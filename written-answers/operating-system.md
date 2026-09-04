@@ -5689,51 +5689,2235 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+   Answer: `Firmware` is low-level software stored permanently inside a hardware device to make that device work. An `operating system` is a large program that manages the whole computer and provides an interface for the user and for applications.
+
+   Firmware
+   - Written into `ROM, EPROM, EEPROM or flash` on the device itself, so it is present the moment power is applied.
+   - It is `hardware specific` — the firmware of one printer will not run another.
+   - Small, from a few kilobytes to a few megabytes, and it performs one fixed job.
+   - Examples: `BIOS/UEFI` on a motherboard, the controller firmware in a hard disk or SSD, the code inside a router, a washing machine, a TV remote or a digital camera.
+   - It runs `first`, before any operating system exists.
+
+   Operating system
+   - A large program `loaded from disk into RAM` at boot time.
+   - It manages the processor, memory, files, devices and security, and provides `system calls` so that applications need not know anything about the hardware.
+   - Large — hundreds of megabytes to gigabytes — and general purpose.
+   - Examples: `Windows, Linux, macOS, Android, iOS`.
+
+   How they cooperate at start-up
+   ```
+      1. Power on
+      2. FIRMWARE (BIOS/UEFI) runs from ROM
+           - POST : test the memory, CPU and devices
+           - find the boot device
+      3. Firmware loads the BOOTLOADER from disk
+      4. The bootloader loads the OPERATING SYSTEM into RAM
+      5. The OS takes control and starts the user's programs
+   ```
+   - The essential relationship: `firmware wakes the hardware up; the operating system then runs the machine`.
+
+   Difference
+
+   | Point | Firmware | Operating System |
+   |---|---|---|
+   | Purpose | Make one device function | Manage the whole computer |
+   | Stored in | ROM / flash, on the device | Disk, loaded into RAM |
+   | Size | KB to a few MB | Hundreds of MB to GB |
+   | Scope | One specific hardware device | The entire system |
+   | Runs | First, at power-on | After the firmware |
+   | Hardware specific | `Yes` | No — portable across machines |
+   | User interface | None or very limited | Full GUI and command line |
+   | Multitasking | Usually none | Yes |
+   | Updated | Rarely, by "flashing" | Frequently, by patches |
+   | Risk of a bad update | Can `brick` the device | Usually recoverable |
+   | User modifies it | Almost never | Constantly |
+   | Examples | BIOS/UEFI, router firmware, SSD controller | Windows, Linux, Android |
+
+   - One point that is easy to miss: an operating system `also relies on firmware while it runs`, not only at boot. Every disk, network card and graphics card contains its own firmware, and the OS driver talks to that firmware rather than to raw silicon.
+
 2. **Define: Socket, Kernel, Process, Program, Multiprogramming, Context Switching; Explain Preemptive Priority Scheduling algorithm with illustration; Explain LRU and NRU Page Replacement algorithm.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 302 (ET: BIBM)]*
+
+   Answer: Definitions
+
+   `Socket`
+   - A `socket` is one endpoint of a two-way communication link between two programs over a network. It is identified by an `IP address plus a port number`, and the pair of sockets defines a connection.
+   ```
+      Socket = IP address : port          e.g. 192.168.1.5 : 8080
+
+      Types : STREAM socket   -> TCP , reliable and connection oriented
+              DATAGRAM socket -> UDP , fast and connectionless
+              RAW socket      -> direct IP access, used by ping
+   ```
+   - Every network program — a web server, a database client, an SSH session — is built on sockets. `socket() , bind() , listen() , accept() , connect() , send() , recv() , close()` are the system calls involved.
+
+   `Kernel`
+   - The `core` of the operating system, resident in memory from boot to shutdown and running in `privileged mode` with full access to the hardware.
+   - It manages processes, memory, devices and files, and exposes `system calls` to applications.
+   - Types: `monolithic` (Linux), `microkernel` (QNX, Minix), `hybrid` (Windows NT, macOS).
+
+   `Program` versus `Process`
+   ```
+      PROGRAM : a PASSIVE set of instructions stored on disk. An executable
+                file. It occupies no CPU and no memory of its own.
+
+      PROCESS : a program in EXECUTION - an ACTIVE entity, with its own
+                address space, program counter, registers, stack, heap
+                and a Process Control Block.
+   ```
+   - One program can produce `many processes` — opening a browser twice gives two processes from one program. A program is a recipe; a process is the cooking.
+   ```
+      A process consists of :
+           Text section  : the program code
+           Data section  : global and static variables
+           Heap          : dynamically allocated memory
+           Stack         : local variables, parameters, return addresses
+           PCB           : state, PC, registers, memory limits, open files
+   ```
+
+   `Multiprogramming`
+   - Keeping `several programs in main memory at once`, so that when one waits for I/O the CPU is given to another instead of idling.
+   ```
+      Program A : |CPU|....I/O wait....|CPU|
+      Program B : .....|CPU|....I/O wait....|CPU|
+      CPU busy  : |AAA|BBB|AAA|BBB|...   - never idle
+   ```
+   - It needs memory protection, interrupts, context switching and a scheduler. It raises `CPU utilisation` and `throughput`.
+
+   `Context switching`
+   - Saving the state of the running process and loading the state of another, so that the CPU can be handed from one to the other.
+   ```
+      1. Save the CPU state (PC, registers, flags) into the outgoing PCB
+      2. Update that process's state to READY or WAITING
+      3. Select the next process (the scheduler)
+      4. Load its state from its PCB
+      5. Jump to its saved program counter
+   ```
+   - It is `pure overhead` — a few microseconds during which no useful work is done — which is why the time quantum must not be too small.
+
+   Preemptive priority scheduling
+   - Each process has a priority. The CPU always runs the highest-priority `ready` process, and a higher-priority `arrival` takes the CPU away from a running process.
+   ```
+      Process   Arrival   Burst   Priority  (lower number = higher priority)
+        P1         0        10        3
+        P2         1         1        1
+        P3         2         2        4
+        P4         3         1        5
+        P5         4         5        2
+   ```
+   ```
+      t=0 : only P1 (prio 3)                   -> P1 runs
+      t=1 : P2 arrives, prio 1 beats 3         -> PREEMPT , P2 runs
+      t=2 : P2 done. P1(3), P3(4) ready        -> P1 runs
+      t=4 : P5 arrives, prio 2 beats 3         -> PREEMPT , P5 runs
+      t=9 : P5 done , P1 is highest            -> P1 to completion
+      t=16: P3 ; t=18 : P4
+
+      |P1|P2|  P1  |    P5    |      P1      | P3 |P4|
+      0  1  2      4          9             16   18 19
+   ```
+   ```
+      Process  Completion  Turnaround  Waiting
+        P1        16          16          6
+        P2         2           1          0
+        P3        18          16         14
+        P4        19          16         15
+        P5         9           5          0
+                          ----------   --------
+      Average waiting time    = 35/5 = 7.00 ms
+      Average turnaround time = 54/5 = 10.80 ms
+   ```
+   - Weakness: `starvation` of low-priority processes such as P4. Cured by `ageing` — raising a process's priority the longer it waits.
+
+   LRU and NRU page replacement
+
+   `LRU — Least Recently Used`
+   - Replaces the page that has `not been used for the longest time`, on the assumption that a page unused for a long while is unlikely to be needed soon.
+   ```
+      Reference string : 7 0 1 2 0 3 0 4 , 3 frames
+
+      7      -> [7]           miss
+      0      -> [7,0]         miss
+      1      -> [7,0,1]       miss
+      2      -> [0,1,2]       miss   (7 was least recently used)
+      0      -> [1,2,0]       HIT
+      3      -> [2,0,3]       miss   (1 was least recently used)
+      0      -> [2,3,0]       HIT
+      4      -> [3,0,4]       miss   (2 was least recently used)
+
+      6 misses , 2 hits
+   ```
+   ```
+      Implementation : a COUNTER per page, or a STACK of page numbers.
+      Both are expensive - a timestamp must be updated on EVERY access.
+      Advantage : it never suffers Belady's anomaly.
+   ```
+
+   `NRU — Not Recently Used`
+   - A cheap approximation to LRU, using two bits kept by the hardware.
+   ```
+      R = Referenced bit , set on every read or write
+      M = Modified (dirty) bit , set on every write
+
+      The R bit is CLEARED periodically by a timer interrupt, so it
+      records recent use only.
+
+      Pages are then placed in four classes :
+
+           Class 0 : R = 0 , M = 0   not referenced , not modified  <- BEST victim
+           Class 1 : R = 0 , M = 1   not referenced , modified
+           Class 2 : R = 1 , M = 0   referenced , not modified
+           Class 3 : R = 1 , M = 1   referenced and modified        <- keep
+
+      NRU evicts a page at random from the LOWEST non-empty class.
+   ```
+   - Class 1 is preferred over class 2 because writing a dirty page to disk once is cheaper than repeatedly reloading a page that is actively in use.
+
+   Comparison
+
+   | Point | LRU | NRU |
+   |---|---|---|
+   | Basis | Exact time of last use | Two bits, R and M |
+   | Accuracy | High | Approximate |
+   | Hardware cost | High — a counter or stack per page | Very low — two bits |
+   | Overhead per access | Update a timestamp every time | Hardware sets a bit |
+   | Belady's anomaly | Never | Possible |
+   | Used in practice | Rarely in pure form | Yes, as the basis of the clock algorithm |
+
+   - What real systems use: the `clock` (second-chance) algorithm, which is NRU arranged as a circular list, and its refinement the `enhanced second-chance` algorithm using both R and M. `Optimal (OPT)` replacement, which evicts the page needed furthest in the future, is unimplementable — it needs knowledge of the future — but is used as the benchmark against which the others are measured.
 
 3. **Explain how can multiprogramming be achieved on a uniprocessor system?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
 
+   Answer: `Multiprogramming` means keeping `several programs in main memory at the same time` so that the CPU always has work to do. On a `uniprocessor` — a machine with one CPU — only one program can actually execute at any instant, so multiprogramming is achieved by `switching` the CPU between them.
+
+   The problem it solves
+   ```
+      A single program alternates between CPU bursts and I/O waits :
+
+      Program A : |CPU| ---- waiting for disk ---- |CPU| ---- I/O ---- |CPU|
+                             CPU IS IDLE HERE             IDLE
+
+      A typical program spends 60-80 per cent of its time waiting for I/O.
+      Without multiprogramming, the CPU is idle for all of it.
+   ```
+
+   How it works
+   ```
+      Program A : |CPU|........I/O wait.........|CPU|.....I/O.....
+      Program B : ......|CPU|.......I/O wait........|CPU|.........
+      Program C : ...........|CPU|.......I/O wait........|CPU|....
+
+      CPU busy  : |AAA|BBB|CCC|AAA|BBB|CCC|...   -  NEVER IDLE
+   ```
+   - The moment a program requests I/O, the operating system takes the CPU away and gives it to another program that is ready. When the I/O finishes, an interrupt makes that program ready again.
+
+   What is required to make it possible
+
+   1. `Several programs resident in memory at once`
+   - Memory is divided among them, by fixed partitions in early systems and by `paging` and `virtual memory` in modern ones.
+
+   2. `Memory protection`
+   - Each program must be prevented from reading or writing another's memory. Achieved with `base and limit registers`, or with the `MMU` and page tables. Without this, one faulty program would destroy the others.
+
+   3. `Interrupts`
+   - The mechanism that lets the operating system regain control. An I/O completion interrupt, or a timer interrupt, transfers control back to the kernel so it can choose a new process.
+
+   4. `Context switching`
+   - Saving the CPU state — program counter, registers, flags, memory-map pointers — of the outgoing process into its `PCB (Process Control Block)`, and loading the incoming one's.
+   ```
+      Save state of P1  ->  select P2  ->  load state of P2  ->  run P2
+   ```
+   - The time this takes is pure overhead, typically a few microseconds.
+
+   5. `A scheduler`
+   - The short-term scheduler decides which ready process runs next, using FCFS, SJF, priority or round robin.
+
+   6. `The Process Control Block`
+   - One per process, holding its state, program counter, registers, memory limits, open files and accounting information. It is what makes it possible to stop a process and resume it later exactly where it stopped.
+
+   7. `Device management and spooling`
+   - The OS queues I/O requests so that several programs can share one printer or disk without interfering.
+
+   The illusion of simultaneity
+   ```
+      Switching happens thousands of times a second, so to a human it looks
+      as though every program is running at once. In reality the CPU is
+      executing exactly ONE instruction at a time - it is INTERLEAVING,
+      not true parallelism.
+
+      True parallelism requires MULTIPROCESSING - more than one CPU.
+   ```
+
+   Benefits
+   ```
+      High CPU utilisation - the CPU is almost never idle
+      Higher throughput    - more jobs completed per hour
+      Better use of memory and devices
+      Shorter average response time
+   ```
+
+   Costs
+   ```
+      Complex memory management and protection hardware
+      Context-switch overhead
+      Scheduling complexity
+      Deadlock and synchronisation problems appear
+      Thrashing if too many processes are admitted
+   ```
+
+   - The related terms, which examiners like to see distinguished: `multiprogramming` keeps several programs in memory to keep the CPU busy; `multitasking` is multiprogramming with time-sharing added, so the switching is driven by a timer rather than only by I/O; and `multiprocessing` uses more than one CPU, which alone gives true simultaneous execution.
+
 4. **Write the difference between shell and kernel?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
+
+   Answer: The `kernel` is the core of the operating system, which talks to the hardware. The `shell` is the outer layer that the user talks to.
+   ```
+           USER
+             |
+          SHELL         - interprets commands
+             |
+          KERNEL        - manages processes, memory, devices
+             |
+          HARDWARE
+   ```
+
+   Kernel
+   - The `central component` of the operating system, loaded into memory at boot and resident until shutdown.
+   - Runs in `kernel mode` (privileged mode) with complete access to the hardware and to all memory.
+   - Responsibilities:
+   ```
+      Process management     : creation, scheduling, termination
+      Memory management      : allocation, paging, virtual memory
+      Device management      : drivers, interrupt handling
+      File system management : reading and writing files
+      System calls           : the interface applications use
+      Security and protection
+   ```
+   - Types: `monolithic` (Linux), `microkernel` (Minix, QNX), `hybrid` (Windows NT, macOS), `exokernel`.
+
+   Shell
+   - A `user-level program` that reads the commands a user types, interprets them, and asks the kernel to carry them out through system calls.
+   - Runs in `user mode` with no special privileges of its own.
+   - Two kinds:
+   ```
+      CLI shell : bash , sh , zsh , ksh , csh , fish , PowerShell , cmd
+      GUI shell : GNOME , KDE , Windows Explorer
+   ```
+   - It is not part of the operating system proper. It can be replaced, and several shells can be installed side by side.
+
+   How a command travels through them
+   ```
+      $ ls -l
+
+      1. The SHELL reads the line and parses it
+      2. It expands wildcards and variables
+      3. It forks a child process and calls exec("/bin/ls")
+      4. The KERNEL creates the process, loads the program, schedules it
+      5. ls issues system calls (openat, getdents, write)
+      6. The KERNEL performs them and returns the data
+      7. The output reaches the terminal
+   ```
+
+   Difference
+
+   | Point | Kernel | Shell |
+   |---|---|---|
+   | Position | Innermost layer, next to the hardware | Outermost layer, next to the user |
+   | Nature | The core of the OS | An ordinary program |
+   | Mode | `Kernel mode` — privileged | `User mode` |
+   | Interacts with | The hardware | The user |
+   | Function | Manage processes, memory, devices, files | Interpret and run commands |
+   | Loaded | At boot, stays in memory | When the user logs in |
+   | Replaceable | No — changing it means changing the OS | `Yes` — bash, zsh, fish |
+   | How many | One per running system | Many can run at once |
+   | Direct hardware access | Yes | No — only through system calls |
+   | Written in | C and assembly | C, or a scripting language |
+   | Examples | Linux kernel, Windows NT kernel | bash, zsh, PowerShell, cmd |
+   | If it crashes | The whole system halts | Only that session ends |
+
+   Useful commands
+   ```bash
+      uname -r            # kernel version
+      uname -a            # full kernel information
+      echo $SHELL         # which shell you are using
+      cat /etc/shells     # which shells are installed
+      chsh -s /bin/zsh    # change your login shell
+   ```
+
+   - The relationship in one line: `the shell is the interface, the kernel is the engine`. A user never speaks to the kernel directly; every request passes through the shell or an application, and reaches the kernel as a `system call`.
 
 5. **DOS কী? অপারেটিং সিস্টেমের কাজ ও প্রকারভেদ ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What DOS is
+   - `DOS` stands for `Disk Operating System`. It is a `single-user, single-tasking`, command-line operating system that was the standard for IBM PCs and compatibles from 1981 to the mid-1990s.
+   - The best-known version is `MS-DOS` from Microsoft; IBM sold the same product as `PC-DOS`.
+   ```
+      Characteristics :
+           16-bit , real mode , addresses 1 MB of memory
+           SINGLE TASKING - only one program at a time
+           SINGLE USER - no accounts, no permissions
+           COMMAND LINE only - no graphical interface
+           FAT file system , with 8.3 filenames (NAME.EXT)
+           No memory protection - a bad program can crash the machine
+   ```
+   ```
+      Common commands :
+           DIR      list files              CD       change directory
+           COPY     copy a file             DEL      delete
+           REN      rename                  MD / RD  make / remove directory
+           FORMAT   format a disk           TYPE     display a file
+           CLS      clear the screen        CHKDSK   check the disk
+   ```
+   - Early Windows (1.0 to 3.11, and 95/98 to a large extent) ran `on top of` DOS rather than replacing it. Modern Windows keeps a DOS-like shell in `cmd.exe`, but there is no DOS underneath it.
+
+   Functions of an operating system
+   ```
+      1. PROCESS MANAGEMENT
+           Create, schedule, suspend and terminate processes ; context
+           switching ; inter-process communication ; deadlock handling.
+
+      2. MEMORY MANAGEMENT
+           Allocate and free memory ; keep track of what is in use ;
+           paging, segmentation and virtual memory ; protect one process
+           from another.
+
+      3. FILE MANAGEMENT
+           Create, read, write, delete files and directories ; manage
+           the directory structure ; control access permissions ;
+           allocate disk blocks.
+
+      4. DEVICE (I/O) MANAGEMENT
+           Device drivers ; buffering, caching and spooling ; scheduling
+           disk requests ; handling interrupts.
+
+      5. SECURITY AND PROTECTION
+           Authentication , authorisation , encryption , audit logging ,
+           isolating one user's data from another's.
+
+      6. USER INTERFACE
+           A command-line shell, a graphical desktop, or both.
+
+      7. RESOURCE ALLOCATION AND ACCOUNTING
+           Share the CPU, memory and devices fairly ; record usage.
+
+      8. ERROR DETECTION AND RECOVERY
+           Detect a hardware fault, a bad instruction or a full disk, and
+           respond without crashing the whole system.
+
+      9. NETWORKING
+           Protocol stacks, sockets, remote file systems.
+   ```
+
+   Types of operating system
+   ```
+      BATCH
+           Jobs with similar needs are grouped and run without user
+           interaction. No interactivity ; the CPU is often idle.
+           Example : early IBM mainframe systems.
+
+      TIME-SHARING (multitasking)
+           The CPU is shared by rapid switching, so many users appear to
+           work simultaneously. Short response time is the goal.
+           Example : UNIX , Linux , Windows.
+
+      MULTIPROGRAMMING
+           Several programs held in memory ; when one waits for I/O the
+           CPU is given to another. Maximises CPU utilisation.
+
+      MULTIPROCESSING
+           Two or more CPUs in one machine, giving TRUE parallelism.
+           Symmetric (SMP) or asymmetric.
+
+      DISTRIBUTED
+           Several independent computers joined by a network, presented
+           to the user as one system. Resource sharing and fault
+           tolerance are the aims.
+           Example : Amoeba , modern cluster systems.
+
+      REAL-TIME (RTOS)
+           A response is guaranteed within a fixed deadline.
+           HARD real time : a missed deadline is a total failure -
+                pacemaker, aircraft control, airbag.
+           SOFT real time : a missed deadline degrades quality -
+                video streaming, online gaming.
+           Example : RTLinux , VxWorks , FreeRTOS , QNX.
+
+      NETWORK
+           Manages shared files, printers and users across a LAN. Each
+           machine keeps its own identity, unlike a distributed system.
+           Example : Novell NetWare , Windows Server.
+
+      EMBEDDED
+           Built into a device with fixed function and limited memory.
+           Example : the firmware in a washing machine, a router, a car ECU.
+
+      MOBILE
+           Optimised for touch, battery life and connectivity.
+           Example : Android , iOS.
+
+      SINGLE-USER SINGLE-TASKING : MS-DOS
+      SINGLE-USER MULTITASKING   : Windows , macOS
+      MULTI-USER                 : Linux , UNIX , mainframe systems
+   ```
+
+   - Where DOS sits in this classification: it is a `single-user, single-tasking, command-line` operating system with no memory protection and no multiprogramming — which is exactly why it was replaced. Modern Windows and Linux are `single-user or multi-user multitasking` systems built on a protected-mode kernel with virtual memory.
+
 6. **Write down the difference between Multitasking and Multiprocessing.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
+
+   Answer: `Multitasking` means one CPU switching rapidly between several tasks so that they appear to run at once. `Multiprocessing` means a computer having `more than one CPU`, so tasks genuinely do run at once.
+
+   Multitasking
+   - The operating system gives each task a short `time slice` and switches between them thousands of times a second, using `context switching`. Only one task actually executes at any instant on a given CPU.
+   ```
+      ONE CPU :
+
+      Task A : |AA|      |AA|      |AA|
+      Task B :     |BB|      |BB|      |BB|
+      Task C :         |CC|      |CC|
+
+      Interleaved, not simultaneous.
+   ```
+   ```
+      Types :
+         PREEMPTIVE  - the OS forcibly takes the CPU back when the
+                       quantum expires. Windows, Linux, macOS.
+         COOPERATIVE - a task must yield voluntarily. Early Windows and
+                       classic Mac OS. One misbehaving program froze
+                       the whole machine.
+   ```
+
+   Multiprocessing
+   - Two or more `physical processors` (or cores) in one computer, each executing an instruction stream at the same moment. This is `true parallelism`.
+   ```
+      FOUR CPUs :
+
+      CPU1 : |AAAAAAAAAA|
+      CPU2 : |BBBBBBBBBB|      all four at the SAME instant
+      CPU3 : |CCCCCCCCCC|
+      CPU4 : |DDDDDDDDDD|
+   ```
+   ```
+      Types :
+         SYMMETRIC (SMP)  - every CPU is equal, shares one memory and
+                            runs the same copy of the OS. The normal case.
+         ASYMMETRIC       - a master CPU controls the others, which
+                            handle specific tasks.
+   ```
+
+   Difference
+
+   | Point | Multitasking | Multiprocessing |
+   |---|---|---|
+   | Number of CPUs | `One` (or one per core) | `Two or more` |
+   | Execution | Interleaved — appears simultaneous | `Genuinely simultaneous` |
+   | Mechanism | Time slicing and context switching | Parallel execution on separate CPUs |
+   | Parallelism | Apparent only | Real |
+   | Requires | A scheduler and a timer interrupt | Multiple processors and cache coherence |
+   | Throughput gain | None — the same CPU does the work | Near-linear with the number of CPUs |
+   | Failure of one CPU | Not applicable | The system continues on the others |
+   | Cost | No extra hardware | Extra processors |
+   | Overhead | Context switching | Synchronisation and cache coherence |
+   | Purpose | Responsiveness and utilisation | Raw throughput and reliability |
+   | Examples | Windows, Linux on a single-core machine | A multi-core server, a supercomputer |
+
+   The related terms, which examiners like to see distinguished
+   ```
+      MULTIPROGRAMMING : several programs held in MEMORY at once, so the
+           CPU is given to another whenever one waits for I/O. The switch
+           is triggered by an I/O request, not by a timer.
+
+      MULTITASKING     : multiprogramming plus TIME SHARING - the switch
+           is also driven by a timer, so every task gets a regular turn.
+           This is what makes a system interactive.
+
+      MULTITHREADING   : one PROCESS divided into several THREADS that
+           share its address space. Cheaper to create and switch than a
+           process, but a fault in one thread can bring down the process.
+
+      MULTIPROCESSING  : more than one CPU, giving true parallelism.
+   ```
+
+   How they combine in practice
+   ```
+      A modern 8-core machine running Linux uses ALL of them at once :
+
+           MULTIPROCESSING  - 8 cores really execute in parallel
+           MULTITASKING     - each core time-slices among many processes
+           MULTIPROGRAMMING - hundreds of processes are resident in memory
+           MULTITHREADING   - each browser tab is a thread of one process
+   ```
+
+   - The limit on multiprocessing is `Amdahl's law`: if a fraction `(1-P)` of a program is inherently serial, the speed-up can never exceed `1/(1-P)` however many CPUs are added. A program that is 20 per cent serial can never go more than five times faster.
 
 7. **(b) What is the difference between micro kernel and macro kernel in the context of OS?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
 
+   Answer: The two are the opposite answers to one design question: `how much of the operating system should run in privileged kernel mode?`
+
+   Macro kernel (monolithic kernel)
+   - `Every` operating-system service runs inside the kernel, in `kernel mode`, as one large program in a single address space.
+   ```
+      +-------------------------------------------------+
+      |                  USER MODE                      |
+      |   Application 1     Application 2               |
+      +-------------------------------------------------+
+      |                 KERNEL MODE                     |
+      |   Scheduler | Memory manager | File system      |
+      |   Device drivers | Network stack | IPC          |
+      |            ALL IN ONE ADDRESS SPACE             |
+      +-------------------------------------------------+
+      |                  HARDWARE                       |
+      +-------------------------------------------------+
+   ```
+   - Services call each other by `direct function call`, which is why it is fast.
+   - Examples: `Linux`, traditional `UNIX`, `MS-DOS`, `BSD`.
+
+   Microkernel
+   - Only the `bare minimum` runs in kernel mode — typically scheduling, basic memory management and inter-process communication. Everything else runs as an ordinary `user-mode server process`.
+   ```
+      +-------------------------------------------------+
+      |                  USER MODE                      |
+      |  Application | File | Device | Network | Memory |
+      |              | srvr | driver | server  | server |
+      +-------------------------------------------------+
+      |            MICROKERNEL (kernel mode)            |
+      |     IPC  |  basic scheduling  |  address spaces |
+      +-------------------------------------------------+
+      |                  HARDWARE                       |
+      +-------------------------------------------------+
+   ```
+   - Services communicate by `message passing` through the kernel, which costs two context switches per request — the source of its slowness.
+   - Examples: `QNX`, `Minix`, `Mach`, `L4`, `Symbian`.
+
+   Difference
+
+   | Point | Macro (monolithic) kernel | Microkernel |
+   |---|---|---|
+   | Size | Large — millions of lines | Small — often under 10,000 lines |
+   | Services in kernel mode | `All` of them | Only IPC, scheduling, memory |
+   | Communication | Direct function calls | `Message passing` |
+   | Speed | `Faster` — no IPC overhead | Slower — two context switches per call |
+   | Reliability | A driver crash kills the `whole system` | A server crash kills `only that service` |
+   | Extensibility | Recompile or load a kernel module | `Add a user-space process` |
+   | Debugging | Hard — kernel debugging | Easy — ordinary user-space debugging |
+   | Security | Large attack surface in privileged mode | Small trusted computing base |
+   | Portability | Lower | Higher |
+   | Memory footprint | Larger | Smaller |
+   | Examples | Linux, UNIX, MS-DOS | QNX, Minix, L4, Mach |
+
+   The central trade-off
+   ```
+      MONOLITHIC : buys SPEED at the cost of RELIABILITY.
+           A faulty printer driver runs in kernel mode with full hardware
+           access, so a bug in it can corrupt any memory in the system.
+           This is the cause of most "blue screen" and kernel panic faults.
+
+      MICROKERNEL : buys RELIABILITY at the cost of SPEED.
+           The same faulty driver is an ordinary process. If it crashes,
+           the kernel simply restarts it and the system continues.
+           But every disk read now costs several messages instead of
+           one function call.
+   ```
+
+   Hybrid kernels — what real systems actually use
+   ```
+      Windows NT (and every later Windows), macOS (XNU) and modern
+      Linux are all HYBRID in practice :
+
+           Windows NT : a microkernel-influenced design, but the graphics
+                subsystem and drivers were MOVED INTO the kernel for speed.
+
+           macOS XNU  : the Mach microkernel plus a BSD monolithic layer
+                in the same address space.
+
+           Linux      : monolithic, but with LOADABLE KERNEL MODULES, so
+                drivers can be inserted and removed at run time without
+                recompiling - which gives much of the microkernel's
+                flexibility while keeping direct function calls.
+   ```
+
+   - The historical footnote worth knowing: the `Tanenbaum-Torvalds debate` of 1992 argued exactly this question. Tanenbaum, the author of Minix, held that monolithic kernels were obsolete; Torvalds argued that the performance cost of message passing was unacceptable. In practice the hybrid designs above took what worked from both, and Linux's success settled the argument in favour of pragmatism rather than either pure form.
+
 8. **অথবা, (ক) Blocking এবং Buffering OS এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) The two terms belong to different parts of the operating system: `blocking` is about how a process waits, and `buffering` is about where data is held in transit.
+
+   Blocking
+   - A `blocking` operation is one in which the calling process is `suspended` — moved from RUNNING to WAITING — until the operation completes. It does no work and consumes no CPU while it waits.
+   ```
+      Process issues read()
+           |
+           v
+      State : RUNNING -> WAITING        the process is BLOCKED
+           |
+      (the OS gives the CPU to another process)
+           |
+      I/O completes -> interrupt
+           |
+           v
+      State : WAITING -> READY -> RUNNING     the process resumes
+   ```
+   ```
+      BLOCKING (synchronous) I/O :
+           n = read(fd, buf, 100);        // the process waits here
+           process(buf);                   // reached only after the read
+
+      NON-BLOCKING (asynchronous) I/O :
+           n = read(fd, buf, 100);        // returns IMMEDIATELY, perhaps
+                                           // with 0 bytes and EWOULDBLOCK
+           // the process can do other work and check again later
+   ```
+   - Where it matters: a blocking `accept()` in a single-threaded server can serve only one client at a time, which is why real servers use threads, `select()`, `poll()` or `epoll()`.
+
+   Buffering
+   - A `buffer` is an area of memory that holds data `temporarily` while it moves between two devices or processes that work at different speeds.
+   ```
+      Fast producer                    Slow consumer
+      (application)  --> [ BUFFER ] --> (printer)
+
+      The application writes at memory speed and continues immediately;
+      the printer drains the buffer at its own pace.
+   ```
+   ```
+      Types :
+         SINGLE buffering : one buffer. The producer must wait while the
+              consumer empties it.
+         DOUBLE buffering : two buffers. The producer fills one while the
+              consumer empties the other - used in graphics to prevent
+              flicker and tearing.
+         CIRCULAR buffering : a ring of buffers, so producer and consumer
+              run continuously. Used for audio, video and network streams.
+   ```
+   - Reasons for buffering:
+   ```
+      SPEED MISMATCH between producer and consumer
+      Different DATA TRANSFER SIZES - one device works in bytes, another
+           in 4 KB blocks
+      Copy SEMANTICS - the OS copies the data before returning, so the
+           application may reuse its own memory immediately
+      Reduces the NUMBER of physical I/O operations
+   ```
+
+   Related mechanisms often asked alongside
+   ```
+      CACHING  : keeping a COPY of frequently used data in faster memory.
+           A buffer holds the ONLY copy in transit ; a cache holds a
+           DUPLICATE of data that also exists elsewhere.
+
+      SPOOLING : Simultaneous Peripheral Operation On-Line. Output is
+           written to a DISK FILE and a daemon feeds the device from
+           there, so many jobs can queue for one printer.
+   ```
+
+   Difference
+
+   | Point | Blocking | Buffering |
+   |---|---|---|
+   | Concerns | How a process `waits` | Where data is `stored` in transit |
+   | Level | Process scheduling | I/O management |
+   | Effect on the process | It is `suspended` | It usually `continues` |
+   | Purpose | Wait correctly for a slow operation | Smooth a speed mismatch |
+   | Alternative | Non-blocking or asynchronous I/O | Unbuffered (direct) I/O |
+   | Cost | Idle waiting time for that process | Memory, and one extra copy |
+   | Types | Blocking, non-blocking, asynchronous | Single, double, circular |
+   | Example | `read()` waiting for a disk sector | The print queue in RAM |
+
+   How the two combine in practice
+   ```
+      printf("hello");        // writes into a BUFFER, returns at once
+      fflush(stdout);         // forces the buffer out - may BLOCK
+
+      The buffering is what makes printf fast; the blocking happens only
+      when the buffer must actually reach the device.
+   ```
+   - This is also why output can appear to vanish when a program crashes: it was still sitting in the buffer and was never flushed.
 
 9. **(গ) Real Time System বলতে কী বোঝায় ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) A `real-time system` is one in which the correctness of the result depends not only on `what` is computed but on `when` it is delivered. A correct answer that arrives after its deadline is a `failure`.
+
+   - The defining property is `predictability`, not raw speed. A real-time system guarantees a `worst-case response time`; a general-purpose system only offers a good average.
+
+   Two categories
+   ```
+      HARD REAL TIME
+           A missed deadline is a TOTAL SYSTEM FAILURE, and may be
+           catastrophic.
+           Examples : a pacemaker , an airbag controller , aircraft
+           flight control , a nuclear reactor shutdown system , anti-lock
+           brakes.
+           No virtual memory, no secondary storage in the critical path,
+           and every operation's worst-case time must be known.
+
+      SOFT REAL TIME
+           A missed deadline DEGRADES the service but does not destroy it.
+           Examples : video streaming , online gaming , VoIP , a
+           multimedia player.
+           A late video frame causes a stutter, not a disaster.
+
+      FIRM REAL TIME (sometimes listed separately)
+           A late result is USELESS but not harmful - for example a frame
+           in a live broadcast that arrives after its slot.
+   ```
+
+   Characteristics
+   ```
+      DETERMINISM     : the same input always produces the same timing
+      BOUNDED LATENCY : a guaranteed maximum interrupt and dispatch latency
+      PRIORITY BASED  : preemptive priority scheduling, so an urgent task
+                        always displaces a less urgent one
+      SMALL and COMPACT : a minimal kernel, so worst-case paths are short
+      NO virtual memory in hard real-time systems - a page fault would
+           introduce an unpredictable delay
+      RELIABILITY     : fault tolerance and often redundant hardware
+      CONCURRENCY     : many tasks with individual deadlines
+   ```
+
+   Scheduling algorithms used
+   ```
+      RATE MONOTONIC (RMS)      - static priority; the task with the
+           shortest PERIOD gets the highest priority.
+           Schedulable if  sum(Ci/Ti) <= n(2^(1/n) - 1)
+           For large n this bound approaches 0.693, so about 69 per cent
+           CPU utilisation is guaranteed schedulable.
+
+      EARLIEST DEADLINE FIRST (EDF) - dynamic priority; whichever task
+           has the nearest deadline runs next.
+           Schedulable if  sum(Ci/Ti) <= 1  , so it can reach 100 per cent
+           utilisation - optimal for a uniprocessor.
+
+      LEAST LAXITY FIRST (LLF)  - priority by slack time remaining.
+   ```
+   ```
+      Ci = worst-case execution time of task i
+      Ti = its period
+      Ci/Ti = the fraction of CPU it needs
+   ```
+
+   Real-time operating systems
+   ```
+      VxWorks , QNX , FreeRTOS , RTLinux , Micrium uC/OS ,
+      Windows CE , RTEMS
+   ```
+   - A general-purpose Linux can be made soft real-time with the `PREEMPT_RT` patch, which makes almost the whole kernel preemptible.
+
+   Real time versus general purpose
+
+   | Point | Real-time system | General-purpose system |
+   |---|---|---|
+   | Priority | `Meeting deadlines` | Average throughput and fairness |
+   | Response | Guaranteed worst case | Best effort |
+   | Scheduling | Preemptive priority, RMS, EDF | Round robin, multilevel feedback |
+   | Virtual memory | Avoided in hard real time | Standard |
+   | Kernel | Small, fully preemptible | Large |
+   | Determinism | Essential | Not required |
+   | Throughput | Sacrificed for predictability | Maximised |
+   | Examples | VxWorks, QNX, FreeRTOS | Windows, Linux, macOS |
+
+   - The point that is most often misunderstood: `real time does not mean fast`. A system that responds in 50 ms `every time without exception` is real-time; one that usually responds in 1 ms but occasionally takes 200 ms is not. For an airbag, the guarantee matters and the average does not.
+
 10. **Explain context switching in Operating System.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
+
+    Answer: `Context switching` is the act of saving the state of the currently running process and loading the saved state of another, so that the CPU can be handed from one process to the other and each can later resume exactly where it stopped.
+
+    - It is the mechanism that makes `multitasking` possible. Without it, a process would have to run to completion before any other could start.
+
+    What the "context" is
+    - Everything the CPU needs to resume a process, all of it stored in that process's `Process Control Block (PCB)`.
+    ```
+       Program counter          the next instruction to execute
+       CPU registers            general purpose, index, stack pointer
+       Flags / status word      zero, carry, sign, interrupt enable
+       Memory management data   base and limit registers, page-table pointer
+       Process state            RUNNING , READY , WAITING
+       Accounting information   CPU time used, process ID, priority
+       I/O status               open files, pending I/O requests
+    ```
+
+    The steps
+    ```mermaid
+    sequenceDiagram
+        participant P1 as Process P1
+        participant K as Kernel
+        participant P2 as Process P2
+        P1->>K: interrupt or system call
+        K->>K: 1. save P1's state into PCB1
+        K->>K: 2. mark P1 READY or WAITING
+        K->>K: 3. scheduler selects P2
+        K->>K: 4. load P2's state from PCB2
+        K->>P2: 5. jump to P2's saved program counter
+    ```
+    ```
+       1. An INTERRUPT or SYSTEM CALL transfers control to the kernel.
+       2. The kernel SAVES the CPU state into the outgoing process's PCB.
+       3. The process's state is updated to READY or WAITING and it is
+          placed in the appropriate queue.
+       4. The SCHEDULER selects the next process to run.
+       5. The kernel LOADS that process's state from its PCB - registers,
+          memory-map pointers, flags.
+       6. Control jumps to its saved program counter, and it resumes as
+          though it had never stopped.
+    ```
+
+    What triggers a context switch
+    ```
+       TIMER INTERRUPT   : the time quantum expires (preemptive scheduling)
+       SYSTEM CALL       : the process requests I/O and must wait
+       I/O INTERRUPT     : a device completes, making a waiting process ready
+       HIGHER PRIORITY   : a more important process becomes ready
+       PROCESS EXIT      : the running process terminates
+       PAGE FAULT        : the required page is not in memory
+    ```
+
+    The cost
+    ```
+       A context switch does NO USEFUL WORK. It is pure overhead.
+
+       Direct cost   : saving and restoring registers , updating the PCB ,
+                       running the scheduler          -> 1 to 10 microseconds
+
+       Indirect cost : the CACHE and the TLB now hold the WRONG process's
+                       data, so the incoming process suffers a burst of
+                       misses until they refill. This is often LARGER than
+                       the direct cost.
+    ```
+    ```
+       Quantum 100 ms , switch 5 us  ->  overhead 0.005 %   negligible
+       Quantum 100 us , switch 5 us  ->  overhead 5 %       significant
+       Quantum  10 us , switch 5 us  ->  overhead 33 %      unacceptable
+    ```
+    - This is exactly why the time quantum cannot be made arbitrarily small: shrinking it improves response time but wastes an increasing share of the CPU on switching.
+
+    Process switch versus thread switch
+    ```
+       PROCESS switch : the address space changes, so the page-table
+            pointer is reloaded and the TLB is FLUSHED. Expensive.
+
+       THREAD switch  : threads of one process SHARE the address space,
+            so only the registers and the stack pointer change. The TLB
+            and much of the cache stay valid.
+
+       A thread switch is roughly 5 to 10 times cheaper than a process
+       switch, which is one of the main reasons threads exist.
+    ```
+
+    How systems reduce the cost
+    ```
+       Hardware support : some processors have several REGISTER SETS, so
+            switching means changing a pointer rather than copying registers
+       Tagged TLBs (ASIDs) : each entry carries an address-space id, so the
+            TLB need not be flushed on every switch
+       Larger time quanta for CPU-bound work
+       Threads instead of processes where the work can share memory
+       Processor affinity : keeping a process on the same core, so its
+            cache contents are still there when it resumes
+    ```
+
+    - The related term is `dispatch latency`: the time from the scheduler deciding to switch until the new process actually begins executing. In a real-time system this figure must be bounded and small, which is why real-time kernels are kept fully preemptible and simple.
 
 11. **Which Operating system is considered as an Open source?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
+    Answer: `Linux` is the operating system regarded as open source.
+
+    - It was created by `Linus Torvalds` in 1991 and released under the `GNU General Public License (GPL)`, which makes the source code freely available to read, modify and redistribute.
+    ```
+       Open source means :
+            the SOURCE CODE is published
+            anyone may READ , MODIFY and REDISTRIBUTE it
+            it is usually free of charge
+            development is by a community, not one company
+    ```
+
+    Major open-source operating systems
+    ```
+       Linux distributions :
+            Ubuntu , Debian , Fedora , CentOS / Rocky / AlmaLinux ,
+            Red Hat Enterprise Linux (source open, support paid) ,
+            openSUSE , Arch Linux , Linux Mint , Kali Linux
+
+       Other open-source systems :
+            FreeBSD , OpenBSD , NetBSD   - the BSD family
+            Android (AOSP)               - built on the Linux kernel
+            Chromium OS
+            Minix , FreeRTOS , RTEMS     - teaching and embedded systems
+    ```
+
+    Proprietary (closed source) operating systems, for contrast
+    ```
+       Microsoft Windows , Apple macOS , Apple iOS ,
+       IBM z/OS , Oracle Solaris (now largely closed) , MS-DOS
+    ```
+
+    Open source versus proprietary
+
+    | Point | Open source (Linux) | Proprietary (Windows) |
+    |---|---|---|
+    | Source code | `Public` | Secret |
+    | Cost | Usually free | Paid licence |
+    | Modification | Allowed and encouraged | Prohibited |
+    | Redistribution | Allowed under the licence | Prohibited |
+    | Licence | GPL, Apache, MIT, BSD | EULA |
+    | Developed by | A worldwide community | One company |
+    | Support | Community forums; paid support available | Official vendor support |
+    | Security | Many eyes find and fix flaws quickly | Depends on the vendor; flaws stay hidden |
+    | Updates | Frequent | On the vendor's schedule |
+    | Vendor lock-in | Low — the code can be forked | High |
+    | Customisation | Complete | None beyond what is offered |
+    | Accountability | No single responsible party | The vendor is contractually responsible |
+
+    Why Linux dominates where it does
+    ```
+       Servers        : about 90 % of public cloud workloads and nearly
+                        all of the top 500 supercomputers
+       Mobile         : Android, built on the Linux kernel, holds roughly
+                        70 % of the smartphone market
+       Embedded       : routers, smart TVs, cars, industrial controllers
+       Reasons        : no licence cost, stability, security, the ability
+                        to strip it down to exactly what a device needs,
+                        and freedom from any single vendor
+    ```
+
+    Licences worth naming
+    ```
+       GPL        : COPYLEFT - any derivative work must also be open source.
+                    Used by the Linux kernel.
+       LGPL       : a weaker copyleft, for libraries.
+       Apache 2.0 : permissive, and grants patent rights.
+       MIT / BSD  : permissive - derivatives may be closed source.
+    ```
+
+    - A distinction worth stating: `open source is not the same as free of charge`. Red Hat Enterprise Linux is fully open source, yet the subscription that provides support and certified updates is paid for. The freedom refers to the `source code`, not necessarily to the price.
+
 12. **What is kernel? Write down the objectives of kernel.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
+
+    Answer: What a kernel is
+    - The `kernel` is the core of the operating system. It is loaded into memory at boot, stays resident until shutdown, and runs in `kernel mode` (privileged mode) with complete access to the hardware and to all memory.
+    - It sits between the applications and the hardware, and every request from a program reaches it as a `system call`.
+    ```
+            USER
+              |
+           SHELL / APPLICATIONS       user mode
+              |
+           ---- system call interface ----
+              |
+           KERNEL                      kernel mode, privileged
+              |
+           HARDWARE
+    ```
+
+    Objectives and functions of the kernel
+
+    1. `Process management`
+    ```
+       Create , schedule , suspend and terminate processes
+       Maintain the Process Control Block for each
+       Perform context switching
+       Provide inter-process communication : pipes, signals, shared memory,
+            message queues
+       Detect and handle deadlock
+    ```
+
+    2. `Memory management`
+    ```
+       Allocate and free memory to processes
+       Keep track of which parts of memory are in use and by whom
+       Implement paging, segmentation and VIRTUAL MEMORY
+       PROTECT each process's memory from every other
+       Handle page faults and choose pages to replace
+    ```
+
+    3. `Device management`
+    ```
+       Provide DEVICE DRIVERS, so applications need not know the hardware
+       Handle INTERRUPTS from devices
+       Buffering, caching and spooling
+       Schedule disk requests
+    ```
+
+    4. `File system management`
+    ```
+       Create, read, write and delete files and directories
+       Maintain the directory structure and the allocation of disk blocks
+       Enforce access permissions
+    ```
+
+    5. `System call interface`
+    ```
+       Provide the controlled entry points through which a user program
+       asks for a privileged service - the ONLY legal way into kernel mode.
+
+       Examples : open , read , write , fork , exec , wait , exit , kill
+    ```
+
+    6. `Security and protection`
+    ```
+       Authenticate users ; enforce permissions
+       Keep one user's data inaccessible to another
+       Separate USER mode from KERNEL mode, so an application cannot
+            touch the hardware directly
+       Maintain an audit trail
+    ```
+
+    7. `Resource allocation and arbitration`
+    ```
+       Share the CPU, memory and devices fairly among competing processes,
+       and prevent one process from monopolising any of them.
+    ```
+
+    8. `Abstraction`
+    ```
+       Present a simple, uniform interface over messy hardware. A program
+       calls read() whether the data is on an SSD, a hard disk, a network
+       share or a USB stick.
+    ```
+
+    Types of kernel
+    ```
+       MONOLITHIC : every service runs in kernel mode, in one address space.
+            Fast, but a driver bug can crash the whole system.
+            Linux , traditional UNIX , MS-DOS
+
+       MICROKERNEL: only IPC, basic scheduling and memory management run in
+            kernel mode ; drivers and file systems are user-space servers.
+            Reliable and secure, but slower because of message passing.
+            QNX , Minix , L4 , Mach
+
+       HYBRID     : a compromise, which is what real systems use.
+            Windows NT , macOS XNU
+
+       EXOKERNEL  : an extreme minimalist design that exposes the hardware
+            directly and leaves abstraction to libraries. Research only.
+    ```
+
+    Useful commands
+    ```bash
+       uname -r                 # kernel version
+       uname -a                 # full kernel information
+       lsmod                    # loaded kernel modules
+       dmesg                    # kernel ring buffer messages
+       cat /proc/version        # kernel build details
+    ```
+
+    - The essential statement: the kernel's objective is to be `the trusted intermediary` — it is the only software with full hardware access, and every other program must ask it for anything privileged. That single design decision is what gives an operating system its protection, its multitasking and its stability.
 
 13. **IBM প্রতিষ্ঠান কর্তৃক কোন Operating System প্রস্তুত করা হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) `IBM` created several operating systems. The most important are these.
+
+    `PC-DOS` (1981)
+    - The operating system for the original `IBM Personal Computer`. It was licensed from Microsoft, which sold the same product as `MS-DOS`. IBM's version was called PC-DOS, and later `IBM DOS`.
+
+    `OS/2` (1987)
+    - Developed jointly by `IBM and Microsoft`, then continued by IBM alone after the partnership broke up in 1990. A 32-bit, multitasking, graphical operating system, technically ahead of Windows 3.x but commercially defeated by it. Later versions were called `OS/2 Warp`.
+
+    `AIX` (1986)
+    - IBM's own version of `UNIX`, still sold today for its `POWER` servers. Used widely in banking and enterprise data centres.
+
+    `OS/360` (1964)
+    - The operating system for the `System/360` mainframe — one of the most important operating systems ever written, and the subject of Fred Brooks's book `The Mythical Man-Month`.
+
+    `z/OS`
+    - The current mainframe operating system, descended from OS/360 through MVS and OS/390. It still runs the core banking and payment systems of much of the world.
+
+    `i5/OS` (now `IBM i`)
+    - The operating system of the AS/400 and its successors, notable for its integrated database.
+
+    Summary
+
+    | Operating system | Year | Platform | Note |
+    |---|---|---|---|
+    | OS/360 | 1964 | System/360 mainframe | The ancestor of z/OS |
+    | PC-DOS | 1981 | IBM PC | Licensed from Microsoft |
+    | AIX | 1986 | RS/6000, POWER | IBM's UNIX |
+    | OS/2 | 1987 | PC | With Microsoft, then IBM alone |
+    | OS/400 → IBM i | 1988 | AS/400 | Integrated database |
+    | z/OS | 2000 | Mainframe | Current, from MVS/OS-390 |
+
+    - The short answer usually expected in a paper of this kind is `PC-DOS` or `OS/2`. `AIX` and `z/OS` are the ones still in commercial use, and `OS/360` is the historically most significant.
+
 14. **Explain: Kernel, Cache, Virtual Memory and RAID.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872-873 (ET: N/A)]*
+
+    Answer: Kernel
+    - The `core` of the operating system, resident in memory from boot to shutdown, running in `kernel mode` with full access to the hardware.
+    - Functions: `process management` (creation, scheduling, context switching), `memory management` (allocation, paging, virtual memory, protection), `device management` (drivers, interrupts), `file system management`, `system calls` and `security`.
+    ```
+       Types : MONOLITHIC  - all services in kernel mode (Linux, UNIX)
+               MICROKERNEL - only IPC, scheduling, memory (QNX, Minix)
+               HYBRID      - a compromise (Windows NT, macOS)
+    ```
+    - The `shell` is the outer layer the user speaks to; the kernel is the engine underneath. No application touches the hardware directly — every request becomes a `system call`.
+
+    Cache
+    - A small, very fast memory placed between the CPU and main memory, holding the instructions and data most recently used.
+    - It exists to bridge a huge speed gap: a CPU cycle is under a nanosecond, a DRAM access is 50-100 ns, or roughly 200 cycles.
+    ```
+       CPU <-> L1 (32-64 KB, ~4 cy) <-> L2 (256KB-1MB, ~12 cy)
+           <-> L3 (8-32 MB, ~40 cy) <-> RAM (GB, ~200 cy)
+    ```
+    ```
+       Average access time = hit time + (miss rate x miss penalty)
+
+       Hit time 5 ns , miss penalty 100 ns , hit ratio 95 % :
+            5 + (0.05 x 100) = 10 ns , against 105 ns with no cache
+    ```
+    - It works because of the `principle of locality`: a program reuses the same instructions and data (temporal locality) and reads neighbouring addresses (spatial locality), so a small cache satisfies 90-99 per cent of all requests.
+    - Other caches built on the same idea: the `TLB` for address translations, the `disk cache` in RAM, the `browser cache` and the `DNS cache`.
+
+    Virtual memory
+    - A technique that lets a process use an address space `larger than the physical RAM`, by keeping only the actively used parts in memory and the rest on disk.
+    ```
+       Virtual address ----> [ MMU + page table ] ----> Physical address
+                                  |
+                             page not present?
+                                  |
+                             PAGE FAULT -> fetch it from disk
+    ```
+    ```
+       Implemented by PAGING : the virtual address space is divided into
+       fixed-size PAGES (typically 4 KB), physical memory into FRAMES of
+       the same size, and a PAGE TABLE maps one to the other.
+    ```
+    - Benefits: programs larger than RAM can run; more processes fit in memory, so multiprogramming rises; each process gets its own protected address space; and the programmer need not manage overlays.
+    - Cost: a page fault costs milliseconds. If the working sets of the running processes exceed physical memory, the system spends all its time swapping instead of computing — `thrashing`.
+    - Page replacement algorithms: `FIFO`, `LRU`, `Optimal`, `Clock (second chance)`, `NRU`.
+
+    RAID
+    - `Redundant Array of Independent Disks` — several physical disks combined into one logical drive, for `performance`, `fault tolerance` and `capacity`.
+    ```
+       Striping  : data split across disks and accessed in parallel -> speed
+       Mirroring : the same data written to two disks -> redundancy
+       Parity    : an XOR checksum, from which a lost block is rebuilt
+    ```
+
+    | Level | Technique | Min disks | Usable | Survives |
+    |---|---|---|---|---|
+    | RAID 0 | Striping | 2 | 100 % | `Nothing` |
+    | RAID 1 | Mirroring | 2 | 50 % | 1 disk |
+    | RAID 5 | Striping + distributed parity | 3 | (n-1)/n | 1 disk |
+    | RAID 6 | Double parity | 4 | (n-2)/n | 2 disks |
+    | RAID 10 | Mirror then stripe | 4 | 50 % | 1 per mirror |
+
+    - `RAID is not a backup`. It protects against `disk failure` alone; a deleted table, ransomware, corruption or a fire is written faithfully to every disk at the same instant.
+
+    How the four relate
+    ```
+       The KERNEL manages all of them.
+       CACHE and VIRTUAL MEMORY are both parts of the MEMORY HIERARCHY -
+            cache hides the slowness of RAM, virtual memory hides the
+            smallness of RAM by using the disk.
+       RAID sits at the bottom of that hierarchy, making the disk itself
+            faster and more reliable.
+    ```
 
 15. **(a) Briefly describe the function that measure the efficiency of an operating system.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025 (ET: N/A)]*
 
+    Answer: The efficiency of an operating system is judged by how well it uses the hardware and how well it serves the user. The measures fall into two groups, and they conflict with one another.
+
+    System-oriented measures
+    ```
+       1. CPU UTILISATION
+            The percentage of time the CPU is doing useful work.
+            Target : 40 % on a lightly loaded system to 90 % on a heavily
+            loaded one. It should be MAXIMISED.
+
+       2. THROUGHPUT
+            The number of processes completed per unit time.
+            Long jobs give a low figure, short jobs a high one, so it is
+            meaningful only for a comparable workload. MAXIMISE.
+
+       3. MEMORY UTILISATION
+            How much of physical memory holds useful data rather than
+            being free or wasted by fragmentation.
+
+       4. DEVICE UTILISATION
+            Keeping the disks and other devices busy in parallel with
+            the CPU, which is what multiprogramming is for.
+
+       5. FAIRNESS
+            Every process gets a reasonable share, and none STARVES.
+    ```
+
+    User-oriented measures
+    ```
+       6. TURNAROUND TIME
+            Submission to completion, for one process.
+            Turnaround = Completion - Arrival = Waiting + Burst + I/O
+            MINIMISE.
+
+       7. WAITING TIME
+            Total time spent in the ready queue.
+            Waiting = Turnaround - Burst.  MINIMISE.
+
+       8. RESPONSE TIME
+            Submission to the FIRST response. This is what an interactive
+            user actually feels, and it matters more than turnaround time
+            on a desktop. MINIMISE.
+
+       9. PREDICTABILITY
+            The same job should take about the same time each run.
+            Essential in real-time systems.
+
+      10. RELIABILITY and AVAILABILITY
+            Uptime , mean time between failures , and graceful recovery
+            from a fault.
+    ```
+
+    The functions whose efficiency is being measured
+    ```
+       PROCESS MANAGEMENT : the scheduling algorithm decides waiting,
+            turnaround and response time.
+            Measured by average waiting time and average turnaround time.
+
+       MEMORY MANAGEMENT  : paging and virtual memory decide how many
+            processes fit and how often a page fault occurs.
+            Measured by the PAGE FAULT RATE and the degree of
+            multiprogramming sustained without THRASHING.
+
+       FILE and I/O MANAGEMENT : disk scheduling and buffering decide
+            throughput.
+            Measured by average seek time, transfer rate and the disk
+            cache hit ratio.
+
+       CONTEXT SWITCHING  : pure overhead.
+            Measured as switch time / time quantum. It must stay a small
+            percentage.
+
+       CACHE PERFORMANCE  :
+            Average access time = hit time + (miss rate x miss penalty)
+            Measured by the HIT RATIO, which is the single most influential
+            number in system performance.
+    ```
+
+    Worked illustrations
+    ```
+       CPU utilisation with n processes each spending fraction p waiting
+       for I/O :
+
+            CPU utilisation = 1 - p^n
+
+            p = 0.8 , n = 1 -> 20 %
+            p = 0.8 , n = 4 -> 59 %
+            p = 0.8 , n = 10 -> 89 %
+
+       This is the quantitative argument for multiprogramming.
+    ```
+    ```
+       Effective memory access time with paging :
+
+            EAT = (1 - p) x memory access + p x page fault time
+
+            Memory access 100 ns , page fault 8 ms , fault rate 1 in 1000 :
+            EAT = 0.999 x 100 ns + 0.001 x 8,000,000 ns = 8100 ns
+
+            A fault rate of just 0.1 per cent makes memory 81 times slower.
+            This is why the page fault rate must be kept extremely low.
+    ```
+
+    The conflicts between the measures
+    ```
+       Maximising CPU UTILISATION can worsen RESPONSE TIME, because the
+            CPU is kept busy with long jobs.
+
+       Minimising average TURNAROUND favours SJF, which STARVES long jobs.
+
+       Minimising RESPONSE TIME favours a small quantum, which raises
+            CONTEXT-SWITCH OVERHEAD and lowers throughput.
+
+       Raising the DEGREE OF MULTIPROGRAMMING raises utilisation until the
+            working sets exceed memory, at which point THRASHING collapses
+            performance entirely.
+    ```
+
+    - The conclusion an examiner looks for: `no operating system optimises every measure at once`. A batch system maximises throughput, a time-sharing system minimises response time, and a real-time system maximises predictability. The design is always a deliberate choice among these conflicting criteria.
+
 16. **What is the difference between micro kernel and macro kernel? What are the sub components of I/O manager in Windows NT?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052-1053 (ET: BUET)]*
+
+    Answer: Micro kernel versus macro (monolithic) kernel
+
+    `Macro kernel (monolithic)`
+    - `Every` operating-system service — scheduler, memory manager, file system, device drivers, network stack — runs inside the kernel in `kernel mode`, in one address space.
+    - Services call each other by `direct function call`, which is what makes it fast.
+    - Examples: `Linux`, traditional `UNIX`, `MS-DOS`, `BSD`.
+
+    `Microkernel`
+    - Only the `minimum` runs in kernel mode: inter-process communication, basic scheduling and address-space management. Drivers, file systems and network stacks run as ordinary `user-mode server processes`.
+    - They communicate by `message passing` through the kernel, costing two context switches per request.
+    - Examples: `QNX`, `Minix`, `Mach`, `L4`, `Symbian`.
+    ```
+       MONOLITHIC                        MICROKERNEL
+       +----------------------+          +----------------------------+
+       |     applications     |          | apps | file | driver | net |
+       +----------------------+          |      | srvr | server | srv |
+       | scheduler | memory   |          +----------------------------+
+       | file sys  | drivers  |          |  microkernel : IPC ,       |
+       | network   | IPC      |          |  scheduling , memory       |
+       +----------------------+          +----------------------------+
+       |      hardware        |          |         hardware           |
+       +----------------------+          +----------------------------+
+    ```
+
+    Difference
+
+    | Point | Macro (monolithic) kernel | Microkernel |
+    |---|---|---|
+    | Size | Large — millions of lines | Small — often under 10,000 lines |
+    | Services in kernel mode | `All` | Only IPC, scheduling, memory |
+    | Communication | Direct function calls | `Message passing` |
+    | Speed | `Faster` | Slower — IPC overhead |
+    | Reliability | A driver crash kills the `whole system` | A server crash kills only that service |
+    | Extensibility | Recompile or load a module | Add a user-space process |
+    | Debugging | Hard — kernel level | Easy — user level |
+    | Security | Large privileged attack surface | Small trusted computing base |
+    | Portability | Lower | Higher |
+    | Examples | Linux, UNIX | QNX, Minix, L4 |
+
+    - The trade-off in one line: `monolithic buys speed at the cost of reliability; microkernel buys reliability at the cost of speed`. Real systems are `hybrid` — Windows NT moved graphics into the kernel for speed, macOS puts a BSD layer inside Mach, and Linux uses loadable modules to gain flexibility while keeping direct calls.
+
+    Sub-components of the Windows NT I/O Manager
+
+    - The `I/O Manager` is the Executive component that handles all input and output. It defines a uniform, packet-driven interface so that every driver looks the same to the rest of the system.
+    ```
+       The central object is the IRP - the I/O REQUEST PACKET. Every I/O
+       operation becomes an IRP, which is passed DOWN a stack of drivers
+       and back up with the result.
+    ```
+
+    Its sub-components
+    ```
+       1. CACHE MANAGER
+            Provides a unified file cache for all file systems. Maps file
+            data into virtual memory and works with the Memory Manager,
+            so that reads are usually satisfied without touching the disk.
+            Handles lazy writing and read-ahead.
+
+       2. FILE SYSTEM DRIVERS
+            NTFS , FAT32 , exFAT , CDFS , UDF , and network redirectors.
+            They translate a file request into disk-block requests.
+
+       3. DEVICE DRIVERS
+            Control individual hardware devices. Layered as :
+                 HIGHEST-LEVEL : file system drivers
+                 INTERMEDIATE  : class drivers, filter drivers,
+                                 mirror and encryption drivers
+                 LOWEST-LEVEL  : hardware bus drivers, port drivers
+
+       4. NETWORK DRIVERS and REDIRECTORS
+            Present remote files and printers as though they were local,
+            through the NDIS interface.
+
+       5. PLUG AND PLAY MANAGER
+            Detects hardware, allocates resources, loads the right driver
+            and supports hot insertion and removal.
+
+       6. POWER MANAGER
+            Coordinates power state transitions (sleep, hibernate,
+            shutdown) across all devices, sending power IRPs.
+
+       7. WMI (Windows Management Instrumentation) support
+            Lets drivers publish management and performance data.
+
+       8. I/O REQUEST PACKET (IRP) MANAGEMENT
+            Allocates, queues, completes and cancels IRPs, and manages
+            the driver stack each one traverses.
+    ```
+
+    How a read travels through it
+    ```
+       Application calls ReadFile()
+            |
+       I/O Manager creates an IRP
+            |
+       Cache Manager - is the data already cached?  ->  yes, return it
+            |  no
+       File system driver (NTFS) - translate to disk blocks
+            |
+       Volume / partition driver
+            |
+       Disk class driver -> port driver -> miniport driver
+            |
+       Hardware
+            |
+       Interrupt -> completion travels back UP the same stack
+    ```
+    - The `layered, packet-driven` design is what allows a filter driver — an antivirus scanner, an encryption layer, a compression layer — to be inserted anywhere in the stack without changing any other driver.
 
 17. **What is operating System? What are the main components of operating System?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
 
+    Answer: What an operating system is
+    - An `operating system` is the system software that manages the computer's hardware and software resources and provides common services for application programs. It is the `interface between the user and the hardware`.
+    ```
+            USER
+              |
+           APPLICATION PROGRAMS
+              |
+           OPERATING SYSTEM
+              |
+           HARDWARE
+    ```
+    - It is the first program loaded after the firmware, and it stays in memory until shutdown. Examples: `Windows, Linux, macOS, Android, iOS, UNIX`.
+
+    Its two roles
+    ```
+       As a RESOURCE MANAGER : allocates the CPU, memory, devices and files
+            among competing processes, fairly and efficiently.
+
+       As an EXTENDED MACHINE : hides messy hardware behind a clean
+            interface, so a program calls read() without knowing whether
+            the data is on an SSD, a network share or a USB stick.
+    ```
+
+    Main components
+
+    1. `Kernel`
+    - The core, resident in memory and running in privileged mode with full hardware access. Everything below is either part of it or works through it.
+
+    2. `Process management`
+    ```
+       Creating, scheduling, suspending and terminating processes
+       Maintaining a Process Control Block for each
+       Context switching
+       Inter-process communication : pipes, signals, shared memory
+       Deadlock detection and handling
+    ```
+
+    3. `Memory management`
+    ```
+       Allocating and freeing memory
+       Tracking which parts are in use and by whom
+       Paging, segmentation and VIRTUAL MEMORY
+       Protecting each process's memory from every other
+    ```
+
+    4. `File management`
+    ```
+       Creating, reading, writing and deleting files and directories
+       Maintaining the directory structure
+       Mapping files onto disk blocks
+       Enforcing access permissions
+    ```
+
+    5. `Device (I/O) management`
+    ```
+       Device drivers , which hide hardware differences
+       Interrupt handling
+       Buffering , caching and spooling
+       Disk scheduling
+    ```
+
+    6. `Secondary storage management`
+    ```
+       Free-space management , storage allocation , disk scheduling
+    ```
+
+    7. `Security and protection`
+    ```
+       Authentication , authorisation , encryption , audit logging
+       Separating user mode from kernel mode
+    ```
+
+    8. `Command interpreter (shell) and user interface`
+    ```
+       CLI : bash , sh , PowerShell , cmd
+       GUI : GNOME , KDE , Windows Explorer , Aqua
+    ```
+
+    9. `System call interface`
+    ```
+       The controlled entry points through which an application requests a
+       privileged service - the only legal route into kernel mode.
+       Examples : open , read , write , fork , exec , wait , exit
+    ```
+
+    10. `Networking`
+    ```
+       Protocol stacks , sockets , remote file systems
+    ```
+
+    Diagram
+    ```
+       +-----------------------------------------------------+
+       |               USER APPLICATIONS                     |
+       +-----------------------------------------------------+
+       |     SHELL / GUI          |    SYSTEM PROGRAMS       |
+       +-----------------------------------------------------+
+       |            SYSTEM CALL INTERFACE                    |
+       +-----------------------------------------------------+
+       |                    KERNEL                           |
+       |  Process   | Memory   | File     | Device  | Network|
+       |  manager   | manager  | manager  | manager | stack  |
+       |            |          |          |         |        |
+       |  Scheduler | Paging   | Buffers  | Drivers |        |
+       +-----------------------------------------------------+
+       |                    HARDWARE                         |
+       |     CPU   |   Memory   |   Disk   |   I/O devices   |
+       +-----------------------------------------------------+
+    ```
+
+    - The essential point: the kernel is the only software with `full hardware access`, and every other program must ask it for anything privileged. That single design decision is what gives an operating system its `protection, multitasking and stability`.
+
 18. **(গ) Operating System-এর সংগঠন সহ কাজ উল্লেখ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067-1068 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) Organisation (structure) of an operating system
+
+    An operating system can be built in several ways. The structures, from simplest to most modern, are these.
+
+    1. `Simple / monolithic structure`
+    - No clear separation of modules; everything is written together with no defined interfaces.
+    - Example: `MS-DOS`, in which an application could call BIOS routines directly, so a faulty program could crash the machine.
+
+    2. `Layered structure`
+    - The system is divided into layers, each built only on the one below it and offering a clean interface to the one above.
+    ```
+       Layer 5 : user programs
+       Layer 4 : I/O management
+       Layer 3 : operator-process communication
+       Layer 2 : memory management
+       Layer 1 : CPU scheduling
+       Layer 0 : hardware
+    ```
+    - Advantage: easy to build, debug and verify one layer at a time. Disadvantage: deciding the order of layers is difficult, and crossing many layers costs performance.
+    - Example: the `THE` system, and early UNIX in part.
+
+    3. `Microkernel structure`
+    - Only the minimum runs in kernel mode; everything else is a user-space server communicating by message passing.
+    - Reliable and extensible, but slower. Example: `QNX`, `Minix`, `Mach`.
+
+    4. `Modular structure`
+    - A small core kernel with `loadable modules` added at run time. This is what modern `Linux` uses: `insmod` and `rmmod` add and remove drivers without recompiling or rebooting.
+    - It gives the microkernel's flexibility while keeping the monolithic kernel's direct function calls.
+
+    5. `Hybrid structure`
+    - A combination chosen for practicality. `Windows NT` and `macOS XNU` both are.
+
+    6. `Virtual machine structure`
+    - A hypervisor presents each operating system with the illusion of its own hardware. Examples: `VMware`, `Hyper-V`, `KVM`, `VirtualBox`, and `IBM VM/370`, the original.
+
+    Diagram of the general organisation
+    ```
+       +-----------------------------------------------------+
+       |               USER APPLICATIONS                     |
+       +-----------------------------------------------------+
+       |     SHELL / GUI          |    SYSTEM PROGRAMS       |
+       +-----------------------------------------------------+
+       |            SYSTEM CALL INTERFACE                    |
+       +-----------------------------------------------------+
+       |                    KERNEL                           |
+       |  Process   | Memory   | File     | Device  | Network|
+       |  manager   | manager  | manager  | manager | stack  |
+       +-----------------------------------------------------+
+       |                    HARDWARE                         |
+       +-----------------------------------------------------+
+    ```
+
+    Functions of an operating system
+    ```
+       1. PROCESS MANAGEMENT
+            Create, schedule, suspend and terminate processes ; maintain
+            the PCB ; context switching ; inter-process communication ;
+            deadlock handling.
+
+       2. MEMORY MANAGEMENT
+            Allocate and free memory ; track what is in use ; paging,
+            segmentation and virtual memory ; protect one process from
+            another.
+
+       3. FILE MANAGEMENT
+            Create, read, write and delete files and directories ;
+            maintain the directory structure ; map files onto disk blocks ;
+            enforce permissions.
+
+       4. DEVICE (I/O) MANAGEMENT
+            Device drivers ; interrupt handling ; buffering, caching and
+            spooling ; disk scheduling.
+
+       5. SECONDARY STORAGE MANAGEMENT
+            Free-space management , allocation , disk scheduling.
+
+       6. SECURITY AND PROTECTION
+            Authentication , authorisation , encryption , audit logging ,
+            and the separation of user mode from kernel mode.
+
+       7. USER INTERFACE
+            A command-line shell, a graphical desktop, or both.
+
+       8. RESOURCE ALLOCATION AND ACCOUNTING
+            Share the CPU, memory and devices fairly ; record usage.
+
+       9. ERROR DETECTION AND RECOVERY
+            Detect a hardware fault, a bad instruction or a full disk and
+            respond without crashing the system.
+
+      10. NETWORKING
+            Protocol stacks , sockets , remote file systems.
+    ```
+
+    - The two ways of summarising the whole thing, which examiners like: the operating system acts as a `resource manager`, allocating the CPU, memory, devices and files among competing processes, and as an `extended machine`, hiding messy hardware behind a clean and uniform interface.
 
 19. **(খ) Time shearing operating system and Real time operating system-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Time-sharing operating system
+    - A `time-sharing` system lets `many users` work at the same computer at the same time, by giving each a short `time slice` of the CPU in rotation. The switching is so fast that every user believes the machine is theirs alone.
+    - It is `multiprogramming plus a timer`: the CPU is taken away when the quantum expires, not only when a process requests I/O.
+    ```
+       Goal : MINIMISE RESPONSE TIME, so that interactive work feels instant
+       Scheduling : Round Robin, or a multilevel feedback queue
+       Examples : UNIX , Linux , Windows , macOS , multi-user mainframes
+    ```
+
+    Real-time operating system
+    - A `real-time` system guarantees that a task completes within a `fixed deadline`. Correctness depends not only on `what` is computed but on `when` it is delivered — a correct answer that arrives late is a failure.
+    ```
+       HARD real time : a missed deadline is a TOTAL FAILURE
+            pacemaker , airbag , aircraft flight control , reactor shutdown
+       SOFT real time : a missed deadline degrades quality
+            video streaming , VoIP , online gaming
+
+       Goal : PREDICTABILITY, not average speed
+       Scheduling : preemptive priority , Rate Monotonic , Earliest Deadline First
+       Examples : VxWorks , QNX , FreeRTOS , RTLinux
+    ```
+
+    Difference
+
+    | Point | Time-sharing OS | Real-time OS |
+    |---|---|---|
+    | Primary goal | Minimise `response time` for users | Meet every `deadline` |
+    | Key property | Fairness | `Predictability` (determinism) |
+    | Timing | Best effort — no guarantee | Guaranteed worst case |
+    | Scheduling | Round Robin, multilevel feedback | Preemptive priority, RMS, EDF |
+    | Users | Many, interactive | Usually none — it controls a device |
+    | Effect of a delay | Slight inconvenience | Failure, possibly catastrophic |
+    | Virtual memory | Standard | `Avoided` in hard real time — a page fault is unpredictable |
+    | Kernel | Large, general purpose | Small, fully preemptible |
+    | Throughput | Maximised | Sacrificed for predictability |
+    | Task priority | Dynamic, adjusted for fairness | Fixed by deadline importance |
+    | Memory | Large, paged | Small, often static allocation |
+    | Examples | UNIX, Linux, Windows | VxWorks, QNX, FreeRTOS |
+    | Used in | Servers, desktops, mainframes | Medical devices, avionics, cars, robots |
+
+    Why a time-sharing system cannot be used for hard real-time work
+    ```
+       1. VIRTUAL MEMORY : a page fault takes milliseconds, and cannot be
+          predicted. An airbag controller cannot risk it.
+
+       2. NON-PREEMPTIBLE KERNEL SECTIONS : a general-purpose kernel spends
+          time in critical sections where it cannot be interrupted, so the
+          worst-case latency is unbounded.
+
+       3. FAIR SCHEDULING : the scheduler deliberately gives every process
+          a turn. A real-time system must let the urgent task run
+          IMMEDIATELY, whatever else is waiting.
+
+       4. UNBOUNDED INTERRUPT LATENCY : general-purpose drivers may disable
+          interrupts for long periods.
+    ```
+
+    The middle ground
+    ```
+       Linux with the PREEMPT_RT patch makes almost the whole kernel
+       preemptible and gives bounded latency, which is enough for SOFT
+       real-time work such as audio processing and industrial control -
+       but not for a pacemaker.
+    ```
+
+    - The point most often misunderstood, and worth stating plainly: `real time does not mean fast`. A system that always responds within 50 ms is real-time; one that usually responds in 1 ms but occasionally takes 200 ms is not. For a safety-critical device, the guarantee matters and the average does not.
+
 20. **(ক) মাল্টি প্রোগ্রামিং অপারেটিং সিস্টেম কী? সচিত্র বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1092 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) A `multiprogramming operating system` keeps `several programs in main memory at the same time`, so that when one program waits for input or output the CPU is given to another instead of sitting idle.
+
+    - Only one program executes at any instant on a single CPU; the operating system `interleaves` them so rapidly that the CPU is never idle while work is waiting.
+
+    The problem it solves
+    ```
+       A single program alternates between CPU bursts and I/O waits, and a
+       typical program spends 60-80 per cent of its time waiting.
+
+       WITHOUT multiprogramming :
+
+       Program A : |CPU|--------- waiting for disk ---------|CPU|
+                                 CPU IS IDLE HERE
+
+       WITH multiprogramming :
+
+       Program A : |CPU|........I/O wait.........|CPU|.....I/O.....
+       Program B : ......|CPU|.......I/O wait........|CPU|.........
+       Program C : ...........|CPU|.......I/O wait........|CPU|....
+
+       CPU busy  : |AAA|BBB|CCC|AAA|BBB|CCC|...   -  NEVER IDLE
+    ```
+
+    Memory layout
+    ```
+       +---------------------------+  high address
+       |    Operating system       |
+       +---------------------------+
+       |    Program A              |
+       +---------------------------+
+       |    Program B              |     several programs resident
+       +---------------------------+     at the same time
+       |    Program C              |
+       +---------------------------+
+       |    Free space             |
+       +---------------------------+  0
+    ```
+
+    What it requires
+    ```
+       1. SEVERAL PROGRAMS IN MEMORY at once - fixed partitions in early
+          systems, paging and virtual memory in modern ones.
+
+       2. MEMORY PROTECTION - base and limit registers, or the MMU and page
+          tables, so one program cannot touch another's memory.
+
+       3. INTERRUPTS - the mechanism that returns control to the OS when
+          an I/O operation completes.
+
+       4. CONTEXT SWITCHING - saving the CPU state of one process into its
+          PCB and loading another's.
+
+       5. A SCHEDULER - to choose which ready process runs next.
+
+       6. THE PROCESS CONTROL BLOCK - one per process, holding its state,
+          program counter, registers, memory limits and open files.
+    ```
+
+    CPU utilisation, quantified
+    ```
+       If each process spends a fraction p of its time waiting for I/O,
+       and n processes are in memory :
+
+            CPU utilisation = 1 - p^n
+
+       p = 0.8 , n = 1  ->  20 %
+       p = 0.8 , n = 4  ->  59 %
+       p = 0.8 , n = 10 ->  89 %
+    ```
+    - This single formula is the quantitative argument for multiprogramming, and it also shows the diminishing return: beyond a point, adding processes gains little and risks `thrashing`.
+
+    Advantages
+    ```
+       High CPU utilisation - the CPU is almost never idle
+       Higher throughput - more jobs completed per hour
+       Better use of memory and devices
+       Shorter average waiting time
+    ```
+
+    Disadvantages
+    ```
+       Complex memory management and protection hardware required
+       Context-switch overhead
+       Scheduling complexity
+       Deadlock and synchronisation problems appear
+       THRASHING if too many processes are admitted
+    ```
+
+    The related terms, which examiners like to see distinguished
+    ```
+       MULTIPROGRAMMING : several programs in MEMORY ; the switch happens
+            when one requests I/O. Goal - keep the CPU busy.
+
+       MULTITASKING     : multiprogramming plus TIME SHARING ; a timer also
+            forces a switch, so every task gets a regular turn.
+            Goal - responsiveness.
+
+       MULTIPROCESSING  : more than one CPU, so tasks run truly in parallel.
+
+       MULTITHREADING   : one process divided into threads sharing its
+            address space.
+    ```
 
 21. **Discuss the Operating System architecture and how it works?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
 
+    Answer: Operating system architecture
+
+    An operating system can be structured in several ways. The main architectures, from oldest to most modern, are these.
+
+    1. `Monolithic architecture`
+    - Every service — scheduler, memory manager, file system, drivers, network stack — runs inside the kernel in `kernel mode`, in one address space, calling each other by direct function call.
+    ```
+       +-------------------------------------------------+
+       |          USER APPLICATIONS       (user mode)    |
+       +-------------------------------------------------+
+       |               SYSTEM CALL INTERFACE             |
+       +-------------------------------------------------+
+       |   Scheduler | Memory | File system | Drivers    |
+       |   Network stack | IPC        (kernel mode)      |
+       +-------------------------------------------------+
+       |                  HARDWARE                       |
+       +-------------------------------------------------+
+    ```
+    - Fast, but a bug in any driver can crash the whole system. Example: `Linux`, `UNIX`.
+
+    2. `Layered architecture`
+    - Divided into layers, each using only the one below and offering a clean interface above.
+    ```
+       Layer 5 : user programs
+       Layer 4 : I/O management
+       Layer 3 : operator-process communication
+       Layer 2 : memory management
+       Layer 1 : CPU scheduling
+       Layer 0 : hardware
+    ```
+    - Easy to build and debug one layer at a time, but crossing many layers costs performance.
+
+    3. `Microkernel architecture`
+    - Only IPC, basic scheduling and address-space management run in kernel mode; drivers and file systems are user-space servers communicating by `message passing`.
+    - Reliable and secure, but slower. Example: `QNX`, `Minix`, `L4`.
+
+    4. `Modular architecture`
+    - A small core with `loadable kernel modules` added at run time. Modern `Linux` uses this: `insmod` and `rmmod` add and remove drivers without a reboot.
+
+    5. `Hybrid architecture`
+    - A practical combination. `Windows NT` moved graphics into the kernel for speed; `macOS XNU` puts a BSD layer inside the Mach microkernel.
+
+    How an operating system works — the boot sequence
+    ```
+       1. POWER ON
+       2. FIRMWARE (BIOS/UEFI) runs from ROM : POST, find the boot device
+       3. BOOTLOADER (GRUB, Windows Boot Manager) is loaded from disk
+       4. The bootloader loads the KERNEL into RAM
+       5. The kernel initialises memory management, the scheduler and drivers
+       6. The first process is started - 'init' or 'systemd' on Linux
+       7. System services and daemons start
+       8. The login prompt or graphical desktop appears
+    ```
+
+    How it works while running — the system-call cycle
+    ```mermaid
+    sequenceDiagram
+        participant A as Application (user mode)
+        participant K as Kernel (kernel mode)
+        participant H as Hardware
+        A->>K: system call, e.g. read()
+        K->>K: switch to kernel mode, validate arguments
+        K->>H: issue the device request
+        K->>A: block the caller, schedule another process
+        H->>K: interrupt - the data is ready
+        K->>A: copy the data, mark the process READY
+    ```
+    ```
+       1. The application executes a TRAP instruction (int 0x80, syscall).
+       2. The CPU switches from USER mode to KERNEL mode.
+       3. The kernel validates the arguments and performs the service.
+       4. If it must wait, the process is BLOCKED and the scheduler picks
+          another - a CONTEXT SWITCH.
+       5. When the device finishes it raises an INTERRUPT.
+       6. The handler marks the waiting process READY.
+       7. Control returns to user mode with the result.
+    ```
+
+    The two modes, which make the whole design work
+    ```
+       USER MODE   : restricted. A program cannot touch the hardware,
+                     cannot access another process's memory, and cannot
+                     execute privileged instructions.
+
+       KERNEL MODE : unrestricted. Full access to hardware and all memory.
+
+       A MODE BIT in the processor records which is current. The only way
+       to enter kernel mode is through a system call, an interrupt or a
+       trap - all of which land at an address the kernel chose.
+    ```
+    - This single hardware feature is what gives an operating system its `protection`. Without it, any program could overwrite the kernel.
+
+    The four managers at work simultaneously
+    ```
+       PROCESS MANAGER : chooses which process runs, performs context
+            switches, handles creation and termination.
+
+       MEMORY MANAGER  : allocates memory, translates virtual addresses to
+            physical ones through the page table, handles page faults.
+
+       FILE MANAGER    : maps file names to disk blocks, enforces
+            permissions, maintains the directory tree.
+
+       DEVICE MANAGER  : drives the hardware through drivers, handles
+            interrupts, buffers and schedules I/O.
+    ```
+
+    - Summed up in one sentence: the operating system is a `permanently resident program that owns the hardware`, and every other program runs in a restricted mode and must ask it — by system call — for anything privileged. Everything else in its design follows from that arrangement.
+
 22. **Difference between Multiprocessing and Multitasking.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
+
+    Answer: `Multiprocessing` means a computer having `more than one CPU`, so tasks genuinely execute at the same instant. `Multitasking` means `one CPU` switching rapidly between tasks so that they appear to run at once.
+
+    Multiprocessing
+    - Two or more `physical processors` (or cores) in one system, sharing memory and controlled by one operating system.
+    ```
+       CPU1 : |AAAAAAAAAA|
+       CPU2 : |BBBBBBBBBB|      all four at the SAME instant
+       CPU3 : |CCCCCCCCCC|      - TRUE parallelism
+       CPU4 : |DDDDDDDDDD|
+    ```
+    ```
+       Types :
+          SYMMETRIC (SMP)  : every CPU is equal, shares one memory, runs
+               the same copy of the OS. The normal arrangement today.
+          ASYMMETRIC       : a master CPU controls the others, which are
+               assigned specific tasks.
+    ```
+
+    Multitasking
+    - One CPU divided in time. Each task gets a short `quantum`, and `context switching` moves the CPU between them thousands of times a second.
+    ```
+       ONE CPU :
+
+       Task A : |AA|      |AA|      |AA|
+       Task B :     |BB|      |BB|      |BB|      - INTERLEAVED,
+       Task C :         |CC|      |CC|              not simultaneous
+    ```
+    ```
+       Types :
+          PREEMPTIVE  : the OS forcibly reclaims the CPU. Windows, Linux.
+          COOPERATIVE : a task must yield voluntarily. Early Windows.
+    ```
+
+    Difference
+
+    | Point | Multiprocessing | Multitasking |
+    |---|---|---|
+    | Number of CPUs | `Two or more` | `One` |
+    | Execution | `Genuinely simultaneous` | Interleaved — appears simultaneous |
+    | Parallelism | Real | Apparent |
+    | Mechanism | Parallel execution on separate CPUs | Time slicing and context switching |
+    | Requires | Multiple processors, cache coherence | A scheduler and a timer interrupt |
+    | Throughput | Rises with the number of CPUs | Unchanged — the same CPU does the work |
+    | Failure of one CPU | The system continues on the others | Not applicable |
+    | Cost | Extra hardware | No extra hardware |
+    | Overhead | Synchronisation, cache coherence | Context switching |
+    | Purpose | Raw throughput and reliability | Responsiveness and CPU utilisation |
+    | Examples | A multi-core server, a supercomputer | Windows on a single-core machine |
+
+    Why multiprocessing is used
+    ```
+       Increased THROUGHPUT - more work per unit time
+       Economy of SCALE - the CPUs share memory, disks and power supplies,
+            so n processors in one box cost far less than n separate machines
+       Increased RELIABILITY - graceful degradation. If one CPU fails, the
+            others continue, which is why it is used in fault-tolerant systems
+    ```
+
+    The limit on multiprocessing — Amdahl's law
+    ```
+       Speed-up = 1 / [ (1 - P) + P/N ]
+
+       P = the parallelisable fraction of the program
+       N = the number of processors
+    ```
+    ```
+       A program that is 90 % parallel :
+            N = 2   ->  1.82 times
+            N = 4   ->  3.08
+            N = 8   ->  4.71
+            N = 100 ->  9.17
+            N = inf ->  10.0        the hard ceiling
+
+       The 10 per cent serial part alone limits the speed-up to 10,
+       however many processors are added.
+    ```
+
+    The related terms
+    ```
+       MULTIPROGRAMMING : several programs in MEMORY, so the CPU switches
+            when one waits for I/O. Goal - keep the CPU busy.
+
+       MULTITASKING     : multiprogramming plus TIME SHARING, so a timer
+            also forces a switch. Goal - responsiveness.
+
+       MULTITHREADING   : one PROCESS divided into threads sharing an
+            address space. Cheaper to switch than a process.
+
+       MULTIPROCESSING  : more than one CPU. The only one that gives
+            TRUE parallelism.
+    ```
+    - In practice a modern machine uses all four at once: eight cores really execute in parallel (multiprocessing), each core time-slices among many processes (multitasking), hundreds of processes are resident (multiprogramming), and each browser tab is a thread (multithreading).
 
 23. **Difference between Multitasking and Multiprogramming.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
 
+    Answer: `Multitasking` and `multiprogramming` are closely related — multitasking is multiprogramming with time sharing added — which is why the distinction is so often asked.
+
+    Multiprogramming
+    - Keeping `several programs in main memory` at once, so that when one waits for I/O the CPU is given to another rather than sitting idle.
+    - The switch is triggered by an `I/O request` or by the process terminating. A program that never does I/O keeps the CPU indefinitely.
+    ```
+       Program A : |CPU|........I/O wait.........|CPU|
+       Program B : ......|CPU|.......I/O wait........|CPU|
+
+       The switch happens when A asks for I/O, not on a clock tick.
+    ```
+    ```
+       GOAL : maximise CPU UTILISATION
+       Origin : batch systems of the 1960s
+    ```
+
+    Multitasking
+    - Multiprogramming `plus a timer`. Each task gets a fixed `time quantum`, and when it expires the operating system `preempts` the task whether or not it has asked for I/O.
+    ```
+       Task A : |AA|      |AA|      |AA|
+       Task B :     |BB|      |BB|      |BB|
+       Task C :         |CC|      |CC|
+
+       The switch happens on every quantum expiry.
+    ```
+    ```
+       GOAL : minimise RESPONSE TIME, so the system feels interactive
+       Origin : time-sharing systems
+    ```
+
+    Difference
+
+    | Point | Multiprogramming | Multitasking |
+    |---|---|---|
+    | Definition | Several programs held in memory | Several tasks share the CPU by time slicing |
+    | Switch triggered by | An `I/O request` or termination | A `timer interrupt` (quantum expiry) |
+    | Preemption | Not necessarily | `Always` |
+    | Primary goal | Maximise CPU utilisation | Minimise response time |
+    | Time quantum | Not used | `Essential` |
+    | Interactivity | Poor | `Good` |
+    | User interaction | Little or none | Continuous |
+    | Context switches | Fewer | Many more |
+    | Overhead | Lower | Higher |
+    | Typical system | Batch | Time-sharing, desktop |
+    | Examples | Early mainframe batch systems | Windows, Linux, macOS, Android |
+
+    The relationship between them
+    ```
+       MULTITASKING is a LOGICAL EXTENSION of MULTIPROGRAMMING.
+
+       Every multitasking system is also a multiprogramming system,
+       because it must hold several programs in memory to switch between.
+       But a multiprogramming system is NOT necessarily multitasking - if
+       it switches only on I/O, a compute-bound job can hold the CPU for
+       minutes, which makes interactive use impossible.
+    ```
+
+    What both require
+    ```
+       Several programs resident in memory
+       MEMORY PROTECTION, so one cannot corrupt another
+       INTERRUPTS, to return control to the operating system
+       CONTEXT SWITCHING, with a Process Control Block per process
+       A SCHEDULER
+
+       Multitasking additionally requires a TIMER INTERRUPT, which is what
+       makes preemption possible.
+    ```
+
+    The full family, for completeness
+    ```
+       MULTIPROGRAMMING : several programs in memory ; switch on I/O
+       MULTITASKING     : + time sharing ; switch on a timer
+       MULTITHREADING   : one process split into threads sharing its
+                          address space ; cheaper to switch
+       MULTIPROCESSING  : more than one CPU ; TRUE parallelism
+    ```
+    - A modern machine uses all four simultaneously, which is why the terms are so easily confused. The single distinguishing question to ask is: `what causes the switch?` If it is an I/O request, that is multiprogramming; if it is a clock tick, that is multitasking.
+
 24. **Explain the functionalities of operating system.** *[ICT Ministry Assistant Programmer 2017 compact it 1239-1240 (ET: N/A)]*
+
+    Answer: An `operating system` manages the computer's hardware and software resources and provides common services to application programs. Its functionalities are the following.
+
+    1. Process management
+    ```
+       Create , schedule , suspend and terminate processes
+       Maintain a PROCESS CONTROL BLOCK for each, holding its state,
+            program counter, registers, memory limits and open files
+       Perform CONTEXT SWITCHING between processes
+       Provide INTER-PROCESS COMMUNICATION : pipes, signals, shared
+            memory, message queues
+       Detect and handle DEADLOCK
+       Synchronise concurrent processes with semaphores and mutexes
+    ```
+
+    2. Memory management
+    ```
+       Allocate memory to a process and free it afterwards
+       Keep track of which parts of memory are in use and by whom
+       Implement PAGING, SEGMENTATION and VIRTUAL MEMORY, so a program
+            larger than RAM can run
+       PROTECT each process's memory from every other
+       Handle page faults and choose which page to replace
+       Decide the degree of multiprogramming, and avoid THRASHING
+    ```
+
+    3. File management
+    ```
+       Create, read, write, delete and rename files and directories
+       Maintain the directory structure and the file allocation table
+       Map a file name onto physical disk blocks
+       Enforce ACCESS PERMISSIONS - who may read, write or execute
+       Provide backup and recovery facilities
+    ```
+
+    4. Device (I/O) management
+    ```
+       Provide DEVICE DRIVERS, so applications need not know the hardware
+       Handle INTERRUPTS from devices
+       BUFFERING - smooth the speed mismatch between fast CPU and slow device
+       CACHING - keep frequently used data in fast memory
+       SPOOLING - queue jobs for a shared device such as a printer
+       Schedule disk requests : FCFS, SSTF, SCAN, C-SCAN
+    ```
+
+    5. Secondary storage management
+    ```
+       Free-space management , storage allocation , disk scheduling
+       Mounting and unmounting file systems
+    ```
+
+    6. Security and protection
+    ```
+       AUTHENTICATION - verify who the user is (password, biometric, MFA)
+       AUTHORISATION  - decide what that user may do
+       Separate USER MODE from KERNEL MODE, so an application cannot touch
+            the hardware directly
+       Encryption , firewalls , audit logging
+       Isolate one user's data from another's
+    ```
+
+    7. User interface
+    ```
+       Command-line shell : bash , PowerShell , cmd
+       Graphical shell    : GNOME , KDE , Windows Explorer , Aqua
+    ```
+
+    8. Resource allocation and accounting
+    ```
+       Share the CPU, memory, devices and files fairly among competing
+       processes ; prevent any one from monopolising a resource ;
+       record usage for billing or analysis
+    ```
+
+    9. Error detection and recovery
+    ```
+       Detect a hardware fault, a bad instruction, an arithmetic error,
+       a full disk or a network failure, and respond without crashing
+       the whole system
+    ```
+
+    10. Networking
+    ```
+       Protocol stacks , sockets , remote file systems , name resolution
+    ```
+
+    11. Booting the system
+    ```
+       Load itself from disk, initialise the hardware, start the first
+       process and bring the system to a usable state
+    ```
+
+    The two ways of summarising all of it
+    ```
+       As a RESOURCE MANAGER
+            It allocates the CPU, memory, devices and files among competing
+            processes, fairly and efficiently, and keeps them from
+            interfering with one another.
+
+       As an EXTENDED MACHINE (a virtual machine)
+            It hides messy hardware behind a clean, uniform interface. A
+            program calls read() whether the data is on an SSD, a hard
+            disk, a network share or a USB stick - and never has to know.
+    ```
+
+    - The mechanism that makes all of it enforceable is the `two-mode` design: a `mode bit` in the processor distinguishes user mode from kernel mode, and the only ways into kernel mode are a `system call`, an `interrupt` or a `trap` — all of which land at an address the kernel itself chose. Without that single hardware feature, none of the protection above would be possible.
 
 ## Deadlock & Resource Allocation (23)
 
