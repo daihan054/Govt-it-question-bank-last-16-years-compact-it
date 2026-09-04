@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 185 / 243 done**  ·  **Questions: 2373 answered, 0 skipped, 3168 total**
+**Subtopics: 184 / 243 done**  ·  **Questions: 2354 answered, 0 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -26,7 +26,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `microprocessor-and-computer-architecture.md` | IT | 11 / 11 | 135 | 0 | 135 |
 | `ms-office.md` | IT | 1 / 1 | 1 | 0 | 1 |
 | `oop.md` | IT | 9 / 9 | 117 | 0 | 117 |
-| `operating-system.md` | IT | 9 / 12 | 181 | 0 | 196 |
+| `operating-system.md` | IT | 8 / 12 | 162 | 0 | 196 |
 | `programming-languages.md` | IT | 0 / 1 | 0 | 0 | 6 |
 | `software-engineering.md` | IT | 0 / 14 | 0 | 0 | 152 |
 | `web-technology.md` | IT | 0 / 7 | 0 | 0 | 77 |
