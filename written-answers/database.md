@@ -20493,7 +20493,180 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+   Answer: `JDBC` (Java Database Connectivity) is the standard Java API that lets a Java program connect to a database, send SQL statements and read the results. It sits in the `java.sql` package and hides the differences between database products — the same Java code works with MySQL, Oracle or PostgreSQL by changing only the driver and the URL.
+
+   ```mermaid
+   flowchart LR
+       A[Java application] --> B[JDBC API]
+       B --> C[JDBC driver<br/>Connector/J]
+       C --> D[(MySQL database)]
+   ```
+
+   Main interfaces
+   ```
+   DriverManager     : finds the driver and opens the connection
+   Connection        : one session with the database
+   Statement         : sends a plain SQL statement
+   PreparedStatement : sends a pre-compiled SQL statement with parameters
+   ResultSet         : the rows returned by a query
+   ```
+
+   Steps to connect a Java application to MySQL
+
+   1. Add the driver
+   - Put `mysql-connector-j-8.x.x.jar` on the classpath, or add the Maven dependency. Without it the program fails with `No suitable driver`.
+
+   2. Load and register the driver
+   ```java
+   Class.forName("com.mysql.cj.jdbc.Driver");
+   ```
+   - Since JDBC 4.0 this line is optional, because the driver registers itself automatically, but it is still written in exams.
+
+   3. Establish the connection
+   ```java
+   String url  = "jdbc:mysql://localhost:3306/bank_db";
+   String user = "root";
+   String pass = "secret";
+   Connection con = DriverManager.getConnection(url, user, pass);
+   ```
+   - URL format: `jdbc:mysql://<host>:<port>/<database>`. Port 3306 is MySQL's default.
+
+   4. Create a statement
+   ```java
+   PreparedStatement ps =
+       con.prepareStatement("SELECT emp_id, name FROM Employee WHERE dept_id = ?");
+   ps.setInt(1, 10);
+   ```
+
+   5. Execute it
+   ```java
+   ResultSet rs = ps.executeQuery();          // for SELECT
+   // int n = ps.executeUpdate();             // for INSERT, UPDATE, DELETE
+   ```
+
+   6. Process the result
+   ```java
+   while (rs.next()) {
+       System.out.println(rs.getInt("emp_id") + " - " + rs.getString("name"));
+   }
+   ```
+
+   7. Close the resources
+   ```java
+   rs.close(); ps.close(); con.close();
+   ```
+
+   Complete program
+   ```java
+   import java.sql.*;
+
+   public class DbDemo {
+       public static void main(String[] args) {
+           String url = "jdbc:mysql://localhost:3306/bank_db";
+           String sql = "SELECT emp_id, name FROM Employee WHERE dept_id = ?";
+
+           try (Connection con = DriverManager.getConnection(url, "root", "secret");
+                PreparedStatement ps = con.prepareStatement(sql)) {
+
+               ps.setInt(1, 10);
+               try (ResultSet rs = ps.executeQuery()) {
+                   while (rs.next()) {
+                       System.out.println(rs.getInt("emp_id") + " - "
+                                        + rs.getString("name"));
+                   }
+               }
+           } catch (SQLException e) {
+               e.printStackTrace();
+           }
+       }
+   }
+   ```
+
+   Points to note
+   - Use `try-with-resources`, as above. It closes the connection even when an exception is thrown; a leaked connection eventually exhausts the pool.
+   - Always prefer `PreparedStatement` over `Statement`. It blocks `SQL injection`, because a parameter is never treated as SQL, and it is faster since the plan is reused.
+   - In production, connections come from a `connection pool` (HikariCP, Tomcat JDBC), not from `DriverManager` on every request — opening a connection is expensive.
+   - For a transaction, call `con.setAutoCommit(false)`, then `con.commit()` or `con.rollback()`.
+
 2. **(b) Explain embedded SQL with an appropriate example.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
+
+   Answer: `Embedded SQL` means SQL statements written directly inside the source code of a `host language` such as C, C++, COBOL or Java. The program gets the computing power of the host language and the data-handling power of SQL in one place.
+
+   - The SQL is `static` — written and known at compile time — so it can be checked and optimised in advance. This is the opposite of `dynamic SQL`, which is built as a string at run time.
+
+   How it is compiled
+   ```
+      source.pc  --->  Precompiler  --->  source.c  --->  C compiler  --->  program
+      (C + SQL)        (Pro*C)            (pure C with        |
+                                           library calls)     v
+                                                          database
+   ```
+   - A `precompiler` reads the mixed file, replaces every SQL statement with a call to the DBMS runtime library, and produces ordinary host-language source.
+
+   Rules
+   - Every SQL statement begins with `EXEC SQL` and ends with the host language's terminator (`;` in C).
+   - `Host variables` — ordinary program variables used inside SQL — are declared in a declare section and prefixed with a colon inside SQL statements.
+   - `SQLCA` (SQL Communications Area) carries the status back; `SQLCODE` is 0 on success, 100 when no row was found, and negative on error.
+   - A query returning many rows must use a `cursor`, because a C variable can hold only one value.
+
+   Example in C (Oracle Pro*C)
+   ```c
+   #include <stdio.h>
+   EXEC SQL INCLUDE SQLCA;
+
+   int main() {
+       EXEC SQL BEGIN DECLARE SECTION;
+           int     emp_id;
+           char    emp_name[50];
+           float   salary;
+           char    user[30] = "scott/tiger";
+       EXEC SQL END DECLARE SECTION;
+
+       EXEC SQL CONNECT :user;
+
+       /* single row : SELECT ... INTO */
+       emp_id = 101;
+       EXEC SQL SELECT emp_name, salary
+                INTO   :emp_name, :salary
+                FROM   Employee
+                WHERE  emp_id = :emp_id;
+
+       printf("Name: %s  Salary: %.2f\n", emp_name, salary);
+
+       /* update and commit */
+       EXEC SQL UPDATE Employee SET salary = salary * 1.10
+                WHERE emp_id = :emp_id;
+       EXEC SQL COMMIT WORK;
+
+       return 0;
+   }
+   ```
+
+   Reading many rows with a cursor
+   ```c
+   EXEC SQL DECLARE c_emp CURSOR FOR
+            SELECT emp_id, emp_name FROM Employee WHERE dept_id = :dept;
+
+   EXEC SQL OPEN c_emp;
+
+   while (1) {
+       EXEC SQL FETCH c_emp INTO :emp_id, :emp_name;
+       if (sqlca.sqlcode == 100) break;          /* no more rows */
+       printf("%d %s\n", emp_id, emp_name);
+   }
+
+   EXEC SQL CLOSE c_emp;
+   ```
+
+   | Point | Embedded (static) SQL | Dynamic SQL |
+   |---|---|---|
+   | Written | At compile time | Built as a string at run time |
+   | Syntax checked | By the precompiler | Only when executed |
+   | Speed | Faster, plan prepared once | Slower, must be parsed |
+   | Flexibility | Fixed statement | Table and columns can vary |
+   | Risk | Safe | SQL injection if values are concatenated |
+
+   - Advantages: compile-time checking, better performance, and the host language supplies the logic SQL lacks. Drawbacks: it needs a precompiler, the code is tied to that DBMS, and modern applications mostly use `JDBC` or `ODBC` call-level interfaces instead.
 
 ## Relational Keys (Candidate, Super, Primary, Foreign Key) (1)
 
