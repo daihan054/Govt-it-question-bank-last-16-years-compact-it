@@ -1763,33 +1763,968 @@
 
 1. **Explain the push and pop operations of the stack.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
+   Answer: A stack is a linear data structure that follows the `LIFO` (Last In, First Out) principle: the element inserted most recently is the first to be removed. All operations happen at one end, called the `top`.
+
+   PUSH — inserting an element
+   - Adds a new element to the `top` of the stack.
+   - Algorithm:
+   ```
+   PUSH(stack, item)
+   BEGIN
+       IF top = MAX − 1 THEN
+           PRINT "Stack Overflow"         // stack is full
+           RETURN
+       END IF
+       top = top + 1
+       stack[top] = item
+   END
+   ```
+   - Error condition: `Stack Overflow` — attempting to push onto a full stack.
+   - Complexity: `O(1)`.
+
+   POP — removing an element
+   - Removes and returns the element at the `top`.
+   - Algorithm:
+   ```
+   POP(stack)
+   BEGIN
+       IF top = −1 THEN
+           PRINT "Stack Underflow"        // stack is empty
+           RETURN
+       END IF
+       item = stack[top]
+       top = top − 1
+       RETURN item
+   END
+   ```
+   - Error condition: `Stack Underflow` — attempting to pop from an empty stack.
+   - Complexity: `O(1)`.
+
+   Worked example
+   ```
+   Initially: top = −1, stack empty
+
+   PUSH(10)   ->  [10]                top = 0
+   PUSH(20)   ->  [10, 20]            top = 1
+   PUSH(30)   ->  [10, 20, 30]        top = 2
+
+   POP()      ->  returns 30, stack [10, 20]      top = 1
+   POP()      ->  returns 20, stack [10]          top = 0
+   ```
+   ```
+       top ->  30                 30 is removed first,
+               20     POP  -->    because it was pushed last
+               10                        (LIFO)
+   ```
+
+   C implementation
+   ```c
+   #define MAX 100
+   int stack[MAX];
+   int top = -1;
+
+   void push(int item) {
+       if (top == MAX - 1) { printf("Stack Overflow\n"); return; }
+       stack[++top] = item;
+   }
+
+   int pop(void) {
+       if (top == -1) { printf("Stack Underflow\n"); return -1; }
+       return stack[top--];
+   }
+   ```
+
+   Other stack operations
+   - `peek()` or `top()` — returns the top element without removing it.
+   - `isEmpty()` — true when top = −1.
+   - `isFull()` — true when top = MAX − 1.
+
+   Applications
+   - Function call management (the call stack) and recursion; expression conversion and evaluation (infix to postfix); balanced-parentheses checking; undo and redo; browser back button; backtracking algorithms; and depth-first search.
+
 2. **Implementation of Stack using two Queues?** *[BCIC Assistant Programmer 14.02.2025 compact it 1326 (ET: BUET)]*
+
+   Answer: A stack (LIFO) can be simulated with two queues (FIFO). There are two standard designs, differing in which operation carries the cost.
+
+   Method 1 — costly PUSH, O(1) POP
+
+   - Idea: keep the newest element always at the front of q1.
+
+   ```
+   PUSH(x):
+       enqueue x into q2
+       while q1 is not empty:
+           dequeue from q1 and enqueue into q2
+       swap the names of q1 and q2
+       // now q1 has x at the front
+
+   POP():
+       if q1 is empty: return "Stack Underflow"
+       return dequeue from q1
+   ```
+
+   Trace
+   ```
+   PUSH(1): q2=[1]; q1 empty; swap -> q1=[1]
+   PUSH(2): q2=[2]; move 1 -> q2=[2,1]; swap -> q1=[2,1]
+   PUSH(3): q2=[3]; move 2,1 -> q2=[3,2,1]; swap -> q1=[3,2,1]
+
+   POP() -> 3   (correct: last pushed comes out first)
+   POP() -> 2
+   ```
+   - Complexity: `PUSH = O(n)`, `POP = O(1)`.
+
+   Method 2 — O(1) PUSH, costly POP
+
+   - Idea: push normally, and do the work at pop time.
+
+   ```
+   PUSH(x):
+       enqueue x into q1                 // O(1)
+
+   POP():
+       if q1 is empty: return "Stack Underflow"
+       while q1 has more than one element:
+           dequeue from q1 and enqueue into q2
+       result = dequeue from q1          // the last element = top of stack
+       swap the names of q1 and q2
+       return result
+   ```
+
+   Trace
+   ```
+   PUSH(1), PUSH(2), PUSH(3)  ->  q1 = [1, 2, 3]
+
+   POP(): move 1, 2 to q2 -> q2=[1,2], q1=[3]
+          result = 3, swap -> q1=[1,2]
+   POP(): move 1 to q2 -> q2=[1], q1=[2]
+          result = 2, swap -> q1=[1]
+   ```
+   - Complexity: `PUSH = O(1)`, `POP = O(n)`.
+
+   C++ implementation (Method 2)
+   ```cpp
+   #include <queue>
+   class StackUsingQueues {
+       std::queue<int> q1, q2;
+   public:
+       void push(int x) {
+           q1.push(x);                       // O(1)
+       }
+       int pop() {
+           if (q1.empty()) return -1;        // underflow
+           while (q1.size() > 1) {           // move all but the last
+               q2.push(q1.front());
+               q1.pop();
+           }
+           int top = q1.front();
+           q1.pop();
+           std::swap(q1, q2);
+           return top;
+       }
+       int top() {
+           if (q1.empty()) return -1;
+           while (q1.size() > 1) { q2.push(q1.front()); q1.pop(); }
+           int t = q1.front();
+           q2.push(t); q1.pop();
+           std::swap(q1, q2);
+           return t;
+       }
+       bool empty() { return q1.empty(); }
+   };
+   ```
+
+   Comparison
+
+   | Point | Method 1 | Method 2 |
+   |---|---|---|
+   | PUSH | O(n) | `O(1)` |
+   | POP | `O(1)` | O(n) |
+   | Best when | Pops are frequent | Pushes are frequent |
+   | Space | O(n) | O(n) |
+
+   - It can also be done with a `single queue`: push x, then rotate the queue by dequeuing and re-enqueuing the preceding n − 1 elements. That gives O(n) push and O(1) pop with only one queue.
 
 3. **Correct of correct parentheses if it is written proper show matched if it does not show unmatched.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 
+   Answer: Checking whether parentheses are balanced is the classic application of a stack, because the most recently opened bracket must be the first one closed — exactly LIFO behaviour.
+
+   Rules for a balanced expression
+   - Every opening bracket has a matching closing bracket of the `same type`.
+   - Brackets are closed in the `correct order` — no crossing, so `([)]` is invalid.
+   - No closing bracket appears before its opening bracket.
+
+   Algorithm
+   ```
+   BEGIN
+       create an empty stack
+       FOR each character ch in the expression:
+           IF ch is an opening bracket ( { [ THEN
+               push ch onto the stack
+           ELSE IF ch is a closing bracket ) } ] THEN
+               IF stack is empty THEN
+                   RETURN "Unmatched"            // closing with nothing open
+               END IF
+               top = pop()
+               IF top does not match ch THEN
+                   RETURN "Unmatched"            // wrong type
+               END IF
+           END IF
+       END FOR
+
+       IF stack is empty THEN RETURN "Matched"
+       ELSE RETURN "Unmatched"                   // something left unclosed
+   END
+   ```
+
+   C program
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+
+   int isBalanced(char *exp) {
+       char stack[100];
+       int top = -1;
+       for (int i = 0; exp[i]; i++) {
+           char c = exp[i];
+           if (c == '(' || c == '{' || c == '[')
+               stack[++top] = c;
+           else if (c == ')' || c == '}' || c == ']') {
+               if (top == -1) return 0;                    // nothing to match
+               char open = stack[top--];
+               if ((c == ')' && open != '(') ||
+                   (c == '}' && open != '{') ||
+                   (c == ']' && open != '['))
+                   return 0;                               // wrong type
+           }
+       }
+       return (top == -1);                                 // all closed?
+   }
+
+   int main(void) {
+       char *tests[] = { "{[()]}", "((a+b)*c)", "[())", "{[}]", "(()" };
+       for (int i = 0; i < 5; i++)
+           printf("%-12s -> %s\n", tests[i],
+                  isBalanced(tests[i]) ? "Matched" : "Unmatched");
+       return 0;
+   }
+   ```
+
+   Output
+   ```
+   {[()]}       -> Matched
+   ((a+b)*c)    -> Matched
+   [())         -> Unmatched
+   {[}]         -> Unmatched
+   (()          -> Unmatched
+   ```
+
+   Trace of `{[()]}`
+   ```
+   Char   Action                  Stack
+    {     push                    [ { ]
+    [     push                    [ {, [ ]
+    (     push                    [ {, [, ( ]
+    )     pop '(' — matches       [ {, [ ]
+    ]     pop '[' — matches       [ { ]
+    }     pop '{' — matches       [ ]
+   End    stack empty             -> MATCHED
+   ```
+
+   Trace of `[())`
+   ```
+   Char   Action                  Stack
+    [     push                    [ [ ]
+    (     push                    [ [, ( ]
+    )     pop '(' — matches       [ [ ]
+    )     pop '[' — MISMATCH      -> UNMATCHED
+   ```
+
+   The three failure cases to remember
+   - A closing bracket arrives with an `empty stack` — e.g. `)(`
+   - The popped bracket is of the `wrong type` — e.g. `{]`
+   - The stack is `not empty` at the end — e.g. `((`
+
+   Complexity
+   - `Time O(n)` — each character is examined once. `Space O(n)` — in the worst case all characters are opening brackets.
+
 4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
+
+   Answer:
+
+   Difference between stack and queue
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
+   | Insertion | At the `top` — push | At the `rear` — enqueue |
+   | Deletion | At the `top` — pop | From the `front` — dequeue |
+   | Ends used | One end only | Two ends |
+   | Pointers needed | One (`top`) | Two (`front` and `rear`) |
+   | Operations | push, pop, peek, isEmpty, isFull | enqueue, dequeue, front, isEmpty, isFull |
+   | Order of removal | Reverse of insertion order | Same as insertion order |
+   | Overflow / underflow | Stack Overflow / Underflow | Queue Full / Queue Empty |
+   | Variants | — | Circular queue, priority queue, deque |
+   | Real-world analogy | A stack of plates | A queue at a ticket counter |
+   | Recursion support | Directly supports it (the call stack) | Not used for recursion |
+
+   ```
+   STACK (LIFO)                    QUEUE (FIFO)
+
+     push ->  [ C ]  <- pop         enqueue ->  [ A | B | C ]  -> dequeue
+              [ B ]                             rear        front
+              [ A ]
+           one end                            two ends
+   ```
+
+   Two problems solved by a `stack`
+
+   1. `Balanced parentheses checking`
+   - The most recently opened bracket must be closed first, which is exactly LIFO. Push every opening bracket; on a closing bracket, pop and check that the types match. The expression is balanced only if the stack is empty at the end.
+   - Used by every compiler and code editor to report a missing bracket.
+
+   2. `Expression conversion and evaluation`
+   - Infix to postfix conversion uses a stack to hold operators until an operator of lower precedence arrives.
+   - Postfix evaluation uses a stack for operands: push each operand, and on an operator pop two, apply, and push the result.
+   ```
+   Infix: 12 / (7 − 3) + 2   ->  Postfix: 12 7 3 − / 2 +   ->  Value: 5
+   ```
+   - Related stack applications: the function call stack and recursion, undo/redo, the browser back button, backtracking, and depth-first search.
+
+   Two problems solved by a `queue`
+
+   1. `CPU and printer scheduling`
+   - Jobs must be served in the order they arrive, which is exactly FIFO. A print spooler queues documents and prints them in submission order; a round-robin CPU scheduler holds ready processes in a queue.
+
+   2. `Breadth-first search (BFS)`
+   - BFS explores a graph level by level. Nodes discovered first must be expanded first, so a queue holds the frontier. This is how the shortest path in an unweighted graph is found, and how a tree is printed level by level.
+   - Related queue applications: buffering in I/O and networking, call centre waiting lines, message queues, and the ready queue in an operating system.
 
 5. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
 
+   Answer:
+
+   Given
+   ```
+   P = 12 / (7 − 3) + 2
+   ```
+
+   Part 1 — convert infix to postfix using a stack
+
+   Rules
+   - Operands go straight to the output.
+   - `(` is pushed onto the stack.
+   - On `)`, pop and output until the matching `(` is found, then discard both brackets.
+   - For an operator, pop and output all stack operators of `higher or equal` precedence (for left-associative operators), then push it.
+   - At the end, pop and output everything remaining.
+   - Precedence: `^` highest, then `* /`, then `+ −`.
+
+   Trace
+
+   | Token | Action | Stack | Output |
+   |---|---|---|---|
+   | 12 | operand → output | | 12 |
+   | / | push | / | 12 |
+   | ( | push | / ( | 12 |
+   | 7 | operand → output | / ( | 12 7 |
+   | − | push (top is `(`) | / ( − | 12 7 |
+   | 3 | operand → output | / ( − | 12 7 3 |
+   | ) | pop until `(` | / | 12 7 3 − |
+   | + | `/` has higher precedence → pop it, then push `+` | + | 12 7 3 − / |
+   | 2 | operand → output | + | 12 7 3 − / 2 |
+   | end | pop everything | | 12 7 3 − / 2 + |
+
+   ```
+   Postfix P = 12 7 3 − / 2 +
+   ```
+
+   Part 2 — evaluate the postfix expression
+
+   Rule: push operands; on an operator, pop two, apply, push the result. The `second` value popped is the left operand.
+
+   | Token | Action | Stack |
+   |---|---|---|
+   | 12 | push | [12] |
+   | 7 | push | [12, 7] |
+   | 3 | push | [12, 7, 3] |
+   | − | pop 3 and 7 → 7 − 3 = 4 | [12, 4] |
+   | / | pop 4 and 12 → 12 / 4 = 3 | [3] |
+   | 2 | push | [3, 2] |
+   | + | pop 2 and 3 → 3 + 2 = 5 | [5] |
+
+   ```
+   Value of P = 5
+   ```
+
+   Check against the original infix
+   ```
+   12 / (7 − 3) + 2
+   = 12 / 4 + 2
+   = 3 + 2
+   = 5    ✓
+   ```
+
+   For completeness — the prefix form
+   ```
+   Prefix P = + / 12 − 7 3 2
+   ```
+   - Obtained by reversing the infix (swapping brackets), converting to postfix, and reversing the result. Evaluating it right to left also gives 5.
+
 6. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.)
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
+   | Insertion | At the top (`push`) | At the rear (`enqueue`) |
+   | Deletion | At the top (`pop`) | From the front (`dequeue`) |
+   | Ends used | One end only | Two different ends |
+   | Pointers | One — `top` | Two — `front` and `rear` |
+   | Order of output | Reverse of the input order | Same as the input order |
+   | Basic operations | push, pop, peek, isEmpty, isFull | enqueue, dequeue, front, isEmpty, isFull |
+   | Empty condition | top = −1 | front = −1, or front > rear |
+   | Full condition | top = MAX − 1 | rear = MAX − 1 |
+   | Error terms | Stack Overflow / Underflow | Queue Full / Queue Empty |
+   | Variants | — | Circular queue, priority queue, double-ended queue |
+   | Analogy | A stack of plates | A line at a ticket counter |
+   | Used for recursion | Yes — the call stack | No |
+   | Typical applications | Expression evaluation, balanced parentheses, undo/redo, backtracking, DFS | CPU and printer scheduling, BFS, buffering, message queues |
+
+   ```
+   STACK (LIFO)                       QUEUE (FIFO)
+
+     push -->  [ C ]  --> pop          enqueue --> [ A | B | C ] --> dequeue
+               [ B ]                               rear       front
+               [ A ]
+         insert and delete                  insert at one end,
+           at the SAME end                  delete at the OTHER end
+   ```
+
+   - Simple memory aid: in a stack, the last plate you put down is the first you pick up. In a queue, the first person to arrive at the counter is the first to be served.
 
 7. **Write down the difference between Stack and Queue.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Working principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
+   | Insertion operation | `push`, at the top | `enqueue`, at the rear |
+   | Deletion operation | `pop`, from the top | `dequeue`, from the front |
+   | Ends used | One end only | Two ends |
+   | Pointers required | One (`top`) | Two (`front` and `rear`) |
+   | Output order | Reverse of insertion | Same as insertion |
+   | Empty condition | top = −1 | front = −1 or front > rear |
+   | Full condition | top = MAX − 1 | rear = MAX − 1 |
+   | Error terms | Stack Overflow / Stack Underflow | Queue Full / Queue Empty |
+   | Peek operation | Returns the topmost element | Returns the front element |
+   | Types | Simple stack only | Simple, circular, priority, double-ended |
+   | Recursion | Directly used (the call stack) | Not applicable |
+   | Implementation | Array or linked list | Array (usually circular) or linked list |
+   | Complexity | O(1) push and pop | O(1) enqueue and dequeue |
+   | Real-life example | A pile of plates; the browser back button | A queue at a bank counter; a printer spool |
+   | Applications | Expression conversion and evaluation, parentheses matching, undo/redo, backtracking, DFS | CPU scheduling, printer spooling, BFS, buffering, message queues |
+
+   ```
+   STACK                              QUEUE
+
+    push ->  [ C ]  -> pop            enqueue -> [ A | B | C ] -> dequeue
+             [ B ]                               rear        front
+             [ A ]
+      both operations at                insertion at one end,
+         the SAME end                    deletion at the OTHER
+   ```
+
+   - The core distinction in one line: a stack reverses the order of its elements, while a queue preserves it.
+
 8. **Prefix Conversion A+ B * C+D expression?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
+
+   Answer:
+
+   Given
+   ```
+   A + B * C + D
+   ```
+
+   Step 1 — apply precedence and associativity
+   - `*` has higher precedence than `+`, so B * C binds first.
+   - `+` is `left-associative`, so the leftmost addition is performed first.
+   ```
+   A + B * C + D
+   = (A + (B * C)) + D
+   ```
+
+   Step 2 — build the expression tree
+   ```
+                   +
+                /     \
+               +       D
+             /   \
+            A     *
+                /   \
+               B     C
+   ```
+
+   Step 3 — read the prefix form (preorder: Root, Left, Right)
+   ```
+   +   ->  root
+   +   ->  left subtree root
+   A
+   *
+   B
+   C
+   D
+   ```
+   ```
+   Prefix = + + A * B C D
+   ```
+
+   Verification by expanding
+   ```
+   + + A * B C D
+     the outer + takes two operands:
+       first  : + A * B C   =  A + (B*C)
+       second : D
+     so the whole thing is (A + B*C) + D   ✓
+   ```
+
+   For completeness — the other notations
+   ```
+   Infix   : (A + (B * C)) + D
+   Prefix  : + + A * B C D
+   Postfix : A B C * + D +
+   ```
+
+   Method used to convert infix to prefix with a stack
+   - Step 1 — reverse the infix expression, swapping every `(` with `)` and vice versa.
+   - Step 2 — convert the reversed expression to postfix, treating `^` as right-associative and everything else as left-associative in the reversed sense.
+   - Step 3 — reverse the result. That is the prefix form.
+
+   Numerical check with A=1, B=2, C=3, D=4
+   ```
+   Infix : 1 + 2*3 + 4 = 1 + 6 + 4 = 11
+   Prefix: + + 1 * 2 3 4
+           * 2 3 = 6 ; + 1 6 = 7 ; + 7 4 = 11   ✓
+   ```
 
 9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
+   Answer: A stack works on the `LIFO` principle — the element pushed most recently is the first one popped.
+
+   Trace of the operations
+
+   | Operation | Action | Stack (top on the right) | Value of S |
+   |---|---|---|---|
+   | Push(200) | 200 goes on top | [200] | — |
+   | Push(500) | 500 goes on top | [200, 500] | — |
+   | Push(100) | 100 goes on top | [200, 500, 100] | — |
+   | S = Pop() | removes the top element | [200, 500] | `100` |
+
+   ```
+       top ->  100        <- pushed last, so popped first
+               500
+               200
+   ```
+
+   Answer
+   ```
+   S = 100
+   ```
+
+   Why
+   - The stack removes elements in the reverse order of insertion. 100 was pushed last, so it sits at the top and is the first to be removed.
+
+   If the operations continued
+   ```
+   Push(200), Push(500), Push(100)
+   S1 = Pop()  ->  100,  stack [200, 500]
+   S2 = Pop()  ->  500,  stack [200]
+   S3 = Pop()  ->  200,  stack []
+   S4 = Pop()  ->  Stack Underflow — the stack is empty
+   ```
+
+   - Contrast with a `queue` (FIFO): after Enqueue(200), Enqueue(500), Enqueue(100), a Dequeue would return `200`, the element inserted first.
+
 10. **Expalin: Infix, Prefix, Postfix notation.** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
+
+    Answer: These are the three ways of writing an arithmetic expression, differing only in `where the operator is placed` relative to its operands.
+
+    Infix notation
+    - The operator sits `between` its two operands — the normal human way of writing arithmetic.
+    ```
+    A + B          (a + b) * c          A + B * C
+    ```
+    - It requires `precedence rules` (`^` before `* /` before `+ −`), `associativity rules`, and `brackets` to override them.
+    - Easy for people to read, but harder for a machine: a compiler must parse precedence and brackets before it can evaluate anything. That is why expressions are converted to postfix internally.
+
+    Prefix notation (Polish notation)
+    - The operator comes `before` its two operands. Invented by Jan Łukasiewicz.
+    ```
+    + A B         * + a b c            + A * B C
+    ```
+    - No brackets and no precedence rules are ever needed — the position of the operator fixes the order completely.
+    - Evaluated by scanning `right to left` with a stack: push operands; on an operator, pop two, apply, push the result.
+    - It is the `preorder` traversal of the expression tree.
+
+    Postfix notation (Reverse Polish notation, RPN)
+    - The operator comes `after` its two operands.
+    ```
+    A B +         a b + c *            A B C * +
+    ```
+    - Again no brackets or precedence are needed.
+    - Evaluated by scanning `left to right` with a stack, which is the natural direction — this is why compilers, calculators and stack machines use it.
+    - It is the `postorder` traversal of the expression tree.
+
+    Comparison
+
+    | Expression (infix) | Prefix | Postfix |
+    |---|---|---|
+    | A + B | + A B | A B + |
+    | A + B * C | + A * B C | A B C * + |
+    | (A + B) * C | * + A B C | A B + C * |
+    | A + B * C + D | + + A * B C D | A B C * + D + |
+    | ((A+B)*C − (D−E)^F) | − * + A B C ^ − D E F | A B + C * D E − F ^ − |
+
+    The expression tree that unifies them
+    ```
+    Expression: (A + B) * C
+
+                    *
+                 /     \
+                +       C
+              /   \
+             A     B
+
+    Preorder  (Root, Left, Right) = * + A B C   -> PREFIX
+    Inorder   (Left, Root, Right) = A + B * C   -> INFIX (needs brackets)
+    Postorder (Left, Right, Root) = A B + C *   -> POSTFIX
+    ```
+
+    Why the machine forms are used
+    - Prefix and postfix need `no brackets and no precedence table`, so evaluation is a single pass with a stack and no parsing.
+    - Postfix is preferred over prefix because it is scanned left to right, in the same direction the input arrives.
+    - Conversion from infix uses a stack for the operators — the classic Shunting-Yard algorithm.
 
 11. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    Stack
+    - A linear data structure following `LIFO` — Last In, First Out. Insertion and deletion both take place at the same end, called the `top`.
+    - Operations: `push` (insert), `pop` (delete), `peek/top` (read the top), `isEmpty`, `isFull`. All are O(1).
+    - One pointer, `top`, is enough. Empty when top = −1; full when top = MAX − 1.
+    - Errors: Stack Overflow on pushing to a full stack; Stack Underflow on popping an empty one.
+
+    Queue
+    - A linear data structure following `FIFO` — First In, First Out. Insertion happens at the `rear` and deletion at the `front`.
+    - Operations: `enqueue` (insert at rear), `dequeue` (delete from front), `front`, `isEmpty`, `isFull`. All O(1).
+    - Two pointers are needed, `front` and `rear`.
+    - Variants: circular queue (reuses freed space at the start of the array), priority queue (served by priority rather than arrival), and deque (insertion and deletion at both ends).
+
+    Comparative discussion
+
+    | Point | Stack | Queue |
+    |---|---|---|
+    | Principle | LIFO | FIFO |
+    | Insertion | Top (push) | Rear (enqueue) |
+    | Deletion | Top (pop) | Front (dequeue) |
+    | Ends used | One | Two |
+    | Pointers | One (top) | Two (front, rear) |
+    | Output order | Reversed | Preserved |
+    | Types | One | Simple, circular, priority, deque |
+    | Recursion | Supports it directly | Does not |
+    | Errors | Overflow, Underflow | Queue Full, Queue Empty |
+    | Implementation | Array or linked list | Array (usually circular) or linked list |
+    | Applications | Expression evaluation, parentheses matching, undo/redo, backtracking, DFS, function calls | CPU and printer scheduling, BFS, buffering, message queues |
+
+    ```
+    STACK                                QUEUE
+
+      push -> [ C ] -> pop               enqueue -> [ A | B | C ] -> dequeue
+              [ B ]                                 rear       front
+              [ A ]
+       one end for both                     one end each
+    ```
+
+    - The essential difference: a stack `reverses` the order of the data passing through it, while a queue `preserves` it. That single property decides which one a problem needs — parentheses matching needs reversal, and printer scheduling needs preservation.
+
 12. **Difference between LIFO and FIFO in data structure.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
+
+    Answer:
+
+    LIFO — Last In, First Out
+    - The element inserted `most recently` is removed first.
+    - Implemented by the `stack` data structure.
+    - Insertion (`push`) and deletion (`pop`) both happen at the same end, the `top`.
+    - Only one pointer is needed, `top`.
+    - The output order is the `reverse` of the input order.
+    - Analogy: a stack of plates — you take the plate you put down last.
+
+    FIFO — First In, First Out
+    - The element inserted `first` is removed first.
+    - Implemented by the `queue` data structure.
+    - Insertion (`enqueue`) happens at the `rear`, deletion (`dequeue`) at the `front`.
+    - Two pointers are needed, `front` and `rear`.
+    - The output order is the `same` as the input order.
+    - Analogy: a queue at a ticket counter — the first person to arrive is served first.
+
+    Comparison
+
+    | Point | LIFO (Stack) | FIFO (Queue) |
+    |---|---|---|
+    | Order of removal | Last inserted, first out | First inserted, first out |
+    | Data structure | Stack | Queue |
+    | Insertion end | Top | Rear |
+    | Deletion end | Top (same end) | Front (opposite end) |
+    | Pointers | 1 (top) | 2 (front, rear) |
+    | Output order | Reversed | Preserved |
+    | Fairness | Unfair — an early element may wait forever | Fair — every element is served in turn |
+    | Errors | Overflow, Underflow | Queue Full, Queue Empty |
+    | Applications | Function calls and recursion, expression evaluation, undo/redo, backtracking, DFS | CPU and disk scheduling, printer spooling, BFS, buffering, message queues |
+
+    ```
+    LIFO                                FIFO
+
+      in -> [ 3 ] -> out                in -> [ 1 | 2 | 3 ] -> out
+            [ 2 ]                             rear      front
+            [ 1 ]
+      3 arrives last, leaves first       1 arrives first, leaves first
+    ```
+
+    Where each is the right choice
+    - Use `LIFO` when the most recent item must be handled first: undoing the last action, returning from the innermost function call, matching the innermost bracket.
+    - Use `FIFO` when fairness and order matter: serving customers, printing documents, transmitting packets, exploring a graph level by level.
+    - Related disciplines: `LILO` is another name for FIFO, and `FILO` another name for LIFO. Operating systems also use LRU and priority-based policies, which are neither.
 
 13. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) A stack is a LIFO structure in which all operations take place at one end, the `top`.
+
+    1. PUSH — insert an element
+    - Places a new element on the top of the stack.
+    ```
+    PUSH(item)
+        IF top = MAX − 1 THEN print "Stack Overflow"; return
+        top = top + 1
+        stack[top] = item
+    ```
+    - Error: `Stack Overflow` when the stack is already full. Complexity `O(1)`.
+
+    2. POP — remove an element
+    - Removes and returns the top element.
+    ```
+    POP()
+        IF top = −1 THEN print "Stack Underflow"; return
+        item = stack[top]
+        top = top − 1
+        RETURN item
+    ```
+    - Error: `Stack Underflow` when the stack is empty. Complexity `O(1)`.
+
+    3. PEEK (or TOP) — read without removing
+    - Returns the top element but leaves the stack unchanged.
+    ```
+    PEEK()
+        IF top = −1 THEN print "Stack is empty"; return
+        RETURN stack[top]
+    ```
+    - Complexity `O(1)`.
+
+    4. isEmpty — test for an empty stack
+    ```
+    isEmpty()
+        RETURN (top = −1)
+    ```
+
+    5. isFull — test for a full stack
+    ```
+    isFull()
+        RETURN (top = MAX − 1)
+    ```
+
+    6. SIZE — number of elements currently held
+    ```
+    SIZE()
+        RETURN top + 1
+    ```
+
+    7. DISPLAY — show all elements from top to bottom
+    ```
+    DISPLAY()
+        FOR i = top DOWNTO 0:
+            print stack[i]
+    ```
+
+    Worked example
+    ```
+    Initially top = −1
+
+    PUSH(10)  -> [10]              top = 0
+    PUSH(20)  -> [10, 20]          top = 1
+    PUSH(30)  -> [10, 20, 30]      top = 2
+    PEEK()    -> returns 30, stack unchanged
+    POP()     -> returns 30, stack [10, 20]   top = 1
+    SIZE()    -> 2
+    isEmpty() -> false
+    ```
+
+    - All stack operations are `O(1)` in both array and linked-list implementations, which is why the stack is used wherever constant-time insertion and removal at one end are required: the function call stack, expression evaluation, undo/redo and backtracking.
+
 14. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) This is a postfix expression, evaluated with a stack.
+
+    Given
+    ```
+    3  2  *  2  ↑  5  3  −  8  4  /  *  −
+    ```
+    - `↑` denotes exponentiation.
+
+    Rule
+    - Scan left to right. Push every operand. On an operator, pop `two` values, apply the operator, and push the result. The `second` value popped is the left operand.
+
+    Step-by-step evaluation
+
+    | Step | Token | Action | Stack (top on the right) |
+    |---|---|---|---|
+    | 1 | 3 | push | [3] |
+    | 2 | 2 | push | [3, 2] |
+    | 3 | `*` | pop 2 and 3 → 3 × 2 = 6 | [6] |
+    | 4 | 2 | push | [6, 2] |
+    | 5 | `↑` | pop 2 and 6 → 6² = 36 | [36] |
+    | 6 | 5 | push | [36, 5] |
+    | 7 | 3 | push | [36, 5, 3] |
+    | 8 | `−` | pop 3 and 5 → 5 − 3 = 2 | [36, 2] |
+    | 9 | 8 | push | [36, 2, 8] |
+    | 10 | 4 | push | [36, 2, 8, 4] |
+    | 11 | `/` | pop 4 and 8 → 8 ÷ 4 = 2 | [36, 2, 2] |
+    | 12 | `*` | pop 2 and 2 → 2 × 2 = 4 | [36, 4] |
+    | 13 | `−` | pop 4 and 36 → 36 − 4 = 32 | [32] |
+
+    ```
+    Final value = 32
+    ```
+
+    Check against the equivalent infix expression
+    ```
+    (3 * 2) ↑ 2  −  ((5 − 3) * (8 / 4))
+    = 6 ↑ 2 − (2 * 2)
+    = 36 − 4
+    = 32     ✓
+    ```
+
+    Points to be careful about
+    - The order of the operands matters for `−`, `/` and `↑`. The value popped `second` is the left operand: for `8 4 /` the result is 8 ÷ 4 = 2, not 4 ÷ 8.
+    - At the end the stack must contain `exactly one` value. More than one means the expression was malformed.
+    - Complexity: `O(n)` time and `O(n)` space, in a single left-to-right pass with no bracket parsing at all — which is precisely why compilers convert infix to postfix.
+
 15. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
+
+    Answer:
+
+    C program to check balanced parentheses
+    ```c
+    #include <stdio.h>
+    #include <string.h>
+    #define MAX 100
+
+    char stack[MAX];
+    int top = -1;
+
+    void push(char c) { stack[++top] = c; }
+    char pop(void)    { return stack[top--]; }
+    int  isEmpty(void){ return top == -1; }
+
+    int matches(char open, char close) {
+        return (open == '(' && close == ')') ||
+               (open == '{' && close == '}') ||
+               (open == '[' && close == ']');
+    }
+
+    int isBalanced(char *exp) {
+        top = -1;                                  // reset for each call
+        for (int i = 0; exp[i] != '\0'; i++) {
+            char c = exp[i];
+
+            if (c == '(' || c == '{' || c == '[') {
+                push(c);                           // opening bracket
+            }
+            else if (c == ')' || c == '}' || c == ']') {
+                if (isEmpty()) return 0;           // closing with nothing open
+                if (!matches(pop(), c)) return 0;  // wrong type
+            }
+            // any other character is ignored
+        }
+        return isEmpty();                          // nothing left unclosed
+    }
+
+    int main(void) {
+        char exp[MAX];
+        printf("Enter an expression: ");
+        scanf("%s", exp);
+        printf("%s\n", isBalanced(exp) ? "Balanced" : "Not Balanced");
+        return 0;
+    }
+    ```
+
+    Sample runs
+    ```
+    Enter an expression: {[()]}
+    Balanced
+
+    Enter an expression: ((a+b)*c)
+    Balanced
+
+    Enter an expression: [())
+    Not Balanced
+
+    Enter an expression: {[}]
+    Not Balanced
+
+    Enter an expression: (()
+    Not Balanced
+    ```
+
+    C++ version using the standard library
+    ```cpp
+    #include <iostream>
+    #include <stack>
+    #include <string>
+    using namespace std;
+
+    bool isBalanced(const string &exp) {
+        stack<char> st;
+        for (char c : exp) {
+            if (c == '(' || c == '{' || c == '[') st.push(c);
+            else if (c == ')' || c == '}' || c == ']') {
+                if (st.empty()) return false;
+                char open = st.top(); st.pop();
+                if ((c == ')' && open != '(') ||
+                    (c == '}' && open != '{') ||
+                    (c == ']' && open != '[')) return false;
+            }
+        }
+        return st.empty();
+    }
+
+    int main() {
+        string exp;
+        cin >> exp;
+        cout << (isBalanced(exp) ? "Balanced" : "Not Balanced") << endl;
+    }
+    ```
+
+    Why a stack is the right structure
+    - The bracket opened most recently must be the first one closed — exactly `LIFO` behaviour. No other data structure captures that nesting requirement so directly.
+
+    The three ways an expression can fail
+    - A closing bracket arrives when the stack is `empty` — e.g. `)(`
+    - The popped bracket is of the `wrong type` — e.g. `{]`
+    - The stack is `not empty` when the input ends — e.g. `((`
+
+    Complexity
+    - `Time O(n)`, one pass over the string. `Space O(n)` in the worst case, when every character is an opening bracket.
 
 16. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
 ```text
@@ -1799,13 +2734,398 @@ Input: [())
 Output: Not Balanced
 ```
 
+    Answer:
+
+    C++ program
+    ```cpp
+    #include <iostream>
+    #include <stack>
+    #include <string>
+    using namespace std;
+
+    bool isBalanced(const string &exp) {
+        stack<char> st;
+
+        for (char c : exp) {
+            if (c == '(' || c == '{' || c == '[') {
+                st.push(c);                       // opening bracket -> push
+            }
+            else if (c == ')' || c == '}' || c == ']') {
+                if (st.empty()) return false;     // closing with nothing open
+
+                char open = st.top();
+                st.pop();
+
+                if ((c == ')' && open != '(') ||  // wrong type of bracket
+                    (c == '}' && open != '{') ||
+                    (c == ']' && open != '['))
+                    return false;
+            }
+            // digits, letters and operators are ignored
+        }
+        return st.empty();                        // nothing left unclosed
+    }
+
+    int main() {
+        string exp;
+        while (cin >> exp) {
+            cout << (isBalanced(exp) ? "Balanced" : "Not Balanced") << endl;
+        }
+        return 0;
+    }
+    ```
+
+    Sample input and output, matching the question
+    ```
+    Input:  [0]{[00]0}
+    Output: Balanced
+
+    Input:  [())
+    Output: Not Balanced
+    ```
+
+    Trace of `[0]{[00]0}`
+    ```
+    Char   Action                       Stack
+     [     push                         [ [ ]
+     0     ignored                      [ [ ]
+     ]     pop '[' — matches            [ ]
+     {     push                         [ { ]
+     [     push                         [ {, [ ]
+     0     ignored                      [ {, [ ]
+     0     ignored                      [ {, [ ]
+     ]     pop '[' — matches            [ { ]
+     0     ignored                      [ { ]
+     }     pop '{' — matches            [ ]
+    End    stack empty -> BALANCED
+    ```
+
+    Trace of `[())`
+    ```
+    Char   Action                       Stack
+     [     push                         [ [ ]
+     (     push                         [ [, ( ]
+     )     pop '(' — matches            [ [ ]
+     )     pop '[' — MISMATCH           -> NOT BALANCED
+    ```
+
+    Java version
+    ```java
+    import java.util.*;
+
+    public class BalancedParenthesis {
+        static boolean isBalanced(String exp) {
+            Deque<Character> st = new ArrayDeque<>();
+            for (char c : exp.toCharArray()) {
+                if (c == '(' || c == '{' || c == '[') st.push(c);
+                else if (c == ')' || c == '}' || c == ']') {
+                    if (st.isEmpty()) return false;
+                    char open = st.pop();
+                    if ((c == ')' && open != '(') ||
+                        (c == '}' && open != '{') ||
+                        (c == ']' && open != '[')) return false;
+                }
+            }
+            return st.isEmpty();
+        }
+
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            while (sc.hasNext())
+                System.out.println(isBalanced(sc.next()) ? "Balanced" : "Not Balanced");
+        }
+    }
+    ```
+
+    Key points
+    - A stack is the right structure because the bracket opened `most recently` must be closed first — exactly LIFO.
+    - Three failure cases: a closing bracket with an empty stack, a mismatched type, and a non-empty stack at the end.
+    - `Time O(n)`, `Space O(n)`.
+
 17. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The structure in which insertion and deletion both take place at the `same end` is the `Stack`.
+
+    Why
+    - A stack is a LIFO (Last In, First Out) structure. Both `push` (insertion) and `pop` (deletion) operate at one end only, called the `top`. Only a single pointer, `top`, is therefore needed.
+    ```
+                top ->  [ C ]      push adds here
+                        [ B ]      pop removes from here
+                        [ A ]
+                  both operations at the SAME end
+    ```
+
+    Contrast with a queue
+    - In a queue, insertion (`enqueue`) is at the `rear` and deletion (`dequeue`) is at the `front` — two `different` ends, requiring two pointers.
+    ```
+       enqueue -->  [ A | B | C ]  --> dequeue
+                    rear       front
+    ```
+
+    Summary
+
+    | Structure | Insertion | Deletion | Same end? |
+    |---|---|---|---|
+    | `Stack` | Top | Top | `Yes` |
+    | Queue | Rear | Front | No |
+    | Deque | Both ends | Both ends | Either end |
+    | Linked list | Anywhere | Anywhere | Not restricted |
+
+    - The special case worth noting is the `deque` (double-ended queue), which allows insertion and deletion at both ends, so it can behave as either a stack or a queue.
 
 18. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
 
+    Answer:
+
+    C program
+    ```c
+    #include <stdio.h>
+    #include <string.h>
+    #define MAX 100
+
+    char stack[MAX];
+    int top = -1;
+
+    void push(char c) { stack[++top] = c; }
+    char pop(void)    { return stack[top--]; }
+    int  isEmpty(void){ return top == -1; }
+
+    int matches(char open, char close) {
+        return (open == '(' && close == ')') ||
+               (open == '{' && close == '}') ||
+               (open == '[' && close == ']');
+    }
+
+    int isBalanced(char *exp) {
+        top = -1;
+        for (int i = 0; exp[i] != '\0'; i++) {
+            char c = exp[i];
+
+            if (c == '(' || c == '{' || c == '[')
+                push(c);                            // opening bracket
+            else if (c == ')' || c == '}' || c == ']') {
+                if (isEmpty())            return 0;  // closing, nothing open
+                if (!matches(pop(), c))   return 0;  // wrong type
+            }
+        }
+        return isEmpty();                            // nothing left unclosed
+    }
+
+    int main(void) {
+        char exp[MAX];
+        printf("Enter expression: ");
+        scanf("%s", exp);
+        printf("%s\n", isBalanced(exp) ? "Balanced" : "Not Balanced");
+        return 0;
+    }
+    ```
+
+    Output for several inputs
+    ```
+    {[()]}        -> Balanced
+    ((a+b)*c)     -> Balanced
+    [0]{[00]0}    -> Balanced
+    [())          -> Not Balanced
+    {[}]          -> Not Balanced
+    (()           -> Not Balanced
+    )(            -> Not Balanced
+    ```
+
+    Algorithm in words
+    ```
+    create an empty stack
+    for each character:
+        if it is ( { [        -> push it
+        if it is ) } ]        -> if the stack is empty, fail
+                                 pop; if the popped bracket does not
+                                 match the type, fail
+    at the end: balanced only if the stack is empty
+    ```
+
+    Trace of `{[()]}`
+    ```
+    Char   Action                Stack
+     {     push                  [ { ]
+     [     push                  [ {, [ ]
+     (     push                  [ {, [, ( ]
+     )     pop '(' — match       [ {, [ ]
+     ]     pop '[' — match       [ { ]
+     }     pop '{' — match       [ ]
+    End    empty -> BALANCED
+    ```
+
+    Why a stack
+    - The most recently opened bracket must be the first one closed, which is precisely the LIFO property. No other structure expresses nesting so directly.
+
+    The three failure cases
+    - Closing bracket with an `empty stack` — e.g. `)(`
+    - Popped bracket of the `wrong type` — e.g. `{]`
+    - Stack `not empty` at the end — e.g. `((`
+
+    Complexity: `Time O(n)`, `Space O(n)`.
+
 19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    PUSH procedure — inserting data into a stack
+    ```
+    ALGORITHM PUSH(stack, top, MAX, item)
+    INPUT : the stack array, the current top index, the capacity MAX, and the item
+    OUTPUT: the item placed on top of the stack
+
+    BEGIN
+        // Step 1: check for overflow
+        IF top = MAX − 1 THEN
+            PRINT "Stack Overflow — cannot insert"
+            RETURN
+        END IF
+
+        // Step 2: move the top pointer up
+        top = top + 1
+
+        // Step 3: place the item at the new top
+        stack[top] = item
+
+        PRINT item, " pushed successfully"
+    END
+    ```
+
+    C implementation
+    ```c
+    #define MAX 100
+    int stack[MAX];
+    int top = -1;                       // -1 means the stack is empty
+
+    void push(int item) {
+        if (top == MAX - 1) {           // overflow check FIRST
+            printf("Stack Overflow\n");
+            return;
+        }
+        top = top + 1;
+        stack[top] = item;
+        printf("%d pushed\n", item);
+    }
+    ```
+
+    Linked-list version, which has no fixed capacity
+    ```c
+    struct Node { int data; struct Node *next; };
+    struct Node *top = NULL;
+
+    void push(int item) {
+        struct Node *newNode = malloc(sizeof(struct Node));
+        if (newNode == NULL) { printf("Heap Overflow\n"); return; }
+        newNode->data = item;
+        newNode->next = top;            // new node points to the old top
+        top = newNode;                  // new node becomes the top
+    }
+    ```
+
+    Worked example
+    ```
+    Initially: top = −1, stack empty
+
+    PUSH(10)  ->  top = 0,  stack[0] = 10   ->  [10]
+    PUSH(20)  ->  top = 1,  stack[1] = 20   ->  [10, 20]
+    PUSH(30)  ->  top = 2,  stack[2] = 30   ->  [10, 20, 30]
+
+          top ->  30
+                  20
+                  10
+    ```
+
+    Points to note
+    - The `overflow check must come first`. Incrementing top before checking would write past the end of the array.
+    - `top` is initialised to −1 for a 0-based array, so the first push stores at index 0.
+    - Complexity: `O(1)` time and `O(1)` extra space.
+    - The counterpart operation is `POP`, which reads stack[top] and then decrements top, after checking for `Stack Underflow` when top = −1.
+
 20. **Write prefix and postfix notations from the statement like $((A+B)*C-(D-E)^F)$** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
+
+    Answer:
+
+    Given
+    ```
+    ((A + B) * C − (D − E) ^ F)
+    ```
+
+    Step 1 — establish the order of operations
+    - Precedence: `^` highest, then `* /`, then `+ −`. The brackets already group A+B and D−E.
+    ```
+    ((A + B) * C)  −  ((D − E) ^ F)
+    ```
+    - The operator applied `last` is the outer `−`, so it becomes the root of the expression tree.
+
+    Step 2 — the expression tree
+    ```
+                            −
+                        /       \
+                       *         ^
+                     /   \      /   \
+                    +     C    −      F
+                  /   \       /  \
+                 A     B     D    E
+    ```
+
+    Step 3 — prefix notation (preorder: Root, Left, Right)
+    ```
+    −            root
+      *          left subtree root
+        +
+          A
+          B
+        C
+      ^          right subtree root
+        −
+          D
+          E
+        F
+    ```
+    ```
+    Prefix = − * + A B C ^ − D E F
+    ```
+
+    Step 4 — postfix notation (postorder: Left, Right, Root)
+    ```
+    A  B  +      -> (A+B)
+    C  *         -> (A+B)*C
+    D  E  −      -> (D−E)
+    F  ^         -> (D−E)^F
+    −            -> the whole expression
+    ```
+    ```
+    Postfix = A B + C * D E − F ^ −
+    ```
+
+    Answers
+
+    | Notation | Result |
+    |---|---|
+    | Infix | ((A + B) * C − (D − E) ^ F) |
+    | `Prefix` | `− * + A B C ^ − D E F` |
+    | `Postfix` | `A B + C * D E − F ^ −` |
+
+    Verification with numbers — A=3, B=4, C=2, D=9, E=5, F=2
+    ```
+    Infix : ((3+4)*2) − ((9−5)^2) = 14 − 16 = −2
+
+    Postfix: 3 4 + 2 * 9 5 − 2 ^ −
+      3 4 +   -> 7
+      2 *     -> 14
+      9 5 −   -> 4
+      2 ^     -> 16
+      −       -> 14 − 16 = −2      ✓
+
+    Prefix (scan right to left): − * + 3 4 2 ^ − 9 5 2
+      push 2, 5, 9 ; − -> 9−5 = 4
+      ^ -> 4^2 = 16
+      push 2, 4, 3 ; + -> 3+4 = 7
+      * -> 7*2 = 14
+      − -> 14−16 = −2              ✓
+    ```
+
+    - Both machine notations give the same value as the infix expression, and neither needs a single bracket — which is exactly why compilers convert to them.
 
 ## Linked List (15)
 
