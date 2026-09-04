@@ -7590,13 +7590,277 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 1. **Core vs thread in networking?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: `Core` and `thread` are processor terms rather than networking ones, though the same words appear in networking with different meanings. Both senses are given.
+
+   In a processor
+
+   `Core`
+   - A `physical` independent processing unit inside the CPU chip. Each core has its own ALU, control unit, registers and L1 cache, and can execute a program entirely on its own.
+   - A quad-core processor genuinely runs four programs at the same instant.
+
+   `Thread`
+   - A `logical` stream of instructions — the smallest unit the operating system schedules. With `hyper-threading` (SMT), one physical core presents itself as two logical processors and interleaves two threads, keeping its execution units busy while one thread waits for memory.
+   ```
+      4 cores , 8 threads
+
+      Core 1 : Thread 1 , Thread 2
+      Core 2 : Thread 3 , Thread 4
+      Core 3 : Thread 5 , Thread 6
+      Core 4 : Thread 7 , Thread 8
+   ```
+   - Hyper-threading adds roughly `20-30 per cent` performance, not 100 per cent, because the two threads share one core's actual hardware.
+
+   | Point | Core | Thread |
+   |---|---|---|
+   | Nature | Physical hardware | Logical execution stream |
+   | Own ALU and registers | Yes | No — shares the core's |
+   | True parallelism | Yes | Interleaved on one core |
+   | Set by | The chip design | The OS and the SMT feature |
+   | Performance gain | Nearly linear with count | About 20-30 % per core |
+
+   In networking, where the same words are used differently
+
+   `Core` — the `core network` or `core layer`
+   ```
+      Access layer       : where users connect (switches, access points)
+      Distribution layer : routing and policy between access and core
+      Core layer         : the high-speed backbone that switches traffic
+                           between distribution blocks as fast as possible
+   ```
+   - The core layer's job is `speed and reliability only`. No access lists, no filtering, no policy — anything that adds latency is pushed down to the distribution layer. It is built with redundant high-capacity links.
+   - `Core router` and `core switch` mean the devices in that layer, and a `core network` is the operator's backbone that carries aggregated traffic between regions.
+
+   `Thread` — two meanings in networking
+   ```
+      1. Thread (capital T) : an IEEE 802.15.4-based low-power mesh
+         networking protocol for IoT devices, using IPv6 with 6LoWPAN.
+         Self-healing, no single point of failure, used in smart homes.
+
+      2. Threads in server software : a web server or a router's control
+         plane creates one thread per connection or per queue, so that many
+         sessions are handled concurrently.
+   ```
+
+   - Which meaning the question wants depends on context. In a hardware or CPU question, `core versus thread` means physical versus logical processors. In a network design question, `core` means the backbone layer.
+
 2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
+
+   Answer: (Answered in English, as required for IT topics.) The `i5` and `i7` labels denote performance tiers within one generation. The hardware differences are these.
+
+   1. Number of cores and threads
+   ```
+      Core i5 : typically 6 cores , 12 threads
+      Core i7 : typically 8 or more cores , 16 or more threads
+   ```
+   - More cores means more genuinely parallel work — the largest single difference in heavy multi-threaded tasks such as video encoding, compilation and virtualisation.
+
+   2. Hyper-threading
+   - On many generations the `i5 lacks hyper-threading` while the `i7 has it`, so an i7 presents twice as many logical processors as physical cores.
+   - Hyper-threading adds roughly `20-30 per cent`, by keeping a core's execution units busy while one thread waits for memory.
+
+   3. Cache size
+   ```
+      Core i5 : 9-12 MB of L3 cache
+      Core i7 : 12-25 MB of L3 cache
+   ```
+   - A larger L3 raises the hit ratio, and since a main-memory access costs about 200 cycles against 40 for L3, this affects real performance considerably.
+
+   4. Clock speed and Turbo Boost
+   - The i7 usually has a higher base clock and a higher maximum turbo frequency, and it holds turbo for longer because of its larger power budget.
+
+   5. Thermal design power and cooling
+   ```
+      Core i5 : 65 W typical
+      Core i7 : 95-125 W typical
+   ```
+   - The higher TDP is what allows the extra cores and the higher sustained clocks, but it demands better cooling.
+
+   6. Integrated graphics
+   - Both usually have integrated graphics, but the i7's version often has more execution units and a higher graphics clock.
+
+   7. Overclocking and platform features
+   - The unlocked `K` variants are more common in the i7 line, and i7 chips more often support features such as more PCIe lanes.
+
+   Summary
+
+   | Point | Core i5 | Core i7 |
+   |---|---|---|
+   | Cores | 6 typically | 8 or more |
+   | Threads | 6-12 | 16 or more |
+   | Hyper-threading | Often absent | Usually present |
+   | L3 cache | 9-12 MB | 12-25 MB |
+   | Base clock | Lower | Higher |
+   | Turbo Boost | Yes, lower ceiling | Yes, higher ceiling |
+   | TDP | ~65 W | 95-125 W |
+   | Price | Moderate | High |
+   | Suited to | Everyday use, gaming | Video editing, CAD, development, virtualisation |
+
+   - Two important warnings. First, the tier number is `not a generation`: a newer i5 usually beats an older i7, so the generation code — the leading digits of the model number, as in `i5-13600K` — matters more than the tier. Second, the exact figures above vary by generation; the `principle` is constant — i7 means more cores, more threads, more cache and a higher clock, at higher power and price.
 
 3. **What is Hyper threading? What is the use of it?** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)]*
 
+   Answer: What hyper-threading is
+   - `Hyper-Threading Technology (HTT)` is Intel's implementation of `Simultaneous Multithreading (SMT)`. One `physical` core presents itself to the operating system as `two logical processors`, so it can hold and interleave two threads at once.
+   - It works by duplicating only the `architectural state` — the registers, the program counter and the control registers — while the two threads `share` the core's real execution hardware: the ALUs, the FPU, the caches and the branch predictor.
+   ```
+      +-------------------------------------------+
+      |            One physical core              |
+      |                                           |
+      |  Thread 1 state      Thread 2 state       |  <- duplicated
+      |  (registers, PC)     (registers, PC)      |
+      |            \           /                  |
+      |          Shared execution units           |  <- NOT duplicated
+      |          (ALU, FPU, cache, scheduler)     |
+      +-------------------------------------------+
+   ```
+   ```
+      4 physical cores , hyper-threading enabled  ->  8 logical processors
+      Windows Task Manager then shows "4 cores, 8 logical processors"
+   ```
+
+   Why it helps
+   - A single thread frequently `stalls` — waiting for a cache miss, a branch misprediction or a long-latency instruction. During those cycles the core's execution units sit idle.
+   - With two threads resident, the core simply issues instructions from the `other` thread while the first is stalled. The idle slots are filled.
+   ```
+      Without HT : | T1 | T1 | stall | stall | T1 |
+      With HT    : | T1 | T1 |  T2   |  T2   | T1 |     -> units stay busy
+   ```
+
+   Uses and benefits
+   - `Higher throughput` on multi-threaded work — typically `20-30 per cent`, not 100 per cent, because the two threads share one core's real hardware.
+   - `Better responsiveness` when many programs run at once: browsing while a file compresses in the background.
+   - `Server workloads` benefit most — web servers, database servers and virtualisation hosts, where many independent requests arrive and each stalls often on memory or I/O.
+   - `Content creation` — video encoding, 3D rendering and compilation are all highly parallel.
+   - `Cost efficiency`: extra performance from a modest amount of extra silicon, far cheaper than adding real cores.
+
+   Limitations
+   - It is `not` the same as doubling the cores. Two threads compete for one set of ALUs and one cache, so a single heavily compute-bound thread gains nothing.
+   - `Cache contention` can make some workloads slightly `slower` with HT enabled.
+   - Single-threaded programs see no benefit at all.
+   - It raises power and heat.
+   - `Security`: side-channel attacks such as `Spectre`, `Foreshadow` and `PortSmash` exploit the fact that two threads share a core. Some cloud providers and security-sensitive sites disable SMT for this reason.
+
+   Comparison
+
+   | Point | Physical core | Logical (hyper-)thread |
+   |---|---|---|
+   | Nature | Real hardware | Duplicated register state only |
+   | Execution units | Its own | Shared with the sibling thread |
+   | Performance gain | Nearly linear | About 20-30 % |
+   | True parallelism | Yes | Interleaved on one core |
+   | Cost in silicon | High | Small |
+
+   - Terminology note: `Hyper-Threading` is Intel's brand name. AMD's equivalent is simply called `SMT`, and both implement the same idea. A processor described as "8 cores, 16 threads" has 8 physical cores each running 2 threads.
+
 4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
 
+   Answer: What hyper-threading is
+   - `Hyper-Threading (HTT)` is Intel's implementation of `Simultaneous Multithreading (SMT)`. One `physical` core presents itself to the operating system as `two logical processors`, so it can hold and interleave two threads at once.
+   - Only the `architectural state` is duplicated — the registers, the program counter and the control registers. The two threads `share` the real hardware: the ALUs, the FPU, the caches and the branch predictor.
+   ```
+      +-------------------------------------------+
+      |            One physical core              |
+      |   Thread 1 state       Thread 2 state     |  <- duplicated
+      |            \             /                |
+      |         Shared execution units            |  <- NOT duplicated
+      |         (ALU, FPU, cache, scheduler)      |
+      +-------------------------------------------+
+   ```
+   - Why it helps: a single thread frequently stalls waiting for a cache miss or a mispredicted branch, leaving the execution units idle. With two threads resident, the core issues instructions from the other thread and fills those idle slots.
+   ```
+      Without HT : | T1 | T1 | stall | stall | T1 |
+      With HT    : | T1 | T1 |  T2   |  T2   | T1 |
+   ```
+   - Gain: typically `20-30 per cent` on multi-threaded work, `not` 100 per cent, because the two threads share one core's real hardware.
+
+   What "2 cores and 4 threads" means
+   ```
+      2 CORES   : two PHYSICAL processing units on the chip. Each has its own
+                  ALU, control unit, registers and L1 cache, and can execute a
+                  program completely independently. These give TRUE parallelism.
+
+      4 THREADS : four LOGICAL processors that the operating system can
+                  schedule work onto. Since there are only 2 physical cores,
+                  hyper-threading is enabled and each core carries 2 threads.
+   ```
+   ```
+      Core 1 : Thread 1 , Thread 2
+      Core 2 : Thread 3 , Thread 4
+
+      The OS sees 4 processors and schedules 4 tasks.
+      The chip really has 2 sets of execution hardware.
+   ```
+   - The relationship is simply `threads = cores x 2` when SMT is on, and `threads = cores` when it is off.
+   - Practical effect: such a processor runs 4 tasks concurrently, but the throughput is roughly that of `2.5 cores`, not 4 — because two threads sharing a core cannot both use the ALUs at the same instant.
+
+   Core i3, i5, i7 and i9
+
+   | Point | i3 | i5 | i7 | i9 |
+   |---|---|---|---|---|
+   | Tier | Entry | Mid range | High end | Enthusiast |
+   | Cores (typical) | 4 | 6 | 8 | 16-24 |
+   | Threads | 8 | 12 | 16 | 24-32 |
+   | L3 cache | Smallest | Medium | Large | Largest |
+   | Turbo Boost | Usually absent | Yes | Yes | Yes, highest |
+   | TDP | ~35-65 W | ~65 W | ~95-125 W | ~125-250 W |
+   | Suited to | Browsing, office work | Everyday plus gaming | Editing, CAD, development | Workstation, rendering, servers |
+
+   - The essential warning: the tier number is `not a generation`. A newer i5 usually beats an older i7, so the generation code — the leading digits of the model number, as in `i5-13600K` — matters more than the tier itself.
+   - Note also that a higher number is not automatically better `for a given task`: a game that uses only four threads gains nothing from an i9's extra cores, and would run just as fast on an i5 with a higher clock.
+
 5. **১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) An Intel `Core i7` processor's model number identifies its generation, so a full example names both.
+
+   Examples by generation
+   ```
+      1st  gen (Nehalem, 2008)      : i7-920 , i7-960
+      2nd  gen (Sandy Bridge, 2011) : i7-2600 , i7-2600K
+      3rd  gen (Ivy Bridge, 2012)   : i7-3770 , i7-3770K
+      4th  gen (Haswell, 2013)      : i7-4770 , i7-4790K
+      6th  gen (Skylake, 2015)      : i7-6700 , i7-6700K
+      8th  gen (Coffee Lake, 2017)  : i7-8700 , i7-8700K
+      10th gen (Comet Lake, 2020)   : i7-10700 , i7-10700K
+      11th gen (Rocket Lake, 2021)  : i7-11700K
+      12th gen (Alder Lake, 2021)   : i7-12700K
+      13th gen (Raptor Lake, 2022)  : i7-13700K
+      14th gen (Raptor Lake R, 2023): i7-14700K
+   ```
+
+   How to read the model number
+   ```
+      i7 - 13 700 K
+      ^    ^   ^  ^
+      |    |   |  +-- suffix
+      |    |   +----- SKU number : higher means a better chip in that generation
+      |    +--------- GENERATION : 13 = 13th generation
+      +-------------- tier : i3, i5, i7, i9
+   ```
+
+   Common suffixes
+   ```
+      K  : unlocked multiplier, can be overclocked
+      F  : no integrated graphics
+      KF : unlocked and no integrated graphics
+      T  : low power desktop
+      H  : high performance laptop
+      U  : low power laptop
+      HX : laptop, desktop-class performance
+      X  : extreme edition (HEDT platform)
+   ```
+
+   A worked example — `i7-13700K`
+   ```
+      i7   : the high-end tier
+      13   : 13th generation (Raptor Lake)
+      700  : the SKU within that generation
+      K    : unlocked, overclockable
+
+      Specification : 16 cores (8 performance + 8 efficient), 24 threads,
+                      30 MB L3 cache, up to 5.4 GHz turbo, 125 W base power
+   ```
+
+   - The point to state clearly: the `generation number matters more than the tier`. An `i7-4770` (4th generation, 2013) is comfortably beaten by an `i5-13600` (13th generation, 2022), because a decade of architectural improvement outweighs the tier difference. When comparing processors, always read the generation digits first.
 
 ## RISC vs CISC Architecture (4)
 
