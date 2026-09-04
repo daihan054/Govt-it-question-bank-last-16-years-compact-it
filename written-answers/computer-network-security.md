@@ -4517,23 +4517,328 @@
 
 1. **সাইবার অপরাধের প্রকারভেদ পরিবেশের স্থায়িত্ব বর্ণনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: Cybercrime is any criminal activity that targets or uses a computer, network or digital device.
+
+   Types of cybercrime
+
+   **(a) Crimes against individuals**
+   - Identity theft, online fraud, cyberstalking, cyberbullying, online harassment, defamation, revenge pornography, phishing.
+
+   **(b) Crimes against property**
+   - Hacking, data theft, ransomware, malware distribution, intellectual property theft, software piracy, credit card fraud.
+
+   **(c) Crimes against organisations**
+   - Data breach, DDoS attack, corporate espionage, insider data theft, business email compromise.
+
+   **(d) Crimes against government / society**
+   - Cyber terrorism, attacks on critical infrastructure, hacking government websites, spreading disinformation, online radicalisation.
+
+   **(e) Financial cybercrime**
+   - Online banking fraud, card skimming, cryptocurrency fraud, money laundering through digital channels, MFS fraud.
+
+   Why cybercrime persists — the environmental factors that sustain it
+   - **Anonymity** — attackers hide behind VPNs, Tor and compromised machines, so attribution is difficult.
+   - **No geographic boundary** — the attacker sits in one country, the victim in another, and jurisdiction becomes a legal obstacle.
+   - **Low cost, high return** — an attack toolkit costs very little; a successful ransomware campaign earns a great deal.
+   - **Crime as a service** — ransomware-as-a-service and phishing kits let unskilled criminals operate.
+   - **Weak enforcement capacity** — investigators, forensic laboratories and trained prosecutors are scarce, especially in developing countries.
+   - **Low digital literacy** among victims, which keeps social engineering effective.
+   - **Under-reporting** — organisations conceal breaches to protect reputation, so the true scale stays hidden.
+   - **Rapid technology change** — new platforms appear faster than law and defence adapt.
+
+   Prevention
+   - Strong technical controls, public awareness campaigns, capacity building for law enforcement, up-to-date legislation, international cooperation, and mandatory breach reporting.
+
 2. **Why is cyber security important? What are the common types of cyber threats? Explain cyber security measures.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
+
+   Answer:
+
+   (a) Why cyber security is important
+   - **Protects sensitive data** — customer records, financial data, national ID information and intellectual property.
+   - **Prevents financial loss** — direct theft, fraud, ransom payments and the far larger cost of recovery and downtime.
+   - **Maintains business continuity** — a ransomware attack can halt an entire bank's operations.
+   - **Preserves trust and reputation** — customers leave after a breach, and the reputational damage outlasts the technical recovery.
+   - **Regulatory compliance** — the Bangladesh Bank ICT Security Guideline, PCI DSS and data protection rules carry penalties.
+   - **Protects national security** — attacks on critical infrastructure such as power, banking and telecom have physical consequences.
+   - **Growing attack surface** — cloud, mobile, remote work and IoT have expanded what must be defended.
+
+   (b) Common types of cyber threat
+   - **Malware** — virus, worm, trojan, ransomware, spyware, rootkit.
+   - **Phishing and social engineering** — the entry point for most breaches.
+   - **DoS and DDoS** — denial of availability.
+   - **Man-in-the-Middle** — interception of communication.
+   - **SQL injection and XSS** — web application attacks.
+   - **Password attacks** — brute force, credential stuffing.
+   - **Zero-day exploits** — attacks before a patch exists.
+   - **Insider threats** — malicious or careless employees.
+   - **Supply chain attacks** — compromise through a trusted vendor.
+   - **APT (Advanced Persistent Threat)** — long-term stealthy intrusion, often state-sponsored.
+
+   (c) Cyber security measures
+
+   **Technical**
+   - Firewall, IPS and network segmentation.
+   - Antivirus and EDR on every endpoint.
+   - Encryption of data at rest and in transit.
+   - Multi-factor authentication and least privilege.
+   - Patch management — the single most effective control.
+   - Backup following the 3-2-1 rule, with tested restores.
+   - SIEM with 24/7 monitoring.
+
+   **Administrative**
+   - Written security policy, incident response plan, business continuity and DR plan.
+   - Regular VAPT and audit.
+   - Vendor risk assessment.
+   - **Security awareness training** — since most breaches begin with a person.
+
+   **Physical**
+   - Access control to server rooms, CCTV, environmental and fire protection.
+
+   - Guiding principle: **defence in depth**. No single control is sufficient; layers are built so that the failure of one does not expose everything.
 
 3. **Hacking a system without cracking the system, only for finding bugs and vulgarities is called?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
+   Answer: It is called **Ethical Hacking**, and the person doing it is a **White Hat Hacker** or **penetration tester**.
+
+   - Ethical hacking means testing a system for vulnerabilities **with the owner's explicit written permission**, in order to find and fix weaknesses before a criminal finds them.
+   - The findings are reported to the owner, never exploited or sold.
+
+   Related terms
+   - **Penetration Testing (VAPT)** — a structured, authorised simulated attack.
+   - **Bug Bounty** — a programme paying researchers for responsibly disclosed vulnerabilities.
+   - **Red Team** — simulates a real adversary; **Blue Team** defends.
+   - **Responsible disclosure** — reporting privately and giving the vendor time to patch before publishing.
+
+   Types of hacker
+
+   | Type | Permission | Intent | Legality |
+   |---|---|---|---|
+   | White hat | Yes | Improve security | Legal |
+   | Grey hat | No | Usually curiosity, not malice | Illegal |
+   | Black hat | No | Malicious gain | Illegal |
+
+   - Key point: **authorisation is what makes it ethical.** The same technical activity without written permission is a crime, regardless of intent.
+   - Certifications: CEH, OSCP, CISSP.
+
 4. **What is Cybercrime? Cybercrime রোধে প্রয়োজনীয় পদক্ষেপ গুলো লিখ।** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
+
+   Answer:
+
+   (a) Cybercrime
+   - Any illegal activity carried out using a computer, network or digital device — either as the tool of the crime, its target, or both.
+   - Examples: hacking, data theft, online fraud, ransomware, identity theft, cyberbullying, phishing, and attacks on critical infrastructure.
+
+   (b) Necessary steps to prevent cybercrime
+
+   **Individual level**
+   - Use strong unique passwords and a password manager; enable multi-factor authentication.
+   - Never share OTP, PIN or password with anyone, including callers claiming to be from the bank.
+   - Verify links and sender addresses before clicking; be sceptical of urgency.
+   - Keep the operating system, browser and antivirus updated.
+   - Avoid public Wi-Fi for banking, or use a VPN.
+   - Limit what is shared on social media — it feeds social engineering.
+   - Back up important data.
+
+   **Organisational level**
+   - Firewall, IPS, EDR, network segmentation and encryption.
+   - Patch management and vulnerability scanning.
+   - Least privilege and regular access review.
+   - **Security awareness training** for all staff.
+   - Incident response plan, tested backups and a DR site.
+   - Regular VAPT and audit.
+   - Vendor and supply chain security assessment.
+
+   **National level**
+   - Up-to-date **cyber security legislation** and specialised cyber tribunals.
+   - A national **CERT/CIRT** for coordinated incident response.
+   - Trained cyber police units and digital forensic laboratories.
+   - Protection framework for **Critical Information Infrastructure**.
+   - Public awareness campaigns.
+   - International cooperation, since cybercrime crosses borders.
+   - Capacity building — producing skilled cyber security professionals.
 
 5. **What is Cyber space? Write some threats of cyber space.** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 
+   Answer:
+
+   (a) Cyberspace
+   - The virtual environment created by interconnected computer networks, systems, data and users — the global domain in which digital communication, transactions and interaction take place.
+   - It has no physical geography but real consequences, and it includes the internet, telecommunications networks, computer systems, embedded processors and the data they carry.
+
+   (b) Threats in cyberspace
+
+   **Technical threats**
+   - **Malware** — virus, worm, trojan, ransomware, spyware.
+   - **Hacking and unauthorised access** to systems and data.
+   - **DDoS attacks** taking services offline.
+   - **Man-in-the-Middle** interception.
+   - **Web application attacks** — SQL injection, XSS.
+   - **Zero-day exploits**.
+
+   **Human and social threats**
+   - **Phishing and social engineering**.
+   - **Identity theft**.
+   - **Cyberbullying, cyberstalking and online harassment**.
+   - **Misinformation and disinformation** campaigns.
+   - **Insider threats**.
+
+   **Financial threats**
+   - Online banking and card fraud, MFS fraud, cryptocurrency scams, digital money laundering.
+
+   **National and strategic threats**
+   - **Cyber terrorism** and attacks on critical infrastructure — power grid, banking, telecom, water.
+   - **Cyber espionage** by state actors.
+   - **APT campaigns** with long-term stealthy presence.
+   - **Cyber warfare** between states.
+
+   **Privacy threats**
+   - Mass data collection and profiling, data breaches, surveillance, and misuse of personal information.
+
+   - What makes cyberspace threats distinctive: attacks are cheap, anonymous, instantaneous and borderless, while defence must be continuous, expensive and comprehensive. This asymmetry is the fundamental problem of cyber security.
+
 6. **Write the cyber security threats.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
+
+   Answer: The main cyber security threats, grouped by type.
+
+   **Malware threats**
+   - Virus, worm, trojan horse, ransomware, spyware, adware, rootkit, keylogger, botnet, cryptojacking, fileless malware.
+
+   **Social engineering threats**
+   - Phishing, spear phishing, whaling, smishing, vishing, pretexting, baiting, business email compromise.
+
+   **Network threats**
+   - DoS and DDoS, Man-in-the-Middle, ARP spoofing, DNS spoofing, MAC flooding, session hijacking, packet sniffing, rogue access points.
+
+   **Application threats**
+   - SQL injection, cross-site scripting, CSRF, buffer overflow, directory traversal, insecure APIs, file upload vulnerabilities.
+
+   **Access and credential threats**
+   - Brute force, dictionary attacks, credential stuffing, privilege escalation, weak or default passwords.
+
+   **Advanced threats**
+   - Zero-day exploits, Advanced Persistent Threats, supply chain compromise, state-sponsored attacks.
+
+   **Human threats**
+   - Insider threats (malicious and negligent), shadow IT, poor security hygiene, physical theft of devices.
+
+   **Emerging threats**
+   - IoT device compromise, cloud misconfiguration, AI-generated deepfake fraud, attacks on AI models, and the future quantum threat to current encryption.
+
+   - Underlying pattern: technical controls have improved greatly, so attackers increasingly target the two weakest links — **people** and **misconfiguration**.
 
 7. **What is Vulnerability?** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
+   Answer: A vulnerability is a **weakness or flaw** in a system, application, network, process or person that could be exploited by a threat to gain unauthorised access or cause harm.
+
+   Types of vulnerability
+   - **Software** — unpatched systems, coding errors such as buffer overflow, SQL injection flaws, insecure APIs.
+   - **Configuration** — default credentials, unnecessary open ports, directory listing enabled, misconfigured cloud storage.
+   - **Network** — unencrypted protocols, weak Wi-Fi security, flat network with no segmentation.
+   - **Physical** — unlocked server rooms, unattended workstations, no CCTV.
+   - **Human** — susceptibility to phishing, weak passwords, poor security awareness. This is consistently the largest category.
+   - **Process** — no patch management, no access review, no incident response plan.
+
+   How vulnerabilities are identified and managed
+   - **Vulnerability scanning** (Nessus, OpenVAS, Qualys) and **penetration testing**.
+   - **CVE** — a public catalogue of known vulnerabilities with unique identifiers.
+   - **CVSS** — a scoring system from 0 to 10 rating severity, used to prioritise remediation.
+   - Management cycle: identify → assess and prioritise → remediate (patch or configure) → verify → repeat.
+
+   Relationship to threat and risk
+   ```
+   Risk = Threat × Vulnerability × Impact
+   ```
+   - A vulnerability alone causes no harm. Harm occurs only when a threat exploits it. But the vulnerability is the part an organisation can actually control — you cannot remove attackers, but you can remove the weakness they would use.
+
 8. **What is cyber threat intelligence database? What is the use of this in corporate office network?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 752 (ET: N/A)]*
+
+   Answer:
+
+   (a) Cyber Threat Intelligence (CTI) database
+   - A curated, continuously updated repository of information about current and emerging cyber threats — who the attackers are, what tools and techniques they use, and what technical indicators identify their activity.
+
+   What it contains
+   - **IoCs (Indicators of Compromise)** — malicious IP addresses, domains, URLs, file hashes, email addresses.
+   - **TTPs (Tactics, Techniques and Procedures)** — how specific threat actors operate, commonly mapped to the **MITRE ATT&CK** framework.
+   - **Vulnerability intelligence** — which CVEs are being actively exploited in the wild, which matters far more than raw CVSS score.
+   - **Threat actor profiles** — motivation, targeting and capability.
+   - **Malware signatures and behaviour patterns**.
+
+   Sources
+   - Commercial feeds (Recorded Future, Mandiant), open sources (MISP, AlienVault OTX, abuse.ch), government CERTs and national CIRTs, and industry sharing groups such as FS-ISAC for banks.
+
+   (b) Use in a corporate office network
+
+   - **Proactive blocking** — feed malicious IPs and domains into the firewall, proxy and DNS so known-bad destinations are blocked before any user reaches them.
+   - **Faster detection** — the SIEM correlates internal logs against IoCs, so a compromised machine talking to a known command-and-control server is flagged immediately.
+   - **Patch prioritisation** — thousands of CVEs exist, but intelligence identifies the handful being actively exploited. This is where limited patching effort should go first.
+   - **Phishing defence** — known malicious sender domains and URLs are blocked at the email gateway.
+   - **Incident response** — during an investigation, intelligence identifies the malware family and threat actor, which reveals what else to look for and how the attacker typically moves.
+   - **Threat hunting** — analysts search proactively for TTPs associated with actors known to target their sector.
+   - **Risk-based decisions** — knowing which actors target banks in South Asia shapes where budget and controls are placed.
+   - **Automated response** — SOAR platforms consume intelligence and act without human delay.
+
+   - Practical caution: intelligence is only useful if it is INTEGRATED and ACTED ON. A feed that nobody consumes into the firewall and SIEM is an expense, not a control.
 
 9. **সাইবার অপরাধ কি? ৮টি সাইবার অপরাধ এর নাম লিখুন। সাইবার অপরাধ দূর করার জন্য ৬টি পন্থার নাম লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948-949 (ET: N/A)]*
 
+   Answer:
+
+   (a) Cybercrime
+   - Any criminal act committed using a computer, network or digital device — where the device is the tool of the crime, the target, or both.
+
+   (b) Eight cybercrimes
+   - **Hacking** — unauthorised access to a computer system or network.
+   - **Phishing** — impersonating a trusted party to steal credentials.
+   - **Identity theft** — stealing personal information to impersonate someone.
+   - **Ransomware attack** — encrypting a victim's data and demanding payment.
+   - **Online financial fraud** — card fraud, banking fraud, MFS fraud.
+   - **Cyberbullying and online harassment** — including cyberstalking and defamation.
+   - **Data breach / data theft** — stealing confidential organisational or customer data.
+   - **DDoS attack** — flooding a service so legitimate users cannot access it.
+
+   Others: software piracy, cyber terrorism, child exploitation, spreading malware, and cryptocurrency fraud.
+
+   (c) Six ways to counter cybercrime
+   - **Strong technical controls** — firewall, antivirus and EDR, encryption, multi-factor authentication, and prompt patching.
+   - **Public awareness and training** — since most cybercrime succeeds through social engineering rather than technical compromise.
+   - **Strong legislation and enforcement** — up-to-date cyber law, specialised cyber tribunals, trained cyber police and digital forensic laboratories.
+   - **National CERT/CIRT** — coordinated incident detection, response and information sharing.
+   - **International cooperation** — cybercrime crosses borders, so mutual legal assistance and cross-border investigation are essential.
+   - **Regular audit, VAPT and monitoring** — finding and fixing weaknesses before criminals exploit them, with 24/7 SOC monitoring.
+
 10. **Employee causes the most risk of fraud and computer compromises- do you agree with the statement. Justify your answer.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
+
+    Answer: **Broadly yes — but with an important qualification.** Employees are the largest source of risk, though most of that risk comes from NEGLIGENCE rather than malice.
+
+    (a) Arguments supporting the statement
+
+    - **Legitimate access** — employees already hold valid credentials and are inside the perimeter, so firewalls, IPS and perimeter controls simply do not apply to them.
+    - **Knowledge of the system** — an insider knows where the valuable data is, when monitoring is weak, and which controls can be avoided. An outsider must discover all of this.
+    - **Trust** — their activity looks normal, so detection is far harder than for an external intruder.
+    - **Phishing entry point** — the overwhelming majority of successful breaches begin with an employee clicking a link or opening an attachment. Technically the attacker is external, but the employee is the door.
+    - **Negligence at scale** — weak or reused passwords, sharing credentials, losing an unencrypted laptop, misdirected email, using unauthorised cloud services, and leaving workstations unlocked.
+    - **Privileged users** — system administrators and DBAs can bypass application-level controls entirely, and can often delete the logs that would record it.
+    - **Departing employees** — data theft is common in the weeks before resignation, and orphaned accounts are frequently left active.
+    - Industry breach studies consistently attribute a large share of incidents to an internal element.
+
+    (b) Qualifications to the statement
+    - **External attacks are more numerous**, even if individual insider incidents cause more damage per event.
+    - Most insider incidents are **accidental**, not criminal — which changes the appropriate response from punishment to training and control design.
+    - **Third parties and vendors** with system access represent a comparable risk that the statement omits.
+    - Blaming employees can obscure a real failure of CONTROL DESIGN. If one person can move a large sum unchecked, that is a process failure, not merely a personnel failure.
+
+    (c) Controls that follow from this
+    - **Least privilege** and regular access review; immediate revocation on departure.
+    - **Segregation of duties** and maker-checker approval for financial transactions.
+    - **Privileged Access Management** with session recording, so administrators are also accountable.
+    - **DLP** and monitoring of large or unusual data movements.
+    - **UEBA** to detect behaviour that deviates from a user's own baseline.
+    - **Mandatory leave and job rotation** — a long-running fraud usually surfaces when the person is away.
+    - **Security awareness training with simulated phishing**, which addresses the negligence majority.
+    - **Background verification** at recruitment and a clear acceptable use policy.
+
+    - Balanced conclusion: agree that the employee is the single greatest risk vector, but the correct response is better control design and training rather than distrust of staff.
 
 ## Security Principles (CIA Triad) (8)
 
