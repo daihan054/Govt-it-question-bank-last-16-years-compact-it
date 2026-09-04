@@ -10239,31 +10239,566 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **What is Star vs Mesh Topology?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
+   Answer:
+
+   Star topology
+   - Every device connects by its own cable to a central device — a switch or hub. All traffic passes through that centre.
+   ```
+           PC
+            |
+     PC --[SWITCH]-- PC
+            |
+           PC
+   ```
+   - Links for n devices: `n`
+   - Advantages: easy to install and extend; one cable failure affects only one device; faults are easy to isolate; central management; excellent performance with a switch.
+   - Disadvantages: the central device is a single point of failure — if the switch dies, the whole network stops; more cable than a bus; the switch adds cost.
+
+   Mesh topology
+   - Every device has a direct dedicated link to every other device (full mesh).
+   ```
+        A -------- B
+        | \      / |
+        |   \  /   |
+        |    \/    |
+        |    /\    |
+        |  /    \  |
+        D -------- C
+   ```
+   - Links for n devices: `n(n − 1) / 2`; each device needs n − 1 ports.
+   - Advantages: highest reliability, since traffic reroutes around any failed link; no traffic congestion, because every link is dedicated; excellent privacy and security; easy fault identification.
+   - Disadvantages: enormous cabling and port cost, which grows quadratically; very difficult to install and maintain; impractical beyond a small number of nodes.
+
+   Comparison
+
+   | Point | Star | Mesh |
+   |---|---|---|
+   | Links for n devices | n | n(n − 1)/2 |
+   | Ports per device | 1 | n − 1 |
+   | Cost | Low | Very high |
+   | Installation | Easy | Very difficult |
+   | Fault tolerance | Poor — central device is critical | Excellent — many alternative paths |
+   | Congestion | Possible at the centre | None; links are dedicated |
+   | Scalability | Excellent | Poor |
+   | Typical use | Every modern LAN | WAN backbones, critical links, wireless mesh |
+
+   - Example for n = 6: star needs 6 links, mesh needs 15. For n = 20: star needs 20, mesh needs 190. That growth is why full mesh is reserved for a handful of critical nodes, usually as a `partial mesh`.
+
 2. **(b) Define network topology and classify it.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1446 (ET: N/A)]*
+
+   Answer:
+
+   Definition
+   - Network topology is the arrangement — the layout — of the nodes and links in a network. It describes how devices are physically connected and how data logically flows between them.
+   - Two kinds are distinguished:
+     - `Physical topology` — how the cables are actually laid out.
+     - `Logical topology` — the path the data actually takes. These can differ: a 10BASE-T network is physically a star (all cables go to a hub) but logically a bus (every station hears every frame).
+
+   Classification
+
+   1. Bus
+   - All devices attach to one shared backbone cable, terminated at both ends.
+   - Links: n drop cables plus one backbone. Cheapest and simplest, but a break in the backbone brings down the whole network, and performance collapses as devices are added.
+
+   2. Star
+   - Every device has its own cable to a central switch or hub.
+   - Links: n. Easy to install and troubleshoot; one cable failure affects one device only; but the central device is a single point of failure. This is the standard modern LAN topology.
+
+   3. Ring
+   - Each device connects to exactly two neighbours, forming a closed loop. Data travels in one direction, often controlled by a token.
+   - Links: n. No collisions and predictable performance, but a single break stops everything unless a dual ring is used, as in FDDI.
+
+   4. Mesh
+   - Every device is directly connected to every other (full mesh).
+   - Links: n(n − 1)/2. Highest reliability and no congestion, but the cost grows quadratically. A `partial mesh`, connecting only the important nodes, is the practical compromise.
+
+   5. Tree (hierarchical)
+   - A hierarchy of star networks connected to a common backbone. This is the standard structured-cabling model for a multi-floor building.
+   - Scalable and easy to manage, but the root node is a critical point of failure.
+
+   6. Hybrid
+   - Any combination of the above — for example star-bus or star-ring. Most real networks are hybrids: star at each floor, joined by a fibre backbone.
+
+   Summary table
+
+   | Topology | Links for n devices | Cost | Reliability | Common use |
+   |---|---|---|---|---|
+   | Bus | 1 backbone + n taps | Lowest | Poor | Obsolete |
+   | Star | n | Low | Medium | Every modern LAN |
+   | Ring | n | Medium | Poor (single ring) | Legacy, metro fibre rings |
+   | Mesh | n(n − 1)/2 | Highest | Excellent | WAN backbones, wireless mesh |
+   | Tree | n − 1 | Medium | Medium | Campus and multi-storey buildings |
+   | Hybrid | Varies | Varies | Good | Almost all real networks |
 
 3. **Write 4 topology name?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+   Answer: Four network topologies are:
+
+   1. `Bus topology` — all devices share one backbone cable, terminated at both ends.
+   2. `Star topology` — every device connects to a central switch or hub.
+   3. `Ring topology` — each device connects to two neighbours, forming a closed loop.
+   4. `Mesh topology` — every device has a direct link to every other device.
+
+   ```
+   BUS                    STAR                RING              MESH
+                                                                A----B
+   --+----+----+--         PC                 A---B             |\  /|
+     |    |    |            |                /     \            | \/ |
+    PC   PC   PC      PC--[SW]--PC          D-------C           | /\ |
+                             |                                  |/  \|
+                            PC                                  D----C
+   ```
+
+   - Two more are commonly listed: `Tree` (a hierarchy of stars on a backbone) and `Hybrid` (any combination, which is what most real networks are).
+   - Links needed for n devices: bus = 1 backbone, star = n, ring = n, mesh = n(n − 1)/2.
+
 4. **What is Network Topology? Distinguish between Bus, Ring, Tree and Star topology. Discuss how the Bus topology works.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
+
+   Answer:
+
+   What is network topology
+   - The arrangement of nodes and links in a network — how devices are connected physically and how data flows logically between them. Physical and logical topology can differ: 10BASE-T is physically a star but logically a bus.
+
+   Distinction between the four
+
+   | Point | Bus | Ring | Star | Tree |
+   |---|---|---|---|---|
+   | Structure | One shared backbone cable | Closed loop of point-to-point links | All devices to one central device | Hierarchy of stars on a backbone |
+   | Links for n devices | 1 backbone + n taps | n | n | n − 1 |
+   | Central device | None | None | Switch or hub | Root switch plus branch switches |
+   | Data flow | Broadcast along the bus in both directions | Unidirectional around the loop | Through the central device | Down and up the hierarchy |
+   | Effect of one cable break | Whole network fails | Whole ring fails (single ring) | One device only | The branch below the break |
+   | Effect of central failure | Not applicable | Not applicable | Whole network fails | That branch, or all of it at the root |
+   | Collisions | Yes, uses CSMA/CD | None; token controlled | None on a switch | None on switches |
+   | Adding a device | Easy but disruptive | Disrupts the ring | Very easy | Easy |
+   | Cost | Lowest | Medium | Low | Medium |
+   | Troubleshooting | Very difficult | Difficult | Easy | Moderate |
+   | Performance under load | Degrades badly | Predictable | Excellent | Good |
+   | Status | Obsolete | Legacy, metro fibre rings | Standard LAN | Standard for campuses |
+
+   How bus topology works
+   ```
+      Terminator                                        Terminator
+          |                                                  |
+          +----+---------+---------+---------+---------+-----+
+               |         |         |         |         |
+              PC1       PC2       PC3       PC4       PC5
+   ```
+   - Step 1 — a station wanting to send first listens to the backbone (carrier sense). If it is busy, it waits.
+   - Step 2 — when the line is idle, it transmits. The signal travels in `both directions` along the backbone and reaches every station.
+   - Step 3 — every station reads the destination MAC address in the frame. Only the intended recipient copies it; all others discard it. This is why bus topology has no privacy.
+   - Step 4 — if two stations transmit at once, the signals collide. Each detects the collision, sends a jam signal, waits a random backoff time, and retries. This is `CSMA/CD`.
+   - Step 5 — terminators (50 ohm) at both ends absorb the signal so it does not reflect back and interfere. A missing terminator breaks the whole segment.
+
+   - Weaknesses that killed it: one break disables everything, faults are very hard to locate, only one station can transmit at a time so bandwidth is shared, and performance collapses as stations are added.
 
 5. **What is Personal Area Network? What is needed component and explain?** *[Mongla Port Authority Assistant Programmer 2023 compact it 572 (ET: N/A)]*
 
+   Answer:
+
+   What is a Personal Area Network
+   - A PAN is the smallest category of network, covering the space immediately around one person — typically within about 10 metres.
+   - It connects an individual's own devices to each other, or to a nearby network, for personal use.
+   - It can be wired (USB, FireWire) or wireless (WPAN — Bluetooth, Zigbee, NFC, infrared).
+
+   Components needed
+
+   1. Devices (nodes)
+   - The personal devices being connected: smartphone, laptop, tablet, smartwatch, wireless earphones, fitness band, wireless keyboard and mouse, printer, health sensors.
+
+   2. Wireless adapter or transceiver
+   - Each device needs a radio for the chosen technology — a Bluetooth chip, a Zigbee module or an NFC coil. Without a common radio standard the devices cannot connect.
+
+   3. Communication technology (the protocol)
+   - `Bluetooth` (IEEE 802.15.1) — the most common, 2.4 GHz, about 10 m, 1–3 Mbps; BLE for low-power sensors.
+   - `Zigbee` (IEEE 802.15.4) — very low power, mesh capable, used in home automation.
+   - `NFC` — a few centimetres, used for payments and pairing.
+   - `Infrared (IrDA)` — line of sight, short range, used by remote controls.
+   - `USB / FireWire` — the wired equivalents.
+
+   4. Master or coordinator device
+   - One device acts as the master. In Bluetooth a `piconet` has one master and up to seven active slaves; several piconets form a `scatternet`. A smartphone usually plays the master role.
+
+   5. Pairing and security
+   - Devices must be paired, which authenticates them and establishes an encryption key. Bluetooth uses PIN or Secure Simple Pairing, and encrypts the link afterwards. Without this, anyone in range could connect.
+
+   6. Software and drivers
+   - The protocol stack and profiles on each device — for example the Bluetooth A2DP profile for stereo audio, HID for keyboards, and companion apps for wearables.
+
+   Characteristics
+   - Range about 10 m, low data rate, very low power consumption, low cost, easy ad hoc setup, and no infrastructure required.
+   - Uses: hands-free calling, wireless audio, file transfer between phones, wearable health monitoring, contactless payment, and connecting IoT sensors to a phone.
+
 6. **What is Topology in data communication? What are differences between Bus, Ring, Tree and Star topology? Purpose of IEEE 802.11 committee.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 512 (ET: MIST)]*
+
+   Answer:
+
+   (a) What is topology in data communication
+   - Topology is the arrangement of nodes and links in a network — how devices are connected and how data flows between them.
+   - Physical topology describes the actual cable layout; logical topology describes the path the data takes. They can differ, as in 10BASE-T, which is physically a star and logically a bus.
+
+   (b) Differences between Bus, Ring, Tree and Star
+
+   | Point | Bus | Ring | Tree | Star |
+   |---|---|---|---|---|
+   | Structure | One shared backbone | Closed loop | Hierarchy of stars | All devices to one centre |
+   | Links for n devices | 1 backbone + n taps | n | n − 1 | n |
+   | Central device | None | None | Root switch | Switch or hub |
+   | Data flow | Broadcast both ways | One direction round the loop | Down and up the hierarchy | Through the centre |
+   | One cable break | Whole network down | Whole ring down | Branch below it down | One device only |
+   | Central failure | N/A | N/A | That branch or all | Whole network down |
+   | Collisions | Yes (CSMA/CD) | None, token based | None on switches | None on a switch |
+   | Expansion | Limited | Disruptive | Very easy | Very easy |
+   | Troubleshooting | Very hard | Hard | Moderate | Easy |
+   | Cost | Lowest | Medium | Medium | Low |
+   | Status | Obsolete | Legacy | Standard for campuses | Standard for LANs |
+
+   (c) Purpose of the IEEE 802.11 committee
+   - IEEE 802.11 is the working group responsible for standardising `Wireless LAN` — the family of technologies marketed as Wi-Fi.
+   - Its purpose is to define the physical layer and the MAC sub-layer for wireless local area networks, so that equipment from different manufacturers interoperates.
+   - Specifically it defines: the radio frequencies and channels used (2.4 GHz, 5 GHz, 6 GHz), the modulation schemes, the `CSMA/CA` access method with RTS/CTS, frame formats, association and roaming procedures, power-saving modes, and security (WEP, then WPA, WPA2 and WPA3 under 802.11i).
+
+   Main amendments
+
+   | Standard | Year | Band | Maximum rate |
+   |---|---|---|---|
+   | 802.11b | 1999 | 2.4 GHz | 11 Mbps |
+   | 802.11a | 1999 | 5 GHz | 54 Mbps |
+   | 802.11g | 2003 | 2.4 GHz | 54 Mbps |
+   | 802.11n (Wi-Fi 4) | 2009 | 2.4/5 GHz | 600 Mbps |
+   | 802.11ac (Wi-Fi 5) | 2013 | 5 GHz | 3.5 Gbps |
+   | 802.11ax (Wi-Fi 6/6E) | 2019 | 2.4/5/6 GHz | 9.6 Gbps |
+   | 802.11be (Wi-Fi 7) | 2024 | 2.4/5/6 GHz | 46 Gbps |
 
 7. **(খ) একটি নেটওয়ার্কে n সংখ্যক ডিভাইসের জন্যে Bus, Mesh এবং Star টপোলজিতে তারের লিংকগুলোর সংখ্যা কত?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Number of cable links required for n devices.
+
+   | Topology | Number of links | Ports per device |
+   |---|---|---|
+   | Bus | `1 backbone cable` plus n drop connections (often counted simply as `n` taps) | 1 |
+   | Mesh (full) | `n(n − 1) / 2` | n − 1 |
+   | Star | `n` | 1 |
+
+   Derivation for mesh
+   - Each device must connect to every other device, so each has n − 1 links.
+   - Counting this way counts every link twice, once from each end.
+   ```
+   Number of links = n(n − 1) / 2
+   ```
+
+   Worked values
+
+   | n | Bus | Star | Mesh |
+   |---|---|---|---|
+   | 4 | 1 backbone + 4 taps | 4 | 6 |
+   | 5 | 1 backbone + 5 taps | 5 | 10 |
+   | 6 | 1 backbone + 6 taps | 6 | 15 |
+   | 10 | 1 backbone + 10 taps | 10 | 45 |
+   | 20 | 1 backbone + 20 taps | 20 | 190 |
+   | 100 | 1 backbone + 100 taps | 100 | 4950 |
+
+   - The point the table makes: star and bus grow `linearly` with n, while mesh grows `quadratically`. That is exactly why full mesh is never used for a LAN and is reserved for a small number of critical WAN links, usually as a partial mesh.
+   - Related figures: ring needs n links; tree needs n − 1 links.
+
 8. **What is network topology? Write the name all different topology used in computer networking with example, diagram and their activities.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 673 (ET: N/A)]*
+
+   Answer:
+
+   What is network topology
+   - The arrangement of nodes and links in a network — how devices are connected physically and how data flows logically between them.
+
+   The topologies, with diagrams and how they work
+
+   1. Bus topology
+   ```
+   Terminator --+----+----+----+----+-- Terminator
+                |    |    |    |    |
+               PC1  PC2  PC3  PC4  PC5
+   ```
+   - All devices share one backbone cable, terminated at both ends. A transmitted signal travels both ways and reaches every station; only the addressed one keeps it.
+   - Access is controlled by CSMA/CD, so collisions occur and are resolved by backoff.
+   - Example: 10BASE2 and 10BASE5 Ethernet.
+   - Advantages: cheapest, least cable, easy to extend. Disadvantages: one break kills the whole network, faults are very hard to locate, and bandwidth is shared.
+
+   2. Star topology
+   ```
+           PC
+            |
+     PC --[SWITCH]-- PC
+            |
+           PC
+   ```
+   - Every device has its own cable to a central switch or hub; all traffic passes through the centre.
+   - With a switch, each port is its own collision domain and gets full bandwidth.
+   - Example: every modern Ethernet LAN.
+   - Advantages: easy to install, extend and troubleshoot; one cable fault affects only one device; central management. Disadvantage: the central device is a single point of failure.
+
+   3. Ring topology
+   ```
+       A ----> B
+       ^       |
+       |       v
+       D <---- C
+   ```
+   - Each device connects to exactly two neighbours in a closed loop. Data circulates in one direction, and a token grants the right to transmit, so there are no collisions.
+   - Example: Token Ring (802.5), FDDI, SONET metro rings.
+   - Advantages: no collisions, predictable performance under load, equal access for all. Disadvantages: a single break stops everything unless a dual counter-rotating ring is used, and adding a device disrupts the ring.
+
+   4. Mesh topology
+   ```
+        A -------- B
+        | \      / |
+        |   \  /   |
+        |    \/    |
+        |    /\    |
+        D -------- C
+   ```
+   - Every device links directly to every other. Links = n(n − 1)/2.
+   - Example: internet backbone links, wireless mesh networks.
+   - Advantages: highest reliability, no congestion, excellent security, easy fault isolation. Disadvantages: cost and cabling grow quadratically; impractical beyond a few nodes, so partial mesh is used instead.
+
+   5. Tree (hierarchical) topology
+   ```
+               [ROOT SWITCH]
+               /            \
+        [SWITCH]            [SWITCH]
+        /   |   \            /    \
+      PC   PC   PC         PC     PC
+   ```
+   - A hierarchy of star networks joined to a common backbone. This is the structured-cabling model of a multi-floor building.
+   - Advantages: highly scalable, easy to manage and expand, faults confined to a branch. Disadvantage: the root is critical, and heavy traffic concentrates on the backbone.
+
+   6. Hybrid topology
+   - Any combination of the above — star-bus, star-ring, and so on. Almost every real network is a hybrid: star at each floor, tree between floors, and mesh between sites.
+   - Advantages: combines the strengths of each; flexible and scalable. Disadvantages: complex to design, and expensive.
+
+   Summary
+
+   | Topology | Links | Cost | Reliability | Scalability |
+   |---|---|---|---|---|
+   | Bus | n taps + backbone | Lowest | Poor | Poor |
+   | Star | n | Low | Medium | Excellent |
+   | Ring | n | Medium | Poor | Poor |
+   | Mesh | n(n−1)/2 | Highest | Excellent | Poor |
+   | Tree | n − 1 | Medium | Medium | Excellent |
+   | Hybrid | Varies | Varies | Good | Excellent |
 
 9. **Write down the types of topology.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
+   Answer: The types of network topology are:
+
+   1. `Bus` — all devices share one backbone cable, terminated at both ends. Links: 1 backbone plus n taps.
+   2. `Star` — every device connects to a central switch or hub. Links: n.
+   3. `Ring` — devices form a closed loop, each connected to two neighbours. Links: n.
+   4. `Mesh` — every device links directly to every other. Links: n(n − 1)/2.
+   5. `Tree (hierarchical)` — a hierarchy of stars joined to a backbone. Links: n − 1.
+   6. `Hybrid` — any combination of the above; almost all real networks are hybrids.
+
+   ```
+   BUS              STAR              RING            MESH             TREE
+   --+--+--+--       PC              A---B           A----B          [ROOT]
+     |  |  |          |             /     \          |\  /|          /     \
+    PC PC PC    PC--[SW]--PC       D-------C         | \/ |       [SW]    [SW]
+                      |                              | /\ |        /|\     /\
+                     PC                              D----C      PC PC PC PC PC
+   ```
+
+   - Two further distinctions: `physical` topology is how the cables are laid; `logical` topology is the path the data actually follows. A 10BASE-T network is physically a star but logically a bus.
+   - The star is the standard for modern LANs, the tree for multi-storey buildings and campuses, and the mesh for critical WAN links.
+
 10. **Write down the Disadvantages of Bus topology.** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
+
+    Answer: Disadvantages of bus topology.
+
+    - `Single point of total failure` — a break anywhere in the backbone cable splits the network and brings the entire segment down, not just one device. This is the most serious weakness.
+    - `Very difficult to troubleshoot` — a fault could be anywhere along the cable, at any tap, or at either terminator. There is no link light to tell you which section is broken.
+    - `Shared bandwidth` — only one station may transmit at a time, so the total capacity is divided among all devices. Adding devices slows everyone down.
+    - `Collisions` — CSMA/CD means collisions increase sharply with the number of active stations, and performance collapses under load.
+    - `Limited cable length and device count` — 185 m and 30 devices for 10BASE2; 500 m and 100 devices for 10BASE5. Signal attenuation sets these limits.
+    - `Terminators are essential` — a missing or faulty 50-ohm terminator causes signal reflection that corrupts everything on the segment, and this is a common and confusing fault.
+    - `No security or privacy` — every frame reaches every station, so any machine can capture all traffic simply by putting its NIC in promiscuous mode.
+    - `Disruptive to extend` — adding a station usually means cutting into the backbone, which interrupts the whole network.
+    - `No redundancy` — there is only one path, so there is no alternative route if the cable fails.
+    - `Poor scalability` — the topology becomes unusable as the network grows.
+
+    - These weaknesses, especially the whole-network failure and the impossibility of troubleshooting, are why bus topology is completely obsolete and has been replaced by the switched star.
 
 11. **(b) Define network topologies with features.** *[National University Assistant Programmer 2020 compact it 977 (ET: DU)]*
 
+    Answer:
+
+    Definition
+    - Network topology is the arrangement of nodes and links in a network — how devices are connected and how data flows between them.
+    - `Physical topology` is the actual cable layout; `logical topology` is the route data takes. A 10BASE-T network is physically a star but logically a bus.
+
+    The topologies with their features
+
+    Bus
+    - One shared backbone cable with terminators at both ends; every station taps into it.
+    - Features: cheapest and least cabling; broadcast transmission reaching all stations; CSMA/CD access with collisions; a single break disables everything; very hard to troubleshoot; poor scalability; now obsolete.
+
+    Star
+    - Every device has its own cable to a central switch or hub.
+    - Features: n links; easy installation and expansion; one cable fault affects only that device; excellent fault isolation and central management; dedicated bandwidth per port with a switch; but the central device is a single point of failure. This is the standard modern LAN.
+
+    Ring
+    - A closed loop in which each device connects to exactly two neighbours; data flows in one direction.
+    - Features: n links; token-controlled access so there are no collisions; predictable, fair performance under heavy load; but one break stops the ring unless a dual counter-rotating ring is used; adding a device is disruptive.
+
+    Mesh
+    - Every device directly connected to every other.
+    - Features: n(n − 1)/2 links and n − 1 ports per device; highest reliability with many alternative paths; dedicated links so no congestion; excellent privacy; easy fault identification; but the cost grows quadratically, so only partial mesh is practical at scale.
+
+    Tree (hierarchical)
+    - A hierarchy of star networks connected to a common backbone.
+    - Features: n − 1 links; highly scalable; easy to manage and expand floor by floor; faults confined to a branch; but the root is critical and the backbone can become a bottleneck. This is the structured-cabling model.
+
+    Hybrid
+    - Any combination of the above.
+    - Features: takes the strengths of each; very flexible and scalable; fault tolerant if designed with redundancy; but complex and expensive to design and maintain. Almost every real network is a hybrid.
+
+    | Topology | Links | Cost | Reliability | Troubleshooting |
+    |---|---|---|---|---|
+    | Bus | backbone + n taps | Lowest | Poor | Very hard |
+    | Star | n | Low | Medium | Easy |
+    | Ring | n | Medium | Poor | Hard |
+    | Mesh | n(n−1)/2 | Highest | Excellent | Easy |
+    | Tree | n − 1 | Medium | Medium | Moderate |
+
 12. **(d) List some various types of Topologies. What are the factors to choose a topology?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
+
+    Answer:
+
+    (a) Types of topology
+    - `Bus` — one shared backbone cable with terminators at both ends.
+    - `Star` — all devices connected to a central switch or hub.
+    - `Ring` — a closed loop, each device connected to two neighbours.
+    - `Mesh` — every device directly connected to every other; full or partial.
+    - `Tree (hierarchical)` — a hierarchy of stars joined to a backbone.
+    - `Hybrid` — any combination of the above.
+
+    (b) Factors in choosing a topology
+
+    - `Cost` — cabling, ports, switches and installation labour. Bus is cheapest, mesh by far the most expensive because links grow as n(n − 1)/2.
+    - `Reliability and fault tolerance` — how much damage one failure causes. Mesh survives almost anything; a bus fails completely on one break.
+    - `Scalability` — how easily devices and sites can be added. Star and tree scale well; bus and ring do not.
+    - `Performance and traffic volume` — dedicated bandwidth per device (star with a switch, mesh) versus shared bandwidth (bus, ring).
+    - `Number of devices and their distribution` — a handful of critical routers may justify a mesh; two hundred desks on four floors call for a tree of stars.
+    - `Physical layout of the site` — building shape, distance between floors and buildings, existing ducts and cable trays. Cable length limits (100 m for UTP) often dictate where switches must sit.
+    - `Ease of installation and maintenance` — how quickly it can be built, and how easily a fault can be located. Star is the clear winner here.
+    - `Expandability and future growth` — spare ports and structured cabling so new users can be added without redesign.
+    - `Security requirements` — a bus lets every station see all traffic; a switched star and VLANs confine it.
+    - `Availability requirement` — if downtime is unacceptable, redundant links and a partial mesh core are needed, with protocols such as STP or VRRP.
+    - `Type of cable and technology` — fibre for long backbone runs, UTP for the last 100 m, wireless where cabling is impossible.
+    - `Skill and staffing` — a complex mesh or hybrid design needs trained administrators.
+
+    - The usual outcome for an office: a `tree of switched stars` — a star at each floor, floors joined by a fibre backbone to a core switch, with a redundant second core link if availability matters.
 
 13. **(খ) Bus and Ring টপোলজির মধ্যে কোনটি ভালো এবং কেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Between bus and ring, `ring topology is better` overall, though each has its own strengths.
+
+    Comparison
+
+    | Point | Bus | Ring | Better |
+    |---|---|---|---|
+    | Collisions | Yes, CSMA/CD | None; token controlled | Ring |
+    | Performance under heavy load | Collapses as collisions multiply | Stays predictable and fair | Ring |
+    | Fair access | No; a busy station can dominate | Yes; the token circulates to everyone | Ring |
+    | Signal strength | Attenuates along the shared cable | Each node regenerates the signal, so it can span longer distances | Ring |
+    | Effect of one break | Entire network down | Entire ring down (single ring); a dual ring survives | Ring, if dual |
+    | Cable required | Least | Slightly more | Bus |
+    | Cost | Cheapest | Slightly higher | Bus |
+    | Installation | Simplest | More complex | Bus |
+    | Adding a device | Easy, but disrupts the segment | Must break the ring | Bus |
+    | Troubleshooting | Very difficult | Difficult, but a station can report a fault | Ring |
+    | Terminators | Required; a missing one breaks everything | Not needed | Ring |
+
+    Why ring is generally judged better
+    - `No collisions.` The token guarantees that only one station transmits at a time by design, rather than by detecting and recovering from collisions. This is decisive under heavy load, where a bus degrades badly but a ring keeps working predictably.
+    - `Fair and deterministic access.` Every station gets the token in turn, so there is a guaranteed maximum waiting time — important for industrial and real-time applications.
+    - `Signal regeneration at every node`, so the network can cover greater distances without a separate repeater.
+    - `A dual counter-rotating ring`, as used by FDDI and SONET, survives a single cable break by wrapping the traffic back, which a bus can never do.
+
+    Where bus wins
+    - It is cheaper, uses less cable, is simpler to install, and adding a station does not require breaking a loop.
+
+    Practical conclusion
+    - Both are obsolete for LANs. The `switched star` replaced them, because it combines no collisions (like a ring) with easy installation and fault isolation (better than either), and one cable failure affects only one device. Ring topology survives today mainly in metro fibre networks, where the dual-ring resilience is the reason for choosing it.
+
 14. **Draw Different type of Network topologies and mention their features.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1166 (ET: N/A)]*
+
+    Answer:
+
+    1. Bus topology
+    ```
+    Terminator --+----+----+----+----+-- Terminator
+                 |    |    |    |    |
+                PC1  PC2  PC3  PC4  PC5
+    ```
+    - Features: one shared backbone with terminators at both ends; broadcast transmission that reaches every station; CSMA/CD access with collisions; least cabling and lowest cost; one break disables the entire network; very difficult to troubleshoot; poor scalability; no privacy. Obsolete.
+
+    2. Star topology
+    ```
+             PC
+              |
+       PC --[SWITCH]-- PC
+              |
+             PC
+    ```
+    - Features: n links, one per device; easiest to install, extend and troubleshoot; a cable fault affects only one device; dedicated bandwidth and no collisions with a switch; central management and monitoring; but the central device is a single point of failure. The standard modern LAN.
+
+    3. Ring topology
+    ```
+         A ----> B
+         ^       |
+         |       v
+         D <---- C
+    ```
+    - Features: n links; unidirectional flow; token-controlled access so there are no collisions; fair and deterministic access with a bounded waiting time; every node regenerates the signal, allowing longer spans; but one break stops the ring unless a dual counter-rotating ring is used, and adding a device is disruptive. Used in FDDI and SONET metro rings.
+
+    4. Mesh topology
+    ```
+          A -------- B
+          | \      / |
+          |   \  /   |
+          |    \/    |
+          |    /\    |
+          D -------- C
+    ```
+    - Features: n(n − 1)/2 links and n − 1 ports per device; dedicated point-to-point links so there is no congestion; highest fault tolerance, since traffic reroutes around any failure; excellent privacy and easy fault isolation; but cost and cabling grow quadratically, so only a partial mesh is practical. Used for WAN backbones and wireless mesh.
+
+    5. Tree (hierarchical) topology
+    ```
+                 [CORE SWITCH]
+                 /           \
+          [FLOOR SW]        [FLOOR SW]
+           /  |  \            /    \
+         PC  PC  PC         PC     PC
+    ```
+    - Features: n − 1 links; combines star groups on a common backbone; highly scalable and easy to expand floor by floor; faults confined to one branch; clear hierarchy simplifies management; but the root is critical and the backbone can become a bottleneck. The structured-cabling standard for buildings and campuses.
+
+    6. Hybrid topology
+    ```
+        [ROUTER] ==== [ROUTER]      <- mesh between sites
+           |               |
+       [SWITCH]        [SWITCH]     <- star at each site
+        / | \           /  |  \
+      PC PC PC        PC  PC  PC
+    ```
+    - Features: any combination of the above; takes the strengths of each; flexible and highly scalable; fault tolerant when redundancy is designed in; but complex and expensive to plan and maintain. Almost every real network is a hybrid.
+
+    Summary
+
+    | Topology | Links | Cost | Reliability | Scalability | Troubleshooting |
+    |---|---|---|---|---|---|
+    | Bus | backbone + n taps | Lowest | Poor | Poor | Very hard |
+    | Star | n | Low | Medium | Excellent | Easy |
+    | Ring | n | Medium | Poor | Poor | Hard |
+    | Mesh | n(n−1)/2 | Highest | Excellent | Poor | Easy |
+    | Tree | n − 1 | Medium | Medium | Excellent | Moderate |
+    | Hybrid | Varies | Varies | Good | Excellent | Moderate |
 
 ## IPv6 Addressing (13)
 
