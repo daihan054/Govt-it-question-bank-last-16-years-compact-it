@@ -196,29 +196,157 @@
 
 1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
+   Answer:
+   - Formula: $n(A \cup B) = n(A) + n(B) - n(A \cap B)$
+   - Substituting values:
+     $$40 = 20 + 30 - n(A \cap B)$$
+     $$n(A \cap B) = 50 - 40 = 10$$
+   - Answer: 10
+
 2. **Math: Set related (72%, 40% and both 30%)** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
+
+   Answer:
+   - Let total candidates $= 100\%$
+   - Given: $n(A) = 72\%$, $n(B) = 40\%$, $n(A \cap B) = 30\%$
+   - Union of sets:
+     $$n(A \cup B) = n(A) + n(B) - n(A \cap B) = 72\% + 40\% - 30\% = 82\%$$
+   - Percentage belonging to neither (failed in both):
+     $$\text{Neither} = 100\% - n(A \cup B) = 100\% - 82\% = 18\%$$
+   - Answer: $18\%$
 
 3. **Find the sets X and Y if X \cup Y = \{1, 2, 3, 5, 6, 8, 9, 10\}, X \cap Y = \{1, 5\} and Y - X = \{2, 6, 9, 10\}.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 419 (ET: BIBM)]*
 
+   Answer:
+   - $Y = (Y - X) \cup (X \cap Y) = \{2, 6, 9, 10\} \cup \{1, 5\} = \{1, 2, 5, 6, 9, 10\}$
+   - $X - Y = (X \cup Y) - Y = \{1, 2, 3, 5, 6, 8, 9, 10\} - \{1, 2, 5, 6, 9, 10\} = \{3, 8\}$
+   - $X = (X - Y) \cup (X \cap Y) = \{3, 8\} \cup \{1, 5\} = \{1, 3, 5, 8\}$
+   - Answer:
+     - $X = \{1, 3, 5, 8\}$
+     - $Y = \{1, 2, 5, 6, 9, 10\}$
+
 4. **১ থেকে ১০০ পর্যন্ত কয়টি সংখ্যা রয়েছে যা ৩ ও ৪ দ্বারা বিভাজ্য নয়?** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
+
+   Answer:
+   - মোট সংখ্যা $N = 100$
+   - ৩ দ্বারা বিভাজ্য সংখ্যা $n(A) = \lfloor \frac{100}{3} \rfloor = 33$
+   - ৪ দ্বারা বিভাজ্য সংখ্যা $n(B) = \lfloor \frac{100}{4} \rfloor = 25$
+   - ৩ ও ৪ উভয়ের ল.সা.গু ১২ দ্বারা বিভাজ্য সংখ্যা $n(A \cap B) = \lfloor \frac{100}{12} \rfloor = 8$
+   - ৩ বা ৪ দ্বারা বিভাজ্য সংখ্যা:
+     $$n(A \cup B) = n(A) + n(B) - n(A \cap B) = 33 + 25 - 8 = 50$$
+   - ৩ ও ৪ কোনটি দ্বারাই বিভাজ্য নয় এমন সংখ্যা:
+     $$\text{Total} - n(A \cup B) = 100 - 50 = 50$$
+   - উত্তর: ৫০টি (50 numbers)
 
 5. **Express the following statement as a logical expression, “If someone is female and is a parent, then this person is someone's mother”.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 664 (ET: N/A)]*
 
-6. **(ক) p \land (\neg p \lor q) - logical expression টির জন্য Truth table প্রস্তুত করুন। যেখানে p, q- Boolean variable.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
+   Answer:
+   - Let predicates be:
+     - $F(x)$: $x$ is female
+     - $P(x, y)$: $x$ is a parent of $y$
+     - $M(x, y)$: $x$ is the mother of $y$
+   - Logical Expression:
+     $$\forall x \forall y \left( (F(x) \land P(x, y)) \to M(x, y) \right)$$
+     (Alternatively: $\forall x \left( (F(x) \land \exists y \, P(x, y)) \to \exists y \, M(x, y) \right)$)
 
-7. **(খ) দেখাও যে, (p \land q) \rightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
+6. **(ক) p \land (
+eg p \lor q) - logical expression টির জন্য Truth table প্রস্তুত করুন। যেখানে p, q- Boolean variable.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
 
-8. **(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (\bar{C} \cup \bar{B}) \cap \bar{A}. এখানে A, B, C এগুলো Sets.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
+   Answer:
+| $p$ | $q$ | $\neg p$ | $\neg p \lor q$ | $p \land (\neg p \lor q)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| T | T | F | T | **T** |
+| T | F | F | F | **F** |
+| F | T | T | T | **F** |
+| F | F | T | T | **F** |
+
+   - Note: The expression simplifies logically to $p \land q$.
+
+7. **(খ) দেখাও যে, (p \land q) ightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
+
+   Answer:
+   - Truth Table:
+| $p$ | $q$ | $p \land q$ | $p \lor q$ | $(p \land q) \to (p \lor q)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| T | T | T | T | **T** |
+| T | F | F | T | **T** |
+| F | T | F | T | **T** |
+| F | F | F | F | **T** |
+
+   - যেহেতু শর্তযুক্ত উক্তির সকল সত্যতার মান সর্বদা সত্য (T), তাই $(p \land q) \to (p \lor q)$ একটি টটোলজি (Tautology)।
+
+8. **(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (ar{C} \cup ar{B}) \cap ar{A}. এখানে A, B, C এগুলো Sets.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
+
+   Answer:
+   - Set (সেট): বাস্তব বা চিন্তাজগতের সুনির্দিষ্ট ও সুসংজ্ঞায়িত বস্তুর সমাবেশকে সেট বলে।
+   - Power Set (শক্তি সেট): কোনো সেটের সকল সম্ভাব্য উপসেট (Subset) নিয়ে গঠিত সেটকে তার শক্তি সেট বলে; উপাদান $n$ হলে শক্তি সেটের সদস্য সংখ্যা $2^n$।
+   - Proper Subset (প্রকৃত উপসেট): যদি $B$ সেটের সকল উপাদান $A$ সেটে থাকে কিন্তু $A$ সেটে অন্তত একটি অতিরিক্ত উপাদান থাকে, তবে $B$-কে $A$-এর প্রকৃত উপসেট ($B \subset A$) বলে।
+   - Membership Table Verification:
+| $A$ | $B$ | $C$ | $B \cap C$ | $A \cup (B \cap C)$ |
+|:---:|:---:|:---:|:---:|:---:|
+| 1 | 1 | 1 | 1 | **1** |
+| 1 | 1 | 0 | 0 | **1** |
+| 1 | 0 | 1 | 0 | **1** |
+| 1 | 0 | 0 | 0 | **1** |
+| 0 | 1 | 1 | 1 | **1** |
+| 0 | 1 | 0 | 0 | **0** |
+| 0 | 0 | 1 | 0 | **0** |
+| 0 | 0 | 0 | 0 | **0** |
 
 9. **(খ) যদি A-B = \{1, 5, 7, 8\}, B-A = \{2, 10\} এবং A \cap B = \{3, 6, 9\} হয়, তবে A, B Set এর মান কত?** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
 
+   Answer:
+   - $A = (A - B) \cup (A \cap B) = \{1, 5, 7, 8\} \cup \{3, 6, 9\} = \{1, 3, 5, 6, 7, 8, 9\}$
+   - $B = (B - A) \cup (A \cap B) = \{2, 10\} \cup \{3, 6, 9\} = \{2, 3, 6, 9, 10\}$
+   - উত্তর:
+     - $A = \{1, 3, 5, 6, 7, 8, 9\}$
+     - $B = \{2, 3, 6, 9, 10\}$
+
 10. **(a) Out of ten families, six families have dogs, four have cats and two have neither cats nor dogs. Find the number of families that have both cats and dogs?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
-11. **(c) Using truth table finds which of the following implications are equivalent to p \to (p \lor \neg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
+    Answer:
+    - Total families $N = 10$
+    - Families having dogs $n(D) = 6$
+    - Families having cats $n(C) = 4$
+    - Families having neither $n(D \cup C)' = 2$
+    - Families having at least one pet:
+      $$n(D \cup C) = 10 - 2 = 8$$
+    - Using Principle of Inclusion-Exclusion:
+      $$n(D \cup C) = n(D) + n(C) - n(D \cap C)$$
+      $$8 = 6 + 4 - n(D \cap C)$$
+      $$n(D \cap C) = 10 - 8 = 2$$
+    - Answer: 2 families
+
+11. **(c) Using truth table finds which of the following implications are equivalent to p 	o (p \lor 
+eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
+
+    Answer:
+    - Truth Table:
+| $p$ | $q$ | $p \land q$ | $\neg(p \land q)$ | $p \lor \neg(p \land q)$ | $p \to (p \lor \neg(p \land q))$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| T | T | T | F | T | **T** |
+| T | F | F | T | T | **T** |
+| F | T | F | T | T | **T** |
+| F | F | F | T | T | **T** |
+
+    - Conclusion: The proposition $p \to (p \lor \neg(p \land q))$ is always True (Tautology), so it is never a contradiction.
 
 12. **(ii) Propositional logic ও Predicate Logic উদাহরণসহ বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 952-953 (ET: N/A)]*
 
+    Answer:
+    - Propositional Logic (প্রপোজিশনাল লজিক):
+      - এটি গাণিতিক যুক্তির এমন এক শাখা যেখানে সম্পূর্ণ উক্তি বা বাক্যকে একক চলক ($p, q$) দ্বারা প্রকাশ করা হয় যা কেবল সত্য (True) বা মিথ্যা (False) হতে পারে।
+      - উদাহরণ: $p$: "বৃষ্টি হচ্ছে", $q$: "রাস্তা ভেজা"। যৌগিক রূপ: $p \to q$ ("যদি বৃষ্টি হয় তবে রাস্তা ভেজা")।
+    - Predicate Logic (প্রেডিকেট লজিক):
+      - এটি প্রপোজিশনাল লজিকের আধুনিক রূপ যা ব্যক্তিসত্তা (Subject), বৈশিষ্ট্য (Predicate) এবং কোয়ান্টিফায়ার ($\forall$ - সার্বজনীন, $\exists$ - অস্তিত্বমূলক) অন্তর্ভুক্ত করে।
+      - উদাহরণ: "সকল মানুষ মরণশীল" $\implies \forall x (\text{Man}(x) \to \text{Mortal}(x))$।
+
 13. **Propositional Logic and Predicate Logic উদাহরণসহ বুঝিয়ে লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020 (ET: N/A)]*
+
+    Answer:
+    - Propositional Logic: Deals with declarative propositions that are evaluated as atomic truth values (T/F) using Boolean operators ($\land, \lor, \neg, \to, \leftrightarrow$).
+      - Example: $p$: "Dhaka is the capital of Bangladesh" (True).
+    - Predicate Logic (First-Order Logic): Breaks statements into predicates, objects/variables, and quantifiers, allowing granular expressions about properties of entities.
+      - Example: $\exists x (\text{Student}(x) \land \text{Passed}(x))$ ("Some students passed the exam").
 
 ## Percentage, Profit & Loss, Simple & Compound Interest (12)
 
