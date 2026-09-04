@@ -9678,21 +9678,968 @@
 
 1. **সংগঠনিক নির্দেশকগুলো কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) `Organisational indicators` are the measures an organisation uses to judge how well it is performing and how mature its process is. In software engineering they are the metrics collected across `projects`, not within one project, and they are what drive process improvement.
+
+   Categories of organisational indicator
+
+   1. Process indicators
+   ```
+      DEFECT DENSITY        defects per KLOC or per function point
+      DEFECT REMOVAL
+           EFFICIENCY       defects found before release / total
+                            defects found
+      REVIEW EFFECTIVENESS  defects found per review hour
+      PHASE CONTAINMENT     what fraction of defects are caught in
+                            the phase that introduced them
+      REWORK PERCENTAGE     effort spent redoing work
+      CMMI MATURITY LEVEL   1 to 5
+   ```
+
+   2. Project performance indicators
+   ```
+      SCHEDULE VARIANCE     actual duration vs planned
+      COST VARIANCE         actual cost vs budget
+      EFFORT VARIANCE       actual person-months vs estimated
+      ESTIMATION ACCURACY   how close estimates are to actuals
+      PRODUCTIVITY          function points or KLOC per person-month
+      VELOCITY              story points completed per sprint
+      ON-TIME DELIVERY RATE percentage of projects delivered on time
+   ```
+
+   3. Product quality indicators
+   ```
+      RELIABILITY           MTBF , failure rate
+      AVAILABILITY          uptime percentage
+      CUSTOMER-REPORTED
+           DEFECTS          defects found by users after release
+      MAINTAINABILITY INDEX
+      TEST COVERAGE         statement and branch coverage achieved
+   ```
+
+   4. Customer indicators
+   ```
+      CUSTOMER SATISFACTION score
+      NET PROMOTER SCORE
+      CUSTOMER RETENTION and repeat business
+      SLA COMPLIANCE        percentage of tickets answered in time
+      AVERAGE RESOLUTION TIME for a reported defect
+   ```
+
+   5. People and resource indicators
+   ```
+      EMPLOYEE TURNOVER / ATTRITION RATE
+      TRAINING HOURS per person per year
+      RESOURCE UTILISATION  billable against total hours
+      EMPLOYEE SATISFACTION
+      SKILL INVENTORY       what competences the organisation holds
+   ```
+
+   6. Business indicators
+   ```
+      REVENUE and PROFIT per project
+      RETURN ON INVESTMENT
+      MARKET SHARE
+      COST OF QUALITY       prevention + appraisal + failure cost
+   ```
+
+   How they are used
+   ```mermaid
+   flowchart LR
+       A[Collect data from projects] --> B[Store in an organisational metrics repository]
+       B --> C[Analyse trends across projects]
+       C --> D[Set baselines and targets]
+       D --> E[Improve the process]
+       E --> A
+   ```
+   ```
+      The cycle matters more than any single number. One project's
+      defect density means little ; the ORGANISATIONAL BASELINE built
+      from many projects is what lets a manager say whether a new
+      project is going well or badly.
+
+      This is exactly what CMMI level 4 (QUANTITATIVELY MANAGED)
+      requires, and what level 5 (OPTIMISING) uses to improve the
+      process continuously.
+   ```
+
+   - The rule for choosing indicators: they must be `SMART` — specific, measurable, achievable, relevant and time-bound — and there must be `few` of them. An organisation that tracks fifty indicators tracks none of them.
+   - The caution worth stating: an indicator used to `judge individuals` stops being a measurement and becomes a target to be gamed. Measure lines of code per programmer and you will get more lines, not better software. Indicators should measure the `process`, not the people.
+
 2. **Which you build about real life software project? What problems you faced during that time and how to solve this?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
+
+   Answer: A real project — an online loan application system for a bank
+
+   The project
+   ```
+      A web system allowing customers to apply for a personal loan
+      online, and bank officers to review, approve or reject the
+      application.
+
+      Team    : 6 people - 1 project manager , 3 developers ,
+                1 tester , 1 business analyst
+      Duration: 5 months
+      Stack   : Java Spring Boot , MySQL , React , deployed on-
+                premises
+      Model   : Agile , two-week sprints
+   ```
+
+   Problem 1 — requirements kept changing
+   ```
+      PROBLEM
+           The loan eligibility rules changed three times during
+           development, because the bank's credit policy was itself
+           being revised.
+
+      SOLUTION
+           We moved the rules OUT of the code and into a RULES TABLE
+           in the database, with the officer able to edit the
+           thresholds. A rule change then became a data change, not
+           a code release.
+           We also fixed a formal CHANGE CONTROL process : every
+           change request was logged, estimated for impact, and
+           approved or deferred to a later sprint.
+   ```
+
+   Problem 2 — the customer representative was rarely available
+   ```
+      PROBLEM
+           The branch manager who owned the requirements was too busy
+           to attend sprint reviews. Requirements were guessed, and
+           two features had to be rebuilt.
+
+      SOLUTION
+           We asked for a NOMINATED PRODUCT OWNER with authority to
+           decide, and reduced what we asked of them : a 30-minute
+           prepared meeting instead of an open one, and a PROTOTYPE
+           to react to rather than questions to answer.
+           People cannot describe what they want, but they can always
+           react to what they see.
+   ```
+
+   Problem 3 — integration with the legacy core banking system
+   ```
+      PROBLEM
+           The core banking system was 12 years old, had no API and
+           almost no documentation. Its data format was undocumented,
+           and the original developers had left.
+
+      SOLUTION
+           We built an ADAPTER layer that translated between our
+           format and the legacy file format, so no legacy code was
+           touched.
+           We used a SIMULATOR of the legacy system during
+           development, because access to the real one was limited
+           to a two-hour window each night.
+   ```
+
+   Problem 4 — performance collapsed under load
+   ```
+      PROBLEM
+           The application list page took 40 seconds when the table
+           reached 200,000 rows. It had been fast on 500 test rows.
+
+      SOLUTION
+           Profiling showed an N+1 QUERY - one query per row to fetch
+           the applicant's name.
+           We fixed it with a JOIN, added an INDEX on the status and
+           date columns, and introduced PAGINATION.
+           40 seconds became under 2 seconds.
+
+      LESSON : test with PRODUCTION-SIZED data, not sample data.
+           Performance defects are invisible on a small dataset.
+   ```
+
+   Problem 5 — a security finding in the audit
+   ```
+      PROBLEM
+           The bank's IT audit found that the document upload
+           accepted any file type, and that the application ID was
+           sequential and could be guessed - so one customer could
+           view another's application.
+
+      SOLUTION
+           Restricted uploads by MIME type and size, stored files
+           outside the web root, and replaced sequential IDs with
+           UUIDs.
+           Added an OBJECT-LEVEL AUTHORISATION check on every
+           request - the real fix, since hiding the ID alone is not
+           security.
+   ```
+
+   Problem 6 — the deadline was fixed and the scope was not
+   ```
+      PROBLEM
+           Go-live was tied to a marketing campaign date that could
+           not move, and the scope had grown.
+
+      SOLUTION
+           We PRIORITISED with MoSCoW - Must, Should, Could, Won't -
+           and agreed with the sponsor to release the MUST items on
+           the date and the rest in a second release a month later.
+           Working software delivered on time with 70 per cent of the
+           features was far better than nothing on the date.
+   ```
+
+   - The general lessons, stated briefly: `test with realistic data volumes`; `keep volatile business rules out of the code`; `write an adapter rather than modify a legacy system`; and when the date is fixed, `negotiate scope, never quality`. The problems that actually threatened this project were not technical difficulty but `changing requirements`, `customer availability` and `legacy integration` — which is the usual finding.
 
 3. **Project management related question (what are the approaches)** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 520 (ET: MIST)]*
 
+   Answer: Project management approaches
+
+   1. Predictive — Waterfall
+   ```
+      The whole scope, schedule and budget are fixed at the start,
+      and the project runs through the phases once, in order.
+
+      SUITS  : requirements fixed and fully understood ; fixed-price
+           contracts ; safety-critical or regulated work.
+      FAILS  : when requirements change, because change is very
+           expensive and feedback arrives too late.
+   ```
+
+   2. Iterative and incremental
+   ```
+      The product is built and delivered in parts. Each increment is
+      a complete mini life cycle producing WORKING SOFTWARE, and
+      feedback shapes the next one.
+
+      SUITS  : when early delivery matters and requirements are only
+           partly known.
+   ```
+
+   3. Agile
+   ```
+      Short sprints of 1 to 4 weeks, each delivering working
+      software, with the customer present throughout.
+
+      FOUR VALUES
+        Individuals and interactions over processes and tools
+        Working software            over comprehensive documentation
+        Customer collaboration      over contract negotiation
+        Responding to change        over following a plan
+
+      FRAMEWORKS
+        SCRUM   sprints ; Product Owner , Scrum Master , team ;
+                daily stand-up , review , retrospective
+        KANBAN  visualise the work , LIMIT WORK IN PROGRESS ,
+                continuous flow with no fixed sprints
+        XP      pair programming , TDD , continuous integration
+        SAFe , LeSS   Agile scaled to large organisations
+   ```
+
+   4. Spiral — risk-driven
+   ```
+      Each loop has four quadrants : set objectives , IDENTIFY AND
+      RESOLVE RISKS with a prototype , develop and verify , plan the
+      next loop.
+
+      SUITS  : large, expensive, uncertain systems, where the risk of
+           failure is itself the main problem.
+      COSTS  : the repeated risk analysis is expensive, so it is
+           wrong for small projects.
+   ```
+
+   5. Critical Path Method and PERT
+   ```
+      The project is broken into activities with dependencies, and
+      the CRITICAL PATH - the longest chain, which has no slack -
+      determines the shortest possible duration.
+
+           A(3) --> B(5) --> D(4)
+                       \       /
+                        C(2)--+
+
+           Path A-B-D = 12 days   <- CRITICAL PATH
+           Path A-C-D =  9 days   -> 3 days of slack
+
+      Any delay on the CRITICAL PATH delays the whole project ;
+      delay elsewhere may not.
+
+      PERT adds three-point estimation :
+           expected time = (optimistic + 4*most likely + pessimistic)
+                           / 6
+   ```
+
+   6. PRINCE2 and PMBOK
+   ```
+      PRINCE2  a process-based method - business case, defined roles,
+           stages, and management by exception. Widely used in
+           government.
+      PMBOK    the PMI body of knowledge : 5 process groups
+           (initiating, planning, executing, monitoring and
+           controlling, closing) and 10 knowledge areas (scope, time,
+           cost, quality, resource, communication, risk,
+           procurement, stakeholder, integration).
+   ```
+
+   7. Lean and Six Sigma
+   ```
+      LEAN       eliminate WASTE - anything not adding customer
+           value. Deliver as late as responsibly possible, decide as
+           late as possible.
+      SIX SIGMA  reduce VARIATION using DMAIC - Define , Measure ,
+           Analyse , Improve , Control.
+   ```
+
+   8. Hybrid — what large organisations actually do
+   ```
+      Waterfall-style planning, architecture and contract UP FRONT,
+      to satisfy the tender and the auditors ; AGILE SPRINTS for the
+      build.
+
+      Banks and government projects in Bangladesh usually work this
+      way rather than adopting either model in pure form.
+   ```
+
+   Choosing between them
+   ```
+      +------------------+------------------+---------------------+
+      | Condition        | Approach         | Reason              |
+      +------------------+------------------+---------------------+
+      | Requirements     | WATERFALL        | scope can be fixed  |
+      | fixed and known  |                  | and priced          |
+      | Requirements     | AGILE            | change is expected  |
+      | unclear/changing |                  |                     |
+      | Large, risky,    | SPIRAL           | risk is analysed    |
+      | expensive        |                  | each loop           |
+      | Fixed date,      | AGILE + MoSCoW   | negotiate SCOPE,    |
+      | flexible scope   |                  | never quality       |
+      | Government       | HYBRID / PRINCE2 | contract needs a    |
+      | tender           |                  | fixed specification |
+      +------------------+------------------+---------------------+
+   ```
+   - The judgement to state: there is no universally best approach. The deciding question is `how well the requirements are known` and `how much the customer can be involved`. A well-run Waterfall project beats a badly-run Agile one, and the commonest cause of failure is adopting a method whose preconditions the organisation cannot meet.
+
 4. **(খ) User story ও Product backlog কী?** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) User story
+   - A `user story` is a short, plain-language description of a feature, written from the `user's point of view`. It states who wants it, what they want, and why.
+   ```
+      THE STANDARD FORMAT
+
+           As a  <type of user> ,
+           I want <some goal> ,
+           so that <some benefit / reason>.
+
+      EXAMPLES
+
+           As a CUSTOMER , I want to reset my password , so that I
+           can log in again if I forget it.
+
+           As a BANK OFFICER , I want to see a list of pending loan
+           applications , so that I can process them in order.
+
+           As an ADMIN , I want to block a user account , so that a
+           compromised account cannot be used.
+   ```
+   ```
+      ACCEPTANCE CRITERIA are attached to each story - the
+      conditions that decide when it is DONE :
+
+           Given the user clicks "Forgot password"
+           When a registered email address is entered
+           Then a reset link is emailed and expires in 30 minutes
+   ```
+   - The three parts a good story satisfies, called the `3 Cs`: the `Card` (the short written statement), the `Conversation` (the discussion it triggers, where the real detail emerges) and the `Confirmation` (the acceptance criteria).
+   - The quality test is `INVEST`: `Independent`, `Negotiable`, `Valuable`, `Estimable`, `Small`, `Testable`.
+   ```
+      THE POINT OF A USER STORY is that it is deliberately BRIEF.
+      It is a PLACEHOLDER FOR A CONVERSATION, not a specification.
+      A story that tries to state every detail has defeated its own
+      purpose - that is what an SRS is for.
+   ```
+   - Stories are estimated in `story points` — relative size, not hours — usually by `planning poker` with the whole team.
+
+   Product backlog
+   - The `product backlog` is the single, `prioritised list of everything wanted` in the product — features, changes, defect fixes and technical work. It is owned by the `Product Owner`.
+   ```
+      PRODUCT BACKLOG  (highest priority at the top)
+      +----+--------------------------------------+--------+------+
+      | ID | User story                           | Points | Pri  |
+      +----+--------------------------------------+--------+------+
+      | 12 | As a customer, I want to reset my    |   3    | High |
+      |    | password ...                         |        |      |
+      | 07 | As a customer, I want to view my     |   5    | High |
+      |    | transaction history ...              |        |      |
+      | 21 | As an admin, I want to export a      |   8    | Med  |
+      |    | monthly report ...                   |        |      |
+      | 34 | As a customer, I want dark mode ...  |   2    | Low  |
+      +----+--------------------------------------+--------+------+
+   ```
+   ```
+      PROPERTIES
+
+      ORDERED     the most valuable item is at the TOP. Everything
+                  has a position ; nothing is "equally important".
+      DYNAMIC     it is never finished. Items are added, removed and
+                  re-ordered every sprint - this is what makes Agile
+                  able to absorb change.
+      DETAILED
+      APPROPRIATELY  items near the TOP are small and fully
+                  detailed, ready to be worked on. Items lower down
+                  are large and vague, and are refined only when they
+                  come closer. This is DEEP - Detailed appropriately,
+                  Emergent, Estimated, Prioritised.
+      ESTIMATED   each item carries a size in story points.
+      SINGLE      there is ONE backlog per product, however many
+                  teams work on it.
+   ```
+
+   How the two work together
+   ```mermaid
+   flowchart LR
+       A[Product Backlog<br/>all user stories, prioritised] --> B[Sprint Planning]
+       B --> C[Sprint Backlog<br/>stories chosen for this sprint]
+       C --> D[Sprint: 1-4 weeks]
+       D --> E[Working increment]
+       E --> F[Review + Retrospective]
+       F --> A
+   ```
+   ```
+      PRODUCT BACKLOG   everything wanted , ever         owned by the
+                                                         PRODUCT OWNER
+      SPRINT BACKLOG    what THIS sprint will deliver    owned by the
+                                                         TEAM
+   ```
+   - `Backlog refinement` (or grooming) is the regular session in which the team and the Product Owner break large items down, add detail and estimate — so that the top of the backlog is always ready for the next sprint planning.
 
 5. **Assume you are a project manager and your job is to develop an application which is similar to what you have developed is past only larger and complex. The customer has documented the requirements clearly. What team structure would you choose in this case and why?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 759 (ET: N/A)]*
 
+   Answer: Team structure chosen: the `Chief Programmer team` — a `centralised control` structure.
+
+   Why the scenario points to it
+   ```
+      The question gives three facts, and each one favours
+      centralised control :
+
+      1. "similar to what you have developed in the past"
+           -> the problem is UNDERSTOOD. There is no need for group
+              exploration or debate ; the solution approach is
+              already known.
+
+      2. "the requirements are DOCUMENTED CLEARLY"
+           -> there is little uncertainty to resolve by discussion.
+              A democratic structure earns its cost by exploring
+              unknowns, and here there are few.
+
+      3. "LARGER and more COMPLEX"
+           -> a bigger team. Democratic structures do not scale :
+              communication paths grow as n(n-1)/2 , so a team of 12
+              has 66 channels and consensus becomes impossible.
+   ```
+
+   The chief programmer structure
+   ```
+                       +----------------------+
+                       |  CHIEF PROGRAMMER    |
+                       |  - designs the system|
+                       |  - writes the        |
+                       |    critical modules  |
+                       |  - assigns work      |
+                       |  - makes ALL         |
+                       |    technical         |
+                       |    decisions         |
+                       +----------------------+
+                          /      |        \
+                         /       |         \
+             +-----------+  +-----------+  +-------------+
+             | Backup    |  | Librarian |  | Programmers |
+             | Programmer|  | (docs,    |  | (2 to 6)    |
+             | (deputy)  |  |  builds,  |  |             |
+             +-----------+  |  records) |  +-------------+
+                            +-----------+
+                                   |
+                            +-------------+
+                            | Specialists |
+                            | (DBA, tester|
+                            |  UI, admin) |
+                            +-------------+
+   ```
+   ```
+      ROLES
+        CHIEF PROGRAMMER   a senior, experienced engineer with full
+             technical AND administrative authority. Designs the
+             system and writes the hardest parts personally.
+        BACKUP PROGRAMMER  the deputy - understands the whole design
+             and can take over. This role exists precisely to remove
+             the single-point-of-failure risk.
+        LIBRARIAN          maintains documentation, source control,
+             builds and records, so the programmers are not
+             distracted by administration.
+        PROGRAMMERS        implement the modules assigned to them.
+        SPECIALISTS        DBA , tester , UI designer as needed.
+   ```
+
+   Why it fits this project
+   ```
+      FAST DECISIONS       one person decides, so no time is lost to
+           consensus. With clear requirements there is little to
+           debate.
+      REUSE OF EXPERIENCE  the chief programmer has built this kind
+           of system before, and that knowledge is applied directly
+           to the design rather than rediscovered by the group.
+      SCALES to a large team  work is decomposed and assigned ;
+           communication is through the chief, so it grows linearly
+           rather than quadratically.
+      DESIGN CONSISTENCY   one architect means one coherent
+           architecture - important as complexity grows.
+      PREDICTABLE SCHEDULE clear ownership and clear assignment make
+           progress easy to track, which matters on a fixed-scope
+           project.
+   ```
+
+   The risks, and how they are managed
+   ```
+      SINGLE POINT OF FAILURE   if the chief programmer leaves or
+           falls ill, the project stalls.
+           -> the BACKUP PROGRAMMER role exists for exactly this ;
+              the design must also be documented, not held in one
+              head.
+
+      LOWER MORALE and less creativity   juniors have little say and
+           report lower job satisfaction in this structure.
+           -> delegate module-level design decisions, hold design
+              reviews where anyone may object, and rotate people
+              through harder work.
+
+      BOTTLENECK            every decision waits on one person.
+           -> delegate within modules ; the chief decides ACROSS
+              module boundaries only.
+   ```
+
+   The alternatives, and why they are rejected here
+   ```
+      DEMOCRATIC (egoless) TEAM
+           No fixed leader ; decisions by consensus ; high morale and
+           creativity.
+           BEST FOR : small teams (under 5-8) , RESEARCH-type or
+                POORLY UNDERSTOOD problems , long projects.
+           REJECTED : this problem is well understood and the team is
+                large. Consensus would only slow it down.
+
+      MIXED CONTROL TEAM
+           A hierarchy of small democratic groups, each reporting
+           upward - democratic within a group, centralised between
+           groups.
+           THE SERIOUS ALTERNATIVE. If the team is very large - say
+           over 15 - I would choose this instead : the chief
+           programmer structure alone starts to bottleneck at that
+           size, while mixed control keeps decisions local and
+           scales further.
+   ```
+
+   - The general rule the answer rests on: `democratic structures suit uncertainty and small teams; centralised structures suit understood problems and large teams`. This project is an understood problem with a large team and documented requirements, so `chief programmer` is correct — moving to `mixed control` if the team grows beyond about fifteen people.
+
 6. **a) What is conflict in git? How to resolve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+   Answer: What a Git conflict is
+   - A `merge conflict` happens when two branches change the `same lines of the same file` in different ways, and Git cannot decide which version is correct. It stops and asks a human.
+   ```
+      Git merges automatically when the changes are in DIFFERENT
+      places. It CANNOT merge when :
+
+        - the same LINES were edited on both branches
+        - one branch DELETED a file the other MODIFIED
+        - both branches ADDED a file with the same name but
+          different content
+        - a file was RENAMED on one branch and edited on the other
+   ```
+   ```
+      $ git merge feature-login
+      Auto-merging src/login.js
+      CONFLICT (content): Merge conflict in src/login.js
+      Automatic merge failed; fix conflicts and then commit the result.
+   ```
+
+   What the conflict looks like in the file
+   ```
+      <<<<<<< HEAD
+      const timeout = 30;          <- YOUR version (current branch)
+      =======
+      const timeout = 60;          <- THEIR version (incoming branch)
+      >>>>>>> feature-login
+   ```
+   ```
+      <<<<<<< HEAD        marks the start of YOUR changes
+      =======             separates the two versions
+      >>>>>>> branch      marks the end of THEIR changes
+   ```
+
+   How to resolve it
+   ```
+      1. SEE which files are in conflict
+
+           git status
+           git diff --name-only --diff-filter=U
+
+      2. OPEN each conflicted file and decide what the code SHOULD
+         be. There are three possibilities :
+
+           keep YOURS      delete their block and the markers
+           keep THEIRS     delete your block and the markers
+           COMBINE BOTH    write the correct merged code by hand -
+                           this is the commonest and correct answer
+
+         REMOVE ALL THREE MARKERS - <<<<<<< , ======= , >>>>>>>
+         Leaving one in the file is the classic mistake ; the code
+         will not even compile.
+
+      3. TEST the result. A resolved conflict that was never run is
+         not resolved.
+
+      4. STAGE and COMMIT
+
+           git add src/login.js
+           git commit               # Git supplies a merge message
+   ```
+
+   Shortcuts for whole-file resolution
+   ```
+      git checkout --ours   <file>    keep the current branch's
+                                      version entirely
+      git checkout --theirs <file>    keep the incoming version
+                                      entirely
+      git mergetool                   open a 3-way visual merge tool
+      git merge --abort               cancel the merge and go back to
+                                      where you were - the safe way
+                                      out if the conflict is a mess
+      git rebase --abort              the same, during a rebase
+   ```
+   ```
+      CAUTION with --ours / --theirs : they take the WHOLE FILE, not
+      the conflicting lines. Any good change from the other side is
+      silently lost. Use them only when one version is genuinely
+      correct in its entirety.
+   ```
+   ```
+      NOTE that "ours" and "theirs" SWAP MEANING during a REBASE :
+           in a MERGE  : ours = your branch , theirs = incoming
+           in a REBASE : ours = the branch being rebased ONTO ,
+                         theirs = your commits
+      This reversal causes real mistakes, so check with git status
+      before using either flag.
+   ```
+
+   How to reduce conflicts in the first place
+   ```
+      PULL and MERGE FREQUENTLY - a branch that diverges for two
+           weeks conflicts far more than one merged daily.
+      SMALL, FOCUSED COMMITS in one area of the code.
+      AGREE OWNERSHIP - if two people must edit the same file, talk
+           first.
+      AGREE ON FORMATTING - an auto-formatter that reindents a whole
+           file creates conflicts on every line for no reason.
+      NEVER COMMIT generated files, build output or IDE settings ;
+           put them in .gitignore.
+      COMMUNICATE - most conflicts are an organisational problem
+           showing up as a technical one.
+   ```
+   - The point worth stating: a conflict is `not an error`. It is Git correctly refusing to guess. The resolution is a `human decision about what the code should do`, and the only way to confirm it is right is to `run the tests afterwards`.
 
 7. **b) Write down the difference between Patch and Upgrade.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
+   Answer: Difference between a patch and an upgrade
+
+   | Point | Patch | Upgrade |
+   |---|---|---|
+   | Purpose | `Fix` a specific defect or security hole | Move to a `newer version` with new features |
+   | Size | `Small` — a few files | `Large` — often the whole product |
+   | Scope | One problem | The entire application |
+   | Version number | Changes the `last` digit — 2.1.3 → 2.1.4 | Changes the `major or minor` — 2.1 → 3.0 |
+   | New features | `None` | `Yes` |
+   | Frequency | Often — sometimes weekly | Rarely — every year or two |
+   | Cost | Usually `free` under the support contract | Often `paid` |
+   | Downtime | Little or none | Significant — planning required |
+   | Risk | Low | `High` — behaviour may change |
+   | Reversible | Easily uninstalled | Hard to reverse; needs a full backup |
+   | Testing needed | Regression test the affected area | `Full` regression test |
+   | User retraining | None | Often needed |
+
+   Patch
+   ```
+      A small piece of code released to CORRECT a specific problem
+      in software already installed.
+
+      TYPES
+        BUG FIX PATCH      corrects a defect
+        SECURITY PATCH     closes a vulnerability. The most urgent -
+             "Patch Tuesday" exists for these.
+        HOTFIX             an emergency patch, released outside the
+             normal schedule for a critical fault in production.
+        SERVICE PACK       a bundle of many patches, released
+             together.
+
+      Example : Windows 10 build 19045.3570 -> 19045.3693
+                MySQL 8.0.34 -> 8.0.35
+   ```
+
+   Upgrade
+   ```
+      Replacing the software with a NEWER VERSION that has new
+      features, a changed interface, or a new architecture.
+
+      Example : Windows 10  -> Windows 11
+                MySQL 5.7   -> MySQL 8.0
+                Office 2019 -> Office 365
+   ```
+
+   Semantic versioning — how the numbers say which is which
+   ```
+           MAJOR . MINOR . PATCH
+
+             3   .   2   .   5
+
+      PATCH  (5)  a backward-compatible BUG FIX     -> a PATCH
+      MINOR  (2)  new features, still backward
+                  compatible                        -> an UPGRADE
+      MAJOR  (3)  BREAKING CHANGES                  -> an UPGRADE ,
+                  and the risky kind
+   ```
+
+   The related term
+   ```
+      UPDATE is often used loosely for either. Strictly it sits
+      between the two : it may add small features as well as fix
+      defects, but it does not change the major version.
+
+           PATCH   -> fix only
+           UPDATE  -> fix + small improvements
+           UPGRADE -> new version , new features , possible breaking
+                      changes
+   ```
+
+   What each requires in practice
+   ```
+      BEFORE A PATCH
+           read the release note ; test in staging ; regression test
+           the affected area ; apply in a maintenance window.
+
+      BEFORE AN UPGRADE
+           FULL BACKUP and a TESTED ROLLBACK plan
+           check hardware and licence requirements
+           check COMPATIBILITY of every integration and plugin
+           full regression test in a staging environment
+           DATA MIGRATION scripts, versioned and reversible
+           user TRAINING and documentation
+           a defined cutover window and a communication plan
+   ```
+   - The judgement to state: `security patches should be applied promptly` — an unpatched known vulnerability is the commonest route into a system. `Upgrades should be planned`, because they change behaviour, may break integrations, and are hard to reverse. Treating an upgrade with the casualness appropriate to a patch is how production outages happen.
+
 8. **Qualification of a good team leader.** *[NESCO Manager (Software) 2018 compact it 1208-1209 (ET: N/A)]*
 
+   Answer: Qualifications of a good team leader
+
+   Technical qualifications
+   ```
+      TECHNICAL COMPETENCE
+           Enough depth to judge a design, review code and estimate
+           realistically. A leader who cannot read the code cannot
+           tell whether the team is in trouble.
+
+      PROBLEM SOLVING
+           Breaks a large problem into parts and decides between
+           alternatives on evidence rather than preference.
+
+      DOMAIN KNOWLEDGE
+           Understands the business the software serves - banking
+           rules, accounting practice - so requirements are
+           challenged when they are wrong.
+
+      PLANNING AND ESTIMATION
+           Breaks work down, estimates, tracks progress, and adjusts
+           when the estimate proves wrong.
+   ```
+
+   Management qualifications
+   ```
+      DECISION MAKING
+           Decides with incomplete information, and decides in time.
+           An undecided leader is worse than a wrong one, because the
+           team stops.
+
+      DELEGATION
+           Assigns work by skill and then LEAVES IT ALONE. A leader
+           who does everything personally becomes the bottleneck.
+
+      ORGANISATION and TIME MANAGEMENT
+           Prioritises, and protects the team's time from
+           interruption.
+
+      RISK MANAGEMENT
+           Identifies what could go wrong early, and plans for it
+           rather than reacting to it.
+   ```
+
+   Communication qualifications
+   ```
+      CLEAR COMMUNICATION
+           Explains the same thing in the right register to a
+           developer, a customer and a manager.
+
+      LISTENING
+           The single most underrated quality. A leader who does not
+           listen never learns that the project is late until it is.
+
+      UPWARD HONESTY
+           Reports bad news to management EARLY and accurately. A
+           leader who hides slippage guarantees a crisis.
+
+      NEGOTIATION
+           Negotiates scope, deadlines and resources with the
+           sponsor - and negotiates SCOPE, never quality.
+   ```
+
+   Personal qualities
+   ```
+      INTEGRITY and FAIRNESS
+           Gives credit where it is due, takes responsibility for
+           failure, treats everyone by the same standard. Without
+           this nothing else works, because the team will not
+           follow.
+
+      ACCOUNTABILITY
+           Owns the outcome. "The team failed" is not a report a
+           good leader makes.
+
+      MOTIVATION and EMPATHY
+           Knows what each person wants from the work, and notices
+           when someone is struggling before it shows in the
+           schedule.
+
+      CALM UNDER PRESSURE
+           Production is down at 2 a.m. The leader's job is to stay
+           methodical, because panic spreads faster than any
+           instruction.
+
+      ADAPTABILITY
+           Requirements change, people leave, technology moves. A
+           leader attached to the original plan fails with it.
+
+      WILLINGNESS TO LEARN, AND TO BE CORRECTED
+           A leader who cannot be told they are wrong will be told
+           nothing.
+   ```
+
+   Leadership behaviour
+   ```
+      LEADS BY EXAMPLE      follows the standards demanded of others
+      SHIELDS THE TEAM      absorbs interruptions and political
+                            pressure so the team can work
+      DEVELOPS PEOPLE       mentors, and creates a successor. A
+                            leader whose team cannot function
+                            without them has failed at this
+      GIVES FEEDBACK        specific, timely, and in private when
+                            critical
+      BUILDS TRUST          a team that fears blame hides problems,
+                            and hidden problems are the ones that
+                            kill projects
+   ```
+
+   - The distinction worth stating: a `manager` administers the plan; a `leader` makes the team want to deliver it. In software the leader also has to be `technically credible`, because engineers do not follow someone who cannot judge their work. The two qualities that matter most in practice are `honest upward reporting` and `psychological safety` — a leader who reports slippage early and whose team is not afraid to admit a mistake will recover from almost anything, and a leader lacking either will be surprised by failure.
+
 9. **Write down pros and cons over qualification candidate.** *[NESCO Manager (Software) 2018 compact it 1210-1211 (ET: N/A)]*
+
+   Answer: The question is `incomplete` — the specific candidate, post or comparison being asked about was not captured, so the exact answer cannot be given. What such a question tests is `how to weigh the strengths and weaknesses of a candidate against a job's requirements`, and that framework is given below.
+
+   The framework: judge the candidate against the requirement, not in the abstract
+   ```
+      Every strength and weakness matters only in relation to what
+      the POST actually needs. A brilliant researcher is a poor
+      choice for a maintenance role, and the reverse is equally
+      true.
+   ```
+
+   Pros of a highly qualified candidate
+   ```
+      TECHNICAL DEPTH        productive from an early stage ; needs
+           less supervision and less training.
+      JUDGEMENT              has seen the failure modes before, so
+           designs and estimates are more realistic.
+      MENTORING              raises the whole team's level, not only
+           their own output.
+      CREDIBILITY            with customers, auditors and regulators.
+      FASTER PROBLEM SOLVING on the difficult problems, which is
+           where most schedule risk lies.
+   ```
+
+   Cons of a highly qualified candidate
+   ```
+      COST                   a higher salary, and possibly a
+           distortion of the existing pay structure.
+      RETENTION RISK         likely to leave for a better offer,
+           especially if the work is below their level.
+      OVER-QUALIFICATION     a person given routine work becomes
+           bored and disengaged - a real and common failure.
+      RIGIDITY               long experience with one approach can
+           become resistance to a different one.
+      TEAM FIT               may not accept direction from a less
+           experienced lead.
+   ```
+
+   Pros of a less qualified but promising candidate
+   ```
+      COST                   affordable, and easier to justify.
+      TRAINABILITY           learns the organisation's way of working
+           rather than importing another's.
+      LOYALTY                a person developed in-house tends to
+           stay longer.
+      ENTHUSIASM             and willingness to take on unglamorous
+           work.
+      SUCCESSION             builds the organisation's future
+           capability.
+   ```
+
+   Cons of a less qualified candidate
+   ```
+      TRAINING COST and TIME before they are productive.
+      SUPERVISION            consumes a senior person's time - a
+           hidden cost that is routinely underestimated.
+      RISK on critical work  a mistake in a payment or security
+           module is expensive.
+      NO INDEPENDENT
+           JUDGEMENT yet     needs their design decisions reviewed.
+   ```
+
+   How to decide
+   ```
+      1. SEPARATE the ESSENTIAL from the DESIRABLE in the job
+         specification. Most requirement lists confuse the two.
+
+      2. Ask WHAT THE ROLE ACTUALLY NEEDS :
+           a NEW, DIFFICULT system      -> favour experience
+           MAINTENANCE and support      -> favour trainability and
+                                           retention
+           a REGULATED or SAFETY-
+                critical module         -> favour experience,
+                                           without exception
+           a LARGE TEAM to be built     -> hire one senior to mentor
+                                           several juniors
+
+      3. Consider the TEAM as a whole, not the individual. A team of
+         all seniors is expensive and argumentative ; a team of all
+         juniors has nobody to learn from. A MIX is almost always
+         right.
+
+      4. Test rather than assume. A structured technical exercise on
+         REAL work tells more than a certificate or a years-of-
+         experience count.
+
+      5. Score against WEIGHTED criteria, so the decision is
+         recorded and defensible :
+
+         +------------------+--------+-------------+-------------+
+         | Criterion        | Weight | Candidate A | Candidate B |
+         +------------------+--------+-------------+-------------+
+         | Technical skill  |  30 %  |      9      |      6      |
+         | Domain knowledge |  20 %  |      7      |      8      |
+         | Communication    |  20 %  |      6      |      9      |
+         | Team fit         |  15 %  |      5      |      9      |
+         | Cost / salary fit|  15 %  |      4      |      9      |
+         +------------------+--------+-------------+-------------+
+         | WEIGHTED TOTAL           |     6.7     |     7.8     |
+         +--------------------------+-------------+-------------+
+   ```
+   - The judgement worth stating: `over-qualification is a genuine risk, not a bonus`. A candidate whose ability far exceeds the role will disengage or leave, and the cost of replacing them exceeds whatever was saved. The right answer is almost never "the most qualified candidate" but `the best fit between what the role needs and what the candidate offers` — and the criteria for that must be agreed and weighted before the interviews, not after.
 
 ## Software Design Principles (Coupling & Cohesion) (5)
 
