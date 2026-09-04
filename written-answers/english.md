@@ -761,17 +761,35 @@ ii. The data were collected and it were analyzed carefully.
 
 1. **What is the Opposite word of Transparent?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+   Answer: Opaque (translucent is also partially opposite).
+
 2. **Antonym of “fantasy”:** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+   Answer: Reality (or: Fact / Truth).
 
 3. **When the writer uses the word “prosperous” to describe the voyage, what does he mean?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+   Answer: He means that the voyage was successful, favorable, smooth, and marked by good fortune and favorable weather conditions.
+
 4. **What 2 synonyms of the word “Accordingly”?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+   Answer: Consequently, Therefore (or: Correspondingly, Appropriately).
 
 5. **১. নিচের কোনটি লেফটেনেন্ট এর সঠিক Spelling? (a) Lieutenant (b) Leptenant (c) Lieutenand (d) Lieftenant** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
+   Answer: (a) Lieutenant
+
 6. **১. What is the synonym of Certainly?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+   Answer: Definitely (or: Surely / Undoubtedly).
+
 7. **৫. Spelling Correction: Tsunami, Commission, Laughping, hetarogineous.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+   Answer:
+   - Tsunami -> Tsunami (Already correct)
+   - Commission -> Commission (Already correct)
+   - Laughping -> Laughing
+   - hetarogineous -> Heterogeneous
 
 ## Letter & Application Writing (6)
 
