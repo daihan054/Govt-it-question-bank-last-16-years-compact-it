@@ -45,6 +45,101 @@
 
 2. **An artificial intelligence is an agent is an entity that continuously revious its enviornment.....** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 449 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the sentence was cut off in the paper. It is the standard definition of an `intelligent agent`, and the full statement and its explanation are given below.
+
+   The complete definition
+   ```
+      "An intelligent agent is an entity that continuously PERCEIVES its
+       environment through SENSORS and ACTS upon that environment through
+       ACTUATORS, so as to achieve its goal."
+   ```
+   - This is the definition given by Russell and Norvig in `Artificial Intelligence: A Modern Approach`, the standard text.
+
+   The structure of an agent
+   ```mermaid
+   flowchart LR
+       E[ENVIRONMENT] -->|percepts| S[Sensors]
+       S --> A[Agent function<br/>decides what to do]
+       A --> AC[Actuators]
+       AC -->|actions| E
+   ```
+   ```
+      PERCEPT          : what the agent senses at one instant
+      PERCEPT SEQUENCE : everything it has ever perceived
+      AGENT FUNCTION   : maps the percept sequence to an action
+      AGENT PROGRAM    : the concrete implementation of that function
+      ACTUATOR         : how the agent changes the environment
+   ```
+
+   The PEAS description, used to specify any agent
+   ```
+      P - Performance measure : how success is judged
+      E - Environment         : where it operates
+      A - Actuators           : what it can do
+      S - Sensors             : what it can perceive
+   ```
+   ```
+      Example - a self-driving taxi :
+         P : safety , speed , legality , passenger comfort , profit
+         E : roads , traffic , pedestrians , weather
+         A : steering , accelerator , brake , indicator , horn
+         S : cameras , LIDAR , GPS , speedometer , engine sensors
+   ```
+
+   Types of agent, in increasing order of capability
+   ```
+      1. SIMPLE REFLEX AGENT
+         Acts only on the CURRENT percept, using condition-action rules.
+         "If the car in front is braking, then brake."
+         Fails whenever the environment is partially observable.
+
+      2. MODEL-BASED REFLEX AGENT
+         Keeps an INTERNAL STATE representing the part of the world it
+         cannot currently see, updated by a model of how the world works.
+
+      3. GOAL-BASED AGENT
+         Also holds a GOAL, and chooses actions that move towards it.
+         Needs search and planning.
+
+      4. UTILITY-BASED AGENT
+         Holds a UTILITY FUNCTION, so it can choose between several goal
+         states and act rationally when goals conflict or are uncertain.
+
+      5. LEARNING AGENT
+         Improves its own performance from experience. It has four parts :
+         the learning element, the performance element, the critic and
+         the problem generator.
+   ```
+
+   Properties of an environment
+   ```
+      Fully  vs Partially observable   : can the agent see everything?
+      Deterministic vs Stochastic      : is the next state predictable?
+      Episodic vs Sequential           : do past actions matter?
+      Static vs Dynamic                : does the world change while it thinks?
+      Discrete vs Continuous           : finite states, or continuous ones?
+      Single agent vs Multi agent      : are there other agents?
+   ```
+   ```
+      Chess          : fully observable , deterministic , sequential ,
+                       static , discrete , multi agent
+      Self-driving   : partially observable , stochastic , sequential ,
+                       dynamic , continuous , multi agent  - the hardest case
+   ```
+
+   Rationality
+   ```
+      A RATIONAL AGENT is one that, for every possible percept sequence,
+      selects the action expected to MAXIMISE its performance measure,
+      given the evidence it has and whatever knowledge it was built with.
+
+      Rational is NOT the same as omniscient. An agent that looks both ways
+      and is still hit by a falling object acted rationally; it simply
+      could not have known.
+   ```
+
+   - Examples of agents worth naming: a `thermostat` (simple reflex), a `robot vacuum cleaner` (model-based), a `chess program` (goal-based), a `route planner` (utility-based) and a `spam filter` (learning agent).
+
 3. **Write PEAS for (a) Auto taxi (b) Automatic clinical test.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
 
    Answer: PEAS is the standard way to describe the task environment of a rational agent. It stands for Performance measure, Environment, Actuators and Sensors — set these four and the agent's job is fully specified.

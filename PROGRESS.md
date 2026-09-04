@@ -2,11 +2,11 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 178 / 243 done**  ·  **Questions: 2233 answered, 31 skipped, 3168 total**
+**Subtopics: 178 / 243 done**  ·  **Questions: 2242 answered, 22 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
-| `ai-and-ml.md` | IT | 11 / 11 | 42 | 1 | 43 |
+| `ai-and-ml.md` | IT | 11 / 11 | 43 | 0 | 43 |
 | `algorithm.md` | IT | 14 / 14 | 130 | 4 | 134 |
 | `bangla.md` | General | 0 / 6 | 0 | 0 | 123 |
 | `c-programming.md` | IT | 9 / 9 | 270 | 0 | 270 |
@@ -17,7 +17,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `computer-networks.md` | IT | 33 / 33 | 507 | 0 | 507 |
 | `data-structure.md` | IT | 8 / 8 | 97 | 0 | 97 |
 | `database.md` | IT | 19 / 19 | 292 | 2 | 294 |
-| `dld.md` | IT | 9 / 9 | 140 | 8 | 148 |
+| `dld.md` | IT | 9 / 9 | 148 | 0 | 148 |
 | `electrical-and-electronics.md` | IT | 9 / 9 | 31 | 8 | 39 |
 | `english.md` | General | 0 / 8 | 0 | 0 | 112 |
 | `gk.md` | General | 0 / 4 | 0 | 0 | 214 |
@@ -35,7 +35,6 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 
 Content-free or truncated entries — no answer written.
 
-- `ai-and-ml.md → Artificial Intelligence & Expert Systems` — question 2
 - `algorithm.md → Algorithm Analysis & Asymptotic Complexity` — question 4
 - `algorithm.md → Greedy Algorithms (Fractional Knapsack)` — question 6
 - `algorithm.md → Algorithm Analysis & Asymptotic Complexity` — question 10
@@ -45,16 +44,8 @@ Content-free or truncated entries — no answer written.
 - `computer-fundamental.md → Computer Fundamentals & Acronyms` — question 2
 - `database.md → Database Backup & Disaster Recovery` — question 2
 - `database.md → Data Warehousing, Data Mining & Business Intelligence` — question 3
-- `dld.md → Karnaugh Map (K-Map)` — question 2
-- `dld.md → Karnaugh Map (K-Map)` — question 3
-- `dld.md → Karnaugh Map (K-Map)` — question 7
-- `dld.md → Karnaugh Map (K-Map)` — question 8
-- `dld.md → Karnaugh Map (K-Map)` — question 10
-- `dld.md → Karnaugh Map (K-Map)` — question 13
-- `dld.md → Karnaugh Map (K-Map)` — question 14
-- `dld.md → Combinational Circuits (Adders, Encoders, MUX)` — question 16
-- `electrical-and-electronics.md → Operational Amplifiers (Op-Amp)` — question 1
 - `electrical-and-electronics.md → Circuit Theorems (Thevenin, Norton, Superposition)` — question 1
+- `electrical-and-electronics.md → Operational Amplifiers (Op-Amp)` — question 1
 - `electrical-and-electronics.md → Circuit Theorems (Thevenin, Norton, Superposition)` — question 2
 - `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 6
 - `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 9

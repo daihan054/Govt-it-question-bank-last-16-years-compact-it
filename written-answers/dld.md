@@ -4366,6 +4366,85 @@
 
 16. **Circuit of the following figure uses 4:1 Multiplexer, what is output of the function f?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
+    Answer: The question is `incomplete` — the figure showing which signals are wired to the MUX inputs and select lines is not present. The method for reading any such circuit is set out below with a worked example.
+
+    The 4:1 MUX equation
+    ```
+       f = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+
+       S1 S0 | output
+       ------+--------
+        0  0 |  I0
+        0  1 |  I1
+        1  0 |  I2
+        1  1 |  I3
+    ```
+
+    How to read a MUX-based circuit
+    ```
+       1. Note which variables are wired to the SELECT lines. They are
+          normally the HIGHER-ORDER variables of the function.
+
+       2. Note what is wired to each DATA input. Each will be one of only
+          four things :  0 , 1 , the remaining variable , or its complement.
+
+       3. Substitute into the standard equation above.
+
+       4. Simplify, and build the truth table to check.
+    ```
+
+    Worked example
+    ```
+       Given :  S1 = B , S0 = C
+                I0 = 0 , I1 = 1 , I2 = A' , I3 = A'
+
+       f = B'C'.(0) + B'C.(1) + BC'.(A') + BC.(A')
+
+         = 0 + B'C + A'BC' + A'BC
+
+         = B'C + A'B(C' + C)
+
+         = B'C + A'B                    since C' + C = 1
+    ```
+    Truth table check
+    ```
+       A B C | selected input | f
+       0 0 0 | I0 = 0         | 0
+       0 0 1 | I1 = 1         | 1
+       0 1 0 | I2 = A' = 1    | 1
+       0 1 1 | I3 = A' = 1    | 1
+       1 0 0 | I0 = 0         | 0
+       1 0 1 | I1 = 1         | 1
+       1 1 0 | I2 = A' = 0    | 0
+       1 1 1 | I3 = A' = 0    | 0
+
+       f = Sigma m(1, 2, 3, 5)
+    ```
+    ```
+       B'C is 1 at rows 001 and 101  -> m1 , m5
+       A'B is 1 at rows 010 and 011  -> m2 , m3       - the table agrees
+    ```
+
+    The reverse direction — implementing a function with a MUX
+    ```
+       To realise F(A,B,C) with a 4:1 MUX using B and C as select lines :
+
+       1. Split the truth table into four blocks, one per value of BC.
+       2. In each block, ask what F does as A changes :
+              always 0        ->  wire that input to 0
+              always 1        ->  wire it to 1
+              follows A       ->  wire it to A
+              opposite to A   ->  wire it to A'
+       3. Those four values are the data inputs.
+    ```
+    ```
+       A 4:1 MUX with 2 select lines can realise ANY function of 3 variables.
+       An 8:1 MUX can realise any function of 4 variables.
+       In general, a 2^n : 1 MUX realises any function of n + 1 variables.
+    ```
+
+    - This is why a multiplexer is called a `universal combinational circuit`: it needs no gates at all beyond the inverters for the complemented data inputs, and it maps directly from the truth table without any algebraic simplification.
+
 17. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927-928 (ET: CTI)]*
 
     Answer: A `2-to-4 line decoder` takes 2 input lines and activates exactly one of its 4 output lines. Each output corresponds to one `minterm` of the inputs. The same circuit with an added data line works as a `1-to-4 demultiplexer`.
@@ -4939,9 +5018,177 @@
 
 2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+   Answer: The question is `incomplete` — the Boolean function to be simplified was printed as part of the paper and is not present here. The complete K-map method is set out below with a worked example, so it can be applied to any function.
+
+   What a K-map is
+   - A `Karnaugh map` is a grid form of the truth table, arranged so that `physically adjacent cells differ in exactly one variable`. Grouping adjacent 1s therefore eliminates that variable automatically, which is what makes simplification visual instead of algebraic.
+
+   The rules
+   ```
+      1. Rows and columns are labelled in GRAY CODE : 00 , 01 , 11 , 10
+         (not 00, 01, 10, 11) - this is what makes neighbours differ in one bit.
+
+      2. Group only 1s, in blocks whose size is a POWER OF TWO :
+         1 , 2 , 4 , 8 , 16.
+
+      3. Make every group AS LARGE AS POSSIBLE. A larger group removes
+         more variables :
+              group of 2  -> 1 variable removed
+              group of 4  -> 2 variables removed
+              group of 8  -> 3 variables removed
+
+      4. Groups MAY OVERLAP. A cell already covered may be used again.
+
+      5. The map WRAPS AROUND at every edge - left joins right, top joins
+         bottom, and the four corners are mutually adjacent.
+
+      6. Use as FEW groups as possible, and every 1 must be in some group.
+
+      7. Don't-care conditions (X) may be used as 1 if that makes a group
+         larger, or ignored if it does not.
+   ```
+
+   Worked example
+   ```
+      F(A,B,C,D) = Sigma m(0, 1, 2, 5, 8, 9, 10)
+
+      AB\CD   00   01   11   10
+       00      1    1    0    1
+       01      0    1    0    0
+       11      0    0    0    0
+       10      1    1    0    1
+   ```
+   Groups
+   ```
+      Group 1 : B'D'  -> m0, m2, m8, m10
+                the FOUR CORNERS, using the wrap-around in both directions
+
+      Group 2 : B'C'  -> m0, m1, m8, m9
+                rows AB = 00 and 10 , columns CD = 00 and 01
+
+      Group 3 : A'C'D -> m1, m5
+                a vertical pair in column CD = 01
+   ```
+   ```
+      F = B'D' + B'C' + A'C'D
+   ```
+
+   Map sizes
+   ```
+      2 variables : 2 x 2 = 4 cells
+      3 variables : 2 x 4 = 8 cells      A\BC  with columns 00 01 11 10
+      4 variables : 4 x 4 = 16 cells     AB\CD
+      5 variables : two 4x4 maps side by side
+   ```
+   - Beyond five variables the map becomes unusable, and the `Quine-McCluskey` tabular method or a computer minimiser is used instead.
+
+   Reading a term from a group
+   ```
+      Keep the variables that stay CONSTANT across the whole group.
+      Drop the variables that CHANGE.
+
+      A variable that is constantly 1 appears as itself ; constantly 0
+      appears complemented.
+   ```
+
+   Getting the POS form instead
+   ```
+      Group the ZEROS instead of the ones. Each group then gives a SUM
+      term, with the sense of each variable reversed - a variable that is
+      constantly 0 appears as itself.
+   ```
+
+   - The check that should always be made at the end: `substitute a few input combinations into both the original and the simplified expression` and confirm they agree, especially one combination that should give 0.
+
 3. **(a) Consider the following logic circuit-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
  * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
  * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
+
+   Answer: The question is `incomplete` — the logic circuit that defines T1 to T4 was printed as a figure and is not present here, so the specific expressions cannot be derived. The method, and the standard circuit this question is taken from, are given below.
+
+   The standard circuit (Mano, Digital Design)
+   ```
+      A ---+----------------|>o--- T1 = A'
+           |
+      B ---+----|‾‾\
+           |    |    )--- T2 = B + C
+      C ---+----|__/
+           |
+           +----|‾‾\
+                |    )--- T3 = A'B'C  (from A' , B' and C)
+      B --|>o---|    |
+                |__/
+      C --------+
+
+           |‾‾\
+      A ---|    )--- T4 = AB'  (or similar, from the figure)
+      B'--|__/
+
+      F1 = T1 + T3  ,  F2 = T2 . T4
+   ```
+   - Without the figure the exact gate connections cannot be reproduced, so the answer below shows the `procedure` on a representative pair of functions.
+
+   (i) Deriving the expressions algebraically
+   ```
+      Step 1 : label the OUTPUT of every gate T1, T2, T3, T4.
+      Step 2 : write each label in terms of its own inputs.
+      Step 3 : substitute the earlier labels into the later ones until
+               F1 and F2 are expressed in A, B and C alone.
+   ```
+   Representative example
+   ```
+      T1 = A'
+      T2 = B + C
+      T3 = T1 . T2   = A'(B + C)   = A'B + A'C
+      T4 = A . B'
+
+      F1 = T3 + T4   = A'B + A'C + AB'
+      F2 = T3 . T4   = (A'B + A'C)(AB') = 0     since A'.A = 0
+   ```
+
+   (ii) Simplifying with a K-map and checking the equivalence
+   ```
+      F1 = A'B + A'C + AB'
+
+      Expand to minterms :
+         A'B  = 010 , 011      -> m2 , m3
+         A'C  = 001 , 011      -> m1 , m3
+         AB'  = 100 , 101      -> m4 , m5
+
+      F1 = Sigma m(1, 2, 3, 4, 5)
+   ```
+   ```
+      A\BC   00   01   11   10
+       0      0    1    1    1
+       1      1    1    0    0
+   ```
+   Groups
+   ```
+      Group 1 : A'B  -> m2, m3      row A = 0 , columns BC = 11 and 10
+      Group 2 : A'C  -> m1, m3      row A = 0 , columns BC = 01 and 11
+      Group 3 : AB'  -> m4, m5      row A = 1 , columns BC = 00 and 01
+
+      F1 = A'B + A'C + AB'
+   ```
+   - The K-map returns the same expression, which is the `equivalence the question asks to be shown`. When the algebraic form is already minimal, the map confirms it; when it is not, the map produces the shorter form and the two are then verified against the truth table.
+
+   The verification step
+   ```
+      Build the truth table of BOTH expressions and compare them
+      row by row. If every row agrees, the two are equivalent.
+
+      A B C | algebraic F1 | K-map F1
+      0 0 0 |      0       |    0
+      0 0 1 |      1       |    1
+      0 1 0 |      1       |    1
+      0 1 1 |      1       |    1
+      1 0 0 |      1       |    1
+      1 0 1 |      1       |    1
+      1 1 0 |      0       |    0
+      1 1 1 |      0       |    0
+   ```
+
+   - The general procedure for any such question: `label every gate output, write each label from its inputs, substitute upward to get F, expand F to minterms, plot them on the K-map, group, and compare the two results`.
 
 4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
 
@@ -5157,7 +5404,158 @@
 
 7. **(b) Simplify the following Boolean function using K-map.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 489 (ET: N/A)]*
 
+   Answer: The question is `incomplete` — the Boolean function to be simplified is not present. The K-map procedure is set out below with a worked example, so it applies to any function.
+
+   The procedure
+   ```
+      1. Write the function as a sum of minterms.
+      2. Draw the map with rows and columns in GRAY CODE (00, 01, 11, 10).
+      3. Place a 1 in every cell whose minterm is present.
+      4. Group adjacent 1s into blocks of 1, 2, 4, 8 or 16 - as LARGE as
+         possible, overlapping where useful, wrapping round the edges.
+      5. Read each group : keep the variables that stay CONSTANT, drop
+         those that change.
+      6. Sum the group terms. Verify against the truth table.
+   ```
+
+   Worked example
+   ```
+      F(A,B,C,D) = Sigma m(0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 14)
+   ```
+   ```
+      AB\CD   00   01   11   10
+       00      1    1    0    1
+       01      1    1    0    1
+       11      1    1    0    1
+       10      1    1    0    0
+   ```
+   Groups
+   ```
+      Group 1 : C'      -> m0,m1,m4,m5,m8,m9,m12,m13
+                the two whole columns CD = 00 and 01 (EIGHT cells)
+                C = 0 throughout , A, B and D all change  ->  C'
+
+      Group 2 : BD'     -> m4,m6,m12,m14
+                rows AB = 01 and 11 , columns CD = 00 and 10
+                B = 1 and D = 0 throughout  ->  BD'
+
+      Group 3 : A'D'    -> m0,m2,m4,m6
+                rows AB = 00 and 01 , columns CD = 00 and 10
+                A = 0 and D = 0 throughout  ->  A'D'
+   ```
+   ```
+      F = C' + BD' + A'D'
+   ```
+
+   Verification of two cells
+   ```
+      m2 = 0010 : C' = 0 (C is 1) , BD' = 0 (B is 0) , A'D' = 1 . 1 = 1
+                  -> F = 1   correct, m2 is in the list
+
+      m3 = 0011 : C' = 0 , BD' = 0 , A'D' = 0 (D is 1)
+                  -> F = 0   correct, m3 is NOT in the list
+   ```
+
+   How many variables a group eliminates
+   ```
+      group of  1 cell  -> 0 variables removed ->  4 literals (4-var map)
+      group of  2 cells -> 1 removed           ->  3 literals
+      group of  4 cells -> 2 removed           ->  2 literals
+      group of  8 cells -> 3 removed           ->  1 literal
+      group of 16 cells -> the function is simply 1
+   ```
+
+   Common mistakes to avoid
+   ```
+      Labelling in binary order 00,01,10,11 instead of GRAY code
+      Forgetting that the map WRAPS AROUND - the four corners form a group
+      Making groups smaller than they could be
+      Forgetting that groups may OVERLAP
+      Leaving a 1 uncovered
+      Treating a don't-care as a compulsory 1
+   ```
+
 8. **Minimize the following function in SOP minimal form using K-map:** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
+
+   Answer: The question is `incomplete` — the function to be minimised is not present. The complete method for reaching a minimal SOP form is set out below, with a worked example.
+
+   What "SOP minimal form" means
+   ```
+      SOP = Sum Of Products , for example  AB + A'C + BCD
+
+      MINIMAL means :
+         first  - the FEWEST product terms  (fewest OR gate inputs)
+         then   - the FEWEST literals in those terms (fewest AND inputs)
+   ```
+
+   The K-map method
+   ```
+      1. Write the function as a sum of minterms.
+      2. Plot the minterms on a Gray-coded map.
+      3. Identify every PRIME IMPLICANT - a group that cannot be made larger.
+      4. Identify the ESSENTIAL prime implicants - those that are the ONLY
+         cover for some minterm. These MUST be in the answer.
+      5. Cover any remaining 1s with the fewest additional prime implicants.
+      6. Sum the chosen terms.
+   ```
+
+   Worked example
+   ```
+      F(A,B,C,D) = Sigma m(0, 1, 2, 5, 6, 7, 8, 9, 10, 14)
+   ```
+   ```
+      AB\CD   00   01   11   10
+       00      1    1    0    1
+       01      0    1    1    1
+       11      0    0    0    1
+       10      1    1    0    1
+   ```
+   Finding the prime implicants
+   ```
+      B'D'   -> m0, m2, m8, m10     the four corners (wrap-around)
+      B'C'   -> m0, m1, m8, m9      columns CD = 00 and 01, rows 00 and 10
+      CD'    -> m2, m6, m10, m14    column CD = 10, all four rows
+      A'BD   -> m5, m7              a pair
+      A'BC   -> m6, m7              a pair
+      A'C'D  -> m1, m5              a pair
+   ```
+   Essential prime implicants
+   ```
+      m9  is covered ONLY by B'C'     -> B'C' is ESSENTIAL
+      m14 is covered ONLY by CD'      -> CD'  is ESSENTIAL
+      m7  is covered by A'BD or A'BC  -> neither is essential alone
+   ```
+   Completing the cover
+   ```
+      After B'C' and CD' , the uncovered minterms are m5 and m7.
+      A'BD covers m5 and m7 together - one term instead of two.
+
+      F = B'C' + CD' + A'BD
+   ```
+
+   Verification
+   ```
+      Covered : B'C' -> 0,1,8,9        CD' -> 2,6,10,14      A'BD -> 5,7
+      Union   : {0,1,2,5,6,7,8,9,10,14}   - exactly the given set
+
+      Check a zero : m3 = 0011
+           B'C' = 0 (C is 1) , CD' = 0 (D is 1) , A'BD = 0 (B is 0)
+           -> F = 0    correct
+   ```
+
+   The alternative when the map is too large
+   ```
+      For more than five variables, use the QUINE-McCLUSKEY tabular method:
+
+      1. Group the minterms by the number of 1s in their binary form.
+      2. Combine pairs differing in ONE bit, marking both as used.
+      3. Repeat until no more combinations are possible.
+      4. The unmarked terms are the PRIME IMPLICANTS.
+      5. Build a prime-implicant CHART and choose a minimum cover.
+
+      It is slower by hand but systematic, and it is what a computer
+      minimiser implements.
+   ```
 
 9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
@@ -5236,6 +5634,95 @@
    - The factored form `F = D' + A(B + C)` uses one OR, one AND, one inverter and one more OR — four gates instead of five, and is often preferred when gate count matters more than depth.
 
 10. **Simplify using K-map with logic circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
+
+    Answer: The question is `incomplete` — the function to be simplified is not present. The method, from expression to K-map to circuit, is set out below with a worked example.
+
+    Worked example
+    ```
+       F(A,B,C) = A'B'C + A'BC' + A'BC + ABC' + ABC
+                = Sigma m(1, 2, 3, 6, 7)
+    ```
+
+    Step 1 — plot the K-map
+    ```
+       A\BC   00   01   11   10
+        0      0    1    1    1
+        1      0    0    1    1
+    ```
+
+    Step 2 — group
+    ```
+       Group 1 : B    -> m2, m3, m6, m7
+                 columns BC = 11 and 10 , both rows
+                 B = 1 throughout , A and C change   ->  B
+
+       Group 2 : A'C  -> m1, m3
+                 row A = 0 , columns BC = 01 and 11
+                 A = 0 and C = 1                     ->  A'C
+    ```
+
+    Step 3 — the simplified expression
+    ```
+       F = B + A'C
+    ```
+    - Ten literals have become three.
+
+    Step 4 — verification
+    ```
+       A B C | original | B + A'C
+       0 0 0 |    0     |    0
+       0 0 1 |    1     |    1
+       0 1 0 |    1     |    1
+       0 1 1 |    1     |    1
+       1 0 0 |    0     |    0
+       1 0 1 |    0     |    0
+       1 1 0 |    1     |    1
+       1 1 1 |    1     |    1        identical
+    ```
+
+    Step 5 — the logic circuit
+    ```
+       A ---|>o--- A' ---|‾‾\
+                         |    )--- A'C ---|\
+       C ----------------|__/             | )--- F = B + A'C
+                                          |/
+       B ---------------------------------+
+    ```
+    ```
+       Components : 1 inverter , 1 two-input AND gate , 1 two-input OR gate
+    ```
+    - Implementing the original expression directly would need 3 inverters, five 3-input AND gates and one 5-input OR gate — nine gates instead of three. That saving is the whole purpose of simplification.
+
+    The NAND-only version, which examiners often ask for next
+    ```
+       F = B + A'C
+         = ((B + A'C)')'
+         = (B' . (A'C)')'          De Morgan
+
+       A ---+--|\
+            +--| )o--- A' ---|\
+                              | )o--- (A'C)' ---+
+       C ---------------------|/                |---|\
+                                                |   | )o--- F
+       B ---+--|\                               |---|/
+            +--| )o--- B' ----------------------+
+    ```
+    ```
+       4 NAND gates : two used as inverters, one for A'C, one for the OR
+    ```
+
+    The general procedure to state
+    ```
+       1. Expand the function into minterms.
+       2. Plot them on a Gray-coded K-map.
+       3. Group adjacent 1s into the largest possible blocks of 2^n,
+          overlapping and wrapping round the edges as needed.
+       4. Read each group : keep the constant variables, drop the changing ones.
+       5. Sum the terms - that is the minimal SOP.
+       6. Verify against the truth table.
+       7. Draw the circuit : one AND gate per product term, feeding one OR gate,
+          with inverters for the complemented inputs.
+    ```
 
 11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 798 (ET: N/A)]*
 
@@ -5377,8 +5864,186 @@
 
 13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879 (ET: BUET)]*
 
+    Answer: The question is `incomplete` — the two K-maps, which were printed as filled grids, are not present. The method for reading a completed K-map is set out below with worked examples.
+
+    How to read a K-map that is already filled in
+    ```
+       1. Confirm the labelling is in GRAY CODE : 00 , 01 , 11 , 10.
+          If it is not, the adjacency property does not hold and no
+          grouping is valid.
+
+       2. Group the 1s into blocks of 1, 2, 4, 8 or 16 - as LARGE as
+          possible, overlapping freely, and wrapping round every edge.
+
+       3. Read each group : keep the variables that stay CONSTANT across
+          it, and drop those that change. A constant 1 gives the variable
+          itself ; a constant 0 gives its complement.
+
+       4. Sum the group terms to get the minimal SOP.
+    ```
+
+    Example (i) — a 4-variable map
+    ```
+       AB\CD   00   01   11   10
+        00      1    1    0    0
+        01      1    1    0    0
+        11      1    1    1    1
+        10      1    1    1    1
+    ```
+    Groups
+    ```
+       Group 1 : C'   -> the two whole columns CD = 00 and 01 (8 cells)
+                         C = 0 throughout  ->  C'
+
+       Group 2 : A    -> the two whole rows AB = 11 and 10 (8 cells)
+                         A = 1 throughout  ->  A
+
+       F = A + C'
+    ```
+
+    Example (ii) — a map with a wrap-around group
+    ```
+       AB\CD   00   01   11   10
+        00      1    0    0    1
+        01      0    0    0    0
+        11      0    0    0    0
+        10      1    0    0    1
+    ```
+    Group
+    ```
+       The FOUR CORNERS are all adjacent, because the map wraps in both
+       directions. They form one group of four.
+
+       B = 0 and D = 0 throughout ; A and C change.
+
+       F = B'D'
+    ```
+    - The four-corner group is the single most commonly missed pattern in K-map questions.
+
+    Example (iii) — a 3-variable map with don't-cares
+    ```
+       A\BC   00   01   11   10
+        0      1    1    X    0
+        1      0    X    1    1
+    ```
+    ```
+       A don't-care X may be treated as 1 if that ENLARGES a group, or
+       ignored if it does not.
+
+       Taking both X as 1 :
+           Group A'B'  -> m0, m1
+           Group C     -> m1, m3, m5, m7   (columns BC = 01 and 11)
+           Group AB    -> m6, m7
+
+       F = A'B' + C + AB      (a shorter cover than ignoring the X)
+    ```
+
+    Getting the POS form from the same map
+    ```
+       Group the ZEROS instead of the ones, and reverse the sense of each
+       variable : a variable constantly 0 appears as ITSELF, and one
+       constantly 1 appears complemented. Each group then gives a SUM term,
+       and the terms are multiplied together.
+    ```
+
+    Common errors
+    ```
+       Binary labelling (00,01,10,11) instead of Gray code
+       Missing the wrap-around groups, especially the four corners
+       Making a group smaller than it could be
+       Grouping a number of cells that is not a power of two
+       Leaving a 1 uncovered
+       Treating a don't-care as a compulsory 1
+    ```
+
 14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
    F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
+
+    Answer: The function is
+    ```
+       F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD
+         + AB'C'D'  + AB'CD'  + ABCD'  + ABCD
+    ```
+
+    Step 1 — convert each term to its minterm number
+    ```
+       A'B'C'D' = 0000 = m0          AB'C'D' = 1000 = m8
+       A'B'CD'  = 0010 = m2          AB'CD'  = 1010 = m10
+       A'BCD'   = 0110 = m6          ABCD'   = 1110 = m14
+       A'BCD    = 0111 = m7          ABCD    = 1111 = m15
+
+       F(A,B,C,D) = Sigma m(0, 2, 6, 7, 8, 10, 14, 15)
+    ```
+
+    Step 2 — draw the K-map
+    ```
+       AB\CD   00   01   11   10
+        00      1    0    0    1        m0  m1  m3  m2
+        01      0    0    1    1        m4  m5  m7  m6
+        11      0    0    1    1        m12 m13 m15 m14
+        10      1    0    0    1        m8  m9  m11 m10
+    ```
+
+    Step 3 — group the 1s
+    ```
+       Group 1 : B'D'  ->  m0 , m2 , m8 , m10
+
+          AB\CD   00   01   11   10
+           00     [1]   .    .   [1]
+           01      .    .    .    .
+           11      .    .    .    .
+           10     [1]   .    .   [1]
+
+          Rows AB = 00 and 10 , columns CD = 00 and 10.
+          The map wraps in BOTH directions, so these four corner-like
+          cells are adjacent. B = 0 and D = 0 throughout  ->  B'D'
+
+       Group 2 : BC    ->  m6 , m7 , m14 , m15
+
+          AB\CD   00   01   11   10
+           00      .    .    .    .
+           01      .    .   [1]  [1]
+           11      .    .   [1]  [1]
+           10      .    .    .    .
+
+          Rows AB = 01 and 11 , columns CD = 11 and 10.
+          B = 1 and C = 1 throughout  ->  BC
+    ```
+
+    Step 4 — the simplified expression
+    ```
+       F = B'D' + BC
+    ```
+    - Thirty-two literals have become four.
+
+    Step 5 — verification
+    ```
+       Covered by B'D' : m0 , m2 , m8 , m10
+       Covered by BC   : m6 , m7 , m14 , m15
+       Union            : {0, 2, 6, 7, 8, 10, 14, 15}   - exactly the given set
+
+       Check a zero cell :
+          m5 = 0101 : B'D' = 0 (B is 1 and D is 1) , BC = 0 (C is 0)
+                      -> F = 0     correct, m5 is not in the list
+          m3 = 0011 : B'D' = 0 (D is 1) , BC = 0 (B is 0)
+                      -> F = 0     correct
+    ```
+
+    Step 6 — the logic circuit
+    ```
+       B ---|>o--- B' ---|‾‾\
+                         |    )--- B'D' ---+
+       D ---|>o--- D' ---|__/              |---|\
+                                           |   | )--- F = B'D' + BC
+       B ---------------|‾‾\               |---|/
+                        |    )--- BC ------+  (OR)
+       C ---------------|__/
+    ```
+    ```
+       Components : 2 inverters , 2 two-input AND gates , 1 two-input OR gate
+    ```
+
+    - Points worth noting: the `wrap-around` grouping is what makes `B'D'` a four-cell block rather than two separate pairs — missing it would give the longer answer `B'C'D' + B'CD'` instead. The map wraps at the left and right edges and at the top and bottom, so the four corners of a 4-variable map are always mutually adjacent.
 
 15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
 
