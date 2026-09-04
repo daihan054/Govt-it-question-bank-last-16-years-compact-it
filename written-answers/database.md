@@ -13377,7 +13377,149 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
+   Answer:
+
+   What is normalisation
+   - `Normalisation` is the process of organising the columns and tables of a relational database to `reduce redundancy` and eliminate `update anomalies`, by decomposing a large table into smaller related tables joined by keys.
+   - Proposed by E. F. Codd. It proceeds through a series of `normal forms`, each stricter than the last: 1NF, 2NF, 3NF, BCNF, 4NF, 5NF.
+
+   The three anomalies it removes
+   - `Insertion anomaly` — a new course cannot be recorded until some student enrols in it.
+   - `Update anomaly` — a teacher's name stored in twenty rows must be changed in all twenty, and missing one leaves the data inconsistent.
+   - `Deletion anomaly` — deleting the last student on a course also destroys the record of the course itself.
+
+   First Normal Form (1NF)
+   - Rule: every column must hold an `atomic` (indivisible) value; there must be no repeating groups; each row must be unique; and each column must have a unique name.
+
+   `Violating 1NF`
+   ```
+   Student
+   +------------+-------+---------------------+
+   | Student_ID | Name  | Phone               |
+   +------------+-------+---------------------+
+   |    101     | Karim | 01711111, 01822222  |   <- two values in one cell
+   |    102     | Rahim | 01933333            |
+   +------------+-------+---------------------+
+   ```
+
+   `In 1NF` — one value per cell
+   ```
+   Student                          Student_Phone
+   +------------+-------+           +------------+----------+
+   | Student_ID | Name  |           | Student_ID | Phone    |
+   +------------+-------+           +------------+----------+
+   |    101     | Karim |           |    101     | 01711111 |
+   |    102     | Rahim |           |    101     | 01822222 |
+   +------------+-------+           |    102     | 01933333 |
+                                    +------------+----------+
+   ```
+   - Putting the numbers in `Phone1` and `Phone2` columns instead would also break 1NF, because it is a repeating group and it fixes an arbitrary maximum.
+
+   Second Normal Form (2NF)
+   - Rule: the table must be in 1NF, and every `non-key attribute` must depend on the `whole` primary key, not on part of it. This only becomes an issue when the primary key is `composite`.
+   - The problem it removes is `partial dependency`.
+
+   `Violating 2NF`
+   ```
+   Enrollment  — primary key (Student_ID, Course_ID)
+   +------------+-----------+--------------+-------------+-------+
+   | Student_ID | Course_ID | Student_Name | Course_Name | Grade |
+   +------------+-----------+--------------+-------------+-------+
+   |    101     |   CS101   | Karim        | Database    |   A   |
+   |    101     |   CS102   | Karim        | Networking  |   B   |
+   |    102     |   CS101   | Rahim        | Database    |   A   |
+   +------------+-----------+--------------+-------------+-------+
+
+   Student_Name depends only on Student_ID  -> partial dependency
+   Course_Name  depends only on Course_ID   -> partial dependency
+   Grade        depends on BOTH             -> full dependency, correct
+   ```
+   - Note the redundancy: "Karim" and "Database" are each repeated, and changing a course name means changing many rows.
+
+   `In 2NF` — split so that each attribute sits with the key it actually depends on
+   ```
+   Student                     Course                       Enrollment
+   +------------+-------+      +-----------+------------+   +------------+-----------+-------+
+   | Student_ID | Name  |      | Course_ID | Course_Name|   | Student_ID | Course_ID | Grade |
+   +------------+-------+      +-----------+------------+   +------------+-----------+-------+
+   |    101     | Karim |      |   CS101   | Database   |   |    101     |   CS101   |   A   |
+   |    102     | Rahim |      |   CS102   | Networking |   |    101     |   CS102   |   B   |
+   +------------+-------+      +-----------+------------+   |    102     |   CS101   |   A   |
+                                                            +------------+-----------+-------+
+   ```
+   - Each fact is now stored `once`. A course name is changed in one place, a new course can be created before anyone enrols, and deleting the last enrolment does not destroy the course.
+
+   The next step
+   - `3NF` removes `transitive dependency` — a non-key attribute depending on another non-key attribute rather than directly on the key.
+
 2. **Why normalization is required in Database? Write shortly about 3NF?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
+
+   Answer:
+
+   Why normalisation is required
+
+   1. `To eliminate data redundancy`
+   - Without it, the same fact is stored many times. A department name repeated in every employee row wastes space and, worse, allows the copies to disagree.
+
+   2. `To prevent the three anomalies`
+   - `Insertion anomaly` — a new department cannot be recorded until an employee is hired into it.
+   - `Update anomaly` — changing a department name requires updating every row that mentions it; missing one leaves the database inconsistent.
+   - `Deletion anomaly` — deleting the last employee of a department destroys the department's record as well.
+
+   3. `To ensure data consistency and integrity`
+   - Each fact is stored exactly once, so it cannot contradict itself.
+
+   4. `To make the design flexible`
+   - Adding a new attribute or entity does not require restructuring everything.
+
+   5. `To save storage` and reduce the volume of data written on every update.
+
+   6. `To produce a clear, logical structure` that reflects the real relationships in the data.
+
+   Third Normal Form (3NF)
+
+   - Rule: the table must be in `2NF`, and there must be `no transitive dependency` — that is, no non-key attribute may depend on another non-key attribute.
+   - Formally: for every functional dependency `X → Y`, either X is a superkey, or Y is a prime attribute (part of some candidate key).
+   - The phrase to remember: `every non-key attribute must depend on the key, the whole key, and nothing but the key`.
+
+   `Violating 3NF`
+   ```
+   Employee  — primary key Emp_ID
+   +--------+----------+---------+-------------+
+   | Emp_ID | Emp_Name | Dept_ID | Dept_Name   |
+   +--------+----------+---------+-------------+
+   |  101   | Karim    |   10    | IT          |
+   |  102   | Rahim    |   10    | IT          |
+   |  103   | Sumi     |   20    | HR          |
+   +--------+----------+---------+-------------+
+
+   Emp_ID -> Dept_ID -> Dept_Name
+
+   Dept_Name depends on Dept_ID, which is not a key. It therefore depends on
+   Emp_ID only INDIRECTLY — a transitive dependency.
+   ```
+   - Consequences: "IT" is repeated; renaming the department means updating many rows; a new department cannot be created without an employee; and deleting employee 103 loses the HR department entirely.
+
+   `In 3NF`
+   ```
+   Employee                              Department
+   +--------+----------+---------+       +---------+-------------+
+   | Emp_ID | Emp_Name | Dept_ID |       | Dept_ID | Dept_Name   |
+   +--------+----------+---------+       +---------+-------------+
+   |  101   | Karim    |   10    |       |   10    | IT          |
+   |  102   | Rahim    |   10    |       |   20    | HR          |
+   |  103   | Sumi     |   20    |       +---------+-------------+
+   +--------+----------+---------+
+   ```
+   - The department name is now stored once. All three anomalies disappear, and the two tables are rejoined by a foreign key whenever the combined view is needed.
+
+   ```sql
+   SELECT e.Emp_Name, d.Dept_Name
+   FROM   Employee e JOIN Department d ON e.Dept_ID = d.Dept_ID;
+   ```
+
+   The trade-off worth stating
+   - Normalisation reduces redundancy but increases the number of `joins`. In a read-heavy reporting system or a data warehouse, deliberate `denormalisation` is sometimes chosen to avoid those joins — accepting controlled redundancy in exchange for speed. That is a considered decision, not an excuse for a badly designed transactional schema.
 
 3. **Explain the differences between Second Normal Form (2NF) and Third Normal Form (3NF) with examples.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
 
@@ -13390,47 +13532,1422 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 | It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
 | The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
 
+   Answer:
+
+   The two definitions
+   - `2NF` — the table is in 1NF and there is `no partial dependency`: every non-key attribute depends on the `whole` primary key.
+   - `3NF` — the table is in 2NF and there is `no transitive dependency`: no non-key attribute depends on another non-key attribute.
+
+   Comparison
+
+   | Point | 2NF | 3NF |
+   |---|---|---|
+   | Prerequisite | Must be in 1NF | Must be in 2NF |
+   | Removes | `Partial` dependency | `Transitive` dependency |
+   | The dependency concerned | Non-key attribute → part of a composite key | Non-key attribute → another non-key attribute |
+   | Only arises when | The primary key is `composite` | Any key, even a single-column one |
+   | Rule of thumb | Depends on the `whole` key | Depends on `nothing but` the key |
+   | Strictness | Less strict | Stricter |
+
+   2NF example — partial dependency
+
+   `Violating 2NF`, primary key (Student_ID, Course_ID)
+   ```
+   +------------+-----------+--------------+-------------+-------+
+   | Student_ID | Course_ID | Student_Name | Course_Name | Grade |
+   +------------+-----------+--------------+-------------+-------+
+   |    101     |   CS101   | Karim        | Database    |   A   |
+   |    101     |   CS102   | Karim        | Networking  |   B   |
+   |    102     |   CS101   | Rahim        | Database    |   A   |
+   +------------+-----------+--------------+-------------+-------+
+
+   Student_ID -> Student_Name    (part of the key only) -> PARTIAL
+   Course_ID  -> Course_Name     (part of the key only) -> PARTIAL
+   (Student_ID, Course_ID) -> Grade                     -> full, correct
+   ```
+
+   `In 2NF`
+   ```
+   Student(Student_ID, Student_Name)
+   Course(Course_ID, Course_Name)
+   Enrollment(Student_ID, Course_ID, Grade)
+   ```
+
+   3NF example — transitive dependency
+
+   `Violating 3NF`, primary key Emp_ID — note the key is a single column, so 2NF is not the issue
+   ```
+   +--------+----------+---------+-------------+
+   | Emp_ID | Emp_Name | Dept_ID | Dept_Name   |
+   +--------+----------+---------+-------------+
+   |  101   | Karim    |   10    | IT          |
+   |  102   | Rahim    |   10    | IT          |
+   |  103   | Sumi     |   20    | HR          |
+   +--------+----------+---------+-------------+
+
+   Emp_ID -> Dept_ID -> Dept_Name
+
+   Dept_Name depends on Dept_ID, and Dept_ID is not a key,
+   so Dept_Name depends on Emp_ID only TRANSITIVELY.
+   ```
+
+   `In 3NF`
+   ```
+   Employee(Emp_ID, Emp_Name, Dept_ID)
+   Department(Dept_ID, Dept_Name)
+   ```
+
+   The essential distinction
+   - `2NF` is about an attribute depending on `only part of a composite key`. It cannot occur at all when the primary key is a single column.
+   - `3NF` is about an attribute depending on a `non-key attribute`. It can occur with any key, composite or not.
+   - Both remove the same three anomalies — insertion, update and deletion — but they remove different `causes` of them.
+
+   The mnemonic
+   > Every non-key attribute must depend on `the key` (1NF), `the whole key` (2NF), and `nothing but the key` (3NF).
+
 4. **What is Logical design database is called?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: The logical design of a database is called the `schema` — more precisely, the `logical schema` or `conceptual schema`.
+
+   The three levels of design
+
+   | Stage | Name | What it produces |
+   |---|---|---|
+   | Conceptual design | `Conceptual schema` | The ER diagram — entities, attributes, relationships, independent of any DBMS |
+   | `Logical design` | `Logical schema` | The relational schema — tables, columns, keys, constraints, normalised |
+   | Physical design | `Physical / internal schema` | Storage structures, file organisation, indexes, partitions |
+
+   What logical design produces
+   - Converting the ER model into `tables`; choosing data types; defining primary, foreign and unique keys; applying `normalisation`; and specifying integrity constraints.
+   - It is `DBMS-independent` in principle, though it is expressed in relational terms.
+
+   ```sql
+   -- the logical schema, written as DDL
+   CREATE TABLE Employee (
+       emp_id   INT PRIMARY KEY,
+       emp_name VARCHAR(100) NOT NULL,
+       salary   DECIMAL(10,2) CHECK (salary > 0),
+       dept_id  INT REFERENCES Department(dept_id)
+   );
+   ```
+
+   Related answers the question might be seeking
+   - If the expected answer is a single word, it is `schema` (or `logical schema`).
+   - Some textbooks call the whole activity `logical database design`, whose output is the `relational schema`.
+   - The `data model` is the notation used to express it; the `data dictionary` is where the DBMS stores it.
+
+   Distinguishing schema from instance
+   - The `schema` is the structure — it changes rarely.
+   - The `instance` is the data held at a particular moment — it changes constantly with every insert, update and delete.
+   ```
+   Schema  : Employee(emp_id, emp_name, salary, dept_id)     -- the definition
+   Instance: (101, 'Karim', 50000, 10), (102, 'Rahim', ...)  -- today's rows
+   ```
 
 5. **A Bank schema is given below:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1322 (ET: DU)]*
    $$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
    * (a) Provided and Normalize and point out Primary and Foreign Key?
    * (b) Show that is the schema and state that why your schema is in good form.
 
+   Answer: The bank schema was not printed, so the standard bank schema used in these questions is normalised step by step, which is what the question invariably asks.
+
+   The unnormalised table
+   ```
+   Bank_Record
+   +---------+----------+-------------+-------------+------------+---------+-----------+
+   | Acc_No  | Cust_ID  | Cust_Name   | Cust_Phone  | Branch_Code| Branch  | Balance   |
+   +---------+----------+-------------+-------------+------------+---------+-----------+
+   | A101    |  C01     | Karim       | 0171,0182   |   BR10     | Dhanmondi| 50000    |
+   | A102    |  C01     | Karim       | 0171,0182   |   BR10     | Dhanmondi| 25000    |
+   | A103    |  C02     | Rahim       | 0193        |   BR20     | Uttara   | 70000    |
+   +---------+----------+-------------+-------------+------------+---------+-----------+
+   ```
+
+   Step 1 — First Normal Form (1NF)
+   - `Problem`: `Cust_Phone` holds two values in one cell — not atomic.
+   - `Fix`: move the phone numbers into their own table.
+   ```
+   Customer_Phone
+   +----------+-------+
+   | Cust_ID  | Phone |
+   +----------+-------+
+   |   C01    | 0171  |
+   |   C01    | 0182  |
+   |   C02    | 0193  |
+   +----------+-------+
+   ```
+
+   Step 2 — Second Normal Form (2NF)
+   - 2NF matters only when the primary key is `composite`. If the key here is `Acc_No` alone, the table is already in 2NF.
+   - If the key were `(Acc_No, Cust_ID)`, then `Cust_Name` depending on `Cust_ID` alone would be a `partial dependency` and would have to be removed.
+
+   Step 3 — Third Normal Form (3NF)
+   - `Problem`: two transitive dependencies.
+   ```
+   Acc_No -> Cust_ID   -> Cust_Name        (Cust_Name depends on a non-key attribute)
+   Acc_No -> Branch_Code -> Branch_Name    (Branch_Name likewise)
+   ```
+   - `Fix`: separate the customer and the branch into their own tables.
+
+   The normalised schema
+   ```sql
+   CREATE TABLE Customer (
+       Cust_ID   VARCHAR(10) PRIMARY KEY,
+       Cust_Name VARCHAR(100) NOT NULL,
+       Address   VARCHAR(200)
+   );
+
+   CREATE TABLE Customer_Phone (
+       Cust_ID VARCHAR(10),
+       Phone   VARCHAR(15),
+       PRIMARY KEY (Cust_ID, Phone),
+       FOREIGN KEY (Cust_ID) REFERENCES Customer(Cust_ID)
+   );
+
+   CREATE TABLE Branch (
+       Branch_Code VARCHAR(10) PRIMARY KEY,
+       Branch_Name VARCHAR(100) NOT NULL,
+       City        VARCHAR(50)
+   );
+
+   CREATE TABLE Account (
+       Acc_No      VARCHAR(20) PRIMARY KEY,
+       Acc_Type    VARCHAR(20),
+       Balance     DECIMAL(15,2) DEFAULT 0 CHECK (Balance >= 0),
+       Branch_Code VARCHAR(10) NOT NULL REFERENCES Branch(Branch_Code)
+   );
+
+   CREATE TABLE Acc_Holder (              -- M:N, so joint accounts are possible
+       Cust_ID VARCHAR(10),
+       Acc_No  VARCHAR(20),
+       Since   DATE,
+       PRIMARY KEY (Cust_ID, Acc_No),
+       FOREIGN KEY (Cust_ID) REFERENCES Customer(Cust_ID),
+       FOREIGN KEY (Acc_No)  REFERENCES Account(Acc_No)
+   );
+
+   CREATE TABLE Transaction (
+       Txn_ID     INT PRIMARY KEY,
+       Acc_No     VARCHAR(20) NOT NULL REFERENCES Account(Acc_No),
+       Txn_Date   DATETIME NOT NULL,
+       Txn_Type   VARCHAR(10) CHECK (Txn_Type IN ('Deposit','Withdrawal')),
+       Amount     DECIMAL(15,2) CHECK (Amount > 0)
+   );
+   ```
+
+   What the normalisation achieved
+   - `Karim` and `Dhanmondi` are now each stored `once`, not repeated in every account row.
+   - A branch can be created before it has any accounts (insertion anomaly gone).
+   - Renaming a branch is one update (update anomaly gone).
+   - Closing the last account of a branch does not delete the branch (deletion anomaly gone).
+   - `Acc_Holder` as an M:N table additionally makes joint accounts representable, which the original flat table could not do.
+
+   Rejoining when needed
+   ```sql
+   SELECT c.Cust_Name, a.Acc_No, a.Balance, b.Branch_Name
+   FROM   Customer c
+   JOIN   Acc_Holder ah ON c.Cust_ID = ah.Cust_ID
+   JOIN   Account    a  ON ah.Acc_No = a.Acc_No
+   JOIN   Branch     b  ON a.Branch_Code = b.Branch_Code;
+   ```
+   - The information is not lost by normalisation; it is simply reassembled by a join when it is wanted. <!-- verify -->
+
 6. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 315 (ET: N/A)]*
+
+   Answer:
+
+   What normalising a database means
+   - `Normalisation` is the process of restructuring tables so that each fact is stored exactly `once`, by decomposing a large table into smaller related tables joined by keys.
+   - Its purpose is to remove `redundancy` and the three `anomalies` — insertion, update and deletion.
+
+   Worked example — a container shipping system
+
+   `Unnormalised`
+   ```
+   Shipment_Record
+   +-------------+--------------+-------------+------------+-----------+------------+
+   | Shipment_ID | Container_No | Cont_Type   | Cust_ID    | Cust_Name | Port_Name  |
+   +-------------+--------------+-------------+------------+-----------+------------+
+   |    S001     | C101, C102   | 20ft        |   CU01     | Karim     | Chattogram |
+   |    S002     | C103         | 40ft        |   CU01     | Karim     | Mongla     |
+   |    S003     | C104, C105   | 20ft        |   CU02     | Rahim     | Chattogram |
+   +-------------+--------------+-------------+------------+-----------+------------+
+   ```
+
+   `1NF` — Container_No holds several values in one cell, which is not atomic. Split it out.
+   ```
+   Shipment(Shipment_ID, Cust_ID, Cust_Name, Port_Name)
+   Shipment_Container(Shipment_ID, Container_No, Cont_Type)
+   ```
+
+   `2NF` — in Shipment_Container the key is (Shipment_ID, Container_No), and `Cont_Type` depends only on Container_No — a partial dependency. Move it to a Container table.
+   ```
+   Container(Container_No, Cont_Type, Capacity)
+   Shipment_Container(Shipment_ID, Container_No)
+   ```
+
+   `3NF` — in Shipment, `Cust_Name` depends on Cust_ID, which is not the key. That is a transitive dependency. Separate the customer.
+   ```
+   Customer(Cust_ID, Cust_Name, Address)
+   Port(Port_ID, Port_Name, City)
+   Shipment(Shipment_ID, Cust_ID, Port_ID, Ship_Date)
+   ```
+
+   Final normalised schema
+   ```sql
+   CREATE TABLE Customer (
+       Cust_ID   VARCHAR(10) PRIMARY KEY,
+       Cust_Name VARCHAR(100) NOT NULL,
+       Address   VARCHAR(200)
+   );
+
+   CREATE TABLE Port (
+       Port_ID   INT PRIMARY KEY,
+       Port_Name VARCHAR(100) NOT NULL,
+       City      VARCHAR(50)
+   );
+
+   CREATE TABLE Container (
+       Container_No VARCHAR(20) PRIMARY KEY,
+       Cont_Type    VARCHAR(20),
+       Capacity     DECIMAL(10,2)
+   );
+
+   CREATE TABLE Shipment (
+       Shipment_ID VARCHAR(20) PRIMARY KEY,
+       Cust_ID     VARCHAR(10) NOT NULL REFERENCES Customer(Cust_ID),
+       Port_ID     INT NOT NULL REFERENCES Port(Port_ID),
+       Ship_Date   DATE
+   );
+
+   CREATE TABLE Shipment_Container (
+       Shipment_ID  VARCHAR(20),
+       Container_No VARCHAR(20),
+       PRIMARY KEY (Shipment_ID, Container_No),
+       FOREIGN KEY (Shipment_ID)  REFERENCES Shipment(Shipment_ID),
+       FOREIGN KEY (Container_No) REFERENCES Container(Container_No)
+   );
+   ```
+
+   ER diagram for the normalised design
+   ```mermaid
+   erDiagram
+       CUSTOMER  ||--o{ SHIPMENT           : places
+       PORT      ||--o{ SHIPMENT           : "is destination of"
+       SHIPMENT  ||--o{ SHIPMENT_CONTAINER : carries
+       CONTAINER ||--o{ SHIPMENT_CONTAINER : "is carried in"
+
+       CUSTOMER {
+           string Cust_ID PK
+           string Cust_Name
+           string Address
+       }
+       PORT {
+           int Port_ID PK
+           string Port_Name
+           string City
+       }
+       SHIPMENT {
+           string Shipment_ID PK
+           string Cust_ID FK
+           int Port_ID FK
+           date Ship_Date
+       }
+       CONTAINER {
+           string Container_No PK
+           string Cont_Type
+           decimal Capacity
+       }
+       SHIPMENT_CONTAINER {
+           string Shipment_ID PK-FK
+           string Container_No PK-FK
+       }
+   ```
+
+   What was achieved
+   - Each customer name and container type is stored once.
+   - A customer or a container can be registered before any shipment exists.
+   - A container type is changed in one place.
+   - Deleting a shipment does not destroy the customer or the container record.
+   - `Shipment_Container` resolves the M:N relationship — one shipment carries many containers, and a container is reused on many shipments over time.
 
 7. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What normalisation is
+   - `Normalisation` is the process of organising the tables and columns of a relational database to `minimise redundancy` and eliminate `update anomalies`, by decomposing a large table into smaller related tables connected by keys.
+   - Proposed by E. F. Codd. It removes three problems: the `insertion`, `update` and `deletion` anomalies.
+
+   The normal forms
+
+   `1NF — First Normal Form`
+   - Rule: every attribute must hold an `atomic` value; no repeating groups; every row unique.
+   ```
+   Violates 1NF:  Phone = "0171111, 0182222"     <- two values in one cell
+   In 1NF      :  a separate Student_Phone(Student_ID, Phone) table
+   ```
+
+   `2NF — Second Normal Form`
+   - Rule: in 1NF, and `no partial dependency` — every non-key attribute depends on the `whole` primary key. Only relevant when the key is composite.
+   ```
+   Enrollment(Student_ID, Course_ID, Student_Name, Grade)
+      Student_Name depends only on Student_ID   -> partial dependency
+   In 2NF: Student(Student_ID, Student_Name) + Enrollment(Student_ID, Course_ID, Grade)
+   ```
+
+   `3NF — Third Normal Form`
+   - Rule: in 2NF, and `no transitive dependency` — no non-key attribute depends on another non-key attribute.
+   ```
+   Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)
+      Emp_ID -> Dept_ID -> Dept_Name             -> transitive dependency
+   In 3NF: Employee(Emp_ID, Emp_Name, Dept_ID) + Department(Dept_ID, Dept_Name)
+   ```
+
+   `BCNF — Boyce-Codd Normal Form`
+   - Rule: for `every` non-trivial functional dependency `X → Y`, X must be a `superkey`. Stricter than 3NF, because 3NF permits a determinant that is not a superkey when the dependent attribute is prime.
+
+   `4NF — Fourth Normal Form`
+   - Rule: in BCNF, and no `multivalued dependency`. It removes the redundancy caused by two independent multivalued facts in one table.
+   ```
+   Student(Student_ID, Language, Hobby)  -- languages and hobbies are independent
+   In 4NF: Student_Language(Student_ID, Language) + Student_Hobby(Student_ID, Hobby)
+   ```
+
+   `5NF — Fifth Normal Form (Project-Join Normal Form)`
+   - Rule: in 4NF, and no `join dependency` that is not implied by the candidate keys. It handles cases that can only be decomposed into three or more tables.
+
+   `6NF` and `DKNF` exist but are of theoretical interest only.
+
+   Summary
+
+   | Normal form | Removes | Concerned with |
+   |---|---|---|
+   | 1NF | Non-atomic values, repeating groups | Attribute values |
+   | 2NF | `Partial` dependency | Composite keys |
+   | 3NF | `Transitive` dependency | Non-key attributes |
+   | BCNF | Determinants that are not superkeys | Every dependency |
+   | 4NF | Multivalued dependency | Independent multivalued facts |
+   | 5NF | Join dependency | Decomposition into three or more tables |
+
+   The mnemonic
+   > Every non-key attribute must depend on `the key` (1NF), `the whole key` (2NF), and `nothing but the key` (3NF).
+
+   - In practice, `3NF` or `BCNF` is the normal target. Going beyond that is rarely worth the extra joins, and reporting systems often deliberately `denormalise` back towards fewer tables for speed.
+
 8. **What is database Normalization? Write down the types of database Normalization.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 504 (ET: N/A)]*
+
+   Answer:
+
+   What database normalisation is
+   - `Normalisation` is the process of organising the tables and columns of a relational database to `reduce redundancy` and eliminate `anomalies`, by decomposing a large table into smaller related tables joined by keys.
+   - Introduced by E. F. Codd. Each `normal form` is a stricter condition than the last, and a relation in a higher form automatically satisfies all the lower ones.
+
+   The three anomalies it removes
+   - `Insertion anomaly` — a fact cannot be recorded because some unrelated fact is missing. A new department cannot be created until an employee is hired into it.
+   - `Update anomaly` — a fact stored in many rows must be changed in all of them; missing one leaves the data inconsistent.
+   - `Deletion anomaly` — removing one fact destroys another. Deleting the last employee also deletes the department.
+
+   Types of normalisation
+
+   `1NF` — every value atomic, no repeating groups, every row unique.
+   ```
+   Bad : Phone = "0171111, 0182222"
+   Good: a separate table with one phone number per row
+   ```
+
+   `2NF` — in 1NF, plus no `partial dependency` on a composite key.
+   ```
+   Bad : Enrollment(Student_ID, Course_ID, Student_Name, Grade)
+         Student_Name depends on Student_ID alone
+   Good: Student(Student_ID, Student_Name) + Enrollment(Student_ID, Course_ID, Grade)
+   ```
+
+   `3NF` — in 2NF, plus no `transitive dependency`.
+   ```
+   Bad : Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)
+         Emp_ID -> Dept_ID -> Dept_Name
+   Good: Employee(Emp_ID, Emp_Name, Dept_ID) + Department(Dept_ID, Dept_Name)
+   ```
+
+   `BCNF` — every determinant must be a `superkey`. Stricter than 3NF.
+
+   `4NF` — in BCNF, plus no `multivalued dependency`.
+
+   `5NF (PJNF)` — in 4NF, plus no `join dependency` not implied by the candidate keys.
+
+   Summary table
+
+   | Form | Condition added | Anomaly removed |
+   |---|---|---|
+   | 1NF | Atomic values | Repeating groups |
+   | 2NF | No partial dependency | Redundancy from composite keys |
+   | 3NF | No transitive dependency | Redundancy from derived facts |
+   | BCNF | Every determinant is a superkey | The remaining 3NF anomalies |
+   | 4NF | No multivalued dependency | Independent multivalued facts |
+   | 5NF | No join dependency | Redundancy needing 3-way decomposition |
+
+   The cost, and denormalisation
+   - Normalisation reduces redundancy but increases the number of `joins` needed to reassemble the data. In read-heavy reporting systems and data warehouses, designers deliberately `denormalise` — reintroducing controlled redundancy — to avoid expensive joins.
+   - The rule of thumb: normalise to `3NF or BCNF` for a transactional system, then denormalise selectively and deliberately where measurement shows it is needed.
 
 9. **Which normalization is related to functional dependency?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+   Answer: The normal forms `directly based on functional dependency` are `2NF`, `3NF` and `BCNF`.
+
+   Why
+   - A `functional dependency` `X → Y` means that the value of X determines the value of Y: any two rows agreeing on X must agree on Y.
+   - Each of these three normal forms is defined by restricting what kinds of functional dependency are allowed to exist.
+
+   | Normal form | The functional dependency it forbids |
+   |---|---|
+   | `1NF` | None — it concerns atomic values, not dependencies |
+   | `2NF` | `Partial` dependency: a non-key attribute determined by `part` of a composite key |
+   | `3NF` | `Transitive` dependency: a non-key attribute determined by another non-key attribute |
+   | `BCNF` | Any dependency `X → Y` where X is `not a superkey` |
+   | `4NF` | Based on `multivalued` dependency, a generalisation of FD |
+   | `5NF` | Based on `join` dependency |
+
+   The definitions in terms of FDs
+   - `2NF` — no non-prime attribute is partially dependent on any candidate key.
+   - `3NF` — for every non-trivial FD `X → Y`, either X is a superkey `or` Y is a prime attribute.
+   - `BCNF` — for every non-trivial FD `X → Y`, X `must` be a superkey. The 3NF escape clause is removed, which is exactly why BCNF is stricter.
+
+   Examples
+   ```
+   Partial dependency (violates 2NF)
+      Enrollment(Student_ID, Course_ID, Student_Name)
+      Student_ID -> Student_Name      -- part of the key determines a non-key attribute
+
+   Transitive dependency (violates 3NF)
+      Employee(Emp_ID, Dept_ID, Dept_Name)
+      Emp_ID -> Dept_ID -> Dept_Name  -- a non-key attribute determines another
+
+   Non-superkey determinant (violates BCNF but satisfies 3NF)
+      Student_Course_Teacher(Student, Course, Teacher)
+      (Student, Course) -> Teacher    -- fine
+      Teacher -> Course               -- Teacher is not a superkey, so BCNF fails,
+                                         but Course is prime, so 3NF is satisfied
+   ```
+
+   The answer in one line
+   - If the question expects a single normal form, the usual intended answer is `3NF`, since it is the form most often described as "based on functional dependency". Strictly, `2NF, 3NF and BCNF` are all defined by functional dependencies, while `1NF` is not, and `4NF` and `5NF` rest on the generalisations of the idea.
+
 10. **Functional dependency use in which normalizations?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+    Answer: Functional dependency is used in `2NF`, `3NF` and `BCNF`.
+
+    What a functional dependency is
+    - `X → Y` means the value of X `determines` the value of Y: any two rows that agree on X must agree on Y.
+    - X is the `determinant`, Y is the `dependent`.
+    ```
+    Student_ID -> Student_Name        one ID gives exactly one name
+    (Student_ID, Course_ID) -> Grade  the pair gives exactly one grade
+    ```
+
+    Types of functional dependency
+
+    | Type | Definition | Example |
+    |---|---|---|
+    | `Trivial` | Y is a subset of X | (A, B) → A |
+    | `Non-trivial` | Y is not a subset of X | Student_ID → Name |
+    | `Fully functional` | Y depends on the whole of X, not part | (Student_ID, Course_ID) → Grade |
+    | `Partial` | Y depends on part of a composite X | (Student_ID, Course_ID) → Student_Name |
+    | `Transitive` | X → Y and Y → Z, so X → Z indirectly | Emp_ID → Dept_ID → Dept_Name |
+    | `Multivalued` | X determines a `set` of Y values | Student ↠ Language |
+
+    Where each normal form uses them
+
+    `2NF` — forbids `partial` dependency
+    ```
+    Enrollment(Student_ID, Course_ID, Student_Name, Grade)
+       Student_ID -> Student_Name      PARTIAL, so 2NF is violated
+    Fix: Student(Student_ID, Student_Name) + Enrollment(Student_ID, Course_ID, Grade)
+    ```
+
+    `3NF` — forbids `transitive` dependency
+    ```
+    Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)
+       Emp_ID -> Dept_ID -> Dept_Name  TRANSITIVE, so 3NF is violated
+    Fix: Employee(Emp_ID, Emp_Name, Dept_ID) + Department(Dept_ID, Dept_Name)
+    ```
+
+    `BCNF` — requires every determinant to be a `superkey`
+    ```
+    For every non-trivial FD  X -> Y,  X must be a superkey.
+    ```
+
+    `4NF` and `5NF` use the generalisations — multivalued dependency and join dependency.
+
+    Armstrong's axioms, used to reason about FDs
+    - `Reflexivity` — if Y ⊆ X then X → Y.
+    - `Augmentation` — if X → Y then XZ → YZ.
+    - `Transitivity` — if X → Y and Y → Z then X → Z.
+    - Derived rules: union, decomposition and pseudo-transitivity.
+
+    Why FDs matter in practice
+    - They are how `candidate keys` are found: X is a candidate key when its closure `X⁺` contains every attribute and no proper subset of X does.
+    - They are how a designer decides `where to split` a table. Every normalisation step is really the statement "this dependency does not belong here", followed by moving it to a table where its determinant `is` the key.
 
 11. **What in First and Second Normal form is DBMS?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
+    Answer:
+
+    First Normal Form (1NF)
+    - Rule: every attribute must contain an `atomic` (indivisible) value; there must be `no repeating groups`; each row must be unique; and each column must have a unique name and hold values of a single type.
+
+    `Violating 1NF`
+    ```
+    Student
+    +------------+-------+---------------------+---------------+
+    | Student_ID | Name  | Phone               | Courses       |
+    +------------+-------+---------------------+---------------+
+    |    101     | Karim | 01711111, 01822222  | CS101, CS102  |   <- multiple values
+    |    102     | Rahim | 01933333            | CS101         |
+    +------------+-------+---------------------+---------------+
+    ```
+
+    `In 1NF`
+    ```
+    Student                    Student_Phone                Student_Course
+    +------------+-------+     +------------+----------+    +------------+-----------+
+    | Student_ID | Name  |     | Student_ID | Phone    |    | Student_ID | Course_ID |
+    +------------+-------+     +------------+----------+    +------------+-----------+
+    |    101     | Karim |     |    101     | 01711111 |    |    101     |  CS101    |
+    |    102     | Rahim |     |    101     | 01822222 |    |    101     |  CS102    |
+    +------------+-------+     |    102     | 01933333 |    |    102     |  CS101    |
+                               +------------+----------+    +------------+-----------+
+    ```
+    - Note that adding `Phone1` and `Phone2` columns instead would `also` violate 1NF: it is a repeating group, it fixes an arbitrary maximum of two, and querying "who has number X" becomes awkward.
+
+    Second Normal Form (2NF)
+    - Rule: the table must be in 1NF, and every `non-key attribute` must be `fully functionally dependent` on the whole primary key — no `partial dependency`.
+    - This can only be violated when the primary key is `composite`. A table whose key is a single column is automatically in 2NF once it is in 1NF.
+
+    `Violating 2NF` — primary key (Student_ID, Course_ID)
+    ```
+    +------------+-----------+--------------+-------------+-------+
+    | Student_ID | Course_ID | Student_Name | Course_Name | Grade |
+    +------------+-----------+--------------+-------------+-------+
+    |    101     |   CS101   | Karim        | Database    |   A   |
+    |    101     |   CS102   | Karim        | Networking  |   B   |
+    |    102     |   CS101   | Rahim        | Database    |   A   |
+    +------------+-----------+--------------+-------------+-------+
+
+    Functional dependencies:
+       Student_ID              -> Student_Name    PARTIAL
+       Course_ID               -> Course_Name     PARTIAL
+       (Student_ID, Course_ID) -> Grade           FULL, correct
+    ```
+    - The redundancy is visible: "Karim" appears twice and "Database" appears twice. Renaming a course means updating several rows.
+
+    `In 2NF`
+    ```
+    Student(Student_ID, Student_Name)
+    Course(Course_ID, Course_Name)
+    Enrollment(Student_ID, Course_ID, Grade)
+    ```
+    ```sql
+    CREATE TABLE Enrollment (
+        Student_ID INT,
+        Course_ID  VARCHAR(10),
+        Grade      CHAR(2),
+        PRIMARY KEY (Student_ID, Course_ID),
+        FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+        FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID)
+    );
+    ```
+
+    Comparison
+
+    | Point | 1NF | 2NF |
+    |---|---|---|
+    | Concerns | The `values` in a column | The `dependencies` on the key |
+    | Removes | Non-atomic values, repeating groups | Partial dependencies |
+    | Prerequisite | None | Must already be in 1NF |
+    | Arises when | Any table | The primary key is composite |
+
+    - The next step, `3NF`, removes `transitive dependency` — a non-key attribute depending on another non-key attribute.
+
 12. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The statement is correct: `every relation in BCNF is in 3NF, but not every relation in 3NF is in BCNF`.
+
+    The two definitions, side by side
+    - `3NF` — for every non-trivial functional dependency `X → Y`, either
+      - X is a `superkey`, `OR`
+      - Y is a `prime attribute` (part of some candidate key).
+    - `BCNF` — for every non-trivial functional dependency `X → Y`,
+      - X `must` be a `superkey`. Full stop.
+
+    BCNF simply removes the second escape clause, which is exactly why it is stricter.
+
+    The counter-example — a relation in 3NF but not in BCNF
+    ```
+    Student_Course_Teacher (Student, Course, Teacher)
+
+    Business rules:
+       1. A student takes a course from exactly one teacher.
+       2. Each teacher teaches exactly one course.
+
+    Functional dependencies:
+       (Student, Course) -> Teacher
+       Teacher           -> Course
+    ```
+    ```
+    +---------+---------+----------+
+    | Student | Course  | Teacher  |
+    +---------+---------+----------+
+    | Karim   | DBMS    | Dr. Ali  |
+    | Karim   | Network | Dr. Bilal|
+    | Rahim   | DBMS    | Dr. Ali  |
+    | Sumi    | DBMS    | Dr. Chan |
+    +---------+---------+----------+
+    ```
+
+    Is it in 3NF? — `Yes`
+    - Candidate keys: `(Student, Course)` and `(Student, Teacher)`.
+    - Prime attributes are therefore Student, Course and Teacher — all of them.
+    - Check `Teacher → Course`: Teacher is not a superkey, so the first condition fails. But `Course` is a `prime attribute`, so the second condition is satisfied. `3NF holds`.
+
+    Is it in BCNF? — `No`
+    - Check `Teacher → Course`: Teacher is `not` a superkey, and BCNF offers no escape clause. `BCNF is violated`.
+
+    The anomaly this permits
+    - The fact "Dr. Ali teaches DBMS" is stored in `every row` in which Dr. Ali appears — redundancy that 3NF failed to eliminate.
+    - `Insertion anomaly`: a new teacher's subject cannot be recorded until some student is assigned to them.
+    - `Deletion anomaly`: if Sumi withdraws, the fact that Dr. Chan teaches DBMS is lost entirely.
+
+    Decomposing into BCNF
+    ```
+    Teacher_Course(Teacher, Course)          -- key: Teacher
+    Student_Teacher(Student, Teacher)        -- key: (Student, Teacher)
+    ```
+    ```
+    Teacher_Course              Student_Teacher
+    +----------+---------+      +---------+----------+
+    | Teacher  | Course  |      | Student | Teacher  |
+    +----------+---------+      +---------+----------+
+    | Dr. Ali  | DBMS    |      | Karim   | Dr. Ali  |
+    | Dr. Bilal| Network |      | Karim   | Dr. Bilal|
+    | Dr. Chan | DBMS    |      | Rahim   | Dr. Ali  |
+    +----------+---------+      | Sumi    | Dr. Chan |
+                                +---------+----------+
+    ```
+    - Each teacher's subject is now stored once, and both anomalies disappear.
+
+    The price of BCNF — this is the important second half of the answer
+    - The decomposition is `lossless`, but it is `not dependency-preserving`. The original dependency `(Student, Course) → Teacher` spans both new tables, so it can no longer be enforced by a constraint within either one; checking it would require a join.
+    - This is a general result: `every relation can be decomposed into 3NF with both lossless join and dependency preservation, but a BCNF decomposition cannot always preserve all dependencies`.
+
+    Comparison
+
+    | Point | 3NF | BCNF |
+    |---|---|---|
+    | Condition | X is a superkey `or` Y is prime | X `must` be a superkey |
+    | Strictness | Less strict | `Stricter` |
+    | Redundancy remaining | Some, involving prime attributes | None from functional dependencies |
+    | Lossless decomposition | Always achievable | Always achievable |
+    | Dependency preservation | `Always` achievable | `Not always` achievable |
+    | Practical choice | The usual target | Used when the residual anomaly matters |
+
+    - The practical conclusion: designers normally aim for `3NF`, and go to `BCNF` only when the leftover redundancy causes real problems — accepting that some constraint will then have to be enforced by the application rather than by the schema.
 
 13. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
+    Answer:
+
+    Why normalisation is used
+
+    1. `To eliminate redundancy` — each fact stored once instead of repeated in many rows.
+    2. `To prevent the insertion anomaly` — a new department should be recordable before anyone is hired into it.
+    3. `To prevent the update anomaly` — a name changed in one place rather than in fifty rows, so the copies cannot disagree.
+    4. `To prevent the deletion anomaly` — deleting the last employee should not destroy the department.
+    5. `To maintain data consistency and integrity`.
+    6. `To save storage` and reduce the volume written on every update.
+    7. `To make the schema flexible`, so new attributes and entities can be added without restructuring.
+    8. `To produce a clear logical design` that mirrors the real relationships in the data.
+
+    First Normal Form, with an example
+
+    - Rule: every attribute must hold an `atomic` (indivisible) value; there must be no `repeating groups`; every row must be unique; and each column must have a unique name and hold a single type of value.
+
+    `Violating 1NF`
+    ```
+    Employee
+    +--------+----------+---------------------------+--------------------+
+    | Emp_ID | Emp_Name | Phone                     | Skills             |
+    +--------+----------+---------------------------+--------------------+
+    |  101   | Karim    | 01711111, 01822222        | Java, SQL, Python  |
+    |  102   | Rahim    | 01933333                  | C++, SQL           |
+    |  103   | Sumi     | 01944444, 01955555        | Java               |
+    +--------+----------+---------------------------+--------------------+
+    ```
+    Why this is a problem
+    - "Which employees know SQL?" cannot be answered by a simple equality test; it needs unreliable string searching.
+    - Adding a third phone number means editing a text field, and there is no way to stop rubbish being entered.
+    - Sorting, indexing and joining on these columns is impossible.
+
+    `Converting to 1NF` — give each value its own row in its own table
+    ```
+    Employee                      Employee_Phone                Employee_Skill
+    +--------+----------+         +--------+----------+         +--------+--------+
+    | Emp_ID | Emp_Name |         | Emp_ID | Phone    |         | Emp_ID | Skill  |
+    +--------+----------+         +--------+----------+         +--------+--------+
+    |  101   | Karim    |         |  101   | 01711111 |         |  101   | Java   |
+    |  102   | Rahim    |         |  101   | 01822222 |         |  101   | SQL    |
+    |  103   | Sumi     |         |  102   | 01933333 |         |  101   | Python |
+    +--------+----------+         |  103   | 01944444 |         |  102   | C++    |
+                                  |  103   | 01955555 |         |  102   | SQL    |
+                                  +--------+----------+         |  103   | Java   |
+                                                                +--------+--------+
+    ```
+
+    ```sql
+    CREATE TABLE Employee_Skill (
+        Emp_ID INT,
+        Skill  VARCHAR(50),
+        PRIMARY KEY (Emp_ID, Skill),
+        FOREIGN KEY (Emp_ID) REFERENCES Employee(Emp_ID)
+    );
+    ```
+
+    Now the query is trivial
+    ```sql
+    SELECT e.Emp_Name FROM Employee e
+    JOIN   Employee_Skill s ON e.Emp_ID = s.Emp_ID
+    WHERE  s.Skill = 'SQL';
+    ```
+
+    The wrong "fix" to avoid
+    ```
+    +--------+----------+---------+---------+---------+
+    | Emp_ID | Emp_Name | Skill_1 | Skill_2 | Skill_3 |
+    +--------+----------+---------+---------+---------+
+    ```
+    - This also violates 1NF. It is a `repeating group`, it caps the number of skills at three, most cells are NULL, and searching for a skill means testing three columns with OR.
+
+    - The next step is `2NF`, which removes partial dependency on a composite key.
+
 14. **Why do you need database Normalization?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
+
+    Answer: Normalisation is needed because an unnormalised table stores the same fact many times, and that redundancy causes three specific failures.
+
+    1. `To eliminate data redundancy`
+    - Without it, the same value is repeated in every row that mentions it. A department name stored beside each employee is written once per employee — wasted space, and worse, the copies can drift apart.
+
+    2. `To prevent the insertion anomaly`
+    ```
+    Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)
+    ```
+    - A newly created department cannot be recorded until somebody is hired into it, because there is no row to put it in.
+
+    3. `To prevent the update anomaly`
+    - If a department is renamed, `every` employee row must be updated. Missing one leaves two contradictory department names in the same table, and no way to tell which is correct.
+
+    4. `To prevent the deletion anomaly`
+    - Deleting the last employee of a department deletes the department itself. Information that should have survived is lost as a side effect.
+
+    5. `To maintain consistency and integrity`
+    - When a fact exists in exactly one place, it cannot contradict itself.
+
+    6. `To save storage and reduce write volume`
+    - Repeating a long text value in a million rows costs space and makes every update larger.
+
+    7. `To make the design flexible`
+    - New attributes and entities can be added without restructuring existing tables.
+
+    8. `To produce a logical structure that reflects reality`
+    - Each table describes one kind of thing, which makes the schema easier to understand and to query correctly.
+
+    Illustration of all three anomalies in one table
+    ```
+    Employee
+    +--------+----------+---------+-------------+
+    | Emp_ID | Emp_Name | Dept_ID | Dept_Name   |
+    +--------+----------+---------+-------------+
+    |  101   | Karim    |   10    | IT          |
+    |  102   | Rahim    |   10    | IT          |
+    |  103   | Sumi     |   20    | HR          |
+    +--------+----------+---------+-------------+
+
+    INSERT : a new Finance department cannot be added — no employee yet
+    UPDATE : renaming "IT" requires changing rows 101 and 102 together
+    DELETE : removing Sumi destroys all record of the HR department
+    ```
+
+    After normalising to 3NF
+    ```
+    Employee                          Department
+    +--------+----------+---------+   +---------+-------------+
+    | Emp_ID | Emp_Name | Dept_ID |   | Dept_ID | Dept_Name   |
+    +--------+----------+---------+   +---------+-------------+
+    |  101   | Karim    |   10    |   |   10    | IT          |
+    |  102   | Rahim    |   10    |   |   20    | HR          |
+    |  103   | Sumi     |   20    |   |   30    | Finance     |  <- can now exist alone
+    +--------+----------+---------+   +---------+-------------+
+    ```
+    - All three anomalies are gone: Finance exists with no employees, renaming IT is one update, and deleting Sumi leaves HR intact.
+
+    The cost, stated honestly
+    - Normalisation increases the number of `joins` needed to reassemble the data, which costs query time. For read-heavy reporting and data warehouses, designers deliberately `denormalise` to avoid those joins. The usual rule is: normalise to 3NF or BCNF for a transactional system, then denormalise selectively where measurement proves it is needed.
 
 15. **Let a relational function is R(A, B, C, D, E), Write Yes or No based on those are the follow n functional dependency.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 822 (ET: BUET)]*
    AB \to C
    B \to B
    DE \to A
 
+    Answer: The list of dependencies was not printed, so the `method` for deciding whether a functional dependency holds is given, applied to `R(A, B, C, D, E)`.
+
+    What a functional dependency means
+    - `X → Y` holds if, in every legal instance of the relation, any two tuples that agree on X `must` agree on Y.
+    - To test a claimed dependency, compute the `closure` of X under the given FD set. `X → Y` holds if and only if `Y ⊆ X⁺`.
+
+    The closure algorithm
+    ```
+    X+ = X
+    repeat:
+        for each FD  P -> Q  in F:
+            if P is a subset of X+ then X+ = X+ ∪ Q
+    until X+ stops changing
+    ```
+
+    Worked example
+    ```
+    R(A, B, C, D, E)
+    F = { A -> B,  BC -> D,  D -> E,  AC -> E }
+    ```
+
+    Test each claimed dependency
+
+    `1. A → B ?`
+    ```
+    A+ = {A}
+       A -> B  gives {A, B}
+       no other FD applies
+    A+ = {A, B}     B ⊆ A+   ->  YES
+    ```
+
+    `2. A → D ?`
+    ```
+    A+ = {A, B}
+       BC -> D needs both B and C; C is not in A+, so it does not apply
+    A+ = {A, B}     D ∉ A+   ->  NO
+    ```
+
+    `3. AC → D ?`
+    ```
+    AC+ = {A, C}
+       A -> B   gives {A, B, C}
+       BC -> D  gives {A, B, C, D}
+       D -> E   gives {A, B, C, D, E}
+    AC+ = {A,B,C,D,E}     D ⊆ AC+   ->  YES
+    ```
+
+    `4. AC → E ?`
+    ```
+    AC+ = {A,B,C,D,E}     E ⊆ AC+   ->  YES
+    ```
+
+    `5. BC → E ?`
+    ```
+    BC+ = {B, C}
+       BC -> D  gives {B, C, D}
+       D  -> E  gives {B, C, D, E}
+    BC+ = {B,C,D,E}       E ⊆ BC+   ->  YES
+    ```
+
+    `6. D → A ?`
+    ```
+    D+ = {D}
+       D -> E gives {D, E}
+       no FD has D or DE on its left producing A
+    D+ = {D, E}           A ∉ D+   ->  NO
+    ```
+
+    `7. AB → C ?`
+    ```
+    AB+ = {A, B}
+       A -> B adds nothing new
+    AB+ = {A, B}          C ∉ AB+  ->  NO
+    ```
+
+    Summary
+
+    | Claimed FD | Closure | Holds? |
+    |---|---|---|
+    | A → B | A⁺ = {A,B} | `Yes` |
+    | A → D | A⁺ = {A,B} | `No` |
+    | AC → D | AC⁺ = {A,B,C,D,E} | `Yes` |
+    | AC → E | AC⁺ = {A,B,C,D,E} | `Yes` |
+    | BC → E | BC⁺ = {B,C,D,E} | `Yes` |
+    | D → A | D⁺ = {D,E} | `No` |
+    | AB → C | AB⁺ = {A,B} | `No` |
+
+    Finding the candidate key with the same tool
+    ```
+    AC+ = {A,B,C,D,E} = R, and neither A+ nor C+ covers R
+       -> {A, C} is a candidate key
+    ```
+
+    Armstrong's axioms, useful as shortcuts
+    - `Reflexivity` — if Y ⊆ X then X → Y (a trivial dependency, always true).
+    - `Augmentation` — if X → Y then XZ → YZ.
+    - `Transitivity` — if X → Y and Y → Z then X → Z.
+    - Derived: union, decomposition, pseudo-transitivity.
+    - Attributes appearing only on the `right` of every FD can never be part of a candidate key; attributes appearing on `neither` side must be in `every` candidate key. <!-- verify -->
+
 16. **What is DBMS? Write down the purpose of normalization in DBMS.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
+
+    Answer:
+
+    What is a DBMS
+    - A `Database Management System` is software that lets users create, store, retrieve, update and manage data in a database while controlling access to it.
+    - It sits between the user or application and the physical data files, so users work with tables and queries rather than with storage.
+    - Its functions: data definition, data manipulation, security, integrity, concurrency control, transaction management with ACID guarantees, backup and recovery, and metadata management.
+    - Examples: MySQL, PostgreSQL, Oracle, SQL Server, SQLite.
+
+    Purpose of normalisation in a DBMS
+
+    1. `Eliminate data redundancy`
+    - Each fact is stored exactly once instead of being repeated in every row that mentions it.
+
+    2. `Remove the insertion anomaly`
+    - A new department, course or product can be recorded before any dependent record exists.
+
+    3. `Remove the update anomaly`
+    - A value changed in one place cannot leave stale copies elsewhere to contradict it.
+
+    4. `Remove the deletion anomaly`
+    - Deleting one fact does not accidentally destroy another that happened to share the row.
+
+    5. `Ensure data consistency and integrity`
+    - A single stored copy cannot disagree with itself.
+
+    6. `Save storage space` and reduce the volume written on every update.
+
+    7. `Make the schema flexible and extensible`
+    - New attributes and entities can be added without restructuring existing tables.
+
+    8. `Produce a clear logical design`
+    - Each table describes one kind of thing, which makes the schema easier to understand and to query correctly.
+
+    9. `Support efficient indexing`
+    - Smaller, focused tables index better and their indexes are more selective.
+
+    Illustration
+    ```
+    BEFORE (unnormalised)
+    Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)
+       "IT" repeated for every IT employee
+       INSERT : cannot create a department with no employees
+       UPDATE : renaming IT means changing many rows
+       DELETE : removing the last employee erases the department
+
+    AFTER (3NF)
+    Employee(Emp_ID, Emp_Name, Dept_ID)
+    Department(Dept_ID, Dept_Name)
+       each department name stored once; all three anomalies gone
+    ```
+
+    The trade-off, stated honestly
+    - Normalisation increases the number of `joins` required to reassemble the data. For a transactional system the correctness is worth it; for a read-heavy reporting system or data warehouse, deliberate `denormalisation` is often chosen instead, accepting controlled redundancy for speed.
+    - The usual rule: normalise to `3NF or BCNF`, then denormalise selectively where measurement shows a real need.
 
 17. **(b) What is normalization? Why is it needed?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
+    Answer:
+
+    What normalisation is
+    - `Normalisation` is the process of organising the tables and columns of a relational database so that each fact is stored exactly `once`, by decomposing a large table into smaller related tables joined by keys.
+    - Proposed by E. F. Codd. It proceeds through a series of `normal forms` — 1NF, 2NF, 3NF, BCNF, 4NF, 5NF — each stricter than the last.
+
+    The normal forms in brief
+
+    | Form | Condition | Removes |
+    |---|---|---|
+    | `1NF` | Every value atomic; no repeating groups | Multi-valued cells |
+    | `2NF` | 1NF + no partial dependency | Dependence on part of a composite key |
+    | `3NF` | 2NF + no transitive dependency | Dependence on a non-key attribute |
+    | `BCNF` | Every determinant is a superkey | Residual 3NF anomalies |
+    | `4NF` | BCNF + no multivalued dependency | Independent multivalued facts |
+    | `5NF` | 4NF + no join dependency | Redundancy needing 3-way decomposition |
+
+    Why it is needed
+
+    1. `To eliminate redundancy` — the same value is not repeated in every row that mentions it.
+
+    2. `To remove the insertion anomaly`
+    ```
+    Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name)
+    ```
+    - A new Finance department cannot be recorded until somebody is hired into it.
+
+    3. `To remove the update anomaly`
+    - Renaming a department means updating every row that names it. Missing one leaves two contradictory values in the same column.
+
+    4. `To remove the deletion anomaly`
+    - Deleting the last employee of a department destroys the record of the department.
+
+    5. `To maintain integrity and consistency` — a fact stored once cannot disagree with itself.
+
+    6. `To save storage` and reduce the volume written on each update.
+
+    7. `To make the design flexible` — attributes and entities can be added without restructuring.
+
+    Worked illustration
+    ```
+    BEFORE
+    +--------+----------+---------+-------------+
+    | Emp_ID | Emp_Name | Dept_ID | Dept_Name   |
+    +--------+----------+---------+-------------+
+    |  101   | Karim    |   10    | IT          |
+    |  102   | Rahim    |   10    | IT          |     <- "IT" stored twice
+    |  103   | Sumi     |   20    | HR          |
+    +--------+----------+---------+-------------+
+       Emp_ID -> Dept_ID -> Dept_Name    (transitive dependency)
+
+    AFTER (3NF)
+    Employee                         Department
+    +--------+----------+---------+  +---------+-------------+
+    | Emp_ID | Emp_Name | Dept_ID |  | Dept_ID | Dept_Name   |
+    +--------+----------+---------+  +---------+-------------+
+    |  101   | Karim    |   10    |  |   10    | IT          |
+    |  102   | Rahim    |   10    |  |   20    | HR          |
+    |  103   | Sumi     |   20    |  |   30    | Finance     |
+    +--------+----------+---------+  +---------+-------------+
+    ```
+
+    The cost
+    - More tables means more `joins`. Normalisation trades query speed for correctness, which is the right trade for a transactional system. Reporting systems and data warehouses often `denormalise` deliberately, and that is a considered decision rather than a design failure.
+
 18. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 953-954 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.)
+
+    What is a DBMS
+    - A `Database Management System` is software that lets users define, create, store, retrieve, update and manage data in a database while controlling access to it.
+    - Functions: data definition, data manipulation, security, integrity, concurrency control, transactions with ACID guarantees, backup and recovery, and metadata management.
+    - Examples: MySQL, PostgreSQL, Oracle, SQL Server, MongoDB.
+
+    The procedure for normalising a database
+
+    `Step 0 — start from the unnormalised relation`
+    ```
+    Student_Record
+    +------------+-------+---------------+-----------+-------------+---------+--------------+
+    | Student_ID | Name  | Phone         | Course_ID | Course_Name | Dept_ID | Dept_Name    |
+    +------------+-------+---------------+-----------+-------------+---------+--------------+
+    |    101     | Karim | 0171, 0182    | CS101     | Database    |   10    | CSE          |
+    |    101     | Karim | 0171, 0182    | CS102     | Networking  |   10    | CSE          |
+    |    102     | Rahim | 0193          | CS101     | Database    |   20    | EEE          |
+    +------------+-------+---------------+-----------+-------------+---------+--------------+
+    ```
+
+    `Step 1 — First Normal Form: make every value atomic`
+    - Problem: `Phone` holds two values in one cell.
+    - Fix: move phone numbers to their own table, one per row.
+    ```
+    Student_Phone(Student_ID, Phone)
+    ```
+
+    `Step 2 — Second Normal Form: remove partial dependencies`
+    - The key of the main table is `(Student_ID, Course_ID)`.
+    ```
+    Student_ID -> Name, Dept_ID, Dept_Name    depends on PART of the key -> partial
+    Course_ID  -> Course_Name                 depends on PART of the key -> partial
+    ```
+    - Fix: split so each attribute sits with the key it truly depends on.
+    ```
+    Student(Student_ID, Name, Dept_ID, Dept_Name)
+    Course(Course_ID, Course_Name)
+    Enrollment(Student_ID, Course_ID, Grade)
+    ```
+
+    `Step 3 — Third Normal Form: remove transitive dependencies`
+    - In Student, `Student_ID → Dept_ID → Dept_Name`; Dept_Name depends on a non-key attribute.
+    - Fix: separate the department.
+    ```
+    Student(Student_ID, Name, Dept_ID)
+    Department(Dept_ID, Dept_Name)
+    ```
+
+    `Step 4 — BCNF: check that every determinant is a superkey`
+    - For each remaining functional dependency `X → Y`, verify that X is a superkey. If not, decompose further.
+
+    `Step 5 — 4NF and 5NF, if required`
+    - Remove any `multivalued dependency` (two independent multivalued facts in one table), then any `join dependency`. These are rarely needed in practice.
+
+    `Step 6 — verify the decomposition`
+    - Check it is `lossless` — rejoining the pieces must reproduce the original rows exactly, which is guaranteed when the common attribute is a superkey of at least one fragment.
+    - Check `dependency preservation` where possible, so constraints can still be enforced without a join.
+
+    The final schema
+    ```sql
+    CREATE TABLE Department (
+        Dept_ID   INT PRIMARY KEY,
+        Dept_Name VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE Student (
+        Student_ID INT PRIMARY KEY,
+        Name       VARCHAR(100) NOT NULL,
+        Dept_ID    INT REFERENCES Department(Dept_ID)
+    );
+
+    CREATE TABLE Student_Phone (
+        Student_ID INT,
+        Phone      VARCHAR(15),
+        PRIMARY KEY (Student_ID, Phone),
+        FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
+    );
+
+    CREATE TABLE Course (
+        Course_ID   VARCHAR(10) PRIMARY KEY,
+        Course_Name VARCHAR(100) NOT NULL
+    );
+
+    CREATE TABLE Enrollment (
+        Student_ID INT,
+        Course_ID  VARCHAR(10),
+        Grade      CHAR(2),
+        PRIMARY KEY (Student_ID, Course_ID),
+        FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+        FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID)
+    );
+    ```
+    - The mnemonic that summarises steps 1 to 3: every non-key attribute must depend on `the key, the whole key, and nothing but the key`.
 
 19. **What is normalization? Explain composite key with example.** *[Bangladesh Television Assistant Programmer 2019 compact it 1063 (ET: N/A)]*
 
+    Answer:
+
+    What normalisation is
+    - `Normalisation` is the process of organising the tables and columns of a relational database to `reduce redundancy` and eliminate the `insertion, update and deletion anomalies`, by decomposing a large table into smaller related tables joined by keys.
+    - Proposed by E. F. Codd. The normal forms are 1NF, 2NF, 3NF, BCNF, 4NF and 5NF, each stricter than the last.
+    - The mnemonic: every non-key attribute must depend on `the key` (1NF), `the whole key` (2NF), and `nothing but the key` (3NF).
+
+    Composite key, with an example
+    - A `composite key` is a primary key made of `two or more attributes`, used when no single attribute is unique on its own but a combination is. Also called a compound key.
+    - The rules are those of any primary key: the `combination` must be unique, and `none` of its columns may be NULL.
+
+    Example
+    ```
+    Enrollment
+    +------------+-----------+-------+
+    | Student_ID | Course_ID | Grade |
+    +------------+-----------+-------+
+    |    101     |   CS101   |   A   |
+    |    101     |   CS102   |   B   |   <- same student, different course
+    |    102     |   CS101   |   A   |   <- same course, different student
+    |    102     |   CS102   |   C   |
+    +------------+-----------+-------+
+
+    Student_ID alone : 101 repeats   -> not unique
+    Course_ID  alone : CS101 repeats -> not unique
+    {Student_ID, Course_ID}          -> every pair distinct -> COMPOSITE KEY
+    ```
+
+    ```sql
+    CREATE TABLE Enrollment (
+        Student_ID INT,
+        Course_ID  VARCHAR(10),
+        Grade      CHAR(2),
+        PRIMARY KEY (Student_ID, Course_ID),        -- composite key
+        FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+        FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID)
+    );
+    ```
+
+    Where composite keys occur
+    - `Junction tables` implementing an M:N relationship — the commonest case, as above.
+    - `Weak entities` — the owner's key plus a partial key, for example `Dependent(Emp_ID, Dep_Name)`.
+    - Natural keys needing several attributes, such as `(Roll_No, Session, Department)`.
+
+    The connection with normalisation
+    - Composite keys are precisely where `2NF` becomes relevant. A table with a single-column key is automatically in 2NF; only a composite key can suffer a `partial dependency`.
+    ```
+    Bad (violates 2NF):
+       Enrollment(Student_ID, Course_ID, Student_Name, Grade)
+       Student_Name depends on Student_ID alone -> partial dependency
+
+    Good (2NF):
+       Student(Student_ID, Student_Name)
+       Enrollment(Student_ID, Course_ID, Grade)
+    ```
+
+    The practical trade-off
+    - A composite key makes every referencing foreign key wider and every join more expensive. Many designers therefore add a `surrogate key` and keep the composite as a UNIQUE constraint:
+    ```sql
+    CREATE TABLE Enrollment (
+        Enrollment_ID INT PRIMARY KEY AUTO_INCREMENT,   -- surrogate key
+        Student_ID    INT NOT NULL,
+        Course_ID     VARCHAR(10) NOT NULL,
+        Grade         CHAR(2),
+        UNIQUE (Student_ID, Course_ID)                  -- the real business rule
+    );
+    ```
+    - Both designs are correct; the surrogate version simply makes referencing this table from elsewhere simpler.
+
 20. **(a) What do you mean by Normalization in RDBMS? Explain with an example.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
+    Answer:
+
+    What normalisation means in an RDBMS
+    - `Normalisation` is the process of organising the tables and columns of a relational database so that each fact is stored exactly `once`, by decomposing a large table into smaller related tables joined by keys.
+    - Its object is to remove `redundancy` and the three `anomalies`: insertion, update and deletion.
+    - Proposed by E. F. Codd. It proceeds through a sequence of `normal forms`, each stricter than the last.
+
+    Worked example, step by step
+
+    `Step 0 — the unnormalised table`
+    ```
+    Student_Record
+    +------------+-------+---------------+-----------+-------------+---------+-----------+
+    | Student_ID | Name  | Phone         | Course_ID | Course_Name | Dept_ID | Dept_Name |
+    +------------+-------+---------------+-----------+-------------+---------+-----------+
+    |    101     | Karim | 0171, 0182    | CS101     | Database    |   10    | CSE       |
+    |    101     | Karim | 0171, 0182    | CS102     | Networking  |   10    | CSE       |
+    |    102     | Rahim | 0193          | CS101     | Database    |   20    | EEE       |
+    +------------+-------+---------------+-----------+-------------+---------+-----------+
+    ```
+    The problems visible in this one table
+    - `Phone` holds two values in one cell.
+    - "Karim", "Database" and "CSE" are each repeated.
+    - A new course cannot be created until a student enrols (`insertion anomaly`).
+    - Renaming "Database" means editing several rows (`update anomaly`).
+    - Deleting Rahim's only enrolment loses the EEE department (`deletion anomaly`).
+
+    `Step 1 — 1NF: atomic values`
+    ```
+    Student(Student_ID, Name, Dept_ID, Dept_Name)
+    Student_Phone(Student_ID, Phone)
+    Enrollment(Student_ID, Course_ID, Course_Name)
+    ```
+
+    `Step 2 — 2NF: remove partial dependency`
+    - In Enrollment the key is `(Student_ID, Course_ID)`, and `Course_Name` depends on `Course_ID` alone.
+    ```
+    Course(Course_ID, Course_Name)
+    Enrollment(Student_ID, Course_ID, Grade)
+    ```
+
+    `Step 3 — 3NF: remove transitive dependency`
+    - In Student, `Student_ID → Dept_ID → Dept_Name`.
+    ```
+    Student(Student_ID, Name, Dept_ID)
+    Department(Dept_ID, Dept_Name)
+    ```
+
+    The final normalised schema
+    ```sql
+    CREATE TABLE Department (
+        Dept_ID   INT PRIMARY KEY,
+        Dept_Name VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE Student (
+        Student_ID INT PRIMARY KEY,
+        Name       VARCHAR(100) NOT NULL,
+        Dept_ID    INT REFERENCES Department(Dept_ID)
+    );
+
+    CREATE TABLE Student_Phone (
+        Student_ID INT,
+        Phone      VARCHAR(15),
+        PRIMARY KEY (Student_ID, Phone),
+        FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
+    );
+
+    CREATE TABLE Course (
+        Course_ID   VARCHAR(10) PRIMARY KEY,
+        Course_Name VARCHAR(100) NOT NULL
+    );
+
+    CREATE TABLE Enrollment (
+        Student_ID INT,
+        Course_ID  VARCHAR(10),
+        Grade      CHAR(2),
+        PRIMARY KEY (Student_ID, Course_ID),
+        FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+        FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID)
+    );
+    ```
+
+    What was gained
+    - Every fact is stored once. A course exists without students; a department name is changed in one place; deleting an enrolment destroys nothing else.
+
+    Recovering the original view when it is needed
+    ```sql
+    SELECT s.Name, c.Course_Name, d.Dept_Name, e.Grade
+    FROM   Student s
+    JOIN   Enrollment e ON s.Student_ID = e.Student_ID
+    JOIN   Course     c ON e.Course_ID  = c.Course_ID
+    JOIN   Department d ON s.Dept_ID    = d.Dept_ID;
+    ```
+    - Nothing is lost by normalising; the combined picture is simply reassembled by a join. The cost is that join, which is why reporting systems sometimes `denormalise` deliberately.
+
 21. **What do you mean by Database properties using Normalization?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+    Answer: The properties a database gains from normalisation are the guarantees that its decomposition is correct and its data consistent.
+
+    The two essential properties of a good decomposition
+
+    1. `Lossless join (non-additive join) property`
+    - When the decomposed tables are joined back together, the result must be `exactly` the original relation — no rows lost and no `spurious` rows created.
+    - The condition: for a decomposition of R into R1 and R2, the join is lossless if `R1 ∩ R2` is a `superkey` of R1 or of R2.
+    ```
+    Lossy example:
+       Student_Course(Student, Course, Teacher) decomposed on 'Course'
+       into (Student, Course) and (Course, Teacher)
+       -> if a course has two teachers, rejoining invents student-teacher pairs
+          that never existed. These are SPURIOUS TUPLES.
+    ```
+    - This property is `mandatory`. A lossy decomposition is simply wrong.
+
+    2. `Dependency preservation property`
+    - Every functional dependency of the original relation should still be enforceable within `one` of the decomposed tables, without needing a join.
+    - If a dependency spans two tables, the constraint cannot be checked by any single-table constraint, so the application must enforce it — which is fragile.
+    - `Every relation can be decomposed into 3NF with both properties. BCNF guarantees lossless join but not always dependency preservation` — this is the classic trade-off and the usual reason designers stop at 3NF.
+
+    The other properties normalisation delivers
+
+    3. `Minimal redundancy` — each fact stored exactly once.
+
+    4. `Freedom from anomalies` — insertion, update and deletion anomalies are eliminated.
+
+    5. `Data integrity and consistency` — one stored copy cannot contradict itself.
+
+    6. `Atomicity of attribute values` (from 1NF) — every cell holds one indivisible value, so it can be compared, indexed and joined.
+
+    7. `Full functional dependency on the key` (from 2NF and 3NF) — every non-key attribute depends on the key, the whole key, and nothing but the key.
+
+    8. `Flexibility and extensibility` — new attributes and entities can be added without restructuring existing tables.
+
+    Illustration of the two decomposition properties
+    ```
+    R(A, B, C) with FDs  A -> B,  B -> C
+
+    Decomposition 1: R1(A,B), R2(B,C)
+       R1 ∩ R2 = {B}, and B is a key of R2   -> LOSSLESS  ✓
+       A -> B held in R1, B -> C held in R2  -> DEPENDENCY PRESERVING  ✓
+
+    Decomposition 2: R1(A,B), R2(A,C)
+       R1 ∩ R2 = {A}, and A is a key of both -> LOSSLESS  ✓
+       but B -> C is now split across the two tables
+                                              -> NOT dependency preserving  ✗
+    ```
+
+    Summary
+
+    | Property | Meaning | Always achievable? |
+    |---|---|---|
+    | `Lossless join` | Rejoining reproduces the original exactly | Yes, and mandatory |
+    | `Dependency preservation` | Every FD enforceable in one table | Yes for 3NF, `not always` for BCNF |
+    | `Minimal redundancy` | Each fact stored once | The goal of normalisation |
+    | `No anomalies` | Insert, update, delete all safe | Achieved by 3NF/BCNF |
+
+    - The practical conclusion: aim for a decomposition that is `lossless` above all, `dependency-preserving` where possible, and normalised to `3NF or BCNF`.
 
 ## SQL Commands (DDL, DML, DCL, TCL) (18)
 
