@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 25 questions
+**Table of Contents** — 6 subtopics · 26 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,6 +8,7 @@
 | 3 | [Grammar & Ambiguity](#grammar--ambiguity-5) | 5 |
 | 4 | [Lexical Analysis & Compiler Phases](#lexical-analysis--compiler-phases-5) | 5 |
 | 5 | [Linker & Loader](#linker--loader-1) | 1 |
+| 6 | [Compiler Design & Theory of Computation](#compiler-design--theory-of-computation-1) | 1 |
 
 <!-- TOC END -->
 
@@ -16,8 +17,12 @@
 ## Regular Expressions & Finite Automata (7)
 
 1. **Which one of the following regular expressions represents the language: the set of all binary strings having two consecutive 0s and two consecutive 1s?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 448 (ET: BUET)]*
+   a. (0+1)^*0011(0+1)^* + (0+1)^*1100(0+1)^*
+   b. (0+1)^*(00(0+1)^*11 + 11(0+1)^*00)(0+1)^*
+   c. (0+1)^*00(0+1)^* + (0+1)^*11(0+1)^*
+   d. 00(0+1)^*11 + 11(0+1)^*00
 
-   Answer: The options were not printed with the question. The standard answer to this classic problem is:
+Answer: The options were not printed with the question. The standard answer to this classic problem is:
 
    ```
    (0 + 1)* 00 (0 + 1)* 11 (0 + 1)*  +  (0 + 1)* 11 (0 + 1)* 00 (0 + 1)*
@@ -43,7 +48,7 @@
 
 2. **Which one of the following regular expressions represents the language: The set of all binary strings having two consecutive 0's and two consecutive 1's? Explain why?** *[BITAC Assistant Programmer 27.10.2023 compact it 561 (ET: BUTEX)]*
 
-   Answer: The correct regular expression is
+Answer: The correct regular expression is
 
    ```
    (0 + 1)* 00 (0 + 1)* 11 (0 + 1)*  +  (0 + 1)* 11 (0 + 1)* 00 (0 + 1)*
@@ -69,7 +74,7 @@
 
 3. **Design a DFA to accept floating-point numbers of the form +/- n or +/- n.m, where n and m are decimal integers (non-empty strings over the digits \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}).** *[EGCB Assistant Engineer (CSE) 2022 compact it 717 (ET: BUET)]*
 
-   Answer: The language is: an optional sign, then one or more digits, then optionally a dot followed by one or more digits.
+Answer: The language is: an optional sign, then one or more digits, then optionally a dot followed by one or more digits.
 
    Regular expression: `(+ | - | ε) D⁺ ( . D⁺ | ε)` where `D = 0|1|...|9`
 
@@ -108,7 +113,7 @@
 
 4. **State diagram of DFA using binary strings having 0 with multiple of 3 on input \{0,1\}. Also showing regular expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 836-837 (ET: N/A)], [Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
 
-   Answer: The language is all binary strings in which the NUMBER OF 0s is a multiple of 3 (0, 3, 6, 9, ...). Three states are needed, one for each remainder when the count of 0s is divided by 3.
+Answer: The language is all binary strings in which the NUMBER OF 0s is a multiple of 3 (0, 3, 6, 9, ...). Three states are needed, one for each remainder when the count of 0s is divided by 3.
 
    ```mermaid
    stateDiagram-v2
@@ -147,7 +152,7 @@
 
 5. **Draw the state diagram of deterministic Finite Automata (DFA), which accepts set of all strings over \{0, 1\} which interpreted as binary number is divisible by 4.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851 (ET: N/A)]*
 
-   Answer: A binary number is divisible by 4 exactly when its last TWO bits are `00`. So the DFA only has to remember the last two bits it has read.
+Answer: A binary number is divisible by 4 exactly when its last TWO bits are `00`. So the DFA only has to remember the last two bits it has read.
 
    ```mermaid
    stateDiagram-v2
@@ -188,7 +193,7 @@
 
 6. **Design a finite automaton for an elevator. The elevator can be at one of two floors: Ground or First. There is one button that controls the elevator, and it has two values: Up or Down. Also, there are two lights in the elevator that indicate the current floor: Red for Ground and Green for First.** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
 
-   Answer: This is a Moore machine — the output (the light) depends only on the current state, not on the input.
+Answer: This is a Moore machine — the output (the light) depends only on the current state, not on the input.
 
    - States: `G` = Ground floor, `F` = First floor
    - Input alphabet: `{Up, Down}`
@@ -223,7 +228,7 @@
 
 7. **What are the components of finite automation model? Difference between DFA and NFA.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1103-1104 (ET: AUST)]*
 
-   Answer:
+Answer:
 
    Components of a finite automaton
    - A finite automaton is formally a 5-tuple `M = (Q, Σ, δ, q₀, F)`:
@@ -259,7 +264,7 @@
 
 1. **b) Write down the difference between Interpreter and Compiler?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)], [BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)], [CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)], [PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)], [Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)], [BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
 
-   Answer: A compiler translates the WHOLE program into machine code before running it. An interpreter translates and executes ONE LINE at a time.
+Answer: A compiler translates the WHOLE program into machine code before running it. An interpreter translates and executes ONE LINE at a time.
 
    | Point | Compiler | Interpreter |
    |---|---|---|
@@ -278,7 +283,7 @@
 
 2. **What are Compilers and Interpreters? Briefly describe their role and differences. Write some key points on the advantages and disadvantages of Open Source Software.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Compiler
    - A system program that translates the entire source code of a high-level language into machine code (object code) in one pass, before execution begins.
@@ -317,7 +322,7 @@
 
 3. **(a) Difference between interpreter and compiler. Write down the phases of a compiler.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Interpreter vs compiler
 
@@ -354,7 +359,7 @@
 
 4. **Define an Interpreted language.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
 
-   Answer: An interpreted language is a programming language whose programs are executed directly by an interpreter, which reads and runs the source code one statement at a time, without producing a separate compiled executable file.
+Answer: An interpreted language is a programming language whose programs are executed directly by an interpreter, which reads and runs the source code one statement at a time, without producing a separate compiled executable file.
 
    Characteristics
    - No separate compilation step — the source file itself is run.
@@ -372,7 +377,7 @@
 
 5. **Difference between compiler and interpreter with example?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
 
-   Answer:
+Answer:
 
    | Point | Compiler | Interpreter |
    |---|---|---|
@@ -405,7 +410,7 @@
 
 6. **Compiler and Interpreter-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Compiler | Interpreter |
    |---|---|---|
@@ -424,7 +429,7 @@
 
 7. **Difference between Interpreter and Compiler.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Interpreter | Compiler |
    |---|---|---|
@@ -443,9 +448,9 @@
 
 ## Grammar & Ambiguity (5)
 
-1. Consider the grammar: E -> E + E | E * E | id. Show that the grammar is ambiguous for the string: id + id * id. [SO IT 25-07-2026]
+1. **Consider the grammar: E -> E + E | E * E | id. Show that the grammar is ambiguous for the string: id + id * id.** [SO IT 25-07-2026]
 
-   Answer: A grammar is ambiguous if a single string has MORE THAN ONE parse tree (or more than one leftmost derivation). For `id + id * id` two different parse trees exist, so the grammar is ambiguous.
+Answer: A grammar is ambiguous if a single string has MORE THAN ONE parse tree (or more than one leftmost derivation). For `id + id * id` two different parse trees exist, so the grammar is ambiguous.
 
    Parse tree 1 — treats `+` as the top operator, giving `id + (id * id)`
    ```
@@ -487,7 +492,7 @@
 
 2. **6.15 Consider the grammar: E \to E + E \mid E * E \mid id. Show that the grammar is ambiguous for the string: id + id * id.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-   Answer: To prove ambiguity, two different parse trees must be produced for the same string.
+Answer: To prove ambiguity, two different parse trees must be produced for the same string.
 
    Definition used
    - A context-free grammar is ambiguous if some string in its language has more than one parse tree, or equivalently more than one leftmost derivation.
@@ -539,7 +544,7 @@
 
 3. **How CFG to represent a palindrome number?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
 
-   Answer: A palindrome reads the same forwards and backwards. The grammar is built by adding the SAME symbol at both ends at every step, which is exactly what a context-free grammar can do and a regular expression cannot.
+Answer: A palindrome reads the same forwards and backwards. The grammar is built by adding the SAME symbol at both ends at every step, which is exactly what a context-free grammar can do and a regular expression cannot.
 
    CFG for binary palindromes over `{0, 1}`
    ```
@@ -578,7 +583,7 @@
 
 4. **Context free Grammar: (like as....)** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the grammar it refers to ("like as....") was not captured. The full treatment of context-free grammar and ambiguity is given below.
+Answer: The question is `incomplete` — the grammar it refers to ("like as....") was not captured. The full treatment of context-free grammar and ambiguity is given below.
 
    Context-Free Grammar (CFG)
    - A `CFG` is a formal grammar in which every production has a `single non-terminal` on its left-hand side. It is defined as a four-tuple:
@@ -683,7 +688,7 @@
 
 5. **Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 877-878 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    Derivation
    ```
@@ -716,7 +721,7 @@
 
 1. **(a) How does a compiler handle comments in source code?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
-   Answer: Comments are removed during **lexical analysis**, the very first phase of the compiler. They never reach the parser and never appear in the generated code.
+Answer: Comments are removed during **lexical analysis**, the very first phase of the compiler. They never reach the parser and never appear in the generated code.
 
    How it works
    - The lexical analyzer (scanner) reads the source character by character.
@@ -737,8 +742,9 @@
    - Documentation comments such as Javadoc are an exception — a separate tool reads them, but the compiler itself still discards them.
 
 2. **What is the total number of tokens that will be generated by the logical analyzer for the C statement given below? You can disigned the spaces:** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 447 (ET: BUET)]*
+   Power=bpdb*(nuclear+coal+hydro)
 
-   Answer: The C statement was not printed with the question, so the counting method is shown on a representative statement.
+Answer: The C statement was not printed with the question, so the counting method is shown on a representative statement.
 
    How a lexical analyzer counts tokens
    - A token is the smallest meaningful unit: keyword, identifier, constant, string literal, operator or punctuation symbol.
@@ -770,7 +776,7 @@
 
 3. **Why we optimize algorithm when it runs in compile time?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
 
-   Answer: Code optimization is done at COMPILE time because it is a one-time cost that pays off on every single run of the program.
+Answer: Code optimization is done at COMPILE time because it is a one-time cost that pays off on every single run of the program.
 
    Reasons for optimizing at compile time
    - **Pay once, benefit forever** — the program is compiled once but executed thousands of times. Time spent optimizing during compilation is amortised across every run.
@@ -792,7 +798,7 @@
 
 4. **Explain Semantic Error in a context of Compiler.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
-   Answer: A semantic error is an error of MEANING. The statement follows the grammar of the language correctly, so it passes syntax analysis, but it makes no sense according to the language's rules. It is caught in the third phase of the compiler, semantic analysis.
+Answer: A semantic error is an error of MEANING. The statement follows the grammar of the language correctly, so it passes syntax analysis, but it makes no sense according to the language's rules. It is caught in the third phase of the compiler, semantic analysis.
 
    Common semantic errors
    - **Type mismatch** — `int x = "hello";` assigning a string to an integer.
@@ -823,7 +829,7 @@
 
 5. **(খ) Parsing কী? Top-down parsing and bottom-up parsing সম্পর্কে লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1070 (ET: N/A)]*
 
-   Answer: Parsing, or syntax analysis, is the second phase of a compiler. It takes the token stream from the lexical analyzer and checks whether it can be produced by the grammar of the language, building a parse tree in the process. If no tree can be built, a syntax error is reported.
+Answer: Parsing, or syntax analysis, is the second phase of a compiler. It takes the token stream from the lexical analyzer and checks whether it can be produced by the grammar of the language, building a parse tree in the process. If no tree can be built, a syntax error is reported.
 
    Top-down parsing
    - Builds the parse tree from the ROOT (start symbol) down to the LEAVES (tokens).
@@ -855,7 +861,7 @@
 
 1. **(b) What are the tasks of linker and loader? Describe briefly using examples.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 479 (ET: N/A)]*
 
-   Answer: The linker and the loader are the last two system programs in the path from source code to a running process.
+Answer: The linker and the loader are the last two system programs in the path from source code to a running process.
 
    ```mermaid
    flowchart LR
@@ -905,3 +911,19 @@
    | Part of | The toolchain (`ld`) | The operating system |
 
    - Two kinds of linking: **static linking** copies library code into the executable, making it larger but self-contained; **dynamic linking** leaves it to the loader, giving smaller files and shared library updates.
+
+## Compiler Design & Theory of Computation (1)
+
+1. **Write difference between compiler and interpreter.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317]]*
+
+   Answer: Both compilers and interpreters translate high-level source code into machine-executable instructions, but they differ in their execution model.
+
+   | Feature | Compiler | Interpreter |
+   |---|---|---|
+   | Translation Method | Translates the entire source code into machine code at once before execution | Translates and executes the source code line-by-line sequentially |
+   | Target / Output File | Generates an independent executable file (e.g., `.exe`, `.out`) | Does not generate an intermediate machine code file |
+   | Execution Speed | Faster execution since compilation is done beforehand | Slower execution because translation occurs at runtime |
+   | Memory Requirement | Requires more memory during compilation to generate object code | Requires less memory as only one instruction is translated at a time |
+   | Error Detection | Displays all syntax errors and warnings together after scanning the full code | Stops execution immediately upon encountering the first error |
+   | Debugging | Comparatively harder to isolate errors | Easier to debug line-by-line |
+   | Programming Languages | C, C++, C#, Rust, Go, Fortran | Python, JavaScript, PHP, Ruby, Perl |
