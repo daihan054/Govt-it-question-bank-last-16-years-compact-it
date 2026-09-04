@@ -1087,7 +1087,32 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
+   Answer:
+   - Step 1: Compute the antiderivative:
+     $$\int (2x^2 + 3x)\, dx = \frac{2x^3}{3} + \frac{3x^2}{2}$$
+   - Step 2: Evaluate the definite integral from $0$ to $2$:
+     $$\int_0^2 (2x^2 + 3x)\, dx = \left[ \frac{2x^3}{3} + \frac{3x^2}{2} \right]_0^2$$
+     $$= \left( \frac{2(2)^3}{3} + \frac{3(2)^2}{2} \right) - (0) = \left( \frac{16}{3} + \frac{12}{2} \right) = \frac{16}{3} + 6 = \frac{16 + 18}{3} = \frac{34}{3}$$
+   - Answer: $\frac{34}{3}$ (or $11\frac{1}{3}$)
+
 2. **Solve the problem: \int e^x \cos x\,dx** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
+
+   Answer:
+   - Let $I = \int e^x \cos x\, dx$.
+   - Using integration by parts ($\int u\,dv = uv - \int v\,du$):
+     - Let $u = \cos x \implies du = -\sin x\, dx$
+     - Let $dv = e^x\, dx \implies v = e^x$
+     $$I = e^x \cos x - \int e^x (-\sin x)\, dx = e^x \cos x + \int e^x \sin x\, dx$$
+   - Applying integration by parts to $\int e^x \sin x\, dx$:
+     - Let $u = \sin x \implies du = \cos x\, dx$
+     - Let $dv = e^x\, dx \implies v = e^x$
+     $$\int e^x \sin x\, dx = e^x \sin x - \int e^x \cos x\, dx = e^x \sin x - I$$
+   - Substituting back:
+     $$I = e^x \cos x + e^x \sin x - I \implies 2I = e^x (\sin x + \cos x)$$
+     $$I = \frac{e^x}{2}(\sin x + \cos x) + C$$
+   - Answer: $\frac{e^x}{2}(\sin x + \cos x) + C$
+
+
 
 ## Comprehensive Math Problems (2)
 
