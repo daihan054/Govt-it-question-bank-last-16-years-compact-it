@@ -6972,37 +6972,928 @@
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
+   Answer: Multiplexer
+   - A `multiplexer (MUX)` is a combinational circuit with many data inputs and one output. Selection lines decide which input reaches the output, so it is also called a `data selector`.
+   - With `n` select lines it handles `2^n` inputs.
+   ```
+      I0 ---|\
+      I1 ---| \
+      I2 ---|  |--- Y        Y = S1'S0'I0 + S1'S0 I1 + S1S0'I2 + S1S0 I3
+      I3 ---| /
+            |/
+             |  |
+            S1  S0
+   ```
+   - Uses: choosing one register to feed the ALU, sharing one transmission line among many sources, parallel-to-serial conversion, and implementing any Boolean function from its truth table.
+
+   D latch versus D flip-flop
+   - Both store one bit and both copy D to Q. The difference is `when` they look at D.
+   - A `D latch` is `level-triggered`. While the enable line is HIGH it is `transparent` — Q follows every change of D. When enable goes LOW, the last value is held.
+   - A `D flip-flop` is `edge-triggered`. It samples D only at the instant the clock goes from 0 to 1 (or 1 to 0), and ignores D at all other times.
+
+   ```
+      CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
+
+      D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
+
+      D latch Q  ___|‾‾‾|___|‾‾‾‾‾|____________     follows D while EN is HIGH
+
+      D flip-flop Q ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|______     changes only at the rising edge
+                    ^                 ^
+                    edge              edge
+   ```
+
+   | Point | D latch | D flip-flop |
+   |---|---|---|
+   | Triggering | Level (enable HIGH) | Clock edge |
+   | Transparency | Transparent while enabled | Never transparent |
+   | Output changes | Any time during the enable period | Only at the active edge |
+   | Built from | Cross-coupled gates + enable | Two latches, master-slave |
+   | Gate count and area | Fewer, smaller, faster | More gates, more area |
+   | Power | Lower | Higher (the clock switches every cycle) |
+   | Timing analysis | Difficult, output can glitch through | Simple and predictable |
+   | Used in | Asynchronous logic, small buffers | Registers, counters, shift registers |
+
+   - In a synchronous design the flip-flop is used almost everywhere, because every stage changes at one predictable instant. A latch's transparency lets a change race through several stages in one clock period, which is the classic cause of unreliable circuits.
+
 2. **Difference between combinational and sequential circuits.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
+
+   Answer: Combinational circuit
+   - The output depends `only on the present inputs`. There is no memory and no clock.
+   - Change an input and the output changes after the gate delay only.
+   ```
+           +----------------+
+      -----|                |-----
+      -----|  Logic gates   |-----   outputs = f(present inputs)
+      -----|                |-----
+           +----------------+
+   ```
+   - Examples: adder, subtractor, multiplexer, demultiplexer, encoder, decoder, comparator, code converter.
+
+   Sequential circuit
+   - The output depends on `the present inputs and the past history`, which is held in `memory elements` (flip-flops). Almost always driven by a `clock`.
+   - A feedback path carries the stored state back into the logic.
+   ```
+           +----------------+
+      -----|                |-----> outputs
+      -----|  Logic gates   |
+           |                |----+
+           +----------------+    |
+                 ^               v
+                 |        +--------------+
+                 +--------|  Flip-flops  |<--- CLK
+                  present |  (memory)    |
+                   state  +--------------+
+   ```
+   - Examples: flip-flop, register, counter, shift register, RAM, finite state machine.
+
+   Difference
+
+   | Point | Combinational | Sequential |
+   |---|---|---|
+   | Output depends on | Present inputs only | Present inputs + past state |
+   | Memory element | None | Flip-flops or latches |
+   | Clock | Not needed | Usually required |
+   | Feedback path | None | Present |
+   | Design tool | Truth table, K-map | State table, state diagram |
+   | Speed | Faster | Slower, limited by the clock |
+   | Complexity | Simpler | More complex |
+   | Examples | Adder, MUX, decoder, comparator | Counter, register, shift register, FSM |
+
+   Types of sequential circuit
+   ```
+   Synchronous  : all flip-flops share one clock, state changes together
+   Asynchronous : the output of one flip-flop clocks the next (ripple)
+   ```
+
+   - The two are used together: a real digital system is combinational logic that computes the next state, wrapped around flip-flops that remember it. That is exactly what a `finite state machine` is.
 
 3. **(b) Design a 4-bit ring counter using flip-flops. Write down its working principle using.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
 
+   Answer: A `ring counter` is a shift register whose output is fed back to its input, so a single 1 circulates round the ring. A 4-bit ring counter has `4 states`, one per flip-flop.
+
+   Circuit — 4 D flip-flops in a loop
+   ```
+           +-------+     +-------+     +-------+     +-------+
+      +--->|  D  Q |---->|  D  Q |---->|  D  Q |---->|  D  Q |---+
+      |    |       |     |       |     |       |     |       |   |
+      |    | FF0   |     | FF1   |     | FF2   |     | FF3   |   |
+      |    +---^---+     +---^---+     +---^---+     +---^---+   |
+      |        |             |             |             |       |
+      |       CLK           CLK           CLK           CLK      |
+      |                                                          |
+      +----------------------------------------------------------+
+                       Q3 fed back to D0
+   ```
+   ```
+      D0 = Q3      D1 = Q0      D2 = Q1      D3 = Q2
+   ```
+   - A `PRESET` on FF0 and `CLEAR` on the other three load the starting pattern `1000`. Without this the counter can start in an all-zero state and stay there forever.
+
+   Working principle
+   - On every clock edge, each flip-flop copies its left neighbour's value. The single 1 therefore moves one place to the right, and the last output wraps round to the first.
+   ```
+   Clock | Q0 Q1 Q2 Q3
+   ------+-------------
+   init  |  1  0  0  0        loaded by PRESET / CLEAR
+     1   |  0  1  0  0
+     2   |  0  0  1  0
+     3   |  0  0  0  1
+     4   |  1  0  0  0        back to the start
+   ```
+   - `Modulus = 4` for 4 flip-flops. In general an n-bit ring counter has n states, whereas an n-bit binary counter has 2^n.
+
+   Timing diagram
+   ```
+      CLK   __|‾|__|‾|__|‾|__|‾|__|‾|__
+
+      Q0    ‾‾‾‾|___________________|‾‾‾
+
+      Q1    ____|‾‾‾‾|________________
+
+      Q2    _________|‾‾‾‾|___________
+
+      Q3    ______________|‾‾‾‾|______
+   ```
+   - Only one output is HIGH at a time, and each stays HIGH for exactly one clock period.
+
+   Points to note
+   - `Self-decoding`: each state is already a single active line, so no decoder is needed. This is why ring counters drive stepper motors and time-slot sequencers directly.
+   - `Wasteful of flip-flops`: 4 flip-flops give only 4 states instead of 16.
+   - Not `self-starting` — a wrong pattern circulates forever, so the reset circuit is essential.
+   - A `Johnson counter` (twisted ring) feeds back `Q3'` instead of Q3 and doubles the count to 2n = 8 states with the same four flip-flops.
+
 4. **(খ) Combinational এবং Sequential circuit এর মধ্যে পার্থক্য ডায়াগ্রাম সহকারে লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 773 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) Combinational circuit
+   - The output depends `only on the present input`. There is no memory element and no clock, so the same input always gives the same output.
+   ```
+           +--------------------+
+      A ---|                    |--- Y1
+      B ---|   Logic gates      |--- Y2
+      C ---|   (no memory)      |
+           +--------------------+
+
+      Y = f(A, B, C)          present inputs only
+   ```
+   - Examples: half adder, full adder, multiplexer, demultiplexer, encoder, decoder, comparator.
+
+   Sequential circuit
+   - The output depends on `the present input and the stored past state`. Memory elements (flip-flops) hold that state, and a `feedback` path carries it back into the logic. A clock normally decides when the state may change.
+   ```
+           +--------------------+
+      A ---|                    |------------> outputs
+      B ---|   Combinational    |
+           |   logic            |----+
+           +--------------------+    |
+                 ^                   v
+                 |            +---------------+
+                 |            |  Flip-flops   |
+                 +------------|  (memory)     |<--- CLK
+                  present     +---------------+
+                   state
+   ```
+   - Examples: flip-flop, register, shift register, counter, RAM, finite state machine.
+
+   Difference
+
+   | Point | Combinational | Sequential |
+   |---|---|---|
+   | Output depends on | Present input only | Present input + previous state |
+   | Memory | None | Flip-flops or latches |
+   | Feedback path | Absent | Present |
+   | Clock | Not needed | Normally required |
+   | Design method | Truth table and K-map | State diagram and state table |
+   | Speed | Faster | Slower, limited by the clock period |
+   | Complexity | Simple | More complex |
+   | Examples | Adder, MUX, decoder | Counter, register, FSM |
+
+   - The two are always used together. A practical digital system is combinational logic that computes the `next state` from the `present state` and the inputs, wrapped around flip-flops that remember the state — which is exactly the definition of a finite state machine.
 
 5. **Given a 100MHz clock signal derive a circuit using T-flip flops of generate 50MHz and 25MHz clock signals. Draw a timing diagram for all the three clock signal.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823-824 (ET: BUET)]*
 
+   Answer: A `T flip-flop` with T tied to logic 1 toggles on every active clock edge. Its output therefore completes one full cycle for every `two` input cycles, so it divides the frequency by 2.
+
+   Circuit — two T flip-flops in cascade
+   ```
+         T=1              T=1
+          |                |
+      +---v-----+      +---v-----+
+      | T    Q  |--+-->| T    Q  |--+--> 25 MHz
+      |         |  |   |         |  |
+      |  FF1    |  |   |  FF2    |  |
+      +----^----+  |   +----^----+  |
+           |       |        |       |
+      100 MHz      +-- 50 MHz       +-- output of FF2
+       CLK              (also feeds FF2's clock)
+   ```
+   ```
+      FF1 : clocked by 100 MHz  ->  Q1 = 50 MHz
+      FF2 : clocked by Q1 (50 MHz) -> Q2 = 25 MHz
+   ```
+
+   Frequency calculation
+   ```
+      Input clock          f0 = 100 MHz     period T0 = 10 ns
+
+      After FF1  f1 = f0 / 2 = 100 / 2 = 50 MHz     period T1 = 20 ns
+      After FF2  f2 = f1 / 2 =  50 / 2 = 25 MHz     period T2 = 40 ns
+   ```
+   - General rule: `n` toggle flip-flops in cascade divide the frequency by `2^n`.
+
+   Timing diagram
+   ```
+                 10 ns
+                |<-->|
+      100 MHz   _|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_
+                 ^   ^   ^   ^   ^   ^   ^   ^        rising edges
+
+      50 MHz    __|‾‾‾|___|‾‾‾|___|‾‾‾|___|‾‾‾|__
+                 |<-- 20 ns -->|
+                 toggles on every rising edge of the 100 MHz clock
+
+      25 MHz    __|‾‾‾‾‾‾‾|_______|‾‾‾‾‾‾‾|______
+                 |<------ 40 ns ------>|
+                 toggles on every rising edge of the 50 MHz signal
+   ```
+   - Each waveform is a `square wave with a 50 % duty cycle`, which is one reason toggle-based division is preferred over gating.
+
+   Building a T flip-flop if only JK or D is available
+   ```
+      JK flip-flop : tie J = K = 1                 -> toggles every edge
+      D flip-flop  : connect D to Q'                -> toggles every edge
+
+           +--------+
+      +--->| D    Q |---+---> output
+      |    |        |   |
+      |    |     Q' |---+
+      |    +---^----+   |
+      |        |        |
+      |       CLK       |
+      +-----------------+
+   ```
+
+   Points to note
+   - This two-stage circuit is exactly a `2-bit asynchronous (ripple) counter`. Q1 is the least significant bit and Q2 the most significant.
+   - Because FF2 is clocked by FF1's output, the delays `add up` — this is the ripple problem. For a 100 MHz clock and only two stages it is not a concern, but in a long chain a `synchronous` counter, where every flip-flop shares the same clock, is used instead.
+   - Adding a third stage would give 12.5 MHz, a fourth 6.25 MHz, and so on.
+
 6. **What is the difference between latch and flip-flop?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
+
+   Answer: Both a `latch` and a `flip-flop` store one bit. The difference is `when` they respond to their inputs.
+
+   Latch
+   - `Level-triggered`: it responds while the enable line is at its active level.
+   - It is `transparent` during that whole period — the output follows every change of the input.
+   - Built directly from cross-coupled NAND or NOR gates, so it is small and fast.
+
+   Flip-flop
+   - `Edge-triggered`: it samples the input only at the instant the clock changes from 0 to 1 (or 1 to 0), and ignores it at every other moment.
+   - It is never transparent — the output changes at one predictable instant per clock cycle.
+   - Built from `two latches` in a master-slave arrangement.
+
+   ```
+      CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
+
+      D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
+
+      Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________   follows D while EN is HIGH
+
+      FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________   changes only at the edge
+                    ^                ^
+                    rising edge      rising edge
+   ```
+
+   Difference
+
+   | Point | Latch | Flip-flop |
+   |---|---|---|
+   | Triggering | Level (enable HIGH or LOW) | Clock edge, rising or falling |
+   | Transparency | Transparent while enabled | Never transparent |
+   | Clock | Not strictly needed | Required |
+   | Built from | Cross-coupled gates | Two latches (master-slave) |
+   | Gate count and area | Fewer, smaller | About double |
+   | Speed | Faster | Slower |
+   | Power | Lower | Higher, the clock switches every cycle |
+   | Timing analysis | Difficult; data can race through | Simple and predictable |
+   | Output glitches | Can pass through | Blocked |
+   | Used in | Asynchronous circuits, simple storage | Registers, counters, shift registers |
+   | Examples | SR latch, D latch, gated latch | D, JK, T, master-slave flip-flop |
+
+   - Why flip-flops dominate real designs: in a synchronous system every stage must change at the same instant. A latch's transparency lets a new value race forward through several stages inside one clock period, which produces unpredictable results. The flip-flop's edge trigger closes that door.
+   - Latches are still used where area and power matter more than timing safety, for example in low-power ASIC pipelines and inside the flip-flops themselves.
 
 7. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
 
+   Answer: The question asks which clock scheme is `cheapest` to build for a company's digital system. The answer depends on what the clock has to do.
+
+   For a digital counter or divider — use an `asynchronous (ripple) clock`
+   - In a ripple counter only the first flip-flop receives the external clock; each later stage is clocked by the previous stage's output.
+   ```
+      CLK ---> FF0 ---> FF1 ---> FF2 ---> FF3
+                Q0       Q1       Q2       Q3
+   ```
+   - Why it is cheaper:
+   ```
+   No clock distribution network is needed        -> less wiring, smaller PCB
+   No combinational next-state logic per stage    -> fewer gates
+   Lower dynamic power, since only one flip-flop
+      switches at the fastest rate                -> smaller supply, less cooling
+   Simple, standard low-cost ICs (7493, 4020)
+   ```
+   - The cost: the delays `add up` down the chain, so the counter is slow and produces short-lived wrong values (`glitches`) while the ripple settles. That is acceptable for a slow application such as an electricity meter, a display multiplexer or an event counter.
+
+   For the system clock source — use a `crystal oscillator`
+   - A quartz crystal oscillator costs very little (a few taka) and gives an accuracy of about 20-50 ppm, which is enough for almost every industrial system.
+   ```
+      RC oscillator      : cheapest, but drifts badly with temperature
+      Crystal oscillator : very cheap, accurate, the normal choice
+      TCXO / OCXO        : temperature-compensated / oven-controlled,
+                           far more accurate but much more expensive
+      GPS / atomic clock : only for time-critical or metering-grade systems
+   ```
+
+   Where the cheap option must not be used
+   - Anything that has to be `read while it is counting` — a display driven directly from a ripple counter can show a wrong value during the ripple.
+   - Anything `high speed`, where the accumulated delay exceeds the clock period.
+   - Anything requiring `traceable timekeeping`, such as billing or regulatory logs, where a TCXO or a network-synchronised clock is required.
+
+   - Practical recommendation: use a `crystal-based clock source` feeding an `asynchronous ripple counter` for the low-speed counting and dividing work, and reserve the more expensive synchronous design and temperature-compensated oscillator for the parts of the system where accuracy or speed actually matters. This gives the lowest total cost without compromising the critical functions. <!-- verify -->
+
 8. **(ii) R-S Flip-flop এর সত্যস্য সারণি ও বৈশিষ্ট আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 959-960 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) An `SR flip-flop` (Set-Reset) is the most basic memory element. `S` sets the output to 1 and `R` resets it to 0.
+
+   Circuit — cross-coupled NOR gates
+   ```
+      S ---|\
+           | )o----+---- Q
+      +----|/      |
+      |            |
+      |    +-------+
+      |    |
+      +----|-------+
+           |       |
+      R ---|\      |
+           | )o----+---- Q'
+      +----|/
+      |
+      +--- (from Q)
+   ```
+   - The clocked version adds two AND gates so that S and R take effect only while the clock is HIGH.
+
+   Truth table
+   ```
+   S  R | Q(next)   | remark
+   -----+-----------+---------------------------
+   0  0 | Q (no change) | memory state, holds the last value
+   0  1 |    0      | RESET
+   1  0 |    1      | SET
+   1  1 |    ?      | INVALID / forbidden
+   ```
+
+   Characteristic table and equation
+   ```
+   S  R  Q | Q(next)
+   --------+--------
+   0  0  0 |   0
+   0  0  1 |   1
+   0  1  0 |   0
+   0  1  1 |   0
+   1  0  0 |   1
+   1  0  1 |   1
+   1  1  0 |   x        forbidden
+   1  1  1 |   x        forbidden
+
+      Q(next) = S + R'Q          with the condition  S . R = 0
+   ```
+
+   Excitation table (used when designing counters)
+   ```
+   Q -> Q(next) |  S  R
+   -------------+-------
+     0  ->  0   |  0  x
+     0  ->  1   |  1  0
+     1  ->  0   |  0  1
+     1  ->  1   |  x  0
+   ```
+
+   Characteristics
+   - `Bistable` — it has two stable states, 1 and 0, and stays in one until told to change. This is what makes it a 1-bit memory.
+   - `Q and Q' are always complementary`, except in the forbidden state.
+   - `Hold state` — with S = R = 0 the previous output is retained. This is the whole point of the device.
+   - `Forbidden state` — S = R = 1 tries to set and reset at once. Both outputs go to the same value, so Q and Q' are no longer complements. Worse, when the inputs return to 0 0 the final state depends on which gate is fractionally faster, so the result is unpredictable. This is called a `race condition`.
+   - `Level-triggered` in its basic form; adding a clock and edge detection gives an edge-triggered flip-flop.
+   - Prone to `switch bounce` filtering use — one common application is debouncing a mechanical switch.
+
+   - The forbidden state is the reason for the `JK flip-flop`, which feeds Q and Q' back into the input gates so that J = K = 1 makes the output `toggle` instead of becoming invalid. Tying J and K together gives the `T (toggle)` flip-flop, and tying `R = S'` gives the `D` flip-flop.
 
 9. **MOD-6 বাইনারি কাউন্টার এর Block Diagram অংকন করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039 (ET: DPI)]*
 
+   Answer: (Answered in English, as required for IT topics.) A `MOD-6` counter has 6 states, counting 000 to 101 and then resetting to 000. It needs `3 flip-flops`, because 2^2 = 4 is too few and 2^3 = 8 is enough.
+   ```
+      Number of flip-flops : 2^n >= 6  ->  n = 3
+      Count sequence       : 000, 001, 010, 011, 100, 101, back to 000
+      State 110 must trigger the reset
+   ```
+
+   Block diagram
+   ```
+                    +--------+     +--------+     +--------+
+      CLK --------->| T   Q0 |---->| T   Q1 |---->| T   Q2 |
+                    |        |     |        |     |        |
+                    |  FF0   |     |  FF1   |     |  FF2   |
+                    |  CLR   |     |  CLR   |     |  CLR   |
+                    +---^----+     +---^----+     +---^----+
+                        |              |              |
+                        +--------------+--------------+
+                                       |
+                               +-------+-------+
+                               |    NAND       |
+                               +---^-------^---+
+                                   |       |
+                                  Q1      Q2
+   ```
+   - All three T inputs are tied to logic 1, so each flip-flop toggles on its clock edge.
+   - FF0 is clocked by the external clock; FF1 by Q0 and FF2 by Q1 — a `ripple` (asynchronous) connection.
+   - The NAND gate watches for the first unwanted state.
+
+   Reset logic
+   ```
+      The counter must clear as soon as the count reaches 6 = 110
+
+      Q2 Q1 Q0 = 1 1 0
+
+      CLEAR = (Q2 . Q1)'          active-LOW clear from a NAND gate
+   ```
+   - Only Q2 and Q1 are needed; Q0 is a don't-care, because 110 is the first state in which both Q2 and Q1 are 1.
+
+   Count sequence
+   ```
+   Clock | Q2 Q1 Q0 | decimal
+   ------+----------+--------
+   init  |  0  0  0 |   0
+     1   |  0  0  1 |   1
+     2   |  0  1  0 |   2
+     3   |  0  1  1 |   3
+     4   |  1  0  0 |   4
+     5   |  1  0  1 |   5
+     6   |  1  1  0 |   6  -> NAND fires, CLEAR goes LOW, count returns to 000
+   ```
+
+   Timing diagram
+   ```
+      CLK  _|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_
+
+      Q0   __|‾‾‾|___|‾‾‾|___|‾‾‾|__
+
+      Q1   ______|‾‾‾‾‾‾‾|_______|‾‾   (spike, cleared immediately)
+
+      Q2   ______________|‾‾‾‾‾‾‾|__
+   ```
+
+   Points to note
+   - State 110 exists for only a few nanoseconds — long enough to fire the NAND, then cleared. This very short pulse is called a `glitch` or a `spike`, and it is the main drawback of the reset method.
+   - A `synchronous` MOD-6 counter avoids the glitch entirely, by feeding the same clock to all three flip-flops and deriving each T input from combinational logic. It costs more gates but is safe to read at any time.
+   - The same technique gives any modulus: MOD-10 clears on 1010 with `CLEAR = (Q3.Q1)'`, MOD-12 on 1100, and so on.
+
 10. **(গ) Flip-Flop কী? একটি Multiplexer এর কার্যপদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1075 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) Flip-flop
+    - A `flip-flop` is a `bistable` sequential circuit that stores `one bit` of information. It has two stable states, 1 and 0, and stays in one until a clock edge tells it to change.
+    - It is `edge-triggered`: it samples its inputs only at the instant the clock goes from 0 to 1 (or 1 to 0). This is what makes a synchronous system predictable.
+    - The outputs `Q` and `Q'` are always complementary.
+
+    Types
+    ```
+    SR flip-flop : S sets, R resets ; S = R = 1 is forbidden
+    D flip-flop  : Q(next) = D           , used in registers
+    JK flip-flop : like SR, but J = K = 1 toggles instead of being forbidden
+    T flip-flop  : T = 1 toggles, T = 0 holds ; used in counters
+    ```
+    ```
+       D flip-flop truth table          T flip-flop truth table
+       D | Q(next)                      T | Q(next)
+       --+--------                      --+--------
+       0 |   0                          0 |   Q     (hold)
+       1 |   1                          1 |   Q'    (toggle)
+    ```
+    ```
+            +----------+
+       D ---| D      Q |--- Q
+            |          |
+       CLK->|>      Q' |--- Q'
+            +----------+
+    ```
+    - Uses: registers, shift registers, counters, memory cells and finite state machines.
+
+    Multiplexer — working procedure
+    - A `multiplexer (MUX)` is a combinational circuit with `2^n data inputs`, `n selection lines` and `one output`. The select value decides which input reaches the output.
+    ```
+    Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+    ```
+    ```
+       I0 -------------------|‾‾\
+       S1' ------------------|    )----- S1'S0'I0 ---+
+       S0' ------------------|___/                   |
+       I1 -------------------|‾‾\                    |
+       S1' ------------------|    )----- S1'S0 I1 ---+
+       S0  ------------------|___/                   |---|\
+       I2 -------------------|‾‾\                    |   | )--- Y
+       S1  ------------------|    )----- S1 S0'I2 ---+---|/
+       S0' ------------------|___/                   |
+       I3 -------------------|‾‾\                    |
+       S1  ------------------|    )----- S1 S0 I3 ---+
+       S0  ------------------|___/
+    ```
+    ```
+    S1  S0 | Y
+    -------+----
+     0   0 | I0
+     0   1 | I1
+     1   0 | I2
+     1   1 | I3
+    ```
+    - Two inverters produce the complemented select signals. Each AND gate is wired to one unique combination of them, so `exactly one AND gate is enabled` at any time and the other three output 0. The OR gate therefore carries only the selected input, and no conflict can occur.
+    - Uses: selecting one register to feed the ALU, sharing one transmission line among several sources, parallel-to-serial conversion, and building any Boolean function directly from its truth table.
 
 11. **Ripple counter কী? একটি তিন বিটের Asynchronous up ripple counter এর গঠন লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077-1078 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) A `ripple counter` is an `asynchronous` counter in which only the first flip-flop receives the external clock. Each following flip-flop is clocked by the output of the one before it, so the count change `ripples` from the least significant bit towards the most significant.
+
+    - It is built from `toggle` flip-flops — a JK flip-flop with J = K = 1, or a D flip-flop with D tied to Q'.
+    - An `n-bit` ripple counter has `2^n` states and divides the input frequency by 2^n.
+
+    3-bit asynchronous up ripple counter
+    ```
+          J=K=1            J=K=1            J=K=1
+           | |              | |              | |
+       +---v-v---+      +---v-v---+      +---v-v---+
+       | J  K  Q0|--+-->| J  K  Q1|--+-->| J  K  Q2|---> Q2 (MSB)
+       |         |  |   |         |  |   |         |
+       |   FF0   |  |   |   FF1   |  |   |   FF2   |
+       +----^----+  |   +----^----+  |   +----^----+
+            |       |        |       |        |
+           CLK      +--------+       +--------+
+         (external)   Q0 clocks FF1    Q1 clocks FF2
+    ```
+    - Every flip-flop toggles on the `falling edge` of its own clock input, which gives an `up` counter.
+    - Q0 is the least significant bit and Q2 the most significant.
+
+    Count sequence
+    ```
+    Clock | Q2 Q1 Q0 | decimal
+    ------+----------+--------
+    init  |  0  0  0 |   0
+      1   |  0  0  1 |   1
+      2   |  0  1  0 |   2
+      3   |  0  1  1 |   3
+      4   |  1  0  0 |   4
+      5   |  1  0  1 |   5
+      6   |  1  1  0 |   6
+      7   |  1  1  1 |   7
+      8   |  0  0  0 |   0     back to the start
+    ```
+
+    Timing diagram
+    ```
+       CLK  _|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_
+
+       Q0   ___|‾‾‾|___|‾‾‾|___|‾‾‾|___|‾‾‾|_      f/2
+
+       Q1   _______|‾‾‾‾‾‾‾|_______|‾‾‾‾‾‾‾|_      f/4
+
+       Q2   _______________|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|_      f/8
+    ```
+    - Each stage halves the frequency, so a ripple counter is also a `frequency divider`.
+
+    Advantages
+    - Very simple; no combinational next-state logic and no clock distribution network.
+    - Fewer gates, lower cost and lower power.
+
+    Disadvantages
+    - The delays `add up`: the MSB settles after `n × t_pd`. This limits the maximum counting speed.
+    - While the ripple travels, the outputs show short-lived wrong values — `glitches` — so the count must not be decoded or read during that time.
+    - A `synchronous` counter, where all flip-flops share one clock, removes both problems at the cost of extra logic.
+
 12. **(c) Draw the circuit diagram of a mod-10 asynchronous ripple up counter and explain its operation.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+    Answer: A `mod-10` (decade) counter counts 0000 to 1001 and then returns to 0000, giving ten states. It needs `4 flip-flops`, since 2^3 = 8 is too few and 2^4 = 16 is enough.
+    ```
+       Count sequence : 0000 ... 1001 (0 to 9), then reset
+       State 1010 (decimal 10) must fire the reset
+    ```
+
+    Circuit diagram
+    ```
+          J=K=1        J=K=1        J=K=1        J=K=1
+           | |          | |          | |          | |
+       +---v-v---+  +---v-v---+  +---v-v---+  +---v-v---+
+       | J K  Q0 |->| J K  Q1 |->| J K  Q2 |->| J K  Q3 |--> Q3 (MSB)
+       |         |  |         |  |         |  |         |
+       |   FF0   |  |   FF1   |  |   FF2   |  |   FF3   |
+       |   CLR   |  |   CLR   |  |   CLR   |  |   CLR   |
+       +--^---^--+  +--^---^--+  +--^---^--+  +--^---^--+
+          |   |        |   |        |   |        |   |
+         CLK  |       Q0   |       Q1   |       Q2   |
+              |            |            |            |
+              +------------+------------+------------+
+                                  |
+                          +-------+-------+
+                          |     NAND      |
+                          +--^---------^--+
+                             |         |
+                            Q1        Q3
+    ```
+    - All J and K inputs are tied to logic 1, so every flip-flop toggles on its clock edge.
+    - FF0 takes the external clock; each later flip-flop is clocked by the previous output — the `ripple` connection.
+    - The NAND gate drives the active-LOW `CLEAR` of all four flip-flops together.
+
+    Reset logic
+    ```
+       The counter must clear the moment the count reaches 10 = 1010
+
+       Q3 Q2 Q1 Q0 = 1 0 1 0
+
+       CLEAR = (Q3 . Q1)'
+    ```
+    - Only `Q3 and Q1` are needed, because 1010 is the first count in which both are 1. Q0 and Q2 are don't-cares.
+
+    Operation
+    ```
+    Clock | Q3 Q2 Q1 Q0 | decimal
+    ------+-------------+--------
+    init  |  0  0  0  0 |   0
+      1   |  0  0  0  1 |   1
+      2   |  0  0  1  0 |   2
+      3   |  0  0  1  1 |   3
+      4   |  0  1  0  0 |   4
+      5   |  0  1  0  1 |   5
+      6   |  0  1  1  0 |   6
+      7   |  0  1  1  1 |   7
+      8   |  1  0  0  0 |   8
+      9   |  1  0  0  1 |   9
+     10   |  1  0  1  0 |  10 -> NAND output goes LOW, CLEAR fires,
+          |  0  0  0  0 |       count jumps back to 0
+    ```
+
+    Timing diagram
+    ```
+       CLK  _|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_
+
+       Q0   __|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|
+
+       Q1   ____|‾‾‾|___|‾‾‾|___|‾‾‾|___|‾‾‾|___|‾ (spike)
+
+       Q3   ________________________________|‾‾‾|__
+    ```
+
+    Points to note
+    - State 1010 exists for only a few nanoseconds before the clear takes effect. This very short `glitch` is the main drawback of the reset method, and it means the outputs must not be decoded during that instant.
+    - The counter divides the input frequency by 10, so it is also a `decade frequency divider`. The 7490 IC is the classic implementation.
+    - A `synchronous` mod-10 counter drives all four flip-flops from the same clock and derives the J and K inputs from logic, which removes the glitch and the accumulated ripple delay.
 
 13. **Difference between Register and Latch.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
+    Answer: A `latch` stores `one bit`. A `register` stores a `group of bits` — usually 8, 16, 32 or 64 — and is built from several flip-flops sharing one clock.
+
+    Latch
+    - A level-triggered 1-bit memory element made from cross-coupled gates.
+    - It is `transparent` while its enable line is active: the output follows the input.
+    - Types: SR latch, D latch, gated latch.
+    ```
+            +-----------+
+       D ---|           |--- Q
+            |  D latch  |
+       EN --|           |--- Q'
+            +-----------+
+    ```
+
+    Register
+    - A set of `n` flip-flops wired to the same clock, so all n bits are stored or read at the same instant.
+    - It is a complete storage unit inside a CPU: the accumulator, program counter, instruction register and general-purpose registers are all registers.
+    - Types: parallel-in parallel-out (PIPO), shift register (SISO, SIPO, PISO), and universal shift register.
+    ```
+            +-------+ +-------+ +-------+ +-------+
+       D0 ->| D   Q |->Q0     |         |         |
+       D1 ->| D   Q |-> Q1    |         |         |
+       D2 ->| D   Q |-> Q2    |         |         |
+       D3 ->| D   Q |-> Q3    |         |         |
+            +---^---+ +---^---+ +---^---+ +---^---+
+                |         |         |         |
+                +---------+----+----+---------+
+                               |
+                              CLK        4-bit register
+    ```
+
+    Difference
+
+    | Point | Latch | Register |
+    |---|---|---|
+    | Stores | 1 bit | n bits (8, 16, 32, 64) |
+    | Built from | Cross-coupled gates | n flip-flops |
+    | Triggering | Level (enable) | Clock edge |
+    | Transparency | Transparent while enabled | Never transparent |
+    | Size and cost | Very small | n times larger |
+    | Timing | Hard to analyse | Predictable |
+    | Purpose | Hold one signal, buffering | Hold data or an address inside a CPU |
+    | Extra ability | None | Can shift, load in parallel, count |
+    | Examples | SR latch, D latch | Accumulator, PC, IR, shift register |
+
+    - Relationship between them: a flip-flop is built from two latches, and a register is built from n flip-flops. So the latch is the smallest brick and the register is the finished wall.
+    - Practical note: an unintended latch appearing in a design — usually caused by an incomplete `if` statement in HDL code — is a well-known bug, because it makes the circuit level-sensitive where the designer expected an edge-triggered register.
+
 14. **Main difference between Combinational and Sequential circuits.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
+
+    Answer: The main difference is `memory`. A combinational circuit has none; a sequential circuit has memory and therefore remembers what happened before.
+
+    Combinational circuit
+    - Output = f(present inputs) only. Feed the same inputs and you always get the same output.
+    - No memory element, no feedback path, and normally no clock.
+    ```
+            +----------------+
+       -----|                |-----
+       -----|  Logic gates   |-----   Y = f(A, B, C)
+       -----|                |-----
+            +----------------+
+    ```
+    - Examples: half adder, full adder, multiplexer, demultiplexer, encoder, decoder, comparator, code converter.
+
+    Sequential circuit
+    - Output = f(present inputs, present state). The state is held in flip-flops and fed back into the logic.
+    - A clock decides when the state is allowed to change.
+    ```
+            +----------------+
+       -----|                |------> outputs
+       -----|  Logic gates   |
+            |                |----+
+            +----------------+    |
+                  ^               v
+                  |        +--------------+
+                  +--------|  Flip-flops  |<--- CLK
+                   present |   (memory)   |
+                    state  +--------------+
+    ```
+    - Examples: flip-flop, register, shift register, counter, RAM, finite state machine.
+
+    Difference
+
+    | Point | Combinational | Sequential |
+    |---|---|---|
+    | Output depends on | Present inputs only | Present inputs + past state |
+    | Memory element | None | Flip-flops or latches |
+    | Feedback | Absent | Present |
+    | Clock | Not needed | Normally required |
+    | Design method | Truth table, K-map | State diagram, state table |
+    | Speed | Faster | Slower, bounded by the clock |
+    | Complexity | Simpler | More complex |
+    | Examples | Adder, MUX, decoder | Counter, register, FSM |
+
+    - Types of sequential circuit: `synchronous`, where every flip-flop shares one clock, and `asynchronous` (ripple), where one flip-flop clocks the next.
+    - The two are always used together: a real system is combinational logic computing the next state, wrapped around flip-flops that remember it — the definition of a finite state machine.
 
 15. **What is synchronous? Why sequential circuit use synchronization.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
+    Answer: Synchronous
+    - `Synchronous` means that all the parts of a circuit change state `at the same instant`, controlled by a common `clock` signal. Every flip-flop receives the same clock and acts on the same edge.
+    - The opposite is `asynchronous`, where one element's output triggers the next, so the changes happen one after another and at unpredictable moments.
+    ```
+       Synchronous                     Asynchronous (ripple)
+
+       CLK ---+---+---+                CLK --> FF0 --> FF1 --> FF2
+              |   |   |                          Q0      Q1
+              v   v   v
+            FF0  FF1  FF2              each flip-flop clocks the next
+       all flip-flops share one clock
+    ```
+
+    Why sequential circuits use synchronization
+    - `Predictable timing.` Every state change happens at one known instant, so the designer knows exactly when the outputs are valid and safe to read.
+    - `No accumulated delay.` In a ripple counter the delays add up down the chain, so the most significant bit settles after n gate delays. With one shared clock, all outputs settle within one gate delay of the same edge.
+    - `No glitches during counting.` A ripple counter passes through short-lived wrong values while the ripple travels — reading or decoding at that moment gives a wrong result. A synchronous counter never shows an invalid state.
+    - `Race conditions are avoided.` Without a clock, two signals arriving at slightly different times can leave the circuit in the wrong state. The clock edge forces every element to sample at the same moment, so the race disappears.
+    - `Higher maximum speed.` The clock period only has to cover `the longest single path`, not the sum of all stages.
+    ```
+       f_max = 1 / (t_pd + t_setup + t_clk-to-Q)
+    ```
+    - `Simple design and verification.` Setup and hold checks, static timing analysis and simulation all assume a clock. Modern EDA tools are built entirely around synchronous design.
+    - `Reliable data exchange between blocks.` If two blocks share a clock, one can hand data to the other with no handshake at all.
+
+    Cost of synchronisation
+    - The clock must reach every flip-flop at nearly the same time. The difference is `clock skew`, and controlling it needs a carefully balanced clock tree, which uses area and power.
+    - The clock switches every cycle, so it is often the largest single consumer of dynamic power in a chip. `Clock gating` is used to switch it off in idle blocks.
+
+    - Summary: synchronisation trades some power and wiring for `predictability`. In a system of thousands of flip-flops that predictability is not a convenience, it is the only way the design can be made to work at all.
+
 16. **What is the difference between flip-flop and latch with figure?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190-1191 (ET: N/A)]*
 
+    Answer: Both a `latch` and a `flip-flop` are 1-bit memory elements. The difference is `when` they accept new data — a latch responds to the `level` of its control signal, a flip-flop to its `edge`.
+
+    D latch — level-triggered
+    ```
+                    +---------+
+       D -----------| D     Q |----- Q
+                    |         |
+       EN ----------| EN   Q' |----- Q'
+                    +---------+
+
+       While EN = 1  ->  Q follows D  (transparent)
+       While EN = 0  ->  Q holds the last value
+    ```
+
+    D flip-flop — edge-triggered (master-slave)
+    ```
+            master latch          slave latch
+          +-----------+         +-----------+
+       D--| D       Q |----+----| D       Q |---- Q
+          |           |    |    |           |
+       +--| EN        |    | +--| EN     Q' |---- Q'
+       |  +-----------+    | |  +-----------+
+       |                   | |
+       |     +------+      | |
+       CLK --| NOT  |------+ |
+             +------+        |
+       CLK ------------------+
+
+       The master is transparent while CLK = 0, the slave while CLK = 1.
+       Since they are never open together, data moves forward by exactly
+       one stage per clock cycle  ->  the edge trigger.
+    ```
+
+    Timing comparison
+    ```
+       CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
+
+       D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
+
+       Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________   follows D whenever EN is HIGH
+
+       FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________   changes only at the rising edge
+                     ^                ^
+    ```
+
+    Difference
+
+    | Point | Latch | Flip-flop |
+    |---|---|---|
+    | Triggering | Level (enable HIGH or LOW) | Clock edge |
+    | Transparency | Transparent while enabled | Never transparent |
+    | Clock | Not strictly needed | Required |
+    | Structure | Cross-coupled gates | Two latches, master-slave |
+    | Area and gate count | Small | About double |
+    | Speed | Faster | Slower |
+    | Power | Lower | Higher, the clock toggles every cycle |
+    | Timing analysis | Hard; data can race through | Simple and predictable |
+    | Used in | Asynchronous logic, buffering | Registers, counters, shift registers |
+    | Examples | SR latch, D latch | D, JK, T flip-flop |
+
+    - Why the flip-flop is used in real designs: in a synchronous system, all stages must update together. A latch stays open for a whole half-cycle, so a new value can `race` through two or three stages in one clock period and corrupt the state. The edge trigger closes that window.
+
 17. **What is the difference between latch and flip-flop?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227 (ET: N/A)]*
+
+    Answer: Both store one bit of data. The difference is `when` each responds to its input.
+
+    Latch
+    - `Level-triggered` — it responds throughout the time its enable line is active.
+    - It is `transparent` during that period: the output follows every change of the input.
+    - Built directly from cross-coupled NAND or NOR gates, so it is small, fast and cheap.
+    - Types: SR latch, D latch, gated SR latch.
+
+    Flip-flop
+    - `Edge-triggered` — it samples the input only at the instant the clock changes from 0 to 1 (or 1 to 0), and ignores it at every other moment.
+    - It is never transparent; the output can change at only one predictable instant per clock cycle.
+    - Built from `two latches` in a master-slave arrangement, so it costs roughly twice the area.
+    - Types: D, JK, T, master-slave.
+
+    ```
+       CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
+
+       D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
+
+       Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________
+
+       FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________
+                     ^                ^
+                     rising edge      rising edge
+    ```
+
+    Difference
+
+    | Point | Latch | Flip-flop |
+    |---|---|---|
+    | Triggering | Level | Clock edge |
+    | Transparency | Transparent while enabled | Never transparent |
+    | Clock required | No | Yes |
+    | Built from | Cross-coupled gates | Two latches (master-slave) |
+    | Area and gate count | Fewer | About double |
+    | Speed | Faster | Slower |
+    | Power | Lower | Higher |
+    | Timing analysis | Difficult, data can race through | Simple and predictable |
+    | Glitch behaviour | A glitch on the input can pass | Blocked between edges |
+    | Used in | Asynchronous circuits, buffering | Registers, counters, shift registers, FSMs |
+
+    - Why flip-flops dominate practical design: a latch stays open for a whole half-cycle, so a new value can race forward through several stages in one clock period, giving unpredictable results. The flip-flop's edge trigger allows exactly one stage of movement per cycle, which is what makes a synchronous system analysable.
+    - Latches are still used where area and power matter more than timing safety, for example in low-power pipelines — and every flip-flop is itself made of two of them.
 
 ## Logic Families (TTL vs CMOS) (6)
 
