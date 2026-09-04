@@ -3043,13 +3043,320 @@
 
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]
 
+   Answer: Difference between unit testing and integration testing
+
+   | Point | Unit testing | Integration testing |
+   |---|---|---|
+   | What is tested | `One module` or function alone | `Two or more modules working together` |
+   | Purpose | Does this piece work `by itself`? | Do the pieces work `together`? |
+   | Who does it | `Developers` | Developers or the testing team |
+   | Testing type | `White box` — the code is visible | Black box or `grey box` |
+   | Isolation | Dependencies replaced by `stubs` and `drivers` | Real modules are used |
+   | Faults found | Logic errors, wrong calculation, bad boundary | `Interface` errors, wrong data format, mismatched parameters |
+   | When | `First`, as soon as a module is coded | `After` unit testing passes |
+   | Scope | Very small | Larger, and grows with each build |
+   | Cost of a defect | Lowest | Higher |
+
+   The stubs and drivers point
+   ```
+      A module rarely stands alone, so unit testing fakes its
+      neighbours :
+
+           DRIVER - a dummy CALLER that invokes the module and passes
+                    test data. Needed to test a lower-level module.
+           STUB   - a dummy CALLED module that returns a fixed value.
+                    Needed to test an upper-level module.
+
+           +--------+        +----------+        +-------+
+           | DRIVER | -----> | MODULE   | -----> | STUB  |
+           | (fake  |        | UNDER    |        |(fake  |
+           | caller)|        | TEST     |        | callee)|
+           +--------+        +----------+        +-------+
+   ```
+
+   Integration approaches
+   ```
+      BIG BANG    all modules combined at once. Simple, but when it
+           fails nobody knows which interface is at fault.
+
+      TOP-DOWN    start at the top module, add lower ones gradually.
+           Needs STUBS. Major control flaws are found early.
+
+      BOTTOM-UP   start at the lowest modules and build upward.
+           Needs DRIVERS. Low-level utilities are proved first, but
+           the overall design is tested last.
+
+      SANDWICH    top-down and bottom-up at the same time, meeting in
+           the middle. Used on large systems.
+   ```
+
+   Example
+   ```
+      A banking application.
+
+      UNIT TEST        calculateInterest() alone :
+                       principal 1000 , rate 5 , time 1 -> expect 50
+                       also test rate = 0 , negative principal , the
+                       boundary values.
+
+      INTEGRATION TEST calculateInterest() called by the
+                       AccountModule, which in turn writes to the
+                       DatabaseModule. Does the amount arrive in the
+                       right FORMAT, with the right NUMBER OF DECIMAL
+                       PLACES, in the right CURRENCY field ?
+   ```
+   - The reason both are needed: `every unit can pass its own tests and the system can still fail`. Unit tests prove each module is right on its own; integration tests prove the assumptions the modules make about each other are right. Interface mismatches are the commonest defect in large systems, and unit testing cannot detect them by definition.
+
 2. **ফরম্যাটিভ মূল্যায়ন (Formative Evaluation) বলতে কী বুঝায়?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) What formative evaluation is
+   - `Formative evaluation` is assessment carried out `while` a product or a process is still being developed, so that its findings can be used to `improve` it. It is done `during` the work, not after it.
+   ```
+      FORMATIVE  : evaluation TO IMPROVE  - done DURING development
+      SUMMATIVE  : evaluation TO JUDGE    - done AT THE END
+   ```
+   - The distinction in one line: `formative evaluation shapes; summative evaluation grades`.
+
+   In software engineering
+   ```
+      FORMATIVE evaluation                SUMMATIVE evaluation
+      -----------------------------       -----------------------------
+      code review , walkthrough           final acceptance testing
+      unit and integration testing        system testing against the SRS
+      prototype user testing              a released-product audit
+      sprint review , retrospective       post-project review
+      usability testing on a mock-up      the final usability report
+   ```
+   - Examples: a `code review` finds defects while the code is still being written, so the author can fix them cheaply. A `sprint review` in Agile shows working software to the customer every two weeks precisely so the next sprint can be corrected. A `usability test on a paper prototype` changes the design before it is built.
+
+   Characteristics
+   ```
+      PURPOSE    to improve, not to grade
+      TIMING     ongoing, during development
+      FEEDBACK   immediate and specific, so it can be acted on
+      RESULT     changes to the product or the process
+      RISK       low - problems are found while they are cheap
+   ```
+
+   Why it matters
+   ```
+      Cost of fixing a defect, by the phase where it is FOUND :
+
+        Requirements   1        Testing        50
+        Design         5        After release  100+
+        Coding        10
+
+      FORMATIVE evaluation acts at the LEFT of this table ;
+      SUMMATIVE evaluation only confirms what is already built.
+   ```
+   - In education, from where the term comes, `formative` assessment is the class test or assignment used to guide teaching, while `summative` assessment is the final examination that awards the grade. The software-engineering meaning is the same idea applied to a product.
+   - The practical conclusion: both are needed. Formative evaluation improves the work while change is still cheap; summative evaluation is what finally certifies that the product is fit to release.
 
 3. **Explain Verification and Validation in Software Engineering. Discuss black-box testing and white-box testing with examples.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1426 (ET: E-Zone)]*
 
+   Answer: Verification and validation
+   ```
+      VERIFICATION : "Are we building the product RIGHT ?"
+           Does the work product match its SPECIFICATION ?
+
+      VALIDATION   : "Are we building the RIGHT product ?"
+           Does the finished product meet the USER'S ACTUAL NEED ?
+   ```
+
+   | Point | Verification | Validation |
+   |---|---|---|
+   | Question asked | Building the product `right`? | Building the `right` product? |
+   | Compared against | The `specification` — SRS, design | The `user's real need` |
+   | When | `Throughout` development, at every phase | Mainly at the `end`, after the product runs |
+   | Method | Reviews, walkthroughs, inspections, static analysis | Actual `testing` — the code is executed |
+   | Code executed? | `No` — static | `Yes` — dynamic |
+   | Who does it | The QA team and peers | The testing team and the `customer` |
+   | Finds | Defects in documents and code structure | Defects in behaviour and fitness for purpose |
+   | Cost of a defect found | Low | High |
+
+   - Why both are needed: a product can pass verification completely and still fail validation. If the SRS captured the wrong requirement, the code will match the specification perfectly and still be useless. `Verification checks conformance; validation checks usefulness.`
+
+   Black box testing
+   - Tests the software `only through its inputs and outputs`, with no knowledge of the internal code. Done by testers working from the `SRS`.
+   ```
+           input ---->  [ ??? ]  ----> output
+                      the box is CLOSED
+
+      Techniques :
+        EQUIVALENCE PARTITIONING - divide the input into classes that
+             should behave alike, and test ONE value from each.
+        BOUNDARY VALUE ANALYSIS  - test at and around the edges,
+             where most defects live.
+        DECISION TABLE - all combinations of business rules.
+        STATE TRANSITION - the legal and illegal state changes.
+        ERROR GUESSING - experience-based guesses.
+   ```
+   ```
+      Example : a login field accepting a password of 8 to 16
+      characters.
+
+        EQUIVALENCE CLASSES : length < 8 (invalid) , 8-16 (valid) ,
+             > 16 (invalid)
+        BOUNDARY VALUES     : 7 , 8 , 9 , 15 , 16 , 17
+   ```
+
+   White box testing
+   - Tests with `full knowledge of the internal code and logic`. The tester reads the source and designs cases to exercise its statements, branches and paths. Done by `developers`. Also called `structural` or `glass box` testing.
+   ```
+      Coverage criteria :
+        STATEMENT  every line executed at least once
+        BRANCH     every if takes both the true and false path
+        PATH       every route through the code
+        CONDITION  every sub-condition evaluated both ways
+        LOOP       0 iterations , 1 iteration , many
+
+      Example :  if (a > 0 && b > 0)  x = 1;  else  x = 2;
+
+        STATEMENT coverage : 1 test  , a=1 , b=1
+        BRANCH    coverage : 2 tests , (1,1) and (1,-1)
+        CONDITION coverage : cases making a>0 both T and F, and
+                             b>0 both T and F
+   ```
+
+   The difference in one line
+   ```
+      BLACK BOX tests WHAT the software does - from the SRS.
+      WHITE BOX tests HOW it does it - from the CODE.
+      GREY BOX  is in between - partial knowledge, used heavily in
+                security testing.
+   ```
+   - They are complements, not alternatives. White box testing cannot find a `missing requirement`, because a feature that was never coded has no code to cover. Black box testing cannot find `dead code` or an untested branch. Both are needed.
+
 4. **Difference between Alpha tests, Beta test, gamma test in software development.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 399 (ET: BUET)]*
 
+   Answer: Alpha, beta and gamma testing are the three stages of `acceptance testing`, in that order.
+
+   | Point | Alpha testing | Beta testing | Gamma testing |
+   |---|---|---|---|
+   | Where | At the `developer's` site | At the `user's` own site | At the user's site |
+   | Who tests | Internal staff, QA, sometimes selected users | `Real external users` | Real users |
+   | Environment | Controlled, in a lab | `Real`, uncontrolled | Real |
+   | Developer present? | `Yes`, watching | `No` | No |
+   | Stage | `First` — before beta | After alpha | `Last` — just before release |
+   | Testing type | White box + black box | `Black box` only | Black box only |
+   | Purpose | Find defects before outsiders see it | Find defects in real use, gather feedback | Final check that the product is ready to ship |
+   | Changes made | Many | Some | `None`, except critical fixes |
+   | Also called | In-house acceptance testing | Field testing, pre-release testing | Release-candidate testing |
+
+   Alpha testing
+   ```
+      Done at the DEVELOPER'S site, in a controlled environment, by
+      the internal QA team and sometimes by selected customers.
+      The developers WATCH and can fix defects immediately.
+
+      Both WHITE BOX and BLACK BOX techniques are used, because the
+      testers can see the code.
+
+      Typically run in two cycles :
+         cycle 1 - the QA team tests the build
+         cycle 2 - after fixes, it is tested again
+   ```
+
+   Beta testing
+   ```
+      Done at the USER'S site, by REAL users, in the REAL environment,
+      with NO developer present. The users report problems back.
+
+      Only BLACK BOX testing is possible - the users cannot see the
+      code.
+
+      This is where a product meets conditions the developers could
+      never reproduce : slow networks, old browsers, unexpected data,
+      and users who click things nobody expected.
+   ```
+
+   Gamma testing
+   ```
+      The FINAL stage, done on the RELEASE CANDIDATE. The product is
+      already complete and no new features are added.
+
+      Its purpose is only to CONFIRM that the product is ready to
+      ship, and that it meets the specified requirements. Only
+      CRITICAL defects are fixed at this point.
+
+      Note : gamma testing is NOT part of the standard ISTQB
+      vocabulary. Many books stop at alpha and beta. Where it is
+      taught, it means this final release-readiness check.
+   ```
+
+   The sequence
+   ```mermaid
+   flowchart LR
+       A[System testing] --> B[Alpha: developer site, internal]
+       B --> C[Beta: user site, real users]
+       C --> D[Gamma: release candidate check]
+       D --> E[Release]
+   ```
+   - The key contrast to state: `alpha testing is controlled and observed; beta testing is uncontrolled and unobserved`. That is exactly why both are needed — alpha finds the defects that careful testing reveals, and beta finds the ones only real users in real conditions can produce.
+
 5. **What do you understand about software quality assurance (SQA)? While purchasing a software system for your company, as a SQA team leader what aspects will you look into for a quality software.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 330 (ET: BIBM)]*
+
+   Answer: What SQA is
+   - `Software Quality Assurance (SQA)` is the set of planned and systematic activities that ensure a software product and the process that builds it meet the required standards. It is `process-oriented` and `preventive` — it aims to stop defects being introduced, not merely to find them afterwards.
+   ```
+      SQA  vs  QC  vs  TESTING
+
+      SQA      PROCESS oriented , PREVENTIVE. Standards, audits,
+               reviews, training, process improvement.
+      QC       PRODUCT oriented , DETECTIVE. Inspects the finished
+               work to find defects.
+      TESTING  a SUBSET of QC - executing the software to find
+               failures.
+   ```
+   - Its activities: define standards and procedures, review the SRS and the design, run audits, verify that the process is being followed, collect defect metrics, and drive process improvement (`CMMI`, `ISO 9001`, `Six Sigma`).
+
+   What to look for when buying software, as SQA team leader
+
+   1. Functional fitness
+   - Does it do what the business actually needs? Map every requirement in our SRS against the product's features and record the `gaps`. Insist on a demonstration with `our own data`, not the vendor's.
+
+   2. Reliability and availability
+   - Failure rate, `MTBF`, recovery time after a crash, and the vendor's published uptime record. Ask for `references` from existing customers of comparable size.
+
+   3. Performance and scalability
+   - Response time under our expected load, and behaviour at `peak` — month-end, salary day. Will it still work when our transaction volume triples? Ask for `benchmark results`, and run a `load test` during evaluation.
+
+   4. Security
+   - Authentication and role-based `authorisation`, data `encryption` at rest and in transit, an `audit trail` of who did what, patch policy, and any security certification. For a bank this is decisive.
+
+   5. Usability
+   - How long does an ordinary clerk take to learn it? Screen design, error messages, help, and language support.
+
+   6. Maintainability and support
+   - Who fixes defects, in what time, under what `SLA`? Is source code held in `escrow` if the vendor closes? How often are new versions issued, and what does an upgrade cost?
+
+   7. Interoperability and portability
+   - Does it integrate with our existing core banking system, database and reporting tools? Does it expose an `API`? Does it run on our platform, and can we move it later?
+
+   8. Documentation and training
+   - User manual, administrator guide, API documentation, and a training plan for our staff.
+
+   9. Compliance
+   - Does it satisfy Bangladesh Bank regulations, data-protection law and audit requirements? Are the `licence terms` acceptable, and what happens on renewal?
+
+   10. Vendor evaluation
+   - Financial stability, years in business, size of the support team, existing clients, and process maturity (`CMMI` level, `ISO 9001`).
+
+   11. Total cost of ownership
+   - Not the licence price alone: implementation, customisation, data migration, training, annual maintenance, and the cost of upgrades over five years.
+
+   How to evaluate in practice
+   ```
+      1. Write the requirements and give each a WEIGHT.
+      2. Score each candidate product against every requirement.
+      3. Run a PILOT or proof of concept with OUR OWN data.
+      4. Check REFERENCES - talk to existing customers directly.
+      5. Compare TOTAL COST OF OWNERSHIP over 5 years, not licence
+         price.
+      6. Read the CONTRACT : SLA, penalties, source-code escrow,
+         exit clause.
+   ```
+   - The single most common mistake to avoid: buying on `licence price and a demonstration`. A demonstration is prepared by the vendor with prepared data. Insist on a `pilot with our own data and our own users` before signing, and make the acceptance criteria part of the contract.
 
 6. **Match the table:** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 396 (ET: BUET)]*
 
@@ -3063,59 +3370,2012 @@
 | (vi) Security Testing | (f) identifying and addressing security vulnerabilities in a software application. |
 | (vii) Usability Testing | (g) a method of testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it. |
 
+   Answer: The question is `incomplete` — the table to be matched was not captured, so the exact pairing cannot be given. The material such a question is normally set on is below, in the form a matching question uses.
+
+   Testing terms and their definitions
+   ```
+      UNIT TESTING          test one module or function in isolation
+      INTEGRATION TESTING   test two or more modules working together
+      SYSTEM TESTING        test the complete product against the SRS
+      ACCEPTANCE TESTING    the customer confirms business fitness
+      REGRESSION TESTING    re-run old tests to prove a change broke
+                            nothing
+      SMOKE TESTING         a quick check that the build is stable
+                            enough to test at all
+      SANITY TESTING        a narrow check that one specific fix works
+      ALPHA TESTING         at the developer's site, internal users
+      BETA TESTING          at the user's site, real users
+      STRESS TESTING        push beyond the limit until it breaks
+      LOAD TESTING          behaviour under the expected load
+      PERFORMANCE TESTING   speed and response time
+      SECURITY TESTING      resistance to attack
+      USABILITY TESTING     how easily users can use it
+   ```
+
+   Testing techniques
+   ```
+      BLACK BOX  test from inputs and outputs only ; from the SRS
+      WHITE BOX  test with full knowledge of the code ; from the code
+      GREY BOX   partial knowledge of the internals
+
+      EQUIVALENCE PARTITIONING  divide input into classes, test one
+                                value from each
+      BOUNDARY VALUE ANALYSIS   test at and around the edges
+      STATEMENT COVERAGE        every line executed once
+      BRANCH COVERAGE           every if takes both paths
+   ```
+
+   SDLC phases and their outputs
+   ```
+      Planning            ->  project plan , feasibility report
+      Requirement analysis->  SRS
+      Design              ->  SDD , ER diagram , DFD , UML
+      Coding              ->  source code
+      Testing             ->  test reports
+      Deployment          ->  the live system
+      Maintenance         ->  updated versions
+   ```
+
+   SDLC models and their defining feature
+   ```
+      WATERFALL   linear sequential ; requirements frozen
+      INCREMENTAL delivered in parts ; feedback after each release
+      SPIRAL      RISK ANALYSIS in every loop
+      PROTOTYPE   a model built first to clarify requirements
+      V-MODEL     each development phase paired with its test level
+      AGILE       short sprints ; the customer present throughout
+   ```
+
+   Verification and validation
+   ```
+      VERIFICATION  "building the product RIGHT ?"  - reviews , static
+      VALIDATION    "building the RIGHT product ?"  - testing , dynamic
+   ```
+   - If the actual table is available, the method is the same in every case: read each item on the left, identify its `defining property`, and find the description on the right that names that property. Items that look similar — `smoke` against `sanity`, `load` against `stress`, `verification` against `validation` — are where matching questions place their traps, so those pairs are worth learning as pairs.
+
 7. **Given scenario of software engineering (Unit test, Regression Test, Smoke Test, Integration testing, Load Testing). Write the name of the testing and whether it is functional? Non-functional or both.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
+
+   Answer: The five named tests, with their classification.
+
+   | Test | What it does | Functional / non-functional |
+   |---|---|---|
+   | Unit test | Tests one module or function in isolation | `Functional` |
+   | Regression test | Re-runs old tests after a change to prove nothing else broke | `Both` |
+   | Smoke test | A quick check that the build is stable enough to test at all | `Functional` |
+   | Integration test | Tests two or more modules working together | `Functional` |
+   | Load test | Behaviour under the expected number of users or transactions | `Non-functional` |
+
+   The reasoning
+   ```
+      FUNCTIONAL testing asks  : does it do the RIGHT THING ?
+           It checks BEHAVIOUR against the requirements.
+
+      NON-FUNCTIONAL testing asks : does it do it WELL ENOUGH ?
+           It checks QUALITY ATTRIBUTES - speed, load, security,
+           usability, reliability.
+   ```
+   ```
+      UNIT TEST         checks that one function returns the correct
+           result. Purely behavioural.        -> FUNCTIONAL
+
+      SMOKE TEST        runs the few critical paths - can the
+           application start, can a user log in, does the main screen
+           open. It checks BEHAVIOUR, only shallowly.
+                                              -> FUNCTIONAL
+           Also called a "build verification test". If it fails, the
+           build is REJECTED and no further testing is attempted.
+
+      INTEGRATION TEST  checks that data passes correctly across the
+           interface between modules. Behavioural.
+                                              -> FUNCTIONAL
+
+      LOAD TEST         checks RESPONSE TIME and THROUGHPUT with,
+           say, 1000 concurrent users. It says nothing about whether
+           the answers are correct - only whether the system keeps
+           up.                                -> NON-FUNCTIONAL
+
+      REGRESSION TEST   is not a KIND of test but a REASON for
+           re-running tests. The suite re-run may contain functional
+           tests (does the calculation still give the right answer)
+           AND non-functional ones (is the response time still under
+           2 seconds).                        -> BOTH
+   ```
+
+   Related distinctions worth keeping straight
+   ```
+      SMOKE vs SANITY
+           SMOKE  - WIDE and SHALLOW. Does the whole build work at
+                    all ? Run on EVERY new build.
+           SANITY - NARROW and DEEP. Does this ONE fixed defect
+                    actually work now ? Run after a small change.
+
+      LOAD vs STRESS
+           LOAD   - the EXPECTED load. Does it meet the target ?
+           STRESS - BEYOND the limit, until it breaks. Does it fail
+                    GRACEFULLY, and does it recover ?
+           Both are NON-FUNCTIONAL.
+   ```
+   - The rule to apply to any test named in such a question: if it checks `what the system does`, it is functional; if it checks `how well the system does it`, it is non-functional. Regression is the exception, because it describes `when` tests are run rather than what they check.
 
 8. **(ক) Software Quality Assurance বলতে কী বোঝায়? উহার Attribute গুলো আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What Software Quality Assurance is
+   - `Software Quality Assurance (SQA)` is the set of planned and systematic activities that ensure the software product and the process that builds it meet the required standards. It is `process-oriented` and `preventive` — its aim is to stop defects being introduced, not merely to find them later.
+   ```
+      SQA      PROCESS oriented , PREVENTIVE - standards, reviews,
+               audits, training, process improvement.
+      QC       PRODUCT oriented , DETECTIVE - inspects the finished
+               work to find defects.
+      TESTING  a SUBSET of QC - executing the software to find
+               failures.
+   ```
+   - SQA activities: defining standards and procedures, reviewing the SRS and design, auditing that the process is followed, collecting defect metrics, and driving process improvement through `CMMI`, `ISO 9001` or `Six Sigma`.
+
+   The quality attributes
+
+   McCall's model groups eleven factors into three categories.
+   ```
+      PRODUCT OPERATION - how well it runs now
+        CORRECTNESS   does it do exactly what the requirements say ?
+        RELIABILITY   does it perform without failure, consistently ?
+        EFFICIENCY    how much CPU, memory and storage does it need ?
+        INTEGRITY     can it protect itself from unauthorised access ?
+        USABILITY     how much effort does a user need to learn and
+                      operate it ?
+
+      PRODUCT REVISION - how easily it can be changed
+        MAINTAINABILITY  how easily can a defect be located and fixed ?
+        FLEXIBILITY      how easily can a new feature be added ?
+        TESTABILITY      how easily can it be tested ?
+
+      PRODUCT TRANSITION - how well it moves to a new environment
+        PORTABILITY      can it be moved to another platform ?
+        REUSABILITY      can its components be used in another system ?
+        INTEROPERABILITY can it work with other systems ?
+   ```
+
+   The `ISO 9126` model, now superseded by `ISO 25010`, lists six characteristics:
+   ```
+      FUNCTIONALITY    does it provide the required functions,
+                       accurately and securely ?
+      RELIABILITY      maturity , fault tolerance , recoverability
+      USABILITY        understandability , learnability , operability
+      EFFICIENCY       time behaviour and resource use
+      MAINTAINABILITY  analysability , changeability , stability ,
+                       testability
+      PORTABILITY      adaptability , installability , replaceability
+   ```
+
+   - The difference between the two models: `McCall` includes internal qualities that only developers see, while `ISO 9126` emphasises characteristics `visible to the user`. Both are used, and an examiner will accept either list.
+   - The practical point: these attributes often `conflict`. Making a system faster (efficiency) may make it harder to read (maintainability); adding security checks (integrity) slows it down. Quality is therefore a matter of `deliberate trade-offs agreed with the customer`, not of maximising every attribute at once.
+
 9. **6.5 Explain the difference between Unit Testing and Integration Testing.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+   Answer: Difference between unit testing and integration testing
+
+   | Point | Unit testing | Integration testing |
+   |---|---|---|
+   | What is tested | `One module` or function alone | `Two or more modules together` |
+   | Question asked | Does this piece work `by itself`? | Do the pieces work `together`? |
+   | Who does it | `Developers` | Developers or the testing team |
+   | Technique | `White box` — the code is visible | Black box or `grey box` |
+   | Isolation | Dependencies faked by `stubs` and `drivers` | Real modules are used |
+   | Faults found | Logic errors, wrong calculations, bad boundaries | `Interface` errors, wrong data format, parameter mismatch |
+   | When | `First`, as soon as a module is coded | `After` unit testing passes |
+   | Cost of a defect | Lowest | Higher |
+
+   Stubs and drivers
+   ```
+      A module rarely stands alone, so unit testing fakes its
+      neighbours :
+
+           DRIVER - a dummy CALLER that invokes the module with test
+                    data. Needed to test a LOWER-level module.
+           STUB   - a dummy CALLEE that returns a fixed value.
+                    Needed to test an UPPER-level module.
+
+           +--------+        +----------+        +--------+
+           | DRIVER | -----> |  MODULE  | -----> |  STUB  |
+           +--------+        |UNDER TEST|        +--------+
+                             +----------+
+   ```
+
+   Integration approaches
+   ```
+      BIG BANG   everything combined at once. Simple, but when it
+           fails nobody knows which interface caused it.
+      TOP-DOWN   start at the top, add lower modules gradually.
+           Needs STUBS. Control-flow flaws are found early.
+      BOTTOM-UP  start at the lowest modules and build upward.
+           Needs DRIVERS. Utilities proved first, design tested last.
+      SANDWICH   both directions at once, meeting in the middle.
+   ```
+
+   Example
+   ```
+      Banking application.
+
+      UNIT TEST        calculateInterest() alone :
+                       principal 1000 , rate 5 , time 1 -> expect 50
+                       plus rate = 0 , negative principal , boundaries.
+
+      INTEGRATION TEST calculateInterest() called by AccountModule,
+                       which writes to DatabaseModule. Does the amount
+                       arrive with the right number of DECIMAL PLACES,
+                       in the right CURRENCY field, in the right FORMAT?
+   ```
+   - The reason both are required: `every unit can pass its own tests and the system can still fail`. Unit tests prove each module is correct alone; integration tests prove the assumptions modules make about each other are correct. Interface mismatches are the commonest defect in large systems, and unit testing cannot detect them by definition.
 
 10. **What is Software testing? Difference between Black box testing and White box testing.** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
+    Answer: What software testing is
+    - `Software testing` is the process of running a program with the intention of `finding defects` — proving that what the software actually does differs from what it should do. It also measures quality and gives the confidence needed to release.
+    ```
+       Two facts that define the discipline :
+
+       1. Testing can show the PRESENCE of defects, never their
+          ABSENCE  (Dijkstra).
+       2. EXHAUSTIVE testing is IMPOSSIBLE. A program with 10 inputs of
+          32 bits each has more input combinations than there are atoms
+          in the observable universe.
+
+       So testing is about choosing the FEW cases most likely to find
+       defects - which is exactly what the techniques below do.
+    ```
+
+    Difference between black box and white box testing
+
+    | Point | Black box testing | White box testing |
+    |---|---|---|
+    | Knowledge of code | `None` — the box is closed | `Full` — the source is read |
+    | Based on | The `SRS` / requirements | The `code` structure |
+    | Also called | Functional, behavioural, closed box | `Structural`, glass box, clear box |
+    | Who does it | `Testers` | `Developers` |
+    | Level applied | System, acceptance | `Unit`, integration |
+    | Finds | Wrong or missing functionality | Logic errors, dead code, untested branches |
+    | Cannot find | Untested internal paths, dead code | `Missing requirements` |
+    | Programming knowledge | Not needed | `Required` |
+    | Test design | Equivalence partitioning, boundary value analysis | Statement, branch, path coverage |
+
+    Black box techniques
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       EQUIVALENCE PARTITIONING  divide the input into classes that
+            should behave alike ; test ONE value from each.
+       BOUNDARY VALUE ANALYSIS   test at and around the edges, where
+            most defects live.
+       DECISION TABLE            all combinations of business rules.
+       STATE TRANSITION          legal and illegal state changes.
+       ERROR GUESSING            experience-based guesses.
+
+       Example : a password field accepting 8 to 16 characters.
+            CLASSES  : <8 invalid , 8-16 valid , >16 invalid
+            BOUNDARY : 7 , 8 , 9 , 15 , 16 , 17
+    ```
+
+    White box techniques
+    ```
+       STATEMENT COVERAGE  every line executed at least once
+       BRANCH COVERAGE     every if takes both the true and false path
+       PATH COVERAGE       every route through the code
+       CONDITION COVERAGE  every sub-condition evaluated both ways
+       LOOP COVERAGE       0 iterations , 1 , and many
+
+       Example :  if (a > 0 && b > 0)  x = 1;  else  x = 2;
+            STATEMENT : 1 test  (a=1 , b=1)
+            BRANCH    : 2 tests (1,1) and (1,-1)
+    ```
+
+    - Why both are needed, stated plainly: `white box testing cannot find a missing requirement` — if a required feature was never coded, there is no code to cover, so no amount of coverage will reveal its absence. `Black box testing cannot find dead code` or an untested branch. The two are complements, and `grey box` testing, with partial knowledge of the internals, sits between them and is used heavily in security work.
+
 11. **Define test plan and Test case.** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 567 (ET: N/A)]*
+
+    Answer: Test plan
+    - A `test plan` is the document that describes the `whole testing effort` for a project — its scope, approach, resources and schedule. It answers `what will be tested, how, by whom and when`. It is written before testing begins, usually by the test manager.
+    ```
+       IEEE 829 contents of a test plan :
+
+         1. Test plan identifier
+         2. Introduction and objectives
+         3. Test items - what software and which version
+         4. FEATURES TO BE TESTED
+         5. FEATURES NOT TO BE TESTED , and why
+         6. APPROACH - the strategy : levels, techniques, tools
+         7. Item PASS / FAIL criteria
+         8. SUSPENSION criteria and resumption requirements
+         9. Test DELIVERABLES - cases, scripts, reports
+        10. Testing TASKS
+        11. ENVIRONMENT - hardware, software, data, network
+        12. Responsibilities - who does what
+        13. Staffing and TRAINING needs
+        14. SCHEDULE and milestones
+        15. RISKS and contingencies
+        16. Approvals
+    ```
+
+    Test case
+    - A `test case` is a single, specific check: one set of inputs, the steps to perform, and the `expected result`. It answers `exactly what to do and what should happen`.
+    ```
+       Fields of a test case :
+
+         Test case ID          TC_LOGIN_002
+         Module / feature      Login
+         Test case title       Login with a wrong password
+         PRECONDITION          The user account exists and is active
+         TEST DATA             username : rahim
+                               password : wrongpass123
+         STEPS                 1. Open the login page
+                               2. Enter the username
+                               3. Enter the wrong password
+                               4. Click Login
+         EXPECTED RESULT       Error message "Invalid credentials" is
+                               shown ; the user stays on the login page
+         ACTUAL RESULT         (filled in during execution)
+         STATUS                Pass / Fail
+         Priority              High
+         Written by / date
+    ```
+
+    The difference
+
+    | Point | Test plan | Test case |
+    |---|---|---|
+    | Scope | The `whole project` | `One specific check` |
+    | Level | Strategic — what and how | Operational — exact steps |
+    | Written by | `Test manager` / lead | `Test engineer` |
+    | Quantity | `One` per project | `Hundreds or thousands` |
+    | Written when | Before testing starts | During test design |
+    | Answers | Scope, approach, schedule, resources | Input, steps, `expected result` |
+    ```
+       ONE test plan  ->  many TEST SUITES  ->  many TEST CASES
+    ```
+    - The single most important field of a test case is the `expected result`, and it must be written `before` the test is run. A test case without a pre-stated expected result is not a test — the tester will simply accept whatever the software produces.
+    - Related term: a `test scenario` is a broader statement of what to verify ("verify the login functionality"), from which several concrete `test cases` are derived — valid login, wrong password, blank field, locked account.
 
 12. **(d) What is the main difference between black box and white box testing?** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)], [Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)], [Teletalk Assistant Manager (IT) 2023 compact it 466 (ET: N/A)], [SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
 
+    Answer: The main difference is `knowledge of the internal code`.
+    ```
+       BLACK BOX  the tester CANNOT see the code. Testing is done
+            purely through INPUTS and OUTPUTS, working from the SRS.
+            It asks : does it do the RIGHT THING ?
+
+       WHITE BOX  the tester CAN see the code. Test cases are designed
+            to exercise the program's statements, branches and paths.
+            It asks : does it do it the RIGHT WAY ?
+    ```
+
+    | Point | Black box | White box |
+    |---|---|---|
+    | Knowledge of code | `None` | `Full` |
+    | Based on | The `SRS` / requirements | The `source code` |
+    | Also called | Functional, behavioural, closed box | `Structural`, glass box, clear box |
+    | Who does it | `Testers` | `Developers` |
+    | Applied at | System, acceptance testing | `Unit`, integration testing |
+    | Programming skill | Not needed | `Required` |
+    | Finds | Wrong or missing functionality | Logic errors, dead code, untested branches |
+    | Cannot find | Untested paths, dead code | `Missing requirements` |
+    | Test design | Equivalence partitioning, boundary values | Statement, branch, path coverage |
+
+    Black box
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       Techniques : equivalence partitioning , boundary value
+            analysis , decision tables , state transition , error
+            guessing.
+
+       Example : a password field accepting 8 to 16 characters
+            CLASSES  : < 8 invalid , 8-16 valid , > 16 invalid
+            BOUNDARY : 7 , 8 , 9 , 15 , 16 , 17
+    ```
+
+    White box
+    ```
+       The tester READS the code :
+
+            if (a > 0 && b > 0)  x = 1;
+            else                 x = 2;
+
+       STATEMENT coverage : 1 test  (a=1 , b=1)
+       BRANCH    coverage : 2 tests (1,1) and (1,-1)
+       CONDITION coverage : cases making a>0 both T and F, and b>0
+                            both T and F
+    ```
+    - The point that decides most exam answers: `white box testing cannot detect a missing requirement`. A feature that was never coded has no code to cover, so 100 per cent coverage proves nothing about it. `Black box testing cannot detect dead code` or an untested branch. The two are complements, and `grey box` testing — partial knowledge of the internals — sits between them and is used heavily in security testing.
+
 13. **Verification and validation are two process areas at CMMI level 3. For both of these areas (a) provide a definition (b) a description of how you can fulfill these areas in your software testing activities.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 444 (ET: BIBM)]*
+
+    Answer: (a) Definitions
+
+    Verification (VER)
+    ```
+       CMMI : "to ensure that selected WORK PRODUCTS meet their
+               SPECIFIED REQUIREMENTS."
+
+       In plain terms : "Are we building the product RIGHT ?"
+       It compares the work product against its SPECIFICATION.
+    ```
+
+    Validation (VAL)
+    ```
+       CMMI : "to demonstrate that a product or product component
+               FULFILS ITS INTENDED USE when placed in its INTENDED
+               ENVIRONMENT."
+
+       In plain terms : "Are we building the RIGHT product ?"
+       It compares the product against the USER'S ACTUAL NEED.
+    ```
+
+    | Point | Verification | Validation |
+    |---|---|---|
+    | Question | Building the product `right`? | Building the `right` product? |
+    | Compared with | The `specification` — SRS, design | The `user's real need` |
+    | When | `Throughout` development | Mainly at the `end`, in the real environment |
+    | Method | Reviews, walkthroughs, `peer reviews`, static analysis | Actual `execution` — testing, demonstration, pilot |
+    | Code executed? | `No` — static | `Yes` — dynamic |
+    | Performed by | Peers and the QA team | Testers and the `customer` |
+
+    (b) How each is fulfilled in software testing activities
+
+    Verification — the three CMMI specific goals
+    ```
+       SG 1  PREPARE FOR VERIFICATION
+            - select the work products to verify : SRS , design
+              document , source code , test cases themselves
+            - establish the verification ENVIRONMENT
+            - define the verification PROCEDURES and CRITERIA -
+              checklists, entry and exit criteria
+
+       SG 2  PERFORM PEER REVIEWS
+            - prepare and schedule the reviews
+            - conduct INSPECTIONS and WALKTHROUGHS of the SRS, design
+              and code
+            - record and ANALYSE the defect data - defect density,
+              where defects originate, which review type finds most
+
+       SG 3  VERIFY SELECTED WORK PRODUCTS
+            - execute the procedures , record results
+            - identify CORRECTIVE ACTION and track it to closure
+    ```
+    ```
+       In practice, our verification activities are :
+
+         REQUIREMENT REVIEW  - is the SRS complete, consistent,
+              testable, unambiguous ?
+         DESIGN REVIEW       - does the design cover every SRS item ?
+         CODE REVIEW and STATIC ANALYSIS - does the code follow the
+              design and the coding standards ?
+         TRACEABILITY MATRIX - every requirement maps to a design
+              element, to code, and to at least one test case.
+         UNIT and INTEGRATION TESTING - the code behaves as the
+              design specifies.
+    ```
+
+    Validation — the two CMMI specific goals
+    ```
+       SG 1  PREPARE FOR VALIDATION
+            - select the products to validate and the METHODS -
+              user acceptance testing, demonstration, pilot run
+            - establish the validation ENVIRONMENT : it must
+              RESEMBLE PRODUCTION - real data volumes, real network,
+              real hardware
+            - define the validation procedures and ACCEPTANCE
+              CRITERIA, agreed with the customer
+
+       SG 2  VALIDATE PRODUCT OR PRODUCT COMPONENTS
+            - perform validation and ANALYSE the results
+            - record issues and feed them back
+    ```
+    ```
+       In practice, our validation activities are :
+
+         USER ACCEPTANCE TESTING (UAT) - real users, real business
+              scenarios, real data ; the customer signs off.
+         ALPHA TESTING - at our site, with internal users watching.
+         BETA TESTING  - at the customer's site, real environment, no
+              developer present.
+         PILOT RUN     - one branch or department goes live first.
+         PROTOTYPE DEMONSTRATIONS during development, so mismatches
+              are found before the whole product is built.
+         NON-FUNCTIONAL validation - load, performance and security
+              testing under production-like conditions.
+    ```
+
+    - Why both are needed, and why CMMI treats them as separate process areas: a product can pass `verification` completely and fail `validation`. If the SRS captured the wrong requirement, the code will match the specification perfectly and still be useless to the user. Verification checks `conformance`; validation checks `usefulness`. At CMMI maturity level 3 both must be defined, planned and measured — not left to whatever the testers happen to do.
 
 14. **অথবা, (ক) Software testing কী? উহার গুরুত্ব আলোচনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 603 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) What software testing is
+    - `Software testing` is the process of running a program with the intention of `finding defects` — proving that what the software actually does differs from what it should do. It also measures quality and provides the confidence needed to release.
+    ```
+       Two facts that define the discipline :
+
+       1. Testing can show the PRESENCE of defects, never their
+          ABSENCE (Dijkstra).
+       2. EXHAUSTIVE testing is IMPOSSIBLE - the input space of even a
+          small program is astronomically large.
+
+       So testing is the art of choosing the FEW cases most likely to
+       expose defects.
+    ```
+
+    Its importance
+
+    1. Defects are cheapest to fix when found early
+    ```
+       Cost of fixing a defect, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       Testing at every level, not only at the end, keeps the cost at
+       the left of this table.
+    ```
+
+    2. It protects money and reputation
+    - A defect in a banking system can post a wrong balance, duplicate a transaction or expose customer data. The financial and legal cost of one such failure dwarfs the entire testing budget.
+
+    3. It protects safety
+    - In medical, aviation and industrial control software, an untested path can cost lives. This is why such systems are tested to `branch` or even `path` coverage, not merely to statement coverage.
+
+    4. It verifies that the requirements are actually met
+    - `Acceptance testing` is the customer's formal confirmation that the product does what the contract said. Without it there is no objective basis for accepting delivery.
+
+    5. It gives confidence to release
+    - A passing regression suite is the evidence on which a release decision is made. Without it, every release is a guess.
+
+    6. It enables change
+    - With an automated test suite, a developer can `refactor` freely, because a broken assumption shows up in minutes. Without one, every change is risky, and the system ossifies.
+
+    7. It improves the product and the process
+    - Defect data shows `where` defects arise — which module, which phase, which type — and that feeds process improvement. This is one of the main inputs to `SQA`.
+
+    8. It is required for compliance
+    - Standards such as `ISO 9001`, `CMMI` and banking regulations require documented testing with recorded results.
+
+    The levels at which it is done
+    ```
+       UNIT         each module alone         by developers
+       INTEGRATION  modules working together  by developers
+       SYSTEM       the whole product vs SRS  by the QA team
+       ACCEPTANCE   business fitness          by the CUSTOMER
+    ```
+    - The conclusion to state plainly: testing does not `create` quality — quality comes from good requirements, good design and good coding. Testing `measures` quality and prevents defective work from reaching the user. That is why `SQA` (preventive, process-oriented) and `testing` (detective, product-oriented) are both needed, and neither replaces the other.
+
 15. **অথবা, (ক) Black-box এবং White-box testing এর মধ্যে পার্থক্যগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) Differences between black-box and white-box testing
+
+    | Point | Black box testing | White box testing |
+    |---|---|---|
+    | Knowledge of code | `None` — the box is closed | `Full` — the source is read |
+    | Based on | The `SRS` / requirements | The `code` structure |
+    | Also called | Functional, behavioural, closed box | `Structural`, glass box, clear box |
+    | Who does it | `Testers` | `Developers` |
+    | Applied at | System and acceptance testing | `Unit` and integration testing |
+    | Programming skill | Not needed | `Required` |
+    | Finds | Wrong or missing functionality | Logic errors, dead code, untested branches |
+    | Cannot find | Untested internal paths, dead code | `Missing requirements` |
+    | Test design | Equivalence partitioning, boundary values | Statement, branch, path coverage |
+    | Time to design | Less | More — the code must be studied |
+    | Automation | UI and API test tools | Coverage tools and unit-test frameworks |
+
+    Black box
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       TECHNIQUES
+         EQUIVALENCE PARTITIONING  divide input into classes that
+              behave alike ; test ONE value from each
+         BOUNDARY VALUE ANALYSIS   test at and around the edges
+         DECISION TABLE            all combinations of business rules
+         STATE TRANSITION          legal and illegal state changes
+         ERROR GUESSING            experience-based
+
+       Example : a password field accepting 8 to 16 characters
+            CLASSES  : < 8 invalid , 8-16 valid , > 16 invalid
+            BOUNDARY : 7 , 8 , 9 , 15 , 16 , 17
+    ```
+
+    White box
+    ```
+       The tester READS the code and designs cases to cover it :
+
+            if (a > 0 && b > 0)  x = 1;
+            else                 x = 2;
+
+       STATEMENT coverage : 1 test  (a=1 , b=1)
+       BRANCH    coverage : 2 tests (1,1) and (1,-1)
+       CONDITION coverage : cases making a>0 both T and F, and b>0
+                            both T and F
+
+       COVERAGE CRITERIA
+         STATEMENT  every line executed once
+         BRANCH     every if takes both paths
+         PATH       every route through the code
+         LOOP       0 iterations , 1 , and many
+    ```
+
+    - The point that settles most answers: `white box testing cannot detect a missing requirement`, because a feature that was never coded has no code to cover — 100 per cent coverage proves nothing about it. `Black box testing cannot detect dead code` or an untested branch. They are complements, not alternatives, and `grey box` testing — with partial knowledge of the internals — sits between them and is used heavily in security testing.
 
 16. **What is software testing? Discuss effective and exhaustive testing.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
+    Answer: What software testing is
+    - `Software testing` is the process of running a program with the intention of `finding defects` — proving that what the software actually does differs from what it should do. It also measures quality and gives the confidence needed to release.
+    ```
+       Dijkstra's principle :
+       "Testing can show the PRESENCE of defects, but never their
+        ABSENCE."
+    ```
+
+    Exhaustive testing
+    - `Exhaustive testing` means testing `every possible input and every possible path` through the program. It would prove the program correct — and it is `impossible` in practice.
+    ```
+       WHY IT IS IMPOSSIBLE
+
+       Input space :
+            a single 32-bit integer input has 2^32 = 4,294,967,296
+            possible values.
+            TWO such inputs give 2^64 = 1.8 * 10^19 combinations.
+            At a million tests per second, that takes over
+            500,000 YEARS.
+
+       Path space :
+            a loop that may run 1 to 20 times, containing a 5-way
+            branch, has about 5^20 = 10^14 paths.
+            At 1 ms per path : about 3,170 YEARS.
+
+       And even exhaustive INPUT testing would not cover every
+       internal STATE, timing and concurrency combination.
+    ```
+    - The consequence: testing must always be a `sample`. The entire craft lies in choosing the sample that is most likely to find defects.
+
+    Effective testing
+    - `Effective testing` means finding the `most defects with the fewest test cases`, by choosing cases intelligently rather than exhaustively.
+    ```
+       HOW EFFECTIVENESS IS ACHIEVED
+
+       EQUIVALENCE PARTITIONING
+            Inputs that should behave the same are grouped ; ONE value
+            from each class is tested. Testing 5 and 6 adds nothing if
+            both fall in the same class.
+
+       BOUNDARY VALUE ANALYSIS
+            Most defects live at the EDGES - off-by-one errors, wrong
+            <= versus <. For a valid range 1 to 100, test
+            0 , 1 , 2 , 99 , 100 , 101.
+
+       RISK-BASED PRIORITY
+            Test the modules that are most COMPLEX, most CHANGED, most
+            USED, or most COSTLY to fail. In a bank, the interest
+            calculation is tested harder than the help screen.
+
+       DEFECT CLUSTERING (the PARETO principle)
+            About 80 per cent of defects are found in about 20 per
+            cent of the modules. Concentrate effort there.
+
+       CODE COVERAGE as a check
+            Measure statement and branch coverage to find what has NOT
+            been exercised - but note that coverage is a MINIMUM, not
+            a proof of correctness.
+
+       REGRESSION AUTOMATION
+            Automate the repeated checks so human effort goes into
+            designing NEW tests rather than re-running old ones.
+    ```
+
+    Comparison
+    ```
+       +---------------+---------------------+---------------------+
+       |               | EXHAUSTIVE          | EFFECTIVE           |
+       +---------------+---------------------+---------------------+
+       | Coverage      | every input, every  | selected classes    |
+       |               | path               | and boundaries      |
+       | Test cases    | astronomically many | manageable          |
+       | Time and cost | infinite            | affordable          |
+       | Feasible ?    | NO                  | YES                 |
+       | Result        | proof of            | high confidence,    |
+       |               | correctness         | not proof           |
+       +---------------+---------------------+---------------------+
+    ```
+    - The conclusion to state: since exhaustive testing is impossible, the aim is never "test everything" but "`test the right things`". `Equivalence partitioning` reduces the number of cases; `boundary value analysis` chooses the ones most likely to fail; and `risk-based prioritisation` decides where to spend the remaining effort.
+
 17. **How alpha testing is performed in software development?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 670 (ET: N/A)]*
+
+    Answer: What alpha testing is
+    - `Alpha testing` is the first stage of `acceptance testing`. It is carried out at the `developer's own site`, in a controlled environment, by internal staff and sometimes by selected customers, with the developers `present and watching`.
+
+    How it is performed
+    ```
+       1. ENTRY CRITERIA
+            System testing is complete, the build is stable, and the
+            product is FEATURE COMPLETE. A smoke test passes.
+
+       2. PLAN THE ALPHA TEST
+            Decide the scope, the environment, the participants and
+            the exit criteria. Prepare REAL BUSINESS SCENARIOS, not
+            just isolated function checks.
+
+       3. SET UP THE ENVIRONMENT
+            Configure a test environment at the developer's site that
+            resembles production - similar hardware, similar data
+            volumes, realistic test data.
+
+       4. SELECT THE TESTERS
+            The internal QA team, plus people from other departments
+            who did NOT build the product, and sometimes a few
+            friendly customers invited in.
+
+       5. EXECUTE IN TWO CYCLES - the usual practice
+            CYCLE 1 : the in-house QA team runs the full scenarios,
+                 using BOTH white box and black box techniques,
+                 because the code is available to them.
+            Defects are logged, prioritised and FIXED.
+            CYCLE 2 : after the fixes, the product is tested again,
+                 this time with more emphasis on business users
+                 exercising it as they actually would.
+
+       6. LOG AND TRIAGE DEFECTS
+            Every defect is recorded with severity and priority. The
+            DEVELOPERS ARE PRESENT, so many are diagnosed and fixed
+            immediately - this is the main advantage of alpha testing.
+
+       7. NON-FUNCTIONAL CHECKS
+            Performance, load, security and usability are exercised
+            under production-like conditions.
+
+       8. EXIT CRITERIA
+            No open critical or high-severity defects ; all planned
+            scenarios executed ; the product is judged fit to expose
+            to outside users.
+
+       9. SIGN OFF and move to BETA testing.
+    ```
+
+    ```mermaid
+    flowchart LR
+        A[System testing complete] --> B[Alpha cycle 1: QA team]
+        B --> C[Fix defects]
+        C --> D[Alpha cycle 2: business users]
+        D --> E[Sign off]
+        E --> F[Beta testing at user site]
+    ```
+
+    Alpha against beta
+    ```
+       ALPHA                          BETA
+       -----------------------        -----------------------
+       at the DEVELOPER'S site        at the USER'S site
+       internal staff and invited     REAL external users
+            customers
+       CONTROLLED environment         REAL, uncontrolled
+       developers PRESENT             developers ABSENT
+       white box + black box          black box only
+       many defects fixed on the      feedback collected and fixed
+            spot                           in a later release
+    ```
+    - What alpha testing is `for`: to catch the defects that would embarrass the organisation if an outsider found them, while fixing is still cheap and the developers are on hand. What it `cannot` do is reproduce the conditions of real use — slow networks, unusual data, users behaving unexpectedly. That is exactly why `beta testing` follows it.
 
 18. **(b) Explain block box testing and white box testing.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 692 (ET: N/A)]*
 
+    Answer: Black box testing
+    - `Black box testing` examines the software `only through its inputs and outputs`, with no knowledge of the internal code. The tester works from the `SRS` and asks whether the system does the right thing.
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       Also called FUNCTIONAL , BEHAVIOURAL or CLOSED BOX testing.
+       Done by TESTERS , at SYSTEM and ACCEPTANCE level.
+       No programming knowledge is needed.
+    ```
+    ```
+       TECHNIQUES
+
+       EQUIVALENCE PARTITIONING
+            Divide the input into classes that should behave alike,
+            and test ONE value from each. Testing 5 and 6 adds nothing
+            if both fall in the same class.
+
+       BOUNDARY VALUE ANALYSIS
+            Test at and around the edges, where off-by-one errors and
+            wrong < versus <= live.
+
+       DECISION TABLE   all combinations of business rules
+       STATE TRANSITION legal and illegal state changes
+       ERROR GUESSING   experience-based cases : empty input, zero,
+                        a very long string, special characters
+    ```
+    ```
+       Example : a field accepting an age between 18 and 60
+
+         CLASSES  : < 18 invalid , 18-60 valid , > 60 invalid ,
+                    non-numeric invalid
+         BOUNDARY : 17 , 18 , 19 , 59 , 60 , 61
+    ```
+    - Strength: it finds `wrong or missing functionality`, and it tests the product the way a user experiences it. Weakness: it cannot tell which parts of the code were never exercised, so `dead code` and untested branches go unnoticed.
+
+    White box testing
+    - `White box testing` tests with `full knowledge of the internal code and logic`. The tester reads the source and designs cases to exercise its statements, branches and paths. It is done by `developers`, at `unit` and `integration` level. Also called `structural`, `glass box` or `clear box` testing.
+    ```
+       COVERAGE CRITERIA
+
+         STATEMENT  every line executed at least once
+         BRANCH     every if takes both the true and false path
+         PATH       every route through the code
+         CONDITION  every sub-condition evaluated both ways
+         LOOP       0 iterations , 1 iteration , many
+    ```
+    ```
+       Example :  if (a > 0 && b > 0)  x = 1;  else  x = 2;
+
+         STATEMENT coverage : 1 test  (a=1 , b=1)
+         BRANCH    coverage : 2 tests (1,1) and (1,-1)
+         CONDITION coverage : cases making a>0 both T and F, and
+                              b>0 both T and F
+    ```
+    - Strength: it finds `logic errors`, dead code, wrong loop boundaries and untested branches, and it can be measured objectively by a coverage tool. Weakness: it `cannot find a missing requirement` — a feature that was never coded has no code to cover, so 100 per cent coverage proves nothing about it.
+
+    Comparison
+
+    | Point | Black box | White box |
+    |---|---|---|
+    | Knowledge of code | `None` | `Full` |
+    | Based on | `SRS` | `Source code` |
+    | Done by | Testers | `Developers` |
+    | Level | System, acceptance | `Unit`, integration |
+    | Finds | Missing or wrong function | Logic errors, dead code |
+    | Cannot find | Untested paths | `Missing requirements` |
+
+    - They are complements, not alternatives. `Grey box` testing, with partial knowledge of the internals, sits between them and is used heavily in security testing.
+
 19. **(a) Explain software validation, Verification and Modularity.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 696 (ET: N/A)]*
+
+    Answer: Verification
+    ```
+       "Are we building the product RIGHT ?"
+
+       Verification checks that a WORK PRODUCT matches its
+       SPECIFICATION. It is STATIC - the code need not be executed.
+
+       Methods : reviews , walkthroughs , inspections , peer review ,
+                 static analysis , desk checking.
+       Applied  : at EVERY phase - the SRS is verified against the
+                 user's stated needs, the design against the SRS, the
+                 code against the design.
+       Done by  : peers and the QA team.
+       Finds    : defects in documents and code structure, at the
+                 LOWEST cost.
+    ```
+
+    Validation
+    ```
+       "Are we building the RIGHT product ?"
+
+       Validation checks that the finished product meets the USER'S
+       ACTUAL NEED, in the real environment. It is DYNAMIC - the code
+       is EXECUTED.
+
+       Methods : black box testing , system testing , user acceptance
+                 testing , alpha and beta testing , pilot runs.
+       Applied  : mainly at the END, once the product runs.
+       Done by  : the testing team and the CUSTOMER.
+       Finds    : defects in behaviour and in fitness for purpose.
+    ```
+
+    | Point | Verification | Validation |
+    |---|---|---|
+    | Question | Building the product `right`? | Building the `right` product? |
+    | Compared with | The `specification` | The `user's real need` |
+    | Code executed? | `No` — static | `Yes` — dynamic |
+    | When | Throughout development | At the end |
+    | By whom | Peers, QA | Testers, `customer` |
+
+    - Why both are needed: a product can pass verification completely and still fail validation. If the SRS captured the wrong requirement, the code matches the specification perfectly and is still useless. `Verification checks conformance; validation checks usefulness.`
+
+    Modularity
+    - `Modularity` is the design principle of dividing a system into `separate, independent modules`, each with a single well-defined job and a clear interface. Each can be developed, tested and changed on its own.
+    ```
+                      +---------------------+
+                      |   Banking System    |
+                      +---------------------+
+                         /       |        \
+                +--------+  +---------+  +----------+
+                |Account |  |Transact-|  | Report   |
+                |Module  |  |ion Mod. |  | Module   |
+                +--------+  +---------+  +----------+
+
+       Each module hides its internal working and exposes only an
+       INTERFACE. Another module needs to know WHAT it does, not HOW.
+    ```
+
+    The two measures of good modularity
+    ```
+       COHESION - HIGH is good
+            How closely the things INSIDE one module belong together.
+            A module that only validates a PIN has high cohesion. A
+            "utility" module that validates PINs, prints reports and
+            sends email has LOW cohesion.
+
+       COUPLING - LOW is good
+            How much one module depends on another. Modules that talk
+            only through a small, well-defined interface are loosely
+            coupled ; modules that share global variables are tightly
+            coupled.
+
+       THE RULE : HIGH COHESION , LOW COUPLING.
+    ```
+
+    Why modularity matters
+    - `Maintainability` — a change stays inside one module instead of rippling through the system.
+    - `Testability` — each module can be unit tested alone, with stubs and drivers standing in for its neighbours.
+    - `Parallel development` — different people can build different modules at the same time.
+    - `Reusability` — a well-defined module can be used in another system.
+    - `Comprehensibility` — a person can understand one module without holding the whole system in mind.
+
+    - How the three connect: `modularity` makes `verification` practical, because a small module can actually be reviewed and unit tested. And `validation` remains necessary however good the modules are, because correct modules assembled to the wrong specification still give the wrong product.
 
 20. **(b) Explain the diference between black-box and White-box testing.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 696 (ET: N/A)]*
 
+    Answer: Difference between black-box and white-box testing
+
+    | Point | Black box testing | White box testing |
+    |---|---|---|
+    | Knowledge of code | `None` — the box is closed | `Full` — the source is read |
+    | Based on | The `SRS` / requirements | The `code` structure |
+    | Also called | Functional, behavioural, closed box | `Structural`, glass box, clear box |
+    | Who does it | `Testers` | `Developers` |
+    | Applied at | System, acceptance testing | `Unit`, integration testing |
+    | Programming skill | Not needed | `Required` |
+    | Finds | Wrong or missing functionality | Logic errors, dead code, untested branches |
+    | Cannot find | Untested internal paths, dead code | `Missing requirements` |
+    | Test design | Equivalence partitioning, boundary values | Statement, branch, path coverage |
+    | Effort to design | Lower | Higher — the code must be studied |
+    | Basis of "done" | All requirements exercised | A `coverage` percentage |
+
+    Black box
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       TECHNIQUES
+         EQUIVALENCE PARTITIONING - divide the input into classes
+              that behave alike ; test ONE value from each
+         BOUNDARY VALUE ANALYSIS  - test at and around the edges
+         DECISION TABLE   - all combinations of business rules
+         STATE TRANSITION - legal and illegal state changes
+         ERROR GUESSING   - experience-based cases
+
+       Example : a field accepting an age between 18 and 60
+         CLASSES  : < 18 invalid , 18-60 valid , > 60 invalid
+         BOUNDARY : 17 , 18 , 19 , 59 , 60 , 61
+    ```
+
+    White box
+    ```
+       The tester READS the code :
+
+            if (a > 0 && b > 0)  x = 1;
+            else                 x = 2;
+
+       STATEMENT coverage : 1 test  (a=1 , b=1)
+       BRANCH    coverage : 2 tests (1,1) and (1,-1)
+       CONDITION coverage : cases making a>0 both T and F, and
+                            b>0 both T and F
+
+       COVERAGE CRITERIA
+         STATEMENT  every line executed once
+         BRANCH     every if takes both paths
+         PATH       every route through the code
+         LOOP       0 iterations , 1 iteration , many
+    ```
+
+    - The decisive point: `white box testing cannot detect a missing requirement`, because a feature that was never coded has no code to cover — even 100 per cent coverage proves nothing about it. `Black box testing cannot detect dead code` or an untested branch. The two are complements; `grey box` testing, with partial knowledge of the internals, sits between them and is used heavily in security testing.
+
 21. **Software testing কত প্রকার ও কী কী? Testing এর ক্ষেত্রে Boundary Value Analysis (BVA) এবং Equivalence Partitioning কীভাবে কাজ করে?** *[Software Assistant Programmer 13.10.2022 compact it 708 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) Types of software testing
+
+    By technique
+    ```
+       BLACK BOX  - no knowledge of the code ; tested through inputs
+                    and outputs, from the SRS
+       WHITE BOX  - full knowledge of the code ; statements, branches
+                    and paths are exercised
+       GREY BOX   - partial knowledge ; used heavily in security work
+    ```
+
+    By level
+    ```
+       UNIT         one module alone            by developers
+       INTEGRATION  modules working together    by developers
+       SYSTEM       the whole product vs SRS    by the QA team
+       ACCEPTANCE   business fitness            by the CUSTOMER
+                    (alpha , beta)
+    ```
+
+    By execution
+    ```
+       STATIC   - the code is NOT run : reviews, walkthroughs,
+                  inspections, static analysis
+       DYNAMIC  - the code IS run : all the levels above
+    ```
+
+    By purpose
+    ```
+       FUNCTIONAL      does it do the RIGHT THING ?
+            smoke , sanity , regression , unit , integration , system ,
+            acceptance
+
+       NON-FUNCTIONAL  does it do it WELL ENOUGH ?
+            performance , LOAD (expected load) , STRESS (beyond the
+            limit) , security , usability , compatibility ,
+            reliability , recovery , scalability
+
+       MAINTENANCE
+            regression testing after a change ; confirmation testing
+            that a specific fix works
+    ```
+
+    By method
+    ```
+       MANUAL     - a human executes the cases
+       AUTOMATED  - a tool executes them ; essential for regression
+    ```
+
+    Boundary Value Analysis
+    - `Boundary Value Analysis (BVA)` tests at and just around the `edges` of an input range, because that is where most defects live — off-by-one errors, and `<` written where `<=` was meant.
+    ```
+       For a valid range  MIN  to  MAX , test :
+
+            MIN - 1     just below      (invalid)
+            MIN         the boundary    (valid)
+            MIN + 1     just inside     (valid)
+            MAX - 1     just inside     (valid)
+            MAX         the boundary    (valid)
+            MAX + 1     just above      (invalid)
+    ```
+    ```
+       Example : a field accepting an age of 18 to 60
+
+            17  18  19  ............  59  60  61
+             ^   ^   ^                 ^   ^   ^
+          invalid valid              valid   invalid
+
+       6 test cases replace 44 - and they are the 6 most likely to
+       fail.
+    ```
+
+    Equivalence Partitioning
+    - `Equivalence Partitioning` divides the input into `classes whose members should all behave the same way`, and tests only `one value` from each class. If one member of a class works, the others are assumed to work too.
+    ```
+       Example : the same age field, 18 to 60
+
+            CLASS 1 : age < 18          INVALID   -> test 10
+            CLASS 2 : 18 <= age <= 60   VALID     -> test 35
+            CLASS 3 : age > 60          INVALID   -> test 75
+            CLASS 4 : non-numeric       INVALID   -> test "abc"
+            CLASS 5 : empty             INVALID   -> test ""
+
+       5 test cases instead of thousands.
+    ```
+
+    How they work together
+    ```
+       EQUIVALENCE PARTITIONING reduces the NUMBER of cases by
+            grouping inputs that behave alike.
+       BOUNDARY VALUE ANALYSIS chooses WHICH values to take - the
+            ones at the edges of those classes, where defects
+            concentrate.
+
+       Used together they give small, high-yield test suites :
+
+            Classes  : <18 , 18-60 , >60
+            Boundaries : 17 , 18 , 19 , 59 , 60 , 61
+            Plus one typical value from the middle : 35
+    ```
+    - The reason both exist: `exhaustive testing is impossible`, so the whole craft is choosing a small sample most likely to expose defects. Equivalence partitioning cuts the sample size; boundary value analysis makes the remaining cases the most productive ones.
 
 22. **(খ) Quality Control কাকে বলে? Quality review process কীভাবে কাজ করে?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) What Quality Control is
+    - `Quality Control (QC)` is the set of activities that `inspect and test the finished work product` to find defects and confirm that it meets the required standards. It is `product-oriented` and `detective` — it finds defects that already exist.
+    ```
+       SQA      PROCESS oriented , PREVENTIVE
+                standards, audits, training, process improvement.
+                Aim : stop defects being INTRODUCED.
+
+       QC       PRODUCT oriented , DETECTIVE
+                inspection, review, testing of the work product.
+                Aim : FIND defects that are already there.
+
+       TESTING  a SUBSET of QC - executing the software to find
+                failures.
+    ```
+    - QC activities: code review and inspection, walkthroughs, all levels of testing (unit, integration, system, acceptance), defect logging and tracking, and checking documents against standards.
+
+    How the quality review process works
+    ```mermaid
+    flowchart LR
+        A[Planning] --> B[Preparation]
+        B --> C[Review meeting]
+        C --> D[Rework]
+        D --> E[Follow-up]
+        E --> F{Exit criteria met?}
+        F -->|No| B
+        F -->|Yes| G[Approved]
+    ```
+    ```
+       1. PLANNING
+            Choose the work product - SRS , design document , code ,
+            test cases. Appoint the roles :
+                 MODERATOR - runs the review, keeps it on track
+                 AUTHOR    - wrote the work product ; does NOT defend it
+                 REVIEWERS - the peers who examine it
+                 SCRIBE    - records every defect found
+            Fix the entry criteria, the checklist and the schedule.
+
+       2. KICK-OFF
+            Distribute the document and the checklist ; explain the
+            objectives.
+
+       3. INDIVIDUAL PREPARATION
+            Each reviewer studies the document ALONE and lists the
+            defects found. THIS IS WHERE MOST DEFECTS ARE ACTUALLY
+            FOUND - not in the meeting.
+
+       4. REVIEW MEETING
+            The findings are pooled, discussed and logged.
+            THE GOLDEN RULE : the meeting FINDS defects, it does NOT
+            FIX them, and it examines the PRODUCT, never the PERSON.
+            A meeting that drifts into solving problems, or into
+            criticising the author, has failed.
+
+       5. REWORK
+            The AUTHOR corrects the defects.
+
+       6. FOLLOW-UP
+            The moderator verifies that every logged defect has been
+            addressed. If the exit criteria are not met, the review is
+            repeated.
+    ```
+
+    Types of review
+    ```
+       INFORMAL REVIEW  a colleague reads it. Cheap, undocumented.
+       WALKTHROUGH      the AUTHOR leads and explains the document to
+                        the reviewers. Good for education and for
+                        getting a shared understanding.
+       TECHNICAL REVIEW peers with technical expertise assess it,
+                        often for a design decision.
+       INSPECTION       the MOST FORMAL. A trained moderator, defined
+                        roles, entry and exit criteria, checklists and
+                        METRICS. It finds the most defects, and is the
+                        most expensive.
+    ```
+
+    Why reviews matter
+    ```
+       Cost of fixing a defect, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       A review of the SRS acts at the FAR LEFT of this table. This is
+       why reviewing a requirements document is the single most
+       cost-effective quality activity available.
+    ```
+    - The metrics collected from reviews — defects found per page, defects per hour of preparation, and where in the life cycle each defect originated — feed back into `SQA` and drive process improvement. That is the link between `QC` (finding this defect) and `SQA` (stopping the next one).
+
 23. **What is black box testing? Consider a program which computes the square root of an input integer between 0 and 5000. Determine the equivalence class test cases. Determine the test cases using boundary value analysis also.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
+
+    Answer: What black box testing is
+    - `Black box testing` examines the software `only through its inputs and outputs`, with no knowledge of the internal code. The tester works from the `SRS` and asks whether the system does the right thing.
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       Also called FUNCTIONAL , BEHAVIOURAL or CLOSED BOX testing.
+       Done by TESTERS ; no programming knowledge needed.
+       Techniques : equivalence partitioning , boundary value
+            analysis , decision tables , state transition , error
+            guessing.
+    ```
+
+    The program
+    ```
+       Computes the SQUARE ROOT of an input INTEGER between 0 and 5000.
+
+            VALID input range :  0 <= n <= 5000
+    ```
+
+    Equivalence class test cases
+    ```
+       The input is divided into classes whose members should all
+       behave the same way. ONE value is tested from each class.
+
+       +-------+---------------------------+----------+-------------+
+       | Class | Description               | Valid?   | Test value  |
+       +-------+---------------------------+----------+-------------+
+       |  EC1  | n < 0                     | INVALID  |   -25       |
+       |  EC2  | 0 <= n <= 5000            | VALID    |  2500       |
+       |  EC3  | n > 5000                  | INVALID  |  6000       |
+       |  EC4  | non-integer (real number) | INVALID  |    12.7     |
+       |  EC5  | non-numeric / character   | INVALID  |  "abc"      |
+       |  EC6  | empty input               | INVALID  |   ""        |
+       +-------+---------------------------+----------+-------------+
+    ```
+    ```
+       EXPECTED RESULTS
+
+         n = -25   -> error : "input must not be negative"
+         n = 2500  -> 50           (sqrt of 2500)
+         n = 6000  -> error : "input must not exceed 5000"
+         n = 12.7  -> error : "input must be an integer"
+         n = "abc" -> error : "input must be numeric"
+         n = ""    -> error : "input required"
+
+       6 test cases replace 5001 valid inputs plus every invalid one.
+    ```
+
+    Boundary value test cases
+    ```
+       Test at and just around the edges of the valid range, because
+       that is where off-by-one errors and wrong < versus <= live.
+
+       Valid range : MIN = 0 , MAX = 5000
+
+       +--------+---------------+----------+---------------------+
+       | Value  | Position      | Valid?   | Expected result     |
+       +--------+---------------+----------+---------------------+
+       |   -1   | MIN - 1       | INVALID  | error message       |
+       |    0   | MIN           | VALID    | 0                   |
+       |    1   | MIN + 1       | VALID    | 1                   |
+       | 2500   | typical value | VALID    | 50                  |
+       | 4999   | MAX - 1       | VALID    | 70.7036...          |
+       | 5000   | MAX           | VALID    | 70.7107...          |
+       | 5001   | MAX + 1       | INVALID  | error message       |
+       +--------+---------------+----------+---------------------+
+    ```
+    ```
+       VERIFICATION of the expected values :
+
+            sqrt(0)    = 0
+            sqrt(1)    = 1
+            sqrt(2500) = 50            since 50 * 50 = 2500
+            sqrt(4999) = 70.70360...
+            sqrt(5000) = 70.71068...   since 70.71068^2 = 5000.0
+    ```
+
+    The two together
+    ```
+       EQUIVALENCE PARTITIONING reduces the NUMBER of cases by
+            grouping inputs that behave alike.
+       BOUNDARY VALUE ANALYSIS chooses WHICH values to use - the ones
+            at the edges, where defects concentrate.
+
+       COMBINED MINIMUM SUITE :
+            -1 , 0 , 1 , 2500 , 4999 , 5000 , 5001 , 12.7 , "abc" , ""
+            -> 10 test cases for a program with 5001 valid inputs.
+    ```
+    - The defect these cases are hunting: a programmer who wrote `if (n < 5000)` instead of `if (n <= 5000)`. The value `5000` — and only that value — exposes it. That single example is the whole argument for boundary value analysis.
 
 24. **Definition of Gray-box testing and Unit testing.** *[EGCB Assistant Engineer (CSE) 2022 compact it 715 (ET: BUET)]*
 
+    Answer: Grey-box testing
+    - `Grey-box testing` is testing with `partial knowledge` of the internal structure. The tester knows the architecture, the database schema and the interfaces, but not the full source code. It sits between black box and white box.
+    ```
+       BLACK BOX : sees NOTHING inside      - tests from the SRS
+       GREY BOX  : sees SOME of the inside  - architecture, database
+                   schema, API contracts
+       WHITE BOX : sees EVERYTHING          - tests from the code
+    ```
+    ```
+       Example : testing a web login.
+
+         BLACK BOX - type a wrong password , check the error message.
+         GREY BOX  - knowing the users table has a "failed_attempts"
+                     column, type a wrong password THREE times, then
+                     CHECK THE DATABASE that the counter incremented
+                     and the account locked.
+         WHITE BOX - read the authentication function and design cases
+                     to cover every branch in it.
+    ```
+    - Where it is used: `integration testing`, `API testing`, `database testing`, `web application testing` and above all `security testing` — a penetration tester who has been given the architecture but not the source is doing grey-box work.
+    - Advantages: it combines the user's viewpoint with enough inside knowledge to design far sharper cases, and it verifies effects the user cannot see, such as database state. Disadvantage: with only partial visibility, full path coverage is impossible, so some internal paths still go untested.
+
+    Unit testing
+    - `Unit testing` tests the `smallest testable piece` of software — one function, method or class — `in isolation`, to prove it works by itself.
+    ```
+       Who   : the DEVELOPER who wrote it
+       When  : as soon as the unit is coded, BEFORE integration
+       Type  : WHITE BOX - the code is visible
+       Aim   : find logic errors, wrong calculations and bad boundary
+               handling at the cheapest possible point
+    ```
+    ```
+       A unit rarely stands alone, so its neighbours are FAKED :
+
+            DRIVER - a dummy CALLER that invokes the unit with test
+                     data. Needed to test a LOWER-level unit.
+            STUB   - a dummy CALLEE returning a fixed value. Needed to
+                     test an UPPER-level unit.
+
+            +--------+        +----------+        +--------+
+            | DRIVER | -----> |   UNIT   | -----> |  STUB  |
+            +--------+        |UNDER TEST|        +--------+
+                              +----------+
+    ```
+    ```
+       Example : calculateInterest(principal, rate, time)
+
+            (1000 , 5 , 1)  -> expect 50
+            (1000 , 0 , 1)  -> expect 0          zero rate
+            (0 , 5 , 1)     -> expect 0          zero principal
+            (-1000 , 5 , 1) -> expect an error   negative principal
+    ```
+    - Frameworks: `JUnit` for Java, `NUnit` for .NET, `pytest` for Python, `Google Test` for C++. These make the tests automatic, so the whole suite is re-run on every build as a `regression` check.
+    - Why it matters most: a defect found in unit testing costs about a tenth of what the same defect costs in system testing, and a hundredth of what it costs after release. A maintained unit-test suite is also what makes `refactoring` safe — without it, developers stop improving the code and the system ossifies.
+
 25. **Integration testing of pharmaceutical automation software?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
+
+    Answer: What integration testing is
+    - `Integration testing` checks that two or more modules `work together correctly` after each has passed its own unit tests. It finds `interface` defects — wrong data format, mismatched parameters, wrong units, bad timing — which unit testing cannot detect by definition.
+
+    Pharmaceutical automation software — what the modules are
+    ```
+       +----------------+   +------------------+   +----------------+
+       | Recipe / Batch |-->| Process Control  |-->|  PLC / Device  |
+       | Management     |   | (weighing,mixing)|   |  Interface     |
+       +----------------+   +------------------+   +----------------+
+               |                     |                     |
+               v                     v                     v
+       +----------------+   +------------------+   +----------------+
+       | Inventory      |   | Quality Control  |   | Audit Trail /  |
+       | Management     |   | (QC) Module      |   | Reporting      |
+       +----------------+   +------------------+   +----------------+
+    ```
+
+    The integration test cases that matter
+    ```
+       1. RECIPE -> PROCESS CONTROL
+            Does a recipe of 250.00 mg per tablet reach the control
+            module as 250.00 mg and NOT 250 g or 0.25 g ?
+            UNIT MISMATCH is the classic interface defect, and in a
+            pharmaceutical plant it is a patient-safety defect.
+
+       2. PROCESS CONTROL -> PLC / DEVICE
+            Is the mixing time, temperature and speed transmitted
+            correctly ? Does the device ACKNOWLEDGE ? What happens if
+            the acknowledgement never arrives ?
+
+       3. SENSOR -> CONTROL MODULE
+            Are temperature and weight readings received at the right
+            frequency, with the right precision and the right sign ?
+            Does an out-of-range reading raise an ALARM and stop the
+            batch ?
+
+       4. PROCESS -> INVENTORY
+            Is raw material deducted exactly ONCE per batch ? A double
+            deduction or a missed one corrupts stock records.
+
+       5. QC MODULE -> BATCH RELEASE
+            A batch that FAILS quality control must be BLOCKED from
+            release. Test the negative path explicitly.
+
+       6. ALL MODULES -> AUDIT TRAIL
+            Every action must be logged with user, timestamp and old
+            and new values. This is a REGULATORY requirement, not a
+            convenience.
+
+       7. ERROR AND RECOVERY PATHS
+            Power failure mid-batch , network loss to the PLC ,
+            database unavailable. Does the system fail SAFE - stop the
+            equipment, preserve the batch record, and recover to a
+            consistent state ?
+    ```
+
+    The approach
+    ```
+       BOTTOM-UP is usually chosen for plant automation :
+
+            Test device drivers and the PLC interface FIRST, with
+            DRIVERS standing in for the callers, because these are the
+            components that touch real equipment and carry the
+            greatest risk.
+            Then integrate the control layer, then the management
+            layer.
+
+       Alternatives :
+         TOP-DOWN  - start at recipe management, use STUBS for the
+              devices. Finds control-flow flaws early.
+         SANDWICH  - both at once ; used on large systems.
+         BIG BANG  - unsuitable here : when it fails, nobody can tell
+              which interface caused it, and the cost of a wrong
+              command reaching real equipment is unacceptable.
+
+       SIMULATORS are essential - the PLC and the equipment are
+       replaced by a simulator so that a wrong command cannot damage
+       machinery or waste material during testing.
+    ```
+
+    The regulatory dimension
+    ```
+       Pharmaceutical software falls under GxP and 21 CFR Part 11.
+       Integration testing must therefore be part of a documented
+       VALIDATION exercise :
+
+            IQ - Installation Qualification : installed correctly
+            OQ - Operational Qualification  : operates per
+                 specification, in the intended range
+            PQ - Performance Qualification  : performs consistently in
+                 actual production
+
+       Every test case, its expected result, its actual result and
+       its approval must be RECORDED and RETAINED. An undocumented
+       test does not exist as far as an auditor is concerned.
+    ```
+    - The point that distinguishes this domain: in ordinary business software an integration defect produces a wrong report; here it can produce a wrong `dose`. So the test design concentrates on `units of measurement`, `alarm and interlock paths`, `audit trail completeness` and `safe failure`, and every one of those is tested with negative cases, not merely happy paths.
 
 26. **(ক) Software এর \alpha-version ও \beta-version কি?** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Alpha version
+    - The `alpha version` is the first reasonably complete build of the software, tested `inside the developer's own organisation`. It is feature-complete but still contains many known defects.
+    ```
+       Where    : at the DEVELOPER'S site , controlled environment
+       Who      : internal QA staff, other departments, sometimes a
+                  few invited customers
+       Present  : the DEVELOPERS watch and fix defects on the spot
+       Testing  : BOTH white box and black box, since the code is
+                  available
+       State    : unstable ; crashes and missing pieces are expected
+       Purpose  : catch the defects that would embarrass the company
+                  if an outsider found them
+    ```
+
+    Beta version
+    - The `beta version` is the near-final build released to a limited number of `real users outside the organisation`, who use it in their own environment and report problems back.
+    ```
+       Where    : at the USER'S site , the REAL environment
+       Who      : REAL external users - a public or closed beta
+       Present  : NO developer is present
+       Testing  : BLACK BOX only - users cannot see the code
+       State    : fairly stable ; most major defects already fixed
+       Purpose  : find the defects that only real conditions produce,
+                  and gather feedback before general release
+    ```
+
+    Comparison
+
+    | Point | Alpha version | Beta version |
+    |---|---|---|
+    | Where tested | `Developer's` site | `User's` own site |
+    | Who tests | Internal staff, invited customers | `Real external users` |
+    | Environment | Controlled, lab-like | `Real`, uncontrolled |
+    | Developer present | `Yes` | `No` |
+    | Stability | Unstable, many defects | Fairly stable |
+    | Testing type | White box + black box | `Black box` only |
+    | Order | `First` | After alpha |
+    | Defect fixing | Immediate, on the spot | Collected, fixed in a later build |
+    | Also called | In-house acceptance testing | Field testing, pre-release |
+
+    The sequence
+    ```mermaid
+    flowchart LR
+        A[System testing] --> B[ALPHA version: internal]
+        B --> C[Fix defects]
+        C --> D[BETA version: real users]
+        D --> E[Fix and finalise]
+        E --> F[Final release]
+    ```
+    - The essential contrast: `alpha testing is controlled and observed; beta testing is uncontrolled and unobserved`. That is exactly why both are needed. Alpha finds what careful testing reveals; beta finds what only real users on real networks with real data can produce — slow connections, old browsers, unexpected input, and people using the product in ways nobody anticipated.
+    - Some organisations add a `gamma version` — a final release-candidate check in which no new features are added and only critical defects are fixed.
+
 27. **(গ) Unit testing, Integration testing এবং Beta testing বলতে কি বুঝায়?** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 768 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) Unit testing
+    - `Unit testing` tests the `smallest testable piece` of software — one function, method or class — `in isolation`, to prove it works on its own.
+    ```
+       Who   : the DEVELOPER who wrote it
+       When  : as soon as the unit is coded, BEFORE integration
+       Type  : WHITE BOX - the code is visible
+       Aim   : find logic errors, wrong calculations and bad boundary
+               handling at the cheapest possible point
+    ```
+    ```
+       Neighbours are FAKED so the unit stands alone :
+            DRIVER - a dummy CALLER that invokes the unit
+            STUB   - a dummy CALLEE returning a fixed value
+
+       Example : calculateInterest(principal, rate, time)
+            (1000 , 5 , 1)  -> expect 50
+            (1000 , 0 , 1)  -> expect 0
+            (-1000 , 5 , 1) -> expect an error
+    ```
+    - Frameworks: `JUnit`, `NUnit`, `pytest`, `Google Test`. Automated unit tests become the `regression suite` re-run on every build.
+
+    Integration testing
+    - `Integration testing` checks that two or more modules `work together correctly` after each has passed its own unit tests. It finds `interface` defects — wrong data format, mismatched parameters, wrong units — which unit testing cannot detect by definition.
+    ```
+       APPROACHES
+         BIG BANG   everything at once. Simple, but a failure gives no
+              clue which interface caused it.
+         TOP-DOWN   start at the top module, add lower ones ; needs
+              STUBS. Control-flow flaws found early.
+         BOTTOM-UP  start at the lowest modules ; needs DRIVERS.
+              Utilities proved first.
+         SANDWICH   both directions at once, meeting in the middle.
+    ```
+    ```
+       Example : calculateInterest() is called by AccountModule, which
+       writes to DatabaseModule. Does the amount arrive with the right
+       number of DECIMAL PLACES, in the right CURRENCY field, in the
+       right FORMAT ?
+    ```
+
+    Beta testing
+    - `Beta testing` is the second stage of acceptance testing. A near-final build is given to a limited number of `real users outside the organisation`, who use it in their `own environment` with `no developer present` and report problems back.
+    ```
+       Where   : at the USER'S site , the REAL environment
+       Who     : REAL external users - a public or closed beta
+       Type    : BLACK BOX only - users cannot see the code
+       Purpose : find the defects that only real conditions produce -
+                 slow networks, old browsers, unusual data, and users
+                 behaving in ways nobody anticipated
+       Follows : ALPHA testing, which is done at the developer's site
+                 with the developers watching
+    ```
+
+    Where they sit in the sequence
+    ```mermaid
+    flowchart LR
+        A[UNIT: one module] --> B[INTEGRATION: modules together]
+        B --> C[SYSTEM: whole product vs SRS]
+        C --> D[ACCEPTANCE: alpha then BETA]
+        D --> E[Release]
+    ```
+    - The reason all three are needed: unit testing proves each module is right `alone`; integration testing proves the assumptions modules make about `each other` are right; and beta testing proves the finished product survives `the real world`, which no controlled test environment can reproduce.
 
 28. **(i) Black Box testing and White Box testing এর মধ্যে পার্থক্য লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 784 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Difference between Black Box testing and White Box testing
+
+    | Point | Black box testing | White box testing |
+    |---|---|---|
+    | Knowledge of code | `None` — the box is closed | `Full` — the source is read |
+    | Based on | The `SRS` / requirements | The `code` structure |
+    | Also called | Functional, behavioural, closed box | `Structural`, glass box, clear box |
+    | Who does it | `Testers` | `Developers` |
+    | Applied at | System, acceptance testing | `Unit`, integration testing |
+    | Programming skill | Not needed | `Required` |
+    | Finds | Wrong or missing functionality | Logic errors, dead code, untested branches |
+    | Cannot find | Untested internal paths, dead code | `Missing requirements` |
+    | Test design | Equivalence partitioning, boundary values | Statement, branch, path coverage |
+    | Design effort | Lower | Higher — the code must be studied |
+    | "Done" measured by | All requirements exercised | A `coverage` percentage |
+
+    Black box
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       TECHNIQUES
+         EQUIVALENCE PARTITIONING - group inputs that behave alike ;
+              test ONE value from each class
+         BOUNDARY VALUE ANALYSIS  - test at and around the edges
+         DECISION TABLE   - all combinations of business rules
+         STATE TRANSITION - legal and illegal state changes
+         ERROR GUESSING   - experience-based cases
+
+       Example : a field accepting an age of 18 to 60
+            CLASSES  : < 18 invalid , 18-60 valid , > 60 invalid
+            BOUNDARY : 17 , 18 , 19 , 59 , 60 , 61
+    ```
+
+    White box
+    ```
+       The tester READS the code :
+
+            if (a > 0 && b > 0)  x = 1;
+            else                 x = 2;
+
+       STATEMENT coverage : 1 test  (a=1 , b=1)
+       BRANCH    coverage : 2 tests (1,1) and (1,-1)
+       CONDITION coverage : cases making a>0 both T and F, and
+                            b>0 both T and F
+
+       COVERAGE CRITERIA
+         STATEMENT  every line executed once
+         BRANCH     every if takes both paths
+         PATH       every route through the code
+         LOOP       0 iterations , 1 , and many
+    ```
+
+    - The decisive point: `white box testing cannot detect a missing requirement` — a feature never coded has no code to cover, so even 100 per cent coverage says nothing about it. `Black box testing cannot detect dead code` or an unexercised branch. They are complements; `grey box` testing, with partial knowledge of the internals, sits between them and is used heavily in security testing.
+
 29. **(a) Distinguish between black box and white box testing. Give examples of both type of testing** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
+
+    Answer: Distinction between black box and white box testing
+
+    | Point | Black box testing | White box testing |
+    |---|---|---|
+    | Knowledge of code | `None` | `Full` |
+    | Based on | The `SRS` / requirements | The `source code` |
+    | Also called | Functional, behavioural, closed box | `Structural`, glass box, clear box |
+    | Who does it | `Testers` | `Developers` |
+    | Applied at | System, acceptance | `Unit`, integration |
+    | Programming skill | Not needed | `Required` |
+    | Finds | Wrong or missing functionality | Logic errors, dead code, untested branches |
+    | Cannot find | Untested paths, dead code | `Missing requirements` |
+    | Basis of "done" | All requirements exercised | A `coverage` percentage |
+
+    Examples of black box testing
+    ```
+       1. LOGIN FORM
+            Enter a valid username and password  -> expect the home
+                 page.
+            Enter a valid username and a wrong password -> expect
+                 "Invalid credentials".
+            Leave both blank -> expect "Field required".
+            The tester never looks at the authentication code.
+
+       2. AGE FIELD accepting 18 to 60 - EQUIVALENCE PARTITIONING
+            CLASS 1 : age < 18        invalid  -> test 10
+            CLASS 2 : 18 to 60        valid    -> test 35
+            CLASS 3 : age > 60        invalid  -> test 75
+            CLASS 4 : non-numeric     invalid  -> test "abc"
+
+       3. THE SAME FIELD - BOUNDARY VALUE ANALYSIS
+            17 , 18 , 19 , 59 , 60 , 61
+            The value 18 exposes  if (age > 18)  written where
+            if (age >= 18)  was meant.
+
+       4. ATM WITHDRAWAL
+            Withdraw 500 from a balance of 1000 -> expect success,
+                 balance 500.
+            Withdraw 2000 from 1000 -> expect "Insufficient balance".
+            Withdraw 0 , withdraw a negative amount , withdraw an
+                 amount that is not a multiple of 500.
+    ```
+
+    Examples of white box testing
+    ```
+       1. STATEMENT AND BRANCH COVERAGE
+
+            int grade(int m) {
+                if (m >= 80)      return 1;   // A
+                else if (m >= 60) return 2;   // B
+                else              return 3;   // C
+            }
+
+            STATEMENT coverage needs 3 tests : m = 90 , 70 , 40
+            BRANCH    coverage needs the same 3 - every if takes both
+                 its true and false path across those cases.
+
+       2. CONDITION COVERAGE
+
+            if (a > 0 && b > 0)  x = 1;  else  x = 2;
+
+            Cases must make  a > 0  both TRUE and FALSE, and
+                             b > 0  both TRUE and FALSE :
+                 (1 , 1)   (1 , -1)   (-1 , 1)
+
+       3. LOOP COVERAGE
+
+            for (i = 0; i < n; i++)  sum += a[i];
+
+            Test n = 0 (loop never runs) , n = 1 (runs once) ,
+                 n = 100 (runs many times).
+            n = 0 is the case that exposes an uninitialised sum.
+
+       4. DEAD CODE DETECTION
+            A coverage tool reports that the else branch of a
+            particular if was NEVER executed by any test - either the
+            test suite is incomplete, or that branch is unreachable
+            and should be deleted.
+    ```
+
+    - Why both are required: white box testing `cannot find a missing requirement`, because a feature that was never coded has no code to cover. Black box testing `cannot find dead code` or an untested branch. `Grey box` testing sits between them — partial knowledge of the architecture and database, used heavily in security and API testing.
 
 30. **Software development এ Black Box Testing বলতে কি বুঝায়?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
 
+    Answer: (Answered in English, as required for IT topics.) What black box testing is
+    - `Black box testing` examines the software `only through its inputs and outputs`, with no knowledge of the internal code. The tester works from the `SRS` and asks one question: does the system do the `right thing`?
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       Also called FUNCTIONAL , BEHAVIOURAL or CLOSED BOX testing.
+       Done by TESTERS , at SYSTEM and ACCEPTANCE level.
+       No programming knowledge is needed.
+    ```
+
+    Techniques
+    ```
+       EQUIVALENCE PARTITIONING
+            Divide the input into classes that should behave alike ;
+            test ONE value from each. Testing 5 and 6 adds nothing if
+            both fall in the same class.
+
+       BOUNDARY VALUE ANALYSIS
+            Test at and around the edges, where off-by-one errors and
+            wrong < versus <= live.
+
+       DECISION TABLE      all combinations of business rules
+       STATE TRANSITION    legal and illegal state changes
+       ERROR GUESSING      experience-based : empty input, zero, a
+                           very long string, special characters
+       USE CASE TESTING    end-to-end business scenarios
+    ```
+
+    Example
+    ```
+       A field accepting an age between 18 and 60.
+
+       EQUIVALENCE CLASSES
+            < 18        invalid  -> test 10
+            18 to 60    valid    -> test 35
+            > 60        invalid  -> test 75
+            non-numeric invalid  -> test "abc"
+            empty       invalid  -> test ""
+
+       BOUNDARY VALUES
+            17 , 18 , 19 , 59 , 60 , 61
+
+       The value 18 is what exposes  if (age > 18)  written where
+       if (age >= 18)  was intended.
+    ```
+
+    Advantages
+    - The tester needs `no programming knowledge`, so business users can take part.
+    - It tests the product `as the user experiences it`.
+    - It is independent of the implementation, so tests survive a rewrite of the code.
+    - It can be designed as soon as the `SRS` exists, in parallel with coding.
+    - It finds `wrong or missing functionality` — which white box testing cannot.
+
+    Disadvantages
+    - It cannot tell which parts of the code were `never exercised`, so dead code and untested branches go unnoticed.
+    - Without visibility, some cases are `redundant` while others are missed.
+    - `Exhaustive` input testing is impossible, so the choice of cases decides how effective it is.
+    - It cannot locate the cause of a failure, only its symptom.
+
+    - The contrast to state: `white box` testing works from the code and measures `coverage`, finding logic errors and dead code but never a missing requirement. `Grey box` testing sits between the two, with partial knowledge of the architecture and database, and is used heavily in security and API testing. Black box and white box are complements, not alternatives.
+
 31. **Briefly describe Unit testing, Smoke testing and Stress testing in software engineering.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 914 (ET: N/A)]*
+
+    Answer: Unit testing
+    - `Unit testing` tests the `smallest testable piece` of software — one function, method or class — `in isolation`.
+    ```
+       Who   : the DEVELOPER who wrote it
+       When  : as soon as the unit is coded, BEFORE integration
+       Type  : WHITE BOX - the code is visible
+       Aim   : find logic errors, wrong calculations and bad boundary
+               handling at the cheapest possible point
+    ```
+    ```
+       Neighbours are FAKED so the unit stands alone :
+            DRIVER - a dummy CALLER that invokes the unit
+            STUB   - a dummy CALLEE returning a fixed value
+
+       Example : calculateInterest(1000 , 5 , 1) -> expect 50
+                 calculateInterest(1000 , 0 , 1) -> expect 0
+                 calculateInterest(-1000 , 5 , 1) -> expect an error
+    ```
+    - Frameworks: `JUnit`, `NUnit`, `pytest`, `Google Test`. The automated suite becomes the `regression` check re-run on every build, and it is what makes `refactoring` safe.
+
+    Smoke testing
+    - `Smoke testing` is a quick, shallow check that a new build is `stable enough to be worth testing at all`. It runs only the few most critical paths.
+    ```
+       Also called BUILD VERIFICATION TESTING.
+
+       Characteristics : WIDE but SHALLOW - it touches many features,
+            each only superficially. It takes minutes, not hours.
+       Run on          : EVERY new build, before detailed testing.
+       If it FAILS     : the build is REJECTED and sent back to the
+            developers. No further testing is attempted, because
+            detailed testing of a broken build wastes the whole team's
+            day.
+
+       Example, for a banking application :
+            does the application start ?
+            can a user log in ?
+            does the account list load ?
+            can one transaction be posted ?
+    ```
+    ```
+       SMOKE vs SANITY - the pair examiners test
+
+         SMOKE  : WIDE and SHALLOW. Does the whole build work at all ?
+                  Run on EVERY build.
+         SANITY : NARROW and DEEP. Does this ONE fixed defect actually
+                  work now ? Run after a small change.
+    ```
+    - The name comes from hardware: switch the board on and see whether smoke comes out. If it does, there is no point measuring anything else.
+
+    Stress testing
+    - `Stress testing` pushes the system `beyond its specified limits` to find its breaking point and to check that it fails `safely` and `recovers`.
+    ```
+       It answers three questions :
+            WHERE does it break ?
+            HOW does it break - gracefully, or with data corruption ?
+            Does it RECOVER when the load is removed ?
+
+       Methods : far more concurrent users than specified ; huge data
+            volumes ; starving it of memory or disk ; cutting the
+            network or the database mid-transaction.
+
+       Example : a system specified for 1000 concurrent users is
+            driven to 2000 , 5000 , 10000. The findings wanted are
+            that it degrades gradually, shows a clear error rather
+            than corrupting data, and returns to normal once the load
+            drops.
+    ```
+    ```
+       LOAD vs STRESS - the other pair examiners test
+
+         LOAD   : the EXPECTED load. Does it MEET the target ?
+         STRESS : BEYOND the limit. Does it FAIL GRACEFULLY ?
+
+       Both are NON-FUNCTIONAL tests.
+    ```
+    - How the three relate in a project's flow: `unit tests` run on every commit, a `smoke test` gates every build, and `stress testing` is done once the system is functionally stable — there is no value in stress testing a build that cannot pass its smoke test.
 
 32. **Write different between Alpha and Beta testing.** *[BREB Assistant General Manager (IT) 2021 compact it 933-934 (ET: N/A)]*
 
+    Answer: Difference between alpha and beta testing
+
+    | Point | Alpha testing | Beta testing |
+    |---|---|---|
+    | Where | At the `developer's` site | At the `user's` own site |
+    | Who tests | Internal QA staff, other departments, a few invited customers | `Real external users` |
+    | Environment | `Controlled`, lab-like | `Real`, uncontrolled |
+    | Developer present | `Yes`, watching | `No` |
+    | Order | `First` | `After` alpha |
+    | Testing type | White box + black box | `Black box` only |
+    | Stability of the build | Unstable, many known defects | Fairly stable |
+    | Defect fixing | Often `immediate`, on the spot | Collected and fixed in a later build |
+    | Purpose | Catch defects before outsiders see the product | Find defects that only `real use` produces |
+    | Reliability and usability | Not the main focus | `Checked in depth` |
+    | Duration | Longer, several cycles | A few weeks of real use |
+    | Also called | In-house acceptance testing | Field testing, pre-release testing |
+
+    Alpha testing
+    ```
+       Done at the DEVELOPER'S site, in a controlled environment, by
+       internal staff and sometimes selected customers. The developers
+       WATCH, so a defect can be diagnosed and fixed at once.
+
+       BOTH white box and black box techniques are used, because the
+       testers have access to the code.
+
+       Usually run in TWO CYCLES :
+            cycle 1 - the QA team runs the full scenarios
+            cycle 2 - after fixes, business users exercise it as they
+                 actually would
+    ```
+
+    Beta testing
+    ```
+       Done at the USER'S site, by REAL users, in the REAL
+       environment, with NO developer present. Users report problems
+       back through a feedback channel.
+
+       Only BLACK BOX testing is possible.
+
+       This is where the product meets conditions the developers could
+       never reproduce : slow networks, old browsers, unusual data,
+       and users who do things nobody anticipated.
+    ```
+
+    The sequence
+    ```mermaid
+    flowchart LR
+        A[System testing] --> B[ALPHA: developer site, internal]
+        B --> C[Fix defects]
+        C --> D[BETA: user site, real users]
+        D --> E[Fix and finalise]
+        E --> F[Release]
+    ```
+    - The essential contrast: `alpha testing is controlled and observed; beta testing is uncontrolled and unobserved`. That is precisely why both are needed — alpha finds the defects that careful, systematic testing reveals, and beta finds the ones that only real users in real conditions can produce.
+    - Both are forms of `acceptance testing`, the last level before release. Some organisations add a `gamma` stage — a final check on the release candidate in which no new features are added and only critical defects are fixed.
+
 33. **Testing is an activity that is performed to verify correct behavior of a program. Testing should be conducted in all the stages of program development. Describe different types of tests conducted in the implementation stage.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 980 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+    Answer: The `implementation stage` is where code is written, so the tests conducted there are the ones a developer runs on code as it is produced — before the system as a whole exists.
+
+    The tests conducted in the implementation stage
+
+    1. Unit testing
+    ```
+       Tests the smallest testable piece - one function, method or
+       class - IN ISOLATION.
+
+       Who  : the DEVELOPER who wrote it
+       Type : WHITE BOX - the code is visible
+       Aim  : logic errors, wrong calculations, bad boundaries
+
+       Neighbours are FAKED :
+            DRIVER - a dummy CALLER that invokes the unit
+            STUB   - a dummy CALLEE returning a fixed value
+
+       Example : calculateInterest(1000 , 5 , 1) -> expect 50
+                 also rate = 0 , negative principal , boundary values
+    ```
+
+    2. Static testing — reviews and inspections
+    ```
+       The code is NOT executed ; it is READ.
+
+         DESK CHECKING   the author re-reads their own code
+         PEER REVIEW     a colleague reads it
+         WALKTHROUGH     the author explains it to reviewers
+         INSPECTION      the most formal - moderator, checklist,
+                         recorded defects and metrics
+         STATIC ANALYSIS a tool detects uninitialised variables,
+                         unreachable code, type mismatches, memory
+                         leaks
+
+       Reviews find defects at the LOWEST cost of any technique,
+       because nothing has to be built or run first.
+    ```
+
+    3. Integration testing
+    ```
+       Once several modules are coded, they are combined and the
+       INTERFACES between them are tested - wrong data format,
+       mismatched parameters, wrong units.
+
+       APPROACHES
+         BIG BANG   everything at once ; a failure gives no clue where
+         TOP-DOWN   start at the top ; needs STUBS
+         BOTTOM-UP  start at the bottom ; needs DRIVERS
+         SANDWICH   both directions at once
+    ```
+
+    4. Regression testing
+    ```
+       Every time a module is changed or a defect fixed, the EXISTING
+       tests are re-run to prove nothing else broke. This is the test
+       that makes continuous change safe, and it is the reason unit
+       tests are automated.
+    ```
+
+    5. Smoke testing
+    ```
+       A quick, shallow check that each new build is stable enough to
+       be worth testing at all - WIDE but SHALLOW. If it fails the
+       build is rejected and no detailed testing is attempted.
+    ```
+
+    6. Debugging — the related activity
+    ```
+       TESTING finds that a failure exists.
+       DEBUGGING locates its CAUSE in the code and corrects it.
+       They are different activities : testing is planned and
+       systematic, debugging is investigative.
+    ```
+
+    Where these sit relative to the later stages
+    ```mermaid
+    flowchart LR
+        A[IMPLEMENTATION<br/>unit, static, integration,<br/>regression, smoke] --> B[SYSTEM TESTING<br/>whole product vs SRS]
+        B --> C[ACCEPTANCE<br/>alpha, beta, UAT]
+        C --> D[MAINTENANCE<br/>regression after each change]
+    ```
+    ```
+       IMPLEMENTATION stage : UNIT , STATIC , INTEGRATION , REGRESSION ,
+            SMOKE - all by DEVELOPERS, all WHITE or GREY box.
+       TESTING stage        : SYSTEM and NON-FUNCTIONAL testing - by
+            the QA team, BLACK box.
+       ACCEPTANCE stage     : ALPHA , BETA , UAT - by the CUSTOMER.
+    ```
+    - Why the implementation stage carries so much of the testing burden: a defect found by a unit test costs about a tenth of what the same defect costs in system testing and a hundredth of what it costs after release. Testing at the point of writing is not an extra activity — it is the cheapest place the work can possibly be done.
 
 34. **How would you test an ATM in a banking system?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052 (ET: BUET)]*
    a) Withdrawing money less than the account balance
@@ -3129,17 +5389,676 @@
    i) Try to enter invalid pin more than 3 times and see if the account gets locked.
    j) Verify how much time the system takes to log out.
 
+    Answer: Testing an ATM in a banking system covers `functional`, `non-functional`, `hardware` and `security` aspects. The approach below is organised by test level.
+
+    1. Unit testing
+    ```
+       Each module tested alone :
+            PIN validation , amount validation , balance calculation ,
+            denomination breakdown , receipt formatting.
+
+       Example : withdraw(balance=1000 , amount=500) -> new balance 500
+                 withdraw(balance=1000 , amount=2000) -> error
+    ```
+
+    2. Integration testing
+    ```
+       ATM  <->  card reader , keypad , cash dispenser , printer
+       ATM  <->  bank SWITCH  <->  CORE BANKING SYSTEM
+       ATM  <->  receipt printer and journal log
+
+       The critical case : is the amount debited from the account
+       EXACTLY ONCE for one dispense ? A double debit or a dispense
+       without a debit is the worst possible defect.
+    ```
+
+    3. Functional testing — the main scenarios
+    ```
+       CARD HANDLING
+         valid card , expired card , blocked card , damaged magnetic
+         stripe , foreign bank card , card inserted the wrong way,
+         card left in the machine (retain after timeout)
+
+       PIN
+         correct PIN -> proceed
+         wrong PIN once , twice , THREE times -> card BLOCKED
+         PIN entry timeout
+         PIN change function
+
+       WITHDRAWAL
+         amount within balance          -> success
+         amount above balance           -> "Insufficient balance"
+         amount above the DAILY LIMIT   -> rejected
+         amount not a multiple of 500   -> rejected
+         amount = 0 or negative         -> rejected
+         ATM has insufficient CASH      -> clear message, no debit
+         exact-denomination cases : 500 , 1000 , 4500 , 20000
+
+       OTHER TRANSACTIONS
+         balance enquiry , mini statement , fund transfer , deposit ,
+         bill payment , PIN change , cancel at every step
+    ```
+
+    4. Boundary value and equivalence testing
+    ```
+       Daily limit 50,000 ; per-transaction limit 20,000 ;
+       multiples of 500.
+
+         BOUNDARY : 499 , 500 , 501 , 19,999 , 20,000 , 20,001
+                    49,500 , 50,000 , 50,500
+         CLASSES  : below minimum , valid , above per-transaction
+                    limit , above daily limit , non-multiple
+    ```
+
+    5. Negative and interruption testing — where ATMs actually fail
+    ```
+       POWER FAILURE mid-transaction, after debit but before dispense
+            -> the transaction must be REVERSED automatically.
+       NETWORK LOSS to the core banking system mid-transaction
+            -> no debit without a dispense.
+       CASH JAM in the dispenser
+            -> the amount must be re-credited.
+       USER WALKS AWAY leaving cash or card
+            -> retract and log.
+       Two withdrawals from the same account at two ATMs at the SAME
+            MOMENT
+            -> a CONCURRENCY test ; the balance must not go negative.
+    ```
+    - These are the cases that matter most, and they are all `negative` paths. An ATM that handles the happy path perfectly and mishandles a power cut is worse than useless.
+
+    6. Non-functional testing
+    ```
+       PERFORMANCE  response time per transaction under 5 seconds
+       LOAD         many ATMs hitting the switch at once - salary day
+       STRESS       beyond the specified transaction rate
+       RECOVERY     restart after power loss ; is the journal intact ?
+       USABILITY    screen readability, clear prompts, Bangla and
+                    English, accessibility for blind users
+       COMPATIBILITY  cards from other banks, VISA and Mastercard
+                    networks
+    ```
+
+    7. Security testing
+    ```
+       PIN must be ENCRYPTED end to end and never appear in a log or
+            on the receipt
+       the receipt must show a MASKED card number
+       physical security : card skimmer detection , camera , tamper
+            alarm
+       test for brute-force PIN attempts , card cloning , man-in-the-
+            middle on the network link
+       AUDIT TRAIL : every transaction logged with time, ATM ID, card
+            number and amount
+    ```
+
+    8. Acceptance and regression testing
+    ```
+       UAT   : bank staff run real business scenarios on a live-like
+               ATM before rollout.
+       PILOT : one branch first, then the network.
+       REGRESSION : the full suite re-run after every software update,
+               because an ATM update that breaks reversal handling
+               costs real money.
+    ```
+    - The single principle worth stating: for an ATM, the test design concentrates on `what happens when something goes wrong halfway through`. Money and card are physical objects — an interrupted transaction must leave the account, the cash drawer and the journal in a `consistent` state, and proving that is the heart of ATM testing.
+
 35. **Write code to test a sorting algorithm of array?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1056 (ET: AUST)]*
+
+    Answer: The test program below drives a sorting function and checks `two properties` on every case: the output is in order, and it is a permutation of the input. Checking only the order is not enough — a function that returns all zeros is "sorted" but wrong.
+
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    /* the function under test */
+    void bubbleSort(int a[], int n) {
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - 1 - i; j++)
+                if (a[j] > a[j + 1]) {
+                    int t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;
+                }
+    }
+
+    /* check 1 : is the array in non-decreasing order ? */
+    int isSorted(int a[], int n) {
+        for (int i = 0; i < n - 1; i++)
+            if (a[i] > a[i + 1]) return 0;
+        return 1;
+    }
+
+    int cmp(const void *x, const void *y) {
+        int a = *(int *)x, b = *(int *)y;
+        return (a > b) - (a < b);        /* no subtraction : avoids overflow */
+    }
+
+    /* check 2 : are the same elements still present ? */
+    int isPermutation(int a[], int b[], int n) {
+        int *p = malloc(n * sizeof(int)), *q = malloc(n * sizeof(int));
+        memcpy(p, a, n * sizeof(int));
+        memcpy(q, b, n * sizeof(int));
+        qsort(p, n, sizeof(int), cmp);
+        qsort(q, n, sizeof(int), cmp);
+        int ok = memcmp(p, q, n * sizeof(int)) == 0;
+        free(p); free(q);
+        return ok;
+    }
+
+    int runTest(char *name, int in[], int n) {
+        int *copy = malloc(n * sizeof(int) + 1);
+        memcpy(copy, in, n * sizeof(int));
+        bubbleSort(copy, n);
+        int pass = isSorted(copy, n) && isPermutation(in, copy, n);
+        printf("%-22s : %s\n", name, pass ? "PASS" : "FAIL");
+        free(copy);
+        return pass;
+    }
+
+    int main(void) {
+        int t1[] = {5, 2, 9, 1, 7};
+        int t2[] = {1, 2, 3, 4, 5};
+        int t3[] = {5, 4, 3, 2, 1};
+        int t4[] = {4, 4, 4, 4};
+        int t5[] = {42};
+        int t6[] = {-3, 0, -7, 5};
+        int t7[] = {2147483647, -2147483648, 0};
+        int total = 0, pass = 0;
+
+        pass += runTest("random order",      t1, 5); total++;
+        pass += runTest("already sorted",    t2, 5); total++;
+        pass += runTest("reverse sorted",    t3, 5); total++;
+        pass += runTest("all duplicates",    t4, 4); total++;
+        pass += runTest("single element",    t5, 1); total++;
+        pass += runTest("negative numbers",  t6, 4); total++;
+        pass += runTest("INT_MIN / INT_MAX", t7, 3); total++;
+        pass += runTest("empty array",       t1, 0); total++;
+
+        printf("\n%d of %d tests passed\n", pass, total);
+        return pass == total ? 0 : 1;
+    }
+    ```
+
+    Output when run
+    ```
+       random order           : PASS
+       already sorted         : PASS
+       reverse sorted         : PASS
+       all duplicates         : PASS
+       single element         : PASS
+       negative numbers       : PASS
+       INT_MIN / INT_MAX      : PASS
+       empty array            : PASS
+
+       8 of 8 tests passed
+    ```
+
+    Why these particular test cases
+    ```
+       random order      the ordinary case
+       already sorted    a badly written loop can UNDO a sorted array ;
+                         it is also the best case for detecting an
+                         infinite loop
+       reverse sorted    the WORST case - every element must move
+       all duplicates    exposes  a[j] >= a[j+1]  written where
+                         a[j] > a[j+1]  was meant (breaks stability,
+                         and can loop forever)
+       single element    n = 1 : the loop must not run at all
+       empty array       n = 0 : the commonest crash, because
+                         n - 1 becomes -1
+       negative numbers  exposes code that assumes non-negative values
+       INT_MIN / INT_MAX exposes any comparator written as  a - b ,
+                         which OVERFLOWS
+    ```
+    - The two properties checked are what make this a real test rather than an eyeball check. `isSorted` alone would pass a function that returns `{0,0,0,0,0}`; `isPermutation` alone would pass a function that does nothing. Both together are necessary and sufficient.
+    - One further check worth adding for a `stable` sort: sort an array of records by one key and verify that records with equal keys keep their original relative order. Bubble sort with a strict `>` comparison is stable; changing it to `>=` silently breaks that, and only such a test would catch it.
 
 36. **How would you test an ATM in a distributed system?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
 
+    Answer: A distributed ATM system has one extra problem an isolated ATM does not: `many ATMs, one shared account balance, across an unreliable network`. So the testing has all the layers of ordinary ATM testing plus a set of distributed-system concerns.
+
+    The architecture being tested
+    ```
+       +--------+  +--------+  +--------+
+       | ATM 1  |  | ATM 2  |  | ATM 3  |   (different branches / cities)
+       +--------+  +--------+  +--------+
+            \          |           /
+             \         |          /
+              +---- NETWORK -----+
+                      |
+              +----------------+
+              |  BANK SWITCH   |   (routes, and talks to VISA / NPSB)
+              +----------------+
+                      |
+              +----------------+
+              | CORE BANKING   |   (the authoritative balance)
+              |   DATABASE     |
+              +----------------+
+    ```
+
+    1. Standard ATM functional testing
+    ```
+       Card handling : valid , expired , blocked , damaged stripe ,
+            foreign bank card
+       PIN           : correct , wrong three times -> BLOCKED , timeout
+       Withdrawal    : within balance , above balance , above daily
+            limit , not a multiple of 500 , zero , negative , ATM out
+            of cash
+       Others        : balance enquiry , mini statement , transfer ,
+            deposit , PIN change , cancel at every step
+       BOUNDARY      : 499 / 500 / 501 , 19,999 / 20,000 / 20,001 ,
+            49,500 / 50,000 / 50,500
+    ```
+
+    2. Concurrency — the central distributed test
+    ```
+       THE CRITICAL CASE
+
+       Balance 1000. Two withdrawals of 800 each, from TWO DIFFERENT
+       ATMs, at the SAME INSTANT.
+
+         WRONG behaviour : both read 1000 , both succeed , balance
+              becomes -600. The bank has lost 600.
+         CORRECT behaviour : the core banking database SERIALISES
+              them - one succeeds, the other gets "Insufficient
+              balance".
+
+       This must be tested with a script that fires both requests
+       simultaneously, not one after the other. It is a RACE
+       CONDITION, and it is exactly what row-level LOCKING and ACID
+       TRANSACTIONS exist to prevent.
+    ```
+    - Related cases: the same card used at two ATMs at once; a withdrawal at one ATM while a transfer from the same account is in flight; and the `daily limit` enforced correctly when withdrawals happen at several ATMs on the same day.
+
+    3. Network failure and partition testing
+    ```
+       NETWORK LOST after the debit but BEFORE the dispense
+            -> the transaction must be REVERSED automatically. Test
+               that the reversal actually arrives and is applied ONCE.
+
+       NETWORK LOST after the dispense but before the confirmation
+            -> the debit must NOT be reversed. Money left the machine.
+
+       TIMEOUT of the switch response
+            -> the ATM must not guess. It must either wait for a
+               definite answer or fail closed.
+
+       DUPLICATE MESSAGE - the switch retries a request the core
+            already processed
+            -> IDEMPOTENCY test. The same transaction reference must
+               debit the account ONCE, however many times it arrives.
+
+       NETWORK PARTITION - a branch is cut off from the core
+            -> does the ATM go OFFLINE and refuse service, or does it
+               serve from stale local data ? Serving from stale data
+               is how double-spending happens.
+    ```
+    - These reversal, idempotency and partition cases are the ones that distinguish distributed ATM testing from single-ATM testing, and they are where real money is lost.
+
+    4. Consistency and reconciliation
+    ```
+       END-OF-DAY RECONCILIATION
+            cash dispensed by the machine = sum of debits in the core
+            banking database = the ATM journal total.
+            Any mismatch is a defect, however small.
+
+       Test with deliberately injected failures - power cuts, jams,
+       network drops - and then verify the three totals still agree.
+    ```
+
+    5. Non-functional testing
+    ```
+       LOAD        many ATMs hitting the switch at once - salary day,
+                   Eid, month end
+       STRESS      beyond the specified transaction rate
+       FAILOVER    kill the primary switch or database - does the
+                   standby take over, and is any transaction lost ?
+       LATENCY     response under 5 seconds even from a remote branch
+                   on a slow link
+       RECOVERY    restart after power loss ; is the journal intact ?
+       SCALABILITY add more ATMs - does throughput scale ?
+    ```
+
+    6. Security testing
+    ```
+       PIN ENCRYPTED end to end ; never in a log, never on the receipt
+       card number MASKED on the receipt
+       the ATM-to-switch link ENCRYPTED - test for a man-in-the-middle
+       brute-force PIN attempts blocked
+       card skimming and cloning detection
+       AUDIT TRAIL : every transaction logged with time, ATM ID,
+            masked card number and amount
+    ```
+
+    7. Test environment
+    ```
+       ATM SIMULATORS are essential. Real ATMs cannot be used to test
+       1000 concurrent withdrawals, and cannot safely be power-cut
+       repeatedly. Simulators reproduce the card reader, dispenser and
+       network so the failure cases can be driven deliberately.
+
+       A LIVE-LIKE test core banking database with realistic data
+       volumes is equally necessary - concurrency defects do not
+       appear on a database with ten rows.
+    ```
+    - The principle that governs all of it: in a distributed system the interesting question is never "does a withdrawal work" but "`what state is everything left in when the network fails halfway through`". Every important test case therefore injects a failure at a specific point and then verifies that the account, the cash drawer and the journal still agree.
+
 37. **What is Alpha and Beta testing?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123 (ET: BREB)]*
+
+    Answer: Alpha testing
+    - `Alpha testing` is the first stage of `acceptance testing`, carried out at the `developer's own site` by internal staff and sometimes a few invited customers, with the developers `present and watching`.
+    ```
+       Where   : at the DEVELOPER'S site , a controlled environment
+       Who     : internal QA staff, other departments, selected
+                 customers
+       Present : the DEVELOPERS watch and can fix defects on the spot
+       Type    : BOTH white box and black box, since the code is
+                 available
+       State   : the build is feature-complete but still unstable
+       Purpose : catch the defects that would embarrass the company if
+                 an outsider found them
+    ```
+    - It is usually run in `two cycles`: the QA team tests the build, defects are fixed, and then business users exercise it as they actually would.
+
+    Beta testing
+    - `Beta testing` is the second stage. A near-final build is released to a limited number of `real users outside the organisation`, who use it in their `own environment` with `no developer present`.
+    ```
+       Where   : at the USER'S site , the REAL environment
+       Who     : REAL external users - a public or closed beta
+       Present : NO developer
+       Type    : BLACK BOX only - users cannot see the code
+       State   : fairly stable ; most major defects already fixed
+       Purpose : find the defects that only real conditions produce,
+                 and collect feedback before general release
+    ```
+
+    Comparison
+
+    | Point | Alpha testing | Beta testing |
+    |---|---|---|
+    | Where | `Developer's` site | `User's` own site |
+    | Who tests | Internal staff, invited customers | `Real external users` |
+    | Environment | `Controlled` | `Real`, uncontrolled |
+    | Developer present | `Yes` | `No` |
+    | Order | `First` | After alpha |
+    | Testing type | White box + black box | `Black box` only |
+    | Defect fixing | Often immediate | In a later build |
+    | Also called | In-house acceptance testing | Field testing, pre-release |
+
+    The sequence
+    ```mermaid
+    flowchart LR
+        A[System testing] --> B[ALPHA: internal, developer site]
+        B --> C[Fix defects]
+        C --> D[BETA: real users, own site]
+        D --> E[Fix and finalise]
+        E --> F[Release]
+    ```
+    - The essential contrast: `alpha testing is controlled and observed; beta testing is uncontrolled and unobserved`. That is why both are needed — alpha finds what systematic testing reveals, and beta finds what only real users, on real networks, with real data, and behaving unpredictably, can produce.
 
 38. **A program sorts an array of integer. Write down the code that tests the sorting algorithm of written in a program.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163-1164 (ET: N/A)]*
 
+    Answer: The test program below drives the sorting function and checks `two properties` on every case: the output is in order, and it contains exactly the same elements as the input. Checking the order alone is not enough — a function returning all zeros is "sorted" but wrong.
+
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    /* the function under test */
+    void sortArray(int a[], int n) {
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - 1 - i; j++)
+                if (a[j] > a[j + 1]) {
+                    int t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;
+                }
+    }
+
+    /* property 1 : non-decreasing order */
+    int isSorted(int a[], int n) {
+        for (int i = 0; i < n - 1; i++)
+            if (a[i] > a[i + 1]) return 0;
+        return 1;
+    }
+
+    int cmp(const void *x, const void *y) {
+        int a = *(int *)x, b = *(int *)y;
+        return (a > b) - (a < b);      /* not a - b : that overflows */
+    }
+
+    /* property 2 : same elements, same multiplicities */
+    int isPermutation(int in[], int out[], int n) {
+        int *p = malloc(n * sizeof(int)), *q = malloc(n * sizeof(int));
+        memcpy(p, in,  n * sizeof(int));
+        memcpy(q, out, n * sizeof(int));
+        qsort(p, n, sizeof(int), cmp);
+        qsort(q, n, sizeof(int), cmp);
+        int ok = memcmp(p, q, n * sizeof(int)) == 0;
+        free(p); free(q);
+        return ok;
+    }
+
+    int runTest(char *name, int in[], int n) {
+        int *copy = malloc(n * sizeof(int) + 1);
+        memcpy(copy, in, n * sizeof(int));
+        sortArray(copy, n);
+        int pass = isSorted(copy, n) && isPermutation(in, copy, n);
+        printf("%-22s : %s\n", name, pass ? "PASS" : "FAIL");
+        free(copy);
+        return pass;
+    }
+
+    int main(void) {
+        int t1[] = {8, 3, 5, 1, 9, 2};
+        int t2[] = {1, 2, 3, 4, 5};
+        int t3[] = {9, 7, 5, 3, 1};
+        int t4[] = {6, 6, 6, 6};
+        int t5[] = {42};
+        int t6[] = {-4, 0, -9, 3};
+        int t7[] = {2147483647, -2147483648, 0};
+        int total = 0, pass = 0;
+
+        pass += runTest("random order",      t1, 6); total++;
+        pass += runTest("already sorted",    t2, 5); total++;
+        pass += runTest("reverse sorted",    t3, 5); total++;
+        pass += runTest("all duplicates",    t4, 4); total++;
+        pass += runTest("single element",    t5, 1); total++;
+        pass += runTest("negative numbers",  t6, 4); total++;
+        pass += runTest("INT_MIN / INT_MAX", t7, 3); total++;
+        pass += runTest("empty array",       t1, 0); total++;
+
+        printf("\n%d of %d tests passed\n", pass, total);
+        return pass == total ? 0 : 1;
+    }
+    ```
+
+    Output when run
+    ```
+       random order           : PASS
+       already sorted         : PASS
+       reverse sorted         : PASS
+       all duplicates         : PASS
+       single element         : PASS
+       negative numbers       : PASS
+       INT_MIN / INT_MAX      : PASS
+       empty array            : PASS
+
+       8 of 8 tests passed
+    ```
+
+    Why each test case is there
+    ```
+       random order      the ordinary case
+       already sorted    a badly written loop can UNDO a sorted array
+       reverse sorted    the WORST case - every element must move
+       all duplicates    exposes  >=  written where  >  was meant
+       single element    n = 1 : the loop must not execute
+       empty array       n = 0 : the commonest crash, because n-1 = -1
+       negative numbers  exposes code assuming non-negative values
+       INT_MIN / INT_MAX exposes a comparator written as  a - b
+    ```
+    - Both properties are needed and together they are sufficient: `isSorted` alone would accept a function that returns all zeros, and `isPermutation` alone would accept a function that does nothing. Neither check on its own is a test.
+    - For a `stable` sort, add one more case: sort records by a single key and verify that records with equal keys keep their original relative order. Changing the comparison from `>` to `>=` silently breaks stability, and only such a test detects it.
+
 39. **Difference between black box and white box testing.** *[Palli Sanchay Bank Programmer 2018 compact it 1172 (ET: N/A)]*, *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
+    Answer: Difference between black box and white box testing
+
+    | Point | Black box testing | White box testing |
+    |---|---|---|
+    | Knowledge of code | `None` — the box is closed | `Full` — the source is read |
+    | Based on | The `SRS` / requirements | The `code` structure |
+    | Also called | Functional, behavioural, closed box | `Structural`, glass box, clear box |
+    | Who does it | `Testers` | `Developers` |
+    | Applied at | System, acceptance testing | `Unit`, integration testing |
+    | Programming skill | Not needed | `Required` |
+    | Finds | Wrong or missing functionality | Logic errors, dead code, untested branches |
+    | Cannot find | Untested internal paths, dead code | `Missing requirements` |
+    | Test design | Equivalence partitioning, boundary values | Statement, branch, path coverage |
+    | Design effort | Lower | Higher — the code must be studied |
+    | "Done" measured by | All requirements exercised | A `coverage` percentage |
+
+    Black box
+    ```
+            input ---->  [ ??? ]  ----> output
+                       the box is CLOSED
+
+       TECHNIQUES
+         EQUIVALENCE PARTITIONING - group inputs that behave alike ;
+              test ONE value from each class
+         BOUNDARY VALUE ANALYSIS  - test at and around the edges
+         DECISION TABLE   - all combinations of business rules
+         STATE TRANSITION - legal and illegal state changes
+         ERROR GUESSING   - experience-based cases
+
+       Example : a field accepting an age of 18 to 60
+            CLASSES  : < 18 invalid , 18-60 valid , > 60 invalid
+            BOUNDARY : 17 , 18 , 19 , 59 , 60 , 61
+    ```
+
+    White box
+    ```
+       The tester READS the code :
+
+            if (a > 0 && b > 0)  x = 1;
+            else                 x = 2;
+
+       STATEMENT coverage : 1 test  (a=1 , b=1)
+       BRANCH    coverage : 2 tests (1,1) and (1,-1)
+       CONDITION coverage : cases making a>0 both T and F, and
+                            b>0 both T and F
+
+       COVERAGE CRITERIA
+         STATEMENT  every line executed once
+         BRANCH     every if takes both paths
+         PATH       every route through the code
+         LOOP       0 iterations , 1 , and many
+    ```
+
+    - The decisive point: `white box testing cannot detect a missing requirement` — a feature never coded has no code to cover, so even full coverage says nothing about it. `Black box testing cannot detect dead code` or an unexercised branch. They are complements, not alternatives; `grey box` testing, with partial knowledge of the architecture and database, sits between them and is used heavily in security and API testing.
+
 40. **A program sorts an array of integer. Write down the code that tests the sorting algorithm of written** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
+
+    Answer: The test program below drives the sorting function and checks `two properties` on every case: the result is in order, and it contains exactly the same elements as the input. Order alone is not enough — a function that returns all zeros is "sorted" but wrong.
+
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    /* the function under test */
+    void sortArray(int a[], int n) {
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - 1 - i; j++)
+                if (a[j] > a[j + 1]) {
+                    int t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;
+                }
+    }
+
+    /* property 1 : non-decreasing order */
+    int isSorted(int a[], int n) {
+        for (int i = 0; i < n - 1; i++)
+            if (a[i] > a[i + 1]) return 0;
+        return 1;
+    }
+
+    int cmp(const void *x, const void *y) {
+        int a = *(int *)x, b = *(int *)y;
+        return (a > b) - (a < b);      /* not a - b : that overflows */
+    }
+
+    /* property 2 : same elements, same multiplicities */
+    int isPermutation(int in[], int out[], int n) {
+        int *p = malloc(n * sizeof(int)), *q = malloc(n * sizeof(int));
+        memcpy(p, in,  n * sizeof(int));
+        memcpy(q, out, n * sizeof(int));
+        qsort(p, n, sizeof(int), cmp);
+        qsort(q, n, sizeof(int), cmp);
+        int ok = memcmp(p, q, n * sizeof(int)) == 0;
+        free(p); free(q);
+        return ok;
+    }
+
+    int runTest(char *name, int in[], int n) {
+        int *copy = malloc(n * sizeof(int) + 1);
+        memcpy(copy, in, n * sizeof(int));
+        sortArray(copy, n);
+        int pass = isSorted(copy, n) && isPermutation(in, copy, n);
+        printf("%-22s : %s\n", name, pass ? "PASS" : "FAIL");
+        free(copy);
+        return pass;
+    }
+
+    int main(void) {
+        int t1[] = {7, 2, 8, 1, 4};
+        int t2[] = {1, 2, 3, 4, 5};
+        int t3[] = {5, 4, 3, 2, 1};
+        int t4[] = {3, 3, 3, 3};
+        int t5[] = {99};
+        int t6[] = {-5, 0, -1, 8};
+        int t7[] = {2147483647, -2147483648, 0};
+        int total = 0, pass = 0;
+
+        pass += runTest("random order",      t1, 5); total++;
+        pass += runTest("already sorted",    t2, 5); total++;
+        pass += runTest("reverse sorted",    t3, 5); total++;
+        pass += runTest("all duplicates",    t4, 4); total++;
+        pass += runTest("single element",    t5, 1); total++;
+        pass += runTest("negative numbers",  t6, 4); total++;
+        pass += runTest("INT_MIN / INT_MAX", t7, 3); total++;
+        pass += runTest("empty array",       t1, 0); total++;
+
+        printf("\n%d of %d tests passed\n", pass, total);
+        return pass == total ? 0 : 1;
+    }
+    ```
+
+    Output when run
+    ```
+       random order           : PASS
+       already sorted         : PASS
+       reverse sorted         : PASS
+       all duplicates         : PASS
+       single element         : PASS
+       negative numbers       : PASS
+       INT_MIN / INT_MAX      : PASS
+       empty array            : PASS
+
+       8 of 8 tests passed
+    ```
+
+    Why these test cases
+    ```
+       random order      the ordinary case
+       already sorted    a badly written loop can UNDO a sorted array
+       reverse sorted    the WORST case - every element must move
+       all duplicates    exposes  >=  written where  >  was meant
+       single element    n = 1 : the loop must not execute
+       empty array       n = 0 : the commonest crash, since n-1 = -1
+       negative numbers  exposes code assuming non-negative values
+       INT_MIN / INT_MAX exposes a comparator written as  a - b
+    ```
+    - The two checks are jointly necessary: `isSorted` alone accepts a function returning all zeros, and `isPermutation` alone accepts a function that does nothing. Either one on its own is not a test.
+    - The boundary cases `n = 0` and `n = 1` are the ones that actually find defects in real sorting code, because `n - 1` in the loop bound becomes `-1` when `n` is zero. Any test suite for a sorting routine that omits the empty array is incomplete.
 
 ## UML Diagrams (Class, Use Case, Sequence) (14)
 
