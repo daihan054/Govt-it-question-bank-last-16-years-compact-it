@@ -15366,9 +15366,129 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **What are the limitaions of CDMA?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+   Answer: CDMA (Code Division Multiple Access) lets all users share the same frequency at the same time, separated only by orthogonal codes. Its limitations follow directly from that design.
+
+   1. The near-far problem — the most serious limitation
+   - All users transmit on the same frequency, so a handset close to the base station arrives far stronger than one at the cell edge. Signal strength falls with the square of distance, so a user 10 times closer arrives 100 times stronger, and the distant user's signal is buried.
+   - The remedy is `strict power control`, adjusted around 800 times per second, so that every signal arrives at the base station at nearly the same level. This control loop adds complexity, consumes battery, and if it fails, the cell effectively collapses.
+
+   2. Self-jamming (multiple access interference)
+   - The codes assigned to users are not perfectly orthogonal once signals arrive with different delays through multipath. Every other user therefore appears as noise to each receiver.
+   - Consequently `capacity is interference-limited`, not hard-limited: as more users join, the noise floor rises for everyone, and quality degrades gradually for all rather than blocking new calls. This is called `soft capacity`, and it means quality falls as the cell fills.
+
+   3. Complexity and cost
+   - Power control, code management, RAKE receivers to combine multipath components, and soft handover all make the handset and base station far more complex than in TDMA or FDMA. This raises cost and power consumption.
+
+   4. Precise synchronisation required
+   - Code synchronisation, and in some systems network-wide timing from GPS, is essential. Loss of timing loses the link entirely.
+
+   5. Limited number of orthogonal codes
+   - The set of usable spreading codes is finite, which caps how many users can be separated cleanly in one cell.
+
+   6. Soft handover overhead
+   - A handset in soft handover communicates with two or three base stations at once, which improves reliability but consumes resources in every one of them.
+
+   7. Wide bandwidth requirement
+   - The signal is spread over a much wider band than the data needs (1.25 MHz for IS-95, 5 MHz for WCDMA), so a large contiguous block of spectrum is required.
+
+   8. Battery drain
+   - Continuous power-control signalling and the RAKE receiver's processing consume more energy than a simple TDMA handset.
+
+   9. Migration and ecosystem issues
+   - CDMA networks (IS-95, CDMA2000) had a smaller handset ecosystem than GSM, and moving to LTE required a different upgrade path. Most operators eventually shut CDMA down.
+
+   - Balancing view: CDMA's advantages are real — no frequency planning is needed because every cell reuses the same frequency, soft handover is seamless, and it resists narrowband interference and eavesdropping. Its interference-limited capacity is precisely why 4G and 5G moved to `OFDMA`, which keeps users orthogonal in time and frequency and so avoids self-jamming altogether.
+
 2. **Mention the basic differences between frequency-hopped spread spectrum (FHSS) and direct sequence spread spectrum (DSSS) techniques.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+   Answer: Both are spread spectrum techniques that deliberately spread a narrowband signal over a much wider bandwidth. They differ in `how` they spread it.
+
+   FHSS — Frequency Hopping Spread Spectrum
+   - The carrier `hops` rapidly from one frequency to another in a sequence known only to the transmitter and receiver, determined by a pseudo-random code.
+   - At any instant the signal is narrowband; the spreading comes from using many frequencies over time.
+   - Two types: `slow hopping` (several bits per hop) and `fast hopping` (several hops per bit).
+   - Bluetooth hops 1600 times per second across 79 channels in the 2.4 GHz band.
+
+   DSSS — Direct Sequence Spread Spectrum
+   - Each data bit is multiplied by a much faster pseudo-random `chip sequence`, which spreads the signal across a wide band `continuously`.
+   - The processing gain is the ratio of the chip rate to the bit rate. The receiver correlates with the same code to recover the data, and in doing so suppresses everything that does not match.
+   - Used by 802.11b Wi-Fi, GPS, and CDMA mobile networks.
+
+   Comparison
+
+   | Point | FHSS | DSSS |
+   |---|---|---|
+   | Spreading method | Carrier hops between frequencies over time | Each bit multiplied by a fast chip code, spread continuously |
+   | Instantaneous bandwidth | Narrow | Wide |
+   | Overall bandwidth | Wide, built up over many hops | Wide at every instant |
+   | Data rate | Lower — about 1–3 Mbps in 802.11 | Higher — up to 11 Mbps in 802.11b |
+   | Resistance to narrowband interference | Very good — only the hops that land on the interferer are lost, and error coding recovers them. It keeps working with 25 % of hops jammed | Good, through processing gain, but a strong narrowband jammer can degrade it badly |
+   | Resistance to wideband interference | Poorer | Better |
+   | Multipath performance | Less affected | Suffers, but a RAKE receiver turns multipath into an advantage |
+   | Synchronisation | Both ends must follow the same hop sequence and timing | Both ends must align the chip code precisely |
+   | Near-far problem | Not significant | Significant — needs power control |
+   | Complexity | Simpler transceiver, but needs a fast agile synthesiser | More complex correlator and RAKE receiver |
+   | Power consumption | Lower | Higher |
+   | Cost | Lower | Higher |
+   | Security | Good — an eavesdropper must know the hop sequence | Good — an eavesdropper must know the chip code |
+   | Typical use | Bluetooth, military communication, cordless phones, 802.11 (original) | Wi-Fi 802.11b, GPS, CDMA (IS-95, WCDMA), ZigBee |
+
+   Diagram
+   ```
+   FHSS                              DSSS
+   freq                              freq
+    |  #                              |################
+    |     #        #                  |################
+    |  #     #        #               |################   (continuously wide)
+    |          #   #                  |################
+    +--------------------> time       +--------------------> time
+    narrow at any instant,            wide at every instant
+    hops around over time
+   ```
+
+   - Shared advantages: resistance to jamming and interception, ability to coexist with other users in the same band, and low power spectral density so the signal barely disturbs narrowband users.
+   - FHSS is chosen when robustness against narrowband interference and simplicity matter (Bluetooth in a crowded 2.4 GHz band); DSSS is chosen when higher data rate and precise ranging matter (Wi-Fi, GPS).
+
 3. **What is CDMA? Briefly explain.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1122 (ET: BREB)]*
+
+   Answer:
+
+   What is CDMA
+   - CDMA (Code Division Multiple Access) is a channel-access method in which `all users transmit at the same time on the same frequency`, and are separated instead by unique orthogonal codes.
+   - It is built on `Direct Sequence Spread Spectrum`: each user's data bits are multiplied by a fast pseudo-random chip sequence, spreading the signal across a wide band.
+
+   How it works
+   - Step 1 — each user is assigned a unique `spreading code` (a Walsh or PN code) that is orthogonal to every other user's code.
+   - Step 2 — the transmitter multiplies each data bit by that code. A 1-bit becomes the code sequence and a 0-bit becomes its inverse, so the signal now occupies a much wider bandwidth at a much lower power density.
+   - Step 3 — all users' spread signals are transmitted simultaneously on the same frequency and simply add together in the air.
+   - Step 4 — the receiver multiplies the composite signal by the `same code` and integrates. The wanted signal correlates and reassembles; every other user's signal, being orthogonal, averages to nearly zero and appears only as low-level noise.
+
+   ```
+   User A data:   1  0  1
+   Code A:        1011 0100 1011
+   Transmitted:   spread wideband signal
+                                          all sum in the air
+   User B data:   0  1  1                       |
+   Code B:        1101 0010 1101                v
+                                        [receiver x Code A] -> User A's data
+                                        [receiver x Code B] -> User B's data
+   ```
+
+   Analogy often used
+   - A room in which many pairs of people speak at once, each pair in a different language. Everyone hears all the sound, but each listener understands only the language they know; the rest is background noise.
+
+   Key characteristics
+   - `Frequency reuse factor of 1` — every cell can use the same frequency, so no frequency planning is required at all. This was CDMA's great practical advantage over GSM.
+   - `Soft capacity` — capacity is limited by interference rather than by a fixed number of channels, so an extra user degrades quality slightly for everyone rather than being blocked.
+   - `Soft handover` — a handset can talk to two or three base stations at once during a handover, so calls are not dropped at cell boundaries.
+   - `Processing gain` gives resistance to narrowband interference and jamming, and makes eavesdropping difficult without the code.
+   - `Power control` about 800 times per second is essential to solve the near-far problem.
+
+   Standards and uses
+   - IS-95 (cdmaOne), CDMA2000, WCDMA/UMTS (3G) and GPS all use CDMA principles.
+
+   Limitations
+   - The near-far problem, self-jamming as user numbers rise, receiver complexity (RAKE receivers), higher battery drain, a finite number of orthogonal codes, and the need for wide contiguous spectrum. These are why 4G and 5G moved to OFDMA instead.
 
 ## Line Coding & Digital Encoding (2)
 
