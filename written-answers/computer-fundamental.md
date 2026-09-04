@@ -1992,37 +1992,340 @@
 
 1. **What is the difference between System Software and Application Software?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)], [Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer:
+
+   | Point | System Software | Application Software |
+   |---|---|---|
+   | Purpose | Runs and manages the computer hardware | Performs a specific task for the user |
+   | Works for | The machine | The user |
+   | Installation | Comes with the computer or is installed first | Installed by the user as needed |
+   | Necessity | Essential — the computer cannot run without it | Optional — the machine still works without it |
+   | Runs | In the background, continuously | Only when the user starts it |
+   | Written in | Low-level languages, C, assembly | High-level languages |
+   | Independence | Runs independently | Cannot run without system software |
+   | Size | Generally smaller | Generally larger |
+   | Examples | Operating system, device drivers, compilers, utilities, BIOS | MS Word, browsers, media players, banking apps, games |
+
+   - Relationship: application software sits ON TOP of system software. When Word saves a file, it does not touch the disk directly — it asks the operating system, which uses the disk driver.
+   - A third category, **utility software** (antivirus, disk cleanup, backup), is usually grouped under system software.
+
 2. **What is platform independent software discuss with example?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 514 (ET: MIST)]*
+
+   Answer: Platform-independent software runs on different operating systems and hardware architectures WITHOUT being rewritten or recompiled for each one. It is also called cross-platform software.
+
+   How platform independence is achieved
+   - **Virtual machine approach** — the source is compiled to an intermediate form, and a platform-specific runtime executes it. Java compiles to bytecode which the JVM runs; there is a different JVM for Windows, Linux and macOS, but the same bytecode runs on all.
+   - **Interpreted approach** — the source itself is shipped and an interpreter on each platform runs it. Python and JavaScript work this way.
+   - **Web-based approach** — the application runs inside a browser, so any device with a browser can use it.
+
+   Example — Java
+   - Java's slogan is **WORA: Write Once, Run Anywhere**.
+   - `javac Hello.java` produces `Hello.class` containing bytecode, not machine code.
+   - The same `Hello.class` file runs unchanged on Windows, Linux and macOS, because each has its own JVM.
+
+   Other examples
+   - **Python**, **JavaScript** and **PHP** — interpreted, so the same script runs anywhere the interpreter exists.
+   - **HTML/CSS/JS web applications** — Gmail runs identically on every OS.
+   - **Electron and Flutter apps** — VS Code and many mobile apps ship one codebase for several platforms.
+
+   Platform-DEPENDENT software for contrast
+   - A C program compiled on Windows produces a `.exe` that will not run on Linux, because the executable format and system calls differ. It must be recompiled for each platform.
+
+   - Trade-off: platform independence costs some performance, because the extra runtime layer is slower than native machine code.
 
 3. **Difference between High level languages and low level language with some example?** *[SPCB Sub-Assistant Programmer 2022 compact it 739 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Low-level language | High-level language |
+   |---|---|---|
+   | Closeness to hardware | Very close, machine oriented | Far from hardware, problem oriented |
+   | Readability | Difficult — binary or mnemonics | Easy — close to English |
+   | Translator needed | Assembler (for assembly); none for machine code | Compiler or interpreter |
+   | Portability | Machine dependent, not portable | Portable across machines |
+   | Execution speed | Very fast | Slower, because of translation overhead |
+   | Memory control | Direct control over registers and memory | Managed by the language and runtime |
+   | Development time | Very long | Much shorter |
+   | Debugging | Hard | Easier |
+   | Examples | Machine language (binary), Assembly language | C, C++, Java, Python, COBOL, FORTRAN |
+
+   Examples of the same operation
+   - **Machine language**: `10110000 01100001` — pure binary, directly executable.
+   - **Assembly language**: `MOV AL, 61h` — mnemonics, needs an assembler.
+   - **High-level language**: `a = 97;` — readable, needs a compiler.
+
+   - **C is often called a middle-level language**, because it has high-level structure but also allows pointer arithmetic and direct memory access like a low-level language.
+   - Choice in practice: low-level for device drivers, embedded systems and operating system kernels; high-level for almost everything else.
+
 4. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
+
+   Answer: **Spreadsheet software** is used for calculation work on a computer. The most common one is **Microsoft Excel**.
+
+   Spreadsheet software
+   - Organises data in a grid of rows and columns and performs calculations using formulas and functions.
+   - Examples: Microsoft Excel, Google Sheets, LibreOffice Calc, Apple Numbers.
+   - Common functions: `SUM`, `AVERAGE`, `COUNT`, `MAX`, `MIN`, `IF`, `VLOOKUP`.
+
+   Dedicated accounting software
+   - For formal book-keeping, purpose-built accounting software is used instead: **Tally**, QuickBooks, Zoho Books, SAP FICO and Oracle Financials.
+
+   - So the answer depends on the scope: for general calculation, a spreadsheet; for organisational accounts, dedicated accounting software.
 
 5. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+   Answer: The grid of many cells in a spreadsheet program is called a **worksheet** (also called a spreadsheet or sheet).
+
+   Related terms
+   - **Cell** — a single box formed by the intersection of a row and a column, addressed as `A1`, `B5`.
+   - **Row** — a horizontal line of cells, numbered 1, 2, 3, ...
+   - **Column** — a vertical line of cells, lettered A, B, C, ...
+   - **Worksheet** — one complete grid of cells.
+   - **Workbook** — a file containing several worksheets. An Excel `.xlsx` file is a workbook.
+   - **Range** — a selected block of cells, written as `A1:C10`.
+   - **Cell reference / cell address** — the name of a cell, `A1`.
+
+   - Modern Excel supports 1,048,576 rows and 16,384 columns (A to XFD) in a single worksheet.
+
 6. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
+
+   Answer: **(c) Java.**
+
+   - Java was the official primary language for Android development from the platform's launch, and the Android SDK and framework APIs are written for it.
+   - **Kotlin** has since become Google's officially preferred language (announced 2017, made preferred in 2019), but Kotlin runs on the JVM and interoperates fully with Java, so Java knowledge remains the foundation.
+   - C and C++ are used only through the Android NDK for performance-critical parts such as game engines.
+   - **iOS is not a language at all** — it is Apple's mobile operating system. Its languages are Swift and Objective-C.
 
 7. **LOGO কি ধরনের প্রোগ্রাম?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
+   Answer: **LOGO is an educational programming language**, designed to teach programming concepts to children.
+
+   - Developed in 1967 at MIT by Seymour Papert, Wally Feurzeig and Cynthia Solomon.
+   - It is derived from LISP, so it is a functional and interpreted language.
+   - Its best-known feature is **turtle graphics**: a small on-screen "turtle" is moved with simple commands and draws lines as it goes.
+
+   Sample commands
+   ```
+   FORWARD 100      ; move forward 100 steps
+   RIGHT 90         ; turn right 90 degrees
+   REPEAT 4 [ FORWARD 100 RIGHT 90 ]   ; draws a square
+   ```
+
+   Why it is used in teaching
+   - The turtle gives immediate visual feedback, so a child sees the effect of a command at once.
+   - It introduces sequence, repetition, procedures and geometry naturally.
+   - It is the ancestor of modern block-based teaching languages such as Scratch.
+
 8. **MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 867 (ET: BUET)]*
+
+   Answer: The `IF` function tests a condition and returns one value if true and another if false.
+
+   Syntax
+   ```
+   =IF(logical_test, value_if_true, value_if_false)
+   ```
+
+   Basic example — place this formula in cell D1
+   ```
+   =IF(A1>B1, A1, B1)
+   ```
+   - Meaning: if the value in A1 is greater than B1, put A1 in D1; otherwise put B1.
+
+   Using all three cells — nested IF to find the largest of A1, B1, C1
+   ```
+   =IF(AND(A1>B1, A1>C1), A1, IF(B1>C1, B1, C1))
+   ```
+   - The `AND` checks both conditions. If A1 is largest, return A1; otherwise compare B1 and C1.
+   - The same result is obtained far more simply with `=MAX(A1:C1)`.
+
+   Other useful forms
+   ```
+   =IF(A1+B1+C1>100, "Pass", "Fail")        ; condition on the total
+   =IF(A1="", "Empty", A1+B1+C1)             ; check for a blank cell
+   =IFS(A1>80,"A+", A1>70,"A", A1>60,"A-", TRUE,"F")   ; multiple conditions
+   ```
+
+   - Note: nesting more than three or four `IF`s becomes unreadable. `IFS`, `VLOOKUP` or `XLOOKUP` are better for many conditions.
 
 9. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** *[41th BCS 2021 compact it 881 (ET: N/A)]*
 
+   Answer: **Software** is the set of programs, instructions and associated data that tells the computer hardware what to do. It has no physical existence — it can be seen and used but not touched.
+
+   (a) System Software
+   - Software that runs and manages the computer hardware and provides a platform for other software to run on. It works for the MACHINE, not directly for the user.
+
+   Types with examples
+   - **Operating System** — Windows, Linux, macOS, Android. Manages processes, memory, files and devices.
+   - **Device driver** — printer driver, graphics driver. Lets the OS talk to specific hardware.
+   - **Language translator** — compiler (GCC), interpreter (Python), assembler.
+   - **Utility software** — antivirus, disk defragmenter, backup tools, file compression.
+   - **Firmware** — BIOS/UEFI.
+
+   (b) Application Software
+   - Software written to perform a specific task for the USER. It runs on top of system software.
+
+   Types with examples
+   - **Word processing** — MS Word, Google Docs.
+   - **Spreadsheet** — MS Excel, LibreOffice Calc.
+   - **Presentation** — MS PowerPoint.
+   - **Database** — MS Access, MySQL client tools.
+   - **Web browser** — Chrome, Firefox.
+   - **Multimedia** — VLC, Photoshop.
+   - **Custom business software** — core banking system, payroll, ERP.
+
+   - Key relationship: application software cannot run without system software. When Excel saves a file it does not write to the disk itself; it asks the operating system, which uses the disk driver.
+
 10. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+    Answer: **Email Bangla** (emailbangla.com) is a well-known service for writing email in Bangla. It provides phonetic Bangla webmail so the user can type Bangla without installing any keyboard software.
+
+    - More generally, Bangla email can be written in any modern email client — Gmail, Outlook, Thunderbird — because they all support Unicode. The Bangla text is typed using a Bangla input tool such as **Avro Keyboard** or **Bijoy**, then pasted or typed into the mail.
+    - **Avro Keyboard** (Mehdi Hasan Khan, 2003) is the most widely used Unicode Bangla input software, and it works inside every application including email.
+    - Before Unicode, ASCII-based fonts like Bijoy could not be emailed reliably, because the recipient needed the same font installed. Unicode solved this.  <!-- verify -->
 
 11. **Graphics Design এর চারটি Software এর নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
+    Answer: Four graphics design software:
+
+    - **Adobe Photoshop** — raster (bitmap) editing; photo retouching, digital painting, web graphics.
+    - **Adobe Illustrator** — vector graphics; logos, icons, illustrations that scale without quality loss.
+    - **CorelDRAW** — vector graphics; very widely used in Bangladesh for banners, business cards and print design.
+    - **Adobe InDesign** — page layout and desktop publishing; books, magazines, brochures.
+
+    Free and open-source alternatives
+    - **GIMP** (raster, alternative to Photoshop), **Inkscape** (vector, alternative to Illustrator), **Scribus** (layout), **Canva** (web-based, template driven), **Figma** (UI and web design).
+
+    - Key distinction to state: Photoshop and GIMP work with PIXELS, so enlarging an image loses quality. Illustrator, CorelDRAW and Inkscape work with mathematical PATHS, so the artwork scales to any size without loss — which is why logos are always made in vector software.
+
 12. **Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadsheet এর একেকটা ঘরকে _____ বলে? (iv) Storage device এর মূল folder এর নাম _____? (v) Database এর data file গুলোর তালিকাকে _____ বলা হয়?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
+
+    Answer:
+
+    | Part | Answer |
+    |---|---|
+    | (i) | `winword` — type it in the Run dialog (`Win + R`) and press Enter |
+    | (ii) | Automation — to automate repetitive tasks |
+    | (iii) | Cell |
+    | (iv) | Root folder (root directory) |
+    | (v) | Data dictionary (also called the system catalogue) |
+
+    Explanations
+    - **(i)** Other Run commands: `excel` for Excel, `powerpnt` for PowerPoint, `notepad`, `calc`, `cmd`, `mspaint`.
+    - **(ii)** A macro records a sequence of actions so it can be replayed with one click or keystroke. In Office it is written in VBA (Visual Basic for Applications). It saves time on repetitive formatting, calculation and report generation.
+    - **(iii)** A cell is the box formed where a row meets a column, addressed as `A1`, `B5`.
+    - **(iv)** The root folder is the topmost directory of a storage device, written as `C:\` in Windows and `/` in Linux. Every other folder lies inside it.
+    - **(v)** The data dictionary stores metadata — the definitions of tables, columns, data types, indexes, constraints and users. It is the database's description of itself.
 
 13. **What is DSS? Write the difference between MIS and DSS.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: RUET)]*
 
+    Answer: **DSS (Decision Support System)** is a computer-based information system that helps managers make SEMI-STRUCTURED and UNSTRUCTURED decisions by providing analytical models, simulation and what-if analysis on both internal and external data.
+
+    Components of a DSS
+    - **Database** — internal and external data.
+    - **Model base** — statistical, financial and optimisation models.
+    - **User interface** — interactive, so the manager drives the analysis directly.
+
+    MIS vs DSS
+
+    | Point | MIS | DSS |
+    |---|---|---|
+    | Purpose | Reports on routine operations | Supports complex, non-routine decisions |
+    | Decision type | Structured, repetitive | Semi-structured and unstructured |
+    | Users | Middle management | Middle and top management, analysts |
+    | Output | Fixed periodic reports | Interactive analysis, forecasts, what-if results |
+    | Data source | Mainly internal transaction data | Internal plus external data |
+    | Flexibility | Low — fixed formats | High — user-driven |
+    | Analysis | Summarising and comparing | Modelling, simulation, optimisation |
+    | Question answered | "What happened?" | "What if?" and "What should we do?" |
+    | Example | Monthly branch performance report | Should we open a new branch in this upazila? |
+
+    - Relationship: a DSS often consumes the data produced by the MIS, which in turn is built on TPS transaction data.
+
 14. **Compare between TPS and DSS.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1165-1166 (ET: N/A)]*
+
+    Answer:
+
+    | Point | TPS (Transaction Processing System) | DSS (Decision Support System) |
+    |---|---|---|
+    | Purpose | Records and processes day-to-day business transactions | Supports managers in making complex decisions |
+    | Level of management | Operational — the lowest level | Tactical and strategic — middle and top level |
+    | Users | Clerks, cashiers, operational staff | Managers, analysts, executives |
+    | Data volume | Very high — thousands of transactions per day | Lower volume, but wider variety |
+    | Data type | Detailed, current, internal | Summarised, historical plus external |
+    | Processing | Repetitive, routine, real-time or batch | Interactive, ad hoc, analytical |
+    | Output | Transaction records, receipts, confirmations | Reports, forecasts, what-if scenarios, recommendations |
+    | Decision type | Structured, pre-defined rules | Semi-structured and unstructured |
+    | Response requirement | Must be fast and always available | Can take longer; accuracy matters more than speed |
+    | Banking example | Recording a cash deposit or ATM withdrawal | Deciding the interest rate for a new deposit product |
+
+    Relationship between them
+    - TPS is the FOUNDATION of the information system hierarchy. It captures the raw data.
+    - That data flows upward: **TPS → MIS → DSS → ESS**.
+    - A DSS cannot work without the transaction data a TPS collects. The layers serve different management levels, from operational at the bottom to strategic at the top.
 
 15. **Differentiate between system software and application software.** *[Multiple Ministry Assistant Programmer 2017 compact it 1228-1229 (ET: N/A)]*
 
+    Answer:
+
+    | Point | System Software | Application Software |
+    |---|---|---|
+    | Definition | Manages and controls the hardware, and provides a platform for other software | Performs a specific task for the end user |
+    | Serves | The computer system | The user |
+    | Essential? | Yes — without it the machine cannot function | No — the machine still runs without it |
+    | When it runs | Starts with the computer and runs continuously in the background | Runs only when the user opens it |
+    | Dependence | Runs independently | Depends entirely on system software |
+    | Written in | Assembly and low-level languages, C | High-level languages |
+    | User interaction | Little direct interaction | Constant direct interaction |
+    | Installation | Installed first, often pre-loaded | Installed later by the user |
+    | Examples | Windows, Linux, device drivers, compilers, BIOS, antivirus | MS Word, Excel, Chrome, VLC, banking software, games |
+
+    - Layered view: **Hardware → System software → Application software → User**. Each layer talks only to the one below it.
+
 16. **Define system software and application software with three examples of each.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
 
+    Answer:
+
+    **System software**
+    - Software that operates and controls the computer hardware and provides an environment in which application software can run. It works for the machine rather than directly for the user.
+
+    Three examples
+    - **Operating System (Windows, Linux)** — manages processes, memory, files and devices.
+    - **Device driver (printer driver, graphics driver)** — allows the OS to communicate with a specific piece of hardware.
+    - **Compiler (GCC, javac)** — translates high-level source code into machine code.
+
+    **Application software**
+    - Software written to perform a particular task for the user, running on top of system software.
+
+    Three examples
+    - **Microsoft Word** — creating and editing documents.
+    - **Microsoft Excel** — spreadsheet calculation and data analysis.
+    - **Google Chrome** — browsing the web.
+
+    - Other common application software: VLC media player, Photoshop, core banking systems, ERP and payroll software.
+
 17. **b) What are the main differences between software and hardware? Discuss with examples.** *[Ministry of Finance Programmer 2013 compact it 1271 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Hardware | Software |
+    |---|---|---|
+    | Nature | Physical — can be touched | Logical — a set of instructions, cannot be touched |
+    | Manufacture | Manufactured in a factory | Developed by programmers |
+    | Wear and tear | Wears out and degrades physically over time | Never wears out, but becomes outdated |
+    | Failure mode | Fails gradually, warning signs appear | Fails suddenly, from a bug already present |
+    | Repair | Faulty parts are replaced | Faulty code is corrected and reissued |
+    | Copying | Cannot be copied; each unit must be made | Copied instantly and at almost no cost |
+    | Virus | Not affected directly | Can be infected |
+    | Transfer | Moved physically | Transferred over a network in seconds |
+    | Dependence | Useless without software | Cannot run without hardware |
+    | Examples | CPU, RAM, hard disk, keyboard, monitor, printer | Windows, MS Word, Chrome, Android, banking application |
+
+    Relationship
+    - Hardware is the body, software is the mind. Neither is useful alone.
+    - Hardware without software is inert metal; software without hardware is just a file that cannot execute.
+    - **Firmware** sits between them — software permanently stored inside a hardware chip, such as BIOS or router firmware.
+
+    Example illustrating both
+    - Printing a document: MS Word (software) sends the print command, the operating system and printer driver (software) translate it, and the printer (hardware) physically puts ink on paper. Remove any part and nothing prints.
 
 ## Data Center Infrastructure & Power Management (10)
 
