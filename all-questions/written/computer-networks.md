@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 517 questions
+**Table of Contents** — 33 subtopics · 519 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-111) | 111 |
-| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-53) | 53 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-112) | 112 |
+| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-54) | 54 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-32) | 32 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-23) | 23 |
 | 5 | [Networking Devices](#networking-devices-23) | 23 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (111)
+## Subnetting & IP Addressing (112)
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
 2. An organization has been assigned the IPv4 network address 192.168.1.0/24. As part of the network deployment, the network administrator is required to divide the address space into four equal-sized subnets to support different departments. Determine the Network Address, Subnet Mask (both CIDR and dotted-decimal notation). *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
@@ -310,7 +310,9 @@ ii) 211.10.15.4
 
 111. **Given IP address 10.10.0.0/16, you have divided the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP address of the third subnet.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 83]]*
 
-## OSI & TCP/IP Reference Model (53)
+112. **Define the states of the DNS (Domain Name System). How does DNS resolve a domain name into an IP address?** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 224-225]]*
+
+## OSI & TCP/IP Reference Model (54)
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
 2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -431,6 +433,8 @@ ii) 211.10.15.4
 
 53. **(b) Given following values:** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 70]]*
 True Positive (TP) = 560 True Negative (TN) = 330 False Positive (FP) = 60 False Negative (FN) = 50 Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score
+
+54. **Write a Java class named BankAccount having the following: Private fields: account_name, account_number, balance (encapsulation), Methods: deposit(), withdraw(), display(). Show code with access control and method implementation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 226-228]]*
 
 ## Networking Fundamentals & Terminology (32)
 

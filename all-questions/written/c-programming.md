@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 272 questions
+**Table of Contents** — 9 subtopics · 273 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-113) | 113 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-114) | 114 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
 | 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (113)
+## Basic Programs & Control Statements (114)
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -428,6 +428,8 @@ for(a=1; a<=100; a++)
    4
 
 113. **Write a C program to get max element of an array.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
+
+114. **Write a program (in C or any language) to find the sum of even numbers from 1 to n.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 221]]*
 
 ## Output Tracing & Control Flow (57)
 

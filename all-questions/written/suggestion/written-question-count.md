@@ -1,17 +1,17 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3203** questions.
+Sorted by count, highest first. Total **3221** questions.
 
 ## IT questions
 
-Total: **2658** questions.
+Total: **2676** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **517** |
-| | Subnetting & IP Addressing | 111 |
-| | OSI & TCP/IP Reference Model | 53 |
+| **Computer Networks** | **— all subcategories —** | **519** |
+| | Subnetting & IP Addressing | 112 |
+| | OSI & TCP/IP Reference Model | 54 |
 | | Networking Fundamentals & Terminology | 32 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 23 |
 | | Networking Devices | 23 |
@@ -43,14 +43,14 @@ Total: **2658** questions.
 | | Address Resolution (ARP & RARP) | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **298** |
-| | SQL Queries | 89 |
+| **Database** | **— all subcategories —** | **300** |
+| | SQL Queries | 90 |
 | | Keys in DBMS | 34 |
 | | DBMS Architecture & Features | 26 |
 | | ER Diagram & Database Design | 25 |
 | | Normalization & Database Design | 23 |
 | | SQL Commands (DDL, DML, DCL, TCL) | 18 |
-| | Transaction Management & ACID Properties | 14 |
+| | Transaction Management & ACID Properties | 15 |
 | | Relational Data Model & ER Relationships | 14 |
 | | Indexing & Query Optimization (B-Tree, B+ Tree) | 10 |
 | | Data Warehousing, Data Mining & Business Intelligence | 9 |
@@ -63,8 +63,8 @@ Total: **2658** questions.
 | | Database Connectivity (JDBC) | 2 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
-| **C Programming** | **— all subcategories —** | **272** |
-| | Basic Programs & Control Statements | 113 |
+| **C Programming** | **— all subcategories —** | **273** |
+| | Basic Programs & Control Statements | 114 |
 | | Output Tracing & Control Flow | 57 |
 | | Recursion & Functions | 38 |
 | | Operators, Data Types & Language Concepts | 25 |
@@ -73,12 +73,12 @@ Total: **2658** questions.
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **197** |
+| **Operating System** | **— all subcategories —** | **198** |
 | | Linux / Unix Commands & Administration | 47 |
 | | CPU Scheduling Algorithms | 25 |
 | | OS Concepts & System Software | 24 |
 | | Deadlock & Resource Allocation | 23 |
-| | Memory Management & Paging | 17 |
+| | Memory Management & Paging | 18 |
 | | Virtual Memory & Page Replacement (Thrashing) | 16 |
 | | Process Management & Process States | 12 |
 | | Concurrency, Threads & Synchronization | 11 |
@@ -87,7 +87,7 @@ Total: **2658** questions.
 | | Windows & System Administration | 5 |
 | | Process Synchronization & Concurrency | 4 |
 | | OS Concepts & Process Management | 0 |
-| **Computer & Network Security** | **— all subcategories —** | **184** |
+| **Computer & Network Security** | **— all subcategories —** | **186** |
 | | Social Engineering & Cyber Attacks | 32 |
 | | Cryptography | 31 |
 | | Firewalls & Network Defense | 20 |
@@ -101,10 +101,10 @@ Total: **2658** questions.
 | | Critical Information Infrastructure (CII) & Cyber Governance | 3 |
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 3 |
+| | Cryptography & Network Security | 2 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| | Cryptography & Network Security | 0 |
-| **Computer Fundamentals** | **— all subcategories —** | **159** |
-| | Computer Fundamentals & Acronyms | 65 |
+| **Computer Fundamentals** | **— all subcategories —** | **162** |
+| | Computer Fundamentals & Acronyms | 68 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
@@ -140,8 +140,8 @@ Total: **2658** questions.
 | | 2's Complement & Binary Arithmetic | 4 |
 | | Finite State Machines (FSM) | 1 |
 | | Number Systems & Codes | 0 |
-| **Algorithm** | **— all subcategories —** | **136** |
-| | Sorting Algorithms & Complexity | 38 |
+| **Algorithm** | **— all subcategories —** | **137** |
+| | Sorting Algorithms & Complexity | 39 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 15 |
 | | Searching Algorithms | 14 |
@@ -188,22 +188,23 @@ Total: **2658** questions.
 | | Hashing & Hash Tables | 7 |
 | | Queue | 6 |
 | | Data Structure Fundamentals | 6 |
-| **Web Technology** | **— all subcategories —** | **77** |
-| | HTML & Web Fundamentals | 30 |
+| | Tree Data Structures (BST, AVL, B-Tree, Heaps) | 0 |
+| **Web Technology** | **— all subcategories —** | **78** |
+| | HTML & Web Fundamentals | 31 |
 | | JavaScript & jQuery (DOM & Validation) | 16 |
 | | HTTP Protocol | 10 |
 | | Web Services & APIs (SOAP vs REST) | 8 |
 | | Full Stack & Backend Web Development | 7 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
-| **AI & Machine Learning** | **— all subcategories —** | **47** |
+| **AI & Machine Learning** | **— all subcategories —** | **52** |
+| | Artificial Intelligence & Machine Learning | 9 |
 | | Artificial Intelligence & Expert Systems | 8 |
 | | Deep Learning & Neural Networks (ANN, CNN, RNN) | 8 |
 | | Machine Learning Paradigms (Supervised vs Unsupervised) | 6 |
 | | Model Evaluation & Datasets | 5 |
 | | Supervised Learning (Decision Trees) | 4 |
 | | Generative AI & Explainable AI (XAI) | 4 |
-| | Artificial Intelligence & Machine Learning | 4 |
 | | Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) | 3 |
 | | Search Algorithms (Informed vs Uninformed Search) | 2 |
 | | Overfitting, Underfitting & Model Generalization | 1 |

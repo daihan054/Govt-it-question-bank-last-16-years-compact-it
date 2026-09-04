@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 98 questions
+**Table of Contents** — 9 subtopics · 98 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,6 +11,7 @@
 | 6 | [Hashing & Hash Tables](#hashing--hash-tables-7) | 7 |
 | 7 | [Queue](#queue-6) | 6 |
 | 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
+| 9 | [Tree Data Structures (BST, AVL, B-Tree, Heaps)](#tree-data-structures-bst-avl-b-tree-heaps-0) | 0 |
 
 <!-- TOC END -->
 
@@ -240,3 +241,6 @@ Output: Not Balanced
 5. **What is linear and Non-linear data structure? Write an example of data structure which represents logarithmic complexity?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 
 6. **Difference between linear and nonlinear data structure.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
+
+## Tree Data Structures (BST, AVL, B-Tree, Heaps) (0)
+**Explain Abstraction with a simple code example.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 228-229]]*

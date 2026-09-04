@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 197 questions
+**Table of Contents** — 13 subtopics · 198 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,7 +7,7 @@
 | 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-25) | 25 |
 | 3 | [OS Concepts & System Software](#os-concepts--system-software-24) | 24 |
 | 4 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
-| 5 | [Memory Management & Paging](#memory-management--paging-17) | 17 |
+| 5 | [Memory Management & Paging](#memory-management--paging-18) | 18 |
 | 6 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
 | 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
 | 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
@@ -351,7 +351,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 23. **(b) What are the conditions for a deadlock situation?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
 
-## Memory Management & Paging (17)
+## Memory Management & Paging (18)
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
    **(i) How many pages are in logical address space?**
    **(ii) How many bits are used for the page number and offset?** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1437 (ET: BUET)]*
@@ -397,6 +397,8 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 17. **(a) Consider a computer system with the following specifications: 2+2=4** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72]]*
 Physical memory (RAM): 4 GB, Page size: 4 KB, Virtual address space: 32 bits, Page table entry size: 8 bytes, Answer the following: (i) How many pages are there in the virtual address space? Explain your answer. (ii) What is the size of the page table? Explain your answer.
+
+18. **What is Thrashing? How does it impact CPU performance and system efficiency?** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 228]]*
 
 ## Virtual Memory & Page Replacement (Thrashing) (16)
 

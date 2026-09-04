@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 184 questions
+**Table of Contents** — 15 subtopics · 186 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -16,8 +16,8 @@
 | 11 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
 | 12 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
 | 13 | [Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing-3) | 3 |
-| 14 | [Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities-1) | 1 |
-| 15 | [Cryptography & Network Security](#cryptography--network-security-0) | 0 |
+| 14 | [Cryptography & Network Security](#cryptography--network-security-2) | 2 |
+| 15 | [Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities-1) | 1 |
 
 <!-- TOC END -->
 
@@ -429,9 +429,11 @@
 
 3. **e) What is email? What precautions can be taken to prevent unnecessary and unwanted e-mails?** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
 
+## Cryptography & Network Security (2)
+1. **(a) What is 2-factor authentication? Describe it with an example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65]]*
+
+2. **Focus Witting: Banking Security (English) [Discuss the key security measures used in modern banking applications to protect customer data and prevent fraud.]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
 ## Buffer Overflow & Software Vulnerabilities (1)
 
 1. **Explain buffer overflow attack with an example.** *[BTCL Assistant Manager (Technical) 2023 compact it 592 (ET: BUET)]*
-
-## Cryptography & Network Security (0)
-**(a) What is 2-factor authentication? Describe it with an example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65]]*

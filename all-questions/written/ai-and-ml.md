@@ -1,15 +1,15 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 47 questions
+**Table of Contents** — 12 subtopics · 52 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
-| 2 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
-| 3 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
-| 4 | [Model Evaluation & Datasets](#model-evaluation--datasets-5) | 5 |
-| 5 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees-4) | 4 |
-| 6 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai-4) | 4 |
-| 7 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-4) | 4 |
+| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-9) | 9 |
+| 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
+| 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
+| 4 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
+| 5 | [Model Evaluation & Datasets](#model-evaluation--datasets-5) | 5 |
+| 6 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees-4) | 4 |
+| 7 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai-4) | 4 |
 | 8 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3) | 3 |
 | 9 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search-2) | 2 |
 | 10 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization-1) | 1 |
@@ -19,6 +19,26 @@
 <!-- TOC END -->
 
 ---
+
+## Artificial Intelligence & Machine Learning (9)
+1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
+(i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
+
+2. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 70]]*
+
+3. **What is the difference between Supervised and Unsupervised learning?** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*
+
+4. **Explain Different types of Cyber-attack.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 84-85]]*
+
+5. **What is the CIA Triad? Explain its three components with examples.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222]]*
+
+6. **AI related Question [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+7. **A banking application requires a 4-digit PIN fo. login. If a wrong PIN is entered, an error message should be displayed. Design a test case for this scenario and explain with examples. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+8. **Determine which pair of graphs are isomorphic. Justify your answer with reasoning or proof. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+9. **Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
 ## Artificial Intelligence & Expert Systems (8)
 
@@ -109,16 +129,6 @@
 3. **LLM stands for __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
 4. **What is ChatGPT? Write down the Pros and cons of ChatGPT.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
-
-## Artificial Intelligence & Machine Learning (4)
-1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
-(i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
-
-2. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 70]]*
-
-3. **What is the difference between Supervised and Unsupervised learning?** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*
-
-4. **Explain Different types of Cyber-attack.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 84-85]]*
 
 ## Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)
 

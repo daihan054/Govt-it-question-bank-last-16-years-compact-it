@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 435 questions
+**Table of Contents** — 6 subtopics · 437 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
 | 2 | [International Affairs](#international-affairs-104) | 104 |
-| 3 | [Everyday Science](#everyday-science-89) | 89 |
+| 3 | [Everyday Science](#everyday-science-91) | 91 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -1690,7 +1690,7 @@
 ১০। War & Peace কার লেখা? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
    40) [bitbox it book 163]__
 
-## Everyday Science (89)
+## Everyday Science (91)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -2318,6 +2318,16 @@
    (b) 30
    (c) 35
    (d) 40
+
+90. **Explain the concepts of:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222-223]]*
+   a. Reinforcement Learning (RL)
+   b. Deep Learning (DL)
+   c. Federated Learning (FL) Differentiate them in terms of learning method, data usage, and provide one real-world example for each.
+
+91. **Explain the following addressing modes in the 8086 microprocessors:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 225]]*
+   a. Direct Addressing
+   b. Immediate Addressing
+   c. Register Addressing Differentiate among them with examples.
 
 ## Geography & Environment (26)
 

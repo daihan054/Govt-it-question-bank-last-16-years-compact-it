@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 77 questions
+**Table of Contents** — 7 subtopics · 78 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-30) | 30 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-31) | 31 |
 | 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-16) | 16 |
 | 3 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-8) | 8 |
@@ -15,8 +15,7 @@
 
 ---
 
-## HTML & Web Fundamentals (30)
-
+## HTML & Web Fundamentals (31)
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
 2. **What is URL? Give an Example.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
@@ -94,6 +93,8 @@
 29. **What is local Storage and session Storage in HTML5?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
 30. **What are the minimum HTML Tags is used web pages? How can your comments at web pages so that browser not read this?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1266 (ET: N/A)]*
+
+31. **What are SOAP and RESTful APIs? Discuss the differences between them in terms of architecture, format, and usage.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 223]]*
 
 ## JavaScript & jQuery (DOM & Validation) (16)
 

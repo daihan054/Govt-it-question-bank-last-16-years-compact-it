@@ -1,15 +1,15 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 298 questions
+**Table of Contents** — 19 subtopics · 300 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-89) | 89 |
+| 1 | [SQL Queries](#sql-queries-90) | 90 |
 | 2 | [Keys in DBMS](#keys-in-dbms-34) | 34 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-26) | 26 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
 | 5 | [Normalization & Database Design](#normalization--database-design-23) | 23 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-18) | 18 |
-| 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-14) | 14 |
+| 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-15) | 15 |
 | 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-14) | 14 |
 | 9 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-10) | 10 |
 | 10 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-9) | 9 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (89)
+## SQL Queries (90)
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
 2. Consider a STUDENTS table with the following attributes: StudentID, Name, Department, Marks (10 Marks)
@@ -384,6 +384,8 @@ employee (employee_name, street, city) works (employee_name, company_name, salar
 
 89. **SQL to find duplicate names from employee Table.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
 
+90. **Given a table Sales (sales_id, salesman, region, sales_amount, sales_date), Write an SQL query to: Display sales_id, region, and MAX(sales_amount), Where the average sales_amount > 50000 and each region has at least 5 sales.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 226]]*
+
 ## Keys in DBMS (34)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
@@ -696,8 +698,7 @@ employee (employee_name, street, city) works (employee_name, company_name, salar
 
 18. **What are the difference among DDL, DML and DCL?** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
 
-## Transaction Management & ACID Properties (14)
-
+## Transaction Management & ACID Properties (15)
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
 
 2. **How many process of Transaction complete?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
@@ -725,6 +726,8 @@ employee (employee_name, street, city) works (employee_name, company_name, salar
 13. **Describe the ACID properties in a database. When does a deadlock occur and how do you prevent it, in a database?** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1116 (ET: DU)]*
 
 14. **Describe the ACID properties of database.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
+
+15. **Explain ACID properties in the context of database transactions.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 221-222]]*
 
 ## Relational Data Model & ER Relationships (14)
 
