@@ -9761,17 +9761,654 @@ public class WhatTheOutput{
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
 
+   Answer: Java has `four` access levels, of which three have keywords — `public`, `private` and `protected` — plus the `default` (package-private) level, which has no keyword.
+
+   The access table, marked Y (accessible) and N (not accessible)
+   ```
+      Accessible from        | private | default | protected | public
+      -----------------------+---------+---------+-----------+--------
+      Same class             |    Y    |    Y    |     Y     |   Y
+      Same package,          |    N    |    Y    |     Y     |   Y
+        non-subclass         |         |         |           |
+      Same package, subclass |    N    |    Y    |     Y     |   Y
+      Different package,     |    N    |    N    |     Y     |   Y
+        SUBCLASS             |         |         |           |
+      Different package,     |    N    |    N    |     N     |   Y
+        non-subclass         |         |         |           |
+   ```
+
+   For the three named specifiers only
+
+   | Accessible from | `public` | `private` | `protected` |
+   |---|---|---|---|
+   | Within the same class | `Y` | `Y` | `Y` |
+   | Another class, same package | `Y` | `N` | `Y` |
+   | Subclass in the same package | `Y` | `N` | `Y` |
+   | Subclass in a different package | `Y` | `N` | `Y` |
+   | Non-subclass, different package | `Y` | `N` | `N` |
+
+   What each means
+   ```
+      public    : visible EVERYWHERE - any class, any package.
+                  The widest access.
+
+      protected : visible inside the class, throughout the same package,
+                  AND to SUBCLASSES in other packages.
+                  Designed for inheritance.
+
+      default   : (no keyword) visible only within the SAME PACKAGE.
+                  Also called package-private.
+
+      private   : visible ONLY inside the class that declares it.
+                  The narrowest access, and the basis of encapsulation.
+   ```
+
+   Ordering from widest to narrowest
+   ```
+      public  >  protected  >  default  >  private
+   ```
+
+   Demonstration
+   ```java
+   package pack1;
+
+   public class A {
+       public    int p = 1;      // everywhere
+       protected int q = 2;      // package + subclasses anywhere
+                 int r = 3;      // package only (default)
+       private   int s = 4;      // this class only
+
+       void test() {
+           System.out.println(p + " " + q + " " + r + " " + s);  // all Y
+       }
+   }
+   ```
+   ```java
+   package pack2;
+   import pack1.A;
+
+   public class B extends A {          // a SUBCLASS in another package
+       void test() {
+           System.out.println(p);      // Y - public
+           System.out.println(q);      // Y - protected, and B is a subclass
+           // System.out.println(r);   // N - default, different package
+           // System.out.println(s);   // N - private
+       }
+   }
+
+   class C {                           // NOT a subclass, different package
+       void test() {
+           A a = new A();
+           System.out.println(a.p);    // Y - public
+           // System.out.println(a.q); // N - protected, and C is not a subclass
+       }
+   }
+   ```
+
+   Rules worth stating
+   ```
+      A top-level CLASS may only be public or default - never private
+           or protected.
+
+      A subclass CANNOT reduce the access of an overridden method :
+           a public method cannot become protected in the subclass.
+           It may WIDEN it.
+
+      protected access from another package works only through
+           INHERITANCE - a subclass may use its OWN inherited member,
+           but not another object's.
+
+      The rule of good design : make every field PRIVATE and expose
+           behaviour through public methods. That is encapsulation.
+   ```
+
 2. **Explain the various types of access specifiers.** *[DESCO Assistant Engineer 20.05.2023 compact it 579 (ET: DESCO)]*
+
+   Answer: An `access specifier` (access modifier) controls `where` a class member may be used. It is the mechanism by which `encapsulation` is actually enforced.
+
+   Java has `four` levels
+   ```
+      public  >  protected  >  default  >  private
+      widest                              narrowest
+   ```
+
+   1. `public`
+   - Accessible from `everywhere` — any class, any package.
+   - Used for the class's `interface`: the methods other code is meant to call.
+   ```java
+      public class Student {
+          public void display() { ... }
+      }
+   ```
+
+   2. `protected`
+   - Accessible inside the class, throughout the `same package`, and to `subclasses in any package`.
+   - Designed for inheritance: it lets a subclass reach the parent's internals while keeping unrelated classes out.
+   ```java
+      protected double balance;      // subclasses may use it directly
+   ```
+
+   3. `default` (package-private, no keyword)
+   - Accessible only within the `same package`. Writing no specifier at all gives this level.
+   ```java
+      int roll;          // visible to other classes in the same package only
+   ```
+
+   4. `private`
+   - Accessible `only inside the class` that declares it. The narrowest level, and the foundation of encapsulation.
+   ```java
+      private double balance;        // nothing outside can touch it
+   ```
+
+   Access table
+   ```
+      Accessible from             | private | default | protected | public
+      ----------------------------+---------+---------+-----------+--------
+      Same class                  |    Y    |    Y    |     Y     |   Y
+      Same package, non-subclass  |    N    |    Y    |     Y     |   Y
+      Same package, subclass      |    N    |    Y    |     Y     |   Y
+      Other package, SUBCLASS     |    N    |    N    |     Y     |   Y
+      Other package, non-subclass |    N    |    N    |     N     |   Y
+   ```
+
+   Example
+   ```java
+   public class BankAccount {
+
+       private   double balance;         // only this class
+       protected String accountType;     // this class + subclasses
+                 String branchCode;      // same package only (default)
+       public    String accountNumber;   // everywhere
+
+       public void deposit(double amt) {          // public interface
+           if (amt > 0) balance += amt;           // private data, validated
+       }
+
+       public double getBalance() { return balance; }
+
+       private void auditLog(String msg) { ... }  // internal helper, hidden
+   }
+   ```
+
+   C++ has `three` specifiers
+   ```
+      public    : accessible everywhere
+      protected : the class and its derived classes
+      private   : the class only  (the DEFAULT for a class)
+   ```
+   ```cpp
+   class Student {
+   private:                 // default for a class
+       int roll;
+   protected:
+       string name;
+   public:
+       void display() { ... }
+   };
+   ```
+   - In C++ the default for a `struct` is `public` and for a `class` is `private` — that is the only real difference between the two.
+   - C++ also has `friend`, which lets a named function or class reach private members. Java has no equivalent.
+
+   Rules and good practice
+   ```
+      A top-level class may only be public or default - never private
+           or protected.
+
+      An overriding method CANNOT reduce access :
+           public in the parent cannot become protected in the child.
+
+      protected across packages works only through INHERITANCE - a
+           subclass may use its OWN inherited member, not another object's.
+
+      DESIGN RULE : make every field PRIVATE and expose behaviour through
+           public methods. Fields should almost never be public, because a
+           public field can be set to any value by anyone, which destroys
+           every invariant the class tries to maintain.
+   ```
 
 3. **Which type of variable violates encapsulation rules?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)], [BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+   Answer: A `public instance variable` violates encapsulation.
+
+   - `Encapsulation` requires that an object's data be `hidden` and reachable only through its own methods. A public field is directly readable and writable by any code anywhere, so the class loses all control over its own state.
+
+   The problem
+   ```java
+   class BankAccount {
+       public double balance;         // VIOLATES encapsulation
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           BankAccount acc = new BankAccount();
+
+           acc.balance = -99999;      // legal! The account is now corrupt.
+           acc.balance = 1000000;     // legal! Money created from nothing.
+       }
+   }
+   ```
+   - There is no validation, no audit trail and no way to stop it. Every rule the class was supposed to enforce is bypassed.
+
+   The correct design
+   ```java
+   class BankAccount {
+       private double balance;                    // hidden
+
+       public void deposit(double amount) {
+           if (amount > 0) balance += amount;     // VALIDATED
+           else System.out.println("Invalid amount");
+       }
+
+       public void withdraw(double amount) {
+           if (amount > 0 && amount <= balance) balance -= amount;
+           else System.out.println("Insufficient balance");
+       }
+
+       public double getBalance() { return balance; }   // read-only access
+   }
+   ```
+   ```java
+      acc.balance = -99999;      // COMPILE ERROR - balance is private
+      acc.deposit(-500);         // rejected by the validation
+   ```
+
+   Which variables violate encapsulation, ranked
+   ```
+      public    field  : the WORST - anyone anywhere can change it
+      protected field  : weaker violation - any subclass, in any package,
+                         can change it, so the parent cannot enforce its
+                         own invariants
+      default   field  : any class in the same package can change it
+      private   field  : correct - encapsulation preserved
+   ```
+
+   Other ways encapsulation is broken, even with private fields
+   ```java
+      // 1. a setter with NO validation - private in name only
+      public void setBalance(double b) { this.balance = b; }   // as bad as public
+
+      // 2. returning a MUTABLE object directly
+      private List<String> items;
+      public List<String> getItems() { return items; }   // the caller can now
+                                                         // modify the internal list
+      // fix :
+      public List<String> getItems() { return new ArrayList<>(items); }
+
+      // 3. a public STATIC mutable field - shared global state, the worst of all
+      public static int counter;
+   ```
+
+   The acceptable exception
+   ```java
+      public static final double PI = 3.14159;
+   ```
+   - A `public static final` constant of an immutable type is safe, because it can be read but never changed. `final` on a mutable object is `not` safe: the reference cannot be reassigned, but the object it points to can still be modified.
+
+   - The rule to state: `make every field private and expose behaviour, not data`. Getters and setters are then the single controlled entry point, where validation, logging and future changes of representation can all live.
+
 4. **Which members of base class cannot access to derived class?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+   Answer: The `private` members of a base class cannot be accessed by a derived class.
+
+   - A `private` member belongs to the class that declares it and to nothing else — not even to its own subclasses. This is what keeps encapsulation intact through an inheritance chain.
+
+   ```java
+   class Base {
+       private   int a = 1;      // NOT accessible in the subclass
+       protected int b = 2;      // accessible
+                 int c = 3;      // accessible if in the SAME package
+       public    int d = 4;      // accessible everywhere
+   }
+
+   class Derived extends Base {
+       void test() {
+           // System.out.println(a);   // COMPILE ERROR - a is private
+           System.out.println(b);      // OK - protected
+           System.out.println(c);      // OK - same package (default)
+           System.out.println(d);      // OK - public
+       }
+   }
+   ```
+
+   What each specifier allows a subclass to do
+   ```
+      Member in the base | Subclass in the SAME package | Subclass in ANOTHER package
+      -------------------+------------------------------+---------------------------
+      private            |          NO                  |          NO
+      default            |          YES                 |          NO
+      protected          |          YES                 |          YES
+      public             |          YES                 |          YES
+   ```
+
+   An important subtlety
+   - A private member is still `inherited` in the sense that it `exists inside` the subclass object and occupies memory. It simply cannot be `named` there.
+   ```java
+   class Base {
+       private int balance = 1000;
+       public int getBalance() { return balance; }    // a public accessor
+   }
+
+   class Derived extends Base {
+       void show() {
+           // System.out.println(balance);   // ERROR - cannot name it
+           System.out.println(getBalance()); // OK - reach it through the
+       }                                     //      inherited public method
+   }
+   ```
+   - So the data is there, and can be reached `indirectly` through an inherited public or protected method. Only direct naming is forbidden.
+
+   In C++
+   ```cpp
+   class Base {
+   private:   int a;          // NOT accessible in Derived
+   protected: int b;          // accessible in Derived
+   public:    int c;          // accessible everywhere
+   };
+
+   class Derived : public Base {
+       void test() {
+           // a = 1;          // ERROR
+           b = 2;             // OK
+           c = 3;             // OK
+       }
+   };
+   ```
+   - C++ adds the `friend` keyword, which can grant a named class or function access to private members. Java has no equivalent.
+   - C++ also has three `inheritance modes`, which further restrict what the derived class exposes:
+   ```
+      class D : public    B   // public stays public, protected stays protected
+      class D : protected B   // public becomes protected
+      class D : private   B   // public and protected both become private
+   ```
+
+   Other things a subclass cannot access or change
+   ```
+      private members       - not accessible at all
+      final methods         - inherited but cannot be OVERRIDDEN
+      static methods        - can be HIDDEN, not overridden
+      constructors          - not inherited; call them with super(...)
+      a final class         - cannot be inherited from at all
+   ```
+
+   - Design point: making a field `protected` rather than `private` weakens encapsulation, because every subclass — including ones written years later by other people — can then change it directly, and the base class can no longer enforce its own invariants. The usual advice is to keep fields `private` and expose `protected methods` instead.
 
 5. **What are the various Access Specification in C++? Explain their purpose with are example.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 673 (ET: N/A)]*
 
+   Answer: C++ has `three` access specifiers, and their purpose is to enforce `encapsulation` by controlling where each member may be used.
+   ```
+      private    : accessible only inside the class itself   (the DEFAULT)
+      protected  : the class and its DERIVED classes
+      public     : accessible from everywhere
+   ```
+
+   1. `private`
+   - Accessible only within the class that declares it. Not even a derived class can name it.
+   - Purpose: `hide the implementation`. Data members are normally private so the class controls every change to its own state.
+
+   2. `protected`
+   - Accessible inside the class and inside any `derived` class, but not from outside.
+   - Purpose: let a subclass work with the parent's data while keeping unrelated code out. It is the specifier designed for inheritance.
+
+   3. `public`
+   - Accessible from anywhere.
+   - Purpose: the class's `interface` — the members other code is meant to use.
+
+   Access table
+   ```
+      Accessible from      | private | protected | public
+      ---------------------+---------+-----------+--------
+      Inside the class     |    Y    |     Y     |   Y
+      Derived class        |    N    |     Y     |   Y
+      Outside (main, etc.) |    N    |     N     |   Y
+   ```
+
+   Example
+   ```cpp
+   #include <iostream>
+   using namespace std;
+
+   class Base {
+   private:
+       int privateVar = 1;
+
+   protected:
+       int protectedVar = 2;
+
+   public:
+       int publicVar = 3;
+
+       void showAll() {                 // inside the class : all three
+           cout << privateVar << " " << protectedVar << " "
+                << publicVar << endl;
+       }
+   };
+
+   class Derived : public Base {
+   public:
+       void test() {
+           // cout << privateVar;       // ERROR - private
+           cout << protectedVar << endl;   // OK
+           cout << publicVar    << endl;   // OK
+       }
+   };
+
+   int main() {
+       Base b;
+       // cout << b.privateVar;         // ERROR
+       // cout << b.protectedVar;       // ERROR
+       cout << b.publicVar << endl;     // OK
+       b.showAll();
+
+       Derived d;
+       d.test();
+       return 0;
+   }
+   ```
+
+   A practical class using all three
+   ```cpp
+   class BankAccount {
+   private:
+       double balance;                       // hidden - the invariant
+       void auditLog(string msg) { }         // internal helper
+
+   protected:
+       string accountType;                   // subclasses may need it
+
+   public:
+       BankAccount(double opening) {
+           balance = (opening > 0) ? opening : 0;
+       }
+
+       void deposit(double amount) {         // the interface
+           if (amount > 0) { balance += amount; auditLog("deposit"); }
+       }
+
+       double getBalance() { return balance; }
+   };
+   ```
+   - `balance` is private, so it can only change through `deposit()`, which validates. That is encapsulation working.
+
+   The default in C++
+   ```cpp
+      class X { int a; };      // 'a' is PRIVATE by default
+      struct Y { int a; };     // 'a' is PUBLIC by default
+   ```
+   - This default is the only real difference between `class` and `struct` in C++.
+
+   Inheritance modes — a second use of the same keywords
+   ```cpp
+      class D : public    B    // public stays public , protected stays protected
+      class D : protected B    // public becomes protected
+      class D : private   B    // public and protected both become private (DEFAULT)
+   ```
+
+   The `friend` exception
+   ```cpp
+   class Box {
+   private:
+       double width;
+       friend void printWidth(Box b);        // this function may see width
+   };
+
+   void printWidth(Box b) {
+       cout << b.width;                      // legal because it is a friend
+   }
+   ```
+   - `friend` deliberately breaks encapsulation for one named function or class. It is used for operator overloading — especially `<<` and `>>` — and should be used sparingly. Java has no equivalent.
+
+   - Design rule: make every data member `private`, expose behaviour through `public` methods, and use `protected` only when a subclass genuinely needs direct access.
+
 6. **How many specifiers are used in C++ programing?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+   Answer: C++ uses `three` access specifiers.
+   ```
+      1. private
+      2. protected
+      3. public
+   ```
+
+   What each means
+   ```
+      private    : accessible ONLY inside the class that declares it.
+                   This is the DEFAULT for a class.
+
+      protected  : accessible inside the class and inside any DERIVED class,
+                   but not from outside.
+
+      public     : accessible from EVERYWHERE.
+   ```
+
+   Access table
+   ```
+      Accessible from      | private | protected | public
+      ---------------------+---------+-----------+--------
+      Inside the class     |    Y    |     Y     |   Y
+      Derived class        |    N    |     Y     |   Y
+      Outside the class    |    N    |     N     |   Y
+   ```
+
+   Example
+   ```cpp
+   class Student {
+   private:                     // the default for a class
+       int roll;
+   protected:
+       string name;
+   public:
+       void setRoll(int r) { roll = r; }
+       int  getRoll()      { return roll; }
+   };
+   ```
+
+   The defaults
+   ```cpp
+      class X { int a; };       // 'a' is PRIVATE   by default
+      struct Y { int a; };      // 'a' is PUBLIC    by default
+   ```
+   - This is the only genuine difference between `class` and `struct` in C++.
+
+   The same three keywords in inheritance
+   ```cpp
+      class D : public    B     // public stays public, protected stays protected
+      class D : protected B     // public becomes protected
+      class D : private   B     // both become private   (the DEFAULT for a class)
+   ```
+   - So the three specifiers appear in two roles: controlling `member` access, and controlling how a base class's members are `re-exposed` by a derived class.
+
+   Comparison with Java
+   ```
+      C++  : 3 specifiers  - private , protected , public
+             plus 'friend', which can grant access to a named function
+             or class
+
+      Java : 4 levels      - private , default (package-private) ,
+             protected , public
+             no 'friend' equivalent
+   ```
+   - Java's extra level is `default`, which applies when no keyword is written and limits access to the same package. C++ has no notion of a package, so it has no such level.
+
+   - Short answer: `three` — private, protected and public. Counting the `friend` mechanism as a fourth is a reasonable point to add, but it is a declaration rather than an access specifier.
+
 7. **Briefly Describe Abstraction, Encapsulation.** *[Bangladesh Competition Commission Programmer 2019 compact it 1059-1060 (ET: DU)]*
+
+   Answer: Abstraction
+   - `Abstraction` means showing only the `essential features` of an object and hiding the implementation. The user learns `what` a class does, not `how` it does it.
+   - Achieved in Java with `abstract classes` and `interfaces`.
+   ```java
+   abstract class Shape {
+       abstract double area();          // WHAT, with no HOW
+
+       void describe() {                // a concrete method is allowed too
+           System.out.println("Area = " + area());
+       }
+   }
+
+   class Circle extends Shape {
+       double r;
+       Circle(double r) { this.r = r; }
+       @Override double area() { return 3.1416 * r * r; }    // the HOW
+   }
+   ```
+   - Real-world analogy: a driver uses the `steering wheel, accelerator and brake`. How the rack, the fuel injection and the discs work is hidden. That hiding is abstraction.
+   - An `interface` gives complete abstraction, since (before Java 8) it contained no implementation at all:
+   ```java
+      interface Payable { void pay(double amount); }
+   ```
+   - Benefits: it reduces complexity, enforces a `contract` that every subclass must honour, and lets the implementation be replaced without breaking a single caller.
+
+   Encapsulation
+   - `Encapsulation` binds the data and the methods that act on it into one unit — the class — and `hides the internal state` behind private fields with public accessor methods.
+   ```java
+   class BankAccount {
+       private double balance;                    // hidden
+
+       public void deposit(double amount) {
+           if (amount > 0) balance += amount;     // validated
+       }
+       public void withdraw(double amount) {
+           if (amount > 0 && amount <= balance) balance -= amount;
+       }
+       public double getBalance() { return balance; }
+   }
+   ```
+   ```java
+      acc.balance = -99999;      // COMPILE ERROR - balance is private
+      acc.deposit(-500);         // rejected by the validation
+   ```
+   - Benefits: `data security` (the object cannot be put into an invalid state), a single place for validation, and the freedom to change the internal representation later without breaking any caller.
+   - It is enforced by the `access modifiers`: `private`, `protected`, `public` and default.
+
+   Difference
+
+   | Point | Abstraction | Encapsulation |
+   |---|---|---|
+   | Hides | The `implementation` — how it works | The `data` — the internal state |
+   | Question it answers | `What` does it do? | `How is the data protected?` |
+   | Focus | Design level | Implementation level |
+   | Achieved by | Abstract classes, interfaces | Access modifiers, getters and setters |
+   | Solves | Complexity — the user sees less | Security — the data cannot be corrupted |
+   | Applied at | The class's outward design | The class's internal members |
+   | Java keyword | `abstract`, `interface` | `private`, `public`, `protected` |
+
+   How they work together
+   ```java
+      interface Payment { void pay(double amount); }     // ABSTRACTION
+
+      class CardPayment implements Payment {
+          private String cardNumber;                     // ENCAPSULATION
+          private String cvv;
+
+          public void pay(double amount) {               // the abstraction's
+              validateCard();                            // contract, fulfilled
+              processTransaction(amount);
+          }
+
+          private void validateCard() { ... }            // hidden helper
+          private void processTransaction(double a) { ... }
+      }
+   ```
+   - The caller sees only `pay(amount)` — that is abstraction. The card number and CVV are private and unreachable — that is encapsulation. The two are complementary: abstraction hides the `complexity`, encapsulation hides the `data`.
 
 ## Exception Handling (4)
 
