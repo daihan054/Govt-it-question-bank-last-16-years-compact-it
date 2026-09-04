@@ -7902,15 +7902,321 @@
  * **(ii) Noise**
  * **(iii) Power consumption.**
 
+   Answer: `TTL` (Transistor-Transistor Logic) is built from bipolar junction transistors; `CMOS` (Complementary Metal-Oxide-Semiconductor) is built from complementary pairs of PMOS and NMOS transistors.
+
+   (i) Speed
+   - `Classic TTL is faster than early CMOS.` Standard 74 TTL has a propagation delay of about 10 ns, 74LS about 9 ns and 74F about 3 ns. The original 4000-series CMOS was slow, around 50 ns, because its MOSFETs had to charge relatively large gate capacitances at low current.
+   - `Modern CMOS is faster than any TTL.` 74HC is roughly equal to 74LS, while 74AC and 74LVC are well under 3 ns. Today every high-speed processor is CMOS.
+   ```
+      74 (TTL)      ~10 ns          4000 (old CMOS)   ~50 ns
+      74LS (TTL)    ~9  ns          74HC  (CMOS)      ~8  ns
+      74F  (TTL)    ~3  ns          74AC  (CMOS)      ~3  ns
+   ```
+   - CMOS speed also depends on the supply voltage and the load capacitance: raising Vdd makes it faster, and a heavy capacitive load makes it slower.
+
+   (ii) Noise immunity
+   - `CMOS is far better` — its noise margin is roughly `2 to 3 times` that of TTL.
+   ```
+      TTL  (5 V)   :  VIL = 0.8 V , VIH = 2.0 V
+                      noise margin about 0.4 V
+
+      CMOS (5 V)   :  VIL = 1.5 V , VIH = 3.5 V
+                      noise margin about 1.5 V
+   ```
+   - The reason: a CMOS gate switches near `Vdd/2`, so the 0 and 1 ranges are wide and symmetrical. A TTL gate's thresholds sit close together near 1.4 V, leaving a narrow band.
+   - This is why CMOS is preferred in industrial and noisy environments, and why TTL needs careful decoupling.
+
+   (iii) Power consumption
+   - `CMOS uses far less power`, which is the single biggest reason it replaced TTL.
+   - A TTL gate draws current `continuously`, because a transistor is always conducting in one state or the other. About 10 mW per gate for standard TTL, 2 mW for 74LS.
+   - A CMOS gate draws almost `no static current` at all — in either state, one of the two complementary transistors is off, so there is no path from Vdd to ground. Static power is in nanowatts.
+   - CMOS consumes power only `while switching`, to charge and discharge the load capacitance:
+   ```
+      P(dynamic) = C . Vdd^2 . f
+   ```
+   - So CMOS power rises with the clock frequency. At very high frequency it can approach TTL levels, but at low or moderate speed it is thousands of times lower.
+
+   Summary
+
+   | Point | TTL | CMOS |
+   |---|---|---|
+   | Built from | Bipolar transistors | PMOS + NMOS pairs |
+   | Speed | Fast in classic families | Slow in old families, fastest today |
+   | Noise margin | About 0.4 V — poor | About 1.5 V — 2-3 times better |
+   | Static power | High, about 10 mW per gate | Almost zero |
+   | Dynamic power | Roughly constant | Rises with frequency |
+   | Supply voltage | 5 V only | 3 to 18 V (4000), 1.8-5 V modern |
+   | Fan-out | About 10 | Very high (over 50), limited by capacitance |
+   | Packing density | Low | Very high — the reason for VLSI |
+   | Cost per gate | Higher | Lower |
+   | Used in | Legacy and some interface circuits | Everything modern: CPU, memory, ASIC |
+
+   - Practical note: CMOS inputs must never be left floating, because a high-impedance input picks up noise and can make both transistors conduct at once. Unused CMOS inputs are always tied to Vdd or ground.
+
 2. **Describe the important characteristics of digital IC's.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 556 (ET: BIBM)]*
+
+   Answer: A `digital IC` (integrated circuit) contains many logic gates fabricated on one silicon chip. When choosing one, these are the characteristics that matter.
+
+   1. Propagation delay (t_pd)
+   - The time between an input change and the corresponding output change. It decides the maximum operating speed.
+   ```
+      74LS TTL  ~ 9 ns        74AC CMOS ~ 3 ns        ECL ~ 1 ns
+   ```
+
+   2. Power dissipation
+   - The power one gate consumes. TTL draws current continuously (about 10 mW per gate); CMOS draws almost none when static, and only `P = C.Vdd^2.f` while switching.
+
+   3. Speed-power product (figure of merit)
+   ```
+      Speed-power product = propagation delay × power dissipation   [ pJ ]
+   ```
+   - The lower the better. It is the fair way to compare families, since speed can always be bought with power.
+
+   4. Fan-in
+   - The `number of inputs` a gate can accept. A 3-input NAND has a fan-in of 3. Very large fan-in slows the gate down.
+
+   5. Fan-out
+   - The `number of similar gates` one output can drive and still keep valid logic levels. TTL is about 10; CMOS is much higher, though limited by the capacitance the driver must charge.
+
+   6. Noise margin
+   - The largest unwanted voltage that can appear on a line without changing the logic value.
+   ```
+      NM(high) = VOH(min) - VIH(min)
+      NM(low)  = VIL(max) - VOL(max)
+
+      TTL  ~ 0.4 V        CMOS ~ 1.5 V at 5 V supply
+   ```
+
+   7. Logic levels and supply voltage
+   - The voltage ranges accepted as 0 and 1, and the supply the chip needs. TTL is 5 V only; CMOS works from 1.8 V to 18 V depending on the family. Mixing families needs a level translator.
+
+   8. Operating temperature range
+   ```
+      Commercial : 0 to 70 C
+      Industrial : -40 to 85 C
+      Military   : -55 to 125 C
+   ```
+
+   9. Packing density and scale of integration
+   ```
+      SSI  : up to 12 gates          MSI  : 12 to 100
+      LSI  : 100 to 10,000           VLSI : over 10,000
+      ULSI : over 1 million
+   ```
+   - CMOS has by far the highest density, which is why every VLSI chip uses it.
+
+   10. Current parameters
+   - `IOH, IOL` — how much current the output can source and sink; this is what limits fan-out.
+   - `IIH, IIL` — the current each input demands.
+
+   11. Other practical points
+   - `Cost` per gate, `availability`, and package type (DIP, SOIC, QFN, BGA).
+   - `Reliability` and immunity to electrostatic discharge — CMOS inputs are sensitive and need protection diodes and careful handling.
+   - `Compatibility` with the rest of the board, so that outputs and inputs meet each other's voltage and current specifications.
+
+   - In practice the choice is a trade: speed, power, noise immunity and cost cannot all be maximised at once. CMOS wins on power, density and noise margin, which is why it dominates modern design.
 
 3. **Difference between Analog and Digital Circuit.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 873 (ET: N/A)]*
 
+   Answer: An `analog circuit` works with signals that vary `continuously` over a range of values. A `digital circuit` works with signals that take only `two discrete` values, 0 and 1.
+
+   Analog circuit
+   - The signal can take any value between its limits — 0 V, 1.37 V, 2.891 V and so on.
+   - Built from resistors, capacitors, inductors, diodes, transistors and operational amplifiers.
+   - The output is a continuous function of the input, so amplification, filtering and mixing are natural operations.
+   ```
+      Analog signal
+           /‾‾\      /‾‾\
+      ----/    \____/    \----     any value at any instant
+   ```
+
+   Digital circuit
+   - The signal is either LOW (about 0 V) or HIGH (about 5 V or 3.3 V). Everything between is either forbidden or resolved to the nearer level.
+   - Built from logic gates, flip-flops, counters and processors.
+   - Designed and analysed with `Boolean algebra`, truth tables and K-maps.
+   ```
+      Digital signal
+           __|‾‾‾|___|‾‾‾|___      only two levels
+   ```
+
+   Difference
+
+   | Point | Analog circuit | Digital circuit |
+   |---|---|---|
+   | Signal | Continuous, any value | Discrete, only 0 and 1 |
+   | Components | R, L, C, diode, op-amp | Logic gates, flip-flops |
+   | Design method | Circuit equations, calculus | Boolean algebra, truth table, K-map |
+   | Noise immunity | Poor — noise adds to the signal permanently | Excellent — the level is restored at every gate |
+   | Accuracy | Limited by component tolerance and drift | Set by the number of bits |
+   | Storage | Difficult, degrades over time | Easy and exact |
+   | Design complexity | Needs careful, skilled analysis | Systematic, automated by CAD tools |
+   | Power | Often continuous | Mostly only while switching (CMOS) |
+   | Integration density | Low | Very high (VLSI) |
+   | Cost of reproduction | Copies degrade | Copies are exact |
+   | Examples | Amplifier, radio receiver, filter, power supply | Computer, calculator, digital watch, mobile phone |
+
+   Why digital is preferred
+   - `Noise immunity` is the decisive advantage: every gate regenerates a clean 0 or 1, so a signal can pass through thousands of stages without degrading. An analog signal accumulates every bit of noise it meets.
+   - Data can be `stored, copied and transmitted exactly`, and errors can be detected and corrected with parity, checksums and CRC.
+   - The design is `programmable and reusable`, and integrates to billions of transistors per chip.
+
+   - The real world is analog, so practical systems are `mixed-signal`: a sensor gives an analog voltage, an `ADC` converts it to bits, digital logic processes it, and a `DAC` converts the result back to analog for a speaker or an actuator.
+
 4. **(c) What is fan-in and fan out?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
+
+   Answer: Fan-in
+   - `Fan-in` is the `number of inputs` a logic gate can accept.
+   - A 2-input NAND has a fan-in of 2; a 3-input AND has a fan-in of 3.
+   ```
+      A ---|‾‾\
+      B ---|    )--- Y          fan-in = 3
+      C ---|__/
+   ```
+   - It is a property of the gate itself, fixed when the gate is designed.
+   - A large fan-in makes the gate `slower` and `weaker`: in CMOS the series transistors add resistance, so charging the output takes longer. In practice fan-in is kept to 4 or fewer, and a wider function is built as a tree of small gates.
+
+   Fan-out
+   - `Fan-out` is the `number of similar gate inputs` that one output can drive while still producing valid logic levels.
+   ```
+                           +--> gate 1
+                           +--> gate 2
+      Y (one output) ------+--> gate 3          fan-out = 4
+                           +--> gate 4
+   ```
+   - It is calculated from the output and input current ratings:
+   ```
+      Fan-out(HIGH) = IOH(max) / IIH(max)
+      Fan-out(LOW)  = IOL(max) / IIL(max)
+
+      Fan-out = the smaller of the two
+   ```
+   - Worked example for standard TTL:
+   ```
+      IOL = 16 mA , IIL = 1.6 mA   ->  16 / 1.6 = 10
+      IOH = 400 uA , IIH = 40 uA   ->  400 / 40 = 10
+
+      Fan-out = 10
+   ```
+
+   Typical values
+   ```
+      TTL   : about 10
+      CMOS  : 50 or more in principle, because inputs draw almost no DC current
+      ECL   : about 25
+   ```
+   - CMOS fan-out is not limited by current but by `capacitance`. Every extra input adds gate capacitance, which slows the switching edge. So the real limit is the maximum acceptable propagation delay, not the logic level.
+
+   What happens if the limits are exceeded
+   - Driving more inputs than the fan-out allows makes `VOH fall` and `VOL rise`, so the noise margin shrinks and the signal may be read incorrectly.
+   - The edges become slow, which can cause a receiving gate to oscillate or draw excess current.
+   - The fix is a `buffer` or `line driver` between the source and the loads, which restores full drive strength.
+
+   | Point | Fan-in | Fan-out |
+   |---|---|---|
+   | Meaning | Number of inputs a gate accepts | Number of gate inputs one output can drive |
+   | Side of the gate | Input | Output |
+   | Set by | The gate's internal design | Output and input current ratings |
+   | Effect of a large value | Slower, weaker gate | Degraded logic levels, slower edges |
+   | Typical value | 2 to 4 | 10 (TTL), 50+ (CMOS) |
 
 5. **Sources of transient fault and permanent fault in a digital system consists of hardware and software? Example based on Hardware and software.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
+   Answer: A `fault` is a defect that can make a digital system behave incorrectly. Faults are classified by `how long they last`.
+   ```
+   Transient fault : appears for a short time and then disappears by itself.
+                     The hardware is not damaged. Also called a soft error.
+
+   Permanent fault : stays until the faulty part is repaired or replaced.
+                     Also called a hard fault or a solid fault.
+   ```
+
+   Sources of transient faults
+
+   Hardware
+   - `Cosmic rays and alpha particles` hitting a memory cell and flipping a bit — the classic `single event upset (SEU)`, the reason servers use ECC RAM.
+   - `Power supply fluctuation`, brownouts, voltage droop and ground bounce.
+   - `Electromagnetic interference` from a motor, a relay or a nearby radio transmitter.
+   - `Crosstalk` between adjacent PCB tracks, and reflections on an unterminated line.
+   - `Electrostatic discharge` from a person touching the board.
+   - `Metastability` — a flip-flop sampled too close to the clock edge settles unpredictably.
+   - `Temperature spikes` and loose or oxidised connectors that momentarily open.
+   - Example: a bit flips in RAM during a lightning-induced surge, the program reads a wrong value, and the system works normally again after a reboot.
+
+   Software
+   - `Race condition` — two threads reach the same data in an unexpected order, so the bug appears only occasionally.
+   - `Deadlock` or `livelock` that clears when one process times out.
+   - `Memory leak` or temporary exhaustion of a buffer or a connection pool under peak load.
+   - `Timing and synchronisation` errors that show up only under a particular load.
+   - Example: a web application fails once during a traffic spike because two threads updated the same counter at the same instant, and works correctly afterwards.
+
+   Sources of permanent faults
+
+   Hardware
+   - `Manufacturing defects` — a broken track, a short between layers, a bad solder joint.
+   - `Wear-out mechanisms` — electromigration thinning a metal line, gate-oxide breakdown, hot-carrier degradation.
+   - `Physical damage` — a burnt IC, a cracked board, a connector broken off.
+   - `Component ageing` — dried-out electrolytic capacitors, worn NAND flash cells that no longer hold charge.
+   - `Overvoltage or overheating` that destroys a transistor permanently.
+   - Modelled in testing as `stuck-at-0` and `stuck-at-1` faults, where a line is permanently held at one value.
+   - Example: a data line on a memory bus is shorted to ground, so that bit reads 0 in every location, every time.
+
+   Software
+   - `Logic error` in the code — a wrong formula, an off-by-one loop bound, a missing case.
+   - `Design error` in the algorithm or the specification itself.
+   - `Corrupted firmware` or a bad update that leaves the system permanently broken.
+   - Example: a leap-year calculation that omits the century rule fails identically every time the date is 29 February 2100.
+
+   Detection and handling
+
+   | Fault type | Detection | Handling |
+   |---|---|---|
+   | Transient | Parity, ECC, checksum, CRC, watchdog timer | Retry, correct with ECC, reset, re-transmit |
+   | Permanent | Built-in self-test, stuck-at test vectors, diagnostics | Replace the part, use a redundant spare, patch the code |
+
+   - Practical distinction to state in the exam: a transient fault `goes away when you retry`, so the correct response is redundancy in time — retry, ECC, re-transmission. A permanent fault does not, so the correct response is redundancy in space — a spare unit, triple modular redundancy, or repair.
+
 6. **What is IC? Advantages of IC over discrete component circuit. Why do IC's need small power for their operation?** *[BTRC Assistant Director (Technical) 2019 compact it 1147 (ET: N/A)]*
+
+   Answer: What an IC is
+   - An `integrated circuit (IC)` is a complete electronic circuit — transistors, diodes, resistors and their interconnections — fabricated together on a single small piece of semiconductor, usually silicon.
+   - Invented by `Jack Kilby` (1958) and `Robert Noyce` (1959). A modern processor holds billions of transistors on a chip a few square centimetres in size.
+   ```
+   Scale of integration
+      SSI  : up to 12 gates            MSI  : 12 to 100 gates
+      LSI  : 100 to 10,000             VLSI : over 10,000
+      ULSI : over 1 million
+   ```
+
+   Advantages of an IC over a discrete-component circuit
+   - `Very small size.` Thousands of components occupy the space one discrete transistor used to take. This is what made computers, mobile phones and hearing aids possible.
+   - `Low cost.` Hundreds of identical chips are made on one wafer in the same set of steps, so the cost per circuit falls dramatically with volume.
+   - `High reliability.` Most failures in discrete circuits happen at `soldered joints and connections`. An IC has almost none — the interconnections are formed on the chip itself.
+   - `Low power consumption.` The components are tiny, so the currents, voltages and capacitances are all small.
+   - `Higher speed.` The interconnections are microns long instead of centimetres, so signals arrive sooner and stray capacitance and inductance are far lower.
+   - `Better matched characteristics.` Components made side by side on the same wafer, at the same time, have nearly identical properties and drift together with temperature. This is very hard to achieve with discrete parts.
+   - `Light weight`, so it suits portable and aerospace equipment.
+   - `Easy replacement.` A faulty IC is unplugged and swapped rather than repaired.
+   - `Simpler design and assembly` — fewer parts to buy, place and solder, so a smaller PCB and less manufacturing time.
+
+   Limitations
+   - A faulty IC cannot be repaired, only replaced.
+   - Large inductors and high-value capacitors cannot be fabricated on chip.
+   - It handles only low power; heat dissipation limits the current.
+   - Design and mask costs are enormous, so it pays only in volume.
+
+   Why an IC needs so little power
+   - `Very small components.` Channel lengths are measured in nanometres, so the currents needed to switch a transistor are microamperes, not milliamperes.
+   - `Very short interconnections.` Wires microns long have tiny capacitance, and the dynamic power of a digital circuit is
+   ```
+      P = C . Vdd^2 . f
+   ```
+     so a small `C` directly means small power.
+   - `Low supply voltage.` Modern chips run at 1.0-3.3 V rather than the 5-12 V of discrete designs, and power depends on the `square` of the voltage — halving Vdd cuts power to a quarter.
+   - `CMOS technology.` In either logic state one of the two complementary transistors is off, so there is no path from supply to ground and the `static current is almost zero`. Power is drawn only during switching.
+   - `No power lost in interconnection resistance`, unlike a board full of discrete parts joined by long tracks and solder joints.
+   - `Clock gating and power gating` switch off idle blocks completely in modern designs.
+
+   - The result: a discrete gate built from transistors and resistors might dissipate tens of milliwatts, while an equivalent CMOS gate on a chip dissipates nanowatts when idle. That difference is exactly what makes a battery-powered smartphone possible.
 
 ## 2's Complement & Binary Arithmetic (4)
 
