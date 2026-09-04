@@ -871,11 +871,50 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
+   Answer:
+   - Bags brought by ADs $= 6 \times 1 = 6\text{ bags}$
+   - Bags brought by DDs $= 4 \times \frac{1}{2} = 2\text{ bags}$
+   - Total number of bags $= 6 + 2 = 8\text{ bags}$
+   - Probability that a randomly selected bag belongs to a DD:
+     $$P(\text{DD bag}) = \frac{\text{Bags from DDs}}{\text{Total bags}} = \frac{2}{8} = \frac{1}{4} = 0.25$$
+   - Answer: $\frac{1}{4}$ (or $25\%$)
+
 2. **If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 421 (ET: BIBM)]*
+
+   Answer:
+   - Total possible sample space outcomes for throwing two dice $= 6 \times 6 = 36$.
+   - Favorable outcomes where the sum of two faces is $7$:
+     $$E = \{(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)\}$$
+   - Number of favorable outcomes $n(E) = 6$.
+   - Probability:
+     $$P(\text{Sum} = 7) = \frac{n(E)}{n(S)} = \frac{6}{36} = \frac{1}{6}$$
+   - Answer: $\frac{1}{6}$
 
 3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 
+   Answer:
+   - Total number of items $n = 8$.
+   - Ascending order: $12, 22, 23, 24, 24, 25, 28, 30$
+   - Mean ($\bar{x}$):
+     $$\bar{x} = \frac{\sum x}{n} = \frac{12 + 22 + 23 + 24 + 24 + 25 + 28 + 30}{8} = \frac{188}{8} = 23.5$$
+   - Median:
+     - Average of $\left(\frac{n}{2}\right)^{\text{th}}$ and $\left(\frac{n}{2} + 1\right)^{\text{th}}$ terms ($4^{\text{th}}$ and $5^{\text{th}}$ terms):
+     $$\text{Median} = \frac{24 + 24}{2} = 24$$
+   - Mode:
+     - The value with maximum frequency is $24$ (occurs 2 times).
+     $$\text{Mode} = 24$$
+   - Answer: $\text{Mean} = 23.5, \text{Median} = 24, \text{Mode} = 24$
+
 4. **10-bits number taken randomly, find the probability that all the bits are 1.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
+
+   Answer:
+   - Total possible 10-bit binary combinations $= 2^{10} = 1024$.
+   - Favorable outcome (the exact sequence $1111111111$) $= 1$.
+   - Probability:
+     $$P(\text{all bits 1}) = \left(\frac{1}{2}\right)^{10} = \frac{1}{1024} \approx 0.000977$$
+   - Answer: $\frac{1}{1024}$
+
+
 
 ## Propositional Logic & Logical Equivalence (4)
 
