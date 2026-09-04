@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 97 questions
+**Table of Contents** — 8 subtopics · 98 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,8 +8,8 @@
 | 3 | [Linked List](#linked-list-15) | 15 |
 | 4 | [Binary Search Tree (BST)](#binary-search-tree-bst-9) | 9 |
 | 5 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
-| 6 | [Queue](#queue-6) | 6 |
-| 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
+| 6 | [Hashing & Hash Tables](#hashing--hash-tables-7) | 7 |
+| 7 | [Queue](#queue-6) | 6 |
 | 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
 
 <!-- TOC END -->
@@ -194,6 +194,21 @@ Output: Not Balanced
 
 8. **Draw (max/min) heap binay tree using 11 nodes.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
+## Hashing & Hash Tables (7)
+1. **(b) What is hash table? What are the advantages of using hash table?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
+
+2. **Consider a hash table of size 13 strong entries with integer keys. Suppose the hash function is h(k) = k \bmod 13. Insert in the given order entries with keys 10, 3, 6, 16, 17, 19 in to the hash table using linear probing to resolve collisions. Show all the work.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
+
+3. **অথবা, Hashing বলতে কী বোঝায়? Hash ফাংশন গঠনের জন্যে যে কোনো তিনটি পদ্ধতি বিস্তারিত লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
+
+4. **Separate chaining hash function math.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
+
+5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** *[BCC Assistant Programmer 12.02.2021 compact it 815 (ET: BUET)]*
+
+6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
+
+7. **(b) What is hash table? What are the advantages of using hash table.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65-66]]*
+
 ## Queue (6)
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
@@ -207,20 +222,6 @@ Output: Not Balanced
 5. **Circular Queue and Priority Queue কীভাবে কাজ করে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 912-913 (ET: BUET)]*
 
 6. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
-
-## Hashing & Hash Tables (6)
-
-1. **(b) What is hash table? What are the advantages of using hash table?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
-
-2. **Consider a hash table of size 13 strong entries with integer keys. Suppose the hash function is h(k) = k \bmod 13. Insert in the given order entries with keys 10, 3, 6, 16, 17, 19 in to the hash table using linear probing to resolve collisions. Show all the work.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
-
-3. **অথবা, Hashing বলতে কী বোঝায়? Hash ফাংশন গঠনের জন্যে যে কোনো তিনটি পদ্ধতি বিস্তারিত লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
-
-4. **Separate chaining hash function math.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
-
-5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** *[BCC Assistant Programmer 12.02.2021 compact it 815 (ET: BUET)]*
-
-6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
 ## Data Structure Fundamentals (6)
 

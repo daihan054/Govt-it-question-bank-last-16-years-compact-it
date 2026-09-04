@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 270 questions
+**Table of Contents** — 9 subtopics · 271 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-111) | 111 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-112) | 112 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
 | 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (111)
+## Basic Programs & Control Statements (112)
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -417,6 +417,15 @@ for(a=1; a<=100; a++)
 1 2 3 4
 
 1 2 3 4 5
+
+112. **(a) Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68]]*
+1234
+
+ 234
+
+  34
+
+   4
 
 ## Output Tracing & Control Flow (57)
 

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 134 questions
+**Table of Contents** — 15 subtopics · 135 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-36) | 36 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-37) | 37 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-15) | 15 |
 | 4 | [Searching Algorithms](#searching-algorithms-14) | 14 |
@@ -17,13 +17,13 @@
 | 12 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
 | 13 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
 | 14 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
+| 15 | [Searching & Graph Algorithms](#searching--graph-algorithms-0) | 0 |
 
 <!-- TOC END -->
 
 ---
 
-## Sorting Algorithms & Complexity (36)
-
+## Sorting Algorithms & Complexity (37)
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -105,6 +105,8 @@
 35. **(a) Write down the Merge sort algorithm. What is the time complexity of this algorithm?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
 
 36. **Marge sort Algorithm ব্যবহার করে নিম্নের Data গুলো sorting করুন। [3, 13, 25, 7, 15, 2, 5, 35]** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
+
+37. **(b) What is heap sort? Build a heap tree from the following list of numbers: [44, 30, 50, 22, 60, 55, 70, 55].** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 
@@ -360,3 +362,6 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 ## NP-Completeness & Complexity Reduction (1)
 
 1. **A reduces to B Polynomial time. Which is better and why?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
+
+## Searching & Graph Algorithms (0)
+**(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*

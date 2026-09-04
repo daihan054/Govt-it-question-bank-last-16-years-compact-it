@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 184 questions
+**Table of Contents** — 15 subtopics · 184 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -17,6 +17,7 @@
 | 12 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
 | 13 | [Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing-3) | 3 |
 | 14 | [Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities-1) | 1 |
+| 15 | [Cryptography & Network Security](#cryptography--network-security-0) | 0 |
 
 <!-- TOC END -->
 
@@ -431,3 +432,6 @@
 ## Buffer Overflow & Software Vulnerabilities (1)
 
 1. **Explain buffer overflow attack with an example.** *[BTCL Assistant Manager (Technical) 2023 compact it 592 (ET: BUET)]*
+
+## Cryptography & Network Security (0)
+**(a) What is 2-factor authentication? Describe it with an example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65]]*

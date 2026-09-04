@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 135 questions
+**Table of Contents** — 11 subtopics · 136 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-35) | 35 |
+| 1 | [Microprocessor Architecture & Functions](#microprocessor-architecture--functions-36) | 36 |
 | 2 | [Memory Hierarchy & Storage](#memory-hierarchy--storage-26) | 26 |
 | 3 | [RAID Architecture & Storage](#raid-architecture--storage-15) | 15 |
 | 4 | [Cache Memory](#cache-memory-14) | 14 |
@@ -19,8 +19,7 @@
 
 ---
 
-## Microprocessor Architecture & Functions (35)
-
+## Microprocessor Architecture & Functions (36)
 1. **ছোট প্রসেসরের (Microprocessor) কাজ এক নজরে এবং কী কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **b) Compare and contrast between CPU and GPU.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1342 (ET: N/A)]*
@@ -98,6 +97,9 @@
 34. **What are the difference between 8086 and 8088 microprocessors? Mention the flags of 8086 micriprocessor.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1273-1275 (ET: N/A)]*
 
 35. **What is SPI (Serial Peripheral Interface)? What are the advantages over parallel interface?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276 (ET: N/A)]*
+
+36. **(d) What is cache memory? Explain the concepts of cache memory.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 73-74]]*
+(i) Cache hit and (ii) Cache miss.
 
 ## Memory Hierarchy & Storage (26)
 
