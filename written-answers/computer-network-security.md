@@ -5621,3 +5621,65 @@
 ## Buffer Overflow & Software Vulnerabilities (1)
 
 1. **Explain buffer overflow attack with an example.** *[BTCL Assistant Manager (Technical) 2023 compact it 592 (ET: BUET)]*
+
+   Answer: A buffer overflow occurs when a program writes more data into a fixed-size memory buffer than it can hold, so the excess spills into ADJACENT memory. An attacker exploits this to overwrite critical values and take control of execution.
+
+   Why it happens
+   - Languages such as C and C++ do not perform automatic bounds checking. Functions like `gets()`, `strcpy()` and `scanf("%s")` copy until they find a terminator, regardless of the destination size.
+
+   Vulnerable example
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+
+   void vulnerable(char *input) {
+       char buffer[10];        // only 10 bytes reserved
+       strcpy(buffer, input);  // NO length check — the flaw
+       printf("Input: %s\n", buffer);
+   }
+
+   int main(int argc, char *argv[]) {
+       vulnerable(argv[1]);
+       return 0;
+   }
+   ```
+   - Passing a 10-character string is fine. Passing 100 characters writes 90 bytes past the end of `buffer`.
+
+   What lies beyond the buffer — the stack layout
+   ```
+   Higher addresses
+   +---------------------------+
+   |  Return address           |  <-- overwriting THIS hijacks execution
+   +---------------------------+
+   |  Saved base pointer (EBP) |
+   +---------------------------+
+   |  buffer[10]               |  <-- overflow starts here and grows upward
+   +---------------------------+
+   Lower addresses
+   ```
+
+   How the attack works
+   - **Step 1** — the attacker supplies input longer than the buffer.
+   - **Step 2** — the excess overwrites the saved base pointer and then the **return address**.
+   - **Step 3** — the attacker sets the return address to point at their own injected code (shellcode) placed elsewhere in the input.
+   - **Step 4** — when the function returns, the CPU jumps to that address and executes the attacker's code, typically spawning a shell with the program's privileges.
+
+   Consequences
+   - Arbitrary code execution, privilege escalation (critical if the program runs as root), program crash (denial of service), and data corruption.
+   - Historic examples: the Morris Worm (1988), Code Red, and SQL Slammer all used buffer overflows.
+
+   Prevention
+
+   **Coding practices**
+   - Use bounded functions: `strncpy()` instead of `strcpy()`, `fgets()` instead of `gets()`, `snprintf()` instead of `sprintf()`.
+   - Always validate input length before copying.
+   - Prefer memory-safe languages — Java, Python, Rust, C# perform bounds checking automatically.
+
+   **Compiler and OS protections**
+   - **Stack canaries** — a random value placed before the return address; if it is altered, the program aborts before returning.
+   - **ASLR (Address Space Layout Randomisation)** — randomises memory addresses so the attacker cannot predict where to jump.
+   - **DEP / NX bit** — marks the stack non-executable, so injected shellcode cannot run.
+   - **Fortify Source** and compiler warnings (`-Wall -Wextra -fstack-protector`).
+
+   **Process**
+   - Static analysis tools, fuzzing, and code review focused on all memory-copy operations.
