@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 468 questions
+**Table of Contents** — 6 subtopics · 472 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
-| 2 | [Everyday Science](#everyday-science-120) | 120 |
+| 2 | [Everyday Science](#everyday-science-124) | 124 |
 | 3 | [International Affairs](#international-affairs-106) | 106 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
@@ -987,7 +987,7 @@
    C. রোবটি
    D. জেনেটিক্স
 
-## Everyday Science (120)
+## Everyday Science (124)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -1839,6 +1839,17 @@ int main() \{
    i. Retrieve the names and salaries of all employees who work in the 'Sales' department.
    ii. write query to show all employee's leave count.
    iii. Write query to show employees who are in 'HR' department and have taken at least 5 leaves.
+
+121. **Query.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
+
+122. **We have a library and library has number of books. Each book has a title, an ISBN number, and an author. You are asked to design a software system for managing a library. The system should be able to keep track of the total number of books in the library and the number of books that have been borrowed.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 383]]*
+
+123. **In a group there are 100 students. 72 students can speak English and 43 can speak French. Answer the following question.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395]]*
+   (i) Find no of students who can speak English only.
+   (ii) Find no of students who can speak French only.
+   (iii) Find no of students who can speak both.
+
+124. **Find the shortest path.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395-396]]*
 
 ## International Affairs (106)
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*

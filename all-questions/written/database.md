@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 20 subtopics · 303 questions
+**Table of Contents** — 20 subtopics · 304 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-93) | 93 |
+| 1 | [SQL Queries](#sql-queries-94) | 94 |
 | 2 | [Keys in DBMS](#keys-in-dbms-34) | 34 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-26) | 26 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
@@ -28,7 +28,7 @@
 
 ---
 
-## SQL Queries (93)
+## SQL Queries (94)
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
 2. Consider a STUDENTS table with the following attributes: StudentID, Name, Department, Marks (10 Marks)
@@ -394,6 +394,93 @@ Product(pid, name, price, category, maker_cid) Purchase(buyer-ssn, seller-ssn, s
 
 93. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
 a) Write a SQL Query to find the duplicate phone number of employee table. b) Write a SQL query to find the Second largest salary from Employee table.
+
+94. **There are Given 4 tables, Customer, Products, Order, Order Details of Ecommerce company. From the relation find out the following queries.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 387]]*
+__Customer Table:__
+
+__Column Name__
+
+__Data Type__
+
+customer_id
+
+INT
+
+first_name
+
+VARCHAR
+
+last_name
+
+VARCHAR
+
+email
+
+VARCHAR
+
+__Products Table:__
+
+__Column Name__
+
+__Data Type__
+
+product_id
+
+INT
+
+product_name
+
+VARCHAR
+
+price
+
+DECIMAL
+
+__OrderDetails Table:__
+
+__Column Name__
+
+__Data Type__
+
+order_id
+
+INT
+
+product_id
+
+INT
+
+quantity
+
+INT
+
+__Order Table:__
+
+__Column Name__
+
+__Data Type__
+
+order_id
+
+INT
+
+customer_id
+
+INT
+
+order_date
+
+DATE
+
+order_type
+
+CHAR
+
+monetary_value
+
+DECIMAL
+
+i) Find first name of all customer whose order type is as ‘B’ on March 15, 2024. ii) Find total sum of monetary money of order between March 01, 2024 and march 15, 2024.
 
 ## Keys in DBMS (34)
 

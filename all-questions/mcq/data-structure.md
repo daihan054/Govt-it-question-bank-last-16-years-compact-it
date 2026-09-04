@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 87 questions
+**Table of Contents** — 7 subtopics · 89 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,7 +7,7 @@
 | 2 | [Stack & Queue](#stack--queue-23) | 23 |
 | 3 | [Tree & Binary Search Tree](#tree--binary-search-tree-20) | 20 |
 | 4 | [Linked List](#linked-list-10) | 10 |
-| 5 | [Data Structures & Algorithms](#data-structures--algorithms-4) | 4 |
+| 5 | [Data Structures & Algorithms](#data-structures--algorithms-6) | 6 |
 | 6 | [Priority Queue & Heap](#priority-queue--heap-3) | 3 |
 | 7 | [Hashing & Hash Tables](#hashing--hash-tables-2) | 2 |
 
@@ -499,7 +499,7 @@
    C) O(\log n)
    D) O(n \log n)
 
-## Data Structures & Algorithms (4)
+## Data Structures & Algorithms (6)
 1. **When sorting an array using randomized quicksort (pivot chosen randomly), what are the average-case and worst-case time complexities? [ যখন একটি অ্যারে randomized quicksort ব্যবহার করে sort করা হয় (pivot র‍্যান্ডমভাবে নির্বাচন করা হয়), তখন এর average-case এবং worst-case time complexity কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
    (a) O(n \\log n), O(n)
    (b) O(n \\log n), O(n^2)
@@ -523,6 +523,10 @@
    (B) Queue
    (C) Tree
    (D) Graph
+
+5. **How can you multiply two square 16\*16 matrices on a computer processor that can only handle 8\*8 matrix multiplications? Write an algorithm for this problem?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 380]]*
+
+6. **How can a binary tree be represented using an array, and how are the positions of the left and right children determined based on the index of the parent node?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
 
 ## Priority Queue & Heap (3)
 

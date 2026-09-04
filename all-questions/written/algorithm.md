@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 142 questions
+**Table of Contents** — 15 subtopics · 143 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,8 +11,8 @@
 | 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-9) | 9 |
 | 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
 | 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
-| 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
-| 10 | [Searching & Graph Algorithms](#searching--graph-algorithms-5) | 5 |
+| 9 | [Searching & Graph Algorithms](#searching--graph-algorithms-6) | 6 |
+| 10 | [Dynamic Programming](#dynamic-programming-5) | 5 |
 | 11 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
 | 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-3) | 3 |
 | 13 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
@@ -346,6 +346,19 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
+## Searching & Graph Algorithms (6)
+1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
+
+2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
+
+3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
+
+4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*, *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378-379]]*
+
+6. **Construct a Binary Search tree using the following set of data: 45, 9, 5, 19, 23, 19, 46, 2, 12, 10.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 384]]*
+
 ## Dynamic Programming (5)
 
 1. A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one repeater, and the distance between consecutive locations is given by P_i > 0. For reliable communication, two selected repeater stations must be at least K kilometers apart. Using Dynamic Programming, determine the maximum number of repeaters that can be installed while maintaining the required minimum distance between any two selected stations. [BSCCPL AME 21-08-2026 (BUET)]
@@ -357,17 +370,6 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 4. **Write down the Algorithm for determining Fibonacci number through dynamic programming.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
-
-## Searching & Graph Algorithms (5)
-1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
-
-2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
-
-3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
-
-4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
-
-5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*, *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378-379]]*
 
 ## Graph Representation (Adjacency Matrix vs List) (4)
 

@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 203 questions
+**Table of Contents** — 15 subtopics · 203 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -17,6 +17,7 @@
 | 12 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
 | 13 | [OS Concepts & Process Management](#os-concepts--process-management-4) | 4 |
 | 14 | [Deadlock & Concurrency Control](#deadlock--concurrency-control-0) | 0 |
+| 15 | [Linux, Shell & System Commands](#linux-shell--system-commands-0) | 0 |
 
 <!-- TOC END -->
 
@@ -611,3 +612,6 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 ## Deadlock & Concurrency Control (0)
 **Describe three basic techniques that exist to control deadlocks in databases. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 312-313]]*
+
+## Linux, Shell & System Commands (0)
+**Answer the following Linux Command.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 386]]*

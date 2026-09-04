@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2852** questions.
+Sorted by count, highest first. Total **2862** questions.
 
 ## IT questions
 
-Total: **1655** questions.
+Total: **1661** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **311** |
-| | Networking Fundamentals & Terminology | 66 |
+| **Computer Networks** | **— all subcategories —** | **312** |
+| | Networking Fundamentals & Terminology | 67 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
@@ -38,8 +38,8 @@ Total: **1655** questions.
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
 | | Database Fundamentals & SQL | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **156** |
-| | Hardware Components & Peripherals | 54 |
+| **Computer Fundamentals** | **— all subcategories —** | **159** |
+| | Hardware Components & Peripherals | 57 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -69,12 +69,12 @@ Total: **1655** questions.
 | | Inheritance | 6 |
 | | Constructors & Destructors | 6 |
 | | Exception Handling | 6 |
-| **Data Structure** | **— all subcategories —** | **87** |
+| **Data Structure** | **— all subcategories —** | **89** |
 | | Data Structure Basics | 25 |
 | | Stack & Queue | 23 |
 | | Tree & Binary Search Tree | 20 |
 | | Linked List | 10 |
-| | Data Structures & Algorithms | 4 |
+| | Data Structures & Algorithms | 6 |
 | | Priority Queue & Heap | 3 |
 | | Hashing & Hash Tables | 2 |
 | **Microprocessor & Computer Architecture** | **— all subcategories —** | **85** |
@@ -157,13 +157,13 @@ Total: **1655** questions.
 
 ## General Questions
 
-Total: **1197** questions.
+Total: **1201** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **468** |
+| **General Knowledge** | **— all subcategories —** | **472** |
 | | Bangladesh Affairs | 171 |
-| | Everyday Science | 120 |
+| | Everyday Science | 124 |
 | | International Affairs | 106 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |

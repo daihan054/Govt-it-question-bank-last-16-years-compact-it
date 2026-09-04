@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 311 questions
+**Table of Contents** — 13 subtopics · 312 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-66) | 66 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-67) | 67 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (66)
+## Networking Fundamentals & Terminology (67)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -432,6 +432,8 @@
    b) What is the last valid host address?
    c) What is the broadcast address?
    d) What is the subnet mask?
+
+67. **From the given table of IP addresses, identify which address is a Loopback address. Explain the reason behind your answer and mention the standard range of loopback addresses.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 382]]*
 
 ## Application Layer Protocols (58)
 

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 189 questions
+**Table of Contents** — 10 subtopics · 193 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-95) | 95 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-99) | 99 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
 | 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (95)
+## Computer Fundamentals & Acronyms (99)
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -265,6 +265,22 @@ Above 1000000
 30%
 
 a) Write a funtcion using any language that calculates a person tax. b) If three person given income then calculate the tax and display which have the maximum tax.
+
+96. **168.0.1
+
+?**
+
+97. **0.0.5
+
+?**
+
+98. **0.0.1
+
+?**
+
+99. **16.0.10
+
+?**
 
 ## ICT in Society & Governance (24)
 

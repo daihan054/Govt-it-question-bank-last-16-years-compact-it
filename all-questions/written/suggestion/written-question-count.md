@@ -1,24 +1,24 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3349** questions.
+Sorted by count, highest first. Total **3360** questions.
 
 ## IT questions
 
-Total: **2788** questions.
+Total: **2799** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **539** |
-| | Subnetting & IP Addressing | 117 |
+| **Computer Networks** | **— all subcategories —** | **541** |
+| | Subnetting & IP Addressing | 118 |
 | | OSI & TCP/IP Reference Model | 57 |
 | | Networking Fundamentals & Terminology | 32 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 23 |
 | | Networking Devices | 23 |
 | | Transport Layer (TCP & UDP) | 22 |
+| | Physical Layer & Transmission Media (Cables & Wiring) | 20 |
 | | Wireless Networks & IoT (mmWave) | 19 |
 | | Multiplexing & Bandwidth | 19 |
-| | Physical Layer & Transmission Media (Cables & Wiring) | 19 |
 | | Routing Protocols & Route Configuration | 19 |
 | | Communication System & Transmission Modes | 17 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
@@ -43,8 +43,8 @@ Total: **2788** questions.
 | | Address Resolution (ARP & RARP) | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **303** |
-| | SQL Queries | 93 |
+| **Database** | **— all subcategories —** | **304** |
+| | SQL Queries | 94 |
 | | Keys in DBMS | 34 |
 | | DBMS Architecture & Features | 26 |
 | | ER Diagram & Database Design | 25 |
@@ -64,8 +64,8 @@ Total: **2788** questions.
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
 | | Keys, Constraints & Database Objects | 0 |
-| **C Programming** | **— all subcategories —** | **280** |
-| | Basic Programs & Control Statements | 120 |
+| **C Programming** | **— all subcategories —** | **281** |
+| | Basic Programs & Control Statements | 121 |
 | | Output Tracing & Control Flow | 57 |
 | | Recursion & Functions | 39 |
 | | Operators, Data Types & Language Concepts | 25 |
@@ -89,15 +89,16 @@ Total: **2788** questions.
 | | Process Synchronization & Concurrency | 4 |
 | | OS Concepts & Process Management | 4 |
 | | Deadlock & Concurrency Control | 0 |
-| **Computer & Network Security** | **— all subcategories —** | **196** |
+| | Linux, Shell & System Commands | 0 |
+| **Computer & Network Security** | **— all subcategories —** | **197** |
 | | Social Engineering & Cyber Attacks | 32 |
 | | Cryptography | 31 |
 | | Firewalls & Network Defense | 20 |
 | | Malware & Security Threats | 20 |
 | | Web Security Vulnerabilities | 19 |
 | | Authentication & Access Control | 16 |
+| | Cryptography & Network Security | 13 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
-| | Cryptography & Network Security | 12 |
 | | Cyber Crime & Security | 10 |
 | | Security Principles (CIA Triad) | 8 |
 | | VPN & Tunneling Protocols (IPsec, SSL VPN) | 6 |
@@ -105,8 +106,8 @@ Total: **2788** questions.
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **189** |
-| | Computer Fundamentals & Acronyms | 95 |
+| **Computer Fundamentals** | **— all subcategories —** | **193** |
+| | Computer Fundamentals & Acronyms | 99 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
@@ -132,18 +133,18 @@ Total: **2788** questions.
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
 | | Software Design, Architecture & Patterns | 0 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **153** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **154** |
 | | Logic Gates & Universal Gates | 34 |
 | | Number Systems & Base Conversions | 26 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 23 |
-| | Karnaugh Map (K-Map) | 21 |
+| | Karnaugh Map (K-Map) | 22 |
 | | Boolean Algebra & De Morgan’s Theorem | 19 |
 | | Sequential Circuits (Latches & Flip-Flops) | 17 |
 | | Logic Families (TTL vs CMOS) | 6 |
 | | 2's Complement & Binary Arithmetic | 4 |
 | | Number Systems & Codes | 2 |
 | | Finite State Machines (FSM) | 1 |
-| **Algorithm** | **— all subcategories —** | **142** |
+| **Algorithm** | **— all subcategories —** | **143** |
 | | Sorting Algorithms & Complexity | 39 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 15 |
@@ -152,8 +153,8 @@ Total: **2788** questions.
 | | Dynamic Programming & Greedy Algorithms | 9 |
 | | Graph Theory & Isomorphism | 7 |
 | | Greedy Algorithms (Fractional Knapsack) | 6 |
+| | Searching & Graph Algorithms | 6 |
 | | Dynamic Programming | 5 |
-| | Searching & Graph Algorithms | 5 |
 | | Graph Representation (Adjacency Matrix vs List) | 4 |
 | | Divide and Conquer & Matrix Multiplication | 3 |
 | | Heap & Priority Queue | 2 |

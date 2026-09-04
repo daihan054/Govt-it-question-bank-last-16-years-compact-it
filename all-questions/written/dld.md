@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 153 questions
+**Table of Contents** — 10 subtopics · 154 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-34) | 34 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-26) | 26 |
 | 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
-| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-21) | 21 |
+| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-22) | 22 |
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-19) | 19 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-17) | 17 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
@@ -210,7 +210,7 @@
 
 23. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
 
-## Karnaugh Map (K-Map) (21)
+## Karnaugh Map (K-Map) (22)
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
 
 2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
@@ -259,6 +259,8 @@
 
 21. **If you are CEO of a software company. You need a software from following three options:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 (a) Buy: Buy a software with cost 50 Lakh. (b) Building: Developed by developer cost 30 lakhs, possibility is 30% to develop complete software. (c) Modification: Buy and small modifications cost 30 lakh, for large modifications cost 80% increase.
+
+22. **Using a Karnaugh map, simplify the function (A,B,C,D) = \\Sigma 0,1,2,5,7,8,9,10,13,15 into Sum of Products form.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 385]]*
 
 ## Boolean Algebra & De Morgan’s Theorem (19)
 
