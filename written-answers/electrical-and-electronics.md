@@ -1767,7 +1767,177 @@
 
 1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
+   Answer: The system must turn the street light `off in daylight` and `on in darkness`, automatically. The sensing element is an `LDR` (Light Dependent Resistor), whose resistance falls when light falls on it.
+   ```
+      Bright light  ->  LDR resistance LOW   (about 1 k ohm)
+      Darkness      ->  LDR resistance HIGH  (about 1 M ohm)
+   ```
+
+   Block diagram
+   ```mermaid
+   flowchart LR
+       A[LDR sensor] --> B[Voltage divider]
+       B --> C[Comparator / Schmitt trigger]
+       C --> D[Transistor driver]
+       D --> E[Relay]
+       E --> F[Street lamp 220V]
+   ```
+
+   Circuit
+   ```
+           +5V
+            |
+           ###  LDR
+           ###
+            |
+            +-------------------|+\
+            |                   |  \  LM393
+           ###  R1 = 10k        |   >------+
+           ### (fixed)      +---|- /       |
+            |               |   |  /       |
+           GND              |   +-/        |
+                           ###              |
+                preset  ###  RV (threshold) |
+                           ###              |
+                           GND              |
+                                            v
+                                       +---/\/\/\--- base
+                                       |    1k        |
+                                       |             |<  Q1 (BC547)
+                                       |              |
+                                     (from            |
+                                  comparator)        +--- relay coil ---+5V (12V)
+                                                      |     with a flyback
+                                                     GND    diode across it
+
+      Relay contacts (NO) switch the 220 V mains to the street lamp.
+   ```
+
+   How it works
+   ```
+      1. LDR and R1 form a voltage divider. The voltage at their junction
+         depends on how much light falls on the LDR.
+
+            Daylight  : LDR resistance low  -> junction voltage HIGH
+            Night     : LDR resistance high -> junction voltage LOW
+
+      2. The comparator compares that voltage with a threshold set by the preset RV.
+
+            Junction voltage > threshold (day)   -> output LOW  -> Q1 off
+            Junction voltage < threshold (night) -> output HIGH -> Q1 on
+
+      3. Q1 energises the relay coil, whose normally-open contacts close and
+         connect the 220 V mains to the lamp.
+
+      4. At sunrise the LDR resistance falls again, the comparator flips back,
+         Q1 turns off and the lamp goes out.
+   ```
+
+   Microcontroller version (Arduino)
+   ```c
+   const int LDR = A0;        // LDR divider output
+   const int RELAY = 8;       // relay drive pin
+   const int THRESHOLD = 400; // set by measurement at dusk
+
+   void setup() {
+       pinMode(RELAY, OUTPUT);
+   }
+
+   void loop() {
+       int light = analogRead(LDR);      // 0 = dark, 1023 = bright
+
+       if (light < THRESHOLD)
+           digitalWrite(RELAY, HIGH);    // dark  -> lamp ON
+       else
+           digitalWrite(RELAY, LOW);     // light -> lamp OFF
+
+       delay(1000);                      // check once per second
+   }
+   ```
+
+   Design points that earn marks
+   - `Hysteresis` is essential. Without it the lamp flickers on and off at dusk as the light hovers around the threshold. A Schmitt trigger, or positive feedback around the comparator, gives two separate switching levels — turn on below 380, turn off above 420.
+   - A `flyback diode` must be fitted across the relay coil, otherwise the inductive spike destroys the transistor when the coil is switched off.
+   - Add a `delay of a few seconds` before acting, so a passing headlight or a lightning flash does not switch the lamp.
+   - A `PIR motion sensor` can be added so the lamp runs at low brightness all night and goes to full brightness only when someone approaches — the standard energy-saving design.
+   - An `SSR` (solid-state relay) or a triac can replace the mechanical relay for silent operation and a much longer life.
+   - The mains side must be `isolated` from the low-voltage side, which the relay or an opto-triac provides.
+
 2. **Which signal a sensor could to send the signal to microcontroller if the sensor finds any gas leakage point?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 861 (ET: N/A)]*
+
+   Answer: A gas sensor sends the microcontroller either an `analogue voltage` or a `digital HIGH/LOW`, depending on which output pin is used. Almost every gas sensor module — the `MQ` series is the standard — provides `both`.
+
+   The two output signals
+   ```
+      AO  (analogue out) : a voltage that RISES as the gas concentration rises
+                           Typically 0 to 5 V, read by the microcontroller's ADC.
+                           Gives the actual concentration, not just present/absent.
+
+      DO  (digital out)  : a single bit, produced by an on-board LM393 comparator
+                           that compares AO with a threshold set by a preset.
+                           Usually ACTIVE LOW - it goes LOW when gas is detected.
+   ```
+
+   How the sensor works
+   - The MQ-series sensor uses a heated `tin dioxide (SnO2)` element. In clean air its resistance is high; when a combustible gas such as LPG, methane or CO adsorbs on the surface, its `resistance falls`. A load resistor turns that change into a voltage.
+   ```
+      No gas     ->  high sensor resistance ->  low  AO voltage , DO = HIGH
+      Gas leak   ->  low  sensor resistance ->  high AO voltage , DO = LOW
+   ```
+
+   Connection
+   ```
+           MQ-6 / MQ-2 module            Microcontroller
+         +---------------+
+         | VCC           |----------------- 5 V
+         | GND           |----------------- GND
+         | AO  (analog)  |----------------- A0   (ADC input)
+         | DO  (digital) |----------------- D2   (interrupt-capable pin)
+         +---------------+
+   ```
+
+   Code
+   ```c
+   const int AO = A0, DO = 2, BUZZER = 8, VALVE = 9;
+   const int THRESHOLD = 300;         // set by calibration
+
+   void setup() {
+       pinMode(DO, INPUT);
+       pinMode(BUZZER, OUTPUT);
+       pinMode(VALVE, OUTPUT);
+       Serial.begin(9600);
+   }
+
+   void loop() {
+       int level = analogRead(AO);            // 0 to 1023, gas concentration
+       int alarm = digitalRead(DO);           // LOW when gas is detected
+
+       Serial.println(level);
+
+       if (level > THRESHOLD || alarm == LOW) {
+           digitalWrite(BUZZER, HIGH);        // sound the alarm
+           digitalWrite(VALVE, HIGH);         // close the solenoid valve
+           // send an SMS or MQTT message here
+       } else {
+           digitalWrite(BUZZER, LOW);
+       }
+       delay(500);
+   }
+   ```
+
+   Which output to use
+
+   | Point | Analogue (AO) | Digital (DO) |
+   |---|---|---|
+   | Signal | Continuous voltage | Single bit, HIGH or LOW |
+   | Read by | ADC pin | Any digital pin |
+   | Information | The actual concentration | Only "gas present / absent" |
+   | Threshold set by | Software, changeable | Hardware preset on the module |
+   | Can trigger an interrupt | No | Yes |
+   | Best for | Monitoring, logging, graded alarms | A simple alarm, waking the MCU from sleep |
+
+   - Best practice for a gas-leak system: use `both`. Wire `DO` to an interrupt pin so the microcontroller wakes and reacts instantly, and read `AO` to log the concentration and distinguish a small leak from a dangerous one.
+   - Practical points: MQ sensors need a `warm-up` of 20 seconds to a few minutes before their reading is valid, they are `not gas-selective`, and they drift with temperature and humidity — so a proper installation calibrates them and, in a real gas plant, uses an industrial `4-20 mA` transmitter instead of a hobby module.
 
 ## Circuit Theorems (Thevenin, Norton, Superposition) (2)
 
