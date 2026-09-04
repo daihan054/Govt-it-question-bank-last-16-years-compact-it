@@ -5088,15 +5088,187 @@
 
 1. **What is the purpose of VPN used in computer security?** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
+   Answer: A **VPN (Virtual Private Network)** creates an encrypted tunnel across a public network, so that data travels as if it were on a private network.
+
+   Purposes in computer security
+   - **Confidentiality** — all traffic inside the tunnel is encrypted, so an attacker on public Wi-Fi or an ISP cannot read it.
+   - **Secure remote access** — employees working from home reach internal servers safely, without exposing those servers to the internet.
+   - **Connecting branch offices** — a site-to-site VPN links two offices over the internet at a fraction of the cost of a leased line.
+   - **Authentication** — only users with valid credentials or certificates can establish the tunnel.
+   - **Integrity** — the protocol detects any modification of the data in transit.
+   - **Hiding the internal network** — internal IP addresses and topology are not exposed.
+   - **Anonymity and location masking** — the destination sees the VPN server's IP, not the user's.
+   - **Bypassing geographic restrictions** and censorship.
+   - **Protection on untrusted networks** — hotel, airport and café Wi-Fi become usable for sensitive work.
+
+   Common protocols
+   - **IPsec** (network layer), **SSL/TLS VPN** (browser based), **OpenVPN**, **WireGuard**, **L2TP/IPsec**. PPTP is obsolete and insecure.
+
+   - Limitation worth noting: a VPN protects the CHANNEL, not the endpoints. An infected laptop connected by VPN brings its malware straight onto the corporate network, which is why endpoint health checking is used alongside.
+
 2. **In which layer IPsec works?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+   Answer: **IPsec works at the Network layer (Layer 3)** of the OSI model, and at the Internet layer of the TCP/IP model.
+
+   Why the layer matters
+   - Operating at layer 3 means IPsec protects **every application automatically**, without any change to the applications themselves. HTTP, FTP, SMTP and any other protocol carried over IP are all secured.
+   - By contrast, **SSL/TLS works at the Transport/Session layer (Layer 4-5)** and secures only the applications written to use it.
+
+   IPsec components
+   - **AH (Authentication Header)** — provides authentication and integrity, but NOT encryption.
+   - **ESP (Encapsulating Security Payload)** — provides encryption, authentication and integrity. This is what is normally used.
+   - **IKE (Internet Key Exchange)** — negotiates the security association and exchanges keys, on UDP port 500.
+
+   Two modes
+
+   | Mode | What is protected | Used for |
+   |---|---|---|
+   | **Transport mode** | Only the payload; the original IP header is kept | Host-to-host communication |
+   | **Tunnel mode** | The ENTIRE original packet is encrypted and given a new IP header | Site-to-site VPN — the standard choice |
+
+   - Tunnel mode is what makes a site-to-site VPN possible, because the original source and destination addresses are hidden inside the encrypted payload.
 
 3. **What is VPN? How it is working.** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
 
+   Answer: A VPN is a technology that creates a secure encrypted tunnel over a public network, allowing private data to travel across the internet as if it were on a private link.
+
+   How it works
+   ```mermaid
+   flowchart LR
+       U[User device<br/>VPN client] -->|1. authenticate| S[VPN Server / Gateway]
+       U -->|2. encrypted tunnel over the internet| S
+       S -->|3. decrypt and forward| N[Internal network / Internet]
+       N -->|4. response| S
+       S -->|5. re-encrypt and return| U
+   ```
+
+   - **Step 1 — Authentication.** The client contacts the VPN server and proves its identity with a username and password, a certificate, or a pre-shared key.
+   - **Step 2 — Tunnel establishment.** Both sides negotiate the encryption algorithm and exchange keys, typically using IKE for IPsec or a TLS handshake for SSL VPN.
+   - **Step 3 — Encapsulation.** Each original packet is wrapped inside a new packet — the original headers and payload become the payload of the outer packet.
+   - **Step 4 — Encryption.** The encapsulated packet is encrypted, so anyone intercepting it sees only ciphertext with the VPN server as the visible destination.
+   - **Step 5 — Transmission.** The packet crosses the public internet normally.
+   - **Step 6 — Decryption and forwarding.** The VPN server decrypts, removes the outer wrapper and forwards the original packet to its real destination.
+   - The return path reverses the process.
+
+   Protocols
+   - **IPsec** (layer 3), **SSL/TLS VPN** (browser based, no client needed), **OpenVPN**, **WireGuard** (modern, fast, simple), **L2TP/IPsec**. **PPTP is obsolete and must not be used.**
+
+   Benefits
+   - Encryption on untrusted networks, secure remote access, low-cost branch connectivity, hidden internal topology, and IP address masking.
+
 4. **(a) How can VPN provide secure communication platform? Explain site-to-site VPN and remote-access VPN using necessary figures.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 800 (ET: N/A)]*
+
+   Answer:
+
+   (a) How a VPN provides secure communication
+   - **Encryption** — AES or ChaCha20 encrypts everything inside the tunnel, so interception yields only ciphertext.
+   - **Authentication** — certificates, pre-shared keys or user credentials ensure only authorised endpoints can join.
+   - **Integrity** — HMAC detects any tampering with packets in transit.
+   - **Tunnelling / encapsulation** — the original packet including its addresses is hidden inside the outer packet, concealing the internal topology.
+   - **Key exchange** — IKE or TLS establishes fresh session keys, ideally with forward secrecy.
+
+   (b) Site-to-Site VPN
+   - Connects two entire NETWORKS — typically a head office and a branch — through VPN gateways at each end. Individual computers need no VPN software; the gateways handle everything.
+
+   ```mermaid
+   flowchart LR
+       subgraph HO [Head Office LAN]
+           A[PC] --- B[Server]
+       end
+       HO --- G1[VPN Gateway 1]
+       G1 -->|encrypted IPsec tunnel<br/>over the internet| G2[VPN Gateway 2]
+       G2 --- BR
+       subgraph BR [Branch Office LAN]
+           C[PC] --- D[Printer]
+       end
+   ```
+
+   - Uses **IPsec in tunnel mode**, and the tunnel is permanently established.
+   - Transparent to users — a branch employee reaches head office servers exactly as if on the same LAN.
+   - Two forms: **intranet VPN** (offices of the same organisation) and **extranet VPN** (connecting to a partner or supplier).
+
+   (c) Remote-Access VPN
+   - Connects an INDIVIDUAL USER to the corporate network from anywhere. VPN client software runs on the user's own device.
+
+   ```mermaid
+   flowchart LR
+       U1[Employee laptop<br/>at home] -->|encrypted tunnel| GW[VPN Gateway / Concentrator]
+       U2[Employee phone<br/>travelling] -->|encrypted tunnel| GW
+       GW --- LAN[Corporate LAN<br/>servers and files]
+   ```
+
+   - Uses **SSL/TLS VPN** (often browser-based, no client install) or **IPsec with a client**.
+   - Established on demand, and torn down when the user disconnects.
+   - Requires per-user authentication, ideally with MFA.
+
+   Comparison
+
+   | Point | Site-to-Site | Remote-Access |
+   |---|---|---|
+   | Connects | Network to network | User to network |
+   | Client software | Not needed on user devices | Required on each device |
+   | Tunnel duration | Always on | On demand |
+   | Typical protocol | IPsec tunnel mode | SSL/TLS VPN or IPsec client |
+   | Scale | A few fixed sites | Many mobile users |
+   | Configured by | Network administrators, once | Each user, per session |
 
 5. **What is VPN? Difference between site to site VPN and Remote access VPN.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840 (ET: N/A)]*
 
+   Answer:
+
+   (a) VPN
+   - A Virtual Private Network creates an encrypted tunnel across a public network, so private data travels securely as if on a dedicated private link. It provides confidentiality, authentication and integrity.
+
+   (b) Site-to-Site VPN vs Remote-Access VPN
+
+   | Point | Site-to-Site VPN | Remote-Access VPN |
+   |---|---|---|
+   | What it connects | Two complete networks | One user device to a network |
+   | Endpoints | VPN gateway to VPN gateway | VPN client to VPN gateway |
+   | Client software on user devices | Not required | Required (or a browser for SSL VPN) |
+   | Tunnel | Permanently established | Created on demand, per session |
+   | User awareness | Transparent — users do not know it exists | The user actively connects |
+   | Typical protocol | IPsec in tunnel mode | SSL/TLS VPN, or IPsec with a client |
+   | Authentication | Between gateways, using certificates or a pre-shared key | Per user, ideally with MFA |
+   | Number of connections | Few and fixed | Many and variable |
+   | Bandwidth need | High — carries all inter-office traffic | Moderate per user |
+   | Typical use | Head office to branch office | Employee working from home or travelling |
+   | Management | Configured once by network admins | Managed per user account |
+
+   When each is used
+   - **Site-to-site** — a bank connecting 50 branches to head office. Cheaper than leased lines and requires no configuration on individual PCs.
+   - **Remote-access** — the same bank's officers connecting from home, or an auditor accessing systems while travelling.
+
+   - Most organisations run both: site-to-site tunnels for permanent branch connectivity, and a remote-access concentrator for mobile staff.
+
 6. **What is VPN? Why we use it?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
+
+   Answer:
+
+   (a) VPN
+   - A Virtual Private Network is a technology that establishes an encrypted tunnel over a public network such as the internet, so that data travels privately and securely between two points.
+
+   (b) Why we use it
+
+   **Security reasons**
+   - **Encryption of traffic** — protects data from eavesdropping on public Wi-Fi, hotel networks and untrusted ISPs.
+   - **Secure remote access** — staff reach internal systems without those systems being exposed to the internet.
+   - **Authentication** — only verified users and devices can establish the tunnel.
+   - **Data integrity** — tampering in transit is detected.
+   - **Hides internal network structure** from outside observers.
+
+   **Business reasons**
+   - **Cost saving** — a site-to-site VPN over the internet costs far less than a dedicated leased line between offices.
+   - **Supports remote and hybrid work** — a necessity since 2020.
+   - **Connects branches, ATMs and partner organisations** securely.
+   - **Compliance** — regulators including Bangladesh Bank require encrypted remote access to banking systems.
+
+   **Practical reasons**
+   - **Privacy** — the ISP and websites see the VPN server's address, not the user's.
+   - **Bypassing geographic restrictions** and censorship.
+   - **Safe use of public networks** for banking and email.
+
+   - Limitation to state: a VPN secures the connection, not the device. An infected laptop on a VPN carries its malware directly into the corporate network, so endpoint security and posture checking must accompany it.
 
 ## Critical Information Infrastructure (CII) & Cyber Governance (3)
 
