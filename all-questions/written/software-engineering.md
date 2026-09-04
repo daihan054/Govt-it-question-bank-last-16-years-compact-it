@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 152 questions
+**Table of Contents** — 14 subtopics · 153 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-45) | 45 |
+| 1 | [SDLC Phases & Models](#sdlc-phases--models-46) | 46 |
 | 2 | [Software Testing & Evaluation](#software-testing--evaluation-40) | 40 |
 | 3 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-14) | 14 |
 | 4 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-13) | 13 |
@@ -22,7 +22,7 @@
 
 ---
 
-## SDLC Phases & Models (45)
+## SDLC Phases & Models (46)
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
 2. What are the main phases of the Software Development Life Cycle (SDLC)? Explain each phase briefly. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
@@ -114,6 +114,8 @@
 45. **Define software engineering according to IEEE. What is SDLC? Describe any two SDLC.** *[ICT Ministry Assistant Programmer 2017 compact it 1242 (ET: N/A)]*
 
 **What methodology would you use for software engineering?** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 41]]*
+
+46. **What is SDLC? Write down the Phases of SDLC?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317-318]]*
 
 ## Software Testing & Evaluation (40)
 

@@ -1,16 +1,16 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 524 questions
+**Table of Contents** — 33 subtopics · 526 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-114) | 114 |
-| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-55) | 55 |
+| 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-56) | 56 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-32) | 32 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-23) | 23 |
 | 5 | [Networking Devices](#networking-devices-23) | 23 |
 | 6 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-19) | 19 |
 | 7 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-19) | 19 |
-| 8 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-18) | 18 |
+| 8 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-19) | 19 |
 | 9 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
 | 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-17) | 17 |
 | 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-17) | 17 |
@@ -316,7 +316,7 @@ ii) 211.10.15.4
 
 114. **Write down the Private IP address ranges of Class A, Class B, and Class C.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 240]]*
 
-## OSI & TCP/IP Reference Model (55)
+## OSI & TCP/IP Reference Model (56)
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
 2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -441,6 +441,8 @@ True Positive (TP) = 560 True Negative (TN) = 330 False Positive (FP) = 60 False
 54. **Write a Java class named BankAccount having the following: Private fields: account_name, account_number, balance (encapsulation), Methods: deposit(), withdraw(), display(). Show code with access control and method implementation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 226-228]]*
 
 55. **Add suitable prepositions (২টি বাক্য দেওয়া হয়).** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+56. **Given a positive integer N, return the \\text\{N\}^\\text\{th\} row of Pascal's triangle. (Pascal's triangle is a triangular array of the binomial coefficients formed by summing up the elements or previous row.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 324]]*
 
 ## Networking Fundamentals & Terminology (32)
 
@@ -723,7 +725,7 @@ Devices: Router, Switch, Network Interface Card (NIC), Web Server. Protocols: HT
 
 19. **Write the difference between TCP and UDP.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 241]]*
 
-## Multiplexing & Bandwidth (18)
+## Multiplexing & Bandwidth (19)
 1. Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference? [SO IT 25-07-2026]
 
 2. **ব্যান্ডউইথ (Bandwidth) বলতে কী বুঝায়?** *[সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
@@ -761,6 +763,8 @@ Devices: Router, Switch, Network Interface Card (NIC), Web Server. Protocols: HT
 18. **Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b) the output bit duration (c) the output bit rate and (d) the output frame rate.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1009 (ET: N/A)]*
 
 **A file of 10 MB needs to be sent over a network link with a bandwidth of 5 Mbps. Calculate: How long will it take to transmit the file? And What is the transmission delay if the propagation delay is 20 ms?** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 42]]*
+
+19. **What are the propagation time and the transmission time for a 2.5-Kbyte message and if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 12,000 km and that light travels at 2.4\*10^8 m/s.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317]]*
 
 ## Routing Protocols & Route Configuration (18)
 

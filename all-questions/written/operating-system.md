@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 200 questions
+**Table of Contents** — 14 subtopics · 201 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-47) | 47 |
-| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-25) | 25 |
+| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-26) | 26 |
 | 3 | [OS Concepts & System Software](#os-concepts--system-software-24) | 24 |
 | 4 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
 | 5 | [Memory Management & Paging](#memory-management--paging-18) | 18 |
@@ -155,8 +155,7 @@
    vii) nslookup
    viii) mkdir
 
-## CPU Scheduling Algorithms (25)
-
+## CPU Scheduling Algorithms (26)
 1. A CPU scheduling algorithm must choose a process from the ready queue to execute. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
 2. **Five jobs A, B, C, D, and E arrive at a compute center at approximately the same time. Their estimated running times are 10, 6, 2, 4, and 8 minutes, respectively. Their (externally defined) priorities are 3, 5, 2, 1, and 4, respectively, with 5 being the highest priority. For each of the following scheduling algorithms, determine the mean process turnaround time. (Ignore process switching overhead.) (a) Round-robin (quantum = 2 minutes), (b) Priority scheduling, (c) First-come, first-served (run in order 10, 6, 2, 4, 8), (d) Shortest job first.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1421 (ET: E-Zone)]*
@@ -249,6 +248,8 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 24. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
 
 25. **What is turnaround time of a process? Difference between FAT32 and NTFS?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1279 (ET: N/A)]*
+
+26. **Write various types of CPU scheduling. Describes a CPU scheduling method which has best performance.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320]]*
 
 ## OS Concepts & System Software (24)
 

@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 117 questions
+**Table of Contents** — 10 subtopics · 119 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -12,7 +12,7 @@
 | 7 | [Exception Handling](#exception-handling-4) | 4 |
 | 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
 | 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
-| 10 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-0) | 0 |
+| 10 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-2) | 2 |
 
 <!-- TOC END -->
 
@@ -494,8 +494,8 @@ public:
 
 2. **An Abstract class Player with two sub classes Bowler and Batsman, Abstract class has one abstract method average, also have constructor and a string function that display name bowler or batsman. Batsman class implement abstract function average and display result, Batsman class have run and number match data. Now write a Java Program and show Batsman average run.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (0)
-**(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
+## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (2)
+1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
 class myclass \{
 
     int num;
@@ -505,3 +505,5 @@ public:
     myclass(int i) \{ num=i; \}
 
 \};
+
+2. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*

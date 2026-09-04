@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 52 questions
+**Table of Contents** — 12 subtopics · 55 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-9) | 9 |
+| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-12) | 12 |
 | 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
 | 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
 | 4 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
@@ -20,7 +20,7 @@
 
 ---
 
-## Artificial Intelligence & Machine Learning (9)
+## Artificial Intelligence & Machine Learning (12)
 1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
 (i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
 
@@ -39,6 +39,12 @@
 8. **Determine which pair of graphs are isomorphic. Justify your answer with reasoning or proof. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
 9. **Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+10. **Write various types of information security against cyber threats.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 321]]*
+
+11. **What is trigger, explain with example. Why trigger needed?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 322]]*
+
+12. **The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days For example, if the given array is \{100, 180, 260, 310, 40, 535, 695\}, the maximum profit can be earned by buying on day 0, and selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 323]]*
 
 ## Artificial Intelligence & Expert Systems (8)
 

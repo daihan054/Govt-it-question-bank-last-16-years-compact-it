@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 137 questions
+**Table of Contents** — 15 subtopics · 140 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -14,10 +14,10 @@
 | 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
 | 10 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
 | 11 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-3) | 3 |
-| 12 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
-| 13 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
-| 14 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
-| 15 | [Searching & Graph Algorithms](#searching--graph-algorithms-0) | 0 |
+| 12 | [Searching & Graph Algorithms](#searching--graph-algorithms-3) | 3 |
+| 13 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
+| 14 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
+| 15 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
 
 <!-- TOC END -->
 
@@ -376,6 +376,13 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 3. **Write an algorithm for matrix multiplication.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
+## Searching & Graph Algorithms (3)
+1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
+
+2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
+
+3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
+
 ## Heap & Priority Queue (2)
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
@@ -389,6 +396,3 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 ## NP-Completeness & Complexity Reduction (1)
 
 1. **A reduces to B Polynomial time. Which is better and why?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
-
-## Searching & Graph Algorithms (0)
-**(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*

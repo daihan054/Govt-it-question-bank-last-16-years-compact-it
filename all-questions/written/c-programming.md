@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 275 questions
+**Table of Contents** — 9 subtopics · 276 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-116) | 116 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-117) | 117 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
 | 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (116)
+## Basic Programs & Control Statements (117)
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -483,6 +483,8 @@ for (S = 1, P = -x, I = 1; I < a; I++)
 \}
 
 What will be the approximation of f(x)?
+
+117. **Write a program that read n number string and print these strings in ascending order.** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 326]]*
 
 ## Output Tracing & Control Flow (57)
 

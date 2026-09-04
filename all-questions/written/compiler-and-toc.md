@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 25 questions
+**Table of Contents** — 6 subtopics · 25 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,6 +8,7 @@
 | 3 | [Grammar & Ambiguity](#grammar--ambiguity-5) | 5 |
 | 4 | [Lexical Analysis & Compiler Phases](#lexical-analysis--compiler-phases-5) | 5 |
 | 5 | [Linker & Loader](#linker--loader-1) | 1 |
+| 6 | [Compiler Design & Theory of Computation](#compiler-design--theory-of-computation-0) | 0 |
 
 <!-- TOC END -->
 
@@ -77,3 +78,6 @@
 ## Linker & Loader (1)
 
 1. **(b) What are the tasks of linker and loader? Describe briefly using examples.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 479 (ET: N/A)]*
+
+## Compiler Design & Theory of Computation (0)
+**Write difference between compiler and interpreter.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317]]*
