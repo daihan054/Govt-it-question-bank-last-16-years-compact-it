@@ -5906,7 +5906,187 @@
 
 1. Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation? [SO IT 25-07-2026]
 
+   Answer: A `single-cycle` implementation completes one whole instruction per clock cycle. A `pipelined` implementation splits the instruction into stages and overlaps consecutive instructions, so one instruction `completes` every cycle even though each takes several cycles to pass through.
+
+   The problem with a single-cycle design
+   - The clock period must be long enough for the `slowest` instruction to finish completely.
+   ```
+      Instruction fetch      200 ps
+      Register read          100 ps
+      ALU operation          200 ps
+      Data memory access     200 ps
+      Register write         100 ps
+      -----------------------------
+      Load word (longest)    800 ps   ->  the clock period must be 800 ps
+   ```
+   - Every other instruction is padded out to the same 800 ps. An `ADD`, which needs only 600 ps, wastes 200 ps every time; a branch wastes even more.
+   - Hardware is idle most of the time — the data memory sits unused during an ADD, and the ALU sits unused during a fetch.
+
+   How pipelining fixes it
+   ```
+      Clock period = the slowest SINGLE STAGE, not the whole instruction
+                   = 200 ps , not 800 ps
+   ```
+   ```
+      Single cycle
+      I1 |========800ps========|
+      I2                        |========800ps========|
+      I3                                               |=======...
+
+      Pipelined (5 stages of 200 ps)
+      I1 | IF | ID | EX |MEM | WB |
+      I2      | IF | ID | EX |MEM | WB |
+      I3           | IF | ID | EX |MEM | WB |
+      I4                | IF | ID | EX |MEM | WB |
+                             ^ from here, one instruction finishes every 200 ps
+   ```
+
+   Speed-up
+   ```
+      Ideal speed-up = number of pipeline stages = k
+
+      Actual speed-up = (k x n) / (k + n - 1)
+           where n is the number of instructions
+
+      For large n, this approaches k.
+   ```
+   ```
+      1000 instructions, 5 stages :
+
+      Single cycle : 1000 x 800 ps = 800,000 ps
+      Pipelined    : (5 + 999) x 200 ps = 200,800 ps
+
+      Speed-up = 800,000 / 200,800 = 3.98 times
+   ```
+
+   Why designers favour it
+   - `Much higher throughput.` One instruction completes per cycle instead of one per 800 ps — roughly a fivefold gain for a five-stage pipeline.
+   - `Higher clock frequency.` The clock is set by the slowest stage, so it can be raised far above what a single-cycle design allows. Deeper pipelines allow even higher clocks, which is how GHz speeds were reached.
+   - `Better hardware utilisation.` Every functional unit is busy on a different instruction at the same time, instead of one being used while the rest idle.
+   - `No wasted time on short instructions.` Each instruction uses only the stages it needs, at full clock rate.
+   - `Scalable.` More stages can be added, and the design extends naturally to superscalar issue.
+   - `Cost effective` — it needs only pipeline registers between the stages, not duplicated functional units.
+
+   The costs, which must also be stated
+   ```
+      Latency of a single instruction is UNCHANGED, or slightly worse, because
+           of the pipeline register delays. Only throughput improves.
+
+      HAZARDS :
+         Structural : two stages want the same hardware unit
+         Data       : an instruction needs a result not yet written back
+                      -> solved by forwarding, or by stalling
+         Control    : a branch is not resolved until later
+                      -> solved by branch prediction; a misprediction flushes
+                         the pipeline
+      Deeper pipelines make the misprediction penalty larger, which is why
+      the Pentium 4's 31-stage pipeline was abandoned.
+   ```
+
+   - Summary: a single-cycle design wastes time on every instruction because the clock must suit the worst one. Pipelining sets the clock by the `slowest stage` instead, and overlaps instructions so the hardware is never idle — buying a large gain in throughput at the cost of managing hazards.
+
 2. **Write down the names of different stages of instruction pipelining in a multi-cycle datapath architecture. What is a data-hazard in a pipelined datapath?** *[BPSC (Ministry) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
+
+   Answer: Stages of instruction pipelining
+
+   The classic `five-stage` pipeline, used in MIPS and DLX and taught as the standard model:
+   ```
+      1. IF  - Instruction Fetch
+           Read the instruction from memory at the address in the PC,
+           and increment the PC.
+
+      2. ID  - Instruction Decode / Register Fetch
+           Decode the opcode, and read the source operands from the
+           register file. The branch target is also computed here.
+
+      3. EX  - Execute / Address Calculation
+           The ALU performs the arithmetic or logic operation, or computes
+           the effective memory address for a load or store.
+
+      4. MEM - Memory Access
+           Read from or write to data memory. Only LOAD and STORE use this
+           stage; other instructions pass through it doing nothing.
+
+      5. WB  - Write Back
+           Write the result into the destination register.
+   ```
+   ```
+      I1 | IF | ID | EX |MEM | WB |
+      I2      | IF | ID | EX |MEM | WB |
+      I3           | IF | ID | EX |MEM | WB |
+      I4                | IF | ID | EX |MEM | WB |
+                             ^ from here one instruction completes per cycle
+   ```
+   - Between every pair of stages sits a `pipeline register` (IF/ID, ID/EX, EX/MEM, MEM/WB) which carries the instruction's data and control signals forward.
+
+   The simpler four-stage model is also quoted
+   ```
+      Fetch -> Decode -> Execute -> Write back
+   ```
+   - Modern processors use far deeper pipelines: the Intel Core family uses 14-19 stages, splitting fetch, decode, rename, schedule, execute, memory and retire.
+
+   Data hazard
+
+   - A `data hazard` occurs when an instruction needs a value that an earlier instruction in the pipeline has computed but has `not yet written back`. The pipeline would read a stale value.
+
+   Example
+   ```asm
+      ADD  R1, R2, R3      ; R1 = R2 + R3 , written back in WB (cycle 5)
+      SUB  R4, R1, R5      ; needs R1 in EX (cycle 4) - too early!
+   ```
+   ```
+      Cycle :     1    2    3    4    5    6
+      ADD      | IF | ID | EX |MEM | WB |
+      SUB           | IF | ID | EX |MEM | WB |
+                               ^         ^
+                               needs R1  R1 is only written here
+   ```
+
+   Three kinds of data hazard
+   ```
+      RAW (Read After Write)  : the true dependency shown above.
+                                The only one that occurs in a simple in-order
+                                pipeline.
+      WAR (Write After Read)  : a later instruction writes a register an
+                                earlier one has not yet read. Occurs only with
+                                out-of-order execution.
+      WAW (Write After Write) : two instructions write the same register out
+                                of order.
+   ```
+
+   How data hazards are solved
+   ```
+      1. FORWARDING (bypassing) - the usual solution.
+         The ALU result is routed directly from the EX/MEM pipeline register
+         back to the ALU input of the next instruction, without waiting for WB.
+         This removes most RAW hazards with no lost cycles.
+
+      2. STALLING (pipeline bubble).
+         When forwarding cannot help - a LOAD followed immediately by a use of
+         the loaded value - the pipeline inserts one bubble, because the data
+         is not available until the end of MEM.
+
+            LW   R1, 0(R2)
+            ADD  R3, R1, R4     ; must stall one cycle
+
+      3. COMPILER SCHEDULING.
+         The compiler reorders independent instructions into the gap, so the
+         stall does no harm.
+
+      4. OUT-OF-ORDER EXECUTION with register renaming, in modern processors,
+         which removes WAR and WAW entirely and hides most RAW latency.
+   ```
+
+   The other two hazard types, for completeness
+   ```
+      Structural hazard : two stages need the same hardware in the same cycle,
+           for example instruction fetch and data access competing for one
+           memory. Solved by separate instruction and data caches.
+
+      Control hazard    : a branch is not resolved until the EX stage, so the
+           instructions fetched after it may be wrong. Solved by branch
+           prediction; a misprediction flushes the pipeline.
+   ```
 
 3. **(c) Fill in the gaps RISC or CISC:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
    * (i) Pipelining is less efficient due to instruction complexity and variability ______
@@ -5914,17 +6094,555 @@
    * (iii) Complex decoding due to variable instruction length ______
    * (iv) Each instruction typically executes in a single clock cycle ______
 
+   Answer: (i) Pipelining is less efficient due to instruction complexity and variability — `CISC`
+   - CISC instructions vary in length (1 to 15 bytes in x86) and in how many cycles they take. A pipeline works best when every instruction is the same size and takes the same time, so this variability causes stalls and makes the pipeline control logic complicated.
+
+   (ii) Emphasis on hardware simplicity and efficiency — `RISC`
+   - RISC deliberately keeps the instruction set small and regular so that the control unit can be `hardwired` rather than microprogrammed. The saved silicon is spent on more registers, larger caches and deeper pipelines.
+
+   (iii) Complex decoding due to variable instruction length — `CISC`
+   - Because a CISC instruction's length is not known until part of it has been decoded, the processor cannot simply fetch a fixed number of bytes per instruction. Modern x86 chips need several decoder units working in parallel just to keep up.
+
+   (iv) Each instruction typically executes in a single clock cycle — `RISC`
+   - Fixed-length, simple instructions each complete in about one cycle. This is what makes RISC pipelines efficient, since every stage takes the same time.
+
+   Summary
+
+   | Statement | Answer |
+   |---|---|
+   | (i) Pipelining is less efficient due to instruction complexity and variability | `CISC` |
+   | (ii) Emphasis on hardware simplicity and efficiency | `RISC` |
+   | (iii) Complex decoding due to variable instruction length | `CISC` |
+   | (iv) Each instruction typically executes in a single clock cycle | `RISC` |
+
+   Full comparison, for context
+
+   | Point | RISC | CISC |
+   |---|---|---|
+   | Instruction set | Small and simple | Large and complex |
+   | Instruction length | Fixed | Variable |
+   | Cycles per instruction | Mostly 1 | Many |
+   | Memory access | Only LOAD and STORE | Most instructions can |
+   | Registers | Many (32 or more) | Few (8 to 16) |
+   | Control unit | Hardwired | Microprogrammed |
+   | Pipelining | Easy and efficient | Difficult |
+   | Decoding | Simple | Complex |
+   | Code size | Larger | Smaller |
+   | Compiler effort | Higher | Lower |
+   | Power consumption | Low | Higher |
+   | Examples | ARM, RISC-V, MIPS, SPARC | Intel x86, AMD64, Motorola 68000 |
+
+   - Practical note: the distinction has blurred. Modern x86 processors decode their CISC instructions into RISC-like `micro-operations` internally, so they are CISC at the interface and RISC in the execution core. RISC still wins decisively on power efficiency, which is why every mobile phone uses ARM.
+
 4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 299 (ET: BIBM)]*
+
+   Answer: Multiprocessor versus multicomputer system
+
+   `Multiprocessor` — several CPUs inside `one` computer, sharing the same main memory and one operating system. Communication is through `shared memory`. Also called a `tightly coupled` system.
+
+   `Multicomputer` — several `complete, independent` computers, each with its own CPU, memory and operating system, joined by a network. Communication is by `message passing`. Also called a `loosely coupled` system, or a cluster.
+
+   | Point | Multiprocessor | Multicomputer |
+   |---|---|---|
+   | Memory | Shared, single address space | Private to each node |
+   | Communication | Through shared memory | Message passing over a network |
+   | Coupling | Tight | Loose |
+   | Operating system | One, for the whole machine | One per node |
+   | Speed of communication | Very fast (nanoseconds) | Slower (microseconds) |
+   | Scalability | Limited — memory bus contention | Very high — thousands of nodes |
+   | Cost | Higher per processor | Lower, built from ordinary machines |
+   | Fault tolerance | A failure can stop the system | A node can fail and the rest continue |
+   | Programming | Threads, shared variables | MPI, sockets |
+   | Examples | A multicore server, SMP machine | Beowulf cluster, Hadoop cluster, cloud |
+
+   Shared memory
+   - `Shared memory` means all processors see the `same physical address space`. If processor 1 writes to address X, processor 2 reading X sees the new value. This makes communication as cheap as an ordinary memory access.
+   ```
+      CPU1   CPU2   CPU3   CPU4
+        |      |      |      |
+        +------+---+--+------+
+                   |
+             SHARED MEMORY
+   ```
+   - Two organisations:
+   ```
+      UMA  (Uniform Memory Access) : every processor takes the same time to
+           reach any location. Simple, but the bus becomes a bottleneck
+           beyond a handful of processors. This is classic SMP.
+
+      NUMA (Non-Uniform Memory Access) : each processor has local memory it
+           reaches quickly and remote memory it reaches more slowly.
+           Scales far better, and is what modern multi-socket servers use.
+   ```
+   - The difficulty it creates: each processor caches copies of shared data, so the copies can disagree. That is the `cache coherence problem`.
+
+   Two schemes to maintain cache coherence
+
+   `1. Snooping (bus-based)`
+   - Every cache controller `watches` (snoops on) the shared bus and sees every transaction issued by every other cache.
+   ```
+      Write-invalidate  (the common scheme)
+         When a processor writes to a block, it broadcasts an INVALIDATE.
+         Every other cache holding that block marks its copy invalid.
+         The next read by another processor misses and fetches the new value.
+
+      Write-update (write-broadcast)
+         The new value itself is broadcast, and every other cache updates its
+         copy. Fewer misses, but far more bus traffic, so it is rarely used.
+   ```
+   - Usually implemented with the `MESI` protocol, in which each cache line is Modified, Exclusive, Shared or Invalid.
+   - Simple and fast, but it needs a `broadcast medium`, so it does not scale beyond a few dozen processors.
+
+   `2. Directory-based`
+   - A central `directory` records, for every memory block, which caches hold a copy and in what state.
+   ```
+      Block address | State  | Sharers
+      --------------+--------+-----------------
+      0x1000        | Shared | CPU1, CPU3
+      0x2000        | Modified| CPU2
+   ```
+   - On a write, the directory sends invalidation messages `only to the caches that actually hold the block` — a point-to-point message, not a broadcast.
+   - Scales to hundreds or thousands of processors, which is why it is used in large NUMA machines. The cost is the directory storage and the extra latency of the lookup.
+
+   | Point | Snooping | Directory-based |
+   |---|---|---|
+   | Needs a broadcast bus | Yes | No |
+   | Messages | Broadcast to all | Point-to-point to sharers only |
+   | Scalability | Poor, tens of CPUs | Good, hundreds or thousands |
+   | Latency | Low | Higher, directory lookup first |
+   | Storage overhead | None | Directory entry per block |
+   | Used in | Small SMP systems | Large NUMA and distributed shared memory |
+
+   Pipelining
+   - `Pipelining` is a technique in which an instruction is divided into stages, and consecutive instructions are `overlapped` so that a different instruction occupies each stage at the same time. One instruction then `completes` every clock cycle, even though each takes several cycles to pass through.
+
+   The four stages
+   ```
+      1. FETCH   : read the instruction from memory at the address in the PC,
+                   and increment the PC.
+
+      2. DECODE  : interpret the opcode, identify the operands, and read
+                   them from the register file.
+
+      3. EXECUTE : the ALU performs the arithmetic or logic operation, or
+                   computes the effective memory address.
+
+      4. WRITE BACK : store the result in the destination register or in
+                   memory.
+   ```
+   ```
+      I1 | F  | D  | E  | W  |
+      I2      | F  | D  | E  | W  |
+      I3           | F  | D  | E  | W  |
+      I4                | F  | D  | E  | W  |
+                          ^ from here, one instruction finishes every cycle
+   ```
+   ```
+      Ideal speed-up = number of stages = 4
+      Actual speed-up = (k x n) / (k + n - 1)   for n instructions, k stages
+   ```
+   - Hazards limit the gain: `structural` (two stages want the same unit), `data` (a result is not ready yet — fixed by forwarding or a stall) and `control` (a branch changes the flow — fixed by branch prediction).
 
 5. **6.1 Why do modern processor designs favor a multi-stage pipelined approach over a single-cycle implementation?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+   Answer: A `single-cycle` design completes one whole instruction per clock cycle, so the clock period must cover the `slowest` instruction. A `pipelined` design splits the instruction into stages and overlaps consecutive instructions, so the clock period need only cover the `slowest stage`.
+
+   The problem with single-cycle
+   ```
+      Instruction fetch      200 ps
+      Register read          100 ps
+      ALU operation          200 ps
+      Data memory access     200 ps
+      Register write         100 ps
+      -----------------------------
+      Load word (longest)    800 ps  ->  clock period must be 800 ps
+   ```
+   - Every instruction is padded to 800 ps, even an `ADD` that needs only 600 ps and a branch that needs 500 ps.
+   - Most of the hardware is idle at any moment: the data memory does nothing during an ADD, the ALU does nothing during a fetch.
+
+   What pipelining changes
+   ```
+      Clock period = slowest STAGE = 200 ps , not 800 ps
+   ```
+   ```
+      Single cycle
+      I1 |=========800 ps=========|
+      I2                           |=========800 ps=========|
+
+      Pipelined, 5 stages of 200 ps
+      I1 | IF | ID | EX |MEM | WB |
+      I2      | IF | ID | EX |MEM | WB |
+      I3           | IF | ID | EX |MEM | WB |
+      I4                | IF | ID | EX |MEM | WB |
+                             ^ one instruction completes every 200 ps
+   ```
+
+   Speed-up
+   ```
+      Actual speed-up = (k x n) / (k + n - 1)
+
+      1000 instructions, 5 stages :
+         Single cycle : 1000 x 800  = 800,000 ps
+         Pipelined    : (5 + 999) x 200 = 200,800 ps
+         Speed-up     = 3.98 times
+   ```
+
+   Reasons designers favour pipelining
+   - `Higher throughput` — one instruction finishes per cycle rather than one per 800 ps.
+   - `Higher clock frequency` — the clock is set by the slowest stage, not the whole instruction, which is how GHz speeds became possible.
+   - `Better hardware utilisation` — every functional unit works on a different instruction simultaneously instead of sitting idle.
+   - `No waste on short instructions` — each uses only the stages it needs, at the full clock rate.
+   - `Low extra cost` — only pipeline registers are added, not duplicated functional units.
+   - `Extensible` — the same idea scales to deeper pipelines and to superscalar issue of several instructions per cycle.
+
+   Costs that must be mentioned
+   ```
+      Latency of a single instruction does NOT improve; only throughput does.
+
+      Hazards :
+         Structural : two stages want the same hardware unit
+         Data       : a result is not written back before the next instruction
+                      needs it  -> solved by forwarding, else a stall
+         Control    : a branch is not resolved until later
+                      -> solved by branch prediction; a wrong guess flushes
+                         the pipeline
+
+      Deeper pipelines suffer a larger misprediction penalty, which is why the
+      Pentium 4's 31-stage design was abandoned in favour of shorter pipelines.
+   ```
+
+   - Summary: single-cycle wastes time on every instruction because the clock must suit the worst case. Pipelining sets the clock by the `slowest stage` and keeps every unit busy, buying a large throughput gain in exchange for hazard-handling logic.
+
 6. **How computer Architecture is characterized. What are the 5 stages of the DLX pipeline?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049-1050 (ET: BUET)]*
+
+   Answer: How computer architecture is characterized
+
+   Computer architecture is described by the following attributes.
+
+   1. `Instruction Set Architecture (ISA)`
+   - The interface the machine presents to software: the instruction set, the data types, the registers, the addressing modes and the exception model.
+   ```
+      RISC : small, fixed-length, simple instructions (ARM, RISC-V, MIPS)
+      CISC : large, variable-length, complex instructions (x86)
+   ```
+
+   2. `Word size and data path width` — 8, 16, 32 or 64 bits. It decides how much data is processed per operation and how much memory can be addressed.
+
+   3. `Memory organisation`
+   ```
+      Von Neumann : one memory for both instructions and data
+      Harvard     : separate instruction and data memories, with separate buses
+      The memory hierarchy: registers, cache (L1/L2/L3), main memory, disk
+      Virtual memory, paging and segmentation
+   ```
+
+   4. `Addressing modes` — immediate, direct, indirect, register, indexed, base-plus-offset, relative.
+
+   5. `Instruction format` — the opcode field, the operand fields, and whether the length is fixed or variable.
+
+   6. `Register organisation` — the number of general-purpose registers, and whether the machine is accumulator-based, stack-based or register-register.
+
+   7. `Control unit design` — hardwired (fast, RISC) or microprogrammed (flexible, CISC).
+
+   8. `Parallelism`
+   ```
+      Pipelining, superscalar issue, out-of-order execution
+      SIMD vector instructions
+      Multicore and multithreading
+      Flynn's classification : SISD, SIMD, MISD, MIMD
+   ```
+
+   9. `I/O organisation` — programmed I/O, interrupt-driven I/O, DMA; memory-mapped or isolated I/O.
+
+   10. `Performance metrics`
+   ```
+      CPU time = Instruction count x CPI x Clock cycle time
+      MIPS, MFLOPS, SPEC benchmark scores
+      Amdahl's law : the speed-up is limited by the serial fraction
+   ```
+
+   11. `Cost, power and reliability` — performance per watt matters as much as raw speed in mobile and data-centre design.
+
+   The five stages of the DLX pipeline
+
+   DLX is the teaching architecture of Hennessy and Patterson, and its five-stage pipeline is the classic model. MIPS uses the same arrangement.
+   ```
+      1. IF  - Instruction Fetch
+           Fetch the instruction from memory using the PC, and increment the PC.
+
+      2. ID  - Instruction Decode / Register Fetch
+           Decode the opcode and read the source operands from the register
+           file. The branch target address is also computed here.
+
+      3. EX  - Execute / Effective Address Calculation
+           The ALU performs the arithmetic or logic operation, or calculates
+           the memory address for a load or store, or evaluates the branch
+           condition.
+
+      4. MEM - Memory Access
+           Read from or write to data memory. Only LOAD and STORE use this
+           stage; other instructions pass through it idle.
+
+      5. WB  - Write Back
+           Write the result into the destination register.
+   ```
+   ```
+      I1 | IF | ID | EX |MEM | WB |
+      I2      | IF | ID | EX |MEM | WB |
+      I3           | IF | ID | EX |MEM | WB |
+      I4                | IF | ID | EX |MEM | WB |
+      I5                     | IF | ID | EX |MEM | WB |
+                             ^ from here one instruction completes per cycle
+   ```
+   - Between the stages sit the `pipeline registers` IF/ID, ID/EX, EX/MEM and MEM/WB, which carry the instruction's data and control signals forward.
+   - Ideal speed-up is 5; the hazards that reduce it are `structural`, `data` (solved by forwarding, or a stall after a load) and `control` (solved by branch prediction).
 
 7. **“Pentium processor has a superscalar architecture.” Explain the meaning of statement.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
 
+   Answer: A `superscalar` processor can `issue and execute more than one instruction in the same clock cycle`, because it contains several parallel execution units. A plain pipelined processor completes at most one instruction per cycle; a superscalar one completes several.
+
+   What the statement means for the Pentium
+   - The original Pentium (1993) had `two integer pipelines`, called the `U pipe` and the `V pipe`, plus a separate floating-point unit.
+   ```
+      U pipe : the main pipeline - can execute any instruction
+      V pipe : the secondary pipeline - can execute only simple instructions
+   ```
+   - When two consecutive instructions were compatible, the Pentium `paired` them and executed both in one cycle. This is why it was roughly twice as fast as the 486 at the same clock speed.
+   ```
+      Scalar pipeline (486)          Superscalar (Pentium)
+
+      I1 | F | D | E | W |           I1 | F | D | E | W |     (U pipe)
+      I2     | F | D | E | W |       I2 | F | D | E | W |     (V pipe)
+      I3         | F | D | E | W |   I3     | F | D | E | W |
+                                     I4     | F | D | E | W |
+
+      1 instruction per cycle        2 instructions per cycle
+   ```
+
+   Conditions for pairing on the Pentium
+   ```
+      Both instructions must be SIMPLE (single-cycle, no microcode)
+      Neither may be a jump, except as the second of the pair
+      There must be NO DATA DEPENDENCY between them
+      Neither may contain a prefix, except a few permitted cases
+   ```
+   - If the pair could not be issued together, the second instruction simply waited a cycle, so the processor never ran slower than a scalar one.
+
+   Terms that go with it
+   ```
+      Scalar      : at most 1 instruction issued per cycle
+      Superscalar : more than 1 instruction issued per cycle - SPATIAL parallelism
+      Superpipelined : very deep pipeline, higher clock - TEMPORAL parallelism
+      IPC (Instructions Per Cycle) : the measure of superscalar effectiveness
+   ```
+   ```
+      Performance = clock frequency x IPC x number of cores
+   ```
+   - Superscalar design attacks the `IPC` term, while raising the clock attacks the frequency term. Since clock speeds stopped rising around 2005, IPC and core count are where all modern gains come from.
+
+   What a superscalar processor needs
+   - `Multiple execution units` — several ALUs, an FPU, load and store units.
+   - `Wide instruction fetch and decode`, to supply several instructions per cycle.
+   - `Dependency checking hardware`, to find which instructions may safely go together.
+   - `Register renaming`, to remove false (WAR and WAW) dependencies.
+   - `Out-of-order execution and a reorder buffer` in later designs, so an instruction waiting for data does not block the ones behind it.
+   - `Branch prediction`, since a mispredicted branch now wastes several instructions per cycle rather than one.
+
+   Limits
+   - `Instruction-level parallelism` in ordinary code is limited — typically 4 to 8 independent instructions can be found, and beyond that the extra units sit idle.
+   - The dependency-checking logic grows roughly as the square of the issue width, so it becomes expensive and power-hungry.
+   - This diminishing return is precisely why the industry moved from ever-wider single cores to `multicore` processors.
+
+   - Summary of the statement: saying the Pentium is superscalar means it has `more than one instruction pipeline` and can start two instructions in the same cycle, so its instructions-per-cycle can exceed 1 — the first x86 processor able to do so.
+
 8. **Using pipeline calculate the value of fetch and execution cycle.** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
 
+   Answer: The question gives no specific timings, so the standard pipeline formulas are derived and applied to a worked example. The method is what carries the marks.
+
+   Non-pipelined (sequential) execution
+   - Each instruction completes its fetch and execution before the next begins.
+   ```
+      Total time = n x (t(fetch) + t(execute))
+   ```
+   ```
+      Example : n = 4 instructions , fetch = 1 cycle , execute = 1 cycle
+
+      Total = 4 x (1 + 1) = 8 cycles
+
+      I1 | F | E |
+      I2         | F | E |
+      I3                 | F | E |
+      I4                         | F | E |
+   ```
+
+   Pipelined execution (2 stages: fetch and execute)
+   - While one instruction is executing, the next is being fetched.
+   ```
+      Total time = (k + n - 1) x t(cycle)
+
+      where k = number of stages , n = number of instructions
+   ```
+   ```
+      Example : k = 2 , n = 4
+
+      Total = (2 + 4 - 1) = 5 cycles
+
+      I1 | F | E |
+      I2     | F | E |
+      I3         | F | E |
+      I4             | F | E |
+      cycle: 1   2   3   4   5
+   ```
+
+   Speed-up
+   ```
+      Speed-up = time without pipeline / time with pipeline
+
+               = (n x k) / (k + n - 1)
+
+      For this example = (4 x 2) / (2 + 4 - 1) = 8 / 5 = 1.6 times
+   ```
+   ```
+      As n becomes large, speed-up -> k (the number of stages)
+   ```
+
+   The same with a five-stage pipeline
+   ```
+      Stages : IF , ID , EX , MEM , WB
+      n = 1000 instructions
+
+      Without pipeline : 1000 x 5 = 5,000 cycles
+      With pipeline    : 5 + 1000 - 1 = 1,004 cycles
+
+      Speed-up = 5000 / 1004 = 4.98 , close to the ideal 5
+   ```
+
+   Effect of unequal stage times
+   ```
+      Clock period = the SLOWEST stage + pipeline register delay
+
+      IF 200 ps , ID 100 ps , EX 200 ps , MEM 200 ps , WB 100 ps
+      -> clock period = 200 ps
+
+      Non-pipelined instruction time = 800 ps
+      Pipelined throughput           = one instruction per 200 ps
+   ```
+
+   Effect of stalls, which reduce the ideal figure
+   ```
+      Total cycles = k + n - 1 + (number of stall cycles)
+
+      Effective CPI = 1 + stall cycles per instruction
+
+      Speed-up = k / (1 + stalls per instruction)
+   ```
+   ```
+      Example : 5 stages , 20 % of instructions cause a 1-cycle stall
+
+      Effective CPI = 1 + 0.20 = 1.2
+      Speed-up = 5 / 1.2 = 4.17  instead of the ideal 5
+   ```
+
+   Formulas to remember
+   ```
+      Non-pipelined time = n x k x t
+      Pipelined time     = (k + n - 1) x t
+      Speed-up           = (n x k) / (k + n - 1)
+      Efficiency         = speed-up / k
+      Throughput         = n / [(k + n - 1) x t]
+   ```
+   - Points worth stating: pipelining improves `throughput`, not the latency of any single instruction. The ideal speed-up equals the number of stages, and it is approached only when `n >> k` and there are no hazards. <!-- verify -->
+
 9. **What is pipelining? What is opcode and operand in machine code? Explain snooping cache.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1277 (ET: N/A)]*
+
+   Answer: What pipelining is
+   - `Pipelining` divides the execution of an instruction into stages, and overlaps consecutive instructions so that a different instruction occupies each stage at the same time. One instruction then `completes` every clock cycle, even though each takes several cycles to pass through.
+   ```
+      Five-stage pipeline : IF -> ID -> EX -> MEM -> WB
+
+      I1 | IF | ID | EX |MEM | WB |
+      I2      | IF | ID | EX |MEM | WB |
+      I3           | IF | ID | EX |MEM | WB |
+                        ^ one instruction finishes every cycle from here
+   ```
+   ```
+      Clock period    = the slowest STAGE, not the whole instruction
+      Speed-up        = (n x k) / (k + n - 1)  ->  approaches k for large n
+   ```
+   - It improves `throughput`, not the latency of any single instruction. Its limits are the three hazards: `structural`, `data` (fixed by forwarding, else a stall) and `control` (fixed by branch prediction).
+
+   Opcode and operand in machine code
+   - A machine instruction is a binary pattern divided into fields. The two essential parts are the `opcode` and the `operand`.
+   ```
+      +----------------+---------------------------+
+      |     OPCODE     |         OPERAND(S)        |
+      +----------------+---------------------------+
+         what to do            what to do it to
+   ```
+
+   `Opcode` (operation code)
+   - The field that says `which operation` is to be performed — ADD, SUB, MOV, JMP, LOAD, STORE.
+   - The control unit decodes it and generates the corresponding control signals.
+   - Its width fixes how many distinct instructions exist: `n` bits allow 2^n opcodes.
+
+   `Operand`
+   - The field that says `what data` the operation works on. It may be:
+   ```
+      An immediate value  : the number itself is in the instruction
+      A register name     : the data is in that register
+      A memory address    : direct, indirect, indexed or base-plus-offset
+   ```
+   - An instruction may have zero, one, two or three operands.
+
+   Example
+   ```
+      Assembly :  ADD  R1, R2
+
+      Machine  :  0001 0001 0010
+                  ^^^^ ^^^^ ^^^^
+                  |    |    +-- operand 2 : register R2
+                  |    +------- operand 1 : register R1
+                  +------------ opcode    : ADD
+   ```
+   - The `addressing mode` field, where present, says how the operand field is to be interpreted.
+
+   Snooping cache
+   - `Cache snooping` is a hardware scheme that keeps the caches of several processors `coherent` — that is, it prevents two processors from holding different values for the same memory address.
+
+   The problem it solves
+   ```
+      CPU1 and CPU2 both cache the block containing X = 5.
+      CPU1 writes X = 10 into its own cache.
+      CPU2 still reads 5 from its cache  ->  INCOHERENT.
+   ```
+
+   How snooping works
+   - Every cache controller `watches` (snoops on) the shared bus and sees every transaction issued by every other cache. When a transaction affects a block it holds, it acts.
+   ```
+      WRITE-INVALIDATE  (the common scheme)
+         When a processor writes a block, it broadcasts an INVALIDATE on the bus.
+         Every other cache holding that block marks its copy INVALID.
+         Their next read misses and fetches the new value.
+
+      WRITE-UPDATE (write-broadcast)
+         The new value itself is broadcast and every other cache updates its
+         copy. Fewer misses, but far more bus traffic, so it is rarely used.
+   ```
+   - Implemented with the `MESI` protocol, in which each cache line carries one of four states:
+   ```
+      M (Modified)  : this cache has the only copy, and it has been changed
+      E (Exclusive) : this cache has the only copy, unchanged
+      S (Shared)    : several caches hold identical, unmodified copies
+      I (Invalid)   : the copy is stale and must not be used
+   ```
+
+   Advantages and limits
+   ```
+      Advantages : simple, fast, no central directory needed
+      Limits     : requires a BROADCAST medium, so it does not scale beyond
+                   a few dozen processors
+   ```
+   - For larger systems, `directory-based` coherence is used instead: a directory records which caches hold each block, so invalidations are sent only to those caches as point-to-point messages rather than broadcast to all.
 
 ## Assembly Language & Addressing Modes (8)
 
