@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 140 questions
+**Table of Contents** — 15 subtopics · 141 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -13,8 +13,8 @@
 | 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
 | 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
 | 10 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
-| 11 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-3) | 3 |
-| 12 | [Searching & Graph Algorithms](#searching--graph-algorithms-3) | 3 |
+| 11 | [Searching & Graph Algorithms](#searching--graph-algorithms-4) | 4 |
+| 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-3) | 3 |
 | 13 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
 | 14 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
 | 15 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
@@ -368,6 +368,15 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 4. **নিম্নে উল্লেখিত Graph- এর Adjacency Metrix এবং Adjacency List বের করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148-1149 (ET: BUET)]*
 
+## Searching & Graph Algorithms (4)
+1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
+
+2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
+
+3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
+
+4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
 ## Divide and Conquer & Matrix Multiplication (3)
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
@@ -375,13 +384,6 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 2. **(খ) Divide and Conquer technique কী? একটি সমস্যা বর্ণনা করুন যা Divide and Conquer Technique এ সমাধান করা যায়।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1089 (ET: N/A)]*
 
 3. **Write an algorithm for matrix multiplication.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
-
-## Searching & Graph Algorithms (3)
-1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
-
-2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
-
-3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
 
 ## Heap & Priority Queue (2)
 

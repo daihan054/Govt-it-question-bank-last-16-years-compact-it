@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 526 questions
+**Table of Contents** — 33 subtopics · 530 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-114) | 114 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-115) | 115 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-56) | 56 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-32) | 32 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-23) | 23 |
@@ -15,11 +15,11 @@
 | 10 | [Communication System & Transmission Modes](#communication-system--transmission-modes-17) | 17 |
 | 11 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-17) | 17 |
 | 12 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-16) | 16 |
-| 13 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
-| 14 | [Network Topologies](#network-topologies-14) | 14 |
-| 15 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
-| 16 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-13) | 13 |
-| 17 | [Network Address Translation (NAT)](#network-address-translation-nat-13) | 13 |
+| 13 | [Network Address Translation (NAT)](#network-address-translation-nat-16) | 16 |
+| 14 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
+| 15 | [Network Topologies](#network-topologies-14) | 14 |
+| 16 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
+| 17 | [Physical Layer & Optical Fiber (Attenuation & Power Budget)](#physical-layer--optical-fiber-attenuation--power-budget-13) | 13 |
 | 18 | [Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait-12) | 12 |
 | 19 | [Network Services (DHCP, NAT)](#network-services-dhcp-nat-11) | 11 |
 | 20 | [Digital Modulation & Signal Processing (BPSK, QPSK)](#digital-modulation--signal-processing-bpsk-qpsk-10) | 10 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (114)
+## Subnetting & IP Addressing (115)
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
 2. An organization has been assigned the IPv4 network address 192.168.1.0/24. As part of the network deployment, the network administrator is required to divide the address space into four equal-sized subnets to support different departments. Determine the Network Address, Subnet Mask (both CIDR and dotted-decimal notation). *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
@@ -315,6 +315,9 @@ ii) 211.10.15.4
 113. **Calculate the Network address, Broadcast address, Minimum host address, and Maximum host address of the following IP: 192.168.111.165/28** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
 114. **Write down the Private IP address ranges of Class A, Class B, and Class C.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 240]]*
+
+115. **A device in a network has an IP Address 172.16.128.120/25. Based on this information answer the following: [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 335]]*
+(i) What is the network address for this network? (ii) What is the maximum number of devices can be connected with this network?
 
 ## OSI & TCP/IP Reference Model (56)
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
@@ -962,6 +965,42 @@ The output of the program is ________.?
 
 16. **Consider a noiseless channel with a bandwidth of 3 KHz transmitting a signal with two signal levels. What is the maximum bit rate?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
 
+## Network Address Translation (NAT) (16)
+1. Network Address Translation (NAT) maps internal networks to the public internet.
+   * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
+   * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+2. **Connection between Public IP to Private IP is called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+3. **What is NAT? Explain with topological diagram.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 589 (ET: BUET)]*
+
+4. **Explain NAT? Differenc between IPv4 and IPv6.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 549 (ET: BIBM)]*
+
+5. **What is NAT? Write down the list of private IP address.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
+
+6. **Briefly explain Network Address Translation (NAT).** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
+
+7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 787 (ET: N/A)]*
+
+8. **(b) What is NAT? Mention its advantages.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
+
+9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
+
+10. **Why do we need NAT? Draw a topology diagram to explain NAT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
+
+11. **What is PAT? How does a network PAT work?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
+
+12. **What is NAT?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
+
+13. **Show the translation process of a NAT Box.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
+
+14. **Read the following passage and answer the questions that follow:** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329-330]]*
+“The acquisition of knowledge is one of the most essential things of life. Man is not only a being, he is a being with mind, conscience and intelligence. These faculties of his mind can be made to grow and develop only with patience and knowledge. Where the universe is concerned, knowledge means knowing man, nature and the universe and their relationship. Man is born ignorant of the knowledge of the world. But he can attain it through learning and education. If man is capable of it in the future, he must attain the truth from man himself. Will he use his power cleverly? Philosophy should make it known that the truth can be revealed only when the tyranny of prejudice and blind traditions is broken away. And if philosophy can help us feel the value of true things, then it can bring light into a world of darkness.” Questions: (2 \\times 5 = 10) (a) Why is the acquisition of knowledge essential? (b) How can knowledge grow? (c) Who is the being with mind, conscience and intelligence? (d) Where does the future danger to man come from? (e) How can philosophy bring light into a world of darkness?
+
+15. **জাতীয় ক্রীড়া পরিষদ (National Sports Council) কী? এর দায়িত্ব কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+16. **NATO কী? এর সদস্য রাষ্ট্রসমূহের মধ্যে বর্তমান বিশ্ব প্রেক্ষাপটে কী ধরনের বিভক্তি লক্ষ্য করা যায়?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
 ## Error Detection & Data Communication (CRC, Throughput) (14)
 
 1. (a) CMY color model এর উপাদানগুলো লিখুন (CMY color model এর কাজ কী?)
@@ -1086,36 +1125,6 @@ The output of the program is ________.?
 12. **What is 3dB?** *[BTRC Assistant Director (Technical) 2019 compact it 1145-1146 (ET: N/A)]*
 
 13. **From single mode fiber and multimode fiber which one is suitable for LAN?** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
-
-## Network Address Translation (NAT) (13)
-
-1. Network Address Translation (NAT) maps internal networks to the public internet.
-   * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
-   * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
-
-2. **Connection between Public IP to Private IP is called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
-
-3. **What is NAT? Explain with topological diagram.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 589 (ET: BUET)]*
-
-4. **Explain NAT? Differenc between IPv4 and IPv6.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 549 (ET: BIBM)]*
-
-5. **What is NAT? Write down the list of private IP address.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
-
-6. **Briefly explain Network Address Translation (NAT).** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
-
-7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 787 (ET: N/A)]*
-
-8. **(b) What is NAT? Mention its advantages.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
-
-9. **(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
-
-10. **Why do we need NAT? Draw a topology diagram to explain NAT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
-
-11. **What is PAT? How does a network PAT work?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
-
-12. **What is NAT?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
-
-13. **Show the translation process of a NAT Box.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
 ## Flow Control & Data Link Layer (Stop-and-Wait) (12)
 

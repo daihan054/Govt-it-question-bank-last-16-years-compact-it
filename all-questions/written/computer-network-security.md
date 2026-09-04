@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 191 questions
+**Table of Contents** — 15 subtopics · 192 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -12,7 +12,7 @@
 | 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
 | 8 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
 | 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-8) | 8 |
-| 10 | [Cryptography & Network Security](#cryptography--network-security-7) | 7 |
+| 10 | [Cryptography & Network Security](#cryptography--network-security-8) | 8 |
 | 11 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
 | 12 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
 | 13 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
@@ -391,7 +391,7 @@
 
 8. **What is non-repudiation in network security? Give a proper example.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
-## Cryptography & Network Security (7)
+## Cryptography & Network Security (8)
 1. **(a) What is 2-factor authentication? Describe it with an example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65]]*
 
 2. **Focus Witting: Banking Security (English) [Discuss the key security measures used in modern banking applications to protect customer data and prevent fraud.]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
@@ -405,6 +405,8 @@
 6. **What is a spoofed packet, and how can it be used in network attacks?** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 325]]*
 
 7. **List and briefly describe five principal functions of an operating system.** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 325]]*
+
+8. **(a) What is authentication? With example write a short note on “Two factor authentication”. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 335]]*
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN) (6)
 

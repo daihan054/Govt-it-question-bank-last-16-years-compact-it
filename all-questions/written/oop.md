@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 119 questions
+**Table of Contents** — 10 subtopics · 121 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -10,9 +10,9 @@
 | 5 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
 | 6 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 7 | [Exception Handling](#exception-handling-4) | 4 |
-| 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
-| 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
-| 10 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-2) | 2 |
+| 8 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-4) | 4 |
+| 9 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
+| 10 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
 
 <!-- TOC END -->
 
@@ -473,6 +473,25 @@ public class WhatTheOutput{
 
 4. **Write the difference between throw and throws using Exception handling?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1172-1173 (ET: N/A)]*
 
+## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (4)
+1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
+class myclass \{
+
+    int num;
+
+public:
+
+    myclass(int i) \{ num=i; \}
+
+\};
+
+2. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*
+
+3. **Write an essay on the following topic using the hints given below: Objectives of Education (15 \\times 1 = 15)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
+
+4. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
+
 ## C++ OOP Concepts & Friend Functions (3)
 
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1355 (ET: N/A)]*
@@ -493,17 +512,3 @@ public:
 1. **Class/Interface implementation of code?** *[BCIC Assistant Programmer 14.02.2025 compact it 1329 (ET: BUET)]*
 
 2. **An Abstract class Player with two sub classes Bowler and Batsman, Abstract class has one abstract method average, also have constructor and a string function that display name bowler or batsman. Batsman class implement abstract function average and display result, Batsman class have run and number match data. Now write a Java Program and show Batsman average run.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
-
-## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (2)
-1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
-class myclass \{
-
-    int num;
-
-public:
-
-    myclass(int i) \{ num=i; \}
-
-\};
-
-2. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*

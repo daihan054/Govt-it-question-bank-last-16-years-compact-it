@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 55 questions
+**Table of Contents** — 12 subtopics · 61 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-12) | 12 |
+| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-18) | 18 |
 | 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
 | 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
 | 4 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
@@ -20,7 +20,7 @@
 
 ---
 
-## Artificial Intelligence & Machine Learning (12)
+## Artificial Intelligence & Machine Learning (18)
 1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
 (i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
 
@@ -45,6 +45,21 @@
 11. **What is trigger, explain with example. Why trigger needed?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 322]]*
 
 12. **The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days For example, if the given array is \{100, 180, 260, 310, 40, 535, 695\}, the maximum profit can be earned by buying on day 0, and selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 323]]*
+
+13. **Children's addiction to smart mobile phones has become a concern in recent years. So write a letter to the editor of an English daily expressing your views on the responsible use of smart phones. (5 \\times 1 = 5)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+
+14. **ক) Deep Blue কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+খ) Android কী? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
+
+গ) Vitamin D এর ঘাটতি মানবদেহে কী ধরনের প্রভাব ফেলে? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
+
+15. **(b) An organization is planning to deploy a wireless network. Explain the security considerations for setting up a secure Wi-Fi network including the authentication methods, encryption protocols and best practices to prevent unauthorized access. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331-332]]*
+
+16. **(b) What are the main security vulnerabilities commonly found in web applications? How would you address them? [3 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
+
+17. **(a) Explain the concept of social engineering. What are the common social engineering techniques? How can you define them? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
+
+18. **(c) What are the main components of flowchart? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
 
 ## Artificial Intelligence & Expert Systems (8)
 

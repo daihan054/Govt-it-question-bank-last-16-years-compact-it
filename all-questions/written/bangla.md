@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 127 questions
+**Table of Contents** — 6 subtopics · 136 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [বাংলা ব্যাকরণ ও সাহিত্য](#বাংলা-ব্যাকরণ-ও-সাহিত্য-61) | 61 |
-| 2 | [Focus Writing](#focus-writing-29) | 29 |
+| 2 | [Focus Writing](#focus-writing-38) | 38 |
 | 3 | [Translation](#translation-19) | 19 |
 | 4 | [পত্র লিখন](#পত্র-লিখন-7) | 7 |
 | 5 | [সারমর্ম / সারাংশ](#সারমর্ম--সারাংশ-6) | 6 |
@@ -156,7 +156,7 @@
 
 **৫ টা ম্যাথ, বাংলা ব্যাকরণ, অনুবাদ ইত্যাদি।** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 42]]*
 
-## Focus Writing (29)
+## Focus Writing (38)
 1. Focus Writing in Bangla: "বাংলাদেশের অর্থনীতিতে মোবাইল ব্যাংকিং: সম্ভাবনা, বাধা ও উত্তরণের উপায়" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
 2. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ বিষয়ক একটি প্রবন্ধ রচনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
@@ -214,6 +214,26 @@
 28. **রচনা লিখুনঃ “সমাজে নৈতিকতার ভূমিকা” (০৭)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 315]]*
 
 29. **“রোহিঙ্গাদের মায়ানমারে প্রত্যাবর্তন, বাংলাদেশের স্থিতিশীলতা ও নিরাপত্তার জন্য জরুরী” – এ বিষয়ে আপনার মতামত দিন। (03)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+
+30. **অনুধাবনমূলক প্রশ্নের উত্তরের ভিত্তিতে নিচের প্রশ্নগুলোর উত্তর দাও:** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 328]]*
+সহনশীলতা একটি মহৎ গুণ। ধৈর্য না থাকলে কোনো উন্নতি সম্ভব নয়। কাজ করতে গিয়ে যদি একবার ব্যর্থ হও তবে ত্যাগ করো না। বারবার চেষ্টা করতে থাকো। একদিন সফলতা আসবেই। জীবনের প্রতিটি ক্ষেত্রে ধৈর্যের প্রয়োজন। উপরের অনুচ্ছেদটি পড়ে নিচের প্রশ্নগুলোর উত্তর দাও: (ক) সহনশীলতা কী? (খ) কাজ করতে গিয়ে একবার ব্যর্থ হলে কী করব? (গ) জীবনের কোন ক্ষেত্রে ধৈর্যের প্রয়োজন? (ঘ) অনুচ্ছেদটির সারাংশ লেখ।
+
+31. **নিচের কবিতাংশটি পড়ে প্রশ্নগুলোর উত্তর দাও:** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 328-329]]*
+মানুষেরই মতো মানুষ যদি না হয় তবে সে পশুর চেয়েও নিচে নেমে যায়। এই জগতে কিছু মানুষ আছে দুঃখীদের দুঃখে দুঃখ পায় না। আছে কিছু মানুষ, মানুষকে ঠকিয়ে সুখের স্বপ্নে বিভোর হয়ে যায়। (খ) কী রকম মানুষ পশুর চেয়েও অধম? (গ) কিছু মানুষ দুঃখীদের দুঃখে কেন দুঃখ পায় না? (ঘ) অনুচ্ছেদটির সারাংশ লেখ।
+
+32. **বাংলাদেশের রপ্তানিযোগ্য পণ্যের নাম লেখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+33. **বাংলাদেশের কয়টি বিভাগ ও কয়টি জেলা রয়েছে?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+34. **কোন তিনজন ব্যক্তি বাংলাদেশের জাতীয় সংগীত ও জাতীয় পতাকা নির্মাণে ভূমিকা রেখেছেন?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+35. **বাংলাদেশ কবে এবং কোথায় বিশ্বকাপ ক্রিকেটে প্রথমবার অংশগ্রহণ করে এবং সেই খেলায় প্রতিপক্ষ কোন দেশ ছিল?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+36. **মুক্তিযুদ্ধকালীন বাংলাদেশের কোন দুটি যুদ্ধ গুরুত্বপূর্ণ এবং ঐতিহাসিক?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+37. **বাংলাদেশের জাতীয় সংসদে কয়টি আসন রয়েছে এবং সংরক্ষিত মহিলা আসনের সংখ্যা কত?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+38. **বাংলাদেশে বর্তমানে জাতীয় সংসদের বিরোধীদল কারা? তারা সংসদে কতটি আসন পেয়েছে?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
 
 ## Translation (19)
 

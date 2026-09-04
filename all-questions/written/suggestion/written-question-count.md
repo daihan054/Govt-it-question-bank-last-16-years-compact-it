@@ -1,16 +1,16 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3281** questions.
+Sorted by count, highest first. Total **3312** questions.
 
 ## IT questions
 
-Total: **2730** questions.
+Total: **2752** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **526** |
-| | Subnetting & IP Addressing | 114 |
+| **Computer Networks** | **— all subcategories —** | **530** |
+| | Subnetting & IP Addressing | 115 |
 | | OSI & TCP/IP Reference Model | 56 |
 | | Networking Fundamentals & Terminology | 32 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 23 |
@@ -22,11 +22,11 @@ Total: **2730** questions.
 | | Communication System & Transmission Modes | 17 |
 | | Physical Layer & Transmission Media (Cables & Wiring) | 17 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
+| | Network Address Translation (NAT) | 16 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
 | | Network Topologies | 14 |
 | | IPv6 Addressing | 13 |
 | | Physical Layer & Optical Fiber (Attenuation & Power Budget) | 13 |
-| | Network Address Translation (NAT) | 13 |
 | | Flow Control & Data Link Layer (Stop-and-Wait) | 12 |
 | | Network Services (DHCP, NAT) | 11 |
 | | Digital Modulation & Signal Processing (BPSK, QPSK) | 10 |
@@ -63,6 +63,7 @@ Total: **2730** questions.
 | | Database Connectivity (JDBC) | 2 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
+| | Keys, Constraints & Database Objects | 0 |
 | **C Programming** | **— all subcategories —** | **276** |
 | | Basic Programs & Control Statements | 117 |
 | | Output Tracing & Control Flow | 57 |
@@ -88,7 +89,7 @@ Total: **2730** questions.
 | | Process Synchronization & Concurrency | 4 |
 | | OS Concepts & Process Management | 2 |
 | | Deadlock & Concurrency Control | 0 |
-| **Computer & Network Security** | **— all subcategories —** | **191** |
+| **Computer & Network Security** | **— all subcategories —** | **192** |
 | | Social Engineering & Cyber Attacks | 32 |
 | | Cryptography | 31 |
 | | Firewalls & Network Defense | 20 |
@@ -98,14 +99,14 @@ Total: **2730** questions.
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
 | | Cyber Crime & Security | 10 |
 | | Security Principles (CIA Triad) | 8 |
-| | Cryptography & Network Security | 7 |
+| | Cryptography & Network Security | 8 |
 | | VPN & Tunneling Protocols (IPsec, SSL VPN) | 6 |
 | | Critical Information Infrastructure (CII) & Cyber Governance | 3 |
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **182** |
-| | Computer Fundamentals & Acronyms | 88 |
+| **Computer Fundamentals** | **— all subcategories —** | **186** |
+| | Computer Fundamentals & Acronyms | 92 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
@@ -115,9 +116,9 @@ Total: **2730** questions.
 | | Quantum Computing & Emerging Technologies | 3 |
 | | Digital Banking & Financial Inclusion | 2 |
 | | User Interfaces (CLI vs GUI) | 1 |
-| **Software Engineering** | **— all subcategories —** | **153** |
-| | SDLC Phases & Models | 46 |
-| | Software Testing & Evaluation | 40 |
+| **Software Engineering** | **— all subcategories —** | **155** |
+| | SDLC Phases & Models | 47 |
+| | Software Testing & Evaluation | 41 |
 | | UML Diagrams (Class, Use Case, Sequence) | 14 |
 | | Software Architecture & Design Patterns (MVC) | 13 |
 | | Software Requirements Engineering | 10 |
@@ -130,6 +131,7 @@ Total: **2730** questions.
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
+| | Software Design, Architecture & Patterns | 0 |
 | **Digital Logic Design (DLD)** | **— all subcategories —** | **152** |
 | | Logic Gates & Universal Gates | 34 |
 | | Number Systems & Base Conversions | 26 |
@@ -141,7 +143,7 @@ Total: **2730** questions.
 | | 2's Complement & Binary Arithmetic | 4 |
 | | Number Systems & Codes | 2 |
 | | Finite State Machines (FSM) | 1 |
-| **Algorithm** | **— all subcategories —** | **140** |
+| **Algorithm** | **— all subcategories —** | **141** |
 | | Sorting Algorithms & Complexity | 39 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 15 |
@@ -152,8 +154,8 @@ Total: **2730** questions.
 | | Greedy Algorithms (Fractional Knapsack) | 6 |
 | | Dynamic Programming | 5 |
 | | Graph Representation (Adjacency Matrix vs List) | 4 |
+| | Searching & Graph Algorithms | 4 |
 | | Divide and Conquer & Matrix Multiplication | 3 |
-| | Searching & Graph Algorithms | 3 |
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
 | | NP-Completeness & Complexity Reduction | 1 |
@@ -169,7 +171,7 @@ Total: **2730** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **119** |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **121** |
 | | OOP Concepts (Inheritance & Polymorphism) | 54 |
 | | Java Programming & Methods | 18 |
 | | Class Design & Object-Oriented Modeling | 11 |
@@ -177,9 +179,9 @@ Total: **2730** questions.
 | | Constructors & Destructors | 8 |
 | | Encapsulation & Access Modifiers | 7 |
 | | Exception Handling | 4 |
+| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 4 |
 | | C++ OOP Concepts & Friend Functions | 3 |
 | | Interfaces & Abstract Classes | 2 |
-| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 2 |
 | **Data Structure** | **— all subcategories —** | **100** |
 | | Tree | 27 |
 | | Stack | 20 |
@@ -190,6 +192,7 @@ Total: **2730** questions.
 | | Queue | 6 |
 | | Data Structure Fundamentals | 6 |
 | | Tree Data Structures (BST, AVL, B-Tree, Heaps) | 2 |
+| | Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) | 0 |
 | **Web Technology** | **— all subcategories —** | **78** |
 | | HTML & Web Fundamentals | 31 |
 | | JavaScript & jQuery (DOM & Validation) | 16 |
@@ -198,8 +201,8 @@ Total: **2730** questions.
 | | Full Stack & Backend Web Development | 7 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
-| **AI & Machine Learning** | **— all subcategories —** | **55** |
-| | Artificial Intelligence & Machine Learning | 12 |
+| **AI & Machine Learning** | **— all subcategories —** | **61** |
+| | Artificial Intelligence & Machine Learning | 18 |
 | | Artificial Intelligence & Expert Systems | 8 |
 | | Deep Learning & Neural Networks (ANN, CNN, RNN) | 8 |
 | | Machine Learning Paradigms (Supervised vs Unsupervised) | 6 |
@@ -238,9 +241,9 @@ Total: **2730** questions.
 | | Lexical Analysis & Compiler Phases | 5 |
 | | Linker & Loader | 1 |
 | | Compiler Design & Theory of Computation | 0 |
-| **Programming Languages** | **— all subcategories —** | **10** |
+| **Programming Languages** | **— all subcategories —** | **12** |
 | | Visual Basic & .NET | 6 |
-| | Core Programming Languages | 4 |
+| | Core Programming Languages | 6 |
 | **Image Processing** | **— all subcategories —** | **7** |
 | | Computer Graphics (Vector & Raster) | 3 |
 | | Color Models | 1 |
@@ -252,7 +255,7 @@ Total: **2730** questions.
 
 ## General Questions
 
-Total: **551** questions.
+Total: **560** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -261,9 +264,9 @@ Total: **551** questions.
 | | International Affairs | 70 |
 | | Everyday Science & Environment | 22 |
 | | Banking & ICT Abbreviations | 8 |
-| **Bangla** | **— all subcategories —** | **127** |
+| **Bangla** | **— all subcategories —** | **136** |
 | | বাংলা ব্যাকরণ ও সাহিত্য | 61 |
-| | Focus Writing | 29 |
+| | Focus Writing | 38 |
 | | Translation | 19 |
 | | পত্র লিখন | 7 |
 | | সারমর্ম / সারাংশ | 6 |

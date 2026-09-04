@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 301 questions
+**Table of Contents** — 20 subtopics · 301 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -22,6 +22,7 @@
 | 17 | [Database Connectivity (JDBC)](#database-connectivity-jdbc-2) | 2 |
 | 18 | [Relational Keys (Candidate, Super, Primary, Foreign Key)](#relational-keys-candidate-super-primary-foreign-key-1) | 1 |
 | 19 | [Indexing in DBMS](#indexing-in-dbms-1) | 1 |
+| 20 | [Keys, Constraints & Database Objects](#keys-constraints--database-objects-0) | 0 |
 
 <!-- TOC END -->
 
@@ -919,3 +920,6 @@ employee (employee_name, street, city) works (employee_name, company_name, salar
 ## Indexing in DBMS (1)
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+## Keys, Constraints & Database Objects (0)
+**(d) What are the purpose of Primary Key and Foreign Key in context with ‘Relational Database’? Write in short with examples. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334-335]]*

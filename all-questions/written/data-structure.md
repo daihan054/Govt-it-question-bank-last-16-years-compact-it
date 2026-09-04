@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 100 questions
+**Table of Contents** — 10 subtopics · 100 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -12,6 +12,7 @@
 | 7 | [Queue](#queue-6) | 6 |
 | 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
 | 9 | [Tree Data Structures (BST, AVL, B-Tree, Heaps)](#tree-data-structures-bst-avl-b-tree-heaps-2) | 2 |
+| 10 | [Linear Data Structures (Arrays, Stacks, Queues, Linked Lists)](#linear-data-structures-arrays-stacks-queues-linked-lists-0) | 0 |
 
 <!-- TOC END -->
 
@@ -246,3 +247,6 @@ Output: Not Balanced
 1. **Explain Abstraction with a simple code example.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 228-229]]*
 
 2. **Compare an Interface and an Abstract Class in OOP. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
+
+## Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) (0)
+**(a) Compare Stack and Queue in context with data structure. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333-334]]*

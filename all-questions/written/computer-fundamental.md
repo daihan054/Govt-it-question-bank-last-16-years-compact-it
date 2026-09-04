@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 182 questions
+**Table of Contents** — 10 subtopics · 186 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-88) | 88 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-92) | 92 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
 | 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (88)
+## Computer Fundamentals & Acronyms (92)
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -230,6 +230,14 @@
 87. **রহিমের মাসিক বেতন ১৬ শতাংশ বৃদ্ধি পেলে তিনি প্রতি মাসে ৮১২ টাকা অতিরিক্ত পেতে পারেন। যদি তার মাসিক বেতন ১০ শতাংশ বৃদ্ধি পেত, তিনি প্রতি মাসে কত টাকা উপার্জন করতেন? (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
 
 88. **(a+b)^2 = 36 এবং (a-b)^2 = 16 হলে ab এবং (a^2+b^2)-এর মান নির্ণয় কর। (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+
+89. **E-7 কী? এর সদস্য দেশ কয়টি?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+90. **(a) Write a short comparative note on “Static web page” and “Dynamic web page”. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+91. **(b) What is malware? State in short with some examples? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
+
+92. **(c) You have been given the responsibility of identifying software requirements from a customer who tells you he is too busy to meet with you. What should you do? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 336]]*
 
 ## ICT in Society & Governance (24)
 
