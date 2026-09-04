@@ -19538,17 +19538,481 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **What are the different types of join in SQL?** *[DESCO Assistant Engineer 20.05.2023 compact it 580 (ET: DESCO)]*
 
+   Answer: A `JOIN` combines rows from two or more tables based on a related column between them, usually a foreign key.
+
+   Sample tables
+   ```
+   Employee                       Department
+   +--------+-------+---------+   +---------+--------+
+   | emp_id | name  | dept_id |   | dept_id | name   |
+   +--------+-------+---------+   +---------+--------+
+   | 101    | Rahim | 10      |   | 10      | CSE    |
+   | 102    | Karim | 20      |   | 20      | EEE    |
+   | 103    | Jamal | NULL    |   | 30      | ME     |  <- no employee
+   +--------+-------+---------+   +---------+--------+
+   ```
+
+   1. INNER JOIN
+   - Returns only the rows that `match on both sides`. Unmatched rows from either table are dropped.
+   ```sql
+   SELECT e.name, d.name
+   FROM Employee e INNER JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   ```
+   Rahim | CSE
+   Karim | EEE          -- Jamal and ME are excluded
+   ```
+
+   2. LEFT OUTER JOIN
+   - All rows from the `left` table, plus the matching rows from the right. Where there is no match, the right columns come back `NULL`.
+   ```
+   Rahim | CSE
+   Karim | EEE
+   Jamal | NULL         -- kept, though he has no department
+   ```
+
+   3. RIGHT OUTER JOIN
+   - All rows from the `right` table, plus matches from the left; unmatched left columns are `NULL`.
+   ```
+   Rahim | CSE
+   Karim | EEE
+   NULL  | ME           -- kept, though nobody works in ME
+   ```
+
+   4. FULL OUTER JOIN
+   - All rows from `both` tables. Unmatched rows on either side get NULLs.
+   ```
+   Rahim | CSE
+   Karim | EEE
+   Jamal | NULL
+   NULL  | ME
+   ```
+
+   5. CROSS JOIN
+   - Every row of the first table paired with every row of the second — the `Cartesian product`. 3 rows × 3 rows = 9 rows. No `ON` clause. Written by accident when the join condition is forgotten.
+
+   6. SELF JOIN
+   - A table joined to itself, using two aliases. Used for hierarchies.
+   ```sql
+   SELECT e.name AS employee, m.name AS manager
+   FROM Employee e JOIN Employee m ON e.manager_id = m.emp_id;
+   ```
+
+   7. NATURAL JOIN
+   - Joins automatically on `all columns with the same name`. Short to write but risky, because adding a column later can silently change the result.
+
+   ```
+      INNER          LEFT           RIGHT          FULL
+      +---+---+     +===+---+     +---+===+     +===+===+
+      | A |*B*|     |*A*|*B*|     | A |*B*|     |*A*|*B*|
+      +---+---+     +===+---+     +---+===+     +===+===+
+      only matches  all of A      all of B      all of both
+   ```
+
+   | Join | Returns |
+   |---|---|
+   | INNER | Only matching rows |
+   | LEFT OUTER | All left rows + matches |
+   | RIGHT OUTER | All right rows + matches |
+   | FULL OUTER | All rows from both sides |
+   | CROSS | Every combination |
+   | SELF | A table joined to itself |
+
+   - MySQL has no `FULL OUTER JOIN`; it is written as a `LEFT JOIN UNION RIGHT JOIN`.
+
 2. **Left joning and inner joining of a table.** *[BTCL Assistant Manager (Technical) 2023 compact it 594 (ET: BUET)]*
+
+   Answer: Both combine rows from two tables using a matching column. The difference is what happens to rows that have `no match`.
+
+   Sample tables
+   ```
+   Employee                       Department
+   +--------+-------+---------+   +---------+-----------+
+   | emp_id | name  | dept_id |   | dept_id | dept_name |
+   +--------+-------+---------+   +---------+-----------+
+   | 101    | Rahim | 10      |   | 10      | CSE       |
+   | 102    | Karim | 20      |   | 20      | EEE       |
+   | 103    | Jamal | NULL    |   | 30      | ME        |
+   +--------+-------+---------+   +---------+-----------+
+   ```
+
+   INNER JOIN
+   - Returns only the rows where the condition matches on `both` sides. Any row without a partner is dropped.
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e
+   INNER  JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   ```
+   name  | dept_name
+   ------+----------
+   Rahim | CSE
+   Karim | EEE
+
+   Jamal is dropped (no department), ME is dropped (no employee)
+   ```
+
+   LEFT JOIN (LEFT OUTER JOIN)
+   - Returns `every row of the left table`, and the matching data from the right table where it exists. Where there is no match, the right-hand columns come back as `NULL`.
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e
+   LEFT   JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   ```
+   name  | dept_name
+   ------+----------
+   Rahim | CSE
+   Karim | EEE
+   Jamal | NULL        <- kept, with NULL
+
+   ME is still dropped, because it is on the right side
+   ```
+
+   ```
+      INNER JOIN                LEFT JOIN
+      +-----+-----+            +=====+-----+
+      |  A  |**B**|            |**A**|**B**|
+      +-----+-----+            +=====+-----+
+      only the overlap         all of A, plus the overlap
+   ```
+
+   The most useful pattern — finding what is missing
+   ```sql
+   -- employees who belong to no department
+   SELECT e.name
+   FROM   Employee e
+   LEFT   JOIN Department d ON e.dept_id = d.dept_id
+   WHERE  d.dept_id IS NULL;
+   ```
+
+   | Point | INNER JOIN | LEFT JOIN |
+   |---|---|---|
+   | Rows returned | Only matching rows | All left rows + matches |
+   | Unmatched left rows | Dropped | Kept, right columns NULL |
+   | Unmatched right rows | Dropped | Dropped |
+   | Row count | ≤ smaller side | ≥ number of left rows |
+   | NULLs in the result | None from the join | Yes, where no match |
+   | Used for | Rows that exist in both | Full list plus optional detail |
+
+   - A common mistake: putting a condition on the right table in the `WHERE` clause of a LEFT JOIN. `WHERE d.dept_name = 'CSE'` removes the NULL rows and silently turns the LEFT JOIN back into an INNER JOIN. Put such a condition in the `ON` clause instead.
 
 3. **Which join is used for including not matching all records with output?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+   Answer: The `FULL OUTER JOIN` includes all records from both tables, matching or not.
+
+   - It returns every row from the left table and every row from the right table. Where a row on one side has no partner on the other, the missing columns come back as `NULL`.
+
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e
+   FULL   OUTER JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+
+   ```
+   Employee                     Department
+   101 Rahim  dept 10           10  CSE
+   102 Karim  dept 20           20  EEE
+   103 Jamal  dept NULL         30  ME
+
+   Result:
+   name  | dept_name
+   ------+----------
+   Rahim | CSE          <- matched
+   Karim | EEE          <- matched
+   Jamal | NULL         <- unmatched left row, kept
+   NULL  | ME           <- unmatched right row, kept
+   ```
+
+   Related answers, depending on how the question is meant
+   - Non-matching rows from `one` side only: `LEFT OUTER JOIN` keeps all left rows, `RIGHT OUTER JOIN` keeps all right rows.
+   - `Only` the non-matching rows on both sides:
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e
+   FULL   OUTER JOIN Department d ON e.dept_id = d.dept_id
+   WHERE  e.dept_id IS NULL OR d.dept_id IS NULL;
+   ```
+
+   ```
+      FULL OUTER JOIN
+      +=======+=======+
+      |***A***|***B***|
+      +=======+=======+
+      everything from both sides
+   ```
+
+   Points to note
+   - Oracle, SQL Server and PostgreSQL support `FULL OUTER JOIN` directly. `OUTER` is optional in the keyword.
+   - MySQL does `not` have it, so it is written as the union of a left and a right join:
+   ```sql
+   SELECT e.name, d.dept_name FROM Employee e
+   LEFT JOIN Department d ON e.dept_id = d.dept_id
+   UNION
+   SELECT e.name, d.dept_name FROM Employee e
+   RIGHT JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   - It is used mainly for `reconciliation` — comparing two lists to find what exists in one but not the other, such as matching a bank's own transaction list against the card switch's list.
+
 4. **What is inner join? Explain with syntax and example.** *[Bangladesh Television Assistant Programmer 2019 compact it 1065 (ET: N/A)]*
+
+   Answer: An `INNER JOIN` combines rows from two tables and returns only the rows where the join condition is `true on both sides`. Any row without a partner in the other table is left out.
+
+   Syntax
+   ```sql
+   SELECT column_list
+   FROM   table1
+   INNER  JOIN table2
+   ON     table1.column = table2.column
+   [WHERE condition];
+   ```
+   - `INNER` is optional — writing `JOIN` alone means an inner join in every major DBMS.
+   - The older form puts the condition in the `WHERE` clause. It works, but the `ON` form is preferred because the join condition and the filter stay separate.
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e, Department d
+   WHERE  e.dept_id = d.dept_id;         -- old style, same result
+   ```
+
+   Example
+   ```
+   Employee                       Department
+   +--------+-------+---------+   +---------+-----------+
+   | emp_id | name  | dept_id |   | dept_id | dept_name |
+   +--------+-------+---------+   +---------+-----------+
+   | 101    | Rahim | 10      |   | 10      | CSE       |
+   | 102    | Karim | 20      |   | 20      | EEE       |
+   | 103    | Jamal | NULL    |   | 30      | ME        |
+   +--------+-------+---------+   +---------+-----------+
+   ```
+   ```sql
+   SELECT e.emp_id, e.name, d.dept_name
+   FROM   Employee e
+   INNER  JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   ```
+   emp_id | name  | dept_name
+   -------+-------+----------
+   101    | Rahim | CSE
+   102    | Karim | EEE
+
+   Jamal is excluded : his dept_id is NULL, so it matches nothing
+   ME is excluded    : no employee has dept_id 30
+   ```
+
+   With a filter and three tables
+   ```sql
+   SELECT e.name, d.dept_name, p.project_name
+   FROM   Employee e
+   JOIN   Department d ON e.dept_id = d.dept_id
+   JOIN   Project p    ON p.emp_id  = e.emp_id
+   WHERE  d.dept_name = 'CSE';
+   ```
+
+   ```
+      INNER JOIN
+      +-----+-----+
+      |  A  |**B**|      only the overlapping part is returned
+      +-----+-----+
+   ```
+
+   Points to note
+   - `NULL` never matches anything, not even another `NULL`, so a row with a NULL in the join column is always dropped by an inner join.
+   - The result has at most as many rows as the smaller side — unless the join column has duplicates, in which case the rows multiply.
+   - Forgetting the `ON` clause turns the query into a `CROSS JOIN` and returns every combination of rows.
+   - Use an inner join when only rows that exist in both tables are wanted; use a `LEFT JOIN` when the unmatched rows must be kept.
 
 5. **(b) Explain JOIN and INNER-JOIN procedure.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
+   Answer: JOIN
+   - A `JOIN` is the SQL operation that combines rows from two or more tables using a related column, normally a foreign key matching a primary key. It is what makes a normalized design usable: data is split across tables to avoid redundancy, and joins put it back together for a report.
+   - General form:
+   ```sql
+   SELECT column_list
+   FROM   table1
+   JOIN   table2 ON table1.column = table2.column;
+   ```
+   - Types: `INNER`, `LEFT OUTER`, `RIGHT OUTER`, `FULL OUTER`, `CROSS`, `SELF` and `NATURAL`.
+
+   INNER JOIN
+   - Returns only the rows where the condition is `true on both sides`. Unmatched rows on either side are dropped. Writing `JOIN` alone means `INNER JOIN`.
+
+   Procedure — how the DBMS actually performs it
+   ```
+   1. Read the join condition from the ON clause
+   2. Take a row from the outer (usually smaller) table
+   3. Find the rows in the inner table whose join column matches
+   4. Combine the matched pair into one output row
+   5. Discard rows with no match
+   6. Repeat for every row of the outer table
+   7. Apply the WHERE filter and the SELECT list to the result
+   ```
+   - The optimiser picks one of three physical methods:
+   ```
+   Nested loop join : for each outer row, look up the inner table
+                      -> good when the inner side has an index
+   Hash join        : build a hash table on the smaller side, probe with the
+                      larger -> best for large equi-joins
+   Sort-merge join  : sort both sides on the join key, then merge
+                      -> good when the data is already sorted
+   ```
+
+   Example
+   ```
+   Employee                       Department
+   +--------+-------+---------+   +---------+-----------+
+   | emp_id | name  | dept_id |   | dept_id | dept_name |
+   +--------+-------+---------+   +---------+-----------+
+   | 101    | Rahim | 10      |   | 10      | CSE       |
+   | 102    | Karim | 20      |   | 20      | EEE       |
+   | 103    | Jamal | NULL    |   | 30      | ME        |
+   +--------+-------+---------+   +---------+-----------+
+   ```
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e
+   INNER  JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   ```
+   Rahim | CSE
+   Karim | EEE          -- Jamal and ME are dropped
+   ```
+
+   Points to note
+   - `NULL` matches nothing, so a NULL in the join column always removes the row from an inner join.
+   - Index the join column — usually the foreign key — or the join falls back to scanning the inner table for every outer row.
+   - Forgetting the `ON` clause produces a `CROSS JOIN` and every combination of rows, which is the classic cause of a query that never finishes.
+
 6. **Define: (i) Left outer join (ii) Right outer join (iii) Full outer join (iv) One to many and (v) Many to many** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
 
+   Answer: (i) Left outer join
+   - Returns `all rows from the left table`, plus the matching rows from the right table. Where the right table has no match, its columns come back as `NULL`.
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e LEFT OUTER JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   ```
+   Rahim | CSE
+   Karim | EEE
+   Jamal | NULL      <- employee with no department, still shown
+   ```
+   - Used to list everything on one side with optional detail from the other, and to find missing rows with `WHERE d.dept_id IS NULL`.
+
+   (ii) Right outer join
+   - Returns `all rows from the right table`, plus the matching rows from the left. Unmatched left columns become `NULL`.
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e RIGHT OUTER JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   ```
+   Rahim | CSE
+   Karim | EEE
+   NULL  | ME        <- department with no employee, still shown
+   ```
+   - Any right join can be rewritten as a left join by swapping the tables, which is why it is used far less often.
+
+   (iii) Full outer join
+   - Returns `all rows from both tables`. Unmatched rows on either side get NULLs in the missing columns.
+   ```
+   Rahim | CSE
+   Karim | EEE
+   Jamal | NULL
+   NULL  | ME
+   ```
+   - Used for reconciliation — finding what exists in one list but not the other. MySQL has no `FULL OUTER JOIN`; it is written as `LEFT JOIN UNION RIGHT JOIN`.
+
+   ```
+      LEFT           RIGHT          FULL
+      +===+---+     +---+===+     +===+===+
+      |*A*|*B*|     | A |*B*|     |*A*|*B*|
+      +===+---+     +---+===+     +===+===+
+      all of A      all of B      all of both
+   ```
+
+   (iv) One to many (1:N)
+   - A `relationship` in which one row of table A can be linked to many rows of table B, while each row of B links to only one row of A.
+   - Example: one `Department` has many `Employee` rows; each employee works in one department.
+   - Implementation: put the `foreign key on the many side`.
+   ```sql
+   CREATE TABLE Employee (
+     emp_id  INT PRIMARY KEY,
+     dept_id INT REFERENCES Department(dept_id)
+   );
+   ```
+   - This is the most common relationship in real databases.
+
+   (v) Many to many (M:N)
+   - Many rows of A relate to many rows of B.
+   - Example: a `Student` takes many `Course` rows, and each course has many students.
+   - A relational table cannot store this directly, so a third `junction table` is created whose primary key is the pair of foreign keys.
+   ```sql
+   CREATE TABLE Enrollment (
+     student_id INT REFERENCES Student(student_id),
+     course_id  INT REFERENCES Course(course_id),
+     grade      CHAR(2),
+     PRIMARY KEY (student_id, course_id)
+   );
+   ```
+   - The junction table is also the natural place for attributes of the relationship itself, such as the grade or the enrollment date.
+
 7. **What join should use when there is no match between two tables?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1266 (ET: N/A)]*
+
+   Answer: When rows that have `no match` in the other table must still appear, an `OUTER JOIN` is used. Which one depends on which side's unmatched rows are needed.
+
+   ```
+   FULL OUTER JOIN  -> keeps unmatched rows from BOTH tables
+   LEFT OUTER JOIN  -> keeps unmatched rows from the LEFT table only
+   RIGHT OUTER JOIN -> keeps unmatched rows from the RIGHT table only
+   ```
+   - An `INNER JOIN` cannot be used, because it drops every row without a partner.
+
+   Sample data
+   ```
+   Employee                       Department
+   101 Rahim  dept 10             10  CSE
+   102 Karim  dept 20             20  EEE
+   103 Jamal  dept NULL           30  ME
+   ```
+
+   FULL OUTER JOIN — nothing is lost from either side
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e
+   FULL   OUTER JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   ```
+   Rahim | CSE
+   Karim | EEE
+   Jamal | NULL      <- employee with no department
+   NULL  | ME        <- department with no employee
+   ```
+
+   LEFT OUTER JOIN — every employee, matched or not
+   ```sql
+   SELECT e.name, d.dept_name
+   FROM   Employee e
+   LEFT   JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+
+   Listing `only` the non-matching rows
+   ```sql
+   -- employees who belong to no department
+   SELECT e.name
+   FROM   Employee e
+   LEFT   JOIN Department d ON e.dept_id = d.dept_id
+   WHERE  d.dept_id IS NULL;
+
+   -- unmatched rows on both sides at once
+   SELECT e.name, d.dept_name
+   FROM   Employee e
+   FULL   OUTER JOIN Department d ON e.dept_id = d.dept_id
+   WHERE  e.emp_id IS NULL OR d.dept_id IS NULL;
+   ```
+
+   Points to note
+   - MySQL has no `FULL OUTER JOIN`. Use `LEFT JOIN ... UNION ... RIGHT JOIN`.
+   - Test the unmatched side with `IS NULL`, never with `= NULL`, which is always unknown.
+   - In a LEFT JOIN, a condition on the right table belongs in the `ON` clause. Putting it in `WHERE` removes the NULL rows and quietly turns the query back into an inner join.
 
 ## Distributed & Parallel Databases (5)
 
