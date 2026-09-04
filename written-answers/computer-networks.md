@@ -12810,25 +12810,347 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **What is the DHCP in computer networking?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
+   Answer: DHCP (Dynamic Host Configuration Protocol) is an application-layer protocol that automatically supplies a device with its IP configuration when it joins a network.
+
+   What it provides
+   - IP address, subnet mask, default gateway, DNS server addresses, and often the domain name, lease time and NTP server.
+
+   Key facts
+   - Ports: `UDP 67` (server) and `UDP 68` (client).
+   - It works through the four-step `DORA` exchange: Discover, Offer, Request, Acknowledge.
+   - Addresses are leased for a limited period and renewed at T1 (50 percent) and T2 (87.5 percent) of the lease.
+   - A relay agent (`ip helper-address`) forwards DHCP broadcasts across a router, so one server can serve many subnets.
+   - Reservations bind one MAC address to one fixed IP, for printers and servers.
+
+   Why it is needed
+   - Without DHCP every device would need manual configuration, which is slow, error-prone and impossible to manage at scale. It also eliminates duplicate-address conflicts and allows a limited pool of addresses to be reused as devices come and go.
+
+   Risks
+   - DHCP has no authentication, so a rogue server can hand out a false gateway and intercept traffic; DHCP snooping on the switch prevents this. DHCP starvation exhausts the pool with forged MAC addresses; port security limits it.
+   - If no server replies, a Windows client self-assigns an `APIPA` address from 169.254.0.0/16, which allows only local communication and is a clear symptom of DHCP failure.
+
 2. **What is the NAT in Computer networking?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
+
+   Answer: NAT (Network Address Translation) is the process by which a router rewrites the IP addresses in a packet's header as it crosses the boundary between a private network and the public internet.
+
+   Why it exists
+   - IPv4 provides only about 4.3 billion addresses, and they were exhausted. RFC 1918 private ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) can be reused by every organisation, but internet routers drop them. NAT translates them into a public address.
+
+   How it works
+   - Outbound: the private source address, and with PAT the source port, is replaced by the router's public address and a unique port; the mapping is stored in a translation table and the checksums are recalculated.
+   - Inbound: the router matches the returning packet's destination port against the table and restores the original private address and port.
+
+   Types
+
+   | Type | Mapping | Use |
+   |---|---|---|
+   | Static NAT | One private ↔ one public, fixed | A server reachable from the internet |
+   | Dynamic NAT | Many private ↔ a pool of public | Sharing a small public block |
+   | PAT / NAT overload | Many private ↔ one public, by port | Home and office routers |
+
+   Advantages and drawbacks
+   - Advantages: conserves public addresses, lowers cost, hides internal topology, drops unsolicited inbound traffic by default, and allows internal renumbering or a change of ISP without touching internal hosts.
+   - Drawbacks: breaks end-to-end connectivity, complicates VoIP, peer-to-peer and IPsec, needs application-layer gateways for FTP and SIP, adds CPU load and state to the router, and obscures which internal host generated external traffic.
+   - IPv6 removes the need for NAT entirely.
 
 3. **NAT Stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+   Answer: NAT stands for `Network Address Translation`.
+
+   - It is the technique by which a router rewrites the IP addresses in packet headers so that hosts using private RFC 1918 addresses can communicate over the public internet.
+   - Defined in RFC 1631 (1994) as a response to IPv4 address exhaustion.
+   - Ports and addresses are recorded in a `translation table` so that returning packets can be mapped back to the correct internal host.
+
+   Types
+   - `Static NAT` — one private address permanently mapped to one public address.
+   - `Dynamic NAT` — private addresses mapped to a pool of public ones, as available.
+   - `PAT` (Port Address Translation), also called NAT overload — many private addresses share one public address, distinguished by source port. This is what every home router uses.
+
+   - Related abbreviations often asked with it: `PAT` — Port Address Translation; `DHCP` — Dynamic Host Configuration Protocol; `DNS` — Domain Name System.
+
 4. **Which two services are required to enable a computer to receive dynamic IP address and access internet using domain names?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 634 (ET: N/A)]*
+
+   Answer: The two services required are `DHCP` and `DNS`.
+
+   DHCP (Dynamic Host Configuration Protocol)
+   - Gives the computer a `dynamic IP address` automatically, together with the subnet mask, default gateway and the addresses of the DNS servers.
+   - Uses the DORA exchange — Discover, Offer, Request, Acknowledge — over UDP ports 67 and 68.
+   - Without it, every machine would have to be configured by hand.
+
+   DNS (Domain Name System)
+   - Translates `domain names into IP addresses`, so a user can type www.example.com instead of an address.
+   - Runs on port 53: UDP for ordinary queries, TCP for zone transfers and large responses.
+   - Without it the computer would have an internet connection but could not resolve any name.
+
+   How they work together
+   ```
+   1. PC joins the network
+   2. DHCP supplies: IP address, mask, gateway, and DNS server addresses
+   3. User types www.example.com
+   4. DNS resolves the name to an IP address
+   5. The PC connects to that address through the gateway
+   ```
+   - The link between them is the key point: DHCP is what tells the client which DNS server to use. If DHCP fails, the client gets no address at all; if DNS fails, the client is connected but every name lookup fails.
 
 5. **What is DHCP Server and why it is needed in a computer network.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 670 (ET: N/A)]*
 
+   Answer:
+
+   What is a DHCP server
+   - A DHCP server is the machine or service that holds a pool of IP addresses and hands them out automatically to devices joining the network, along with the subnet mask, default gateway, DNS servers, domain name and lease time.
+   - It listens on `UDP port 67` and replies to clients on `UDP port 68`.
+   - It can be a dedicated server (Windows Server, Linux ISC DHCP or Kea), or the service built into a router or Layer 3 switch.
+   - It maintains a database of `bindings`, recording which address was leased to which client (identified by MAC address or DUID) and until when.
+
+   Why it is needed in a network
+
+   - `Eliminates manual configuration.` Configuring an address, mask, gateway and DNS on every machine by hand is slow and impractical beyond a handful of devices. In an office with 500 PCs it is simply not viable.
+   - `Prevents duplicate addresses.` Manual configuration inevitably produces conflicts, and an IP conflict knocks both machines off the network. The server tracks every allocation, so a conflict cannot occur.
+   - `Uses a limited pool efficiently.` Addresses are leased, not owned. When a laptop leaves, its lease expires and the address returns to the pool for someone else. A pool of 100 addresses can serve several hundred occasional users.
+   - `Supports mobility.` Laptops and phones move between networks constantly and receive correct settings automatically at each one.
+   - `Centralises change.` If the DNS server or the gateway changes, it is edited once on the DHCP server rather than on every device.
+   - `Reduces errors and support calls`, since users never type addresses.
+   - `Scales`, whether the network has 10 devices or 10,000, and a relay agent lets one server serve many subnets.
+   - `Reservations` give printers and servers a fixed address while still keeping the configuration central.
+
+   Risks to be aware of
+   - No authentication, so a rogue DHCP server can hand out a false gateway and become a man in the middle. `DHCP snooping` on the switch blocks offers from untrusted ports.
+   - `DHCP starvation` exhausts the pool with forged MAC addresses; port security limits the number of MACs per port.
+   - If the server fails, new clients cannot join, so redundancy (two servers splitting the scope, or a failover pair) is normal practice.
+
 6. **(b) Explain the message flow between a DHCP server and client. Show necessary timing diagram.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
+
+   Answer: The exchange between a DHCP client and server is the four-step `DORA` process, carried over UDP ports 67 (server) and 68 (client).
+
+   Timing diagram
+   ```
+      CLIENT                                            SERVER
+    (no IP address)                                 (holds the pool)
+         |                                                |
+    t=0  |=== DHCP DISCOVER =============================>|
+         |   src 0.0.0.0:68  dst 255.255.255.255:67       |
+         |   broadcast, carries the client's MAC          |
+         |                                                | [reserves a
+         |                                                |  free address]
+    t=1  |<================== DHCP OFFER =================|
+         |   src server:67   dst 255.255.255.255:68       |
+         |   offers IP, mask, gateway, DNS, lease time    |
+         |                                                |
+    t=2  |=== DHCP REQUEST ==============================>|
+         |   broadcast, naming the chosen server          |
+         |   (tells other servers to release their offers)|
+         |                                                | [writes the
+         |                                                |  binding]
+    t=3  |<================== DHCP ACK ===================|
+         |   confirms the lease and all parameters        |
+         |                                                |
+         |  === client configures its interface ===       |
+         |                                                |
+    T1   |=== DHCP REQUEST (renew, unicast) ============>|   at 50% of lease
+    =0.5T|<== DHCP ACK ==================================|
+         |                                                |
+    T2   |=== DHCP REQUEST (rebind, broadcast) =========>|   at 87.5% of lease
+   =0.875|<== DHCP ACK ==================================|
+         |                                                |
+         |=== DHCP RELEASE (on shutdown) ===============>|
+   ```
+
+   Message by message
+
+   | Step | Message | Sent by | Type | Purpose |
+   |---|---|---|---|---|
+   | D | DISCOVER | Client | Broadcast | Is any DHCP server present? |
+   | O | OFFER | Server | Broadcast | Here is an available address and its settings |
+   | R | REQUEST | Client | Broadcast | I accept this server's offer |
+   | A | ACK | Server | Broadcast | Confirmed; the lease is recorded |
+
+   Why REQUEST is broadcast rather than unicast
+   - Several servers may have made offers and each has reserved an address. Broadcasting the REQUEST tells the servers that were not chosen to release the addresses they set aside.
+
+   Other messages
+   - `NAK` — the server refuses, for example because the requested address is no longer valid on this subnet. The client restarts from DISCOVER.
+   - `DECLINE` — the client found the offered address already in use (it ARPs to check) and rejects it.
+   - `RELEASE` — the client gives the address back, typically on shutdown.
+   - `INFORM` — the client already has an address but wants other parameters such as DNS.
+
+   Lease renewal timers
+   - `T1 = 50 %` of the lease: the client unicasts a REQUEST to the same server.
+   - `T2 = 87.5 %`: if there was no reply, it broadcasts to any server.
+   - If the lease expires with no reply, the address is given up and DORA starts again.
+   - `ipconfig /release` and `ipconfig /renew` force these steps manually.
+
+   Across subnets
+   - Routers do not forward broadcasts, so a `DHCP relay agent` (the `ip helper-address` command) converts the broadcast into a unicast towards a central server.
 
 7. **What is APIPA?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840 (ET: N/A)]*
 
+   Answer: APIPA stands for `Automatic Private IP Addressing`. It is the mechanism by which a Windows (and most modern) host assigns itself an address when no DHCP server can be reached.
+
+   How it works
+   - The client boots and broadcasts DHCP DISCOVER messages.
+   - If no DHCP server replies after several attempts (about a minute), the client picks a random address from `169.254.0.0/16` with mask `255.255.0.0`.
+   - It then sends a gratuitous ARP to check that no other host already uses that address. If there is a conflict it picks another and repeats, up to ten times.
+   - It keeps retrying DHCP in the background, typically every five minutes, and switches over the moment a server appears.
+
+   Characteristics
+   - Range: `169.254.0.0 – 169.254.255.255` (the usable part is 169.254.1.0 – 169.254.254.255).
+   - It is a `link-local` address: routers never forward it, so communication is limited to the local segment.
+   - No default gateway and no DNS server are configured, so `there is no internet access`. Name resolution falls back to NetBIOS or mDNS.
+   - Devices with APIPA addresses can still talk to each other on the same segment, which is why an ad hoc file transfer between two PCs still works.
+
+   Why it matters in practice
+   - Seeing a 169.254.x.x address in `ipconfig` is a definitive diagnostic: it means the machine `could not reach a DHCP server`. The fault is therefore the cable, the switch port, the VLAN, the DHCP server itself, or a blocked relay — not the PC's IP configuration.
+
+   Troubleshooting steps
+   - Check the physical link and the switch port.
+   - Verify the DHCP server is running and its scope is not exhausted.
+   - Check the `ip helper-address` on the router if the server is on another subnet.
+   - Run `ipconfig /release` then `ipconfig /renew`.
+   - Confirm the port is in the correct VLAN.
+
+   - The IPv6 equivalent is the `FE80::/10` link-local address, but with an important difference: in IPv6 a link-local address is always configured in addition to any global address, not only as a fallback.
+
 8. **What do you mean by DHCP server? Explain the benefits of using dedicated DHCP server. Briefly describe the main benefits of using IPv6 protocol.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 914 (ET: N/A)]*
+
+   Answer:
+
+   (a) What is a DHCP server
+   - A server that automatically issues IP addresses and related configuration — subnet mask, default gateway, DNS servers, domain name and lease time — to devices joining the network.
+   - It listens on UDP port 67 and replies to clients on port 68, using the DORA exchange: Discover, Offer, Request, Acknowledge.
+   - It keeps a binding database recording which address was leased to which client and until when.
+
+   (b) Benefits of a dedicated DHCP server (as opposed to the service built into a router)
+
+   - `Scalability` — a dedicated server handles thousands of clients and many subnets, where a router's built-in service typically manages one small pool.
+   - `Multiple scopes and subnets` from one place, reached through relay agents, so the whole organisation is administered centrally.
+   - `High availability` — two servers can split a scope 80/20, or run as a failover pair, so an outage does not stop new clients joining. A router's service is a single point of failure.
+   - `Detailed control` — per-scope options, vendor and user class options, PXE boot parameters, and fine-grained lease times.
+   - `Reservations at scale` — hundreds of MAC-to-IP bindings for printers, cameras and servers, managed in one console.
+   - `Integration with DNS` — dynamic DNS updates so that a client's name resolves correctly as soon as it receives its address.
+   - `Logging, auditing and reporting` — a record of which device held which address at which time, which is essential for security investigations.
+   - `Better performance` — the router's CPU is left for routing rather than lease processing.
+   - `Policy and filtering` — allow or deny by MAC address or vendor class.
+   - `Backup and restore` of the lease database, and easier capacity planning from utilisation reports.
+
+   (c) Main benefits of IPv6
+
+   - `Vast address space` — 128 bits gives 3.4 × 10^38 addresses, permanently ending the shortage that shaped IPv4.
+   - `No NAT required`, which restores true end-to-end connectivity and makes peer-to-peer, VoIP and IoT far simpler.
+   - `Simpler, fixed 40-byte header` with 8 fields instead of 13, and no header checksum, so routers forward faster.
+   - `Stateless autoconfiguration (SLAAC)` — a host configures itself from a Router Advertisement, with no DHCP server needed.
+   - `Built-in IPsec` for authentication, integrity and encryption, rather than an optional add-on.
+   - `Better QoS` through the Traffic Class field and a 20-bit Flow Label that identifies individual flows.
+   - `No broadcast` — multicast replaces it, so uninterested hosts are never disturbed and broadcast-amplification attacks disappear.
+   - `Efficient routing` through hierarchical allocation and route aggregation, which keeps global routing tables smaller.
+   - `Built-in mobility` (Mobile IPv6), letting a device keep its address as it moves between networks.
+   - `Harder to scan` — a /64 subnet holds 1.8 × 10^19 addresses, making automated reconnaissance and worm propagation impractical.
+   - `Simpler network management`, since renumbering is supported by design and every device can have a unique, traceable address.
 
 9. **১৬. DHCP uses UDP port _____ for sending data to the server.** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
+   Answer: DHCP uses `UDP port 67` for sending data to the server.
+
+   - Client to server: destination port `67`.
+   - Server to client: destination port `68`.
+   - Both are well-known ports, and DHCP uses UDP rather than TCP because the client has no IP address yet and must broadcast, which TCP cannot do.
+
+   Why these two ports
+   - Using two fixed ports rather than an ephemeral client port allows the server's reply to be broadcast and still be recognised only by DHCP clients. A client with no address cannot receive a unicast reply, so the broadcast must be distinguishable.
+
+   Message flow with ports
+   ```
+   DISCOVER  src 0.0.0.0:68        dst 255.255.255.255:67
+   OFFER     src <server>:67       dst 255.255.255.255:68
+   REQUEST   src 0.0.0.0:68        dst 255.255.255.255:67
+   ACK       src <server>:67       dst 255.255.255.255:68
+   ```
+
+   Related port numbers
+
+   | Service | Port |
+   |---|---|
+   | DHCP server / client | 67 / 68 (UDP) |
+   | DHCPv6 server / client | 547 / 546 (UDP) |
+   | DNS | 53 (UDP and TCP) |
+   | TFTP | 69 (UDP) |
+   | SNMP | 161, 162 (UDP) |
+   | HTTP / HTTPS | 80 / 443 (TCP) |
+
 10. **DHCP কি? DHCP কিভাবে কাজ করে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1043 (ET: DPI)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    What is DHCP
+    - DHCP (Dynamic Host Configuration Protocol) is an application-layer protocol that automatically assigns an IP address and the rest of the network configuration to a device when it joins a network.
+    - It supplies: IP address, subnet mask, default gateway, DNS server addresses, domain name and lease time.
+    - Ports: UDP 67 for the server, UDP 68 for the client.
+    - It removes the need for manual configuration, prevents duplicate addresses, and lets a limited pool of addresses be reused as devices come and go.
+
+    How DHCP works — the DORA exchange
+
+    - `1. DHCP DISCOVER` — the client has no address, so it broadcasts to 255.255.255.255 from source 0.0.0.0, carrying its MAC address, asking whether any DHCP server is present.
+    - `2. DHCP OFFER` — every server that hears it reserves a free address from its pool and replies with that address plus the mask, gateway, DNS servers and lease time.
+    - `3. DHCP REQUEST` — the client accepts one offer (normally the first to arrive) and broadcasts a request naming that server. Broadcasting tells the other servers to release the addresses they had reserved.
+    - `4. DHCP ACK` — the chosen server confirms, writes the binding into its database, and the client configures its interface. If the address has become unavailable it sends a NAK instead and the client restarts.
+
+    ```
+    CLIENT                                  SERVER
+      |------- DISCOVER (broadcast) --------->|
+      |<------ OFFER (IP proposed) -----------|
+      |------- REQUEST (broadcast) ---------->|
+      |<------ ACK (confirmed) ---------------|
+         client now has IP, mask, gateway, DNS
+    ```
+
+    Lease renewal
+    - At `T1` (50 percent of the lease) the client unicasts a renewal request to the same server.
+    - At `T2` (87.5 percent), if there was no reply, it broadcasts to any server.
+    - If the lease expires with no reply, the address is released and DORA begins again.
+
+    Across subnets
+    - Routers do not forward broadcasts, so a `DHCP relay agent` (`ip helper-address`) converts the broadcast into a unicast towards a central server, letting one server serve many VLANs.
+
+    If DHCP fails
+    - A Windows client assigns itself an APIPA address from 169.254.0.0/16, which allows only local communication. Seeing a 169.254.x.x address is a definite sign that the DHCP server was unreachable.
+
 11. **Write the disadvantage of manual IP. Name the protocol of dynamic IP assigning. DHCP how works?** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
+
+    Answer:
+
+    (a) Disadvantages of manual (static) IP configuration
+
+    - `Time consuming` — every device must be visited and configured individually. In an office of 500 machines this is days of work.
+    - `Duplicate address conflicts` — the commonest and most damaging error. Two devices with the same address knock each other off the network, and the fault is hard to trace.
+    - `Typing errors` — a wrong mask, gateway or DNS server silently breaks connectivity, and the symptom rarely points at the cause.
+    - `No mobility` — a laptop moving between networks must be reconfigured by hand each time.
+    - `Difficult to change` — if the DNS server or the gateway changes, every device must be edited again.
+    - `Wasteful of addresses` — an address assigned to a machine stays assigned even when the machine is switched off or removed, so the pool is used inefficiently.
+    - `Requires documentation` — a spreadsheet of every allocation must be maintained, and it goes stale immediately.
+    - `Needs technical knowledge` — ordinary users cannot do it, so every new device becomes a support call.
+    - `Does not scale`, and there is no central record of which device holds which address.
+
+    (b) Protocol for dynamic IP assignment
+    - `DHCP` — Dynamic Host Configuration Protocol, on UDP ports 67 (server) and 68 (client).
+    - Its predecessors were BOOTP and RARP; the IPv6 version is DHCPv6 (ports 547 and 546), alongside SLAAC.
+
+    (c) How DHCP works — the DORA exchange
+
+    - `Discover` — the client broadcasts to 255.255.255.255 from 0.0.0.0, carrying its MAC address, looking for any DHCP server.
+    - `Offer` — each server reserves a free address and replies with it plus the mask, gateway, DNS servers and lease time.
+    - `Request` — the client broadcasts its acceptance of one offer, naming the chosen server so the others release their reservations.
+    - `Acknowledge` — the chosen server confirms, records the binding, and the client configures its interface.
+
+    ```
+    CLIENT                                SERVER
+      |----- DISCOVER (broadcast) --------->|
+      |<---- OFFER ------------------------|
+      |----- REQUEST (broadcast) --------->|
+      |<---- ACK --------------------------|
+    ```
+
+    - Renewal happens at T1 (50 percent of the lease, unicast to the same server) and T2 (87.5 percent, broadcast to any server).
+    - A relay agent forwards the broadcast across a router so one server can serve many subnets.
+    - If no server answers, the client falls back to an APIPA address in 169.254.0.0/16, with local connectivity only.
 
 ## Digital Modulation & Signal Processing (BPSK, QPSK) (10)
 
