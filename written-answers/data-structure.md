@@ -3131,33 +3131,1067 @@ Output: Not Balanced
 
 1. **Explain with proper example of singly linked list.** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
 
+   Answer: A singly linked list is a linear data structure in which elements, called `nodes`, are stored in separate memory locations and linked together by pointers. Each node points only to the `next` node, so the list can be traversed in one direction only.
+
+   Structure of a node
+   ```c
+   struct Node {
+       int data;            // the value stored
+       struct Node *next;   // pointer to the next node
+   };
+   ```
+
+   Diagram
+   ```
+    head
+     |
+     v
+   +------+----+     +------+----+     +------+----+
+   |  10  | *--|---->|  20  | *--|---->|  30  |NULL|
+   +------+----+     +------+----+     +------+----+
+     node 1            node 2            node 3
+   ```
+   - `head` points to the first node. The `next` field of the last node is `NULL`, marking the end.
+
+   Worked example — building the list 10 → 20 → 30
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+
+   struct Node { int data; struct Node *next; };
+
+   struct Node* createNode(int value) {
+       struct Node *n = malloc(sizeof(struct Node));
+       n->data = value;
+       n->next = NULL;
+       return n;
+   }
+
+   void display(struct Node *head) {
+       struct Node *cur = head;
+       while (cur != NULL) {
+           printf("%d -> ", cur->data);
+           cur = cur->next;
+       }
+       printf("NULL\n");
+   }
+
+   int main(void) {
+       struct Node *head = createNode(10);
+       head->next        = createNode(20);
+       head->next->next  = createNode(30);
+
+       display(head);        // 10 -> 20 -> 30 -> NULL
+       return 0;
+   }
+   ```
+
+   Basic operations
+
+   | Operation | Method | Complexity |
+   |---|---|---|
+   | Insert at beginning | New node's next = head; head = new node | `O(1)` |
+   | Insert at end | Traverse to the last node, then link | O(n) |
+   | Insert after a given node | Relink two pointers | O(1) |
+   | Delete from beginning | head = head->next; free the old head | `O(1)` |
+   | Delete a given value | Traverse, relink the previous node, free | O(n) |
+   | Search | Traverse from head comparing values | O(n) |
+   | Traverse | Follow next until NULL | O(n) |
+
+   Insertion at the beginning, shown step by step
+   ```
+   Before:  head -> [20|*] -> [30|NULL]
+
+   Step 1: create the new node        [10|NULL]
+   Step 2: new->next = head           [10|*] -> [20|*] -> [30|NULL]
+   Step 3: head = new                 head -> [10|*] -> [20|*] -> [30|NULL]
+   ```
+
+   Advantages
+   - `Dynamic size` — it grows and shrinks at run time, so no memory is wasted and no maximum has to be fixed in advance.
+   - Insertion and deletion are `O(1)` when the position is already known, with no shifting of elements as an array requires.
+   - Memory need not be contiguous, so a large list can be built even in a fragmented heap.
+
+   Disadvantages
+   - `No random access` — reaching the nth element requires walking n nodes, so search is O(n).
+   - Extra memory for the pointer in every node.
+   - It can only be traversed `forward`; going back requires restarting from the head.
+   - Poorer cache performance than an array, because the nodes are scattered in memory.
+
 2. **Explain the difference between a singly linked list and a doubly linked list data structure.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 426 (ET: BIBM)]*
+
+   Answer:
+
+   | Point | Singly linked list | Doubly linked list |
+   |---|---|---|
+   | Pointers per node | One — `next` | Two — `next` and `prev` |
+   | Direction of traversal | `Forward only` | `Both forward and backward` |
+   | Memory per node | Less | More (one extra pointer per node) |
+   | Deleting a given node | Needs a pointer to the `previous` node, so O(n) to find it | O(1), since the node already knows its predecessor |
+   | Insertion before a node | Difficult; must traverse from the head | Easy and O(1) |
+   | Reverse traversal | Not possible without reversing the list | Straightforward from the tail |
+   | Implementation | Simpler | More complex — two pointers to maintain on every operation |
+   | Risk of error | Lower | Higher; forgetting to update `prev` corrupts the list |
+   | Memory overhead | 1 pointer × n nodes | 2 pointers × n nodes |
+   | Typical uses | Stacks, queues, simple lists, hash-table chaining | Browser history, undo/redo, LRU cache, music playlists, text editors |
+
+   Node structures
+   ```c
+   // Singly linked list
+   struct Node {
+       int data;
+       struct Node *next;
+   };
+
+   // Doubly linked list
+   struct DNode {
+       int data;
+       struct DNode *prev;
+       struct DNode *next;
+   };
+   ```
+
+   Diagrams
+   ```
+   SINGLY LINKED LIST
+
+   head
+    |
+    v
+   +----+---+    +----+---+    +----+------+
+   | 10 | *-|--->| 20 | *-|--->| 30 | NULL |
+   +----+---+    +----+---+    +----+------+
+
+
+   DOUBLY LINKED LIST
+
+           head                                        tail
+            |                                            |
+            v                                            v
+   +------+----+---+   +---+----+---+   +---+----+------+
+   | NULL | 10 | *-|<->| * | 20 | *-|<->| * | 30 | NULL |
+   +------+----+---+   +---+----+---+   +---+----+------+
+     prev  data next
+   ```
+
+   Why the extra pointer is worth its cost
+   - Deleting a node whose address is already known takes `O(1)` in a doubly linked list, because `node->prev->next = node->next` and `node->next->prev = node->prev` are enough. In a singly linked list the predecessor must be found first, which costs O(n).
+   - That single property is why an `LRU cache` uses a doubly linked list together with a hash map: the map gives the node's address instantly, and the list then removes and re-inserts it in constant time.
+
+   Circular variants
+   - Either list can be made `circular` by pointing the last node's `next` back to the head (and in the doubly linked case, the head's `prev` back to the tail). A circular doubly linked list allows traversal to begin at any node and continue indefinitely in either direction, which suits round-robin scheduling and music playlists.
 
 3. **(ক) Linked list কী? উহার প্রকারভেদ চিত্রসহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What is a linked list
+   - A linked list is a linear data structure in which elements, called `nodes`, are stored at scattered memory locations and joined together by `pointers`. Each node holds the data and the address of the next node.
+   - Unlike an array, the memory is not contiguous, so the list can grow and shrink at run time without any fixed maximum size.
+   - Access to the list is through a `head` pointer that holds the address of the first node.
+
+   Types of linked list
+
+   1. Singly linked list
+   - Each node has one pointer, `next`, so the list can be traversed in one direction only. The last node's `next` is NULL.
+   ```
+   head
+    |
+    v
+   +----+---+    +----+---+    +----+------+
+   | 10 | *-|--->| 20 | *-|--->| 30 | NULL |
+   +----+---+    +----+---+    +----+------+
+   ```
+   - Simplest and uses least memory, but reverse traversal is impossible and deleting a node needs its predecessor.
+
+   2. Doubly linked list
+   - Each node has two pointers, `prev` and `next`, so traversal is possible in both directions.
+   ```
+           head                                       tail
+            |                                           |
+            v                                           v
+   +------+----+---+   +---+----+---+   +---+----+------+
+   | NULL | 10 | *-|<->| * | 20 | *-|<->| * | 30 | NULL |
+   +------+----+---+   +---+----+---+   +---+----+------+
+   ```
+   - Deleting a known node is O(1); the cost is one extra pointer per node.
+
+   3. Circular singly linked list
+   - The last node's `next` points back to the first node instead of NULL, so there is no end.
+   ```
+   head
+    |
+    v
+   +----+---+    +----+---+    +----+---+
+   | 10 | *-|--->| 20 | *-|--->| 30 | *-|--+
+   +----+---+    +----+---+    +----+---+  |
+      ^                                    |
+      +------------------------------------+
+   ```
+   - Useful for round-robin CPU scheduling and any repeating cycle.
+
+   4. Circular doubly linked list
+   - Both circular and bidirectional: the last node's `next` points to the head, and the head's `prev` points to the tail.
+   ```
+      +----------------------------------------------+
+      |                                              |
+      v                                              |
+   +---+----+---+   +---+----+---+   +---+----+---+  |
+   | * | 10 | *-|<->| * | 20 | *-|<->| * | 30 | *-|--+
+   +---+----+---+   +---+----+---+   +---+----+---+
+      ^                                              |
+      +----------------------------------------------+
+   ```
+   - Traversal can start at any node and continue indefinitely in either direction. Used in music playlists, the Fibonacci heap and advanced schedulers.
+
+   Comparison
+
+   | Type | Pointers per node | Traversal | Extra memory | Typical use |
+   |---|---|---|---|---|
+   | Singly | 1 | Forward only | Least | Stacks, queues, hash chaining |
+   | Doubly | 2 | Both ways | More | Undo/redo, LRU cache, browser history |
+   | Circular singly | 1 | Forward, endless | Least | Round-robin scheduling |
+   | Circular doubly | 2 | Both ways, endless | Most | Playlists, Fibonacci heap |
+
 4. **(a) Compare array and linked list with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
+
+   Answer:
+
+   Diagrams
+   ```
+   ARRAY — contiguous memory, accessed by index
+
+   index :    0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           | 10  | 20  | 30  | 40  | 50  |
+           +-----+-----+-----+-----+-----+
+   address: 1000  1004  1008  1012  1016      <- fixed 4-byte steps
+            address of element i = base + i × size   -> O(1) access
+
+
+   LINKED LIST — scattered memory, joined by pointers
+
+   head
+    |
+    v
+   +----+---+     +----+---+     +----+------+
+   | 10 | *-|---->| 20 | *-|---->| 30 | NULL |
+   +----+---+     +----+---+     +----+------+
+    @2000          @5400          @1200        <- addresses unrelated
+   ```
+
+   Comparison
+
+   | Point | Array | Linked list |
+   |---|---|---|
+   | Memory allocation | `Contiguous` block | `Scattered`, joined by pointers |
+   | Size | Fixed at declaration (static) | Grows and shrinks at run time (dynamic) |
+   | Access to the ith element | `O(1)` by index | `O(n)`, must walk from the head |
+   | Insertion or deletion at the beginning | O(n) — every element must shift | `O(1)` |
+   | Insertion or deletion in the middle | O(n) — shifting | O(1) once the position is known, O(n) to find it |
+   | Insertion or deletion at the end | O(1) if space remains | O(n), or O(1) with a tail pointer |
+   | Search (unsorted) | O(n) | O(n) |
+   | Search (sorted) | `O(log n)` with binary search | O(n) — binary search is impossible |
+   | Memory overhead | None beyond the data | One or two pointers per node |
+   | Memory wastage | Unused declared slots are wasted | None; exactly what is needed |
+   | Memory usage when full | Efficient | Higher, because of the pointers |
+   | Cache performance | `Excellent` — elements are adjacent | Poor — nodes are scattered |
+   | Resizing | Requires reallocating and copying | Not needed |
+   | Ease of implementation | Simple | More complex; pointer errors are easy to make |
+   | Suited to | Fixed-size data, frequent random access, matrices | Unknown or changing size, frequent insertion and deletion |
+
+   Worked illustration
+   ```
+   Insert 15 at the beginning
+
+   ARRAY: every element must move one place right
+      [10, 20, 30, 40, 50]  ->  [15, 10, 20, 30, 40, 50]      O(n)
+
+   LINKED LIST: two pointer assignments
+      new->next = head ; head = new                            O(1)
+   ```
+
+   Choosing between them
+   - Use an `array` when the size is known, random access by index is frequent, and binary search or matrix arithmetic is required.
+   - Use a `linked list` when the size is unpredictable and insertions and deletions are frequent, particularly at the front — which is exactly why stacks, queues and hash-table chaining are built on linked lists.
 
 5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What is a linked list
+   - A linked list is a linear data structure whose elements, called `nodes`, are stored in scattered memory locations and joined by `pointers`. Each node contains the data and the address of the next node.
+   - The list is reached through a `head` pointer holding the address of the first node; the last node's pointer is `NULL`.
+   - Because it does not need contiguous memory, it can grow and shrink at run time with no fixed maximum size.
+
+   Node structure
+   ```c
+   struct Node {
+       int data;             // the value
+       struct Node *next;    // address of the next node
+   };
+   ```
+
+   Example — the list 10 → 20 → 30
+   ```
+   head
+    |
+    v
+   +------+----+     +------+----+     +------+------+
+   |  10  | *--|---->|  20  | *--|---->|  30  | NULL |
+   +------+----+     +------+----+     +------+------+
+    @2000             @5400             @1200
+   ```
+   - The addresses are unrelated to one another; only the pointers hold the list together.
+
+   Building it in C
+   ```c
+   struct Node *head = malloc(sizeof(struct Node));
+   head->data = 10;
+
+   head->next = malloc(sizeof(struct Node));
+   head->next->data = 20;
+
+   head->next->next = malloc(sizeof(struct Node));
+   head->next->next->data = 30;
+   head->next->next->next = NULL;
+   ```
+
+   Traversal
+   ```c
+   struct Node *cur = head;
+   while (cur != NULL) {
+       printf("%d -> ", cur->data);
+       cur = cur->next;
+   }
+   printf("NULL\n");            // 10 -> 20 -> 30 -> NULL
+   ```
+
+   Types
+   - `Singly` — one pointer, forward traversal only.
+   - `Doubly` — `prev` and `next`, traversal in both directions.
+   - `Circular singly` — the last node points back to the head.
+   - `Circular doubly` — circular and bidirectional.
+
+   Advantages
+   - Dynamic size, so no memory is wasted and no limit must be fixed in advance.
+   - Insertion and deletion at the beginning are `O(1)`, with no shifting of elements.
+   - Memory need not be contiguous.
+
+   Disadvantages
+   - No random access; reaching the nth element costs O(n), and binary search is impossible.
+   - Extra memory for a pointer in every node.
+   - Poor cache performance, because nodes are scattered.
+
+   Applications
+   - Implementation of stacks and queues, chaining in hash tables, adjacency lists for graphs, undo/redo, browser history, music playlists, and dynamic memory management inside the operating system.
+
 6. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.)
+
+   Diagrams
+   ```
+   ARRAY — one contiguous block
+
+   index :    0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           | 10  | 20  | 30  | 40  | 50  |
+           +-----+-----+-----+-----+-----+
+   address: 1000  1004  1008  1012  1016
+      address of element i = base + i × size   ->  O(1) access
+
+
+   LINKED LIST — scattered nodes joined by pointers
+
+   head
+    |
+    v
+   +----+---+     +----+---+     +----+------+
+   | 10 | *-|---->| 20 | *-|---->| 30 | NULL |
+   +----+---+     +----+---+     +----+------+
+    @2000          @5400          @1200
+   ```
+
+   Differences
+
+   | Point | Array | Linked list |
+   |---|---|---|
+   | Memory | Contiguous | Scattered, joined by pointers |
+   | Size | Fixed at declaration | Dynamic, changes at run time |
+   | Access to the ith element | O(1) by index | O(n), traverse from the head |
+   | Insert or delete at the front | O(n) — all elements shift | O(1) |
+   | Insert or delete in the middle | O(n) | O(1) if the position is known |
+   | Binary search | Possible on a sorted array, O(log n) | Not possible |
+   | Extra memory | None | One or two pointers per node |
+   | Wasted memory | Unused declared slots | None |
+   | Cache performance | Excellent | Poor |
+   | Resizing | Requires reallocation and copying | Not required |
+   | Implementation | Simple | More complex |
+
+   Worked example — inserting 15 at the beginning
+   ```
+   ARRAY
+   Before: [10, 20, 30, 40, 50]
+   Step 1: shift 50 -> index 5
+   Step 2: shift 40 -> index 4
+   Step 3: shift 30 -> index 3
+   Step 4: shift 20 -> index 2
+   Step 5: shift 10 -> index 1
+   Step 6: place 15 at index 0
+   After : [15, 10, 20, 30, 40, 50]     -> 5 moves, O(n)
+
+   LINKED LIST
+   Step 1: create the node          [15|NULL]
+   Step 2: new->next = head         [15|*] -> [10|*] -> ...
+   Step 3: head = new
+                                     -> 2 assignments, O(1)
+   ```
+
+   Worked example — reading the 3rd element
+   ```
+   ARRAY       : arr[2]  -> 30 immediately                    O(1)
+   LINKED LIST : head -> node1 -> node2 -> node3, then read 30 O(n)
+   ```
+
+   When to use which
+   - `Array` — the size is known, random access is frequent, or binary search and matrix operations are needed.
+   - `Linked list` — the size varies unpredictably, and insertions or deletions are frequent, especially at the front.
 
 7. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 636 (ET: N/A)]*
 
+   Answer:
+
+   What is a linked list
+   - A linked list is a linear data structure whose elements, called `nodes`, are stored in scattered memory and joined by `pointers`. Each node holds data and the address of the next node.
+   - Access begins at a `head` pointer; the last node's pointer is NULL. The list grows and shrinks at run time, with no fixed size.
+
+   Algorithm to create a linked list
+   ```
+   ALGORITHM createLinkedList()
+   BEGIN
+       head = NULL
+       tail = NULL
+
+       READ n                                   // number of nodes wanted
+
+       FOR i = 1 TO n DO
+           // Step 1: allocate a new node
+           newNode = allocate memory for a node
+           IF newNode = NULL THEN
+               PRINT "Memory allocation failed"
+               RETURN
+           END IF
+
+           // Step 2: fill in the data
+           READ value
+           newNode.data = value
+           newNode.next = NULL
+
+           // Step 3: attach it to the list
+           IF head = NULL THEN
+               head = newNode                   // first node
+               tail = newNode
+           ELSE
+               tail.next = newNode              // link the previous last node
+               tail = newNode                   // the new node becomes the last
+           END IF
+       END FOR
+
+       RETURN head
+   END
+   ```
+
+   C implementation
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+
+   struct Node { int data; struct Node *next; };
+
+   struct Node* createList(int n) {
+       struct Node *head = NULL, *tail = NULL, *newNode;
+       for (int i = 0; i < n; i++) {
+           newNode = malloc(sizeof(struct Node));
+           if (!newNode) { printf("Memory allocation failed\n"); return head; }
+           scanf("%d", &newNode->data);
+           newNode->next = NULL;
+
+           if (head == NULL) head = tail = newNode;
+           else { tail->next = newNode; tail = newNode; }
+       }
+       return head;
+   }
+
+   void display(struct Node *head) {
+       for (struct Node *cur = head; cur; cur = cur->next)
+           printf("%d -> ", cur->data);
+       printf("NULL\n");
+   }
+   ```
+
+   Graphical example — creating the list 10, 20, 30
+
+   Step 1 — insert 10, the list is empty so it becomes the head
+   ```
+   head
+    |
+    v
+   +------+------+
+   |  10  | NULL |
+   +------+------+
+   ```
+
+   Step 2 — insert 20, linked to the tail
+   ```
+   head
+    |
+    v
+   +------+----+     +------+------+
+   |  10  | *--|---->|  20  | NULL |
+   +------+----+     +------+------+
+                       ^
+                      tail
+   ```
+
+   Step 3 — insert 30
+   ```
+   head
+    |
+    v
+   +------+----+     +------+----+     +------+------+
+   |  10  | *--|---->|  20  | *--|---->|  30  | NULL |
+   +------+----+     +------+----+     +------+------+
+                                         ^
+                                        tail
+   ```
+
+   Complexity
+   - Creating n nodes: `O(n)` time. Each individual insertion at the tail is O(1) because a `tail` pointer is kept; without one it would be O(n) per insertion and O(n²) overall.
+   - Space: `O(n)`, plus one pointer per node.
+
 8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
+
+   Answer:
+
+   Advantages of linked lists over arrays
+
+   - `Dynamic size.` The list grows and shrinks at run time, so the size need not be known in advance. An array's size is fixed at declaration, which means either wasting space or running out of it.
+   - `Efficient insertion and deletion.` Inserting or deleting at the beginning is `O(1)` — just two pointer assignments. In an array every following element must shift, which is O(n).
+   - `No memory wastage.` Exactly as many nodes are allocated as are needed. An array declared for 1000 elements but holding 10 wastes the other 990 slots.
+   - `No contiguous memory needed.` A linked list can be built even when the heap is fragmented and no single large block is free. An array of 1 MB needs 1 MB of contiguous memory.
+   - `No costly resizing.` A dynamic array must allocate a bigger block and copy everything across when it fills; a linked list simply allocates one more node.
+   - `Easy to implement other structures.` Stacks, queues, adjacency lists for graphs and chaining in hash tables are all naturally built on linked lists.
+   - `Merging and splitting are cheap` — changing a few pointers, rather than copying data.
+
+   Disadvantages of linked lists over arrays
+
+   - `No random access.` Reaching the ith element requires walking i nodes, which is `O(n)`, whereas an array gives `O(1)` by index. This is the single biggest drawback.
+   - `Binary search is impossible`, because it depends on random access. A sorted array can be searched in O(log n); a sorted linked list still takes O(n).
+   - `Extra memory for pointers.` Every node carries one pointer (singly) or two (doubly). Storing a single 4-byte integer per node may cost 12 or 20 bytes in total on a 64-bit machine.
+   - `Poor cache performance.` Array elements sit next to each other, so one cache line brings in several of them. Linked-list nodes are scattered, causing a cache miss at almost every step. In practice this often makes an array several times faster even for operations where the linked list has the better big-O.
+   - `No reverse traversal` in a singly linked list.
+   - `More complex code`, and pointer errors — dangling pointers, memory leaks, lost links — are easy to make.
+   - `Deletion needs the predecessor` in a singly linked list, so it costs O(n) to find it.
+
+   Summary
+
+   | Operation | Array | Linked list | Winner |
+   |---|---|---|---|
+   | Access ith element | O(1) | O(n) | `Array` |
+   | Insert at beginning | O(n) | O(1) | `Linked list` |
+   | Insert at end | O(1) | O(1) with a tail pointer | Tie |
+   | Delete from beginning | O(n) | O(1) | `Linked list` |
+   | Search (unsorted) | O(n) | O(n) | Tie |
+   | Search (sorted) | O(log n) | O(n) | `Array` |
+   | Memory per element | Data only | Data + pointer | `Array` |
+   | Resize | Reallocate and copy | Not needed | `Linked list` |
+
+   - Practical rule: choose an array when the size is stable and access is by index; choose a linked list when the size varies and insertions or deletions at the front are frequent.
 
 9. **(a) Computer and contrast between array and linked list.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
 
+   Answer:
+
+   Comparison
+   ```
+   ARRAY                                   LINKED LIST
+
+     0     1     2     3                    head
+   +----+-----+-----+-----+                  |
+   | 10 | 20  | 30  | 40  |                  v
+   +----+-----+-----+-----+           +----+---+   +----+---+   +----+------+
+    1000 1004  1008  1012             | 10 | *-|-->| 20 | *-|-->| 30 | NULL |
+                                      +----+---+   +----+---+   +----+------+
+    contiguous, index arithmetic       scattered, joined by pointers
+   ```
+
+   | Point | Array | Linked list |
+   |---|---|---|
+   | Memory layout | Contiguous | Non-contiguous |
+   | Size | Static, fixed at declaration | Dynamic, changes at run time |
+   | Declaration | `int a[100];` | Nodes allocated with malloc / new |
+   | Access to element i | `O(1)` — base + i × size | `O(n)` — traverse from the head |
+   | Insert at beginning | O(n) | `O(1)` |
+   | Insert at end | O(1) if space remains | O(1) with a tail pointer, else O(n) |
+   | Delete from beginning | O(n) | `O(1)` |
+   | Search, unsorted | O(n) | O(n) |
+   | Search, sorted | `O(log n)` binary search | O(n); binary search impossible |
+   | Extra memory | None | 1 pointer per node (singly), 2 (doubly) |
+   | Memory wastage | Unused declared slots | None |
+   | Cache locality | `Excellent` | Poor |
+   | Resizing | Reallocate and copy everything | Not required |
+   | Merging two structures | Copy all elements, O(n) | Relink a pointer, O(1) |
+   | Ease of coding | Simple | Pointer handling; leaks and dangling pointers possible |
+
+   Contrast in one operation each
+   ```
+   Insert 5 at the front of [10, 20, 30, 40]
+
+   ARRAY:        shift 40, 30, 20, 10 one place right, then write 5 -> 4 moves, O(n)
+   LINKED LIST:  new->next = head ; head = new                        -> 2 steps, O(1)
+
+
+   Read the 3rd element
+
+   ARRAY:        a[2] -> immediate                                     O(1)
+   LINKED LIST:  head -> n1 -> n2 -> n3, then read                     O(n)
+   ```
+
+   Similarities
+   - Both are `linear` data structures storing a sequence of elements in order.
+   - Both support traversal, insertion, deletion and search.
+   - Both can implement stacks and queues.
+
+   Choosing between them
+   - Use an `array` for a known, stable size with frequent random access — lookup tables, matrices, sorting with binary search.
+   - Use a `linked list` for an unpredictable size with frequent insertion and deletion, especially at the front — queues, undo stacks, hash-table chaining, graph adjacency lists.
+
 10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851-852 (ET: N/A)]*
+
+    Answer:
+
+    C program — recursive reverse printing
+    ```c
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    struct Node {
+        int data;
+        struct Node *next;
+    };
+
+    // Recursively prints the list in reverse order
+    void printReverse(struct Node *head) {
+        if (head == NULL)            // base case: end of the list
+            return;
+
+        printReverse(head->next);    // 1. first go all the way to the end
+        printf("%d", head->data);    // 2. print on the way back
+        if (head->next != NULL) printf(" > ");   // separator, not after the last
+    }
+
+    struct Node* newNode(int v) {
+        struct Node *n = malloc(sizeof(struct Node));
+        n->data = v;
+        n->next = NULL;
+        return n;
+    }
+
+    int main(void) {
+        struct Node *head = newNode(1);
+        head->next = newNode(2);
+        head->next->next = newNode(3);
+        head->next->next->next = newNode(4);
+
+        printReverse(head);          // 4 > 3 > 2 > 1
+        printf("\n");
+        return 0;
+    }
+    ```
+
+    Output
+    ```
+    Input : 1 > 2 > 3 > 4
+    Output: 4 > 3 > 2 > 1
+    ```
+
+    How the recursion works
+    - The key idea is that the `print statement comes after the recursive call`. The function dives all the way to the end of the list first, and only prints as the calls unwind — which produces reverse order.
+    ```
+    printReverse(1) -> calls printReverse(2)
+                         -> calls printReverse(3)
+                              -> calls printReverse(4)
+                                   -> calls printReverse(NULL) -> returns
+                                   prints 4
+                              prints 3
+                         prints 2
+                    prints 1
+
+    Output: 4 3 2 1
+    ```
+    - Placing `printf` `before` the recursive call would print 1 2 3 4 — the normal forward order. That single line's position is the whole trick.
+
+    Java version
+    ```java
+    class Node {
+        int data; Node next;
+        Node(int d) { data = d; }
+    }
+
+    public class ReverseList {
+        static void printReverse(Node head) {
+            if (head == null) return;
+            printReverse(head.next);
+            System.out.print(head.data + " ");
+        }
+        public static void main(String[] args) {
+            Node head = new Node(1);
+            head.next = new Node(2);
+            head.next.next = new Node(3);
+            head.next.next.next = new Node(4);
+            printReverse(head);        // 4 3 2 1
+        }
+    }
+    ```
+
+    Python version
+    ```python
+    class Node:
+        def __init__(self, data):
+            self.data = data
+            self.next = None
+
+    def print_reverse(head):
+        if head is None:
+            return
+        print_reverse(head.next)
+        print(head.data, end=' ')
+
+    head = Node(1); head.next = Node(2)
+    head.next.next = Node(3); head.next.next.next = Node(4)
+    print_reverse(head)                # 4 3 2 1
+    ```
+
+    Complexity
+    - `Time O(n)` — every node is visited once.
+    - `Space O(n)` for the recursion stack. For a very long list this risks stack overflow, so an iterative alternative would push the values onto an explicit stack and then pop them.
+    - Note the difference between `printing` in reverse, which does not change the list, and actually `reversing` the list, which requires relinking every pointer and can be done iteratively in O(1) extra space.
 
 11. **(a) What are the differences between linked list and array data structure?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Array | Linked list |
+    |---|---|---|
+    | Memory allocation | `Contiguous` — one continuous block | `Non-contiguous` — scattered nodes joined by pointers |
+    | Size | Static; fixed when declared | Dynamic; grows and shrinks at run time |
+    | Allocation time | Compile time (static arrays) | Run time, using malloc or new |
+    | Access to element i | `O(1)` — base address + i × size | `O(n)` — walk from the head |
+    | Insert or delete at the front | O(n) — every element shifts | `O(1)` |
+    | Insert or delete in the middle | O(n) — shifting | O(1) once the position is known |
+    | Insert or delete at the end | O(1) if space remains | O(1) with a tail pointer, else O(n) |
+    | Search, unsorted | O(n) | O(n) |
+    | Search, sorted | `O(log n)` binary search | O(n); binary search impossible |
+    | Extra memory per element | None | 1 pointer (singly), 2 (doubly) |
+    | Memory wastage | Unused declared slots are wasted | None — exactly what is used |
+    | Cache performance | `Excellent`; neighbours share cache lines | Poor; every hop may be a cache miss |
+    | Resizing | Reallocate and copy the whole array | Not needed |
+    | Merging two structures | O(n), copying | O(1), relinking one pointer |
+    | Implementation | Simple | More complex; leaks and dangling pointers possible |
+    | Best suited to | Fixed size, frequent random access, matrices, lookup tables | Unknown size, frequent insertion and deletion, stacks, queues, hash chaining |
+
+    Illustration
+    ```
+    ARRAY                            LINKED LIST
+
+      0    1    2    3               head
+    +----+----+----+----+             |
+    | 10 | 20 | 30 | 40 |             v
+    +----+----+----+----+     +----+---+  +----+---+  +----+------+
+     1000 1004 1008 1012      | 10 | *-|->| 20 | *-|->| 30 | NULL |
+                              +----+---+  +----+---+  +----+------+
+    index arithmetic gives      must follow the chain from the head
+    instant access
+    ```
+
+    The trade-off in one sentence
+    - An array buys `fast access` at the cost of `expensive insertion`; a linked list buys `fast insertion` at the cost of `slow access`. Which is better depends entirely on which operation the program performs more often.
+
 12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
+
+    Answer: A linked list is better than an array for `Insert` and `Delete`, but `not` for `Search`.
+
+    Insert — `linked list is better`
+    - Inserting at the beginning of a linked list is `O(1)`: create the node, set `new->next = head`, then `head = new`. Two assignments, nothing else moves.
+    - Inserting at the beginning of an array is `O(n)`: every existing element must shift one place to the right to make room.
+    - Inserting in the middle is O(1) in a linked list once the position is known, against O(n) in an array.
+    - A linked list also never needs `resizing`. When an array fills up, a bigger block must be allocated and every element copied across.
+    ```
+    Insert 5 at the front of [10, 20, 30, 40]
+
+    ARRAY:       shift 40, 30, 20, 10 right, then write 5   -> 4 moves,  O(n)
+    LINKED LIST: new->next = head ; head = new              -> 2 steps,  O(1)
+    ```
+
+    Delete — `linked list is better`
+    - Deleting the first element of a linked list is `O(1)`: `head = head->next`, then free the old node.
+    - Deleting the first element of an array is `O(n)`: every following element shifts left to close the gap.
+    - In a `doubly` linked list, deleting any node whose address is known is O(1), because the node already knows its predecessor.
+
+    Search — `array is better`
+    - An array gives `O(1)` random access by index, so a `sorted` array can be searched with binary search in `O(log n)`.
+    - A linked list has no random access. Reaching the middle element already costs O(n), so binary search cannot be applied at all; searching is always `O(n)` even when the list is sorted.
+    - Arrays also have far better `cache locality`, so even an O(n) linear scan of an array is typically several times faster in practice than the same scan of a linked list.
+
+    Summary
+
+    | Operation | Array | Linked list | Better |
+    |---|---|---|---|
+    | Insert at beginning | O(n) | O(1) | `Linked list` |
+    | Insert in middle (position known) | O(n) | O(1) | `Linked list` |
+    | Delete from beginning | O(n) | O(1) | `Linked list` |
+    | Delete a known node | O(n) | O(1) (doubly) | `Linked list` |
+    | Access element i | O(1) | O(n) | `Array` |
+    | Search, unsorted | O(n) | O(n) | Array (cache) |
+    | Search, sorted | O(log n) | O(n) | `Array` |
+
+    - Answer in one line: `Insert` and `Delete` favour the linked list; `Search` favours the array.
 
 13. **Linked list, doubly linked list and circular linked list explains with diagram.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1004-1005 (ET: DU)]*
 
+    Answer:
+
+    1. Singly linked list
+    - Each node has one pointer, `next`, holding the address of the following node. The last node's `next` is `NULL`.
+    - Traversal is `forward only`, starting from the head.
+    ```
+    head
+     |
+     v
+    +------+----+     +------+----+     +------+------+
+    |  10  | *--|---->|  20  | *--|---->|  30  | NULL |
+    +------+----+     +------+----+     +------+------+
+     data  next
+    ```
+    ```c
+    struct Node {
+        int data;
+        struct Node *next;
+    };
+    ```
+    - Advantages: least memory per node, simplest to implement.
+    - Disadvantages: no backward traversal; deleting a node requires finding its predecessor, which is O(n).
+    - Uses: stacks, queues, chaining in hash tables, adjacency lists.
+
+    2. Doubly linked list
+    - Each node has two pointers, `prev` and `next`, so traversal is possible in `both directions`. The head's `prev` and the tail's `next` are NULL.
+    ```
+            head                                          tail
+             |                                             |
+             v                                             v
+    +------+------+----+   +----+------+----+   +----+------+------+
+    | NULL |  10  | *--|<->| *  |  20  | *--|<->| *  |  30  | NULL |
+    +------+------+----+   +----+------+----+   +----+------+------+
+      prev  data  next
+    ```
+    ```c
+    struct DNode {
+        int data;
+        struct DNode *prev;
+        struct DNode *next;
+    };
+    ```
+    - Advantages: traversal in either direction; deleting a node whose address is known is `O(1)`; insertion before a node is easy.
+    - Disadvantages: one extra pointer per node; two pointers to maintain on every operation, so more chance of error.
+    - Uses: browser history (back and forward), undo/redo, LRU cache, text editors, music playlists.
+
+    3. Circular linked list
+    - The last node points back to the `first` node instead of NULL, so the list has no end. It exists in singly and doubly forms.
+
+    Circular singly linked list
+    ```
+    head
+     |
+     v
+    +------+----+     +------+----+     +------+----+
+    |  10  | *--|---->|  20  | *--|---->|  30  | *--|--+
+    +------+----+     +------+----+     +------+----+  |
+       ^                                                |
+       +------------------------------------------------+
+    ```
+
+    Circular doubly linked list
+    ```
+       +--------------------------------------------------+
+       |                                                  |
+       v                                                  |
+    +----+------+----+   +----+------+----+   +----+------+----+
+    | *  |  10  | *--|<->| *  |  20  | *--|<->| *  |  30  | *--|--+
+    +----+------+----+   +----+------+----+   +----+------+----+  |
+       ^                                                          |
+       +----------------------------------------------------------+
+    ```
+    - Advantages: traversal can begin at any node and continue indefinitely; the whole list is reachable from any single node; ideal for anything cyclic.
+    - Disadvantages: traversal must be stopped deliberately by comparing against the starting node, or it loops forever; slightly more complex insertion and deletion.
+    - Uses: round-robin CPU scheduling, music and video playlists on repeat, multiplayer turn management, buffering, the Fibonacci heap.
+
+    Comparison
+
+    | Point | Singly | Doubly | Circular |
+    |---|---|---|---|
+    | Pointers per node | 1 | 2 | 1 or 2 |
+    | Traversal | Forward only | Both directions | Endless, in one or both directions |
+    | Last node points to | NULL | NULL | The head |
+    | Memory per node | Least | Most | Same as its base type |
+    | Delete a known node | O(n) | O(1) | Depends on the base type |
+    | Reaching the tail from the head | O(n) | O(n), or O(1) with a tail pointer | O(n) |
+    | Typical use | Stacks, queues | Undo/redo, LRU | Round-robin scheduling, playlists |
+
 14. **In a doubly linked list write the function of Traversing from the tail.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
+    Answer: Traversing a doubly linked list from the tail is possible because every node stores a `prev` pointer holding the address of its predecessor. This is the operation a singly linked list cannot perform at all.
+
+    Node structure
+    ```c
+    struct Node {
+        int data;
+        struct Node *prev;
+        struct Node *next;
+    };
+    ```
+
+    Function — traversing backward from the tail
+    ```c
+    void traverseFromTail(struct Node *tail) {
+        struct Node *current = tail;
+
+        if (current == NULL) {
+            printf("List is empty\n");
+            return;
+        }
+
+        printf("Backward traversal: ");
+        while (current != NULL) {
+            printf("%d ", current->data);
+            current = current->prev;      // move towards the head
+        }
+        printf("\n");
+    }
+    ```
+
+    If only the head pointer is available
+    ```c
+    void traverseFromTail(struct Node *head) {
+        if (head == NULL) { printf("List is empty\n"); return; }
+
+        struct Node *current = head;
+
+        // Step 1: walk to the last node
+        while (current->next != NULL)
+            current = current->next;
+
+        // Step 2: now walk back using prev
+        printf("Backward traversal: ");
+        while (current != NULL) {
+            printf("%d ", current->data);
+            current = current->prev;
+        }
+        printf("\n");
+    }
+    ```
+
+    Illustration
+    ```
+            head                                          tail
+             |                                             |
+             v                                             v
+    +------+----+----+   +----+----+----+   +----+----+------+
+    | NULL | 10 | *--|<->| *  | 20 | *--|<->| *  | 30 | NULL |
+    +------+----+----+   +----+----+----+   +----+----+------+
+
+    Start at tail (30), print 30, follow prev
+       -> 20, print 20, follow prev
+       -> 10, print 10, follow prev
+       -> NULL, stop
+
+    Output: 30 20 10
+    ```
+
+    Pseudocode
+    ```
+    ALGORITHM traverseFromTail(tail)
+    BEGIN
+        current = tail
+        IF current = NULL THEN
+            PRINT "List is empty"
+            RETURN
+        END IF
+
+        WHILE current ≠ NULL DO
+            PRINT current.data
+            current = current.prev
+        END WHILE
+    END
+    ```
+
+    Complexity
+    - `O(n)` time if the tail pointer is already stored, `O(n)` for the walk plus `O(n)` to find the tail if it is not — still O(n) overall.
+    - `O(1)` extra space, since only one pointer variable is used.
+
+    Why this matters
+    - Keeping an explicit `tail` pointer makes backward traversal, and insertion at the end, immediate. Without it the list must be walked from the head first.
+    - In a `circular doubly` linked list the loop condition changes: traversal continues `until the starting node is reached again`, rather than until NULL.
+
 15. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.)
+
+    A linked list is a `linear data structure` in which the elements, called `nodes`, are stored at scattered memory locations and joined together by `pointers`. Each node contains two parts: the data, and the address of the next node.
+
+    Structure
+    ```c
+    struct Node {
+        int data;             // the value stored
+        struct Node *next;    // address of the next node
+    };
+    ```
+
+    Diagram
+    ```
+    head
+     |
+     v
+    +------+----+     +------+----+     +------+------+
+    |  10  | *--|---->|  20  | *--|---->|  30  | NULL |
+    +------+----+     +------+----+     +------+------+
+     data  next
+    ```
+    - The `head` pointer holds the address of the first node.
+    - The last node's pointer is `NULL`, marking the end of the list.
+
+    Key characteristics
+    - The memory is `not contiguous` — nodes may be anywhere in the heap.
+    - The size is `dynamic`: nodes are allocated and freed at run time, so no maximum has to be fixed in advance.
+    - Elements are reached only by following the chain from the head, so there is no random access.
+
+    Types
+    - `Singly linked list` — one pointer per node, forward traversal only.
+    - `Doubly linked list` — `prev` and `next` pointers, traversal in both directions.
+    - `Circular linked list` — the last node points back to the first, so there is no end.
+
+    Advantages
+    - Dynamic size with no wasted memory.
+    - Insertion and deletion at the beginning are `O(1)`, with no shifting of elements.
+    - Works even when memory is fragmented, since no contiguous block is needed.
+
+    Disadvantages
+    - No random access: reaching the nth element takes `O(n)`, and binary search is impossible.
+    - Extra memory for a pointer in every node.
+    - Poor cache performance, because the nodes are scattered.
+
+    Applications
+    - Implementing stacks and queues, chaining in hash tables, adjacency lists for graphs, undo/redo, browser history, music playlists, and the free-list used by dynamic memory allocators.
 
 ## Binary Search Tree (BST) (9)
 
