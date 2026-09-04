@@ -3317,13 +3317,376 @@
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+   Answer: A `multiplexer (MUX)` selects one of many inputs and sends it to a single output. A `demultiplexer (DEMUX)` takes one input and sends it to one of many outputs. They are exact opposites, and both are controlled by `select lines`.
+
+   Multiplexer — many to one
+   ```
+      I0 ---|\
+      I1 ---| \
+      I2 ---|  |--- Y        Y = one of I0..I3, chosen by S1 S0
+      I3 ---| /
+            |/
+             |  |
+            S1  S0
+
+      For n select lines : 2^n data inputs, 1 output
+   ```
+   ```
+   Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+   ```
+   ```
+   S1  S0 | Y
+   -------+----
+   0   0  | I0
+   0   1  | I1
+   1   0  | I2
+   1   1  | I3
+   ```
+
+   Demultiplexer — one to many
+   ```
+                 /|--- Y0
+                / |--- Y1
+      D -------|  |--- Y2      D goes to ONE output, chosen by S1 S0
+                \ |--- Y3
+                 \|
+             |  |
+            S1  S0
+
+      For n select lines : 1 input, 2^n outputs
+   ```
+   ```
+   Y0 = S1'S0'.D    Y1 = S1'S0.D    Y2 = S1S0'.D    Y3 = S1S0.D
+   ```
+
+   Difference
+
+   | Point | Multiplexer | Demultiplexer |
+   |---|---|---|
+   | Function | Many inputs to one output | One input to many outputs |
+   | Data lines | 2^n inputs, 1 output | 1 input, 2^n outputs |
+   | Also called | Data selector | Data distributor |
+   | Select lines | Choose which input passes | Choose which output receives |
+   | Common types | 2:1, 4:1, 8:1, 16:1 | 1:2, 1:4, 1:8, 1:16 |
+   | Converts | Parallel to serial | Serial to parallel |
+   | Equivalent to | — | A decoder with an enable line |
+
+   Practical applications
+   - `Multiplexer` — in a `telephone or data communication system`, many subscriber lines share one expensive trunk line. The MUX picks one channel at a time so a single cable carries traffic from many sources. Inside a CPU, a MUX selects which register feeds the ALU. A MUX is also used to implement any Boolean function directly from its truth table.
+   - `Demultiplexer` — at the far end of that same trunk line, the DEMUX sends each arriving channel back to the correct subscriber. In a computer, a DEMUX (used as a decoder) takes an address and enables exactly one memory chip or one output device.
+
+   ```mermaid
+   flowchart LR
+       A[4 sources] --> M[MUX]
+       M -->|one shared line| D[DEMUX]
+       D --> B[4 destinations]
+   ```
+   - The pair is always used together: the MUX combines many channels onto one line, and the DEMUX separates them again at the other end. Both must be given the same select value at the same time.
+
 2. **Design a Full Adder circuit using basic logic gates (AND, OR, NOT). Draw the truth table, derive the Boolean expressions for the Sum (S) and Carry (C_{out}), and draw the complete circuit diagram.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
+
+   Answer: A `full adder` adds three one-bit inputs — A, B and a carry from the previous stage, `Cin` — and produces two outputs, a `Sum` and a `carry out`, `Cout`.
+
+   Truth table
+   ```
+   A  B  Cin | Sum | Cout
+   ----------+-----+-----
+   0  0   0  |  0  |  0
+   0  0   1  |  1  |  0
+   0  1   0  |  1  |  0
+   0  1   1  |  0  |  1
+   1  0   0  |  1  |  0
+   1  0   1  |  0  |  1
+   1  1   0  |  0  |  1
+   1  1   1  |  1  |  1
+   ```
+
+   Boolean expressions from the truth table
+   ```
+   Sum  = Sigma m(1, 2, 4, 7)
+        = A'B'Cin + A'BCin' + AB'Cin' + ABCin
+
+   Cout = Sigma m(3, 5, 6, 7)
+        = A'BCin + AB'Cin + ABCin' + ABCin
+   ```
+
+   Simplify Sum
+   ```
+   Sum = Cin'(A'B + AB') + Cin(A'B' + AB)
+       = Cin'(A (+) B) + Cin(A (+) B)'
+       = A (+) B (+) Cin              a three-input XOR
+   ```
+   - Sum cannot be reduced further — it is 1 when an `odd` number of inputs are 1.
+
+   Simplify Cout with a K-map
+   ```
+      AB\Cin   0     1
+       00      0     0
+       01      0     1
+       11      1     1
+       10      0     1
+
+   Groups of two :
+      ABCin' + ABCin  -> AB
+      A'BCin + ABCin  -> BCin
+      AB'Cin + ABCin  -> ACin
+
+   Cout = AB + BCin + ACin
+   ```
+   - Cout is the `majority function`: it is 1 when two or more inputs are 1.
+
+   Circuit using AND, OR and NOT only
+   ```
+      A ---+--|>o-- A' --+
+           |             |---|‾‾\
+      B ---+--|>o-- B' --+---|    )--- A'B'Cin ---+
+           |             |   |___/                |
+      Cin -+-------------+                        |
+                                                  |
+           (three more 3-input AND gates, one per minterm of Sum)
+                                                  |---|\
+      A'BCin' --------------------------------+   |   | )--- Sum
+      AB'Cin' --------------------------------+---+   |/
+      ABCin   --------------------------------+      (4-input OR)
+
+
+      A ---+---|‾‾\
+           |   |    )--- A.B -----+
+      B ---+---|___/              |
+           |                      |
+      B ---+---|‾‾\               |---|\
+           |   |    )--- B.Cin ---+   | )--- Cout
+      Cin -+---|___/              |   |/
+           |                      |  (3-input OR)
+      A ---+---|‾‾\               |
+           |   |    )--- A.Cin ---+
+      Cin -+---|___/
+   ```
+
+   Simpler circuit using XOR
+   ```
+      A ---|\
+           | ))--- (A(+)B) ---|\
+      B ---|/                 | ))--- Sum = A (+) B (+) Cin
+                       Cin ---|/
+
+      A ---|‾‾\
+           |   )--- AB -------------|\
+      B ---|__/                     |
+                                    | )--- Cout = AB + Cin(A (+) B)
+      (A(+)B) ---|‾‾\               |
+                 |   )--- Cin(A(+)B)|/
+      Cin -------|__/
+   ```
+
+   Gate count
+   ```
+   Basic gates (AND-OR-NOT) : 3 inverters + 4 three-input AND + 3 two-input AND
+                              + 1 four-input OR + 1 three-input OR = 12 gates
+   With XOR gates           : 2 XOR + 2 AND + 1 OR = 5 gates
+   ```
+   - The XOR form is what is used in practice, because it is smaller and has a shorter carry path — and the carry path is what limits the speed of a multi-bit adder.
 
 3. **What is half adder?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: A `half adder` is a combinational circuit that adds `two` one-bit binary numbers and produces two outputs — a `Sum` and a `Carry`.
+
+   - It is called "half" because it cannot accept a carry coming in from a previous stage. That is why it can only be used for the least significant bit of an addition.
+
+   Truth table
+   ```
+   A  B | Sum | Carry
+   -----+-----+------
+   0  0 |  0  |  0
+   0  1 |  1  |  0
+   1  0 |  1  |  0
+   1  1 |  0  |  1        1 + 1 = 10 in binary : sum 0, carry 1
+   ```
+
+   Boolean expressions
+   ```
+   Sum   = A'B + AB' = A (+) B          XOR gate
+   Carry = A . B                         AND gate
+   ```
+
+   Logic circuit
+   ```
+      A ---+-----|\
+           |     | ))--- Sum = A (+) B
+      B ---+--+--|/
+           |  |
+           |  |
+           +--+--|‾‾\
+                 |    )--- Carry = A . B
+                 |___/
+   ```
+
+   Block diagram
+   ```
+           +-------------+
+      A ---|             |--- Sum
+           | Half Adder  |
+      B ---|             |--- Carry
+           +-------------+
+   ```
+
+   Points to note
+   - Only `two gates` are needed: one XOR and one AND.
+   - Built from NAND gates alone it takes 5 gates.
+   - Limitation: it has no `carry-in`, so half adders cannot be chained to add multi-bit numbers. Two half adders plus one OR gate make a `full adder`, which does accept a carry-in and can be chained.
+   - Uses: the least significant stage of an adder, incrementers, and inside ALUs.
+
 4. **Design a full adder using NAND gates only.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
+   Answer: A full adder needs `9 NAND gates`. The design is two NAND half adders plus one extra NAND to combine the carries.
+
+   Required functions
+   ```
+   Sum  = A (+) B (+) Cin
+   Cout = AB + Cin(A (+) B)
+   ```
+
+   Step 1 — XOR from 4 NAND gates
+   ```
+      A ---+-------------------|\
+           |                   | )o--- G2 = (A.X)' ---+
+           |         +---------|/                     |
+           +---|\    |                                |---|\
+               | )o--+--- X = (A.B)'                  |   | )o--- A (+) B
+           +---|/    |                                |---|/
+           |  (G1)   |                                |
+      B ---+---------+--------|\                      |
+                              | )o--- G3 = (B.X)' ----+
+      B ----------------------|/
+   ```
+
+   Step 2 — the complete 9-gate circuit
+   ```
+      First half adder  (gates 1-4)
+         A, B  ---->  H1 = A (+) B
+         the internal node X1 = (A.B)' is kept
+
+      Second half adder (gates 5-8)
+         H1, Cin ---->  Sum = H1 (+) Cin = A (+) B (+) Cin
+         the internal node X2 = (H1.Cin)' is kept
+
+      Carry combiner   (gate 9)
+         Cout = (X1 . X2)'
+   ```
+   ```
+           +---------------+                +---------------+
+      A ---| NAND half     |--- H1 ---------| NAND half     |--- Sum
+      B ---| adder (4 gts) |                | adder (4 gts) |
+           |               |--- X1 --+      |               |--- X2 --+
+           +---------------+         |      +---------------+         |
+                                     |   Cin ---^                     |
+                                     |                                |
+                                     +-------|\                       |
+                                             | )o--- Cout             |
+                                     +-------|/                       |
+                                     |      (gate 9)                  |
+                                     +--------------------------------+
+   ```
+
+   Why gate 9 gives the correct carry
+   ```
+      X1 = (A.B)'         so  X1' = A.B
+      X2 = (H1.Cin)'      so  X2' = (A (+) B).Cin
+
+      Cout = (X1 . X2)' = X1' + X2'          De Morgan
+           = A.B + (A (+) B).Cin             the standard carry expression
+   ```
+
+   Verification
+   ```
+   A  B  Cin | H1=A(+)B | X1=(AB)' | X2=(H1.Cin)' | Sum | Cout=(X1.X2)'
+   ----------+----------+----------+--------------+-----+--------------
+   0  0   0  |    0     |    1     |      1       |  0  |      0
+   0  0   1  |    0     |    1     |      1       |  1  |      0
+   0  1   0  |    1     |    1     |      1       |  1  |      0
+   0  1   1  |    1     |    1     |      0       |  0  |      1
+   1  0   0  |    1     |    1     |      1       |  1  |      0
+   1  0   1  |    1     |    1     |      0       |  0  |      1
+   1  1   0  |    0     |    0     |      1       |  0  |      1
+   1  1   1  |    0     |    0     |      1       |  1  |      1
+   ```
+   - The Sum and Cout columns match the full adder truth table exactly.
+
+   - Points to note: the trick that saves gates is `reusing the internal NAND node` of each half adder instead of building a separate OR gate. A naive design — build XOR, AND and OR separately from NAND — needs far more than 9 gates.
+
 5. **Design a full adder using two half adders and an OR gate?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
+
+   Answer: A `full adder` adds three bits — A, B and `Cin` — giving a `Sum` and a `Cout`. A `half adder` adds only two bits. Two half adders and one OR gate build a full adder.
+
+   Half adder recap
+   ```
+   Sum   = A (+) B          XOR gate
+   Carry = A . B            AND gate
+   ```
+
+   Construction
+   ```
+           +-------------+                 +-------------+
+      A ---|   Half      |--- S1 ----------|   Half      |--- Sum
+           |   Adder 1   |                 |   Adder 2   |
+      B ---|             |--- C1 --+  Cin -|             |--- C2 --+
+           +-------------+         |       +-------------+         |
+                                   |                               |
+                                   +----------|\                   |
+                                              | )--- Cout          |
+                                   +----------|/                   |
+                                   |         (OR)                  |
+                                   +-------------------------------+
+   ```
+   - Half adder 1 adds A and B, giving `S1 = A (+) B` and `C1 = A.B`.
+   - Half adder 2 adds S1 and Cin, giving `Sum = S1 (+) Cin` and `C2 = S1.Cin`.
+   - The OR gate combines the two carries: `Cout = C1 + C2`.
+
+   Gate-level view
+   ```
+      A ---|\                    S1
+           | ))-----+------------|\
+      B ---|/       |            | ))--- Sum = A (+) B (+) Cin
+                    |    Cin ----|/
+                    |     |
+                    |     |
+                    +--|‾‾\
+                       |    )--- C2 = S1.Cin ---|\
+      Cin -------------|__/                     | )--- Cout
+                                                |/
+      A ---|‾‾\                                 |
+           |    )--- C1 = A.B --------------- --+
+      B ---|__/
+   ```
+
+   Proof of the expressions
+   ```
+   Sum  = S1 (+) Cin = (A (+) B) (+) Cin = A (+) B (+) Cin        correct
+
+   Cout = C1 + C2
+        = A.B + (A (+) B).Cin
+        = A.B + (A'B + AB').Cin
+        = AB + A'BCin + AB'Cin
+        = AB + BCin + ACin                                        correct
+   ```
+   - The last step uses `AB + A'BCin = B(A + A'Cin) = B(A + Cin)`, giving `AB + BCin`, and the same for A.
+
+   Verification
+   ```
+   A  B  Cin | S1 | C1 | Sum | C2 | Cout = C1+C2
+   ----------+----+----+-----+----+-------------
+   0  0   0  | 0  | 0  |  0  | 0  |      0
+   0  0   1  | 0  | 0  |  1  | 0  |      0
+   0  1   0  | 1  | 0  |  1  | 0  |      0
+   0  1   1  | 1  | 0  |  0  | 1  |      1
+   1  0   0  | 1  | 0  |  1  | 0  |      0
+   1  0   1  | 1  | 0  |  0  | 1  |      1
+   1  1   0  | 0  | 1  |  0  | 0  |      1
+   1  1   1  | 0  | 1  |  1  | 0  |      1
+   ```
+   - Matches the full adder truth table exactly.
+
+   - Point worth noting: `C1 and C2 can never both be 1`, so the OR gate could equally be an XOR gate. C1 = 1 needs A = B = 1, which makes S1 = 0 and therefore C2 = 0.
 
 6. **Multiplexing:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 ```
@@ -3339,39 +3702,1165 @@
                 S_1 S_0
 ```
 
+   Answer: The circuit is a `4x1 multiplexer` with
+   ```
+      S1 = B  ,  S0 = C          (the two selection lines)
+      I0 = 0
+      I1 = 1
+      I2 = A'      (A through an inverter)
+      I3 = A'
+   ```
+
+   The general 4x1 MUX equation
+   ```
+   F = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+   ```
+
+   Substituting the given connections
+   ```
+   F = B'C'.(0) + B'C.(1) + BC'.(A') + BC.(A')
+
+     = 0 + B'C + A'BC' + A'BC
+
+     = B'C + A'B(C' + C)
+
+     = B'C + A'B                    since C' + C = 1
+   ```
+   ```
+   F(A, B, C) = B'C + A'B
+   ```
+
+   Truth table
+   ```
+   A  B  C | selected input | F
+   --------+----------------+---
+   0  0  0 | I0 = 0         | 0
+   0  0  1 | I1 = 1         | 1
+   0  1  0 | I2 = A' = 1    | 1
+   0  1  1 | I3 = A' = 1    | 1
+   1  0  0 | I0 = 0         | 0
+   1  0  1 | I1 = 1         | 1
+   1  1  0 | I2 = A' = 0    | 0
+   1  1  1 | I3 = A' = 0    | 0
+   ```
+   ```
+   F = Sigma m(1, 2, 3, 5)
+   ```
+
+   Check against the simplified expression
+   ```
+   B'C  is 1 at rows 001 and 101  -> m1, m5
+   A'B  is 1 at rows 010 and 011  -> m2, m3
+
+   F = m1 + m2 + m3 + m5           matches the table
+   ```
+
+   - How to read any MUX-based circuit: the `select lines carry the higher-order variables`, and the data inputs are the residues of the function for each select combination — 0, 1, the remaining variable, or its complement. Writing the four residues down and expanding the standard MUX equation gives the function in one step. <!-- verify -->
+
 7. **Truth Table from the following circuit (2-bit input A, B full adder with carry bit C_{in}).** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 314 (ET: N/A)]*
+
+   Answer: A `full adder` adds three one-bit inputs — A, B and the carry from the previous stage, `Cin` — and produces a `Sum` and a `carry out`, `Cout`.
+
+   Circuit
+   ```
+      A ---|\                    S1
+           | ))-----+------------|\
+      B ---|/       |            | ))--- Sum
+                    |    Cin ----|/
+                    |     |
+                    +--|‾‾\
+                       |    )--- C2 ---|\
+      Cin -------------|__/            | )--- Cout
+                                       |/
+      A ---|‾‾\                        |
+           |    )--- C1 ---------------+
+      B ---|__/
+   ```
+
+   Boolean expressions
+   ```
+   Sum  = A (+) B (+) Cin
+   Cout = A.B + B.Cin + A.Cin
+   ```
+
+   Truth table
+   ```
+   A  B  Cin | A+B+Cin | Sum | Cout   | meaning
+   ----------+---------+-----+--------+-------------------
+   0  0   0  |    0    |  0  |   0    | 0 = binary 00
+   0  0   1  |    1    |  1  |   0    | 1 = binary 01
+   0  1   0  |    1    |  1  |   0    | 1 = binary 01
+   0  1   1  |    2    |  0  |   1    | 2 = binary 10
+   1  0   0  |    1    |  1  |   0    | 1 = binary 01
+   1  0   1  |    2    |  0  |   1    | 2 = binary 10
+   1  1   0  |    2    |  0  |   1    | 2 = binary 10
+   1  1   1  |    3    |  1  |   1    | 3 = binary 11
+   ```
+
+   How to read it
+   - The right-hand column shows what the circuit is actually doing: it counts how many of the three inputs are 1 and writes that count as a two-bit number, `Cout Sum`.
+   - `Sum` is 1 when an `odd` number of inputs are 1 — that is exactly the three-input XOR.
+   - `Cout` is 1 when `two or more` inputs are 1 — the majority function.
+
+   Minterm form
+   ```
+   Sum  = Sigma m(1, 2, 4, 7)
+   Cout = Sigma m(3, 5, 6, 7)
+   ```
+
+   - Point worth noting: `n` full adders chained together, each one's Cout feeding the next one's Cin, form an `n-bit ripple carry adder`. The carry has to travel through every stage, which is why the ripple adder is slow and why carry-look-ahead adders were invented.
 
 8. **একটি 2:4 ডিকোডার ও একটি OR গেট ব্যবহার করে একটি হাফ এডার ডিজাইন কর।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
 
+   Answer: (Answered in English, as required for IT topics.) A `half adder` adds two bits A and B, producing
+   ```
+   Sum   = A (+) B = A'B + AB'   = Sigma m(1, 2)
+   Carry = A . B                  = Sigma m(3)
+   ```
+
+   A `2:4 decoder` takes 2 inputs and activates exactly one of its 4 outputs — each output is one minterm of the two inputs.
+   ```
+      A  B | D0    D1    D2    D3
+      -----+-----------------------
+      0  0 |  1     0     0     0        D0 = A'B'
+      0  1 |  0     1     0     0        D1 = A'B
+      1  0 |  0     0     1     0        D2 = AB'
+      1  1 |  0     0     0     1        D3 = AB
+   ```
+
+   Design
+   - Since the decoder already produces every minterm, the function is built simply by OR-ing the minterms it needs.
+   ```
+   Sum   = m1 + m2 = D1 + D2        -> one OR gate
+   Carry = m3      = D3             -> taken directly, no gate needed
+   ```
+
+   Circuit
+   ```
+                +-----------------+
+                |                 |--- D0 = A'B'   (not used)
+      A --------|                 |
+                |   2:4 Decoder   |--- D1 = A'B  ---+
+      B --------|                 |                 |---|\
+                |                 |--- D2 = AB'  ---+   | )--- Sum
+                |                 |                     |/
+                |                 |--- D3 = AB  ------------- Carry
+                +-----------------+
+   ```
+
+   Verification
+   ```
+   A  B | D0 D1 D2 D3 | Sum = D1+D2 | Carry = D3
+   -----+-------------+-------------+-----------
+   0  0 |  1  0  0  0 |      0      |     0
+   0  1 |  0  1  0  0 |      1      |     0
+   1  0 |  0  0  1  0 |      1      |     0
+   1  1 |  0  0  0  1 |      0      |     1
+   ```
+   - This matches the half adder truth table exactly.
+
+   - Points to note: a decoder is a `minterm generator`, so any combinational function of n variables can be built from an n-to-2^n decoder plus one OR gate per output. Only `one OR gate` was needed here because the Carry is a single minterm.
+   - If the decoder has `active-low` outputs, a NAND gate is used in place of the OR gate.
+
 9. **Design 6 \times 1 MUX by using 2 \times 1 MUX** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 460 (ET: BUET)]*
+
+   Answer: A `6x1 MUX` selects one of six inputs. It needs `3 select lines` (since 2^2 = 4 is too few and 2^3 = 8 covers 6), of which two combinations stay unused.
+
+   Requirement
+   ```
+      Inputs      : I0 I1 I2 I3 I4 I5
+      Select lines: S2 S1 S0
+      Output      : Y
+   ```
+
+   Design using a tree of 2x1 MUX gates
+   ```
+   Stage 1 : pair the inputs, both controlled by S0
+   Stage 2 : pair those results, controlled by S1
+   Stage 3 : pick between the two halves, controlled by S2
+   ```
+   ```
+      I0 ---|\
+            | M1 |--- P0 ---|\
+      I1 ---|/              | M4 |--- Q0 ---|\
+             S0             |/               |
+      I2 ---|\              S1               | M6 |--- Y
+            | M2 |--- P1 ---|                |/
+      I3 ---|/                               |
+             S0                              |
+                                             |
+      I4 ---|\                               |
+            | M3 |--- Q1 --------------------+
+      I5 ---|/                              S2
+             S0
+   ```
+   - `M1, M2, M3` are stage-1 2x1 MUX gates, all selected by `S0`.
+   - `M4` is a 2x1 MUX selected by `S1`, choosing between P0 and P1.
+   - `M6` is the final 2x1 MUX selected by `S2`, choosing between Q0 (the first four inputs) and Q1 (the last two).
+
+   Selection table
+   ```
+   S2 S1 S0 | selected input
+   ---------+---------------
+    0  0  0 |   I0
+    0  0  1 |   I1
+    0  1  0 |   I2
+    0  1  1 |   I3
+    1  x  0 |   I4
+    1  x  1 |   I5
+   ```
+   - When `S2 = 1`, S1 is a don't-care, because only I4 and I5 remain and S0 alone distinguishes them.
+
+   Gate count
+   ```
+      Stage 1 : 3 MUX  (M1, M2, M3)
+      Stage 2 : 1 MUX  (M4)
+      Stage 3 : 1 MUX  (M6)
+      -----------------------
+      Total   : 5 two-to-one multiplexers
+   ```
+
+   - General rule: an `N x 1` MUX built from 2x1 MUX gates needs `N - 1` of them, so 6 - 1 = 5, which matches.
+   - The same tree, extended by one more 2x1 MUX in stage 2, gives a full 8x1 MUX using 7 two-to-one multiplexers.
 
 10. **What is Half Adder circuit? Expalin with block diagram with logic circuit.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 497 (ET: N/A)]*
 
+    Answer: A `half adder` is a combinational circuit that adds two one-bit binary numbers A and B, producing a `Sum` bit and a `Carry` bit.
+
+    - It is called "half" because it has no input for a carry coming from the previous stage. Two half adders plus an OR gate make a `full adder`, which does have one.
+
+    Truth table
+    ```
+    A  B | Sum | Carry
+    -----+-----+------
+    0  0 |  0  |  0
+    0  1 |  1  |  0
+    1  0 |  1  |  0
+    1  1 |  0  |  1        1 + 1 = 10 in binary
+    ```
+
+    Boolean expressions
+    ```
+    Sum   = A'B + AB' = A (+) B          XOR gate
+    Carry = A . B                         AND gate
+    ```
+
+    Block diagram
+    ```
+            +-------------------+
+       A ---|                   |--- Sum   = A (+) B
+            |    Half Adder     |
+       B ---|                   |--- Carry = A . B
+            +-------------------+
+    ```
+
+    Logic circuit
+    ```
+       A ---+-----|\
+            |     | ))--- Sum = A (+) B
+       B ---+--+--|/
+            |  |
+            +--+--|‾‾\
+                  |    )--- Carry = A . B
+                  |___/
+    ```
+
+    Implementation with basic gates only (no XOR available)
+    ```
+       A ---|>o--- A' ---|‾‾\
+                         |    )--- A'B ---|\
+       B ---------------|__/               | )--- Sum
+                                           |/
+       A ---------------|‾‾\               |
+                        |    )--- AB' -----+
+       B ---|>o--- B' --|__/
+
+       A ---|‾‾\
+            |    )--- Carry
+       B ---|__/
+    ```
+
+    Points to note
+    - Only `two gates` are needed with XOR available: one XOR and one AND. From NAND gates alone it takes 5.
+    - Limitation: no carry-in, so half adders cannot be chained to add multi-bit numbers.
+    - Uses: the least significant stage of an adder, binary incrementers, and inside the ALU of a processor.
+
 11. **Desugn a logic circuit that counts the number of 1s in 3 inputs (A, B, C) and outputs a two-bit binary number representing that count of 1s?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 683 (ET: N/A)]*
+
+    Answer: The circuit counts how many of A, B, C are 1 and writes that count as a 2-bit number `Y1 Y0`. The count can be 0, 1, 2 or 3, which needs exactly two output bits.
+
+    Truth table
+    ```
+    A  B  C | count | Y1 | Y0
+    --------+-------+----+----
+    0  0  0 |   0   | 0  | 0
+    0  0  1 |   1   | 0  | 1
+    0  1  0 |   1   | 0  | 1
+    0  1  1 |   2   | 1  | 0
+    1  0  0 |   1   | 0  | 1
+    1  0  1 |   2   | 1  | 0
+    1  1  0 |   2   | 1  | 0
+    1  1  1 |   3   | 1  | 1
+    ```
+
+    Boolean expressions
+    ```
+    Y0 = Sigma m(1, 2, 4, 7)
+    Y1 = Sigma m(3, 5, 6, 7)
+    ```
+
+    Simplify Y0
+    ```
+    Y0 = A'B'C + A'BC' + AB'C' + ABC
+       = C'(A'B + AB') + C(A'B' + AB)
+       = C'(A (+) B) + C(A (+) B)'
+       = A (+) B (+) C                  three-input XOR
+    ```
+    - Y0 is 1 when an `odd` number of inputs are 1 — which is exactly the parity of the count.
+
+    Simplify Y1 with a K-map
+    ```
+       AB\C    0     1
+        00     0     0
+        01     0     1
+        11     1     1
+        10     0     1
+
+    Groups of two :  AB , BC , AC
+
+    Y1 = AB + BC + AC
+    ```
+    - Y1 is 1 when `two or more` inputs are 1 — the majority function.
+
+    Circuit
+    ```
+       A ---|\
+            | ))--- (A(+)B) ---|\
+       B ---|/                 | ))--- Y0 = A (+) B (+) C
+                         C ----|/
+
+       A ---|‾‾\
+            |    )--- AB ------+
+       B ---|__/               |
+                               |---|\
+       B ---|‾‾\               |   | )--- Y1 = AB + BC + AC
+            |    )--- BC ------+---|/
+       C ---|__/               |  (3-input OR)
+                               |
+       A ---|‾‾\               |
+            |    )--- AC ------+
+       C ---|__/
+    ```
+
+    Gate count
+    ```
+       2 XOR gates, 3 AND gates, 1 three-input OR gate = 6 gates
+    ```
+
+    - Points to note: this circuit is exactly a `full adder`, with Y0 as the Sum and Y1 as the carry out. Any circuit that counts the number of 1s in its inputs is called a `population counter`, and the 3-input case is the full adder. The 7-input version is used inside multiplier arrays.
 
 12. **একটি 4:1 Multiplexer এর Logic Diagram অঙ্কন করে দেখান?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
+    Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`. The select value decides which input reaches the output.
+
+    Boolean expression
+    ```
+    Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+    ```
+
+    Function table
+    ```
+    S1  S0 |  Y
+    -------+-----
+     0   0 |  I0
+     0   1 |  I1
+     1   0 |  I2
+     1   1 |  I3
+    ```
+
+    Logic diagram
+    ```
+       I0 -------------------|‾‾\
+       S1' ------------------|    )----- S1'S0'I0 ---+
+       S0' ------------------|___/                   |
+                                                     |
+       I1 -------------------|‾‾\                    |
+       S1' ------------------|    )----- S1'S0 I1 ---+
+       S0  ------------------|___/                   |
+                                                     |---|\
+       I2 -------------------|‾‾\                    |   | )--- Y
+       S1  ------------------|    )----- S1 S0'I2 ---+---|/
+       S0' ------------------|___/                   |  (4-input OR)
+                                                     |
+       I3 -------------------|‾‾\                    |
+       S1  ------------------|    )----- S1 S0 I3 ---+
+       S0  ------------------|___/
+
+
+       S1 ---|>o--- S1'          S0 ---|>o--- S0'
+    ```
+
+    Symbol
+    ```
+       I0 ---|\
+       I1 ---| \
+       I2 ---|  |--- Y
+       I3 ---| /
+             |/
+              |  |
+             S1  S0
+    ```
+
+    Components
+    ```
+       2 inverters        : produce S1' and S0'
+       4 three-input AND  : one per data input, enabled by its select combination
+       1 four-input OR    : combines them, since only one AND can be 1 at a time
+    ```
+
+    How it works
+    - The two inverters give both true and complemented select signals.
+    - Each AND gate is enabled by exactly one combination of `S1 S0`. For `S1S0 = 10`, only the third AND gate has both select conditions satisfied, so it passes I2 while the other three AND gates output 0.
+    - The OR gate therefore carries whichever single input was selected.
+
+    - Uses: data selection in a CPU, sharing one transmission line among several sources, parallel-to-serial conversion, and implementing any Boolean function of 3 variables directly from its truth table.
+
 13. **How do you design a logic circuit that has three inputs A, B, C and whose output will be high only when majority of the inputs are high. (a) Find truth table and (b) Show SOP and POS equation.** *[EGCB Assistant Engineer (CSE) 2022 compact it 715 (ET: BUET)]*
+
+    Answer: The output is high when a `majority` of the three inputs are high — that is, when two or three of them are 1.
+
+    (a) Truth table
+    ```
+    A  B  C | number of 1s | F
+    --------+--------------+---
+    0  0  0 |      0       | 0
+    0  0  1 |      1       | 0
+    0  1  0 |      1       | 0
+    0  1  1 |      2       | 1
+    1  0  0 |      1       | 0
+    1  0  1 |      2       | 1
+    1  1  0 |      2       | 1
+    1  1  1 |      3       | 1
+    ```
+
+    (b) SOP equation — collect the rows where F = 1
+    ```
+    F = Sigma m(3, 5, 6, 7)
+      = A'BC + AB'C + ABC' + ABC
+    ```
+
+    Simplify with a K-map
+    ```
+       AB\C    0     1
+        00     0     0
+        01     0     1
+        11     1     1
+        10     0     1
+
+    Groups of two :
+       ABC' + ABC  -> AB
+       A'BC + ABC  -> BC
+       AB'C + ABC  -> AC
+    ```
+    ```
+    F(SOP) = AB + BC + AC
+    ```
+
+    (b) POS equation — collect the rows where F = 0
+    ```
+    F = Pi M(0, 1, 2, 4)
+      = (A + B + C)(A + B + C')(A + B' + C)(A' + B + C)
+    ```
+
+    Simplify — group the maxterms in pairs
+    ```
+    (A + B + C)(A + B + C')  = A + B          (C disappears)
+    (A + B + C)(A + B' + C)  = A + C          (B disappears)
+    (A + B + C)(A' + B + C)  = B + C          (A disappears)
+    ```
+    - The maxterm `(A+B+C)` can be reused in each pair, since `X.X = X`.
+    ```
+    F(POS) = (A + B)(B + C)(A + C)
+    ```
+
+    Circuit from the SOP form
+    ```
+       A ---|‾‾\
+            |    )--- AB -----+
+       B ---|__/              |
+                              |---|\
+       B ---|‾‾\              |   | )--- F
+            |    )--- BC -----+---|/
+       C ---|__/              |  (3-input OR)
+                              |
+       A ---|‾‾\              |
+            |    )--- AC -----+
+       C ---|__/
+    ```
+
+    Check that the two forms agree
+    ```
+    A  B  C | AB+BC+AC | (A+B)(B+C)(A+C)
+    --------+----------+-----------------
+    0  1  1 |    1     |  1 . 1 . 1 = 1
+    1  0  1 |    1     |  1 . 1 . 1 = 1
+    1  1  0 |    1     |  1 . 1 . 1 = 1
+    0  0  1 |    0     |  0 . 1 . 1 = 0
+    ```
+    - Both forms need 3 two-input gates plus one 3-input gate, so neither is cheaper here.
+
+    - Point worth noting: this majority function is exactly the `carry-out` of a full adder, and it is also used in triple modular redundancy, where three copies of a circuit vote so that one failure is masked.
 
 14. **Design a 8\times 1 MUX and explain working procedure.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 720 (ET: N/A)]*
 
+    Answer: An `8x1 multiplexer` selects one of eight data inputs `I0-I7` and passes it to a single output `Y`. It needs `3 selection lines` `S2 S1 S0`, since 2^3 = 8.
+
+    Boolean expression
+    ```
+    Y = S2'S1'S0'.I0 + S2'S1'S0.I1 + S2'S1S0'.I2 + S2'S1S0.I3
+      + S2S1'S0'.I4  + S2S1'S0.I5  + S2S1S0'.I6  + S2S1S0.I7
+    ```
+
+    Function table
+    ```
+    S2 S1 S0 | Y
+    ---------+----
+     0  0  0 | I0
+     0  0  1 | I1
+     0  1  0 | I2
+     0  1  1 | I3
+     1  0  0 | I4
+     1  0  1 | I5
+     1  1  0 | I6
+     1  1  1 | I7
+    ```
+
+    Logic diagram
+    ```
+       I0 ---|‾‾\
+       S2'---|    )--- T0 ---+
+       S1'---|    |          |
+       S0'---|___/           |
+                             |
+       I1 ---|‾‾\            |
+       S2'---|    )--- T1 ---+
+       S1'---|    |          |
+       S0 ---|___/           |
+                             |
+            ( ... six more    |---|\
+              4-input AND     |   | )--- Y
+              gates, one per  +---|/
+              select value )  |   (8-input OR)
+                             |
+       I7 ---|‾‾\            |
+       S2 ---|    )--- T7 ---+
+       S1 ---|    |
+       S0 ---|___/
+
+       S2 ---|>o--- S2'      S1 ---|>o--- S1'      S0 ---|>o--- S0'
+    ```
+
+    Symbol
+    ```
+       I0 ---|\
+       I1 ---| \
+       I2 ---|  \
+       I3 ---|   |
+       I4 ---|   |--- Y
+       I5 ---|  /
+       I6 ---| /
+       I7 ---|/
+              |  |  |
+             S2 S1 S0
+    ```
+
+    Working procedure
+    - The three inverters produce both true and complemented forms of every select line, so six select signals are available.
+    - Each of the eight AND gates is wired to one unique combination of those signals. For `S2S1S0 = 101`, only the gate wired to `S2, S1', S0` has all three select conditions satisfied; it passes I5, and the other seven AND gates output 0.
+    - The OR gate therefore carries exactly one value — the selected input. Only one AND gate can ever be active, so no conflict is possible.
+    - With an `enable` input, the whole MUX can be switched off, and two 8x1 MUX chips plus one extra select line can be cascaded into a 16x1 MUX.
+
+    Components
+    ```
+       3 inverters
+       8 four-input AND gates
+       1 eight-input OR gate
+    ```
+
+    - Uses: selecting one of eight registers in a CPU, sharing one line among eight sources in communication, parallel-to-serial conversion, and implementing any Boolean function of 4 variables (three on the select lines, the fourth fed to the data inputs).
+
 15. **(a) Draw the logic diagram of Half-Adder the truth table of Full-Adder and use half Adder (S) and basic gates to build a Full-Adder.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
+
+    Answer: Half adder — logic diagram
+    - A half adder adds two bits A and B.
+    ```
+    Sum   = A (+) B          XOR gate
+    Carry = A . B            AND gate
+    ```
+    ```
+       A ---+-----|\
+            |     | ))--- Sum = A (+) B
+       B ---+--+--|/
+            |  |
+            +--+--|‾‾\
+                  |    )--- Carry = A . B
+                  |___/
+    ```
+    ```
+    A  B | Sum | Carry
+    -----+-----+------
+    0  0 |  0  |  0
+    0  1 |  1  |  0
+    1  0 |  1  |  0
+    1  1 |  0  |  1
+    ```
+
+    Full adder — truth table
+    - A full adder adds three bits: A, B and the carry-in `Cin`.
+    ```
+    A  B  Cin | Sum | Cout
+    ----------+-----+-----
+    0  0   0  |  0  |  0
+    0  0   1  |  1  |  0
+    0  1   0  |  1  |  0
+    0  1   1  |  0  |  1
+    1  0   0  |  1  |  0
+    1  0   1  |  0  |  1
+    1  1   0  |  0  |  1
+    1  1   1  |  1  |  1
+    ```
+    ```
+    Sum  = A (+) B (+) Cin
+    Cout = AB + BCin + ACin
+    ```
+
+    Full adder from two half adders and one OR gate
+    ```
+            +-------------+                 +-------------+
+       A ---|   Half      |--- S1 ----------|   Half      |--- Sum
+            |   Adder 1   |                 |   Adder 2   |
+       B ---|             |--- C1 --+  Cin -|             |--- C2 --+
+            +-------------+         |       +-------------+         |
+                                    |                               |
+                                    +----------|\                   |
+                                               | )--- Cout          |
+                                    +----------|/                   |
+                                    |         (OR)                  |
+                                    +-------------------------------+
+    ```
+    - Half adder 1 adds A and B, giving `S1 = A (+) B` and `C1 = A.B`.
+    - Half adder 2 adds S1 and Cin, giving `Sum = S1 (+) Cin` and `C2 = S1.Cin`.
+    - The basic OR gate combines the two carries: `Cout = C1 + C2`.
+
+    Proof
+    ```
+    Sum  = (A (+) B) (+) Cin = A (+) B (+) Cin              correct
+
+    Cout = A.B + (A (+) B).Cin
+         = AB + (A'B + AB')Cin
+         = AB + A'BCin + AB'Cin
+         = AB + BCin + ACin                                 correct
+    ```
+
+    - Point worth noting: `C1 and C2 can never both be 1` — C1 = 1 requires A = B = 1, which forces S1 = 0 and hence C2 = 0. So the OR gate could equally be an XOR gate without changing the result.
 
 16. **Circuit of the following figure uses 4:1 Multiplexer, what is output of the function f?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
 17. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927-928 (ET: CTI)]*
 
+    Answer: A `2-to-4 line decoder` takes 2 input lines and activates exactly one of its 4 output lines. Each output corresponds to one `minterm` of the inputs. The same circuit with an added data line works as a `1-to-4 demultiplexer`.
+
+    Truth table (with enable E)
+    ```
+    E  A  B | D0  D1  D2  D3
+    --------+----------------
+    0  x  x |  0   0   0   0        disabled, all outputs low
+    1  0  0 |  1   0   0   0        D0 = E.A'B'
+    1  0  1 |  0   1   0   0        D1 = E.A'B
+    1  1  0 |  0   0   1   0        D2 = E.AB'
+    1  1  1 |  0   0   0   1        D3 = E.AB
+    ```
+
+    Logic circuit
+    ```
+       A ---+---|>o--- A' ---+
+            |                |
+       B ---+---|>o--- B' ---+
+            |                |
+            |    A'  B'  E   |
+            |     |   |   |
+            |    |‾‾‾‾‾‾‾\
+            +----|        )------- D0 = E A'B'
+                 |_______/
+
+                 A'  B   E
+                 |   |   |
+                |‾‾‾‾‾‾‾\
+                |        )-------- D1 = E A'B
+                |_______/
+
+                 A   B'  E
+                 |   |   |
+                |‾‾‾‾‾‾‾\
+                |        )-------- D2 = E AB'
+                |_______/
+
+                 A   B   E
+                 |   |   |
+                |‾‾‾‾‾‾‾\
+                |        )-------- D3 = E AB
+                |_______/
+    ```
+
+    Components
+    ```
+       2 inverters            : produce A' and B'
+       4 three-input AND gates: one per output line
+    ```
+
+    Used as a 1-to-4 demultiplexer
+    - Replace the enable line `E` with the `data` line `D`. The select lines A and B then decide which output the data reaches.
+    ```
+       D0 = D.A'B'    D1 = D.A'B    D2 = D.AB'    D3 = D.AB
+    ```
+    - A decoder and a demultiplexer are therefore the `same circuit`; only the role of the extra input differs. That is why chips are sold as "decoder/demultiplexer".
+
+    Symbol
+    ```
+            +-----------------+
+       A ---|                 |--- D0
+            |   2-to-4        |--- D1
+       B ---|   Decoder       |--- D2
+            |                 |--- D3
+       E ---|                 |
+            +-----------------+
+    ```
+
+    Uses
+    - `Address decoding` — selecting one memory chip or one I/O device from an address.
+    - `Minterm generation` — any Boolean function can be built from a decoder plus one OR gate per output, since every minterm is already available.
+    - `Seven-segment display driving` — a 4-to-16 (or BCD-to-7-segment) decoder turns a binary digit into the segment pattern.
+    - Many real decoders have `active-low` outputs; then a NAND gate replaces each AND gate and the selected line goes to 0 while the rest stay at 1.
+
 18. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
+
+    Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`.
+
+    Boolean expression
+    ```
+    Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+    ```
+
+    Logic diagram
+    ```
+       I0 -------------------|‾‾\
+       S1' ------------------|    )----- S1'S0'I0 ---+
+       S0' ------------------|___/                   |
+                                                     |
+       I1 -------------------|‾‾\                    |
+       S1' ------------------|    )----- S1'S0 I1 ---+
+       S0  ------------------|___/                   |
+                                                     |---|\
+       I2 -------------------|‾‾\                    |   | )--- Y
+       S1  ------------------|    )----- S1 S0'I2 ---+---|/
+       S0' ------------------|___/                   |  (4-input OR)
+                                                     |
+       I3 -------------------|‾‾\                    |
+       S1  ------------------|    )----- S1 S0 I3 ---+
+       S0  ------------------|___/
+
+
+       S1 ---|>o--- S1'          S0 ---|>o--- S0'
+    ```
+
+    Components
+    ```
+       2 inverters         : produce S1' and S0'
+       4 three-input AND   : one per data input
+       1 four-input OR     : combines them
+    ```
+
+    Work of the two selection lines
+    - The selection lines form a `2-bit address` that names which data input is to be connected to the output. With 2 lines there are 2^2 = 4 addresses, which is exactly the number of data inputs.
+    ```
+    S1  S0 | address | selected input
+    -------+---------+---------------
+     0   0 |    0    |  I0
+     0   1 |    1    |  I1
+     1   0 |    2    |  I2
+     1   1 |    3    |  I3
+    ```
+    - `S1` is the more significant bit: it chooses between the lower pair (I0, I1) and the upper pair (I2, I3).
+    - `S0` is the less significant bit: within the chosen pair, it picks the first or the second.
+    - Each AND gate receives one unique combination of the true and complemented select signals, so exactly `one` AND gate is enabled at a time and the other three output 0. The OR gate therefore carries only the selected value, and no conflict can occur.
+    - The general rule: `n selection lines control 2^n data inputs`, so 3 lines give an 8:1 MUX and 4 lines a 16:1 MUX.
+
+    - Uses: choosing one register in a CPU, sharing one transmission line among several sources, parallel-to-serial conversion, and building any Boolean function of three variables straight from its truth table.
 
 19. **Half adder এর সাহায্যে Full adder বাস্তবায়ন করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) A `full adder` adds three bits — A, B and a carry-in `Cin` — while a `half adder` adds only two. Two half adders and one OR gate build a full adder.
+
+    Half adder recap
+    ```
+    Sum   = A (+) B          XOR gate
+    Carry = A . B            AND gate
+    ```
+
+    Construction
+    ```
+            +-------------+                 +-------------+
+       A ---|   Half      |--- S1 ----------|   Half      |--- Sum
+            |   Adder 1   |                 |   Adder 2   |
+       B ---|             |--- C1 --+  Cin -|             |--- C2 --+
+            +-------------+         |       +-------------+         |
+                                    |                               |
+                                    +----------|\                   |
+                                               | )--- Cout          |
+                                    +----------|/                   |
+                                    |         (OR)                  |
+                                    +-------------------------------+
+    ```
+
+    Step by step
+    ```
+    Half adder 1 :  inputs A, B
+                    S1 = A (+) B          the partial sum
+                    C1 = A . B            the carry produced by A + B
+
+    Half adder 2 :  inputs S1, Cin
+                    Sum = S1 (+) Cin = A (+) B (+) Cin
+                    C2  = S1 . Cin        the carry produced by adding Cin
+
+    OR gate      :  Cout = C1 + C2
+    ```
+
+    Gate-level circuit
+    ```
+       A ---|\                    S1
+            | ))-----+------------|\
+       B ---|/       |            | ))--- Sum = A (+) B (+) Cin
+                     |    Cin ----|/
+                     |     |
+                     +--|‾‾\
+                        |    )--- C2 ---|\
+       Cin -------------|__/            | )--- Cout
+                                        |/
+       A ---|‾‾\                        |
+            |    )--- C1 ---------------+
+       B ---|__/
+    ```
+
+    Verification
+    ```
+    A  B  Cin | S1 | C1 | Sum | C2 | Cout
+    ----------+----+----+-----+----+------
+    0  0   0  | 0  | 0  |  0  | 0  |  0
+    0  0   1  | 0  | 0  |  1  | 0  |  0
+    0  1   0  | 1  | 0  |  1  | 0  |  0
+    0  1   1  | 1  | 0  |  0  | 1  |  1
+    1  0   0  | 1  | 0  |  1  | 0  |  0
+    1  0   1  | 1  | 0  |  0  | 1  |  1
+    1  1   0  | 0  | 1  |  0  | 0  |  1
+    1  1   1  | 0  | 1  |  1  | 0  |  1
+    ```
+    - The Sum and Cout columns match the full adder truth table exactly.
+
+    - Point worth noting: `C1 and C2 are never both 1` at the same time, because C1 = 1 needs A = B = 1, which makes S1 = 0 and therefore C2 = 0. The OR gate could equally be an XOR gate.
+
 20. **(খ) Multiplexer কি? চিত্রসহ একটি Multiplexer এর গঠন ও কাজ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) A `multiplexer (MUX)` is a combinational circuit that has `many data inputs and one output`. Selection lines decide which input is connected to the output at that moment. It is also called a `data selector`.
+
+    - With `n` selection lines it can handle `2^n` data inputs, so 2 lines give a 4:1 MUX and 3 lines an 8:1 MUX.
+
+    Structure of a 4:1 MUX
+    ```
+       I0 -------------------|‾‾\
+       S1' ------------------|    )----- S1'S0'I0 ---+
+       S0' ------------------|___/                   |
+                                                     |
+       I1 -------------------|‾‾\                    |
+       S1' ------------------|    )----- S1'S0 I1 ---+
+       S0  ------------------|___/                   |
+                                                     |---|\
+       I2 -------------------|‾‾\                    |   | )--- Y
+       S1  ------------------|    )----- S1 S0'I2 ---+---|/
+       S0' ------------------|___/                   |  (4-input OR)
+                                                     |
+       I3 -------------------|‾‾\                    |
+       S1  ------------------|    )----- S1 S0 I3 ---+
+       S0  ------------------|___/
+
+       S1 ---|>o--- S1'          S0 ---|>o--- S0'
+    ```
+    ```
+    Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+    ```
+
+    Components
+    ```
+       2 inverters         : produce the complemented select signals
+       4 three-input AND   : one per data input
+       1 four-input OR     : combines them
+    ```
+
+    Working
+    ```
+    S1  S0 |  Y
+    -------+-----
+     0   0 |  I0
+     0   1 |  I1
+     1   0 |  I2
+     1   1 |  I3
+    ```
+    - Each AND gate is wired to one unique combination of the select signals. When `S1S0 = 10`, only the third AND gate has both select conditions met, so it passes I2 while the other three output 0.
+    - Since only one AND gate can be active at any time, the OR gate carries exactly the selected value and no conflict occurs.
+    - Many MUX chips also have an `enable` line that forces the output low, which allows several chips to be cascaded into a larger MUX.
+
+    Symbol
+    ```
+       I0 ---|\
+       I1 ---| \
+       I2 ---|  |--- Y
+       I3 ---| /
+             |/
+              |  |
+             S1  S0
+    ```
+
+    Applications
+    - Selecting one of several registers to feed the ALU inside a CPU.
+    - Sharing one expensive transmission line among many sources in communication.
+    - `Parallel to serial` conversion — cycle the select lines and the parallel inputs leave one after another.
+    - Implementing any Boolean function directly from its truth table, which is why a MUX is called a universal combinational circuit.
+    - The reverse circuit, the `demultiplexer`, takes one input to many outputs and is used at the far end of the shared line.
 
 21. **দুটি 1-bit full adder এর মাধ্যমে 2-bit full adder তৈরি করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
+    Answer: (Answered in English, as required for IT topics.) A 2-bit adder adds two 2-bit numbers `A1A0` and `B1B0`, with a carry-in `C0`, giving a 2-bit sum `S1S0` and a carry-out `C2`. Two 1-bit full adders chained together do this. The result is a `ripple carry adder`.
+
+    Connection
+    ```
+            A1 B1                          A0 B0
+             |  |                           |  |
+          +--v--v----+                   +--v--v----+
+          |   Full   |<--- C1 -----------|   Full   |<--- C0  (carry in, usually 0)
+     C2 <-|  Adder 1 |                   |  Adder 0 |
+          +----------+                   +----------+
+                |                              |
+                S1                             S0
+    ```
+    - `Full Adder 0` adds the least significant bits A0, B0 and C0. Its carry out `C1` becomes the carry `in` of the next stage.
+    - `Full Adder 1` adds A1, B1 and C1, giving S1 and the final carry out C2.
+    - The carry has to `ripple` from the right-hand stage to the left, which is why the circuit is named this way.
+
+    Equations
+    ```
+    Stage 0 :  S0 = A0 (+) B0 (+) C0
+               C1 = A0B0 + B0C0 + A0C0
+
+    Stage 1 :  S1 = A1 (+) B1 (+) C1
+               C2 = A1B1 + B1C1 + A1C1
+    ```
+
+    Worked example — 11 + 01 with C0 = 0
+    ```
+            A = 1 1   (3)
+            B = 0 1   (1)
+           ---------
+       result = 1 0 0 (4)
+
+    Stage 0 : A0=1, B0=1, C0=0  ->  S0 = 0 , C1 = 1
+    Stage 1 : A1=1, B1=0, C1=1  ->  S1 = 0 , C2 = 1
+
+       C2 S1 S0 = 1 0 0 = 4        correct
+    ```
+
+    Second example — 10 + 11
+    ```
+            A = 1 0   (2)
+            B = 1 1   (3)
+           ---------
+       result = 1 0 1 (5)
+
+    Stage 0 : 0 + 1 + 0  ->  S0 = 1 , C1 = 0
+    Stage 1 : 1 + 1 + 0  ->  S1 = 0 , C2 = 1
+
+       C2 S1 S0 = 1 0 1 = 5        correct
+    ```
+
+    Points to note
+    - The same idea extends directly: `n` full adders in a chain make an `n-bit ripple carry adder`. Four of them form the 7483 IC.
+    - The `drawback` is speed. Stage 1 cannot finish until stage 0's carry arrives, so the total delay grows with the number of bits. For a 32-bit adder this is unacceptable, which is why `carry look-ahead` adders compute all the carries in parallel from the equations
+    ```
+       Gi = AiBi  (generate)      Pi = Ai (+) Bi  (propagate)
+       Ci+1 = Gi + Pi.Ci
+    ```
+    - Setting `C0 = 1` turns the same circuit into a subtractor when the B inputs are complemented, since `A - B = A + B' + 1` in 2's complement.
+
 22. **চিত্রে প্রদর্শিত 7 segment display দেওয়া আছে এখন 7 ও 2 display এর জন্য কোন LED High হবে?** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
+    Answer: (Answered in English, as required for IT topics.) A `seven segment display` has seven LEDs named `a` to `g`. In a common-cathode display, a segment lights when its input is `HIGH (1)`.
+
+    Segment layout
+    ```
+             a
+          -------
+         |       |
+       f |       | b
+         |   g   |
+          -------
+         |       |
+       e |       | c
+         |       |
+          -------
+             d
+    ```
+
+    For the digit 7
+    ```
+             a
+          -------
+                 |
+                 | b
+                 |
+          (blank)
+                 |
+                 | c
+                 |
+          (blank)
+    ```
+    ```
+       HIGH (1) : a , b , c
+       LOW  (0) : d , e , f , g
+    ```
+    ```
+       a b c d e f g
+       1 1 1 0 0 0 0
+    ```
+
+    For the digit 2
+    ```
+             a
+          -------
+                 |
+                 | b
+             g   |
+          -------
+         |
+       e |
+         |
+          -------
+             d
+    ```
+    ```
+       HIGH (1) : a , b , d , e , g
+       LOW  (0) : c , f
+    ```
+    ```
+       a b c d e f g
+       1 1 0 1 1 0 1
+    ```
+
+    Full reference table (common cathode, active high)
+    ```
+    Digit | a  b  c  d  e  f  g
+    ------+---------------------
+      0   | 1  1  1  1  1  1  0
+      1   | 0  1  1  0  0  0  0
+      2   | 1  1  0  1  1  0  1
+      3   | 1  1  1  1  0  0  1
+      4   | 0  1  1  0  0  1  1
+      5   | 1  0  1  1  0  1  1
+      6   | 1  0  1  1  1  1  1
+      7   | 1  1  1  0  0  0  0
+      8   | 1  1  1  1  1  1  1
+      9   | 1  1  1  1  0  1  1
+    ```
+
+    Points to note
+    - The two digits share segments `a` and `b`. Digit 7 needs only three segments, the fewest of any digit except 1.
+    - In a `common anode` display the logic is reversed — a segment lights when its input is `LOW`, so the same digit patterns are inverted.
+    - A `BCD-to-seven-segment decoder` such as the 7447 or 7448 converts the 4-bit binary digit into these seven signals automatically, and a series resistor limits the current through each LED.
+
 23. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
+
+    Answer: The function is
+    ```
+    F(A, B, C, D) = Sigma m(0, 3, 4, 5, 6, 7)
+    ```
+    - The selection lines are `C` and `D` (S1 = C, S0 = D), so the data inputs of the 4x1 MUX must be functions of the remaining variables A and B.
+
+    Step 1 — truth table
+    ```
+    m   A B C D | F        m    A B C D | F
+    ------------+---       -------------+---
+     0  0 0 0 0 | 1         8   1 0 0 0 | 0
+     1  0 0 0 1 | 0         9   1 0 0 1 | 0
+     2  0 0 1 0 | 0        10   1 0 1 0 | 0
+     3  0 0 1 1 | 1        11   1 0 1 1 | 0
+     4  0 1 0 0 | 1        12   1 1 0 0 | 0
+     5  0 1 0 1 | 1        13   1 1 0 1 | 0
+     6  0 1 1 0 | 1        14   1 1 1 0 | 0
+     7  0 1 1 1 | 1        15   1 1 1 1 | 0
+    ```
+    - Every listed minterm has `A = 0`, so F is 0 whenever A = 1.
+
+    Step 2 — implementation table, grouped by the select value CD
+    ```
+       CD = 00 :  rows m0(A=0,B=0)=1 , m4(A=0,B=1)=1 , m8(A=1,B=0)=0 , m12(A=1,B=1)=0
+                  F = 1 exactly when A = 0            ->  I0 = A'
+
+       CD = 01 :  m1=0 , m5=1 , m9=0 , m13=0
+                  F = 1 only when A=0 and B=1          ->  I1 = A'B
+
+       CD = 10 :  m2=0 , m6=1 , m10=0 , m14=0
+                  F = 1 only when A=0 and B=1          ->  I2 = A'B
+
+       CD = 11 :  m3=1 , m7=1 , m11=0 , m15=0
+                  F = 1 exactly when A = 0            ->  I3 = A'
+    ```
+
+    Step 3 — the MUX connections
+    ```
+       I0 = A'       I1 = A'B       I2 = A'B       I3 = A'
+       S1 = C        S0 = D
+    ```
+
+    Circuit
+    ```
+       A ---|>o--- A' ---+-----------------|\
+                         |                 | I0
+                         |                 |
+       A' --|‾‾\         |                 |
+            |    )--- A'B ----------------| I1   4x1
+       B ---|__/         |                 |     MUX  |--- F
+                         |                 |
+            A'B ---------------------------| I2
+                         |                 |
+                         +-----------------| I3
+                                           |/
+                                            |  |
+                                            C  D
+                                           S1  S0
+    ```
+
+    Verification of the MUX equation
+    ```
+    F = C'D'.I0 + C'D.I1 + CD'.I2 + CD.I3
+      = C'D'.A' + C'D.A'B + CD'.A'B + CD.A'
+      = A'(C'D' + CD) + A'B(C'D + CD')
+      = A'.(C XNOR D) + A'B.(C XOR D)
+    ```
+    ```
+    Check m5 (A=0,B=1,C=0,D=1) : XNOR=0 , XOR=1 , A'B=1  ->  F = 0 + 1 = 1    correct
+    Check m2 (A=0,B=0,C=1,D=0) : XNOR=0 , XOR=1 , A'B=0  ->  F = 0 + 0 = 0    correct
+    Check m3 (A=0,B=0,C=1,D=1) : XNOR=1 , A'=1           ->  F = 1            correct
+    Check m9 (A=1,...)         : A'=0 everywhere         ->  F = 0            correct
+    ```
+
+    - Method to remember: put the `higher-order` variables on the select lines, split the truth table into one block per select value, and read off what the output does in terms of the remaining variables — it can only be `0`, `1`, a variable, or its complement. A 4x1 MUX can therefore realise any function of 3 variables directly, and many functions of 4 variables as here.
 
 ## Karnaugh Map (K-Map) (19)
 
