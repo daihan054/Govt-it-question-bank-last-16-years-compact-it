@@ -1140,4 +1140,40 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 458 (ET: BUET)]*
 
+   Answer:
+   - Let $f(x) = x^2 - 3$.
+   - Check interval endpoints:
+     - $f(1) = 1^2 - 3 = -2 < 0$
+     - $f(2) = 2^2 - 3 = 1 > 0$
+     - Since $f(1) \cdot f(2) < 0$, a root lies in $[1, 2]$.
+   - Bisection Method Iterations:
+     - Iteration 1: $c_1 = \frac{1 + 2}{2} = 1.5 \implies f(1.5) = 1.5^2 - 3 = -0.75 < 0$. Root in $[1.5, 2]$.
+     - Iteration 2: $c_2 = \frac{1.5 + 2}{2} = 1.75 \implies f(1.75) = 1.75^2 - 3 = 0.0625 > 0$. Root in $[1.5, 1.75]$.
+     - Iteration 3: $c_3 = \frac{1.5 + 1.75}{2} = 1.625 \implies f(1.625) = 1.625^2 - 3 = -0.3594 < 0$. Root in $[1.625, 1.75]$.
+     - Iteration 4: $c_4 = \frac{1.625 + 1.75}{2} = 1.6875 \implies f(1.6875) = -0.1523 < 0$. Root in $[1.6875, 1.75]$.
+     - Iteration 5: $c_5 = \frac{1.6875 + 1.75}{2} = 1.71875 \implies f(1.71875) = -0.0459 < 0$. Root in $[1.71875, 1.75]$.
+     - Iteration 6: $c_6 = \frac{1.71875 + 1.75}{2} = 1.734375 \approx 1.732$.
+   - Newton-Raphson Formula ($x_{n+1} = \frac{x_n^2 + 3}{2x_n}$ with $x_0 = 1.5$):
+     - $x_1 = 1.75$, $x_2 = 1.73214$.
+   - Answer: $x \approx 1.732$ (or $\sqrt{3}$)
+
 2. **(ক) কোন একটি সমীকরণের মূল নির্ণয়ের জন্য নিউমেরিক্যাল এনালাইসিসে ব্যবহৃত বিভিন্ন পদ্ধতির নাম লিখুন এবং বাইসেকশান পদ্ধতি ব্যবহার করে সমীকরণটির মূল নির্ণয়ের পদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
+
+   Answer:
+   - মূল নির্ণয়ে ব্যবহৃত প্রধান নিউমেরিক্যাল পদ্ধতিসমূহ:
+     - বাইসেকশন পদ্ধতি (Bisection Method)
+     - নিউটন-র‌্যাফসন পদ্ধতি (Newton-Raphson Method)
+     - রেগুলা-ফলসি / ফলস পজিশন পদ্ধতি (Regula-Falsi Method)
+     - সেকেন্ড পদ্ধতি (Secant Method)
+     - ফিক্সড পয়েন্ট ইটারেশন পদ্ধতি (Fixed Point Iteration Method)
+   - বাইসেকশন পদ্ধতির কার্যপ্রণালী:
+     - মূলনীতি: ইন্টারমিডিয়েট ভ্যালু থিওরেমের উপর প্রতিষ্ঠিত। যদি $f(x)$ অবিচ্ছিন্ন এবং $f(a) \cdot f(b) < 0$ হয়, তবে $[a, b]$ ব্যবধিতে অন্তত একটি মূল থাকে।
+     - ধাপ ১: প্রারম্ভিক সীমা $a$ এবং $b$ নির্ধারণ করা যেন $f(a) \cdot f(b) < 0$ হয়।
+     - ধাপ ২: ব্যবধির মধ্যবিন্দু নির্ণয়: $c = \frac{a + b}{2}$
+     - ধাপ ৩: $f(c)$ নির্ণয় করে শর্ত পরীক্ষা:
+       - যদি $f(c) = 0$ হয়, তবে $c$-ই নির্ণেয় মূল।
+       - যদি $f(a) \cdot f(c) < 0$ হয়, তবে পরবর্তী ব্যবধি হবে $[a, c]$ (অর্থাৎ $b = c$)।
+       - যদি $f(c) \cdot f(b) < 0$ হয়, তবে পরবর্তী ব্যবধি হবে $[c, b]$ (অর্থাৎ $a = c$)।
+     - ধাপ ৪: কাঙ্ক্ষিত নির্ভুলতা বা সহনশীলতা সীমা ($|b - a| < \epsilon$) অর্জিত না হওয়া পর্যন্ত ধাপ ২ ও ৩ এর পুনরাবৃত্তি করা।
+
+
