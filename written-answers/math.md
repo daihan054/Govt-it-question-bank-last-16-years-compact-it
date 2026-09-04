@@ -1028,9 +1028,60 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+   Answer:
+   - Total positions $= 7$ in a circle (numbered 1 to 7 clockwise).
+   - Step 1 (Seating layout):
+     - Place A at seat 1 $\implies \text{Cap}(A) = \text{Green}$.
+     - D sits 2 seats right (clockwise) of A $\implies \text{Seat 3} = D$.
+     - E sits between F and G with $\text{Cap}(E) = \text{Red} \implies$ E, F, G take consecutive seats $\{5, 6, 7\}$, so $\text{Seat 6} = E$, while F and G are at seats 5 and 7.
+     - C sits 2 seats left of B $\implies \text{Seat 4} = B$ and $\text{Seat 2} = C$ with $\text{Cap}(C) = \text{Blue}$.
+   - Step 2 (Cap color assignment with no adjacent same colors):
+     - Seat 1 (A): Green
+     - Seat 2 (C): Blue
+     - Seat 6 (E): Red $\implies$ adjacent seats 5 and 7 cannot be Red.
+     - Seat 7 is adjacent to Seat 1 (Green) and Seat 6 (Red) $\implies \text{Seat 7 (G)} = \text{Blue}$.
+     - Seat 5 is adjacent to Seat 6 (Red) $\implies \text{Seat 5 (F)} = \text{Green}$.
+     - Seat 4 (B) is adjacent to Seat 5 (Green) $\implies \text{Seat 4 (B)} = \text{Blue}$.
+     - Seat 3 (D) is between Seat 2 (Blue) and Seat 4 (Blue) $\implies \text{Seat 3 (D)} = \text{Red}$.
+   - Cap colors of everyone:
+     - A: Green
+     - B: Blue
+     - C: Blue
+     - D: Red
+     - E: Red
+     - F: Green
+     - G: Blue
+
 2. **Explain knight knave problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
 
+   Answer:
+   - The Knights and Knaves puzzle is a class of logical reasoning problems:
+     - Knight: Always tells the truth (statements are strictly True).
+     - Knave: Always lies (statements are strictly False).
+   - Solving Principle:
+     - Formulate propositional logic equations for each speaker's claim: A statement $S$ made by person $P$ means $P \leftrightarrow S$.
+     - Test each hypothesis (assume $P$ is Knight or Knave) and find the scenario that contains no logical contradictions.
+   - Example:
+     - Person A says: "At least one of us is a knave."
+     - If A were a knave, his statement would be false, implying neither is a knave (both are knights) — a contradiction.
+     - Thus, A is a Knight, and his statement is true, meaning person B must be a Knave.
+
 3. **Suppose You've [1-9] ordering number, put the appropriate number below this figure such as each side have 17 up.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+   Answer:
+   - Magic Triangle Problem: Placing numbers $1$ to $9$ on a triangle with 4 numbers on each of the 3 sides so that each side sums to $17$.
+   - Let the 3 vertex numbers be $v_1, v_2, v_3$:
+     $$\text{Sum of all 3 sides} = 3 \times 17 = 51$$
+     $$\text{Sum of numbers } 1 \text{ to } 9 = \frac{9 \times 10}{2} = 45$$
+     $$\text{Sum of 3 vertices } (v_1 + v_2 + v_3) = 51 - 45 = 6$$
+   - The only 3 distinct numbers from $\{1, \dots, 9\}$ summing to $6$ are $\{1, 2, 3\}$.
+   - Side configurations using remaining numbers $\{4, 5, 6, 7, 8, 9\}$:
+     - Side 1 (between vertices 1 and 2): $1 + 5 + 9 + 2 = 17$
+     - Side 2 (between vertices 2 and 3): $2 + 4 + 8 + 3 = 17$
+     - Side 3 (between vertices 3 and 1): $3 + 6 + 7 + 1 = 17$
+   - Vertices: $1, 2, 3$; Intermediate side pairs: $(5, 9)$, $(4, 8)$, and $(6, 7)$.
+
+
 
 ## Calculus & Integration (2)
 
