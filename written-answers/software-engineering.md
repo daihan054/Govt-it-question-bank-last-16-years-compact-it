@@ -6064,31 +6064,1471 @@
 
 1. An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a **Class Diagram** showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]
 
+   Answer: Class diagram
+   ```mermaid
+   classDiagram
+       class Customer {
+           -int customerId
+           -String name
+           -String email
+           +register()
+           +login()
+           +placeOrder()
+       }
+       class Order {
+           -int orderId
+           -Date orderDate
+           -double totalAmount
+           -String status
+           +calculateTotal()
+           +cancelOrder()
+       }
+       class PaymentMethod {
+           <<abstract>>
+           -int paymentId
+           -double amount
+           +pay()
+           +refund()
+       }
+       class CreditCard {
+           -String cardNumber
+           -Date expiryDate
+           -String cvv
+           +pay()
+           +validateCard()
+       }
+       class MobileBanking {
+           -String mobileNumber
+           -String provider
+           +pay()
+           +sendOtp()
+       }
+       Customer "1" --> "0..*" Order : places
+       Order "1" --> "1" PaymentMethod : paid by
+       PaymentMethod <|-- CreditCard
+       PaymentMethod <|-- MobileBanking
+   ```
+   ```
+      +---------------------+          +---------------------+
+      |      Customer       |  1    0..*|       Order        |
+      +---------------------+----------+---------------------+
+      | -customerId : int   |  places  | -orderId : int      |
+      | -name : String      |          | -orderDate : Date   |
+      | -email : String     |          | -totalAmount:double |
+      +---------------------+          | -status : String    |
+      | +register()         |          +---------------------+
+      | +login()            |          | +calculateTotal()   |
+      | +placeOrder()       |          | +cancelOrder()      |
+      +---------------------+          +---------------------+
+                                                 | 1
+                                                 | paid by
+                                                 | 1
+                                       +---------------------+
+                                       |  PaymentMethod      |
+                                       |   {abstract}        |
+                                       +---------------------+
+                                       | -paymentId : int    |
+                                       | -amount : double    |
+                                       +---------------------+
+                                       | +pay()              |
+                                       | +refund()           |
+                                       +---------------------+
+                                                /_\
+                                                 |  inheritance
+                                       +---------+---------+
+                                       |                   |
+                          +---------------------+  +---------------------+
+                          |    CreditCard       |  |   MobileBanking     |
+                          +---------------------+  +---------------------+
+                          | -cardNumber:String  |  | -mobileNumber:String|
+                          | -expiryDate : Date  |  | -provider : String  |
+                          | -cvv : String       |  +---------------------+
+                          +---------------------+  | +pay()              |
+                          | +pay()              |  | +sendOtp()          |
+                          | +validateCard()     |  +---------------------+
+                          +---------------------+
+   ```
+
+   Explanation
+   ```
+      NOTATION
+        -  private attribute      +  public method
+        ---------->               ASSOCIATION , with multiplicity
+        ------|>   /_\            INHERITANCE (generalisation)
+        {abstract}                an abstract class - cannot be
+                                  instantiated on its own
+   ```
+   - `Customer –– Order` is an `association` with multiplicity `1 to 0..*`: one customer may place many orders, and each order belongs to exactly one customer.
+   - `Order –– PaymentMethod` is an association `1 to 1`: each order is settled by one payment.
+   - `CreditCard` and `MobileBanking` `inherit` from `PaymentMethod`. Each overrides `pay()` with its own implementation — this is `polymorphism`: the Order calls `pay()` without knowing which kind of payment it holds.
+   - Making `PaymentMethod` `abstract` is the important design point. A new method — bKash, Nagad, cash on delivery — is added as a new subclass, and `Order` needs no change at all. That is the `open–closed principle`.
+
 2. Draw a Use Case Diagram for an Online Banking System with two actors: Customer and Bank Admin. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+   Answer: Use case diagram for an online banking system
+   ```
+      +==============================================================+
+      |                    ONLINE BANKING SYSTEM                     |
+      |                                                              |
+      |     (  Login  )                                              |
+      |                                                              |
+      |     (  Check Balance      )                                  |
+      |                                                              |
+      |     (  Transfer Funds     )                                  |
+      |                                                              |
+      |     (  Pay Bills         )                                   |
+      |                                                              |
+      |     (  View Statement    )                                   |
+      |                                                              |
+      |     (  Change Password   )                                   |
+      |                                                              |
+      |     (  Manage Accounts   )                                   |
+      |                                                              |
+      |     (  Approve Loan      )                                   |
+      |                                                              |
+      |     (  Generate Reports  )                                   |
+      |                                                              |
+      |     (  Block / Unblock Account )                             |
+      +==============================================================+
+
+           O                                              O
+          -|-   CUSTOMER                                 -|-  BANK ADMIN
+          / \                                            / \
+
+      CUSTOMER  ----> Login , Check Balance , Transfer Funds ,
+                      Pay Bills , View Statement , Change Password
+
+      BANK ADMIN ---> Login , Manage Accounts , Approve Loan ,
+                      Generate Reports , Block / Unblock Account
+   ```
+   ```mermaid
+   flowchart LR
+       C(("Customer")) --- UC1(["Login"])
+       C --- UC2(["Check Balance"])
+       C --- UC3(["Transfer Funds"])
+       C --- UC4(["Pay Bills"])
+       C --- UC5(["View Statement"])
+       A(("Bank Admin")) --- UC1
+       A --- UC6(["Manage Accounts"])
+       A --- UC7(["Approve Loan"])
+       A --- UC8(["Generate Reports"])
+       UC3 -.->|includes| UC9(["Verify OTP"])
+       UC4 -.->|includes| UC9
+   ```
+
+   The relationships shown
+   ```
+      ASSOCIATION      a plain line from an actor to a use case -
+                       "this actor performs this use case".
+
+      <<include>>      one use case ALWAYS uses another.
+                       Transfer Funds  <<include>>  Verify OTP
+                       Pay Bills       <<include>>  Verify OTP
+                       The included behaviour is mandatory and is
+                       factored out to avoid repeating it.
+
+      <<extend>>       OPTIONAL behaviour added under a condition.
+                       Transfer Funds  <<extend>>  Apply Charge
+                       (only when the transfer is to another bank)
+
+      GENERALISATION   an actor inherits another actor's use cases.
+                       Bank Admin could be shown as a specialisation
+                       of Bank Staff.
+   ```
+
+   Explanation
+   ```
+      THE SYSTEM BOUNDARY - the rectangle - separates what is inside
+           the system from the actors outside it. Everything the
+           system does is drawn inside ; actors are always outside.
+
+      ACTORS are ROLES, not people. One person may be both a Customer
+           and an Admin ; that is still two actors.
+
+      Login is SHARED by both actors, so both have a line to it.
+
+      Each OVAL is a complete goal the actor achieves, expressed from
+           the ACTOR'S point of view - "Transfer Funds", not
+           "Update the balance table".
+   ```
+   - The commonest mistake in drawing one of these is turning it into a flowchart. A use case diagram shows `what` the system does and `who` uses it, `not the order` in which things happen. Sequence is shown by a `sequence diagram`; internal logic by an `activity diagram`.
 
 3. **Draw a class diagram for an E-commerce website where customer can view different products, can pay either by card or cash.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 401 (ET: BUET)]*
 
+   Answer: Class diagram
+   ```mermaid
+   classDiagram
+       class Customer {
+           -int customerId
+           -String name
+           -String email
+           +viewProducts()
+           +addToCart()
+           +placeOrder()
+       }
+       class Product {
+           -int productId
+           -String name
+           -double price
+           -int stock
+           +getDetails()
+           +checkStock()
+       }
+       class Order {
+           -int orderId
+           -Date orderDate
+           -double total
+           +calculateTotal()
+       }
+       class Payment {
+           <<abstract>>
+           -int paymentId
+           -double amount
+           +pay()
+       }
+       class CardPayment {
+           -String cardNumber
+           -Date expiry
+           +pay()
+           +authorize()
+       }
+       class CashPayment {
+           -String collectedBy
+           +pay()
+           +issueReceipt()
+       }
+       Customer "1" --> "0..*" Order : places
+       Order "1" --> "1..*" Product : contains
+       Order "1" --> "1" Payment : settled by
+       Payment <|-- CardPayment
+       Payment <|-- CashPayment
+   ```
+   ```
+      +--------------------+  1    0..* +--------------------+
+      |     Customer       |-----------|       Order         |
+      +--------------------+  places   +--------------------+
+      | -customerId : int  |           | -orderId : int      |
+      | -name : String     |           | -orderDate : Date   |
+      | -email : String    |           | -total : double     |
+      +--------------------+           +--------------------+
+      | +viewProducts()    |           | +calculateTotal()   |
+      | +addToCart()       |           +--------------------+
+      | +placeOrder()      |             1 |          | 1
+      +--------------------+      contains |          | settled by
+                                      1..* |          | 1
+                           +--------------------+  +--------------------+
+                           |      Product       |  |     Payment        |
+                           +--------------------+  |    {abstract}      |
+                           | -productId : int   |  +--------------------+
+                           | -name : String     |  | -paymentId : int   |
+                           | -price : double    |  | -amount : double   |
+                           | -stock : int       |  +--------------------+
+                           +--------------------+  | +pay()             |
+                           | +getDetails()      |  +--------------------+
+                           | +checkStock()      |           /_\
+                           +--------------------+            |
+                                           +-----------------+-------------+
+                                           |                               |
+                             +--------------------+          +--------------------+
+                             |    CardPayment     |          |    CashPayment     |
+                             +--------------------+          +--------------------+
+                             | -cardNumber:String |          | -collectedBy:String|
+                             | -expiry : Date     |          +--------------------+
+                             +--------------------+          | +pay()             |
+                             | +pay()             |          | +issueReceipt()    |
+                             | +authorize()       |          +--------------------+
+                             +--------------------+
+   ```
+
+   Explanation
+   ```
+      NOTATION
+        -  private attribute       +  public method
+        -------->                  ASSOCIATION with multiplicity
+        ------|>   /_\             INHERITANCE
+        {abstract}                 abstract class
+   ```
+   - `Customer` to `Order` is `1 to 0..*` — a customer may place many orders (or none yet), and each order belongs to one customer.
+   - `Order` to `Product` is `1 to 1..*` — an order must contain at least one product. In a fuller model this would be an `association class` called `OrderItem`, carrying the quantity and the unit price at the time of sale.
+   - `Payment` is `abstract`; `CardPayment` and `CashPayment` inherit from it and each overrides `pay()`. This is `polymorphism` — the `Order` calls `pay()` without knowing which kind of payment it holds.
+   - Why making `Payment` abstract matters: adding bKash, Nagad or cash on delivery means adding one new subclass, with `no change to Order` at all. That is the `open–closed principle` in a diagram.
+
 4. **Consider the following buy a product description. Customer browses catalog, selects items to buy and then goes to check out. Customer fills in shipping information (address, receive time). System presents full pricing information and customer fills in credit card information. System authorizes purchase, confirms sale and sends confirming email to customer. Draw a use case diagram for the above system.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 424 (ET: BIBM)]*
+
+   Answer: Use case diagram
+   ```
+      +===============================================================+
+      |                  ONLINE SHOPPING SYSTEM                       |
+      |                                                               |
+      |    (  Browse Catalog  )                                       |
+      |                                                               |
+      |    (  Select Items / Add to Cart  )                           |
+      |                                                               |
+      |    (  Check Out  )                                            |
+      |            :                                                  |
+      |            : <<include>>                                      |
+      |            v                                                  |
+      |    (  Enter Shipping Information  )                           |
+      |            :                                                  |
+      |            : <<include>>                                      |
+      |            v                                                  |
+      |    (  Display Full Pricing  )                                 |
+      |            :                                                  |
+      |            : <<include>>                                      |
+      |            v                                                  |
+      |    (  Enter Credit Card Information  )                        |
+      |            :                                                  |
+      |            : <<include>>                                      |
+      |            v                                                  |
+      |    (  Authorize Payment  ) - - - - - - - - - - - - - - - -+   |
+      |            :                                              |   |
+      |            : <<include>>                                  |   |
+      |            v                                              |   |
+      |    (  Confirm Sale  )                                     |   |
+      |            :                                              |   |
+      |            : <<include>>                                  |   |
+      |            v                                              |   |
+      |    (  Send Confirmation Email  ) - - - - - - - - - - -+   |   |
+      +=======================================================+===+===+
+                                                              |   |
+           O                                                  |   |
+          -|-  CUSTOMER                                       |   |
+          / \                                                 v   v
+                                               +----------------+ +----------------+
+                                               | EMAIL SERVICE  | | CREDIT CARD    |
+                                               |  (secondary    | | AUTHORIZATION  |
+                                               |   actor)       | |    SERVICE     |
+                                               +----------------+ +----------------+
+   ```
+   ```mermaid
+   flowchart LR
+       C(("Customer")) --- U1(["Browse Catalog"])
+       C --- U2(["Select Items"])
+       C --- U3(["Check Out"])
+       U3 -.->|include| U4(["Enter Shipping Info"])
+       U3 -.->|include| U5(["Display Pricing"])
+       U3 -.->|include| U6(["Enter Card Info"])
+       U3 -.->|include| U7(["Authorize Payment"])
+       U3 -.->|include| U8(["Confirm Sale"])
+       U3 -.->|include| U9(["Send Email"])
+       U7 --- CC(("Card Auth Service"))
+       U9 --- ES(("Email Service"))
+   ```
+
+   The use cases, taken from the description
+   ```
+      Browse Catalog                  "Customer browses catalog"
+      Select Items / Add to Cart      "selects items to buy"
+      Check Out                       "then goes to check out"
+      Enter Shipping Information      "fills in shipping information
+                                       (address, receive time)"
+      Display Full Pricing            "System presents full pricing
+                                       information"
+      Enter Credit Card Information   "customer fills in credit card
+                                       information"
+      Authorize Payment               "System authorizes purchase"
+      Confirm Sale                    "confirms sale"
+      Send Confirmation Email         "sends confirming email"
+   ```
+
+   The actors
+   ```
+      PRIMARY actor    : CUSTOMER - initiates the whole flow and
+                         receives the benefit.
+      SECONDARY actors : CREDIT CARD AUTHORIZATION SERVICE and
+                         EMAIL SERVICE - external systems the system
+                         calls on to complete the goal. They are
+                         still actors, because they lie OUTSIDE the
+                         system boundary.
+   ```
+
+   The relationships
+   ```
+      ASSOCIATION   a plain line - "this actor performs this use case"
+      <<include>>   Check Out ALWAYS includes shipping entry, pricing
+                    display, card entry, authorisation, confirmation
+                    and the email. All of it is MANDATORY, so
+                    <<include>> is correct, not <<extend>>.
+      <<extend>>    would be used for OPTIONAL behaviour, such as
+                    "Apply Discount Coupon" extending Check Out.
+   ```
+   - One point worth stating: the description reads like a sequence of steps, and it is tempting to draw arrows showing the order. `A use case diagram must not show sequence.` It shows only `what` the system does and `who` is involved. The step-by-step order in the description belongs in the use case's `textual description` (main flow and alternative flows), or in a `sequence diagram`.
 
 5. **Library management class diagram:** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 380 (ET: BUET)]*
 
+   Answer: Class diagram for a library management system
+   ```mermaid
+   classDiagram
+       class Library {
+           -String name
+           -String address
+           +addBook()
+           +removeBook()
+       }
+       class Book {
+           -String isbn
+           -String title
+           -String author
+           -int totalCopies
+           -int availableCopies
+           +isAvailable()
+           +reserve()
+       }
+       class Member {
+           <<abstract>>
+           -int memberId
+           -String name
+           -String phone
+           -int maxBooks
+           +borrowBook()
+           +returnBook()
+       }
+       class Student {
+           -String department
+           -String session
+           +getMaxBooks()
+       }
+       class Teacher {
+           -String designation
+           +getMaxBooks()
+       }
+       class Loan {
+           -int loanId
+           -Date issueDate
+           -Date dueDate
+           -Date returnDate
+           +calculateFine()
+           +isOverdue()
+       }
+       class Librarian {
+           -int staffId
+           -String name
+           +issueBook()
+           +acceptReturn()
+           +collectFine()
+       }
+       Library "1" *-- "0..*" Book : contains
+       Member <|-- Student
+       Member <|-- Teacher
+       Member "1" --> "0..*" Loan : has
+       Book "1" --> "0..*" Loan : issued in
+       Librarian "1" --> "0..*" Loan : processes
+   ```
+   ```
+      +------------------+  1    0..* +--------------------------+
+      |     Library      |*----------|          Book            |
+      +------------------+ contains  +--------------------------+
+      | -name : String   |           | -isbn : String           |
+      | -address : String|           | -title : String          |
+      +------------------+           | -author : String         |
+      | +addBook()       |           | -totalCopies : int       |
+      | +removeBook()    |           | -availableCopies : int   |
+      +------------------+           +--------------------------+
+                                     | +isAvailable()           |
+                                     | +reserve()               |
+                                     +--------------------------+
+                                               1 |
+                                    issued in    | 0..*
+      +------------------+  1    0..* +--------------------------+
+      |     Member       |-----------|          Loan            |
+      |   {abstract}     |    has    +--------------------------+
+      +------------------+           | -loanId : int            |
+      | -memberId : int  |           | -issueDate : Date        |
+      | -name : String   |           | -dueDate : Date          |
+      | -phone : String  |           | -returnDate : Date       |
+      | -maxBooks : int  |           +--------------------------+
+      +------------------+           | +calculateFine()         |
+      | +borrowBook()    |           | +isOverdue()             |
+      | +returnBook()    |           +--------------------------+
+      +------------------+                   0..* |
+             /_\                                  | processes
+              |                                 1 |
+      +-------+--------+              +--------------------------+
+      |                |              |        Librarian         |
+   +-----------+ +-----------+        +--------------------------+
+   |  Student  | |  Teacher  |        | -staffId : int           |
+   +-----------+ +-----------+        | -name : String           |
+   |-department| |-designat- |        +--------------------------+
+   |-session   | | ion       |        | +issueBook()             |
+   +-----------+ +-----------+        | +acceptReturn()          |
+   |+getMaxBo- | |+getMaxBo- |        | +collectFine()           |
+   | oks()     | | oks()     |        +--------------------------+
+   +-----------+ +-----------+
+   ```
+
+   Explanation
+   ```
+      NOTATION
+        -  private attribute      +  public method
+        -------->                 ASSOCIATION with multiplicity
+        ------|>  /_\             INHERITANCE (generalisation)
+        *-------                  COMPOSITION - the filled diamond
+        {abstract}                abstract class
+   ```
+   - `Library –◆– Book` is a `composition`, drawn with a filled diamond: the books belong to the library, and if the library is dissolved its catalogue entries go with it.
+   - `Loan` is the key class in the design. A member borrowing a book is a `many-to-many` relationship, and a many-to-many association must be resolved into a separate class. `Loan` holds what belongs to the borrowing event itself — issue date, due date, return date and the fine.
+   - `Student` and `Teacher` `inherit` from `Member` and each overrides `getMaxBooks()`, because a teacher may usually borrow more books than a student. This is `polymorphism`.
+   - `Librarian` is modelled as a class rather than an actor here, because the system stores which staff member issued each loan. In the `use case diagram` the same librarian appears as an `actor` — the two diagrams show different views of the same person.
+   - `calculateFine()` sits on `Loan`, not on `Member`, because the fine depends on `dueDate` and `returnDate`, which are `Loan`'s own attributes. Putting a method where its data lives is what `high cohesion` means in practice.
+
 6. **Draw A class diagram. A token-ring based local area network (LAN) is a network consisting of nodes in which network packets are sent around. Every node has a unique name within the network, and refers to its next node. Different kinds of nodes exist: Workstations are originators of messages; servers and printers are network nodes that can receive messages. Packets contain an originator a destination and content, and are sent around on a network. A LAN is a circular configuration of nodes.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 438 (ET: BIBM)]*
+
+   Answer: Class diagram for a token-ring LAN
+   ```mermaid
+   classDiagram
+       class LAN {
+           -String name
+           +addNode()
+           +removeNode()
+           +sendPacket()
+       }
+       class Node {
+           <<abstract>>
+           -String name
+           +receivePacket()
+           +forwardPacket()
+       }
+       class Workstation {
+           -String userName
+           +originatePacket()
+           +receivePacket()
+       }
+       class Server {
+           -String service
+           -int capacity
+           +receivePacket()
+       }
+       class Printer {
+           -String model
+           -int queueLength
+           +receivePacket()
+           +print()
+       }
+       class Packet {
+           -String content
+           +isDelivered()
+       }
+       LAN "1" *-- "3..*" Node : consists of
+       Node "1" --> "1" Node : next
+       Node <|-- Workstation
+       Node <|-- Server
+       Node <|-- Printer
+       Workstation "1" --> "0..*" Packet : originates
+       Packet "1" --> "1" Node : destination
+       LAN "1" --> "0..*" Packet : carries
+   ```
+   ```
+      +--------------------+  1     3..*  +--------------------------+
+      |        LAN         |*------------|          Node            |
+      +--------------------+ consists of +--------------------------+
+      | -name : String     |             | -name : String {unique}  |
+      +--------------------+             +--------------------------+
+      | +addNode()         |             | +receivePacket()         |
+      | +removeNode()      |             | +forwardPacket()          |
+      | +sendPacket()      |             +--------------------------+
+      +--------------------+                 |          /_\
+           | 1                          next |           |
+           | carries                    1    |           |
+           | 0..*                       +----+           |
+      +--------------------------+                       |
+      |         Packet           |          +------------+------------+
+      +--------------------------+          |            |            |
+      | -content : String        |   +-------------+ +---------+ +---------+
+      +--------------------------+   | Workstation | | Server  | | Printer |
+      | +isDelivered()           |   +-------------+ +---------+ +---------+
+      +--------------------------+   |-userName    | |-service | |-model   |
+         1 | originator              |             | |-capacity| |-queue   |
+           |          +--------------+-------------+ +---------+ +---------+
+         1 | destination             |+originate-  | |+receive-| |+receive-|
+           v                         |  Packet()   | | Packet()| | Packet()|
+      ( a Node )                     |+receive-    | +---------+ |+print() |
+                                     |  Packet()   |             +---------+
+                                     +-------------+
+   ```
+
+   The circular structure — how the ring is modelled
+   ```
+      The self-association  Node --> Node  with the role name "next"
+      is what makes it a RING. Each node refers to exactly ONE next
+      node, and following the chain returns to the start.
+
+           Node A ---next---> Node B ---next---> Node C
+             ^                                     |
+             +----------------next-----------------+
+
+      MULTIPLICITY on that association is  1 to 1  : every node has
+      exactly one successor, and is the successor of exactly one node.
+
+      The circularity itself is a CONSTRAINT, not something the
+      notation can enforce, so it is written on the diagram :
+
+           {the next-links form a single closed cycle}
+   ```
+
+   Explanation of each element
+   ```
+      LAN               a network. COMPOSITION (filled diamond) to
+                        Node : the nodes make up the LAN, and a
+                        minimum of 3..* keeps it a meaningful ring.
+
+      Node {abstract}   the general concept. It carries the UNIQUE
+                        name required by the description, and the
+                        "next" reference. It is ABSTRACT because
+                        every real node is one of the three kinds
+                        below.
+
+      Workstation       ORIGINATES messages - so it alone has
+                        originatePacket().
+      Server , Printer  can only RECEIVE messages. They inherit
+                        receivePacket() and add their own behaviour.
+
+      Packet            has three parts required by the description :
+                        an ORIGINATOR (a Node, in practice a
+                        Workstation), a DESTINATION (a Node) and
+                        CONTENT. The originator and destination are
+                        modelled as ASSOCIATIONS to Node rather than
+                        as plain string attributes, because they
+                        really are references to nodes.
+   ```
+   - Two design points worth stating. First, the description says a workstation `originates` and a server or printer `receives`, so `originatePacket()` belongs only on `Workstation` while `receivePacket()` is inherited by all three — the difference in capability is expressed by `where the operation is placed`, not by a flag. Second, `{unique}` on `Node.name` records the description's requirement that every node has a unique name within the network; a constraint in braces is the standard UML way to state a rule the box-and-line notation cannot capture.
 
 7. **(খ) একটি লাইব্রেরি ব্যবস্থাপনা সিস্টেম এর জন্যে Use Case Diagram অঙ্কন করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Use case diagram for a library management system
+   ```
+      +===============================================================+
+      |                 LIBRARY MANAGEMENT SYSTEM                     |
+      |                                                               |
+      |     (  Search Book  )                                         |
+      |                                                               |
+      |     (  View Book Details  )                                   |
+      |                                                               |
+      |     (  Borrow Book  ) - - - <<include>> - - -> ( Check        |
+      |                                                  Eligibility )|
+      |                                                               |
+      |     (  Return Book  ) - - - <<extend>> - - -> ( Pay Fine )    |
+      |                                                               |
+      |     (  Reserve Book  )                                        |
+      |                                                               |
+      |     (  Renew Book  )                                          |
+      |                                                               |
+      |     (  Login  )                                               |
+      |                                                               |
+      |     (  Add / Remove Book  )                                   |
+      |                                                               |
+      |     (  Manage Member  )                                       |
+      |                                                               |
+      |     (  Issue Book  )                                          |
+      |                                                               |
+      |     (  Collect Fine  )                                        |
+      |                                                               |
+      |     (  Generate Report  )                                     |
+      +===============================================================+
+
+           O                    O                       O
+          -|-  MEMBER          -|-  LIBRARIAN          -|-  ADMIN
+          / \                  / \                     / \
+
+      MEMBER    ---> Login , Search Book , View Book Details ,
+                     Borrow Book , Return Book , Reserve Book ,
+                     Renew Book
+
+      LIBRARIAN ---> Login , Search Book , Issue Book , Accept Return ,
+                     Collect Fine , Add / Remove Book
+
+      ADMIN     ---> Login , Manage Member , Add / Remove Book ,
+                     Generate Report
+   ```
+   ```mermaid
+   flowchart LR
+       M(("Member")) --- U1(["Search Book"])
+       M --- U2(["Borrow Book"])
+       M --- U3(["Return Book"])
+       M --- U4(["Reserve Book"])
+       L(("Librarian")) --- U5(["Issue Book"])
+       L --- U6(["Collect Fine"])
+       L --- U7(["Add/Remove Book"])
+       A(("Admin")) --- U8(["Manage Member"])
+       A --- U9(["Generate Report"])
+       A --- U7
+       U2 -.->|include| U10(["Check Eligibility"])
+       U3 -.->|extend| U6
+   ```
+
+   The relationships
+   ```
+      ASSOCIATION      a plain line from an actor to a use case -
+                       "this actor performs this use case".
+
+      <<include>>      MANDATORY sub-behaviour, always performed.
+                       Borrow Book  <<include>>  Check Eligibility
+                       (the member's borrowing limit and any existing
+                        overdue book must ALWAYS be checked)
+
+      <<extend>>       OPTIONAL behaviour, added only under a
+                       condition.
+                       Return Book  <<extend>>  Pay Fine
+                       (a fine arises ONLY if the book is overdue)
+
+      GENERALISATION   an actor inherits another's use cases.
+                       Librarian and Admin could both be shown as
+                       specialisations of a Staff actor, since both
+                       share Login and Add / Remove Book.
+   ```
+
+   Explanation
+   ```
+      THE SYSTEM BOUNDARY - the rectangle - separates what the system
+           does from the actors, who are always OUTSIDE it.
+
+      ACTORS are ROLES, not individuals. The same person may be both
+           a Member and a Librarian ; that is still two actors.
+
+      Shared use cases - Login , Search Book , Add / Remove Book -
+           have a line from EVERY actor that performs them.
+
+      Each OVAL is a complete GOAL, named from the ACTOR's point of
+           view : "Borrow Book", not "Update the loan table".
+   ```
+   - The mistake to avoid is drawing the diagram as a flow of steps. A use case diagram shows `what` the system does and `who` uses it, `never the sequence`. Sequence belongs in a `sequence diagram`, and the step-by-step main flow and alternative flows belong in the use case's `written description`.
+
 8. **How do you model the following situation with a UML class diagram the car fleet of a car rental contains multiple cars, one car belongs to exactly one car fleet.** *[BIWTA; Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
+
+   Answer: The situation is modelled as a `composition` — the filled-diamond relationship — with multiplicity `1` on the fleet side and `1..*` on the car side.
+   ```mermaid
+   classDiagram
+       class CarFleet {
+           -int fleetId
+           -String location
+           +addCar()
+           +removeCar()
+           +getAvailableCars()
+       }
+       class Car {
+           -String registrationNo
+           -String model
+           -String status
+           +isAvailable()
+           +assignToRental()
+       }
+       CarFleet "1" *-- "1..*" Car : contains
+   ```
+   ```
+      +--------------------------+            +--------------------------+
+      |        CarFleet          |  1    1..* |           Car            |
+      +--------------------------+*----------+--------------------------+
+      | -fleetId : int           |  contains  | -registrationNo : String |
+      | -location : String       |            | -model : String          |
+      +--------------------------+            | -status : String         |
+      | +addCar()                |            +--------------------------+
+      | +removeCar()             |            | +isAvailable()           |
+      | +getAvailableCars()      |            | +assignToRental()        |
+      +--------------------------+            +--------------------------+
+
+           the FILLED DIAMOND  *  sits at the CarFleet end
+   ```
+
+   How the two statements in the question map onto the notation
+   ```
+      "a car fleet contains MULTIPLE cars"
+           -> multiplicity  1..*  at the CAR end
+              (use 0..* instead if an empty fleet is allowed)
+
+      "one car belongs to EXACTLY ONE car fleet"
+           -> multiplicity  1  at the FLEET end
+              This is the phrase that makes it a COMPOSITION rather
+              than a plain association : a part that belongs to
+              exactly one whole.
+   ```
+
+   Why composition and not aggregation or association
+   ```
+      ASSOCIATION  ----------    a plain relationship. It would allow
+           a car to belong to several fleets, or to none. That
+           contradicts "exactly one".
+
+      AGGREGATION  <>--------    HOLLOW diamond. A "has-a" in which
+           the part can exist INDEPENDENTLY and can be SHARED - a
+           Department and its Teachers, where a teacher may belong to
+           two departments and survives the department closing.
+
+      COMPOSITION  *--------     FILLED diamond. A STRONG "owns-a" :
+           - the part belongs to EXACTLY ONE whole
+           - the part is NOT SHARED
+           - the whole controls the part's lifetime
+
+      The phrase "exactly one car fleet" rules out sharing, so
+      COMPOSITION is the correct choice.
+   ```
+   - One qualification worth stating. Composition in its strictest reading means the part is `destroyed with the whole`, and a real car obviously survives the closing of a rental branch — it would be transferred to another fleet. So many modellers would draw this as an `aggregation` (hollow diamond) with multiplicity `1`, which captures "belongs to exactly one" without claiming the car ceases to exist.
+   ```
+      BOTH answers are defensible, and the multiplicity is what
+      actually carries the requirement :
+
+           CarFleet  1  *--------  1..*  Car     (strict reading)
+           CarFleet  1  <>-------  1..*  Car     (car outlives fleet)
+
+      What must NOT be drawn is  0..*  at the fleet end, or a plain
+      association with no multiplicity - either would fail to state
+      "exactly one".
+   ```
 
 9. **(ক) Typical web-based login system এর জন্য sequence diagram আঁকুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 778 (ET: N/A)]*
 
+   Answer: Sequence diagram for a web-based login system
+   ```mermaid
+   sequenceDiagram
+       actor User
+       participant Browser
+       participant WebServer
+       participant AuthController
+       participant Database
+       User->>Browser: enter username, password
+       Browser->>WebServer: POST /login
+       WebServer->>AuthController: validate(username, password)
+       AuthController->>Database: SELECT user WHERE username=?
+       Database-->>AuthController: user record + password hash
+       AuthController->>AuthController: hash(password) and compare
+       alt credentials valid
+           AuthController->>Database: create session
+           AuthController-->>WebServer: success + session ID
+           WebServer-->>Browser: 302 redirect + Set-Cookie
+           Browser-->>User: home page
+       else credentials invalid
+           AuthController->>Database: increment failed attempts
+           AuthController-->>WebServer: failure
+           WebServer-->>Browser: 401 + error message
+           Browser-->>User: "Invalid username or password"
+       end
+   ```
+   ```
+      User      Browser    WebServer   AuthCtrl    Database
+       |           |           |           |           |
+       |  enter    |           |           |           |
+       |  user/pwd |           |           |           |
+       |---------->|           |           |           |
+       |           | POST      |           |           |
+       |           | /login    |           |           |
+       |           |---------->|           |           |
+       |           |           | validate  |           |
+       |           |           |---------->|           |
+       |           |           |           | SELECT    |
+       |           |           |           | user      |
+       |           |           |           |---------->|
+       |           |           |           |<- - - - - |
+       |           |           |           |  record + |
+       |           |           |           |  hash     |
+       |           |           |           |           |
+       |           |           |     [hash & compare]  |
+       |           |           |           |           |
+       |           |           |           | create    |
+       |           |           |           | session   |
+       |           |           |           |---------->|
+       |           |           |<- - - - - |           |
+       |           |           | success + |           |
+       |           |           | sessionID |           |
+       |           |<- - - - - |           |           |
+       |           | 302 +     |           |           |
+       |           | Set-Cookie|           |           |
+       |<- - - - - |           |           |           |
+       | home page |           |           |           |
+       |           |           |           |           |
+
+      ------>  synchronous call (solid arrowhead)
+      - - ->   return message  (dashed line)
+      [ ]      a self-call, drawn as a small loop on the lifeline
+   ```
+
+   The notation
+   ```
+      ACTOR / OBJECT     the boxes across the top. An actor is drawn
+                         as a stick figure, an object as a rectangle.
+      LIFELINE           the vertical dashed line below each box -
+                         the object's existence over time. TIME RUNS
+                         DOWNWARD.
+      ACTIVATION BAR     the thin rectangle on a lifeline while that
+                         object is doing work.
+      SYNCHRONOUS MESSAGE  solid line, filled arrowhead. The caller
+                         WAITS for the reply.
+      RETURN MESSAGE     dashed line, open arrowhead.
+      SELF MESSAGE       an arrow from a lifeline back to itself -
+                         here, hashing the password.
+      alt FRAGMENT       a box labelled "alt" divided by a dashed
+                         line, showing the two alternative outcomes.
+   ```
+
+   Explanation of the flow
+   ```
+      1. The user submits the form ; the browser sends a POST.
+      2. The web server hands the credentials to the authentication
+         controller.
+      3. The controller fetches the stored PASSWORD HASH - never the
+         password itself, which is not stored anywhere.
+      4. It hashes the submitted password with the stored SALT and
+         compares. A constant-time comparison is used, so the time
+         taken does not reveal how much of the password was right.
+      5. VALID   : a session record is created, and the session ID
+                   goes back as an HttpOnly, Secure cookie. The
+                   browser is redirected to the home page.
+         INVALID : the failed-attempt counter is incremented -
+                   three failures lock the account - and a single
+                   generic message is returned.
+   ```
+   - The security detail worth one line: the error message must be `"Invalid username or password"`, never "no such user" or "wrong password". Distinguishing the two tells an attacker which usernames exist, which is `user enumeration`.
+   - Where each UML diagram fits: the `sequence diagram` above shows the `order` of interactions over time; a `use case diagram` would show only that a Visitor performs Login; and an `activity diagram` would show the internal decision logic. All three describe the same login from different viewpoints.
+
 10. **(c) Explain different type of relationships that are used in a UML diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
+
+    Answer: UML class diagrams use `six` kinds of relationship. They differ in how strongly the two classes depend on each other.
+
+    1. Association
+    ```
+       A structural link : one class knows about another and keeps a
+       reference to it.
+
+            Student  ------------  Course
+                     enrolled in
+
+       With MULTIPLICITY and a role name :
+
+            Student "1..*" ------ "1..*" Course
+
+       Multiplicity values :  1 , 0..1 , 1..* , 0..* , 3..5 , *
+
+       NAVIGABILITY : an arrowhead shows one-way navigation.
+            Order --------> Product      Order knows its products,
+                                         but a Product does not know
+                                         which Orders contain it.
+    ```
+
+    2. Aggregation — "has-a", the weak whole–part
+    ```
+            Department  <>------------  Teacher
+                        HOLLOW diamond at the WHOLE end
+
+       The part can exist INDEPENDENTLY and can be SHARED :
+         a teacher survives the department being closed, and may
+         belong to two departments at once.
+    ```
+
+    3. Composition — "owns-a", the strong whole–part
+    ```
+            House  *------------  Room
+                   FILLED diamond at the WHOLE end
+
+       The part belongs to EXACTLY ONE whole, is NOT SHARED, and its
+       LIFETIME is controlled by the whole : destroy the house and
+       the rooms cease to exist.
+
+       AGGREGATION vs COMPOSITION - the test to apply :
+            Can the part belong to two wholes ?      -> aggregation
+            Can the part outlive the whole ?         -> aggregation
+            Neither ?                                -> composition
+    ```
+
+    4. Generalisation — inheritance, "is-a"
+    ```
+            Payment
+               /_\                  hollow triangle pointing at the
+                |                   PARENT class
+         +------+------+
+         |             |
+      CreditCard   CashPayment
+
+       The child inherits the parent's attributes and operations and
+       may OVERRIDE them. An {abstract} parent cannot be instantiated.
+    ```
+
+    5. Realisation — implementing an interface
+    ```
+            <<interface>>
+              Printable
+                 /_\
+                  :                  DASHED line , hollow triangle
+                  :
+              Invoice
+
+       The class promises to provide the operations the interface
+       declares. Same triangle as inheritance, but a DASHED line -
+       the difference is inheriting IMPLEMENTATION versus implementing
+       a CONTRACT.
+    ```
+
+    6. Dependency — "uses"
+    ```
+            OrderService  - - - - - >  EmailSender
+                          DASHED line , open arrowhead
+
+       The WEAKEST relationship : one class uses another temporarily -
+       as a method parameter, a local variable, or a static call - but
+       does not keep a reference to it. A change in EmailSender may
+       force a change in OrderService, and that is all the coupling
+       there is.
+    ```
+
+    Summary
+    ```
+       +----------------+------------------+-------------------------+
+       | Relationship   | Notation         | Meaning                 |
+       +----------------+------------------+-------------------------+
+       | Association    | ----------       | knows about             |
+       | Aggregation    | <>---------      | has-a , part is shared  |
+       |                |                  | and independent         |
+       | Composition    | *---------       | owns-a , part dies with |
+       |                |                  | the whole               |
+       | Generalisation | ------|>  /_\    | is-a , inheritance      |
+       | Realisation    | - - - -|> /_\    | implements an interface |
+       | Dependency     | - - - - ->       | uses temporarily        |
+       +----------------+------------------+-------------------------+
+
+       STRENGTH OF COUPLING , weakest to strongest :
+            dependency < association < aggregation < composition
+    ```
+    - The three relationships found in `other` UML diagrams, worth naming: `<<include>>` and `<<extend>>` between use cases in a use case diagram, and `message` arrows between lifelines in a sequence diagram. Those are not class relationships and should not be mixed into a class diagram.
+    - The distinction examiners test most is `aggregation against composition`. The deciding question is not how the classes feel but whether the part can be `shared` or can `outlive` the whole. If it can, the diamond is hollow.
 
 11. **Write down the use case diagram for ATM.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162-1163 (ET: N/A)]*
 
+    Answer: Use case diagram for an ATM
+    ```
+       +===============================================================+
+       |                          ATM SYSTEM                           |
+       |                                                               |
+       |     (  Insert Card  )                                         |
+       |                                                               |
+       |     (  Authenticate PIN  )                                    |
+       |                                                               |
+       |     (  Withdraw Cash  ) - - <<include>> - -> ( Authenticate   |
+       |                                                    PIN     )  |
+       |                                                               |
+       |     (  Deposit Cash  )                                        |
+       |                                                               |
+       |     (  Check Balance  )                                       |
+       |                                                               |
+       |     (  Transfer Funds  )                                      |
+       |                                                               |
+       |     (  Mini Statement  )                                      |
+       |                                                               |
+       |     (  Change PIN  )                                          |
+       |                                                               |
+       |     (  Print Receipt  )  <- - <<extend>> - -  Withdraw Cash   |
+       |                                                               |
+       |     (  Refill Cash  )                                         |
+       |                                                               |
+       |     (  Maintain ATM  )                                        |
+       +======================================+========================+
+                                              |
+            O                    O            |            O
+           -|-  CUSTOMER        -|- BANK      |           -|- TECHNICIAN
+           / \                  / \  OFFICER  |           / \
+                                              v
+                                  +--------------------------+
+                                  |    BANK SERVER /         |
+                                  |    CORE BANKING SYSTEM   |
+                                  |    (secondary actor)     |
+                                  +--------------------------+
+
+       CUSTOMER   ---> Insert Card , Authenticate PIN , Withdraw Cash ,
+                       Deposit Cash , Check Balance , Transfer Funds ,
+                       Mini Statement , Change PIN
+
+       TECHNICIAN ---> Refill Cash , Maintain ATM
+
+       BANK OFFICER -> Refill Cash , view transaction log
+
+       BANK SERVER --> takes part in every transaction that needs
+                       authorisation or a balance update
+    ```
+    ```mermaid
+    flowchart LR
+        C(("Customer")) --- U1(["Insert Card"])
+        C --- U2(["Authenticate PIN"])
+        C --- U3(["Withdraw Cash"])
+        C --- U4(["Deposit Cash"])
+        C --- U5(["Check Balance"])
+        C --- U6(["Transfer Funds"])
+        C --- U7(["Change PIN"])
+        T(("Technician")) --- U8(["Refill Cash"])
+        T --- U9(["Maintain ATM"])
+        U3 -.->|include| U2
+        U3 -.->|extend| U10(["Print Receipt"])
+        U3 --- B(("Bank Server"))
+        U6 --- B
+    ```
+
+    The relationships
+    ```
+       ASSOCIATION    a plain line - "this actor performs this use
+                      case".
+
+       <<include>>    MANDATORY sub-behaviour, always performed.
+                      Withdraw Cash , Deposit Cash , Check Balance ,
+                      Transfer Funds all  <<include>>  Authenticate
+                      PIN - no transaction happens without it, so the
+                      behaviour is factored out instead of repeated in
+                      every use case.
+
+       <<extend>>     OPTIONAL behaviour under a condition.
+                      Withdraw Cash  <<extend>>  Print Receipt
+                      (only if the customer asks for a receipt)
+                      Withdraw Cash  <<extend>>  Apply Service Charge
+                      (only for another bank's card)
+
+       The arrow direction is the point candidates get wrong :
+            <<include>>  points FROM the base use case TO the included
+                         one.
+            <<extend>>   points FROM the extending use case TO the
+                         base one.
+    ```
+
+    Explanation
+    ```
+       THE SYSTEM BOUNDARY - the rectangle - contains everything the
+            ATM system does. Actors always sit OUTSIDE it.
+
+       PRIMARY actor    : CUSTOMER - initiates the transaction and
+            receives the benefit.
+       SECONDARY actor  : BANK SERVER - an external system the ATM
+            calls on to authorise and to update the balance. It is
+            still an actor, because it lies outside the boundary.
+       SUPPORTING actors: TECHNICIAN and BANK OFFICER - they use the
+            system, but for maintenance rather than banking.
+
+       Each OVAL is a complete GOAL named from the actor's viewpoint -
+            "Withdraw Cash", not "Decrement the balance field".
+    ```
+    - The commonest error is drawing arrows between the ovals to show the order — insert card, then PIN, then choose transaction. `A use case diagram never shows sequence.` The order belongs in the use case's `written description` or in a `sequence diagram`.
+
 12. **Draw UML diagram of composite design pattern.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
+
+    Answer: UML diagram of the Composite design pattern
+    ```mermaid
+    classDiagram
+        class Component {
+            <<abstract>>
+            +operation()
+            +add(Component c)
+            +remove(Component c)
+            +getChild(int i)
+        }
+        class Leaf {
+            +operation()
+        }
+        class Composite {
+            -List~Component~ children
+            +operation()
+            +add(Component c)
+            +remove(Component c)
+            +getChild(int i)
+        }
+        class Client
+        Component <|-- Leaf
+        Component <|-- Composite
+        Composite "1" o-- "0..*" Component : children
+        Client --> Component : uses
+    ```
+    ```
+       +----------+          +----------------------------------+
+       |  Client  |--------->|          Component               |
+       +----------+   uses   |          {abstract}              |
+                             +----------------------------------+
+                             | +operation()                     |
+                             | +add(Component c)                |
+                             | +remove(Component c)             |
+                             | +getChild(int i)                 |
+                             +----------------------------------+
+                                           /_\
+                                            |
+                              +-------------+-------------+
+                              |                           |
+                  +--------------------+      +--------------------------+
+                  |       Leaf         |      |       Composite          |
+                  +--------------------+      +--------------------------+
+                  |                    |      | -children : List         |
+                  +--------------------+      +--------------------------+
+                  | +operation()       |      | +operation()             |
+                  +--------------------+      | +add(Component c)        |
+                                              | +remove(Component c)     |
+                                              | +getChild(int i)         |
+                                              +--------------------------+
+                                                  |  0..*
+                                                  |  children
+                                                  +---------------+
+                                                                  |
+                                              back to Component ---+
+                                              (HOLLOW diamond o---
+                                               at the Composite end)
+    ```
+
+    The three participants
+    ```
+       COMPONENT  {abstract}
+            Declares the interface COMMON to both single objects and
+            groups. This is the key to the pattern : the CLIENT talks
+            only to Component and never needs to know whether it holds
+            one object or a whole tree.
+
+       LEAF
+            A single object with NO children. It implements
+            operation(). The child-management methods (add, remove)
+            either do nothing or throw an exception, since a leaf has
+            no children.
+
+       COMPOSITE
+            Holds a COLLECTION of Components - which may be Leaves or
+            other Composites. Its operation() DELEGATES to every child
+            in turn, and this recursion is what makes the tree work.
+    ```
+
+    How operation() works
+    ```
+       Leaf.operation()        do the work for this one object.
+
+       Composite.operation()   for each child in children :
+                                    child.operation();
+                               - and each child may itself be a
+                               Composite, so the call recurses down
+                               the whole tree.
+    ```
+
+    Example — a file system
+    ```
+            Component  = FileSystemEntry
+            Leaf       = File          (has a size of its own)
+            Composite  = Folder        (contains Files and Folders)
+
+                             Folder "root"
+                            /      |       \
+                  File a.txt   Folder "docs"   File b.jpg
+                                  /      \
+                           File c.pdf   Folder "old"
+                                              |
+                                        File d.doc
+
+       getSize() on the root walks the whole tree recursively and
+       returns the total. The CLIENT calls getSize() once, on one
+       object, and does not care how deep the tree is.
+    ```
+    - Other real uses: a GUI where a `Panel` contains `Buttons` and other `Panels`, and both answer `draw()`; an organisation chart where a `Manager` contains `Employees` and other `Managers`; and an arithmetic expression tree where a `Number` is a leaf and an `Operator` is a composite.
+    - The design point the pattern exists for: `it lets a client treat a single object and a group of objects identically`. Without it, every client would need an `if` to distinguish a file from a folder — and that `if` would have to be repeated everywhere. The one trade-off is that putting `add()` and `remove()` on `Component` gives `Leaf` methods that are meaningless for it; the alternative, putting them only on `Composite`, makes the interfaces differ and forces the client to check the type again. Both variants are documented, and the first is the one usually drawn.
 
 13. **Write the use cases of withdrawing money for ATM card.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1223-1224 (ET: N/A)]*
 
+    Answer: Use case: `Withdraw Money`
+
+    The use case specification
+    ```
+       USE CASE NAME    Withdraw Money
+       PRIMARY ACTOR    Customer (ATM card holder)
+       SECONDARY ACTOR  Bank Server / Core Banking System
+       GOAL             The customer obtains cash, and the account is
+                        debited by exactly the same amount.
+       PRECONDITION     The ATM is switched on and has cash. The
+                        customer holds a valid, active card.
+       TRIGGER          The customer inserts the card.
+       POSTCONDITION    Cash is dispensed, the account is debited once,
+                        and the transaction is written to the journal.
+    ```
+
+    Main success flow
+    ```
+       1.  Customer inserts the ATM card.
+       2.  System reads the card and verifies it is valid and active.
+       3.  System prompts for the PIN.
+       4.  Customer enters the PIN.
+       5.  System sends the PIN to the bank server for verification.
+       6.  Bank server confirms the PIN is correct.
+       7.  System displays the transaction menu.
+       8.  Customer selects "Withdraw Cash".
+       9.  System prompts for the amount.
+       10. Customer enters the amount.
+       11. System checks : amount is a valid multiple , within the
+           per-transaction limit , within the daily limit , and the
+           ATM holds enough cash.
+       12. System sends a debit request to the bank server.
+       13. Bank server checks the balance and DEBITS the account.
+       14. Bank server returns approval.
+       15. System dispenses the cash.
+       16. System asks whether a receipt is wanted.
+       17. System returns the card.
+       18. System writes the transaction to its journal.
+    ```
+
+    Alternative and exception flows — where the marks are
+    ```
+       3a. CARD INVALID , EXPIRED or BLOCKED
+             -> display a message , RETAIN or return the card , end.
+
+       6a. WRONG PIN
+             -> re-prompt. After THREE failures, BLOCK the card and
+                end the use case.
+
+       6b. PIN ENTRY TIMEOUT
+             -> return the card and end.
+
+       11a. INSUFFICIENT BALANCE
+             -> "Insufficient balance" , return to the menu.
+                NOTHING is debited.
+
+       11b. AMOUNT EXCEEDS THE DAILY LIMIT
+             -> message , return to the menu.
+
+       11c. AMOUNT NOT A VALID MULTIPLE (e.g. 1,250)
+             -> message , re-prompt.
+
+       11d. ATM HAS INSUFFICIENT CASH
+             -> "Cannot dispense this amount" , return to the menu.
+                NOTHING is debited.
+
+       12a. NETWORK FAILURE before the debit
+             -> cancel , return the card , NO debit.
+
+       14a. NETWORK FAILURE AFTER the debit but BEFORE the dispense
+             -> THE CRITICAL CASE. The system must send a REVERSAL so
+                the debit is undone. Money must never leave the
+                account without leaving the machine.
+
+       15a. CASH JAM in the dispenser
+             -> re-credit the account , log the fault , notify the
+                branch.
+
+       17a. CUSTOMER DOES NOT TAKE THE CARD
+             -> RETRACT the card after the timeout and log it.
+
+       17b. CUSTOMER DOES NOT TAKE THE CASH
+             -> retract the cash , re-credit the account , log it.
+    ```
+
+    Use case diagram
+    ```
+       +===============================================================+
+       |                          ATM SYSTEM                           |
+       |                                                               |
+       |   (  Withdraw Money  ) - - <<include>> - -> ( Validate Card ) |
+       |          :        :                                           |
+       |          :        : - - <<include>> - -> ( Authenticate PIN )  |
+       |          :        :                                           |
+       |          :        : - - <<include>> - -> ( Debit Account )    |
+       |          :                                                    |
+       |          : <<extend>>                                         |
+       |          v                                                    |
+       |   (  Print Receipt  )                                         |
+       |                                                               |
+       |   (  Reverse Transaction  )   <- on failure after debit       |
+       +======================================+========================+
+                                              |
+            O                                 v
+           -|-  CUSTOMER            +--------------------------+
+           / \                       |      BANK SERVER        |
+                                     |   (secondary actor)     |
+                                     +--------------------------+
+    ```
+    ```mermaid
+    flowchart LR
+        C(("Customer")) --- W(["Withdraw Money"])
+        W -.->|include| V(["Validate Card"])
+        W -.->|include| A(["Authenticate PIN"])
+        W -.->|include| D(["Debit Account"])
+        W -.->|extend| R(["Print Receipt"])
+        D --- B(("Bank Server"))
+        A --- B
+    ```
+    - Why `Validate Card`, `Authenticate PIN` and `Debit Account` use `<<include>>`: they happen on `every` withdrawal without exception, so the behaviour is factored out rather than repeated inside each transaction use case. `Print Receipt` uses `<<extend>>` because it happens only if the customer asks.
+    - The point that distinguishes a good answer: the `exception flows` matter more than the main flow. Cash and card are physical, so an interrupted transaction must leave the `account`, the `cash drawer` and the `journal` in a consistent state. Step 14a — reversal after debit but before dispense — is where real money is lost, and any serious use case description must state it.
+
 14. **Draw a high level use case diagram: Use case diagram for a visitor who want to login a page by using username password.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+
+    Answer: High-level use case diagram — visitor login
+    ```
+       +===============================================================+
+       |                        WEB APPLICATION                        |
+       |                                                               |
+       |          (  Login  )                                          |
+       |             :   :                                             |
+       |             :   : - - - <<include>> - - -> ( Validate         |
+       |             :   :                            Credentials )    |
+       |             :                                                 |
+       |             : <<extend>>                                      |
+       |             v                                                 |
+       |          (  Reset Password  )                                 |
+       |                                                               |
+       |          (  Register  )                                       |
+       |                                                               |
+       |          (  Logout  )                                         |
+       +=======================================+=======================+
+                                               |
+            O                                  v
+           -|-   VISITOR              +--------------------------+
+           / \                        |     USER DATABASE        |
+                                      |   (secondary actor)      |
+                                      +--------------------------+
+
+       VISITOR ---> Login , Register , Reset Password , Logout
+    ```
+    ```mermaid
+    flowchart LR
+        V(("Visitor")) --- L(["Login"])
+        V --- R(["Register"])
+        V --- O(["Logout"])
+        L -.->|include| VC(["Validate Credentials"])
+        L -.->|extend| RP(["Reset Password"])
+        VC --- DB(("User Database"))
+    ```
+
+    The use case specification
+    ```
+       USE CASE NAME  Login
+       ACTOR          Visitor
+       GOAL           Gain access to the protected part of the site.
+       PRECONDITION   The visitor has a registered account.
+       TRIGGER        The visitor opens the login page.
+       POSTCONDITION  A session is created and the visitor is
+                      redirected to the home page.
+
+       MAIN FLOW
+         1. Visitor opens the login page.
+         2. System displays the username and password fields.
+         3. Visitor enters username and password and submits.
+         4. System validates that neither field is empty.
+         5. System looks up the username in the user database.
+         6. System hashes the submitted password and compares it with
+            the stored hash.
+         7. Credentials match -> system creates a SESSION and sets a
+            session cookie.
+         8. System redirects the visitor to the home page.
+
+       ALTERNATIVE FLOWS
+         4a. A FIELD IS EMPTY
+               -> "This field is required" , stay on the page.
+         6a. USERNAME NOT FOUND , or PASSWORD WRONG
+               -> "Invalid username or password" - ONE generic
+                  message for BOTH cases.
+         6b. THREE CONSECUTIVE FAILURES
+               -> lock the account temporarily , notify by email.
+         6c. ACCOUNT NOT ACTIVATED or SUSPENDED
+               -> the appropriate message ; no session created.
+         6d. Visitor clicks "Forgot password"
+               -> the Reset Password use case (an <<extend>>).
+    ```
+
+    The relationships
+    ```
+       ASSOCIATION    a plain line - the Visitor performs Login.
+
+       <<include>>    Login ALWAYS validates credentials, so that
+                      behaviour is factored out and shared with any
+                      other use case needing it.
+
+       <<extend>>     Reset Password happens ONLY IF the visitor has
+                      forgotten the password - optional, conditional
+                      behaviour, so the arrow points FROM Reset
+                      Password TO Login.
+
+       SECONDARY ACTOR  the USER DATABASE sits outside the system
+                      boundary and is called on to complete the goal.
+    ```
+    - One security point that belongs in the answer: step 6a must return a `single generic message` for both a wrong username and a wrong password. Saying "no such user" tells an attacker which usernames exist, which is `user enumeration`.
+    - What "high-level" means here: only the actor, the system boundary and the goal-level use cases are shown, with no internal steps. The step-by-step flow above belongs in the `written specification` or in a `sequence diagram` — a use case diagram never shows sequence.
 
 ## Software Architecture & Design Patterns (MVC) (13)
 
