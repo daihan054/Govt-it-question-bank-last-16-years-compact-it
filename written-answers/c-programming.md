@@ -3640,6 +3640,96 @@ for(a=1; a<=100; a++)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+   Answer: The question is `incomplete` — the paper printed a code snippet that was not captured, so the specific program cannot be traced. The traps that C output questions test are set out below, with worked examples, so the method is available whatever the missing code was.
+
+   1. Integer division truncates
+   ```c
+      printf("%d", 5/2);        // 2   , not 2.5
+      printf("%f", 5/2.0);      // 2.500000  - one operand is a double
+      printf("%d", -5/2);       // -2  , C truncates TOWARDS ZERO
+      printf("%d", -5%2);       // -1  , the remainder takes the sign of the left
+   ```
+
+   2. Pre-increment and post-increment
+   ```c
+      int i = 5;
+      printf("%d", i++);        // prints 5 , then i becomes 6
+      printf("%d", ++i);        // i becomes 7 first , then prints 7
+   ```
+
+   3. Type promotion and format specifiers
+   ```c
+      char c = 'A';
+      printf("%d", c);          // 65  - the ASCII value
+      printf("%c", 66);         // B
+
+      float f = 3.7;
+      printf("%d", (int)f);     // 3   - the fraction is discarded
+   ```
+
+   4. sizeof
+   ```c
+      printf("%lu", sizeof(int));      // 4 on a typical machine
+      printf("%lu", sizeof(char));     // 1, ALWAYS
+      printf("%lu", sizeof("hello"));  // 6 - five characters plus '\0'
+
+      int a[10];
+      printf("%lu", sizeof(a));        // 40
+      void f(int a[]) { sizeof(a); }   // 8 - an array DECAYS to a pointer
+   ```
+
+   5. The `=` versus `==` trap
+   ```c
+      int x = 5;
+      if (x = 0)  printf("A");     // ASSIGNS 0, which is false -> nothing
+      if (x == 0) printf("B");     // compares
+   ```
+
+   6. Missing `break` in a switch — fall-through
+   ```c
+      int x = 2;
+      switch (x) {
+          case 1: printf("1");
+          case 2: printf("2");     // no break
+          case 3: printf("3");     // falls through
+          default: printf("D");
+      }
+      // Output : 23D
+   ```
+
+   7. Loop with a misplaced semicolon
+   ```c
+      for (i = 0; i < 5; i++);     // the semicolon ENDS the loop
+          printf("%d", i);         // runs ONCE, printing 5
+   ```
+
+   8. Array index out of range
+   ```c
+      int a[5] = {1,2,3,4,5};
+      printf("%d", a[5]);          // UNDEFINED - a[5] does not exist
+   ```
+
+   9. String and pointer basics
+   ```c
+      char s[] = "hello";
+      printf("%d", strlen(s));     // 5
+      printf("%lu", sizeof(s));    // 6 - includes '\0'
+      printf("%c", *(s+1));        // e
+      printf("%s", s+1);           // ello
+   ```
+
+   10. Static and scope
+   ```c
+      void f() {
+          static int c = 0;        // initialised ONCE, keeps its value
+          int d = 0;               // reset on every call
+          printf("%d %d", ++c, ++d);
+      }
+      f(); f(); f();               // 1 1  2 1  3 1
+   ```
+
+   - The general method for any such question: `evaluate the expression exactly as C does` — apply the precedence table, note every side effect and its sequence point, watch for implicit type conversion, and check whether the format specifier matches the argument's type. Most output questions are built on one of the ten traps above.
+
 2. **What will be the output of following program?**
 ```c
 #include <stdio.h>
@@ -3793,7 +3883,173 @@ return 0;
 
 7. **Explain following program while part in step for the input 1221 and 3456 and also write the output of the program. (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয় নি!!)** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the paper itself records that the full program could not be collected. Without the loop body the exact output cannot be produced. The standard program that this question describes is the `digit-processing while loop`, traced below for the two given inputs, `1221` and `3456`.
+
+   The usual program — reverse a number, or test it for a palindrome
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       int n, rev = 0, digit, original;
+
+       printf("Enter a number: ");
+       scanf("%d", &n);
+       original = n;
+
+       while (n > 0) {              // the 'while part' the question refers to
+           digit = n % 10;          // take the LAST digit
+           rev = rev * 10 + digit;  // append it to the reversed number
+           n = n / 10;              // remove the last digit
+       }
+
+       printf("Reversed: %d\n", rev);
+       if (rev == original)
+           printf("It is a PALINDROME\n");
+       else
+           printf("It is NOT a palindrome\n");
+
+       return 0;
+   }
+   ```
+
+   Step-by-step trace for input `1221`
+   ```
+      n = 1221 , rev = 0 , original = 1221
+
+      Iteration 1 : digit = 1221 % 10 = 1
+                    rev   = 0*10 + 1   = 1
+                    n     = 1221 / 10  = 122
+
+      Iteration 2 : digit = 122 % 10  = 2
+                    rev   = 1*10 + 2   = 12
+                    n     = 122 / 10   = 12
+
+      Iteration 3 : digit = 12 % 10   = 2
+                    rev   = 12*10 + 2  = 122
+                    n     = 12 / 10    = 1
+
+      Iteration 4 : digit = 1 % 10    = 1
+                    rev   = 122*10 + 1 = 1221
+                    n     = 1 / 10     = 0     -> loop ends
+
+      Output : Reversed: 1221
+               It is a PALINDROME
+   ```
+
+   Step-by-step trace for input `3456`
+   ```
+      n = 3456 , rev = 0 , original = 3456
+
+      Iteration 1 : digit = 6 , rev = 6    , n = 345
+      Iteration 2 : digit = 5 , rev = 65   , n = 34
+      Iteration 3 : digit = 4 , rev = 654  , n = 3
+      Iteration 4 : digit = 3 , rev = 6543 , n = 0   -> loop ends
+
+      Output : Reversed: 6543
+               It is NOT a palindrome
+   ```
+
+   Summary table
+   ```
+      Input   Reversed   Palindrome?
+      1221      1221        YES
+      3456      6543        NO
+   ```
+
+   The three lines that do all the work
+   ```
+      digit = n % 10        extract the LAST digit
+      rev   = rev*10 + digit  shift the result left and append the digit
+      n     = n / 10        remove the last digit (integer division)
+
+      The loop runs once per digit, so it is O(number of digits) = O(log n).
+   ```
+
+   - If the intended program was instead `digit sum` or `counting digits`, the same trace applies with `sum = sum + digit` or `count++` in place of the middle line:
+   ```
+      1221 -> digit sum 6 , 4 digits
+      3456 -> digit sum 18 , 4 digits
+   ```
+
 8. **Write the function for which the output is 1 for that input.** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
+
+   Answer: The question is `incomplete` — the input for which the function must return 1 was printed with the previous question and is not present here. The answer below covers the functions that this question normally asks for, all of which return `1` (true) for a matching input and `0` otherwise.
+
+   If the required test is `palindrome number` — which follows from the 1221 and 3456 inputs of the previous question
+   ```c
+   int isPalindrome(int n) {
+       int rev = 0, original = n;
+
+       while (n > 0) {
+           rev = rev * 10 + (n % 10);
+           n = n / 10;
+       }
+       return (rev == original) ? 1 : 0;
+   }
+   ```
+   ```
+      isPalindrome(1221)  ->  1        1221 reversed is 1221
+      isPalindrome(3456)  ->  0        3456 reversed is 6543
+   ```
+
+   If the test is `prime number`
+   ```c
+   int isPrime(int n) {
+       if (n <= 1) return 0;
+       for (int i = 2; i * i <= n; i++)
+           if (n % i == 0) return 0;
+       return 1;
+   }
+   ```
+   ```
+      isPrime(17) -> 1 ,  isPrime(18) -> 0
+      The loop stops at sqrt(n), so it is O(sqrt n).
+   ```
+
+   If the test is `even number`
+   ```c
+   int isEven(int n) {
+       return (n % 2 == 0) ? 1 : 0;
+   }
+   ```
+
+   If the test is `Armstrong number`
+   ```c
+   int isArmstrong(int n) {
+       int sum = 0, temp = n, digits = 0, t = n;
+       while (t > 0) { digits++; t /= 10; }
+       t = n;
+       while (t > 0) {
+           int d = t % 10, p = 1;
+           for (int i = 0; i < digits; i++) p *= d;
+           sum += p;
+           t /= 10;
+       }
+       return (sum == n) ? 1 : 0;
+   }
+   ```
+   ```
+      isArmstrong(153) -> 1     1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+      isArmstrong(154) -> 0
+   ```
+
+   If the test is `string palindrome`
+   ```c
+   int isStringPalindrome(char s[]) {
+       int i = 0, j = strlen(s) - 1;
+       while (i < j) {
+           if (s[i] != s[j]) return 0;
+           i++; j--;
+       }
+       return 1;
+   }
+   ```
+   ```
+      isStringPalindrome("madam") -> 1
+      isStringPalindrome("hello") -> 0
+   ```
+
+   - The pattern every such function follows: `return 1 when the property holds and 0 otherwise`, exiting early the moment a counter-example is found. C has no built-in boolean type in C89, so `int` with 0 and 1 is the convention; `<stdbool.h>` in C99 adds `bool`, `true` and `false`, which compile to the same values.
 
 9. **In the below C code. Write the Output on below table based on code and left side. And also explain the line 7-11 in below code.**
 ```c
@@ -3843,7 +4099,200 @@ int main() {
 
 10. **C programming output problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 468 (ET: N/A)]*
 
+    Answer: The question is `incomplete` — the paper printed a code snippet that was not captured, so the specific output cannot be produced. The traps that C output questions are built on are set out below with worked examples.
+
+    1. Operator precedence and associativity
+    ```c
+       printf("%d", 2 + 3 * 4);         // 14 , not 20 - * binds tighter than +
+       printf("%d", (2 + 3) * 4);       // 20
+       printf("%d", 10 > 5 == 1);       // 1  - > binds tighter than ==
+    ```
+
+    2. Increment operators and their side effects
+    ```c
+       int i = 5, j;
+       j = i++ + ++i;         // UNDEFINED BEHAVIOUR - i is modified twice
+                              // between sequence points. Never write this.
+
+       int a = 5;
+       printf("%d %d", a++, a);   // the ORDER of evaluation of arguments is
+                                  // not specified - also undefined
+    ```
+
+    3. Integer division and the modulus sign
+    ```c
+       printf("%d", 7/2);       // 3
+       printf("%d", 7%2);       // 1
+       printf("%d", -7/2);      // -3  (truncated towards zero)
+       printf("%d", -7%2);      // -1  (sign follows the left operand)
+       printf("%f", 7/2);       // GARBAGE - %f with an int argument
+    ```
+
+    4. Pointer arithmetic
+    ```c
+       int a[5] = {10,20,30,40,50};
+       int *p = a;
+
+       printf("%d", *p);        // 10
+       printf("%d", *(p+2));    // 30
+       printf("%d", *p++);      // 10 , then p moves on
+       printf("%d", ++*p);      // 11 - increments the VALUE, not the pointer
+       printf("%d", p[3]);      // 40 - identical to *(p+3)
+    ```
+
+    5. Character and ASCII
+    ```c
+       char c = 'A';
+       printf("%c %d", c, c);       // A 65
+       printf("%c", c + 1);         // B
+       printf("%d", 'z' - 'a');     // 25
+    ```
+
+    6. Strings and the terminating null
+    ```c
+       char s[] = "hello";
+       printf("%lu %d", sizeof(s), (int)strlen(s));   // 6 5
+       printf("%s", s + 2);                            // llo
+       printf("%c", s[strlen(s)]);                     // '\0' - prints nothing
+    ```
+
+    7. Loops with tricky conditions
+    ```c
+       for (i = 0; i < 5; i++);         // semicolon ends the loop body
+           printf("%d", i);             // prints 5, once
+
+       i = 0;
+       while (i++ < 3) printf("%d", i); // 123
+       // i is compared, THEN incremented
+    ```
+
+    8. switch fall-through
+    ```c
+       switch (2) {
+           case 1: printf("A");
+           case 2: printf("B");     // no break
+           case 3: printf("C");
+       }
+       // Output : BC
+    ```
+
+    9. Static variables
+    ```c
+       void f() { static int c = 0; printf("%d", ++c); }
+       f(); f(); f();               // 123
+    ```
+
+    10. Pass by value versus pass by reference
+    ```c
+       void swap(int a, int b)   { int t=a; a=b; b=t; }      // does NOTHING
+       void swap(int *a, int *b) { int t=*a; *a=*b; *b=t; }  // works
+    ```
+
+    - The method for any output question: work through the code `line by line, keeping a table of every variable`, and apply C's rules exactly — precedence, integer truncation, implicit conversion, and the match between the format specifier and the argument type. Most such questions are one of the ten traps above.
+
 11. **What is the output of code snippet?** *[BICIC Assistant Programmer 2022 compact it 631 (ET: BUET)]*
+
+    Answer: The question is `incomplete` — the code snippet it refers to was not captured. The commonest snippets used in such questions are traced below, so the method is available whichever one was intended.
+
+    Snippet type 1 — pointer and array
+    ```c
+       int a[5] = {1, 2, 3, 4, 5};
+       int *p = a;
+       printf("%d %d %d", *p, *(p+2), p[4]);
+    ```
+    ```
+       Output : 1 3 5
+
+       *p       = a[0] = 1
+       *(p+2)   = a[2] = 3          pointer arithmetic scales by sizeof(int)
+       p[4]     = *(p+4) = a[4] = 5
+    ```
+
+    Snippet type 2 — increment operators
+    ```c
+       int i = 5;
+       printf("%d ", i++);      // 5 , then i = 6
+       printf("%d ", ++i);      // i = 7 , prints 7
+       printf("%d ", i--);      // 7 , then i = 6
+       printf("%d", --i);       // i = 5 , prints 5
+    ```
+    ```
+       Output : 5 7 7 5
+    ```
+
+    Snippet type 3 — string handling
+    ```c
+       char s[] = "Bangladesh";
+       printf("%lu ", sizeof(s));     // 11 - ten characters plus '\0'
+       printf("%lu ", strlen(s));     // 10
+       printf("%s ", s + 5);          // adesh
+       printf("%c", s[2]);            // n
+    ```
+    ```
+       Output : 11 10 adesh n
+    ```
+
+    Snippet type 4 — switch fall-through
+    ```c
+       int x = 2;
+       switch (x) {
+           case 1: printf("One");
+           case 2: printf("Two");
+           case 3: printf("Three");
+                   break;
+           default: printf("Other");
+       }
+    ```
+    ```
+       Output : TwoThree
+
+       Without a break, execution FALLS THROUGH into the following cases
+       until a break or the end of the switch is reached.
+    ```
+
+    Snippet type 5 — static variable
+    ```c
+       void count() {
+           static int c = 0;
+           int d = 0;
+           c++; d++;
+           printf("%d %d | ", c, d);
+       }
+       int main() { count(); count(); count(); }
+    ```
+    ```
+       Output : 1 1 | 2 1 | 3 1 |
+
+       'static' is initialised ONCE and keeps its value between calls;
+       the ordinary local d is created and destroyed every call.
+    ```
+
+    Snippet type 6 — integer division and type
+    ```c
+       printf("%d ", 5/2);         // 2
+       printf("%.2f ", 5/2.0);     // 2.50
+       printf("%d ", (int)2.9);    // 2   - truncates, does not round
+       printf("%d", 'A' + 1);      // 66
+    ```
+    ```
+       Output : 2 2.50 2 66
+    ```
+
+    Snippet type 7 — the semicolon trap
+    ```c
+       int i;
+       for (i = 0; i < 5; i++);
+           printf("%d", i);
+    ```
+    ```
+       Output : 5
+
+       The semicolon after the for statement makes the loop body EMPTY.
+       The printf is not part of the loop and runs once, after i has
+       reached 5.
+    ```
+
+    - The method for any snippet: `keep a table of every variable and update it line by line`, watching for integer truncation, the difference between prefix and postfix increment, missing `break` statements, and whether the `printf` format specifier matches the argument's actual type.
 
 12. **নিচের পাইথন program এর Output বের কর:** *[BTCL Junior Assistant Manager 2022 compact it 641 (ET: BUET)]*
 ```python
@@ -4500,9 +4949,329 @@ int main(){
 
 31. **After compilation and execution, what will be output in the following code:** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
+    Answer: The question is `incomplete` — the code that was to be compiled and executed is not present. The classes of behaviour that "after compilation and execution" questions test are set out below with worked examples.
+
+    Case 1 — the program does not compile
+    ```c
+       int main() {
+           int x = 10;
+           x = "hello";        // ERROR: assigning char* to int
+           return 0;
+       }
+    ```
+    ```
+       Output : COMPILATION ERROR. No output is produced at all.
+
+       Common compile errors : missing semicolon , undeclared variable ,
+       type mismatch , missing header , wrong number of arguments.
+    ```
+
+    Case 2 — it compiles but the behaviour is undefined
+    ```c
+       int main() {
+           int a[5];
+           printf("%d", a[10]);      // out of bounds
+           int *p;
+           printf("%d", *p);         // uninitialised pointer
+           return 0;
+       }
+    ```
+    ```
+       Output : UNDEFINED. It may print garbage, or crash with a
+       segmentation fault, or appear to work. The standard imposes no
+       requirement, so "undefined behaviour" is the correct answer.
+    ```
+
+    Case 3 — it compiles with a warning and prints something surprising
+    ```c
+       int main() {
+           float f = 3.14;
+           printf("%d", f);          // WRONG specifier for a float
+           return 0;
+       }
+    ```
+    ```
+       Output : garbage. %d reads four bytes as an int, but a float is
+       passed as a double and laid out differently.
+    ```
+
+    Case 4 — it works, and the trick is in the logic
+    ```c
+       int main() {
+           int i = 0;
+           while (i++ < 3)
+               printf("%d ", i);
+           return 0;
+       }
+    ```
+    ```
+       Output : 1 2 3
+
+       i++ < 3 : the CURRENT value is compared, then i is incremented.
+       i = 0 -> 0<3 true , i becomes 1 , print 1
+       i = 1 -> 1<3 true , i becomes 2 , print 2
+       i = 2 -> 2<3 true , i becomes 3 , print 3
+       i = 3 -> 3<3 false , loop ends
+    ```
+
+    Case 5 — a runtime error
+    ```c
+       int main() {
+           int a = 10, b = 0;
+           printf("%d", a / b);      // division by zero
+           return 0;
+       }
+    ```
+    ```
+       Output : the program compiles, then crashes.
+       On Linux : "Floating point exception (core dumped)"
+    ```
+
+    The stages a C program passes through
+    ```
+       source.c
+          |  PREPROCESSOR   - expands #include and #define
+          v
+       source.i
+          |  COMPILER       - checks syntax and types, produces assembly
+          v
+       source.s
+          |  ASSEMBLER      - produces machine code
+          v
+       source.o
+          |  LINKER         - joins the object files and libraries
+          v
+       a.out                - the executable
+    ```
+    ```
+       A syntax or type fault is caught by the COMPILER  -> no executable
+       A missing function body is caught by the LINKER   -> no executable
+       A bad pointer is caught at RUN TIME, or not at all
+    ```
+
+    - The habit that answers such questions correctly: first ask `does it compile`, then `is any behaviour undefined`, and only then trace the logic. Many exam snippets are designed so that the answer is "compilation error" rather than a value.
+
 32. **Write down the output of following program:** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
 
+    Answer: The question is `incomplete` — the program whose output was to be written is not present. The programs that appear most often in this position are traced below.
+
+    Program type 1 — nested loop pattern
+    ```c
+    #include <stdio.h>
+    int main() {
+        int i, j;
+        for (i = 1; i <= 4; i++) {
+            for (j = 1; j <= i; j++)
+                printf("%d ", j);
+            printf("\n");
+        }
+        return 0;
+    }
+    ```
+    ```
+       Output :
+       1
+       1 2
+       1 2 3
+       1 2 3 4
+    ```
+
+    Program type 2 — recursion
+    ```c
+    #include <stdio.h>
+    int fact(int n) {
+        if (n <= 1) return 1;
+        return n * fact(n - 1);
+    }
+    int main() {
+        printf("%d", fact(5));
+        return 0;
+    }
+    ```
+    ```
+       Output : 120
+
+       fact(5) = 5 * fact(4)
+               = 5 * 4 * fact(3)
+               = 5 * 4 * 3 * fact(2)
+               = 5 * 4 * 3 * 2 * fact(1)
+               = 5 * 4 * 3 * 2 * 1 = 120
+    ```
+
+    Program type 3 — array and pointer
+    ```c
+    #include <stdio.h>
+    int main() {
+        int a[] = {10, 20, 30, 40, 50};
+        int *p = a;
+        printf("%d %d %d %d", *p, *(p+1), *(p+4), p[2]);
+        return 0;
+    }
+    ```
+    ```
+       Output : 10 20 50 30
+    ```
+
+    Program type 4 — string reversal
+    ```c
+    #include <stdio.h>
+    #include <string.h>
+    int main() {
+        char s[] = "BANGLADESH";
+        int i, n = strlen(s);
+        for (i = n - 1; i >= 0; i--)
+            printf("%c", s[i]);
+        return 0;
+    }
+    ```
+    ```
+       Output : HSEDALGNAB
+    ```
+
+    Program type 5 — swap by pointer, versus swap by value
+    ```c
+    #include <stdio.h>
+    void swapVal(int a, int b)   { int t = a; a = b; b = t; }
+    void swapRef(int *a, int *b) { int t = *a; *a = *b; *b = t; }
+
+    int main() {
+        int x = 10, y = 20;
+        swapVal(x, y);
+        printf("%d %d | ", x, y);      // 10 20 - UNCHANGED
+        swapRef(&x, &y);
+        printf("%d %d", x, y);         // 20 10 - swapped
+        return 0;
+    }
+    ```
+    ```
+       Output : 10 20 | 20 10
+
+       C passes arguments BY VALUE. swapVal receives copies and changes
+       only those copies. Only passing the ADDRESS lets a function alter
+       the caller's variables.
+    ```
+
+    Program type 6 — Fibonacci
+    ```c
+    #include <stdio.h>
+    int main() {
+        int a = 0, b = 1, c, i;
+        printf("%d %d ", a, b);
+        for (i = 3; i <= 8; i++) {
+            c = a + b;
+            printf("%d ", c);
+            a = b; b = c;
+        }
+        return 0;
+    }
+    ```
+    ```
+       Output : 0 1 1 2 3 5 8 13
+    ```
+
+    - The method for any such question: `keep a running table of every variable`, update it line by line, and write down exactly what each `printf` emits, including whether it ends with a newline. Most marks are lost by forgetting integer truncation or by mis-tracing a prefix versus postfix increment.
+
 33. **What will be the output in C and java code? (i) C program:** *[Combined 4 Banks Assistant Programmer 2020 compact it 1003 (ET: DU)]*
+
+    Answer: The question is `incomplete` — the C program and the Java program it refers to were not captured. The comparison the question is built on is set out below, with the snippets that appear most often in this position.
+
+    Case 1 — integer division
+    ```c
+       /* C */
+       printf("%d", 5/2);          // 2
+       printf("%f", 5/2.0);        // 2.500000
+    ```
+    ```java
+       // Java
+       System.out.println(5/2);    // 2
+       System.out.println(5/2.0);  // 2.5
+    ```
+    - Both truncate integer division. Java prints `2.5`, C prints `2.500000`, because `%f` defaults to six decimal places.
+
+    Case 2 — array size
+    ```c
+       /* C */
+       int a[5] = {1,2,3,4,5};
+       printf("%lu", sizeof(a)/sizeof(a[0]));   // 5
+    ```
+    ```java
+       // Java
+       int[] a = {1,2,3,4,5};
+       System.out.println(a.length);            // 5
+    ```
+    - C has no length field, so the size must be computed. Java stores the length with the array, and checks every index at run time.
+
+    Case 3 — out-of-bounds access
+    ```c
+       /* C */
+       int a[5];
+       printf("%d", a[10]);        // UNDEFINED - garbage or a crash
+    ```
+    ```java
+       // Java
+       int[] a = new int[5];
+       System.out.println(a[10]);  // ArrayIndexOutOfBoundsException
+    ```
+    - This is the sharpest difference: C does not check, Java always does.
+
+    Case 4 — string comparison
+    ```c
+       /* C */
+       char s1[] = "test", s2[] = "test";
+       printf("%d", s1 == s2);          // 0 - two different addresses
+       printf("%d", strcmp(s1,s2));     // 0 - contents are equal
+    ```
+    ```java
+       // Java
+       String s1 = "test", s2 = "test";
+       System.out.println(s1 == s2);        // true  - both from the string pool
+       String s3 = new String("test");
+       System.out.println(s1 == s3);        // false - a new heap object
+       System.out.println(s1.equals(s3));   // true
+    ```
+
+    Case 5 — uninitialised variables
+    ```c
+       /* C */
+       int x;
+       printf("%d", x);            // GARBAGE - undefined
+    ```
+    ```java
+       // Java
+       int x;
+       System.out.println(x);      // COMPILE ERROR: variable x might not
+                                   // have been initialized
+    ```
+    - A `field` in Java is zero-initialised; a `local variable` must be assigned before use, and the compiler enforces it.
+
+    Case 6 — integer overflow
+    ```c
+       /* C */
+       int x = 2147483647;
+       printf("%d", x + 1);        // -2147483648 (implementation defined
+                                   // for signed overflow - undefined by the standard)
+    ```
+    ```java
+       // Java
+       int x = 2147483647;
+       System.out.println(x + 1);  // -2147483648 - DEFINED to wrap around
+    ```
+
+    Summary of the differences these questions test
+
+    | Point | C | Java |
+    |---|---|---|
+    | Array bounds checked | `No` | `Yes` — throws an exception |
+    | Pointers | Yes | No — references only |
+    | Memory management | Manual `malloc` / `free` | Garbage collector |
+    | Uninitialised local | Garbage value | Compile error |
+    | String comparison | `strcmp` | `.equals()`, not `==` |
+    | Integer overflow | Undefined for signed | Defined to wrap |
+    | `sizeof` | Yes | No — use `.length` |
+    | Output | `printf` with format specifiers | `System.out.println` |
+    | Platform | Compiled to machine code | Compiled to bytecode, runs on the JVM |
+
+    - The general rule that answers most of these: `C trusts the programmer and checks nothing at run time; Java checks everything and throws an exception instead of corrupting memory`. Where a C snippet prints garbage or crashes, the Java equivalent usually refuses to compile or throws.
 
 34. **a) Using Pseudocode give an example of run time error.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035-1036 (ET: BUET)]*
 
@@ -4550,6 +5319,109 @@ int main(){
     - Run-time errors are handled with input validation, bounds checking, and exception handling (`try...catch` in languages that support it).
 
 35. **Find the Output:** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
+
+    Answer: The question is `incomplete` — the code whose output was to be found is not present. The snippets that appear most often in this position are traced below.
+
+    Snippet 1 — prefix and postfix in one expression
+    ```c
+       int i = 10;
+       printf("%d %d %d", i++, ++i, i);
+    ```
+    ```
+       Output : UNDEFINED BEHAVIOUR.
+
+       'i' is modified more than once between sequence points, and the
+       order in which printf's arguments are evaluated is unspecified.
+       Different compilers print different results. The correct exam
+       answer is "undefined", not a number.
+    ```
+
+    Snippet 2 — the comma operator
+    ```c
+       int x = (1, 2, 3);
+       printf("%d", x);            // 3 - the comma operator yields the LAST value
+
+       int a = 5, b;
+       b = (a++, a+10);
+       printf("%d %d", a, b);      // 6 16
+    ```
+
+    Snippet 3 — pointer to a string literal
+    ```c
+       char *s = "hello";
+       printf("%c ", *s);          // h
+       printf("%c ", *(s+4));      // o
+       printf("%s ", s+2);         // llo
+       printf("%lu", strlen(s));   // 5
+    ```
+    ```
+       Output : h o llo 5
+    ```
+
+    Snippet 4 — the dangling else
+    ```c
+       int a = 5, b = 10;
+       if (a > 3)
+           if (b > 20)
+               printf("A");
+       else
+           printf("B");
+    ```
+    ```
+       Output : nothing.
+
+       The 'else' binds to the NEAREST unmatched 'if', which is the inner
+       one, not the outer one as the indentation suggests. Since a > 3 is
+       true and b > 20 is false, control reaches the else - but the else
+       belongs to the inner if, so "B" is printed.
+
+       Corrected reading : the output is B.
+       The lesson : indentation means nothing to the compiler. Use braces.
+    ```
+
+    Snippet 5 — the size of things
+    ```c
+       printf("%lu ", sizeof(int));        // 4
+       printf("%lu ", sizeof(char));       // 1 , always
+       printf("%lu ", sizeof(double));     // 8
+       printf("%lu ", sizeof("abc"));      // 4 - three characters plus '\0'
+       printf("%lu", sizeof('a'));         // 4 in C - a character constant
+                                           //   has type int
+    ```
+    ```
+       Output : 4 1 8 4 4
+    ```
+
+    Snippet 6 — a do-while loop
+    ```c
+       int i = 10;
+       do {
+           printf("%d ", i);
+           i++;
+       } while (i < 5);
+    ```
+    ```
+       Output : 10
+
+       A do-while ALWAYS executes its body at least once, because the
+       condition is tested at the END. This is the whole point of the
+       construct, and the usual trick in such questions.
+    ```
+
+    Snippet 7 — bitwise operators
+    ```c
+       int a = 12, b = 10;              // 1100 and 1010 in binary
+       printf("%d ", a & b);            // 8   -> 1000
+       printf("%d ", a | b);            // 14  -> 1110
+       printf("%d ", a ^ b);            // 6   -> 0110
+       printf("%d ", a << 1);           // 24  - shift left = multiply by 2
+       printf("%d", a >> 1);            // 6   - shift right = divide by 2
+    ```
+    ```
+       Output : 8 14 6 24 6
+    ```
+
+    - The method for any "find the output" question: `keep a table of every variable and update it after each statement`, and before writing the answer ask three checks — is any behaviour undefined, does any integer division truncate, and does every format specifier match its argument's type.
 
 36. **Find the error of given code** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
 ```c
@@ -4767,6 +5639,127 @@ while(i!=n) {
     - Had the condition been `i != 5`, the `continue` at `i == 3` would have skipped the `i++` as well and caused an infinite loop. That is the classic danger of `continue` inside a `while` loop.
 
 43. **What is the output of following program?** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1166 (ET: N/A)]*
+
+    Answer: The question is `incomplete` — the program is not present. The snippets that appear most often in this position are traced below.
+
+    Snippet 1 — recursion with a printed trace
+    ```c
+    #include <stdio.h>
+    void fun(int n) {
+        if (n > 0) {
+            printf("%d ", n);
+            fun(n - 1);
+            printf("%d ", n);       // printed on the way BACK UP
+        }
+    }
+    int main() { fun(3); return 0; }
+    ```
+    ```
+       Output : 3 2 1 1 2 3
+
+       Going down : 3 , 2 , 1
+       Base case  : n = 0 , returns
+       Coming up  : 1 , 2 , 3
+
+       The second printf runs AFTER the recursive call returns, which is
+       why the sequence is symmetrical.
+    ```
+
+    Snippet 2 — a function that cannot swap
+    ```c
+    #include <stdio.h>
+    void swap(int a, int b) { int t = a; a = b; b = t; }
+    int main() {
+        int x = 5, y = 10;
+        swap(x, y);
+        printf("%d %d", x, y);
+        return 0;
+    }
+    ```
+    ```
+       Output : 5 10
+
+       C passes arguments BY VALUE. swap works on copies, so the caller's
+       variables are untouched. Passing &x and &y and taking int* fixes it.
+    ```
+
+    Snippet 3 — array decay in a function
+    ```c
+    #include <stdio.h>
+    void f(int a[]) { printf("%lu ", sizeof(a)); }
+    int main() {
+        int a[10];
+        printf("%lu ", sizeof(a));      // 40
+        f(a);                            // 8 - a POINTER, not an array
+        return 0;
+    }
+    ```
+    ```
+       Output : 40 8
+
+       An array passed to a function DECAYS to a pointer, so its size
+       information is lost. This is why array functions in C always take
+       an extra length parameter.
+    ```
+
+    Snippet 4 — static versus automatic storage
+    ```c
+    #include <stdio.h>
+    int counter() {
+        static int c = 0;
+        return ++c;
+    }
+    int main() {
+        printf("%d %d %d", counter(), counter(), counter());
+        return 0;
+    }
+    ```
+    ```
+       The three values are 1, 2 and 3 - but the ORDER in which printf's
+       arguments are evaluated is UNSPECIFIED in C. Many compilers evaluate
+       right to left and print "3 2 1".
+
+       The safe answer : the counter returns 1, 2, 3 in call order, but the
+       printed order depends on the compiler. Written as three separate
+       printf statements it is unambiguously 1 2 3.
+    ```
+
+    Snippet 5 — the goto and label pattern
+    ```c
+    #include <stdio.h>
+    int main() {
+        int i = 0;
+        loop:
+            printf("%d ", i);
+            i++;
+            if (i < 5) goto loop;
+        return 0;
+    }
+    ```
+    ```
+       Output : 0 1 2 3 4
+    ```
+
+    Snippet 6 — the ternary operator chained
+    ```c
+    #include <stdio.h>
+    int main() {
+        int marks = 75;
+        char grade = marks >= 80 ? 'A' :
+                     marks >= 70 ? 'B' :
+                     marks >= 60 ? 'C' : 'F';
+        printf("%c", grade);
+        return 0;
+    }
+    ```
+    ```
+       Output : B
+
+       The ternary operator is RIGHT associative, so the chain reads as a
+       nested if-else and stops at the first true condition.
+    ```
+
+    - The general method: `trace the program line by line with a variable table`, and check three things before answering — whether anything is undefined (multiple modification between sequence points, unspecified argument order), whether any integer division truncates, and whether each format specifier matches its argument.
 
 44. **Find the output of following program.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1169 (ET: N/A)]*
    i)
