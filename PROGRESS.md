@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 167 / 243 done**  ·  **Questions: 2037 answered, 38 skipped, 3168 total**
+**Subtopics: 168 / 243 done**  ·  **Questions: 2090 answered, 39 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -25,7 +25,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `math.md` | General | 0 / 15 | 0 | 0 | 96 |
 | `microprocessor-and-computer-architecture.md` | IT | 11 / 11 | 133 | 2 | 135 |
 | `ms-office.md` | IT | 1 / 1 | 1 | 0 | 1 |
-| `oop.md` | IT | 0 / 9 | 0 | 0 | 117 |
+| `oop.md` | IT | 1 / 9 | 53 | 1 | 117 |
 | `operating-system.md` | IT | 0 / 12 | 0 | 0 | 196 |
 | `programming-languages.md` | IT | 0 / 1 | 0 | 0 | 6 |
 | `software-engineering.md` | IT | 0 / 14 | 0 | 0 | 152 |
@@ -73,3 +73,4 @@ Content-free or truncated entries — no answer written.
 - `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 12
 - `microprocessor-and-computer-architecture.md → CPU Performance & Instruction Cycle` — question 1
 - `microprocessor-and-computer-architecture.md → CPU Performance & Instruction Cycle` — question 4
+- `oop.md → OOP Concepts (Inheritance & Polymorphism)` — question 37
