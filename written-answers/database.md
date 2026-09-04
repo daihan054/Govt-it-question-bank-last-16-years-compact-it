@@ -18604,19 +18604,396 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)]*
 
+   Answer: Both are partial backups taken between two full backups. The difference is what they measure the change against.
+
+   Incremental backup
+   - Copies only the data changed `since the last backup of any kind` — full or incremental.
+   - Each incremental therefore covers a small slice of time, so it is the fastest to take and uses the least space.
+   - Restoring needs the `full backup plus every incremental in the chain`, applied in order. If one incremental in the middle is lost or corrupt, everything after it is useless.
+
+   Differential backup
+   - Copies all the data changed `since the last full backup`.
+   - It grows a little bigger every day, because it repeats what the earlier differentials already had.
+   - Restoring needs only `the full backup plus the latest differential` — two files.
+
+   Example — full backup on Sunday
+   ```
+           Incremental                     Differential
+   Mon  changes of Mon        (small)   changes since Sun        (small)
+   Tue  changes of Tue        (small)   changes of Mon+Tue       (bigger)
+   Wed  changes of Wed        (small)   changes of Mon+Tue+Wed   (bigger still)
+
+   Restore on Thursday:
+     Incremental  : Full + Mon + Tue + Wed   (4 files, slow, fragile)
+     Differential : Full + Wed               (2 files, fast, safe)
+   ```
+
+   | Point | Incremental | Differential |
+   |---|---|---|
+   | Baseline | The last backup of any type | The last full backup |
+   | Backup time | Fastest | Slower, grows daily |
+   | Storage used | Least | More |
+   | Restore time | Slowest — apply the whole chain | Faster — only two sets |
+   | Files needed to restore | Full + all incrementals | Full + latest differential |
+   | Risk | One broken file breaks the chain | Only two files must be good |
+   | Best for | Huge data, narrow backup window | Fast recovery, moderate data |
+
+   Which suits a banking system
+   - `Differential` is the safer choice for a bank, because in banking `restore time and reliability matter far more than backup storage cost`. An RTO measured in minutes cannot afford to replay a seven-day incremental chain, and the chain has a single point of failure that incremental backups cannot escape.
+   - In practice a bank uses all three together:
+   ```
+   Weekly   : full backup
+   Daily    : differential backup
+   Every 15 min : transaction log (archive log) backup
+   Continuous   : synchronous replication to the DR site
+   ```
+   - The log backups give a very small `RPO` — point-in-time recovery to within minutes — while the differential keeps the `RTO` short. Storage is cheap; a bank that cannot reopen on Monday morning is not.
+
 2. **Database Data Loss based case study type question......** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
 3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 333 (ET: BIBM)]*
 
+   Answer: An `IT disaster recovery (DR) plan` is a written, tested procedure that says how IT systems and data will be brought back after a disaster — fire, flood, power failure, hardware failure, cyber attack or human error. `Business continuity planning (BCP)` is wider: it covers how the whole organisation keeps working while IT is being restored.
+
+   Two numbers drive every DR plan
+   ```
+   RPO (Recovery Point Objective) : how much data may be lost   -> "at most 15 minutes"
+   RTO (Recovery Time Objective)  : how long the outage may last -> "back within 1 hour"
+   ```
+   - Every technology choice below is decided by these two numbers, so they are agreed with the business first, not with IT.
+
+   Approach for the data centre
+
+   1. Business impact analysis and risk assessment
+   - List every system, rank it as critical, important or deferrable, and set an RPO and RTO for each. The core banking system may need RPO 0; the HR portal may tolerate one day.
+
+   2. Backup strategy — the 3-2-1 rule
+   ```
+   3 copies of the data
+   2 different media types
+   1 copy off-site (and ideally 1 immutable / offline copy against ransomware)
+
+   Weekly full  +  daily differential  +  15-minute log backup
+   ```
+   - Backups must be `encrypted`, catalogued, and `test-restored` regularly. An untested backup is not a backup.
+
+   3. Redundancy inside the primary site
+   - Dual power feeds, UPS and generator; redundant cooling; RAID storage; clustered servers; dual network paths and dual ISPs; no single point of failure.
+
+   4. A DR site
+   ```
+   Hot site   : fully equipped, data replicated live, ready in minutes     (high cost)
+   Warm site  : hardware ready, data restored from backup, hours to start  (medium)
+   Cold site  : space and power only, days to start                        (low cost)
+   ```
+   - A bank's core system needs a `hot` DR site far enough away that the same flood or earthquake cannot hit both.
+
+   5. Replication
+   - `Synchronous` replication to the DR site gives RPO = 0, because a transaction commits only after the standby confirms the write. It needs low latency, so the distance is limited.
+   - `Asynchronous` replication works over any distance but loses the last few seconds.
+   - Oracle Data Guard, SQL Server Always On availability groups and storage-level mirroring all implement this.
+
+   6. Failover and failback procedure
+   - Write, step by step, who declares a disaster, who switches DNS or the load balancer, how the application is pointed at the DR database, and how the systems are brought back to the primary site afterwards.
+
+   7. People and communication
+   - A named DR team with deputies, an out-of-hours contact list, an escalation path, and a plan to inform customers and the regulator.
+
+   8. Testing
+   - A `tabletop` walkthrough every quarter and a real `failover drill` at least once a year. Record how long it actually took and fix what failed.
+
+   9. Documentation and review
+   - Keep runbooks, network diagrams and passwords in a sealed off-site copy — a plan stored only on the failed server is worthless. Review after every major change.
+
+   - Points to note for a Bangladeshi bank: Bangladesh Bank's ICT Security Guideline requires a DR site, periodic DR drills and documented BCP. Cyber recovery now needs `immutable` or air-gapped backups, because ransomware deliberately encrypts the online backups first.
+
 4. **একটি MySQL database এর ডাটা ব্যাক আপ ও ব্যাক আপ করা ডাটা রিস্টোর করার কমান্ড লিখ।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
+
+   Answer: (Answered in English, as required for IT topics.) MySQL uses the `mysqldump` utility to take a logical backup and the `mysql` client to restore it. These are run from the operating system shell, not from inside the MySQL prompt.
+
+   Backup — mysqldump
+
+   One database
+   ```bash
+   mysqldump -u root -p bank_db > bank_db_backup.sql
+   ```
+
+   One or more specific tables
+   ```bash
+   mysqldump -u root -p bank_db customer account > tables_backup.sql
+   ```
+
+   Several databases
+   ```bash
+   mysqldump -u root -p --databases bank_db hr_db > multi_backup.sql
+   ```
+
+   All databases on the server
+   ```bash
+   mysqldump -u root -p --all-databases > full_backup.sql
+   ```
+
+   A consistent backup of a live InnoDB database, with the binary log position recorded
+   ```bash
+   mysqldump -u root -p --single-transaction --routines --triggers --events \
+             --master-data=2 bank_db > bank_db_backup.sql
+   ```
+
+   Compressed backup, to save space
+   ```bash
+   mysqldump -u root -p bank_db | gzip > bank_db_backup.sql.gz
+   ```
+
+   Restore
+
+   Into an existing database
+   ```bash
+   mysql -u root -p bank_db < bank_db_backup.sql
+   ```
+
+   The database must exist first, so create it if needed
+   ```bash
+   mysql -u root -p -e "CREATE DATABASE bank_db;"
+   mysql -u root -p bank_db < bank_db_backup.sql
+   ```
+
+   From inside the MySQL prompt
+   ```sql
+   CREATE DATABASE bank_db;
+   USE bank_db;
+   SOURCE /home/admin/bank_db_backup.sql;
+   ```
+
+   Restoring a compressed backup
+   ```bash
+   gunzip < bank_db_backup.sql.gz | mysql -u root -p bank_db
+   ```
+
+   A backup taken with `--all-databases` already contains the CREATE statements
+   ```bash
+   mysql -u root -p < full_backup.sql
+   ```
+
+   Points to note
+   - `mysqldump` produces a `logical` backup — a text file of `CREATE` and `INSERT` statements. It is portable across versions and platforms, but slow to restore for very large databases.
+   - `--single-transaction` gives a consistent snapshot of InnoDB tables `without locking them`, so the application keeps running. Do not use `--lock-all-tables` on a production server unless the outage is planned.
+   - Add `--routines --triggers --events`, otherwise stored procedures, triggers and scheduled events are silently left out.
+   - For very large databases use a `physical` backup tool such as `Percona XtraBackup` or `mysqlbackup`, which copies the data files directly and restores far faster.
+   - For point-in-time recovery, restore the dump and then replay the binary log:
+   ```bash
+   mysqlbinlog --start-datetime="2026-09-04 09:00:00" mysql-bin.000012 | mysql -u root -p
+   ```
 
 5. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 539 (ET: MIST)]*
 
+   Answer: `Data backup` is the act of making an extra copy of data before anything goes wrong. `Data recovery` is the act of bringing data back after something has gone wrong. Backup is preventive and planned; recovery is corrective and reactive.
+
+   Data backup
+   - A copy of the data kept on separate storage — disk, tape, or cloud — so that the original can be replaced if lost.
+   - Done on a schedule, automatically, whether or not there is a problem.
+   - Types: `full`, `differential`, `incremental`, plus transaction log backups for point-in-time recovery.
+   - The standard rule is `3-2-1`: three copies, two media types, one copy off-site.
+   - Real-world use: a bank runs a full backup every Sunday, a differential every night, and a transaction log backup every 15 minutes. A company laptop syncs to cloud storage continuously. None of this depends on anything failing.
+
+   Data recovery
+   - The process of restoring data after loss caused by hardware failure, accidental deletion, corruption, ransomware or a disaster.
+   - Two very different situations:
+   ```
+   Recovery FROM a backup : restore the copy, then roll forward the logs
+                            -> planned, fast, reliable
+   Recovery WITHOUT a backup : forensic tools, file carving, clean-room
+                            work on a failed disk
+                            -> expensive, slow, partial success at best
+   ```
+   - Measured by `RTO` (how long the restore may take) and `RPO` (how much data may be lost).
+   - Real-world use: a DBA drops the wrong table at 11 a.m.; the team restores last night's backup and replays the transaction log up to 10:59 a.m. Or a ransomware attack encrypts the file server, and the systems are rebuilt from the immutable off-site copy.
+
+   | Point | Data backup | Data recovery |
+   |---|---|---|
+   | Nature | Preventive | Corrective |
+   | When done | Before loss, on a schedule | After loss, on demand |
+   | Frequency | Regular and routine | Rare, only when needed |
+   | Cost | Predictable storage cost | Can be very high if no backup exists |
+   | Depends on | Policy and automation | The quality of the backup |
+   | Success | Almost always | Not guaranteed |
+   | Example | Nightly `mysqldump` to off-site storage | Restoring that dump after a disk failure |
+
+   - The link between them: `recovery is only as good as the backup`. A backup that has never been test-restored is not a backup — it is a hope. Banks therefore run periodic restore drills and measure the actual RTO achieved, not the planned one.
+
 6. **To achieve a '0-bit data loss' for its 24 x 7 x 365 banking operation, what steps or technology should an online bank employ to safeguard its data against any potential threats of data loss?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 518 (ET: MIST)]*
+
+   Answer: `Zero data loss` means `RPO = 0` — not a single committed transaction is lost, even if the primary site is destroyed. For a 24×7 bank this needs several layers working together; no single product gives it.
+
+   1. Synchronous replication to a DR site
+   - The single most important step. A transaction commits `only after` the standby site has confirmed that the redo/log record is written on its own disk.
+   - Oracle `Data Guard` in Maximum Protection or Maximum Availability mode, SQL Server `Always On` synchronous-commit availability groups, or `MySQL Group Replication`.
+   - Cost: extra commit latency, so the DR site must be within a distance where the round trip stays small (typically under 100-150 km). For a longer distance, Oracle's `Far Sync` instance keeps RPO 0 while placing the standby far away.
+
+   2. Write-ahead logging and archive log shipping
+   - Every change is written to the log `before` the data page, and the log is forced to disk at commit. This is what makes `durability` real.
+   - Archive logs are shipped continuously, giving point-in-time recovery to the second.
+
+   3. Storage-level redundancy
+   ```
+   RAID 1 / RAID 10   : mirrored disks, survives a disk failure
+   Redundant controllers, dual HBAs, dual SAN fabrics
+   Storage array mirroring (EMC SRDF, IBM Metro Mirror) between sites
+   ```
+
+   4. High-availability clustering at the primary site
+   - `Oracle RAC` or SQL Server failover clusters keep the database up when a server dies, so a node failure never becomes a data-loss event.
+   - Redundant power (dual feed, UPS, generator), redundant cooling, redundant network paths and dual ISPs.
+
+   5. Multi-layer backup with the 3-2-1 rule
+   ```
+   3 copies, 2 media types, 1 off-site
+   Weekly full + daily differential + 15-minute log backup
+   At least one immutable or air-gapped copy against ransomware
+   ```
+   - Backups encrypted, catalogued and `test-restored` on a schedule.
+
+   6. Geographically separated DR site
+   - Far enough that one flood, fire or earthquake cannot take both. Ideally a third, distant site holds an asynchronous copy, so a regional disaster is also survivable.
+
+   7. Transaction-level protection
+   - Strict ACID with `Serializable` or `Repeatable Read` where correctness demands it, and two-phase commit for distributed transactions so partial updates cannot survive.
+
+   8. Protection against the non-hardware causes
+   - Most real data loss is human or malicious, not physical:
+   ```
+   Least-privilege access and separation of duties
+   No shared DBA accounts; every action logged and audited
+   Change control on production; no ad-hoc DELETE without a WHERE review
+   Flashback / point-in-time recovery to undo a wrong DELETE quickly
+   Anti-ransomware: immutable backups, offline copy, EDR, network segmentation
+   ```
+
+   9. Monitoring and drills
+   - Alert on replication lag, log-shipping delay, failed backup jobs and full disks — a silent replication break is how "zero data loss" quietly becomes "one week of loss".
+   - Run a real failover drill at least once a year and record the actual RTO and RPO achieved.
+
+   - Summary of the architecture:
+   ```
+   Primary site (RAC cluster, RAID, UPS)
+           | synchronous replication  -> RPO 0
+   Near DR site (hot standby, same city region)
+           | asynchronous replication -> regional disaster
+   Far DR site + immutable off-site backup copies
+   ```
 
 7. **MySQL database এর ক্ষেত্রে Backup and Restore করার কমান্ড লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 
+   Answer: (Answered in English, as required for IT topics.) MySQL is backed up with the `mysqldump` utility and restored with the `mysql` client. Both are run from the operating system shell.
+
+   Backup commands
+   ```bash
+   # one database
+   mysqldump -u root -p bank_db > bank_db.sql
+
+   # specific tables only
+   mysqldump -u root -p bank_db customer account > tables.sql
+
+   # several databases
+   mysqldump -u root -p --databases bank_db hr_db > multi.sql
+
+   # every database on the server
+   mysqldump -u root -p --all-databases > full_backup.sql
+
+   # consistent backup of a live InnoDB database, without locking it
+   mysqldump -u root -p --single-transaction --routines --triggers --events \
+             bank_db > bank_db.sql
+
+   # compressed
+   mysqldump -u root -p bank_db | gzip > bank_db.sql.gz
+   ```
+
+   Restore commands
+   ```bash
+   # the target database must exist first
+   mysql -u root -p -e "CREATE DATABASE bank_db;"
+
+   # restore into it
+   mysql -u root -p bank_db < bank_db.sql
+
+   # a --all-databases dump already contains CREATE DATABASE
+   mysql -u root -p < full_backup.sql
+
+   # from a compressed file
+   gunzip < bank_db.sql.gz | mysql -u root -p bank_db
+   ```
+
+   From inside the MySQL prompt
+   ```sql
+   CREATE DATABASE bank_db;
+   USE bank_db;
+   SOURCE /home/admin/bank_db.sql;
+   ```
+
+   Point-in-time recovery
+   ```bash
+   # restore the dump, then replay the binary log up to the moment before the error
+   mysqlbinlog --stop-datetime="2026-09-04 10:59:00" mysql-bin.000012 | mysql -u root -p
+   ```
+
+   Points to note
+   - `mysqldump` gives a `logical` backup — a text file of `CREATE` and `INSERT` statements. Portable, but slow to restore for a very large database.
+   - `--single-transaction` takes a consistent snapshot of InnoDB tables `without locking` them, so the application stays online. Use it on production.
+   - Always add `--routines --triggers --events`; without them stored procedures, triggers and scheduled events are silently missing from the dump.
+   - For large databases use a `physical` backup tool such as `Percona XtraBackup`, which copies the data files and restores far faster.
+   - Restoring overwrites existing data, so verify the target database name before running the command.
+
 8. **Describe what are the ways for no data loss?** *[RAKUB Assistant Database Administrator 2020 compact it 1015-1016 (ET: E-Zone)]*
+
+   Answer: No single technique prevents data loss. Protection is built in layers, so that when one layer fails another still holds. The target is `RPO = 0` — not one committed transaction lost.
+
+   1. Regular, tested backups
+   ```
+   3-2-1 rule : 3 copies, 2 media types, 1 off-site
+   Weekly full + daily differential + 15-minute transaction log backup
+   At least one immutable / air-gapped copy against ransomware
+   ```
+   - Backups must be encrypted and `test-restored` on a schedule. An untested backup is only a hope.
+
+   2. Transaction logging and point-in-time recovery
+   - `Write-ahead logging` forces the log record to disk before commit returns, so a crash can be repaired by `redo` and `undo`.
+   - Archived logs allow recovery to any second, which is how a wrong `DELETE` at 11:00 is undone by restoring to 10:59.
+
+   3. Replication
+   - `Synchronous` replication to a standby — the transaction commits only after the standby has written the log — gives RPO 0. Oracle Data Guard Maximum Protection, SQL Server Always On synchronous commit.
+   - `Asynchronous` replication to a distant site protects against a regional disaster, at the cost of a few seconds.
+
+   4. Storage and server redundancy
+   ```
+   RAID 1 / RAID 10   : mirrored disks survive a disk failure
+   Clustered servers  : a node failure does not stop the database
+   Dual power, UPS and generator; redundant cooling; dual network paths
+   ```
+
+   5. A disaster recovery site
+   - A `hot` DR site far enough away that one flood or fire cannot take both, with a documented failover procedure and a yearly live drill.
+
+   6. ACID transactions
+   - Atomicity and durability are what stop a half-finished transaction from surviving a crash. Distributed work uses `two-phase commit` so partial updates cannot happen.
+
+   7. Access control and change discipline
+   - Most real data loss is human, not physical:
+   ```
+   Least privilege; no shared DBA accounts
+   Separation of duties, and every action audited
+   Change control on production; review any DELETE or UPDATE without a WHERE
+   Test on a staging copy before running on production
+   ```
+
+   8. Security against attack
+   - Ransomware targets the online backups first, so keep an offline or immutable copy. Add encryption at rest and in transit, patching, network segmentation and endpoint protection.
+
+   9. Physical and environmental protection
+   - Controlled data-centre access, fire suppression, temperature and humidity control, and surge protection.
+
+   10. Monitoring and validation
+   - Alert on replication lag, failed backup jobs, disk space and database corruption checks (`DBCC CHECKDB`, `RMAN VALIDATE`). A silently broken replication link is how zero data loss quietly becomes a week of loss.
+
+   - Summary: `backups protect against everything slowly, replication protects against disaster instantly, and access control protects against the most common cause of all — people`. All three are needed.
 
 ## PL/SQL & Database Triggers (7)
 

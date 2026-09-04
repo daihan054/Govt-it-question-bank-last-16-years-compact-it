@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 123 / 243 done**  ·  **Questions: 1690 answered, 19 skipped, 3168 total**
+**Subtopics: 124 / 243 done**  ·  **Questions: 1697 answered, 20 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -16,7 +16,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `computer-network-security.md` | IT | 14 / 14 | 184 | 0 | 184 |
 | `computer-networks.md` | IT | 33 / 33 | 507 | 0 | 507 |
 | `data-structure.md` | IT | 8 / 8 | 97 | 0 | 97 |
-| `database.md` | IT | 10 / 19 | 257 | 1 | 294 |
+| `database.md` | IT | 11 / 19 | 264 | 2 | 294 |
 | `dld.md` | IT | 0 / 9 | 0 | 0 | 148 |
 | `electrical-and-electronics.md` | IT | 0 / 9 | 0 | 0 | 39 |
 | `english.md` | General | 0 / 8 | 0 | 0 | 112 |
@@ -53,4 +53,5 @@ Content-free or truncated entries — no answer written.
 - `compiler-and-toc.md → Grammar & Ambiguity` — question 4
 - `computer-fundamental.md → Computer Fundamentals & Acronyms` — question 1
 - `computer-fundamental.md → Computer Fundamentals & Acronyms` — question 2
+- `database.md → Database Backup & Disaster Recovery` — question 2
 - `database.md → Data Warehousing, Data Mining & Business Intelligence` — question 3
