@@ -3065,7 +3065,74 @@
 
 1. **What is digital banking and how does it differ from traditional banking? How can digital banking promote financial inclusion?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 554 (ET: BIBM)]*
 
+   Answer:
+
+   (a) Digital banking
+   - The delivery of banking services through digital channels — internet banking, mobile apps, ATMs, agent points and MFS — instead of requiring a visit to a branch. Every routine transaction is performed by the customer, at any time, from anywhere.
+
+   (b) Digital banking vs traditional banking
+
+   | Point | Traditional banking | Digital banking |
+   |---|---|---|
+   | Access channel | Physical branch, in person | Internet, mobile app, ATM, agent point |
+   | Availability | Banking hours on working days | 24 hours, 7 days |
+   | Transaction time | Minutes to hours, manual processing | Seconds |
+   | Documentation | Paper forms, cheques, passbooks | Paperless, e-KYC |
+   | Cost per transaction | High — branch rent, staff, paper | A small fraction of branch cost |
+   | Geographic reach | Limited by branch network | Anywhere with connectivity |
+   | Account opening | Branch visit with documents | e-KYC, often same day from home |
+   | Customer service | Face to face | Chatbot, call centre, in-app support |
+   | Main risk | Physical theft, forgery, cash handling | Cyber fraud, phishing, account takeover |
+   | Better suited to | Complex advice, large cash handling | Everyday transactions, payments, transfers |
+
+   (c) How digital banking promotes financial inclusion
+   - **Removes the distance barrier** — a villager 30 km from the nearest branch can transact from a mobile phone or a local agent point. This is the single largest inclusion effect.
+   - **Removes the cost barrier** — no minimum balance and negligible transaction cost make small accounts viable for the bank, which branch banking never was.
+   - **Agent banking** — a local shop acts as a bank outlet with a POS device, bringing deposits, withdrawals and remittance to rural areas without the cost of a branch.
+   - **Mobile Financial Services (bKash, Nagad, Rocket)** — bring payments to people with no bank account at all, needing only a basic phone.
+   - **Simplified e-KYC** — NID-based digital verification removes the paperwork barrier for people with limited literacy.
+   - **Government-to-Person transfers** — social safety-net allowances, stipends and disaster relief paid directly to a wallet, eliminating leakage.
+   - **Remittance** — overseas workers send money directly to a family wallet within minutes, at far lower cost than informal channels.
+   - **Credit access** — transaction history in a wallet becomes an alternative credit score for people with no formal credit record, enabling nano-loans.
+   - **Women's inclusion** — an account controlled from a personal phone gives women financial privacy and control that a shared branch visit does not.
+
+   Barriers that remain
+   - Smartphone and internet cost, digital and financial literacy, weak rural network coverage, agent trust and fraud, and the gender gap in phone ownership.
+
 2. **(a) Define Electronic Payment System (EPS) with necessary diagram. Name 5 types of EPS.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
+
+   Answer: An **Electronic Payment System (EPS)** is a system that allows money to be transferred from a payer to a payee electronically over a network, without exchanging physical cash or cheques.
+
+   Parties involved
+   - **Customer (payer)**, **Merchant (payee)**, **Issuing bank** (the customer's bank), **Acquiring bank** (the merchant's bank), and the **Payment gateway / switch** that connects them.
+
+   Diagram — how an online card payment flows
+   ```mermaid
+   flowchart LR
+       C[Customer] -->|1. pays online| M[Merchant website]
+       M -->|2. payment request| G[Payment Gateway]
+       G -->|3. forwards| A[Acquiring Bank]
+       A -->|4. routes via card network| I[Issuing Bank]
+       I -->|5. authorise / decline| A
+       A -->|6. response| G
+       G -->|7. confirmation| M
+       M -->|8. receipt| C
+   ```
+   - Steps 1-5 are **authorisation**, completed in seconds. The actual movement of funds, called **settlement**, happens later in a batch between the banks.
+
+   Five types of Electronic Payment System
+   - **Card-based payment** — debit cards, credit cards and prepaid cards, processed through networks such as VISA, Mastercard and the local NPSB.
+   - **Internet banking / fund transfer** — direct bank-to-bank transfer through BEFTN, RTGS or NPSB.
+   - **Mobile Financial Services (MFS) / e-wallet** — bKash, Nagad, Rocket, Upay; also PayPal and Google Pay internationally.
+   - **QR code payment** — the customer scans a merchant QR code and pays from a wallet or bank app. Bangladesh Bank's interoperable "Bangla QR" falls here.
+   - **e-Cheque / electronic clearing** — cheque images cleared electronically through BACH instead of physical movement.
+
+   Others worth naming
+   - Cryptocurrency payment, Direct Debit and standing instruction, and contactless NFC card payment.
+
+   Advantages and risks
+   - Advantages: speed, convenience, lower handling cost, full transaction record, and reduced cash risk.
+   - Risks: card fraud, phishing, data breach and dependence on connectivity — which is why two-factor authentication and PCI DSS compliance are mandatory.
 
 ## User Interfaces (CLI vs GUI) (1)
 
