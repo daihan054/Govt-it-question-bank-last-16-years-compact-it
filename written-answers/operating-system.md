@@ -7923,11 +7923,376 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 1. **What is Deadlock? Given a scenery and find out the process is face deadlock sitiation?** *[IFIC Bank Officer IT 2025 compact it 1448 (ET: IFIC)]*
 
+   Answer: What deadlock is
+   - A `deadlock` is a state in which two or more processes are each `waiting for a resource held by another`, so none of them can ever proceed. They wait forever.
+   ```
+      P1 holds A and wants B
+      P2 holds B and wants A
+           -> neither can continue , and neither will release what it has
+   ```
+
+   The four necessary conditions — all must hold at once
+   ```
+      1. MUTUAL EXCLUSION : a resource can be held by only one process
+      2. HOLD AND WAIT    : a process holds resources while requesting more
+      3. NO PREEMPTION    : a resource cannot be taken away by force
+      4. CIRCULAR WAIT    : a closed chain of processes, each waiting on
+                            the next
+   ```
+
+   Scenario, and how to test it
+
+   A classic case
+   ```
+      Two processes share a printer (A) and a scanner (B).
+
+      Time  P1                          P2
+      ----  --------------------------  --------------------------
+      t1    request A  -> granted
+      t2                                request B  -> granted
+      t3    request B  -> WAITS (P2 has it)
+      t4                                request A  -> WAITS (P1 has it)
+
+      DEADLOCK.
+   ```
+
+   Checking the four conditions against the scenario
+   ```
+      MUTUAL EXCLUSION : the printer and scanner can serve only one
+           process at a time                                     HOLDS
+      HOLD AND WAIT    : P1 holds A while waiting for B           HOLDS
+      NO PREEMPTION    : neither device can be seized             HOLDS
+      CIRCULAR WAIT    : P1 -> P2 -> P1                           HOLDS
+
+      All four hold, so the system IS deadlocked.
+   ```
+
+   Resource allocation graph — the formal test
+   ```mermaid
+   flowchart LR
+       P1((P1)) -->|requests| B[Resource B]
+       B -->|assigned to| P2((P2))
+       P2 -->|requests| A[Resource A]
+       A -->|assigned to| P1
+   ```
+   ```
+      ---> from a PROCESS to a RESOURCE means a REQUEST
+      ---> from a RESOURCE to a PROCESS means an ASSIGNMENT
+
+      RULE :
+         If every resource has ONE instance :
+              a CYCLE  <=>  a DEADLOCK
+         If a resource has SEVERAL instances :
+              a cycle is NECESSARY but NOT SUFFICIENT - it may still be safe
+   ```
+   - Here the graph contains the cycle `P1 -> B -> P2 -> A -> P1`, and every resource has one instance, so the deadlock is confirmed.
+
+   A scenario that is NOT a deadlock
+   ```
+      Time  P1                          P2
+      ----  --------------------------  --------------------------
+      t1    request A  -> granted
+      t2    request B  -> granted
+      t3    release A , release B
+      t4                                request A  -> granted
+      t5                                request B  -> granted
+
+      NO circular wait, because P1 acquired BOTH resources before P2
+      asked for either. The system is safe.
+   ```
+   - This is exactly why `ordered acquisition` prevents deadlock: if every process takes A before B, a cycle can never form.
+
+   How to answer such a question
+   ```
+      1. List which process holds which resource, and what each is waiting for.
+      2. Draw the resource allocation graph.
+      3. Look for a CYCLE.
+      4. If resources are single-instance, a cycle means deadlock.
+         If multi-instance, run the SAFETY ALGORITHM (Banker's) to see
+         whether a safe sequence exists.
+      5. Confirm all four conditions hold, and say which one would break
+         the deadlock if removed.
+   ```
+
 2. **The four conditions that are necessary for a resource deadlock to occur are mutual exclusion, hold and wait, no preemption and circular wait. Give an example to show that these conditions are not sufficient for a resource deadlock to occur.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
+
+   Answer: The four conditions are `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`. They are `necessary` — a deadlock cannot occur unless all four hold — but they are `not jointly sufficient` in a system with multiple instances of a resource.
+
+   The example that shows they are not sufficient
+   ```
+      A system has TWO instances of resource R.
+      Two processes, P1 and P2, each hold one instance and each wants
+      one more.
+   ```
+   ```
+      Allocation :  P1 holds 1 instance of R
+                    P2 holds 1 instance of R
+      Request    :  P1 wants 1 more
+                    P2 wants 1 more
+      Available  :  0
+   ```
+   Resource allocation graph
+   ```
+           P1 ---request--->  [ R : two instances ]
+           P2 ---request--->  [ R ]
+           [ R ] ---assigned---> P1
+           [ R ] ---assigned---> P2
+
+      This graph CONTAINS A CYCLE :  P1 -> R -> P2 -> R -> P1
+   ```
+   - All four conditions hold: R is mutually exclusive, both processes hold while waiting, neither instance can be preempted, and there is a circular wait in the graph.
+   - Yet the system is `not necessarily deadlocked`. If a `third process P3` also holds an instance and is about to release it, the request can be satisfied and everyone proceeds.
+
+   A cleaner version of the same argument
+   ```
+      Three instances of R , three processes.
+
+      P1 holds 1 and wants 1 more
+      P2 holds 1 and wants 1 more
+      P3 holds 1 and will RELEASE it without asking for more
+
+      The graph has a cycle among P1 and P2, and all four conditions
+      appear to hold - but when P3 releases its instance, P1 obtains it,
+      finishes, releases both, and P2 then proceeds.
+
+      NO DEADLOCK, despite the cycle.
+   ```
+
+   Why the distinction matters
+   ```
+      SINGLE-instance resources :
+           a cycle in the resource allocation graph  <=>  DEADLOCK
+           (necessary AND sufficient)
+
+      MULTI-instance resources :
+           a cycle is NECESSARY but NOT SUFFICIENT
+           A deadlock implies a cycle, but a cycle does not imply a deadlock.
+   ```
+   - This is precisely why the `Banker's algorithm` exists. For multi-instance resources the graph alone cannot decide, so the `safety algorithm` is run: if some sequence of processes can be completed with the resources available, the state is `safe` even though a cycle is present.
+
+   The correct statement of the theorem
+   ```
+      Deadlock  =>  all four conditions hold        (they are NECESSARY)
+      All four conditions hold  =>  deadlock        FALSE in general
+
+      The four conditions plus NO SAFE SEQUENCE  =>  deadlock
+   ```
+
+   Which condition each prevention method attacks
+   ```
+      MUTUAL EXCLUSION : cannot usually be removed - a printer really can
+           serve one job at a time. Spooling removes it where possible.
+
+      HOLD AND WAIT    : removed by requiring a process to request ALL its
+           resources at once, or to release everything before asking again.
+           Cost : low utilisation and possible starvation.
+
+      NO PREEMPTION    : removed by allowing a resource to be seized and
+           the victim rolled back. Works for CPU and memory, not for a
+           printer mid-page.
+
+      CIRCULAR WAIT    : removed by imposing a TOTAL ORDER on resources
+           and requiring every process to request them in increasing
+           order. This is the most PRACTICAL method, and the one used in
+           real kernel code.
+   ```
+   - Breaking `any one` of the four is enough to make deadlock impossible, which is the whole point of stating them as necessary conditions.
 
 3. **(a) Define operating system. Why resource allocation graph used for deadlock detection?** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1446 (ET: N/A)]*
 
+   Answer: Definition of an operating system
+   - An `operating system` is the system software that manages the computer's hardware and software resources and provides common services for application programs. It is the `interface between the user and the hardware`.
+   ```
+           USER  ->  APPLICATIONS  ->  OPERATING SYSTEM  ->  HARDWARE
+   ```
+   - Its two roles: a `resource manager`, allocating the CPU, memory, devices and files among competing processes; and an `extended machine`, hiding messy hardware behind a clean uniform interface.
+   - Its main components: the `kernel`, and the `process`, `memory`, `file`, `device` and `security` managers, reached through the `system call interface`.
+   - Examples: `Windows, Linux, macOS, Android, iOS, UNIX`.
+
+   Why a resource allocation graph is used for deadlock detection
+   - A `resource allocation graph (RAG)` is a directed graph that records, at one instant, `who holds what` and `who is waiting for what`. Deadlock is a property of exactly that information, so the graph captures the whole problem in one picture.
+   ```
+      Vertices :  P = processes , drawn as circles
+                  R = resources , drawn as rectangles, with a dot per instance
+
+      Edges    :  P --> R    a REQUEST edge : P is waiting for R
+                  R --> P    an ASSIGNMENT edge : an instance of R is held by P
+   ```
+
+   Example — a deadlock
+   ```mermaid
+   flowchart LR
+       P1((P1)) -->|requests| R2[R2]
+       R2 -->|assigned| P2((P2))
+       P2 -->|requests| R1[R1]
+       R1 -->|assigned| P1
+   ```
+   ```
+      The cycle  P1 -> R2 -> P2 -> R1 -> P1  is present.
+      Both resources have ONE instance, so this IS a deadlock.
+   ```
+
+   The rule the graph gives
+   ```
+      If EVERY resource has a SINGLE instance :
+           a CYCLE  <=>  a DEADLOCK        (necessary AND sufficient)
+
+      If some resource has SEVERAL instances :
+           a cycle is NECESSARY but NOT SUFFICIENT
+           A deadlock implies a cycle, but a cycle may still be safe.
+   ```
+   - With multiple instances the graph must be supplemented by the `safety algorithm` (the Banker's algorithm), which asks whether some order of completion exists.
+
+   Why the graph is the right tool
+   ```
+      1. It makes the CIRCULAR WAIT condition VISIBLE. Circular wait is
+         one of the four necessary conditions, and it is the only one that
+         depends on the current state rather than on the resource's nature.
+
+      2. Deadlock detection becomes CYCLE DETECTION, a standard graph
+         problem solvable by DFS in O(V + E).
+
+      3. It shows exactly WHICH processes are involved, so a victim can be
+         chosen for rollback or termination.
+
+      4. It is easy to MAINTAIN INCREMENTALLY - an edge is added on every
+         request and removed on every release, so the graph is always current.
+
+      5. It can be used PREDICTIVELY. With a CLAIM edge (dashed, P ---> R,
+         meaning "P may request R later") the system can refuse a request
+         that would create a cycle - which is deadlock AVOIDANCE rather
+         than detection.
+   ```
+
+   The wait-for graph, its compressed form
+   ```
+      For single-instance resources the resources can be removed
+      entirely, leaving only  Pi -> Pj  meaning "Pi waits for a resource
+      held by Pj".
+
+           P1 -> P2 -> P3 -> P1        a cycle -> DEADLOCK
+
+      This halves the graph and is what the operating system actually
+      maintains for detection.
+   ```
+
+   - The alternative for multi-instance systems is the `Banker's algorithm`, which computes a `Need` matrix and looks for a safe sequence. The graph is preferred when instances are single, because cycle detection is far cheaper than running the safety algorithm on every request.
+
 4. **What is Deadlock? Write Conditions for Deadlock and also write Deadlock.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
+
+   Answer: What deadlock is
+   - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed. Every one of them waits forever.
+   ```
+      P1 holds A and requests B
+      P2 holds B and requests A
+           -> neither can continue, and neither will release what it holds
+   ```
+
+   The four necessary conditions
+   - All four must hold `simultaneously` for a deadlock to be possible. They are called the `Coffman conditions`.
+   ```
+      1. MUTUAL EXCLUSION
+           At least one resource is non-shareable - only one process may
+           use it at a time. A printer, a tape drive, a write lock.
+
+      2. HOLD AND WAIT
+           A process holds at least one resource while waiting to acquire
+           others that are currently held by someone else.
+
+      3. NO PREEMPTION
+           A resource cannot be forcibly taken from a process. It is
+           released only voluntarily, when the process has finished with it.
+
+      4. CIRCULAR WAIT
+           A closed chain of processes exists, P0 -> P1 -> ... -> Pn -> P0,
+           in which each is waiting for a resource held by the next.
+   ```
+   - Breaking `any one` of the four makes deadlock impossible, which is exactly how prevention works.
+
+   Deadlock handling — the four strategies
+   ```
+      1. DEADLOCK PREVENTION
+           Design the system so that one of the four conditions can never
+           hold.
+
+      2. DEADLOCK AVOIDANCE
+           Allow the conditions, but examine each request before granting
+           it and refuse any that could lead to an unsafe state.
+           The BANKER'S ALGORITHM.
+
+      3. DEADLOCK DETECTION AND RECOVERY
+           Let deadlocks happen, detect them with a wait-for graph or the
+           safety algorithm, and then recover by killing or rolling back
+           a victim.
+
+      4. IGNORE THE PROBLEM
+           The OSTRICH ALGORITHM. Deadlocks are rare, so the cost of
+           prevention outweighs the cost of an occasional reboot.
+           This is what UNIX, Linux and Windows actually do.
+   ```
+
+   Deadlock prevention, condition by condition
+   ```
+      MUTUAL EXCLUSION
+           Usually cannot be removed - a printer really can serve one job
+           at a time. SPOOLING removes it where the resource permits.
+
+      HOLD AND WAIT
+           Require a process to request ALL its resources at once, before
+           it starts ; or to release everything it holds before asking for
+           more.
+           Cost : low resource utilisation , and possible STARVATION.
+
+      NO PREEMPTION
+           If a process holding resources requests one that cannot be
+           granted, take away everything it holds and restart it later.
+           Works for the CPU and memory ; useless for a printer mid-page.
+
+      CIRCULAR WAIT
+           Impose a TOTAL ORDER on all resource types and require every
+           process to request them in INCREASING order.
+           This is the MOST PRACTICAL method, and it is what real kernel
+           code uses - "always lock A before B".
+   ```
+
+   Deadlock avoidance — the Banker's algorithm
+   ```
+      Each process declares its MAXIMUM need in advance.
+      Before granting a request the system checks whether the resulting
+      state is SAFE - that is, whether some sequence of processes exists
+      in which each can obtain its maximum need and finish.
+
+      SAFE   -> grant the request
+      UNSAFE -> make the process wait, even though the resources are free
+   ```
+   - Note that `unsafe is not the same as deadlocked`. An unsafe state merely means deadlock has become possible.
+
+   Detection and recovery
+   ```
+      DETECTION : maintain a WAIT-FOR GRAPH and look for a cycle
+           (single-instance resources), or run the safety algorithm
+           periodically (multi-instance).
+
+      RECOVERY  :
+           Terminate all deadlocked processes - simple, but costly
+           Terminate one at a time until the cycle breaks
+           Preempt resources from a victim and roll it back to a checkpoint
+
+      Choosing the victim : the process with the least work done, the
+           fewest resources held, or the lowest priority. Guard against
+           STARVATION by not choosing the same victim repeatedly.
+   ```
+
+   Comparison
+
+   | Strategy | When applied | Cost | Used in practice |
+   |---|---|---|---|
+   | Prevention | Design time | Low utilisation | Yes, for lock ordering |
+   | Avoidance | Every request | Needs maximum claims in advance | Rarely |
+   | Detection and recovery | Periodically | Detection overhead, rollback | In databases |
+   | Ignore | Never | An occasional hang | `Yes` — Windows, Linux, UNIX |
+
+   - Why general-purpose systems ignore it: deadlock is rare, prevention would cripple utilisation, and avoidance requires every process to declare its maximum needs in advance, which no ordinary program can do. `Database systems`, by contrast, do detect deadlocks — they build a wait-for graph, choose a victim and roll its transaction back automatically, because a transaction can be safely undone whereas an arbitrary process cannot.
 
 5. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances).** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
    * (a) Need matrix
@@ -7935,41 +8300,1562 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
    Snapshot at time T_0:
 The content of the matrix. Need is defined to be Max – Allocation.
 
+   Answer: Given, the standard snapshot at time T0
+   ```
+      5 processes P0 to P4 ,  3 resource types A (10) , B (5) , C (7)
+
+               Allocation        Max
+                A  B  C        A  B  C
+      P0        0  1  0        7  5  3
+      P1        2  0  0        3  2  2
+      P2        3  0  2        9  0  2
+      P3        2  1  1        2  2  2
+      P4        0  0  2        4  3  3
+   ```
+
+   Available resources
+   ```
+      Total allocated :
+           A = 0+2+3+2+0 = 7
+           B = 1+0+0+1+0 = 2
+           C = 0+0+2+1+2 = 5
+
+      Available = Total - Allocated
+           A = 10 - 7 = 3
+           B =  5 - 2 = 3
+           C =  7 - 5 = 2
+
+      Available = ( 3 , 3 , 2 )
+   ```
+
+   (a) The Need matrix
+   ```
+      Need = Max - Allocation
+   ```
+   ```
+               Allocation        Max          NEED
+                A  B  C        A  B  C      A  B  C
+      P0        0  1  0        7  5  3      7  4  3
+      P1        2  0  0        3  2  2      1  2  2
+      P2        3  0  2        9  0  2      6  0  0
+      P3        2  1  1        2  2  2      0  1  1
+      P4        0  0  2        4  3  3      4  3  1
+   ```
+   Working
+   ```
+      P0 : 7-0 , 5-1 , 3-0  ->  7  4  3
+      P1 : 3-2 , 2-0 , 2-0  ->  1  2  2
+      P2 : 9-3 , 0-0 , 2-2  ->  6  0  0
+      P3 : 2-2 , 2-1 , 2-1  ->  0  1  1
+      P4 : 4-0 , 3-0 , 3-2  ->  4  3  1
+   ```
+
+   (b) Is the state safe? — run the safety algorithm
+   ```
+      Work = Available = (3, 3, 2)
+      Finish[i] = false for all i
+
+      Repeatedly find a process whose NEED <= WORK , run it, and add its
+      ALLOCATION back to WORK.
+   ```
+   ```
+      Step 1 : Work = (3,3,2)
+               P0 need (7,4,3) <= (3,3,2) ? NO
+               P1 need (1,2,2) <= (3,3,2) ? YES   -> run P1
+               Work = (3,3,2) + (2,0,0) = (5,3,2)
+
+      Step 2 : Work = (5,3,2)
+               P0 need (7,4,3) ? NO
+               P2 need (6,0,0) ? NO
+               P3 need (0,1,1) <= (5,3,2) ? YES   -> run P3
+               Work = (5,3,2) + (2,1,1) = (7,4,3)
+
+      Step 3 : Work = (7,4,3)
+               P0 need (7,4,3) <= (7,4,3) ? YES, but take P4 first as in
+               the standard order
+               P4 need (4,3,1) <= (7,4,3) ? YES   -> run P4
+               Work = (7,4,3) + (0,0,2) = (7,4,5)
+
+      Step 4 : Work = (7,4,5)
+               P0 need (7,4,3) <= (7,4,5) ? YES   -> run P0
+               Work = (7,4,5) + (0,1,0) = (7,5,5)
+
+      Step 5 : Work = (7,5,5)
+               P2 need (6,0,0) <= (7,5,5) ? YES   -> run P2
+               Work = (7,5,5) + (3,0,2) = (10,5,7)
+   ```
+   ```
+      All five processes finished, and Work has returned to the total
+      ( 10 , 5 , 7 ) - which confirms the arithmetic.
+
+      The system is in a SAFE STATE.
+
+      SAFE SEQUENCE :  < P1 , P3 , P4 , P0 , P2 >
+   ```
+   - Other safe sequences exist, such as `<P1, P3, P0, P2, P4>`. A state is safe if `at least one` such sequence exists.
+
+   Checking an additional request — the resource-request algorithm
+   ```
+      Suppose P1 now requests (1, 0, 2).
+
+      Step 1 : Request <= Need ?
+               (1,0,2) <= (1,2,2)   YES
+
+      Step 2 : Request <= Available ?
+               (1,0,2) <= (3,3,2)   YES
+
+      Step 3 : PRETEND to grant it :
+               Available = (3,3,2) - (1,0,2) = (2,3,0)
+               Alloc P1  = (2,0,0) + (1,0,2) = (3,0,2)
+               Need  P1  = (1,2,2) - (1,0,2) = (0,2,0)
+
+      Step 4 : Run the safety algorithm on the new state.
+               A safe sequence < P1, P3, P4, P0, P2 > still exists,
+               so the request is GRANTED.
+   ```
+
+   - Points worth stating: `safe` and `deadlock-free` are not the same. Every safe state is deadlock-free, but an `unsafe` state is not necessarily deadlocked — it only means the system can no longer guarantee that deadlock will be avoided. The Banker's algorithm is conservative for exactly that reason, and it also requires every process to declare its `maximum need in advance`, which is why real operating systems do not use it.
+
 6. **(a) Explain Circular wait deadlock.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 415 (ET: BUET)]*
+
+   Answer: `Circular wait` is one of the four necessary conditions for deadlock. It holds when a `closed chain` of processes exists, in which each process is waiting for a resource held by the next process in the chain.
+   ```
+      P0 waits for a resource held by P1
+      P1 waits for a resource held by P2
+      ...
+      Pn waits for a resource held by P0        <- the chain CLOSES
+   ```
+
+   The simplest case — two processes
+   ```
+      P1 holds A , requests B
+      P2 holds B , requests A
+
+           P1 ---waits for---> P2
+            ^                   |
+            |                   |
+            +----waits for------+
+
+      The chain is closed, so neither can ever proceed.
+   ```
+   ```mermaid
+   flowchart LR
+       P1((P1)) -->|requests| B[Resource B]
+       B -->|held by| P2((P2))
+       P2 -->|requests| A[Resource A]
+       A -->|held by| P1
+   ```
+
+   A three-process chain
+   ```
+      P1 holds A , wants B
+      P2 holds B , wants C
+      P3 holds C , wants A
+
+           P1 -> P2 -> P3 -> P1
+
+      Each is blocked, and none will release, so all three wait forever.
+   ```
+
+   The everyday illustration — the four-way crossing
+   ```
+      Four cars reach a crossroads at the same moment, each blocking the
+      next one's path :
+
+                 car A (northbound)
+                      |
+      car D --------- + --------- car B
+      (eastbound)     |          (westbound)
+                 car C (southbound)
+
+      A blocks B , B blocks C , C blocks D , D blocks A.
+      No car can move. This is a physical circular wait.
+   ```
+
+   Why it is the condition worth attacking
+   ```
+      MUTUAL EXCLUSION cannot usually be removed - a printer really can
+           serve one job at a time.
+      HOLD AND WAIT can be removed only by making a process claim
+           everything at once, which wastes resources badly.
+      NO PREEMPTION cannot be removed for a printer or a tape drive.
+
+      CIRCULAR WAIT can be removed CHEAPLY, by imposing an ORDER.
+   ```
+
+   How circular wait is prevented — resource ordering
+   ```
+      Assign every resource type a unique NUMBER, and require every
+      process to request resources in STRICTLY INCREASING order.
+
+           F(printer)  = 1
+           F(scanner)  = 2
+           F(disk)     = 3
+
+      A process holding the scanner (2) may request the disk (3),
+      but may NOT request the printer (1) without first releasing
+      the scanner.
+   ```
+   ```
+      Why a cycle then becomes impossible :
+
+      Suppose a cycle P0 -> P1 -> ... -> Pn -> P0 existed. Following the
+      chain, each process holds a LOWER-numbered resource and waits for a
+      HIGHER-numbered one, so the numbers strictly increase all the way
+      round. But going all the way round returns to the start, which
+      would require F(R) < F(R) - a contradiction.
+
+      Therefore NO CYCLE CAN FORM.
+   ```
+   - This is the method real kernel and database code uses. The convention "always take lock A before lock B" is exactly resource ordering, and it is why multi-threaded code documents its lock order.
+
+   Detecting it
+   ```
+      Build a WAIT-FOR GRAPH : one node per process, and an edge
+      Pi -> Pj whenever Pi waits for a resource held by Pj.
+
+      A CYCLE in that graph is a circular wait.
+      Cycle detection by DFS costs O(V + E).
+   ```
+   - For `single-instance` resources a cycle means a deadlock. For `multi-instance` resources a cycle is necessary but not sufficient, so the `Banker's safety algorithm` must be run instead.
+
+   - The point to state clearly: `circular wait is the only one of the four conditions that depends on the current state rather than on the nature of the resource`. That is why it is both the easiest to detect and the cheapest to prevent.
 
 7. **Give the necessary conditions for deadlock to occur. Is it possible to have deadlock involving only a single process? Explain your answer.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 422 (ET: BIBM)]*
 
+   Answer: The necessary conditions
+   - All `four` must hold simultaneously for a deadlock to be possible. They are the `Coffman conditions`.
+   ```
+      1. MUTUAL EXCLUSION
+           At least one resource is non-shareable - only one process may
+           hold it at a time.
+
+      2. HOLD AND WAIT
+           A process holds at least one resource while waiting for others
+           that are held by other processes.
+
+      3. NO PREEMPTION
+           A resource cannot be forcibly taken away; it is released only
+           voluntarily by the process holding it.
+
+      4. CIRCULAR WAIT
+           A closed chain P0 -> P1 -> ... -> Pn -> P0 exists, in which
+           each process waits for a resource held by the next.
+   ```
+   - Breaking any one of the four makes deadlock impossible.
+
+   Is deadlock possible with only a single process?
+
+   `Yes — but only in a technical sense, and only if the resource is non-reentrant.`
+
+   The case where it CAN happen
+   ```
+      A single process deadlocks itself if it requests a resource it
+      already holds, and that resource is NOT REENTRANT.
+
+      Example - a non-reentrant mutex :
+
+           lock(m);            // acquired
+           ...
+           lock(m);            // requests the SAME lock again
+                               // -> blocks, waiting for ITSELF
+                               // -> it will never release, so it waits
+                               //    forever
+
+      This is SELF-DEADLOCK, and it is a real and common bug. It happens
+      when a function that already holds a lock calls another function
+      that also tries to take it.
+   ```
+   - Checking the four conditions against it:
+   ```
+      MUTUAL EXCLUSION : the mutex admits one holder             HOLDS
+      HOLD AND WAIT    : the process holds m and waits for m     HOLDS
+      NO PREEMPTION    : the mutex cannot be seized              HOLDS
+      CIRCULAR WAIT    : the chain is  P -> P , a cycle of
+                         LENGTH ONE                              HOLDS
+   ```
+   - All four hold, so it satisfies the formal definition. The circular wait is degenerate — a self-loop — but it is a cycle nonetheless.
+
+   The case where it CANNOT happen
+   ```
+      If the resource is REENTRANT (a recursive mutex, for example), the
+      second request is granted immediately because the owner is the same
+      thread. No wait occurs, so no deadlock.
+
+      A recursive lock keeps a COUNT :
+           lock(m);   count = 1
+           lock(m);   count = 2      granted, same owner
+           unlock(m); count = 1
+           unlock(m); count = 0      now released
+   ```
+
+   The formal answer usually expected
+   ```
+      In the STRICT textbook model, deadlock is defined over a SET of
+      two or more processes, so a single process is excluded by definition
+      and the answer is NO.
+
+      In PRACTICE, self-deadlock on a non-reentrant lock is a genuine
+      phenomenon and satisfies all four conditions with a cycle of
+      length one, so the answer is YES.
+
+      The safe exam answer states BOTH, gives the non-reentrant mutex
+      example, and notes that a recursive mutex prevents it.
+   ```
+
+   Related single-process hangs that are `not` deadlock
+   ```
+      INFINITE LOOP     : the process is RUNNING, not waiting. Not deadlock.
+      BUSY WAITING      : it holds the CPU while spinning. Not deadlock.
+      LIVELOCK          : processes keep changing state but make no
+                          progress - they are active, not blocked.
+      STARVATION        : a process is ready but never scheduled. It could
+                          run if chosen, so it is not deadlocked.
+   ```
+   - The distinguishing test is simple: in a deadlock the processes are `blocked and can never be unblocked by anything they or the scheduler could do`. In starvation or a livelock, progress is still possible in principle.
+
 8. **Deadlock এর চারটি শর্ত লিখ।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 381 (ET: BUET)]*
+
+   Answer: (Answered in English, as required for IT topics.) The four conditions for deadlock — all must hold `simultaneously`. They are known as the `Coffman conditions`.
+
+   1. Mutual exclusion
+   ```
+      At least one resource must be NON-SHAREABLE - only one process may
+      use it at a time.
+
+      Example : a printer , a tape drive , a write lock on a file.
+      A read-only file is shareable, so it can never cause a deadlock.
+   ```
+
+   2. Hold and wait
+   ```
+      A process must be HOLDING at least one resource while WAITING to
+      acquire additional resources that are held by other processes.
+
+      Example : P1 holds the printer and waits for the scanner.
+   ```
+
+   3. No preemption
+   ```
+      A resource cannot be FORCIBLY TAKEN from the process holding it.
+      It is released only VOLUNTARILY, when that process has finished.
+
+      Example : a printer cannot be seized in the middle of a page.
+      The CPU, by contrast, CAN be preempted, which is why the CPU is
+      never the cause of a deadlock.
+   ```
+
+   4. Circular wait
+   ```
+      A CLOSED CHAIN of processes must exist :
+
+           P0 waits for a resource held by P1
+           P1 waits for a resource held by P2
+           ...
+           Pn waits for a resource held by P0
+
+      The simplest case, with two processes :
+
+           P1 holds A , wants B
+           P2 holds B , wants A
+   ```
+
+   An example satisfying all four
+   ```
+      Two processes share a printer (A) and a scanner (B).
+
+      t1  P1 requests A -> granted
+      t2  P2 requests B -> granted
+      t3  P1 requests B -> WAITS
+      t4  P2 requests A -> WAITS
+
+      MUTUAL EXCLUSION : both devices serve one process at a time  HOLDS
+      HOLD AND WAIT    : P1 holds A while waiting for B            HOLDS
+      NO PREEMPTION    : neither device can be seized              HOLDS
+      CIRCULAR WAIT    : P1 -> P2 -> P1                            HOLDS
+
+      DEADLOCK.
+   ```
+
+   How each condition is attacked to prevent deadlock
+   ```
+      MUTUAL EXCLUSION : usually cannot be removed. SPOOLING removes it
+           where possible - jobs are written to disk and a daemon feeds
+           the printer, so no process ever holds the printer itself.
+
+      HOLD AND WAIT    : require a process to request ALL its resources
+           at once, or to release everything before requesting more.
+           Cost : poor utilisation and possible starvation.
+
+      NO PREEMPTION    : allow a resource to be seized and the victim
+           rolled back. Works for CPU and memory, not for a printer.
+
+      CIRCULAR WAIT    : impose a TOTAL ORDER on resource types and
+           require requests in INCREASING order. The MOST PRACTICAL
+           method, and the one real kernel and database code uses.
+   ```
+
+   - Two facts worth adding. First, the four conditions are `necessary but not sufficient` when a resource has several instances — a cycle in the resource allocation graph may then still be safe, which is why the `Banker's algorithm` exists. Second, breaking `any single one` of the four is enough to make deadlock impossible, which is exactly why they are stated as necessary conditions.
 
 9. **What is deadlock? Draw its diagram.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
+   Answer: What deadlock is
+   - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
+   ```
+      P1 holds A and requests B
+      P2 holds B and requests A
+           -> neither can continue, and neither will release what it holds
+   ```
+   - It needs all four `Coffman conditions` at once: `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`.
+
+   Diagram — the resource allocation graph
+   ```mermaid
+   flowchart LR
+       P1((P1)) -->|requests| R2[Resource R2]
+       R2 -->|assigned to| P2((P2))
+       P2 -->|requests| R1[Resource R1]
+       R1 -->|assigned to| P1
+   ```
+   ```
+      Notation :
+           circle    = a PROCESS
+           rectangle = a RESOURCE  (with one dot per instance)
+           P ---> R  = a REQUEST edge   : P is waiting for R
+           R ---> P  = an ASSIGNMENT edge : an instance of R is held by P
+
+
+           +--------+   request    +----------+
+           |   P1   |------------->|    R2    |
+           +--------+              +----------+
+                ^                        |
+                | assigned               | assigned
+                |                        v
+           +----------+   request   +--------+
+           |    R1    |<------------|   P2   |
+           +----------+             +--------+
+
+      The cycle  P1 -> R2 -> P2 -> R1 -> P1  is present.
+      Both resources have ONE instance, so this IS a deadlock.
+   ```
+
+   The simpler wait-for graph
+   ```
+      Remove the resources and keep only "which process waits for which" :
+
+           P1 --------> P2
+            ^            |
+            |            |
+            +------------+
+
+      A CYCLE means a circular wait, hence a deadlock.
+   ```
+
+   A three-process deadlock
+   ```
+           P1 -> R2 -> P2 -> R3 -> P3 -> R1 -> P1
+
+           P1 holds R1 , wants R2
+           P2 holds R2 , wants R3
+           P3 holds R3 , wants R1
+
+      Wait-for graph :   P1 -> P2 -> P3 -> P1
+   ```
+
+   The everyday illustration
+   ```
+      Four cars at a crossroads, each blocking the next :
+
+                 car A
+                   |
+         car D --- + --- car B
+                   |
+                 car C
+
+      A blocks B , B blocks C , C blocks D , D blocks A.
+      No car can move - a physical circular wait.
+   ```
+
+   The rule the diagram gives
+   ```
+      SINGLE instance per resource :
+           a CYCLE  <=>  a DEADLOCK        (necessary AND sufficient)
+
+      MULTIPLE instances per resource :
+           a cycle is NECESSARY but NOT SUFFICIENT - the state may still
+           be safe, so the BANKER'S SAFETY ALGORITHM must be run.
+   ```
+
+   A graph with a cycle that is NOT a deadlock
+   ```
+      Resource R has TWO instances.
+
+           P1 holds one and wants one more
+           P2 holds one and wants one more
+           P3 holds one and will RELEASE it without asking for more
+
+      A cycle exists between P1 and P2, but when P3 releases its
+      instance P1 obtains it, finishes and releases both, and P2 then
+      proceeds. NO deadlock.
+   ```
+   - This is exactly why multiple instances require the safety algorithm rather than simple cycle detection.
+
+   How deadlock is handled
+   ```
+      PREVENTION : make one of the four conditions impossible - usually
+           by imposing an ORDER on resource requests, which makes a
+           circular wait unformable.
+      AVOIDANCE  : the Banker's algorithm - refuse any request that would
+           lead to an unsafe state.
+      DETECTION and RECOVERY : maintain the wait-for graph, detect a
+           cycle, and kill or roll back a victim.
+      IGNORE     : the "ostrich algorithm" - what Windows, Linux and UNIX
+           actually do, because deadlock is rare and prevention is costly.
+   ```
+
 10. **(ক) Deadlock কী? Deadlock Handling করার বিভিন্ন উপায়সমূহ আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 413 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What deadlock is
+    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
+    ```
+       P1 holds A and requests B
+       P2 holds B and requests A     -> both wait forever
+    ```
+    - It requires all four `Coffman conditions` simultaneously: `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`. Breaking any one makes deadlock impossible.
+
+    The four ways of handling deadlock
+
+    1. Deadlock prevention
+    - Design the system so that `one of the four conditions can never hold`.
+    ```
+       MUTUAL EXCLUSION : rarely removable. SPOOLING removes it where the
+            resource permits - jobs go to a disk queue, so no process ever
+            holds the printer itself.
+
+       HOLD AND WAIT    : require a process to request ALL its resources
+            at once before starting, or to release everything it holds
+            before asking for more.
+            Cost : poor resource utilisation , possible STARVATION.
+
+       NO PREEMPTION    : if a request cannot be granted, seize everything
+            the process holds and restart it later. Works for CPU and
+            memory ; useless for a printer mid-page.
+
+       CIRCULAR WAIT    : impose a TOTAL ORDER on resource types and
+            require every process to request them in INCREASING order.
+
+            F(printer) = 1 , F(scanner) = 2 , F(disk) = 3
+
+            A cycle then cannot form, because following it round would
+            require F(R) < F(R).
+
+            THIS IS THE MOST PRACTICAL METHOD, and it is what real kernel
+            and database code uses - "always lock A before B".
+    ```
+
+    2. Deadlock avoidance
+    - Allow the conditions, but examine `every request before granting it` and refuse any that could lead to an unsafe state.
+    ```
+       THE BANKER'S ALGORITHM
+
+       Each process declares its MAXIMUM need in advance.
+       Need = Max - Allocation
+
+       Before granting a request, the system checks whether the resulting
+       state is SAFE - whether some sequence of processes exists in which
+       each can obtain its maximum need and finish.
+
+            SAFE   -> grant
+            UNSAFE -> make the process wait, even though resources are free
+    ```
+    - `Unsafe is not the same as deadlocked`; it means deadlock has merely become possible. The algorithm is deliberately conservative.
+    - Its weakness: every process must declare its maximum needs in advance, which no ordinary program can do. That is why real operating systems do not use it.
+
+    3. Deadlock detection and recovery
+    - Let deadlocks happen, detect them, then recover.
+    ```
+       DETECTION
+            Single-instance resources : maintain a WAIT-FOR GRAPH and look
+                 for a CYCLE. Cycle detection by DFS costs O(V + E).
+            Multi-instance resources : run the SAFETY ALGORITHM periodically.
+
+            How often ? Every request is expensive ; too rarely leaves
+            processes hanging. A common compromise is to check when CPU
+            utilisation drops below a threshold, since a deadlock idles
+            the processes involved.
+
+       RECOVERY
+            PROCESS TERMINATION
+                 Kill ALL deadlocked processes - simple, but all their
+                 work is lost.
+                 Kill ONE AT A TIME until the cycle breaks - less costly,
+                 but detection must be re-run after each kill.
+
+            RESOURCE PREEMPTION
+                 Take a resource from a victim and give it to another.
+                 Three issues :
+                   - selecting the VICTIM : fewest resources held, least
+                     CPU time consumed, lowest priority
+                   - ROLLBACK : return the victim to a safe CHECKPOINT
+                   - STARVATION : do not choose the same victim every time;
+                     include the number of rollbacks in the cost function
+    ```
+
+    4. Ignore the problem — the "ostrich algorithm"
+    ```
+       Deadlocks are RARE in a general-purpose system, and the cost of
+       prevention or avoidance is high. So Windows, Linux and UNIX simply
+       ignore the possibility and rely on the user to reboot or kill a
+       hung process.
+
+       This is a deliberate ENGINEERING DECISION, not an oversight :
+       a 1-in-a-million hang is cheaper than a permanent 20 per cent
+       loss of resource utilisation.
+    ```
+
+    Comparison
+
+    | Method | When applied | Overhead | Utilisation | Used in practice |
+    |---|---|---|---|---|
+    | Prevention | Design time | Low | `Poor` | Yes, for lock ordering |
+    | Avoidance | Every request | High | Moderate | Rarely |
+    | Detection and recovery | Periodically | Medium | Good | `Databases` |
+    | Ignore | Never | None | Best | `Windows, Linux, UNIX` |
+
+    - Where detection genuinely is used: `database management systems`. A DBMS builds a wait-for graph of its transactions, detects a cycle, chooses a victim and `rolls its transaction back automatically`. That is possible only because a transaction is designed to be undoable — an arbitrary operating-system process is not.
 
 11. **What are the four necessary condition of deadlock in an operating system?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
 
+    Answer: There are `four` necessary conditions, known as the `Coffman conditions`. All must hold `simultaneously` for a deadlock to occur.
+
+    1. Mutual exclusion
+    ```
+       At least one resource must be held in a NON-SHAREABLE mode - only
+       one process may use it at a time.
+
+       Example : a printer , a tape drive , a write lock on a file.
+       A read-only file is shareable and can never cause a deadlock.
+    ```
+
+    2. Hold and wait
+    ```
+       A process must be HOLDING at least one resource while WAITING to
+       acquire additional resources held by other processes.
+
+       Example : P1 holds the printer and waits for the scanner.
+    ```
+
+    3. No preemption
+    ```
+       A resource cannot be FORCIBLY TAKEN from the process holding it.
+       It is released only VOLUNTARILY, after that process finishes with it.
+
+       Example : a printer cannot be seized mid-page. The CPU CAN be
+       preempted, which is why the CPU never causes a deadlock.
+    ```
+
+    4. Circular wait
+    ```
+       A CLOSED CHAIN of waiting processes must exist :
+
+            P0 -> P1 -> P2 -> ... -> Pn -> P0
+
+       where each waits for a resource held by the next.
+    ```
+    ```
+       The simplest case :
+            P1 holds A , wants B
+            P2 holds B , wants A
+
+            P1 ---> P2
+             ^        |
+             +--------+
+    ```
+
+    Example satisfying all four
+    ```
+       Two processes share a printer (A) and a scanner (B).
+
+       t1  P1 requests A -> granted
+       t2  P2 requests B -> granted
+       t3  P1 requests B -> WAITS
+       t4  P2 requests A -> WAITS
+
+       MUTUAL EXCLUSION : each device serves one process        HOLDS
+       HOLD AND WAIT    : P1 holds A while waiting for B        HOLDS
+       NO PREEMPTION    : neither device can be seized          HOLDS
+       CIRCULAR WAIT    : P1 -> P2 -> P1                        HOLDS
+
+       DEADLOCK.
+    ```
+
+    Which condition each prevention method removes
+
+    | Condition | Can it be removed? | How, and at what cost |
+    |---|---|---|
+    | Mutual exclusion | Rarely | Spooling, where the resource allows |
+    | Hold and wait | Yes | Request all resources at once — poor utilisation |
+    | No preemption | Partly | Seize and roll back — impossible for a printer |
+    | `Circular wait` | `Yes, cheaply` | Impose a total order on resources |
+
+    Why resource ordering works
+    ```
+       Number every resource type and require requests in INCREASING order.
+
+            F(printer) = 1 , F(scanner) = 2 , F(disk) = 3
+
+       Suppose a cycle P0 -> P1 -> ... -> Pn -> P0 existed. Following it
+       round, each process holds a lower-numbered resource and waits for a
+       higher-numbered one, so the numbers strictly increase all the way
+       round. But returning to the start would require F(R) < F(R) - a
+       contradiction.
+
+       Therefore no cycle can form.
+    ```
+    - This is why every multi-threaded programming guide insists on a documented `lock order`: it is deadlock prevention by attacking the circular-wait condition.
+
+    - One important qualification: the four conditions are `necessary but not sufficient` when a resource has `several instances`. A cycle in the resource allocation graph may then still be a safe state, which is exactly why the `Banker's algorithm` and its safety check exist.
+
 12. **(a) What is deadlock in operating system (OS)? What are the four necessary and sufficient conditions behind deadlock?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
+
+    Answer: (a) What deadlock is
+    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
+    ```
+       P1 holds A and requests B
+       P2 holds B and requests A     -> both wait forever
+    ```
+    - No process in the set can move, and none will release what it holds, so the wait is `permanent` — unlike starvation, where progress is still possible in principle.
+
+    The four conditions
+    ```
+       1. MUTUAL EXCLUSION
+            At least one resource is non-shareable - only one process may
+            hold it at a time.  (printer , tape drive , write lock)
+
+       2. HOLD AND WAIT
+            A process holds at least one resource while waiting for more
+            that are held by others.
+
+       3. NO PREEMPTION
+            A resource cannot be forcibly taken away; it is released only
+            voluntarily by its holder.
+
+       4. CIRCULAR WAIT
+            A closed chain  P0 -> P1 -> ... -> Pn -> P0  exists, in which
+            each process waits for a resource held by the next.
+    ```
+
+    A note on the wording "necessary and sufficient"
+    - The question says `necessary and sufficient`, but the standard result is that these four are `necessary` — and sufficient only for `single-instance` resources.
+    ```
+       SINGLE instance per resource type :
+            all four hold  <=>  DEADLOCK
+            (equivalently, a CYCLE in the resource allocation graph
+             means a deadlock)
+            -> here they ARE necessary AND sufficient
+
+       MULTIPLE instances per resource type :
+            all four may hold and the state may STILL BE SAFE.
+            A cycle is then NECESSARY but NOT SUFFICIENT.
+    ```
+    - Counter-example with two instances of R:
+    ```
+       P1 holds one instance and wants one more
+       P2 holds one instance and wants one more
+       P3 holds one instance and will RELEASE it without asking for more
+
+       A cycle exists between P1 and P2, but when P3 releases, P1 gets the
+       instance, finishes, releases both, and P2 proceeds.  NO deadlock.
+    ```
+    - This is precisely why the `Banker's safety algorithm` exists: for multi-instance resources the four conditions are not enough, and the state has to be tested.
+
+    Example where all four hold and a deadlock really occurs
+    ```
+       t1  P1 requests the printer -> granted
+       t2  P2 requests the scanner -> granted
+       t3  P1 requests the scanner -> WAITS
+       t4  P2 requests the printer -> WAITS
+
+       Both devices are single-instance, so the cycle P1 -> P2 -> P1 is a
+       genuine deadlock.
+    ```
+
+    - Breaking `any one` of the four makes deadlock impossible. Attacking `circular wait` is the cheapest: number the resource types and require every process to request them in increasing order. A cycle then cannot form, because following it round would require `F(R) < F(R)`.
 
 13. **(b) A system has P processes each needing a maximum of m resources and a total of r resources available. Which conditions must hold to make the system deadlock free?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
+    Answer: The setting
+    ```
+       P = number of processes
+       m = maximum number of resource units EACH process may need
+       r = total number of resource units available
+       All units are IDENTICAL and are requested one at a time.
+    ```
+
+    The condition
+    ```
+            r  >=  P * (m - 1) + 1
+    ```
+    - Equivalently, `r >= P*m - P + 1`. If this holds, the system can never deadlock, whatever order the requests arrive in.
+
+    Why it works
+    ```
+       Consider the WORST CASE. To have a deadlock, EVERY process must be
+       stuck holding some units and waiting for more.
+
+       The most units a process can hold and still be waiting is  m - 1 ,
+       because a process that has all m of its units can finish and does
+       not need to wait.
+
+       So the worst distribution is :
+
+            every one of the P processes holds  (m - 1)  units
+            total units tied up  =  P * (m - 1)
+
+       If there is even ONE spare unit left over, i.e.
+
+            r  >=  P * (m - 1) + 1
+
+       then that spare unit is given to some process Pi. Pi now has all m
+       units it can need, so it FINISHES and RELEASES all m units. Those
+       m units let the next process complete, and so on, until every
+       process finishes.
+
+       Hence NO DEADLOCK is possible.
+    ```
+
+    Worked check
+    ```
+       P = 3 processes , m = 4 units each.
+
+       Required :  r >= 3 * (4 - 1) + 1 = 3 * 3 + 1 = 10
+
+       Case r = 10  ->  SAFE
+            worst case : P1 = 3 , P2 = 3 , P3 = 3 , used = 9
+            1 unit spare -> give it to P1 -> P1 has 4 , finishes ,
+            releases 4 -> P2 finishes -> P3 finishes.
+
+       Case r = 9   ->  DEADLOCK POSSIBLE
+            P1 = 3 , P2 = 3 , P3 = 3 , used = 9 , spare = 0
+            each needs 1 more , none can get it -> all wait forever.
+    ```
+
+    The general form when needs differ
+    ```
+       If process Pi may need at most  Ni  units (needs not equal), the
+       condition becomes
+
+            r  >=  SUM( Ni - 1 ) + 1  =  SUM(Ni) - P + 1
+
+       which is the same statement, written for unequal maximum needs.
+       The equivalent inequality often quoted is
+
+            SUM(Ni)  <  r + P
+    ```
+    - Both forms say the same thing: `deadlock is impossible as long as the total demand is small enough that at least one process can always be given everything it needs`.
+
+    - Note this is a `prevention` condition checked at design time from the totals — not the `Banker's algorithm`, which tests the actual allocation state at run time before granting each request.
+
 14. **Name and define characteristics properties of the Deadlock situation in a computer system.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
+
+    Answer: The `characteristic properties` of a deadlock are the four `Coffman conditions`. All four must hold `simultaneously` for a deadlock to exist.
+
+    1. Mutual exclusion
+    ```
+       At least one resource is held in a NON-SHAREABLE mode - only one
+       process may use it at a time.
+
+       Example : a printer , a tape drive , a write lock on a record.
+       A read-only file is shareable and can never cause a deadlock.
+    ```
+
+    2. Hold and wait
+    ```
+       A process HOLDS at least one resource while WAITING for additional
+       resources that are held by other processes.
+
+       Example : P1 holds the printer and waits for the scanner.
+    ```
+
+    3. No preemption
+    ```
+       A resource cannot be FORCIBLY TAKEN from its holder. It is released
+       only VOLUNTARILY, after the holder finishes with it.
+
+       Example : a printer cannot be seized mid-page. The CPU CAN be
+       preempted, which is why the CPU is never a cause of deadlock.
+    ```
+
+    4. Circular wait
+    ```
+       A CLOSED CHAIN of waiting processes exists :
+
+            P0 -> P1 -> P2 -> ... -> Pn -> P0
+
+       Simplest case :
+            P1 holds A , wants B
+            P2 holds B , wants A
+
+            P1 ---> P2
+             ^        |
+             +--------+
+    ```
+
+    Example in which all four are present
+    ```
+       t1  P1 requests the printer (A) -> granted
+       t2  P2 requests the scanner (B) -> granted
+       t3  P1 requests B              -> WAITS
+       t4  P2 requests A              -> WAITS
+
+       MUTUAL EXCLUSION : each device serves one process       HOLDS
+       HOLD AND WAIT    : P1 holds A while waiting for B       HOLDS
+       NO PREEMPTION    : neither device can be seized         HOLDS
+       CIRCULAR WAIT    : P1 -> P2 -> P1                       HOLDS
+
+       DEADLOCK.
+    ```
+
+    How each property is used to prevent deadlock
+
+    | Property | Removable? | Method and cost |
+    |---|---|---|
+    | Mutual exclusion | Rarely | Spooling, where the device allows |
+    | Hold and wait | Yes | Request everything at once — poor utilisation |
+    | No preemption | Partly | Seize and roll back — useless for a printer |
+    | `Circular wait` | `Yes, cheaply` | Total ordering of resource types |
+
+    - One qualification worth stating: these four properties are `necessary but not sufficient` when a resource type has `several instances`. A cycle may then still be a safe state, which is why the `Banker's algorithm` tests the state instead of just looking for a cycle.
 
 15. **(b) What are the conditions for deadlock situations? Explain briefly.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 688 (ET: N/A)]*
 
+    Answer: A deadlock needs `four` conditions to hold at the same time. They are the `Coffman conditions`.
+
+    1. Mutual exclusion
+    ```
+       At least one resource must be NON-SHAREABLE - only one process may
+       hold it at a time.
+
+       Example : a printer , a tape drive , a write lock.
+       A shareable read-only file can never cause a deadlock.
+    ```
+
+    2. Hold and wait
+    ```
+       A process must be HOLDING one or more resources while WAITING for
+       others that are currently held by other processes.
+
+       Example : P1 holds the printer and waits for the scanner.
+    ```
+
+    3. No preemption
+    ```
+       A resource cannot be TAKEN AWAY by force. Its holder must release
+       it voluntarily.
+
+       Example : a printer cannot be seized mid-page. The CPU can be
+       preempted, so the CPU never causes deadlock.
+    ```
+
+    4. Circular wait
+    ```
+       A CLOSED CHAIN of waiting processes must exist :
+
+            P0 -> P1 -> ... -> Pn -> P0
+
+            P1 holds A , wants B
+            P2 holds B , wants A
+
+            P1 ---> P2
+             ^        |
+             +--------+
+    ```
+
+    Brief example
+    ```
+       t1  P1 gets the printer
+       t2  P2 gets the scanner
+       t3  P1 asks for the scanner -> WAITS
+       t4  P2 asks for the printer -> WAITS
+
+       All four conditions hold, so this is a deadlock.
+    ```
+
+    Breaking the conditions
+    ```
+       Remove ANY ONE and deadlock becomes impossible.
+
+       Mutual exclusion -> spooling , where possible
+       Hold and wait    -> request all resources at once
+       No preemption    -> seize the resource and roll the victim back
+       Circular wait    -> NUMBER the resource types and require requests
+                           in INCREASING order.  A cycle then cannot form,
+                           because going round it would need F(R) < F(R).
+    ```
+    - Circular wait is the one attacked in practice; the rule "always take lock A before lock B" in real kernel and database code is exactly this.
+
+    - Important qualification: the four are `necessary but not sufficient` when a resource type has `multiple instances`. There a cycle may still be a safe state, so the `Banker's safety algorithm` must be run to decide.
+
 16. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances). Snapshot at time T_0. The content of the matrix. Need is defined to be \text{Max} - \text{Allocation}. Check that \text{Request} \le \text{Available}. Executing safety algorithm shows that sequence \langle P_1, P_3, P_4, P_0, P_2 \rangle satisfies safety requirement.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 855 (ET: N/A)]*
+
+    Answer: Given, the standard snapshot at time T0.
+    ```
+       Total resources :  A = 10 , B = 5 , C = 7
+
+               Allocation        Max
+                A  B  C        A  B  C
+       P0       0  1  0        7  5  3
+       P1       2  0  0        3  2  2
+       P2       3  0  2        9  0  2
+       P3       2  1  1        2  2  2
+       P4       0  0  2        4  3  3
+    ```
+
+    Step 1 — Available
+    ```
+       Available = Total - sum of Allocation
+
+       sum of Allocation :  A : 0+2+3+2+0 = 7
+                            B : 1+0+0+1+0 = 2
+                            C : 0+0+2+1+2 = 5
+
+       Available = (10-7 , 5-2 , 7-5) = (3 , 3 , 2)
+    ```
+
+    Step 2 — Need matrix, Need = Max - Allocation
+    ```
+                  Need
+                A  B  C
+       P0       7  4  3          (7-0 , 5-1 , 3-0)
+       P1       1  2  2          (3-2 , 2-0 , 2-0)
+       P2       6  0  0          (9-3 , 0-0 , 2-2)
+       P3       0  1  1          (2-2 , 2-1 , 2-1)
+       P4       4  3  1          (4-0 , 3-0 , 3-2)
+    ```
+
+    Step 3 — Safety algorithm
+    - Work = Available = (3,3,2), and every Finish[i] = false. Repeatedly pick a process whose `Need <= Work`, let it finish, and add its Allocation to Work.
+    ```
+       Work = (3,3,2)
+
+       P0 : Need (7,4,3) <= (3,3,2) ?   7>3   NO
+       P1 : Need (1,2,2) <= (3,3,2) ?   YES -> run P1
+            Work = (3,3,2) + Allocation(2,0,0) = (5,3,2)
+
+       P2 : Need (6,0,0) <= (5,3,2) ?   6>5   NO
+       P3 : Need (0,1,1) <= (5,3,2) ?   YES -> run P3
+            Work = (5,3,2) + (2,1,1) = (7,4,3)
+
+       P4 : Need (4,3,1) <= (7,4,3) ?   YES -> run P4
+            Work = (7,4,3) + (0,0,2) = (7,4,5)
+
+       P0 : Need (7,4,3) <= (7,4,5) ?   YES -> run P0
+            Work = (7,4,5) + (0,1,0) = (7,5,5)
+
+       P2 : Need (6,0,0) <= (7,5,5) ?   YES -> run P2
+            Work = (7,5,5) + (3,0,2) = (10,5,7)
+    ```
+    ```
+       All five Finish[i] = true , and Work returns to (10,5,7) = Total.
+    ```
+
+    Safe sequence
+    ```
+            < P1 , P3 , P4 , P0 , P2 >
+    ```
+    - The system is in a `safe state`.
+
+    Step 4 — the request test
+    - When a running process makes a request, three checks are applied in order:
+    ```
+       1. Request <= Need     else ERROR - the process exceeded its
+                              declared maximum
+       2. Request <= Available else WAIT  - the resources are not free
+       3. PRETEND to grant :
+               Available   = Available - Request
+               Allocation  = Allocation + Request
+               Need        = Need - Request
+          then run the SAFETY ALGORITHM on this trial state.
+
+               SAFE   -> grant the request for real
+               UNSAFE -> undo the trial and make the process WAIT
+    ```
+    - Example: `P1 requests (1,0,2)`. Check `(1,0,2) <= Need(1,2,2)` — yes. Check `(1,0,2) <= Available(3,3,2)` — yes. After the trial grant, `Available = (2,3,0)` and the safety algorithm finds the sequence `<P1, P3, P4, P0, P2>`, so the request is `granted`.
+
+    Points to note
+    - The Banker's algorithm is `deadlock avoidance`, not detection. It refuses a request that `could` lead to trouble, so resources may sit idle even when a request could safely be served.
+    - An `unsafe` state is not a deadlocked state; it only means deadlock has become possible.
+    - Its practical limitation: every process must declare its `maximum need in advance`, which ordinary programs cannot do. This is why real operating systems do not use it.
 
 17. **(a) What is Artificial Intelligence (AI)? What are the necessary conditions for a deadlock in an operating system?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
 
+    Answer: (a) What Artificial Intelligence is
+    - `Artificial Intelligence (AI)` is the branch of computer science that builds machines able to do tasks that normally need human intelligence — learning from data, reasoning, understanding language, recognising images and making decisions.
+    ```
+       Main branches :
+         Machine Learning     - learn patterns from data instead of being
+                                programmed with fixed rules
+         Deep Learning        - multi-layer neural networks
+         NLP                  - understand and generate human language
+         Computer Vision      - understand images and video
+         Expert Systems       - rule-based reasoning in a narrow domain
+         Robotics             - perceive the world and act in it
+    ```
+    ```
+       Types by capability :
+         NARROW AI   - good at ONE task. All AI in use today : spam
+                       filters , face unlock , recommendation systems ,
+                       chatbots , medical image screening.
+         GENERAL AI  - human-level ability across ANY task. Does not exist.
+         SUPER AI    - beyond human ability. Theoretical.
+    ```
+    - Common uses: fraud detection in banking, credit scoring, OCR for cheque clearing, speech recognition, machine translation and self-driving vehicles.
+
+    The necessary conditions for a deadlock
+    ```
+       1. MUTUAL EXCLUSION
+            At least one resource is non-shareable - one holder at a time.
+            (printer , tape drive , write lock)
+
+       2. HOLD AND WAIT
+            A process holds one or more resources while waiting for others
+            held by other processes.
+
+       3. NO PREEMPTION
+            A resource cannot be seized; it is released only voluntarily
+            by its holder.
+
+       4. CIRCULAR WAIT
+            A closed chain exists :  P0 -> P1 -> ... -> Pn -> P0 ,
+            each waiting for a resource held by the next.
+    ```
+    - All four must hold `at the same time`; breaking any one makes deadlock impossible.
+    ```
+       Example :
+            t1  P1 gets the printer
+            t2  P2 gets the scanner
+            t3  P1 asks for the scanner -> WAITS
+            t4  P2 asks for the printer -> WAITS
+
+            Cycle P1 -> P2 -> P1 , both devices single-instance
+            -> DEADLOCK
+    ```
+    - Circular wait is the condition attacked in practice: number the resource types and require requests in `increasing order`, so a cycle can never form.
+
 18. **What is Deadlock? Explain two situations where deadlock condition occurs.** *[Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
+
+    Answer: What deadlock is
+    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
+    - It needs the four `Coffman conditions` together: `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`.
+
+    Situation 1 — two processes and two devices
+    ```
+       A printer (A) and a scanner (B). Both are single-instance.
+
+       t1  P1 requests A -> granted        P1 holds A
+       t2  P2 requests B -> granted        P2 holds B
+       t3  P1 requests B -> WAITS          B is held by P2
+       t4  P2 requests A -> WAITS          A is held by P1
+
+       Wait-for graph :   P1 ---> P2
+                           ^        |
+                           +--------+
+
+       P1 will not release A until it gets B ; P2 will not release B until
+       it gets A. Neither ever happens.
+    ```
+    - The cause is the `order of requests`. Had both processes asked for A first and then B, no cycle could have formed. This is why resource ordering prevents deadlock.
+
+    Situation 2 — two database transactions holding row locks
+    ```
+       T1 : UPDATE accounts SET bal = bal - 500 WHERE id = 1;   -- locks row 1
+            UPDATE accounts SET bal = bal + 500 WHERE id = 2;   -- wants row 2
+
+       T2 : UPDATE accounts SET bal = bal - 300 WHERE id = 2;   -- locks row 2
+            UPDATE accounts SET bal = bal + 300 WHERE id = 1;   -- wants row 1
+
+            T1 holds row 1 , waits for row 2
+            T2 holds row 2 , waits for row 1
+            -> circular wait on ROW LOCKS
+    ```
+    - This is the commonest deadlock in real banking software. The DBMS handles it by `detection and recovery`: it builds a wait-for graph, finds the cycle, picks a `victim` and `rolls that transaction back` automatically, so the other can finish. That is possible only because a transaction is designed to be undoable.
+
+    Two more situations worth mentioning
+    ```
+       MESSAGE PASSING
+            P1 does receive(from P2) , then send(to P2)
+            P2 does receive(from P1) , then send(to P1)
+            Both block on receive - each waits for a message the other
+            will never send. Here the "resource" is a MESSAGE.
+
+       SELF-DEADLOCK ON A NON-REENTRANT LOCK
+            lock(m);  ...  lock(m);
+            The thread waits for a lock it already holds - a cycle of
+            length one. A recursive mutex prevents it.
+    ```
+
+    How each situation is avoided
+    ```
+       Situation 1 : impose a TOTAL ORDER on devices - always request the
+            printer before the scanner. A cycle then cannot form.
+       Situation 2 : access rows in a FIXED ORDER (ascending primary key),
+            or let the DBMS detect and roll back a victim.
+    ```
 
 19. **A, B two resources. Two processes (P1 and P2) share these resources. When a process request for a resources, if that resource is free then it will be allocated with that resources. If the resources are not free then the process will halt. Now the scenario is:** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 973 (ET: BUET)]*
 
+    Answer: The question is `incomplete` — the scenario table showing the actual sequence of requests by P1 and P2 was not captured, so the exact answer cannot be produced. The method and the standard version of this problem are given below.
+
+    The rule stated in the question
+    ```
+       Request a free resource   -> it is ALLOCATED
+       Request a busy resource   -> the process HALTS (blocks) and keeps
+                                    whatever it already holds
+    ```
+    - This rule is exactly `hold and wait` with `no preemption`, so with two single-instance resources a deadlock is possible.
+
+    The standard scenario for this problem
+    ```
+       Two resources A and B , each with ONE instance.
+
+       Time   P1                        P2
+       ----   -----------------------   -----------------------
+       t1     request A -> granted      -
+       t2     -                         request B -> granted
+       t3     request B -> HALTS        -
+       t4     -                         request A -> HALTS
+
+       State :  P1 holds A , waits for B
+                P2 holds B , waits for A
+    ```
+
+    Resource allocation graph
+    ```mermaid
+    flowchart LR
+        P1((P1)) -->|requests| B[Resource B]
+        B -->|held by| P2((P2))
+        P2 -->|requests| A[Resource A]
+        A -->|held by| P1
+    ```
+    ```
+            +--------+  request  +--------+
+            |   P1   |---------->|   B    |
+            +--------+           +--------+
+                 ^                    |
+                 | held               | held
+            +--------+  request  +--------+
+            |   A    |<----------|   P2   |
+            +--------+           +--------+
+
+       Wait-for graph :   P1 ---> P2 ---> P1     a CYCLE
+    ```
+
+    Checking the four conditions
+    ```
+       MUTUAL EXCLUSION : A and B have one instance each          HOLDS
+       HOLD AND WAIT    : P1 holds A and waits for B              HOLDS
+       NO PREEMPTION    : a halted process keeps its resource     HOLDS
+       CIRCULAR WAIT    : P1 -> P2 -> P1                          HOLDS
+
+       Both resources are single-instance, so the cycle IS a deadlock.
+    ```
+    - Verdict for this ordering: `deadlock`.
+
+    An ordering of the same requests that does NOT deadlock
+    ```
+       Time   P1                        P2
+       t1     request A -> granted      -
+       t2     request B -> granted      -
+       t3     use , then release A , B  -
+       t4     -                         request A -> granted
+       t5     -                         request B -> granted
+
+       P1 never waits while holding, so no cycle forms.  NO DEADLOCK.
+    ```
+    - The general test to apply to whatever the actual table shows: draw the resource allocation graph at the final state; with single-instance resources, `a cycle means a deadlock and no cycle means none`.
+
+    How to make this system deadlock-free
+    ```
+       RESOURCE ORDERING : fix F(A) = 1 , F(B) = 2 and require every
+            process to request in increasing order. Both processes then
+            take A before B, so the one that gets A first finishes first.
+            A cycle cannot form.
+
+       ALL-OR-NOTHING    : a process requests A and B together ; if both
+            are not free it gets neither. Removes HOLD AND WAIT.
+
+       TIMEOUT and ROLLBACK : a halted process releases what it holds
+            after a timeout and retries. Removes NO PREEMPTION.
+    ```
+
 20. **What is Operating Systems Deadlock? কীভাবে Deadlock দূর করা যায়?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What an operating system deadlock is
+    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
+    ```
+       P1 holds A and requests B
+       P2 holds B and requests A     -> both wait forever
+    ```
+    - All four `Coffman conditions` must hold together: `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`.
+
+    How deadlock is removed — the four approaches
+
+    1. Prevention — make one condition impossible
+    ```
+       MUTUAL EXCLUSION : use SPOOLING where the device allows. Print jobs
+            go to a disk queue and a daemon feeds the printer, so no
+            process ever holds the printer itself.
+
+       HOLD AND WAIT    : require a process to request ALL its resources
+            at once, or to release everything before requesting more.
+            Cost : poor utilisation , possible starvation.
+
+       NO PREEMPTION    : if a request cannot be met, seize what the
+            process holds and restart it later. Works for CPU and memory,
+            not for a printer mid-page.
+
+       CIRCULAR WAIT    : NUMBER the resource types and require requests
+            in INCREASING order.
+
+                 F(printer) = 1 , F(scanner) = 2 , F(disk) = 3
+
+            A cycle then cannot form : following it round, the numbers
+            would have to increase all the way back to the start, needing
+            F(R) < F(R) - impossible.
+
+            THIS IS THE PRACTICAL METHOD - "always lock A before B".
+    ```
+
+    2. Avoidance — the Banker's algorithm
+    ```
+       Each process declares its MAXIMUM need in advance.
+            Need = Max - Allocation
+
+       Before granting any request the system tests the resulting state :
+            SAFE   (some order exists in which all processes can finish)
+                         -> grant
+            UNSAFE -> make the process wait, even though resources are free
+    ```
+    - Weakness: maximum needs must be known in advance, which ordinary programs cannot supply. Hence real operating systems do not use it.
+
+    3. Detection and recovery
+    ```
+       DETECTION
+            Single-instance resources : keep a WAIT-FOR GRAPH and look for
+                 a CYCLE - DFS, O(V + E).
+            Multi-instance resources  : run the SAFETY ALGORITHM
+                 periodically.
+
+       RECOVERY
+            KILL processes  - all of them (simple, wasteful) or one at a
+                 time until the cycle breaks.
+            PREEMPT resources - choose a VICTIM (fewest resources held,
+                 least CPU consumed, lowest priority), ROLL IT BACK to a
+                 checkpoint, and avoid STARVATION by not picking the same
+                 victim every time.
+    ```
+    - This is what a `DBMS` does: it detects a lock cycle and rolls a transaction back automatically.
+
+    4. Ignore it — the "ostrich algorithm"
+    ```
+       Deadlock is rare, and prevention costs utilisation permanently.
+       So Windows, Linux and UNIX simply ignore it and rely on the user
+       to kill the hung process or reboot. A deliberate trade-off.
+    ```
+
+    Comparison
+
+    | Method | Applied at | Overhead | Utilisation | Used in practice |
+    |---|---|---|---|---|
+    | Prevention | Design time | Low | `Poor` | Yes, as lock ordering |
+    | Avoidance | Every request | High | Moderate | Rarely |
+    | Detection | Periodically | Medium | Good | `Databases` |
+    | Ignore | Never | None | Best | `Windows, Linux, UNIX` |
 
 21. **(d) Define Deadlock. Write down the necessary conditions for deadlock.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026 (ET: N/A)]*
 
+    Answer: Definition
+    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so no process in the set can ever proceed.
+    ```
+       P1 holds A and requests B
+       P2 holds B and requests A     -> the wait is PERMANENT
+    ```
+    - The wait is permanent because none of them will release what it holds until it gets what it is waiting for. This is what separates deadlock from `starvation`, where a process could still run if the scheduler chose it.
+
+    The necessary conditions
+    ```
+       1. MUTUAL EXCLUSION
+            At least one resource is non-shareable - only one process may
+            hold it at a time.  (printer , tape drive , write lock)
+
+       2. HOLD AND WAIT
+            A process holds at least one resource while waiting for more
+            that are held by other processes.
+
+       3. NO PREEMPTION
+            A resource cannot be forcibly taken from its holder; it is
+            released only voluntarily.
+
+       4. CIRCULAR WAIT
+            A closed chain  P0 -> P1 -> ... -> Pn -> P0  exists, each
+            process waiting for a resource held by the next.
+    ```
+    - All four must hold `simultaneously`. Breaking `any one` makes deadlock impossible, which is why they are called necessary conditions.
+
+    Example
+    ```
+       t1  P1 gets the printer (A)
+       t2  P2 gets the scanner (B)
+       t3  P1 asks for B -> WAITS
+       t4  P2 asks for A -> WAITS
+
+       Wait-for graph :  P1 ---> P2 ---> P1     a CYCLE  ->  DEADLOCK
+    ```
+
+    Breaking each condition
+
+    | Condition | Removable? | Method |
+    |---|---|---|
+    | Mutual exclusion | Rarely | Spooling, where the device allows |
+    | Hold and wait | Yes | Request all resources at once |
+    | No preemption | Partly | Seize the resource and roll the victim back |
+    | `Circular wait` | `Yes, cheaply` | Total ordering of resource types |
+
+    - Resource ordering, the practical method: number the resource types and require every process to request in `increasing order`. Following a hypothetical cycle round would require `F(R) < F(R)`, so no cycle can form.
+    - One qualification: for a resource type with `multiple instances` the four conditions are `necessary but not sufficient` — a cycle may still be a safe state, so the `Banker's safety algorithm` decides instead.
+
 22. **Four condition of deadlock in Operating System. Suppose, n processes, \text{P}_1, \text{P}_2\dots \text{P}_n share m identical esource units which can be reserved and released one at a time. The maximum resources request of process \text{P}_i is \text{S}_i, where \text{S}_i>0. Which one is sufficient condition for ensuring that deadlock doesn't occur? (Full প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
+    Answer: The four conditions for deadlock
+    ```
+       1. MUTUAL EXCLUSION - at least one resource is non-shareable, so
+          only one process may hold it at a time.
+       2. HOLD AND WAIT    - a process holds resources while waiting for
+          more that are held by others.
+       3. NO PREEMPTION    - a resource cannot be seized; it is released
+          only voluntarily.
+       4. CIRCULAR WAIT    - a closed chain P0 -> P1 -> ... -> Pn -> P0
+          exists, each waiting for a resource held by the next.
+    ```
+    - All four must hold at once. Breaking any one makes deadlock impossible.
+
+    The sufficient condition
+    ```
+       Given :  n processes P1 ... Pn
+                m identical resource units, reserved and released one at
+                a time
+                Si = maximum request of process Pi , Si > 0
+
+       The sufficient condition for NO deadlock is
+
+                SUM( Si )  <  m + n
+                    i=1..n
+    ```
+    - Equivalently `sum(Si) <= m + n - 1`.
+
+    Why it works
+    ```
+       For a deadlock, EVERY process must be blocked while holding some
+       units. A process holding all Si of its units can finish, so a
+       BLOCKED process holds at most  (Si - 1)  units.
+
+       The worst case therefore ties up
+
+            SUM( Si - 1 )  =  SUM(Si) - n     units
+
+       If even ONE unit is still free, some process can be given its last
+       unit, finish, and release everything - which unblocks the next, and
+       so on. So deadlock is impossible when
+
+            SUM(Si) - n  <  m
+            SUM(Si)      <  m + n
+    ```
+
+    Worked check
+    ```
+       n = 3 processes , m = 10 units , S1 = 4 , S2 = 4 , S3 = 4
+
+            SUM(Si) = 12 ,  m + n = 13
+            12 < 13   ->  TRUE  ->  NO DEADLOCK POSSIBLE
+
+       Verify : worst case each holds Si-1 = 3 , total 9 , one unit
+       spare -> give it to P1 -> P1 has 4 , finishes , releases 4 ->
+       P2 finishes -> P3 finishes.
+
+       Now try m = 9 :
+            SUM(Si) = 12 ,  m + n = 12
+            12 < 12   ->  FALSE  ->  deadlock POSSIBLE
+
+       Verify : each holds 3 , total 9 , nothing spare , each needs one
+       more -> all wait forever.  DEADLOCK.
+    ```
+
+    - The equal-need form of the same result is `m >= n*(S - 1) + 1` when every process needs the same maximum `S`. Both say one thing: `deadlock cannot occur as long as at least one process can always be given everything it still needs`.
+    - Note this is a `sufficient` condition, not a necessary one. If it fails, deadlock is merely `possible` — not certain. It is also a design-time check on totals, unlike the `Banker's algorithm`, which tests the actual allocation state before granting each request.
+
 23. **(b) What are the conditions for a deadlock situation?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
+
+    Answer: A deadlock requires `four` conditions to hold at the same time — the `Coffman conditions`.
+
+    1. Mutual exclusion
+    ```
+       At least one resource must be NON-SHAREABLE - only one process may
+       hold it at a time.
+
+       Example : printer , tape drive , write lock on a record.
+       A read-only file is shareable, so it can never cause a deadlock.
+    ```
+
+    2. Hold and wait
+    ```
+       A process must be HOLDING at least one resource while WAITING for
+       others that are held by other processes.
+
+       Example : P1 holds the printer and waits for the scanner.
+    ```
+
+    3. No preemption
+    ```
+       A resource cannot be FORCIBLY TAKEN from its holder; it is released
+       only voluntarily.
+
+       Example : a printer cannot be seized mid-page. The CPU CAN be
+       preempted, which is why the CPU never causes deadlock.
+    ```
+
+    4. Circular wait
+    ```
+       A CLOSED CHAIN of waiting processes must exist :
+
+            P0 -> P1 -> ... -> Pn -> P0
+
+            P1 holds A , wants B
+            P2 holds B , wants A
+
+            P1 ---> P2
+             ^        |
+             +--------+
+    ```
+
+    Example
+    ```
+       t1  P1 gets the printer (A)
+       t2  P2 gets the scanner (B)
+       t3  P1 asks for B -> WAITS
+       t4  P2 asks for A -> WAITS
+
+       All four hold, both devices are single-instance -> DEADLOCK.
+    ```
+
+    Breaking the conditions
+    ```
+       Mutual exclusion -> spooling , where the device allows
+       Hold and wait    -> request all resources at once
+       No preemption    -> seize the resource and roll the victim back
+       Circular wait    -> NUMBER the resource types and require requests
+                           in INCREASING order ; a cycle then cannot form
+    ```
+    - Circular wait is the one attacked in real systems; the documented "lock order" in kernel and database code is exactly this rule.
+    - Qualification: with `multiple instances` of a resource type the four are `necessary but not sufficient` — a cycle may still be safe, so the `Banker's safety algorithm` is used to decide.
 
 ## Virtual Memory & Page Replacement (Thrashing) (16)
 
