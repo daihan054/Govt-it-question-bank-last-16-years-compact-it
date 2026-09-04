@@ -5539,9 +5539,84 @@
 
 1. **Unsoliciated email is called?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+   Answer: Unsolicited email is called **SPAM** (also called junk email or Unsolicited Bulk Email, UBE).
+
+   - Spam is unwanted email sent in bulk to a large number of recipients who never requested it, usually for advertising, scams or malware distribution.
+   - The name comes from a Monty Python sketch in which the word "spam" is repeated endlessly, drowning out everything else.
+
+   Types of spam
+   - **Commercial spam** — unwanted advertising.
+   - **Phishing email** — impersonating a trusted organisation to steal credentials. This is spam with criminal intent.
+   - **Malware spam** — carrying an infected attachment or link.
+   - **Scam email** — advance-fee fraud, lottery and inheritance scams.
+   - **Spam in other channels** — SMS spam, comment spam, and social media spam.
+
+   Anti-spam measures
+   - **Spam filters** using content analysis, Bayesian filtering and machine learning.
+   - **SPF, DKIM and DMARC** — DNS-based checks that verify the sender domain and block spoofing.
+   - **Blacklists (RBL)** of known spam-sending IP addresses.
+   - **Greylisting** — temporarily rejecting the first delivery attempt, which most spam senders never retry.
+   - **CAPTCHA** on sign-up forms, and never publishing an email address in plain text on a web page.
+   - Not clicking "unsubscribe" on genuine spam, since it confirms the address is live.
+
 2. **If you downloaded the email, you will be able to face the problem. Which attack do you face?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
+   Answer: Downloading or opening an email attachment from an unknown source most commonly leads to a **Malware attack**, delivered through a **Phishing email**.
+
+   The specific attacks faced
+   - **Malware infection** — the attachment carries a virus, trojan, spyware or **ransomware** that installs when opened.
+   - **Phishing** — a link in the email leads to a fake login page that captures credentials.
+   - **Ransomware** — the most damaging outcome; files are encrypted and a ransom demanded. The overwhelming majority of ransomware infections begin with an email attachment.
+   - **Trojan / backdoor installation** — giving the attacker remote control.
+   - **Keylogger** — recording passwords as they are typed.
+   - **Macro attack** — a Word or Excel file whose macro downloads the real payload when macros are enabled.
+   - **Drive-by download** — merely visiting the linked page installs malware through a browser vulnerability.
+
+   Warning signs of a malicious email
+   - Unexpected attachment, especially `.exe`, `.zip`, `.js`, `.scr` or a document asking to "Enable Content".
+   - Urgent or threatening language, generic greeting, spelling errors.
+   - Sender address slightly different from the genuine domain.
+   - A link whose displayed text does not match its actual destination.
+
+   Prevention
+   - Do not open unexpected attachments, even from a known sender whose account may be compromised.
+   - Verify through a separate channel before acting.
+   - Keep antivirus and the operating system updated.
+   - Disable macros by default.
+   - Use email filtering with attachment sandboxing.
+   - Maintain backups, so a ransomware infection is recoverable.
+
 3. **e) What is email? What precautions can be taken to prevent unnecessary and unwanted e-mails?** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
+
+   Answer:
+
+   (a) Email
+   - **Electronic mail** is a method of exchanging digital messages over a computer network. A message is composed by the sender, transmitted through mail servers, and stored in the recipient's mailbox until read.
+   - Protocols: **SMTP** (port 25/587) sends mail; **POP3** (port 110) downloads it to one device; **IMAP** (port 143) keeps it on the server and synchronises across devices.
+   - Components: sender and recipient addresses, subject, body, attachments, and headers carrying routing information.
+
+   (b) Precautions against unwanted email (spam)
+
+   **Technical measures**
+   - **Enable the spam filter** in the mail client or server; modern filters use Bayesian and machine-learning classification.
+   - **Configure SPF, DKIM and DMARC** on your own domain, which prevents others spoofing it and improves your delivery reputation.
+   - **Use blacklists (RBL)** to reject mail from known spam sources.
+   - **Greylisting** — temporarily reject first delivery attempts; genuine servers retry, most spam senders do not.
+   - **Attachment scanning and sandboxing** at the mail gateway.
+   - Block dangerous attachment types (`.exe`, `.scr`, `.js`) at the gateway.
+
+   **Behavioural measures**
+   - **Never publish your email address in plain text** on a website; use an image or an obfuscated form, since spammers harvest addresses with crawlers.
+   - **Do not reply to spam or click its unsubscribe link** — it confirms the address is live and increases the volume.
+   - **Use a secondary address** for online registrations and newsletters, keeping the primary address private.
+   - **Read privacy policies** before giving an address to a website.
+   - **Do not forward chain emails**, which circulate address lists.
+   - Use **disposable or alias addresses** for one-off sign-ups.
+
+   **Organisational measures**
+   - Staff awareness training on recognising phishing.
+   - A clear reporting mechanism for suspicious email.
+   - Regular review of filter effectiveness and false positives.
 
 ## Buffer Overflow & Software Vulnerabilities (1)
 
