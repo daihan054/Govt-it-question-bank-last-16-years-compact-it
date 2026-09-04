@@ -3137,3 +3137,41 @@
 ## User Interfaces (CLI vs GUI) (1)
 
 1. **What is CLI?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
+
+   Answer: **CLI (Command Line Interface)** is a text-based user interface in which the user types commands at a prompt and the system responds with text output. There are no windows, icons or menus.
+
+   Examples
+   - Windows: Command Prompt (`cmd`), PowerShell.
+   - Linux and macOS: Bash, Zsh — the terminal.
+   - Network devices: Cisco IOS CLI, MikroTik terminal.
+
+   Sample commands
+   ```
+   dir                  # Windows: list files
+   ls -l                # Linux: list files with details
+   cd /home/user        # change directory
+   ping 8.8.8.8         # test connectivity
+   ipconfig / ifconfig  # show network configuration
+   ```
+
+   CLI vs GUI
+
+   | Point | CLI | GUI |
+   |---|---|---|
+   | Interaction | Typed commands | Mouse, icons, menus, windows |
+   | Learning curve | Steep — commands must be memorised | Easy — options are visible |
+   | Speed for an expert | Very fast | Slower, many clicks |
+   | Resource use | Very low | High — graphics need CPU, RAM, GPU |
+   | Automation | Excellent — scripts and batch files | Difficult |
+   | Remote access | Works well over a slow link (SSH) | Needs high bandwidth |
+   | Precision | Exact control, every option available | Only what the designer exposed |
+   | Error risk | High — a mistyped command can be destructive | Lower, with confirmation dialogs |
+
+   Why CLI is still essential
+   - **Automation and scripting** — hundreds of servers configured by one script; impossible through a GUI.
+   - **Remote administration** — SSH over a slow or metered connection.
+   - **Server operating systems** often run without any GUI at all, to save resources and reduce attack surface.
+   - **Full functionality** — many advanced options are exposed only through the CLI.
+   - **Reproducibility** — a command can be documented, reviewed and repeated exactly; a sequence of mouse clicks cannot.
+
+   - In practice a system administrator uses both: a GUI for exploration and reporting, and the CLI for real work and automation.
