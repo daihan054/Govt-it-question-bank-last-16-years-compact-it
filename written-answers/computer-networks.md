@@ -15593,7 +15593,95 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **(a) Discuss the main role of Address Resolution Protocol (ARP) in the network layer of TCP/IP protocol suite.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
 
+   Answer:
+
+   The main role of ARP
+   - ARP (Address Resolution Protocol) `maps a known IP address to the corresponding MAC address` on the local network. It is the bridge between Layer 3 logical addressing and Layer 2 physical delivery.
+   - It is necessary because the two layers use entirely different address schemes. The Network layer knows the destination's IP address, but a frame can only be delivered on the local link using a 48-bit MAC address. ARP supplies the missing piece.
+
+   Why it sits between the layers
+   - ARP is usually placed at the boundary of Layer 2 and Layer 3, and textbooks differ on which side. It is triggered by the Network layer (which has the IP address) and it produces a Data Link layer address, and its messages are carried directly in Ethernet frames with EtherType 0x0806, not inside IP. Both placements can therefore be defended.
+
+   How it works
+   - Step 1 — a host with a packet to send first checks whether the destination is on its own subnet, by ANDing both addresses with its subnet mask.
+     - If it is local, it needs the destination's own MAC address.
+     - If it is remote, it needs the `default gateway's` MAC address instead, not the destination's. This is a point examiners frequently test.
+   - Step 2 — it looks in its `ARP cache` for the required IP. If a valid entry exists, it is used immediately and no ARP traffic is generated.
+   - Step 3 — on a miss, it broadcasts an `ARP Request` to FF:FF:FF:FF:FF:FF: "Who has 192.168.1.10? Tell 192.168.1.5."
+   - Step 4 — every host on the segment receives it, but only the owner of that IP replies, with a `unicast ARP Reply` containing its MAC address.
+   - Step 5 — the sender stores the pair in its ARP cache, typically for two to twenty minutes, and builds the frame.
+
+   ```
+   PC-A (192.168.1.5)                              PC-B (192.168.1.10)
+      |-- ARP Request (broadcast) ------------------->|
+      |   "Who has 192.168.1.10? Tell 192.168.1.5"    |
+      |<-- ARP Reply (unicast) -----------------------|
+      |   "192.168.1.10 is at 00:1A:2B:3C:4D:5E"      |
+   ```
+
+   Related roles
+   - `Gratuitous ARP` — a host announces its own mapping unsolicited, to detect duplicate addresses and to update everyone's cache after a failover (this is how VRRP and HSRP move a virtual IP).
+   - `Proxy ARP` — a router answers on behalf of a host on another segment, so the sender believes the destination is local.
+   - `RARP` — the reverse mapping, MAC to IP, now replaced by BOOTP and DHCP.
+   - `Inverse ARP` — used in Frame Relay to find the IP address at the far end of a known virtual circuit.
+   - Commands: `arp -a` displays the cache; `arp -d` clears it.
+
+   Security note
+   - ARP has no authentication, so any host can send a false reply. `ARP spoofing` lets an attacker associate its own MAC with the gateway's IP and become a man in the middle. `Dynamic ARP Inspection` on the switch, together with DHCP snooping, is the standard defence.
+   - In IPv6, ARP does not exist at all — it is replaced by `Neighbour Discovery` over ICMPv6, which uses solicited-node multicast instead of broadcast and can be secured with SEND.
+
 2. **What is ARP? Briefly explain ARP.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841-842 (ET: N/A)]*
+
+   Answer:
+
+   What is ARP
+   - ARP (Address Resolution Protocol) resolves a known `IP address` into the corresponding `MAC address` on the local network, so that a frame can actually be delivered.
+   - Defined in RFC 826. Its messages travel directly inside Ethernet frames with EtherType `0x0806`, not inside IP packets.
+   - It is needed because IP addresses work end to end across the internet, but the actual delivery on each link is done with MAC addresses.
+
+   How ARP works
+
+   - Step 1 — Local or remote decision. The sender ANDs its own IP and the destination IP with the subnet mask.
+     - Same network -> it needs the destination host's MAC.
+     - Different network -> it needs the `default gateway's` MAC, since the packet must go through the router.
+   - Step 2 — Cache lookup. It checks its `ARP cache`. A hit means no ARP traffic at all.
+   - Step 3 — ARP Request. On a miss it broadcasts to FF:FF:FF:FF:FF:FF, asking "Who has this IP? Tell me." Every host on the segment receives it.
+   - Step 4 — ARP Reply. Only the host owning that IP responds, and it replies by `unicast` with its MAC address. (It also learns the requester's mapping from the request, and caches it.)
+   - Step 5 — Caching. The sender records the IP-to-MAC pair for a few minutes, then discards it so that stale mappings do not persist.
+   - Step 6 — Transmission. The frame is built with the correct destination MAC and sent.
+
+   ```
+   PC-A 192.168.1.5                             PC-B 192.168.1.10
+        |--- ARP Request (broadcast) ------------->|
+        |    "Who has 192.168.1.10?"               |
+        |<-- ARP Reply (unicast) ------------------|
+        |    "It is at 00:1A:2B:3C:4D:5E"          |
+        |--- data frame to that MAC -------------->|
+   ```
+
+   ARP packet fields
+   - Hardware type (1 for Ethernet), protocol type (0x0800 for IPv4), hardware and protocol address lengths (6 and 4), operation (1 = request, 2 = reply), then the sender's MAC and IP and the target's MAC and IP. In a request the target MAC field is all zeros.
+
+   Types of ARP
+
+   | Type | Purpose |
+   |---|---|
+   | ARP | IP to MAC |
+   | RARP | MAC to IP — obsolete, replaced by DHCP |
+   | Proxy ARP | A router answers on behalf of a host on another segment |
+   | Gratuitous ARP | A host announces its own mapping, to detect duplicates and to update caches after a failover |
+   | Inverse ARP | Finds the IP at the far end of a known virtual circuit, used in Frame Relay |
+
+   Useful commands
+   ```
+   arp -a          view the ARP cache
+   arp -d <ip>     delete an entry
+   ip neigh show   Linux equivalent
+   ```
+
+   Security
+   - ARP has no authentication, so `ARP spoofing` is easy: an attacker sends forged replies claiming the gateway's IP belongs to its own MAC, and all traffic then flows through the attacker. Defences are Dynamic ARP Inspection, DHCP snooping, static ARP entries for critical hosts, and port security.
+   - IPv6 does not use ARP at all; `Neighbour Discovery` over ICMPv6 replaces it, using solicited-node multicast rather than broadcast so that uninterested hosts are not disturbed.
 
 ## VLANs & Subnetting Comparison (2)
 
