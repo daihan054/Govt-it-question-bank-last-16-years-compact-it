@@ -14168,17 +14168,318 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)], [BTCL Assistant Manager (Technical) 2021 compact it 765 (ET: BUET)]*
 
+   Answer:
+
+   Given
+   - Step size (resolution) Δ = 2 V
+   - Sinusoidal signal amplitude A = 10 V (peak)
+
+   Step 1 — number of quantisation levels
+   - The signal swings from −10 V to +10 V, a peak-to-peak range of 20 V.
+   ```
+   L = peak-to-peak range / step size = 20 / 2 = 10 levels
+   ```
+
+   Step 2 — number of bits per sample
+   ```
+   n = log2(L) = log2(10) = 3.32
+   ```
+   - A whole number of bits is required, so `n = 4 bits per sample` (giving 16 levels, which covers the 10 needed).
+
+   Step 3 — signal power
+   ```
+   Ps = A² / 2 = 10² / 2 = 50 W (normalised)
+   ```
+
+   Step 4 — quantisation noise power
+   ```
+   Pq = Δ² / 12 = 2² / 12 = 4 / 12 = 0.3333 W
+   ```
+   - The Δ²/12 result comes from assuming the quantisation error is uniformly distributed between −Δ/2 and +Δ/2.
+
+   Step 5 — signal-to-noise ratio
+   ```
+   SNR = Ps / Pq = 50 / 0.3333 = 150
+   SNR(dB) = 10 log10(150) = 21.76 dB
+   ```
+
+   Check with the standard PCM formula
+   ```
+   SNR(dB) = 1.76 + 6.02 n
+           = 1.76 + 6.02 × 3.32
+           = 1.76 + 20.0
+           = 21.76 dB     -- the two methods agree
+   ```
+
+   | Quantity | Value |
+   |---|---|
+   | Quantisation levels | 10 |
+   | Bits per sample | 3.32, rounded up to `4` |
+   | Signal power | 50 W |
+   | Quantisation noise power | 0.333 W |
+   | `SNR` | `150` |
+   | `SNR in dB` | `21.76 dB` |
+
+   - Rule to remember: `every extra bit adds about 6 dB` to the SNR, because it halves the step size and therefore quarters the noise power.
+
 2. **Draw Delta modulation figure and math. (Approximate)** *[NPCBL Executive Trainee (IT) 2022 compact it 648 (ET: BUET)]*
+
+   Answer: Delta modulation (DM) is the simplest form of differential PCM. It transmits only `one bit per sample`, indicating whether the signal has risen or fallen since the last sample.
+
+   How it works
+   - The encoder compares the input with a staircase approximation it maintains internally.
+   - If the input is `higher`, it sends `1` and steps the staircase up by Δ.
+   - If the input is `lower`, it sends `0` and steps the staircase down by Δ.
+   - The decoder does the same thing in reverse, then smooths the staircase with a low-pass filter.
+
+   Waveform diagram
+   ```
+    amplitude
+       |            _____
+       |         __/     \__            <- original analogue signal m(t)
+       |      __/           \__
+       |   __/                 \__
+       |  /  ___                  \
+       | /__|   |___                \
+       |/|  |   |   |___             \
+       +---------------------------------> time
+         staircase approximation follows in steps of Delta
+
+    output bits:  1 1 1 1 1 1 0 0 1 0 0 0 0 0 ...
+                   ^rising          ^falling
+   ```
+
+   Block diagram
+   ```
+   TRANSMITTER                          RECEIVER
+   m(t) --->(+)---> comparator ---> 1-bit ---> [Accumulator] ---> [LPF] ---> m'(t)
+             ^      (1 if +, 0 if -)  output      (integrator)
+             |                  |
+             |     [Accumulator]<+
+             +-----(staircase feedback)
+   ```
+
+   The two noise types — the key examination point
+
+   - `Slope overload distortion` — occurs when the signal rises faster than the staircase can climb. The condition to avoid it is:
+   ```
+   Δ · fs  >=  max |dm/dt|
+   ```
+   For a sinusoid `Am sin(2π fm t)`, the maximum slope is `Am · 2π fm`, so
+   ```
+   Δ · fs >= 2π fm Am
+   ```
+   - `Granular (idle) noise` — occurs when the signal is nearly constant. The staircase hunts up and down by ±Δ around it, producing a small square-wave error. It is reduced by making Δ `smaller` — the opposite of what slope overload demands.
+
+   Worked example
+   - Am = 10 V, fm = 4 kHz, Δ = 2 V.
+   ```
+   Maximum slope = 10 × 2π × 4000 = 251,327 V/s
+   fs >= 251,327 / 2 = 125,664 samples/s
+   Data rate = 125.66 kbps (one bit per sample)
+   ```
+
+   Advantages and drawbacks
+   - Advantages: extremely simple hardware, only 1 bit per sample, no need for a codeword framing structure.
+   - Drawbacks: requires a very high sampling rate, and suffers from both slope overload and granular noise, which pull the choice of Δ in opposite directions.
+   - `Adaptive Delta Modulation (ADM)` solves this by varying Δ automatically — large when the slope is steep, small when the signal is flat.
 
 3. **A singla-tone message signal of bandwidth 4KHZ and amplitude 10V is transmitted by \Delta-modulation with step size 2V. Determine the data rate so that slope overloading noise is the minimum.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+   Answer: To minimise slope overload distortion, the staircase must be able to climb at least as fast as the signal itself.
+
+   Given
+   - Message bandwidth (single tone) fm = 4 kHz = 4000 Hz
+   - Amplitude Am = 10 V
+   - Step size Δ = 2 V
+
+   Step 1 — the slope overload condition
+   - For the staircase to keep up, the step size multiplied by the sampling rate must be at least the maximum slope of the signal:
+   ```
+   Δ · fs  >=  max | dm(t)/dt |
+   ```
+
+   Step 2 — maximum slope of the message signal
+   - For `m(t) = Am sin(2π fm t)`:
+   ```
+   dm/dt = Am · 2π fm · cos(2π fm t)
+   max |dm/dt| = Am · 2π fm
+               = 10 × 2π × 4000
+               = 251,327 V/s
+   ```
+
+   Step 3 — minimum sampling rate
+   ```
+   fs >= max slope / Δ
+      = 251,327 / 2
+      = 125,664 samples per second
+   ```
+
+   Step 4 — data rate
+   - Delta modulation sends `one bit per sample`:
+   ```
+   Data rate = fs × 1 bit = 125,664 bps ≈ 125.7 kbps
+   ```
+
+   - Answer: the data rate must be at least `125.66 kbps` (about 125.7 kbps).
+
+   Points worth noting
+   - Compare this with the Nyquist rate for the same signal, only 8000 samples/s. Delta modulation needs `nearly 16 times` more samples, which is the price of using just one bit each.
+   - The trade-off: raising Δ would reduce the required rate, but it would increase `granular noise` when the signal is flat. Lowering Δ reduces granular noise but demands an even higher sampling rate.
+   - `Adaptive Delta Modulation` resolves the conflict by varying Δ with the signal slope, giving good performance at a far lower rate.
+
 4. **A single-tone message signal of bandwidth 4 KHZ is sampled by using a pulse train of frequency 200% higher than the Nyquist rate of the message signal to obtain PAM signal. The duty cycle of the pulse train is 20%. By drawing the amplitude spectrum of the PAM signal, determine its bandwidth.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 676 (ET: N/A)]*
 
+   Answer:
+
+   Given
+   - Message bandwidth fm = 4 kHz
+   - Pulse train frequency = 200 % higher than the Nyquist rate
+   - Duty cycle = 20 %
+
+   Step 1 — Nyquist rate
+   ```
+   fN = 2 × fm = 2 × 4000 = 8000 Hz = 8 kHz
+   ```
+
+   Step 2 — actual sampling (pulse train) frequency
+   - "200 % higher" means the Nyquist rate plus twice itself, so three times the value:
+   ```
+   fs = 8 kHz + (200 % of 8 kHz) = 8 + 16 = 24 kHz
+   ```
+
+   Step 3 — pulse period and pulse width
+   ```
+   Ts = 1 / fs = 1 / 24,000 = 41.67 µs
+   τ  = duty cycle × Ts = 0.20 × 41.67 = 8.33 µs
+   ```
+
+   Step 4 — amplitude spectrum of the PAM signal
+   - Natural or flat-top sampling multiplies the message by a rectangular pulse train. In the frequency domain this produces copies of the message spectrum at every multiple of fs, with their amplitudes shaped by a `sinc envelope` whose first null is at `1/τ`.
+   ```
+   amplitude
+      |
+      |####      sinc envelope, first null at 1/tau = 120 kHz
+      | |  |###
+      | |  | |  |##
+      | |  | |  | |  |#
+      +--+--+--+--+--+--+--+---------------------> f (kHz)
+      0  24 48 72 96 120
+         ^  ^  ^  ^  ^
+         copies of the message spectrum at multiples of fs = 24 kHz,
+         each 8 kHz wide, with amplitudes following the sinc envelope
+   ```
+
+   Step 5 — bandwidth of the PAM signal
+   - The bandwidth is taken up to the first null of the sinc envelope:
+   ```
+   BW = 1 / τ = 1 / (8.33 × 10^-6) = 120,000 Hz = 120 kHz
+   ```
+
+   | Quantity | Value |
+   |---|---|
+   | Nyquist rate | 8 kHz |
+   | Sampling frequency | 24 kHz |
+   | Sampling period Ts | 41.67 µs |
+   | Pulse width τ | 8.33 µs |
+   | `Bandwidth of the PAM signal` | `120 kHz` |
+
+   - The important observation: the PAM bandwidth depends on the `pulse width`, not on the message bandwidth. Narrower pulses (a smaller duty cycle) spread the spectrum further, which is why PAM is far less bandwidth-efficient than the 4 kHz of the original message.
+
 5. **Define pulse amplitude modulation. Explaine the different type of computer network.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1107 (ET: AUST)]*
+
+   Answer:
+
+   (a) Pulse Amplitude Modulation
+   - PAM is a pulse modulation technique in which the `amplitude` of each pulse in a regularly spaced pulse train is made proportional to the instantaneous amplitude of the analogue message signal at the sampling instant. The pulse width and the pulse position stay constant.
+   - It is the first step in producing PCM: sample, then quantise, then encode.
+   ```
+   message   /\      /\
+            /  \    /  \
+    -------/----\--/----\-------
+   PAM:    | |  |  | |  |     pulses of different heights,
+           | |  |  | |  |     equally spaced in time
+   ```
+   - Two forms: `natural sampling`, where the pulse top follows the signal, and `flat-top sampling`, where the value is held constant for the pulse duration (which introduces the aperture effect).
+   - Sampling must satisfy Nyquist: fs >= 2 fm, or aliasing occurs.
+   - Bandwidth of the PAM signal is about 1/τ, where τ is the pulse width — much wider than the message bandwidth.
+   - Drawbacks: the information is in the amplitude, so it is as vulnerable to noise as AM, and the varying amplitude requires a linear amplifier. This is why PAM is rarely transmitted directly and is instead converted to PCM. Related schemes PWM and PPM put the information in width or position and are far more noise-resistant.
+   - Uses: an intermediate step in PCM, LED and motor control, Ethernet line coding (1000BASE-T uses PAM-5, and PAM-4 is used in 400G optics).
+
+   (b) Types of computer network
+
+   | Type | Range | Speed | Ownership | Example |
+   |---|---|---|---|---|
+   | PAN | 1–10 m | Low | Personal | Bluetooth headset, smartwatch |
+   | LAN | Up to ~1 km | Very high, 1–100 Gbps | Private | Office or school network |
+   | CAN | A campus | High | Private | University network |
+   | MAN | 5–50 km, one city | Medium | Private or public | Cable TV network, city fibre ring |
+   | WAN | Country or continent | Lower | Leased from carriers | The internet, a bank's branch network |
+
+   Other classifications
+   - By architecture: `client–server` (central control, easier security and backup) and `peer-to-peer` (no central server, cheap, hard to manage at scale).
+   - By medium: wired (UTP, coaxial, fibre) and wireless (Wi-Fi, cellular, satellite).
+   - By access: intranet (internal only), extranet (opened to selected partners) and internet (public).
+   - Special purpose: SAN for storage, WLAN for wireless LAN, VPN for a secure tunnel across a public network.
 
 6. **Consider an audio signal with spectral component limited to the frequency band to 3300Hz. Assume that a sampling rate of 8000s/s with be used to generate a signal power to average needs to be 30dB.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1154 (ET: RUET)]*
    a) What the minimum number of bit per sample?
    b) Calculate the minimum channel bandwidth required for transmission of such a PCM signal.
+
+   Answer:
+
+   Given
+   - Audio signal limited to 3300 Hz
+   - Sampling rate = 8000 samples per second
+   - Required signal-to-quantisation-noise ratio = 30 dB
+
+   (a) Minimum number of bits per sample
+
+   - The standard PCM relationship is:
+   ```
+   SNR(dB) = 1.76 + 6.02 n
+   ```
+   - Setting this at least equal to 30 dB:
+   ```
+   1.76 + 6.02 n >= 30
+   6.02 n >= 28.24
+   n >= 4.69
+   ```
+   - A whole number of bits is required, so
+   ```
+   n = 5 bits per sample
+   ```
+   - Check: with n = 5, SNR = 1.76 + 6.02 × 5 = `31.86 dB`, which satisfies the 30 dB requirement. With n = 4 it would be only 25.84 dB, which fails.
+
+   (b) Minimum channel bandwidth
+
+   Step 1 — bit rate
+   ```
+   Bit rate = sampling rate × bits per sample
+            = 8000 × 5
+            = 40,000 bps = 40 kbps
+   ```
+
+   Step 2 — minimum bandwidth from Nyquist
+   - For binary signalling (2 levels), the Nyquist relation is `C = 2 B log2(L)` with L = 2, so `C = 2B`:
+   ```
+   B = bit rate / 2 = 40,000 / 2 = 20,000 Hz = 20 kHz
+   ```
+
+   | Quantity | Value |
+   |---|---|
+   | Message bandwidth | 3300 Hz |
+   | Sampling rate | 8000 samples/s |
+   | Quantisation levels | 2^5 = 32 |
+   | `Bits per sample` | `5` |
+   | Bit rate | 40 kbps |
+   | `Minimum channel bandwidth` | `20 kHz` |
+
+   Points worth noting
+   - Sampling at 8000 samples/s satisfies Nyquist for 3300 Hz (which requires at least 6600), and the extra margin leaves room for the anti-aliasing filter to roll off.
+   - The digitised signal needs 20 kHz of channel bandwidth against the original 3.3 kHz — roughly six times more. That is the cost of digitisation, paid for by noise immunity and perfect regeneration.
+   - Using a multi-level line code (L = 4) would halve the required bandwidth to 10 kHz, at the price of needing a higher SNR.
+   - Rule to remember: `each extra bit adds about 6 dB` of SNR and increases the bit rate by one sampling-rate's worth.
 
 ## Switching Techniques (Circuit vs Packet Switching) (5)
 
