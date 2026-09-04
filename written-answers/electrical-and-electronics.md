@@ -290,6 +290,97 @@
 
 6. **Find R and I from a circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the circuit diagram is not present. The complete method for finding an unknown resistance and current is given below with a worked example.
+
+   The three laws every such problem uses
+   ```
+      OHM'S LAW        V = I R          ,  I = V/R  ,  R = V/I
+
+      KIRCHHOFF'S CURRENT LAW (KCL)
+           The sum of currents ENTERING a node equals the sum LEAVING it.
+           sum I(in) = sum I(out)
+
+      KIRCHHOFF'S VOLTAGE LAW (KVL)
+           Round any closed loop, the sum of all voltages is zero.
+           sum V = 0
+   ```
+
+   Series and parallel combination
+   ```
+      SERIES   :  R(eq) = R1 + R2 + R3 + ...
+                  the SAME current flows through each
+                  the voltage DIVIDES
+
+      PARALLEL :  1/R(eq) = 1/R1 + 1/R2 + 1/R3 + ...
+                  two resistors :  R(eq) = R1 R2 / (R1 + R2)
+                  the SAME voltage across each
+                  the current DIVIDES
+   ```
+
+   Worked example
+   ```
+           +----[ R1 = 4 ohm ]----+----[ R = ? ]----+
+           |                      |                 |
+         (+) 24 V              [ R2 = 12 ohm ]      |
+           |                      |                 |
+           +----------------------+-----------------+
+
+      Given : the total current drawn from the source is I = 3 A
+      Find  : R , and the current through each branch
+   ```
+   Step 1 — total resistance from Ohm's law
+   ```
+      R(total) = V / I = 24 / 3 = 8 ohms
+   ```
+   Step 2 — express R(total) in terms of the unknown
+   ```
+      R2 is in parallel with R , and that combination is in series with R1 :
+
+      R(total) = R1 + (R2 R)/(R2 + R)
+
+           8 = 4 + (12 R)/(12 + R)
+           4 = 12R / (12 + R)
+           4(12 + R) = 12R
+           48 + 4R = 12R
+           48 = 8R
+           R = 6 ohms
+   ```
+   Step 3 — the branch currents
+   ```
+      Parallel combination = (12 x 6)/(12 + 6) = 72/18 = 4 ohms
+      Voltage across the parallel section = I x 4 = 3 x 4 = 12 V
+
+      I through R2 = 12 / 12 = 1 A
+      I through R  = 12 / 6  = 2 A
+      Check : 1 + 2 = 3 A = total current       correct  (KCL)
+   ```
+   Step 4 — verify with KVL
+   ```
+      Round the loop :  24 - (3 x 4) - 12 = 24 - 12 - 12 = 0     correct
+   ```
+
+   The general procedure
+   ```
+      1. Label every node and assume a direction for every current.
+      2. Reduce any obvious series and parallel groups first.
+      3. Apply KCL at each node and KVL round each independent loop.
+      4. Solve the simultaneous equations for the unknowns.
+      5. VERIFY : substitute the answers back and confirm that KCL holds
+         at every node and KVL round every loop, and that the power
+         delivered equals the power dissipated.
+   ```
+
+   Other techniques for a harder network
+   ```
+      Voltage divider :  V(R2) = V x R2/(R1 + R2)
+      Current divider :  I(R1) = I x R2/(R1 + R2)
+      Mesh analysis   :  KVL round each mesh, solve for the mesh currents
+      Node analysis   :  KCL at each node, solve for the node voltages
+      Thevenin        :  replace the network by V(th) in series with R(th)
+      Norton          :  replace it by I(N) in parallel with R(N)
+      Superposition   :  one source at a time, then add the results
+   ```
+
 7. **Audio Frequency ও Radio Frequency এর মধ্যেকার পার্থক্য লিখুন। ১০ ওহমের ১০টি ট্রানজিস্টর কোন সিরিজে সংযুক্ত হলে তাতে রেজিস্ট্যান্স কত হবে?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
 
    Answer: (Answered in English, as required for IT topics.) Part 1 — Audio frequency versus Radio frequency
@@ -406,11 +497,427 @@
 
 9. **Find the Value of I.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the circuit diagram is not present. The methods for finding an unknown current are given below with worked examples.
+
+   Method 1 — Ohm's law, for a single branch
+   ```
+      I = V / R
+   ```
+   ```
+      A 12 V source across a 4 ohm resistor :   I = 12/4 = 3 A
+   ```
+
+   Method 2 — series and parallel reduction
+   ```
+      SERIES   : R(eq) = R1 + R2 + ...        same current through each
+      PARALLEL : 1/R(eq) = 1/R1 + 1/R2 + ...  same voltage across each
+                 two resistors : R(eq) = R1 R2/(R1 + R2)
+   ```
+   Worked example
+   ```
+           +---[ 4 ohm ]---+---[ 6 ohm ]---+
+           |               |               |
+         (+) 24 V      [ 12 ohm ]          |
+           |               |               |
+           +---------------+---------------+
+
+      Parallel part : (12 x 6)/(12 + 6) = 4 ohms
+      Total         : 4 + 4 = 8 ohms
+      Total current : I = 24/8 = 3 A
+
+      Voltage across the parallel section = 3 x 4 = 12 V
+      I through 12 ohm = 12/12 = 1 A
+      I through 6  ohm = 12/6  = 2 A
+      Check (KCL) : 1 + 2 = 3 A       correct
+   ```
+
+   Method 3 — the current divider rule
+   ```
+      For two resistors in parallel carrying a total current I :
+
+           I(R1) = I x  R2/(R1 + R2)
+           I(R2) = I x  R1/(R1 + R2)
+
+      Note the CROSS multiplication - the current prefers the SMALLER
+      resistance, so R1's share is proportional to R2.
+   ```
+   ```
+      I = 3 A into 12 ohm parallel 6 ohm :
+           I(12) = 3 x 6/18 = 1 A
+           I(6)  = 3 x 12/18 = 2 A       same as above
+   ```
+
+   Method 4 — Kirchhoff's laws, for a network that will not reduce
+   ```
+      KCL : sum of currents into a node = sum out
+      KVL : sum of voltages round any closed loop = 0
+   ```
+   Worked example — two loops
+   ```
+          I1 ->  [ 2 ohm ]        I2 ->  [ 3 ohm ]
+        +-------/\/\/\------+-------/\/\/\-------+
+        |                   |                    |
+      (+) 10 V          [ 5 ohm ]              (+) 5 V
+        |                 I3 |                    |
+        +-------------------+--------------------+
+
+      KCL at the middle node :   I1 = I2 + I3
+      KVL loop 1 :  10 - 2 I1 - 5 I3 = 0
+      KVL loop 2 :   5 - 3 I2 - 5 I3 = 0        (traversed appropriately)
+
+      Substituting I1 = I2 + I3 and solving the two equations gives the
+      three currents. Always finish by checking KCL at the node and KVL
+      round both loops.
+   ```
+
+   Method 5 — mesh or nodal analysis, for anything larger
+   ```
+      MESH  : assign a circulating current to each mesh, write KVL for
+              each, and solve the simultaneous equations.
+      NODAL : choose a reference node, write KCL at every other node in
+              terms of the node voltages, and solve.
+
+      Nodal is usually easier when there are more loops than nodes.
+   ```
+
+   Method 6 — Thevenin, when only one branch current is wanted
+   ```
+      1. REMOVE the branch whose current is wanted.
+      2. Find V(th) - the open-circuit voltage across those terminals.
+      3. Find R(th) - the resistance looking back in, with all
+         independent sources set to zero (voltage sources shorted,
+         current sources opened).
+      4. Reconnect the branch :
+
+           I = V(th) / (R(th) + R(branch))
+   ```
+   - This is the fastest route when the network is large but only one current matters.
+
+   The verification that should always be done
+   ```
+      KCL holds at every node
+      KVL holds round every loop
+      Power delivered by the sources = power dissipated in the resistors
+           sum (V x I) sources = sum (I^2 R) resistors
+   ```
+
 10. **BREB power transmission interrupt related.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
+
+    Answer: The question is `incomplete` — only the topic "BREB power transmission interrupt related" was recorded, not the question itself. `BREB` is the Bangladesh Rural Electrification Board, so the subject is `interruptions in power transmission and distribution`, which is covered below.
+
+    Types of interruption
+    ```
+       MOMENTARY   : less than 5 minutes. Usually cleared automatically by
+                     a RECLOSER after a transient fault such as a branch
+                     touching a line.
+       SUSTAINED   : longer than 5 minutes. Needs a crew to attend.
+       PLANNED     : announced in advance, for maintenance or new connections.
+       UNPLANNED   : a fault, a storm, or equipment failure.
+       LOAD SHEDDING : a deliberate interruption because generation is less
+                     than demand - a managed rotation of outages.
+    ```
+
+    Causes of transmission and distribution interruption
+    ```
+       NATURAL      : storm, lightning strike, flood, fallen tree,
+                      salt or dust pollution on insulators, birds and animals
+       EQUIPMENT    : transformer failure, insulator flashover, conductor
+                      snapping, breaker or CT/PT failure, cable fault,
+                      ageing infrastructure
+       ELECTRICAL   : short circuit (line-to-line, line-to-ground), overload,
+                      over-voltage, under-frequency
+       OPERATIONAL  : switching error, wrong protection setting, maintenance
+       EXTERNAL     : vehicle hitting a pole, construction damage to an
+                      underground cable, theft of conductor, vandalism
+       SYSTEM       : generation shortfall, a cascading trip, a grid
+                      collapse such as the national blackout of 1 November 2014
+    ```
+
+    Types of electrical fault
+    ```
+       SYMMETRICAL (rare, about 5 %)
+            Three-phase (L-L-L) , three-phase-to-ground (L-L-L-G)
+            The most severe, but balanced and simplest to analyse.
+
+       UNSYMMETRICAL (about 95 %)
+            Single line-to-ground (L-G)   - the COMMONEST, about 70 %
+            Line-to-line (L-L)            - about 15 %
+            Double line-to-ground (L-L-G) - about 10 %
+    ```
+
+    The protection scheme that clears a fault
+    ```
+       RELAY detects the abnormal condition and commands the breaker
+            Over-current relay     : too much current
+            Differential relay     : current in does not equal current out -
+                                     used for transformers and generators
+            Distance relay         : impedance indicates how far the fault is -
+                                     used for transmission lines
+            Earth-fault relay      : unbalanced current to ground
+
+       CIRCUIT BREAKER interrupts the fault current
+            Oil , air-blast , SF6 , vacuum
+
+       RECLOSER automatically re-closes after a delay, in case the fault
+            was transient. Typically tries three times before locking out.
+
+       ISOLATOR provides a visible off-load disconnection for safe working
+
+       LIGHTNING ARRESTER diverts a surge to earth
+       EARTH WIRE on top of the tower shields the phase conductors
+    ```
+
+    The reliability indices BREB and every utility is measured by
+    ```
+       SAIFI = System Average Interruption FREQUENCY Index
+             = total customer interruptions / total customers served
+               -> how OFTEN the average customer loses supply
+
+       SAIDI = System Average Interruption DURATION Index
+             = sum of customer-minutes lost / total customers
+               -> how LONG the average customer is without supply
+
+       CAIDI = SAIDI / SAIFI
+               -> the average length of ONE interruption
+
+       ASAI  = Average Service Availability Index
+             = (available hours / demanded hours) x 100 %
+    ```
+
+    How interruptions are reduced
+    ```
+       PREVENTION   : tree trimming along the right of way, insulator
+                      cleaning, thermographic inspection, transformer oil
+                      testing, replacing ageing conductor
+       DESIGN       : ring-main and mesh networks instead of radial feeders,
+                      so an alternative path exists ; underground cable in
+                      storm-prone areas ; higher insulation levels
+       PROTECTION   : properly graded relay settings, so only the nearest
+                      breaker trips ; auto-reclosers on rural feeders
+       AUTOMATION   : SCADA for remote monitoring and switching ;
+                      a distribution management system ; smart meters that
+                      report an outage without a customer call
+       MANAGEMENT   : an outage management system, stocked spares, trained
+                      crews and a published restoration target
+    ```
+
+    - For BREB specifically, the network is `largely rural and radial`, with long 11 kV and 33 kV feeders, so a single fault far from the substation can black out a wide area. That is why rural electrification programmes concentrate on `auto-reclosers, feeder sectionalising and right-of-way clearance` rather than on undergrounding, which is far too costly per kilometre for a rural line.
 
 11. **EEE related 3 math question.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
+    Answer: The question is `incomplete` — only "EEE related 3 math question" was recorded, not the three problems. The three topics that such a paper almost always draws them from are worked below, so the methods are available.
+
+    Problem type 1 — DC network analysis
+    ```
+       Find the total resistance and the branch currents.
+
+            +---[ 4 ohm ]---+---[ 6 ohm ]---+
+            |               |               |
+          (+) 24 V      [ 12 ohm ]          |
+            |               |               |
+            +---------------+---------------+
+    ```
+    ```
+       Step 1 : the parallel pair
+            R(p) = (12 x 6)/(12 + 6) = 72/18 = 4 ohms
+
+       Step 2 : total resistance
+            R(total) = 4 + 4 = 8 ohms
+
+       Step 3 : total current
+            I = V/R = 24/8 = 3 A
+
+       Step 4 : voltage across the parallel section
+            V(p) = 3 x 4 = 12 V
+
+       Step 5 : branch currents
+            I(12) = 12/12 = 1 A
+            I(6)  = 12/6  = 2 A
+            Check : 1 + 2 = 3 A   (KCL)      correct
+
+       Step 6 : power
+            P = V I = 24 x 3 = 72 W
+            Check : 3^2 x 4 + 1^2 x 12 + 2^2 x 6 = 36 + 12 + 24 = 72 W
+    ```
+
+    Problem type 2 — AC series RLC circuit
+    ```
+       R = 30 ohm , L = 0.1 H , C = 100 uF , V = 230 V at 50 Hz.
+       Find the impedance, the current and the power factor.
+    ```
+    ```
+       X(L) = 2 pi f L = 2 x 3.1416 x 50 x 0.1 = 31.42 ohms
+       X(C) = 1/(2 pi f C) = 1/(2 x 3.1416 x 50 x 100e-6) = 31.83 ohms
+
+       Net reactance X = X(L) - X(C) = 31.42 - 31.83 = -0.41 ohms
+            (negative, so the circuit is slightly CAPACITIVE)
+
+       Z = sqrt(R^2 + X^2) = sqrt(900 + 0.168) = 30.003 ohms
+
+       I = V/Z = 230/30.003 = 7.666 A
+
+       pf = cos(theta) = R/Z = 30/30.003 = 0.9999 leading
+            theta = arctan(X/R) = arctan(-0.41/30) = -0.78 degrees
+
+       Real power     P = V I cos(theta) = 230 x 7.666 x 0.9999 = 1763 W
+       Apparent power S = V I = 230 x 7.666 = 1763 VA
+       Reactive power Q = V I sin(theta) = -24 VAR
+
+       Resonant frequency f(r) = 1/(2 pi sqrt(LC))
+                               = 1/(2 x 3.1416 x sqrt(0.1 x 100e-6))
+                               = 50.33 Hz
+       The supply is almost at resonance, which is why the pf is nearly 1.
+    ```
+
+    Problem type 3 — transformer or motor calculation
+    ```
+       A single-phase transformer : 2200/220 V , 50 Hz , 10 kVA.
+       Find the turns ratio and the rated currents.
+    ```
+    ```
+       Turns ratio  a = V1/V2 = 2200/220 = 10 : 1
+
+       Primary current   I1 = S/V1 = 10,000/2200 = 4.545 A
+       Secondary current I2 = S/V2 = 10,000/220  = 45.45 A
+       Check : I1/I2 = 4.545/45.45 = 1/10 = 1/a      correct
+    ```
+    ```
+       Three-phase induction motor : 12-pole alternator at 500 rpm feeding
+       an 8-pole motor, slip 3 %.
+
+       Supply frequency  f  = P N /120 = 12 x 500/120 = 50 Hz
+       Synchronous speed Ns = 120 f/P  = 120 x 50/8  = 750 rpm
+       Full-load speed   N  = Ns(1 - s) = 750 x 0.97 = 727.5 rpm
+    ```
+
+    The formulas these three problems rest on
+    ```
+       DC        : V = IR , P = VI = I^2 R = V^2/R
+                   Series R = R1+R2 ; Parallel 1/R = 1/R1+1/R2
+                   KCL : sum I(in) = sum I(out)
+                   KVL : sum V round a loop = 0
+
+       AC        : X(L) = 2 pi f L , X(C) = 1/(2 pi f C)
+                   Z = sqrt(R^2 + (XL - XC)^2)
+                   pf = cos(theta) = R/Z
+                   P = VI cos(theta) , S = VI , Q = VI sin(theta)
+                   Resonance : f(r) = 1/(2 pi sqrt(LC))
+
+       Machines  : f = PN/120 , Ns = 120f/P , s = (Ns - N)/Ns
+                   a = V1/V2 = N1/N2 = I2/I1
+                   Efficiency = output/input x 100
+    ```
+    - The habit that earns marks in all three: `write the formula, substitute the numbers with their units, compute, and then verify` — for DC by checking KCL and the power balance, for AC by checking that P = I^2 R, and for machines by checking the turns or speed ratio.
+
 12. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The question is `incomplete` — the circuit diagram is not present. The method for finding the total resistance and then a particular branch current is set out below with a worked example.
+
+    Step 1 — reduce the network to find the total resistance
+    ```
+       SERIES   : R(eq) = R1 + R2 + R3 + ...
+                  the same current flows through each
+
+       PARALLEL : 1/R(eq) = 1/R1 + 1/R2 + ...
+                  two resistors : R(eq) = R1 R2/(R1 + R2)
+                  the same voltage across each
+    ```
+
+    Step 2 — find the total current from Ohm's law
+    ```
+       I(total) = V / R(total)
+    ```
+
+    Step 3 — work back through the network to the branch wanted, using the current divider rule
+    ```
+       For two resistors in parallel carrying a total current I :
+
+            I(R1) = I x R2/(R1 + R2)
+            I(R2) = I x R1/(R1 + R2)
+
+       The CROSS multiplication is the point : current prefers the smaller
+       resistance, so R1's share is proportional to R2.
+    ```
+
+    Worked example
+    ```
+                     I1        R1 = 6 ohm
+            +--------/\/\/\-----------+
+            |                         |
+            |        I2   R2 = 12 ohm |
+          (+) 24 V --/\/\/\-----------+
+            |                         |
+            |        I3   R3 = 4 ohm  |
+            +--------/\/\/\-----------+
+            |                         |
+            +-------------------------+
+
+       Three resistors in PARALLEL across a 24 V source.
+       Find the total resistance and I3.
+    ```
+    Total resistance
+    ```
+       1/R(total) = 1/6 + 1/12 + 1/4
+                 = 2/12 + 1/12 + 3/12
+                 = 6/12
+       R(total)  = 12/6 = 2 ohms
+    ```
+    Total current
+    ```
+       I(total) = V/R(total) = 24/2 = 12 A
+    ```
+    The branch currents
+    ```
+       In a PARALLEL circuit every branch has the FULL 24 V across it, so
+       each branch current is found directly :
+
+            I1 = 24/6  = 4 A
+            I2 = 24/12 = 2 A
+            I3 = 24/4  = 6 A
+
+       Check (KCL) : 4 + 2 + 6 = 12 A = I(total)      correct
+    ```
+    Answer
+    ```
+       Total resistance R(total) = 2 ohms
+       Current I3                = 6 A
+    ```
+    Power check
+    ```
+       Delivered   : P = V I = 24 x 12 = 288 W
+       Dissipated  : 4^2 x 6 + 2^2 x 12 + 6^2 x 4
+                   = 96 + 48 + 144 = 288 W           correct
+    ```
+
+    A mixed series-parallel example, which is the harder case
+    ```
+            +---[ R1 = 2 ]---+---[ R2 = 6 ]---+
+            |                |                |
+          (+) 24 V       [ R3 = 3 ]           |
+            |                |                |
+            +----------------+----------------+
+
+       R2 in parallel with R3 : (6 x 3)/(6 + 3) = 2 ohms
+       R(total) = R1 + 2 = 4 ohms
+       I(total) = 24/4 = 6 A
+
+       Voltage across the parallel section = 6 x 2 = 12 V
+       I(R2) = 12/6 = 2 A
+       I(R3) = 12/3 = 4 A
+       Check : 2 + 4 = 6 A                            correct
+    ```
+
+    The general procedure to state
+    ```
+       1. Redraw the circuit, marking every node.
+       2. Reduce the innermost series and parallel groups first, working
+          outward until a single resistance remains.
+       3. Find the total current with Ohm's law.
+       4. Expand back outward, using the voltage divider for series
+          sections and the current divider for parallel ones.
+       5. VERIFY : KCL at every node, KVL round every loop, and the power
+          delivered equal to the power dissipated.
+    ```
 
 13. **What is the difference between battery and capacitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
 
@@ -1690,6 +2197,136 @@
 
 1. **Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the op-amp circuit diagram is not present. The gain of every standard ideal op-amp configuration is derived below, so the right formula can be applied to whichever circuit was printed.
+
+   The two golden rules for an ideal op-amp
+   ```
+      1. NO CURRENT flows into either input     (input impedance is infinite)
+      2. The two inputs are at the SAME voltage (a VIRTUAL SHORT), whenever
+         negative feedback is present
+   ```
+   - Every gain formula below follows from these two rules alone.
+
+   1. Inverting amplifier
+   ```
+           Rf
+      +---/\/\/\---+
+      |            |
+      |   Rin      |
+      Vi--/\/\/\---+---|-\
+                       |  \
+                       |   >--- Vo
+                       |  /
+                GND ---|+/
+   ```
+   ```
+      The '-' input is a virtual earth, so it sits at 0 V.
+      Current through Rin = Vi/Rin , and it must all flow through Rf.
+
+           Vi/Rin = -Vo/Rf
+
+      Av = Vo/Vi = -Rf / Rin
+   ```
+   - The minus sign is a `180 degree phase inversion`.
+
+   2. Non-inverting amplifier
+   ```
+      Vi ---|+\
+            |  \
+            |   >--- Vo
+            |  /
+         +--|-/
+         |      Rf
+         +----/\/\/\---+--- Vo
+         |             |
+        Rin            |
+         |             |
+        GND ----------+
+   ```
+   ```
+      The '-' input equals Vi (virtual short), and it is the tap of a
+      divider from Vo :
+
+           Vi = Vo x Rin/(Rin + Rf)
+
+      Av = Vo/Vi = 1 + Rf / Rin
+   ```
+   - Always `positive` and always `at least 1`.
+
+   3. Voltage follower (buffer)
+   ```
+      Vi ---|+\
+            |  \
+            |   >---+--- Vo
+            |  /    |
+         +--|-/     |
+         |          |
+         +----------+
+   ```
+   ```
+      Rf = 0 and Rin = infinity , so
+
+      Av = 1 + 0/inf = 1        Vo = Vi
+   ```
+   - Gain of 1, but it converts a high-impedance source into a low-impedance output — the whole point of it.
+
+   4. Summing amplifier
+   ```
+      V1 --/\/\/\--+
+           R1      |         Rf
+      V2 --/\/\/\--+---+---/\/\/\---+
+           R2      |   |            |
+      V3 --/\/\/\--+---+---|-\      |
+           R3              |  \     |
+                           |   >----+--- Vo
+                    GND ---|+/
+   ```
+   ```
+      Vo = -Rf ( V1/R1 + V2/R2 + V3/R3 )
+
+      If R1 = R2 = R3 = R :   Vo = -(Rf/R)(V1 + V2 + V3)
+      If also Rf = R      :   Vo = -(V1 + V2 + V3)
+   ```
+
+   5. Difference (differential) amplifier
+   ```
+      Vo = (Rf/R1)(V2 - V1)        when R1 = R3 and R2 = Rf
+   ```
+
+   6. Integrator and differentiator
+   ```
+      INTEGRATOR   : Rin in , C in the feedback path
+           Vo = -(1/(Rin C)) integral of Vi dt
+
+      DIFFERENTIATOR : C in , Rf in the feedback path
+           Vo = -(Rf C) dVi/dt
+   ```
+
+   7. Cascaded stages
+   ```
+      Overall gain = the PRODUCT of the individual gains
+
+      Av(total) = Av1 x Av2 x Av3 ...
+   ```
+   ```
+      Example : an inverting stage of -10 followed by a non-inverting
+      stage of +5 gives  -10 x 5 = -50
+   ```
+
+   How to identify which formula applies
+   ```
+      Is the input fed to the '-' terminal ?      -> INVERTING , -Rf/Rin
+      Is the input fed to the '+' terminal ?      -> NON-INVERTING , 1+Rf/Rin
+      Is the output tied straight back to '-' ?   -> FOLLOWER , gain 1
+      Are several inputs joined at '-' ?          -> SUMMING
+      Are inputs at BOTH terminals ?              -> DIFFERENTIAL
+      Is there a capacitor in the feedback path ? -> INTEGRATOR
+      Is there a capacitor at the input ?         -> DIFFERENTIATOR
+      Are there several op-amps in a chain ?      -> MULTIPLY the gains
+   ```
+
+   - Ideal characteristics to state alongside the answer: infinite open-loop gain, infinite input impedance, zero output impedance, infinite bandwidth and infinite CMRR. Real devices have gain around 10^5, input impedance in megohms and a finite gain-bandwidth product, but the ideal assumptions give answers accurate to a fraction of a per cent in any ordinary feedback circuit.
+
 2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
 
    Answer: (Answered in English, as required for IT topics.) Main characteristics of an operational amplifier
@@ -1943,7 +2580,240 @@
 
 1. **Find current across 2 \Omega resistor using Thevenin Theorem:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the circuit diagram is not present. Thevenin's theorem and the full procedure are set out below with a worked example, so it can be applied to whichever circuit was printed.
+
+   Thevenin's theorem
+   ```
+      Any linear two-terminal network of sources and resistances can be
+      replaced, as seen from those two terminals, by a SINGLE voltage
+      source V(th) in SERIES with a SINGLE resistance R(th).
+
+           R(th)
+      +---/\/\/\---+------o A
+      |            |
+     (+) V(th)   [ R(L) ]      the load reconnected here
+      |            |
+      +------------+------o B
+   ```
+   ```
+      Then the load current is simply
+
+           I(L) = V(th) / (R(th) + R(L))
+   ```
+
+   The five-step procedure
+   ```
+      1. REMOVE the load resistor (here the 2 ohm) from the circuit.
+
+      2. Find V(th) = the OPEN-CIRCUIT voltage across the two terminals
+         where the load was. Use KVL, nodal analysis or a voltage divider.
+
+      3. Find R(th) = the resistance looking back into those terminals
+         with EVERY INDEPENDENT SOURCE SET TO ZERO :
+              a voltage source becomes a SHORT circuit
+              a current source becomes an OPEN circuit
+         Then reduce the remaining resistors by series and parallel rules.
+
+      4. Draw the Thevenin equivalent : V(th) in series with R(th).
+
+      5. RECONNECT the load and compute
+              I(L) = V(th)/(R(th) + R(L))
+   ```
+
+   Worked example
+   ```
+           R1 = 4 ohm        R3 = 1 ohm
+      +---/\/\/\-----+------/\/\/\----+---o A
+      |              |                |
+     (+) 12 V    [ R2 = 6 ohm ]    [ R(L) = 2 ohm ]
+      |              |                |
+      +--------------+----------------+---o B
+
+      Find the current through the 2 ohm resistor.
+   ```
+   Step 1 — remove the 2 ohm load
+   ```
+           4 ohm             1 ohm
+      +---/\/\/\-----+------/\/\/\----o A
+      |              |
+     (+) 12 V    [ 6 ohm ]
+      |              |
+      +--------------+----------------o B
+   ```
+   Step 2 — find V(th), the open-circuit voltage
+   ```
+      With the load removed, NO current flows through R3, so there is no
+      drop across it. V(th) is therefore the voltage across R2, given by
+      the voltage divider :
+
+      V(th) = 12 x R2/(R1 + R2) = 12 x 6/(4 + 6) = 12 x 0.6 = 7.2 V
+   ```
+   Step 3 — find R(th)
+   ```
+      SHORT the 12 V source and look back in from A-B :
+
+      R1 (4) is now in PARALLEL with R2 (6) :
+           (4 x 6)/(4 + 6) = 24/10 = 2.4 ohms
+
+      R3 (1) is in SERIES with that :
+           R(th) = 2.4 + 1 = 3.4 ohms
+   ```
+   Step 4 — the Thevenin equivalent
+   ```
+           R(th) = 3.4 ohm
+      +---/\/\/\---+------o A
+      |            |
+     (+) 7.2 V   [ 2 ohm ]
+      |            |
+      +------------+------o B
+   ```
+   Step 5 — the load current
+   ```
+      I(L) = V(th) / (R(th) + R(L))
+           = 7.2 / (3.4 + 2)
+           = 7.2 / 5.4
+      I(L) = 1.333 A
+
+      Voltage across the 2 ohm = 1.333 x 2 = 2.67 V
+   ```
+
+   Why the theorem is worth using
+   ```
+      If only ONE branch current is wanted, Thevenin avoids solving the
+      whole network. It is especially valuable when the LOAD is going to
+      be CHANGED several times - V(th) and R(th) are found once, and each
+      new load needs only one division.
+   ```
+
+   Related results
+   ```
+      NORTON  : the dual - a current source I(N) in PARALLEL with R(N)
+                I(N) = V(th)/R(th)  ,  R(N) = R(th)
+
+      MAXIMUM POWER TRANSFER : the load receives maximum power when
+                R(L) = R(th) , and that power is V(th)^2/(4 R(th))
+
+      SUPERPOSITION : with several sources, find the response to each one
+                separately (the others set to zero) and add the results.
+   ```
+
 2. **Find the Value of I_{ab} using Norton's Theorem.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
+
+   Answer: The question is `incomplete` — the circuit diagram is not present. Norton's theorem and the complete procedure are set out below with a worked example.
+
+   Norton's theorem
+   ```
+      Any linear two-terminal network of sources and resistances can be
+      replaced, as seen from those terminals, by a SINGLE current source
+      I(N) in PARALLEL with a SINGLE resistance R(N).
+
+           +---------------+--------+------o a
+           |               |        |
+         (   )            ###      ###
+         ( ^ ) I(N)       ### R(N) ### R(L)
+         (   )            ###      ###
+           |               |        |
+           +---------------+--------+------o b
+   ```
+   ```
+      Then the load current follows from the current divider :
+
+           I(ab) = I(N) x R(N)/(R(N) + R(L))
+   ```
+
+   The five-step procedure
+   ```
+      1. REMOVE the load resistor from between a and b.
+
+      2. Find I(N) = the SHORT-CIRCUIT current. Place a short across a-b
+         and compute the current through that short.
+
+      3. Find R(N) = the resistance looking back into a-b with EVERY
+         INDEPENDENT SOURCE SET TO ZERO :
+              a voltage source becomes a SHORT
+              a current source becomes an OPEN
+         R(N) is identical to R(th).
+
+      4. Draw the Norton equivalent : I(N) in parallel with R(N).
+
+      5. RECONNECT the load and apply the current divider.
+   ```
+
+   Worked example
+   ```
+           R1 = 4 ohm         R3 = 1 ohm
+      +---/\/\/\-----+-------/\/\/\----+---o a
+      |              |                 |
+     (+) 12 V    [ R2 = 6 ohm ]     [ R(L) = 2 ohm ]
+      |              |                 |
+      +--------------+-----------------+---o b
+
+      Find I(ab), the current through the 2 ohm resistor.
+   ```
+   Step 1 and 2 — find I(N), the short-circuit current
+   ```
+      Remove the 2 ohm and SHORT a to b. R3 (1 ohm) is now in parallel
+      with R2 (6 ohm) :
+
+           R2 parallel R3 = (6 x 1)/(6 + 1) = 6/7 = 0.857 ohms
+
+      Total resistance seen by the source = 4 + 0.857 = 4.857 ohms
+      Source current = 12/4.857 = 2.471 A
+
+      That current divides between R2 and R3. The short-circuit current
+      is the part flowing through R3 :
+
+           I(N) = 2.471 x R2/(R2 + R3) = 2.471 x 6/7 = 2.118 A
+   ```
+   Step 3 — find R(N)
+   ```
+      SHORT the 12 V source and look back from a-b :
+
+           R1 (4) parallel R2 (6) = 24/10 = 2.4 ohms
+           R3 (1) in SERIES with that
+
+           R(N) = 2.4 + 1 = 3.4 ohms
+   ```
+   Step 4 — the Norton equivalent
+   ```
+           +--------+--------+------o a
+           |        |        |
+         (   )     ###      ###
+         ( ^ )     ### 3.4  ### 2 ohm
+         (   )2.118A###      ###
+           |        |        |
+           +--------+--------+------o b
+   ```
+   Step 5 — the load current, by the current divider
+   ```
+      I(ab) = I(N) x R(N)/(R(N) + R(L))
+            = 2.118 x 3.4/(3.4 + 2)
+            = 2.118 x 3.4/5.4
+            = 2.118 x 0.6296
+      I(ab) = 1.333 A
+   ```
+
+   Cross-check with Thevenin
+   ```
+      V(th) = I(N) x R(N) = 2.118 x 3.4 = 7.2 V
+      R(th) = R(N) = 3.4 ohms
+
+      I(ab) = V(th)/(R(th) + R(L)) = 7.2/5.4 = 1.333 A     same answer
+   ```
+   - The two theorems are `duals`, and this identity is the standard way to verify either result.
+
+   Norton versus Thevenin
+
+   | Point | Thevenin | Norton |
+   |---|---|---|
+   | Equivalent | Voltage source in `series` with R | Current source in `parallel` with R |
+   | Source found from | The `open-circuit` voltage | The `short-circuit` current |
+   | Resistance | R(th) | R(N) = R(th) — identical |
+   | Conversion | V(th) = I(N) x R(N) | I(N) = V(th) / R(th) |
+   | Load current | V(th)/(R(th) + R(L)) | I(N) x R(N)/(R(N) + R(L)) |
+   | Easier when | The load is in series | The load is in parallel |
+
+   - Both theorems apply only to `linear` networks, and both replace the network only `as seen from the two chosen terminals` — the internal currents and voltages of the original circuit are not reproduced by the equivalent.
 
 ## Electrical Machines (Motors & Alternators) (1)
 

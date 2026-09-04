@@ -7328,6 +7328,120 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 1. **There was a CPU cycle math** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 400 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — only "There was a CPU cycle math" was recorded, so the figures are unknown. The complete set of CPU performance formulas and worked examples is given below.
+
+   The CPU performance equation
+   ```
+      CPU time = Instruction count x CPI x Clock cycle time
+
+               = (Instruction count x CPI) / Clock frequency
+   ```
+   ```
+      Instruction count : how many instructions the program executes
+      CPI               : average Cycles Per Instruction
+      Clock cycle time  : 1 / frequency , in seconds
+   ```
+
+   The basic relations
+   ```
+      Clock cycle time  T = 1 / f
+      Clock frequency   f = 1 / T
+
+      Total clock cycles = Instruction count x CPI
+      Execution time     = Total cycles x T = Total cycles / f
+
+      MIPS = Instruction count / (Execution time x 10^6)
+           = f / (CPI x 10^6)
+   ```
+
+   Worked example 1 — average CPI from a mix
+   ```
+      1 billion instructions on a 2 GHz processor.
+      50 % take 3 cycles , 30 % take 4 cycles , 20 % take 5 cycles.
+
+      CPI = (0.50 x 3) + (0.30 x 4) + (0.20 x 5)
+          = 1.5 + 1.2 + 1.0
+          = 3.7
+
+      Total cycles = 10^9 x 3.7 = 3.7 x 10^9
+      T            = 1/(2 x 10^9) = 0.5 ns
+
+      Execution time = 3.7 x 10^9 x 0.5 x 10^-9 = 1.85 seconds
+
+      MIPS = 10^9 / (1.85 x 10^6) = 540.5 MIPS
+   ```
+
+   Worked example 2 — comparing two machines
+   ```
+      Computer A : 3.2 GHz , CPI 2.0
+      Computer B : 2.4 GHz , CPI 1.2
+
+      Time per instruction  =  CPI / f
+
+      A : 2.0 / 3.2e9 = 0.625 ns
+      B : 1.2 / 2.4e9 = 0.500 ns
+
+      B is faster.  Speed-up = 0.625 / 0.500 = 1.25 , that is 25 % faster.
+   ```
+   - The lesson this example teaches: `clock speed alone does not decide performance`. A has a 33 per cent higher clock but is 25 per cent slower, because its CPI is worse.
+
+   Worked example 3 — the effect of cache misses
+   ```
+      Base CPI = 1.0
+      30 % of instructions access memory
+      Miss rate 5 % , miss penalty 100 cycles
+
+      Extra cycles per instruction = 0.30 x 0.05 x 100 = 1.5
+
+      Effective CPI = 1.0 + 1.5 = 2.5
+
+      The processor is running at 40 % of its potential speed, purely
+      because of memory stalls.
+   ```
+
+   Worked example 4 — Amdahl's law
+   ```
+      Speed-up = 1 / [ (1 - P) + P/S ]
+
+      P = the fraction of the program that is improved
+      S = how much that fraction is sped up
+   ```
+   ```
+      60 % of a program is made 5 times faster :
+
+      Speed-up = 1 / [ 0.4 + 0.6/5 ] = 1 / [0.4 + 0.12] = 1/0.52 = 1.92
+
+      Even with an INFINITE speed-up of that 60 % :
+           1 / 0.4 = 2.5 times , and no more.
+
+      The serial fraction sets a hard ceiling. This is why adding cores
+      stops helping.
+   ```
+
+   Worked example 5 — pipelining
+   ```
+      Non-pipelined time = n x k x t
+      Pipelined time     = (k + n - 1) x t
+      Speed-up           = (n x k) / (k + n - 1)   ->  approaches k
+   ```
+   ```
+      1000 instructions , 5 stages :
+         without pipeline : 5000 cycles
+         with pipeline    : 5 + 999 = 1004 cycles
+         speed-up         = 4.98 , close to the ideal 5
+   ```
+
+   Worked example 6 — average memory access time
+   ```
+      AMAT = hit time + (miss rate x miss penalty)
+
+      Hit time 5 ns , miss penalty 100 ns , hit ratio 95 % :
+           AMAT = 5 + (0.05 x 100) = 10 ns
+      Without a cache the access would be 105 ns - ten times worse.
+   ```
+
+   - The three terms of the performance equation are influenced by different things, and a good answer says so: `instruction count` depends on the compiler and the instruction set, `CPI` on the microarchitecture and the memory system, and `clock cycle time` on the circuit technology. Improving any one improves performance, and a real design must attend to all three.
+
 2. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
    Answer: (Answered in English, as required for IT topics.) Clock cycle
@@ -7470,6 +7584,103 @@ MOV AX, A534H এবং MOV AX, [A534H]
    - Point worth stating: the three terms of the performance equation are influenced by different things. `Instruction count` depends on the compiler and the ISA, `CPI` on the microarchitecture and the memory system, and `clock cycle time` on the circuit technology. Improving any one of them improves performance, and a real design must attend to all three.
 
 4. **Operating system math: clock frequency 700MHz.** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
+
+   Answer: The question is `incomplete` — only "clock frequency 700 MHz" was recorded, so the rest of the data is unknown. The calculations that a 700 MHz figure is used for are worked below.
+
+   The basic relations
+   ```
+      Clock frequency  f = 700 MHz = 700 x 10^6 Hz
+
+      Clock cycle time T = 1/f
+                         = 1/(700 x 10^6)
+                         = 1.4286 x 10^-9 s
+                         = 1.4286 nanoseconds
+   ```
+   - So one clock tick lasts about `1.43 ns`, and the processor performs 700 million ticks every second.
+
+   Calculation 1 — execution time of a program
+   ```
+      CPU time = (Instruction count x CPI) / f
+   ```
+   ```
+      Example : 500 million instructions , average CPI = 2
+
+      Total cycles = 500 x 10^6 x 2 = 10^9 cycles
+      CPU time     = 10^9 / (700 x 10^6) = 1.4286 seconds
+   ```
+
+   Calculation 2 — MIPS
+   ```
+      MIPS = f / (CPI x 10^6)
+           = (700 x 10^6) / (2 x 10^6)
+           = 350 MIPS
+   ```
+
+   Calculation 3 — how many instructions in a given time
+   ```
+      Instructions = (f x time) / CPI
+                   = (700 x 10^6 x 1) / 2
+                   = 350 million instructions per second
+   ```
+
+   Calculation 4 — a time-quantum or interrupt period expressed in cycles
+   ```
+      A 10 ms scheduling quantum at 700 MHz :
+
+      Cycles = 700 x 10^6 x 10 x 10^-3 = 7,000,000 cycles
+
+      So a process gets seven million clock cycles per quantum, which is
+      why a context switch of a few microseconds is affordable overhead.
+   ```
+
+   Calculation 5 — context-switch overhead
+   ```
+      A context switch takes 5 microseconds at 700 MHz :
+
+      Cycles lost = 700 x 10^6 x 5 x 10^-6 = 3,500 cycles
+
+      With a 10 ms quantum, the overhead is
+           5 us / 10 ms = 0.05 %      - negligible
+
+      With a 100 us quantum it would be
+           5 us / 100 us = 5 %        - significant
+
+      This is exactly why the time quantum must not be made too small.
+   ```
+
+   Calculation 6 — memory access measured in cycles
+   ```
+      Main memory latency 100 ns at 700 MHz :
+
+      Cycles = 100 ns / 1.4286 ns = 70 cycles
+
+      Every cache miss therefore costs about 70 wasted cycles, which is
+      what makes the cache hit ratio the dominant performance factor.
+   ```
+
+   Calculation 7 — the effect of a cache
+   ```
+      AMAT = hit time + (miss rate x miss penalty)
+
+      Hit time 2 cycles , miss penalty 70 cycles , hit ratio 95 % :
+           AMAT = 2 + (0.05 x 70) = 5.5 cycles
+
+      Without the cache every access would cost 70 cycles - nearly
+      thirteen times worse.
+   ```
+
+   The formulas to remember
+   ```
+      T = 1/f                             f = 1/T
+      CPU time = (IC x CPI) / f
+      MIPS = f / (CPI x 10^6)
+      Cycles for a duration = f x duration
+      Duration of n cycles  = n / f
+      AMAT = hit time + miss rate x miss penalty
+      Speed-up (Amdahl) = 1 / [(1-P) + P/S]
+   ```
+
+   - One point worth stating: `700 MHz sounds slow by modern standards, but MHz alone means little`. A 700 MHz ARM Cortex-A processor in an embedded system may outperform an older 2 GHz chip on the same task, because it completes more instructions per cycle. Real performance is `frequency x IPC x cores`.
 
 5. **Computer A has 3.2GHz processing speed and it has 2.0 clock speeds in a program and at the same program Computer B has 2.4 GHz processing speed with 1.2 clock speed. Which computer will run faster and how much faster?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118-1119 (ET: BUET)]*
 

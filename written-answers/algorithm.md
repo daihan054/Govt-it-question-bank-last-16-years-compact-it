@@ -1202,6 +1202,97 @@
 
 13. **True false (DFS/ Directed graph related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)]*
 
+    Answer: The question is `incomplete` — the paper itself records that the exact statements could not be collected. The true/false statements that such questions use about DFS and directed graphs are given below, each with its answer and reason.
+
+    Statements about DFS
+    ```
+       1. DFS uses a STACK.                                        TRUE
+          Either an explicit stack or the recursion call stack.
+
+       2. DFS always finds the SHORTEST path in an unweighted graph. FALSE
+          That is BFS. DFS finds A path, not necessarily the shortest.
+
+       3. The time complexity of DFS is O(V + E) with an adjacency list. TRUE
+          With an adjacency matrix it is O(V^2).
+
+       4. The space complexity of DFS is O(V).                      TRUE
+          The stack can hold at most V vertices, in a path graph.
+
+       5. DFS visits every vertex exactly once.                     TRUE
+          Provided the visited array is used and the graph is connected.
+
+       6. DFS on a disconnected graph visits every vertex in one call. FALSE
+          One call reaches only one component; the outer loop must restart
+          DFS from every unvisited vertex.
+    ```
+
+    Statements about directed graphs
+    ```
+       7. A directed graph has a CYCLE if and only if DFS finds a BACK EDGE.
+                                                                   TRUE
+          This is the standard cycle-detection test.
+
+       8. In a DIRECTED graph, DFS classifies edges into four kinds. TRUE
+             TREE edge    : to an unvisited vertex
+             BACK edge    : to an ancestor still on the stack -> a CYCLE
+             FORWARD edge : to a descendant already finished
+             CROSS edge   : to a vertex in another subtree
+
+       9. In an UNDIRECTED graph, DFS produces only tree and back edges.
+                                                                   TRUE
+          Forward and cross edges cannot occur.
+
+      10. Topological sort is possible for any directed graph.       FALSE
+          Only for a DAG - a Directed Acyclic Graph. A cycle makes it
+          impossible.
+
+      11. Topological sort is obtained by reversing the DFS FINISH order.
+                                                                   TRUE
+
+      12. A directed graph is STRONGLY CONNECTED if every vertex can reach
+          every other.                                             TRUE
+          Tested with Kosaraju's or Tarjan's algorithm, both DFS based.
+
+      13. If a directed graph has V vertices and V-1 edges it must be a tree.
+                                                                   FALSE
+          It may be disconnected and contain a cycle, for example a
+          3-cycle plus an isolated vertex with V = 4 and E = 3.
+
+      14. Reversing every edge of a directed graph preserves its strongly
+          connected components.                                    TRUE
+          This is what makes Kosaraju's algorithm work.
+    ```
+
+    The DFS algorithm, for reference
+    ```
+       DFS(G, u):
+           visited[u] = true
+           process(u)
+           for each v adjacent to u:
+               if not visited[v]:
+                   DFS(G, v)
+
+       main:
+           for each vertex u:              // handles a DISCONNECTED graph
+               if not visited[u]:
+                   DFS(G, u)
+    ```
+    ```
+       Time  : O(V + E)  with an adjacency list
+       Space : O(V)      for the visited array and the recursion stack
+    ```
+
+    DFS versus BFS
+
+    | Point | DFS | BFS |
+    |---|---|---|
+    | Data structure | Stack (or recursion) | Queue |
+    | Shortest path (unweighted) | `No` | `Yes` |
+    | Space | O(V) — O(h) for a tree | O(V) — O(w) for a tree |
+    | Finds a cycle | Yes, via a back edge | Yes, via a non-parent visited node |
+    | Topological sort | `Yes` | Only with Kahn's algorithm |
+    | Best for | Cycle detection, topological sort, SCC, maze solving | Shortest path, level order, nearest neighbour |
+
 14. **Draw BFS and DFS tree starting node A-** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 878 (ET: BUET)]*
 
     Answer: The graph figure was not printed with the question, so this graph is used to show the method.
@@ -2104,6 +2195,102 @@ for i in N:
 
 4. **Including Time and Space complexity....** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 553 (ET: BIBM)]*
 
+   Answer: The question is `incomplete` — the algorithm whose complexity was to be analysed was cut off. The full framework for stating time and space complexity is given below, with the standard results.
+
+   What the two measure
+   ```
+      TIME complexity  : how the number of basic OPERATIONS grows with the
+                         input size n
+      SPACE complexity : how much EXTRA memory the algorithm needs, beyond
+                         the input itself (AUXILIARY space)
+   ```
+
+   The asymptotic notations
+   ```
+      O(f(n))      UPPER bound      - "grows no faster than"   (worst case)
+      Omega(f(n))  LOWER bound      - "grows at least as fast" (best case)
+      Theta(f(n))  TIGHT bound      - both, so the exact growth rate
+      o , omega    strict versions of O and Omega
+   ```
+
+   The order of growth, best to worst
+   ```
+      O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(n^3) < O(2^n) < O(n!)
+   ```
+   ```
+      n = 1,000,000 :
+         O(log n)   ~ 20 steps
+         O(n)       ~ 10^6
+         O(n log n) ~ 2 x 10^7
+         O(n^2)     ~ 10^12          - hours
+         O(2^n)     ~ impossible
+   ```
+
+   Sorting algorithms
+   ```
+      Algorithm       Best        Average     Worst       Space     Stable
+      ------------    --------    --------    --------    ------    ------
+      Bubble sort     O(n)        O(n^2)      O(n^2)      O(1)      Yes
+      Selection sort  O(n^2)      O(n^2)      O(n^2)      O(1)      No
+      Insertion sort  O(n)        O(n^2)      O(n^2)      O(1)      Yes
+      Merge sort      O(n log n)  O(n log n)  O(n log n)  O(n)      Yes
+      Quick sort      O(n log n)  O(n log n)  O(n^2)      O(log n)  No
+      Heap sort       O(n log n)  O(n log n)  O(n log n)  O(1)      No
+      Counting sort   O(n+k)      O(n+k)      O(n+k)      O(k)      Yes
+      Radix sort      O(nk)       O(nk)       O(nk)       O(n+k)    Yes
+   ```
+
+   Searching
+   ```
+      Linear search   : O(n)      , space O(1)
+      Binary search   : O(log n)  , space O(1) iterative , O(log n) recursive
+                        requires a SORTED array
+      Hashing         : O(1) average , O(n) worst  , space O(n)
+   ```
+
+   Data structure operations
+   ```
+      Structure        Access    Search    Insert    Delete
+      -------------    ------    ------    ------    ------
+      Array            O(1)      O(n)      O(n)      O(n)
+      Sorted array     O(1)      O(log n)  O(n)      O(n)
+      Linked list      O(n)      O(n)      O(1)*     O(1)*
+      Stack / Queue    O(n)      O(n)      O(1)      O(1)
+      BST (balanced)   O(log n)  O(log n)  O(log n)  O(log n)
+      BST (skewed)     O(n)      O(n)      O(n)      O(n)
+      Hash table       -         O(1) avg  O(1) avg  O(1) avg
+      Heap             O(1) min  O(n)      O(log n)  O(log n)
+
+      * given a pointer to the position
+   ```
+
+   Graph algorithms
+   ```
+      BFS / DFS              : O(V + E)         space O(V)
+      Dijkstra (binary heap) : O((V+E) log V)   space O(V)
+      Bellman-Ford           : O(V . E)         space O(V)
+      Floyd-Warshall         : O(V^3)           space O(V^2)
+      Prim (heap) / Kruskal  : O(E log V)       space O(V)
+      Topological sort       : O(V + E)         space O(V)
+   ```
+
+   How to derive a complexity
+   ```
+      1. Count the BASIC OPERATIONS as a function of n.
+      2. Drop the CONSTANTS and the LOWER-ORDER terms :
+            3n^2 + 5n + 100   ->   O(n^2)
+      3. For nested loops, MULTIPLY :
+            for i in 1..n:  for j in 1..n:  ->  O(n^2)
+      4. For sequential loops, ADD and keep the larger :
+            O(n) then O(n^2)  ->  O(n^2)
+      5. For a recurrence, apply the MASTER THEOREM :
+            T(n) = a T(n/b) + f(n)
+            Merge sort : T(n) = 2T(n/2) + O(n)  ->  O(n log n)
+            Binary search: T(n) = T(n/2) + O(1) ->  O(log n)
+   ```
+
+   - The space-time trade-off worth mentioning: an algorithm can often be made faster by using more memory. `Counting sort` runs in O(n) time but needs O(k) space; `hashing` gives O(1) lookup but needs O(n) space; `dynamic programming` beats plain recursion by storing sub-results.
+
 5. **What is complexity? Find the Complexity from code and explain.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 501 (ET: IBA)]*
 
    Answer: Complexity measures how the time and memory used by an algorithm grow with the input size `n`. The code fragment was not printed with the question, so the standard cases are worked out below.
@@ -2234,6 +2421,99 @@ for i in N:
    - Result: `T(n) = Θ(n⁰ · log n) = Θ(log n)`. Both methods agree.
 
 10. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
+
+    Answer: The question is `incomplete` — the paper itself records that the full question could not be collected. It concerns operations of complexity `O(N^2)`, and the relevant material is set out below.
+
+    What O(N^2) means
+    - `Quadratic` growth. Doubling the input makes the work `four times` greater, because the running time is proportional to the square of the input size.
+    ```
+       N = 10        ->     100 operations
+       N = 100       ->  10,000
+       N = 1,000     ->  1,000,000
+       N = 10,000    ->  100,000,000     - already seconds
+       N = 100,000   ->  10^10           - minutes to hours
+       N = 1,000,000 ->  10^12           - impractical
+    ```
+    - The practical limit for an O(N^2) algorithm is roughly `N = 10,000` in an exam or interview setting.
+
+    Where O(N^2) comes from
+    ```
+       1. NESTED LOOPS, each running N times
+
+            for (i = 0; i < n; i++)
+                for (j = 0; j < n; j++)
+                    // O(1) work
+                                                ->  O(n^2)
+
+       2. A TRIANGULAR nested loop - still O(n^2)
+
+            for (i = 0; i < n; i++)
+                for (j = i; j < n; j++)
+                                                ->  n(n+1)/2 = O(n^2)
+
+          Half the work of the full square, but the SAME order, because
+          constants are dropped.
+    ```
+
+    Data structures and operations that are O(N^2)
+    ```
+       SORTING (the simple algorithms)
+            Bubble sort      : O(n^2) average and worst
+            Selection sort   : O(n^2) always
+            Insertion sort   : O(n^2) worst , O(n) on nearly sorted data
+            Quick sort       : O(n^2) WORST case, when the pivot is always
+                               the smallest or largest element
+
+       MATRIX operations
+            Adding two n x n matrices      : O(n^2)
+            Transposing an n x n matrix    : O(n^2)
+            Multiplying an n x n matrix by a vector : O(n^2)
+            (matrix MULTIPLICATION is O(n^3) by the naive method)
+
+       GRAPHS with an ADJACENCY MATRIX
+            BFS or DFS                     : O(V^2)
+            Dijkstra without a heap        : O(V^2)
+            Prim without a heap            : O(V^2)
+            Space for the matrix itself    : O(V^2)
+
+       OTHER
+            All pairs of elements          : O(n^2) pairs
+            Naive substring search         : O(n.m), which is O(n^2) when m ~ n
+            Building a BST from sorted input (a skewed tree) : O(n^2)
+            Repeated string concatenation in a loop          : O(n^2)
+    ```
+
+    How an O(N^2) algorithm is usually improved
+    ```
+       Problem                     O(n^2) way          Better way
+       -------------------------   ----------------    ------------------
+       Sorting                     Bubble / selection  Merge / heap : O(n log n)
+       Finding duplicates          Compare every pair  Hash set     : O(n)
+       Two-sum                     Try every pair      Hash map     : O(n)
+       Closest pair of numbers     Try every pair      Sort first   : O(n log n)
+       Graph traversal             Adjacency matrix    Adjacency list: O(V+E)
+       Dijkstra                    Linear scan for min Binary heap  : O(E log V)
+       String concatenation        s = s + x in a loop StringBuilder: O(n)
+       Fibonacci                   Plain recursion O(2^n) DP        : O(n)
+    ```
+
+    Worked example — reducing O(n^2) to O(n)
+    ```java
+       // O(n^2) : does the array contain a duplicate?
+       for (int i = 0; i < n; i++)
+           for (int j = i+1; j < n; j++)
+               if (a[i] == a[j]) return true;
+
+       // O(n) : the same question, using a hash set
+       Set<Integer> seen = new HashSet<>();
+       for (int x : a) {
+           if (!seen.add(x)) return true;      // add returns false if present
+       }
+       return false;
+    ```
+    - The trade is `space for time`: the hash set costs O(n) memory, and buys a reduction from 10^12 operations to 10^6 at n = one million.
+
+    - The point examiners look for: `O(n^2) is acceptable for small n and unacceptable for large n`, and the standard cures are `sorting first`, `hashing`, `dynamic programming` or `choosing a better data structure`.
 
 11. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
@@ -2856,6 +3136,102 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - Sorting by finish time is what makes greedy optimal here; it minimises idle time and leaves the maximum room for the remaining activities.
 
 6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
+
+   Answer: The question is `incomplete` — the paper itself records that the full question could not be collected, so the specific weights, values and capacity are unknown. The comparison it asks for, and the calculation method, are set out below with a worked example.
+
+   The distinction the question is testing
+   ```
+      FRACTIONAL knapsack : an item may be broken, so any fraction may be
+           taken. The GREEDY method by value/weight ratio is PROVABLY
+           OPTIMAL. Greedy cost = optimal cost , and the difference is ZERO.
+
+      0/1 knapsack        : an item must be taken WHOLE or left behind.
+           The greedy method is NOT optimal. Only dynamic programming
+           gives the optimal answer, and the difference can be large.
+   ```
+
+   Worked example — where greedy fails
+   ```
+      Capacity W = 10
+
+      Item   Weight   Value   Value/Weight
+        A       10      60         6.0
+        B        6      50         8.3
+        C        5      40         8.0
+   ```
+
+   Greedy by value-to-weight ratio (0/1 knapsack)
+   ```
+      Sort by ratio : B (8.3) , C (8.0) , A (6.0)
+
+      Take B : weight 6 , value 50 , remaining capacity 4
+      Try C  : weight 5 > 4 remaining  -> cannot take it whole
+      Try A  : weight 10 > 4           -> cannot take it
+
+      GREEDY value  = 50
+      Weight used   = 6 , with 4 units of capacity WASTED
+   ```
+
+   Optimal solution, by dynamic programming
+   ```
+      Consider every subset that fits within W = 10 :
+
+         {A}      weight 10 , value 60
+         {B}      weight  6 , value 50
+         {C}      weight  5 , value 40
+         {B, C}   weight 11 -> does NOT fit
+         {A, B}   weight 16 -> does not fit
+
+      OPTIMAL value = 60      by taking item A alone
+   ```
+
+   The difference
+   ```
+      Optimal value  = 60
+      Greedy value   = 50
+      -----------------------
+      LOSS           = 10
+
+      Loss as a percentage = 10 / 60 x 100 = 16.67 %
+   ```
+   - Greedy chose B because its `ratio` was best, but B's smaller weight left 4 units of capacity unusable. The optimal answer sacrifices ratio for a better `fit`.
+
+   The same items under the FRACTIONAL knapsack
+   ```
+      Sort by ratio : B (8.3) , C (8.0) , A (6.0)
+
+      Take all of B  : weight 6 , value 50 , remaining 4
+      Take 4/5 of C  : weight 4 , value 40 x 4/5 = 32 , remaining 0
+
+      Greedy value = 50 + 32 = 82
+
+      This IS the optimal value. Difference = 0.
+   ```
+   - Greedy is optimal here because any leftover capacity can always be filled with a fraction of the next-best item, so no capacity is ever wasted.
+
+   Why greedy is optimal for fractional but not for 0/1
+   ```
+      FRACTIONAL : the problem has the GREEDY-CHOICE PROPERTY. Taking the
+           highest ratio first can never be wrong, because whatever
+           capacity remains is filled at the next best rate. An exchange
+           argument proves it: swapping any part of a lower-ratio item for
+           the same weight of a higher-ratio one never reduces the value.
+
+      0/1        : the indivisibility breaks that argument. Committing to
+           a high-ratio item can leave a fragment of capacity that no
+           remaining item fits into, which is exactly what happened above.
+   ```
+
+   Complexity
+   ```
+      Fractional knapsack , greedy : O(n log n)   - dominated by the sort
+      0/1 knapsack , DP            : O(n W) time , O(n W) space
+                                     (pseudo-polynomial, since it depends
+                                      on the NUMERIC value of W)
+      0/1 knapsack , greedy        : O(n log n) , but not optimal
+   ```
+
+   - The general lesson to state: `greedy is fast but only correct when the problem has the greedy-choice property and optimal substructure`. Fractional knapsack, Huffman coding, Dijkstra, Prim and Kruskal all have it. `0/1 knapsack does not`, which is why it needs dynamic programming.
 
 ## Dynamic Programming (5)
 

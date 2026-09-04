@@ -22,7 +22,194 @@
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: The question as printed is `incomplete and garbled` — the Bengali text asks for the expansion and analysis of certain acronyms, but the list of acronyms itself was not captured. The acronyms that appear in this paper are expanded below.
+
+   Computer fundamentals
+   ```
+      CPU     Central Processing Unit
+      ALU     Arithmetic Logic Unit
+      CU      Control Unit
+      RAM     Random Access Memory
+      ROM     Read Only Memory
+      PROM    Programmable Read Only Memory
+      EPROM   Erasable Programmable Read Only Memory
+      EEPROM  Electrically Erasable Programmable Read Only Memory
+      BIOS    Basic Input Output System
+      UEFI    Unified Extensible Firmware Interface
+      SMPS    Switched Mode Power Supply
+      GPU     Graphics Processing Unit
+      MMU     Memory Management Unit
+      TLB     Translation Lookaside Buffer
+   ```
+
+   Storage
+   ```
+      HDD     Hard Disk Drive
+      SSD     Solid State Drive
+      RAID    Redundant Array of Independent Disks
+      NVMe    Non-Volatile Memory Express
+      SATA    Serial Advanced Technology Attachment
+      SCSI    Small Computer System Interface
+      NAS     Network Attached Storage
+      SAN     Storage Area Network
+   ```
+
+   Software and programming
+   ```
+      OS      Operating System
+      GUI     Graphical User Interface
+      CLI     Command Line Interface
+      API     Application Programming Interface
+      IDE     Integrated Development Environment
+      SDK     Software Development Kit
+      JDK     Java Development Kit
+      JRE     Java Runtime Environment
+      JVM     Java Virtual Machine
+      OOP     Object Oriented Programming
+      SQL     Structured Query Language
+      DBMS    Database Management System
+      RDBMS   Relational Database Management System
+      ACID    Atomicity, Consistency, Isolation, Durability
+   ```
+
+   Networking
+   ```
+      LAN     Local Area Network
+      WAN     Wide Area Network
+      MAN     Metropolitan Area Network
+      TCP     Transmission Control Protocol
+      IP      Internet Protocol
+      UDP     User Datagram Protocol
+      HTTP    HyperText Transfer Protocol
+      HTTPS   HyperText Transfer Protocol Secure
+      FTP     File Transfer Protocol
+      SMTP    Simple Mail Transfer Protocol
+      DNS     Domain Name System
+      DHCP    Dynamic Host Configuration Protocol
+      OSI     Open Systems Interconnection
+      NAT     Network Address Translation
+      VPN     Virtual Private Network
+      MAC     Media Access Control
+      ARP     Address Resolution Protocol
+      ICMP    Internet Control Message Protocol
+      SSH     Secure Shell
+      VLAN    Virtual Local Area Network
+   ```
+
+   Web and data
+   ```
+      WWW     World Wide Web
+      URL     Uniform Resource Locator
+      HTML    HyperText Markup Language
+      CSS     Cascading Style Sheets
+      XML     eXtensible Markup Language
+      JSON    JavaScript Object Notation
+      CMS     Content Management System
+      CDN     Content Delivery Network
+      REST    REpresentational State Transfer
+      SOAP    Simple Object Access Protocol
+   ```
+
+   Security
+   ```
+      SSL     Secure Sockets Layer
+      TLS     Transport Layer Security
+      AES     Advanced Encryption Standard
+      DES     Data Encryption Standard
+      RSA     Rivest, Shamir, Adleman
+      PKI     Public Key Infrastructure
+      MFA     Multi-Factor Authentication
+      DDoS    Distributed Denial of Service
+      IDS     Intrusion Detection System
+      IPS     Intrusion Prevention System
+      SHA     Secure Hash Algorithm
+   ```
+
+   Bangladesh-specific
+   ```
+      BCC     Bangladesh Computer Council
+      BTRC    Bangladesh Telecommunication Regulatory Commission
+      BTCL    Bangladesh Telecommunications Company Limited
+      BDIX    Bangladesh Internet Exchange
+      NID     National Identity Document
+      ICT     Information and Communication Technology
+      BASIS   Bangladesh Association of Software and Information Services
+      BGD e-GOV CIRT   Bangladesh Government Computer Incident Response Team
+   ```
+
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+   Answer: The question as printed is `incomplete and garbled`. Read as it stands, it asks for the analysis of the words `RAIN`, `FRAME`, `NAME` and `HEART`, which are not standard computing acronyms. The two readings that make sense are given below.
+
+   Reading 1 — they are `mnemonics`, not acronyms
+   - A `mnemonic` is a memory aid in which each letter stands for an item in a list. Ordinary words are chosen deliberately, because a word is easier to remember than a random string.
+   ```
+      RAIN  , FRAME , NAME , HEART
+   ```
+   - None of these is an established acronym in computer science. The paper very probably printed a list beside each word and asked what each letter stood for; that list is missing, so the expansions cannot be recovered.
+
+   Reading 2 — the letters are close to real computing terms
+   - Some of these are near-misses for standard terms, which the following list covers:
+   ```
+      FRAME   In computer science this IS a technical term, not an acronym :
+           - a PAGE FRAME : a fixed-size block of PHYSICAL memory, the same
+             size as a page (typically 4 KB). Virtual pages are mapped
+             onto physical frames by the page table.
+           - a STACK FRAME : the block pushed on the call stack for one
+             function call, holding its parameters, local variables, return
+             address and saved registers.
+           - a DATA LINK FRAME : the unit of data at OSI layer 2, carrying
+             source and destination MAC addresses plus a CRC.
+           - a VIDEO FRAME : one still image in a sequence, hence
+             "frames per second".
+
+      NAME   Again a term rather than an acronym :
+           - NAME RESOLUTION : converting a name to an address, which is
+             what DNS does.
+           - NAMESPACE : a region in which every name must be unique.
+           - DOMAIN NAME : the human-readable address of a host.
+
+      HEART  Not a computing acronym. The nearest technical term is
+           HEARTBEAT : a periodic signal one machine sends to another to
+           prove it is still alive. Used in clusters, load balancers and
+           high-availability systems; when the heartbeat stops, failover
+           begins.
+
+      RAIN   Not standard. The closest term is RAID (Redundant Array of
+           Independent Disks). RAIN has been used by some vendors for
+           "Redundant Array of Independent Nodes", meaning a cluster of
+           commodity servers acting as one storage system - the idea
+           behind Ceph, GlusterFS and HDFS.
+   ```
+
+   Genuine computing mnemonics, which is what such a question usually tests
+   ```
+      ACID    Atomicity , Consistency , Isolation , Durability
+              - the four transaction guarantees of a DBMS
+
+      BASE    Basically Available , Soft state , Eventual consistency
+              - the NoSQL alternative to ACID
+
+      CRUD    Create , Read , Update , Delete
+              - the four basic data operations
+
+      SOLID   Single responsibility , Open-closed , Liskov substitution ,
+              Interface segregation , Dependency inversion
+              - the five object-oriented design principles
+
+      CIA     Confidentiality , Integrity , Availability
+              - the three pillars of information security
+
+      PEAS    Performance , Environment , Actuators , Sensors
+              - how an AI agent is specified
+
+      FIFO    First In First Out         LIFO  Last In First Out
+      FCFS    First Come First Served    SJF   Shortest Job First
+      DRY     Don't Repeat Yourself      KISS  Keep It Simple, Stupid
+      WORA    Write Once, Run Anywhere   - Java's promise
+   ```
+
+   - Answer to give in the exam: state plainly that `RAIN, FRAME, NAME and HEART are not standard computing acronyms`, explain `FRAME`, `NAME` and `heartbeat` as technical terms, note that `RAID` is almost certainly what `RAIN` was meant to be, and then give the genuine mnemonics above. That covers every likely intention of the question.
 
 3. **Write the full meaning: HTTP, DVD, and SMTP?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1335 (ET: N/A)]*
 

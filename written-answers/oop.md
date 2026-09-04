@@ -3331,6 +3331,133 @@ public class main{
 
 37. **OOP problem (Inheritance related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
+    Answer: The question is `incomplete` — the paper itself records that the exact problem could not be collected. It is an inheritance problem, and the complete treatment is given below.
+
+    What inheritance is
+    - `Inheritance` lets a new class acquire the fields and methods of an existing one. The existing class is the `superclass` (parent, base) and the new one the `subclass` (child, derived). The relationship is `is-a`.
+    - Its purposes are `code reuse`, a natural hierarchy, and enabling `runtime polymorphism`.
+
+    The five types
+    ```
+       1. SINGLE        A -> B
+       2. MULTILEVEL    A -> B -> C
+       3. HIERARCHICAL  A -> B , A -> C
+       4. MULTIPLE      A , B -> C     (Java: interfaces only)
+       5. HYBRID        any combination of the above
+    ```
+    ```
+       Single        Multilevel      Hierarchical      Multiple
+          A              A                A             A   B
+          |              |               / \             \ /
+          B              B              B   C             C
+                         |
+                         C
+    ```
+
+    A complete worked problem — the type these questions use
+    ```java
+    // ---------- SUPERCLASS ----------
+    class Employee {
+        protected String name;
+        protected double basic;
+
+        public Employee(String name, double basic) {
+            this.name  = name;
+            this.basic = basic;
+        }
+
+        public double calculateSalary() {          // to be OVERRIDDEN
+            return basic;
+        }
+
+        public void display() {                    // reused by every subclass
+            System.out.printf("%-10s %-12s %10.2f%n",
+                              name, getClass().getSimpleName(), calculateSalary());
+        }
+    }
+
+    // ---------- SUBCLASSES ----------
+    class Manager extends Employee {
+        private double allowance;
+
+        public Manager(String name, double basic, double allowance) {
+            super(name, basic);                    // MUST be the first statement
+            this.allowance = allowance;
+        }
+
+        @Override
+        public double calculateSalary() {
+            return basic + allowance + 0.40 * basic;
+        }
+    }
+
+    class Officer extends Employee {
+        public Officer(String name, double basic) { super(name, basic); }
+
+        @Override
+        public double calculateSalary() { return basic + 0.20 * basic; }
+    }
+
+    class Clerk extends Employee {
+        public Clerk(String name, double basic) { super(name, basic); }
+        // calculateSalary() is NOT overridden - the inherited version is used
+    }
+
+    // ---------- MAIN ----------
+    public class Main {
+        public static void main(String[] args) {
+
+            Employee[] staff = {                   // SUPERCLASS references
+                new Manager("Rahim", 50000, 10000),
+                new Officer("Karim", 50000),
+                new Clerk  ("Jamal", 30000)
+            };
+
+            double total = 0;
+            for (Employee e : staff) {
+                e.display();                       // each runs ITS OWN version
+                total += e.calculateSalary();
+            }
+            System.out.printf("%-23s %10.2f%n", "TOTAL", total);
+        }
+    }
+    ```
+    Output
+    ```
+       Rahim      Manager        80000.00
+       Karim      Officer        60000.00
+       Jamal      Clerk          30000.00
+       TOTAL                    170000.00
+    ```
+
+    What the program demonstrates
+    ```
+       INHERITANCE          : name, basic and display() written ONCE
+       CONSTRUCTOR CHAINING : super(...) passes values up to the parent
+       METHOD OVERRIDING    : each subclass redefines calculateSalary()
+       RUNTIME POLYMORPHISM : the array holds Employee references, so the
+                              JVM decides at run time which version runs -
+                              DYNAMIC METHOD DISPATCH
+       OPEN-CLOSED PRINCIPLE: adding a Director class needs NO change to main
+    ```
+
+    Rules that such problems test
+    ```
+       super(...) must be the FIRST statement in a subclass constructor
+       Constructors are NOT inherited
+       A subclass CANNOT access the PRIVATE members of its parent -
+            only public and protected ones, and default ones in the same package
+       An overriding method cannot REDUCE the access level
+       'final' prevents overriding ; a final CLASS cannot be inherited at all
+       'static' methods are HIDDEN, not overridden - resolved by the
+            reference type, not the object
+       FIELDS are never polymorphic - also resolved by the reference type
+       Java forbids multiple inheritance of CLASSES, to avoid the DIAMOND
+            PROBLEM ; interfaces provide it safely
+    ```
+
+    - The caution worth adding: inheritance creates `tight coupling`, so a change in the superclass can break every subclass. The modern advice is `prefer composition over inheritance` — hold an object as a field when the relationship is really `has-a` rather than `is-a`.
+
 38. **Object Oriented Programming (OOP) language -এর প্রধান বৈশিষ্ট্য গুলো কী কী? দুটি OOP language -এর নাম লিখুন।** *[41th BCS 2021 compact it 881 (ET: N/A)]*
 
     Answer: (Answered in English, as required for IT topics.) The main features of an object-oriented programming language are the four pillars, together with the class and object mechanism they rest on.
@@ -4881,6 +5008,161 @@ public class main{
    - The fix is to add a `return` for every path, or a single `return` at the end.
 
 2. **Write a Java Code....** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
+
+   Answer: The question is `incomplete` — the paper printed only "Write a Java Code...." and the requirement was not captured. The programs that this paper asks for elsewhere are given below, so the answer covers whichever was intended.
+
+   Program 1 — a class with encapsulation, constructor, getters and setters
+   ```java
+   class BankAccount {
+
+       private String accountNumber;      // PRIVATE - encapsulation
+       private String holderName;
+       private double balance;
+
+       public BankAccount(String accNo, String name, double opening) {
+           this.accountNumber = accNo;
+           this.holderName    = name;
+           this.balance       = (opening > 0) ? opening : 0;
+       }
+
+       public void deposit(double amount) {
+           if (amount > 0) balance += amount;
+           else System.out.println("Deposit must be positive");
+       }
+
+       public void withdraw(double amount) {
+           if (amount > 0 && amount <= balance) balance -= amount;
+           else System.out.println("Insufficient balance");
+       }
+
+       public double getBalance()       { return balance; }
+       public String getAccountNumber() { return accountNumber; }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           BankAccount acc = new BankAccount("AC1001", "Rahim", 5000);
+           acc.deposit(2000);
+           acc.withdraw(1500);
+           System.out.println("Balance: " + acc.getBalance());   // 5500.0
+       }
+   }
+   ```
+
+   Program 2 — a method that returns a value
+   ```java
+   public class Calculator {
+       public int add(int a, int b)          { return a + b; }
+       public double average(int a, int b)   { return (a + b) / 2.0; }
+       public boolean isEven(int n)          { return n % 2 == 0; }
+
+       public String grade(int marks) {
+           if (marks >= 80) return "A+";
+           else if (marks >= 70) return "A";
+           else if (marks >= 60) return "B";
+           else if (marks >= 33) return "Pass";
+           else return "Fail";
+       }
+
+       public static void main(String[] args) {
+           Calculator c = new Calculator();
+           System.out.println(c.add(10, 20));     // 30
+           System.out.println(c.grade(75));       // A
+       }
+   }
+   ```
+
+   Program 3 — inheritance and method overriding
+   ```java
+   class Employee {
+       protected String name;
+       protected double basic;
+
+       Employee(String name, double basic) {
+           this.name = name; this.basic = basic;
+       }
+       double calculateSalary() { return basic; }
+       void display() { System.out.println(name + " : " + calculateSalary()); }
+   }
+
+   class Manager extends Employee {
+       Manager(String n, double b) { super(n, b); }
+       @Override double calculateSalary() { return basic + 0.40 * basic; }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Employee[] staff = { new Manager("Rahim", 50000),
+                                new Employee("Karim", 50000) };
+           for (Employee e : staff) e.display();
+       }
+   }
+   ```
+
+   Program 4 — exception handling
+   ```java
+   import java.util.Scanner;
+
+   public class Divide {
+       public static void main(String[] args) {
+           Scanner sc = new Scanner(System.in);
+           try {
+               System.out.print("Numerator  : ");
+               int a = sc.nextInt();
+               System.out.print("Denominator: ");
+               int b = sc.nextInt();
+               System.out.println("Result: " + (a / b));
+           } catch (ArithmeticException e) {
+               System.out.println("Cannot divide by zero");
+           } catch (Exception e) {
+               System.out.println("Invalid input: " + e.getMessage());
+           } finally {
+               sc.close();
+           }
+       }
+   }
+   ```
+
+   Program 5 — string and array handling
+   ```java
+   public class StringDemo {
+       public static void main(String[] args) {
+
+           String s = "Bangladesh";
+           System.out.println(s.length());           // 10
+           System.out.println(s.toUpperCase());      // BANGLADESH
+           System.out.println(s.substring(0, 5));    // Bangl
+           System.out.println(new StringBuilder(s).reverse());  // hsedalgnaB
+
+           int[] a = {45, 12, 78, 33, 90};
+           int max = a[0], sum = 0;
+           for (int x : a) {
+               sum += x;
+               if (x > max) max = x;
+           }
+           System.out.println("Sum: " + sum + ", Max: " + max);
+       }
+   }
+   ```
+
+   Program 6 — recursion
+   ```java
+   public class Recursion {
+       static int factorial(int n) {
+           return (n <= 1) ? 1 : n * factorial(n - 1);
+       }
+       static int fib(int n) {
+           return (n <= 1) ? n : fib(n - 1) + fib(n - 2);
+       }
+       public static void main(String[] args) {
+           System.out.println(factorial(5));            // 120
+           for (int i = 0; i < 8; i++) System.out.print(fib(i) + " ");
+           // 0 1 1 2 3 5 8 13
+       }
+   }
+   ```
+
+   - The structure every Java program must have: a `class`, a `public static void main(String[] args)` entry point, and a file named exactly after the public class. `System.out.println` prints, `Scanner` reads input, and every field should be `private` with public methods giving controlled access.
 
 3. **What does run Finalization do?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
@@ -8890,6 +9172,146 @@ public class WhatTheOutput{
    - What the question is really testing: whether the candidate `simplifies the expression` instead of computing it six times. Once `(10 + 2i)/2 - i = 5` is seen, the whole program collapses to a single answer. It is also testing the habit of using `array.length` rather than a hard-coded bound.
 
 10. **You are required to trace the changes in value for each of the numbers, before and after each method are called for each of iterations and finally write down output of the program.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1195-1196 (ET: N/A)]*
+
+    Answer: The question is `incomplete` — the program whose values were to be traced is not present. The complete method for tracing a program, and the traces that such a question uses, are given below.
+
+    How to trace a program
+    ```
+       1. Draw a TABLE with one column per variable, plus a column for
+          the output.
+       2. Write the INITIAL value of every variable.
+       3. Work through the code ONE STATEMENT at a time, updating the table
+          after each statement.
+       4. Note the values BEFORE and AFTER every method call.
+       5. Record every print statement in the output column, in order.
+    ```
+
+    Trace 1 — pass by value, the commonest such question
+    ```java
+    public class Main {
+        static void change(int x) {
+            System.out.println("  inside, before: " + x);
+            x = x * 2;
+            System.out.println("  inside, after : " + x);
+        }
+        public static void main(String[] args) {
+            int a = 10;
+            System.out.println("before call: " + a);
+            change(a);
+            System.out.println("after call : " + a);
+        }
+    }
+    ```
+    ```
+       Iteration   a (caller)   x (callee)   output
+       ---------   ----------   ----------   -----------------------
+       start           10            -       before call: 10
+       enter change    10           10         inside, before: 10
+       x = x*2         10           20         inside, after : 20
+       return          10            -       after call : 10
+    ```
+    ```
+       Output :
+          before call: 10
+            inside, before: 10
+            inside, after : 20
+          after call : 10
+
+       Java passes PRIMITIVES BY VALUE. change() works on a COPY, so the
+       caller's 'a' is untouched. This is the whole point of the question.
+    ```
+
+    Trace 2 — an object reference, where the caller IS affected
+    ```java
+    class Box { int value; }
+
+    public class Main {
+        static void change(Box b) { b.value = 99; }
+        static void reassign(Box b) { b = new Box(); b.value = 500; }
+
+        public static void main(String[] args) {
+            Box box = new Box();
+            box.value = 10;
+            System.out.println("before  : " + box.value);   // 10
+            change(box);
+            System.out.println("after change  : " + box.value);   // 99
+            reassign(box);
+            System.out.println("after reassign: " + box.value);   // 99
+        }
+    }
+    ```
+    ```
+       change()   MODIFIES the object the reference points to  -> 99
+       reassign() rebinds the LOCAL copy of the reference, so the caller's
+                  object is untouched  -> still 99
+
+       Java is ALWAYS pass by value. What is passed by value for an object
+       is the REFERENCE, not the object itself.
+    ```
+
+    Trace 3 — a loop with a swap in each iteration
+    ```java
+    public class Main {
+        static void swap(int[] a, int i, int j) {
+            int t = a[i]; a[i] = a[j]; a[j] = t;
+        }
+        public static void main(String[] args) {
+            int[] a = {5, 3, 8, 1};
+            for (int i = 0; i < a.length - 1; i++)
+                for (int j = 0; j < a.length - 1 - i; j++)
+                    if (a[j] > a[j+1]) swap(a, j, j+1);
+            for (int x : a) System.out.print(x + " ");
+        }
+    }
+    ```
+    ```
+       Pass 1 :  5 3 8 1  ->  3 5 8 1  ->  3 5 8 1  ->  3 5 1 8
+       Pass 2 :  3 5 1 8  ->  3 5 1 8  ->  3 1 5 8
+       Pass 3 :  3 1 5 8  ->  1 3 5 8
+
+       Output : 1 3 5 8
+
+       ARRAYS are objects, so swap() DOES change the caller's array.
+    ```
+
+    Trace 4 — a static variable across several calls
+    ```java
+    public class Main {
+        static int count = 0;
+        static void increment() { count++; System.out.print(count + " "); }
+        public static void main(String[] args) {
+            increment(); increment(); increment();
+            System.out.println("| final = " + count);
+        }
+    }
+    ```
+    ```
+       Call   count before   count after   output
+       ----   ------------   -----------   ------
+        1          0              1          1
+        2          1              2          2
+        3          2              3          3
+
+       Output : 1 2 3 | final = 3
+
+       A static field belongs to the CLASS, so all calls share one copy.
+    ```
+
+    The rules such questions test
+    ```
+       Java is ALWAYS pass by value.
+            - For a PRIMITIVE, the value is copied -> the caller is unaffected.
+            - For an OBJECT, the REFERENCE is copied -> the object CAN be
+              modified, but REASSIGNING the parameter cannot affect the caller.
+
+       A STATIC variable is shared by every call ; a LOCAL variable is
+            created fresh each time.
+
+       Arrays are objects, so a method CAN change their contents.
+
+       Strings are IMMUTABLE, so a method can never change the caller's
+            string - it can only return a new one.
+    ```
 
 ## Constructors & Destructors (8)
 

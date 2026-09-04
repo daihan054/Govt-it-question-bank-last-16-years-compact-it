@@ -578,6 +578,109 @@
 
 4. **Context free Grammar: (like as....)** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the grammar it refers to ("like as....") was not captured. The full treatment of context-free grammar and ambiguity is given below.
+
+   Context-Free Grammar (CFG)
+   - A `CFG` is a formal grammar in which every production has a `single non-terminal` on its left-hand side. It is defined as a four-tuple:
+   ```
+      G = (V , T , P , S)
+
+      V = the set of NON-TERMINALS (variables)
+      T = the set of TERMINALS (the alphabet)
+      P = the set of PRODUCTIONS , each of the form  A -> alpha
+          where A is in V and alpha is any string of V and T symbols
+      S = the START symbol , S in V
+   ```
+   - "Context free" means the left side is always exactly one non-terminal, so a rule may be applied whatever surrounds it.
+
+   Example — arithmetic expressions
+   ```
+      E -> E + E
+      E -> E * E
+      E -> ( E )
+      E -> id
+   ```
+   ```
+      V = {E} , T = {+ , * , ( , ) , id} , S = E
+   ```
+
+   Ambiguity
+   - A grammar is `ambiguous` if some string in its language has `more than one parse tree` (equivalently, more than one leftmost derivation).
+   ```
+      The string  id + id * id  has TWO parse trees under the grammar above :
+
+      Tree 1 : + at the root            Tree 2 : * at the root
+               E                                 E
+             / | \                             / | \
+            E  +  E                           E  *  E
+            |    /|\                        / | \   |
+           id   E * E                      E  +  E  id
+                |   |                      |     |
+               id  id                     id    id
+
+      Tree 1 gives  id + (id * id)      Tree 2 gives  (id + id) * id
+   ```
+   - The two trees mean different things, so the grammar is ambiguous. That is fatal for a compiler, because the parse tree determines the generated code.
+
+   Why ambiguity must be removed
+   ```
+      A compiler must produce ONE unambiguous meaning for every program.
+      An ambiguous grammar also breaks LL(1) and LR(1) parser construction,
+      producing shift-reduce or reduce-reduce CONFLICTS.
+   ```
+
+   Removing ambiguity — enforce precedence and associativity
+   ```
+      E -> E + T | T          '+' is left associative, lowest precedence
+      T -> T * F | F          '*' is left associative, higher precedence
+      F -> ( E ) | id         parentheses and operands bind tightest
+   ```
+   - Now `id + id * id` has exactly `one` parse tree, and it gives `id + (id * id)` — the correct arithmetic meaning. Precedence is expressed by the `level` of the non-terminal and associativity by whether the recursion is on the left or the right.
+
+   The dangling-else ambiguity, the other classic case
+   ```
+      Ambiguous :
+         S -> if E then S | if E then S else S | other
+
+      'if E1 then if E2 then S1 else S2' can attach the else to either if.
+
+      Unambiguous - the else binds to the NEAREST unmatched if :
+         S  -> M | U
+         M  -> if E then M else M | other          (matched)
+         U  -> if E then S | if E then M else U    (unmatched)
+   ```
+
+   Two important facts
+   ```
+      Ambiguity is a property of the GRAMMAR, not of the LANGUAGE.
+           The same language often has both an ambiguous and an
+           unambiguous grammar - as the expression grammar above shows.
+
+      Some languages are INHERENTLY AMBIGUOUS : every grammar for them
+           is ambiguous. An example is
+                L = { a^i b^j c^k | i = j or j = k }
+
+      Deciding whether an arbitrary CFG is ambiguous is UNDECIDABLE.
+   ```
+
+   Left recursion and left factoring, the two other transformations
+   ```
+      LEFT RECURSION must be removed for a top-down (LL) parser :
+         A -> A alpha | beta
+      becomes
+         A  -> beta A'
+         A' -> alpha A' | epsilon
+
+      LEFT FACTORING removes a common prefix, so the parser can decide
+      with one lookahead token :
+         A -> alpha beta1 | alpha beta2
+      becomes
+         A  -> alpha A'
+         A' -> beta1 | beta2
+   ```
+
+   - Where CFGs sit in the hierarchy: they generate exactly the `context-free languages`, recognised by a `pushdown automaton`, and they are Type 2 in the Chomsky hierarchy — more powerful than regular grammars (which cannot count matched brackets) and less powerful than context-sensitive grammars.
+
 5. **Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 877-878 (ET: BUET)]*
 
    Answer:

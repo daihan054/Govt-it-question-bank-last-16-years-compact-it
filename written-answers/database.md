@@ -18286,6 +18286,119 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **Software scenario question- Business Intelligence Model** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+   Answer: The question is `incomplete` — it was a scenario-based question and the scenario itself was not captured. The `Business Intelligence model` it refers to is set out below, together with the way such a scenario is answered.
+
+   What a BI model is
+   - A `Business Intelligence model` is the architecture and the data design that turn an organisation's raw operational data into information managers can act on.
+   ```mermaid
+   flowchart LR
+       A[Source systems<br/>core banking, ATM, CRM] -->|ETL| B[Staging area<br/>clean and standardise]
+       B --> C[(Data warehouse<br/>star schema)]
+       C --> D[Data marts<br/>retail, credit, treasury]
+       D --> E[OLAP cube]
+       E --> F[Dashboards and reports]
+       C --> G[Data mining<br/>prediction, fraud]
+   ```
+
+   The five layers
+   ```
+      1. DATA SOURCE layer
+           Core banking, card switch, ATM, loan origination, CRM, HR,
+           spreadsheets, and external feeds such as Bangladesh Bank rates.
+
+      2. ETL / INTEGRATION layer
+           Extract from each source, Transform - clean, de-duplicate,
+           standardise codes, build a single customer view - and Load.
+           Tools : Informatica, Talend, SSIS, Apache NiFi.
+           Near-real-time needs use CHANGE DATA CAPTURE instead of batch.
+
+      3. DATA WAREHOUSE layer
+           Subject-oriented, integrated, time-variant and non-volatile.
+           Stored DENORMALIZED as a STAR SCHEMA : one central fact table
+           of measures surrounded by dimension tables of descriptions.
+           Department-sized subsets are carved out as DATA MARTS.
+
+      4. ANALYSIS layer
+           OLAP cubes supporting roll-up, drill-down, slice and dice.
+           Data mining : classification, clustering, association rules,
+           regression, anomaly detection.
+
+      5. PRESENTATION layer
+           Dashboards, scorecards, ad-hoc reports, alerts, mobile views.
+           Tools : Power BI, Tableau, Qlik Sense, OBIEE, Apache Superset.
+   ```
+
+   The star schema at the centre of the model
+   ```
+           Dim_Time                    Dim_Branch
+      +--------------+            +----------------+
+      | time_key  PK |            | branch_key PK  |
+      | date, month  |            | branch_name    |
+      | quarter,year |            | city , zone    |
+      +------+-------+            +--------+-------+
+             |                             |
+             |     +------------------+    |
+             +-----|   Fact_Sales     |----+
+                   +------------------+
+                   | time_key     FK  |
+                   | branch_key   FK  |   <- keys
+                   | product_key  FK  |
+                   | customer_key FK  |
+                   +------------------+
+                   | amount           |
+                   | quantity         |   <- MEASURES
+                   | discount         |
+                   +--------+---------+
+             |                             |
+      +------+-------+            +--------+--------+
+      | product_key PK|           | customer_key PK |
+      | product_name  |           | customer_name   |
+      | category      |           | occupation      |
+      +---------------+           +-----------------+
+   ```
+
+   How to answer a BI scenario question
+   ```
+      1. IDENTIFY THE BUSINESS QUESTION
+           "Which branches are losing deposit share, and why?"
+
+      2. LIST THE KPIs that answer it
+           Total deposit , advance-deposit ratio , NPL percentage ,
+           cost of fund , net interest margin , CASA ratio ,
+           new accounts per day , transactions per channel.
+
+      3. NAME THE DATA SOURCES and how each is extracted
+           Core banking nightly ; card switch by CDC ; CRM nightly.
+
+      4. DESIGN THE DIMENSIONS AND FACTS
+           Conformed dimensions - Customer, Branch, Product, Time - so
+           that "branch" means the same thing in every report.
+
+      5. STATE THE AGGREGATIONS
+           Pre-compute daily, monthly and quarterly totals per branch and
+           product, so the dashboard does not aggregate millions of rows
+           at query time.
+
+      6. DEFINE THE DELIVERY
+           Role-based dashboards - a branch manager sees one branch, the
+           MD sees the bank - with drill-down from bank to zone to branch
+           to account.
+
+      7. STATE THE NON-FUNCTIONAL REQUIREMENTS
+           Refresh frequency, data quality checks, masking of account
+           numbers and NID, encryption, and an audit log of who saw what.
+   ```
+
+   The BI maturity ladder, which such scenarios often ask about
+   ```
+      Descriptive  : what HAPPENED ?          - reports and dashboards
+      Diagnostic   : WHY did it happen ?      - drill-down, OLAP
+      Predictive   : what WILL happen ?       - data mining, machine learning
+      Prescriptive : what SHOULD we do ?      - optimisation, simulation
+   ```
+
+   - The point that carries most marks in a scenario answer: `data quality`. A dashboard built on unmatched customer records produces confident but wrong numbers, so the single customer view built during ETL is the foundation of the whole model.
+
 4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
 
    Answer: (Answered in English, as required for IT topics.) `Big data` means datasets so large, so fast-arriving or so varied that ordinary databases and tools cannot store or process them in a reasonable time. It needs distributed systems such as `Hadoop` and `Spark` that spread the data and the computation across many machines.
@@ -18650,6 +18763,130 @@ SELECT *FROM students ORDER BY ID, NAME DESC
    - The log backups give a very small `RPO` — point-in-time recovery to within minutes — while the differential keeps the `RTO` short. Storage is cheap; a bank that cannot reopen on Monday morning is not.
 
 2. **Database Data Loss based case study type question......** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
+
+   Answer: The question is `incomplete` — it was a case study and the scenario was not captured. The complete framework for answering a database data-loss case study is set out below.
+
+   Step 1 — identify the cause of loss
+   ```
+      HARDWARE   : disk failure, controller failure, RAID array lost,
+                   power surge, server destroyed by fire or flood
+      HUMAN      : a DELETE or DROP without a WHERE clause, a wrong
+                   restore, a mistyped path - the COMMONEST cause
+      SOFTWARE   : a database bug, corrupted pages, a failed upgrade,
+                   an application writing bad data
+      MALICIOUS  : ransomware, a disgruntled insider, SQL injection
+      ENVIRONMENT: fire, flood, theft of the server
+   ```
+
+   Step 2 — establish the two numbers that decide everything
+   ```
+      RPO (Recovery Point Objective) : how much data may be lost
+                                       "at most 15 minutes"
+      RTO (Recovery Time Objective)  : how long the outage may last
+                                       "back within 1 hour"
+   ```
+   - Every technical choice below follows from these two figures, and they are agreed with the business, not with IT.
+
+   Step 3 — the immediate response
+   ```
+      1. STOP further writing to the affected database, so that the
+         damage is not overwritten and recovery stays possible.
+      2. Do NOT restart the service blindly - it may replay the fault.
+      3. Take a BACKUP OF THE CURRENT DAMAGED STATE before touching
+         anything. If the restore goes wrong, this is the only copy left.
+      4. Identify exactly WHAT was lost and WHEN - which tables, which
+         rows, and the timestamp of the last good state.
+      5. Inform the stakeholders and the regulator, if reporting is required.
+   ```
+
+   Step 4 — recover, by the method that fits the cause
+   ```
+      POINT-IN-TIME RECOVERY - the normal case for accidental deletion
+
+         1. Restore the last FULL backup
+         2. Apply the DIFFERENTIAL backup
+         3. Replay the TRANSACTION LOGS up to the second BEFORE the error
+
+         SQL Server :
+            RESTORE DATABASE bank FROM DISK='full.bak' WITH NORECOVERY;
+            RESTORE DATABASE bank FROM DISK='diff.bak' WITH NORECOVERY;
+            RESTORE LOG bank FROM DISK='log.trn'
+                   WITH STOPAT = '2026-09-04 10:59:00', RECOVERY;
+
+         Oracle :
+            RMAN> RESTORE DATABASE;
+            RMAN> RECOVER DATABASE UNTIL TIME "TO_DATE('...','...')";
+
+         MySQL :
+            mysql < full_backup.sql
+            mysqlbinlog --stop-datetime="2026-09-04 10:59:00" \
+                        mysql-bin.000012 | mysql
+   ```
+   ```
+      FLASHBACK - Oracle, for a recent logical error, and much faster
+         FLASHBACK TABLE customers TO TIMESTAMP
+                 (SYSTIMESTAMP - INTERVAL '30' MINUTE);
+         FLASHBACK TABLE customers TO BEFORE DROP;   -- from the recycle bin
+
+      FAILOVER - for a hardware or site failure
+         Switch to the synchronous standby, which has RPO = 0.
+   ```
+
+   Step 5 — verify before declaring success
+   ```
+      Row counts against a known reference
+      Referential integrity checks
+      Application-level reconciliation - do the ledger totals balance?
+      Corruption check : DBCC CHECKDB , or RMAN VALIDATE
+      Have the business confirm the data is correct, not just present
+   ```
+
+   Step 6 — the root-cause analysis and the prevention plan
+   ```
+      BACKUP - the 3-2-1 rule
+           3 copies , 2 media types , 1 off-site
+           Weekly full + daily differential + 15-minute log backup
+           At least one IMMUTABLE or air-gapped copy against ransomware
+           Backups ENCRYPTED, catalogued and TEST-RESTORED regularly
+
+      REPLICATION
+           SYNCHRONOUS to a near DR site  -> RPO = 0
+           ASYNCHRONOUS to a distant site -> survives a regional disaster
+           Oracle Data Guard, SQL Server Always On, MySQL Group Replication
+
+      REDUNDANCY
+           RAID 10 for the data files, RAID 1 for the transaction log,
+           clustered servers, dual power, UPS and generator
+
+      ACCESS CONTROL - because most loss is human
+           Least privilege ; no shared DBA accounts ; separation of duties
+           Change control on production
+           Review every DELETE or UPDATE that has no WHERE clause
+           Test on a staging copy first
+           Audit log of every action
+
+      MONITORING
+           Alert on failed backup jobs, replication lag, disk space and
+           corruption checks. A silently broken replication link is how
+           "zero data loss" quietly becomes a week of loss.
+
+      DRILLS
+           A real failover exercise at least once a year, with the ACTUAL
+           RTO and RPO achieved recorded and the gaps fixed.
+   ```
+
+   The essential point for any such case study
+   ```
+      RAID IS NOT A BACKUP.
+
+      RAID protects against DISK FAILURE only. A dropped table, a
+      ransomware attack, a corrupted page, a fire or a theft is written
+      faithfully to every disk in the array at the same instant.
+
+      Only a separate, tested, off-site backup protects against those.
+   ```
+
+   - For a Bangladeshi bank there is also a compliance dimension worth stating: `Bangladesh Bank's ICT Security Guideline` requires a DR site, documented business continuity planning, periodic DR drills and incident reporting, so a data-loss case study must include the notification and documentation steps, not only the technical recovery.
 
 3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 333 (ET: BIBM)]*
 
