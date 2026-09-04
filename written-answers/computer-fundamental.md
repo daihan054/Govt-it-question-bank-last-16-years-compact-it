@@ -2331,23 +2331,293 @@
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 305 (ET: BIBM)]*
 
+   Answer: For a data centre cooling load, a **diesel standby generator** is the standard and preferred choice.
+
+   Comparison by fuel type
+
+   | Fuel | Cost | Availability | Runtime | Suitability |
+   |---|---|---|---|---|
+   | **Diesel** | Moderate purchase, moderate running cost | Widely available and easily stored on site | Long — large fuel tanks are practical | **Best for standby data centre use** |
+   | Natural gas | Lower running cost | Needs a piped supply, which may fail in a disaster | Unlimited while the pipe works | Good only where the gas grid is reliable |
+   | Petrol (gasoline) | Cheap unit, expensive to run | Available | Short, fuel degrades in storage | Small loads only, not data centres |
+   | Solar + battery | Very high capital | Free energy | Depends on battery bank | Supplementary, not primary standby |
+
+   Why diesel is preferred
+   - **Reliability on start** — a diesel genset reaches full load within 10-15 seconds, which is what the UPS bridge is sized for.
+   - **High power density** — cooling loads (CRAC/CRAH units and chillers) draw large currents; diesel handles them well.
+   - **On-site fuel storage** — during a flood or grid failure the piped gas supply may also fail, but stored diesel does not.
+   - **Proven and serviceable** — spare parts and technicians are available locally in Bangladesh.
+
+   Recommendation summary
+   - **Generator type**: three-phase, water-cooled diesel standby genset with an AMF (Auto Mains Failure) panel and ATS (Automatic Transfer Switch).
+   - **Sizing**: rated for the full cooling load plus 25% headroom, so it is not run at 100% continuously.
+   - **Redundancy**: N+1 configuration for Tier III or Tier IV, so one generator can fail or be serviced without loss of cooling.
+   - **Fuel storage**: at least 24-72 hours of runtime on site, with a refuelling contract.
+   - **Budget note**: diesel costs more to run than natural gas, but for a STANDBY unit that runs only a few hours a year, reliability matters far more than fuel efficiency.
+
+   - Note on the wording: the generator supplies AC to the building, and the UPS/rectifier converts it to DC where DC is needed. A pure DC generator is used only in specialised DC-powered telecom plants.
+
 2. **Describe the most important factors of data center for banking organization.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
+
+   Answer: A banking data centre carries different priorities from a general one, because downtime and data loss both have legal and financial consequences.
+
+   (a) Availability and redundancy
+   - Target Tier III or Tier IV — 99.982% or 99.995% uptime.
+   - N+1 or 2N redundancy on power, cooling and network paths.
+   - Dual utility feeds, UPS banks and standby generators.
+
+   (b) Security
+   - **Physical** — biometric access control, mantrap, CCTV, 24/7 guards, visitor logging.
+   - **Logical** — firewalls, IPS/IDS, network segmentation, encryption at rest and in transit.
+   - **Compliance** — Bangladesh Bank ICT Security Guideline, PCI DSS for card data, ISO 27001.
+
+   (c) Disaster recovery and business continuity
+   - A **DR site in a geographically separate seismic and flood zone**, which Bangladesh Bank requires.
+   - Defined **RTO (Recovery Time Objective)** and **RPO (Recovery Point Objective)**, with regular DR drills.
+   - Real-time or near-real-time data replication.
+
+   (d) Power
+   - Redundant UPS with sufficient battery autonomy, standby generators with 24-72 hours of fuel, and an ATS for automatic changeover.
+
+   (e) Cooling
+   - Precision CRAC/CRAH units, hot-aisle/cold-aisle containment, redundant chillers, and temperature and humidity monitoring.
+
+   (f) Network
+   - Redundant links from at least two different ISPs following physically separate routes, core switch redundancy, and adequate bandwidth for branch and ATM traffic.
+
+   (g) Fire protection
+   - VESDA early smoke detection and a clean-agent suppression system (FM-200 or NOVEC), never water sprinklers over live equipment.
+
+   (h) Monitoring and management
+   - DCIM for power, cooling and asset monitoring; NOC with 24/7 staffing; alerting and audit logging.
+
+   (i) Scalability and data sovereignty
+   - Room to grow as branches and digital transactions increase, and compliance with rules requiring customer data to remain inside the country.
 
 3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
 
+   Answer: Energy efficiency is measured by **PUE (Power Usage Effectiveness) = Total facility power ÷ IT equipment power**. A PUE of 1.0 is perfect; a typical older data centre sits at 1.8-2.0, meaning almost as much power goes to cooling and losses as to the servers themselves.
+
+   Main challenges
+   - **Cooling dominates non-IT power** — cooling can be 35-40% of total consumption. Reducing it without risking equipment temperature is the central difficulty.
+   - **Redundancy conflicts with efficiency** — N+1 and 2N designs mean UPS units and chillers run at partial load, where their efficiency is lowest. A UPS at 30% load is far less efficient than at 80%.
+   - **Server underutilisation** — many servers run at 10-20% CPU while drawing 50-60% of peak power. Idle servers consume power for no output.
+   - **Legacy equipment** — older servers, UPS units and CRAC units are far less efficient, but replacing working equipment is capital-expensive.
+   - **Poor airflow management** — hot and cold air mixing forces the cooling system to work harder. Missing blanking panels and untidy cabling under raised floors are common causes.
+   - **Variable and unpredictable load** — capacity must be sized for peak, so it is oversized most of the time.
+   - **Measurement gaps** — without per-rack and per-circuit metering, there is no data to optimise against.
+   - **Uptime versus efficiency trade-off** — operators are judged on availability, so they run cooling colder than necessary "to be safe".
+   - **Local climate** — in Bangladesh's hot, humid climate, free cooling (using outside air) is viable for far fewer hours per year than in temperate countries.
+   - **Cost and disruption of retrofitting** — containment, airflow redesign and equipment replacement need downtime, which a bank cannot easily schedule.
+
+   Practical measures that work
+   - Hot-aisle/cold-aisle containment and blanking panels, raising the supply air temperature within ASHRAE limits, virtualization and consolidation to raise server utilisation, decommissioning "zombie" servers, variable-speed fans and pumps, high-efficiency modular UPS, and DCIM-based continuous monitoring.
+
 4. **What do you mean by national data center?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
+
+   Answer: A national data centre is a centralised, government-owned facility that hosts the data, applications and IT infrastructure of the country's public sector, providing a single secure and standardised platform for e-government services.
+
+   Purpose
+   - Consolidates scattered ministry-level servers into one professionally managed facility.
+   - Guarantees data sovereignty — citizen data stays inside the country.
+   - Provides shared hosting, cloud services, disaster recovery and connectivity to all government agencies.
+   - Reduces duplicated spending, since each ministry no longer builds its own server room.
+
+   In Bangladesh
+   - The **National Data Center (NDC)** at Bangladesh Computer Council (BCC), Agargaon, Dhaka.
+   - The **Bangladesh Data Center Company Limited (BDCCL)** operates the **4-Tier National Data Center at Kaliakoir Hi-Tech Park**, one of the largest Tier IV facilities in the region, inaugurated in 2019.
+   - It hosts the National Portal, NID database, e-GP, land records, health and education systems, and the Bangladesh Government Cloud (BGD e-GOV cloud).
+   - A separate **Disaster Recovery site in Jessore** keeps a replica, so a disaster at one location does not lose national data.
+
+   Key requirements
+   - Very high availability (Tier III or IV), strong physical and cyber security, disaster recovery in a separate seismic zone, scalability, and 24/7 monitoring.
 
 5. **What is DCIM in a data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
 
+   Answer: **DCIM (Data Center Infrastructure Management)** is software that monitors, measures and manages the physical infrastructure of a data centre — power, cooling, space and assets — and links it with the IT equipment running on top.
+
+   What DCIM monitors
+   - **Power** — intelligent rack PDUs, floor PDUs, UPS status, battery health, load percentage and runtime estimates, remote power panels and busways.
+   - **Cooling** — CRAC/CRAH units, chiller status, temperature and humidity sensors, airflow.
+   - **Space and capacity** — rack elevation diagrams, free U-space, weight limits.
+   - **Assets** — a complete inventory of every server, switch and cable, with its exact rack location and port.
+   - **Environment** — leak detection, smoke, door access.
+
+   Main functions
+   - **Real-time monitoring and alerting** — an alarm before a problem becomes an outage.
+   - **Capacity planning** — answers "where can I install 5 more servers with enough power and cooling?" without a physical survey.
+   - **Energy efficiency** — measures PUE and identifies where energy is wasted.
+   - **Change and workflow management** — plans and tracks installations and moves.
+   - **Reporting** — for management, audit and regulatory compliance.
+
+   Benefits
+   - Prevents outages caused by overloaded circuits or hot spots, avoids stranded capacity, extends equipment life, and provides the documented evidence auditors require.
+
+   - Common products: Schneider EcoStruxure IT, Sunbird dcTrack, Nlyte, Cormant-CS, and the open-source NetBox for asset and IP management.
+
 6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
+
+   Answer: Data centre tiering is the classification system defined by the **Uptime Institute**, rating a facility from Tier I to Tier IV according to the redundancy of its power and cooling infrastructure, and therefore its guaranteed availability.
+
+   Comparison of the four tiers
+
+   | Feature | Tier I | Tier II | Tier III | Tier IV |
+   |---|---|---|---|---|
+   | Uptime guarantee | 99.671% | 99.741% | 99.982% | 99.995% |
+   | Annual downtime | about 28.8 hours | about 22.0 hours | about 1.6 hours | about 26.3 minutes |
+   | Power/cooling paths | Single | Single | Multiple, one active | Multiple, all active |
+   | Redundant components | None | Partial (N+1) | N+1 | 2N or 2N+1 |
+   | Concurrently maintainable | No | No | **Yes** | Yes |
+   | Fault tolerant | No | No | No | **Yes** |
+   | Maintenance needs shutdown | Yes | Yes | No | No |
+   | Typical user | Small business | SME | Enterprise, bank | National infrastructure, large bank |
+   | Relative cost | Lowest | Low | High | Highest |
+
+   Illustrative diagrams
+
+   ```
+   TIER I — single path, no redundancy
+       Utility ──> UPS ──> PDU ──> Server
+       (any single failure stops everything)
+
+   TIER II — single path, redundant components
+       Utility ──> UPS (N+1) ──> PDU ──> Server
+       (a spare UPS module exists, but still one path)
+
+   TIER III — dual path, one active (concurrently maintainable)
+       Utility A ──> UPS A ──┐
+                             ├──> Server (dual PSU)
+       Utility B ──> UPS B ──┘   (path B on standby)
+       (any component can be serviced without shutdown)
+
+   TIER IV — dual path, both active (fault tolerant)
+       Utility A ──> UPS A ──> PDU A ──┐
+                                        ├──> Server (dual PSU)
+       Utility B ──> UPS B ──> PDU B ──┘
+       (both paths live; any single failure is survived automatically)
+   ```
+
+   The two key distinctions to state
+   - **Concurrently maintainable (Tier III)** — any single component can be taken out for maintenance without stopping the IT load.
+   - **Fault tolerant (Tier IV)** — any single UNPLANNED failure is survived automatically, with no human intervention.
+
+   - Bangladesh's Kaliakoir National Data Center is a Tier IV facility; most commercial bank data centres in the country target Tier III.
 
 7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 751 (ET: N/A)]*
 
+   Answer: **Dynamic capacity provisioning** means automatically adding or removing computing resources — servers, VMs, containers, storage, bandwidth — in real time as the workload rises and falls, instead of keeping a fixed amount of capacity permanently allocated.
+
+   How it works
+   - Monitoring agents watch metrics such as CPU utilisation, memory, request rate and queue length.
+   - Threshold or predictive rules trigger scaling: "if average CPU exceeds 70% for 5 minutes, add an instance".
+   - New instances start automatically and join the load balancer; when demand falls, surplus instances are stopped.
+   - Idle physical servers can then be powered down or put into a low-power state.
+
+   Why it is essential for a data centre
+   - **Cost efficiency** — capacity is paid for only while it is used. Static provisioning for peak load means most capacity sits idle most of the time.
+   - **Energy saving** — idle servers still draw 50-60% of peak power. Consolidating workloads and powering down empty hosts directly reduces the electricity and cooling bill, improving PUE.
+   - **Handles unpredictable demand** — a bank's traffic spikes on salary day and before Eid. Manual provisioning cannot react fast enough.
+   - **Better resource utilisation** — raises typical server utilisation from 15% to 60-70%.
+   - **Performance and SLA compliance** — capacity grows before response time degrades, so service levels are met.
+   - **Faster deployment** — new capacity appears in minutes, not weeks of procurement.
+   - **Supports multi-tenancy** — resources move between tenants as their needs change.
+
+   Challenges to note
+   - Scaling delay (a VM takes minutes to boot, though a container takes seconds), the risk of oscillation if thresholds are badly tuned, licensing costs that scale with instance count, and stateful applications that cannot simply be duplicated.
+
+   - Implementations: AWS Auto Scaling, Azure VM Scale Sets, Kubernetes Horizontal Pod Autoscaler, VMware DRS.
+
 8. **Write down the element of data center.** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1125 (ET: BREB)]*
+
+   Answer: A data centre is built from four groups of elements.
+
+   (a) IT infrastructure — the equipment that does the work
+   - **Servers** — rack, blade or tower servers running the applications.
+   - **Storage** — SAN, NAS, disk arrays and tape backup.
+   - **Network** — core and access switches, routers, firewalls, load balancers, structured cabling.
+   - **Racks and cabinets** — 42U racks housing the equipment, with cable management.
+
+   (b) Power infrastructure
+   - **Utility feed**, ideally two independent feeds.
+   - **UPS** — bridges the gap until the generator starts, and conditions the power.
+   - **Standby generator** with on-site fuel storage.
+   - **ATS (Automatic Transfer Switch)** and **PDU (Power Distribution Unit)** at floor and rack level.
+   - Earthing, surge protection and lightning arresters.
+
+   (c) Cooling and environment
+   - **Precision air conditioning** — CRAC or CRAH units, not comfort AC.
+   - **Hot-aisle / cold-aisle layout** with containment.
+   - **Raised floor** or overhead cable trays for airflow and cabling.
+   - Temperature and humidity sensors, leak detection.
+
+   (d) Physical security and safety
+   - Biometric and card access control, mantrap entry, CCTV, 24/7 security staff.
+   - **Fire detection and suppression** — VESDA smoke detection with clean-agent suppression (FM-200 / NOVEC), never water over live equipment.
+
+   (e) Management and monitoring
+   - **DCIM software**, **NOC (Network Operations Centre)**, monitoring and alerting systems, and documented operating procedures.
+
+   (f) Redundancy and continuity
+   - N+1 or 2N configurations, and a **Disaster Recovery site** in a different geographic zone.
 
 9. **Write down difference between Online UPS and Offline UPS.** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159-1160 (ET: BUET)]*
 
+   Answer: The difference is whether the load is ALWAYS fed through the inverter, or only after the mains fails.
+
+   | Point | Online UPS (double conversion) | Offline UPS (standby) |
+   |---|---|---|
+   | Normal operation | Mains → rectifier → battery/DC bus → inverter → load. The inverter always feeds the load | Mains passes straight to the load; the inverter is idle |
+   | Transfer time | **Zero** — there is nothing to switch | 4-10 milliseconds while the relay switches |
+   | Power conditioning | Complete — output is a clean regenerated sine wave, isolated from all mains disturbance | None — mains noise, sag and surge pass through to the load |
+   | Output waveform | Pure sine wave | Often simulated/square sine wave in cheaper units |
+   | Protection against | All nine power problems including sag, surge, noise, frequency variation | Mainly blackout and severe voltage swing |
+   | Efficiency | Lower (85-92%), because of double conversion | Higher (95-98%) in normal operation |
+   | Heat and cost | More heat, higher price | Less heat, cheaper |
+   | Battery wear | Battery is float-charged continuously | Battery is used only during outage |
+   | Used for | Servers, data centres, medical and industrial equipment | Home PC, small office equipment |
+
+   Line-interactive UPS — the middle option
+   - Adds an AVR (automatic voltage regulator) so it can correct voltage sag and surge without switching to battery. Transfer time 2-4 ms. Widely used for small servers and network equipment.
+
+   - For a bank's data centre the answer is always ONLINE UPS: servers with switching power supplies can crash on even a few milliseconds of interruption, and the double-conversion design guarantees zero transfer time and full isolation from a poor-quality grid.
+
 10. **Explain the component of Data Center.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1222-1223 (ET: N/A)]*
+
+    Answer: A data centre has five component groups, each essential.
+
+    ```mermaid
+    flowchart TD
+        A[Data Center] --> B[IT Infrastructure<br/>servers, storage, network]
+        A --> C[Power<br/>UPS, generator, PDU, ATS]
+        A --> D[Cooling<br/>CRAC, containment, sensors]
+        A --> E[Security & Safety<br/>access control, CCTV, fire suppression]
+        A --> F[Management<br/>DCIM, NOC, monitoring]
+    ```
+
+    **(a) IT infrastructure**
+    - **Servers** — rack-mounted or blade servers running applications and databases.
+    - **Storage systems** — SAN and NAS arrays, backup tape libraries.
+    - **Network equipment** — core switches, access switches, routers, firewalls, load balancers.
+    - **Structured cabling** — fibre and copper, organised in trays and patch panels.
+    - **Racks** — standard 42U cabinets with cable management and blanking panels.
+
+    **(b) Power infrastructure**
+    - Dual utility feeds where available, **UPS** for instantaneous backup, **diesel generator** for extended outage, **ATS** for automatic changeover, and **PDUs** distributing power to each rack. Plus earthing and surge protection.
+
+    **(c) Cooling and environmental control**
+    - **Precision air conditioning (CRAC/CRAH)** maintaining about 18-27 °C and 40-60% relative humidity.
+    - **Hot-aisle / cold-aisle** arrangement with containment to stop hot and cold air mixing.
+    - Raised floor or overhead distribution, temperature and humidity sensors, leak detection.
+
+    **(d) Physical security and fire safety**
+    - Biometric access control, mantrap entry, CCTV, 24/7 guards, visitor logging.
+    - **VESDA** early smoke detection with **clean-agent suppression (FM-200 / NOVEC)**, which extinguishes fire without damaging electronics.
+
+    **(e) Management and monitoring**
+    - **DCIM software** tracking power, cooling, space and assets.
+    - **NOC** staffed round the clock, alerting systems, documented SOPs, and a **Disaster Recovery site** in a separate geographic zone.
+
+    - All five must be designed together. A data centre with excellent servers but single-path power is still a Tier I facility, and its availability is set by its weakest component.
 
 ## Blockchain & Emerging Technologies (8)
 
