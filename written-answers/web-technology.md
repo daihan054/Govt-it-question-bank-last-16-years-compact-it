@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 77 questions
+**Table of Contents** — 7 subtopics · 80 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-30) | 30 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-33) | 33 |
 | 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-16) | 16 |
 | 3 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-8) | 8 |
@@ -15,11 +15,11 @@
 
 ---
 
-## HTML & Web Fundamentals (30)
+## HTML & Web Fundamentals (33)
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: The HTML image tag is `<img>`. It embeds an image in a web page.
+Answer: The HTML image tag is `<img>`. It embeds an image in a web page.
    ```html
       <img src="photo.jpg" alt="A red rose" width="300" height="200">
    ```
@@ -71,7 +71,7 @@
 
 2. **What is URL? Give an Example.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
-   Answer: What a URL is
+Answer: What a URL is
    - `URL` stands for `Uniform Resource Locator`. It is the complete address that identifies `where a resource is on the internet and how to fetch it`.
    ```
       EXAMPLE
@@ -129,6 +129,11 @@
    - One practical note: characters that are not allowed in a URL must be `percent-encoded` — a space becomes `%20`, and an `&` inside a value becomes `%26`. Failing to encode a query value is a common source of broken links and of `injection` vulnerabilities.
 
 3. **(খ) নিচের টেবিলটি তৈরি করার জন্য HTML কোড লিখুন :** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 413 (ET: N/A)]*
+
+| Std name | Compulsory | Optional |
+|---|---|---|
+| Hasan | Bangla | English | ICT | Math |
+| Nafis | Bangla | English | ICT | Biology |
 
 | Std name | Compulsory | Optional |
 |---|---|---|
@@ -225,7 +230,7 @@
 
 4. **একটি ওয়েবসাইটের (Website) কয়টি অংশ থাকে এবং কী কী?** *[সাধারণ জ্ঞান: বিজ্ঞান ও প্রযুক্তি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: (Answered in English, as required for IT topics.) A website has `four` main parts, in the sense of the sections that appear on a page.
+Answer: (Answered in English, as required for IT topics.) A website has `four` main parts, in the sense of the sections that appear on a page.
    ```
       +==========================================================+
       |                       HEADER                             |
@@ -297,7 +302,7 @@
 
 5. **(ক) ওয়েব ডিজাইন কী? স্ট্যাটিক ও ডায়নামিক ওয়েবসাইটের পার্থক্য ব্যাখ্যা করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: (Answered in English, as required for IT topics.) What web design is
+Answer: (Answered in English, as required for IT topics.) What web design is
    - `Web design` is the process of planning and creating the `look, layout and usability` of a website — what the visitor sees and how they interact with it. It covers the visual design and the front-end implementation.
    ```
       WHAT IT INVOLVES
@@ -364,7 +369,7 @@
 
 6. **What is the popular way of linking many documents?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: The popular way of linking many documents is the `hyperlink`, created with the anchor tag `<a>` and its `href` attribute.
+Answer: The popular way of linking many documents is the `hyperlink`, created with the anchor tag `<a>` and its `href` attribute.
    ```html
       <a href="page2.html">Go to page 2</a>
    ```
@@ -447,7 +452,7 @@
 
 7. **Which tag is used for creating button in html?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: The `<button>` tag is used to create a button in HTML.
+Answer: The `<button>` tag is used to create a button in HTML.
    ```html
       <button type="button">Click Me</button>
    ```
@@ -521,7 +526,7 @@
 
 8. **(ক) HTML Element কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 607 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What an HTML element is
+Answer: (Answered in English, as required for IT topics.) What an HTML element is
    - An `HTML element` is a complete unit of an HTML document. It normally consists of a `start tag`, the `content`, and an `end tag`.
    ```
       <p>This is a paragraph.</p>
@@ -623,7 +628,7 @@
 
 9. **(খ) Static ও Dynamic ওয়েবসাইটের মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 607 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Difference between static and dynamic websites
+Answer: (Answered in English, as required for IT topics.) Difference between static and dynamic websites
 
    | Point | Static website | Dynamic website |
    |---|---|---|
@@ -687,7 +692,7 @@
 
 10. **অথবা, (ক) উদাহরণসহ HTML webpage এর গঠন ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 608 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Structure of an HTML web page
+Answer: (Answered in English, as required for IT topics.) Structure of an HTML web page
     - Every HTML page has the same skeleton: a `doctype`, a root `<html>` element, and inside it exactly two children — `<head>` for information `about` the page, and `<body>` for the content that is `displayed`.
     ```
        +--------------------------------------------------+
@@ -805,6 +810,14 @@
       - Yellow Capsicum
       - Red Capsicum
 
+1. Fruits
+      (a) Mango
+      (b) Orange
+   2. Vagetables
+      - Green Capsicum
+      - Yellow Capsicum
+      - Red Capsicum
+
     Answer: (Answered in English, as required for IT topics.) The list needs an `ordered list` at the outer level, with a `nested ordered list` using lower-case letters under "Fruits" and a `nested unordered list` under "Vegetables".
 
     The HTML code
@@ -907,7 +920,7 @@
 
 12. **অথবা, নিম্নোক্ত উপাদানগুলোসহ একটি HTML page লিখুন। Hyperlink, Ordered list, Unordered list, Form (Tent box, Check box, Option Button).** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The page below contains a `hyperlink`, an `ordered list`, an `unordered list`, and a `form` with a text box, check boxes and radio (option) buttons.
+Answer: (Answered in English, as required for IT topics.) The page below contains a `hyperlink`, an `ordered list`, an `unordered list`, and a `form` with a text box, check boxes and radio (option) buttons.
 
     ```html
     <!DOCTYPE html>
@@ -1045,7 +1058,7 @@
 
 13. **(ক) HTML এবং CSS কী? সংক্ষেপে ব্যাখ্যা করুন। শুধুমাত্র HTML এবং CSS ব্যবহার করে Web Site তৈরির ক্ষেত্রে সীমাবদ্ধতা আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) What HTML is
+Answer: (Answered in English, as required for IT topics.) What HTML is
     - `HTML` stands for `HyperText Markup Language`. It provides the `structure and content` of a web page — headings, paragraphs, images, links, tables and forms. It is a `markup` language, not a programming language: it has no variables, no conditions and no loops.
     ```html
        <h1>Welcome</h1>
@@ -1127,7 +1140,7 @@
 
 14. **(খ) Static Web Page এবং Dynamic Web Page এর মধ্যে পার্থক্য আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Difference between a static web page and a dynamic web page
+Answer: (Answered in English, as required for IT topics.) Difference between a static web page and a dynamic web page
 
     | Point | Static web page | Dynamic web page |
     |---|---|---|
@@ -1187,7 +1200,7 @@
 
 15. **(ক) কোন প্রতিষ্ঠানের Web page development এ HTML এবং CSS এর ভূমিকা কি? শুধুমাত্র HTML এবং CSS ব্যবহার করে কোন ধরনের Web Page Development করা যেতে পারে?** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 771 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The role of HTML and CSS in an organisation's web page development
+Answer: (Answered in English, as required for IT topics.) The role of HTML and CSS in an organisation's web page development
 
     HTML — structure and content
     - `HTML (HyperText Markup Language)` provides the `skeleton` of every page. It defines what each piece of content `is` — a heading, a paragraph, a table, a form field, a link.
@@ -1282,7 +1295,7 @@
 
 16. **(ii) HTML ও CSS কী?** *[BPSC Assistant Network Engineer 2020 compact it 950-951 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) HTML
+Answer: (Answered in English, as required for IT topics.) HTML
     - `HTML` stands for `HyperText Markup Language`. It is the standard language used to create the `structure and content` of a web page — headings, paragraphs, images, links, lists, tables and forms.
     ```html
        <h1>Welcome</h1>
@@ -1352,7 +1365,7 @@
 
 17. **একটি Image ও একটি Web site URL HTML প্রদর্শন করার জন্য প্রয়োজনীয় code লিখুন?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
-    Answer: The code needed to display an image and a website URL (a hyperlink).
+Answer: The code needed to display an image and a website URL (a hyperlink).
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -1431,7 +1444,7 @@
 
 18. **Write down the description of `<header>`, `<footer>`, `<section>` and `<article>` tag of new HTML5.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1057 (ET: AUST)]*
 
-    Answer: These are four of the `semantic` elements introduced in HTML5. They replace anonymous `<div>` containers with tags that state `what the content is`.
+Answer: These are four of the `semantic` elements introduced in HTML5. They replace anonymous `<div>` containers with tags that state `what the content is`.
 
     `<header>`
     - Introductory content for the page or for a section — typically a logo, a site title, a heading, and often the navigation.
@@ -1558,7 +1571,7 @@
 
 19. **(ক) Web portal ও Web hosting কী? Web hosting এর প্রয়োজনীয়তা ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1089-1090 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) What a web portal is
+Answer: (Answered in English, as required for IT topics.) What a web portal is
     - A `web portal` is a website that acts as a `single gateway` to many different services, applications and sources of information, usually personalised for the logged-in user.
     ```
        A WEBSITE presents information ; a PORTAL gives ACCESS to
@@ -1669,7 +1682,7 @@
 
 20. **(ক) Web site কি? Linear/Sequential structure and Tree/Hierarchical structure সচিত্র বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1091 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) What a website is
+Answer: (Answered in English, as required for IT topics.) What a website is
     - A `website` is a collection of `related web pages`, stored on a web server under one `domain name`, and reachable over the internet. The entry page is called the `home page`.
     ```
        A website is made of three things :
@@ -1777,6 +1790,12 @@
     - The two other structures worth naming in one line: the `webbed` or `network` structure, where every page links to many others, as Wikipedia does — flexible, but the visitor can easily get lost; and the `hybrid`, which most real sites actually use — a tree for the overall site with a linear sequence inside a checkout or registration flow.
 
 21. **(খ) নিচের টেবিলটি তৈরি করার জন্য HTML কোড লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1091 (ET: N/A)]*
+
+| Customer Name | Product Name |  |  | Product Manufacturer |
+|---|---|---|---|---|
+| Mr. Jhon | Computer | Printer | Modem | HP |
+|  |  |  |  | HP |
+|  |  |  |  | ASUS |
 
 | Customer Name | Product Name |  |  | Product Manufacturer |
 |---|---|---|---|---|
@@ -1902,7 +1921,7 @@
 
 22. **(b) Explain `<div>`.............`</div>` tag of HTML with an example.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143-1144 (ET: N/A)]*
 
-    Answer: What `<div>` is
+Answer: What `<div>` is
     - `<div>` is a `block-level container` with no meaning of its own. It groups other elements so they can be styled or positioned together, or manipulated as a unit by JavaScript. The name is short for `division`.
     ```
        It has NO visual effect by itself - it adds no border, no
@@ -2010,7 +2029,7 @@
 
 23. **Write HTML5 media tags name.** *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
-    Answer: The HTML5 media tags are:
+Answer: The HTML5 media tags are:
     ```
        <audio>    plays sound - music, a recording
        <video>    plays video
@@ -2098,7 +2117,7 @@
 
 24. **Write down the proper use of these semantics in HTML-`<header>`, `<footer>`, `<article>` and `<section>`.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*, *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
-    Answer: These four `semantic` elements from HTML5 replace anonymous `<div>` containers with tags that state what the content `is`.
+Answer: These four `semantic` elements from HTML5 replace anonymous `<div>` containers with tags that state what the content `is`.
 
     `<header>`
     ```
@@ -2219,7 +2238,7 @@
 
 25. **Write down the name of some HTML5 media tag.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
-    Answer: The HTML5 media tags are:
+Answer: The HTML5 media tags are:
     ```
        <audio>    plays sound - music, a recording
        <video>    plays video
@@ -2280,7 +2299,7 @@
 
 26. **What is canvas HTML? What is difference between HTML canvas and SVG?** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
-    Answer: What HTML canvas is
+Answer: What HTML canvas is
     - `<canvas>` is an HTML5 element that provides a `blank rectangular drawing area` on which graphics are drawn `with JavaScript`. The tag itself draws nothing — it only reserves the space.
     ```html
        <canvas id="myCanvas" width="400" height="200"
@@ -2370,7 +2389,7 @@
 
 27. **What are the uses of `<header>`, `<article>`, `<section>` and `<footer>` in html?** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
 
-    Answer: These are four `semantic` elements from HTML5. They render exactly like a `<div>` — their value is that they state `what the content is`.
+Answer: These are four `semantic` elements from HTML5. They render exactly like a `<div>` — their value is that they state `what the content is`.
 
     `<header>` — introductory content
     ```
@@ -2471,7 +2490,7 @@
 
 28. **What is HTML Canvas? Differentiate between canvas and SVG.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 
-    Answer: What HTML Canvas is
+Answer: What HTML Canvas is
     - `<canvas>` is an HTML5 element that provides a `blank rectangular drawing area` on which graphics are drawn `with JavaScript`. The tag itself draws nothing — it only reserves the space.
     ```html
        <canvas id="myCanvas" width="400" height="200"
@@ -2561,7 +2580,7 @@
 
 29. **What is local Storage and session Storage in HTML5?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
-    Answer: `localStorage` and `sessionStorage` are the two parts of the HTML5 `Web Storage API`. Both store data as `key–value pairs` in the browser, on the client side, with no server involvement.
+Answer: `localStorage` and `sessionStorage` are the two parts of the HTML5 `Web Storage API`. Both store data as `key–value pairs` in the browser, on the client side, with no server involvement.
 
     localStorage
     - Stores data with `no expiry`. It survives closing the tab, closing the browser and restarting the computer, and it is `shared across all tabs` of the same origin.
@@ -2643,7 +2662,7 @@
 
 30. **What are the minimum HTML Tags is used web pages? How can your comments at web pages so that browser not read this?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1266 (ET: N/A)]*
 
-    Answer: The minimum HTML tags used in a web page
+Answer: The minimum HTML tags used in a web page
     ```html
     <!DOCTYPE html>
     <html>
@@ -2757,11 +2776,36 @@
     ```
     - The point worth stating at the end: an HTML comment hides text from the `display`, not from the `visitor`. Anything that must genuinely be hidden has to be kept on the server — in a server-side comment or outside the delivered file entirely.
 
+31. **What are SOAP and RESTful APIs? Discuss the differences between them in terms of architecture, format, and usage.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 223]]*
+
+Answer:
+    - **SOAP (Simple Object Access Protocol)**: A standardized, contract-based XML communication protocol that strictly relies on WSDL (Web Services Description Language) definitions and WS-Security specifications.
+    - **RESTful API (Representational State Transfer)**: An architectural design style that utilizes standard stateless HTTP methods (GET, POST, PUT, DELETE) to manipulate resources identified by URIs.
+
+    Comparison between SOAP and REST:
+
+    | Feature | SOAP API | RESTful API |
+    |---|---|---|
+    | Underlying Nature | Formal Protocol with strict specifications and standards | Architectural Style with flexible design principles |
+    | Data Format | Strictly XML only | Supports JSON (standard), XML, HTML, and Plain Text |
+    | Transport Protocols | Protocol independent (HTTP, HTTPS, SMTP, TCP, JMS) | Strictly bound to HTTP and HTTPS |
+    | Bandwidth & Speed | Heavier payload; slower parsing due to verbose XML envelopes | Lightweight; faster execution and minimal bandwidth consumption |
+    | State Management | Can be configured as stateful or stateless | Strictly Stateless (every request carries complete context) |
+    | Security Standard | Built-in WS-Security, ACID transaction compliance | Relies on transport-layer TLS/HTTPS, OAuth 2.0, and JWT tokens |
+    | Best Suited For | Enterprise banking, payment gateways, legacy telecommunications | Modern web apps, mobile backends, cloud microservices |
+
+32. **Translation [Bangla to English]** *[compact it 522]*
+Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
+
+Answer:
+    অনুবাদ (বঙ্গানুবাদ):
+    ব্যাংকিং খাতে সক্ষমতা উন্নয়ন অত্যন্ত গুরুত্বপূর্ণ, কারণ দ্রুত পরিবর্তনশীল প্রেক্ষাপটে এ শিল্প প্রতিনিয়ত নতুন নতুন চ্যালেঞ্জ ও সম্ভাবনার মুখোমুখি হচ্ছে। জটিল আর্থিক পরিবেশকে কার্যকরভাবে পরিচালনার লক্ষ্যে ব্যাংকিং পেশাজীবীদের জ্ঞান, দক্ষতা ও সামর্থ্য বৃদ্ধি করাই এর মূল লক্ষ্য। এর অন্তর্ভুক্ত রয়েছে আর্থিক সাক্ষরতা, ঝুঁকি ব্যবস্থাপনা, আইনি ও নীতিগত বাধ্যবাধকতা পরিপালন এবং প্রযুক্তিগত দক্ষতার মতো ক্ষেত্রসমূহে প্রশিক্ষণ প্রদান। ব্যাংকসমূহ যখন উন্নত প্রযুক্তি ও ডিজিটাল ব্যাংকিং সলিউশন সমন্বিত করছে, তখন পরিচালনগত দক্ষতা বৃদ্ধি এবং গ্রাহকসেবার মানোন্নয়নে এসব প্রযুক্তি ব্যবহারের জন্য বিশেষায়িত দক্ষতার প্রয়োজনীয়তা ক্রমাগত বাড়ছে। সক্ষমতা উন্নয়নমূলক উদ্যোগসমূহ নেতৃত্ব বিকাশের ওপরও গুরুত্বারোপ করে, যা অর্থনৈতিক অনিশ্চয়তা ও প্রতিযোগিতামূলক চাপের মধ্য দিয়ে ব্যাংকগুলোকে পরিচালিত করতে ঊর্ধ্বতন নির্বাহীদের কৌশলগত চিন্তাভাবনা ও সিদ্ধান্ত গ্রহণের সক্ষমতা বৃদ্ধি করে।
+
 ## JavaScript & jQuery (DOM & Validation) (16)
 
 1. **Jquery for email validation** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: jQuery email validation
+Answer: jQuery email validation
    ```html
    <!DOCTYPE html>
    <html>
@@ -2876,7 +2920,7 @@
 
 2. **Write Javascript code to check NID validity?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1359 (ET: BUET)]*
 
-   Answer: A Bangladeshi `NID` (National ID) number is `10`, `13` or `17` digits long. The 17-digit form begins with a 4-digit year of birth, and the older forms are 13 and 10 digits.
+Answer: A Bangladeshi `NID` (National ID) number is `10`, `13` or `17` digits long. The 17-digit form begins with a 4-digit year of birth, and the older forms are 13 and 10 digits.
    ```javascript
    function isValidNID(nid) {
 
@@ -3004,7 +3048,7 @@
 
 3. **Which tag is used to write JavaScript in html?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: The `<script>` tag is used to write JavaScript in HTML.
+Answer: The `<script>` tag is used to write JavaScript in HTML.
    ```html
       <script>
           alert("Hello World");
@@ -3080,7 +3124,7 @@
 
 4. **Write Javascript function to validate a customer number where the customer number in 3 uppercase letter and district code followed by 8 digits.** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
 
-   Answer: The customer number is `3 uppercase letters` — the district code — followed by `8 digits`, giving a total length of 11 characters.
+Answer: The customer number is `3 uppercase letters` — the district code — followed by `8 digits`, giving a total length of 11 characters.
    ```javascript
    function validateCustomerNumber(custNo) {
 
@@ -3211,7 +3255,7 @@
 
 5. **Write HTML and Javascript code of following box.** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the figure of the box was not captured with it, so the exact layout cannot be reproduced. The two forms such a question normally asks for are given below, and either can be adapted to whatever box the figure shows.
+Answer: The question is `incomplete` — the figure of the box was not captured with it, so the exact layout cannot be reproduced. The two forms such a question normally asks for are given below, and either can be adapted to whatever box the figure shows.
 
    Version 1 — a dialogue box (alert, confirm, prompt)
    ```html
@@ -3351,7 +3395,7 @@
 
 6. **Explain hoisting in JavaScript?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 761 (ET: N/A)]*
 
-   Answer: What hoisting is
+Answer: What hoisting is
    - `Hoisting` is JavaScript's behaviour of moving `declarations` to the top of their scope before the code runs. The `declaration` is hoisted; the `assignment` is not.
    ```javascript
       console.log(x);      // undefined  - NOT an error
@@ -3456,7 +3500,7 @@
 
 7. **Display element by id in JavaScript?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 762 (ET: N/A)]*
 
-   Answer: An element is fetched by its `id` with `document.getElementById()`, and its content is displayed or changed through `innerHTML` or `textContent`.
+Answer: An element is fetched by its `id` with `document.getElementById()`, and its content is displayed or changed through `innerHTML` or `textContent`.
    ```html
    <!DOCTYPE html>
    <html>
@@ -3586,6 +3630,23 @@
 </html>
 ```
 
+```html
+<html>
+<body>
+<script>
+    for(var x=1;x<=9; x++) {
+        if(x%2==0) {
+            console.log(x+"is an even value.");
+        }
+        else{
+            console.log(x+ "is an odd value.");
+        }
+    }
+</script>
+</body>
+</html>
+```
+
    Answer: The code as given is already complete and correct in its logic. The only defect is the `missing space` before "is", which makes the output read `1is an odd value.` instead of `1 is an odd value.`
 
    The corrected code
@@ -3682,7 +3743,7 @@
 
 9. **Differentiate among $.ajax(), $.get() and $.load() function of jQuery with necessary example.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*, *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
-   Answer: All three are jQuery AJAX methods, but they differ in `flexibility` and in `what they do with the response`.
+Answer: All three are jQuery AJAX methods, but they differ in `flexibility` and in `what they do with the response`.
 
    | Point | `$.ajax()` | `$.get()` | `$.load()` |
    |---|---|---|---|
@@ -3805,7 +3866,7 @@
 
 10. **How do you change the value of a HTML element using HTML DOM?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
 
-    Answer: The value of an HTML element is changed through the DOM by selecting the element and then assigning to the appropriate property. `Which` property depends on the kind of element.
+Answer: The value of an HTML element is changed through the DOM by selecting the element and then assigning to the appropriate property. `Which` property depends on the kind of element.
     ```javascript
        // 1. the CONTENT of an ordinary element
        document.getElementById("demo").innerHTML = "New text";
@@ -3931,7 +3992,7 @@
 
 11. **Difference among $.ajax(), $.load() and $.get().** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
-    Answer: The three are all jQuery AJAX methods, differing in `flexibility` and in `what they do with the response`.
+Answer: The three are all jQuery AJAX methods, differing in `flexibility` and in `what they do with the response`.
 
     | Point | `$.ajax()` | `$.get()` | `$.load()` |
     |---|---|---|---|
@@ -4023,7 +4084,7 @@
 
 12. **How to change html attribute through html DOM?** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163 (ET: N/A)]*, *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
-    Answer: An attribute is changed through the DOM either by assigning to the matching `property` or by calling `setAttribute()`.
+Answer: An attribute is changed through the DOM either by assigning to the matching `property` or by calling `setAttribute()`.
     ```javascript
        var img = document.getElementById("pic");
 
@@ -4156,7 +4217,7 @@
 
 13. **Suppose you've a javaScript code name as “bankScript” write the code for loading in HTML using JS.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
 
-    Answer: An external JavaScript file named `bankScript` is loaded with the `<script>` tag and its `src` attribute.
+Answer: An external JavaScript file named `bankScript` is loaded with the `<script>` tag and its `src` attribute.
     ```html
        <script src="bankScript.js"></script>
     ```
@@ -4279,7 +4340,7 @@
 
 14. **What is closure in JavaScript? Explain with an example?** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
 
-    Answer: What a closure is
+Answer: What a closure is
     - A `closure` is a function that `remembers the variables of the scope in which it was created`, and can still use them even after that outer function has finished executing.
     ```
        A closure is formed whenever a function is defined INSIDE
@@ -4423,7 +4484,7 @@
 
 15. **Difference among $.ajax(), $.load(), $.get().** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
 
-    Answer: The three are jQuery AJAX methods, differing in `flexibility` and in `what they do with the response`.
+Answer: The three are jQuery AJAX methods, differing in `flexibility` and in `what they do with the response`.
 
     | Point | `$.ajax()` | `$.get()` | `$.load()` |
     |---|---|---|---|
@@ -4518,7 +4579,7 @@
 
 16. **What is the working procedure of AJAX?** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1221-1222 (ET: N/A)]*
 
-    Answer: What AJAX is
+Answer: What AJAX is
     - `AJAX` stands for `Asynchronous JavaScript and XML`. It is a technique that lets a web page `exchange data with the server and update part of itself, without reloading the whole page`.
     ```
        WITHOUT AJAX
@@ -4672,9 +4733,9 @@
 
 ## HTTP Protocol (10)
 
-1. What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503 [SO IT 25-07-2026]
+1. **What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503** [SO IT 25-07-2026]
 
-   Answer: The three status codes, with their exact standard reason phrases.
+Answer: The three status codes, with their exact standard reason phrases.
    ```
       (a) 200  ->  OK
       (b) 403  ->  Forbidden
@@ -4752,9 +4813,9 @@
    ```
    - The first digit is what carries the meaning, and it is worth remembering as a rule: `2 = it worked`, `3 = look elsewhere`, `4 = your mistake`, `5 = our mistake`.
 
-2. Describe any two key differences between the HTTP GET and HTTP POST methods used for communication between a web browser and a web server. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+2. **Describe any two key differences between the HTTP GET and HTTP POST methods used for communication between a web browser and a web server.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer: Two key differences between `GET` and `POST`.
+Answer: Two key differences between `GET` and `POST`.
 
    1. Where the data is carried
    ```
@@ -4851,7 +4912,7 @@
 
 3. **6.7 What do the following specific HTTP status codes mean? Write down the exact standard text phrase for each: (a) 200 (b) 403 (c) 503** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-   Answer: The three codes with their exact standard reason phrases.
+Answer: The three codes with their exact standard reason phrases.
    ```
       (a) 200  ->  OK
       (b) 403  ->  Forbidden
@@ -4920,7 +4981,7 @@
 
 4. **(ক) ফর্ম জমা দেয়ার পদ্ধতি GET এবং POST এর মধ্যে পার্থক্য কী, কখন কোন পদ্ধতি ব্যবহার করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Difference between the GET and POST form submission methods
+Answer: (Answered in English, as required for IT topics.) Difference between the GET and POST form submission methods
 
    | Point | GET | POST |
    |---|---|---|
@@ -5028,7 +5089,7 @@
 
 5. **What is cookie? What is its purpose?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
-   Answer: What a cookie is
+Answer: What a cookie is
    - A `cookie` is a small piece of data — a name and a value, usually under `4 KB` — that a web server sends to the browser, and that the browser then `stores and sends back with every subsequent request` to that site.
    ```
       HOW IT WORKS
@@ -5141,7 +5202,7 @@
 
 6. **What is the difference between http and https?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 648 (ET: BUET)], [BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 
-   Answer: Difference between HTTP and HTTPS
+Answer: Difference between HTTP and HTTPS
 
    | Point | HTTP | HTTPS |
    |---|---|---|
@@ -5231,7 +5292,7 @@
 
 7. **(গ) URL কী? একটি URL ক্লিক করার পর Web Page Show করার পূর্ব পর্যন্ত যে কয়টি Step হয় সেগুলির নাম লিখুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What a URL is
+Answer: (Answered in English, as required for IT topics.) What a URL is
    - `URL` stands for `Uniform Resource Locator`. It is the complete address saying `where a resource is and how to fetch it`.
    ```
       https://www.example.com:443/products/list.php?id=25#top
@@ -5344,7 +5405,7 @@
 
 8. **(c) Explain the difference between Stateless and Stateful protocols. Which type of protocol http is?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 885-886 (ET: N/A)]*
 
-   Answer: Stateless and stateful protocols
+Answer: Stateless and stateful protocols
 
    | Point | Stateless protocol | Stateful protocol |
    |---|---|---|
@@ -5437,7 +5498,7 @@
 
 9. **What is the difference between http session and http cookies?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 911 (ET: BUET)]*
 
-   Answer: Difference between an HTTP session and HTTP cookies
+Answer: Difference between an HTTP session and HTTP cookies
 
    | Point | Cookie | Session |
    |---|---|---|
@@ -5541,7 +5602,7 @@
 
 10. **It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?** *[Sadharan Bima Corporation Programmer/ AP/AME 2020 compact it 1002 (ET: DU)], [BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-    Answer: The answer is a `cookie` — more precisely an `HTTP cookie`, also called a web cookie or browser cookie.
+Answer: The answer is a `cookie` — more precisely an `HTTP cookie`, also called a web cookie or browser cookie.
     ```
        DEFINITION
        A cookie is a small piece of data - typically under 4 KB -
@@ -5626,7 +5687,7 @@
 
 1. **What are SOAP and RESTful APIs in web services? State one main difference between SOAP and REST in terms of how they exchange data.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1426 (ET: E-Zone)]*
 
-   Answer: What SOAP is
+Answer: What SOAP is
    - `SOAP (Simple Object Access Protocol)` is a `protocol` for exchanging structured messages between applications. Every message is an `XML envelope` with a strictly defined format, and the service is described by a `WSDL` file.
    ```xml
       <?xml version="1.0"?>
@@ -5704,97 +5765,75 @@
 
 2. **What is API?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
-   Answer: What an API is
-   - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software talks to another`. It states what requests can be made, in what format, and what will come back — while `hiding how the work is actually done`.
+Answer: What an API is
+   - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software communicates with another` — stating what requests may be made, in what format, and what will be returned, while `hiding how the work is done`.
    ```
-      THE IDEA IS ABSTRACTION
-
       An API is a CONTRACT. The caller needs to know only WHAT to
-      send and WHAT comes back, never HOW it is computed. The
-      provider can rewrite the internals completely, and as long as
+      send and WHAT comes back, never HOW it is produced. The
+      provider may rewrite the internals completely, and as long as
       the contract holds, nothing breaks.
    ```
 
-   The analogy usually given
+   The analogy
    ```
-      A RESTAURANT
+      You (client)  ->  the WAITER (API)  ->  the KITCHEN (server)
 
-           You (the client)  ->  the WAITER (the API)  ->  the
-           KITCHEN (the server)
-
-      You read the MENU and place an order in the expected form.
-      You do not enter the kitchen or learn the recipes. The waiter
-      carries the request in and the food back out.
-
-      Change the chef, the stove or the recipe - the menu still
-      works. That is exactly what an API guarantees.
+      You order from the MENU in the expected form. You never enter
+      the kitchen. Change the chef or the recipe - the menu still
+      works.
    ```
 
-   Kinds of API
-   ```
-      WEB API      called over HTTP, between separate systems
-           REST , SOAP , GraphQL
-      LIBRARY API  the functions a library exposes
-           printf() in C , ArrayList in Java
-      OPERATING SYSTEM API   system calls
-           open() , read() , the Win32 API
-      DATABASE API JDBC , ODBC
-      HARDWARE API a device driver interface
-   ```
-
-   Example — a REST web API
+   Example
    ```
       REQUEST
            GET https://api.weather.com/v1/current?city=Dhaka
            Authorization: Bearer <api-key>
 
       RESPONSE
-           {
-             "city": "Dhaka",
-             "temperature": 32,
-             "humidity": 78,
-             "condition": "Partly cloudy"
-           }
+           { "city": "Dhaka", "temperature": 32, "humidity": 78 }
 
-      The application shows 32 degrees. It has no idea where the
-      satellites are, how the forecast is computed, or what
-      database holds it.
+      The application shows 32 degrees, knowing nothing about how
+      the figure was obtained.
+   ```
+
+   Types
+   ```
+      WEB API      over HTTP , between systems : REST , SOAP ,
+                   GraphQL
+      LIBRARY API  the functions a library exposes : printf() ,
+                   ArrayList
+      OS API       system calls : open() , read() , Win32
+      DATABASE API JDBC , ODBC
+      HARDWARE API a device driver interface
+   ```
+
+   Why APIs are used
+   ```
+      REUSE          use a service someone else built
+      ABSTRACTION    the internals may change without breaking the
+           caller
+      INTEGRATION    systems in different languages, written by
+           different companies, work together
+      SECURITY       only what the API exposes is reachable ; the
+           database is never touched directly
+      PARALLEL WORK  front-end and back-end teams agree the
+           interface first, then work at the same time
    ```
 
    Everyday examples
    ```
-      GOOGLE MAPS API        a ride-sharing app shows a map without
-           drawing one
-      bKash / SSLCOMMERZ API an e-commerce site takes a payment
-           without handling card data itself
-      NID VERIFICATION API   a bank checks an applicant's NID
-           against the Election Commission's record
-      SMS GATEWAY API        an application sends an OTP
-      FACEBOOK LOGIN API     "Sign in with Facebook" - no password
-           is stored by the site
-      WEATHER , currency and stock-price APIs
+      Google Maps API      a map inside another application
+      bKash / SSLCOMMERZ   taking a payment without handling card
+           data
+      NID verification     a bank checking an applicant's NID
+      SMS gateway          sending an OTP
+      Facebook Login       signing in without storing a password
    ```
-
-   Why APIs matter
-   ```
-      REUSE          use a service someone else built, instead of
-           building it
-      ABSTRACTION    the internals can change without breaking the
-           caller
-      INTEGRATION    two systems written in different languages,
-           by different companies, can work together
-      SECURITY       only what the API exposes is reachable ; the
-           database is never touched directly
-      PARALLEL WORK  front-end and back-end teams agree the API and
-           then work at the same time
-      SCALABILITY    the provider can move, replicate or rewrite
-           the service freely
-   ```
-   - One point worth stating: an API is a `public URL`. Anyone can call it directly with `curl`, without your application. So `authentication` (an API key, `OAuth 2.0`), `authorisation`, `input validation` and `rate limiting` must all be enforced on the server — the fact that only your own app is supposed to call it proves nothing.
+   - The security point worth stating: an API endpoint is a `public URL`. Anyone can call it directly with `curl`, without your application, so `authentication` (an API key or `OAuth 2.0`), `authorisation`, `input validation` and `rate limiting` all have to be enforced on the `server`.
 
 3. **What is an API?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)]*
 
-   Answer: What an API is
+Answer: What an API is
    - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software communicates with another` — stating what requests may be made, in what format, and what will be returned, while `hiding how the work is done`.
    ```
       An API is a CONTRACT. The caller needs to know only WHAT to
@@ -5874,7 +5913,7 @@
 
 4. **Write difference between REST API and SOAP API.** *[BKSP Assistant Programmer 13.07.2024 compact it 1460 (ET: N/A)]*
 
-   Answer: Difference between a REST API and a SOAP API
+Answer: Difference between a REST API and a SOAP API
 
    | Point | SOAP API | REST API |
    |---|---|---|
@@ -5956,7 +5995,7 @@
 
 5. **What is API? Explain with example.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
-   Answer: What an API is
+Answer: What an API is
    - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software talks to another` — stating what requests may be made, in what format, and what will be returned, while `hiding how the work is done`.
    ```
       An API is a CONTRACT. The caller needs to know only WHAT to
@@ -6058,7 +6097,7 @@
 
 6. **What is the two prime advantages of RESTful API?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 756 (ET: N/A)]*
 
-   Answer: The two prime advantages of a RESTful API are `statelessness`, which gives scalability, and its `uniform interface over standard HTTP`, which gives simplicity and interoperability.
+Answer: The two prime advantages of a RESTful API are `statelessness`, which gives scalability, and its `uniform interface over standard HTTP`, which gives simplicity and interoperability.
 
    1. Statelessness — and therefore scalability
    ```
@@ -6147,7 +6186,7 @@
 
 7. **What is API?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 
-   Answer: What an API is
+Answer: What an API is
    - `API` stands for `Application Programming Interface`. It is a defined set of rules through which `one piece of software communicates with another` — stating what requests may be made, in what format, and what will be returned, while `hiding how the work is done`.
    ```
       An API is a CONTRACT. The caller needs to know only WHAT to
@@ -6215,7 +6254,7 @@
 
 8. **What is SOAP?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1157 (ET: DU)]*
 
-   Answer: What SOAP is
+Answer: What SOAP is
    - `SOAP` stands for `Simple Object Access Protocol`. It is a `W3C standard protocol` for exchanging structured information between applications. Every message is an `XML document` wrapped in a mandatory `envelope`, and the service is described by a `WSDL` file.
    ```
       SOAP is a PROTOCOL, not a style. Its message format, error
@@ -6328,7 +6367,7 @@
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 320 (ET: N/A)]*
 
-   Answer: A login page with a client side, a server side and a database. `PHP` and `MySQL` are used, and the same structure applies in any language.
+Answer: A login page with a client side, a server side and a database. `PHP` and `MySQL` are used, and the same structure applies in any language.
 
    1. The database
    ```sql
@@ -6559,7 +6598,7 @@
 
 2. **(খ) Client-side scripting এর তুলনায় Server-side scripting এর সুবিধাগুলো কী কী?** *[Software Assistant Programmer 13.10.2022 compact it 709 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) The distinction
+Answer: (Answered in English, as required for IT topics.) The distinction
    ```
       CLIENT-SIDE SCRIPTING   runs in the BROWSER , on the user's
            machine.  JavaScript.
@@ -6654,7 +6693,7 @@
 
 3. **(খ) PHP কি? Web Development এ Java Script এর প্রয়োজনীয়তা সম্পর্কে বিবরণ দিন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 771 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What PHP is
+Answer: (Answered in English, as required for IT topics.) What PHP is
    - `PHP` stands for `PHP: Hypertext Preprocessor` — a recursive acronym; the original name was Personal Home Page. It is a `server-side scripting language` designed for web development. The code runs on the `server`, and only its `output` — plain HTML — is sent to the browser.
    ```php
       <!DOCTYPE html>
@@ -6749,7 +6788,7 @@
 
 4. **(b) What are the resources you need to access a web enabled application?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 
-   Answer: The resources needed to access a web-enabled application, grouped by layer.
+Answer: The resources needed to access a web-enabled application, grouped by layer.
 
    1. Client-side resources
    ```
@@ -6850,7 +6889,7 @@
 
 5. **Apache কোন ধরনের Server এক কথায় লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
 
-   Answer: `Apache` is a `web server`.
+Answer: `Apache` is a `web server`.
    ```
       Its full name is the APACHE HTTP SERVER, often written as
       "Apache httpd".
@@ -6923,7 +6962,7 @@
 
 6. **Discuss the necessary of using application framework in web application development.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1053 (ET: BUET)]*
 
-   Answer: What an application framework is
+Answer: What an application framework is
    - An `application framework` is a ready-made skeleton for an application. It provides the routing, request handling, database layer, templating and security, so the developer writes only the parts specific to the application.
    ```
       EXAMPLES
@@ -7035,7 +7074,7 @@
 
 7. **(b) Draw three tier architecture of web technology.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1142 (ET: N/A)]*
 
-   Answer: Three-tier architecture of web technology
+Answer: Three-tier architecture of web technology
    ```mermaid
    flowchart TD
        A["TIER 1 - PRESENTATION<br/>Browser: HTML, CSS, JavaScript"] -->|HTTP request| B["TIER 2 - APPLICATION / LOGIC<br/>Web server + PHP, Java, .NET"]
@@ -7153,7 +7192,7 @@
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 411 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What CSS is
+Answer: (Answered in English, as required for IT topics.) What CSS is
    - `CSS` stands for `Cascading Style Sheets`. It controls the `presentation` of an HTML document — colours, fonts, spacing, borders, backgrounds and layout. It separates how a page `looks` from what it `contains`.
    ```css
       selector  {  property : value ;  }
@@ -7275,7 +7314,7 @@
 
 2. **What is CSS? What is CSS framework? Write down 3 CSS framework name?** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
-   Answer: What CSS is
+Answer: What CSS is
    - `CSS` stands for `Cascading Style Sheets`. It controls the `presentation` of an HTML document — colours, fonts, spacing, borders, backgrounds and layout — keeping how a page `looks` separate from what it `contains`.
    ```css
       selector { property : value ; }
@@ -7349,7 +7388,7 @@
 
 3. **(খ) CSS Box Model এ ‘Padding’ এবং ‘Margin’ এরিয়ার মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) The CSS box model
+Answer: (Answered in English, as required for IT topics.) The CSS box model
    - Every element is a rectangular box built of `four` areas, from the inside out.
    ```
       +==================================================+
@@ -7475,7 +7514,7 @@
 
 4. **(খ) CSS কী? কতভাবে একজন Website develop কারী তার page-এ CSS ব্যবহার করতে পারে।** *[Software Assistant Programmer 13.10.2022 compact it 708 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What CSS is
+Answer: (Answered in English, as required for IT topics.) What CSS is
    - `CSS` stands for `Cascading Style Sheets`. It controls the `presentation` of an HTML document — colours, fonts, spacing, borders, backgrounds and layout — keeping how a page `looks` separate from what it `contains`.
    ```css
       selector { property : value ; }
@@ -7582,7 +7621,7 @@
 
 1. **A & B two frames in a browser loaded from different origins. Why is it a reasonable security policy to allow A to navigate B to another origin base only on whether the display area of A contains dis-pare of B and A has the control over area.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 494 (ET: N/A)]*
 
-   Answer: The question, restated
+Answer: The question, restated
    - Two frames `A` and `B` are loaded from `different origins`. The browser permits `A` to navigate `B` to another URL, and the stated justification is that `A's display area contains B's display area, and A controls that area`. The question asks why that is a reasonable security policy.
 
    The rule the browser actually applies
@@ -7702,7 +7741,7 @@
 
 2. **What is CORS in web development?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 761 (ET: N/A)]*
 
-   Answer: What CORS is
+Answer: What CORS is
    - `CORS` stands for `Cross-Origin Resource Sharing`. It is a browser mechanism that lets a server `explicitly permit` a web page from one origin to make requests to a different origin — relaxing the `same-origin policy` in a controlled way.
    ```
       AN ORIGIN = SCHEME + HOST + PORT , all three.
