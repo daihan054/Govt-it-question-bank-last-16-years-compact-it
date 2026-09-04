@@ -16210,31 +16210,794 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
 
+   Answer: A `transaction` is a single logical unit of work made up of one or more SQL statements, which must either complete entirely or have no effect at all. The `ACID` properties are the four guarantees a DBMS gives about every transaction.
+
+   The standard example used throughout
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';   -- debit
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';   -- credit
+   COMMIT;
+   ```
+
+   `A — Atomicity` (all or nothing)
+   - A transaction is `indivisible`. Either every statement takes effect, or none does.
+   - If the system crashes after the debit but before the credit, the debit is `undone` during recovery. Money is never destroyed by a failure.
+   - Implemented by the `transaction log` and the `undo` mechanism: `COMMIT` makes the whole unit permanent, `ROLLBACK` reverses all of it.
+   - Without atomicity, a crash mid-transfer would leave 5,000 taka missing from the bank.
+
+   `C — Consistency` (valid state to valid state)
+   - A transaction moves the database from one `consistent` state to another. Every integrity constraint — primary key, foreign key, CHECK, NOT NULL — and every business rule holds before it starts and after it finishes.
+   - In the transfer, the total money in the two accounts must be the same afterwards as before. If a `CHECK (balance >= 0)` would be violated, the whole transaction is rejected.
+   - Enforced jointly by the DBMS's constraints and by the application writing correct transactions.
+
+   `I — Isolation` (concurrent transactions do not interfere)
+   - Transactions running at the same time must produce the same result as if they had run `one after another` — a property called `serializability`.
+   - Without it, three classic problems occur:
+     - `Dirty read` — reading data another transaction wrote but has not committed.
+     - `Non-repeatable read` — reading the same row twice and getting different values.
+     - `Phantom read` — re-running a query and finding new rows that were not there before.
+   - Implemented by `locking` (two-phase locking) or by `MVCC` (multi-version concurrency control).
+
+   The four SQL isolation levels
+
+   | Level | Dirty read | Non-repeatable read | Phantom read |
+   |---|---|---|---|
+   | Read Uncommitted | Possible | Possible | Possible |
+   | Read Committed | Prevented | Possible | Possible |
+   | Repeatable Read | Prevented | Prevented | Possible |
+   | `Serializable` | Prevented | Prevented | Prevented |
+
+   - Higher isolation gives more correctness and less concurrency. Most systems default to `Read Committed`; MySQL InnoDB defaults to `Repeatable Read`.
+
+   `D — Durability` (committed means permanent)
+   - Once a transaction has committed, its changes `survive` any subsequent failure — power loss, crash, or disk error.
+   - Implemented by `write-ahead logging`: the log record is forced to stable storage `before` the data page is written, so recovery can `redo` any committed change that had not yet reached the data files.
+   - Supported further by checkpoints, backups and replication.
+
+   How the four fit together
+   ```
+   Atomicity   : all or nothing            -> protects against FAILURE mid-transaction
+   Consistency : valid state to valid state -> protects the RULES of the data
+   Isolation   : as if run one at a time    -> protects against CONCURRENCY
+   Durability  : committed is permanent     -> protects against CRASH after commit
+   ```
+
+   Why they matter together
+   - A bank transfer needs all four simultaneously. Atomicity stops the money vanishing, consistency stops the balances becoming invalid, isolation stops another transaction reading a half-completed transfer, and durability stops a power failure losing a committed deposit. Any one of them missing makes the system untrustworthy for financial data.
+   - The trade-off is performance: strict isolation in particular reduces concurrency, which is why NoSQL systems often relax these guarantees to `BASE` — Basically Available, Soft state, Eventual consistency — accepting temporary inconsistency in exchange for scale.
+
 2. **How many process of Transaction complete?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
+
+   Answer: A transaction passes through `five` states, from the moment it begins to the moment it ends.
+
+   The state diagram
+   ```mermaid
+   stateDiagram-v2
+       [*] --> Active
+       Active --> PartiallyCommitted : final statement executed
+       Active --> Failed : error occurs
+       PartiallyCommitted --> Committed : changes written to disk
+       PartiallyCommitted --> Failed : failure during write
+       Failed --> Aborted : rollback complete
+       Committed --> [*]
+       Aborted --> [*]
+   ```
+
+   ASCII form, as drawn in an examination
+   ```
+                       +-----------+
+         BEGIN ------->|  ACTIVE   |
+                       +-----+-----+
+                       /           \
+          last statement            error
+                     /                 \
+          +----------v--------+     +---v------+
+          | PARTIALLY         |     |  FAILED  |
+          | COMMITTED         |     +----+-----+
+          +----------+--------+          |
+                     |                   | rollback
+          written to disk                |
+                     |             +-----v-----+
+          +----------v--------+    |  ABORTED  |
+          |    COMMITTED      |    +-----------+
+          +-------------------+
+   ```
+
+   The five states
+
+   1. `Active`
+   - The transaction is executing. This is the initial state, and it remains active while its statements run. All changes so far are held in buffers and are not yet permanent.
+
+   2. `Partially Committed`
+   - The `final statement` has executed, but the changes are still in memory and have not been written to disk. The transaction is not yet safe: a crash at this moment still loses it.
+
+   3. `Committed`
+   - The changes have been written permanently to stable storage. The transaction is complete and `cannot be rolled back`. This is where `durability` takes effect.
+
+   4. `Failed`
+   - An error has made normal execution impossible — a constraint violation, a deadlock, a system crash, or an explicit abort.
+
+   5. `Aborted (Terminated)`
+   - The rollback has finished and the database has been restored to the state it was in before the transaction started. The transaction may then be `restarted` (if the failure was transient, such as a deadlock) or `killed` (if it was a logic error).
+
+   The SQL statements that move between the states
+   ```sql
+   BEGIN;                    -- enters the Active state
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+   SAVEPOINT after_transfer;  -- an intermediate marker
+   COMMIT;                    -- Partially Committed -> Committed
+   -- or
+   ROLLBACK;                  -- Failed -> Aborted
+   ROLLBACK TO after_transfer;-- undo part of the work, stay Active
+   ```
+
+   The point worth stating
+   - The distinction between `Partially Committed` and `Committed` is where the whole recovery mechanism lives. Until the log record reaches stable storage, the transaction can still be lost; after it does, the DBMS is obliged to reproduce it even after a crash. That transition is what `write-ahead logging` exists to make safe.
+   - Note that a transaction can `only` reach Committed from Partially Committed, and once Committed it can never move again — which is precisely what durability means.
 
 3. **ACID এর প্রোপার্টি কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) `ACID` stands for `Atomicity, Consistency, Isolation, Durability` — the four properties that every database transaction must guarantee.
+
+   Example used throughout — a bank transfer
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+   COMMIT;
+   ```
+
+   `A — Atomicity`
+   - All or nothing. Either every statement in the transaction takes effect, or none does.
+   - If the system fails after the debit but before the credit, the debit is `undone`. Money is never lost to a crash.
+   - Implemented by the transaction log's `undo` records, with `COMMIT` and `ROLLBACK` as the controls.
+
+   `C — Consistency`
+   - The database moves from one `valid` state to another. Every constraint — primary key, foreign key, CHECK, NOT NULL — and every business rule holds before and after.
+   - Here, the total money across the two accounts must be unchanged. A `CHECK (balance >= 0)` violation causes the whole transaction to be rejected.
+
+   `I — Isolation`
+   - Concurrent transactions must produce the same result as if they had run `one after another`.
+   - Without it: `dirty read` (reading uncommitted data), `non-repeatable read` (the same row changing between two reads) and `phantom read` (new rows appearing).
+   - Implemented by locking or MVCC, and controlled by the four isolation levels: Read Uncommitted, Read Committed, Repeatable Read and Serializable.
+
+   `D — Durability`
+   - Once committed, the changes `survive` any later failure — power loss, crash or disk error.
+   - Implemented by `write-ahead logging`: the log record reaches stable storage before the data page does, so recovery can redo any committed change.
+
+   Summary
+
+   | Property | Guarantee | Protects against | Implemented by |
+   |---|---|---|---|
+   | `Atomicity` | All or nothing | Failure mid-transaction | Log, undo, ROLLBACK |
+   | `Consistency` | Valid state to valid state | Invalid data | Constraints and correct application logic |
+   | `Isolation` | As if run one at a time | Concurrency problems | Locking, MVCC |
+   | `Durability` | Committed is permanent | Crash after commit | Write-ahead log, checkpoints |
+
+   - The four are needed `together`. A bank transfer without atomicity loses money, without consistency produces invalid balances, without isolation lets another transaction read a half-finished transfer, and without durability loses a committed deposit in a power cut.
+
 4. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.)
+
+   What a transaction is
+   - A `transaction` is a single logical unit of work consisting of one or more SQL statements, which must either complete `entirely` or have `no effect at all`.
+   - It is the unit at which the database guarantees correctness. The classic example is a bank transfer, in which a debit and a credit must succeed or fail together.
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+   COMMIT;
+   ```
+   - A transaction passes through five states: `Active` → `Partially Committed` → `Committed`, or `Active` → `Failed` → `Aborted`.
+
+   The ACID properties
+
+   `Atomicity`
+   - The transaction is `indivisible` — all of it happens or none of it does.
+   - If the system crashes between the debit and the credit, the debit is undone during recovery, so money is never destroyed.
+   - Implemented by the transaction log's undo records; controlled by `COMMIT` and `ROLLBACK`.
+
+   `Consistency`
+   - The database moves from one `valid` state to another. Every integrity constraint and business rule holds before and after the transaction.
+   - In the transfer, the total across both accounts must be unchanged. A violation of `CHECK (balance >= 0)` aborts the whole transaction.
+   - Enforced jointly by the DBMS constraints and by correctly written application logic.
+
+   `Isolation`
+   - Concurrent transactions must behave as though they ran `one after another` — the property called `serializability`.
+   - Without it, three problems appear: `dirty read`, `non-repeatable read` and `phantom read`.
+   - Implemented by two-phase locking or by MVCC. The SQL standard defines four isolation levels:
+
+   | Level | Dirty read | Non-repeatable read | Phantom |
+   |---|---|---|---|
+   | Read Uncommitted | Possible | Possible | Possible |
+   | Read Committed | No | Possible | Possible |
+   | Repeatable Read | No | No | Possible |
+   | Serializable | No | No | No |
+
+   `Durability`
+   - Once `COMMIT` returns, the changes are permanent and survive any later crash.
+   - Implemented by `write-ahead logging` — the log record reaches stable storage before the data page — together with checkpoints, backups and replication.
+
+   How they work together
+   ```
+   Atomicity   -> protects against a failure in the middle
+   Consistency -> protects the rules of the data
+   Isolation   -> protects against interference from other transactions
+   Durability  -> protects against a crash after commit
+   ```
+
+   The trade-off worth stating
+   - Strict isolation in particular costs concurrency, because locks make transactions wait. This is why many distributed and NoSQL systems relax ACID to `BASE` — Basically Available, Soft state, Eventual consistency — accepting temporary inconsistency in exchange for scale and availability. For financial data, that trade is not acceptable, which is why banks stay with ACID.
 
 5. **Case Study type Database-related problem (Solve: ACID)** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
+   Answer: The case study was not printed, so the standard ACID case study — a bank transfer — is worked through in full, which is what these questions invariably present.
+
+   The scenario
+   > Karim transfers 5,000 taka from account A101 to account A102. A101 holds 20,000 and A102 holds 8,000. Explain how the DBMS guarantees correctness.
+
+   The transaction
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';   -- step 1
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';   -- step 2
+   COMMIT;
+   ```
+
+   `Problem 1 — the system crashes after step 1`
+   ```
+   A101 = 15000   (debited)
+   A102 =  8000   (not yet credited)
+   Total = 23000, but it was 28000 -> 5000 taka has vanished
+   ```
+   - `Atomicity` solves it. The transaction never committed, so during recovery the DBMS reads the undo log and reverses step 1. A101 returns to 20,000 and the customer simply retries.
+
+   `Problem 2 — the account would go negative`
+   ```
+   Karim tries to transfer 25000 from an account holding 20000
+   ```
+   - `Consistency` solves it. The constraint `CHECK (balance >= 0)` is violated by step 1, so the DBMS aborts the entire transaction. The database is never left in an invalid state.
+   ```sql
+   ALTER TABLE Account ADD CONSTRAINT chk_bal CHECK (balance >= 0);
+   ```
+
+   `Problem 3 — another transaction reads the half-finished transfer`
+   ```
+   T1: debit A101 (15000)  ...
+   T2: reads A101 = 15000 and A102 = 8000, reports a total of 23000
+   T1: credit A102, COMMIT
+   ```
+   - T2 saw money that momentarily existed nowhere. This is a `dirty read` if T1 had not committed.
+   - `Isolation` solves it. At `Read Committed` or above, T2 cannot see T1's uncommitted changes; at `Serializable`, the two behave exactly as though they had run one after the other.
+
+   `Problem 4 — power failure immediately after COMMIT`
+   ```
+   COMMIT returns to the user, then the server loses power
+   ```
+   - `Durability` solves it. `Write-ahead logging` forced the log record to disk `before` COMMIT returned, so on restart the DBMS `redoes` the change from the log. The customer's receipt is honoured.
+
+   The complete solution
+   ```sql
+   BEGIN;
+
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   -- constraint CHECK (balance >= 0) fires here if funds are insufficient
+
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+
+   INSERT INTO Transaction_Log (acc_no, txn_type, amount, txn_time)
+   VALUES ('A101', 'Transfer Out', 5000, NOW()),
+          ('A102', 'Transfer In',  5000, NOW());
+
+   COMMIT;
+   ```
+
+   Which property answers which failure
+
+   | What goes wrong | Property that prevents it | Mechanism |
+   |---|---|---|
+   | Crash between the two updates | `Atomicity` | Undo log, ROLLBACK |
+   | Balance would go negative | `Consistency` | CHECK constraint |
+   | Another user reads a half-done transfer | `Isolation` | Locking or MVCC |
+   | Power cut just after COMMIT | `Durability` | Write-ahead log, redo |
+
+   - The lesson the case study is designed to teach: all four are needed `simultaneously`. Removing any one of them makes the system unusable for money.
+
 6. **What are the ACID properties of transaction to ensure data reliability and integrity?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
+
+   Answer: The `ACID` properties are the four guarantees a DBMS gives about every transaction, and together they are what make a database trustworthy for data such as money and medical records.
+
+   `Atomicity` — all or nothing
+   - A transaction is `indivisible`: either every one of its statements takes effect, or none does.
+   - Reliability role: a failure in the middle can never leave the data half-changed.
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   -- crash here
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+   COMMIT;
+   ```
+   - Recovery reads the undo log and reverses the debit, so the 5,000 taka is not lost.
+
+   `Consistency` — valid state to valid state
+   - Every integrity constraint and business rule holds before the transaction starts and after it finishes.
+   - Reliability role: the data can never become invalid, whatever the application does.
+   ```sql
+   CHECK (balance >= 0)          -- an overdraft is rejected, aborting the transaction
+   FOREIGN KEY (dept_id) ...     -- an order cannot reference a customer who does not exist
+   ```
+
+   `Isolation` — as if run one at a time
+   - Concurrent transactions produce the same result as some serial order of them.
+   - Reliability role: one user's half-finished work is never visible to another.
+   - The three problems it prevents:
+   ```
+   Dirty read          : T2 reads data T1 wrote but has not committed
+   Non-repeatable read : T2 reads the same row twice and gets different values
+   Phantom read        : T2 repeats a query and finds new rows
+   ```
+   - Implemented by two-phase locking or MVCC, and tuned through the four isolation levels.
+
+   `Durability` — committed means permanent
+   - Once `COMMIT` returns, the changes survive any subsequent crash, power failure or disk error.
+   - Reliability role: a customer holding a receipt can rely on the transaction having happened.
+   - Implemented by `write-ahead logging`: the log record is forced to stable storage before COMMIT returns, so recovery can `redo` the change.
+
+   Summary
+
+   | Property | Guarantee | Failure it prevents | Mechanism |
+   |---|---|---|---|
+   | Atomicity | All or nothing | Partial update after a crash | Undo log, ROLLBACK |
+   | Consistency | Valid to valid | Invalid or corrupt data | Constraints, triggers |
+   | Isolation | As if serial | Interference between users | Locking, MVCC |
+   | Durability | Permanent once committed | Losing committed work | Write-ahead log, redo |
+
+   Why all four are needed together
+   - Take away `atomicity` and money disappears in a crash. Take away `consistency` and balances become negative. Take away `isolation` and two ATMs withdraw the same funds twice. Take away `durability` and a committed deposit is lost in a power cut. No three of them are sufficient.
+   - The cost is performance, particularly from isolation, which is why some distributed systems adopt `BASE` instead — accepting eventual rather than immediate consistency in exchange for availability and scale.
 
 7. **(a) What is ACID mean in database system?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
+   Answer: `ACID` is the set of four properties that a database transaction must satisfy: `Atomicity, Consistency, Isolation and Durability`.
+
+   A `transaction` is a single logical unit of work made of one or more SQL statements, which must either complete entirely or have no effect at all.
+
+   `A — Atomicity`
+   - All or nothing. The transaction is indivisible.
+   - If a bank transfer debits one account and the system crashes before crediting the other, the debit is undone during recovery.
+   - Implemented by the transaction log's `undo` records; controlled by `COMMIT` and `ROLLBACK`.
+
+   `C — Consistency`
+   - The database moves from one `valid` state to another. All integrity constraints and business rules hold both before and after.
+   - In a transfer, the total money must be unchanged; a `CHECK (balance >= 0)` violation aborts the whole transaction.
+
+   `I — Isolation`
+   - Concurrent transactions behave as though they had run `one after another`.
+   - Prevents `dirty reads`, `non-repeatable reads` and `phantom reads`.
+   - Implemented by locking or MVCC; tuned by the four isolation levels — Read Uncommitted, Read Committed, Repeatable Read, Serializable.
+
+   `D — Durability`
+   - Once committed, the changes survive any later crash or power failure.
+   - Implemented by `write-ahead logging`, where the log record reaches stable storage before COMMIT returns.
+
+   Illustration
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+   COMMIT;
+   ```
+   ```
+   Atomicity   : both updates happen, or neither does
+   Consistency : total money before = total money after
+   Isolation   : no other transaction sees the intermediate state
+   Durability  : after COMMIT, a power cut cannot undo it
+   ```
+
+   Summary
+
+   | Letter | Property | Guarantee |
+   |---|---|---|
+   | A | Atomicity | All or nothing |
+   | C | Consistency | Valid state to valid state |
+   | I | Isolation | As if executed serially |
+   | D | Durability | Permanent once committed |
+
+   - The term was coined by Theo Härder and Andreas Reuter in 1983, building on Jim Gray's earlier work on transactions.
+   - The contrast worth knowing: many NoSQL systems adopt `BASE` — Basically Available, Soft state, Eventual consistency — trading strict ACID guarantees for availability and horizontal scale. That trade is acceptable for a social media feed and unacceptable for a bank ledger.
+
 8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) A `transaction` is a single logical unit of work that must complete entirely or have no effect at all. The `ACID` properties are the four guarantees the DBMS makes about it.
+
+   `Atomicity` — all or nothing
+   - The transaction is indivisible. Either all its statements take effect or none do.
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   -- crash here
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+   COMMIT;
+   ```
+   - Recovery reads the `undo log` and reverses the debit, so no money is lost.
+
+   `Consistency` — valid state to valid state
+   - Every integrity constraint and business rule holds before and after the transaction.
+   - The total money in the two accounts must be unchanged. A `CHECK (balance >= 0)` violation aborts the whole transaction.
+
+   `Isolation` — as if executed one at a time
+   - Concurrent transactions must yield the same result as some serial order of them.
+   - Prevents three problems:
+   ```
+   Dirty read          : reading data another transaction has not committed
+   Non-repeatable read : the same row gives different values when read twice
+   Phantom read        : a repeated query returns rows that were not there before
+   ```
+   - Implemented by `two-phase locking` or `MVCC`, and controlled by four isolation levels:
+
+   | Level | Dirty | Non-repeatable | Phantom |
+   |---|---|---|---|
+   | Read Uncommitted | Yes | Yes | Yes |
+   | Read Committed | No | Yes | Yes |
+   | Repeatable Read | No | No | Yes |
+   | Serializable | No | No | No |
+
+   `Durability` — permanent once committed
+   - After `COMMIT` returns, the changes survive any crash or power failure.
+   - Implemented by `write-ahead logging`: the log record is forced to disk before COMMIT returns, so recovery can `redo` the change.
+
+   Summary
+
+   | Property | Guarantee | Prevents | Mechanism |
+   |---|---|---|---|
+   | Atomicity | All or nothing | Half-completed work | Undo log, ROLLBACK |
+   | Consistency | Valid to valid | Invalid data | Constraints |
+   | Isolation | As if serial | Interference | Locks, MVCC |
+   | Durability | Permanent | Losing committed work | Write-ahead log, redo |
+
+   - All four are required together. Removing any one makes the database unusable for financial data, which is why relational systems retain ACID while many NoSQL systems relax it to `BASE` for scale.
 
 9. **What do you mean by Rollback and Roll forward?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 
+   Answer: `Rollback` and `roll forward` are the two recovery operations a DBMS performs after a failure, using the `transaction log`.
+
+   Rollback (UNDO)
+   - Reversing the changes made by a transaction, restoring the database to the state it was in before the transaction began.
+   - Applied to transactions that were `active but not committed` when the failure occurred, and to any transaction the user explicitly aborts.
+   - Uses the `undo` (before-image) records in the log: for each change, the old value is written back.
+
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   -- an error occurs, or the user changes their mind
+   ROLLBACK;                     -- the debit is reversed
+   ```
+
+   - Partial rollback with a savepoint
+   ```sql
+   BEGIN;
+   UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+   SAVEPOINT after_debit;
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A999';   -- wrong account
+   ROLLBACK TO after_debit;      -- undo only the second statement
+   UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';   -- correct it
+   COMMIT;
+   ```
+
+   Roll forward (REDO)
+   - Reapplying the changes of transactions that `had committed` before the failure but whose data pages had not yet reached disk.
+   - Uses the `redo` (after-image) records in the log: for each change, the new value is written again.
+   - This is what makes `durability` real: `COMMIT` only guarantees that the log record is safe, not that the data page was written.
+
+   ```
+   Recovery after a crash:
+      1. Read the log from the last checkpoint
+      2. REDO   every committed transaction   -> roll forward
+      3. UNDO   every uncommitted transaction -> rollback
+      4. The database is now consistent
+   ```
+
+   Comparison
+
+   | Point | Rollback (UNDO) | Roll forward (REDO) |
+   |---|---|---|
+   | Direction | Backward in time | Forward in time |
+   | Applied to | Uncommitted transactions | Committed transactions |
+   | Log record used | Before-image (old value) | After-image (new value) |
+   | Purpose | Preserve `atomicity` | Preserve `durability` |
+   | Triggered by | Error, user abort, deadlock, crash recovery | Crash recovery, restoring from backup |
+   | Result | The change never happened | The change is reapplied |
+
+   Roll forward in backup and recovery
+   - The other common use: restore last night's full backup, then `roll forward` through the archived logs to bring the database up to the moment just before the failure. This is `point-in-time recovery`.
+   ```
+   Full backup (Sunday) ---> apply logs Mon, Tue, Wed ---> state at Wednesday 14:32
+   ```
+
+   The illustration that ties them together
+   ```
+   Log:  T1 begin ... T1 commit ... T2 begin ... [CRASH]
+
+   Recovery:
+      T1 committed but its pages may not be on disk  -> ROLL FORWARD (redo T1)
+      T2 was still active                             -> ROLL BACK (undo T2)
+   ```
+   - In short: `roll forward makes committed work permanent, rollback makes uncommitted work disappear`. Together they restore the database to a state that satisfies both atomicity and durability.
+
 10. **Describe ACID properties of DBMS.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 860 (ET: N/A)]*
+
+    Answer: The `ACID` properties are the four guarantees a DBMS makes about every transaction — a transaction being a single logical unit of work that must complete entirely or not at all.
+
+    `Atomicity`
+    - All or nothing. Either every statement of the transaction takes effect or none does.
+    - If a bank transfer debits one account and the system crashes before crediting the other, recovery reads the `undo log` and reverses the debit. Money is never destroyed by a failure.
+    - Controlled by `COMMIT` and `ROLLBACK`.
+
+    `Consistency`
+    - The database moves from one `valid` state to another. Every constraint — primary key, foreign key, CHECK, NOT NULL — and every business rule holds before and after.
+    - In a transfer, the total across both accounts must be unchanged. A `CHECK (balance >= 0)` violation aborts the entire transaction.
+    - Enforced jointly by the DBMS's constraints and by correctly written application logic.
+
+    `Isolation`
+    - Concurrent transactions behave as though they had run `one after another` — the property called `serializability`.
+    - Without it three problems arise:
+    ```
+    Dirty read          : T2 reads what T1 wrote but has not committed
+    Non-repeatable read : T2 reads a row twice and gets different values
+    Phantom read        : T2 repeats a query and new rows have appeared
+    ```
+    - Implemented by `two-phase locking` (a growing phase acquiring locks, a shrinking phase releasing them) or by `MVCC`, which gives each transaction a consistent snapshot instead of blocking readers.
+
+    `Durability`
+    - Once `COMMIT` returns, the changes are permanent and survive any subsequent crash, power failure or disk error.
+    - Implemented by `write-ahead logging`: the log record is forced to stable storage `before` the data page is written and before COMMIT returns, so recovery can `redo` the change.
+    - Supported further by checkpoints, backups and replication.
+
+    Worked illustration
+    ```sql
+    BEGIN;
+    UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+    UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+    COMMIT;
+    ```
+    ```
+    Atomicity   : both updates, or neither
+    Consistency : 28000 total before, 28000 total after
+    Isolation   : no other session sees the intermediate 23000
+    Durability  : a power cut after COMMIT cannot undo it
+    ```
+
+    Summary
+
+    | Property | Guarantee | Mechanism |
+    |---|---|---|
+    | Atomicity | All or nothing | Undo log, ROLLBACK |
+    | Consistency | Valid state to valid state | Constraints, triggers |
+    | Isolation | As if serial | 2PL or MVCC |
+    | Durability | Permanent once committed | Write-ahead log, redo, checkpoints |
+
+    - The cost is concurrency: strict isolation makes transactions wait for locks. That is why many distributed systems relax ACID to `BASE` — Basically Available, Soft state, Eventual consistency — which is acceptable for a social feed but not for a bank ledger.
 
 11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 984-985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+    Answer: The SQL statements that end a transaction are `COMMIT` and `ROLLBACK`. `SAVEPOINT` and `SET TRANSACTION` are used within one.
+
+    `COMMIT`
+    ```sql
+    COMMIT;
+    COMMIT WORK;        -- the full standard form
+    ```
+    - Function: makes all the changes of the current transaction `permanent` and visible to other users.
+    - It ends the transaction successfully. Once it returns, the changes are `durable` — they survive any subsequent crash, because the log record was forced to stable storage first.
+    - All locks held by the transaction are released, and the changes can no longer be rolled back.
+
+    `ROLLBACK`
+    ```sql
+    ROLLBACK;
+    ROLLBACK WORK;
+    ```
+    - Function: `undoes` every change made by the current transaction, restoring the database to the state it was in when the transaction began.
+    - It ends the transaction unsuccessfully, releases all its locks, and preserves `atomicity` by ensuring the partial work leaves no trace.
+    - The DBMS also issues an implicit rollback automatically on a deadlock, a constraint violation, or a system crash.
+
+    `SAVEPOINT` — a partial marker within a transaction
+    ```sql
+    SAVEPOINT savepoint_name;
+    ROLLBACK TO savepoint_name;
+    RELEASE SAVEPOINT savepoint_name;
+    ```
+    - Function: marks an intermediate point so that part of a transaction can be undone without abandoning all of it. `ROLLBACK TO` does not end the transaction — it remains active.
+
+    `SET TRANSACTION` — sets the properties of the transaction
+    ```sql
+    SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+    SET TRANSACTION READ ONLY;
+    ```
+
+    A worked example using all of them
+    ```sql
+    BEGIN;                                       -- or START TRANSACTION
+
+    UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+
+    SAVEPOINT after_debit;                        -- intermediate marker
+
+    UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A999';   -- wrong account
+
+    ROLLBACK TO after_debit;                      -- undo only the second update
+                                                  -- the transaction is still ACTIVE
+
+    UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';   -- correct it
+
+    COMMIT;                                       -- ENDS the transaction, permanently
+    ```
+
+    Summary
+
+    | Statement | Function | Ends the transaction? |
+    |---|---|---|
+    | `COMMIT` | Makes all changes permanent | `Yes`, successfully |
+    | `ROLLBACK` | Undoes all changes | `Yes`, unsuccessfully |
+    | `ROLLBACK TO savepoint` | Undoes changes made after the savepoint | No — still active |
+    | `SAVEPOINT` | Marks a point to return to | No |
+    | `SET TRANSACTION` | Sets isolation level or read-only mode | No |
+
+    Points worth remembering
+    - `DDL statements auto-commit`. Running `CREATE TABLE` in the middle of a transaction silently commits everything before it, which is a frequent and painful surprise.
+    - Many client tools run in `autocommit` mode, where every statement is its own transaction. Explicit `BEGIN` turns that off for the duration.
+    - After `COMMIT` there is no way back, which is why an important change should be verified with a `SELECT` while the transaction is still open.
+
 12. **Describe Database ACID properties.** *[RAKUB Assistant Database Administrator 2020 compact it 1012 (ET: E-Zone)]*
+
+    Answer: A `transaction` is one logical unit of work — a group of SQL statements that must succeed or fail together. `ACID` is the set of four properties the DBMS guarantees for every transaction.
+
+    `A — Atomicity`
+    - All or nothing. Either every statement of the transaction takes effect, or none of them does.
+    - A transfer debits one account and credits another. If the system crashes between the two, recovery reads the `undo log` and reverses the debit, so money is never lost or created.
+    - Statements: `COMMIT` makes the work permanent, `ROLLBACK` erases it.
+
+    `C — Consistency`
+    - The database moves from one `valid` state to another. Every constraint — primary key, foreign key, `CHECK`, `NOT NULL` — and every business rule holds before and after.
+    - In a transfer the sum of the two balances must be unchanged. A `CHECK (balance >= 0)` violation aborts the whole transaction.
+
+    `I — Isolation`
+    - Concurrent transactions must produce the same result as if they had run `one after another`. This is called `serializability`.
+    - Without it three anomalies occur:
+    ```
+    Dirty read          : reading data another transaction has not committed
+    Non-repeatable read : the same row gives a different value when read again
+    Phantom read        : a repeated query returns rows that were not there before
+    ```
+    - Enforced by `two-phase locking` — a growing phase that only acquires locks and a shrinking phase that only releases them — or by `MVCC`, which gives each transaction a snapshot so readers never block writers.
+    - Four standard levels trade safety for speed:
+
+    | Level | Dirty | Non-repeatable | Phantom |
+    |---|---|---|---|
+    | Read Uncommitted | Yes | Yes | Yes |
+    | Read Committed | No | Yes | Yes |
+    | Repeatable Read | No | No | Yes |
+    | Serializable | No | No | No |
+
+    `D — Durability`
+    - Once `COMMIT` returns, the changes are permanent and survive a crash, a power cut or a disk failure.
+    - Implemented by `write-ahead logging`: the log record reaches stable storage before the data page is written and before COMMIT returns, so recovery can `redo` the change.
+
+    Worked example
+    ```sql
+    BEGIN;
+    UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+    UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+    COMMIT;
+    ```
+    ```
+    Atomicity   : both updates or neither
+    Consistency : total across the two accounts stays the same
+    Isolation   : no other session sees the money "in the air"
+    Durability  : a power failure after COMMIT cannot undo it
+    ```
+    - The price of ACID is concurrency, since strict isolation makes transactions wait for locks. That is why many distributed NoSQL systems relax it to `BASE` — Basically Available, Soft state, Eventual consistency — acceptable for a news feed but not for a bank ledger.
 
 13. **Describe the ACID properties in a database. When does a deadlock occur and how do you prevent it, in a database?** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1116 (ET: DU)]*
 
+    Answer: Part 1 — the ACID properties
+
+    `Atomicity` — all or nothing. Either every statement of the transaction takes effect or none does. If a transfer debits one account and the system crashes before the credit, recovery uses the `undo log` to reverse the debit.
+
+    `Consistency` — the database goes from one valid state to another. All constraints and business rules hold before and after, so the total money across the two accounts never changes.
+
+    `Isolation` — concurrent transactions behave as if run one at a time (`serializability`). It prevents dirty reads, non-repeatable reads and phantom reads, and is enforced by `two-phase locking` or `MVCC`.
+
+    `Durability` — once `COMMIT` returns, the changes survive any crash. Implemented by `write-ahead logging`: the log record is forced to disk before COMMIT returns.
+
+    Part 2 — when a deadlock occurs
+
+    A `deadlock` is when two or more transactions each hold a lock the other one needs, so all of them wait forever and none can finish.
+
+    ```
+    T1                                T2
+    LOCK Account   (granted)          LOCK Loan      (granted)
+    request LOCK Loan  ---- waits for T2
+                                      request LOCK Account ---- waits for T1
+            both wait forever = DEADLOCK
+    ```
+
+    ```mermaid
+    flowchart LR
+        T1[Transaction T1] -->|waits for lock on Loan| T2[Transaction T2]
+        T2 -->|waits for lock on Account| T1
+    ```
+
+    Four conditions must all hold at once (Coffman conditions):
+    - `Mutual exclusion` — a lock is held by only one transaction at a time.
+    - `Hold and wait` — a transaction keeps its locks while asking for more.
+    - `No preemption` — a lock cannot be taken away by force.
+    - `Circular wait` — a closed chain of transactions, each waiting on the next.
+
+    Part 3 — how to prevent it
+
+    Timestamp-based prevention — every transaction gets a timestamp, and older means higher priority. Breaking the circular wait is what makes deadlock impossible.
+
+    | Scheme | T1 (older) needs a lock held by T2 (younger) | T2 (younger) needs a lock held by T1 (older) |
+    |---|---|---|
+    | `Wait-Die` (non-preemptive) | T1 waits | T2 dies — aborts and restarts with its old timestamp |
+    | `Wound-Wait` (preemptive) | T1 wounds T2 — T2 is aborted | T2 waits |
+
+    Other practical methods:
+    - `Lock ordering` — every transaction acquires locks in the same fixed order, for example always Account then Loan. A cycle then cannot form. This is the simplest and most effective fix in application code.
+    - `Acquire all locks at once` at the start, which removes the hold-and-wait condition.
+    - `Lock timeout` — a transaction that waits longer than a set time is rolled back automatically. Simple, but it can abort transactions that were not deadlocked.
+    - `Keep transactions short` and touch the fewest rows possible, so the window for a conflict is small.
+
+    Detection instead of prevention
+    - Most real systems (Oracle, SQL Server, PostgreSQL, MySQL InnoDB) let deadlocks happen and then detect them. The DBMS builds a `wait-for graph` with one node per transaction and an edge Ti → Tj when Ti waits for a lock held by Tj. A `cycle` in the graph means a deadlock.
+    - The system then picks a `victim` — usually the transaction with the least work done or the fewest locks — rolls it back, releases its locks and lets the others proceed. The application should catch the deadlock error and simply retry.
+
 14. **Describe the ACID properties of database.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
+
+    Answer: A `transaction` is one logical unit of work whose statements must all succeed or all fail. `ACID` is the four guarantees a DBMS gives every transaction, proposed by Härder and Reuter in 1983.
+
+    `Atomicity` — all or nothing
+    - Either every statement of the transaction takes effect or none of them does. There is no half-done transaction.
+    - A crash in the middle of a bank transfer is undone from the `undo log`, so the debit without the matching credit never survives.
+    - Under the control of `COMMIT` and `ROLLBACK`.
+
+    `Consistency` — valid state to valid state
+    - Every integrity constraint and business rule holds both before and after the transaction: primary key, foreign key, `CHECK`, `NOT NULL`, triggers.
+    - The total of the two account balances must be the same after the transfer as before it.
+
+    `Isolation` — as if run one at a time
+    - Transactions running at the same time give the same result as some serial order of them, a property called `serializability`.
+    - It stops three anomalies:
+    ```
+    Dirty read          : T2 reads a value T1 wrote but never committed
+    Non-repeatable read : T2 reads a row twice and gets two different values
+    Phantom read        : T2 repeats a query and finds new rows have appeared
+    ```
+    - Enforced by `two-phase locking` (locks are only acquired in a growing phase, only released in a shrinking phase) or by `MVCC`, which shows each transaction a consistent snapshot.
+
+    `Durability` — permanent once committed
+    - After `COMMIT` returns, the changes survive a crash, a power failure or a restart.
+    - Implemented by `write-ahead logging`: the log record is forced to stable storage before COMMIT returns, so recovery can `redo` the change even if the data page never reached disk. Checkpoints and backups support this.
+
+    Example
+    ```sql
+    BEGIN;
+    UPDATE Account SET balance = balance - 5000 WHERE acc_no = 'A101';
+    UPDATE Account SET balance = balance + 5000 WHERE acc_no = 'A102';
+    COMMIT;
+    ```
+
+    | Property | What it guarantees here | Mechanism |
+    |---|---|---|
+    | Atomicity | Both updates or neither | Undo log, ROLLBACK |
+    | Consistency | Total balance unchanged | Constraints |
+    | Isolation | Nobody sees the money mid-flight | 2PL or MVCC |
+    | Durability | A power cut after COMMIT cannot undo it | Write-ahead log, redo |
+
+    - ACID is what makes a relational database trustworthy for banking, ticketing and accounting. Systems that need extreme scale often relax it to `BASE` — Basically Available, Soft state, Eventual consistency.
 
 ## Relational Data Model & ER Relationships (14)
 
