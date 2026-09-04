@@ -14485,13 +14485,171 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **Why is packet switching more suitable for internet communication?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+   Answer: Packet switching suits internet communication because internet traffic is `bursty`, the network is `enormous and shared`, and reliability must survive partial failure. Circuit switching fails on all three counts.
+
+   Reasons
+
+   - `Efficient use of capacity.` A web session sends a burst of data then sits idle while the user reads. A circuit reserves bandwidth for the whole session, so it is idle most of the time and wasted. Packet switching gives the link to whoever has data at that instant, so one link serves many users through statistical multiplexing.
+
+   - `No setup delay.` Circuit switching must establish an end-to-end path before any data moves. Packet switching sends immediately, which matters when a page load involves dozens of short connections to different servers.
+
+   - `Robustness.` Each packet is routed independently, so if a link or router fails, later packets simply take another path. A circuit is destroyed by a single failure along its path and must be rebuilt. This survivability was the original design goal of ARPANET.
+
+   - `Scalability.` The internet has billions of hosts. Reserving a dedicated circuit for every pair is impossible; packet switching requires no per-conversation state in the core routers.
+
+   - `Supports variable rates.` Applications range from a 100-byte DNS query to a 4K video stream. Packets adapt automatically; a fixed circuit cannot.
+
+   - `Cost.` Sharing links among many users lowers the cost per user dramatically, and no expensive per-circuit reservation machinery is needed.
+
+   - `Natural fit for digital data.` Data is naturally chunked into messages, and errors can be detected and the individual packet retransmitted, rather than corrupting a continuous stream.
+
+   - `Different services on one network.` Web, email, voice and video all travel as packets over the same infrastructure, which is why the telephone network itself has converged onto IP.
+
+   The trade-off
+   - Packet switching gives no bandwidth guarantee, and it introduces variable delay (jitter), out-of-order arrival and possible loss. These are handled above the network layer: TCP restores order and reliability, and QoS, buffering and jitter buffers handle real-time traffic. The internet accepted these costs because the gains in efficiency and robustness are overwhelming.
+
 2. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** *[BUET Assistant Programmer 21.06.2025 compact it 1435 (ET: BUET)]*
+
+   Answer:
+
+   Comparison
+
+   | Point | Circuit switching | Packet switching |
+   |---|---|---|
+   | Path | A dedicated physical path reserved end to end for the whole session | No dedicated path; each packet is routed independently |
+   | Setup | Connection must be established first | None; send immediately |
+   | Bandwidth | Reserved and guaranteed, wasted when idle | Shared; allocated on demand |
+   | Efficiency | Low for bursty traffic | High — statistical multiplexing |
+   | Delay | Setup delay, then constant transmission delay | No setup delay, but variable queuing delay |
+   | Jitter | None | Present |
+   | Order of arrival | Always in order | May arrive out of order |
+   | Reliability on failure | The whole call drops | Packets reroute around the failure |
+   | Store and forward | No | Yes, at every router |
+   | Charging | By time and distance | By volume of data |
+   | Congestion effect | New calls are blocked; existing ones unaffected | Everyone slows down; packets may be dropped |
+   | Overhead | Low per byte, no headers | Header on every packet |
+   | Suited to | Continuous, constant-rate traffic | Bursty, variable-rate traffic |
+   | Examples | Traditional telephone network, ISDN, leased line | The internet, Ethernet, X.25, Frame Relay |
+
+   Which is used on the internet, and why
+   - `Packet switching` is used predominantly on the internet.
+
+   Justification
+   - `Traffic is bursty.` A user loads a page, then reads it for a minute. A reserved circuit would sit idle for that minute. Packet switching gives the capacity to someone else in the meantime.
+   - `Efficiency through statistical multiplexing.` Because not all users are active simultaneously, one link can serve far more subscribers than its raw capacity would suggest under circuit switching.
+   - `Robustness.` Packets route around a failed link automatically. This survivability was the founding requirement of ARPANET, from which the internet grew.
+   - `Scalability.` Billions of hosts cannot each hold a reserved circuit; the core routers keep no per-conversation state at all.
+   - `No setup delay`, which matters greatly when a single web page opens dozens of short connections.
+   - `One network for every service` — web, mail, voice and video all become packets, which is why even telephony has migrated to VoIP over IP.
+   - `Lower cost`, since capacity is shared rather than reserved.
+
+   - The costs — variable delay, possible loss and out-of-order arrival — are handled above the network layer by TCP, and by QoS and jitter buffers for real-time traffic. They are a small price for the efficiency and resilience gained.
 
 3. **(c) Compare circuit switching and packet switching.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Circuit switching | Packet switching |
+   |---|---|---|
+   | Resource allocation | Dedicated path reserved for the entire session | No reservation; resources shared on demand |
+   | Connection setup | Required before any data flows | Not required (datagram); optional in virtual circuits |
+   | Bandwidth | Fixed and guaranteed | Variable, shared |
+   | Utilisation | Poor for bursty traffic — the circuit is idle much of the time | High, through statistical multiplexing |
+   | Delay | Setup delay first, then constant | No setup delay, but variable queuing delay at each hop |
+   | Jitter | None | Present |
+   | Packet order | Always preserved | May arrive out of order (datagram) |
+   | Store and forward | No | Yes, at every intermediate node |
+   | Header overhead | None during the call | A header on every packet |
+   | Effect of a link failure | The call is dropped | Packets reroute automatically |
+   | Effect of congestion | New calls are blocked; existing calls unaffected | Everyone experiences delay; packets may be dropped |
+   | Reliability of delivery | Guaranteed once connected | Best effort; TCP adds reliability above |
+   | Billing | By duration and distance | By volume of data |
+   | Complexity in the node | Simple switching once set up | Routing decision for every packet |
+   | Best suited to | Continuous constant-rate traffic — voice | Bursty variable-rate traffic — data |
+   | Examples | PSTN telephone, ISDN, leased line, SONET | Internet, Ethernet, X.25, Frame Relay, MPLS |
+
+   Three phases of circuit switching
+   - Setup, data transfer, teardown.
+
+   Two kinds of packet switching
+   - `Datagram` — every packet is routed independently and may take a different path (the internet, IP).
+   - `Virtual circuit` — a path is agreed first and all packets follow it in order, but bandwidth is still shared (X.25, Frame Relay, ATM, MPLS). It combines the ordering of circuit switching with the efficiency of packet switching.
+
+   - Summary: circuit switching guarantees quality by wasting capacity; packet switching maximises capacity by giving up guarantees. The internet chose the second and rebuilt the guarantees where needed, using TCP and QoS.
+
 4. **Do you prefer packet switching compared to circuit switching in communication network? If Yes, why? How does packet switching work step by step? What applications use packet switching?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 536 (ET: MIST)]*
 
+   Answer:
+
+   Do I prefer packet switching? — `Yes`, for a general communication network.
+
+   Why
+
+   - `Efficiency.` Traffic is bursty. A circuit reserves bandwidth for a whole session and wastes it whenever the user is idle. Packet switching gives the link to whoever has data at that moment, so one link serves many more users.
+   - `No setup delay.` Data can be sent immediately, without first building an end-to-end path.
+   - `Robustness.` Each packet is routed independently, so a failed link is simply avoided by subsequent packets. A circuit is destroyed by any single failure along it.
+   - `Scalability.` No per-conversation state is held in core routers, so the network can grow to billions of hosts.
+   - `Handles variable rates` — from a 100-byte DNS query to a 4K video stream, on the same infrastructure.
+   - `Lower cost` per user, because capacity is shared rather than reserved.
+   - `Error handling per packet` — only the damaged packet is retransmitted, not the whole transfer.
+
+   The honest trade-off
+   - Packet switching gives no bandwidth guarantee and introduces variable delay, jitter, reordering and possible loss. TCP restores order and reliability, and QoS, MPLS and jitter buffers manage real-time traffic. Circuit switching remains preferable only where a constant guaranteed rate is essential and traffic is continuous.
+
+   How packet switching works, step by step
+
+   - Step 1 — `Segmentation.` The message is divided into packets of a manageable size, typically up to 1500 bytes on Ethernet.
+   - Step 2 — `Encapsulation.` Each packet receives a header containing the source and destination IP addresses, a sequence number, TTL and a checksum.
+   - Step 3 — `Transmission.` The packet is sent to the first router; no path is reserved in advance.
+   - Step 4 — `Store and forward.` Each router receives the whole packet, checks its integrity, consults its routing table, and queues it for the correct outgoing interface.
+   - Step 5 — `Independent routing.` Each packet is forwarded by longest prefix match, and different packets of the same message may take different paths as conditions change.
+   - Step 6 — `Queuing.` If the outgoing link is busy, the packet waits in a buffer. If the buffer is full it is dropped — this is where congestion becomes loss.
+   - Step 7 — `Reassembly.` The destination uses the sequence numbers to put packets back in order and rebuild the original message.
+   - Step 8 — `Error recovery.` Missing or corrupted packets are detected and retransmitted by TCP.
+
+   ```
+   Message -> [P1][P2][P3][P4] -> different paths -> reassembled at the destination
+
+              /-- R1 -- R3 --\
+   Sender ---+                +--- Receiver
+              \-- R2 -- R4 --/
+   ```
+
+   Applications that use packet switching
+   - The entire internet: web (HTTP/HTTPS), email (SMTP, IMAP), file transfer (FTP), DNS.
+   - Ethernet and Wi-Fi LANs.
+   - VoIP and video conferencing (Zoom, WhatsApp calls) — voice itself has migrated to packets.
+   - Streaming video (YouTube, Netflix) and online gaming.
+   - Mobile data networks: 4G LTE and 5G are entirely packet-switched, unlike 2G voice.
+   - Cloud computing, IoT, and WAN technologies such as MPLS, Frame Relay and X.25.
+
 5. **Why is packet suiting suitable for digital data transmission?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
+
+   Answer: Packet switching suits digital data transmission because digital data is naturally discrete and bursty, which is exactly what packet switching handles best.
+
+   Reasons
+
+   - `Data is naturally chunked.` A file, a web page or an email is already a discrete block of bits, so dividing it into packets is natural. Voice, by contrast, is a continuous stream, which is why the telephone network originally used circuits.
+
+   - `Traffic is bursty.` A computer sends a burst then falls silent while the user reads or thinks. Reserving a circuit for the idle periods wastes almost all of the reserved capacity; packet switching gives that capacity to another user instantly.
+
+   - `Statistical multiplexing.` Because not every user is active at once, one link can serve far more subscribers than its raw capacity would allow under reservation. This is the single largest efficiency gain.
+
+   - `Error detection and selective retransmission.` Each packet carries its own checksum, so a corrupted packet is detected and only that packet is resent. In a continuous circuit an error corrupts the stream with no easy way to repair just the damaged part.
+
+   - `Variable data rates are supported naturally.` The same network carries a 100-byte DNS query and a gigabit video stream without reconfiguration.
+
+   - `No setup delay.` A short transaction — a DNS lookup, an API call — completes in milliseconds. Building and tearing down a circuit for it would cost far more time than the transfer itself.
+
+   - `Robustness.` Packets route around failed links automatically, so a partial network failure degrades performance instead of dropping the connection.
+
+   - `Sequence numbers restore order.` Digital data can be numbered, buffered and reassembled exactly, so out-of-order arrival is a solvable problem — which it is not for an analogue stream.
+
+   - `Scalability and low cost.` No per-conversation state in the core, and shared links, so the cost per user falls as the network grows.
+
+   - `Digital regeneration.` Each store-and-forward hop reads the bits and generates a clean new signal, so noise does not accumulate along the path.
+
+   - Summary: packet switching matches the character of digital data — discrete, bursty, variable in rate, and repairable packet by packet — and it converts what would be wasted idle capacity into throughput for other users.
 
 ## WAN Technologies (SONET/SDH, ATM, WDM) (5)
 
