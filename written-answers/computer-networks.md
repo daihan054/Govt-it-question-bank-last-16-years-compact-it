@@ -15195,9 +15195,172 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+   Answer:
+
+   Homodyne detection (also called zero-IF or direct conversion)
+   - The local oscillator runs at `exactly the same frequency` as the incoming carrier, and in phase with it: `fLO = fRF`.
+   - Mixing therefore brings the signal straight down to `zero` intermediate frequency — the baseband — in one step.
+   ```
+      RF signal (fc) ---->[ MIXER ]----> baseband (0 Hz) ----> [LPF] ----> output
+                              ^
+                              |
+                       Local oscillator at fLO = fc
+                       (phase locked to the carrier)
+   ```
+   - Advantages: no IF stage, so fewer components; no image frequency problem at all; easy to integrate on a single chip, which is why almost every modern mobile phone uses it.
+   - Disadvantages: the local oscillator must be phase-locked to the carrier, which needs a Costas loop or PLL; DC offset and 1/f flicker noise sit right in the middle of the wanted band; and LO leakage back out of the antenna is a real problem.
+
+   Heterodyne detection
+   - The local oscillator runs at a `different` frequency from the carrier, offset by a fixed amount: `fLO = fRF ± fIF`.
+   - Mixing produces a fixed `intermediate frequency`, which is then filtered and amplified before demodulation.
+   ```
+      RF signal (fc) ---->[ MIXER ]----> IF (455 kHz) ----> [IF amp/filter] ----> [Detector] ---->
+                              ^
+                              |
+                       Local oscillator at fLO = fc + 455 kHz
+   ```
+   - Advantages: all the gain and selectivity are provided at one `fixed` frequency, so the filters can be sharp and are never retuned; only the RF tuned circuit and the LO track together; excellent selectivity and sensitivity.
+   - Disadvantages: the `image frequency` problem, extra components, and higher cost and power.
+
+   | Point | Homodyne | Heterodyne |
+   |---|---|---|
+   | LO frequency | Equal to the carrier | Offset by the IF |
+   | Output of the mixer | Baseband (0 Hz) | Fixed intermediate frequency |
+   | IF stage | None | Required |
+   | Image frequency | None | Present, must be rejected |
+   | Phase lock needed | Yes | No |
+   | Selectivity | Set by a low-pass filter | Set by a sharp fixed IF filter |
+   | Integration | Easy, single chip | Harder |
+   | Main problems | DC offset, flicker noise, LO leakage | Image response |
+   | Used in | Mobile phones, SDR, optical coherent receivers | AM/FM radio, television, radar |
+
+   Block diagram of a superheterodyne AM receiver
+   ```
+             |
+          ___|___  antenna
+             |
+      +------v-------+   +--------+   +----------------+   +---------------+
+      | RF amplifier |-->| MIXER  |-->| IF amplifier   |-->| Detector      |
+      | + preselector|   |        |   | 455 kHz, tuned |   | (envelope /   |
+      | (tuned)      |   +---^----+   | fixed filters  |   |  diode)       |
+      +--------------+       |        +----------------+   +-------+-------+
+                             |                                     |
+                     +-------+--------+                     +------v------+
+                     | Local          |                     | AGC         |
+                     | oscillator     |<--------------------| (feeds back |
+                     | fLO = fc + 455 |                     |  to RF/IF)  |
+                     +----------------+                     +------+------+
+                       ganged tuning with the RF stage              |
+                                                             +------v------+
+                                                             | AF amplifier|
+                                                             +------+------+
+                                                                    |
+                                                                Loudspeaker
+   ```
+
+   Stage by stage
+   - `RF amplifier and preselector` — amplifies the wanted station, improves the noise figure, and above all rejects the `image frequency`.
+   - `Mixer` — multiplies the RF signal by the local oscillator, producing the sum and difference frequencies.
+   - `Local oscillator` — tuned by the same ganged capacitor as the RF stage, always running `455 kHz above` the wanted station so the difference is always 455 kHz.
+   - `IF amplifier` — provides most of the gain and selectivity, at one fixed frequency with sharp, permanently aligned filters. This is the reason the superheterodyne design won.
+   - `Detector` — an envelope detector (a diode, resistor and capacitor) recovers the audio from the AM waveform.
+   - `AGC` — automatic gain control feeds a DC level back to the RF and IF stages so that strong and weak stations produce similar output volume.
+   - `AF amplifier and speaker` — amplify the recovered audio.
+
+   The image frequency problem
+   - With the standard 455 kHz IF, tuning to 1000 kHz sets the LO to 1455 kHz. A station at `1455 + 455 = 1910 kHz` would also produce a 455 kHz difference and be heard on top of the wanted one.
+   ```
+   Image frequency = fc + 2 × IF
+   ```
+   - This is why the preselector exists, and why the IF is chosen high enough to place the image far away, where the tuned RF circuit can reject it.
+
 2. **Difference between AM and FM. (a) Which is prefer for long distance communication? (b) Which has low distortion? (c) Which has low interference?** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
 
+   Answer:
+
+   Difference between AM and FM
+
+   | Point | AM (Amplitude Modulation) | FM (Frequency Modulation) |
+   |---|---|---|
+   | What varies | The carrier's `amplitude` | The carrier's `frequency` |
+   | Carrier amplitude | Varies with the message | Constant |
+   | Carrier frequency | Constant | Varies with the message |
+   | Bandwidth | Narrow: BW = 2 fm (about 10 kHz per station) | Wide: BW = 2(Δf + fm) (about 200 kHz per station) |
+   | Noise immunity | Poor — noise is itself an amplitude disturbance | Excellent — a limiter removes amplitude noise |
+   | Sound quality | Lower; limited audio bandwidth | High fidelity, stereo capable |
+   | Range | Very long, especially at night | Shorter, largely line of sight |
+   | Frequency band | 535–1605 kHz (medium wave) | 88–108 MHz |
+   | Power efficiency | Poor — at best 33 %, since most power is in the carrier | Better; constant envelope allows an efficient class-C amplifier |
+   | Circuit complexity | Simple modulator and envelope detector | More complex: VCO and discriminator or PLL |
+   | Number of sidebands | 2 | Theoretically infinite, practically limited by Carson's rule |
+   | Effect of a fade | Directly changes the recovered signal | Amplitude changes are removed by the limiter |
+
+   (a) Which is preferred for long-distance communication — `AM`
+   - AM broadcasting uses the medium-wave band, whose lower frequencies `diffract around obstacles and follow the curvature of the earth` (ground wave).
+   - At night, medium waves are reflected by the ionosphere (`skywave propagation`), so an AM station can be heard hundreds or even thousands of kilometres away.
+   - AM's narrow bandwidth also means the transmitted power is concentrated in a small spectrum, so the signal-to-noise ratio at long range is better.
+   - FM at 88–108 MHz travels essentially in straight lines and is not reflected by the ionosphere, so its useful range is limited to roughly the radio horizon — typically 50 to 100 km.
+   - Note the distinction the question is probing: FM is `better in quality`, AM is `better in reach`.
+
+   (b) Which has low distortion — `FM`
+   - The information is carried in frequency, not amplitude, so amplitude distortion introduced by the channel or by a non-linear amplifier does not affect the recovered signal.
+   - A `limiter` in the FM receiver clips the signal to a constant amplitude before detection, removing amplitude variation entirely.
+   - FM also supports a much wider audio bandwidth (up to 15 kHz against roughly 5 kHz for AM), and pre-emphasis and de-emphasis further improve high-frequency quality.
+   - The constant envelope allows an efficient non-linear class-C power amplifier without introducing distortion.
+
+   (c) Which has low interference — `FM`
+   - Same underlying reason: noise, lightning static and electrical interference are almost entirely amplitude disturbances, and the FM limiter removes them.
+   - FM also exhibits the `capture effect`: when two stations share a frequency, the receiver locks onto the stronger one and suppresses the weaker completely, instead of hearing both mixed together as AM does.
+   - FM's wide bandwidth gives processing gain, improving the output signal-to-noise ratio beyond what the input ratio would suggest.
+   - AM has none of these mechanisms — every amplitude disturbance is heard directly as noise.
+
+   Summary
+   - `AM wins on range and simplicity`; `FM wins on quality, distortion and interference`. That is exactly why AM survives for long-distance and aviation communication while FM is used for music broadcasting.
+
 3. **A sinusoidal modulating waveform of amplitude 5V and frequency of 2 kHz is applied to FM generator, which has a frequency sensitivity of 40Hz/volt. Calculate the frequency deviation, modulation index and bandwidth.** *[BOF Assistant Programmer 2022 compact it 734 (ET: MIST)]*
+
+   Answer:
+
+   Given
+   - Modulating amplitude Am = 5 V
+   - Modulating frequency fm = 2 kHz = 2000 Hz
+   - Frequency sensitivity kf = 40 Hz per volt
+
+   Step 1 — frequency deviation
+   - The deviation is how far the carrier frequency swings from its centre value.
+   ```
+   Δf = kf × Am
+      = 40 Hz/V × 5 V
+      = 200 Hz
+   ```
+
+   Step 2 — modulation index
+   - For FM the modulation index is the ratio of deviation to modulating frequency.
+   ```
+   β = Δf / fm
+     = 200 / 2000
+     = 0.1
+   ```
+   - Since `β < 1`, this is `narrowband FM`. (β > 1 would be wideband FM.)
+
+   Step 3 — bandwidth, by Carson's rule
+   ```
+   BW = 2 (Δf + fm)
+      = 2 (200 + 2000)
+      = 2 × 2200
+      = 4400 Hz = 4.4 kHz
+   ```
+
+   | Quantity | Formula | Value |
+   |---|---|---|
+   | Frequency deviation | Δf = kf · Am | `200 Hz` |
+   | Modulation index | β = Δf / fm | `0.1` |
+   | Bandwidth | BW = 2(Δf + fm) | `4400 Hz = 4.4 kHz` |
+
+   Checks and observations
+   - Narrowband FM check: for β << 1 the bandwidth approaches `2 fm` = 4000 Hz, and Carson's rule gives 4400 Hz, which is consistent.
+   - Note what each parameter depends on: `Δf depends only on the amplitude` of the modulating signal, never on its frequency. `β depends on both`. This is the opposite of AM, where the modulation index depends only on the amplitude ratio.
+   - For comparison, commercial FM broadcasting uses Δf = 75 kHz and fm = 15 kHz, giving β = 5 and BW = 2(75 + 15) = 180 kHz, which is why FM stations are spaced 200 kHz apart.
 
 ## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (3)
 
