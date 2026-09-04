@@ -3375,15 +3375,165 @@ Answer: The question is `incomplete` — the paper itself records that the full 
 
 1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
 
+   Answer: Kruskal's algorithm is a greedy algorithm used to find the Minimum Spanning Tree (MST) of a weighted, connected undirected graph.
+
+   Algorithm Steps:
+   1. Sort all edges of the graph in non-decreasing order of their weights.
+   2. Iterate through sorted edges and select the lowest-weight edge.
+   3. Check if adding the selected edge forms a cycle with the MST formed so far using the Disjoint Set Union (DSU / Union-Find) data structure.
+   4. If no cycle is formed, include the edge in the MST; otherwise, discard it.
+   5. Repeat until exactly $(V - 1)$ edges are included in the MST, where $V$ is the total number of vertices.
+
+   - Total MST Cost = $\sum \text{weight of chosen } (V - 1) \text{ edges}$.
+   - Time Complexity: $O(E \log E)$ or $O(E \log V)$ for sorting edges and applying Union-Find with path compression.
+
 2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+
+   int binarySearch(int arr[], int n, int key) {
+       int low = 0, high = n - 1;
+       while (low <= high) {
+           int mid = low + (high - low) / 2; // Avoids integer overflow
+           if (arr[mid] == key)
+               return mid; // Key found at index mid
+           else if (arr[mid] < key)
+               low = mid + 1; // Search right half
+           else
+               high = mid - 1; // Search left half
+       }
+       return -1; // Key not present in array
+   }
+
+   int main(void) {
+       int arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};
+       int key = 23;
+       int result = binarySearch(arr, 10, key);
+       if (result != -1)
+           printf("Element %d found at index %d\n", key, result);
+       else
+           printf("Element not found\n");
+       return 0;
+   }
+   ```
+
+   - Time Complexity: $O(\log n)$ because the search interval is halved in every step.
+   - Space Complexity: $O(1)$ auxiliary memory.
 
 3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
 
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <stdbool.h>
+
+   bool isPrime(int n) {
+       if (n <= 1) return false;
+       if (n <= 3) return true;
+       if (n % 2 == 0 || n % 3 == 0) return false;
+
+       for (int i = 5; i * i <= n; i += 6) {
+           if (n % i == 0 || n % (i + 2) == 0)
+               return false;
+       }
+       return true;
+   }
+
+   int main(void) {
+       int num;
+       printf("Enter a positive integer: ");
+       scanf("%d", &num);
+
+       if (isPrime(num))
+           printf("%d is a Prime Number.\n", num);
+       else
+           printf("%d is NOT a Prime Number.\n", num);
+       return 0;
+   }
+   ```
+
+   - Time Complexity: $O(\sqrt{n})$ by checking divisors up to $\sqrt{n}$ with step 6 optimization.
+
 4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
 
-5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*, *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378-379]]*
+   Answer:
+   - BIMSTEC (Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation): An international regional organization established on 6 June 1997 through the Bangkok Declaration. It serves as a bridge between South and Southeast Asia to promote economic growth, trade, technical cooperation, and multi-modal connectivity among countries in the Bay of Bengal region.
+   - Member States (7 Countries):
+     1. Bangladesh
+     2. Bhutan
+     3. India
+     4. Myanmar
+     5. Nepal
+     6. Sri Lanka
+     7. Thailand
+
+5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^{th}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*, *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378-379]]*
+
+   Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <stdbool.h>
+
+   void printPrimes(int n) {
+       printf("Prime numbers from 1 to %d:\n", n);
+       for (int i = 2; i <= n; i++) {
+           bool is_prime = true;
+           for (int j = 2; j * j <= i; j++) {
+               if (i % j == 0) {
+                   is_prime = false;
+                   break;
+               }
+           }
+           if (is_prime)
+               printf("%d ", i);
+       }
+       printf("\n");
+   }
+
+   int main(void) {
+       int n;
+       printf("Enter N: ");
+       scanf("%d", &n);
+       printPrimes(n);
+       return 0;
+   }
+   ```
+
+   - For `N = 20`, output is `2 3 5 7 11 13 17 19`.
+   - Time Complexity: $O(n\sqrt{n})$, Space Complexity: $O(1)$.
 
 6. **Construct a Binary Search tree using the following set of data: 45, 9, 5, 19, 23, 19, 46, 2, 12, 10.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 384]]*
+
+   Answer: In a Binary Search Tree (BST), for every node, all values in its left subtree are smaller, and all values in its right subtree are greater.
+
+   Step-by-Step Node Insertions:
+   - 1. Insert `45`: Root node.
+   - 2. Insert `9`: `9 < 45` $\to$ left child of `45`.
+   - 3. Insert `5`: `5 < 45`, `5 < 9` $\to$ left child of `9`.
+   - 4. Insert `19`: `19 < 45`, `19 > 9` $\to$ right child of `9`.
+   - 5. Insert `23`: `23 < 45`, `23 > 9`, `23 > 19` $\to$ right child of `19`.
+   - 6. Insert `46`: `46 > 45` $\to$ right child of `45`.
+   - 7. Insert `2`: `2 < 45`, `2 < 9`, `2 < 5` $\to$ left child of `5`.
+   - 8. Insert `12`: `12 < 45`, `12 > 9`, `12 < 19` $\to$ left child of `19`.
+   - 9. Insert `10`: `10 < 45`, `10 > 9`, `10 < 19`, `10 < 12` $\to$ left child of `12`.
+
+   Final Binary Search Tree:
+   ```
+              45
+            /    \
+           9      46
+          / \
+         5   19
+        /   /  \
+       2   12   23
+          /
+         10
+   ```
 
 ## Dynamic Programming (5)
 
