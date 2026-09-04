@@ -2826,13 +2826,167 @@
 
 1. **What should be checked before buying servers?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 318 (ET: N/A)]*
 
+   Answer: Server purchase decisions should start from the WORKLOAD, then match hardware to it.
+
+   (a) Workload and sizing
+   - What will it run — database, web application, virtualization host, file server? Each stresses a different resource.
+   - Expected user count, transaction volume and growth over the next 3-5 years.
+
+   (b) Processor
+   - Number of sockets, cores per socket, clock speed, cache size.
+   - Database workloads favour higher clock speed; virtualization favours more cores.
+
+   (c) Memory
+   - Capacity, and just as important, the number of free DIMM slots for future expansion.
+   - **ECC (Error Correcting Code) memory is mandatory** for a server — it detects and corrects single-bit errors that would otherwise silently corrupt data.
+
+   (d) Storage
+   - **SAS vs SATA vs NVMe SSD** — SAS or NVMe for databases, SATA for bulk storage.
+   - **RAID controller with battery-backed write cache**, and the RAID level appropriate to the workload (RAID 10 for databases, RAID 5/6 for file storage).
+   - Hot-swap drive bays and spare capacity.
+
+   (e) Redundancy and availability
+   - **Dual redundant hot-swap power supplies** — non-negotiable for production.
+   - Redundant fans, hot-swap drives, and multiple network ports for teaming.
+
+   (f) Network
+   - Number and speed of NICs (1 GbE, 10 GbE), and support for teaming and VLANs.
+
+   (g) Form factor and physical fit
+   - Rack (1U, 2U), tower or blade. Check rack space, depth, weight, power draw and cooling capacity in the existing room.
+
+   (h) Management and support
+   - Out-of-band management (iDRAC, iLO, IPMI) for remote power control and console access — essential in a data centre.
+   - **Warranty and local service** — next-business-day on-site support and spare-part availability in Bangladesh matter more than a small price difference.
+
+   (i) Compatibility and compliance
+   - Operating system and hypervisor certification (VMware HCL, Windows Server logo).
+   - Vendor roadmap, firmware update policy and end-of-support date.
+
+   (j) Total cost of ownership
+   - Purchase price plus power, cooling, licences, support contract and expected lifetime — not the sticker price alone.
+
 2. **Scenario based descriptive question for server related problem ( How do you handle those problem for your company )** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
+
+   Answer: A structured incident-handling approach should be described, since the exact scenario varies.
+
+   (a) Immediate response
+   - **Identify and assess** — what exactly failed, which services are affected, how many users, is data at risk.
+   - **Communicate** — inform management and users with an initial estimate; silence causes more damage than bad news.
+   - **Contain** — isolate the failing server, fail over to the standby node or DR site to restore service first. Restoring service and finding the root cause are separate activities.
+
+   (b) Diagnosis
+   - Check hardware indicators: front-panel LEDs, iDRAC/iLO system log, POST errors.
+   - Check system logs: Event Viewer on Windows, `/var/log` and `dmesg` on Linux.
+   - Check resources: CPU, RAM, disk space, disk I/O, network utilisation.
+   - Check services and dependencies: database, application, network path, DNS, storage array.
+   - Check recent changes — a large share of incidents follow a change made in the previous 24 hours.
+
+   (c) Common scenarios and their handling
+
+   | Scenario | Immediate action | Permanent fix |
+   |---|---|---|
+   | Server will not boot | Check power, PSU LEDs, POST codes; boot from a known-good disk | Replace failed component; restore from image |
+   | Disk failure in RAID | Confirm array is degraded but online; replace the hot-swap disk | Rebuild array; verify backups; check for a second failing disk |
+   | Out of disk space | Clear logs and temp files to restore service | Add capacity; implement log rotation and monitoring alerts |
+   | High CPU / slow response | Identify the runaway process; restart the service | Tune the query or code; scale out |
+   | Overheating | Verify room cooling; check fans | Clean dust; replace failed fan; fix CRAC unit |
+   | Network unreachable | Check NIC, cable, switch port, VLAN | Configure NIC teaming and redundant uplinks |
+   | Security incident | Isolate from the network immediately; preserve evidence | Patch, rebuild from clean image, rotate credentials, report per policy |
+
+   (d) After the incident
+   - **Root cause analysis** and a written incident report.
+   - **Preventive action** — patching, monitoring thresholds, capacity planning, redundancy improvements.
+   - **Update runbooks** so the next person handles it faster.
+   - **Test backups and DR** — an untested backup is not a backup.
+
+   - Governing principle in a bank: restore service first, preserve evidence, then fix the root cause — and follow the documented escalation matrix throughout.
 
 3. **What are the key hardware components that make up a typical server, and how do they contribute to its overall performance and functionality?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 537 (ET: MIST)]*
 
+   Answer:
+
+   | Component | Contribution to performance and functionality |
+   |---|---|
+   | **CPU (one or more sockets)** | Executes all instructions. Core count decides how many workloads run truly in parallel; clock speed decides single-thread performance; cache size reduces waiting for memory |
+   | **RAM (ECC, registered)** | Holds active data and running programs. Insufficient RAM forces swapping to disk, which is thousands of times slower. ECC corrects single-bit errors that would otherwise corrupt data silently |
+   | **Storage (SAS / SATA / NVMe SSD)** | Holds the OS, applications and data. IOPS and latency decide database and file-server responsiveness far more than raw capacity |
+   | **RAID controller** | Combines disks for redundancy and speed. A battery-backed write cache dramatically improves write performance and protects in-flight data during a power loss |
+   | **Motherboard and chipset** | Connects everything. Determines the number of sockets, DIMM slots, PCIe lanes and expansion capacity |
+   | **Network Interface Cards** | Move data in and out. Multiple NICs allow teaming for both throughput and failover |
+   | **Redundant power supplies (PSU)** | Two hot-swap units on separate feeds keep the server running when one PSU or one feed fails |
+   | **Cooling — fans and heatsinks** | Prevent thermal throttling. An overheating CPU deliberately slows itself, so cooling directly affects sustained performance |
+   | **Out-of-band management (iDRAC / iLO / IPMI)** | Remote power control, console and hardware monitoring even when the OS is down — essential for a data centre |
+   | **GPU / accelerator (optional)** | Handles parallel workloads such as ML training, video encoding and VDI far faster than the CPU |
+   | **Chassis and backplane** | Hot-swap bays and airflow design allow maintenance without shutdown |
+
+   - How they interact: the slowest component sets the ceiling. A 64-core CPU starved of RAM, or an NVMe array behind a 1 GbE NIC, wastes the money spent on the fast part. Balanced sizing against the actual workload matters more than maximising any single specification.
+
 4. **Discuss server maintenance best practices, including routine tasks like cleaning, monitoring, and applying security patches. How do these practices contribute to server longevity and performance?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 540 (ET: MIST)]*
 
+   Answer:
+
+   (a) Physical maintenance
+   - **Dust cleaning** every 3-6 months — dust blocks airflow, raises temperature and shortens component life. Use compressed air, never a vacuum near boards.
+   - **Check fans and cooling** — a failed fan causes a hot spot that throttles the CPU and eventually kills components.
+   - **Verify environment** — room temperature 18-27 °C, humidity 40-60%.
+   - **Inspect cabling** — loose or strained cables cause intermittent faults that are very hard to diagnose.
+   - **Test UPS batteries** — batteries degrade silently and fail exactly when needed.
+
+   (b) Monitoring
+   - **Hardware health** — disk SMART status, RAID array state, temperature, fan speed, PSU status through iDRAC/iLO.
+   - **Resource utilisation** — CPU, memory, disk space and I/O, network. Set threshold alerts BEFORE saturation.
+   - **Log review** — system, security and application logs, ideally centralised in a SIEM.
+   - **Service and uptime monitoring** — synthetic checks that a service actually answers, not just that the machine pings.
+
+   (c) Software and security
+   - **Patch management** — apply OS and application security patches on a defined schedule, tested in a staging environment first. This is the single most effective security control.
+   - **Firmware and driver updates** — BIOS, RAID controller and NIC firmware fix real stability bugs.
+   - **Antivirus / EDR** with current definitions.
+   - **Account and access review** — remove departed users, enforce least privilege, rotate service-account passwords.
+   - **Configuration and change management** — documented, approved changes with rollback plans.
+
+   (d) Backup and recovery
+   - Follow the **3-2-1 rule**: three copies, on two different media, one off-site.
+   - **Test restores regularly** — an untested backup is only a hope.
+   - Maintain and rehearse the disaster recovery plan.
+
+   (e) Documentation
+   - Asset inventory, network diagram, configuration baselines, runbooks and maintenance history.
+
+   How these contribute
+   - **Longevity** — clean, cool, well-powered hardware lasts years longer; heat and dust are the main killers of electronics.
+   - **Performance** — no thermal throttling, no disk exhaustion, no resource starvation.
+   - **Availability** — problems are caught by monitoring before they become outages.
+   - **Security** — patching closes the vulnerabilities that attackers actually use.
+   - **Recoverability** — tested backups turn a disaster into an inconvenience.
+
 5. **Difference between SAS and SATA. Which one is best server?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
+
+   Answer:
+
+   | Point | SAS (Serial Attached SCSI) | SATA (Serial ATA) |
+   |---|---|---|
+   | Designed for | Enterprise servers, 24/7 operation | Desktops and consumer devices |
+   | Transfer speed | Up to 12 Gb/s (22.5 Gb/s in SAS-4) | Up to 6 Gb/s |
+   | Rotational speed | 10,000 or 15,000 RPM | 5,400 or 7,200 RPM |
+   | Latency and IOPS | Lower latency, much higher IOPS | Higher latency, lower IOPS |
+   | Reliability (MTBF) | Higher — built for continuous duty | Lower — rated for lighter duty cycles |
+   | Duty cycle rating | 24/7 continuous | Typically 8 hours/day |
+   | Error correction | Advanced, full end-to-end data protection | Basic |
+   | Dual port | Yes — two paths to the same drive for redundancy | No, single port |
+   | Hot swap | Yes, without powering down | Limited |
+   | Capacity per drive | Generally lower | Much higher, and cheaper per TB |
+   | Cost per GB | High | Low |
+   | Typical use | Databases, transaction systems, virtualization | Backup, archive, file storage, bulk data |
+
+   Which is best for a server
+   - **SAS is the better choice for a production server**, especially for a bank. It is built for 24/7 operation, has far higher IOPS and lower latency for transactional database work, supports dual-port redundancy, and has a much higher MTBF.
+   - **SATA is appropriate within a server for bulk, sequential, non-critical storage** — backup targets, log archives and media files — where capacity per taka matters more than IOPS.
+
+   The practical modern answer
+   - Many enterprises now use a tiered mix: **NVMe SSD** for the hottest database data (hundreds of thousands of IOPS), **SAS** for general production workloads, and **SATA / nearline SAS** for archive.
+   - For a bank's core banking database, SAS SSD or NVMe is the correct specification; SATA is acceptable only for backup storage.
 
 ## Quantum Computing & Emerging Technologies (3)
 
