@@ -1,20 +1,23 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 196 questions
+**Table of Contents** — 15 subtopics · 209 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-47) | 47 |
-| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-25) | 25 |
+| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-26) | 26 |
 | 3 | [OS Concepts & System Software](#os-concepts--system-software-24) | 24 |
 | 4 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
-| 5 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
-| 6 | [Memory Management & Paging](#memory-management--paging-16) | 16 |
+| 5 | [Memory Management & Paging](#memory-management--paging-18) | 18 |
+| 6 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
 | 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
 | 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
 | 9 | [File Systems & Disk Management](#file-systems--disk-management-7) | 7 |
-| 10 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
-| 11 | [Windows & System Administration](#windows--system-administration-5) | 5 |
-| 12 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
+| 10 | [OS Concepts & Process Management](#os-concepts--process-management-7) | 7 |
+| 11 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
+| 12 | [Windows & System Administration](#windows--system-administration-5) | 5 |
+| 13 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
+| 14 | [Deadlock & Concurrency Control](#deadlock--concurrency-control-2) | 2 |
+| 15 | [Linux, Shell & System Commands](#linux-shell--system-commands-1) | 1 |
 
 <!-- TOC END -->
 
@@ -28,75 +31,78 @@
    (c) Delete all files in a folder.
    (d) Show partition.
 
-   Answer: (a) Give a file read, write and execute permission
+* **(a) Displays real-time system statistics, including CPU usage, memory usage, running processes, and system load.**
+   * **(b) Searches for a specified pattern in a file or output.**
+   * **(c) Shows disk usage for all mounted file systems.**
+   * **(d) Displays information about system memory (RAM and swap).** *[BCIC Assistant Programmer 14.02.2025 compact it 1325 (ET: BUET)]*
+
+   Answer: (a) Real-time system statistics — CPU, memory, processes, load
    ```bash
-      chmod 777 filename          # everyone : read + write + execute
-      chmod u+rwx filename        # only the OWNER gets rwx
-      chmod a+rwx filename        # symbolic form of 777
+      top                    # the classic real-time process viewer
+      htop                   # a friendlier colour version, if installed
    ```
    ```
-      Permission values :  r = 4 , w = 2 , x = 1
-      rwx = 4 + 2 + 1 = 7
+      top - 14:32:01 up 5 days,  3:12,  2 users,  load average: 0.52, 0.58, 0.59
+      Tasks: 245 total,   1 running, 244 sleeping
+      %Cpu(s):  4.2 us,  1.1 sy,  0.0 ni, 94.5 id
+      MiB Mem :  15852.0 total,   4210.5 free,   6120.3 used
+   ```
+   - Press `q` to quit, `k` to kill a process, `M` to sort by memory and `P` to sort by CPU.
 
-      777  ->  owner 7 , group 7 , others 7
-   ```
-
-   (b) Show the IP address
+   (b) Search for a pattern in a file or in output
    ```bash
-      ip addr show                # the modern command
-      ip a                        # short form
-      ifconfig                    # older, from net-tools
-      hostname -I                 # just the IP addresses
-      ip route get 1.1.1.1        # shows which interface is used
+      grep "pattern" filename
+      grep -i "pattern" filename       # ignore case
+      grep -r "pattern" /path          # search recursively
+      grep -n "pattern" filename       # show line numbers
+      grep -v "pattern" filename       # INVERT - lines NOT matching
+      grep -c "pattern" filename       # count matching lines
+
+      ps aux | grep httpd              # searching the output of another command
    ```
 
-   (c) Delete all files in a folder
+   (c) Disk usage for all mounted file systems
    ```bash
-      rm /path/to/folder/*             # files only, not subdirectories
-      rm -r /path/to/folder/*          # files AND subdirectories
-      rm -rf /path/to/folder/*         # force, no confirmation
-
-      find /path/to/folder -type f -delete    # safer for very many files
+      df -h                   # human readable : G, M, K
+      df -Th                  # also shows the filesystem TYPE
+      df -i                   # inode usage instead of blocks
    ```
-   - `rm -rf` is unforgiving. There is no recycle bin, and a mistyped path such as `rm -rf / home` instead of `rm -rf /home` destroys the system.
-
-   (d) Show partitions
-   ```bash
-      lsblk                       # block devices and partitions, as a tree
-      fdisk -l                    # detailed partition table (needs root)
-      df -h                       # MOUNTED filesystems, human readable
-      parted -l                   # partition details
-      cat /proc/partitions        # the kernel's own list
-      blkid                       # UUID and filesystem type of each partition
    ```
-
-   Sample outputs
-   ```
-      $ lsblk
-      NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
-      sda      8:0    0  500G  0 disk
-      |-sda1   8:1    0    1G  0 part /boot
-      |-sda2   8:2    0  100G  0 part /
-      `-sda3   8:3    0  399G  0 part /home
-
-      $ df -h
       Filesystem      Size  Used Avail Use% Mounted on
       /dev/sda2       100G   45G   50G  48% /
       /dev/sda3       399G  120G  259G  32% /home
+      tmpfs           7.8G  1.2M  7.8G   1% /run
+   ```
+   - Do not confuse `df` with `du`: `df` reports `filesystem` usage, while `du` reports the size of `directories`.
+
+   (d) System memory — RAM and swap
+   ```bash
+      free -h                 # human readable
+      free -m                 # in megabytes
+      free -g                 # in gigabytes
+      cat /proc/meminfo       # the kernel's detailed view
+      vmstat                  # memory plus CPU and I/O statistics
+   ```
+   ```
+                     total        used        free      shared  buff/cache   available
+      Mem:            15Gi       6.0Gi       4.1Gi       1.2Gi       5.4Gi       8.0Gi
+      Swap:          2.0Gi          0B       2.0Gi
    ```
 
    Summary
 
-   | Task | Command |
+   | Requirement | Command |
    |---|---|
-   | Full permission | `chmod 777 filename` |
-   | Show IP address | `ip addr show` or `ifconfig` |
-   | Delete all files in a folder | `rm -rf /path/*` |
-   | Show partitions | `lsblk` or `fdisk -l` |
+   | (a) Real-time CPU, memory, processes, load | `top` (or `htop`) |
+   | (b) Search a pattern | `grep "pattern" file` |
+   | (c) Disk usage of all filesystems | `df -h` |
+   | (d) RAM and swap information | `free -h` |
+
+   - Related monitoring commands worth naming: `uptime` for the load average alone, `iostat` for disk I/O, `netstat` or `ss` for network sockets, and `ps aux` for a one-off snapshot of every process.
 
 2. **Write a Linux command to count the total number of characters and words from the first 10 lines of a file named "wasacustomers.txt".** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1437 (ET: BUET)]*
 
-   Answer: The task is to take the `first 10 lines` of the file and count the characters and words in them.
+Answer: The task is to take the `first 10 lines` of the file and count the characters and words in them.
    ```bash
       head -10 wasacustomers.txt | wc -cw
    ```
@@ -149,87 +155,124 @@
 
 3. **Linux command:** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1361 (ET: BUET)], [GTCL Assistant Engineer (CSE) 2022 compact it 685 (ET: BUET)], [PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the paper printed only the heading "Linux command:" and the list of specific commands asked for was not captured. The commands that appear most often in this paper are given below, so the answer is usable whichever sub-questions were intended.
+i) passwd
+   ii) cat>file.txt
+   iii) telnet
+   iv) ls
+   v) ping
+   vi) su
+   vii) nslookup
+   viii) mkdir
 
-   File and directory commands
-   ```bash
-      ls -la                  # list all files with details, including hidden
-      pwd                     # print the current working directory
-      cd /path                # change directory ; cd .. up , cd ~ home
-      mkdir -p a/b/c          # create a directory, with parents
-      rmdir folder            # remove an EMPTY directory
-      rm file                 # remove a file
-      rm -r folder            # remove a directory and its contents
-      cp file dest            # copy ; cp -r for a directory
-      mv old new              # move, or RENAME
-      touch file              # create an empty file
-      find / -name "*.txt"    # search for files by name
-   ```
+    Answer: i. `passwd` — change a password
+    ```bash
+       passwd                       # change your OWN password
+       sudo passwd rahim            # change another user's (root only)
+       sudo passwd -l rahim         # LOCK the account
+       sudo passwd -u rahim         # unlock it
+       sudo passwd -e rahim         # force a change at the next login
+       passwd -S rahim              # show the password status
+    ```
+    ```
+       $ passwd
+       Changing password for rahim.
+       Current password:
+       New password:
+       Retype new password:
+       passwd: password updated successfully
+    ```
+    - Passwords are stored, hashed, in `/etc/shadow`, which only root can read.
 
-   Viewing and searching file contents
-   ```bash
-      cat file                # display the whole file
-      head -10 file           # first 10 lines
-      tail -10 file           # last 10 lines
-      tail -f logfile         # follow a log as it grows
-      less file               # page through a file
-      grep -n "text" file     # search for a string, with line numbers
-      grep -r "text" /path    # search recursively
-      wc -l file              # count lines ; -w words , -c bytes
-      sed -n '10,20p' file    # print lines 10 to 20
-   ```
+    ii. `cat > file.txt` — create a file and type its contents
+    ```bash
+       cat > file.txt
+       This is line one
+       This is line two
+       <Ctrl + D>                   # end of input
+    ```
+    ```
+       cat       "concatenate" - normally displays a file
+       >         redirect the OUTPUT into a file, creating or TRUNCATING it
+       Ctrl + D  signals end-of-file, so cat stops reading
+    ```
+    ```bash
+       cat file.txt                 # display the contents
+       cat >> file.txt              # APPEND instead of overwriting
+       cat file1 file2 > merged.txt # join two files into a third
+       cat -n file.txt              # display with line numbers
+    ```
+    - The trap: `>` destroys the existing contents without warning. Use `>>` to add to a file.
 
-   Permission and ownership
-   ```bash
-      chmod 755 file          # set permissions (r=4 , w=2 , x=1)
-      chmod u+x file          # symbolic form
-      chown user:group file   # change owner and group
-      ls -l file              # view the current permissions
-   ```
+    iii. `telnet` — connect to a remote host
+    ```bash
+       telnet hostname              # connect on the default port 23
+       telnet 192.168.1.10
+       telnet google.com 80         # test whether a PORT is open
+    ```
+    - `telnet` sends everything, including the password, `in plain text`. It is obsolete for remote login and has been replaced by `ssh`. Its one remaining use is as a quick port-connectivity test:
+    ```bash
+       $ telnet google.com 80
+       Trying 142.250.196.14...
+       Connected to google.com.        <- port 80 is open
+    ```
+    - `nc -zv host 80` does the same job more cleanly.
 
-   Process and system information
-   ```bash
-      ps aux                  # every running process
-      top                     # live CPU, memory and process view
-      kill -9 PID             # terminate a process
-      df -h                   # disk space of all filesystems
-      du -sh folder           # size of a folder
-      free -h                 # RAM and swap
-      uname -a                # kernel and system information
-      uptime                  # how long the system has been up
-   ```
+    iv. `ls` — list directory contents
+    ```bash
+       ls                # names only
+       ls -l             # long listing : permissions, owner, size, date
+       ls -a             # including hidden (dot) files
+       ls -la            # both
+       ls -lh            # human-readable sizes
+       ls -lt            # newest first
+       ls -R             # recurse into subdirectories
+    ```
 
-   Network commands
-   ```bash
-      ip addr show            # IP addresses  (older: ifconfig)
-      ping -c 4 host          # test connectivity
-      traceroute host         # the path packets take
-      netstat -tuln           # listening ports  (modern: ss -tuln)
-      ssh user@host           # secure remote login
-      scp file user@host:/dir # copy a file over SSH
-      wget URL                # download a file
-   ```
+    v. `ping` — test network connectivity
+    ```bash
+       ping google.com
+       ping -c 4 google.com         # send 4 packets and stop
+       ping 8.8.8.8                 # test by IP, bypassing DNS
+    ```
+    ```
+       64 bytes from 142.250.196.14: icmp_seq=1 ttl=115 time=12.3 ms
+       --- 4 packets transmitted, 4 received, 0% packet loss
+    ```
+    - It sends an `ICMP Echo Request` and waits for the reply, testing name resolution, reachability and round-trip time together.
 
-   User management
-   ```bash
-      sudo useradd -m user    # create a user with a home directory
-      sudo passwd user        # set the password
-      sudo usermod -aG grp u  # add the user to a group
-      whoami , id , groups    # who am I, and what groups am I in
-   ```
+    vi. `su` — switch user
+    ```bash
+       su                     # become root (asks for ROOT's password)
+       su -                   # become root WITH root's environment
+       su rahim               # become another user
+       su - rahim             # with that user's full login environment
+       exit                   # return to the previous user
+    ```
+    ```
+       su        switch user, keeping the current environment
+       su -      switch user AND load their profile, PATH and home directory
+       sudo cmd  run ONE command as root, using YOUR OWN password
+    ```
+    - `sudo` is preferred over `su` on modern systems: it needs no shared root password, it logs every command, and it grants only what the `/etc/sudoers` file allows.
 
-   Archiving and packages
-   ```bash
-      tar -czvf a.tar.gz dir  # create a compressed archive
-      tar -xzvf a.tar.gz      # extract it
-      sudo apt install pkg    # Debian and Ubuntu
-      sudo yum install pkg    # RHEL and CentOS
-   ```
+    Summary
 
-   - The permission arithmetic, which almost every version of this question needs: `r = 4, w = 2, x = 1`, so `rwx = 7`, `r-x = 5` and `r-- = 4`, giving the familiar `755` and `644`.
+    | Command | Purpose |
+    |---|---|
+    | `passwd` | Change a password |
+    | `cat > file.txt` | Create a file and type its contents |
+    | `telnet` | Remote login (obsolete) or a port test |
+    | `ls` | List directory contents |
+    | `ping` | Test network connectivity |
+    | `su` | Switch to another user |
 
 4. **Write Linux command:** *[BCIC Assistant Programmer 14.02.2025 compact it 1324 (ET: BUET)]*
    * **(a) Displays real-time system statistics, including CPU usage, memory usage, running processes, and system load.**
+   * **(b) Searches for a specified pattern in a file or output.**
+   * **(c) Shows disk usage for all mounted file systems.**
+   * **(d) Displays information about system memory (RAM and swap).** *[BCIC Assistant Programmer 14.02.2025 compact it 1325 (ET: BUET)]*
+
+* **(a) Displays real-time system statistics, including CPU usage, memory usage, running processes, and system load.**
    * **(b) Searches for a specified pattern in a file or output.**
    * **(c) Shows disk usage for all mounted file systems.**
    * **(d) Displays information about system memory (RAM and swap).** *[BCIC Assistant Programmer 14.02.2025 compact it 1325 (ET: BUET)]*
@@ -300,7 +343,7 @@
 
 5. **ফাইল Rename করার Linux কমান্ড কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Linux has no separate rename command in the classic Unix set. Renaming is done with `mv`.
+Answer: (Answered in English, as required for IT topics.) Linux has no separate rename command in the classic Unix set. Renaming is done with `mv`.
    ```bash
       mv oldname.txt newname.txt
    ```
@@ -353,7 +396,7 @@
 
 6. **Which file is need by init to get the default run level?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
-   Answer: The file is `/etc/inittab`.
+Answer: The file is `/etc/inittab`.
 
    - On a traditional `SysV init` system, `init` reads `/etc/inittab` at boot and finds the default run level in the `initdefault` line.
    ```
@@ -406,7 +449,7 @@
 
 7. **Show last 10 lines of log file which is continuously updating in Linux command?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
 
-   Answer: The command is `tail -f`.
+Answer: The command is `tail -f`.
    ```bash
       tail -f /var/log/syslog
    ```
@@ -463,7 +506,7 @@
 
 8. **Linux Command in ownership and group permission.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 567 (ET: N/A)]*
 
-   Answer: Ownership is changed with `chown` and `chgrp`; permissions are changed with `chmod`.
+Answer: Ownership is changed with `chown` and `chgrp`; permissions are changed with `chmod`.
 
    Changing the owner — `chown`
    ```bash
@@ -555,7 +598,7 @@
 
 9. **UNIX command with example: File move, Change Directory and search from a specific line.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 500 (ET: IBA)]*
 
-   Answer: File move — `mv`
+Answer: File move — `mv`
    ```bash
       mv source destination
    ```
@@ -655,6 +698,14 @@
 | Download a file from an URL |
 *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 474 (ET: N/A)]*
 
+| Questions |
+|---|
+| Show hidden files and directories |
+| Delete a directory and its file |
+| Prints last five lines of a text file |
+| Download a file from an URL |
+*[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 474 (ET: N/A)]*
+
     Answer: The four commands.
 
     | Requirement | Command |
@@ -719,6 +770,10 @@
 
 11. **Write Linux command to find out the following question:** *[BTCL Assistant Manager (Technical) 2023 compact it 592 (ET: BUET)]*
    (a) To show current file directory.
+   (b) To show 11^{\text{th}} to 15^{\text{th}} line from file name myfile.
+   (c) To show permission for read, write and execution file name myfile.
+
+(a) To show current file directory.
    (b) To show 11^{\text{th}} to 15^{\text{th}} line from file name myfile.
    (c) To show permission for read, write and execution file name myfile.
 
@@ -801,7 +856,7 @@
 
 12. **Write down the names of the three users who can access a file on directory on Linux.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 447 (ET: BUET)]*
 
-    Answer: Linux defines `three` classes of user for every file and directory.
+Answer: Linux defines `three` classes of user for every file and directory.
     ```
        1. USER   (owner)  - u   : the user who owns the file
        2. GROUP           - g   : the members of the file's group
@@ -874,7 +929,7 @@
 
 13. **You need to find the total number of linux of the .c and .h file in the current directory formulas the linux commands to display this......... (Approximate)** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 448 (ET: BUET)]*
 
-    Answer: The task is to count the total number of `lines` in all `.c` and `.h` files in the current directory.
+Answer: The task is to count the total number of `lines` in all `.c` and `.h` files in the current directory.
     ```bash
        wc -l *.c *.h
     ```
@@ -943,7 +998,7 @@
 
 14. **Find the possible path to know how data on the internet treavels from your mechine to the site www.bicic.gov.bd. Write down the necessary command to accomplish this.** *[BICIC Assistant Programmer 2022 compact it 633 (ET: BUET)]*
 
-    Answer: The command is `traceroute`.
+Answer: The command is `traceroute`.
     ```bash
        traceroute www.bicic.gov.bd
     ```
@@ -1006,7 +1061,7 @@
 
 15. **You want to run some specific commands at some price schedules time. Which command will have to be used for this.** *[BICIC Assistant Programmer 2022 compact it 633 (ET: BUET)]*
 
-    Answer: The command is `cron`, configured through `crontab`. For a task that should run `once` at a particular time, the command is `at`.
+Answer: The command is `cron`, configured through `crontab`. For a task that should run `once` at a particular time, the command is `at`.
 
     `cron` — for repeating scheduled commands
     ```bash
@@ -1104,6 +1159,10 @@
    b) নতুন ডিরেক্টরি তৈরির কমান্ড।
    c) ফাইল এ্যাকসেস পারমিশন দেখানোর কমান্ড।
 
+a) একটি ফোল্ডারের সকল ফাইল দেখানোর কমান্ড।
+   b) নতুন ডিরেক্টরি তৈরির কমান্ড।
+   c) ফাইল এ্যাকসেস পারমিশন দেখানোর কমান্ড।
+
     Answer: (Answered in English, as required for IT topics.) (a) Show all the files in a folder
     ```bash
        ls                      # names only
@@ -1175,7 +1234,7 @@
 
 17. **UNIX command (directory listing with hidden files).** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 662 (ET: N/A)]*
 
-    Answer: The command is `ls -a`.
+Answer: The command is `ls -a`.
     ```bash
        ls -a                   # list ALL entries, including hidden ones
        ls -A                   # all except . and ..
@@ -1249,7 +1308,7 @@
 
 18. **Difference between below 3 linux command: cd, cd usr/desk/home, cd/user/desk/home** *[EGCB Assistant Engineer (CSE) 2022 compact it 717 (ET: BUET)]*
 
-    Answer: The three differ in `where they start from` — and one of them contains a mistake.
+Answer: The three differ in `where they start from` — and one of them contains a mistake.
 
     1. `cd`
     ```bash
@@ -1326,7 +1385,7 @@
 
 19. **Linux Command: Write down the linux command: All hidden flies, remove a file, permission of a file, search for a string.** *[Water Supply and Sewerage Authority (WASA); Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)], [MGMCL Assistant Manager (ICT) 20.05.2022 compact it 651 (ET: BUET)]*
 
-    Answer: The four commands.
+Answer: The four commands.
 
     1. Show all hidden files
     ```bash
@@ -1401,7 +1460,7 @@
 
 20. **(b) Write Linux commands to: (i) Make a directory named PSC (ii) Copy a directory with all its Contents into a directory name/home/admin.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
 
-    Answer: (i) Make a directory named `PSC`
+Answer: (i) Make a directory named `PSC`
     ```bash
        mkdir PSC
     ```
@@ -1469,7 +1528,7 @@
 
 21. **In Linux, History is a very useful command to show you all of the last commands that have been recently used. Grep is a Linux command-line tool used to search for a string of characters in a specified file. Write grep and history command to find previous commands in Linux.** *[BCC Assistant Programmer 12.02.2021 compact it 813 (ET: BUET)]*
 
-    Answer: The two commands are used together with a `pipe`, so that `history` produces the list and `grep` filters it.
+Answer: The two commands are used together with a `pipe`, so that `history` produces the list and `grep` filters it.
     ```bash
        history | grep "command"
     ```
@@ -1547,7 +1606,7 @@
 
 22. **Write down a shell script program that would add the line “This is my file” at the top of each file having the extention ‘txt’ in the current directory. Note that all the other contents of the .txt file(s) would remain unchanged and start from the second line.** *[BPDB Assistant Engineer (CSE) 2021 compact it 818 (ET: BUET)]*
 
-    Answer: The script must insert a line at the `top` of every `.txt` file while keeping the rest of the contents unchanged, starting from the second line.
+Answer: The script must insert a line at the `top` of every `.txt` file while keeping the rest of the contents unchanged, starting from the second line.
 
     Method 1 — using `sed` (the shortest)
     ```bash
@@ -1657,7 +1716,7 @@
 
 23. **Write the following UNIX command with example: (a) ls (b) grep (c) ssh** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 820 (ET: BUET)]*
 
-    Answer: (a) `ls` — list directory contents
+Answer: (a) `ls` — list directory contents
     ```bash
        ls                      # names only
        ls -l                   # long listing : permissions, owner, size, date
@@ -1744,7 +1803,7 @@
 
 24. **(a) Check if the website of ‘TGTDCL’. (b) How to create folder in sub-directory?** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
 
-    Answer: (a) Check whether the TGTDCL website is reachable
+Answer: (a) Check whether the TGTDCL website is reachable
 
     Several commands answer different parts of "is the site up".
     ```bash
@@ -1827,7 +1886,7 @@
 
 25. **Write a Linux command to revoke permission from no user but owner from a file “jdcl.txt”.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
-    Answer: The requirement is that `nobody except the owner` has any permission on `jdcl.txt`.
+Answer: The requirement is that `nobody except the owner` has any permission on `jdcl.txt`.
     ```bash
        chmod 700 jdcl.txt
     ```
@@ -1893,7 +1952,7 @@
 
 26. **Linux এর ক্ষেত্রে User Creation এর কমান্ড লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) The command is `useradd` (or `adduser` on Debian and Ubuntu).
+Answer: (Answered in English, as required for IT topics.) The command is `useradd` (or `adduser` on Debian and Ubuntu).
     ```bash
        sudo useradd username
        sudo passwd username              # then set the password
@@ -1983,7 +2042,7 @@
 
 27. **Write Linux command for following question: a) Create a file apscl.txt in current location. b) Given permission to all read write and execute to the file apscl.txt c) Read first 7 lines from apscl.txt file d) Delete the file apscl.txt** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867-868 (ET: BUET)]*
 
-    Answer: (a) Create a file `apscl.txt` in the current location
+Answer: (a) Create a file `apscl.txt` in the current location
     ```bash
        touch apscl.txt                    # create an empty file
     ```
@@ -2056,7 +2115,7 @@
 
 28. **How do you define bash?** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)]*
 
-    Answer: `Bash` stands for `Bourne Again SHell`. It is a `command-line interpreter` — a program that reads the commands a user types, interprets them, and asks the kernel to carry them out.
+Answer: `Bash` stands for `Bourne Again SHell`. It is a `command-line interpreter` — a program that reads the commands a user types, interprets them, and asks the kernel to carry them out.
 
     - It is the `default shell` on most Linux distributions, written by Brian Fox in 1989 as a free replacement for the original `Bourne shell (sh)`. The name is a pun on that ancestry.
 
@@ -2140,7 +2199,7 @@
 
 29. **Linux Command: Write a code for listing home directory files with all details and human readable size got to Home directory, list directory files with 10-15 are display only 10^{\text{th}} to 15^{\text{th}} lines of words of them. Write the instructions in a way that they execute together and shows the result.** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 878 (ET: BUET)]*
 
-    Answer: The requirement is a `single command line` that goes to the home directory, lists its files with full details and human-readable sizes, and then shows only the 10th to 15th lines of that listing.
+Answer: The requirement is a `single command line` that goes to the home directory, lists its files with full details and human-readable sizes, and then shows only the 10th to 15th lines of that listing.
     ```bash
        cd ~ && ls -lh | sed -n '10,15p'
     ```
@@ -2201,7 +2260,7 @@
 
 30. **(i) Linux command for showing all files including the hidden files inside the home directory.** *[NESCO Assistant Manager (ICT) 2021 compact it 907 (ET: BUET)]*
 
-    Answer: The command is `ls -a` run in the home directory.
+Answer: The command is `ls -a` run in the home directory.
     ```bash
        ls -a ~
     ```
@@ -2269,7 +2328,7 @@
 
 31. **(ii) Linux command for showing page size, disk space in a human-readable format.** *[NESCO Assistant Manager (ICT) 2021 compact it 907 (ET: BUET)]*
 
-    Answer: Two separate things are asked for: the memory `page size`, and the `disk space` in human-readable form.
+Answer: Two separate things are asked for: the memory `page size`, and the `disk space` in human-readable form.
 
     Page size
     ```bash
@@ -2342,7 +2401,7 @@
 
 32. **A home directory called SGFL exists on your computer. Write a Linux command to create a link called “SGFL-Link” in the home directory.** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
 
-    Answer: The command is `ln -s`.
+Answer: The command is `ln -s`.
     ```bash
        ln -s ~/SGFL ~/SGFL-Link
     ```
@@ -2413,7 +2472,7 @@
 
 33. **Write Shell command which make a folder name ‘A’ with read permission access only.** *[Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
 
-    Answer: The folder must be created and then given `read permission only`.
+Answer: The folder must be created and then given `read permission only`.
     ```bash
        mkdir A && chmod 444 A
     ```
@@ -2489,7 +2548,7 @@
 
 34. **Write Shell command which copy folder ‘A’ all information into folder ‘P’. Folder ‘A’ and folder ‘P’s parent folder is same.** *[Janata Bank Assistant System Administrator 2021 compact it 938-939 (ET: N/A)]*
 
-    Answer: Both folders share the same parent, so the copy is a simple recursive `cp`.
+Answer: Both folders share the same parent, so the copy is a simple recursive `cp`.
     ```bash
        cp -r A/* P/
     ```
@@ -2555,7 +2614,7 @@
 
 35. **৩. লিনাক্স এর প্রিন্ট কমান্ডটি লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The Linux print command is `lpr` (or `lp`).
+Answer: (Answered in English, as required for IT topics.) The Linux print command is `lpr` (or `lp`).
     ```bash
        lpr filename.txt              # send a file to the default printer
        lp filename.txt               # the System V equivalent
@@ -2624,7 +2683,7 @@
 
 36. **৬. ফোল্ডার রিমুভ করার জন্য নিচেরর কোনটি লিনাক্স কমান্ড হিসেবে ব্যবহৃত হয়?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The command to remove a folder is `rmdir` for an empty one, and `rm -r` for one that has contents.
+Answer: (Answered in English, as required for IT topics.) The command to remove a folder is `rmdir` for an empty one, and `rm -r` for one that has contents.
     ```bash
        rmdir foldername             # ONLY works if the folder is EMPTY
        rm -r foldername             # removes the folder AND everything inside
@@ -2696,7 +2755,7 @@
 
 37. **৭. ফাইল কপি করার জন্য লিনাক্স কমান্ড কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The Linux command to copy a file is `cp`.
+Answer: (Answered in English, as required for IT topics.) The Linux command to copy a file is `cp`.
     ```bash
        cp source destination
     ```
@@ -2771,7 +2830,7 @@
 
 38. **ফাইল কপি করার লিনাক্স/ইউনিক্স কমান্ড কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The Linux and Unix command to copy a file is `cp`.
+Answer: (Answered in English, as required for IT topics.) The Linux and Unix command to copy a file is `cp`.
     ```bash
        cp source destination
     ```
@@ -2832,7 +2891,7 @@
 
 39. **২. নেটওয়ার্ক কানেক্টিভিটি টেস্ট করার জন্য লিনাক্স কমান্ড লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 946 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) The command to test network connectivity is `ping`.
+Answer: (Answered in English, as required for IT topics.) The command to test network connectivity is `ping`.
     ```bash
        ping hostname_or_IP
     ```
@@ -2900,7 +2959,7 @@
 
 40. **৩. IP Address বের করার জন্য লিনাক্স কমান্ড লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 946 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) The modern command is `ip addr show`.
+Answer: (Answered in English, as required for IT topics.) The modern command is `ip addr show`.
     ```bash
        ip addr show                # full details
        ip a                        # short form
@@ -2978,7 +3037,7 @@
 
 41. **Write down Linux command: i. Display current directory folder and file. ii. Create a folder name “DPDC”. iii. Remove a file like as “DPDC2”. iv. A file name is “myFile”; Rename the file name to “DPDC2.txt”. v. Give permission to a file so that anyone can read, write and executive that file.** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
 
-    Answer: i. Display the files and folders in the current directory
+Answer: i. Display the files and folders in the current directory
     ```bash
        ls                     # names only
        ls -l                  # long listing with details
@@ -3053,7 +3112,7 @@
 
 42. **A bash shell script using for loop to give output of given pattern:** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035 (ET: BUET)]*
 
-    Answer: The question is `incomplete` — the pattern the script should produce was printed as a figure and is not present in the text. The three patterns that appear in such papers are given below, each with a `for` loop, so the method covers whichever was intended.
+Answer: The question is `incomplete` — the pattern the script should produce was printed as a figure and is not present in the text. The three patterns that appear in such papers are given below, each with a `for` loop, so the method covers whichever was intended.
 
     Pattern 1 — increasing right triangle
     ```
@@ -3181,6 +3240,11 @@
    iii. Put a read/write permission to a file
    iv. Find the mac address using command
 
+i. Rename a file test.docs to test.txt
+   ii. Delete a file from a folder
+   iii. Put a read/write permission to a file
+   iv. Find the mac address using command
+
     Answer: i. Rename `test.docs` to `test.txt`
     ```bash
        mv test.docs test.txt
@@ -3262,7 +3326,7 @@
 
 44. **Write Linux command: (i) File permission (ii) Remove file or folder (iii) Show IP address** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
-    Answer: (i) File permission
+Answer: (i) File permission
     ```bash
        ls -l filename               # SHOW the permissions
        chmod 755 filename           # SET them, numeric form
@@ -3341,7 +3405,7 @@
 
 45. **Linux এ file তৈরির জন্য কি কি Command ব্যবহৃত হয়? পূর্ণ Command লিখ।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) Several commands create a file in Linux; which to use depends on whether content is to be typed at the same time.
+Answer: (Answered in English, as required for IT topics.) Several commands create a file in Linux; which to use depends on whether content is to be typed at the same time.
 
     1. `touch` — create an empty file
     ```bash
@@ -3428,6 +3492,11 @@
    (iii) None other then the other users can read the file.
    Write a shell command based on those conditions.
 
+(i) Anyone can execute the file named “sample”.
+   (ii) Only the owner or the user group can edit the file.
+   (iii) None other then the other users can read the file.
+   Write a shell command based on those conditions.
+
     Answer: The three conditions must be read carefully, because the third one is oddly worded.
     ```
        (i) Anyone can EXECUTE the file        -> x for owner, group and others
@@ -3497,6 +3566,15 @@
 
 47. **Linux Command:** *[BTCL Assistant Manager (Technical) 2017 compact it 1255-1256 (ET: N/A)]*
    i) passwd
+   ii) cat>file.txt
+   iii) telnet
+   iv) ls
+   v) ping
+   vi) su
+   vii) nslookup
+   viii) mkdir
+
+i) passwd
    ii) cat>file.txt
    iii) telnet
    iv) ls
@@ -3607,11 +3685,11 @@
     | `ping` | Test network connectivity |
     | `su` | Switch to another user |
 
-## CPU Scheduling Algorithms (25)
+## CPU Scheduling Algorithms (26)
 
-1. A CPU scheduling algorithm must choose a process from the ready queue to execute. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+1. **A CPU scheduling algorithm must choose a process from the ready queue to execute.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: `CPU scheduling` is the activity of deciding which process in the `ready queue` gets the CPU next. It is what makes multiprogramming possible: while one process waits for I/O, the CPU is given to another instead of sitting idle.
+Answer: `CPU scheduling` is the activity of deciding which process in the `ready queue` gets the CPU next. It is what makes multiprogramming possible: while one process waits for I/O, the CPU is given to another instead of sitting idle.
 
    When scheduling happens
    ```
@@ -3678,7 +3756,7 @@
 
 2. **Five jobs A, B, C, D, and E arrive at a compute center at approximately the same time. Their estimated running times are 10, 6, 2, 4, and 8 minutes, respectively. Their (externally defined) priorities are 3, 5, 2, 1, and 4, respectively, with 5 being the highest priority. For each of the following scheduling algorithms, determine the mean process turnaround time. (Ignore process switching overhead.) (a) Round-robin (quantum = 2 minutes), (b) Priority scheduling, (c) First-come, first-served (run in order 10, 6, 2, 4, 8), (d) Shortest job first.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1421 (ET: E-Zone)]*
 
-   Answer: Given
+Answer: Given
    ```
       Job :   A    B    C    D    E
       Time:  10    6    2    4    8      minutes
@@ -3786,7 +3864,7 @@
 
 3. **Process CPU burst and Priority given. Calculate Average Waiting time using (i) Preemptive Priority (ii) Non Preemptive priority.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: The process table is not printed with the question, so the standard set below is used. The method is what matters, and it applies to any data.
+Answer: The process table is not printed with the question, so the standard set below is used. The method is what matters, and it applies to any data.
    ```
       Process   Arrival   Burst   Priority   (lower number = higher priority)
         P1         0        10        3
@@ -3873,7 +3951,7 @@
 
 4. **Calculate Average Waiting time using (i) FCFS (ii) SJF and (iii) RR (Quantum = 2) for the following:** *[BCC Assistant Programmer 18.10.2025 compact it 1443 (ET: BCC)]*
 
-   Answer: The process table is not printed with the question, so the standard set below is used, and the method applies to any data.
+Answer: The process table is not printed with the question, so the standard set below is used, and the method applies to any data.
    ```
       Process   Arrival Time   Burst Time
         P1           0             5
@@ -3981,6 +4059,20 @@ All process arrived at time 0. Lower number has higher priority.
  * (iii) What is waiting time of each process for each of the scheduling algorithms in (i)?
  * (iv) Which algorithm resulting minimum average waiting time?
 
+| Process | Burst time | Priority |
+|---|---|---|
+| P1 | 10 | 3 |
+| P2 | 1 | 1 |
+| P3 | 2 | 3 |
+| P4 | 1 | 4 |
+| P5 | 5 | 2 |
+
+All process arrived at time 0. Lower number has higher priority.
+ * (i) Draw the Gantt chart using FCFS, Non-preemptive priority, SJF and RR (Quantum = 1).
+ * (ii) What is the turnaround time of each process for each of the scheduling algorithms in (i)?
+ * (iii) What is waiting time of each process for each of the scheduling algorithms in (i)?
+ * (iv) Which algorithm resulting minimum average waiting time?
+
    Answer: Given
    ```
       Process   Burst   Priority
@@ -4072,7 +4164,7 @@ All process arrived at time 0. Lower number has higher priority.
 
 6. **a) Define CPU Scheduling. Draw Gantt charts and find average waiting time for: i) FCFS, ii) SJF (Non-preemptive), iii) Preemptive Priority.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1344 (ET: N/A)]*
 
-   Answer: Definition of CPU scheduling
+Answer: Definition of CPU scheduling
    - `CPU scheduling` is the activity of deciding which process in the `ready queue` receives the CPU next. It is what makes multiprogramming work: while one process waits for I/O, the CPU is handed to another rather than left idle.
    ```
       Criteria to MAXIMISE : CPU utilisation , throughput
@@ -4169,7 +4261,7 @@ All process arrived at time 0. Lower number has higher priority.
 
 7. **Process burst time and priority given. Draw Gantt chart and find average waiting time for preemptive priority scheduling.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
 
-   Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
+Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
    ```
       Process   Arrival   Burst   Priority   (lower number = higher priority)
         P1         0        10        3
@@ -4253,7 +4345,7 @@ All process arrived at time 0. Lower number has higher priority.
 
 8. **Shortest job scheduling (SJF) is a __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: Shortest Job First is a `non-preemptive` scheduling algorithm.
+Answer: Shortest Job First is a `non-preemptive` scheduling algorithm.
 
    - Once the CPU is given to the process with the smallest burst time, that process `keeps the CPU until it finishes`. Even if a shorter job arrives a moment later, it must wait.
    - Its preemptive counterpart has a different name: `SRTF (Shortest Remaining Time First)`, in which a newly arrived shorter job does take the CPU away.
@@ -4318,7 +4410,7 @@ All process arrived at time 0. Lower number has higher priority.
 
 9. **Round-robin scheduling (RR) is a __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: Round Robin is a `preemptive` scheduling algorithm.
+Answer: Round Robin is a `preemptive` scheduling algorithm.
 
    - Each process is given a fixed `time quantum` (time slice). When the quantum expires, the process is `preempted` — moved to the back of the ready queue — and the CPU is given to the next process.
    - It is essentially `FCFS with preemption added`, which is why it is sometimes described that way.
@@ -4394,7 +4486,7 @@ All process arrived at time 0. Lower number has higher priority.
 
 10. **(a) FCFS and SJF Scheduling. (b) Find AWT and ATAT.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 316 (ET: N/A)]*
 
-    Answer: (a) FCFS and SJF scheduling
+Answer: (a) FCFS and SJF scheduling
 
     `FCFS — First Come First Served`
     - The process that requests the CPU first is served first, implemented as a simple FIFO queue. It is `non-preemptive`: once started, a process runs to completion.
@@ -4477,7 +4569,7 @@ All process arrived at time 0. Lower number has higher priority.
 
 11. **Advantages of CPU Scheduling Algorithm.** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1460 (ET: N/A)]*
 
-    Answer: `CPU scheduling` decides which process in the ready queue gets the CPU next. Its advantages are the following.
+Answer: `CPU scheduling` decides which process in the ready queue gets the CPU next. Its advantages are the following.
 
     1. `Maximum CPU utilisation`
     - Without scheduling the CPU would sit idle whenever the running process waited for I/O. Scheduling hands the CPU to another ready process instead, so a busy system keeps utilisation near 100 per cent.
@@ -4533,7 +4625,7 @@ All process arrived at time 0. Lower number has higher priority.
 
 12. **What type of RR Scheduling Algorithm: Preemtive/ Non-Preemtive?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
-    Answer: Round Robin is a `preemptive` scheduling algorithm.
+Answer: Round Robin is a `preemptive` scheduling algorithm.
 
     - Each process receives a fixed `time quantum`. When the quantum expires, the operating system `forcibly takes the CPU away` — that forcible removal is exactly what preemption means — and places the process at the back of the ready queue.
 
@@ -4594,6 +4686,18 @@ All process arrived at time 0. Lower number has higher priority.
     - Consequence worth stating: because RR preempts, a process can be interrupted `in the middle of updating shared data`. That is precisely why preemptive systems need `mutexes and semaphores`, and why race conditions are a concern in them but not in a purely non-preemptive scheduler.
 
 13. **(গ) নিচের সারণীটি দেখুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+| Process | Burst Time (milli second) | Priority |
+|---|---|---|
+| P₁ | 15 | 3 |
+| P₂ | 2 | 1 |
+| P₃ | 4 | 3 |
+| P₄ | 2 | 4 |
+| P₅ | 8 | 2 |
+
+সমস্ত process একই সাথে 0 সময়ে এসে পৌঁছে।
+i) FCFS এবং SJF Scheduling algorithm ব্যবহার করে Gantt Chart এর মাধ্যমে process গুলোর execution দেখান।
+ii) উপরের উভয় algorithm এর জন্য প্রত্যেকটি process এর turnaround সময় নির্ণয় করুন।
 
 | Process | Burst Time (milli second) | Priority |
 |---|---|---|
@@ -4683,6 +4787,17 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
     - Note that the total time is `31 ms` under both algorithms. Scheduling never changes the total work; it only changes `who waits for whom`.
 
 14. **Consider the following six processes each having its own unique processing time and arrival time.**
+| Processes | Arrival time | Processing time |
+|---|---|---|
+| P1 | 0 | 8 |
+| P2 | 0 | 4 |
+| P3 | 0 | 5 |
+| P4 | 1 | 9 |
+| P5 | 1 | 7 |
+| P6 | 0 | 1 |
+**Find average turnaround time using shortest job first scheduling algorithm.**
+*[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 461 (ET: BUET)]*
+
 | Processes | Arrival time | Processing time |
 |---|---|---|
 | P1 | 0 | 8 |
@@ -4790,6 +4905,14 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 | P3 | 3 | 6 |
 *[Teletalk Assistant Manager (IT) 2023 compact it 467 (ET: N/A)]*
 
+| Process | Arrival Time | Execute Time |
+|---|---|---|
+| P0 | 0 | 5 |
+| P1 | 1 | 3 |
+| P2 | 2 | 8 |
+| P3 | 3 | 6 |
+*[Teletalk Assistant Manager (IT) 2023 compact it 467 (ET: N/A)]*
+
     Answer: Given
     ```
        Process   Arrival Time   Execute (Burst) Time
@@ -4878,7 +5001,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 16. **Starvation in SJF, Starvation free scheduling algorithm name. (Question not clear)** *[RPGCL Assistant Manager (ICT) 2022 compact it 654 (ET: BUET)]*
 
-    Answer: Starvation in SJF
+Answer: Starvation in SJF
     - `Starvation` (indefinite blocking) is the condition in which a process is `ready to run but never gets the CPU`, because the scheduler always finds someone else it prefers.
     - In `SJF` the scheduler always picks the process with the smallest burst time. A `long` process is therefore postponed every time a shorter one arrives. If short jobs keep arriving, the long one waits forever.
     ```
@@ -4960,7 +5083,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 17. **Consider the processes P1, P2, P3, P4 given in the below table, arrives for execution in the same order, with Arrival Time 0, and given Burst Time, let's find the average waiting time using the FCFS scheduling algorithm.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
-    Answer: The burst times are not printed with the question, so the standard set below is used. All four arrive at time 0, in the order P1, P2, P3, P4.
+Answer: The burst times are not printed with the question, so the standard set below is used. All four arrive at time 0, in the order P1, P2, P3, P4.
     ```
        Process   Arrival Time   Burst Time
          P1           0             21
@@ -5032,7 +5155,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 18. **Job arrival time and execution time of Operating system tasks table is given, find out- (i) Average waiting time for FCFS (ii) Preemptive SJF (iii) Round Robin (Quantum time: 3) scheduling algorithm** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925 (ET: CTI)]*
 
-    Answer: The job table is not printed with the question, so the standard set below is used. The method applies to any data.
+Answer: The job table is not printed with the question, so the standard set below is used. The method applies to any data.
     ```
        Process   Arrival Time   Execution (Burst) Time
          P1           0                  5
@@ -5133,7 +5256,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 19. **Calculate The Average Waiting Time of SJF scheduling algorithm.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-    Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
+Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
     ```
        Process   Arrival Time   Burst Time
          P1           0             5
@@ -5214,7 +5337,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 20. **(a) Define FCFS, SJF and RR algorithm (Quantum=20).** *[National University Assistant Programmer 2020 compact it 977-978 (ET: DU)]*
 
-    Answer: The three algorithms. The burst times are not printed with the question, so the classic textbook set is used to illustrate them, and the assumption is stated.
+Answer: The three algorithms. The burst times are not printed with the question, so the classic textbook set is used to illustrate them, and the assumption is stated.
     ```
        P1 = 53 , P2 = 17 , P3 = 68 , P4 = 24    (all arrive at time 0)
     ```
@@ -5286,7 +5409,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 21. **(b) Turnaround time of FCFS and SJF** *[National University Assistant Programmer 2020 compact it 978 (ET: DU)]*
 
-    Answer: `Turnaround time` is the total time a process spends in the system.
+Answer: `Turnaround time` is the total time a process spends in the system.
     ```
        Turnaround time = Completion time - Arrival time
                        = Waiting time + Burst time
@@ -5351,7 +5474,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 22. **Operating system (OS) scheduling is the key concept of multiprogramming. List and briefly define the major types of OS scheduling.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985-986 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer: `Scheduling` is what makes multiprogramming work: it decides which of the many processes in the system gets a resource next. It operates at `three levels`, distinguished by how often they run and what they decide.
+Answer: `Scheduling` is what makes multiprogramming work: it decides which of the many processes in the system gets a resource next. It operates at `three levels`, distinguished by how often they run and what they decide.
 
     1. Long-term scheduler (job scheduler / admission scheduler)
     ```
@@ -5425,7 +5548,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 23. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026 (ET: N/A)]*
 
-    Answer: (i) Round Robin
+Answer: (i) Round Robin
     - Each process receives a fixed `time quantum` (time slice). When the quantum expires, the process is `preempted` and moved to the back of the ready queue, and the next process runs.
     - It is `preemptive` and designed for `time-sharing` and interactive systems.
     ```
@@ -5516,7 +5639,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 24. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
 
-    Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
+Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
     ```
        Process   Arrival Time   Burst Time
          P1           0             5
@@ -5600,7 +5723,7 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 25. **What is turnaround time of a process? Difference between FAT32 and NTFS?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1279 (ET: N/A)]*
 
-    Answer: Turnaround time
+Answer: Turnaround time
     - `Turnaround time` is the `total time a process spends in the system` — from the moment it is submitted until the moment it finishes.
     ```
        Turnaround time = Completion time - Arrival time
@@ -5685,5095 +5808,28 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
                permissions, journaling and large files are needed
     ```
 
-## OS Concepts & System Software (24)
-
-1. Difference Between Firmware and OS. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
-
-   Answer: `Firmware` is low-level software stored permanently inside a hardware device to make that device work. An `operating system` is a large program that manages the whole computer and provides an interface for the user and for applications.
-
-   Firmware
-   - Written into `ROM, EPROM, EEPROM or flash` on the device itself, so it is present the moment power is applied.
-   - It is `hardware specific` — the firmware of one printer will not run another.
-   - Small, from a few kilobytes to a few megabytes, and it performs one fixed job.
-   - Examples: `BIOS/UEFI` on a motherboard, the controller firmware in a hard disk or SSD, the code inside a router, a washing machine, a TV remote or a digital camera.
-   - It runs `first`, before any operating system exists.
-
-   Operating system
-   - A large program `loaded from disk into RAM` at boot time.
-   - It manages the processor, memory, files, devices and security, and provides `system calls` so that applications need not know anything about the hardware.
-   - Large — hundreds of megabytes to gigabytes — and general purpose.
-   - Examples: `Windows, Linux, macOS, Android, iOS`.
-
-   How they cooperate at start-up
-   ```
-      1. Power on
-      2. FIRMWARE (BIOS/UEFI) runs from ROM
-           - POST : test the memory, CPU and devices
-           - find the boot device
-      3. Firmware loads the BOOTLOADER from disk
-      4. The bootloader loads the OPERATING SYSTEM into RAM
-      5. The OS takes control and starts the user's programs
-   ```
-   - The essential relationship: `firmware wakes the hardware up; the operating system then runs the machine`.
-
-   Difference
-
-   | Point | Firmware | Operating System |
-   |---|---|---|
-   | Purpose | Make one device function | Manage the whole computer |
-   | Stored in | ROM / flash, on the device | Disk, loaded into RAM |
-   | Size | KB to a few MB | Hundreds of MB to GB |
-   | Scope | One specific hardware device | The entire system |
-   | Runs | First, at power-on | After the firmware |
-   | Hardware specific | `Yes` | No — portable across machines |
-   | User interface | None or very limited | Full GUI and command line |
-   | Multitasking | Usually none | Yes |
-   | Updated | Rarely, by "flashing" | Frequently, by patches |
-   | Risk of a bad update | Can `brick` the device | Usually recoverable |
-   | User modifies it | Almost never | Constantly |
-   | Examples | BIOS/UEFI, router firmware, SSD controller | Windows, Linux, Android |
-
-   - One point that is easy to miss: an operating system `also relies on firmware while it runs`, not only at boot. Every disk, network card and graphics card contains its own firmware, and the OS driver talks to that firmware rather than to raw silicon.
-
-2. **Define: Socket, Kernel, Process, Program, Multiprogramming, Context Switching; Explain Preemptive Priority Scheduling algorithm with illustration; Explain LRU and NRU Page Replacement algorithm.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 302 (ET: BIBM)]*
-
-   Answer: Definitions
-
-   `Socket`
-   - A `socket` is one endpoint of a two-way communication link between two programs over a network. It is identified by an `IP address plus a port number`, and the pair of sockets defines a connection.
-   ```
-      Socket = IP address : port          e.g. 192.168.1.5 : 8080
-
-      Types : STREAM socket   -> TCP , reliable and connection oriented
-              DATAGRAM socket -> UDP , fast and connectionless
-              RAW socket      -> direct IP access, used by ping
-   ```
-   - Every network program — a web server, a database client, an SSH session — is built on sockets. `socket() , bind() , listen() , accept() , connect() , send() , recv() , close()` are the system calls involved.
-
-   `Kernel`
-   - The `core` of the operating system, resident in memory from boot to shutdown and running in `privileged mode` with full access to the hardware.
-   - It manages processes, memory, devices and files, and exposes `system calls` to applications.
-   - Types: `monolithic` (Linux), `microkernel` (QNX, Minix), `hybrid` (Windows NT, macOS).
-
-   `Program` versus `Process`
-   ```
-      PROGRAM : a PASSIVE set of instructions stored on disk. An executable
-                file. It occupies no CPU and no memory of its own.
-
-      PROCESS : a program in EXECUTION - an ACTIVE entity, with its own
-                address space, program counter, registers, stack, heap
-                and a Process Control Block.
-   ```
-   - One program can produce `many processes` — opening a browser twice gives two processes from one program. A program is a recipe; a process is the cooking.
-   ```
-      A process consists of :
-           Text section  : the program code
-           Data section  : global and static variables
-           Heap          : dynamically allocated memory
-           Stack         : local variables, parameters, return addresses
-           PCB           : state, PC, registers, memory limits, open files
-   ```
-
-   `Multiprogramming`
-   - Keeping `several programs in main memory at once`, so that when one waits for I/O the CPU is given to another instead of idling.
-   ```
-      Program A : |CPU|....I/O wait....|CPU|
-      Program B : .....|CPU|....I/O wait....|CPU|
-      CPU busy  : |AAA|BBB|AAA|BBB|...   - never idle
-   ```
-   - It needs memory protection, interrupts, context switching and a scheduler. It raises `CPU utilisation` and `throughput`.
-
-   `Context switching`
-   - Saving the state of the running process and loading the state of another, so that the CPU can be handed from one to the other.
-   ```
-      1. Save the CPU state (PC, registers, flags) into the outgoing PCB
-      2. Update that process's state to READY or WAITING
-      3. Select the next process (the scheduler)
-      4. Load its state from its PCB
-      5. Jump to its saved program counter
-   ```
-   - It is `pure overhead` — a few microseconds during which no useful work is done — which is why the time quantum must not be too small.
-
-   Preemptive priority scheduling
-   - Each process has a priority. The CPU always runs the highest-priority `ready` process, and a higher-priority `arrival` takes the CPU away from a running process.
-   ```
-      Process   Arrival   Burst   Priority  (lower number = higher priority)
-        P1         0        10        3
-        P2         1         1        1
-        P3         2         2        4
-        P4         3         1        5
-        P5         4         5        2
-   ```
-   ```
-      t=0 : only P1 (prio 3)                   -> P1 runs
-      t=1 : P2 arrives, prio 1 beats 3         -> PREEMPT , P2 runs
-      t=2 : P2 done. P1(3), P3(4) ready        -> P1 runs
-      t=4 : P5 arrives, prio 2 beats 3         -> PREEMPT , P5 runs
-      t=9 : P5 done , P1 is highest            -> P1 to completion
-      t=16: P3 ; t=18 : P4
-
-      |P1|P2|  P1  |    P5    |      P1      | P3 |P4|
-      0  1  2      4          9             16   18 19
-   ```
-   ```
-      Process  Completion  Turnaround  Waiting
-        P1        16          16          6
-        P2         2           1          0
-        P3        18          16         14
-        P4        19          16         15
-        P5         9           5          0
-                          ----------   --------
-      Average waiting time    = 35/5 = 7.00 ms
-      Average turnaround time = 54/5 = 10.80 ms
-   ```
-   - Weakness: `starvation` of low-priority processes such as P4. Cured by `ageing` — raising a process's priority the longer it waits.
-
-   LRU and NRU page replacement
-
-   `LRU — Least Recently Used`
-   - Replaces the page that has `not been used for the longest time`, on the assumption that a page unused for a long while is unlikely to be needed soon.
-   ```
-      Reference string : 7 0 1 2 0 3 0 4 , 3 frames
-
-      7      -> [7]           miss
-      0      -> [7,0]         miss
-      1      -> [7,0,1]       miss
-      2      -> [0,1,2]       miss   (7 was least recently used)
-      0      -> [1,2,0]       HIT
-      3      -> [2,0,3]       miss   (1 was least recently used)
-      0      -> [2,3,0]       HIT
-      4      -> [3,0,4]       miss   (2 was least recently used)
-
-      6 misses , 2 hits
-   ```
-   ```
-      Implementation : a COUNTER per page, or a STACK of page numbers.
-      Both are expensive - a timestamp must be updated on EVERY access.
-      Advantage : it never suffers Belady's anomaly.
-   ```
-
-   `NRU — Not Recently Used`
-   - A cheap approximation to LRU, using two bits kept by the hardware.
-   ```
-      R = Referenced bit , set on every read or write
-      M = Modified (dirty) bit , set on every write
-
-      The R bit is CLEARED periodically by a timer interrupt, so it
-      records recent use only.
-
-      Pages are then placed in four classes :
-
-           Class 0 : R = 0 , M = 0   not referenced , not modified  <- BEST victim
-           Class 1 : R = 0 , M = 1   not referenced , modified
-           Class 2 : R = 1 , M = 0   referenced , not modified
-           Class 3 : R = 1 , M = 1   referenced and modified        <- keep
-
-      NRU evicts a page at random from the LOWEST non-empty class.
-   ```
-   - Class 1 is preferred over class 2 because writing a dirty page to disk once is cheaper than repeatedly reloading a page that is actively in use.
-
-   Comparison
-
-   | Point | LRU | NRU |
-   |---|---|---|
-   | Basis | Exact time of last use | Two bits, R and M |
-   | Accuracy | High | Approximate |
-   | Hardware cost | High — a counter or stack per page | Very low — two bits |
-   | Overhead per access | Update a timestamp every time | Hardware sets a bit |
-   | Belady's anomaly | Never | Possible |
-   | Used in practice | Rarely in pure form | Yes, as the basis of the clock algorithm |
-
-   - What real systems use: the `clock` (second-chance) algorithm, which is NRU arranged as a circular list, and its refinement the `enhanced second-chance` algorithm using both R and M. `Optimal (OPT)` replacement, which evicts the page needed furthest in the future, is unimplementable — it needs knowledge of the future — but is used as the benchmark against which the others are measured.
-
-3. **Explain how can multiprogramming be achieved on a uniprocessor system?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
-
-   Answer: `Multiprogramming` means keeping `several programs in main memory at the same time` so that the CPU always has work to do. On a `uniprocessor` — a machine with one CPU — only one program can actually execute at any instant, so multiprogramming is achieved by `switching` the CPU between them.
-
-   The problem it solves
-   ```
-      A single program alternates between CPU bursts and I/O waits :
-
-      Program A : |CPU| ---- waiting for disk ---- |CPU| ---- I/O ---- |CPU|
-                             CPU IS IDLE HERE             IDLE
-
-      A typical program spends 60-80 per cent of its time waiting for I/O.
-      Without multiprogramming, the CPU is idle for all of it.
-   ```
-
-   How it works
-   ```
-      Program A : |CPU|........I/O wait.........|CPU|.....I/O.....
-      Program B : ......|CPU|.......I/O wait........|CPU|.........
-      Program C : ...........|CPU|.......I/O wait........|CPU|....
-
-      CPU busy  : |AAA|BBB|CCC|AAA|BBB|CCC|...   -  NEVER IDLE
-   ```
-   - The moment a program requests I/O, the operating system takes the CPU away and gives it to another program that is ready. When the I/O finishes, an interrupt makes that program ready again.
-
-   What is required to make it possible
-
-   1. `Several programs resident in memory at once`
-   - Memory is divided among them, by fixed partitions in early systems and by `paging` and `virtual memory` in modern ones.
-
-   2. `Memory protection`
-   - Each program must be prevented from reading or writing another's memory. Achieved with `base and limit registers`, or with the `MMU` and page tables. Without this, one faulty program would destroy the others.
-
-   3. `Interrupts`
-   - The mechanism that lets the operating system regain control. An I/O completion interrupt, or a timer interrupt, transfers control back to the kernel so it can choose a new process.
-
-   4. `Context switching`
-   - Saving the CPU state — program counter, registers, flags, memory-map pointers — of the outgoing process into its `PCB (Process Control Block)`, and loading the incoming one's.
-   ```
-      Save state of P1  ->  select P2  ->  load state of P2  ->  run P2
-   ```
-   - The time this takes is pure overhead, typically a few microseconds.
-
-   5. `A scheduler`
-   - The short-term scheduler decides which ready process runs next, using FCFS, SJF, priority or round robin.
-
-   6. `The Process Control Block`
-   - One per process, holding its state, program counter, registers, memory limits, open files and accounting information. It is what makes it possible to stop a process and resume it later exactly where it stopped.
-
-   7. `Device management and spooling`
-   - The OS queues I/O requests so that several programs can share one printer or disk without interfering.
-
-   The illusion of simultaneity
-   ```
-      Switching happens thousands of times a second, so to a human it looks
-      as though every program is running at once. In reality the CPU is
-      executing exactly ONE instruction at a time - it is INTERLEAVING,
-      not true parallelism.
-
-      True parallelism requires MULTIPROCESSING - more than one CPU.
-   ```
-
-   Benefits
-   ```
-      High CPU utilisation - the CPU is almost never idle
-      Higher throughput    - more jobs completed per hour
-      Better use of memory and devices
-      Shorter average response time
-   ```
-
-   Costs
-   ```
-      Complex memory management and protection hardware
-      Context-switch overhead
-      Scheduling complexity
-      Deadlock and synchronisation problems appear
-      Thrashing if too many processes are admitted
-   ```
-
-   - The related terms, which examiners like to see distinguished: `multiprogramming` keeps several programs in memory to keep the CPU busy; `multitasking` is multiprogramming with time-sharing added, so the switching is driven by a timer rather than only by I/O; and `multiprocessing` uses more than one CPU, which alone gives true simultaneous execution.
-
-4. **Write the difference between shell and kernel?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
-
-   Answer: The `kernel` is the core of the operating system, which talks to the hardware. The `shell` is the outer layer that the user talks to.
-   ```
-           USER
-             |
-          SHELL         - interprets commands
-             |
-          KERNEL        - manages processes, memory, devices
-             |
-          HARDWARE
-   ```
-
-   Kernel
-   - The `central component` of the operating system, loaded into memory at boot and resident until shutdown.
-   - Runs in `kernel mode` (privileged mode) with complete access to the hardware and to all memory.
-   - Responsibilities:
-   ```
-      Process management     : creation, scheduling, termination
-      Memory management      : allocation, paging, virtual memory
-      Device management      : drivers, interrupt handling
-      File system management : reading and writing files
-      System calls           : the interface applications use
-      Security and protection
-   ```
-   - Types: `monolithic` (Linux), `microkernel` (Minix, QNX), `hybrid` (Windows NT, macOS), `exokernel`.
-
-   Shell
-   - A `user-level program` that reads the commands a user types, interprets them, and asks the kernel to carry them out through system calls.
-   - Runs in `user mode` with no special privileges of its own.
-   - Two kinds:
-   ```
-      CLI shell : bash , sh , zsh , ksh , csh , fish , PowerShell , cmd
-      GUI shell : GNOME , KDE , Windows Explorer
-   ```
-   - It is not part of the operating system proper. It can be replaced, and several shells can be installed side by side.
-
-   How a command travels through them
-   ```
-      $ ls -l
-
-      1. The SHELL reads the line and parses it
-      2. It expands wildcards and variables
-      3. It forks a child process and calls exec("/bin/ls")
-      4. The KERNEL creates the process, loads the program, schedules it
-      5. ls issues system calls (openat, getdents, write)
-      6. The KERNEL performs them and returns the data
-      7. The output reaches the terminal
-   ```
-
-   Difference
-
-   | Point | Kernel | Shell |
-   |---|---|---|
-   | Position | Innermost layer, next to the hardware | Outermost layer, next to the user |
-   | Nature | The core of the OS | An ordinary program |
-   | Mode | `Kernel mode` — privileged | `User mode` |
-   | Interacts with | The hardware | The user |
-   | Function | Manage processes, memory, devices, files | Interpret and run commands |
-   | Loaded | At boot, stays in memory | When the user logs in |
-   | Replaceable | No — changing it means changing the OS | `Yes` — bash, zsh, fish |
-   | How many | One per running system | Many can run at once |
-   | Direct hardware access | Yes | No — only through system calls |
-   | Written in | C and assembly | C, or a scripting language |
-   | Examples | Linux kernel, Windows NT kernel | bash, zsh, PowerShell, cmd |
-   | If it crashes | The whole system halts | Only that session ends |
-
-   Useful commands
-   ```bash
-      uname -r            # kernel version
-      uname -a            # full kernel information
-      echo $SHELL         # which shell you are using
-      cat /etc/shells     # which shells are installed
-      chsh -s /bin/zsh    # change your login shell
-   ```
-
-   - The relationship in one line: `the shell is the interface, the kernel is the engine`. A user never speaks to the kernel directly; every request passes through the shell or an application, and reaches the kernel as a `system call`.
-
-5. **DOS কী? অপারেটিং সিস্টেমের কাজ ও প্রকারভেদ ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) What DOS is
-   - `DOS` stands for `Disk Operating System`. It is a `single-user, single-tasking`, command-line operating system that was the standard for IBM PCs and compatibles from 1981 to the mid-1990s.
-   - The best-known version is `MS-DOS` from Microsoft; IBM sold the same product as `PC-DOS`.
-   ```
-      Characteristics :
-           16-bit , real mode , addresses 1 MB of memory
-           SINGLE TASKING - only one program at a time
-           SINGLE USER - no accounts, no permissions
-           COMMAND LINE only - no graphical interface
-           FAT file system , with 8.3 filenames (NAME.EXT)
-           No memory protection - a bad program can crash the machine
-   ```
-   ```
-      Common commands :
-           DIR      list files              CD       change directory
-           COPY     copy a file             DEL      delete
-           REN      rename                  MD / RD  make / remove directory
-           FORMAT   format a disk           TYPE     display a file
-           CLS      clear the screen        CHKDSK   check the disk
-   ```
-   - Early Windows (1.0 to 3.11, and 95/98 to a large extent) ran `on top of` DOS rather than replacing it. Modern Windows keeps a DOS-like shell in `cmd.exe`, but there is no DOS underneath it.
-
-   Functions of an operating system
-   ```
-      1. PROCESS MANAGEMENT
-           Create, schedule, suspend and terminate processes ; context
-           switching ; inter-process communication ; deadlock handling.
-
-      2. MEMORY MANAGEMENT
-           Allocate and free memory ; keep track of what is in use ;
-           paging, segmentation and virtual memory ; protect one process
-           from another.
-
-      3. FILE MANAGEMENT
-           Create, read, write, delete files and directories ; manage
-           the directory structure ; control access permissions ;
-           allocate disk blocks.
-
-      4. DEVICE (I/O) MANAGEMENT
-           Device drivers ; buffering, caching and spooling ; scheduling
-           disk requests ; handling interrupts.
-
-      5. SECURITY AND PROTECTION
-           Authentication , authorisation , encryption , audit logging ,
-           isolating one user's data from another's.
-
-      6. USER INTERFACE
-           A command-line shell, a graphical desktop, or both.
-
-      7. RESOURCE ALLOCATION AND ACCOUNTING
-           Share the CPU, memory and devices fairly ; record usage.
-
-      8. ERROR DETECTION AND RECOVERY
-           Detect a hardware fault, a bad instruction or a full disk, and
-           respond without crashing the whole system.
-
-      9. NETWORKING
-           Protocol stacks, sockets, remote file systems.
-   ```
-
-   Types of operating system
-   ```
-      BATCH
-           Jobs with similar needs are grouped and run without user
-           interaction. No interactivity ; the CPU is often idle.
-           Example : early IBM mainframe systems.
-
-      TIME-SHARING (multitasking)
-           The CPU is shared by rapid switching, so many users appear to
-           work simultaneously. Short response time is the goal.
-           Example : UNIX , Linux , Windows.
-
-      MULTIPROGRAMMING
-           Several programs held in memory ; when one waits for I/O the
-           CPU is given to another. Maximises CPU utilisation.
-
-      MULTIPROCESSING
-           Two or more CPUs in one machine, giving TRUE parallelism.
-           Symmetric (SMP) or asymmetric.
-
-      DISTRIBUTED
-           Several independent computers joined by a network, presented
-           to the user as one system. Resource sharing and fault
-           tolerance are the aims.
-           Example : Amoeba , modern cluster systems.
-
-      REAL-TIME (RTOS)
-           A response is guaranteed within a fixed deadline.
-           HARD real time : a missed deadline is a total failure -
-                pacemaker, aircraft control, airbag.
-           SOFT real time : a missed deadline degrades quality -
-                video streaming, online gaming.
-           Example : RTLinux , VxWorks , FreeRTOS , QNX.
-
-      NETWORK
-           Manages shared files, printers and users across a LAN. Each
-           machine keeps its own identity, unlike a distributed system.
-           Example : Novell NetWare , Windows Server.
-
-      EMBEDDED
-           Built into a device with fixed function and limited memory.
-           Example : the firmware in a washing machine, a router, a car ECU.
-
-      MOBILE
-           Optimised for touch, battery life and connectivity.
-           Example : Android , iOS.
-
-      SINGLE-USER SINGLE-TASKING : MS-DOS
-      SINGLE-USER MULTITASKING   : Windows , macOS
-      MULTI-USER                 : Linux , UNIX , mainframe systems
-   ```
-
-   - Where DOS sits in this classification: it is a `single-user, single-tasking, command-line` operating system with no memory protection and no multiprogramming — which is exactly why it was replaced. Modern Windows and Linux are `single-user or multi-user multitasking` systems built on a protected-mode kernel with virtual memory.
-
-6. **Write down the difference between Multitasking and Multiprocessing.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
-
-   Answer: `Multitasking` means one CPU switching rapidly between several tasks so that they appear to run at once. `Multiprocessing` means a computer having `more than one CPU`, so tasks genuinely do run at once.
-
-   Multitasking
-   - The operating system gives each task a short `time slice` and switches between them thousands of times a second, using `context switching`. Only one task actually executes at any instant on a given CPU.
-   ```
-      ONE CPU :
-
-      Task A : |AA|      |AA|      |AA|
-      Task B :     |BB|      |BB|      |BB|
-      Task C :         |CC|      |CC|
-
-      Interleaved, not simultaneous.
-   ```
-   ```
-      Types :
-         PREEMPTIVE  - the OS forcibly takes the CPU back when the
-                       quantum expires. Windows, Linux, macOS.
-         COOPERATIVE - a task must yield voluntarily. Early Windows and
-                       classic Mac OS. One misbehaving program froze
-                       the whole machine.
-   ```
-
-   Multiprocessing
-   - Two or more `physical processors` (or cores) in one computer, each executing an instruction stream at the same moment. This is `true parallelism`.
-   ```
-      FOUR CPUs :
-
-      CPU1 : |AAAAAAAAAA|
-      CPU2 : |BBBBBBBBBB|      all four at the SAME instant
-      CPU3 : |CCCCCCCCCC|
-      CPU4 : |DDDDDDDDDD|
-   ```
-   ```
-      Types :
-         SYMMETRIC (SMP)  - every CPU is equal, shares one memory and
-                            runs the same copy of the OS. The normal case.
-         ASYMMETRIC       - a master CPU controls the others, which
-                            handle specific tasks.
-   ```
-
-   Difference
-
-   | Point | Multitasking | Multiprocessing |
-   |---|---|---|
-   | Number of CPUs | `One` (or one per core) | `Two or more` |
-   | Execution | Interleaved — appears simultaneous | `Genuinely simultaneous` |
-   | Mechanism | Time slicing and context switching | Parallel execution on separate CPUs |
-   | Parallelism | Apparent only | Real |
-   | Requires | A scheduler and a timer interrupt | Multiple processors and cache coherence |
-   | Throughput gain | None — the same CPU does the work | Near-linear with the number of CPUs |
-   | Failure of one CPU | Not applicable | The system continues on the others |
-   | Cost | No extra hardware | Extra processors |
-   | Overhead | Context switching | Synchronisation and cache coherence |
-   | Purpose | Responsiveness and utilisation | Raw throughput and reliability |
-   | Examples | Windows, Linux on a single-core machine | A multi-core server, a supercomputer |
-
-   The related terms, which examiners like to see distinguished
-   ```
-      MULTIPROGRAMMING : several programs held in MEMORY at once, so the
-           CPU is given to another whenever one waits for I/O. The switch
-           is triggered by an I/O request, not by a timer.
-
-      MULTITASKING     : multiprogramming plus TIME SHARING - the switch
-           is also driven by a timer, so every task gets a regular turn.
-           This is what makes a system interactive.
-
-      MULTITHREADING   : one PROCESS divided into several THREADS that
-           share its address space. Cheaper to create and switch than a
-           process, but a fault in one thread can bring down the process.
-
-      MULTIPROCESSING  : more than one CPU, giving true parallelism.
-   ```
-
-   How they combine in practice
-   ```
-      A modern 8-core machine running Linux uses ALL of them at once :
-
-           MULTIPROCESSING  - 8 cores really execute in parallel
-           MULTITASKING     - each core time-slices among many processes
-           MULTIPROGRAMMING - hundreds of processes are resident in memory
-           MULTITHREADING   - each browser tab is a thread of one process
-   ```
-
-   - The limit on multiprocessing is `Amdahl's law`: if a fraction `(1-P)` of a program is inherently serial, the speed-up can never exceed `1/(1-P)` however many CPUs are added. A program that is 20 per cent serial can never go more than five times faster.
-
-7. **(b) What is the difference between micro kernel and macro kernel in the context of OS?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
-
-   Answer: The two are the opposite answers to one design question: `how much of the operating system should run in privileged kernel mode?`
-
-   Macro kernel (monolithic kernel)
-   - `Every` operating-system service runs inside the kernel, in `kernel mode`, as one large program in a single address space.
-   ```
-      +-------------------------------------------------+
-      |                  USER MODE                      |
-      |   Application 1     Application 2               |
-      +-------------------------------------------------+
-      |                 KERNEL MODE                     |
-      |   Scheduler | Memory manager | File system      |
-      |   Device drivers | Network stack | IPC          |
-      |            ALL IN ONE ADDRESS SPACE             |
-      +-------------------------------------------------+
-      |                  HARDWARE                       |
-      +-------------------------------------------------+
-   ```
-   - Services call each other by `direct function call`, which is why it is fast.
-   - Examples: `Linux`, traditional `UNIX`, `MS-DOS`, `BSD`.
-
-   Microkernel
-   - Only the `bare minimum` runs in kernel mode — typically scheduling, basic memory management and inter-process communication. Everything else runs as an ordinary `user-mode server process`.
-   ```
-      +-------------------------------------------------+
-      |                  USER MODE                      |
-      |  Application | File | Device | Network | Memory |
-      |              | srvr | driver | server  | server |
-      +-------------------------------------------------+
-      |            MICROKERNEL (kernel mode)            |
-      |     IPC  |  basic scheduling  |  address spaces |
-      +-------------------------------------------------+
-      |                  HARDWARE                       |
-      +-------------------------------------------------+
-   ```
-   - Services communicate by `message passing` through the kernel, which costs two context switches per request — the source of its slowness.
-   - Examples: `QNX`, `Minix`, `Mach`, `L4`, `Symbian`.
-
-   Difference
-
-   | Point | Macro (monolithic) kernel | Microkernel |
-   |---|---|---|
-   | Size | Large — millions of lines | Small — often under 10,000 lines |
-   | Services in kernel mode | `All` of them | Only IPC, scheduling, memory |
-   | Communication | Direct function calls | `Message passing` |
-   | Speed | `Faster` — no IPC overhead | Slower — two context switches per call |
-   | Reliability | A driver crash kills the `whole system` | A server crash kills `only that service` |
-   | Extensibility | Recompile or load a kernel module | `Add a user-space process` |
-   | Debugging | Hard — kernel debugging | Easy — ordinary user-space debugging |
-   | Security | Large attack surface in privileged mode | Small trusted computing base |
-   | Portability | Lower | Higher |
-   | Memory footprint | Larger | Smaller |
-   | Examples | Linux, UNIX, MS-DOS | QNX, Minix, L4, Mach |
-
-   The central trade-off
-   ```
-      MONOLITHIC : buys SPEED at the cost of RELIABILITY.
-           A faulty printer driver runs in kernel mode with full hardware
-           access, so a bug in it can corrupt any memory in the system.
-           This is the cause of most "blue screen" and kernel panic faults.
-
-      MICROKERNEL : buys RELIABILITY at the cost of SPEED.
-           The same faulty driver is an ordinary process. If it crashes,
-           the kernel simply restarts it and the system continues.
-           But every disk read now costs several messages instead of
-           one function call.
-   ```
-
-   Hybrid kernels — what real systems actually use
-   ```
-      Windows NT (and every later Windows), macOS (XNU) and modern
-      Linux are all HYBRID in practice :
-
-           Windows NT : a microkernel-influenced design, but the graphics
-                subsystem and drivers were MOVED INTO the kernel for speed.
-
-           macOS XNU  : the Mach microkernel plus a BSD monolithic layer
-                in the same address space.
-
-           Linux      : monolithic, but with LOADABLE KERNEL MODULES, so
-                drivers can be inserted and removed at run time without
-                recompiling - which gives much of the microkernel's
-                flexibility while keeping direct function calls.
-   ```
-
-   - The historical footnote worth knowing: the `Tanenbaum-Torvalds debate` of 1992 argued exactly this question. Tanenbaum, the author of Minix, held that monolithic kernels were obsolete; Torvalds argued that the performance cost of message passing was unacceptable. In practice the hybrid designs above took what worked from both, and Linux's success settled the argument in favour of pragmatism rather than either pure form.
-
-8. **অথবা, (ক) Blocking এবং Buffering OS এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) The two terms belong to different parts of the operating system: `blocking` is about how a process waits, and `buffering` is about where data is held in transit.
-
-   Blocking
-   - A `blocking` operation is one in which the calling process is `suspended` — moved from RUNNING to WAITING — until the operation completes. It does no work and consumes no CPU while it waits.
-   ```
-      Process issues read()
-           |
-           v
-      State : RUNNING -> WAITING        the process is BLOCKED
-           |
-      (the OS gives the CPU to another process)
-           |
-      I/O completes -> interrupt
-           |
-           v
-      State : WAITING -> READY -> RUNNING     the process resumes
-   ```
-   ```
-      BLOCKING (synchronous) I/O :
-           n = read(fd, buf, 100);        // the process waits here
-           process(buf);                   // reached only after the read
-
-      NON-BLOCKING (asynchronous) I/O :
-           n = read(fd, buf, 100);        // returns IMMEDIATELY, perhaps
-                                           // with 0 bytes and EWOULDBLOCK
-           // the process can do other work and check again later
-   ```
-   - Where it matters: a blocking `accept()` in a single-threaded server can serve only one client at a time, which is why real servers use threads, `select()`, `poll()` or `epoll()`.
-
-   Buffering
-   - A `buffer` is an area of memory that holds data `temporarily` while it moves between two devices or processes that work at different speeds.
-   ```
-      Fast producer                    Slow consumer
-      (application)  --> [ BUFFER ] --> (printer)
-
-      The application writes at memory speed and continues immediately;
-      the printer drains the buffer at its own pace.
-   ```
-   ```
-      Types :
-         SINGLE buffering : one buffer. The producer must wait while the
-              consumer empties it.
-         DOUBLE buffering : two buffers. The producer fills one while the
-              consumer empties the other - used in graphics to prevent
-              flicker and tearing.
-         CIRCULAR buffering : a ring of buffers, so producer and consumer
-              run continuously. Used for audio, video and network streams.
-   ```
-   - Reasons for buffering:
-   ```
-      SPEED MISMATCH between producer and consumer
-      Different DATA TRANSFER SIZES - one device works in bytes, another
-           in 4 KB blocks
-      Copy SEMANTICS - the OS copies the data before returning, so the
-           application may reuse its own memory immediately
-      Reduces the NUMBER of physical I/O operations
-   ```
-
-   Related mechanisms often asked alongside
-   ```
-      CACHING  : keeping a COPY of frequently used data in faster memory.
-           A buffer holds the ONLY copy in transit ; a cache holds a
-           DUPLICATE of data that also exists elsewhere.
-
-      SPOOLING : Simultaneous Peripheral Operation On-Line. Output is
-           written to a DISK FILE and a daemon feeds the device from
-           there, so many jobs can queue for one printer.
-   ```
-
-   Difference
-
-   | Point | Blocking | Buffering |
-   |---|---|---|
-   | Concerns | How a process `waits` | Where data is `stored` in transit |
-   | Level | Process scheduling | I/O management |
-   | Effect on the process | It is `suspended` | It usually `continues` |
-   | Purpose | Wait correctly for a slow operation | Smooth a speed mismatch |
-   | Alternative | Non-blocking or asynchronous I/O | Unbuffered (direct) I/O |
-   | Cost | Idle waiting time for that process | Memory, and one extra copy |
-   | Types | Blocking, non-blocking, asynchronous | Single, double, circular |
-   | Example | `read()` waiting for a disk sector | The print queue in RAM |
-
-   How the two combine in practice
-   ```
-      printf("hello");        // writes into a BUFFER, returns at once
-      fflush(stdout);         // forces the buffer out - may BLOCK
-
-      The buffering is what makes printf fast; the blocking happens only
-      when the buffer must actually reach the device.
-   ```
-   - This is also why output can appear to vanish when a program crashes: it was still sitting in the buffer and was never flushed.
-
-9. **(গ) Real Time System বলতে কী বোঝায় ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) A `real-time system` is one in which the correctness of the result depends not only on `what` is computed but on `when` it is delivered. A correct answer that arrives after its deadline is a `failure`.
-
-   - The defining property is `predictability`, not raw speed. A real-time system guarantees a `worst-case response time`; a general-purpose system only offers a good average.
-
-   Two categories
-   ```
-      HARD REAL TIME
-           A missed deadline is a TOTAL SYSTEM FAILURE, and may be
-           catastrophic.
-           Examples : a pacemaker , an airbag controller , aircraft
-           flight control , a nuclear reactor shutdown system , anti-lock
-           brakes.
-           No virtual memory, no secondary storage in the critical path,
-           and every operation's worst-case time must be known.
-
-      SOFT REAL TIME
-           A missed deadline DEGRADES the service but does not destroy it.
-           Examples : video streaming , online gaming , VoIP , a
-           multimedia player.
-           A late video frame causes a stutter, not a disaster.
-
-      FIRM REAL TIME (sometimes listed separately)
-           A late result is USELESS but not harmful - for example a frame
-           in a live broadcast that arrives after its slot.
-   ```
-
-   Characteristics
-   ```
-      DETERMINISM     : the same input always produces the same timing
-      BOUNDED LATENCY : a guaranteed maximum interrupt and dispatch latency
-      PRIORITY BASED  : preemptive priority scheduling, so an urgent task
-                        always displaces a less urgent one
-      SMALL and COMPACT : a minimal kernel, so worst-case paths are short
-      NO virtual memory in hard real-time systems - a page fault would
-           introduce an unpredictable delay
-      RELIABILITY     : fault tolerance and often redundant hardware
-      CONCURRENCY     : many tasks with individual deadlines
-   ```
-
-   Scheduling algorithms used
-   ```
-      RATE MONOTONIC (RMS)      - static priority; the task with the
-           shortest PERIOD gets the highest priority.
-           Schedulable if  sum(Ci/Ti) <= n(2^(1/n) - 1)
-           For large n this bound approaches 0.693, so about 69 per cent
-           CPU utilisation is guaranteed schedulable.
-
-      EARLIEST DEADLINE FIRST (EDF) - dynamic priority; whichever task
-           has the nearest deadline runs next.
-           Schedulable if  sum(Ci/Ti) <= 1  , so it can reach 100 per cent
-           utilisation - optimal for a uniprocessor.
-
-      LEAST LAXITY FIRST (LLF)  - priority by slack time remaining.
-   ```
-   ```
-      Ci = worst-case execution time of task i
-      Ti = its period
-      Ci/Ti = the fraction of CPU it needs
-   ```
-
-   Real-time operating systems
-   ```
-      VxWorks , QNX , FreeRTOS , RTLinux , Micrium uC/OS ,
-      Windows CE , RTEMS
-   ```
-   - A general-purpose Linux can be made soft real-time with the `PREEMPT_RT` patch, which makes almost the whole kernel preemptible.
-
-   Real time versus general purpose
-
-   | Point | Real-time system | General-purpose system |
-   |---|---|---|
-   | Priority | `Meeting deadlines` | Average throughput and fairness |
-   | Response | Guaranteed worst case | Best effort |
-   | Scheduling | Preemptive priority, RMS, EDF | Round robin, multilevel feedback |
-   | Virtual memory | Avoided in hard real time | Standard |
-   | Kernel | Small, fully preemptible | Large |
-   | Determinism | Essential | Not required |
-   | Throughput | Sacrificed for predictability | Maximised |
-   | Examples | VxWorks, QNX, FreeRTOS | Windows, Linux, macOS |
-
-   - The point that is most often misunderstood: `real time does not mean fast`. A system that responds in 50 ms `every time without exception` is real-time; one that usually responds in 1 ms but occasionally takes 200 ms is not. For an airbag, the guarantee matters and the average does not.
-
-10. **Explain context switching in Operating System.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
-
-    Answer: `Context switching` is the act of saving the state of the currently running process and loading the saved state of another, so that the CPU can be handed from one process to the other and each can later resume exactly where it stopped.
-
-    - It is the mechanism that makes `multitasking` possible. Without it, a process would have to run to completion before any other could start.
-
-    What the "context" is
-    - Everything the CPU needs to resume a process, all of it stored in that process's `Process Control Block (PCB)`.
-    ```
-       Program counter          the next instruction to execute
-       CPU registers            general purpose, index, stack pointer
-       Flags / status word      zero, carry, sign, interrupt enable
-       Memory management data   base and limit registers, page-table pointer
-       Process state            RUNNING , READY , WAITING
-       Accounting information   CPU time used, process ID, priority
-       I/O status               open files, pending I/O requests
-    ```
-
-    The steps
-    ```mermaid
-    sequenceDiagram
-        participant P1 as Process P1
-        participant K as Kernel
-        participant P2 as Process P2
-        P1->>K: interrupt or system call
-        K->>K: 1. save P1's state into PCB1
-        K->>K: 2. mark P1 READY or WAITING
-        K->>K: 3. scheduler selects P2
-        K->>K: 4. load P2's state from PCB2
-        K->>P2: 5. jump to P2's saved program counter
-    ```
-    ```
-       1. An INTERRUPT or SYSTEM CALL transfers control to the kernel.
-       2. The kernel SAVES the CPU state into the outgoing process's PCB.
-       3. The process's state is updated to READY or WAITING and it is
-          placed in the appropriate queue.
-       4. The SCHEDULER selects the next process to run.
-       5. The kernel LOADS that process's state from its PCB - registers,
-          memory-map pointers, flags.
-       6. Control jumps to its saved program counter, and it resumes as
-          though it had never stopped.
-    ```
-
-    What triggers a context switch
-    ```
-       TIMER INTERRUPT   : the time quantum expires (preemptive scheduling)
-       SYSTEM CALL       : the process requests I/O and must wait
-       I/O INTERRUPT     : a device completes, making a waiting process ready
-       HIGHER PRIORITY   : a more important process becomes ready
-       PROCESS EXIT      : the running process terminates
-       PAGE FAULT        : the required page is not in memory
-    ```
-
-    The cost
-    ```
-       A context switch does NO USEFUL WORK. It is pure overhead.
-
-       Direct cost   : saving and restoring registers , updating the PCB ,
-                       running the scheduler          -> 1 to 10 microseconds
-
-       Indirect cost : the CACHE and the TLB now hold the WRONG process's
-                       data, so the incoming process suffers a burst of
-                       misses until they refill. This is often LARGER than
-                       the direct cost.
-    ```
-    ```
-       Quantum 100 ms , switch 5 us  ->  overhead 0.005 %   negligible
-       Quantum 100 us , switch 5 us  ->  overhead 5 %       significant
-       Quantum  10 us , switch 5 us  ->  overhead 33 %      unacceptable
-    ```
-    - This is exactly why the time quantum cannot be made arbitrarily small: shrinking it improves response time but wastes an increasing share of the CPU on switching.
-
-    Process switch versus thread switch
-    ```
-       PROCESS switch : the address space changes, so the page-table
-            pointer is reloaded and the TLB is FLUSHED. Expensive.
-
-       THREAD switch  : threads of one process SHARE the address space,
-            so only the registers and the stack pointer change. The TLB
-            and much of the cache stay valid.
-
-       A thread switch is roughly 5 to 10 times cheaper than a process
-       switch, which is one of the main reasons threads exist.
-    ```
-
-    How systems reduce the cost
-    ```
-       Hardware support : some processors have several REGISTER SETS, so
-            switching means changing a pointer rather than copying registers
-       Tagged TLBs (ASIDs) : each entry carries an address-space id, so the
-            TLB need not be flushed on every switch
-       Larger time quanta for CPU-bound work
-       Threads instead of processes where the work can share memory
-       Processor affinity : keeping a process on the same core, so its
-            cache contents are still there when it resumes
-    ```
-
-    - The related term is `dispatch latency`: the time from the scheduler deciding to switch until the new process actually begins executing. In a real-time system this figure must be bounded and small, which is why real-time kernels are kept fully preemptible and simple.
-
-11. **Which Operating system is considered as an Open source?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
-
-    Answer: `Linux` is the operating system regarded as open source.
-
-    - It was created by `Linus Torvalds` in 1991 and released under the `GNU General Public License (GPL)`, which makes the source code freely available to read, modify and redistribute.
-    ```
-       Open source means :
-            the SOURCE CODE is published
-            anyone may READ , MODIFY and REDISTRIBUTE it
-            it is usually free of charge
-            development is by a community, not one company
-    ```
-
-    Major open-source operating systems
-    ```
-       Linux distributions :
-            Ubuntu , Debian , Fedora , CentOS / Rocky / AlmaLinux ,
-            Red Hat Enterprise Linux (source open, support paid) ,
-            openSUSE , Arch Linux , Linux Mint , Kali Linux
-
-       Other open-source systems :
-            FreeBSD , OpenBSD , NetBSD   - the BSD family
-            Android (AOSP)               - built on the Linux kernel
-            Chromium OS
-            Minix , FreeRTOS , RTEMS     - teaching and embedded systems
-    ```
-
-    Proprietary (closed source) operating systems, for contrast
-    ```
-       Microsoft Windows , Apple macOS , Apple iOS ,
-       IBM z/OS , Oracle Solaris (now largely closed) , MS-DOS
-    ```
-
-    Open source versus proprietary
-
-    | Point | Open source (Linux) | Proprietary (Windows) |
-    |---|---|---|
-    | Source code | `Public` | Secret |
-    | Cost | Usually free | Paid licence |
-    | Modification | Allowed and encouraged | Prohibited |
-    | Redistribution | Allowed under the licence | Prohibited |
-    | Licence | GPL, Apache, MIT, BSD | EULA |
-    | Developed by | A worldwide community | One company |
-    | Support | Community forums; paid support available | Official vendor support |
-    | Security | Many eyes find and fix flaws quickly | Depends on the vendor; flaws stay hidden |
-    | Updates | Frequent | On the vendor's schedule |
-    | Vendor lock-in | Low — the code can be forked | High |
-    | Customisation | Complete | None beyond what is offered |
-    | Accountability | No single responsible party | The vendor is contractually responsible |
-
-    Why Linux dominates where it does
-    ```
-       Servers        : about 90 % of public cloud workloads and nearly
-                        all of the top 500 supercomputers
-       Mobile         : Android, built on the Linux kernel, holds roughly
-                        70 % of the smartphone market
-       Embedded       : routers, smart TVs, cars, industrial controllers
-       Reasons        : no licence cost, stability, security, the ability
-                        to strip it down to exactly what a device needs,
-                        and freedom from any single vendor
-    ```
-
-    Licences worth naming
-    ```
-       GPL        : COPYLEFT - any derivative work must also be open source.
-                    Used by the Linux kernel.
-       LGPL       : a weaker copyleft, for libraries.
-       Apache 2.0 : permissive, and grants patent rights.
-       MIT / BSD  : permissive - derivatives may be closed source.
-    ```
-
-    - A distinction worth stating: `open source is not the same as free of charge`. Red Hat Enterprise Linux is fully open source, yet the subscription that provides support and certified updates is paid for. The freedom refers to the `source code`, not necessarily to the price.
-
-12. **What is kernel? Write down the objectives of kernel.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
-
-    Answer: What a kernel is
-    - The `kernel` is the core of the operating system. It is loaded into memory at boot, stays resident until shutdown, and runs in `kernel mode` (privileged mode) with complete access to the hardware and to all memory.
-    - It sits between the applications and the hardware, and every request from a program reaches it as a `system call`.
-    ```
-            USER
-              |
-           SHELL / APPLICATIONS       user mode
-              |
-           ---- system call interface ----
-              |
-           KERNEL                      kernel mode, privileged
-              |
-           HARDWARE
-    ```
-
-    Objectives and functions of the kernel
-
-    1. `Process management`
-    ```
-       Create , schedule , suspend and terminate processes
-       Maintain the Process Control Block for each
-       Perform context switching
-       Provide inter-process communication : pipes, signals, shared memory,
-            message queues
-       Detect and handle deadlock
-    ```
-
-    2. `Memory management`
-    ```
-       Allocate and free memory to processes
-       Keep track of which parts of memory are in use and by whom
-       Implement paging, segmentation and VIRTUAL MEMORY
-       PROTECT each process's memory from every other
-       Handle page faults and choose pages to replace
-    ```
-
-    3. `Device management`
-    ```
-       Provide DEVICE DRIVERS, so applications need not know the hardware
-       Handle INTERRUPTS from devices
-       Buffering, caching and spooling
-       Schedule disk requests
-    ```
-
-    4. `File system management`
-    ```
-       Create, read, write and delete files and directories
-       Maintain the directory structure and the allocation of disk blocks
-       Enforce access permissions
-    ```
-
-    5. `System call interface`
-    ```
-       Provide the controlled entry points through which a user program
-       asks for a privileged service - the ONLY legal way into kernel mode.
-
-       Examples : open , read , write , fork , exec , wait , exit , kill
-    ```
-
-    6. `Security and protection`
-    ```
-       Authenticate users ; enforce permissions
-       Keep one user's data inaccessible to another
-       Separate USER mode from KERNEL mode, so an application cannot
-            touch the hardware directly
-       Maintain an audit trail
-    ```
-
-    7. `Resource allocation and arbitration`
-    ```
-       Share the CPU, memory and devices fairly among competing processes,
-       and prevent one process from monopolising any of them.
-    ```
-
-    8. `Abstraction`
-    ```
-       Present a simple, uniform interface over messy hardware. A program
-       calls read() whether the data is on an SSD, a hard disk, a network
-       share or a USB stick.
-    ```
-
-    Types of kernel
-    ```
-       MONOLITHIC : every service runs in kernel mode, in one address space.
-            Fast, but a driver bug can crash the whole system.
-            Linux , traditional UNIX , MS-DOS
-
-       MICROKERNEL: only IPC, basic scheduling and memory management run in
-            kernel mode ; drivers and file systems are user-space servers.
-            Reliable and secure, but slower because of message passing.
-            QNX , Minix , L4 , Mach
-
-       HYBRID     : a compromise, which is what real systems use.
-            Windows NT , macOS XNU
-
-       EXOKERNEL  : an extreme minimalist design that exposes the hardware
-            directly and leaves abstraction to libraries. Research only.
-    ```
-
-    Useful commands
-    ```bash
-       uname -r                 # kernel version
-       uname -a                 # full kernel information
-       lsmod                    # loaded kernel modules
-       dmesg                    # kernel ring buffer messages
-       cat /proc/version        # kernel build details
-    ```
-
-    - The essential statement: the kernel's objective is to be `the trusted intermediary` — it is the only software with full hardware access, and every other program must ask it for anything privileged. That single design decision is what gives an operating system its protection, its multitasking and its stability.
-
-13. **IBM প্রতিষ্ঠান কর্তৃক কোন Operating System প্রস্তুত করা হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) `IBM` created several operating systems. The most important are these.
-
-    `PC-DOS` (1981)
-    - The operating system for the original `IBM Personal Computer`. It was licensed from Microsoft, which sold the same product as `MS-DOS`. IBM's version was called PC-DOS, and later `IBM DOS`.
-
-    `OS/2` (1987)
-    - Developed jointly by `IBM and Microsoft`, then continued by IBM alone after the partnership broke up in 1990. A 32-bit, multitasking, graphical operating system, technically ahead of Windows 3.x but commercially defeated by it. Later versions were called `OS/2 Warp`.
-
-    `AIX` (1986)
-    - IBM's own version of `UNIX`, still sold today for its `POWER` servers. Used widely in banking and enterprise data centres.
-
-    `OS/360` (1964)
-    - The operating system for the `System/360` mainframe — one of the most important operating systems ever written, and the subject of Fred Brooks's book `The Mythical Man-Month`.
-
-    `z/OS`
-    - The current mainframe operating system, descended from OS/360 through MVS and OS/390. It still runs the core banking and payment systems of much of the world.
-
-    `i5/OS` (now `IBM i`)
-    - The operating system of the AS/400 and its successors, notable for its integrated database.
-
-    Summary
-
-    | Operating system | Year | Platform | Note |
-    |---|---|---|---|
-    | OS/360 | 1964 | System/360 mainframe | The ancestor of z/OS |
-    | PC-DOS | 1981 | IBM PC | Licensed from Microsoft |
-    | AIX | 1986 | RS/6000, POWER | IBM's UNIX |
-    | OS/2 | 1987 | PC | With Microsoft, then IBM alone |
-    | OS/400 → IBM i | 1988 | AS/400 | Integrated database |
-    | z/OS | 2000 | Mainframe | Current, from MVS/OS-390 |
-
-    - The short answer usually expected in a paper of this kind is `PC-DOS` or `OS/2`. `AIX` and `z/OS` are the ones still in commercial use, and `OS/360` is the historically most significant.
-
-14. **Explain: Kernel, Cache, Virtual Memory and RAID.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872-873 (ET: N/A)]*
-
-    Answer: Kernel
-    - The `core` of the operating system, resident in memory from boot to shutdown, running in `kernel mode` with full access to the hardware.
-    - Functions: `process management` (creation, scheduling, context switching), `memory management` (allocation, paging, virtual memory, protection), `device management` (drivers, interrupts), `file system management`, `system calls` and `security`.
-    ```
-       Types : MONOLITHIC  - all services in kernel mode (Linux, UNIX)
-               MICROKERNEL - only IPC, scheduling, memory (QNX, Minix)
-               HYBRID      - a compromise (Windows NT, macOS)
-    ```
-    - The `shell` is the outer layer the user speaks to; the kernel is the engine underneath. No application touches the hardware directly — every request becomes a `system call`.
-
-    Cache
-    - A small, very fast memory placed between the CPU and main memory, holding the instructions and data most recently used.
-    - It exists to bridge a huge speed gap: a CPU cycle is under a nanosecond, a DRAM access is 50-100 ns, or roughly 200 cycles.
-    ```
-       CPU <-> L1 (32-64 KB, ~4 cy) <-> L2 (256KB-1MB, ~12 cy)
-           <-> L3 (8-32 MB, ~40 cy) <-> RAM (GB, ~200 cy)
-    ```
-    ```
-       Average access time = hit time + (miss rate x miss penalty)
-
-       Hit time 5 ns , miss penalty 100 ns , hit ratio 95 % :
-            5 + (0.05 x 100) = 10 ns , against 105 ns with no cache
-    ```
-    - It works because of the `principle of locality`: a program reuses the same instructions and data (temporal locality) and reads neighbouring addresses (spatial locality), so a small cache satisfies 90-99 per cent of all requests.
-    - Other caches built on the same idea: the `TLB` for address translations, the `disk cache` in RAM, the `browser cache` and the `DNS cache`.
-
-    Virtual memory
-    - A technique that lets a process use an address space `larger than the physical RAM`, by keeping only the actively used parts in memory and the rest on disk.
-    ```
-       Virtual address ----> [ MMU + page table ] ----> Physical address
-                                  |
-                             page not present?
-                                  |
-                             PAGE FAULT -> fetch it from disk
-    ```
-    ```
-       Implemented by PAGING : the virtual address space is divided into
-       fixed-size PAGES (typically 4 KB), physical memory into FRAMES of
-       the same size, and a PAGE TABLE maps one to the other.
-    ```
-    - Benefits: programs larger than RAM can run; more processes fit in memory, so multiprogramming rises; each process gets its own protected address space; and the programmer need not manage overlays.
-    - Cost: a page fault costs milliseconds. If the working sets of the running processes exceed physical memory, the system spends all its time swapping instead of computing — `thrashing`.
-    - Page replacement algorithms: `FIFO`, `LRU`, `Optimal`, `Clock (second chance)`, `NRU`.
-
-    RAID
-    - `Redundant Array of Independent Disks` — several physical disks combined into one logical drive, for `performance`, `fault tolerance` and `capacity`.
-    ```
-       Striping  : data split across disks and accessed in parallel -> speed
-       Mirroring : the same data written to two disks -> redundancy
-       Parity    : an XOR checksum, from which a lost block is rebuilt
-    ```
-
-    | Level | Technique | Min disks | Usable | Survives |
-    |---|---|---|---|---|
-    | RAID 0 | Striping | 2 | 100 % | `Nothing` |
-    | RAID 1 | Mirroring | 2 | 50 % | 1 disk |
-    | RAID 5 | Striping + distributed parity | 3 | (n-1)/n | 1 disk |
-    | RAID 6 | Double parity | 4 | (n-2)/n | 2 disks |
-    | RAID 10 | Mirror then stripe | 4 | 50 % | 1 per mirror |
-
-    - `RAID is not a backup`. It protects against `disk failure` alone; a deleted table, ransomware, corruption or a fire is written faithfully to every disk at the same instant.
-
-    How the four relate
-    ```
-       The KERNEL manages all of them.
-       CACHE and VIRTUAL MEMORY are both parts of the MEMORY HIERARCHY -
-            cache hides the slowness of RAM, virtual memory hides the
-            smallness of RAM by using the disk.
-       RAID sits at the bottom of that hierarchy, making the disk itself
-            faster and more reliable.
-    ```
-
-15. **(a) Briefly describe the function that measure the efficiency of an operating system.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025 (ET: N/A)]*
-
-    Answer: The efficiency of an operating system is judged by how well it uses the hardware and how well it serves the user. The measures fall into two groups, and they conflict with one another.
-
-    System-oriented measures
-    ```
-       1. CPU UTILISATION
-            The percentage of time the CPU is doing useful work.
-            Target : 40 % on a lightly loaded system to 90 % on a heavily
-            loaded one. It should be MAXIMISED.
-
-       2. THROUGHPUT
-            The number of processes completed per unit time.
-            Long jobs give a low figure, short jobs a high one, so it is
-            meaningful only for a comparable workload. MAXIMISE.
-
-       3. MEMORY UTILISATION
-            How much of physical memory holds useful data rather than
-            being free or wasted by fragmentation.
-
-       4. DEVICE UTILISATION
-            Keeping the disks and other devices busy in parallel with
-            the CPU, which is what multiprogramming is for.
-
-       5. FAIRNESS
-            Every process gets a reasonable share, and none STARVES.
-    ```
-
-    User-oriented measures
-    ```
-       6. TURNAROUND TIME
-            Submission to completion, for one process.
-            Turnaround = Completion - Arrival = Waiting + Burst + I/O
-            MINIMISE.
-
-       7. WAITING TIME
-            Total time spent in the ready queue.
-            Waiting = Turnaround - Burst.  MINIMISE.
-
-       8. RESPONSE TIME
-            Submission to the FIRST response. This is what an interactive
-            user actually feels, and it matters more than turnaround time
-            on a desktop. MINIMISE.
-
-       9. PREDICTABILITY
-            The same job should take about the same time each run.
-            Essential in real-time systems.
-
-      10. RELIABILITY and AVAILABILITY
-            Uptime , mean time between failures , and graceful recovery
-            from a fault.
-    ```
-
-    The functions whose efficiency is being measured
-    ```
-       PROCESS MANAGEMENT : the scheduling algorithm decides waiting,
-            turnaround and response time.
-            Measured by average waiting time and average turnaround time.
-
-       MEMORY MANAGEMENT  : paging and virtual memory decide how many
-            processes fit and how often a page fault occurs.
-            Measured by the PAGE FAULT RATE and the degree of
-            multiprogramming sustained without THRASHING.
-
-       FILE and I/O MANAGEMENT : disk scheduling and buffering decide
-            throughput.
-            Measured by average seek time, transfer rate and the disk
-            cache hit ratio.
-
-       CONTEXT SWITCHING  : pure overhead.
-            Measured as switch time / time quantum. It must stay a small
-            percentage.
-
-       CACHE PERFORMANCE  :
-            Average access time = hit time + (miss rate x miss penalty)
-            Measured by the HIT RATIO, which is the single most influential
-            number in system performance.
-    ```
-
-    Worked illustrations
-    ```
-       CPU utilisation with n processes each spending fraction p waiting
-       for I/O :
-
-            CPU utilisation = 1 - p^n
-
-            p = 0.8 , n = 1 -> 20 %
-            p = 0.8 , n = 4 -> 59 %
-            p = 0.8 , n = 10 -> 89 %
-
-       This is the quantitative argument for multiprogramming.
-    ```
-    ```
-       Effective memory access time with paging :
-
-            EAT = (1 - p) x memory access + p x page fault time
-
-            Memory access 100 ns , page fault 8 ms , fault rate 1 in 1000 :
-            EAT = 0.999 x 100 ns + 0.001 x 8,000,000 ns = 8100 ns
-
-            A fault rate of just 0.1 per cent makes memory 81 times slower.
-            This is why the page fault rate must be kept extremely low.
-    ```
-
-    The conflicts between the measures
-    ```
-       Maximising CPU UTILISATION can worsen RESPONSE TIME, because the
-            CPU is kept busy with long jobs.
-
-       Minimising average TURNAROUND favours SJF, which STARVES long jobs.
-
-       Minimising RESPONSE TIME favours a small quantum, which raises
-            CONTEXT-SWITCH OVERHEAD and lowers throughput.
-
-       Raising the DEGREE OF MULTIPROGRAMMING raises utilisation until the
-            working sets exceed memory, at which point THRASHING collapses
-            performance entirely.
-    ```
-
-    - The conclusion an examiner looks for: `no operating system optimises every measure at once`. A batch system maximises throughput, a time-sharing system minimises response time, and a real-time system maximises predictability. The design is always a deliberate choice among these conflicting criteria.
-
-16. **What is the difference between micro kernel and macro kernel? What are the sub components of I/O manager in Windows NT?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052-1053 (ET: BUET)]*
-
-    Answer: Micro kernel versus macro (monolithic) kernel
-
-    `Macro kernel (monolithic)`
-    - `Every` operating-system service — scheduler, memory manager, file system, device drivers, network stack — runs inside the kernel in `kernel mode`, in one address space.
-    - Services call each other by `direct function call`, which is what makes it fast.
-    - Examples: `Linux`, traditional `UNIX`, `MS-DOS`, `BSD`.
-
-    `Microkernel`
-    - Only the `minimum` runs in kernel mode: inter-process communication, basic scheduling and address-space management. Drivers, file systems and network stacks run as ordinary `user-mode server processes`.
-    - They communicate by `message passing` through the kernel, costing two context switches per request.
-    - Examples: `QNX`, `Minix`, `Mach`, `L4`, `Symbian`.
-    ```
-       MONOLITHIC                        MICROKERNEL
-       +----------------------+          +----------------------------+
-       |     applications     |          | apps | file | driver | net |
-       +----------------------+          |      | srvr | server | srv |
-       | scheduler | memory   |          +----------------------------+
-       | file sys  | drivers  |          |  microkernel : IPC ,       |
-       | network   | IPC      |          |  scheduling , memory       |
-       +----------------------+          +----------------------------+
-       |      hardware        |          |         hardware           |
-       +----------------------+          +----------------------------+
-    ```
-
-    Difference
-
-    | Point | Macro (monolithic) kernel | Microkernel |
-    |---|---|---|
-    | Size | Large — millions of lines | Small — often under 10,000 lines |
-    | Services in kernel mode | `All` | Only IPC, scheduling, memory |
-    | Communication | Direct function calls | `Message passing` |
-    | Speed | `Faster` | Slower — IPC overhead |
-    | Reliability | A driver crash kills the `whole system` | A server crash kills only that service |
-    | Extensibility | Recompile or load a module | Add a user-space process |
-    | Debugging | Hard — kernel level | Easy — user level |
-    | Security | Large privileged attack surface | Small trusted computing base |
-    | Portability | Lower | Higher |
-    | Examples | Linux, UNIX | QNX, Minix, L4 |
-
-    - The trade-off in one line: `monolithic buys speed at the cost of reliability; microkernel buys reliability at the cost of speed`. Real systems are `hybrid` — Windows NT moved graphics into the kernel for speed, macOS puts a BSD layer inside Mach, and Linux uses loadable modules to gain flexibility while keeping direct calls.
-
-    Sub-components of the Windows NT I/O Manager
-
-    - The `I/O Manager` is the Executive component that handles all input and output. It defines a uniform, packet-driven interface so that every driver looks the same to the rest of the system.
-    ```
-       The central object is the IRP - the I/O REQUEST PACKET. Every I/O
-       operation becomes an IRP, which is passed DOWN a stack of drivers
-       and back up with the result.
-    ```
-
-    Its sub-components
-    ```
-       1. CACHE MANAGER
-            Provides a unified file cache for all file systems. Maps file
-            data into virtual memory and works with the Memory Manager,
-            so that reads are usually satisfied without touching the disk.
-            Handles lazy writing and read-ahead.
-
-       2. FILE SYSTEM DRIVERS
-            NTFS , FAT32 , exFAT , CDFS , UDF , and network redirectors.
-            They translate a file request into disk-block requests.
-
-       3. DEVICE DRIVERS
-            Control individual hardware devices. Layered as :
-                 HIGHEST-LEVEL : file system drivers
-                 INTERMEDIATE  : class drivers, filter drivers,
-                                 mirror and encryption drivers
-                 LOWEST-LEVEL  : hardware bus drivers, port drivers
-
-       4. NETWORK DRIVERS and REDIRECTORS
-            Present remote files and printers as though they were local,
-            through the NDIS interface.
-
-       5. PLUG AND PLAY MANAGER
-            Detects hardware, allocates resources, loads the right driver
-            and supports hot insertion and removal.
-
-       6. POWER MANAGER
-            Coordinates power state transitions (sleep, hibernate,
-            shutdown) across all devices, sending power IRPs.
-
-       7. WMI (Windows Management Instrumentation) support
-            Lets drivers publish management and performance data.
-
-       8. I/O REQUEST PACKET (IRP) MANAGEMENT
-            Allocates, queues, completes and cancels IRPs, and manages
-            the driver stack each one traverses.
-    ```
-
-    How a read travels through it
-    ```
-       Application calls ReadFile()
-            |
-       I/O Manager creates an IRP
-            |
-       Cache Manager - is the data already cached?  ->  yes, return it
-            |  no
-       File system driver (NTFS) - translate to disk blocks
-            |
-       Volume / partition driver
-            |
-       Disk class driver -> port driver -> miniport driver
-            |
-       Hardware
-            |
-       Interrupt -> completion travels back UP the same stack
-    ```
-    - The `layered, packet-driven` design is what allows a filter driver — an antivirus scanner, an encryption layer, a compression layer — to be inserted anywhere in the stack without changing any other driver.
-
-17. **What is operating System? What are the main components of operating System?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
-
-    Answer: What an operating system is
-    - An `operating system` is the system software that manages the computer's hardware and software resources and provides common services for application programs. It is the `interface between the user and the hardware`.
-    ```
-            USER
-              |
-           APPLICATION PROGRAMS
-              |
-           OPERATING SYSTEM
-              |
-           HARDWARE
-    ```
-    - It is the first program loaded after the firmware, and it stays in memory until shutdown. Examples: `Windows, Linux, macOS, Android, iOS, UNIX`.
-
-    Its two roles
-    ```
-       As a RESOURCE MANAGER : allocates the CPU, memory, devices and files
-            among competing processes, fairly and efficiently.
-
-       As an EXTENDED MACHINE : hides messy hardware behind a clean
-            interface, so a program calls read() without knowing whether
-            the data is on an SSD, a network share or a USB stick.
-    ```
-
-    Main components
-
-    1. `Kernel`
-    - The core, resident in memory and running in privileged mode with full hardware access. Everything below is either part of it or works through it.
-
-    2. `Process management`
-    ```
-       Creating, scheduling, suspending and terminating processes
-       Maintaining a Process Control Block for each
-       Context switching
-       Inter-process communication : pipes, signals, shared memory
-       Deadlock detection and handling
-    ```
-
-    3. `Memory management`
-    ```
-       Allocating and freeing memory
-       Tracking which parts are in use and by whom
-       Paging, segmentation and VIRTUAL MEMORY
-       Protecting each process's memory from every other
-    ```
-
-    4. `File management`
-    ```
-       Creating, reading, writing and deleting files and directories
-       Maintaining the directory structure
-       Mapping files onto disk blocks
-       Enforcing access permissions
-    ```
-
-    5. `Device (I/O) management`
-    ```
-       Device drivers , which hide hardware differences
-       Interrupt handling
-       Buffering , caching and spooling
-       Disk scheduling
-    ```
-
-    6. `Secondary storage management`
-    ```
-       Free-space management , storage allocation , disk scheduling
-    ```
-
-    7. `Security and protection`
-    ```
-       Authentication , authorisation , encryption , audit logging
-       Separating user mode from kernel mode
-    ```
-
-    8. `Command interpreter (shell) and user interface`
-    ```
-       CLI : bash , sh , PowerShell , cmd
-       GUI : GNOME , KDE , Windows Explorer , Aqua
-    ```
-
-    9. `System call interface`
-    ```
-       The controlled entry points through which an application requests a
-       privileged service - the only legal route into kernel mode.
-       Examples : open , read , write , fork , exec , wait , exit
-    ```
-
-    10. `Networking`
-    ```
-       Protocol stacks , sockets , remote file systems
-    ```
-
-    Diagram
-    ```
-       +-----------------------------------------------------+
-       |               USER APPLICATIONS                     |
-       +-----------------------------------------------------+
-       |     SHELL / GUI          |    SYSTEM PROGRAMS       |
-       +-----------------------------------------------------+
-       |            SYSTEM CALL INTERFACE                    |
-       +-----------------------------------------------------+
-       |                    KERNEL                           |
-       |  Process   | Memory   | File     | Device  | Network|
-       |  manager   | manager  | manager  | manager | stack  |
-       |            |          |          |         |        |
-       |  Scheduler | Paging   | Buffers  | Drivers |        |
-       +-----------------------------------------------------+
-       |                    HARDWARE                         |
-       |     CPU   |   Memory   |   Disk   |   I/O devices   |
-       +-----------------------------------------------------+
-    ```
-
-    - The essential point: the kernel is the only software with `full hardware access`, and every other program must ask it for anything privileged. That single design decision is what gives an operating system its `protection, multitasking and stability`.
-
-18. **(গ) Operating System-এর সংগঠন সহ কাজ উল্লেখ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067-1068 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) Organisation (structure) of an operating system
-
-    An operating system can be built in several ways. The structures, from simplest to most modern, are these.
-
-    1. `Simple / monolithic structure`
-    - No clear separation of modules; everything is written together with no defined interfaces.
-    - Example: `MS-DOS`, in which an application could call BIOS routines directly, so a faulty program could crash the machine.
-
-    2. `Layered structure`
-    - The system is divided into layers, each built only on the one below it and offering a clean interface to the one above.
-    ```
-       Layer 5 : user programs
-       Layer 4 : I/O management
-       Layer 3 : operator-process communication
-       Layer 2 : memory management
-       Layer 1 : CPU scheduling
-       Layer 0 : hardware
-    ```
-    - Advantage: easy to build, debug and verify one layer at a time. Disadvantage: deciding the order of layers is difficult, and crossing many layers costs performance.
-    - Example: the `THE` system, and early UNIX in part.
-
-    3. `Microkernel structure`
-    - Only the minimum runs in kernel mode; everything else is a user-space server communicating by message passing.
-    - Reliable and extensible, but slower. Example: `QNX`, `Minix`, `Mach`.
-
-    4. `Modular structure`
-    - A small core kernel with `loadable modules` added at run time. This is what modern `Linux` uses: `insmod` and `rmmod` add and remove drivers without recompiling or rebooting.
-    - It gives the microkernel's flexibility while keeping the monolithic kernel's direct function calls.
-
-    5. `Hybrid structure`
-    - A combination chosen for practicality. `Windows NT` and `macOS XNU` both are.
-
-    6. `Virtual machine structure`
-    - A hypervisor presents each operating system with the illusion of its own hardware. Examples: `VMware`, `Hyper-V`, `KVM`, `VirtualBox`, and `IBM VM/370`, the original.
-
-    Diagram of the general organisation
-    ```
-       +-----------------------------------------------------+
-       |               USER APPLICATIONS                     |
-       +-----------------------------------------------------+
-       |     SHELL / GUI          |    SYSTEM PROGRAMS       |
-       +-----------------------------------------------------+
-       |            SYSTEM CALL INTERFACE                    |
-       +-----------------------------------------------------+
-       |                    KERNEL                           |
-       |  Process   | Memory   | File     | Device  | Network|
-       |  manager   | manager  | manager  | manager | stack  |
-       +-----------------------------------------------------+
-       |                    HARDWARE                         |
-       +-----------------------------------------------------+
-    ```
-
-    Functions of an operating system
-    ```
-       1. PROCESS MANAGEMENT
-            Create, schedule, suspend and terminate processes ; maintain
-            the PCB ; context switching ; inter-process communication ;
-            deadlock handling.
-
-       2. MEMORY MANAGEMENT
-            Allocate and free memory ; track what is in use ; paging,
-            segmentation and virtual memory ; protect one process from
-            another.
-
-       3. FILE MANAGEMENT
-            Create, read, write and delete files and directories ;
-            maintain the directory structure ; map files onto disk blocks ;
-            enforce permissions.
-
-       4. DEVICE (I/O) MANAGEMENT
-            Device drivers ; interrupt handling ; buffering, caching and
-            spooling ; disk scheduling.
-
-       5. SECONDARY STORAGE MANAGEMENT
-            Free-space management , allocation , disk scheduling.
-
-       6. SECURITY AND PROTECTION
-            Authentication , authorisation , encryption , audit logging ,
-            and the separation of user mode from kernel mode.
-
-       7. USER INTERFACE
-            A command-line shell, a graphical desktop, or both.
-
-       8. RESOURCE ALLOCATION AND ACCOUNTING
-            Share the CPU, memory and devices fairly ; record usage.
-
-       9. ERROR DETECTION AND RECOVERY
-            Detect a hardware fault, a bad instruction or a full disk and
-            respond without crashing the system.
-
-      10. NETWORKING
-            Protocol stacks , sockets , remote file systems.
-    ```
-
-    - The two ways of summarising the whole thing, which examiners like: the operating system acts as a `resource manager`, allocating the CPU, memory, devices and files among competing processes, and as an `extended machine`, hiding messy hardware behind a clean and uniform interface.
-
-19. **(খ) Time shearing operating system and Real time operating system-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) Time-sharing operating system
-    - A `time-sharing` system lets `many users` work at the same computer at the same time, by giving each a short `time slice` of the CPU in rotation. The switching is so fast that every user believes the machine is theirs alone.
-    - It is `multiprogramming plus a timer`: the CPU is taken away when the quantum expires, not only when a process requests I/O.
-    ```
-       Goal : MINIMISE RESPONSE TIME, so that interactive work feels instant
-       Scheduling : Round Robin, or a multilevel feedback queue
-       Examples : UNIX , Linux , Windows , macOS , multi-user mainframes
-    ```
-
-    Real-time operating system
-    - A `real-time` system guarantees that a task completes within a `fixed deadline`. Correctness depends not only on `what` is computed but on `when` it is delivered — a correct answer that arrives late is a failure.
-    ```
-       HARD real time : a missed deadline is a TOTAL FAILURE
-            pacemaker , airbag , aircraft flight control , reactor shutdown
-       SOFT real time : a missed deadline degrades quality
-            video streaming , VoIP , online gaming
-
-       Goal : PREDICTABILITY, not average speed
-       Scheduling : preemptive priority , Rate Monotonic , Earliest Deadline First
-       Examples : VxWorks , QNX , FreeRTOS , RTLinux
-    ```
-
-    Difference
-
-    | Point | Time-sharing OS | Real-time OS |
-    |---|---|---|
-    | Primary goal | Minimise `response time` for users | Meet every `deadline` |
-    | Key property | Fairness | `Predictability` (determinism) |
-    | Timing | Best effort — no guarantee | Guaranteed worst case |
-    | Scheduling | Round Robin, multilevel feedback | Preemptive priority, RMS, EDF |
-    | Users | Many, interactive | Usually none — it controls a device |
-    | Effect of a delay | Slight inconvenience | Failure, possibly catastrophic |
-    | Virtual memory | Standard | `Avoided` in hard real time — a page fault is unpredictable |
-    | Kernel | Large, general purpose | Small, fully preemptible |
-    | Throughput | Maximised | Sacrificed for predictability |
-    | Task priority | Dynamic, adjusted for fairness | Fixed by deadline importance |
-    | Memory | Large, paged | Small, often static allocation |
-    | Examples | UNIX, Linux, Windows | VxWorks, QNX, FreeRTOS |
-    | Used in | Servers, desktops, mainframes | Medical devices, avionics, cars, robots |
-
-    Why a time-sharing system cannot be used for hard real-time work
-    ```
-       1. VIRTUAL MEMORY : a page fault takes milliseconds, and cannot be
-          predicted. An airbag controller cannot risk it.
-
-       2. NON-PREEMPTIBLE KERNEL SECTIONS : a general-purpose kernel spends
-          time in critical sections where it cannot be interrupted, so the
-          worst-case latency is unbounded.
-
-       3. FAIR SCHEDULING : the scheduler deliberately gives every process
-          a turn. A real-time system must let the urgent task run
-          IMMEDIATELY, whatever else is waiting.
-
-       4. UNBOUNDED INTERRUPT LATENCY : general-purpose drivers may disable
-          interrupts for long periods.
-    ```
-
-    The middle ground
-    ```
-       Linux with the PREEMPT_RT patch makes almost the whole kernel
-       preemptible and gives bounded latency, which is enough for SOFT
-       real-time work such as audio processing and industrial control -
-       but not for a pacemaker.
-    ```
-
-    - The point most often misunderstood, and worth stating plainly: `real time does not mean fast`. A system that always responds within 50 ms is real-time; one that usually responds in 1 ms but occasionally takes 200 ms is not. For a safety-critical device, the guarantee matters and the average does not.
-
-20. **(ক) মাল্টি প্রোগ্রামিং অপারেটিং সিস্টেম কী? সচিত্র বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1092 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) A `multiprogramming operating system` keeps `several programs in main memory at the same time`, so that when one program waits for input or output the CPU is given to another instead of sitting idle.
-
-    - Only one program executes at any instant on a single CPU; the operating system `interleaves` them so rapidly that the CPU is never idle while work is waiting.
-
-    The problem it solves
-    ```
-       A single program alternates between CPU bursts and I/O waits, and a
-       typical program spends 60-80 per cent of its time waiting.
-
-       WITHOUT multiprogramming :
-
-       Program A : |CPU|--------- waiting for disk ---------|CPU|
-                                 CPU IS IDLE HERE
-
-       WITH multiprogramming :
-
-       Program A : |CPU|........I/O wait.........|CPU|.....I/O.....
-       Program B : ......|CPU|.......I/O wait........|CPU|.........
-       Program C : ...........|CPU|.......I/O wait........|CPU|....
-
-       CPU busy  : |AAA|BBB|CCC|AAA|BBB|CCC|...   -  NEVER IDLE
-    ```
-
-    Memory layout
-    ```
-       +---------------------------+  high address
-       |    Operating system       |
-       +---------------------------+
-       |    Program A              |
-       +---------------------------+
-       |    Program B              |     several programs resident
-       +---------------------------+     at the same time
-       |    Program C              |
-       +---------------------------+
-       |    Free space             |
-       +---------------------------+  0
-    ```
-
-    What it requires
-    ```
-       1. SEVERAL PROGRAMS IN MEMORY at once - fixed partitions in early
-          systems, paging and virtual memory in modern ones.
-
-       2. MEMORY PROTECTION - base and limit registers, or the MMU and page
-          tables, so one program cannot touch another's memory.
-
-       3. INTERRUPTS - the mechanism that returns control to the OS when
-          an I/O operation completes.
-
-       4. CONTEXT SWITCHING - saving the CPU state of one process into its
-          PCB and loading another's.
-
-       5. A SCHEDULER - to choose which ready process runs next.
-
-       6. THE PROCESS CONTROL BLOCK - one per process, holding its state,
-          program counter, registers, memory limits and open files.
-    ```
-
-    CPU utilisation, quantified
-    ```
-       If each process spends a fraction p of its time waiting for I/O,
-       and n processes are in memory :
-
-            CPU utilisation = 1 - p^n
-
-       p = 0.8 , n = 1  ->  20 %
-       p = 0.8 , n = 4  ->  59 %
-       p = 0.8 , n = 10 ->  89 %
-    ```
-    - This single formula is the quantitative argument for multiprogramming, and it also shows the diminishing return: beyond a point, adding processes gains little and risks `thrashing`.
-
-    Advantages
-    ```
-       High CPU utilisation - the CPU is almost never idle
-       Higher throughput - more jobs completed per hour
-       Better use of memory and devices
-       Shorter average waiting time
-    ```
-
-    Disadvantages
-    ```
-       Complex memory management and protection hardware required
-       Context-switch overhead
-       Scheduling complexity
-       Deadlock and synchronisation problems appear
-       THRASHING if too many processes are admitted
-    ```
-
-    The related terms, which examiners like to see distinguished
-    ```
-       MULTIPROGRAMMING : several programs in MEMORY ; the switch happens
-            when one requests I/O. Goal - keep the CPU busy.
-
-       MULTITASKING     : multiprogramming plus TIME SHARING ; a timer also
-            forces a switch, so every task gets a regular turn.
-            Goal - responsiveness.
-
-       MULTIPROCESSING  : more than one CPU, so tasks run truly in parallel.
-
-       MULTITHREADING   : one process divided into threads sharing its
-            address space.
-    ```
-
-21. **Discuss the Operating System architecture and how it works?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
-
-    Answer: Operating system architecture
-
-    An operating system can be structured in several ways. The main architectures, from oldest to most modern, are these.
-
-    1. `Monolithic architecture`
-    - Every service — scheduler, memory manager, file system, drivers, network stack — runs inside the kernel in `kernel mode`, in one address space, calling each other by direct function call.
-    ```
-       +-------------------------------------------------+
-       |          USER APPLICATIONS       (user mode)    |
-       +-------------------------------------------------+
-       |               SYSTEM CALL INTERFACE             |
-       +-------------------------------------------------+
-       |   Scheduler | Memory | File system | Drivers    |
-       |   Network stack | IPC        (kernel mode)      |
-       +-------------------------------------------------+
-       |                  HARDWARE                       |
-       +-------------------------------------------------+
-    ```
-    - Fast, but a bug in any driver can crash the whole system. Example: `Linux`, `UNIX`.
-
-    2. `Layered architecture`
-    - Divided into layers, each using only the one below and offering a clean interface above.
-    ```
-       Layer 5 : user programs
-       Layer 4 : I/O management
-       Layer 3 : operator-process communication
-       Layer 2 : memory management
-       Layer 1 : CPU scheduling
-       Layer 0 : hardware
-    ```
-    - Easy to build and debug one layer at a time, but crossing many layers costs performance.
-
-    3. `Microkernel architecture`
-    - Only IPC, basic scheduling and address-space management run in kernel mode; drivers and file systems are user-space servers communicating by `message passing`.
-    - Reliable and secure, but slower. Example: `QNX`, `Minix`, `L4`.
-
-    4. `Modular architecture`
-    - A small core with `loadable kernel modules` added at run time. Modern `Linux` uses this: `insmod` and `rmmod` add and remove drivers without a reboot.
-
-    5. `Hybrid architecture`
-    - A practical combination. `Windows NT` moved graphics into the kernel for speed; `macOS XNU` puts a BSD layer inside the Mach microkernel.
-
-    How an operating system works — the boot sequence
-    ```
-       1. POWER ON
-       2. FIRMWARE (BIOS/UEFI) runs from ROM : POST, find the boot device
-       3. BOOTLOADER (GRUB, Windows Boot Manager) is loaded from disk
-       4. The bootloader loads the KERNEL into RAM
-       5. The kernel initialises memory management, the scheduler and drivers
-       6. The first process is started - 'init' or 'systemd' on Linux
-       7. System services and daemons start
-       8. The login prompt or graphical desktop appears
-    ```
-
-    How it works while running — the system-call cycle
-    ```mermaid
-    sequenceDiagram
-        participant A as Application (user mode)
-        participant K as Kernel (kernel mode)
-        participant H as Hardware
-        A->>K: system call, e.g. read()
-        K->>K: switch to kernel mode, validate arguments
-        K->>H: issue the device request
-        K->>A: block the caller, schedule another process
-        H->>K: interrupt - the data is ready
-        K->>A: copy the data, mark the process READY
-    ```
-    ```
-       1. The application executes a TRAP instruction (int 0x80, syscall).
-       2. The CPU switches from USER mode to KERNEL mode.
-       3. The kernel validates the arguments and performs the service.
-       4. If it must wait, the process is BLOCKED and the scheduler picks
-          another - a CONTEXT SWITCH.
-       5. When the device finishes it raises an INTERRUPT.
-       6. The handler marks the waiting process READY.
-       7. Control returns to user mode with the result.
-    ```
-
-    The two modes, which make the whole design work
-    ```
-       USER MODE   : restricted. A program cannot touch the hardware,
-                     cannot access another process's memory, and cannot
-                     execute privileged instructions.
-
-       KERNEL MODE : unrestricted. Full access to hardware and all memory.
-
-       A MODE BIT in the processor records which is current. The only way
-       to enter kernel mode is through a system call, an interrupt or a
-       trap - all of which land at an address the kernel chose.
-    ```
-    - This single hardware feature is what gives an operating system its `protection`. Without it, any program could overwrite the kernel.
-
-    The four managers at work simultaneously
-    ```
-       PROCESS MANAGER : chooses which process runs, performs context
-            switches, handles creation and termination.
-
-       MEMORY MANAGER  : allocates memory, translates virtual addresses to
-            physical ones through the page table, handles page faults.
-
-       FILE MANAGER    : maps file names to disk blocks, enforces
-            permissions, maintains the directory tree.
-
-       DEVICE MANAGER  : drives the hardware through drivers, handles
-            interrupts, buffers and schedules I/O.
-    ```
-
-    - Summed up in one sentence: the operating system is a `permanently resident program that owns the hardware`, and every other program runs in a restricted mode and must ask it — by system call — for anything privileged. Everything else in its design follows from that arrangement.
-
-22. **Difference between Multiprocessing and Multitasking.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
-
-    Answer: `Multiprocessing` means a computer having `more than one CPU`, so tasks genuinely execute at the same instant. `Multitasking` means `one CPU` switching rapidly between tasks so that they appear to run at once.
-
-    Multiprocessing
-    - Two or more `physical processors` (or cores) in one system, sharing memory and controlled by one operating system.
-    ```
-       CPU1 : |AAAAAAAAAA|
-       CPU2 : |BBBBBBBBBB|      all four at the SAME instant
-       CPU3 : |CCCCCCCCCC|      - TRUE parallelism
-       CPU4 : |DDDDDDDDDD|
-    ```
-    ```
-       Types :
-          SYMMETRIC (SMP)  : every CPU is equal, shares one memory, runs
-               the same copy of the OS. The normal arrangement today.
-          ASYMMETRIC       : a master CPU controls the others, which are
-               assigned specific tasks.
-    ```
-
-    Multitasking
-    - One CPU divided in time. Each task gets a short `quantum`, and `context switching` moves the CPU between them thousands of times a second.
-    ```
-       ONE CPU :
-
-       Task A : |AA|      |AA|      |AA|
-       Task B :     |BB|      |BB|      |BB|      - INTERLEAVED,
-       Task C :         |CC|      |CC|              not simultaneous
-    ```
-    ```
-       Types :
-          PREEMPTIVE  : the OS forcibly reclaims the CPU. Windows, Linux.
-          COOPERATIVE : a task must yield voluntarily. Early Windows.
-    ```
-
-    Difference
-
-    | Point | Multiprocessing | Multitasking |
-    |---|---|---|
-    | Number of CPUs | `Two or more` | `One` |
-    | Execution | `Genuinely simultaneous` | Interleaved — appears simultaneous |
-    | Parallelism | Real | Apparent |
-    | Mechanism | Parallel execution on separate CPUs | Time slicing and context switching |
-    | Requires | Multiple processors, cache coherence | A scheduler and a timer interrupt |
-    | Throughput | Rises with the number of CPUs | Unchanged — the same CPU does the work |
-    | Failure of one CPU | The system continues on the others | Not applicable |
-    | Cost | Extra hardware | No extra hardware |
-    | Overhead | Synchronisation, cache coherence | Context switching |
-    | Purpose | Raw throughput and reliability | Responsiveness and CPU utilisation |
-    | Examples | A multi-core server, a supercomputer | Windows on a single-core machine |
-
-    Why multiprocessing is used
-    ```
-       Increased THROUGHPUT - more work per unit time
-       Economy of SCALE - the CPUs share memory, disks and power supplies,
-            so n processors in one box cost far less than n separate machines
-       Increased RELIABILITY - graceful degradation. If one CPU fails, the
-            others continue, which is why it is used in fault-tolerant systems
-    ```
-
-    The limit on multiprocessing — Amdahl's law
-    ```
-       Speed-up = 1 / [ (1 - P) + P/N ]
-
-       P = the parallelisable fraction of the program
-       N = the number of processors
-    ```
-    ```
-       A program that is 90 % parallel :
-            N = 2   ->  1.82 times
-            N = 4   ->  3.08
-            N = 8   ->  4.71
-            N = 100 ->  9.17
-            N = inf ->  10.0        the hard ceiling
-
-       The 10 per cent serial part alone limits the speed-up to 10,
-       however many processors are added.
-    ```
-
-    The related terms
-    ```
-       MULTIPROGRAMMING : several programs in MEMORY, so the CPU switches
-            when one waits for I/O. Goal - keep the CPU busy.
-
-       MULTITASKING     : multiprogramming plus TIME SHARING, so a timer
-            also forces a switch. Goal - responsiveness.
-
-       MULTITHREADING   : one PROCESS divided into threads sharing an
-            address space. Cheaper to switch than a process.
-
-       MULTIPROCESSING  : more than one CPU. The only one that gives
-            TRUE parallelism.
-    ```
-    - In practice a modern machine uses all four at once: eight cores really execute in parallel (multiprocessing), each core time-slices among many processes (multitasking), hundreds of processes are resident (multiprogramming), and each browser tab is a thread (multithreading).
-
-23. **Difference between Multitasking and Multiprogramming.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
-
-    Answer: `Multitasking` and `multiprogramming` are closely related — multitasking is multiprogramming with time sharing added — which is why the distinction is so often asked.
-
-    Multiprogramming
-    - Keeping `several programs in main memory` at once, so that when one waits for I/O the CPU is given to another rather than sitting idle.
-    - The switch is triggered by an `I/O request` or by the process terminating. A program that never does I/O keeps the CPU indefinitely.
-    ```
-       Program A : |CPU|........I/O wait.........|CPU|
-       Program B : ......|CPU|.......I/O wait........|CPU|
-
-       The switch happens when A asks for I/O, not on a clock tick.
-    ```
-    ```
-       GOAL : maximise CPU UTILISATION
-       Origin : batch systems of the 1960s
-    ```
-
-    Multitasking
-    - Multiprogramming `plus a timer`. Each task gets a fixed `time quantum`, and when it expires the operating system `preempts` the task whether or not it has asked for I/O.
-    ```
-       Task A : |AA|      |AA|      |AA|
-       Task B :     |BB|      |BB|      |BB|
-       Task C :         |CC|      |CC|
-
-       The switch happens on every quantum expiry.
-    ```
-    ```
-       GOAL : minimise RESPONSE TIME, so the system feels interactive
-       Origin : time-sharing systems
-    ```
-
-    Difference
-
-    | Point | Multiprogramming | Multitasking |
-    |---|---|---|
-    | Definition | Several programs held in memory | Several tasks share the CPU by time slicing |
-    | Switch triggered by | An `I/O request` or termination | A `timer interrupt` (quantum expiry) |
-    | Preemption | Not necessarily | `Always` |
-    | Primary goal | Maximise CPU utilisation | Minimise response time |
-    | Time quantum | Not used | `Essential` |
-    | Interactivity | Poor | `Good` |
-    | User interaction | Little or none | Continuous |
-    | Context switches | Fewer | Many more |
-    | Overhead | Lower | Higher |
-    | Typical system | Batch | Time-sharing, desktop |
-    | Examples | Early mainframe batch systems | Windows, Linux, macOS, Android |
-
-    The relationship between them
-    ```
-       MULTITASKING is a LOGICAL EXTENSION of MULTIPROGRAMMING.
-
-       Every multitasking system is also a multiprogramming system,
-       because it must hold several programs in memory to switch between.
-       But a multiprogramming system is NOT necessarily multitasking - if
-       it switches only on I/O, a compute-bound job can hold the CPU for
-       minutes, which makes interactive use impossible.
-    ```
-
-    What both require
-    ```
-       Several programs resident in memory
-       MEMORY PROTECTION, so one cannot corrupt another
-       INTERRUPTS, to return control to the operating system
-       CONTEXT SWITCHING, with a Process Control Block per process
-       A SCHEDULER
-
-       Multitasking additionally requires a TIMER INTERRUPT, which is what
-       makes preemption possible.
-    ```
-
-    The full family, for completeness
-    ```
-       MULTIPROGRAMMING : several programs in memory ; switch on I/O
-       MULTITASKING     : + time sharing ; switch on a timer
-       MULTITHREADING   : one process split into threads sharing its
-                          address space ; cheaper to switch
-       MULTIPROCESSING  : more than one CPU ; TRUE parallelism
-    ```
-    - A modern machine uses all four simultaneously, which is why the terms are so easily confused. The single distinguishing question to ask is: `what causes the switch?` If it is an I/O request, that is multiprogramming; if it is a clock tick, that is multitasking.
-
-24. **Explain the functionalities of operating system.** *[ICT Ministry Assistant Programmer 2017 compact it 1239-1240 (ET: N/A)]*
-
-    Answer: An `operating system` manages the computer's hardware and software resources and provides common services to application programs. Its functionalities are the following.
-
-    1. Process management
-    ```
-       Create , schedule , suspend and terminate processes
-       Maintain a PROCESS CONTROL BLOCK for each, holding its state,
-            program counter, registers, memory limits and open files
-       Perform CONTEXT SWITCHING between processes
-       Provide INTER-PROCESS COMMUNICATION : pipes, signals, shared
-            memory, message queues
-       Detect and handle DEADLOCK
-       Synchronise concurrent processes with semaphores and mutexes
-    ```
-
-    2. Memory management
-    ```
-       Allocate memory to a process and free it afterwards
-       Keep track of which parts of memory are in use and by whom
-       Implement PAGING, SEGMENTATION and VIRTUAL MEMORY, so a program
-            larger than RAM can run
-       PROTECT each process's memory from every other
-       Handle page faults and choose which page to replace
-       Decide the degree of multiprogramming, and avoid THRASHING
-    ```
-
-    3. File management
-    ```
-       Create, read, write, delete and rename files and directories
-       Maintain the directory structure and the file allocation table
-       Map a file name onto physical disk blocks
-       Enforce ACCESS PERMISSIONS - who may read, write or execute
-       Provide backup and recovery facilities
-    ```
-
-    4. Device (I/O) management
-    ```
-       Provide DEVICE DRIVERS, so applications need not know the hardware
-       Handle INTERRUPTS from devices
-       BUFFERING - smooth the speed mismatch between fast CPU and slow device
-       CACHING - keep frequently used data in fast memory
-       SPOOLING - queue jobs for a shared device such as a printer
-       Schedule disk requests : FCFS, SSTF, SCAN, C-SCAN
-    ```
-
-    5. Secondary storage management
-    ```
-       Free-space management , storage allocation , disk scheduling
-       Mounting and unmounting file systems
-    ```
-
-    6. Security and protection
-    ```
-       AUTHENTICATION - verify who the user is (password, biometric, MFA)
-       AUTHORISATION  - decide what that user may do
-       Separate USER MODE from KERNEL MODE, so an application cannot touch
-            the hardware directly
-       Encryption , firewalls , audit logging
-       Isolate one user's data from another's
-    ```
-
-    7. User interface
-    ```
-       Command-line shell : bash , PowerShell , cmd
-       Graphical shell    : GNOME , KDE , Windows Explorer , Aqua
-    ```
-
-    8. Resource allocation and accounting
-    ```
-       Share the CPU, memory, devices and files fairly among competing
-       processes ; prevent any one from monopolising a resource ;
-       record usage for billing or analysis
-    ```
-
-    9. Error detection and recovery
-    ```
-       Detect a hardware fault, a bad instruction, an arithmetic error,
-       a full disk or a network failure, and respond without crashing
-       the whole system
-    ```
-
-    10. Networking
-    ```
-       Protocol stacks , sockets , remote file systems , name resolution
-    ```
-
-    11. Booting the system
-    ```
-       Load itself from disk, initialise the hardware, start the first
-       process and bring the system to a usable state
-    ```
-
-    The two ways of summarising all of it
-    ```
-       As a RESOURCE MANAGER
-            It allocates the CPU, memory, devices and files among competing
-            processes, fairly and efficiently, and keeps them from
-            interfering with one another.
-
-       As an EXTENDED MACHINE (a virtual machine)
-            It hides messy hardware behind a clean, uniform interface. A
-            program calls read() whether the data is on an SSD, a hard
-            disk, a network share or a USB stick - and never has to know.
-    ```
-
-    - The mechanism that makes all of it enforceable is the `two-mode` design: a `mode bit` in the processor distinguishes user mode from kernel mode, and the only ways into kernel mode are a `system call`, an `interrupt` or a `trap` — all of which land at an address the kernel itself chose. Without that single hardware feature, none of the protection above would be possible.
-
-## Deadlock & Resource Allocation (23)
-
-1. **What is Deadlock? Given a scenery and find out the process is face deadlock sitiation?** *[IFIC Bank Officer IT 2025 compact it 1448 (ET: IFIC)]*
-
-   Answer: What deadlock is
-   - A `deadlock` is a state in which two or more processes are each `waiting for a resource held by another`, so none of them can ever proceed. They wait forever.
-   ```
-      P1 holds A and wants B
-      P2 holds B and wants A
-           -> neither can continue , and neither will release what it has
-   ```
-
-   The four necessary conditions — all must hold at once
-   ```
-      1. MUTUAL EXCLUSION : a resource can be held by only one process
-      2. HOLD AND WAIT    : a process holds resources while requesting more
-      3. NO PREEMPTION    : a resource cannot be taken away by force
-      4. CIRCULAR WAIT    : a closed chain of processes, each waiting on
-                            the next
-   ```
-
-   Scenario, and how to test it
-
-   A classic case
-   ```
-      Two processes share a printer (A) and a scanner (B).
-
-      Time  P1                          P2
-      ----  --------------------------  --------------------------
-      t1    request A  -> granted
-      t2                                request B  -> granted
-      t3    request B  -> WAITS (P2 has it)
-      t4                                request A  -> WAITS (P1 has it)
-
-      DEADLOCK.
-   ```
-
-   Checking the four conditions against the scenario
-   ```
-      MUTUAL EXCLUSION : the printer and scanner can serve only one
-           process at a time                                     HOLDS
-      HOLD AND WAIT    : P1 holds A while waiting for B           HOLDS
-      NO PREEMPTION    : neither device can be seized             HOLDS
-      CIRCULAR WAIT    : P1 -> P2 -> P1                           HOLDS
-
-      All four hold, so the system IS deadlocked.
-   ```
-
-   Resource allocation graph — the formal test
-   ```mermaid
-   flowchart LR
-       P1((P1)) -->|requests| B[Resource B]
-       B -->|assigned to| P2((P2))
-       P2 -->|requests| A[Resource A]
-       A -->|assigned to| P1
-   ```
-   ```
-      ---> from a PROCESS to a RESOURCE means a REQUEST
-      ---> from a RESOURCE to a PROCESS means an ASSIGNMENT
-
-      RULE :
-         If every resource has ONE instance :
-              a CYCLE  <=>  a DEADLOCK
-         If a resource has SEVERAL instances :
-              a cycle is NECESSARY but NOT SUFFICIENT - it may still be safe
-   ```
-   - Here the graph contains the cycle `P1 -> B -> P2 -> A -> P1`, and every resource has one instance, so the deadlock is confirmed.
-
-   A scenario that is NOT a deadlock
-   ```
-      Time  P1                          P2
-      ----  --------------------------  --------------------------
-      t1    request A  -> granted
-      t2    request B  -> granted
-      t3    release A , release B
-      t4                                request A  -> granted
-      t5                                request B  -> granted
-
-      NO circular wait, because P1 acquired BOTH resources before P2
-      asked for either. The system is safe.
-   ```
-   - This is exactly why `ordered acquisition` prevents deadlock: if every process takes A before B, a cycle can never form.
-
-   How to answer such a question
-   ```
-      1. List which process holds which resource, and what each is waiting for.
-      2. Draw the resource allocation graph.
-      3. Look for a CYCLE.
-      4. If resources are single-instance, a cycle means deadlock.
-         If multi-instance, run the SAFETY ALGORITHM (Banker's) to see
-         whether a safe sequence exists.
-      5. Confirm all four conditions hold, and say which one would break
-         the deadlock if removed.
-   ```
-
-2. **The four conditions that are necessary for a resource deadlock to occur are mutual exclusion, hold and wait, no preemption and circular wait. Give an example to show that these conditions are not sufficient for a resource deadlock to occur.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
-
-   Answer: The four conditions are `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`. They are `necessary` — a deadlock cannot occur unless all four hold — but they are `not jointly sufficient` in a system with multiple instances of a resource.
-
-   The example that shows they are not sufficient
-   ```
-      A system has TWO instances of resource R.
-      Two processes, P1 and P2, each hold one instance and each wants
-      one more.
-   ```
-   ```
-      Allocation :  P1 holds 1 instance of R
-                    P2 holds 1 instance of R
-      Request    :  P1 wants 1 more
-                    P2 wants 1 more
-      Available  :  0
-   ```
-   Resource allocation graph
-   ```
-           P1 ---request--->  [ R : two instances ]
-           P2 ---request--->  [ R ]
-           [ R ] ---assigned---> P1
-           [ R ] ---assigned---> P2
-
-      This graph CONTAINS A CYCLE :  P1 -> R -> P2 -> R -> P1
-   ```
-   - All four conditions hold: R is mutually exclusive, both processes hold while waiting, neither instance can be preempted, and there is a circular wait in the graph.
-   - Yet the system is `not necessarily deadlocked`. If a `third process P3` also holds an instance and is about to release it, the request can be satisfied and everyone proceeds.
-
-   A cleaner version of the same argument
-   ```
-      Three instances of R , three processes.
-
-      P1 holds 1 and wants 1 more
-      P2 holds 1 and wants 1 more
-      P3 holds 1 and will RELEASE it without asking for more
-
-      The graph has a cycle among P1 and P2, and all four conditions
-      appear to hold - but when P3 releases its instance, P1 obtains it,
-      finishes, releases both, and P2 then proceeds.
-
-      NO DEADLOCK, despite the cycle.
-   ```
-
-   Why the distinction matters
-   ```
-      SINGLE-instance resources :
-           a cycle in the resource allocation graph  <=>  DEADLOCK
-           (necessary AND sufficient)
-
-      MULTI-instance resources :
-           a cycle is NECESSARY but NOT SUFFICIENT
-           A deadlock implies a cycle, but a cycle does not imply a deadlock.
-   ```
-   - This is precisely why the `Banker's algorithm` exists. For multi-instance resources the graph alone cannot decide, so the `safety algorithm` is run: if some sequence of processes can be completed with the resources available, the state is `safe` even though a cycle is present.
-
-   The correct statement of the theorem
-   ```
-      Deadlock  =>  all four conditions hold        (they are NECESSARY)
-      All four conditions hold  =>  deadlock        FALSE in general
-
-      The four conditions plus NO SAFE SEQUENCE  =>  deadlock
-   ```
-
-   Which condition each prevention method attacks
-   ```
-      MUTUAL EXCLUSION : cannot usually be removed - a printer really can
-           serve one job at a time. Spooling removes it where possible.
-
-      HOLD AND WAIT    : removed by requiring a process to request ALL its
-           resources at once, or to release everything before asking again.
-           Cost : low utilisation and possible starvation.
-
-      NO PREEMPTION    : removed by allowing a resource to be seized and
-           the victim rolled back. Works for CPU and memory, not for a
-           printer mid-page.
-
-      CIRCULAR WAIT    : removed by imposing a TOTAL ORDER on resources
-           and requiring every process to request them in increasing
-           order. This is the most PRACTICAL method, and the one used in
-           real kernel code.
-   ```
-   - Breaking `any one` of the four is enough to make deadlock impossible, which is the whole point of stating them as necessary conditions.
-
-3. **(a) Define operating system. Why resource allocation graph used for deadlock detection?** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1446 (ET: N/A)]*
-
-   Answer: Definition of an operating system
-   - An `operating system` is the system software that manages the computer's hardware and software resources and provides common services for application programs. It is the `interface between the user and the hardware`.
-   ```
-           USER  ->  APPLICATIONS  ->  OPERATING SYSTEM  ->  HARDWARE
-   ```
-   - Its two roles: a `resource manager`, allocating the CPU, memory, devices and files among competing processes; and an `extended machine`, hiding messy hardware behind a clean uniform interface.
-   - Its main components: the `kernel`, and the `process`, `memory`, `file`, `device` and `security` managers, reached through the `system call interface`.
-   - Examples: `Windows, Linux, macOS, Android, iOS, UNIX`.
-
-   Why a resource allocation graph is used for deadlock detection
-   - A `resource allocation graph (RAG)` is a directed graph that records, at one instant, `who holds what` and `who is waiting for what`. Deadlock is a property of exactly that information, so the graph captures the whole problem in one picture.
-   ```
-      Vertices :  P = processes , drawn as circles
-                  R = resources , drawn as rectangles, with a dot per instance
-
-      Edges    :  P --> R    a REQUEST edge : P is waiting for R
-                  R --> P    an ASSIGNMENT edge : an instance of R is held by P
-   ```
-
-   Example — a deadlock
-   ```mermaid
-   flowchart LR
-       P1((P1)) -->|requests| R2[R2]
-       R2 -->|assigned| P2((P2))
-       P2 -->|requests| R1[R1]
-       R1 -->|assigned| P1
-   ```
-   ```
-      The cycle  P1 -> R2 -> P2 -> R1 -> P1  is present.
-      Both resources have ONE instance, so this IS a deadlock.
-   ```
-
-   The rule the graph gives
-   ```
-      If EVERY resource has a SINGLE instance :
-           a CYCLE  <=>  a DEADLOCK        (necessary AND sufficient)
-
-      If some resource has SEVERAL instances :
-           a cycle is NECESSARY but NOT SUFFICIENT
-           A deadlock implies a cycle, but a cycle may still be safe.
-   ```
-   - With multiple instances the graph must be supplemented by the `safety algorithm` (the Banker's algorithm), which asks whether some order of completion exists.
-
-   Why the graph is the right tool
-   ```
-      1. It makes the CIRCULAR WAIT condition VISIBLE. Circular wait is
-         one of the four necessary conditions, and it is the only one that
-         depends on the current state rather than on the resource's nature.
-
-      2. Deadlock detection becomes CYCLE DETECTION, a standard graph
-         problem solvable by DFS in O(V + E).
-
-      3. It shows exactly WHICH processes are involved, so a victim can be
-         chosen for rollback or termination.
-
-      4. It is easy to MAINTAIN INCREMENTALLY - an edge is added on every
-         request and removed on every release, so the graph is always current.
-
-      5. It can be used PREDICTIVELY. With a CLAIM edge (dashed, P ---> R,
-         meaning "P may request R later") the system can refuse a request
-         that would create a cycle - which is deadlock AVOIDANCE rather
-         than detection.
-   ```
-
-   The wait-for graph, its compressed form
-   ```
-      For single-instance resources the resources can be removed
-      entirely, leaving only  Pi -> Pj  meaning "Pi waits for a resource
-      held by Pj".
-
-           P1 -> P2 -> P3 -> P1        a cycle -> DEADLOCK
-
-      This halves the graph and is what the operating system actually
-      maintains for detection.
-   ```
-
-   - The alternative for multi-instance systems is the `Banker's algorithm`, which computes a `Need` matrix and looks for a safe sequence. The graph is preferred when instances are single, because cycle detection is far cheaper than running the safety algorithm on every request.
-
-4. **What is Deadlock? Write Conditions for Deadlock and also write Deadlock.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
-
-   Answer: What deadlock is
-   - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed. Every one of them waits forever.
-   ```
-      P1 holds A and requests B
-      P2 holds B and requests A
-           -> neither can continue, and neither will release what it holds
-   ```
-
-   The four necessary conditions
-   - All four must hold `simultaneously` for a deadlock to be possible. They are called the `Coffman conditions`.
-   ```
-      1. MUTUAL EXCLUSION
-           At least one resource is non-shareable - only one process may
-           use it at a time. A printer, a tape drive, a write lock.
-
-      2. HOLD AND WAIT
-           A process holds at least one resource while waiting to acquire
-           others that are currently held by someone else.
-
-      3. NO PREEMPTION
-           A resource cannot be forcibly taken from a process. It is
-           released only voluntarily, when the process has finished with it.
-
-      4. CIRCULAR WAIT
-           A closed chain of processes exists, P0 -> P1 -> ... -> Pn -> P0,
-           in which each is waiting for a resource held by the next.
-   ```
-   - Breaking `any one` of the four makes deadlock impossible, which is exactly how prevention works.
-
-   Deadlock handling — the four strategies
-   ```
-      1. DEADLOCK PREVENTION
-           Design the system so that one of the four conditions can never
-           hold.
-
-      2. DEADLOCK AVOIDANCE
-           Allow the conditions, but examine each request before granting
-           it and refuse any that could lead to an unsafe state.
-           The BANKER'S ALGORITHM.
-
-      3. DEADLOCK DETECTION AND RECOVERY
-           Let deadlocks happen, detect them with a wait-for graph or the
-           safety algorithm, and then recover by killing or rolling back
-           a victim.
-
-      4. IGNORE THE PROBLEM
-           The OSTRICH ALGORITHM. Deadlocks are rare, so the cost of
-           prevention outweighs the cost of an occasional reboot.
-           This is what UNIX, Linux and Windows actually do.
-   ```
-
-   Deadlock prevention, condition by condition
-   ```
-      MUTUAL EXCLUSION
-           Usually cannot be removed - a printer really can serve one job
-           at a time. SPOOLING removes it where the resource permits.
-
-      HOLD AND WAIT
-           Require a process to request ALL its resources at once, before
-           it starts ; or to release everything it holds before asking for
-           more.
-           Cost : low resource utilisation , and possible STARVATION.
-
-      NO PREEMPTION
-           If a process holding resources requests one that cannot be
-           granted, take away everything it holds and restart it later.
-           Works for the CPU and memory ; useless for a printer mid-page.
-
-      CIRCULAR WAIT
-           Impose a TOTAL ORDER on all resource types and require every
-           process to request them in INCREASING order.
-           This is the MOST PRACTICAL method, and it is what real kernel
-           code uses - "always lock A before B".
-   ```
-
-   Deadlock avoidance — the Banker's algorithm
-   ```
-      Each process declares its MAXIMUM need in advance.
-      Before granting a request the system checks whether the resulting
-      state is SAFE - that is, whether some sequence of processes exists
-      in which each can obtain its maximum need and finish.
-
-      SAFE   -> grant the request
-      UNSAFE -> make the process wait, even though the resources are free
-   ```
-   - Note that `unsafe is not the same as deadlocked`. An unsafe state merely means deadlock has become possible.
-
-   Detection and recovery
-   ```
-      DETECTION : maintain a WAIT-FOR GRAPH and look for a cycle
-           (single-instance resources), or run the safety algorithm
-           periodically (multi-instance).
-
-      RECOVERY  :
-           Terminate all deadlocked processes - simple, but costly
-           Terminate one at a time until the cycle breaks
-           Preempt resources from a victim and roll it back to a checkpoint
-
-      Choosing the victim : the process with the least work done, the
-           fewest resources held, or the lowest priority. Guard against
-           STARVATION by not choosing the same victim repeatedly.
-   ```
-
-   Comparison
-
-   | Strategy | When applied | Cost | Used in practice |
-   |---|---|---|---|
-   | Prevention | Design time | Low utilisation | Yes, for lock ordering |
-   | Avoidance | Every request | Needs maximum claims in advance | Rarely |
-   | Detection and recovery | Periodically | Detection overhead, rollback | In databases |
-   | Ignore | Never | An occasional hang | `Yes` — Windows, Linux, UNIX |
-
-   - Why general-purpose systems ignore it: deadlock is rare, prevention would cripple utilisation, and avoidance requires every process to declare its maximum needs in advance, which no ordinary program can do. `Database systems`, by contrast, do detect deadlocks — they build a wait-for graph, choose a victim and roll its transaction back automatically, because a transaction can be safely undone whereas an arbitrary process cannot.
-
-5. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances).** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
-   * (a) Need matrix
-   * (b) Safe state or Unsafe
-   Snapshot at time T_0:
-The content of the matrix. Need is defined to be Max – Allocation.
-
-   Answer: Given, the standard snapshot at time T0
-   ```
-      5 processes P0 to P4 ,  3 resource types A (10) , B (5) , C (7)
-
-               Allocation        Max
-                A  B  C        A  B  C
-      P0        0  1  0        7  5  3
-      P1        2  0  0        3  2  2
-      P2        3  0  2        9  0  2
-      P3        2  1  1        2  2  2
-      P4        0  0  2        4  3  3
-   ```
-
-   Available resources
-   ```
-      Total allocated :
-           A = 0+2+3+2+0 = 7
-           B = 1+0+0+1+0 = 2
-           C = 0+0+2+1+2 = 5
-
-      Available = Total - Allocated
-           A = 10 - 7 = 3
-           B =  5 - 2 = 3
-           C =  7 - 5 = 2
-
-      Available = ( 3 , 3 , 2 )
-   ```
-
-   (a) The Need matrix
-   ```
-      Need = Max - Allocation
-   ```
-   ```
-               Allocation        Max          NEED
-                A  B  C        A  B  C      A  B  C
-      P0        0  1  0        7  5  3      7  4  3
-      P1        2  0  0        3  2  2      1  2  2
-      P2        3  0  2        9  0  2      6  0  0
-      P3        2  1  1        2  2  2      0  1  1
-      P4        0  0  2        4  3  3      4  3  1
-   ```
-   Working
-   ```
-      P0 : 7-0 , 5-1 , 3-0  ->  7  4  3
-      P1 : 3-2 , 2-0 , 2-0  ->  1  2  2
-      P2 : 9-3 , 0-0 , 2-2  ->  6  0  0
-      P3 : 2-2 , 2-1 , 2-1  ->  0  1  1
-      P4 : 4-0 , 3-0 , 3-2  ->  4  3  1
-   ```
-
-   (b) Is the state safe? — run the safety algorithm
-   ```
-      Work = Available = (3, 3, 2)
-      Finish[i] = false for all i
-
-      Repeatedly find a process whose NEED <= WORK , run it, and add its
-      ALLOCATION back to WORK.
-   ```
-   ```
-      Step 1 : Work = (3,3,2)
-               P0 need (7,4,3) <= (3,3,2) ? NO
-               P1 need (1,2,2) <= (3,3,2) ? YES   -> run P1
-               Work = (3,3,2) + (2,0,0) = (5,3,2)
-
-      Step 2 : Work = (5,3,2)
-               P0 need (7,4,3) ? NO
-               P2 need (6,0,0) ? NO
-               P3 need (0,1,1) <= (5,3,2) ? YES   -> run P3
-               Work = (5,3,2) + (2,1,1) = (7,4,3)
-
-      Step 3 : Work = (7,4,3)
-               P0 need (7,4,3) <= (7,4,3) ? YES, but take P4 first as in
-               the standard order
-               P4 need (4,3,1) <= (7,4,3) ? YES   -> run P4
-               Work = (7,4,3) + (0,0,2) = (7,4,5)
-
-      Step 4 : Work = (7,4,5)
-               P0 need (7,4,3) <= (7,4,5) ? YES   -> run P0
-               Work = (7,4,5) + (0,1,0) = (7,5,5)
-
-      Step 5 : Work = (7,5,5)
-               P2 need (6,0,0) <= (7,5,5) ? YES   -> run P2
-               Work = (7,5,5) + (3,0,2) = (10,5,7)
-   ```
-   ```
-      All five processes finished, and Work has returned to the total
-      ( 10 , 5 , 7 ) - which confirms the arithmetic.
-
-      The system is in a SAFE STATE.
-
-      SAFE SEQUENCE :  < P1 , P3 , P4 , P0 , P2 >
-   ```
-   - Other safe sequences exist, such as `<P1, P3, P0, P2, P4>`. A state is safe if `at least one` such sequence exists.
-
-   Checking an additional request — the resource-request algorithm
-   ```
-      Suppose P1 now requests (1, 0, 2).
-
-      Step 1 : Request <= Need ?
-               (1,0,2) <= (1,2,2)   YES
-
-      Step 2 : Request <= Available ?
-               (1,0,2) <= (3,3,2)   YES
-
-      Step 3 : PRETEND to grant it :
-               Available = (3,3,2) - (1,0,2) = (2,3,0)
-               Alloc P1  = (2,0,0) + (1,0,2) = (3,0,2)
-               Need  P1  = (1,2,2) - (1,0,2) = (0,2,0)
-
-      Step 4 : Run the safety algorithm on the new state.
-               A safe sequence < P1, P3, P4, P0, P2 > still exists,
-               so the request is GRANTED.
-   ```
-
-   - Points worth stating: `safe` and `deadlock-free` are not the same. Every safe state is deadlock-free, but an `unsafe` state is not necessarily deadlocked — it only means the system can no longer guarantee that deadlock will be avoided. The Banker's algorithm is conservative for exactly that reason, and it also requires every process to declare its `maximum need in advance`, which is why real operating systems do not use it.
-
-6. **(a) Explain Circular wait deadlock.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 415 (ET: BUET)]*
-
-   Answer: `Circular wait` is one of the four necessary conditions for deadlock. It holds when a `closed chain` of processes exists, in which each process is waiting for a resource held by the next process in the chain.
-   ```
-      P0 waits for a resource held by P1
-      P1 waits for a resource held by P2
-      ...
-      Pn waits for a resource held by P0        <- the chain CLOSES
-   ```
-
-   The simplest case — two processes
-   ```
-      P1 holds A , requests B
-      P2 holds B , requests A
-
-           P1 ---waits for---> P2
-            ^                   |
-            |                   |
-            +----waits for------+
-
-      The chain is closed, so neither can ever proceed.
-   ```
-   ```mermaid
-   flowchart LR
-       P1((P1)) -->|requests| B[Resource B]
-       B -->|held by| P2((P2))
-       P2 -->|requests| A[Resource A]
-       A -->|held by| P1
-   ```
-
-   A three-process chain
-   ```
-      P1 holds A , wants B
-      P2 holds B , wants C
-      P3 holds C , wants A
-
-           P1 -> P2 -> P3 -> P1
-
-      Each is blocked, and none will release, so all three wait forever.
-   ```
-
-   The everyday illustration — the four-way crossing
-   ```
-      Four cars reach a crossroads at the same moment, each blocking the
-      next one's path :
-
-                 car A (northbound)
-                      |
-      car D --------- + --------- car B
-      (eastbound)     |          (westbound)
-                 car C (southbound)
-
-      A blocks B , B blocks C , C blocks D , D blocks A.
-      No car can move. This is a physical circular wait.
-   ```
-
-   Why it is the condition worth attacking
-   ```
-      MUTUAL EXCLUSION cannot usually be removed - a printer really can
-           serve one job at a time.
-      HOLD AND WAIT can be removed only by making a process claim
-           everything at once, which wastes resources badly.
-      NO PREEMPTION cannot be removed for a printer or a tape drive.
-
-      CIRCULAR WAIT can be removed CHEAPLY, by imposing an ORDER.
-   ```
-
-   How circular wait is prevented — resource ordering
-   ```
-      Assign every resource type a unique NUMBER, and require every
-      process to request resources in STRICTLY INCREASING order.
-
-           F(printer)  = 1
-           F(scanner)  = 2
-           F(disk)     = 3
-
-      A process holding the scanner (2) may request the disk (3),
-      but may NOT request the printer (1) without first releasing
-      the scanner.
-   ```
-   ```
-      Why a cycle then becomes impossible :
-
-      Suppose a cycle P0 -> P1 -> ... -> Pn -> P0 existed. Following the
-      chain, each process holds a LOWER-numbered resource and waits for a
-      HIGHER-numbered one, so the numbers strictly increase all the way
-      round. But going all the way round returns to the start, which
-      would require F(R) < F(R) - a contradiction.
-
-      Therefore NO CYCLE CAN FORM.
-   ```
-   - This is the method real kernel and database code uses. The convention "always take lock A before lock B" is exactly resource ordering, and it is why multi-threaded code documents its lock order.
-
-   Detecting it
-   ```
-      Build a WAIT-FOR GRAPH : one node per process, and an edge
-      Pi -> Pj whenever Pi waits for a resource held by Pj.
-
-      A CYCLE in that graph is a circular wait.
-      Cycle detection by DFS costs O(V + E).
-   ```
-   - For `single-instance` resources a cycle means a deadlock. For `multi-instance` resources a cycle is necessary but not sufficient, so the `Banker's safety algorithm` must be run instead.
-
-   - The point to state clearly: `circular wait is the only one of the four conditions that depends on the current state rather than on the nature of the resource`. That is why it is both the easiest to detect and the cheapest to prevent.
-
-7. **Give the necessary conditions for deadlock to occur. Is it possible to have deadlock involving only a single process? Explain your answer.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 422 (ET: BIBM)]*
-
-   Answer: The necessary conditions
-   - All `four` must hold simultaneously for a deadlock to be possible. They are the `Coffman conditions`.
-   ```
-      1. MUTUAL EXCLUSION
-           At least one resource is non-shareable - only one process may
-           hold it at a time.
-
-      2. HOLD AND WAIT
-           A process holds at least one resource while waiting for others
-           that are held by other processes.
-
-      3. NO PREEMPTION
-           A resource cannot be forcibly taken away; it is released only
-           voluntarily by the process holding it.
-
-      4. CIRCULAR WAIT
-           A closed chain P0 -> P1 -> ... -> Pn -> P0 exists, in which
-           each process waits for a resource held by the next.
-   ```
-   - Breaking any one of the four makes deadlock impossible.
-
-   Is deadlock possible with only a single process?
-
-   `Yes — but only in a technical sense, and only if the resource is non-reentrant.`
-
-   The case where it CAN happen
-   ```
-      A single process deadlocks itself if it requests a resource it
-      already holds, and that resource is NOT REENTRANT.
-
-      Example - a non-reentrant mutex :
-
-           lock(m);            // acquired
-           ...
-           lock(m);            // requests the SAME lock again
-                               // -> blocks, waiting for ITSELF
-                               // -> it will never release, so it waits
-                               //    forever
-
-      This is SELF-DEADLOCK, and it is a real and common bug. It happens
-      when a function that already holds a lock calls another function
-      that also tries to take it.
-   ```
-   - Checking the four conditions against it:
-   ```
-      MUTUAL EXCLUSION : the mutex admits one holder             HOLDS
-      HOLD AND WAIT    : the process holds m and waits for m     HOLDS
-      NO PREEMPTION    : the mutex cannot be seized              HOLDS
-      CIRCULAR WAIT    : the chain is  P -> P , a cycle of
-                         LENGTH ONE                              HOLDS
-   ```
-   - All four hold, so it satisfies the formal definition. The circular wait is degenerate — a self-loop — but it is a cycle nonetheless.
-
-   The case where it CANNOT happen
-   ```
-      If the resource is REENTRANT (a recursive mutex, for example), the
-      second request is granted immediately because the owner is the same
-      thread. No wait occurs, so no deadlock.
-
-      A recursive lock keeps a COUNT :
-           lock(m);   count = 1
-           lock(m);   count = 2      granted, same owner
-           unlock(m); count = 1
-           unlock(m); count = 0      now released
-   ```
-
-   The formal answer usually expected
-   ```
-      In the STRICT textbook model, deadlock is defined over a SET of
-      two or more processes, so a single process is excluded by definition
-      and the answer is NO.
-
-      In PRACTICE, self-deadlock on a non-reentrant lock is a genuine
-      phenomenon and satisfies all four conditions with a cycle of
-      length one, so the answer is YES.
-
-      The safe exam answer states BOTH, gives the non-reentrant mutex
-      example, and notes that a recursive mutex prevents it.
-   ```
-
-   Related single-process hangs that are `not` deadlock
-   ```
-      INFINITE LOOP     : the process is RUNNING, not waiting. Not deadlock.
-      BUSY WAITING      : it holds the CPU while spinning. Not deadlock.
-      LIVELOCK          : processes keep changing state but make no
-                          progress - they are active, not blocked.
-      STARVATION        : a process is ready but never scheduled. It could
-                          run if chosen, so it is not deadlocked.
-   ```
-   - The distinguishing test is simple: in a deadlock the processes are `blocked and can never be unblocked by anything they or the scheduler could do`. In starvation or a livelock, progress is still possible in principle.
-
-8. **Deadlock এর চারটি শর্ত লিখ।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 381 (ET: BUET)]*
-
-   Answer: (Answered in English, as required for IT topics.) The four conditions for deadlock — all must hold `simultaneously`. They are known as the `Coffman conditions`.
-
-   1. Mutual exclusion
-   ```
-      At least one resource must be NON-SHAREABLE - only one process may
-      use it at a time.
-
-      Example : a printer , a tape drive , a write lock on a file.
-      A read-only file is shareable, so it can never cause a deadlock.
-   ```
-
-   2. Hold and wait
-   ```
-      A process must be HOLDING at least one resource while WAITING to
-      acquire additional resources that are held by other processes.
-
-      Example : P1 holds the printer and waits for the scanner.
-   ```
-
-   3. No preemption
-   ```
-      A resource cannot be FORCIBLY TAKEN from the process holding it.
-      It is released only VOLUNTARILY, when that process has finished.
-
-      Example : a printer cannot be seized in the middle of a page.
-      The CPU, by contrast, CAN be preempted, which is why the CPU is
-      never the cause of a deadlock.
-   ```
-
-   4. Circular wait
-   ```
-      A CLOSED CHAIN of processes must exist :
-
-           P0 waits for a resource held by P1
-           P1 waits for a resource held by P2
-           ...
-           Pn waits for a resource held by P0
-
-      The simplest case, with two processes :
-
-           P1 holds A , wants B
-           P2 holds B , wants A
-   ```
-
-   An example satisfying all four
-   ```
-      Two processes share a printer (A) and a scanner (B).
-
-      t1  P1 requests A -> granted
-      t2  P2 requests B -> granted
-      t3  P1 requests B -> WAITS
-      t4  P2 requests A -> WAITS
-
-      MUTUAL EXCLUSION : both devices serve one process at a time  HOLDS
-      HOLD AND WAIT    : P1 holds A while waiting for B            HOLDS
-      NO PREEMPTION    : neither device can be seized              HOLDS
-      CIRCULAR WAIT    : P1 -> P2 -> P1                            HOLDS
-
-      DEADLOCK.
-   ```
-
-   How each condition is attacked to prevent deadlock
-   ```
-      MUTUAL EXCLUSION : usually cannot be removed. SPOOLING removes it
-           where possible - jobs are written to disk and a daemon feeds
-           the printer, so no process ever holds the printer itself.
-
-      HOLD AND WAIT    : require a process to request ALL its resources
-           at once, or to release everything before requesting more.
-           Cost : poor utilisation and possible starvation.
-
-      NO PREEMPTION    : allow a resource to be seized and the victim
-           rolled back. Works for CPU and memory, not for a printer.
-
-      CIRCULAR WAIT    : impose a TOTAL ORDER on resource types and
-           require requests in INCREASING order. The MOST PRACTICAL
-           method, and the one real kernel and database code uses.
-   ```
-
-   - Two facts worth adding. First, the four conditions are `necessary but not sufficient` when a resource has several instances — a cycle in the resource allocation graph may then still be safe, which is why the `Banker's algorithm` exists. Second, breaking `any single one` of the four is enough to make deadlock impossible, which is exactly why they are stated as necessary conditions.
-
-9. **What is deadlock? Draw its diagram.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
-
-   Answer: What deadlock is
-   - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
-   ```
-      P1 holds A and requests B
-      P2 holds B and requests A
-           -> neither can continue, and neither will release what it holds
-   ```
-   - It needs all four `Coffman conditions` at once: `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`.
-
-   Diagram — the resource allocation graph
-   ```mermaid
-   flowchart LR
-       P1((P1)) -->|requests| R2[Resource R2]
-       R2 -->|assigned to| P2((P2))
-       P2 -->|requests| R1[Resource R1]
-       R1 -->|assigned to| P1
-   ```
-   ```
-      Notation :
-           circle    = a PROCESS
-           rectangle = a RESOURCE  (with one dot per instance)
-           P ---> R  = a REQUEST edge   : P is waiting for R
-           R ---> P  = an ASSIGNMENT edge : an instance of R is held by P
-
-
-           +--------+   request    +----------+
-           |   P1   |------------->|    R2    |
-           +--------+              +----------+
-                ^                        |
-                | assigned               | assigned
-                |                        v
-           +----------+   request   +--------+
-           |    R1    |<------------|   P2   |
-           +----------+             +--------+
-
-      The cycle  P1 -> R2 -> P2 -> R1 -> P1  is present.
-      Both resources have ONE instance, so this IS a deadlock.
-   ```
-
-   The simpler wait-for graph
-   ```
-      Remove the resources and keep only "which process waits for which" :
-
-           P1 --------> P2
-            ^            |
-            |            |
-            +------------+
-
-      A CYCLE means a circular wait, hence a deadlock.
-   ```
-
-   A three-process deadlock
-   ```
-           P1 -> R2 -> P2 -> R3 -> P3 -> R1 -> P1
-
-           P1 holds R1 , wants R2
-           P2 holds R2 , wants R3
-           P3 holds R3 , wants R1
-
-      Wait-for graph :   P1 -> P2 -> P3 -> P1
-   ```
-
-   The everyday illustration
-   ```
-      Four cars at a crossroads, each blocking the next :
-
-                 car A
-                   |
-         car D --- + --- car B
-                   |
-                 car C
-
-      A blocks B , B blocks C , C blocks D , D blocks A.
-      No car can move - a physical circular wait.
-   ```
-
-   The rule the diagram gives
-   ```
-      SINGLE instance per resource :
-           a CYCLE  <=>  a DEADLOCK        (necessary AND sufficient)
-
-      MULTIPLE instances per resource :
-           a cycle is NECESSARY but NOT SUFFICIENT - the state may still
-           be safe, so the BANKER'S SAFETY ALGORITHM must be run.
-   ```
-
-   A graph with a cycle that is NOT a deadlock
-   ```
-      Resource R has TWO instances.
-
-           P1 holds one and wants one more
-           P2 holds one and wants one more
-           P3 holds one and will RELEASE it without asking for more
-
-      A cycle exists between P1 and P2, but when P3 releases its
-      instance P1 obtains it, finishes and releases both, and P2 then
-      proceeds. NO deadlock.
-   ```
-   - This is exactly why multiple instances require the safety algorithm rather than simple cycle detection.
-
-   How deadlock is handled
-   ```
-      PREVENTION : make one of the four conditions impossible - usually
-           by imposing an ORDER on resource requests, which makes a
-           circular wait unformable.
-      AVOIDANCE  : the Banker's algorithm - refuse any request that would
-           lead to an unsafe state.
-      DETECTION and RECOVERY : maintain the wait-for graph, detect a
-           cycle, and kill or roll back a victim.
-      IGNORE     : the "ostrich algorithm" - what Windows, Linux and UNIX
-           actually do, because deadlock is rare and prevention is costly.
-   ```
-
-10. **(ক) Deadlock কী? Deadlock Handling করার বিভিন্ন উপায়সমূহ আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 413 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) What deadlock is
-    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
-    ```
-       P1 holds A and requests B
-       P2 holds B and requests A     -> both wait forever
-    ```
-    - It requires all four `Coffman conditions` simultaneously: `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`. Breaking any one makes deadlock impossible.
-
-    The four ways of handling deadlock
-
-    1. Deadlock prevention
-    - Design the system so that `one of the four conditions can never hold`.
-    ```
-       MUTUAL EXCLUSION : rarely removable. SPOOLING removes it where the
-            resource permits - jobs go to a disk queue, so no process ever
-            holds the printer itself.
-
-       HOLD AND WAIT    : require a process to request ALL its resources
-            at once before starting, or to release everything it holds
-            before asking for more.
-            Cost : poor resource utilisation , possible STARVATION.
-
-       NO PREEMPTION    : if a request cannot be granted, seize everything
-            the process holds and restart it later. Works for CPU and
-            memory ; useless for a printer mid-page.
-
-       CIRCULAR WAIT    : impose a TOTAL ORDER on resource types and
-            require every process to request them in INCREASING order.
-
-            F(printer) = 1 , F(scanner) = 2 , F(disk) = 3
-
-            A cycle then cannot form, because following it round would
-            require F(R) < F(R).
-
-            THIS IS THE MOST PRACTICAL METHOD, and it is what real kernel
-            and database code uses - "always lock A before B".
-    ```
-
-    2. Deadlock avoidance
-    - Allow the conditions, but examine `every request before granting it` and refuse any that could lead to an unsafe state.
-    ```
-       THE BANKER'S ALGORITHM
-
-       Each process declares its MAXIMUM need in advance.
-       Need = Max - Allocation
-
-       Before granting a request, the system checks whether the resulting
-       state is SAFE - whether some sequence of processes exists in which
-       each can obtain its maximum need and finish.
-
-            SAFE   -> grant
-            UNSAFE -> make the process wait, even though resources are free
-    ```
-    - `Unsafe is not the same as deadlocked`; it means deadlock has merely become possible. The algorithm is deliberately conservative.
-    - Its weakness: every process must declare its maximum needs in advance, which no ordinary program can do. That is why real operating systems do not use it.
-
-    3. Deadlock detection and recovery
-    - Let deadlocks happen, detect them, then recover.
-    ```
-       DETECTION
-            Single-instance resources : maintain a WAIT-FOR GRAPH and look
-                 for a CYCLE. Cycle detection by DFS costs O(V + E).
-            Multi-instance resources : run the SAFETY ALGORITHM periodically.
-
-            How often ? Every request is expensive ; too rarely leaves
-            processes hanging. A common compromise is to check when CPU
-            utilisation drops below a threshold, since a deadlock idles
-            the processes involved.
-
-       RECOVERY
-            PROCESS TERMINATION
-                 Kill ALL deadlocked processes - simple, but all their
-                 work is lost.
-                 Kill ONE AT A TIME until the cycle breaks - less costly,
-                 but detection must be re-run after each kill.
-
-            RESOURCE PREEMPTION
-                 Take a resource from a victim and give it to another.
-                 Three issues :
-                   - selecting the VICTIM : fewest resources held, least
-                     CPU time consumed, lowest priority
-                   - ROLLBACK : return the victim to a safe CHECKPOINT
-                   - STARVATION : do not choose the same victim every time;
-                     include the number of rollbacks in the cost function
-    ```
-
-    4. Ignore the problem — the "ostrich algorithm"
-    ```
-       Deadlocks are RARE in a general-purpose system, and the cost of
-       prevention or avoidance is high. So Windows, Linux and UNIX simply
-       ignore the possibility and rely on the user to reboot or kill a
-       hung process.
-
-       This is a deliberate ENGINEERING DECISION, not an oversight :
-       a 1-in-a-million hang is cheaper than a permanent 20 per cent
-       loss of resource utilisation.
-    ```
-
-    Comparison
-
-    | Method | When applied | Overhead | Utilisation | Used in practice |
-    |---|---|---|---|---|
-    | Prevention | Design time | Low | `Poor` | Yes, for lock ordering |
-    | Avoidance | Every request | High | Moderate | Rarely |
-    | Detection and recovery | Periodically | Medium | Good | `Databases` |
-    | Ignore | Never | None | Best | `Windows, Linux, UNIX` |
-
-    - Where detection genuinely is used: `database management systems`. A DBMS builds a wait-for graph of its transactions, detects a cycle, chooses a victim and `rolls its transaction back automatically`. That is possible only because a transaction is designed to be undoable — an arbitrary operating-system process is not.
-
-11. **What are the four necessary condition of deadlock in an operating system?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
-
-    Answer: There are `four` necessary conditions, known as the `Coffman conditions`. All must hold `simultaneously` for a deadlock to occur.
-
-    1. Mutual exclusion
-    ```
-       At least one resource must be held in a NON-SHAREABLE mode - only
-       one process may use it at a time.
-
-       Example : a printer , a tape drive , a write lock on a file.
-       A read-only file is shareable and can never cause a deadlock.
-    ```
-
-    2. Hold and wait
-    ```
-       A process must be HOLDING at least one resource while WAITING to
-       acquire additional resources held by other processes.
-
-       Example : P1 holds the printer and waits for the scanner.
-    ```
-
-    3. No preemption
-    ```
-       A resource cannot be FORCIBLY TAKEN from the process holding it.
-       It is released only VOLUNTARILY, after that process finishes with it.
-
-       Example : a printer cannot be seized mid-page. The CPU CAN be
-       preempted, which is why the CPU never causes a deadlock.
-    ```
-
-    4. Circular wait
-    ```
-       A CLOSED CHAIN of waiting processes must exist :
-
-            P0 -> P1 -> P2 -> ... -> Pn -> P0
-
-       where each waits for a resource held by the next.
-    ```
-    ```
-       The simplest case :
-            P1 holds A , wants B
-            P2 holds B , wants A
-
-            P1 ---> P2
-             ^        |
-             +--------+
-    ```
-
-    Example satisfying all four
-    ```
-       Two processes share a printer (A) and a scanner (B).
-
-       t1  P1 requests A -> granted
-       t2  P2 requests B -> granted
-       t3  P1 requests B -> WAITS
-       t4  P2 requests A -> WAITS
-
-       MUTUAL EXCLUSION : each device serves one process        HOLDS
-       HOLD AND WAIT    : P1 holds A while waiting for B        HOLDS
-       NO PREEMPTION    : neither device can be seized          HOLDS
-       CIRCULAR WAIT    : P1 -> P2 -> P1                        HOLDS
-
-       DEADLOCK.
-    ```
-
-    Which condition each prevention method removes
-
-    | Condition | Can it be removed? | How, and at what cost |
-    |---|---|---|
-    | Mutual exclusion | Rarely | Spooling, where the resource allows |
-    | Hold and wait | Yes | Request all resources at once — poor utilisation |
-    | No preemption | Partly | Seize and roll back — impossible for a printer |
-    | `Circular wait` | `Yes, cheaply` | Impose a total order on resources |
-
-    Why resource ordering works
-    ```
-       Number every resource type and require requests in INCREASING order.
-
-            F(printer) = 1 , F(scanner) = 2 , F(disk) = 3
-
-       Suppose a cycle P0 -> P1 -> ... -> Pn -> P0 existed. Following it
-       round, each process holds a lower-numbered resource and waits for a
-       higher-numbered one, so the numbers strictly increase all the way
-       round. But returning to the start would require F(R) < F(R) - a
-       contradiction.
-
-       Therefore no cycle can form.
-    ```
-    - This is why every multi-threaded programming guide insists on a documented `lock order`: it is deadlock prevention by attacking the circular-wait condition.
-
-    - One important qualification: the four conditions are `necessary but not sufficient` when a resource has `several instances`. A cycle in the resource allocation graph may then still be a safe state, which is exactly why the `Banker's algorithm` and its safety check exist.
-
-12. **(a) What is deadlock in operating system (OS)? What are the four necessary and sufficient conditions behind deadlock?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
-
-    Answer: (a) What deadlock is
-    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
-    ```
-       P1 holds A and requests B
-       P2 holds B and requests A     -> both wait forever
-    ```
-    - No process in the set can move, and none will release what it holds, so the wait is `permanent` — unlike starvation, where progress is still possible in principle.
-
-    The four conditions
-    ```
-       1. MUTUAL EXCLUSION
-            At least one resource is non-shareable - only one process may
-            hold it at a time.  (printer , tape drive , write lock)
-
-       2. HOLD AND WAIT
-            A process holds at least one resource while waiting for more
-            that are held by others.
-
-       3. NO PREEMPTION
-            A resource cannot be forcibly taken away; it is released only
-            voluntarily by its holder.
-
-       4. CIRCULAR WAIT
-            A closed chain  P0 -> P1 -> ... -> Pn -> P0  exists, in which
-            each process waits for a resource held by the next.
-    ```
-
-    A note on the wording "necessary and sufficient"
-    - The question says `necessary and sufficient`, but the standard result is that these four are `necessary` — and sufficient only for `single-instance` resources.
-    ```
-       SINGLE instance per resource type :
-            all four hold  <=>  DEADLOCK
-            (equivalently, a CYCLE in the resource allocation graph
-             means a deadlock)
-            -> here they ARE necessary AND sufficient
-
-       MULTIPLE instances per resource type :
-            all four may hold and the state may STILL BE SAFE.
-            A cycle is then NECESSARY but NOT SUFFICIENT.
-    ```
-    - Counter-example with two instances of R:
-    ```
-       P1 holds one instance and wants one more
-       P2 holds one instance and wants one more
-       P3 holds one instance and will RELEASE it without asking for more
-
-       A cycle exists between P1 and P2, but when P3 releases, P1 gets the
-       instance, finishes, releases both, and P2 proceeds.  NO deadlock.
-    ```
-    - This is precisely why the `Banker's safety algorithm` exists: for multi-instance resources the four conditions are not enough, and the state has to be tested.
-
-    Example where all four hold and a deadlock really occurs
-    ```
-       t1  P1 requests the printer -> granted
-       t2  P2 requests the scanner -> granted
-       t3  P1 requests the scanner -> WAITS
-       t4  P2 requests the printer -> WAITS
-
-       Both devices are single-instance, so the cycle P1 -> P2 -> P1 is a
-       genuine deadlock.
-    ```
-
-    - Breaking `any one` of the four makes deadlock impossible. Attacking `circular wait` is the cheapest: number the resource types and require every process to request them in increasing order. A cycle then cannot form, because following it round would require `F(R) < F(R)`.
-
-13. **(b) A system has P processes each needing a maximum of m resources and a total of r resources available. Which conditions must hold to make the system deadlock free?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
-
-    Answer: The setting
-    ```
-       P = number of processes
-       m = maximum number of resource units EACH process may need
-       r = total number of resource units available
-       All units are IDENTICAL and are requested one at a time.
-    ```
-
-    The condition
-    ```
-            r  >=  P * (m - 1) + 1
-    ```
-    - Equivalently, `r >= P*m - P + 1`. If this holds, the system can never deadlock, whatever order the requests arrive in.
-
-    Why it works
-    ```
-       Consider the WORST CASE. To have a deadlock, EVERY process must be
-       stuck holding some units and waiting for more.
-
-       The most units a process can hold and still be waiting is  m - 1 ,
-       because a process that has all m of its units can finish and does
-       not need to wait.
-
-       So the worst distribution is :
-
-            every one of the P processes holds  (m - 1)  units
-            total units tied up  =  P * (m - 1)
-
-       If there is even ONE spare unit left over, i.e.
-
-            r  >=  P * (m - 1) + 1
-
-       then that spare unit is given to some process Pi. Pi now has all m
-       units it can need, so it FINISHES and RELEASES all m units. Those
-       m units let the next process complete, and so on, until every
-       process finishes.
-
-       Hence NO DEADLOCK is possible.
-    ```
-
-    Worked check
-    ```
-       P = 3 processes , m = 4 units each.
-
-       Required :  r >= 3 * (4 - 1) + 1 = 3 * 3 + 1 = 10
-
-       Case r = 10  ->  SAFE
-            worst case : P1 = 3 , P2 = 3 , P3 = 3 , used = 9
-            1 unit spare -> give it to P1 -> P1 has 4 , finishes ,
-            releases 4 -> P2 finishes -> P3 finishes.
-
-       Case r = 9   ->  DEADLOCK POSSIBLE
-            P1 = 3 , P2 = 3 , P3 = 3 , used = 9 , spare = 0
-            each needs 1 more , none can get it -> all wait forever.
-    ```
-
-    The general form when needs differ
-    ```
-       If process Pi may need at most  Ni  units (needs not equal), the
-       condition becomes
-
-            r  >=  SUM( Ni - 1 ) + 1  =  SUM(Ni) - P + 1
-
-       which is the same statement, written for unequal maximum needs.
-       The equivalent inequality often quoted is
-
-            SUM(Ni)  <  r + P
-    ```
-    - Both forms say the same thing: `deadlock is impossible as long as the total demand is small enough that at least one process can always be given everything it needs`.
-
-    - Note this is a `prevention` condition checked at design time from the totals — not the `Banker's algorithm`, which tests the actual allocation state at run time before granting each request.
-
-14. **Name and define characteristics properties of the Deadlock situation in a computer system.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
-
-    Answer: The `characteristic properties` of a deadlock are the four `Coffman conditions`. All four must hold `simultaneously` for a deadlock to exist.
-
-    1. Mutual exclusion
-    ```
-       At least one resource is held in a NON-SHAREABLE mode - only one
-       process may use it at a time.
-
-       Example : a printer , a tape drive , a write lock on a record.
-       A read-only file is shareable and can never cause a deadlock.
-    ```
-
-    2. Hold and wait
-    ```
-       A process HOLDS at least one resource while WAITING for additional
-       resources that are held by other processes.
-
-       Example : P1 holds the printer and waits for the scanner.
-    ```
-
-    3. No preemption
-    ```
-       A resource cannot be FORCIBLY TAKEN from its holder. It is released
-       only VOLUNTARILY, after the holder finishes with it.
-
-       Example : a printer cannot be seized mid-page. The CPU CAN be
-       preempted, which is why the CPU is never a cause of deadlock.
-    ```
-
-    4. Circular wait
-    ```
-       A CLOSED CHAIN of waiting processes exists :
-
-            P0 -> P1 -> P2 -> ... -> Pn -> P0
-
-       Simplest case :
-            P1 holds A , wants B
-            P2 holds B , wants A
-
-            P1 ---> P2
-             ^        |
-             +--------+
-    ```
-
-    Example in which all four are present
-    ```
-       t1  P1 requests the printer (A) -> granted
-       t2  P2 requests the scanner (B) -> granted
-       t3  P1 requests B              -> WAITS
-       t4  P2 requests A              -> WAITS
-
-       MUTUAL EXCLUSION : each device serves one process       HOLDS
-       HOLD AND WAIT    : P1 holds A while waiting for B       HOLDS
-       NO PREEMPTION    : neither device can be seized         HOLDS
-       CIRCULAR WAIT    : P1 -> P2 -> P1                       HOLDS
-
-       DEADLOCK.
-    ```
-
-    How each property is used to prevent deadlock
-
-    | Property | Removable? | Method and cost |
-    |---|---|---|
-    | Mutual exclusion | Rarely | Spooling, where the device allows |
-    | Hold and wait | Yes | Request everything at once — poor utilisation |
-    | No preemption | Partly | Seize and roll back — useless for a printer |
-    | `Circular wait` | `Yes, cheaply` | Total ordering of resource types |
-
-    - One qualification worth stating: these four properties are `necessary but not sufficient` when a resource type has `several instances`. A cycle may then still be a safe state, which is why the `Banker's algorithm` tests the state instead of just looking for a cycle.
-
-15. **(b) What are the conditions for deadlock situations? Explain briefly.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 688 (ET: N/A)]*
-
-    Answer: A deadlock needs `four` conditions to hold at the same time. They are the `Coffman conditions`.
-
-    1. Mutual exclusion
-    ```
-       At least one resource must be NON-SHAREABLE - only one process may
-       hold it at a time.
-
-       Example : a printer , a tape drive , a write lock.
-       A shareable read-only file can never cause a deadlock.
-    ```
-
-    2. Hold and wait
-    ```
-       A process must be HOLDING one or more resources while WAITING for
-       others that are currently held by other processes.
-
-       Example : P1 holds the printer and waits for the scanner.
-    ```
-
-    3. No preemption
-    ```
-       A resource cannot be TAKEN AWAY by force. Its holder must release
-       it voluntarily.
-
-       Example : a printer cannot be seized mid-page. The CPU can be
-       preempted, so the CPU never causes deadlock.
-    ```
-
-    4. Circular wait
-    ```
-       A CLOSED CHAIN of waiting processes must exist :
-
-            P0 -> P1 -> ... -> Pn -> P0
-
-            P1 holds A , wants B
-            P2 holds B , wants A
-
-            P1 ---> P2
-             ^        |
-             +--------+
-    ```
-
-    Brief example
-    ```
-       t1  P1 gets the printer
-       t2  P2 gets the scanner
-       t3  P1 asks for the scanner -> WAITS
-       t4  P2 asks for the printer -> WAITS
-
-       All four conditions hold, so this is a deadlock.
-    ```
-
-    Breaking the conditions
-    ```
-       Remove ANY ONE and deadlock becomes impossible.
-
-       Mutual exclusion -> spooling , where possible
-       Hold and wait    -> request all resources at once
-       No preemption    -> seize the resource and roll the victim back
-       Circular wait    -> NUMBER the resource types and require requests
-                           in INCREASING order.  A cycle then cannot form,
-                           because going round it would need F(R) < F(R).
-    ```
-    - Circular wait is the one attacked in practice; the rule "always take lock A before lock B" in real kernel and database code is exactly this.
-
-    - Important qualification: the four are `necessary but not sufficient` when a resource type has `multiple instances`. There a cycle may still be a safe state, so the `Banker's safety algorithm` must be run to decide.
-
-16. **Banker's Algorithm: 5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances). Snapshot at time T_0. The content of the matrix. Need is defined to be \text{Max} - \text{Allocation}. Check that \text{Request} \le \text{Available}. Executing safety algorithm shows that sequence \langle P_1, P_3, P_4, P_0, P_2 \rangle satisfies safety requirement.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 855 (ET: N/A)]*
-
-    Answer: Given, the standard snapshot at time T0.
-    ```
-       Total resources :  A = 10 , B = 5 , C = 7
-
-               Allocation        Max
-                A  B  C        A  B  C
-       P0       0  1  0        7  5  3
-       P1       2  0  0        3  2  2
-       P2       3  0  2        9  0  2
-       P3       2  1  1        2  2  2
-       P4       0  0  2        4  3  3
-    ```
-
-    Step 1 — Available
-    ```
-       Available = Total - sum of Allocation
-
-       sum of Allocation :  A : 0+2+3+2+0 = 7
-                            B : 1+0+0+1+0 = 2
-                            C : 0+0+2+1+2 = 5
-
-       Available = (10-7 , 5-2 , 7-5) = (3 , 3 , 2)
-    ```
-
-    Step 2 — Need matrix, Need = Max - Allocation
-    ```
-                  Need
-                A  B  C
-       P0       7  4  3          (7-0 , 5-1 , 3-0)
-       P1       1  2  2          (3-2 , 2-0 , 2-0)
-       P2       6  0  0          (9-3 , 0-0 , 2-2)
-       P3       0  1  1          (2-2 , 2-1 , 2-1)
-       P4       4  3  1          (4-0 , 3-0 , 3-2)
-    ```
-
-    Step 3 — Safety algorithm
-    - Work = Available = (3,3,2), and every Finish[i] = false. Repeatedly pick a process whose `Need <= Work`, let it finish, and add its Allocation to Work.
-    ```
-       Work = (3,3,2)
-
-       P0 : Need (7,4,3) <= (3,3,2) ?   7>3   NO
-       P1 : Need (1,2,2) <= (3,3,2) ?   YES -> run P1
-            Work = (3,3,2) + Allocation(2,0,0) = (5,3,2)
-
-       P2 : Need (6,0,0) <= (5,3,2) ?   6>5   NO
-       P3 : Need (0,1,1) <= (5,3,2) ?   YES -> run P3
-            Work = (5,3,2) + (2,1,1) = (7,4,3)
-
-       P4 : Need (4,3,1) <= (7,4,3) ?   YES -> run P4
-            Work = (7,4,3) + (0,0,2) = (7,4,5)
-
-       P0 : Need (7,4,3) <= (7,4,5) ?   YES -> run P0
-            Work = (7,4,5) + (0,1,0) = (7,5,5)
-
-       P2 : Need (6,0,0) <= (7,5,5) ?   YES -> run P2
-            Work = (7,5,5) + (3,0,2) = (10,5,7)
-    ```
-    ```
-       All five Finish[i] = true , and Work returns to (10,5,7) = Total.
-    ```
-
-    Safe sequence
-    ```
-            < P1 , P3 , P4 , P0 , P2 >
-    ```
-    - The system is in a `safe state`.
-
-    Step 4 — the request test
-    - When a running process makes a request, three checks are applied in order:
-    ```
-       1. Request <= Need     else ERROR - the process exceeded its
-                              declared maximum
-       2. Request <= Available else WAIT  - the resources are not free
-       3. PRETEND to grant :
-               Available   = Available - Request
-               Allocation  = Allocation + Request
-               Need        = Need - Request
-          then run the SAFETY ALGORITHM on this trial state.
-
-               SAFE   -> grant the request for real
-               UNSAFE -> undo the trial and make the process WAIT
-    ```
-    - Example: `P1 requests (1,0,2)`. Check `(1,0,2) <= Need(1,2,2)` — yes. Check `(1,0,2) <= Available(3,3,2)` — yes. After the trial grant, `Available = (2,3,0)` and the safety algorithm finds the sequence `<P1, P3, P4, P0, P2>`, so the request is `granted`.
-
-    Points to note
-    - The Banker's algorithm is `deadlock avoidance`, not detection. It refuses a request that `could` lead to trouble, so resources may sit idle even when a request could safely be served.
-    - An `unsafe` state is not a deadlocked state; it only means deadlock has become possible.
-    - Its practical limitation: every process must declare its `maximum need in advance`, which ordinary programs cannot do. This is why real operating systems do not use it.
-
-17. **(a) What is Artificial Intelligence (AI)? What are the necessary conditions for a deadlock in an operating system?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
-
-    Answer: (a) What Artificial Intelligence is
-    - `Artificial Intelligence (AI)` is the branch of computer science that builds machines able to do tasks that normally need human intelligence — learning from data, reasoning, understanding language, recognising images and making decisions.
-    ```
-       Main branches :
-         Machine Learning     - learn patterns from data instead of being
-                                programmed with fixed rules
-         Deep Learning        - multi-layer neural networks
-         NLP                  - understand and generate human language
-         Computer Vision      - understand images and video
-         Expert Systems       - rule-based reasoning in a narrow domain
-         Robotics             - perceive the world and act in it
-    ```
-    ```
-       Types by capability :
-         NARROW AI   - good at ONE task. All AI in use today : spam
-                       filters , face unlock , recommendation systems ,
-                       chatbots , medical image screening.
-         GENERAL AI  - human-level ability across ANY task. Does not exist.
-         SUPER AI    - beyond human ability. Theoretical.
-    ```
-    - Common uses: fraud detection in banking, credit scoring, OCR for cheque clearing, speech recognition, machine translation and self-driving vehicles.
-
-    The necessary conditions for a deadlock
-    ```
-       1. MUTUAL EXCLUSION
-            At least one resource is non-shareable - one holder at a time.
-            (printer , tape drive , write lock)
-
-       2. HOLD AND WAIT
-            A process holds one or more resources while waiting for others
-            held by other processes.
-
-       3. NO PREEMPTION
-            A resource cannot be seized; it is released only voluntarily
-            by its holder.
-
-       4. CIRCULAR WAIT
-            A closed chain exists :  P0 -> P1 -> ... -> Pn -> P0 ,
-            each waiting for a resource held by the next.
-    ```
-    - All four must hold `at the same time`; breaking any one makes deadlock impossible.
-    ```
-       Example :
-            t1  P1 gets the printer
-            t2  P2 gets the scanner
-            t3  P1 asks for the scanner -> WAITS
-            t4  P2 asks for the printer -> WAITS
-
-            Cycle P1 -> P2 -> P1 , both devices single-instance
-            -> DEADLOCK
-    ```
-    - Circular wait is the condition attacked in practice: number the resource types and require requests in `increasing order`, so a cycle can never form.
-
-18. **What is Deadlock? Explain two situations where deadlock condition occurs.** *[Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
-
-    Answer: What deadlock is
-    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
-    - It needs the four `Coffman conditions` together: `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`.
-
-    Situation 1 — two processes and two devices
-    ```
-       A printer (A) and a scanner (B). Both are single-instance.
-
-       t1  P1 requests A -> granted        P1 holds A
-       t2  P2 requests B -> granted        P2 holds B
-       t3  P1 requests B -> WAITS          B is held by P2
-       t4  P2 requests A -> WAITS          A is held by P1
-
-       Wait-for graph :   P1 ---> P2
-                           ^        |
-                           +--------+
-
-       P1 will not release A until it gets B ; P2 will not release B until
-       it gets A. Neither ever happens.
-    ```
-    - The cause is the `order of requests`. Had both processes asked for A first and then B, no cycle could have formed. This is why resource ordering prevents deadlock.
-
-    Situation 2 — two database transactions holding row locks
-    ```
-       T1 : UPDATE accounts SET bal = bal - 500 WHERE id = 1;   -- locks row 1
-            UPDATE accounts SET bal = bal + 500 WHERE id = 2;   -- wants row 2
-
-       T2 : UPDATE accounts SET bal = bal - 300 WHERE id = 2;   -- locks row 2
-            UPDATE accounts SET bal = bal + 300 WHERE id = 1;   -- wants row 1
-
-            T1 holds row 1 , waits for row 2
-            T2 holds row 2 , waits for row 1
-            -> circular wait on ROW LOCKS
-    ```
-    - This is the commonest deadlock in real banking software. The DBMS handles it by `detection and recovery`: it builds a wait-for graph, finds the cycle, picks a `victim` and `rolls that transaction back` automatically, so the other can finish. That is possible only because a transaction is designed to be undoable.
-
-    Two more situations worth mentioning
-    ```
-       MESSAGE PASSING
-            P1 does receive(from P2) , then send(to P2)
-            P2 does receive(from P1) , then send(to P1)
-            Both block on receive - each waits for a message the other
-            will never send. Here the "resource" is a MESSAGE.
-
-       SELF-DEADLOCK ON A NON-REENTRANT LOCK
-            lock(m);  ...  lock(m);
-            The thread waits for a lock it already holds - a cycle of
-            length one. A recursive mutex prevents it.
-    ```
-
-    How each situation is avoided
-    ```
-       Situation 1 : impose a TOTAL ORDER on devices - always request the
-            printer before the scanner. A cycle then cannot form.
-       Situation 2 : access rows in a FIXED ORDER (ascending primary key),
-            or let the DBMS detect and roll back a victim.
-    ```
-
-19. **A, B two resources. Two processes (P1 and P2) share these resources. When a process request for a resources, if that resource is free then it will be allocated with that resources. If the resources are not free then the process will halt. Now the scenario is:** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 973 (ET: BUET)]*
-
-    Answer: The question is `incomplete` — the scenario table showing the actual sequence of requests by P1 and P2 was not captured, so the exact answer cannot be produced. The method and the standard version of this problem are given below.
-
-    The rule stated in the question
-    ```
-       Request a free resource   -> it is ALLOCATED
-       Request a busy resource   -> the process HALTS (blocks) and keeps
-                                    whatever it already holds
-    ```
-    - This rule is exactly `hold and wait` with `no preemption`, so with two single-instance resources a deadlock is possible.
-
-    The standard scenario for this problem
-    ```
-       Two resources A and B , each with ONE instance.
-
-       Time   P1                        P2
-       ----   -----------------------   -----------------------
-       t1     request A -> granted      -
-       t2     -                         request B -> granted
-       t3     request B -> HALTS        -
-       t4     -                         request A -> HALTS
-
-       State :  P1 holds A , waits for B
-                P2 holds B , waits for A
-    ```
-
-    Resource allocation graph
-    ```mermaid
-    flowchart LR
-        P1((P1)) -->|requests| B[Resource B]
-        B -->|held by| P2((P2))
-        P2 -->|requests| A[Resource A]
-        A -->|held by| P1
-    ```
-    ```
-            +--------+  request  +--------+
-            |   P1   |---------->|   B    |
-            +--------+           +--------+
-                 ^                    |
-                 | held               | held
-            +--------+  request  +--------+
-            |   A    |<----------|   P2   |
-            +--------+           +--------+
-
-       Wait-for graph :   P1 ---> P2 ---> P1     a CYCLE
-    ```
-
-    Checking the four conditions
-    ```
-       MUTUAL EXCLUSION : A and B have one instance each          HOLDS
-       HOLD AND WAIT    : P1 holds A and waits for B              HOLDS
-       NO PREEMPTION    : a halted process keeps its resource     HOLDS
-       CIRCULAR WAIT    : P1 -> P2 -> P1                          HOLDS
-
-       Both resources are single-instance, so the cycle IS a deadlock.
-    ```
-    - Verdict for this ordering: `deadlock`.
-
-    An ordering of the same requests that does NOT deadlock
-    ```
-       Time   P1                        P2
-       t1     request A -> granted      -
-       t2     request B -> granted      -
-       t3     use , then release A , B  -
-       t4     -                         request A -> granted
-       t5     -                         request B -> granted
-
-       P1 never waits while holding, so no cycle forms.  NO DEADLOCK.
-    ```
-    - The general test to apply to whatever the actual table shows: draw the resource allocation graph at the final state; with single-instance resources, `a cycle means a deadlock and no cycle means none`.
-
-    How to make this system deadlock-free
-    ```
-       RESOURCE ORDERING : fix F(A) = 1 , F(B) = 2 and require every
-            process to request in increasing order. Both processes then
-            take A before B, so the one that gets A first finishes first.
-            A cycle cannot form.
-
-       ALL-OR-NOTHING    : a process requests A and B together ; if both
-            are not free it gets neither. Removes HOLD AND WAIT.
-
-       TIMEOUT and ROLLBACK : a halted process releases what it holds
-            after a timeout and retries. Removes NO PREEMPTION.
-    ```
-
-20. **What is Operating Systems Deadlock? কীভাবে Deadlock দূর করা যায়?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) What an operating system deadlock is
-    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so none can ever proceed.
-    ```
-       P1 holds A and requests B
-       P2 holds B and requests A     -> both wait forever
-    ```
-    - All four `Coffman conditions` must hold together: `mutual exclusion`, `hold and wait`, `no preemption` and `circular wait`.
-
-    How deadlock is removed — the four approaches
-
-    1. Prevention — make one condition impossible
-    ```
-       MUTUAL EXCLUSION : use SPOOLING where the device allows. Print jobs
-            go to a disk queue and a daemon feeds the printer, so no
-            process ever holds the printer itself.
-
-       HOLD AND WAIT    : require a process to request ALL its resources
-            at once, or to release everything before requesting more.
-            Cost : poor utilisation , possible starvation.
-
-       NO PREEMPTION    : if a request cannot be met, seize what the
-            process holds and restart it later. Works for CPU and memory,
-            not for a printer mid-page.
-
-       CIRCULAR WAIT    : NUMBER the resource types and require requests
-            in INCREASING order.
-
-                 F(printer) = 1 , F(scanner) = 2 , F(disk) = 3
-
-            A cycle then cannot form : following it round, the numbers
-            would have to increase all the way back to the start, needing
-            F(R) < F(R) - impossible.
-
-            THIS IS THE PRACTICAL METHOD - "always lock A before B".
-    ```
-
-    2. Avoidance — the Banker's algorithm
-    ```
-       Each process declares its MAXIMUM need in advance.
-            Need = Max - Allocation
-
-       Before granting any request the system tests the resulting state :
-            SAFE   (some order exists in which all processes can finish)
-                         -> grant
-            UNSAFE -> make the process wait, even though resources are free
-    ```
-    - Weakness: maximum needs must be known in advance, which ordinary programs cannot supply. Hence real operating systems do not use it.
-
-    3. Detection and recovery
-    ```
-       DETECTION
-            Single-instance resources : keep a WAIT-FOR GRAPH and look for
-                 a CYCLE - DFS, O(V + E).
-            Multi-instance resources  : run the SAFETY ALGORITHM
-                 periodically.
-
-       RECOVERY
-            KILL processes  - all of them (simple, wasteful) or one at a
-                 time until the cycle breaks.
-            PREEMPT resources - choose a VICTIM (fewest resources held,
-                 least CPU consumed, lowest priority), ROLL IT BACK to a
-                 checkpoint, and avoid STARVATION by not picking the same
-                 victim every time.
-    ```
-    - This is what a `DBMS` does: it detects a lock cycle and rolls a transaction back automatically.
-
-    4. Ignore it — the "ostrich algorithm"
-    ```
-       Deadlock is rare, and prevention costs utilisation permanently.
-       So Windows, Linux and UNIX simply ignore it and rely on the user
-       to kill the hung process or reboot. A deliberate trade-off.
-    ```
-
-    Comparison
-
-    | Method | Applied at | Overhead | Utilisation | Used in practice |
-    |---|---|---|---|---|
-    | Prevention | Design time | Low | `Poor` | Yes, as lock ordering |
-    | Avoidance | Every request | High | Moderate | Rarely |
-    | Detection | Periodically | Medium | Good | `Databases` |
-    | Ignore | Never | None | Best | `Windows, Linux, UNIX` |
-
-21. **(d) Define Deadlock. Write down the necessary conditions for deadlock.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026 (ET: N/A)]*
-
-    Answer: Definition
-    - A `deadlock` is a state in which a set of processes are each `waiting for a resource held by another process in the same set`, so no process in the set can ever proceed.
-    ```
-       P1 holds A and requests B
-       P2 holds B and requests A     -> the wait is PERMANENT
-    ```
-    - The wait is permanent because none of them will release what it holds until it gets what it is waiting for. This is what separates deadlock from `starvation`, where a process could still run if the scheduler chose it.
-
-    The necessary conditions
-    ```
-       1. MUTUAL EXCLUSION
-            At least one resource is non-shareable - only one process may
-            hold it at a time.  (printer , tape drive , write lock)
-
-       2. HOLD AND WAIT
-            A process holds at least one resource while waiting for more
-            that are held by other processes.
-
-       3. NO PREEMPTION
-            A resource cannot be forcibly taken from its holder; it is
-            released only voluntarily.
-
-       4. CIRCULAR WAIT
-            A closed chain  P0 -> P1 -> ... -> Pn -> P0  exists, each
-            process waiting for a resource held by the next.
-    ```
-    - All four must hold `simultaneously`. Breaking `any one` makes deadlock impossible, which is why they are called necessary conditions.
-
-    Example
-    ```
-       t1  P1 gets the printer (A)
-       t2  P2 gets the scanner (B)
-       t3  P1 asks for B -> WAITS
-       t4  P2 asks for A -> WAITS
-
-       Wait-for graph :  P1 ---> P2 ---> P1     a CYCLE  ->  DEADLOCK
-    ```
-
-    Breaking each condition
-
-    | Condition | Removable? | Method |
-    |---|---|---|
-    | Mutual exclusion | Rarely | Spooling, where the device allows |
-    | Hold and wait | Yes | Request all resources at once |
-    | No preemption | Partly | Seize the resource and roll the victim back |
-    | `Circular wait` | `Yes, cheaply` | Total ordering of resource types |
-
-    - Resource ordering, the practical method: number the resource types and require every process to request in `increasing order`. Following a hypothetical cycle round would require `F(R) < F(R)`, so no cycle can form.
-    - One qualification: for a resource type with `multiple instances` the four conditions are `necessary but not sufficient` — a cycle may still be a safe state, so the `Banker's safety algorithm` decides instead.
-
-22. **Four condition of deadlock in Operating System. Suppose, n processes, \text{P}_1, \text{P}_2\dots \text{P}_n share m identical esource units which can be reserved and released one at a time. The maximum resources request of process \text{P}_i is \text{S}_i, where \text{S}_i>0. Which one is sufficient condition for ensuring that deadlock doesn't occur? (Full প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
-
-    Answer: The four conditions for deadlock
-    ```
-       1. MUTUAL EXCLUSION - at least one resource is non-shareable, so
-          only one process may hold it at a time.
-       2. HOLD AND WAIT    - a process holds resources while waiting for
-          more that are held by others.
-       3. NO PREEMPTION    - a resource cannot be seized; it is released
-          only voluntarily.
-       4. CIRCULAR WAIT    - a closed chain P0 -> P1 -> ... -> Pn -> P0
-          exists, each waiting for a resource held by the next.
-    ```
-    - All four must hold at once. Breaking any one makes deadlock impossible.
-
-    The sufficient condition
-    ```
-       Given :  n processes P1 ... Pn
-                m identical resource units, reserved and released one at
-                a time
-                Si = maximum request of process Pi , Si > 0
-
-       The sufficient condition for NO deadlock is
-
-                SUM( Si )  <  m + n
-                    i=1..n
-    ```
-    - Equivalently `sum(Si) <= m + n - 1`.
-
-    Why it works
-    ```
-       For a deadlock, EVERY process must be blocked while holding some
-       units. A process holding all Si of its units can finish, so a
-       BLOCKED process holds at most  (Si - 1)  units.
-
-       The worst case therefore ties up
-
-            SUM( Si - 1 )  =  SUM(Si) - n     units
-
-       If even ONE unit is still free, some process can be given its last
-       unit, finish, and release everything - which unblocks the next, and
-       so on. So deadlock is impossible when
-
-            SUM(Si) - n  <  m
-            SUM(Si)      <  m + n
-    ```
-
-    Worked check
-    ```
-       n = 3 processes , m = 10 units , S1 = 4 , S2 = 4 , S3 = 4
-
-            SUM(Si) = 12 ,  m + n = 13
-            12 < 13   ->  TRUE  ->  NO DEADLOCK POSSIBLE
-
-       Verify : worst case each holds Si-1 = 3 , total 9 , one unit
-       spare -> give it to P1 -> P1 has 4 , finishes , releases 4 ->
-       P2 finishes -> P3 finishes.
-
-       Now try m = 9 :
-            SUM(Si) = 12 ,  m + n = 12
-            12 < 12   ->  FALSE  ->  deadlock POSSIBLE
-
-       Verify : each holds 3 , total 9 , nothing spare , each needs one
-       more -> all wait forever.  DEADLOCK.
-    ```
-
-    - The equal-need form of the same result is `m >= n*(S - 1) + 1` when every process needs the same maximum `S`. Both say one thing: `deadlock cannot occur as long as at least one process can always be given everything it still needs`.
-    - Note this is a `sufficient` condition, not a necessary one. If it fails, deadlock is merely `possible` — not certain. It is also a design-time check on totals, unlike the `Banker's algorithm`, which tests the actual allocation state before granting each request.
-
-23. **(b) What are the conditions for a deadlock situation?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
-
-    Answer: A deadlock requires `four` conditions to hold at the same time — the `Coffman conditions`.
-
-    1. Mutual exclusion
-    ```
-       At least one resource must be NON-SHAREABLE - only one process may
-       hold it at a time.
-
-       Example : printer , tape drive , write lock on a record.
-       A read-only file is shareable, so it can never cause a deadlock.
-    ```
-
-    2. Hold and wait
-    ```
-       A process must be HOLDING at least one resource while WAITING for
-       others that are held by other processes.
-
-       Example : P1 holds the printer and waits for the scanner.
-    ```
-
-    3. No preemption
-    ```
-       A resource cannot be FORCIBLY TAKEN from its holder; it is released
-       only voluntarily.
-
-       Example : a printer cannot be seized mid-page. The CPU CAN be
-       preempted, which is why the CPU never causes deadlock.
-    ```
-
-    4. Circular wait
-    ```
-       A CLOSED CHAIN of waiting processes must exist :
-
-            P0 -> P1 -> ... -> Pn -> P0
-
-            P1 holds A , wants B
-            P2 holds B , wants A
-
-            P1 ---> P2
-             ^        |
-             +--------+
-    ```
-
-    Example
-    ```
-       t1  P1 gets the printer (A)
-       t2  P2 gets the scanner (B)
-       t3  P1 asks for B -> WAITS
-       t4  P2 asks for A -> WAITS
-
-       All four hold, both devices are single-instance -> DEADLOCK.
-    ```
-
-    Breaking the conditions
-    ```
-       Mutual exclusion -> spooling , where the device allows
-       Hold and wait    -> request all resources at once
-       No preemption    -> seize the resource and roll the victim back
-       Circular wait    -> NUMBER the resource types and require requests
-                           in INCREASING order ; a cycle then cannot form
-    ```
-    - Circular wait is the one attacked in real systems; the documented "lock order" in kernel and database code is exactly this rule.
-    - Qualification: with `multiple instances` of a resource type the four are `necessary but not sufficient` — a cycle may still be safe, so the `Banker's safety algorithm` is used to decide.
-
-## Virtual Memory & Page Replacement (Thrashing) (16)
-
-1. Consider the following page reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1. Assuming a system with 3 page frames initially empty, calculate the number of page faults using the following page replacement algorithms: (i) FIFO (First-In, First-Out), (ii) LRU (Least Recently Used), and (iii) Optimal Page Replacement. [BSCCPL AME 21-08-2026 (BUET)]
-
-   Answer: Given, reference string = 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1 with 3 frames, all initially empty.
-
-   (i) FIFO — replace the page that entered earliest
-   ```
-    Ref  7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
-    F1   7  7  7  2  2  2  2  4  4  4  0  0  0  0  0  0  0  7  7  7
-    F2   .  0  0  0  0  3  3  3  2  2  2  2  2  1  1  1  1  1  0  0
-    F3   .  .  1  1  1  1  0  0  0  3  3  3  3  3  2  2  2  2  2  1
-         F  F  F  F  H  F  F  F  F  F  F  H  H  F  F  H  H  F  F  F
-   ```
-   ```
-      Faults = 15 , Hits = 5
-      Hit ratio = 5 / 20 = 0.25
-   ```
-
-   (ii) LRU — replace the page unused for the longest time
-   ```
-    Ref  7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
-    F1   7  7  7  2  2  2  2  4  4  4  0  0  0  1  1  1  1  1  1  1
-    F2   .  0  0  0  0  0  0  0  0  3  3  3  3  3  3  0  0  0  0  0
-    F3   .  .  1  1  1  3  3  3  2  2  2  2  2  2  2  2  2  7  7  7
-         F  F  F  F  H  F  H  F  F  F  F  H  H  F  H  F  H  F  H  H
-   ```
-   ```
-      Faults = 12 , Hits = 8
-      Hit ratio = 8 / 20 = 0.40
-   ```
-
-   (iii) Optimal — replace the page that will be used farthest in the future
-   ```
-    Ref  7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
-    F1   7  7  7  2  2  2  2  2  2  2  2  2  2  2  2  2  2  7  7  7
-    F2   .  0  0  0  0  0  0  4  4  4  0  0  0  0  0  0  0  0  0  0
-    F3   .  .  1  1  1  3  3  3  3  3  3  3  3  1  1  1  1  1  1  1
-         F  F  F  F  H  F  H  F  H  H  F  H  H  F  H  H  H  F  H  H
-   ```
-   ```
-      Faults = 9 , Hits = 11
-      Hit ratio = 11 / 20 = 0.55
-   ```
-
-   Result
-   ```
-           FIFO     = 15 page faults
-           LRU      = 12 page faults
-           OPTIMAL  =  9 page faults
-   ```
-   - Optimal gives the fewest faults, but it needs knowledge of future references, so it cannot be implemented. It is used only as a `benchmark` to judge the others.
-   - LRU beats FIFO because it uses `recency of use`, which approximates locality of reference. FIFO ignores usage and can throw out a heavily used page just because it is old.
-   - FIFO can also suffer `Belady's anomaly`: adding more frames can `increase` faults. LRU and Optimal are stack algorithms and never show it.
-
-2. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1422 (ET: E-Zone)]*
-
-   Answer: What thrashing is
-   - `Thrashing` is the state where the system spends more time `swapping pages between memory and disk` than running the processes themselves. Useful work almost stops.
-
-   How it happens in a demand-paged system
-   ```
-      1. The degree of multiprogramming is raised - more processes are
-         kept in memory at the same time.
-      2. Each process now gets FEWER FRAMES than its WORKING SET (the set
-         of pages it is actively using).
-      3. A process cannot keep its active pages resident, so almost every
-         memory reference is a PAGE FAULT.
-      4. The faulting process blocks on the paging disk. The CPU goes idle.
-      5. The CPU scheduler sees LOW CPU UTILISATION and, believing the
-         system is under-loaded, ADMITS MORE PROCESSES.
-      6. The new processes steal frames from the existing ones, so faults
-         rise again -> step 4.
-   ```
-   - This feedback loop is the heart of the problem: the scheduler's cure makes the disease worse. The system collapses into thrashing.
-
-   Effect on CPU utilisation
-   ```
-      CPU
-      util
-       |         ____
-       |       /     \
-       |     /        \          <- thrashing begins
-       |   /            \
-       | /                \_____
-       +-----------------------------> degree of multiprogramming
-                    ^
-               optimal point
-   ```
-   ```
-      Before the peak : more processes -> better CPU utilisation
-      After  the peak : more processes -> utilisation FALLS SHARPLY
-   ```
-   - Effect on the system: throughput drops, response time becomes very long, the disk light stays on continuously, and the CPU sits mostly idle. The machine appears frozen even though the CPU has nothing to do.
-
-   Why it is really a locality problem
-   - A program does not use its pages evenly. At any moment it works inside a `locality` — a small group of pages (a function's code, its local variables, an array being scanned). If the frames given to a process can hold its current locality, faults are rare. If they cannot, faults explode.
-
-   How thrashing is handled
-   ```
-      WORKING SET MODEL (Denning)
-           W(t, D) = the set of pages referenced in the last D references.
-           Give each process enough frames to hold its working set.
-           If  SUM of all working set sizes > total frames , SUSPEND one
-           process and free its frames.
-
-      PAGE FAULT FREQUENCY (PFF)
-           Measure each process's fault rate and keep it inside a band :
-
-               rate ABOVE the upper limit -> give the process MORE frames
-               rate BELOW the lower limit -> take frames AWAY
-               no frames left to give     -> SUSPEND a process
-
-      LOCAL REPLACEMENT
-           A faulting process may only replace ITS OWN pages, so it cannot
-           steal frames from others and spread the thrashing.
-
-      PRACTICAL FIXES
-           Add more RAM ; use a better replacement policy ; reduce the
-           degree of multiprogramming.
-   ```
-
-   - The key point for the examiner: `thrashing is not caused by a slow CPU or a slow disk, but by giving processes fewer frames than their working sets need`. The fix is to reduce the load or increase the frames, never to admit more processes.
-
-3. **a) Write about notes on i) Virtual memory, and ii) Cache memory.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
-
-   Answer: (i) Virtual memory
-   - `Virtual memory` is a technique that lets a process run even when it is `larger than the physical RAM`. Only the parts currently needed are kept in RAM; the rest stays on disk in the `swap space`.
-   ```
-      Each process sees one large, continuous VIRTUAL ADDRESS SPACE.
-      The MMU translates every virtual address into a physical address
-      using the PAGE TABLE.
-
-           virtual address = [ page number | offset ]
-                                    |
-                             page table lookup
-                                    |
-           physical address = [ frame number | offset ]
-   ```
-   - It works by `demand paging`: a page is brought in only when it is referenced. If the page is not resident, the valid bit is 0, the MMU raises a `page fault`, the OS fetches the page from disk into a free frame (evicting a victim if none is free), updates the page table and restarts the instruction.
-   - Benefits: programs bigger than RAM can run, more processes fit in memory, each process is isolated from the others, and there is no external fragmentation.
-   - Cost: a page fault costs milliseconds against nanoseconds for a memory access, and too little RAM leads to `thrashing`.
-
-   (ii) Cache memory
-   - `Cache memory` is a small, very fast memory placed between the CPU and main memory. It holds the data and instructions used most recently, so the CPU does not have to wait for slow RAM.
-   ```
-      CPU  <->  L1  <->  L2  <->  L3  <->  RAM  <->  DISK
-           fastest, smallest  ----->  slowest, largest
-
-      L1 : ~32 KB   , ~1-4 cycles
-      L2 : ~256 KB-1 MB
-      L3 : ~8-32 MB , shared between cores
-   ```
-   - It works because of `locality of reference`: `temporal` (a recently used item is likely to be used again) and `spatial` (neighbouring addresses are likely to be used next, so a whole block is fetched).
-   - Mapping is `direct`, `fully associative` or `set associative`. Write policy is `write-through` or `write-back`.
-   ```
-      Average access time = h * Tc + (1 - h) * Tm
-           h  = hit ratio , Tc = cache time , Tm = memory time
-   ```
-
-   The essential difference
-   | Point | Virtual memory | Cache memory |
-   |---|---|---|
-   | Purpose | Run programs `bigger than RAM` | Make memory access `faster` |
-   | Levels involved | RAM and `disk` | CPU and `RAM` |
-   | Managed by | `Operating system` (software) | `Hardware` |
-   | Unit moved | Page, 4 KB or larger | Block or line, 32-128 bytes |
-   | Miss cost | Milliseconds (`page fault`) | Nanoseconds (`cache miss`) |
-   | Miss handled by | OS page fault handler | Cache controller |
-
-4. **Consider a reference string 4,7,6,1,2,7,2 the number of frames in the memory is 3. Using page Replacement Algorithm (LRU), find the number of page fault.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)]*
-
-   Answer: Given, reference string = 4, 7, 6, 1, 2, 7, 2 with 3 frames, all initially empty, LRU policy.
-
-   LRU rule
-   ```
-      On a fault with all frames full, replace the page that has NOT been
-      USED for the LONGEST TIME.
-   ```
-
-   Step-by-step trace
-   ```
-    Ref     4     7     6     1     2     7     2
-    F1      4     4     4     1     1     1     1
-    F2      .     7     7     7     2     2     2
-    F3      .     .     6     6     6     7     7
-          FAULT FAULT FAULT FAULT FAULT FAULT  HIT
-   ```
-   ```
-    Ref 4 : frames empty                 -> FAULT , load 4      [4]
-    Ref 7 : not present , free frame     -> FAULT , load 7      [4,7]
-    Ref 6 : not present , free frame     -> FAULT , load 6      [4,7,6]
-    Ref 1 : not present , frames FULL
-            last used : 4 -> t1 , 7 -> t2 , 6 -> t3
-            oldest use = 4                -> FAULT , replace 4 with 1
-                                                          [1,7,6]
-    Ref 2 : not present , frames FULL
-            last used : 7 -> t2 , 6 -> t3 , 1 -> t4
-            oldest use = 7                -> FAULT , replace 7 with 2
-                                                          [1,2,6]
-    Ref 7 : not present , frames FULL
-            last used : 6 -> t3 , 1 -> t4 , 2 -> t5
-            oldest use = 6                -> FAULT , replace 6 with 7
-                                                          [1,2,7]
-    Ref 2 : PRESENT                       -> HIT
-   ```
-
-   Result
-   ```
-           Total references = 7
-           Page faults      = 6
-           Page hits        = 1
-
-           Hit  ratio  = 1 / 7 = 0.143  (14.3 %)
-           Miss ratio  = 6 / 7 = 0.857  (85.7 %)
-   ```
-   - The fault count is high because almost every page is referenced only once — there is little `locality of reference` for LRU to exploit. The first 3 faults are unavoidable `cold-start` faults, since the frames begin empty.
-
-5. **Why virtual memory needed?** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 477 (ET: N/A)]*
-
-   Answer: What virtual memory is
-   - `Virtual memory` lets a process run even when it is larger than the physical RAM. Only the pages currently in use stay in RAM; the rest sit on disk in the `swap space`.
-
-   Why it is needed
-
-   (a) Programs larger than RAM must still run
-   ```
-      A 4 GB program on a 2 GB machine :
-           without virtual memory -> it cannot run at all
-           with virtual memory    -> only the pages in use are resident,
-                                     so it runs normally
-   ```
-
-   (b) More processes fit in memory, so the CPU stays busy
-   ```
-      Without VM : each process needs its FULL size in RAM, so few fit,
-           and when they all block on I/O the CPU goes idle.
-      With VM    : each process needs only its ACTIVE pages, so many more
-           fit -> higher degree of multiprogramming -> better CPU
-           utilisation and throughput.
-   ```
-
-   (c) The programmer is freed from memory limits
-   - Before virtual memory the programmer had to split a program into `overlays` by hand and load them in turn. Virtual memory makes that automatic; the code is written against one large flat address space.
-
-   (d) Protection and isolation between processes
-   ```
-      Every process has its OWN page table, so process A's virtual page 5
-      and process B's virtual page 5 map to DIFFERENT frames.
-      A stray pointer in A cannot touch B's memory - the MMU rejects any
-      address not mapped in A's own page table.
-   ```
-
-   (e) No external fragmentation
-   - Memory is handed out in fixed-size `frames`, so any free frame fits any page. There is no need to compact memory. Only a little `internal fragmentation` remains in the last page of a process.
-
-   (f) Sharing and faster process creation
-   ```
-      One copy of a shared library (or the code of a program run twice)
-      is kept in RAM and MAPPED into several page tables.
-      COPY-ON-WRITE lets fork() share all pages read-only and copy a page
-      only when one process writes to it - so process creation is cheap.
-   ```
-
-   How it works, in short
-   ```
-      Demand paging : a page is loaded only when referenced.
-
-      reference -> valid bit = 1 ?  yes -> access memory
-                                 no  -> PAGE FAULT
-                                        -> find a free frame (replace a
-                                           victim if none)
-                                        -> read the page from disk
-                                        -> update the page table
-                                        -> restart the instruction
-   ```
-
-   The cost
-   - A page fault costs `milliseconds` while a RAM access costs `nanoseconds`, so the fault rate must stay very low. If the frames given to processes fall below their `working sets`, the system starts `thrashing` — it spends all its time paging and almost none running.
-
-6. **Consider page reference string 1, 3, 0, 3, 5, 6, 3 with 3 page frames. Find the number of page faults.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
-
-   Answer: Given, reference string = 1, 3, 0, 3, 5, 6, 3 with 3 frames, all initially empty. The policy is not stated, so `FIFO` is taken as the default and the other two are shown for comparison.
-
-   FIFO — replace the page that came in earliest
-   ```
-    Ref     1     3     0     3     5     6     3
-    F1      1     1     1     1     5     5     5
-    F2      .     3     3     3     3     6     6
-    F3      .     .     0     0     0     0     3
-          FAULT FAULT FAULT  HIT  FAULT FAULT FAULT
-   ```
-   ```
-    Ref 1 : free frame                  -> FAULT           [1]
-    Ref 3 : free frame                  -> FAULT           [1,3]
-    Ref 0 : free frame                  -> FAULT           [1,3,0]
-    Ref 3 : present                     -> HIT
-    Ref 5 : full , oldest in = 1        -> FAULT , 1 out   [5,3,0]
-    Ref 6 : full , oldest in = 3        -> FAULT , 3 out   [5,6,0]
-    Ref 3 : full , oldest in = 0        -> FAULT , 0 out   [5,6,3]
-   ```
-   ```
-           Page faults = 6 ,  Hits = 1
-           Hit ratio   = 1 / 7 = 0.143
-   ```
-
-   LRU — replace the page unused for the longest time
-   ```
-    Ref     1     3     0     3     5     6     3
-    F1      1     1     1     1     5     5     5
-    F2      .     3     3     3     3     3     3
-    F3      .     .     0     0     0     6     6
-          FAULT FAULT FAULT  HIT  FAULT FAULT  HIT
-   ```
-   ```
-           Page faults = 5 ,  Hits = 2
-   ```
-   - LRU does better at reference 7: the hit on 3 at reference 4 made 3 recently used, so LRU kept it while FIFO threw it out.
-
-   Optimal — replace the page needed farthest in the future
-   ```
-    Ref     1     3     0     3     5     6     3
-    F1      1     1     1     1     5     6     6
-    F2      .     3     3     3     3     3     3
-    F3      .     .     0     0     0     0     0
-          FAULT FAULT FAULT  HIT  FAULT FAULT  HIT
-   ```
-   ```
-           Page faults = 5 ,  Hits = 2
-   ```
-
-   Result
-   ```
-           FIFO    = 6 page faults
-           LRU     = 5 page faults
-           OPTIMAL = 5 page faults
-   ```
-   - The first 3 faults in every case are unavoidable `cold-start` faults, because the frames start empty. FIFO loses one extra fault by evicting page 3, which was about to be used again — it looks only at `arrival time`, not at `usage`.
-
-7. **Difference between physical memory and virtual memory, also describe the advantages and disadvantages of virtual memory.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 553 (ET: BIBM)]*
-
-   Answer: Difference between physical memory and virtual memory
-
-   | Point | Physical memory (RAM) | Virtual memory |
-   |---|---|---|
-   | What it is | The `actual hardware` — RAM chips on the board | A `technique` that uses RAM plus disk space |
-   | Size | Fixed by the hardware installed | Limited by the `address space`, e.g. 4 GB on 32-bit |
-   | Speed | Fast, nanoseconds | Slow when the disk is touched, milliseconds |
-   | Location | RAM only | RAM + `swap space` on disk |
-   | Addresses | `Physical addresses`, used by the memory bus | `Virtual addresses`, generated by the CPU |
-   | Managed by | `Hardware` and the memory controller | `Operating system` and the MMU |
-   | Cost | Expensive per GB | Cheap, uses existing disk |
-   | Shared? | One physical RAM for the whole machine | Every process has `its own` virtual space |
-
-   - How they connect: the CPU only ever issues `virtual addresses`. The `MMU` translates each one through the `page table` into a physical address. If the page is not in RAM the valid bit is 0, a `page fault` occurs, and the OS brings the page in from disk.
-   ```
-      virtual address = [ page number | offset ]
-                               |
-                        page table lookup
-                               |
-      physical address = [ frame number | offset ]
-   ```
-
-   Advantages of virtual memory
-   - Programs `larger than RAM` can run — only the active pages need to be resident.
-   - A `higher degree of multiprogramming`: each process needs only its working set in RAM, so more processes fit and the CPU stays busy.
-   - `Protection and isolation` — each process has its own page table, so a stray pointer cannot reach another process's memory.
-   - `No external fragmentation` — memory is given out in fixed-size frames, so any free frame fits any page. No compaction is needed.
-   - `Sharing` — one copy of a shared library is mapped into many page tables. `Copy-on-write` makes `fork()` cheap.
-   - The programmer no longer writes `overlays` by hand; one flat address space is assumed.
-
-   Disadvantages of virtual memory
-   - `Slow when it is actually used`: a page fault costs milliseconds against nanoseconds for a RAM access, so a high fault rate destroys performance.
-   - `Thrashing` — if processes get fewer frames than their working sets, the system spends all its time paging and almost none running.
-   - `Address translation overhead` on every reference; a `TLB` is needed to hide it, and a TLB miss costs extra memory accesses.
-   - `Space cost` — page tables themselves occupy RAM, and swap space occupies disk.
-   - `Internal fragmentation` in the last page of each process.
-   - `Unpredictable timing`, which makes it unsuitable for hard `real-time` systems, where paging is usually disabled.
-
-8. **(c) Define paging and trashing in the context of OS.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
-
-   Answer: Paging
-   - `Paging` is a memory management scheme that removes the need for a process to sit in one continuous block of RAM. Virtual memory is cut into fixed-size `pages` and physical memory into `frames` of the same size, and any page can go into any free frame.
-   ```
-      page size = frame size , typically 4 KB
-
-      virtual address = [ page number p | offset d ]
-                                 |
-                         page table[p] = f
-                                 |
-      physical address = [ frame number f | offset d ]
-   ```
-   ```
-      Process P (4 pages)              Physical memory (frames)
-      +--------+                       +--------+ frame 0
-      | page 0 |---------------------->| page 2 |
-      +--------+                       +--------+ frame 1
-      | page 1 |--------+              |  free  |
-      +--------+        |              +--------+ frame 2
-      | page 2 |---+    +------------->| page 1 |
-      +--------+   |                   +--------+ frame 3
-      | page 3 |-+ +------------------>| page 0 |
-      +--------+ |                     +--------+ frame 4
-                 +-------------------->| page 3 |
-                                       +--------+
-      The pages need NOT be next to each other in RAM.
-   ```
-   - What it gives: `no external fragmentation`, since any free frame fits any page; and it makes `virtual memory` possible, because unneeded pages can stay on disk.
-   - What it costs: a little `internal fragmentation` in the last page, the RAM used by the `page table`, and one extra memory access per reference — which is why a `TLB` is added.
-
-   Thrashing
-   - `Thrashing` is the state where the system spends more time `swapping pages between RAM and disk` than executing processes. Useful work nearly stops.
-   ```
-      How it builds up :
-
-      1. Too many processes are admitted.
-      2. Each gets FEWER FRAMES than its WORKING SET.
-      3. Nearly every reference is a PAGE FAULT.
-      4. Processes block on the paging disk , so the CPU goes IDLE.
-      5. The scheduler sees low CPU use and ADMITS MORE PROCESSES.
-      6. Frames get thinner still -> back to step 3.
-   ```
-   ```
-      CPU
-      util
-       |       ____
-       |     /     \        <- thrashing starts here
-       |   /         \
-       | /             \____
-       +---------------------> degree of multiprogramming
-   ```
-   - Symptoms: the disk runs continuously, response time becomes very long, throughput collapses and the CPU is mostly idle.
-   - Cures: `working set model` — give each process enough frames for its active pages and suspend a process when the total exceeds the frames available; `page fault frequency` — add frames to a process whose fault rate is too high and take frames away when it is too low; `local replacement` so a faulting process can evict only its own pages; and in practice, more RAM or a lower degree of multiprogramming.
-
-   - The relation between the two: paging is the `mechanism`, thrashing is what happens when that mechanism is `overloaded` — too many pages competing for too few frames.
-
-9. **What is page fault in computing systems? What does it occur?** *[BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
-
-   Answer: What a page fault is
-   - A `page fault` is the interrupt (a trap) raised by the hardware when a process refers to a page that is `not currently in physical memory`. It is not an error — in a demand-paged system it is the normal way pages get loaded.
-   ```
-      The page table entry carries a VALID / INVALID bit :
-
-           valid bit = 1  ->  the page IS in a frame  -> access proceeds
-           valid bit = 0  ->  the page is NOT resident -> PAGE FAULT
-   ```
-
-   When it occurs
-   ```
-      1. DEMAND PAGING - the first touch of a page. A new process starts
-         with all pages invalid, so its first few references all fault.
-         These are COLD-START faults and are unavoidable.
-      2. The page was EVICTED earlier by the replacement algorithm and is
-         referenced again.
-      3. The page is in the SWAP FILE on disk, not in RAM.
-      4. COPY-ON-WRITE - after fork(), a write to a shared page faults so
-         the OS can make a private copy.
-      5. MEMORY-MAPPED FILE - the first access to a mapped region.
-      6. An INVALID reference - a wild pointer outside the address space.
-         This one is a real error : the OS sends a segmentation fault and
-         kills the process.
-   ```
-
-   How the OS handles it
-   ```mermaid
-   flowchart TD
-       A[CPU references a page] --> B{Valid bit = 1?}
-       B -->|Yes| C[Access memory - done]
-       B -->|No| D[Trap to OS: page fault]
-       D --> E{Free frame available?}
-       E -->|No| F[Run page replacement, evict victim]
-       E -->|Yes| G[Read page from disk into frame]
-       F --> G
-       G --> H[Update page table, valid bit = 1]
-       H --> I[Restart the faulting instruction]
-   ```
-   ```
-      Steps in order :
-      1. The MMU traps to the kernel and saves the process state.
-      2. The OS checks whether the reference is LEGAL. If not -> kill.
-      3. It finds a free frame ; if there is none it runs the REPLACEMENT
-         ALGORITHM (LRU, FIFO, clock) to pick a VICTIM. A DIRTY victim
-         must be written back to disk first.
-      4. It schedules a disk read for the required page and BLOCKS the
-         process, so the CPU runs someone else meanwhile.
-      5. When the read finishes it updates the page table and the TLB.
-      6. It RESTARTS the faulting instruction - which now succeeds.
-   ```
-
-   Cost — why the fault rate must stay tiny
-   ```
-      Effective access time = (1 - p) * ma  +  p * (page fault time)
-
-           p  = page fault rate
-           ma = memory access time , say 100 ns
-           page fault service time , say 8 ms = 8,000,000 ns
-
-      If p = 0.001 :
-           EAT = 0.999 * 100 + 0.001 * 8,000,000
-               = 99.9 + 8000  =  8099.9 ns
-
-      That is about 80 TIMES SLOWER than 100 ns.
-      To keep the slowdown under 10 per cent, p must be below
-      about 0.0000025 - roughly one fault in 400,000 accesses.
-   ```
-   - If the fault rate stays high because processes have fewer frames than their `working sets`, the system enters `thrashing` and throughput collapses.
-
-   - Terminology worth keeping straight: a `page fault` means the page is not in RAM and is handled by the `operating system` in milliseconds. A `TLB miss` means only the translation is not cached; the page may still be in RAM, and the hardware handles it in nanoseconds.
-
-10. **Write short note on Virtual Memory and Cache memory.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
-
-    Answer: Virtual memory
-    - `Virtual memory` is a technique that lets a process run even when it is `larger than the installed RAM`. Only the pages currently in use are kept in RAM; the rest stay on disk in the `swap space`.
-    ```
-       The CPU issues only VIRTUAL addresses. The MMU translates each one
-       through the PAGE TABLE :
-
-            virtual address  = [ page number | offset ]
-                                      |
-                               page table lookup
-                                      |
-            physical address = [ frame number | offset ]
-    ```
-    - It runs on `demand paging`: a page is fetched only when referenced. If the valid bit is 0 the hardware raises a `page fault`; the OS finds a free frame (evicting a victim if none is free), reads the page from disk, updates the page table and restarts the instruction.
-    - Advantages: programs bigger than RAM can run; more processes fit, so the CPU stays busy; each process is `isolated` by its own page table; there is `no external fragmentation`; and libraries can be shared, with `copy-on-write` making `fork()` cheap.
-    - Cost: a page fault takes `milliseconds` against nanoseconds for a RAM access, and if processes get fewer frames than their `working sets` the system starts `thrashing` — all paging, no work.
-
-    Cache memory
-    - `Cache memory` is a small, very fast memory between the CPU and main memory. It holds recently and frequently used data and instructions so the CPU does not stall waiting for slow RAM.
-    ```
-       CPU <-> L1 <-> L2 <-> L3 <-> RAM <-> DISK
-            fastest, smallest ------> slowest, largest
-
-       L1 : ~32 KB  , 1-4 cycles , split into instruction and data
-       L2 : ~256 KB - 1 MB , per core
-       L3 : ~8-32 MB , shared between cores
-    ```
-    - It works because of `locality of reference` — `temporal` (what was just used will likely be used again) and `spatial` (nearby addresses come next, so a whole `block` is fetched, not one word).
-    - Mapping is `direct`, `fully associative` or `set associative`. Writes use `write-through` (update both at once, simple) or `write-back` (update the cache and mark it dirty, faster).
-    ```
-       Average access time = h * Tc + (1 - h) * Tm
-
-            h  = hit ratio , Tc = cache access time , Tm = memory time
-
-       Example : h = 0.9 , Tc = 10 ns , Tm = 100 ns
-            = 0.9 * 10 + 0.1 * 100 = 9 + 10 = 19 ns
-    ```
-
-    Difference in one view
-    | Point | Virtual memory | Cache memory |
-    |---|---|---|
-    | Purpose | Run programs `bigger than RAM` | Make access `faster` |
-    | Levels | RAM and `disk` | CPU and `RAM` |
-    | Managed by | `Operating system` | `Hardware` |
-    | Unit moved | Page, 4 KB or more | Block, 32-128 bytes |
-    | Miss cost | Milliseconds (`page fault`) | Nanoseconds (`cache miss`) |
-
-11. **(ii) Virtual Memory এর প্রয়োজনীয়তা কি ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) What virtual memory is
-    - `Virtual memory` lets a process run even when it is larger than the physical RAM. Only the pages in active use stay in RAM; the rest remain on disk in the `swap space`.
-
-    Why it is needed
-
-    (a) Address space limitation is removed
-    ```
-       A 4 GB program on a 2 GB machine :
-            without virtual memory -> cannot be loaded , cannot run
-            with virtual memory    -> only the ACTIVE pages are resident ,
-                                      so it runs normally
-    ```
-    - Before virtual memory the programmer had to split a large program into `overlays` and load them by hand. Virtual memory does that automatically.
-
-    (b) Higher degree of multiprogramming
-    ```
-       Without VM : each process needs its FULL size in RAM -> few
-            processes fit -> when they block on I/O the CPU idles.
-       With VM    : each process needs only its WORKING SET -> many more
-            fit -> better CPU utilisation and throughput.
-    ```
-
-    (c) Protection and isolation
-    ```
-       Every process has its own PAGE TABLE, so process A's page 5 and
-       process B's page 5 map to DIFFERENT frames. An address not mapped
-       in A's page table is rejected by the MMU, so a stray pointer in A
-       cannot touch B's memory.
-    ```
-
-    (d) No external fragmentation
-    - RAM is handed out in fixed-size `frames`, so any free frame fits any page. Memory never has to be compacted; only a little `internal fragmentation` remains in the last page of a process.
-
-    (e) Sharing and cheap process creation
-    - One copy of a shared library is mapped into many page tables. `Copy-on-write` lets `fork()` share every page read-only and copy a page only when a process writes to it.
-
-    How it works
-    ```
-       DEMAND PAGING - a page is loaded only when it is referenced.
-
-            reference -> valid bit = 1 ? yes -> access memory
-                                         no  -> PAGE FAULT
-                                                -> get a free frame , or
-                                                   evict a victim
-                                                -> read the page from disk
-                                                -> update the page table
-                                                -> restart the instruction
-    ```
-
-    The cost
-    ```
-       Page fault  : MILLISECONDS
-       RAM access  : NANOSECONDS
-
-       So the fault rate must stay very low. If processes are given fewer
-       frames than their working sets, the system THRASHES - it pages
-       continuously and does almost no work.
-    ```
-
-12. **A system uses 3 page frames for storing process pages in main memory. It uses the Least Recently Used (LRU) page replacement policy. Assume that all the page frames are initially empty. What is the total number of page faults that will occur while processing the page reference string given below? 4, 7, 6, 1, 7, 6, 1, 2, 7, 2.** *[BPDB Assistant Engineer (CSE) 2021 compact it 817 (ET: BUET)]*
-
-    Answer: Given, reference string = 4, 7, 6, 1, 7, 6, 1, 2, 7, 2 with 3 frames, all initially empty, LRU policy.
-
-    LRU rule
-    ```
-       On a fault with all frames full, evict the page that has NOT been
-       USED for the LONGEST TIME.
-    ```
-
-    Step-by-step trace
-    ```
-     Ref     4    7    6    1    7    6    1    2    7    2
-     F1      4    4    4    1    1    1    1    1    1    1
-     F2      .    7    7    7    7    7    7    2    2    2
-     F3      .    .    6    6    6    6    6    6    7    7
-           FLT  FLT  FLT  FLT  HIT  HIT  HIT  FLT  FLT  HIT
-    ```
-    ```
-     Ref 4 : free frame                    -> FAULT  [4]
-     Ref 7 : free frame                    -> FAULT  [4,7]
-     Ref 6 : free frame                    -> FAULT  [4,7,6]
-     Ref 1 : full ; last used 4@t1 7@t2 6@t3
-             least recent = 4              -> FAULT , 4 out , 1 in
-                                                      [1,7,6]
-     Ref 7 : present                       -> HIT
-     Ref 6 : present                       -> HIT
-     Ref 1 : present                       -> HIT
-     Ref 2 : full ; last used 7@t5 6@t6 1@t7
-             least recent = 7              -> FAULT , 7 out , 2 in
-                                                      [1,2,6]
-     Ref 7 : full ; last used 6@t6 1@t7 2@t8
-             least recent = 6              -> FAULT , 6 out , 7 in
-                                                      [1,2,7]
-     Ref 2 : present                       -> HIT
-    ```
-
-    Result
-    ```
-            Total references = 10
-            Page faults      = 6
-            Page hits        = 4
-
-            Hit  ratio = 4 / 10 = 0.40  (40 %)
-            Miss ratio = 6 / 10 = 0.60  (60 %)
-    ```
-    - 3 of the 6 faults are unavoidable `cold-start` faults, because the frames begin empty. Only 3 are genuine replacement faults.
-    - Note reference 9: page 7 had just been evicted at reference 8 and is needed immediately afterwards. This is the weakness of a fixed-frame policy — the eviction decision uses only the `past`, while the request pattern depends on the `future`. Optimal replacement would have kept 7 and evicted 6 instead.
-
-13. **Briefly explain the concept of ‘Thrashing’ in terms of OS.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 822 (ET: BUET)]*
-
-    Answer: What thrashing is
-    - `Thrashing` is the state in which the system spends more time `swapping pages between RAM and disk` than actually executing processes. Useful work almost stops.
-
-    How it starts
-    ```
-       1. Too many processes are kept in memory at once.
-       2. Each one gets FEWER FRAMES than its WORKING SET - the set of
-          pages it is actively using.
-       3. It cannot hold its active pages, so nearly every reference is a
-          PAGE FAULT.
-       4. The process blocks on the paging disk , so the CPU goes IDLE.
-       5. The scheduler sees low CPU utilisation, thinks the system is
-          under-loaded, and ADMITS MORE PROCESSES.
-       6. The new processes steal frames from the old ones -> step 3.
-    ```
-    - The vicious circle is the point: the scheduler's attempted cure is what makes it worse.
-
-    Effect on the system
-    ```
-       CPU
-       util
-        |       ____
-        |     /     \        <- thrashing begins
-        |   /         \
-        | /             \____
-        +---------------------> degree of multiprogramming
-                  ^
-            optimal point
-    ```
-    - Symptoms: the disk runs continuously, response time becomes very long, throughput collapses, and the CPU is mostly idle even though the machine seems frozen.
-
-    Why it happens — locality
-    - A program uses its pages unevenly. At any moment it works inside a small `locality` — one function's code, its local variables, an array being scanned. If the frames allotted can hold the current locality, faults are rare; if they cannot, faults explode.
-
-    How it is controlled
-    ```
-       WORKING SET MODEL (Denning)
-            W(t, D) = pages referenced in the last D references.
-            Give each process enough frames to hold its working set.
-            If SUM of working sets > total frames , SUSPEND a process.
-
-       PAGE FAULT FREQUENCY (PFF)
-            fault rate ABOVE the upper limit -> give MORE frames
-            fault rate BELOW the lower limit -> take frames AWAY
-            no frames left to give           -> SUSPEND a process
-
-       LOCAL REPLACEMENT
-            A faulting process may replace only ITS OWN pages, so it
-            cannot steal frames and spread the problem.
-
-       PRACTICAL : add RAM , use a better replacement policy , lower the
-            degree of multiprogramming.
-    ```
-
-    - The key point: thrashing is not caused by a slow CPU or a slow disk. It is caused by giving processes `fewer frames than their working sets need`. The remedy is to reduce the load or increase the frames — never to admit more processes.
-
-14. **(a) What do you mean by virtual memory?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
-
-    Answer: What virtual memory is
-    - `Virtual memory` is a technique that lets a process run even when it is `larger than the physical RAM`. Only the pages currently needed are kept in RAM; the rest stay on disk in the `swap space`. Each process therefore sees one large, continuous address space of its own, whatever the real memory size is.
-
-    How it works
-    ```
-       The CPU issues only VIRTUAL addresses. The MMU translates each one
-       through the PAGE TABLE :
-
-            virtual address  = [ page number p | offset d ]
-                                        |
-                                page table[p] = f
-                                        |
-            physical address = [ frame number f | offset d ]
-
-       The page table entry also holds :
-            VALID bit  - is the page in RAM ?
-            DIRTY bit  - has it been modified ?
-            protection bits - read , write , execute
-    ```
-    ```
-       DEMAND PAGING - fetch a page only when it is referenced :
-
-            valid bit = 1  -> access memory , done
-            valid bit = 0  -> PAGE FAULT
-                              -> take a free frame , or evict a VICTIM
-                                 chosen by LRU / FIFO / clock
-                              -> write the victim back if it is DIRTY
-                              -> read the wanted page from disk
-                              -> set valid bit = 1 , update the TLB
-                              -> RESTART the faulting instruction
-    ```
-    - A `TLB` (a small cache of recent translations) is used so most references need no page-table lookup at all.
-
-    What it gives
-    - Programs `bigger than RAM` can run.
-    - A `higher degree of multiprogramming`, since each process needs only its working set resident — so the CPU stays busy.
-    - `Protection` — each process has its own page table, so a stray pointer cannot reach another process's memory.
-    - `No external fragmentation`, because any free frame fits any page.
-    - `Sharing` of libraries, and cheap `fork()` through `copy-on-write`.
-
-    The cost
-    ```
-       Page fault : MILLISECONDS      RAM access : NANOSECONDS
-
-       Effective access time = (1 - p) * ma + p * (fault service time)
-
-       With ma = 100 ns , fault = 8 ms , p = 0.001 :
-            EAT = 0.999*100 + 0.001*8,000,000 = 8099.9 ns
-            -> about 80 times slower than 100 ns
-    ```
-    - So the fault rate must be extremely small. If processes get fewer frames than their working sets, the system enters `thrashing` — it pages continuously and does almost no useful work.
-
-15. **A system uses 8 page frames to store process pages in main memory. It uses the minimum page replacement policy. Assume that all page frames are initially blank. 64 separate pages were inserted and then the pages were inserted reverse order. How many pages will be miss?** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
-
-    Answer: Given
-    ```
-       Frames                = 8 , all initially empty
-       Policy                = MINIMUM page replacement (OPTIMAL / MIN) -
-                               evict the page needed FARTHEST in the future
-       64 distinct pages are referenced in order , then the SAME 64 pages
-       are referenced in REVERSE order.
-
-       Reference string : 1, 2, 3, ... , 64, 64, 63, 62, ... , 2, 1
-       Total references : 64 + 64 = 128
-    ```
-
-    Phase 1 — the forward pass, references 1 to 64
-    ```
-       Every page is seen for the FIRST TIME, so every reference is a MISS.
-
-            Misses in phase 1 = 64
-    ```
-    - What is left in the frames at the end matters. Optimal always evicts the page needed farthest ahead. During the forward pass, the pages needed soonest in the reverse pass are the `high-numbered` ones, so optimal keeps those and throws out the low-numbered ones.
-    ```
-       After reference 64, the 8 frames hold the LAST 8 pages loaded :
-
-            { 57 , 58 , 59 , 60 , 61 , 62 , 63 , 64 }
-    ```
-
-    Phase 2 — the reverse pass, 64 down to 1
-    ```
-       64 -> HIT     63 -> HIT     62 -> HIT     61 -> HIT
-       60 -> HIT     59 -> HIT     58 -> HIT     57 -> HIT
-                                                 --> 8 HITS
-
-       56 -> MISS , and from here on every page has already been evicted
-            and will never be reused, so each one is a MISS :
-
-            pages 56 , 55 , 54 , ... , 2 , 1   ->  56 MISSES
-    ```
-    ```
-            Misses in phase 2 = 56
-    ```
-
-    Total
-    ```
-            Misses = 64 (forward)  +  56 (reverse)  =  120
-
-            Hits   = 128 - 120 = 8
-
-            Miss ratio = 120 / 128 = 0.9375   (93.75 %)
-            Hit  ratio =   8 / 128 = 0.0625   ( 6.25 %)
-    ```
-
-    Answer: `120 page misses`.
-
-    General formula for this pattern
-    ```
-       With F frames and N distinct pages referenced forward then reverse
-       (N > F) :
-
-            misses = N + (N - F)  =  2N - F
-
-       Check : 2(64) - 8 = 128 - 8 = 120        matches
-    ```
-    - Why the result is so bad: only `8` of the 128 references hit. The reference pattern has no reuse within a window of 8 pages — page 1 is touched at reference 1 and again at reference 128, 127 references apart. No policy with 8 frames can help, and since MIN is provably `optimal`, FIFO and LRU cannot do better than 120 here either.
-
-16. **(খ) Virtual Memory বলতে কী বোঝায়? এর কার্যপদ্ধতি সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1093 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) What virtual memory means
-    - `Virtual memory` is a technique that lets a process run even when it is `larger than the installed RAM`. Only the pages currently in use are kept in RAM; the rest stay on disk in the `swap space`. Every process therefore sees one large, continuous address space of its own, regardless of the real memory size.
-
-    Working procedure
-
-    Step 1 — split memory into equal blocks
-    ```
-       Virtual memory of a process  ->  PAGES     (fixed size, e.g. 4 KB)
-       Physical memory (RAM)        ->  FRAMES    (same size)
-
-       Any page can go into any free frame - they need not be adjacent.
-    ```
-
-    Step 2 — address translation by the MMU
-    ```
-       virtual address  = [ page number p | offset d ]
-                                    |
-                            page table[p] = f
-                                    |
-       physical address = [ frame number f | offset d ]
-
-       Each page table entry also holds :
-            VALID bit      - is the page in RAM ?
-            DIRTY bit      - was it modified ?
-            protection bits - read / write / execute
-    ```
-    - A `TLB` caches the most recent translations, so most references need no page-table lookup.
-
-    Step 3 — demand paging and the page fault
-    ```mermaid
-    flowchart TD
-        A[CPU issues virtual address] --> B{Valid bit = 1?}
-        B -->|Yes| C[Access the frame - done]
-        B -->|No| D[Page fault - trap to OS]
-        D --> E{Free frame?}
-        E -->|No| F[Evict a victim, write back if dirty]
-        E -->|Yes| G[Read the page from disk]
-        F --> G
-        G --> H[Update page table and TLB]
-        H --> I[Restart the instruction]
-    ```
-    ```
-       1. valid bit = 0  -> the hardware raises a PAGE FAULT.
-       2. The OS checks that the reference is LEGAL ; if not , it kills
-          the process with a segmentation fault.
-       3. It finds a free frame ; if none , the REPLACEMENT ALGORITHM
-          (LRU , FIFO , clock) picks a VICTIM. A DIRTY victim is written
-          back to the swap space first.
-       4. It reads the required page from disk , and BLOCKS the process
-          meanwhile so the CPU can run another one.
-       5. It updates the page table and the TLB.
-       6. It RESTARTS the faulting instruction , which now succeeds.
-    ```
-
-    What it gives, and what it costs
-    ```
-       GIVES : programs bigger than RAM can run ; more processes fit , so
-               CPU utilisation rises ; each process is ISOLATED by its own
-               page table ; NO EXTERNAL FRAGMENTATION ; libraries can be
-               shared , and fork() is cheap through COPY-ON-WRITE.
-
-       COSTS : a page fault takes MILLISECONDS against NANOSECONDS for a
-               RAM access ; page tables occupy RAM ; and if processes get
-               fewer frames than their WORKING SETS the system THRASHES -
-               it pages continuously and does almost no work.
-    ```
-
-## Memory Management & Paging (16)
+26. **Write various types of CPU scheduling. Describes a CPU scheduling method which has best performance.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320]]*
+
+Answer:
+    Types of CPU Scheduling Algorithms:
+    - 1. First-Come, First-Served (FCFS): Non-preemptive; processes are scheduled in order of arrival. Suffers from Convoy Effect.
+    - 2. Shortest Job First (SJF) / Shortest Remaining Time First (SRTF): Allocates CPU to the process with the smallest CPU burst time (Non-preemptive SJF and Preemptive SRTF).
+    - 3. Priority Scheduling: Allocates CPU based on priority levels; preemptive or non-preemptive. Suffers from starvation (mitigated via Aging).
+    - 4. Round Robin (RR): Preemptive; uses a fixed time quantum ($q$) in a cyclic FIFO queue. Ideal for time-sharing systems.
+    - 5. Multilevel Queue (MLQ) & Multilevel Feedback Queue (MLFQ): Partitions ready queue into multiple priority queues with dynamic process migration.
+
+    CPU Scheduling Method with Best Performance:
+    - **Shortest Job First (SJF) / SRTF** is provably optimal for minimizing average waiting time for a given set of processes.
+    - How it works: By executing shortest jobs first, shorter processes release resources rapidly, drastically lowering the queue waiting time for all subsequent processes.
+    - For interactive time-sharing systems, **Round Robin (with an optimal time quantum where 80% of bursts are shorter than $q$)** provides the best interactive responsiveness and fairness.
+
+## Memory Management & Paging (18)
 
 1. **A system uses 16 bit logical address and a page size of 1 KB.**
    **(i) How many pages are in logical address space?**
+   **(ii) How many bits are used for the page number and offset?** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1437 (ET: BUET)]*
+
+**(i) How many pages are in logical address space?**
    **(ii) How many bits are used for the page number and offset?** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1437 (ET: BUET)]*
 
    Answer: Given
@@ -10828,6 +5884,9 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 2. **Consider a logical address space of 512 pages, each of 2-KB page size, mapped onto a physical memory containing 128 frames.**
    **a. How many bits are required in the logical address?**
+   **b. How many bits are required in the physical address?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
+
+**a. How many bits are required in the logical address?**
    **b. How many bits are required in the physical address?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
 
    Answer: Given
@@ -10906,6 +5965,14 @@ The content of the matrix. Need is defined to be Max – Allocation.
  * **(i) How many pages are there in the virtual address space? Explain your answer.**
  * **(ii) What is the size of the page table? Explain your answer.**
 
+* Physical memory (RAM): 4\text{ GB}
+ * Page size: 4\text{ KB}
+ * Virtual address space: 32\text{ bits}
+ * Page table entry size: 8\text{ bytes}
+**Answer the following:**
+ * **(i) How many pages are there in the virtual address space? Explain your answer.**
+ * **(ii) What is the size of the page table? Explain your answer.**
+
    Answer: Given
    ```
       Physical memory (RAM)   = 4 GB
@@ -10970,7 +6037,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 4. **Compare “Paging” and “Segmentation” memory management technique?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
 
-   Answer: Comparison of paging and segmentation
+Answer: Comparison of paging and segmentation
 
    | Point | Paging | Segmentation |
    |---|---|---|
@@ -11028,7 +6095,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 5. **The __________ swaps process in and out of the memory.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: The blank is filled by the `medium-term scheduler` (also called the `swapper`).
+Answer: The blank is filled by the `medium-term scheduler` (also called the `swapper`).
    ```
       The MEDIUM-TERM SCHEDULER swaps processes in and out of memory.
    ```
@@ -11069,7 +6136,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 6. **Difference between Paging and Segmentation.** *[BTCL - JAM ( Technical) 05.04.2024 compact it 383 (ET: BUET)]*
 
-   Answer: Difference between paging and segmentation
+Answer: Difference between paging and segmentation
 
    | Point | Paging | Segmentation |
    |---|---|---|
@@ -11123,7 +6190,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 7. **(ক) Swapping কী? Internal এবং External Fragmentation এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 414 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What swapping is
+Answer: (Answered in English, as required for IT topics.) What swapping is
    - `Swapping` is moving a whole process out of RAM to the disk (the `swap space` or `backing store`) and bringing it back later. It frees memory for other processes when RAM is short.
    ```
       RAM                              DISK (swap space)
@@ -11173,7 +6240,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 8. **Find out total number of pages, when page size 4KB and address space 32 bit.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 588 (ET: BUET)]*
 
-   Answer: Given
+Answer: Given
    ```
       Page size    = 4 KB = 4096 bytes = 2^12 bytes
       Address space = 32 bits , so the space is 2^32 bytes = 4 GB
@@ -11213,7 +6280,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 9. **(ক) Paging এবং Segmentation এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 609 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Difference between paging and segmentation
+Answer: (Answered in English, as required for IT topics.) Difference between paging and segmentation
 
    | Point | Paging | Segmentation |
    |---|---|---|
@@ -11268,7 +6335,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 10. **(খ) Operating System-এর Memory hierarchy সচিত্র বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 611 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) What the memory hierarchy is
+Answer: (Answered in English, as required for IT topics.) What the memory hierarchy is
     - The `memory hierarchy` arranges storage in levels. Going down the pyramid the memory gets `larger and cheaper but slower`; going up it gets `faster but smaller and costlier`. The aim is to give the CPU the speed of the top level at close to the cost of the bottom level.
 
     Diagram
@@ -11345,7 +6412,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 11. **(খ) Internal এবং External fragmentation এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Difference between internal and external fragmentation
+Answer: (Answered in English, as required for IT topics.) Difference between internal and external fragmentation
 
     | Point | Internal fragmentation | External fragmentation |
     |---|---|---|
@@ -11404,7 +6471,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 12. **(a) What is demand paging?** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 821 (ET: BUET)]*
 
-    Answer: What demand paging is
+Answer: What demand paging is
     - `Demand paging` is a way of implementing virtual memory in which a page is brought into RAM `only when it is actually referenced`, not when the process starts. It is `lazy loading` — nothing is fetched until it is needed.
     ```
        Without demand paging : load the WHOLE program into RAM, then run.
@@ -11465,7 +6532,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 13. **In the given example, let us assume the jobs and the memory requirements as the following: Job1=90k, Job2=20k, Job3=50k, Job4=200k. Let the free pace memory allocation blocks are: Block1=50k, Block2=100k, Block3=90k, Block4=200k, Block5=50k.** *[Janata Bank Assistant System Administrator 2021 compact it 939-940 (ET: N/A)]*
 
-    Answer: The question gives the data but does not say which allocation strategy to apply, so all three standard strategies are worked out.
+Answer: The question gives the data but does not say which allocation strategy to apply, so all three standard strategies are worked out.
     ```
        Jobs (in order)   : J1 = 90 K , J2 = 20 K , J3 = 50 K , J4 = 200 K
        Free blocks       : B1 = 50 K , B2 = 100 K , B3 = 90 K ,
@@ -11549,7 +6616,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 14. **(ক) অপারেটিং সিস্টেম এর ক্ষেত্রে Swapping কী? কোন ক্ষেত্রে এটি ব্যবহৃত হয় লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) What swapping is
+Answer: (Answered in English, as required for IT topics.) What swapping is
     - `Swapping` is moving a whole process out of RAM to the disk and bringing it back later. The disk area used is called the `swap space` or `backing store`.
     ```
        RAM                              DISK (swap space)
@@ -11610,7 +6677,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 15. **(a) What do you mean by page table for memory management? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1129 (ET: N/A)]*
 
-    Answer: What a page table is
+Answer: What a page table is
     - A `page table` is the data structure the operating system keeps `for each process` to record which `frame` of physical memory holds each of its `pages`. It is the map the MMU uses to turn a virtual address into a physical one.
     ```
        One entry per virtual page. The entry holds :
@@ -11686,7 +6753,7 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 16. **Why page are sizes always powers of 2?** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
 
-    Answer: Page sizes are always a power of 2 so that the hardware can split a virtual address into a `page number` and an `offset` by `simply cutting the bit string`, with no division or multiplication at all.
+Answer: Page sizes are always a power of 2 so that the hardware can split a virtual address into a `page number` and an `offset` by `simply cutting the bit string`, with no division or multiplication at all.
 
     The reason
     ```
@@ -11746,11 +6813,45 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
     - The same argument explains why `cache block sizes`, `frame sizes`, `disk sector sizes` and `TLB entry counts` are also powers of 2. Common page sizes are `4 KB (2^12)`, `2 MB (2^21)` and `1 GB (2^30)` for huge pages — every one a power of two.
 
-## Process Management & Process States (12)
+17. **(a) Consider a computer system with the following specifications: 2+2=4** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72]]*
+Physical memory (RAM): 4 GB, Page size: 4 KB, Virtual address space: 32 bits, Page table entry size: 8 bytes, Answer the following: (i) How many pages are there in the virtual address space? Explain your answer. (ii) What is the size of the page table? Explain your answer.
 
-1. **(b) What is process? Describe different states of a process.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
+Answer:
+    Given:
+    - Virtual Address Space = $32\text{ bits} \implies 2^{32}\text{ bytes} = 4\text{ GB}$
+    - Page Size = $4\text{ KB} = 4 \times 1024\text{ bytes} = 2^{12}\text{ bytes}$
+    - Page Table Entry (PTE) Size = $8\text{ bytes}$
+    - Physical Memory (RAM) = $4\text{ GB}$
 
-   Answer: What a process is
+    (i) Number of Pages in Virtual Address Space:
+    $$\text{Number of Pages} = \frac{\text{Total Virtual Address Space}}{\text{Page Size}} = \frac{2^{32}\text{ bytes}}{2^{12}\text{ bytes}} = 2^{20} = 1,048,576\text{ pages (1 Mega Pages)}$$
+    - Explanation: A 32-bit address space contains $2^{32}$ individual byte addresses. Dividing by $2^{12}$ bytes per page leaves 20 bits for the Page Number ($p$), yielding $2^{20}$ total virtual pages.
+
+    (ii) Size of the Page Table:
+    $$\text{Page Table Size} = \text{Number of Pages} \times \text{PTE Size} = 2^{20} \times 8\text{ bytes} = 8,388,608\text{ bytes} = 8\text{ MB}$$
+    - Explanation: A single-level page table must store one entry for every virtual page. With $2^{20}$ entries of 8 bytes each, the total memory consumed by the page table is $2^{20} \times 8 = 8\text{ MB}$.
+
+18. **What is Thrashing? How does it impact CPU performance and system efficiency?** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 228]]*
+
+Answer:
+    Thrashing is a severe operating system degradation state where the system spends substantially more time swapping virtual memory pages between RAM and secondary storage (paging activity) than executing actual user processes.
+
+    Causes of Thrashing:
+    - Occurs when the degree of multiprogramming is excessively high, and the sum of the working sets of all active processes exceeds the total available physical memory frames.
+
+    Impact on CPU Performance & System Efficiency:
+    - CPU Utilization Collapses: Processes frequently encounter page faults, entering wait states for disk I/O. The CPU scheduler perceives low utilization and attempts to introduce more processes, accelerating system collapse.
+    - System Unresponsiveness: Throughput drops near zero, and the system becomes completely frozen or unresponsive.
+
+    Prevention Techniques:
+    - Working Set Model: Ensure that a process is allocated sufficient frames to hold its active working set before dispatching.
+    - Page Fault Frequency (PFF): Dynamically monitor page fault rates; allocate frames if PFF is too high, or suspend processes if memory is saturated.
+
+## OS Concepts & Process Management (7)
+
+1. **(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
+
+Answer: What a process is
    - A `process` is a program in `execution`. A program is a passive file on disk; a process is the active thing the OS is running, with its own memory, registers and program counter.
    ```
       A process consists of :
@@ -11811,3080 +6912,137 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
    - Two more states appear in systems that swap: `Suspended-Ready` and `Suspended-Blocked`, entered when the `medium-term scheduler` swaps a process out to disk to free memory.
 
-2. **(c) Define context switch with proper example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
+2. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
 
-   Answer: What a context switch is
-   - A `context switch` is the act of saving the state of the process that is running and loading the saved state of another, so the CPU can switch from one process to the other.
-   ```
-      The "context" that is saved and restored :
-           program counter (PC)
-           all CPU registers , stack pointer , status flags
-           memory management information - page table base register
-           process state , priority , accounting data
+Answer:
+    A Microcontroller integrates the CPU, RAM, ROM, timers, and I/O ports onto a single integrated circuit, whereas a Microprocessor contains only the CPU core and requires external chips.
 
-      All of it is kept in the PROCESS CONTROL BLOCK (PCB).
-   ```
+    Advantages of Microcontroller over Microprocessor:
+    - 1. Compact Footprint & Low Cost: Single-chip integration eliminates external memory and bus routing, drastically reducing manufacturing cost and PCB board size.
+    - 2. Low Power Consumption: Operates on milliwatts, making it ideal for battery-powered embedded devices and IoT sensors.
+    - 3. Dedicated Real-Time Control: Optimized for specific control tasks with built-in ADC, PWM, and hardware interrupt pins.
+    - 4. High Reliability: Fewer external components mean lower vulnerability to electrical noise, loose connections, and hardware faults.
+    - 5. Simplified Circuit Design: Minimal external support components required.
 
-   The steps
-   ```mermaid
-   sequenceDiagram
-       participant P1 as Process P1
-       participant OS as Kernel
-       participant P2 as Process P2
-       P1->>OS: interrupt or system call
-       OS->>OS: save state of P1 into PCB1
-       OS->>OS: select P2 (scheduler)
-       OS->>OS: load state of P2 from PCB2
-       OS->>P2: resume P2
-   ```
-   ```
-      1. An INTERRUPT or SYSTEM CALL stops P1.
-      2. The OS SAVES P1's registers and PC into PCB1.
-      3. P1's state changes to READY or WAITING ; it joins a queue.
-      4. The scheduler PICKS P2.
-      5. The OS LOADS P2's registers and PC from PCB2.
-      6. The page table base register is switched to P2's table, and
-         the TLB is flushed or tagged.
-      7. Control jumps to P2's saved PC ; P2 resumes exactly where it
-         had stopped.
-   ```
+3. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
 
-   Example
-   ```
-      P1 is a text editor , P2 is a music player. Time slice = 10 ms.
+Answer:
+    Multithreading is an execution model allowing multiple lightweight execution paths (threads) within a single process to run concurrently, sharing code, data, and OS resources.
 
-      t = 0 ms   P1 RUNNING. PC = 0x4021 , R1 = 55
-      t = 10 ms  Timer interrupt.
-                 SAVE : PCB1 <- PC 0x4021 , R1 = 55 , flags
-                 P1 -> READY
-                 LOAD : from PCB2 -> PC 0x8110 , R1 = 92
-                 P2 -> RUNNING
-      t = 20 ms  Timer interrupt again.
-                 SAVE PCB2 , LOAD PCB1 -> P1 resumes at 0x4021 with
-                 R1 = 55 , exactly as if nothing had happened.
+    Key Advantages of Multithreading:
+    - Enhanced Responsiveness: In GUI/web applications, background operations (e.g., file upload, database sync) run on worker threads, keeping the user interface smooth and responsive.
+    - Parallelism on Multi-Core CPUs: Utilizes modern multi-core hardware architectures by executing independent compute-heavy tasks simultaneously.
+    - Resource Sharing & Economy: Threads share common memory space and address segments, eliminating the heavy memory overhead of spawning separate processes.
+    - Low Context Switching Overhead: Thread context switching is significantly faster than process context switching since memory translation maps do not need swapping.
+    - Higher Throughput: Enables web servers (e.g., Netty, Nginx, Tomcat) to handle thousands of concurrent client requests efficiently.
 
-      The user sees both the editor and the music running "together",
-      though the CPU only ever ran one at a time.
-   ```
+4. **What are the major challenges faced by software engineers during software development? Explain with examples how these challenges affect the development process and how they can be mitigated.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
 
-   When it happens
-   ```
-      - the TIME SLICE expires (timer interrupt)
-      - a process makes an I/O request and BLOCKS
-      - a HIGHER-PRIORITY process becomes ready (preemption)
-      - an interrupt from a device arrives
-      - the process exits
-   ```
+Answer:
+    Major Software Engineering Challenges:
 
-   The cost
-   ```
-      A context switch is PURE OVERHEAD - no user work is done during it.
+    - 1. Scope Creep & Volatile Requirements:
+      - Impact: Continuous unplanned feature additions cause deadline breaches and budget overruns.
+      - Mitigation: Adopt Agile/Scrum methodologies with iterative sprint planning and clear change-control boards (CCB).
+    - 2. Technical Debt & Legacy Code Integration:
+      - Impact: Quick, poorly documented code patches increase maintenance cost and cause regression bugs.
+      - Mitigation: Enforce automated CI/CD unit testing, strict peer code reviews, and regular refactoring cycles.
+    - 3. Security Vulnerabilities:
+      - Impact: Security flaws (SQLi, XSS, broken access) lead to data breaches and regulatory penalties.
+      - Mitigation: Implement DevSecOps practices, static/dynamic code analysis (SAST/DAST), and automated dependency vulnerability scanners.
+    - 4. System Scalability & Concurrency Bottlenecks:
+      - Impact: Application crashes under sudden peak user traffic.
+      - Mitigation: Utilize microservices architecture, horizontal container autoscaling, database connection pooling, and Redis distributed caching.
 
-           typical cost : 1 - 100 microseconds
-           plus an INDIRECT cost : the new process finds the CACHE and
-           the TLB filled with the OLD process's data, so it runs slowly
-           until they warm up again. This is often the bigger cost.
+5. **Computer A has a 2 GHz processor and takes 250 picoseconds to execute a single instruction, while Computer B has a 2.5 GHz processor and takes 500 picoseconds per instruction. Which computer is faster?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
 
-      That is why the time slice must not be too small : with a 1 ms
-      slice and a 100 us switch, 10 per cent of the CPU is lost to
-      switching alone.
-   ```
-   - A `thread` switch inside the same process is much cheaper, because the address space, the page table and the open files are shared — only the registers and the stack pointer change, and the TLB need not be flushed.
+Answer:
+    Execution speed is strictly determined by the **actual execution time per instruction**, not raw clock frequency alone:
 
-3. **(খ) Process কী? বিভিন্ন ধরনের Process state এর কাজ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 414 (ET: N/A)]*
+    - Computer A:
+      - Execution Time per Instruction ($T_A$) = $250\text{ picoseconds} = 250 \times 10^{-12}\text{ seconds}$.
+    - Computer B:
+      - Execution Time per Instruction ($T_B$) = $500\text{ picoseconds} = 500 \times 10^{-12}\text{ seconds}$.
 
-   Answer: (Answered in English, as required for IT topics.) What a process is
-   - A `process` is a program in `execution`. The program is a passive file lying on disk; the process is the active thing the OS is actually running, with its own memory, registers and program counter.
-   ```
-      A process is made of :
-           TEXT   - the program code
-           DATA   - global and static variables
-           HEAP   - memory allocated at run time
-           STACK  - function calls , parameters , local variables
-           program counter and CPU registers
-           PROCESS CONTROL BLOCK (PCB) - the OS's record of it
-   ```
+    Comparison:
+    $$\text{Speedup Ratio} = \frac{T_B}{T_A} = \frac{500\text{ ps}}{250\text{ ps}} = 2.0$$
 
-   The states and what each one does
-   ```mermaid
-   stateDiagram-v2
-       [*] --> New
-       New --> Ready: admitted
-       Ready --> Running: dispatch
-       Running --> Ready: time slice over
-       Running --> Waiting: I/O request
-       Waiting --> Ready: I/O complete
-       Running --> Terminated: exit
-       Terminated --> [*]
-   ```
-   ```
-      NEW
-           The process is being created. The OS builds its PCB, assigns
-           a PID and allocates memory. It is not yet running.
-           Work done here : admission control - the LONG-TERM SCHEDULER
-           decides whether memory is available to let it in.
+    Conclusion:
+    - **Computer A is 2 times faster than Computer B** because it requires only half the time ($250\text{ ps}$ vs $500\text{ ps}$) to execute each instruction.
 
-      READY
-           The process is in memory and can run ; it lacks only the CPU.
-           It waits in the READY QUEUE.
-           Work done here : the SHORT-TERM SCHEDULER chooses among all
-           ready processes using FCFS , SJF , Round Robin or priority.
+6. **What are the five states of a process in an operating system?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
-      RUNNING
-           The CPU is executing its instructions. On one core, only ONE
-           process is running at any instant.
-           Work done here : the actual computation , plus system calls
-           the process issues.
+Answer:
+    The five lifecycle states of a process in an Operating System are:
 
-      WAITING (BLOCKED)
-           The process cannot proceed until an event occurs - I/O
-           completion, user input, a semaphore, a signal. It is NOT in
-           the ready queue and cannot be scheduled.
-           Work done here : the device or event is serviced ; when the
-           interrupt arrives the process is moved back to READY.
-
-      TERMINATED
-           Execution has finished, or the process was killed. Its memory
-           and open files are released and its PCB is removed.
-           Work done here : the exit status is passed to the parent.
-   ```
-
-   The transitions
-   ```
-      New -> Ready         ADMIT      long-term scheduler
-      Ready -> Running     DISPATCH   short-term scheduler
-      Running -> Ready     TIMEOUT    preemption ; the process COULD
-                                      still run
-      Running -> Waiting   BLOCK      it asked for I/O ; VOLUNTARY
-      Waiting -> Ready     WAKE UP    the event finished - note it goes
-                                      to READY, not to RUNNING
-      Running -> Terminated  EXIT
-   ```
-   - The point examiners look for: there is `no Waiting -> Running edge`. A woken process must queue up and be scheduled again like everyone else.
-   - In systems that swap, two more states exist — `Suspended-Ready` and `Suspended-Blocked` — entered when the `medium-term scheduler` moves a process out to disk to free memory.
-
-4. **Explain the process state.** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
-
-   Answer: A `process state` says what a process is doing at this moment. The OS keeps the state in the process's `PCB` and moves it from queue to queue as the state changes.
-
-   The five states
-   ```mermaid
-   stateDiagram-v2
-       [*] --> New
-       New --> Ready: admitted
-       Ready --> Running: dispatch
-       Running --> Ready: time slice over
-       Running --> Waiting: I/O request
-       Waiting --> Ready: I/O complete
-       Running --> Terminated: exit
-       Terminated --> [*]
-   ```
-   ```
-      NEW        Being created. The PCB is set up and memory assigned.
-                 Not yet in the ready queue.
-
-      READY      In memory and able to run ; waiting only for the CPU.
-                 Sits in the READY QUEUE. Many processes can be ready.
-
-      RUNNING    The CPU is executing its instructions. Only ONE per
-                 core at any instant.
-
-      WAITING    Cannot proceed until an event occurs - I/O completion,
-      (BLOCKED)  user input, a semaphore. NOT in the ready queue, so it
-                 cannot be scheduled.
-
-      TERMINATED Finished or killed. Resources freed, PCB removed.
-   ```
-
-   The transitions
-   ```
-      New -> Ready         ADMIT     the long-term scheduler lets it in
-      Ready -> Running     DISPATCH  the short-term scheduler picks it
-      Running -> Ready     TIMEOUT   its slice expired, or a higher
-                                     priority process arrived.
-                                     INVOLUNTARY - it could still run.
-      Running -> Waiting   BLOCK     it REQUESTED I/O.
-                                     VOLUNTARY - it cannot run now.
-      Waiting -> Ready     WAKE UP   the event completed.
-                                     It goes to READY, NOT to RUNNING.
-      Running -> Terminated  EXIT
-   ```
-
-   Two points that are commonly asked
-   ```
-      1. There is NO  Waiting -> Running  edge.
-         A woken process must join the ready queue and be scheduled
-         again like every other ready process.
-
-      2. There is NO  Ready -> Waiting  edge.
-         Only a RUNNING process can ask for I/O, so only a running
-         process can block.
-   ```
-
-   The difference between Ready and Waiting
-   | Point | Ready | Waiting |
-   |---|---|---|
-   | Why it is not running | The CPU is busy | It is waiting for an `event` |
-   | Could it run now? | `Yes`, if given the CPU | `No`, the CPU would not help |
-   | Which queue | Ready queue | `Device` / event queue |
-   | What frees it | The `scheduler` | An `interrupt` from the device |
-
-   The suspended states
-   ```
-      When memory is short, the MEDIUM-TERM SCHEDULER swaps a process
-      out to disk. Two more states then appear :
-
-           SUSPENDED-READY    swapped out , but able to run
-           SUSPENDED-BLOCKED  swapped out , and still waiting for an event
-
-      Ready  ->  Suspended-Ready      swap out
-      Suspended-Ready -> Ready        swap in
-   ```
-   - Why the state is tracked at all: the OS keeps one queue per state, so scheduling is just picking from the right queue. It never has to search through every process to find one that can run.
-
-5. **(ক) Process কী? একটি Process এর বিভিন্ন ধাপগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) What a process is
-   - A `process` is a program in `execution`. The program is a passive file on disk; the process is the active running instance, with its own memory, registers and program counter.
-   ```
-      The parts of a process in memory :
-
-      +----------------+  high address
-      |     STACK      |  function calls , locals , parameters
-      |       |        |  (grows DOWN)
-      |       v        |
-      +----------------+
-      |     free       |
-      +----------------+
-      |       ^        |
-      |       |        |  (grows UP)
-      |     HEAP       |  malloc / new
-      +----------------+
-      |     DATA       |  global and static variables
-      +----------------+
-      |     TEXT       |  the program code
-      +----------------+  low address
-   ```
-   - Two runs of the same program are `two separate processes`: the same code, but separate memory and separate `PCB`s.
-
-   The stages a process goes through
-   ```mermaid
-   stateDiagram-v2
-       [*] --> New
-       New --> Ready: admitted
-       Ready --> Running: dispatch
-       Running --> Ready: time slice over
-       Running --> Waiting: I/O request
-       Waiting --> Ready: I/O complete
-       Running --> Terminated: exit
-       Terminated --> [*]
-   ```
-   ```
-      1. NEW
-         The process is created. The OS allots a PID, builds the PCB
-         and assigns memory. The LONG-TERM SCHEDULER decides whether to
-         admit it.
-
-      2. READY
-         It is in memory and can run - only the CPU is missing. It waits
-         in the READY QUEUE, from which the SHORT-TERM SCHEDULER picks.
-
-      3. RUNNING
-         The CPU is executing its instructions. Only one process per
-         core at a time.
-
-      4. WAITING (BLOCKED)
-         It asked for I/O or an event and cannot continue. It leaves the
-         ready queue and joins a device queue.
-
-      5. TERMINATED
-         It has finished or been killed. Memory and open files are
-         released, the exit status goes to the parent, and the PCB is
-         removed.
-   ```
-
-   The transitions between the stages
-   ```
-      New -> Ready          ADMIT
-      Ready -> Running      DISPATCH
-      Running -> Ready      TIMEOUT , preemption - INVOLUNTARY , and the
-                            process could still run
-      Running -> Waiting    BLOCK - VOLUNTARY , it asked for I/O
-      Waiting -> Ready      WAKE UP - it goes to READY, NOT to RUNNING
-      Running -> Terminated EXIT
-   ```
-   - Note there is `no Waiting -> Running` transition and `no Ready -> Waiting` transition: only a running process can ask for I/O, and a woken process must be scheduled again before it runs.
-   - Where swapping is used, two more stages exist — `Suspended-Ready` and `Suspended-Blocked` — reached when the `medium-term scheduler` moves a process out to disk to free memory.
-
-6. **অথবা, (ক) Process Control Block (PCB) কী? এটি একটি Process সংক্রান্ত যে যে তথ্য রাখে সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) What a PCB is
-   - A `Process Control Block (PCB)` is the data structure the OS keeps for `every process`. It holds everything the OS needs to manage that process and, above all, everything needed to `stop it and restart it later exactly where it left off`. It is also called the `task control block`.
-   - Every process has `exactly one` PCB. The OS keeps them all in a process table and links them into the ready and device queues.
-
-   What it stores
-   ```
-      1. PROCESS IDENTIFICATION
-           PID , parent PID (PPID) , user ID , group ID
-
-      2. PROCESS STATE
-           new / ready / running / waiting / terminated
-
-      3. PROGRAM COUNTER
-           the address of the NEXT instruction to execute
-
-      4. CPU REGISTERS
-           accumulator , index registers , stack pointer , general
-           registers , condition flags - saved on a context switch
-
-      5. CPU SCHEDULING INFORMATION
-           priority , pointer to the scheduling queue , time slice used,
-           scheduling parameters
-
-      6. MEMORY MANAGEMENT INFORMATION
-           base and limit registers , page table or segment table
-           pointer , page table base register value
-
-      7. ACCOUNTING INFORMATION
-           CPU time used , real time elapsed , time limits , process
-           numbers , resource usage
-
-      8. I/O STATUS INFORMATION
-           list of open files , allocated devices , pending I/O
-           requests
-
-      9. INTER-PROCESS COMMUNICATION
-           pending signals , message queue pointers , semaphore state
-
-      10. POINTER
-           link to the next PCB in the ready or device queue
-   ```
-
-   Diagram
-   ```
-      +--------------------------------+
-      |   pointer      |  process state|
-      +--------------------------------+
-      |          process ID            |
-      +--------------------------------+
-      |        program counter         |
-      +--------------------------------+
-      |         CPU registers          |
-      +--------------------------------+
-      |     memory limits / page table |
-      +--------------------------------+
-      |        list of open files      |
-      +--------------------------------+
-      |   accounting and priority      |
-      +--------------------------------+
-   ```
-
-   Why it matters — the context switch
-   ```
-      When the OS switches from P1 to P2 :
-
-           SAVE  P1's PC and registers  ->  PCB1
-           LOAD  P2's PC and registers  <-  PCB2
-
-      Without the PCB a stopped process could never be resumed. The PCB
-      IS the process, as far as the operating system is concerned.
-   ```
-   - The PCB is kept in `kernel memory` only. A user process cannot read or write its own PCB — it can only ask through system calls such as `getpid()` or `nice()`. This is what makes process isolation and protection possible.
-
-7. **Write down the name of four information stored in PCB (Process Control Block).** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
-
-   Answer: Four pieces of information stored in the `Process Control Block`:
-   ```
-      1. PROCESS ID (PID) and process state
-           The unique number identifying the process, and whether it is
-           new , ready , running , waiting or terminated.
-
-      2. PROGRAM COUNTER
-           The address of the NEXT instruction to be executed. This is
-           what lets a stopped process resume at exactly the right place.
-
-      3. CPU REGISTERS
-           Accumulator , index registers , stack pointer , general
-           registers and condition flags - all saved on a context switch
-           and restored when the process runs again.
-
-      4. MEMORY MANAGEMENT INFORMATION
-           Base and limit register values , and the pointer to the
-           process's page table or segment table.
-   ```
-
-   Other fields, if more are asked for
-   ```
-      5. CPU SCHEDULING INFO  - priority , queue pointers , time slice
-      6. ACCOUNTING INFO      - CPU time used , real time elapsed ,
-                                time limits
-      7. I/O STATUS INFO      - open files , allocated devices , pending
-                                I/O requests
-      8. IPC INFO             - pending signals , message queue pointers
-      9. PARENT PID and the list of child processes
-   ```
-
-   Layout
-   ```
-      +--------------------------------+
-      |  pointer       | process state |
-      +--------------------------------+
-      |         process ID (PID)       |
-      +--------------------------------+
-      |        program counter         |
-      +--------------------------------+
-      |         CPU registers          |
-      +--------------------------------+
-      |  memory limits / page table    |
-      +--------------------------------+
-      |       list of open files       |
-      +--------------------------------+
-   ```
-
-   Why these four matter most
-   ```
-      On a CONTEXT SWITCH the OS must :
-           SAVE  the PC and registers into the PCB of the outgoing
-                 process
-           LOAD  the PC and registers from the PCB of the incoming one
-           SWITCH the page table pointer to the new process's table
-
-      Without the PC and registers the process could not resume ;
-      without the memory information it would read another process's
-      memory. The PCB is kept in KERNEL memory, so a user process can
-      never touch it directly.
-   ```
-
-8. **Operating System এর Process state diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
-
-   Answer: (Answered in English, as required for IT topics.) Process state diagram
-   ```mermaid
-   stateDiagram-v2
-       [*] --> New
-       New --> Ready: admitted
-       Ready --> Running: dispatch (scheduler)
-       Running --> Ready: interrupt / time slice over
-       Running --> Waiting: I/O or event wait
-       Waiting --> Ready: I/O or event complete
-       Running --> Terminated: exit
-       Terminated --> [*]
-   ```
-   ```
-                            admitted
-           +-------+  ------------------>  +---------+
-           |  NEW  |                       |  READY  |<---------+
-           +-------+                       +---------+          |
-                                           |       ^            |
-                                 dispatch  |       | interrupt  |
-                                           v       |            |
-                                       +-------------+          |
-                                       |   RUNNING   |          |
-                                       +-------------+          |
-                                        |          |            |
-                                 exit   |          | I/O request|
-                                        v          v            |
-                                +------------+  +---------+     |
-                                | TERMINATED |  | WAITING |-----+
-                                +------------+  +---------+
-                                                    I/O complete
-   ```
-
-   The five states
-   ```
-      NEW        Being created ; the PCB is set up and memory assigned.
-      READY      In memory , able to run , waiting only for the CPU.
-                 It sits in the READY QUEUE.
-      RUNNING    The CPU is executing its instructions. One per core.
-      WAITING    Blocked on an event - I/O , user input , a semaphore.
-                 Not in the ready queue , so it cannot be scheduled.
-      TERMINATED Finished or killed ; resources freed , PCB removed.
-   ```
-
-   The six transitions
-   ```
-      New -> Ready          ADMIT      the long-term scheduler admits it
-      Ready -> Running      DISPATCH   the short-term scheduler picks it
-      Running -> Ready      TIMEOUT    time slice expired or preempted -
-                                       INVOLUNTARY , it could still run
-      Running -> Waiting    BLOCK      it REQUESTED I/O - VOLUNTARY
-      Waiting -> Ready      WAKE UP    the event finished ; it goes to
-                                       READY , not to RUNNING
-      Running -> Terminated EXIT
-   ```
-   - Two edges that do `not` exist, and are often asked about: there is `no Waiting -> Running` (a woken process must be scheduled again) and `no Ready -> Waiting` (only a running process can issue an I/O request).
-
-   With swapping — the seven-state diagram
-   ```
-      When memory is short, the MEDIUM-TERM SCHEDULER swaps a process
-      out to disk :
-
-           Ready   <---- swap in ----  SUSPENDED-READY
-                   ---- swap out --->
-
-           Waiting <---- swap in ----  SUSPENDED-BLOCKED
-                   ---- swap out --->
-
-      SUSPENDED-BLOCKED -> SUSPENDED-READY when its event completes
-      while it is still on disk.
-   ```
-
-9. **(i) Operating System এর Process State Transition Diagram আঁকুন ও ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) Process state transition diagram
-   ```mermaid
-   stateDiagram-v2
-       [*] --> New
-       New --> Ready: admitted
-       Ready --> Running: dispatch
-       Running --> Ready: interrupt / time slice over
-       Running --> Waiting: I/O or event wait
-       Waiting --> Ready: I/O or event complete
-       Running --> Terminated: exit
-       Terminated --> [*]
-   ```
-   ```
-                            admitted
-           +-------+  ------------------>  +---------+
-           |  NEW  |                       |  READY  |<---------+
-           +-------+                       +---------+          |
-                                           |       ^            |
-                                 dispatch  |       | interrupt  |
-                                           v       |            |
-                                       +-------------+          |
-                                       |   RUNNING   |          |
-                                       +-------------+          |
-                                        |          |            |
-                                 exit   |          | I/O request|
-                                        v          v            |
-                                +------------+  +---------+     |
-                                | TERMINATED |  | WAITING |-----+
-                                +------------+  +---------+
-                                                   I/O complete
-   ```
-
-   The states
-   ```
-      NEW        The process is being created. The OS assigns a PID,
-                 builds the PCB and allots memory.
-      READY      In memory and able to run ; only the CPU is missing.
-                 It waits in the READY QUEUE.
-      RUNNING    The CPU is executing its instructions. Only one per
-                 core at any instant.
-      WAITING    Blocked until an event happens - I/O completion, user
-                 input, a semaphore. Not schedulable.
-      TERMINATED Finished or killed ; memory and files released, PCB
-                 removed.
-   ```
-
-   Explanation of each transition
-   ```
-      1. New -> Ready       ADMIT
-           The LONG-TERM SCHEDULER decides there is enough memory and
-           admits the process. This controls the degree of
-           multiprogramming.
-
-      2. Ready -> Running   DISPATCH
-           The SHORT-TERM SCHEDULER selects it by FCFS , SJF , Round
-           Robin or priority, and the dispatcher loads its context.
-
-      3. Running -> Ready   TIMEOUT / PREEMPTION
-           The time slice expired, or a higher-priority process became
-           ready. INVOLUNTARY - the process was perfectly able to
-           continue, so it returns to the ready queue.
-
-      4. Running -> Waiting  BLOCK
-           The process itself asked for I/O or a resource. VOLUNTARY -
-           it cannot continue, so keeping the CPU would waste it. It
-           leaves the ready queue for a device queue.
-
-      5. Waiting -> Ready    WAKE UP
-           The device interrupt arrives and the event completes. Note
-           carefully that it goes to READY , NOT to RUNNING - it must
-           be scheduled again like everyone else.
-
-      6. Running -> Terminated  EXIT
-           exit() was called, or the process was killed. The exit status
-           is passed to the parent and the PCB is freed.
-   ```
-
-   Two transitions that do not exist
-   ```
-      Waiting -> Running : NO. A woken process must queue and be
-           scheduled again ; the CPU may be busy with someone else.
-
-      Ready -> Waiting   : NO. Only a RUNNING process can execute an
-           I/O instruction, so only a running process can block.
-   ```
-
-   With swapping
-   ```
-      Ready   <-- swap in / swap out -->  SUSPENDED-READY
-      Waiting <-- swap in / swap out -->  SUSPENDED-BLOCKED
-
-      Done by the MEDIUM-TERM SCHEDULER to free memory when RAM is
-      short or the system is thrashing.
-   ```
-
-10. **Operating System এর ক্ষেত্রে নিম্নোক্ত Process State গুলো ব্যবহার করে State Diagram অংকন করুন। [New, ready, Wait, Run, Terminated]** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
-
-    Answer: (Answered in English, as required for IT topics.) State diagram using New, Ready, Wait, Run and Terminated
-    ```mermaid
-    stateDiagram-v2
-        [*] --> New
-        New --> Ready: admitted
-        Ready --> Run: dispatch
-        Run --> Ready: time slice over / preempted
-        Run --> Wait: I/O request
-        Wait --> Ready: I/O complete
-        Run --> Terminated: exit
-        Terminated --> [*]
     ```
-    ```
-                             admitted
-            +-------+  ------------------>  +---------+
-            |  NEW  |                       |  READY  |<---------+
-            +-------+                       +---------+          |
-                                            |       ^            |
-                                  dispatch  |       | preempted  |
-                                            v       |            |
-                                        +-------------+          |
-                                        |     RUN     |          |
-                                        +-------------+          |
-                                         |          |            |
-                                  exit   |          | I/O request|
-                                         v          v            |
-                                 +------------+  +---------+     |
-                                 | TERMINATED |  |  WAIT   |-----+
-                                 +------------+  +---------+
-                                                    I/O complete
+    [New] ---> [Ready] <=======> [Running] ---> [Terminated]
+                 ^                  |
+                 |                  v
+                 +----- [Waiting] <-+
     ```
 
-    The states
-    ```
-       NEW        Being created. The OS assigns a PID, builds the PCB and
-                  allots memory. Not yet runnable.
+    - 1. New: The initial state when a program is being loaded into memory and created as a process.
+    - 2. Ready: The process is loaded in main memory and waiting in the ready queue to be assigned CPU time by the scheduler.
+    - 3. Running: The process instructions are actively being executed by the CPU.
+    - 4. Waiting (Blocked): The process cannot execute until an external event (such as I/O completion or signal receipt) occurs.
+    - 5. Terminated: The process has finished execution, and the OS reclaims its allocated memory and resources.
 
-       READY      In memory and able to run ; only the CPU is missing.
-                  It sits in the READY QUEUE.
+7. **Differentiate between 32-bit and 64-bit microprocessors. Difference between core i3, i5, i7. Please write down the configuration of the latest laptop.** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 513-514]]*
 
-       RUN        The CPU is executing its instructions. Only one process
-                  per core at any instant.
+Answer:
 
-       WAIT       Blocked on an event - I/O completion, user input, a
-                  semaphore. It is NOT in the ready queue and cannot be
-                  scheduled.
-
-       TERMINATED Finished or killed. Memory and open files are released
-                  and the PCB is removed.
-    ```
-
-    The transitions
-    ```
-       New -> Ready          ADMIT     the long-term scheduler admits it
-       Ready -> Run          DISPATCH  the short-term scheduler picks it
-       Run -> Ready          TIMEOUT   its time slice expired , or a
-                                       higher-priority process arrived.
-                                       INVOLUNTARY - it could still run.
-       Run -> Wait           BLOCK     it REQUESTED I/O. VOLUNTARY - it
-                                       cannot use the CPU now.
-       Wait -> Ready         WAKE UP   the event completed. It goes to
-                                       READY , NOT straight to RUN.
-       Run -> Terminated     EXIT      exit() , or it was killed.
-    ```
-
-    The two edges that must not be drawn
-    ```
-       Wait  -> Run   : WRONG. A woken process joins the READY queue and
-                        must be scheduled again ; the CPU may be busy.
-
-       Ready -> Wait  : WRONG. Only a RUNNING process can execute an I/O
-                        instruction, so only a running process can block.
-    ```
-    - The difference between Ready and Wait is what the diagram is really testing: a `Ready` process needs only the CPU, while a `Wait` process would not benefit from the CPU at all — it needs an `event`. That is why they sit in different queues, and why the scheduler looks only at the ready queue.
-
-11. **(c) What are the difference between process and threads?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
-
-    Answer: Difference between a process and a thread
-
-    | Point | Process | Thread |
+    1. 32-bit vs 64-bit Microprocessors:
+    | Feature | 32-bit Microprocessor | 64-bit Microprocessor |
     |---|---|---|
-    | Definition | A program in `execution`, with its own memory | A `lightweight` unit of execution `inside` a process |
-    | Memory | Has its `own` address space | `Shares` the process's code, data and heap |
-    | What is private | Everything | Only the `stack`, registers and program counter |
-    | Creation cost | `High` — a new address space and page table | `Low` — only a stack and a register set |
-    | Context switch | `Slow` — the page table changes, the TLB is flushed | `Fast` — the address space is unchanged |
-    | Communication | Needs `IPC` — pipes, shared memory, message queues | Direct, through `shared variables` |
-    | Isolation | Strong — one crash does not touch the others | `Weak` — one bad thread can crash the whole process |
-    | Synchronisation | Rarely needed between processes | `Essential` — mutex, semaphore, for shared data |
-    | Dependence | Independent | Cannot exist without its parent process |
+    | Memory Addressing | Can address at most $2^{32} = 4\text{ GB}$ RAM | Can theoretically address $2^{64} = 16\text{ Exabytes}$ (Practically up to TBs) |
+    | Data Processing | Processes 32 bits (4 bytes) of data per clock cycle | Processes 64 bits (8 bytes) of data per clock cycle |
+    | Register Width | General-purpose registers are 32 bits wide | General-purpose registers are 64 bits wide |
+
+    2. Difference between Intel Core i3, i5, and i7:
+    | Feature | Core i3 | Core i5 | Core i7 |
+    |---|---|---|---|
+    | Target Segment | Budget & Entry-level | Mainstream / Balanced Performance | High-end / Gaming & Professional Workstation |
+    | Cores / Threads | 4 Cores / 8 Threads | 6 to 14 Cores (Performance + Efficiency cores) | 12 to 20 Cores (High multi-thread throughput) |
+    | Cache Size | 6 MB to 12 MB Smart Cache | 12 MB to 24 MB Smart Cache | 24 MB to 33 MB+ Smart Cache |
+    | Turbo Boost | Basic clock boost | High Turbo Boost frequency | Maximum single-core & all-core Turbo Boost |
+
+    3. Configuration of a Modern Latest Laptop:
+    - Processor: Intel Core i7 14th Gen (14700HX) / AMD Ryzen 7 8845HS / Apple M3 Pro
+    - RAM: 16 GB or 32 GB DDR5 (5600 MHz)
+    - Storage: 1 TB PCIe 4.0 NVMe M.2 SSD
+    - Display: 15.6-inch QHD (2560x1440) 165Hz IPS / 120Hz OLED Anti-Glare
+    - Graphics: NVIDIA GeForce RTX 4060 (8GB GDDR6) / Integrated Iris Xe
+    - Connectivity: Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3, Thunderbolt 4 / USB-C 4.0
+    - Battery & OS: 4-Cell 80Wh Li-ion battery, Windows 11 Pro (64-bit).
+
+## Deadlock & Concurrency Control (2)
+
+## Deadlock & Concurrency Control (2)
+
+1. **Describe three basic techniques that exist to control deadlocks in databases. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 312-313]]*
+
+Answer:
+    A Deadlock is a situation where two or more concurrent transactions are in a simultaneous circular wait, each holding a lock on a data item that the other requires.
+
+    Three Primary Techniques to Control Deadlocks:
+    - 1. Deadlock Prevention (Timestamp Schemes):
+      - Enforces protocols before transaction execution so a deadlock state can never occur.
+      - Wait-Die Scheme (Non-preemptive): If an older transaction requests a resource held by a younger one, it waits; if a younger transaction requests a resource from an older one, the younger transaction dies (rolls back).
+      - Wound-Wait Scheme (Preemptive): If an older transaction requests a resource from a younger one, the older transaction preempts ("wounds") the younger one; if younger requests from older, younger waits.
+    - 2. Deadlock Detection:
+      - Allows deadlocks to occur, periodically constructing a directed **Wait-For Graph (WFG)** where vertices represent active transactions and edges represent lock requests.
+      - A cycle in the Wait-For Graph indicates a deadlock.
+    - 3. Deadlock Recovery:
+      - Once a cycle is detected, the DBMS initiates recovery by selecting a victim transaction (based on lowest rollback cost/work done), rolling it back to a previous checkpoint, and releasing its held locks to let others proceed.
+
+2. **What are the four necessary conditions for a deadlock to occur?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+Answer:
+    According to Coffman (1971), a deadlock can occur if and only if all four of the following conditions hold simultaneously in a system:
+
+    - 1. Mutual Exclusion: At least one resource must be held in a non-shareable mode (only one process can use the resource at any given time).
+    - 2. Hold and Wait: A process must currently be holding at least one resource and simultaneously waiting to acquire additional resources held by other processes.
+    - 3. No Preemption: Resources cannot be forcibly confiscated from a process; a resource can only be released voluntarily by the holding process after it completes its task.
+    - 4. Circular Wait: A closed chain of processes $\{P_0, P_1, \dots, P_n\}$ exists such that $P_0$ is waiting for a resource held by $P_1$, $P_1$ is waiting for $P_2$, and $P_n$ is waiting for a resource held by $P_0$.
 
-    Memory picture
-    ```
-       PROCESS A                    PROCESS B
-       +-------------+              +-------------+
-       |    STACK    |              |    STACK    |
-       |    HEAP     |              |    HEAP     |
-       |    DATA     |              |    DATA     |
-       |    TEXT     |              |    TEXT     |
-       +-------------+              +-------------+
-       SEPARATE address spaces - A cannot touch B's memory.
-
-
-       ONE PROCESS WITH THREE THREADS
-       +--------------------------------------------+
-       | stack T1 |  stack T2  |  stack T3          |  PRIVATE
-       +--------------------------------------------+
-       |            HEAP  (shared)                  |
-       |            DATA  (shared)                  |  SHARED
-       |            TEXT  (shared)                  |
-       +--------------------------------------------+
-       Each thread has its own PC and registers.
-    ```
-
-    What is shared and what is not
-    ```
-       SHARED among threads : code , global and static data , heap ,
-                              open files , signals , the address space
-       PRIVATE to a thread  : stack , registers , program counter ,
-                              thread ID , errno
-    ```
-
-    Why threads are used
-    - `Responsiveness` — a GUI stays alive while a background thread does the slow work.
-    - `Cheap` — creating a thread and switching between threads costs far less than for a process.
-    - `Easy sharing` — threads use the same variables directly, with no IPC layer.
-    - `Parallelism` — different threads can run on different cores at the same time.
-
-    The price
-    - Because the heap and globals are shared, two threads writing the same variable create a `race condition`, so `mutexes` and `semaphores` are needed. Processes rarely have this problem, because their memory is separate.
-    - One thread's segmentation fault kills the `entire process`, taking every other thread with it. A crashing process leaves its siblings untouched. This is exactly why Chrome puts each tab in a separate `process` rather than a thread.
-
-12. **(b) What are the difference between process and thread?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
-
-    Answer: Difference between a process and a thread
-
-    | Point | Process | Thread |
-    |---|---|---|
-    | What it is | A program in `execution`, with its own memory | A `lightweight` unit of execution `inside` a process |
-    | Address space | `Own` address space and page table | `Shares` the process's address space |
-    | Private data | Everything belongs to it | Only the `stack`, registers and program counter |
-    | Creation cost | `High` — build an address space and a PCB | `Low` — just a stack and a register set |
-    | Context switch | `Slow` — page table switch, TLB flush | `Fast` — no address-space change |
-    | Communication | Through `IPC` — pipes, shared memory, sockets | Directly through `shared variables` |
-    | Isolation | `Strong` — a crash affects only itself | `Weak` — a crash kills every thread in the process |
-    | Synchronisation | Seldom needed | `Required` — mutex, semaphore |
-    | Also called | Heavyweight process | Lightweight process (LWP) |
-
-    Memory picture
-    ```
-       TWO PROCESSES                ONE PROCESS , THREE THREADS
-       +----------+ +----------+    +-----------------------------+
-       |  STACK   | |  STACK   |    | stk T1 | stk T2 | stk T3    |  private
-       |  HEAP    | |  HEAP    |    +-----------------------------+
-       |  DATA    | |  DATA    |    |        HEAP  (shared)       |
-       |  TEXT    | |  TEXT    |    |        DATA  (shared)       |  shared
-       +----------+ +----------+    |        TEXT  (shared)       |
-        SEPARATE - no sharing       +-----------------------------+
-    ```
-    ```
-       SHARED between threads : code , globals and statics , heap ,
-                                open files , signal handlers
-       PRIVATE to each thread : stack , registers , program counter ,
-                                thread ID , errno
-    ```
-
-    Why threads exist
-    - `Responsiveness` — a GUI keeps answering the user while a worker thread does the slow job.
-    - `Low cost` — creating and switching threads is far cheaper than processes.
-    - `Easy sharing` — no IPC layer is needed; the threads simply use the same variables.
-    - `True parallelism` — different threads run on different cores at once.
-
-    The trade-off
-    ```
-       Sharing memory is both the ADVANTAGE and the DANGER.
-
-       Two threads doing  count = count + 1  at the same time can
-       both read the old value, so one increment is LOST - a RACE
-       CONDITION. A MUTEX or SEMAPHORE is needed.
-
-       A segmentation fault in ONE thread kills the WHOLE process and
-       every other thread in it. A crashing PROCESS leaves its siblings
-       alive.
-    ```
-    - That last point is why a browser like Chrome puts every tab in a separate `process`, not a thread: one page crashing must not take the whole browser down. The cost is more memory and IPC — a deliberate trade of efficiency for isolation.
-
-## Concurrency, Threads & Synchronization (11)
-
-1. Multi-threaded processing and distributed computing have become essential. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
-
-   Answer: The question is `incomplete` — only a statement is given, with no actual question following it. The topic it points to is answered below.
-
-   Multi-threaded processing
-   - `Multithreading` means running several `threads` inside one process. All threads share the process's code, data and heap; each has only its own `stack`, `registers` and `program counter`.
-   ```
-      ONE PROCESS , THREE THREADS
-      +---------------------------------------+
-      | stk T1 |  stk T2  |  stk T3           |  PRIVATE
-      +---------------------------------------+
-      |         HEAP , DATA , TEXT            |  SHARED
-      +---------------------------------------+
-   ```
-   - Why it has become essential: `multicore CPUs`. A single-threaded program uses only one core, so on an 8-core machine it wastes 7 of them. Threads are the way a program gets `real parallelism`.
-   - Other reasons: `responsiveness` — a GUI or a server keeps answering while a worker thread does the slow job; `low cost` — creating a thread and switching between threads is far cheaper than for a process; and `easy sharing` — threads use the same variables directly, with no IPC layer.
-   - The price: shared memory brings `race conditions`, so `mutexes` and `semaphores` are needed; and a crash in one thread kills the whole process.
-
-   Distributed computing
-   - `Distributed computing` spreads work across `many machines` connected by a network, which appear to the user as one system.
-   ```
-           +---------+   +---------+   +---------+
-           | Node 1  |   | Node 2  |   | Node 3  |
-           +---------+   +---------+   +---------+
-                |             |             |
-                +------- network -----------+
-                              |
-                       +-------------+
-                       |   Client    |
-                       +-------------+
-   ```
-   - Why it has become essential: one machine cannot be made fast enough or large enough for modern workloads. Adding machines (`horizontal scaling`) is cheaper and has no ceiling, and multiple machines give `fault tolerance` — if one dies the others carry on.
-   - Examples: `Hadoop` and `Spark` for large data sets, `Kubernetes` for containers, cloud services, and bank core systems replicated across data centres for disaster recovery.
-   - The price: the `network` may fail or be slow, keeping data `consistent` across nodes is hard (the `CAP theorem` says you cannot have consistency, availability and partition tolerance all at once), and debugging is much harder than on one machine.
-
-   How the two relate
-   ```
-      MULTITHREADING  : parallelism INSIDE one machine , shared memory
-      DISTRIBUTED     : parallelism ACROSS many machines , message
-                        passing over a network
-
-      Real systems use BOTH : each node in a cluster runs a
-      multi-threaded server process.
-   ```
-
-2. **What is Multithreading programming? Why Multithreading used in programming?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 296 (ET: BIBM)]*
-
-   Answer: What multithreaded programming is
-   - `Multithreading` is writing a program so that several `threads` run inside one process. Each thread is a separate path of execution, but they all share the process's memory.
-   ```
-      SHARED among threads : code (TEXT) , globals and statics (DATA) ,
-                             HEAP , open files , signal handlers
-      PRIVATE to a thread  : STACK , registers , program counter ,
-                             thread ID
-   ```
-   ```
-      ONE PROCESS , THREE THREADS
-      +----------------------------------------+
-      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
-      +----------------------------------------+
-      |        HEAP    (shared)                |
-      |        DATA    (shared)                |  SHARED
-      |        TEXT    (shared)                |
-      +----------------------------------------+
-   ```
-   - A single-threaded program does one thing at a time; a multithreaded one can download a file, update the screen and write a log at the same time.
-
-   Why multithreading is used
-
-   (a) Responsiveness
-   ```
-      A single-threaded GUI that starts a 10-second file save FREEZES -
-      it cannot repaint or accept clicks until the save ends.
-
-      With threads : the worker thread saves the file while the UI
-      thread keeps answering the user.
-   ```
-
-   (b) Use of multiple cores — real parallelism
-   ```
-      On an 8-core CPU a single-threaded program uses ONE core and
-      wastes seven. Eight threads can genuinely run at the same instant,
-      one per core.
-   ```
-
-   (c) Cheaper than processes
-   ```
-      Creating a process : new address space , new page table , copy
-           the parent - EXPENSIVE.
-      Creating a thread  : just a stack and a register set - CHEAP,
-           roughly 10 to 100 times faster.
-
-      A context switch between threads of the same process needs NO
-      page table change and NO TLB flush, so it is far quicker too.
-   ```
-
-   (d) Easy sharing of data
-   - Threads share the heap and globals, so they exchange data by simply writing a variable. Processes need `IPC` — pipes, shared memory or sockets — which is slower and more code.
-
-   (e) Better use of waiting time
-   - While one thread blocks on disk or network I/O, another thread of the same process keeps the CPU busy. A web server usually gives one thread per request for exactly this reason.
-
-   The cost, which should be mentioned
-   ```
-      RACE CONDITION - two threads doing  count = count + 1  can both
-           read the old value, so one increment is LOST.
-           -> MUTEX or SEMAPHORE is needed.
-
-      DEADLOCK       - two threads each holding a lock the other wants.
-
-      HARD TO DEBUG  - bugs depend on timing and may not repeat.
-
-      NO ISOLATION   - a segmentation fault in one thread kills the
-           WHOLE process and every thread in it.
-   ```
-   - That last point explains why a browser like Chrome puts each tab in a separate `process` rather than a thread: one crashing page must not take the whole browser down.
-
-3. **What is Multithreading System?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1460 (ET: N/A)]*
-
-   Answer: What a multithreading system is
-   - A `multithreading system` is one in which a single process is divided into several `threads`, each running its own path of execution, while they all share the process's memory and resources. The OS can schedule those threads independently, so several can run at once on different cores.
-   ```
-      ONE PROCESS , THREE THREADS
-      +----------------------------------------+
-      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
-      +----------------------------------------+
-      |         HEAP   (shared)                |
-      |         DATA   (shared)                |  SHARED
-      |         TEXT   (shared)                |
-      +----------------------------------------+
-      Each thread has its own PROGRAM COUNTER and REGISTERS.
-   ```
-   - A thread is called a `lightweight process` because it carries far less state than a process: no separate address space, no page table of its own.
-
-   Multithreading models
-   ```
-      MANY-TO-ONE
-           Many user threads mapped to ONE kernel thread.
-           Cheap, but ONE blocking call blocks ALL of them, and it
-           cannot use multiple cores.
-
-      ONE-TO-ONE
-           Each user thread has its OWN kernel thread.
-           True parallelism and no blocking problem, but each thread
-           costs kernel resources. Used by Linux and Windows.
-
-      MANY-TO-MANY
-           Many user threads multiplexed onto a smaller number of
-           kernel threads. Combines the advantages, but is complex.
-   ```
-
-   Types of thread
-   ```
-      USER-LEVEL THREADS
-           Managed by a library in user space. Fast to create and
-           switch, but the kernel does not know they exist, so a
-           blocking system call stops all of them.
-
-      KERNEL-LEVEL THREADS
-           Managed by the OS. Slower to create, but they can run on
-           different cores and one blocking does not stop the rest.
-   ```
-
-   Benefits
-   - `Responsiveness` — a GUI or a server keeps answering while a worker thread does the slow job.
-   - `Resource sharing` — threads share code, data and files by default, with no IPC layer.
-   - `Economy` — creating a thread and switching between threads is much cheaper than for a process, since the address space does not change and the TLB is not flushed.
-   - `Scalability` — different threads run on different cores, giving real parallelism on a multicore CPU.
-
-   Problems
-   ```
-      RACE CONDITION : shared data written by two threads at once.
-                       Needs a MUTEX or SEMAPHORE.
-      DEADLOCK       : each thread holds the lock the other wants.
-      NO ISOLATION   : a crash in one thread kills the whole process.
-      DEBUGGING      : bugs depend on timing and may not repeat.
-   ```
-
-4. **What is the output of the following code?** *[BAERA Assistant Engineer (CSE) 2023 compact it 574 (ET: BUET)]*
-```c
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <unistd.h>
-int main(int argc, char *argv[]){
-    int i;
-    for(i=0;i<4;i++){
-        int pid = fork();
-        if(pid==0){
-            printf("%d\n",i);
-            exit(0);
-        }
-    }
-    for(i=0;i<4;i++){
-        wait(NULL);
-    }
-    return 0;
-}
-```
-
-   Answer: Output
-   ```
-      0
-      1
-      2
-      3
-
-      Four lines - the numbers 0, 1, 2 and 3, each once.
-      The ORDER is NOT guaranteed, because the four children are
-      separate processes scheduled independently. On most systems it
-      comes out in order, but 2 1 0 3 is equally legal.
-   ```
-
-   Why — the key point
-   ```
-      The child does  printf  and then  exit(0) , so a child NEVER
-      returns to the loop. Only the PARENT keeps looping.
-
-      Therefore exactly FOUR children are created, one per iteration :
-
-           i = 0 : parent forks -> child C0 prints 0 , exits
-           i = 1 : parent forks -> child C1 prints 1 , exits
-           i = 2 : parent forks -> child C2 prints 2 , exits
-           i = 3 : parent forks -> child C3 prints 3 , exits
-
-      Total processes = 1 parent + 4 children = 5
-   ```
-
-   Process tree
-   ```
-                       PARENT
-                    /   |   |   \
-                  C0   C1  C2   C3
-                (0)   (1) (2)   (3)
-
-      A FLAT tree - every child is a direct child of the parent.
-   ```
-
-   How fork() behaves here
-   ```
-      fork() returns TWICE :
-           in the CHILD  -> 0        so  if(pid==0)  is TRUE
-           in the PARENT -> child's PID (> 0)   so the if is FALSE
-
-      The child inherits a COPY of the parent's memory, so it has its
-      own copy of  i  with the value at the moment of the fork. That is
-      why C2 prints 2 and not something else.
-   ```
-
-   The second loop
-   ```
-      for(i=0;i<4;i++) wait(NULL);
-
-      The parent waits for all 4 children before returning. This
-      prevents ZOMBIE processes - a finished child stays as a zombie
-      until its parent reaps it with wait(). It also guarantees the
-      parent exits LAST.
-   ```
-
-   If the child did not call exit(0)
-   ```
-      Without exit(0) the child would CONTINUE THE LOOP and fork again.
-      The count would then double at every iteration :
-
-           total processes = 2^4 = 16
-           printed lines   = 15
-
-      That single exit(0) is what keeps the answer at 4 instead of 15.
-   ```
-   - One note on the code as written: `printf` is used but `<stdio.h>` is not included. Older compilers accept it with an implicit-declaration warning and the program still prints correctly; a strict C99 or later compiler will warn or refuse. The intended output is unaffected.
-
-5. **অথবা, (ক) Thread এর সংজ্ঞা দিন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) Definition
-   - A `thread` is the smallest unit of execution that the CPU can schedule. It is a single path of execution `inside a process`. Several threads can exist in one process, and they all share the process's code, data and open files while each keeps its own stack and registers.
-   - A thread is also called a `lightweight process (LWP)`, because it carries far less state than a full process — no separate address space and no page table of its own.
-
-   What a thread owns and what it shares
-   ```
-      PRIVATE to each thread :
-           STACK  (its own function calls and local variables)
-           REGISTERS
-           PROGRAM COUNTER
-           thread ID , errno
-
-      SHARED with the other threads of the same process :
-           TEXT  - the code
-           DATA  - globals and statics
-           HEAP  - memory from malloc / new
-           open files , signal handlers , the address space
-   ```
-   ```
-      ONE PROCESS , THREE THREADS
-      +----------------------------------------+
-      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
-      +----------------------------------------+
-      |         HEAP   (shared)                |
-      |         DATA   (shared)                |  SHARED
-      |         TEXT   (shared)                |
-      +----------------------------------------+
-   ```
-
-   Types
-   ```
-      USER-LEVEL THREAD  - managed by a library in user space. Fast to
-           create and switch, but the kernel cannot see it, so ONE
-           blocking system call stops every thread.
-
-      KERNEL-LEVEL THREAD - managed by the OS. Slower to create, but it
-           can be scheduled on a different core and blocking affects
-           only itself.
-   ```
-
-   Why threads are used
-   - `Responsiveness` — a GUI keeps answering while a worker thread does the slow job.
-   - `Economy` — creating a thread, and switching between threads of the same process, is much cheaper than for a process, because the address space does not change and the TLB is not flushed.
-   - `Resource sharing` — threads share data directly, with no `IPC` layer.
-   - `Parallelism` — different threads run on different cores at the same time.
-
-   The danger
-   ```
-      Because the heap and globals are shared, two threads writing the
-      same variable create a RACE CONDITION, so a MUTEX or SEMAPHORE is
-      required. And a crash in ONE thread kills the WHOLE process.
-   ```
-
-6. **Write down the thread life cycle.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
-
-   Answer: What the thread life cycle is
-   - The `thread life cycle` is the set of states a thread passes through from creation until it finishes. The thread scheduler moves it from one state to the next.
-
-   The states
-   ```mermaid
-   stateDiagram-v2
-       [*] --> New
-       New --> Runnable: start()
-       Runnable --> Running: scheduler picks it
-       Running --> Runnable: yield() / time slice over
-       Running --> Blocked: waiting for a lock
-       Running --> Waiting: wait() / join()
-       Blocked --> Runnable: lock acquired
-       Waiting --> Runnable: notify() / timeout
-       Running --> Terminated: run() ends
-       Terminated --> [*]
-   ```
-   ```
-      1. NEW (born)
-           The thread object has been created but has not started. No
-           CPU and no stack are assigned yet.
-           In Java :  Thread t = new Thread(r);
-
-      2. RUNNABLE (ready)
-           start() has been called. The thread is ready and waiting in
-           the READY QUEUE for the scheduler to pick it.
-
-      3. RUNNING
-           The scheduler gave it the CPU and run() is executing. Only
-           one thread per core at a time.
-
-      4. BLOCKED / WAITING (not runnable)
-           The thread cannot proceed. Three common reasons :
-               BLOCKED       - waiting for a MONITOR LOCK held by
-                               another thread (a synchronized block)
-               WAITING       - wait() or join() with no timeout ,
-                               waiting indefinitely for another thread
-               TIMED WAITING - sleep(ms) , wait(ms) , join(ms)
-           It is NOT in the ready queue, so it cannot be scheduled.
-
-      5. TERMINATED (dead)
-           run() has returned, or an unhandled exception ended the
-           thread. It cannot be restarted - calling start() again
-           throws an error.
-   ```
-
-   The transitions
-   ```
-      New -> Runnable          start()
-      Runnable -> Running      the scheduler dispatches it
-      Running -> Runnable      yield() , or the time slice expired -
-                               INVOLUNTARY , it could still run
-      Running -> Blocked       it tried to enter a synchronized block
-                               whose lock is held
-      Running -> Waiting       wait() , join() , sleep()
-      Blocked -> Runnable      the lock was released and acquired
-      Waiting -> Runnable      notify() , notifyAll() , or the sleep
-                               timeout expired
-      Running -> Terminated    run() returned , or an exception escaped
-   ```
-
-   Points examiners look for
-   ```
-      1. There is NO  Blocked -> Running  edge. A woken thread goes to
-         RUNNABLE and must be scheduled again.
-
-      2. A TERMINATED thread CANNOT be restarted. To run the same work
-         again, create a NEW thread object.
-
-      3. RUNNABLE covers both "ready" and "running" in the Java enum -
-         Java does not expose a separate RUNNING state, because
-         whether a thread holds the CPU is decided by the OS.
-
-      4. sleep() keeps any LOCK the thread holds ; wait() RELEASES the
-         lock. This difference is asked very often.
-   ```
-
-7. **What is Multi-threading and multi-tasking? Difference between Multi-threading and Multi-tasking?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 854 (ET: N/A)]*
-
-   Answer: What multithreading is
-   - `Multithreading` means running several `threads` inside `one process`. The threads share the process's code, data and heap; each keeps only its own stack, registers and program counter.
-   ```
-      ONE PROCESS , THREE THREADS
-      +----------------------------------------+
-      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
-      +----------------------------------------+
-      |        HEAP , DATA , TEXT              |  SHARED
-      +----------------------------------------+
-   ```
-   - Example: a web browser where one thread renders the page, one downloads images and one runs JavaScript — all inside the same tab process.
-
-   What multitasking is
-   - `Multitasking` means the OS runs several `processes` at the same time on one CPU, switching between them so quickly that they appear to run together.
-   ```
-      PROCESS A     PROCESS B     PROCESS C
-      +--------+    +--------+    +--------+
-      | own    |    | own    |    | own    |
-      | memory |    | memory |    | memory |
-      +--------+    +--------+    +--------+
-           \            |            /
-            +---- CPU time-sliced ---+
-
-      time -> | A | B | C | A | B | C | ...
-   ```
-   - Example: an editor, a music player and a browser all running while you work.
-   ```
-      Two forms :
-        PREEMPTIVE   - the OS takes the CPU back after a time slice.
-                       Windows, Linux, UNIX.
-        COOPERATIVE  - a process keeps the CPU until it yields
-                       voluntarily. One bad program freezes the machine.
-   ```
-
-   Difference between multithreading and multitasking
-
-   | Point | Multithreading | Multitasking |
-   |---|---|---|
-   | Unit involved | `Threads` inside one process | Separate `processes` |
-   | Memory | Threads `share` one address space | Each process has its `own` memory |
-   | Switching cost | `Low` — no page table change, no TLB flush | `High` — full context switch |
-   | Creation cost | `Cheap` — a stack and registers | `Expensive` — a whole address space |
-   | Communication | Direct, through `shared variables` | Through `IPC` — pipes, sockets, shared memory |
-   | Isolation | `Weak` — one crash kills the whole process | `Strong` — a crash affects only that process |
-   | Synchronisation | `Needed` — mutex, semaphore | Rarely needed |
-   | Granularity | Fine — inside one application | Coarse — between applications |
-
-   - How they relate: they are `levels`, not alternatives. A modern OS multitasks between processes, and each of those processes may itself be multithreaded. Multitasking gives `isolation`; multithreading gives `speed and sharing`. Chrome uses both — a separate process per tab for safety, and many threads inside each tab for speed.
-
-8. **(c) What is thread? Give some benefits of multi-threaded programming.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 889-890 (ET: N/A)]*
-
-   Answer: What a thread is
-   - A `thread` is the smallest unit of execution the CPU can schedule — a single path of execution `inside a process`. Several threads can live in one process, sharing its memory while each keeps its own stack and registers.
-   ```
-      PRIVATE to a thread : STACK , REGISTERS , PROGRAM COUNTER ,
-                            thread ID
-      SHARED with others  : TEXT (code) , DATA (globals) , HEAP ,
-                            open files , signal handlers
-   ```
-   ```
-      ONE PROCESS , THREE THREADS
-      +----------------------------------------+
-      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
-      +----------------------------------------+
-      |        HEAP , DATA , TEXT              |  SHARED
-      +----------------------------------------+
-   ```
-   - It is called a `lightweight process`, because it carries no separate address space and no page table of its own.
-
-   Benefits of multithreaded programming
-
-   (a) Responsiveness
-   ```
-      A single-threaded GUI that starts a 10-second save FREEZES - no
-      repaint, no clicks accepted, until the save finishes.
-
-      With threads : a worker thread saves while the UI thread keeps
-      answering the user.
-   ```
-
-   (b) Resource sharing
-   - Threads share code, data and the heap `by default`. Processes must set up `IPC` — shared memory or message passing — which is more code and slower.
-
-   (c) Economy
-   ```
-      Creating a process : new address space , new page table , copy
-           the parent's structures - EXPENSIVE.
-      Creating a thread  : a stack and a register set - roughly 10 to
-           100 times cheaper.
-
-      Switching between threads of the SAME process needs NO page table
-      change and NO TLB flush, so it is far faster than a process
-      switch.
-   ```
-
-   (d) Scalability — use of multiple cores
-   ```
-      On an 8-core CPU a single-threaded program uses ONE core and
-      wastes seven. Eight threads can genuinely execute at the same
-      instant, one per core. This is REAL parallelism, not just
-      interleaving.
-   ```
-
-   (e) Better use of blocking time
-   - While one thread waits on disk or network I/O, another thread of the same process keeps the CPU busy. A web server gives one thread per request for exactly this reason.
-
-   The cost, worth one line
-   ```
-      Sharing memory brings RACE CONDITIONS, so MUTEXES and SEMAPHORES
-      are needed ; and a crash in ONE thread kills the WHOLE process.
-   ```
-
-9. **(d) Differentiate between thread and process.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
-
-   Answer: Difference between a thread and a process
-
-   | Point | Process | Thread |
-   |---|---|---|
-   | What it is | A program in `execution`, with its own memory | A path of execution `inside` a process |
-   | Address space | `Own` address space and page table | `Shares` the process's address space |
-   | Private data | Everything belongs to it | Only the `stack`, registers, program counter |
-   | Creation cost | `High` — build an address space and a PCB | `Low` — a stack and a register set |
-   | Context switch | `Slow` — page table switch, TLB flush | `Fast` — no address space change |
-   | Communication | Through `IPC` — pipes, shared memory, sockets | Directly through `shared variables` |
-   | Isolation | `Strong` — a crash affects only itself | `Weak` — a crash kills the whole process |
-   | Synchronisation | Rarely needed | `Required` — mutex, semaphore |
-   | Dependence | Independent | Cannot exist without its parent process |
-   | Also called | Heavyweight process | Lightweight process (LWP) |
-
-   Memory picture
-   ```
-      TWO PROCESSES                ONE PROCESS , THREE THREADS
-      +----------+ +----------+    +-----------------------------+
-      |  STACK   | |  STACK   |    | stk T1 | stk T2 | stk T3    | private
-      |  HEAP    | |  HEAP    |    +-----------------------------+
-      |  DATA    | |  DATA    |    |        HEAP  (shared)       |
-      |  TEXT    | |  TEXT    |    |        DATA  (shared)       | shared
-      +----------+ +----------+    |        TEXT  (shared)       |
-       SEPARATE - no sharing       +-----------------------------+
-   ```
-   ```
-      SHARED between threads : code , globals and statics , heap ,
-                               open files , signal handlers
-      PRIVATE to each thread : stack , registers , program counter ,
-                               thread ID , errno
-   ```
-
-   Why the difference matters
-   ```
-      SPEED      : a thread switch skips the page table change and the
-                   TLB flush, so it is far cheaper than a process switch.
-
-      SAFETY     : two processes cannot corrupt each other's memory -
-                   the MMU forbids it. Two threads CAN, because they
-                   share the heap. Hence RACE CONDITIONS and the need
-                   for locks.
-
-      CRASH      : a segmentation fault in one thread kills EVERY thread
-                   in the process. A crashing process leaves its
-                   siblings alive.
-   ```
-   - That last point is the practical reason a browser like Chrome puts each tab in its own `process`, not a thread: one crashing page must not bring down the whole browser. The cost is more memory and IPC — isolation bought at the price of efficiency.
-
-10. **What is multitasking and multithreading? What are the advantage threads over process?** *[Bangladesh Competition Commission Programmer 2019 compact it 1060 (ET: DU)]*
-
-    Answer: What multitasking is
-    - `Multitasking` is the OS running several `processes` at once on one CPU, switching between them so fast that they seem to run together.
-    ```
-       PROCESS A     PROCESS B     PROCESS C
-       +--------+    +--------+    +--------+
-       | own    |    | own    |    | own    |
-       | memory |    | memory |    | memory |
-       +--------+    +--------+    +--------+
-            \            |            /
-             +--- CPU time-sliced ----+
-
-       time -> | A | B | C | A | B | C | ...
-    ```
-    - Two forms: `preemptive`, where the OS takes the CPU back when the time slice ends (Windows, Linux, UNIX), and `cooperative`, where a process keeps the CPU until it yields — so one badly written program can freeze the machine.
-
-    What multithreading is
-    - `Multithreading` is running several `threads` inside one process. They share the code, data and heap; each has only its own stack, registers and program counter.
-    ```
-       ONE PROCESS , THREE THREADS
-       +----------------------------------------+
-       | stack T1 |  stack T2  |  stack T3      |  PRIVATE
-       +----------------------------------------+
-       |        HEAP , DATA , TEXT              |  SHARED
-       +----------------------------------------+
-    ```
-
-    Advantages of threads over processes
-
-    (a) Cheaper to create
-    ```
-       A process : new address space , new page table , copy the
-            parent's structures - EXPENSIVE.
-       A thread  : a stack and a register set - roughly 10 to 100 times
-            cheaper.
-    ```
-
-    (b) Cheaper to switch
-    ```
-       PROCESS switch : save registers , CHANGE the page table base
-            register , FLUSH the TLB , and the cache is cold afterwards.
-       THREAD  switch : save registers only. The address space, the page
-            table and the TLB are UNCHANGED.
-    ```
-
-    (c) Easy data sharing
-    - Threads share the heap and globals, so they exchange data by simply writing a variable. Processes need `IPC` — pipes, shared memory or sockets — which is slower and much more code.
-
-    (d) Responsiveness
-    - One thread can keep a GUI or a server answering while another does the slow work. A single-threaded program freezes for the whole duration of a long operation.
-
-    (e) Better use of blocking time and of multiple cores
-    - While one thread waits on I/O another keeps the CPU busy, and different threads can run on different cores at the same instant, giving real parallelism.
-
-    (f) Less memory
-    - Ten threads share one copy of the code and the heap. Ten processes need ten copies of everything.
-
-    The trade-off
-    ```
-       What threads GAIN in speed and sharing, they LOSE in safety :
-
-         RACE CONDITIONS - shared data needs MUTEXES and SEMAPHORES
-         NO ISOLATION    - a crash in one thread kills the whole process
-         HARD DEBUGGING  - bugs depend on timing and may not repeat
-    ```
-    - This is why a browser like Chrome uses `processes` for tabs and `threads` inside each tab: isolation where a crash would matter, speed where it would not.
-
-11. **Define thread cancellation, target thread. Enumerate the different RAID level.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1106-1107 (ET: AUST)]*
-
-    Answer: Thread cancellation
-    - `Thread cancellation` is terminating a thread `before it has finished` its work. The thread being cancelled is called the `target thread`.
-    ```
-       Example : ten threads search a database in parallel. The moment
-       one finds the record, the other nine are USELESS and are
-       cancelled. The same happens when a user presses "Stop" on a
-       page that is still loading.
-    ```
-
-    Target thread
-    - The `target thread` is the thread that is to be cancelled — the one that receives the cancellation request. In POSIX it is named in `pthread_cancel(target)`.
-
-    The two ways to cancel
-    ```
-       ASYNCHRONOUS CANCELLATION
-            One thread terminates the target IMMEDIATELY.
-            Problem : the target may be holding a LOCK, or half-way
-            through updating shared data, or may have memory and files
-            it never released. The system is left INCONSISTENT and
-            resources LEAK.
-
-       DEFERRED CANCELLATION  (the safe and usual method)
-            The request is only MARKED. The target checks a flag at
-            safe points called CANCELLATION POINTS, and terminates
-            itself in an orderly way - releasing locks, freeing memory
-            and closing files first.
-            This is the DEFAULT in POSIX threads.
-    ```
-    ```
-       Cancellation state in POSIX :
-            PTHREAD_CANCEL_ENABLE  / PTHREAD_CANCEL_DISABLE
-            PTHREAD_CANCEL_DEFERRED / PTHREAD_CANCEL_ASYNCHRONOUS
-
-       A thread can DISABLE cancellation while in a critical section,
-       and re-enable it afterwards. Cleanup handlers pushed with
-       pthread_cleanup_push() are run in reverse order when the
-       cancellation is finally acted upon.
-    ```
-    - Java takes the same view: `Thread.stop()` was deprecated because it was asynchronous and unsafe. The supported way is `interrupt()`, which sets a flag the thread checks itself — deferred cancellation by another name.
-
-    RAID levels
-    ```
-       RAID 0  STRIPING , no redundancy
-            Data split across N disks. Fastest read and write, full
-            capacity, but ONE disk failure loses EVERYTHING.
-            Minimum 2 disks. Usable = 100 %.
-
-       RAID 1  MIRRORING
-            Every disk has an exact copy. Survives one disk failure per
-            mirror pair, fast reads, but half the capacity is lost.
-            Minimum 2 disks. Usable = 50 %.
-
-       RAID 2  Bit-level striping with HAMMING CODE error correction.
-            Needs many disks and is OBSOLETE - modern drives detect
-            their own errors.
-
-       RAID 3  Byte-level striping with a DEDICATED PARITY disk.
-            All disks must move together, so only one I/O at a time.
-            Good for large sequential transfers, poor for small ones.
-
-       RAID 4  BLOCK-level striping with a DEDICATED PARITY disk.
-            Allows independent reads, but the single parity disk is a
-            BOTTLENECK - every write touches it.
-
-       RAID 5  Block-level striping with DISTRIBUTED PARITY.
-            Parity spread over all disks, so no bottleneck. Survives
-            ONE disk failure. Minimum 3 disks.
-            Usable = (N - 1) / N.   THE MOST COMMON LEVEL.
-
-       RAID 6  Block-level striping with DOUBLE distributed parity.
-            Survives TWO simultaneous disk failures. Minimum 4 disks.
-            Usable = (N - 2) / N. Slower writes than RAID 5.
-
-       NESTED
-       RAID 10 (1+0)  Mirror first, then stripe the mirrors.
-            Fast and highly reliable ; 50 per cent usable.
-            Used for DATABASES.
-       RAID 01 (0+1)  Stripe first, then mirror. Less fault-tolerant
-            than RAID 10 for the same disks.
-    ```
-    ```
-       +-------+-----------+--------+----------------+-------------+
-       | Level | Technique | Min    | Usable space   | Failures    |
-       |       |           | disks  |                | survived    |
-       +-------+-----------+--------+----------------+-------------+
-       |   0   | striping  |   2    |    100 %       |     0       |
-       |   1   | mirroring |   2    |     50 %       |     1       |
-       |   5   | stripe +  |   3    |  (N-1)/N       |     1       |
-       |       | parity    |        |                |             |
-       |   6   | stripe +  |   4    |  (N-2)/N       |     2       |
-       |       | 2 parity  |        |                |             |
-       |  10   | mirror +  |   4    |     50 %       | 1 per mirror|
-       |       | stripe    |        |                |             |
-       +-------+-----------+--------+----------------+-------------+
-    ```
-    - The point to state plainly: `RAID is not a backup`. It protects against a `disk` failing, not against deletion, corruption, ransomware or fire. A separate backup is still required.
-
-## File Systems & Disk Management (7)
-
-1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
-
-   Answer: `NTFS` stands for `New Technology File System`.
-   - It is the default file system of Windows NT and every Windows version after it — Windows 2000, XP, 7, 10 and 11. It replaced `FAT32`.
-   ```
-      Key features :
-        large files and volumes - a file may exceed 4 GB , unlike FAT32
-        JOURNALING - a log of pending changes, so the disk recovers
-             quickly after a crash or power cut
-        PERMISSIONS - per-file and per-folder access control (ACLs)
-        ENCRYPTION - EFS , and compression on individual files
-        DISK QUOTAS per user
-        HARD LINKS , symbolic links and sparse files
-   ```
-   - Compared with `FAT32`: NTFS has no practical 4 GB file limit, supports permissions and journaling, and is more reliable; FAT32 is simpler and is still used on USB drives because almost every device can read it.
-   - Related names worth knowing: `FAT32` (File Allocation Table), `exFAT` (Extended FAT, used on large SD cards), `ext4` (the usual Linux file system) and `APFS` (Apple File System).
-
-2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) UNIX treats `everything as a file`, so file types cover far more than ordinary data. There are `seven` standard types, and the first character of `ls -l` shows which one it is.
-   ```
-      $ ls -l
-      -rw-r--r--   1 user  staff   1024  report.txt        regular
-      drwxr-xr-x   5 user  staff    160  documents         directory
-      lrwxr-xr-x   1 user  staff     11  link -> file.txt  symbolic link
-      crw-rw-rw-   1 root  wheel   3, 2  /dev/tty          character
-      brw-r-----   1 root  disk    8, 0  /dev/sda          block
-      prw-r--r--   1 user  staff      0  mypipe            FIFO
-      srwxrwxrwx   1 user  staff      0  /tmp/socket       socket
-   ```
-
-   The seven types
-   ```
-      1. REGULAR FILE          -
-           Ordinary data - text, source code, executables, images.
-           UNIX imposes NO internal structure ; it is just a stream of
-           bytes, and only the program using it knows the format.
-
-      2. DIRECTORY             d
-           A special file holding a list of ( file name -> inode
-           number ) pairs. It does NOT hold the file contents.
-           Every directory has "." for itself and ".." for its parent.
-
-      3. SYMBOLIC LINK         l
-           A small file holding the PATH of another file - a shortcut.
-           It may cross file systems, and it breaks if the target is
-           deleted. A HARD LINK, by contrast, is another directory
-           entry pointing to the SAME INODE, so it cannot cross file
-           systems and the data survives until the last link is gone.
-
-      4. CHARACTER SPECIAL FILE   c
-           A device accessed ONE CHARACTER AT A TIME, unbuffered -
-           keyboard, terminal, serial port, /dev/null.
-
-      5. BLOCK SPECIAL FILE       b
-           A device accessed in FIXED-SIZE BLOCKS, buffered - hard
-           disks, SSDs, USB drives, CD-ROM.
-
-      6. FIFO / NAMED PIPE        p
-           For inter-process communication between UNRELATED processes.
-           One writes, another reads, first-in-first-out. Created with
-           mkfifo. Unlike an ordinary pipe it has a NAME in the file
-           system.
-
-      7. SOCKET                   s
-           For two-way communication between processes, on the same
-           machine (a UNIX domain socket) or across a network.
-   ```
-
-   Why this design matters
-   ```
-      Because devices, pipes and sockets are all FILES, the SAME system
-      calls work on all of them :
-
-           open() , read() , write() , close()
-
-      So a program can read from a file, a keyboard or a network
-      connection with identical code. This uniformity is the single
-      most important idea in the UNIX design.
-   ```
-   - The command to identify a type is `ls -l` (first character), `file <name>` (which inspects the content) or `stat <name>`.
-
-3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) Which drive holds "My Documents"
-   - `My Documents` (called `Documents` since Windows Vista) is kept on the drive where Windows itself is installed, which is normally the `C: drive`.
-   ```
-      Windows XP :  C:\Documents and Settings\<username>\My Documents
-      Vista and later :  C:\Users\<username>\Documents
-   ```
-   - It is a `user profile folder`, so each user account gets its own copy. It can be `relocated` to another drive — right-click the folder, Properties, Location, Move — and many people move it to D: so a reinstall of Windows does not wipe their data.
-
-   What NTFS is
-   - `NTFS` stands for `New Technology File System`. It is the default file system of Windows NT and every later Windows version — 2000, XP, 7, 10 and 11. It replaced `FAT32`.
-   ```
-      Main features :
-
-      JOURNALING     A log of pending changes is written before the
-           change itself, so after a crash or power cut the disk
-           recovers in seconds instead of needing a full scan.
-
-      LARGE FILES    No 4 GB per-file limit, unlike FAT32. Volumes can
-           run to hundreds of terabytes.
-
-      SECURITY       Per-file and per-folder permissions through ACLs,
-           so one user cannot read another's files.
-
-      ENCRYPTION     EFS encrypts files transparently ; BitLocker
-           encrypts the whole volume.
-
-      COMPRESSION    Individual files or folders can be compressed.
-
-      DISK QUOTAS    A limit on how much space each user may consume.
-
-      OTHER          Hard links , symbolic links , sparse files ,
-           shadow copies (previous versions) , and better handling of
-           bad sectors.
-   ```
-
-   NTFS against FAT32
-
-   | Point | NTFS | FAT32 |
-   |---|---|---|
-   | Maximum file size | Practically unlimited | `4 GB` |
-   | Journaling | `Yes` | No |
-   | Permissions | `Yes`, per file and folder | No |
-   | Encryption, compression | `Yes` | No |
-   | Compatibility | Windows; read-only on macOS | `Almost every device` |
-   | Typical use | Windows system drives | USB drives, SD cards, cameras |
-
-   - Which to choose: `NTFS` for a Windows hard disk or SSD, because of journaling and permissions; `FAT32` or `exFAT` for a pen drive that has to work on a TV, camera or car stereo, because those devices usually cannot read NTFS.
-
-4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
-
-   Answer: Given
-   ```
-      Disk block size          = 128 bytes
-      Disk block address size  = 8 bytes
-      File descriptor (inode) holds :
-           8 direct block addresses
-           1 single indirect block address
-           1 double indirect block address
-   ```
-
-   Step 1 — how many addresses fit in one block
-   ```
-      Addresses per block = block size / address size
-                          = 128 / 8
-                          = 16 addresses
-   ```
-
-   Step 2 — blocks reachable by each kind of pointer
-   ```
-      DIRECT           8 pointers , each -> 1 data block
-                       = 8 blocks
-
-      SINGLE INDIRECT  1 pointer -> 1 index block holding 16 addresses
-                       = 16 blocks
-
-      DOUBLE INDIRECT  1 pointer -> 1 index block of 16 addresses ,
-                       each of those -> another index block of 16
-                       = 16 * 16
-                       = 256 blocks
-   ```
-   ```
-      INODE
-      +----------------+
-      | direct  0..7   | -----> 8 data blocks
-      +----------------+
-      | single indirect| ----> [16 addr] ----> 16 data blocks
-      +----------------+
-      | double indirect| ----> [16 addr] --+--> [16 addr] -> 16 blocks
-      +----------------+                   |    ...  (16 of these)
-                                           +--> [16 addr] -> 16 blocks
-                                                = 256 data blocks
-   ```
-
-   Step 3 — total data blocks
-   ```
-      Total = 8 + 16 + 256
-            = 280 blocks
-   ```
-
-   Step 4 — maximum file size
-   ```
-      Maximum file size = total blocks * block size
-                        = 280 * 128 bytes
-                        = 35,840 bytes
-
-                        = 35,840 / 1024 KB
-                        = 35 KB
-   ```
-
-   Answer
-   ```
-      Maximum possible file size = 35,840 bytes = 35 KB
-   ```
-   - The 300 GB figure is a `distractor`. The limit here comes from the `inode structure`, not from the size of the disk — with only 280 addressable blocks, no file can exceed 35 KB however large the volume is.
-   - Note also that the index blocks themselves consume disk space but hold no file data, so they are not counted in the file size.
-   - If a `triple indirect` pointer were added it would contribute `16 * 16 * 16 = 4096` blocks, taking the maximum to `(8 + 16 + 256 + 4096) * 128 = 559,360 bytes ≈ 546 KB`. Real systems use 1 KB to 4 KB blocks, which is why their limits run into terabytes.
-
-5. **(খ) Direct or Random Access File-প্রক্রিয়াকরণ চিত্রসহ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) What direct (random) access is
-   - In `direct` or `random access`, any record can be read or written `immediately`, without reading the records before it. The file is treated as a numbered sequence of fixed-size records, and the OS jumps straight to the one asked for.
-
-   Diagram
-   ```
-      DIRECT / RANDOM ACCESS
-                   need record 4 - jump STRAIGHT to it
-                               |
-                               v
-      +--------+--------+--------+--------+--------+
-      | rec 0  | rec 1  | rec 2  | rec 3  | rec 4  |
-      +--------+--------+--------+--------+--------+
-           0       1        2        3        4     <- record number
-
-
-      SEQUENTIAL ACCESS  (for contrast)
-      +--------+--------+--------+--------+--------+
-      | rec 0  |-> rec 1|-> rec 2|-> rec 3|-> rec 4|
-      +--------+--------+--------+--------+--------+
-      Records 0 to 3 MUST be read before record 4.
-   ```
-
-   How the address is worked out
-   ```
-      All records have the SAME LENGTH, so the position is arithmetic :
-
-           byte offset = record number * record size
-
-      Example : record size = 100 bytes , want record 4
-           offset = 4 * 100 = 400
-           -> seek to byte 400 and read 100 bytes
-
-      The seek is O(1) - one calculation, one disk head movement,
-      independent of how big the file is.
-   ```
-
-   The operations
-   ```
-      read (n)      read record n
-      write (n)     write record n
-      seek (n)      move the file pointer to record n
-      position = n  then an ordinary read / write
-
-      In C :   fseek(fp, n * sizeof(rec), SEEK_SET);
-               fread(&r, sizeof(rec), 1, fp);
-   ```
-
-   ```mermaid
-   flowchart LR
-       A[Request record n] --> B[offset = n * record size]
-       B --> C[Seek to that offset]
-       C --> D[Read or write the record]
-   ```
-
-   Sequential against direct access
-
-   | Point | Sequential | Direct / random |
-   |---|---|---|
-   | Order of access | One after another, in order | `Any record, any order` |
-   | Time to reach record n | Proportional to `n` | `Constant` |
-   | Record length | May vary | Must be `fixed` |
-   | Storage needed | Tape or disk | `Disk` only — tape cannot seek |
-   | Best for | Payroll, batch reports, logs | `Databases`, ATM, airline booking |
-
-   - Where it is used and why: an ATM must fetch `one` account record out of millions in a fraction of a second, so sequential access is impossible. Database systems, indexed files (`ISAM`) and airline reservation systems all rely on direct access.
-   - The requirement is that records be `fixed length`, so the offset can be computed. Variable-length records need an `index` that maps a key to a byte offset, which is exactly what a database index does.
-
-6. **(a) An I/O system with a simple disk gets an average 50 I/O requests per second and average time for a disk to server an I/O request is 10ms. Calculate the utilization of I/O system.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
-
-   Answer: Given
-   ```
-      Arrival rate         lambda = 50 I/O requests per second
-      Average service time S      = 10 ms = 10 / 1000 = 0.01 second
-   ```
-
-   Formula
-   ```
-      Utilisation  U  =  arrival rate  *  average service time
-                      =  lambda * S
-   ```
-   - The reasoning behind it: in one second `50` requests arrive, and each one keeps the disk busy for `0.01` second. So the total busy time in that second is `50 × 0.01`.
-
-   Calculation
-   ```
-      U = 50 * 0.01
-
-        = 0.5
-
-        = 50 %
-   ```
-
-   Answer
-   ```
-      Utilisation of the I/O system = 0.5  =  50 %
-   ```
-
-   Cross-check by service capacity
-   ```
-      Service rate  mu = 1 / S = 1 / 0.01 = 100 requests per second
-
-      U = lambda / mu = 50 / 100 = 0.5 = 50 %      same result
-   ```
-   - Meaning: the disk is busy `half` the time and idle the other half. It can serve `100` requests per second, so at 50 requests per second it has spare capacity.
-   - Note the condition for stability: `U` must stay below `1`. If the arrival rate reached 100 per second, `U = 1` and the queue would grow without limit; response time rises very steeply as `U` approaches 1, which is why real systems are sized to run well below full utilisation.
-
-7. **Explain inode data structures in Linux OS.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220-1221 (ET: N/A)]*
-
-   Answer: What an inode is
-   - An `inode` (index node) is the data structure Linux keeps for `every file`, holding all its `metadata` and the `pointers to its data blocks`. One inode per file, identified by a unique `inode number` within the file system.
-   - The one thing an inode does `not` contain is the `file name`. The name lives in the `directory`, which is just a table of `(name → inode number)` pairs. This is what makes `hard links` possible — several names, one inode.
-
-   What it stores
-   ```
-      FILE TYPE        regular , directory , symlink , block , char ,
-                       FIFO , socket
-      PERMISSIONS      rwx for owner , group , others
-      OWNER            UID and GID
-      SIZE             in bytes
-      LINK COUNT       how many hard links point to this inode
-      TIMESTAMPS       atime  - last access
-                       mtime  - last modification of the CONTENT
-                       ctime  - last change of the INODE itself
-      BLOCK POINTERS   where the data actually is
-   ```
-
-   The block pointer structure — the heart of the design
-   ```
-      INODE
-      +---------------------+
-      | metadata            |
-      +---------------------+
-      | direct  0           | ------------> data block
-      | direct  1           | ------------> data block
-      |   ...  (12 of them) |
-      | direct 11           | ------------> data block
-      +---------------------+
-      | single indirect     | --> [index blk] --> many data blocks
-      +---------------------+
-      | double indirect     | --> [index] --> [index] --> data blocks
-      +---------------------+
-      | triple indirect     | --> [index] -> [index] -> [index] -> data
-      +---------------------+
-   ```
-   ```
-      With a 4 KB block and a 4-byte address, one index block holds
-      4096 / 4 = 1024 addresses :
-
-           12 direct        =        12 blocks
-           single indirect  =      1024 blocks
-           double indirect  = 1024*1024 = 1,048,576 blocks
-           triple indirect  = 1024^3   = 1,073,741,824 blocks
-
-      So a small file needs NO index block at all - the first 12
-      pointers cover 48 KB. Only a large file pays the cost of extra
-      lookups, which is reasonable because it is large anyway.
-   ```
-
-   How a path is resolved
-   ```mermaid
-   flowchart LR
-       A["/home/user/a.txt"] --> B[Read / directory]
-       B --> C[Find inode of home]
-       C --> D[Find inode of user]
-       D --> E[Find inode of a.txt]
-       E --> F[Follow block pointers to the data]
-   ```
-
-   Hard link against symbolic link
-   ```
-      HARD LINK      another NAME for the SAME inode. The link count
-           goes up. Deleting one name leaves the data alive until the
-           count reaches 0. Cannot cross file systems, cannot point to
-           a directory.
-
-      SYMBOLIC LINK  a SEPARATE inode whose data is the PATH of the
-           target. Can cross file systems, and BREAKS if the target is
-           deleted.
-   ```
-
-   Practical points
-   ```
-      ls -i file        show the inode number
-      df -i             show inode usage per file system
-      stat file         show all inode fields
-
-      The number of inodes is FIXED when the file system is created.
-      A disk can therefore run out of INODES while free space remains -
-      the classic symptom of millions of tiny files, where "No space
-      left on device" appears though df shows space available.
-   ```
-
-## CPU Scheduling (6)
-
-1. A system has three processes with the following arrival times and CPU burst times:
-
-| Process | Arrival Time (ms) | Burst Time (ms) |
-|---|---|---|
-| P1 | 0 | 5 |
-| P2 | 1 | 3 |
-| P3 | 2 | 2 |
-
-Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the average waiting time and the average turnaround time. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
-
-   Answer: Given
-   ```
-      Process   Arrival Time (AT)   Burst Time (BT)
-        P1            0                  5
-        P2            1                  3
-        P3            2                  2
-   ```
-   - `FCFS` is non-preemptive: the process that arrives first runs to completion. The order of arrival is P1, P2, P3.
-
-   Gantt chart
-   ```
-      +-------------+---------+-------+
-      |     P1      |   P2    |  P3   |
-      +-------------+---------+-------+
-      0             5         8       10
-   ```
-
-   Completion, turnaround and waiting times
-   ```
-      TAT = CT - AT          WT = TAT - BT
-
-      P1 : CT = 5   TAT = 5 - 0 = 5    WT = 5 - 5 = 0
-      P2 : CT = 8   TAT = 8 - 1 = 7    WT = 7 - 3 = 4
-      P3 : CT = 10  TAT = 10 - 2 = 8   WT = 8 - 2 = 6
-   ```
-   ```
-      +---------+----+----+----+-----+----+
-      | Process | AT | BT | CT | TAT | WT |
-      +---------+----+----+----+-----+----+
-      |   P1    |  0 |  5 |  5 |   5 |  0 |
-      |   P2    |  1 |  3 |  8 |   7 |  4 |
-      |   P3    |  2 |  2 | 10 |   8 |  6 |
-      +---------+----+----+----+-----+----+
-   ```
-
-   Averages
-   ```
-      Average waiting time    = (0 + 4 + 6) / 3
-                              = 10 / 3
-                              = 3.33 ms
-
-      Average turnaround time = (5 + 7 + 8) / 3
-                              = 20 / 3
-                              = 6.67 ms
-   ```
-
-   Answer
-   ```
-      Average waiting time    = 3.33 ms
-      Average turnaround time = 6.67 ms
-   ```
-   - Note the weakness this shows — the `convoy effect`. P1 has the longest burst and arrives first, so the two short processes must wait behind it. Running them shortest first (`SJF`) would give an average waiting time of `(0 + 3 + 5)/3 = 2.67 ms`, which is better. FCFS is simple and starvation-free, but it is poor for average waiting time.
-
-2. (a) নিচের গুলোর Distributed-GPT control and computing এর কার্যকারিতা লিখুন:
-   (b) Clock cycle কী? একটি প্রসেসরের clock speed 3.5 GHz বলতে কী বোঝায়?
-   (c) নিচের সারণীটি দেখুুন:
-
-| Process | Burst Time (milli second) | Priority |
-|---|---|---|
-| P_1 | 15 | 1 |
-| P_2 | 2 | 1 |
-| P_3 | 4 | 3 |
-| P_4 | 2 | 4 |
-| P_5 | 8 | 2 |
-
-(a) অ্যালগরিদম প্রতিটি সংক্ষেপ ও সারণির উত্তর লেখুন।
-(b) FCFS এবং SJF Scheduling algorithm গুলোর মধ্যে Gantt Chart এবং অপেক্ষাকৃত সুষম এবং গড়ের (average waiting time) ও টার্ন অ্যারাউন্ড (turnaround time) এর হিসাব নির্ণয় কর। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
-   Answer: (a) The first part of the question is `incomplete` — "Distributed-GPT control and computing" has no list of items following it, so the items to describe were not captured. The standard topic it points to is `distributed control and computing`, covered briefly below.
-   ```
-      DISTRIBUTED COMPUTING - work is spread over MANY machines
-      connected by a network, and they appear to the user as ONE system.
-
-           +--------+   +--------+   +--------+
-           | Node 1 |   | Node 2 |   | Node 3 |
-           +--------+   +--------+   +--------+
-                |            |            |
-                +------- network ---------+
-
-      WHY : one machine cannot be made fast or large enough. Adding
-           machines is cheaper, has no ceiling, and gives FAULT
-           TOLERANCE - if one node dies the rest carry on.
-      COST: the network can fail, keeping data CONSISTENT across nodes
-           is hard, and debugging is much harder.
-      USES: Hadoop and Spark for large data, Kubernetes for containers,
-           cloud services, bank core systems replicated across data
-           centres.
-   ```
-
-   (b) Clock cycle, and what 3.5 GHz means
-   - A `clock cycle` is one complete tick of the CPU's clock — one full swing from low to high and back. It is the smallest unit of time in which the processor does work; every instruction takes a whole number of cycles.
-   ```
-      CLK   __|‾‾|__|‾‾|__|‾‾|__|‾‾|__
-            |<-->|
-           one clock cycle
-   ```
-   ```
-      Clock speed = how many cycles happen per second.
-
-      3.5 GHz = 3.5 * 10^9 cycles per second
-              = 3,500,000,000 cycles every second
-
-      Cycle time = 1 / frequency
-                 = 1 / (3.5 * 10^9)
-                 = 0.2857 * 10^-9 second
-                 = 0.2857 nanosecond  (about 286 picoseconds)
-   ```
-   - What it does `not` mean: 3.5 GHz is not 3.5 billion instructions per second. Some instructions need several cycles, and a pipelined superscalar CPU can finish more than one per cycle. The honest measure is
-   ```
-      CPU time = instruction count * CPI * cycle time
-
-      So a 3.5 GHz CPU with CPI 2 is SLOWER than a 3.0 GHz CPU with
-      CPI 1. Comparing clock speeds across different architectures is
-      meaningless - this is the "megahertz myth".
-   ```
-
-   (c) Scheduling for the given table
-   ```
-      Process   BT   Priority        (all arrive at time 0 ;
-        P1      15      1             priority 1 = HIGHEST)
-        P2       2      1
-        P3       4      3
-        P4       2      4
-        P5       8      2
-   ```
-
-   FCFS — order P1, P2, P3, P4, P5
-   ```
-      +----------------+----+------+----+--------+
-      |       P1       | P2 |  P3  | P4 |   P5   |
-      +----------------+----+------+----+--------+
-      0                15   17     21   23       31
-
-      Process  BT   CT   TAT   WT
-        P1     15   15    15    0
-        P2      2   17    17   15
-        P3      4   21    21   17
-        P4      2   23    23   21
-        P5      8   31    31   23
-
-      Average WT  = (0+15+17+21+23)/5 = 76/5  = 15.20 ms
-      Average TAT = (15+17+21+23+31)/5 = 107/5 = 21.40 ms
-   ```
-
-   SJF — order P2, P4, P3, P5, P1 (shortest burst first)
-   ```
-      +----+----+------+--------+----------------+
-      | P2 | P4 |  P3  |   P5   |       P1       |
-      +----+----+------+--------+----------------+
-      0    2    4      8        16               31
-
-      Process  BT   CT   TAT   WT
-        P1     15   31    31   16
-        P2      2    2     2    0
-        P3      4    8     8    4
-        P4      2    4     4    2
-        P5      8   16    16    8
-
-      Average WT  = (16+0+4+2+8)/5 = 30/5 = 6.00 ms
-      Average TAT = (31+2+8+4+16)/5 = 61/5 = 12.20 ms
-   ```
-
-   Comparison
-   ```
-      +--------+-------------+---------------+
-      | Policy | Average WT  | Average TAT   |
-      +--------+-------------+---------------+
-      | FCFS   |  15.20 ms   |   21.40 ms    |
-      | SJF    |   6.00 ms   |   12.20 ms    |
-      +--------+-------------+---------------+
-   ```
-   - `SJF` is far better here, and this is not luck: SJF is `provably optimal` for average waiting time when all processes arrive together. FCFS suffers the `convoy effect` — the 15 ms P1 runs first and every short process queues behind it.
-   - The catch with SJF is that the burst time must be known in advance, which it never is. Real schedulers estimate it by `exponential averaging` of past bursts. SJF can also `starve` a long process if short ones keep arriving; `ageing` fixes that by slowly raising a waiting process's priority.
-
-3. **Consider the set of 3 processes whose arrival time and burst time are given below-**
-
-| Process | AT | BT |
-|---|---|---|
-| P1 | 0 | 5 |
-| P2 | 1 | 4 |
-| P3 | 2 | 2 |
-
-**If the CPU scheduling policy is round robin with time quantum=2, finds out the completion time, turnaround time, waiting time, and response time** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1447 (ET: N/A)]*
-
-   Answer: Given
-   ```
-      Process   AT   BT
-        P1       0    5
-        P2       1    4
-        P3       2    2
-
-      Round Robin , time quantum q = 2
-   ```
-
-   Ready queue trace
-   ```
-      t=0   P1 arrives , queue = [P1]
-            P1 runs 0-2 , remaining 3
-            at t=1 P2 arrived , at t=2 P3 arrived
-            queue = [P2 , P3 , P1]
-
-      t=2   P2 runs 2-4 , remaining 2 -> queue = [P3 , P1 , P2]
-      t=4   P3 runs 4-6 , remaining 0 -> P3 DONE at 6
-            queue = [P1 , P2]
-      t=6   P1 runs 6-8 , remaining 1 -> queue = [P2 , P1]
-      t=8   P2 runs 8-10, remaining 0 -> P2 DONE at 10
-            queue = [P1]
-      t=10  P1 runs 10-11 , remaining 0 -> P1 DONE at 11
-   ```
-
-   Gantt chart
-   ```
-      +------+------+------+------+------+---+
-      |  P1  |  P2  |  P3  |  P1  |  P2  |P1 |
-      +------+------+------+------+------+---+
-      0      2      4      6      8     10   11
-   ```
-
-   Results
-   ```
-      TAT = CT - AT
-      WT  = TAT - BT
-      RT  = time of FIRST run - AT
-
-      +---------+----+----+----+-----+----+----+
-      | Process | AT | BT | CT | TAT | WT | RT |
-      +---------+----+----+----+-----+----+----+
-      |   P1    |  0 |  5 | 11 |  11 |  6 |  0 |
-      |   P2    |  1 |  4 | 10 |   9 |  5 |  1 |
-      |   P3    |  2 |  2 |  6 |   4 |  2 |  2 |
-      +---------+----+----+----+-----+----+----+
-   ```
-   ```
-      P1 : CT=11 , TAT = 11-0 = 11 , WT = 11-5 = 6 , RT = 0-0 = 0
-      P2 : CT=10 , TAT = 10-1 =  9 , WT =  9-4 = 5 , RT = 2-1 = 1
-      P3 : CT= 6 , TAT =  6-2 =  4 , WT =  4-2 = 2 , RT = 4-2 = 2
-   ```
-
-   Averages
-   ```
-      Average TAT = (11 + 9 + 4) / 3 = 24 / 3 = 8.00 ms
-      Average WT  = ( 6 + 5 + 2) / 3 = 13 / 3 = 4.33 ms
-      Average RT  = ( 0 + 1 + 2) / 3 =  3 / 3 = 1.00 ms
-   ```
-   - What Round Robin buys is a low `response time` — every process starts within one quantum of its turn, which is what an interactive user notices. The price is a higher average turnaround time than SJF, plus a `context switch` at every quantum boundary (5 switches here).
-   - Choosing `q` matters: too large and RR degenerates into FCFS; too small and switching overhead dominates. The usual rule is that the quantum should exceed about 80 per cent of the CPU bursts.
-
-4. **There are 3 tasks P1, P2, and P3. The arrival time and duration of each task is given below. Apply the round-robin scheduling algorithm with quantum size-20 to schedule the tasks in a single core machine. Calculate the turnaround time for each task. (All tasks have the same priority)** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
-
-| Task | Arrival time (ms) | Duration (ms) |
-|---|---|---|
-| P1 | 0 | 40 |
-| P2 | 5 | 40 |
-| P3 | 10 | 20 |
-
-   Answer: Given
-   ```
-      Task   Arrival time (ms)   Duration / BT (ms)
-       P1           0                  40
-       P2           5                  40
-       P3          10                  20
-
-      Round Robin , time quantum q = 20 , single core , equal priority
-   ```
-
-   Ready queue trace
-   ```
-      t=0    only P1 has arrived , queue = [P1]
-             P1 runs 0-20 , remaining 20
-             during this P2 arrived (t=5) and P3 arrived (t=10)
-             queue = [P2 , P3 , P1]
-
-      t=20   P2 runs 20-40 , remaining 20 -> queue = [P3 , P1 , P2]
-      t=40   P3 runs 40-60 , remaining  0 -> P3 DONE at 60
-             queue = [P1 , P2]
-      t=60   P1 runs 60-80 , remaining  0 -> P1 DONE at 80
-             queue = [P2]
-      t=80   P2 runs 80-100, remaining  0 -> P2 DONE at 100
-   ```
-
-   Gantt chart
-   ```
-      +---------+---------+---------+---------+---------+
-      |   P1    |   P2    |   P3    |   P1    |   P2    |
-      +---------+---------+---------+---------+---------+
-      0        20        40        60        80        100
-   ```
-
-   Turnaround time for each task
-   ```
-      TAT = Completion time - Arrival time
-
-      P1 : CT = 80   TAT = 80 - 0  = 80 ms
-      P2 : CT = 100  TAT = 100 - 5 = 95 ms
-      P3 : CT = 60   TAT = 60 - 10 = 50 ms
-   ```
-   ```
-      +------+----+----+-----+-----+-----+----+
-      | Task | AT | BT | CT  | TAT | WT  | RT |
-      +------+----+----+-----+-----+-----+----+
-      |  P1  |  0 | 40 |  80 |  80 |  40 |  0 |
-      |  P2  |  5 | 40 | 100 |  95 |  55 | 15 |
-      |  P3  | 10 | 20 |  60 |  50 |  30 | 30 |
-      +------+----+----+-----+-----+-----+----+
-
-      WT = TAT - BT , RT = first run - AT
-   ```
-
-   Averages
-   ```
-      Average TAT = (80 + 95 + 50) / 3 = 225 / 3 = 75.00 ms
-      Average WT  = (40 + 55 + 30) / 3 = 125 / 3 = 41.67 ms
-      Average RT  = ( 0 + 15 + 30) / 3 =  45 / 3 = 15.00 ms
-   ```
-   - Note that the quantum of 20 exactly halves the 40 ms tasks, so each of them runs in two clean slices and there is no leftover fragment. The CPU is busy from 0 to 100 with `no idle time`, since P1 was already running when the others arrived.
-   - With `q = 40` or more, RR would behave exactly like `FCFS` here — each task would finish in one slice. That is the general rule: a quantum larger than the longest burst turns Round Robin into FCFS.
-
-5. **Calculate the average waiting time.** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
-
-| Process | Burst Time |
-|---|---|
-| P1 | 21 |
-| P2 | 3 |
-| P3 | 6 |
-
-   Answer: Given
-   ```
-      Process   Burst Time
-        P1          21
-        P2           3
-        P3           6
-   ```
-   - No arrival times are given, so all three are taken to arrive at `time 0`. The scheduling policy is not stated, so `FCFS` is worked out as the default and `SJF` is shown for comparison.
-
-   FCFS — order P1, P2, P3
-   ```
-      +----------------------+------+---------+
-      |          P1          |  P2  |   P3    |
-      +----------------------+------+---------+
-      0                      21     24        30
-
-      WT = start time - arrival time
-
-      P1 : WT = 0
-      P2 : WT = 21
-      P3 : WT = 24
-   ```
-   ```
-      +---------+----+----+-----+----+
-      | Process | BT | CT | TAT | WT |
-      +---------+----+----+-----+----+
-      |   P1    | 21 | 21 |  21 |  0 |
-      |   P2    |  3 | 24 |  24 | 21 |
-      |   P3    |  6 | 30 |  30 | 24 |
-      +---------+----+----+-----+----+
-   ```
-   ```
-      Average waiting time = (0 + 21 + 24) / 3
-                           = 45 / 3
-                           = 15 ms
-
-      Average turnaround   = (21 + 24 + 30) / 3 = 75 / 3 = 25 ms
-   ```
-
-   Answer
-   ```
-      Average waiting time = 15 ms
-   ```
-
-   SJF for comparison — order P2, P3, P1
-   ```
-      +------+---------+----------------------+
-      |  P2  |   P3    |          P1          |
-      +------+---------+----------------------+
-      0      3         9                      30
-
-      P2 : WT = 0    P3 : WT = 3    P1 : WT = 9
-
-      Average waiting time = (0 + 3 + 9) / 3 = 12 / 3 = 4 ms
-      Average turnaround   = (3 + 9 + 30) / 3 = 42 / 3 = 14 ms
-   ```
-   ```
-      +--------+--------------+
-      | Policy | Average WT   |
-      +--------+--------------+
-      | FCFS   |    15 ms     |
-      | SJF    |     4 ms     |
-      +--------+--------------+
-   ```
-   - The difference is the `convoy effect`: under FCFS the 21 ms P1 runs first and the two short processes queue behind it. `SJF` is provably `optimal` for average waiting time when all processes arrive together — no other order can beat 4 ms here.
-
-6. **(খ) CPU Scheduling কী? যে যে কারণে CPU Scheduling করতে হয় সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) What CPU scheduling is
-   - `CPU scheduling` is the OS deciding `which ready process gets the CPU next`. The part that chooses is the `short-term scheduler`, and the part that actually hands over control is the `dispatcher`.
-   ```
-      READY QUEUE
-      +----+----+----+----+
-      | P1 | P2 | P3 | P4 |  ---- scheduler chooses ---->  CPU
-      +----+----+----+----+
-   ```
-   - It is needed because there is normally `one CPU and many ready processes`, so someone must decide the order.
-
-   Why CPU scheduling is necessary
-
-   (a) The CPU must not sit idle
-   ```
-      A process alternates between a CPU BURST and an I/O BURST :
-
-           CPU burst | I/O burst | CPU burst | I/O burst | ...
-
-      While P1 waits on the disk - MILLISECONDS, an eternity for the
-      CPU - the CPU would be doing NOTHING. Scheduling gives it to
-      another ready process, so the idle time is used.
-   ```
-
-   (b) To keep CPU utilisation and throughput high
-   - `Utilisation` is the fraction of time the CPU is busy, and `throughput` is the number of processes finished per unit time. A good schedule raises both.
-
-   (c) To keep response time low
-   - On an interactive system the user must see something happen quickly. `Round Robin` gives every process a turn within one quantum, so nothing appears frozen.
-
-   (d) To share the CPU fairly and prevent starvation
-   - Without scheduling, one long process could hold the CPU forever. `Preemption` takes the CPU back when the time slice ends, and `ageing` slowly raises the priority of a long-waiting process so it is not starved.
-
-   (e) To honour priorities
-   - A real-time or system process must be able to run before an ordinary background job.
-
-   (f) To minimise waiting and turnaround time
-   ```
-      Order matters enormously. With bursts 21, 3, 6 all arriving at 0 :
-
-           FCFS  ->  average waiting time = 15 ms
-           SJF   ->  average waiting time =  4 ms
-
-      Same work, same CPU - only the ORDER changed.
-   ```
-
-   When scheduling decisions are made
-   ```
-      1. Running -> Waiting    (a process requests I/O)      non-preemptive
-      2. Running -> Ready      (its time slice expired)      preemptive
-      3. Waiting -> Ready      (I/O finished)                preemptive
-      4. Running -> Terminated (it exits)                    non-preemptive
-
-      If decisions are made ONLY at 1 and 4, the scheme is
-      NON-PREEMPTIVE ; if at 2 and 3 as well, it is PREEMPTIVE.
-   ```
-
-   The criteria a scheduler is judged by
-   ```
-      MAXIMISE : CPU utilisation , throughput
-      MINIMISE : turnaround time , waiting time , response time
-      ENSURE   : fairness , and no starvation
-   ```
-   - These pull against each other, which is why no single algorithm wins. `FCFS` is simple but suffers the convoy effect; `SJF` is optimal for waiting time but needs the burst length in advance and can starve long jobs; `Round Robin` is best for response time but adds context-switch overhead; `priority` scheduling honours importance but needs `ageing` to avoid starvation. Real systems use `multilevel feedback queues`, which combine several of these.
-
-## Windows & System Administration (5)
-
-1. **How to check the IP address in the Windows Command Prompt?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
-
-   Answer: The command is `ipconfig`.
-   ```
-      C:\> ipconfig
-
-      Windows IP Configuration
-
-      Ethernet adapter Ethernet:
-         Connection-specific DNS Suffix  . :
-         IPv4 Address. . . . . . . . . . . : 192.168.1.10
-         Subnet Mask . . . . . . . . . . . : 255.255.255.0
-         Default Gateway . . . . . . . . . : 192.168.1.1
-   ```
-
-   Useful variants
-   ```
-      ipconfig             IP address , subnet mask , default gateway
-      ipconfig /all        adds MAC address , DHCP server , DNS servers ,
-                           lease times , host name
-      ipconfig /release    give up the DHCP lease
-      ipconfig /renew      request a new DHCP lease
-      ipconfig /flushdns   clear the DNS resolver cache
-      ipconfig /displaydns show the DNS cache
-   ```
-
-   Other ways
-   ```
-      GUI     : Settings -> Network & Internet -> Properties
-      PowerShell : Get-NetIPAddress      or    Get-NetIPConfiguration
-      Older   : netsh interface ip show config
-   ```
-   - Note the difference between the `private` and the `public` address. `ipconfig` shows the private LAN address given by the router, such as `192.168.1.10`. The public address the internet sees belongs to the router and is found from a site like `whatismyip.com`.
-   - The Linux and macOS equivalent is `ip addr show` (or the older `ifconfig`).
-
-2. **Assume that an office has three departments and each department has 50 to 70 employees who are using computers with Windows operating systems. The office space is designed in such a way that an employee can use any computer within a department. Once an employee logs in from a computer, he/she will get access to his files from the server. Let you are planning for network and server setup for this company.**
-   * **(a) What is Active Directory? Do you need an Active Directory for such an office? If yes, briefly explain its use under this circumstance.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 323 (ET: BIBM)]*
-
-   Answer: (a) What Active Directory is
-   - `Active Directory (AD)` is Microsoft's directory service, running on a Windows Server called a `Domain Controller`. It keeps a central database of all users, computers, printers and groups on the network, and it handles `authentication` (who are you) and `authorisation` (what may you do).
-   ```
-                       +----------------------+
-                       |  DOMAIN CONTROLLER   |
-                       |  Active Directory    |
-                       |  users , groups ,    |
-                       |  computers , policy  |
-                       +----------------------+
-                          /       |       \
-                         /        |        \
-                +--------+   +--------+   +--------+
-                |  PC 1  |   |  PC 2  |   |  PC 3  |
-                +--------+   +--------+   +--------+
-                any employee may log in at ANY of these
-   ```
-   - Its structure: `objects` (users, computers) sit in `Organisational Units (OUs)`, which sit in a `domain`; domains form a `tree`, and trees form a `forest`. It uses `LDAP` for queries and `Kerberos` for authentication.
-
-   Is Active Directory needed here? `Yes`
-
-   The office has three departments with `150 to 210 users` and computers that any employee may sit at. That is exactly the case a domain is built for.
-   ```
-      WITHOUT AD (a WORKGROUP) :
-           every user would need a separate local account on EVERY
-           computer in the department.
-           70 users * 70 PCs = up to 4,900 accounts to create by hand.
-           A password change would have to be repeated on every machine.
-           UNMANAGEABLE.
-
-      WITH AD :
-           ONE account per user, held centrally.
-           The user logs in at ANY computer with the SAME credentials.
-   ```
-
-   How it is used in this office
-   ```
-      1. SINGLE SIGN-ON
-           One username and password works on every PC and on the file
-           server. This is what makes "sit at any computer" possible.
-
-      2. ROAMING PROFILES and FOLDER REDIRECTION
-           The user's Documents and Desktop live on the SERVER, not on
-           the PC. So the files follow the user to whichever machine
-           they use - which is precisely what the question requires.
-
-      3. GROUP-BASED PERMISSIONS
-           Create a security group per department :
-                Accounts , Sales , HR
-           Give each group rights only to its own share :
-                \\server\accounts   -> Accounts group only
-           A transfer between departments is one group change, not a
-           rewrite of every folder's permissions.
-
-      4. GROUP POLICY (GPO)
-           Push settings to all PCs at once - password length and expiry,
-           screen lock timeout, USB blocking, mapped drives, printer
-           installation, software deployment, Windows Update policy.
-
-      5. CENTRAL ACCOUNT LIFECYCLE
-           A new employee gets one account. A leaver is DISABLED ONCE
-           and is instantly locked out of every machine and share - a
-           serious security point that a workgroup cannot deliver.
-
-      6. AUDITING
-           Every logon and file access is logged centrally, which
-           matters for any organisation under audit requirements.
-   ```
-
-   Recommended setup
-   ```
-      Domain Controller  : Windows Server with AD DS , DNS and DHCP.
-                           A SECOND DC for redundancy - if the only DC
-                           fails, nobody can log in.
-      File Server        : department shares, with folder redirection.
-      OU structure       : one OU per department, with a GPO on each.
-      Groups             : one security group per department.
-   ```
-   - The rule of thumb: a `workgroup` is workable up to roughly 10 to 20 computers. Beyond that the manual account management collapses. With 150 or more users across three departments, `Active Directory is not optional but necessary`.
-
-3. **Describe the booting process in windows system.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
-
-   Answer: The Windows boot process runs in `four` stages.
-
-   Diagram
-   ```mermaid
-   flowchart TD
-       A[Power on: POST] --> B[BIOS / UEFI firmware]
-       B --> C[Boot Manager: bootmgr / bootmgfw.efi]
-       C --> D[OS Loader: winload.exe]
-       D --> E[Kernel: ntoskrnl.exe + HAL]
-       E --> F[Session Manager: smss.exe]
-       F --> G[Winlogon: login screen]
-   ```
-
-   1. PreBoot — firmware
-   ```
-      POWER ON
-        -> POST (Power On Self Test) checks RAM, CPU, keyboard, disks
-        -> the FIRMWARE initialises the hardware
-
-      BIOS system  : reads the MASTER BOOT RECORD (MBR) from the first
-           sector of the disk , which points to the active partition.
-      UEFI system  : reads the EFI SYSTEM PARTITION and starts
-           bootmgfw.efi directly. UEFI also supports SECURE BOOT, which
-           refuses to run an unsigned boot loader.
-   ```
-
-   2. Windows Boot Manager
-   ```
-      BIOS  -> bootmgr
-      UEFI  -> bootmgfw.efi
-
-      It reads the BOOT CONFIGURATION DATA (BCD) store , which lists
-      the installed operating systems.
-        - one OS  -> load it straight away
-        - several -> show the boot menu
-        - resuming from hibernation -> hand over to winresume.exe,
-          which restores hiberfil.sys instead of booting fresh
-   ```
-
-   3. Windows OS Loader — winload.exe
-   ```
-      - loads the KERNEL , ntoskrnl.exe
-      - loads the HAL , hal.dll , which hides hardware differences
-      - loads the SYSTEM registry hive
-      - loads the BOOT_START drivers - the ones needed to reach the
-        disk , such as the storage controller driver
-      - VERIFIES DRIVER SIGNATURES ; an unsigned boot driver is
-        refused
-      - it does NOT start the kernel yet, only prepares it
-   ```
-
-   4. Kernel initialisation and session start
-   ```
-      ntoskrnl.exe takes control :
-        - initialises memory management, the scheduler and the object
-          manager
-        - starts the remaining drivers that are not BOOT_START
-        - starts the SESSION MANAGER , smss.exe
-
-      smss.exe :
-        - creates the paging file and the environment
-        - starts csrss.exe (the Windows subsystem)
-        - starts wininit.exe for session 0 - services , the SCM
-          (services.exe) and lsass.exe for security
-        - starts winlogon.exe for the user session
-
-      winlogon.exe shows the LOGIN SCREEN. After the credentials are
-      checked by lsass.exe, userinit.exe runs, explorer.exe starts,
-      and the DESKTOP appears.
-   ```
-
-   Summary line
-   ```
-      POST -> BIOS/UEFI -> bootmgr -> winload.exe -> ntoskrnl.exe
-           -> smss.exe -> winlogon.exe -> explorer.exe -> DESKTOP
-   ```
-   - Where to intervene when it fails: `F8` or `Shift+Restart` reaches the `Advanced Startup` options — Safe Mode, Startup Repair and the recovery console. Startup Repair fixes a damaged `BCD` or `MBR`, which is the commonest cause of a machine that stops before the login screen.
-
-4. **১৯. বর্তমানে উইন্ডোজ অপারেটিং সিস্টেম এর কত তম ভার্সন বাজারজাত করা হয়েছে?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) The version currently on the market is `Windows 11`, released in October 2021. It is the latest Windows version for personal computers.
-   ```
-      Major desktop versions, in order :
-
-        Windows 1.0  (1985)      Windows 2.0  (1987)
-        Windows 3.0 / 3.1        Windows 95 , 98 , ME
-        Windows NT , 2000        Windows XP   (2001)
-        Windows Vista (2007)     Windows 7    (2009)
-        Windows 8 / 8.1 (2012)   Windows 10   (2015)
-        Windows 11   (2021)      <- CURRENT
-   ```
-   - Note on the numbering: there is `no Windows 9`. Microsoft went straight from 8.1 to 10.
-   - Windows 10 support ended in `October 2025`, so Windows 11 is now the supported desktop version.
-   - On the server side the current release is `Windows Server 2025`. Server and desktop versions are numbered separately.
-   - Windows 11's main requirements, which were new: `TPM 2.0`, `UEFI with Secure Boot`, a 64-bit processor, 4 GB RAM and 64 GB storage. Many older machines cannot run it for the TPM reason alone.
-
-5. **What is main difference between Domain and Workgroup?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
-
-   Answer: Difference between a domain and a workgroup
-
-   | Point | Workgroup | Domain |
-   |---|---|---|
-   | Network model | `Peer-to-peer` — every PC is equal | `Client-server` — a central controller |
-   | Management | `Decentralised` — each PC manages itself | `Centralised` — a Domain Controller manages all |
-   | User accounts | A separate `local` account on every PC | `One` account, held centrally in Active Directory |
-   | Login | Works only on `that one` computer | Works on `any` computer in the domain |
-   | Server needed? | `No` | `Yes` — Windows Server running Active Directory |
-   | Security policy | Set on each PC `by hand` | Pushed to all PCs by `Group Policy` |
-   | Practical size | Up to about `10–20` computers | `Thousands` of users and machines |
-   | Network scope | One `local` network only | Can span `many sites` |
-   | Cost | Free | Needs a server licence and an administrator |
-   | Typical use | Home, small office | Company, bank, university, government office |
-
-   Workgroup
-   ```
-      +------+   +------+   +------+
-      | PC 1 |---| PC 2 |---| PC 3 |
-      +------+   +------+   +------+
-      Every PC keeps its OWN user list and its OWN permissions.
-      To use PC 2's shared folder, you need an account ON PC 2.
-   ```
-
-   Domain
-   ```
-                 +----------------------+
-                 |  DOMAIN CONTROLLER   |
-                 |  Active Directory    |
-                 +----------------------+
-                   /        |         \
-            +------+   +------+   +------+
-            | PC 1 |   | PC 2 |   | PC 3 |
-            +------+   +------+   +------+
-      ONE account per user. The same login works on every PC, and
-      the user's files follow them from the server.
-   ```
-
-   Why the difference matters in practice
-   ```
-      70 users and 70 PCs in a WORKGROUP :
-           up to 4,900 local accounts to create by hand, and a
-           password change must be repeated on every machine.
-           UNWORKABLE.
-
-      The same office as a DOMAIN :
-           70 accounts, created once. A leaver is DISABLED ONCE and is
-           instantly locked out of every machine and every share.
-   ```
-   - What a domain adds beyond accounts: `Group Policy` to enforce password rules, screen locks and USB restrictions on every PC at once; `roaming profiles` and `folder redirection` so files follow the user; `group-based permissions` per department; and central `auditing` of logons and file access.
-   - The rule of thumb: use a `workgroup` for a home or a very small office; move to a `domain` once there are more than about 10 to 20 computers, or as soon as central control of accounts and security is required.
-
-## Process Synchronization & Concurrency (4)
-
-1. Two independent applications running concurrently attempt to update the same file located at a same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution. [BSCCPL AME 21-08-2026 (BUET)]
-
-   Answer: The consistency problem
-   - This is a `race condition` leading to a `lost update`. Two applications read the same file, each modifies its own copy, and each writes back. The second write overwrites the first, so one update disappears with no error reported.
-   ```
-      File holds the value 100.
-
-      t1  App A reads   100
-      t2  App B reads   100
-      t3  App A writes  100 + 50 = 150
-      t4  App B writes  100 + 30 = 130       <- A's update is LOST
-
-      Correct result should have been 180.
-   ```
-   - The related problems that can occur with the same file are:
-   ```
-      LOST UPDATE        one writer's change is silently overwritten
-      DIRTY READ         a reader sees a half-written file
-      INCONSISTENT READ  a reader gets part of the old data and part of
-                         the new, so the file is internally inconsistent
-      TORN WRITE         two writers interleave and the file is left
-                         corrupt, matching neither version
-   ```
-   - The root cause: `read - modify - write` is not `atomic`. The file is a `shared resource`, and the section of code that touches it is a `critical section`. What is required is `mutual exclusion` — only one application inside the critical section at a time.
-
-   Synchronisation techniques that solve it
-
-   (a) File locking — the right answer here
-   ```
-      The two applications are SEPARATE PROCESSES, possibly written in
-      different languages and started independently. They share no
-      memory, so an in-process mutex is useless. The lock must live
-      where BOTH can see it - in the FILE SYSTEM, enforced by the
-      operating system.
-
-      POSIX / Linux :  flock(fd, LOCK_EX)     or  fcntl(F_SETLKW)
-      Windows       :  LockFileEx()
-
-      Shared (read) lock    : many readers together , no writer
-      Exclusive (write) lock: one writer , no readers
-   ```
-   ```
-      App A                        App B
-      -----                        -----
-      acquire EXCLUSIVE lock       acquire EXCLUSIVE lock -> BLOCKS
-      read file                            (waits)
-      modify
-      write file
-      release lock                 -> acquires the lock
-                                   read file  (now sees 150)
-                                   modify , write 180
-                                   release lock
-   ```
-
-   (b) Mutex or binary semaphore, for threads of one process
-   ```
-      wait(S)                  // P operation , S = 1 initially
-         critical section      // read - modify - write the file
-      signal(V)                // V operation
-
-      Correct for THREADS sharing memory. It does NOT work across
-      independent processes, which is why file locking is preferred
-      in this case.
-   ```
-
-   (c) Named semaphore or lock file, across processes
-   ```
-      A NAMED semaphore (sem_open) is visible by name to unrelated
-      processes and works across them.
-
-      A LOCK FILE created with O_CREAT | O_EXCL is atomic - the second
-      process's create FAILS, telling it the resource is taken. It is
-      simple but leaves a STALE LOCK if the holder crashes, so a
-      timeout or a PID check is needed.
-   ```
-
-   (d) Atomic write by rename
-   ```
-      Write to a temporary file, then rename() it over the original.
-      rename() is ATOMIC in POSIX, so a reader always sees either the
-      complete OLD file or the complete NEW one - never a half-written
-      one. This removes DIRTY READS, but on its own it does NOT stop
-      LOST UPDATES.
-   ```
-
-   Justification — the most appropriate solution
-   ```
-      Use an OS-LEVEL ADVISORY FILE LOCK (flock / fcntl / LockFileEx)
-      around the whole read-modify-write, and write through a
-      TEMPORARY FILE plus rename().
-
-      Why :
-      1. The two applications are independent processes with no shared
-         memory, so only a file-system-level lock is visible to both.
-      2. The KERNEL releases the lock automatically if a process
-         crashes - a plain lock file would stay stuck.
-      3. The lock covers the ENTIRE read-modify-write, so the update is
-         atomic and nothing is lost.
-      4. rename() guarantees no reader ever sees a partial file.
-      5. Readers can take a SHARED lock, so many may read at once while
-         a writer still gets exclusive access.
-   ```
-   - What must be avoided: locking only around the `write`. The read must be inside the same lock, or both processes will still read the same stale value and one update will be lost — exactly the original bug.
-   - If the data is genuinely important, the better answer is to stop using a plain file and use a `database`, which provides `ACID transactions` and row-level locking designed for exactly this problem.
-
-2. **What is Semaphore? How would you improve performance when using semaphores?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 504 (ET: N/A)]*
-
-   Answer: What a semaphore is
-   - A `semaphore` is an integer variable shared by processes, used to control access to a shared resource. It is changed only by two `atomic` operations, so no two processes can update it at the same time.
-   ```
-      wait(S)   or P(S)          signal(S)  or V(S)
-      ------------------          ------------------
-      while (S <= 0)              S = S + 1
-          ;      // wait
-      S = S - 1
-   ```
-   - `wait` is used before entering the critical section and `signal` after leaving it. Being `atomic` is the whole point — if two processes could decrement `S` at once, the semaphore itself would have a race condition.
-
-   Two kinds
-   ```
-      BINARY SEMAPHORE (mutex)   S = 0 or 1
-           Only ONE process in the critical section at a time.
-           Used for MUTUAL EXCLUSION.
-
-      COUNTING SEMAPHORE         S = 0 , 1 , 2 , ... N
-           Up to N processes may hold the resource together.
-           Used when there are N identical instances - say 3 printers,
-           so S starts at 3.
-   ```
-
-   Example — the classic use
-   ```
-      semaphore mutex = 1;
-
-      Process Pi :
-           wait(mutex);
-                critical section        // read - modify - write
-           signal(mutex);
-                remainder section
-
-      The second process to call wait() finds mutex = 0 and BLOCKS
-      until the first calls signal().
-   ```
-
-   How performance is improved when using semaphores
-
-   (a) Replace busy waiting with block and wake up
-   ```
-      The naive implementation SPINS :
-           while (S <= 0) ;      <- burns the CPU doing nothing
-      This is a SPINLOCK, and it wastes a whole time slice.
-
-      The efficient implementation keeps a WAITING QUEUE :
-
-           wait(S)   : S--;  if (S < 0) { add this process to S.queue;
-                                          block(); }
-           signal(S) : S++;  if (S <= 0) { remove P from S.queue;
-                                           wakeup(P); }
-
-      A blocked process consumes NO CPU. A negative S now tells you
-      how many processes are waiting.
-
-      Spinlocks are still better for VERY short critical sections on a
-      multiprocessor, where blocking would cost more than spinning.
-   ```
-
-   (b) Keep the critical section short
-   - Do the slow work — file I/O, computation, logging — `outside` the lock, and hold the semaphore only for the few instructions that actually touch the shared data. A long critical section serialises the whole program.
-
-   (c) Use finer-grained locking
-   - One semaphore per record or per bucket instead of one for the entire table. Independent operations then proceed in parallel instead of queueing behind a single global lock.
-
-   (d) Use a reader-writer lock where reads dominate
-   ```
-      Many readers may share the data ; only a writer needs exclusive
-      access. A plain mutex would serialise the readers too, which is
-      pure waste when most operations are reads.
-   ```
-
-   (e) Use a counting semaphore rather than a binary one where the resource has several instances
-   - With 3 printers, a binary semaphore lets only 1 job print. `S = 3` lets 3 run together.
-
-   (f) Avoid deadlock and priority inversion
-   ```
-      DEADLOCK : always acquire semaphores in the SAME ORDER in every
-           process. Two processes taking S and Q in opposite orders
-           deadlock at once.
-
-      PRIORITY INVERSION : a low-priority process holding a semaphore
-           blocks a high-priority one. Fixed by PRIORITY INHERITANCE -
-           the holder temporarily inherits the waiter's priority.
-
-      STARVATION : release the queue in FIFO order, not LIFO.
-   ```
-
-   (g) Prefer a lock-free operation where one exists
-   - For a simple counter an `atomic increment` instruction is far faster than a semaphore, because it needs no system call and no context switch at all.
-
-3. **(গ) Process Synchronization এর ক্ষেত্রে Race condition ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) What a race condition is
-   - A `race condition` happens when two or more processes access shared data at the same time, and the final result depends on the `order in which they happen to run`. The same program can give a different answer on every run.
-
-   The classic example
-   ```
-      Shared variable :  count = 5
-      Both processes execute  count = count + 1
-
-      In machine code this is THREE steps, not one :
-
-           load   register , count
-           add    register , 1
-           store  count , register
-
-      INTERLEAVING THAT WORKS
-      ---------------------------------------------
-      P1 : load  R1 <- 5
-      P1 : add   R1 = 6
-      P1 : store count = 6
-      P2 : load  R2 <- 6
-      P2 : add   R2 = 7
-      P2 : store count = 7        CORRECT
-
-      INTERLEAVING THAT FAILS
-      ---------------------------------------------
-      P1 : load  R1 <- 5
-      P2 : load  R2 <- 5          <- reads the OLD value
-      P1 : add   R1 = 6
-      P2 : add   R2 = 6
-      P1 : store count = 6
-      P2 : store count = 6        WRONG - should be 7
-                                     ONE INCREMENT IS LOST
-   ```
-   - The result was correct in one case and wrong in the other, with the `same code and the same data`. Only the timing changed. That is what makes race conditions so hard to find — the bug may not repeat.
-
-   The banking example
-   ```
-      Balance = 1000. Two ATMs withdraw 500 each at the same moment.
-
-      ATM 1 reads 1000        ATM 2 reads 1000
-      ATM 1 : 1000-500 = 500  ATM 2 : 1000-500 = 500
-      ATM 1 writes 500        ATM 2 writes 500
-
-      1000 was withdrawn but the balance shows 500.
-      The bank has LOST 500.
-   ```
-
-   Why it happens
-   ```
-      1. SHARED DATA - two processes touch the same variable or file.
-      2. AT LEAST ONE WRITES - two readers can never race.
-      3. NO SYNCHRONISATION - the read-modify-write is not ATOMIC, so
-         the OS can preempt in the middle of it.
-   ```
-
-   The critical section
-   ```
-      The piece of code that touches the shared data is the CRITICAL
-      SECTION. The cure is MUTUAL EXCLUSION - only one process inside
-      at a time.
-
-           entry section        // wait(mutex)
-                CRITICAL SECTION
-           exit section         // signal(mutex)
-                remainder section
-   ```
-
-   How it is prevented
-   ```
-      MUTEX / BINARY SEMAPHORE
-           wait(mutex); count = count + 1; signal(mutex);
-           The second process blocks until the first has finished.
-
-      ATOMIC INSTRUCTION
-           Test-and-set , compare-and-swap , atomic increment - the
-           hardware guarantees the whole operation is indivisible.
-
-      PETERSON'S ALGORITHM
-           A software solution for two processes, using flag[] and
-           turn. Correct in theory, but modern CPUs reorder memory
-           accesses, so it needs memory barriers to work in practice.
-
-      MONITOR
-           A high-level construct that locks automatically on entry -
-           used in Java as the synchronized keyword.
-
-      DISABLE INTERRUPTS
-           Works only on a single processor, and only for kernel code.
-   ```
-   - Two distinctions worth making. A `race condition` gives a `wrong answer`, while a `deadlock` gives `no answer at all` — the processes simply stop. And two processes reading the same value never race; a race needs at least one `writer`.
-
-4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) What the critical section problem is
-   - A `critical section` is the part of a program that accesses `shared data` — a variable, a file, a table. The `critical section problem` is designing a protocol that lets several processes share that data without corrupting it.
-   ```
-      Structure of a process :
-
-           do {
-                ENTRY SECTION          // ask permission
-                     CRITICAL SECTION  // touch the shared data
-                EXIT SECTION           // release permission
-                     REMAINDER SECTION // other work
-           } while (true);
-   ```
-   - The problem exists because a `read - modify - write` is not atomic. If two processes interleave inside it, an update is lost:
-   ```
-      count = 5 , both processes do  count = count + 1
-
-      P1 loads 5 , P2 loads 5 , both compute 6 , both store 6.
-      Result is 6, but it should be 7 - ONE UPDATE IS LOST.
-   ```
-
-   The three requirements a solution must satisfy
-   ```
-      1. MUTUAL EXCLUSION
-           If one process is inside its critical section, no other
-           process may be inside its own.
-
-      2. PROGRESS
-           If no process is in its critical section and some want to
-           enter, only those wanting to enter may decide who goes next,
-           and the decision cannot be postponed indefinitely. A process
-           in its REMAINDER section must not block others.
-
-      3. BOUNDED WAITING
-           There is a limit on how many times other processes may enter
-           after a process has made its request. This is what prevents
-           STARVATION.
-   ```
-   - A solution that gives mutual exclusion but not progress or bounded waiting is `not` a valid solution — this is the point examiners test.
-
-   How it is solved
-
-   (a) Peterson's algorithm — a software solution for two processes
-   ```
-      shared : boolean flag[2] = {false, false};
-               int     turn;
-
-      Process Pi (j is the other process) :
-
-           flag[i] = true;        // I want to enter
-           turn    = j;           // but you go first
-           while (flag[j] && turn == j)
-                ;                 // wait
-                CRITICAL SECTION
-           flag[i] = false;
-                REMAINDER SECTION
-   ```
-   - It satisfies all three requirements. Its weaknesses: it works for `two` processes only, it uses `busy waiting`, and on a modern CPU that reorders memory accesses it needs `memory barriers` to be correct.
-
-   (b) Hardware support — atomic instructions
-   ```
-      TEST-AND-SET , COMPARE-AND-SWAP , SWAP - the CPU performs the
-      whole read-modify-write as ONE indivisible operation.
-
-           while (test_and_set(&lock))
-                ;      // spin
-                CRITICAL SECTION
-           lock = false;
-
-      Simple and fast, but it BUSY WAITS and, in this plain form,
-      does not guarantee bounded waiting.
-   ```
-
-   (c) Mutex lock
-   ```
-      acquire(lock);
-           CRITICAL SECTION
-      release(lock);
-
-      The usual solution in application code. A blocking mutex puts
-      the waiter to sleep instead of spinning, so no CPU is wasted.
-   ```
-
-   (d) Semaphore
-   ```
-      semaphore mutex = 1;
-
-      wait(mutex);
-           CRITICAL SECTION
-      signal(mutex);
-
-      A COUNTING semaphore extends this to N instances of a resource,
-      which a mutex cannot express.
-   ```
-
-   (e) Monitor
-   ```
-      A high-level construct in which the lock is taken and released
-      AUTOMATICALLY on entry and exit, so the programmer cannot forget
-      the release. Java's  synchronized  keyword is a monitor.
-   ```
-
-   (f) Disabling interrupts
-   - Prevents any context switch during the critical section. It works only for `kernel` code on a `single processor`, and is unusable on a multicore machine, so it is never a general answer.
-
-   - Which to use in practice: a `mutex` or a `semaphore` for ordinary application code, a `spinlock` only for very short critical sections in the kernel, and a `monitor` where the language provides one. Whichever is chosen, the critical section must be kept `short`, and locks must always be acquired in the `same order` to avoid deadlock.
