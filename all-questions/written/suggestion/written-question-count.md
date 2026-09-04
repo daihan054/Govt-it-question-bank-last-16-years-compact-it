@@ -1,11 +1,11 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3378** questions.
+Sorted by count, highest first. Total **3394** questions.
 
 ## IT questions
 
-Total: **2817** questions.
+Total: **2832** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -74,7 +74,7 @@ Total: **2817** questions.
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **204** |
+| **Operating System** | **— all subcategories —** | **207** |
 | | Linux / Unix Commands & Administration | 47 |
 | | CPU Scheduling Algorithms | 26 |
 | | OS Concepts & System Software | 24 |
@@ -85,11 +85,22 @@ Total: **2817** questions.
 | | Concurrency, Threads & Synchronization | 11 |
 | | File Systems & Disk Management | 7 |
 | | CPU Scheduling | 6 |
+| | OS Concepts & Process Management | 6 |
 | | Windows & System Administration | 5 |
-| | OS Concepts & Process Management | 5 |
 | | Process Synchronization & Concurrency | 4 |
-| | Deadlock & Concurrency Control | 0 |
+| | Deadlock & Concurrency Control | 2 |
 | | Linux, Shell & System Commands | 0 |
+| **Computer Fundamentals** | **— all subcategories —** | **206** |
+| | Computer Fundamentals & Acronyms | 112 |
+| | ICT in Society & Governance | 24 |
+| | Hardware Components & BIOS (CMOS Battery) | 24 |
+| | Software Types & Classification | 17 |
+| | Data Center Infrastructure & Power Management | 10 |
+| | Blockchain & Emerging Technologies | 8 |
+| | Server Hardware & Enterprise Systems | 5 |
+| | Quantum Computing & Emerging Technologies | 3 |
+| | Digital Banking & Financial Inclusion | 2 |
+| | User Interfaces (CLI vs GUI) | 1 |
 | **Computer & Network Security** | **— all subcategories —** | **197** |
 | | Social Engineering & Cyber Attacks | 32 |
 | | Cryptography | 31 |
@@ -106,17 +117,6 @@ Total: **2817** questions.
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **196** |
-| | Computer Fundamentals & Acronyms | 102 |
-| | ICT in Society & Governance | 24 |
-| | Hardware Components & BIOS (CMOS Battery) | 24 |
-| | Software Types & Classification | 17 |
-| | Data Center Infrastructure & Power Management | 10 |
-| | Blockchain & Emerging Technologies | 8 |
-| | Server Hardware & Enterprise Systems | 5 |
-| | Quantum Computing & Emerging Technologies | 3 |
-| | Digital Banking & Financial Inclusion | 2 |
-| | User Interfaces (CLI vs GUI) | 1 |
 | **Digital Logic Design (DLD)** | **— all subcategories —** | **157** |
 | | Logic Gates & Universal Gates | 34 |
 | | Number Systems & Base Conversions | 26 |
@@ -172,12 +172,12 @@ Total: **2817** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **127** |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **128** |
 | | OOP Concepts (Inheritance & Polymorphism) | 54 |
 | | Java Programming & Methods | 18 |
 | | Class Design & Object-Oriented Modeling | 11 |
+| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 11 |
 | | Output Tracing & Recursion | 10 |
-| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 10 |
 | | Constructors & Destructors | 8 |
 | | Encapsulation & Access Modifiers | 7 |
 | | Exception Handling | 4 |
@@ -202,8 +202,8 @@ Total: **2817** questions.
 | | Full Stack & Backend Web Development | 7 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
-| **AI & Machine Learning** | **— all subcategories —** | **65** |
-| | Artificial Intelligence & Machine Learning | 22 |
+| **AI & Machine Learning** | **— all subcategories —** | **66** |
+| | Artificial Intelligence & Machine Learning | 23 |
 | | Artificial Intelligence & Expert Systems | 8 |
 | | Deep Learning & Neural Networks (ANN, CNN, RNN) | 8 |
 | | Machine Learning Paradigms (Supervised vs Unsupervised) | 6 |
@@ -256,7 +256,7 @@ Total: **2817** questions.
 
 ## General Questions
 
-Total: **561** questions.
+Total: **562** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -265,9 +265,9 @@ Total: **561** questions.
 | | International Affairs | 70 |
 | | Everyday Science & Environment | 22 |
 | | Banking & ICT Abbreviations | 8 |
-| **Bangla** | **— all subcategories —** | **137** |
+| **Bangla** | **— all subcategories —** | **138** |
 | | বাংলা ব্যাকরণ ও সাহিত্য | 61 |
-| | Focus Writing | 39 |
+| | Focus Writing | 40 |
 | | Translation | 19 |
 | | পত্র লিখন | 7 |
 | | সারমর্ম / সারাংশ | 6 |

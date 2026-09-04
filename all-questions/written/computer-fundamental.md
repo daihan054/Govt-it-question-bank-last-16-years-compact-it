@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 196 questions
+**Table of Contents** — 10 subtopics · 206 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-102) | 102 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-112) | 112 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
 | 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (102)
+## Computer Fundamentals & Acronyms (112)
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -287,6 +287,26 @@ a) Write a funtcion using any language that calculates a person tax. b) If three
 101. **Find roots of Quadratic equality equation ax^2+bx+c=0 in C or Any other language.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 399]]*
 
 102. **What are the data units of the Physical layer, Data Link layer, Network layer, and Transport layer?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+
+103. **Draw diagrams of Bus, Star, and Mesh network topologies.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+104. **Write the names of three linear and three non-linear data structures. Also, mention which type is more memory efficient — linear or non-linear?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+105. **জাতীয় গ্রিডে সংযুক্ত প্রথম সৌর বিদ্যুৎ প্রকল্প কোথায় স্থাপিত হয়?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+106. **"ভূষণ্ডির কাক" বাগধারাটির অর্থ কী?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+107. **বাক্যটি কোন বাচ্যের উদাহরণ: "কোথায় যাওয়া হচ্ছে"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+108. **Fill in the blank using correct subjunctive mood: I wish I ___ a king.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+109. **Complete the sentence correctly: Where are you ___ ?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+110. **What is the adjective form of the noun "misery"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+111. **If a + b + c = 15 and ab + bc + ca = 83 then what is the value of a^2 + b^2 + c^2?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+112. **A product is sold at a loss of 8%. If the product is sold at a price of 800 Taka more than its original price, then there is a profit of 8%. What is the original price of the product?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
 ## ICT in Society & Governance (24)
 

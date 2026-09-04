@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 161 questions
+**Table of Contents** — 6 subtopics · 163 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-59) | 59 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-61) | 61 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (59)
+## Hardware Components & Peripherals (61)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -368,6 +368,10 @@ int main ()\{
    b. George Bernard Shaw
    c. Ben Jonson
    d. Christopher Marlowe
+
+60. **c) CPU Scheduling কি? ২টি CPU Scheduling algorithm এর নাম লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+
+61. **c) তিনটি Optical Storage এর নাম লিখুন** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
 
 ## Software Types & Classification (40)
 

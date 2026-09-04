@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 65 questions
+**Table of Contents** — 12 subtopics · 66 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-22) | 22 |
+| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-23) | 23 |
 | 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
 | 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
 | 4 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
@@ -20,7 +20,7 @@
 
 ---
 
-## Artificial Intelligence & Machine Learning (22)
+## Artificial Intelligence & Machine Learning (23)
 1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
 (i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
 
@@ -68,6 +68,8 @@
 21. **Draw bit error rate curve and comparison between BER and SNR and QPSK with explained.** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 373-374]]*
 
 22. **You have 1Gb data, but your computer can handle 64 kb data at a time. No how can you sort them. Explain your answer and write the pseudocode of the sorting code.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+
+23. **A box contains 10 red and 10 black marbles. If you close your eyes and pick 3 marbles, what is the probability that all 3 marbles will be black?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
 ## Artificial Intelligence & Expert Systems (8)
 

@@ -1,12 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 22 questions
+**Table of Contents** — 5 subtopics · 23 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [MS Excel](#ms-excel-10) | 10 |
 | 2 | [MS Word](#ms-word-5) | 5 |
-| 3 | [MS PowerPoint](#ms-powerpoint-3) | 3 |
-| 4 | [MS Office & Shortcuts](#ms-office--shortcuts-3) | 3 |
+| 3 | [MS Office & Shortcuts](#ms-office--shortcuts-4) | 4 |
+| 4 | [MS PowerPoint](#ms-powerpoint-3) | 3 |
 | 5 | [MS Access](#ms-access-1) | 1 |
 
 <!-- TOC END -->
@@ -107,6 +107,27 @@
    c. Click X button on title bar
    d. Press Alt+F4
 
+## MS Office & Shortcuts (4)
+1. **(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
+
+2. **Which of the following is an example of system software? [ নিচের কোনটি সিস্টেম সফটওয়্যারের উদাহরণ? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
+   (a) MS Word
+   (b) Google Chrome
+   (c) Operating System
+   (d) Photoshop
+
+3. **The most famous romantic poet of English literature is-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
+   a. John Dryden
+   b. Alexander Pope
+   c. William Wordsworth
+   d. T.S Eliot
+
+4. **Find the correctly spelt word** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   a) aggrandize
+   b) aggrandiize
+   c) aggrandice
+   d) aggrandise
+
 ## MS PowerPoint (3)
 
 1. **Which file format can be added to a PowerPoint show?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*
@@ -126,21 +147,6 @@
    b. Dragging
    c. Selecting
    d. Moving
-
-## MS Office & Shortcuts (3)
-1. **(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
-
-2. **Which of the following is an example of system software? [ নিচের কোনটি সিস্টেম সফটওয়্যারের উদাহরণ? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
-   (a) MS Word
-   (b) Google Chrome
-   (c) Operating System
-   (d) Photoshop
-
-3. **The most famous romantic poet of English literature is-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
-   a. John Dryden
-   b. Alexander Pope
-   c. William Wordsworth
-   d. T.S Eliot
 
 ## MS Access (1)
 

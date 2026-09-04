@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 485 questions
+**Table of Contents** — 6 subtopics · 503 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
-| 2 | [Everyday Science](#everyday-science-136) | 136 |
-| 3 | [International Affairs](#international-affairs-107) | 107 |
+| 2 | [Everyday Science](#everyday-science-151) | 151 |
+| 3 | [International Affairs](#international-affairs-110) | 110 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -987,7 +987,7 @@
    C. রোবটি
    D. জেনেটিক্স
 
-## Everyday Science (136)
+## Everyday Science (151)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -1923,7 +1923,77 @@ int main() \{
    (a) Construct the truth table.
    (b) Use the truth table to find the POS (Product of Sums) expression using K-map simplification.
 
-## International Affairs (107)
+137. **‘কালের কলস’ কাব্যগ্রন্থটির রচয়িতা কে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   ক) আল মাহমুদ
+   খ) শামসুর রহমান
+   গ) শহীদ কাদরী
+   ঘ) রফিক আজাদ
+
+138. **বাংলা গদ্যে প্রথম যতিচিহ্ন ব্যবহার করেন কে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   ক) প্রমথ চৌধুরী
+   খ) রামমোহন রায়
+   গ) ঈশ্বরচন্দ্র বিদ্যাসাগর
+   ঘ) রামায়ণ
+
+139. **Please stop ------ so many mistake.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   a) to make
+   b) make
+   c) making
+   d) makes
+
+140. **The price of gold as well as silver ------ risen.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   a) is
+   b) have
+   c) has
+   d) are
+
+141. **My doctor knew that I would eventually recover and do kind of work "I would be doing" before.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   a) would have been doing
+   b) would have done
+   c) had been done
+   d) had been doing
+
+142. **Sincere work are indispensable ---- our country.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   a) for
+   b) in
+   c) to
+   d) of
+
+143. **বেথেলহাম কোথায় অবস্থিত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) তেহরান
+   খ) থাইল্যান্ড
+   গ) ফিলিস্তিন
+   ঘ) জর্দান
+
+144. **10, 17, 19, 25, 30, 32 এর মধ্যক কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) ১৯
+   খ) ২০
+   গ) ২১
+   ঘ) ২২
+
+145. **a - \\\{a - (a + 1)\\\} = ?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) a
+   খ) 1
+   গ) a - 1
+   ঘ) a + 1
+
+146. **একটি রম্বসের কর্ণ 8 মি ও 6 হলে এর ক্ষেত্রফল কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) ৪৮
+   খ) ২৪
+   গ) ৬৪
+   ঘ) ৩৬
+
+147. **a) JS Query তে Ajax কেন ব্যবহার করা হয়?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+
+148. **b) ১ গিগাবাইট .................... কিলোবাইট** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+
+149. **ধরুন একটি প্রজেক্ট ডেভেলপমেন্ট করবেন এতে আনুষাঙ্গিক অনেক কিছুই প্রয়োজন। একটি প্রজেক্ট ডেভেলপ করা পরিপূর্ণ ভাবে করা সম্ভব না সে ক্ষেত্রে এর কস্টিং বা বাজেট সাশ্রয়ী করা দরকার এর জন্যে agile বা waterfall প্রজেক্ট ডেভেলপ করার ক্ষেত্রে আপনি কোনটি নির্বাচন করবেন? কেন করবেন ব্যাখ্যা করুন।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+150. **মেইল করার জন্যে কোন প্রটোকল ব্যবহার করা হয়?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+
+151. **Cache মেমোরি কি? Cache মেমোরি কম্পিউটারের কোন অংশে আছে? Cache মেমোরি ছোটো হলে অসুবিধা কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+
+## International Affairs (110)
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) David Baker
    (b) John Jumper
@@ -2643,6 +2713,24 @@ int main() \{
    খ. নামিবিয়া
    গ. ভুটান
    ঘ. সিয়েরা লিওন
+
+108. **জাতিসংঘ এর নিরাপত্তা পরিষদের স্থায়ী সদস্য কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) ৫
+   খ) ৭
+   গ) ৯
+   ঘ) ৬
+
+109. **উপমহাদেশের কোন বাঙালি প্রথম অস্কার লাভ করে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) সত্যজিত রায়
+   খ) জহির রায়হান
+   গ) সুকুমার সেন
+   ঘ) রবীন্দ্রনাথ
+
+110. **মুক্তিযুদ্ধ কত জন নারী মুক্তিযোদ্ধা বীর প্রতীক খেতাব পায়?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) ১
+   খ) ২
+   গ) ৩
+   ঘ) ৫
 
 ## Geography & Environment (26)
 

@@ -1,23 +1,23 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 164 questions
+**Table of Contents** — 15 subtopics · 172 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Algebra](#algebra-45) | 45 |
-| 2 | [Geometry](#geometry-24) | 24 |
-| 3 | [Percentage, Profit & Loss](#percentage-profit--loss-22) | 22 |
+| 2 | [Geometry](#geometry-25) | 25 |
+| 3 | [Percentage, Profit & Loss](#percentage-profit--loss-25) | 25 |
 | 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
 | 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
 | 6 | [Set Theory](#set-theory-8) | 8 |
 | 7 | [Analytical Reasoning](#analytical-reasoning-7) | 7 |
 | 8 | [Average & Age Problems](#average--age-problems-6) | 6 |
 | 9 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
-| 10 | [Permutation & Combination](#permutation--combination-5) | 5 |
-| 11 | [Trigonometry](#trigonometry-4) | 4 |
-| 12 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 13 | [Time & Work](#time--work-4) | 4 |
+| 10 | [Time & Work](#time--work-6) | 6 |
+| 11 | [Permutation & Combination](#permutation--combination-5) | 5 |
+| 12 | [Trigonometry](#trigonometry-4) | 4 |
+| 13 | [Probability & Statistics](#probability--statistics-4) | 4 |
 | 14 | [Basic Arithmetic](#basic-arithmetic-2) | 2 |
-| 15 | [Speed, Time & Distance](#speed-time--distance-0) | 0 |
+| 15 | [Speed, Time & Distance](#speed-time--distance-2) | 2 |
 
 <!-- TOC END -->
 
@@ -306,7 +306,7 @@
    (c) Priority Scheduling
    (d) FIFO
 
-## Geometry (24)
+## Geometry (25)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ১২০°
    খ. ১৮০°
@@ -451,7 +451,13 @@
    (c) 80 cm
    (d) Cannot be determined
 
-## Percentage, Profit & Loss (22)
+25. **সমকোণী ত্রিভুজের অতিভুজ 10 অপর বাহুদ্বয়ের একটি 6 হলে, অপরটি কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) ৭
+   খ) ৮
+   গ) ৯
+   ঘ) ১০
+
+## Percentage, Profit & Loss (25)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
@@ -584,6 +590,16 @@
    খ. নিউট্রন
    গ. হাইড্রোজেন
    ঘ. এটম
+
+23. **১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) ৪
+   খ) ৫
+   গ) ৬
+   ঘ) ৭
+
+24. **একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+25. **SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
 
 ## Arithmetic & Number Series (16)
 
@@ -951,6 +967,45 @@
    c. 91
    d. 114
 
+## Time & Work (6)
+1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ৪ দিন
+   খ. ৫ দিন
+   গ. ৬ দিন
+   ঘ. ৭ দিন
+
+**পাইপ A একটি ট্যাঙ্ক ২০ মিনিটে ভর্তি করতে পারে, পাইপ B ৩০ মিনিটে ভর্তি করতে পারে এবং পাইপ C সেই ট্যাঙ্কটি ৪০ মিনিটে খালি করতে পারে। যদি এই তিনটি পাইপ একসাথে চালু করা হয়, তাহলে ট্যাঙ্কটি ভর্তি হতে কত সময় লাগবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ১৭.১৪ মিনিট
+   খ. ২০ মিনিট
+   গ. ৮ মিনিট
+   ঘ. কোনোটিই নয়
+
+2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Switch
+   (b) Hub
+   (c) Router
+   (d) Modem
+
+3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
+   (a) 45
+   (b) 90
+   (c) 63
+   (d) 126
+
+4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
+   (A) Print screen
+   (B) File open
+   (C) Help
+   (D) Save
+
+5. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) ফজলুর রহমান
+   খ) ইউসুফ আলী
+   গ) তাজউদ্দিন আহমেদ
+   ঘ) মনসুর আলী
+
+6. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
 ## Permutation & Combination (5)
 
 1. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*
@@ -1033,37 +1088,6 @@
    c. 5/6
    d. 1/6
 
-## Time & Work (4)
-1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. ৪ দিন
-   খ. ৫ দিন
-   গ. ৬ দিন
-   ঘ. ৭ দিন
-
-**পাইপ A একটি ট্যাঙ্ক ২০ মিনিটে ভর্তি করতে পারে, পাইপ B ৩০ মিনিটে ভর্তি করতে পারে এবং পাইপ C সেই ট্যাঙ্কটি ৪০ মিনিটে খালি করতে পারে। যদি এই তিনটি পাইপ একসাথে চালু করা হয়, তাহলে ট্যাঙ্কটি ভর্তি হতে কত সময় লাগবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ১৭.১৪ মিনিট
-   খ. ২০ মিনিট
-   গ. ৮ মিনিট
-   ঘ. কোনোটিই নয়
-
-2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
-   (a) Switch
-   (b) Hub
-   (c) Router
-   (d) Modem
-
-3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
-   (a) 45
-   (b) 90
-   (c) 63
-   (d) 126
-
-4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
-   (A) Print screen
-   (B) File open
-   (C) Help
-   (D) Save
-
 ## Basic Arithmetic (2)
 1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
    ক. ৩৫ বছর
@@ -1077,8 +1101,8 @@
    গ. প্রবাসিনী
    ঘ. প্রোষিতপত্নীক
 
-## Speed, Time & Distance (0)
-**সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+## Speed, Time & Distance (2)
+1. **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
    ক. তরলের প্রবাহের মসৃণতা
    খ. তরলের প্রবাহের আপেক্ষিক গতি
    গ. তরলের প্রবাহে বাধা দেওয়ার ধর্ম
@@ -1089,3 +1113,5 @@
    খ. ২২৪ কি.মি.
    গ. ২৩০ কি.মি.
    ঘ. ২৩৪ কি.মি.
+
+2. **a) নিম্নোক্ত মেমোরিগুলোকে গতির দ্রুততার ভিত্তিতে ক্রমানুসারে সাজিয়ে লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*

@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 204 questions
+**Table of Contents** — 15 subtopics · 207 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -13,10 +13,10 @@
 | 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
 | 9 | [File Systems & Disk Management](#file-systems--disk-management-7) | 7 |
 | 10 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
-| 11 | [Windows & System Administration](#windows--system-administration-5) | 5 |
-| 12 | [OS Concepts & Process Management](#os-concepts--process-management-5) | 5 |
+| 11 | [OS Concepts & Process Management](#os-concepts--process-management-6) | 6 |
+| 12 | [Windows & System Administration](#windows--system-administration-5) | 5 |
 | 13 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
-| 14 | [Deadlock & Concurrency Control](#deadlock--concurrency-control-0) | 0 |
+| 14 | [Deadlock & Concurrency Control](#deadlock--concurrency-control-2) | 2 |
 | 15 | [Linux, Shell & System Commands](#linux-shell--system-commands-0) | 0 |
 
 <!-- TOC END -->
@@ -578,6 +578,19 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 6. **(খ) CPU Scheduling কী? যে যে কারণে CPU Scheduling করতে হয় সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
 
+## OS Concepts & Process Management (6)
+1. **(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
+
+2. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+
+3. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
+
+4. **What are the major challenges faced by software engineers during software development? Explain with examples how these challenges affect the development process and how they can be mitigated.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+5. **Computer A has a 2 GHz processor and takes 250 picoseconds to execute a single instruction, while Computer B has a 2.5 GHz processor and takes 500 picoseconds per instruction. Which computer is faster?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
+
+6. **What are the five states of a process in an operating system?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
 ## Windows & System Administration (5)
 
 1. **How to check the IP address in the Windows Command Prompt?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
@@ -591,17 +604,6 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 5. **What is main difference between Domain and Workgroup?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
 
-## OS Concepts & Process Management (5)
-1. **(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
-
-2. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
-
-3. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
-
-4. **What are the major challenges faced by software engineers during software development? Explain with examples how these challenges affect the development process and how they can be mitigated.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
-
-5. **Computer A has a 2 GHz processor and takes 250 picoseconds to execute a single instruction, while Computer B has a 2.5 GHz processor and takes 500 picoseconds per instruction. Which computer is faster?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
-
 ## Process Synchronization & Concurrency (4)
 
 1. Two independent applications running concurrently attempt to update the same file located at a same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution. [BSCCPL AME 21-08-2026 (BUET)]
@@ -612,8 +614,10 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
 
-## Deadlock & Concurrency Control (0)
-**Describe three basic techniques that exist to control deadlocks in databases. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 312-313]]*
+## Deadlock & Concurrency Control (2)
+1. **Describe three basic techniques that exist to control deadlocks in databases. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 312-313]]*
+
+2. **What are the four necessary conditions for a deadlock to occur?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
 ## Linux, Shell & System Commands (0)
 **Answer the following Linux Command.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 386]]*

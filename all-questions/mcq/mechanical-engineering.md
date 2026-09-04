@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 37 questions
+**Table of Contents** — 7 subtopics · 38 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Engineering Mechanics & Strength of Materials](#engineering-mechanics--strength-of-materials-10) | 10 |
-| 2 | [Thermodynamics & Heat Transfer](#thermodynamics--heat-transfer-9) | 9 |
+| 2 | [Thermodynamics & Heat Transfer](#thermodynamics--heat-transfer-10) | 10 |
 | 3 | [Engineering Materials & Manufacturing](#engineering-materials--manufacturing-7) | 7 |
 | 4 | [Machining & Workshop Practice](#machining--workshop-practice-6) | 6 |
 | 5 | [Industrial & Production Engineering](#industrial--production-engineering-3) | 3 |
@@ -77,7 +77,7 @@
    (গ) সর্বনিম্ন
    (ঘ) সর্বনিম্ন অথবা সর্বোচ্চ
 
-## Thermodynamics & Heat Transfer (9)
+## Thermodynamics & Heat Transfer (10)
 1. **একটি হিমায়ন চক্রের হিমায়ক কর্তৃক তাপ শোষিত হয়** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*
    (ক) কন্ডেন্সারে
    (খ) ইভাপোরেটরে
@@ -137,6 +137,12 @@
    (b) Archie
    (c) Alta vista
    (d) WAIS
+
+10. **'একুশ মানে মাথা নত না করা' এই প্রতিজ্ঞা কে করেছেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   ক) আবুল ফজল
+   খ) শেখর আহমদ
+   গ) অর্থ অপুর্বর
+   ঘ) সিরাজুল ইসলাম চৌধুরী
 
 ## Engineering Materials & Manufacturing (7)
 

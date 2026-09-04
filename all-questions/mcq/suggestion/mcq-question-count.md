@@ -1,11 +1,11 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2896** questions.
+Sorted by count, highest first. Total **2934** questions.
 
 ## IT questions
 
-Total: **1667** questions.
+Total: **1676** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -23,7 +23,7 @@ Total: **1667** questions.
 | | Routing Protocols | 13 |
 | | Error Detection & Correction | 3 |
 | | Switching Techniques | 3 |
-| **Database** | **— all subcategories —** | **181** |
+| **Database** | **— all subcategories —** | **184** |
 | | SQL Commands & Queries | 52 |
 | | DBMS Concepts & Architecture | 34 |
 | | Normalization | 16 |
@@ -34,12 +34,12 @@ Total: **1667** questions.
 | | Relational Model & Terminology | 8 |
 | | PL/SQL & Triggers | 7 |
 | | Indexing & Query Optimization | 6 |
+| | Database Fundamentals & SQL | 6 |
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | Concurrency Control & Locking | 5 |
-| | Database Fundamentals & SQL | 3 |
 | | SQL Joins | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **161** |
-| | Hardware Components & Peripherals | 59 |
+| **Computer Fundamentals** | **— all subcategories —** | **163** |
+| | Hardware Components & Peripherals | 61 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -69,12 +69,12 @@ Total: **1667** questions.
 | | Inheritance | 6 |
 | | Constructors & Destructors | 6 |
 | | Exception Handling | 6 |
-| **Data Structure** | **— all subcategories —** | **89** |
+| **Data Structure** | **— all subcategories —** | **91** |
 | | Data Structure Basics | 25 |
 | | Stack & Queue | 23 |
 | | Tree & Binary Search Tree | 20 |
 | | Linked List | 10 |
-| | Data Structures & Algorithms | 6 |
+| | Data Structures & Algorithms | 8 |
 | | Priority Queue & Heap | 3 |
 | | Hashing & Hash Tables | 2 |
 | **Microprocessor & Computer Architecture** | **— all subcategories —** | **85** |
@@ -128,9 +128,9 @@ Total: **1667** questions.
 | | Software Design & Metrics | 8 |
 | | Design Patterns | 3 |
 | | Software Requirements Engineering | 1 |
-| **Mechanical Engineering** | **— all subcategories —** | **37** |
+| **Mechanical Engineering** | **— all subcategories —** | **38** |
 | | Engineering Mechanics & Strength of Materials | 10 |
-| | Thermodynamics & Heat Transfer | 9 |
+| | Thermodynamics & Heat Transfer | 10 |
 | | Engineering Materials & Manufacturing | 7 |
 | | Machining & Workshop Practice | 6 |
 | | Industrial & Production Engineering | 3 |
@@ -140,11 +140,11 @@ Total: **1667** questions.
 | | Python | 10 |
 | | Mobile & Android Development | 7 |
 | | Visual Basic & .NET | 7 |
-| **MS Office** | **— all subcategories —** | **22** |
+| **MS Office** | **— all subcategories —** | **23** |
 | | MS Excel | 10 |
 | | MS Word | 5 |
+| | MS Office & Shortcuts | 4 |
 | | MS PowerPoint | 3 |
-| | MS Office & Shortcuts | 3 |
 | | MS Access | 1 |
 | **Cloud Computing** | **— all subcategories —** | **20** |
 | | Cloud Computing Fundamentals | 14 |
@@ -157,19 +157,19 @@ Total: **1667** questions.
 
 ## General Questions
 
-Total: **1229** questions.
+Total: **1258** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **485** |
+| **General Knowledge** | **— all subcategories —** | **503** |
 | | Bangladesh Affairs | 171 |
-| | Everyday Science | 136 |
-| | International Affairs | 107 |
+| | Everyday Science | 151 |
+| | International Affairs | 110 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
-| **Bangla** | **— all subcategories —** | **297** |
-| | বাংলা ব্যাকরণ | 159 |
+| **Bangla** | **— all subcategories —** | **300** |
+| | বাংলা ব্যাকরণ | 162 |
 | | বাংলা সাহিত্য | 113 |
 | | বাগধারা ও প্রবাদ | 13 |
 | | এক কথায় প্রকাশ | 5 |
@@ -184,19 +184,19 @@ Total: **1229** questions.
 | | Idioms & Phrases | 25 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Math** | **— all subcategories —** | **164** |
+| **Math** | **— all subcategories —** | **172** |
 | | Algebra | 45 |
-| | Geometry | 24 |
-| | Percentage, Profit & Loss | 22 |
+| | Geometry | 25 |
+| | Percentage, Profit & Loss | 25 |
 | | Arithmetic & Number Series | 16 |
 | | Time, Work & Distance | 11 |
 | | Set Theory | 8 |
 | | Analytical Reasoning | 7 |
 | | Average & Age Problems | 6 |
 | | Ratio & Proportion | 6 |
+| | Time & Work | 6 |
 | | Permutation & Combination | 5 |
 | | Trigonometry | 4 |
 | | Probability & Statistics | 4 |
-| | Time & Work | 4 |
 | | Basic Arithmetic | 2 |
-| | Speed, Time & Distance | 0 |
+| | Speed, Time & Distance | 2 |

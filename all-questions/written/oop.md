@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 127 questions
+**Table of Contents** — 10 subtopics · 128 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-54) | 54 |
 | 2 | [Java Programming & Methods](#java-programming--methods-18) | 18 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-11) | 11 |
-| 4 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
-| 5 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-10) | 10 |
+| 4 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-11) | 11 |
+| 5 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
 | 6 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
 | 7 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 8 | [Exception Handling](#exception-handling-4) | 4 |
@@ -250,6 +250,40 @@ Public class class B extends class A {
 
 11. **In java language: write a class named Bicycle having 3 integer variables (speed, gear, cost) and a constructor to initialize the variables. Also write a class named MountBike that inherits Bicycle class, having an extra variable speedcost and a constructor to initialize the variable.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1269 (ET: N/A)]*
 
+## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (11)
+1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
+class myclass \{
+
+    int num;
+
+public:
+
+    myclass(int i) \{ num=i; \}
+
+\};
+
+2. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*
+
+3. **Write an essay on the following topic using the hints given below: Objectives of Education (15 \\times 1 = 15)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
+
+4. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
+
+5. **Write a C/C++/ Java program to find sum of the series 1+2+4+7+11+16+.....+n** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351-352]]*
+
+6. **What is polymorphism? Differences in types of polymorphism. Define.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353-354]]*
+
+7. **The ratio of boys to girls in a classroom is 2:3. After 3 more boys enter the classroom, the ratio is 3:4. How many people were there in the room at the start?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+8. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
+a) What is Series? b) Write a program using C/C++ to find n^\{th\} Fibonacci.
+
+9. **What is polymorphism in the context of OOP? Explain with example.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400]]*
+
+10. **Write down the concept about inheritance with example.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
+
+11. **In a class of 100 students, 80 passed in Bengali, 88 passed in English, and 70 passed in both subjects. How many students failed in both subjects?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
 ## Output Tracing & Recursion (10)
 
 1. Consider the following Java program and determine the integer value printed by the execution of the main() method:
@@ -428,38 +462,6 @@ public class WhatTheOutput{
 ```
 
 10. **You are required to trace the changes in value for each of the numbers, before and after each method are called for each of iterations and finally write down output of the program.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1195-1196 (ET: N/A)]*
-
-## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (10)
-1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
-class myclass \{
-
-    int num;
-
-public:
-
-    myclass(int i) \{ num=i; \}
-
-\};
-
-2. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*
-
-3. **Write an essay on the following topic using the hints given below: Objectives of Education (15 \\times 1 = 15)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
-Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
-
-4. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
-
-5. **Write a C/C++/ Java program to find sum of the series 1+2+4+7+11+16+.....+n** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351-352]]*
-
-6. **What is polymorphism? Differences in types of polymorphism. Define.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353-354]]*
-
-7. **The ratio of boys to girls in a classroom is 2:3. After 3 more boys enter the classroom, the ratio is 3:4. How many people were there in the room at the start?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
-
-8. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
-a) What is Series? b) Write a program using C/C++ to find n^\{th\} Fibonacci.
-
-9. **What is polymorphism in the context of OOP? Explain with example.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400]]*
-
-10. **Write down the concept about inheritance with example.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
 
 ## Constructors & Destructors (8)
 

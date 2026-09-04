@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 297 questions
+**Table of Contents** — 9 subtopics · 300 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-159) | 159 |
+| 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-162) | 162 |
 | 2 | [বাংলা সাহিত্য](#বাংলা-সাহিত্য-113) | 113 |
 | 3 | [বাগধারা ও প্রবাদ](#বাগধারা-ও-প্রবাদ-13) | 13 |
 | 4 | [এক কথায় প্রকাশ](#এক-কথায়-প্রকাশ-5) | 5 |
@@ -17,7 +17,7 @@
 
 ---
 
-## বাংলা ব্যাকরণ (159)
+## বাংলা ব্যাকরণ (162)
 1. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
    a) কর্মকারকে শূন্য
    b) করণকারকে শূন্য
@@ -970,6 +970,20 @@
    খ. প্রবীণ
    গ. সুহৃদ
    ঘ. জ্যাঠামী
+
+160. **অর্থ অনুসারে শব্দ কত প্রকার?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   ক) ২
+   খ) ৪
+   গ) ৩
+   ঘ) ৬
+
+161. **'বর্ষার রূপ ভারি মনোমুগ্ধকর' এখানে 'ভারি' শব্দটি কি অর্থে -** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
+   ক) বেশি ওজন
+   খ) ওজন
+   গ) বেশি
+   ঘ) খুব
+
+162. **c) একটি Array তে সংখ্যক n পুর্নসংখ্যা রয়েছে, সেখান থেকে সর্বোচ্চবার রয়েছে এমন সংখ্যা বের করার জন্য পছন্দমত ভাষায় কোড লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450-451]]*
 
 ## বাংলা সাহিত্য (113)
 1. **মীর মশাররফ হোসেনের “বিষাদ সিন্ধু” একটি-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
