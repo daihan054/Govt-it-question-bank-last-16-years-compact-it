@@ -12209,7 +12209,242 @@
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What a DFD is
+   - A `Data Flow Diagram (DFD)` is a graphical model showing `how data moves through a system` — where it comes from, what processes transform it, where it is stored, and where it goes. It shows the `flow of data`, not the flow of control.
+   ```
+      A DFD shows WHAT data moves and WHERE it goes.
+      It does NOT show :
+           the ORDER of steps        -> that is a FLOWCHART
+           decisions or loops        -> that is a FLOWCHART
+           timing                    -> that is a SEQUENCE DIAGRAM
+      This is the distinction examiners test.
+   ```
+
+   The four symbols
+   ```
+      1. PROCESS  -  a circle (Yourdon) or a rounded rectangle (Gane
+                     and Sarson)
+
+              +---------+              +-------------+
+              |    1    |      or      | 1  Validate |
+              | Validate|              |    Order    |
+              |  Order  |              +-------------+
+              +---------+
+         A transformation of data. It is NUMBERED and named with a
+         VERB + OBJECT : "Validate Order", "Calculate Interest".
+
+      2. DATA FLOW  -  a named arrow
+
+              ---- order details ---->
+
+         The MOVEMENT of data. Every arrow MUST be labelled with the
+         data it carries - an unlabelled arrow is meaningless.
+
+      3. DATA STORE  -  two parallel lines, or an open rectangle
+
+              +==============================
+               D1 |   Customer File
+              +==============================
+
+         Where data rests. Numbered D1, D2 and so on.
+
+      4. EXTERNAL ENTITY  -  a rectangle (also called a terminator
+                             or source/sink)
+
+              +-------------+
+              |  CUSTOMER   |
+              +-------------+
+
+         A person, department or system OUTSIDE the boundary that
+         supplies or receives data.
+   ```
+
+   Levels of a DFD
+   ```
+      LEVEL 0 - the CONTEXT DIAGRAM
+           The WHOLE system as ONE process, with all external
+           entities around it. It fixes the SYSTEM BOUNDARY.
+
+           +----------+   order      +--------------+   order    +--------+
+           | CUSTOMER |------------->|      0       |----------->| SUPPLY |
+           |          |<-------------| Order System |<-----------|        |
+           +----------+  invoice     +--------------+  stock     +--------+
+
+      LEVEL 1
+           The single process is EXPLODED into its main processes -
+           typically 5 to 7 - with the data stores now visible.
+
+      LEVEL 2 and below
+           Each level-1 process is exploded further, until each
+           process is simple enough to describe in a page.
+   ```
+
+   The rules that must be obeyed
+   ```
+      BALANCING     the data flows into and out of a process must be
+           the SAME at every level. A child diagram cannot invent an
+           input its parent does not have.
+
+      NO PROCESS WITHOUT AN INPUT  - the "MIRACLE" error : output
+           appearing from nothing.
+      NO PROCESS WITHOUT AN OUTPUT - the "BLACK HOLE" error : data
+           goes in and never comes out.
+
+      NO DIRECT FLOW between :
+           two DATA STORES        - data cannot move itself ; a
+                                    PROCESS must move it
+           two EXTERNAL ENTITIES  - that flow is outside the system
+           an ENTITY and a STORE  - a process must sit between them
+
+      EVERY FLOW IS LABELLED with the data it carries.
+      EVERY PROCESS IS NUMBERED , and named with a verb.
+   ```
+
+   Why a DFD is used
+   - It is understood by `non-technical users`, so it is an excellent tool for confirming requirements with the customer.
+   - It shows the `system boundary` clearly — what is inside and what is outside.
+   - It exposes `missing data` and `unused stores` at analysis time, when correction is cheap.
+   - It supports `top-down` decomposition, so a large system is understood one level at a time.
+
+   - The limitation to state: a DFD says nothing about `when` or `in what order` things happen, and nothing about `decisions`. Those need a `flowchart`, an `activity diagram` or a `state diagram`. A DFD drawn with decisions and sequence in it is not a DFD.
+
 2. **১ জন ব্যক্তি ১টি Bank Account খোলার জন্য একটি form fillup করেন। এরপর তাতে Manager স্বাক্ষর করেন। এবার উক্ত Account-এ ঐ ব্যক্তি কিছু টাকা Deposit করলে Account সচল হয়। এই Process টি DFD এর মাধ্যমে প্রকাশ করুন।** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
+
+   Answer: (Answered in English, as required for IT topics.) The process
+   ```
+      1. A person fills in an account-opening FORM and submits it.
+      2. The MANAGER verifies and SIGNS (approves) it.
+      3. The person DEPOSITS an initial amount.
+      4. The account becomes ACTIVE.
+   ```
+
+   Level 0 — the context diagram
+   ```
+       +-----------+    application form      +-------------------+
+       |           |------------------------->|                   |
+       |  CUSTOMER |    initial deposit       |        0          |
+       |           |------------------------->|  ACCOUNT OPENING  |
+       |           |                          |     SYSTEM        |
+       |           |<-------------------------|                   |
+       +-----------+  account number ,        +-------------------+
+                      activation notice          ^          |
+                                                 |          |
+                                 approval /      |          | application
+                                 signature       |          | for approval
+                                                 |          v
+                                           +-------------------+
+                                           |     MANAGER       |
+                                           +-------------------+
+   ```
+   ```mermaid
+   flowchart LR
+       C(("Customer")) -->|application form| S[0. Account Opening System]
+       C -->|initial deposit| S
+       S -->|account number, activation notice| C
+       S -->|application for approval| M(("Manager"))
+       M -->|approval / signature| S
+   ```
+
+   Level 1 — the exploded diagram
+   ```
+      +----------+  filled form   +-------------+  verified form
+      |          |--------------->|      1      |----------------+
+      | CUSTOMER |                |   RECEIVE   |                |
+      |          |                |  AND VERIFY |                |
+      |          |                |    FORM     |                |
+      |          |                +-------------+                |
+      |          |                       |                       v
+      |          |                       | application    +-------------+
+      |          |                       | details        |      2      |
+      |          |                       v                |   APPROVE   |
+      |          |            +======================+    | APPLICATION |
+      |          |            | D1 | Application File|<-->|             |
+      |          |            +======================+    +-------------+
+      |          |                                          ^        |
+      |          |                                          |        | approved
+      |          |                        approval /        |        | application
+      |          |                        signature   +-----------+   |
+      |          |                                    |  MANAGER  |   |
+      |          |                                    +-----------+   |
+      |          |                                                    v
+      |          |                                            +-------------+
+      |          |  account number                            |      3      |
+      |          |<-------------------------------------------|   CREATE    |
+      |          |                                            |  ACCOUNT    |
+      |          |                                            +-------------+
+      |          |                                                    |
+      |          |  deposit slip + cash                               | new account
+      |          |------------------------+                           | record
+      |          |                        v                           v
+      |          |                +-------------+          +====================+
+      |          |                |      4      |          | D2 | Account File  |
+      |          |                |   ACCEPT    |--------->|                    |
+      |          |                |   DEPOSIT   | balance  +====================+
+      |          |                +-------------+                     ^
+      |          |                        |                           |
+      |          |                        | deposit                   | status
+      |          |                        v                           | = ACTIVE
+      |          |            +======================+                |
+      |          |            | D3 | Transaction File|          +-------------+
+      |          |            +======================+          |      5      |
+      |          |                                              |  ACTIVATE   |
+      |          |  activation notice                           |   ACCOUNT   |
+      |          |<---------------------------------------------|             |
+      +----------+                                              +-------------+
+   ```
+   ```mermaid
+   flowchart TD
+       C(("Customer")) -->|filled form| P1[1. Receive and verify form]
+       P1 -->|application details| D1[(D1 Application File)]
+       P1 -->|verified form| P2[2. Approve application]
+       M(("Manager")) -->|signature| P2
+       P2 -->|approved application| P3[3. Create account]
+       P3 -->|new account record| D2[(D2 Account File)]
+       P3 -->|account number| C
+       C -->|initial deposit| P4[4. Accept deposit]
+       P4 -->|deposit record| D3[(D3 Transaction File)]
+       P4 -->|updated balance| D2
+       P4 -->|balance credited| P5[5. Activate account]
+       P5 -->|status = ACTIVE| D2
+       P5 -->|activation notice| C
+   ```
+
+   The elements used
+   ```
+      EXTERNAL ENTITIES   CUSTOMER , MANAGER
+           Both are OUTSIDE the system - they supply and receive
+           data but are not part of it.
+
+      PROCESSES
+           1  Receive and Verify Form
+           2  Approve Application     (the manager's signature)
+           3  Create Account
+           4  Accept Deposit
+           5  Activate Account
+
+      DATA STORES
+           D1  Application File
+           D2  Account File
+           D3  Transaction File
+
+      DATA FLOWS
+           filled form , verified form , approval / signature ,
+           approved application , account number , initial deposit ,
+           deposit record , updated balance , activation notice
+   ```
+
+   The rules obeyed in this diagram
+   ```
+      Every process has at least one INPUT and one OUTPUT - no black
+           holes and no miracles.
+      No flow goes directly from an ENTITY to a DATA STORE ; process
+           1 and process 4 sit in between.
+      No flow goes directly between two DATA STORES.
+      Every arrow is LABELLED with the data it carries.
+      The level-1 flows to and from the CUSTOMER and the MANAGER
+           BALANCE with the context diagram.
+   ```
+   - One point to note: the diagram shows `what data moves`, not the sequence. The account happens to be created before the deposit, but the DFD does not assert that order — a `flowchart` or an `activity diagram` would be needed to state it.
 
 ## Code Smells & Refactoring (2)
 
