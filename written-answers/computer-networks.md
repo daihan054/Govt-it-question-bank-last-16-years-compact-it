@@ -13156,23 +13156,476 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **Draw Bit Error Rate vs Signal to Noise Ratio curve of QPSK and BPSK.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 293 (ET: BUET)]*
 
+   Answer: The important result is that `BPSK and QPSK have the same BER for a given Eb/N0` — their curves lie on top of each other.
+
+   BER vs SNR curve
+   ```
+   BER
+   1e-1 |*
+        | *
+        |  *
+   1e-2 |   **
+        |     *
+        |      **        BPSK and QPSK
+   1e-3 |        **   <-- both follow the SAME curve
+        |          **
+        |            **
+   1e-4 |              **
+        |                ***
+   1e-5 |                   ***
+        |                      ****
+   1e-6 |                          ****
+        +----+----+----+----+----+----+----> Eb/N0 (dB)
+        0    2    4    6    8   10   12
+   ```
+   - Reference points on the curve: about 10^-3 at 7 dB, 10^-4 at 8.4 dB, 10^-5 at 9.6 dB, and 10^-6 at 10.5 dB.
+
+   The formula
+   ```
+   BER (BPSK) = Q( sqrt(2 Eb/N0) )
+   BER (QPSK) = Q( sqrt(2 Eb/N0) )       -- identical
+   ```
+   - The curves coincide because QPSK is simply two independent BPSK streams, one on the in-phase carrier and one on the quadrature carrier. Each stream carries half the total power but also half the total bits, so the energy per bit is unchanged.
+
+   Why QPSK is therefore preferred
+   - For the same BER and the same Eb/N0, QPSK sends `2 bits per symbol` against BPSK's 1, so it delivers `twice the data rate in the same bandwidth`. There is no penalty in error performance — this is why QPSK is used in satellite links, LTE, Wi-Fi and DVB.
+   - The trade-off is complexity: QPSK needs a more elaborate modulator and demodulator, and it is more sensitive to phase noise and carrier recovery error.
+
+   Where the curves do separate
+   - Plotted against `SNR per symbol` rather than Eb/N0, QPSK is 3 dB worse than BPSK, because each QPSK symbol carries two bits. Examiners often expect the Eb/N0 version, in which the curves coincide.
+   - Higher-order schemes are genuinely worse: 8-PSK needs roughly 3.5 dB more and 16-QAM about 4 dB more Eb/N0 than BPSK for the same BER, because the constellation points sit closer together.
+
+   ```
+   BER
+        |  *  *   *
+        |   *  *   *
+        |    *  *   *
+        |     *  *   *
+        |      *  *   *   <- 16-QAM (rightmost, worst)
+        |    BPSK/  8-PSK
+        |    QPSK
+        +--------------------> Eb/N0 (dB)
+   ```
+
 2. **What is baseband and passband frequency?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
+
+   Answer:
+
+   Baseband
+   - Baseband refers to the `original frequency band of the signal`, from (or near) zero hertz up to its highest frequency, with `no modulation onto a carrier`.
+   - The digital signal is placed directly onto the medium as voltage levels.
+   - Frequency range: `0 to f_max`. A voice signal is 0–4 kHz; a 10 Mbps Ethernet signal occupies from DC upwards.
+   - Only one signal can occupy the medium at a time, so the whole bandwidth belongs to that one channel.
+   - It uses digital line coding — NRZ, Manchester, RZ — rather than a modulator.
+   - Examples: Ethernet (the `BASE` in 10BASE-T stands for baseband), RS-232, and any short digital cable link.
+   - Repeaters, not amplifiers, are used to extend it.
+
+   Passband (broadband)
+   - Passband refers to a signal that has been `modulated onto a carrier frequency`, so it occupies a band of frequencies centred on that carrier rather than starting from zero.
+   - Frequency range: `fc − B/2 to fc + B/2`, where fc is the carrier.
+   - Because different signals can use different carriers, `many channels share the medium at once` through FDM. This is the essential advantage.
+   - It uses ASK, FSK, PSK or QAM.
+   - Examples: AM and FM radio, television broadcast, cable TV, ADSL, Wi-Fi, mobile networks.
+   - Amplifiers are used to extend it, and the signal can travel much further.
+
+   | Point | Baseband | Passband |
+   |---|---|---|
+   | Carrier | None | Yes |
+   | Frequency range | 0 to f_max | Around fc |
+   | Channels on the medium | One | Many, by FDM |
+   | Signalling | Line coding | ASK, FSK, PSK, QAM |
+   | Direction | Usually bidirectional | Usually one direction per channel |
+   | Distance | Shorter, needs repeaters | Longer, uses amplifiers |
+   | Example | Ethernet, RS-232 | Radio, TV, Wi-Fi, ADSL |
+
+   - Why passband exists: a low-frequency baseband signal cannot be radiated efficiently (the antenna would have to be kilometres long), cannot share a medium with other signals, and cannot travel far. Modulating it onto a high carrier solves all three problems at once.
 
 3. **অথবা, (ক) Low-pass Channel এবং Band-pass Channel এর মধ্যে উদাহরণসহ পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   Low-pass channel
+   - A channel whose bandwidth starts at or near `zero hertz` and extends up to some maximum frequency: `0 to f_max`.
+   - It can carry a baseband signal directly, with no modulation, because the DC and low-frequency components of a digital signal pass through unchanged.
+   - Only one signal can use it at a time.
+   - Examples: a twisted-pair cable in an Ethernet LAN, a coaxial cable carrying baseband data, an RS-232 serial link, the local loop of a telephone line used for a direct digital connection.
+
+   Band-pass channel
+   - A channel that passes only a `range of frequencies away from zero`, from f1 to f2, and blocks everything below f1 and above f2.
+   - A baseband digital signal cannot pass through it, because its low-frequency components would be blocked. The signal must first be `modulated onto a carrier` inside the passband.
+   - Because different carriers can be used, many signals can share the same medium at once by FDM.
+   - Examples: a telephone voice channel (300–3300 Hz), an AM radio channel, a television channel, a Wi-Fi channel at 2.4 GHz, an ADSL sub-band.
+
+   ```
+   LOW-PASS CHANNEL                 BAND-PASS CHANNEL
+   amplitude                        amplitude
+      |______                          |     ______
+      |      \                         |    /      \
+      |       \                        |   /        \
+      +--------\------> f              +--/----------\--> f
+      0      f_max                     0  f1        f2
+      passes from DC upward            passes only f1 to f2
+   ```
+
+   | Point | Low-pass channel | Band-pass channel |
+   |---|---|---|
+   | Frequency range | 0 to f_max | f1 to f2, with f1 > 0 |
+   | Passes DC | Yes | No |
+   | Signal used | Baseband, directly | Passband, modulated onto a carrier |
+   | Modulation needed | No | Yes — ASK, FSK, PSK, QAM |
+   | Channels at once | One | Many, by FDM |
+   | Example | Ethernet cable, RS-232 | Telephone line for a modem, radio, Wi-Fi |
+
+   - Practical consequence: this is exactly why a `modem` exists. A telephone line is a band-pass channel from 300 to 3300 Hz, so a computer's baseband digital signal must be modulated onto an audio carrier to pass through it, and demodulated at the far end.
+
 4. **What is modulation? Why is it necessary?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
+
+   Answer:
+
+   What is modulation
+   - Modulation is the process of varying one or more properties of a high-frequency `carrier` signal — its amplitude, frequency or phase — in step with the information signal, so that the information can be carried over the medium.
+   - The reverse process at the receiver is `demodulation`. A device that does both is a `modem`.
+
+   Types
+   - Analogue modulation: `AM` (amplitude), `FM` (frequency), `PM` (phase).
+   - Digital modulation: `ASK`, `FSK`, `PSK`, `QAM`, and the multi-carrier scheme `OFDM`.
+   - Pulse modulation: PAM, PWM, PPM, PCM.
+
+   Why modulation is necessary
+
+   - `Practical antenna size.` An antenna must be roughly a quarter of the wavelength to radiate efficiently. A 3 kHz audio signal has a wavelength of 100 km, needing a 25 km antenna — impossible. Shifting it onto a 100 MHz carrier gives a wavelength of 3 m and an antenna of about 75 cm. This is the single strongest reason.
+
+   - `Multiplexing — sharing the medium.` Without modulation every transmitter would occupy the same low frequency band and interfere with every other. Modulating each onto a different carrier lets hundreds of radio stations, TV channels and Wi-Fi networks coexist. This is FDM.
+
+   - `Long-distance transmission.` Higher frequencies propagate better through air and can be focused into a beam, so the signal travels much further with less power.
+
+   - `Band-pass channels require it.` Many channels do not pass DC or low frequencies — a telephone line passes only 300–3300 Hz. A baseband digital signal simply cannot get through, so it must be modulated onto a carrier inside that band.
+
+   - `Noise reduction.` FM and PSK are far more resistant to amplitude noise than a raw baseband signal, because the information is carried in frequency or phase rather than in amplitude.
+
+   - `Higher data rate in the same bandwidth.` Multi-level schemes such as 16-QAM and 64-QAM carry 4 or 6 bits per symbol, multiplying throughput without extra spectrum.
+
+   - `Regulatory allocation.` Spectrum is licensed in defined bands; modulation is what places a transmission into its assigned band.
+
+   - Summary: modulation makes radiation practical, allows many users to share one medium, extends range, matches the signal to the channel's passband, improves noise immunity, and raises spectral efficiency.
 
 5. **Amplitude Modulation related problem. (Approximate)** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
 
+   Answer: The exact problem was not printed, so the amplitude modulation formulas and the standard worked patterns are given.
+
+   The AM signal
+   ```
+   s(t) = Ac [1 + m cos(2π fm t)] cos(2π fc t)
+   ```
+   - Ac = carrier amplitude, fc = carrier frequency, fm = modulating frequency, m = modulation index.
+
+   Modulation index
+   ```
+   m = Am / Ac
+   ```
+   - From a trapezoidal or envelope display:
+   ```
+   m = (Vmax − Vmin) / (Vmax + Vmin)
+   ```
+   - `m < 1` — undermodulation, wasteful of power.
+   - `m = 1` — 100 percent modulation, the ideal.
+   - `m > 1` — overmodulation, which distorts the envelope and cannot be recovered by an envelope detector.
+
+   Bandwidth
+   ```
+   BW = 2 fm          (for a single tone)
+   BW = 2 fm(max)     (for a band of frequencies)
+   ```
+   - Example: a 5 kHz audio signal on a 1 MHz carrier occupies 990–1010 kHz... more precisely 995 to 1005 kHz, a bandwidth of 10 kHz.
+
+   Power relations
+   ```
+   Pt = Pc (1 + m²/2)
+   Psidebands = Pc · m²/2
+   Efficiency η = (m²/2) / (1 + m²/2) = m² / (2 + m²)
+   ```
+   - At m = 1 the efficiency is only `33.3 percent` — two-thirds of the transmitted power is in the carrier, which carries no information. This is the fundamental weakness of AM and the reason DSB-SC and SSB exist.
+
+   Worked example
+   - Carrier power 1000 W, m = 0.8.
+   ```
+   Pt = 1000 (1 + 0.64/2) = 1000 × 1.32 = 1320 W
+   Sideband power = 1000 × 0.32 = 320 W (160 W in each sideband)
+   Efficiency = 0.32 / 1.32 = 24.2 %
+   ```
+
+   Multiple modulating signals
+   ```
+   m_total = sqrt(m1² + m2² + m3² + ...)
+   ```
+
+   Current relation
+   ```
+   It = Ic sqrt(1 + m²/2)
+   ```
+   - Example: Ic = 10 A, m = 0.6 gives It = 10 × sqrt(1.18) = 10.86 A. <!-- verify -->
+
 6. **Compare between (i) AM and ASK and (ii) FM and FSK considering modulation scheme, bandwith requirement, noise tolerance and circuit complexity.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+   Answer:
+
+   (i) AM vs ASK
+
+   | Point | AM (Amplitude Modulation) | ASK (Amplitude Shift Keying) |
+   |---|---|---|
+   | Modulating signal | Analogue and continuous | Digital, discrete bits |
+   | Modulation scheme | Carrier amplitude varies continuously with the message | Carrier amplitude switches between fixed levels: present for 1, absent (or lower) for 0 |
+   | Output | A continuously varying envelope | A pulsed on/off carrier (OOK in the binary case) |
+   | Bandwidth | `BW = 2 fm` | `BW = (1 + d) × Nbaud`, typically about 2 × bit rate |
+   | Noise tolerance | Poor — noise directly alters amplitude, and it cannot be separated from the signal | Poor, but better than AM: the receiver only decides between two levels, so small noise causes no error |
+   | Circuit complexity | Simple modulator, very simple envelope detector | Simple; a switch and an envelope detector suffice |
+   | Error handling | None; noise is permanent | Digital regeneration removes noise completely at each repeater |
+   | Application | Medium-wave broadcast radio, aircraft VHF | Optical fibre (on/off keying), low-cost RFID, infrared remote controls |
+
+   (ii) FM vs FSK
+
+   | Point | FM (Frequency Modulation) | FSK (Frequency Shift Keying) |
+   |---|---|---|
+   | Modulating signal | Analogue and continuous | Digital bits |
+   | Modulation scheme | Carrier frequency varies continuously with the message amplitude | Carrier switches between two (or M) discrete frequencies: f1 for 0, f2 for 1 |
+   | Bandwidth | `BW = 2(Δf + fm)` — Carson's rule; wide | `BW = (f2 − f1) + Nbaud`; wider than ASK or PSK |
+   | Noise tolerance | Excellent — information is in frequency, so amplitude noise can be removed by a limiter | Excellent, for the same reason; far better than ASK |
+   | Circuit complexity | More complex: VCO modulator, discriminator or PLL demodulator | Moderate; two oscillators or a VCO, and a filter-based or PLL detector |
+   | Power efficiency | Constant envelope, so a non-linear class-C amplifier can be used efficiently | Same advantage — constant envelope |
+   | Application | FM broadcast radio, TV sound, two-way radio | Low-speed modems, caller ID, Bluetooth (GFSK), LoRa, telemetry |
+
+   The general pattern
+   - The `SK` schemes are the digital counterparts of the analogue ones: continuous variation is replaced by switching between discrete states.
+   - Amplitude-based schemes (AM, ASK) are simplest and cheapest but least noise-tolerant, because noise is itself an amplitude disturbance.
+   - Frequency-based schemes (FM, FSK) buy much better noise immunity at the cost of more bandwidth and more complex circuitry.
+   - Phase-based schemes (PSK, QAM), not asked here, give the best spectral efficiency of all and are what modern systems use.
 
 7. **What are the advantages of PSK and explain why coherent detection is necessary for demodulating the PSK signal?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+   Answer:
+
+   Advantages of PSK
+
+   - `Better noise immunity than ASK.` The information is carried in the phase, so amplitude noise — which is the commonest kind — does not corrupt it. A limiter can strip amplitude variation away entirely before detection.
+   - `Better bandwidth efficiency than FSK.` FSK needs enough spectrum to hold two or more separated frequencies; PSK keeps one carrier frequency and changes only its phase, so it occupies less bandwidth for the same bit rate.
+   - `Constant envelope` (in BPSK and QPSK). The amplitude never changes, so the transmitter can use an efficient non-linear class-C power amplifier without distortion. This matters enormously for battery-powered and satellite transmitters.
+   - `Lower BER for a given Eb/N0.` BPSK is the optimum binary scheme: it needs about 3 dB less Eb/N0 than coherent FSK and far less than ASK for the same error rate.
+   - `Scales to higher orders.` QPSK carries 2 bits per symbol at the same BER as BPSK, 8-PSK carries 3, and the same idea extends to QAM. This doubles or triples throughput in the same bandwidth.
+   - `Robust against fading` compared with amplitude schemes, since a fade changes amplitude, not phase.
+   - Widely used: satellite links, LTE and 5G, Wi-Fi, DVB, cable modems and RFID.
+
+   Why coherent detection is necessary for PSK
+
+   - `The information is in the phase, and phase is only meaningful relative to a reference.` A receiver that does not know the carrier's phase has nothing to compare the incoming signal against. In BPSK the two symbols are `+A cos(2π fc t)` and `−A cos(2π fc t)`; they differ only in sign, so an envelope detector sees an identical amplitude for both and can distinguish nothing at all.
+
+   - `Non-coherent detection cannot work for PSK.` ASK and FSK can be detected non-coherently, because they differ in amplitude or in frequency, both of which can be measured without a phase reference. PSK has no such handle — all symbols share the same amplitude and the same frequency.
+
+   - `A locally generated carrier is therefore required`, exactly matched in frequency and phase to the transmitted carrier. It is recovered by a Costas loop, a squaring loop or a PLL, and the received signal is multiplied by it and integrated over each symbol period. The sign of the result gives the bit.
+
+   - `Phase ambiguity is the practical problem.` A recovered carrier can lock 180° out of phase (or in 90° steps for QPSK), which inverts every bit. Two standard remedies exist:
+     - `Differential encoding` (DPSK), in which the data is carried in the `change` of phase between consecutive symbols rather than in the absolute phase. This removes the need for an absolute reference, at the cost of about 1 dB in Eb/N0 and a tendency for errors to occur in pairs.
+     - A known training or pilot sequence to resolve the ambiguity.
+
+   - Summary: coherent detection is not an optional refinement for PSK — it is the only way to recover the data, because phase has no absolute meaning without a reference. That is the price paid for PSK's superior noise and bandwidth performance.
+
 8. **Draw the constellation diagram of QPSK, 8-PSK and 32-QAM. Why these multilevel signals prefereed and what are the challenges for multilevel modulation?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+   Answer:
+
+   Constellation diagrams
+
+   QPSK — 4 points, 2 bits per symbol, all on one circle
+   ```
+                 Q
+                 |
+         01 *    |    * 00
+                 |
+      -----------+----------- I
+                 |
+         11 *    |    * 10
+                 |
+      4 phases: 45°, 135°, 225°, 315°
+      constant amplitude
+   ```
+
+   8-PSK — 8 points, 3 bits per symbol, still one circle
+   ```
+                 Q
+           *     |     *
+                 |
+      *          |          *
+      -----------+----------- I
+      *          |          *
+                 |
+           *     |     *
+
+      8 phases spaced 45° apart, constant amplitude
+   ```
+
+   32-QAM — 32 points, 5 bits per symbol, a cross constellation
+   ```
+                 Q
+            *  *  *  *
+         *  *  *  *  *  *
+         *  *  *  *  *  *
+      ---*--*--*--+--*--*--*--- I
+         *  *  *  *  *  *
+         *  *  *  *  *  *
+            *  *  *  *
+
+      32 points; both amplitude and phase vary.
+      The corners of the 6x6 grid are removed, giving
+      the characteristic "cross" shape, which keeps the
+      average power lower than a full square would.
+   ```
+
+   Why multilevel signals are preferred
+
+   - `Higher bit rate in the same bandwidth.` The relationship is `bit rate = baud rate × log2(M)`. Bandwidth is set by the baud rate, so raising M raises throughput without needing more spectrum.
+
+   | Scheme | Points M | Bits/symbol | Rate at 1000 baud |
+   |---|---|---|---|
+   | BPSK | 2 | 1 | 1 kbps |
+   | QPSK | 4 | 2 | 2 kbps |
+   | 8-PSK | 8 | 3 | 3 kbps |
+   | 16-QAM | 16 | 4 | 4 kbps |
+   | 32-QAM | 32 | 5 | 5 kbps |
+   | 64-QAM | 64 | 6 | 6 kbps |
+
+   - `Spectrum is scarce and expensive`, licensed in fixed blocks, so squeezing more bits into the same hertz has direct commercial value.
+   - `Adaptive modulation` lets a system use a high order when the channel is good and drop to a lower order when it degrades, maximising throughput at every moment. LTE, Wi-Fi and DVB-S2 all do this.
+   - `Lower symbol rate for a given bit rate` also means less intersymbol interference and simpler timing recovery.
+
+   Challenges of multilevel modulation
+
+   - `Higher SNR required.` The constellation points sit closer together, so less noise is needed to push a received point into the wrong decision region. Each step up in order costs roughly 3 to 6 dB in required Eb/N0.
+   - `Higher bit error rate for a given SNR`, and one symbol error can corrupt several bits — Gray coding is used so that adjacent points differ by only one bit, limiting the damage.
+   - `Linear amplifiers required.` QAM has a varying envelope, so the power amplifier must be linear, which is far less efficient than the class-C amplifier a constant-envelope scheme can use. Battery life and transmitter cost both suffer.
+   - `High peak-to-average power ratio (PAPR)`, forcing the amplifier to be backed off from its peak, wasting further power.
+   - `Precise carrier and timing recovery.` Phase noise, frequency offset and timing jitter rotate or smear the constellation, and the tolerance shrinks as M grows.
+   - `Sensitivity to channel impairments` — fading, multipath and non-linearity all distort the constellation, so equalisation becomes essential.
+   - `Greater receiver complexity and cost`, with more elaborate DSP for equalisation, carrier recovery and soft-decision decoding.
+
+   - The design trade-off in one line: multilevel modulation buys spectral efficiency and pays for it in required SNR, amplifier linearity and receiver complexity.
 
 9. **a) What is QAM? Explain it.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
 
+   Answer:
+
+   What is QAM
+   - QAM (Quadrature Amplitude Modulation) is a digital modulation scheme that varies `both the amplitude and the phase` of the carrier at the same time, so that each symbol represents several bits.
+   - It combines ASK and PSK. Because it uses two dimensions rather than one, it packs far more points into the constellation for a given minimum spacing, which is why it is the most spectrally efficient scheme in common use.
+
+   How it works
+   - Two carriers of the same frequency, 90° apart in phase, are used: the `in-phase` carrier cos(2π fc t) and the `quadrature` carrier sin(2π fc t). Being orthogonal, they do not interfere with each other.
+   - The incoming bit stream is split in two. One half amplitude-modulates the I carrier, the other half amplitude-modulates the Q carrier, and the two are added.
+   ```
+   s(t) = I(t) cos(2π fc t) − Q(t) sin(2π fc t)
+   ```
+   - The receiver multiplies the incoming signal separately by cos and by sin, low-pass filters both, and recovers I and Q. The pair (I, Q) identifies one point on the constellation, and that point maps to a group of bits.
+
+   Bits per symbol
+   ```
+   Bits per symbol = log2(M)
+   Bit rate = baud rate × log2(M)
+   ```
+
+   | Scheme | Points | Bits/symbol | Typical use |
+   |---|---|---|---|
+   | 4-QAM (= QPSK) | 4 | 2 | Satellite, LTE control channels |
+   | 16-QAM | 16 | 4 | Wi-Fi, LTE, cable |
+   | 64-QAM | 64 | 6 | Wi-Fi, DVB-C, LTE |
+   | 256-QAM | 256 | 8 | Cable modems, Wi-Fi 5 |
+   | 1024/4096-QAM | 1024/4096 | 10/12 | Wi-Fi 6/7, DOCSIS 3.1 |
+
+   Constellation of 16-QAM
+   ```
+           Q
+      *  *  |  *  *      4 amplitude levels on I
+      *  *  |  *  *      4 amplitude levels on Q
+    -------+-------- I   = 16 combinations
+      *  *  |  *  *        4 bits per symbol
+      *  *  |  *  *
+   ```
+
+   Advantages
+   - The highest spectral efficiency of the common schemes — more bits per hertz than PSK of the same order.
+   - Scales smoothly, and supports adaptive modulation: use 256-QAM when the channel is good, fall back to QPSK when it is poor.
+   - Used everywhere: Wi-Fi, LTE and 5G, DVB, cable modems, ADSL and microwave links.
+
+   Disadvantages
+   - Requires a high SNR, because the points sit close together. Each doubling of the order costs roughly 3 dB.
+   - The envelope varies, so a `linear` power amplifier is required, which is much less efficient than the class-C amplifier a constant-envelope scheme can use.
+   - High peak-to-average power ratio, forcing amplifier back-off.
+   - Sensitive to phase noise, frequency offset and non-linearity, so accurate carrier recovery and equalisation are essential.
+
 10. **b) Draw diagram for 16 QAM having? (i) 3 amplitudes, 12 phases (ii) 4 amplitudes, 8 phases** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030-1031 (ET: N/A)]*
+
+    Answer: Both diagrams show 16 points, so both carry 4 bits per symbol, but they place those points differently.
+
+    (i) 16-QAM with 3 amplitudes and 12 phases
+    ```
+                         Q
+                         |
+                  *      *      *
+                     \   |   /
+              *    *  \  |  /  *    *
+                    \  \ | /  /
+         *     *  *  \ \ | / /  *  *     *
+       ------------------+------------------ I
+         *     *  *  / / | \ \  *  *     *
+                    /  / | \  \
+              *    *  /  |  \  *    *
+                     /   |   \
+                  *      *      *
+                         |
+
+       3 concentric circles  = 3 amplitude levels
+       12 distinct phase angles, 30 degrees apart
+       Points: 4 on the inner ring, 8 on the middle, 4 on the outer
+               = 16 points total
+    ```
+    - The points lie on three circles of different radius. Twelve phase positions are used, but not every phase appears on every ring — that is how 16 points are formed rather than 36.
+    - Advantage: the constant-amplitude rings keep the peak-to-average power ratio lower than a square grid would.
+    - Disadvantage: the minimum distance between points is smaller than in the square arrangement, so the error performance is worse for the same average power. It is the older, less efficient layout.
+
+    (ii) 16-QAM with 4 amplitudes and 8 phases
+    ```
+                         Q
+                         |
+               *     *   |   *     *
+                         |
+           *      *      *      *      *
+                         |
+       ------*------*----+----*------*------ I
+                         |
+           *      *      *      *      *
+                         |
+               *     *   |   *     *
+                         |
+
+       4 concentric circles = 4 amplitude levels
+       8 distinct phase angles, 45 degrees apart
+       16 points distributed across the four rings
+    ```
+    - Four amplitude levels combined with eight phase positions, again selecting 16 of the possible combinations.
+
+    For comparison — the standard square 16-QAM actually used in practice
+    ```
+            Q
+       *  *  |  *  *      I takes 4 levels: -3, -1, +1, +3
+       *  *  |  *  *      Q takes 4 levels: -3, -1, +1, +3
+     -------+-------- I   4 x 4 = 16 points
+       *  *  |  *  *      3 distinct amplitudes, 12 phases
+       *  *  |  *  *      (corner, edge and inner points)
+    ```
+    - Interestingly, the square constellation is itself a "3 amplitude, 12 phase" arrangement: the four corner points share one amplitude, the eight edge points another, and the four inner points a third.
+    - The square grid is preferred in real systems because it maximises the minimum distance between points for a given average power, which minimises the bit error rate, and because I and Q can be generated and detected independently, which greatly simplifies the hardware.
+
+    Common properties of all three
+    - 16 points, `log2(16) = 4 bits per symbol`.
+    - Bit rate = baud rate × 4. At 1000 baud, that is 4000 bps.
+    - Gray coding is applied so that adjacent points differ in only one bit, which limits the damage caused by a single symbol error.
 
 ## Email Architecture & Protocols (SMTP, POP3, IMAP) (10)
 
