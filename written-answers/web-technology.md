@@ -2761,17 +2761,812 @@
 
 1. **Jquery for email validation** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+   Answer: jQuery email validation
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <meta charset="UTF-8">
+       <title>Email Validation</title>
+       <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+       </script>
+       <style>
+           .error { color: red;   font-size: 13px; }
+           .ok    { color: green; font-size: 13px; }
+       </style>
+   </head>
+   <body>
+
+   <form id="myForm">
+       <label for="email">Email :</label>
+       <input type="text" id="email" name="email">
+       <span id="msg"></span>
+       <br><br>
+       <button type="submit">Submit</button>
+   </form>
+
+   <script>
+   $(document).ready(function () {
+
+       // the validation function
+       function isValidEmail(email) {
+           var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+           return pattern.test(email);
+       }
+
+       // validate as the user types
+       $("#email").on("keyup blur", function () {
+           var email = $(this).val().trim();
+
+           if (email === "") {
+               $("#msg").text("Email is required")
+                        .attr("class", "error");
+           } else if (!isValidEmail(email)) {
+               $("#msg").text("Invalid email address")
+                        .attr("class", "error");
+           } else {
+               $("#msg").text("Valid email")
+                        .attr("class", "ok");
+           }
+       });
+
+       // validate again on submit
+       $("#myForm").on("submit", function (e) {
+           var email = $("#email").val().trim();
+
+           if (!isValidEmail(email)) {
+               e.preventDefault();          // STOP the submission
+               $("#msg").text("Please enter a valid email")
+                        .attr("class", "error");
+               $("#email").focus();
+           }
+       });
+
+   });
+   </script>
+
+   </body>
+   </html>
+   ```
+
+   Tested results
+   ```
+      a@b.com                    -> VALID
+      rahim.ali@example.co.uk    -> VALID
+      bad@                       -> INVALID  (no domain)
+      @bad.com                   -> INVALID  (no local part)
+      no at.com                  -> INVALID  (no @ , and a space)
+      x@y.z                      -> INVALID  (top-level domain must
+                                               be at least 2 letters)
+   ```
+
+   The regular expression, part by part
+   ```
+      /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+
+      ^          start of the string
+      [^\s@]+    one or more characters that are NOT a space and
+                 NOT an @   -> the local part
+      @          exactly one @
+      [^\s@]+    the domain name
+      \.         a literal dot  (escaped, because a bare . means
+                 "any character")
+      [^\s@]{2,} at least TWO characters - the top-level domain
+      $          end of the string
+   ```
+
+   Alternatives worth knowing
+   ```html
+      <!-- 1. HTML5 does most of this with no code at all -->
+      <input type="email" required>
+      <!-- the browser validates it and shows its own message -->
+
+      <!-- 2. the jQuery Validate plugin -->
+      <script src="jquery.validate.min.js"></script>
+      <script>
+      $("#myForm").validate({
+          rules:    { email: { required: true, email: true } },
+          messages: { email: { required: "Email is required",
+                               email: "Enter a valid email" } }
+      });
+      </script>
+   ```
+   - The point that must be stated: `client-side validation is for the user's convenience, never for security`. Anyone can disable JavaScript or send the request directly, so the `email must be validated again on the server`. Client-side checks catch typing mistakes; server-side checks are what actually protect the application.
+   - And no regular expression can prove an address `exists`. The only real test is to `send a confirmation email` and require the user to click the link — which is why every registration system does exactly that.
+
 2. **Write Javascript code to check NID validity?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1359 (ET: BUET)]*
+
+   Answer: A Bangladeshi `NID` (National ID) number is `10`, `13` or `17` digits long. The 17-digit form begins with a 4-digit year of birth, and the older forms are 13 and 10 digits.
+   ```javascript
+   function isValidNID(nid) {
+
+       // 1. remove spaces and dashes the user may have typed
+       nid = String(nid).replace(/[\s-]/g, "").trim();
+
+       // 2. it must be empty of everything except digits
+       if (!/^\d+$/.test(nid)) {
+           return { valid: false, message: "NID must contain digits only" };
+       }
+
+       // 3. the length must be 10 , 13 or 17
+       if (nid.length !== 10 && nid.length !== 13 && nid.length !== 17) {
+           return { valid: false,
+                    message: "NID must be 10, 13 or 17 digits" };
+       }
+
+       // 4. for the 17-digit form, check the birth year is sensible
+       if (nid.length === 17) {
+           var year = parseInt(nid.substring(0, 4), 10);
+           var now  = new Date().getFullYear();
+           if (year < 1900 || year > now) {
+               return { valid: false,
+                        message: "Invalid birth year in NID" };
+           }
+       }
+
+       return { valid: true, message: "Valid NID" };
+   }
+   ```
+
+   Tested results
+   ```
+      1234567890            ->  VALID   (10 digits)
+      1234567890123         ->  VALID   (13 digits)
+      19851234567890123     ->  VALID   (17 digits , year 1985)
+      12345678901234567     ->  VALID by length , but the year
+                                 1234 is rejected by the year check
+      12345                 ->  INVALID (wrong length)
+      12a4567890            ->  INVALID (contains a letter)
+   ```
+
+   The complete form
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <meta charset="UTF-8">
+       <title>NID Validation</title>
+       <style>
+           .error { color: red;   font-size: 13px; }
+           .ok    { color: green; font-size: 13px; }
+       </style>
+   </head>
+   <body>
+
+   <form id="nidForm">
+       <label for="nid">NID Number :</label>
+       <input type="text" id="nid" maxlength="17">
+       <span id="msg"></span>
+       <br><br>
+       <button type="submit">Submit</button>
+   </form>
+
+   <script>
+   function isValidNID(nid) {
+       nid = String(nid).replace(/[\s-]/g, "").trim();
+       if (!/^\d+$/.test(nid))
+           return { valid: false, message: "Digits only" };
+       if ([10, 13, 17].indexOf(nid.length) === -1)
+           return { valid: false, message: "Must be 10, 13 or 17 digits" };
+       if (nid.length === 17) {
+           var y = parseInt(nid.substring(0, 4), 10);
+           if (y < 1900 || y > new Date().getFullYear())
+               return { valid: false, message: "Invalid birth year" };
+       }
+       return { valid: true, message: "Valid NID" };
+   }
+
+   var input = document.getElementById("nid");
+   var msg   = document.getElementById("msg");
+
+   input.addEventListener("keyup", function () {
+       var r = isValidNID(input.value);
+       msg.textContent = input.value === "" ? "" : r.message;
+       msg.className   = r.valid ? "ok" : "error";
+   });
+
+   document.getElementById("nidForm").addEventListener("submit",
+       function (e) {
+           var r = isValidNID(input.value);
+           if (!r.valid) {
+               e.preventDefault();
+               msg.textContent = r.message;
+               msg.className   = "error";
+               input.focus();
+           }
+       });
+   </script>
+
+   </body>
+   </html>
+   ```
+
+   The regular expression version, if a one-line answer is wanted
+   ```javascript
+      function isValidNID(nid) {
+          return /^(\d{10}|\d{13}|\d{17})$/.test(String(nid).trim());
+      }
+   ```
+   ```
+      ^          start
+      \d{10}     exactly 10 digits
+      |          OR
+      \d{13}     exactly 13 digits
+      |          OR
+      \d{17}     exactly 17 digits
+      $          end
+
+      The anchors ^ and $ are essential. Without them the pattern
+      would match 10 digits ANYWHERE inside a longer string.
+   ```
+   - What this validation can and cannot do: it checks the `format` only. Whether the number actually belongs to a real person can be confirmed only by querying the `Election Commission NID verification service`, which is what banks do during account opening.
+   - And as always: `client-side validation is for the user's convenience, not for security`. The NID must be validated again on the `server`, because anyone can disable JavaScript or post the request directly.
 
 3. **Which tag is used to write JavaScript in html?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+   Answer: The `<script>` tag is used to write JavaScript in HTML.
+   ```html
+      <script>
+          alert("Hello World");
+      </script>
+   ```
+
+   The two ways of using it
+   ```html
+      <!-- 1. INTERNAL - the code is written inside the tag -->
+      <script>
+          document.getElementById("demo").innerHTML = "Hello";
+      </script>
+
+      <!-- 2. EXTERNAL - the code is in a separate .js file -->
+      <script src="script.js"></script>
+   ```
+   ```
+      With  src  the tag must still be CLOSED, and it must be
+      EMPTY - anything written between the tags is IGNORED when
+      src is present.
+
+           CORRECT :  <script src="app.js"></script>
+           WRONG   :  <script src="app.js" />
+   ```
+
+   Where to place it
+   ```
+      IN THE <head>
+           The script is loaded before the page is drawn, so it
+           BLOCKS rendering. And an element the script refers to
+           does not exist yet, so getElementById returns null.
+
+      AT THE END OF <body> - the usual recommendation
+           The HTML is drawn first, so the page appears quickly and
+           every element already exists when the script runs.
+
+      IN THE <head> WITH defer  - the modern best practice
+           <script src="app.js" defer></script>
+           The file is fetched in parallel with parsing and then
+           executed after the HTML is complete.
+   ```
+   ```
+      THE THREE LOADING MODES
+
+      <script src="a.js">          fetch and execute IMMEDIATELY -
+           parsing STOPS while it downloads and runs
+      <script src="a.js" async>    fetch in parallel , execute AS
+           SOON AS IT ARRIVES - order NOT guaranteed
+      <script src="a.js" defer>    fetch in parallel , execute
+           after parsing , IN ORDER
+   ```
+
+   The `type` attribute
+   ```html
+      <script>                    <!-- HTML5 : JavaScript is the
+                                       default, no type needed -->
+      <script type="text/javascript">   <!-- older, still valid -->
+      <script type="module">      <!-- an ES6 module ; import and
+                                       export may be used -->
+   ```
+
+   Related tags and attributes, for completeness
+   ```html
+      <!-- inline event handler - works, but not recommended -->
+      <button onclick="alert('Hi')">Click</button>
+
+      <!-- shown only when JavaScript is DISABLED -->
+      <noscript>
+          This site requires JavaScript to be enabled.
+      </noscript>
+   ```
+   - The practice worth stating: keep JavaScript in an `external file` rather than inline. The browser then `caches` it, one file serves every page, the HTML stays readable, and behaviour is separated from structure — the same argument that puts CSS in its own file.
+
 4. **Write Javascript function to validate a customer number where the customer number in 3 uppercase letter and district code followed by 8 digits.** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
+
+   Answer: The customer number is `3 uppercase letters` — the district code — followed by `8 digits`, giving a total length of 11 characters.
+   ```javascript
+   function validateCustomerNumber(custNo) {
+
+       custNo = String(custNo).trim();
+
+       // 3 uppercase letters followed by exactly 8 digits
+       var pattern = /^[A-Z]{3}\d{8}$/;
+
+       return pattern.test(custNo);
+   }
+   ```
+
+   Tested results
+   ```
+      DHA12345678     ->  VALID
+      ABC12345678     ->  VALID
+      dha12345678     ->  INVALID  (lower case letters)
+      DHAK12345678    ->  INVALID  (4 letters)
+      DHA1234567      ->  INVALID  (only 7 digits)
+      DHA123456789    ->  INVALID  (9 digits)
+      DH112345678     ->  INVALID  (a digit among the letters)
+   ```
+
+   The regular expression, part by part
+   ```
+      /^[A-Z]{3}\d{8}$/
+
+      ^         start of the string
+      [A-Z]     one UPPERCASE letter , A to Z
+      {3}       exactly three of them
+      \d        one digit , 0 to 9   (same as [0-9])
+      {8}       exactly eight of them
+      $         end of the string
+
+      The anchors ^ and $ are ESSENTIAL. Without them the pattern
+      would match a valid number buried inside a longer string, so
+      "XXDHA12345678YY" would pass.
+   ```
+
+   The version with specific error messages
+   ```javascript
+   function validateCustomerNumber(custNo) {
+
+       custNo = String(custNo).trim();
+
+       if (custNo === "")
+           return { valid: false, message: "Customer number is required" };
+
+       if (custNo.length !== 11)
+           return { valid: false,
+                    message: "Must be exactly 11 characters" };
+
+       if (!/^[A-Z]{3}/.test(custNo))
+           return { valid: false,
+                    message: "First 3 characters must be uppercase letters" };
+
+       if (!/^[A-Z]{3}\d{8}$/.test(custNo))
+           return { valid: false,
+                    message: "Last 8 characters must be digits" };
+
+       return { valid: true,
+                district: custNo.substring(0, 3),
+                serial:   custNo.substring(3),
+                message:  "Valid customer number" };
+   }
+   ```
+
+   The complete form
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <meta charset="UTF-8">
+       <title>Customer Number Validation</title>
+       <style>
+           .error { color: red;   font-size: 13px; }
+           .ok    { color: green; font-size: 13px; }
+       </style>
+   </head>
+   <body>
+
+   <form id="custForm">
+       <label for="cust">Customer Number :</label>
+       <input type="text" id="cust" maxlength="11"
+              placeholder="DHA12345678"
+              style="text-transform:uppercase">
+       <span id="msg"></span>
+       <br><br>
+       <button type="submit">Submit</button>
+   </form>
+
+   <script>
+   function validateCustomerNumber(c) {
+       return /^[A-Z]{3}\d{8}$/.test(String(c).trim());
+   }
+
+   var input = document.getElementById("cust");
+   var msg   = document.getElementById("msg");
+
+   input.addEventListener("keyup", function () {
+       input.value = input.value.toUpperCase();   // help the user
+       if (input.value === "") { msg.textContent = ""; return; }
+
+       if (validateCustomerNumber(input.value)) {
+           msg.textContent = "Valid";  msg.className = "ok";
+       } else {
+           msg.textContent = "Format must be AAA12345678";
+           msg.className   = "error";
+       }
+   });
+
+   document.getElementById("custForm").addEventListener("submit",
+       function (e) {
+           if (!validateCustomerNumber(input.value)) {
+               e.preventDefault();
+               msg.textContent = "Invalid customer number";
+               msg.className   = "error";
+               input.focus();
+           }
+       });
+   </script>
+
+   </body>
+   </html>
+   ```
+   - Two useful touches in the form: `text-transform:uppercase` in CSS displays the input in capitals, and `input.value.toUpperCase()` actually converts it — the CSS alone changes only the appearance, so the value sent would still be lower case. And `maxlength="11"` stops over-typing before validation is even needed.
+   - If the letters must be one of a fixed list of district codes, the pattern is extended: `/^(DHA|CTG|SYL|KHU|RAJ|BAR|RAN|MYM)\d{8}$/`. And as always, the same check must be repeated on the `server` — client-side validation is for the user's convenience, not for security.
 
 5. **Write HTML and Javascript code of following box.** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the figure of the box was not captured with it, so the exact layout cannot be reproduced. The two forms such a question normally asks for are given below, and either can be adapted to whatever box the figure shows.
+
+   Version 1 — a dialogue box (alert, confirm, prompt)
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <meta charset="UTF-8">
+       <title>Dialogue Boxes</title>
+   </head>
+   <body>
+
+       <button onclick="showAlert()">Alert Box</button>
+       <button onclick="showConfirm()">Confirm Box</button>
+       <button onclick="showPrompt()">Prompt Box</button>
+       <p id="result"></p>
+
+   <script>
+       function showAlert() {
+           alert("This is an alert box");
+       }
+
+       function showConfirm() {
+           var ok = confirm("Do you want to continue ?");
+           document.getElementById("result").innerHTML =
+               ok ? "You pressed OK" : "You pressed Cancel";
+       }
+
+       function showPrompt() {
+           var name = prompt("Please enter your name", "Rahim");
+           document.getElementById("result").innerHTML =
+               (name === null) ? "You cancelled"
+                               : "Hello " + name;
+       }
+   </script>
+
+   </body>
+   </html>
+   ```
+   ```
+      THE THREE BUILT-IN BOXES
+
+      alert(message)
+           One message and an OK button. Returns nothing.
+
+      confirm(message)
+           OK and Cancel. Returns TRUE for OK, FALSE for Cancel.
+
+      prompt(message, default)
+           A text box with OK and Cancel. Returns the STRING typed,
+           or NULL if Cancel is pressed.
+
+      NOTE : prompt returns a STRING even for a number, so
+      parseInt() or Number() is needed before arithmetic. And
+      Cancel returns null, NOT an empty string - the two must be
+      distinguished.
+   ```
+
+   Version 2 — an input box with a calculation
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <meta charset="UTF-8">
+       <title>Input Box</title>
+       <style>
+           .box {
+               border: 2px solid #333;
+               border-radius: 8px;
+               padding: 20px;
+               width: 300px;
+               font-family: Arial, sans-serif;
+           }
+           .box h3    { margin-top: 0; }
+           .box input { width: 100%; padding: 6px;
+                        margin-bottom: 10px; }
+           .box button{ padding: 6px 14px; }
+           #out       { font-weight: bold; color: navy; }
+       </style>
+   </head>
+   <body>
+
+   <div class="box">
+       <h3>Simple Calculator</h3>
+
+       <label for="n1">First number :</label>
+       <input type="number" id="n1">
+
+       <label for="n2">Second number :</label>
+       <input type="number" id="n2">
+
+       <button onclick="calculate()">Add</button>
+
+       <p>Result : <span id="out">-</span></p>
+   </div>
+
+   <script>
+       function calculate() {
+           var a = document.getElementById("n1").value;
+           var b = document.getElementById("n2").value;
+
+           if (a === "" || b === "") {
+               document.getElementById("out").innerHTML =
+                   "Please fill in both fields";
+               return;
+           }
+
+           // the values are STRINGS, so they must be converted -
+           // "2" + "3" would give "23", not 5
+           var sum = Number(a) + Number(b);
+
+           document.getElementById("out").innerHTML = sum;
+       }
+   </script>
+
+   </body>
+   </html>
+   ```
+   ```
+      +---------------------------------+
+      |  Simple Calculator              |
+      |                                 |
+      |  First number :                 |
+      |  +---------------------------+  |
+      |  |                           |  |
+      |  +---------------------------+  |
+      |  Second number :                |
+      |  +---------------------------+  |
+      |  |                           |  |
+      |  +---------------------------+  |
+      |  [ Add ]                        |
+      |                                 |
+      |  Result : 25                    |
+      +---------------------------------+
+   ```
+   - The mistake this example is designed to show: `input.value is always a string`. Without `Number()` or `parseInt()`, `"2" + "3"` produces `"23"` rather than `5`. Subtraction, multiplication and division convert automatically; only `+` does not, because `+` also means string concatenation.
+   - If the figure showed a `modal` dialogue rather than a plain box, the same HTML is used inside a fixed-position overlay `<div>`, shown and hidden by setting `style.display` — or, in modern HTML, with the `<dialog>` element and its `showModal()` method.
+
 6. **Explain hoisting in JavaScript?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 761 (ET: N/A)]*
 
+   Answer: What hoisting is
+   - `Hoisting` is JavaScript's behaviour of moving `declarations` to the top of their scope before the code runs. The `declaration` is hoisted; the `assignment` is not.
+   ```javascript
+      console.log(x);      // undefined  - NOT an error
+      var x = 5;
+      console.log(x);      // 5
+   ```
+   ```
+      The engine treats it as :
+
+           var x;               // declaration HOISTED to the top
+           console.log(x);      // undefined - declared but not yet
+                                // assigned
+           x = 5;               // the assignment stays where it was
+           console.log(x);      // 5
+   ```
+   - Why it happens: JavaScript runs in `two phases`. In the `compilation` phase it scans the scope and registers every declaration; in the `execution` phase it runs the statements. So a variable exists before the line that declares it is reached.
+
+   `var` — hoisted and initialised to `undefined`
+   ```javascript
+      function test() {
+          console.log(a);      // undefined
+          var a = 10;
+          console.log(a);      // 10
+      }
+   ```
+
+   `let` and `const` — hoisted, but NOT initialised
+   ```javascript
+      console.log(b);      // ReferenceError : Cannot access 'b'
+                           // before initialization
+      let b = 5;
+   ```
+   ```
+      let and const ARE hoisted, but they are placed in the
+      TEMPORAL DEAD ZONE (TDZ) - the region from the start of the
+      scope to the line of the declaration. Touching the variable
+      inside the TDZ throws a ReferenceError.
+
+      THIS IS THE POINT MOST OFTEN GOT WRONG. People say "let is
+      not hoisted". It IS hoisted ; it is simply not INITIALISED,
+      which is why the error is "cannot access before
+      initialization" rather than "b is not defined".
+   ```
+
+   Function declarations — hoisted completely
+   ```javascript
+      greet();                     // "Hello" - it WORKS
+
+      function greet() {
+          console.log("Hello");
+      }
+   ```
+   - A `function declaration` is hoisted with its whole body, so it can be called before it appears in the file.
+
+   Function expressions — NOT hoisted
+   ```javascript
+      greet();                     // TypeError : greet is not a
+                                   // function
+      var greet = function () {
+          console.log("Hello");
+      };
+   ```
+   ```
+      Here only  var greet  is hoisted, as undefined. Calling
+      undefined() gives a TypeError - a DIFFERENT error from the
+      ReferenceError above, and the distinction is often examined.
+
+      An ARROW FUNCTION behaves the same way :
+           greet();                 // ReferenceError (with let)
+           let greet = () => {};
+   ```
+
+   Summary
+   ```
+      +---------------------+-----------+------------------------+
+      | Declaration         | Hoisted ? | Value before the line  |
+      +---------------------+-----------+------------------------+
+      | var                 | YES       | undefined              |
+      | let                 | yes       | TDZ -> ReferenceError  |
+      | const               | yes       | TDZ -> ReferenceError  |
+      | function declaration| YES       | the whole function     |
+      | function expression | as var    | undefined -> TypeError |
+      | class               | yes       | TDZ -> ReferenceError  |
+      +---------------------+-----------+------------------------+
+   ```
+
+   A classic trap
+   ```javascript
+      var x = 1;
+      function f() {
+          console.log(x);      // undefined , NOT 1
+          var x = 2;
+      }
+      f();
+   ```
+   ```
+      The inner  var x  is hoisted to the top of f(), so it SHADOWS
+      the outer x for the whole function. At the console.log the
+      local x exists but has not been assigned, so it is undefined.
+   ```
+   - The practical conclusion: use `let` and `const` rather than `var`. Their `temporal dead zone` turns a silent `undefined` into a loud `ReferenceError`, so a variable used before its declaration becomes an error the developer sees instead of a bug the user finds. Declaring variables at the top of the scope makes hoisting irrelevant, which is the real remedy.
+
 7. **Display element by id in JavaScript?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 762 (ET: N/A)]*
+
+   Answer: An element is fetched by its `id` with `document.getElementById()`, and its content is displayed or changed through `innerHTML` or `textContent`.
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head><meta charset="UTF-8"><title>getElementById</title></head>
+   <body>
+
+       <p id="demo">Original text</p>
+       <button onclick="show()">Show</button>
+
+   <script>
+       function show() {
+           // 1. GET the element by its id
+           var el = document.getElementById("demo");
+
+           // 2. READ its content
+           console.log(el.innerHTML);        // "Original text"
+
+           // 3. CHANGE its content
+           el.innerHTML = "Text changed by JavaScript";
+       }
+   </script>
+
+   </body>
+   </html>
+   ```
+
+   Reading and writing content
+   ```javascript
+      var el = document.getElementById("demo");
+
+      el.innerHTML   = "<b>Bold text</b>";   // HTML is PARSED
+      el.textContent = "<b>Bold text</b>";   // shown as plain TEXT
+      el.innerText   = "Visible text only";  // ignores hidden text
+
+      // for a form field, use .value , NOT .innerHTML
+      var name = document.getElementById("nameBox").value;
+   ```
+   ```
+      innerHTML vs textContent - the point that matters
+
+      innerHTML    parses the string as HTML. If the string came
+           from a USER, this creates an XSS vulnerability :
+                el.innerHTML = userInput;   // DANGEROUS
+           A user could submit <img src=x onerror="...">.
+
+      textContent  inserts the string as plain text. Tags are
+           displayed, not executed. ALWAYS use textContent for
+           untrusted data.
+   ```
+
+   Changing an attribute and the style
+   ```javascript
+      var img = document.getElementById("pic");
+
+      img.src = "new.jpg";                   // a direct property
+      img.setAttribute("alt", "New image");  // any attribute
+      img.getAttribute("src");               // read it back
+
+      img.style.border  = "2px solid red";   // one style
+      img.classList.add("highlight");        // better - use a class
+   ```
+
+   The other ways to select elements
+   ```javascript
+      document.getElementById("demo")            // ONE element ,
+                                                 // or null
+      document.getElementsByClassName("card")    // a LIVE
+                                                 // HTMLCollection
+      document.getElementsByTagName("p")         // a live collection
+      document.querySelector(".card")            // the FIRST match ,
+                                                 // any CSS selector
+      document.querySelectorAll(".card")         // a STATIC NodeList
+                                                 // of all matches
+   ```
+   ```
+      getElementById is the FASTEST, because an id is unique and the
+      browser keeps an index of ids.
+
+      querySelector is the most FLEXIBLE - it accepts any CSS
+      selector :
+           document.querySelector("#main .card > p:first-child")
+   ```
+
+   The two mistakes that account for most failures
+   ```
+      1. THE SCRIPT RUNS BEFORE THE ELEMENT EXISTS
+
+           <head>
+               <script>
+                   document.getElementById("demo").innerHTML = "Hi";
+                   // TypeError : Cannot set property of null
+               </script>
+           </head>
+           <body><p id="demo"></p></body>
+
+         The <p> has not been parsed yet, so getElementById returns
+         NULL.
+
+         THE FIX - any one of :
+           put the <script> at the END of <body>
+           use  <script src="app.js" defer></script>
+           wrap the code in
+                document.addEventListener("DOMContentLoaded",
+                    function () { ... });
+
+      2. USING innerHTML ON A FORM FIELD
+           An <input> has no inner HTML. Its content is in .value :
+                document.getElementById("box").value
+   ```
+   - One further note: `id` must be `unique` in a document. If two elements share an id the HTML is invalid, and `getElementById` returns only the first — a bug that is very hard to see, because nothing reports an error.
 
 8. **if-else ব্যবহার করে Javascript দিয়ে নিচের কোডটি সম্পন্ন কর, যেন Output ডান পাশের মত আসে।** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 ```html
@@ -2791,21 +3586,1089 @@
 </html>
 ```
 
+   Answer: The code as given is already complete and correct in its logic. The only defect is the `missing space` before "is", which makes the output read `1is an odd value.` instead of `1 is an odd value.`
+
+   The corrected code
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <body>
+   <script>
+       for (var x = 1; x <= 9; x++) {
+           if (x % 2 == 0) {
+               console.log(x + " is an even value.");
+           } else {
+               console.log(x + " is an odd value.");
+           }
+       }
+   </script>
+   </body>
+   </html>
+   ```
+
+   The output
+   ```
+      1 is an odd value.
+      2 is an even value.
+      3 is an odd value.
+      4 is an even value.
+      5 is an odd value.
+      6 is an even value.
+      7 is an odd value.
+      8 is an even value.
+      9 is an odd value.
+   ```
+
+   How it works
+   ```
+      for (var x = 1; x <= 9; x++)
+
+           initialisation : x = 1
+           condition      : x <= 9   - checked BEFORE each pass
+           increment      : x++      - run AFTER each pass
+
+      x % 2 == 0
+
+           The MODULUS operator gives the REMAINDER of x divided
+           by 2.
+                even number -> remainder 0  -> the if is TRUE
+                odd  number -> remainder 1  -> the else runs
+
+           x=1 : 1 % 2 = 1  -> odd
+           x=2 : 2 % 2 = 0  -> even
+           x=3 : 3 % 2 = 1  -> odd     and so on to 9
+   ```
+
+   If the output must appear on the page rather than in the console
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <body>
+
+   <div id="output"></div>
+
+   <script>
+       var result = "";
+       for (var x = 1; x <= 9; x++) {
+           if (x % 2 == 0) {
+               result += x + " is an even value.<br>";
+           } else {
+               result += x + " is an odd value.<br>";
+           }
+       }
+       document.getElementById("output").innerHTML = result;
+   </script>
+
+   </body>
+   </html>
+   ```
+   - `console.log` writes to the browser's `developer console` (F12), which the visitor never sees. To show the result on the page, `innerHTML` or `document.write` is needed. Building the whole string first and assigning `innerHTML` once is better than assigning inside the loop, because each assignment forces the browser to re-parse and re-render.
+
+   The shorter forms worth knowing
+   ```javascript
+      // the ternary operator, in place of if-else
+      for (var x = 1; x <= 9; x++) {
+          console.log(x + (x % 2 === 0 ? " is an even value."
+                                       : " is an odd value."));
+      }
+
+      // a template literal , ES6
+      for (let x = 1; x <= 9; x++) {
+          const type = x % 2 === 0 ? "even" : "odd";
+          console.log(`${x} is an ${type} value.`);
+      }
+   ```
+   - Two details worth stating. `let` should be preferred to `var` for the loop counter: `var` is function-scoped, so `x` still exists after the loop and equals 10, whereas `let` is block-scoped and confined to the loop. And `===` should be preferred to `==`: `==` performs type coercion, so `"0" == 0` is true, while `===` compares type as well and avoids a whole class of silent bugs.
+
 9. **Differentiate among $.ajax(), $.get() and $.load() function of jQuery with necessary example.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*, *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
+
+   Answer: All three are jQuery AJAX methods, but they differ in `flexibility` and in `what they do with the response`.
+
+   | Point | `$.ajax()` | `$.get()` | `$.load()` |
+   |---|---|---|---|
+   | Type | The `low-level` general method | A `shorthand` for GET | A `method on a selected element` |
+   | HTTP method | `Any` — GET, POST, PUT, DELETE | `GET` only | `GET`, or `POST` if data is passed |
+   | Called on | `$` (jQuery itself) | `$` | `$("#selector")` — an element |
+   | What it does with the reply | Hands it to your `callback` | Hands it to your `callback` | `Inserts it into the element` automatically |
+   | Options available | `All` of them | Few | Few |
+   | Error handling | `Full` — error, complete, statusCode | Limited — chain `.fail()` | A callback that reports the status |
+   | Can load part of a page | No | No | `Yes` — with a selector fragment |
+   | Use when | Anything non-trivial | A quick GET of data | Dropping HTML into a container |
+
+   `$.ajax()` — the full form
+   ```javascript
+      $.ajax({
+          url:      "getUser.php",
+          type:     "POST",
+          data:     { id: 5, name: "Rahim" },
+          dataType: "json",
+          timeout:  5000,
+          beforeSend: function () {
+              $("#loader").show();
+          },
+          success: function (response) {
+              $("#result").html(response.name);
+          },
+          error: function (xhr, status, err) {
+              console.log("Failed : " + status + " " + err);
+          },
+          complete: function () {
+              $("#loader").hide();      // runs on success AND error
+          }
+      });
+   ```
+   - Every other AJAX method in jQuery is a wrapper around this one. It is the only one that gives access to `type`, `timeout`, `headers`, `beforeSend`, `contentType` and `async`.
+
+   `$.get()` — shorthand for a GET request
+   ```javascript
+      $.get("getUser.php", { id: 5 }, function (data) {
+          $("#result").html(data);
+      });
+
+      // it returns a promise, so it can be chained
+      $.get("data.json")
+       .done(function (d) { console.log(d); })
+       .fail(function ()  { console.log("error"); })
+       .always(function () { console.log("finished"); });
+   ```
+   ```
+      It is exactly equivalent to :
+
+           $.ajax({ url: "getUser.php", type: "GET",
+                    data: { id: 5 }, success: function (data) {...} });
+
+      The companion methods are :
+           $.post()      the same, with type POST
+           $.getJSON()   a GET that parses the reply as JSON
+           $.getScript() a GET that executes the reply as JavaScript
+   ```
+
+   `$.load()` — load HTML straight into an element
+   ```javascript
+      // load a whole page fragment into a div
+      $("#content").load("page.html");
+
+      // load ONLY PART of another page - the distinctive feature
+      $("#content").load("page.html #section2");
+
+      // with a callback
+      $("#content").load("page.html", function (response, status) {
+          if (status === "error") {
+              $("#content").html("Could not load the content.");
+          }
+      });
+
+      // passing data makes it a POST
+      $("#content").load("search.php", { q: "laptop" });
+   ```
+   ```
+      THE TWO THINGS THAT MAKE $.load() DIFFERENT
+
+      1. It is called on an ELEMENT, not on $ , and it INSERTS the
+         response into that element automatically. No success
+         callback is needed just to display the result.
+
+      2. It can fetch a FRAGMENT :
+                $("#content").load("page.html #section2");
+         jQuery fetches the whole page, then keeps only the part
+         matching #section2. Convenient, but note that the WHOLE
+         page still travels over the network.
+   ```
+
+   The relationship
+   ```
+      $.ajax()   -  the engine
+         |
+         +--- $.get()      GET , callback
+         +--- $.post()     POST , callback
+         +--- $.getJSON()  GET , parsed as JSON
+         +--- .load()      GET , inserted into the element
+
+      All of them ultimately call $.ajax().
+   ```
+
+   Which to use
+   ```
+      NEED a POST, custom headers, a timeout, or proper error
+           handling            ->  $.ajax()
+      NEED to fetch some data quickly with a GET
+                               ->  $.get()  or  $.getJSON()
+      NEED to drop a block of HTML into a container
+                               ->  .load()
+   ```
+   - The modern alternative worth naming: the browser's own `fetch()` API with `async/await` does everything `$.ajax()` does, with no library at all.
+   ```javascript
+      const res  = await fetch("getUser.php");
+      const data = await res.json();
+   ```
+   - One caution about `fetch()`: unlike `$.ajax()`, it does `not` treat an HTTP `404` or `500` as an error — the promise resolves, and `res.ok` must be checked explicitly. That difference catches out developers moving from jQuery.
 
 10. **How do you change the value of a HTML element using HTML DOM?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1058 (ET: AUST)]*
 
+    Answer: The value of an HTML element is changed through the DOM by selecting the element and then assigning to the appropriate property. `Which` property depends on the kind of element.
+    ```javascript
+       // 1. the CONTENT of an ordinary element
+       document.getElementById("demo").innerHTML = "New text";
+
+       // 2. the VALUE of a form field
+       document.getElementById("nameBox").value = "Rahim";
+
+       // 3. an ATTRIBUTE
+       document.getElementById("pic").src = "new.jpg";
+    ```
+
+    The three properties for content
+    ```javascript
+       var el = document.getElementById("demo");
+
+       el.innerHTML   = "<b>Bold</b>";   // parsed as HTML - shows
+                                         // BOLD text
+       el.textContent = "<b>Bold</b>";   // plain text - shows the
+                                         // TAGS literally
+       el.innerText   = "Visible only";  // like textContent, but
+                                         // respects CSS visibility
+    ```
+    ```
+       innerHTML vs textContent - the security point
+
+       innerHTML PARSES the string as HTML. Assigning user input to
+       it creates an XSS vulnerability :
+
+            el.innerHTML = userInput;    // DANGEROUS
+            // a user could submit  <img src=x onerror="steal()">
+
+       ALWAYS use textContent for data that came from a user.
+       Use innerHTML only for markup you generated yourself.
+    ```
+
+    Form elements use `.value`, not `.innerHTML`
+    ```javascript
+       document.getElementById("txt").value    = "Rahim";   // text box
+       document.getElementById("chk").checked  = true;      // checkbox
+       document.getElementById("sel").value    = "Dhaka";   // dropdown
+       document.getElementById("area").value   = "Notes";   // textarea
+    ```
+    ```
+       An <input> has NO inner HTML - it is an empty element. Setting
+       innerHTML on it does nothing at all, and this is the
+       commonest DOM mistake.
+    ```
+
+    A complete example
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head><meta charset="UTF-8"><title>Change value</title></head>
+    <body>
+
+        <p id="demo">Original text</p>
+        <input type="text" id="nameBox" value="old name">
+        <img id="pic" src="old.jpg" alt="Picture" width="150">
+        <br><br>
+        <button onclick="changeAll()">Change everything</button>
+
+    <script>
+        function changeAll() {
+            // content of a paragraph
+            document.getElementById("demo").textContent =
+                "The text has been changed";
+
+            // value of an input
+            document.getElementById("nameBox").value = "Rahim";
+
+            // attribute of an image
+            document.getElementById("pic").src = "new.jpg";
+            document.getElementById("pic").alt = "New picture";
+
+            // a style
+            document.getElementById("demo").style.color = "green";
+
+            // a class - the better way to change appearance
+            document.getElementById("demo").classList.add("highlight");
+        }
+    </script>
+
+    </body>
+    </html>
+    ```
+
+    Selecting the element
+    ```javascript
+       document.getElementById("demo")          // ONE element or null
+       document.querySelector(".card")          // FIRST CSS match
+       document.querySelectorAll(".card")       // ALL matches
+       document.getElementsByClassName("card")  // a LIVE collection
+       document.getElementsByTagName("p")       // a live collection
+    ```
+    ```
+       To change MANY elements, loop over the collection :
+
+            document.querySelectorAll(".price").forEach(function (el) {
+                el.textContent = "100 Tk";
+            });
+    ```
+
+    The mistake that breaks most scripts
+    ```
+       THE SCRIPT RUNS BEFORE THE ELEMENT EXISTS
+
+            <head>
+                <script>
+                    document.getElementById("demo").innerHTML = "Hi";
+                    // TypeError : Cannot set property of null
+                </script>
+            </head>
+            <body><p id="demo"></p></body>
+
+       THE FIX - any one of :
+            put the <script> at the END of <body>
+            use  <script src="app.js" defer></script>
+            wrap the code in
+                 document.addEventListener("DOMContentLoaded",
+                     function () { ... });
+    ```
+    - The jQuery equivalents, for comparison: `$("#demo").html("New text")`, `$("#demo").text("New text")` and `$("#nameBox").val("Rahim")`. The distinction between `.html()` and `.text()` is exactly the `innerHTML` and `textContent` distinction, with the same security implication.
+
 11. **Difference among $.ajax(), $.load() and $.get().** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
+
+    Answer: The three are all jQuery AJAX methods, differing in `flexibility` and in `what they do with the response`.
+
+    | Point | `$.ajax()` | `$.get()` | `$.load()` |
+    |---|---|---|---|
+    | Type | The `low-level` general method | `Shorthand` for GET | A method on a `selected element` |
+    | HTTP method | `Any` — GET, POST, PUT, DELETE | `GET` only | GET, or POST if data is passed |
+    | Called on | `$` | `$` | `$("#selector")` |
+    | Response handling | Given to `your callback` | Given to `your callback` | `Inserted into the element` automatically |
+    | Options | `All` | Few | Few |
+    | Error handling | `Full` — error, complete, statusCode | Chain `.fail()` | A status argument in the callback |
+    | Loads part of a page | No | No | `Yes` — with a fragment selector |
+
+    `$.ajax()`
+    ```javascript
+       $.ajax({
+           url:      "getUser.php",
+           type:     "POST",
+           data:     { id: 5 },
+           dataType: "json",
+           timeout:  5000,
+           beforeSend: function () { $("#loader").show(); },
+           success:  function (r)  { $("#result").html(r.name); },
+           error:    function (xhr, status, err) {
+                         console.log("Failed : " + err);
+                     },
+           complete: function ()   { $("#loader").hide(); }
+       });
+    ```
+    - The only method giving access to `type`, `timeout`, `headers`, `beforeSend` and `contentType`. Every other jQuery AJAX method is a wrapper around it.
+
+    `$.get()`
+    ```javascript
+       $.get("getUser.php", { id: 5 }, function (data) {
+           $("#result").html(data);
+       });
+
+       // it returns a promise
+       $.get("data.json")
+        .done(function (d) { console.log(d); })
+        .fail(function ()  { console.log("error"); });
+    ```
+    ```
+       Equivalent to :
+            $.ajax({ url: "getUser.php", type: "GET",
+                     data: { id: 5 }, success: function (d) {...} });
+
+       Companions : $.post() , $.getJSON() , $.getScript()
+    ```
+
+    `$.load()`
+    ```javascript
+       // load a page fragment into a div
+       $("#content").load("page.html");
+
+       // load ONLY PART of another page
+       $("#content").load("page.html #section2");
+
+       // with a callback
+       $("#content").load("page.html", function (resp, status) {
+           if (status === "error")
+               $("#content").html("Could not load the content.");
+       });
+    ```
+    ```
+       THE TWO DISTINCTIVE FEATURES
+
+       1. It is called on an ELEMENT and INSERTS the response into
+          that element automatically - no success callback is needed
+          simply to display the result.
+
+       2. It can fetch a FRAGMENT of another page. jQuery downloads
+          the WHOLE page and then keeps only the part matching the
+          selector - convenient, but the entire page still crosses
+          the network.
+    ```
+
+    The relationship
+    ```
+       $.ajax()   -  the engine
+          |
+          +--- $.get()      GET , callback
+          +--- $.post()     POST , callback
+          +--- $.getJSON()  GET , parsed as JSON
+          +--- .load()      GET , inserted into the element
+
+       All of them ultimately call $.ajax().
+    ```
+    - Which to use: `$.ajax()` when a POST, a timeout, custom headers or real error handling is needed; `$.get()` or `$.getJSON()` for a quick data fetch; `.load()` to drop a block of HTML into a container.
+    - The modern alternative: the browser's own `fetch()` with `async/await` needs no library at all. One difference to remember — `fetch()` does `not` treat a `404` or `500` as an error, so `res.ok` must be checked explicitly, whereas `$.ajax()` calls its `error` handler automatically.
 
 12. **How to change html attribute through html DOM?** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1163 (ET: N/A)]*, *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
+    Answer: An attribute is changed through the DOM either by assigning to the matching `property` or by calling `setAttribute()`.
+    ```javascript
+       var img = document.getElementById("pic");
+
+       // 1. as a PROPERTY - shorter, and works for standard
+       //    attributes
+       img.src = "new.jpg";
+       img.alt = "New picture";
+
+       // 2. with setAttribute() - works for ANY attribute
+       img.setAttribute("src", "new.jpg");
+       img.setAttribute("data-id", "42");
+    ```
+
+    The methods
+    ```javascript
+       el.setAttribute("name", "value")   // set or replace
+       el.getAttribute("name")            // read - returns a STRING
+                                          // or null
+       el.removeAttribute("name")         // delete
+       el.hasAttribute("name")            // true / false
+    ```
+
+    A complete example
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head><meta charset="UTF-8"><title>Change attribute</title></head>
+    <body>
+
+        <img id="pic" src="old.jpg" alt="Old picture" width="150">
+        <a  id="link" href="old.html">Click here</a>
+        <input id="box" type="text" value="text">
+        <br><br>
+        <button onclick="changeAttributes()">Change</button>
+
+    <script>
+        function changeAttributes() {
+
+            // an image
+            var img = document.getElementById("pic");
+            img.src = "new.jpg";
+            img.setAttribute("alt", "New picture");
+            img.setAttribute("width", "300");
+
+            // a link
+            var link = document.getElementById("link");
+            link.href   = "https://example.com";
+            link.target = "_blank";
+            link.setAttribute("rel", "noopener noreferrer");
+
+            // a form field
+            var box = document.getElementById("box");
+            box.setAttribute("placeholder", "Enter your name");
+            box.disabled = true;             // a BOOLEAN attribute
+
+            // remove one
+            img.removeAttribute("width");
+        }
+    </script>
+
+    </body>
+    </html>
+    ```
+
+    Property against `setAttribute()` — where they differ
+    ```
+       For most attributes they are interchangeable. Three cases
+       where they are NOT :
+
+       1. BOOLEAN ATTRIBUTES - checked , disabled , selected ,
+          readonly
+
+            el.checked = true;                    // CORRECT
+            el.setAttribute("checked", "false");  // WRONG - the
+                 attribute's PRESENCE is what counts, so this
+                 actually CHECKS the box.
+            To uncheck : el.removeAttribute("checked") , or better
+                 el.checked = false;
+
+       2. value ON AN INPUT
+
+            el.value                  the CURRENT value, including
+                                      whatever the user typed
+            el.getAttribute("value")  the value written in the HTML -
+                                      the DEFAULT, which does not
+                                      change as the user types
+
+       3. class - the attribute is "class" but the property is
+          "className"
+
+            el.className = "card active";
+            el.setAttribute("class", "card active");
+            el.classList.add("active");        // the BEST way
+            el.classList.remove("active");
+            el.classList.toggle("active");
+    ```
+    ```
+       AND href :
+            link.href                  returns the ABSOLUTE URL,
+                                       e.g. "https://site.com/a.html"
+            link.getAttribute("href")  returns exactly what was
+                                       written, e.g. "a.html"
+    ```
+
+    Changing style — attribute or class
+    ```javascript
+       // one style at a time
+       el.style.color           = "red";
+       el.style.backgroundColor = "yellow";   // camelCase , NOT
+                                              // background-color
+
+       // BETTER - change a class and keep the styling in CSS
+       el.classList.add("highlight");
+    ```
+    - Why the class approach is preferred: styling stays in the `stylesheet` where it belongs, one class can carry a dozen properties, and the change is easy to reverse with `classList.remove()`.
+
+    Custom data attributes
+    ```html
+       <div id="prod" data-id="42" data-price="1500"></div>
+    ```
+    ```javascript
+       var d = document.getElementById("prod");
+
+       d.dataset.id     // "42"    - the dataset API
+       d.dataset.price  // "1500"
+       d.dataset.stock = "10";     // adds data-stock="10"
+    ```
+    - Note that every attribute value is a `string`. `d.dataset.price` gives `"1500"`, so `Number()` or `parseInt()` is needed before arithmetic — otherwise `d.dataset.price + 1` produces `"15001"`.
+    - The jQuery equivalents: `$("#pic").attr("src", "new.jpg")`, `$("#pic").removeAttr("width")`, `$("#box").prop("disabled", true)` and `$("#prod").data("id")`. jQuery draws the same distinction — `attr()` for attributes, `prop()` for boolean properties.
+
 13. **Suppose you've a javaScript code name as “bankScript” write the code for loading in HTML using JS.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
+
+    Answer: An external JavaScript file named `bankScript` is loaded with the `<script>` tag and its `src` attribute.
+    ```html
+       <script src="bankScript.js"></script>
+    ```
+
+    The complete page
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bank Application</title>
+
+        <!-- external CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- external JavaScript , loaded with defer -->
+        <script src="bankScript.js" defer></script>
+    </head>
+    <body>
+
+        <h1>Bank Application</h1>
+        <input type="text" id="amount" placeholder="Enter amount">
+        <button id="btn">Calculate Interest</button>
+        <p id="result"></p>
+
+    </body>
+    </html>
+    ```
+
+    `bankScript.js`
+    ```javascript
+       function calculateInterest(principal, rate, years) {
+           return (principal * rate * years) / 100;
+       }
+
+       document.addEventListener("DOMContentLoaded", function () {
+
+           document.getElementById("btn").addEventListener("click",
+               function () {
+                   var p = Number(document.getElementById("amount").value);
+
+                   if (!p || p <= 0) {
+                       document.getElementById("result").textContent =
+                           "Please enter a valid amount";
+                       return;
+                   }
+
+                   var interest = calculateInterest(p, 8, 1);
+                   document.getElementById("result").textContent =
+                       "Interest for 1 year : " + interest + " Tk";
+               });
+       });
+    ```
+
+    Where the tag may be placed
+    ```
+       1. AT THE END OF <body>  - the traditional recommendation
+            <body>
+                ... all the HTML ...
+                <script src="bankScript.js"></script>
+            </body>
+          The HTML is parsed first, so every element already exists.
+
+       2. IN <head> WITH defer  - the modern best practice
+            <script src="bankScript.js" defer></script>
+          The file downloads in PARALLEL with parsing and runs after
+          the HTML is complete. Fastest, and the DOM is ready.
+
+       3. IN <head> WITHOUT defer  - AVOID
+            Parsing STOPS while the file downloads and runs, so the
+            page appears later ; and getElementById returns NULL,
+            because the elements do not exist yet.
+    ```
+    ```
+       THE THREE LOADING MODES
+
+       <script src="a.js">          fetch and run IMMEDIATELY ;
+            parsing BLOCKS
+       <script src="a.js" async>    fetch in parallel , run AS SOON
+            AS IT ARRIVES - order between files NOT guaranteed
+       <script src="a.js" defer>    fetch in parallel , run after
+            parsing , IN ORDER
+
+       Use  defer  for your own scripts that depend on the DOM ; use
+       async only for independent scripts such as analytics.
+    ```
+
+    Loading several files, and the order rule
+    ```html
+       <!-- a LIBRARY must come BEFORE the code that uses it -->
+       <script src="jquery-3.7.1.min.js"></script>
+       <script src="bankScript.js"></script>
+    ```
+    - With plain `src` or with `defer`, files execute in the order written. With `async` they do not, so a library and the code that depends on it must never both use `async`.
+
+    Loading a script dynamically, from JavaScript
+    ```javascript
+       var s = document.createElement("script");
+       s.src = "bankScript.js";
+       s.onload  = function () { console.log("loaded"); };
+       s.onerror = function () { console.log("failed to load"); };
+       document.head.appendChild(s);
+    ```
+
+    As an ES6 module
+    ```html
+       <script type="module" src="bankScript.js"></script>
+    ```
+    ```javascript
+       // bankScript.js
+       export function calculateInterest(p, r, y) {
+           return (p * r * y) / 100;
+       }
+
+       // another file
+       import { calculateInterest } from "./bankScript.js";
+    ```
+    - Modules are `deferred by default` and have their own scope, so nothing leaks into the global namespace. They must be served over `http` or `https`, not opened as a `file://` page.
+    - Why external files are preferred to inline script: the browser `caches` the file, so it is downloaded once and reused on every page; one file serves the whole site; the HTML stays readable; and behaviour is separated from structure — the same argument that puts CSS in its own file.
 
 14. **What is closure in JavaScript? Explain with an example?** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
 
+    Answer: What a closure is
+    - A `closure` is a function that `remembers the variables of the scope in which it was created`, and can still use them even after that outer function has finished executing.
+    ```
+       A closure is formed whenever a function is defined INSIDE
+       another function and then used OUTSIDE it. The inner function
+       keeps a live reference to the outer function's variables -
+       they are NOT copied, and they are NOT destroyed when the
+       outer function returns.
+    ```
+
+    Example — a counter
+    ```javascript
+       function makeCounter() {
+           let count = 0;                    // a LOCAL variable
+
+           return function () {              // the inner function
+               count++;                      // it USES count
+               return count;
+           };
+       }
+
+       const c1 = makeCounter();
+       const c2 = makeCounter();
+
+       console.log(c1());     // 1
+       console.log(c1());     // 2
+       console.log(c1());     // 3
+       console.log(c2());     // 1   - a SEPARATE closure
+    ```
+    ```
+       TESTED OUTPUT :  1  2  3  1
+
+       Two things this proves :
+
+       1. count SURVIVES after makeCounter() has returned. Normally
+          a local variable is destroyed when its function ends -
+          here it is kept alive because the returned function still
+          refers to it.
+
+       2. c1 and c2 have THEIR OWN count. Each call to makeCounter()
+          creates a NEW scope and therefore a NEW closure. This is
+          why c2() returns 1 and not 4.
+    ```
+
+    Example — data privacy, the main practical use
+    ```javascript
+       function createAccount(initialBalance) {
+           let balance = initialBalance;     // PRIVATE - unreachable
+                                             // from outside
+
+           return {
+               deposit: function (amount) {
+                   balance += amount;
+                   return balance;
+               },
+               withdraw: function (amount) {
+                   if (amount > balance) return "Insufficient balance";
+                   balance -= amount;
+                   return balance;
+               },
+               getBalance: function () {
+                   return balance;
+               }
+           };
+       }
+
+       const acc = createAccount(1000);
+
+       console.log(acc.deposit(500));    // 1500
+       console.log(acc.withdraw(200));   // 1300
+       console.log(acc.getBalance());    // 1300
+       console.log(acc.withdraw(5000));  // "Insufficient balance"
+       console.log(acc.balance);         // undefined  <- PRIVATE
+    ```
+    ```
+       TESTED OUTPUT : 1500 , 1300 , 1300 , "Insufficient balance" ,
+                       undefined
+
+       The last line is the point. balance CANNOT be read or written
+       directly - only the three returned functions can touch it.
+       JavaScript had no  private  keyword, and closures are how
+       ENCAPSULATION was achieved.
+    ```
+
+    The classic interview trap
+    ```javascript
+       // WITH var - the wrong output
+       for (var i = 1; i <= 3; i++) {
+           setTimeout(function () { console.log(i); }, 0);
+       }
+       // prints  4  4  4
+
+       // WITH let - correct
+       for (let j = 1; j <= 3; j++) {
+           setTimeout(function () { console.log(j); }, 0);
+       }
+       // prints  1  2  3
+    ```
+    ```
+       TESTED : var gives "4 4 4" , let gives "1 2 3"
+
+       WHY :  var is FUNCTION-scoped, so all three callbacks close
+       over the SAME i. By the time they run, the loop has finished
+       and i is 4.
+
+       let is BLOCK-scoped, so each iteration creates a NEW binding
+       of j - three separate closures, holding 1, 2 and 3.
+
+       The pre-ES6 fix was an IIFE, which created a new scope by
+       hand :
+            for (var i = 1; i <= 3; i++) {
+                (function (n) {
+                    setTimeout(function () { console.log(n); }, 0);
+                })(i);
+            }
+    ```
+
+    Where closures are used in real code
+    ```
+       PRIVATE DATA         as in createAccount above
+       FUNCTION FACTORIES   function multiplier(n) {
+                                return x => x * n;
+                            }
+                            const double = multiplier(2);
+       CALLBACKS and EVENT HANDLERS - they close over the variables
+            they need
+       THE MODULE PATTERN   an IIFE returning only a public API
+       MEMOISATION and CACHING - the cache lives in the closure
+       setTimeout , setInterval , and every asynchronous callback
+       PARTIAL APPLICATION and currying
+    ```
+
+    The caution
+    ```
+       A closure keeps its outer variables ALIVE, so they cannot be
+       garbage collected while the closure exists. Holding a
+       closure over a large object - a big array, a DOM node - keeps
+       that object in memory, which is a real source of MEMORY LEAKS
+       in long-running pages.
+    ```
+    - The definition to give in one sentence: `a closure is the combination of a function and the lexical environment in which it was declared`. Every JavaScript function is technically a closure; the term is used when the surrounding variables actually outlive the call that created them.
+
 15. **Difference among $.ajax(), $.load(), $.get().** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
 
+    Answer: The three are jQuery AJAX methods, differing in `flexibility` and in `what they do with the response`.
+
+    | Point | `$.ajax()` | `$.get()` | `$.load()` |
+    |---|---|---|---|
+    | Type | The `low-level` general method | `Shorthand` for GET | A method on a `selected element` |
+    | HTTP method | `Any` — GET, POST, PUT, DELETE | `GET` only | GET, or POST if data is passed |
+    | Called on | `$` | `$` | `$("#selector")` |
+    | Response | Given to `your callback` | Given to `your callback` | `Inserted into the element` automatically |
+    | Options | `All` | Few | Few |
+    | Error handling | `Full` — error, complete, statusCode | Chain `.fail()` | A status argument in the callback |
+    | Loads part of a page | No | No | `Yes` — with a fragment selector |
+    | Returns | A jqXHR promise | A jqXHR promise | The `jQuery object`, for chaining |
+
+    `$.ajax()` — the general method
+    ```javascript
+       $.ajax({
+           url:      "getUser.php",
+           type:     "POST",
+           data:     { id: 5 },
+           dataType: "json",
+           timeout:  5000,
+           beforeSend: function () { $("#loader").show(); },
+           success:  function (r) { $("#result").html(r.name); },
+           error:    function (xhr, status, err) {
+                         console.log("Failed : " + err);
+                     },
+           complete: function () { $("#loader").hide(); }
+       });
+    ```
+    - The only one of the three that exposes `type`, `timeout`, `headers`, `contentType`, `beforeSend` and `async`. Every other jQuery AJAX method is a wrapper around it.
+
+    `$.get()` — a GET request
+    ```javascript
+       $.get("getUser.php", { id: 5 }, function (data) {
+           $("#result").html(data);
+       });
+
+       // it returns a promise
+       $.get("data.json")
+        .done(function (d) { console.log(d); })
+        .fail(function ()  { console.log("error"); })
+        .always(function () { console.log("finished"); });
+    ```
+    ```
+       Exactly equivalent to :
+            $.ajax({ url: "getUser.php", type: "GET",
+                     data: { id: 5 }, success: function (d) {...} });
+
+       Its companions : $.post() , $.getJSON() , $.getScript()
+    ```
+
+    `$.load()` — load HTML into an element
+    ```javascript
+       $("#content").load("page.html");
+
+       // load ONLY PART of another page
+       $("#content").load("page.html #section2");
+
+       // with a callback
+       $("#content").load("page.html", function (resp, status) {
+           if (status === "error")
+               $("#content").html("Could not load the content.");
+       });
+
+       // passing data makes it a POST
+       $("#content").load("search.php", { q: "laptop" });
+    ```
+    ```
+       THE TWO THINGS THAT SET IT APART
+
+       1. It is called on an ELEMENT and INSERTS the response into
+          that element automatically. No callback is needed simply
+          to display the result.
+
+       2. It can fetch a FRAGMENT. jQuery downloads the WHOLE page
+          and then keeps only the part matching the selector -
+          convenient, but the entire page still crosses the network.
+    ```
+
+    The relationship
+    ```
+       $.ajax()   -  the engine
+          |
+          +--- $.get()      GET , callback
+          +--- $.post()     POST , callback
+          +--- $.getJSON()  GET , parsed as JSON
+          +--- .load()      GET , inserted into the element
+
+       All three ultimately call $.ajax().
+    ```
+    - Which to use: `$.ajax()` for a POST, a timeout, custom headers or real error handling; `$.get()` or `$.getJSON()` for a quick data fetch; `.load()` to drop a block of HTML into a container.
+    - The modern replacement: the browser's own `fetch()` with `async/await` needs no library. One difference to note — `fetch()` does `not` treat a `404` or `500` as an error, so `res.ok` must be checked by hand, whereas `$.ajax()` calls its `error` handler automatically.
+
 16. **What is the working procedure of AJAX?** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1221-1222 (ET: N/A)]*
+
+    Answer: What AJAX is
+    - `AJAX` stands for `Asynchronous JavaScript and XML`. It is a technique that lets a web page `exchange data with the server and update part of itself, without reloading the whole page`.
+    ```
+       WITHOUT AJAX
+            click -> the whole page is requested -> the whole page
+            reloads -> the screen flickers and scroll position is
+            lost
+
+       WITH AJAX
+            click -> JavaScript sends a background request -> only
+            the reply data comes back -> only the relevant part of
+            the page is updated
+    ```
+    - Despite the name, `XML` is rarely used now — `JSON` replaced it — and AJAX requests need not be asynchronous, though they almost always are.
+
+    The working procedure
+    ```mermaid
+    sequenceDiagram
+        participant U as User
+        participant B as Browser (JS)
+        participant X as XMLHttpRequest
+        participant S as Server
+        participant D as Database
+        U->>B: clicks or types
+        B->>X: create the request object
+        X->>S: HTTP request (in the background)
+        S->>D: query
+        D-->>S: data
+        S-->>X: response (JSON / HTML / XML)
+        X->>B: onreadystatechange fires
+        B->>U: update part of the page (DOM)
+    ```
+    ```
+       STEP BY STEP
+
+       1. An EVENT occurs - a click, a keystroke, a page load.
+
+       2. JavaScript creates an XMLHttpRequest object (or calls
+          fetch()).
+                 var xhr = new XMLHttpRequest();
+
+       3. It CONFIGURES the request - the method, the URL, and
+          whether it is asynchronous.
+                 xhr.open("GET", "getData.php?id=5", true);
+
+       4. It registers a CALLBACK to run when the state changes.
+                 xhr.onreadystatechange = function () { ... };
+
+       5. It SENDS the request. Control returns IMMEDIATELY - this
+          is what "asynchronous" means. The page stays responsive
+          and the user can carry on.
+                 xhr.send();
+
+       6. The SERVER receives the request, runs its code, queries
+          the database, and sends back only the DATA - as JSON,
+          HTML, XML or plain text. It does NOT send a whole page.
+
+       7. When the response arrives the CALLBACK fires. It checks
+          readyState === 4 (done) and status === 200 (OK).
+
+       8. JavaScript UPDATES THE DOM with the data - only the part
+          of the page that changed.
+    ```
+
+    The code — plain XMLHttpRequest
+    ```javascript
+       function loadData() {
+           var xhr = new XMLHttpRequest();
+
+           xhr.onreadystatechange = function () {
+               if (xhr.readyState === 4) {          // 4 = DONE
+                   if (xhr.status === 200) {        // 200 = OK
+                       var data = JSON.parse(xhr.responseText);
+                       document.getElementById("result").textContent =
+                           data.name;
+                   } else {
+                       document.getElementById("result").textContent =
+                           "Error : " + xhr.status;
+                   }
+               }
+           };
+
+           xhr.open("GET", "getUser.php?id=5", true);
+           xhr.send();
+       }
+    ```
+    ```
+       THE FIVE readyState VALUES
+
+            0  UNSENT           open() not yet called
+            1  OPENED           open() called
+            2  HEADERS_RECEIVED
+            3  LOADING          the response is arriving
+            4  DONE             the response is complete
+
+       Only state 4 matters in practice, and status must ALSO be
+       checked - state 4 with status 404 means the request finished
+       and FAILED.
+    ```
+
+    The same thing with `fetch()` — the modern way
+    ```javascript
+       async function loadData() {
+           try {
+               const res = await fetch("getUser.php?id=5");
+
+               if (!res.ok)                      // MUST be checked
+                   throw new Error("HTTP " + res.status);
+
+               const data = await res.json();
+               document.getElementById("result").textContent = data.name;
+
+           } catch (err) {
+               document.getElementById("result").textContent =
+                   "Error : " + err.message;
+           }
+       }
+    ```
+    - The trap in `fetch()`: it does `not` reject on a `404` or `500`. The promise resolves normally, so `res.ok` must be tested explicitly — otherwise an error page is parsed as if it were data.
+
+    Where AJAX is used
+    ```
+       live SEARCH SUGGESTIONS as the user types
+       FORM VALIDATION against the server - "is this username taken ?"
+       INFINITE SCROLL and "load more"
+       a chat application
+       auto-saving a draft
+       updating a cart total without leaving the page
+       dependent DROPDOWNS - choosing a district fills the thana list
+    ```
+
+    Advantages and limitations
+    ```
+       ADVANTAGES
+         FASTER and smoother - only data crosses the network, not a
+              whole page
+         LESS BANDWIDTH and less server load
+         the page does not FLICKER and the scroll position is kept
+         a desktop-like experience
+
+       LIMITATIONS
+         it needs JAVASCRIPT ENABLED
+         the BACK BUTTON and BOOKMARKING break unless the History
+              API is used
+         SEARCH ENGINES may not see content loaded by AJAX
+         SAME-ORIGIN POLICY blocks requests to another domain unless
+              the server sends CORS headers
+         debugging is harder, because the request is invisible in
+              the address bar
+    ```
+    - The security point that must be stated: an AJAX endpoint is a `public URL`. Anyone can call it directly with `curl`, without the page. So `authentication, authorisation and input validation must all be enforced on the server` — the fact that the only caller is your own JavaScript proves nothing.
 
 ## HTTP Protocol (10)
 
