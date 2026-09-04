@@ -261,7 +261,8 @@ eg p \lor q) - logical expression টির জন্য Truth table প্র�
 
    - Note: The expression simplifies logically to $p \land q$.
 
-7. **(খ) দেখাও যে, (p \land q) ightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
+7. **(খ) দেখাও যে, (p \land q) 
+ightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
    Answer:
    - Truth Table:
@@ -352,27 +353,130 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **Math: Interest realated** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
+   Answer:
+   - For Principal $P = 10,000$, Rate $r = 10\%$, Time $t = 3$ years:
+     - Simple Interest: $I = P \times r \times t = 10000 \times 0.10 \times 3 = 3000$ Taka.
+     - Compound Interest: $CI = P(1 + r)^t - P = 10000(1.10)^3 - 10000 = 13310 - 10000 = 3310$ Taka.
+
 2. **১০০ টাকার ২৫টি করে লেবু ক্রয় করে ১০০ টাকায় ২০টি করে লেবু বিক্রি করলে শতকরা কত লাভ হবে?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
+
+   Answer:
+   - ১টি লেবুর ক্রয়মূল্য $= \frac{100}{25} = 4$ টাকা
+   - ১টি লেবুর বিক্রয়মূল্য $= \frac{100}{20} = 5$ টাকা
+   - লাভ $= 5 - 4 = 1$ টাকা
+   - শতকরা লাভ:
+     $$\text{Profit}\% = \frac{1}{4} \times 100\% = 25\%$$
+   - উত্তর: ২৫% (25%)
 
 3. **জনাব রহিম তার সম্পদের ২৫% স্ত্রীকে, ৪৫% ছেলেকে এবং অবশিষ্ট ৭২০০০ টাকা মেয়েকে দিলেন। তার সম্পদের মোট মূল কত?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
 
+   Answer:
+   - স্ত্রী ও ছেলে পেল $= 25\% + 45\% = 70\%$
+   - অবশিষ্ট রইল $= 100\% - 70\% = 30\%$
+   - শর্তমতে, মোট সম্পত্তির $30\% = 72,000$ টাকা
+   - মোট সম্পত্তির মূল্য:
+     $$\text{Total Value} = \frac{72000 \times 100}{30} = 2,40,000 \text{ টাকা}$$
+   - উত্তর: ২,৪০,০০০ টাকা
+
 4. **A scored 30% marks and failed by 15 marks. B scored 40% marks and obtained 35 marks more than those required to pass. The pass percentage is?** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
 
-5. **A basketball team has won 15 games and lost 9. If these games represent 16\frac{2}{3}\% of the games to be played, then how many more games must the team win to average 75% for the season?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
+   Answer:
+   - Let total marks be $T$ and passing mark be $P$.
+   - According to conditions:
+     $$P = 0.30T + 15 \quad \text{--- (1)}$$
+     $$P = 0.40T - 35 \quad \text{--- (2)}$$
+   - Equating (1) and (2):
+     $$0.40T - 0.30T = 15 + 35$$
+     $$0.10T = 50 \implies T = 500$$
+   - Passing marks $P = 0.30(500) + 15 = 150 + 15 = 165$.
+   - Pass Percentage:
+     $$\text{Pass}\% = \frac{165}{500} \times 100\% = 33\%$$
+   - Answer: 33%
+
+5. **A basketball team has won 15 games and lost 9. If these games represent 16rac{2}{3}\% of the games to be played, then how many more games must the team win to average 75% for the season?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
+
+   Answer:
+   - Total games played so far $= 15 + 9 = 24$.
+   - Given: 24 games represent $16\frac{2}{3}\% = \frac{50}{3}\% = \frac{1}{6}$ of total games.
+   - Total games in the season $= 24 \times 6 = 144$.
+   - Total wins required to achieve $75\%$ win rate:
+     $$\text{Total Wins Needed} = 0.75 \times 144 = 108$$
+   - Additional games the team must win:
+     $$\text{More Wins Needed} = 108 - 15 = 93$$
+   - Answer: 93 games
 
 6. **A father has divided his property between his two sons A and B. A invests the amount at a compound profit of 8\% p.a. B invests the amount of 10\% p.a. simple profit. At the end of 2 years, the profit received by B is Taka 1336 more than the interest received by A. Find A's share in the fathers property of Taka 25000.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 446 (ET: BIBM)]*
 
+   Answer:
+   - Let A's share be Tk. $x$, then B's share is Tk. $(25000 - x)$.
+   - Interest received by A (Compound Interest for 2 years at 8%):
+     $$I_A = x(1 + 0.08)^2 - x = x(1.1664 - 1) = 0.1664x$$
+   - Profit received by B (Simple Interest for 2 years at 10%):
+     $$I_B = (25000 - x) \times 0.10 \times 2 = 0.20(25000 - x) = 5000 - 0.20x$$
+   - Given: $I_B - I_A = 1336$
+     $$(5000 - 0.20x) - 0.1664x = 1336$$
+     $$5000 - 0.3664x = 1336$$
+     $$0.3664x = 3664$$
+     $$x = \frac{3664}{0.3664} = 10,000$$
+   - Answer: Taka 10,000
+
 7. **The percentage profit earned by selling an artical for Tk. 1920 is equal to the percentage loss incurred by selling the same artical for Tk. 1280. At what price should the artical be sold to make 25\% profit?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
+
+   Answer:
+   - Let the Cost Price be $CP$.
+   - Since Profit % = Loss %:
+     $$\frac{1920 - CP}{CP} = \frac{CP - 1280}{CP}$$
+     $$1920 - CP = CP - 1280$$
+     $$2CP = 3200 \implies CP = 1600$$
+   - Selling Price for $25\%$ profit:
+     $$SP = CP \times (1 + 0.25) = 1600 \times 1.25 = 2000$$
+   - Answer: Tk. 2000
 
 8. **আগে যে টাকায় ৭ লিটার সয়াবিন তেল পাওয়া যেত, এখন সে টাকায় ৫ লিটার সয়াবিন তেল পাওয়া যায়। সয়াবিন তেলের দাম শতকরা কত ভাগ বৃদ্ধি পেল?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+   Answer:
+   - ধরি, টাকার পরিমাণ $= T$ টাকা।
+   - পূর্বে প্রতি লিটার তেলের দাম ছিল $= \frac{T}{7}$ টাকা।
+   - বর্তমানে প্রতি লিটার তেলের দাম $= \frac{T}{5}$ টাকা।
+   - লিটার প্রতি দাম বৃদ্ধি $= \frac{T}{5} - \frac{T}{7} = \frac{2T}{35}$ টাকা।
+   - শতকরা দাম বৃদ্ধি:
+     $$\text{Percentage Increase} = \frac{\frac{2T}{35}}{\frac{T}{7}} \times 100\% = \frac{2}{35} \times 7 \times 100\% = 40\%$$
+   - উত্তর: ৪০% (40%)
+
 9. **০.০২৫ এর শতকরা ১ অংশ কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+   Answer:
+   $$0.025 \times 1\% = 0.025 \times \frac{1}{100} = 0.00025 = 2.5 \times 10^{-4}$$
+   - উত্তর: 0.00025
 
 10. **৩. চিনির মূল্য ২০% বৃদ্ধির পাওয়ার পর চিনির ব্যবহার শতকরা কত কমালে মোট খরচের কোনো পরিবর্তন হবে না।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+    Answer:
+    - সূত্র: ব্যবহার হ্রাসের হার $= \frac{r}{100 + r} \times 100\%$
+    - $r = 20$ বসিয়ে:
+      $$\text{Reduction}\% = \frac{20}{100 + 20} \times 100\% = \frac{20}{120} \times 100\% = \frac{100}{6}\% = 16\frac{2}{3}\% \approx 16.67\%$$
+    - উত্তর: ১৬.৬৭% (বা $16\frac{2}{3}\%$)
+
 11. **৪. একই হার সুদে ৩০০ টাকার ৪ বছরের সুদ এবং ৫০০ টাকার ৫ বছরের সুদ একতে ১৪৮ টাকা হলে, শতকনা বার্ষিক সুদের হার কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+    Answer:
+    - ধরি, বার্ষিক সুদের হার $r\%$।
+    - ৩০০ টাকার ৪ বছরের সুদ $= \frac{300 \times 4 \times r}{100} = 12r$ টাকা
+    - ৫০০ টাকার ৫ বছরের সুদ $= \frac{500 \times 5 \times r}{100} = 25r$ টাকা
+    - শর্তমতে:
+      $$12r + 25r = 148$$
+      $$37r = 148 \implies r = \frac{148}{37} = 4$$
+    - উত্তর: ৪% (4%)
+
 12. **মিঃ কবির সাহেব তার স্ত্রীকে ৫৮%, ছেলেকে ১২% সম্পত্তি দান করেন। দান করার পর তার কাছে অবশিষ্ট সম্পত্তির পরিমাণ ৭২,০০০ টাকা। তার মোট সম্পত্তির পরিমান কত?** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+    Answer:
+    - দানকৃত মোট সম্পত্তি $= 58\% + 12\% = 70\%$
+    - অবশিষ্ট অংশ $= 100\% - 70\% = 30\%$
+    - শর্তমতে, মোট সম্পত্তির $30\% = 72,000$ টাকা
+    - মোট সম্পত্তির পরিমাণ:
+      $$\text{Total Amount} = \frac{72000 \times 100}{30} = 2,40,000 \text{ টাকা}$$
+    - উত্তর: ২,৪০,০০০ টাকা
 
 ## Basic Arithmetic & Average (11)
 
