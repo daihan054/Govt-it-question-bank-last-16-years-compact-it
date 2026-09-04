@@ -4186,22 +4186,228 @@
 
 1. **What is SSL?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*, *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
+   Answer: **SSL (Secure Sockets Layer)** is a cryptographic protocol that provides a secure, encrypted channel between a client and a server over an insecure network. It was developed by Netscape in 1995.
+
+   What it provides
+   - **Encryption** — data in transit cannot be read by anyone intercepting it.
+   - **Authentication** — a digital certificate proves the server really is who it claims to be.
+   - **Integrity** — a MAC detects any modification of the data in transit.
+
+   How it works — the handshake
+   - The client connects and the server presents its digital certificate.
+   - The client verifies the certificate against a trusted Certificate Authority.
+   - Both sides agree a random symmetric **session key** using asymmetric cryptography.
+   - All subsequent data is encrypted with that fast symmetric key.
+
+   Important current status
+   - **All SSL versions are obsolete and insecure.** SSL 2.0 and 3.0 are broken (POODLE attack) and must be disabled.
+   - The modern replacement is **TLS (Transport Layer Security)**, currently TLS 1.2 and TLS 1.3.
+   - The name "SSL" survives in common usage — "SSL certificate" almost always means a TLS certificate.
+
+   Uses
+   - HTTPS (port 443), secure email (SMTPS, IMAPS), FTPS, VPN, and any application needing an encrypted channel.
+
 2. **Which client is used to security cannot to a remote server?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
+
+   Answer: The question appears to ask which client is used to connect SECURELY to a remote server. The answer is **SSH (Secure Shell)**.
+
+   - SSH provides an encrypted terminal session to a remote server, on **port 22**.
+   - Common SSH clients: **PuTTY** (Windows), **OpenSSH** (`ssh` command on Linux, macOS and modern Windows), MobaXterm, Termius.
+
+   Why SSH and not Telnet
+   - **Telnet (port 23)** sends everything, including the password, in PLAIN TEXT. Anyone sniffing the network reads the credentials directly.
+   - **SSH** encrypts the entire session and also authenticates the server, so it resists both eavesdropping and man-in-the-middle attacks.
+   - Telnet should be considered obsolete and disabled on every device.
+
+   Related secure clients
+
+   | Purpose | Insecure protocol | Secure replacement |
+   |---|---|---|
+   | Remote terminal | Telnet (23) | SSH (22) |
+   | File transfer | FTP (21) | SFTP / SCP (22), FTPS (990) |
+   | Web | HTTP (80) | HTTPS (443) |
+   | Remote desktop | VNC (unencrypted) | RDP with TLS (3389), VNC over SSH tunnel |
 
 3. **Ensure secure communication between a client application and the database server.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 314 (ET: N/A)]*
 
+   Answer: Securing the client-to-database channel requires controls at several layers.
+
+   (a) Encryption in transit
+   - **Enable TLS/SSL on the database listener.** MySQL, PostgreSQL, SQL Server and Oracle all support it — `require_secure_transport=ON` in MySQL, `ssl=on` in PostgreSQL, "Force Encryption" in SQL Server.
+   - **Verify the server certificate on the client**, not just encrypt. Without verification the connection is still vulnerable to man-in-the-middle.
+   - Use TLS 1.2 or 1.3 only; disable SSLv3 and TLS 1.0/1.1.
+
+   (b) Authentication
+   - **Strong, unique credentials** for the application account; never a shared or default account.
+   - **Certificate-based or Kerberos authentication** where supported, which removes the password from the connection entirely.
+   - **Never hard-code credentials** in source code or config files — use a secrets manager or the OS credential store.
+   - Rotate credentials regularly.
+
+   (c) Authorisation
+   - **Least privilege** — grant only the specific SELECT, INSERT, UPDATE needed on the specific tables. No DDL rights, no `sa`/`root`.
+   - Separate accounts for read-only reporting and for write operations.
+   - Use views and stored procedures to limit what the application can reach.
+
+   (d) Network controls
+   - **Place the database on a separate VLAN**, never in the DMZ and never internet-facing.
+   - **Firewall rule allowing only the application server's IP** to reach the database port.
+   - Change the default listener port where practical, and disable remote root login.
+   - For remote administration, require a **VPN or SSH tunnel**.
+
+   (e) Application-side
+   - **Parameterised queries** everywhere, to eliminate SQL injection.
+   - **Connection pooling** with a controlled lifetime.
+   - Generic error handling so connection strings and schema details are never exposed.
+
+   (f) Data protection and monitoring
+   - **Encryption at rest** (TDE) and column-level encryption for sensitive fields.
+   - **Database activity monitoring** and audit logging of all connections and privileged operations, forwarded to a SIEM.
+   - Regular patching of the database engine and client drivers.
+
 4. **Difference between HTTP and HTTPs.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 398 (ET: BUET)]*
 
+   Answer:
+
+   | Point | HTTP | HTTPS |
+   |---|---|---|
+   | Full form | HyperText Transfer Protocol | HyperText Transfer Protocol Secure |
+   | Security | None — data travels in plain text | Encrypted with SSL/TLS |
+   | Port | 80 | 443 |
+   | Certificate | Not required | SSL/TLS certificate from a CA required |
+   | Data readable if intercepted | Yes | No |
+   | Server authentication | None | Certificate proves the server's identity |
+   | Data integrity | Not protected | Protected — tampering is detected |
+   | Browser indication | "Not secure" warning | Padlock icon |
+   | Speed | Marginally faster | Slightly slower due to encryption, though HTTP/2 and TLS 1.3 have largely closed the gap |
+   | SEO | Ranked lower by search engines | Ranked higher |
+   | Suitable for | Nothing sensitive; largely obsolete | All modern websites |
+
+   What HTTPS adds
+   - **Confidentiality** — an attacker sniffing the network sees only ciphertext.
+   - **Authentication** — the certificate proves you are talking to the real bank, not an impostor.
+   - **Integrity** — content cannot be modified in transit, which also blocks ISP ad injection.
+
+   - Practical note: HTTPS is now the default. Browsers mark plain HTTP pages as "Not secure", and HSTS makes browsers refuse to downgrade a site to HTTP once it has been seen over HTTPS.
+
 5. **(গ) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে কোনটি কার্যকর?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+   Answer: **HTTPS is effective from a security standpoint; HTTP provides no security at all.**
+
+   Why HTTPS is secure
+   - **Encryption** — SSL/TLS encrypts everything, so an attacker sniffing the network sees only unreadable ciphertext. Passwords, card numbers and personal data are protected.
+   - **Authentication** — the server presents a certificate issued by a trusted Certificate Authority, proving it really is the claimed site. This prevents an attacker from impersonating a bank.
+   - **Integrity** — a message authentication code detects any alteration in transit, so content cannot be modified or injected.
+
+   Why HTTP is not secure
+   - Everything travels in **plain text**. Anyone on the same Wi-Fi, or any router along the path, can read passwords and messages directly.
+   - There is **no server verification**, so a man-in-the-middle can impersonate the site.
+   - Content can be **modified in transit** without detection.
+
+   Practical consequence
+   - Any page that accepts a login, payment or personal information MUST use HTTPS. Using HTTP for such a page is a direct security failure, not merely a shortcoming.
+   - Browsers now display "Not secure" on HTTP pages, and HSTS prevents downgrade once a site is known to support HTTPS.
+
+   - Conclusion: HTTPS is the only acceptable choice for a modern website. HTTP survives only for non-sensitive static content, and even there it is being phased out.
 
 6. **Write down the basic differences of the following:**
    **(ii) TLS 1.2 vs. 1.3** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 535 (ET: MIST)]*
 
+   Answer:
+
+   | Point | TLS 1.2 (2008) | TLS 1.3 (2018) |
+   |---|---|---|
+   | Handshake round trips | 2-RTT | **1-RTT**, and 0-RTT for session resumption |
+   | Connection speed | Slower | Noticeably faster, especially on high-latency links |
+   | Cipher suites supported | Around 37, many weak | Only 5, all strong AEAD suites |
+   | Weak algorithms | Still permits RSA key exchange, CBC mode, SHA-1, MD5, RC4 | All **removed** |
+   | Forward secrecy | Optional | **Mandatory** for every session |
+   | Encryption modes | CBC, AEAD and others | AEAD only — AES-GCM and ChaCha20-Poly1305 |
+   | Handshake encryption | Handshake is mostly in clear text | Most of the handshake is encrypted |
+   | Downgrade attacks | Possible (FREAK, Logjam, POODLE) | Protected by design |
+   | Renegotiation | Supported, and a known attack surface | Removed entirely |
+
+   Why forward secrecy matters most
+   - In TLS 1.2 with RSA key exchange, an attacker who records traffic today and later steals the server's private key can decrypt ALL of that recorded traffic retrospectively.
+   - TLS 1.3 mandates ephemeral key exchange, so each session has its own key that is discarded afterwards. Stealing the server's private key does not decrypt past sessions.
+
+   - Practical recommendation: enable TLS 1.3, keep TLS 1.2 for compatibility with older clients, and disable TLS 1.0 and 1.1 entirely — PCI DSS already requires this.
+
 7. **What is SSL, TLS, and HTTPs?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 594 (ET: N/A)]*
+
+   Answer:
+
+   **SSL (Secure Sockets Layer)**
+   - The original cryptographic protocol for securing network communication, developed by Netscape in 1995.
+   - Versions: SSL 2.0 and SSL 3.0 — **both are now broken and deprecated** (POODLE attack against SSL 3.0).
+   - The name persists in everyday usage even though the actual protocol is no longer used.
+
+   **TLS (Transport Layer Security)**
+   - The successor to SSL, standardised by the IETF in 1999. TLS 1.0 was essentially SSL 3.1.
+   - Versions: TLS 1.0 and 1.1 (deprecated), **TLS 1.2 and TLS 1.3 (current and secure)**.
+   - Provides encryption, authentication through certificates, and integrity.
+   - Works at the transport layer, so it secures any application protocol placed on top of it.
+
+   **HTTPS (HyperText Transfer Protocol Secure)**
+   - Not a separate protocol — it is simply **HTTP running inside a TLS tunnel**, on port 443 instead of 80.
+   - The browser and server first perform a TLS handshake to establish an encrypted channel, then exchange ordinary HTTP messages inside it.
+
+   Relationship
+   ```
+   SSL  →  (evolved into)  →  TLS
+   HTTP + TLS  =  HTTPS
+   ```
+
+   - Other protocols secured the same way: FTPS (FTP over TLS), SMTPS, IMAPS, and LDAPS. In each case the plain protocol is wrapped in TLS.
 
 8. **Attacker steals private key of website that uses transport layer security and remains undetected what can be done with private key?** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
 
+   Answer: A stolen TLS private key is a catastrophic compromise. What the attacker can do depends on which key exchange the server uses.
+
+   (a) Impersonate the website — always possible
+   - The attacker can set up a server that presents the genuine certificate and prove possession of the matching private key.
+   - Browsers will show a valid padlock with no warning, because the certificate is real.
+   - Combined with DNS spoofing or a MITM position, this produces a perfect phishing site indistinguishable from the real bank.
+
+   (b) Decrypt recorded traffic — only WITHOUT forward secrecy
+   - If the server uses **RSA key exchange** (TLS 1.2 with an RSA cipher suite), the session key is encrypted with the server's public key. Anyone holding the private key can recover the session key and decrypt any traffic they recorded — including traffic captured months ago.
+   - If the server uses **ephemeral Diffie-Hellman (ECDHE)**, which gives **forward secrecy**, past sessions CANNOT be decrypted, because the session keys were never derived from the long-term private key. This is exactly why TLS 1.3 makes forward secrecy mandatory.
+
+   (c) Active man-in-the-middle in real time
+   - With the private key, the attacker can terminate TLS connections, read and modify traffic, and re-encrypt onward — undetectable by the user in either case.
+
+   (d) Forge digital signatures
+   - Sign data as the organisation, which may allow code signing abuse or forged authentication tokens.
+
+   Immediate response required
+   - **Revoke the certificate at once** through the CA, so OCSP and CRL mark it invalid.
+   - **Generate a new key pair and obtain a new certificate.**
+   - **Investigate the breach** to determine how the key was taken and what else is compromised.
+   - **Enable forward secrecy** (ECDHE-only cipher suites) so a future key theft cannot decrypt past traffic.
+   - **Store private keys in an HSM**, so the key material can never be exported in the first place.
+
+   - The key lesson: certificate revocation is slow and imperfectly honoured by clients, so prevention through HSM storage and forward secrecy matters far more than the response.
+
 9. **(a) Write the full form of those: (i) SSL (ii) TSL** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
+
+   Answer:
+   - **(i) SSL — Secure Sockets Layer.** The original protocol for encrypted network communication, developed by Netscape in 1995. All versions are now deprecated and insecure.
+   - **(ii) TLS — Transport Layer Security.** (The question writes "TSL", which is a transposition of TLS.) The successor to SSL, standardised by the IETF. TLS 1.2 and TLS 1.3 are the current secure versions.
+
+   Both provide the same three services
+   - **Encryption** — data cannot be read in transit.
+   - **Authentication** — a digital certificate proves the server's identity.
+   - **Integrity** — any modification of the data is detected.
+
+   Version history
+
+   | Protocol | Year | Status |
+   |---|---|---|
+   | SSL 2.0 | 1995 | Broken, prohibited |
+   | SSL 3.0 | 1996 | Broken (POODLE), prohibited |
+   | TLS 1.0 | 1999 | Deprecated |
+   | TLS 1.1 | 2006 | Deprecated |
+   | TLS 1.2 | 2008 | Secure, widely used |
+   | TLS 1.3 | 2018 | Current best practice |
 
 10. **(b) Which IP address may have secured via SSL and publicly by the Certificate Authority(CA). If secured Write Yes or otherwise No.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
    1.1.1.1
@@ -4211,9 +4417,101 @@
    172.16.8.1
    10.0.0.1
 
+   Answer: A public Certificate Authority can issue a certificate only for a **PUBLIC (routable) IP address**, never for a private one.
+
+   | IP address | Type | Certificate from a public CA? |
+   |---|---|---|
+   | **1.1.1.1** | Public (Cloudflare DNS) | **Yes** |
+   | **8.8.4.1** | Public | **Yes** |
+   | **192.168.10.2** | Private — RFC 1918 | **No** |
+   | **8.8.8.8** | Public (Google DNS) | **Yes** |
+   | **172.16.8.1** | Private — RFC 1918 | **No** |
+   | **10.0.0.1** | Private — RFC 1918 | **No** |
+
+   The three private IPv4 ranges (RFC 1918)
+   - `10.0.0.0` – `10.255.255.255` (10.0.0.0/8)
+   - `172.16.0.0` – `172.31.255.255` (172.16.0.0/12)
+   - `192.168.0.0` – `192.168.255.255` (192.168.0.0/16)
+
+   Why private IPs cannot be certified publicly
+   - A CA must verify that the applicant CONTROLS the address. A private IP is used simultaneously by millions of separate networks worldwide, so ownership cannot be established and the certificate would be meaningless.
+   - The CA/Browser Forum has prohibited public CAs from issuing certificates for private IPs and internal names since 2016.
+
+   - For internal servers on private addresses, an organisation issues certificates from its **own internal CA** and distributes that CA's root certificate to its client machines.
+
 11. **HTTPs কীভাবে একটি Website-এর সুরক্ষা দেয়? ব্লক ডায়াফ্রামের মাধ্যমে উত্তর দিন।** *[40th BCS 2020 compact it 971 (ET: BPSC)]*
 
+    Answer: HTTPS secures a website by wrapping ordinary HTTP inside a TLS encrypted tunnel.
+
+    Block diagram
+    ```mermaid
+    flowchart TD
+        A[Browser / Client] --> B[HTTP layer<br/>request and response]
+        B --> C[TLS / SSL layer<br/>encryption + authentication + integrity]
+        C --> D[TCP layer<br/>port 443]
+        D --> E[Internet]
+        E --> F[TCP layer]
+        F --> G[TLS / SSL layer<br/>decryption + verification]
+        G --> H[HTTP layer]
+        H --> I[Web Server]
+    ```
+
+    The TLS handshake, step by step
+    ```mermaid
+    sequenceDiagram
+        participant C as Client
+        participant S as Server
+        C->>S: 1. ClientHello — supported TLS versions and cipher suites
+        S->>C: 2. ServerHello + digital certificate (contains public key)
+        C->>C: 3. Verify certificate against trusted CA
+        C->>S: 4. Key exchange (ECDHE) to agree a session key
+        S->>C: 5. Finished — handshake complete
+        C->>S: 6. Encrypted HTTP request
+        S->>C: 7. Encrypted HTTP response
+    ```
+
+    How it protects the website — three guarantees
+    - **Confidentiality (encryption)** — everything after the handshake is encrypted with a symmetric session key. Anyone sniffing the network sees only ciphertext, so passwords and card numbers are safe.
+    - **Authentication (certificate)** — the server's certificate is signed by a trusted CA, proving the site is genuine. This prevents an attacker from impersonating the bank.
+    - **Integrity (MAC)** — each record carries a message authentication code, so any modification in transit is detected and the connection is dropped. This also blocks content and advertisement injection by an ISP.
+
+    - Additional protection comes from **HSTS**, which instructs the browser never to connect to that site over plain HTTP again, defeating SSL-stripping attacks.
+
 12. **What is the difference among threat, vulnerability and risk? Explain SSL and TLS.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1050 (ET: BUET)]*
+
+    Answer:
+
+    (a) Threat, vulnerability and risk
+
+    | Term | Definition | Example |
+    |---|---|---|
+    | **Threat** | A potential DANGER that could exploit a weakness and cause harm | A hacker, malware, a fire, a disgruntled employee |
+    | **Vulnerability** | A WEAKNESS or gap in a system that a threat could exploit | Unpatched software, weak password, no firewall |
+    | **Risk** | The potential LOSS when a threat exploits a vulnerability | Financial loss from a data breach |
+
+    The relationship
+    ```
+    Risk = Threat × Vulnerability × Impact
+    ```
+    - If there is no vulnerability, a threat cannot cause harm. If there is no threat, a vulnerability is not exploited. Risk exists only when all three combine.
+
+    Illustrative example
+    - **Threat**: a burglar exists in the neighbourhood.
+    - **Vulnerability**: the office window has no lock.
+    - **Risk**: the probability and cost of the office being burgled.
+    - You cannot remove the threat (burglars exist), but you CAN remove the vulnerability (fit a lock), which reduces the risk.
+
+    Security response to each
+    - Threat cannot usually be eliminated — it is monitored through threat intelligence.
+    - Vulnerability CAN be eliminated — through patching, hardening and configuration.
+    - Risk is managed — accepted, mitigated, transferred (insurance) or avoided.
+
+    (b) SSL and TLS
+    - **SSL (Secure Sockets Layer)** — the original encryption protocol from Netscape, 1995. All versions are now broken and prohibited.
+    - **TLS (Transport Layer Security)** — its standardised successor. TLS 1.2 and 1.3 are the current secure versions.
+    - Both provide **encryption**, **authentication** through certificates, and **integrity**.
+    - Both work by: server presents a certificate → client verifies it against a trusted CA → both agree a symmetric session key → all data is encrypted with that key.
+    - HTTPS is simply HTTP carried inside a TLS tunnel on port 443.
 
 ## Cyber Crime & Security (10)
 
