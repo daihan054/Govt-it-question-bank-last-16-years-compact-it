@@ -813,11 +813,59 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **A boat travels 15 km upstream and 22 km downstream in 5 hr. find out the speed of the stream.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
+   Answer:
+   - Let speed of boat in still water $= u\text{ km/h}$ and speed of stream $= v\text{ km/h}$.
+   - Upstream speed $= u - v$, Downstream speed $= u + v$.
+   - Time equation:
+     $$\frac{15}{u - v} + \frac{22}{u + v} = 5$$
+   - Since $u + v$ divides $22$ and $u - v$ divides $15$, let $u + v = 11$ and $u - v = 5$:
+     $$\frac{15}{5} + \frac{22}{11} = 3 + 2 = 5\text{ (satisfied)}$$
+   - Solving the system:
+     $$u + v = 11$$
+     $$u - v = 5$$
+   - Subtracting the second equation from the first:
+     $$2v = 11 - 5 = 6 \implies v = 3\text{ km/h}$$
+   - Speed of boat in still water $u = 8\text{ km/h}$, Speed of stream $v = 3\text{ km/h}$.
+   - Answer: $3\text{ km/h}$
+
 2. **A boat covers 143 km upstream in 13 hours and the same distance downstream in 11 hours. What is the speed (in km/hr) of the boat in still (without stream) water?** *[BARC Programmer 04.08.2023 compact it 597 (ET: N/A)]*
+
+   Answer:
+   - Upstream speed ($S_{\text{up}}$):
+     $$S_{\text{up}} = \frac{143\text{ km}}{13\text{ hr}} = 11\text{ km/hr}$$
+   - Downstream speed ($S_{\text{down}}$):
+     $$S_{\text{down}} = \frac{143\text{ km}}{11\text{ hr}} = 13\text{ km/hr}$$
+   - Speed of the boat in still water ($u$):
+     $$u = \frac{S_{\text{down}} + S_{\text{up}}}{2} = \frac{13 + 11}{2} = \frac{24}{2} = 12\text{ km/hr}$$
+   - Answer: $12\text{ km/hr}$
 
 3. **An aeroplane started 30 minutes later than the scheduled time from a place 1500 km away from its destination. To reach the destination at the scheduled time the pilot had to increase the speed by 250 km/h. What was the speed of the aeroplane per hour during the journey?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
+   Answer:
+   - Let usual speed $= x\text{ km/h}$. Increased speed during the journey $= (x + 250)\text{ km/h}$.
+   - Distance $= 1500\text{ km}$, Time difference $= 30\text{ min} = \frac{1}{2}\text{ hr}$.
+   - Setting up the equation:
+     $$\frac{1500}{x} - \frac{1500}{x + 250} = \frac{1}{2}$$
+     $$\frac{1500(x + 250 - x)}{x(x + 250)} = \frac{1}{2} \implies \frac{1500 \times 250}{x(x + 250)} = \frac{1}{2}$$
+     $$x(x + 250) = 750,000 \implies x^2 + 250x - 750000 = 0$$
+     $$(x + 1000)(x - 750) = 0 \implies x = 750\text{ km/h (since } x > 0)$$
+   - Speed during the journey $= x + 250 = 750 + 250 = 1000\text{ km/h}$.
+   - Answer: $1000\text{ km/h}$
+
 4. **নৌকার গতিবেগ ঘন্টায় ১৫কিমি ও স্রোতের গতিবেগ ঘন্টায় ৫কিমি। ৩০কিমি গিয়ে ফিরে আসতে মোট সময় কত?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
+
+   Answer:
+   - নৌকার বেগ $u = 15\text{ কিমি/ঘণ্টা}$, স্রোতের বেগ $v = 5\text{ কিমি/ঘণ্টা}$
+   - স্রোতের অনুকূলে গতিবেগ $= u + v = 15 + 5 = 20\text{ কিমি/ঘণ্টা}$
+   - স্রোতের প্রতিকূলে গতিবেগ $= u - v = 15 - 5 = 10\text{ কিমি/ঘণ্টা}$
+   - অনুকূলে ৩০ কিমি যেতে সময়:
+     $$t_1 = \frac{30}{20} = 1.5\text{ ঘণ্টা}$$
+   - প্রতিকূলে ৩০ কিমি ফিরে আসতে সময়:
+     $$t_2 = \frac{30}{10} = 3\text{ ঘণ্টা}$$
+   - মোট সময় $= t_1 + t_2 = 1.5 + 3 = 4.5\text{ ঘণ্টা}$ (বা ৪ ঘণ্টা ৩০ মিনিট)
+   - উত্তর: 4.5 ঘণ্টা
+
+
 
 ## Probability & Statistics (4)
 
