@@ -3410,7 +3410,178 @@
 
 1. A CPU scheduling algorithm must choose a process from the ready queue to execute. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer: `CPU scheduling` is the activity of deciding which process in the `ready queue` gets the CPU next. It is what makes multiprogramming possible: while one process waits for I/O, the CPU is given to another instead of sitting idle.
+
+   When scheduling happens
+   ```
+      1. Running  -> Waiting   (a process issues an I/O request)
+      2. Running  -> Ready     (an interrupt or a time quantum expires)
+      3. Waiting  -> Ready     (I/O completes)
+      4. Running  -> Terminated
+
+      Cases 1 and 4 only  ->  NON-PREEMPTIVE scheduling
+      All four cases      ->  PREEMPTIVE scheduling
+   ```
+
+   Scheduling criteria — what a good algorithm maximises or minimises
+   ```
+      CPU utilisation   : keep the CPU busy          -> MAXIMISE
+      Throughput        : processes completed per unit time -> MAXIMISE
+      Turnaround time   : submission to completion   -> MINIMISE
+      Waiting time      : total time in the ready queue -> MINIMISE
+      Response time     : submission to FIRST response  -> MINIMISE
+      Fairness          : no process starves
+   ```
+   ```
+      Turnaround time = Completion time - Arrival time
+      Waiting time    = Turnaround time - Burst time
+   ```
+
+   The main algorithms
+
+   `FCFS (First Come First Served)`
+   - Non-preemptive; processes run in arrival order. Simple and fair, but suffers the `convoy effect`: one long process at the front makes every short one wait.
+
+   `SJF (Shortest Job First)`
+   - Picks the process with the smallest burst time. It is `provably optimal` for average waiting time, but the burst time must be predicted, and long processes can `starve`.
+
+   `SRTF (Shortest Remaining Time First)`
+   - The preemptive form of SJF. A newly arrived shorter job preempts the running one.
+
+   `Priority scheduling`
+   - The highest-priority process runs first. Available in preemptive and non-preemptive forms. Low-priority processes may starve, which is cured by `ageing` — raising a process's priority the longer it waits.
+
+   `Round Robin (RR)`
+   - Preemptive; each process gets a fixed `time quantum`, then goes to the back of the queue. Fair, and the best `response time`, which is why interactive systems use it.
+   ```
+      Quantum too LARGE  -> behaves like FCFS
+      Quantum too SMALL  -> too many context switches, high overhead
+      Rule of thumb : 80 % of bursts should be shorter than the quantum
+   ```
+
+   `Multilevel Queue` and `Multilevel Feedback Queue`
+   - Several queues with different priorities and different algorithms. In the feedback version a process can `move between queues`, so a CPU-bound process sinks to a lower priority while an interactive one rises. This is what real systems use.
+
+   Comparison
+
+   | Algorithm | Preemptive | Avg waiting time | Starvation | Best for |
+   |---|---|---|---|---|
+   | FCFS | No | Poor | No | Batch systems |
+   | SJF | No | `Optimal` | Yes | Batch, if bursts are known |
+   | SRTF | Yes | Very good | Yes | Batch |
+   | Priority | Both | Varies | Yes | Real-time |
+   | Round Robin | Yes | Moderate | `No` | Interactive, time sharing |
+   | Multilevel feedback | Yes | Good | No (with ageing) | General purpose |
+
+   - The `dispatcher` is the component that actually carries out the switch: it saves the old context, loads the new one and jumps to the right instruction. The time it takes is the `dispatch latency`, and it is pure overhead.
+
 2. **Five jobs A, B, C, D, and E arrive at a compute center at approximately the same time. Their estimated running times are 10, 6, 2, 4, and 8 minutes, respectively. Their (externally defined) priorities are 3, 5, 2, 1, and 4, respectively, with 5 being the highest priority. For each of the following scheduling algorithms, determine the mean process turnaround time. (Ignore process switching overhead.) (a) Round-robin (quantum = 2 minutes), (b) Priority scheduling, (c) First-come, first-served (run in order 10, 6, 2, 4, 8), (d) Shortest job first.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1421 (ET: E-Zone)]*
+
+   Answer: Given
+   ```
+      Job :   A    B    C    D    E
+      Time:  10    6    2    4    8      minutes
+      Prio:   3    5    2    1    4      (5 = highest)
+
+      All arrive at approximately time 0.
+
+      Turnaround time = Completion time - Arrival time
+                      = Completion time, since all arrive at 0
+   ```
+
+   (a) Round Robin, quantum = 2 minutes
+   ```
+      Gantt chart :
+      A | B | C | D | E | A | B | D | E | A | B | E | A | E | A
+      0   2   4   6   8  10  12  14  16  18  20  22  24  26  28  30
+   ```
+   ```
+      Round 1 : A B C D E   -> C finishes at 6
+      Round 2 : A B D E     -> D finishes at 16
+      Round 3 : A B E       -> B finishes at 22
+      Round 4 : A E         -> E finishes at 28
+      Round 5 : A           -> A finishes at 30
+   ```
+   ```
+      Job   Completion   Turnaround
+      A         30           30
+      B         22           22
+      C          6            6
+      D         16           16
+      E         28           28
+                        ---------
+      Mean turnaround = (30+22+6+16+28)/5 = 102/5 = 20.4 minutes
+   ```
+
+   (b) Priority scheduling (5 is highest, non-preemptive)
+   ```
+      Order by priority : B(5) , E(4) , A(3) , C(2) , D(1)
+
+      Gantt chart :
+      B    |  E     |  A      |  C   |  D
+      0    6        14        24     26    30
+   ```
+   ```
+      Job   Completion   Turnaround
+      A         24           24
+      B          6            6
+      C         26           26
+      D         30           30
+      E         14           14
+                        ---------
+      Mean turnaround = (24+6+26+30+14)/5 = 100/5 = 20.0 minutes
+   ```
+
+   (c) First Come First Served, in the order 10, 6, 2, 4, 8
+   ```
+      Order : A , B , C , D , E
+
+      Gantt chart :
+      A       |  B   | C  |  D  |   E
+      0      10     16   18    22       30
+   ```
+   ```
+      Job   Completion   Turnaround
+      A         10           10
+      B         16           16
+      C         18           18
+      D         22           22
+      E         30           30
+                        ---------
+      Mean turnaround = (10+16+18+22+30)/5 = 96/5 = 19.2 minutes
+   ```
+
+   (d) Shortest Job First
+   ```
+      Order by burst time : C(2) , D(4) , B(6) , E(8) , A(10)
+
+      Gantt chart :
+      C  |  D  |  B    |   E    |    A
+      0  2     6      12       20        30
+   ```
+   ```
+      Job   Completion   Turnaround
+      A         30           30
+      B         12           12
+      C          2            2
+      D          6            6
+      E         20           20
+                        ---------
+      Mean turnaround = (30+12+2+6+20)/5 = 70/5 = 14.0 minutes
+   ```
+
+   Comparison of the four
+
+   | Algorithm | Mean turnaround time |
+   |---|---|
+   | (a) Round Robin, q = 2 | 20.4 minutes |
+   | (b) Priority | 20.0 minutes |
+   | (c) FCFS | 19.2 minutes |
+   | (d) `SJF` | `14.0 minutes` — the best |
+
+   - `SJF gives the minimum` mean turnaround time, and this is not an accident: SJF is `provably optimal` for average waiting and turnaround time when all processes are available at the same moment. Running the shortest job first means its short time is added to the wait of the fewest possible other jobs.
+   - `Round Robin is the worst here`, because with a 2-minute quantum every job is chopped into many pieces and each one finishes late. Its advantage is `response time`, not turnaround time — every job starts within 10 minutes, whereas under FCFS job E waits 22 minutes before it begins at all.
+   - The trade-off to state: SJF minimises average turnaround but can `starve` long jobs; RR guarantees `no starvation` and good responsiveness at the cost of turnaround.
 
 3. **Process CPU burst and Priority given. Calculate Average Waiting time using (i) Preemptive Priority (ii) Non Preemptive priority.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
@@ -3432,19 +3603,359 @@ All process arrived at time 0. Lower number has higher priority.
  * (iii) What is waiting time of each process for each of the scheduling algorithms in (i)?
  * (iv) Which algorithm resulting minimum average waiting time?
 
+   Answer: Given
+   ```
+      Process   Burst   Priority
+        P1       10        3
+        P2        1        1
+        P3        2        3
+        P4        1        4
+        P5        5        2
+
+      All arrive at time 0.  A LOWER number means a HIGHER priority.
+   ```
+
+   (i) Gantt charts
+
+   `FCFS` — in the order given
+   ```
+      |    P1    |P2|  P3 |P4|   P5   |
+      0         10  11    13 14       19
+   ```
+
+   `Non-preemptive priority` — order P2(1), P5(2), P1(3), P3(3), P4(4)
+   ```
+      |P2|   P5   |    P1    |  P3 |P4|
+      0  1        6         16    18 19
+
+      P1 and P3 both have priority 3, so the tie is broken by arrival order.
+   ```
+
+   `SJF` — order P2(1), P4(1), P3(2), P5(5), P1(10)
+   ```
+      |P2|P4| P3 |   P5   |     P1     |
+      0  1  2    4        9           19
+   ```
+
+   `Round Robin, quantum = 1`
+   ```
+      |P1|P2|P3|P4|P5|P1|P3|P5|P1|P5|P1|P5|P1|P5|P1|P1|P1|P1|P1|
+      0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
+   ```
+   ```
+      Round 1 : P1 P2 P3 P4 P5   -> P2 and P4 finish
+      Round 2 : P1 P3 P5         -> P3 finishes at 7
+      Rounds 3-5 : P1 P5         -> P5 finishes at 14
+      Then P1 alone until 19
+   ```
+
+   (ii) Turnaround time = Completion time (all arrive at 0)
+
+   | Process | FCFS | Priority | SJF | RR (q=1) |
+   |---|---|---|---|---|
+   | P1 | 10 | 16 | 19 | 19 |
+   | P2 | 11 | 1 | 1 | 2 |
+   | P3 | 13 | 18 | 4 | 7 |
+   | P4 | 14 | 19 | 2 | 4 |
+   | P5 | 19 | 6 | 9 | 14 |
+   | `Average` | `13.40` | `12.00` | `7.00` | `9.20` |
+
+   (iii) Waiting time = Turnaround time - Burst time
+
+   | Process | FCFS | Priority | SJF | RR (q=1) |
+   |---|---|---|---|---|
+   | P1 | 0 | 6 | 9 | 9 |
+   | P2 | 10 | 0 | 0 | 1 |
+   | P3 | 11 | 16 | 2 | 5 |
+   | P4 | 13 | 18 | 1 | 3 |
+   | P5 | 14 | 1 | 4 | 9 |
+   | `Average` | `9.60` | `8.20` | `3.20` | `5.40` |
+
+   Sample working, for FCFS
+   ```
+      P1 : starts 0 , ends 10  ->  TAT = 10 , WT = 10 - 10 = 0
+      P2 : starts 10, ends 11  ->  TAT = 11 , WT = 11 - 1  = 10
+      P3 : starts 11, ends 13  ->  TAT = 13 , WT = 13 - 2  = 11
+      P4 : starts 13, ends 14  ->  TAT = 14 , WT = 14 - 1  = 13
+      P5 : starts 14, ends 19  ->  TAT = 19 , WT = 19 - 5  = 14
+
+      Avg WT = (0 + 10 + 11 + 13 + 14) / 5 = 48 / 5 = 9.60
+   ```
+
+   (iv) Which gives the minimum average waiting time
+   ```
+      SJF  =  3.20 ms        <- MINIMUM
+      RR   =  5.40 ms
+      Priority = 8.20 ms
+      FCFS =  9.60 ms
+   ```
+   - `SJF gives the minimum average waiting time`, and this is guaranteed rather than accidental. SJF is `provably optimal` when all processes arrive together: running the shortest job first adds its short burst to the wait of every remaining process, and any other order adds a longer one.
+   - The cost is `starvation` — a long process such as P1 can be postponed indefinitely if short jobs keep arriving — and the fact that the burst time must be `predicted`, since it is not known in advance in a real system. That is why practical systems use `multilevel feedback queues` rather than pure SJF.
+
 6. **a) Define CPU Scheduling. Draw Gantt charts and find average waiting time for: i) FCFS, ii) SJF (Non-preemptive), iii) Preemptive Priority.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1344 (ET: N/A)]*
 
 7. **Process burst time and priority given. Draw Gantt chart and find average waiting time for preemptive priority scheduling.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
 
 8. **Shortest job scheduling (SJF) is a __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: Shortest Job First is a `non-preemptive` scheduling algorithm.
+
+   - Once the CPU is given to the process with the smallest burst time, that process `keeps the CPU until it finishes`. Even if a shorter job arrives a moment later, it must wait.
+   - Its preemptive counterpart has a different name: `SRTF (Shortest Remaining Time First)`, in which a newly arrived shorter job does take the CPU away.
+
+   Other correct ways to complete the sentence
+   ```
+      SJF is a NON-PREEMPTIVE scheduling algorithm.
+      SJF is an OPTIMAL algorithm for minimum average waiting time.
+      SJF is a PRIORITY scheduling algorithm, where the priority is the
+           inverse of the burst time.
+   ```
+
+   Why it is called optimal
+   ```
+      For a given set of processes available at the same time, SJF gives
+      the MINIMUM possible average waiting time. No other order can do
+      better.
+
+      Reason : running the shortest job first adds the SMALLEST possible
+      delay to every job still waiting behind it.
+   ```
+
+   Example
+   ```
+      P1 = 6 , P2 = 8 , P3 = 7 , P4 = 3   (all arrive at 0)
+
+      SJF order : P4 , P1 , P3 , P2
+
+      |P4 |  P1  |   P3  |    P2   |
+      0   3      9      16        24
+
+      WT : P4 = 0 , P1 = 3 , P3 = 9 , P2 = 16
+      Average waiting time = 28 / 4 = 7 ms
+
+      FCFS on the same set gives 10.25 ms, so SJF is clearly better.
+   ```
+
+   Drawbacks
+   ```
+      STARVATION : a long process may never run if short ones keep arriving.
+                   Cured by AGEING - raising a job's priority as it waits.
+
+      The BURST TIME must be KNOWN in advance, and in a real system it is
+      not. It is ESTIMATED from the past, by exponential averaging :
+
+           tau(n+1) = alpha * t(n) + (1 - alpha) * tau(n)
+
+           t(n)   = the actual length of the last burst
+           tau(n) = the previous prediction
+           alpha  = usually 0.5
+   ```
+
+   Summary
+
+   | Algorithm | Preemptive? | Selection rule |
+   |---|---|---|
+   | FCFS | No | Arrival order |
+   | `SJF` | `No` | Smallest burst time |
+   | SRTF | `Yes` | Smallest remaining time |
+   | Priority | Either form exists | Highest priority |
+   | Round Robin | Yes | Fixed time quantum |
+
 9. **Round-robin scheduling (RR) is a __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: Round Robin is a `preemptive` scheduling algorithm.
+
+   - Each process is given a fixed `time quantum` (time slice). When the quantum expires, the process is `preempted` — moved to the back of the ready queue — and the CPU is given to the next process.
+   - It is essentially `FCFS with preemption added`, which is why it is sometimes described that way.
+
+   Other correct completions
+   ```
+      RR is a PREEMPTIVE scheduling algorithm.
+      RR is a TIME-SHARING algorithm, designed for interactive systems.
+      RR is a STARVATION-FREE algorithm.
+   ```
+
+   How it works
+   ```
+      Ready queue is circular (FIFO). Each process runs for at most one
+      quantum, then goes to the TAIL of the queue.
+
+      If burst time <= quantum : the process finishes and leaves.
+      If burst time >  quantum : it is preempted and requeued.
+   ```
+
+   Example — quantum = 2
+   ```
+      P1 = 5 , P2 = 3 , P3 = 4   (all arrive at 0)
+
+      |P1|P2|P3|P1|P2|P3|P1|
+      0  2  4  6  8  9 11 12
+
+      P2 finishes at 9 , P3 at 11 , P1 at 12
+   ```
+
+   Choosing the quantum — the central design decision
+   ```
+      Quantum too LARGE  -> behaves like FCFS; response time suffers
+      Quantum too SMALL  -> too many context switches; overhead dominates
+
+      Rule of thumb : 80 % of CPU bursts should be SHORTER than the quantum.
+      Typical value : 10 to 100 milliseconds.
+   ```
+   ```
+      Burst = 10 ms , context switch = 1 ms
+
+      quantum 12 ms : 1 switch      overhead ~9 %
+      quantum  6 ms : 2 switches    overhead ~17 %
+      quantum  1 ms : 10 switches   overhead ~50 %
+   ```
+
+   Advantages
+   ```
+      NO STARVATION - every process gets the CPU within (n-1) x quantum
+      FAIR - all processes are treated equally
+      Excellent RESPONSE TIME, which is why interactive and time-sharing
+           systems use it
+      Simple to implement with a circular queue
+   ```
+
+   Disadvantages
+   ```
+      Higher average turnaround time than SJF
+      Performance depends heavily on the quantum
+      Context-switching overhead
+      It ignores priority - an urgent job waits its turn like any other
+   ```
+
+   Summary
+
+   | Algorithm | Preemptive? | Starvation | Best for |
+   |---|---|---|---|
+   | FCFS | No | No | Batch |
+   | SJF | No | Yes | Batch |
+   | SRTF | Yes | Yes | Batch |
+   | Priority | Either | Yes | Real time |
+   | `Round Robin` | `Yes` | `No` | Interactive, time sharing |
 
 10. **(a) FCFS and SJF Scheduling. (b) Find AWT and ATAT.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 316 (ET: N/A)]*
 
 11. **Advantages of CPU Scheduling Algorithm.** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1460 (ET: N/A)]*
 
+    Answer: `CPU scheduling` decides which process in the ready queue gets the CPU next. Its advantages are the following.
+
+    1. `Maximum CPU utilisation`
+    - Without scheduling the CPU would sit idle whenever the running process waited for I/O. Scheduling hands the CPU to another ready process instead, so a busy system keeps utilisation near 100 per cent.
+
+    2. `Higher throughput`
+    - More processes complete per unit time, because the CPU is never wasted and short jobs are not stuck behind long ones.
+
+    3. `Lower waiting and turnaround time`
+    - Choosing the right order reduces how long each process waits. `SJF` is provably optimal for average waiting time, and the improvement over FCFS is often 30-50 per cent.
+    ```
+       Turnaround time = Completion - Arrival
+       Waiting time    = Turnaround - Burst
+    ```
+
+    4. `Better response time`
+    - `Round Robin` guarantees that every process starts within `(n-1) x quantum`, so an interactive user sees a reaction quickly instead of waiting for a long job to finish. This is what makes time-sharing possible at all.
+
+    5. `Fairness and no starvation`
+    - Round Robin gives every process an equal share. `Ageing` raises the priority of a long-waiting process, so even priority scheduling can be made starvation-free.
+
+    6. `Support for multiprogramming and multitasking`
+    - Several programs appear to run at once on one CPU, which is the whole basis of a modern operating system.
+
+    7. `Priority for important work`
+    - Real-time and system-critical tasks can be given precedence, which matters in medical equipment, industrial control and banking transaction systems.
+
+    8. `Efficient resource use`
+    - Mixing CPU-bound and I/O-bound processes keeps both the CPU and the devices busy at the same time, instead of one waiting for the other.
+
+    9. `Predictability for real-time systems`
+    - Algorithms such as `Rate Monotonic` and `Earliest Deadline First` guarantee that deadlines are met, which is essential where a late answer is a wrong answer.
+
+    10. `Adaptability`
+    - A `multilevel feedback queue` moves a process between queues according to its behaviour, so interactive processes rise and CPU-bound ones sink automatically, with no manual tuning.
+
+    The criteria it optimises
+    ```
+       MAXIMISE : CPU utilisation , throughput
+       MINIMISE : turnaround time , waiting time , response time
+       ENSURE   : fairness , no starvation
+    ```
+
+    Costs, for balance
+    ```
+       Context-switch overhead - saving and restoring state is pure waste
+       Algorithm complexity in the kernel
+       No single algorithm is best for every criterion, so real systems
+            compromise
+       Starvation is possible in SJF and priority scheduling without ageing
+    ```
+
+    - The essential point: scheduling does not make any individual process faster. It makes the `system as a whole` more productive and more responsive by never letting the CPU idle while work is waiting.
+
 12. **What type of RR Scheduling Algorithm: Preemtive/ Non-Preemtive?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
+
+    Answer: Round Robin is a `preemptive` scheduling algorithm.
+
+    - Each process receives a fixed `time quantum`. When the quantum expires, the operating system `forcibly takes the CPU away` — that forcible removal is exactly what preemption means — and places the process at the back of the ready queue.
+
+    Why it must be preemptive
+    ```
+       Without preemption, a process that received the CPU would keep it
+       until it finished, which is FCFS.
+
+       Round Robin's whole purpose is to guarantee that no process holds the
+       CPU for more than one quantum, so that every other process gets a turn
+       quickly. That guarantee is impossible without preemption.
+    ```
+
+    How the preemption happens
+    ```
+       1. The scheduler starts a TIMER for one quantum when it dispatches
+          a process.
+       2. If the process finishes or blocks first, it releases the CPU
+          voluntarily and the timer is cancelled.
+       3. If the timer expires first, it raises a TIMER INTERRUPT.
+       4. The interrupt handler saves the process's context, moves it to the
+          tail of the ready queue, and dispatches the next process.
+    ```
+
+    Example — quantum = 2
+    ```
+       P1 = 5 , P2 = 3 , P3 = 4
+
+       |P1|P2|P3|P1|P2|P3|P1|
+       0  2  4  6  8  9 11 12
+        ^  ^  ^
+        each of these is a PREEMPTION at the quantum boundary
+    ```
+
+    Classification of the common algorithms
+
+    | Algorithm | Preemptive? |
+    |---|---|
+    | FCFS | `Non-preemptive` |
+    | SJF | `Non-preemptive` |
+    | SRTF (Shortest Remaining Time First) | `Preemptive` |
+    | Priority | `Both` forms exist |
+    | `Round Robin` | `Preemptive` |
+    | Multilevel Queue | Usually preemptive |
+    | Multilevel Feedback Queue | Preemptive |
+
+    Preemptive versus non-preemptive
+
+    | Point | Preemptive | Non-preemptive |
+    |---|---|---|
+    | CPU taken away | Yes, by the OS | Only when the process yields |
+    | Response time | Better | Worse |
+    | Overhead | Higher — more context switches | Lower |
+    | Starvation | Possible in priority forms | Possible in SJF |
+    | Suits | Interactive and real-time systems | Batch systems |
+    | Data consistency | Needs synchronisation | Simpler |
+
+    - Consequence worth stating: because RR preempts, a process can be interrupted `in the middle of updating shared data`. That is precisely why preemptive systems need `mutexes and semaphores`, and why race conditions are a concern in them but not in a purely non-preemptive scheduler.
 
 13. **(গ) নিচের সারণীটি দেখুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
@@ -3460,6 +3971,81 @@ All process arrived at time 0. Lower number has higher priority.
 i) FCFS এবং SJF Scheduling algorithm ব্যবহার করে Gantt Chart এর মাধ্যমে process গুলোর execution দেখান।
 ii) উপরের উভয় algorithm এর জন্য প্রত্যেকটি process এর turnaround সময় নির্ণয় করুন।
 
+    Answer: (Answered in English, as required for IT topics.) Given
+    ```
+       Process   Burst Time (ms)   Priority
+         P1            15             3
+         P2             2             1
+         P3             4             3
+         P4             2             4
+         P5             8             2
+
+       All processes arrive at time 0.
+    ```
+
+    (i) Gantt charts
+
+    `FCFS` — in the order given
+    ```
+       |       P1        | P2 |  P3  | P4 |    P5    |
+       0                15   17     21   23         31
+    ```
+
+    `SJF` — order by burst time: P2(2), P4(2), P3(4), P5(8), P1(15)
+    ```
+       | P2 | P4 |  P3  |    P5    |       P1        |
+       0    2    4      8         16                31
+    ```
+    - P2 and P4 both have a burst of 2, so the tie is broken by arrival order.
+
+    (ii) Turnaround time of each process
+    ```
+       Turnaround time = Completion time - Arrival time
+                       = Completion time, since all arrive at 0
+    ```
+
+    `FCFS`
+    ```
+       Process   Completion   Turnaround   Waiting (TAT - Burst)
+         P1          15           15               0
+         P2          17           17              15
+         P3          21           21              17
+         P4          23           23              21
+         P5          31           31              23
+                              ----------      ----------
+       Average TAT = (15+17+21+23+31)/5 = 107/5 = 21.40 ms
+       Average WT  = (0+15+17+21+23)/5  =  76/5 = 15.20 ms
+    ```
+
+    `SJF`
+    ```
+       Process   Completion   Turnaround   Waiting
+         P1          31           31           16
+         P2           2            2            0
+         P3           8            8            4
+         P4           4            4            2
+         P5          16           16            8
+                              ----------   ----------
+       Average TAT = (31+2+8+4+16)/5 = 61/5 = 12.20 ms
+       Average WT  = (16+0+4+2+8)/5  = 30/5 =  6.00 ms
+    ```
+
+    Comparison
+
+    | Process | FCFS TAT | SJF TAT | FCFS WT | SJF WT |
+    |---|---|---|---|---|
+    | P1 | 15 | 31 | 0 | 16 |
+    | P2 | 17 | 2 | 15 | 0 |
+    | P3 | 21 | 8 | 17 | 4 |
+    | P4 | 23 | 4 | 21 | 2 |
+    | P5 | 31 | 16 | 23 | 8 |
+    | `Average` | `21.40` | `12.20` | `15.20` | `6.00` |
+
+    - `SJF is far better`: average turnaround falls from 21.40 to 12.20 ms and average waiting from 15.20 to 6.00 ms — a reduction of about 60 per cent.
+    - The reason is the `convoy effect` in FCFS: P1 has a 15 ms burst and happens to be first, so every short process behind it waits for the whole of it. SJF runs the short ones first, so their small bursts are added to fewer waits.
+    - The price of SJF is `starvation`: P1, the longest process, finishes last and would be postponed indefinitely if short jobs kept arriving. In a real system this is cured by `ageing`, which raises a process's priority the longer it waits.
+    - Note that the total time is `31 ms` under both algorithms. Scheduling never changes the total work; it only changes `who waits for whom`.
+
 14. **Consider the following six processes each having its own unique processing time and arrival time.**
 | Processes | Arrival time | Processing time |
 |---|---|---|
@@ -3472,6 +4058,93 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 **Find average turnaround time using shortest job first scheduling algorithm.**
 *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 461 (ET: BUET)]*
 
+    Answer: Given
+    ```
+       Process   Arrival Time   Processing (Burst) Time
+         P1           0                  8
+         P2           0                  4
+         P3           0                  5
+         P4           1                  9
+         P5           1                  7
+         P6           0                  1
+    ```
+    - `Shortest Job First` here means the non-preemptive form: at each decision point the scheduler picks the shortest job among those that have `already arrived`.
+
+    Step-by-step selection
+    ```
+       t = 0  : available P1(8) P2(4) P3(5) P6(1)   -> shortest is P6(1)
+                P6 runs 0 -> 1
+
+       t = 1  : available P1(8) P2(4) P3(5) P4(9) P5(7)  -> shortest is P2(4)
+                P2 runs 1 -> 5
+
+       t = 5  : available P1(8) P3(5) P4(9) P5(7)   -> shortest is P3(5)
+                P3 runs 5 -> 10
+
+       t = 10 : available P1(8) P4(9) P5(7)         -> shortest is P5(7)
+                P5 runs 10 -> 17
+
+       t = 17 : available P1(8) P4(9)               -> shortest is P1(8)
+                P1 runs 17 -> 25
+
+       t = 25 : only P4(9) left
+                P4 runs 25 -> 34
+    ```
+
+    Gantt chart
+    ```
+       |P6|  P2  |  P3  |    P5    |    P1    |     P4     |
+       0  1      5     10         17         25           34
+    ```
+
+    Turnaround time = Completion time - Arrival time
+    ```
+       Process   Arrival   Burst   Completion   Turnaround   Waiting
+         P1         0        8         25           25          17
+         P2         0        4          5            5           1
+         P3         0        5         10           10           5
+         P4         1        9         34           33          24
+         P5         1        7         17           16           9
+         P6         0        1          1            1           0
+                                              -----------   ---------
+    ```
+    ```
+       Total turnaround = 25 + 5 + 10 + 33 + 16 + 1 = 90
+
+       Average turnaround time = 90 / 6 = 15.00 units
+    ```
+
+    Average waiting time, for completeness
+    ```
+       Waiting time = Turnaround - Burst
+
+       Total waiting = 17 + 1 + 5 + 24 + 9 + 0 = 56
+
+       Average waiting time = 56 / 6 = 9.33 units
+    ```
+
+    Verification
+    ```
+       Total burst time = 8 + 4 + 5 + 9 + 7 + 1 = 34
+       The last process finishes at t = 34, and the CPU is never idle,
+       so the schedule is consistent.
+    ```
+
+    Points worth noting
+    ```
+       ARRIVAL TIME MATTERS. At t = 0, P4 and P5 have not arrived, so they
+       cannot be chosen even though the scheduler is picking the shortest
+       job. This is the commonest mistake in such questions.
+
+       P4 has the LONGEST burst and finishes last, waiting 24 units. This
+       illustrates SJF's weakness - long jobs STARVE.
+
+       If PREEMPTIVE SJF (SRTF) were used instead, the answer would differ,
+       because an arriving shorter job could interrupt the running one.
+       Here it makes no difference, since P4 and P5 arriving at t = 1 are
+       both longer than P2, which is running at that moment.
+    ```
+
 15. **Find average turnaround time and average waiting time using round robin and FCFS algorithm?**
 | Process | Arrival Time | Execute Time |
 |---|---|---|
@@ -3481,7 +4154,173 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 | P3 | 3 | 6 |
 *[Teletalk Assistant Manager (IT) 2023 compact it 467 (ET: N/A)]*
 
+    Answer: Given
+    ```
+       Process   Arrival Time   Execute (Burst) Time
+         P0           0                 5
+         P1           1                 3
+         P2           2                 8
+         P3           3                 6
+    ```
+    - The quantum is not stated, so `quantum = 2` is assumed for Round Robin, and the assumption is written down.
+
+    FCFS — First Come First Served
+    ```
+       Order of arrival : P0 , P1 , P2 , P3
+
+       Gantt chart :
+       |   P0   |  P1  |     P2     |    P3    |
+       0        5      8           16         22
+    ```
+    ```
+       Process  Arrival  Burst  Completion  Turnaround  Waiting
+         P0        0       5         5           5         0
+         P1        1       3         8           7         4
+         P2        2       8        16          14         6
+         P3        3       6        22          19        13
+                                            ----------  --------
+       Total                                     45        23
+
+       Average turnaround time = 45 / 4 = 11.25 units
+       Average waiting time    = 23 / 4 =  5.75 units
+    ```
+    ```
+       Turnaround = Completion - Arrival
+       Waiting    = Turnaround - Burst
+    ```
+
+    Round Robin, quantum = 2
+    ```
+       Gantt chart :
+       |P0|P1|P2|P0|P3|P1|P2 |P0|P3 |P2 |P3 |P2 |
+       0  2  4  6  8 10 11  13 14  16 18  20  22
+    ```
+    Step by step
+    ```
+       t=0 : queue [P0]            P0 runs 0-2  , rem 3   ; P1 arrives
+       t=2 : queue [P1,P0]         P1 runs 2-4  , rem 1   ; P2, P3 arrive
+       t=4 : queue [P2,P3,P0,P1]   P2 runs 4-6  , rem 6
+       t=6 : queue [P3,P0,P1,P2]   P3 runs 6-8  , rem 4
+       t=8 : queue [P0,P1,P2,P3]   P0 runs 8-10 , rem 1
+       t=10: queue [P1,P2,P3,P0]   P1 runs 10-11, DONE at 11
+       t=11: queue [P2,P3,P0]      P2 runs 11-13, rem 4
+       t=13: queue [P3,P0,P2]      P3 runs 13-14 wait - P0 has 1 left
+    ```
+    - Working it out carefully gives this completion order:
+    ```
+       P1 completes at 11
+       P0 completes at 14
+       P3 completes at 20
+       P2 completes at 22
+    ```
+    ```
+       Process  Arrival  Burst  Completion  Turnaround  Waiting
+         P0        0       5        14          14         9
+         P1        1       3        11          10         7
+         P2        2       8        22          20        12
+         P3        3       6        20          17        11
+                                            ----------  --------
+       Total                                     61        39
+
+       Average turnaround time = 61 / 4 = 15.25 units
+       Average waiting time    = 39 / 4 =  9.75 units
+    ```
+
+    Comparison
+
+    | Metric | FCFS | Round Robin (q = 2) |
+    |---|---|---|
+    | Average turnaround time | `11.25` | 15.25 |
+    | Average waiting time | `5.75` | 9.75 |
+    | Response time for P3 | 13 | `5` |
+    | Starvation | Possible for short jobs behind long ones | `None` |
+    | Context switches | 3 | 11 |
+
+    - `FCFS wins on turnaround and waiting time` here, because Round Robin chops every process into pieces and each one finishes later.
+    - `Round Robin wins on response time`, which is what it is for. Under FCFS, P3 does not start until t = 16; under RR it starts at t = 6. On an interactive system that difference is what the user actually feels.
+    - The general rule: `RR trades average turnaround time for responsiveness and fairness`. The smaller the quantum, the better the response time and the worse the turnaround, until context-switch overhead dominates.
+
 16. **Starvation in SJF, Starvation free scheduling algorithm name. (Question not clear)** *[RPGCL Assistant Manager (ICT) 2022 compact it 654 (ET: BUET)]*
+
+    Answer: Starvation in SJF
+    - `Starvation` (indefinite blocking) is the condition in which a process is `ready to run but never gets the CPU`, because the scheduler always finds someone else it prefers.
+    - In `SJF` the scheduler always picks the process with the smallest burst time. A `long` process is therefore postponed every time a shorter one arrives. If short jobs keep arriving, the long one waits forever.
+    ```
+       t=0  : P1 (burst 100) and P2 (burst 2) are ready  -> P2 runs
+       t=2  : P3 (burst 3) has arrived                   -> P3 runs
+       t=5  : P4 (burst 1) has arrived                   -> P4 runs
+       ...
+       P1 never runs, even though it has been waiting since t = 0.
+    ```
+    - The same problem occurs in `SRTF` (preemptive SJF) and in `priority scheduling`, where a low-priority process can be postponed indefinitely.
+    ```
+       Algorithms that CAN starve : SJF , SRTF , Priority , Multilevel Queue
+    ```
+
+    The classic illustration
+    ```
+       It was reported that when the IBM 7094 at MIT was shut down in 1973,
+       a low-priority process submitted in 1967 was found still waiting,
+       six years later.
+    ```
+
+    The cure — `ageing`
+    - `Ageing` gradually `increases the priority` of a process the longer it waits, so that even the least favoured job eventually reaches the front.
+    ```
+       Every 15 minutes of waiting, raise the priority by 1.
+
+       A process at priority 127 (lowest) reaches priority 0 (highest)
+       after about 32 hours - long, but FINITE.
+    ```
+    - Applied to SJF, ageing means the effective burst estimate is reduced as the process waits, so it is eventually chosen.
+
+    Starvation-free scheduling algorithms
+    ```
+       ROUND ROBIN
+            Every process gets the CPU within (n-1) x quantum. This bound
+            is guaranteed, so starvation is IMPOSSIBLE. It is the standard
+            answer to this question.
+
+       FCFS (First Come First Served)
+            Strict arrival order, so every process eventually reaches the
+            front. Starvation-free, though the average waiting time is poor
+            and it suffers the convoy effect.
+
+       MULTILEVEL FEEDBACK QUEUE with ageing
+            Processes move between queues, and ageing promotes long-waiting
+            ones. This is what real operating systems use.
+
+       HRRN (Highest Response Ratio Next)
+            Response ratio = (waiting time + burst time) / burst time
+
+            The ratio RISES as a process waits, so a long-waiting job
+            eventually wins. It is starvation-free by construction, and it
+            favours short jobs like SJF while protecting long ones.
+
+       LOTTERY SCHEDULING
+            Each process holds tickets and one is drawn at random. Every
+            process has a non-zero probability every time, so starvation
+            has probability zero over the long run.
+
+       FAIR-SHARE / CFS (Completely Fair Scheduler)
+            Used in Linux. It tracks the CPU time each process has received
+            and always runs the one that has had the least, which guarantees
+            every process a share.
+    ```
+
+    Comparison
+
+    | Algorithm | Starvation possible? | Cure |
+    |---|---|---|
+    | FCFS | No | — |
+    | SJF / SRTF | `Yes` | Ageing |
+    | Priority | `Yes` | Ageing |
+    | `Round Robin` | `No` | Built in |
+    | HRRN | `No` | Built in |
+    | Multilevel feedback | No, with ageing | Ageing |
+    | Linux CFS | No | Built in |
+
+    - Short answer: SJF starves long processes because it always prefers short ones; the standard starvation-free algorithms are `Round Robin`, `FCFS` and `HRRN`, and the standard cure applied to SJF and priority scheduling is `ageing`.
 
 17. **Consider the processes P1, P2, P3, P4 given in the below table, arrives for execution in the same order, with Arrival Time 0, and given Burst Time, let's find the average waiting time using the FCFS scheduling algorithm.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
@@ -3491,15 +4330,394 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 20. **(a) Define FCFS, SJF and RR algorithm (Quantum=20).** *[National University Assistant Programmer 2020 compact it 977-978 (ET: DU)]*
 
+    Answer: The three algorithms. The burst times are not printed with the question, so the classic textbook set is used to illustrate them, and the assumption is stated.
+    ```
+       P1 = 53 , P2 = 17 , P3 = 68 , P4 = 24    (all arrive at time 0)
+    ```
+
+    `FCFS — First Come First Served`
+    - The process that requests the CPU `first` is served first. It is `non-preemptive`: once a process starts, it runs to completion.
+    - Implemented as a simple FIFO queue.
+    ```
+       Gantt chart, in arrival order P1, P2, P3, P4 :
+
+       |        P1        |  P2  |         P3        |    P4    |
+       0                 53     70                  138        162
+    ```
+    ```
+       Waiting : P1 = 0 , P2 = 53 , P3 = 70 , P4 = 138
+       Average waiting time = 261 / 4 = 65.25 ms
+    ```
+    - Advantage: simple and fair in arrival order. Disadvantage: the `convoy effect` — one long process at the front makes every short one wait, so the average waiting time is poor.
+
+    `SJF — Shortest Job First`
+    - The process with the `smallest burst time` runs first. Non-preemptive in its basic form; the preemptive version is called `SRTF`.
+    - It is `provably optimal` for average waiting time when all processes are available together.
+    ```
+       Order by burst : P2(17) , P4(24) , P1(53) , P3(68)
+
+       |  P2  |    P4    |        P1        |         P3        |
+       0     17         41                 94                  162
+    ```
+    ```
+       Waiting : P2 = 0 , P4 = 17 , P1 = 41 , P3 = 94
+       Average waiting time = 152 / 4 = 38.00 ms
+    ```
+    - Advantage: the minimum possible average waiting time. Disadvantages: the burst time must be `predicted`, and long processes can `starve`.
+
+    `RR — Round Robin, quantum = 20`
+    - Each process gets the CPU for at most one `time quantum`, then is preempted and sent to the back of the ready queue. `Preemptive`, and designed for time-sharing.
+    ```
+       |  P1 |  P2 | P3 | P4 | P1 | P3 | P4| P1  | P3        |
+       0    20    37   57   77   97  117 121 134             162
+    ```
+    ```
+       Round 1 : P1 20 , P2 17 (finishes at 37) , P3 20 , P4 20
+       Round 2 : P1 20 , P3 20 , P4 4 (finishes at 121)
+       Round 3 : P1 13 (finishes at 134) , P3 28 (finishes at 162)
+    ```
+    ```
+       Waiting : P1 = 81 , P2 = 20 , P3 = 94 , P4 = 97
+       Average waiting time = 292 / 4 = 73.00 ms
+    ```
+    - Advantage: `no starvation` and excellent `response time` — every process starts within 60 ms here, whereas under FCFS P4 waits 138 ms. Disadvantage: the worst average turnaround of the three, plus context-switch overhead.
+
+    Comparison on this data
+
+    | Algorithm | Preemptive | Average waiting time | Starvation |
+    |---|---|---|---|
+    | FCFS | No | 65.25 ms | No |
+    | `SJF` | No | `38.00 ms` — the best | Yes |
+    | RR (q = 20) | Yes | 73.00 ms | `No` |
+
+    Choosing the quantum in RR
+    ```
+       Quantum too LARGE  ->  behaves like FCFS
+       Quantum too SMALL  ->  context-switch overhead dominates
+
+       Rule of thumb : 80 % of CPU bursts should be shorter than the quantum.
+       Typical value  : 10 to 100 ms.
+    ```
+    - The trade-off to state: `SJF minimises average waiting time but can starve long jobs; RR guarantees fairness and responsiveness at the cost of turnaround time; FCFS is simplest but suffers the convoy effect.`
+
 21. **(b) Turnaround time of FCFS and SJF** *[National University Assistant Programmer 2020 compact it 978 (ET: DU)]*
+
+    Answer: `Turnaround time` is the total time a process spends in the system.
+    ```
+       Turnaround time = Completion time - Arrival time
+                       = Waiting time + Burst time
+    ```
+    - The burst times are not printed with the question, so the classic textbook set is used, and the assumption is stated.
+    ```
+       P1 = 53 , P2 = 17 , P3 = 68 , P4 = 24    (all arrive at time 0)
+
+       Since every arrival time is 0, turnaround time = completion time.
+    ```
+
+    FCFS — in arrival order P1, P2, P3, P4
+    ```
+       |        P1        |  P2  |         P3        |    P4    |
+       0                 53     70                  138        162
+    ```
+    ```
+       Process   Burst   Completion   Turnaround   Waiting
+         P1       53         53           53          0
+         P2       17         70           70         53
+         P3       68        138          138         70
+         P4       24        162          162        138
+                                  ----------    ---------
+       Total                          423           261
+
+       Average turnaround time = 423 / 4 = 105.75 ms
+       Average waiting time    = 261 / 4 =  65.25 ms
+    ```
+
+    SJF — order by burst time P2(17), P4(24), P1(53), P3(68)
+    ```
+       |  P2  |    P4    |        P1        |         P3        |
+       0     17         41                 94                  162
+    ```
+    ```
+       Process   Burst   Completion   Turnaround   Waiting
+         P1       53         94           94         41
+         P2       17         17           17          0
+         P3       68        162          162         94
+         P4       24         41           41         17
+                                  ----------    ---------
+       Total                          314           152
+
+       Average turnaround time = 314 / 4 = 78.50 ms
+       Average waiting time    = 152 / 4 = 38.00 ms
+    ```
+
+    Comparison
+
+    | Process | FCFS turnaround | SJF turnaround |
+    |---|---|---|
+    | P1 | 53 | 94 |
+    | P2 | 70 | 17 |
+    | P3 | 138 | 162 |
+    | P4 | 162 | 41 |
+    | `Average` | `105.75 ms` | `78.50 ms` |
+
+    - `SJF reduces the average turnaround time by about 26 per cent`, from 105.75 to 78.50 ms.
+    - The reason is the `convoy effect` in FCFS: P1 has a 53 ms burst and happens to be first, so P2's 17 ms job waits 53 ms behind it. SJF runs the short jobs first, so their short bursts are added to the wait of fewer processes.
+    - Note that `P3 is worse off` under SJF — 162 against 138 — and P1 is worse off too. SJF improves the `average` by making the short jobs much better and the long ones somewhat worse. Taken to its limit, this is what causes `starvation` of long processes.
+    - Note also that the `total elapsed time is 162 ms under both algorithms`. Scheduling never changes the amount of work; it only changes who waits for whom.
 
 22. **Operating system (OS) scheduling is the key concept of multiprogramming. List and briefly define the major types of OS scheduling.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985-986 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+    Answer: `Scheduling` is what makes multiprogramming work: it decides which of the many processes in the system gets a resource next. It operates at `three levels`, distinguished by how often they run and what they decide.
+
+    1. Long-term scheduler (job scheduler / admission scheduler)
+    ```
+       Decides : WHICH jobs are admitted into the system
+       Moves   : NEW  ->  READY
+       Runs    : rarely - seconds or minutes apart
+    ```
+    - It controls the `degree of multiprogramming`, meaning how many processes are in memory at once. Admitting too few wastes the CPU; admitting too many causes thrashing.
+    - It aims for a good `mix` of CPU-bound and I/O-bound processes, so that the CPU and the devices are both kept busy.
+    - Because it runs rarely, it can afford to be slow and careful.
+    - Present in `batch systems`. Modern interactive systems such as Linux and Windows have effectively no long-term scheduler — every submitted process is admitted immediately.
+
+    2. Short-term scheduler (CPU scheduler / dispatcher)
+    ```
+       Decides : WHICH ready process gets the CPU next
+       Moves   : READY  ->  RUNNING
+       Runs    : very often - every few milliseconds
+    ```
+    - This is what is normally meant by "CPU scheduling". It must be `extremely fast`, because any time it spends is time the CPU is not doing useful work.
+    - Uses algorithms such as `FCFS`, `SJF`, `SRTF`, `Priority`, `Round Robin` and `multilevel feedback queues`.
+    - The `dispatcher` is its companion: it performs the actual context switch, saving the old state, loading the new one and jumping to the right instruction. The time it takes is the `dispatch latency`.
+
+    3. Medium-term scheduler (swapper)
+    ```
+       Decides : WHICH processes to remove from memory temporarily
+       Moves   : READY or WAITING  ->  SUSPENDED (on disk) , and back
+       Runs    : occasionally, when memory is under pressure
+    ```
+    - It performs `swapping`: writing a process's memory image out to disk to free RAM, and bringing it back later.
+    - Its purposes are to reduce the degree of multiprogramming when memory is short, to relieve `thrashing`, and to improve the process mix.
+
+    How the three fit together
+    ```mermaid
+    flowchart LR
+        N[NEW] -->|Long-term scheduler| R[READY]
+        R -->|Short-term scheduler| RUN[RUNNING]
+        RUN -->|quantum expires| R
+        RUN -->|I/O request| W[WAITING]
+        W -->|I/O completes| R
+        RUN --> T[TERMINATED]
+        R -->|Medium-term: swap out| S[SUSPENDED READY]
+        S -->|swap in| R
+        W -->|swap out| SW[SUSPENDED WAITING]
+    ```
+
+    Comparison
+
+    | Point | Long-term | Short-term | Medium-term |
+    |---|---|---|---|
+    | Also called | Job scheduler | CPU scheduler | Swapper |
+    | Decides | Which jobs enter the system | Which process gets the CPU | Which process leaves memory |
+    | Transition | New -> Ready | Ready -> Running | Ready/Waiting -> Suspended |
+    | Frequency | Seconds to minutes | Milliseconds | Occasional |
+    | Speed required | Can be slow | Must be very fast | Moderate |
+    | Controls | Degree of multiprogramming | CPU allocation | Memory pressure |
+    | Present in | Batch systems | `All systems` | Time-sharing systems |
+
+    Other kinds of scheduling in an operating system
+    ```
+       I/O scheduling   : the order in which disk requests are served -
+                          FCFS, SSTF, SCAN, C-SCAN, LOOK
+
+       Thread scheduling: user-level versus kernel-level threads,
+                          and how they are mapped
+
+       Real-time        : Rate Monotonic, Earliest Deadline First -
+                          guarantees deadlines rather than fairness
+    ```
+
+    - The essential point: the `short-term scheduler` is the one that determines responsiveness and is invoked thousands of times a second; the `long-term scheduler` sets how much work is in the system at all; and the `medium-term scheduler` is the safety valve that relieves memory pressure.
+
 23. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026 (ET: N/A)]*
+
+    Answer: (i) Round Robin
+    - Each process receives a fixed `time quantum` (time slice). When the quantum expires, the process is `preempted` and moved to the back of the ready queue, and the next process runs.
+    - It is `preemptive` and designed for `time-sharing` and interactive systems.
+    ```
+       P1 = 5 , P2 = 3 , P3 = 4   , quantum = 2
+
+       |P1|P2|P3|P1|P2|P3|P1|
+       0  2  4  6  8  9 11 12
+
+       Waiting : P1 = 7 , P2 = 6 , P3 = 7
+       Average waiting time = 20 / 3 = 6.67
+    ```
+    ```
+       Advantages    : NO STARVATION - every process runs within
+                       (n-1) x quantum ; fair ; excellent response time
+       Disadvantages : higher average turnaround time ; context-switch
+                       overhead ; ignores priority
+
+       Quantum too LARGE -> behaves like FCFS
+       Quantum too SMALL -> overhead dominates
+       Rule of thumb : 80 % of bursts should be shorter than the quantum
+    ```
+
+    (ii) FCFS — First Come First Served
+    - The process that requests the CPU `first` is served first, implemented as a simple FIFO queue. `Non-preemptive`: once started, a process runs to completion.
+    ```
+       P1 = 24 , P2 = 3 , P3 = 3   (all arrive at 0)
+
+       |          P1          |P2 |P3 |
+       0                     24  27  30
+
+       Waiting : P1 = 0 , P2 = 24 , P3 = 27
+       Average waiting time = 51 / 3 = 17.00
+
+       If the order were P2, P3, P1 instead :
+       |P2 |P3 |          P1          |
+       0   3   6                     30
+       Average waiting time = 9 / 3 = 3.00
+    ```
+    - The same three processes give 17.00 or 3.00 depending only on the order. This is the `convoy effect`: one long process at the front makes every short one wait.
+    ```
+       Advantages    : simplest to implement ; fair in arrival order ;
+                       no starvation
+       Disadvantages : poor average waiting time ; convoy effect ;
+                       bad for interactive systems
+    ```
+
+    (iii) Priority scheduling
+    - Each process is given a `priority number`, and the highest-priority process runs first. Ties are broken by FCFS.
+    - Exists in both forms: `non-preemptive` (the running process keeps the CPU) and `preemptive` (a higher-priority arrival takes it away).
+    ```
+       Process  Burst  Priority (1 = highest)
+         P1      10       3
+         P2       1       1
+         P3       2       4
+         P4       5       2
+
+       Non-preemptive order : P2(1) , P4(2) , P1(3) , P3(4)
+
+       |P2|   P4   |     P1     | P3 |
+       0  1        6           16   18
+
+       Waiting : P2 = 0 , P4 = 1 , P1 = 6 , P3 = 16
+       Average waiting time = 23 / 4 = 5.75
+    ```
+    - Priority may be `internal` (computed from memory needs, burst time, I/O ratio) or `external` (set by the user, the department or the amount paid).
+    ```
+       Advantages    : important work is served first ; essential for
+                       real-time systems
+       Disadvantages : STARVATION - a low-priority process may never run
+
+       Cure : AGEING - raise a process's priority the longer it waits.
+              A process at priority 127 promoted one level every 15 minutes
+              reaches priority 0 in about 32 hours - long, but FINITE.
+    ```
+    - `SJF is a special case of priority scheduling`, in which the priority is the inverse of the predicted burst time.
+
+    Comparison
+
+    | Point | Round Robin | FCFS | Priority |
+    |---|---|---|---|
+    | Preemptive | Yes | No | Both forms |
+    | Selection | Time quantum, in turn | Arrival order | Highest priority |
+    | Starvation | `No` | No | `Yes` — cured by ageing |
+    | Average waiting | Moderate | Poor | Depends |
+    | Response time | `Best` | Poor | Good for high priority |
+    | Overhead | High — many switches | Lowest | Moderate |
+    | Best for | Interactive, time sharing | Batch | Real-time systems |
 
 24. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
 
 25. **What is turnaround time of a process? Difference between FAT32 and NTFS?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1279 (ET: N/A)]*
+
+    Answer: Turnaround time
+    - `Turnaround time` is the `total time a process spends in the system` — from the moment it is submitted until the moment it finishes.
+    ```
+       Turnaround time = Completion time - Arrival time
+
+       It can also be written as :
+
+       Turnaround time = Waiting time + Burst time + I/O time
+    ```
+    - It measures the whole experience from the user's point of view, so it is one of the main criteria a scheduling algorithm tries to `minimise`.
+    ```
+       Example :
+          A process arrives at t = 2 and completes at t = 17
+
+          Turnaround time = 17 - 2 = 15 ms
+          If its burst time was 6 ms , its waiting time was 15 - 6 = 9 ms
+    ```
+
+    The related timing terms
+    ```
+       Arrival time     : when the process enters the ready queue
+       Burst time       : how long it actually needs the CPU
+       Completion time  : when it finishes
+       Waiting time     : total time spent in the ready queue
+                          = Turnaround - Burst
+       Response time    : arrival to the FIRST time it gets the CPU
+       Throughput       : processes completed per unit time
+    ```
+    - The distinction that matters: `response time` is what an interactive user feels, while `turnaround time` is what a batch job's owner cares about. Round Robin optimises the first; SJF optimises the second.
+
+    FAT32 versus NTFS
+
+    `FAT32` (File Allocation Table, 32-bit) is the older, simpler filesystem introduced with Windows 95 OSR2. `NTFS` (New Technology File System) came with Windows NT and is the standard for Windows today.
+
+    | Point | FAT32 | NTFS |
+    |---|---|---|
+    | Full form | File Allocation Table 32 | New Technology File System |
+    | Maximum file size | `4 GB` | 16 TB (practically unlimited) |
+    | Maximum partition size | 2 TB (32 GB to format in Windows) | 256 TB |
+    | File permissions | `None` | Yes — full ACLs per user and group |
+    | Encryption | No | Yes — EFS, and BitLocker |
+    | Compression | No | Yes, built in |
+    | Journaling | `No` | `Yes` — recovers after a crash |
+    | Disk quotas | No | Yes |
+    | Reliability | Poor — corruption on power loss | High — the journal replays the change |
+    | Fragmentation | High | Lower, and it self-manages |
+    | Filename length | 255 characters | 255 characters, full Unicode |
+    | Cluster size | 4-32 KB | 4 KB typically |
+    | Overhead | Very low | Higher |
+    | Compatibility | `Universal` — Windows, macOS, Linux, cameras, TVs, car stereos | Windows fully; read-only on macOS; needs a driver on Linux |
+    | Used for | USB pen drives, SD cards, embedded devices | Windows system and data drives |
+
+    Why the 4 GB limit exists
+    ```
+       FAT32 stores a file's size in a 32-bit field.
+
+       2^32 - 1 = 4,294,967,295 bytes = 4 GB - 1 byte
+
+       This is why a 5 GB video file cannot be copied to a FAT32 pen drive,
+       which is the most common practical encounter with the limitation.
+    ```
+
+    Why NTFS is more reliable — journaling
+    ```
+       Before changing the filesystem, NTFS writes the intended change to a
+       LOG. If the power fails mid-operation, the log is replayed on the
+       next boot and the filesystem is restored to a consistent state.
+
+       FAT32 has no log. A power failure during a write can leave the file
+       allocation table inconsistent, which is why chkdsk was so often
+       needed on older Windows systems.
+    ```
+
+    Which to use
+    ```
+       FAT32 : small removable media that must work on EVERYTHING -
+               a camera SD card, a car stereo USB stick
+
+       exFAT : the modern replacement for FAT32 on removable media -
+               no 4 GB limit, and still widely compatible
+
+       NTFS  : Windows system drives and any large internal disk, where
+               permissions, journaling and large files are needed
+    ```
 
 ## OS Concepts & System Software (24)
 
