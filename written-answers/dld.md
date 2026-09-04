@@ -8521,3 +8521,64 @@
 ## Finite State Machines (FSM) (1)
 
 1. **A traffic signal cycles from RED to YELLOW, YELLOW to GREEN and GREEN to RED. In each cycle RED is turned for 100 seconds, YELLOW is turned for 40 seconds and GREEN is turned for 80 seconds. The traffic has to be implemented using FSM. The only input to this FSM is a clock of 10 second period. The minimum number of flip-flops require to implement this FSM is?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
+
+   Answer: The number of flip-flops is decided by the `number of distinct states` the FSM must hold, and each clock tick is one state.
+
+   Step 1 — find how many clock ticks each colour lasts
+   ```
+      Clock period = 10 seconds
+
+      RED    : 100 / 10 = 10 ticks
+      YELLOW :  40 / 10 =  4 ticks
+      GREEN  :  80 / 10 =  8 ticks
+   ```
+
+   Step 2 — find the total number of states in one full cycle
+   ```
+      Total time  = 100 + 40 + 80 = 220 seconds
+      Total states = 220 / 10 = 22 states
+   ```
+   - The FSM cannot simply have 3 states (one per colour), because it must also `count how long` each colour has lasted. Every 10-second slot is therefore a separate state, and the machine walks through 22 of them before repeating.
+
+   Step 3 — find the minimum number of flip-flops
+   ```
+      n flip-flops give 2^n states
+
+      2^4 = 16  <  22        not enough
+      2^5 = 32  >= 22        enough
+
+      n = ceil( log2(22) ) = 5
+   ```
+   ```
+      Minimum number of flip-flops = 5
+   ```
+
+   State diagram (compressed)
+   ```mermaid
+   stateDiagram-v2
+       [*] --> RED_1
+       RED_1 --> RED_2 : clock
+       RED_2 --> RED_10 : ... 10 states total
+       RED_10 --> YELLOW_1 : clock
+       YELLOW_1 --> YELLOW_4 : ... 4 states total
+       YELLOW_4 --> GREEN_1 : clock
+       GREEN_1 --> GREEN_8 : ... 8 states total
+       GREEN_8 --> RED_1 : clock
+   ```
+
+   State allocation
+   ```
+      State 0  to 9   ->  RED    lamp on   (10 states, 100 s)
+      State 10 to 13  ->  YELLOW lamp on   ( 4 states,  40 s)
+      State 14 to 21  ->  GREEN  lamp on   ( 8 states,  80 s)
+      State 21 -> back to state 0
+   ```
+   - The output logic is simple combinational decoding of the 5-bit state:
+   ```
+      RED    = 1 when state <= 9
+      YELLOW = 1 when 10 <= state <= 13
+      GREEN  = 1 when state >= 14
+   ```
+   - Ten of the 32 possible states are unused, so they are treated as don't-cares in the K-map, or forced back to state 0 for a safe design.
+
+   - The common mistake to avoid: answering `2` flip-flops for three colours. The clock is the only input, so the machine has no way to know how long a colour has been showing except by counting, which is what forces 22 states and therefore 5 flip-flops.
