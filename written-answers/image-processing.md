@@ -348,3 +348,69 @@
 ## Morphological Operations (1)
 
 1. **Define: (i) Erosion and Dilation; (ii) Opening and Closing.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
+
+   Answer: `Morphological operations` process the `shape` of objects in a binary (or grayscale) image. Each one slides a small shape called a `structuring element (SE)` over the image and decides each output pixel from the neighbourhood the SE covers.
+
+   (i) Erosion and Dilation
+
+   `Erosion` — written `A (-) B`
+   - An output pixel is set to 1 only if the structuring element fits `entirely inside` the object at that position. In grayscale, the output is the `minimum` of the neighbourhood.
+   - Effect: objects `shrink`, boundaries move inward, thin connections break, and small isolated specks of noise disappear.
+   ```
+      Before erosion              After erosion (3x3 SE)
+      0 0 0 0 0 0 0               0 0 0 0 0 0 0
+      0 1 1 1 1 1 0               0 0 0 0 0 0 0
+      0 1 1 1 1 1 0               0 0 1 1 1 0 0
+      0 1 1 1 1 1 0               0 0 0 0 0 0 0
+      0 0 0 0 0 0 0               0 0 0 0 0 0 0
+      0 0 1 0 0 0 0               0 0 0 0 0 0 0   <- the lone speck is gone
+   ```
+   - Uses: removing salt noise, separating objects that touch, and finding the boundary by `A - erosion(A)`.
+
+   `Dilation` — written `A (+) B`
+   - An output pixel is set to 1 if the structuring element `overlaps` the object at all. In grayscale, the output is the `maximum` of the neighbourhood.
+   - Effect: objects `grow`, boundaries move outward, small holes and narrow gaps are filled, and broken lines are joined.
+   ```
+      Before dilation             After dilation (3x3 SE)
+      0 0 0 0 0                   0 1 1 1 0
+      0 0 1 0 0                   1 1 1 1 1
+      0 1 1 1 0        ->         1 1 1 1 1
+      0 0 1 0 0                   1 1 1 1 1
+      0 0 0 0 0                   0 1 1 1 0
+   ```
+   - Uses: filling small holes, bridging gaps in broken characters before OCR, and thickening thin features.
+   - The two are `duals`: eroding the object is the same as dilating the background.
+
+   (ii) Opening and Closing
+
+   `Opening` — written `A o B = dilate( erode(A, B), B )`
+   - `Erosion followed by dilation`, with the same structuring element.
+   - The erosion removes small objects and thin bridges; the dilation restores the surviving objects to roughly their original size.
+   - Effect: `removes small objects, thin protrusions and narrow bridges` while keeping the shape and size of the larger objects. It smooths the outside of a contour.
+   ```
+      Two blobs joined by a thin neck  ->  opening separates them
+      Small specks of noise            ->  opening removes them completely
+   ```
+   - Uses: removing salt noise, separating touching objects, size-based filtering.
+
+   `Closing` — written `A . B = erode( dilate(A, B), B )`
+   - `Dilation followed by erosion`, with the same structuring element.
+   - The dilation fills small holes and gaps; the erosion shrinks the object back to its original size.
+   - Effect: `fills small holes and narrow gaps` and joins nearby objects, while keeping the overall size. It smooths the inside of a contour.
+   ```
+      A letter with a broken stroke    ->  closing repairs it
+      Small holes inside a shape       ->  closing fills them
+   ```
+   - Uses: removing pepper noise, closing gaps in broken text before OCR, filling small internal holes.
+
+   Summary
+
+   | Operation | Definition | Effect on object size | Removes |
+   |---|---|---|---|
+   | Erosion | SE must fit inside | Shrinks | Small objects, thin lines |
+   | Dilation | SE must overlap | Grows | Small holes, gaps |
+   | Opening | Erode then dilate | Roughly unchanged | Small objects, thin bridges, outward spikes |
+   | Closing | Dilate then erode | Roughly unchanged | Small holes, narrow gaps, inward notches |
+
+   - Both opening and closing are `idempotent`: applying them twice gives the same result as applying them once. That is why they are used as shape filters rather than as repeated operations.
+   - `Top-hat transform` = A - opening(A), which extracts the small bright details that opening removed; `bottom-hat` = closing(A) - A does the same for dark details. Both are used to correct uneven illumination.
