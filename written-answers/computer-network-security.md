@@ -5274,9 +5274,81 @@
 
 1. What is CII? How many CII organizations? Name 10 CII organization name. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+   Answer:
+
+   (a) What CII is
+   - **Critical Information Infrastructure** means the computer systems, networks and data whose destruction or disruption would have a debilitating effect on national security, the economy, public health or public safety.
+   - In Bangladesh it is declared by government gazette by the ICT Division, and CII organisations must meet stricter security, audit and incident-reporting obligations.
+   - Sectors typically covered: government administration, banking and finance, energy and power, telecommunications, health, transport, water and defence.
+
+   (b) How many CII organisations in Bangladesh
+   - The first gazette in **October 2022** declared **29 organisations** under section 15 of the Digital Security Act 2018.
+   - In **August 2023** five more were added, bringing the total to **34**.
+   - The number has since been reported as **35**. Because the list is periodically extended by gazette, the current figure should be checked against the latest ICT Division notification.  <!-- verify -->
+
+   (c) Ten CII organisations
+   - President's Office
+   - Prime Minister's Office
+   - Bangladesh Bank
+   - National Board of Revenue (NBR)
+   - Bangladesh Data Center Company Limited (BDCCL)
+   - Election Commission Secretariat (NID Wing)
+   - Bangladesh Telecommunication Regulatory Commission (BTRC)
+   - Bangladesh Computer Council (BCC)
+   - Bangladesh Power Development Board (BPDB)
+   - Department of Immigration and Passports
+
+   Others in the list include the Ministry of Foreign Affairs, Bangladesh Railway, Biman Bangladesh Airlines, Chittagong Port Authority, Titas Gas and various state-owned banks.
+
+   Obligations placed on a CII organisation
+   - Appoint a designated security officer, conduct regular audits and VAPT, report incidents to the national CIRT, implement the prescribed security controls, and maintain a disaster recovery plan.
+
 2. **CTC কী? কী কাজে ব্যবহার হয়?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: The abbreviation **CTC** has several meanings, and the intended one depends on context. In a cyber security and immigration context the most likely readings are:
+
+   **(a) Counter Terrorism Centre / Counter Terrorism and Transnational Crime (CTTC)**
+   - In Bangladesh, the **Counter Terrorism and Transnational Crime (CTTC)** unit of Dhaka Metropolitan Police handles terrorism, cybercrime and transnational organised crime.
+   - Its **Cyber Crime Investigation Division** investigates online fraud, hacking, cyberbullying, and online radicalisation. It is the unit most citizens deal with when reporting a cybercrime.
+
+   **(b) In networking — Cisco Transceiver Compatibility / Central Trunk Controller**, which is unlikely here.
+
+   **(c) In HR — Cost To Company**, the total annual cost of an employee, again unlikely in this paper.
+
+   **(d) In immigration — Certificate of Travel Clearance / Travel Certificate**, issued in place of a passport for one-time travel.
+
+   - Given that the question comes from a Department of Immigration and Passports paper alongside cyber security topics, **Counter Terrorism and Transnational Crime (CTTC)** with its cybercrime investigation role is the most probable intended answer. The abbreviation as printed is ambiguous.  <!-- verify -->
+
 3. **(c) Briefly write about the cybersecurity laws of Bangladesh.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
+
+   Answer: Bangladesh's cyber law has changed repeatedly, so the sequence matters.
+
+   **(a) ICT Act 2006 (Information and Communication Technology Act)**
+   - The first comprehensive law. It gave legal recognition to electronic records and **digital signatures**, established the **Controller of Certifying Authorities (CCA)**, and created offences for hacking, data theft and publishing obscene material electronically.
+   - Its section 57 was heavily criticised for restricting free expression and was eventually repealed.
+
+   **(b) Digital Security Act 2018 (DSA)**
+   - Replaced the controversial provisions of the ICT Act. It created the **Digital Security Agency**, the **National Computer Incident Response Team (CIRT)**, and a Digital Security Council.
+   - **Section 15** provided for declaring **Critical Information Infrastructure**, under which 29 organisations were gazetted in 2022.
+   - It covered offences including illegal access, digital forgery, identity fraud, cyber terrorism and defamation.
+   - It drew sustained criticism from journalists and rights groups for vaguely defined speech offences and non-bailable provisions.
+
+   **(c) Cyber Security Act 2023**
+   - Enacted 13 September 2023, replacing the Digital Security Act. It retained the CII framework and the CIRT, made several offences bailable and reduced some penalties, but critics argued the core speech provisions were largely carried over.
+
+   **(d) Cyber Security Ordinance 2025**
+   - On **22 May 2025** the interim government **repealed the Cyber Security Act 2023** and introduced the **Cyber Security Ordinance 2025**, which is the currently operative instrument.  <!-- verify -->
+
+   **Other relevant instruments**
+   - **Bangladesh Telecommunication Regulation Act 2001** — governs telecom and internet services.
+   - **Bangladesh Bank ICT Security Guideline** — mandatory security standards for banks and financial institutions, covering data centres, access control, incident reporting and DR.
+   - **Right to Information Act 2009** and the **Pornography Control Act 2012**.
+   - A dedicated **Data Protection law** has been in draft for several years.
+
+   **Institutions**
+   - National Cyber Security Agency, BGD e-GOV CIRT, the Cyber Tribunal, and the CTTC cybercrime unit of the police.
+
+   - Because this area has changed three times in seven years, an exam answer should state the sequence and name the current instrument rather than treating any one Act as permanent.
 
 ## Cryptography & Network Security Scenarios (3)
 
