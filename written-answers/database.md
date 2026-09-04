@@ -17003,31 +17003,727 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. What are the different types of relationships in a relational database? Explain each with examples. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer: A `relationship` is a link between two tables, created by a foreign key. There are three types, decided by how many rows on one side can match how many rows on the other.
+
+   (a) One-to-One (1:1)
+   - One row in table A matches at most one row in table B, and the reverse is also true.
+   - Example: `Employee` and `EmployeePassport`. One employee has one passport, one passport belongs to one employee.
+   - Implementation: put the foreign key in either table and mark it `UNIQUE`.
+   ```sql
+   CREATE TABLE Passport (
+     passport_no VARCHAR(15) PRIMARY KEY,
+     emp_id      INT UNIQUE REFERENCES Employee(emp_id)
+   );
+   ```
+   - Used to split rarely used or sensitive columns into a separate table.
+
+   (b) One-to-Many (1:N)
+   - One row in table A matches many rows in table B, but each row in B matches only one row in A.
+   - Example: one `Department` has many `Employee` rows; each employee works in one department.
+   - Implementation: put the foreign key on the `many` side. This is the most common relationship.
+   ```sql
+   CREATE TABLE Employee (
+     emp_id  INT PRIMARY KEY,
+     dept_id INT REFERENCES Department(dept_id)
+   );
+   ```
+
+   (c) Many-to-Many (M:N)
+   - Many rows in A match many rows in B.
+   - Example: a `Student` takes many `Course` rows, and a course has many students.
+   - Implementation: a relational table cannot store this directly, so a third table — a `junction` or `bridge` table — is created. Its primary key is the pair of foreign keys.
+   ```sql
+   CREATE TABLE Enrollment (
+     student_id INT REFERENCES Student(student_id),
+     course_id  INT REFERENCES Course(course_id),
+     grade      CHAR(2),
+     PRIMARY KEY (student_id, course_id)
+   );
+   ```
+
+   ```mermaid
+   erDiagram
+       DEPARTMENT ||--o{ EMPLOYEE : "has"
+       EMPLOYEE ||--|| PASSPORT : "holds"
+       STUDENT ||--o{ ENROLLMENT : "takes"
+       COURSE ||--o{ ENROLLMENT : "has"
+   ```
+
+   Summary
+
+   | Type | Rule | Example | How it is stored |
+   |---|---|---|---|
+   | 1:1 | One matches one | Employee — Passport | Foreign key with `UNIQUE` |
+   | 1:N | One matches many | Department — Employee | Foreign key on the many side |
+   | M:N | Many match many | Student — Course | Junction table with two foreign keys |
+
+   - A fourth case is the `self-relationship` (unary), where a table refers to itself — for example `Employee.manager_id` pointing to `Employee.emp_id`.
+
 2. **Discuss about different types of relations in DBMS.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
+
+   Answer: The word `relation` has two meanings in DBMS, and both are asked in exams.
+
+   Part 1 — a relation as a table
+   - In the relational model a `relation` is a table: a set of rows (tuples) over a fixed set of columns (attributes).
+   - Its `degree` is the number of columns and its `cardinality` is the number of rows.
+
+   Types of relations
+   - `Base relation` — a real table stored on disk, created by `CREATE TABLE`.
+   - `View` (virtual relation) — not stored; it is a saved `SELECT` computed when used.
+   - `Derived relation` — the result of a query such as a join or a projection.
+   - `Snapshot` / materialised view — the result of a query that `is` stored, refreshed periodically.
+   - `Temporary relation` — exists only for the current session or query.
+
+   Part 2 — relations between tables
+   - More often the question means the `relationship` between two tables, created by a foreign key. There are three.
+
+   `One-to-One (1:1)`
+   - One row on each side. Example: `Employee` and `Passport`.
+   - Stored as a foreign key marked `UNIQUE`.
+
+   `One-to-Many (1:N)`
+   - One row on the left matches many on the right. Example: one `Department` has many `Employee` rows.
+   - Stored as a foreign key on the `many` side. This is the most common type.
+
+   `Many-to-Many (M:N)`
+   - Many rows on both sides. Example: a `Student` takes many `Course` rows and a course has many students.
+   - Cannot be stored directly. A third `junction table` is created whose primary key is the pair of foreign keys.
+
+   ```sql
+   CREATE TABLE Enrollment (
+     student_id INT REFERENCES Student(student_id),
+     course_id  INT REFERENCES Course(course_id),
+     PRIMARY KEY (student_id, course_id)
+   );
+   ```
+
+   ```mermaid
+   erDiagram
+       DEPARTMENT ||--o{ EMPLOYEE : has
+       STUDENT ||--o{ ENROLLMENT : takes
+       COURSE ||--o{ ENROLLMENT : has
+   ```
+
+   By degree — the number of entity types taking part
+   - `Unary` (recursive) — an entity related to itself, such as `Employee.manager_id` pointing back to `Employee`.
+   - `Binary` — two entity types. Almost all real relationships are binary.
+   - `Ternary` — three entity types, such as Supplier–Part–Project.
+   - `N-ary` — n entity types; rare, and usually broken into binary ones.
 
 3. **What is the degree of relation in dbms?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+   Answer: The word `degree` is used in two different senses, so the answer depends on which one the question means. Both are given below.
+
+   (a) Degree of a relation (a table)
+   - The `degree` of a relation is the `number of attributes (columns)` in it. It is also called the `arity` of the relation.
+   - The number of rows is the `cardinality`, not the degree.
+
+   ```
+   Student(student_id, name, dept, cgpa)
+
+      degree      = 4       (four columns)
+      cardinality = 3       (three rows, in this example)
+
+      student_id | name   | dept | cgpa
+      -----------+--------+------+------
+      101        | Rahim  | CSE  | 3.75
+      102        | Karim  | EEE  | 3.40
+      103        | Jamal  | CSE  | 3.90
+   ```
+   - A relation with degree 1 is `unary`, degree 2 is `binary`, degree 3 is `ternary`, degree n is `n-ary`.
+   - The degree changes only when a column is added or dropped, so it is a property of the schema. The cardinality changes with every `INSERT` or `DELETE`, so it is a property of the data.
+
+   (b) Degree of a relationship
+   - The `degree of a relationship` is the `number of entity types taking part` in it.
+
+   | Degree | Name | Meaning | Example |
+   |---|---|---|---|
+   | 1 | Unary (recursive) | An entity related to itself | An `Employee` manages another `Employee` |
+   | 2 | Binary | Two entity types | `Student` enrolls in `Course` |
+   | 3 | Ternary | Three entity types | `Supplier` supplies `Part` for `Project` |
+   | n | N-ary | n entity types | Rare; usually broken into binary ones |
+
+   ```mermaid
+   erDiagram
+       STUDENT ||--o{ ENROLLMENT : "binary"
+       COURSE ||--o{ ENROLLMENT : "binary"
+       EMPLOYEE ||--o{ EMPLOYEE : "unary - manages"
+   ```
+
+   - Do not confuse degree with cardinality. Degree counts `how many entity types` take part; cardinality (1:1, 1:N, M:N) says `how many instances` of one may relate to the other.
+
 4. **(খ) One-to-one এবং One-to-many রিলেশন উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) `Cardinality` decides how many rows on one side of a relationship may match rows on the other side. One-to-one and one-to-many are two of its three forms.
+
+   One-to-One (1:1)
+   - One row in table A matches at most one row in table B, and one row in B matches at most one row in A.
+   - Example: an `Employee` has exactly one `Passport`, and a passport belongs to exactly one employee.
+   ```
+   Employee                  Passport
+   +--------+-------+        +-------------+--------+
+   | emp_id | name  |        | passport_no | emp_id |
+   +--------+-------+        +-------------+--------+
+   | 101    | Rahim | -----> | BD1234567   | 101    |
+   | 102    | Karim | -----> | BD7654321   | 102    |
+   +--------+-------+        +-------------+--------+
+   ```
+   - Implementation: the foreign key is placed in either table and marked `UNIQUE`, which is what limits the match to one row.
+   ```sql
+   CREATE TABLE Passport (
+     passport_no VARCHAR(15) PRIMARY KEY,
+     emp_id      INT UNIQUE REFERENCES Employee(emp_id)
+   );
+   ```
+   - Other examples: Person — NID, Country — Capital city, User — User profile.
+   - Used mainly to move rarely read or sensitive columns into a separate table.
+
+   One-to-Many (1:N)
+   - One row in table A matches many rows in table B, but each row in B matches only one row in A.
+   - Example: one `Department` has many `Employee` rows, while each employee works in one department.
+   ```
+   Department                Employee
+   +---------+--------+      +--------+-------+---------+
+   | dept_id | name   |      | emp_id | name  | dept_id |
+   +---------+--------+      +--------+-------+---------+
+   | 10      | CSE    | ---> | 101    | Rahim | 10      |
+   |         |        | ---> | 102    | Karim | 10      |
+   | 20      | EEE    | ---> | 103    | Jamal | 20      |
+   +---------+--------+      +--------+-------+---------+
+   ```
+   - Implementation: the foreign key goes on the `many` side, with no `UNIQUE` on it.
+   ```sql
+   CREATE TABLE Employee (
+     emp_id  INT PRIMARY KEY,
+     name    VARCHAR(50),
+     dept_id INT REFERENCES Department(dept_id)
+   );
+   ```
+   - Other examples: Customer — Order, Author — Book, Teacher — Class.
+   - This is the most common relationship in real databases.
+
+   ```mermaid
+   erDiagram
+       EMPLOYEE ||--|| PASSPORT : "1:1 holds"
+       DEPARTMENT ||--o{ EMPLOYEE : "1:N has"
+   ```
+
+   | Point | One-to-One | One-to-Many |
+   |---|---|---|
+   | Matching | One row to one row | One row to many rows |
+   | Foreign key | In either table, `UNIQUE` | On the many side, not unique |
+   | Example | Employee — Passport | Department — Employee |
+   | How common | Rare | Very common |
 
 5. **Weak Entity and strong entity difference with relation.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)]*
 
+   Answer: An `entity` is a real-world object stored as a table. Entities are of two kinds, decided by whether the entity can identify itself.
+
+   Strong entity
+   - An entity that has its `own primary key`, so each of its rows can be identified without help from any other table.
+   - Example: `Student(student_id, name)` — `student_id` alone identifies a student.
+   - Drawn as a single rectangle in an ER diagram.
+
+   Weak entity
+   - An entity that has `no primary key of its own`. It depends on a strong entity — called its `owner` or identifying entity — for identification.
+   - It has a `partial key` (discriminator), which is unique only within one owner.
+   - Example: `Dependent(name, relation)` of an employee. Two employees may both have a son named "Rahim", so `name` alone is not unique. The key becomes `emp_id + name`.
+   - Drawn as a double rectangle, and its partial key is underlined with a dashed line.
+
+   The relation between them — the identifying relationship
+   - The link joining a weak entity to its owner is the `identifying relationship`, drawn as a `double diamond`.
+   - The weak entity has `total participation` — no dependent can exist without an employee — shown by a double line.
+   - Its primary key = `owner's primary key + its own partial key`, so the foreign key is part of the primary key.
+   - Deleting the owner row deletes all its weak rows, so `ON DELETE CASCADE` is the natural rule.
+
+   ```
+      +-----------+       /\/\        +==========+
+      | EMPLOYEE  |------< HAS >======|| DEPENDENT ||
+      +-----------+       \/\/        +==========+
+       emp_id (PK)      identifying     name (partial key)
+                        relationship
+   ```
+
+   ```sql
+   CREATE TABLE Dependent (
+     emp_id INT,
+     name   VARCHAR(50),
+     relation VARCHAR(20),
+     PRIMARY KEY (emp_id, name),                 -- owner key + partial key
+     FOREIGN KEY (emp_id) REFERENCES Employee(emp_id) ON DELETE CASCADE
+   );
+   ```
+
+   | Point | Strong entity | Weak entity |
+   |---|---|---|
+   | Primary key | Has its own | Has none; only a partial key |
+   | Identified by | Itself | Owner's key + partial key |
+   | Existence | Independent | Depends on the owner |
+   | ER symbol | Single rectangle | Double rectangle |
+   | Relationship symbol | Single diamond | Double diamond (identifying) |
+   | Participation | May be partial | Always total |
+   | Example | Employee, Student | Dependent, Order line, Room in a building |
+
 6. **(b) Give example of week and strong entity sets.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
+
+   Answer: A `strong entity set` has its own primary key and can be identified on its own. A `weak entity set` has no primary key of its own and depends on an owner entity for identification.
+
+   Example 1 — Employee and Dependent
+   - `Employee(emp_id, name, salary)` is strong: `emp_id` alone identifies a row.
+   - `Dependent(name, age, relation)` is weak: two different employees may each have a son named "Rahim", so `name` is not unique on its own. Its key becomes `emp_id + name`.
+   ```
+      +-----------+      /\/\       +===============+
+      | EMPLOYEE  |-----< HAS >=====||  DEPENDENT   ||
+      +-----------+      \/\/       +===============+
+       emp_id (PK)    identifying     name (partial key)
+   ```
+
+   Example 2 — Order and Order_Item
+   - `Order(order_id, order_date)` is strong.
+   - `Order_Item(line_no, qty, price)` is weak: line number 1 exists in every order, so it is unique only inside one order. Key = `order_id + line_no`.
+
+   Example 3 — Building and Room
+   - `Building(building_id, name)` is strong.
+   - `Room(room_no, capacity)` is weak: room 101 exists in many buildings. Key = `building_id + room_no`.
+
+   Example 4 — Bank Loan and Payment
+   - `Loan(loan_no, amount)` is strong.
+   - `Payment(payment_no, date, amount)` is weak: payment number 1 exists for every loan. Key = `loan_no + payment_no`.
+
+   ```sql
+   CREATE TABLE Order_Item (
+     order_id INT,
+     line_no  INT,
+     qty      INT,
+     PRIMARY KEY (order_id, line_no),            -- owner key + partial key
+     FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE CASCADE
+   );
+   ```
+
+   Points to note
+   - The weak entity is drawn as a `double rectangle` and its link to the owner as a `double diamond` (the identifying relationship).
+   - The weak entity always has `total participation` — no dependent without an employee, no room without a building.
+   - Deleting the owner must delete its weak rows, so `ON DELETE CASCADE` is used.
 
 7. **(a) What is referential integrity? How do you impose in your database design?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
+   Answer: `Referential integrity` is the rule that a foreign key value must either match an existing primary key value in the parent table or be `NULL`. It stops rows that point at something that does not exist.
+
+   - Example: an `Employee` row with `dept_id = 50` is invalid if no department 50 exists in `Department`. Such a row is called an `orphan row`.
+   - The child table is called the `referencing` table, the parent the `referenced` table.
+
+   How it is imposed in a database design
+   - Declare the foreign key when creating the table. The DBMS then enforces it automatically on every insert, update and delete.
+   ```sql
+   CREATE TABLE Department (
+     dept_id   INT PRIMARY KEY,
+     dept_name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+     emp_id  INT PRIMARY KEY,
+     name    VARCHAR(50),
+     dept_id INT,
+     CONSTRAINT fk_dept FOREIGN KEY (dept_id)
+         REFERENCES Department(dept_id)
+         ON DELETE SET NULL
+         ON UPDATE CASCADE
+   );
+   ```
+   - Add it to an existing table:
+   ```sql
+   ALTER TABLE Employee
+   ADD CONSTRAINT fk_dept FOREIGN KEY (dept_id) REFERENCES Department(dept_id);
+   ```
+
+   What the DBMS then blocks
+   ```
+   INSERT INTO Employee VALUES (105, 'Rahim', 50);   -- rejected, dept 50 does not exist
+   DELETE FROM Department WHERE dept_id = 10;        -- action depends on the rule below
+   ```
+
+   Referential actions — what happens when the parent row changes
+
+   | Action | On delete or update of the parent |
+   |---|---|
+   | `NO ACTION` / `RESTRICT` | The operation is rejected while children exist (the default) |
+   | `CASCADE` | The children are deleted, or their foreign key is updated too |
+   | `SET NULL` | The child foreign key becomes `NULL` (the column must allow NULL) |
+   | `SET DEFAULT` | The child foreign key takes its default value |
+
+   Design rules to follow
+   - The foreign key column and the referenced column must have the `same data type`.
+   - The referenced column must be a `primary key` or have a `UNIQUE` constraint.
+   - Index the foreign key column, otherwise every parent delete scans the whole child table.
+   - Choose the action from the business rule: an order line has no meaning without its order, so `CASCADE`; an employee still exists after a department closes, so `SET NULL`.
+   - Do the checking in the database, not only in the application. Application checks are bypassed by direct SQL, bulk loads and other programs.
+
 8. **What is a weak entity for data modeling using the entity relationship model find out any weak entity and its identify relationship for the school database? Which of the following table? Student(student_id, student_name, admission_year) Teacher(teacher_id, teacher_name, teacher_joindate) Course(course_id, subject_name, credit)** *[BCC Assistant Programmer 12.02.2021 compact it 814 (ET: BUET)]*
+
+   Answer: A `weak entity` is an entity that has no primary key of its own. It cannot be identified on its own, so it depends on a `strong` (owner) entity. It has only a `partial key` (discriminator), which is unique inside one owner, and its real primary key is `owner's primary key + partial key`. The relationship joining it to its owner is the `identifying relationship`, drawn as a double diamond, and the weak entity always has total participation.
+
+   Answer to the question asked
+   - None of the three tables given is a weak entity:
+   ```
+   Student(student_id, student_name, admission_year)   -> strong, key student_id
+   Teacher(teacher_id, teacher_name, teacher_joindate) -> strong, key teacher_id
+   Course(course_id, subject_name, credit)             -> strong, key course_id
+   ```
+   - Each has its own primary key, so each is a `strong entity`.
+
+   The weak entity in a school database
+   - The missing piece is `Enrollment` (the mark or grade a student gets in a course). A row like "the result of student 101 in course CSE101" has no identity of its own — remove the student or the course and it means nothing.
+   - Its partial key is the `semester` or `exam_no`, unique only within one student–course pair.
+
+   ```
+      +-----------+     /\/\      +=================+     /\/\     +----------+
+      |  STUDENT  |----< TAKES >==||   ENROLLMENT   ||===< FOR >---|  COURSE  |
+      +-----------+     \/\/      +=================+     \/\/     +----------+
+       student_id(PK)  identifying   semester              identifying course_id(PK)
+                       relationship  (partial key)         relationship
+   ```
+
+   ```mermaid
+   erDiagram
+       STUDENT ||--o{ ENROLLMENT : takes
+       COURSE  ||--o{ ENROLLMENT : "is taken as"
+       TEACHER ||--o{ COURSE : teaches
+   ```
+
+   ```sql
+   CREATE TABLE Enrollment (
+     student_id  INT,
+     course_id   INT,
+     semester    VARCHAR(10),                  -- partial key
+     grade       CHAR(2),
+     PRIMARY KEY (student_id, course_id, semester),
+     FOREIGN KEY (student_id) REFERENCES Student(student_id) ON DELETE CASCADE,
+     FOREIGN KEY (course_id)  REFERENCES Course(course_id)  ON DELETE CASCADE
+   );
+   ```
+
+   Other weak entities that fit a school database
+   - `Class_Section` — section A exists in every class, so its key is `course_id + section_name`.
+   - `Attendance` — identified by `student_id + class_date`.
+   - `Dependent` of a teacher — identified by `teacher_id + name`.
+   - In every case the pattern is the same: the child borrows the parent's key, and deleting the parent deletes the child, so `ON DELETE CASCADE` is used.
 
 9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)]*
 
+   Answer: A `weak entity set` is a set of entities that has `no primary key of its own`. Its rows cannot be identified without the help of another entity, called the `owner` or identifying entity set.
+
+   - Example: `Dependent(name, age, relation)` of an employee. Two employees may each have a son named "Rahim", so `name` alone cannot identify a row.
+   - It is drawn as a `double rectangle`. The link to its owner is the `identifying relationship`, drawn as a `double diamond`.
+   - It always has `total participation` in that relationship — no dependent can exist without an employee — shown by a double line.
+
+   How the primary key is generated
+   - The weak entity has a `partial key`, also called a `discriminator`: an attribute that is unique only `within one owner`. In an ER diagram it is underlined with a `dashed` line.
+   - The primary key is then formed as:
+   ```
+      Primary key of weak entity =
+           Primary key of the owner entity  +  Partial key (discriminator)
+   ```
+   - So `Dependent` gets `(emp_id, name)`. Employee 101's son Rahim and employee 102's son Rahim are now two different rows.
+
+   ```
+      +-----------+       /\/\        +================+
+      | EMPLOYEE  |------< HAS >======||   DEPENDENT   ||
+      +-----------+       \/\/        +================+
+       emp_id (PK)     identifying      name (partial key, dashed underline)
+                       relationship     PK = (emp_id, name)
+   ```
+
+   ```sql
+   CREATE TABLE Dependent (
+     emp_id   INT,                                   -- borrowed from the owner
+     name     VARCHAR(50),                           -- partial key
+     age      INT,
+     relation VARCHAR(20),
+     PRIMARY KEY (emp_id, name),                     -- owner key + partial key
+     FOREIGN KEY (emp_id) REFERENCES Employee(emp_id) ON DELETE CASCADE
+   );
+   ```
+
+   Points worth noting
+   - The foreign key here is `part of the primary key`, which is what makes the entity weak. If the foreign key were an ordinary column, the entity would be strong.
+   - The owner's key column must be `NOT NULL` in the weak table, since a primary key cannot contain NULL.
+   - Deleting the owner must delete its weak rows, so `ON DELETE CASCADE` is the correct rule.
+   - More examples: `Room` in a `Building` → `(building_id, room_no)`; `Order_Item` in an `Order` → `(order_id, line_no)`; `Payment` on a `Loan` → `(loan_no, payment_no)`.
+
 10. **(a) Write down Integrity rules in database.** *[National University Assistant Programmer 2020 compact it 976 (ET: DU)]*
+
+    Answer: `Integrity rules` are the conditions that keep the data in a database correct and meaningful. The relational model defines two rules that every DBMS must enforce, plus user-defined rules.
+
+    1. Entity integrity
+    - The `primary key of a table can never be NULL`, and it must be unique.
+    - Reason: the primary key is what identifies a row. A NULL means "unknown", so a NULL key would leave a row that cannot be found or referenced.
+    - If the key has several columns, `no column` in it may be NULL.
+    ```sql
+    CREATE TABLE Student (
+      student_id INT PRIMARY KEY,            -- implicitly NOT NULL and UNIQUE
+      name       VARCHAR(50) NOT NULL
+    );
+    INSERT INTO Student VALUES (NULL, 'Rahim');   -- rejected
+    ```
+
+    2. Referential integrity
+    - A `foreign key value must match an existing primary key value in the parent table, or be NULL`.
+    - Reason: it stops `orphan rows` that point at something that does not exist.
+    ```sql
+    CREATE TABLE Employee (
+      emp_id  INT PRIMARY KEY,
+      dept_id INT REFERENCES Department(dept_id) ON DELETE SET NULL
+    );
+    INSERT INTO Employee VALUES (101, 50);    -- rejected if department 50 does not exist
+    ```
+    - Referential actions decide what happens to the child when the parent is deleted or updated: `RESTRICT`, `CASCADE`, `SET NULL`, `SET DEFAULT`.
+
+    3. Domain integrity
+    - Every value in a column must belong to the column's `domain` — the right data type, range and format.
+    - Enforced by the data type plus `CHECK`, `NOT NULL` and `DEFAULT`.
+    ```sql
+    age    INT CHECK (age BETWEEN 18 AND 60),
+    gender CHAR(1) CHECK (gender IN ('M','F')),
+    status VARCHAR(10) DEFAULT 'ACTIVE'
+    ```
+
+    4. Key integrity (uniqueness)
+    - Any candidate key must stay unique. Enforced by `UNIQUE`.
+    ```sql
+    email VARCHAR(80) UNIQUE
+    ```
+
+    5. User-defined (business) integrity
+    - Rules that come from the business and cannot be expressed by the four above. Enforced by `CHECK`, `triggers` or stored procedures.
+    - Example: an account balance must not fall below the minimum, or a loan cannot be approved by the same officer who applied for it.
+
+    Summary
+
+    | Rule | What it protects | Enforced by |
+    |---|---|---|
+    | Entity integrity | Primary key is unique and never NULL | `PRIMARY KEY` |
+    | Referential integrity | Foreign key matches a real parent row | `FOREIGN KEY` |
+    | Domain integrity | Values fit the column's type and range | Data type, `CHECK`, `NOT NULL` |
+    | Key integrity | Candidate keys stay unique | `UNIQUE` |
+    | Business integrity | Company-specific rules | `CHECK`, triggers |
+
+    - These rules must live `in the database`, not only in the application. Application checks are bypassed by direct SQL, bulk loads and other programs.
 
 11. **What is constraints? Why use constraint? Difference between table level Cosntraint and column level Cosntraint.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
 
+    Answer: A `constraint` is a rule attached to a table column that the DBMS enforces on every insert, update and delete. If a statement breaks the rule, the DBMS rejects it.
+
+    Why constraints are used
+    - They keep the data `accurate and valid` — no negative salary, no invalid grade.
+    - They enforce `entity integrity` — the primary key is unique and never NULL.
+    - They enforce `referential integrity` — no employee in a department that does not exist.
+    - They stop `duplicate` values where duplicates are wrong, such as two accounts with the same email.
+    - They put the rule in `one place`. Every application, script and direct SQL session obeys it, so it cannot be bypassed the way application-level checking can.
+    - They help the `optimiser`, which uses `PRIMARY KEY`, `UNIQUE` and `NOT NULL` information to pick better plans.
+
+    Main constraints
+    ```
+    NOT NULL      the column must have a value
+    UNIQUE        no two rows may share the value
+    PRIMARY KEY   UNIQUE + NOT NULL, one per table
+    FOREIGN KEY   the value must exist in the parent table
+    CHECK         the value must satisfy a condition
+    DEFAULT       a value used when none is supplied
+    ```
+
+    Column-level constraint
+    - Written `on the same line as the column`, right after its data type.
+    - Applies to that `one column only`.
+    ```sql
+    CREATE TABLE Employee (
+      emp_id INT PRIMARY KEY,                       -- column level
+      name   VARCHAR(50) NOT NULL,                  -- column level
+      salary DECIMAL(10,2) CHECK (salary > 0)       -- column level
+    );
+    ```
+
+    Table-level constraint
+    - Written `after all the columns`, as a separate item in the list.
+    - Can use `more than one column`, which is the reason it exists.
+    ```sql
+    CREATE TABLE Enrollment (
+      student_id INT,
+      course_id  INT,
+      marks      INT,
+      final      INT,
+      PRIMARY KEY (student_id, course_id),                    -- composite key
+      CHECK (final <= marks),                                 -- two columns
+      FOREIGN KEY (student_id) REFERENCES Student(student_id) -- table level
+    );
+    ```
+
+    Difference
+
+    | Point | Column level | Table level |
+    |---|---|---|
+    | Where written | With the column definition | After all columns |
+    | Columns covered | Exactly one | One or more |
+    | Composite key possible | No | Yes |
+    | Multi-column `CHECK` | No | Yes |
+    | `NOT NULL` allowed | Yes | No — only column level |
+    | Naming | Usually unnamed, so the system names it | Usually named with `CONSTRAINT` |
+    | Readability | Shorter, easier to read | Needed for composite rules |
+
+    - `NOT NULL` is the one constraint that `cannot` be written at table level. Everything else can be written either way; the choice matters only when more than one column is involved.
+    - Naming a constraint (`CONSTRAINT chk_salary CHECK (salary > 0)`) is good practice, because the error message then says which rule failed and the constraint can be dropped by name.
+
 12. **(ক) Relationship degree কাকে বলে? উহা কত প্রকার ও কি কি? সংক্ষেপে লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1068 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The `degree of a relationship` is the number of entity types that take part in it. If two entity types are joined, the degree is 2; if three, the degree is 3.
+
+    - Do not confuse it with cardinality. Degree counts `how many entity types` join a relationship. Cardinality (1:1, 1:N, M:N) says `how many instances` of one may relate to the other.
+
+    Types — there are four
+
+    (a) Unary (degree 1), also called recursive
+    - One entity type is related to `itself`.
+    - Example: an `Employee` manages another `Employee`. A `Course` is a prerequisite for another `Course`.
+    - Implemented by a foreign key inside the same table.
+    ```sql
+    CREATE TABLE Employee (
+      emp_id     INT PRIMARY KEY,
+      name       VARCHAR(50),
+      manager_id INT REFERENCES Employee(emp_id)     -- points to the same table
+    );
+    ```
+
+    (b) Binary (degree 2)
+    - `Two` entity types take part. This is by far the most common type and maps directly to tables.
+    - Example: `Student` enrolls in `Course`; `Department` has `Employee`.
+
+    (c) Ternary (degree 3)
+    - `Three` entity types take part in one relationship at the same time.
+    - Example: a `Supplier` supplies a `Part` for a `Project`. A `Doctor` prescribes a `Medicine` to a `Patient`.
+    - Stored as a table holding all three foreign keys.
+    ```sql
+    CREATE TABLE Supply (
+      supplier_id INT, part_id INT, project_id INT, qty INT,
+      PRIMARY KEY (supplier_id, part_id, project_id)
+    );
+    ```
+
+    (d) N-ary (degree n)
+    - `n` entity types take part. Rare in practice, and usually broken into several binary relationships because it is hard to read and to maintain.
+
+    ```mermaid
+    erDiagram
+        EMPLOYEE  ||--o{ EMPLOYEE : "unary - manages"
+        STUDENT   ||--o{ ENROLLMENT : "binary"
+        COURSE    ||--o{ ENROLLMENT : "binary"
+        SUPPLIER  ||--o{ SUPPLY : "ternary"
+        PART      ||--o{ SUPPLY : "ternary"
+        PROJECT   ||--o{ SUPPLY : "ternary"
+    ```
+
+    | Degree | Name | Entity types | Example |
+    |---|---|---|---|
+    | 1 | Unary / recursive | 1 (itself) | Employee manages Employee |
+    | 2 | Binary | 2 | Student enrolls in Course |
+    | 3 | Ternary | 3 | Supplier supplies Part for Project |
+    | n | N-ary | n | Rare; usually split into binary |
 
 13. **(খ) Relational Database Model কী? অন্যান্য মডেলের তুলনায় এর সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094-1095 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) The `Relational Database Model`, given by E. F. Codd in 1970, stores all data in `tables` (relations). A table has rows called `tuples` and columns called `attributes`. Tables are linked not by pointers but by `common values` — a foreign key in one table matching a primary key in another.
+
+    Its main features
+    - Every row is identified by a `primary key`, which is unique and never NULL.
+    - Relationships are made by `foreign keys`, so the structure is value-based, not pointer-based.
+    - Data is read and changed by `SQL`, a declarative language: the user says `what` is wanted, not `how` to get it.
+    - The design is refined by `normalization` to remove redundancy and update anomalies.
+    - The DBMS guarantees the `ACID` properties for every transaction.
+
+    ```
+    Department                   Employee
+    +---------+--------+         +--------+-------+---------+
+    | dept_id | name   |         | emp_id | name  | dept_id |
+    +---------+--------+         +--------+-------+---------+
+    | 10      | CSE    | <------ | 101    | Rahim | 10      |
+    | 20      | EEE    | <------ | 102    | Karim | 20      |
+    +---------+--------+         +--------+-------+---------+
+       primary key                          foreign key
+    ```
+
+    Advantages over the older models (hierarchical, network) and over newer ones
+    - `Simple` — everything is a table of rows and columns, easy for a non-programmer to picture. Hierarchical and network models needed the user to follow pointer chains.
+    - `Structural independence` — adding a column or a table does not break existing programs. In the network model the access path was part of the program.
+    - `Flexible querying` — any table can be joined with any other on the spot. The hierarchical model allowed only the paths built in at design time.
+    - `Data integrity` — entity, referential and domain integrity are enforced by the DBMS itself.
+    - `Less redundancy` after normalization, so update anomalies disappear.
+    - `Standard language` — SQL works, with small differences, across Oracle, MySQL, SQL Server and PostgreSQL, so skills and code are portable.
+    - `Strong security` — access can be granted per table, per column or through views.
+
+    Disadvantages
+    - `Slower for deep hierarchies`. Following a parent–child chain needs repeated joins, while the hierarchical model followed a pointer directly.
+    - `Cost` — a commercial RDBMS needs powerful hardware, licences and trained staff.
+    - `Scaling out is hard`. It scales up on one big machine well, but spreading one database across many machines is difficult because joins and ACID must hold across the network. NoSQL systems win here.
+    - `Poor fit for complex data` — images, documents, graphs, geographic and hierarchical data do not fit rows and columns naturally. Object-oriented and document databases handle these better.
+    - `Impedance mismatch` — program objects have to be converted into flat rows and back, which is why ORM tools are needed.
+    - `Rigid schema` — the structure must be fixed in advance, and changing a large live table is expensive. Document databases allow a flexible schema.
+    - `Over-normalization` can produce so many small tables that queries need many joins and become slow, which is why data warehouses deliberately denormalize.
+
 14. **What is cardinality and modality?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265-1266 (ET: N/A)]*
+
+    Answer: `Cardinality` and `modality` are the two numbers written on a relationship line in an ER diagram. Cardinality gives the `maximum` number of related rows; modality gives the `minimum`.
+
+    Cardinality — how many
+    - The maximum number of instances of one entity that may relate to one instance of another.
+    - Three forms:
+    ```
+    One-to-One  (1:1)   one Employee has one Passport
+    One-to-Many (1:N)   one Department has many Employees
+    Many-to-Many(M:N)   a Student takes many Courses, a Course has many Students
+    ```
+    - Written as the maximum in the pair `(min, max)`.
+
+    Modality — is it required
+    - Whether an instance `must` take part in the relationship at all. It has only two values:
+    ```
+    Modality 0  -> optional  (partial participation, the foreign key may be NULL)
+    Modality 1  -> mandatory (total participation, the foreign key is NOT NULL)
+    ```
+    - Example: an `Employee` may or may not have a `Company Car` → modality 0. Every `Employee` must belong to a `Department` → modality 1.
+
+    Reading them together
+    ```
+            modality (min)          cardinality (max)
+                  |                        |
+                  v                        v
+       EMPLOYEE ---(1,1)--- works in ---(0,N)--- DEPARTMENT
+
+       (1,1) on Employee  : every employee must work in exactly one department
+       (0,N) on Department: a department may have zero or many employees
+    ```
+
+    In crow's foot notation the inner symbol is the modality and the outer symbol is the cardinality:
+    ```
+       ---o<     zero or many   (optional, many)
+       ---|<     one or many    (mandatory, many)
+       ---o|     zero or one    (optional, one)
+       ---||     exactly one    (mandatory, one)
+    ```
+
+    ```mermaid
+    erDiagram
+        DEPARTMENT ||--o{ EMPLOYEE : "employs"
+        EMPLOYEE ||--o| CAR : "may be given"
+    ```
+
+    | Point | Cardinality | Modality |
+    |---|---|---|
+    | Answers | How many? | Is it required? |
+    | Value given | Maximum | Minimum |
+    | Possible values | 1 or N (many) | 0 or 1 |
+    | Types | 1:1, 1:N, M:N | Optional, mandatory |
+    | In SQL | Foreign key with or without `UNIQUE` | `NULL` allowed or `NOT NULL` |
+    | Example | One department, many employees | An employee must have a department |
+
+    - A second, unrelated meaning of cardinality appears in query tuning: the number of `distinct values` in a column. A `national_id` column has high cardinality, a `gender` column has low cardinality, and the optimiser uses this to decide whether an index is worth using.
 
 ## Indexing & Query Optimization (B-Tree, B+ Tree) (10)
 
