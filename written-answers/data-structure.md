@@ -6318,9 +6318,187 @@ Output: Not Balanced
 
 1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What is a data structure
+   - A data structure is a systematic way of `organising, storing and managing data` in memory so that it can be accessed and modified efficiently.
+   - It defines both the arrangement of the data and the operations allowed on it — insertion, deletion, traversal, searching, sorting and merging.
+   - The right choice of data structure is what determines whether an algorithm runs in O(1), O(log n) or O(n).
+
+   Classification
+   ```
+                       DATA STRUCTURES
+                       /            \
+                 PRIMITIVE        NON-PRIMITIVE
+             (int, float,          /          \
+              char, pointer)   LINEAR      NON-LINEAR
+                               /   |  \      /    \
+                          Array Stack Queue Tree  Graph
+                               Linked List
+   ```
+
+   Linear data structures
+   - Elements are arranged in a `sequence`, one after another, and each element has exactly one predecessor and one successor (except the first and last).
+   - The whole structure can be traversed in a `single pass`.
+   - Memory may be contiguous (array) or linked (linked list).
+
+   Examples
+   - `Array` — elements in contiguous memory, accessed by index in O(1). Example: `int marks[50];`
+   - `Linked list` — nodes scattered in memory, joined by pointers. Dynamic size, O(1) insertion at the front.
+   - `Stack` — LIFO. Used for function calls, expression evaluation, undo/redo.
+   - `Queue` — FIFO. Used for CPU scheduling, printer spooling, BFS.
+
+   Non-linear data structures
+   - Elements are arranged `hierarchically` or in a network, so one element may connect to `many` others.
+   - The structure cannot be traversed in a single straight pass; recursion or an explicit stack or queue is needed.
+   - They represent relationships that are not sequential.
+
+   Examples
+   - `Tree` — a hierarchy with one root and no cycles. Examples: binary tree, BST, AVL, B-tree, heap. Used in file systems, database indexes, and the parse trees inside compilers.
+   - `Graph` — vertices joined by edges, with cycles permitted. Used for road networks, social networks, routing protocols and dependency resolution.
+
+   Comparison
+
+   | Point | Linear | Non-linear |
+   |---|---|---|
+   | Arrangement | Sequential | Hierarchical or networked |
+   | Neighbours per element | One before, one after | Possibly many |
+   | Traversal | Single pass | Multiple paths; recursion needed |
+   | Memory use | Can be wasteful (array) or efficient | Generally efficient |
+   | Implementation | Simple | More complex |
+   | Levels | Single | Multiple |
+   | Examples | Array, linked list, stack, queue | Tree, graph, heap |
+   | Typical use | Ordered data, buffering, scheduling | Hierarchies, networks, fast search |
+
+   - Rule of thumb: use a `linear` structure when the data has a natural order; use a `non-linear` structure when it has a natural hierarchy or a network of relationships.
+
 2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   Linear data structure
+   - A data structure in which the elements are arranged in a `sequence`, one after another. Every element has exactly one predecessor and one successor, apart from the first and the last.
+   - The entire structure can be traversed `in a single pass`, from beginning to end.
+   - It exists at a single "level" — there is no hierarchy.
+
+   Examples
+   - `Array` — elements in contiguous memory, reached by index in O(1).
+   - `Linked list` — nodes scattered in memory, joined by pointers; dynamic in size.
+   - `Stack` — LIFO; insertion and deletion at one end.
+   - `Queue` — FIFO; insertion at the rear, deletion at the front.
+   ```
+   ARRAY / LIST:   [10] - [20] - [30] - [40]
+                    one straight sequence
+   ```
+
+   Non-linear data structure
+   - A data structure in which elements are arranged `hierarchically` or as a network, so that one element may be connected to `many` others.
+   - It cannot be traversed in a single straight pass; recursion, or an explicit stack or queue, is required.
+   - It represents relationships that are not sequential.
+
+   Examples
+   - `Tree` — a hierarchy with one root and no cycles: binary tree, BST, AVL, B-tree, heap.
+   - `Graph` — vertices joined by edges, cycles allowed: road networks, social networks, routing tables.
+   ```
+   TREE                          GRAPH
+           A                       A ---- B
+         /   \                     |  \   |
+        B     C                    |    \ |
+       / \     \                   D ---- C
+      D   E     F
+   ```
+
+   Comparison
+
+   | Point | Linear | Non-linear |
+   |---|---|---|
+   | Arrangement | Sequential, one after another | Hierarchical or networked |
+   | Connections per element | One predecessor, one successor | Possibly many |
+   | Traversal | One pass, straightforward | Multiple paths; needs recursion |
+   | Levels | Single | Multiple |
+   | Memory utilisation | Often less efficient | Generally more efficient |
+   | Complexity of implementation | Simple | More complex |
+   | Search performance | O(n) typically | O(log n) in a balanced tree |
+   | Examples | Array, linked list, stack, queue | Tree, graph, heap |
+   | Applications | Buffering, scheduling, ordered lists | File systems, databases, networks, AI |
+
+   - Practical distinction: choose a `linear` structure when the data has a natural order, and a `non-linear` structure when it has a natural hierarchy (a file system, an organisation chart) or a network of relationships (a road map, a social network).
+
 3. **What are the operations performed on a data structure? What is Prefix, Postfix and Infix operation?** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105 (ET: AUST)]*
+
+   Answer:
+
+   Part 1 — operations performed on a data structure
+
+   - `Traversal` — visiting every element exactly once, to display or process it. Example: printing all elements of an array, or an inorder walk of a tree.
+   - `Search` — finding whether a given element is present and where. Linear search is O(n); binary search on sorted data is O(log n); a hash table gives O(1).
+   - `Insertion` — adding a new element at a specified position. Cost varies greatly: O(1) at the front of a linked list, O(n) at the front of an array.
+   - `Deletion` — removing an element and closing the gap.
+   - `Sorting` — arranging elements in ascending or descending order, using bubble, insertion, merge, quick or heap sort.
+   - `Merging` — combining two structures into one, as merge sort does.
+   - `Updating` — changing the value of an existing element.
+   - `Splitting` — dividing one structure into two, the counterpart of merging.
+   - `Copying` — duplicating the whole structure.
+
+   Cost of the main operations
+
+   | Structure | Access | Search | Insert | Delete |
+   |---|---|---|---|---|
+   | Array | O(1) | O(n) | O(n) | O(n) |
+   | Sorted array | O(1) | O(log n) | O(n) | O(n) |
+   | Linked list | O(n) | O(n) | O(1) at head | O(1) at head |
+   | Stack / Queue | O(n) | O(n) | O(1) | O(1) |
+   | Balanced BST | O(log n) | O(log n) | O(log n) | O(log n) |
+   | Hash table | – | O(1) avg | O(1) avg | O(1) avg |
+
+   Part 2 — infix, prefix and postfix
+
+   These are three notations for an arithmetic expression, differing only in `where the operator sits` relative to its operands.
+
+   `Infix` — operator `between` the operands
+   ```
+   A + B          (A + B) * C
+   ```
+   - The natural human form, but it needs precedence rules, associativity rules and brackets. A machine must parse all of that before it can evaluate anything.
+
+   `Prefix` (Polish notation) — operator `before` the operands
+   ```
+   + A B          * + A B C
+   ```
+   - No brackets and no precedence rules needed. Evaluated by scanning `right to left` with a stack.
+   - It is the `preorder` traversal of the expression tree.
+
+   `Postfix` (Reverse Polish notation) — operator `after` the operands
+   ```
+   A B +          A B + C *
+   ```
+   - Also needs no brackets. Evaluated by scanning `left to right` with a stack, which is why compilers and calculators use it.
+   - It is the `postorder` traversal of the expression tree.
+
+   Conversion examples
+
+   | Infix | Prefix | Postfix |
+   |---|---|---|
+   | A + B | + A B | A B + |
+   | A + B * C | + A * B C | A B C * + |
+   | (A + B) * C | * + A B C | A B + C * |
+   | A + B * C + D | + + A * B C D | A B C * + D + |
+
+   Evaluating a postfix expression
+   ```
+   12 7 3 − / 2 +
+
+   12       push          [12]
+    7       push          [12, 7]
+    3       push          [12, 7, 3]
+    −       pop 3, 7 -> 4 [12, 4]
+    /       pop 4, 12 -> 3 [3]
+    2       push          [3, 2]
+    +       pop 2, 3 -> 5 [5]
+
+   Result = 5      (check: 12 / (7−3) + 2 = 3 + 2 = 5 ✓)
+   ```
+   - A `stack` is used for all of these conversions and evaluations, which is why the topic always appears alongside stacks.
 
 4. **(b) Implement Array List using following integer value and show operational method of the following: 52, 50, 27, 66, 82.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
    i) Insert data into array list
@@ -6328,6 +6506,219 @@ Output: Not Balanced
    iii) Insert 99 into 2nd position
    iv) Show array list
 
+   Answer:
+
+   Given values: `52, 50, 27, 66, 82`
+
+   An ArrayList is a `dynamic array` — an array that grows automatically when it fills. It keeps the O(1) random access of an array while removing the fixed-size limitation.
+
+   Implementation
+   ```java
+   import java.util.ArrayList;
+
+   public class ArrayListDemo {
+       public static void main(String[] args) {
+           ArrayList<Integer> list = new ArrayList<>();
+
+           // Insert the given values
+           list.add(52);
+           list.add(50);
+           list.add(27);
+           list.add(66);
+           list.add(82);
+
+           System.out.println(list);        // [52, 50, 27, 66, 82]
+       }
+   }
+   ```
+   ```
+   index :   0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           | 52  | 50  | 27  | 66  | 82  |
+           +-----+-----+-----+-----+-----+
+   size = 5
+   ```
+
+   Operations demonstrated
+
+   1. `add(element)` — append at the end
+   ```java
+   list.add(95);          // [52, 50, 27, 66, 82, 95]
+   ```
+   - Cost `O(1)` amortised. When the internal array is full it is replaced by one of double the size and everything is copied, which is O(n), but this happens rarely enough that the average stays O(1).
+
+   2. `add(index, element)` — insert at a position
+   ```java
+   list.add(2, 40);       // [52, 50, 40, 27, 66, 82]
+   ```
+   - Cost `O(n)`, because every element from that index onwards shifts right.
+
+   3. `get(index)` — read
+   ```java
+   list.get(3);           // 66
+   ```
+   - Cost `O(1)` — this is the advantage of an array-backed list.
+
+   4. `set(index, element)` — update
+   ```java
+   list.set(1, 55);       // [52, 55, 27, 66, 82]
+   ```
+   - Cost `O(1)`.
+
+   5. `remove(index)` — delete by position
+   ```java
+   list.remove(0);        // [50, 27, 66, 82]
+   ```
+   - Cost `O(n)`, because the following elements shift left.
+
+   6. `indexOf(element)` — search
+   ```java
+   list.indexOf(66);      // 3
+   list.contains(27);     // true
+   ```
+   - Cost `O(n)` — a linear scan, since the list is not sorted.
+
+   7. `size()` and traversal
+   ```java
+   System.out.println(list.size());            // 5
+   for (int x : list) System.out.print(x + " ");   // 52 50 27 66 82
+   ```
+
+   8. `sort()`
+   ```java
+   Collections.sort(list);     // [27, 50, 52, 66, 82]
+   ```
+   - Cost `O(n log n)`.
+
+   Complexity summary
+
+   | Operation | Cost | Reason |
+   |---|---|---|
+   | get / set by index | `O(1)` | Direct index arithmetic |
+   | add at the end | `O(1)` amortised | Occasional doubling and copy |
+   | add at a position | O(n) | Shifting |
+   | remove by index | O(n) | Shifting |
+   | search (unsorted) | O(n) | Linear scan |
+   | sort | O(n log n) | Comparison sort |
+
+   ArrayList compared with an ordinary array and a LinkedList
+
+   | Point | Array | ArrayList | LinkedList |
+   |---|---|---|---|
+   | Size | Fixed | Grows automatically | Grows automatically |
+   | Access by index | O(1) | O(1) | O(n) |
+   | Insert at the front | O(n) | O(n) | `O(1)` |
+   | Insert at the end | O(1) | O(1) amortised | O(1) |
+   | Memory overhead | None | Some spare capacity | Pointer per node |
+   | Cache performance | Excellent | Excellent | Poor |
+
+   - Choose an `ArrayList` when random access dominates, and a `LinkedList` when insertions and deletions at the front dominate.
+
 5. **What is linear and Non-linear data structure? Write an example of data structure which represents logarithmic complexity?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 
+   Answer:
+
+   Part 1 — linear and non-linear data structures
+
+   `Linear data structure`
+   - Elements are arranged in a `sequence`, one after another. Each element has exactly one predecessor and one successor, apart from the first and last.
+   - The whole structure can be traversed in a `single pass`.
+   - Examples: `array`, `linked list`, `stack`, `queue`.
+   ```
+   [10] - [20] - [30] - [40]      one straight sequence
+   ```
+
+   `Non-linear data structure`
+   - Elements are arranged `hierarchically` or as a network, so one element may be connected to `many` others.
+   - Traversal requires recursion, or an explicit stack or queue; a single straight pass is not possible.
+   - Examples: `tree` (binary tree, BST, AVL, B-tree, heap) and `graph`.
+   ```
+   TREE                      GRAPH
+         A                     A ---- B
+       /   \                   |   \  |
+      B     C                  D ---- C
+     / \
+    D   E
+   ```
+
+   Comparison
+
+   | Point | Linear | Non-linear |
+   |---|---|---|
+   | Arrangement | Sequential | Hierarchical or networked |
+   | Connections | One before, one after | Possibly many |
+   | Traversal | Single pass | Multiple paths, recursive |
+   | Levels | One | Many |
+   | Complexity | Simple | More complex |
+   | Search | Typically O(n) | O(log n) in a balanced tree |
+   | Examples | Array, linked list, stack, queue | Tree, graph, heap |
+
+   Part 2 — a data structure with logarithmic complexity
+
+   The clearest examples are:
+
+   - `Balanced Binary Search Tree` — AVL tree or Red-Black tree. Search, insertion and deletion are all `O(log n)`, because the tree's height is kept at log₂ n and each comparison discards half the remaining nodes.
+   ```
+                       50
+                    /      \
+                  30        70
+                 /  \      /   \
+               20    40  60     80
+
+   Searching for 60: 60 > 50 -> right ; 60 < 70 -> left ; found.
+   3 comparisons for 7 nodes; about 20 for a million.
+   ```
+
+   - `Heap` — insertion and deletion of the root are `O(log n)`, since the element travels at most the height of the tree.
+
+   - `Sorted array with binary search` — search is `O(log n)`, although insertion and deletion remain O(n).
+
+   - `B-tree and B+ tree` — `O(log n)` with a very large base, so a database index of a million records needs only about 3 disk reads.
+
+   - `Skip list` — probabilistically O(log n), used in Redis and LevelDB.
+
+   Why the logarithm appears
+   - Each step `halves` the amount of data still to consider. After k steps, n/2^k items remain, so the search ends when 2^k = n, giving k = log₂ n.
+   - Practical significance: doubling the data adds only `one` extra step. Going from a thousand to a million records raises the cost from about 10 comparisons to about 20 — which is why balanced trees and B-trees underpin every database index.
+
 6. **Difference between linear and nonlinear data structure.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Linear data structure | Non-linear data structure |
+   |---|---|---|
+   | Arrangement of elements | `Sequential` — one after another | `Hierarchical or networked` |
+   | Relationship | Each element has one predecessor and one successor | An element may connect to many others |
+   | Levels | Single level | Multiple levels |
+   | Traversal | Complete in a `single pass` | Needs multiple paths; recursion or an explicit stack or queue |
+   | Ease of implementation | Simple | More complex |
+   | Memory utilisation | Often inefficient — an array wastes unused slots | Generally more efficient |
+   | Search complexity | Typically O(n) | O(log n) in a balanced tree |
+   | Time to traverse | Grows linearly with size | Depends on the structure |
+   | Data volume suited to | Small to moderate | Large and hierarchical |
+   | Examples | Array, linked list, stack, queue | Tree, graph, heap, trie |
+   | Applications | Ordered lists, buffering, scheduling, undo/redo | File systems, database indexes, routing tables, social networks, AI |
+
+   Diagrams
+   ```
+   LINEAR                                 NON-LINEAR
+
+   Array / Linked list:                   Tree:
+     [10] - [20] - [30] - [40]                    A
+                                                /   \
+   Stack (LIFO):                               B     C
+      [30]                                    / \     \
+      [20]                                   D   E     F
+      [10]
+                                          Graph:
+   Queue (FIFO):                            A ---- B
+      in -> [10][20][30] -> out             |  \   |
+                                            D ---- C
+   ```
+
+   The essential difference
+   - In a `linear` structure the data has one natural order, so it can be walked from start to finish. In a `non-linear` structure the data has branches, so at each step there may be several directions to go — which is why traversal needs recursion and why several different traversal orders (preorder, inorder, postorder, level order, DFS, BFS) exist at all.
+
+   Choosing between them
+   - Use a `linear` structure when the data is naturally sequential: a list of records, a buffer, a task queue.
+   - Use a `non-linear` structure when the data is naturally hierarchical (a file system, an organisation chart, an XML document) or a network (a road map, a social graph, a routing table), or when O(log n) search is required.
