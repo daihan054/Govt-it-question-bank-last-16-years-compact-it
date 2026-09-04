@@ -20248,9 +20248,150 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
+   Answer: Table design
+   ```sql
+   CREATE TABLE Student (
+       roll_number    INT           PRIMARY KEY,
+       name           VARCHAR(100)  NOT NULL,
+       department     VARCHAR(50)   NOT NULL,
+       email          VARCHAR(100)  UNIQUE NOT NULL,
+       admission_date DATE          NOT NULL DEFAULT CURRENT_DATE
+   );
+   ```
+
+   Data type for each column
+
+   | Column | Data type | Why |
+   |---|---|---|
+   | Roll Number | `INT` | A whole number, fixed and small. Integer comparison and indexing are the fastest. Use `VARCHAR(15)` only if the roll carries letters or leading zeros, as in "CSE-2021-005" |
+   | Name | `VARCHAR(100)` | Names vary in length, so a variable-length type wastes no space. `CHAR` would pad every short name with blanks |
+   | Department | `VARCHAR(50)` | Same reason. If the list of departments is fixed and short, a `dept_id INT` foreign key to a `Department` table is better still |
+   | Email | `VARCHAR(100)` | Variable length; 100 covers practical addresses. Mark it `UNIQUE`, since no two students share an e-mail |
+   | Admission Date | `DATE` | Stores year, month and day and allows date arithmetic and `BETWEEN`. Never store a date as `VARCHAR` — sorting and comparison then break |
+
+   Primary key — `roll_number`
+   - It is `unique`, since the institute issues one roll number to one student and never repeats it.
+   - It is `never NULL`; every admitted student is given a roll number at admission.
+   - It is `stable` — a student's roll number does not change, while a name, department or e-mail can.
+   - It is `small and numeric`, so the index is compact and joins from other tables (`Result`, `Attendance`, `Fees`) are fast.
+
+   Why not the other columns
+   - `Name` — not unique. Two students can both be "Rahim Uddin", and a name can also be corrected later.
+   - `Department` — clearly not unique; hundreds of students share one.
+   - `Email` — it `is` unique, so it is a valid `candidate key` and should carry a `UNIQUE` constraint. It is not chosen as the primary key because it can change, it may be missing for a new student, and it is a long string that makes every foreign key in every child table large.
+
+   - If the institute has no reliable natural key, a `surrogate key` — `student_id INT AUTO_INCREMENT PRIMARY KEY` — is used instead, with `roll_number` kept as a `UNIQUE` column.
+
 2. **(c) Describe the difference between CHAR and VARCHAR data type.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
+   Answer: Both store character strings. The difference is whether the length is `fixed` or `variable`.
+
+   CHAR(n)
+   - A `fixed-length` type. Every value takes exactly n characters. A shorter value is padded with trailing spaces.
+   - `CHAR(10)` storing 'BD' occupies 10 characters — 'BD' plus 8 spaces.
+   - Because every row's value is the same size, the DBMS knows exactly where each value starts, so access is slightly faster.
+   - Trailing spaces are usually stripped when the value is read back, which can surprise a comparison.
+
+   VARCHAR(n)
+   - A `variable-length` type. Only the actual characters are stored, plus 1 or 2 bytes recording the length. n is only the maximum allowed.
+   - `VARCHAR(50)` storing 'Rahim' occupies about 6 bytes, not 50.
+   - Saves a large amount of space when values differ in length, which is the usual case.
+
+   ```
+   CHAR(10) storing 'BD'         VARCHAR(10) storing 'BD'
+   +---+---+---+---+---+...      +---+---+---+
+   | B | D |   |   |   |         | 2 | B | D |
+   +---+---+---+---+---+...      +---+---+---+
+      10 characters always        length byte + 2 characters
+   ```
+
+   | Point | CHAR | VARCHAR |
+   |---|---|---|
+   | Length | Fixed at n | Variable, up to n |
+   | Padding | Padded with spaces | No padding |
+   | Storage | Always n characters | Actual length + 1-2 length bytes |
+   | Space use | Wasteful for varying data | Efficient |
+   | Speed | Slightly faster, fixed offset | Slightly slower, length must be read |
+   | Fragmentation on update | None — size never changes | Possible, if the new value is longer |
+   | Max length | 255 in MySQL | 65,535 in MySQL (row limit applies) |
+   | Best for | Values of one known length | Values of differing length |
+
+   When to use which
+   - `CHAR` — country code `CHAR(2)`, gender `CHAR(1)`, PIN `CHAR(4)`, blood group `CHAR(3)`, a fixed-format account number. Anything where every value genuinely has the same length.
+   - `VARCHAR` — name, address, e-mail, designation, remarks. Anything where length varies.
+
+   - A practical warning: comparison of `CHAR` values ignores trailing spaces in most systems, so `'BD'` and `'BD  '` compare equal, while in `VARCHAR` they may not. This causes hard-to-find bugs when the same value is stored in a `CHAR` column in one table and a `VARCHAR` column in another.
+
 3. **What is the domain in a relational database? Explain with an example. Show how you would use Alter table SQL command to add a domain on a database table.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 916 (ET: N/A)]*
+
+   Answer: A `domain` is the set of all `permitted values` that an attribute (column) may take. It defines the data type, the length, the format and the range that a value must satisfy to be valid.
+
+   - Example domains:
+   ```
+   Age            : integer, 18 to 60
+   Gender         : 'M' or 'F'
+   Email          : a string containing '@'
+   Salary         : decimal, greater than 0
+   Blood group    : 'A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'
+   ```
+   - Every value in a column must belong to that column's domain. Enforcing this is called `domain integrity`, one of the integrity rules of the relational model.
+   - Domains are `atomic`: one cell holds one indivisible value, not a list. That is the requirement of `1NF`.
+
+   Example
+   ```sql
+   CREATE TABLE Employee (
+       emp_id  INT PRIMARY KEY,
+       name    VARCHAR(50) NOT NULL,
+       age     INT,
+       gender  CHAR(1),
+       salary  DECIMAL(10,2)
+   );
+   ```
+   - The declared data types already set part of the domain — `age` can only hold integers. But nothing yet stops an age of 200 or a gender of 'X', so a `CHECK` constraint is added.
+
+   Adding a domain constraint with ALTER TABLE
+   ```sql
+   -- restrict age to a valid working range
+   ALTER TABLE Employee
+   ADD CONSTRAINT chk_age CHECK (age BETWEEN 18 AND 60);
+
+   -- restrict gender to two values
+   ALTER TABLE Employee
+   ADD CONSTRAINT chk_gender CHECK (gender IN ('M', 'F'));
+
+   -- salary must be positive
+   ALTER TABLE Employee
+   ADD CONSTRAINT chk_salary CHECK (salary > 0);
+
+   -- the column must always have a value
+   ALTER TABLE Employee
+   MODIFY name VARCHAR(50) NOT NULL;
+   ```
+
+   Testing it
+   ```sql
+   INSERT INTO Employee VALUES (101, 'Rahim', 30, 'M', 45000);   -- accepted
+   INSERT INTO Employee VALUES (102, 'Karim', 70, 'M', 45000);   -- rejected, age
+   INSERT INTO Employee VALUES (103, 'Jamal', 30, 'X', 45000);   -- rejected, gender
+   ```
+
+   Removing a domain constraint
+   ```sql
+   ALTER TABLE Employee DROP CONSTRAINT chk_age;     -- Oracle, PostgreSQL, SQL Server
+   ALTER TABLE Employee DROP CHECK chk_age;          -- MySQL
+   ```
+
+   A named domain object
+   - The SQL standard also allows a reusable domain, supported by PostgreSQL and Oracle 23c:
+   ```sql
+   CREATE DOMAIN age_domain AS INT CHECK (VALUE BETWEEN 18 AND 60);
+
+   ALTER TABLE Employee
+   ALTER COLUMN age TYPE age_domain;
+   ```
+   - The advantage is that the rule is written once and reused by every table that needs it, so a change is made in one place.
+
+   - Points to note: always `name` the constraint, so the error message identifies the rule and the constraint can be dropped by name. Adding a constraint to a table that already holds bad rows fails, so the existing data must be cleaned first.
 
 ## NoSQL, NewSQL & Modern Databases (2)
 
