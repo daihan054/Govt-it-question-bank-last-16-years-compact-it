@@ -9983,53 +9983,29 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    Dividend = 11100 000 = 11100000
    ```
 
-   Step 2 — modulo-2 division (XOR, no borrow)
+   Step 2 — modulo-2 division (XOR at every step, no borrowing)
    ```
-               11011
-         ---------------
-   1001 ) 11100000
-          1001
-          ----
-           1010
-           1001
-           ----
-            0110
-            0000
-            ----
-             1100
-             1001
-             ----
-              1010
-              1001
-              ----
-               011   <- remainder (3 bits) = 011
+           1 1 1 1 1        <- quotient (discarded)
+         -------------
+   1001 ) 1 1 1 0 0 0 0 0
+          1 0 0 1
+          -------
+          0 1 1 1 0 0 0 0
+            1 0 0 1
+            -------
+          0 0 1 1 1 0 0 0
+              1 0 0 1
+              -------
+          0 0 0 1 1 1 0 0
+                1 0 0 1
+                -------
+          0 0 0 0 1 1 1 0
+                  1 0 0 1
+                  -------
+          0 0 0 0 0 1 1 1
+                    -----
+                     1 1 1   <- REMAINDER (3 bits)
    ```
-   - Reading the remainder as 3 bits gives `111` when the division is carried out to the full 8-bit dividend. Working it through carefully:
-
-   ```
-   11100000 ÷ 1001
-
-   11100000
-   1001
-   --------
-    1010000
-    1001
-    -------
-     0110000
-     0000
-     -------
-      110000
-      1001
-      ------
-       01100
-       0000
-       -----
-        1100
-        1001
-        ----
-         101  -> remainder bits
-   ```
-   - Performing the full modulo-2 division gives `remainder = 111`.
 
    Step 3 — form the codeword
    ```
@@ -10037,7 +10013,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    ```
 
    Step 4 — verification at the receiver
-   - The receiver divides the received 11100111 by 1001. If the remainder is `000`, no error is detected and the CRC bits are stripped off. A non-zero remainder means the frame is corrupt and it is discarded.
+   - The receiver divides the received 11100111 by 1001. If the remainder is `000`, no error is detected and the 3 CRC bits are stripped off. A non-zero remainder means the frame is corrupt, so it is discarded and retransmitted.
 
    Answer
 
@@ -10049,7 +10025,7 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    | Remainder (CRC) | `111` |
    | Transmitted codeword | `11100111` |
 
-   - Points to remember: the number of appended zeros is always (length of divisor − 1); subtraction in this division is XOR, with no borrowing; and the quotient is discarded — only the remainder matters.
+   - Points to remember: the number of appended zeros is always (length of divisor − 1); subtraction here is XOR, with no borrowing; the quotient is discarded, since only the remainder matters; and the remainder must be written with exactly that many bits, padding with leading zeros if necessary.
 
 10. **A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162. What will be the capacity for this channel?** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
 
@@ -10201,13 +10177,12 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
     Step 1 — convert the polynomial to binary
     ```
-    x^3 + 1  ->  x^3 + 0·x^2 + 0·x + 1  ->  1001
+    x^3 + 1  ->  1·x^3 + 0·x^2 + 0·x^1 + 1  ->  1001
     ```
     - The generator has 4 bits, so its degree is 3, and `3 zeros` are appended to the message.
 
     Given
-    - Message = 11001001
-    - Divisor = 1001
+    - Message = 11001001, Divisor = 1001
 
     Step 2 — append 3 zeros
     ```
@@ -10216,22 +10191,26 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
     Step 3 — modulo-2 division (XOR, no borrowing)
     ```
-    11001001000 ÷ 1001
-
-    11001001000
-    1001
-    --------
-     1011001000
-     1001
-     ----
-      0101001000
-       1001 
-       ----
-        ...
-    carrying the division through to the end gives
-
-    Remainder = 011
+    1001 ) 1 1 0 0 1 0 0 1 0 0 0
+           1 0 0 1
+           -------
+           0 1 0 1 1 0 0 1 0 0 0
+             1 0 0 1
+             -------
+           0 0 0 1 0 0 0 1 0 0 0
+                 1 0 0 1
+                 -------
+           0 0 0 0 0 0 1 1 0 0 0
+                       1 0 0 1
+                       -------
+           0 0 0 0 0 0 0 1 0 1 0
+                         1 0 0 1
+                         -------
+           0 0 0 0 0 0 0 0 0 1 1
+                           -----
+                             0 1 1   <- REMAINDER (3 bits)
     ```
+    - Note that a step is skipped wherever the leading bit is already 0 — the divisor is only XORed when the current leading bit is 1.
 
     Step 4 — form the transmitted frame
     ```
@@ -10252,9 +10231,9 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
     | Message to be transmitted | `11001001011` |
 
     Step 5 — check at the receiver
-    - The receiver divides 11001001011 by 1001. The remainder is `000`, confirming that no error is detected, and the last 3 bits are removed to recover the original message.
+    - The receiver divides 11001001011 by 1001. The remainder is `000`, confirming no error is detected, and the last 3 bits are removed to recover the original message 11001001.
 
-    - Rules to remember: the number of appended zeros equals the degree of the generator polynomial; subtraction in this division is XOR; the quotient is discarded; and the remainder must be padded to exactly the degree of the generator (here 3 bits, so 11 is written as 011).
+    - Rules to remember: the number of appended zeros equals the degree of the generator; subtraction is XOR; the quotient is discarded; and the remainder must be padded to exactly the degree of the generator — here 3 bits, so 11 is written as `011`.
 
 ## Network Topologies (14)
 
