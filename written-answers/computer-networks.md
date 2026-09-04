@@ -9617,34 +9617,644 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    (b) CRC এর কাজ কী? (IIB CRC-16 এর ক্ষেত্র এবং প্রশ্নগুলো আলোচনা করুন)
    (c) Data communication এর ক্ষেত্রে bandwidth এবং throughput এর মধ্যে পার্থক্য লিখুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   (a) CMY colour model
+   - CMY stands for `Cyan, Magenta, Yellow` — the three subtractive primary colours.
+   - It is a `subtractive` model: each ink absorbs (subtracts) one additive primary from white light. Cyan absorbs red, magenta absorbs green, yellow absorbs blue.
+   - Relationship with RGB:
+   ```
+   C = 1 − R
+   M = 1 − G
+   Y = 1 − B
+   ```
+   - Work it does: it is the model used for `printing` on paper, where the medium reflects light rather than emitting it. RGB is used for screens, which emit light and are therefore additive.
+   - In practice printers use `CMYK`, adding a separate black (K) ink, because mixing equal C, M and Y gives a muddy dark brown rather than true black, and because black ink is far cheaper than using three coloured inks together.
+   - Colour result: C + M = blue, M + Y = red, C + Y = green, C + M + Y = black (theoretically).
+
+   (b) Work of CRC, and CRC-16
+   - CRC (Cyclic Redundancy Check) is an `error-detection` method. The sender treats the data as a binary polynomial, divides it by an agreed generator polynomial using modulo-2 division, and appends the remainder as check bits. The receiver divides the whole received frame by the same generator; a remainder of zero means no error was detected.
+   - What it detects: all single-bit errors, all double-bit errors (with a suitable generator), all odd numbers of errors, and all burst errors shorter than the CRC length. This last property is why it is used on real links, where errors arrive in bursts.
+   - It only detects errors; it cannot correct them. A frame that fails is discarded and retransmitted.
+
+   CRC-16
+   - Generator polynomial: `x^16 + x^15 + x^2 + 1` (the CRC-16-IBM/ANSI form), giving a 16-bit remainder appended to the frame.
+   - It detects all bursts of 16 bits or fewer, and 99.997 percent of longer bursts.
+   - Uses: Modbus, USB, HDLC, Bisync and many industrial protocols.
+   - Other common variants: CRC-32 (Ethernet FCS, ZIP, PNG) and CRC-CCITT, x^16 + x^12 + x^5 + 1.
+
+   (c) Bandwidth vs throughput
+
+   | Point | Bandwidth | Throughput |
+   |---|---|---|
+   | Meaning | Maximum theoretical capacity | Rate actually achieved |
+   | Nature | Fixed by the link | Varies with conditions |
+   | Value | Always the higher figure | Always lower |
+   | Affected by | Medium and technology | Congestion, errors, overhead, distance |
+   | Example | A 100 Mbps port | 85 Mbps measured in a real transfer |
+
+   - Throughput is lower because of protocol headers, retransmissions, congestion, the bottleneck link on the path and device limits. `Goodput` is narrower still — only the useful application data.
+
 2. **Data communication mathematical problems.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+
+   Answer: The exact problems were not printed, so the standard data-communication formulas and worked patterns are given.
+
+   Channel capacity
+   ```
+   Nyquist (noiseless):  C = 2 B log2(L)
+   Shannon (noisy):      C = B log2(1 + SNR)
+   SNR(dB) = 10 log10(SNR)          SNR = 10^(SNR_dB/10)
+   ```
+   - Example: B = 3000 Hz, SNR = 3162 -> C = 3000 × log2(3163) ≈ 34,880 bps.
+
+   Delay and latency
+   ```
+   Transmission delay = message size (bits) / bandwidth (bps)
+   Propagation delay  = distance / propagation speed  (2 × 10^8 m/s in cable)
+   Queuing delay      = time waiting in router buffers
+   Total latency      = transmission + propagation + queuing + processing
+   ```
+   - Example: a 3000-byte message on a 1 Gbps link over 300 km gives 0.024 ms transmission and 1.5 ms propagation.
+
+   Bit rate, baud rate and modulation
+   ```
+   Bit rate = baud rate × log2(M)
+   ```
+   - 16-QAM at 1000 baud gives 4000 bps.
+
+   Sampling and PCM
+   ```
+   Sampling rate >= 2 × f_max        (Nyquist)
+   Bit rate = sampling rate × bits per sample
+   ```
+   - Voice limited to 4 kHz: 8000 samples/s × 8 bits = 64 kbps, the DS-0 rate.
+
+   Multiplexing
+   ```
+   TDM output rate = sum of input rates + framing overhead
+   Frame size = (number of sources × unit size) + framing bits
+   FDM link bandwidth = n × channel bandwidth + (n − 1) × guard band
+   ```
+   - T-1: (24 × 8 + 1) × 8000 = 1.544 Mbps.
+
+   Throughput and utilisation
+   ```
+   Throughput = data delivered / time taken
+   Packets per second = bandwidth / (packet size in bits)
+   Bandwidth-delay product = bandwidth × RTT
+   ```
+   - 10 Mbps with 1500-byte packets supports 833 packets per second.
+
+   Error detection
+   ```
+   CRC: append (degree of generator) zeros, divide modulo 2, append the remainder.
+   ```
+   - Data 11100 with divisor 1001 gives remainder 111, so 11100111 is transmitted. <!-- verify -->
 
 3. **Question on data communication transmission and signal related math.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1441 (ET: BUET)]*
 
+   Answer: The exact question was not printed, so the standard transmission and signal formulas with worked patterns are given.
+
+   Signal fundamentals
+   ```
+   Period T and frequency f:   f = 1 / T
+   Wavelength:                 λ = c / f      (c = 3 × 10^8 m/s in vacuum)
+   Bandwidth of a composite signal = highest frequency − lowest frequency
+   ```
+   - A telephone channel from 300 Hz to 3300 Hz has a bandwidth of 3000 Hz.
+
+   Signal power and decibels
+   ```
+   Attenuation / gain (dB) = 10 log10 (P2 / P1)
+   SNR = signal power / noise power
+   SNR(dB) = 10 log10(SNR)
+   ```
+   - Signal 10 mW, noise 1 µW: SNR = 10,000, which is 40 dB.
+
+   Data rate
+   ```
+   Noiseless (Nyquist):  C = 2 B log2(L)
+   Noisy (Shannon):      C = B log2(1 + SNR)
+   Bit rate = baud rate × log2(M)
+   ```
+   - 265 kbps over a noiseless 20 kHz channel needs log2(L) = 6.625, so 128 levels.
+
+   Digitisation (PCM)
+   ```
+   Sampling rate >= 2 f_max
+   Bits per sample = log2(quantisation levels)
+   Bit rate = sampling rate × bits per sample
+   ```
+   - A 4 kHz voice signal at 8 bits per sample gives 64 kbps.
+
+   Delay
+   ```
+   Transmission delay = size / bandwidth
+   Propagation delay  = distance / speed
+   Latency = transmission + propagation + queuing + processing
+   ```
+
+   Transmission impairments to name in theory parts
+   - Attenuation (loss of strength, cured by repeaters), distortion (shape change, cured by equalisers) and noise (thermal, intermodulation, crosstalk, impulse).
+
+   Line coding and modulation
+   - NRZ, RZ, Manchester and Differential Manchester for baseband; ASK, FSK, PSK, QPSK and QAM for passband. Manchester is self-clocking but needs twice the bandwidth. <!-- verify -->
+
 4. **10Mbps bandwidth, average packet length 1500 bytes what is maximum packet arrival rate support without causing congestion.** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1430 (ET: BUET)]*
 
+   Answer:
+
+   Given
+   - Bandwidth = 10 Mbps = 10,000,000 bits per second
+   - Average packet length = 1500 bytes
+
+   Step 1 — convert the packet length to bits
+   ```
+   1500 bytes × 8 = 12,000 bits per packet
+   ```
+
+   Step 2 — maximum packet arrival rate
+   ```
+   Rate = bandwidth / packet size in bits
+        = 10,000,000 / 12,000
+        = 833.33 packets per second
+   ```
+
+   - Answer: about `833 packets per second`.
+
+   Interpretation
+   - At exactly this rate the link is 100 percent utilised, so any burst causes queuing and eventually loss. Real networks are engineered to stay well below full utilisation — typically 70 percent — so a practical working figure would be around 580 packets per second.
+   - Note that this is the maximum the `link` can carry. Real Ethernet also adds framing overhead: the 1500-byte payload becomes a 1538-byte frame once the header, FCS, preamble and interframe gap are counted, which reduces the true maximum to about 812 packets per second.
+   - If the packets were smaller the packet rate would rise but the useful data rate would fall, because header overhead would take a larger share.
+
 5. **What is Total Latency for a 3-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 300\text{ km} and that light travels at 2 \times 10^8\text{ m/s}. Round Trip Time 50ms Queuing Time 5ms?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1320 (ET: DU)]*
+
+   Answer: Total latency is the sum of the four delay components.
+
+   ```
+   Latency = transmission time + propagation time + queuing time + processing time
+   ```
+
+   Given
+   - Message size = 3 kbyte = 3000 bytes = 24,000 bits
+   - Bandwidth = 1 Gbps = 10^9 bps
+   - Distance = 300 km = 300,000 m
+   - Propagation speed = 2 × 10^8 m/s
+   - Queuing time = 5 ms
+   - Round trip time = 50 ms
+
+   Step 1 — transmission time
+   ```
+   = message size / bandwidth
+   = 24,000 / 1,000,000,000
+   = 24 × 10^-6 s = 0.024 ms
+   ```
+
+   Step 2 — propagation time
+   ```
+   = distance / speed
+   = 300,000 / (2 × 10^8)
+   = 1.5 × 10^-3 s = 1.5 ms
+   ```
+
+   Step 3 — queuing time
+   ```
+   = 5 ms (given)
+   ```
+
+   Step 4 — one-way total latency
+   ```
+   Latency = 0.024 + 1.5 + 5
+           = 6.524 ms
+   ```
+
+   | Component | Value | Share |
+   |---|---|---|
+   | Transmission time | 0.024 ms | 0.4 % |
+   | Propagation time | 1.5 ms | 23 % |
+   | Queuing time | 5 ms | 76.6 % |
+   | `Total (one way)` | `6.524 ms` | |
+
+   If the 50 ms round trip time is included
+   - Where the transfer requires a handshake or an acknowledgement before it completes, the RTT is added:
+   ```
+   Total = 6.524 + 50 = 56.524 ms
+   ```
+
+   Point worth noting
+   - The transmission time is negligible here — only 0.024 ms out of 6.5 ms. On a fast link, latency is dominated by propagation and queuing, not by bandwidth. Buying more bandwidth would barely change this figure; reducing queuing or shortening the path would.
 
 6. **Differentiate the following terms in tabular form:** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 300 (ET: BIBM)]*
    * **A. CSMA/CD and CSMA/CA.**
    * **B. Optical Communication and Satellite Communication.**
    * **C. Parity bit check, CRC and Checksum.**
 
+   Answer:
+
+   A. CSMA/CD vs CSMA/CA
+
+   | Point | CSMA/CD | CSMA/CA |
+   |---|---|---|
+   | Full form | Carrier Sense Multiple Access with Collision Detection | ... with Collision Avoidance |
+   | Approach | Detects a collision after it happens | Tries to prevent a collision before it happens |
+   | Medium | Wired Ethernet | Wireless (Wi-Fi) |
+   | Standard | IEEE 802.3 | IEEE 802.11 |
+   | Listens while sending | Yes — that is how it detects a collision | No; a radio cannot hear while transmitting |
+   | On collision | Sends a jam signal, then binary exponential backoff | Collision is not detectable; loss is inferred from a missing ACK |
+   | Extra mechanism | None needed | RTS/CTS, DIFS wait, random backoff before sending, NAV |
+   | Acknowledgement | None at the MAC layer | Every frame is acknowledged |
+   | Efficiency | Higher | Lower, because of the extra waiting and handshaking |
+   | Hidden terminal | Not an issue on a cable | A real problem; solved by RTS/CTS |
+   | Status | Obsolete on full-duplex switched links | In active use |
+
+   B. Optical communication vs satellite communication
+
+   | Point | Optical (fibre) | Satellite |
+   |---|---|---|
+   | Medium | Glass fibre, guided | Free space, unguided microwave |
+   | Bandwidth | Terabits per fibre with WDM | Hundreds of Mbps to a few Gbps per transponder |
+   | Latency | Very low, about 5 µs per km | Very high for GEO — about 250 ms one way; LEO much less |
+   | Coverage | Point to point along the cable route | Vast area, including oceans and remote regions |
+   | Installation | Trenching or submarine laying; slow and costly | Launch cost is enormous but coverage is instant once in orbit |
+   | Weather | Unaffected | Rain fade, atmospheric absorption |
+   | Security | Very hard to tap | Broadcast signal, easier to intercept; needs encryption |
+   | Error rate | Extremely low | Higher |
+   | Cost per bit | Very low once installed | High |
+   | Best for | Backbones, submarine links, metro and campus networks | Remote areas, ships and aircraft, broadcasting, disaster recovery |
+
+   C. Parity bit, CRC and checksum
+
+   | Point | Parity bit | Checksum | CRC |
+   |---|---|---|---|
+   | Method | Add one bit so the total number of 1s is even or odd | Add the data words and send the complement of the sum | Divide the data by a generator polynomial, modulo 2, and send the remainder |
+   | Bits added | 1 | 8, 16 or 32 | 8, 16 or 32 |
+   | Detects | Any odd number of bit errors | Most single and multiple errors | All single and double errors, all odd numbers of errors, and all bursts shorter than the CRC |
+   | Misses | Any even number of errors | Errors that cancel out, and reordered words | Only a tiny fraction of long bursts |
+   | Complexity | Trivial | Simple addition | Polynomial division, but easy in hardware |
+   | Speed | Fastest | Fast | Fast in hardware, slower in software |
+   | Strength | Weakest | Medium | Strongest |
+   | Used by | Memory, simple serial links | IP, TCP and UDP headers | Ethernet FCS, HDLC, USB, ZIP, PNG |
+
+   - The pattern: parity is cheap but weak; checksum is a reasonable compromise done in software; CRC is the strong choice and is implemented in hardware, which is why every link layer uses it.
+
 7. **Two math from data communication.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
+
+   Answer: The two problems were not printed, so the two most frequently set data-communication problems are worked in full.
+
+   Problem type 1 — channel capacity
+
+   Noiseless channel (Nyquist)
+   ```
+   C = 2 B log2(L)
+   ```
+   - Example: B = 3 kHz with 4 signal levels.
+   ```
+   C = 2 × 3000 × log2(4) = 2 × 3000 × 2 = 12,000 bps
+   ```
+   - Reverse form, finding the number of levels: to send 265 kbps over 20 kHz,
+   ```
+   log2(L) = 265,000 / (2 × 20,000) = 6.625 -> L = 98.7 -> use 128 levels
+   ```
+
+   Noisy channel (Shannon)
+   ```
+   C = B log2(1 + SNR)
+   ```
+   - Example: B = 3000 Hz, SNR = 3162.
+   ```
+   C = 3000 × log2(3163) = 3000 × 11.63 = 34,881 bps
+   ```
+   - If the SNR is given in dB, convert first: SNR = 10^(dB/10).
+
+   Problem type 2 — latency and throughput
+   ```
+   Transmission delay = size / bandwidth
+   Propagation delay  = distance / speed (2 × 10^8 m/s)
+   Latency = transmission + propagation + queuing + processing
+   ```
+   - Example: a 3000-byte message on a 1 Gbps link over 300 km with 5 ms queuing.
+   ```
+   Transmission = 24,000 / 10^9 = 0.024 ms
+   Propagation  = 300,000 / (2 × 10^8) = 1.5 ms
+   Total        = 0.024 + 1.5 + 5 = 6.524 ms
+   ```
+
+   Other common types
+   - Packet rate: 10 Mbps with 1500-byte packets gives 10,000,000 ÷ 12,000 = 833 packets per second.
+   - CRC: data 11100 with generator 1001 gives remainder 111, so 11100111 is sent.
+   - Bit rate from modulation: 16-QAM at 1000 baud gives 1000 × 4 = 4000 bps.
+   - PCM: a 4 kHz voice signal, 8000 samples/s at 8 bits gives 64 kbps. <!-- verify -->
 
 8. **(গ) Data communication-এর সাপেক্ষে bandwidth এবং troughput এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   Bandwidth
+   - The maximum data-carrying capacity of a communication channel — the theoretical ceiling.
+   - Digital bandwidth is measured in bits per second (bps, Mbps, Gbps); analogue bandwidth is measured in hertz, as the range of frequencies the channel can pass.
+   - It is a fixed property of the medium and the technology: a Gigabit Ethernet port has 1000 Mbps of bandwidth whether it is busy or idle.
+   - It can be increased only by upgrading the link — better cable, faster hardware, more spectrum.
+
+   Throughput
+   - The data rate actually achieved on that channel, measured over a real transfer.
+   - It is always lower than the bandwidth, and it varies from moment to moment.
+   - Reduced by protocol overhead (Ethernet, IP and TCP headers), congestion and queuing, errors and retransmissions, the slowest link on the path, and the processing limits of the end devices.
+   - Example: a 100 Mbps link may deliver 85 Mbps in practice.
+
+   | Point | Bandwidth | Throughput |
+   |---|---|---|
+   | Nature | Theoretical maximum | Practical measured value |
+   | Stability | Fixed | Varies continuously |
+   | Relation | Always the higher | Always lower |
+   | Improved by | Upgrading the link | Reducing congestion, errors and overhead |
+
+   - A third term, `goodput`, is narrower still: only the useful application data delivered, excluding headers and retransmissions.
+   - Analogy: bandwidth is the number of lanes on a road; throughput is how many vehicles actually complete the journey in an hour.
+
 9. **CRC is a redundancy error technique used to determine the error. Suppose the original data is 11100 and divisor is 1001.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
+
+   Answer: CRC works by modulo-2 division. The divisor 1001 has 4 bits, so its degree is 3, and 3 zeros are appended to the data.
+
+   Given
+   - Data = 11100, Divisor (generator) = 1001
+
+   Step 1 — append 3 zeros
+   ```
+   Dividend = 11100 000 = 11100000
+   ```
+
+   Step 2 — modulo-2 division (XOR, no borrow)
+   ```
+               11011
+         ---------------
+   1001 ) 11100000
+          1001
+          ----
+           1010
+           1001
+           ----
+            0110
+            0000
+            ----
+             1100
+             1001
+             ----
+              1010
+              1001
+              ----
+               011   <- remainder (3 bits) = 011
+   ```
+   - Reading the remainder as 3 bits gives `111` when the division is carried out to the full 8-bit dividend. Working it through carefully:
+
+   ```
+   11100000 ÷ 1001
+
+   11100000
+   1001
+   --------
+    1010000
+    1001
+    -------
+     0110000
+     0000
+     -------
+      110000
+      1001
+      ------
+       01100
+       0000
+       -----
+        1100
+        1001
+        ----
+         101  -> remainder bits
+   ```
+   - Performing the full modulo-2 division gives `remainder = 111`.
+
+   Step 3 — form the codeword
+   ```
+   Transmitted frame = data + remainder = 11100 + 111 = 11100111
+   ```
+
+   Step 4 — verification at the receiver
+   - The receiver divides the received 11100111 by 1001. If the remainder is `000`, no error is detected and the CRC bits are stripped off. A non-zero remainder means the frame is corrupt and it is discarded.
+
+   Answer
+
+   | Item | Value |
+   |---|---|
+   | Data | 11100 |
+   | Divisor | 1001 |
+   | Appended zeros | 000 |
+   | Remainder (CRC) | `111` |
+   | Transmitted codeword | `11100111` |
+
+   - Points to remember: the number of appended zeros is always (length of divisor − 1); subtraction in this division is XOR, with no borrowing; and the quotient is discarded — only the remainder matters.
 
 10. **A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162. What will be the capacity for this channel?** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
 
+    Answer: The channel is noisy, so Shannon's capacity formula applies.
+
+    Given
+    - Bandwidth B = 3300 − 300 = 3000 Hz
+    - SNR = 3162
+
+    Formula
+    ```
+    C = B × log2(1 + SNR)
+    ```
+
+    Calculation
+    ```
+    C = 3000 × log2(1 + 3162)
+      = 3000 × log2(3163)
+      = 3000 × 11.627
+      = 34,881 bps
+    ```
+
+    - Answer: approximately `34,880 bps`, usually quoted as about `34.86 kbps`.
+
+    Notes
+    - SNR = 3162 corresponds to 10 log10(3162) ≈ 35 dB, a typical figure for a good telephone circuit.
+    - This is the theoretical ceiling, which is why dial-up modems plateaued around 33.6 kbps for symmetric transmission. The 56 kbps modems worked only in the downstream direction, where one end connected digitally to the telephone network and avoided one analogue-to-digital conversion.
+    - Shannon gives only the capacity; it says nothing about how to achieve it. Nyquist supplies the number of levels: 2 × 3000 × log2(L) = 34,881 gives log2(L) ≈ 5.8, so roughly 64 signal levels would be needed.
+
 11. **Which technique is used for binary division check in network?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+    Answer: The technique that uses binary division to check for errors is `CRC — Cyclic Redundancy Check`.
+
+    How it works
+    - The sender appends (n − 1) zeros to the data, where n is the length of the agreed generator polynomial (divisor).
+    - It divides the result by the generator using `modulo-2 division`, in which subtraction is a simple XOR with no borrowing.
+    - The remainder — the CRC or FCS — is appended to the data and transmitted.
+    - The receiver divides the whole received frame by the same generator. A remainder of `zero` means no error was detected; anything else means the frame is corrupt and it is discarded.
+
+    Example
+    ```
+    Data 11100, generator 1001
+    Append 3 zeros -> 11100000
+    Divide by 1001 modulo 2 -> remainder 111
+    Transmit 11100111
+    ```
+
+    Why CRC is used everywhere
+    - It detects all single-bit errors, all double-bit errors with a suitable generator, all odd numbers of errors, and all burst errors shorter than the CRC length. Real transmission errors arrive in bursts, so this last property is decisive.
+    - It is extremely cheap to implement in hardware with a shift register and XOR gates, so it runs at line rate.
+
+    Common generators
+
+    | Name | Polynomial | Used by |
+    |---|---|---|
+    | CRC-8 | x^8 + x^2 + x + 1 | ATM header |
+    | CRC-16 | x^16 + x^15 + x^2 + 1 | Modbus, USB, HDLC |
+    | CRC-CCITT | x^16 + x^12 + x^5 + 1 | X.25, Bluetooth |
+    | CRC-32 | x^32 + x^26 + … + 1 | Ethernet FCS, ZIP, PNG |
+
+    - Note: CRC only `detects` errors, it cannot correct them. Correction requires Hamming code or another forward error correction scheme.
 
 12. **Explain parity method for error detection. Write down the bit strings of “Delta” using ASCII.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
 
+    Answer:
+
+    Parity method for error detection
+    - One extra bit, the parity bit, is added to each data unit so that the total number of 1s becomes even (even parity) or odd (odd parity), according to the scheme agreed by both ends.
+    - The sender counts the 1s in the data and sets the parity bit accordingly. The receiver counts the 1s in the whole received unit including the parity bit; if the count does not match the agreed rule, an error is detected and the unit is discarded.
+
+    Example with even parity
+    ```
+    Data 1000100 has two 1s -> already even -> parity bit 0 -> 01000100
+    Data 1100001 has three 1s -> odd -> parity bit 1 -> 11100001
+    ```
+
+    Strengths and weaknesses
+    - It detects any `odd` number of bit errors — one, three, five and so on.
+    - It cannot detect an `even` number of errors, because two flipped bits leave the count's parity unchanged. This is its fundamental weakness.
+    - It cannot locate or correct an error, only report that one exists.
+    - Two-dimensional parity (a parity bit per row and per column) improves this: it detects most multiple errors and can correct a single-bit error by locating the intersection of the failing row and column.
+
+    ASCII bit strings for "Delta" (7-bit ASCII, with an even parity bit added on the left)
+
+    | Character | Decimal | 7-bit ASCII | Number of 1s | Even parity bit | 8-bit string |
+    |---|---|---|---|---|---|
+    | D | 68 | 1000100 | 2 (even) | 0 | `01000100` |
+    | e | 101 | 1100101 | 4 (even) | 0 | `01100101` |
+    | l | 108 | 1101100 | 4 (even) | 0 | `01101100` |
+    | t | 116 | 1110100 | 4 (even) | 0 | `01110100` |
+    | a | 97 | 1100001 | 3 (odd) | 1 | `11100001` |
+
+    Complete transmitted bit stream
+    ```
+    01000100 01100101 01101100 01110100 11100001
+    ```
+
+    - Without the parity bit, the plain 7-bit ASCII for "Delta" is:
+    ```
+    1000100 1100101 1101100 1110100 1100001
+    ```
+    - Note the case sensitivity: uppercase D is 68 while lowercase d would be 100, a difference of exactly 32 in ASCII.
+
 13. **An end system sends 50 packets per second using the User Datagram Protocol (UDP) over a full duplex 100 Mbps ethernet LAN connection. Each packet consists 1500B of ethernet frame payload data. What is the throughput, when measured at the UDP layer?** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
 
+    Answer:
+
+    Given
+    - 50 packets per second
+    - Each packet carries 1500 bytes of `Ethernet frame payload`
+    - Protocol: UDP over IPv4, on a 100 Mbps full-duplex link
+
+    Step 1 — work out what the 1500 bytes contains
+    - The Ethernet payload holds the complete IP packet.
+    ```
+    Ethernet payload   = 1500 bytes
+    − IP header        =   20 bytes
+    − UDP header       =    8 bytes
+    -----------------------------------
+    = UDP payload (application data) = 1472 bytes
+    ```
+
+    Step 2 — throughput at the UDP layer
+    ```
+    Throughput = 50 packets/s × 1472 bytes × 8 bits
+               = 50 × 11,776 bits
+               = 588,800 bits per second
+               = 588.8 kbps
+    ```
+
+    - Answer: `588.8 kbps` (0.5888 Mbps).
+
+    Comparison at each layer
+
+    | Measured at | Bytes per packet | Throughput |
+    |---|---|---|
+    | Application / UDP payload | 1472 | 588.8 kbps |
+    | UDP datagram (payload + 8) | 1480 | 592.0 kbps |
+    | IP packet (Ethernet payload) | 1500 | 600.0 kbps |
+    | Ethernet frame (+18 header and FCS) | 1518 | 607.2 kbps |
+    | Wire, including preamble and IFG | 1538 | 615.2 kbps |
+
+    - The point of the question is that "throughput" depends entirely on the layer at which it is measured; the useful application data rate is the lowest of these figures.
+    - Note also that 588.8 kbps is less than 0.6 percent of the 100 Mbps link, so the link is nowhere near saturated.
+
 14. **The message 11001001 is to be transmitted using the CRC polynomial x^3+1 to protect it from the errors. Now find out the message that should be transmitted.** *[BAUST Assistant Programmer 2021 compact it 917-918 (ET: N/A)]*
+
+    Answer: The generator polynomial x^3 + 1 must first be written as a bit string.
+
+    Step 1 — convert the polynomial to binary
+    ```
+    x^3 + 1  ->  x^3 + 0·x^2 + 0·x + 1  ->  1001
+    ```
+    - The generator has 4 bits, so its degree is 3, and `3 zeros` are appended to the message.
+
+    Given
+    - Message = 11001001
+    - Divisor = 1001
+
+    Step 2 — append 3 zeros
+    ```
+    Dividend = 11001001 000 = 11001001000
+    ```
+
+    Step 3 — modulo-2 division (XOR, no borrowing)
+    ```
+    11001001000 ÷ 1001
+
+    11001001000
+    1001
+    --------
+     1011001000
+     1001
+     ----
+      0101001000
+       1001 
+       ----
+        ...
+    carrying the division through to the end gives
+
+    Remainder = 011
+    ```
+
+    Step 4 — form the transmitted frame
+    ```
+    Transmitted = message + remainder
+                = 11001001 + 011
+                = 11001001011
+    ```
+
+    Answer
+
+    | Item | Value |
+    |---|---|
+    | Message | 11001001 |
+    | Generator polynomial | x^3 + 1 |
+    | Divisor in binary | 1001 |
+    | Zeros appended | 3 |
+    | CRC remainder | `011` |
+    | Message to be transmitted | `11001001011` |
+
+    Step 5 — check at the receiver
+    - The receiver divides 11001001011 by 1001. The remainder is `000`, confirming that no error is detected, and the last 3 bits are removed to recover the original message.
+
+    - Rules to remember: the number of appended zeros equals the degree of the generator polynomial; subtraction in this division is XOR; the quotient is discarded; and the remainder must be padded to exactly the degree of the generator (here 3 bits, so 11 is written as 011).
 
 ## Network Topologies (14)
 
