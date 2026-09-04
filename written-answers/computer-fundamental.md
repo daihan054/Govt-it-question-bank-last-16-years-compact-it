@@ -876,25 +876,18 @@ a) What is full name of ASCII?
    - (l) 16 bits refers to the original Unicode / BMP; modern Unicode extends to 1,114,112 code points across 17 planes.
 
 53. **Write the full form of following topics:** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
-   1. JPEG: Joint Photographic Experts Group
-   2. LCD: Liquid Crystal Display
-   3. NTFS: New Technology File System
-   4. HTTP: Hyper Text Transfer Protocol
-   5. POP3: Post Office Protocol version 3
+    - JPEG
+    - LCD
+    - NTFS
+    - HTTP
+    - POP3
 
-1. JPEG: Joint Photographic Experts Group
-   2. LCD: Liquid Crystal Display
-   3. NTFS: New Technology File System
-   4. HTTP: Hyper Text Transfer Protocol
-   5. POP3: Post Office Protocol version 3
-
-   Answer: The full forms given in the question are all correct. Brief notes on each:
-
-   - **JPEG — Joint Photographic Experts Group.** A lossy image compression standard named after the committee that created it. Best for photographs; loses quality each time it is re-saved.
-   - **LCD — Liquid Crystal Display.** A flat panel where liquid crystals block or pass light from a backlight. Replaced CRT monitors; now largely replaced by LED-backlit LCD and OLED.
-   - **NTFS — New Technology File System.** Microsoft's file system from Windows NT onward. Supports large files, permissions, encryption, compression and journaling, unlike the older FAT32 which has a 4 GB file size limit.
-   - **HTTP — HyperText Transfer Protocol.** Stateless request-response protocol of the web, port 80. HTTPS is its encrypted form on port 443.
-   - **POP3 — Post Office Protocol version 3.** Downloads email from the server to one client, usually deleting it from the server. Port 110. IMAP (port 143) is the alternative that keeps mail on the server and syncs across devices.
+Answer:
+    - JPEG: Joint Photographic Experts Group (standard lossy image compression format)
+    - LCD: Liquid Crystal Display (flat-panel display technology using liquid crystals)
+    - NTFS: New Technology File System (default journaling file system for Windows NT and later)
+    - HTTP: Hypertext Transfer Protocol (application-layer protocol for web hypermedia transmission)
+    - POP3: Post Office Protocol version 3 (standard client-side email retrieval protocol)
 
 54. **Explain URL, FTP, ASCII and BIOS** *[Multiple Ministry Assistant Programmer 2017 compact it 1229-1230 (ET: N/A)]*
 
