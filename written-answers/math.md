@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 96 questions
+**Table of Contents** — 15 subtopics · 97 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Arithmetic & Algebra Problems](#arithmetic--algebra-problems-16) | 16 |
+| 1 | [Arithmetic & Algebra Problems](#arithmetic--algebra-problems-17) | 17 |
 | 2 | [Set Theory & Discrete Math](#set-theory--discrete-math-13) | 13 |
 | 3 | [Percentage, Profit & Loss, Simple & Compound Interest](#percentage-profit--loss-simple--compound-interest-12) | 12 |
 | 4 | [Basic Arithmetic & Average](#basic-arithmetic--average-11) | 11 |
@@ -23,11 +23,11 @@
 
 ---
 
-## Arithmetic & Algebra Problems (16)
+## Arithmetic & Algebra Problems (17)
 
 1. **তিন ক্রমের ম্যাজিক সংখ্যা কোনটি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
-   Answer:
+Answer:
    - সূত্র: $n$ ক্রমের ম্যাজিক সংখ্যা $= \frac{n(n^2 + 1)}{2}$
    - $n = 3$ হলে:
      $$\text{Magic Number} = \frac{3(3^2 + 1)}{2} = \frac{3 \times 10}{2} = 15$$
@@ -35,7 +35,7 @@
 
 2. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝাটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
-   Answer:
+Answer:
    - ধরি, মেঝের প্রস্থ $= w$ মিটার।
    - মেঝের ক্ষেত্রফল $= 20 \times w = 20w$ বর্গমিটার।
    - প্রস্থ ৪ মিটার কম হলে ক্ষেত্রফল $= 20(w - 4)$ বর্গমিটার।
@@ -49,7 +49,7 @@
 
 3. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
-   Answer:
+Answer:
    - প্রারম্ভিক জনসংখ্যা $P = 80,00,000$
    - বার্ষিক বৃদ্ধির হার $r = \frac{30}{1000} = 0.03 = 3\%$
    - ৩ বছর পর মোট জনসংখ্যা:
@@ -59,14 +59,14 @@
 
 4. **প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
-   Answer:
+Answer:
    - সূত্র: প্রথম $n$ সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি $= n^2$
    - অতএব, প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি $= \text{ক}^2$ (বা $k^2$)
    - উত্তর: $\text{ক}^2$
 
 5. **A man could buy a certain number of notebooks for Rs.300. If each notebook cost is Rs.5 more, he could have bought 10 notebooks less for the same amount. Find the price of each notebook?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let the original price of each notebook be Rs. $x$.
    - Original number of notebooks bought $= \frac{300}{x}$
    - When price increases by Rs. 5, new number of notebooks $= \frac{300}{x + 5}$
@@ -79,20 +79,23 @@
    - Since price cannot be negative, $x = 10$.
    - Answer: Rs. 10 (or 10 Taka)
 
-6. **If x is an Integer and x + rac{1}{x} = rac{17}{4}, then value of x - rac{1}{x} = ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
+6. **If x is an Integer and x + \frac{1}{x} = \frac{17}{4}, then value of x - \frac{1}{x} = ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
-   Answer:
-   - Given: $x + \frac{1}{x} = \frac{17}{4} = 4 + \frac{1}{4} \implies x = 4$ (as $x$ is an integer).
-   - Using algebraic identity:
-     $$\left(x - \frac{1}{x}\right)^2 = \left(x + \frac{1}{x}\right)^2 - 4$$
-     $$\left(x - \frac{1}{x}\right)^2 = \left(\frac{17}{4}\right)^2 - 4 = \frac{289}{16} - 4 = \frac{225}{16}$$
-     $$x - \frac{1}{x} = \sqrt{\frac{225}{16}} = \frac{15}{4}$$
-   - For $x = 4$: $4 - \frac{1}{4} = \frac{15}{4}$.
-   - Answer: $\frac{15}{4}$ (or $3.75$)
+Answer:
+   - Given:
+     $$x + \frac{1}{x} = \frac{17}{4}$$
+   - Method 1 (Algebraic Identity):
+     $$\left(x - \frac{1}{x}\right)^2 = \left(x + \frac{1}{x}\right)^2 - 4 \cdot x \cdot \frac{1}{x}$$
+     $$\left(x - \frac{1}{x}\right)^2 = \left(\frac{17}{4}\right)^2 - 4 = \frac{289}{16} - \frac{64}{16} = \frac{225}{16}$$
+     $$x - \frac{1}{x} = \pm \sqrt{\frac{225}{16}} = \pm \frac{15}{4}$$
+   - Finding exact integer $x$:
+     $$4x^2 - 17x + 4 = 0 \implies (4x - 1)(x - 4) = 0$$
+     Since $x$ is an integer, $x = 4$.
+     $$x - \frac{1}{x} = 4 - \frac{1}{4} = \frac{15}{4} = 3.75$$
 
 7. **Students of a class are made to stand in rows. If students are extra in each row, then there would be 2 rows less. If four students are less in each row, then there would be 4 more rows. What is the number of students in the class?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let the number of students in each row be $x$ and the number of rows be $y$.
    - Total number of students $N = xy$.
    - Case 1 (4 extra students per row $\implies 2$ fewer rows):
@@ -105,20 +108,22 @@
    - Total number of students $= xy = 12 \times 8 = 96$.
    - Answer: 96 students
 
-8. **rac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - rac{2+\sqrt{3}}{2-\sqrt{3}} = ?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
+8. **\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - \frac{2+\sqrt{3}}{2-\sqrt{3}} = ?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
 
-   Answer:
-   - Rationalizing the first term:
-     $$\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} = \frac{4(\sqrt{6}+\sqrt{2})^2}{(\sqrt{6})^2 - (\sqrt{2})^2} = \frac{4(6 + 2 + 2\sqrt{12})}{6 - 2} = \frac{4(8 + 4\sqrt{3})}{4} = 8 + 4\sqrt{3}$$
-   - Rationalizing the second term:
-     $$\frac{2+\sqrt{3}}{2-\sqrt{3}} = \frac{(2+\sqrt{3})^2}{2^2 - (\sqrt{3})^2} = \frac{4 + 3 + 4\sqrt{3}}{4 - 3} = 7 + 4\sqrt{3}$$
-   - Subtracting the two terms:
-     $$(8 + 4\sqrt{3}) - (7 + 4\sqrt{3}) = 8 - 7 = 1$$
-   - Answer: 1
+Answer:
+   - Simplifying the First Term:
+     $$\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} = \frac{4(\sqrt{6}+\sqrt{2})(\sqrt{6}+\sqrt{2})}{(\sqrt{6}-\sqrt{2})(\sqrt{6}+\sqrt{2})}$$
+     $$= \frac{4(6 + 2\sqrt{12} + 2)}{6 - 2} = \frac{4(8 + 4\sqrt{3})}{4} = 8 + 4\sqrt{3}$$
+   - Simplifying the Second Term:
+     $$\frac{2+\sqrt{3}}{2-\sqrt{3}} = \frac{(2+\sqrt{3})(2+\sqrt{3})}{(2-\sqrt{3})(2+\sqrt{3})}$$
+     $$= \frac{4 + 4\sqrt{3} + 3}{4 - 3} = \frac{7 + 4\sqrt{3}}{1} = 7 + 4\sqrt{3}$$
+   - Subtracting the Second Term from the First:
+     $$(8 + 4\sqrt{3}) - (7 + 4\sqrt{3}) = 8 + 4\sqrt{3} - 7 - 4\sqrt{3} = 1$$
+   - Answer: $1$
 
 9. **9+7+5+.......ধারাটির যোগফল -১৪৪ হলে, n = কত?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-   Answer:
+Answer:
    - প্রথম পদ $a = 9$, সাধারণ অন্তর $d = 7 - 9 = -2$, সমষ্টি $S_n = -144$
    - সমষ্টির সূত্র: $S_n = \frac{n}{2}[2a + (n - 1)d]$
      $$-144 = \frac{n}{2}[2(9) + (n - 1)(-2)]$$
@@ -131,7 +136,7 @@
 
 10. **পিতার বর্তমান বয়স পুত্রের বয়সের ৩ গুণ। ৫ বছর আগে পিতার বয়স পুত্রের বয়সের ৪ গুণ ছিল। পিতা ও পুত্রের বর্তমান বয়স কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-    Answer:
+Answer:
     - ধরি, পুত্রের বর্তমান বয়স $= x$ বছর।
     - অতএব, পিতার বর্তমান বয়স $= 3x$ বছর।
     - ৫ বছর পূর্বে পুত্রের বয়স ছিল $(x - 5)$ বছর এবং পিতার বয়স ছিল $(3x - 5)$ বছর।
@@ -145,7 +150,7 @@
 
 11. **দুইটি সংখ্যার যোগফল ১১২০ এবং বিয়োগফল বড় সংখ্যাটির ২/৩ অংশ। সংখ্যা দুইটি কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-    Answer:
+Answer:
     - ধরি, বড় সংখ্যাটি $x$ এবং ছোট সংখ্যাটি $y$।
     - শর্তানুসারে:
       $$x + y = 1120 \quad \text{--- (1)}$$
@@ -155,48 +160,64 @@
     - অতএব, $x = 3 \times 280 = 840$
     - উত্তর: ৮৪০ এবং ২৮০ (840 and 280)
 
-12. **\log_3 rac{1}{81} এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+12. **\log_3 \frac{1}{81} এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-    Answer:
-    $$\log_3 \left(\frac{1}{81}\right) = \log_3 (81^{-1}) = \log_3 (3^4)^{-1} = \log_3 (3^{-4}) = -4 \log_3 3 = -4 \times 1 = -4$$
-    - উত্তর: -4
+Answer:
+   - আমরা জানি, $81 = 3^4 \implies \frac{1}{81} = 3^{-4}$
+   - অতএব,
+     $$\log_3 \frac{1}{81} = \log_3 (3^{-4}) = -4 \log_3 3$$
+   - যেহেতু $\log_a a = 1$:
+     $$= -4 \times 1 = -4$$
+   - উত্তর: $-4$
 
 13. **x + y = 7 এবং xy = 10 হলে এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-    Answer:
+Answer:
     - $(x - y)^2 = (x + y)^2 - 4xy = 7^2 - 4(10) = 49 - 40 = 9 \implies x - y = \pm 3$
     - $x^2 + y^2 = (x + y)^2 - 2xy = 7^2 - 2(10) = 49 - 20 = 29$
     - $x^3 + y^3 = (x + y)^3 - 3xy(x + y) = 7^3 - 3(10)(7) = 343 - 210 = 133$
     - উত্তর: $x^2 + y^2 = 29$, $(x - y)^2 = 9$, $x^3 + y^3 = 133$
 
-14. **২. x + rac{1}{x} = 4 হলে, x^2 + rac{1}{x^2} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+14. **২. x + \frac{1}{x} = 4 হলে, x^2 + \frac{1}{x^2} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
-    Answer:
-    $$x^2 + \frac{1}{x^2} = \left(x + \frac{1}{x}\right)^2 - 2 = 4^2 - 2 = 16 - 2 = 14$$
-    - উত্তর: 14
+Answer:
+   - দেওয়া আছে, $x + \frac{1}{x} = 4$
+   - সূত্র প্রয়োগ করে:
+     $$x^2 + \frac{1}{x^2} = \left(x + \frac{1}{x}\right)^2 - 2 \cdot x \cdot \frac{1}{x}$$
+     $$= 4^2 - 2 = 16 - 2 = 14$$
+   - উত্তর: $14$
 
-15. **২. x + rac{1}{x} = \sqrt{3} হলে x^3 + rac{1}{x^3} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+15. **২. x + \frac{1}{x} = \sqrt{3} হলে x^3 + \frac{1}{x^3} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
-    Answer:
-    $$x^3 + \frac{1}{x^3} = \left(x + \frac{1}{x}\right)^3 - 3\left(x + \frac{1}{x}\right) = (\sqrt{3})^3 - 3(\sqrt{3}) = 3\sqrt{3} - 3\sqrt{3} = 0$$
-    - উত্তর: 0
+Answer:
+   - দেওয়া আছে, $x + \frac{1}{x} = \sqrt{3}$
+   - সূত্র প্রয়োগ করে:
+     $$x^3 + \frac{1}{x^3} = \left(x + \frac{1}{x}\right)^3 - 3 \cdot x \cdot \frac{1}{x} \left(x + \frac{1}{x}\right)$$
+     $$= (\sqrt{3})^3 - 3(\sqrt{3}) = 3\sqrt{3} - 3\sqrt{3} = 0$$
+   - উত্তর: $0$
 
-16. **M^0 + \sqrt[3]{8} + 	ext{Logs}_5{125} + (0100)^2 + 5** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+16. **M^0 + \sqrt[3]{8} + \text{Logs}_5{125} + (0100)^2 + 5** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-    Answer:
-    - $M^0 = 1$
-    - $\sqrt[3]{8} = 2$
-    - $\log_5 125 = \log_5 (5^3) = 3$
-    - বাইনারি মান $(0100)_2 = 4_{10} \implies 4^2 = 16$
-    - রাশিমালার মান: $1 + 2 + 3 + 16 + 5 = 27$
-    - (দশমিক ১০০ বিবেচনা করলে: $1 + 2 + 3 + 10000 + 5 = 10011$)
-    - উত্তর: 27 (বা 10011)
+Answer:
+   - প্রতিটি পদের মান নির্ণয়:
+     - $M^0 = 1$ (যেকোনো অশূন্য সংখ্যার সূচক ০ হলে মান ১)
+     - $\sqrt[3]{8} = 8^{1/3} = (2^3)^{1/3} = 2$
+     - $\log_5 125 = \log_5 (5^3) = 3\log_5 5 = 3 \times 1 = 3$
+     - $(0100)^2$:
+       - বাইনারি মান হিসেবে: $(0100)_2 = 4_{10} \implies 4^2 = 16$
+       - সাধারণ ডেসিমাল সংখ্যা হিসেবে: $100^2 = 10000$
+     - শেষ পদ $= 5$
+   - প্রদত্ত রাশিমালাটির যোগফল (বাইনারি বেস $4$ বিবেচনায়):
+     $$1 + 2 + 3 + 16 + 5 = 27$$
+   - (ডেসিমাল ১০০ বিবেচনায় মান: $1 + 2 + 3 + 10000 + 5 = 10011$)
+
+17. **একজন ৪% ও ৬% সুদে দুটি ঋণ নিয়েছে। মোট ঋণ এবং মোট সুদের মান দেওয়া আছে। ৪% ও ৬% হারে নেওয়া ঋণের পরিমাণ কত ছিল? [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
 ## Set Theory & Discrete Math (13)
 
 1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Formula: $n(A \cup B) = n(A) + n(B) - n(A \cap B)$
    - Substituting values:
      $$40 = 20 + 30 - n(A \cap B)$$
@@ -205,7 +226,7 @@
 
 2. **Math: Set related (72%, 40% and both 30%)** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let total candidates $= 100\%$
    - Given: $n(A) = 72\%$, $n(B) = 40\%$, $n(A \cap B) = 30\%$
    - Union of sets:
@@ -216,7 +237,7 @@
 
 3. **Find the sets X and Y if X \cup Y = \{1, 2, 3, 5, 6, 8, 9, 10\}, X \cap Y = \{1, 5\} and Y - X = \{2, 6, 9, 10\}.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 419 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - $Y = (Y - X) \cup (X \cap Y) = \{2, 6, 9, 10\} \cup \{1, 5\} = \{1, 2, 5, 6, 9, 10\}$
    - $X - Y = (X \cup Y) - Y = \{1, 2, 3, 5, 6, 8, 9, 10\} - \{1, 2, 5, 6, 9, 10\} = \{3, 8\}$
    - $X = (X - Y) \cup (X \cap Y) = \{3, 8\} \cup \{1, 5\} = \{1, 3, 5, 8\}$
@@ -226,7 +247,7 @@
 
 4. **১ থেকে ১০০ পর্যন্ত কয়টি সংখ্যা রয়েছে যা ৩ ও ৪ দ্বারা বিভাজ্য নয়?** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
 
-   Answer:
+Answer:
    - মোট সংখ্যা $N = 100$
    - ৩ দ্বারা বিভাজ্য সংখ্যা $n(A) = \lfloor \frac{100}{3} \rfloor = 33$
    - ৪ দ্বারা বিভাজ্য সংখ্যা $n(B) = \lfloor \frac{100}{4} \rfloor = 25$
@@ -239,7 +260,7 @@
 
 5. **Express the following statement as a logical expression, “If someone is female and is a parent, then this person is someone's mother”.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 664 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Let predicates be:
      - $F(x)$: $x$ is female
      - $P(x, y)$: $x$ is a parent of $y$
@@ -248,54 +269,53 @@
      $$\forall x \forall y \left( (F(x) \land P(x, y)) \to M(x, y) \right)$$
      (Alternatively: $\forall x \left( (F(x) \land \exists y \, P(x, y)) \to \exists y \, M(x, y) \right)$)
 
-6. **(ক) p \land (
-eg p \lor q) - logical expression টির জন্য Truth table প্রস্তুত করুন। যেখানে p, q- Boolean variable.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
+6. **(ক) p \land (\neg p \lor q) - logical expression টির জন্য Truth table প্রস্তুত করুন। যেখানে p, q- Boolean variable.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
 
-   Answer:
-| $p$ | $q$ | $\neg p$ | $\neg p \lor q$ | $p \land (\neg p \lor q)$ |
-|:---:|:---:|:---:|:---:|:---:|
-| T | T | F | T | **T** |
-| T | F | F | F | **F** |
-| F | T | T | T | **F** |
-| F | F | T | T | **F** |
-
-   - Note: The expression simplifies logically to $p \land q$.
-
-7. **(খ) দেখাও যে, (p \land q) 
-ightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
-
-   Answer:
+Answer:
    - Truth Table:
-| $p$ | $q$ | $p \land q$ | $p \lor q$ | $(p \land q) \to (p \lor q)$ |
-|:---:|:---:|:---:|:---:|:---:|
-| T | T | T | T | **T** |
-| T | F | F | T | **T** |
-| F | T | F | T | **T** |
-| F | F | F | F | **T** |
+     | $p$ | $q$ | $\neg p$ | $\neg p \lor q$ | $p \land (\neg p \lor q)$ |
+     |:---:|:---:|:---:|:---:|:---:|
+     | T | T | F | T | **T** |
+     | T | F | F | F | **F** |
+     | F | T | T | T | **F** |
+     | F | F | T | T | **F** |
+   - বীজগাণিতিক প্রমাণ: $p \land (\neg p \lor q) \equiv (p \land \neg p) \lor (p \land q) \equiv F \lor (p \land q) \equiv p \land q$।
 
-   - যেহেতু শর্তযুক্ত উক্তির সকল সত্যতার মান সর্বদা সত্য (T), তাই $(p \land q) \to (p \lor q)$ একটি টটোলজি (Tautology)।
+7. **(খ) দেখাও যে, (p \land q) \rightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
-8. **(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (ar{C} \cup ar{B}) \cap ar{A}. এখানে A, B, C এগুলো Sets.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
+Answer:
+   - Truth Table:
+     | $p$ | $q$ | $p \land q$ | $p \lor q$ | $(p \land q) \rightarrow (p \lor q)$ |
+     |:---:|:---:|:---:|:---:|:---:|
+     | T | T | T | T | **T** |
+     | T | F | F | T | **T** |
+     | F | T | F | T | **T** |
+     | F | F | F | F | **T** |
+   - ব্যাখ্যা: সত্যক সারণির (Truth table) চূড়ান্ত কলামে $p$ ও $q$-এর সকল সম্ভাব্য সত্যমানের (Truth values) জন্য ফলাফল সর্বদা True (T) হওয়ায় $(p \land q) \rightarrow (p \lor q)$ একটি **Tautology (টটোলজি)**।
 
-   Answer:
-   - Set (সেট): বাস্তব বা চিন্তাজগতের সুনির্দিষ্ট ও সুসংজ্ঞায়িত বস্তুর সমাবেশকে সেট বলে।
-   - Power Set (শক্তি সেট): কোনো সেটের সকল সম্ভাব্য উপসেট (Subset) নিয়ে গঠিত সেটকে তার শক্তি সেট বলে; উপাদান $n$ হলে শক্তি সেটের সদস্য সংখ্যা $2^n$।
-   - Proper Subset (প্রকৃত উপসেট): যদি $B$ সেটের সকল উপাদান $A$ সেটে থাকে কিন্তু $A$ সেটে অন্তত একটি অতিরিক্ত উপাদান থাকে, তবে $B$-কে $A$-এর প্রকৃত উপসেট ($B \subset A$) বলে।
-   - Membership Table Verification:
-| $A$ | $B$ | $C$ | $B \cap C$ | $A \cup (B \cap C)$ |
-|:---:|:---:|:---:|:---:|:---:|
-| 1 | 1 | 1 | 1 | **1** |
-| 1 | 1 | 0 | 0 | **1** |
-| 1 | 0 | 1 | 0 | **1** |
-| 1 | 0 | 0 | 0 | **1** |
-| 0 | 1 | 1 | 1 | **1** |
-| 0 | 1 | 0 | 0 | **0** |
-| 0 | 0 | 1 | 0 | **0** |
-| 0 | 0 | 0 | 0 | **0** |
+8. **(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (\bar{C} \cup \bar{B}) \cap \bar{A}. এখানে A, B, C এগুলো Sets.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
+
+Answer:
+   - সংজ্ঞা:
+     - Set (সেট): বাস্তব বা চিন্তা জগতের সু-সংজ্ঞায়িত বস্তুর সমাবেশ বা সংগ্রহকে সেট বলে (যেমন: $A = \{1, 2, 3\}$)।
+     - Power Set (শক্তি সেট): কোনো সেটের সকল সম্ভাব্য উপসেট নিয়ে গঠিত সেটকে তার শক্তি সেট বলে। একে $P(A)$ দ্বারা প্রকাশ করা হয়। সেটের সদস্য সংখ্যা $n$ হলে শক্তি সেটের সদস্য সংখ্যা $2^n$।
+     - Proper Subset (প্রকৃত উপসেট): যদি $B$ সেটের সকল উপাদান $A$ সেটে থাকে এবং $A$ সেটে অন্তত একটি উপাদান বেশি থাকে যা $B$-তে নেই, তবে $B$-কে $A$-এর প্রকৃত উপসেট বলা হয় ($B \subset A$)।
+   - Membership Table:
+     | $A$ | $B$ | $C$ | $B \cap C$ | $A \cup (B \cap C)$ | $\bar{A}$ | $\bar{B}$ | $\bar{C}$ | $\bar{C} \cup \bar{B}$ | $(\bar{C} \cup \bar{B}) \cap \bar{A}$ |
+     |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+     | 1 | 1 | 1 | 1 | **1** | 0 | 0 | 0 | 0 | **0** |
+     | 1 | 1 | 0 | 0 | **1** | 0 | 0 | 1 | 1 | **0** |
+     | 1 | 0 | 1 | 0 | **1** | 0 | 1 | 0 | 1 | **0** |
+     | 1 | 0 | 0 | 0 | **1** | 0 | 1 | 1 | 1 | **0** |
+     | 0 | 1 | 1 | 1 | **1** | 1 | 0 | 0 | 0 | **0** |
+     | 0 | 1 | 0 | 0 | **0** | 1 | 0 | 1 | 1 | **1** |
+     | 0 | 0 | 1 | 0 | **0** | 1 | 1 | 0 | 1 | **1** |
+     | 0 | 0 | 0 | 0 | **0** | 1 | 1 | 1 | 1 | **1** |
+   - দ্রষ্টব্য: ডি মরগানের নিয়ম অনুযায়ী $\overline{A \cup (B \cap C)} = \bar{A} \cap \overline{(B \cap C)} = \bar{A} \cap (\bar{B} \cup \bar{C}) = (\bar{C} \cup \bar{B}) \cap \bar{A}$। অর্থাৎ ডানপক্ষটি মূলত বামপক্ষের পূরক সেট (Complement set)।
 
 9. **(খ) যদি A-B = \{1, 5, 7, 8\}, B-A = \{2, 10\} এবং A \cap B = \{3, 6, 9\} হয়, তবে A, B Set এর মান কত?** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
 
-   Answer:
+Answer:
    - $A = (A - B) \cup (A \cap B) = \{1, 5, 7, 8\} \cup \{3, 6, 9\} = \{1, 3, 5, 6, 7, 8, 9\}$
    - $B = (B - A) \cup (A \cap B) = \{2, 10\} \cup \{3, 6, 9\} = \{2, 3, 6, 9, 10\}$
    - উত্তর:
@@ -304,7 +324,7 @@ ightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry o
 
 10. **(a) Out of ten families, six families have dogs, four have cats and two have neither cats nor dogs. Find the number of families that have both cats and dogs?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
-    Answer:
+Answer:
     - Total families $N = 10$
     - Families having dogs $n(D) = 6$
     - Families having cats $n(C) = 4$
@@ -317,23 +337,21 @@ ightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry o
       $$n(D \cap C) = 10 - 8 = 2$$
     - Answer: 2 families
 
-11. **(c) Using truth table finds which of the following implications are equivalent to p 	o (p \lor 
-eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
+11. **(c) Using truth table finds which of the following implications are equivalent to p \to (p \lor \neg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
 
-    Answer:
-    - Truth Table:
-| $p$ | $q$ | $p \land q$ | $\neg(p \land q)$ | $p \lor \neg(p \land q)$ | $p \to (p \lor \neg(p \land q))$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| T | T | T | F | T | **T** |
-| T | F | F | T | T | **T** |
-| F | T | F | T | T | **T** |
-| F | F | F | T | T | **T** |
-
-    - Conclusion: The proposition $p \to (p \lor \neg(p \land q))$ is always True (Tautology), so it is never a contradiction.
+Answer:
+   - Truth Table for $p \to (p \lor \neg(p \land q))$:
+     | $p$ | $q$ | $p \land q$ | $\neg(p \land q)$ | $p \lor \neg(p \land q)$ | $p \to (p \lor \neg(p \land q))$ |
+     |:---:|:---:|:---:|:---:|:---:|:---:|
+     | T | T | T | F | T | **T** |
+     | T | F | F | T | T | **T** |
+     | F | T | F | T | T | **T** |
+     | F | F | F | T | T | **T** |
+   - Conclusion: The expression $p \to (p \lor \neg(p \land q))$ evaluates to True (T) under all possible truth value assignments. Therefore, it is a **Tautology**, and not a contradiction (a contradiction would evaluate to False for all assignments).
 
 12. **(ii) Propositional logic ও Predicate Logic উদাহরণসহ বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 952-953 (ET: N/A)]*
 
-    Answer:
+Answer:
     - Propositional Logic (প্রপোজিশনাল লজিক):
       - এটি গাণিতিক যুক্তির এমন এক শাখা যেখানে সম্পূর্ণ উক্তি বা বাক্যকে একক চলক ($p, q$) দ্বারা প্রকাশ করা হয় যা কেবল সত্য (True) বা মিথ্যা (False) হতে পারে।
       - উদাহরণ: $p$: "বৃষ্টি হচ্ছে", $q$: "রাস্তা ভেজা"। যৌগিক রূপ: $p \to q$ ("যদি বৃষ্টি হয় তবে রাস্তা ভেজা")।
@@ -343,7 +361,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 13. **Propositional Logic and Predicate Logic উদাহরণসহ বুঝিয়ে লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020 (ET: N/A)]*
 
-    Answer:
+Answer:
     - Propositional Logic: Deals with declarative propositions that are evaluated as atomic truth values (T/F) using Boolean operators ($\land, \lor, \neg, \to, \leftrightarrow$).
       - Example: $p$: "Dhaka is the capital of Bangladesh" (True).
     - Predicate Logic (First-Order Logic): Breaks statements into predicates, objects/variables, and quantifiers, allowing granular expressions about properties of entities.
@@ -353,14 +371,14 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **Math: Interest realated** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - For Principal $P = 10,000$, Rate $r = 10\%$, Time $t = 3$ years:
      - Simple Interest: $I = P \times r \times t = 10000 \times 0.10 \times 3 = 3000$ Taka.
      - Compound Interest: $CI = P(1 + r)^t - P = 10000(1.10)^3 - 10000 = 13310 - 10000 = 3310$ Taka.
 
 2. **১০০ টাকার ২৫টি করে লেবু ক্রয় করে ১০০ টাকায় ২০টি করে লেবু বিক্রি করলে শতকরা কত লাভ হবে?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
 
-   Answer:
+Answer:
    - ১টি লেবুর ক্রয়মূল্য $= \frac{100}{25} = 4$ টাকা
    - ১টি লেবুর বিক্রয়মূল্য $= \frac{100}{20} = 5$ টাকা
    - লাভ $= 5 - 4 = 1$ টাকা
@@ -370,7 +388,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **জনাব রহিম তার সম্পদের ২৫% স্ত্রীকে, ৪৫% ছেলেকে এবং অবশিষ্ট ৭২০০০ টাকা মেয়েকে দিলেন। তার সম্পদের মোট মূল কত?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
 
-   Answer:
+Answer:
    - স্ত্রী ও ছেলে পেল $= 25\% + 45\% = 70\%$
    - অবশিষ্ট রইল $= 100\% - 70\% = 30\%$
    - শর্তমতে, মোট সম্পত্তির $30\% = 72,000$ টাকা
@@ -380,7 +398,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 4. **A scored 30% marks and failed by 15 marks. B scored 40% marks and obtained 35 marks more than those required to pass. The pass percentage is?** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Let total marks be $T$ and passing mark be $P$.
    - According to conditions:
      $$P = 0.30T + 15 \quad \text{--- (1)}$$
@@ -393,21 +411,24 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
      $$\text{Pass}\% = \frac{165}{500} \times 100\% = 33\%$$
    - Answer: 33%
 
-5. **A basketball team has won 15 games and lost 9. If these games represent 16rac{2}{3}\% of the games to be played, then how many more games must the team win to average 75% for the season?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
+5. **A basketball team has won 15 games and lost 9. If these games represent 16\frac{2}{3}\% of the games to be played, then how many more games must the team win to average 75% for the season?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
-   Answer:
-   - Total games played so far $= 15 + 9 = 24$.
-   - Given: 24 games represent $16\frac{2}{3}\% = \frac{50}{3}\% = \frac{1}{6}$ of total games.
-   - Total games in the season $= 24 \times 6 = 144$.
-   - Total wins required to achieve $75\%$ win rate:
-     $$\text{Total Wins Needed} = 0.75 \times 144 = 108$$
-   - Additional games the team must win:
-     $$\text{More Wins Needed} = 108 - 15 = 93$$
+Answer:
+   - Step 1: Find total games played so far:
+     $$\text{Games played} = 15 + 9 = 24\text{ games}$$
+   - Step 2: Convert percentage to fraction:
+     $$16\frac{2}{3}\% = \frac{50}{3}\% = \frac{50}{300} = \frac{1}{6}$$
+   - Step 3: Find total games in the entire season:
+     $$\text{Total games} = \frac{24}{1/6} = 24 \times 6 = 144\text{ games}$$
+   - Step 4: Calculate total wins required to average 75% for the season:
+     $$\text{Target wins} = 75\% \text{ of } 144 = \frac{3}{4} \times 144 = 108\text{ wins}$$
+   - Step 5: Find additional wins needed:
+     $$\text{More wins needed} = 108 - 15 = 93\text{ games}$$
    - Answer: 93 games
 
 6. **A father has divided his property between his two sons A and B. A invests the amount at a compound profit of 8\% p.a. B invests the amount of 10\% p.a. simple profit. At the end of 2 years, the profit received by B is Taka 1336 more than the interest received by A. Find A's share in the fathers property of Taka 25000.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 446 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let A's share be Tk. $x$, then B's share is Tk. $(25000 - x)$.
    - Interest received by A (Compound Interest for 2 years at 8%):
      $$I_A = x(1 + 0.08)^2 - x = x(1.1664 - 1) = 0.1664x$$
@@ -422,7 +443,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 7. **The percentage profit earned by selling an artical for Tk. 1920 is equal to the percentage loss incurred by selling the same artical for Tk. 1280. At what price should the artical be sold to make 25\% profit?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let the Cost Price be $CP$.
    - Since Profit % = Loss %:
      $$\frac{1920 - CP}{CP} = \frac{CP - 1280}{CP}$$
@@ -434,7 +455,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 8. **আগে যে টাকায় ৭ লিটার সয়াবিন তেল পাওয়া যেত, এখন সে টাকায় ৫ লিটার সয়াবিন তেল পাওয়া যায়। সয়াবিন তেলের দাম শতকরা কত ভাগ বৃদ্ধি পেল?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-   Answer:
+Answer:
    - ধরি, টাকার পরিমাণ $= T$ টাকা।
    - পূর্বে প্রতি লিটার তেলের দাম ছিল $= \frac{T}{7}$ টাকা।
    - বর্তমানে প্রতি লিটার তেলের দাম $= \frac{T}{5}$ টাকা।
@@ -445,13 +466,13 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 9. **০.০২৫ এর শতকরা ১ অংশ কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-   Answer:
+Answer:
    $$0.025 \times 1\% = 0.025 \times \frac{1}{100} = 0.00025 = 2.5 \times 10^{-4}$$
    - উত্তর: 0.00025
 
 10. **৩. চিনির মূল্য ২০% বৃদ্ধির পাওয়ার পর চিনির ব্যবহার শতকরা কত কমালে মোট খরচের কোনো পরিবর্তন হবে না।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
-    Answer:
+Answer:
     - সূত্র: ব্যবহার হ্রাসের হার $= \frac{r}{100 + r} \times 100\%$
     - $r = 20$ বসিয়ে:
       $$\text{Reduction}\% = \frac{20}{100 + 20} \times 100\% = \frac{20}{120} \times 100\% = \frac{100}{6}\% = 16\frac{2}{3}\% \approx 16.67\%$$
@@ -459,7 +480,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 11. **৪. একই হার সুদে ৩০০ টাকার ৪ বছরের সুদ এবং ৫০০ টাকার ৫ বছরের সুদ একতে ১৪৮ টাকা হলে, শতকনা বার্ষিক সুদের হার কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
-    Answer:
+Answer:
     - ধরি, বার্ষিক সুদের হার $r\%$।
     - ৩০০ টাকার ৪ বছরের সুদ $= \frac{300 \times 4 \times r}{100} = 12r$ টাকা
     - ৫০০ টাকার ৫ বছরের সুদ $= \frac{500 \times 5 \times r}{100} = 25r$ টাকা
@@ -470,7 +491,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 12. **মিঃ কবির সাহেব তার স্ত্রীকে ৫৮%, ছেলেকে ১২% সম্পত্তি দান করেন। দান করার পর তার কাছে অবশিষ্ট সম্পত্তির পরিমাণ ৭২,০০০ টাকা। তার মোট সম্পত্তির পরিমান কত?** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-    Answer:
+Answer:
     - দানকৃত মোট সম্পত্তি $= 58\% + 12\% = 70\%$
     - অবশিষ্ট অংশ $= 100\% - 70\% = 30\%$
     - শর্তমতে, মোট সম্পত্তির $30\% = 72,000$ টাকা
@@ -482,7 +503,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **What is the Average of 1 to 49 numbers?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Formula: $\text{Average} = \frac{n + 1}{2}$ (for first $n$ natural numbers)
    - For $n = 49$:
      $$\text{Average} = \frac{49 + 1}{2} = \frac{50}{2} = 25$$
@@ -490,7 +511,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **দুইটি সংখ্যার গ.সা.গু. ১১ এবং ল.সা.গু. ৭৭০০। একটি সংখ্যা ২৭৫ হলে অপর সংখ্যাটি কত?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
 
-   Answer:
+Answer:
    - সূত্র: দুইটি সংখ্যার গুণফল = গ.সা.গু. $\times$ ল.সা.গু.
    - অপর সংখ্যা:
      $$\text{Other Number} = \frac{\text{গ.সা.গু.} \times \text{ল.সা.গু.}}{\text{একটি সংখ্যা}} = \frac{11 \times 7700}{275} = 308$$
@@ -498,11 +519,11 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **What is the largest two-digit natural number (a part of the number system, which includes all positive integers from 1 to infinity)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: 99
+Answer: 99
 
 4. **If the average of seven consecutive even numbers is 62, then the one-fourth of twice of total of first and sixth number is?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Let the 7 consecutive even numbers be $x-6, x-4, x-2, x, x+2, x+4, x+6$.
    - The middle (4th) number is the average $\implies x = 62$.
    - The 7 numbers are: 56, 58, 60, 62, 64, 66, 68.
@@ -514,7 +535,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 5. **৯৯ + ৯৮ + ৯৭ + ------+৪০ = কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-   Answer:
+Answer:
    - প্রথম পদ $a = 99$, শেষ পদ $l = 40$, সাধারণ অন্তর $d = -1$
    - পদসংখ্যা $n = \frac{\text{শেষ পদ} - \text{প্রথম পদ}}{d} + 1 = \frac{40 - 99}{-1} + 1 = 59 + 1 = 60$
    - সমষ্টির সূত্র:
@@ -523,14 +544,14 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 6. **কোন ক্ষুদ্রতম সংখ্যাকে ৩, ৫ এবং ৬ দ্বারা ভাগ করলে ভাগশেষ ১ হবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-   Answer:
+Answer:
    - ৩, ৫ এবং ৬ এর ল.সা.গু. (LCM) $= 30$
    - নির্ণেয় ক্ষুদ্রতম সংখ্যা $= \text{LCM} + \text{ভাগশেষ} = 30 + 1 = 31$
    - উত্তর: 31
 
 7. **১. তিন অংকের বৃহত্তম সংখ্যা ও ক্ষুদ্রতম সংখ্যার পার্থক্য কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
-   Answer:
+Answer:
    - তিন অংকের বৃহত্তম সংখ্যা $= 999$
    - তিন অংকের ক্ষুদ্রতম সংখ্যা $= 100$
    - পার্থক্য $= 999 - 100 = 899$
@@ -538,21 +559,21 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 8. **৪. দুইটি সংখ্যার গ. সা. গু ও ল. সা. গু যথাক্রমে ১২ ও ১৫। সংখ্যা দুইটির গুনফল কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
-   Answer:
+Answer:
    - সূত্র: সংখ্যা দুইটির গুণফল = গ.সা.গু $\times$ ল.সা.গু
    - গুণফল $= 12 \times 15 = 180$
    - উত্তর: 180
 
 9. **১. ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা কয়টি ও কি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
-   Answer:
+Answer:
    - ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা মোট ১০টি।
    - সংখ্যাগুলো হলো: ২, ৩, ৫, ৭, ১১, ১৩, ১৭, ১৯, ২৩, ২৯ (2, 3, 5, 7, 11, 13, 17, 19, 23, 29)।
    - উত্তর: ১০টি
 
 10. **৩. একজনন ক্রিকেটারের 10 ইনিংসে রানের গড় 44.5. 11 তম ইনিংসে কত রান করে আউট হলে, সব ইনিংস মিলিয়ে তার রানের গড় 50 হবে?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
-    Answer:
+Answer:
     - ১০ ইনিংসে মোট রান $= 10 \times 44.5 = 445$ রান
     - ১১ ইনিংসে মোট প্রয়োজনীয় রান $= 11 \times 50 = 550$ রান
     - ১১তম ইনিংসে করতে হবে $= 550 - 445 = 105$ রান
@@ -560,7 +581,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 11. **৫. দুইটি সংখ্যার গড় xy. একটি সংখ্যা x হলে অপর সংখ্যাটি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
-    Answer:
+Answer:
     - দুইটি সংখ্যার সমষ্টি $= 2 \times xy = 2xy$
     - একটি সংখ্যা $= x$
     - অতএব, অপর সংখ্যা $= 2xy - x = x(2y - 1)$
@@ -570,7 +591,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **একটি বৃত্তের সমীকরণ দেয়া ছিল এবং একটি বিন্দুতে স্পর্শক এর সমীকরণ চাওয়া হয়েছিল** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
-   Answer:
+Answer:
    - বৃত্তের সাধারণ সমীকরণ: $x^2 + y^2 + 2gx + 2fy + c = 0$
    - বৃত্তের উপরস্থ $(x_1, y_1)$ বিন্দুতে স্পর্শকের সমীকরণ:
      $$xx_1 + yy_1 + g(x + x_1) + f(y + y_1) + c = 0$$
@@ -581,7 +602,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **Math : Geometry** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Standard formulas for competitive bank geometry exams:
      - Triangle:
        - Right triangle: $\text{Hypotenuse}^2 = \text{Base}^2 + \text{Height}^2$, $\text{Area} = \frac{1}{2} \times \text{Base} \times \text{Height}$
@@ -596,7 +617,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **In the figure, ABCD is a rectangle. The area of quadrilateral EBFD is one-half the area of the rectangle ABCD. Which one of the following is the value of AD?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let rectangle $ABCD$ have sides $AB = CD = x$ and $AD = BC = y$.
    - Total area of rectangle $ABCD = x \times y = xy$.
    - Given, $\text{Area of quadrilateral } EBFD = \frac{1}{2} xy$.
@@ -608,7 +629,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 4. **Two sides of a plot 32m and 24m and the angle between them a perfect right angle. The other two sides measure 25m each and the other three angles are not right angles. What is the area of the plot?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - The plot can be divided into two triangles by drawing a diagonal across the right angle:
    - Triangle 1 (Right-angled triangle with perpendicular sides 32 m and 24 m):
      - Hypotenuse (diagonal $d$) $= \sqrt{32^2 + 24^2} = \sqrt{1024 + 576} = \sqrt{1600} = 40\text{ m}$
@@ -622,7 +643,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 5. **In the given figure, PQT is a right triangle then what is the area of square QRST.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - In right triangle $PQT$, side $QT$ forms one side of the square $QRST$.
    - By Pythagorean Theorem in $\Delta PQT$:
      $$QT^2 = PQ^2 + PT^2 \quad (\text{when } \angle P = 90^\circ)$$
@@ -632,7 +653,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 6. **AD is the longest side of the triangle ABD shown in the figure, what is the length of longest side of \Delta\text{ABC}?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - In any triangle, the longest side lies opposite to the largest angle.
    - For $\Delta ABD$: Since $AD$ is the longest side, the angle opposite to it, $\angle ABD$, is the greatest angle in $\Delta ABD$.
    - For $\Delta ABC$: 
@@ -642,7 +663,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 7. **একটি সমদ্বিবাহু সমকোণী ত্রিভুজের অতিভুজ ১২ সেমি হলে, ত্রিভুজটির ক্ষেত্রফল কত বর্গ সেমি?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-   Answer:
+Answer:
    - ধরি, সমদ্বিবাহু সমকোণী ত্রিভুজের সমান বাহুদ্বয়ের প্রতিটির দৈর্ঘ্য $= a\text{ সেমি}$
    - পিথাগোরাসের উপপাদ্য অনুসারে:
      $$a^2 + a^2 = (\text{অতিভুজ})^2 \implies 2a^2 = 12^2 = 144 \implies a^2 = 72$$
@@ -652,7 +673,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 8. **বৃত্তস্থ চতুর্ভুজের একটি কোণ ৮০° হলে তার বিপরীত কোণের মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-   Answer:
+Answer:
    - উপপাদ্য: বৃত্তস্থ চতুর্ভুজের যেকোনো দুটি বিপরীত কোণের সমষ্টি $180^\circ$ বা দুই সমকোণ।
    - ধরি, একটি কোণ $= 80^\circ$
    - অতএব, বিপরীত কোণ $= 180^\circ - 80^\circ = 100^\circ$
@@ -660,7 +681,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 9. **কোন বর্গক্ষেত্রের ক্ষেত্রফল ১০০ বর্গমিটার। এর বাহুর দৈর্ঘ্য ১০% বৃদ্ধি পেলে এর ক্ষেত্রফলের শতকরা বৃদ্ধির হার কত?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
-   Answer:
+Answer:
    - প্রাথমিক ক্ষেত্রফল $= 100\text{ বর্গমিটার}$
    - প্রাথমিক বাহু $= \sqrt{100} = 10\text{ মিটার}$
    - ১০% বৃদ্ধিতে নতুন বাহু $= 10 + \left(10 \times \frac{10}{100}\right) = 11\text{ মিটার}$
@@ -671,19 +692,17 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 10. **৫. সমকোণী ত্রিভুজের সমকোণ সংলগ্ন দুই বাহুর মান ৩ এবং ৪ হলে। ইহার অতিভুজ এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
-    Answer:
+Answer:
     - পিথাগোরাসের উপপাদ্য অনুসারে:
       $$\text{অতিভুজ} = \sqrt{\text{ভূমি}^2 + \text{লম্ব}^2}$$
     - $\text{অতিভুজ} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5$
     - উত্তর: 5
 
-
-
 ## Permutations & Combinations (6)
 
 1. **CARBON word permutations that vowel must occupy odd positions?** *[BCIC Assistant Programmer 14.02.2025 compact it 1329 (ET: BUET)]*
 
-   Answer:
+Answer:
    - The word "CARBON" has 6 letters:
      - Vowels (2): A, O
      - Consonants (4): C, R, B, N
@@ -698,7 +717,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **PROBLEMS শব্দটির P ও S কে প্রথমে এবং শেষে যথাক্রমে রেখে কতগুলো শব্দ গঠন করা যায়?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
-   Answer:
+Answer:
    - "PROBLEMS" শব্দে মোট ৮টি বর্ণ আছে এবং প্রতিটি বর্ণ ভিন্ন।
    - শর্তমতে, প্রথম স্থানে P এবং শেষ স্থানে S নির্দিষ্ট থাকবে।
    - অতএব, P ও S এর স্থান নির্দিষ্ট (১টি উপায়)।
@@ -709,7 +728,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **In how many ways you can distribute 3 identical green shirt and 3 identical red shirt among 6 individual persons.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
-   Answer:
+Answer:
    - Total persons $= 6$, each getting exactly 1 shirt.
    - We need to choose 3 persons out of 6 to receive identical green shirts (the other 3 automatically receive identical red shirts).
    - Number of ways $= \binom{6}{3} = \frac{6!}{3! \times 3!} = \frac{6 \times 5 \times 4}{3 \times 2 \times 1} = 20$
@@ -717,7 +736,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 4. **Suppose we have 6 hospital and 4 police station. Need to select a 4 stations for interrupted power supply. How many ways can we select where at least one hospital on the uninterrupted power supply list?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 454 (ET: BUET)]*
 
-   Answer:
+Answer:
    - Total stations $= 6\text{ hospitals} + 4\text{ police stations} = 10\text{ stations}$.
    - Number of stations to be chosen $= 4$.
    - Total ways to select 4 stations from 10 without restriction:
@@ -730,7 +749,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 5. **Reliability, Permutation related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
 
-   Answer:
+Answer:
    - Standard concepts for system reliability and component arrangement:
      - Series system (all $n$ components must work):
        $$R_{\text{series}} = R_1 \times R_2 \times \dots \times R_n$$
@@ -740,7 +759,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 6. **If 10 people meet each other and each shakes hands only once with each of the others, how many handshakes will there be?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Each handshake requires 2 distinct people.
    - Total number of handshakes among $n$ people:
      $$\binom{n}{2} = \frac{n(n - 1)}{2}$$
@@ -748,13 +767,11 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
      $$\text{Total handshakes} = \frac{10 \times (10 - 1)}{2} = \frac{10 \times 9}{2} = 45$$
    - Answer: 45
 
-
-
 ## Ratio, Proportion & Mixtures (4)
 
 1. **Math : Gold purity** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Gold purity is measured in Karats (K), where pure gold is 24 Karats (100% gold):
      - Purity Percentage $= \frac{\text{Karat}}{24} \times 100\%$
      - 24K Gold $= \frac{24}{24} \times 100\% = 100\%$ pure gold
@@ -765,7 +782,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **In the group of boys and girls, 4 of girls and 13 of boys are 12 years younger. If the members are girls from total members then what would be the strongest group between 12 years younger or more?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let total members $= N$, consisting of $B$ boys and $G$ girls ($N = B + G$).
    - Number of members who are 12 years younger:
      $$\text{Younger group} = 4\text{ (girls)} + 13\text{ (boys)} = 17\text{ members}$$
@@ -778,7 +795,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **In the three jars, milk and water are mixed with the ratio 1:2, 2:3, and 3:4. If all are mixed into one jar, what will be the ratio of milk and water?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Assume equal capacity for each of the three jars.
    - Let the capacity of each jar be $\text{LCM}(1+2, 2+3, 3+4) = \text{LCM}(3, 5, 7) = 105\text{ units}$.
    - Quantity of Milk and Water in each jar:
@@ -796,7 +813,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 4. **১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-   Answer:
+Answer:
    - সূত্র: $M_1 \times D_1 = M_2 \times D_2$
    - এখানে,
      - $M_1 = 12\text{ জন}$
@@ -807,13 +824,11 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
      $$12 \times 9 = 18 \times D_2 \implies D_2 = \frac{12 \times 9}{18} = \frac{108}{18} = 6\text{ দিন}$$
    - উত্তর: 6 দিন
 
-
-
 ## Speed, Time, Distance & Boats (4)
 
 1. **A boat travels 15 km upstream and 22 km downstream in 5 hr. find out the speed of the stream.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let speed of boat in still water $= u\text{ km/h}$ and speed of stream $= v\text{ km/h}$.
    - Upstream speed $= u - v$, Downstream speed $= u + v$.
    - Time equation:
@@ -830,7 +845,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **A boat covers 143 km upstream in 13 hours and the same distance downstream in 11 hours. What is the speed (in km/hr) of the boat in still (without stream) water?** *[BARC Programmer 04.08.2023 compact it 597 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Upstream speed ($S_{\text{up}}$):
      $$S_{\text{up}} = \frac{143\text{ km}}{13\text{ hr}} = 11\text{ km/hr}$$
    - Downstream speed ($S_{\text{down}}$):
@@ -841,7 +856,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **An aeroplane started 30 minutes later than the scheduled time from a place 1500 km away from its destination. To reach the destination at the scheduled time the pilot had to increase the speed by 250 km/h. What was the speed of the aeroplane per hour during the journey?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Let usual speed $= x\text{ km/h}$. Increased speed during the journey $= (x + 250)\text{ km/h}$.
    - Distance $= 1500\text{ km}$, Time difference $= 30\text{ min} = \frac{1}{2}\text{ hr}$.
    - Setting up the equation:
@@ -854,7 +869,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 4. **নৌকার গতিবেগ ঘন্টায় ১৫কিমি ও স্রোতের গতিবেগ ঘন্টায় ৫কিমি। ৩০কিমি গিয়ে ফিরে আসতে মোট সময় কত?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
-   Answer:
+Answer:
    - নৌকার বেগ $u = 15\text{ কিমি/ঘণ্টা}$, স্রোতের বেগ $v = 5\text{ কিমি/ঘণ্টা}$
    - স্রোতের অনুকূলে গতিবেগ $= u + v = 15 + 5 = 20\text{ কিমি/ঘণ্টা}$
    - স্রোতের প্রতিকূলে গতিবেগ $= u - v = 15 - 5 = 10\text{ কিমি/ঘণ্টা}$
@@ -865,13 +880,11 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
    - মোট সময় $= t_1 + t_2 = 1.5 + 3 = 4.5\text{ ঘণ্টা}$ (বা ৪ ঘণ্টা ৩০ মিনিট)
    - উত্তর: 4.5 ঘণ্টা
 
-
-
 ## Probability & Statistics (4)
 
 1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
-   Answer:
+Answer:
    - Bags brought by ADs $= 6 \times 1 = 6\text{ bags}$
    - Bags brought by DDs $= 4 \times \frac{1}{2} = 2\text{ bags}$
    - Total number of bags $= 6 + 2 = 8\text{ bags}$
@@ -881,7 +894,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 421 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Total possible sample space outcomes for throwing two dice $= 6 \times 6 = 36$.
    - Favorable outcomes where the sum of two faces is $7$:
      $$E = \{(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)\}$$
@@ -892,7 +905,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 
-   Answer:
+Answer:
    - Total number of items $n = 8$.
    - Ascending order: $12, 22, 23, 24, 24, 25, 28, 30$
    - Mean ($\bar{x}$):
@@ -907,20 +920,18 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 4. **10-bits number taken randomly, find the probability that all the bits are 1.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
 
-   Answer:
+Answer:
    - Total possible 10-bit binary combinations $= 2^{10} = 1024$.
    - Favorable outcome (the exact sequence $1111111111$) $= 1$.
    - Probability:
      $$P(\text{all bits 1}) = \left(\frac{1}{2}\right)^{10} = \frac{1}{1024} \approx 0.000977$$
    - Answer: $\frac{1}{1024}$
 
-
-
 ## Propositional Logic & Logical Equivalence (4)
 
 1. **(খ) দেখান যে, p ↔ q এবং (p ∧ q) ∨ (¬p ∧ ¬q) logically equivalent.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer:
+Answer:
    - সত্যক সারণী (Truth Table) তৈরি করে পাই:
 
      | $p$ | $q$ | $p \leftrightarrow q$ | $p \land q$ | $\neg p$ | $\neg q$ | $\neg p \land \neg q$ | $(p \land q) \lor (\neg p \land \neg q)$ |
@@ -934,7 +945,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **(d) Simplify the following expression: $\neg(\neg q \land (\neg p \lor q)) \lor \neg p$.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Step 1: Apply De Morgan's Law to the negated term:
      $$\neg(\neg q \land (\neg p \lor q)) \equiv \neg(\neg q) \lor \neg(\neg p \lor q) \equiv q \lor (p \land \neg q)$$
    - Step 2: Simplify $q \lor (p \land \neg q)$ using Distributive Law:
@@ -946,7 +957,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **What is tautology? Write an example of a tautology.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 
-   Answer:
+Answer:
    - Definition: A tautology is a compound propositional formula that is always true for all possible truth values of its constituent variables.
    - Example: $p \lor \neg p$ (Law of Excluded Middle).
    - Truth Table:
@@ -960,7 +971,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 4. **What is tautology? A statement like $[(A \rightarrow B) \land A] \rightarrow A$ was given and said to prove it is a tautology by using truth table.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
 
-   Answer:
+Answer:
    - A tautology is a formula in propositional logic that evaluates to True under every possible truth assignment.
    - Truth Table for $[(A \rightarrow B) \land A] \rightarrow A$:
 
@@ -973,13 +984,11 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
    - The last column yields True ($T$) for all truth value combinations. Hence, the statement is a tautology.
 
-
-
 ## Discrete Mathematics & Recurrence Relations (3)
 
 1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 592 (ET: BUET)]*
 
-   Answer:
+Answer:
    - Let $a_n$ be the number of valid bit strings of length $n$ without two consecutive $0$s.
    - Any valid string of length $n$ must end in either $1$ or $0$:
      - Case 1 (Ends with $1$): The preceding $n-1$ bits form any valid string of length $n-1$. Total ways $= a_{n-1}$.
@@ -992,7 +1001,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Let $P(n): 3^n - 1 \text{ is a multiple of } 2$.
    - Base Step ($n = 1$):
      $$3^1 - 1 = 3 - 1 = 2 = 2 \times 1$$
@@ -1007,7 +1016,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **Proved that $1+2+3+4+\dots\dots\dots\dots+n = \frac{n(n+1)}{2}$** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
-   Answer:
+Answer:
    - Proof by Mathematical Induction:
      - Let $P(n): 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}$.
      - Base Case ($n = 1$):
@@ -1022,13 +1031,11 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
    - Therefore, $P(k+1)$ is true whenever $P(k)$ is true.
    - By mathematical induction, $1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}$ holds for all $n \ge 1$. (Proved)
 
-
-
 ## Analytical Ability & Logical Reasoning (3)
 
 1. **A, B, C, D, E, F, G are sitting in a circular arrangement. Each of them wears caps of either red, blue, or green color. Conditions are (i) D sits two seats right of A. A is wearing green cap (ii) C sits two seats left of B. C is wearing blue cap (iii) E sits in between F and G. E is wearing red cap (iv) No two person sitting next to each other can have same color cap Find the cap color of everyone.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
-   Answer:
+Answer:
    - Total positions $= 7$ in a circle (numbered 1 to 7 clockwise).
    - Step 1 (Seating layout):
      - Place A at seat 1 $\implies \text{Cap}(A) = \text{Green}$.
@@ -1054,7 +1061,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **Explain knight knave problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
 
-   Answer:
+Answer:
    - The Knights and Knaves puzzle is a class of logical reasoning problems:
      - Knight: Always tells the truth (statements are strictly True).
      - Knave: Always lies (statements are strictly False).
@@ -1068,7 +1075,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 3. **Suppose You've [1-9] ordering number, put the appropriate number below this figure such as each side have 17 up.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Magic Triangle Problem: Placing numbers $1$ to $9$ on a triangle with 4 numbers on each of the 3 sides so that each side sums to $17$.
    - Let the 3 vertex numbers be $v_1, v_2, v_3$:
      $$\text{Sum of all 3 sides} = 3 \times 17 = 51$$
@@ -1081,13 +1088,11 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
      - Side 3 (between vertices 3 and 1): $3 + 6 + 7 + 1 = 17$
    - Vertices: $1, 2, 3$; Intermediate side pairs: $(5, 9)$, $(4, 8)$, and $(6, 7)$.
 
-
-
 ## Calculus & Integration (2)
 
 1. **(a)** $\int_0^2 (2x^2+3x)dx$ *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
-   Answer:
+Answer:
    - Step 1: Compute the antiderivative:
      $$\int (2x^2 + 3x)\, dx = \frac{2x^3}{3} + \frac{3x^2}{2}$$
    - Step 2: Evaluate the definite integral from $0$ to $2$:
@@ -1097,7 +1102,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **Solve the problem: \int e^x \cos x\,dx** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
-   Answer:
+Answer:
    - Let $I = \int e^x \cos x\, dx$.
    - Using integration by parts ($\int u\,dv = uv - \int v\,du$):
      - Let $u = \cos x \implies du = -\sin x\, dx$
@@ -1112,13 +1117,11 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
      $$I = \frac{e^x}{2}(\sin x + \cos x) + C$$
    - Answer: $\frac{e^x}{2}(\sin x + \cos x) + C$
 
-
-
 ## Comprehensive Math Problems (2)
 
 1. **৫ টা ম্যাথ সংক্রান্ত প্রশ্নাবলি।** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
-   Answer:
+Answer:
    - সরকারি নিয়োগ পরীক্ষায় আসা প্রধান ৫টি গাণিতিক ক্ষেত্রের সারসংক্ষেপ:
      - পাটিগণিত ও লাভ-ক্ষতি: শতকরা, সরল ও চক্রবৃদ্ধি মুনাফা ($I = Pnr, C = P(1+r)^n$) এবং ক্রয়মূল্য-বিক্রয়মূল্য।
      - সময়, কাজ ও গতিবেগ: ঐকিক নিয়ম, নল ও চৌবাচ্চা, ট্রেন ও নৌকার আপেক্ষিক বেগ ($d = v \times t$)।
@@ -1128,19 +1131,17 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **Math: 3 \times 5 = 15 Marks** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-   Answer:
+Answer:
    - Core mathematical problem types typical in 15-mark written exams (3 problems $\times$ 5 marks):
      - Time & Work: If $A$ completes a job in $x$ days and $B$ in $y$ days, their combined rate is $\frac{1}{x} + \frac{1}{y} = \frac{x+y}{xy}$, taking $\frac{xy}{x+y}$ days.
      - Profit & Loss with Discount: $\text{Selling Price} = \text{Cost Price} \times (1 + \text{Profit\%}) = \text{Marked Price} \times (1 - \text{Discount\%})$.
      - Weighted Average & Mixtures: Rule of alligation $\frac{Q_A}{Q_B} = \frac{P_B - P_m}{P_m - P_A}$ to blend two concentrations into a target ratio.
 
-
-
 ## Numerical Methods & Root Finding (2)
 
 1. **Determine the root of the given equation x^2 - 3 = 0 for x \in [1, 2]** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 458 (ET: BUET)]*
 
-   Answer:
+Answer:
    - Let $f(x) = x^2 - 3$.
    - Check interval endpoints:
      - $f(1) = 1^2 - 3 = -2 < 0$
@@ -1159,7 +1160,7 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 2. **(ক) কোন একটি সমীকরণের মূল নির্ণয়ের জন্য নিউমেরিক্যাল এনালাইসিসে ব্যবহৃত বিভিন্ন পদ্ধতির নাম লিখুন এবং বাইসেকশান পদ্ধতি ব্যবহার করে সমীকরণটির মূল নির্ণয়ের পদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
 
-   Answer:
+Answer:
    - মূল নির্ণয়ে ব্যবহৃত প্রধান নিউমেরিক্যাল পদ্ধতিসমূহ:
      - বাইসেকশন পদ্ধতি (Bisection Method)
      - নিউটন-র‌্যাফসন পদ্ধতি (Newton-Raphson Method)
@@ -1175,5 +1176,3 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
        - যদি $f(a) \cdot f(c) < 0$ হয়, তবে পরবর্তী ব্যবধি হবে $[a, c]$ (অর্থাৎ $b = c$)।
        - যদি $f(c) \cdot f(b) < 0$ হয়, তবে পরবর্তী ব্যবধি হবে $[c, b]$ (অর্থাৎ $a = c$)।
      - ধাপ ৪: কাঙ্ক্ষিত নির্ভুলতা বা সহনশীলতা সীমা ($|b - a| < \epsilon$) অর্জিত না হওয়া পর্যন্ত ধাপ ২ ও ৩ এর পুনরাবৃত্তি করা।
-
-
