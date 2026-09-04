@@ -1692,6 +1692,77 @@
 
 2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
 
+   Answer: (Answered in English, as required for IT topics.) Main characteristics of an operational amplifier
+   - An `op-amp` is a high-gain DC-coupled differential amplifier with two inputs — inverting (-) and non-inverting (+) — and one output.
+   ```
+      V1 ---|-\
+            |  \
+            |   >--- Vo = A (V2 - V1)
+            |  /
+      V2 ---|+/
+   ```
+
+   Ideal characteristics
+   ```
+      Open-loop voltage gain  A   : infinite            (real: 10^5 to 10^6)
+      Input impedance         Zin : infinite            (real: 1 M to 10^12 ohm)
+      Output impedance        Zo  : zero                (real: 20 to 100 ohm)
+      Bandwidth                   : infinite            (real: limited by GBW)
+      Common-mode rejection ratio : infinite            (real: 90 to 120 dB)
+      Slew rate                   : infinite            (real: 0.5 to 20 V/us)
+      Offset voltage and current  : zero                (real: small but non-zero)
+      Drift with temperature      : zero
+   ```
+
+   The two golden rules used in every analysis
+   ```
+      1. No current flows into either input      (input impedance is infinite)
+      2. The two inputs are at the same voltage  (virtual short, when negative
+                                                  feedback is present)
+   ```
+
+   Practical characteristics that matter
+   - `Very high gain` — so high that the op-amp is almost never used open loop. Negative feedback sets the gain instead, which makes it stable and predictable.
+   - `Differential input` — it amplifies the difference between the inputs and rejects any signal common to both, which is what kills noise picked up on both wires.
+   - `Wide supply range`, typically +/-5 V to +/-18 V, or single supply in modern parts.
+   - `Slew rate` limits how fast the output can change; exceeding it distorts a fast signal.
+   - `Gain-bandwidth product` is constant, so raising the closed-loop gain reduces the usable bandwidth.
+
+   Common configurations
+   ```
+      Inverting amplifier      : Av = -Rf / Rin
+      Non-inverting amplifier  : Av = 1 + Rf / Rin
+      Voltage follower         : Av = 1        (buffer)
+      Summing amplifier, difference amplifier, integrator, differentiator,
+      comparator, active filter, oscillator
+   ```
+
+   How AC power is converted to DC power
+   - The process is `rectification`, and a complete supply has four stages.
+   ```
+      AC 220 V --> Transformer --> Rectifier --> Filter --> Regulator --> DC out
+                   (step down)    (AC to DC)   (smooth)   (hold steady)
+   ```
+   - `Transformer` steps 220 V down to a low AC voltage and isolates the load from the mains.
+   - `Rectifier` — diodes conduct one way only, so the alternating waveform becomes one-directional (pulsating DC). A `bridge rectifier` of four diodes uses both halves of each cycle.
+   ```
+                 D1        D2
+           +----|>|---+---|<|----+
+           |          |          |
+      AC ~ |          +--- + ----|--- output
+           |          |          |
+           +----|<|---+---|>|----+
+                 D3        D4
+   ```
+   - `Filter` — a large electrolytic capacitor charges at each peak and discharges slowly between peaks, filling in the gaps.
+   ```
+      Before filter   /‾\/‾\/‾\      pulsating
+      After filter    ‾‾‾\_/‾‾‾      nearly flat, with a small ripple
+   ```
+   - `Regulator` — a zener diode or an IC such as `7805` or `7812` holds the output fixed despite changes in load current and mains voltage.
+
+   - Modern equipment uses an `SMPS` instead: the mains is rectified, chopped at 20-100 kHz, passed through a small ferrite transformer and rectified again. Because the transformer runs at high frequency it is tiny, and efficiency reaches 80-90 per cent against 50-60 per cent for the linear supply above.
+
 ## Sensor Circuits & Automated Control Systems (2)
 
 1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
