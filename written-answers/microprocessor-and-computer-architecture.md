@@ -7330,13 +7330,261 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 2. **(খ) Clock cycle কী? একটি মাইক্রো-প্রসেসরের speed 3.5 GHz বলতে কী বোঝায়?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+   Answer: (Answered in English, as required for IT topics.) Clock cycle
+   - A `clock cycle` is one complete oscillation of the processor's clock signal — one tick of the square wave that synchronises everything inside the CPU.
+   ```
+      CLK   __|‾‾|__|‾‾|__|‾‾|__
+              |<-->|
+              one clock cycle (one period, T)
+   ```
+   - Every action in the processor happens at a clock edge: a register latches, a pipeline stage advances, a flag is set. The clock is what keeps every part of the machine in step.
+   ```
+      Clock cycle time (period)  T = 1 / f
+      Clock frequency            f = 1 / T
+   ```
+   - One instruction usually needs several cycles. `CPI` (cycles per instruction) measures how many.
+   ```
+      CPU time = Instruction count x CPI x Clock cycle time
+   ```
+
+   What "3.5 GHz" means
+   ```
+      1 Hz  = 1 cycle per second
+      1 GHz = 1,000,000,000 cycles per second
+
+      3.5 GHz = 3,500,000,000 clock cycles per second
+   ```
+   - The time for one cycle is therefore
+   ```
+      T = 1 / (3.5 x 10^9)
+        = 0.2857 x 10^-9 s
+        = 0.2857 nanoseconds
+        = 285.7 picoseconds
+   ```
+   - So the processor advances one step every 0.286 nanoseconds — three and a half thousand million steps every second.
+
+   What it does `not` mean
+   - It does `not` mean 3.5 billion instructions per second. Some instructions need several cycles, while a superscalar processor completes several instructions per cycle. Real throughput is:
+   ```
+      Performance = clock frequency x IPC x number of cores
+   ```
+   - Comparing two processors by clock speed alone is only valid when they share the same architecture. A 2.5 GHz modern chip easily beats a 3.5 GHz chip of ten years ago, because it does far more work per cycle.
+   - Modern processors quote a `base` clock and a higher `turbo` clock, reached only while thermal and power headroom allows. Under sustained load the chip may `throttle` back to protect itself.
+
+   Worked example
+   ```
+      Program : 2 billion instructions , average CPI = 2 , clock 3.5 GHz
+
+      Total cycles = 2 x 10^9 x 2 = 4 x 10^9
+      Execution time = 4 x 10^9 / 3.5 x 10^9 = 1.14 seconds
+   ```
+
+   - Summary: `3.5 GHz` states how fast the processor's internal metronome ticks. It sets the upper limit on how quickly work can be done, but the actual speed also depends on `IPC`, the number of cores, the cache and the memory system.
+
 3. **A program (or a program task) takes 1 billion instructions to execute on a processor running at 2 GHz. Suppose also that 50% of the instructions execute in 3 clock cycles, 30% execute in 4 clock cycles, and 20% execute in 5 clock cycles. What is the execution time for the program or task?** *[RAKUB Programmer (PO) 12.10.2021 compact it 847 (ET: N/A)]*
+
+   Answer: The standard CPU performance equation is
+   ```
+      CPU time = Instruction count x CPI x Clock cycle time
+
+               = (Instruction count x CPI) / Clock frequency
+   ```
+
+   Given
+   ```
+      Instruction count = 1 billion = 1 x 10^9
+      Clock frequency   = 2 GHz     = 2 x 10^9 Hz
+
+      50 % of instructions take 3 clock cycles
+      30 % of instructions take 4 clock cycles
+      20 % of instructions take 5 clock cycles
+   ```
+
+   Step 1 — average CPI (cycles per instruction)
+   ```
+      CPI = sum of (fraction x cycles)
+
+          = (0.50 x 3) + (0.30 x 4) + (0.20 x 5)
+
+          = 1.5 + 1.2 + 1.0
+
+      CPI = 3.7 cycles per instruction
+   ```
+
+   Step 2 — total clock cycles needed
+   ```
+      Total cycles = Instruction count x CPI
+
+                   = 1 x 10^9 x 3.7
+
+                   = 3.7 x 10^9 cycles
+   ```
+
+   Step 3 — clock cycle time
+   ```
+      T = 1 / f = 1 / (2 x 10^9) = 0.5 x 10^-9 s = 0.5 nanoseconds
+   ```
+
+   Step 4 — execution time
+   ```
+      Execution time = total cycles x clock cycle time
+
+                     = 3.7 x 10^9 x 0.5 x 10^-9
+
+                     = 1.85 seconds
+   ```
+   ```
+      Answer : 1.85 seconds
+   ```
+
+   Check by the direct formula
+   ```
+      Execution time = (Instruction count x CPI) / frequency
+
+                     = (1 x 10^9 x 3.7) / (2 x 10^9)
+
+                     = 3.7 / 2 = 1.85 s        correct
+   ```
+
+   Breakdown by instruction class, as a further check
+   ```
+      Class      Count            Cycles each   Total cycles
+      ---------  ---------------  -----------   ---------------
+      50 %       0.5 x 10^9            3        1.5 x 10^9
+      30 %       0.3 x 10^9            4        1.2 x 10^9
+      20 %       0.2 x 10^9            5        1.0 x 10^9
+      ------------------------------------------------------
+      Total      1.0 x 10^9                     3.7 x 10^9
+   ```
+
+   Related figures
+   ```
+      MIPS = Instruction count / (execution time x 10^6)
+           = 1 x 10^9 / (1.85 x 10^6)
+           = 540.5 MIPS
+
+      Effective rate = frequency / CPI = 2 x 10^9 / 3.7 = 540.5 million
+                       instructions per second        (the same figure)
+   ```
+
+   - Point worth stating: the three terms of the performance equation are influenced by different things. `Instruction count` depends on the compiler and the ISA, `CPI` on the microarchitecture and the memory system, and `clock cycle time` on the circuit technology. Improving any one of them improves performance, and a real design must attend to all three.
 
 4. **Operating system math: clock frequency 700MHz.** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
 
 5. **Computer A has 3.2GHz processing speed and it has 2.0 clock speeds in a program and at the same program Computer B has 2.4 GHz processing speed with 1.2 clock speed. Which computer will run faster and how much faster?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118-1119 (ET: BUET)]*
 
+   Answer: Speed is judged by the `time taken per instruction`, not by clock frequency alone. The performance equation is
+   ```
+      CPU time per instruction = CPI / clock frequency
+   ```
+   - Here "clock speeds in a program" means the average `CPI` — cycles per instruction.
+
+   Given
+   ```
+      Computer A : frequency = 3.2 GHz , CPI = 2.0
+      Computer B : frequency = 2.4 GHz , CPI = 1.2
+   ```
+
+   Step 1 — clock cycle time of each machine
+   ```
+      Computer A : T = 1 / (3.2 x 10^9) = 0.3125 ns
+      Computer B : T = 1 / (2.4 x 10^9) = 0.4167 ns
+   ```
+
+   Step 2 — time per instruction
+   ```
+      Computer A : 2.0 x 0.3125 ns = 0.625 ns per instruction
+
+      Computer B : 1.2 x 0.4167 ns = 0.500 ns per instruction
+   ```
+
+   Step 3 — compare
+   ```
+      Computer B takes LESS time per instruction, so COMPUTER B IS FASTER.
+
+      How much faster = time(A) / time(B)
+
+                      = 0.625 / 0.500
+
+                      = 1.25
+   ```
+   ```
+      Answer : Computer B is faster, by a factor of 1.25 - that is, 25 % faster.
+   ```
+
+   Alternative working, for the same n instructions
+   ```
+      Let the program contain n instructions.
+
+      Time on A = (n x CPI_A) / f_A = (n x 2.0) / 3.2 x 10^9 = n x 0.625 ns
+      Time on B = (n x CPI_B) / f_B = (n x 1.2) / 2.4 x 10^9 = n x 0.500 ns
+
+      Ratio = 0.625 n / 0.500 n = 1.25        same result
+   ```
+
+   Instruction throughput, another way to state it
+   ```
+      Computer A : 3.2 x 10^9 / 2.0 = 1,600 million instructions per second
+      Computer B : 2.4 x 10^9 / 1.2 = 2,000 million instructions per second
+
+      2000 / 1600 = 1.25        Computer B again 1.25 times faster
+   ```
+
+   - The lesson this question teaches: `clock speed alone does not decide performance`. Computer A has a 33 per cent higher clock but is 25 per cent slower, because its CPI is worse. Real speed is `frequency divided by CPI`, and modern architectures compete mainly on lowering CPI — better pipelines, branch prediction, superscalar issue and larger caches — rather than on raising the clock, which stopped improving significantly after about 2005.
+
 6. **Write down factor of microprocessor speed?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124-1125 (ET: BREB)]*
+
+   Answer: The speed of a microprocessor is decided by several factors acting together, not by clock frequency alone.
+   ```
+      Performance = Clock frequency x IPC x Number of cores
+   ```
+
+   1. Clock speed (frequency)
+   - The number of cycles per second, in GHz. A 3 GHz processor ticks three thousand million times a second, one tick every 0.33 ns.
+   - It sets the upper limit, but is only meaningful when comparing processors of the `same architecture`.
+
+   2. Instructions per cycle (IPC) and microarchitecture
+   - How much work is completed per tick. Better pipelines, wider superscalar issue, out-of-order execution and good branch prediction all raise IPC. This is where nearly all modern gains come from.
+   ```
+      CPU time = Instruction count x CPI x Clock cycle time
+   ```
+
+   3. Number of cores and threads
+   - More cores run more tasks genuinely simultaneously; hyper-threading lets one core run two threads and keeps its units busy.
+   - Limited by `Amdahl's law` — the serial part of a program does not speed up however many cores are added.
+
+   4. Cache memory
+   - The most important single factor after the architecture itself.
+   ```
+      L1 : 32-64 KB   ~4 cycles
+      L2 : 256KB-1MB  ~12 cycles
+      L3 : 8-32 MB    ~40 cycles
+      RAM: gigabytes  ~200 cycles
+   ```
+   - A larger, better-organised cache raises the hit ratio, and a five-point change in hit ratio can change real performance by 50 per cent.
+
+   5. Word size (bus width)
+   - A 64-bit processor moves 64 bits per operation and addresses far more memory than a 32-bit one.
+
+   6. Pipelining and superscalar design
+   - Pipelining overlaps stages so an instruction completes every cycle; superscalar issue completes several. `Hazards` — data dependencies and branch mispredictions — stall the pipeline and cost cycles.
+
+   7. Memory and bus speed
+   - The RAM type (DDR4 or DDR5), its latency, and the memory controller's bandwidth. A fast processor starved of data simply waits.
+
+   8. Instruction set architecture
+   - RISC instructions pipeline cleanly; CISC packs more work into each instruction. Special instruction sets — SSE, AVX, AES-NI — accelerate particular tasks enormously.
+
+   9. Manufacturing process
+   - A smaller process (7 nm, 5 nm, 3 nm) places transistors closer together, so they switch faster and use less power, allowing a higher clock at the same heat.
+
+   10. Thermal design and power
+   - If the chip overheats it `throttles`, dropping its clock to protect itself. Cooling therefore affects sustained speed directly, and `turbo boost` lasts only while thermal headroom remains.
+
+   11. Software factors
+   - A well-optimised, multi-threaded, compiler-optimised program uses the hardware far better than a poorly written one. Background processes steal cycles.
+
+   - Summary: clock speed is only one term of three. `Speed = clock x IPC x cores`, and all of it is bounded by how quickly the cache and memory can feed the processor.
 
 ## Multi-Core & Multi-Threading (5)
 
