@@ -1215,11 +1215,320 @@
 
 1. **You are required to convert a 12-bit digital number to an analogue voltage over the voltage range of 0 to 3.3V with a Digital-to-Analogue Converter (DAC). What is the resolution of the analogue output?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 419 (ET: BIBM)]*
 
+   Answer: The `resolution` of a DAC is the smallest change in output voltage produced by a change of `1` in the digital input — the size of one step.
+   ```
+      Resolution = Full-scale voltage range / (2^n - 1)
+   ```
+   - `2^n` is the number of distinct codes, so there are `2^n - 1` steps between the lowest and the highest output.
+
+   Given
+   ```
+      n = 12 bits
+      Output range = 0 V to 3.3 V , so V(FS) = 3.3 V
+   ```
+
+   Step 1 — number of codes and steps
+   ```
+      Number of codes = 2^12 = 4096        (0000 0000 0000 to 1111 1111 1111)
+      Number of steps = 4096 - 1 = 4095
+   ```
+
+   Step 2 — resolution
+   ```
+      Resolution = 3.3 / 4095
+                 = 0.0008059 V
+   ```
+   ```
+      Resolution = 0.806 mV = 806 microvolts per bit
+   ```
+
+   Step 3 — check the end points
+   ```
+      Code 0000 0000 0000 (0)     ->  0 x 0.806 mV      = 0 V
+      Code 1111 1111 1111 (4095)  ->  4095 x 0.806 mV   = 3.3 V      correct
+   ```
+
+   The alternative convention
+   ```
+      Some texts divide by 2^n instead of 2^n - 1 :
+
+      3.3 / 4096 = 0.0008057 V = 0.806 mV
+
+      The two answers agree to three decimal places, so either is accepted.
+      Dividing by 2^n - 1 makes the highest code equal exactly full scale;
+      dividing by 2^n makes the step size an exact binary fraction.
+   ```
+
+   Resolution as a percentage
+   ```
+      (1 / 4095) x 100 = 0.0244 %
+   ```
+
+   How resolution changes with the number of bits, over the same 0-3.3 V range
+   ```
+       8 bit :  3.3 / 255   = 12.94 mV
+      10 bit :  3.3 / 1023  =  3.23 mV
+      12 bit :  3.3 / 4095  =  0.806 mV
+      16 bit :  3.3 / 65535 =  0.050 mV
+   ```
+   - Each extra bit `halves` the step size, so resolution improves exponentially with bit count.
+
+   - Point worth noting: resolution is not the same as `accuracy`. Resolution is the smallest step the converter can produce; accuracy is how close the real output is to the ideal value, and it is limited by offset error, gain error, and differential and integral non-linearity.
+
 2. **An 8 bit (Analog to Digital Converter) = 2.56v. Let the minimum analog voltage = 0v. Calculate binary data output if analog input=1.7** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)]*
+
+   Answer: An ADC divides its full-scale input range into `2^n` equal steps and outputs the code corresponding to the input level.
+   ```
+      Step size (resolution) = (V(max) - V(min)) / 2^n
+
+      Digital output = (V(in) - V(min)) / step size
+   ```
+
+   Given
+   ```
+      n        = 8 bits
+      V(max)   = 2.56 V        (full-scale reference)
+      V(min)   = 0 V
+      V(in)    = 1.7 V
+   ```
+
+   Step 1 — number of levels
+   ```
+      2^8 = 256 levels , codes 0 to 255
+   ```
+
+   Step 2 — step size
+   ```
+      Step = (2.56 - 0) / 256
+           = 0.01 V
+           = 10 mV per bit
+   ```
+   - This is a convenient reference voltage, chosen exactly so that one bit equals 10 mV.
+
+   Step 3 — digital output in decimal
+   ```
+      D = (V(in) - V(min)) / step
+        = (1.7 - 0) / 0.01
+        = 170
+   ```
+
+   Step 4 — convert 170 to 8-bit binary
+   ```
+      170 / 2 = 85  r 0     (LSB)
+       85 / 2 = 42  r 1
+       42 / 2 = 21  r 0
+       21 / 2 = 10  r 1
+       10 / 2 =  5  r 0
+        5 / 2 =  2  r 1
+        2 / 2 =  1  r 0
+        1 / 2 =  0  r 1     (MSB)
+
+      Reading upward : 1010 1010
+   ```
+   ```
+      Binary output = 1010 1010  =  (AA)16  =  170 decimal
+   ```
+
+   Verification
+   ```
+      1010 1010 = 128 + 32 + 8 + 2 = 170
+      170 x 0.01 V = 1.70 V        matches the analogue input exactly
+   ```
+
+   Quantisation check
+   ```
+      1.7 V falls exactly on a step boundary, so there is no quantisation error here.
+
+      In general the maximum quantisation error is +/- half a step
+          = +/- 5 mV for this converter.
+   ```
+
+   Some other input values, for practice
+   ```
+      V(in) = 0.00 V  ->  code   0 = 0000 0000
+      V(in) = 1.28 V  ->  code 128 = 1000 0000
+      V(in) = 2.55 V  ->  code 255 = 1111 1111
+      V(in) = 2.56 V  ->  saturates at 255; the top code represents 2.55 V
+   ```
+   - Point worth noting: the highest code represents `V(max) - one step`, not V(max) itself. Any input above 2.55 V is clipped to 1111 1111.
 
 3. **Draw an ADC converter circuit which convert an analog signal to digital signal.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
+   Answer: An `ADC` converts a continuously varying analogue voltage into a binary number. The most common exam circuit is the `successive approximation` type, which is what almost every microcontroller uses.
+
+   Complete signal chain
+   ```mermaid
+   flowchart LR
+       A[Analog input] --> B[Anti-aliasing<br/>low-pass filter]
+       B --> C[Sample and Hold]
+       C --> D[Comparator]
+       D --> E[SAR logic]
+       E --> F[Internal DAC]
+       F --> D
+       E --> G[Digital output]
+   ```
+
+   Successive Approximation Register (SAR) ADC
+   ```
+                           +-------------+
+      Vin ---> S/H ------->|             |
+                           | Comparator  |----+
+                 +-------->|             |    |
+                 |         +-------------+    |
+                 |                            v
+                 |                    +---------------+
+                 |                    |  SAR control  |----> digital output
+                 |                    |    logic      |      (n bits)
+                 |                    +-------+-------+
+                 |                            |
+                 |         +----------------+ |
+                 +---------|  internal DAC  |<+
+                           +----------------+
+                                   ^
+                                V(ref)
+   ```
+
+   How it works
+   ```
+      1. The sample-and-hold freezes the input voltage so it cannot change
+         while the conversion runs.
+      2. The SAR sets the MSB to 1 and clears the rest    ->  1000 0000
+      3. The DAC turns that code into a voltage, and the comparator asks
+         "is Vin greater than the DAC output?"
+            YES -> keep the bit as 1
+            NO  -> clear it back to 0
+      4. Move to the next bit and repeat.
+      5. After n comparisons, the register holds the answer.
+   ```
+   - It performs a `binary search`, so an 8-bit conversion needs exactly 8 clock cycles, and a 12-bit one exactly 12.
+
+   Worked example — 8-bit ADC, Vref = 2.56 V, Vin = 1.7 V
+   ```
+      Step = 2.56 / 256 = 10 mV
+
+      bit 7 : try 1000 0000 = 1.28 V   -> 1.7 > 1.28  keep 1
+      bit 6 : try 1100 0000 = 1.92 V   -> 1.7 < 1.92  clear to 0
+      bit 5 : try 1010 0000 = 1.60 V   -> 1.7 > 1.60  keep 1
+      bit 4 : try 1011 0000 = 1.76 V   -> 1.7 < 1.76  clear to 0
+      bit 3 : try 1010 1000 = 1.68 V   -> 1.7 > 1.68  keep 1
+      bit 2 : try 1010 1100 = 1.72 V   -> 1.7 < 1.72  clear to 0
+      bit 1 : try 1010 1010 = 1.70 V   -> equal        keep 1
+      bit 0 : try 1010 1011 = 1.71 V   -> 1.7 < 1.71  clear to 0
+
+      Result = 1010 1010 = 170       and 170 x 10 mV = 1.70 V     correct
+   ```
+
+   Simplest circuit — the flash (parallel) ADC
+   ```
+      V(ref)
+        |
+       ###
+        +---------|\
+       ###        | > comparator 3 ---+
+        +---------|/                  |
+       ###                            |    +---------+
+        +---------|\                  +--->|         |
+       ###        | > comparator 2 ------->| Priority|--- D1
+        +---------|/                  +--->| encoder |--- D0
+       ###                            |    +---------+
+        +---------|\                  |
+       ###        | > comparator 1 ---+
+        +---------|/
+       ###
+        |         ^
+       GND        |
+                 Vin
+   ```
+   - A resistor ladder creates `2^n - 1` reference levels, one comparator per level, and a priority encoder turns the comparator outputs into a binary code.
+   - It converts in a `single clock cycle` — the fastest type — but needs 255 comparators for 8 bits, so it is used only for very high speed video and radar work.
+
+   Comparison of ADC types
+
+   | Type | Speed | Resolution | Cost | Used in |
+   |---|---|---|---|---|
+   | Flash | Fastest | Low (up to 8 bit) | Very high | Video, radar |
+   | SAR | Medium | 8 to 18 bit | Low | Microcontrollers, data acquisition |
+   | Dual slope | Slow | Very high | Low | Digital multimeters |
+   | Sigma-delta | Slow | Highest (24 bit) | Medium | Audio, precision measurement |
+
 4. **(ক) A/D Converter দ্বারা কিভাবে একটি Analog signal Digital signal এ রূপান্তরিত করা হয়। ডায়াগ্রাম সহ লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) An `A/D converter` turns a continuously varying analogue voltage into a binary number a computer can process. The conversion has four stages.
+
+   ```mermaid
+   flowchart LR
+       A[Analog signal] --> B[Sampling]
+       B --> C[Quantization]
+       C --> D[Encoding]
+       D --> E[Digital output]
+   ```
+
+   Stage 1 — Sampling
+   - The continuous signal is measured at regular intervals, `f(s)` times per second, and a sample-and-hold circuit freezes each value while it is converted.
+   - `Nyquist theorem`: the sampling rate must be at least twice the highest frequency present.
+   ```
+      f(s) >= 2 . f(max)
+   ```
+   - Example: speech up to 4 kHz is sampled at 8 kHz; CD audio up to 20 kHz is sampled at 44.1 kHz.
+   - If this rule is broken, high frequencies fold back and appear as false low frequencies — `aliasing` — so an anti-aliasing low-pass filter is placed before the sampler.
+
+   Stage 2 — Quantization
+   - Each sample is rounded to the nearest of `2^n` fixed levels.
+   ```
+      Step size = (V(max) - V(min)) / 2^n
+   ```
+   - The rounding introduces `quantization error`, at most half a step. More bits give smaller steps and less error:
+   ```
+      SNR(dB) = 6.02 n + 1.76
+   ```
+
+   Stage 3 — Encoding
+   - Each level is written as an `n-bit binary number`.
+
+   Stage 4 — Output
+   - The bits are delivered in parallel or serially to the processor.
+
+   Circuit — successive approximation ADC
+   ```
+                           +-------------+
+      Vin ---> S/H ------->|             |
+                           | Comparator  |----+
+                 +-------->|             |    |
+                 |         +-------------+    |
+                 |                            v
+                 |                    +---------------+
+                 |                    |  SAR control  |---> digital output
+                 |                    |    logic      |
+                 |                    +-------+-------+
+                 |         +----------------+ |
+                 +---------|  internal DAC  |<+
+                           +----------------+
+                                   ^
+                                V(ref)
+   ```
+   - The SAR sets the most significant bit, the DAC converts the trial code back to a voltage, and the comparator decides whether to keep or clear that bit. Repeating this for every bit is a `binary search`, so an n-bit conversion takes exactly n clock cycles.
+
+   Worked example — 8-bit ADC, V(ref) = 2.56 V, V(in) = 1.7 V
+   ```
+      Step = 2.56 / 256 = 10 mV
+      Code = 1.7 / 0.01 = 170 = 1010 1010
+
+      Check : 170 x 10 mV = 1.70 V        correct
+   ```
+
+   Waveforms
+   ```
+      Analog       /‾‾\      /‾‾\
+              ----/    \____/    \----
+
+      Sampled      | | | | | | | | |      values taken at intervals of 1/fs
+
+      Quantized    _|‾|_|‾‾|_|‾|__        each held at the nearest level
+
+      Encoded      101 110 100 011 ...    the binary output
+   ```
+
+   - Points worth noting: `sampling rate` decides which frequencies survive, and `number of bits` decides how accurately each sample is represented. The reverse device is the `DAC`, which reconstructs the analogue waveform, and the two together form the basis of every digital audio, video and instrumentation system.
 
 ## AC Circuits & Power Analysis (2)
 
