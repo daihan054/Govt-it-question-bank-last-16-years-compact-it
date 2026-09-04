@@ -2182,55 +2182,1269 @@
 
 1. Compare RAM, ROM, cache memory, and secondary storage in terms of speed and usage. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer: The four form a `memory hierarchy`: as you move away from the CPU, storage gets larger and cheaper but much slower.
+   ```
+           CPU
+            |
+         Registers      ~1 cycle        bytes          fastest, costliest
+            |
+         Cache (L1/L2/L3) 4-40 cycles   KB to MB
+            |
+         RAM (main)     ~200 cycles     GB
+            |
+         Secondary (SSD/HDD)  millions  TB             slowest, cheapest
+   ```
+
+   Cache memory
+   - Very fast SRAM built on or beside the CPU chip, holding the instructions and data most recently used.
+   - Access takes about `4 cycles (L1)` to `40 cycles (L3)`.
+   - Size 32 KB to 32 MB. Volatile. Managed by hardware, not by the programmer.
+   - Purpose: hide the slowness of RAM. Without it a fast CPU would spend most of its time waiting.
+
+   RAM (Random Access Memory)
+   - The computer's `main working memory`. Holds the operating system, the running programs and their data.
+   - Access takes about `200 cycles` — roughly 50 to 100 ns. Size 4 GB to 64 GB.
+   - `Volatile` — everything is lost when power goes off.
+   - `Read and write` freely. Built as `DRAM`, which needs constant refreshing.
+
+   ROM (Read Only Memory)
+   - Holds the `firmware` that the machine needs at power-on: the BIOS/UEFI, the bootstrap loader, and the fixed program in an embedded device.
+   - Speed is comparable to RAM but slightly slower; size is small, kilobytes to a few megabytes.
+   - `Non-volatile` — the contents survive a power cut. Normally `read only`; modern EEPROM and Flash forms can be rewritten, but slowly.
+
+   Secondary storage (HDD, SSD, optical, tape)
+   - `Permanent` bulk storage for files, programs and the operating system itself.
+   - Access takes `milliseconds` for a hard disk and `tens of microseconds` for an SSD — thousands to millions of times slower than RAM.
+   - Size is terabytes; cost per gigabyte is by far the lowest. Non-volatile.
+   - The CPU cannot execute directly from it; data must first be copied into RAM.
+
+   Comparison
+
+   | Point | Cache | RAM | ROM | Secondary storage |
+   |---|---|---|---|---|
+   | Speed | Fastest after registers | Fast | Moderate | Slowest |
+   | Access time | 1-40 cycles | ~50-100 ns | ~100 ns | 0.1 ms (SSD) to 10 ms (HDD) |
+   | Capacity | KB to MB | GB | KB to MB | GB to TB |
+   | Volatile | Yes | Yes | No | No |
+   | Read / write | Both | Both | Read mostly | Both |
+   | Cost per byte | Highest | High | Low | Lowest |
+   | Technology | SRAM | DRAM | Flash / EEPROM | Magnetic or NAND flash |
+   | Managed by | Hardware | Operating system | Manufacturer | File system |
+   | Holds | Recently used data | Running programs | Firmware, BIOS | All files, permanently |
+
+   - Why the hierarchy works: the `principle of locality`. Programs reuse the same instructions and data repeatedly (temporal locality) and access neighbouring addresses (spatial locality), so a small fast cache satisfies most requests and the slow levels are reached rarely.
+
 2. **Difference between SRAM & DRAM also write Differences Cache Memory vs Flash Memory.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
+
+   Answer: SRAM versus DRAM
+
+   `SRAM` (Static RAM)
+   - Each cell is a `flip-flop` made of `6 transistors`. It holds its value as long as power is applied, with `no refreshing`.
+   - Very fast, but large per bit and expensive.
+   - Used for `cache memory` (L1, L2, L3) and CPU registers.
+
+   `DRAM` (Dynamic RAM)
+   - Each cell is `1 transistor + 1 capacitor`. The bit is the charge on the capacitor, which leaks away, so every cell must be `refreshed` thousands of times a second.
+   - Slower, but very small and cheap per bit, so huge capacities are possible.
+   - Used for `main memory` (the RAM sticks in a computer).
+
+   | Point | SRAM | DRAM |
+   |---|---|---|
+   | Cell | 6 transistors (flip-flop) | 1 transistor + 1 capacitor |
+   | Refresh needed | No | Yes, every few milliseconds |
+   | Speed | Very fast (1-10 ns) | Slower (50-70 ns) |
+   | Density | Low | Very high |
+   | Cost per bit | High | Low |
+   | Power (idle) | Low | Higher, refresh consumes power |
+   | Capacity per chip | Small (KB to MB) | Large (GB) |
+   | Used in | Cache, registers | Main memory |
+   | Volatile | Yes | Yes |
+
+   Cache memory versus Flash memory
+
+   `Cache memory`
+   - Small, very fast `SRAM` on or beside the CPU, holding recently used instructions and data. Managed automatically by hardware.
+   - `Volatile` — contents vanish at power-off.
+   - Purpose: hide the latency of main memory so the CPU is not left waiting.
+
+   `Flash memory`
+   - `Non-volatile` semiconductor storage using floating-gate transistors that trap charge. It keeps its contents with no power at all.
+   - Slower than cache or RAM, and it wears out — each cell survives a limited number of write cycles (about 3,000 to 100,000).
+   - Used in SSDs, pen drives, memory cards, and for BIOS/firmware storage.
+
+   | Point | Cache memory | Flash memory |
+   |---|---|---|
+   | Technology | SRAM | Floating-gate NAND/NOR |
+   | Volatile | Yes | No |
+   | Speed | Extremely fast (ns) | Much slower (microseconds) |
+   | Purpose | Speed up CPU access to RAM | Permanent storage of data |
+   | Location | Inside or next to the CPU | On an SSD, pen drive or motherboard |
+   | Capacity | KB to MB | GB to TB |
+   | Cost per byte | Very high | Low |
+   | Write endurance | Unlimited | Limited, cells wear out |
+   | Erase before write | No | Yes, whole blocks at a time |
+   | Managed by | Hardware | Controller and file system |
+
+   - Where each sits in the hierarchy: `registers -> cache (SRAM) -> main memory (DRAM) -> SSD (flash) -> hard disk`. Speed falls and capacity rises at each step, which is exactly what the hierarchy is designed to do.
 
 3. **DRAM stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+   Answer: `DRAM` stands for `Dynamic Random Access Memory`.
+
+   - "Dynamic" because each cell stores its bit as `charge on a tiny capacitor`, and that charge leaks away. The memory controller must therefore `refresh` every row thousands of times a second by reading it and writing it back. Without refreshing, the data is lost in a few milliseconds.
+   - "Random Access" because any location can be reached directly in the same time, without reading through what comes before it.
+   ```
+      One DRAM cell = 1 transistor + 1 capacitor
+   ```
+   - Because a cell is so small, DRAM packs enormous capacity onto a chip at very low cost per bit. That is why it is used for `main memory` — the RAM sticks in a computer.
+   - It is `volatile`: everything is lost when power is switched off.
+
+   Types
+   ```
+      SDRAM  : synchronous, clocked with the system bus
+      DDR    : Double Data Rate - transfers on both clock edges
+      DDR2, DDR3, DDR4, DDR5 : successive generations, each faster and
+                               lower in voltage
+   ```
+
+   Compared with SRAM
+   ```
+      SRAM : 6 transistors per cell, no refresh, very fast, expensive
+             -> used for CACHE
+
+      DRAM : 1 transistor + 1 capacitor, needs refresh, slower, cheap
+             -> used for MAIN MEMORY
+   ```
+
 4. **What is stand for EEPROM?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
+
+   Answer: `EEPROM` stands for `Electrically Erasable Programmable Read Only Memory`.
+
+   - It is a `non-volatile` memory that keeps its contents with no power, but can be `erased and rewritten electrically`, byte by byte, while it stays in the circuit.
+   - The bit is stored as charge trapped on a `floating gate` inside a transistor.
+
+   How it improved on earlier ROMs
+   ```
+      ROM    : contents fixed by the manufacturer; can never be changed
+      PROM   : Programmable ROM - the user can write it ONCE, then never again
+      EPROM  : Erasable PROM - erased by ULTRAVIOLET light through a quartz
+               window; the chip must be removed from the board, and the WHOLE
+               chip is erased at once (about 20 minutes)
+      EEPROM : erased ELECTRICALLY, BYTE by BYTE, without removing the chip
+      Flash  : a fast EEPROM that erases in BLOCKS rather than bytes,
+               which makes it much cheaper and denser
+   ```
+
+   Characteristics
+   ```
+      Non-volatile           : keeps data without power
+      Byte-level erase       : any single byte can be rewritten
+      In-circuit programmable: no need to remove the chip
+      Endurance              : about 10,000 to 1,000,000 write cycles per cell
+      Data retention         : 10 years or more
+      Write speed            : slow (milliseconds) compared with reading
+      Capacity               : small - bytes to a few hundred kilobytes
+   ```
+
+   Uses
+   - Storing `configuration and calibration data` that must survive a power cut but may change occasionally — BIOS settings, a device's serial number, a meter's reading, a car ECU's tuning values.
+   - Inside microcontrollers, as a small area for saving settings between power cycles.
+
+   - `Flash memory` is the descendant that took over the bulk market: it gives up byte-level erasing in exchange for far higher density and lower cost, which is why SSDs, pen drives and memory cards all use flash rather than plain EEPROM.
 
 5. **কম্পিউটার স্মৃতি বলতে কী বোঝায়? কম্পিউটারের স্মৃতির শ্রেণিবিভাগ আলোচনা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 405 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Computer memory
+   - `Memory` is the part of a computer that `stores` data, instructions and results so that they can be used by the processor. Without it a computer could hold nothing, not even the program it is running.
+   - Memory is organised as a large number of `locations`, each with a unique `address`, and each holding a fixed number of bits — normally one byte.
+   ```
+      Address     Content
+      ---------   -------
+      0000        1010 1101
+      0001        0011 0110
+      0002        1111 0000
+   ```
+
+   Functions of memory
+   - Hold the `program` currently being executed.
+   - Hold the `data` it is working on, and the `results` produced.
+   - Hold the `operating system` and the firmware needed to start the machine.
+   - Store files `permanently` for future use.
+
+   Classification of memory
+
+   1. By position in the hierarchy
+   ```
+      Registers          : inside the CPU, fastest, a few bytes
+      Cache memory       : L1, L2, L3 - SRAM, very fast, KB to MB
+      Primary (main)     : RAM and ROM - directly accessible by the CPU, GB
+      Secondary          : hard disk, SSD, optical disc - permanent, TB
+      Tertiary / backup  : magnetic tape, cloud storage - archival
+   ```
+   - Moving down the list, speed and cost per byte fall while capacity rises.
+
+   2. By volatility
+   ```
+      Volatile     : loses its contents when power is removed  -> RAM, cache
+      Non-volatile : keeps its contents without power          -> ROM, HDD, SSD
+   ```
+
+   3. Primary memory, by type
+   ```
+      RAM (Random Access Memory) - volatile, read/write, main working memory
+           SRAM : 6-transistor flip-flop cell, no refresh, fast, used for cache
+           DRAM : 1 transistor + 1 capacitor, needs refresh, cheap, used for
+                  main memory (SDRAM, DDR, DDR2, DDR3, DDR4, DDR5)
+
+      ROM (Read Only Memory) - non-volatile, holds firmware
+           MROM   : masked, written by the manufacturer, never changeable
+           PROM   : user-programmable ONCE
+           EPROM  : erased by ultraviolet light, whole chip at a time
+           EEPROM : erased electrically, byte by byte, in circuit
+           Flash  : block-erasable EEPROM, used in BIOS, SSDs, pen drives
+   ```
+
+   4. Secondary memory, by technology
+   ```
+      Magnetic      : hard disk, floppy disk, magnetic tape
+      Optical       : CD, DVD, Blu-ray
+      Semiconductor : SSD, pen drive, SD card (all flash based)
+   ```
+
+   5. By access method
+   ```
+      Random access     : any location reached directly, same time - RAM, SSD
+      Sequential access : must pass through everything before it - magnetic tape
+      Direct access     : a mixture of the two - hard disk
+      Associative       : searched by content, not address - cache tag memory
+   ```
+
+   The hierarchy, drawn
+   ```
+                 /\
+                /  \        Registers      - fastest, smallest, costliest
+               /----\       Cache
+              /------\      Main memory (RAM, ROM)
+             /--------\     Secondary (SSD, HDD)
+            /----------\    Tertiary (tape, cloud)
+           /____________\   - slowest, largest, cheapest
+   ```
+
+   - Why the hierarchy exists: fast memory is expensive and slow memory is cheap, so a computer uses a little of the fast kind and a lot of the slow kind. It works because of the `principle of locality` — programs keep reusing the same small set of instructions and data, so the fast levels satisfy most requests.
+
 6. **Write down the difference between RAM and ROM.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
+
+   Answer: `RAM` is the computer's working memory — fast, read/write and volatile. `ROM` holds permanent firmware — non-volatile and normally read only.
+
+   RAM (Random Access Memory)
+   - Holds the operating system, the running programs and the data they are working on.
+   - `Volatile`: everything is lost when the power goes off.
+   - Both `read and write` at full speed.
+   - Types: `SRAM` (flip-flop cell, no refresh, fast, used for cache) and `DRAM` (capacitor cell, needs refresh, cheap, used for main memory).
+
+   ROM (Read Only Memory)
+   - Holds the firmware the machine needs at power-on: the BIOS/UEFI, the bootstrap loader, and the fixed program of an embedded device.
+   - `Non-volatile`: contents survive a power cut.
+   - Written by the manufacturer, or rewritten only slowly and with a special procedure.
+   - Types: `MROM`, `PROM`, `EPROM`, `EEPROM`, `Flash`.
+
+   Difference
+
+   | Point | RAM | ROM |
+   |---|---|---|
+   | Full form | Random Access Memory | Read Only Memory |
+   | Volatility | Volatile — data lost at power-off | Non-volatile — data retained |
+   | Read / write | Both, freely | Read normally; writing is slow or impossible |
+   | Speed | Very fast | Slower to write, comparable to read |
+   | Capacity | Large (4-64 GB) | Small (KB to a few MB) |
+   | Cost per byte | Higher | Lower |
+   | Contents | Programs and data currently in use | Firmware, BIOS, bootstrap loader |
+   | Modified by the user | Yes, constantly | No, or rarely |
+   | Types | SRAM, DRAM | MROM, PROM, EPROM, EEPROM, Flash |
+   | Power consumption | Higher (DRAM needs refresh) | Lower |
+   | Used for | Temporary working storage | Permanent instructions |
+
+   - How they work together at start-up: the CPU can execute nothing without instructions, and RAM is empty at power-on. So the processor begins by fetching from `ROM`, which runs the BIOS, tests the hardware, and loads the operating system from disk into `RAM`. From that point the machine runs out of RAM.
 
 7. **Differentiate among CPU register, Cache memory, Main memory and Secondary memory.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 510 (ET: MIST)]*
 
+   Answer: These four are successive levels of the `memory hierarchy`. Moving away from the CPU, storage becomes larger and cheaper but much slower.
+   ```
+      CPU Register  ->  Cache  ->  Main memory  ->  Secondary memory
+      fastest                                         slowest
+      smallest                                        largest
+      costliest per byte                              cheapest per byte
+   ```
+
+   CPU register
+   - Storage `inside` the CPU itself, used to hold the operands and addresses currently being processed.
+   - Access takes about `one clock cycle` — the fastest storage that exists.
+   - Capacity is tiny: a few dozen registers of 32 or 64 bits, so a few hundred bytes in total.
+   - Managed by the `compiler and the instruction set`. Examples: PC, IR, accumulator, AX, flags.
+
+   Cache memory
+   - Small, very fast `SRAM` on or beside the CPU chip, holding recently used instructions and data.
+   ```
+      L1 : 32-64 KB   ~4 cycles
+      L2 : 256KB-1MB  ~12 cycles
+      L3 : 8-32 MB    ~40 cycles
+   ```
+   - Managed automatically by `hardware` — the programmer cannot address it directly.
+   - Purpose: hide the latency of main memory so the CPU is not left waiting.
+
+   Main memory (RAM)
+   - The working memory of the computer, holding the operating system and every running program.
+   - Access takes about `50-100 ns`, roughly 200 cycles. Capacity 4-64 GB.
+   - Built as `DRAM`; volatile; managed by the operating system through virtual memory.
+   - The CPU can address it directly, which is why a program must be loaded here before it can run.
+
+   Secondary memory
+   - Permanent bulk storage: hard disk, SSD, optical disc, pen drive.
+   - Access takes `tens of microseconds (SSD)` to `milliseconds (HDD)` — thousands to millions of times slower than RAM.
+   - Capacity is terabytes, and cost per byte is by far the lowest. `Non-volatile`.
+   - The CPU `cannot` execute from it directly; data must be copied into RAM first. Managed by the `file system`.
+
+   Comparison
+
+   | Point | CPU register | Cache | Main memory | Secondary memory |
+   |---|---|---|---|---|
+   | Location | Inside the CPU | On or beside the CPU | On the motherboard | External drive |
+   | Access time | ~1 cycle | 4-40 cycles | ~200 cycles | 10^4 to 10^7 cycles |
+   | Capacity | Bytes | KB to MB | GB | TB |
+   | Technology | Flip-flops | SRAM | DRAM | Magnetic or NAND flash |
+   | Cost per byte | Highest | Very high | Moderate | Lowest |
+   | Volatile | Yes | Yes | Yes | No |
+   | Managed by | Compiler / ISA | Hardware | Operating system | File system |
+   | CPU can execute from it | Yes | Yes | Yes | No |
+   | Holds | Current operands | Recently used data | Running programs | All files, permanently |
+
+   - Why the hierarchy works: the `principle of locality`. A program reuses the same instructions and data repeatedly (temporal locality) and accesses neighbouring addresses (spatial locality), so a small fast level satisfies most requests and the slow levels are reached only occasionally.
+
 8. **What do you mean by memory organization? Write the different between SRAM and DRAM.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 558 (ET: BIBM)]*
+
+   Answer: Memory organization
+   - `Memory organization` is how the memory of a computer is `structured, addressed and connected` to the processor so that data can be stored and retrieved efficiently.
+
+   It covers
+   - `Addressing` — every location has a unique address; an n-bit address bus reaches 2^n locations.
+   ```
+      16 lines -> 64 KB      20 lines -> 1 MB      32 lines -> 4 GB
+   ```
+   - `Word size` — how many bits are read or written per access (8, 16, 32, 64).
+   - `The memory hierarchy` — registers, cache, main memory and secondary storage arranged so that speed and cost are traded against capacity.
+   - `Memory mapping and decoding` — an address decoder selects exactly one chip for each address range, so several chips share the same bus without conflict.
+   - `Memory interleaving` — consecutive addresses are spread across several banks so that they can be accessed in parallel, raising bandwidth.
+   - `Banking and organisation of a chip` — a chip described as `1K x 8` has 1024 locations of 8 bits each; several such chips are combined to widen the word or extend the address range.
+   - `Virtual memory, paging and segmentation` — the operating system's way of giving each process its own address space larger than physical RAM.
+   - `Cache organisation` — direct-mapped, set-associative or fully associative, with a replacement policy and a write policy.
+   - `Memory-mapped I/O versus isolated I/O` — whether devices share the memory address space or have their own.
+
+   Example of combining chips
+   ```
+      Required : 4K x 8 memory
+      Available: 1K x 8 chips
+
+      Number of chips = 4K / 1K = 4 chips in series (to extend the address range)
+
+      Each chip needs 10 address lines (2^10 = 1K)
+      2 more lines go to a 2-to-4 decoder to select which chip
+      Total : 12 address lines -> 2^12 = 4K locations
+   ```
+
+   SRAM versus DRAM
+
+   `SRAM` (Static RAM) — each cell is a `flip-flop` of `6 transistors`. It holds its value as long as power is on, with `no refreshing`. Fast but large and expensive per bit.
+
+   `DRAM` (Dynamic RAM) — each cell is `1 transistor + 1 capacitor`. The charge leaks, so every row must be `refreshed` thousands of times a second. Slower, but tiny and cheap, so huge capacities are possible.
+
+   | Point | SRAM | DRAM |
+   |---|---|---|
+   | Cell structure | 6 transistors (flip-flop) | 1 transistor + 1 capacitor |
+   | Refresh required | No | Yes, every few milliseconds |
+   | Access time | 1-10 ns | 50-70 ns |
+   | Density | Low | Very high |
+   | Cost per bit | High | Low |
+   | Power (idle) | Low | Higher, refresh circuitry runs constantly |
+   | Capacity per chip | KB to MB | GB |
+   | Complexity | Simpler interface, no refresh logic | Needs a refresh controller |
+   | Used in | Cache memory, registers | Main memory |
+   | Volatile | Yes | Yes |
+
+   - Both are volatile. The design trade is simple: `SRAM buys speed with area, DRAM buys capacity with refresh overhead`. That is why a computer uses a little SRAM as cache in front of a lot of DRAM.
 
 9. **What is dual channel RAM? Difference between single In-Line and Dual In-Line Memory Module.** *[BITAC Assistant Programmer 27.10.2023 compact it 559 (ET: BUTEX)]*
 
+   Answer: Dual channel RAM
+   - `Dual channel` is a memory configuration in which the memory controller uses `two independent 64-bit data paths` to the RAM at the same time, instead of one.
+   - This `doubles the theoretical bandwidth` between the CPU and memory — the width becomes 128 bits per transfer.
+   ```
+      Single channel : CPU <--- 64-bit path ---> RAM
+      Dual channel   : CPU <--- 64-bit path ---> RAM stick A
+                           <--- 64-bit path ---> RAM stick B    (in parallel)
+   ```
+
+   Requirements to enable it
+   - `Two (or four) modules`, installed in the correct paired slots — usually the same colour, or slots 1 and 3, or 2 and 4. The motherboard manual states which.
+   - The modules should `match` in capacity, speed, timings and preferably manufacturer. Mismatched sticks usually still run, but at the slower module's timings, or fall back to single channel.
+   - The memory controller (now inside the CPU) must support it.
+
+   What it gains
+   - Higher memory bandwidth — in practice 10-30 per cent better in memory-bound work, and much more for `integrated graphics`, which shares system RAM and is starved by a single channel.
+   - Little benefit for ordinary office work, which is not memory-bound.
+   ```
+      Practical rule : 2 x 8 GB is better than 1 x 16 GB, at the same price.
+   ```
+   - `Triple`, `quad` and `octa` channel exist on workstation and server platforms.
+
+   SIMM versus DIMM
+
+   `SIMM` (Single In-line Memory Module)
+   - The contacts on the two sides of the edge connector are `electrically the same` — the two rows are joined, so there is effectively one row of contacts.
+   - 30-pin (8-bit) or 72-pin (32-bit) data path.
+   - Because a Pentium has a 64-bit bus, SIMMs had to be installed in `matched pairs`.
+   - Older technology: FPM and EDO RAM, 5 V. Obsolete.
+
+   `DIMM` (Dual In-line Memory Module)
+   - The contacts on the two sides are `electrically independent`, so the module has twice as many usable connections in the same length.
+   - 168-pin SDRAM, 184-pin DDR, 240-pin DDR2/DDR3, 288-pin DDR4/DDR5. Data path is `64 bits`.
+   - Can be installed `singly`, because one module already matches the CPU's 64-bit bus.
+   - Runs at lower voltage (3.3 V down to 1.1 V), so it uses less power.
+
+   | Point | SIMM | DIMM |
+   |---|---|---|
+   | Contacts on the two sides | Connected — act as one row | Independent — two separate rows |
+   | Data path width | 8 or 32 bits | 64 bits |
+   | Pins | 30 or 72 | 168 to 288 |
+   | Installed | In matched pairs | Singly |
+   | Voltage | 5 V | 3.3 V down to 1.1 V |
+   | Memory type | FPM, EDO | SDRAM, DDR to DDR5 |
+   | Capacity | Small (up to 128 MB) | Large (up to 128 GB per module) |
+   | Status | Obsolete | Current standard |
+
+   - The laptop version of a DIMM is the `SO-DIMM` (Small Outline DIMM), which is shorter but works the same way.
+   - Note the difference between `dual channel` and `dual in-line`: dual channel is a `motherboard and CPU feature` about how many paths exist to memory; dual in-line describes the `physical module` and how its edge contacts are wired. They are unrelated despite the similar names.
+
 10. **What is the difference between Dynamic RAM and Static RAM?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
+
+    Answer: Both are volatile read/write memories. The difference is the `cell design`, and everything else follows from it.
+
+    `SRAM` (Static RAM)
+    - Each cell is a `flip-flop` built from `6 transistors`. It holds its value as long as power is applied.
+    - `Static` means no refreshing is needed — the cross-coupled inverters keep reinforcing the stored bit.
+    - Fast, but a 6-transistor cell is large and expensive, so capacity is limited.
+
+    `DRAM` (Dynamic RAM)
+    - Each cell is `1 transistor + 1 capacitor`. The bit is the charge on that capacitor.
+    - `Dynamic` means the charge leaks away, so every row must be `refreshed` — read and written back — every few milliseconds.
+    - A one-transistor cell is tiny, so DRAM is cheap and very dense.
+
+    ```
+       SRAM cell (6T)                DRAM cell (1T1C)
+
+          Vdd    Vdd                    word line
+           |      |                         |
+          |‾|    |‾|                      --|
+          |_|    |_|                        |
+           +--><--+   cross-coupled       -----  capacitor
+           |      |   inverters            ---
+          |‾|    |_|                        |
+          |_|    | |                       GND
+           |      |                    bit line
+          GND    GND
+    ```
+
+    Difference
+
+    | Point | SRAM | DRAM |
+    |---|---|---|
+    | Cell structure | 6 transistors (flip-flop) | 1 transistor + 1 capacitor |
+    | Refresh required | No | Yes, every few milliseconds |
+    | Access time | 1-10 ns | 50-70 ns |
+    | Speed | Much faster | Slower |
+    | Density | Low | Very high |
+    | Capacity per chip | KB to MB | GB |
+    | Cost per bit | High | Low |
+    | Power when idle | Low | Higher — refresh runs constantly |
+    | Power when active | Higher | Lower |
+    | Extra circuitry | None | Refresh controller needed |
+    | Heat | Lower | Higher |
+    | Used in | Cache (L1, L2, L3), registers | Main memory (the RAM sticks) |
+    | Volatile | Yes | Yes |
+    | Types | Asynchronous, synchronous, pipeline burst | SDRAM, DDR, DDR2-DDR5 |
+
+    - The trade-off in one line: `SRAM buys speed by spending area; DRAM buys capacity by accepting refresh overhead`.
+    - That is exactly why a computer uses both — a few megabytes of SRAM as cache sitting in front of many gigabytes of DRAM. The cache hides the DRAM's latency, and the DRAM supplies the capacity the cache cannot.
 
 11. **Give classification of memory. Differentiate between RAM and ROM.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 664 (ET: N/A)]*
 
+    Answer: Classification of memory
+
+    1. By position in the hierarchy
+    ```
+       Registers          : inside the CPU, ~1 cycle, a few hundred bytes
+       Cache memory       : L1, L2, L3 - SRAM, 4-40 cycles, KB to MB
+       Primary (main)     : RAM and ROM, ~200 cycles, GB
+       Secondary          : hard disk, SSD, optical disc, TB
+       Tertiary / backup  : magnetic tape, cloud - archival
+    ```
+    - Speed and cost per byte fall going down; capacity rises.
+
+    2. By volatility
+    ```
+       Volatile     : contents lost at power-off   -> RAM, cache, registers
+       Non-volatile : contents retained            -> ROM, HDD, SSD, flash
+    ```
+
+    3. Primary memory by type
+    ```
+       RAM - volatile, read/write
+            SRAM : 6-transistor flip-flop cell, no refresh, fast, used for cache
+            DRAM : 1 transistor + 1 capacitor, needs refresh, cheap,
+                   used for main memory (SDRAM, DDR to DDR5)
+
+       ROM - non-volatile, holds firmware
+            MROM   : masked, fixed by the manufacturer
+            PROM   : programmable once by the user
+            EPROM  : erased by ultraviolet light, whole chip at a time
+            EEPROM : erased electrically, byte by byte, in circuit
+            Flash  : block-erasable EEPROM - BIOS, SSD, pen drive
+    ```
+
+    4. Secondary memory by technology
+    ```
+       Magnetic      : hard disk, floppy disk, magnetic tape
+       Optical       : CD, DVD, Blu-ray
+       Semiconductor : SSD, pen drive, SD card (all flash)
+    ```
+
+    5. By access method
+    ```
+       Random access     : any location reached directly - RAM, SSD
+       Sequential access : must pass through everything before it - tape
+       Direct access     : a mixture - hard disk
+       Associative       : searched by content, not by address - cache tags
+    ```
+
+    Difference between RAM and ROM
+
+    | Point | RAM | ROM |
+    |---|---|---|
+    | Full form | Random Access Memory | Read Only Memory |
+    | Volatility | Volatile — lost at power-off | Non-volatile — retained |
+    | Read / write | Both, at full speed | Read normally; writing slow or impossible |
+    | Capacity | Large (4-64 GB) | Small (KB to a few MB) |
+    | Cost per byte | Higher | Lower |
+    | Speed | Very fast | Slower to write |
+    | Contents | Programs and data in use now | Firmware, BIOS, bootstrap loader |
+    | Changed by the user | Constantly | Rarely or never |
+    | Types | SRAM, DRAM | MROM, PROM, EPROM, EEPROM, Flash |
+    | Power use | Higher (DRAM refresh) | Lower |
+    | Purpose | Temporary working storage | Permanent instructions |
+
+    - How they cooperate at start-up: RAM is empty at power-on, so the CPU begins fetching from `ROM`. The BIOS there tests the hardware and loads the operating system from disk into `RAM`, and from that point the machine runs out of RAM.
+
 12. **(গ) Primary Memory and Secondary Memory এর উদাহরণসহ তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) Primary memory
+    - The memory the CPU can `address directly`. A program must be loaded here before it can run.
+    - Fast, expensive per byte, and small in capacity.
+    - Two kinds:
+    ```
+       RAM : volatile, read/write, holds the OS and running programs
+             SRAM (cache) and DRAM (main memory)
+
+       ROM : non-volatile, holds firmware - BIOS, bootstrap loader
+             MROM, PROM, EPROM, EEPROM, Flash
+    ```
+    - Examples: DDR4 RAM modules, cache memory, the BIOS chip.
+
+    Secondary memory
+    - Permanent bulk storage that the CPU `cannot address directly`. Data must first be copied into primary memory.
+    - Slow, cheap per byte, and very large in capacity. Non-volatile.
+    ```
+       Magnetic      : hard disk, magnetic tape, floppy disk
+       Optical       : CD, DVD, Blu-ray
+       Semiconductor : SSD, pen drive, SD card
+    ```
+    - Examples: a 1 TB hard disk, a 512 GB SSD, a 32 GB pen drive.
+
+    Comparison
+
+    | Point | Primary memory | Secondary memory |
+    |---|---|---|
+    | CPU access | Direct | Not direct — must go through primary |
+    | Speed | Very fast (ns) | Slow (microseconds to milliseconds) |
+    | Capacity | Small (GB) | Large (TB) |
+    | Cost per byte | High | Very low |
+    | Volatility | RAM volatile, ROM non-volatile | Always non-volatile |
+    | Purpose | Hold programs and data in use now | Store everything permanently |
+    | Data retention | Only while powered (RAM) | Retained for years |
+    | Technology | Semiconductor | Magnetic, optical, flash |
+    | Portability | Fixed inside the machine | Often removable |
+    | Also called | Main memory, internal memory | Auxiliary memory, external storage |
+    | Examples | RAM, ROM, cache | HDD, SSD, DVD, pen drive |
+
+    How they work together
+    ```
+       1. A program file sits on the hard disk (secondary).
+       2. The user runs it; the OS COPIES it into RAM (primary).
+       3. The CPU executes it from RAM.
+       4. Results are written back to the disk to be kept permanently.
+    ```
+    - The reason for the split is economic: fast memory is expensive, so a computer uses a small amount of it for the work in hand and a large amount of cheap slow storage for everything else.
 
 13. **Write down the difference between SRAM and DRAM.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
 
+    Answer: Both are volatile read/write memories, and every difference follows from the `cell design`.
+
+    `SRAM` (Static RAM)
+    - Each cell is a `flip-flop` of `6 transistors`, which holds its value as long as power is applied.
+    - `No refresh` is needed — the cross-coupled inverters keep reinforcing the bit.
+    - Fast, but the large cell makes it costly and limits capacity.
+
+    `DRAM` (Dynamic RAM)
+    - Each cell is `1 transistor + 1 capacitor`, storing the bit as charge.
+    - The charge leaks away, so every row must be `refreshed` every few milliseconds.
+    - The tiny cell makes it very dense and cheap.
+
+    Difference
+
+    | Point | SRAM | DRAM |
+    |---|---|---|
+    | Cell | 6 transistors (flip-flop) | 1 transistor + 1 capacitor |
+    | Refresh needed | No | Yes, every few milliseconds |
+    | Access time | 1-10 ns | 50-70 ns |
+    | Speed | Much faster | Slower |
+    | Density | Low | Very high |
+    | Capacity per chip | KB to MB | GB |
+    | Cost per bit | High | Low |
+    | Idle power | Low | Higher — refresh runs constantly |
+    | Extra circuitry | None | Refresh controller required |
+    | Heat generated | Less | More |
+    | Used in | Cache (L1, L2, L3), registers | Main memory (RAM sticks) |
+    | Volatile | Yes | Yes |
+    | Types | Asynchronous, synchronous, pipeline burst | SDRAM, DDR, DDR2 to DDR5 |
+
+    - The trade-off in one line: `SRAM buys speed by spending silicon area; DRAM buys capacity by accepting the cost of refreshing`.
+    - Both are used together in every computer — a few megabytes of SRAM cache in front of many gigabytes of DRAM. The cache hides the DRAM's latency; the DRAM supplies the capacity.
+
 14. **(ক) Data transfer rate এর ভিত্তিতে নিম্নোক্ত memory/storage device গুলোকে বেশী থেকে কম ক্রমানুসারে সাজান। (i) Flash drive (ii) SSD (iii) Cache memory (iv) DVD (v) RAM (vi) Magnetic HD** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) Arranged from the `highest` data transfer rate to the `lowest`:
+    ```
+       1. Cache memory      (iii)
+       2. RAM               (v)
+       3. SSD               (ii)
+       4. Magnetic HD       (vi)
+       5. Flash drive       (i)
+       6. DVD               (iv)
+    ```
+
+    Typical transfer rates
+
+    | Rank | Device | Typical transfer rate | Technology |
+    |---|---|---|---|
+    | 1 | Cache memory | 100 GB/s to 1 TB/s | SRAM, on the CPU die |
+    | 2 | RAM | 20-50 GB/s (DDR4/DDR5) | DRAM, on the memory bus |
+    | 3 | SSD | 500 MB/s (SATA) to 7 GB/s (NVMe) | NAND flash, PCIe or SATA |
+    | 4 | Magnetic hard disk | 100-200 MB/s | Rotating magnetic platter |
+    | 5 | Flash drive (pen drive) | 20-400 MB/s (USB 2.0 to 3.x) | NAND flash over USB |
+    | 6 | DVD | 1.3-22 MB/s (1x to 16x) | Optical, laser reading a disc |
+
+    Why the order comes out this way
+    - `Cache` is SRAM built onto the processor die itself, only millimetres from the ALU, with an extremely wide internal bus. Nothing else is close.
+    - `RAM` is DRAM on the motherboard, reached over a dedicated 64-bit (or 128-bit dual-channel) memory bus at gigahertz rates.
+    - `SSD` has no moving parts, so there is no seek time, but it is reached over PCIe or SATA, which is far narrower and slower than the memory bus.
+    - `Magnetic HD` must physically move a head and wait for the platter to rotate under it. Sequential transfer is respectable, but random access costs milliseconds.
+    - `Flash drive` uses the same kind of NAND flash as an SSD, but with a cheap controller, fewer parallel chips and the USB bus as a bottleneck. A USB 2.0 drive is limited to about 40 MB/s.
+    - `DVD` is slowest of all: a laser reads a spinning plastic disc, and even 16x speed is only about 22 MB/s.
+
+    - Two related points worth stating. First, `random access` widens the gap far more than sequential transfer does — an SSD is roughly 100 times faster than a hard disk at random reads but only 3-5 times faster sequentially. Second, this order is exactly the `memory hierarchy`: speed falls and capacity rises as you move away from the CPU.
 
 15. **Which of the following is non volatile memory? (a) SRAM (b) DRAM (c) ROM (d) HDD** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
+    Answer: The non-volatile options are `(c) ROM` and `(d) HDD`.
+
+    - `Non-volatile` memory keeps its contents when the power is switched off. `Volatile` memory loses everything.
+
+    Option by option
+    ```
+       (a) SRAM : VOLATILE
+           Each cell is a 6-transistor flip-flop. It holds its value only while
+           power is applied. Used for cache memory.
+
+       (b) DRAM : VOLATILE
+           Each cell is 1 transistor + 1 capacitor. The charge leaks away, so
+           it must be refreshed, and everything is lost at power-off.
+           Used for main memory.
+
+       (c) ROM  : NON-VOLATILE
+           Holds firmware - the BIOS and bootstrap loader - which must survive
+           a power cut, since the machine has to start from it.
+
+       (d) HDD  : NON-VOLATILE
+           Data is stored as magnetic polarity on a platter, which does not
+           depend on power at all.
+    ```
+
+    - If the question expects a `single` answer from the memory devices proper, it is `(c) ROM`, because SRAM, DRAM and ROM are all semiconductor memories and only ROM among them is non-volatile. A hard disk is secondary storage rather than memory, though it is certainly non-volatile too.
+
+    Volatile and non-volatile at a glance
+
+    | Type | Volatile? | Used for |
+    |---|---|---|
+    | Registers | Yes | Current operands inside the CPU |
+    | SRAM (cache) | Yes | Hiding main-memory latency |
+    | DRAM (main memory) | Yes | Running programs and their data |
+    | ROM / EEPROM / Flash | No | Firmware, BIOS, embedded programs |
+    | HDD, SSD, optical, tape | No | Permanent file storage |
+
+    - Why it matters at start-up: RAM is empty when the machine is switched on, so the CPU must begin executing from `non-volatile` ROM. The BIOS there tests the hardware and loads the operating system from the disk into RAM.
+
 16. **(b) Here are given 4 types of different memory. Which memory is the faster? Write in sequence order in the following figure: Register, Hard disk, Cache, RAM.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 821 (ET: BUET)]*
+
+    Answer: In order from `fastest` to `slowest`:
+    ```
+       1. Register
+       2. Cache
+       3. RAM
+       4. Hard disk
+    ```
+
+    The memory hierarchy
+    ```
+                  /\
+                 /  \        1. REGISTER   ~1 cycle       bytes
+                /----\       2. CACHE      4-40 cycles    KB-MB
+               /------\      3. RAM        ~200 cycles    GB
+              /--------\     4. HARD DISK  10^7 cycles    TB
+             /__________\
+
+       Going down : slower, larger, cheaper per byte
+       Going up   : faster, smaller, costlier per byte
+    ```
+
+    Why the order is this way
+
+    | Rank | Memory | Access time | Location | Technology |
+    |---|---|---|---|---|
+    | 1 | Register | ~1 clock cycle (0.3 ns) | Inside the CPU | Flip-flops |
+    | 2 | Cache | 4-40 cycles (1-15 ns) | On or beside the CPU die | SRAM |
+    | 3 | RAM | ~200 cycles (50-100 ns) | On the motherboard | DRAM |
+    | 4 | Hard disk | 5-10 milliseconds | Separate drive | Magnetic platter |
+
+    - `Register` is inside the ALU's own data path, so the value is already where it is needed. Nothing can be faster.
+    - `Cache` is SRAM millimetres away on the same die, with a very wide internal bus.
+    - `RAM` is DRAM on the motherboard, reached over the external memory bus, and its capacitor cells are inherently slower than flip-flops.
+    - `Hard disk` has to move a mechanical head and wait for the platter to spin under it. It is roughly `a million times` slower than RAM — the largest single gap in the whole hierarchy, and the reason SSDs replaced hard disks for system drives.
+
+    The size of the gap, put in human terms
+    ```
+       If a register access took 1 second, then
+
+          cache  would take about 10 seconds
+          RAM    would take about 3 minutes
+          HDD    would take about 4 months
+    ```
+
+    - Why the hierarchy works at all: the `principle of locality`. A program reuses the same instructions and data repeatedly (`temporal locality`) and reads neighbouring addresses (`spatial locality`), so a small fast level satisfies most requests and the slow levels are reached only occasionally.
 
 17. **RAM and ROM difference লিখ?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) `RAM` is the computer's working memory — fast, read/write and volatile. `ROM` holds permanent firmware — non-volatile and normally read only.
+
+    RAM (Random Access Memory)
+    - Holds the operating system, the running programs and the data being worked on.
+    - `Volatile`: everything is lost when the power goes off.
+    - Freely `read and written` at full speed.
+    - Types: `SRAM` (flip-flop cell, no refresh, fast, used for cache) and `DRAM` (capacitor cell, needs refresh, cheap, used for main memory).
+
+    ROM (Read Only Memory)
+    - Holds the firmware needed at power-on: the BIOS/UEFI, the bootstrap loader, and the fixed program of an embedded device.
+    - `Non-volatile`: the contents survive a power cut.
+    - Written by the manufacturer, or rewritten only slowly with a special procedure.
+    - Types: `MROM`, `PROM`, `EPROM`, `EEPROM`, `Flash`.
+
+    Difference
+
+    | Point | RAM | ROM |
+    |---|---|---|
+    | Full form | Random Access Memory | Read Only Memory |
+    | Volatility | Volatile | Non-volatile |
+    | Read / write | Both | Read normally; writing slow or impossible |
+    | Speed | Very fast | Slower to write |
+    | Capacity | Large (4-64 GB) | Small (KB to a few MB) |
+    | Cost per byte | Higher | Lower |
+    | Contents | Programs and data in use | Firmware, BIOS |
+    | Changed by the user | Constantly | Rarely or never |
+    | Types | SRAM, DRAM | MROM, PROM, EPROM, EEPROM, Flash |
+    | Power consumption | Higher | Lower |
+    | Purpose | Temporary working storage | Permanent instructions |
+
+    - How they cooperate at start-up: RAM is empty at power-on, so the CPU begins fetching from `ROM`. The BIOS there tests the hardware and loads the operating system from disk into `RAM`, after which the machine runs out of RAM.
+
 18. **(a) Write the difference between: (i) RAM and ROM (ii) Open source software and Proproetary software.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1023-1024 (ET: N/A)]*
+
+    Answer: (i) RAM and ROM
+
+    `RAM` is the working memory: fast, read/write, volatile, holding the operating system and the running programs. `ROM` holds permanent firmware: non-volatile and normally read only.
+
+    | Point | RAM | ROM |
+    |---|---|---|
+    | Full form | Random Access Memory | Read Only Memory |
+    | Volatility | Volatile — lost at power-off | Non-volatile — retained |
+    | Read / write | Both, freely | Read normally; writing slow or impossible |
+    | Speed | Very fast | Slower to write |
+    | Capacity | Large (4-64 GB) | Small (KB to a few MB) |
+    | Cost per byte | Higher | Lower |
+    | Contents | Programs and data in use now | BIOS, bootstrap loader, firmware |
+    | Types | SRAM, DRAM | MROM, PROM, EPROM, EEPROM, Flash |
+    | Purpose | Temporary working storage | Permanent instructions |
+
+    - At power-on, RAM is empty, so the CPU must start from `ROM`. The BIOS there tests the hardware and loads the operating system from disk into `RAM`.
+
+    (ii) Open source software and proprietary software
+
+    `Open source software` publishes its `source code` under a licence that allows anyone to read, modify and redistribute it. `Proprietary software` keeps the source code secret and is licensed only as a compiled binary, under conditions set by the owner.
+
+    | Point | Open source software | Proprietary software |
+    |---|---|---|
+    | Source code | Public, freely available | Secret, kept by the vendor |
+    | Cost | Usually free | Paid licence |
+    | Modification | Allowed and encouraged | Prohibited by licence |
+    | Redistribution | Allowed under the licence | Prohibited |
+    | Licence | GPL, Apache, MIT, BSD | EULA, per-seat or subscription |
+    | Developed by | A community of contributors | One company's employees |
+    | Support | Community forums; paid support optional | Official vendor support included |
+    | Security | Many eyes can find and fix bugs | Depends on the vendor; flaws stay hidden |
+    | Updates | Frequent, community driven | On the vendor's schedule |
+    | Vendor lock-in | Low — the code can be forked | High |
+    | Customisation | Complete | None beyond what is offered |
+    | Accountability | No single party responsible | The vendor is contractually responsible |
+    | Examples | Linux, Apache, MySQL, LibreOffice, Firefox, Android | Windows, macOS, MS Office, Oracle, Photoshop |
+
+    - Practical trade: open source gives `control and low cost` but requires in-house skill; proprietary gives `support and accountability` but costs money and creates dependence on the vendor. Many organisations, including government offices, mix the two — Linux servers running proprietary application software.
 
 19. **(b) Outline the functions performed by memory. List some factors upon which memory can be classified.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1024 (ET: N/A)]*
 
+    Answer: Functions performed by memory
+    - `Store the program` currently being executed, so the CPU can fetch its instructions.
+    - `Store the data` the program is working on, and the intermediate and final results.
+    - `Hold the operating system` and the firmware needed to start the machine.
+    - `Store files permanently` for future use — the job of secondary memory.
+    - `Supply the CPU on demand`, delivering an instruction or an operand whenever it is requested.
+    - `Act as a buffer` between devices working at different speeds — a print spooler, a disk cache, an I/O buffer.
+    - `Provide addressability`: every location has a unique address, so any item can be found directly.
+    - `Support multiprogramming`, by holding several processes at once with protection between them.
+    - `Provide virtual memory`, so that a program larger than physical RAM can still run, with the operating system swapping pages to disk.
+    - `Retain data without power`, in the non-volatile levels.
+
+    Factors on which memory is classified
+
+    1. `Volatility`
+    ```
+       Volatile     : contents lost at power-off  -> RAM, cache, registers
+       Non-volatile : contents retained           -> ROM, HDD, SSD, flash
+    ```
+
+    2. `Position in the hierarchy and proximity to the CPU`
+    ```
+       Registers -> Cache -> Primary (RAM, ROM) -> Secondary -> Tertiary
+    ```
+
+    3. `Access method`
+    ```
+       Random access     : any location reached directly - RAM, SSD
+       Sequential access : must pass through everything before it - magnetic tape
+       Direct access     : a mixture of the two - hard disk
+       Associative       : searched by content rather than address - cache tags
+    ```
+
+    4. `Read / write capability`
+    ```
+       Read-write   : RAM, hard disk
+       Read-only    : ROM, CD-ROM
+       Write-once   : PROM, CD-R
+       Read-mostly  : EPROM, EEPROM, Flash
+    ```
+
+    5. `Technology used`
+    ```
+       Semiconductor : RAM, ROM, cache, SSD, pen drive
+       Magnetic      : hard disk, floppy disk, magnetic tape
+       Optical       : CD, DVD, Blu-ray
+    ```
+
+    6. `Speed / access time`
+    ```
+       Registers ~1 cycle , cache 4-40 , RAM ~200 , SSD 10^4 , HDD 10^7
+    ```
+
+    7. `Capacity` — bytes for registers, kilobytes to megabytes for cache, gigabytes for RAM, terabytes for disks.
+
+    8. `Cost per bit` — highest for registers, lowest for tape and optical media.
+
+    9. `Physical location` — internal (on the motherboard or the CPU) or external (removable drives, cloud).
+
+    10. `Portability` — fixed (RAM, internal hard disk) or removable (pen drive, SD card, DVD).
+
+    11. `Power consumption and volatility of the storage mechanism` — DRAM needs constant refreshing; SRAM and flash do not.
+
+    - The classification matters because it explains the `hierarchy`: fast memory is expensive and small, slow memory is cheap and large, so a computer uses a little of each and relies on the `principle of locality` to make the arrangement work.
+
 20. **(c) Given below the list of some memory devices. Identify which are semi-conductor, optical and magnetic memory. CD, RAM, Floppy Disk, Hard Disk, ROM, DVD.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1024 (ET: N/A)]*
+
+    Answer: The six devices classified by the technology that stores the data.
+
+    Semiconductor memory
+    ```
+       RAM
+       ROM
+    ```
+    - Data is held in `transistors and capacitors` on a silicon chip. There are no moving parts, so access is very fast — nanoseconds.
+    - `RAM` is volatile; `ROM` is non-volatile.
+    - Other examples: cache, SSD, pen drive, SD card, EEPROM, flash.
+
+    Magnetic memory
+    ```
+       Floppy Disk
+       Hard Disk
+    ```
+    - Data is stored as the `direction of magnetisation` of tiny regions on a coated surface. A read/write head moves over a spinning platter.
+    - Non-volatile, mechanical, and therefore slow — milliseconds — but very cheap per byte and large in capacity.
+    - Other examples: magnetic tape, magnetic drum.
+
+    Optical memory
+    ```
+       CD
+       DVD
+    ```
+    - Data is stored as microscopic `pits and lands` burned into a reflective layer, and read by a `laser` that detects the change in reflection.
+    - Non-volatile, removable, cheap to duplicate, but slow and limited in capacity.
+    - Other examples: Blu-ray, CD-R, CD-RW, DVD-R.
+
+    Summary
+
+    | Device | Category | How data is stored | Volatile? |
+    |---|---|---|---|
+    | CD | Optical | Pits and lands read by a laser | No |
+    | RAM | Semiconductor | Charge in transistors and capacitors | Yes |
+    | Floppy Disk | Magnetic | Magnetised regions on a flexible disc | No |
+    | Hard Disk | Magnetic | Magnetised regions on a rigid platter | No |
+    | ROM | Semiconductor | Fixed transistor pattern or trapped charge | No |
+    | DVD | Optical | Pits and lands, denser than CD | No |
+
+    Capacity and speed, for comparison
+    ```
+       Floppy Disk : 1.44 MB     obsolete
+       CD          : 700 MB      1.3-7.8 MB/s
+       DVD         : 4.7-8.5 GB  1.3-22 MB/s
+       Hard Disk   : 500 GB-20 TB  100-200 MB/s
+       RAM         : 4-64 GB     20-50 GB/s
+       ROM         : KB to MB    comparable to RAM for reading
+    ```
+
+    - The trend to note: semiconductor storage has been steadily replacing both of the others. `SSDs` (semiconductor) have displaced hard disks in laptops, and `pen drives` and cloud storage have displaced CDs and DVDs entirely.
 
 21. **How Maximum size of memory (RAM) is needed that can be addressed by 32-bit system.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1031 (ET: BUET)]*
 
+    Answer: The amount of memory a processor can address is set by the width of its `address bus`.
+    ```
+       Addressable memory = 2^(number of address lines) x (size of one location)
+    ```
+    - In almost every modern computer each location holds `one byte` — this is `byte addressing`.
+
+    Calculation for a 32-bit system
+    ```
+       Number of address lines = 32
+
+       Number of addressable locations = 2^32
+                                       = 4,294,967,296 locations
+
+       Each location = 1 byte
+
+       Total = 4,294,967,296 bytes
+    ```
+
+    Convert to convenient units
+    ```
+       4,294,967,296 bytes
+          / 1024 = 4,194,304 KB
+          / 1024 = 4,096 MB
+          / 1024 = 4 GB
+    ```
+    ```
+       Maximum addressable RAM = 4 GB
+    ```
+
+    Shortcut worth memorising
+    ```
+       2^10 = 1 K        2^20 = 1 M        2^30 = 1 G
+
+       2^32 = 2^2 x 2^30 = 4 x 1 G = 4 GB
+    ```
+
+    Why a 32-bit machine usually shows less than 4 GB
+    - Part of that 4 GB address space is reserved for hardware, not for RAM: graphics card memory, BIOS ROM, PCI device windows and I/O mapping. This is `memory-mapped I/O`.
+    - So a 32-bit Windows system with 4 GB installed typically reports only `3.2 to 3.5 GB` as usable. The rest is not missing, it is occupied by device addresses.
+    - `PAE` (Physical Address Extension) works around this by widening the physical address to 36 bits, giving 64 GB, though any single process is still limited to 4 GB.
+
+    Other bus widths, for comparison
+    ```
+       16-bit : 2^16 = 64 KB          (8085)
+       20-bit : 2^20 = 1 MB           (8086)
+       32-bit : 2^32 = 4 GB
+       64-bit : 2^64 = 16 EB in theory
+                in practice 48 address lines are implemented -> 256 TB
+    ```
+
+    - The distinction to state clearly: the `data bus` decides how many bits move per transfer and therefore the speed; the `address bus` decides how much memory can be reached and therefore the capacity. The two are independent.
+
 22. **What is access time and transfer time?** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*
+
+    Answer: Both describe how long a memory or storage operation takes, but they measure different parts of it.
+
+    Access time
+    - The time from the moment a request is issued until the `first` item of data is available.
+    - It is the `latency` — the waiting part of the operation, and it does not depend on how much data is being read.
+    ```
+       Access time = seek time + rotational latency + controller overhead
+    ```
+    - For a hard disk:
+    ```
+       Seek time          : moving the head to the right track   ~4-9 ms
+       Rotational latency : waiting for the sector to arrive     ~2-4 ms
+       Total access time  : ~5-12 ms
+    ```
+    - For semiconductor memory there is no mechanical part, so access time is the electrical delay only:
+    ```
+       Register :  ~0.3 ns        Cache : 1-15 ns
+       RAM      :  50-100 ns      SSD   : 20-100 microseconds
+    ```
+
+    Transfer time
+    - The time taken to actually `move the data` once it has been found. It depends directly on how much data there is.
+    ```
+       Transfer time = amount of data / transfer rate
+    ```
+    - Example: reading 10 MB from a disk whose transfer rate is 200 MB/s
+    ```
+       Transfer time = 10 / 200 = 0.05 s = 50 ms
+    ```
+
+    Total time for one operation
+    ```
+       Total time = access time + transfer time
+    ```
+    ```
+       Reading one 512-byte sector from a hard disk :
+          access time   = 10 ms          (dominates completely)
+          transfer time = 512 B / 200 MB/s = 0.0026 ms
+          total         ~ 10 ms
+
+       Reading a 100 MB file from the same disk :
+          access time   = 10 ms
+          transfer time = 100 / 200 = 500 ms   (now dominates)
+          total         ~ 510 ms
+    ```
+
+    Comparison
+
+    | Point | Access time | Transfer time |
+    |---|---|---|
+    | Measures | Waiting to reach the data | Moving the data |
+    | Also called | Latency | Data transfer / throughput time |
+    | Depends on data size | No | Yes, directly proportional |
+    | Depends on | Seek, rotation, electrical delay | Transfer rate and amount of data |
+    | Units | Nanoseconds to milliseconds | Depends on the amount |
+    | Improved by | Faster mechanics, no mechanics at all (SSD) | Wider or faster bus |
+
+    - Why the distinction matters in practice: for `many small random reads` — which is what an operating system does most — `access time` decides performance, and this is exactly where an SSD beats a hard disk by a factor of about a hundred. For `one large sequential read` the transfer rate matters more, and there the gap narrows to three or four times.
 
 23. **(ক) Memory address register and Memory buffer register কী? Primary memory and Secondary memory-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069-1070 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Memory Address Register (MAR)
+    - A CPU register that holds the `address` of the memory location the processor is about to read from or write to.
+    - Its contents are placed directly on the `address bus`, so its width equals the number of address lines. A 32-bit MAR can address 2^32 = 4 GB.
+    - It is `unidirectional` — the CPU only writes into it, and the address only travels outward to memory.
+
+    Memory Buffer Register (MBR), also called the Memory Data Register (MDR)
+    - A CPU register that holds the `data` just read from memory, or the data about to be written to it.
+    - It is connected to the `data bus`, so its width equals the word size — 8, 16, 32 or 64 bits.
+    - It is `bidirectional`, since data travels both to and from memory.
+
+    How they work together
+    ```
+       MEMORY READ
+          1. CPU loads the address into MAR
+          2. MAR drives the address bus
+          3. CPU asserts READ on the control bus
+          4. Memory places the contents on the data bus
+          5. MBR latches it
+          6. The value is copied from MBR into a working register
+
+       MEMORY WRITE
+          1. CPU loads the address into MAR and the data into MBR
+          2. MAR drives the address bus, MBR drives the data bus
+          3. CPU asserts WRITE
+          4. Memory stores the value
+    ```
+    ```
+            CPU                                   MEMORY
+       +-------------+                        +-------------+
+       |    MAR      |=== address bus =======>|             |
+       +-------------+                        |             |
+       |    MBR      |<== data bus ==========>|             |
+       +-------------+                        +-------------+
+       |  control    |--- read / write ------>|             |
+       +-------------+                        +-------------+
+    ```
+
+    | Point | MAR | MBR / MDR |
+    |---|---|---|
+    | Holds | The memory address | The data at that address |
+    | Connected to | Address bus | Data bus |
+    | Direction | Unidirectional (out) | Bidirectional |
+    | Width equals | Number of address lines | Word size |
+    | Set by | The CPU, before every access | The CPU or the memory |
+
+    Primary versus secondary memory
+
+    `Primary memory` is directly addressable by the CPU; a program must be loaded here before it can run. It is fast, expensive and small — RAM and ROM.
+
+    `Secondary memory` is permanent bulk storage that the CPU cannot address directly; data must be copied into primary memory first. It is slow, cheap and very large — hard disk, SSD, optical disc, pen drive.
+
+    | Point | Primary memory | Secondary memory |
+    |---|---|---|
+    | CPU access | Direct | Indirect, through primary |
+    | Speed | Nanoseconds | Microseconds to milliseconds |
+    | Capacity | Gigabytes | Terabytes |
+    | Cost per byte | High | Very low |
+    | Volatility | RAM volatile, ROM not | Always non-volatile |
+    | Purpose | Hold what is running now | Store everything permanently |
+    | Technology | Semiconductor | Magnetic, optical, flash |
+    | Portability | Fixed | Often removable |
+    | Examples | RAM, ROM, cache | HDD, SSD, DVD, pen drive |
+
 24. **(b) Difference between SRAM and DRAM.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
+
+    Answer: Both are volatile read/write memories; every difference follows from the `cell design`.
+
+    `SRAM` (Static RAM)
+    - Each cell is a `flip-flop` of `6 transistors`, holding its value as long as power is applied.
+    - `No refresh` is needed, because the cross-coupled inverters keep reinforcing the bit.
+    - Fast, but the large cell makes it costly and limits capacity.
+
+    `DRAM` (Dynamic RAM)
+    - Each cell is `1 transistor + 1 capacitor`, storing the bit as charge.
+    - The charge leaks, so every row must be `refreshed` every few milliseconds.
+    - The tiny cell makes it dense and cheap, so gigabyte capacities are practical.
+
+    Difference
+
+    | Point | SRAM | DRAM |
+    |---|---|---|
+    | Cell structure | 6 transistors (flip-flop) | 1 transistor + 1 capacitor |
+    | Refresh required | No | Yes, every few milliseconds |
+    | Access time | 1-10 ns | 50-70 ns |
+    | Speed | Much faster | Slower |
+    | Density | Low | Very high |
+    | Capacity per chip | KB to MB | GB |
+    | Cost per bit | High | Low |
+    | Idle power | Low | Higher — refresh runs constantly |
+    | Extra circuitry | None | Refresh controller required |
+    | Heat | Less | More |
+    | Used in | Cache (L1, L2, L3), registers | Main memory |
+    | Volatile | Yes | Yes |
+    | Types | Asynchronous, synchronous, pipeline burst | SDRAM, DDR to DDR5 |
+
+    - The trade in one line: `SRAM buys speed by spending silicon area; DRAM buys capacity by accepting refresh overhead`.
+    - Both appear in every computer — a few megabytes of SRAM cache in front of many gigabytes of DRAM. The cache hides the DRAM's latency while the DRAM supplies the capacity.
 
 25. **Write the Memory faster access time memory in top and lowest access time memory is below from the following memory: [Cache Memory, Register Memory, Main Memory, Magnetic Tapes and Magnetic Disks.]** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
 
+    Answer: In order from `fastest access time` at the top to `slowest` at the bottom:
+    ```
+       1. Register Memory
+       2. Cache Memory
+       3. Main Memory
+       4. Magnetic Disks
+       5. Magnetic Tapes
+    ```
+
+    The hierarchy
+    ```
+                  /\
+                 /  \        1. Register memory   ~0.3 ns      bytes
+                /----\       2. Cache memory      1-15 ns      KB-MB
+               /------\      3. Main memory       50-100 ns    GB
+              /--------\     4. Magnetic disk     5-10 ms      TB
+             /----------\    5. Magnetic tape     seconds      TB
+            /____________\
+
+       Going down : slower, larger, cheaper per byte
+    ```
+
+    | Rank | Memory | Access time | Capacity | Technology | Access method |
+    |---|---|---|---|---|---|
+    | 1 | Register | ~0.3 ns (1 cycle) | Bytes | Flip-flops in the CPU | Random |
+    | 2 | Cache | 1-15 ns | KB to MB | SRAM | Random |
+    | 3 | Main memory | 50-100 ns | GB | DRAM | Random |
+    | 4 | Magnetic disk | 5-10 ms | GB to TB | Rotating magnetic platter | Direct |
+    | 5 | Magnetic tape | Seconds to minutes | TB | Magnetic tape reel | `Sequential` |
+
+    Why this order
+    - `Register` sits inside the CPU's own data path, so the value is already where the ALU needs it.
+    - `Cache` is SRAM on the same die, only millimetres away, with a very wide internal bus.
+    - `Main memory` is DRAM on the motherboard, reached over the external memory bus, and its capacitor cells are inherently slower than flip-flops.
+    - `Magnetic disk` must move a mechanical head and wait for the platter to rotate — milliseconds, about a million times slower than RAM.
+    - `Magnetic tape` is worst of all because it is `sequential access`: to reach data in the middle, the whole tape before it must be wound past the head. That is why tape survives only for backup and archiving, where cost per terabyte matters and access speed does not.
+
+    The size of the gaps, in human terms
+    ```
+       If a register access took 1 second, then
+
+          cache        ~ 10 seconds
+          main memory  ~ 3 minutes
+          hard disk    ~ 4 months
+          tape         ~ years
+    ```
+
+    - Why the hierarchy works: the `principle of locality`. A program reuses the same instructions and data (temporal locality) and reads neighbouring addresses (spatial locality), so a small fast level answers most requests and the slow levels are reached rarely.
+
 26. **Difference between ROM and RAM.** *[ICT Ministry Assistant Programmer 2017 compact it 1240-1241 (ET: N/A)]*
+
+    Answer: `ROM` holds permanent firmware — non-volatile and normally read only. `RAM` is the working memory — fast, read/write and volatile.
+
+    ROM (Read Only Memory)
+    - Holds what the machine needs at power-on: the BIOS/UEFI, the bootstrap loader, and the fixed program of an embedded device.
+    - `Non-volatile`: the contents survive a power cut, which is essential, because the CPU has nothing else to execute when the machine is first switched on.
+    - Written by the manufacturer, or rewritten only slowly with a special procedure.
+    - Types: `MROM` (masked, fixed), `PROM` (write once), `EPROM` (erased by ultraviolet light), `EEPROM` (erased electrically, byte by byte), `Flash` (block erasable).
+
+    RAM (Random Access Memory)
+    - Holds the operating system, the running programs and their data.
+    - `Volatile`: everything is lost when the power goes off.
+    - Freely read and written at full speed.
+    - Types: `SRAM` (flip-flop cell, no refresh, fast, used for cache) and `DRAM` (capacitor cell, needs refresh, cheap, used for main memory).
+
+    Difference
+
+    | Point | ROM | RAM |
+    |---|---|---|
+    | Full form | Read Only Memory | Random Access Memory |
+    | Volatility | Non-volatile — retained | Volatile — lost at power-off |
+    | Read / write | Read normally; writing slow or impossible | Both, freely |
+    | Speed | Slower to write | Very fast |
+    | Capacity | Small (KB to a few MB) | Large (4-64 GB) |
+    | Cost per byte | Lower | Higher |
+    | Contents | BIOS, firmware, bootstrap loader | Programs and data in use now |
+    | Changed by the user | Rarely or never | Constantly |
+    | Power consumption | Lower | Higher (DRAM refresh) |
+    | Types | MROM, PROM, EPROM, EEPROM, Flash | SRAM, DRAM |
+    | Purpose | Permanent instructions | Temporary working storage |
+
+    - How they cooperate at start-up: RAM is empty when the power comes on, so the CPU begins fetching instructions from `ROM`. The BIOS there tests the hardware and loads the operating system from disk into `RAM`, and from that moment the machine runs out of RAM.
 
 ## RAID Architecture & Storage (15)
 
