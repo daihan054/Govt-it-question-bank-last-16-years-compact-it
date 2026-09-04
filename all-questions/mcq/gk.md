@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 422 questions
+**Table of Contents** — 6 subtopics · 423 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
 | 2 | [International Affairs](#international-affairs-103) | 103 |
-| 3 | [Everyday Science](#everyday-science-77) | 77 |
+| 3 | [Everyday Science](#everyday-science-78) | 78 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -1642,7 +1642,7 @@
    গ. ২৩০ কেভি
    ঘ. ১৩২ কেভি
 
-## Everyday Science (77)
+## Everyday Science (78)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -2199,6 +2199,11 @@
    খ. গ্রীষ্মকালে
    গ. বর্ষাকালে
    ঘ. বসন্তকালে
+
+78. **A communication channel has a signal power of P_s = 50\\text\{ mW\} and a noise power of P_n = 5\\text\{ mW\}** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 85]]*
+   a) Find the Signal-to-Noise Ratio (SNR) in linear form and decibels
+   (dB) .
+   b) If the bandwidth of the channel is B=3 MHz, calculate the channel capacity using Shannon's formula.
 
 ## Geography & Environment (26)
 

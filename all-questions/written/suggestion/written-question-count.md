@@ -1,20 +1,20 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3182** questions.
+Sorted by count, highest first. Total **3203** questions.
 
 ## IT questions
 
-Total: **2637** questions.
+Total: **2658** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **512** |
-| | Subnetting & IP Addressing | 110 |
+| **Computer Networks** | **— all subcategories —** | **517** |
+| | Subnetting & IP Addressing | 111 |
 | | OSI & TCP/IP Reference Model | 53 |
 | | Networking Fundamentals & Terminology | 32 |
-| | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 22 |
-| | Networking Devices | 20 |
+| | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 23 |
+| | Networking Devices | 23 |
 | | Wireless Networks & IoT (mmWave) | 19 |
 | | Multiplexing & Bandwidth | 18 |
 | | Routing Protocols & Route Configuration | 18 |
@@ -43,12 +43,12 @@ Total: **2637** questions.
 | | Address Resolution (ARP & RARP) | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **296** |
-| | SQL Queries | 88 |
+| **Database** | **— all subcategories —** | **298** |
+| | SQL Queries | 89 |
 | | Keys in DBMS | 34 |
 | | DBMS Architecture & Features | 26 |
 | | ER Diagram & Database Design | 25 |
-| | Normalization & Database Design | 22 |
+| | Normalization & Database Design | 23 |
 | | SQL Commands (DDL, DML, DCL, TCL) | 18 |
 | | Transaction Management & ACID Properties | 14 |
 | | Relational Data Model & ER Relationships | 14 |
@@ -63,8 +63,8 @@ Total: **2637** questions.
 | | Database Connectivity (JDBC) | 2 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
-| **C Programming** | **— all subcategories —** | **271** |
-| | Basic Programs & Control Statements | 112 |
+| **C Programming** | **— all subcategories —** | **272** |
+| | Basic Programs & Control Statements | 113 |
 | | Output Tracing & Control Flow | 57 |
 | | Recursion & Functions | 38 |
 | | Operators, Data Types & Language Concepts | 25 |
@@ -103,8 +103,8 @@ Total: **2637** questions.
 | | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
 | | Cryptography & Network Security | 0 |
-| **Computer Fundamentals** | **— all subcategories —** | **153** |
-| | Computer Fundamentals & Acronyms | 59 |
+| **Computer Fundamentals** | **— all subcategories —** | **159** |
+| | Computer Fundamentals & Acronyms | 65 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
@@ -129,30 +129,19 @@ Total: **2637** questions.
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **148** |
-| | Logic Gates & Universal Gates | 33 |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **150** |
+| | Logic Gates & Universal Gates | 34 |
 | | Number Systems & Base Conversions | 26 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 23 |
-| | Karnaugh Map (K-Map) | 19 |
+| | Karnaugh Map (K-Map) | 20 |
 | | Boolean Algebra & De Morgan’s Theorem | 19 |
 | | Sequential Circuits (Latches & Flip-Flops) | 17 |
 | | Logic Families (TTL vs CMOS) | 6 |
 | | 2's Complement & Binary Arithmetic | 4 |
 | | Finite State Machines (FSM) | 1 |
-| **Microprocessor & Computer Architecture** | **— all subcategories —** | **136** |
-| | Microprocessor Architecture & Functions | 36 |
-| | Memory Hierarchy & Storage | 26 |
-| | RAID Architecture & Storage | 15 |
-| | Cache Memory | 14 |
-| | Secondary Storage (HDD vs SSD) | 10 |
-| | Instruction Pipelining & Hazards | 9 |
-| | Assembly Language & Addressing Modes | 8 |
-| | CPU Performance & Instruction Cycle | 6 |
-| | Multi-Core & Multi-Threading | 5 |
-| | RISC vs CISC Architecture | 4 |
-| | 8085 Microprocessor & Edge Computing | 3 |
-| **Algorithm** | **— all subcategories —** | **135** |
-| | Sorting Algorithms & Complexity | 37 |
+| | Number Systems & Codes | 0 |
+| **Algorithm** | **— all subcategories —** | **136** |
+| | Sorting Algorithms & Complexity | 38 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 15 |
 | | Searching Algorithms | 14 |
@@ -167,6 +156,18 @@ Total: **2637** questions.
 | | Huffman Coding & Data Compression | 1 |
 | | NP-Completeness & Complexity Reduction | 1 |
 | | Searching & Graph Algorithms | 0 |
+| **Microprocessor & Computer Architecture** | **— all subcategories —** | **136** |
+| | Microprocessor Architecture & Functions | 36 |
+| | Memory Hierarchy & Storage | 26 |
+| | RAID Architecture & Storage | 15 |
+| | Cache Memory | 14 |
+| | Secondary Storage (HDD vs SSD) | 10 |
+| | Instruction Pipelining & Hazards | 9 |
+| | Assembly Language & Addressing Modes | 8 |
+| | CPU Performance & Instruction Cycle | 6 |
+| | Multi-Core & Multi-Threading | 5 |
+| | RISC vs CISC Architecture | 4 |
+| | 8085 Microprocessor & Edge Computing | 3 |
 | **Object Oriented Programming (OOP)** | **— all subcategories —** | **117** |
 | | OOP Concepts (Inheritance & Polymorphism) | 54 |
 | | Java Programming & Methods | 18 |
@@ -195,16 +196,16 @@ Total: **2637** questions.
 | | Full Stack & Backend Web Development | 7 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
-| **AI & Machine Learning** | **— all subcategories —** | **45** |
+| **AI & Machine Learning** | **— all subcategories —** | **47** |
 | | Artificial Intelligence & Expert Systems | 8 |
 | | Deep Learning & Neural Networks (ANN, CNN, RNN) | 8 |
 | | Machine Learning Paradigms (Supervised vs Unsupervised) | 6 |
 | | Model Evaluation & Datasets | 5 |
 | | Supervised Learning (Decision Trees) | 4 |
 | | Generative AI & Explainable AI (XAI) | 4 |
+| | Artificial Intelligence & Machine Learning | 4 |
 | | Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) | 3 |
 | | Search Algorithms (Informed vs Uninformed Search) | 2 |
-| | Artificial Intelligence & Machine Learning | 2 |
 | | Overfitting, Underfitting & Model Generalization | 1 |
 | | Association Rule Learning (Market Basket Analysis) | 1 |
 | | Clustering & Unsupervised Learning (K-Means, Hierarchical) | 1 |
@@ -234,14 +235,15 @@ Total: **2637** questions.
 | | Grammar & Ambiguity | 5 |
 | | Lexical Analysis & Compiler Phases | 5 |
 | | Linker & Loader | 1 |
+| **Programming Languages** | **— all subcategories —** | **8** |
+| | Visual Basic & .NET | 6 |
+| | Core Programming Languages | 2 |
 | **Image Processing** | **— all subcategories —** | **7** |
 | | Computer Graphics (Vector & Raster) | 3 |
 | | Color Models | 1 |
 | | Frequency Domain Filtering | 1 |
 | | Edge Detection | 1 |
 | | Morphological Operations | 1 |
-| **Programming Languages** | **— all subcategories —** | **6** |
-| | Visual Basic & .NET | 6 |
 | **MS Office** | **— all subcategories —** | **1** |
 | | MS Excel | 1 |
 

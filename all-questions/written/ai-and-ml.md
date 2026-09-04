@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 45 questions
+**Table of Contents** — 12 subtopics · 47 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,9 +9,9 @@
 | 4 | [Model Evaluation & Datasets](#model-evaluation--datasets-5) | 5 |
 | 5 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees-4) | 4 |
 | 6 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai-4) | 4 |
-| 7 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3) | 3 |
-| 8 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search-2) | 2 |
-| 9 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-2) | 2 |
+| 7 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-4) | 4 |
+| 8 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3) | 3 |
+| 9 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search-2) | 2 |
 | 10 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization-1) | 1 |
 | 11 | [Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis-1) | 1 |
 | 12 | [Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical-1) | 1 |
@@ -110,6 +110,16 @@
 
 4. **What is ChatGPT? Write down the Pros and cons of ChatGPT.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+## Artificial Intelligence & Machine Learning (4)
+1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
+(i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
+
+2. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 70]]*
+
+3. **What is the difference between Supervised and Unsupervised learning?** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*
+
+4. **Explain Different types of Cyber-attack.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 84-85]]*
+
 ## Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)
 
 1. **Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how each approach differs in its learning mechanism, data usage, and real-world applications.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1427 (ET: E-Zone)]*
@@ -123,12 +133,6 @@
 1. **Write down the difference between informed and uninformed search algorithm.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
 2. **How $\alpha$-$\beta$ pruning is better than minimax search in game planning?** *[ICT Ministry Assistant Programmer 2017 compact it 1243 (ET: N/A)]*
-
-## Artificial Intelligence & Machine Learning (2)
-1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
-(i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
-
-2. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 70]]*
 
 ## Overfitting, Underfitting & Model Generalization (1)
 

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 135 questions
+**Table of Contents** — 15 subtopics · 136 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-37) | 37 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-38) | 38 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-15) | 15 |
 | 4 | [Searching Algorithms](#searching-algorithms-14) | 14 |
@@ -23,7 +23,7 @@
 
 ---
 
-## Sorting Algorithms & Complexity (37)
+## Sorting Algorithms & Complexity (38)
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -107,6 +107,31 @@
 36. **Marge sort Algorithm ব্যবহার করে নিম্নের Data গুলো sorting করুন। [3, 13, 25, 7, 15, 2, 5, 35]** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
 
 37. **(b) What is heap sort? Build a heap tree from the following list of numbers: [44, 30, 50, 22, 60, 55, 70, 55].** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
+
+38. **Analyze the following C function and determine its Big O Time Complexity and Space Complexity. Explain your reasoning.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 83-84]]*
+\#include <stdio.h>
+
+void findDuplicates(int arr[], int n) \{
+
+    // Outer loop to pick an element
+
+    for (int i = 0; i < n; i++) \{
+
+        // Inner loop to compare it with the rest of the elements
+
+        for (int j = i + 1; j < n; j++) \{
+
+            if (arr[i] == arr[j]) \{
+
+                printf("Duplicate found: %d\\n", arr[i]);
+
+            \}
+
+        \}
+
+    \}
+
+\}
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 

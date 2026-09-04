@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 296 questions
+**Table of Contents** — 19 subtopics · 298 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-88) | 88 |
+| 1 | [SQL Queries](#sql-queries-89) | 89 |
 | 2 | [Keys in DBMS](#keys-in-dbms-34) | 34 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-26) | 26 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
-| 5 | [Normalization & Database Design](#normalization--database-design-22) | 22 |
+| 5 | [Normalization & Database Design](#normalization--database-design-23) | 23 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-18) | 18 |
 | 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-14) | 14 |
 | 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-14) | 14 |
@@ -27,7 +27,7 @@
 
 ---
 
-## SQL Queries (88)
+## SQL Queries (89)
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
 2. Consider a STUDENTS table with the following attributes: StudentID, Name, Department, Marks (10 Marks)
@@ -382,6 +382,8 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 88. **(b) Consider the following database schema** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 74]]*
 employee (employee_name, street, city) works (employee_name, company_name, salary) company (employee_name, city) Write the SQL commands to perform the following operations: (i) Find the names of all employees who live in the city 'Dhaka'. (ii) Find the names of all employees whose salary in greater than BDT 1,00,000. (iii) Find the names of all employees who live in 'Dhaka' and whose salary in less than 1,00,000.
 
+89. **SQL to find duplicate names from employee Table.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
+
 ## Keys in DBMS (34)
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
@@ -587,7 +589,7 @@ employee (employee_name, street, city) works (employee_name, company_name, salar
 
 25. **Design ER diagram for Online MCQ examination portal. Your design must contain separate entities for student, examination, question, solution and submission. Ensure that normalization is ful-fill in your design and identify the primary and foreign key.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1196-1197 (ET: N/A)]*
 
-## Normalization & Database Design (22)
+## Normalization & Database Design (23)
 1. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
 2. **Why normalization is required in Database? Write shortly about 3NF?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
@@ -647,6 +649,8 @@ employee (employee_name, street, city) works (employee_name, company_name, salar
 
 22. **(a) Draw an E-R diagram of a Library Management System. Where** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 74]]*
 (i) A library has multiple books. (ii) Each book can have multiple copies.
+
+23. **(c) Why normalization is required in Database? Write shortly about 3NF.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 75]]*
 
 ## SQL Commands (DDL, DML, DCL, TCL) (18)
 

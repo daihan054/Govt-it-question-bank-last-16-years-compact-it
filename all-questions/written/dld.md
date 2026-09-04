@@ -1,23 +1,24 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 148 questions
+**Table of Contents** — 10 subtopics · 150 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-33) | 33 |
+| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-34) | 34 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-26) | 26 |
 | 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
-| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-19) | 19 |
+| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-20) | 20 |
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-19) | 19 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-17) | 17 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
 | 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-4) | 4 |
 | 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
+| 10 | [Number Systems & Codes](#number-systems--codes-0) | 0 |
 
 <!-- TOC END -->
 
 ---
 
-## Logic Gates & Universal Gates (33)
+## Logic Gates & Universal Gates (34)
 1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
 2. Explain how any Boolean function can be implemented using only universal gates. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
@@ -85,6 +86,9 @@
 33. **What do you understand by universality of logic gate? Prove universality of NOR logic gate.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1280 (ET: N/A)]*
 
 **Design Basic gate using NOR gate or Show that NOR is gate Universal gate.** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 40]]*
+
+34. **(a) Consider the following logic circuit.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 75-76]]*
+(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C. (ii) Use K-map to simplify these expressions F_1 and F_2, and show that they are equivalent to the ones obtained in (i).
 
 ## Number Systems & Base Conversions (26)
 
@@ -206,8 +210,7 @@
 
 23. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
 
-## Karnaugh Map (K-Map) (19)
-
+## Karnaugh Map (K-Map) (20)
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
 
 2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
@@ -248,6 +251,11 @@
 18. **Simplify the expression: $F(A,B,C) = \bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$, using k-map.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
 19. **(a) Simplify $F(A,B,C,D) = ACD+AB+\bar{D}+A\bar{C}D$ using K-map and draw the simplified circuit diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+20. **Sentence correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+ক) (a+b)^4 - (a-b)^4 = 8ab(a^2+b^2) __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
+
+খ) একজন দোকানদার ৭ ১/২% ক্ষতিতে একটি দ্রব্য বিক্রয় করল যদি দ্রব্যটির ক্রয়মূল্য ১০% কম হতো এবংবিক্রয়মূল্য ৩১ টাকা বেশি হতো তাহলে ২০% লাভ হতো। দ্রব্যটির ক্রয়মূল্য কত? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
 
 ## Boolean Algebra & De Morgan’s Theorem (19)
 
@@ -355,3 +363,6 @@
 ## Finite State Machines (FSM) (1)
 
 1. **A traffic signal cycles from RED to YELLOW, YELLOW to GREEN and GREEN to RED. In each cycle RED is turned for 100 seconds, YELLOW is turned for 40 seconds and GREEN is turned for 80 seconds. The traffic has to be implemented using FSM. The only input to this FSM is a clock of 10 second period. The minimum number of flip-flops require to implement this FSM is?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
+
+## Number Systems & Codes (0)
+**(b) Represent - 25 in 8 bit binary using 2's complement.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 76]]*

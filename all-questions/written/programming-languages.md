@@ -1,9 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 1 subtopics · 6 questions
+**Table of Contents** — 2 subtopics · 8 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Visual Basic & .NET](#visual-basic--net-6) | 6 |
+| 2 | [Core Programming Languages](#core-programming-languages-2) | 2 |
 
 <!-- TOC END -->
 
@@ -22,3 +23,8 @@
 5. **What is garbage collection? Write down the difference between garbage collection in .NET 4 and earlier version of .NET** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 
 6. **What is .NET framework? Write the main components of .NET framework?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
+
+## Core Programming Languages (2)
+1. **Write a C/JAVA program to determine if a given year is a leap year or not.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 81]]*
+
+2. **Write down the difference between informed and uninformed search algorithm.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*

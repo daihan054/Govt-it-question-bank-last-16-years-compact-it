@@ -1,7 +1,7 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2742** questions.
+Sorted by count, highest first. Total **2743** questions.
 
 ## IT questions
 
@@ -152,14 +152,14 @@ Total: **1617** questions.
 
 ## General Questions
 
-Total: **1125** questions.
+Total: **1126** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **422** |
+| **General Knowledge** | **— all subcategories —** | **423** |
 | | Bangladesh Affairs | 171 |
 | | International Affairs | 103 |
-| | Everyday Science | 77 |
+| | Everyday Science | 78 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
