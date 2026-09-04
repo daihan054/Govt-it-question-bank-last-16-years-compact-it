@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 134 questions
+**Table of Contents** — 15 subtopics · 144 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-36) | 36 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-40) | 40 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-15) | 15 |
 | 4 | [Searching Algorithms](#searching-algorithms-14) | 14 |
@@ -11,21 +11,24 @@
 | 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-9) | 9 |
 | 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
 | 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
-| 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
-| 10 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
-| 11 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-3) | 3 |
-| 12 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
-| 13 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
-| 14 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
+| 9 | [Searching & Graph Algorithms](#searching--graph-algorithms-6) | 6 |
+| 10 | [Dynamic Programming](#dynamic-programming-5) | 5 |
+| 11 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
+| 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-3) | 3 |
+| 13 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
+| 14 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
+| 15 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Sorting Algorithms & Complexity (36)
+## Sorting Algorithms & Complexity (40)
 
-1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
+1. **(a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য**
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+(b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
    Answer:
 
@@ -53,9 +56,9 @@
 
    - The rule is identical for both: compare each adjacent pair and swap if the left one is larger. Letters are compared by ASCII value, so `A < B < C < D`.
 
-2. Explain the **QuickSort** algorithm with an example. Analyze its best-case, average-case, and worst-case time complexities. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
+2. **Explain the **QuickSort** algorithm with an example. Analyze its best-case, average-case, and worst-case time complexities.** *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
-   Answer: Quick sort is a divide-and-conquer sorting algorithm. It picks one element as pivot, moves all smaller elements to its left and all larger ones to its right, then sorts the two sides recursively.
+Answer: Quick sort is a divide-and-conquer sorting algorithm. It picks one element as pivot, moves all smaller elements to its left and all larger ones to its right, then sorts the two sides recursively.
 
    Steps
    - Choose a pivot — first, last, middle or a random element.
@@ -89,6 +92,14 @@
 | Quick sort |  |  |  |
 | Heap sort |  |  |  |
 
+| Algorithms | Best Case | Worst Case | Average Case |
+|---|---|---|---|
+| Selection sort |  |  |  |
+| Insertion sort |  |  |  |
+| Merge sort |  |  |  |
+| Quick sort |  |  |  |
+| Heap sort |  |  |  |
+
    Answer:
 
    | Algorithms | Best Case | Worst Case | Average Case | Auxiliary space |
@@ -107,7 +118,7 @@
 
 4. **Explain the Quick Sort algorithm with a suitable example. Under what conditions does Quick Sort exhibit its worst-case time complexity, and why does this situation occur?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
 
-   Answer: Quick sort selects a pivot, partitions the array so that smaller elements go left and larger go right, then sorts both sides recursively.
+Answer: Quick sort selects a pivot, partitions the array so that smaller elements go left and larger go right, then sorts both sides recursively.
 
    Example — `7, 2, 9, 4` with the last element as pivot
    - Pivot 4 → `2, [4], 7, 9`
@@ -135,7 +146,7 @@
 
 5. **(b) Write down the selection sort algorithm. Find out the best case, average case, and worst case time completely.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
-   Answer: Selection sort repeatedly finds the smallest element in the unsorted part and places it at the front of that part.
+Answer: Selection sort repeatedly finds the smallest element in the unsorted part and places it at the front of that part.
 
    ```
    SelectionSort(A, n)
@@ -161,7 +172,7 @@
 
 6. **Sort the following array using Insertion sort. 14, 33, 27, 10, 35, 19, 48, 44.** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1334 (ET: N/A)]*
 
-   Answer: Insertion sort takes one element at a time and inserts it into its correct place among the elements already sorted on its left.
+Answer: Insertion sort takes one element at a time and inserts it into its correct place among the elements already sorted on its left.
 
    Initial: `14, 33, 27, 10, 35, 19, 48, 44`
 
@@ -181,7 +192,7 @@
 
 7. **Sort this array using merge sort 12, 45, 23, 6, 80, 20.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: Merge sort splits the array into halves until each part holds one element, then merges the parts back in sorted order.
+Answer: Merge sort splits the array into halves until each part holds one element, then merges the parts back in sorted order.
 
    Divide phase
    ```
@@ -207,7 +218,7 @@
 
 8. **What is the worst-case time and space complexity of quicksort? Briefly explain how this worst-case behavior can occur.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 428 (ET: BIBM)]*
 
-   Answer:
+Answer:
    - Worst-case time complexity: `O(n²)`
    - Worst-case space complexity: `O(n)`, from the recursion stack. The partitioning itself is in place and uses `O(1)` auxiliary memory.
 
@@ -225,7 +236,7 @@
 
 9. **Why Quick sort worst complexity in O(n^2)? Explain with example.** *[BKSP Assistant Programmer 13.07.2024 compact it 1458 (ET: N/A)]*
 
-   Answer: Quick sort reaches `O(n²)` in the worst case because the partition step can fail to divide the array into balanced halves.
+Answer: Quick sort reaches `O(n²)` in the worst case because the partition step can fail to divide the array into balanced halves.
 
    Reason
    - Partition itself costs `O(n)` at every level.
@@ -244,7 +255,7 @@
 
 10. **In a quicksort algorithm taking the first element as a pivot element. Now Analyze the time complexity of the quicksort algorithm when all services of the quicks sort algorithm are already sorted.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
 
-    Answer: With the first element as pivot on an already sorted array, quick sort hits its worst case and runs in `O(n²)`.
+Answer: With the first element as pivot on an already sorted array, quick sort hits its worst case and runs in `O(n²)`.
 
     Analysis
     - In a sorted array the first element is the smallest of that sub-array.
@@ -263,6 +274,8 @@
     - This is the irony of quick sort — already sorted input, which is the easiest case for insertion sort, is the hardest case here. Using a random or median-of-three pivot restores `O(n log n)`.
 
 11. **(খ) Bubble sort algorithm ব্যবহার করে নিচের সংখ্যাগুলো sort করুন। প্রতিটি ধাপ প্রদর্শন করতে হবে।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+13, 14, 23, 4, 6
+
 13, 14, 23, 4, 6
 
     Answer: Bubble sort compares each adjacent pair and swaps them when they are out of order. After every pass the largest remaining element settles at the end.
@@ -293,7 +306,7 @@
 
 12. **Write a liner algorithm two sorted item merge. Why this algorithm takes O(n) time complexity?** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 591 (ET: BUET)]*
 
-    Answer: Two sorted arrays are merged by comparing their front elements and always taking the smaller one.
+Answer: Two sorted arrays are merged by comparing their front elements and always taking the smaller one.
 
     ```
     Merge(A[1..m], B[1..n], C)
@@ -321,7 +334,7 @@
 
 13. **(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 479 (ET: N/A)]*
 
-    Answer: The recurrence comes directly from the three steps of divide and conquer.
+Answer: The recurrence comes directly from the three steps of divide and conquer.
 
     Step 1 - Divide
     - The array of size `n` is split into two halves at the middle index.
@@ -347,7 +360,7 @@
 
 14. **Sort the following data using merge sort. Also mention best and worst case of the algorithm.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 459 (ET: BUET)]*
 
-    Answer: The data list was not printed with the question, so `38, 27, 43, 3, 9, 82, 10` is used to show the method.
+Answer: The data list was not printed with the question, so `38, 27, 43, 3, 9, 82, 10` is used to show the method.
 
     Divide phase
     ```
@@ -374,7 +387,7 @@
 
 15. **Which short uses divide and conquer technique?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-    Answer: Merge sort and Quick sort use the divide-and-conquer technique.
+Answer: Merge sort and Quick sort use the divide-and-conquer technique.
 
     - Merge sort — divides the array into two equal halves, sorts each recursively, then merges them. The heavy work is in the combine step.
     - Quick sort — partitions the array around a pivot, then sorts both parts recursively. The heavy work is in the divide step.
@@ -382,7 +395,7 @@
 
 16. **Fastest sorting algorithms?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-    Answer: Quick sort is generally the fastest comparison-based sorting algorithm in practice.
+Answer: Quick sort is generally the fastest comparison-based sorting algorithm in practice.
 
     - Its average case is `O(n log n)` with a very small constant factor, it sorts in place, and it uses the CPU cache well because it works on nearby memory.
     - Merge sort and heap sort are also `O(n log n)` but usually run slower — merge sort needs `O(n)` extra memory and copies between arrays, while heap sort jumps around the array and hurts cache performance.
@@ -391,7 +404,7 @@
 
 17. **Bubble sort, Quick sort and Merge sort algorithm এর Worst case complexity নির্ণয় কর।** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     | Algorithm | Worst-case time | Auxiliary space | When it happens |
     |---|---|---|---|
@@ -405,7 +418,7 @@
 
 18. **Write down the pseudocode of quick sort algorithm through recursive algorithm. Express the arrange complexity off this algorithm.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```
     QuickSort(A, low, high)
@@ -434,7 +447,7 @@
 
 19. **How many member of swapping is needed to sort the number sequence 5, 8, 3, 6, 2 in ascending order using bubble sort.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)]*
 
-    Answer: 7 swaps are needed.
+Answer: 7 swaps are needed.
 
     Initial: `5, 8, 3, 6, 2`
 
@@ -452,7 +465,7 @@
 
 20. **(i) Bubble sort Algorithm লিখুন। এ অ্যালগরিদমটির Time Complexity বের করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 783 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```
     BubbleSort(A, n)
@@ -478,7 +491,7 @@
 
 21. **(a) Compaire and contrast between Quick sort and Merge sort in terms of their time and space complexity.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 793 (ET: N/A)]*
 
-    Answer: Both are divide-and-conquer sorts with `O(n log n)` average time, but they differ sharply in worst case and memory use.
+Answer: Both are divide-and-conquer sorts with `O(n log n)` average time, but they differ sharply in worst case and memory use.
 
     | Point | Quick sort | Merge sort |
     |---|---|---|
@@ -497,7 +510,7 @@
 
 22. **(b) Difference between Heap Sort and Merge Sort.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 885 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Heap sort | Merge sort |
     |---|---|---|
@@ -514,7 +527,7 @@
 
 23. **(a) How the quick sort is implemented? What is the complexity of quick sort?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 892, 895 (ET: N/A)]*
 
-    Answer: Quick sort is implemented with a partition routine plus recursion.
+Answer: Quick sort is implemented with a partition routine plus recursion.
 
     Implementation steps
     - Pick a pivot — commonly the last element, or a random one to avoid the worst case.
@@ -540,7 +553,7 @@
 
 24. **Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Quick sort analysis
     - Balanced partition: `T(n) = 2T(n/2) + O(n)` → `O(n log n)`.
@@ -564,7 +577,7 @@
 
 25. **Insertion sort is a simple sorting algorithm. Write a program to sort some given numbers using insertion sort algorithm.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 989-990 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -603,7 +616,7 @@
 
 26. **Bubble Sort কীভাবে কাজ করে উদাহরণসহ বুঝিয়ে লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
 
-    Answer: Bubble sort compares every pair of adjacent elements and swaps them when they are in the wrong order. After each pass the largest remaining element "bubbles up" to the end.
+Answer: Bubble sort compares every pair of adjacent elements and swaps them when they are in the wrong order. After each pass the largest remaining element "bubbles up" to the end.
 
     Working rule
     - Compare `A[j]` with `A[j+1]`; if `A[j] > A[j+1]`, swap them.
@@ -621,7 +634,7 @@
 
 27. **Selection Sort টেকনিক ব্যবহার করে নিম্নোক্ত ডাটা গুলোকে সর্টিং করুন। 45, 72, 80, 65, 84, 52, 37** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039-1040 (ET: DPI)]*
 
-    Answer: Selection sort finds the smallest element in the unsorted part and swaps it with the first element of that part.
+Answer: Selection sort finds the smallest element in the unsorted part and swaps it with the first element of that part.
 
     Initial: `45, 72, 80, 65, 84, 52, 37`
 
@@ -640,7 +653,7 @@
 
 28. **(গ) উদাহরনসহ Bubble sort algorithm লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076-1077 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```
     BubbleSort(A, n)
@@ -665,7 +678,7 @@
 
 29. **(ক) নিম্নের সংখ্যাগুলোকে ঊর্ধ্বক্রমানুসারে সাজানোর জন্য Bubble Sort কিভাবে কাজ করবে তা ধাপে ধাপে প্রদর্শন করুন। 5, 8, 3, 6, 2** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
 
-    Answer: Initial: `5, 8, 3, 6, 2`
+Answer: Initial: `5, 8, 3, 6, 2`
 
     Pass 1
     - (5,8) no swap → `5, 8, 3, 6, 2`
@@ -691,7 +704,7 @@
 
 30. **(ক) Selection sort পদ্ধতির Algorithm লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087-1088 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```
     SelectionSort(A, n)
@@ -715,7 +728,7 @@
 
 31. **(খ) ৭ জন ছাত্রের পরীক্ষার প্রাপ্ত Marks দেওয়া আছে: 45, 72, 80, 65, 84, 52, 37 Selection short ব্যবহার করে নম্বরগুলো নিম্নক্রমানুযায়ী সাজানোর প্রক্রিয়া ধাপে ধাপে লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088 (ET: N/A)]*
 
-    Answer: For descending order the rule is reversed — each pass finds the largest element of the unsorted part and swaps it to the front.
+Answer: For descending order the rule is reversed — each pass finds the largest element of the unsorted part and swaps it to the front.
 
     Initial: `45, 72, 80, 65, 84, 52, 37`
 
@@ -734,7 +747,7 @@
 
 32. **(ক) Heap sort কিভাবে কাজ করে? উদাহরণসহ দেখান।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088 (ET: N/A)]*
 
-    Answer: Heap sort first turns the array into a max-heap, then repeatedly moves the root — which is always the largest element — to the end of the array.
+Answer: Heap sort first turns the array into a max-heap, then repeatedly moves the root — which is always the largest element — to the end of the array.
 
     Steps
     - Build a max-heap from the array, so every parent is greater than both of its children.
@@ -765,7 +778,7 @@
 
 33. **Describe four types sorting algorithm with example.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1114-1115 (ET: DU)]*
 
-    Answer:
+Answer:
 
     (a) Bubble sort
     - Compares adjacent pairs and swaps them if out of order; the largest element moves to the end each pass.
@@ -791,7 +804,7 @@
 
 34. **Sorting the value with radix sort: 608, 5, 768, 298, 576, 975, 90, 80** *[DESCO Assistant Engineer (CSE) 2019 compact it 1117-1118 (ET: BUET)]*
 
-    Answer: Radix sort sorts one digit at a time, starting from the least significant digit, using a stable bucket (counting) sort at each pass. The largest number has 3 digits, so 3 passes are needed.
+Answer: Radix sort sorts one digit at a time, starting from the least significant digit, using a stable bucket (counting) sort at each pass. The largest number has 3 digits, so 3 passes are needed.
 
     Initial: `608, 5, 768, 298, 576, 975, 90, 80`
 
@@ -836,7 +849,7 @@
 
 35. **(a) Write down the Merge sort algorithm. What is the time complexity of this algorithm?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```
     MergeSort(A, low, high)
@@ -867,7 +880,7 @@
 
 36. **Marge sort Algorithm ব্যবহার করে নিম্নের Data গুলো sorting করুন। [3, 13, 25, 7, 15, 2, 5, 35]** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     Divide phase
     ```
@@ -893,11 +906,99 @@
     - Sorted data: `2, 3, 5, 7, 13, 15, 25, 35`
     - With 8 elements there are `log₂ 8 = 3` levels of splitting, and each level costs `O(n)`, so the total time is `O(n log n)`.
 
+37. **(b) What is heap sort? Build a heap tree from the following list of numbers: [44, 30, 50, 22, 60, 55, 70, 55].** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
+
+    Answer: Heap Sort is a comparison-based sorting algorithm that uses a Binary Heap data structure. It first transforms the unsorted array into a Max-Heap, then repeatedly removes the maximum element (root), places it at the end of the array, and heapifies the remaining elements until sorted.
+    - Time Complexity: $O(n \log n)$ in all cases (Best, Average, Worst).
+    - Space Complexity: $O(1)$ auxiliary space (in-place).
+
+    Building Max-Heap from `[44, 30, 50, 22, 60, 55, 70, 55]`:
+    - Step 1 (Initial Binary Tree):
+      Index 0: 44, Index 1: 30, Index 2: 50, Index 3: 22, Index 4: 60, Index 5: 55, Index 6: 70, Index 7: 55
+    - Step 2 (Heapify bottom-up from last non-leaf node):
+      - Node 3 (`22`) with child `55` -> Swap `22` and `55`.
+      - Node 2 (`50`) with children `55` and `70` -> Swap `50` and `70`.
+      - Node 1 (`30`) with children `55` and `60` -> Swap `30` and `60`.
+      - Node 0 (`44`) with children `60` and `70` -> Swap `44` and `70`, then swap `44` with child `55`.
+
+    Final Max-Heap Array: `[70, 60, 55, 55, 30, 44, 50, 22]`
+
+    Max-Heap Tree:
+    ```
+              70
+            /    \
+          60      55
+         /  \    /  \
+       55   30  44   50
+      /
+     22
+    ```
+
+38. **Analyze the following C function and determine its Big O Time Complexity and Space Complexity. Explain your reasoning.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 83-84]]*
+```c
+#include <stdio.h>
+
+void findDuplicates(int arr[], int n) {
+    // Outer loop to pick an element
+    for (int i = 0; i < n; i++) {
+        // Inner loop to compare it with the rest of the elements
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                printf("Duplicate found: %d\n", arr[i]);
+            }
+        }
+    }
+}
+```
+
+    Answer:
+    - Time Complexity: $O(n^2)$
+      - Reasoning: The outer loop runs $n$ times ($i = 0$ to $n-1$). For each iteration $i$, the inner loop executes $(n - i - 1)$ times.
+      - Total operations = $(n - 1) + (n - 2) + \dots + 1 = \frac{n(n - 1)}{2} = \frac{n^2 - n}{2}$.
+      - In asymptotic Big-O notation, the highest order term dominates, yielding $O(n^2)$.
+    - Space Complexity: $O(1)$ (Constant Space)
+      - Reasoning: The algorithm uses only scalar loop counter variables (`i`, `j`) and does not allocate any dynamic memory or auxiliary data structures proportional to input size $n$.
+
+39. **Explain the Quick Sort algorithm with a suitable example. What is the worst-case time complexity, and in which scenario does it occur?** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 220]]*
+
+    Answer: Quick Sort is a Divide-and-Conquer sorting algorithm. It selects an element as a `pivot`, partitions the array so that elements smaller than the pivot move to the left and larger elements move to the right, and then recursively sorts the left and right subarrays.
+
+    Step-by-step Example on `[10, 80, 30, 90, 40, 50, 70]`:
+    - 1. Choose pivot = `70`.
+    - 2. Partition array around `70`: elements `< 70` (`10, 30, 40, 50`) move left; elements `> 70` (`80, 90`) move right.
+      Array after partition: `[10, 30, 40, 50, 70, 90, 80]`.
+    - 3. Recursively apply Quick Sort on `[10, 30, 40, 50]` and `[90, 80]`.
+    - 4. Resulting sorted array: `[10, 30, 40, 50, 70, 80, 90]`.
+
+    Complexities:
+    - Best & Average Case: $O(n \log n)$
+    - Worst-Case Time Complexity: $O(n^2)$
+    - Worst-Case Condition: Occurs when the partitioning is unbalanced at every step—i.e., when the chosen pivot is always the smallest or largest element. This happens when the input array is already sorted in ascending or descending order and the first or last element is consistently chosen as the pivot.
+
+40. **Apply the Merge Sort algorithm using the divide and conquer approach to sort the following list of numbers: 5, 1, 6, 3, 7, 2, 8, and 4.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+
+    Answer: Merge Sort divides the array into halves until single elements remain, then merges sorted subarrays.
+
+    Step-by-Step Execution:
+    - 1. Divide Phase:
+      - `[5, 1, 6, 3, 7, 2, 8, 4]` splits into `[5, 1, 6, 3]` and `[7, 2, 8, 4]`.
+      - `[5, 1, 6, 3]` splits into `[5, 1]` and `[6, 3]` $\to$ `[5]`, `[1]`, `[6]`, `[3]`.
+      - `[7, 2, 8, 4]` splits into `[7, 2]` and `[8, 4]` $\to$ `[7]`, `[2]`, `[8]`, `[4]`.
+
+    - 2. Merge Phase:
+      - Level 1: Merge `[5]` & `[1]` $\to$ `[1, 5]`; Merge `[6]` & `[3]` $\to$ `[3, 6]`.
+      - Level 1: Merge `[7]` & `[2]` $\to$ `[2, 7]`; Merge `[8]` & `[4]` $\to$ `[4, 8]`.
+      - Level 2: Merge `[1, 5]` & `[3, 6]` $\to$ `[1, 3, 5, 6]`.
+      - Level 2: Merge `[2, 7]` & `[4, 8]` $\to$ `[2, 4, 7, 8]`.
+      - Level 3: Merge `[1, 3, 5, 6]` & `[2, 4, 7, 8]` $\to$ `[1, 2, 3, 4, 5, 6, 7, 8]`.
+
+    Final Sorted List: `1, 2, 3, 4, 5, 6, 7, 8`. Total time complexity $O(n \log n)$.
+
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 
 1. **Why DFS better than BFS, Explain?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: DFS beats BFS in several situations, mainly because it uses far less memory.
+Answer: DFS beats BFS in several situations, mainly because it uses far less memory.
 
    - Memory — DFS stores only the vertices on the current path, so space is `O(d)` where `d` is the depth. BFS must hold the entire frontier, which is `O(b^d)`. On a wide graph BFS can run out of memory while DFS does not.
    - Deep solutions — DFS is more suitable when the answer lies far from the source, since it dives straight down one branch. BFS must first expand every shallower level.
@@ -912,7 +1013,7 @@
 
 2. **Write an Algorithm to detect a cycle in a directed graph.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1336 (ET: N/A)]*
 
-   Answer: A directed graph contains a cycle if DFS ever reaches a vertex that is still on the current recursion path. Such an edge is called a back edge.
+Answer: A directed graph contains a cycle if DFS ever reaches a vertex that is still on the current recursion path. Such an edge is called a back edge.
 
    ```
    HasCycle(G)
@@ -949,7 +1050,7 @@
 
 3. **What are the BFS and DFS value for the Binary tree from the following figure?** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 459 (ET: BUET)]*
 
-   Answer: The figure was not printed with the question, so this standard binary tree is used to show the method.
+Answer: The figure was not printed with the question, so this standard binary tree is used to show the method.
 
    ```
              A
@@ -975,7 +1076,7 @@
 
 4. **What are BFS and DFS for Binary Tree?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 464 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    BFS (Breadth First Search)
    - Visits every node of one level before moving to the next, so it is also called level order traversal.
@@ -1004,7 +1105,7 @@
 
 5. **(খ) BFS ও DFS এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | BFS | DFS |
    |---|---|---|
@@ -1022,7 +1123,7 @@
 
 6. **অথবা, (ক) BFS অ্যালগরিদম উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
-   Answer: BFS explores a graph level by level. It visits the source, then all its neighbours, then all of their neighbours, using a queue to remember what to visit next.
+Answer: BFS explores a graph level by level. It visits the source, then all its neighbours, then all of their neighbours, using a queue to remember what to visit next.
 
    ```
    BFS(G, s)
@@ -1059,7 +1160,7 @@
 
 7. **(খ) Node A থেকে শুরু করে নিম্নোক্ত গ্রাফটির DFS Traversal লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
-   Answer: The graph figure was not printed with the question, so this graph is used to show the method.
+Answer: The graph figure was not printed with the question, so this graph is used to show the method.
 
    ```
         A --- B --- E
@@ -1083,7 +1184,7 @@
 
 8. **Difference between depth first and breadth first search.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Depth First Search (DFS) | Breadth First Search (BFS) |
    |---|---|---|
@@ -1098,7 +1199,7 @@
 
 9. **(b) What are the main limitation of Depth First Search (DFS)? Is there any way to solve these issues?** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Limitations of DFS
    - Not complete — on an infinite or very deep graph it can keep descending one branch and never reach a goal that exists elsewhere.
@@ -1116,7 +1217,7 @@
 
 10. **DFS complexity (Approximate)** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 718 (ET: N/A)]*
 
-    Answer:
+Answer:
     - Time complexity: `O(V + E)`, where `V` is the number of vertices and `E` the number of edges.
     - Space complexity: `O(V)` for the visited array and the recursion stack.
 
@@ -1125,7 +1226,7 @@
 
 11. **Follow alphabetical ordering while considering the order of nodes traversed. (Find BFS and DFS)** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
 
-    Answer: The graph figure was not printed with the question, so this graph is used, with neighbours always taken in alphabetical order.
+Answer: The graph figure was not printed with the question, so this graph is used, with neighbours always taken in alphabetical order.
 
     ```
         A --- B --- D
@@ -1150,7 +1251,7 @@
 
 12. **Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG. Now write a C/C++ Program with the following Input and Output. Input: 5 2, 5 0, 4 0, 4 1, 2 3, 3 1 Output: 5 4 2 3 1 0** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 831-833 (ET: N/A)]*
 
-    Answer: The DFS method is used — run DFS on every unvisited vertex, and push a vertex onto a stack only after all of its descendants are finished. Popping the stack then gives the topological order.
+Answer: The DFS method is used — run DFS on every unvisited vertex, and push a vertex onto a stack only after all of its descendants are finished. Popping the stack then gives the topological order.
 
     ```c
     #include <stdio.h>
@@ -1202,7 +1303,7 @@
 
 13. **True false (DFS/ Directed graph related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the paper itself records that the exact statements could not be collected. The true/false statements that such questions use about DFS and directed graphs are given below, each with its answer and reason.
+Answer: The question is `incomplete` — the paper itself records that the exact statements could not be collected. The true/false statements that such questions use about DFS and directed graphs are given below, each with its answer and reason.
 
     Statements about DFS
     ```
@@ -1295,7 +1396,7 @@
 
 14. **Draw BFS and DFS tree starting node A-** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 878 (ET: BUET)]*
 
-    Answer: The graph figure was not printed with the question, so this graph is used to show the method.
+Answer: The graph figure was not printed with the question, so this graph is used to show the method.
 
     ```
         A --- B --- D
@@ -1328,7 +1429,7 @@
 
 15. **(c) Between Depths first search (DFS) and Breath first search (BFS). Which one is faster? Which one requires more memory?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Which is faster
     - In asymptotic terms neither is faster — both are `O(V + E)`, since each visits every vertex once and inspects every edge once.
@@ -1342,7 +1443,7 @@
 
 16. **Find the time and space complexity of BFS which has branch 4 branch and the target at level 5? If cpu can explore 10000 nodes per second find the time required and if the memory 1KB find the required memory.** *[NRCC Assistant Programmer 2021 compact it 931 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Given
     - Branching factor `b = 4`
@@ -1371,7 +1472,7 @@
 
 17. **Run the BFS algorithm from vertex 1 and draw the BFS tree.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033-1034 (ET: BUET)]*
 
-    Answer: The graph figure was not printed with the question, so this graph is used to show the method.
+Answer: The graph figure was not printed with the question, so this graph is used to show the method.
 
     ```
         1 --- 2 --- 5
@@ -1406,7 +1507,7 @@
 
 1. **A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
-   Answer: I would select the A* (A-star) algorithm for a pathfinding robot. If the map offers no useful heuristic, Dijkstra's algorithm is the fallback.
+Answer: I would select the A* (A-star) algorithm for a pathfinding robot. If the map offers no useful heuristic, Dijkstra's algorithm is the fallback.
 
    Why A*
    - It is an informed search — it uses the known goal position as a guide, so it expands far fewer cells than Dijkstra.
@@ -1427,7 +1528,7 @@
 
 2. **(a) Apply the Kruskal's algorithm for the following graph to find out the cost of the minimum spanning Tree (MST).** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
 
-   Answer: The graph figure was not printed with the question, so this weighted graph is used to show the method.
+Answer: The graph figure was not printed with the question, so this weighted graph is used to show the method.
 
    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3` (6 vertices)
 
@@ -1451,7 +1552,7 @@
 
 3. **Shortest path বের করা : Dijkstra's Algorithm** *[BTCL - JAM ( Technical) 05.04.2024 compact it 383 (ET: BUET)]*
 
-   Answer: Dijkstra's algorithm finds the shortest path from one source vertex to every other vertex in a graph with non-negative edge weights. It is a greedy algorithm.
+Answer: Dijkstra's algorithm finds the shortest path from one source vertex to every other vertex in a graph with non-negative edge weights. It is a greedy algorithm.
 
    ```
    Dijkstra(G, source)
@@ -1480,7 +1581,7 @@
 
 4. **Find the shortest path from following graph starts from:** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 394 (ET: BUET)]*
 
-   Answer: The graph figure was not printed with the question, so this graph is used with Dijkstra starting from A.
+Answer: The graph figure was not printed with the question, so this graph is used with Dijkstra starting from A.
 
    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
 
@@ -1509,7 +1610,7 @@
 
 5. **Find the minimum spanning tree:** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 700 (ET: BUET)]*
 
-   Answer: The graph figure was not printed with the question, so this graph is used, solved by Prim's algorithm starting at A.
+Answer: The graph figure was not printed with the question, so this graph is used, solved by Prim's algorithm starting at A.
 
    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
 
@@ -1531,7 +1632,7 @@
 
 6. **How to find single source shortest path from negative weighted cycle. Justify and how you find it is negative weighted graph.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
 
-   Answer: If a negative weight cycle is reachable from the source, the shortest path does not exist — going round the cycle again and again keeps lowering the cost towards minus infinity. So the correct output is to detect and report the cycle, not a distance.
+Answer: If a negative weight cycle is reachable from the source, the shortest path does not exist — going round the cycle again and again keeps lowering the cost towards minus infinity. So the correct output is to detect and report the cycle, not a distance.
 
    Algorithm to use — Bellman-Ford
    - Dijkstra cannot be used, because it assumes a settled vertex can never improve, and a negative edge breaks that assumption.
@@ -1557,7 +1658,7 @@
 
 7. **Shortest path algorithm (Djikstra's algorithm)** *[BPDB Assistant Engineer (CSE) 2021 compact it 817 (ET: BUET)]*
 
-   Answer: Dijkstra's algorithm is a greedy single-source shortest path algorithm for graphs whose edge weights are all non-negative.
+Answer: Dijkstra's algorithm is a greedy single-source shortest path algorithm for graphs whose edge weights are all non-negative.
 
    Working principle
    - Keep a distance value for every vertex; source = 0, all others = infinity.
@@ -1578,7 +1679,7 @@
 
 8. **Find the Minimum Spanning Tree of the following graph using Kruskal's algorithm.** *[RAKUB Programmer (PO) 12.10.2021 compact it 847-849 (ET: N/A)]*
 
-   Answer: The graph figure was not printed with the question, so this graph is used.
+Answer: The graph figure was not printed with the question, so this graph is used.
 
    Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
 
@@ -1603,7 +1704,7 @@
 
 9. **Find out minimum spanning tree from a given graph using krushkal algorithm.** *[Sonali Bank Ltd. Officer IT 2021 compact it 908 (ET: N/A)]*
 
-   Answer: Kruskal's algorithm builds the MST by always taking the cheapest edge that does not create a cycle.
+Answer: Kruskal's algorithm builds the MST by always taking the cheapest edge that does not create a cycle.
 
    Algorithm
    - Sort all edges in increasing order of weight.
@@ -1622,7 +1723,7 @@
 
 10. **Consider the following graph: Now find the minimum spanning tree using Kruskal's algorithm.** *[BAUST Assistant Programmer 2021 compact it 920 (ET: N/A)]*
 
-    Answer: The graph figure was not printed with the question, so this graph is used.
+Answer: The graph figure was not printed with the question, so this graph is used.
 
     Edges: `A-B 4, A-C 2, B-C 1, B-D 5, C-D 8, C-E 10, D-E 2, D-F 6, E-F 3`
 
@@ -1644,7 +1745,7 @@
 
 11. **Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using the shortest path between two substations for SGFL Company.** *[SGFL Assistant General Engineer 2021 compact it 935-936 (ET: BUET)]*
 
-    Answer: Model the substations as a weighted graph — each substation is a vertex and each road between two substations is an edge whose weight is the distance or travel time. Then apply Dijkstra's algorithm, since all distances are non-negative.
+Answer: Model the substations as a weighted graph — each substation is a vertex and each road between two substations is an edge whose weight is the distance or travel time. Then apply Dijkstra's algorithm, since all distances are non-negative.
 
     ```
     ShortestRoute(G, source S, destination D)
@@ -1677,7 +1778,7 @@
 
 12. **Shortest Path Algorithm.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-    Answer: A shortest path algorithm finds the route between two vertices of a weighted graph whose total edge weight is smallest.
+Answer: A shortest path algorithm finds the route between two vertices of a weighted graph whose total edge weight is smallest.
 
     | Algorithm | Type | Negative weights | Time complexity |
     |---|---|---|---|
@@ -1692,7 +1793,7 @@
 
 13. **How to Determine the weighted graph has negative cycle?** *[Combined 4 Banks Assistant Programmer 2020 compact it 1006-1007 (ET: DU)]*
 
-    Answer: Use the Bellman-Ford algorithm and run one extra relaxation round after the normal ones.
+Answer: Use the Bellman-Ford algorithm and run one extra relaxation round after the normal ones.
 
     Method
     - Set `dist[source] = 0` and every other distance to infinity.
@@ -1709,7 +1810,7 @@
 
 14. **নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।** *[Sundharban Gas Assistant Programmer 2020 compact it 1048 (ET: N/A)]*
 
-    Answer: The graph figure was not printed with the question, so this graph is used with Dijkstra's algorithm from vertex A.
+Answer: The graph figure was not printed with the question, so this graph is used with Dijkstra's algorithm from vertex A.
 
     Edges: `A-B 4, A-C 2, B-C 1, B-D 5, D-E 2, C-E 10`
 
@@ -1731,7 +1832,7 @@
 
 15. **S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Calculates the average cost.** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
-    Answer: The cost values were not printed with the question, so these costs are assumed in order to show the method.
+Answer: The cost values were not printed with the question, so these costs are assumed in order to show the method.
 
     Assumed costs: `S1-S2 4, S1-S3 2, S2-S3 1, S2-S4 5, S3-S4 8, S4-S5 2, S3-S5 10`
 
@@ -1773,9 +1874,9 @@
 
 ## Searching Algorithms (14)
 
-1. An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. [SO IT 25-07-2026]
+1. **An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** [SO IT 25-07-2026]
 
-   Answer: Binary search, because the array is already sorted.
+Answer: Binary search, because the array is already sorted.
 
    Justification
    - Binary search checks the middle element and discards half the array at each step, so it runs in `O(log n)`.
@@ -1789,7 +1890,7 @@
 
 2. **Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    ```
    binarySearch(array, target, low, high)
@@ -1813,7 +1914,7 @@
 
 3. **What is the complexity of Binary algorithm?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: Binary search has `O(log n)` time complexity.
+Answer: Binary search has `O(log n)` time complexity.
 
    - Best case: `O(1)` — the target happens to be the middle element on the first comparison.
    - Average case: `O(log n)`
@@ -1823,7 +1924,7 @@
 
 4. **6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-   Answer: Binary search is the correct choice.
+Answer: Binary search is the correct choice.
 
    Why
    - The data is sorted, which is the one condition binary search requires.
@@ -1844,7 +1945,7 @@
 
 5. **Explain Algorithm of Binary search.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
-   Answer: Binary search finds an element in a sorted array by repeatedly comparing with the middle element and discarding the half that cannot contain the target.
+Answer: Binary search finds an element in a sorted array by repeatedly comparing with the middle element and discarding the half that cannot contain the target.
 
    ```
    BinarySearch(A, n, target)
@@ -1872,7 +1973,7 @@
 
 6. **Binary search using recursive function.** *[Teletalk Assistant Manager (IT) 2023 compact it 466 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    ```c
    int binarySearch(int a[], int low, int high, int target) {
@@ -1900,7 +2001,7 @@
 
 7. **(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Linear Search | Binary Search |
    |---|---|---|
@@ -1917,7 +2018,7 @@
 
 8. **Write a C/C++ program for binary search.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 712 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    ```c
    #include <stdio.h>
@@ -1961,7 +2062,7 @@
 
 9. **(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
-   Answer: Linear search, also called sequential search, checks each element of a list one after another until the target is found or the list ends.
+Answer: Linear search, also called sequential search, checks each element of a list one after another until the target is found or the list ends.
 
    ```
    LinearSearch(A, n, target)
@@ -1987,7 +2088,7 @@
 
 10. **(a) Write a program in C/C++/Java to perform binary search on a list of integer members.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 791 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2028,7 +2129,7 @@
 
 11. **যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 973-974 (ET: BUET)]*
 
-    Answer: Take the sorted array `A = 2, 5, 8, 12, 16, 23, 38, 56, 72, 91` (n = 10, indices 0 to 9) and search for `23`.
+Answer: Take the sorted array `A = 2, 5, 8, 12, 16, 23, 38, 56, 72, 91` (n = 10, indices 0 to 9) and search for `23`.
 
     | Step | low | high | mid | A[mid] | Comparison | Action |
     |---|---|---|---|---|---|---|
@@ -2046,7 +2147,7 @@
 
 12. **(খ) Binary Search কিভাবে করা হয়? উদাহরণসহ দেখান।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
 
-    Answer: Binary search works on a sorted array. It compares the target with the middle element and then continues in only the half where the target could possibly be.
+Answer: Binary search works on a sorted array. It compares the target with the middle element and then continues in only the half where the target could possibly be.
 
     Rule
     - If `A[mid] == target` → found.
@@ -2071,7 +2172,7 @@
 
 13. **(ক) Liner search কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088-1089 (ET: N/A)]*
 
-    Answer: Linear search is the simplest searching technique. It compares the target with each element of the list from the beginning until a match is found or the list ends.
+Answer: Linear search is the simplest searching technique. It compares the target with each element of the list from the beginning until a match is found or the list ends.
 
     Advantages
     - Very simple to write and understand.
@@ -2091,7 +2192,7 @@
 
 14. **What is algorithm? Write down the algorithm to find out the second highest element in an n-element array.** *[ICT Ministry Assistant Programmer 2017 compact it 1236 (ET: N/A)]*
 
-    Answer: An algorithm is a finite, ordered set of unambiguous steps that takes some input and produces the required output in a finite amount of time.
+Answer: An algorithm is a finite, ordered set of unambiguous steps that takes some input and produces the required output in a finite amount of time.
 
     Properties of an algorithm
     - Input, output, definiteness (every step is clear), finiteness (it terminates) and effectiveness (each step is actually doable).
@@ -2142,6 +2243,13 @@ for i in N:
 ```
 *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
+```python
+for i in N:
+    for j in M:
+
+```
+*[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
+
    Answer: The code has two nested loops. The outer loop runs `N` times and, for every one of those turns, the inner loop runs `M` times.
 
    Time complexity
@@ -2157,7 +2265,7 @@ for i in N:
 
 2. **What is complexity of Algorithm? Categorize complexity of Algorihm.** *[BKSP Assistant Programmer 13.07.2024 compact it 1458 (ET: N/A)]*
 
-   Answer: Complexity of an algorithm is a measure of the resources it needs — how much time it takes and how much memory it uses — written as a function of the input size `n`.
+Answer: Complexity of an algorithm is a measure of the resources it needs — how much time it takes and how much memory it uses — written as a function of the input size `n`.
 
    Two main kinds
    - Time complexity — how the running time grows as `n` grows.
@@ -2183,7 +2291,7 @@ for i in N:
 
 3. **(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: Computational complexity of an algorithm is the amount of resources — time and memory — that the algorithm needs, expressed as a function of the input size `n`.
+Answer: Computational complexity of an algorithm is the amount of resources — time and memory — that the algorithm needs, expressed as a function of the input size `n`.
 
    - It answers the question "how does the cost grow when the input grows?", not "how many seconds does it take on this machine?".
    - Machine speed, compiler and programming language are deliberately ignored, so the measure stays the same everywhere.
@@ -2195,7 +2303,7 @@ for i in N:
 
 4. **Including Time and Space complexity....** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 553 (ET: BIBM)]*
 
-   Answer: The question is `incomplete` — the algorithm whose complexity was to be analysed was cut off. The full framework for stating time and space complexity is given below, with the standard results.
+Answer: The question is `incomplete` — the algorithm whose complexity was to be analysed was cut off. The full framework for stating time and space complexity is given below, with the standard results.
 
    What the two measure
    ```
@@ -2293,7 +2401,7 @@ for i in N:
 
 5. **What is complexity? Find the Complexity from code and explain.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 501 (ET: IBA)]*
 
-   Answer: Complexity measures how the time and memory used by an algorithm grow with the input size `n`. The code fragment was not printed with the question, so the standard cases are worked out below.
+Answer: Complexity measures how the time and memory used by an algorithm grow with the input size `n`. The code fragment was not printed with the question, so the standard cases are worked out below.
 
    Rules used
    - A loop running `n` times costs `O(n)`.
@@ -2334,7 +2442,7 @@ for i in N:
 
 6. **What is Big O and Big Omega?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
-   Answer: Big O and Big Omega are asymptotic notations. They describe how the running time of an algorithm grows, one from above and one from below.
+Answer: Big O and Big Omega are asymptotic notations. They describe how the running time of an algorithm grows, one from above and one from below.
 
    Big O (upper bound)
    - `f(n) = O(g(n))` if there are positive constants `c` and `n₀` such that `0 ≤ f(n) ≤ c·g(n)` for all `n ≥ n₀`.
@@ -2351,7 +2459,7 @@ for i in N:
 
 7. **(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 606 (ET: N/A)]*
 
-   Answer: Complexity of an algorithm means the amount of time and memory it needs, written as a function of the input size `n`. It is a way to compare algorithms without depending on any particular computer.
+Answer: Complexity of an algorithm means the amount of time and memory it needs, written as a function of the input size `n`. It is a way to compare algorithms without depending on any particular computer.
 
    - Time complexity — growth of the number of basic operations.
    - Space complexity — growth of the extra memory used.
@@ -2372,7 +2480,7 @@ for i in N:
 
 8. **Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    | Algorithm | Best case | Worst case | Space |
    |---|---|---|---|
@@ -2394,7 +2502,7 @@ for i in N:
 
 9. **Recurrence equation of binary search and solve it.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    Step 1 - form the recurrence
    - Binary search compares the target with the middle element, which costs constant time `O(1)`.
@@ -2422,7 +2530,7 @@ for i in N:
 
 10. **Data structure: Complexity O(N^2). [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the paper itself records that the full question could not be collected. It concerns operations of complexity `O(N^2)`, and the relevant material is set out below.
+Answer: The question is `incomplete` — the paper itself records that the full question could not be collected. It concerns operations of complexity `O(N^2)`, and the relevant material is set out below.
 
     What O(N^2) means
     - `Quadratic` growth. Doubling the input makes the work `four times` greater, because the running time is proportional to the square of the input size.
@@ -2517,7 +2625,7 @@ for i in N:
 
 11. **Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
-    Answer: This is a subtract-and-conquer recurrence, so the Master Theorem does not apply. It is solved by iteration (repeated substitution).
+Answer: This is a subtract-and-conquer recurrence, so the Master Theorem does not apply. It is solved by iteration (repeated substitution).
 
     Step 1 - expand the relation
     - `T(n) = 3T(n-1) + 2`
@@ -2550,7 +2658,7 @@ for i in N:
 
 12. **There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also depends of several factors. Describe the algorithm complexity factors.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983-984 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer: The complexity of an algorithm is decided by several factors, some belonging to the algorithm itself and some to the environment it runs in.
+Answer: The complexity of an algorithm is decided by several factors, some belonging to the algorithm itself and some to the environment it runs in.
 
     (a) Input size (n)
     - The main factor. Complexity is always written as a function of `n`, because cost grows with the amount of data.
@@ -2575,7 +2683,7 @@ for i in N:
 
 13. **Write an algorithm which complexity is O(logn).** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1122 (ET: BUET)]*
 
-    Answer: Binary search runs in `O(log n)`, because each comparison discards half of the remaining elements.
+Answer: Binary search runs in `O(log n)`, because each comparison discards half of the remaining elements.
 
     ```
     BinarySearch(A, n, target)
@@ -2614,6 +2722,13 @@ for(k=0; k<n;k++)
 count++;
 ```
 
+```c
+for(i=0; i<n;i++)
+for(j=0; j<n;j++)
+for(k=0; k<n;k++)
+count++;
+```
+
     Answer: There are three loops, each nested inside the previous one, and each runs `n` times.
 
     Time complexity
@@ -2635,7 +2750,7 @@ count++;
 
 1. **State the Principle of Optimality in Dynamic Programming. How does it distinguish Dynamic Programming from Greedy Algorithms?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
 
-   Answer: The Principle of Optimality, given by Richard Bellman, says that an optimal solution to a problem contains within it optimal solutions to all of its subproblems. In short, if a sequence of decisions is optimal, then every subsequence of it must also be optimal.
+Answer: The Principle of Optimality, given by Richard Bellman, says that an optimal solution to a problem contains within it optimal solutions to all of its subproblems. In short, if a sequence of decisions is optimal, then every subsequence of it must also be optimal.
 
    - This property is also called optimal substructure. Dynamic programming works only when it holds.
    - Example: if the shortest path from A to C passes through B, then the A-to-B part must itself be the shortest path from A to B. If a shorter A-to-B route existed, the whole path would not have been shortest.
@@ -2650,7 +2765,7 @@ count++;
 
 2. **(খ) Greedy Method ও Dynamic Algorithm এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 411 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Greedy Method | Dynamic Programming |
    |---|---|---|
@@ -2667,7 +2782,7 @@ count++;
 
 3. **Write down the difference between Divide and Conquer and Dynamic Programming.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
 
-   Answer: Both break a problem into smaller pieces, but they differ in whether those pieces overlap.
+Answer: Both break a problem into smaller pieces, but they differ in whether those pieces overlap.
 
    | Point | Divide and Conquer | Dynamic Programming |
    |---|---|---|
@@ -2683,7 +2798,7 @@ count++;
 
 4. **(a) How does dynamic programming relate with divide and conquer approach?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 484 (ET: N/A)]*
 
-   Answer: Dynamic programming is an extension of divide and conquer. It keeps the same idea of breaking a problem into smaller subproblems, but adds storage so that no subproblem is ever solved twice.
+Answer: Dynamic programming is an extension of divide and conquer. It keeps the same idea of breaking a problem into smaller subproblems, but adds storage so that no subproblem is ever solved twice.
 
    What they share
    - Both split the original problem into smaller instances of the same problem.
@@ -2701,7 +2816,7 @@ count++;
 
 5. **(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
 
-   Answer: No. A greedy algorithm does not always give the optimal solution, because it fixes each choice on local information and never reconsiders it.
+Answer: No. A greedy algorithm does not always give the optimal solution, because it fixes each choice on local information and never reconsiders it.
 
    Example where greedy fails — 0/1 Knapsack
    - Capacity 10 kg. Items: A (6 kg, Tk 60), B (5 kg, Tk 45), C (5 kg, Tk 45).
@@ -2723,7 +2838,7 @@ count++;
 
 6. **Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are the difference between there two techniques?** *[BCC Assistant Programmer 12.02.2021 compact it 813 (ET: BUET)]*
 
-   Answer: The real difference is what happens to the subproblems after they are created.
+Answer: The real difference is what happens to the subproblems after they are created.
 
    Divide and Conquer
    - Subproblems are independent — solving one tells you nothing about another.
@@ -2747,13 +2862,13 @@ count++;
 
 7. **Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879-880 (ET: BUET)]*
 
-   Answer:
+Answer:
    - (a) Matrix multiplication — Strassen's algorithm, which is a Divide and Conquer algorithm. It multiplies two `n × n` matrices in `O(n^2.81)` instead of the naive `O(n³)`. The related Matrix Chain Multiplication problem, which finds the cheapest order of multiplication, is a Dynamic Programming algorithm running in `O(n³)`.
    - (b) Knapsack — 0/1 Knapsack is a Dynamic Programming algorithm, running in `O(n × W)` where `W` is the capacity. Fractional Knapsack is a Greedy algorithm, running in `O(n log n)` because the items are sorted by value-per-weight ratio.
 
 8. **Greedy algorithm উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
-   Answer: A greedy algorithm builds a solution step by step, always taking the option that looks best at that moment, and never going back to change it.
+Answer: A greedy algorithm builds a solution step by step, always taking the option that looks best at that moment, and never going back to change it.
 
    Working steps
    - Start with an empty solution.
@@ -2775,7 +2890,7 @@ count++;
 
 9. **(খ) Greedy Algorithm কাকে বলে? দুটি এমন সমস্যা বর্ণনা করুন যা Greedy Algorithm দিয়ে সমাধান করা যায়।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1088 (ET: N/A)]*
 
-   Answer: A greedy algorithm is one that constructs the answer piece by piece, always picking the choice that gives the most immediate benefit, without looking ahead and without undoing an earlier choice.
+Answer: A greedy algorithm is one that constructs the answer piece by piece, always picking the choice that gives the most immediate benefit, without looking ahead and without undoing an earlier choice.
 
    Two problems solved by the greedy approach
 
@@ -2797,7 +2912,7 @@ count++;
 
 1. **Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1419 (ET: E-Zone)]*
 
-   Answer: The graph figures were not printed with the question, so the checking method is shown instead.
+Answer: The graph figures were not printed with the question, so the checking method is shown instead.
 
    Definition: two graphs are isomorphic if there is a one-to-one correspondence (bijection) between their vertex sets that preserves adjacency — that is, one graph can be relabelled to become exactly the other.
 
@@ -2815,7 +2930,7 @@ count++;
 
 2. **(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (i) Chromatic number χ(G)
    - The minimum number of colours needed to colour all vertices of a graph so that no two adjacent vertices share a colour.
@@ -2837,7 +2952,7 @@ count++;
 
 3. **(খ) দেখান যে, n সংখ্যক vertex এর একটি tree এর ঠিক n-1 সংখ্যক edge আছে।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
-   Answer: A tree is a connected graph with no cycle. The claim is that a tree with `n` vertices has exactly `n − 1` edges. It is proved by induction on `n`.
+Answer: A tree is a connected graph with no cycle. The claim is that a tree with `n` vertices has exactly `n − 1` edges. It is proved by induction on `n`.
 
    Base case (n = 1)
    - A tree with a single vertex has no edge.
@@ -2860,7 +2975,7 @@ count++;
 
 4. **(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 690 (ET: N/A)]*
 
-   Answer: An Eulerian path (or Eulerian trail) is a walk in a graph that uses every edge exactly once. Vertices may be repeated, but no edge may be. If the walk starts and ends at the same vertex, it is called an Eulerian circuit.
+Answer: An Eulerian path (or Eulerian trail) is a walk in a graph that uses every edge exactly once. Vertices may be repeated, but no edge may be. If the walk starts and ends at the same vertex, it is called an Eulerian circuit.
 
    Necessary and sufficient conditions — undirected graph
    - All vertices with at least one edge must belong to a single connected component.
@@ -2883,7 +2998,7 @@ count++;
 
 5. **(c) What is a strongly connected graph?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
-   Answer: A directed graph is strongly connected if there is a directed path from every vertex to every other vertex. That is, for any pair `u` and `v`, both `u → v` and `v → u` must be reachable.
+Answer: A directed graph is strongly connected if there is a directed path from every vertex to every other vertex. That is, for any pair `u` and `v`, both `u → v` and `v → u` must be reachable.
 
    - The term applies only to directed graphs. For an undirected graph the equivalent term is simply "connected".
    - Weakly connected — the graph becomes connected only if edge directions are ignored. Every strongly connected graph is weakly connected, but not the reverse.
@@ -2898,7 +3013,7 @@ count++;
 
 6. **True False with explanation about Graph related (Two).** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
 
-   Answer: The two statements were not printed with the question, so two commonly asked graph statements are answered to show the method.
+Answer: The two statements were not printed with the question, so two commonly asked graph statements are answered to show the method.
 
    Statement 1: "A tree with n vertices always has n−1 edges." — True.
    - A tree is connected and acyclic. Removing a leaf repeatedly reduces both the vertex count and the edge count by one, and a single vertex has zero edges. So the count is exactly `n − 1`. Adding one more edge to a tree always creates a cycle.
@@ -2910,6 +3025,11 @@ count++;
 
 7. **State whether the following are True or False:** *[6 Banks & Financial Institutions Assistant Programmer 2021 (ET: N/A)]*
    a) Back edge in DAG
+   b) Extra edge in DAG
+   c) Strongly connected component
+   d) Unique path on different weight on graph
+
+a) Back edge in DAG
    b) Extra edge in DAG
    c) Strongly connected component
    d) Unique path on different weight on graph
@@ -2931,8 +3051,17 @@ count++;
 
 ## Greedy Algorithms (Fractional Knapsack) (6)
 
-1. (a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।
+1. **(a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।**
    (b)
+
+| Item | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Value | 18 | 2.5 | 12 | 14 | 20 |
+| Weight | 4 | 3 | 1 | 2 | 5 |
+
+**অনুসারে প্রাপ্ত fractional knapsack সমস্যা সমাধান একটি চিত্রানুপাতে উত্তর লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+(b)
 
 | Item | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|
@@ -2997,6 +3126,15 @@ count++;
 i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
 ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
 
+| Item | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Value | 20 | 15 | 12 | 14 | 20 |
+| Weight | 4 | 3 | 2 | 2 | 5 |
+
+একজন ব্যক্তি fractional knapsack ব্যবহার করে একটি থলি পূর্ণ করতে চান।
+i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
+ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
+
    Answer:
 
    Step 1 - compute the value-to-weight ratio
@@ -3034,7 +3172,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 3. **BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for service with the time slot [start, end]. If two customers requesting for the same time slot then only one customer can receive the service. Write an algorithm such that BPDB can provide service maximum number of customer at a time.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 453 (ET: BUET)]*
 
-   Answer: This is the Activity Selection Problem. The greedy rule is to always serve the customer whose service finishes earliest, because that leaves the most time free for everyone else.
+Answer: This is the Activity Selection Problem. The greedy rule is to always serve the customer whose service finishes earliest, because that leaves the most time free for everyone else.
 
    ```
    MaxCustomers(start[], end[], n)
@@ -3068,7 +3206,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 4. **Given n jobs starting time n[] and duration d[], print maximum number of jobs that don't overlap between each other.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 834 (ET: N/A)]*
 
-   Answer: Duration is given instead of finish time, so first compute `finish[i] = start[i] + duration[i]`. After that it is the standard activity selection problem.
+Answer: Duration is given instead of finish time, so first compute `finish[i] = start[i] + duration[i]`. After that it is the standard activity selection problem.
 
    ```
    MaxNonOverlappingJobs(start[], duration[], n)
@@ -3105,7 +3243,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 5. **You are given a set of activities with their starting time s[] and finishing time f[].** *[RAKUB Programmer (PO) 12.10.2021 compact it 852 (ET: N/A)]*
 
-   Answer: The task is to select the maximum number of activities that a single person can perform, given that no two chosen activities may overlap. This is the Activity Selection Problem, solved by a greedy algorithm.
+Answer: The task is to select the maximum number of activities that a single person can perform, given that no two chosen activities may overlap. This is the Activity Selection Problem, solved by a greedy algorithm.
 
    Greedy rule
    - Sort all activities by finishing time in ascending order.
@@ -3137,7 +3275,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
-   Answer: The question is `incomplete` — the paper itself records that the full question could not be collected, so the specific weights, values and capacity are unknown. The comparison it asks for, and the calculation method, are set out below with a worked example.
+Answer: The question is `incomplete` — the paper itself records that the full question could not be collected, so the specific weights, values and capacity are unknown. The comparison it asks for, and the calculation method, are set out below with a worked example.
 
    The distinction the question is testing
    ```
@@ -3233,11 +3371,25 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
    - The general lesson to state: `greedy is fast but only correct when the problem has the greedy-choice property and optimal substructure`. Fractional knapsack, Huffman coding, Dijkstra, Prim and Kruskal all have it. `0/1 knapsack does not`, which is why it needs dynamic programming.
 
+## Searching & Graph Algorithms (6)
+
+1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
+
+2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
+
+3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
+
+4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*, *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378-379]]*
+
+6. **Construct a Binary Search tree using the following set of data: 45, 9, 5, 19, 23, 19, 46, 2, 12, 10.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 384]]*
+
 ## Dynamic Programming (5)
 
-1. A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one repeater, and the distance between consecutive locations is given by P_i > 0. For reliable communication, two selected repeater stations must be at least K kilometers apart. Using Dynamic Programming, determine the maximum number of repeaters that can be installed while maintaining the required minimum distance between any two selected stations. [BSCCPL AME 21-08-2026 (BUET)]
+1. **A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one repeater, and the distance between consecutive locations is given by P_i > 0. For reliable communication, two selected repeater stations must be at least K kilometers apart. Using Dynamic Programming, determine the maximum number of repeaters that can be installed while maintaining the required minimum distance between any two selected stations.** [BSCCPL AME 21-08-2026 (BUET)]
 
-   Answer: This is a "maximum number of selections with a minimum gap" problem. Convert the gaps `Pᵢ` into absolute positions first, then apply DP.
+Answer: This is a "maximum number of selections with a minimum gap" problem. Convert the gaps `Pᵢ` into absolute positions first, then apply DP.
 
    Step 1 - build absolute positions
    - `pos[1] = 0`
@@ -3283,7 +3435,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 2. **What is Dynamic programming? Explain with example.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 474 (ET: N/A)]*
 
-   Answer: Dynamic programming is a technique that solves a problem by breaking it into smaller subproblems, solving each subproblem only once, and storing its answer so it is never recomputed.
+Answer: Dynamic programming is a technique that solves a problem by breaking it into smaller subproblems, solving each subproblem only once, and storing its answer so it is never recomputed.
 
    Two conditions a problem must satisfy
    - Optimal substructure — the optimal answer to the whole problem is built from optimal answers to its subproblems.
@@ -3311,7 +3463,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 3. **The maximum subarray is the task of finding a contiguous subarray with the largest sum within a given one dimentional array of numbers. Suppose the array is: A: [-2, 1, -3, -1, 2, 1, -5, 4]** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 448 (ET: BUET)]*
 
-   Answer: Kadane's algorithm solves this in one pass. At each index it decides whether to extend the previous subarray or start fresh from the current element.
+Answer: Kadane's algorithm solves this in one pass. At each index it decides whether to extend the previous subarray or start fresh from the current element.
 
    ```
    Kadane(A, n)
@@ -3344,7 +3496,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 4. **Write down the Algorithm for determining Fibonacci number through dynamic programming.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
-   Answer: Two DP forms are shown — bottom-up tabulation and top-down memoization.
+Answer: Two DP forms are shown — bottom-up tabulation and top-down memoization.
 
    Bottom-up (tabulation)
    ```
@@ -3385,7 +3537,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
-   Answer: For the dynamic programming Fibonacci algorithm of the previous question:
+Answer: For the dynamic programming Fibonacci algorithm of the previous question:
 
    | Method | Time complexity | Space complexity |
    |---|---|---|
@@ -3404,7 +3556,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 495 (ET: N/A)]*
 
-   Answer: The right representation depends on whether the graph is sparse or dense, and on which operation is performed most often.
+Answer: The right representation depends on whether the graph is sparse or dense, and on which operation is performed most often.
 
    | Operation | Adjacency matrix | Adjacency list |
    |---|---|---|
@@ -3433,7 +3585,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 2. **Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are numbered from 1 to 7 as in a binary heap.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
-   Answer: In binary-heap numbering, the children of node `i` are `2i` and `2i+1`. So the complete binary tree on 7 vertices is:
+Answer: In binary-heap numbering, the children of node `i` are `2i` and `2i+1`. So the complete binary tree on 7 vertices is:
 
    ```
               1
@@ -3472,7 +3624,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 3. **(b) How a graph can be represented? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
 
-   Answer: A graph is stored in memory in one of three standard ways.
+Answer: A graph is stored in memory in one of three standard ways.
 
    Example graph used below
    ```
@@ -3513,7 +3665,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 4. **নিম্নে উল্লেখিত Graph- এর Adjacency Metrix এবং Adjacency List বের করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148-1149 (ET: BUET)]*
 
-   Answer: The graph figure was not printed with the question, so this graph is used to show the method.
+Answer: The graph figure was not printed with the question, so this graph is used to show the method.
 
    ```
         1 --- 2
@@ -3552,7 +3704,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
-   Answer: Use block partitioning — the divide-and-conquer idea behind Strassen's method. Split each 16×16 matrix into four 8×8 blocks and multiply the blocks as if they were single elements, since blocks obey the same multiplication rule as scalars.
+Answer: Use block partitioning — the divide-and-conquer idea behind Strassen's method. Split each 16×16 matrix into four 8×8 blocks and multiply the blocks as if they were single elements, since blocks obey the same multiplication rule as scalars.
 
    Step 1 - partition
    - `A = [[A11, A12], [A21, A22]]` and `B = [[B11, B12], [B21, B22]]`, where every block is 8×8 — exactly what the processor supports.
@@ -3585,7 +3737,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 2. **(খ) Divide and Conquer technique কী? একটি সমস্যা বর্ণনা করুন যা Divide and Conquer Technique এ সমাধান করা যায়।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1089 (ET: N/A)]*
 
-   Answer: Divide and Conquer is an algorithm design technique with three steps — divide the problem into smaller subproblems of the same type, conquer them by solving each recursively, and combine their solutions into the answer for the original problem.
+Answer: Divide and Conquer is an algorithm design technique with three steps — divide the problem into smaller subproblems of the same type, conquer them by solving each recursively, and combine their solutions into the answer for the original problem.
 
    - Divide — split the input into two or more smaller parts.
    - Conquer — solve each part recursively; a part small enough is solved directly (the base case).
@@ -3607,7 +3759,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 3. **Write an algorithm for matrix multiplication.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
-   Answer: Two matrices `A (m × n)` and `B (n × p)` can be multiplied only when the column count of A equals the row count of B. The product `C` is `m × p`.
+Answer: Two matrices `A (m × n)` and `B (n × p)` can be multiplied only when the column count of A equals the row count of B. The product `C` is `m × p`.
 
    Formula: `C[i][j] = Σ (A[i][k] × B[k][j])` for `k = 1 to n`
 
@@ -3643,7 +3795,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1321 (ET: DU)]*
 
-   Answer: A min-heap is a complete binary tree in which every parent is smaller than or equal to both of its children, so the smallest value sits at the root. It is stored in an array where, for index `i`, the parent is at `(i−1)/2`, the left child at `2i+1` and the right child at `2i+2`.
+Answer: A min-heap is a complete binary tree in which every parent is smaller than or equal to both of its children, so the smallest value sits at the root. It is stored in an array where, for index `i`, the parent is at `(i−1)/2`, the left child at `2i+1` and the right child at `2i+2`.
 
    Insertion rule: append the new value at the end, then sift it up by swapping with its parent while it is smaller than that parent.
 
@@ -3677,7 +3829,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 2. **Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 427 (ET: BIBM)]*
 
-   Answer: Insertion into a max-heap has two phases — place the item, then restore the heap property by sifting it upward.
+Answer: Insertion into a max-heap has two phases — place the item, then restore the heap property by sifting it upward.
 
    Procedure
    - Append the new item at the first free position, that is at the end of the array. This keeps the tree complete.
@@ -3714,7 +3866,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **Huffman encoding draw huffman tree. Given word “CONNECTION”.** *[NPCBL Executive Trainee (IT) 2022 compact it 645 (ET: BUET)]*
 
-   Answer: Huffman coding is a greedy lossless compression method. It gives short codes to frequent characters and longer codes to rare ones, and every code is a prefix code — no code is a prefix of another, so decoding is unambiguous.
+Answer: Huffman coding is a greedy lossless compression method. It gives short codes to frequent characters and longer codes to rare ones, and every code is a prefix code — no code is a prefix of another, so decoding is unambiguous.
 
    Step 1 - count the character frequencies in "CONNECTION"
 
@@ -3775,7 +3927,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 1. **A reduces to B Polynomial time. Which is better and why?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 
-   Answer: If A reduces to B in polynomial time, written `A ≤ₚ B`, then B is at least as hard as A. So B is the harder problem and A is the easier one.
+Answer: If A reduces to B in polynomial time, written `A ≤ₚ B`, then B is at least as hard as A. So B is the harder problem and A is the easier one.
 
    What the reduction means
    - There is a function `f`, computable in polynomial time, that converts any instance `x` of A into an instance `f(x)` of B.
