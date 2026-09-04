@@ -13356,17 +13356,397 @@ int main(int argc, char *argv[]){
 
 1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+   Answer: `NTFS` stands for `New Technology File System`.
+   - It is the default file system of Windows NT and every Windows version after it — Windows 2000, XP, 7, 10 and 11. It replaced `FAT32`.
+   ```
+      Key features :
+        large files and volumes - a file may exceed 4 GB , unlike FAT32
+        JOURNALING - a log of pending changes, so the disk recovers
+             quickly after a crash or power cut
+        PERMISSIONS - per-file and per-folder access control (ACLs)
+        ENCRYPTION - EFS , and compression on individual files
+        DISK QUOTAS per user
+        HARD LINKS , symbolic links and sparse files
+   ```
+   - Compared with `FAT32`: NTFS has no practical 4 GB file limit, supports permissions and journaling, and is more reliable; FAT32 is simpler and is still used on USB drives because almost every device can read it.
+   - Related names worth knowing: `FAT32` (File Allocation Table), `exFAT` (Extended FAT, used on large SD cards), `ext4` (the usual Linux file system) and `APFS` (Apple File System).
+
 2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) UNIX treats `everything as a file`, so file types cover far more than ordinary data. There are `seven` standard types, and the first character of `ls -l` shows which one it is.
+   ```
+      $ ls -l
+      -rw-r--r--   1 user  staff   1024  report.txt        regular
+      drwxr-xr-x   5 user  staff    160  documents         directory
+      lrwxr-xr-x   1 user  staff     11  link -> file.txt  symbolic link
+      crw-rw-rw-   1 root  wheel   3, 2  /dev/tty          character
+      brw-r-----   1 root  disk    8, 0  /dev/sda          block
+      prw-r--r--   1 user  staff      0  mypipe            FIFO
+      srwxrwxrwx   1 user  staff      0  /tmp/socket       socket
+   ```
+
+   The seven types
+   ```
+      1. REGULAR FILE          -
+           Ordinary data - text, source code, executables, images.
+           UNIX imposes NO internal structure ; it is just a stream of
+           bytes, and only the program using it knows the format.
+
+      2. DIRECTORY             d
+           A special file holding a list of ( file name -> inode
+           number ) pairs. It does NOT hold the file contents.
+           Every directory has "." for itself and ".." for its parent.
+
+      3. SYMBOLIC LINK         l
+           A small file holding the PATH of another file - a shortcut.
+           It may cross file systems, and it breaks if the target is
+           deleted. A HARD LINK, by contrast, is another directory
+           entry pointing to the SAME INODE, so it cannot cross file
+           systems and the data survives until the last link is gone.
+
+      4. CHARACTER SPECIAL FILE   c
+           A device accessed ONE CHARACTER AT A TIME, unbuffered -
+           keyboard, terminal, serial port, /dev/null.
+
+      5. BLOCK SPECIAL FILE       b
+           A device accessed in FIXED-SIZE BLOCKS, buffered - hard
+           disks, SSDs, USB drives, CD-ROM.
+
+      6. FIFO / NAMED PIPE        p
+           For inter-process communication between UNRELATED processes.
+           One writes, another reads, first-in-first-out. Created with
+           mkfifo. Unlike an ordinary pipe it has a NAME in the file
+           system.
+
+      7. SOCKET                   s
+           For two-way communication between processes, on the same
+           machine (a UNIX domain socket) or across a network.
+   ```
+
+   Why this design matters
+   ```
+      Because devices, pipes and sockets are all FILES, the SAME system
+      calls work on all of them :
+
+           open() , read() , write() , close()
+
+      So a program can read from a file, a keyboard or a network
+      connection with identical code. This uniformity is the single
+      most important idea in the UNIX design.
+   ```
+   - The command to identify a type is `ls -l` (first character), `file <name>` (which inspects the content) or `stat <name>`.
 
 3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Which drive holds "My Documents"
+   - `My Documents` (called `Documents` since Windows Vista) is kept on the drive where Windows itself is installed, which is normally the `C: drive`.
+   ```
+      Windows XP :  C:\Documents and Settings\<username>\My Documents
+      Vista and later :  C:\Users\<username>\Documents
+   ```
+   - It is a `user profile folder`, so each user account gets its own copy. It can be `relocated` to another drive — right-click the folder, Properties, Location, Move — and many people move it to D: so a reinstall of Windows does not wipe their data.
+
+   What NTFS is
+   - `NTFS` stands for `New Technology File System`. It is the default file system of Windows NT and every later Windows version — 2000, XP, 7, 10 and 11. It replaced `FAT32`.
+   ```
+      Main features :
+
+      JOURNALING     A log of pending changes is written before the
+           change itself, so after a crash or power cut the disk
+           recovers in seconds instead of needing a full scan.
+
+      LARGE FILES    No 4 GB per-file limit, unlike FAT32. Volumes can
+           run to hundreds of terabytes.
+
+      SECURITY       Per-file and per-folder permissions through ACLs,
+           so one user cannot read another's files.
+
+      ENCRYPTION     EFS encrypts files transparently ; BitLocker
+           encrypts the whole volume.
+
+      COMPRESSION    Individual files or folders can be compressed.
+
+      DISK QUOTAS    A limit on how much space each user may consume.
+
+      OTHER          Hard links , symbolic links , sparse files ,
+           shadow copies (previous versions) , and better handling of
+           bad sectors.
+   ```
+
+   NTFS against FAT32
+
+   | Point | NTFS | FAT32 |
+   |---|---|---|
+   | Maximum file size | Practically unlimited | `4 GB` |
+   | Journaling | `Yes` | No |
+   | Permissions | `Yes`, per file and folder | No |
+   | Encryption, compression | `Yes` | No |
+   | Compatibility | Windows; read-only on macOS | `Almost every device` |
+   | Typical use | Windows system drives | USB drives, SD cards, cameras |
+
+   - Which to choose: `NTFS` for a Windows hard disk or SSD, because of journaling and permissions; `FAT32` or `exFAT` for a pen drive that has to work on a TV, camera or car stereo, because those devices usually cannot read NTFS.
+
 4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
+
+   Answer: Given
+   ```
+      Disk block size          = 128 bytes
+      Disk block address size  = 8 bytes
+      File descriptor (inode) holds :
+           8 direct block addresses
+           1 single indirect block address
+           1 double indirect block address
+   ```
+
+   Step 1 — how many addresses fit in one block
+   ```
+      Addresses per block = block size / address size
+                          = 128 / 8
+                          = 16 addresses
+   ```
+
+   Step 2 — blocks reachable by each kind of pointer
+   ```
+      DIRECT           8 pointers , each -> 1 data block
+                       = 8 blocks
+
+      SINGLE INDIRECT  1 pointer -> 1 index block holding 16 addresses
+                       = 16 blocks
+
+      DOUBLE INDIRECT  1 pointer -> 1 index block of 16 addresses ,
+                       each of those -> another index block of 16
+                       = 16 * 16
+                       = 256 blocks
+   ```
+   ```
+      INODE
+      +----------------+
+      | direct  0..7   | -----> 8 data blocks
+      +----------------+
+      | single indirect| ----> [16 addr] ----> 16 data blocks
+      +----------------+
+      | double indirect| ----> [16 addr] --+--> [16 addr] -> 16 blocks
+      +----------------+                   |    ...  (16 of these)
+                                           +--> [16 addr] -> 16 blocks
+                                                = 256 data blocks
+   ```
+
+   Step 3 — total data blocks
+   ```
+      Total = 8 + 16 + 256
+            = 280 blocks
+   ```
+
+   Step 4 — maximum file size
+   ```
+      Maximum file size = total blocks * block size
+                        = 280 * 128 bytes
+                        = 35,840 bytes
+
+                        = 35,840 / 1024 KB
+                        = 35 KB
+   ```
+
+   Answer
+   ```
+      Maximum possible file size = 35,840 bytes = 35 KB
+   ```
+   - The 300 GB figure is a `distractor`. The limit here comes from the `inode structure`, not from the size of the disk — with only 280 addressable blocks, no file can exceed 35 KB however large the volume is.
+   - Note also that the index blocks themselves consume disk space but hold no file data, so they are not counted in the file size.
+   - If a `triple indirect` pointer were added it would contribute `16 * 16 * 16 = 4096` blocks, taking the maximum to `(8 + 16 + 256 + 4096) * 128 = 559,360 bytes ≈ 546 KB`. Real systems use 1 KB to 4 KB blocks, which is why their limits run into terabytes.
 
 5. **(খ) Direct or Random Access File-প্রক্রিয়াকরণ চিত্রসহ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What direct (random) access is
+   - In `direct` or `random access`, any record can be read or written `immediately`, without reading the records before it. The file is treated as a numbered sequence of fixed-size records, and the OS jumps straight to the one asked for.
+
+   Diagram
+   ```
+      DIRECT / RANDOM ACCESS
+                   need record 4 - jump STRAIGHT to it
+                               |
+                               v
+      +--------+--------+--------+--------+--------+
+      | rec 0  | rec 1  | rec 2  | rec 3  | rec 4  |
+      +--------+--------+--------+--------+--------+
+           0       1        2        3        4     <- record number
+
+
+      SEQUENTIAL ACCESS  (for contrast)
+      +--------+--------+--------+--------+--------+
+      | rec 0  |-> rec 1|-> rec 2|-> rec 3|-> rec 4|
+      +--------+--------+--------+--------+--------+
+      Records 0 to 3 MUST be read before record 4.
+   ```
+
+   How the address is worked out
+   ```
+      All records have the SAME LENGTH, so the position is arithmetic :
+
+           byte offset = record number * record size
+
+      Example : record size = 100 bytes , want record 4
+           offset = 4 * 100 = 400
+           -> seek to byte 400 and read 100 bytes
+
+      The seek is O(1) - one calculation, one disk head movement,
+      independent of how big the file is.
+   ```
+
+   The operations
+   ```
+      read (n)      read record n
+      write (n)     write record n
+      seek (n)      move the file pointer to record n
+      position = n  then an ordinary read / write
+
+      In C :   fseek(fp, n * sizeof(rec), SEEK_SET);
+               fread(&r, sizeof(rec), 1, fp);
+   ```
+
+   ```mermaid
+   flowchart LR
+       A[Request record n] --> B[offset = n * record size]
+       B --> C[Seek to that offset]
+       C --> D[Read or write the record]
+   ```
+
+   Sequential against direct access
+
+   | Point | Sequential | Direct / random |
+   |---|---|---|
+   | Order of access | One after another, in order | `Any record, any order` |
+   | Time to reach record n | Proportional to `n` | `Constant` |
+   | Record length | May vary | Must be `fixed` |
+   | Storage needed | Tape or disk | `Disk` only — tape cannot seek |
+   | Best for | Payroll, batch reports, logs | `Databases`, ATM, airline booking |
+
+   - Where it is used and why: an ATM must fetch `one` account record out of millions in a fraction of a second, so sequential access is impossible. Database systems, indexed files (`ISAM`) and airline reservation systems all rely on direct access.
+   - The requirement is that records be `fixed length`, so the offset can be computed. Variable-length records need an `index` that maps a key to a byte offset, which is exactly what a database index does.
+
 6. **(a) An I/O system with a simple disk gets an average 50 I/O requests per second and average time for a disk to server an I/O request is 10ms. Calculate the utilization of I/O system.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
 
+   Answer: Given
+   ```
+      Arrival rate         lambda = 50 I/O requests per second
+      Average service time S      = 10 ms = 10 / 1000 = 0.01 second
+   ```
+
+   Formula
+   ```
+      Utilisation  U  =  arrival rate  *  average service time
+                      =  lambda * S
+   ```
+   - The reasoning behind it: in one second `50` requests arrive, and each one keeps the disk busy for `0.01` second. So the total busy time in that second is `50 × 0.01`.
+
+   Calculation
+   ```
+      U = 50 * 0.01
+
+        = 0.5
+
+        = 50 %
+   ```
+
+   Answer
+   ```
+      Utilisation of the I/O system = 0.5  =  50 %
+   ```
+
+   Cross-check by service capacity
+   ```
+      Service rate  mu = 1 / S = 1 / 0.01 = 100 requests per second
+
+      U = lambda / mu = 50 / 100 = 0.5 = 50 %      same result
+   ```
+   - Meaning: the disk is busy `half` the time and idle the other half. It can serve `100` requests per second, so at 50 requests per second it has spare capacity.
+   - Note the condition for stability: `U` must stay below `1`. If the arrival rate reached 100 per second, `U = 1` and the queue would grow without limit; response time rises very steeply as `U` approaches 1, which is why real systems are sized to run well below full utilisation.
+
 7. **Explain inode data structures in Linux OS.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220-1221 (ET: N/A)]*
+
+   Answer: What an inode is
+   - An `inode` (index node) is the data structure Linux keeps for `every file`, holding all its `metadata` and the `pointers to its data blocks`. One inode per file, identified by a unique `inode number` within the file system.
+   - The one thing an inode does `not` contain is the `file name`. The name lives in the `directory`, which is just a table of `(name → inode number)` pairs. This is what makes `hard links` possible — several names, one inode.
+
+   What it stores
+   ```
+      FILE TYPE        regular , directory , symlink , block , char ,
+                       FIFO , socket
+      PERMISSIONS      rwx for owner , group , others
+      OWNER            UID and GID
+      SIZE             in bytes
+      LINK COUNT       how many hard links point to this inode
+      TIMESTAMPS       atime  - last access
+                       mtime  - last modification of the CONTENT
+                       ctime  - last change of the INODE itself
+      BLOCK POINTERS   where the data actually is
+   ```
+
+   The block pointer structure — the heart of the design
+   ```
+      INODE
+      +---------------------+
+      | metadata            |
+      +---------------------+
+      | direct  0           | ------------> data block
+      | direct  1           | ------------> data block
+      |   ...  (12 of them) |
+      | direct 11           | ------------> data block
+      +---------------------+
+      | single indirect     | --> [index blk] --> many data blocks
+      +---------------------+
+      | double indirect     | --> [index] --> [index] --> data blocks
+      +---------------------+
+      | triple indirect     | --> [index] -> [index] -> [index] -> data
+      +---------------------+
+   ```
+   ```
+      With a 4 KB block and a 4-byte address, one index block holds
+      4096 / 4 = 1024 addresses :
+
+           12 direct        =        12 blocks
+           single indirect  =      1024 blocks
+           double indirect  = 1024*1024 = 1,048,576 blocks
+           triple indirect  = 1024^3   = 1,073,741,824 blocks
+
+      So a small file needs NO index block at all - the first 12
+      pointers cover 48 KB. Only a large file pays the cost of extra
+      lookups, which is reasonable because it is large anyway.
+   ```
+
+   How a path is resolved
+   ```mermaid
+   flowchart LR
+       A["/home/user/a.txt"] --> B[Read / directory]
+       B --> C[Find inode of home]
+       C --> D[Find inode of user]
+       D --> E[Find inode of a.txt]
+       E --> F[Follow block pointers to the data]
+   ```
+
+   Hard link against symbolic link
+   ```
+      HARD LINK      another NAME for the SAME inode. The link count
+           goes up. Deleting one name leaves the data alive until the
+           count reaches 0. Cannot cross file systems, cannot point to
+           a directory.
+
+      SYMBOLIC LINK  a SEPARATE inode whose data is the PATH of the
+           target. Can cross file systems, and BREAKS if the target is
+           deleted.
+   ```
+
+   Practical points
+   ```
+      ls -i file        show the inode number
+      df -i             show inode usage per file system
+      stat file         show all inode fields
+
+      The number of inodes is FIXED when the file system is created.
+      A disk can therefore run out of INODES while free space remains -
+      the classic symptom of millions of tiny files, where "No space
+      left on device" appears though df shows space available.
+   ```
 
 ## CPU Scheduling (6)
 
