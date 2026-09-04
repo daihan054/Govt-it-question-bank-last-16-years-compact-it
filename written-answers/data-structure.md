@@ -5915,15 +5915,404 @@ Output: Not Balanced
 
 1. **(b) What is hash table? What are the advantages of using hash table?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
 
+   Answer:
+
+   What is a hash table
+   - A hash table is a data structure that stores `key–value` pairs in an array, using a `hash function` to convert each key directly into an array index.
+   ```
+   index = h(key)
+   ```
+   - Because the index is computed rather than searched for, an element can be reached in `O(1)` average time — no comparison chain is needed at all.
+
+   ```
+   key "name"  --> h("name") = 3 --> +-------+---------------+
+                                     | index |     value     |
+                                     +-------+---------------+
+                                     |   0   |               |
+                                     |   1   |  "Dhaka"      |
+                                     |   2   |               |
+                                     |   3   |  "Karim"      |
+                                     |   4   |               |
+                                     +-------+---------------+
+   ```
+
+   Hash function
+   - Maps a key of any size to a fixed range of indices. A good hash function is fast to compute, distributes keys uniformly, and is deterministic.
+   - Common methods: `division` (h(k) = k mod m, with m prime), `mid-square`, `folding`, and `multiplication`.
+
+   Collisions
+   - Two different keys may hash to the same index. Two families of solutions:
+     - `Separate chaining` — each slot holds a linked list of all keys that hash there.
+     - `Open addressing` — probe for the next free slot: linear probing, quadratic probing or double hashing.
+
+   Advantages of a hash table
+
+   - `O(1) average time` for search, insert and delete. No other general-purpose structure achieves this — a balanced BST needs O(log n), an unsorted array O(n).
+   - `Direct access by key`, computed rather than searched, so the cost is independent of how many items are stored.
+   - `Fast even for very large data sets`: looking up one key among a million costs the same as among a hundred.
+   - `Flexible keys` — strings, objects and composite values can all be hashed, not just integers.
+   - `Efficient duplicate detection and set membership testing`, which is why hash sets are used for de-duplication.
+   - `Simple interface and wide language support` — Python `dict`, Java `HashMap`, C++ `unordered_map`, JavaScript objects.
+   - `Dynamic sizing` through rehashing when the load factor grows too high.
+   - `Good space–time balance` when the load factor is kept around 0.7.
+
+   Limitations, for balance
+   - `No ordering` — the keys come out in arbitrary order, so range queries and sorted traversal are impossible. A BST is used when order matters.
+   - `Worst case O(n)` if the hash function is poor and every key collides.
+   - Performance depends on the `load factor` α = n/m; rehashing is an expensive O(n) operation when it happens.
+   - Some memory is always left empty by design.
+
+   Applications
+   - Database indexing, compiler symbol tables, caches (including CPU caches and web caches), password storage, dictionaries and sets in every modern language, blockchains, and duplicate detection.
+
 2. **Consider a hash table of size 13 strong entries with integer keys. Suppose the hash function is h(k) = k \bmod 13. Insert in the given order entries with keys 10, 3, 6, 16, 17, 19 in to the hash table using linear probing to resolve collisions. Show all the work.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
+
+   Answer:
+
+   Given
+   ```
+   Table size m = 13
+   Hash function h(k) = k mod 13
+   Keys inserted in order: 10, 3, 6, 16, 17, 19
+   Collision resolution: linear probing, h(k, i) = (h(k) + i) mod 13
+   ```
+
+   Step-by-step insertion
+
+   `Key 10`
+   ```
+   h(10) = 10 mod 13 = 10
+   Slot 10 is empty -> place 10 at index 10
+   ```
+
+   `Key 3`
+   ```
+   h(3) = 3 mod 13 = 3
+   Slot 3 is empty -> place 3 at index 3
+   ```
+
+   `Key 6`
+   ```
+   h(6) = 6 mod 13 = 6
+   Slot 6 is empty -> place 6 at index 6
+   ```
+
+   `Key 16`
+   ```
+   h(16) = 16 mod 13 = 3
+   Slot 3 is OCCUPIED by 3  -> COLLISION
+   Probe 1: (3 + 1) mod 13 = 4, empty -> place 16 at index 4
+   ```
+
+   `Key 17`
+   ```
+   h(17) = 17 mod 13 = 4
+   Slot 4 is OCCUPIED by 16  -> COLLISION
+   Probe 1: (4 + 1) mod 13 = 5, empty -> place 17 at index 5
+   ```
+
+   `Key 19`
+   ```
+   h(19) = 19 mod 13 = 6
+   Slot 6 is OCCUPIED by 6  -> COLLISION
+   Probe 1: (6 + 1) mod 13 = 7, empty -> place 19 at index 7
+   ```
+
+   Final hash table
+
+   | Index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+   | Key | – | – | – | `3` | `16` | `17` | `6` | `19` | – | – | `10` | – | – |
+
+   Summary of the work
+
+   | Key | h(k) | Collision? | Probes | Final index |
+   |---|---|---|---|---|
+   | 10 | 10 | No | 0 | 10 |
+   | 3 | 3 | No | 0 | 3 |
+   | 6 | 6 | No | 0 | 6 |
+   | 16 | 3 | Yes, with 3 | 1 | 4 |
+   | 17 | 4 | Yes, with 16 | 1 | 5 |
+   | 19 | 6 | Yes, with 6 | 1 | 7 |
+
+   Observations
+   - `Load factor` α = 6 / 13 = 0.46, comfortably below the 0.7 threshold at which open addressing degrades.
+   - Total probes: 3 collisions, each resolved in one extra step.
+   - Notice the `primary clustering` beginning to form at indices 3–7: linear probing places colliding keys next to one another, and those blocks then attract further collisions. Key 17 collided not with another key that shared its hash, but with 16, which had itself been displaced. This is the characteristic weakness of linear probing, and it is why `quadratic probing` (offset i²) or `double hashing` (offset i·h₂(k)) are preferred for heavily loaded tables.
+   - Deletion in an open-addressed table must place a `tombstone` marker rather than simply emptying the slot, or the probe chain would break and later keys would become unreachable.
 
 3. **অথবা, Hashing বলতে কী বোঝায়? Hash ফাংশন গঠনের জন্যে যে কোনো তিনটি পদ্ধতি বিস্তারিত লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What hashing means
+   - Hashing is the technique of converting a key of any size into a fixed-size integer, the `hash value`, which is then used directly as an index into an array called a `hash table`.
+   ```
+   index = h(key)
+   ```
+   - Because the position is `computed` rather than searched for, insertion, deletion and search all take `O(1)` on average, independent of how many items are stored.
+   - Two different keys mapping to the same index is called a `collision`, and every hash table needs a strategy to resolve it — separate chaining or open addressing.
+
+   Properties of a good hash function
+   - Fast to compute; distributes keys `uniformly` across the table; deterministic; and uses every part of the key, so that similar keys do not cluster.
+
+   Three methods of constructing a hash function
+
+   1. `Division method`
+   ```
+   h(k) = k mod m
+   ```
+   - The key is divided by the table size m and the remainder is the index.
+   - `Choice of m matters greatly.` It should be a `prime` number not close to a power of 2. If m = 2^p, the hash uses only the lowest p bits of the key and ignores the rest, which clusters badly.
+   - Example: m = 13, keys 10, 3, 6, 16 → h = 10, 3, 6, 3. Key 16 collides with 3.
+   - Advantages: extremely simple and fast, only one operation. Disadvantage: consecutive keys map to consecutive slots, which produces clustering under linear probing.
+
+   2. `Mid-square method`
+   - Square the key, then take a fixed number of digits from the `middle` of the result.
+   - Example, for a table of 100 slots (2 digits needed):
+   ```
+   k = 3121
+   k² = 9740641
+   middle two digits -> 40
+   h(3121) = 40
+   ```
+   - The middle digits depend on `all` the digits of the key, so keys that differ only at one end still spread out well.
+   - Advantage: good uniform distribution. Disadvantage: squaring a large key can overflow, and the number of digits to take must be chosen carefully.
+
+   3. `Folding method`
+   - Split the key into equal-sized parts, add them together, and take the result modulo the table size. Digits may optionally be reversed on alternate parts (`shift folding` versus `boundary folding`).
+   ```
+   k = 12345678, table size 1000, parts of 3 digits
+   Split : 123 | 456 | 78
+   Sum   : 123 + 456 + 78 = 657
+   h(k)  = 657 mod 1000 = 657
+   ```
+   - Advantage: every digit of the key influences the result, and it handles very long keys such as account numbers and phone numbers well. Disadvantage: the part size must be chosen to suit the table size.
+
+   Two further methods worth naming
+   - `Multiplication method`: `h(k) = ⌊ m × (k·A mod 1) ⌋`, with A ≈ 0.618 (the golden ratio). The table size is unrestricted, which is its advantage over the division method.
+   - `Digit extraction`: choose specific digit positions from the key, discarding those known to be poorly distributed — for example dropping a common area-code prefix from a set of phone numbers.
+
+   Collision resolution, in brief
+   - `Separate chaining` — each slot holds a linked list of all keys hashing there. Simple, tolerates a load factor above 1, and deletion is easy.
+   - `Open addressing` — probe for the next free slot: linear (i), quadratic (i²), or double hashing (i·h₂(k)). Saves the pointer memory, but the load factor must stay below about 0.7.
+
 4. **Separate chaining hash function math.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
+
+   Answer: The specific data was not printed, so separate chaining is explained and worked through with a complete example.
+
+   What separate chaining is
+   - Each slot of the hash table holds a `pointer to a linked list` (a "chain") containing every key that hashes to that index. Collisions are therefore never a problem — the new key is simply appended to the chain.
+   ```
+   index
+     0  --> NULL
+     1  --> [ 12 ] --> [ 23 ] --> NULL       <- two keys collided here
+     2  --> [ 35 ] --> NULL
+     3  --> NULL
+   ```
+
+   Worked example
+   ```
+   Hash function : h(k) = k mod 7
+   Table size    : m = 7
+   Keys          : 15, 11, 27, 8, 12, 22, 29
+   ```
+
+   Computing the hash of each key
+   ```
+   h(15) = 15 mod 7 = 1
+   h(11) = 11 mod 7 = 4
+   h(27) = 27 mod 7 = 6
+   h(8)  =  8 mod 7 = 1      -> collides with 15
+   h(12) = 12 mod 7 = 5
+   h(22) = 22 mod 7 = 1      -> collides with 15 and 8
+   h(29) = 29 mod 7 = 1      -> collides again
+   ```
+
+   Resulting hash table
+   ```
+   index
+     0  --> NULL
+     1  --> [15] --> [8] --> [22] --> [29] --> NULL
+     2  --> NULL
+     3  --> NULL
+     4  --> [11] --> NULL
+     5  --> [12] --> NULL
+     6  --> [27] --> NULL
+   ```
+   - New keys are usually inserted at the `head` of the chain, which makes insertion O(1); the order within a chain does not matter for correctness.
+
+   Searching
+   ```
+   Search for 22:
+     h(22) = 1, go to slot 1
+     traverse the chain: 15 -> no ; 8 -> no ; 22 -> FOUND (3 comparisons)
+
+   Search for 30:
+     h(30) = 2, slot 2 is empty -> NOT FOUND (0 comparisons)
+   ```
+
+   Load factor and performance
+   ```
+   α = n / m = number of keys / number of slots
+   Here α = 7 / 7 = 1.0
+   ```
+
+   | Case | Search cost |
+   |---|---|
+   | Best | O(1) — the key is first in its chain, or the slot is empty |
+   | Average | `O(1 + α)` |
+   | Worst | `O(n)` — every key hashes to the same slot |
+
+   - The average chain length is exactly α, which is why keeping α near 1 keeps chaining efficient. Doubling the table size and rehashing restores performance when α grows too large.
+
+   Separate chaining vs open addressing
+
+   | Point | Separate chaining | Open addressing |
+   |---|---|---|
+   | Storage | Linked lists outside the table | All keys inside the table |
+   | Load factor | May exceed 1 | Must stay below about 0.7 |
+   | Deletion | Simple — unlink the node | Needs a tombstone marker |
+   | Clustering | None | Primary and secondary clustering |
+   | Extra memory | Pointers for every node | None |
+   | Cache performance | Poorer, nodes are scattered | Better, contiguous array |
+   | Behaviour when full | Never truly full | Insertion fails |
+
+   - Refinement used in practice: Java's `HashMap` converts a chain into a `balanced tree` once it exceeds eight nodes, which caps the worst case at O(log n) instead of O(n) and defends against deliberate hash-collision attacks.
 
 5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** *[BCC Assistant Programmer 12.02.2021 compact it 815 (ET: BUET)]*
 
+   Answer: The suitable data structure is a `hash table` (also called a hash map or dictionary).
+
+   Why
+   - A hash table computes the storage position directly from the key using a `hash function`:
+   ```
+   index = h(key)
+   ```
+   - No comparisons and no traversal are needed — the index is calculated in one step — so search, insertion and deletion all take `O(1)` on average, regardless of how many items are stored. Looking up one key among a million costs the same as among ten.
+
+   Comparison with the alternatives
+
+   | Data structure | Search | Insert | Delete | Ordered? |
+   |---|---|---|---|---|
+   | Unsorted array | O(n) | O(1) | O(n) | No |
+   | Sorted array | O(log n) | O(n) | O(n) | Yes |
+   | Linked list | O(n) | O(1) | O(n) | No |
+   | Balanced BST (AVL, Red-Black) | O(log n) | O(log n) | O(log n) | Yes |
+   | `Hash table` | `O(1) average` | `O(1) average` | `O(1) average` | `No` |
+
+   - Only the hash table achieves expected O(1) search, which is exactly what the question asks for.
+
+   How collisions are handled
+   - Two keys may hash to the same index. Either `separate chaining` (each slot holds a linked list) or `open addressing` (probe for the next free slot: linear, quadratic or double hashing) resolves this.
+
+   Conditions for the O(1) guarantee to hold
+   - A `good hash function` that spreads keys uniformly.
+   - A `load factor` α = n/m kept low, around 0.7 for open addressing, with rehashing when it is exceeded.
+   - Without these, the worst case degrades to `O(n)` — every key landing in one chain.
+
+   Language implementations
+   - Python `dict` and `set`, Java `HashMap` and `HashSet`, C++ `unordered_map` and `unordered_set`, JavaScript `Map` and plain objects, C# `Dictionary`.
+
+   When a hash table is `not` the right answer
+   - If the data must be kept `sorted`, or range queries such as "all keys between 20 and 40" are needed, a hash table cannot help — it has no ordering at all. A balanced BST or a B+ tree is the correct choice there.
+
 6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
+
+   Answer:
+
+   Given
+   ```
+   Hash function : h(x) = x mod 11
+   Table size    : m = 11 (indices 0 to 10)
+   Keys          : 22, 44, 73, 55, 18, 8, 31, 32
+   Collision     : linear probing, (h(x) + i) mod 11
+   ```
+
+   Step-by-step insertion
+
+   `Key 22`
+   ```
+   h(22) = 22 mod 11 = 0
+   Slot 0 empty -> place at index 0
+   ```
+
+   `Key 44`
+   ```
+   h(44) = 44 mod 11 = 0
+   Slot 0 OCCUPIED by 22 -> collision
+   Probe 1: (0+1) mod 11 = 1, empty -> place at index 1
+   ```
+
+   `Key 73`
+   ```
+   h(73) = 73 mod 11 = 7        (73 = 66 + 7)
+   Slot 7 empty -> place at index 7
+   ```
+
+   `Key 55`
+   ```
+   h(55) = 55 mod 11 = 0
+   Slot 0 occupied, slot 1 occupied
+   Probe 2: (0+2) mod 11 = 2, empty -> place at index 2
+   ```
+
+   `Key 18`
+   ```
+   h(18) = 18 mod 11 = 7
+   Slot 7 OCCUPIED by 73 -> collision
+   Probe 1: (7+1) mod 11 = 8, empty -> place at index 8
+   ```
+
+   `Key 8`
+   ```
+   h(8) = 8 mod 11 = 8
+   Slot 8 OCCUPIED by 18 -> collision
+   Probe 1: (8+1) mod 11 = 9, empty -> place at index 9
+   ```
+
+   `Key 31`
+   ```
+   h(31) = 31 mod 11 = 9        (31 = 22 + 9)
+   Slot 9 OCCUPIED by 8 -> collision
+   Probe 1: (9+1) mod 11 = 10, empty -> place at index 10
+   ```
+
+   `Key 32`
+   ```
+   h(32) = 32 mod 11 = 10       (32 = 22 + 10)
+   Slot 10 OCCUPIED by 31 -> collision
+   Probe 1: (10+1) mod 11 = 0  -> occupied by 22
+   Probe 2: 1 -> occupied by 44
+   Probe 3: 2 -> occupied by 55
+   Probe 4: 3 -> EMPTY -> place at index 3
+   ```
+   - Note the `wrap-around` at probe 1: after index 10 the search continues at index 0, which is what the modulo does.
+
+   Final hash table
+
+   | Index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+   |---|---|---|---|---|---|---|---|---|---|---|---|
+   | Key | `22` | `44` | `55` | `32` | – | – | – | `73` | `18` | `8` | `31` |
+
+   Summary of the work
+
+   | Key | h(x) | Collision with | Probes | Final index |
+   |---|---|---|---|---|
+   | 22 | 0 | – | 0 | 0 |
+   | 44 | 0 | 22 | 1 | 1 |
+   | 73 | 7 | – | 0 | 7 |
+   | 55 | 0 | 22, 44 | 2 | 2 |
+   | 18 | 7 | 73 | 1 | 8 |
+   | 8 | 8 | 18 | 1 | 9 |
+   | 31 | 9 | 8 | 1 | 10 |
+   | 32 | 10 | 31, 22, 44, 55 | `4` | 3 |
+
+   Observations
+   - `Load factor` α = 8/11 = 0.73, already at the level where open addressing starts to degrade.
+   - Two large `clusters` have formed, at indices 0–3 and 7–10, with only 4, 5 and 6 free. This is `primary clustering`, the characteristic weakness of linear probing: once a block forms, any key hashing anywhere into it must probe past the whole block. Key 32 needed 4 probes for exactly this reason.
+   - `Quadratic probing` (offset i²) or `double hashing` (offset i·h₂(x)) would spread the probes out and avoid these long runs.
+   - Deletion must use a `tombstone` marker rather than emptying the slot, or the probe chains through that slot would break and later keys would become unfindable.
 
 ## Data Structure Fundamentals (6)
 
