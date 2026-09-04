@@ -5354,9 +5354,186 @@
 
 1. Cryptography and Network Security Scenario: [BSCCPL AME 21-08-2026 (BUET)] Cox's Bazar wants to send confidential information to Kuakata through an insecure network. Cox's Bazar first generates a hash value using a Hash Function (H). The message, hash value, and routing data are combined and encrypted using Kuakata's Public Key (Ku). The encrypted ciphertext is transmitted through the network. During transmission, an attacker positioned between Cox's Bazar and Kuakata intercepts the encrypted data. The attacker captures the ciphertext and deliberately blocks it so that Kuakata never receives the message. However, the attacker is unable to read or decrypt the original message because Kuakata's Private Key (\text{Ku}^{-1}) is not available to the attacker. Kuakata is expected to decrypt the received ciphertext using its Private Key (\text{Ku}^{-1}) and verify the integrity of the message using the hash value whenever the message is successfully delivered. Questions: (a) Is there any digital signature? (b) Identify attack. (c) How to identify origin of the? (d) How to manage the attack. (e) Does the described communication provide a Digital Signature? Give reasons. If not, explain how Cox's Bazar can add a Digital Signature using Cox's Bazar's Private Key (\text{Kc}^{-1}) and verification using Cox's Bazar's Public Key (\text{Kc}). (f) Which security services are provided by the system among Confidentiality, Integrity, Authentication, Non-repudiation, and Availability? (g) Suggest suitable techniques or mechanisms to protect the communication against the attack identified in question (b). (h) Draw a complete communication diagram showing \text{Message} \to \text{Hash} \to \text{Routing Data} \to \text{Encryption with Ku} \to \text{Attacker} \to \text{Kuakata} \to \text{Decryption with } \text{Ku}^{-1}, and indicate the keys used in each stage.
 
+   Answer:
+
+   **(a) and (e) Is there a digital signature? — NO.**
+   - The hash is computed and sent, but it is encrypted with **Kuakata's PUBLIC key (Ku)**, not with **Cox's Bazar's PRIVATE key (Kc⁻¹)**.
+   - A digital signature requires the SENDER's private key. Since Ku is public, ANYONE could have produced this ciphertext while pretending to be Cox's Bazar.
+   - The hash here provides integrity only — it detects accidental or malicious corruption, but proves nothing about who sent the message.
+
+   How to add a proper digital signature
+   - Cox's Bazar computes `h = H(Message)`.
+   - Cox's Bazar encrypts that hash with its own **private key**: `Signature = E(h, Kc⁻¹)`.
+   - The message plus this signature is then encrypted with **Ku** for confidentiality and transmitted.
+   - Kuakata decrypts with `Ku⁻¹`, then decrypts the signature with Cox's Bazar's **public key Kc** to recover `h`, hashes the received message independently, and compares.
+   - A match now proves origin, integrity AND non-repudiation.
+
+   **(b) Identify the attack — Denial of Service (an INTERRUPTION attack).**
+   - The attacker captures and BLOCKS the ciphertext so it never reaches Kuakata.
+   - This is an **active attack** of the interruption type. It is not interception in the harmful sense, because the attacker cannot read the content.
+   - It attacks **AVAILABILITY**, not confidentiality or integrity.
+   - The attacker's position also constitutes a Man-in-the-Middle placement, but the action taken is denial of service.
+
+   **(c) How to identify the origin of the message**
+   - As described, the origin CANNOT be identified — there is no sender authentication of any kind.
+   - To identify origin, add a **digital signature with Cox's Bazar's private key Kc⁻¹**, verified with the public key Kc obtained from a certificate issued by a trusted CA.
+   - Supporting mechanisms: MAC with a shared secret key, mutual TLS authentication, and a **nonce or timestamp** to prevent replay.
+
+   **(d) and (g) How to manage the attack**
+   - **Acknowledgement and timeout** — Kuakata should acknowledge receipt. If Cox's Bazar receives no ACK within a timeout, it retransmits. This is exactly what TCP does.
+   - **Sequence numbers** — a gap reveals that a message was dropped.
+   - **Redundant / multiple paths** — send over more than one route, so blocking one path does not stop delivery.
+   - **Heartbeat / keep-alive** monitoring so a blocked link is detected quickly.
+   - **Network redundancy** — dual ISP links following physically separate routes.
+   - **IPsec with anti-replay and integrity protection** to secure the channel itself.
+   - **IDS/IPS and traffic monitoring** to detect the interception point.
+   - **Out-of-band confirmation** for critical messages.
+   - Note the limitation: a DoS attack cannot be PREVENTED by cryptography. Encryption protects content, never delivery. Only redundancy and detection address availability.
+
+   **(f) Security services provided by the system as described**
+
+   | Service | Provided? | Reason |
+   |---|---|---|
+   | **Confidentiality** | **Yes** | Encrypted with Ku; only Ku⁻¹ can decrypt, and the attacker does not have it |
+   | **Integrity** | **Yes** | The hash allows Kuakata to detect any alteration — but only IF the message arrives |
+   | **Authentication** | **No** | No sender private key is used, so origin is unproven |
+   | **Non-repudiation** | **No** | Requires a digital signature, which is absent |
+   | **Availability** | **No** | The attacker successfully blocked delivery |
+
+   **(h) Complete communication diagram**
+
+   ```mermaid
+   flowchart TD
+       M[Message M] --> H["Hash: h = H(M)"]
+       M --> COMB[Combine: M + h + Routing Data]
+       H --> COMB
+       COMB --> ENC["Encrypt with Ku<br/>(Kuakata's PUBLIC key)"]
+       ENC --> CT[Ciphertext]
+       CT --> NET[Insecure Network]
+       NET --> ATK["ATTACKER<br/>captures and BLOCKS<br/>cannot decrypt — no Ku⁻¹"]
+       ATK -.->|message never arrives| K["Kuakata"]
+       K --> DEC["Decrypt with Ku⁻¹<br/>(Kuakata's PRIVATE key)"]
+       DEC --> VER["Recompute H(M) and compare with h"]
+       VER --> OK[Integrity verified]
+   ```
+
+   Keys used at each stage
+
+   | Stage | Key used | Purpose |
+   |---|---|---|
+   | Hashing | None | Integrity check value |
+   | Encryption at Cox's Bazar | **Ku** — Kuakata's public key | Confidentiality |
+   | Decryption at Kuakata | **Ku⁻¹** — Kuakata's private key | Recover the plaintext |
+   | Signature (MISSING, should be added) | **Kc⁻¹** — Cox's Bazar's private key | Authentication and non-repudiation |
+   | Signature verification (MISSING) | **Kc** — Cox's Bazar's public key | Confirm origin |
+
+   - Summary of the design flaw: the scheme achieves confidentiality and integrity but omits authentication entirely, and it has no defence against interruption. Adding a signature with Kc⁻¹ fixes the first gap; acknowledgement plus path redundancy addresses the second.
+
 2. **Explain Cyber Attack Scenario-** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1441 (ET: BUET)]*
 
+   Answer: The specific scenario was not printed with the question, so a representative attack scenario for a power distribution utility is described, following the standard **Cyber Kill Chain**.
+
+   Scenario — ransomware attack on a distribution utility
+
+   **Stage 1 — Reconnaissance**
+   - The attacker gathers information from the company website, LinkedIn and public tender documents: employee names, email format, technologies in use, and vendor relationships.
+
+   **Stage 2 — Weaponisation and Delivery**
+   - A spear-phishing email is crafted, appearing to come from a known equipment vendor, with a malicious invoice attachment. It is sent to finance and procurement staff.
+
+   **Stage 3 — Exploitation**
+   - An employee opens the attachment. A macro executes and exploits an unpatched vulnerability, downloading the payload.
+
+   **Stage 4 — Installation**
+   - Malware establishes persistence through a scheduled task and a registry run key, and disables the antivirus.
+
+   **Stage 5 — Command and Control**
+   - The infected machine beacons out to the attacker's C2 server over HTTPS, blending with normal web traffic.
+
+   **Stage 6 — Lateral movement and privilege escalation**
+   - The attacker harvests credentials with Mimikatz, moves across the flat network using RDP and SMB, and eventually obtains domain administrator rights. Weeks may pass at this stage.
+
+   **Stage 7 — Actions on objectives**
+   - Sensitive data — customer records, billing data, SCADA configuration — is EXFILTRATED first.
+   - Backups and shadow copies are deleted.
+   - Ransomware is deployed across all servers simultaneously, encrypting billing, CRM and file systems.
+   - A ransom note demands payment, with a threat to publish the stolen data.
+
+   **Impact**
+   - Billing and customer service halted, financial loss, regulatory reporting obligations, reputational damage, and — if the OT network were reached — risk to power distribution itself.
+
+   **Where it could have been stopped**
+
+   | Stage | Control that would have blocked it |
+   |---|---|
+   | Delivery | Email filtering, attachment sandboxing, user awareness training |
+   | Exploitation | Patch management, macro blocking by policy |
+   | Installation | EDR, application whitelisting, least privilege |
+   | C2 | Egress filtering, DNS monitoring, threat intelligence feeds |
+   | Lateral movement | Network segmentation, MFA, privileged access management |
+   | Objectives | Offline immutable backups, DLP, IT/OT separation |
+
+   - Key lesson: an attack has many stages, and defence in depth means any one layer can break the chain. The most valuable single control here is **network segmentation**, which prevents one compromised workstation from becoming a company-wide outage.
+
 3. **Imagine yu should design a secure transmission protocol for sending data from one node to another node. You should divide the message in the multiple packets and this packets will be using different path so that any one cannot decrypt the message.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
+
+   Answer: The design combines **secret sharing / message splitting** with **multipath routing**, so that capturing traffic on any single path yields nothing useful.
+
+   Design overview
+   ```mermaid
+   flowchart LR
+       M[Original Message] --> E[Encrypt with AES session key]
+       E --> S["Split into n shares<br/>(Shamir's Secret Sharing, k of n)"]
+       S --> P1[Share 1 → Path A]
+       S --> P2[Share 2 → Path B]
+       S --> P3[Share 3 → Path C]
+       P1 --> R[Receiver]
+       P2 --> R
+       P3 --> R
+       R --> RC["Reconstruct from any k shares"]
+       RC --> D[Decrypt with session key]
+       D --> O[Original Message]
+   ```
+
+   Protocol steps
+
+   **Step 1 — Key establishment**
+   - Sender and receiver perform an authenticated key exchange (ECDHE with certificates) to agree a symmetric session key. Mutual authentication prevents a man-in-the-middle at this stage.
+
+   **Step 2 — Encrypt**
+   - Encrypt the whole message with **AES-256-GCM**, which provides confidentiality AND integrity in one operation.
+
+   **Step 3 — Split using threshold secret sharing**
+   - Apply **Shamir's Secret Sharing** to produce `n` shares such that any `k` of them reconstruct the message, but `k−1` shares reveal **absolutely nothing** — not even partial information.
+   - This is the crucial property. Simply cutting the ciphertext into pieces would leak partial data; secret sharing does not.
+
+   **Step 4 — Multipath routing**
+   - Send each share over a DIFFERENT network path — different ISPs, different physical routes, or different overlay circuits.
+   - An attacker must compromise at least `k` independent paths simultaneously to learn anything.
+
+   **Step 5 — Per-share protection**
+   - Each share carries a sequence number, a nonce and a timestamp (anti-replay), plus its own HMAC so tampering is detected per share.
+   - Pad every share to the same length so traffic analysis cannot infer structure.
+
+   **Step 6 — Reassembly**
+   - The receiver collects any `k` valid shares, reconstructs the ciphertext, verifies the AES-GCM authentication tag, and decrypts.
+   - Because only `k` of `n` are needed, the scheme also survives the loss or blocking of some paths — it provides availability as well as confidentiality.
+
+   **Step 7 — Acknowledgement and retransmission**
+   - The receiver acknowledges. Missing shares are retransmitted, ideally over a different path.
+
+   Security properties achieved
+
+   | Property | Mechanism |
+   |---|---|
+   | Confidentiality | AES-256-GCM plus secret sharing |
+   | Integrity | GCM authentication tag and per-share HMAC |
+   | Authentication | Mutual certificate-based key exchange |
+   | Availability | k-of-n threshold tolerates lost or blocked paths |
+   | Traffic analysis resistance | Uniform padding, multiple paths, optional dummy traffic |
+   | Replay protection | Nonce and timestamp per share |
+
+   - Practical basis: this is essentially how **onion routing (Tor)**, **multipath TCP** and **distributed storage systems** approach the same problem. The cost is added latency and complexity, so it suits high-value low-volume traffic rather than bulk data.
 
 ## Email & Messaging Security (Spam, Phishing) (3)
 
