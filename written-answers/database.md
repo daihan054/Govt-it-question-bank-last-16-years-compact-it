@@ -20672,6 +20672,72 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 399 (ET: BUET)]*
 
+   Answer: Given
+   ```
+   Employee(NID, Company_ID, Name, Mobile_Number)
+
+   NID           : unique by definition (national ID)
+   Mobile_Number : unique, stated in the question
+   Company_ID    : not unique (many employees share one company)
+   Name          : not unique (two people can have the same name)
+   ```
+
+   Step 1 — find the candidate keys
+   - A `candidate key` is a minimal set of attributes that uniquely identifies a row. Minimal means no attribute can be removed and still keep it unique.
+   - `NID` alone is unique → candidate key.
+   - `Mobile_Number` alone is unique → candidate key.
+   - Any larger set containing either of them is not minimal, so it is a super key but not a candidate key.
+
+   ```
+   Number of candidate keys = 2
+   Two candidate keys       : {NID}  and  {Mobile_Number}
+   ```
+
+   Step 2 — find the super keys
+   - A `super key` is any set of attributes that uniquely identifies a row. It need not be minimal, so any set that `contains` a candidate key is a super key.
+   - The table has 4 attributes, so there are 2^4 = 16 possible subsets.
+   - A subset is a super key if it contains `NID` or `Mobile_Number`.
+   - Count the subsets that contain `neither`: those are the subsets of {Company_ID, Name}, which number 2^2 = 4.
+   ```
+   Total subsets                       = 2^4 = 16
+   Subsets with neither NID nor Mobile = 2^2 =  4
+   Number of super keys                = 16 - 4 = 12
+   ```
+
+   The 12 super keys listed
+   ```
+    1. {NID}
+    2. {Mobile}
+    3. {NID, Mobile}
+    4. {NID, Company_ID}
+    5. {NID, Name}
+    6. {NID, Company_ID, Name}
+    7. {Mobile, Company_ID}
+    8. {Mobile, Name}
+    9. {Mobile, Company_ID, Name}
+   10. {NID, Mobile, Company_ID}
+   11. {NID, Mobile, Name}
+   12. {NID, Mobile, Company_ID, Name}
+   ```
+
+   Answer
+   ```
+   Number of super keys     = 12
+   Number of candidate keys = 2
+   Two candidate keys       = {NID} and {Mobile_Number}
+   ```
+
+   - Any one candidate key is chosen as the `primary key` — normally `NID`, because it never changes, while a mobile number can be replaced. The other then becomes an `alternate key` and is given a `UNIQUE` constraint.
+   ```sql
+   CREATE TABLE Employee (
+       NID           VARCHAR(17) PRIMARY KEY,
+       Company_ID    INT,
+       Name          VARCHAR(50) NOT NULL,
+       Mobile_Number VARCHAR(15) UNIQUE NOT NULL
+   );
+   ```
+   - General formula: if a relation has `n` attributes and a single attribute A is unique, the number of super keys containing A is 2^(n-1). Here two single attributes are unique, so by inclusion-exclusion: 2^3 + 2^3 − 2^2 = 8 + 8 − 4 = 12, which matches.
+
 ## Indexing in DBMS (1)
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
