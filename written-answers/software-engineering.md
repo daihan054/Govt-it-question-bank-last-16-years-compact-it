@@ -12454,7 +12454,246 @@
    * **(c) Duplicate Code**
    * **(d) Shotgun surgery.**
 
+   Answer: A `code smell` is a surface sign in the code that something deeper is wrong with the design. It is not a bug — the program works — but it makes the code hard to change.
+
+   (a) Feature envy
+   - A method is more interested in `another class's data` than in its own. It keeps reaching across to fetch fields from another object.
+   ```java
+      // SMELL - Order is "envious" of Customer's data
+      class Order {
+          private Customer customer;
+
+          double calculateDiscount() {
+              if (customer.getType().equals("PREMIUM")
+                  && customer.getYearsActive() > 5
+                  && customer.getTotalPurchases() > 100000)
+                  return 0.20;
+              return 0.05;
+          }
+      }
+   ```
+   ```
+      Every field used belongs to CUSTOMER, not to Order.
+
+      THE FIX : MOVE METHOD - put the method where its data lives.
+
+      class Customer {
+          double getDiscountRate() {
+              if (type.equals("PREMIUM") && yearsActive > 5
+                  && totalPurchases > 100000)
+                  return 0.20;
+              return 0.05;
+          }
+      }
+      class Order {
+          double calculateDiscount() {
+              return customer.getDiscountRate();
+          }
+      }
+   ```
+   - Why it matters: it means `low cohesion` and `high coupling` — the logic sits in the wrong class, and Order breaks whenever Customer's fields change. The principle it violates is `tell, don't ask`.
+
+   (b) Dead code
+   - Code that is `never executed` or whose result is never used — left behind by a change nobody cleaned up.
+   ```java
+      // SMELL
+      class ReportService {
+          void generate() {
+              printReport();
+          }
+
+          // never called from anywhere - DEAD
+          void printOldFormatReport() { ... }
+
+          void process(int status) {
+              if (status == 1) { ... }
+              else if (status == 2) { ... }
+              else if (status == 1) { ... }   // UNREACHABLE - status
+                                              // can never be 1 here
+          }
+
+          int calculate() {
+              int unused = expensiveCall();   // result never used
+              return 42;
+          }
+      }
+   ```
+   ```
+      FORMS OF DEAD CODE
+           a method or class nobody calls
+           an unreachable branch
+           a variable assigned and never read
+           an import or parameter never used
+           code disabled by  if (false)  or a permanently false flag
+           a large block COMMENTED OUT "in case we need it"
+
+      THE FIX : DELETE IT. Version control remembers it. Commented-
+           out code kept "just in case" is the commonest form, and
+           the least justifiable.
+   ```
+   - Why it matters: it misleads the reader into thinking it is used, it must still be compiled and maintained, and it inflates the apparent size of the system. A `code coverage` tool and the compiler's warnings both find it.
+
+   (c) Duplicate code
+   - The `same logic appears in more than one place`. The most common smell of all, and the source of the most defects.
+   ```java
+      // SMELL - the same validation in three places
+      class UserService {
+          void register(String email) {
+              if (email == null || !email.contains("@")
+                  || email.length() < 5)
+                  throw new IllegalArgumentException("bad email");
+              ...
+          }
+      }
+      class OrderService {
+          void placeOrder(String email) {
+              if (email == null || !email.contains("@")
+                  || email.length() < 5)
+                  throw new IllegalArgumentException("bad email");
+              ...
+          }
+      }
+   ```
+   ```
+      THE FIX : EXTRACT METHOD - one definition, called from both.
+
+      class EmailValidator {
+          static void validate(String email) {
+              if (email == null || !email.contains("@")
+                  || email.length() < 5)
+                  throw new IllegalArgumentException("bad email");
+          }
+      }
+
+      Duplication in SIBLING CLASSES is fixed by PULL UP METHOD into
+      the common parent ; duplication in unrelated classes by
+      EXTRACT CLASS.
+   ```
+   - Why it matters: a defect fixed in one copy remains in the others. The rule is `DRY — Don't Repeat Yourself`: every piece of knowledge should have a single authoritative representation.
+
+   (d) Shotgun surgery
+   - `One small change forces edits in many different classes`. The logic for a single concern is scattered across the system.
+   ```java
+      // SMELL - adding one new tax rate requires changing FIVE files
+      class OrderService   { double tax = amount * 0.15; }
+      class InvoiceService { double tax = amount * 0.15; }
+      class ReportService  { double tax = amount * 0.15; }
+      class RefundService  { double tax = amount * 0.15; }
+      class ExportService  { double tax = amount * 0.15; }
+
+      The VAT rate changes from 15 to 12 per cent.
+      -> FIVE classes must be found and edited, and missing ONE
+         produces a silent, wrong figure.
+   ```
+   ```
+      THE FIX : MOVE METHOD and MOVE FIELD to gather the scattered
+           logic into ONE class.
+
+      class TaxCalculator {
+          private static final double VAT_RATE = 0.12;
+          static double calculate(double amount) {
+              return amount * VAT_RATE;
+          }
+      }
+      Now the change is made in ONE place.
+   ```
+   - Why it matters: it is the sign of a missing abstraction and of `poor cohesion` — a single responsibility spread across many classes.
+   ```
+      THE PAIR THAT IS ALWAYS CONFUSED
+
+      DIVERGENT CHANGE  : ONE class is changed for MANY different
+           reasons.  -> the class does too much. Fix by EXTRACT
+           CLASS.
+
+      SHOTGUN SURGERY   : ONE change touches MANY classes.
+           -> the responsibility is scattered. Fix by MOVE METHOD to
+           gather it.
+
+      They are opposites, and the exam tests exactly this contrast.
+   ```
+   - The general point: all four smells are symptoms of the same underlying failure — the code does not have `high cohesion and low coupling`. `Refactoring` is the disciplined cure, and it is safe only when a `regression test suite` exists to prove behaviour has not changed.
+
 2. **What is reverse engineering and forward engineering?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 860-861 (ET: N/A)]*
+
+   Answer: Forward engineering
+   - `Forward engineering` is the normal development direction: moving from a `high-level abstraction` down to the `implementation`. Requirements become a design, and the design becomes code.
+   ```
+      REQUIREMENTS  ->  DESIGN  ->  CODE  ->  WORKING SYSTEM
+
+           SRS   ->  ER diagram , UML class diagram  ->  source
+                 ->  the running product
+   ```
+   ```
+      EXAMPLES
+        drawing a UML class diagram and then GENERATING the Java
+             class skeletons from it
+        designing an ER diagram and generating the CREATE TABLE
+             statements
+        writing the SRS, then the design, then the code - the whole
+             normal SDLC
+   ```
+
+   Reverse engineering
+   - `Reverse engineering` is the opposite direction: `recovering the design or specification from an existing system`, usually because the documentation is missing or out of date. The system is `analysed, not modified`.
+   ```
+      WORKING SYSTEM  ->  CODE  ->  DESIGN  ->  REQUIREMENTS
+
+           source code  ->  class diagram , ER diagram  ->
+           an understanding of what the system does
+   ```
+   ```
+      WHY IT IS DONE
+        the original developers have LEFT and the documentation is
+             lost - the commonest reason
+        a LEGACY system must be maintained, migrated or replaced
+        to understand a third-party component or file format
+        for INTEROPERABILITY - to make a new system talk to an old
+             one
+        for SECURITY ANALYSIS - malware analysis, vulnerability
+             research
+        to recover the DATABASE SCHEMA from a live database
+
+      EXAMPLES
+        generating a class diagram from existing Java source
+        recovering an ER diagram from a production database
+        DISASSEMBLING a binary to understand what it does
+   ```
+
+   Comparison
+
+   | Point | Forward engineering | Reverse engineering |
+   |---|---|---|
+   | Direction | Abstract → `concrete` | Concrete → `abstract` |
+   | Starts from | Requirements | The `existing system` |
+   | Produces | Working code | `Documentation`, models, understanding |
+   | Purpose | Build something new | `Understand` something that exists |
+   | Modifies the system? | Builds it | `No` — it only analyses |
+   | When used | Normal development | Legacy maintenance, migration, security |
+
+   Re-engineering — where the two meet
+   ```
+      RE-ENGINEERING = REVERSE engineering , then FORWARD engineering
+
+           old system --REVERSE--> recovered design --IMPROVE-->
+           better design --FORWARD--> new system
+
+      The FUNCTION is preserved ; the STRUCTURE and TECHNOLOGY are
+      replaced. This is how a COBOL mainframe system becomes a Java
+      web application without losing its business rules.
+
+      RESTRUCTURING is the narrower case : the code is improved but
+      the design and function are unchanged.
+   ```
+   ```mermaid
+   flowchart LR
+       A[Requirements] -->|forward| B[Design]
+       B -->|forward| C[Code]
+       C -->|reverse| B
+       B -->|reverse| A
+       C -->|re-engineering| D[Improved system]
+   ```
+
+   - The legal and ethical qualification worth stating: reverse engineering is `lawful` for interoperability, security research, education and maintaining one's own systems, and is explicitly permitted for interoperability in many jurisdictions. It is `not` lawful when it breaches a licence agreement, infringes copyright by copying the recovered code, or is used to defeat protection or to pirate software. The technique is neutral; the purpose decides.
 
 ## Open Source Software & Licensing (2)
 
