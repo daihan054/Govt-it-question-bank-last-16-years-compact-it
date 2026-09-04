@@ -17729,6 +17729,36 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **How indexing improve query performance?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
 
+   Answer: An `index` is a separate, sorted structure that stores the values of one or more columns together with a pointer to the row that holds them. It works like the index at the back of a book — instead of reading every page, you look up the word and jump straight to the page number.
+
+   How it speeds up a query
+   - `It removes the full table scan.` Without an index the DBMS reads every row (a `full table scan`, cost O(n)). With a B+ tree index it walks 3 or 4 levels down the tree, cost O(log n).
+   ```
+   Employee table with 1,000,000 rows
+      without index : ~1,000,000 row reads
+      with B+ tree  : ~3-4 node reads  ->  thousands of times faster
+   ```
+   - `Fewer disk I/Os.` The B+ tree is wide and shallow, and its upper levels usually stay in memory, so only one or two real disk reads are needed.
+   - `Range queries become cheap.` The leaves of a B+ tree are linked in sorted order, so `WHERE salary BETWEEN 30000 AND 50000` finds the first match and then walks the leaf chain.
+   - `Sorting is avoided.` An index on the `ORDER BY` column already holds the data in order, so the expensive sort step disappears.
+   - `Joins get faster.` An index on the foreign key turns a nested-loop join from "scan the inner table once per outer row" into an index lookup per outer row.
+   - `GROUP BY, MIN and MAX` are answered from the index directly — the smallest value is the leftmost leaf entry.
+   - `Covering index.` If the index contains every column the query asks for, the DBMS answers from the index alone and never touches the table. This is an `index-only scan`.
+   - `UNIQUE indexes` make duplicate checking a single lookup instead of a scan.
+
+   ```sql
+   CREATE INDEX idx_emp_dept ON Employee(dept_id);
+   CREATE INDEX idx_emp_name_sal ON Employee(dept_id, salary);   -- composite
+   ```
+
+   The cost side
+   - Every `INSERT`, `UPDATE` and `DELETE` must update the index too, so writes get slower.
+   - Indexes take extra disk space.
+   - An index is not used if the query hides the column in a function, such as `WHERE UPPER(name) = 'RAHIM'`, or if the column has very few distinct values.
+   - A composite index is used only if the query filters on its `leftmost` columns. An index on `(dept_id, salary)` helps `WHERE dept_id = 10` but not `WHERE salary = 50000`.
+
+   - Rule of thumb: index the primary key, the foreign keys, and the columns that appear in `WHERE`, `JOIN` and `ORDER BY`. Do not index every column.
+
 2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
 
 **Table Name: STUDENT**
@@ -17751,21 +17781,420 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 337 (ET: BIBM)]*
 
+   Answer: Primary key
+   - A column, or a set of columns, that `uniquely identifies` each row of a table. It is always `UNIQUE` and `NOT NULL`, and a table can have only one.
+   - Example: `student_id` in `Student`. It enforces `entity integrity`.
+
+   Foreign key
+   - A column in one table whose value must match a `primary key` value in another table, or be `NULL`.
+   - Example: `Employee.dept_id` referring to `Department.dept_id`. It enforces `referential integrity` and stops orphan rows.
+
+   Indexing
+   - A separate sorted structure (usually a `B+ tree`) holding column values plus a pointer to the matching row. It lets the DBMS jump to a row instead of scanning the whole table.
+
+   The relationship between the three
+   - A `PRIMARY KEY` constraint automatically creates a `unique index` in every major DBMS. That index is how the uniqueness is checked at all — without it, each insert would need a full scan.
+   - A `FOREIGN KEY` does `not` create an index automatically in most systems (MySQL InnoDB is the exception). It only uses the parent's index for checking.
+   - So the practical rule is: index every foreign key yourself. Otherwise each parent `DELETE` or `UPDATE` scans the whole child table, and joins on that key stay slow.
+   ```sql
+   CREATE INDEX idx_emp_dept ON Employee(dept_id);
+   ```
+
+   | Item | Purpose | Index created? |
+   |---|---|---|
+   | Primary key | Identify a row uniquely | Yes, a unique index, automatically |
+   | Unique key | Prevent duplicates | Yes, automatically |
+   | Foreign key | Link to the parent table | No — you must create it |
+
+   Does indexing always make an application faster? No.
+
+   Reasons it can make things slower
+   - `Writes slow down.` Every `INSERT`, `UPDATE` and `DELETE` must also update every index on the table. Ten indexes mean ten extra structures to maintain per write. On a write-heavy table this can dominate.
+   - `Storage cost.` Indexes may take as much space as the table itself, and they compete for memory with the data pages.
+   - `Low-selectivity columns.` An index on `gender` or a `status` flag returns half the table. Reading index plus table is `slower` than a plain sequential scan, so the optimiser ignores it and the index becomes dead weight.
+   - `The index may not be usable.` `WHERE UPPER(name) = 'RAHIM'`, `WHERE salary * 12 > 600000` or a leading wildcard `LIKE '%man'` all prevent index use, because the stored value no longer matches what is searched.
+   - `Wrong column order` in a composite index. An index on `(dept_id, salary)` does not help `WHERE salary = 50000`, because only the leftmost columns can be used.
+   - `Small tables.` For a few hundred rows the whole table fits in one or two pages, so a scan is already fastest.
+   - `Fragmentation.` After many updates the index becomes bloated and must be rebuilt.
+   - `Stale statistics` can make the optimiser choose the wrong index entirely.
+
+   - Conclusion: an index is a `trade — faster reads for slower writes and more space`. It helps when the query is selective (returns a small fraction of the rows) and the column is used in `WHERE`, `JOIN` or `ORDER BY`. Adding indexes blindly to every column makes an application slower, not faster.
+
 3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) `Indexing` and `hashing` are the two ways a DBMS finds a row without reading the whole table.
+
+   Part 1 — Indexing methods
+
+   An index stores `search key + pointer to the row`, kept in sorted order.
+
+   (a) Primary (clustering) index
+   - Built on the column the file is `physically sorted` by, usually the primary key. Only one per table, because the data can be sorted only one way.
+
+   (b) Secondary (non-clustering) index
+   - Built on a column the file is not sorted by. A table can have many. It must be `dense`, because the rows are scattered.
+
+   (c) Dense index
+   - One index entry for `every` row. Fast, but large.
+
+   (d) Sparse index
+   - One entry per `block` of rows. Smaller, but the block must then be scanned. Possible only on a sorted file.
+   ```
+   Sparse index          Data file (sorted)
+   +-----+-----+         +----+----+----+
+   | 10  | ----+-------> | 10 | 20 | 30 |
+   | 40  | ----+-------> | 40 | 50 | 60 |
+   +-----+-----+         +----+----+----+
+   ```
+
+   (e) Multi-level index
+   - The index itself grows too big to search, so an index is built on the index. Repeating this gives the `B+ tree`.
+
+   (f) B+ tree index
+   - The structure used by nearly every real DBMS. All the actual keys live in the `leaf` nodes, which are linked in sorted order; the internal nodes are only a directory. Height stays 3-4 even for millions of rows, so a lookup is O(log n), and `range queries` are answered by walking the leaf chain.
+
+   Part 2 — Hashing methods
+
+   Hashing computes the address directly with a `hash function` h(key) → bucket number. No searching, no tree walking: one lookup is O(1).
+
+   (a) Static hashing
+   - A `fixed` number of buckets is fixed in advance.
+   ```
+   h(emp_id) = emp_id mod 5
+
+      emp_id 101 -> bucket 1
+      emp_id 205 -> bucket 0
+   ```
+   - Problem: when a bucket fills, an `overflow chain` is added, and searching that chain destroys the O(1) benefit. If the file grows, the whole thing must be rehashed.
+
+   (b) Dynamic hashing
+   - The number of buckets `grows and shrinks` with the data.
+   - `Extendible hashing` — a directory of 2^d entries, where d is the global depth. When a bucket overflows, only that bucket is split, and the directory doubles only when needed. No full rehash.
+   - `Linear hashing` — buckets are split one at a time in a fixed order, so no directory is needed at all.
+
+   Comparison
+
+   | Point | Indexing (B+ tree) | Hashing |
+   |---|---|---|
+   | Structure | Sorted tree | Hash function and buckets |
+   | Exact-match lookup | O(log n) | O(1), the fastest |
+   | Range query `BETWEEN` | Very good — walk the leaf chain | Not possible; must scan all buckets |
+   | `ORDER BY` | Free, data is already sorted | No help |
+   | Space | Extra tree storage | Buckets, plus overflow chains |
+   | Weakness | Slightly slower point lookup | Collisions and overflow; growth is costly |
+   | Used for | General purpose, ranges, sorting | Point lookups, hash joins, in-memory tables |
 
 4. **How does index tuning help in improving query performance?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 747 (ET: N/A)]*
 
+   Answer: `Index tuning` is the work of choosing which indexes a database should have — adding the missing ones, dropping the useless ones, and fixing the shape of the ones that exist — so that queries run faster without making writes too slow.
+
+   How it improves performance
+   - `Removes full table scans.` Adding an index on a filtered column turns a scan of a million rows into a 3-4 level tree walk.
+   - `Fixes the column order in composite indexes.` Only the `leftmost` columns of a composite index can be used. An index on `(salary, dept_id)` is useless for `WHERE dept_id = 10`, while `(dept_id, salary)` serves both. Reordering the columns costs nothing and can change everything.
+   - `Creates covering indexes.` If the index holds every column the query needs, the DBMS never touches the table — an `index-only scan`.
+   ```sql
+   -- query: SELECT emp_id, salary FROM Employee WHERE dept_id = 10;
+   CREATE INDEX idx_cover ON Employee(dept_id, salary, emp_id);
+   ```
+   - `Indexes the foreign keys.` Most systems do not index a foreign key automatically, so joins and parent deletes stay slow until you add it.
+   - `Removes the sort step.` An index on the `ORDER BY` or `GROUP BY` column supplies rows already in order.
+   - `Drops unused and duplicate indexes.` Every extra index slows down every `INSERT`, `UPDATE` and `DELETE` and wastes space. An index on `(dept_id)` is redundant when `(dept_id, salary)` exists.
+   - `Rebuilds fragmented indexes` and `updates statistics`, so the optimiser's row estimates are right and it picks the correct plan.
+
+   How it is done in practice
+   ```sql
+   EXPLAIN ANALYZE SELECT * FROM Employee WHERE dept_id = 10;
+   ```
+   ```
+   1. Find the slow queries from the slow-query log or the DBMS's own views
+   2. Read the execution plan; look for "Seq Scan", "Full Table Scan", "Sort"
+   3. Add or reshape the index on the WHERE / JOIN / ORDER BY columns
+   4. Re-run EXPLAIN and compare the cost and the actual time
+   5. Check that writes have not become too slow
+   6. Drop indexes the plans never use
+   ```
+
+   Points to keep in mind
+   - An index helps only when the query is `selective` — it returns a small fraction of the rows. An index on `gender` will not be used.
+   - An index is ignored when the column is wrapped in a function (`WHERE UPPER(name) = ...`) or when `LIKE` starts with a wildcard. Rewrite the query, or build a function-based index.
+   - Index tuning is always a `trade`: faster reads for slower writes and more disk space. On a table that is written far more often than it is read, fewer indexes is the right answer.
+
 5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
+
+   Answer: The employee rows are not printed with the question, so the standard set of `emp_id` values below is used. The method is the same for any data.
+   ```
+   emp_id values inserted in order:  10, 20, 30, 40, 50, 60, 70, 80
+   ```
+
+   Rules for n = 4
+   ```
+   n = 4  means each node holds at most 4 pointers.
+
+   Internal node : max 3 keys, 4 pointers   min ceil(4/2) = 2 pointers
+   Leaf node     : max n-1 = 3 keys          min ceil(3/2) = 2 keys
+   ```
+   - All the real keys live in the `leaves`. Internal nodes only guide the search.
+   - The leaves are linked left to right, so a range query walks the chain.
+
+   Step-by-step construction
+
+   Insert 10, 20, 30 — one leaf, still within 3 keys.
+   ```
+      [10 | 20 | 30]
+   ```
+
+   Insert 40 — the leaf now needs 4 keys, so it `splits`. The first ceil(n/2) = 2 keys stay left, the rest go right, and the first key of the right leaf (30) is `copied up`.
+   ```
+               [ 30 ]
+              /      \
+      [10|20] -----> [30|40]
+   ```
+
+   Insert 50 — fits in the right leaf.
+   ```
+               [ 30 ]
+              /      \
+      [10|20] -----> [30|40|50]
+   ```
+
+   Insert 60 — that leaf overflows {30,40,50,60}, splits into [30|40] and [50|60], and 50 is copied up.
+   ```
+                 [ 30 | 50 ]
+                /     |     \
+      [10|20] -> [30|40] -> [50|60]
+   ```
+
+   Insert 70 — fits.
+   ```
+                 [ 30 | 50 ]
+                /     |     \
+      [10|20] -> [30|40] -> [50|60|70]
+   ```
+
+   Insert 80 — that leaf overflows {50,60,70,80}, splits into [50|60] and [70|80], and 70 is copied up. The root now has 3 keys and 4 pointers, which is exactly its limit.
+
+   Final B+ tree
+   ```
+                       +----+----+----+
+                       | 30 | 50 | 70 |          <- root (internal)
+                       +----+----+----+
+                      /     |     |     \
+                     /      |     |      \
+           +-------+   +-------+   +-------+   +-------+
+           | 10 20 |-->| 30 40 |-->| 50 60 |-->| 70 80 |    <- leaves, linked
+           +-------+   +-------+   +-------+   +-------+
+               |           |           |           |
+             record      record      record      record
+            pointers    pointers    pointers    pointers
+   ```
+
+   How a search works
+   - To find `emp_id = 60`: at the root, 60 lies between 50 and 70, so follow the third pointer; the leaf [50|60] holds 60, and its pointer gives the employee record. Two node reads for eight records, and still only 3-4 reads for millions.
+   - To find `emp_id BETWEEN 30 AND 60`: reach leaf [30|40], then follow the leaf chain right until the key passes 60.
+
+   Points to state in the exam
+   - A key `copied up` on a leaf split stays in the leaf as well. On an `internal` node split the middle key is `moved up`, not copied.
+   - Every leaf is at the `same depth`, so the tree stays balanced and every search costs the same.
 
 6. **What is Indexing? Write down the usages of Indexing.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
 
+   Answer: `Indexing` is a technique that creates a small, sorted structure holding the values of one or more columns together with a pointer to the row that contains them. The DBMS searches this structure instead of reading the whole table — the same idea as the index at the back of a book.
+
+   - The structure used in practice is a `B+ tree`. All the keys sit in the leaves, the leaves are linked in sorted order, and the tree stays 3-4 levels deep even for millions of rows.
+   ```
+   Index                      Table
+   +-------+--------+         +--------+-------+---------+
+   | key   | rowid  |         | emp_id | name  | dept_id |
+   +-------+--------+         +--------+-------+---------+
+   | 101   | ---------------> | 101    | Rahim | 10      |
+   | 102   | ---------------> | 102    | Karim | 20      |
+   +-------+--------+         +--------+-------+---------+
+   ```
+
+   ```sql
+   CREATE INDEX idx_emp_dept ON Employee(dept_id);
+   CREATE UNIQUE INDEX idx_emp_email ON Employee(email);
+   DROP INDEX idx_emp_dept;
+   ```
+
+   Usages of indexing
+   - `Fast lookup` — turns a full table scan of O(n) into a tree walk of O(log n), which is the main reason it exists.
+   - `Range queries` — `WHERE salary BETWEEN 30000 AND 50000` finds the first match and walks the linked leaves.
+   - `Enforcing uniqueness` — a `PRIMARY KEY` or `UNIQUE` constraint is implemented by a unique index; that is how duplicates are caught without a scan.
+   - `Faster joins` — an index on the foreign key turns the inner side of a join into a lookup instead of a scan.
+   - `Avoiding sorts` — an index on the `ORDER BY` or `GROUP BY` column already holds the rows in order.
+   - `MIN and MAX` — read from the first or last leaf entry directly.
+   - `Covering index` — if the index holds every column the query needs, the table is never touched (an `index-only scan`).
+   - `Referential integrity checks` — the parent's index is what makes a foreign-key check cheap.
+
+   Types
+   ```
+   Primary / clustered  : on the column the table is physically sorted by; one per table
+   Secondary            : on any other column; many allowed
+   Unique               : no duplicate values
+   Composite            : on several columns, e.g. (dept_id, salary)
+   Dense / sparse       : one entry per row / one entry per block
+   Bitmap               : for columns with few distinct values, used in data warehouses
+   ```
+
+   - The cost: every write must update every index, and indexes take disk space. So index the primary key, the foreign keys, and the columns used in `WHERE`, `JOIN` and `ORDER BY` — not every column.
+
 7. **(খ) Database এর ক্ষেত্রে Indexing এর কার্যকারিতা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) An `index` is a small sorted structure that holds column values plus a pointer to the row that contains them. The DBMS searches the index instead of the table, exactly as a reader uses the index at the back of a book.
+
+   Effectiveness of indexing
+   - `It removes the full table scan.` A table of one million rows costs about one million reads without an index. With a B+ tree index the search walks 3-4 levels, so it costs 3-4 node reads.
+   ```
+      without index : O(n)      ~1,000,000 row reads
+      with B+ tree  : O(log n)  ~3-4 node reads
+   ```
+   - `Fewer disk I/Os`, which is the real cost in a database. The upper levels of the tree usually stay in memory, so only one or two true disk reads are needed.
+   - `Range queries become cheap.` The leaves of a B+ tree are linked in sorted order, so `WHERE salary BETWEEN 30000 AND 50000` finds the first matching entry and then walks the chain.
+   - `Sorting is avoided.` An index on the `ORDER BY` column supplies the rows already in order, so the sort step disappears.
+   - `Joins get faster.` An index on the foreign key turns the inner table of a join from a repeated scan into a repeated lookup.
+   - `Uniqueness is enforced cheaply.` `PRIMARY KEY` and `UNIQUE` are implemented by a unique index; without it every insert would scan the table to check for duplicates.
+   - `MIN, MAX and COUNT` can be answered from the index alone.
+   - `Covering index` — when the index holds every column the query asks for, the table is never read at all.
+
+   ```sql
+   CREATE INDEX idx_emp_dept ON Employee(dept_id);
+   CREATE INDEX idx_dept_sal  ON Employee(dept_id, salary);   -- composite
+   ```
+
+   Where it does not help
+   - Every `INSERT`, `UPDATE` and `DELETE` must update every index, so writes become slower.
+   - Indexes take extra disk space, sometimes as much as the table.
+   - On a column with few distinct values, such as `gender`, the index returns half the table and the optimiser ignores it.
+   - Wrapping the column in a function — `WHERE UPPER(name) = 'RAHIM'` — or a leading wildcard `LIKE '%man'` prevents the index from being used.
+   - On a very small table a plain scan is already the fastest choice.
+
+   - So indexing trades `faster reads for slower writes and more space`. Index the primary key, the foreign keys and the columns used in `WHERE`, `JOIN` and `ORDER BY` — not every column.
 
 8. **(ক) Sorting and Indexing-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) `Sorting` arranges the data records themselves in order. `Indexing` leaves the data where it is and builds a separate sorted structure that points to it.
+
+   Sorting
+   - The rows are physically rearranged in the file so that the values of one column appear in ascending or descending order.
+   - Only `one` order is possible, because a file can be laid out only one way.
+   - Every insert in the middle needs the following records to shift, which is expensive.
+   - In SQL, `ORDER BY` sorts the result of one query; it does not change the stored table.
+
+   Indexing
+   - A separate structure — normally a `B+ tree` — stores `search key + pointer to the row`. The table itself stays untouched.
+   - `Many` indexes on many different columns can exist on the same table at the same time.
+   - An insert only adds one entry to each index; nothing in the table is shifted.
+
+   ```
+   Index (sorted)                Table (unsorted)
+   +------+---------+            +--------+-------+
+   | key  | pointer |            | emp_id | name  |
+   +------+---------+            +--------+-------+
+   | 10   |  -----------------> | 30     | Jamal |
+   | 20   |  ----------------->  | 10     | Rahim |
+   | 30   |  ----------------->  | 20     | Karim |
+   +------+---------+            +--------+-------+
+   ```
+
+   Difference
+
+   | Point | Sorting | Indexing |
+   |---|---|---|
+   | What is arranged | The data records themselves | A separate key-and-pointer structure |
+   | Data movement | Records are physically moved | Records stay where they are |
+   | How many possible | Only one order per table | Many indexes on many columns |
+   | Extra space | None | Extra space for each index |
+   | Insert / delete cost | High — records must shift | Low — only the index entry changes |
+   | Search speed | Binary search, O(log n), but only on the sorted column | O(log n) on every indexed column |
+   | Structure | The data file itself | B+ tree, hash table, bitmap |
+   | SQL | `ORDER BY` (result only), clustered table | `CREATE INDEX` |
+
+   - The two meet in the `clustered index`, where the table is physically kept in the order of the index key. It gives the fastest range scans, which is why only one clustered index per table is allowed.
+   - Practical point: sorting helps only the one column it was done on, while indexing can speed up searches on many columns at once — at the cost of extra space and slower writes.
+
 9. **What is the purpose of index in database?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
 
+   Answer: An `index` is a small sorted structure that stores the values of one or more columns together with a pointer to the row holding them. Its purpose is to let the DBMS find rows `without reading the whole table`.
+
+   Purposes of an index
+   - `Speed up searching.` Without an index the DBMS performs a full table scan, cost O(n). With a B+ tree index it walks 3-4 levels, cost O(log n). On a million-row table that is the difference between a million reads and four.
+   - `Reduce disk I/O`, which is the real cost in any database. The upper levels of the B+ tree usually stay cached in memory.
+   - `Answer range queries.` The leaves of a B+ tree are linked in sorted order, so `WHERE salary BETWEEN 30000 AND 50000` finds the first match and walks the chain.
+   - `Enforce uniqueness.` `PRIMARY KEY` and `UNIQUE` are implemented internally by a unique index — that is how a duplicate is caught in one lookup instead of a scan.
+   - `Avoid sorting.` An index on the `ORDER BY` or `GROUP BY` column already holds the rows in order.
+   - `Speed up joins.` An index on the foreign key turns the inner side of a join into a lookup rather than a repeated scan.
+   - `Support referential integrity.` Checking a foreign key uses the parent's index.
+   - `Serve a query from the index alone.` If the index holds every column the query needs, the table is never touched — an `index-only scan`.
+
+   ```sql
+   CREATE INDEX idx_emp_dept ON Employee(dept_id);
+   CREATE UNIQUE INDEX idx_emp_email ON Employee(email);
+   ```
+
+   ```
+   Index                        Table
+   +-------+---------+          +--------+-------+---------+
+   | key   | pointer |          | emp_id | name  | dept_id |
+   +-------+---------+          +--------+-------+---------+
+   | 101   | -----------------> | 101    | Rahim | 10      |
+   | 102   | -----------------> | 102    | Karim | 20      |
+   +-------+---------+          +--------+-------+---------+
+   ```
+
+   The cost
+   - Every `INSERT`, `UPDATE` and `DELETE` must also update every index, so writes get slower.
+   - Indexes consume extra disk space.
+   - On a column with few distinct values, or when the column is wrapped in a function, the index is not used at all.
+
+   - So the purpose of an index is to trade `write speed and disk space for read speed`. Index the primary key, the foreign keys and the columns used in `WHERE`, `JOIN` and `ORDER BY`.
+
 10. **How hashtable is used in database?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
+
+    Answer: A `hash table` maps a key to a storage address directly, using a `hash function`: h(key) → bucket number. There is no searching and no tree to walk, so an exact-match lookup costs O(1). A database uses this idea in several places.
+
+    1. Hash file organisation (hash index)
+    - The rows themselves are stored in `buckets` chosen by the hash of the key column.
+    ```
+    h(emp_id) = emp_id mod 5
+
+       emp_id 101 -> bucket 1
+       emp_id 205 -> bucket 0
+       emp_id 307 -> bucket 2
+
+       +----------+----------+----------+----------+----------+
+       | bucket 0 | bucket 1 | bucket 2 | bucket 3 | bucket 4 |
+       +----------+----------+----------+----------+----------+
+            205        101        307
+    ```
+    - To find employee 101 the DBMS computes 101 mod 5 = 1 and reads bucket 1. One disk read, no matter how big the table is.
+    - `Static hashing` fixes the bucket count in advance, so a full bucket needs an `overflow chain`, which slows lookups. `Dynamic hashing` — extendible or linear hashing — splits buckets as the file grows, so no full rehash is needed.
+
+    2. Hash index
+    ```sql
+    CREATE INDEX idx_emp_hash ON Employee USING HASH (emp_id);
+    ```
+    - Faster than a B+ tree for `=` lookups, but useless for `<`, `>`, `BETWEEN` and `ORDER BY`, because hashing destroys the order. That is why B+ trees remain the default.
+
+    3. Hash join
+    - The most important use in query processing. To join two tables, the DBMS builds a hash table in memory on the join key of the smaller table (`build` phase), then scans the bigger table and probes it (`probe` phase).
+    ```
+    Build : hash Department on dept_id, keep it in memory
+    Probe : for each Employee row, hash its dept_id and look it up
+    ```
+    - This makes an equi-join O(m + n) instead of the O(m × n) of a nested loop.
+
+    4. Other uses inside the DBMS
+    - `Hash aggregation` for `GROUP BY` — each group key hashes to a slot that keeps its running total.
+    - `DISTINCT` and set operations — duplicates are detected by hashing.
+    - `Partitioning` — `PARTITION BY HASH (customer_id)` spreads rows evenly across partitions or across nodes in a distributed database.
+    - `Buffer pool and lock manager` — the DBMS finds a cached page or a lock entry by hashing its page id.
+    - `Password and checksum storage` — a one-way hash such as SHA-256, a different purpose from lookup.
+
+    Limitations
+    - `Collisions` — two keys hashing to the same bucket — need chaining or open addressing.
+    - `No range or sorted access`, so a hash index cannot serve `BETWEEN` or `ORDER BY`.
+    - A `poor hash function` makes buckets uneven and degrades lookups to a scan.
 
 ## Data Warehousing, Data Mining & Business Intelligence (9)
 
