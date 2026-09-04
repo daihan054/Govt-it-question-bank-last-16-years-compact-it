@@ -26,93 +26,3018 @@
 
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
+   Answer: Recommended model: the `Incremental model`, delivered in phases. `Agile / Scrum` is the equally acceptable answer, and the justification is the same.
+
+   Why it fits this project
+   ```
+      The librarian's requirement is EXPLICIT :
+
+        "delivered in PHASES"                -> incremental delivery
+        "feedback incorporated AFTER EACH
+         RELEASE"                            -> customer feedback loop
+
+      Waterfall cannot do this - it delivers ONCE, at the very end,
+      so feedback can only arrive when it is too late to act on.
+   ```
+
+   How the project would be phased
+   ```
+      Increment 1 : book catalogue - add , search , view
+      Increment 2 : member management , issue and return
+      Increment 3 : fine calculation , reservations
+      Increment 4 : reports , notifications , admin dashboard
+
+      Each increment is fully ANALYSED , DESIGNED , CODED , TESTED and
+      DELIVERED as working software. The librarian uses it, gives
+      feedback, and that feedback shapes the next increment.
+   ```
+   ```mermaid
+   flowchart LR
+       A[Increment 1: Catalogue] --> B[Feedback]
+       B --> C[Increment 2: Issue/Return]
+       C --> D[Feedback]
+       D --> E[Increment 3: Fines]
+   ```
+
+   Two advantages of the chosen model
+
+   1. Working software is delivered early, and feedback can still change the outcome
+   ```
+      The librarian sees a usable catalogue after increment 1 instead
+      of waiting months for everything. If the search screen is wrong,
+      it is corrected in increment 2 - while it is still CHEAP to fix.
+      In Waterfall the same error would be found during acceptance
+      testing, when the whole design has already been built on it.
+   ```
+
+   2. Requirements may change without wrecking the plan
+   ```
+      A university library's rules change - a new fine policy, a new
+      category of member. Incremental development ABSORBS such a change
+      in the next increment. Waterfall freezes requirements after the
+      analysis phase, so any change means a costly formal amendment.
+   ```
+
+   Two further advantages worth one line each
+   ```
+      RISK IS REDUCED  - a problem shows up in one small increment,
+           not in a single huge delivery.
+      RETURN COMES EARLIER - the library starts using the catalogue
+           while the rest is still being built.
+   ```
+   - The one condition to state: the `core architecture` — the database schema and the module boundaries — must be designed well in increment 1. If it is not, later increments force expensive rework. This is the standard weakness of incremental development, and it is why the first increment should carry the architectural risk.
+
 2. What are the main phases of the Software Development Life Cycle (SDLC)? Explain each phase briefly. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+   Answer: The `Software Development Life Cycle (SDLC)` is the structured process a software product goes through, from the first idea to final retirement. It splits the work into ordered phases so that quality and cost stay under control.
+
+   The phases
+   ```mermaid
+   flowchart TD
+       A[1. Planning] --> B[2. Requirement Analysis]
+       B --> C[3. Design]
+       C --> D[4. Implementation / Coding]
+       D --> E[5. Testing]
+       E --> F[6. Deployment]
+       F --> G[7. Maintenance]
+   ```
+
+   1. Planning and feasibility study
+   - Decide `what` is to be built and `whether it is worth building`. Fix the scope, the budget, the schedule and the team. The feasibility study checks whether the project is `technically`, `economically`, `operationally` and `legally` possible.
+   - Output: `project plan`, feasibility report.
+
+   2. Requirement analysis
+   - Collect what the users actually need, through interviews, questionnaires, observation and study of existing documents. Separate `functional` requirements (what the system must do) from `non-functional` ones (speed, security, availability).
+   - Output: `SRS` — Software Requirements Specification, signed off by the client.
+
+   3. Design
+   - Decide `how` the system will be built. `High-level design` fixes the architecture, the modules and the database schema; `low-level design` fixes each module's algorithms, interfaces and screens.
+   - Output: `design document`, ER diagrams, DFDs, UML diagrams.
+
+   4. Implementation — coding
+   - Programmers write the actual code, module by module, following the design and the coding standards. This is usually the longest phase in effort, though not always in calendar time.
+   - Output: `source code`, unit-tested modules.
+
+   5. Testing
+   - Find the defects before the user does. `Unit` testing checks each module, `integration` testing checks the modules together, `system` testing checks the whole product against the SRS, and `acceptance` testing is done by the customer.
+   - Output: `test reports`, a defect-free build.
+
+   6. Deployment
+   - Install the system in the real environment, migrate the data, train the users and go live. Release may be `direct`, `parallel` (old and new run together), `pilot` (one branch first) or `phased`.
+   - Output: the `live system`.
+
+   7. Maintenance
+   - Keep the system working after release. Four kinds:
+   ```
+      CORRECTIVE  - fix defects found in use
+      ADAPTIVE    - adjust to a new OS , database or law
+      PERFECTIVE  - add features , improve performance
+      PREVENTIVE  - restructure the code to avoid future trouble
+   ```
+   - Maintenance typically consumes `60 to 80 per cent` of the total lifetime cost, far more than development.
+
+   - The one fact worth adding: the `cost of fixing a defect rises sharply with the phase in which it is found`. An error caught in requirements costs almost nothing; the same error found after deployment can cost a hundred times more. This is the entire justification for having a disciplined life cycle.
 
 3. Critically analyze the limitations of the Waterfall model and explain how Agile methodologies address those limitations. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
+   Answer: Limitations of the Waterfall model
+
+   1. Requirements must be frozen at the start
+   - The model assumes the customer can state every requirement completely and correctly before any design begins. In practice users discover what they want only when they `see` something working.
+
+   2. No working software until very late
+   - The customer sees nothing until the testing phase. If the product is wrong, months of work are already spent.
+
+   3. Change is very expensive
+   ```
+      Phase in which an error is found     relative cost to fix
+      ------------------------------------------------------
+      Requirements                                1
+      Design                                      5
+      Coding                                     10
+      Testing                                    50
+      After release                             100+
+
+      Waterfall finds requirement errors LATE - exactly where they
+      cost the most.
+   ```
+
+   4. No going back
+   - Each phase must be finished and signed off before the next begins. There is no formal route back to an earlier phase, so a mistake made in analysis is carried through the whole project.
+
+   5. Risk is discovered late
+   - Technical risks — an integration that will not work, a performance target that cannot be met — surface only in testing.
+
+   6. Poor for long or unclear projects
+   - The longer the project, the more the business changes underneath it. A two-year Waterfall project can deliver exactly what was asked for and still be useless.
+
+   7. Testing is a single phase at the end
+   - Defects accumulate and arrive together in one crushing batch.
+
+   How Agile addresses each limitation
+
+   | Waterfall limitation | Agile answer |
+   |---|---|
+   | Requirements frozen early | Requirements are a `living backlog`, re-prioritised every sprint |
+   | Nothing working until the end | `Working software` every 1–4 week sprint |
+   | Change is expensive | "`Responding to change` over following a plan" — change is expected |
+   | No going back | Every sprint repeats analysis, design, code and test |
+   | Risk found late | A sprint review every few weeks exposes risk early |
+   | Customer sees the product once | The customer is `present throughout` and reviews each increment |
+   | Testing only at the end | `Continuous testing`, TDD and CI on every commit |
+
+   How Agile works
+   ```mermaid
+   flowchart LR
+       A[Product Backlog] --> B[Sprint Planning]
+       B --> C[Sprint: 1-4 weeks]
+       C --> D[Working increment]
+       D --> E[Review + Retrospective]
+       E --> A
+   ```
+   ```
+      The four Agile values :
+        Individuals and interactions  over  processes and tools
+        Working software              over  comprehensive documentation
+        Customer collaboration        over  contract negotiation
+        Responding to change          over  following a plan
+
+      The right-hand items have value ; the left-hand ones have MORE.
+   ```
+
+   Where Waterfall is still the better choice
+   - Requirements genuinely fixed and well understood — a payroll system following a published government rule.
+   - Contracts or regulators that demand a complete specification and full documentation up front.
+   - Safety-critical work, where heavy formal review is mandatory.
+   - Short, small projects where the ceremony of Agile costs more than it saves.
+
+   - The fair conclusion: Agile is not universally superior. It solves Waterfall's problem — `late feedback` — but it needs a `committed customer`, a `co-located, skilled team` and tolerance for `light documentation`. Where those are absent, Agile fails in its own way.
+
 4. What is SDLC, Steps of SDLC, in which Step user acceptance assured? *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+
+   Answer: What SDLC is
+   - `SDLC` stands for `Software Development Life Cycle`. It is the structured process a software product passes through from the first idea to final retirement, divided into ordered phases so that cost, time and quality stay under control.
+
+   Steps of SDLC
+   ```mermaid
+   flowchart TD
+       A[1. Planning and feasibility] --> B[2. Requirement analysis]
+       B --> C[3. Design]
+       C --> D[4. Implementation / coding]
+       D --> E[5. Testing]
+       E --> F[6. Deployment]
+       F --> G[7. Maintenance]
+   ```
+   ```
+      1. PLANNING AND FEASIBILITY
+           Fix the scope, budget, schedule and team. Check technical,
+           economic, operational and legal feasibility.
+           Output : project plan , feasibility report.
+
+      2. REQUIREMENT ANALYSIS
+           Gather what users need, through interviews, questionnaires
+           and observation. Separate FUNCTIONAL from NON-FUNCTIONAL
+           requirements.
+           Output : SRS - Software Requirements Specification.
+
+      3. DESIGN
+           Decide HOW it will be built. High-level design fixes the
+           architecture, modules and database ; low-level design fixes
+           algorithms, interfaces and screens.
+           Output : design document , ER diagram , DFD , UML.
+
+      4. IMPLEMENTATION / CODING
+           Write the code module by module, following the design and
+           the coding standards.
+           Output : source code , unit-tested modules.
+
+      5. TESTING
+           Unit -> integration -> system -> ACCEPTANCE testing.
+           Output : test reports , a stable build.
+
+      6. DEPLOYMENT
+           Install in the live environment, migrate data, train users,
+           go live.
+           Output : the running system.
+
+      7. MAINTENANCE
+           Corrective , adaptive , perfective and preventive changes
+           after release. Consumes 60-80 per cent of lifetime cost.
+   ```
+
+   In which step is user acceptance assured?
+   ```
+      USER ACCEPTANCE TESTING (UAT) - part of the TESTING phase, and
+      the LAST level of testing before deployment.
+   ```
+   - Why it is UAT: the earlier levels are run by the `developers` and check that the software works as `built`. UAT is run by the `actual users` in a realistic environment and checks that the software does what the `business needs`. It is the customer's formal sign-off, and it is what authorises deployment.
+   ```
+      The four levels of testing, in order :
+
+        UNIT         each module        by developers
+        INTEGRATION  modules together   by developers
+        SYSTEM       whole product      by the QA team
+        ACCEPTANCE   business fitness   by the CUSTOMER   <- sign-off
+   ```
+   - Two forms of acceptance testing worth naming: `alpha testing`, done by users at the developer's site, and `beta testing`, done by real users in their own environment before general release.
+   - A qualification: acceptance is `assured` at UAT, but it is `prepared for` much earlier — the acceptance criteria come straight from the `SRS` agreed in the requirement analysis phase. If the SRS was wrong, UAT will fail however good the code is.
 
 5. **What is SDLC? Describe the steps of SDLC.** *[IFIC Bank Officer IT 2025 compact it 1448 (ET: IFIC)], [NPCBL Executive Trainee (Software) 26.05.2023 compact it 500 (ET: IBA)]*
 
+   Answer: What SDLC is
+   - `SDLC` stands for `Software Development Life Cycle`. It is the structured process a software product goes through from the first idea to final retirement, split into ordered phases so that cost, schedule and quality remain controllable.
+   - Why it is needed: without a defined life cycle, requirements are missed, defects are found late, and the cost of correction rises steeply.
+   ```
+      Cost of fixing an error, by the phase where it is FOUND :
+
+        Requirements   1        Testing        50
+        Design         5        After release  100+
+        Coding        10
+
+      This is the whole justification for a disciplined process.
+   ```
+
+   The steps
+   ```mermaid
+   flowchart TD
+       A[1. Planning and feasibility] --> B[2. Requirement analysis]
+       B --> C[3. Design]
+       C --> D[4. Coding]
+       D --> E[5. Testing]
+       E --> F[6. Deployment]
+       F --> G[7. Maintenance]
+   ```
+
+   1. Planning and feasibility study
+   - Fix the scope, the budget, the schedule and the team. Check `technical`, `economic`, `operational`, `schedule` and `legal` feasibility.
+   - Output: project plan, feasibility report.
+
+   2. Requirement analysis
+   - Gather what the users actually need — interviews, questionnaires, observation, study of existing documents. Separate `functional` requirements (what it must do) from `non-functional` ones (speed, security, availability).
+   - Output: `SRS`, signed off by the customer.
+
+   3. Design
+   - Decide how it will be built. `High-level design` fixes the architecture, modules and database schema; `low-level design` fixes each module's algorithms, interfaces and screens.
+   - Output: design document, ER diagrams, DFDs, UML diagrams.
+
+   4. Coding — implementation
+   - Write the code module by module against the design, following the agreed coding standards, with version control and code review.
+   - Output: source code, unit-tested modules.
+
+   5. Testing
+   ```
+      UNIT         each module alone         by developers
+      INTEGRATION  modules working together  by developers
+      SYSTEM       whole product vs the SRS  by the QA team
+      ACCEPTANCE   business fitness          by the CUSTOMER
+   ```
+   - Output: test reports and a stable build.
+
+   6. Deployment
+   - Install in the live environment, migrate the data, train the users and go live. The release may be `direct`, `parallel`, `pilot` or `phased`.
+   - Output: the running system.
+
+   7. Maintenance
+   ```
+      CORRECTIVE  fix defects found in use
+      ADAPTIVE    adjust to a new OS , database or law
+      PERFECTIVE  add features , improve performance
+      PREVENTIVE  restructure code to avoid future trouble
+   ```
+   - Maintenance takes `60 to 80 per cent` of the total lifetime cost — far more than development.
+
+   - The models that arrange these phases differently: `Waterfall` runs them strictly once in order; `Iterative` and `Incremental` repeat them per release; `Spiral` adds explicit risk analysis each round; and `Agile` compresses the whole cycle into a 1–4 week sprint, repeated continuously.
+
 6. **Why agile model is better than waterfall model?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
+
+   Answer: Agile is better than Waterfall in the situations that dominate modern software work — changing requirements and a customer who cannot state everything in advance. The reasons follow.
+
+   1. Early and continuous delivery
+   ```
+      WATERFALL : the customer sees NOTHING until testing, often
+           months later. If the product is wrong, the whole effort is
+           already spent.
+      AGILE     : WORKING SOFTWARE every 1-4 week sprint. The customer
+           uses it and reacts while change is still cheap.
+   ```
+
+   2. Change is welcomed rather than resisted
+   - Waterfall freezes requirements after analysis; any later change needs a formal, costly amendment. Agile treats the requirement list as a `living backlog`, re-prioritised at every sprint. One of the four Agile values is exactly "`responding to change` over following a plan".
+
+   3. Errors are found when they are cheap
+   ```
+      Cost of fixing an error, by the phase where it is FOUND :
+
+        Requirements   1        Testing        50
+        Design         5        After release  100+
+        Coding        10
+
+      Waterfall tests ONCE, at the end - the most expensive point.
+      Agile tests CONTINUOUSLY, inside every sprint.
+   ```
+
+   4. Risk is exposed early
+   - A sprint review every few weeks reveals technical and business risk while there is still time to act. In Waterfall an integration problem or a missed performance target surfaces only in the testing phase.
+
+   5. The customer is involved throughout
+   - Agile puts a customer representative (the `Product Owner`) with the team. Waterfall involves the customer at requirement sign-off and again at acceptance — with a long silence between.
+
+   6. Better morale and visibility
+   - Daily stand-ups, sprint reviews and retrospectives make progress visible and let the team improve its own process. Waterfall progress is measured by documents produced, which can look healthy while the product is not.
+
+   Side by side
+
+   | Point | Waterfall | Agile |
+   |---|---|---|
+   | Requirements | `Frozen` after analysis | `Evolve` every sprint |
+   | Delivery | `Once`, at the end | Every `1–4 weeks` |
+   | Customer contact | Start and end only | `Continuous` |
+   | Testing | One phase at the end | `Every sprint` |
+   | Cost of change | `Very high` | `Low` |
+   | Documentation | Heavy | Light, just enough |
+
+   Where Waterfall is still the right choice
+   - Requirements genuinely fixed and well understood — a payroll system implementing a published rule.
+   - Contracts or regulators that demand a full specification and documentation up front.
+   - Safety-critical systems needing formal review at every stage.
+   - Small, short projects where Agile's ceremonies cost more than they save.
+
+   - The honest answer: Agile is better `for most modern projects`, not for all. It requires a committed customer, a skilled team and tolerance for light documentation. Where those are missing, Agile fails in its own way — and a well-run Waterfall project is better than a badly-run Agile one.
 
 7. **a) What are the advantages and disadvantages of the Agile Model compared to the Waterfall Model in software development?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
+   Answer: Advantages of Agile over Waterfall
+
+   | Point | Waterfall | Agile |
+   |---|---|---|
+   | Requirements | `Frozen` after analysis | `Evolve` every sprint |
+   | First working software | Only at the `end` | Every `1–4 weeks` |
+   | Cost of change | `Very high` | `Low` |
+   | Customer involvement | Start and end only | `Continuous` |
+   | Testing | One phase at the end | `Inside every sprint` |
+   | Risk discovery | `Late` | `Early` |
+   | Documentation | Heavy and formal | Light, "just enough" |
+   | Team structure | Specialised, hierarchical | `Cross-functional`, self-organising |
+
+   - `Early delivery` — the customer sees usable software within weeks and can act on it while change is still cheap.
+   - `Change is welcomed` — the backlog is re-prioritised each sprint, so a shift in business need does not wreck the plan.
+   - `Defects found early` — an error costs 1 unit in requirements and over 100 after release; continuous testing catches them at the cheap end.
+   - `Lower risk` — a sprint review every few weeks exposes technical and business risk in time to react.
+   - `Higher customer satisfaction` — the Product Owner sits with the team, so what is built is what is wanted.
+   - `Better visibility` — daily stand-ups and sprint reviews show real progress, not document counts.
+
+   Disadvantages of Agile compared with Waterfall
+   - `Weak documentation` — light documentation hurts when the team changes, or when the system must be maintained years later by other people.
+   - `Cost and schedule are hard to fix in advance` — Waterfall's fixed scope allows a firm quotation; Agile's evolving scope does not, which is a genuine problem for `government tenders` and fixed-price contracts.
+   - `Scope creep` — welcoming change can become never finishing, unless the Product Owner is disciplined.
+   - `Needs a committed customer` — Agile assumes a customer representative is continuously available. Many organisations cannot supply one.
+   - `Needs a skilled, co-located team` — self-organising teams of junior or scattered developers usually underperform.
+   - `Poor fit for safety-critical or heavily regulated work`, where formal specification and traceability are mandatory.
+   - `Less predictable for large systems`, where the overall architecture must be right from the start.
+
+   Where each one wins
+   ```
+      USE WATERFALL when :
+        requirements are fixed and fully understood
+        the contract or regulator demands full documentation
+        the system is safety-critical
+        the project is small and short
+
+      USE AGILE when :
+        requirements are unclear or expected to change
+        the customer can stay involved
+        early delivery matters
+        the team is skilled and cross-functional
+   ```
+   - The middle path used in practice is a `hybrid`: Waterfall-style planning and architecture at the start to satisfy the contract, then Agile sprints for the build. Large organisations, including banks, usually work this way rather than adopting either model in its pure form.
+
 8. **Write down the differences between Agile model and Waterfall model in Software development. What is white box testing?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
+
+   Answer: Differences between the Agile model and the Waterfall model
+
+   | Point | Waterfall | Agile |
+   |---|---|---|
+   | Approach | `Sequential` — one phase after another | `Iterative` and incremental |
+   | Requirements | `Frozen` after the analysis phase | `Evolve` — a living backlog |
+   | Delivery | `Once`, at the very end | Working software every `1–4 weeks` |
+   | Customer involvement | Start and end only | `Continuous` — a Product Owner in the team |
+   | Testing | A single phase `at the end` | `Inside every sprint`, continuously |
+   | Cost of change | `Very high` | `Low` |
+   | Documentation | Heavy and formal | Light, "just enough" |
+   | Team | Specialised, hierarchical | `Cross-functional`, self-organising |
+   | Risk discovery | `Late` — in testing | `Early` — at each sprint review |
+   | Best suited to | Fixed, well-understood requirements | Unclear or changing requirements |
+
+   ```mermaid
+   flowchart LR
+       subgraph Waterfall
+       A[Requirements] --> B[Design] --> C[Code] --> D[Test] --> E[Deploy]
+       end
+       subgraph Agile
+       F[Backlog] --> G[Sprint] --> H[Increment] --> I[Review] --> F
+       end
+   ```
+
+   What is white box testing
+   - `White box testing` tests a program with `full knowledge of its internal code and logic`. The tester reads the source and designs cases to exercise its statements, branches and paths. It is also called `structural`, `glass box` or `clear box` testing, and it is normally done by `developers`.
+   ```
+      The tester can SEE INSIDE the box :
+
+           +------------------------+
+           |  if (a > b)            |   the tester writes cases to
+           |      x = a;            |   force BOTH branches, not just
+           |  else                  |   the one the user happens to hit
+           |      x = b;            |
+           +------------------------+
+   ```
+
+   Coverage criteria — what "tested" means
+   ```
+      STATEMENT COVERAGE  every line executed at least once
+      BRANCH   COVERAGE   every if takes both the true and false path
+      PATH     COVERAGE   every possible route through the code
+      CONDITION COVERAGE  every sub-condition of a compound test is
+                          evaluated both ways
+      LOOP     COVERAGE   the loop runs 0 times , once , and many times
+   ```
+   ```
+      Example :  if (a > 0 && b > 0)  x = 1;  else  x = 2;
+
+      STATEMENT coverage needs 1 test  : a=1 , b=1
+      BRANCH    coverage needs 2 tests : (1,1) and (1,-1)
+      CONDITION coverage needs cases making a>0 both T and F, and
+                b>0 both T and F.
+   ```
+
+   What it finds and what it misses
+   - Finds: dead code, uncovered branches, wrong loop boundaries, logic errors, security holes such as unchecked buffers, and infinite loops.
+   - Misses: `missing requirements`. If a required feature was never coded, there is no code to cover, so white box testing cannot detect its absence.
+
+   - The contrast usually asked for: `black box` testing looks only at inputs and outputs, ignoring the code, and is done by testers from the `SRS`; `white box` testing works from the `code`. `Grey box` combines the two — partial knowledge of the internals, used heavily in security testing. The two are complements, not alternatives.
 
 9. **You are asked to lead a team of software engineers to develop an application software system for your company and deploy it as fast as possible. You need to gather user requirements, design, develop, test and then deploy the system. Between Waterfall Approach and Incremental Approach, which software development approach will you take for your software project? Explain your answer.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 338 (ET: BIBM)]*
 
+   Answer: Chosen approach: the `Incremental approach`.
+
+   Why, given the constraint in the question
+   ```
+      The requirement is "deploy it AS FAST AS POSSIBLE".
+
+      WATERFALL delivers ONCE - nothing is usable until the very last
+      phase. The first deployment is therefore the LATEST possible
+      date.
+
+      INCREMENTAL delivers the first working version after increment
+      1, and the rest follows. The first deployment is the EARLIEST
+      possible date.
+
+      The stated goal decides the answer on its own.
+   ```
+
+   How the project would run
+   ```
+      Increment 1 : core feature - gather requirements , design , code ,
+                    test , DEPLOY.  The company starts using it.
+      Increment 2 : the next most valuable feature , on the same cycle.
+      Increment 3 : and so on.
+
+      Each increment is a complete mini-SDLC producing WORKING SOFTWARE.
+   ```
+   ```mermaid
+   flowchart LR
+       A[Increment 1: core] --> B[Deploy + feedback]
+       B --> C[Increment 2: next feature]
+       C --> D[Deploy + feedback]
+       D --> E[Increment 3]
+   ```
+
+   The reasons, stated for the examiner
+
+   1. `Fastest route to a usable system.` Business value arrives after the first increment instead of at the end of the project.
+   2. `Feedback while it still matters.` Users react to increment 1, and that shapes increment 2 — before the mistake has been built into everything.
+   3. `Requirements need not be complete on day one.` Only increment 1 must be fully understood now; the rest can be settled as the project runs. Waterfall would stall until every requirement was signed off.
+   4. `Lower risk.` A problem appears inside one small increment, not in a single large delivery.
+   5. `Change is absorbed cheaply.` A new business need becomes an item in a later increment rather than a formal change request against a frozen specification.
+
+   Comparison
+
+   | Point | Waterfall | Incremental |
+   |---|---|---|
+   | First deployment | At the `very end` | After `increment 1` |
+   | Requirements needed up front | `All` of them | Only for the current increment |
+   | Cost of change | `Very high` | Low |
+   | Risk | Concentrated at the end | Spread across increments |
+   | Customer feedback | Once, too late | After `every` increment |
+
+   When Waterfall would have been the right answer
+   - If the requirements were fixed, fully known and unlikely to change — a payroll system implementing a published government rule.
+   - If a contract or regulator demanded a complete specification and full documentation before coding.
+   - If the system were safety-critical, needing formal review at every stage.
+
+   - The one precaution to state: the `core architecture` — database schema and module boundaries — must be got right in increment 1. If it is not, later increments force rework, and that is the standard failure mode of incremental development. So increment 1 should carry the architectural risk deliberately, not just the easiest feature.
+
 10. **(খ) Spiral Model চিত্রসহ ব্যাখ্যা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What the Spiral model is
+    - The `Spiral model`, proposed by Barry Boehm in 1986, combines the ordered phases of the Waterfall model with the repetition of iterative development, and adds one thing neither of them has: `explicit risk analysis in every cycle`. The project spirals outward, each loop producing a more complete product.
+
+    Diagram
+    ```
+                        Determine objectives  |  Identify and RESOLVE
+                        alternatives          |  RISKS  (prototype)
+                        constraints           |
+                  ------------------------------------------------
+                                              |
+                        Plan the next         |  Develop and
+                        iteration             |  VERIFY this level
+                                              |
+    ```
+    ```
+            cost / progress increases OUTWARD ->
+
+                  +---------------------------+
+                  |   Quadrant 1  |  Quadrant 2|
+                  |  OBJECTIVES   |    RISK    |
+                  |               |  ANALYSIS  |
+                  +---------------+------------+
+                  |   Quadrant 4  |  Quadrant 3|
+                  |     PLAN      | DEVELOP &  |
+                  |  next cycle   |    TEST    |
+                  +---------------------------+
+
+       Loop 1 : concept          -> prototype 1
+       Loop 2 : requirements     -> prototype 2
+       Loop 3 : design           -> prototype 3
+       Loop 4 : build and test   -> the release
+    ```
+    ```mermaid
+    flowchart LR
+        A[1. Objectives and alternatives] --> B[2. Risk analysis and prototype]
+        B --> C[3. Develop and verify]
+        C --> D[4. Plan the next iteration]
+        D --> A
+    ```
+
+    The four quadrants of every loop
+    ```
+       1. DETERMINE OBJECTIVES
+            Fix the goals, the alternatives and the constraints for this
+            cycle - cost, schedule, interfaces.
+
+       2. IDENTIFY AND RESOLVE RISKS
+            THE DEFINING STEP. List the risks - unclear requirements,
+            an unproven technology, a performance target. Build a
+            PROTOTYPE, run a simulation or a benchmark to settle each
+            one. If a risk cannot be resolved, the project may be
+            STOPPED here, before more money is spent.
+
+       3. DEVELOP AND VERIFY
+            Build and test this level of the product : a prototype in
+            early loops, real code in later ones.
+
+       4. PLAN THE NEXT ITERATION
+            The customer reviews the result and the next cycle is
+            planned. Each loop ends with a formal review.
+    ```
+
+    Advantages
+    - `Risk is handled explicitly` — the only classical model that does. Suited to large, expensive and uncertain projects.
+    - Requirements may be `refined at every loop`, so they need not be complete at the start.
+    - The customer `reviews after every cycle`, so feedback arrives repeatedly.
+    - A doomed project can be `stopped early`, at a review, rather than after full expenditure.
+    - Prototypes reduce technical uncertainty before real money is committed.
+
+    Disadvantages
+    - `Expensive` — the repeated risk analysis and prototyping cost time and money, so it is unsuitable for small projects.
+    - Depends on `expert risk assessors`; a wrong risk judgement defeats the whole purpose.
+    - The number of loops is `not fixed`, so cost and schedule are hard to predict.
+    - `Complex to manage` and heavy in documentation.
+
+    - The point examiners look for: the Spiral model's distinguishing feature is `risk-driven` development. Waterfall is document-driven and Agile is customer-driven; Spiral is the one that decides what to do next by asking `which risk is largest`. It is used for large, long, high-cost systems — defence, aerospace, core banking — not for ordinary applications.
 
 11. **Write down the step of SDLC?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)], [BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
+    Answer: The steps of `SDLC` — the Software Development Life Cycle.
+    ```mermaid
+    flowchart TD
+        A[1. Planning and feasibility] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Coding]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+    ```
+
+    1. Planning and feasibility study
+    - Fix the scope, budget, schedule and team. Check `technical`, `economic`, `operational`, `schedule` and `legal` feasibility.
+    - Output: project plan, feasibility report.
+
+    2. Requirement analysis
+    - Collect what the users need — interviews, questionnaires, observation, study of existing documents. Separate `functional` from `non-functional` requirements.
+    - Output: `SRS`, signed off by the customer.
+
+    3. Design
+    - Decide how it will be built. `High-level design` fixes the architecture, modules and database schema; `low-level design` fixes algorithms, interfaces and screens.
+    - Output: design document, ER diagram, DFD, UML diagrams.
+
+    4. Coding — implementation
+    - Write the code module by module against the design, following coding standards, under version control.
+    - Output: source code, unit-tested modules.
+
+    5. Testing
+    ```
+       UNIT         each module alone         by developers
+       INTEGRATION  modules working together  by developers
+       SYSTEM       whole product vs the SRS  by the QA team
+       ACCEPTANCE   business fitness          by the CUSTOMER
+    ```
+    - Output: test reports and a stable build.
+
+    6. Deployment
+    - Install in the live environment, migrate data, train users, go live. The release may be `direct`, `parallel`, `pilot` or `phased`.
+    - Output: the running system.
+
+    7. Maintenance
+    ```
+       CORRECTIVE  fix defects found in use
+       ADAPTIVE    adjust to a new OS , database or law
+       PERFECTIVE  add features , improve performance
+       PREVENTIVE  restructure to avoid future trouble
+    ```
+    - Maintenance takes `60 to 80 per cent` of the total lifetime cost.
+
+    - Two facts worth adding. The `number of phases` quoted varies between books — 5, 6 or 7 — because planning and feasibility are sometimes merged, and deployment is sometimes folded into maintenance. And the same phases are arranged differently by different `models`: Waterfall runs them once in strict order, Incremental repeats them per release, Spiral adds risk analysis each loop, and Agile compresses the whole cycle into a 1–4 week sprint.
+
 12. **Which SDLC do you prefer between Agile and waterfall model explain with example.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
+
+    Answer: Preferred model: `Agile`, for most modern projects — with the exception noted at the end.
+
+    Why Agile is preferred
+    ```
+       1. WORKING SOFTWARE EVERY 1-4 WEEKS, not once at the end.
+       2. REQUIREMENTS MAY CHANGE - the backlog is re-prioritised each
+          sprint instead of being frozen.
+       3. DEFECTS ARE FOUND EARLY, where they are cheap :
+
+            error found in requirements   cost 1
+            error found after release     cost 100+
+
+       4. THE CUSTOMER IS PRESENT throughout, so what is built is what
+          is wanted.
+       5. RISK SURFACES EARLY, at each sprint review.
+    ```
+
+    Example — an online food-delivery application
+
+    Under Waterfall
+    ```
+       Month 1-2   gather every requirement , freeze the SRS
+       Month 3-4   design the whole system
+       Month 5-8   code everything
+       Month 9     test everything
+       Month 10    deliver
+
+       Now the customer says : "customers want LIVE TRACKING of the
+       rider, and we must add bKash payment."
+
+       Neither was in the frozen SRS. Adding them means reopening the
+       design, so it is a formal change request costing months. And the
+       customer sees the product for the FIRST TIME in month 10.
+    ```
+
+    Under Agile
+    ```
+       Sprint 1 (2 wks) : browse restaurants and menu      -> DELIVERED
+       Sprint 2         : cart and order placement         -> DELIVERED
+       Sprint 3         : payment - and bKash is added here, because
+                          by now the need is known
+       Sprint 4         : live rider tracking - added to the backlog
+                          the moment the customer asks
+       Sprint 5         : ratings and reviews
+
+       The customer uses the app from week 2 and steers the product.
+       The two new requirements cost ONE SPRINT EACH, not a contract
+       amendment.
+    ```
+
+    Comparison
+
+    | Point | Waterfall | Agile |
+    |---|---|---|
+    | Delivery | Once, at the end | Every `1–4 weeks` |
+    | Requirements | `Frozen` | Evolve each sprint |
+    | Cost of change | `Very high` | Low |
+    | Customer contact | Start and end | `Continuous` |
+    | Testing | One phase at the end | Every sprint |
+    | Documentation | Heavy | Light |
+
+    Where I would choose Waterfall instead
+    ```
+       A GOVERNMENT PAYROLL SYSTEM implementing a published pay scale :
+
+         the rules are FIXED and published in a gazette
+         the tender demands a complete specification and a firm price
+         full documentation is required for audit
+         the requirement will not change during the project
+
+       Here Waterfall is genuinely BETTER - Agile's evolving scope
+       cannot be priced in a fixed-price public tender.
+    ```
+    - The practical middle path most large organisations use is a `hybrid`: Waterfall-style planning, architecture and contract up front, then Agile sprints for the build. Banks and government projects in Bangladesh usually work this way rather than adopting either model in its pure form.
 
 13. **Define SDLC? Write the steps of SDLC?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
+    Answer: Definition
+    - `SDLC` — the `Software Development Life Cycle` — is the structured process a software product goes through from the first idea to final retirement. The work is divided into ordered phases, each with a defined input, output and review, so that cost, schedule and quality stay controllable.
+    - Why it is defined at all: without a life cycle, requirements are missed and defects surface late, when they cost the most.
+    ```
+       Cost of fixing an error, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+    ```
+
+    The steps
+    ```mermaid
+    flowchart TD
+        A[1. Planning and feasibility] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Coding]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+    ```
+    ```
+       1. PLANNING AND FEASIBILITY
+            Scope, budget, schedule, team. Technical, economic,
+            operational, schedule and legal feasibility are checked.
+            Output : project plan , feasibility report.
+
+       2. REQUIREMENT ANALYSIS
+            Interviews, questionnaires, observation. FUNCTIONAL
+            requirements (what it must do) are separated from
+            NON-FUNCTIONAL ones (speed, security, availability).
+            Output : SRS , signed off by the customer.
+
+       3. DESIGN
+            HIGH-LEVEL : architecture, modules, database schema.
+            LOW-LEVEL  : algorithms, interfaces, screen layouts.
+            Output : design document , ER diagram , DFD , UML.
+
+       4. CODING
+            Modules written against the design, following coding
+            standards, under version control, with code review.
+            Output : source code , unit-tested modules.
+
+       5. TESTING
+            UNIT -> INTEGRATION -> SYSTEM -> ACCEPTANCE.
+            Acceptance testing is done by the CUSTOMER and is the
+            formal sign-off before release.
+            Output : test reports , a stable build.
+
+       6. DEPLOYMENT
+            Install, migrate data, train users, go live. Release may be
+            DIRECT , PARALLEL , PILOT or PHASED.
+            Output : the running system.
+
+       7. MAINTENANCE
+            CORRECTIVE (fix defects) , ADAPTIVE (new OS or law) ,
+            PERFECTIVE (new features) , PREVENTIVE (restructure).
+            Takes 60-80 per cent of total lifetime cost.
+    ```
+    - The same seven phases are arranged differently by different `models`: `Waterfall` runs them once in strict sequence, `Incremental` repeats them per release, `Spiral` adds risk analysis to each loop, and `Agile` compresses the whole cycle into a 1–4 week sprint that repeats continuously.
+
 14. **What is SDLC? Write the name of 7 phase of SDLC?** *[DESCO Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
+
+    Answer: What SDLC is
+    - `SDLC` stands for `Software Development Life Cycle`. It is the structured process a software product follows from the first idea to final retirement, divided into ordered phases so that cost, schedule and quality stay under control.
+
+    The 7 phases
+    ```
+       1. PLANNING and feasibility study
+       2. REQUIREMENT ANALYSIS
+       3. DESIGN
+       4. IMPLEMENTATION  (coding)
+       5. TESTING
+       6. DEPLOYMENT
+       7. MAINTENANCE
+    ```
+    ```mermaid
+    flowchart TD
+        A[1. Planning] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Implementation]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+    ```
+
+    One line on each
+    ```
+       PLANNING       fix scope, budget, schedule, team ; check
+                      technical, economic, operational and legal
+                      feasibility.
+       ANALYSIS       gather user needs ; produce the SRS.
+       DESIGN         decide HOW - architecture, modules, database,
+                      screens.
+       IMPLEMENTATION write the code, module by module.
+       TESTING        unit -> integration -> system -> acceptance.
+       DEPLOYMENT     install, migrate data, train users, go live.
+       MAINTENANCE    corrective, adaptive, perfective, preventive
+                      changes after release.
+    ```
+    - Note that the phase count differs between books — some show `5` or `6` phases by merging planning with feasibility, or folding deployment into maintenance. The `7-phase` list above is the one usually expected when the question asks for seven.
+    - Also worth one line: `maintenance` is the longest and costliest phase, taking `60 to 80 per cent` of the product's total lifetime cost — more than all six earlier phases together.
 
 15. **(a) What do you understand by Agile? Mention its four values.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
 
+    Answer: What Agile is
+    - `Agile` is an approach to software development in which the product is built in short, repeated cycles called `iterations` or `sprints`, each producing `working software`, with the customer involved throughout. It is not a single method but a `philosophy`, set out in the `Agile Manifesto` of 2001 by 17 practitioners.
+    ```
+       Instead of one long sequence :
+
+            Backlog -> Sprint (1-4 weeks) -> Working increment
+                 ^                                  |
+                 +--- review + retrospective -------+
+
+       Every sprint contains ANALYSIS, DESIGN, CODING and TESTING - a
+       complete mini life cycle.
+    ```
+
+    Its four values
+    ```
+       1. INDIVIDUALS AND INTERACTIONS  over  processes and tools
+            A motivated team that talks to each other beats a rigid
+            process. A five-minute conversation settles what a week of
+            emails would not.
+
+       2. WORKING SOFTWARE  over  comprehensive documentation
+            Progress is measured by software that runs, not by the
+            number of documents produced. Document what is genuinely
+            needed, no more.
+
+       3. CUSTOMER COLLABORATION  over  contract negotiation
+            Work WITH the customer continuously rather than arguing
+            about what the signed contract says. A Product Owner sits
+            with the team.
+
+       4. RESPONDING TO CHANGE  over  following a plan
+            A changed requirement is useful information, not a failure
+            of planning. The backlog is re-prioritised each sprint.
+    ```
+    ```
+       THE CRUCIAL QUALIFICATION, and the one candidates miss :
+
+       "That is, while there is value in the items on the RIGHT, we
+        value the items on the LEFT MORE."
+
+       Agile does NOT say documentation, plans, tools or contracts are
+       worthless. It says that when the two conflict, the left-hand
+       item wins.
+    ```
+
+    The twelve principles, in brief
+    - Satisfy the customer through `early and continuous delivery`; welcome changing requirements even late; deliver working software `frequently`; business people and developers work together `daily`; build around `motivated individuals`; prefer `face-to-face` conversation; `working software` is the primary measure of progress; maintain a `sustainable pace`; attend continuously to `technical excellence`; keep it `simple`; the best designs come from `self-organising teams`; and the team `reflects and adjusts` at regular intervals.
+
+    - The frameworks that implement Agile: `Scrum` (sprints, Product Owner, Scrum Master, daily stand-up), `Kanban` (visualise the work, limit work in progress), `Extreme Programming` (pair programming, test-driven development, continuous integration) and `SAFe` for large organisations. Agile is the philosophy; these are the methods that put it into practice.
+
 16. **(a) Write down the steps of Waterfall model.** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
+
+    Answer: The `Waterfall model` is the classical `linear sequential` model of software development. Each phase must be finished and approved before the next begins, and the output of one phase is the input to the next — so progress flows steadily downward, like a waterfall.
+
+    The steps
+    ```mermaid
+    flowchart TD
+        A[1. Requirement gathering and analysis] --> B[2. System design]
+        B --> C[3. Implementation / coding]
+        C --> D[4. Integration and testing]
+        D --> E[5. Deployment]
+        E --> F[6. Maintenance]
+    ```
+    ```
+       +-------------------------+
+       | 1. REQUIREMENTS         |
+       +-------------------------+
+                  |
+                  v
+           +-------------------------+
+           | 2. SYSTEM DESIGN        |
+           +-------------------------+
+                      |
+                      v
+               +-------------------------+
+               | 3. IMPLEMENTATION       |
+               +-------------------------+
+                          |
+                          v
+                   +-------------------------+
+                   | 4. TESTING              |
+                   +-------------------------+
+                              |
+                              v
+                       +-------------------------+
+                       | 5. DEPLOYMENT           |
+                       +-------------------------+
+                                  |
+                                  v
+                           +-------------------------+
+                           | 6. MAINTENANCE          |
+                           +-------------------------+
+    ```
+
+    1. Requirement gathering and analysis
+    - Collect every requirement from the customer and record it. The `SRS` is produced and formally signed off. Nothing may change afterwards.
+
+    2. System design
+    - `High-level design` fixes the architecture, the modules and the database schema; `low-level design` fixes each module's algorithms, interfaces and screens.
+
+    3. Implementation — coding
+    - The design is translated into code, module by module, and each module is unit tested by its developer.
+
+    4. Integration and testing
+    - The modules are combined and the whole system is tested against the SRS — integration, system and finally acceptance testing by the customer.
+
+    5. Deployment
+    - The product is installed in the customer's environment, data is migrated and users are trained.
+
+    6. Maintenance
+    - Defects found in use are corrected, and the system is adapted or enhanced over its working life.
+
+    Advantages
+    - `Simple to understand and manage`; each phase has a clear deliverable and a review point.
+    - `Well documented`, which suits contracts, audits and later maintenance.
+    - `Easy to plan and cost`, because the scope is fixed at the start.
+    - Works well when requirements are `fixed and fully understood`.
+
+    Disadvantages
+    - Requirements must be `frozen` early, which real customers cannot do.
+    - `No working software until very late` — the customer sees the product only at testing.
+    - `Change is very expensive`; there is no formal route back to an earlier phase.
+    - `Risk is discovered late`, in the testing phase, when correction costs the most.
+    - Poor for long projects, where the business changes while the project runs.
+
+    - Where it is still the right model: fixed, published rules — a payroll system implementing a gazetted pay scale; contracts or regulators demanding a full specification up front; safety-critical systems needing formal review at every stage; and small, short projects where iteration would cost more than it saves.
 
 17. **(খ) Software Engineering এর ক্ষেত্রে Waterfall Model বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 603 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) What the Waterfall model is
+    - The `Waterfall model` is the classical `linear sequential` model of software development, proposed by Winston Royce in 1970. Each phase must be completed and approved before the next begins, and the output of one phase becomes the input to the next — progress flows downward like a waterfall, with no formal way back.
+
+    The phases
+    ```mermaid
+    flowchart TD
+        A[1. Requirement analysis] --> B[2. System design]
+        B --> C[3. Implementation]
+        C --> D[4. Testing]
+        D --> E[5. Deployment]
+        E --> F[6. Maintenance]
+    ```
+    ```
+       1. REQUIREMENT GATHERING AND ANALYSIS
+            Every requirement is collected and recorded. The SRS is
+            produced and formally SIGNED OFF - and then FROZEN.
+
+       2. SYSTEM DESIGN
+            HIGH-LEVEL : architecture, modules, database schema.
+            LOW-LEVEL  : algorithms, interfaces, screen layouts.
+
+       3. IMPLEMENTATION (CODING)
+            The design is turned into code, module by module. Each
+            module is unit tested by its developer.
+
+       4. INTEGRATION AND TESTING
+            Modules are combined ; the whole system is tested against
+            the SRS - integration, system, then acceptance testing by
+            the customer.
+
+       5. DEPLOYMENT
+            Installed at the customer's site, data migrated, users
+            trained, system goes live.
+
+       6. MAINTENANCE
+            Defects corrected, and the system adapted or enhanced over
+            its working life.
+    ```
+
+    Advantages
+    - `Simple to understand and to manage` — every phase has a clear deliverable and a review gate.
+    - `Thoroughly documented`, which suits contracts, audits and future maintenance.
+    - `Easy to estimate and cost`, since the scope is fixed at the start.
+    - Discipline is enforced: nothing is coded before the design is approved.
+    - Works well when the requirements are `fixed and completely understood`.
+
+    Limitations
+    - Requirements must be `frozen` after analysis. Real customers discover what they want only when they see something working.
+    - `No working software until the end` — the customer sees the product for the first time at testing.
+    - `Change is extremely expensive`; there is no formal path back to an earlier phase.
+    - `Risk surfaces late`. An integration problem or a missed performance target appears only in the testing phase.
+    ```
+       Cost of fixing an error, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       Waterfall finds requirement errors LATE - at the expensive end.
+    ```
+    - Poor for long projects, where the business changes underneath the project while it runs.
+    - Testing is a single phase at the end, so defects accumulate and arrive in one crushing batch.
+
+    - Where it is still correct to use: fixed, published rules such as a government pay scale; tenders that demand a complete specification and a firm price; safety-critical systems requiring formal review at every stage; and small, short projects where iteration costs more than it saves. For everything else, `Incremental`, `Spiral` or `Agile` models address Waterfall's central weakness — `feedback that arrives too late to act on`.
+
 18. **(খ) Software maintenance এর সাথে কী কী বিষয় জড়িত, তা আলোচনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 603 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What software maintenance is
+    - `Software maintenance` is all the work done on a software product `after it has been delivered` — correcting faults, adapting it to a changed environment, improving it, and keeping it fit to run. It is not an afterthought: it consumes `60 to 80 per cent` of a product's total lifetime cost, more than all the development phases combined.
+
+    What maintenance involves — the four types
+    ```
+       1. CORRECTIVE MAINTENANCE   (about 20 %)
+            Fixing defects found once the system is in use - a wrong
+            calculation, a crash, a report that prints the wrong total.
+            REACTIVE : it responds to a reported fault.
+
+       2. ADAPTIVE MAINTENANCE     (about 25 %)
+            Changing the software because its ENVIRONMENT changed, not
+            because it is faulty :
+              a new operating system or browser version
+              a database upgrade
+              a change in tax law or a new VAT rate
+              a new hardware platform
+
+       3. PERFECTIVE MAINTENANCE   (about 50 %)
+            Adding features and improving performance or usability at
+            the users' request. THE LARGEST SHARE - because a system in
+            use keeps attracting new demands.
+
+       4. PREVENTIVE MAINTENANCE   (about  5 %)
+            Restructuring the code to stop future problems -
+            refactoring, removing duplication, updating documentation,
+            replacing an obsolete library. It fixes nothing visible
+            today ; it lowers tomorrow's cost.
+    ```
+
+    The activities involved
+    ```
+       - understanding the existing code, often written by others
+       - impact analysis - what else breaks if this is changed
+       - modifying the code and the design
+       - REGRESSION TESTING - proving the change broke nothing else
+       - updating the SRS, the design document and the user manual
+       - version and configuration management
+       - re-deploying and retraining users
+       - a CHANGE CONTROL process : request -> analyse -> approve ->
+         implement -> test -> release
+    ```
+
+    Why maintenance is difficult and costly
+    - The original developers have usually `left`, and the knowledge went with them.
+    - `Documentation is out of date` or missing, so the code must be read to understand the system.
+    - Years of patches leave the structure degraded — `software ageing`. Each change makes the next one harder.
+    - A change in one module can `break another` in a way nobody predicted.
+    - Maintenance is seen as low-prestige work, so it often gets the least experienced staff — which makes the problem worse.
+
+    How maintenance cost is reduced
+    ```
+       During DEVELOPMENT :
+            high COHESION and low COUPLING , so a change stays local
+            clear coding standards and meaningful names
+            good documentation kept with the code
+            an automated test suite , so regressions are caught at once
+
+       During MAINTENANCE :
+            REFACTOR regularly instead of patching
+            keep the documentation in step with the code
+            use version control and a formal change process
+    ```
+    - Two related terms worth naming: `re-engineering` — rebuilding an old system into a better structure while keeping its function — and `reverse engineering`, recovering the design from code when the documentation is lost. Both are used when a legacy system has become too costly to maintain by ordinary means.
 
 19. **(ক) Waterfall model বিস্তারিত বর্ণনা করুন। এই model এর সুবিধা এবং সীমাবদ্ধতাগুলো উল্লেখ করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 620 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) The Waterfall model in detail
+    - The `Waterfall model` is the classical `linear sequential` model, proposed by Winston Royce in 1970. Every phase is completed and formally approved before the next begins, and the output of one phase is the input to the next. Progress flows downward only — hence the name.
+
+    The phases
+    ```mermaid
+    flowchart TD
+        A[1. Requirement gathering and analysis] --> B[2. System design]
+        B --> C[3. Implementation]
+        C --> D[4. Integration and testing]
+        D --> E[5. Deployment]
+        E --> F[6. Maintenance]
+    ```
+    ```
+       1. REQUIREMENT GATHERING AND ANALYSIS
+            All requirements are collected from the customer through
+            interviews, questionnaires and study of existing documents.
+            FUNCTIONAL requirements (what the system must do) are
+            separated from NON-FUNCTIONAL ones (speed, security,
+            availability).
+            Output : SRS - Software Requirements Specification, signed
+            off by the customer and then FROZEN.
+
+       2. SYSTEM DESIGN
+            HIGH-LEVEL DESIGN : overall architecture, module breakdown,
+                 database schema, technology choices.
+            LOW-LEVEL DESIGN  : each module's algorithms, data
+                 structures, interfaces and screen layouts.
+            Output : design document, ER diagram, DFD, UML diagrams.
+
+       3. IMPLEMENTATION (CODING)
+            Programmers translate the design into code, module by
+            module, following the coding standards. Each module is
+            UNIT TESTED by its own developer.
+            Output : source code.
+
+       4. INTEGRATION AND TESTING
+            Modules are combined and tested together, then the whole
+            system is tested against the SRS.
+            INTEGRATION -> SYSTEM -> ACCEPTANCE testing (by the
+            customer).
+            Output : test reports, a stable build.
+
+       5. DEPLOYMENT
+            The product is installed in the customer's environment,
+            data is migrated, users are trained, the system goes live.
+
+       6. MAINTENANCE
+            Corrective, adaptive, perfective and preventive changes
+            over the working life of the system.
+    ```
+
+    Advantages
+    - `Simple to understand and manage` — clear phases, clear deliverables, a review gate at each boundary.
+    - `Well documented`, which suits contracts, audits and later maintenance by other people.
+    - `Easy to estimate and price`, since the scope is fixed at the start. This is why public tenders often demand it.
+    - Discipline is enforced — nothing is coded before the design is approved.
+    - Works well when the requirements are `fixed and completely understood`.
+    - Progress is easy to report — the phase currently under way is the status.
+
+    Limitations
+    - Requirements must be `frozen` after analysis, but customers discover what they want only when they see something working.
+    - `No working software until very late`; the customer first sees the product at testing.
+    - `Change is extremely expensive` — there is no formal route back to a finished phase.
+    - `Risk surfaces late`. An integration failure or a missed performance target appears only in testing.
+    ```
+       Cost of fixing an error, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       Waterfall finds requirement errors at the EXPENSIVE end.
+    ```
+    - `Unsuitable for long projects`, because the business changes while the project runs — the product can match the SRS exactly and still be useless.
+    - `Testing is one phase at the end`, so defects accumulate and arrive together.
+    - The customer is idle through the middle of the project and cannot influence the product.
+
+    - Where it remains the right choice: fixed, published rules such as a gazetted pay scale; contracts or regulators demanding a complete specification and firm price; safety-critical systems requiring formal review at every stage; and small, short projects. For everything else the `Incremental`, `Spiral` and `Agile` models exist precisely to fix Waterfall's central defect — `feedback that arrives too late to act on`.
+
 20. **How does agile methodology used in software development differ from that of waterfall methodology? Explain in brief.** *[BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
+
+    Answer: How Agile differs from Waterfall
+
+    | Point | Waterfall | Agile |
+    |---|---|---|
+    | Approach | `Sequential` — one phase after another | `Iterative` and incremental |
+    | Requirements | `Frozen` after analysis | A `living backlog`, re-prioritised each sprint |
+    | Delivery | `Once`, at the very end | Working software every `1–4 weeks` |
+    | Customer involvement | Start and end only | `Continuous` — a Product Owner in the team |
+    | Testing | A single phase `at the end` | `Inside every sprint` |
+    | Cost of change | `Very high` | `Low` |
+    | Documentation | Heavy and formal | Light — "just enough" |
+    | Team | Specialised, hierarchical | `Cross-functional`, self-organising |
+    | Risk discovery | `Late`, in testing | `Early`, at each sprint review |
+    | Progress measured by | Documents and phases completed | `Working software` |
+
+    The structural difference
+    ```mermaid
+    flowchart LR
+        subgraph Waterfall
+        A[Requirements] --> B[Design] --> C[Code] --> D[Test] --> E[Deploy]
+        end
+        subgraph Agile
+        F[Backlog] --> G[Sprint 1-4 weeks] --> H[Working increment]
+        H --> I[Review] --> F
+        end
+    ```
+    ```
+       WATERFALL does each phase ONCE, for the WHOLE product.
+       AGILE does ALL the phases EVERY SPRINT, for a SMALL SLICE of
+       the product.
+
+       That single structural change is the source of every other
+       difference between them.
+    ```
+
+    Why it matters in practice
+    ```
+       Cost of fixing an error, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       Waterfall tests ONCE, at the end - the most expensive point.
+       Agile tests CONTINUOUSLY, so errors are caught while cheap.
+    ```
+
+    The Agile values that drive it
+    ```
+       Individuals and interactions  over  processes and tools
+       Working software              over  comprehensive documentation
+       Customer collaboration        over  contract negotiation
+       Responding to change          over  following a plan
+
+       The right-hand items still have value ; the left-hand ones have
+       MORE. Agile does not discard documentation or planning.
+    ```
+
+    - Where each one wins: `Waterfall` for fixed, published requirements, fixed-price tenders, and safety-critical or heavily regulated systems. `Agile` where requirements are unclear or changing, the customer can stay involved, and early delivery matters. Large organisations usually run a `hybrid` — Waterfall planning and contract up front, Agile sprints for the build.
 
 21. **Software engineering এ ফিজিবিলিটি স্ট্যাড্যির ৭টি ধাপ বর্ণনা কর।** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
 
+    Answer: (Answered in English, as required for IT topics.) A `feasibility study` decides whether a proposed software project is `worth doing` before any money is committed to it. It is carried out in the planning phase and ends in a recommendation: proceed, revise the scope, or abandon.
+
+    The seven steps
+    ```
+       1. INFORMATION ASSESSMENT
+            Understand the problem and the proposed system. What is
+            wrong with the present arrangement, what should the new
+            system do, who will use it, what are the constraints of
+            budget, time and law.
+
+       2. INFORMATION COLLECTION
+            Gather the facts - interviews with users and managers,
+            questionnaires, observation of the current process, study
+            of existing documents and reports, and a look at similar
+            systems elsewhere.
+
+       3. REPORT WRITING - the preliminary report
+            Write down the findings so far : the problem statement, the
+            objectives, the scope and the alternatives being considered.
+
+       4. GENERAL INFORMATION / PROPOSAL FORMULATION
+            Draw up two or three ALTERNATIVE solutions - build in-house,
+            buy a package, outsource, or upgrade the existing system.
+            Each alternative is described with its technology, cost and
+            timeline.
+
+       5. FEASIBILITY ANALYSIS
+            Test each alternative against the five kinds of feasibility :
+
+              TECHNICAL   - do we have the technology and the skills ?
+              ECONOMIC    - do the benefits exceed the costs ?
+                            (cost-benefit analysis, ROI, payback period)
+              OPERATIONAL - will the users actually accept and use it ?
+              SCHEDULE    - can it be delivered in the time available ?
+              LEGAL       - does it comply with law, licences and
+                            data-protection rules ?
+
+       6. EVALUATION AND COMPARISON
+            Score the alternatives against these criteria, weigh the
+            risks and choose the best option. Cost-benefit analysis is
+            the main tool here.
+
+       7. FINAL REPORT AND RECOMMENDATION
+            Produce the FEASIBILITY REPORT : findings, the chosen
+            alternative, its costs and benefits, the risks and their
+            mitigation, and a clear recommendation. Management then
+            decides :
+                 GO       - proceed to full development
+                 REVISE   - adjust scope, budget or timeline first
+                 NO GO    - abandon, and consider other options
+    ```
+
+    Flow
+    ```mermaid
+    flowchart TD
+        A[1. Information assessment] --> B[2. Information collection]
+        B --> C[3. Preliminary report]
+        C --> D[4. Formulate alternatives]
+        D --> E[5. Feasibility analysis]
+        E --> F[6. Evaluate and compare]
+        F --> G[7. Final report and decision]
+    ```
+
+    - Why it matters: the feasibility study is the cheapest point at which a bad project can be stopped. Cancelling at this stage costs a few weeks of analysis; discovering the same problem after deployment costs the entire project budget.
+    - Note that the number of steps varies between textbooks — some list five, some eight — because the reporting steps are sometimes merged. The `five kinds of feasibility` in step 5, however, are standard and are what examiners look for.
+
 22. **Explain software development life cycle (SDLC).** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
+
+    Answer: The `Software Development Life Cycle (SDLC)` is the structured process a software product follows from the first idea to final retirement. The work is divided into ordered phases, each with a defined input, output and review, so that cost, schedule and quality remain controllable.
+
+    Why it exists
+    ```
+       Cost of fixing an error, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       A defined life cycle catches errors at the CHEAP end. That is
+       its entire justification.
+    ```
+
+    The phases
+    ```mermaid
+    flowchart TD
+        A[1. Planning and feasibility] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Coding]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+    ```
+    ```
+       1. PLANNING AND FEASIBILITY
+            Scope, budget, schedule, team. Technical, economic,
+            operational, schedule and legal feasibility are tested. The
+            project can still be stopped here, cheaply.
+            Output : project plan , feasibility report.
+
+       2. REQUIREMENT ANALYSIS
+            Interviews, questionnaires, observation. FUNCTIONAL
+            requirements are separated from NON-FUNCTIONAL ones.
+            Output : SRS , signed off by the customer.
+
+       3. DESIGN
+            HIGH-LEVEL : architecture, modules, database schema.
+            LOW-LEVEL  : algorithms, interfaces, screens.
+            Output : design document , ER diagram , DFD , UML.
+
+       4. CODING
+            Modules written against the design, following coding
+            standards, under version control, with code review.
+            Output : source code , unit-tested modules.
+
+       5. TESTING
+            UNIT -> INTEGRATION -> SYSTEM -> ACCEPTANCE.
+            Acceptance testing is done by the CUSTOMER and is the
+            formal sign-off before release.
+
+       6. DEPLOYMENT
+            Install, migrate data, train users, go live. Release may be
+            DIRECT , PARALLEL , PILOT or PHASED.
+
+       7. MAINTENANCE
+            CORRECTIVE , ADAPTIVE , PERFECTIVE and PREVENTIVE changes.
+            60-80 per cent of total lifetime cost.
+    ```
+
+    The models — the same phases, arranged differently
+    ```
+       WATERFALL    each phase once, in strict order. Simple, heavily
+            documented, but requirements are frozen and feedback comes
+            far too late.
+
+       ITERATIVE / INCREMENTAL
+            the cycle is repeated per release, so working software is
+            delivered early and feedback shapes the next increment.
+
+       SPIRAL       each loop adds explicit RISK ANALYSIS and a
+            prototype. Used for large, costly, uncertain systems.
+
+       PROTOTYPE    a throwaway model is built first to pin down
+            unclear requirements, then the real system is built.
+
+       V-MODEL      each development phase is paired with its
+            corresponding TEST level, so testing is planned from the
+            start.
+
+       AGILE        the whole cycle is compressed into a 1-4 week
+            sprint and repeated continuously, with the customer
+            present throughout.
+    ```
+    - Which to choose depends on one question: `how well are the requirements known`. Fixed and published — Waterfall. Unclear or changing — Agile or Incremental. Large and risky — Spiral.
 
 23. **(b) What is SDLC? Define the activities of the design phase in SDLC.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 690 (ET: N/A)]*
 
+    Answer: What SDLC is
+    - `SDLC` — the `Software Development Life Cycle` — is the structured process a software product follows from the first idea to final retirement, divided into ordered phases so that cost, schedule and quality stay under control.
+    ```
+       Planning -> Requirement analysis -> DESIGN -> Coding -> Testing
+                -> Deployment -> Maintenance
+    ```
+
+    Activities of the design phase
+    - The design phase answers `how` the system will be built, using the `SRS` from the analysis phase as its input. It is split into two levels.
+
+    (a) High-level design — architectural design
+    ```
+       - choose the overall ARCHITECTURE : layered , client-server ,
+         MVC , microservices
+       - decompose the system into MODULES and fix what each one does
+       - define the INTERFACES between modules - what each module
+         exposes and what it needs
+       - design the DATABASE : entities, attributes, relationships,
+         normalisation, keys and indexes  -> ER DIAGRAM
+       - model the data flow                -> DFD
+       - choose the technology stack : language, framework, database,
+         platform
+       - decide how NON-FUNCTIONAL requirements are met - performance,
+         security, availability, backup
+    ```
+
+    (b) Low-level design — detailed design
+    ```
+       - design the ALGORITHM and logic inside each module
+         (flowchart , pseudocode)
+       - choose the DATA STRUCTURES
+       - fix the exact function signatures and parameters
+       - design the SCREENS and reports - the user interface layout
+       - design INPUT VALIDATION and error handling
+       - specify file formats and report layouts
+    ```
+
+    Other activities that belong to the phase
+    ```
+       - design for TESTABILITY , and prepare the TEST PLAN so that
+         test design runs alongside the design itself (the V-model
+         makes this explicit)
+       - a DESIGN REVIEW or walkthrough with the team and the customer
+       - a TRACEABILITY MATRIX proving every SRS requirement is
+         covered by some design element
+       - produce the SDD - Software Design Document
+    ```
+
+    The principles the design must follow
+    ```
+       MODULARITY      break the system into independent pieces
+       ABSTRACTION     hide the detail behind an interface
+       HIGH COHESION   each module does ONE well-defined job
+       LOW COUPLING    modules depend on each other as little as
+                       possible, so a change stays local
+       INFORMATION HIDING  internal data is not exposed
+       REUSABILITY     design components that can be used again
+    ```
+    ```mermaid
+    flowchart TD
+        A[SRS from analysis] --> B[High-level design: architecture, modules, database]
+        B --> C[Low-level design: algorithms, interfaces, screens]
+        C --> D[Design review and SDD]
+        D --> E[Coding phase]
+    ```
+    - Outputs of the phase: the `Software Design Document (SDD)`, ER diagrams, DFDs, UML diagrams (class, sequence, use case), the database schema, interface specifications and the test plan.
+    - Why this phase carries such weight: a design error is `five times` costlier to fix than a requirement error and `ten times` costlier once it has been coded. `Low coupling and high cohesion`, decided here, are what determine how expensive the system will be to maintain for the rest of its life.
+
 24. **(ক) Software development এর Agile পদ্ধতির মূলনীতিগুলো লিখুন।** *[Software Assistant Programmer 13.10.2022 compact it 706 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The `Agile Manifesto` (2001) states four `values` and twelve `principles`. The principles are the working rules that follow from the values.
+
+    The four values
+    ```
+       Individuals and interactions  over  processes and tools
+       Working software              over  comprehensive documentation
+       Customer collaboration        over  contract negotiation
+       Responding to change          over  following a plan
+
+       The right-hand items still have value ; the left-hand ones have
+       MORE. Agile does not discard documentation, plans or contracts.
+    ```
+
+    The twelve principles
+    ```
+       1. Satisfy the customer through EARLY and CONTINUOUS DELIVERY of
+          valuable software.
+
+       2. WELCOME CHANGING REQUIREMENTS, even late in development.
+          Change is treated as a competitive advantage, not a failure
+          of planning.
+
+       3. DELIVER WORKING SOFTWARE FREQUENTLY - every couple of weeks
+          to a couple of months, preferring the shorter interval.
+
+       4. Business people and developers must WORK TOGETHER DAILY
+          throughout the project.
+
+       5. Build projects around MOTIVATED INDIVIDUALS. Give them the
+          environment and support they need, and TRUST them to get the
+          job done.
+
+       6. FACE-TO-FACE CONVERSATION is the most efficient way of
+          conveying information within a team.
+
+       7. WORKING SOFTWARE is the primary measure of progress - not
+          documents produced or phases completed.
+
+       8. Promote SUSTAINABLE DEVELOPMENT. The team should be able to
+          keep up the same pace indefinitely - no crunch, no burnout.
+
+       9. Continuous attention to TECHNICAL EXCELLENCE and good design
+          enhances agility. Poor code slows every future sprint.
+
+      10. SIMPLICITY - maximising the work NOT done - is essential.
+          Build what is needed now, not what might be needed later.
+
+      11. The best architectures, requirements and designs emerge from
+          SELF-ORGANISING TEAMS, not from a plan imposed from above.
+
+      12. At regular intervals the team REFLECTS on how to become more
+          effective, and ADJUSTS its behaviour accordingly - the
+          RETROSPECTIVE.
+    ```
+
+    How they work in practice
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint Planning]
+        B --> C[Sprint: 1-4 weeks]
+        C --> D[Working increment]
+        D --> E[Review + Retrospective]
+        E --> A
+    ```
+    ```
+       Principle 1 and 3  -> deliver an increment every sprint
+       Principle 2        -> re-prioritise the backlog each sprint
+       Principle 4 and 6  -> the daily stand-up , and a Product Owner
+                             sitting with the team
+       Principle 7        -> the sprint review demonstrates RUNNING
+                             SOFTWARE, not slides
+       Principle 12       -> the retrospective at the end of each sprint
+    ```
+    - The frameworks built on these principles: `Scrum` (sprints, Product Owner, Scrum Master, daily stand-up), `Kanban` (visualise the work, limit work in progress), `Extreme Programming` (pair programming, TDD, continuous integration) and `SAFe` for large organisations.
 
 25. **(খ) Software development এর Waterfall model এর অসুবিধাগুলো কী কী?** *[Software Assistant Programmer 13.10.2022 compact it 706 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Disadvantages of the Waterfall model
+
+    1. Requirements must be frozen at the start
+    - The model assumes the customer can state every requirement completely and correctly before any design begins. In practice users discover what they want only when they `see` something working.
+
+    2. No working software until very late
+    - The customer sees nothing until the testing phase, often months later. If the product is wrong, the whole effort is already spent.
+
+    3. Change is extremely expensive
+    ```
+       Cost of fixing an error, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       Waterfall finds requirement errors LATE - exactly where they
+       cost the most.
+    ```
+
+    4. No way back to an earlier phase
+    - Each phase must be finished and signed off before the next begins. There is no formal route back, so an error made in analysis is carried through the entire project.
+
+    5. Risk is discovered late
+    - Technical risks — an integration that will not work, a performance target that cannot be met — surface only during testing, when correction is most costly.
+
+    6. Testing happens only at the end
+    - Defects accumulate through the whole project and arrive together in one crushing batch, which makes the schedule at the end of a Waterfall project notoriously unreliable.
+
+    7. Poor for long projects
+    - The longer the project runs, the more the business changes underneath it. A two-year project can deliver exactly what the SRS said and still be useless on the day it goes live.
+
+    8. The customer is idle in the middle
+    - After signing the SRS the customer has no involvement until acceptance testing, so there is no chance to correct a misunderstanding.
+
+    9. Progress is measured by documents
+    - A project can look healthy — every document delivered on time — while the product itself is in trouble.
+
+    10. Not suited to unclear or research-type work
+    - If the requirements cannot be known in advance, the model's first phase cannot even be completed.
+
+    Where Waterfall is still correct
+    ```
+       requirements FIXED and published - a payroll system implementing
+            a gazetted pay scale
+       a TENDER demanding a full specification and a firm price
+       SAFETY-CRITICAL systems needing formal review at every stage
+       SMALL, SHORT projects where iteration costs more than it saves
+    ```
+    - The models that answer these weaknesses: `Incremental` and `Agile` deliver working software early so feedback arrives while it is still cheap; `Spiral` adds explicit risk analysis to each loop; and the `V-model` pairs each development phase with its test level, so testing is planned from the very beginning rather than left to the end.
+
 26. **(খ) System/Model Prototype বলতে কী বুঝায়? Product ও Process এর মধ্যে সম্পর্ক কী?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What a prototype is
+    - A `prototype` is a working but incomplete model of a system, built quickly so users can `see and use` it before the real system is developed. Its purpose is to settle unclear requirements — users can rarely describe what they want, but they can always react to something in front of them.
+    ```mermaid
+    flowchart LR
+        A[Gather rough requirements] --> B[Build a quick prototype]
+        B --> C[Customer evaluates it]
+        C --> D{Satisfied?}
+        D -->|No| E[Refine requirements] --> B
+        D -->|Yes| F[Build the real system]
+    ```
+    ```
+       The cycle : build -> show -> get feedback -> refine -> repeat
+       until the requirements are clear, THEN build the real product.
+    ```
+
+    Types of prototype
+    ```
+       THROWAWAY (rapid) prototype
+            Built only to clarify requirements, then DISCARDED. The
+            real system is built properly from scratch.
+
+       EVOLUTIONARY prototype
+            Refined again and again until it BECOMES the final product.
+
+       INCREMENTAL prototype
+            Separate prototypes for separate modules, later combined.
+
+       EXTREME prototype - for web work : a static UI first, then the
+            services behind it, then the real logic.
+    ```
+    - Advantages: misunderstandings are caught `early`, the user is involved from the start, and missing requirements are discovered before coding begins.
+    - Disadvantages: users may mistake the prototype for a finished product; the quick-and-dirty code invites poor structure if it is kept; and the cycle can run on indefinitely if nobody stops it.
+
+    The relation between product and process
+    ```
+       PROCESS  =  HOW the software is built - the set of activities,
+                   their order and the standards followed.
+                   SDLC , Waterfall , Agile , Scrum , code review ,
+                   testing procedure.
+
+       PRODUCT  =  WHAT is produced - the software itself, together
+                   with its SRS, design documents, source code, test
+                   reports and user manual.
+    ```
+    ```
+       PROCESS  ------ produces ------>  PRODUCT
+          ^                                 |
+          |                                 |
+          +------- feedback improves -------+
+            (defect data, review findings,
+             retrospectives)
+    ```
+
+    The relationship, stated plainly
+    ```
+       1. PRODUCT QUALITY DEPENDS ON PROCESS QUALITY.
+            A disciplined process - reviews, standards, testing -
+            produces a better product. A chaotic process produces a
+            defective one, however skilled the individuals are.
+
+       2. THE PRODUCT MEASURES THE PROCESS.
+            Defect density, rework and delivery delay are the evidence
+            used to judge whether the process is working.
+
+       3. FEEDBACK RUNS BOTH WAYS.
+            Defects found in the product lead to process improvement -
+            this is exactly what an Agile RETROSPECTIVE does.
+
+       4. THE PROCESS MUST SUIT THE PRODUCT.
+            A safety-critical product needs a heavy, formal process ;
+            a small web application does not. Using the wrong process
+            for the product damages both.
+    ```
+    - This is the idea behind `CMM` and `CMMI`, which rate an organisation's process maturity from level 1 (chaotic) to level 5 (continuously improving), on the premise that `a mature process yields a predictable product`. The important qualification: a good process makes a good product `likely`, not certain — a disciplined team building the wrong thing still fails.
 
 27. **What is full meaning of SDLC?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
+    Answer: `SDLC` stands for `Software Development Life Cycle`.
+    - It is the structured process a software product follows from the first idea to final retirement, divided into ordered phases so that cost, schedule and quality stay under control.
+    ```
+       The phases :
+
+         1. Planning and feasibility study
+         2. Requirement analysis
+         3. Design
+         4. Implementation (coding)
+         5. Testing
+         6. Deployment
+         7. Maintenance
+    ```
+    - Some books also expand the abbreviation as `System Development Life Cycle`, which is the same idea applied to a whole information system rather than to software alone.
+
 28. **Difference between Waterfall Model and Spiral Model.** *[BDCCL Assistant Engineer (Network) 2022 compact it 741 (ET: N/A)]*
+
+    Answer: Difference between the Waterfall model and the Spiral model
+
+    | Point | Waterfall model | Spiral model |
+    |---|---|---|
+    | Approach | `Linear sequential` — each phase once | `Iterative` — the cycle repeats in loops |
+    | Risk handling | `None` explicitly | `Risk analysis in every loop` — its defining feature |
+    | Requirements | `Frozen` after analysis | Refined at each loop |
+    | Customer involvement | Start and end only | `After every loop`, at the review |
+    | Prototypes | Not used | `Built in each loop` to resolve risk |
+    | Cost | `Low` overhead | `High` — repeated analysis and prototyping |
+    | Suited to | Small projects, fixed requirements | `Large, costly, high-risk` projects |
+    | Documentation | Heavy and formal | Heavy, plus risk reports |
+    | Change | Very expensive | Absorbed in the next loop |
+    | Number of phases | Fixed | `Not fixed` — loops continue until done |
+    | Proposed by | Winston Royce, 1970 | Barry Boehm, 1986 |
+
+    Waterfall
+    ```mermaid
+    flowchart TD
+        A[Requirements] --> B[Design] --> C[Coding] --> D[Testing] --> E[Deployment] --> F[Maintenance]
+    ```
+    ```
+       One pass, top to bottom. No formal way back.
+    ```
+
+    Spiral — four quadrants per loop
+    ```
+       +---------------+------------------+
+       |  1. DETERMINE |  2. IDENTIFY AND |
+       |   OBJECTIVES  |   RESOLVE RISKS  |
+       |               |   (prototype)    |
+       +---------------+------------------+
+       |  4. PLAN the  |  3. DEVELOP AND  |
+       |  next loop    |     VERIFY       |
+       +---------------+------------------+
+
+       cost and progress increase OUTWARD with each loop :
+         loop 1 concept -> loop 2 requirements -> loop 3 design
+         -> loop 4 build and test
+    ```
+    ```mermaid
+    flowchart LR
+        A[Objectives] --> B[Risk analysis + prototype]
+        B --> C[Develop and verify]
+        C --> D[Plan next loop]
+        D --> A
+    ```
+
+    The essential difference
+    ```
+       WATERFALL is DOCUMENT-DRIVEN : the next phase begins when the
+            previous document is approved. Risk is not addressed at
+            all, so it appears in testing - the most expensive place.
+
+       SPIRAL is RISK-DRIVEN : what to do next is decided by asking
+            WHICH RISK IS LARGEST. A prototype or benchmark settles it
+            before real money is spent, and a doomed project can be
+            STOPPED at a loop review.
+    ```
+    - Where each is used: `Waterfall` for small projects with fixed, published requirements and a fixed-price contract. `Spiral` for large, long, expensive systems where the risk of failure is itself the main problem — defence, aerospace, core banking. Its cost makes it wrong for anything small.
 
 29. **What is the principles of agile method?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 757 (ET: N/A)]*
 
+    Answer: The `Agile Manifesto` (2001) lists twelve principles, which follow from its four values.
+
+    The twelve principles
+    ```
+       1. Satisfy the customer through EARLY and CONTINUOUS DELIVERY of
+          valuable software.
+
+       2. WELCOME CHANGING REQUIREMENTS, even late in development.
+          Change is a competitive advantage, not a planning failure.
+
+       3. DELIVER WORKING SOFTWARE FREQUENTLY - every couple of weeks
+          to a couple of months, preferring the shorter interval.
+
+       4. Business people and developers must WORK TOGETHER DAILY.
+
+       5. Build projects around MOTIVATED INDIVIDUALS. Give them the
+          environment and support they need, and TRUST them.
+
+       6. FACE-TO-FACE CONVERSATION is the most efficient way to convey
+          information within a team.
+
+       7. WORKING SOFTWARE is the primary measure of progress - not
+          documents written or phases completed.
+
+       8. Promote SUSTAINABLE DEVELOPMENT - a pace the team can keep up
+          indefinitely. No crunch, no burnout.
+
+       9. Continuous attention to TECHNICAL EXCELLENCE and good design
+          enhances agility. Poor code slows every future sprint.
+
+      10. SIMPLICITY - maximising the work NOT done - is essential.
+
+      11. The best architectures, requirements and designs emerge from
+          SELF-ORGANISING TEAMS.
+
+      12. At regular intervals the team REFLECTS on how to become more
+          effective and ADJUSTS accordingly - the RETROSPECTIVE.
+    ```
+
+    The four values they rest on
+    ```
+       Individuals and interactions  over  processes and tools
+       Working software              over  comprehensive documentation
+       Customer collaboration        over  contract negotiation
+       Responding to change          over  following a plan
+
+       The right-hand items still have value ; the left-hand ones have
+       MORE.
+    ```
+
+    How they appear in practice
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint Planning]
+        B --> C[Sprint: 1-4 weeks]
+        C --> D[Working increment]
+        D --> E[Review + Retrospective]
+        E --> A
+    ```
+    ```
+       Principles 1 and 3 -> an increment delivered every sprint
+       Principle  2       -> the backlog is re-prioritised each sprint
+       Principles 4 and 6 -> the daily stand-up ; a Product Owner
+                             sitting with the team
+       Principle  7       -> the sprint review demonstrates RUNNING
+                             SOFTWARE, not slides
+       Principle  9       -> TDD , code review , continuous integration
+       Principle 12       -> the retrospective at the end of each sprint
+    ```
+    - The frameworks that implement these principles are `Scrum`, `Kanban`, `Extreme Programming (XP)` and `SAFe`. Agile is the philosophy; those are the methods.
+
 30. **From the diagram write down the process of prototype development.** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 758 (ET: N/A)]*
+
+    Answer: The question refers to a diagram that was not captured with it, so the standard `prototype model` process is described. Any diagram of this model shows the same cycle.
+
+    The process
+    ```mermaid
+    flowchart TD
+        A[1. Requirement gathering - rough] --> B[2. Quick design]
+        B --> C[3. Build the prototype]
+        C --> D[4. Customer evaluation]
+        D --> E{Satisfied?}
+        E -->|No| F[5. Refine requirements] --> B
+        E -->|Yes| G[6. Engineer the real product]
+        G --> H[7. Test and deliver]
+        H --> I[8. Maintenance]
+    ```
+    ```
+       1. REQUIREMENT GATHERING - rough
+            The developer and the customer agree the broad objectives
+            and identify whatever requirements are already known. The
+            details are deliberately left open.
+
+       2. QUICK DESIGN
+            A fast, high-level design covering only what the user will
+            SEE - screens, inputs and outputs. Internal structure and
+            efficiency are ignored at this stage.
+
+       3. BUILD THE PROTOTYPE
+            A working but incomplete model is built rapidly, using
+            whatever tools are quickest. It need not be efficient or
+            well structured.
+
+       4. CUSTOMER EVALUATION
+            The customer and the users actually USE the prototype and
+            say what is wrong, missing or unnecessary. This is the
+            whole point of the model - people cannot describe what
+            they want, but they can react to what they see.
+
+       5. REFINE THE PROTOTYPE
+            The feedback is used to sharpen the requirements, and the
+            prototype is modified.
+            STEPS 2 to 5 REPEAT until the customer is satisfied.
+
+       6. ENGINEER THE PRODUCT
+            Once the requirements are clear, the REAL system is built
+            properly - full design, production-quality code, standards
+            and structure.
+
+       7. TEST AND DELIVER
+            Unit, integration, system and acceptance testing, then
+            deployment.
+
+       8. MAINTENANCE
+            Corrective, adaptive, perfective and preventive changes.
+    ```
+
+    Types of prototype
+    ```
+       THROWAWAY (rapid) - built only to clarify requirements, then
+            DISCARDED. The real system is built from scratch.
+       EVOLUTIONARY - refined repeatedly until it BECOMES the product.
+       INCREMENTAL - separate prototypes per module, later combined.
+       EXTREME - for web work : static UI , then services , then logic.
+    ```
+
+    Advantages and disadvantages
+    ```
+       ADVANTAGES
+         misunderstandings are caught EARLY, when they are cheap
+         the user is involved from the beginning
+         missing requirements are found before coding starts
+         good where requirements are UNCLEAR or the customer cannot
+           express them
+
+       DISADVANTAGES
+         the customer may mistake the prototype for a finished product
+           and demand immediate delivery
+         quick-and-dirty code, if kept, gives a poorly structured
+           system
+         the refine-and-show cycle can run on indefinitely
+         the extra prototype work adds cost and time
+    ```
+    - When to use it: unclear requirements, a heavily interactive user interface, or a customer who has never used a system of this kind before. When not to: requirements already fixed and published, or a very small project where the prototype would cost as much as the product.
 
 31. **From the diagram write down the software evolution.** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 760 (ET: N/A)]*
 
+    Answer: The question refers to a diagram that was not captured with it, so the standard `software evolution` process is described. Any textbook diagram of software evolution shows the same cycle.
+
+    What software evolution is
+    - `Software evolution` is the continual process of developing a software product and then `changing it repeatedly` over its working life to keep it useful. A useful system is never finished — it must change or it becomes obsolete.
+
+    The process
+    ```mermaid
+    flowchart TD
+        A[Existing system] --> B[Change requests]
+        B --> C[Impact analysis]
+        C --> D[Release planning]
+        D --> E[System implementation]
+        E --> F[Release the new system]
+        F --> A
+    ```
+    ```
+       1. CHANGE REQUESTS
+            Requests arrive from users, from management, from changed
+            law, or from defects found in operation.
+
+       2. IMPACT ANALYSIS
+            For each request : what modules are affected, what will it
+            cost, what might it break. Requests that cost more than
+            they are worth are rejected here.
+
+       3. RELEASE PLANNING
+            The accepted requests are grouped into a release, and the
+            work is prioritised - fault repair, platform adaptation
+            and system enhancement are balanced against the budget.
+
+       4. SYSTEM IMPLEMENTATION
+            The changes are designed, coded, and REGRESSION TESTED to
+            prove nothing else has broken.
+
+       5. RELEASE
+            The new version is deployed, documentation updated, users
+            informed.
+
+       -> and the cycle BEGINS AGAIN with the next change requests.
+    ```
+
+    The types of change that drive evolution
+    ```
+       CORRECTIVE  fix defects found in use                (about 20 %)
+       ADAPTIVE    adjust to a new OS , database or law    (about 25 %)
+       PERFECTIVE  add features , improve performance      (about 50 %)
+       PREVENTIVE  restructure to avoid future trouble     (about  5 %)
+    ```
+    - Note that `perfective` change is the largest share. Most evolution is not bug-fixing but responding to new demands from a system that people actually use.
+
+    Lehman's laws — why evolution is unavoidable
+    ```
+       CONTINUING CHANGE
+            A program used in a real environment MUST change, or it
+            becomes progressively less useful.
+
+       INCREASING COMPLEXITY
+            As it changes, its structure DEGRADES - unless deliberate
+            work is done to maintain it.
+
+       CONSERVATION OF FAMILIARITY
+            The amount of change per release stays roughly constant,
+            because a team can only absorb so much at a time.
+    ```
+
+    The stages of a system's life
+    ```
+       DEVELOPMENT  -> the initial version is built
+       EVOLUTION    -> regular releases add and adapt ; the team still
+                       understands the system
+       SERVICING    -> only essential fixes are made ; understanding
+                       is fading, the structure has degraded
+       PHASE-OUT    -> no further change ; the system is run until it
+                       is replaced
+    ```
+    - What keeps a system in the `evolution` stage rather than sliding into `servicing`: `low coupling` and `high cohesion`, a maintained test suite, documentation kept in step with the code, and regular `refactoring`. When those are neglected, each change costs more than the last, and eventually `re-engineering` — rebuilding the system with the same function but a better structure — becomes cheaper than continuing to patch it.
+
 32. **(খ) SDLC diagram সহ বর্ণনা করুন। SDLC এর মেজর phases গুলি কী?** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What SDLC is
+    - `SDLC` — the `Software Development Life Cycle` — is the structured process a software product follows from the first idea to final retirement, divided into ordered phases so that cost, schedule and quality remain controllable.
+
+    Diagram
+    ```mermaid
+    flowchart TD
+        A[1. Planning and feasibility] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Coding]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+        G -.feedback.-> B
+    ```
+    ```
+       +--------------------------+
+       | 1. PLANNING / FEASIBILITY|  scope , budget , schedule
+       +--------------------------+
+                    |
+       +--------------------------+
+       | 2. REQUIREMENT ANALYSIS  |  -> SRS
+       +--------------------------+
+                    |
+       +--------------------------+
+       | 3. DESIGN                |  -> architecture , DB , screens
+       +--------------------------+
+                    |
+       +--------------------------+
+       | 4. CODING                |  -> source code
+       +--------------------------+
+                    |
+       +--------------------------+
+       | 5. TESTING               |  -> unit , integration , system ,
+       +--------------------------+     acceptance
+                    |
+       +--------------------------+
+       | 6. DEPLOYMENT            |  -> live system
+       +--------------------------+
+                    |
+       +--------------------------+
+       | 7. MAINTENANCE           |  -> corrective , adaptive ,
+       +--------------------------+     perfective , preventive
+    ```
+
+    The major phases
+    ```
+       1. PLANNING AND FEASIBILITY
+            Fix the scope, budget, schedule and team. Test technical,
+            economic, operational, schedule and legal feasibility. The
+            project can still be stopped here, cheaply.
+
+       2. REQUIREMENT ANALYSIS
+            Gather what users need through interviews, questionnaires
+            and observation. Separate FUNCTIONAL requirements from
+            NON-FUNCTIONAL ones (speed, security, availability).
+            Output : SRS , signed off by the customer.
+
+       3. DESIGN
+            HIGH-LEVEL : architecture, modules, database schema.
+            LOW-LEVEL  : algorithms, interfaces, screen layouts.
+            Output : SDD , ER diagram , DFD , UML.
+
+       4. CODING
+            The design is turned into source code, module by module,
+            following coding standards and under version control.
+
+       5. TESTING
+            UNIT -> INTEGRATION -> SYSTEM -> ACCEPTANCE.
+            Acceptance testing is done by the CUSTOMER, and is the
+            formal sign-off before release.
+
+       6. DEPLOYMENT
+            Install in the live environment, migrate data, train users,
+            go live. Release may be DIRECT , PARALLEL , PILOT or
+            PHASED.
+
+       7. MAINTENANCE
+            CORRECTIVE , ADAPTIVE , PERFECTIVE and PREVENTIVE change.
+            Consumes 60-80 per cent of total lifetime cost.
+    ```
+    - Why the order matters: the cost of correcting an error rises steeply with the phase in which it is found — `1` in requirements, `10` in coding, `100 or more` after release. The whole point of a defined life cycle is to catch errors at the cheap end.
 
 33. **(ii) Software development এর Agile Method সম্পর্কে আলোচনা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 784 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) What the Agile method is
+    - `Agile` is an approach in which software is built in short, repeated cycles called `sprints`, each producing `working software`, with the customer involved throughout. It was set out in the `Agile Manifesto` of 2001. It is a philosophy rather than a single method.
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint Planning]
+        B --> C[Sprint: 1-4 weeks]
+        C --> D[Working increment]
+        D --> E[Review + Retrospective]
+        E --> A
+    ```
+    ```
+       Every sprint contains ANALYSIS, DESIGN, CODING and TESTING - a
+       complete mini life cycle, for a small slice of the product.
+       That single structural change is what separates Agile from
+       Waterfall.
+    ```
+
+    Its four values
+    ```
+       Individuals and interactions  over  processes and tools
+       Working software              over  comprehensive documentation
+       Customer collaboration        over  contract negotiation
+       Responding to change          over  following a plan
+
+       The right-hand items still have value ; the left-hand ones have
+       MORE. Agile does not discard documentation or planning.
+    ```
+
+    How a sprint runs — Scrum, the commonest framework
+    ```
+       ROLES
+         PRODUCT OWNER  - owns and prioritises the backlog ; represents
+              the customer
+         SCRUM MASTER   - removes obstacles and protects the process ;
+              not a manager
+         DEVELOPMENT TEAM - 5 to 9 people, cross-functional and
+              self-organising
+
+       EVENTS
+         SPRINT PLANNING   - choose what to build this sprint
+         DAILY STAND-UP    - 15 minutes : done , doing , blocked
+         SPRINT REVIEW     - demonstrate WORKING SOFTWARE to the
+                             customer
+         RETROSPECTIVE     - how do we work better next sprint
+
+       ARTEFACTS
+         PRODUCT BACKLOG , SPRINT BACKLOG , the INCREMENT
+         BURNDOWN CHART - work remaining against days left
+    ```
+
+    Advantages
+    - `Working software every 1–4 weeks`, so business value arrives early.
+    - `Change is welcomed` — the backlog is re-prioritised each sprint.
+    - `Defects are found early`, where they are cheap: an error costs 1 unit in requirements and over 100 after release.
+    - `Risk surfaces early`, at each sprint review.
+    - `High customer satisfaction`, because the customer steers the product continuously.
+
+    Disadvantages
+    - `Light documentation` hurts when the team changes or the system must be maintained years later.
+    - `Cost and scope cannot be fixed in advance`, which is a genuine problem for fixed-price government tenders.
+    - `Scope creep` if the Product Owner is not disciplined.
+    - Requires a `continuously available customer` and a `skilled, co-located team` — conditions many organisations cannot meet.
+
+    - The frameworks built on Agile: `Scrum`, `Kanban` (visualise the work, limit work in progress), `Extreme Programming` (pair programming, TDD, continuous integration) and `SAFe` for large organisations. Large institutions typically run a `hybrid` — Waterfall planning and contract up front, Agile sprints for the build.
+
 34. **(a) What is Agile? Mentionits four values.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
+
+    Answer: What Agile is
+    - `Agile` is an approach to software development in which the product is built in short, repeated cycles called `sprints`, each producing `working software`, with the customer involved throughout. It was defined in the `Agile Manifesto` of 2001 by 17 practitioners. It is a philosophy, not a single method.
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint: 1-4 weeks]
+        B --> C[Working increment]
+        C --> D[Review + Retrospective]
+        D --> A
+    ```
+    ```
+       Every sprint contains ANALYSIS, DESIGN, CODING and TESTING for a
+       small slice of the product - a complete mini life cycle.
+    ```
+
+    Its four values
+    ```
+       1. INDIVIDUALS AND INTERACTIONS  over  processes and tools
+            A motivated team that talks to each other beats a rigid
+            process. A five-minute conversation settles what a week of
+            emails will not.
+
+       2. WORKING SOFTWARE  over  comprehensive documentation
+            Progress is measured by software that RUNS, not by the
+            number of documents produced. Document what is genuinely
+            needed, no more.
+
+       3. CUSTOMER COLLABORATION  over  contract negotiation
+            Work WITH the customer continuously rather than arguing
+            about what the signed contract says. A Product Owner sits
+            with the team.
+
+       4. RESPONDING TO CHANGE  over  following a plan
+            A changed requirement is useful information, not a failure
+            of planning. The backlog is re-prioritised every sprint.
+    ```
+    ```
+       THE QUALIFICATION THAT IS OFTEN MISSED :
+
+       "While there is value in the items on the RIGHT, we value the
+        items on the LEFT MORE."
+
+       Agile does NOT say documentation, tools, contracts or plans are
+       worthless. It says that when the two conflict, the left-hand
+       item wins.
+    ```
+
+    - The twelve principles that follow from these values include: satisfy the customer through `early and continuous delivery`; `welcome changing requirements` even late; deliver `frequently`; business and developers work together `daily`; `working software` is the primary measure of progress; maintain a `sustainable pace`; and the team `reflects and adjusts` at regular intervals.
+    - The frameworks that implement Agile: `Scrum` (sprints, Product Owner, Scrum Master, daily stand-up), `Kanban` (visualise the work, limit work in progress), `Extreme Programming` (pair programming, TDD, continuous integration) and `SAFe` for large organisations.
 
 35. **What is SDLC? List the stages involed in the SDLC process. Which stages ensures the user acceptance of the system?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 811 (ET: IBA)]*
 
+    Answer: What SDLC is
+    - `SDLC` stands for `Software Development Life Cycle`. It is the structured process a software product goes through from the first idea to final retirement, divided into ordered phases so that cost, schedule and quality remain controllable.
+
+    The stages
+    ```mermaid
+    flowchart TD
+        A[1. Planning and feasibility] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Coding]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+    ```
+    ```
+       1. PLANNING AND FEASIBILITY
+            Scope, budget, schedule, team. Technical, economic,
+            operational, schedule and legal feasibility are tested.
+
+       2. REQUIREMENT ANALYSIS
+            Interviews, questionnaires, observation. Functional and
+            non-functional requirements are separated.
+            Output : SRS , signed off by the customer.
+
+       3. DESIGN
+            High-level : architecture, modules, database schema.
+            Low-level  : algorithms, interfaces, screens.
+
+       4. CODING
+            The design is turned into source code, module by module.
+
+       5. TESTING
+            Unit -> integration -> system -> ACCEPTANCE.
+
+       6. DEPLOYMENT
+            Install, migrate data, train users, go live.
+
+       7. MAINTENANCE
+            Corrective, adaptive, perfective and preventive change.
+    ```
+
+    Which stage ensures user acceptance of the system?
+    ```
+       THE TESTING STAGE - specifically USER ACCEPTANCE TESTING (UAT),
+       the LAST level of testing before deployment.
+    ```
+    - Why UAT and not an earlier level:
+    ```
+       UNIT , INTEGRATION and SYSTEM testing are run by DEVELOPERS and
+       the QA team. They prove the software works AS BUILT - that it
+       matches the specification.
+
+       UAT is run by the ACTUAL USERS, in a realistic environment,
+       with real business data. It proves the software does what the
+       BUSINESS NEEDS. It is the customer's formal SIGN-OFF, and it is
+       what authorises deployment.
+    ```
+    ```
+       The four levels of testing, in order :
+
+         UNIT         each module           by developers
+         INTEGRATION  modules together      by developers
+         SYSTEM       whole product vs SRS  by the QA team
+         ACCEPTANCE   business fitness      by the CUSTOMER  <- sign-off
+    ```
+    - Two forms of acceptance testing: `alpha testing`, done by users at the developer's site, and `beta testing`, done by real users in their own environment before general release.
+    - One qualification worth adding: acceptance is `confirmed` at UAT, but it is `determined` much earlier. The acceptance criteria come straight from the `SRS` agreed during requirement analysis. If the SRS captured the wrong requirements, UAT will fail no matter how good the code is — which is why the analysis phase, not the testing phase, is where user acceptance is really won or lost.
+
 36. **(ii) Software development এর ধাপসমূহ সংক্ষেপে বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 960 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The steps of software development — the `SDLC`.
+    ```mermaid
+    flowchart TD
+        A[1. Planning and feasibility] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Coding]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+    ```
+
+    1. Planning and feasibility study
+    - Fix the scope, budget, schedule and team. Check `technical`, `economic`, `operational`, `schedule` and `legal` feasibility. A doomed project can still be stopped here, cheaply.
+    - Output: project plan, feasibility report.
+
+    2. Requirement analysis
+    - Gather what users actually need — interviews, questionnaires, observation, study of existing documents. Separate `functional` requirements (what it must do) from `non-functional` ones (speed, security, availability).
+    - Output: `SRS`, signed off by the customer.
+
+    3. Design
+    - Decide `how` it will be built. `High-level design` fixes the architecture, modules and database schema; `low-level design` fixes algorithms, interfaces and screens.
+    - Output: design document, ER diagram, DFD, UML diagrams.
+
+    4. Coding — implementation
+    - Write the code module by module against the design, following coding standards, under version control, with code review.
+    - Output: source code, unit-tested modules.
+
+    5. Testing
+    ```
+       UNIT         each module alone         by developers
+       INTEGRATION  modules working together  by developers
+       SYSTEM       whole product vs the SRS  by the QA team
+       ACCEPTANCE   business fitness          by the CUSTOMER
+    ```
+    - Output: test reports and a stable build.
+
+    6. Deployment
+    - Install in the live environment, migrate the data, train the users and go live. The release may be `direct`, `parallel`, `pilot` or `phased`.
+    - Output: the running system.
+
+    7. Maintenance
+    ```
+       CORRECTIVE  fix defects found in use
+       ADAPTIVE    adjust to a new OS , database or law
+       PERFECTIVE  add features , improve performance
+       PREVENTIVE  restructure to avoid future trouble
+    ```
+    - Maintenance takes `60 to 80 per cent` of the total lifetime cost.
+
+    - Why the sequence matters: the cost of fixing an error rises steeply with the phase in which it is found — `1` in requirements, `10` in coding, `100 or more` after release. Catching problems early is the whole purpose of a defined life cycle.
 
 37. **What is Agile Methodology? Difference between Agile Model and Waterfall Model.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1003-1004 (ET: DU)]*
 
+    Answer: What Agile methodology is
+    - `Agile` is an approach in which software is built in short, repeated cycles called `sprints`, each producing `working software`, with the customer involved throughout. It was set out in the `Agile Manifesto` of 2001.
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint: 1-4 weeks]
+        B --> C[Working increment]
+        C --> D[Review + Retrospective]
+        D --> A
+    ```
+    ```
+       Every sprint contains ANALYSIS, DESIGN, CODING and TESTING for
+       a small slice of the product - a complete mini life cycle.
+
+       The four values :
+         Individuals and interactions over processes and tools
+         Working software            over comprehensive documentation
+         Customer collaboration      over contract negotiation
+         Responding to change        over following a plan
+    ```
+
+    Difference between the Agile model and the Waterfall model
+
+    | Point | Waterfall | Agile |
+    |---|---|---|
+    | Approach | `Sequential` — one phase after another | `Iterative` and incremental |
+    | Requirements | `Frozen` after analysis | A `living backlog`, re-prioritised each sprint |
+    | Delivery | `Once`, at the very end | Working software every `1–4 weeks` |
+    | Customer involvement | Start and end only | `Continuous` — a Product Owner in the team |
+    | Testing | One phase `at the end` | `Inside every sprint` |
+    | Cost of change | `Very high` | `Low` |
+    | Documentation | Heavy and formal | Light — "just enough" |
+    | Team | Specialised, hierarchical | `Cross-functional`, self-organising |
+    | Risk discovery | `Late`, in testing | `Early`, at each review |
+    | Progress measured by | Documents and phases completed | `Working software` |
+    | Best for | Fixed, well-understood requirements | Unclear or changing requirements |
+
+    The structural difference
+    ```mermaid
+    flowchart LR
+        subgraph Waterfall
+        A[Requirements] --> B[Design] --> C[Code] --> D[Test] --> E[Deploy]
+        end
+        subgraph Agile
+        F[Backlog] --> G[Sprint] --> H[Increment] --> I[Review] --> F
+        end
+    ```
+    ```
+       WATERFALL does each phase ONCE, for the WHOLE product.
+       AGILE does ALL the phases EVERY SPRINT, for a SMALL SLICE.
+
+       Every other difference between the two follows from that.
+    ```
+
+    Why it matters
+    ```
+       Cost of fixing an error, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       Waterfall tests ONCE, at the end - the expensive point.
+       Agile tests CONTINUOUSLY, so errors are caught while cheap.
+    ```
+    - Where each wins: `Waterfall` for fixed, published requirements, fixed-price tenders and safety-critical systems; `Agile` where requirements are unclear or changing, the customer can stay involved, and early delivery matters. Most large organisations run a `hybrid` — Waterfall planning and contract up front, Agile sprints for the build.
+
 38. **What is SDLC? Write down the step of SDLC.** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*
+
+    Answer: What SDLC is
+    - `SDLC` stands for `Software Development Life Cycle`. It is the structured process a software product follows from the first idea to final retirement, divided into ordered phases so that cost, schedule and quality remain controllable.
+
+    The steps
+    ```mermaid
+    flowchart TD
+        A[1. Planning and feasibility] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Coding]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+    ```
+    ```
+       1. PLANNING AND FEASIBILITY
+            Fix the scope, budget, schedule and team. Test technical,
+            economic, operational, schedule and legal feasibility.
+            Output : project plan , feasibility report.
+
+       2. REQUIREMENT ANALYSIS
+            Gather user needs through interviews, questionnaires and
+            observation. Separate FUNCTIONAL requirements from
+            NON-FUNCTIONAL ones - speed, security, availability.
+            Output : SRS , signed off by the customer.
+
+       3. DESIGN
+            HIGH-LEVEL : architecture, modules, database schema.
+            LOW-LEVEL  : algorithms, interfaces, screen layouts.
+            Output : SDD , ER diagram , DFD , UML diagrams.
+
+       4. CODING (IMPLEMENTATION)
+            The design is turned into source code, module by module,
+            following coding standards, under version control.
+            Output : source code , unit-tested modules.
+
+       5. TESTING
+            UNIT -> INTEGRATION -> SYSTEM -> ACCEPTANCE.
+            Acceptance testing is done by the CUSTOMER and is the
+            formal sign-off before release.
+            Output : test reports , a stable build.
+
+       6. DEPLOYMENT
+            Install in the live environment, migrate the data, train
+            the users, go live. Release may be DIRECT , PARALLEL ,
+            PILOT or PHASED.
+            Output : the running system.
+
+       7. MAINTENANCE
+            CORRECTIVE (fix defects) , ADAPTIVE (new OS or law) ,
+            PERFECTIVE (new features) , PREVENTIVE (restructure).
+            Takes 60-80 per cent of total lifetime cost.
+    ```
+    - The models that arrange these steps differently: `Waterfall` runs them once in strict order; `Incremental` repeats them per release; `Spiral` adds explicit risk analysis to each loop; `V-model` pairs each development phase with its test level; and `Agile` compresses the whole cycle into a 1–4 week sprint repeated continuously.
+    - Why the order matters: an error costs about `1` unit to fix in requirements, `10` in coding and `100 or more` after release. Catching problems early is the entire purpose of a defined life cycle.
 
 39. **(ক) Software Development Life Cycle (SDLC) এর বিভিন্ন ধাপগুলো উল্লেখ করুন ও সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1086 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) The phases of the `Software Development Life Cycle (SDLC)`.
+    ```mermaid
+    flowchart TD
+        A[1. Planning and feasibility] --> B[2. Requirement analysis]
+        B --> C[3. Design]
+        C --> D[4. Coding]
+        D --> E[5. Testing]
+        E --> F[6. Deployment]
+        F --> G[7. Maintenance]
+    ```
+
+    1. Planning and feasibility study
+    - Fix the scope, budget, schedule and team, and decide whether the project is worth doing at all. Five kinds of feasibility are tested: `technical`, `economic`, `operational`, `schedule` and `legal`.
+    - Output: project plan, feasibility report.
+
+    2. Requirement analysis
+    - Find out what the users actually need, through interviews, questionnaires, observation and study of existing documents. `Functional` requirements say what the system must do; `non-functional` ones cover speed, security and availability.
+    - Output: the `SRS`, signed off by the customer.
+
+    3. Design
+    - Decide how the system will be built. `High-level design` fixes the architecture, the modules and the database schema; `low-level design` fixes each module's algorithms, interfaces and screens.
+    - Output: SDD, ER diagram, DFD, UML diagrams.
+
+    4. Coding — implementation
+    - Programmers turn the design into source code, module by module, following the coding standards, under version control, with code review. Each module is unit tested by its own developer.
+    - Output: source code.
+
+    5. Testing
+    ```
+       UNIT         each module alone         by developers
+       INTEGRATION  modules working together  by developers
+       SYSTEM       whole product vs the SRS  by the QA team
+       ACCEPTANCE   business fitness          by the CUSTOMER
+    ```
+    - Output: test reports and a stable build.
+
+    6. Deployment
+    - Install in the customer's environment, migrate the data, train the users and go live. The release may be `direct`, `parallel` (old and new run together), `pilot` (one branch first) or `phased`.
+    - Output: the running system.
+
+    7. Maintenance
+    ```
+       CORRECTIVE  fix defects found in use               (about 20 %)
+       ADAPTIVE    adjust to a new OS , database or law   (about 25 %)
+       PERFECTIVE  add features , improve performance     (about 50 %)
+       PREVENTIVE  restructure to avoid future trouble    (about  5 %)
+    ```
+    - Maintenance consumes `60 to 80 per cent` of the total lifetime cost — more than all six earlier phases combined.
+
+    - Why the sequence matters: the cost of correcting an error rises steeply with the phase in which it is found — about `1` unit in requirements, `10` in coding and `100 or more` after release. Catching problems early is the whole purpose of a defined life cycle.
+
 40. **(খ) Software Development এর ক্ষেত্রে Agile মডেল সম্পর্কে লিখুন। অন্যান্য মডেলের তুলনায় এ মডেলের সুবিধা কি?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1086 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The Agile model
+    - `Agile` is an approach in which software is built in short, repeated cycles called `sprints`, each producing `working software`, with the customer involved throughout. It was defined in the `Agile Manifesto` of 2001.
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint Planning]
+        B --> C[Sprint: 1-4 weeks]
+        C --> D[Working increment]
+        D --> E[Review + Retrospective]
+        E --> A
+    ```
+    ```
+       Every sprint contains ANALYSIS, DESIGN, CODING and TESTING for
+       a small slice of the product - a complete mini life cycle.
+
+       THE FOUR VALUES
+         Individuals and interactions over processes and tools
+         Working software            over comprehensive documentation
+         Customer collaboration      over contract negotiation
+         Responding to change        over following a plan
+    ```
+    ```
+       SCRUM, the commonest framework :
+
+         ROLES     Product Owner , Scrum Master , Development Team
+         EVENTS    Sprint Planning , Daily Stand-up , Sprint Review ,
+                   Retrospective
+         ARTEFACTS Product Backlog , Sprint Backlog , the Increment
+    ```
+
+    Advantages over the other models
+
+    1. Working software arrives early
+    - Waterfall, Spiral and the V-model all deliver a usable product only near the end. Agile delivers one every `1 to 4 weeks`, so business value starts immediately.
+
+    2. Change is welcomed rather than resisted
+    - Waterfall freezes requirements after analysis, so a change means a costly formal amendment. Agile re-prioritises the backlog every sprint, and one of its four values is exactly "responding to change over following a plan".
+
+    3. Defects are caught while they are cheap
+    ```
+       Cost of fixing an error, by the phase where it is FOUND :
+
+         Requirements   1        Testing        50
+         Design         5        After release  100+
+         Coding        10
+
+       Waterfall tests ONCE, at the end. Agile tests EVERY SPRINT.
+    ```
+
+    4. Risk is exposed early
+    - A sprint review every few weeks reveals technical and business risk. Spiral also handles risk, but at far higher cost — it needs repeated formal risk analysis and prototyping.
+
+    5. The customer steers the product
+    - A Product Owner sits with the team, so the product matches what the business needs rather than what the SRS happened to say months earlier.
+
+    6. Real progress is visible
+    - Progress is measured by `working software`, not by documents delivered. A Waterfall project can look healthy on paper while the product is in trouble.
+
+    7. The team improves itself
+    - The `retrospective` at the end of every sprint changes how the team works — no other classical model has a built-in improvement loop.
+
+    - The fair qualification: Agile's advantages come with costs — light documentation, scope that cannot be fixed in advance, and a need for a continuously available customer and a skilled team. For a fixed-price government tender or a safety-critical system, `Waterfall` remains the better model, and large organisations commonly use a `hybrid` of the two.
 
 41. **What is the SCRUM method in software development?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1116 (ET: BUET)]*
 
+    Answer: What Scrum is
+    - `Scrum` is the most widely used `Agile` framework. Work is done in fixed-length cycles called `sprints`, usually 2 to 4 weeks long, each one producing a `potentially shippable increment` of working software.
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint Planning]
+        B --> C[Sprint Backlog]
+        C --> D[Sprint: 2-4 weeks<br/>daily stand-up]
+        D --> E[Increment]
+        E --> F[Sprint Review]
+        F --> G[Retrospective]
+        G --> A
+    ```
+
+    The three roles
+    ```
+       PRODUCT OWNER
+            Owns the PRODUCT BACKLOG and decides its priority.
+            Represents the customer and the business. Says WHAT is
+            built and in what order - never HOW.
+
+       SCRUM MASTER
+            Protects the process and REMOVES OBSTACLES for the team.
+            A facilitator and coach, NOT a manager - the team is
+            self-organising and does not report to the Scrum Master.
+
+       DEVELOPMENT TEAM
+            5 to 9 people, CROSS-FUNCTIONAL (developers, testers,
+            designers) and SELF-ORGANISING. The team decides HOW the
+            work is done and how much it can take on.
+    ```
+
+    The five events
+    ```
+       SPRINT             the fixed-length cycle itself, 2-4 weeks.
+                          Its length never changes mid-project.
+
+       SPRINT PLANNING    the team pulls the highest-priority items
+                          from the product backlog into the SPRINT
+                          BACKLOG and agrees a sprint goal.
+
+       DAILY SCRUM        15 minutes, standing, same time every day :
+                          what I did , what I will do , what is
+                          blocking me. It is a SYNCHRONISATION
+                          meeting, not a status report to a manager.
+
+       SPRINT REVIEW      the team DEMONSTRATES WORKING SOFTWARE to
+                          the Product Owner and stakeholders, who give
+                          feedback that reshapes the backlog.
+
+       SPRINT RETROSPECTIVE
+                          the team examines HOW IT WORKED and agrees
+                          one or two concrete improvements for the
+                          next sprint.
+    ```
+
+    The three artefacts
+    ```
+       PRODUCT BACKLOG  - the prioritised list of everything wanted,
+                          written as USER STORIES :
+                          "As a customer, I want to reset my password
+                           so that I can log in again."
+       SPRINT BACKLOG   - the items chosen for the current sprint,
+                          broken into tasks.
+       INCREMENT        - the working software produced this sprint,
+                          meeting the DEFINITION OF DONE.
+    ```
+
+    Tracking
+    ```
+       BURNDOWN CHART - work remaining against days left in the sprint
+
+         work
+         left |\
+              | \___
+              |     \___          ideal line vs actual line ; if the
+              |         \___      actual stays above the ideal, the
+              +--------------->   sprint is in trouble
+                      days
+       VELOCITY - story points completed per sprint, used to forecast
+                  how much the team can take on next time.
+    ```
+
+    - The rules that make Scrum work, and that are most often broken in practice: the `sprint scope is not changed` once the sprint has begun; the sprint `length is fixed`; the increment must meet an agreed `Definition of Done`; and the Scrum Master is a facilitator, `not a project manager`. A team that adds work mid-sprint or reports status upward at the stand-up is not running Scrum, whatever it calls itself.
+
 42. **Show the structure model in software engineering. Phase of water fall life cycle.** *[Probashi Kallyan Bank Programmer 2019 compact it 1157 (ET: AUST)]*
+
+    Answer: Structured model in software engineering
+    - `Structured analysis and design` is the classical top-down approach: the system is broken into smaller and smaller functional modules until each one is simple enough to code. It is `process-oriented` — it asks what the system `does`, not what objects it is made of.
+    ```
+       TOP-DOWN DECOMPOSITION - the STRUCTURE CHART
+
+                      +---------------------+
+                      |   Payroll System    |
+                      +---------------------+
+                         /       |        \
+                +--------+  +---------+  +----------+
+                | Input  |  | Process |  |  Output  |
+                | data   |  | salary  |  |  report  |
+                +--------+  +---------+  +----------+
+                     |          /   \          |
+                +--------+ +------+ +------+ +--------+
+                |Validate| |Basic | |Deduct| | Print  |
+                +--------+ +------+ +------+ +--------+
+
+       Each box is a MODULE. An arrow shows a CALL, and the data
+       passed between modules is labelled on it.
+    ```
+    - Its tools:
+    ```
+       DFD - Data Flow Diagram : how data moves between processes,
+             data stores and external entities. Levelled 0, 1, 2 ...
+       ER DIAGRAM : the data model - entities and relationships.
+       STRUCTURE CHART : the module hierarchy shown above.
+       DATA DICTIONARY : the definition of every data item.
+       DECISION TABLE and DECISION TREE : complex business rules.
+    ```
+    - The design goal is `high cohesion` (each module does one well-defined job) and `low coupling` (modules depend on each other as little as possible), because those two properties decide how expensive the system will be to change later.
+
+    Phases of the Waterfall life cycle
+    ```mermaid
+    flowchart TD
+        A[1. Requirement gathering and analysis] --> B[2. System design]
+        B --> C[3. Implementation / coding]
+        C --> D[4. Integration and testing]
+        D --> E[5. Deployment]
+        E --> F[6. Maintenance]
+    ```
+    ```
+       1. REQUIREMENT GATHERING AND ANALYSIS
+            All requirements are collected and recorded. The SRS is
+            produced, signed off, and then FROZEN.
+
+       2. SYSTEM DESIGN
+            High-level : architecture, modules, database schema.
+            Low-level  : algorithms, interfaces, screens.
+
+       3. IMPLEMENTATION (CODING)
+            The design is turned into code, module by module. Each
+            module is unit tested by its developer.
+
+       4. INTEGRATION AND TESTING
+            Modules are combined and the whole system is tested
+            against the SRS - integration, system, then acceptance
+            testing by the customer.
+
+       5. DEPLOYMENT
+            Installed at the customer's site, data migrated, users
+            trained, system goes live.
+
+       6. MAINTENANCE
+            Corrective, adaptive, perfective and preventive change.
+    ```
+    - The two fit together naturally: `structured analysis and design` is the technique used inside the requirement and design phases of a `Waterfall` project. Both are top-down and document-driven, which is why they were developed in the same era and are usually taught together. The modern alternative is `object-oriented analysis and design` with `UML`, which models the system as interacting objects rather than as a hierarchy of functions.
 
 43. **Write the agile method components for Software development.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
 
+    Answer: The components of the Agile method for software development.
+
+    1. The four values — the foundation
+    ```
+       Individuals and interactions  over  processes and tools
+       Working software              over  comprehensive documentation
+       Customer collaboration        over  contract negotiation
+       Responding to change          over  following a plan
+
+       The right-hand items have value ; the left-hand ones have MORE.
+    ```
+
+    2. The twelve principles
+    - Early and continuous delivery; welcome changing requirements; deliver frequently; business and developers work together daily; build around motivated individuals; face-to-face conversation; working software is the measure of progress; a sustainable pace; technical excellence; simplicity; self-organising teams; and regular reflection.
+
+    3. The roles
+    ```
+       PRODUCT OWNER    owns and prioritises the backlog ; represents
+                        the customer. Decides WHAT is built.
+       SCRUM MASTER     protects the process, removes obstacles.
+                        A facilitator, NOT a manager.
+       DEVELOPMENT TEAM 5-9 people, cross-functional and
+                        self-organising. Decides HOW.
+       STAKEHOLDERS     the users and business people who give
+                        feedback at each review.
+    ```
+
+    4. The artefacts
+    ```
+       PRODUCT BACKLOG - the prioritised list of everything wanted,
+            written as USER STORIES :
+            "As a customer, I want to reset my password so that I can
+             log in again."
+       SPRINT BACKLOG  - the items chosen for the current sprint,
+            broken into tasks.
+       INCREMENT       - the working software produced this sprint,
+            meeting the agreed DEFINITION OF DONE.
+       BURNDOWN CHART  - work remaining against days left.
+    ```
+
+    5. The events — the sprint cycle
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint Planning]
+        B --> C[Sprint: 1-4 weeks<br/>daily stand-up]
+        C --> D[Increment]
+        D --> E[Sprint Review]
+        E --> F[Retrospective]
+        F --> A
+    ```
+    ```
+       SPRINT PLANNING  choose the work and agree a sprint goal
+       DAILY STAND-UP   15 minutes : done , doing , blocked
+       SPRINT REVIEW    demonstrate WORKING SOFTWARE to the customer
+       RETROSPECTIVE    how do we work better next sprint
+    ```
+
+    6. The engineering practices
+    ```
+       TEST-DRIVEN DEVELOPMENT   write the test first, then the code
+       CONTINUOUS INTEGRATION    integrate and build several times a day
+       REFACTORING               improve the structure without changing
+                                 behaviour
+       PAIR PROGRAMMING          two developers, one keyboard -
+                                 continuous code review
+       COLLECTIVE CODE OWNERSHIP anyone may change any code
+       AUTOMATED TESTING         a regression suite run on every commit
+    ```
+
+    7. The estimation and tracking tools
+    ```
+       STORY POINTS  relative size, not hours
+       PLANNING POKER  the team estimates together
+       VELOCITY      story points completed per sprint, used to
+                     forecast the next one
+       DEFINITION OF DONE  the agreed standard an increment must meet
+    ```
+
+    - The frameworks that package these components: `Scrum` (the roles, events and artefacts above), `Kanban` (visualise the work, limit work in progress, no fixed sprints), `Extreme Programming` (the engineering practices) and `SAFe` for large organisations. Agile is the philosophy; these are the ways it is put into practice.
+
 44. **Explain extreme programming.** *[NESCO Manager (Software) 2018 compact it 1208 (ET: N/A)]*
 
+    Answer: What Extreme Programming is
+    - `Extreme Programming (XP)` is an Agile method created by Kent Beck in the late 1990s. Its idea is to take the practices known to be good — code review, testing, design, integration — and apply them at an `extreme` level, continuously rather than occasionally.
+    ```
+       Code review is good      -> review ALL the time (PAIR PROGRAMMING)
+       Testing is good          -> test BEFORE writing code (TDD)
+       Integration is good      -> integrate SEVERAL TIMES A DAY (CI)
+       Short iterations are good-> make them 1-2 WEEKS
+       Simple design is good    -> design only for TODAY
+    ```
+
+    The five values
+    ```
+       COMMUNICATION  the team, and the customer, talk face to face
+                      every day instead of exchanging documents.
+       SIMPLICITY     build the simplest thing that works. Do not add
+                      what "might be needed later".
+       FEEDBACK       from the tests (seconds), from the pair
+                      (minutes), from the customer (days).
+       COURAGE        be willing to throw away bad code, refactor a
+                      working design, or tell the customer the truth
+                      about the schedule.
+       RESPECT        every member's contribution matters.
+    ```
+
+    The core practices
+    ```
+       PAIR PROGRAMMING
+            Two developers, one keyboard. One writes, the other
+            reviews as it is typed. This is CONTINUOUS code review.
+
+       TEST-DRIVEN DEVELOPMENT (TDD)
+            Write the FAILING TEST FIRST, then the code that makes it
+            pass, then refactor.  RED -> GREEN -> REFACTOR.
+            The tests become a regression suite that never rots.
+
+       CONTINUOUS INTEGRATION
+            Integrate and build several times a day. Integration
+            problems then take minutes, not weeks.
+
+       REFACTORING
+            Improve the internal structure WITHOUT changing behaviour.
+            Done constantly, so the design never degrades.
+
+       SIMPLE DESIGN
+            Design for the requirement in hand, not for an imagined
+            future. "You aren't gonna need it" (YAGNI).
+
+       COLLECTIVE CODE OWNERSHIP
+            Anyone may change any code. No module has a single owner
+            who becomes a bottleneck.
+
+       ON-SITE CUSTOMER
+            A real customer representative sits WITH the team, full
+            time, to answer questions the moment they arise.
+
+       SMALL RELEASES
+            A working version every 1-2 weeks.
+
+       CODING STANDARDS
+            One agreed style, which collective ownership and pair
+            programming both require.
+
+       SUSTAINABLE PACE (40-hour week)
+            No systematic overtime. Tired programmers write defects.
+
+       METAPHOR
+            A shared, simple description of how the system works, so
+            everyone uses the same vocabulary.
+
+       PLANNING GAME
+            The customer writes USER STORIES and sets priority ; the
+            developers estimate. Neither side decides alone.
+    ```
+
+    The cycle
+    ```mermaid
+    flowchart LR
+        A[User stories] --> B[Planning game]
+        B --> C[Write test first]
+        C --> D[Pair programming]
+        D --> E[Refactor]
+        E --> F[Continuous integration]
+        F --> G[Small release]
+        G --> A
+    ```
+
+    Strengths and weaknesses
+    ```
+       STRENGTHS
+         very high code quality - TDD plus continuous review
+         defects found in minutes, when they are cheapest
+         the design stays clean, because refactoring never stops
+         the customer gets exactly what is wanted
+
+       WEAKNESSES
+         pair programming looks expensive to management, and needs
+           developers who can work together
+         requires an ON-SITE CUSTOMER - many organisations cannot
+           supply one
+         little documentation, which hurts long-term maintenance
+         needs a co-located, disciplined and experienced team
+    ```
+    - The point worth stating at the end: the twelve practices are `a system, not a menu`. Simple design is only safe because refactoring is constant; refactoring is only safe because TDD provides a regression suite; collective ownership is only safe because coding standards and pair programming keep the code uniform. Teams that adopt one or two practices in isolation usually get the cost without the benefit.
+
 45. **Define software engineering according to IEEE. What is SDLC? Describe any two SDLC.** *[ICT Ministry Assistant Programmer 2017 compact it 1242 (ET: N/A)]*
+
+    Answer: Software engineering according to IEEE
+    ```
+       IEEE Standard 610.12-1990 defines software engineering as :
+
+       "The application of a SYSTEMATIC, DISCIPLINED, QUANTIFIABLE
+        approach to the development, operation and maintenance of
+        software ; that is, the application of ENGINEERING to
+        software."
+    ```
+    - The three words carry the definition: `systematic` — a defined process, not ad-hoc coding; `disciplined` — standards, reviews and documentation are followed; `quantifiable` — progress and quality are measured, not guessed. And note that it covers `operation and maintenance`, not development alone.
+
+    What SDLC is
+    - `SDLC` — the `Software Development Life Cycle` — is the structured process a software product follows from the first idea to final retirement, split into ordered phases so that cost, schedule and quality stay controllable.
+    ```
+       1. Planning and feasibility    5. Testing
+       2. Requirement analysis        6. Deployment
+       3. Design                      7. Maintenance
+       4. Coding
+    ```
+
+    Two SDLC models described
+
+    1. The Waterfall model
+    ```mermaid
+    flowchart TD
+        A[Requirements] --> B[Design] --> C[Coding] --> D[Testing] --> E[Deployment] --> F[Maintenance]
+    ```
+    - A `linear sequential` model, proposed by Winston Royce in 1970. Each phase is completed and formally approved before the next begins, and the output of one phase is the input to the next. There is no formal route back.
+    ```
+       ADVANTAGES
+         simple to understand and manage ; clear deliverables
+         heavily documented - suits contracts and audits
+         easy to estimate and price, since the scope is fixed
+         works well when requirements are FIXED and understood
+
+       DISADVANTAGES
+         requirements must be FROZEN after analysis
+         NO working software until very late
+         change is extremely expensive - no way back
+         risk surfaces only in testing, the costliest point
+         poor for long projects, where the business changes
+    ```
+
+    2. The Agile model
+    ```mermaid
+    flowchart LR
+        A[Product Backlog] --> B[Sprint: 1-4 weeks] --> C[Working increment] --> D[Review] --> A
+    ```
+    - An `iterative and incremental` model set out in the Agile Manifesto of 2001. The product is built in short sprints, each producing working software, with the customer present throughout.
+    ```
+       FOUR VALUES
+         Individuals and interactions over processes and tools
+         Working software            over comprehensive documentation
+         Customer collaboration      over contract negotiation
+         Responding to change        over following a plan
+
+       ADVANTAGES
+         working software every 1-4 weeks
+         requirements may change without wrecking the plan
+         defects found early, where they are cheap
+         the customer steers the product continuously
+
+       DISADVANTAGES
+         light documentation hurts long-term maintenance
+         cost and scope cannot be fixed in advance - a problem for
+           fixed-price tenders
+         needs a committed customer and a skilled, co-located team
+    ```
+
+    Comparison
+
+    | Point | Waterfall | Agile |
+    |---|---|---|
+    | Approach | `Sequential` | `Iterative` |
+    | Requirements | `Frozen` | Evolve each sprint |
+    | Delivery | Once, at the end | Every `1–4 weeks` |
+    | Cost of change | `Very high` | Low |
+    | Documentation | Heavy | Light |
+    | Best for | Fixed requirements | Changing requirements |
+
+    - Other models worth naming in one line: the `Spiral` model, which adds explicit `risk analysis` to every loop and suits large, costly, uncertain systems; the `V-model`, which pairs each development phase with its corresponding test level; and the `Prototype` model, which builds a throwaway model first to settle unclear requirements.
 
 ## Software Testing & Evaluation (40)
 
