@@ -700,21 +700,62 @@ ii. The data were collected and it were analyzed carefully.
 
 1. **What is the meaning of “see eye to eye”?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+   Answer: To agree fully with someone; to share the same opinion on an issue.
+
 2. **Make sentences with the following (any five): (a) keep pace with (b) make up one's mind (c) put up with (d) take after (e) well off (f) on the sly (g) in case of.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
+
+   Answer:
+   - (a) Keep pace with (তাল মিলিয়ে চলা): We must learn new technologies to keep pace with the modern world.
+   - (b) Make up one's mind (স্থির করা / সিদ্ধান্ত নেওয়া): She made up her mind to pursue a career in software engineering.
+   - (c) Put up with (সহ্য করা): I cannot put up with such disrespectful behavior.
+   - (d) Take after (সদৃশ হওয়া / চেহারায় মিল থাকা): The boy takes after his father in both looks and temperament.
+   - (e) Well off (স্বচ্ছল): His family is financially well off and lives comfortably.
+   - (f) On the sly (গোপনে): He was preparing for the competitive examination on the sly.
+   - (g) In case of (ক্ষেত্রে / প্রয়োজনে): In case of an emergency, press the fire alarm immediately.
 
 3. **অর্থসহ বাক্য রচনা করুন: A Black Sheep, Crocodile tears, Straw Vote, Bed of roses, Hard and fast.** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+   Answer:
+   - A Black Sheep (কুলাঙ্গার): He is the black sheep of his family because of his dishonest activities.
+   - Crocodile tears (মায়াকান্না): She shed crocodile tears over her rival's failure.
+   - Straw Vote (অনানুষ্ঠানিক জনমত যাচাই): The news agency conducted a straw vote before the general election.
+   - Bed of roses (ফুলশয্যা / কণ্টকহীন পথ): Life is not a bed of roses; it is full of struggles.
+   - Hard and fast (বাঁধাধরা / কঠোর): There is no hard and fast rule in learning art.
+
 4. **Make sentences with the following: (a) Play fast and loose. (b) A piece of cake. (c) Beat around the bush. (d) Back against the wall. (e) Eat like a horse.** *[Software Assistant Programmer 13.10.2022 compact it 712 (ET: N/A)]*
+
+   Answer:
+   - (a) Play fast and loose (ছলনা করা / দায়িত্বজ্ঞানহীন আচরণ করা): Do not play fast and loose with the feelings of others.
+   - (b) A piece of cake (খুব সহজ কাজ): Solving this basic coding problem was a piece of cake for him.
+   - (c) Beat around the bush (ঘুরিয়ে-ফিরিয়ে কথা বলা): Stop beating around the bush and come straight to the point.
+   - (d) Back against the wall (চরম সংকটাপন্ন অবস্থা): With rising debts, the company had its back against the wall.
+   - (e) Eat like a horse (প্রচুর পরিমাণে খাওয়া): After the heavy workout, he ate like a horse.
 
 5. **Make sentence: (a) A dark horse (b) Ever and anon.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
+   Answer:
+   - (a) A dark horse (অপ্রত্যাশিত বিজয়ী / অপরিচিত প্রতিভাবান): Nobody expected him to win the tournament, but he proved to be a dark horse.
+   - (b) Ever and anon (মাঝে মাঝে / সময়ে সময়ে): Ever and anon he glanced at his watch while waiting for the train.
+
 6. **“Run with the hare and hunt with the hounds: - কথাটির বাংলা প্রবাদ কী?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+   Answer: সাপের মুখে চুমা, ব্যাঙের মুখে লাথি (বা দুই নৌকায় পা দেওয়া / উভয় পক্ষকে সন্তুষ্ট রেখে চলা)।
 
 7. **What is the meaning of the phrase “Carry the day”?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+   Answer: To win a victory or achieve decisive success (জয়লাভ করা বা সফল হওয়া)।
+
 8. **৪. অর্থসহ বাক্য রচনা কর: (a) Blue Blood (b) Baker's dozen** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+   Answer:
+   - (a) Blue Blood (আভিজাত্য / অভিজাত বংশ): Though born of blue blood, he treats everyone with utmost humility.
+   - (b) Baker's dozen (তেরোটি / এক ডজনের চেয়ে একটি বেশি - ১৩টি): The shopkeeper gave me a baker's dozen of eggs for the price of twelve.
+
 9. **৬. Phrases and Idioms : Eleventh Hours.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+   Answer:
+   - Meaning: At the last possible moment (শেষ মুহূর্তে).
+   - Sentence: He submitted his project application at the eleventh hour just before the deadline.
 
 ## English Vocabulary & Antonyms (7)
 
