@@ -7866,11 +7866,222 @@ MOV AX, A534H এবং MOV AX, [A534H]
 
 1. **RISC stand for __________? Write two characteristics of it's?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+   Answer: `RISC` stands for `Reduced Instruction Set Computer`.
+
+   Two characteristics
+   ```
+      1. A SMALL SET OF SIMPLE, FIXED-LENGTH INSTRUCTIONS, each completing in
+         about ONE clock cycle.
+         Because every instruction is the same size and takes the same time,
+         the pipeline never has to wait, and the control unit can be
+         HARDWIRED rather than microprogrammed.
+
+      2. A LOAD-STORE ARCHITECTURE with MANY REGISTERS.
+         Only the LOAD and STORE instructions touch memory; every other
+         instruction works on registers alone. With 32 or more general-purpose
+         registers, most values stay in registers, so memory traffic is low.
+   ```
+
+   Other characteristics, if more are wanted
+   ```
+      Simple addressing modes    : usually only 3 or 4
+      Efficient pipelining       : the direct result of uniform instructions
+      Hardwired control unit     : fast, and small in silicon
+      Larger code size           : more instructions are needed for the same job
+      More work for the compiler : it must schedule instructions and allocate
+                                   registers well
+      Low power consumption      : which is why every mobile phone uses ARM
+   ```
+
+   Examples
+   ```
+      ARM, RISC-V, MIPS, SPARC, PowerPC, Apple M-series
+   ```
+
+   Compared with CISC
+
+   | Point | RISC | CISC |
+   |---|---|---|
+   | Instruction set | Small and simple | Large and complex |
+   | Instruction length | Fixed | Variable |
+   | Cycles per instruction | About 1 | Many |
+   | Memory access | Only LOAD and STORE | Most instructions |
+   | Registers | Many (32+) | Few (8-16) |
+   | Control unit | Hardwired | Microprogrammed |
+   | Pipelining | Easy and efficient | Difficult |
+   | Code size | Larger | Smaller |
+   | Power | Low | Higher |
+   | Examples | ARM, RISC-V, MIPS | Intel x86, AMD64 |
+
+   - Practical note: modern x86 processors decode their CISC instructions internally into RISC-like `micro-operations`, so they are CISC at the interface and RISC in the execution core. RISC still wins decisively on `performance per watt`, which is why it dominates mobile and now, with Apple's M-series, the laptop market as well.
+
 2. **Difference between RISC and CISC.** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
+
+   Answer: `RISC` (Reduced Instruction Set Computer) uses a small set of simple, uniform instructions. `CISC` (Complex Instruction Set Computer) uses a large set of powerful, varied instructions.
+
+   RISC
+   - Few instructions, all of `fixed length`, each completing in about `one clock cycle`.
+   - A `load-store` architecture: only LOAD and STORE touch memory; everything else operates on registers.
+   - Many general-purpose registers (32 or more), a `hardwired` control unit, and simple addressing modes.
+   - Because every instruction has the same shape, `pipelining` works cleanly.
+   - Examples: ARM, RISC-V, MIPS, SPARC, PowerPC, Apple M-series.
+
+   CISC
+   - Many instructions of `variable length`, some taking many cycles. One instruction can do a great deal of work — a single x86 instruction can load two operands from memory, multiply them and store the result.
+   - Instructions may operate `directly on memory`.
+   - Few registers (8 to 16), a `microprogrammed` control unit, and a rich set of addressing modes.
+   - Designed when memory was expensive, so compact code mattered more than pipeline efficiency.
+   - Examples: Intel x86, AMD64, Motorola 68000, IBM System/360.
+
+   Difference
+
+   | Point | RISC | CISC |
+   |---|---|---|
+   | Instruction set size | Small (about 100) | Large (several hundred) |
+   | Instruction length | Fixed | Variable |
+   | Cycles per instruction | Mostly 1 | 2 to 15 or more |
+   | Memory access | Only LOAD and STORE | Most instructions can |
+   | Registers | Many (32 or more) | Few (8 to 16) |
+   | Addressing modes | Few (3-5) | Many (12 or more) |
+   | Control unit | Hardwired | Microprogrammed |
+   | Pipelining | Easy and efficient | Difficult |
+   | Decoding | Simple | Complex |
+   | Code size | Larger | Smaller |
+   | Compiler complexity | Higher — it must schedule and allocate | Lower |
+   | Transistor use | Spent on registers and cache | Spent on complex instruction logic |
+   | Power consumption | Low | Higher |
+   | Execution time | Depends on the number of instructions | Depends on instruction complexity |
+   | Used in | Mobile, embedded, Apple M-series | Desktop and server x86 |
+
+   The design philosophy behind each
+   ```
+      CISC : make each INSTRUCTION do more, so the program needs fewer of them.
+             Sensible when memory was scarce and compilers were poor.
+
+      RISC : make each instruction SIMPLE and FAST, and let the compiler
+             assemble complex operations from them.
+             Sensible when memory is cheap and compilers are good.
+   ```
+
+   - Practical note: the line has blurred. Modern x86 processors `decode` their CISC instructions into RISC-like `micro-operations` and execute those in a RISC-style pipeline, so they are CISC on the outside and RISC on the inside. RISC still wins clearly on `performance per watt`, which is why every mobile phone uses ARM, and why Apple moved its laptops to ARM as well.
 
 3. **(ক) CISC and RISC processor বলতে কি বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) CISC processor
+   - `CISC` stands for `Complex Instruction Set Computer`. Its design philosophy is to make each `instruction do as much work as possible`, so that a program needs fewer of them.
+   - Characteristics:
+   ```
+      A large instruction set, several hundred instructions
+      VARIABLE-length instructions (1 to 15 bytes in x86)
+      An instruction may take many clock cycles
+      Instructions can operate DIRECTLY on memory
+      Few general-purpose registers (8 to 16)
+      Many addressing modes (12 or more)
+      MICROPROGRAMMED control unit
+      Smaller code size, but harder to pipeline
+   ```
+   - Why it was designed this way: in the 1970s memory was extremely expensive and compilers were poor, so packing more work into each instruction saved precious memory and made assembly programming easier.
+   - Examples: `Intel x86`, `AMD64`, Motorola 68000, IBM System/360.
+
+   RISC processor
+   - `RISC` stands for `Reduced Instruction Set Computer`. Its philosophy is to make each instruction `simple and fast`, and let the compiler build complex operations out of them.
+   - Characteristics:
+   ```
+      A small instruction set, about 100 instructions
+      FIXED-length instructions
+      Each instruction completes in about ONE clock cycle
+      LOAD-STORE architecture : only LOAD and STORE touch memory
+      Many general-purpose registers (32 or more)
+      Few addressing modes (3 to 5)
+      HARDWIRED control unit
+      Larger code size, but very efficient pipelining
+   ```
+   - Why it works: memory became cheap and compilers became good, so the reasons for CISC disappeared. Studies also showed that compilers used only a small fraction of a CISC instruction set in practice.
+   - Examples: `ARM`, `RISC-V`, MIPS, SPARC, PowerPC, Apple M-series.
+
+   Comparison
+
+   | Point | CISC | RISC |
+   |---|---|---|
+   | Instruction set | Large and complex | Small and simple |
+   | Instruction length | Variable | Fixed |
+   | Cycles per instruction | Many | About 1 |
+   | Memory access | Most instructions | Only LOAD and STORE |
+   | Registers | Few (8-16) | Many (32+) |
+   | Addressing modes | Many | Few |
+   | Control unit | Microprogrammed | Hardwired |
+   | Pipelining | Difficult | Easy and efficient |
+   | Code size | Smaller | Larger |
+   | Compiler effort | Lower | Higher |
+   | Power consumption | Higher | Low |
+   | Transistors spent on | Instruction logic | Registers and cache |
+   | Used in | Desktop and server | Mobile, embedded, Apple M-series |
+
+   - The modern position: x86 processors now `decode` their CISC instructions into RISC-like `micro-operations` and execute those in a RISC-style pipeline — CISC at the interface, RISC in the core. RISC's advantage in `performance per watt` is decisive in battery-powered devices, which is why ARM dominates mobile and has now moved into laptops and servers.
+
 4. **What is CISC and RISC?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
+
+   Answer: `CISC` and `RISC` are the two design philosophies for a processor's instruction set.
+
+   CISC — Complex Instruction Set Computer
+   - Makes each `instruction do as much work as possible`, so a program needs fewer instructions.
+   ```
+      Large instruction set (several hundred)
+      VARIABLE-length instructions (1 to 15 bytes in x86)
+      An instruction may take many clock cycles
+      Instructions may operate DIRECTLY on memory
+      Few registers (8 to 16), many addressing modes
+      MICROPROGRAMMED control unit
+      Compact code, but difficult to pipeline
+   ```
+   - Designed in the 1970s, when memory was very expensive and compilers were poor, so packing work into each instruction saved memory.
+   - Examples: `Intel x86`, `AMD64`, Motorola 68000.
+
+   RISC — Reduced Instruction Set Computer
+   - Makes each instruction `simple and fast`, and lets the compiler assemble complex operations from them.
+   ```
+      Small instruction set (about 100)
+      FIXED-length instructions
+      Each completes in about ONE clock cycle
+      LOAD-STORE architecture : only LOAD and STORE touch memory
+      Many registers (32 or more), few addressing modes
+      HARDWIRED control unit
+      Larger code, but very efficient pipelining
+   ```
+   - Examples: `ARM`, `RISC-V`, MIPS, SPARC, PowerPC, Apple M-series.
+
+   Comparison
+
+   | Point | CISC | RISC |
+   |---|---|---|
+   | Instruction set | Large and complex | Small and simple |
+   | Instruction length | Variable | Fixed |
+   | Cycles per instruction | Many | About 1 |
+   | Memory access | Most instructions | Only LOAD and STORE |
+   | Registers | Few (8-16) | Many (32+) |
+   | Addressing modes | Many (12+) | Few (3-5) |
+   | Control unit | Microprogrammed | Hardwired |
+   | Pipelining | Difficult | Easy and efficient |
+   | Decoding | Complex | Simple |
+   | Code size | Smaller | Larger |
+   | Compiler effort | Lower | Higher |
+   | Power consumption | Higher | Low |
+   | Used in | Desktop, server | Mobile, embedded, laptops |
+
+   An example of the difference
+   ```
+      Multiply two numbers held in memory :
+
+      CISC : MULT [2:3], [5:2]        one instruction does load, multiply, store
+
+      RISC : LOAD  R1, [2:3]
+             LOAD  R2, [5:2]
+             MUL   R1, R2
+             STORE [2:3], R1          four simple instructions
+   ```
+   - The CISC version is shorter in code but takes many cycles and cannot be pipelined cleanly. The RISC version is longer but each instruction is one cycle and the pipeline stays full, so the total time is usually similar or better.
+
+   - The modern reality: x86 processors `decode` CISC instructions into RISC-like `micro-operations` internally, so they are CISC at the interface and RISC in the execution core. RISC's decisive advantage is `performance per watt`, which is why ARM dominates mobile devices and now, with Apple's M-series, laptops as well.
 
 ## 8085 Microprocessor & Edge Computing (3)
 
