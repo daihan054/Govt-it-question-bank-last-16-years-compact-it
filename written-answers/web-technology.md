@@ -7153,11 +7153,430 @@
 
 1. **(ক) CSS কী? CSS এর প্রকারভেদসমূহ উদাহরণসহ আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 411 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What CSS is
+   - `CSS` stands for `Cascading Style Sheets`. It controls the `presentation` of an HTML document — colours, fonts, spacing, borders, backgrounds and layout. It separates how a page `looks` from what it `contains`.
+   ```css
+      selector  {  property : value ;  }
+
+      h1        {  color: navy; font-size: 32px;
+                   text-align: center;  }
+   ```
+   ```
+      "CASCADING" refers to the ORDER OF PRIORITY applied when
+      several rules target the same element :
+
+           inline style  >  #id  >  .class  >  element
+
+      The more SPECIFIC rule wins ; between rules of equal
+      specificity, the LAST one written wins. !important overrides
+      all of them, and should be avoided.
+   ```
+
+   The three types of CSS
+
+   1. Inline CSS
+   - Written directly in the element's `style` attribute.
+   ```html
+      <p style="color:red; font-size:18px;">This is red text.</p>
+      <h1 style="text-align:center; color:navy;">Heading</h1>
+   ```
+   ```
+      ADVANTAGE     highest priority ; useful for one quick
+           exception, and for HTML EMAIL, where external CSS is
+           stripped
+      DISADVANTAGE  it must be repeated on every element ; it
+           mixes presentation with content ; it cannot be cached ;
+           it cannot use HOVER or MEDIA QUERIES
+           -> the WORST method for a real site
+   ```
+
+   2. Internal CSS — embedded
+   - Written inside a `<style>` block in the `<head>` of the page.
+   ```html
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <style>
+              body { font-family: Arial, sans-serif; }
+              h1   { color: navy; text-align: center; }
+              p    { line-height: 1.6; }
+              .card{ border: 1px solid #ccc; padding: 20px; }
+          </style>
+      </head>
+      <body>
+          <h1>Welcome</h1>
+          <p>Some text.</p>
+      </body>
+      </html>
+   ```
+   ```
+      ADVANTAGE     styles the WHOLE PAGE from one place ; no extra
+           HTTP request
+      DISADVANTAGE  applies to ONE PAGE ONLY, so it must be
+           repeated in every file ; not cached separately ;
+           increases the size of every page
+           -> acceptable for a single-page document
+   ```
+
+   3. External CSS
+   - Written in a separate `.css` file and attached with `<link>`.
+   ```css
+      /* style.css */
+      body  { font-family: Arial, sans-serif; margin: 0; }
+      h1    { color: navy; text-align: center; }
+      .card { border: 1px solid #ccc; padding: 20px;
+              border-radius: 8px; }
+   ```
+   ```html
+      <head>
+          <link rel="stylesheet" href="style.css">
+      </head>
+   ```
+   ```
+      ADVANTAGE     ONE FILE STYLES THE WHOLE SITE - change the
+           colour once and a thousand pages change ; the browser
+           CACHES it, so pages after the first load faster ; the
+           HTML stays clean
+      DISADVANTAGE  one extra HTTP request on the first load ; the
+           page may flash unstyled if the file is slow
+
+      -> THE BEST METHOD, and the one to name if only one is asked
+         for.
+   ```
+
+   Priority when all three are present
+   ```
+      INLINE  >  INTERNAL  >  EXTERNAL
+
+      ...but internal against external actually depends on the
+      ORDER in the <head>. The one appearing LAST wins :
+
+           <link rel="stylesheet" href="style.css">
+           <style> h1 { color: red; } </style>
+           -> the internal rule wins, being later
+
+           <style> h1 { color: red; } </style>
+           <link rel="stylesheet" href="style.css">
+           -> the EXTERNAL file wins, being later
+
+      This surprises people, and it is a common exam trap. Only
+      INLINE has a genuinely higher specificity ; the other two
+      simply cascade by position.
+   ```
+
+   The fourth method, worth one line
+   ```html
+      <!-- @import , inside a stylesheet or a <style> block -->
+      <style>
+          @import url("style.css");
+      </style>
+   ```
+   - `@import` works, but it is `slower` than `<link>`: the browser cannot start downloading the imported file until it has parsed the file that imports it, so the requests are serialised rather than parallel. `<link>` is preferred.
+
 2. **What is CSS? What is CSS framework? Write down 3 CSS framework name?** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
+
+   Answer: What CSS is
+   - `CSS` stands for `Cascading Style Sheets`. It controls the `presentation` of an HTML document — colours, fonts, spacing, borders, backgrounds and layout — keeping how a page `looks` separate from what it `contains`.
+   ```css
+      selector { property : value ; }
+
+      h1       { color: navy; font-size: 32px; }
+      .card    { border: 1px solid #ccc; padding: 20px; }
+   ```
+   ```
+      Applied in three ways :
+           INLINE     style="..." in the tag
+           INTERNAL   a <style> block in the <head>
+           EXTERNAL   a separate .css file, linked with <link> -
+                      THE BEST METHOD
+   ```
+
+   What a CSS framework is
+   - A `CSS framework` is a ready-made collection of stylesheets — and often a little JavaScript — providing a `grid system`, pre-styled components and utility classes, so a developer builds a responsive interface without writing CSS from nothing.
+   ```
+      WHAT A FRAMEWORK PROVIDES
+
+        a RESPONSIVE GRID SYSTEM - columns that rearrange
+             themselves on a phone
+        PRE-STYLED COMPONENTS - buttons, forms, navigation bars,
+             cards, modals, tables, alerts
+        a TYPOGRAPHY and SPACING scale, so the design is consistent
+        UTILITY CLASSES - text-center , mt-3 , d-flex
+        BROWSER NORMALISATION - the same appearance in every
+             browser
+        ACCESSIBILITY defaults built into the components
+   ```
+
+   Three CSS framework names
+   ```
+      1. BOOTSTRAP     the most widely used. A 12-column grid,
+           a large component library, and Sass variables for
+           theming. Originally from Twitter.
+
+      2. TAILWIND CSS  a UTILITY-FIRST framework. Instead of a
+           pre-made .btn class, small single-purpose classes are
+           composed in the HTML :
+                <button class="px-4 py-2 bg-blue-600 text-white
+                               rounded hover:bg-blue-700">
+
+      3. FOUNDATION    by ZURB. A mobile-first grid, strong
+           accessibility support, and a highly customisable build.
+   ```
+   ```
+      OTHERS worth naming :
+           Bulma        modern, pure CSS, no JavaScript
+           Materialize  implements Google's Material Design
+           Semantic UI  class names that read like English
+           Skeleton     very small and minimal
+   ```
+
+   Advantages of using a framework
+   - `Faster development` — a responsive layout in hours rather than days.
+   - `Responsive by default` — the grid and the breakpoints are already designed and tested.
+   - `Cross-browser consistency` — the framework has absorbed the browser differences.
+   - `Consistent design` — one spacing and typography scale across the whole application.
+   - `Well documented`, with a large community and many examples.
+   - `Accessibility` defaults in the components.
+
+   Disadvantages
+   - `File size` — the full framework is far larger than the CSS an application actually uses, though a build step can strip the unused parts.
+   - `Generic appearance` — sites built on the default Bootstrap theme look alike.
+   - `Learning curve` — the framework's own class names must be learnt.
+   - `Class clutter` in the HTML, which is the standing criticism of the utility-first approach.
+   - `Dependency` on the framework's upgrade cycle, and `overkill` for a small static page.
+
+   - Which to choose: `Bootstrap` where speed and a familiar component set matter, and where the team is not primarily front-end; `Tailwind` where a distinctive design is wanted and the team is comfortable composing utilities; and `no framework at all` for a small site, since modern `Flexbox` and `CSS Grid` do natively what frameworks were originally invented to work around.
 
 3. **(খ) CSS Box Model এ ‘Padding’ এবং ‘Margin’ এরিয়ার মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) The CSS box model
+   - Every element is a rectangular box built of `four` areas, from the inside out.
+   ```
+      +==================================================+
+      |                    MARGIN                        |
+      |   +------------------------------------------+   |
+      |   |                 BORDER                   |   |
+      |   |   +----------------------------------+   |   |
+      |   |   |             PADDING              |   |   |
+      |   |   |   +--------------------------+   |   |   |
+      |   |   |   |                          |   |   |   |
+      |   |   |   |        CONTENT           |   |   |   |
+      |   |   |   |    (text or image)       |   |   |   |
+      |   |   |   |                          |   |   |   |
+      |   |   |   +--------------------------+   |   |   |
+      |   |   |                                  |   |   |
+      |   |   +----------------------------------+   |   |
+      |   |                                          |   |
+      |   +------------------------------------------+   |
+      |                                                  |
+      +==================================================+
+
+      CONTENT  the text or image itself
+      PADDING  space INSIDE the border - between content and border
+      BORDER   the line around the padding
+      MARGIN   space OUTSIDE the border - between this element and
+               its neighbours
+   ```
+
+   Difference between padding and margin
+
+   | Point | Padding | Margin |
+   |---|---|---|
+   | Position | `Inside` the border | `Outside` the border |
+   | Separates | Content from the `border` | This element from `other elements` |
+   | Background colour | `Included` — takes the element's background | `Transparent` — shows what is behind |
+   | Clickable | `Yes` — part of the element | `No` |
+   | Negative value | `Not allowed` | `Allowed` — `margin: -10px` |
+   | Collapsing | `Never` collapses | Vertical margins `collapse` |
+   | `auto` value | Not meaningful | `margin: 0 auto` centres the element |
+   | Affects element size | `Increases` it (in the default box model) | Does not — it pushes neighbours away |
+
+   The syntax is identical
+   ```css
+      padding: 10px;                  /* all four sides */
+      padding: 10px 20px;             /* top-bottom , left-right */
+      padding: 10px 20px 15px 5px;    /* top right bottom left -
+                                         CLOCKWISE */
+      padding-top: 10px;              /* one side */
+
+      margin: 10px;                   /* the same forms */
+      margin: 0 auto;                 /* centre horizontally */
+   ```
+
+   The two differences that actually cause bugs
+
+   1. Background colour
+   ```css
+      .box { background: yellow; padding: 20px; margin: 20px; }
+   ```
+   ```
+      The PADDING is YELLOW - it belongs to the element.
+      The MARGIN is TRANSPARENT - the page background shows through.
+
+      This is the quickest way to tell them apart on screen.
+   ```
+
+   2. Margin collapsing
+   ```css
+      .a { margin-bottom: 30px; }
+      .b { margin-top:    20px; }
+   ```
+   ```
+      The gap between .a and .b is 30px , NOT 50px.
+
+      VERTICAL margins between adjacent elements COLLAPSE to the
+      LARGER of the two. Horizontal margins never collapse, and
+      PADDING NEVER COLLAPSES - 30px of padding plus 20px of
+      padding always gives 50px.
+
+      This surprises everyone once, and it is a favourite exam
+      question.
+   ```
+
+   The size calculation — the other classic trap
+   ```css
+      .box { width: 300px; padding: 20px; border: 5px solid; }
+   ```
+   ```
+      DEFAULT  box-sizing: content-box
+
+           total width = 300 + 20 + 20 + 5 + 5
+                       = 350px          <- NOT 300
+
+           width applies to the CONTENT only. Padding and border
+           are ADDED on top, which is why layouts overflow.
+
+      THE FIX  box-sizing: border-box
+
+           * { box-sizing: border-box; }
+
+           total width = 300px , with padding and border INSIDE it.
+           Content width becomes 300 - 50 = 250px.
+
+      Almost every modern stylesheet begins with that rule,
+      precisely to avoid the arithmetic above.
+   ```
+
+   When to use which
+   ```
+      USE PADDING when
+           the content needs breathing space INSIDE a bordered box
+           or a coloured background
+           a button needs to be larger and more clickable
+           a table cell needs internal spacing
+
+      USE MARGIN when
+           two elements need SEPARATING
+           a block needs CENTRING - margin: 0 auto
+           a heading needs space above it, away from the paragraph
+           before
+   ```
+   - One further asymmetry worth stating: a `click` inside the padding counts as clicking the element, but a click in the margin does not. So a button made larger with `padding` gains a bigger clickable target, while the same button made larger with `margin` gains only empty space around it.
+
 4. **(খ) CSS কী? কতভাবে একজন Website develop কারী তার page-এ CSS ব্যবহার করতে পারে।** *[Software Assistant Programmer 13.10.2022 compact it 708 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) What CSS is
+   - `CSS` stands for `Cascading Style Sheets`. It controls the `presentation` of an HTML document — colours, fonts, spacing, borders, backgrounds and layout — keeping how a page `looks` separate from what it `contains`.
+   ```css
+      selector { property : value ; }
+
+      h1       { color: navy; font-size: 32px;
+                 text-align: center; }
+   ```
+   ```
+      "CASCADING" refers to the priority applied when several rules
+      target the same element :
+
+           inline style  >  #id  >  .class  >  element
+
+      The more SPECIFIC rule wins ; between rules of equal
+      specificity, the LAST one written wins.
+   ```
+
+   The ways a developer can use CSS on a page
+
+   1. Inline CSS
+   ```html
+      <p style="color:red; font-size:18px;">This is red text.</p>
+   ```
+   ```
+      Written in the element's own style attribute.
+
+      USE IT FOR    one quick exception ; HTML EMAIL, where
+           external CSS is stripped by mail clients
+      AVOID IT FOR  a real site : it must be repeated on every
+           element, it mixes presentation with content, it cannot
+           be cached, and it CANNOT use :hover or MEDIA QUERIES
+   ```
+
+   2. Internal CSS — embedded
+   ```html
+      <head>
+          <style>
+              body { font-family: Arial, sans-serif; }
+              h1   { color: navy; text-align: center; }
+              .card{ border: 1px solid #ccc; padding: 20px; }
+          </style>
+      </head>
+   ```
+   ```
+      USE IT FOR    a SINGLE-PAGE document, or a page-specific
+           override
+      AVOID IT FOR  a multi-page site : the block must be copied
+           into every file, and it is not cached separately
+   ```
+
+   3. External CSS
+   ```html
+      <head>
+          <link rel="stylesheet" href="style.css">
+      </head>
+   ```
+   ```css
+      /* style.css */
+      body  { font-family: Arial, sans-serif; margin: 0; }
+      h1    { color: navy; text-align: center; }
+      .card { border: 1px solid #ccc; padding: 20px; }
+   ```
+   ```
+      THE BEST METHOD, and the one to recommend.
+
+      ONE FILE STYLES THE WHOLE SITE - change the colour once and
+           a thousand pages change
+      the browser CACHES it, so every page after the first loads
+           faster
+      the HTML stays clean and readable
+      several files may be linked : reset.css , layout.css ,
+           theme.css
+      a print-only stylesheet can be attached :
+           <link rel="stylesheet" href="print.css" media="print">
+   ```
+
+   4. `@import`
+   ```html
+      <style>
+          @import url("style.css");
+      </style>
+   ```
+   - It works, but it is `slower` than `<link>`: the browser cannot begin downloading the imported file until it has parsed the file that imports it, so requests are serialised instead of parallel.
+
+   Priority when more than one method is used
+   ```
+      INLINE  >  INTERNAL  >  EXTERNAL
+
+      ...but internal against external actually depends on ORDER in
+      the <head> - the one appearing LAST wins :
+
+           <link href="style.css">           then  <style>...</style>
+           -> the INTERNAL rule wins
+
+           <style>...</style>                then  <link href="...">
+           -> the EXTERNAL file wins
+
+      Only INLINE has a genuinely higher specificity. The other two
+      simply cascade by position, and this is a common exam trap.
+   ```
+   - Which a developer should actually choose: `external` for everything, with `internal` only for a page-specific override and `inline` only where nothing else is possible, such as an HTML email. The reason is not style but engineering — one cached file, one place to change, and HTML that a person can read.
 
 ## Web Security & Browser Same-Origin Policy (Iframe) (2)
 
