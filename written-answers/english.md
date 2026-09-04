@@ -362,11 +362,29 @@
 (i) The man disturbed me and said “I am sorry _____ disturbing you”. (Use a preposition)
 (j) The baby is crying. (Make it passive)
 
+   Answer:
+   - (a) discussing
+   - (b) had met
+   - (c) What he uttered in his speech was disappointing.
+   - (d) Why do you not like train journey as much as bus journey?
+   - (e) He is going to have his hair cut.
+   - (f) There is a girls' high school in my village.
+   - (g) Give vent to: He gave vent to his frustration by shouting loudly.
+   - (h) By leaps and bounds: The IT industry in Bangladesh is growing by leaps and bounds.
+   - (i) for
+   - (j) Passive is not applicable (since "cry" is an intransitive verb).
+
 2. **(d) Correct the sentence:** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 i. "He doesn't know anything about computers."
 ii. The data were collected and it were analyzed carefully.
 
+   Answer:
+   - i. He doesn't know anything about computers. (The sentence is already correct)
+   - ii. The data were collected and they were analyzed carefully. (Alternatively: "The data was collected and it was analyzed carefully.")
+
 3. **Fill in the blank: The scientist looked _______ the microscope.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+
+   Answer: through
 
 4. **Rewrite the following sentences using the instruction given in the brackets:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
  * (a) She explained the matter. [Correct the sentence]
@@ -380,6 +398,18 @@ ii. The data were collected and it were analyzed carefully.
  * (i) He said to me, "Please wait here till I return". [Turn it into indirect speech]
  * (ii) She did not listen to me. [Rewrite by using the idiom "turn a deaf ear"]
 
+   Answer:
+   - (a) She explained the matter. (The sentence is already correct)
+   - (b) Among the most popular drinks are coffee and tea.
+   - (c) I like cooking. (or: I like to cook.)
+   - (d) write (Subjunctive mood takes the base form of the verb)
+   - (e) with
+   - (f) in (or on)
+   - (g) I was made to do the work by him.
+   - (h) People say that she is a spy.
+   - (i) He requested me to wait there till he returned.
+   - (ii) She turned a deaf ear to me.
+
 5. **Rewrite the following sentences and use the idiom as directed:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
  * (a) The cost of all these articles have risen. [Correct the sentence]
  * (b) The film is definitely worth to see. [Correct the sentence]
@@ -392,53 +422,167 @@ ii. The data were collected and it were analyzed carefully.
  * (i) Amzad said to me, "I shall be grateful if you help me." [Turn into indirect speech] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
  * (j) Make a sentence with the idiom: 'in respect of' *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+   Answer:
+   - (a) The cost of all these articles has risen.
+   - (b) The film is definitely worth seeing.
+   - (c) with
+   - (d) on
+   - (e) have known
+   - (f) When does he normally take his food?
+   - (g) I was advised by the doctor to take complete rest.
+   - (h) We have achieved our goal.
+   - (i) Amzad told me that he would be grateful if I helped him.
+   - (j) In respect of: In respect of academic performance, she is the top student in her department.
+
 6. **what is the verb of habit?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 401 (ET: BUET)]*
+
+   Answer: Habituate (meaning: to accustom or make used to something).
 
 7. **Correct the sentence : He joined army** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+   Answer: He joined the army.
+
 8. **Write sentence with meaning from the following phrase and idioms: Break the ice, A pain in the neck, Fit as a fiddle, Burn bridges, So far so good** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
+
+   Answer:
+   - Break the ice (to overcome initial awkwardness): He told an amusing story to break the ice among the interview candidates.
+   - A pain in the neck (an annoying or tedious nuisance): Filling out manual forms every week is a pain in the neck.
+   - Fit as a fiddle (in excellent physical health): At seventy, my grandfather remains as fit as a fiddle.
+   - Burn bridges (to destroy relationships or connections permanently): When quitting a job, avoid arguing with your boss so that you do not burn bridges.
+   - So far so good (progressing satisfactorily until now): We have completed the first sprint of development; so far, so good.
 
 9. **Change right sentence compund, intrrogative, exclamatory** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
+   Answer:
+   - Compound: Work hard, and you will achieve success.
+   - Interrogative: Isn't health the greatest wealth of a human being?
+   - Exclamatory: How wonderful the sunset looks over the horizon!
+
 10. **Preposition: 2** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
+
+    Answer:
+    - (a) He is proficient in English and programming.
+    - (b) She is devoted to her studies and career.
 
 11. **Sentence correction: 2** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
+    Answer:
+    - (a) Incorrect: One of my friend is an engineer.
+      Correct: One of my friends is an engineer.
+    - (b) Incorrect: He gave me an advice.
+      Correct: He gave me a piece of advice.
+
 12. **English Transformation of Sentence (Voice change, Simple to complex, Superlative to comparative etc)** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 658 (ET: N/A)]*
+
+    Answer:
+    - Voice Change:
+      Active: The technician repaired the server.
+      Passive: The server was repaired by the technician.
+    - Simple to Complex:
+      Simple: Inspite of his poverty, he is honest.
+      Complex: Although he is poor, he is honest.
+    - Superlative to Comparative:
+      Superlative: Iron is the most useful metal.
+      Comparative: Iron is more useful than any other metal.
 
 13. **Right forms of verb.** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
+    Answer:
+    - (a) The train (leave) before we reached the station.
+      Answer: had left
+    - (b) If you study hard, you (pass) the examination.
+      Answer: will pass
+    - (c) Neither the teacher nor the students (be) present today.
+      Answer: are
+
 14. **Use the correct form of verbs within brackets: (a) Medha walks fast lest she (be) late. (b) Why you (not attend) the meeting yesterday? (c) You had better (to speak) the truth. (d) The poor (to be) born to suffer. (e) The rose (call) the queen of all flowers.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
+
+    Answer:
+    - (a) should be (or: might be)
+    - (b) Why did you not attend the meeting yesterday?
+    - (c) speak
+    - (d) are
+    - (e) is called
 
 15. **Correct the following sentence: (a) He is very popular among the villagers. (b) My father was died in 1995 (c) Give me a hot cup of tea. (d) Rifat will visit us recently. (e) My best friend had left this town last Sunday.** *[Software Assistant Programmer 13.10.2022 compact it 712 (ET: N/A)]*
 
+    Answer:
+    - (a) He is very popular with the villagers.
+    - (b) My father died in 1995.
+    - (c) Give me a cup of hot tea.
+    - (d) Rifat will visit us soon. (or: Rifat visited us recently.)
+    - (e) My best friend left this town last Sunday.
+
 16. **Fill in the gap with appropriate preposition: A Citizen enjoys a lot of rights in times of peace. But sometimes he has to give (a) _____ some of his rights and privileges voluntarily in order (b) _____ keep the independence of his country secure. When his country is (c) _____ war his only duty is to switch (d) _____ all his efforts to the defense of his country.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
+
+    Answer:
+    - (a) up
+    - (b) to
+    - (c) at
+    - (d) over
 
 17. **I had a talk with him. Write the name of 'parts of speech' of the underlined word.** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+    Answer: Noun (Here "talk" is preceded by the indefinite article "a", functioning as the direct object of the verb "had").
+
 18. **Fill in the blanks with appropriate phrase; “He refused to attend the meeting _____ his illness.** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+    Answer: because of (or: on account of / owing to)
 
 19. **Fill in the blank: I count _____ your help.** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
+    Answer: on (or: upon)
+
 20. **Write the passive voice of “Did you do the sum?”** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+    Answer: Was the sum done by you?
 
 21. **Filling the gaps with appropriate word: a) I started _____ Chattogram. b) She has no ability _____ painting. c) Every member of my _____ family d) They as well as he _____ wrong. e) Time and tide _____ for none.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
 
+    Answer:
+    - a) for
+    - b) in
+    - c) nuclear (or: joint / extended)
+    - d) are (or: were)
+    - e) wait
+
 22. **২. Which one is collective noun? (a) Boy (b) Wood (c) Herd (d) Infancy** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+    Answer: (c) Herd
 
 23. **৫. Fill in the Gap: (a) I am sorry _____ the mistake. (b) _____ his being innocent of the crime, the judge sentenced him to one year imprison.** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+    Answer:
+    - (a) for
+    - (b) Despite (or: In spite of)
+
 24. **৬. Fill in the Gap with appropriate articles: (a) Football is (a) _____ popular game in our country. (b) Money cannot buy (a) _____ happiness.** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+
+    Answer:
+    - (a) a
+    - (b) No article (x / zero article)
 
 25. **২. How did you do it? (Change the Voice)** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+    Answer: How was it done by you?
+
 26. **৪. Which sentence is correct?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+    Answer:
+    - Example of standard correct sentence: "One of the students has won the prize."
+    - Rule: "One of" is followed by a plural noun and a singular verb.
 
 27. **৭. I saw _____ one eyed man.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+    Answer: a (Article "a" is used before words beginning with the vowel "o" when it produces the consonant sound /w/).
+
 28. **৮. What's the time _____ your watch?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
+    Answer: by
+
 29. **১০. Since we grow the locally, we need not to _____ it.** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+    Answer: import
 
 ## Translation (18)
 
