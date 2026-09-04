@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 2 subtopics · 8 questions
+**Table of Contents** — 2 subtopics · 9 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Visual Basic & .NET](#visual-basic--net-6) | 6 |
-| 2 | [Core Programming Languages](#core-programming-languages-2) | 2 |
+| 2 | [Core Programming Languages](#core-programming-languages-3) | 3 |
 
 <!-- TOC END -->
 
@@ -24,7 +24,9 @@
 
 6. **What is .NET framework? Write the main components of .NET framework?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
-## Core Programming Languages (2)
+## Core Programming Languages (3)
 1. **Write a C/JAVA program to determine if a given year is a leap year or not.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 81]]*
 
 2. **Write down the difference between informed and uninformed search algorithm.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*
+
+3. **Number of SDGs (Sustainable Development Goals)?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*

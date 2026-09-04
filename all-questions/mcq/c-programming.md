@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 105 questions
+**Table of Contents** — 10 subtopics · 107 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,8 +11,8 @@
 | 6 | [Pointers & Memory Allocation](#pointers--memory-allocation-5) | 5 |
 | 7 | [Recursion](#recursion-4) | 4 |
 | 8 | [Storage Classes & Scope](#storage-classes--scope-3) | 3 |
-| 9 | [Flowcharts & Algorithms](#flowcharts--algorithms-1) | 1 |
-| 10 | [Programming Concepts](#programming-concepts-0) | 0 |
+| 9 | [Programming Concepts](#programming-concepts-2) | 2 |
+| 10 | [Flowcharts & Algorithms](#flowcharts--algorithms-1) | 1 |
 
 <!-- TOC END -->
 
@@ -944,6 +944,15 @@
    (C) Static
    (D) Register
 
+## Programming Concepts (2)
+1. **Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Polymorphism
+   (b) Inheritance
+   (c) Abstraction
+   (d) Encapsulation
+
+2. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
+
 ## Flowcharts & Algorithms (1)
 
 1. **In flowchart what does below represent?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
@@ -958,10 +967,3 @@
    b. Database
    c. Terminal
    d. Process
-
-## Programming Concepts (0)
-**Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
-   (a) Polymorphism
-   (b) Inheritance
-   (c) Abstraction
-   (d) Encapsulation

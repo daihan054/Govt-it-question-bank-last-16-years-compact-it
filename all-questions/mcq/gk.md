@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 437 questions
+**Table of Contents** — 6 subtopics · 444 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
 | 2 | [International Affairs](#international-affairs-104) | 104 |
-| 3 | [Everyday Science](#everyday-science-91) | 91 |
+| 3 | [Everyday Science](#everyday-science-98) | 98 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -1690,7 +1690,7 @@
 ১০। War & Peace কার লেখা? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
    40) [bitbox it book 163]__
 
-## Everyday Science (91)
+## Everyday Science (98)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -2328,6 +2328,30 @@
    a. Direct Addressing
    b. Immediate Addressing
    c. Register Addressing Differentiate among them with examples.
+
+92. **(b) Simplify using K-map. F(A,B,C) = A'BC' + A'BC + AB'C' + AB'C + ABC' + ABC** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
+
+93. **(a) Create an example of a trigger.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+
+94. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
+   (a) You are given the network
+   128. 0.0.0/16. You need to create 492 subnets.
+   (i) Calculate the number of hosts per subnet.
+   (ii) Determine the subnet mask.
+
+95. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
+   (b) Alice wants to send a message to Bob using asymmetric key cryptography.
+   (i) Which key is used for encryption?
+   (ii) Which key is used for decryption?
+
+96. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
+   (a) Given the following traversals of a binary tree: Preorder: 3, 9, 20, 17,
+   6. In order: 9, 3, 17, 20,
+   6. Determine whether a binary tree can be constructed from the given traversals. If possible, construct the tree.
+
+97. **(b) Write a real-life example where Depth-First Search (DFS) performs more efficiently than Breadth-First Search (BFS). Why is DFS better in that situation?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 234]]*
+
+98. **(b) What is the advantage of the Agile methodology over the Waterfall methodology?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
 
 ## Geography & Environment (26)
 

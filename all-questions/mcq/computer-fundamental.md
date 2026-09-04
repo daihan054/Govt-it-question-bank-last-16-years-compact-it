@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 145 questions
+**Table of Contents** — 6 subtopics · 149 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-43) | 43 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-47) | 47 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (43)
+## Hardware Components & Peripherals (47)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -279,6 +279,14 @@
    (b) Requires heuristic functions
    (c) Can get stuck in local optima
    (d) Uses too much memory
+
+44. **(a) Find the output of this program.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 230]]*
+
+45. **(b) Class C has some features. Class D uses all features of Class C and has some extra features of its own. Identify the concept used here in Object-Oriented Programming (OOP) and explain with an example.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 230]]*
+
+46. **(a) Let A= \{1,2,3,4,5,6,7,8\}. If five integers are selected from A, prove that at least one pair of the selected integers has a sum of 9. Use the Pigeonhole Principle.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
+
+47. **A signal has a frequency range of 300 Hz to 3400 Hz. A Pulse Code Modulation (PCM) system is used to digitize the signal. The maximum quantization error is \\pm\\Delta/2 = \\pm 1\\% full scale, and the signal voltage ranges from -1 V to +1 V. Determine the number of bits per sample (n) and the bit rate of the PCM system.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 237]]*
 
 ## Software Types & Classification (40)
 

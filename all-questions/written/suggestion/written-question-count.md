@@ -1,17 +1,17 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3221** questions.
+Sorted by count, highest first. Total **3243** questions.
 
 ## IT questions
 
-Total: **2676** questions.
+Total: **2694** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **519** |
-| | Subnetting & IP Addressing | 112 |
-| | OSI & TCP/IP Reference Model | 54 |
+| **Computer Networks** | **— all subcategories —** | **521** |
+| | Subnetting & IP Addressing | 113 |
+| | OSI & TCP/IP Reference Model | 55 |
 | | Networking Fundamentals & Terminology | 32 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 23 |
 | | Networking Devices | 23 |
@@ -103,8 +103,8 @@ Total: **2676** questions.
 | | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Cryptography & Network Security | 2 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **162** |
-| | Computer Fundamentals & Acronyms | 68 |
+| **Computer Fundamentals** | **— all subcategories —** | **177** |
+| | Computer Fundamentals & Acronyms | 83 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
@@ -236,9 +236,9 @@ Total: **2676** questions.
 | | Grammar & Ambiguity | 5 |
 | | Lexical Analysis & Compiler Phases | 5 |
 | | Linker & Loader | 1 |
-| **Programming Languages** | **— all subcategories —** | **8** |
+| **Programming Languages** | **— all subcategories —** | **9** |
 | | Visual Basic & .NET | 6 |
-| | Core Programming Languages | 2 |
+| | Core Programming Languages | 3 |
 | **Image Processing** | **— all subcategories —** | **7** |
 | | Computer Graphics (Vector & Raster) | 3 |
 | | Color Models | 1 |
@@ -250,7 +250,7 @@ Total: **2676** questions.
 
 ## General Questions
 
-Total: **545** questions.
+Total: **549** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -259,24 +259,24 @@ Total: **545** questions.
 | | International Affairs | 70 |
 | | Everyday Science & Environment | 22 |
 | | Banking & ICT Abbreviations | 8 |
-| **Bangla** | **— all subcategories —** | **123** |
+| **Bangla** | **— all subcategories —** | **125** |
 | | বাংলা ব্যাকরণ ও সাহিত্য | 61 |
-| | Focus Writing | 25 |
+| | Focus Writing | 27 |
 | | Translation | 19 |
 | | পত্র লিখন | 7 |
 | | সারমর্ম / সারাংশ | 6 |
 | | এক কথায় প্রকাশ (One Word Substitution) | 5 |
-| **English** | **— all subcategories —** | **112** |
+| **English** | **— all subcategories —** | **113** |
 | | Focus Writing | 37 |
 | | English Grammar | 29 |
-| | Translation | 18 |
+| | Translation | 19 |
 | | Idioms & Phrases | 9 |
 | | English Vocabulary & Antonyms | 7 |
 | | Letter & Application Writing | 6 |
 | | Reading Comprehension | 5 |
 | | English Literature & Authors | 1 |
-| **Math** | **— all subcategories —** | **96** |
-| | Arithmetic & Algebra Problems | 16 |
+| **Math** | **— all subcategories —** | **97** |
+| | Arithmetic & Algebra Problems | 17 |
 | | Set Theory & Discrete Math | 13 |
 | | Percentage, Profit & Loss, Simple & Compound Interest | 12 |
 | | Basic Arithmetic & Average | 11 |

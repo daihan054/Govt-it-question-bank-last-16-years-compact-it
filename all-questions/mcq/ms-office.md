@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 4 subtopics · 19 questions
+**Table of Contents** — 5 subtopics · 19 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,6 +7,7 @@
 | 2 | [MS Word](#ms-word-5) | 5 |
 | 3 | [MS PowerPoint](#ms-powerpoint-3) | 3 |
 | 4 | [MS Access](#ms-access-1) | 1 |
+| 5 | [MS Office & Shortcuts](#ms-office--shortcuts-0) | 0 |
 
 <!-- TOC END -->
 
@@ -133,3 +134,6 @@
    b. Form
    c. Worksheets
    d. Modules
+
+## MS Office & Shortcuts (0)
+**(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 162 questions
+**Table of Contents** — 10 subtopics · 177 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-68) | 68 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-83) | 83 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
 | 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (68)
+## Computer Fundamentals & Acronyms (83)
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -189,6 +189,36 @@
 67. **Solve a memory address calculation problem given the number of pages, frames, and page size. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
 68. **GK: Write short notes on the Rohingya issue — causes and current situation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+69. **উপসর্গ কী? কত প্রকার ও কী কী?-** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+70. **বাক্য শুদ্ধ করো (৫টি)** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+71. **Correct the spelling: neumonia** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+72. **Make it passive: Do not close the door.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+73. **Identify the sentence type: "Though he is poor, he is honest."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+74. **Make negative: "Everybody hates a liar."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+75. **Make negative without changing the meaning: "Man is mortal."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+76. **BCC establishment year.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+77. **দীর্ঘতম নদী?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+78. **ICT কার্যালয় কবে শুরু?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+79. **কয়টি পঞ্চবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+80. **সার্ক দেশ কয়টি?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+81. **Web 3.0 কোন প্রযুক্তির সঙ্গে সম্পর্কিত?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+82. **পরীক্ষায় 120 টি MCQ প্রশ্নের প্রত্যেকটি সঠিক উত্তরের জন্য 1 নম্বর প্রদান করা হয় এবং প্রত্যেকটি ভুল উত্তরের জন্য 1/4 নম্বর কর্তন করা হয়। একজন পরীক্ষার্থী সকল প্রশ্নের উত্তর দিয়ে 65 নম্বর প্রাপ্ত হয়েছে। পরীক্ষার্থী কতগুলো সঠিক এবং কতগুলো ভুল উত্তর দিয়েছিল?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+83. **Algebra Question: If 2x + 3y = 12 and x - y = 2, find the values of x and y.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
 ## ICT in Society & Governance (24)
 

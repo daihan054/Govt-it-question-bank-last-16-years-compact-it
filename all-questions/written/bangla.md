@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 123 questions
+**Table of Contents** — 6 subtopics · 125 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [বাংলা ব্যাকরণ ও সাহিত্য](#বাংলা-ব্যাকরণ-ও-সাহিত্য-61) | 61 |
-| 2 | [Focus Writing](#focus-writing-25) | 25 |
+| 2 | [Focus Writing](#focus-writing-27) | 27 |
 | 3 | [Translation](#translation-19) | 19 |
 | 4 | [পত্র লিখন](#পত্র-লিখন-7) | 7 |
 | 5 | [সারমর্ম / সারাংশ](#সারমর্ম--সারাংশ-6) | 6 |
@@ -156,8 +156,7 @@
 
 **৫ টা ম্যাথ, বাংলা ব্যাকরণ, অনুবাদ ইত্যাদি।** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 42]]*
 
-## Focus Writing (25)
-
+## Focus Writing (27)
 1. Focus Writing in Bangla: "বাংলাদেশের অর্থনীতিতে মোবাইল ব্যাংকিং: সম্ভাবনা, বাধা ও উত্তরণের উপায়" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
 2. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ বিষয়ক একটি প্রবন্ধ রচনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
@@ -207,6 +206,10 @@
 24. **Focus Writing (বাংলা): বাংলা বন্ড** *[6 Banks & Financial Institutions Assistant Programmer 2021 (ET: N/A)]*
 
 25. **কোভিড-১৯ এর ক্ষতিকারক প্রভাব মোকাবেলায় তথ্য প্রযুক্তির প্রয়োগ ও ভূমিকার উপর একটি সংক্ষিপ্ত রচনা বাংলায় লিখুন।** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+26. **"৩৬ জুলাই" বিষয়ে একটি অনুচ্ছেদ লিখ। (৩ নম্বর)** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+27. **Translate ৩টি বাক্য বাংলা থেকে ইংরেজিতে।** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
 ## Translation (19)
 

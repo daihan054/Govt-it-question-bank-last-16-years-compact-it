@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 96 questions
+**Table of Contents** — 15 subtopics · 97 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Arithmetic & Algebra Problems](#arithmetic--algebra-problems-16) | 16 |
+| 1 | [Arithmetic & Algebra Problems](#arithmetic--algebra-problems-17) | 17 |
 | 2 | [Set Theory & Discrete Math](#set-theory--discrete-math-13) | 13 |
 | 3 | [Percentage, Profit & Loss, Simple & Compound Interest](#percentage-profit--loss-simple--compound-interest-12) | 12 |
 | 4 | [Basic Arithmetic & Average](#basic-arithmetic--average-11) | 11 |
@@ -23,8 +23,7 @@
 
 ---
 
-## Arithmetic & Algebra Problems (16)
-
+## Arithmetic & Algebra Problems (17)
 1. **তিন ক্রমের ম্যাজিক সংখ্যা কোনটি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
 2. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝাটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
@@ -56,6 +55,8 @@
 15. **২. x + \frac{1}{x} = \sqrt{3} হলে x^3 + \frac{1}{x^3} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
 16. **M^0 + \sqrt[3]{8} + \text{Logs}_5{125} + (0100)^2 + 5** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+17. **একজন ৪% ও ৬% সুদে দুটি ঋণ নিয়েছে। মোট ঋণ এবং মোট সুদের মান দেওয়া আছে। ৪% ও ৬% হারে নেওয়া ঋণের পরিমাণ কত ছিল? [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
 ## Set Theory & Discrete Math (13)
 

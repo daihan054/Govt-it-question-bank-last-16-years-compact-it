@@ -1,17 +1,17 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2771** questions.
+Sorted by count, highest first. Total **2785** questions.
 
 ## IT questions
 
-Total: **1625** questions.
+Total: **1632** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **303** |
+| **Computer Networks** | **— all subcategories —** | **304** |
+| | Networking Fundamentals & Terminology | 59 |
 | | Application Layer Protocols | 58 |
-| | Networking Fundamentals & Terminology | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
 | | Wireless & Mobile Communication | 23 |
@@ -37,8 +37,9 @@ Total: **1625** questions.
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **145** |
-| | Hardware Components & Peripherals | 43 |
+| | Database Fundamentals & SQL | 0 |
+| **Computer Fundamentals** | **— all subcategories —** | **149** |
+| | Hardware Components & Peripherals | 47 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -49,7 +50,7 @@ Total: **1625** questions.
 | | Power Systems & Generation | 18 |
 | | Signals & Systems | 11 |
 | | Diodes & Rectifiers | 4 |
-| **C Programming** | **— all subcategories —** | **105** |
+| **C Programming** | **— all subcategories —** | **107** |
 | | Output Tracing | 36 |
 | | Control Statements & Loops | 16 |
 | | Arrays & Functions | 15 |
@@ -58,8 +59,8 @@ Total: **1625** questions.
 | | Pointers & Memory Allocation | 5 |
 | | Recursion | 4 |
 | | Storage Classes & Scope | 3 |
+| | Programming Concepts | 2 |
 | | Flowcharts & Algorithms | 1 |
-| | Programming Concepts | 0 |
 | **Object Oriented Programming (OOP)** | **— all subcategories —** | **100** |
 | | Java Programming | 48 |
 | | Polymorphism & Overloading | 16 |
@@ -148,6 +149,7 @@ Total: **1625** questions.
 | | MS Word | 5 |
 | | MS PowerPoint | 3 |
 | | MS Access | 1 |
+| | MS Office & Shortcuts | 0 |
 | **AI & Machine Learning** | **— all subcategories —** | **18** |
 | | Machine Learning & AI Concepts | 18 |
 | **Compiler & Theory of Computation** | **— all subcategories —** | **6** |
@@ -155,14 +157,14 @@ Total: **1625** questions.
 
 ## General Questions
 
-Total: **1146** questions.
+Total: **1153** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **437** |
+| **General Knowledge** | **— all subcategories —** | **444** |
 | | Bangladesh Affairs | 171 |
 | | International Affairs | 104 |
-| | Everyday Science | 91 |
+| | Everyday Science | 98 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
