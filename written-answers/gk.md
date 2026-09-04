@@ -618,143 +618,387 @@
 
 1. What is the name of the central bank of the United Kingdom? [SO IT 25-07-2026]
 
+   Answer: Bank of England.
+
 2. Which international organization publishes the "World Economic Outlook" report? [SO IT 25-07-2026]
+
+   Answer: International Monetary Fund (IMF).
 
 3. What is the name of the international organization that monitors global health standards and coordinates the response to pandemics? *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+   Answer: World Health Organization (WHO).
+
 4. Where is the headquarters of the International Monetary Fund (IMF) located? *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
+
+   Answer: Washington, D.C., United States.
 
 5. Which country has the world's longest coastline? *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+   Answer: Canada (with a total coastline of over 202,080 kilometers).
+
 6. **সবুজ গ্রিন হাউস গ্যাসের প্রভাবের LDC এর ভূমিকা কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+   Answer:
+   - নগণ্য নির্গমন: স্বল্পোন্নত দেশগুলো (LDC) বৈশ্বিক গ্রিনহাউস গ্যাস নির্গমনের মাত্র ১%-এরও কম অংশের জন্য দায়ী।
+   - চরম ঝুঁকিপূর্ণ শিকার: ভৌগোলিক অবস্থান ও আর্থিক সীমাবদ্ধতার কারণে জলবায়ু পরিবর্তনজনিত দুর্যোগ (বন্যা, ঘূর্ণিঝড়, খরা, সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধি)-র প্রথম ও প্রধান শিকারে পরিণত হচ্ছে এলডিসি দেশগুলো।
+   - আন্তর্জাতিক প্ল্যাটফর্মে ভূমিকা: এলডিসি গ্রুপ কপ (COP) সম্মেলনে জলবায়ু ক্ষতিপূরণ (Loss and Damage Fund), অভিযোজন তহবিল এবং প্রযুক্তি স্থানান্তরের জন্য জোরালো দাবি উপস্থাপন করে।
 
 7. **রাশিয়া ও ইউক্রেন যুদ্ধের মূল কারণগুলো কী কী? ব্যাখ্যা করুন।** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
+   Answer:
+   - ন্যাটোর পূর্বমুখী সম্প্রসারণ: ইউক্রেনের পশ্চিমা সামরিক জোট ন্যাটোতে যোগদানের প্রচেষ্টা রাশিয়া তার জাতীয় নিরাপত্তার জন্য সরাসরি হুমকি বলে বিবেচনা করে।
+   - ভূরাজনৈতিক আধিপত্য: সোভিয়েত ইউনিয়নের পতনের পর ইউক্রেনকে তার প্রভাববলয়ে রাখা রাশিয়ার কৌশলগত ভূরাজনৈতিক স্বার্থ।
+   - ক্রিমিয়া ও দনবাস সংকট: ২০১৪ সালে রাশিয়ার ক্রিমিয়া অন্তর্ভুক্তি এবং ইউক্রেনের পূর্বাঞ্চলীয় রুশভাষী দনবাস (দোনেৎস্ক ও লুহানস্ক) অঞ্চলের সংঘাত এ যুদ্ধের ক্ষেত্র তৈরি করে।
+
 8. **পিং পং কূটনীতি (Ping Pong Diplomacy) কী? এর ফলাফল কী হয়েছিল?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
+
+   Answer:
+   - পিং পং কূটনীতি: ১৯৭১ সালে জাপানের নাগোয়ায় বিশ্ব টেবিল টেনিস চ্যাম্পিয়নশিপ চলাকালীন মার্কিন টেবিল টেনিস দলের চীন সফরের মাধ্যমে দুই বৈরী দেশের মধ্যে গড়ে ওঠা অনানুষ্ঠানিক কূটনৈতিক যোগাযোগকে পিং পং কূটনীতি বলা হয়।
+   - ফলাফল: দুই দশকেরও বেশি সময় ধরে চলা তিক্ত সম্পর্কের বরফ গলে এবং ১৯৭২ সালে মার্কিন প্রেসিডেন্ট রিচার্ড নিক্সনের ঐতিহাসিক বেইজিং সফরের পথ উন্মুক্ত হয়, যা শেষ পর্যন্ত চীন-যুক্তরাষ্ট্র আনুষ্ঠানিক কূটনৈতিক সম্পর্ক প্রতিষ্ঠা করে।
 
 9. **SDG কী? এর কয়টি লক্ষ্যমাত্রা রয়েছে? যে কোন ১০টি লক্ষ্যমাত্রার নাম লিখুন।** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
+   Answer:
+   - SDG (Sustainable Development Goals): জাতিসংঘ ঘোষিত ২০১৬-২০৩০ মেয়াদি ১৭টি সার্বজনীন টেকসই উন্নয়ন লক্ষ্যমাত্রা। এতে মোট ১৭টি গোল এবং ১৬৯টি সুনির্দিষ্ট লক্ষ্য (Targets) রয়েছে।
+   - ১০টি লক্ষ্যমাত্রার নাম:
+     - ১. দারিদ্র্য বিলুপ্তি (No Poverty)
+     - ২. ক্ষুধা মুক্তি (Zero Hunger)
+     - ৩. সুস্বাস্থ্য ও কল্যাণ (Good Health and Well-being)
+     - ৪. গুণগত শিক্ষা (Quality Education)
+     - ৫. জেন্ডার সমতা (Gender Equality)
+     - ৬. নিরাপদ পানি ও স্যানিটেশন (Clean Water and Sanitation)
+     - ৭. সাশ্রয়ী ও দূষণমুক্ত জ্বালানি (Affordable and Clean Energy)
+     - ৮. শোভন কাজ ও অর্থনৈতিক প্রবৃদ্ধি (Decent Work and Economic Growth)
+     - ৯. শিল্প, উদ্ভাবন ও অবকাঠামো (Industry, Innovation and Infrastructure)
+     - ১০. অসমতা হ্রাস (Reduced Inequalities)
+
 10. **বিশ্বায়ন প্রক্রিয়ার মূল চালিকা শক্তি (Driving Forces of Globalization) গুলো কী কী?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
+
+    Answer:
+    - ১. তথ্য ও যোগাযোগ প্রযুক্তি (ICT): ইন্টারনেট, স্যাটেলাইট ও টেলিযোগাযোগের মাধ্যমে তাৎক্ষণিক বৈশ্বিক তথ্য আদান-প্রদান।
+    - ২. আন্তর্জাতিক বাণিজ্য উদারীকরণ: মুক্ত বাণিজ্য চুক্তি ও বিশ্ব বাণিজ্য সংস্থার (WTO) মাধ্যমে শুল্ক হ্রাস।
+    - ৩. বহুজাতিক কর্পোরেশন (MNCs): উৎপাদন ও সাপ্লাই চেইনের বিশ্বায়ন।
+    - ৪. আর্থিক বাজারের একীভূতকরণ: পুঁজি, শেয়ার ও রেমিট্যান্সের অবাধ আন্তঃসীমান্ত প্রবাহ।
+    - ৫. উন্নত পরিবহন নেটওয়ার্ক: বিমান ও কন্টেইনার শিপিংয়ের মাধ্যমে পণ্যের দ্রুত পরিবহন।
 
 11. **মানবিক করিডোর কী? ইউক্রেন কোন বন্দরকে মানবিক করিডোর ঘোষণা করেছে?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+    Answer:
+    - মানবিক করিডোর (Humanitarian Corridor): যুদ্ধ বা সশস্ত্র সংঘাত চলাকালীন বেসামরিক নাগরিকদের নিরাপদে সরিয়ে নেওয়া এবং ত্রাণসামগ্রী ও খাদ্য পরিবহনের জন্য নির্ধারিত একটি নির্দিষ্ট সংঘাতমুক্ত অস্থায়ী পথ।
+    - ঘোষিত বন্দর: কৃষ্ণসাগরের 'ওডেসা' (Odesa) এবং সংলগ্ন চোরনোমোরস্ক ও পিভদেনি বন্দরসমূহ।
+
 12. **"সবুজ অর্থনীতি" কাকে বলে? কার্ল বুরকাতের মতে সবুজ অর্থনীতি কয়টি বিষয়ের উপর নির্ভর করে? কী কী?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
+
+    Answer:
+    - সবুজ অর্থনীতি (Green Economy): যে অর্থনৈতিক কর্মকাণ্ড পরিবেশগত ঝুঁকি এবং কার্বন নির্গমন উল্লেখযোগ্য হারে হ্রাস করে টেকসই উন্নয়ন নিশ্চিত করে, তাকে সবুজ অর্থনীতি বলে।
+    - কার্ল বুরকাতের মতে ৬টি বিষয়ের উপর নির্ভর করে:
+      - ১. নবায়নযোগ্য জ্বালানি (Renewable Energy)
+      - ২. সবুজ ভবন ও নির্মাণ (Green Buildings)
+      - ৩. টেকসই পরিবহন ব্যবস্থা (Sustainable Transport)
+      - ৪. পানি ব্যবস্থাপনা (Water Management)
+      - ৫. বর্জ্য ব্যবস্থাপনা ও পুনর্ব্যবহার (Waste Management)
+      - ৬. টেকসই ভূমি ও কৃষি ব্যবস্থাপনা (Land Management)
 
 13. **পৃথিবীর সর্ববৃহৎ দ্বীপটির নাম কী? এটি কোথায় অবস্থিত এবং কোন দেশের নিয়ন্ত্রণাধীন?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+    Answer:
+    - নাম: গ্রিনল্যান্ড (Greenland — আয়তন প্রায় ২১,৬৬,০৮৬ বর্গ কিমি)।
+    - অবস্থান: উত্তর আটলান্টিক ও আর্কটিক মহাসাগরের মধ্যবর্তী অঞ্চলে।
+    - নিয়ন্ত্রণ: ডেনমার্কের একটি স্বায়ত্তশাসিত অঞ্চল।
+
 14. **যুক্তরাষ্ট্র সরকারের নতুন দপ্তর "ডিপার্টমেন্ট অব গভর্নমেন্ট এফিসিয়েন্সি" এর প্রধান নির্বাহী কর্মকর্তা কে?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
+
+    Answer: ইলন মাস্ক (Elon Musk) এবং বিবেক রামাস্বামী (Vivek Ramaswamy)।
 
 15. **“অপারেশন আয়রন সর্ডস কী?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
 
+    Answer: ২০২৩ সালের ৭ অক্টোবর হামাসের হামলার প্রতিক্রিয়ায় গাজা উপত্যকায় ইসরায়েলি প্রতিরক্ষা বাহিনী (IDF) কর্তৃক পরিচালিত সর্বাত্মক সামরিক অভিযানের সাংকেতিক নাম।
+
 16. **ভারত-চীন যুদ্ধ কত সালে হয়?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
+
+    Answer: ১৯৬২ সালে (২০ অক্টোবর থেকে ২০ নভেম্বর ১৯৬২)।
 
 17. **What is the difference between a Green Economy and a Blue Economy?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 313 (ET: N/A)]*
 
+    Answer:
+    - Green Economy: Focuses on terrestrial sustainable development, reducing environmental risks through low-carbon industrialization, renewable energy (solar, wind), energy-efficient buildings, and waste recycling.
+    - Blue Economy: Focuses specifically on the sustainable use of ocean, marine, and coastal resources for economic growth (fisheries, offshore oil/gas, marine biotechnology, maritime trade, and eco-tourism) while preserving marine ecosystems.
+
 18. **Concept of Westminster Government?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 313 (ET: N/A)]*
+
+    Answer: The Westminster system is a parliamentary system of government developed in the United Kingdom:
+    - Sovereign/Head of State is ceremonial (Monarch or President).
+    - Executive authority is exercised by a Prime Minister and Cabinet drawn directly from members of Parliament.
+    - The Cabinet is collectively responsible to the democratically elected lower house.
+    - Presence of an institutionalized parliamentary opposition to ensure government accountability.
 
 19. **Who was Sir David Attenborough?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+    Answer: Sir David Attenborough is a world-renowned English broadcaster, natural historian, and environmental activist, famous for writing and presenting iconic BBC natural history documentary series including "Planet Earth", "Blue Planet", and "Life on Earth".
+
 20. **2026 সালে ফিফা ফুটবল বিশ্বকাপ কোথায় হবে?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
+
+    Answer: যৌথভাবে উত্তর আমেরিকার ৩টি দেশে অনুষ্ঠিত হবে — যুক্তরাষ্ট্র, কানাডা এবং মেক্সিকো।
 
 21. **Carlos Ancelotti কোন দেশের কোন ক্লাবের ম্যানেজার?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+    Answer: তিনি ইতালির নাগরিক এবং স্প্যানিশ ফুটবল ক্লাব রিয়াল মাদ্রিদ (Real Madrid)-এর প্রধান ম্যানেজার/কোচ।
+
 22. **টেস্ট ক্রিকেটে এখন পর্যন্ত কোন কোন বোলার 700 উইকেট লাভ করেছে?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
+
+    Answer: ৩ জন বোলার:
+    - ১. মুত্তিয়া মুরালিধরন (শ্রীলঙ্কা — ৮০০ উইকেট)
+    - ২. শেন ওয়ার্ন (অস্ট্রেলিয়া — ৭০৮ উইকেট)
+    - ৩. জেমস অ্যান্ডারসন (ইংল্যান্ড — ৭০০+ উইকেট)
 
 23. **পেট্রা শহরটি কোথায় অবস্থিত এবং এটি কারা নির্মাণ করে?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+    Answer: পেট্রা শহরটি বর্তমান জর্ডানে অবস্থিত; এটি খ্রিস্টপূর্ব ৪র্থ শতকে নাবাতিয়ানরা (Nabataeans) লাল বেলেপাথরের পাহাড় কেটে নির্মাণ করে।
+
 24. **বাংলাদেশের কোন নাগরিক লন্ডনের মেয়র নির্বাচিত হয়েছে এবং তিনি কতবার হয়েছে?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
+
+    Answer: লন্ডনের মেয়র সাদিক খান (Sadiq Khan — পাকিস্তানি বংশোদ্ভূত ব্রিটিশ নাগরিক) টানা ৩ বার (২০১৬, ২০২১, ২০২৪) লন্ডনের মেয়র নির্বাচিত হয়েছেন। (লন্ডনের স্থানীয় বরো মেয়র হিসেবে বাংলাদেশি বংশোদ্ভূত একাধিক ব্যক্তি নির্বাচিত হয়েছেন)।
 
 25. **What is BIMSTEC?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 322 (ET: BIBM)]*
 
+    Answer: BIMSTEC stands for Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation. It is a regional multilateral organization formed in 1997 comprising 7 member countries bordering the Bay of Bengal: Bangladesh, Bhutan, India, Myanmar, Nepal, Sri Lanka, and Thailand. Its permanent secretariat is in Dhaka, Bangladesh.
+
 26. **Mention the day and month of celebration of International Mother's Day.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 322 (ET: BIBM)]*
+
+    Answer: It is celebrated annually on the Second Sunday of May.
 
 27. **Who will host the T20 World Cup 2024?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 323 (ET: BIBM)]*
 
+    Answer: Jointly hosted by the United States (USA) and the West Indies.
+
 28. **UNDP works in different countries and territories to eradicate poverty while protecting the planet. The headquarters of UNDP is located in which country?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 429 (ET: BIBM)]*
+
+    Answer: United States (located in New York City).
 
 29. **On 17 November 2015, UNESCO declared International Day for Universal Access to Information. Which day is observed as International Information Day?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 429 (ET: BIBM)]*
 
+    Answer: 28 September.
+
 30. **Which campaign works toward building an international consensus and a sustained global movement of leaders and citizens to eliminate nuclear weapons?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 430 (ET: BIBM)]*
+
+    Answer: ICAN (International Campaign to Abolish Nuclear Weapons) / Global Zero.
 
 31. **জাতিসংঘের নিরাপত্তা পরিষদের দায়িত্ব বর্ণনা করুন।** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+    Answer:
+    - প্রধান দায়িত্ব: আন্তর্জাতিক শান্তি ও নিরাপত্তা রক্ষা করা (অনুচ্ছেদ ২৪)।
+    - বিরোধ নিষ্পত্তি: আন্তর্জাতিক বিরোধের তদন্ত এবং শান্তিপূর্ণ সমাধানের সুপারিশ প্রদান।
+    - বাধ্যতামূলক পদক্ষেপ: আগ্রাসী রাষ্ট্রের বিরুদ্ধে অর্থনৈতিক নিষেধাজ্ঞা, কূটনৈতিক সম্পর্ক ছিন্ন বা সামরিক পদক্ষেপ গ্রহণের নির্দেশ দেওয়া।
+    - শান্তিরক্ষা মিশন: সদস্য রাষ্ট্রগুলোতে জাতিসংঘের শান্তিরক্ষী বাহিনী মোতায়েন ও পরিচালনা করা।
+
 32. **বিশ্ব অর্থনীতিতে হরমুজ প্রণালির গুরুত্ব কী?** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+    Answer:
+    - বৈশ্বিক জ্বালানি করিডোর: পারস্য উপসাগর ও ওমান উপসাগরের মধ্যবর্তী এ প্রণালি দিয়ে বিশ্বের মোট সমুদ্রবাহিত পেট্রোলিয়াম তেলের প্রায় ২০-২৫% পরিবাহিত হয়।
+    - বাণিজ্যিক গুরুত্ব: সৌদি আরব, ইরান, ইরাক, ইউএই ও কুয়েতের মতো শীর্ষ ওপেক (OPEC) তেল রপ্তানিকারক দেশের প্রধান জ্বালানি রপ্তানি পথ।
+    - মূল্য নিয়ন্ত্রণ: হরমুজ প্রণালিতে যেকোনো সামরিক অস্থিরতা মুহূর্তের মধ্যে আন্তর্জাতিক বাজারে তেলের দাম বহুগুণ বৃদ্ধি করে এবং বৈশ্বিক সরবরাহ শৃঙ্খলে ধস নামায়।
 
 33. **অর্থনৈতিক কূটনীতি (Economic Diplomacy) কী? বাংলাদেশের অর্থনৈতিক কূটনীতি (Economic Diplomacy) এর চ্যালেঞ্জসমূহ কী কী?** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+    Answer:
+    - অর্থনৈতিক কূটনীতি: জাতীয় অর্থনৈতিক সমৃদ্ধি অর্জনের লক্ষ্যে আন্তর্জাতিক অঙ্গনে বাণিজ্য প্রসার, সরাসরি বৈদেশিক বিনিয়োগ (FDI) আকর্ষণ, নতুন শ্রমবাজার অনুসন্ধান এবং অর্থনৈতিক চুক্তি সম্পাদনে রাষ্ট্রীয় কূটনীতির কৌশলগত প্রয়োগকে অর্থনৈতিক কূটনীতি বলে।
+    - বাংলাদেশের প্রধান চ্যালেঞ্জসমূহ:
+      - ২০২৬ সালে এলডিসি (LDC) থেকে উত্তরণের পর উন্নত দেশগুলোর শুল্কমুক্ত ও কোটামুক্ত বাজার সুবিধা হারানো।
+      - রপ্তানি আয়ের ক্ষেত্রে একক পণ্যের (তৈরি পোশাক) ওপর অতিরিক্ত নির্ভরতা।
+      - দক্ষ মানবসম্পদের ঘাটতি এবং প্রচলিত শ্রমবাজারগুলোতে ভিসা জটিলতা।
+      - বিদেশি বিনিয়োগ আকর্ষণে জটিল আমলাতান্ত্রিক দীর্ঘসূত্রিতা ও লজিস্টিক দুর্বলতা।
+
 34. **জলবায়ু পরিবর্তন সমস্যা মোকাবেলায় G-7 এর ভূমিকা কী?** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+    Answer:
+    - নির্গমন হ্রাস প্রতিশ্রুতি: ২০৫০ সালের মধ্যে নেট জিরো কার্বন নির্গমন অর্জনে কয়লাভিত্তিক বিদ্যুৎ কেন্দ্র বন্ধের অঙ্গীকার।
+    - জলবায়ু অর্থায়ন: উন্নয়নশীল দেশগুলোর জন্য প্রতি বছর ১০০ বিলিয়ন ডলার জলবায়ু সহায়তা তহবিল নিশ্চিতকরণ।
+    - 'ক্লাইমেট ক্লাব' গঠন: প্যারিস চুক্তির লক্ষ্যমাত্রা দ্রুত বাস্তবায়নে উন্নত ও উন্নয়নশীল দেশগুলোর মধ্যে যৌথ শিল্প ডিকার্বনাইজেশন ফোরাম প্রতিষ্ঠা।
 
 35. **FTA এবং PTA এর পূর্ণরূপ লিখুন এবং এদের মধ্যে পার্থক্য কী?** *[সাধারণ জ্ঞান: আন্তর্জাতিক বিষয়াবলি, বিষয় কোড: ১০৪, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+    Answer:
+    - পূর্ণরূপ:
+      - FTA: Free Trade Agreement (মুক্ত বাণিজ্য চুক্তি)
+      - PTA: Preferential Trade Agreement (অগ্রাধিকারমূলক বাণিজ্য চুক্তি)
+    - পার্থক্য:
+      - শুল্ক ছাড়ের পরিধি: PTA-তে কেবল নির্বাচিত নির্দিষ্ট কিছু পণ্যের ওপর পারস্পরিক শুল্ক হার কমানো বা ছাড় দেওয়া হয়; অন্যদিকে FTA-তে সদস্য দেশগুলোর মধ্যে প্রায় সকল পণ্যের ওপর থেকে শুল্ক ও কোটা সম্পূর্ণ তুলে নেওয়া হয়।
+      - বাণিজ্যের গভীরতা: PTA হলো মুক্ত বাণিজ্যের প্রাথমিক ধাপ, আর FTA হলো পূর্ণাঙ্গ মুক্ত বাণিজ্য ব্যবস্থা।
+
 36. **5.3 What is the name of the central bank of the United Kingdom?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+    Answer: Bank of England.
 
 37. **5.4 Which international organization publishes the "World Economic Outlook" report?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+    Answer: International Monetary Fund (IMF).
+
 38. **How many country participated in cricket world cup 2023?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
+
+    Answer: 10 countries.
 
 39. **How many goals of SDG?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
+    Answer: 17 Goals (accompanied by 169 targets).
+
 40. **What is the function of Global Climate Fund?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
+
+    Answer: The Green Climate Fund (GCF) assists developing countries in responding to climate change by financing projects that reduce greenhouse gas emissions (mitigation) and help vulnerable communities adapt to unavoidable climate impacts (adaptation).
 
 41. **মেসোপটেমিয়া কোন দেশের সভ্যতা।** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
+    Answer: ইরাক (টাইগ্রিস ও ইউফ্রেটিস নদীর মধ্যবর্তী উর্বর অববাহিকায় গড়ে উঠেছিল)।
+
 42. **কোন প্রণালী এশিয়া আফ্রিকাকে পৃথক করেছে?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
+
+    Answer: বাব-এল-মান্দেব প্রণালী (Bab-el-Mandeb Strait)।
 
 43. **The first ODI Cricket was played on January 5, 1971 between which countries?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
+    Answer: Between Australia and England (at the Melbourne Cricket Ground).
+
 44. **Who won the Nobel Prize in Physics in 2023?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
+
+    Answer: Pierre Agostini, Ferenc Krausz, and Anne L'Huillier (for experimental methods that generate attosecond pulses of light).
 
 45. **Write down the names of new members of BRICS.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+    Answer: Egypt, Ethiopia, Iran, and the United Arab Emirates (UAE) officially joined BRICS on January 1, 2024.
+
 46. **Main Purposes of UNESCO.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
+
+    Answer:
+    - To promote world peace and security through international collaboration in education, science, and culture.
+    - To ensure universal access to quality education.
+    - To protect and preserve world cultural and natural heritage sites.
+    - To foster freedom of expression and digital media literacy.
 
 47. **Which city of China, the Asian Olympic be held in 2023?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+    Answer: Hangzhou, China (19th Asian Games).
+
 48. **বিজ্ঞানে নোবেল বিজয়ী ২০২৩ পেয়েছে কোন বিষয়ের উপরে?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+    Answer:
+    - চিকিৎসাবিজ্ঞানে: কার্যকরী mRNA কোভিড-১৯ ভ্যাকসিন তৈরির নিউক্লিওসাইড বেস পরিবর্তনের আবিষ্কারের জন্য।
+    - পদার্থবিজ্ঞানে: অ্যাটোসেকেন্ড আলোক তরঙ্গ উৎপাদনের পরীক্ষামূলক পদ্ধতির জন্য।
+    - রসায়নে: কোয়ান্টাম ডটস (Quantum Dots) আবিষ্কার ও সংশ্লেষণের জন্য।
 
 49. **Who is the inventor of IR 4.00?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
+    Answer: Professor Klaus Schwab (Founder and Executive Chairman of the World Economic Forum, introduced the concept in 2015/2016).
+
 50. **Breifly explain SDG.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 644 (ET: BUET)]*
+
+    Answer: The Sustainable Development Goals (SDGs), adopted by the United Nations in 2015, are a collection of 17 global goals designed to end poverty, fight inequality, protect the planet, and ensure peace and prosperity for all by 2030, covering social, economic, and environmental sustainability.
 
 51. **Greenpeace বলতে কি বুঝ?** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 658 (ET: N/A)]*
 
+    Answer: গ্রিনপিস (Greenpeace) হলো ১৯৭১ সালে প্রতিষ্ঠিত নেদারল্যান্ডসভিত্তিক একটি বিশ্বখ্যাত আন্তর্জাতিক পরিবেশবাদী স্বাধীন বেসরকারি সংস্থা, যা বৈশ্বিক জলবায়ু পরিবর্তন প্রতিরোধ, বনভূমি ও সমুদ্র সংরক্ষণ, পারমাণবিক নিরস্ত্রীকরণ এবং পরিবেশ সুরক্ষায় অহিংস প্রচারণামূলক কার্যক্রম পরিচালনা করে।
+
 52. **৯. পূর্ণরূপ লিখুন: UNIDO, ICJ, NATO** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
+
+    Answer:
+    - UNIDO: United Nations Industrial Development Organization
+    - ICJ: International Court of Justice
+    - NATO: North Atlantic Treaty Organization
 
 53. **১০. ডি-৮ প্রতিষ্ঠিত হয় কোন সালে? এর সদস্য সংখ্যা কত? এর সদরদপ্তর কোথায়?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
 
+    Answer:
+    - প্রতিষ্ঠা: ১৯৯৭ সালের ১৫ জুন (ইস্তাম্বুল ঘোষণার মাধ্যমে)।
+    - সদস্য সংখ্যা: ৮টি (বাংলাদেশ, মিশর, ইন্দোনেশিয়া, ইরান, মালয়েশিয়া, নাইজেরিয়া, পাকিস্তান, তুরস্ক)।
+    - সদরদপ্তর: ইস্তাম্বুল, তুরস্ক।
+
 54. **১১. বাংলাদেশের সাথে মিয়ানমারের প্রধান সমস্যার উল্লেখ করত: এর সমাধানের উপায় সংক্ষেপে বর্ণনা করুন।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 669 (ET: N/A)]*
+
+    Answer:
+    - প্রধান সমস্যা: জোরপূর্বক বাস্তুচ্যুত প্রায় ১২ লক্ষ রোহিঙ্গা শরণার্থীর টেকসই প্রত্যাবাসনে মিয়ানমারের অনীহা ও সীমান্ত এলাকায় সংঘাত।
+    - সমাধানের উপায়:
+      - মিয়ানমারে রোহিঙ্গাদের নাগরিকত্ব, নিরাপত্তা ও মৌলিক অধিকার নিশ্চিত করতে জাতিসংঘ ও আন্তর্জাতিক সম্প্রদায়ের প্রত্যক্ষ নজরদারি জোরদার করা।
+      - আসিয়ান (ASEAN), চীন ও ভারতের কূটনৈতিক প্রভাব কাজে লাগিয়ে নিরাপদ অঞ্চল (Safe Zone) তৈরি করা।
 
 55. **১২. ইউক্রেনের ৩টি সমুদ্রবন্দরের নাম লিখুন।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+    Answer:
+    - ১. ওডেসা বন্দর (Port of Odesa)
+    - ২. মারিউপোল বন্দর (Port of Mariupol)
+    - ৩. চোরনোমোরস্ক বন্দর (Port of Chornomorsk)
+
 56. **১৩. নিম্নলিখিত দেশগুলির রাজধানীর নাম লিখুন: লিবিয়া, হন্ডুরাস, লাটভিয়া।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
+
+    Answer:
+    - লিবিয়া: ত্রিপোলি (Tripoli)
+    - হন্ডুরাস: তেগুসিগালপা (Tegucigalpa)
+    - লাটভিয়া: রিগা (Riga)
 
 57. **১৪. শ্রীলংকার অর্থনৈতিক বিপর্যয়ের মূল কারণ কি?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
+    Answer:
+    - মাত্রাতিরিক্ত অনুৎপাদনশীল বৈদেশিক ঋণ গ্রহণ।
+    - ২০১৯ সালের ইস্টার হামলা ও কোভিড মহামারির কারণে পর্যটন আয়ে চরম ধস।
+    - একতরফাভাবে রাসায়নিক সার নিষিদ্ধ করায় কৃষি উৎপাদনে বিপর্যয়।
+    - বৈদেশিক মুদ্রার রিজার্ভ নিঃশেষ হয়ে আমদানি ব্যয় পরিশোধে অক্ষমতা ও চরম মুদ্রাস্ফীতি।
+
 58. **১৫. রাশিয়া-ইউক্রেন যুদ্ধের মূল কারণ সম্পর্কে তিনটি বাক্য লিখুন।** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
+
+    Answer:
+    - ১. ইউক্রেনের পশ্চিমা সামরিক জোট ন্যাটোতে (NATO) যোগদানের আনুষ্ঠানিক চেষ্টা রাশিয়া তার নিরাপত্তার জন্য মারাত্মক হুমকি মনে করে।
+    - ২. সোভিয়েত-পরবর্তী যুগে রাশিয়ার সীমান্ত নিরাপত্তা ও পূর্ব ইউরোপে ঐতিহাসিক ভূরাজনৈতিক প্রভাববলয় পুনর্প্রতিষ্ঠার প্রচেষ্টা।
+    - ৩. পূর্ব ইউক্রেনের দনবাস অঞ্চলে রুশ বংশোদ্ভূতদের নিরাপত্তা দাবি এবং ২০১৪ সালে ক্রিমিয়া অধিগ্রহণের ধারাবাহিক দ্বন্দ্ব।
 
 59. **(খ) জাতিসংঘের প্রথম মহাসচিব কে ছিলেন?** *[Software Assistant Programmer 13.10.2022 compact it 712 (ET: N/A)]*
 
+    Answer: ট্রিগভে লাই (Trygve Lie — নরওয়ের নাগরিক, ১৯৪৬-১৯৫২)।
+
 60. **(গ) জাতিসংঘের সর্বশেষ সদস্য রাষ্ট্রের নাম কি?** *[Software Assistant Programmer 13.10.2022 compact it 712 (ET: N/A)]*
+
+    Answer: দক্ষিণ সুদান (South Sudan — ১৯৩তম সদস্য রাষ্ট্র, ২০১১ সালে সদস্যপদ লাভ করে)।
 
 61. **সুয়েজ খাল কোন ২টি সাগরকে যুক্ত করেছে।** *[BWMRI Assistant Maintenance Engineer 2022 compact it 737 (ET: N/A)]*
 
+    Answer: ভূমধ্যসাগর এবং লোহিত সাগরকে।
+
 62. **আয়তন ও জনসংখ্যায় এশিয়া মহাদেশের ক্ষুদ্রতম দেশ কোনটি?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 737 (ET: N/A)]*
+
+    Answer: মালদ্বীপ (Maldives)।
 
 63. **একজন বিখ্যাত ব্যক্তির নাম লিখুন যিনি কৃষিতে গবেষণা করে শান্তিতে নোবেল পুরষ্কার জয় লাভ করেন?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 737 (ET: N/A)]*
 
+    Answer: ড. নরম্যান বোরলগ (Dr. Norman Borlaug — 'সবুজ বিপ্লবের জনক', ১৯৭০ সালে শান্তিতে নোবেল পুরস্কার লাভ করেন)।
+
 64. **জার্মানির প্রধানমন্ত্রী সমমর্যাদার পদ কোনটি ও সর্বপ্রথম মহিলার নাম কি?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 923 (ET: N/A)]*
+
+    Answer:
+    - সমমর্যাদার পদ: ফেডারেল চ্যান্সেলর (Federal Chancellor / Bundeskanzler)।
+    - প্রথম নারী চ্যান্সেলর: আঙ্গেলা মেরকেল (Angela Merkel)।
 
 65. **Short Question: a. SWIFT full form. b. Which international organization helps Rohingya? c. Where “Golden Gate” Situated?** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
+    Answer:
+    - a. SWIFT: Society for Worldwide Interbank Financial Telecommunication
+    - b. International organization helping Rohingya: UNHCR (United Nations High Commissioner for Refugees), along with IOM and WFP.
+    - c. Location of Golden Gate: San Francisco, California, United States.
+
 66. **১. CEDAW এর পূর্ণ রূপ কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+    Answer: Convention on the Elimination of All Forms of Discrimination Against Women.
 
 67. **৩. আফগানিস্তান এর মুদ্রার নাম কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+    Answer: আফগানি (Afghani)।
+
 68. **৪. হোয়াইট হল কোথায় অবস্থিত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+    Answer: লন্ডন, যুক্তরাজ্য (যুক্তরাজ্যের প্রশাসনিক দপ্তরসমূহের কেন্দ্রস্থল)।
 
 69. **৫. CIRDAP এর সদর দপ্তর কোথায়?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
+    Answer: ঢাকা, বাংলাদেশ (চামেলি হাউজ)।
+
 70. **৭. সোয়াজিল্যান্ড কোন মহাদেশে অবস্থিত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+    Answer: আফ্রিকা মহাদেশে (বর্তমান নাম: এসওয়াতিনি রাজ্য / Kingdom of Eswatini)।
 
 ## Everyday Science & Environment (22)
 
