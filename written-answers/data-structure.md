@@ -5985,4 +5985,27 @@ Answer:
 
 1. **(a) Compare Stack and Queue in context with data structure. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333-334]]*
 
+Answer:
+
+    | Feature | Stack | Queue |
+    |---|---|---|
+    | Working Principle | LIFO (Last-In, First-Out) or FILO | FIFO (First-In, First-Out) or LILO |
+    | Insertion Operation | `Push` — Adds element at the TOP end | `Enqueue` — Adds element at the REAR end |
+    | Deletion Operation | `Pop` — Removes element from the TOP end | `Dequeue` — Removes element from the FRONT end |
+    | Pointer Pointers | Uses a single pointer: `Top` | Uses two separate pointers: `Front` and `Rear` |
+    | Inspection Operation | `Peek` / `Top` examines the most recent element | `Front` / `Peek` examines the oldest element |
+    | Key Applications | Function call stack, recursion, expression evaluation (Infix to Postfix), undo/redo | CPU scheduling (Round Robin), printer spooling, BFS graph traversal, IO buffering |
+
 2. **Different data structures are used based on how data needs to be accessed and processed. Compare Stack and Queue in terms of how they handle data. Then, provide two real-life scenarios — one where a Stack is the most appropriate solution, and one where a Queue would be more effective.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*
+
+Answer:
+    How They Handle Data:
+    - Stack handles data in a **Last-In, First-Out (LIFO)** order. Both insertion and removal occur at a single designated end called `Top`. The most recently added item is always processed first.
+    - Queue handles data in a **First-In, First-Out (FIFO)** order. Insertion occurs at the `Rear` while extraction occurs at the `Front`, preserving the exact arrival sequence.
+
+    Real-Life Scenarios:
+    - 1. Stack Scenario — Web Browser History & Text Editor Undo:
+      - When a user navigates from Page A $\to$ Page B $\to$ Page C, each URL is pushed onto a navigation stack. When the user clicks the "Back" button, the browser pops the most recently visited URL (Page C) to return to Page B. A stack is essential because the most recent operation must be reversed first.
+    - 2. Queue Scenario — Shared Printer Spooling & Customer Service Ticket System:
+      - In an office network where 20 employees submit print jobs to a shared printer simultaneously, the print requests are placed in a FIFO print queue. The document submitted first is printed first. A queue ensures fairness and prevents job starvation.
+
