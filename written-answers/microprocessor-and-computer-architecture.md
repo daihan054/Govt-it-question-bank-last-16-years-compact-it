@@ -8088,6 +8088,172 @@ MOV AX, A534H এবং MOV AX, [A534H]
 1. (a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।
    (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) `Edge computing` is a model in which data is processed `near where it is produced` — on or beside the device itself — instead of being sent to a distant central cloud.
+
+   - The "edge" means the outer boundary of the network: the sensor, the camera, the machine, the local gateway or a small server in the same building.
+
+   ```mermaid
+   flowchart LR
+       A[IoT devices<br/>sensors, cameras] --> B[Edge node<br/>local processing]
+       B -->|only summaries<br/>and alerts| C[Cloud data centre]
+       B -->|instant decision| A
+   ```
+
+   How it differs from cloud computing
+   ```
+      Cloud computing : device -> internet -> distant data centre -> back
+                        tens to hundreds of milliseconds of round trip
+
+      Edge computing  : device -> local node -> decision
+                        a few milliseconds, and it works without the internet
+   ```
+
+   Why it is used
+   - `Low latency.` A self-driving car braking, or a robot arm stopping, cannot wait 100 ms for a reply from a data centre. Local processing answers in milliseconds.
+   - `Less bandwidth.` A CCTV camera produces gigabytes an hour. The edge node analyses the video locally and sends only the alerts, not the stream.
+   - `Works offline.` A factory or a remote pump station keeps running when the link to the cloud is down.
+   - `Privacy and compliance.` Sensitive data — medical records, biometrics, banking transactions — is processed locally and never leaves the premises, which regulators often require.
+   - `Lower cost.` Bandwidth and cloud storage are expensive; sending only the useful summary is far cheaper.
+   - `Scalability.` Thousands of devices are handled by their local nodes instead of all converging on one data centre.
+
+   Where it is used
+   ```
+      Self-driving cars and driver assistance
+      Industrial IoT and predictive maintenance in factories
+      CCTV with on-camera face and number-plate recognition
+      Smart grids and utility metering
+      Healthcare monitors and wearables
+      Retail point-of-sale analytics
+      5G base stations (multi-access edge computing, MEC)
+      ATMs and bank branch systems, for local fraud checks
+   ```
+
+   Comparison
+
+   | Point | Cloud computing | Edge computing |
+   |---|---|---|
+   | Where processing happens | Central data centre | Near the data source |
+   | Latency | 50-200 ms | 1-10 ms |
+   | Bandwidth needed | High | Low |
+   | Works without internet | No | Yes |
+   | Computing power | Very large | Limited |
+   | Storage | Practically unlimited | Small |
+   | Data privacy | Data leaves the site | Data can stay local |
+   | Cost | Pay for bandwidth and storage | Hardware at each site |
+   | Best for | Big data analysis, training AI models | Real-time decisions, filtering |
+
+   - The two are `complementary`, not alternatives. The usual architecture is `edge for immediate decisions and filtering, cloud for long-term storage, heavy analysis and training the models` that the edge nodes then run. `Fog computing` names the intermediate layer between them.
+
 2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
+   Answer: (Answered in English, as required for IT topics.) The maximum physical memory a processor can address is fixed by the width of its `address bus`.
+   ```
+      Addressable memory = 2^(number of address lines) x 1 byte
+   ```
+
+   Intel 8085
+   ```
+      Address bus = 16 lines (A0 - A15)
+
+      Maximum memory = 2^16 = 65,536 bytes = 64 KB
+   ```
+   - Why 16 lines: the 8085 is an 8-bit processor, and its register pairs (BC, DE, HL) are 16 bits wide. Since an address is held in a register pair, 16 bits is the natural address width, and the designers provided exactly that many pins.
+   - The lower 8 address lines are `multiplexed` with the data lines as AD0-AD7 to save pins, and are separated externally by a latch using the `ALE` signal.
+
+   Intel 8086
+   ```
+      Address bus = 20 lines (A0 - A19)
+
+      Maximum memory = 2^20 = 1,048,576 bytes = 1 MB
+   ```
+   - Why 20 lines and not 16: the 8086's registers are 16 bits, which would give only 64 KB — far too little for the software of the time. Intel therefore added the `segmentation` mechanism to reach a 20-bit address from 16-bit registers.
+   ```
+      Physical address = Segment register x 16 + Offset
+
+      Example :  CS = 1000H , IP = 2000H
+
+                 1000H x 16 = 10000H
+                 10000H + 2000H = 12000H       a 20-bit physical address
+   ```
+   - Multiplying by 16 is simply shifting the segment value left by four bits, which is what supplies the four extra address bits.
+   - Four segment registers exist — `CS, DS, SS, ES` — so the program has separate code, data, stack and extra segments, each up to 64 KB, within the 1 MB space.
+
+   Comparison
+
+   | Point | Intel 8085 | Intel 8086 |
+   |---|---|---|
+   | Data bus | 8 bits | 16 bits |
+   | Address bus | 16 lines | 20 lines |
+   | Maximum memory | `64 KB` | `1 MB` |
+   | Reason | 16-bit register pairs hold the address directly | Segmentation: segment x 16 + offset |
+   | Registers | 8-bit, paired to 16 | 16-bit |
+   | Segmentation | None | Yes, four segments |
+   | Instruction queue | None | 6 bytes |
+
+   Wider processors, for comparison
+   ```
+      80286 : 24 address lines -> 2^24 = 16 MB
+      80386 : 32 address lines -> 2^32 = 4 GB
+      x86-64: 48 lines implemented -> 256 TB in practice
+   ```
+
+   - The rule to state: memory capacity is decided by the `address bus`, and word size by the `data bus`. The two are independent — the 8085 has an 8-bit data bus but a 16-bit address bus, and the 8088 has an 8-bit data bus with the 8086's full 20-bit address bus.
+
 3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865-866 (ET: BUET)]*
+
+   Answer: The 8085 is an 8-bit processor and the 8086 a 16-bit one. The number refers to the width of the data bus and the registers.
+
+   Intel 8085 (1976)
+   ```
+      Data bus    : 8 bits  (AD0-AD7, multiplexed with the low address byte)
+      Address bus : 16 bits (A0-A15)
+      Memory      : 2^16 = 64 KB
+      Registers   : 8-bit  (A, B, C, D, E, H, L), paired to form 16-bit addresses
+      Flags       : 5 (S, Z, AC, P, CY) in an 8-bit register
+      Clock       : 3 MHz
+      Instructions: 74
+      Pipelining  : none
+   ```
+
+   Intel 8086 (1978)
+   ```
+      Data bus    : 16 bits (AD0-AD15, multiplexed)
+      Address bus : 20 bits (A0-A19)
+      Memory      : 2^20 = 1 MB
+      Registers   : 16-bit (AX, BX, CX, DX, SI, DI, BP, SP)
+      Flags       : 9 used in a 16-bit register (6 status + 3 control)
+      Clock       : 5-10 MHz
+      Instructions: 117
+      Pipelining  : a 6-byte instruction QUEUE, filled by the BIU
+      Architecture: split into a Bus Interface Unit and an Execution Unit
+      Segmentation: CS, DS, SS, ES - physical address = segment x 16 + offset
+   ```
+
+   Difference
+
+   | Point | 8085 (8-bit) | 8086 (16-bit) |
+   |---|---|---|
+   | Data bus | 8 bits | 16 bits |
+   | Address bus | 16 lines | 20 lines |
+   | Memory addressable | 64 KB | 1 MB |
+   | Register size | 8-bit, paired to 16 | 16-bit |
+   | Internal architecture | Single unit | Split into BIU and EU |
+   | Instruction queue | None | 6 bytes — allows pipelining |
+   | Pipelining | No | Yes |
+   | Segmentation | No | Yes, four segment registers |
+   | Flag register | 8-bit, 5 flags | 16-bit, 9 flags |
+   | Arithmetic | 8-bit only | 16-bit; also multiply and divide |
+   | Instruction set | 74 instructions | 117 instructions |
+   | Addressing modes | 5 | 8 or more |
+   | Clock speed | 3 MHz | 5-10 MHz |
+   | Multiprocessing | Not supported | Supported (minimum and maximum mode) |
+   | Speed | Slower | Much faster |
+   | Pins | 40 | 40 |
+
+   Why the 8086 is so much faster
+   - `Wider data path` — 16 bits per transfer instead of 8, so a 16-bit value takes one memory cycle rather than two.
+   - `The instruction queue` — the Bus Interface Unit fetches the next instructions while the Execution Unit is still working on the current one. The two overlap, so the bus is never idle. This is the first form of pipelining in the x86 line.
+   - `16-bit ALU` — arithmetic on 16-bit values is done directly, and multiply and divide exist as single instructions.
+   - `20-bit addressing` — sixteen times as much memory, which allowed far larger programs.
+
+   - Historical note: the `8088` is internally identical to the 8086 but has an `8-bit external data bus`, which let IBM build the original PC using cheaper 8-bit support chips. Both run the same software.
