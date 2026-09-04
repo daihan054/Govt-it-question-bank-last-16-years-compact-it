@@ -8822,27 +8822,857 @@
 
 1. What is the difference between functional and non-functional requirements? What is requirement validation? *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
+   Answer: Difference between functional and non-functional requirements
+
+   | Point | Functional requirement | Non-functional requirement |
+   |---|---|---|
+   | What it states | `What` the system must do | `How well` it must do it |
+   | Describes | A feature or behaviour | A quality attribute or constraint |
+   | Also called | Behavioural requirements | `Quality attributes`, constraints |
+   | If not met | The system is `incomplete` | The system works but is `unusable or unacceptable` |
+   | Testing | `Functional` testing — black box | `Non-functional` testing — load, security, usability |
+   | Documented as | Use cases, user stories | Measurable targets in the SRS |
+   | Example | "The system shall allow a customer to transfer funds" | "A transfer shall complete within 3 seconds" |
+
+   Functional requirements — examples
+   ```
+      - The system SHALL allow a user to log in with a username and
+        password.
+      - The system SHALL calculate interest monthly on the closing
+        balance.
+      - The system SHALL send an email confirmation after every
+        transaction.
+      - The system SHALL allow an administrator to block an account.
+      - The system SHALL generate a monthly statement in PDF.
+   ```
+
+   Non-functional requirements — examples
+   ```
+      PERFORMANCE   a page shall load within 2 seconds under a load
+                    of 1000 concurrent users
+      RELIABILITY   availability of 99.9 per cent ; MTBF over 1000
+                    hours
+      SECURITY      passwords stored as a salted hash ; all traffic
+                    over TLS ; account locked after 3 failed logins
+      USABILITY     a new clerk shall be able to complete a deposit
+                    after 30 minutes of training
+      SCALABILITY   shall support 10,000 users, growing to 50,000
+      PORTABILITY   shall run on Windows, Linux and macOS
+      MAINTAINABILITY  a defect shall be fixable within 4 hours
+      COMPLIANCE    shall satisfy Bangladesh Bank regulations and
+                    retain an audit trail for 7 years
+   ```
+   - The rule for writing a good non-functional requirement: it must be `measurable`. "The system shall be fast" is useless; "a transfer shall complete within 3 seconds for 95 per cent of requests at peak load" can be tested and accepted or rejected.
+
+   What requirement validation is
+   - `Requirement validation` is checking that the requirements in the `SRS` are the `right` requirements — that they genuinely describe what the customer wants — before design and coding begin.
+   ```
+      VERIFICATION of requirements : are they written correctly ?
+      VALIDATION of requirements   : are they the RIGHT ones ?
+   ```
+
+   What it checks
+   ```
+      VALIDITY        does the system really need this ? Different
+                      stakeholders often want different things.
+      CONSISTENCY     do any two requirements CONTRADICT each other ?
+      COMPLETENESS    is every function the customer needs included ?
+      REALISM         can it be built with the available technology,
+                      budget and time ?
+      VERIFIABILITY   can each requirement be TESTED ? "user
+                      friendly" cannot ; "30 minutes of training"
+                      can.
+      UNAMBIGUITY     can it be read in only ONE way ?
+      TRACEABILITY    can each requirement be traced to its source
+                      and forward to a design element and a test ?
+   ```
+
+   The techniques used
+   ```
+      REQUIREMENT REVIEW    a systematic walkthrough of the SRS with
+           the customer and the development team - the commonest and
+           most effective method.
+      PROTOTYPING           build a model and let the user try it.
+           Users cannot describe what they want, but they can react
+           to what they see.
+      TEST-CASE GENERATION  write the acceptance test for each
+           requirement. If a test cannot be written, the requirement
+           is not verifiable and must be rewritten.
+      MODEL VALIDATION      check the DFDs, ER and UML models for
+           consistency with the text.
+      CHECKLISTS            a standard list of questions applied to
+           every requirement.
+   ```
+   - Why it is the most valuable quality activity available: a requirement error found in the SRS costs about `1` unit to fix; the same error found after release costs `100 or more`. Validation acts at the far-left of that scale, which is why an SRS review returns more than any other single review.
+
 2. **Which of the following are not needed in software Requirement Specifications (SRS)?** *[BCIC Assistant Programmer 14.02.2025 compact it 1330 (ET: BUET)]*
    * (a) Functional Requirments
    * (b) Non- Functional Requirments
    * (c) Testing Requirments
    * (d) Interface Requirments
 
+   Answer: The question asks which items are `not` needed in an SRS. Since the option list was not captured with the question, the answer is given as what an SRS `does` and `does not` contain — the list against which any option can be checked.
+
+   What an SRS must contain
+   ```
+      IEEE 830 structure :
+
+      1. INTRODUCTION
+           purpose , scope , definitions and abbreviations ,
+           references , overview
+
+      2. OVERALL DESCRIPTION
+           product perspective , product functions , user
+           characteristics , operating environment , CONSTRAINTS ,
+           ASSUMPTIONS and DEPENDENCIES
+
+      3. SPECIFIC REQUIREMENTS
+           FUNCTIONAL requirements - what the system must do
+           NON-FUNCTIONAL requirements - performance , reliability ,
+                security , usability , portability
+           EXTERNAL INTERFACE requirements - user , hardware ,
+                software , communication interfaces
+           DESIGN CONSTRAINTS - standards, regulations, hardware
+                limits the system must respect
+
+      4. APPENDICES and INDEX
+   ```
+
+   What is NOT needed in an SRS
+   ```
+      NOT INCLUDED                       WHERE IT BELONGS INSTEAD
+      ---------------------------------  ------------------------
+      SOURCE CODE                        implementation phase
+      ALGORITHM DETAIL and data
+           structures                    design document (SDD)
+      DATABASE SCHEMA , table design     design document
+      CLASS DIAGRAMS , internal design   design document
+      SCREEN LAYOUT DETAIL - exact
+           colours, fonts, pixel
+           positions                     UI design document
+      PROJECT PLAN , SCHEDULE , GANTT
+           CHART                         project plan
+      COST ESTIMATE and BUDGET           project plan / feasibility
+                                         report
+      TEAM STRUCTURE , who does what     project plan
+      TEST CASES                         test plan
+      HOW the requirement will be
+           implemented                   design document
+      TECHNOLOGY CHOICE , unless it is
+           a genuine constraint          design document
+   ```
+
+   The principle that decides every case
+   ```
+      An SRS states WHAT the system must do , NEVER HOW it will do it.
+
+      Anything describing HOW - algorithms, code, schema, class
+      design - belongs to the DESIGN phase.
+      Anything about MANAGING the work - cost, schedule, staffing -
+      belongs to the PROJECT PLAN.
+   ```
+
+   The characteristics of a good SRS
+   ```
+      CORRECT       every requirement stated is genuinely required
+      UNAMBIGUOUS   it can be read in only ONE way
+      COMPLETE      nothing needed is missing ; no "to be decided"
+      CONSISTENT    no two requirements contradict each other
+      VERIFIABLE    each one can be TESTED. "user friendly" is not
+                    verifiable ; "30 minutes of training" is
+      MODIFIABLE    well structured and indexed, so a change is easy
+      TRACEABLE     each requirement has an ID, traceable back to its
+                    source and forward to design, code and tests
+      RANKED        by importance and stability
+   ```
+   - The two items most often offered as distractors in this kind of question are `algorithm design` and `project schedule`. Both are genuinely `not` part of an SRS: the first belongs in the `design document` and the second in the `project plan`.
+
 3. **(b) Which contents shoud be consider when you setup a new system?** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
+
+   Answer: When setting up a new system, the following must be considered.
+
+   1. Requirements
+   ```
+      FUNCTIONAL     what the system must DO - the features
+      NON-FUNCTIONAL how well - performance, security, availability,
+                     usability, scalability
+      Both must be gathered from ALL stakeholders and recorded in an
+      SRS that the customer signs off.
+   ```
+
+   2. Feasibility
+   ```
+      TECHNICAL    do we have the technology and the skills ?
+      ECONOMIC     do the benefits exceed the costs ? (ROI, payback)
+      OPERATIONAL  will the users actually accept and use it ?
+      SCHEDULE     can it be delivered in the time available ?
+      LEGAL        does it comply with law, licences and data
+                   protection rules ?
+   ```
+
+   3. Hardware and infrastructure
+   ```
+      servers - specification, count, on-premises or cloud
+      storage - capacity now, and growth over 3 to 5 years
+      network - bandwidth, switches, routers, firewall
+      POWER - UPS and generator ; in Bangladesh this is not optional
+      air conditioning and physical security of the server room
+   ```
+
+   4. Software and platform
+   ```
+      operating system , database , web server , application
+      framework , reporting tools , antivirus
+      LICENSING - per user, per core, or open source ; and the cost
+      at renewal, not only at purchase
+   ```
+
+   5. Security
+   ```
+      authentication and ROLE-BASED authorisation
+      ENCRYPTION - at rest and in transit
+      firewall , intrusion detection , patch policy
+      AUDIT TRAIL - who did what, and when
+      compliance with Bangladesh Bank or other regulations
+   ```
+
+   6. Data
+   ```
+      DATA MIGRATION from the old system - and its CLEANING, which
+           is almost always underestimated
+      database design , normalisation , indexing
+      BACKUP schedule , retention period , and - the part usually
+           forgotten - RESTORE TESTING
+      archival and retention rules
+   ```
+
+   7. Integration
+   ```
+      which existing systems must it talk to ?
+      what interfaces - API , file exchange , message queue ?
+      data format and frequency of exchange
+   ```
+
+   8. Users and training
+   ```
+      how many users , in what roles , at which locations
+      TRAINING plan and user manuals
+      CHANGE MANAGEMENT - people resist a new system, and this is a
+           commoner cause of failure than any technical fault
+      help desk and support arrangements
+   ```
+
+   9. Cost — total cost of ownership
+   ```
+      Not the purchase price alone :
+           hardware , software licences , implementation ,
+           customisation , data migration , training , annual
+           maintenance , upgrades - over FIVE years
+   ```
+
+   10. Deployment and continuity
+   ```
+      RELEASE STRATEGY : direct , PARALLEL (old and new run
+           together) , PILOT (one branch first) , or PHASED
+      ROLLBACK PLAN if the new system fails
+      DISASTER RECOVERY - RTO and RPO , and a secondary site
+      Service Level Agreement with the vendor , and SOURCE CODE
+           ESCROW if the vendor closes
+   ```
+
+   11. Maintenance and future growth
+   ```
+      who fixes defects , in what time , under what SLA
+      how often are new versions issued , and at what cost
+      SCALABILITY - will it still work when the load triples ?
+      documentation for whoever maintains it later
+   ```
+
+   - The two considerations most often neglected, and most often fatal: `data migration` from the old system, whose cost is routinely underestimated because the old data turns out to be dirty; and `change management` — a technically perfect system that the staff refuse to use has failed. Both belong in the plan from the start, not as afterthoughts at go-live.
 
 4. **You have been given a responsibility to elicit requirements from a customer, who tells you that he is too busy to meet with you. What should you do?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
 
+   Answer: The situation is common, and the answer is not to give up but to `reduce the demand on the customer's time` while still getting the requirements.
+
+   What to do
+
+   1. Explain the cost of not meeting
+   - Politely make the consequence explicit: requirements gathered from guesswork produce a system that has to be rebuilt. A requirement error costs about `1` unit to fix now and `100 or more` after release. A short meeting now is far cheaper than the rework later. Framed this way, "too busy" often becomes "half an hour on Thursday".
+
+   2. Ask for a small, specific commitment
+   - "Too busy" usually means "not for an open-ended meeting". Ask instead for `30 minutes`, with a written agenda sent in advance and specific questions. A short, prepared meeting is easy to grant.
+
+   3. Identify other stakeholders
+   ```
+      The CEO is rarely the only source, and often not the best one.
+      The people who will USE the system daily know the detail far
+      better :
+           the clerks who do the work
+           the supervisors who check it
+           the accounts and audit staff
+           the IT staff who will run it
+
+      Requirements should be gathered from EVERY stakeholder group,
+      not from one person.
+   ```
+
+   4. Use techniques that do not need his time
+   ```
+      STUDY THE EXISTING SYSTEM - forms, reports, registers,
+           procedures. Existing documents carry most of the business
+           rules already.
+      OBSERVATION - watch the current process being performed.
+      QUESTIONNAIRE - written questions the customer can answer when
+           convenient, in his own time.
+      DOCUMENT ANALYSIS - the organisation's manuals, circulars and
+           regulations.
+      STUDY SIMILAR SYSTEMS in the same industry.
+   ```
+
+   5. Build a prototype and let it do the asking
+   ```
+      Prepare a PROTOTYPE from what has been gathered and show it
+      for 15 minutes.
+
+      People cannot describe what they want, but they can always
+      REACT to something in front of them. A prototype extracts more
+      in fifteen minutes than an hour of open questions would.
+   ```
+
+   6. Send written requirements for confirmation
+   - Draft the requirements from the other sources, and send them with a clear request: "please mark anything wrong". Correcting a draft takes a fraction of the time of composing an answer from nothing.
+
+   7. Ask for a delegated representative
+   - Request that he nominate someone with authority to answer on his behalf — a `Product Owner`, in Agile terms. Get it agreed in writing that this person's decisions are binding, so the CEO need only see the summary.
+
+   8. Use short, asynchronous channels
+   - Email, a shared document with comments, a five-minute phone call, or a video call. Many people who will not attend a meeting will answer three questions in an email.
+
+   9. Record and escalate if it still fails
+   ```
+      Document in writing that access to the customer was requested
+      and not obtained, and record the ASSUMPTIONS made in the SRS
+      as a result.
+
+      This is not blame-shifting. It makes the RISK visible to
+      management, and it protects the project when a requirement
+      later turns out to be wrong. Escalate to the sponsor if the
+      project is genuinely blocked.
+   ```
+
+   - The judgement to state at the end: a customer who is too busy is a `project risk`, and it should be entered in the risk register with a mitigation. The right response is to `lower the cost of participating` — short meetings, prepared questions, a draft to correct, a prototype to react to — not to proceed on assumptions in silence.
+
 5. **(ক) Software development এর ক্ষেত্রে কত প্রকার requirements পাওয়া যায়। উদাহরণসহ requirements সমূহ লিখুন।** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) Requirements are classified in two ways: by `nature` (functional or non-functional) and by `level` (business, user, system).
+
+   Classification by nature
+
+   1. Functional requirements
+   - State `what` the system must do — its features and behaviour.
+   ```
+      - The system SHALL allow a user to log in with a username and
+        password.
+      - The system SHALL calculate interest monthly on the closing
+        balance.
+      - The system SHALL send an email confirmation after every
+        transaction.
+      - The system SHALL allow an administrator to block an account.
+      - The system SHALL generate a monthly statement in PDF.
+   ```
+   - If a functional requirement is not met, the system is `incomplete`.
+
+   2. Non-functional requirements
+   - State `how well` the system must do it — the quality attributes and constraints. Also called `quality attributes`.
+   ```
+      PERFORMANCE      a page shall load within 2 seconds under
+                       1000 concurrent users
+      RELIABILITY      99.9 per cent availability ; MTBF over 1000
+                       hours
+      SECURITY         passwords stored as a salted hash ; TLS for
+                       all traffic ; lockout after 3 failed logins
+      USABILITY        a new clerk shall complete a deposit after 30
+                       minutes of training
+      SCALABILITY      10,000 users now, growing to 50,000
+      PORTABILITY      shall run on Windows, Linux and macOS
+      MAINTAINABILITY  a defect shall be fixable within 4 hours
+      COMPLIANCE       shall meet Bangladesh Bank rules and retain
+                       an audit trail for 7 years
+   ```
+   - If a non-functional requirement is not met, the system `works but is unacceptable` — correct answers delivered too slowly, or insecurely, are still a failure.
+   - The rule for writing one: it must be `measurable`. "The system shall be fast" cannot be tested; "3 seconds for 95 per cent of requests at peak load" can.
+
+   3. Domain requirements
+   - Requirements that come from the `application domain` rather than from any user — a banking system must follow accounting rules; a medical system must follow clinical protocols. They are often implicit, and missing one is a common cause of failure because nobody thinks to state what "everybody knows".
+
+   Classification by level
+   ```
+      BUSINESS REQUIREMENTS
+           Why the organisation wants the system, in business terms.
+           "Reduce account-opening time from 3 days to 1 day."
+
+      USER REQUIREMENTS
+           What a user needs, in the user's own language.
+           "A clerk should be able to open an account by filling one
+            form."
+
+      SYSTEM REQUIREMENTS
+           The detailed technical statement, in the SRS.
+           "The system shall validate the NID against the NID
+            database within 5 seconds and store the result with a
+            timestamp."
+   ```
+
+   Two further categories worth naming
+   ```
+      IMPLEMENTATION / DEPLOYMENT REQUIREMENTS
+           server specification , operating system , database
+           version , network , installation and rollout plan,
+           training and data migration.
+
+      INVERSE (or NEGATIVE) REQUIREMENTS
+           what the system must NOT do.
+           "The system shall NOT store the CVV of a card."
+           Easy to forget, and important in security.
+   ```
+
+   - The classification that matters most in practice is `functional against non-functional`, because they are `tested differently`: functional requirements by black-box functional testing, non-functional ones by load, stress, security and usability testing. Projects fail far more often on missed `non-functional` requirements than on missed features — the system does everything asked of it, and does it too slowly to use.
 
 6. **(খ) Software Requirement Specification (SRS) বলতে কি বুঝায়? Software Development এর কোন ধাপে SRS তৈরি করা হয়?** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 768 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What an SRS is
+   - A `Software Requirements Specification (SRS)` is the formal document that records `everything the software must do`, agreed and signed off by both the customer and the developer. It is the contract between them and the basis of everything built afterwards.
+   ```
+      The SRS states WHAT the system must do , NEVER HOW it will do
+      it. Anything describing HOW - algorithms, database schema,
+      class design - belongs to the DESIGN document.
+   ```
+
+   Contents — the IEEE 830 structure
+   ```
+      1. INTRODUCTION
+           purpose , scope , definitions and abbreviations ,
+           references , overview
+
+      2. OVERALL DESCRIPTION
+           product perspective , product functions , user
+           characteristics , operating environment , CONSTRAINTS ,
+           ASSUMPTIONS and DEPENDENCIES
+
+      3. SPECIFIC REQUIREMENTS
+           FUNCTIONAL requirements     - what the system must do
+           NON-FUNCTIONAL requirements - performance, reliability,
+                security, usability, portability
+           EXTERNAL INTERFACES - user, hardware, software,
+                communication
+           DESIGN CONSTRAINTS - standards and regulations it must
+                respect
+
+      4. APPENDICES and INDEX
+   ```
+
+   Characteristics of a good SRS
+   ```
+      CORRECT       every requirement stated is genuinely required
+      UNAMBIGUOUS   it can be read in only ONE way
+      COMPLETE      nothing needed is missing ; no "to be decided"
+      CONSISTENT    no two requirements contradict each other
+      VERIFIABLE    each one can be TESTED. "user friendly" is not
+                    verifiable ; "30 minutes of training" is
+      MODIFIABLE    well structured and indexed
+      TRACEABLE     each requirement has an ID, traceable back to
+                    its source and forward to design, code and tests
+      RANKED        by importance and stability
+   ```
+
+   At which phase the SRS is prepared
+   ```
+      The SRS is produced in the SECOND phase of the SDLC -
+      REQUIREMENT ANALYSIS , also called the requirement gathering
+      and analysis phase.
+
+        1. Planning and feasibility study
+        2. REQUIREMENT ANALYSIS      <- the SRS is prepared HERE
+        3. Design
+        4. Coding
+        5. Testing
+        6. Deployment
+        7. Maintenance
+   ```
+   ```mermaid
+   flowchart LR
+       A[1. Planning and feasibility] --> B[2. Requirement analysis<br/>SRS produced]
+       B --> C[3. Design<br/>SDD produced]
+       C --> D[4. Coding]
+       D --> E[5. Testing<br/>tests derived from the SRS]
+   ```
+   - Why that phase and no other: the SRS is the `input` to design, so design cannot begin without it; and it is the `source of the acceptance criteria`, so the testing phase depends on it too. It is signed off at the end of requirement analysis and then placed under `change control` — after that, any change goes through a formal change request rather than a conversation.
+
+   - The reason the document repays the effort spent on it: an error found in the SRS costs about `1` unit to fix, the same error found after release costs `100 or more`. Reviewing the SRS is therefore the single most cost-effective quality activity in the whole life cycle.
+
 7. **Assume that you are going to implement an ecommerce site of “XYZ” company. The CEO of the company is Mr. X. You have to identify the following: (i) Stakeholder (ii) Functional requirements (iii) Non-functional requirements (iv) Deployment requirements** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
+
+   Answer: (i) Stakeholders
+   ```
+      INTERNAL
+        Mr. X , CEO of XYZ          the SPONSOR - funds the project
+                                    and sets the business goals
+        Marketing / Sales manager   pricing, promotions, campaigns
+        Warehouse / Inventory staff stock levels, packing, dispatch
+        Accounts / Finance staff    payments, refunds, reconciliation
+        Customer support staff      handle complaints and returns
+        IT / System administrator   will run and maintain the system
+        Site administrator          manages products and users
+
+      EXTERNAL
+        CUSTOMERS (buyers)          the PRIMARY users - the most
+                                    important stakeholder group
+        Suppliers / Vendors         supply the products
+        Payment gateway provider    bKash , Nagad , VISA , SSLCOMMERZ
+        Courier / Delivery partner  Pathao , Sundarban , RedX
+        SMS and email gateway
+        Regulators                  VAT authority , consumer rights ,
+                                    Bangladesh Bank for payments
+
+      PROJECT SIDE
+        Project manager , business analyst , developers , testers ,
+        UI/UX designer
+   ```
+   - The point to make: `Mr. X is the sponsor, not the only stakeholder`. Requirements gathered only from the CEO will miss what the warehouse staff and the customers actually need — and those groups do the daily work.
+
+   (ii) Functional requirements
+   ```
+      CUSTOMER SIDE
+        register and log in ; reset a forgotten password
+        browse products by category ; SEARCH and filter by price,
+             brand, rating
+        view product detail - images, description, price, stock
+        add to CART ; update quantity ; remove an item
+        maintain a WISHLIST
+        CHECKOUT - enter the delivery address, choose a delivery slot
+        PAY by card, bKash, Nagad, or cash on delivery
+        apply a discount coupon
+        receive an order confirmation by email and SMS
+        TRACK the order status
+        cancel an order , request a RETURN or REFUND
+        write a product review and rating
+        view order history
+
+      ADMIN SIDE
+        add , edit and delete products and categories
+        manage stock levels ; receive a low-stock alert
+        view and update order status
+        process refunds
+        manage customers and staff accounts
+        set prices, discounts and coupons
+        GENERATE REPORTS - sales, stock, revenue, best sellers
+
+      SYSTEM SIDE
+        integrate with the PAYMENT GATEWAY
+        integrate with the COURIER API for tracking
+        send email and SMS notifications
+        calculate VAT and delivery charge
+   ```
+
+   (iii) Non-functional requirements
+   ```
+      PERFORMANCE     a product page shall load within 2 seconds ;
+           SEARCH shall return results within 1 second ; the site
+           shall support 5,000 concurrent users
+      SCALABILITY     shall handle a 10-fold traffic increase during
+           an Eid campaign without redesign
+      AVAILABILITY    99.9 per cent uptime ; planned maintenance
+           only between 2 and 4 a.m.
+      SECURITY        HTTPS everywhere ; passwords stored as a
+           SALTED HASH ; PCI-DSS compliance for card data ; the CVV
+           SHALL NOT be stored ; protection against SQL injection,
+           XSS and CSRF ; OTP for payment
+      USABILITY       checkout in 3 clicks or fewer ; MOBILE
+           RESPONSIVE ; Bangla and English interface
+      COMPATIBILITY   Chrome, Firefox, Safari, Edge ; Android and
+           iOS browsers
+      RELIABILITY     no order shall be lost if payment succeeds but
+           the network drops - the transaction must be ATOMIC
+      BACKUP          daily automated backup ; RESTORE TESTED
+           monthly ; RPO 1 hour , RTO 4 hours
+      MAINTAINABILITY modular code , documented API , coding
+           standards
+      LEGAL           VAT calculation per NBR rules ; a privacy
+           policy ; 7-year retention of transaction records
+      SEO             clean URLs , meta tags , sitemap - a business
+           requirement for an e-commerce site, not a luxury
+   ```
+   - The rule for writing these: every one must be `measurable`. "The site shall be fast" is untestable; "2 seconds for 95 per cent of requests at 5,000 concurrent users" can be accepted or rejected.
+
+   (iv) Deployment requirements
+   ```
+      INFRASTRUCTURE
+        cloud hosting - AWS , Azure or a local provider - with
+             auto-scaling
+        a CDN for images and static content
+        a LOAD BALANCER in front of at least two application servers
+        a database server with a REPLICA for failover
+        a separate STAGING environment identical to production
+
+      SOFTWARE STACK
+        web server , application runtime , database version , cache
+        (Redis) , search engine , SSL certificate
+        a fixed, documented version of each - "works on my machine"
+        is not a deployment plan
+
+      RELEASE PROCESS
+        CI/CD pipeline - automated build, test and deploy
+        BLUE-GREEN or CANARY release, so a bad version affects few
+             users
+        a ROLLBACK PLAN and a tested rollback procedure
+        DATABASE MIGRATION scripts, versioned and reversible
+
+      DATA
+        migration of the existing product catalogue and customer
+             list , with CLEANING - almost always underestimated
+        daily backup , offsite copy , tested restore
+
+      MONITORING AND SUPPORT
+        uptime and performance monitoring , error alerting , log
+             aggregation
+        a support rota and an SLA for defect response
+        DISASTER RECOVERY site with stated RTO and RPO
+
+      GO-LIVE
+        a PILOT with limited traffic before full launch
+        staff TRAINING and user documentation
+        a defined cutover window and a communication plan
+   ```
+   - The two deployment items most often neglected: a `tested rollback`, and `restore testing` of backups. A backup that has never been restored is not a backup — and both failures only become visible on the day they matter.
 
 8. **Software Requirement Specification (SRS) বলতে কী বোঝেন? Software development -এর কোন স্তরে SRS প্রস্তুত করা হয়?** *[41th BCS 2021 compact it 881 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What an SRS is
+   - A `Software Requirements Specification (SRS)` is the formal document that records `everything the software must do`, agreed and signed off by both the customer and the developer. It serves as the contract between them and as the basis for design, coding and testing.
+   ```
+      The SRS states WHAT the system must do , NEVER HOW it will do
+      it. Algorithms, database schema and class design belong to the
+      DESIGN document, not here.
+   ```
+
+   Contents — IEEE 830
+   ```
+      1. INTRODUCTION
+           purpose , scope , definitions , references , overview
+
+      2. OVERALL DESCRIPTION
+           product perspective and functions , user characteristics ,
+           operating environment , CONSTRAINTS , ASSUMPTIONS and
+           DEPENDENCIES
+
+      3. SPECIFIC REQUIREMENTS
+           FUNCTIONAL     - what the system must do
+           NON-FUNCTIONAL - performance , reliability , security ,
+                usability , portability
+           EXTERNAL INTERFACES - user , hardware , software ,
+                communication
+           DESIGN CONSTRAINTS - standards and regulations
+
+      4. APPENDICES and INDEX
+   ```
+
+   Characteristics of a good SRS
+   ```
+      CORRECT       every requirement stated is genuinely required
+      UNAMBIGUOUS   readable in only ONE way
+      COMPLETE      nothing needed is missing ; no "to be decided"
+      CONSISTENT    no two requirements contradict each other
+      VERIFIABLE    each one can be TESTED - "user friendly" cannot
+                    be ; "30 minutes of training" can
+      MODIFIABLE    well structured and indexed
+      TRACEABLE     each has an ID, traceable back to its source and
+                    forward to design, code and tests
+      RANKED        by importance and stability
+   ```
+
+   At which stage the SRS is prepared
+   ```
+      In the SECOND phase of the SDLC - REQUIREMENT ANALYSIS.
+
+        1. Planning and feasibility study
+        2. REQUIREMENT ANALYSIS      <- the SRS is prepared HERE
+        3. Design
+        4. Coding
+        5. Testing
+        6. Deployment
+        7. Maintenance
+   ```
+   ```mermaid
+   flowchart LR
+       A[1. Planning] --> B[2. Requirement analysis<br/>SRS produced and signed off]
+       B --> C[3. Design<br/>uses the SRS as input]
+       C --> D[4. Coding]
+       D --> E[5. Testing<br/>acceptance criteria come from the SRS]
+   ```
+   - Why that stage: the SRS is the `input to design`, so design cannot start without it, and it is the `source of the acceptance criteria`, so testing depends on it as well. Once signed off it is placed under `change control` — after that, a change goes through a formal change request rather than a conversation.
+   - Who prepares it: the `business analyst` or system analyst, working with the customer, and it is `reviewed` by the customer, the development team and the QA team before sign-off.
+
+   - The reason the effort is worth spending: an error found in the SRS costs about `1` unit to fix, and the same error found after release costs `100 or more`. Reviewing the SRS is the single most cost-effective quality activity in the entire life cycle.
+
 9. **(ক) Feasibility Test কী? সফটওয়্যার উন্নয়নে উহার প্রয়োজনীয়তা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What a feasibility test is
+   - A `feasibility test`, or feasibility study, is the assessment made `before a project starts` to decide whether it is `worth doing and possible to do`. It ends in a recommendation: proceed, revise the scope, or abandon.
+   ```
+      It is carried out in the FIRST phase of the SDLC - planning -
+      and it is the CHEAPEST point at which a bad project can be
+      stopped. Cancelling here costs a few weeks of analysis ;
+      discovering the same problem after deployment costs the entire
+      budget.
+   ```
+
+   The five kinds of feasibility
+   ```
+      TECHNICAL FEASIBILITY
+           Do we have the technology, the tools and the SKILLS ?
+           Will the existing hardware support it ? Can the
+           performance target actually be met ?
+
+      ECONOMIC FEASIBILITY
+           Do the benefits exceed the costs ? Measured by COST-
+           BENEFIT ANALYSIS , return on investment and PAYBACK
+           PERIOD. This is usually the deciding factor.
+
+      OPERATIONAL FEASIBILITY
+           Will the users ACCEPT and USE it ? Does it fit the way
+           the organisation actually works ? A technically perfect
+           system that the staff refuse to use has failed.
+
+      SCHEDULE FEASIBILITY
+           Can it be delivered in the time available ? A system
+           needed for the next financial year is worthless if it
+           arrives after it.
+
+      LEGAL FEASIBILITY
+           Does it comply with the law, with licensing, with data-
+           protection rules and with the regulator - Bangladesh Bank,
+           NBR, and so on ?
+   ```
+
+   Why it is necessary in software development
+
+   1. It prevents money being wasted on an impossible project
+   - Most large project failures were `predictable at the start`. A feasibility study is the only stage at which cancellation is cheap.
+
+   2. It gives management the information to decide
+   - The output is a `feasibility report` with costs, benefits, risks and a recommendation — the basis on which a sponsor approves or refuses funding.
+
+   3. It exposes risk early
+   - Technical and business risks are identified while there is still time to plan for them, rather than discovered during testing.
+
+   4. It fixes a realistic scope, budget and schedule
+   - The estimates in the project plan come from the feasibility study. Without it, the plan is a guess.
+
+   5. It compares alternatives
+   - Build in-house, buy a package, outsource, or upgrade the existing system. Each is costed and scored, so the choice is made on evidence.
+
+   6. It secures stakeholder agreement
+   - Because the study consults the users and the sponsor, it builds the agreement the project will need later.
+
+   7. It supplies the acceptance criteria
+   - The benefits stated in the study — "reduce account-opening time from 3 days to 1" — become the measures by which the finished system is judged.
+
+   The output
+   ```
+      THE FEASIBILITY REPORT contains :
+           the problem and the objectives
+           the alternatives considered
+           the recommended alternative, with its costs and benefits
+           the risks and their mitigation
+           a clear RECOMMENDATION - GO , REVISE , or NO GO
+   ```
+   - The point worth stating plainly: a feasibility study `can and should conclude that the project should not be done`. A study that always says yes is not a study. Its value lies precisely in its power to stop a project before the money is spent.
+
 10. **(খ) Feasibility Analysis এর বিভিন্ন ধাপসমূহের সংক্ষিপ্ত বিবরণ দিন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The stages of feasibility analysis
+    ```mermaid
+    flowchart TD
+        A[1. Information assessment] --> B[2. Information collection]
+        B --> C[3. Preliminary report]
+        C --> D[4. Formulate alternatives]
+        D --> E[5. Feasibility analysis]
+        E --> F[6. Evaluate and compare]
+        F --> G[7. Final report and decision]
+    ```
+
+    1. Information assessment
+    - Understand the problem and the proposed system. What is wrong with the present arrangement, what should the new system do, who will use it, and what are the constraints of budget, time and law.
+
+    2. Information collection
+    - Gather the facts: interviews with users and managers, questionnaires, observation of the current process, study of existing documents, forms and reports, and a look at similar systems elsewhere.
+
+    3. Preliminary report
+    - Record the findings so far — the problem statement, the objectives, the scope, and the alternatives being considered.
+
+    4. Formulation of alternatives
+    - Draw up two or three `alternative solutions`: build in-house, buy a package, outsource, or upgrade the existing system. Each is described with its technology, cost and timeline.
+
+    5. Feasibility analysis — the core stage
+    ```
+       Each alternative is tested against five kinds of feasibility :
+
+       TECHNICAL     Do we have the technology, tools and SKILLS ?
+            Will the existing hardware support it ? Can the
+            performance target be met ?
+
+       ECONOMIC      Do the benefits exceed the costs ?
+            COST-BENEFIT ANALYSIS , return on investment ,
+            PAYBACK PERIOD , net present value.
+            This is usually the deciding factor.
+
+       OPERATIONAL   Will the users ACCEPT and USE it ?
+            Does it fit how the organisation actually works ? A
+            technically perfect system the staff refuse to use has
+            failed.
+
+       SCHEDULE      Can it be delivered in the time available ?
+            A system needed for the next financial year is worthless
+            if it arrives after it.
+
+       LEGAL         Does it comply with law, licensing, data
+            protection and the regulator - Bangladesh Bank, NBR ?
+    ```
+
+    6. Evaluation and comparison
+    - Score the alternatives against these criteria, weight the criteria by importance, weigh the risks, and select the best option. `Cost-benefit analysis` is the main instrument at this stage.
+    ```
+       Example of a weighted comparison :
+
+       +-------------+--------+-----------+-----------+-----------+
+       | Criterion   | Weight | Build     | Buy       | Outsource |
+       +-------------+--------+-----------+-----------+-----------+
+       | Cost        |  30 %  |    6      |    8      |     7     |
+       | Fit to need |  25 %  |    9      |    6      |     8     |
+       | Time        |  20 %  |    4      |    9      |     7     |
+       | Risk        |  15 %  |    5      |    8      |     5     |
+       | Support     |  10 %  |    7      |    8      |     6     |
+       +-------------+--------+-----------+-----------+-----------+
+       | WEIGHTED TOTAL       |   6.4     |   7.6     |    7.0    |
+       +----------------------+-----------+-----------+-----------+
+    ```
+
+    7. Final report and decision
+    ```
+       THE FEASIBILITY REPORT states :
+            the problem and the objectives
+            the alternatives considered
+            the recommended alternative, with costs and benefits
+            the risks and their mitigation
+            a clear RECOMMENDATION
+
+       Management then decides :
+            GO      - proceed to full development
+            REVISE  - adjust the scope, budget or timeline first
+            NO GO   - abandon, and consider other options
+    ```
+
+    - Two points worth adding. The `number of stages` differs between textbooks — some list five, some eight — because the reporting steps are sometimes merged; but the `five kinds of feasibility` in stage 5 are standard and are what examiners look for. And a feasibility analysis `must be able to conclude "no go"` — a study that always recommends proceeding is not a study, and its whole value lies in the power to stop a project while stopping is still cheap.
 
 ## Software Project Management & Organization (9)
 
