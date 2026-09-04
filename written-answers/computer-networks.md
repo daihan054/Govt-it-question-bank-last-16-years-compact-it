@@ -4308,30 +4308,89 @@ Answer:
 
 20. **(c) Define context switch with proper example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 73]]*
 
-21. **(ক) একটি বিদ্যালয়ে প্রত্যেকে ১০পয়সা করে চাঁদা দিলে ৯০ টাকা হয়।কতজন শিক্ষার্থী ছিলো?** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
-(খ) a+b=7, ab=10 হলে (1/a^2 + 1/b^2) এর মান কত? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+Answer:
+    A Context Switch is the administrative procedure in an Operating System where the state (context) of currently executing process $P_1$ is saved into its Process Control Block (PCB), and the previously saved state of another process $P_2$ is loaded into CPU registers so that execution can seamlessly resume.
 
-22. **(ক) চীন, যুক্তরাষ্ট্র, জাপান ও কানাডা এদের মধ্যে কে G-7 এর সদস্য নয়।** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
-(খ) chat gpt এর প্রতিষ্ঠাতা কে? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+    Key Points:
+    - Context switch is pure computational overhead as no useful user work is performed during the switch.
+    - Context includes Program Counter (PC), CPU registers, memory management information, and process status flags.
 
-(গ) Nam, Asian, oic এর মধ্যে বাংলাদেশ কোনটির সদস্য নয়। __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+    Example:
+    In a Round Robin CPU scheduling system with a 10 ms time quantum:
+    - Process $P_1$ runs for 10 ms until the timer interrupt fires.
+    - The OS kernel saves $P_1$'s register values and execution pointer into $PCB_1$.
+    - The CPU scheduler selects process $P_2$ from the ready queue, loads register states from $PCB_2$, and jumps to $P_2$'s Program Counter.
 
-(ঘ) বিমসটেক এর চেয়ারম্যান কোন দেশ এবং এর সদস্য সংখ্যা কয়টি? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+21. **(ক) একটি বিদ্যালয়ে প্রত্যেকে ১০পয়সা করে চাঁদা দিলে ৯০ টাকা হয়।কতজন শিক্ষার্থী ছিলো?** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+(খ) a+b=7, ab=10 হলে (1/a^2 + 1/b^2) এর মান কত? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
-(ঙ) নির্বাচন সংস্কার কমিশন ও সংবিধান সংস্কার কমিশনের প্রধান কে? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+Answer:
+    (ক)
+    - মোট চাঁদার পরিমাণ = ৯০ টাকা = $90 	imes 100 = 9000$ পয়সা।
+    - প্রত্যেকের চাঁদা = ১০ পয়সা।
+    - অতএব, মোট শিক্ষার্থীর সংখ্যা = $rac{9000}{10} =$ **৯০০ জন**।
 
-(চ) প্রতিবাদী তারুণ্যের জন্য ২১ শে পদক পেয়েছেন কে? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+    (খ)
+    - দেওয়া আছে: $a + b = 7$ এবং $ab = 10$
+    $$\frac{1}{a^2} + \frac{1}{b^2} = \frac{a^2 + b^2}{a^2 b^2} = \frac{(a + b)^2 - 2ab}{(ab)^2}$$
+    - মান বসিয়ে:
+    $$= \frac{7^2 - 2(10)}{10^2} = \frac{49 - 20}{100} = \frac{29}{100} = 0.29$$
+    - নির্ণেয় মান: **$\frac{29}{100}$** (বা **০.২৯**)।
 
-(ছ) wisi কোন দেশের উপজাতি? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+22. **(ক) চীন, যুক্তরাষ্ট্র, জাপান ও কানাডা এদের মধ্যে কে G-7 এর সদস্য নয়।** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+(খ) chat gpt এর প্রতিষ্ঠাতা কে? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
-(জ) নির্বাচন কমিশন সংবিধানের কত নং অনুচ্ছেদ এবং নির্বাচন কমিশন নিয়োগ দেন কে তার নাম। __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+(গ) Nam, Asian, oic এর মধ্যে বাংলাদেশ কোনটির সদস্য নয়। __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
-(ঝ) বাংলাদেশ মহিলা ফুটবল দল আন্তর্জাতিক কোন টুর্নামেন্ট এর জন্য নির্বাচিত হয়েছেন? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+(ঘ) বিমসটেক এর চেয়ারম্যান কোন দেশ এবং এর সদস্য সংখ্যা কয়টি? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
-23. **(ক) থ্রি জিরো তত্ত্বের উদ্ভাবক কে? সংক্ষেপে লিখ।** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
-(খ) STP কত সালে প্রনয়ন করা হয়? এর সাথে মেট্রোরেলের সম্পর্ক কি? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+(ঙ) নির্বাচন সংস্কার কমিশন ও সংবিধান সংস্কার কমিশনের প্রধান কে? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+
+(চ) প্রতিবাদী তারুণ্যের জন্য ২১ শে পদক পেয়েছেন কে? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+
+(ছ) wisi কোন দেশের উপজাতি? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+
+(জ) নির্বাচন কমিশন সংবিধানের কত নং অনুচ্ছেদ এবং নির্বাচন কমিশন নিয়োগ দেন কে তার নাম। __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+
+(ঝ) বাংলাদেশ মহিলা ফুটবল দল আন্তর্জাতিক কোন টুর্নামেন্ট এর জন্য নির্বাচিত হয়েছেন? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+
+Answer:
+    - (ক) **চীন** G-7 এর সদস্য নয় (G-7 সদস্য: যুক্তরাষ্ট্র, কানাডা, জাপান, যুক্তরাজ্য, ফ্রান্স, জার্মানি, ইতালি)।
+    - (খ) ChatGPT তৈরি করেছে কৃত্রিম বুদ্ধিমত্তা গবেষণা প্রতিষ্ঠান **OpenAI** (প্রতিষ্ঠাতাদের মধ্যে স্যাম অল্টম্যান, গ্রেগ ব্রকম্যান, ইলন মাস্ক প্রমুখ উল্লেখযোগ্য)।
+    - (গ) বাংলাদেশ **ASEAN (আসিয়ান)**-এর সদস্য নয় (বাংলাদেশ NAM ও OIC-এর সদস্য)।
+    - (ঘ) বিমসটেক (BIMSTEC)-এর সদস্য রাষ্ট্র **৭টি** (বাংলাদেশ, ভুটান, ভারত, মায়ানমার, নেপাল, শ্রীলঙ্কা ও থাইল্যান্ড)।
+    - (ঙ) নির্বাচন ব্যবস্থা সংস্কার কমিশনের প্রধান: **ড. বদিউল আলম মজুমদার**; সংবিধান সংস্কার কমিশনের প্রধান: **অধ্যাপক আলী রীয়াজ**।
+    - (চ) ২০২৫ সালের একুশে পদক ও জাতীয় স্বীকৃতিতে বৈষম্যবিরোধী ছাত্র আন্দোলনের তরুণ ও শহীদদের আত্মত্যাগ বিশেষভাবে সম্মানিত হয়েছে।
+    - (ছ) উইঘুর (Uighur) চীনের জিনজিয়াং প্রদেশের প্রধান মুসলিম সংখ্যালঘু সম্প্রদায়।
+    - (জ) বাংলাদেশ সংবিধানের **১১৮ নং অনুচ্ছেদ** অনুযায়ী প্রধান নির্বাচন কমিশনার ও অন্যান্য নির্বাচন কমিশনারদের **রাষ্ট্রপতি** নিয়োগ প্রদান করেন।
+    - (ঝ) বাংলাদেশ জাতীয় নারী ফুটবল দল **সাফ নারী চ্যাম্পিয়নশিপ (SAFF Women's Championship)** এবং এএফসি উইমেন্স এশিয়ান কাপ বাছাইপর্বের জন্য নির্বাচিত হয়েছে।
+
+23. **(ক) থ্রি জিরো তত্ত্বের উদ্ভাবক কে? সংক্ষেপে লিখ।** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+(খ) STP কত সালে প্রনয়ন করা হয়? এর সাথে মেট্রোরেলের সম্পর্ক কি? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
+
+Answer:
+    - (ক) থ্রি জিরো তত্ত্বের (3 Zero Theory) প্রবক্তা শান্তিতে নোবেলজয়ী অর্থনীতিবিদ **অধ্যাপক ড. মুহাম্মদ ইউনূস**।
+      তত্ত্বটির মূল ৩টি লক্ষ্য হলো:
+      1. Zero Poverty (শূন্য দারিদ্র্য)
+      2. Zero Unemployment (শূন্য বেকারত্ব - যুবসমাজকে চাকরিপ্রার্থীর বদলে উদ্যোক্তা হিসেবে গড়ে তোলা)
+      3. Zero Net Carbon Emission (শূন্য কার্বন নিঃসরণ - পরিবেশবান্ধব টেকসই পৃথিবী গঠন)।
+    - (খ) স্ট্র্যাটেজিক ট্রান্সপোর্ট প্ল্যান (STP) **২০০৫ সালে** ২০ বছর মেয়াদে প্রণয়ন করা হয় (পরবর্তীতে ২০১৫ সালে RSTP সংশোধিত হয়)।
+      সম্পর্ক: ঢাকা মহানগরীর তীব্র যানজট নিরসনে STP-এর সুপারিশের ভিত্তিতেই কৌশলগত গণপরিবহন ব্যবস্থা হিসেবে ম্যাস র‍্যাপিড ট্রানজিট (MRT বা মেট্রোরেল নেটওয়ার্কের ৫টি রুট) নির্মাণের মহাপরিকল্পনা গৃহীত ও বাস্তবায়ন করা হয়।
 
 24. **What is the topology in data communication? What are the differences between Bus, Ring, Tree & star topology?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 515]]*
+
+Answer:
+    Network Topology refers to the schematic layout and geometric arrangement of connected nodes (computers, printers) and communication links in a data communication network.
+
+    Comparison of Network Topologies:
+
+    | Feature | Bus Topology | Ring Topology | Star Topology | Tree Topology |
+    |---|---|---|---|---|
+    | Architecture | Nodes connected along a single linear central backbone cable | Nodes connected in a closed circular loop with unidirectional/bidirectional flow | All nodes connected individually to a central hub/switch | Hierarchical tree-like structure combining multiple star topologies on a bus backbone |
+    | Central Device | None (uses terminators at cable ends) | None (uses token passing) | Central Switch / Hub | Root switch / Concentrator |
+    | Single Point of Failure | Backbone cable failure brings down entire network | Single node or link failure breaks the whole loop | Central switch failure downs the network; individual cable fault affects only that node | Root node or backbone failure isolates entire branch subtrees |
+    | Scalability & Installation | Easy to install; difficult to troubleshoot when scaled | Easy to install; reconfiguration disrupts network | Very easy to add/remove devices without affecting others | Highly scalable for large corporate networks |
+    | Data Collision | High collision risk; uses CSMA/CD | No collisions due to token-based transmission | Minimal collision (switches manage collision domains) | Low collision within switched branch segments |
 
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (23)
 
