@@ -18999,17 +18999,540 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Explain Database Trigger with example.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+   Answer: A `database trigger` is a block of code stored in the database that runs `automatically` when a defined event happens on a table — an `INSERT`, `UPDATE` or `DELETE`. Nobody calls it; the DBMS fires it.
+
+   - Unlike a stored procedure, a trigger cannot be executed by name and cannot take parameters.
+
+   Syntax
+   ```sql
+   CREATE OR REPLACE TRIGGER trigger_name
+   { BEFORE | AFTER } { INSERT | UPDATE | DELETE } ON table_name
+   [ FOR EACH ROW ]
+   [ WHEN (condition) ]
+   BEGIN
+       -- statements
+   END;
+   ```
+
+   Classification
+   ```
+   By timing : BEFORE  -> runs before the change; :NEW values can be modified
+               AFTER   -> runs after the change; used for auditing
+               INSTEAD OF -> used on views, which cannot be updated directly
+   By level  : Row-level (FOR EACH ROW) -> once per affected row
+               Statement-level          -> once per statement, whatever the row count
+   ```
+   - Inside a row-level trigger, `:NEW` holds the incoming value and `:OLD` the previous one. On an `INSERT` `:OLD` is null; on a `DELETE` `:NEW` is null.
+
+   Example 1 — validate and default a value before insert
+   ```sql
+   CREATE OR REPLACE TRIGGER trg_check_salary
+   BEFORE INSERT OR UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF :NEW.salary < 0 THEN
+           RAISE_APPLICATION_ERROR(-20001, 'Salary cannot be negative');
+       END IF;
+       :NEW.emp_name := UPPER(:NEW.emp_name);
+   END;
+   ```
+
+   Example 2 — audit trail after an update
+   ```sql
+   CREATE TABLE Salary_Audit (
+       emp_id NUMBER, old_salary NUMBER, new_salary NUMBER,
+       changed_by VARCHAR2(30), changed_on DATE
+   );
+
+   CREATE OR REPLACE TRIGGER trg_salary_audit
+   AFTER UPDATE OF salary ON Employee
+   FOR EACH ROW
+   BEGIN
+       INSERT INTO Salary_Audit
+       VALUES (:OLD.emp_id, :OLD.salary, :NEW.salary, USER, SYSDATE);
+   END;
+   ```
+   ```sql
+   UPDATE Employee SET salary = 55000 WHERE emp_id = 101;
+   -- the trigger fires by itself and writes one row into Salary_Audit
+   ```
+
+   Uses
+   - Enforcing business rules that a `CHECK` constraint cannot express.
+   - Keeping an `audit trail` of who changed what and when.
+   - Maintaining derived or summary columns automatically.
+   - Preventing invalid operations, such as changing a salary outside office hours.
+
+   Drawbacks
+   - Hidden logic — a developer reading only the application code cannot see why the data changed.
+   - Hard to debug, and a slow trigger slows down every DML statement on that table.
+   - A trigger that updates another table can fire further triggers, which is easy to write and hard to trace.
+
 2. **Database program with base and high- level language (SQL) to find out the interest rate from the given database table.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
+
+   Answer: The table is not printed with the question, so the usual `Loan` table is assumed. The method is the same for any table.
+   ```sql
+   CREATE TABLE Loan (
+       loan_id      NUMBER PRIMARY KEY,
+       customer_id  NUMBER,
+       loan_type    VARCHAR2(20),      -- HOME, CAR, PERSONAL
+       principal    NUMBER(12,2),
+       interest_rate NUMBER(5,2),      -- percent per year
+       tenure_years NUMBER
+   );
+   ```
+
+   Part 1 — using plain SQL (the high-level, declarative way)
+
+   Read the rate directly
+   ```sql
+   SELECT loan_id, loan_type, interest_rate
+   FROM   Loan
+   WHERE  customer_id = 1001;
+   ```
+
+   Average, highest and lowest rate per loan type
+   ```sql
+   SELECT loan_type,
+          ROUND(AVG(interest_rate), 2) AS avg_rate,
+          MAX(interest_rate) AS max_rate,
+          MIN(interest_rate) AS min_rate
+   FROM   Loan
+   GROUP  BY loan_type;
+   ```
+
+   Compute the rate when only the interest amount is known
+   ```sql
+   SELECT loan_id,
+          ROUND((interest_amount * 100) / (principal * tenure_years), 2) AS rate
+   FROM   Loan;
+   ```
+   - Formula used: simple interest `I = P × R × T / 100`, so `R = (I × 100) / (P × T)`.
+
+   Part 2 — using PL/SQL (the procedural, base-language way)
+
+   ```sql
+   CREATE OR REPLACE PROCEDURE get_interest_rate (p_loan_id IN NUMBER)
+   IS
+       v_type      Loan.loan_type%TYPE;
+       v_principal Loan.principal%TYPE;
+       v_rate      Loan.interest_rate%TYPE;
+       v_years     Loan.tenure_years%TYPE;
+       v_interest  NUMBER(12,2);
+   BEGIN
+       SELECT loan_type, principal, interest_rate, tenure_years
+       INTO   v_type, v_principal, v_rate, v_years
+       FROM   Loan
+       WHERE  loan_id = p_loan_id;
+
+       v_interest := (v_principal * v_rate * v_years) / 100;
+
+       DBMS_OUTPUT.PUT_LINE('Loan type      : ' || v_type);
+       DBMS_OUTPUT.PUT_LINE('Interest rate  : ' || v_rate || ' %');
+       DBMS_OUTPUT.PUT_LINE('Interest amount: ' || v_interest);
+
+   EXCEPTION
+       WHEN NO_DATA_FOUND THEN
+           DBMS_OUTPUT.PUT_LINE('No loan found with id ' || p_loan_id);
+       WHEN OTHERS THEN
+           DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+   END;
+   /
+
+   EXEC get_interest_rate(101);
+   ```
+
+   Using a cursor when many rows must be processed
+   ```sql
+   DECLARE
+       CURSOR c_loan IS SELECT loan_id, loan_type, interest_rate FROM Loan;
+   BEGIN
+       FOR r IN c_loan LOOP
+           DBMS_OUTPUT.PUT_LINE(r.loan_id || ' - ' || r.loan_type
+                                || ' - ' || r.interest_rate || '%');
+       END LOOP;
+   END;
+   /
+   ```
+
+   Points to note
+   - Plain `SQL` says `what` is wanted and is the right tool whenever the answer is a single set of rows.
+   - `PL/SQL` adds variables, `IF`, loops, cursors and exception handling, so it is used when the logic needs step-by-step decisions or must handle errors.
+   - `%TYPE` ties a variable to the column's data type, so the code does not break if the column definition changes.
+   - `SELECT ... INTO` must return exactly one row, otherwise it raises `NO_DATA_FOUND` or `TOO_MANY_ROWS` — which is why the exception block is required.
 
 3. **(c) Define dynamic SQL and trigger with examples.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
 
+   Answer: Dynamic SQL
+   - `Dynamic SQL` is SQL that is `built as a text string while the program is running` and executed at that moment, instead of being written and compiled in advance.
+   - It is needed when the table name, column name or the whole `WHERE` clause is not known until run time, and for `DDL` statements, which cannot be written directly inside a PL/SQL block.
+   - In Oracle it is run with `EXECUTE IMMEDIATE`.
+
+   ```sql
+   DECLARE
+       v_table  VARCHAR2(30) := 'Employee';
+       v_count  NUMBER;
+       v_sql    VARCHAR2(200);
+   BEGIN
+       -- 1. DDL, which static PL/SQL cannot do
+       EXECUTE IMMEDIATE 'CREATE TABLE Temp_Emp (id NUMBER, name VARCHAR2(50))';
+
+       -- 2. table name decided at run time
+       v_sql := 'SELECT COUNT(*) FROM ' || v_table || ' WHERE dept_id = :d';
+       EXECUTE IMMEDIATE v_sql INTO v_count USING 10;
+       DBMS_OUTPUT.PUT_LINE('Rows: ' || v_count);
+   END;
+   /
+   ```
+   - The `USING` clause supplies a `bind variable` (`:d`). Bind variables must always be used instead of joining the value into the string, because string concatenation opens the door to `SQL injection` and forces the database to re-parse every statement.
+
+   | Point | Static SQL | Dynamic SQL |
+   |---|---|---|
+   | Written | At compile time | At run time, as a string |
+   | Checked | At compile time | Only when executed |
+   | Speed | Faster, plan is reused | Slower, needs parsing |
+   | DDL allowed | No | Yes |
+   | Risk | Safe | SQL injection if not bound |
+
+   Trigger
+   - A `trigger` is a stored block of code that the DBMS runs `automatically` when an `INSERT`, `UPDATE` or `DELETE` happens on a table. It cannot be called by name and takes no parameters.
+   - Timing is `BEFORE`, `AFTER` or `INSTEAD OF`; level is row (`FOR EACH ROW`) or statement. Inside a row trigger, `:NEW` is the incoming value and `:OLD` the previous one.
+
+   ```sql
+   -- validate before the change
+   CREATE OR REPLACE TRIGGER trg_check_salary
+   BEFORE INSERT OR UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF :NEW.salary < 0 THEN
+           RAISE_APPLICATION_ERROR(-20001, 'Salary cannot be negative');
+       END IF;
+   END;
+   /
+
+   -- audit after the change
+   CREATE OR REPLACE TRIGGER trg_salary_audit
+   AFTER UPDATE OF salary ON Employee
+   FOR EACH ROW
+   BEGIN
+       INSERT INTO Salary_Audit
+       VALUES (:OLD.emp_id, :OLD.salary, :NEW.salary, USER, SYSDATE);
+   END;
+   /
+   ```
+   ```sql
+   UPDATE Employee SET salary = 55000 WHERE emp_id = 101;
+   -- both triggers fire on their own; no call is written anywhere
+   ```
+   - Used for business rules a `CHECK` cannot express, audit trails, and maintaining derived columns. The drawback is hidden logic that is hard to debug.
+
 4. **(b) Describe the application of trigger in database.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
+
+   Answer: A `trigger` is a stored block of code that the DBMS runs automatically when an `INSERT`, `UPDATE` or `DELETE` happens on a table. Its applications are the jobs that must happen every time, regardless of which program made the change.
+
+   1. Auditing — who changed what and when
+   - The most common use. Banks and government systems are required to keep this trail.
+   ```sql
+   CREATE OR REPLACE TRIGGER trg_salary_audit
+   AFTER UPDATE OF salary ON Employee
+   FOR EACH ROW
+   BEGIN
+       INSERT INTO Salary_Audit
+       VALUES (:OLD.emp_id, :OLD.salary, :NEW.salary, USER, SYSDATE);
+   END;
+   /
+   ```
+
+   2. Enforcing complex business rules
+   - Rules a `CHECK` constraint cannot express, because they involve other tables or other rows.
+   - Example: a withdrawal must not take the balance below the minimum; a loan cannot be approved by the officer who applied for it.
+
+   3. Maintaining derived and summary columns
+   - Keeping a running total in sync automatically.
+   ```sql
+   CREATE OR REPLACE TRIGGER trg_update_total
+   AFTER INSERT ON Order_Item
+   FOR EACH ROW
+   BEGIN
+       UPDATE Orders
+       SET    total_amount = total_amount + (:NEW.qty * :NEW.price)
+       WHERE  order_id = :NEW.order_id;
+   END;
+   /
+   ```
+
+   4. Referential integrity that a foreign key cannot handle
+   - Cross-table rules, cascading actions on views, or checks that depend on a condition.
+
+   5. Data validation and standardisation
+   - Converting a name to upper case, trimming spaces, or generating a code before the row is stored. This must be a `BEFORE` trigger, because only there can `:NEW` be modified.
+
+   6. Automatic value generation
+   - Setting `created_on := SYSDATE` and `created_by := USER` on every insert, or filling a sequence number.
+
+   7. Security and access control
+   - Blocking a change made outside office hours, or from an unexpected user.
+   ```sql
+   IF TO_CHAR(SYSDATE,'HH24') NOT BETWEEN '09' AND '17' THEN
+       RAISE_APPLICATION_ERROR(-20002, 'Changes allowed only in office hours');
+   END IF;
+   ```
+
+   8. Replication and synchronisation
+   - Writing every change into a queue table that another system reads, when the DBMS's own replication is not used.
+
+   9. Preventing invalid operations
+   - Stopping a `DELETE` on a master table, or rejecting an update to a closed accounting period.
+
+   10. Making a view updatable
+   - An `INSTEAD OF` trigger redirects an insert on a join view to the correct base tables.
+
+   Points to note
+   - Triggers are `hidden logic`. A developer reading the application code cannot see why the data changed, so they must be documented.
+   - A slow trigger slows down every DML statement on that table.
+   - Triggers can `cascade` — one trigger fires another — which is easy to write and painful to trace. Where a constraint can do the job, prefer the constraint.
 
 5. **Suppose, ‘Employee’ table (emp_id, emp_name, dept_id, salary) and ‘Department’ table (dept_id, dept_name, increment_dept). Create a tigger to increment the salary of the employee by 10% whose salary is above 30000.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 
+   Answer: The question as written cannot be done exactly as stated, and the exam answer should say why and then give the working version.
+
+   - A trigger on `Employee` cannot `UPDATE Employee` itself in a row-level trigger. Oracle raises the `mutating table` error `ORA-04091`, because the table is in the middle of being changed.
+   - The correct way is a `BEFORE` trigger that changes `:NEW.salary` directly. In a `BEFORE` trigger the row has not been written yet, so assigning to `:NEW` is allowed and costs no extra statement.
+
+   The trigger
+   ```sql
+   CREATE OR REPLACE TRIGGER trg_increment_salary
+   BEFORE INSERT OR UPDATE OF salary ON Employee
+   FOR EACH ROW
+   WHEN (NEW.salary > 30000)
+   BEGIN
+       :NEW.salary := :NEW.salary * 1.10;      -- 10% increment
+   END;
+   /
+   ```
+   - `WHEN (NEW.salary > 30000)` filters the rows before the body runs. Note that inside `WHEN` the colon is not written.
+   - Equivalent form without `WHEN`:
+   ```sql
+   CREATE OR REPLACE TRIGGER trg_increment_salary
+   BEFORE INSERT OR UPDATE OF salary ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF :NEW.salary > 30000 THEN
+           :NEW.salary := :NEW.salary * 1.10;
+       END IF;
+   END;
+   /
+   ```
+
+   Testing it
+   ```sql
+   INSERT INTO Employee VALUES (101, 'Rahim', 10, 40000);
+   SELECT salary FROM Employee WHERE emp_id = 101;    -- 44000
+
+   INSERT INTO Employee VALUES (102, 'Karim', 10, 25000);
+   SELECT salary FROM Employee WHERE emp_id = 102;    -- 25000, unchanged
+   ```
+
+   Using the Department table's own increment rate
+   - The `Department` table has an `increment_dept` column, so a more realistic trigger reads the rate from there.
+   ```sql
+   CREATE OR REPLACE TRIGGER trg_dept_increment
+   BEFORE INSERT OR UPDATE OF salary ON Employee
+   FOR EACH ROW
+   DECLARE
+       v_rate Department.increment_dept%TYPE;
+   BEGIN
+       IF :NEW.salary > 30000 THEN
+           SELECT increment_dept INTO v_rate
+           FROM   Department
+           WHERE  dept_id = :NEW.dept_id;
+
+           :NEW.salary := :NEW.salary * (1 + v_rate / 100);
+       END IF;
+   EXCEPTION
+       WHEN NO_DATA_FOUND THEN
+           NULL;                                -- no rate set, leave salary as is
+   END;
+   /
+   ```
+
+   If a one-time raise is wanted rather than a trigger
+   ```sql
+   UPDATE Employee SET salary = salary * 1.10 WHERE salary > 30000;
+   ```
+
+   Points to state
+   - `BEFORE` trigger, because `:NEW` can be assigned only there. An `AFTER` trigger cannot change the row.
+   - `FOR EACH ROW`, because the rule applies per employee, not per statement.
+   - Reading `Employee` inside a row trigger on `Employee` causes ORA-04091; reading another table such as `Department` is fine.
+
 6. **(a) What is the purpose of database trigger? Explain with an example.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
+   Answer: Purpose of a database trigger
+   - A `trigger` is a block of code stored in the database that runs `automatically` when a defined event — `INSERT`, `UPDATE` or `DELETE` — happens on a table. It cannot be called by name and takes no parameters.
+   - Its purpose is to make a rule apply `every time, to every program`. Logic written in one application can be bypassed by a second application, a script or a direct SQL session; logic in a trigger cannot.
+
+   What it is used for
+   - Enforcing business rules that a `CHECK` constraint cannot express, because they involve other tables or other rows.
+   - Keeping an `audit trail` of who changed what and when — required in banking and government systems.
+   - Maintaining derived or summary columns automatically, such as an order total.
+   - Validating and standardising data before it is stored.
+   - Filling automatic values: `created_on`, `created_by`, a sequence number.
+   - Blocking invalid operations, such as a change to a closed accounting period.
+   - Making a view updatable, through an `INSTEAD OF` trigger.
+
+   Types
+   ```
+   Timing : BEFORE     -> runs before the change; :NEW can be modified here
+            AFTER      -> runs after the change; used for auditing
+            INSTEAD OF -> on views
+   Level  : Row-level (FOR EACH ROW) -> once per affected row
+            Statement-level          -> once per statement
+   ```
+   - `:NEW` is the incoming value, `:OLD` the previous one. On `INSERT`, `:OLD` is null; on `DELETE`, `:NEW` is null.
+
+   Example — audit every salary change
+   ```sql
+   CREATE TABLE Salary_Audit (
+       emp_id NUMBER, old_salary NUMBER, new_salary NUMBER,
+       changed_by VARCHAR2(30), changed_on DATE
+   );
+
+   CREATE OR REPLACE TRIGGER trg_salary_audit
+   AFTER UPDATE OF salary ON Employee
+   FOR EACH ROW
+   BEGIN
+       INSERT INTO Salary_Audit
+       VALUES (:OLD.emp_id, :OLD.salary, :NEW.salary, USER, SYSDATE);
+   END;
+   /
+   ```
+   ```sql
+   UPDATE Employee SET salary = 55000 WHERE emp_id = 101;
+
+   SELECT * FROM Salary_Audit;
+   -- 101 | 50000 | 55000 | SCOTT | 04-SEP-26
+   ```
+   - Nobody wrote a call to the trigger. The `UPDATE` alone caused the audit row to appear, and it would appear equally if the update came from a web application, a batch job or SQL*Plus.
+
+   Example — validate before the change
+   ```sql
+   CREATE OR REPLACE TRIGGER trg_check_salary
+   BEFORE INSERT OR UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       IF :NEW.salary < 0 THEN
+           RAISE_APPLICATION_ERROR(-20001, 'Salary cannot be negative');
+       END IF;
+   END;
+   /
+   ```
+
+   - Drawbacks to mention: triggers are hidden logic that is hard to debug, they slow down every DML statement on the table, and one trigger can fire another and cascade. Where an ordinary constraint can do the job, use the constraint.
+
 7. **Write a program in pl/SQL to find the heighest paid employees from employee table and store the data in HighestPaidEmp table.** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
+
+   Answer: Tables assumed
+   ```sql
+   CREATE TABLE Employee (
+       emp_id   NUMBER PRIMARY KEY,
+       emp_name VARCHAR2(50),
+       dept_id  NUMBER,
+       salary   NUMBER(12,2)
+   );
+
+   CREATE TABLE HighestPaidEmp (
+       emp_id     NUMBER,
+       emp_name   VARCHAR2(50),
+       dept_id    NUMBER,
+       salary     NUMBER(12,2),
+       copied_on  DATE
+   );
+   ```
+
+   Program 1 — the simple case, one highest-paid employee
+   ```sql
+   DECLARE
+       v_emp_id   Employee.emp_id%TYPE;
+       v_name     Employee.emp_name%TYPE;
+       v_dept     Employee.dept_id%TYPE;
+       v_salary   Employee.salary%TYPE;
+   BEGIN
+       SELECT emp_id, emp_name, dept_id, salary
+       INTO   v_emp_id, v_name, v_dept, v_salary
+       FROM   Employee
+       WHERE  salary = (SELECT MAX(salary) FROM Employee)
+       AND    ROWNUM = 1;
+
+       INSERT INTO HighestPaidEmp
+       VALUES (v_emp_id, v_name, v_dept, v_salary, SYSDATE);
+
+       COMMIT;
+       DBMS_OUTPUT.PUT_LINE('Inserted: ' || v_name || ' - ' || v_salary);
+
+   EXCEPTION
+       WHEN NO_DATA_FOUND THEN
+           DBMS_OUTPUT.PUT_LINE('Employee table is empty');
+       WHEN OTHERS THEN
+           ROLLBACK;
+           DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+   END;
+   /
+   ```
+
+   Program 2 — with a cursor, so that ties are all stored
+   ```sql
+   DECLARE
+       CURSOR c_top IS
+           SELECT emp_id, emp_name, dept_id, salary
+           FROM   Employee
+           WHERE  salary = (SELECT MAX(salary) FROM Employee);
+
+       v_count NUMBER := 0;
+   BEGIN
+       FOR r IN c_top LOOP
+           INSERT INTO HighestPaidEmp
+           VALUES (r.emp_id, r.emp_name, r.dept_id, r.salary, SYSDATE);
+           v_count := v_count + 1;
+       END LOOP;
+
+       COMMIT;
+       DBMS_OUTPUT.PUT_LINE(v_count || ' row(s) inserted');
+
+   EXCEPTION
+       WHEN OTHERS THEN
+           ROLLBACK;
+           DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+   END;
+   /
+   ```
+
+   Program 3 — highest paid employee of each department
+   ```sql
+   BEGIN
+       INSERT INTO HighestPaidEmp
+       SELECT emp_id, emp_name, dept_id, salary, SYSDATE
+       FROM   Employee e
+       WHERE  salary = (SELECT MAX(salary) FROM Employee
+                        WHERE dept_id = e.dept_id);
+       COMMIT;
+   END;
+   /
+   ```
+
+   The same job as a single SQL statement
+   ```sql
+   INSERT INTO HighestPaidEmp
+   SELECT emp_id, emp_name, dept_id, salary, SYSDATE
+   FROM   Employee
+   WHERE  salary = (SELECT MAX(salary) FROM Employee);
+   ```
+
+   Points to note
+   - Use `= (SELECT MAX(salary) ...)`, not `ORDER BY salary DESC` with `ROWNUM = 1` alone. `ROWNUM` is assigned before the sort, so `WHERE ROWNUM = 1 ORDER BY salary DESC` returns a random row, which is a common exam trap.
+   - `SELECT ... INTO` fails with `TOO_MANY_ROWS` if two employees share the top salary, which is exactly why the cursor version exists.
+   - `%TYPE` ties each variable to its column's data type, so a change to the table does not break the code.
+   - Always `COMMIT` on success and `ROLLBACK` in the exception block, otherwise a partial insert can be left behind.
 
 ## SQL Joins & Operations (7)
 
