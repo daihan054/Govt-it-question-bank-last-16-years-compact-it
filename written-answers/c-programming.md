@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 270 questions
+**Table of Contents** — 9 subtopics · 284 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-111) | 111 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-124) | 124 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
-| 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
+| 3 | [Recursion & Functions](#recursion--functions-39) | 39 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-14) | 14 |
@@ -17,11 +17,11 @@
 
 ---
 
-## Basic Programs & Control Statements (111)
+## Basic Programs & Control Statements (124)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    ```c
    #include <stdio.h>
@@ -44,7 +44,7 @@
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    ```c
    #include <stdio.h>
@@ -70,7 +70,7 @@
 
 3. **Write a structured program (in C or Python) that takes an integer input n and prints the sum of all even numbers from 1 to n.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
 
-   Answer:
+Answer:
 
    ```c
    #include <stdio.h>
@@ -96,7 +96,7 @@
 
 4. **(a) Difference between a while loop and do-while loop.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1446 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | while loop | do-while loop |
    |---|---|---|
@@ -115,6 +115,13 @@
    - The `while` loop tests `15 < 10` first, finds it false and never enters the body. The `do-while` executes the body once before testing.
 
 5. **Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1354 (ET: N/A)]*
+```
+1 2 3 4
+2 3 4
+3 4
+4
+```
+
 ```
 1 2 3 4
 2 3 4
@@ -150,7 +157,7 @@
 
 6. **a) Suppose you are working with an array of size 10. It contains all the numbers from 1 to 10 exactly once in a random order. But accidentally, one of the numbers in the array got replaced by a zero (0). Write a C/C++ programme using functions, to restore the lost number.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
 
-   Answer: The sum of 1 to 10 is fixed at 55. Whatever is missing equals 55 minus the current sum of the array.
+Answer: The sum of 1 to 10 is fixed at 55. Whatever is missing equals 55 minus the current sum of the array.
 
    ```c
    #include <stdio.h>
@@ -186,7 +193,7 @@
 
 7. **Find biggest elements in an array of 10 components.** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
-   Answer:
+Answer:
 
    ```c
    #include <stdio.h>
@@ -211,7 +218,7 @@
 
 8. **Write a C program that accepts 10 elements in an array and finds the maximum elements from the array.** *[BBA Assistant Programmer 12.07.2025 compact it 1433 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    ```c
    #include <stdio.h>
@@ -238,7 +245,7 @@
 
 9. **Write a function to find minimum number from an array, return minimum value as argument.** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1430 (ET: BUET)]*
 
-   Answer: To return the value "as an argument", the function writes the result into a pointer parameter instead of using a return value.
+Answer: To return the value "as an argument", the function writes the result into a pointer parameter instead of using a return value.
 
    ```c
    #include <stdio.h>
@@ -267,7 +274,7 @@
 
 10. **Write a C/Java program to check Armstrong number or not.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)], [BREB Assistant Programmer (AP) 21.02.2025 compact it 1334 (ET: N/A)]*
 
-    Answer: A number is an Armstrong number when the sum of its digits, each raised to the power of the digit count, equals the number itself. For example `153 = 1³ + 5³ + 3³`.
+Answer: A number is an Armstrong number when the sum of its digits, each raised to the power of the digit count, equals the number itself. For example `153 = 1³ + 5³ + 3³`.
 
     ```c
     #include <stdio.h>
@@ -301,7 +308,7 @@
 
 11. **Write a program from the following series: $e^x = 1 + \frac{x}{1} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots$** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 316 (ET: N/A)]*
 
-    Answer: Each term is built from the previous one by multiplying with `x/i`, so no separate power or factorial calculation is needed.
+Answer: Each term is built from the previous one by multiplying with `x/i`, so no separate power or factorial calculation is needed.
 
     ```c
     #include <stdio.h>
@@ -329,7 +336,7 @@
 
 12. **Write a C program to find sum of: $X - \frac{X^3}{3!} + \frac{X^5}{5!} - \frac{X^7}{7!} \dots N$** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 397 (ET: BUET)]*
 
-    Answer: This is the Taylor series for `sin(x)`. Each term is obtained from the previous one by multiplying with `−x²/((2i)(2i+1))`.
+Answer: This is the Taylor series for `sin(x)`. Each term is obtained from the previous one by multiplying with `−x²/((2i)(2i+1))`.
 
     ```c
     #include <stdio.h>
@@ -359,6 +366,16 @@
     - Time complexity `O(n)`.
 
 13. **Salary Range and Tax Calculation are given:**
+
+| Salary Range | Tax |
+|---|---|
+| 0-250000 | 0 |
+| 250001-5000000 | 10% |
+| 500001-100000 | 20% |
+| >10,00000 | 30% |
+
+   * **a. Write a program using any language to the calculate the total tax of employee.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 290 (ET: BUET)]*
+   * **b. From the three employee salary find the highest tax paying employee.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 290 (ET: BUET)]*
 
 | Salary Range | Tax |
 |---|---|
@@ -414,7 +431,7 @@
 
 14. **Write a C program find prime number 1 to n.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -444,6 +461,10 @@
 
 15. **Write a program in any language to find the sum of rows and columns of a m \times n matrix, where m and n is taken input from the user. Give the output in the following format:**
    **Sample Input matrix:**
+   **Sample Output:**
+   *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 331 (ET: BIBM)]*
+
+**Sample Input matrix:**
    **Sample Output:**
    *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 331 (ET: BIBM)]*
 
@@ -487,6 +508,11 @@
    **Sample Output:**
    **Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
 
+**Sample input:**
+   **Enter value of n: 20**
+   **Sample Output:**
+   **Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
+
    Answer: The Sieve of Eratosthenes is used here, since it is far faster when all primes up to `n` are needed.
 
    ```c
@@ -524,7 +550,7 @@
 
 17. **Write a Program Prime number print from 1 to n.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 294 (ET: BIBM)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -552,6 +578,15 @@
     - Time complexity `O(n√n)`.
 
 18. **Write a Program Floyds triangle n=5**
+```text
+1
+01
+101
+0101
+10101
+```
+*[Combined Bank Assistant Programmer 09.02.2024 compact it 295 (ET: BIBM)]*
+
 ```text
 1
 01
@@ -592,7 +627,7 @@
 
 19. **Write a C Program Find sum of the series: 1+2+4+7+11+..........+N** *[Combined Bank Assistant Programmer 09.02.2024 compact it 295 (ET: BIBM)]*
 
-    Answer: The differences between consecutive terms are 1, 2, 3, 4, ... so each term is the previous term plus the term index.
+Answer: The differences between consecutive terms are 1, 2, 3, 4, ... so each term is the previous term plus the term index.
 
     ```c
     #include <stdio.h>
@@ -621,7 +656,7 @@
 
 20. **Write a function which receives an array of integers as parameter and print the numbers divisible by 3 in the array.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 428 (ET: BIBM)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -652,7 +687,7 @@
 
 21. **Write a C program: ax^2+bx+c=0** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 390 (ET: BUET)]*
 
-    Answer: The roots come from the quadratic formula `x = (−b ± √(b² − 4ac)) / 2a`. The discriminant `D = b² − 4ac` decides which of three cases applies.
+Answer: The roots come from the quadratic formula `x = (−b ± √(b² − 4ac)) / 2a`. The discriminant `D = b² − 4ac` decides which of three cases applies.
 
     ```c
     #include <stdio.h>
@@ -692,7 +727,7 @@
 
 22. **Write a program that take a number as input and output should be sum of digits of that number using python/C also draw its flow chart.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -734,6 +769,8 @@
 
 23. **Find the output from the following: take input and looks the output:**
    **Suppose Input: 6789; Output: 9876** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
+
+**Suppose Input: 6789; Output: 9876** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
 
    Answer: The program reverses the digits of the number. Each digit is peeled off from the right and appended to the result from the left.
 
@@ -779,6 +816,16 @@ int main() {
 }
 ```
 
+```c
+#include<stdio.h>
+int main() {
+    int a[] = {0,1,2,3,4};
+    int b[] = {10,20,30,40,50};
+    printf("%d", b[a[2]]);
+    return 0;
+}
+```
+
    Answer: Output is `30`.
 
    Step-by-step
@@ -790,6 +837,15 @@ int main() {
    - This is array indexing with a nested subscript — the inner subscript is evaluated first and its value is used as the index for the outer array.
 
 25. **Given a code with a variable value "a=85" and finds its output a=85**
+```c
+if a>=90 point A;
+if a>=80 point B;
+if a>=70 point C;
+if a>=60 point D;
+else print F;
+```
+*[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
+
 ```c
 if a>=90 point A;
 if a>=80 point B;
@@ -820,7 +876,7 @@ else print F;
 
 26. **(ক) C ভাষায় ব্যবহৃত বিভিন্ন ধরনের Data Type বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 407 (ET: N/A)]*
 
-    Answer: A data type tells the compiler what kind of value a variable holds and how much memory to give it. C data types fall into three groups.
+Answer: A data type tells the compiler what kind of value a variable holds and how much memory to give it. C data types fall into three groups.
 
     (a) Primary (basic) data types
 
@@ -848,7 +904,7 @@ else print F;
 
 27. **(খ) একটি ধনাত্মক পূর্ণ সংখ্যার Factorial নির্ণয়ের C program লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -878,7 +934,7 @@ else print F;
 
 28. **Write a program swap two numbers without using 3rd variable.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -938,6 +994,37 @@ int main() {
 }
 ```
 
+```c
+#include <stdio.h>
+void PrintArray(int num[], int n) {
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%d", num[i]);
+    }
+    printf("\n");
+}
+void FunctionArray(int num[], int n) {
+    int i, j, key;
+    for (i=1;i<n;i++)
+    {
+        key=num[i];
+        j--;
+        while(j>=0 && j<=n){
+            num[j] = num[j+1];
+            key=num[j];
+        }
+        num[i-1]=key;
+        PrintArray(num,n);
+    }}
+int main() {
+    int num[]={11,2,3,4,5};
+    PrintArray(num,5);
+    FunctionArray(num,5);
+    return 0;
+}
+```
+
     Answer: The first line printed is `112345`. After that the program has undefined behaviour and, when compiled and run, it hangs in an infinite loop.
 
     Why
@@ -966,7 +1053,7 @@ int main() {
 
 30. **Write a program for following sequence and analyze complexity of the program** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
 
-    Answer: The sequence was not printed with the question, so the Fibonacci sequence is used to show both the program and the complexity analysis.
+Answer: The sequence was not printed with the question, so the Fibonacci sequence is used to show both the program and the complexity analysis.
 
     ```c
     #include <stdio.h>
@@ -996,7 +1083,7 @@ int main() {
 
 31. **Write a C/C++ program to count the prime number up to N.** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1024,7 +1111,7 @@ int main() {
 
 32. **Write a C/C++ program for check out a leap year program.** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1065,14 +1152,23 @@ int main() {
    Start
    ```
 
+**a) Sample Output:**
+   ```text
+   1
+   1 2
+   1 2 3
+   1 2 3 4
+   ```
+   **b) Write a C or C++ Program to print an array of five fruits.**
+
    Answer:
 
-   (a) Number triangle — row `i` prints the numbers 1 to `i`.
+   (a) Number triangle of 4 rows
    ```c
    #include <stdio.h>
 
    int main(void) {
-       int n = 3, i, j;
+       int n = 4, i, j;
        for (i = 1; i <= n; i++) {
            for (j = 1; j <= i; j++)
                printf("%d ", j);
@@ -1082,22 +1178,48 @@ int main() {
    }
    ```
 
-   (b) Print a fixed string a fixed number of times.
+   (b) Array of five fruit names — an array of string pointers
    ```c
    #include <stdio.h>
 
    int main(void) {
+       char *fruits[5] = {"Mango", "Banana", "Jackfruit", "Litchi", "Guava"};
        int i;
-       for (i = 1; i <= 4; i++)
-           printf("Start\n");
+
+       printf("List of fruits:\n");
+       for (i = 0; i < 5; i++)
+           printf("%d. %s\n", i + 1, fruits[i]);
        return 0;
    }
    ```
 
-   - In (a) the inner loop bound depends on the outer counter, which is what makes the triangle shape. Time complexity `O(n²)`.
-   - In (b) the loop body is independent of the counter, so it is a simple `O(n)` repetition.
+   - `char *fruits[5]` is an array of five pointers, each pointing to a string literal. A 2-D form `char fruits[5][20]` would also work and allows the strings to be modified.
 
 34. **Find the output of the following program including time and space complexity.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 542 (ET: MIST)]*
+```cpp
+#include<iostream>
+int main(){
+int n;
+std::cout <<"Enter the number of terms for the fibonacci series: ";
+std::cin >> n;
+int first = 0, second =1;
+if (n>=1){
+std::cout <<"Fibonacci Series:"<< first;
+if(n>=2){
+std::cout<< second;
+}
+for(int i=2;i<n ;i++){
+int next = first + second;
+std::cout<<","<<next;
+first = second;
+second = next;
+}
+}
+std::cout<<std::endl;
+return 0;
+}
+```
+
 ```cpp
 #include<iostream>
 int main(){
@@ -1141,7 +1263,7 @@ return 0;
 
 35. **Write a program find prime number between 1 to 100?** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 499 (ET: IBA)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1170,7 +1292,7 @@ return 0;
 
 36. **Write a C program sum of 1 to 100.** *[Mongla Port Authority Assistant Programmer 2023 compact it 571 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1191,6 +1313,15 @@ return 0;
 
 37. **Write a Program:** *[DESCO Assistant Engineer 20.05.2023 compact it 579 (ET: DESCO)]*
    **a) Sample Output:**
+   ```text
+   1
+   1 2
+   1 2 3
+   1 2 3 4
+   ```
+   **b) Write a C or C++ Program to print an array of five fruits.**
+
+**a) Sample Output:**
    ```text
    1
    1 2
@@ -1235,6 +1366,10 @@ return 0;
 
 38. **Write a program in any language that takes two matrices A and B as inputs ensure your code handles matrices of different dimensions—**
    **A) Find matrices C that is multiplication A and B.**
+   **B) Find average in A and B.**
+   **C) Max from matrices C** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 515 (ET: MIST)]*
+
+**A) Find matrices C that is multiplication A and B.**
    **B) Find average in A and B.**
    **C) Max from matrices C** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 515 (ET: MIST)]*
 
@@ -1300,7 +1435,7 @@ return 0;
 
 39. **Write a function to find the smallest element from an array.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 492 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1326,7 +1461,7 @@ return 0;
 
 40. **Suppose you have an array. The array contains elements from 0 to 10. This array also contains 0. To replace these 0s, write a program in C/C++ language.** *[BTCL Assistant Manager (Technical) 2023 compact it 593 (ET: BUET)]*
 
-    Answer: The array should hold 1 to 10 once each, but some entries were replaced by 0. The missing values are found by marking which numbers are present, then the zeros are filled with the missing ones.
+Answer: The array should hold 1 to 10 once each, but some entries were replaced by 0. The missing values are found by marking which numbers are present, then the zeros are filled with the missing ones.
 
     ```c
     #include <stdio.h>
@@ -1359,6 +1494,12 @@ return 0;
 
 41. **Write a function int equilibrium (int[] arr, int n); that given a sequence arr[] of size n, returns an equilibrium index (if any) or -1 if no equilibrium indexes exist. The equilibrium index of an array is an index such that the sum of elements at lower indexes is equal to the sum of elements at higher indexes. Foe example:** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 455 (ET: BUET)]*
    **Input: A[] = {-7, 1, 5, 2, -4, 3, 0}**
+   **Output: 3**
+   **3 is an equilibrium index, because: A[0] + A[1] + A[2] = A[4] + A[5] + A[6]**
+   **Input: A[] = {1, 2, 3}**
+   **Output: -1**
+
+**Input: A[] = {-7, 1, 5, 2, -4, 3, 0}**
    **Output: 3**
    **3 is an equilibrium index, because: A[0] + A[1] + A[2] = A[4] + A[5] + A[6]**
    **Input: A[] = {1, 2, 3}**
@@ -1409,6 +1550,14 @@ return 0;
 ```
 *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
 
+```text
+0
+010
+01010
+
+```
+*[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
+
     Answer: Row `i` has `2i − 1` characters, and the digits alternate starting from 0. So the character at column `j` is 0 when `j` is odd and 1 when `j` is even.
 
     ```c
@@ -1438,7 +1587,7 @@ return 0;
 
 43. **Write a C code that show factorial of a number.** *[BITAC Assistant Programmer 27.10.2023 compact it 561 (ET: BUTEX)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1469,7 +1618,7 @@ return 0;
 
 44. **Write a C Program to delete duplicate element from array.** *[BEPZA Programmer 03.11.2023 compact it 561 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1508,7 +1657,7 @@ return 0;
 
 45. **Given two integers A and B as input write a program to compute the least common multiple of A and B.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 
-    Answer: The relation `LCM(a,b) × GCD(a,b) = a × b` gives the fastest route — find the GCD by Euclid's algorithm, then divide.
+Answer: The relation `LCM(a,b) × GCD(a,b) = a × b` gives the fastest route — find the GCD by Euclid's algorithm, then divide.
 
     ```c
     #include <stdio.h>
@@ -1544,7 +1693,7 @@ return 0;
 
 46. **(খ) এমন একটি C program লিখুন যা একটি array তৈরি করে কতগুলো ডেটা রাখবে, তারপর ফলাফল হিসেবে ডেটাগুলোকে বিপরীত দিক থেকে print করবে।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 600 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1573,7 +1722,7 @@ return 0;
 
 47. **(খ) প্রথম দশটি Fibonacci number প্রদর্শনের জন্য একটি C program লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 601 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1604,7 +1753,7 @@ return 0;
 
 48. **Write a C program: x - \frac{x^3}{3} + \frac{x^5}{5} - \dots** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 650 (ET: BUET)]*
 
-    Answer: This is the arctan (Gregory-Leibniz) series. The denominators are odd numbers, not factorials, and the signs alternate.
+Answer: This is the arctan (Gregory-Leibniz) series. The denominators are odd numbers, not factorials, and the signs alternate.
 
     ```c
     #include <stdio.h>
@@ -1634,7 +1783,7 @@ return 0;
 
 49. **C program to find sum of odd numbers from 1 to n.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 656 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1659,7 +1808,7 @@ return 0;
 
 50. **Determine whwther a given number is prime or not?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1687,7 +1836,7 @@ return 0;
 
 51. **Find the most significant number in an array of N elements.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 683 (ET: N/A)]*
 
-    Answer: "Most significant" here means the largest value in the array.
+Answer: "Most significant" here means the largest value in the array.
 
     ```c
     #include <stdio.h>
@@ -1714,7 +1863,7 @@ return 0;
 
 52. **Determine even or odd numbers.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 684 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1742,6 +1891,14 @@ return 0;
     - Time complexity `O(n)`.
 
 53. **Print the following matrix using for loop.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
+```text
+1
+22
+333
+4444
+55555
+```
+
 ```text
 1
 22
@@ -1781,7 +1938,7 @@ return 0;
 
 54. **ইউজার হতে 10 টি integer data input করে যে data গুলো 5 দ্বারা বিভাজ্য তাদের গড় মান নির্ণয় এর একটি program লিখুন।** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1815,7 +1972,7 @@ return 0;
 
 55. **Write a function in C/C++ that return kth largest number of an array. The function has three parameters array_name, size, k.** *[EGCB Assistant Engineer (CSE) 2022 compact it 714 (ET: BUET)]*
 
-    Answer: Sort the array in descending order and return the element at index `k − 1`.
+Answer: Sort the array in descending order and return the element at index `k − 1`.
 
     ```c
     #include <stdio.h>
@@ -1847,7 +2004,7 @@ return 0;
 
 56. **Write a C/C++ program to find out the prime from 1 to N.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 718 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1875,7 +2032,7 @@ return 0;
 
 57. **Write a C/C++ program to find the reverse number of a number.** *[CAAB Programmer 2022 compact it 721 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1903,7 +2060,7 @@ return 0;
 
 58. **Write a C/C++ program to find the HCF.** *[CAAB Programmer 2022 compact it 721 (ET: N/A)]*
 
-    Answer: HCF (Highest Common Factor) is the same as GCD. Euclid's algorithm is the standard method.
+Answer: HCF (Highest Common Factor) is the same as GCD. Euclid's algorithm is the standard method.
 
     ```c
     #include <stdio.h>
@@ -1937,7 +2094,7 @@ return 0;
 
 59. **Write a C/C++ program to find the sum of digits.** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1965,7 +2122,7 @@ return 0;
 
 60. **Write a program to find this is Leap year or not, using function.** *[BKSP Assistant Programmer 03.12.2022 compact it 729 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -1996,7 +2153,7 @@ return 0;
 
 61. **Write a C program using array, here N is the number of total students. Take the input and find the average marks. Find out the students who got the above marks or low marks according to average marks.** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2038,7 +2195,7 @@ return 0;
 
 62. **Write down a function int reverse (int n) that takes a positive integer as input parameter and returns the reverse of the given integer. For example, if input integer N=2579, then reversed output is= 9752** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 748 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2072,7 +2229,7 @@ return 0;
 
 63. **Consider int num[20][4] holds the marks of four class test(CT) of a class of 20 students. Write a program to find out the sum of best three CT marks for each student.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 748 (ET: N/A)]*
 
-    Answer: The best three out of four is simply the total of all four minus the lowest one.
+Answer: The best three out of four is simply the total of all four minus the lowest one.
 
     ```c
     #include <stdio.h>
@@ -2104,7 +2261,7 @@ return 0;
 
 64. **(ক) নিচের সিরিজ টি ক্যালকুলেটর এবং প্রিন্ট করার জন্য একটি C Program লিখুন। 1 + 2 + 3 + \dots + 100** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2129,7 +2286,7 @@ return 0;
 
 65. **(খ) তোমার ক্লাসের ছাত্রদের তালিকা Sort করার জন্য একটি C Program লিখ।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
 
-    Answer: Student names are strings, so `strcmp` is used for comparison and `strcpy` for swapping.
+Answer: Student names are strings, so `strcmp` is used for comparison and `strcpy` for swapping.
 
     ```c
     #include <stdio.h>
@@ -2167,7 +2324,7 @@ return 0;
 
 66. **(b) Write a program in C/C++/Java to identify the largest number of given 3 numbers.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 791 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2192,7 +2349,7 @@ return 0;
 
 67. **(b) Write down a program in C language that will find the maximum of four integer gives as inputs.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2218,7 +2375,7 @@ return 0;
 
 68. **We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All values of the subarray are said to be in the form of a mountain if either all values are increasing or decreasing or first increasing and then decreasing. Write a C/C++ Program that shows input is a Mountain sequence or Not Mountain sequence.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 833 (ET: N/A)]*
 
-    Answer: Walk up while values increase, then walk down while they decrease. If the whole range is consumed, it is a mountain.
+Answer: Walk up while values increase, then walk down while they decrease. If the whole range is consumed, it is a mountain.
 
     ```c
     #include <stdio.h>
@@ -2249,7 +2406,7 @@ return 0;
 
 69. **Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6** *[RAKUB Programmer (PO) 12.10.2021 compact it 844 (ET: N/A)], [Sonali Bank Ltd. Officer IT 2021 compact it 908 (ET: N/A)]*
 
-    Answer: This value is called the digital root. Keep summing the digits until a single digit remains.
+Answer: This value is called the digital root. Keep summing the digits until a single digit remains.
 
     ```c
     #include <stdio.h>
@@ -2288,6 +2445,14 @@ return 0;
 1
 ```
 
+```text
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+```
+
     Answer: This is an inverted number triangle — row `i` prints 1 up to `n − i + 1`.
 
     ```cpp
@@ -2311,7 +2476,7 @@ return 0;
 
 71. **(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the sum of main diagonal elements of the matrix.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 884 (ET: N/A)]*
 
-    Answer: On the main diagonal the row index equals the column index, so a single loop is enough.
+Answer: On the main diagonal the row index equals the column index, so a single loop is enough.
 
     ```c
     #include <stdio.h>
@@ -2345,7 +2510,7 @@ return 0;
 
 72. **(b) Write down a program to find sum of diagonal elements of a two dimensional matrix.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
-    Answer: A square matrix has two diagonals — the main diagonal `a[i][i]` and the secondary diagonal `a[i][n-1-i]`.
+Answer: A square matrix has two diagonals — the main diagonal `a[i][i]` and the secondary diagonal `a[i][n-1-i]`.
 
     ```c
     #include <stdio.h>
@@ -2378,7 +2543,7 @@ return 0;
 
 73. **(i) Write a C/C++ program up to series n: \frac{1}{2\times 3} + \frac{2}{3\times 4} + \frac{3}{4\times 5} \dots\dots\dots\dots\dots** *[NESCO Assistant Manager (ICT) 2021 compact it 907 (ET: BUET)]*
 
-    Answer: The general term is `i / ((i+1) × (i+2))`.
+Answer: The general term is `i / ((i+1) × (i+2))`.
 
     ```c
     #include <stdio.h>
@@ -2404,7 +2569,7 @@ return 0;
 
 74. **Write a C program to compute the perimeter and area of a circle with a given radius.** *[Sonali Bank Ltd. Officer IT 2021 compact it 909-910 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2430,7 +2595,7 @@ return 0;
 
 75. **A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 912 (ET: BUET)]*
 
-    Answer: Read meter numbers and their units, then report every meter whose consumption exceeds 300 along with the total units of that group.
+Answer: Read meter numbers and their units, then report every meter whose consumption exceeds 300 along with the total units of that group.
 
     ```c
     #include <stdio.h>
@@ -2465,7 +2630,7 @@ return 0;
 
 76. **Write the code for second highest maximum from given three number in c/c++.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 920-921 (ET: N/A)]*
 
-    Answer: The second highest of three numbers is the one that is neither the maximum nor the minimum.
+Answer: The second highest of three numbers is the one that is neither the maximum nor the minimum.
 
     ```c
     #include <stdio.h>
@@ -2497,7 +2662,7 @@ return 0;
 
 77. **Write a simple output C program to check odd-even number.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2521,7 +2686,7 @@ return 0;
 
 78. **Write a C program for prime numbers between 1 to N.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2549,7 +2714,7 @@ return 0;
 
 79. **Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2573,7 +2738,7 @@ return 0;
 
 80. **(i) Formatted Input/Output Statement কাকে বলে? Key-Board থেকে কিভাবে input নেয়া যায়? %d এর অর্থ কী?** *[BPSC Assistant Network Engineer 2020 compact it 954-955 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Formatted input/output statement
     - A statement that reads or writes data in a specified format, controlled by format specifiers. In C these are `scanf()` for input and `printf()` for output.
@@ -2603,7 +2768,7 @@ return 0;
 
 81. **(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।** *[BPSC Assistant Network Engineer 2020 compact it 955 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Format of the if-else statement
     ```c
@@ -2643,7 +2808,7 @@ return 0;
 
 82. **An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as total overtime hours multiplied by 1.5 times the hourly wage. Write a program that takes as inputs the hourly wage, total regular hours, and total overtime hours and prints an employee’s total weekly pay.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2677,7 +2842,7 @@ return 0;
 
 83. **Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).** *[NACTAR Assistant Instructor (ICT) 2020 compact it 990-991 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2705,7 +2870,7 @@ return 0;
 
 84. **X is an integer stream of N numbers. You have to select 2 data P and Q such that A <= (P+Q) <= B. Write an algorithm / pseudo code/ C program how many ways you can select P & Q. The time complexity must be n log n.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1005-1006 (ET: DU)]*
 
-    Answer: Sort the array first, then for each element use binary search to find the valid range of partners. Sorting costs `O(n log n)` and the `n` binary searches cost `O(n log n)` as well.
+Answer: Sort the array first, then for each element use binary search to find the valid range of partners. Sorting costs `O(n log n)` and the `n` binary searches cost `O(n log n)` as well.
 
     ```c
     #include <stdio.h>
@@ -2762,7 +2927,7 @@ return 0;
 
 85. **Write a code in C/C++ that will output the 2nd largest number. (If N>=1)** *[Combined 4 Banks Assistant Programmer 2020 compact it 1008-1009 (ET: DU)]*
 
-    Answer: One pass keeping two running values — the largest and the second largest.
+Answer: One pass keeping two running values — the largest and the second largest.
 
     ```c
     #include <stdio.h>
@@ -2801,7 +2966,7 @@ return 0;
 
 86. **0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040-1041 (ET: DPI)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2833,7 +2998,7 @@ return 0;
 
 87. **Write a program in C to find the sum of following series: $1^2+2^2+3^2+\dots\dots\dots\dots+n^2$** *[Bangladesh Competition Commission Programmer 2019 compact it 1061 (ET: DU)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2861,7 +3026,7 @@ return 0;
 
 88. **A prim number is a number that is evenly divided by only 1 and itself. Write a program to your favorite language to print the first 100 prime numbers.** *[Bangladesh Competition Commission Programmer 2019 compact it 1062 (ET: DU)]*
 
-    Answer: Note the difference from "primes up to 100" — here 100 primes are wanted, so the loop keeps going until the count reaches 100.
+Answer: Note the difference from "primes up to 100" — here 100 primes are wanted, so the loop keeps going until the count reaches 100.
 
     ```c
     #include <stdio.h>
@@ -2895,7 +3060,7 @@ return 0;
 
 89. **(গ) Array processor কী? $1+\frac{1}{2}+\frac{1}{3}+\dots\dots\dots\dots+\frac{1}{N}$ ধারাটির যোগফল নির্ণয়ের জন্য C ভাষায় একটি প্রোগ্রাম লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072-1073 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Array processor
     - A processor designed to perform the same operation on many data elements at the same time, using multiple processing elements that work in lock step under one control unit.
@@ -2927,7 +3092,7 @@ return 0;
 
 90. **(ক) একটি Array তে পাঁচটি সংখ্যা Input হিসেবে নিয়ে তাদের গড় বের করার জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে কোড লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1082-1083 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -2956,7 +3121,7 @@ return 0;
 
 91. **(খ) $ax^2+bx+c=0$ সমীকরণটির x চলকের মান নির্ণয়ের জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে একটি কোড লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1084-1085 (ET: N/A)]*
 
-    Answer: The roots come from `x = (−b ± √(b² − 4ac)) / 2a`, and the discriminant `D = b² − 4ac` selects one of three cases.
+Answer: The roots come from `x = (−b ± √(b² − 4ac)) / 2a`, and the discriminant `D = b² − 4ac` selects one of three cases.
 
     ```c
     #include <stdio.h>
@@ -2999,6 +3164,11 @@ for(a=1; a<=100; a++)
     printf("%d\n", a*a);
 ```
 
+```c
+for(a=1; a<=100; a++)
+    printf("%d\n", a*a);
+```
+
     Answer:
 
     ```c
@@ -3023,7 +3193,7 @@ for(a=1; a<=100; a++)
 
 93. **(a) Write a Java/C program to find the sum of the following series? $\frac{1}{1!} + \frac{2}{2!} + \frac{3}{3!} + \dots\dots\dots\dots + \frac{N}{N!}$** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
-    Answer: The term `i/i!` simplifies to `1/(i−1)!`, but the direct approach is to build the factorial incrementally so it is never recomputed.
+Answer: The term `i/i!` simplifies to `1/(i−1)!`, but the direct approach is to build the factorial incrementally so it is never recomputed.
 
     ```c
     #include <stdio.h>
@@ -3052,7 +3222,7 @@ for(a=1; a<=100; a++)
 
 94. **একটি ৯ ধার বিশিষ্ট বহুভুজের প্রতিটির ধার সমান। উক্ত বহুভুজের অভ্যন্তরীণ কোন ডিগ্রিতে প্রকাশের C Program লিখুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
 
-    Answer: For a regular polygon with `n` sides, each interior angle is `(n − 2) × 180 / n` degrees.
+Answer: For a regular polygon with `n` sides, each interior angle is `(n − 2) × 180 / n` degrees.
 
     ```c
     #include <stdio.h>
@@ -3086,7 +3256,7 @@ for(a=1; a<=100; a++)
 
 95. **Write a program to find the GCD using C/C++.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -3115,7 +3285,7 @@ for(a=1; a<=100; a++)
 
 96. **Write a c program to find max price from 20 items.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -3146,7 +3316,7 @@ for(a=1; a<=100; a++)
 
 97. **Write a program to calculate GPA, Avg and total marks.** *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
-    Answer: Marks are converted to grade points using the standard Bangladeshi grading scale, and the GPA is the average of those points.
+Answer: Marks are converted to grade points using the standard Bangladeshi grading scale, and the GPA is the average of those points.
 
     ```c
     #include <stdio.h>
@@ -3190,7 +3360,7 @@ for(a=1; a<=100; a++)
 
 98. **Write a program of find Prime number in 1 to 100 number. (Using any language)** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -3221,7 +3391,7 @@ for(a=1; a<=100; a++)
 
 99. **Write a program of find max from 20 item price. (Using any language)** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -3248,6 +3418,14 @@ for(a=1; a<=100; a++)
     - Time complexity `O(n)`, space `O(n)`.
 
 100. **Write program for following pattern:** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
+```text
+12345
+1234
+123
+12
+1
+```
+
 ```text
 12345
 1234
@@ -3288,7 +3466,7 @@ for(a=1; a<=100; a++)
 
 101. **Write a c program to verify a perfect number. Perfect number is a positive integer which is equal to the sum of its proper positive divisors.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190 (ET: N/A)]*
 
-     Answer: A proper divisor of `n` is a divisor smaller than `n` itself. If those divisors add up to `n`, it is a perfect number.
+Answer: A proper divisor of `n` is a divisor smaller than `n` itself. If those divisors add up to `n`, it is a perfect number.
 
      ```c
      #include <stdio.h>
@@ -3321,7 +3499,7 @@ for(a=1; a<=100; a++)
 
 102. **Write a program check a number is prime or not prime.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211-1212 (ET: N/A)]*
 
-     Answer:
+Answer:
 
      ```c
      #include <stdio.h>
@@ -3350,7 +3528,7 @@ for(a=1; a<=100; a++)
 
 103. **Suppose an array is {4,5,6,7}. Write a C program that will output like {4,5}, {4,6}, {4,7}, {5,6}, {5,7}, {6,7}.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1212-1213 (ET: N/A)]*
 
-     Answer: This prints every unordered pair. The inner loop starts at `i + 1` so each pair appears once and no element is paired with itself.
+Answer: This prints every unordered pair. The inner loop starts at `i + 1` so each pair appears once and no element is paired with itself.
 
      ```c
      #include <stdio.h>
@@ -3382,7 +3560,7 @@ for(a=1; a<=100; a++)
 
 104. **Write a program using any programming language that reads five numbers from keyboard and display the smaller, larger and average of those numbers.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217-1218 (ET: N/A)]*
 
-     Answer:
+Answer:
 
      ```c
      #include <stdio.h>
@@ -3418,7 +3596,7 @@ for(a=1; a<=100; a++)
 
 105. **Write a program to read the coordinates of the end points of a line and to find its length.** *[Multiple Ministry Assistant Programmer 2017 compact it 1231 (ET: N/A)]*
 
-     Answer: The distance formula is `d = √[(x₂ − x₁)² + (y₂ − y₁)²]`.
+Answer: The distance formula is `d = √[(x₂ − x₁)² + (y₂ − y₁)²]`.
 
      ```c
      #include <stdio.h>
@@ -3448,7 +3626,7 @@ for(a=1; a<=100; a++)
 
 106. **Write a program in C++ to calculate the sum of the series: $1+(1+2)+(1+2+3)+\dots\dots+(1+2+\dots\dots+n)$.** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
 
-     Answer: Each group is a triangular number `i(i+1)/2`, so the whole series is the sum of triangular numbers.
+Answer: Each group is a triangular number `i(i+1)/2`, so the whole series is the sum of triangular numbers.
 
      ```cpp
      #include <iostream>
@@ -3481,7 +3659,7 @@ for(a=1; a<=100; a++)
 
 107. **Write a program to find out the minimum number from a series.** *[BTCL Assistant Manager (Technical) 2017 compact it 1254 (ET: N/A)]*
 
-     Answer:
+Answer:
 
      ```c
      #include <stdio.h>
@@ -3512,7 +3690,7 @@ for(a=1; a<=100; a++)
 
 108. **Write a C program to reverse an integer number.** *[BCC Assistant Programmer 2017 compact it 1256-1257 (ET: N/A)]*
 
-     Answer:
+Answer:
 
      ```c
      #include <stdio.h>
@@ -3542,7 +3720,7 @@ for(a=1; a<=100; a++)
 
 109. **Write a C program to acending (A-Z) using selection sort.** *[BCC Assistant Programmer 2017 compact it 1257 (ET: N/A)]*
 
-     Answer: Selection sort applied to characters — the same algorithm works, since characters compare by their ASCII values.
+Answer: Selection sort applied to characters — the same algorithm works, since characters compare by their ASCII values.
 
      ```c
      #include <stdio.h>
@@ -3579,7 +3757,7 @@ for(a=1; a<=100; a++)
 
 110. **Write a structured program to display Fibonacci series up to 100 Numbers.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
 
-     Answer: "Structured" means the logic is split into a separate function rather than sitting entirely inside `main`.
+Answer: "Structured" means the logic is split into a separate function rather than sitting entirely inside `main`.
 
      ```c
      #include <stdio.h>
@@ -3612,7 +3790,22 @@ for(a=1; a<=100; a++)
 
 111. **Write a program in any language to find out maximum among three numbers.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
 
-     Answer:
+**Write a program to find the summation and average of an integer and float number.** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 43]]*
+
+**Write a code to reverse a string.** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 43-44]]*
+
+**Write a code to print the following pattern.** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 44]]*
+1
+
+1 2
+
+1 2 3
+
+1 2 3 4
+
+1 2 3 4 5
+
+Answer:
 
      ```c
      #include <stdio.h>
@@ -3636,11 +3829,396 @@ for(a=1; a<=100; a++)
      - The running-maximum form is preferred because it extends unchanged to any number of values.
      - Only 2 comparisons are needed, which is the minimum for three values. Time complexity `O(1)`.
 
+112. **(a) Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the following pattern will be printed.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68]]*
+1234
+ 234
+  34
+   4
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+    #include <string.h>
+
+    int main(void) {
+        char str[100];
+        printf("Enter an integer: ");
+        scanf("%s", str);
+        int len = strlen(str);
+
+        for (int i = 0; i < len; i++) {
+            for (int s = 0; s < i; s++)
+                printf(" ");
+            for (int j = i; j < len; j++)
+                printf("%c", str[j]);
+            printf("\n");
+        }
+        return 0;
+    }
+    ```
+
+    - Output for `1234`:
+    ```
+    1234
+     234
+      34
+       4
+    ```
+
+113. **Write a C program to get max element of an array.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int arr[] = {12, 45, 78, 23, 89, 56, 34};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        int max = arr[0];
+
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > max)
+                max = arr[i];
+        }
+
+        printf("Maximum element = %d\n", max);
+        return 0;
+    }
+    ```
+    - Time complexity: O(n), Space complexity: O(1).
+
+114. **Write a program (in C or any language) to find the sum of even numbers from 1 to n.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 221]]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int n, sum = 0;
+        printf("Enter n: ");
+        scanf("%d", &n);
+
+        for (int i = 2; i <= n; i += 2) {
+            sum += i;
+        }
+
+        printf("Sum of even numbers from 1 to %d = %d\n", n, sum);
+        return 0;
+    }
+    ```
+
+115. **Write a program/code to find the largest number in an array of 10 elements.** *[Bangladesh Computer Council (BCC) Post: AP/TW Mark: 4*10=40; Date: 18 Oct 2025 [bitbox it book 241]]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int arr[10];
+        printf("Enter 10 integers:\n");
+        for (int i = 0; i < 10; i++)
+            scanf("%d", &arr[i]);
+
+        int max = arr[0];
+        for (int i = 1; i < 10; i++) {
+            if (arr[i] > max)
+                max = arr[i];
+        }
+
+        printf("Largest number = %d\n", max);
+        return 0;
+    }
+    ```
+
+116. **When the statement numbered 4,5,6,7 are replaced by** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 311-312]]*
+{for(S=1,P=-x, I=1; I<a; I++)
+P = P*X*X-1;
+S = S+P/f(I);
+What will be the approximation of f(x)? (05) [প্রশ্নটি অসম্পূর্ণ ছিল, প্রশ্নটি নিচের মত হতে পারত] Consider the following C program used to approximate a mathematical function f(x):
+```c
+#include <stdio.h>
+
+int f(int n){
+    int i, fact = 1;
+    for(i = 1; i <= n; i++)
+        fact = fact * i;
+    return fact;
+}
+
+int main(){
+    float x, S = 1, P = -x;
+    int I, a;
+    /* statements numbered 4, 5, 6, 7 */
+    printf("%f", S);
+    return 0;
+}
+```
+When the statements numbered 4, 5, 6, and 7 are replaced by:
+```c
+for (S = 1, P = -x, I = 1; I < a; I++) {
+    P = P * x * x * (-1);
+    S = S + P / f(2 * I);
+}
+```
+What will be the approximation of f(x)?
+
+    Answer: The series computes:
+    $$S = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots$$
+    - This is the standard Maclaurin series expansion of the cosine function: $f(x) = \cos(x)$.
+    - Hence, the code produces an approximation of $\cos(x)$.
+
+117. **Write a program that read n number string and print these strings in ascending order.** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 326]]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+    #include <string.h>
+
+    int main(void) {
+        int n;
+        char str[100][100], temp[100];
+
+        printf("Enter number of strings: ");
+        scanf("%d", &n);
+
+        printf("Enter %d strings:\n", n);
+        for (int i = 0; i < n; i++)
+            scanf("%s", str[i]);
+
+        // Bubble sort strings alphabetically
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (strcmp(str[i], str[j]) > 0) {
+                    strcpy(temp, str[i]);
+                    strcpy(str[i], str[j]);
+                    strcpy(str[j], temp);
+                }
+            }
+        }
+
+        printf("Strings in ascending order:\n");
+        for (int i = 0; i < n; i++)
+            printf("%s\n", str[i]);
+
+        return 0;
+    }
+    ```
+
+118. **(b) What are the rules for calculating the n-th Fibonacci number, and what is the recurrence relation that defines this sequence?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 339]]*
+
+    Answer:
+    - Recurrence Relation:
+      $$F(n) = F(n - 1) + F(n - 2) \quad \text{for } n \ge 2$$
+    - Base Rules:
+      $$F(0) = 0, \quad F(1) = 1$$
+    - Sequence: `0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...`
+    - Rule: Each term after the first two is the sum of the two preceding terms.
+
+119. **Write a code to print the following pattern. You can use C/Java as programming language.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353]]*
+1
+01
+101
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int n = 3;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                printf("%d", (i + j) % 2 == 0 ? 1 : 0);
+            }
+            printf("\n");
+        }
+        return 0;
+    }
+    ```
+    - Output:
+    ```
+    1
+    01
+    101
+    ```
+
+120. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
+a) What is call by reference? b) Write a program that indicate the example of reference.
+
+    Answer:
+    - a) Call by Reference: A method of passing arguments to a function where the memory address (reference/pointer) of the original variable is passed. Any change made to the formal parameter inside the function directly modifies the actual variable in the caller.
+    - b) Program Example:
+    ```c
+    #include <stdio.h>
+
+    void swap(int *x, int *y) {
+        int temp = *x;
+        *x = *y;
+        *y = temp;
+    }
+
+    int main(void) {
+        int a = 10, b = 20;
+        printf("Before swap: a = %d, b = %d\n", a, b);
+        swap(&a, &b); // Passing memory addresses
+        printf("After swap:  a = %d, b = %d\n", a, b);
+        return 0;
+    }
+    ```
+
+121. **Write a program that takes two inputs, n and k, where n>k. The program should prompt the user to enter n numbers of data and then return the k^\text{th} smallest data.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 384-385]]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int n, k, arr[100], temp;
+        printf("Enter n and k (where n > k): ");
+        scanf("%d %d", &n, &k);
+
+        printf("Enter %d numbers:\n", n);
+        for (int i = 0; i < n; i++)
+            scanf("%d", &arr[i]);
+
+        // Sort array in ascending order
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
+        printf("The %d-th smallest data is: %d\n", k, arr[k - 1]);
+        return 0;
+    }
+    ```
+
+122. **Write a program for login using database in PHP. Use various parameters (username, hostname, database name and database user)** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
+
+    Answer:
+
+    ```php
+    <?php
+    $hostname = "localhost";
+    $db_user  = "root";
+    $db_pass  = "";
+    $dbname   = "user_db";
+
+    $conn = new mysqli($hostname, $db_user, $db_pass, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $stmt = $conn->prepare("SELECT id, password FROM users WHERE username = ?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($row = $result->fetch_assoc()) {
+            if (password_verify($password, $row['password'])) {
+                echo "Login Successful! Welcome, " . htmlspecialchars($username);
+            } else {
+                echo "Invalid Password.";
+            }
+        } else {
+            echo "User not found.";
+        }
+        $stmt->close();
+    }
+    $conn->close();
+    ?>
+    ```
+
+123. **Write a program that takes a single alphanumeric string as input. The string may contain both letters (a-z, A-Z) and digits (0-9). Your task is to calculate and print the sum of all numeric digit characters in the string.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+    #include <ctype.h>
+
+    int main(void) {
+        char str[200];
+        int sum = 0;
+
+        printf("Enter an alphanumeric string: ");
+        scanf("%s", str);
+
+        for (int i = 0; str[i] != '\0'; i++) {
+            if (isdigit(str[i])) {
+                sum += (str[i] - '0');
+            }
+        }
+
+        printf("Sum of numeric digits = %d\n", sum);
+        return 0;
+    }
+    ```
+
+124. **Write a C program that performs this matrices problem. Calculate and display the sum of the elements on the main diagonal and the sum of the elements on the anti-diagonal of the product matrix.** *[compact it 520]*
+
+    Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int A[10][10], B[10][10], C[10][10];
+        int n, main_diag = 0, anti_diag = 0;
+
+        printf("Enter size n of n x n square matrices: ");
+        scanf("%d", &n);
+
+        printf("Enter elements of matrix A:\n");
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                scanf("%d", &A[i][j]);
+
+        printf("Enter elements of matrix B:\n");
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                scanf("%d", &B[i][j]);
+
+        // Multiply C = A x B
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                C[i][j] = 0;
+                for (int k = 0; k < n; k++)
+                    C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+
+        // Sum of main diagonal and anti-diagonal
+        for (int i = 0; i < n; i++) {
+            main_diag += C[i][i];
+            anti_diag += C[i][n - 1 - i];
+        }
+
+        printf("Sum of main diagonal = %d\n", main_diag);
+        printf("Sum of anti-diagonal = %d\n", anti_diag);
+        return 0;
+    }
+    ```
+
 ## Output Tracing & Control Flow (57)
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: The question is `incomplete` — the paper printed a code snippet that was not captured, so the specific program cannot be traced. The traps that C output questions test are set out below, with worked examples, so the method is available whatever the missing code was.
+Answer: The question is `incomplete` — the paper printed a code snippet that was not captured, so the specific program cannot be traced. The traps that C output questions test are set out below, with worked examples, so the method is available whatever the missing code was.
 
    1. Integer division truncates
    ```c
@@ -3743,30 +4321,46 @@ int main() {
 ```
 *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
 
-   Answer: Output is `0 0 1 3 1`.
+```c
+#include <stdio.h>
+int main() {
+    int i=-1, j=-1, k=0, l=2, m;
+    m= i++ && j++ && k++ || l++;
+    printf("%d %d %d %d %d", i, j, k, l, m);
+    return 0;
+}
+```
 
-   Step-by-step evaluation of `m = i++ && j++ && k++ || l++`
-   - `&&` binds tighter than `||`, so the expression is `(i++ && j++ && k++) || l++`.
-   - `i++` returns the old value `−1`, which is non-zero (true), and `i` becomes `0`.
-   - `j++` returns `−1`, true, and `j` becomes `0`.
-   - `k++` returns `0`, which is false, and `k` becomes `1`.
-   - So the whole `&&` chain is false. Because `false || X` still needs `X`, the right operand runs.
-   - `l++` returns `2`, which is true, and `l` becomes `3`.
-   - `false || true` is true, so `m = 1`.
+    Answer: Output is `0 0 1 3 1`.
 
-   Final values
+    Evaluation of `m = (i++ && j++ && k++) || l++`
+    - `i++` yields the old value `−1`. In C anything non-zero is true, so this is true, and `i` becomes `0`.
+    - `j++` yields `−1`, true, and `j` becomes `0`.
+    - `k++` yields `0`, which is false, and `k` becomes `1`. The `&&` chain is therefore false.
+    - `false || l++` still evaluates the right side. `l++` yields `2`, true, and `l` becomes `3`.
+    - `m = 1`.
 
-   | Variable | Value |
-   |---|---|
-   | i | 0 |
-   | j | 0 |
-   | k | 1 |
-   | l | 3 |
-   | m | 1 |
+    | Variable | Final value |
+    |---|---|
+    | i | 0 |
+    | j | 0 |
+    | k | 1 |
+    | l | 3 |
+    | m | 1 |
 
-   - Key point: in C, `−1` is true because only `0` is false. And short-circuiting did not stop the `&&` chain early here, since the first two operands were both true.
+    - The two traps here: `−1` is true in C (only `0` is false), and post-increment yields the old value while still performing the increment.
 
 3. **(b) Find out the output of this program.**
+```c
+for (int i= 5; i>=1; i--) {
+    for (int j=1; j<=i; j++) {
+        printf("%3d", j);
+    }
+}
+
+```
+*[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1444 (ET: N/A)]*
+
 ```c
 for (int i= 5; i>=1; i--) {
     for (int j=1; j<=i; j++) {
@@ -3814,18 +4408,26 @@ int main() {
 
 ```
 
-   Answer:
+```c
+#include<stdio.h>
+int main() {
+    int a=2, b=5, c;
+    c = a++ + b;
+    printf("%d %d %d", a, b, c);
+    return 0;
+}
+```
 
-   (A) Output is `Devel`, and `len` becomes `5`.
-   - `"Development"` occupies indices 0 to 10. Writing `'\0'` at index 5 replaces `'o'` with the string terminator.
-   - `printf("%s", ...)` stops at the first `'\0'`, so only `D e v e l` is printed.
-   - `strlen` counts characters before the first `'\0'`, giving 5 instead of the original 11.
-   - The remaining characters `pment` are still in memory but are now unreachable through normal string functions.
+    Answer: Output is `3 5 7`.
 
-   (B) Output is `1`.
-   - Iteration 1: `i` is 2, which is true, so `--i` runs → `i` becomes 1, and 1 is true → body runs and prints `i`, which is now `1`.
-   - Iteration 2: `i` is 1, true, so `--i` → `i` becomes 0, and 0 is false → the loop ends without printing.
-   - `j` is never touched, because the false branch of the conditional is never taken while `i` is non-zero.
+    Step-by-step
+    - `a++` is post-increment, so it yields the current value `2` for the expression and only afterwards makes `a` become `3`.
+    - `c = 2 + 5 = 7`.
+    - `b` is never modified, so it stays `5`.
+    - Final values: `a = 3`, `b = 5`, `c = 7`.
+
+    - Contrast with pre-increment: had the code been `c = ++a + b`, then `a` would become 3 first and `c` would be `8`.
+    - Unlike question 14, this statement is well defined, because `a` is modified only once.
 
 5. **Output problem:** *[BREB Assistant Programmer 18.02.2023 compact it 470 (ET: N/A)]*
 ```c
@@ -3841,21 +4443,47 @@ return 0;
 }
 ```
 
-   Answer: The program does not compile. It contains several errors.
+```c
+#include<stdio.h>
 
-   Errors present
-   - `cout` is used but only `<stdio.h>` is included. `cout` belongs to C++ and needs `<iostream>` plus `using namespace std;`.
-   - The text `km 101` is not valid C or C++ — it appears to be a transcription error in the question paper.
-   - Both `cout` statements are missing their terminating semicolons.
+int main() {
 
-   What the intended expression would produce
-   - Taking the intended line as `cout << (++i || ++j && ++k);` with `i = j = k = 1`:
-   - `&&` binds tighter than `||`, so it is `++i || (++j && ++k)`.
-   - `++i` makes `i = 2`, which is true. Because `||` short-circuits, the right side is never evaluated.
-   - So `j` and `k` stay at `1`, the expression prints `1`, and the next line prints `211`.
-   - Full intended output: `1211`.
+float p=10.5;
+
+int a=5*p +5.0;
+
+printf("%d", a);
+
+return 0;
+}
+```
+
+   Answer: Output is `57`.
+
+   Step-by-step
+   - `5 * p` promotes the integer 5 to float, giving `5 × 10.5 = 52.5`.
+   - `52.5 + 5.0 = 57.5`.
+   - Assigning a float to an `int` truncates toward zero — the fractional part is discarded, not rounded.
+   - So `a = 57`, and `printf("%d", a)` prints `57`.
+
+   - Note the difference: truncation gives 57, whereas rounding would have given 58. C assignment always truncates.
 
 6. **Output problem:** *[BREB Assistant Programmer 18.02.2023 (ET: N/A)]*
+```c
+#include<stdio.h>
+
+int main() {
+
+float p=10.5;
+
+int a=5*p +5.0;
+
+printf("%d", a);
+
+return 0;
+}
+```
+
 ```c
 #include<stdio.h>
 
@@ -3883,7 +4511,7 @@ return 0;
 
 7. **Explain following program while part in step for the input 1221 and 3456 and also write the output of the program. (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয় নি!!)** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the paper itself records that the full program could not be collected. Without the loop body the exact output cannot be produced. The standard program that this question describes is the `digit-processing while loop`, traced below for the two given inputs, `1221` and `3456`.
+Answer: The question is `incomplete` — the paper itself records that the full program could not be collected. Without the loop body the exact output cannot be produced. The standard program that this question describes is the `digit-processing while loop`, traced below for the two given inputs, `1221` and `3456`.
 
    The usual program — reverse a number, or test it for a palindrome
    ```c
@@ -3973,7 +4601,7 @@ return 0;
 
 8. **Write the function for which the output is 1 for that input.** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the input for which the function must return 1 was printed with the previous question and is not present here. The answer below covers the functions that this question normally asks for, all of which return `1` (true) for a matching input and `0` otherwise.
+Answer: The question is `incomplete` — the input for which the function must return 1 was printed with the previous question and is not present here. The answer below covers the functions that this question normally asks for, all of which return `1` (true) for a matching input and `0` otherwise.
 
    If the required test is `palindrome number` — which follows from the 1221 and 3456 inputs of the previous question
    ```c
@@ -4070,6 +4698,24 @@ int main() {
 ```
 *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 464 (ET: BUET)]*
 
+```c
+#include <stdio.h>
+int main() {
+    int n, reversed = 0, remainder, original;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    original = n;
+    while (n!= 0) {
+        remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        n /= 10;
+    }
+    if (original == reversed)
+        printf("%d is a palindrome.", original);
+
+```
+*[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 464 (ET: BUET)]*
+
    Answer: The program reverses the digits of the input and checks whether the reversed value equals the original — that is, it tests for a palindrome number.
 
    Explanation of lines 7 to 11 (the while block)
@@ -4099,7 +4745,7 @@ int main() {
 
 10. **C programming output problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 468 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the paper printed a code snippet that was not captured, so the specific output cannot be produced. The traps that C output questions are built on are set out below with worked examples.
+Answer: The question is `incomplete` — the paper printed a code snippet that was not captured, so the specific output cannot be produced. The traps that C output questions are built on are set out below with worked examples.
 
     1. Operator precedence and associativity
     ```c
@@ -4192,7 +4838,7 @@ int main() {
 
 11. **What is the output of code snippet?** *[BICIC Assistant Programmer 2022 compact it 631 (ET: BUET)]*
 
-    Answer: The question is `incomplete` — the code snippet it refers to was not captured. The commonest snippets used in such questions are traced below, so the method is available whichever one was intended.
+Answer: The question is `incomplete` — the code snippet it refers to was not captured. The commonest snippets used in such questions are traced below, so the method is available whichever one was intended.
 
     Snippet type 1 — pointer and array
     ```c
@@ -4307,6 +4953,18 @@ if __name__ == "__main__":
     main()
 ```
 
+```python
+def main():
+    x, y = 8, 4
+    if(x < y):
+        st= "x is less than y"
+    else:
+        st= "x is greater than y"
+    print (st)
+if __name__ == "__main__":
+    main()
+```
+
     Answer: Output is
 
     ```
@@ -4323,6 +4981,22 @@ if __name__ == "__main__":
     - The `__name__` guard exists so that the code does not run automatically when this file is imported as a module by another program.
 
 13. **Output Tracing:** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 657 (ET: N/A)]*
+A)
+```c
+char str[20] = "Development";
+str[5] = '\0';
+int len = strlen(str);
+printf("%s", str);
+```
+B)
+```c
+int i;
+for (i=0; i<9; i++) {
+    if(i==5) continue;
+    printf ("%d\n", i);
+}
+```
+
 A)
 ```c
 char str[20] = "Development";
@@ -4371,19 +5045,38 @@ int main() {
 }
 ```
 
-    Answer: On a typical GCC compiler the output is `36 63`.
+```c
+#include<stdio.h>
+int main() {
+    int a=2, b=5, c;
+    c = a++ + b;
+    printf("%d %d %d", a, b, c);
+    return 0;
+}
+```
 
-    Step-by-step (as GCC evaluates it)
-    - Start: `a = 10`, `b = 25`.
-    - `a = b++ + a++` → uses the old values `25 + 10 = 35`, and both are incremented as side effects. After the assignment `a = 35` and `b = 26`. Note the `a++` side effect is overwritten by the assignment to `a`.
-    - `b = ++b + ++a` → `++b` makes `b = 27` and yields 27; `++a` makes `a = 36` and yields 36. So `b = 27 + 36 = 63`.
-    - Output: `36 63`.
+    Answer: Output is `3 5 7`.
 
-    Important caveat
-    - The statement `a = b++ + a++` modifies `a` twice between two sequence points — once by `a++` and once by the assignment. In C this is undefined behaviour, so a different compiler may legitimately print a different result.
-    - Exam papers expect the GCC answer, but the correct engineering comment is that such code should never be written.
+    Step-by-step
+    - `a++` is post-increment, so it yields the current value `2` for the expression and only afterwards makes `a` become `3`.
+    - `c = 2 + 5 = 7`.
+    - `b` is never modified, so it stays `5`.
+    - Final values: `a = 3`, `b = 5`, `c = 7`.
+
+    - Contrast with pre-increment: had the code been `c = ++a + b`, then `a` would become 3 first and `c` would be `8`.
+    - Unlike question 14, this statement is well defined, because `a` is modified only once.
 
 15. **Find the output of the following program:** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
+```c
+#include<stdio.h>
+int main() {
+    int a=2, b=5, c;
+    c = a++ + b;
+    printf("%d %d %d", a, b, c);
+    return 0;
+}
+```
+
 ```c
 #include<stdio.h>
 int main() {
@@ -4418,6 +5111,18 @@ void main() {
 }
 ```
 
+```c
+#include<stdio.h>
+void main() {
+    int a[5]={5,1,15,20,25};
+    int i,j,m;
+    i=++a[1];
+    j=a[1]++;
+    m=a[i++];
+    printf("%d, %d, %d",i,j,m);
+}
+```
+
     Answer: Output is `3, 2, 15`.
 
     Step-by-step
@@ -4440,6 +5145,16 @@ int main() {
 }
 ```
 
+```c
+#include <stdio.h>
+int isLeapYear(int year);
+int main() {
+    int a = 1;
+    printf("%d %d %d", ++a, a, a++);
+    return 0;
+}
+```
+
     Answer: On GCC the output is `2 2 2`, but the code is undefined behaviour and the answer is compiler dependent.
 
     Why the result is not reliable
@@ -4452,6 +5167,20 @@ int main() {
     - The declared function `isLeapYear` is never defined or called, which is harmless but pointless here.
 
 18. **Output programs:** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)], [Water Supply and Sewerage Authority (WASA); Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
+```c
+#include <stdio.h>
+int fun(int n) {
+    if (n == 4)
+        return n;
+    else
+        return 2 * fun(n + 1);
+}
+int main() {
+    printf("%d", fun(2));
+    return 0;
+}
+```
+
 ```c
 #include <stdio.h>
 int fun(int n) {
@@ -4492,6 +5221,17 @@ void main() {
 }
 ```
 
+```c
+#include <stdio.h>
+#define x 9+2/4*3-2*4+(5-4)*3
+void main() {
+    int i,y;
+    y=6+3*3/5;
+    i=x*x+y;
+    printf("%d", i);
+}
+```
+
     Answer: Output is `30`.
 
     Step 1 - compute y
@@ -4517,6 +5257,18 @@ void main() {
     - Moral of the question: always wrap a macro body in parentheses — `#define x (9+2/4*3-2*4+(5-4)*3)` — otherwise textual substitution produces surprises like this one.
 
 20. **(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 783 (ET: N/A)]*
+```c
+include<stdio.h>
+int main{
+    int i, sum=0
+    for(i=1,i<=10,i++;{
+        sum=sum+i
+    }
+    printf(Sum of number=d, sum)
+    return 0
+}
+```
+
 ```c
 include<stdio.h>
 int main{
@@ -4581,6 +5333,23 @@ int main(){
 }
 ```
 
+```c
+#include<stdio.h>
+int function(int x[],int i){
+    int s=x[i];
+    if(i>0){
+        s+=function(x,i-1);
+    }
+    printf("%d",s);
+    return s;
+}
+int main(){
+    int y[]={1,3,2,8};
+    function(y,2);
+    return 0;
+}
+```
+
     Answer: Output is `146`.
 
     The function returns the sum of `x[0]` through `x[i]`, and prints each partial sum on the way back up the recursion.
@@ -4596,6 +5365,26 @@ int main(){
     - `y[3] = 8` is never touched, because the call started at index 2.
 
 22. **Write Output from below code:** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
+```c
+#include<stdio.h>
+int main() {
+    int i;
+    char s[]="Bangladesh Industrial and Technical Assistant Center";
+    char*s1;
+    s1=s;
+    for(i=0; i<10; i++) {
+        printf("%c", s[i]);
+        ++s1;
+    }
+    printf("\n");
+    for(i=0; i<10; i++) {
+        printf("%c", s1[i]);
+        ++s1;
+    }
+    return 0;
+}
+```
+
 ```c
 #include<stdio.h>
 int main() {
@@ -4664,6 +5453,23 @@ int main(){
 }
 ```
 
+```c
+#include<stdio.h>
+int power(int n, int r){
+    int sum, i;
+    sum=1;
+    for(i=1; i<=r; i++)
+        sum*=n;
+    return sum;
+}
+int main(){
+    int n, r;
+    scanf("%d %d", &n, &r);
+    printf("%d", power(n, r));
+    return 0;
+}
+```
+
     Answer: The program computes `n` raised to the power `r`, that is `nʳ`.
 
     How it works
@@ -4683,6 +5489,16 @@ int main(){
     - Limitation: `int` overflows quickly — `2³¹` already exceeds the range, so `long long` would be safer.
 
 24. **Find out program output of f(\text{arr}, 2), f(\text{arr}, 3), f(\text{arr}, 5), f(\text{arr}, 8). \text{arr}[] = [0, 1, 1, 0, 1, 1, 0, 1]** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 861-862 (ET: N/A)]*
+```c
+int f(int *arr, int arrSize) {
+    int r = 0;
+    for (int i = 0; i < arrSize; ++i) {
+        r = r ^ *(arr + i);
+    }
+    return r;
+}
+```
+
 ```c
 int f(int *arr, int arrSize) {
     int r = 0;
@@ -4725,29 +5541,47 @@ int main() {
 }
 ```
 
-    Answer: Output is
+```c
+#include<stdio.h>
+void func(int arr[], int n) {
+    int i,j;
+    for(i=0; i<n; i++) {
+        for(j=0; j<n-i-1; j++) {
+            if(arr[j]>arr[j+1]) {
+                int temp;
+                temp=arr[j];
+                arr[j]= arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+int main () {
+    int arr[]={39,22,11,34};
+    int n,i;
+    n=sizeof(arr)/sizeof(arr[0]);
+    func(arr,n);
+    for(i=0;i<n;i++) {
+        printf("%d " ,arr[i]);
+    }
+    return 0;
+}
+```
 
-    ```
-    5
-    8
-    9
-    11
-    5
-    ```
+    Answer: Output is `11 22 34 39`.
 
-    Why `y` accumulates across calls
-    - `y` is declared `static`, so it is created once and keeps its value between calls. Every call adds its own `x` to the same shared `y`.
+    What the function does
+    - `func` is bubble sort in ascending order — it repeatedly compares adjacent pairs and swaps them when they are out of order.
+    - `n = sizeof(arr)/sizeof(arr[0]) = 16/4 = 4`.
 
-    Call trace
-    - `recursion(5)` → `y = 0 + 5 = 5`, prints `5`, then calls `recursion(3)` and `recursion(2)`.
-    - `recursion(3)` → `y = 5 + 3 = 8`, prints `8`, calls `recursion(1)` and `recursion(0)`.
-    - `recursion(1)` → `y = 8 + 1 = 9`, prints `9`, calls `recursion(-1)` and `recursion(-2)`, both of which return 1 immediately. So it returns `2`.
-    - `recursion(0)` → `x <= 0`, returns `1` with no printing.
-    - So `recursion(3) = 2 + 1 = 3`.
-    - `recursion(2)` → `y = 9 + 2 = 11`, prints `11`, calls `recursion(0)` and `recursion(-1)`, both returning 1. So it returns `2`.
-    - Final: `recursion(5) = 3 + 2 = 5`, printed last.
+    Pass-by-pass trace starting from `{39, 22, 11, 34}`
+    - Pass 1: (39,22) swap → `22,39,11,34`; (39,11) swap → `22,11,39,34`; (39,34) swap → `22,11,34,39`
+    - Pass 2: (22,11) swap → `11,22,34,39`; (22,34) no swap
+    - Pass 3: (11,22) no swap
+    - Final array: `11 22 34 39`
 
-    - Key learning point: a `static` local variable is not reset on each call, which is what produces the running total 5, 8, 9, 11.
+    - The array is modified in place, because in C an array parameter decays to a pointer and the function works on the caller's memory directly.
+    - Time complexity `O(n²)`.
 
 26. **Find the output of following program:** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)]*
 ```c
@@ -4764,32 +5598,76 @@ printf("\n Outsite Loop, i=%d, p=%d, sum=%d\n", i, p, sum);
 return 0;
 ```
 
-    Answer: Output is
+```c
+int F(n) {
+    if n == 0
+    return 0;
+    if n == 1
+    return 1;
+    return F(n-2)+F(n-1);
+}
+int main() {
+    result F(5);
+}
+```
+*[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
 
-    ```
-    i=-1, p=1, sum=0
-    i=1, p=1, sum=2
-    i=3, p=9, sum=14
-    i=5, p=25, sum=44
+   Answer: This is the Fibonacci function, and `F(5) = 5`. As written the code does not compile — the `if` conditions are missing parentheses, the parameter has no type, and the call `result F(5);` is not a valid statement.
 
-     Outsite Loop, i=7, p=49, sum=44
-    ```
+   Corrected code
+   ```c
+   #include <stdio.h>
 
-    Trace
+   int F(int n) {
+       if (n == 0) return 0;
+       if (n == 1) return 1;
+       return F(n - 2) + F(n - 1);
+   }
 
-    | i | p = i×i | i > 5 ? | sum = sum + (i + p) | Printed? |
-    |---|---|---|---|---|
-    | −1 | 1 | No | 0 + (−1 + 1) = 0 | Yes |
-    | 1 | 1 | No | 0 + (1 + 1) = 2 | Yes |
-    | 3 | 9 | No | 2 + (3 + 9) = 14 | Yes |
-    | 5 | 25 | No | 14 + (5 + 25) = 44 | Yes |
-    | 7 | 49 | Yes → break | not updated | No |
+   int main(void) {
+       printf("%d\n", F(5));
+       return 0;
+   }
+   ```
 
-    - The critical detail is that `p = i*i` executes before the `break` check, so `p` becomes 49 even though the loop exits on that pass.
-    - `sum` stays at 44 because `break` fires before the sum line.
-    - After `break`, `i` retains the value 7 outside the loop.
+   Recursion trace
+   - `F(5) = F(3) + F(4)`
+   - `F(4) = F(2) + F(3)`
+   - `F(3) = F(1) + F(2) = 1 + 1 = 2`
+   - `F(2) = F(0) + F(1) = 0 + 1 = 1`
+   - So `F(4) = 1 + 2 = 3` and `F(5) = 2 + 3 = 5`.
+
+   - Sequence: `F(0)=0, F(1)=1, F(2)=1, F(3)=2, F(4)=3, F(5)=5`.
+   - Time complexity `O(2ⁿ)` because `F(3)` and lower are recomputed many times. Memoization brings this down to `O(n)`.
 
 27. **Output of the following program:** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 878-879 (ET: BUET)]*
+```c
+#include<stdio.h>
+void func(int arr[], int n) {
+    int i,j;
+    for(i=0; i<n; i++) {
+        for(j=0; j<n-i-1; j++) {
+            if(arr[j]>arr[j+1]) {
+                int temp;
+                temp=arr[j];
+                arr[j]= arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+int main () {
+    int arr[]={39,22,11,34};
+    int n,i;
+    n=sizeof(arr)/sizeof(arr[0]);
+    func(arr,n);
+    for(i=0;i<n;i++) {
+        printf("%d " ,arr[i]);
+    }
+    return 0;
+}
+```
+
 ```c
 #include<stdio.h>
 void func(int arr[], int n) {
@@ -4851,31 +5729,50 @@ int main() {
 }
 ```
 
-    Answer: Output is
+```cpp
+#include<stdio.h>
+int main() {
+    int i=1,j=1,k=1;
+    cout<<++i || ++j && ++k;
+    cout<<i<<j<<k;
+    return 0;
+}
+```
 
-    ```
-    i=0 x=3 sum=3
-    i=4 x=7 sum=14
-    i=6 x=9 sum=29
-    Out site loop:
-     i=8 x=11 sum=29
-    ```
+    Answer: The program does not compile as written.
 
-    Trace
+    Compilation error
+    - `cout` is a C++ stream object declared in `<iostream>`, but only `<stdio.h>` is included and there is no `using namespace std;`.
+    - The compiler reports `'cout' was not declared in this scope`.
 
-    | i | x = i+3 | i == 2 ? | i >= 8 ? | sum | Printed? |
-    |---|---|---|---|---|---|
-    | 0 | 3 | No | No | 0 + 3 = 3 | Yes |
-    | 2 | 5 | Yes → continue | — | unchanged | No |
-    | 4 | 7 | No | No | 3 + 11 = 14 | Yes |
-    | 6 | 9 | No | No | 14 + 15 = 29 | Yes |
-    | 8 | 11 | No | Yes → break | unchanged | No |
+    Output if the headers are fixed
+    - Correcting the includes and adding parentheses, the intended code is `cout << (++i || ++j && ++k);` followed by `cout << i << j << k;`.
+    - Precedence: `&&` binds tighter than `||`, so the expression is `++i || (++j && ++k)`.
+    - `++i` makes `i = 2`, which is true. Because `||` short-circuits, the right-hand side is never evaluated at all.
+    - So `j` and `k` remain `1`.
+    - First `cout` prints `1` (the boolean result), then the second prints `211`.
+    - Full output: `1211`.
 
-    - Two important details: `x = i + 3` runs before both checks, so `x` becomes 11 on the final pass even though `break` fires.
-    - `continue` at `i = 2` skips the printing but the loop keeps running; `break` at `i = 8` ends it entirely.
-    - After the loop `i` remains 8, `x` remains 11, and `sum` stays at 29.
+    - A second subtlety: without parentheses, `cout << ++i || ...` would actually parse as `(cout << ++i) || ...` because `<<` binds tighter than `||`. That is why the parentheses matter.
 
 29. **Find the output of the following program. You must show each staps.** *[NRCC Assistant Programmer 2021 compact it 931 (ET: N/A)]*
+```c
+#include<stdio.h>
+int main(){
+    int i=0, j=5, x=0, count=0;
+    while(j>i){
+        if(i==7)
+            break;
+        x=x+i+count;
+        count=count+2;
+        i++;
+    }
+    printf("i=%d, count=%d", i, count);
+    printf("j=%d, x=%d", i, x);
+    return 0;
+}
+```
+
 ```c
 #include<stdio.h>
 int main(){
@@ -4927,6 +5824,20 @@ int main(){
 }
 ```
 
+```c
+#include<stdlib.h>
+#include<string.h>
+int main(){
+    int i=0, length;
+    char string[] = "Hello\0 World!!";
+    length = strlen(string);
+    char*s = string;
+    for(i=0; i<length; ++i)
+        printf("%c", *++s);
+    return 0;
+}
+```
+
     Answer: Output is `ello` followed by one invisible null character.
 
     Step-by-step
@@ -4949,7 +5860,7 @@ int main(){
 
 31. **After compilation and execution, what will be output in the following code:** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
-    Answer: The question is `incomplete` — the code that was to be compiled and executed is not present. The classes of behaviour that "after compilation and execution" questions test are set out below with worked examples.
+Answer: The question is `incomplete` — the code that was to be compiled and executed is not present. The classes of behaviour that "after compilation and execution" questions test are set out below with worked examples.
 
     Case 1 — the program does not compile
     ```c
@@ -5053,7 +5964,7 @@ int main(){
 
 32. **Write down the output of following program:** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the program whose output was to be written is not present. The programs that appear most often in this position are traced below.
+Answer: The question is `incomplete` — the program whose output was to be written is not present. The programs that appear most often in this position are traced below.
 
     Program type 1 — nested loop pattern
     ```c
@@ -5173,7 +6084,7 @@ int main(){
 
 33. **What will be the output in C and java code? (i) C program:** *[Combined 4 Banks Assistant Programmer 2020 compact it 1003 (ET: DU)]*
 
-    Answer: The question is `incomplete` — the C program and the Java program it refers to were not captured. The comparison the question is built on is set out below, with the snippets that appear most often in this position.
+Answer: The question is `incomplete` — the C program and the Java program it refers to were not captured. The comparison the question is built on is set out below, with the snippets that appear most often in this position.
 
     Case 1 — integer division
     ```c
@@ -5275,7 +6186,7 @@ int main(){
 
 34. **a) Using Pseudocode give an example of run time error.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035-1036 (ET: BUET)]*
 
-    Answer: A run-time error is an error that the compiler cannot detect. The program compiles successfully but fails or crashes while it is running.
+Answer: A run-time error is an error that the compiler cannot detect. The program compiles successfully but fails or crashes while it is running.
 
     Example 1 — division by zero
     ```
@@ -5320,7 +6231,7 @@ int main(){
 
 35. **Find the Output:** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the code whose output was to be found is not present. The snippets that appear most often in this position are traced below.
+Answer: The question is `incomplete` — the code whose output was to be found is not present. The snippets that appear most often in this position are traced below.
 
     Snippet 1 — prefix and postfix in one expression
     ```c
@@ -5430,6 +6341,12 @@ For(i=100; i<=0; --i)
     Printf("%d",i);
 ```
 
+```c
+Unsigned inti
+For(i=100; i<=0; --i)
+    Printf("%d",i);
+```
+
     Answer: The code has both syntax errors and a logic error.
 
     Syntax errors
@@ -5459,6 +6376,15 @@ For(i=100; i<=0; --i)
     - This prints 100 down to 1.
 
 37. **What is the output of following code?** *[Bangladesh Competition Commission Programmer 2019 compact it 1062 (ET: DU)]*
+```c
+#include<stdio.h>
+void main () {
+    char *f [] = {"Ronaldo", "Messi", "Zidan", "Maradona"}, str[20];
+    printf("%s\n", f[1]+2);
+    printf("%s", f[2]+1);
+}
+```
+
 ```c
 #include<stdio.h>
 void main () {
@@ -5512,34 +6438,47 @@ int fun(char *s, char *sup) {
 }
 ```
 
-    Answer: The program is broken. It does not produce a meaningful output and, as written, runs until it crashes.
+```c
+#include<stdio.h>
+#define N 7
+void main() {
+    char str[] = "abpqx";
+    for(int i=0; i<N-2; i++)
+        if(i%2) printf("%d ", str[i]++);
+        else printf("%d ", str[i]--);
+}
+```
 
-    Errors in the code
-    - `if (s == "\0")` compares a pointer with the address of a string literal, not the character it points to. It is essentially never true. The correct test is `if (*s == '\0')`.
-    - `else if (s == sup)` compares two pointers, not the characters they point to. Since `s` and `sup` are different arrays, this is never true either. The correct test is `else if (*s == *sup)`.
-    - `fun` is declared to return `int` but the first branch does a bare `return;` with no value.
-    - `fun` is called in `main` before it is declared, so there is no prototype in scope.
-    - `gets()` is dangerous and was removed from the C standard in C11; `fgets()` should be used.
+    Answer: Output is `97 98 112 113 120 `.
 
-    What actually happens
-    - Both comparisons are always false, so control always falls into the `else` branch.
-    - It prints the string from the current position, then recurses with `s+1` and never stops at the terminator — it keeps walking past the end of the array until the program segfaults.
+    Explanation
+    - `N - 2 = 5`, so the loop runs for `i = 0` to `4` — exactly the five characters of `"abpqx"`.
+    - `%d` prints the ASCII code of the character, not the character itself.
+    - Both `str[i]++` and `str[i]--` are post-operators, so the ORIGINAL value is printed and the change happens afterwards. That means the increment or decrement has no effect on what is displayed.
 
-    Corrected version — prints each suffix of `s` that does not match `sup` character by character
-    ```c
-    void fun(char *s, char *sup) {
-        if (*s == '\0')
-            return;
-        else if (*s == *sup)
-            fun(s + 1, sup + 1);
-        else {
-            printf("%s\n", s);
-            fun(s + 1, sup);
-        }
-    }
-    ```
+    | i | i % 2 | Operation | Character | ASCII printed | Value after |
+    |---|---|---|---|---|---|
+    | 0 | 0 (false) | `str[0]--` | 'a' | 97 | 96 |
+    | 1 | 1 (true) | `str[1]++` | 'b' | 98 | 99 |
+    | 2 | 0 | `str[2]--` | 'p' | 112 | 111 |
+    | 3 | 1 | `str[3]++` | 'q' | 113 | 114 |
+    | 4 | 0 | `str[4]--` | 'x' | 120 | 119 |
+
+    - Key ASCII values: `'a' = 97`, `'b' = 98`, `'p' = 112`, `'q' = 113`, `'x' = 120`.
+    - Had pre-operators been used (`++str[i]`), the modified values 98, 99, 111, 114, 119 would have been printed instead.
 
 39. **Find the output of the code:** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1120 (ET: BUET)]*
+```c
+#include <stdio.h>
+#define x 9+2/4*3-2*4+(5-4)*3
+void main() {
+    int i,y;
+    y=6+3*3/5;
+    i=x*x+y;
+    printf("%d",i);
+}
+```
+
 ```c
 #include <stdio.h>
 #define x 9+2/4*3-2*4+(5-4)*3
@@ -5585,6 +6524,18 @@ int main() {
 }
 ```
 
+```c
+#define x 9+2/4*3-2*4+(5-4)*3
+int main() {
+    int i;
+    int y;
+    y=6+3*3/5;
+    i=x*x+y;
+    printf("%d",i);
+    return 0;
+}
+```
+
     Answer: Output is `30`. This is the same problem as the previous question.
 
     Summary of the working
@@ -5606,14 +6557,41 @@ else
     printf("B");
 ```
 
-    Answer: Output is `B`.
+```c
+int i=0; int n=3;
+while(i!=n) {
+    if(i==3)
+        continue;
+    printf("%d", i);
+    i++;
+}
+```
 
-    Reason
-    - The condition `a > b` tests `3 > 10`, which is false.
-    - So the `if` branch is skipped and the `else` branch runs, printing `B`.
-    - Only one of the two branches ever executes.
+    Answer: Output is `012`.
+
+    Trace
+
+    | i | i != n ? | i == 3 ? | Printed | i after |
+    |---|---|---|---|---|
+    | 0 | 0 != 3, true | No | 0 | 1 |
+    | 1 | 1 != 3, true | No | 1 | 2 |
+    | 2 | 2 != 3, true | No | 2 | 3 |
+    | 3 | 3 != 3, false | — | — | loop ends |
+
+    - The `if (i == 3) continue;` line is dead code — the loop condition already stops the loop the moment `i` reaches 3, so `continue` is never reached.
+    - Had the condition been `i != 5`, the `continue` at `i == 3` would have skipped the `i++` as well and caused an infinite loop. That is the classic danger of `continue` inside a `while` loop.
 
 42. **Find the output of the following code:** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160-1161 (ET: BUET)]*
+```c
+int i=0; int n=3;
+while(i!=n) {
+    if(i==3)
+        continue;
+    printf("%d", i);
+    i++;
+}
+```
+
 ```c
 int i=0; int n=3;
 while(i!=n) {
@@ -5640,7 +6618,7 @@ while(i!=n) {
 
 43. **What is the output of following program?** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1166 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the program is not present. The snippets that appear most often in this position are traced below.
+Answer: The question is `incomplete` — the program is not present. The snippets that appear most often in this position are traced below.
 
     Snippet 1 — recursion with a printed trace
     ```c
@@ -5781,20 +6759,59 @@ int main() {
 }
 ```
 
-   Answer:
+```c
+int F(n) {
+    if n == 0
+    return 0;
+    if n == 1
+    return 1;
+    return F(n-2)+F(n-1);
+}
+int main() {
+    result F(5);
+}
+```
+*[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
 
-   (i) Infinite loop — the program prints `10` forever.
-   - `for(;;)` has an empty condition. In C an omitted condition is treated as permanently true, so the loop never ends.
-   - `n` is never changed inside the loop, so the same value is printed endlessly: `10101010...`
-   - The `return 0;` is unreachable. The program must be stopped externally with Ctrl+C.
-   - `for(;;)` and `while(1)` are equivalent ways of writing an infinite loop.
+   Answer: This is the Fibonacci function, and `F(5) = 5`. As written the code does not compile — the `if` conditions are missing parentheses, the parameter has no type, and the call `result F(5);` is not a valid statement.
 
-   (ii) Output is `1`.
-   - Iteration 1: `i` is 2, non-zero, so the conditional picks `--i`. That makes `i = 1` and yields 1, which is true, so the body prints `i` — now `1`.
-   - Iteration 2: `i` is 1, non-zero, so `--i` runs again. `i` becomes 0 and the expression yields 0, which is false, so the loop ends before printing.
-   - `j++` never executes, because `i` never reaches 0 while the condition is being tested with `i` non-zero.
+   Corrected code
+   ```c
+   #include <stdio.h>
+
+   int F(int n) {
+       if (n == 0) return 0;
+       if (n == 1) return 1;
+       return F(n - 2) + F(n - 1);
+   }
+
+   int main(void) {
+       printf("%d\n", F(5));
+       return 0;
+   }
+   ```
+
+   Recursion trace
+   - `F(5) = F(3) + F(4)`
+   - `F(4) = F(2) + F(3)`
+   - `F(3) = F(1) + F(2) = 1 + 1 = 2`
+   - `F(2) = F(0) + F(1) = 0 + 1 = 1`
+   - So `F(4) = 1 + 2 = 3` and `F(5) = 2 + 3 = 5`.
+
+   - Sequence: `F(0)=0, F(1)=1, F(2)=1, F(3)=2, F(4)=3, F(5)=5`.
+   - Time complexity `O(2ⁿ)` because `F(3)` and lower are recomputed many times. Memoization brings this down to `O(n)`.
 
 45. **Find the output following program:** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1170 (ET: N/A)]*
+```c
+int main() {
+    int a=5, b=2, c=1;
+    if (a&&b>c)
+        printf("Bangladesh");
+    else
+        break;
+}
+```
+
 ```c
 int main() {
     int a=5, b=2, c=1;
@@ -5856,26 +6873,59 @@ int main() {
 }
 ```
 
-   Answer:
+```c
+int F(n) {
+    if n == 0
+    return 0;
+    if n == 1
+    return 1;
+    return F(n-2)+F(n-1);
+}
+int main() {
+    result F(5);
+}
+```
+*[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
 
-   (i) Output is `Digi`, and `n` holds `18`.
-   - `strlen` is called BEFORE the `'\0'` is inserted, so `n = 18`, the full length of `"Digital Bangladesh"`.
-   - Writing `'\0'` at index 4 replaces `'t'` and becomes the new string terminator.
-   - `printf("%s")` therefore stops after `D i g i`, printing `Digi`.
-   - The order of the two statements is the whole point of the question — swapping them would give `n = 4`.
+   Answer: This is the Fibonacci function, and `F(5) = 5`. As written the code does not compile — the `if` conditions are missing parentheses, the parameter has no type, and the call `result F(5);` is not a valid statement.
 
-   (ii) Output is
+   Corrected code
+   ```c
+   #include <stdio.h>
+
+   int F(int n) {
+       if (n == 0) return 0;
+       if (n == 1) return 1;
+       return F(n - 2) + F(n - 1);
+   }
+
+   int main(void) {
+       printf("%d\n", F(5));
+       return 0;
+   }
    ```
-   0
-   1
-   2
-   4
-   ```
-   - `continue` skips the `printf` when `i` equals 3, then jumps to `i++` and carries on.
-   - The loop still completes all five iterations; only the printing for `i = 3` is skipped.
-   - With `break` instead, the output would have been just `0 1 2`.
+
+   Recursion trace
+   - `F(5) = F(3) + F(4)`
+   - `F(4) = F(2) + F(3)`
+   - `F(3) = F(1) + F(2) = 1 + 1 = 2`
+   - `F(2) = F(0) + F(1) = 0 + 1 = 1`
+   - So `F(4) = 1 + 2 = 3` and `F(5) = 2 + 3 = 5`.
+
+   - Sequence: `F(0)=0, F(1)=1, F(2)=1, F(3)=2, F(4)=3, F(5)=5`.
+   - Time complexity `O(2ⁿ)` because `F(3)` and lower are recomputed many times. Memoization brings this down to `O(n)`.
 
 47. **What will be the output of following program?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190 (ET: N/A)]*
+```c
+#include <stdio.h>
+int main() {
+    int i=-1, j=-1, k=0, l=2, m;
+    m= i++ && j++ && k++ || l++;
+    printf("%d %d %d %d %d", i, j, k, l, m);
+    return 0;
+}
+```
+
 ```c
 #include <stdio.h>
 int main() {
@@ -5919,13 +6969,41 @@ int main() {
 }
 ```
 
-    Answer: Output is `Bang`.
+```c
+#include <stdio.h>
+int sum(int i) {
+    static int total=0;
+    total+=i;
+    return total;
+}
+int main() {
+    int i;
+    for(i=1; i<10; i++) {
+        printf("%d ", sum(i));
+    }
+}
+```
 
-    Explanation
-    - `"Bangladesh"` fills indices 0 to 9. Writing `'\0'` at index 4 replaces `'l'` with the terminator.
-    - `strlen(str1)` is now 4, and that value is stored in `str2`. Note `str2` is declared as a single `char`, not a string — storing 4 in it is legal but unusual, and it is never printed anyway.
-    - `printf("%s", str1)` stops at the first `'\0'`, so it prints `B a n g`.
-    - The remaining characters `ladesh` are still in memory but unreachable through string functions.
+    Answer: Output is `1 3 6 10 15 21 28 36 45 `.
+
+    Why the values accumulate
+    - `total` is declared `static`, so it is initialised to 0 only once and keeps its value between calls. It is not recreated on each call the way an ordinary local variable would be.
+    - Each call therefore adds the new `i` to the running total from all previous calls.
+
+    | Call | i | total before | total after | Printed |
+    |---|---|---|---|---|
+    | 1 | 1 | 0 | 1 | 1 |
+    | 2 | 2 | 1 | 3 | 3 |
+    | 3 | 3 | 3 | 6 | 6 |
+    | 4 | 4 | 6 | 10 | 10 |
+    | 5 | 5 | 10 | 15 | 15 |
+    | 6 | 6 | 15 | 21 | 21 |
+    | 7 | 7 | 21 | 28 | 28 |
+    | 8 | 8 | 28 | 36 | 36 |
+    | 9 | 9 | 36 | 45 | 45 |
+
+    - These are the triangular numbers — the running sum `1+2+...+n`, which equals `n(n+1)/2`.
+    - Had `total` been a plain `int total = 0;`, it would have been reset on every call and the output would simply have been `1 2 3 4 5 6 7 8 9`.
 
 49. **Write output:** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1212 (ET: N/A)]*
 ```c
@@ -5941,22 +7019,53 @@ int main() {
 }
 ```
 
-    Answer: Output is `0 1 2 4 `.
+```c
+#include <stdio.h>
+int sum(int i) {
+    static int total=0;
+    total+=i;
+    return total;
+}
+int main() {
+    int i;
+    for(i=1; i<10; i++) {
+        printf("%d ", sum(i));
+    }
+}
+```
 
-    Trace
+    Answer: Output is `1 3 6 10 15 21 28 36 45 `.
 
-    | i | i == 3 ? | Action |
-    |---|---|---|
-    | 0 | No | prints `0 ` |
-    | 1 | No | prints `1 ` |
-    | 2 | No | prints `2 ` |
-    | 3 | Yes | `continue` — printing skipped |
-    | 4 | No | prints `4 ` |
+    Why the values accumulate
+    - `total` is declared `static`, so it is initialised to 0 only once and keeps its value between calls. It is not recreated on each call the way an ordinary local variable would be.
+    - Each call therefore adds the new `i` to the running total from all previous calls.
 
-    - `continue` jumps straight to the increment step, so only the printing for `i = 3` is missed. The loop still runs to completion.
-    - In a `for` loop `continue` is safe, because the increment `++i` is part of the loop header and still executes. In a `while` loop the same code would skip the increment and hang.
+    | Call | i | total before | total after | Printed |
+    |---|---|---|---|---|
+    | 1 | 1 | 0 | 1 | 1 |
+    | 2 | 2 | 1 | 3 | 3 |
+    | 3 | 3 | 3 | 6 | 6 |
+    | 4 | 4 | 6 | 10 | 10 |
+    | 5 | 5 | 10 | 15 | 15 |
+    | 6 | 6 | 15 | 21 | 21 |
+    | 7 | 7 | 21 | 28 | 28 |
+    | 8 | 8 | 28 | 36 | 36 |
+    | 9 | 9 | 36 | 45 | 45 |
+
+    - These are the triangular numbers — the running sum `1+2+...+n`, which equals `n(n+1)/2`.
+    - Had `total` been a plain `int total = 0;`, it would have been reset on every call and the output would simply have been `1 2 3 4 5 6 7 8 9`.
 
 50. **Find output:** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
+```cpp
+#include<stdio.h>
+int main() {
+    int i=1,j=1,k=1;
+    cout<<++i || ++j && ++k;
+    cout<<i<<j<<k;
+    return 0;
+}
+```
+
 ```cpp
 #include<stdio.h>
 int main() {
@@ -5984,6 +7093,13 @@ int main() {
     - A second subtlety: without parentheses, `cout << ++i || ...` would actually parse as `(cout << ++i) || ...` because `<<` binds tighter than `||`. That is why the parentheses matter.
 
 51. **Find the mistake in the following program and write it correct form.** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
+```c
+unsigned int i;
+for(i=100; i<=0; --i)
+printf("%d",i);
+return 0;
+```
+
 ```c
 unsigned int i;
 for(i=100; i<=0; --i)
@@ -6026,6 +7142,17 @@ void main() {
 }
 ```
 
+```c
+#include<stdio.h>
+#define N 7
+void main() {
+    char str[] = "abpqx";
+    for(int i=0; i<N-2; i++)
+        if(i%2) printf("%d ", str[i]++);
+        else printf("%d ", str[i]--);
+}
+```
+
     Answer: Output is `97 98 112 113 120 `.
 
     Explanation
@@ -6055,126 +7182,6 @@ int main() {
 }
 ```
 
-    Answer: Output is `-19, 0, 2, 0`.
-
-    Step-by-step evaluation of `m = ++i && ++j && ++k`
-    - `++i` — pre-increment makes `i = −19` and yields `−19`. Non-zero, so true. Continue.
-    - `++j` — pre-increment makes `j = 0` and yields `0`. Zero is false.
-    - `&&` short-circuits here: once an operand is false, the remaining operands are not evaluated at all.
-    - Therefore `++k` never runs, and `k` stays at its original value `2`.
-    - `m` receives the result of the whole expression, which is `0`.
-
-    | Variable | Final value | Why |
-    |---|---|---|
-    | i | −19 | incremented from −20 |
-    | j | 0 | incremented from −1 |
-    | k | 2 | unchanged, short-circuited |
-    | m | 0 | expression is false |
-
-    - Note that `−20` and `−19` are both true in C. Only exactly `0` is false, which is why the chain stopped at `j` and not at `i`.
-
-54. **Write output:** *[BCC Assistant Programmer 2017 compact it 1257-1258 (ET: N/A)]*
-```c
-#include <stdio.h>
-int main() {
-    int a=0, b=1, c=2;
-    *((a)?&b:&a)=a?b:c;
-    printf("%d, %d, %d\n",a,b,c);
-    return 0;
-}
-```
-
-    Answer: Output is `2, 1, 2`.
-
-    Breaking the statement into two halves
-
-    Left side: `*((a) ? &b : &a)`
-    - The condition `a` is `0`, which is false.
-    - So the conditional selects `&a` — the address of `a`.
-    - Dereferencing it gives `a` itself, so the left side is simply `a`.
-
-    Right side: `a ? b : c`
-    - Again `a` is `0`, false.
-    - So the conditional selects `c`, whose value is `2`.
-
-    Result
-    - The statement becomes `a = 2`.
-    - `b` and `c` are untouched, so they remain `1` and `2`.
-    - Output: `2, 1, 2`.
-
-    - The trick in this question is that the same condition `a` controls both sides, and the left side uses the conditional operator to choose which variable gets assigned — a legal but very unusual C idiom.
-
-55. **Write output:** *[BCC Assistant Programmer 2017 compact it 1258 (ET: N/A)]*
-```c
-#include <stdio.h>
-int main() {
-    float n=2;
-    switch(n) {
-        case 2:
-            printf("Hi");
-            break;
-        default:
-            printf("Hello");
-    }
-    return 0;
-}
-```
-
-    Answer: The program does not compile. There is no output.
-
-    Error
-    - The controlling expression of a `switch` statement must have an integer type — `int`, `char`, `short`, `long` or an enum.
-    - Here `n` is declared `float`, which is not allowed.
-    - GCC reports: `error: switch quantity not an integer`. Clang says: `statement requires expression of integer type ('float' invalid)`.
-
-    Why floats are forbidden in a switch
-    - `switch` works by comparing the value against case labels for exact equality, and floating-point values cannot be compared reliably for exact equality because of rounding error. The standard therefore rules them out entirely.
-
-    Corrected version
-    ```c
-    #include <stdio.h>
-    int main(void) {
-        int n = 2;                  // changed from float to int
-        switch (n) {
-            case 2:  printf("Hi");    break;
-            default: printf("Hello");
-        }
-        return 0;
-    }
-    ```
-    - This compiles and prints `Hi`.
-    - Alternatively, keep the float and use an `if...else` chain instead of a `switch`.
-
-56. **Write output:** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
-```c
-#include<stdio.h>
-#define max(a,b) (a>b?a:b)
-int main() {
-    int i=1,j=2,k=0;
-    k=max(i++,++j);
-    printf("%d",k);
-    return 0;
-}
-```
-
-    Answer: Output is `4`.
-
-    Why — the macro expands textually
-    - `max(i++, ++j)` becomes `(i++ > ++j ? i++ : ++j)`.
-    - Note that the arguments appear TWICE in the expansion, so their side effects can happen twice.
-
-    Step-by-step with `i = 1`, `j = 2`
-    - Evaluate the condition `i++ > ++j`:
-      - `i++` yields `1`, and `i` becomes `2`.
-      - `++j` makes `j` become `3` and yields `3`.
-      - `1 > 3` is false.
-    - The false branch `++j` is taken: `j` becomes `4` and yields `4`.
-    - So `k = 4`. Final state: `i = 2`, `j = 4`, `k = 4`.
-
-    - This is the classic argument against function-like macros with side effects — `j` was incremented twice from a single call.
-    - A real function `int max(int a, int b) { return a > b ? a : b; }` would evaluate each argument exactly once and return `2` here instead.
-
-57. **Write output:** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
 ```c
 #include <stdio.h>
 int sum(int i) {
@@ -6211,10 +7218,211 @@ int main() {
     - These are the triangular numbers — the running sum `1+2+...+n`, which equals `n(n+1)/2`.
     - Had `total` been a plain `int total = 0;`, it would have been reset on every call and the output would simply have been `1 2 3 4 5 6 7 8 9`.
 
-## Recursion & Functions (38)
+54. **Write output:** *[BCC Assistant Programmer 2017 compact it 1257-1258 (ET: N/A)]*
+```c
+#include <stdio.h>
+int main() {
+    int a=0, b=1, c=2;
+    *((a)?&b:&a)=a?b:c;
+    printf("%d, %d, %d\n",a,b,c);
+    return 0;
+}
+```
 
-1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
+```c
+#include <stdio.h>
+int sum(int i) {
+    static int total=0;
+    total+=i;
+    return total;
+}
+int main() {
+    int i;
+    for(i=1; i<10; i++) {
+        printf("%d ", sum(i));
+    }
+}
+```
+
+    Answer: Output is `1 3 6 10 15 21 28 36 45 `.
+
+    Why the values accumulate
+    - `total` is declared `static`, so it is initialised to 0 only once and keeps its value between calls. It is not recreated on each call the way an ordinary local variable would be.
+    - Each call therefore adds the new `i` to the running total from all previous calls.
+
+    | Call | i | total before | total after | Printed |
+    |---|---|---|---|---|
+    | 1 | 1 | 0 | 1 | 1 |
+    | 2 | 2 | 1 | 3 | 3 |
+    | 3 | 3 | 3 | 6 | 6 |
+    | 4 | 4 | 6 | 10 | 10 |
+    | 5 | 5 | 10 | 15 | 15 |
+    | 6 | 6 | 15 | 21 | 21 |
+    | 7 | 7 | 21 | 28 | 28 |
+    | 8 | 8 | 28 | 36 | 36 |
+    | 9 | 9 | 36 | 45 | 45 |
+
+    - These are the triangular numbers — the running sum `1+2+...+n`, which equals `n(n+1)/2`.
+    - Had `total` been a plain `int total = 0;`, it would have been reset on every call and the output would simply have been `1 2 3 4 5 6 7 8 9`.
+
+55. **Write output:** *[BCC Assistant Programmer 2017 compact it 1258 (ET: N/A)]*
+```c
+#include <stdio.h>
+int main() {
+    float n=2;
+    switch(n) {
+        case 2:
+            printf("Hi");
+            break;
+        default:
+            printf("Hello");
+    }
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+int sum(int i) {
+    static int total=0;
+    total+=i;
+    return total;
+}
+int main() {
+    int i;
+    for(i=1; i<10; i++) {
+        printf("%d ", sum(i));
+    }
+}
+```
+
+    Answer: Output is `1 3 6 10 15 21 28 36 45 `.
+
+    Why the values accumulate
+    - `total` is declared `static`, so it is initialised to 0 only once and keeps its value between calls. It is not recreated on each call the way an ordinary local variable would be.
+    - Each call therefore adds the new `i` to the running total from all previous calls.
+
+    | Call | i | total before | total after | Printed |
+    |---|---|---|---|---|
+    | 1 | 1 | 0 | 1 | 1 |
+    | 2 | 2 | 1 | 3 | 3 |
+    | 3 | 3 | 3 | 6 | 6 |
+    | 4 | 4 | 6 | 10 | 10 |
+    | 5 | 5 | 10 | 15 | 15 |
+    | 6 | 6 | 15 | 21 | 21 |
+    | 7 | 7 | 21 | 28 | 28 |
+    | 8 | 8 | 28 | 36 | 36 |
+    | 9 | 9 | 36 | 45 | 45 |
+
+    - These are the triangular numbers — the running sum `1+2+...+n`, which equals `n(n+1)/2`.
+    - Had `total` been a plain `int total = 0;`, it would have been reset on every call and the output would simply have been `1 2 3 4 5 6 7 8 9`.
+
+56. **Write output:** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+```c
+#include<stdio.h>
+#define max(a,b) (a>b?a:b)
+int main() {
+    int i=1,j=2,k=0;
+    k=max(i++,++j);
+    printf("%d",k);
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+int sum(int i) {
+    static int total=0;
+    total+=i;
+    return total;
+}
+int main() {
+    int i;
+    for(i=1; i<10; i++) {
+        printf("%d ", sum(i));
+    }
+}
+```
+
+    Answer: Output is `1 3 6 10 15 21 28 36 45 `.
+
+    Why the values accumulate
+    - `total` is declared `static`, so it is initialised to 0 only once and keeps its value between calls. It is not recreated on each call the way an ordinary local variable would be.
+    - Each call therefore adds the new `i` to the running total from all previous calls.
+
+    | Call | i | total before | total after | Printed |
+    |---|---|---|---|---|
+    | 1 | 1 | 0 | 1 | 1 |
+    | 2 | 2 | 1 | 3 | 3 |
+    | 3 | 3 | 3 | 6 | 6 |
+    | 4 | 4 | 6 | 10 | 10 |
+    | 5 | 5 | 10 | 15 | 15 |
+    | 6 | 6 | 15 | 21 | 21 |
+    | 7 | 7 | 21 | 28 | 28 |
+    | 8 | 8 | 28 | 36 | 36 |
+    | 9 | 9 | 36 | 45 | 45 |
+
+    - These are the triangular numbers — the running sum `1+2+...+n`, which equals `n(n+1)/2`.
+    - Had `total` been a plain `int total = 0;`, it would have been reset on every call and the output would simply have been `1 2 3 4 5 6 7 8 9`.
+
+57. **Write output:** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+```c
+#include <stdio.h>
+int sum(int i) {
+    static int total=0;
+    total+=i;
+    return total;
+}
+int main() {
+    int i;
+    for(i=1; i<10; i++) {
+        printf("%d ", sum(i));
+    }
+}
+```
+
+```c
+#include <stdio.h>
+int sum(int i) {
+    static int total=0;
+    total+=i;
+    return total;
+}
+int main() {
+    int i;
+    for(i=1; i<10; i++) {
+        printf("%d ", sum(i));
+    }
+}
+```
+
+    Answer: Output is `1 3 6 10 15 21 28 36 45 `.
+
+    Why the values accumulate
+    - `total` is declared `static`, so it is initialised to 0 only once and keeps its value between calls. It is not recreated on each call the way an ordinary local variable would be.
+    - Each call therefore adds the new `i` to the running total from all previous calls.
+
+    | Call | i | total before | total after | Printed |
+    |---|---|---|---|---|
+    | 1 | 1 | 0 | 1 | 1 |
+    | 2 | 2 | 1 | 3 | 3 |
+    | 3 | 3 | 3 | 6 | 6 |
+    | 4 | 4 | 6 | 10 | 10 |
+    | 5 | 5 | 10 | 15 | 15 |
+    | 6 | 6 | 15 | 21 | 21 |
+    | 7 | 7 | 21 | 28 | 28 |
+    | 8 | 8 | 28 | 36 | 36 |
+    | 9 | 9 | 36 | 45 | 45 |
+
+    - These are the triangular numbers — the running sum `1+2+...+n`, which equals `n(n+1)/2`.
+    - Had `total` been a plain `int total = 0;`, it would have been reset on every call and the output would simply have been `1 2 3 4 5 6 7 8 9`.
+
+## Recursion & Functions (39)
+
+1. **(a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।**
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+(b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
    Answer:
 
@@ -6256,7 +7464,7 @@ int main() {
 
 2. **Write a C program to find the sum of digits of an integer number using "recursion".** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    ```c
    #include <stdio.h>
@@ -6289,7 +7497,7 @@ int main() {
 
 3. **What is recursion?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)]*
 
-   Answer: Recursion is the process in which a function calls itself, directly or indirectly, to solve a smaller instance of the same problem. Such a function is called a recursive function.
+Answer: Recursion is the process in which a function calls itself, directly or indirectly, to solve a smaller instance of the same problem. Such a function is called a recursive function.
 
    Two parts every recursive function must have
    - Base case — the condition that stops the recursion and returns a value directly. Without it the function calls itself forever and the program crashes with a stack overflow.
@@ -6314,6 +7522,13 @@ int main() {
    - Every recursive solution can be rewritten iteratively, usually with better speed and memory but longer code.
 
 4. **Write recursive way below this program:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
+```c
+for(int i=1, i<n; i++)
+    for(int j=0 ; j<i ; j ++)
+        For( int k =0; k<i ; k++)
+            X=X+1
+```
+
 ```c
 for(int i=1, i<n; i++)
     for(int j=0 ; j<i ; j ++)
@@ -6375,6 +7590,22 @@ int main() {
 }
 ```
 
+```c
+#include <stdio.h>
+void fun(int x){
+    if(x<0) {
+        return;
+    }
+    printf("%d\n",x--);
+    fun(--x);
+    printf("%d\n",x);
+}
+int main() {
+    fun(5);
+    return 0;
+}
+```
+
    Answer: Output is
 
    ```
@@ -6399,6 +7630,20 @@ int main() {
    - The two key points: `printf("%d", x--)` prints the value BEFORE decrementing, and each recursive call has its own separate copy of `x`.
 
 6. **Find the output of following program:**
+```c
+int F(n) {
+    if n == 0
+    return 0;
+    if n == 1
+    return 1;
+    return F(n-2)+F(n-1);
+}
+int main() {
+    result F(5);
+}
+```
+*[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
+
 ```c
 int F(n) {
     if n == 0
@@ -6443,7 +7688,7 @@ int main() {
 
 7. **What is function?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
-   Answer: A function is a named block of code that performs one specific task. It is written once and can be called any number of times from anywhere in the program.
+Answer: A function is a named block of code that performs one specific task. It is written once and can be called any number of times from anywhere in the program.
 
    Parts of a function
    - Declaration (prototype) — tells the compiler the return type, name and parameter types: `int add(int, int);`
@@ -6470,7 +7715,7 @@ int main() {
 
 8. **Write a C/C++ program to calculte factorial of N using recursive function.** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    ```c
    #include <stdio.h>
@@ -6500,7 +7745,7 @@ int main() {
 
 9. **Write the recursive function of the below problem and find the recurrence relation of the function. F(n) = 1+2+3+..........+(n-1)+n** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Recursive function
    ```c
@@ -6531,7 +7776,7 @@ int main() {
 
 10. **(a) Mention two basic differences between ‘Call by Value’ and ‘Call by Reference’. Write a simple program in C to swap two integer values using ‘Call by value’.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 487 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Two basic differences
     - What is passed — call by value passes a copy of the variable, while call by reference passes its address.
@@ -6571,7 +7816,7 @@ int main() {
 
 11. **(b) Write a program in C using recursion to find the factorial of an integer.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -6597,7 +7842,7 @@ int main() {
 
 12. **When a function is called more than one time that is called?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-    Answer: When a function calls itself repeatedly, it is called **recursion**, and such a function is a recursive function.
+Answer: When a function calls itself repeatedly, it is called **recursion**, and such a function is a recursive function.
 
     - If the question means a function invoked several times from different places in a program, that is simply reusability — the main reason functions exist.
     - Two forms of recursion: direct recursion, where a function calls itself; and indirect recursion, where function A calls B and B calls A back.
@@ -6605,7 +7850,7 @@ int main() {
 
 13. **(e) Write about the syntax of function.** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
 
-    Answer: A function in C has three parts — declaration, definition and call.
+Answer: A function in C has three parts — declaration, definition and call.
 
     (a) Function declaration (prototype)
     ```c
@@ -6642,7 +7887,7 @@ int main() {
 
 14. **(ক) C প্রোগ্রামিং ল্যাঙ্গুয়েজে user defined function এবং library function এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 600 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Library function | User-defined function |
     |---|---|---|
@@ -6659,7 +7904,7 @@ int main() {
 
 15. **(ক) Call by Value এবং Call by Reference এর মধ্যে পার্থক্য কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Call by Value | Call by Reference |
     |---|---|---|
@@ -6686,7 +7931,7 @@ int main() {
 
 16. **(ঘ) উদাহরণসহ Parameter Passing ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
-    Answer: Parameter passing is the mechanism by which data is sent from a calling function to a called function.
+Answer: Parameter passing is the mechanism by which data is sent from a calling function to a called function.
 
     Two kinds of parameter
     - Formal parameter — the variable listed in the function definition. It exists only inside the function.
@@ -6736,7 +7981,7 @@ int main() {
 
 17. **(খ) উদাহরণসহ recursion ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
-    Answer: Recursion is the technique in which a function solves a problem by calling itself on a smaller version of the same problem.
+Answer: Recursion is the technique in which a function solves a problem by calling itself on a smaller version of the same problem.
 
     Two required parts
     - Base case — stops the recursion by returning a value directly.
@@ -6770,7 +8015,7 @@ int main() {
 
 18. **(ক) Tower of Hanoi সমস্যাটি সমাধানের জন্যে একটি recursive অ্যালগরিদম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
-    Answer: Tower of Hanoi has three rods and `n` disks of different sizes, all stacked on the source rod in decreasing size. The whole stack must be moved to the destination rod under three rules — move one disk at a time, only the top disk of a rod may be moved, and a larger disk may never sit on a smaller one.
+Answer: Tower of Hanoi has three rods and `n` disks of different sizes, all stacked on the source rod in decreasing size. The whole stack must be moved to the destination rod under three rules — move one disk at a time, only the top disk of a rod may be moved, and a larger disk may never sit on a smaller one.
 
     Recursive idea
     - Move the top `n − 1` disks from source to auxiliary, using destination as the temporary rod.
@@ -6813,7 +8058,7 @@ int main() {
 
 19. **What are the differences between call by value and call by Reference?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)], [BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Call by Value | Call by Reference |
     |---|---|---|
@@ -6831,7 +8076,7 @@ int main() {
 
 20. **Distinguish between Call by value and Call by referee in C/C++.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 670 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Call by Value | Call by Reference |
     |---|---|---|
@@ -6866,7 +8111,7 @@ int main() {
 
 21. **Write a recursive algorithm to find the factorial of a positive integer from 1 to N.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Algorithm
     ```
@@ -6903,7 +8148,7 @@ int main() {
 
 22. **What do you mean by recursion? Calculate factorial function using recursion with C programming code.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
-    Answer: Recursion means a function calling itself, directly or indirectly, to solve a smaller instance of the same problem. It needs a base case to stop and a recursive case that shrinks the input each time.
+Answer: Recursion means a function calling itself, directly or indirectly, to solve a smaller instance of the same problem. It needs a base case to stop and a recursive case that shrinks the input each time.
 
     ```c
     #include <stdio.h>
@@ -6933,7 +8178,7 @@ int main() {
 
 23. **Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.** *[GTCL Assistant Engineer (CSE) 2022 compact it 684 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -6969,7 +8214,7 @@ int main() {
 
 24. **(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 690 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -7012,7 +8257,7 @@ int main() {
 
 25. **(খ) Recursion কি? Recursion পদ্ধতিতে একটি Integer সংখ্যার Factorial নির্ণয়ের জন্য C-Language এ একটি Program লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
 
-    Answer: Recursion is the process where a function calls itself to solve a smaller instance of the same problem. It must have a base case that ends the calls, and a recursive case that moves toward that base case.
+Answer: Recursion is the process where a function calls itself to solve a smaller instance of the same problem. It must have a base case that ends the calls, and a recursive case that moves toward that base case.
 
     ```c
     #include <stdio.h>
@@ -7042,6 +8287,22 @@ int main() {
     - Disadvantage: each call consumes a stack frame, so very large `n` risks a stack overflow. An iterative loop avoids that.
 
 26. **Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the following program. So that it does the intended task.** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
+```c
+#include<stdio.h>
+int someDigits(int num) {
+    if(num==0)
+        return 0;
+    else
+        return num%10+sumDigits(num/10);
+}
+int main() {
+    int n;
+    scanf("%d",&n);
+    printf("%d", sumDigits(n));
+    return 0;
+}
+```
+
 ```c
 #include<stdio.h>
 int someDigits(int num) {
@@ -7090,7 +8351,7 @@ int main() {
 
 27. **(b) Write down a pseudocode/program to generate all possible permutation for a given word.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 793 (ET: N/A)]*
 
-    Answer: The standard method is backtracking — fix one character at each position by swapping, recurse on the rest, then swap back to restore the original order.
+Answer: The standard method is backtracking — fix one character at each position by swapping, recurse on the rest, then swap back to restore the original order.
 
     Pseudocode
     ```
@@ -7147,7 +8408,7 @@ int main() {
 
 28. **Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     ```python
     def factorial(n):
@@ -7170,7 +8431,7 @@ int main() {
 
 29. **Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Recursive version
     ```c
@@ -7228,7 +8489,7 @@ int main() {
 
 30. **১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 946 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     ```python
     def recursive_sum(numbers, index=0):
@@ -7262,7 +8523,7 @@ int main() {
 
 31. **(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।** *[BPSC Assistant Network Engineer 2020 compact it 954 (ET: N/A)]*
 
-    Answer: Recursion is a technique in which a function calls itself to solve a smaller version of the same problem, until a base case is reached that can be answered directly.
+Answer: Recursion is a technique in which a function calls itself to solve a smaller version of the same problem, until a base case is reached that can be answered directly.
 
     Two mandatory parts
     - Base case — the stopping condition.
@@ -7296,7 +8557,7 @@ int main() {
 
 32. **Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algorithm to find the factorial of a number.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Algorithm
     ```
@@ -7332,7 +8593,7 @@ int main() {
 
 33. **(a) Write down a function to compute the sum of the row an $n \times m$ matrix of integer.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -7377,7 +8638,7 @@ int main() {
 
 34. **What is recursive function? Give an example of recursive function.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
-    Answer: A recursive function is a function that calls itself, either directly or indirectly, in order to solve a smaller instance of the same problem.
+Answer: A recursive function is a function that calls itself, either directly or indirectly, in order to solve a smaller instance of the same problem.
 
     Requirements
     - A base case, which returns a value without calling the function again. This is what terminates the recursion.
@@ -7415,7 +8676,7 @@ int main() {
 
 35. **Difference between call by value and call by reference with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1166-1167 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Call by Value | Call by Reference |
     |---|---|---|
@@ -7461,7 +8722,7 @@ int main() {
 
 36. **Write Algorithm of Fibonacci series.** *[Palli Sanchay Bank Programmer 2018 compact it 1171-1172 (ET: N/A)]*
 
-    Answer: The Fibonacci series starts with 0 and 1, and every later term is the sum of the two before it: `F(n) = F(n−1) + F(n−2)`.
+Answer: The Fibonacci series starts with 0 and 1, and every later term is the sum of the two before it: `F(n) = F(n−1) + F(n−2)`.
 
     Iterative algorithm — the efficient one
     ```
@@ -7493,7 +8754,7 @@ int main() {
 
 37. **Write the performance of a non-recursive function which is written in recursive way.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
-    Answer: When an iterative (non-recursive) task is rewritten recursively, correctness stays the same but performance normally gets worse.
+Answer: When an iterative (non-recursive) task is rewritten recursively, correctness stays the same but performance normally gets worse.
 
     Comparison for the same problem
 
@@ -7519,7 +8780,7 @@ int main() {
 
 38. **Write a program in C with recursive function to compute the value $X^n$ where n is a positive integer and x has real value.** *[Multiple Ministry Assistant Programmer 2017 compact it 1235-1236 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```c
     #include <stdio.h>
@@ -7562,11 +8823,13 @@ int main() {
     - The simple version is `O(n)`; the squaring version is `O(log n)`, since it halves the exponent at every step.
     - `double` is used because `x` may be a real number and the result grows fast.
 
+39. **a) Using recursion, develop a computer program to find the n-th Fibonacci number using this rule. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 340]]*
+
 ## Operators, Data Types & Language Concepts (25)
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
-   Answer: The difference is operator precedence and integer promotion. Assume `char c;` on a machine where `char` is 1 byte and `int` is 4 bytes.
+Answer: The difference is operator precedence and integer promotion. Assume `char c;` on a machine where `char` is 1 byte and `int` is 4 bytes.
 
    `sizeof c + 1`
    - `sizeof` applied to a variable does not need parentheses, and it binds tighter than `+`.
@@ -7587,7 +8850,7 @@ int main() {
 
 2. **What is the difference between Null and Void?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | NULL | void |
    |---|---|---|
@@ -7604,7 +8867,7 @@ int main() {
 
 3. **What can be used to terminate for(;;)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: `for(;;)` has no condition, so it is an infinite loop. It can be terminated in these ways.
+Answer: `for(;;)` has no condition, so it is an infinite loop. It can be terminated in these ways.
 
    - `break` — the normal way. It exits the loop immediately and control moves to the statement after the loop.
    ```c
@@ -7621,7 +8884,7 @@ int main() {
 
 4. **What will occur when an array is declared without size?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-   Answer: It depends on whether an initializer is given.
+Answer: It depends on whether an initializer is given.
 
    Case 1 — declared without size but WITH an initializer: this is legal.
    ```c
@@ -7646,7 +8909,7 @@ int main() {
 
 5. **(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 601 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Local variable | Global variable |
    |---|---|---|
@@ -7681,7 +8944,7 @@ int main() {
 
 6. **(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
-   Answer: Yes, 32678 can be stored in an `int`, but the margin depends on the machine.
+Answer: Yes, 32678 can be stored in an `int`, but the margin depends on the machine.
 
    On a modern 32-bit `int` (the usual case today)
    - Range is `−2,147,483,648` to `2,147,483,647`.
@@ -7701,7 +8964,7 @@ int main() {
 
 7. **(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 617 (ET: N/A)]*
 
-   Answer: Both add 1 to `i`. The difference is WHEN the new value becomes visible to the surrounding expression.
+Answer: Both add 1 to `i`. The difference is WHEN the new value becomes visible to the surrounding expression.
 
    | Point | ++i (pre-increment) | i++ (post-increment) |
    |---|---|---|
@@ -7734,7 +8997,7 @@ int main() {
 
 8. **What is the main difference between structure and array in C programming? Explain with examples.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
 
-   Answer: The main difference is the data type of the members — an array holds elements of the SAME type, while a structure holds members of DIFFERENT types.
+Answer: The main difference is the data type of the members — an array holds elements of the SAME type, while a structure holds members of DIFFERENT types.
 
    | Point | Array | Structure |
    |---|---|---|
@@ -7769,7 +9032,7 @@ int main() {
 
 9. **Difference between array and structure data type.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Array | Structure |
    |---|---|---|
@@ -7787,7 +9050,7 @@ int main() {
 
 10. **Write down the types of errors which can occur the execution of a program.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
-    Answer: Programming errors fall into four types.
+Answer: Programming errors fall into four types.
 
     (a) Syntax errors
     - Violations of the language's grammar rules, caught by the compiler.
@@ -7819,7 +9082,7 @@ int main() {
 
 11. **Write the syntax of while and do while loop.** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     while loop — entry controlled
     ```c
@@ -7851,7 +9114,7 @@ int main() {
 
 12. **What is nested structure in C programming? Explain with example.** *[SPCB Sub-Assistant Programmer 2022 compact it 741 (ET: N/A)]*
 
-    Answer: A nested structure is a structure that contains another structure as one of its members. It is used when one entity naturally contains another.
+Answer: A nested structure is a structure that contains another structure as one of its members. It is used when one entity naturally contains another.
 
     Example
     ```c
@@ -7894,7 +9157,7 @@ int main() {
 
 13. **(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 784 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Array | Structure |
     |---|---|---|
@@ -7924,7 +9187,7 @@ int main() {
 
 14. **Write some default data type in C.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
 
-    Answer: The built-in (primary) data types of C are:
+Answer: The built-in (primary) data types of C are:
 
     | Data type | Size | Range | Format specifier |
     |---|---|---|---|
@@ -7944,7 +9207,7 @@ int main() {
 
 15. **Write the difference between Structure and Array.** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Structure | Array |
     |---|---|---|
@@ -7967,7 +9230,7 @@ int main() {
 
 16. **Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Control structure in C programming (vi) Stack (vii) Debugging (viii) Increment and Decrement process in C programming (ix) Object in C++ (x) Data encapsulation** *[National University Assistant Programmer 2020 compact it 978-980 (ET: DU)]*
 
-    Answer:
+Answer:
 
     (i) ++i vs i++
     - `++i` increments first and gives the new value; `i++` gives the old value and increments afterwards. Both change `i` by 1.
@@ -8017,7 +9280,7 @@ int main() {
 
 17. **নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
 
-    Answer: The condition checks whether `ch` is a vowel. The `::` in the printed question is a transcription of `||` (logical OR).
+Answer: The condition checks whether `ch` is a vowel. The `::` in the printed question is a transcription of `||` (logical OR).
 
     Original if-else form
     ```c
@@ -8056,6 +9319,12 @@ int main() {
    d. The Size of the character variable in C is \_\_\_\_\_?
    e. In Java what is true about private constructor?
 
+a. Polymorphism refers to \_\_\_\_\_\_\_?
+   b. What is the simplest method to prove that a graph is bipartite?
+   c. In C what is the correct syntax to a send a 3- dimension array as a parameter?
+   d. The Size of the character variable in C is \_\_\_\_\_?
+   e. In Java what is true about private constructor?
+
    Answer:
 
    (a) Polymorphism refers to the ability of one interface or name to take many forms — a single function name or operator behaving differently depending on the object or the arguments. In Greek it literally means "many forms".
@@ -8079,7 +9348,7 @@ int main() {
 
 19. **Coding এর সময় সংঘটিত ভুলসমূহ উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
-    Answer: Errors made while coding fall into four categories.
+Answer: Errors made while coding fall into four categories.
 
     (a) Syntax error — breaking the grammar of the language, caught by the compiler.
     ```c
@@ -8117,7 +9386,7 @@ int main() {
 
 20. **উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1082 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Part 1 — i++ vs ++i
     - `i++` (post-increment): the expression yields the OLD value, then `i` is incremented.
@@ -8155,7 +9424,7 @@ int main() {
 
 21. **(খ) C প্রোগ্রামিং ল্যাঙ্গুয়েজে Structure ও Union এর মধ্যে পার্থক্য কী? উদাহরণসহ লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1083 (ET: N/A)]*
 
-    Answer: The key difference is memory. A structure gives every member its own space, while a union makes all members share one space.
+Answer: The key difference is memory. A structure gives every member its own space, while a union makes all members share one space.
 
     | Point | Structure | Union |
     |---|---|---|
@@ -8191,7 +9460,7 @@ int main() {
 
 22. **Which of the following is the correct order of evaluation?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
-    Answer: The options were not printed with the question, so the standard C operator precedence order is given, from highest to lowest.
+Answer: The options were not printed with the question, so the standard C operator precedence order is given, from highest to lowest.
 
     | Level | Operators | Associativity |
     |---|---|---|
@@ -8217,7 +9486,7 @@ int main() {
 
 23. **(c) Is it possible to convert all if-else code into switch code block? Give an example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
 
-    Answer: No. Not every `if-else` can be converted into a `switch`.
+Answer: No. Not every `if-else` can be converted into a `switch`.
 
     Why not — the restrictions of switch
     - The controlling expression must be of integer or character type. Floating-point values and strings are not allowed.
@@ -8259,7 +9528,7 @@ int main() {
 
 24. **Using examples explain data types used in C language.** *[Multiple Ministry Assistant Programmer 2017 compact it 1231 (ET: N/A)]*
 
-    Answer: A data type tells the compiler what kind of value a variable holds and how much memory to reserve for it. C data types fall into three groups.
+Answer: A data type tells the compiler what kind of value a variable holds and how much memory to reserve for it. C data types fall into three groups.
 
     (a) Primary (basic) data types
     ```c
@@ -8297,7 +9566,7 @@ int main() {
 
 25. **Explain in details the different forms of looping statement in C language.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233-1235 (ET: N/A)]*
 
-    Answer: A loop repeats a block of statements while a condition holds. C provides three loop statements.
+Answer: A loop repeats a block of statements while a condition holds. C provides three loop statements.
 
     (a) for loop — used when the number of repetitions is known
     ```c
@@ -8358,7 +9627,7 @@ int main() {
 
 1. **Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the database. If correct: Granting access. If wrong: Adding 1 to a failed attempt counter. Access denied and block the account if the counter reaches 3.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    ```mermaid
    flowchart TD
@@ -8390,7 +9659,7 @@ int main() {
 
 2. **Draw a Flow chart for print odd number for 1 to N.** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
-   Answer:
+Answer:
 
    ```mermaid
    flowchart TD
@@ -8413,7 +9682,7 @@ int main() {
 
 3. **১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 381 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    ```mermaid
    flowchart TD
@@ -8439,7 +9708,7 @@ int main() {
 
 4. **দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
-   Answer: GCD (HCF) is found by Euclid's algorithm, which repeatedly replaces the pair `(a, b)` with `(b, a mod b)`.
+Answer: GCD (HCF) is found by Euclid's algorithm, which repeatedly replaces the pair `(a, b)` with `(b, a mod b)`.
 
    Algorithm
    ```
@@ -8477,7 +9746,7 @@ int main() {
 
 5. **Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 596 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Algorithm
    ```
@@ -8509,7 +9778,7 @@ int main() {
 
 6. **Write Algorithm and flowchart for printing 1+3+5+ \dots + N.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    Algorithm
    ```
@@ -8542,7 +9811,7 @@ int main() {
 
 7. **Write an Algorithm to check a number is Prime or not Prime.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 656 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Algorithm
    ```
@@ -8587,7 +9856,7 @@ int main() {
 
 8. **Write down the algorithm and draw the flowchart of Quadratic equation.** *[CAAB Programmer 2022 compact it 722 (ET: N/A)]*
 
-   Answer: The roots of `ax² + bx + c = 0` come from `x = (−b ± √D) / 2a` where the discriminant `D = b² − 4ac`.
+Answer: The roots of `ax² + bx + c = 0` come from `x = (−b ± √D) / 2a` where the discriminant `D = b² − 4ac`.
 
    Algorithm
    ```
@@ -8630,7 +9899,7 @@ int main() {
 
 9. **Draw a flowchart and write algorithm for finding Factorial value of an integer number.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 723 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Algorithm
    ```
@@ -8668,7 +9937,7 @@ int main() {
 
 10. **Draw a flowchart of the following series: 1+3+5+7+\dots+N** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     ```mermaid
     flowchart TD
@@ -8695,7 +9964,7 @@ int main() {
 
 11. **(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
-    Answer: An algorithm is a finite, ordered sequence of unambiguous steps that takes some input and produces the required output in a finite amount of time.
+Answer: An algorithm is a finite, ordered sequence of unambiguous steps that takes some input and produces the required output in a finite amount of time.
 
     Properties every algorithm must have
     - Input — zero or more inputs.
@@ -8711,7 +9980,7 @@ int main() {
 
 12. **Three types of control statements and their graphical presentation using flowchart or flow graph.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1037-1038 (ET: BUET)]*
 
-    Answer: Control statements decide the order in which statements execute. There are three basic types.
+Answer: Control statements decide the order in which statements execute. There are three basic types.
 
     (a) Sequence — statements execute one after another
     ```mermaid
@@ -8742,7 +10011,7 @@ int main() {
 
 13. **(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1084 (ET: N/A)]*
 
-    Answer: A loop is a control structure that repeats a block of statements as long as a given condition remains true. It removes the need to write the same statements many times.
+Answer: A loop is a control structure that repeats a block of statements as long as a given condition remains true. It removes the need to write the same statements many times.
 
     Four parts of every loop
     - Initialization — set the control variable to its starting value.
@@ -8777,7 +10046,7 @@ int main() {
 
 14. **Write a pesudcode that takes in one positive number only and returns the factor for that number.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
-    Answer:
+Answer:
 
     Pseudocode
     ```
@@ -8815,6 +10084,12 @@ int main() {
     - Time complexity `O(n)`. It can be reduced to `O(√n)` by looping to `√n` and printing both `i` and `n/i` for each divisor found.
 
 15. **Write down the psudo-code that accepts i, n is integer and value as input, store all n integers in an array, called pairs and return all pairs where the summation of individual's pair=value.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1165 (ET: N/A)]*
+
+| Length: | Input | Output |
+|---|---|---|
+| Array | 5 | {1,5}, {7,-1} |
+| Summation value: | 1 7 -1 5 -7 |  |
+|  | 6 |  |
 
 | Length: | Input | Output |
 |---|---|---|
@@ -8865,7 +10140,7 @@ int main() {
 
 16. **Draw flowchart to input five positive numbers and sort them is ascending order.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1199 (ET: N/A)]*
 
-    Answer: Bubble sort is used, since it is the easiest to draw as a flowchart.
+Answer: Bubble sort is used, since it is the easiest to draw as a flowchart.
 
     ```mermaid
     flowchart TD
@@ -8897,7 +10172,7 @@ int main() {
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)]*
 
-   Answer: Walk through the string one character at a time. Each digit's numeric value is `ch - '0'`, and the running result is shifted left by multiplying by 10.
+Answer: Walk through the string one character at a time. Each digit's numeric value is `ch - '0'`, and the running result is shifted left by multiplying by 10.
 
    ```c
    #include <stdio.h>
@@ -8934,7 +10209,7 @@ int main() {
 
 2. **Write a C program to check whether a string is a Palindrome.** *[BUET Assistant Programmer 21.06.2025 compact it 1433 (ET: BUET)]*
 
-   Answer: Compare characters from both ends moving inward. If every pair matches, the string is a palindrome.
+Answer: Compare characters from both ends moving inward. If every pair matches, the string is a palindrome.
 
    ```c
    #include <stdio.h>
@@ -8969,7 +10244,7 @@ int main() {
 
 3. **Write a C program upper case to lower case conversion.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 475 (ET: N/A)]*
 
-   Answer: In ASCII, a lowercase letter is exactly 32 more than its uppercase counterpart (`'A'` = 65, `'a'` = 97).
+Answer: In ASCII, a lowercase letter is exactly 32 more than its uppercase counterpart (`'A'` = 65, `'a'` = 97).
 
    ```c
    #include <stdio.h>
@@ -8997,7 +10272,7 @@ int main() {
 
 4. **String reverse program but without without using the library function.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)], [BREB Assistant Programmer 18.02.2023 compact it 468 (ET: N/A)]*
 
-   Answer: Find the length manually, then swap the outer characters inward.
+Answer: Find the length manually, then swap the outer characters inward.
 
    ```c
    #include <stdio.h>
@@ -9029,7 +10304,7 @@ int main() {
 
 5. **Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from string.** *[RPGCL Assistant Manager (ICT) 2022 compact it 652 (ET: BUET)]*
 
-   Answer: The example removes the substring `"gram"` from `"programming"`, leaving `"proming"`. So the task is substring removal.
+Answer: The example removes the substring `"gram"` from `"programming"`, leaving `"proming"`. So the task is substring removal.
 
    ```c
    #include <stdio.h>
@@ -9079,7 +10354,7 @@ int main() {
 
 6. **Write a program IPv4 IP validation from given IP with valid and not valid.** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
 
-   Answer: A valid IPv4 address has exactly four parts separated by dots, each part is a number from 0 to 255, and no part is empty or has extra leading zeros.
+Answer: A valid IPv4 address has exactly four parts separated by dots, each part is a number from 0 to 255, and no part is empty or has extra leading zeros.
 
    ```c
    #include <stdio.h>
@@ -9135,7 +10410,7 @@ int main() {
 
 7. **Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter** *[BKSP Assistant Programmer 03.12.2022 compact it 729 (ET: N/A)]*
 
-   Answer: The sample shows the search is case-insensitive — `'b'` matches both the capital `B` of "Bangladesh" and the small `b` of "big", giving 2.
+Answer: The sample shows the search is case-insensitive — `'b'` matches both the capital `B` of "Bangladesh" and the small `b` of "big", giving 2.
 
    ```c
    #include <stdio.h>
@@ -9170,7 +10445,7 @@ int main() {
 
 8. **What is the purpose of '\0' character in C?** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
 
-   Answer: `'\0'` is the null character, and its purpose is to mark the END of a string in C.
+Answer: `'\0'` is the null character, and its purpose is to mark the END of a string in C.
 
    - C has no separate string type. A string is just a `char` array, and `'\0'` is what tells every string function where the data stops.
    - Its ASCII value is 0, and it is written as `'\0'` — a single character, not two.
@@ -9193,7 +10468,7 @@ int main() {
 
 9. **(c) Write down a program to find length of a string without using any library function.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 892 (ET: N/A)]*
 
-   Answer: Count characters until the null terminator is reached.
+Answer: Count characters until the null terminator is reached.
 
    ```c
    #include <stdio.h>
@@ -9220,7 +10495,7 @@ int main() {
 
 10. **Write a program to read a character “lower case ” and convert it into upper case.** *[BAUST Assistant Programmer 2021 compact it 918-919 (ET: N/A)]*
 
-    Answer: An uppercase letter is 32 less than its lowercase counterpart in ASCII.
+Answer: An uppercase letter is 32 less than its lowercase counterpart in ASCII.
 
     ```c
     #include <stdio.h>
@@ -9248,6 +10523,9 @@ int main() {
 
 11. **Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 923-924 (ET: CTI)]*
    Sample Input: 192.168.0.0
+   Sample Output: Class C
+
+Sample Input: 192.168.0.0
    Sample Output: Class C
 
    Answer: The class is decided entirely by the FIRST octet.
@@ -9288,7 +10566,7 @@ int main() {
 
 12. **(b) Write down a C function to sort a list of strings in alphabetic order.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130-1131 (ET: N/A)]*
 
-    Answer: Strings are compared with `strcmp()` and swapped with `strcpy()`, because `=` does not work on C strings.
+Answer: Strings are compared with `strcmp()` and swapped with `strcpy()`, because `=` does not work on C strings.
 
     ```c
     #include <stdio.h>
@@ -9334,7 +10612,7 @@ int main() {
 
 13. **(a) Write an algorithm to find Palindrome number.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1140 (ET: N/A)]*
 
-    Answer: A palindrome number reads the same forwards and backwards, such as 121, 1331 or 12321.
+Answer: A palindrome number reads the same forwards and backwards, such as 121, 1331 or 12321.
 
     Algorithm
     ```
@@ -9373,6 +10651,11 @@ int main() {
     - Time complexity `O(d)` where `d` is the number of digits.
 
 14. **Check string str2 is superscript of string str1.** *[NESCO Manager (Software) 2018 compact it 1209-1210 (ET: N/A)]*
+
+| Input | Output |
+|---|---|
+| str1=x str2=x^x | Yes |
+| str1=x str2=x^2 | No |
 
 | Input | Output |
 |---|---|
@@ -9423,9 +10706,9 @@ int main() {
 
 ## File Handling (4)
 
-1. Name Top C 5 File Management Function Name. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+1. **Name Top C 5 File Management Function Name.** *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
-   Answer: The five most used file management functions in C are:
+Answer: The five most used file management functions in C are:
 
    | Function | Purpose | Syntax |
    |---|---|---|
@@ -9450,7 +10733,7 @@ int main() {
 
 2. **Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.** *[BCC Assistant Programmer 12.02.2021 compact it 814 (ET: BUET)]*
 
-   Answer: Read the file, take the first 10 lines, sort them and print the result.
+Answer: Read the file, take the first 10 lines, sort them and print the result.
 
    ```python
    def first_ten_sorted(filename):
@@ -9483,7 +10766,7 @@ int main() {
 
 3. **You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account, Find the highest and second highest balance of saving account.** *[NRCC Assistant Programmer 2021 compact it 931-932 (ET: N/A)]*
 
-   Answer: The file contents were not printed with the question, so the format `accountNo accountType balance` is assumed, one record per line.
+Answer: The file contents were not printed with the question, so the format `accountNo accountType balance` is assumed, one record per line.
 
    Sample `accounts.txt`
    ```
@@ -9546,7 +10829,7 @@ int main() {
 
 4. **Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
 
-   Answer: Two things could be meant — renaming the extension only, or actually converting the image format. Both are shown.
+Answer: Two things could be meant — renaming the extension only, or actually converting the image format. Both are shown.
 
    Version 1 — rename the extension only
    ```python
@@ -9604,7 +10887,7 @@ int main() {
 
 1. **অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 600 (ET: N/A)]*
 
-   Answer: A pointer is a variable that stores the memory address of another variable instead of storing a value directly.
+Answer: A pointer is a variable that stores the memory address of another variable instead of storing a value directly.
 
    ```c
    int x = 10;
@@ -9627,7 +10910,7 @@ int main() {
 
 2. **(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
-   Answer: A pointer is a variable that holds the memory address of another variable. It is declared with `*` and is used with `&` to take an address and `*` to read the value at that address.
+Answer: A pointer is a variable that holds the memory address of another variable. It is declared with `*` and is used with `&` to take an address and `*` to read the value at that address.
 
    malloc() vs calloc()
 
@@ -9658,7 +10941,7 @@ int main() {
 
 3. **Describe Dynamic memory allocation in programming in C?** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
-   Answer: Dynamic memory allocation means reserving memory while the program is RUNNING, rather than fixing the amount at compile time. The memory comes from the heap and is accessed through pointers.
+Answer: Dynamic memory allocation means reserving memory while the program is RUNNING, rather than fixing the amount at compile time. The memory comes from the heap and is accessed through pointers.
 
    Why it is needed
    - A static array such as `int a[100];` fixes the size before the program starts. If only 5 elements are used, 95 slots are wasted; if 200 are needed, the program fails.
@@ -9709,7 +10992,7 @@ int main() {
 
 4. **(a) What is the difference between array and pointer?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891-892 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Array | Pointer |
    |---|---|---|
@@ -9740,7 +11023,7 @@ int main() {
 
 1. **Write a C program that takes inputs integer values from command line interface and print the summation of the integers.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1361 (ET: BUET)]*
 
-   Answer: Command line arguments reach the program through `main(int argc, char *argv[])`. They arrive as strings, so each must be converted to an integer with `atoi()`.
+Answer: Command line arguments reach the program through `main(int argc, char *argv[])`. They arrive as strings, so each must be converted to an integer with `atoi()`.
 
    ```c
    #include <stdio.h>
