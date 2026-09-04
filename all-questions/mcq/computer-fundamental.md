@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 152 questions
+**Table of Contents** — 6 subtopics · 156 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-50) | 50 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-54) | 54 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (50)
+## Hardware Components & Peripherals (54)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -326,6 +326,30 @@ int main ()\{
    (B) O(log2 n)
    (C) O(log n)
    (D) O(1)
+
+51. **Which of the following is not a storage class specifier in C? [ নিচের কোনটি C ল্যাঙ্গুয়েজে স্টোরেজ ক্লাস নয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
+   (A) auto
+   (B) register
+   (C) static
+   (D) extern (E) volatile
+
+52. **In C, static storage class cannot be used with: [ C-তে static কীওয়ার্ডটি নিচের কোনটির সাথে ব্যবহার করা যায় না? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
+   (A) Global variable
+   (B) Function parameter
+   (C) Function name
+   (D) Local variable
+
+53. **Which of the following storage classes have global visibility in C/C++? [ কোন স্টোরেজ ক্লাসের গ্লোবাল ভিজিবিলিটি (দৃশ্যমানতা) আছে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
+   (A) Auto
+   (B) Extern
+   (C) Static
+   (D) Register
+
+54. **Which of the following is a non-volatile memory? [ নিচের কোনটি নন-ভোলাটাইল (Non-volatile) মেমোরি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
+   (a) RAM
+   (b) Cache
+   (c) ROM
+   (d) Register
 
 ## Software Types & Classification (40)
 

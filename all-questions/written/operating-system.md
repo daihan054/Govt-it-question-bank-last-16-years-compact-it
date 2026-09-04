@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 201 questions
+**Table of Contents** — 14 subtopics · 203 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -15,7 +15,7 @@
 | 10 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
 | 11 | [Windows & System Administration](#windows--system-administration-5) | 5 |
 | 12 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
-| 13 | [OS Concepts & Process Management](#os-concepts--process-management-2) | 2 |
+| 13 | [OS Concepts & Process Management](#os-concepts--process-management-4) | 4 |
 | 14 | [Deadlock & Concurrency Control](#deadlock--concurrency-control-0) | 0 |
 
 <!-- TOC END -->
@@ -600,10 +600,14 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
 
-## OS Concepts & Process Management (2)
+## OS Concepts & Process Management (4)
 1. **(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
 
 2. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+
+3. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
+
+4. **What are the major challenges faced by software engineers during software development? Explain with examples how these challenges affect the development process and how they can be mitigated.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
 
 ## Deadlock & Concurrency Control (0)
 **Describe three basic techniques that exist to control deadlocks in databases. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 312-313]]*

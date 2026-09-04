@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 108 questions
+**Table of Contents** — 10 subtopics · 109 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -10,8 +10,8 @@
 | 5 | [Operators & Expressions](#operators--expressions-11) | 11 |
 | 6 | [Pointers & Memory Allocation](#pointers--memory-allocation-5) | 5 |
 | 7 | [Recursion](#recursion-4) | 4 |
-| 8 | [Storage Classes & Scope](#storage-classes--scope-3) | 3 |
-| 9 | [Programming Concepts](#programming-concepts-3) | 3 |
+| 8 | [Programming Concepts](#programming-concepts-4) | 4 |
+| 9 | [Storage Classes & Scope](#storage-classes--scope-3) | 3 |
 | 10 | [Flowcharts & Algorithms](#flowcharts--algorithms-1) | 1 |
 
 <!-- TOC END -->
@@ -923,6 +923,27 @@
    C) Polish Notation
    D) Traversal algorithm
 
+## Programming Concepts (4)
+1. **Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Polymorphism
+   (b) Inheritance
+   (c) Abstraction
+   (d) Encapsulation
+
+2. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
+
+3. **In a doubly linked list, the number of pointers affected in insertion operation will be— [ ডাবলি লিঙ্কড লিস্টে ইনসারশন অপারেশনে কতটি পয়েন্টার প্রভাবিত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
+   (A) 5
+   (B) 0
+   (C) 1
+   (D) None of these
+
+4. **What is the class and subnet mask if the subnet mask is 255.224.0.0? [ সাবনেট মাস্ক 255.224.0.0 হলে এর ক্লাস এবং মাস্ক বিট কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
+   (A) Class A, 8
+   (B) Class A, 3
+   (C) Class B, 3
+   (D) Class B, 32
+
 ## Storage Classes & Scope (3)
 
 1. **Which of the following is not a storage class specifier in C?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*
@@ -943,21 +964,6 @@
    (B) Extern
    (C) Static
    (D) Register
-
-## Programming Concepts (3)
-1. **Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
-   (a) Polymorphism
-   (b) Inheritance
-   (c) Abstraction
-   (d) Encapsulation
-
-2. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
-
-3. **In a doubly linked list, the number of pointers affected in insertion operation will be— [ ডাবলি লিঙ্কড লিস্টে ইনসারশন অপারেশনে কতটি পয়েন্টার প্রভাবিত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
-   (A) 5
-   (B) 0
-   (C) 1
-   (D) None of these
 
 ## Flowcharts & Algorithms (1)
 

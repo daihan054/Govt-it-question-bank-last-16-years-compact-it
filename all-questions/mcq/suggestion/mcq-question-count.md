@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2829** questions.
+Sorted by count, highest first. Total **2849** questions.
 
 ## IT questions
 
-Total: **1642** questions.
+Total: **1654** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **309** |
-| | Networking Fundamentals & Terminology | 64 |
+| **Computer Networks** | **— all subcategories —** | **310** |
+| | Networking Fundamentals & Terminology | 65 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
@@ -23,7 +23,7 @@ Total: **1642** questions.
 | | Routing Protocols | 13 |
 | | Error Detection & Correction | 3 |
 | | Switching Techniques | 3 |
-| **Database** | **— all subcategories —** | **178** |
+| **Database** | **— all subcategories —** | **180** |
 | | SQL Commands & Queries | 52 |
 | | DBMS Concepts & Architecture | 34 |
 | | Normalization | 16 |
@@ -37,9 +37,9 @@ Total: **1642** questions.
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
-| | Database Fundamentals & SQL | 0 |
-| **Computer Fundamentals** | **— all subcategories —** | **152** |
-| | Hardware Components & Peripherals | 50 |
+| | Database Fundamentals & SQL | 2 |
+| **Computer Fundamentals** | **— all subcategories —** | **156** |
+| | Hardware Components & Peripherals | 54 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -50,7 +50,7 @@ Total: **1642** questions.
 | | Power Systems & Generation | 18 |
 | | Signals & Systems | 11 |
 | | Diodes & Rectifiers | 4 |
-| **C Programming** | **— all subcategories —** | **108** |
+| **C Programming** | **— all subcategories —** | **109** |
 | | Output Tracing | 36 |
 | | Control Statements & Loops | 16 |
 | | Arrays & Functions | 15 |
@@ -58,8 +58,8 @@ Total: **1642** questions.
 | | Operators & Expressions | 11 |
 | | Pointers & Memory Allocation | 5 |
 | | Recursion | 4 |
+| | Programming Concepts | 4 |
 | | Storage Classes & Scope | 3 |
-| | Programming Concepts | 3 |
 | | Flowcharts & Algorithms | 1 |
 | **Object Oriented Programming (OOP)** | **— all subcategories —** | **100** |
 | | Java Programming | 48 |
@@ -69,13 +69,13 @@ Total: **1642** questions.
 | | Inheritance | 6 |
 | | Constructors & Destructors | 6 |
 | | Exception Handling | 6 |
-| **Data Structure** | **— all subcategories —** | **86** |
+| **Data Structure** | **— all subcategories —** | **87** |
 | | Data Structure Basics | 25 |
 | | Stack & Queue | 23 |
 | | Tree & Binary Search Tree | 20 |
 | | Linked List | 10 |
+| | Data Structures & Algorithms | 4 |
 | | Priority Queue & Heap | 3 |
-| | Data Structures & Algorithms | 3 |
 | | Hashing & Hash Tables | 2 |
 | **Microprocessor & Computer Architecture** | **— all subcategories —** | **85** |
 | | CPU & Registers | 35 |
@@ -83,13 +83,13 @@ Total: **1642** questions.
 | | Secondary Storage (HDD & Disk Organization) | 13 |
 | | RAID & Storage Architecture | 5 |
 | | Assembly Language & Machine Code | 4 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **75** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **76** |
 | | Number Systems & Binary Arithmetic | 45 |
 | | Logic Gates & Universal Gates | 16 |
 | | Sequential Circuits (Flip-Flops) | 6 |
 | | Boolean Algebra & Simplification | 4 |
+| | Digital Logic & Number Systems | 3 |
 | | Combinational Circuits (MUX, Decoder) | 2 |
-| | Digital Logic & Number Systems | 2 |
 | **Operating System** | **— all subcategories —** | **74** |
 | | Process Management & Scheduling | 24 |
 | | OS Concepts & Multiprogramming | 16 |
@@ -140,16 +140,16 @@ Total: **1642** questions.
 | | Python | 10 |
 | | Mobile & Android Development | 7 |
 | | Visual Basic & .NET | 7 |
+| **MS Office** | **— all subcategories —** | **21** |
+| | MS Excel | 10 |
+| | MS Word | 5 |
+| | MS PowerPoint | 3 |
+| | MS Office & Shortcuts | 2 |
+| | MS Access | 1 |
 | **Cloud Computing** | **— all subcategories —** | **20** |
 | | Cloud Computing Fundamentals | 14 |
 | | Cloud Service Models | 4 |
 | | Containers & Virtualization | 2 |
-| **MS Office** | **— all subcategories —** | **19** |
-| | MS Excel | 10 |
-| | MS Word | 5 |
-| | MS PowerPoint | 3 |
-| | MS Access | 1 |
-| | MS Office & Shortcuts | 0 |
 | **AI & Machine Learning** | **— all subcategories —** | **18** |
 | | Machine Learning & AI Concepts | 18 |
 | **Compiler & Theory of Computation** | **— all subcategories —** | **6** |
@@ -157,13 +157,13 @@ Total: **1642** questions.
 
 ## General Questions
 
-Total: **1187** questions.
+Total: **1195** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **463** |
+| **General Knowledge** | **— all subcategories —** | **468** |
 | | Bangladesh Affairs | 171 |
-| | Everyday Science | 115 |
+| | Everyday Science | 120 |
 | | International Affairs | 106 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
@@ -177,14 +177,14 @@ Total: **1187** questions.
 | | সন্ধি ও বিচ্ছেদ | 2 |
 | | বাংলা ভাষা বিষয়ক তথ্য | 1 |
 | | বানান ও শুদ্ধিকরণ | 0 |
-| **English** | **— all subcategories —** | **281** |
-| | English Grammar | 165 |
+| **English** | **— all subcategories —** | **282** |
+| | English Grammar | 166 |
 | | Vocabulary, Synonyms & Antonyms | 58 |
 | | Idioms & Phrases | 24 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Math** | **— all subcategories —** | **158** |
-| | Algebra | 44 |
+| **Math** | **— all subcategories —** | **160** |
+| | Algebra | 45 |
 | | Geometry | 24 |
 | | Percentage, Profit & Loss | 21 |
 | | Arithmetic & Number Series | 16 |
@@ -196,6 +196,6 @@ Total: **1187** questions.
 | | Permutation & Combination | 5 |
 | | Trigonometry | 4 |
 | | Probability & Statistics | 4 |
-| | Time & Work | 3 |
+| | Time & Work | 4 |
 | | Speed, Time & Distance | 0 |
 | | Basic Arithmetic | 0 |

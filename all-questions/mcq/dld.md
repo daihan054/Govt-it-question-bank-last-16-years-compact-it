@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 75 questions
+**Table of Contents** — 6 subtopics · 76 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,8 +7,8 @@
 | 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-16) | 16 |
 | 3 | [Sequential Circuits (Flip-Flops)](#sequential-circuits-flip-flops-6) | 6 |
 | 4 | [Boolean Algebra & Simplification](#boolean-algebra--simplification-4) | 4 |
-| 5 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder-2) | 2 |
-| 6 | [Digital Logic & Number Systems](#digital-logic--number-systems-2) | 2 |
+| 5 | [Digital Logic & Number Systems](#digital-logic--number-systems-3) | 3 |
+| 6 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder-2) | 2 |
 
 <!-- TOC END -->
 
@@ -478,6 +478,25 @@
    C) AB
    D) 1
 
+## Digital Logic & Number Systems (3)
+1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
+   (a) 2AF3
+   (b) 6AF3
+   (c) AF34
+   (d) EAF3
+
+2. **Which of the following is the Octal equivalent of the hexadecimal number 7B5? [ নিচের হেক্সাডেসিমাল সংখ্যা 7B5-এর সমতুল্য অক্টাল সংখ্যা কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
+   (a) 735
+   (b) 7551
+   (c) 3665
+   (d) 7561
+
+3. **Which number system is used internally by a computer? [ কম্পিউটার অভ্যন্তরে কোন সংখ্যা পদ্ধতি ব্যবহার করে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
+   (a) Decimal
+   (b) Octal
+   (c) Binary
+   (d) Hexadecimal
+
 ## Combinational Circuits (MUX, Decoder) (2)
 
 1. **How many select line would be there if the inputs of a MUX are 8?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
@@ -491,16 +510,3 @@
    (b) 8
    (c) 16
    (d) 32
-
-## Digital Logic & Number Systems (2)
-1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
-   (a) 2AF3
-   (b) 6AF3
-   (c) AF34
-   (d) EAF3
-
-2. **Which of the following is the Octal equivalent of the hexadecimal number 7B5? [ নিচের হেক্সাডেসিমাল সংখ্যা 7B5-এর সমতুল্য অক্টাল সংখ্যা কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
-   (a) 735
-   (b) 7551
-   (c) 3665
-   (d) 7561

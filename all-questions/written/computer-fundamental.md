@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 186 questions
+**Table of Contents** — 10 subtopics · 188 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-92) | 92 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-94) | 94 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
 | 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (92)
+## Computer Fundamentals & Acronyms (94)
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -238,6 +238,10 @@
 91. **(b) What is malware? State in short with some examples? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
 
 92. **(c) You have been given the responsibility of identifying software requirements from a customer who tells you he is too busy to meet with you. What should you do? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 336]]*
+
+93. **What are the various types of relationships in Database? Define them.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354-355]]*
+
+94. **An instrument store gives a 10% discount to all students off the original cost of an instrument. During a back to school sale an additional 15% is taken off the discounted price. James, a student at the local high school, purchases a flute for Tk 306. How much did it originally cost?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
 
 ## ICT in Society & Governance (24)
 

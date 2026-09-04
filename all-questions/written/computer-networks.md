@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 531 questions
+**Table of Contents** — 33 subtopics · 533 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,8 +11,8 @@
 | 6 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-19) | 19 |
 | 7 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-19) | 19 |
 | 8 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-19) | 19 |
-| 9 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-18) | 18 |
-| 10 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-18) | 18 |
+| 9 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-19) | 19 |
+| 10 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-19) | 19 |
 | 11 | [Communication System & Transmission Modes](#communication-system--transmission-modes-17) | 17 |
 | 12 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-16) | 16 |
 | 13 | [Network Address Translation (NAT)](#network-address-translation-nat-16) | 16 |
@@ -769,8 +769,99 @@ Devices: Router, Switch, Network Interface Card (NIC), Web Server. Protocols: HT
 
 19. **What are the propagation time and the transmission time for a 2.5-Kbyte message and if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 12,000 km and that light travels at 2.4\*10^8 m/s.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317]]*
 
-## Routing Protocols & Route Configuration (18)
+## Physical Layer & Transmission Media (Cables & Wiring) (19)
+1. **Straight through connection vs Crossover connection.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
+2. **Which transmission medium is used in LAN? Write their maximum length and capacity (bps).** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1452 (ET: N/A)]*
+
+3. **IEEE __________ Standard used Ethernet LAN?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+4. **What is the connector name copper cable in LAN?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
+
+5. **What are the different types of transmission media used for data communication? Explain their advantages and disadvantages.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 326 (ET: BIBM)]*
+
+6. **Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 523 (ET: MIST)]*
+
+7. **What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair, co-axial cable and fiber optics in tabular form.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
+
+8. **Why we used straight-through and cross cable with example?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
+
+9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 629 (ET: N/A)]*
+
+10. **What happens when you use cables longer than the prescribed length in a network?** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
+
+11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 789 (ET: N/A)]*
+
+12. **Explain 10baseT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839 (ET: N/A)]*
+
+13. **Which media transfer data with higher bandwidth? Advantages of this media.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843 (ET: N/A)]*
+
+14. **(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026-1027 (ET: N/A)]*
+
+15. **Explain 10Base2, 10Base5, 10BaseT and Ethernet.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276-1277 (ET: N/A)]*
+
+16. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading the operating system.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 66]]*
+
+17. **Consider the following C Program. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 310]]*
+\#include <stdio.h>
+
+int main () \{
+
+    int m = 10;
+
+    int n, n1;
+
+    n = ++m;
+
+    n1 = m++;
+
+    n--;
+
+    --n1;
+
+    n -= n1;
+
+    printf("%d", n);
+
+    return 0;
+
+\}
+
+The output of the program is ________.?
+
+18. **b) After compiling and executing the following code what will be the output?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 340]]*
+Output: The recursive function is: F(n) = F(n-1)+F(n-2); with F(0)=0, F(1)=1
+
+19. **What is the output of the following program? Also explain the output.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 352-353]]*
+\#include <iostream>
+
+using namespace std;
+
+void counter(int n) \{
+
+    if (n > 0) \{
+
+        cout << n << " ";
+
+        counter(n - 1);
+
+        cout << n << " ";
+
+    \}
+
+\}
+
+int main() \{
+
+    int number = 5;
+
+    counter(number);
+
+    return 0;
+
+\}
+
+## Routing Protocols & Route Configuration (19)
 1. A BGP router receives multiple routes to the same destination network from different neighboring autonomous systems. The available routes are given in the following table, containing Path, LOCAL_PREF, AS_PATH, ORIGIN, and MED values. Using the standard BGP best-path selection rules, analyze the attributes in the given order and determine which path will be selected as the best route, showing the comparison and justification for each step. [BSCCPL AME 21-08-2026 (BUET)]
 
 | Path | LOCAL_PREF | AS_PATH | ORIGIN | MED |
@@ -835,68 +926,7 @@ Devices: Router, Switch, Network Interface Card (NIC), Web Server. Protocols: HT
 
 18. **What is difference between link state routing and distance vector routing?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
-## Physical Layer & Transmission Media (Cables & Wiring) (18)
-1. **Straight through connection vs Crossover connection.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
-
-2. **Which transmission medium is used in LAN? Write their maximum length and capacity (bps).** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1452 (ET: N/A)]*
-
-3. **IEEE __________ Standard used Ethernet LAN?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
-
-4. **What is the connector name copper cable in LAN?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
-
-5. **What are the different types of transmission media used for data communication? Explain their advantages and disadvantages.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 326 (ET: BIBM)]*
-
-6. **Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 523 (ET: MIST)]*
-
-7. **What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair, co-axial cable and fiber optics in tabular form.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
-
-8. **Why we used straight-through and cross cable with example?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
-
-9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 629 (ET: N/A)]*
-
-10. **What happens when you use cables longer than the prescribed length in a network?** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
-
-11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 789 (ET: N/A)]*
-
-12. **Explain 10baseT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839 (ET: N/A)]*
-
-13. **Which media transfer data with higher bandwidth? Advantages of this media.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843 (ET: N/A)]*
-
-14. **(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026-1027 (ET: N/A)]*
-
-15. **Explain 10Base2, 10Base5, 10BaseT and Ethernet.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276-1277 (ET: N/A)]*
-
-16. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading the operating system.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 66]]*
-
-17. **Consider the following C Program. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 310]]*
-\#include <stdio.h>
-
-int main () \{
-
-    int m = 10;
-
-    int n, n1;
-
-    n = ++m;
-
-    n1 = m++;
-
-    n--;
-
-    --n1;
-
-    n -= n1;
-
-    printf("%d", n);
-
-    return 0;
-
-\}
-
-The output of the program is ________.?
-
-18. **b) After compiling and executing the following code what will be the output?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 340]]*
-Output: The recursive function is: F(n) = F(n-1)+F(n-2); with F(0)=0, F(1)=1
+19. **The trip from Dhata to Rajshahi takes 4\\frac\{1\}\{2\} hours when travelling at a constant speed of 70 miles per hour. How long, in hours, does the trip take when travelling at a constant speed of 60 miles per hour.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
 
 ## Communication System & Transmission Modes (17)
 

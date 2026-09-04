@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 19 questions
+**Table of Contents** — 5 subtopics · 21 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [MS Excel](#ms-excel-10) | 10 |
 | 2 | [MS Word](#ms-word-5) | 5 |
 | 3 | [MS PowerPoint](#ms-powerpoint-3) | 3 |
-| 4 | [MS Access](#ms-access-1) | 1 |
-| 5 | [MS Office & Shortcuts](#ms-office--shortcuts-0) | 0 |
+| 4 | [MS Office & Shortcuts](#ms-office--shortcuts-2) | 2 |
+| 5 | [MS Access](#ms-access-1) | 1 |
 
 <!-- TOC END -->
 
@@ -127,6 +127,15 @@
    c. Selecting
    d. Moving
 
+## MS Office & Shortcuts (2)
+1. **(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
+
+2. **Which of the following is an example of system software? [ নিচের কোনটি সিস্টেম সফটওয়্যারের উদাহরণ? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
+   (a) MS Word
+   (b) Google Chrome
+   (c) Operating System
+   (d) Photoshop
+
 ## MS Access (1)
 
 1. **Which of the following is not a type of Microsoft Access Database object?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
@@ -134,6 +143,3 @@
    b. Form
    c. Worksheets
    d. Modules
-
-## MS Office & Shortcuts (0)
-**(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*

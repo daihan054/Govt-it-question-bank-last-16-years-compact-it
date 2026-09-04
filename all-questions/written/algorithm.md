@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 141 questions
+**Table of Contents** — 15 subtopics · 142 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -12,8 +12,8 @@
 | 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
 | 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
 | 9 | [Dynamic Programming](#dynamic-programming-5) | 5 |
-| 10 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
-| 11 | [Searching & Graph Algorithms](#searching--graph-algorithms-4) | 4 |
+| 10 | [Searching & Graph Algorithms](#searching--graph-algorithms-5) | 5 |
+| 11 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
 | 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-3) | 3 |
 | 13 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
 | 14 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
@@ -358,6 +358,17 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 5. **What will be the time and space complexity of the above algorithm?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
+## Searching & Graph Algorithms (5)
+1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
+
+2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
+
+3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
+
+4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*
+
 ## Graph Representation (Adjacency Matrix vs List) (4)
 
 1. **Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adjacency list.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 495 (ET: N/A)]*
@@ -367,15 +378,6 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 3. **(b) How a graph can be represented? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
 
 4. **নিম্নে উল্লেখিত Graph- এর Adjacency Metrix এবং Adjacency List বের করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148-1149 (ET: BUET)]*
-
-## Searching & Graph Algorithms (4)
-1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
-
-2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
-
-3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
-
-4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
 
 ## Divide and Conquer & Matrix Multiplication (3)
 

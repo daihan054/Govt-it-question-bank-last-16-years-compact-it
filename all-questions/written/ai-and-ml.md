@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 61 questions
+**Table of Contents** — 12 subtopics · 63 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-18) | 18 |
+| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-20) | 20 |
 | 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
 | 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
 | 4 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
@@ -20,7 +20,7 @@
 
 ---
 
-## Artificial Intelligence & Machine Learning (18)
+## Artificial Intelligence & Machine Learning (20)
 1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
 (i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
 
@@ -60,6 +60,10 @@
 17. **(a) Explain the concept of social engineering. What are the common social engineering techniques? How can you define them? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
 
 18. **(c) What are the main components of flowchart? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
+
+19. **Three friends A, B, and C invest money in a business in the ratio 3:4:5. After 1 year, the profit is Tk36,000. How much profit gain by B?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+20. **Letter your younger brother about the importance of vocational training.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
 
 ## Artificial Intelligence & Expert Systems (8)
 

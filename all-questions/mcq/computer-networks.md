@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 309 questions
+**Table of Contents** — 13 subtopics · 310 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-64) | 64 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-65) | 65 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (64)
+## Networking Fundamentals & Terminology (65)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -419,6 +419,12 @@
    (b) The Manager wondered what he could do for him.
    (c) The Manager wanted to know what he could do for him.
    (d) The Manager said that he could do anything for him.
+
+65. **Which protocol is used to send emails? [ ইমেইল পাঠানোর জন্য কোন প্রোটোকল ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
+   (a) FTP
+   (b) HTTP
+   (c) SMTP
+   (d) SNMP
 
 ## Application Layer Protocols (58)
 

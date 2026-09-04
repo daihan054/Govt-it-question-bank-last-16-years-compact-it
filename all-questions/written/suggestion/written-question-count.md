@@ -1,15 +1,15 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3315** questions.
+Sorted by count, highest first. Total **3331** questions.
 
 ## IT questions
 
-Total: **2755** questions.
+Total: **2771** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **531** |
+| **Computer Networks** | **— all subcategories —** | **533** |
 | | Subnetting & IP Addressing | 115 |
 | | OSI & TCP/IP Reference Model | 56 |
 | | Networking Fundamentals & Terminology | 32 |
@@ -18,8 +18,8 @@ Total: **2755** questions.
 | | Wireless Networks & IoT (mmWave) | 19 |
 | | Transport Layer (TCP & UDP) | 19 |
 | | Multiplexing & Bandwidth | 19 |
-| | Routing Protocols & Route Configuration | 18 |
-| | Physical Layer & Transmission Media (Cables & Wiring) | 18 |
+| | Physical Layer & Transmission Media (Cables & Wiring) | 19 |
+| | Routing Protocols & Route Configuration | 19 |
 | | Communication System & Transmission Modes | 17 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
 | | Network Address Translation (NAT) | 16 |
@@ -64,8 +64,8 @@ Total: **2755** questions.
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
 | | Keys, Constraints & Database Objects | 0 |
-| **C Programming** | **— all subcategories —** | **278** |
-| | Basic Programs & Control Statements | 118 |
+| **C Programming** | **— all subcategories —** | **279** |
+| | Basic Programs & Control Statements | 119 |
 | | Output Tracing & Control Flow | 57 |
 | | Recursion & Functions | 39 |
 | | Operators, Data Types & Language Concepts | 25 |
@@ -74,7 +74,7 @@ Total: **2755** questions.
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **201** |
+| **Operating System** | **— all subcategories —** | **203** |
 | | Linux / Unix Commands & Administration | 47 |
 | | CPU Scheduling Algorithms | 26 |
 | | OS Concepts & System Software | 24 |
@@ -87,9 +87,9 @@ Total: **2755** questions.
 | | CPU Scheduling | 6 |
 | | Windows & System Administration | 5 |
 | | Process Synchronization & Concurrency | 4 |
-| | OS Concepts & Process Management | 2 |
+| | OS Concepts & Process Management | 4 |
 | | Deadlock & Concurrency Control | 0 |
-| **Computer & Network Security** | **— all subcategories —** | **192** |
+| **Computer & Network Security** | **— all subcategories —** | **193** |
 | | Social Engineering & Cyber Attacks | 32 |
 | | Cryptography | 31 |
 | | Firewalls & Network Defense | 20 |
@@ -98,15 +98,15 @@ Total: **2755** questions.
 | | Authentication & Access Control | 16 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
 | | Cyber Crime & Security | 10 |
+| | Cryptography & Network Security | 9 |
 | | Security Principles (CIA Triad) | 8 |
-| | Cryptography & Network Security | 8 |
 | | VPN & Tunneling Protocols (IPsec, SSL VPN) | 6 |
 | | Critical Information Infrastructure (CII) & Cyber Governance | 3 |
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **186** |
-| | Computer Fundamentals & Acronyms | 92 |
+| **Computer Fundamentals** | **— all subcategories —** | **188** |
+| | Computer Fundamentals & Acronyms | 94 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
@@ -143,7 +143,7 @@ Total: **2755** questions.
 | | 2's Complement & Binary Arithmetic | 4 |
 | | Number Systems & Codes | 2 |
 | | Finite State Machines (FSM) | 1 |
-| **Algorithm** | **— all subcategories —** | **141** |
+| **Algorithm** | **— all subcategories —** | **142** |
 | | Sorting Algorithms & Complexity | 39 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 15 |
@@ -153,8 +153,8 @@ Total: **2755** questions.
 | | Graph Theory & Isomorphism | 7 |
 | | Greedy Algorithms (Fractional Knapsack) | 6 |
 | | Dynamic Programming | 5 |
+| | Searching & Graph Algorithms | 5 |
 | | Graph Representation (Adjacency Matrix vs List) | 4 |
-| | Searching & Graph Algorithms | 4 |
 | | Divide and Conquer & Matrix Multiplication | 3 |
 | | Heap & Priority Queue | 2 |
 | | Huffman Coding & Data Compression | 1 |
@@ -171,18 +171,18 @@ Total: **2755** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **121** |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **124** |
 | | OOP Concepts (Inheritance & Polymorphism) | 54 |
 | | Java Programming & Methods | 18 |
 | | Class Design & Object-Oriented Modeling | 11 |
 | | Output Tracing & Recursion | 10 |
 | | Constructors & Destructors | 8 |
 | | Encapsulation & Access Modifiers | 7 |
+| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 7 |
 | | Exception Handling | 4 |
-| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 4 |
 | | C++ OOP Concepts & Friend Functions | 3 |
 | | Interfaces & Abstract Classes | 2 |
-| **Data Structure** | **— all subcategories —** | **100** |
+| **Data Structure** | **— all subcategories —** | **102** |
 | | Tree | 27 |
 | | Stack | 20 |
 | | Linked List | 15 |
@@ -192,7 +192,7 @@ Total: **2755** questions.
 | | Queue | 6 |
 | | Data Structure Fundamentals | 6 |
 | | Tree Data Structures (BST, AVL, B-Tree, Heaps) | 2 |
-| | Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) | 0 |
+| | Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) | 2 |
 | **Web Technology** | **— all subcategories —** | **78** |
 | | HTML & Web Fundamentals | 31 |
 | | JavaScript & jQuery (DOM & Validation) | 16 |
@@ -201,8 +201,8 @@ Total: **2755** questions.
 | | Full Stack & Backend Web Development | 7 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
-| **AI & Machine Learning** | **— all subcategories —** | **61** |
-| | Artificial Intelligence & Machine Learning | 18 |
+| **AI & Machine Learning** | **— all subcategories —** | **63** |
+| | Artificial Intelligence & Machine Learning | 20 |
 | | Artificial Intelligence & Expert Systems | 8 |
 | | Deep Learning & Neural Networks (ANN, CNN, RNN) | 8 |
 | | Machine Learning Paradigms (Supervised vs Unsupervised) | 6 |

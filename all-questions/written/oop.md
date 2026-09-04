@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 121 questions
+**Table of Contents** — 10 subtopics · 124 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,8 +9,8 @@
 | 4 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
 | 5 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
 | 6 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
-| 7 | [Exception Handling](#exception-handling-4) | 4 |
-| 8 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-4) | 4 |
+| 7 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-7) | 7 |
+| 8 | [Exception Handling](#exception-handling-4) | 4 |
 | 9 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
 | 10 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
 
@@ -463,17 +463,7 @@ public class WhatTheOutput{
 
 7. **Briefly Describe Abstraction, Encapsulation.** *[Bangladesh Competition Commission Programmer 2019 compact it 1059-1060 (ET: DU)]*
 
-## Exception Handling (4)
-
-1. **(b) What is exception? Explain how it can be used for debugging a program.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
-
-2. **What is difference between exception and error in Java?** *[SPCB Sub-Assistant Programmer 2022 compact it 737 (ET: N/A)]*
-
-3. **What is exception handling? Write with an example.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
-
-4. **Write the difference between throw and throws using Exception handling?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1172-1173 (ET: N/A)]*
-
-## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (4)
+## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (7)
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
 class myclass \{
 
@@ -491,6 +481,22 @@ public:
 Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
 
 4. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
+
+5. **Write a C/C++/ Java program to find sum of the series 1+2+4+7+11+16+.....+n** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351-352]]*
+
+6. **What is polymorphism? Differences in types of polymorphism. Define.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353-354]]*
+
+7. **The ratio of boys to girls in a classroom is 2:3. After 3 more boys enter the classroom, the ratio is 3:4. How many people were there in the room at the start?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+## Exception Handling (4)
+
+1. **(b) What is exception? Explain how it can be used for debugging a program.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
+
+2. **What is difference between exception and error in Java?** *[SPCB Sub-Assistant Programmer 2022 compact it 737 (ET: N/A)]*
+
+3. **What is exception handling? Write with an example.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
+
+4. **Write the difference between throw and throws using Exception handling?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1172-1173 (ET: N/A)]*
 
 ## C++ OOP Concepts & Friend Functions (3)
 

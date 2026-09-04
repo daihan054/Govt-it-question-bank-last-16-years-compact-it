@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 281 questions
+**Table of Contents** — 5 subtopics · 282 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [English Grammar](#english-grammar-165) | 165 |
+| 1 | [English Grammar](#english-grammar-166) | 166 |
 | 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-58) | 58 |
 | 3 | [Idioms & Phrases](#idioms--phrases-24) | 24 |
 | 4 | [English Literature](#english-literature-17) | 17 |
@@ -13,7 +13,7 @@
 
 ---
 
-## English Grammar (165)
+## English Grammar (166)
 1. **Fill in the blank: The scientist looked _____ the microscope.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **The concert was cancelled _____ the heavy rain.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
@@ -1009,6 +1009,12 @@
    (b) It is hoped that the match will be won by us.
    (c) Winning the match is hoped by us.
    (d) Match winning is our hope.
+
+166. **What does RAM stand for? [ RAM এর পূর্ণরূপ কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
+   (a) Read Access Memory
+   (b) Random Access Memory
+   (c) Rapid Access Machine
+   (d) Read Active Memory
 
 ## Vocabulary, Synonyms & Antonyms (58)
 1. **What is the antonym of 'famous '?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*

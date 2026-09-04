@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 178 questions
+**Table of Contents** — 14 subtopics · 180 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -16,7 +16,7 @@
 | 11 | [Database Connectivity (JDBC/ODBC)](#database-connectivity-jdbcodbc-5) | 5 |
 | 12 | [Concurrency Control & Locking](#concurrency-control--locking-5) | 5 |
 | 13 | [SQL Joins](#sql-joins-2) | 2 |
-| 14 | [Database Fundamentals & SQL](#database-fundamentals--sql-0) | 0 |
+| 14 | [Database Fundamentals & SQL](#database-fundamentals--sql-2) | 2 |
 
 <!-- TOC END -->
 
@@ -1191,5 +1191,11 @@
    c) Outer Join
    d) All of the above
 
-## Database Fundamentals & SQL (0)
-**(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+## Database Fundamentals & SQL (2)
+1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+
+2. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
+   (a) Can have duplicate values
+   (b) Can be NULL
+   (c) Must be unique
+   (d) Can store multiple values

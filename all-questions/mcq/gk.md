@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 463 questions
+**Table of Contents** — 6 subtopics · 468 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
-| 2 | [Everyday Science](#everyday-science-115) | 115 |
+| 2 | [Everyday Science](#everyday-science-120) | 120 |
 | 3 | [International Affairs](#international-affairs-106) | 106 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
@@ -987,7 +987,7 @@
    C. রোবটি
    D. জেনেটিক্স
 
-## Everyday Science (115)
+## Everyday Science (120)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -1783,6 +1783,62 @@ public class main\{
    (B) O(n)
    (C) O(1)
    (D) O(n^2)
+
+116. **The minimum number of fields with each node of doubly linked list is [ ডাবলি লিঙ্কড লিস্টের প্রতিটি নোডে ন্যূনতম ফিল্ড সংখ্যা কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
+   (A) 1
+   (B) 2
+   (C) 3
+   (D) 4
+
+117. **IPv6 does not support which of the following addressing mode? [ IPv6 নিচের কোন অ্যাড্রেসিং মোড সমর্থন করে না? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
+   (A) unicast addressing
+   (B) multicast addressing
+   (C) broadcast addressing
+   (D) anycast addressing
+
+118. **What is the output of this program? [ নিচের প্রোগ্রামের আউটপুট কী হবে? ] \#include <stdio.h>
+
+int main() \{
+
+    static int i = 5;
+
+    if (--i)
+
+        printf("%d ",** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
+   i) ;
+
+        main();
+
+\}
+   (A) 4 3 2 1
+   (B) 1 2 3 4
+   (C) 4 4 4 4
+   (D) 0 0 0 0
+
+119. **Output: [ আউটপুট কী হবে ] \#include <stdio.h>
+
+int main() \{
+
+    int y = 0;
+
+    int x = (y !=** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
+   0) ;
+
+    printf("%d",
+   x) ;
+
+    return 0;
+
+\}
+   (A) 0
+   (B) 1
+   (C) A bog negative Number
+   (D) Compiler Error
+
+120. **Below relations are given, Employee (employee_id, name, salary, department) Leave (employee_id, date, reason, no_leaves) Holiday (Date, description)** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*
+   i. Retrieve the names and salaries of all employees who work in the 'Sales' department.
+   ii. write query to show all employee's leave count.
+   iii. Write query to show employees who are in 'HR' department and have taken at least 5 leaves.
 
 ## International Affairs (106)
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*

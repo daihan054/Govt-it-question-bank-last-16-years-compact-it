@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 158 questions
+**Table of Contents** — 15 subtopics · 160 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Algebra](#algebra-44) | 44 |
+| 1 | [Algebra](#algebra-45) | 45 |
 | 2 | [Geometry](#geometry-24) | 24 |
 | 3 | [Percentage, Profit & Loss](#percentage-profit--loss-21) | 21 |
 | 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
@@ -15,7 +15,7 @@
 | 10 | [Permutation & Combination](#permutation--combination-5) | 5 |
 | 11 | [Trigonometry](#trigonometry-4) | 4 |
 | 12 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 13 | [Time & Work](#time--work-3) | 3 |
+| 13 | [Time & Work](#time--work-4) | 4 |
 | 14 | [Speed, Time & Distance](#speed-time--distance-0) | 0 |
 | 15 | [Basic Arithmetic](#basic-arithmetic-0) | 0 |
 
@@ -23,7 +23,7 @@
 
 ---
 
-## Algebra (44)
+## Algebra (45)
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -299,6 +299,12 @@
    (b) Quick Sort
    (c) Heap Sort
    (d) Merge Sort
+
+45. **Which scheduling algorithm may cause starvation? [ কোন শিডিউলিং অ্যালগরিদমে স্টারভেশন (Starvation) হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
+   (a) FCFS
+   (b) Round Robin
+   (c) Priority Scheduling
+   (d) FIFO
 
 ## Geometry (24)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -1015,7 +1021,7 @@
    c. 5/6
    d. 1/6
 
-## Time & Work (3)
+## Time & Work (4)
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. ৪ দিন
    খ. ৫ দিন
@@ -1039,6 +1045,12 @@
    (b) 90
    (c) 63
    (d) 126
+
+4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
+   (A) Print screen
+   (B) File open
+   (C) Help
+   (D) Save
 
 ## Speed, Time & Distance (0)
 **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
