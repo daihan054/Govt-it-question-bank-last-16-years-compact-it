@@ -9861,35 +9861,914 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 1. Consider the following page reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1. Assuming a system with 3 page frames initially empty, calculate the number of page faults using the following page replacement algorithms: (i) FIFO (First-In, First-Out), (ii) LRU (Least Recently Used), and (iii) Optimal Page Replacement. [BSCCPL AME 21-08-2026 (BUET)]
 
+   Answer: Given, reference string = 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1 with 3 frames, all initially empty.
+
+   (i) FIFO — replace the page that entered earliest
+   ```
+    Ref  7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
+    F1   7  7  7  2  2  2  2  4  4  4  0  0  0  0  0  0  0  7  7  7
+    F2   .  0  0  0  0  3  3  3  2  2  2  2  2  1  1  1  1  1  0  0
+    F3   .  .  1  1  1  1  0  0  0  3  3  3  3  3  2  2  2  2  2  1
+         F  F  F  F  H  F  F  F  F  F  F  H  H  F  F  H  H  F  F  F
+   ```
+   ```
+      Faults = 15 , Hits = 5
+      Hit ratio = 5 / 20 = 0.25
+   ```
+
+   (ii) LRU — replace the page unused for the longest time
+   ```
+    Ref  7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
+    F1   7  7  7  2  2  2  2  4  4  4  0  0  0  1  1  1  1  1  1  1
+    F2   .  0  0  0  0  0  0  0  0  3  3  3  3  3  3  0  0  0  0  0
+    F3   .  .  1  1  1  3  3  3  2  2  2  2  2  2  2  2  2  7  7  7
+         F  F  F  F  H  F  H  F  F  F  F  H  H  F  H  F  H  F  H  H
+   ```
+   ```
+      Faults = 12 , Hits = 8
+      Hit ratio = 8 / 20 = 0.40
+   ```
+
+   (iii) Optimal — replace the page that will be used farthest in the future
+   ```
+    Ref  7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
+    F1   7  7  7  2  2  2  2  2  2  2  2  2  2  2  2  2  2  7  7  7
+    F2   .  0  0  0  0  0  0  4  4  4  0  0  0  0  0  0  0  0  0  0
+    F3   .  .  1  1  1  3  3  3  3  3  3  3  3  1  1  1  1  1  1  1
+         F  F  F  F  H  F  H  F  H  H  F  H  H  F  H  H  H  F  H  H
+   ```
+   ```
+      Faults = 9 , Hits = 11
+      Hit ratio = 11 / 20 = 0.55
+   ```
+
+   Result
+   ```
+           FIFO     = 15 page faults
+           LRU      = 12 page faults
+           OPTIMAL  =  9 page faults
+   ```
+   - Optimal gives the fewest faults, but it needs knowledge of future references, so it cannot be implemented. It is used only as a `benchmark` to judge the others.
+   - LRU beats FIFO because it uses `recency of use`, which approximates locality of reference. FIFO ignores usage and can throw out a heavily used page just because it is old.
+   - FIFO can also suffer `Belady's anomaly`: adding more frames can `increase` faults. LRU and Optimal are stack algorithms and never show it.
+
 2. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1422 (ET: E-Zone)]*
+
+   Answer: What thrashing is
+   - `Thrashing` is the state where the system spends more time `swapping pages between memory and disk` than running the processes themselves. Useful work almost stops.
+
+   How it happens in a demand-paged system
+   ```
+      1. The degree of multiprogramming is raised - more processes are
+         kept in memory at the same time.
+      2. Each process now gets FEWER FRAMES than its WORKING SET (the set
+         of pages it is actively using).
+      3. A process cannot keep its active pages resident, so almost every
+         memory reference is a PAGE FAULT.
+      4. The faulting process blocks on the paging disk. The CPU goes idle.
+      5. The CPU scheduler sees LOW CPU UTILISATION and, believing the
+         system is under-loaded, ADMITS MORE PROCESSES.
+      6. The new processes steal frames from the existing ones, so faults
+         rise again -> step 4.
+   ```
+   - This feedback loop is the heart of the problem: the scheduler's cure makes the disease worse. The system collapses into thrashing.
+
+   Effect on CPU utilisation
+   ```
+      CPU
+      util
+       |         ____
+       |       /     \
+       |     /        \          <- thrashing begins
+       |   /            \
+       | /                \_____
+       +-----------------------------> degree of multiprogramming
+                    ^
+               optimal point
+   ```
+   ```
+      Before the peak : more processes -> better CPU utilisation
+      After  the peak : more processes -> utilisation FALLS SHARPLY
+   ```
+   - Effect on the system: throughput drops, response time becomes very long, the disk light stays on continuously, and the CPU sits mostly idle. The machine appears frozen even though the CPU has nothing to do.
+
+   Why it is really a locality problem
+   - A program does not use its pages evenly. At any moment it works inside a `locality` — a small group of pages (a function's code, its local variables, an array being scanned). If the frames given to a process can hold its current locality, faults are rare. If they cannot, faults explode.
+
+   How thrashing is handled
+   ```
+      WORKING SET MODEL (Denning)
+           W(t, D) = the set of pages referenced in the last D references.
+           Give each process enough frames to hold its working set.
+           If  SUM of all working set sizes > total frames , SUSPEND one
+           process and free its frames.
+
+      PAGE FAULT FREQUENCY (PFF)
+           Measure each process's fault rate and keep it inside a band :
+
+               rate ABOVE the upper limit -> give the process MORE frames
+               rate BELOW the lower limit -> take frames AWAY
+               no frames left to give     -> SUSPEND a process
+
+      LOCAL REPLACEMENT
+           A faulting process may only replace ITS OWN pages, so it cannot
+           steal frames from others and spread the thrashing.
+
+      PRACTICAL FIXES
+           Add more RAM ; use a better replacement policy ; reduce the
+           degree of multiprogramming.
+   ```
+
+   - The key point for the examiner: `thrashing is not caused by a slow CPU or a slow disk, but by giving processes fewer frames than their working sets need`. The fix is to reduce the load or increase the frames, never to admit more processes.
 
 3. **a) Write about notes on i) Virtual memory, and ii) Cache memory.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
 
+   Answer: (i) Virtual memory
+   - `Virtual memory` is a technique that lets a process run even when it is `larger than the physical RAM`. Only the parts currently needed are kept in RAM; the rest stays on disk in the `swap space`.
+   ```
+      Each process sees one large, continuous VIRTUAL ADDRESS SPACE.
+      The MMU translates every virtual address into a physical address
+      using the PAGE TABLE.
+
+           virtual address = [ page number | offset ]
+                                    |
+                             page table lookup
+                                    |
+           physical address = [ frame number | offset ]
+   ```
+   - It works by `demand paging`: a page is brought in only when it is referenced. If the page is not resident, the valid bit is 0, the MMU raises a `page fault`, the OS fetches the page from disk into a free frame (evicting a victim if none is free), updates the page table and restarts the instruction.
+   - Benefits: programs bigger than RAM can run, more processes fit in memory, each process is isolated from the others, and there is no external fragmentation.
+   - Cost: a page fault costs milliseconds against nanoseconds for a memory access, and too little RAM leads to `thrashing`.
+
+   (ii) Cache memory
+   - `Cache memory` is a small, very fast memory placed between the CPU and main memory. It holds the data and instructions used most recently, so the CPU does not have to wait for slow RAM.
+   ```
+      CPU  <->  L1  <->  L2  <->  L3  <->  RAM  <->  DISK
+           fastest, smallest  ----->  slowest, largest
+
+      L1 : ~32 KB   , ~1-4 cycles
+      L2 : ~256 KB-1 MB
+      L3 : ~8-32 MB , shared between cores
+   ```
+   - It works because of `locality of reference`: `temporal` (a recently used item is likely to be used again) and `spatial` (neighbouring addresses are likely to be used next, so a whole block is fetched).
+   - Mapping is `direct`, `fully associative` or `set associative`. Write policy is `write-through` or `write-back`.
+   ```
+      Average access time = h * Tc + (1 - h) * Tm
+           h  = hit ratio , Tc = cache time , Tm = memory time
+   ```
+
+   The essential difference
+   | Point | Virtual memory | Cache memory |
+   |---|---|---|
+   | Purpose | Run programs `bigger than RAM` | Make memory access `faster` |
+   | Levels involved | RAM and `disk` | CPU and `RAM` |
+   | Managed by | `Operating system` (software) | `Hardware` |
+   | Unit moved | Page, 4 KB or larger | Block or line, 32-128 bytes |
+   | Miss cost | Milliseconds (`page fault`) | Nanoseconds (`cache miss`) |
+   | Miss handled by | OS page fault handler | Cache controller |
+
 4. **Consider a reference string 4,7,6,1,2,7,2 the number of frames in the memory is 3. Using page Replacement Algorithm (LRU), find the number of page fault.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)]*
+
+   Answer: Given, reference string = 4, 7, 6, 1, 2, 7, 2 with 3 frames, all initially empty, LRU policy.
+
+   LRU rule
+   ```
+      On a fault with all frames full, replace the page that has NOT been
+      USED for the LONGEST TIME.
+   ```
+
+   Step-by-step trace
+   ```
+    Ref     4     7     6     1     2     7     2
+    F1      4     4     4     1     1     1     1
+    F2      .     7     7     7     2     2     2
+    F3      .     .     6     6     6     7     7
+          FAULT FAULT FAULT FAULT FAULT FAULT  HIT
+   ```
+   ```
+    Ref 4 : frames empty                 -> FAULT , load 4      [4]
+    Ref 7 : not present , free frame     -> FAULT , load 7      [4,7]
+    Ref 6 : not present , free frame     -> FAULT , load 6      [4,7,6]
+    Ref 1 : not present , frames FULL
+            last used : 4 -> t1 , 7 -> t2 , 6 -> t3
+            oldest use = 4                -> FAULT , replace 4 with 1
+                                                          [1,7,6]
+    Ref 2 : not present , frames FULL
+            last used : 7 -> t2 , 6 -> t3 , 1 -> t4
+            oldest use = 7                -> FAULT , replace 7 with 2
+                                                          [1,2,6]
+    Ref 7 : not present , frames FULL
+            last used : 6 -> t3 , 1 -> t4 , 2 -> t5
+            oldest use = 6                -> FAULT , replace 6 with 7
+                                                          [1,2,7]
+    Ref 2 : PRESENT                       -> HIT
+   ```
+
+   Result
+   ```
+           Total references = 7
+           Page faults      = 6
+           Page hits        = 1
+
+           Hit  ratio  = 1 / 7 = 0.143  (14.3 %)
+           Miss ratio  = 6 / 7 = 0.857  (85.7 %)
+   ```
+   - The fault count is high because almost every page is referenced only once — there is little `locality of reference` for LRU to exploit. The first 3 faults are unavoidable `cold-start` faults, since the frames begin empty.
 
 5. **Why virtual memory needed?** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 477 (ET: N/A)]*
 
+   Answer: What virtual memory is
+   - `Virtual memory` lets a process run even when it is larger than the physical RAM. Only the pages currently in use stay in RAM; the rest sit on disk in the `swap space`.
+
+   Why it is needed
+
+   (a) Programs larger than RAM must still run
+   ```
+      A 4 GB program on a 2 GB machine :
+           without virtual memory -> it cannot run at all
+           with virtual memory    -> only the pages in use are resident,
+                                     so it runs normally
+   ```
+
+   (b) More processes fit in memory, so the CPU stays busy
+   ```
+      Without VM : each process needs its FULL size in RAM, so few fit,
+           and when they all block on I/O the CPU goes idle.
+      With VM    : each process needs only its ACTIVE pages, so many more
+           fit -> higher degree of multiprogramming -> better CPU
+           utilisation and throughput.
+   ```
+
+   (c) The programmer is freed from memory limits
+   - Before virtual memory the programmer had to split a program into `overlays` by hand and load them in turn. Virtual memory makes that automatic; the code is written against one large flat address space.
+
+   (d) Protection and isolation between processes
+   ```
+      Every process has its OWN page table, so process A's virtual page 5
+      and process B's virtual page 5 map to DIFFERENT frames.
+      A stray pointer in A cannot touch B's memory - the MMU rejects any
+      address not mapped in A's own page table.
+   ```
+
+   (e) No external fragmentation
+   - Memory is handed out in fixed-size `frames`, so any free frame fits any page. There is no need to compact memory. Only a little `internal fragmentation` remains in the last page of a process.
+
+   (f) Sharing and faster process creation
+   ```
+      One copy of a shared library (or the code of a program run twice)
+      is kept in RAM and MAPPED into several page tables.
+      COPY-ON-WRITE lets fork() share all pages read-only and copy a page
+      only when one process writes to it - so process creation is cheap.
+   ```
+
+   How it works, in short
+   ```
+      Demand paging : a page is loaded only when referenced.
+
+      reference -> valid bit = 1 ?  yes -> access memory
+                                 no  -> PAGE FAULT
+                                        -> find a free frame (replace a
+                                           victim if none)
+                                        -> read the page from disk
+                                        -> update the page table
+                                        -> restart the instruction
+   ```
+
+   The cost
+   - A page fault costs `milliseconds` while a RAM access costs `nanoseconds`, so the fault rate must stay very low. If the frames given to processes fall below their `working sets`, the system starts `thrashing` — it spends all its time paging and almost none running.
+
 6. **Consider page reference string 1, 3, 0, 3, 5, 6, 3 with 3 page frames. Find the number of page faults.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
+
+   Answer: Given, reference string = 1, 3, 0, 3, 5, 6, 3 with 3 frames, all initially empty. The policy is not stated, so `FIFO` is taken as the default and the other two are shown for comparison.
+
+   FIFO — replace the page that came in earliest
+   ```
+    Ref     1     3     0     3     5     6     3
+    F1      1     1     1     1     5     5     5
+    F2      .     3     3     3     3     6     6
+    F3      .     .     0     0     0     0     3
+          FAULT FAULT FAULT  HIT  FAULT FAULT FAULT
+   ```
+   ```
+    Ref 1 : free frame                  -> FAULT           [1]
+    Ref 3 : free frame                  -> FAULT           [1,3]
+    Ref 0 : free frame                  -> FAULT           [1,3,0]
+    Ref 3 : present                     -> HIT
+    Ref 5 : full , oldest in = 1        -> FAULT , 1 out   [5,3,0]
+    Ref 6 : full , oldest in = 3        -> FAULT , 3 out   [5,6,0]
+    Ref 3 : full , oldest in = 0        -> FAULT , 0 out   [5,6,3]
+   ```
+   ```
+           Page faults = 6 ,  Hits = 1
+           Hit ratio   = 1 / 7 = 0.143
+   ```
+
+   LRU — replace the page unused for the longest time
+   ```
+    Ref     1     3     0     3     5     6     3
+    F1      1     1     1     1     5     5     5
+    F2      .     3     3     3     3     3     3
+    F3      .     .     0     0     0     6     6
+          FAULT FAULT FAULT  HIT  FAULT FAULT  HIT
+   ```
+   ```
+           Page faults = 5 ,  Hits = 2
+   ```
+   - LRU does better at reference 7: the hit on 3 at reference 4 made 3 recently used, so LRU kept it while FIFO threw it out.
+
+   Optimal — replace the page needed farthest in the future
+   ```
+    Ref     1     3     0     3     5     6     3
+    F1      1     1     1     1     5     6     6
+    F2      .     3     3     3     3     3     3
+    F3      .     .     0     0     0     0     0
+          FAULT FAULT FAULT  HIT  FAULT FAULT  HIT
+   ```
+   ```
+           Page faults = 5 ,  Hits = 2
+   ```
+
+   Result
+   ```
+           FIFO    = 6 page faults
+           LRU     = 5 page faults
+           OPTIMAL = 5 page faults
+   ```
+   - The first 3 faults in every case are unavoidable `cold-start` faults, because the frames start empty. FIFO loses one extra fault by evicting page 3, which was about to be used again — it looks only at `arrival time`, not at `usage`.
 
 7. **Difference between physical memory and virtual memory, also describe the advantages and disadvantages of virtual memory.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 553 (ET: BIBM)]*
 
+   Answer: Difference between physical memory and virtual memory
+
+   | Point | Physical memory (RAM) | Virtual memory |
+   |---|---|---|
+   | What it is | The `actual hardware` — RAM chips on the board | A `technique` that uses RAM plus disk space |
+   | Size | Fixed by the hardware installed | Limited by the `address space`, e.g. 4 GB on 32-bit |
+   | Speed | Fast, nanoseconds | Slow when the disk is touched, milliseconds |
+   | Location | RAM only | RAM + `swap space` on disk |
+   | Addresses | `Physical addresses`, used by the memory bus | `Virtual addresses`, generated by the CPU |
+   | Managed by | `Hardware` and the memory controller | `Operating system` and the MMU |
+   | Cost | Expensive per GB | Cheap, uses existing disk |
+   | Shared? | One physical RAM for the whole machine | Every process has `its own` virtual space |
+
+   - How they connect: the CPU only ever issues `virtual addresses`. The `MMU` translates each one through the `page table` into a physical address. If the page is not in RAM the valid bit is 0, a `page fault` occurs, and the OS brings the page in from disk.
+   ```
+      virtual address = [ page number | offset ]
+                               |
+                        page table lookup
+                               |
+      physical address = [ frame number | offset ]
+   ```
+
+   Advantages of virtual memory
+   - Programs `larger than RAM` can run — only the active pages need to be resident.
+   - A `higher degree of multiprogramming`: each process needs only its working set in RAM, so more processes fit and the CPU stays busy.
+   - `Protection and isolation` — each process has its own page table, so a stray pointer cannot reach another process's memory.
+   - `No external fragmentation` — memory is given out in fixed-size frames, so any free frame fits any page. No compaction is needed.
+   - `Sharing` — one copy of a shared library is mapped into many page tables. `Copy-on-write` makes `fork()` cheap.
+   - The programmer no longer writes `overlays` by hand; one flat address space is assumed.
+
+   Disadvantages of virtual memory
+   - `Slow when it is actually used`: a page fault costs milliseconds against nanoseconds for a RAM access, so a high fault rate destroys performance.
+   - `Thrashing` — if processes get fewer frames than their working sets, the system spends all its time paging and almost none running.
+   - `Address translation overhead` on every reference; a `TLB` is needed to hide it, and a TLB miss costs extra memory accesses.
+   - `Space cost` — page tables themselves occupy RAM, and swap space occupies disk.
+   - `Internal fragmentation` in the last page of each process.
+   - `Unpredictable timing`, which makes it unsuitable for hard `real-time` systems, where paging is usually disabled.
+
 8. **(c) Define paging and trashing in the context of OS.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
+
+   Answer: Paging
+   - `Paging` is a memory management scheme that removes the need for a process to sit in one continuous block of RAM. Virtual memory is cut into fixed-size `pages` and physical memory into `frames` of the same size, and any page can go into any free frame.
+   ```
+      page size = frame size , typically 4 KB
+
+      virtual address = [ page number p | offset d ]
+                                 |
+                         page table[p] = f
+                                 |
+      physical address = [ frame number f | offset d ]
+   ```
+   ```
+      Process P (4 pages)              Physical memory (frames)
+      +--------+                       +--------+ frame 0
+      | page 0 |---------------------->| page 2 |
+      +--------+                       +--------+ frame 1
+      | page 1 |--------+              |  free  |
+      +--------+        |              +--------+ frame 2
+      | page 2 |---+    +------------->| page 1 |
+      +--------+   |                   +--------+ frame 3
+      | page 3 |-+ +------------------>| page 0 |
+      +--------+ |                     +--------+ frame 4
+                 +-------------------->| page 3 |
+                                       +--------+
+      The pages need NOT be next to each other in RAM.
+   ```
+   - What it gives: `no external fragmentation`, since any free frame fits any page; and it makes `virtual memory` possible, because unneeded pages can stay on disk.
+   - What it costs: a little `internal fragmentation` in the last page, the RAM used by the `page table`, and one extra memory access per reference — which is why a `TLB` is added.
+
+   Thrashing
+   - `Thrashing` is the state where the system spends more time `swapping pages between RAM and disk` than executing processes. Useful work nearly stops.
+   ```
+      How it builds up :
+
+      1. Too many processes are admitted.
+      2. Each gets FEWER FRAMES than its WORKING SET.
+      3. Nearly every reference is a PAGE FAULT.
+      4. Processes block on the paging disk , so the CPU goes IDLE.
+      5. The scheduler sees low CPU use and ADMITS MORE PROCESSES.
+      6. Frames get thinner still -> back to step 3.
+   ```
+   ```
+      CPU
+      util
+       |       ____
+       |     /     \        <- thrashing starts here
+       |   /         \
+       | /             \____
+       +---------------------> degree of multiprogramming
+   ```
+   - Symptoms: the disk runs continuously, response time becomes very long, throughput collapses and the CPU is mostly idle.
+   - Cures: `working set model` — give each process enough frames for its active pages and suspend a process when the total exceeds the frames available; `page fault frequency` — add frames to a process whose fault rate is too high and take frames away when it is too low; `local replacement` so a faulting process can evict only its own pages; and in practice, more RAM or a lower degree of multiprogramming.
+
+   - The relation between the two: paging is the `mechanism`, thrashing is what happens when that mechanism is `overloaded` — too many pages competing for too few frames.
 
 9. **What is page fault in computing systems? What does it occur?** *[BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
 
+   Answer: What a page fault is
+   - A `page fault` is the interrupt (a trap) raised by the hardware when a process refers to a page that is `not currently in physical memory`. It is not an error — in a demand-paged system it is the normal way pages get loaded.
+   ```
+      The page table entry carries a VALID / INVALID bit :
+
+           valid bit = 1  ->  the page IS in a frame  -> access proceeds
+           valid bit = 0  ->  the page is NOT resident -> PAGE FAULT
+   ```
+
+   When it occurs
+   ```
+      1. DEMAND PAGING - the first touch of a page. A new process starts
+         with all pages invalid, so its first few references all fault.
+         These are COLD-START faults and are unavoidable.
+      2. The page was EVICTED earlier by the replacement algorithm and is
+         referenced again.
+      3. The page is in the SWAP FILE on disk, not in RAM.
+      4. COPY-ON-WRITE - after fork(), a write to a shared page faults so
+         the OS can make a private copy.
+      5. MEMORY-MAPPED FILE - the first access to a mapped region.
+      6. An INVALID reference - a wild pointer outside the address space.
+         This one is a real error : the OS sends a segmentation fault and
+         kills the process.
+   ```
+
+   How the OS handles it
+   ```mermaid
+   flowchart TD
+       A[CPU references a page] --> B{Valid bit = 1?}
+       B -->|Yes| C[Access memory - done]
+       B -->|No| D[Trap to OS: page fault]
+       D --> E{Free frame available?}
+       E -->|No| F[Run page replacement, evict victim]
+       E -->|Yes| G[Read page from disk into frame]
+       F --> G
+       G --> H[Update page table, valid bit = 1]
+       H --> I[Restart the faulting instruction]
+   ```
+   ```
+      Steps in order :
+      1. The MMU traps to the kernel and saves the process state.
+      2. The OS checks whether the reference is LEGAL. If not -> kill.
+      3. It finds a free frame ; if there is none it runs the REPLACEMENT
+         ALGORITHM (LRU, FIFO, clock) to pick a VICTIM. A DIRTY victim
+         must be written back to disk first.
+      4. It schedules a disk read for the required page and BLOCKS the
+         process, so the CPU runs someone else meanwhile.
+      5. When the read finishes it updates the page table and the TLB.
+      6. It RESTARTS the faulting instruction - which now succeeds.
+   ```
+
+   Cost — why the fault rate must stay tiny
+   ```
+      Effective access time = (1 - p) * ma  +  p * (page fault time)
+
+           p  = page fault rate
+           ma = memory access time , say 100 ns
+           page fault service time , say 8 ms = 8,000,000 ns
+
+      If p = 0.001 :
+           EAT = 0.999 * 100 + 0.001 * 8,000,000
+               = 99.9 + 8000  =  8099.9 ns
+
+      That is about 80 TIMES SLOWER than 100 ns.
+      To keep the slowdown under 10 per cent, p must be below
+      about 0.0000025 - roughly one fault in 400,000 accesses.
+   ```
+   - If the fault rate stays high because processes have fewer frames than their `working sets`, the system enters `thrashing` and throughput collapses.
+
+   - Terminology worth keeping straight: a `page fault` means the page is not in RAM and is handled by the `operating system` in milliseconds. A `TLB miss` means only the translation is not cached; the page may still be in RAM, and the hardware handles it in nanoseconds.
+
 10. **Write short note on Virtual Memory and Cache memory.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
+
+    Answer: Virtual memory
+    - `Virtual memory` is a technique that lets a process run even when it is `larger than the installed RAM`. Only the pages currently in use are kept in RAM; the rest stay on disk in the `swap space`.
+    ```
+       The CPU issues only VIRTUAL addresses. The MMU translates each one
+       through the PAGE TABLE :
+
+            virtual address  = [ page number | offset ]
+                                      |
+                               page table lookup
+                                      |
+            physical address = [ frame number | offset ]
+    ```
+    - It runs on `demand paging`: a page is fetched only when referenced. If the valid bit is 0 the hardware raises a `page fault`; the OS finds a free frame (evicting a victim if none is free), reads the page from disk, updates the page table and restarts the instruction.
+    - Advantages: programs bigger than RAM can run; more processes fit, so the CPU stays busy; each process is `isolated` by its own page table; there is `no external fragmentation`; and libraries can be shared, with `copy-on-write` making `fork()` cheap.
+    - Cost: a page fault takes `milliseconds` against nanoseconds for a RAM access, and if processes get fewer frames than their `working sets` the system starts `thrashing` — all paging, no work.
+
+    Cache memory
+    - `Cache memory` is a small, very fast memory between the CPU and main memory. It holds recently and frequently used data and instructions so the CPU does not stall waiting for slow RAM.
+    ```
+       CPU <-> L1 <-> L2 <-> L3 <-> RAM <-> DISK
+            fastest, smallest ------> slowest, largest
+
+       L1 : ~32 KB  , 1-4 cycles , split into instruction and data
+       L2 : ~256 KB - 1 MB , per core
+       L3 : ~8-32 MB , shared between cores
+    ```
+    - It works because of `locality of reference` — `temporal` (what was just used will likely be used again) and `spatial` (nearby addresses come next, so a whole `block` is fetched, not one word).
+    - Mapping is `direct`, `fully associative` or `set associative`. Writes use `write-through` (update both at once, simple) or `write-back` (update the cache and mark it dirty, faster).
+    ```
+       Average access time = h * Tc + (1 - h) * Tm
+
+            h  = hit ratio , Tc = cache access time , Tm = memory time
+
+       Example : h = 0.9 , Tc = 10 ns , Tm = 100 ns
+            = 0.9 * 10 + 0.1 * 100 = 9 + 10 = 19 ns
+    ```
+
+    Difference in one view
+    | Point | Virtual memory | Cache memory |
+    |---|---|---|
+    | Purpose | Run programs `bigger than RAM` | Make access `faster` |
+    | Levels | RAM and `disk` | CPU and `RAM` |
+    | Managed by | `Operating system` | `Hardware` |
+    | Unit moved | Page, 4 KB or more | Block, 32-128 bytes |
+    | Miss cost | Milliseconds (`page fault`) | Nanoseconds (`cache miss`) |
 
 11. **(ii) Virtual Memory এর প্রয়োজনীয়তা কি ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) What virtual memory is
+    - `Virtual memory` lets a process run even when it is larger than the physical RAM. Only the pages in active use stay in RAM; the rest remain on disk in the `swap space`.
+
+    Why it is needed
+
+    (a) Address space limitation is removed
+    ```
+       A 4 GB program on a 2 GB machine :
+            without virtual memory -> cannot be loaded , cannot run
+            with virtual memory    -> only the ACTIVE pages are resident ,
+                                      so it runs normally
+    ```
+    - Before virtual memory the programmer had to split a large program into `overlays` and load them by hand. Virtual memory does that automatically.
+
+    (b) Higher degree of multiprogramming
+    ```
+       Without VM : each process needs its FULL size in RAM -> few
+            processes fit -> when they block on I/O the CPU idles.
+       With VM    : each process needs only its WORKING SET -> many more
+            fit -> better CPU utilisation and throughput.
+    ```
+
+    (c) Protection and isolation
+    ```
+       Every process has its own PAGE TABLE, so process A's page 5 and
+       process B's page 5 map to DIFFERENT frames. An address not mapped
+       in A's page table is rejected by the MMU, so a stray pointer in A
+       cannot touch B's memory.
+    ```
+
+    (d) No external fragmentation
+    - RAM is handed out in fixed-size `frames`, so any free frame fits any page. Memory never has to be compacted; only a little `internal fragmentation` remains in the last page of a process.
+
+    (e) Sharing and cheap process creation
+    - One copy of a shared library is mapped into many page tables. `Copy-on-write` lets `fork()` share every page read-only and copy a page only when a process writes to it.
+
+    How it works
+    ```
+       DEMAND PAGING - a page is loaded only when it is referenced.
+
+            reference -> valid bit = 1 ? yes -> access memory
+                                         no  -> PAGE FAULT
+                                                -> get a free frame , or
+                                                   evict a victim
+                                                -> read the page from disk
+                                                -> update the page table
+                                                -> restart the instruction
+    ```
+
+    The cost
+    ```
+       Page fault  : MILLISECONDS
+       RAM access  : NANOSECONDS
+
+       So the fault rate must stay very low. If processes are given fewer
+       frames than their working sets, the system THRASHES - it pages
+       continuously and does almost no work.
+    ```
+
 12. **A system uses 3 page frames for storing process pages in main memory. It uses the Least Recently Used (LRU) page replacement policy. Assume that all the page frames are initially empty. What is the total number of page faults that will occur while processing the page reference string given below? 4, 7, 6, 1, 7, 6, 1, 2, 7, 2.** *[BPDB Assistant Engineer (CSE) 2021 compact it 817 (ET: BUET)]*
+
+    Answer: Given, reference string = 4, 7, 6, 1, 7, 6, 1, 2, 7, 2 with 3 frames, all initially empty, LRU policy.
+
+    LRU rule
+    ```
+       On a fault with all frames full, evict the page that has NOT been
+       USED for the LONGEST TIME.
+    ```
+
+    Step-by-step trace
+    ```
+     Ref     4    7    6    1    7    6    1    2    7    2
+     F1      4    4    4    1    1    1    1    1    1    1
+     F2      .    7    7    7    7    7    7    2    2    2
+     F3      .    .    6    6    6    6    6    6    7    7
+           FLT  FLT  FLT  FLT  HIT  HIT  HIT  FLT  FLT  HIT
+    ```
+    ```
+     Ref 4 : free frame                    -> FAULT  [4]
+     Ref 7 : free frame                    -> FAULT  [4,7]
+     Ref 6 : free frame                    -> FAULT  [4,7,6]
+     Ref 1 : full ; last used 4@t1 7@t2 6@t3
+             least recent = 4              -> FAULT , 4 out , 1 in
+                                                      [1,7,6]
+     Ref 7 : present                       -> HIT
+     Ref 6 : present                       -> HIT
+     Ref 1 : present                       -> HIT
+     Ref 2 : full ; last used 7@t5 6@t6 1@t7
+             least recent = 7              -> FAULT , 7 out , 2 in
+                                                      [1,2,6]
+     Ref 7 : full ; last used 6@t6 1@t7 2@t8
+             least recent = 6              -> FAULT , 6 out , 7 in
+                                                      [1,2,7]
+     Ref 2 : present                       -> HIT
+    ```
+
+    Result
+    ```
+            Total references = 10
+            Page faults      = 6
+            Page hits        = 4
+
+            Hit  ratio = 4 / 10 = 0.40  (40 %)
+            Miss ratio = 6 / 10 = 0.60  (60 %)
+    ```
+    - 3 of the 6 faults are unavoidable `cold-start` faults, because the frames begin empty. Only 3 are genuine replacement faults.
+    - Note reference 9: page 7 had just been evicted at reference 8 and is needed immediately afterwards. This is the weakness of a fixed-frame policy — the eviction decision uses only the `past`, while the request pattern depends on the `future`. Optimal replacement would have kept 7 and evicted 6 instead.
 
 13. **Briefly explain the concept of ‘Thrashing’ in terms of OS.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 822 (ET: BUET)]*
 
+    Answer: What thrashing is
+    - `Thrashing` is the state in which the system spends more time `swapping pages between RAM and disk` than actually executing processes. Useful work almost stops.
+
+    How it starts
+    ```
+       1. Too many processes are kept in memory at once.
+       2. Each one gets FEWER FRAMES than its WORKING SET - the set of
+          pages it is actively using.
+       3. It cannot hold its active pages, so nearly every reference is a
+          PAGE FAULT.
+       4. The process blocks on the paging disk , so the CPU goes IDLE.
+       5. The scheduler sees low CPU utilisation, thinks the system is
+          under-loaded, and ADMITS MORE PROCESSES.
+       6. The new processes steal frames from the old ones -> step 3.
+    ```
+    - The vicious circle is the point: the scheduler's attempted cure is what makes it worse.
+
+    Effect on the system
+    ```
+       CPU
+       util
+        |       ____
+        |     /     \        <- thrashing begins
+        |   /         \
+        | /             \____
+        +---------------------> degree of multiprogramming
+                  ^
+            optimal point
+    ```
+    - Symptoms: the disk runs continuously, response time becomes very long, throughput collapses, and the CPU is mostly idle even though the machine seems frozen.
+
+    Why it happens — locality
+    - A program uses its pages unevenly. At any moment it works inside a small `locality` — one function's code, its local variables, an array being scanned. If the frames allotted can hold the current locality, faults are rare; if they cannot, faults explode.
+
+    How it is controlled
+    ```
+       WORKING SET MODEL (Denning)
+            W(t, D) = pages referenced in the last D references.
+            Give each process enough frames to hold its working set.
+            If SUM of working sets > total frames , SUSPEND a process.
+
+       PAGE FAULT FREQUENCY (PFF)
+            fault rate ABOVE the upper limit -> give MORE frames
+            fault rate BELOW the lower limit -> take frames AWAY
+            no frames left to give           -> SUSPEND a process
+
+       LOCAL REPLACEMENT
+            A faulting process may replace only ITS OWN pages, so it
+            cannot steal frames and spread the problem.
+
+       PRACTICAL : add RAM , use a better replacement policy , lower the
+            degree of multiprogramming.
+    ```
+
+    - The key point: thrashing is not caused by a slow CPU or a slow disk. It is caused by giving processes `fewer frames than their working sets need`. The remedy is to reduce the load or increase the frames — never to admit more processes.
+
 14. **(a) What do you mean by virtual memory?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
+
+    Answer: What virtual memory is
+    - `Virtual memory` is a technique that lets a process run even when it is `larger than the physical RAM`. Only the pages currently needed are kept in RAM; the rest stay on disk in the `swap space`. Each process therefore sees one large, continuous address space of its own, whatever the real memory size is.
+
+    How it works
+    ```
+       The CPU issues only VIRTUAL addresses. The MMU translates each one
+       through the PAGE TABLE :
+
+            virtual address  = [ page number p | offset d ]
+                                        |
+                                page table[p] = f
+                                        |
+            physical address = [ frame number f | offset d ]
+
+       The page table entry also holds :
+            VALID bit  - is the page in RAM ?
+            DIRTY bit  - has it been modified ?
+            protection bits - read , write , execute
+    ```
+    ```
+       DEMAND PAGING - fetch a page only when it is referenced :
+
+            valid bit = 1  -> access memory , done
+            valid bit = 0  -> PAGE FAULT
+                              -> take a free frame , or evict a VICTIM
+                                 chosen by LRU / FIFO / clock
+                              -> write the victim back if it is DIRTY
+                              -> read the wanted page from disk
+                              -> set valid bit = 1 , update the TLB
+                              -> RESTART the faulting instruction
+    ```
+    - A `TLB` (a small cache of recent translations) is used so most references need no page-table lookup at all.
+
+    What it gives
+    - Programs `bigger than RAM` can run.
+    - A `higher degree of multiprogramming`, since each process needs only its working set resident — so the CPU stays busy.
+    - `Protection` — each process has its own page table, so a stray pointer cannot reach another process's memory.
+    - `No external fragmentation`, because any free frame fits any page.
+    - `Sharing` of libraries, and cheap `fork()` through `copy-on-write`.
+
+    The cost
+    ```
+       Page fault : MILLISECONDS      RAM access : NANOSECONDS
+
+       Effective access time = (1 - p) * ma + p * (fault service time)
+
+       With ma = 100 ns , fault = 8 ms , p = 0.001 :
+            EAT = 0.999*100 + 0.001*8,000,000 = 8099.9 ns
+            -> about 80 times slower than 100 ns
+    ```
+    - So the fault rate must be extremely small. If processes get fewer frames than their working sets, the system enters `thrashing` — it pages continuously and does almost no useful work.
 
 15. **A system uses 8 page frames to store process pages in main memory. It uses the minimum page replacement policy. Assume that all page frames are initially blank. 64 separate pages were inserted and then the pages were inserted reverse order. How many pages will be miss?** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
 
+    Answer: Given
+    ```
+       Frames                = 8 , all initially empty
+       Policy                = MINIMUM page replacement (OPTIMAL / MIN) -
+                               evict the page needed FARTHEST in the future
+       64 distinct pages are referenced in order , then the SAME 64 pages
+       are referenced in REVERSE order.
+
+       Reference string : 1, 2, 3, ... , 64, 64, 63, 62, ... , 2, 1
+       Total references : 64 + 64 = 128
+    ```
+
+    Phase 1 — the forward pass, references 1 to 64
+    ```
+       Every page is seen for the FIRST TIME, so every reference is a MISS.
+
+            Misses in phase 1 = 64
+    ```
+    - What is left in the frames at the end matters. Optimal always evicts the page needed farthest ahead. During the forward pass, the pages needed soonest in the reverse pass are the `high-numbered` ones, so optimal keeps those and throws out the low-numbered ones.
+    ```
+       After reference 64, the 8 frames hold the LAST 8 pages loaded :
+
+            { 57 , 58 , 59 , 60 , 61 , 62 , 63 , 64 }
+    ```
+
+    Phase 2 — the reverse pass, 64 down to 1
+    ```
+       64 -> HIT     63 -> HIT     62 -> HIT     61 -> HIT
+       60 -> HIT     59 -> HIT     58 -> HIT     57 -> HIT
+                                                 --> 8 HITS
+
+       56 -> MISS , and from here on every page has already been evicted
+            and will never be reused, so each one is a MISS :
+
+            pages 56 , 55 , 54 , ... , 2 , 1   ->  56 MISSES
+    ```
+    ```
+            Misses in phase 2 = 56
+    ```
+
+    Total
+    ```
+            Misses = 64 (forward)  +  56 (reverse)  =  120
+
+            Hits   = 128 - 120 = 8
+
+            Miss ratio = 120 / 128 = 0.9375   (93.75 %)
+            Hit  ratio =   8 / 128 = 0.0625   ( 6.25 %)
+    ```
+
+    Answer: `120 page misses`.
+
+    General formula for this pattern
+    ```
+       With F frames and N distinct pages referenced forward then reverse
+       (N > F) :
+
+            misses = N + (N - F)  =  2N - F
+
+       Check : 2(64) - 8 = 128 - 8 = 120        matches
+    ```
+    - Why the result is so bad: only `8` of the 128 references hit. The reference pattern has no reuse within a window of 8 pages — page 1 is touched at reference 1 and again at reference 128, 127 references apart. No policy with 8 frames can help, and since MIN is provably `optimal`, FIFO and LRU cannot do better than 120 here either.
+
 16. **(খ) Virtual Memory বলতে কী বোঝায়? এর কার্যপদ্ধতি সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1093 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What virtual memory means
+    - `Virtual memory` is a technique that lets a process run even when it is `larger than the installed RAM`. Only the pages currently in use are kept in RAM; the rest stay on disk in the `swap space`. Every process therefore sees one large, continuous address space of its own, regardless of the real memory size.
+
+    Working procedure
+
+    Step 1 — split memory into equal blocks
+    ```
+       Virtual memory of a process  ->  PAGES     (fixed size, e.g. 4 KB)
+       Physical memory (RAM)        ->  FRAMES    (same size)
+
+       Any page can go into any free frame - they need not be adjacent.
+    ```
+
+    Step 2 — address translation by the MMU
+    ```
+       virtual address  = [ page number p | offset d ]
+                                    |
+                            page table[p] = f
+                                    |
+       physical address = [ frame number f | offset d ]
+
+       Each page table entry also holds :
+            VALID bit      - is the page in RAM ?
+            DIRTY bit      - was it modified ?
+            protection bits - read / write / execute
+    ```
+    - A `TLB` caches the most recent translations, so most references need no page-table lookup.
+
+    Step 3 — demand paging and the page fault
+    ```mermaid
+    flowchart TD
+        A[CPU issues virtual address] --> B{Valid bit = 1?}
+        B -->|Yes| C[Access the frame - done]
+        B -->|No| D[Page fault - trap to OS]
+        D --> E{Free frame?}
+        E -->|No| F[Evict a victim, write back if dirty]
+        E -->|Yes| G[Read the page from disk]
+        F --> G
+        G --> H[Update page table and TLB]
+        H --> I[Restart the instruction]
+    ```
+    ```
+       1. valid bit = 0  -> the hardware raises a PAGE FAULT.
+       2. The OS checks that the reference is LEGAL ; if not , it kills
+          the process with a segmentation fault.
+       3. It finds a free frame ; if none , the REPLACEMENT ALGORITHM
+          (LRU , FIFO , clock) picks a VICTIM. A DIRTY victim is written
+          back to the swap space first.
+       4. It reads the required page from disk , and BLOCKS the process
+          meanwhile so the CPU can run another one.
+       5. It updates the page table and the TLB.
+       6. It RESTARTS the faulting instruction , which now succeeds.
+    ```
+
+    What it gives, and what it costs
+    ```
+       GIVES : programs bigger than RAM can run ; more processes fit , so
+               CPU utilisation rises ; each process is ISOLATED by its own
+               page table ; NO EXTERNAL FRAGMENTATION ; libraries can be
+               shared , and fork() is cheap through COPY-ON-WRITE.
+
+       COSTS : a page fault takes MILLISECONDS against NANOSECONDS for a
+               RAM access ; page tables occupy RAM ; and if processes get
+               fewer frames than their WORKING SETS the system THRASHES -
+               it pages continuously and does almost no work.
+    ```
 
 ## Memory Management & Paging (16)
 
