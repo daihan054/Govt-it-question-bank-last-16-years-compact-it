@@ -2080,58 +2080,1238 @@
    **ii. Octal number 2671 to decimal number.**
    **iii. Octal number 756 to hexadecimal number.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1447 (ET: N/A)]*
 
+   Answer: i. Decimal 9 to binary — divide by 2 and read the remainders upward
+   ```
+      9 / 2 = 4  remainder 1   (LSB)
+      4 / 2 = 2  remainder 0
+      2 / 2 = 1  remainder 0
+      1 / 2 = 0  remainder 1   (MSB)
+
+   Reading upward :  (9)10 = (1001)2
+   ```
+   Check: 1×8 + 0×4 + 0×2 + 1×1 = 9
+
+   ii. Octal 2671 to decimal — multiply each digit by its place value
+   ```
+      (2671)8 = 2×8^3 + 6×8^2 + 7×8^1 + 1×8^0
+              = 2×512 + 6×64 + 7×8 + 1×1
+              = 1024  + 384  + 56  + 1
+              = 1465
+
+      (2671)8 = (1465)10
+   ```
+
+   iii. Octal 756 to hexadecimal — go through binary
+   ```
+   Step 1 : each octal digit -> 3 bits
+      7 = 111    5 = 101    6 = 110
+      (756)8 = (111 101 110)2 = (111101110)2
+
+   Step 2 : regroup the bits in fours, from the RIGHT
+      1 1110 1110
+      pad the left group : 0001 1110 1110
+
+   Step 3 : each group of 4 bits -> one hex digit
+      0001 = 1     1110 = E     1110 = E
+
+      (756)8 = (1EE)16
+   ```
+   Check via decimal: (756)8 = 7×64 + 5×8 + 6 = 494, and (1EE)16 = 1×256 + 14×16 + 14 = 494
+
+   - Points to note: octal and hexadecimal both convert to binary digit by digit (3 bits for octal, 4 bits for hex), so binary is always the bridge between them. Decimal is the only base that needs the divide-and-remainder method.
+
 2. **(b) Represent - 25 in 8 bit binary using 2's complement.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
+
+   Answer: 2's complement is the standard way computers store negative numbers. The method is: write the positive value, invert every bit, then add 1.
+
+   Step 1 — write +25 in 8 bits
+   ```
+      25 / 2 = 12  r 1
+      12 / 2 =  6  r 0
+       6 / 2 =  3  r 0
+       3 / 2 =  1  r 1
+       1 / 2 =  0  r 1
+
+      (25)10 = (11001)2  ->  in 8 bits :  0001 1001
+   ```
+
+   Step 2 — take the 1's complement (invert every bit)
+   ```
+      +25       :  0 0 0 1 1 0 0 1
+      invert    :  1 1 1 0 0 1 1 0        <- 1's complement
+   ```
+
+   Step 3 — add 1
+   ```
+        1 1 1 0 0 1 1 0
+      +             0 1
+      -----------------
+        1 1 1 0 0 1 1 1
+   ```
+
+   Answer
+   ```
+      -25  =  (11100111)2  =  (E7)16
+   ```
+
+   Verification — add +25 and -25; the result must be 0
+   ```
+        0 0 0 1 1 0 0 1     (+25)
+      + 1 1 1 0 0 1 1 1     (-25)
+      -----------------
+      1 0 0 0 0 0 0 0 0
+      ^
+      carry out is discarded in 8-bit arithmetic
+
+      Result = 0000 0000 = 0     correct
+   ```
+
+   Verification by place value
+   ```
+   In 2's complement the MSB carries a NEGATIVE weight:
+
+      1      1     1    0    0   1  1  1
+    -128    64    32   16    8   4  2  1
+    -128 + 64 + 32 + 0 + 0 + 4 + 2 + 1 = -25     correct
+   ```
+
+   Points to note
+   - The MSB is the `sign bit`: 0 means positive, 1 means negative. Here it is 1, as expected.
+   - An 8-bit 2's complement register holds the range `-128 to +127`.
+   - 2's complement is used because subtraction becomes addition — the same adder circuit handles both — and because it has only one representation of zero, unlike 1's complement and sign-magnitude.
 
 3. **ডেসিমেল ৬১ এর বাইনারি মান কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Divide the decimal number repeatedly by 2 and read the remainders from bottom to top.
+   ```
+      61 / 2 = 30   remainder 1    (LSB)
+      30 / 2 = 15   remainder 0
+      15 / 2 =  7   remainder 1
+       7 / 2 =  3   remainder 1
+       3 / 2 =  1   remainder 1
+       1 / 2 =  0   remainder 1    (MSB)
+
+   Reading the remainders upward:
+   ```
+   ```
+      (61)10 = (111101)2
+   ```
+
+   Verification by place value
+   ```
+      1     1     1    1    0    1
+      32 + 16  +  8  + 4  + 0  + 1  = 61      correct
+   ```
+
+   - In 8 bits it is written `0011 1101`, and in hexadecimal `3D`.
+
 4. **$(\text{CDAB})_{16}$ কে অক্টাল এ রূপান্তর কর।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 381 (ET: BUET)]*
+
+   Answer: (Answered in English, as required for IT topics.) Hexadecimal and octal both map directly onto binary, so the shortest route is `hex -> binary -> octal`.
+
+   Step 1 — each hex digit becomes 4 bits
+   ```
+      C = 1100      D = 1101      A = 1010      B = 1011
+
+      (CDAB)16 = (1100 1101 1010 1011)2
+               = (1100110110101011)2
+   ```
+
+   Step 2 — regroup the same bits in threes, from the RIGHT
+   ```
+      1100110110101011
+
+      split from the right :  1 100 110 110 101 011
+      pad the left group   :  001 100 110 110 101 011
+   ```
+
+   Step 3 — each group of 3 bits becomes one octal digit
+   ```
+      001 = 1
+      100 = 4
+      110 = 6
+      110 = 6
+      101 = 5
+      011 = 3
+   ```
+   ```
+      (CDAB)16 = (146653)8
+   ```
+
+   Verification through decimal
+   ```
+   (CDAB)16 = 12×16^3 + 13×16^2 + 10×16^1 + 11×16^0
+            = 12×4096 + 13×256 + 10×16 + 11
+            = 49152 + 3328 + 160 + 11
+            = 52651
+
+   (146653)8 = 1×8^5 + 4×8^4 + 6×8^3 + 6×8^2 + 5×8 + 3
+             = 32768 + 16384 + 3072 + 384 + 40 + 3
+             = 52651        correct
+   ```
+
+   - Points to note: never convert hex to octal through decimal in an exam — binary is far faster and there is no chance of an arithmetic slip. Remember `4 bits per hex digit` and `3 bits per octal digit`, and always group from the right, padding on the left.
 
 5. **Convert Decimal to Octal (423)_{10} and Decimal to Hexadecimal (3000)_{10}.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 392 (ET: BUET)]*
 
+   Answer: Part 1 — (423)10 to octal
+   - Divide repeatedly by 8 and read the remainders upward.
+   ```
+      423 / 8 = 52   remainder 7     (LSD)
+       52 / 8 =  6   remainder 4
+        6 / 8 =  0   remainder 6     (MSD)
+
+      (423)10 = (647)8
+   ```
+   Check: 6×64 + 4×8 + 7 = 384 + 32 + 7 = 423
+
+   Part 2 — (3000)10 to hexadecimal
+   - Divide repeatedly by 16 and read the remainders upward.
+   ```
+      3000 / 16 = 187   remainder  8     (LSD)
+       187 / 16 =  11   remainder 11 = B
+        11 / 16 =   0   remainder 11 = B  (MSD)
+
+      (3000)10 = (BB8)16
+   ```
+   Check: 11×256 + 11×16 + 8 = 2816 + 176 + 8 = 3000
+
+   Hex digit reference
+   ```
+      10 = A    11 = B    12 = C    13 = D    14 = E    15 = F
+   ```
+
+   Cross-check through binary
+   ```
+      (BB8)16 = 1011 1011 1000
+              = 101110111000 (2)
+
+      regroup in threes from the right : 101 110 111 000
+                                        =  5   6   7   0
+      so (3000)10 = (5670)8
+
+      verify : 5×512 + 6×64 + 7×8 + 0 = 2560 + 384 + 56 = 3000   correct
+   ```
+
+   - Points to note: the divide-and-remainder method works for any base — divide by the target base and read the remainders from last to first. The last remainder is always the most significant digit.
+
 6. **কোড কী? BCD এবং Binary কোডের মধ্যে পার্থক্য লিখুন। তিনভিত্তিক সংখ্যা পদ্ধতি সম্পর্কে ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) Code
+   - A `code` is an agreed set of symbols used to represent information in a form a machine can store and process. In digital systems a code maps each piece of data — a decimal digit, a letter, a control action — onto a fixed pattern of bits.
+   ```
+   Numeric codes    : BCD, Excess-3, Gray code
+   Alphanumeric     : ASCII, EBCDIC, Unicode
+   Error-detecting  : parity, Hamming code, CRC
+   ```
+
+   Binary code
+   - The number is converted `as a whole` into base 2 using place values 2^0, 2^1, 2^2 and so on.
+   ```
+      (25)10 = (11001)2        5 bits for the whole number
+   ```
+
+   BCD code (Binary Coded Decimal, or 8421 code)
+   - `Each decimal digit separately` is written as a 4-bit binary group. The digits are never combined.
+   ```
+      (25)10 -> 2 = 0010 , 5 = 0101
+             -> (0010 0101)BCD        8 bits for the same number
+   ```
+   - Only 0000 to 1001 are valid. The six patterns 1010 to 1111 are `invalid` in BCD.
+
+   Difference between BCD and binary
+
+   | Point | Binary code | BCD code |
+   |---|---|---|
+   | Conversion | The whole number at once | Each decimal digit separately |
+   | Bits used | Fewer — the minimum needed | More — always 4 bits per digit |
+   | Example (25) | 11001 (5 bits) | 0010 0101 (8 bits) |
+   | Valid patterns | All 16 patterns of 4 bits | Only 0000-1001; 1010-1111 invalid |
+   | Efficiency | Efficient, no waste | Wasteful — 6 of 16 patterns unused |
+   | Arithmetic | Simple, direct | Needs correction (add 6 when a group exceeds 9) |
+   | Decimal display | Needs a conversion step | Direct — each group drives one digit |
+   | Used in | Computer internal arithmetic | Calculators, digital clocks, meters, seven-segment displays |
+
+   Ternary (base-3) number system
+   - A number system with `base 3`, using only the digits `0, 1 and 2`. Each position carries a weight that is a power of 3.
+   ```
+   Place values :  ... 3^3   3^2   3^1   3^0
+                        27     9     3     1
+   ```
+   - Example — convert (201)3 to decimal:
+   ```
+      2×9 + 0×3 + 1×1 = 18 + 0 + 1 = 19
+   ```
+   - Example — convert (19)10 to ternary, by repeated division by 3:
+   ```
+      19 / 3 = 6  remainder 1
+       6 / 3 = 2  remainder 0
+       2 / 3 = 0  remainder 2
+
+      (19)10 = (201)3
+   ```
+   - `Balanced ternary` uses the digits -1, 0 and +1 and can represent negative numbers without a separate sign bit. The Soviet computer `Setun` (1958) used it.
+   - Ternary is not used in practice because a transistor has two natural clean states, on and off. A third distinct level would need tighter voltage margins and would lose the noise immunity that makes binary reliable.
 
 7. **(9\text{D.AB}6)_{16} ও (306.51)_{10} যোগ করুন এবং ফলাফল বাইনারীতে প্রকাশ করুন। (110101) কোন সংখ্যা পদ্ধতির সংখ্যা হতে পারে বলে মনে করেন?** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Part 1 — the addition
+
+   Step 1 — convert (9D.AB6)16 to decimal
+   ```
+   Integer part :  9×16 + 13×1        = 144 + 13   = 157
+   Fraction     :  A/16 + B/256 + 6/4096
+                = 10/16 + 11/256 + 6/4096
+                = 0.625 + 0.04296875 + 0.00146484375
+                = 0.66943359375
+
+      (9D.AB6)16 = 157.66943359375
+   ```
+
+   Step 2 — add the decimal number
+   ```
+        157.66943359375
+      + 306.51
+      ------------------
+        464.17943359375
+   ```
+
+   Step 3 — express the result in binary
+
+   Integer part 464, by repeated division by 2
+   ```
+      464 / 2 = 232  r 0        (LSB)
+      232 / 2 = 116  r 0
+      116 / 2 =  58  r 0
+       58 / 2 =  29  r 0
+       29 / 2 =  14  r 1
+       14 / 2 =   7  r 0
+        7 / 2 =   3  r 1
+        3 / 2 =   1  r 1
+        1 / 2 =   0  r 1        (MSB)
+
+      (464)10 = (111010000)2
+   ```
+   Check: 256 + 128 + 64 + 16 = 464
+
+   Fraction 0.17943359375, by repeated multiplication by 2
+   ```
+      0.17943359375 × 2 = 0.3588671875  -> 0
+      0.3588671875  × 2 = 0.717734375   -> 0
+      0.717734375   × 2 = 1.43546875    -> 1
+      0.43546875    × 2 = 0.8709375     -> 0
+      0.8709375     × 2 = 1.741875      -> 1
+      0.741875      × 2 = 1.48375       -> 1
+      0.48375       × 2 = 0.9675        -> 0
+      0.9675        × 2 = 1.935         -> 1
+      0.935         × 2 = 1.87          -> 1
+      0.87          × 2 = 1.74          -> 1
+   ```
+   - The fraction does `not` terminate, because 0.51 in decimal is not an exact binary fraction. Taking 10 bits:
+   ```
+      0.17943359375 ~= (0.0010110111...)2
+   ```
+
+   Result
+   ```
+      (9D.AB6)16 + (306.51)10 = (464.17943359375)10
+                              ~= (111010000.0010110111...)2
+   ```
+
+   Part 2 — which number system can (110101) belong to?
+   - The number uses only the digits `0 and 1`.
+   - Every number system with a base of `2 or more` contains the digits 0 and 1. So (110101) is a valid number in `binary, ternary, octal, decimal, hexadecimal` — in fact in any base >= 2.
+   - Its value, however, differs in each:
+   ```
+      (110101)2  = 53
+      (110101)8  = 36929
+      (110101)10 = 110101
+      (110101)16 = 1114369
+   ```
+   - In practice it is read as `binary`, because a string of only 0s and 1s in a digital-logic context means base 2. The safe exam answer is: any base greater than or equal to 2, most commonly binary.
+
 8. **Explain Binary digits, logical levels and digital waveforms using timing diagram.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
+
+   Answer: Binary digits
+   - A `binary digit` or `bit` is the smallest unit of digital information. It has only two possible values, `0` and `1`.
+   - Two values are used because a transistor has two clean natural states — fully off and fully on — so the circuit stays simple and highly noise-immune.
+   - Groups of bits carry larger meaning: 4 bits = a nibble, 8 bits = a byte, and n bits can represent 2^n different values.
+
+   Logic levels
+   - A bit is represented by a `voltage level`. Since no real circuit gives an exact voltage, each logic value is assigned a `range`, with a forbidden band between them.
+   ```
+      +5.0 V ---------------------------
+             |   logic 1 (HIGH) range  |      VOH min = 2.4 V
+      +2.0 V ---------------------------      VIH min = 2.0 V
+             |     forbidden band      |      (indeterminate)
+      +0.8 V ---------------------------      VIL max = 0.8 V
+             |   logic 0 (LOW) range   |      VOL max = 0.4 V
+       0.0 V ---------------------------
+   ```
+   - The gap between the output levels a gate produces and the input levels the next gate accepts is the `noise margin`. It is why a small amount of noise or voltage droop never changes the value.
+   - `Positive logic` means HIGH = 1 and LOW = 0; `negative logic` is the reverse. Positive logic is the normal convention.
+
+   Digital waveform
+   - A `digital waveform` is a voltage that switches between the two levels over time. A real waveform is not a perfect square — it has a finite rise and fall time.
+   ```
+           <-- tr -->                <-- tf -->
+      5V   .-------------------------.
+           |                         |
+           |                         |
+           |                         |
+      0V --'                         '-------------
+           |<--- pulse width (tw) --->|
+           |<--------- period T --------------->|
+   ```
+   ```
+      tr = rise time    (10% to 90% of the amplitude)
+      tf = fall time    (90% down to 10%)
+      tw = pulse width
+      T  = period,   f = 1/T = frequency
+      duty cycle = (tw / T) × 100 %
+   ```
+
+   Timing diagram
+   - A `timing diagram` shows several signals on the same time axis, so the relationship between them can be read directly. This is how digital circuits are analysed and debugged.
+   ```
+      CLK   __|‾‾|__|‾‾|__|‾‾|__|‾‾|__|‾‾|__
+
+      A     _____|‾‾‾‾‾‾‾‾‾‾‾|_____________
+
+      B     _________|‾‾‾‾‾‾‾‾‾‾‾|_________
+
+      AND   _________|‾‾‾‾‾‾‾|_____________
+            (A . B is HIGH only where both are HIGH)
+
+      OR    _____|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|_________
+   ```
+   - Reading it: the AND output is high only during the overlap of A and B; the OR output is high whenever either is high. The clock at the top sets the instants at which flip-flops sample their inputs.
+   - Timing diagrams also reveal `propagation delay` — the output edge appears slightly after the input edge — and `setup and hold` violations, which are the usual cause of unreliable sequential circuits.
 
 9. **Convert: (1741)_{10} = (?)_{16}** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)]*
 
+   Answer: Divide the decimal number repeatedly by 16 and read the remainders from bottom to top.
+   ```
+      1741 / 16 = 108   remainder 13 = D    (LSD)
+       108 / 16 =   6   remainder 12 = C
+         6 / 16 =   0   remainder  6 = 6    (MSD)
+
+   Reading the remainders upward:
+   ```
+   ```
+      (1741)10 = (6CD)16
+   ```
+
+   Hex digit reference
+   ```
+      10 = A    11 = B    12 = C    13 = D    14 = E    15 = F
+   ```
+
+   Verification by place value
+   ```
+      (6CD)16 = 6×16^2 + 12×16^1 + 13×16^0
+              = 6×256  + 12×16   + 13
+              = 1536   + 192     + 13
+              = 1741        correct
+   ```
+
+   Cross-check through binary
+   ```
+      6 = 0110    C = 1100    D = 1101
+
+      (6CD)16 = (0110 1100 1101)2 = (11011001101)2
+
+      place values : 1024 + 512 + 0 + 128 + 64 + 0 + 0 + 8 + 4 + 0 + 1
+                   = 1741        correct
+   ```
+
+   - Points to note: always read the remainders `upward` — the last remainder is the most significant digit. Any remainder from 10 to 15 must be written as a letter A to F, which is the most common mistake in this conversion.
+
 10. **Number Conversion: (i) (4673)_8 = (?)_{16} (ii) (7491)_{10} = (?)_{16}** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
+
+    Answer: (i) (4673)8 = (?)16
+    - Octal and hex both map onto binary, so go through binary. Never through decimal.
+    ```
+    Step 1 : each octal digit -> 3 bits
+       4 = 100    6 = 110    7 = 111    3 = 011
+
+       (4673)8 = (100 110 111 011)2 = (100110111011)2
+
+    Step 2 : regroup the same bits in fours, from the RIGHT
+       1001 1011 1011
+
+    Step 3 : each group of 4 bits -> one hex digit
+       1001 = 9      1011 = B      1011 = B
+    ```
+    ```
+       (4673)8 = (9BB)16
+    ```
+    Check through decimal
+    ```
+       (4673)8 = 4×512 + 6×64 + 7×8 + 3 = 2048 + 384 + 56 + 3 = 2491
+       (9BB)16 = 9×256 + 11×16 + 11     = 2304 + 176 + 11     = 2491    correct
+    ```
+
+    (ii) (7491)10 = (?)16
+    - Divide repeatedly by 16 and read the remainders upward.
+    ```
+       7491 / 16 = 468   remainder  3        (LSD)
+        468 / 16 =  29   remainder  4
+         29 / 16 =   1   remainder 13 = D
+          1 / 16 =   0   remainder  1        (MSD)
+    ```
+    ```
+       (7491)10 = (1D43)16
+    ```
+    Check
+    ```
+       (1D43)16 = 1×4096 + 13×256 + 4×16 + 3
+                = 4096 + 3328 + 64 + 3
+                = 7491        correct
+    ```
+
+    Hex digit reference
+    ```
+       10 = A    11 = B    12 = C    13 = D    14 = E    15 = F
+    ```
+
+    - Points to note: octal-to-hex and hex-to-octal always go through binary — 3 bits per octal digit, 4 bits per hex digit — and the grouping is always done from the right, padding zeros on the left.
 
 11. **Computer এর Binary পদ্ধতি কোন সংখ্যার উপর প্রতিষ্ঠিত?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) The binary system of a computer is based on the number `2`.
+
+    - `Base (radix) = 2`, so only two digits exist: `0 and 1`. Each digit is called a `bit`.
+    - The place value of each position is a power of 2:
+    ```
+       Place :  2^5  2^4  2^3  2^2  2^1  2^0
+       Value :   32   16    8    4    2    1
+
+       (110101)2 = 32 + 16 + 0 + 4 + 0 + 1 = 53
+    ```
+
+    Why 2 and not some other base
+    - A transistor has two clean natural states — fully `off` (0 V) and fully `on` (+5 V or +3.3 V). Representing exactly two values therefore needs no extra circuitry.
+    - The wide gap between the two voltage ranges gives strong `noise immunity`; a small disturbance cannot change a 0 into a 1.
+    - `Boolean algebra`, which works on exactly two values, applies directly, so circuits can be designed and simplified mathematically with truth tables and K-maps.
+    - Storage devices are naturally two-state: charge present or absent, magnetised north or south, pit or land.
+
+    - Related bases: `octal` is base 8 and `hexadecimal` is base 16. Both are used as a short way of writing binary, since 8 = 2^3 and 16 = 2^4, so each octal digit is 3 bits and each hex digit is 4 bits.
+
 12. **BCD code – এ কতগুলি বিট থাকে?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) A BCD code uses `4 bits` for each decimal digit.
+
+    - `BCD` stands for Binary Coded Decimal. Each decimal digit from 0 to 9 is written separately as a 4-bit group. Four bits are needed because 3 bits give only 8 combinations, while 10 digits must be represented.
+    ```
+       0 = 0000     5 = 0101
+       1 = 0001     6 = 0110
+       2 = 0010     7 = 0111
+       3 = 0011     8 = 1000
+       4 = 0100     9 = 1001
+    ```
+    - The place values inside each group are 8, 4, 2, 1, which is why BCD is also called the `8421 code`.
+
+    Example
+    ```
+       (25)10  ->  2 = 0010 ,  5 = 0101
+                     ->  (0010 0101)BCD
+    ```
+
+    Points to note
+    - Only `0000 to 1001` are valid. The six patterns `1010 to 1111` are `invalid` in BCD, so 6 of the 16 combinations are wasted — BCD is less efficient than pure binary.
+    - Pure binary would write 25 as `11001`, using 5 bits, while BCD needs 8.
+    - BCD is used where the number has to be `displayed` as decimal — calculators, digital clocks, electricity meters and seven-segment displays — because each 4-bit group drives one digit directly with no conversion.
+    - BCD addition needs a correction: if a group's sum exceeds 9, `0110` (decimal 6) is added to it.
 
 13. **(b) Convert the following Octal number into Decimal and Hexadecimal: (651)_8** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
 
+    Answer: Octal to decimal — multiply each digit by its place value
+    ```
+       (651)8 = 6×8^2 + 5×8^1 + 1×8^0
+              = 6×64  + 5×8   + 1×1
+              = 384   + 40    + 1
+              = 425
+    ```
+    ```
+       (651)8 = (425)10
+    ```
+
+    Octal to hexadecimal — go through binary, never through decimal
+    ```
+    Step 1 : each octal digit -> 3 bits
+       6 = 110    5 = 101    1 = 001
+
+       (651)8 = (110 101 001)2 = (110101001)2
+
+    Step 2 : regroup the same bits in fours, from the RIGHT
+       1 1010 1001
+       pad the left group :  0001 1010 1001
+
+    Step 3 : each group of 4 bits -> one hex digit
+       0001 = 1     1010 = A     1001 = 9
+    ```
+    ```
+       (651)8 = (1A9)16
+    ```
+
+    Verification
+    ```
+       (1A9)16 = 1×256 + 10×16 + 9
+               = 256 + 160 + 9
+               = 425        matches the decimal answer
+    ```
+
+    Alternative check — decimal to hex by division
+    ```
+       425 / 16 = 26   remainder  9        (LSD)
+        26 / 16 =  1   remainder 10 = A
+         1 / 16 =  0   remainder  1        (MSD)
+
+       -> (1A9)16     correct
+    ```
+
+    - Points to note: `3 bits per octal digit`, `4 bits per hex digit`, and grouping is always done from the right with zero padding on the left.
+
 14. **Binary Number system এর Base কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 943 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The base (radix) of the binary number system is `2`.
+
+    - Because the base is 2, only two digits exist: `0 and 1`. Each digit is called a `bit`.
+    - Each position carries a place value that is a power of 2:
+    ```
+       Place :  2^5  2^4  2^3  2^2  2^1  2^0
+       Value :   32   16    8    4    2    1
+
+       (110101)2 = 32 + 16 + 0 + 4 + 0 + 1 = (53)10
+    ```
+
+    Bases of the four common number systems
+    ```
+       Binary       : base 2      digits 0-1
+       Octal        : base 8      digits 0-7
+       Decimal      : base 10     digits 0-9
+       Hexadecimal  : base 16     digits 0-9, A-F
+    ```
+
+    - Binary is used in computers because a transistor has two clean natural states, off and on, which gives simple circuits and strong noise immunity.
+    - Octal and hexadecimal are shorthand for binary, since 8 = 2^3 and 16 = 2^4 — one octal digit is exactly 3 bits and one hex digit exactly 4 bits.
 
 15. **(i) (1\text{AC})_{16} = (?)_{2}\text{ and }(?)_{10}** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 974 (ET: BUET)]*
 
+    Answer: Part 1 — (1AC)16 to binary
+    - Each hexadecimal digit becomes exactly 4 bits.
+    ```
+       1 = 0001      A = 1010      C = 1100
+
+       (1AC)16 = (0001 1010 1100)2
+    ```
+    ```
+       (1AC)16 = (110101100)2        (leading zeros dropped)
+    ```
+
+    Part 2 — (1AC)16 to decimal
+    ```
+       (1AC)16 = 1×16^2 + 10×16^1 + 12×16^0
+               = 1×256  + 10×16   + 12×1
+               = 256    + 160     + 12
+               = 428
+    ```
+    ```
+       (1AC)16 = (428)10
+    ```
+
+    Hex digit reference
+    ```
+       10 = A    11 = B    12 = C    13 = D    14 = E    15 = F
+    ```
+
+    Verification of the binary answer
+    ```
+       1 1 0 1 0 1 1 0 0
+       256 + 128 + 0 + 32 + 0 + 8 + 4 + 0 + 0 = 428      correct
+    ```
+
+    Bonus — the same value in octal
+    ```
+       Regroup the bits in threes from the right :  110 101 100
+                                                  =  6   5   4
+
+       (1AC)16 = (654)8
+       check : 6×64 + 5×8 + 4 = 384 + 40 + 4 = 428      correct
+    ```
+
+    - Points to note: hex to binary is a direct digit-by-digit substitution of 4 bits, which is why hexadecimal is used as a compact way of writing long binary strings — one hex digit replaces four bits with no arithmetic at all.
+
 16. **(ii) What is the Excess-3 code of 1010?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 974 (ET: BUET)]*
+
+    Answer: `Excess-3` code, also written XS-3, is a code in which the value `3` is added before the number is written in binary. It is a self-complementing code, which is why it was used in early decimal arithmetic circuits.
+    ```
+       Excess-3 = Binary value + 3
+    ```
+
+    Applying it to 1010
+    ```
+    Step 1 : find the value of 1010
+       (1010)2 = 8 + 0 + 2 + 0 = (10)10
+
+    Step 2 : add 3
+       10 + 3 = 13
+
+    Step 3 : write 13 in binary
+       (13)10 = (1101)2
+    ```
+    ```
+       Excess-3 of 1010 = (1101)2
+    ```
+
+    Direct binary addition — the same result
+    ```
+         1 0 1 0        (the given number)
+       + 0 0 1 1        (add 3)
+       -----------
+         1 1 0 1
+    ```
+
+    If 1010 is read as two decimal digits 1 and 0
+    - Excess-3 is normally defined per decimal digit, so this reading is also worth showing:
+    ```
+       digit 1 :  1 + 3 = 4  = 0100
+       digit 0 :  0 + 3 = 3  = 0011
+
+       -> (0100 0011)XS-3
+    ```
+    - Note that `1010` is not a valid `BCD` group, because BCD allows only 0000 to 1001. So the first reading — treat 1010 as the binary value 10 and add 3 — is the one the question expects.
+
+    Excess-3 table for the decimal digits
+    ```
+       Decimal  BCD     Excess-3
+          0     0000     0011
+          1     0001     0100
+          2     0010     0101
+          3     0011     0110
+          4     0100     0111
+          5     0101     1000
+          6     0110     1001
+          7     0111     1010
+          8     1000     1011
+          9     1001     1100
+    ```
+
+    - Why it is called self-complementing: the 1's complement of the Excess-3 code of a digit is the Excess-3 code of its 9's complement. For example 4 is 0111; inverting gives 1000, which is Excess-3 for 5, and 9 - 4 = 5. This makes subtraction by complement very easy in hardware.
 
 17. **There are different number systems. i. Convert (10010.101)_2 = (?)_{10} ii. (543)_{10} = (?)_{16}** *[Sonali & Janata Bank Officer (IT) 2020 compact it 989 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
+    Answer: i. (10010.101)2 = (?)10
+    - Multiply each bit by its place value. Places to the left of the point are 2^0, 2^1, 2^2 …; to the right they are 2^-1, 2^-2, 2^-3 …
+    ```
+       Bit    :   1     0     0     1     0  .   1      0      1
+       Place  :  2^4   2^3   2^2   2^1   2^0 .  2^-1   2^-2   2^-3
+       Value  :  16     8     4     2     1  .  0.5    0.25   0.125
+
+    Integer part  : 16 + 0 + 0 + 2 + 0        = 18
+    Fraction part : 0.5 + 0 + 0.125           = 0.625
+    ```
+    ```
+       (10010.101)2 = (18.625)10
+    ```
+
+    ii. (543)10 = (?)16
+    - Divide repeatedly by 16 and read the remainders upward.
+    ```
+       543 / 16 = 33   remainder 15 = F     (LSD)
+        33 / 16 =  2   remainder  1
+         2 / 16 =  0   remainder  2         (MSD)
+    ```
+    ```
+       (543)10 = (21F)16
+    ```
+    Check
+    ```
+       (21F)16 = 2×256 + 1×16 + 15
+               = 512 + 16 + 15
+               = 543        correct
+    ```
+
+    Hex digit reference
+    ```
+       10 = A    11 = B    12 = C    13 = D    14 = E    15 = F
+    ```
+
+    Cross-check of (543)10 through binary
+    ```
+       (543)10 = (10 0001 1111)2
+
+       regroup in fours from the right : 0010 0001 1111
+                                       =   2    1    F        correct
+    ```
+
+    - Points to note: for the `integer` part of a decimal number, divide by the base and read the remainders `upward`. For the `fraction` part, multiply by the base and read the carries `downward` — the two halves use opposite methods, which is the most common source of error.
+
 18. **Convert (343)_{10} to binary and Hexadecimal.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
+
+    Answer: Part 1 — (343)10 to binary
+    - Divide repeatedly by 2 and read the remainders from bottom to top.
+    ```
+       343 / 2 = 171   remainder 1     (LSB)
+       171 / 2 =  85   remainder 1
+        85 / 2 =  42   remainder 1
+        42 / 2 =  21   remainder 0
+        21 / 2 =  10   remainder 1
+        10 / 2 =   5   remainder 0
+         5 / 2 =   2   remainder 1
+         2 / 2 =   1   remainder 0
+         1 / 2 =   0   remainder 1     (MSB)
+    ```
+    ```
+       (343)10 = (101010111)2
+    ```
+    Check: 256 + 0 + 64 + 0 + 16 + 0 + 4 + 2 + 1 = 343
+
+    Part 2 — (343)10 to hexadecimal
+    - Method A: divide repeatedly by 16.
+    ```
+       343 / 16 = 21   remainder  7        (LSD)
+        21 / 16 =  1   remainder  5
+         1 / 16 =  0   remainder  1        (MSD)
+    ```
+    ```
+       (343)10 = (157)16
+    ```
+    - Method B (faster, from the binary answer): group the bits in fours from the right.
+    ```
+       101010111  ->  1 0101 0111  ->  0001 0101 0111
+                                         1    5    7
+
+       -> (157)16        same answer
+    ```
+    Check
+    ```
+       (157)16 = 1×256 + 5×16 + 7 = 256 + 80 + 7 = 343      correct
+    ```
+
+    - Points to note: once the binary form is known, the hexadecimal form needs no further arithmetic — just regroup the bits in fours from the right, padding zeros on the left. The same bits regrouped in threes give the octal form, `(527)8`.
 
 19. **(1111001101011)_2 কে অক্টাল ও হেক্সাডেসিম্যালে রূপান্তর করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
+    Answer: (Answered in English, as required for IT topics.) Binary converts to octal and hexadecimal by simple grouping — no arithmetic is needed.
+
+    Part 1 — binary to octal (group the bits in `threes` from the right)
+    ```
+       1111001101011
+
+       split from the right :  1 111 001 101 011
+       pad the left group   :  001 111 001 101 011
+
+       001 = 1
+       111 = 7
+       001 = 1
+       101 = 5
+       011 = 3
+    ```
+    ```
+       (1111001101011)2 = (17153)8
+    ```
+
+    Part 2 — binary to hexadecimal (group the same bits in `fours` from the right)
+    ```
+       1111001101011
+
+       split from the right :  1 1110 0110 1011
+       pad the left group   :  0001 1110 0110 1011
+
+       0001 = 1
+       1110 = E
+       0110 = 6
+       1011 = B
+    ```
+    ```
+       (1111001101011)2 = (1E6B)16
+    ```
+
+    Verification through decimal
+    ```
+    Binary  : 4096 + 2048 + 1024 + 512 + 0 + 0 + 32 + 16 + 0 + 8 + 0 + 2 + 1 = 7787
+
+    Octal   : (17153)8 = 1×4096 + 7×512 + 1×64 + 5×8 + 3
+                       = 4096 + 3584 + 64 + 40 + 3 = 7787        correct
+
+    Hex     : (1E6B)16 = 1×4096 + 14×256 + 6×16 + 11
+                       = 4096 + 3584 + 96 + 11 = 7787            correct
+    ```
+
+    - Points to note: grouping is always done `from the right`, and any short group on the left is padded with zeros. Padding on the wrong side is the commonest mistake in this conversion.
+
 20. **(ক) Parity bit কী? $(17.625)_{10}$ কে বাইনারি এবং $(\text{AB.C})_{16}$ কে দশমিক সংখ্যায় প্রকাশ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1071 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) Parity bit
+    - A `parity bit` is one extra bit added to a group of data bits so that the total number of 1s becomes even or odd. It is the simplest form of error detection.
+    ```
+    Even parity : the parity bit makes the total number of 1s EVEN
+    Odd  parity : the parity bit makes the total number of 1s ODD
+    ```
+    ```
+    Data 1011001  has four 1s
+
+       Even parity ->  parity bit 0  ->  transmitted as 1011001 0
+       Odd  parity ->  parity bit 1  ->  transmitted as 1011001 1
+    ```
+    - The receiver counts the 1s. If the count does not match the agreed scheme, an error has occurred.
+    - It is generated by XOR-ing all the data bits, so the hardware is only a chain of XOR gates.
+    - Limitation: it detects any `odd` number of bit errors but misses an `even` number, and it cannot correct anything. For stronger protection, CRC or Hamming code is used.
+
+    Part 2 — (17.625)10 to binary
+
+    Integer part 17, by repeated division by 2
+    ```
+       17 / 2 = 8   remainder 1     (LSB)
+        8 / 2 = 4   remainder 0
+        4 / 2 = 2   remainder 0
+        2 / 2 = 1   remainder 0
+        1 / 2 = 0   remainder 1     (MSB)
+
+       (17)10 = (10001)2
+    ```
+
+    Fraction part 0.625, by repeated multiplication by 2
+    ```
+       0.625 × 2 = 1.25   -> 1   (keep 0.25)
+       0.25  × 2 = 0.5    -> 0   (keep 0.5)
+       0.5   × 2 = 1.0    -> 1   (remainder 0, stop)
+
+       0.625 = (0.101)2
+    ```
+    ```
+       (17.625)10 = (10001.101)2
+    ```
+
+    Part 3 — (AB.C)16 to decimal
+    ```
+    Integer part :  A×16 + B×1
+                 = 10×16 + 11×1
+                 = 160 + 11 = 171
+
+    Fraction part:  C/16 = 12/16 = 0.75
+    ```
+    ```
+       (AB.C)16 = (171.75)10
+    ```
+
+    - Points to note: the `integer` part is converted by dividing and reading the remainders `upward`; the `fraction` part by multiplying and reading the carries `downward`. Mixing the two directions is the usual mistake.
 
 21. **(খ) $(3\text{D}.4\text{C})_{16}$ এবং $(514.6)_8$ কে বাইনারি সংখ্যায় পরিবর্তন করে যোগ এবং যোগফল হেক্সাডেসিমালে প্রকাশ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1071-1072 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Step 1 — (3D.4C)16 to binary
+    - Each hex digit becomes 4 bits, on both sides of the point.
+    ```
+       3 = 0011    D = 1101    .    4 = 0100    C = 1100
+
+       (3D.4C)16 = (00111101 . 01001100)2
+                 = (111101.010011)2        (drop leading and trailing zeros)
+    ```
+
+    Step 2 — (514.6)8 to binary
+    - Each octal digit becomes 3 bits.
+    ```
+       5 = 101    1 = 001    4 = 100    .    6 = 110
+
+       (514.6)8 = (101001100 . 110)2
+    ```
+
+    Step 3 — add the two binary numbers
+    - Align the binary points first.
+    ```
+           101001100.110000
+       +      111101.010011
+       ----------------------
+           110001010.000011
+    ```
+    - Column by column, using 1+1 = 0 carry 1:
+    ```
+       fraction : .110000 + .010011 = .000011  with a carry of 1 into the integer part
+       integer  : 101001100 + 111101 + 1 = 110001010
+    ```
+
+    Step 4 — express the sum in hexadecimal
+    ```
+    Integer part, group in fours from the point going LEFT:
+       1 1000 1010  ->  0001 1000 1010  ->  1  8  A
+
+    Fraction part, group in fours from the point going RIGHT:
+       0000 11      ->  0000 1100        ->  0  C
+    ```
+    ```
+       Sum = (110001010.000011)2 = (18A.0C)16
+    ```
+
+    Verification through decimal
+    ```
+       (3D.4C)16  = 61 + 4/16 + 12/256 = 61 + 0.25 + 0.046875 = 61.296875
+       (514.6)8   = 332 + 6/8          = 332.75
+       ---------------------------------------------------------------
+       Sum        = 394.046875
+
+       (18A.0C)16 = 1×256 + 8×16 + 10 + 0/16 + 12/256
+                  = 256 + 128 + 10 + 0.046875
+                  = 394.046875        correct
+    ```
+
+    - Points to note: on the `fraction` side, grouping starts at the binary point and moves `right`, padding zeros on the right. On the integer side it moves `left`, padding on the left. Getting the padding direction wrong is the usual error in fractional conversions.
+
 22. **(b) Solve the problem: $3.5_{10} + 2.4_8 + 1A.7_{16} = (?)_{16}$** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+    Answer: Convert every term to decimal, add, then convert the total to hexadecimal.
+
+    Step 1 — convert each term to decimal
+    ```
+    (a) 3.5 is already decimal
+           3.5(10) = 3.5
+
+    (b) (2.4)8 = 2×8^0 + 4×8^-1
+               = 2 + 4/8
+               = 2 + 0.5
+               = 2.5
+
+    (c) (1A.7)16 = 1×16^1 + 10×16^0 + 7×16^-1
+                 = 16 + 10 + 7/16
+                 = 26 + 0.4375
+                 = 26.4375
+    ```
+
+    Step 2 — add
+    ```
+          3.5000
+          2.5000
+       + 26.4375
+       ----------
+         32.4375
+    ```
+
+    Step 3 — convert 32.4375 to hexadecimal
+
+    Integer part 32, by repeated division by 16
+    ```
+       32 / 16 = 2   remainder 0     (LSD)
+        2 / 16 = 0   remainder 2     (MSD)
+
+       (32)10 = (20)16
+    ```
+
+    Fraction part 0.4375, by repeated multiplication by 16
+    ```
+       0.4375 × 16 = 7.0   ->  digit 7 , remainder 0 , stop
+
+       0.4375 = (0.7)16
+    ```
+
+    Answer
+    ```
+       3.5(10) + 2.4(8) + 1A.7(16) = (20.7)16
+    ```
+
+    Verification
+    ```
+       (20.7)16 = 2×16 + 0 + 7/16
+                = 32 + 0.4375
+                = 32.4375        correct
+    ```
+
+    - Points to note: when bases are mixed, always convert everything to a `common base` first — decimal is the easiest for hand calculation. For the fraction, multiply by the target base and read the `integer carries downward`; for the integer part, divide and read the `remainders upward`.
 
 23. **$(12345)_{10} = (?)_8$** *[Bangladesh Bank Assistant Programmer 2019 compact it 1156 (ET: DU)]*
 
+    Answer: Divide the decimal number repeatedly by 8 and read the remainders from bottom to top.
+    ```
+       12345 / 8 = 1543   remainder 1     (LSD)
+        1543 / 8 =  192   remainder 7
+         192 / 8 =   24   remainder 0
+          24 / 8 =    3   remainder 0
+           3 / 8 =    0   remainder 3     (MSD)
+
+    Reading the remainders upward:
+    ```
+    ```
+       (12345)10 = (30071)8
+    ```
+
+    Verification by place value
+    ```
+       (30071)8 = 3×8^4 + 0×8^3 + 0×8^2 + 7×8^1 + 1×8^0
+                = 3×4096 + 0 + 0 + 7×8 + 1
+                = 12288 + 56 + 1
+                = 12345        correct
+    ```
+
+    Cross-check through binary
+    ```
+       3 = 011    0 = 000    0 = 000    7 = 111    1 = 001
+
+       (30071)8 = (011 000 000 111 001)2 = (11000000111001)2
+
+       regroup in fours from the right : 0011 0000 0011 1001
+                                       =   3    0    3    9
+
+       so (12345)10 = (3039)16
+       check : 3×4096 + 0 + 3×16 + 9 = 12288 + 48 + 9 = 12345      correct
+    ```
+
+    - Points to note: the last remainder is always the most significant digit, so the remainders must be read `upward`. The same divide-and-remainder method works for any target base — divide by 2 for binary, 8 for octal, 16 for hexadecimal.
+
 24. **Convert $(2345)_{10}$ to Hexadecimal and $(\text{ABCD})_{16}$ to octal number.** *[ICT Ministry Assistant Programmer 2017 compact it 1240 (ET: N/A)]*
 
+    Answer: Part 1 — (2345)10 to hexadecimal
+    - Divide repeatedly by 16 and read the remainders upward.
+    ```
+       2345 / 16 = 146   remainder  9        (LSD)
+        146 / 16 =   9   remainder  2
+          9 / 16 =   0   remainder  9        (MSD)
+    ```
+    ```
+       (2345)10 = (929)16
+    ```
+    Check
+    ```
+       (929)16 = 9×256 + 2×16 + 9
+               = 2304 + 32 + 9
+               = 2345        correct
+    ```
+
+    Part 2 — (ABCD)16 to octal
+    - Go through binary: 4 bits per hex digit, then regroup in threes.
+    ```
+    Step 1 : each hex digit -> 4 bits
+       A = 1010    B = 1011    C = 1100    D = 1101
+
+       (ABCD)16 = (1010 1011 1100 1101)2 = (1010101111001101)2
+
+    Step 2 : regroup the same bits in THREES, from the RIGHT
+       1 010 101 111 001 101
+       pad the left group :  001 010 101 111 001 101
+
+    Step 3 : each group of 3 bits -> one octal digit
+       001 = 1
+       010 = 2
+       101 = 5
+       111 = 7
+       001 = 1
+       101 = 5
+    ```
+    ```
+       (ABCD)16 = (125715)8
+    ```
+
+    Verification through decimal
+    ```
+       (ABCD)16  = 10×4096 + 11×256 + 12×16 + 13
+                 = 40960 + 2816 + 192 + 13 = 43981
+
+       (125715)8 = 1×32768 + 2×4096 + 5×512 + 7×64 + 1×8 + 5
+                 = 32768 + 8192 + 2560 + 448 + 8 + 5 = 43981      correct
+    ```
+
+    Hex digit reference
+    ```
+       10 = A    11 = B    12 = C    13 = D    14 = E    15 = F
+    ```
+
+    - Points to note: decimal conversions need division; hex-octal conversions need only regrouping of bits. Always group from the right and pad zeros on the left.
+
 25. **a) Describe the binary and hexadecimal numbering methods with numerical examples.** *[Ministry of Finance Programmer 2013 compact it 1269 (ET: N/A)]*
+
+    Answer: Binary number system
+    - `Base 2`, using only the digits `0 and 1`. Each digit is called a `bit`.
+    - Each position carries a place value that is a power of 2.
+    ```
+       Place :  2^7  2^6  2^5  2^4  2^3  2^2  2^1  2^0
+       Value :  128   64   32   16    8    4    2    1
+    ```
+    - Example — binary to decimal:
+    ```
+       (110101)2 = 32 + 16 + 0 + 4 + 0 + 1 = (53)10
+    ```
+    - Example — decimal to binary, by repeated division by 2:
+    ```
+       53 / 2 = 26  r 1   (LSB)
+       26 / 2 = 13  r 0
+       13 / 2 =  6  r 1
+        6 / 2 =  3  r 0
+        3 / 2 =  1  r 1
+        1 / 2 =  0  r 1   (MSB)
+
+       (53)10 = (110101)2
+    ```
+    - Fractions use negative powers: `(0.101)2 = 0.5 + 0.125 = 0.625`.
+    - Why it is used: a transistor has two clean states, off and on, so binary circuits are simple and highly noise-immune, and Boolean algebra applies directly.
+
+    Hexadecimal number system
+    - `Base 16`, using sixteen digits: `0-9` and then `A-F` for the values 10 to 15.
+    ```
+       A = 10    B = 11    C = 12    D = 13    E = 14    F = 15
+
+       Place :  16^3   16^2   16^1   16^0
+       Value :  4096    256     16      1
+    ```
+    - Example — hex to decimal:
+    ```
+       (2A9)16 = 2×256 + 10×16 + 9 = 512 + 160 + 9 = (681)10
+    ```
+    - Example — decimal to hex, by repeated division by 16:
+    ```
+       681 / 16 = 42  r  9        (LSD)
+        42 / 16 =  2  r 10 = A
+         2 / 16 =  0  r  2        (MSD)
+
+       (681)10 = (2A9)16
+    ```
+    - The important property: `16 = 2^4`, so `one hex digit is exactly four bits`. Conversion to and from binary is pure substitution, with no arithmetic.
+    ```
+       2 = 0010    A = 1010    9 = 1001
+
+       (2A9)16 = (0010 1010 1001)2
+    ```
+
+    Why hexadecimal is used
+    - It is a `compact shorthand for binary`. A 32-bit address takes 32 binary digits but only 8 hex digits, so it is far easier to read, write and check by eye.
+    - Memory addresses, colour codes (`#FF8000`), MAC addresses, error codes and machine-code dumps are all written in hex for this reason.
+    - Unlike decimal, no calculation is needed to move between hex and binary — which is exactly why base 16 was chosen rather than base 10.
 
 26. **b) Why does the computer require number conversion?** *[Ministry of Finance Programmer 2013 compact it 1270 (ET: N/A)]*
    i. $(11101)_2$ to Decimal number
    ii. $(\text{AB8C})_{16}$ to Decimal number
    iii. $(1101111010)_2$ to Hexadecimal
+
+    Answer: A computer stores and processes everything in `binary`, because a transistor has only two clean states. People, programs and peripherals, however, work in other bases. Conversion is the bridge between them.
+
+    1. Human input and output are decimal
+    - A user types `543` and expects to read `543` on the screen, but the CPU can only add binary numbers. Every input must be converted to binary before processing, and every result converted back to decimal before display.
+
+    2. Machines cannot work in decimal
+    - The only reliable way to represent a value electrically is two voltage levels, `0 V` and `+5 V`. Ten distinct levels would need very tight voltage margins and would lose all noise immunity. So the internal base has to be 2, and everything else must be converted.
+
+    3. Binary is too long for people to read
+    - One 32-bit address is 32 digits long, which is impossible to read or copy without error.
+    ```
+       1010 1011 1100 1101 0001 0010 0011 0100     (32 bits)
+       =  ABCD1234                                  (8 hex digits)
+    ```
+    - `Hexadecimal` shortens it four times, and `octal` three times. This is why memory addresses, MAC addresses, colour codes (`#FF8000`) and error codes are all written in hex.
+
+    4. Hex and octal convert to binary with no arithmetic
+    - Since `16 = 2^4` and `8 = 2^3`, one hex digit is exactly 4 bits and one octal digit exactly 3 bits. Conversion is pure substitution, so a programmer can read the actual bit pattern at a glance — essential for debugging, setting flag bits and reading register dumps.
+
+    5. Different data formats need different codes
+    - Text is stored in `ASCII` or `Unicode`, decimal displays use `BCD`, and rotary encoders use `Gray code`. Moving data between these forms is conversion work.
+
+    6. Arithmetic and negative numbers
+    - Negative values are stored in `2's complement`, and real numbers in `IEEE 754 floating point`. Both are conversions from the ordinary decimal value the user supplied.
+
+    7. Communication between systems
+    - Data crossing a network, a file or a device interface must be converted between the sender's and the receiver's representations — byte order, character set and numeric format.
+
+    8. Memory efficiency and addressing
+    - Choosing the right representation decides how much space a value takes and how it is addressed. Packing decimal digits as BCD, or a number as 8 bits instead of 32, is a conversion decision.
+
+    - Summary: `the machine needs binary, the user needs decimal, and the programmer needs hexadecimal`. Number conversion is what lets all three work on the same data.
 
 ## Combinational Circuits (Adders, Encoders, MUX) (23)
 
