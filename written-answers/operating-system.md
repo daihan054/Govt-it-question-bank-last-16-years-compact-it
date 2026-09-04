@@ -10776,9 +10776,126 @@ The content of the matrix. Need is defined to be Max – Allocation.
    **(i) How many pages are in logical address space?**
    **(ii) How many bits are used for the page number and offset?** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1437 (ET: BUET)]*
 
+   Answer: Given
+   ```
+      Logical address size = 16 bits
+      Page size            = 1 KB = 1024 bytes = 2^10 bytes
+   ```
+
+   (i) Number of pages in the logical address space
+   ```
+      Logical address space = 2^16 bytes = 65536 bytes = 64 KB
+
+      Number of pages = logical address space / page size
+                      = 2^16 / 2^10
+                      = 2^6
+                      = 64 pages
+   ```
+
+   (ii) Bits for the page number and the offset
+   ```
+      Offset bits = log2(page size) = log2(2^10) = 10 bits
+
+      Page number bits = total bits - offset bits
+                       = 16 - 10
+                       = 6 bits
+
+      Check : 2^6 = 64 pages , which matches part (i).
+   ```
+
+   Address format
+   ```
+      16-bit logical address :
+
+      +---------------------+--------------------------+
+      |  page number  (6)   |     offset  (10)         |
+      +---------------------+--------------------------+
+           bits 15 - 10            bits 9 - 0
+
+      Example : logical address 1500 (decimal)
+
+           page number = 1500 / 1024 = 1
+           offset      = 1500 % 1024 = 476
+           -> byte 476 of page 1
+   ```
+
+   Answer
+   ```
+      (i)  Number of pages = 64
+      (ii) Page number = 6 bits , Offset = 10 bits
+   ```
+   - Note that the page table for this process needs `64 entries`, one per page, and that the `physical` address size does not affect either answer — the offset is shared by both, while the frame number replaces the page number.
+
 2. **Consider a logical address space of 512 pages, each of 2-KB page size, mapped onto a physical memory containing 128 frames.**
    **a. How many bits are required in the logical address?**
    **b. How many bits are required in the physical address?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
+
+   Answer: Given
+   ```
+      Logical address space = 512 pages
+      Page size             = 2 KB = 2048 bytes = 2^11 bytes
+      Physical memory       = 128 frames
+      Frame size = page size = 2 KB = 2^11 bytes
+   ```
+
+   a. Bits required in the logical address
+   ```
+      Page number bits = log2(number of pages)
+                       = log2(512) = log2(2^9)
+                       = 9 bits
+
+      Offset bits      = log2(page size)
+                       = log2(2048) = log2(2^11)
+                       = 11 bits
+
+      Logical address  = page number bits + offset bits
+                       = 9 + 11
+                       = 20 bits
+   ```
+   ```
+      Cross-check : logical address space = 512 * 2 KB = 1024 KB = 1 MB
+                    1 MB = 2^20 bytes  ->  20 bits      correct
+   ```
+
+   b. Bits required in the physical address
+   ```
+      Frame number bits = log2(number of frames)
+                        = log2(128) = log2(2^7)
+                        = 7 bits
+
+      Offset bits       = 11 bits    (frame size = page size)
+
+      Physical address  = frame number bits + offset bits
+                        = 7 + 11
+                        = 18 bits
+   ```
+   ```
+      Cross-check : physical memory = 128 * 2 KB = 256 KB = 2^18 bytes
+                    -> 18 bits      correct
+   ```
+
+   Address formats
+   ```
+      LOGICAL  (20 bits)
+      +------------------+----------------------+
+      | page number (9)  |     offset (11)      |
+      +------------------+----------------------+
+
+      PHYSICAL (18 bits)
+      +---------------+----------------------+
+      | frame no (7)  |     offset (11)      |
+      +---------------+----------------------+
+
+      Translation : the PAGE TABLE replaces the 9-bit page number with a
+      7-bit frame number. The OFFSET is copied through UNCHANGED.
+   ```
+
+   Answer
+   ```
+      a. Logical address  = 20 bits
+      b. Physical address = 18 bits
+   ```
+   - The logical space (1 MB) is larger than the physical memory (256 KB), which is exactly the case `virtual memory` is built for — only the pages in use are kept resident and the rest stay on disk.
 
 3. **(a) Consider a computer system with the following specifications:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1351 (ET: N/A)]*
  * Physical memory (RAM): 4\text{ GB}
@@ -10789,31 +10906,845 @@ The content of the matrix. Need is defined to be Max – Allocation.
  * **(i) How many pages are there in the virtual address space? Explain your answer.**
  * **(ii) What is the size of the page table? Explain your answer.**
 
+   Answer: Given
+   ```
+      Physical memory (RAM)   = 4 GB
+      Page size               = 4 KB = 2^12 bytes
+      Virtual address space   = 32 bits
+      Page table entry (PTE)  = 8 bytes
+   ```
+
+   (i) Number of pages in the virtual address space
+   ```
+      Virtual address space size = 2^32 bytes = 4 GB
+
+      Number of pages = virtual address space / page size
+                      = 2^32 / 2^12
+                      = 2^20
+                      = 1,048,576 pages   ( 1 M pages )
+   ```
+   - Why: a 32-bit address is split into a `page number` and an `offset`. The page size is `2^12`, so the low `12 bits` are the offset and the remaining `32 - 12 = 20 bits` are the page number. Twenty bits address `2^20` distinct pages.
+   ```
+      32-bit virtual address :
+
+      +----------------------------+-------------------+
+      |    page number  (20 bits)  |   offset (12)     |
+      +----------------------------+-------------------+
+   ```
+
+   (ii) Size of the page table
+   ```
+      Page table size = number of pages * size of one entry
+                      = 2^20 * 8 bytes
+                      = 2^20 * 2^3
+                      = 2^23 bytes
+                      = 8 MB
+   ```
+   - Why: the page table needs `one entry per virtual page`, whether or not that page is resident. There are `2^20` pages and each entry is `8 bytes`, giving `8 MB` — `for every process`.
+   ```
+      The problem : 100 processes would need 800 MB of page tables in a
+      4 GB machine, just to hold the tables. A single flat page table is
+      therefore not practical.
+
+      The fixes :
+        MULTI-LEVEL PAGE TABLE - page the page table itself, so only the
+             parts in use are resident.
+        INVERTED PAGE TABLE    - one entry per FRAME, not per page ,
+             so the size depends on RAM, not on the address space.
+        LARGER PAGES           - 4 MB pages give 2^32 / 2^22 = 1024
+             entries , a tiny table.
+   ```
+
+   Extra figures worth quoting
+   ```
+      Frames in physical memory = 4 GB / 4 KB = 2^32 / 2^12 = 2^20
+                                = 1,048,576 frames
+
+      Frame number bits = 20 , offset = 12
+           -> physical address = 32 bits
+
+      Here the virtual and physical spaces are the same size, so
+      virtual memory buys ISOLATION and NO EXTERNAL FRAGMENTATION
+      rather than extra capacity.
+   ```
+
 4. **Compare “Paging” and “Segmentation” memory management technique?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
+
+   Answer: Comparison of paging and segmentation
+
+   | Point | Paging | Segmentation |
+   |---|---|---|
+   | Division | Memory is split into `fixed-size` pages and frames | The process is split into `variable-size` segments |
+   | Size decided by | The `hardware` — 4 KB, 8 KB and so on | The `programmer` / compiler, by logical unit |
+   | Basis of division | `Physical` — a block of bytes with no meaning | `Logical` — code, data, stack, heap, a function |
+   | Fragmentation | `Internal` only, in the last page | `External` — variable holes appear between segments |
+   | User's view | `Invisible` to the programmer | `Visible` — it matches how the program is written |
+   | Address form | `[ page number, offset ]`, one number split by bits | `[ segment number, offset ]`, two separate quantities |
+   | Table used | `Page table` — page number to frame number | `Segment table` — base address and `limit` |
+   | Offset check | Not needed; the offset cannot overflow a page | `Needed` — offset must be less than the limit |
+   | Protection | Per page, so a page may mix code and data | `Natural` — a whole code segment is read-only |
+   | Sharing | Possible but clumsy | `Easy` — share a whole library segment |
+   | Compaction | Never needed | Sometimes needed, to close external holes |
+
+   How the addresses are translated
+   ```
+      PAGING - the address is ONE number, split by BIT POSITION :
+
+           +----------------+-----------+
+           | page number p  | offset d  |
+           +----------------+-----------+
+                    |
+             page table[p] = f
+                    |
+           physical = f * page size + d
+
+
+      SEGMENTATION - the address is TWO quantities :
+
+           +----------------+-----------+
+           | segment no  s  | offset d  |
+           +----------------+-----------+
+                    |
+           segment table[s] = ( base , limit )
+
+           if d >= limit  ->  TRAP : addressing error
+           else physical  =  base + d
+   ```
+
+   Why segmentation suffers external fragmentation
+   ```
+      Segments have different sizes, so freeing one leaves a HOLE :
+
+      +--------+------+----------+-----+----------+
+      | seg A  | FREE |  seg C   | FREE|  seg E   |
+      |  40 K  | 20 K |   60 K   | 30 K|   50 K   |
+      +--------+------+----------+-----+----------+
+
+      50 K is free in total, but a 45 K segment will not fit in either
+      hole. Paging never has this problem - ANY free frame fits ANY page.
+   ```
+
+   - What is used in practice: `paged segmentation`. Memory is seen as segments by the program, and each segment is then paged, so the design keeps segmentation's logical protection and sharing while paging removes the external fragmentation. The x86 architecture works this way.
 
 5. **The __________ swaps process in and out of the memory.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: The blank is filled by the `medium-term scheduler` (also called the `swapper`).
+   ```
+      The MEDIUM-TERM SCHEDULER swaps processes in and out of memory.
+   ```
+
+   The three schedulers
+   ```
+      LONG-TERM SCHEDULER   (job scheduler)
+           Decides which jobs from the job pool are ADMITTED into memory.
+           Controls the DEGREE OF MULTIPROGRAMMING.
+           Runs rarely - seconds or minutes apart.
+
+      MEDIUM-TERM SCHEDULER (swapper)
+           SWAPS OUT a process from RAM to disk , and SWAPS IT IN later.
+           Reduces the degree of multiprogramming when memory is tight.
+           Runs occasionally.
+
+      SHORT-TERM SCHEDULER  (CPU scheduler)
+           Picks which READY process gets the CPU next.
+           Runs very often - every few milliseconds.
+   ```
+
+   What swapping does
+   ```
+      RAM                              DISK (swap space / backing store)
+      +-------------+                  +-------------------+
+      |  process A  | ---- swap out -->|    process A      |
+      +-------------+                  +-------------------+
+      |  process B  | <--- swap in ----|    process C      |
+      +-------------+                  +-------------------+
+   ```
+   - A swapped-out process moves to the `suspended` state, its memory is freed for others, and its whole image (or the pages it holds) is written to the `swap space`.
+
+   Why it is done
+   - To free RAM when memory is over-committed, and to lower the `degree of multiprogramming` when the system starts `thrashing`.
+   - To move a low-priority or long-blocked process out so an urgent one can run.
+
+   - Note the wording used in different books: some call the medium-term scheduler simply the `swapper`, and in a demand-paged system the same job is done page by page by the `pager`, which brings in individual pages instead of whole processes.
+
 6. **Difference between Paging and Segmentation.** *[BTCL - JAM ( Technical) 05.04.2024 compact it 383 (ET: BUET)]*
+
+   Answer: Difference between paging and segmentation
+
+   | Point | Paging | Segmentation |
+   |---|---|---|
+   | Division | Memory in `fixed-size` pages and frames | Process in `variable-size` segments |
+   | Size decided by | `Hardware` — 4 KB, 8 KB and so on | `Programmer` / compiler, by logical unit |
+   | Basis | `Physical` — a plain block of bytes | `Logical` — code, data, stack, heap |
+   | Fragmentation | `Internal`, in the last page only | `External`, holes between segments |
+   | Visible to user? | `No`, fully transparent | `Yes`, matches the program's structure |
+   | Address | `[ page number, offset ]` — one number split by bits | `[ segment number, offset ]` — two quantities |
+   | Table | `Page table` — page to frame | `Segment table` — base and `limit` |
+   | Limit check | Not needed | `Needed` — offset must be below the limit |
+   | Protection and sharing | Per page; a page may mix code and data | `Natural` — a whole code segment is read-only and shareable |
+
+   Address translation compared
+   ```
+      PAGING - ONE number, split by BIT POSITION
+
+           +---------------+-----------+
+           | page number p | offset d  |
+           +---------------+-----------+
+                   |
+            page table[p] = f
+                   |
+           physical = f * page size + d
+
+
+      SEGMENTATION - TWO quantities, with a bounds check
+
+           +---------------+-----------+
+           | segment no s  | offset d  |
+           +---------------+-----------+
+                   |
+           segment table[s] = ( base , limit )
+
+           if d >= limit -> TRAP , addressing error
+           else physical = base + d
+   ```
+
+   Why segmentation gives external fragmentation
+   ```
+      +--------+------+----------+------+----------+
+      | seg A  | FREE |  seg C   | FREE |  seg E   |
+      |  40 K  | 20 K |   60 K   | 30 K |   50 K   |
+      +--------+------+----------+------+----------+
+
+      50 K is free , but a 45 K segment fits in NEITHER hole.
+      Paging cannot have this problem - any free frame fits any page.
+   ```
+
+   - In practice both are combined as `paged segmentation`: the program sees segments, and each segment is then paged. This keeps segmentation's logical protection and sharing while paging removes external fragmentation. The x86 architecture works this way.
 
 7. **(ক) Swapping কী? Internal এবং External Fragmentation এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 414 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What swapping is
+   - `Swapping` is moving a whole process out of RAM to the disk (the `swap space` or `backing store`) and bringing it back later. It frees memory for other processes when RAM is short.
+   ```
+      RAM                              DISK (swap space)
+      +-------------+                  +----------------+
+      |  process A  | ---- swap out -->|   process A    |
+      +-------------+                  +----------------+
+      |  process B  | <--- swap in ----|   process C    |
+      +-------------+                  +----------------+
+   ```
+   - It is done by the `medium-term scheduler`, also called the `swapper`. A swapped-out process goes to the `suspended` state. It is used to lower the degree of multiprogramming when the system is short of memory or is `thrashing`.
+   - The cost is high — the whole process image is written and read back — so modern systems swap `pages` instead of whole processes, which is `demand paging`.
+
+   Difference between internal and external fragmentation
+
+   | Point | Internal fragmentation | External fragmentation |
+   |---|---|---|
+   | What it is | Wasted space `inside` an allocated block | Free space `between` allocated blocks |
+   | Cause | The block given is `larger` than requested | Free memory is split into `scattered small holes` |
+   | Where it occurs | `Fixed-size` allocation — paging, fixed partitions | `Variable-size` allocation — segmentation, dynamic partitions |
+   | Is the space usable? | No — it belongs to the process already | Yes in total, but `not as one piece` |
+   | Cure | Use a smaller block size | `Compaction`, or use `paging` |
+   | Present in paging? | `Yes`, in the last page | `No` — any free frame fits any page |
+
+   Internal fragmentation
+   ```
+      Page size = 4 KB , process size = 10 KB
+
+           page 0 : 4 KB  full
+           page 1 : 4 KB  full
+           page 2 : 2 KB used , 2 KB WASTED   <- internal fragmentation
+
+      The 2 KB belongs to the process and cannot be given to anyone else.
+      On average the waste is HALF A PAGE per process.
+   ```
+
+   External fragmentation
+   ```
+      +--------+------+----------+------+--------+
+      | proc A | FREE |  proc C  | FREE | proc E |
+      |  40 K  | 20 K |   60 K   | 30 K |  50 K  |
+      +--------+------+----------+------+--------+
+
+      Total free = 50 K , but a 45 K process fits in NEITHER hole,
+      because the free memory is not CONTIGUOUS.
+   ```
+   - The cure for external fragmentation is `compaction` — sliding the processes together to make one big hole — but it is slow, and it only works if addresses are relocated at run time. This is exactly why `paging` was adopted: it removes external fragmentation completely, at the price of a little internal fragmentation.
+
 8. **Find out total number of pages, when page size 4KB and address space 32 bit.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 588 (ET: BUET)]*
+
+   Answer: Given
+   ```
+      Page size    = 4 KB = 4096 bytes = 2^12 bytes
+      Address space = 32 bits , so the space is 2^32 bytes = 4 GB
+   ```
+
+   Calculation
+   ```
+      Number of pages = address space size / page size
+
+                      = 2^32 / 2^12
+
+                      = 2^(32 - 12)
+
+                      = 2^20
+
+                      = 1,048,576 pages     ( 1 M pages )
+   ```
+
+   Bit-split view of the same result
+   ```
+      Page size 2^12 -> the OFFSET takes the low 12 bits.
+      The remaining 32 - 12 = 20 bits are the PAGE NUMBER.
+      20 bits address 2^20 = 1,048,576 pages.
+
+      32-bit address :
+
+      +-----------------------------+------------------+
+      |    page number (20 bits)    |   offset (12)    |
+      +-----------------------------+------------------+
+   ```
+
+   Answer
+   ```
+      Total number of pages = 2^20 = 1,048,576  ( about 1 million )
+   ```
+   - One consequence worth noting: the page table needs `one entry per page`, so with an 8-byte entry it would occupy `2^20 * 8 = 8 MB` for every process. That is why real systems use `multi-level` or `inverted` page tables instead of one flat table.
 
 9. **(ক) Paging এবং Segmentation এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 609 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Difference between paging and segmentation
+
+   | Point | Paging | Segmentation |
+   |---|---|---|
+   | Division | Memory in `fixed-size` pages and frames | Process in `variable-size` segments |
+   | Size decided by | `Hardware` — 4 KB, 8 KB and so on | `Programmer` / compiler, by logical unit |
+   | Basis | `Physical` — a plain block of bytes | `Logical` — code, data, stack, heap |
+   | Fragmentation | `Internal`, in the last page | `External`, holes between segments |
+   | Visible to user? | `No`, fully transparent | `Yes`, matches the program's structure |
+   | Address | `[ page number, offset ]` — one number split by bits | `[ segment number, offset ]` — two quantities |
+   | Table | `Page table` — page to frame | `Segment table` — base and `limit` |
+   | Limit check | Not needed | `Needed` — offset must be below the limit |
+   | Protection and sharing | Per page; a page may mix code and data | `Natural` — a whole code segment is read-only and shareable |
+   | Compaction | Never needed | Sometimes needed, to close holes |
+
+   Address translation
+   ```
+      PAGING - ONE number, split by BIT POSITION
+
+           +---------------+-----------+
+           | page number p | offset d  |
+           +---------------+-----------+
+                   |
+            page table[p] = f
+                   |
+           physical = f * page size + d
+
+
+      SEGMENTATION - TWO quantities, with a bounds check
+
+           +---------------+-----------+
+           | segment no s  | offset d  |
+           +---------------+-----------+
+                   |
+           segment table[s] = ( base , limit )
+
+           if d >= limit -> TRAP , addressing error
+           else physical = base + d
+   ```
+
+   Why segmentation causes external fragmentation
+   ```
+      +--------+------+----------+------+--------+
+      | seg A  | FREE |  seg C   | FREE | seg E  |
+      |  40 K  | 20 K |   60 K   | 30 K |  50 K  |
+      +--------+------+----------+------+--------+
+
+      50 K is free , but a 45 K segment fits in NEITHER hole.
+      With paging, ANY free frame fits ANY page, so this cannot happen.
+   ```
+
+   - What is actually used is `paged segmentation`: the program sees segments, and each segment is then paged. That keeps segmentation's logical protection and sharing while paging removes the external fragmentation. The x86 architecture works this way.
+
 10. **(খ) Operating System-এর Memory hierarchy সচিত্র বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 611 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What the memory hierarchy is
+    - The `memory hierarchy` arranges storage in levels. Going down the pyramid the memory gets `larger and cheaper but slower`; going up it gets `faster but smaller and costlier`. The aim is to give the CPU the speed of the top level at close to the cost of the bottom level.
+
+    Diagram
+    ```
+                            /\
+                           /  \        REGISTERS
+                          /    \       ~1 KB , < 1 ns , inside CPU
+                         /------\
+                        /        \     CACHE  L1 / L2 / L3
+                       /          \    32 KB - 32 MB , 1-20 ns , SRAM
+                      /------------\
+                     /              \  MAIN MEMORY (RAM)
+                    /                \ 4 - 64 GB , ~100 ns , DRAM
+                   /------------------\
+                  /                    \  SECONDARY STORAGE
+                 /                      \ SSD / HDD , 256 GB - 4 TB
+                /                        \ 0.1 ms - 10 ms
+               /--------------------------\
+              /                            \ TERTIARY / BACKUP
+             /                              \ tape , optical , cloud
+            /________________________________\ TB - PB , seconds
+
+       UPWARD  : faster , smaller , costlier per byte , volatile
+       DOWNWARD: slower , larger , cheaper per byte , non-volatile
+    ```
+
+    Level by level
+    ```
+       REGISTERS   Inside the CPU. Hold the operands the ALU is working on
+                   right now. Managed by the COMPILER.
+
+       CACHE       SRAM between the CPU and RAM. Holds recently used data
+                   and instructions. Managed by HARDWARE.
+                   L1 per core (split into instruction and data),
+                   L2 per core, L3 shared.
+
+       MAIN MEMORY DRAM. Holds the running processes. Managed by the
+                   OPERATING SYSTEM. Volatile.
+
+       SECONDARY   SSD or hard disk. Holds files and the SWAP SPACE.
+                   Non-volatile. Managed by the FILE SYSTEM.
+
+       TERTIARY    Tape, optical or cloud. For archive and backup.
+    ```
+
+    Why the hierarchy works — locality of reference
+    ```
+       TEMPORAL locality : an item just used is likely to be used again
+                           -> keep it in the fast level
+       SPATIAL  locality : neighbouring addresses are used next
+                           -> fetch a whole BLOCK, not one word
+
+       So a small fast level, filled with the right data, satisfies MOST
+       references. The slow levels are touched rarely.
+    ```
+
+    The two mechanisms that connect the levels
+    ```
+       CACHE  <-> RAM   : managed by HARDWARE , unit = BLOCK (32-128 B)
+                          a miss costs NANOSECONDS
+
+       RAM   <-> DISK   : managed by the OS , unit = PAGE (4 KB)
+                          a miss is a PAGE FAULT , costing MILLISECONDS
+    ```
+    ```
+       Average access time = h * T1 + (1 - h) * T2
+
+            h = hit ratio at the faster level
+
+       Example : h = 0.9 , cache 10 ns , RAM 100 ns
+            = 0.9 * 10 + 0.1 * 100 = 19 ns
+            -> close to cache speed at RAM cost
+    ```
 
 11. **(খ) Internal এবং External fragmentation এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Difference between internal and external fragmentation
+
+    | Point | Internal fragmentation | External fragmentation |
+    |---|---|---|
+    | What it is | Wasted space `inside` an allocated block | Free space `between` allocated blocks |
+    | Cause | The block given is `bigger` than requested | Free memory is broken into `scattered small holes` |
+    | Where it occurs | `Fixed-size` allocation — paging, fixed partitions | `Variable-size` allocation — segmentation, dynamic partitions |
+    | Is the space usable? | No — it already belongs to the process | Yes in total, but `not as one piece` |
+    | How it is measured | Block size − requested size | Total free memory − largest free hole |
+    | Cure | Use a smaller block size | `Compaction`, or switch to `paging` |
+    | Present in paging? | `Yes`, in the last page | `No` — any free frame fits any page |
+
+    Internal fragmentation
+    ```
+       Page size = 4 KB , process size = 10 KB
+
+            page 0 : 4 KB  fully used
+            page 1 : 4 KB  fully used
+            page 2 : 2 KB used , 2 KB WASTED   <- internal fragmentation
+
+       That 2 KB is allocated to the process and cannot be given to
+       anyone else. On average the waste is HALF A PAGE per process.
+    ```
+
+    External fragmentation
+    ```
+       +--------+------+----------+------+--------+
+       | proc A | FREE |  proc C  | FREE | proc E |
+       |  40 K  | 20 K |   60 K   | 30 K |  50 K  |
+       +--------+------+----------+------+--------+
+
+       Total free = 20 + 30 = 50 K
+       Largest single hole = 30 K
+
+       A 45 K process CANNOT be loaded, even though 50 K is free,
+       because the free memory is not CONTIGUOUS.
+    ```
+
+    Compaction — the cure for external fragmentation
+    ```
+       BEFORE
+       +--------+------+----------+------+--------+
+       | proc A | FREE |  proc C  | FREE | proc E |
+       +--------+------+----------+------+--------+
+
+       AFTER  (processes slid together)
+       +--------+----------+--------+----------------+
+       | proc A |  proc C  | proc E |     FREE 50 K  |
+       +--------+----------+--------+----------------+
+
+       Now a 45 K process fits.
+       Cost : all processes must be MOVED, which is slow, and it works
+       only if addresses are relocated at RUN TIME (a relocation register).
+    ```
+
+    - The trade-off in one line: `paging removes external fragmentation completely but introduces a little internal fragmentation`, and since the loss is at most one page per process, that trade is almost always worth making. The 50 per cent rule for dynamic partitions makes the point — for every 2N blocks allocated, about N blocks' worth is lost to external fragmentation.
+
 12. **(a) What is demand paging?** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 821 (ET: BUET)]*
+
+    Answer: What demand paging is
+    - `Demand paging` is a way of implementing virtual memory in which a page is brought into RAM `only when it is actually referenced`, not when the process starts. It is `lazy loading` — nothing is fetched until it is needed.
+    ```
+       Without demand paging : load the WHOLE program into RAM, then run.
+       With demand paging    : load NOTHING at first ; fetch each page
+                               only when the process touches it.
+    ```
+
+    How it works
+    ```
+       Every page table entry carries a VALID / INVALID bit :
+
+            valid = 1  ->  the page is in a frame  -> access proceeds
+            valid = 0  ->  the page is on disk     -> PAGE FAULT
+    ```
+    ```mermaid
+    flowchart TD
+        A[Process references a page] --> B{Valid bit = 1?}
+        B -->|Yes| C[Access the frame - done]
+        B -->|No| D[Page fault - trap to OS]
+        D --> E{Free frame available?}
+        E -->|No| F[Replace a victim, write back if dirty]
+        E -->|Yes| G[Read the page from disk]
+        F --> G
+        G --> H[Update page table, valid bit = 1]
+        H --> I[Restart the instruction]
+    ```
+    ```
+       The page fault is serviced in this order :
+       1. Trap to the OS ; save the process state.
+       2. Check that the reference is LEGAL ; if not, kill the process.
+       3. Find a free frame , or run the REPLACEMENT ALGORITHM to pick a
+          victim. Write the victim back if it is DIRTY.
+       4. Schedule the disk read and BLOCK the process, so the CPU runs
+          someone else meanwhile.
+       5. Update the page table and the TLB.
+       6. RESTART the faulting instruction.
+    ```
+
+    Advantages
+    - A process `starts faster`, because only the first few pages are loaded.
+    - `Less RAM per process`, so more processes fit — a higher degree of multiprogramming and better CPU utilisation.
+    - Pages that are never used — error handlers, unused features — are `never loaded at all`.
+    - Programs `larger than RAM` can run.
+
+    The cost
+    ```
+       Effective access time = (1 - p) * ma + p * (page fault time)
+
+            ma = 100 ns , fault service = 8 ms , p = fault rate
+
+       p = 0.001 :
+            EAT = 0.999*100 + 0.001*8,000,000 = 8099.9 ns
+                -> about 80 times slower than plain RAM access
+    ```
+    - So `p` must be extremely small. If processes get fewer frames than their `working sets`, the fault rate stays high and the system `thrashes`.
+
+    - Related term: `pure demand paging` starts a process with `no` pages resident at all, so the very first instruction causes a fault. Real systems soften this with `prepaging` — bringing in a few neighbouring pages at once, since `spatial locality` makes them likely to be needed.
 
 13. **In the given example, let us assume the jobs and the memory requirements as the following: Job1=90k, Job2=20k, Job3=50k, Job4=200k. Let the free pace memory allocation blocks are: Block1=50k, Block2=100k, Block3=90k, Block4=200k, Block5=50k.** *[Janata Bank Assistant System Administrator 2021 compact it 939-940 (ET: N/A)]*
 
+    Answer: The question gives the data but does not say which allocation strategy to apply, so all three standard strategies are worked out.
+    ```
+       Jobs (in order)   : J1 = 90 K , J2 = 20 K , J3 = 50 K , J4 = 200 K
+       Free blocks       : B1 = 50 K , B2 = 100 K , B3 = 90 K ,
+                           B4 = 200 K , B5 = 50 K
+    ```
+
+    (a) First Fit — take the first block big enough
+    ```
+       J1 = 90 K : B1=50 too small , B2=100 FITS       -> B2 , 10 K left
+       J2 = 20 K : B1=50 FITS                          -> B1 , 30 K left
+       J3 = 50 K : B1 has 30 , B2 has 10 , B3=90 FITS  -> B3 , 40 K left
+       J4 = 200 K: B4=200 FITS                         -> B4 ,  0 K left
+
+       Result
+       +-------+---------+---------+-------------------+
+       | Block |  Size   |   Job   |  Left over        |
+       +-------+---------+---------+-------------------+
+       |  B1   |   50 K  |   J2    |   30 K            |
+       |  B2   |  100 K  |   J1    |   10 K            |
+       |  B3   |   90 K  |   J3    |   40 K            |
+       |  B4   |  200 K  |   J4    |    0 K            |
+       |  B5   |   50 K  |    -    |   50 K unused     |
+       +-------+---------+---------+-------------------+
+
+       ALL 4 JOBS ALLOCATED.
+       Internal fragmentation = 30 + 10 + 40 + 0 = 80 K
+       Block B5 (50 K) stays completely free.
+    ```
+
+    (b) Best Fit — take the smallest block that is big enough
+    ```
+       J1 = 90 K : candidates B2=100 , B3=90 , B4=200 ; smallest = B3=90
+                                                       -> B3 ,  0 K left
+       J2 = 20 K : candidates B1=50 , B2=100 , B4=200 , B5=50 ;
+                   smallest = B1=50 (first of the two 50 K)
+                                                       -> B1 , 30 K left
+       J3 = 50 K : candidates B2=100 , B4=200 , B5=50 ; smallest = B5=50
+                                                       -> B5 ,  0 K left
+       J4 = 200 K: candidates B4=200 ; smallest = B4   -> B4 ,  0 K left
+
+       Result
+       +-------+---------+---------+-------------------+
+       | Block |  Size   |   Job   |  Left over        |
+       +-------+---------+---------+-------------------+
+       |  B1   |   50 K  |   J2    |   30 K            |
+       |  B2   |  100 K  |    -    |  100 K unused     |
+       |  B3   |   90 K  |   J1    |    0 K            |
+       |  B4   |  200 K  |   J4    |    0 K            |
+       |  B5   |   50 K  |   J3    |    0 K            |
+       +-------+---------+---------+-------------------+
+
+       ALL 4 JOBS ALLOCATED.
+       Internal fragmentation = 30 K only - the BEST of the three.
+       A whole 100 K block is left free for a future job.
+    ```
+
+    (c) Worst Fit — take the largest block available
+    ```
+       J1 = 90 K : largest = B4 = 200        -> B4 , 110 K left
+       J2 = 20 K : largest = B4 rem 110      -> B4 ,  90 K left
+       J3 = 50 K : largest = B2 = 100        -> B2 ,  50 K left
+       J4 = 200 K: available now are
+                   B1=50 , B2 rem 50 , B3=90 , B4 rem 90 , B5=50
+                   the largest is only 90 K  -> J4 CANNOT BE ALLOCATED
+
+       Result : only 3 of 4 jobs allocated.  J4 must WAIT.
+    ```
+
+    Comparison
+    ```
+       +------------+----------------+---------------------------+
+       | Strategy   | Jobs placed    | Comment                   |
+       +------------+----------------+---------------------------+
+       | First Fit  | 4 of 4         | Fastest to compute        |
+       | Best Fit   | 4 of 4         | Least waste , 30 K only   |
+       | Worst Fit  | 3 of 4 , J4    | Worst - it broke up the   |
+       |            | fails          | only 200 K block          |
+       +------------+----------------+---------------------------+
+    ```
+    - The lesson this example teaches: `Worst Fit destroyed the one block large enough for the big job`. Best Fit did well here, though it is slower because the whole list must be scanned, and over time it tends to leave many tiny unusable holes. First Fit is the usual choice in practice — nearly as good and much faster.
+
 14. **(ক) অপারেটিং সিস্টেম এর ক্ষেত্রে Swapping কী? কোন ক্ষেত্রে এটি ব্যবহৃত হয় লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What swapping is
+    - `Swapping` is moving a whole process out of RAM to the disk and bringing it back later. The disk area used is called the `swap space` or `backing store`.
+    ```
+       RAM                              DISK (swap space)
+       +-------------+                  +----------------+
+       |  process A  | ---- swap out -->|   process A    |
+       +-------------+                  +----------------+
+       |  process B  | <--- swap in ----|   process C    |
+       +-------------+                  +----------------+
+    ```
+    - `Swap out`: the process's memory image is written to disk and its frames are freed. The process moves to the `suspended` state.
+    - `Swap in`: the image is read back into RAM (not necessarily to the same addresses, which is why run-time relocation is needed) and the process becomes `ready` again.
+    - It is carried out by the `medium-term scheduler`, also called the `swapper`.
+
+    ```mermaid
+    stateDiagram-v2
+        [*] --> Ready
+        Ready --> Running: dispatch
+        Running --> Ready: time slice over
+        Running --> Blocked: I/O request
+        Blocked --> Ready: I/O done
+        Ready --> Suspended: swap out
+        Suspended --> Ready: swap in
+    ```
+
+    Where swapping is used
+
+    (a) When RAM is short
+    - More processes have been admitted than memory can hold. Swapping one out frees its frames for the others.
+
+    (b) To stop thrashing
+    ```
+       Too many processes -> each gets fewer frames than its WORKING SET
+       -> page faults explode -> CPU idles.
+
+       The cure is to SWAP OUT one or two processes, lowering the degree
+       of multiprogramming so the rest get enough frames.
+    ```
+
+    (c) To favour a high-priority process
+    - In `roll out, roll in`: a low-priority process is swapped out so an urgent one can be loaded and run at once, then the first is brought back.
+
+    (d) When a process is blocked for a long time
+    - A process waiting on slow I/O or user input is not going to run soon, so its frames are better used elsewhere.
+
+    (e) In `hibernation`
+    - The whole memory image of the system is written to disk so the machine can be powered off and resume from the same state.
+
+    The cost, and what replaced it
+    ```
+       Swap time is dominated by TRANSFER TIME :
+
+            a 100 MB process on a disk giving 50 MB per second
+            = 2 seconds out + 2 seconds in = 4 SECONDS
+
+       That is enormous. So classic whole-process swapping is rare today.
+    ```
+    - Modern systems swap `pages` rather than whole processes — `demand paging`. Only the individual pages that are not in use are written out, which is far cheaper. Linux still calls the disk area the `swap partition`, but what it actually does is page.
 
 15. **(a) What do you mean by page table for memory management? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1129 (ET: N/A)]*
 
+    Answer: What a page table is
+    - A `page table` is the data structure the operating system keeps `for each process` to record which `frame` of physical memory holds each of its `pages`. It is the map the MMU uses to turn a virtual address into a physical one.
+    ```
+       One entry per virtual page. The entry holds :
+
+            FRAME NUMBER    - where the page actually is in RAM
+            VALID / INVALID - is the page resident ?
+            DIRTY (modify)  - has it been written to ?
+            REFERENCED      - has it been used recently ? (for LRU)
+            PROTECTION      - read / write / execute permissions
+    ```
+
+    How it is used
+    ```
+       virtual address  = [ page number p | offset d ]
+                                    |
+                            page table[p] = f
+                                    |
+       physical address = [ frame number f | offset d ]
+
+       The OFFSET is copied through UNCHANGED. Only the page number is
+       translated. The PTBR (page table base register) in the CPU points
+       to the current process's table, and it is reloaded on every
+       context switch.
+    ```
+
+    Example
+    ```
+       Page size = 1 KB = 1024 bytes.  Process P has 4 pages.
+
+       PAGE TABLE of P                      PHYSICAL MEMORY
+       +------+-------+-------+             +---------+ frame 0
+       | page | frame | valid |             | page 2  |
+       +------+-------+-------+             +---------+ frame 1
+       |  0   |   3   |   1   |             |  free   |
+       |  1   |   6   |   1   |             +---------+ frame 2
+       |  2   |   0   |   1   |             |  free   |
+       |  3   |   -   |   0   | on disk     +---------+ frame 3
+       +------+-------+-------+             | page 0  |
+                                            +---------+ ...
+                                            +---------+ frame 6
+                                            | page 1  |
+                                            +---------+
+
+       Translate virtual address 1500 :
+            page number = 1500 / 1024 = 1
+            offset      = 1500 % 1024 = 476
+            page table[1] = frame 6 , valid = 1
+            physical address = 6 * 1024 + 476 = 6144 + 476 = 6620
+
+       Translate virtual address 3200 :
+            page number = 3200 / 1024 = 3
+            offset      = 3200 % 1024 = 128
+            page table[3] : valid = 0   ->  PAGE FAULT
+            the OS loads page 3 from disk, fills in the frame number,
+            sets valid = 1, and restarts the instruction.
+    ```
+
+    Two practical problems, and their fixes
+    ```
+       1. SPEED - the table is in RAM, so every reference would need TWO
+          memory accesses (one for the table, one for the data).
+          FIX : the TLB , a small associative cache of recent
+          translations. With a 98 per cent hit ratio the extra cost is
+          almost nil.
+
+       2. SIZE - a 32-bit space with 4 KB pages has 2^20 pages ; at
+          4 bytes per entry that is 4 MB PER PROCESS.
+          FIX : MULTI-LEVEL page tables (page the page table itself, so
+          only the parts in use are resident) , or an INVERTED page table
+          (one entry per FRAME, so the size depends on RAM, not on the
+          address space).
+    ```
+
 16. **Why page are sizes always powers of 2?** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
+
+    Answer: Page sizes are always a power of 2 so that the hardware can split a virtual address into a `page number` and an `offset` by `simply cutting the bit string`, with no division or multiplication at all.
+
+    The reason
+    ```
+       If page size = 2^k , then for any virtual address :
+
+            page number = address / 2^k   =  address >> k   (right shift)
+            offset      = address % 2^k   =  address & (2^k - 1)  (mask)
+
+       A shift and a mask are FREE in hardware - they are just wires.
+       No arithmetic circuit is involved.
+    ```
+    ```
+       The address does not even need to be "split" - the SAME BITS ARE
+       ALREADY the page number and the offset :
+
+       32-bit address , page size 4 KB = 2^12
+
+       +----------------------------+-------------------+
+       |   page number (20 bits)    |   offset (12)     |
+       +----------------------------+-------------------+
+            bits 31 - 12                 bits 11 - 0
+
+       Address 0x00003ABC :
+            offset      = 0xABC   (low 12 bits)
+            page number = 0x00003 (the rest)
+       No calculation was performed.
+    ```
+
+    What would happen with a non-power-of-2 size
+    ```
+       Suppose page size = 1000 bytes.
+
+            page number = address / 1000     <- an actual DIVISION
+            offset      = address % 1000     <- an actual REMAINDER
+
+       Integer division needs many clock cycles, and address translation
+       happens on EVERY memory reference - several times per instruction.
+       The CPU would be crippled.
+    ```
+
+    Other benefits that follow
+    ```
+       1. The physical address is built by CONCATENATION, not arithmetic :
+               physical = ( frame number << 12 ) | offset
+          Again just wires - no adder.
+
+       2. NO WASTED ADDRESSES. With 12 offset bits, all 4096 combinations
+          are legal. With a 1000-byte page, offsets 1000-4095 would be
+          invalid and would need a bounds check.
+
+       3. The TLB and page table can be indexed by taking BIT FIELDS
+          directly out of the address.
+
+       4. Every page starts on a natural boundary, so the low k bits of a
+          frame's base address are always 0 - useful for ALIGNMENT.
+    ```
+
+    - The same argument explains why `cache block sizes`, `frame sizes`, `disk sector sizes` and `TLB entry counts` are also powers of 2. Common page sizes are `4 KB (2^12)`, `2 MB (2^21)` and `1 GB (2^30)` for huge pages — every one a power of two.
 
 ## Process Management & Process States (12)
 
