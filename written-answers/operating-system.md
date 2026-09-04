@@ -11750,27 +11750,868 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 1. **(b) What is process? Describe different states of a process.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
 
+   Answer: What a process is
+   - A `process` is a program in `execution`. A program is a passive file on disk; a process is the active thing the OS is running, with its own memory, registers and program counter.
+   ```
+      A process consists of :
+           TEXT     - the program code
+           DATA     - global and static variables
+           HEAP     - memory allocated at run time (malloc / new)
+           STACK    - function calls, parameters, local variables
+           PROGRAM COUNTER and CPU registers
+           PROCESS CONTROL BLOCK (PCB) - the OS's record of it
+   ```
+   - Two runs of the same program are `two different processes` — same code, separate memory and separate PCBs.
+
+   The process states
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready: admitted
+       Ready --> Running: dispatch
+       Running --> Ready: interrupt / time slice over
+       Running --> Waiting: I/O or event wait
+       Waiting --> Ready: I/O or event done
+       Running --> Terminated: exit
+       Terminated --> [*]
+   ```
+   ```
+      NEW        The process is being created. Its PCB is being set up
+                 and it is not yet in memory.
+
+      READY      It is in memory and ready to run, waiting only for the
+                 CPU. It sits in the READY QUEUE. Many processes can be
+                 ready at once.
+
+      RUNNING    The CPU is executing its instructions. On a single-core
+                 CPU only ONE process is running at a time.
+
+      WAITING    It cannot continue until some event happens - an I/O
+      (BLOCKED)  completion, user input, or a signal. It is NOT in the
+                 ready queue and cannot be scheduled.
+
+      TERMINATED It has finished or was killed. Its resources are freed
+                 and its PCB is removed.
+   ```
+
+   The transitions, which are what carry the marks
+   ```
+      New -> Ready         ADMIT. The long-term scheduler lets it in.
+      Ready -> Running     DISPATCH. The short-term scheduler picks it.
+      Running -> Ready     TIMEOUT / PREEMPTION. Its time slice expired,
+                           or a higher-priority process arrived. The
+                           process is still able to run.
+      Running -> Waiting   It ASKED for I/O or a resource, and must wait.
+      Waiting -> Ready     The event finished. Note it goes to READY,
+                           NOT straight to RUNNING - it must be
+                           scheduled again.
+      Running -> Terminated  exit() , or it was killed.
+   ```
+   - The distinction examiners look for: `Running -> Ready` is involuntary and the process could still run; `Running -> Waiting` is voluntary and the process cannot run until the event completes. There is `no Waiting -> Running` edge.
+
+   - Two more states appear in systems that swap: `Suspended-Ready` and `Suspended-Blocked`, entered when the `medium-term scheduler` swaps a process out to disk to free memory.
+
 2. **(c) Define context switch with proper example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
+
+   Answer: What a context switch is
+   - A `context switch` is the act of saving the state of the process that is running and loading the saved state of another, so the CPU can switch from one process to the other.
+   ```
+      The "context" that is saved and restored :
+           program counter (PC)
+           all CPU registers , stack pointer , status flags
+           memory management information - page table base register
+           process state , priority , accounting data
+
+      All of it is kept in the PROCESS CONTROL BLOCK (PCB).
+   ```
+
+   The steps
+   ```mermaid
+   sequenceDiagram
+       participant P1 as Process P1
+       participant OS as Kernel
+       participant P2 as Process P2
+       P1->>OS: interrupt or system call
+       OS->>OS: save state of P1 into PCB1
+       OS->>OS: select P2 (scheduler)
+       OS->>OS: load state of P2 from PCB2
+       OS->>P2: resume P2
+   ```
+   ```
+      1. An INTERRUPT or SYSTEM CALL stops P1.
+      2. The OS SAVES P1's registers and PC into PCB1.
+      3. P1's state changes to READY or WAITING ; it joins a queue.
+      4. The scheduler PICKS P2.
+      5. The OS LOADS P2's registers and PC from PCB2.
+      6. The page table base register is switched to P2's table, and
+         the TLB is flushed or tagged.
+      7. Control jumps to P2's saved PC ; P2 resumes exactly where it
+         had stopped.
+   ```
+
+   Example
+   ```
+      P1 is a text editor , P2 is a music player. Time slice = 10 ms.
+
+      t = 0 ms   P1 RUNNING. PC = 0x4021 , R1 = 55
+      t = 10 ms  Timer interrupt.
+                 SAVE : PCB1 <- PC 0x4021 , R1 = 55 , flags
+                 P1 -> READY
+                 LOAD : from PCB2 -> PC 0x8110 , R1 = 92
+                 P2 -> RUNNING
+      t = 20 ms  Timer interrupt again.
+                 SAVE PCB2 , LOAD PCB1 -> P1 resumes at 0x4021 with
+                 R1 = 55 , exactly as if nothing had happened.
+
+      The user sees both the editor and the music running "together",
+      though the CPU only ever ran one at a time.
+   ```
+
+   When it happens
+   ```
+      - the TIME SLICE expires (timer interrupt)
+      - a process makes an I/O request and BLOCKS
+      - a HIGHER-PRIORITY process becomes ready (preemption)
+      - an interrupt from a device arrives
+      - the process exits
+   ```
+
+   The cost
+   ```
+      A context switch is PURE OVERHEAD - no user work is done during it.
+
+           typical cost : 1 - 100 microseconds
+           plus an INDIRECT cost : the new process finds the CACHE and
+           the TLB filled with the OLD process's data, so it runs slowly
+           until they warm up again. This is often the bigger cost.
+
+      That is why the time slice must not be too small : with a 1 ms
+      slice and a 100 us switch, 10 per cent of the CPU is lost to
+      switching alone.
+   ```
+   - A `thread` switch inside the same process is much cheaper, because the address space, the page table and the open files are shared — only the registers and the stack pointer change, and the TLB need not be flushed.
 
 3. **(খ) Process কী? বিভিন্ন ধরনের Process state এর কাজ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 414 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What a process is
+   - A `process` is a program in `execution`. The program is a passive file lying on disk; the process is the active thing the OS is actually running, with its own memory, registers and program counter.
+   ```
+      A process is made of :
+           TEXT   - the program code
+           DATA   - global and static variables
+           HEAP   - memory allocated at run time
+           STACK  - function calls , parameters , local variables
+           program counter and CPU registers
+           PROCESS CONTROL BLOCK (PCB) - the OS's record of it
+   ```
+
+   The states and what each one does
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready: admitted
+       Ready --> Running: dispatch
+       Running --> Ready: time slice over
+       Running --> Waiting: I/O request
+       Waiting --> Ready: I/O complete
+       Running --> Terminated: exit
+       Terminated --> [*]
+   ```
+   ```
+      NEW
+           The process is being created. The OS builds its PCB, assigns
+           a PID and allocates memory. It is not yet running.
+           Work done here : admission control - the LONG-TERM SCHEDULER
+           decides whether memory is available to let it in.
+
+      READY
+           The process is in memory and can run ; it lacks only the CPU.
+           It waits in the READY QUEUE.
+           Work done here : the SHORT-TERM SCHEDULER chooses among all
+           ready processes using FCFS , SJF , Round Robin or priority.
+
+      RUNNING
+           The CPU is executing its instructions. On one core, only ONE
+           process is running at any instant.
+           Work done here : the actual computation , plus system calls
+           the process issues.
+
+      WAITING (BLOCKED)
+           The process cannot proceed until an event occurs - I/O
+           completion, user input, a semaphore, a signal. It is NOT in
+           the ready queue and cannot be scheduled.
+           Work done here : the device or event is serviced ; when the
+           interrupt arrives the process is moved back to READY.
+
+      TERMINATED
+           Execution has finished, or the process was killed. Its memory
+           and open files are released and its PCB is removed.
+           Work done here : the exit status is passed to the parent.
+   ```
+
+   The transitions
+   ```
+      New -> Ready         ADMIT      long-term scheduler
+      Ready -> Running     DISPATCH   short-term scheduler
+      Running -> Ready     TIMEOUT    preemption ; the process COULD
+                                      still run
+      Running -> Waiting   BLOCK      it asked for I/O ; VOLUNTARY
+      Waiting -> Ready     WAKE UP    the event finished - note it goes
+                                      to READY, not to RUNNING
+      Running -> Terminated  EXIT
+   ```
+   - The point examiners look for: there is `no Waiting -> Running edge`. A woken process must queue up and be scheduled again like everyone else.
+   - In systems that swap, two more states exist — `Suspended-Ready` and `Suspended-Blocked` — entered when the `medium-term scheduler` moves a process out to disk to free memory.
+
 4. **Explain the process state.** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
+
+   Answer: A `process state` says what a process is doing at this moment. The OS keeps the state in the process's `PCB` and moves it from queue to queue as the state changes.
+
+   The five states
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready: admitted
+       Ready --> Running: dispatch
+       Running --> Ready: time slice over
+       Running --> Waiting: I/O request
+       Waiting --> Ready: I/O complete
+       Running --> Terminated: exit
+       Terminated --> [*]
+   ```
+   ```
+      NEW        Being created. The PCB is set up and memory assigned.
+                 Not yet in the ready queue.
+
+      READY      In memory and able to run ; waiting only for the CPU.
+                 Sits in the READY QUEUE. Many processes can be ready.
+
+      RUNNING    The CPU is executing its instructions. Only ONE per
+                 core at any instant.
+
+      WAITING    Cannot proceed until an event occurs - I/O completion,
+      (BLOCKED)  user input, a semaphore. NOT in the ready queue, so it
+                 cannot be scheduled.
+
+      TERMINATED Finished or killed. Resources freed, PCB removed.
+   ```
+
+   The transitions
+   ```
+      New -> Ready         ADMIT     the long-term scheduler lets it in
+      Ready -> Running     DISPATCH  the short-term scheduler picks it
+      Running -> Ready     TIMEOUT   its slice expired, or a higher
+                                     priority process arrived.
+                                     INVOLUNTARY - it could still run.
+      Running -> Waiting   BLOCK     it REQUESTED I/O.
+                                     VOLUNTARY - it cannot run now.
+      Waiting -> Ready     WAKE UP   the event completed.
+                                     It goes to READY, NOT to RUNNING.
+      Running -> Terminated  EXIT
+   ```
+
+   Two points that are commonly asked
+   ```
+      1. There is NO  Waiting -> Running  edge.
+         A woken process must join the ready queue and be scheduled
+         again like every other ready process.
+
+      2. There is NO  Ready -> Waiting  edge.
+         Only a RUNNING process can ask for I/O, so only a running
+         process can block.
+   ```
+
+   The difference between Ready and Waiting
+   | Point | Ready | Waiting |
+   |---|---|---|
+   | Why it is not running | The CPU is busy | It is waiting for an `event` |
+   | Could it run now? | `Yes`, if given the CPU | `No`, the CPU would not help |
+   | Which queue | Ready queue | `Device` / event queue |
+   | What frees it | The `scheduler` | An `interrupt` from the device |
+
+   The suspended states
+   ```
+      When memory is short, the MEDIUM-TERM SCHEDULER swaps a process
+      out to disk. Two more states then appear :
+
+           SUSPENDED-READY    swapped out , but able to run
+           SUSPENDED-BLOCKED  swapped out , and still waiting for an event
+
+      Ready  ->  Suspended-Ready      swap out
+      Suspended-Ready -> Ready        swap in
+   ```
+   - Why the state is tracked at all: the OS keeps one queue per state, so scheduling is just picking from the right queue. It never has to search through every process to find one that can run.
 
 5. **(ক) Process কী? একটি Process এর বিভিন্ন ধাপগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What a process is
+   - A `process` is a program in `execution`. The program is a passive file on disk; the process is the active running instance, with its own memory, registers and program counter.
+   ```
+      The parts of a process in memory :
+
+      +----------------+  high address
+      |     STACK      |  function calls , locals , parameters
+      |       |        |  (grows DOWN)
+      |       v        |
+      +----------------+
+      |     free       |
+      +----------------+
+      |       ^        |
+      |       |        |  (grows UP)
+      |     HEAP       |  malloc / new
+      +----------------+
+      |     DATA       |  global and static variables
+      +----------------+
+      |     TEXT       |  the program code
+      +----------------+  low address
+   ```
+   - Two runs of the same program are `two separate processes`: the same code, but separate memory and separate `PCB`s.
+
+   The stages a process goes through
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready: admitted
+       Ready --> Running: dispatch
+       Running --> Ready: time slice over
+       Running --> Waiting: I/O request
+       Waiting --> Ready: I/O complete
+       Running --> Terminated: exit
+       Terminated --> [*]
+   ```
+   ```
+      1. NEW
+         The process is created. The OS allots a PID, builds the PCB
+         and assigns memory. The LONG-TERM SCHEDULER decides whether to
+         admit it.
+
+      2. READY
+         It is in memory and can run - only the CPU is missing. It waits
+         in the READY QUEUE, from which the SHORT-TERM SCHEDULER picks.
+
+      3. RUNNING
+         The CPU is executing its instructions. Only one process per
+         core at a time.
+
+      4. WAITING (BLOCKED)
+         It asked for I/O or an event and cannot continue. It leaves the
+         ready queue and joins a device queue.
+
+      5. TERMINATED
+         It has finished or been killed. Memory and open files are
+         released, the exit status goes to the parent, and the PCB is
+         removed.
+   ```
+
+   The transitions between the stages
+   ```
+      New -> Ready          ADMIT
+      Ready -> Running      DISPATCH
+      Running -> Ready      TIMEOUT , preemption - INVOLUNTARY , and the
+                            process could still run
+      Running -> Waiting    BLOCK - VOLUNTARY , it asked for I/O
+      Waiting -> Ready      WAKE UP - it goes to READY, NOT to RUNNING
+      Running -> Terminated EXIT
+   ```
+   - Note there is `no Waiting -> Running` transition and `no Ready -> Waiting` transition: only a running process can ask for I/O, and a woken process must be scheduled again before it runs.
+   - Where swapping is used, two more stages exist — `Suspended-Ready` and `Suspended-Blocked` — reached when the `medium-term scheduler` moves a process out to disk to free memory.
+
 6. **অথবা, (ক) Process Control Block (PCB) কী? এটি একটি Process সংক্রান্ত যে যে তথ্য রাখে সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) What a PCB is
+   - A `Process Control Block (PCB)` is the data structure the OS keeps for `every process`. It holds everything the OS needs to manage that process and, above all, everything needed to `stop it and restart it later exactly where it left off`. It is also called the `task control block`.
+   - Every process has `exactly one` PCB. The OS keeps them all in a process table and links them into the ready and device queues.
+
+   What it stores
+   ```
+      1. PROCESS IDENTIFICATION
+           PID , parent PID (PPID) , user ID , group ID
+
+      2. PROCESS STATE
+           new / ready / running / waiting / terminated
+
+      3. PROGRAM COUNTER
+           the address of the NEXT instruction to execute
+
+      4. CPU REGISTERS
+           accumulator , index registers , stack pointer , general
+           registers , condition flags - saved on a context switch
+
+      5. CPU SCHEDULING INFORMATION
+           priority , pointer to the scheduling queue , time slice used,
+           scheduling parameters
+
+      6. MEMORY MANAGEMENT INFORMATION
+           base and limit registers , page table or segment table
+           pointer , page table base register value
+
+      7. ACCOUNTING INFORMATION
+           CPU time used , real time elapsed , time limits , process
+           numbers , resource usage
+
+      8. I/O STATUS INFORMATION
+           list of open files , allocated devices , pending I/O
+           requests
+
+      9. INTER-PROCESS COMMUNICATION
+           pending signals , message queue pointers , semaphore state
+
+      10. POINTER
+           link to the next PCB in the ready or device queue
+   ```
+
+   Diagram
+   ```
+      +--------------------------------+
+      |   pointer      |  process state|
+      +--------------------------------+
+      |          process ID            |
+      +--------------------------------+
+      |        program counter         |
+      +--------------------------------+
+      |         CPU registers          |
+      +--------------------------------+
+      |     memory limits / page table |
+      +--------------------------------+
+      |        list of open files      |
+      +--------------------------------+
+      |   accounting and priority      |
+      +--------------------------------+
+   ```
+
+   Why it matters — the context switch
+   ```
+      When the OS switches from P1 to P2 :
+
+           SAVE  P1's PC and registers  ->  PCB1
+           LOAD  P2's PC and registers  <-  PCB2
+
+      Without the PCB a stopped process could never be resumed. The PCB
+      IS the process, as far as the operating system is concerned.
+   ```
+   - The PCB is kept in `kernel memory` only. A user process cannot read or write its own PCB — it can only ask through system calls such as `getpid()` or `nice()`. This is what makes process isolation and protection possible.
 
 7. **Write down the name of four information stored in PCB (Process Control Block).** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
 
+   Answer: Four pieces of information stored in the `Process Control Block`:
+   ```
+      1. PROCESS ID (PID) and process state
+           The unique number identifying the process, and whether it is
+           new , ready , running , waiting or terminated.
+
+      2. PROGRAM COUNTER
+           The address of the NEXT instruction to be executed. This is
+           what lets a stopped process resume at exactly the right place.
+
+      3. CPU REGISTERS
+           Accumulator , index registers , stack pointer , general
+           registers and condition flags - all saved on a context switch
+           and restored when the process runs again.
+
+      4. MEMORY MANAGEMENT INFORMATION
+           Base and limit register values , and the pointer to the
+           process's page table or segment table.
+   ```
+
+   Other fields, if more are asked for
+   ```
+      5. CPU SCHEDULING INFO  - priority , queue pointers , time slice
+      6. ACCOUNTING INFO      - CPU time used , real time elapsed ,
+                                time limits
+      7. I/O STATUS INFO      - open files , allocated devices , pending
+                                I/O requests
+      8. IPC INFO             - pending signals , message queue pointers
+      9. PARENT PID and the list of child processes
+   ```
+
+   Layout
+   ```
+      +--------------------------------+
+      |  pointer       | process state |
+      +--------------------------------+
+      |         process ID (PID)       |
+      +--------------------------------+
+      |        program counter         |
+      +--------------------------------+
+      |         CPU registers          |
+      +--------------------------------+
+      |  memory limits / page table    |
+      +--------------------------------+
+      |       list of open files       |
+      +--------------------------------+
+   ```
+
+   Why these four matter most
+   ```
+      On a CONTEXT SWITCH the OS must :
+           SAVE  the PC and registers into the PCB of the outgoing
+                 process
+           LOAD  the PC and registers from the PCB of the incoming one
+           SWITCH the page table pointer to the new process's table
+
+      Without the PC and registers the process could not resume ;
+      without the memory information it would read another process's
+      memory. The PCB is kept in KERNEL memory, so a user process can
+      never touch it directly.
+   ```
+
 8. **Operating System এর Process state diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
+
+   Answer: (Answered in English, as required for IT topics.) Process state diagram
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready: admitted
+       Ready --> Running: dispatch (scheduler)
+       Running --> Ready: interrupt / time slice over
+       Running --> Waiting: I/O or event wait
+       Waiting --> Ready: I/O or event complete
+       Running --> Terminated: exit
+       Terminated --> [*]
+   ```
+   ```
+                            admitted
+           +-------+  ------------------>  +---------+
+           |  NEW  |                       |  READY  |<---------+
+           +-------+                       +---------+          |
+                                           |       ^            |
+                                 dispatch  |       | interrupt  |
+                                           v       |            |
+                                       +-------------+          |
+                                       |   RUNNING   |          |
+                                       +-------------+          |
+                                        |          |            |
+                                 exit   |          | I/O request|
+                                        v          v            |
+                                +------------+  +---------+     |
+                                | TERMINATED |  | WAITING |-----+
+                                +------------+  +---------+
+                                                    I/O complete
+   ```
+
+   The five states
+   ```
+      NEW        Being created ; the PCB is set up and memory assigned.
+      READY      In memory , able to run , waiting only for the CPU.
+                 It sits in the READY QUEUE.
+      RUNNING    The CPU is executing its instructions. One per core.
+      WAITING    Blocked on an event - I/O , user input , a semaphore.
+                 Not in the ready queue , so it cannot be scheduled.
+      TERMINATED Finished or killed ; resources freed , PCB removed.
+   ```
+
+   The six transitions
+   ```
+      New -> Ready          ADMIT      the long-term scheduler admits it
+      Ready -> Running      DISPATCH   the short-term scheduler picks it
+      Running -> Ready      TIMEOUT    time slice expired or preempted -
+                                       INVOLUNTARY , it could still run
+      Running -> Waiting    BLOCK      it REQUESTED I/O - VOLUNTARY
+      Waiting -> Ready      WAKE UP    the event finished ; it goes to
+                                       READY , not to RUNNING
+      Running -> Terminated EXIT
+   ```
+   - Two edges that do `not` exist, and are often asked about: there is `no Waiting -> Running` (a woken process must be scheduled again) and `no Ready -> Waiting` (only a running process can issue an I/O request).
+
+   With swapping — the seven-state diagram
+   ```
+      When memory is short, the MEDIUM-TERM SCHEDULER swaps a process
+      out to disk :
+
+           Ready   <---- swap in ----  SUSPENDED-READY
+                   ---- swap out --->
+
+           Waiting <---- swap in ----  SUSPENDED-BLOCKED
+                   ---- swap out --->
+
+      SUSPENDED-BLOCKED -> SUSPENDED-READY when its event completes
+      while it is still on disk.
+   ```
 
 9. **(i) Operating System এর Process State Transition Diagram আঁকুন ও ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Process state transition diagram
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready: admitted
+       Ready --> Running: dispatch
+       Running --> Ready: interrupt / time slice over
+       Running --> Waiting: I/O or event wait
+       Waiting --> Ready: I/O or event complete
+       Running --> Terminated: exit
+       Terminated --> [*]
+   ```
+   ```
+                            admitted
+           +-------+  ------------------>  +---------+
+           |  NEW  |                       |  READY  |<---------+
+           +-------+                       +---------+          |
+                                           |       ^            |
+                                 dispatch  |       | interrupt  |
+                                           v       |            |
+                                       +-------------+          |
+                                       |   RUNNING   |          |
+                                       +-------------+          |
+                                        |          |            |
+                                 exit   |          | I/O request|
+                                        v          v            |
+                                +------------+  +---------+     |
+                                | TERMINATED |  | WAITING |-----+
+                                +------------+  +---------+
+                                                   I/O complete
+   ```
+
+   The states
+   ```
+      NEW        The process is being created. The OS assigns a PID,
+                 builds the PCB and allots memory.
+      READY      In memory and able to run ; only the CPU is missing.
+                 It waits in the READY QUEUE.
+      RUNNING    The CPU is executing its instructions. Only one per
+                 core at any instant.
+      WAITING    Blocked until an event happens - I/O completion, user
+                 input, a semaphore. Not schedulable.
+      TERMINATED Finished or killed ; memory and files released, PCB
+                 removed.
+   ```
+
+   Explanation of each transition
+   ```
+      1. New -> Ready       ADMIT
+           The LONG-TERM SCHEDULER decides there is enough memory and
+           admits the process. This controls the degree of
+           multiprogramming.
+
+      2. Ready -> Running   DISPATCH
+           The SHORT-TERM SCHEDULER selects it by FCFS , SJF , Round
+           Robin or priority, and the dispatcher loads its context.
+
+      3. Running -> Ready   TIMEOUT / PREEMPTION
+           The time slice expired, or a higher-priority process became
+           ready. INVOLUNTARY - the process was perfectly able to
+           continue, so it returns to the ready queue.
+
+      4. Running -> Waiting  BLOCK
+           The process itself asked for I/O or a resource. VOLUNTARY -
+           it cannot continue, so keeping the CPU would waste it. It
+           leaves the ready queue for a device queue.
+
+      5. Waiting -> Ready    WAKE UP
+           The device interrupt arrives and the event completes. Note
+           carefully that it goes to READY , NOT to RUNNING - it must
+           be scheduled again like everyone else.
+
+      6. Running -> Terminated  EXIT
+           exit() was called, or the process was killed. The exit status
+           is passed to the parent and the PCB is freed.
+   ```
+
+   Two transitions that do not exist
+   ```
+      Waiting -> Running : NO. A woken process must queue and be
+           scheduled again ; the CPU may be busy with someone else.
+
+      Ready -> Waiting   : NO. Only a RUNNING process can execute an
+           I/O instruction, so only a running process can block.
+   ```
+
+   With swapping
+   ```
+      Ready   <-- swap in / swap out -->  SUSPENDED-READY
+      Waiting <-- swap in / swap out -->  SUSPENDED-BLOCKED
+
+      Done by the MEDIUM-TERM SCHEDULER to free memory when RAM is
+      short or the system is thrashing.
+   ```
+
 10. **Operating System এর ক্ষেত্রে নিম্নোক্ত Process State গুলো ব্যবহার করে State Diagram অংকন করুন। [New, ready, Wait, Run, Terminated]** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
+
+    Answer: (Answered in English, as required for IT topics.) State diagram using New, Ready, Wait, Run and Terminated
+    ```mermaid
+    stateDiagram-v2
+        [*] --> New
+        New --> Ready: admitted
+        Ready --> Run: dispatch
+        Run --> Ready: time slice over / preempted
+        Run --> Wait: I/O request
+        Wait --> Ready: I/O complete
+        Run --> Terminated: exit
+        Terminated --> [*]
+    ```
+    ```
+                             admitted
+            +-------+  ------------------>  +---------+
+            |  NEW  |                       |  READY  |<---------+
+            +-------+                       +---------+          |
+                                            |       ^            |
+                                  dispatch  |       | preempted  |
+                                            v       |            |
+                                        +-------------+          |
+                                        |     RUN     |          |
+                                        +-------------+          |
+                                         |          |            |
+                                  exit   |          | I/O request|
+                                         v          v            |
+                                 +------------+  +---------+     |
+                                 | TERMINATED |  |  WAIT   |-----+
+                                 +------------+  +---------+
+                                                    I/O complete
+    ```
+
+    The states
+    ```
+       NEW        Being created. The OS assigns a PID, builds the PCB and
+                  allots memory. Not yet runnable.
+
+       READY      In memory and able to run ; only the CPU is missing.
+                  It sits in the READY QUEUE.
+
+       RUN        The CPU is executing its instructions. Only one process
+                  per core at any instant.
+
+       WAIT       Blocked on an event - I/O completion, user input, a
+                  semaphore. It is NOT in the ready queue and cannot be
+                  scheduled.
+
+       TERMINATED Finished or killed. Memory and open files are released
+                  and the PCB is removed.
+    ```
+
+    The transitions
+    ```
+       New -> Ready          ADMIT     the long-term scheduler admits it
+       Ready -> Run          DISPATCH  the short-term scheduler picks it
+       Run -> Ready          TIMEOUT   its time slice expired , or a
+                                       higher-priority process arrived.
+                                       INVOLUNTARY - it could still run.
+       Run -> Wait           BLOCK     it REQUESTED I/O. VOLUNTARY - it
+                                       cannot use the CPU now.
+       Wait -> Ready         WAKE UP   the event completed. It goes to
+                                       READY , NOT straight to RUN.
+       Run -> Terminated     EXIT      exit() , or it was killed.
+    ```
+
+    The two edges that must not be drawn
+    ```
+       Wait  -> Run   : WRONG. A woken process joins the READY queue and
+                        must be scheduled again ; the CPU may be busy.
+
+       Ready -> Wait  : WRONG. Only a RUNNING process can execute an I/O
+                        instruction, so only a running process can block.
+    ```
+    - The difference between Ready and Wait is what the diagram is really testing: a `Ready` process needs only the CPU, while a `Wait` process would not benefit from the CPU at all — it needs an `event`. That is why they sit in different queues, and why the scheduler looks only at the ready queue.
 
 11. **(c) What are the difference between process and threads?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
 
+    Answer: Difference between a process and a thread
+
+    | Point | Process | Thread |
+    |---|---|---|
+    | Definition | A program in `execution`, with its own memory | A `lightweight` unit of execution `inside` a process |
+    | Memory | Has its `own` address space | `Shares` the process's code, data and heap |
+    | What is private | Everything | Only the `stack`, registers and program counter |
+    | Creation cost | `High` — a new address space and page table | `Low` — only a stack and a register set |
+    | Context switch | `Slow` — the page table changes, the TLB is flushed | `Fast` — the address space is unchanged |
+    | Communication | Needs `IPC` — pipes, shared memory, message queues | Direct, through `shared variables` |
+    | Isolation | Strong — one crash does not touch the others | `Weak` — one bad thread can crash the whole process |
+    | Synchronisation | Rarely needed between processes | `Essential` — mutex, semaphore, for shared data |
+    | Dependence | Independent | Cannot exist without its parent process |
+
+    Memory picture
+    ```
+       PROCESS A                    PROCESS B
+       +-------------+              +-------------+
+       |    STACK    |              |    STACK    |
+       |    HEAP     |              |    HEAP     |
+       |    DATA     |              |    DATA     |
+       |    TEXT     |              |    TEXT     |
+       +-------------+              +-------------+
+       SEPARATE address spaces - A cannot touch B's memory.
+
+
+       ONE PROCESS WITH THREE THREADS
+       +--------------------------------------------+
+       | stack T1 |  stack T2  |  stack T3          |  PRIVATE
+       +--------------------------------------------+
+       |            HEAP  (shared)                  |
+       |            DATA  (shared)                  |  SHARED
+       |            TEXT  (shared)                  |
+       +--------------------------------------------+
+       Each thread has its own PC and registers.
+    ```
+
+    What is shared and what is not
+    ```
+       SHARED among threads : code , global and static data , heap ,
+                              open files , signals , the address space
+       PRIVATE to a thread  : stack , registers , program counter ,
+                              thread ID , errno
+    ```
+
+    Why threads are used
+    - `Responsiveness` — a GUI stays alive while a background thread does the slow work.
+    - `Cheap` — creating a thread and switching between threads costs far less than for a process.
+    - `Easy sharing` — threads use the same variables directly, with no IPC layer.
+    - `Parallelism` — different threads can run on different cores at the same time.
+
+    The price
+    - Because the heap and globals are shared, two threads writing the same variable create a `race condition`, so `mutexes` and `semaphores` are needed. Processes rarely have this problem, because their memory is separate.
+    - One thread's segmentation fault kills the `entire process`, taking every other thread with it. A crashing process leaves its siblings untouched. This is exactly why Chrome puts each tab in a separate `process` rather than a thread.
+
 12. **(b) What are the difference between process and thread?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
+
+    Answer: Difference between a process and a thread
+
+    | Point | Process | Thread |
+    |---|---|---|
+    | What it is | A program in `execution`, with its own memory | A `lightweight` unit of execution `inside` a process |
+    | Address space | `Own` address space and page table | `Shares` the process's address space |
+    | Private data | Everything belongs to it | Only the `stack`, registers and program counter |
+    | Creation cost | `High` — build an address space and a PCB | `Low` — just a stack and a register set |
+    | Context switch | `Slow` — page table switch, TLB flush | `Fast` — no address-space change |
+    | Communication | Through `IPC` — pipes, shared memory, sockets | Directly through `shared variables` |
+    | Isolation | `Strong` — a crash affects only itself | `Weak` — a crash kills every thread in the process |
+    | Synchronisation | Seldom needed | `Required` — mutex, semaphore |
+    | Also called | Heavyweight process | Lightweight process (LWP) |
+
+    Memory picture
+    ```
+       TWO PROCESSES                ONE PROCESS , THREE THREADS
+       +----------+ +----------+    +-----------------------------+
+       |  STACK   | |  STACK   |    | stk T1 | stk T2 | stk T3    |  private
+       |  HEAP    | |  HEAP    |    +-----------------------------+
+       |  DATA    | |  DATA    |    |        HEAP  (shared)       |
+       |  TEXT    | |  TEXT    |    |        DATA  (shared)       |  shared
+       +----------+ +----------+    |        TEXT  (shared)       |
+        SEPARATE - no sharing       +-----------------------------+
+    ```
+    ```
+       SHARED between threads : code , globals and statics , heap ,
+                                open files , signal handlers
+       PRIVATE to each thread : stack , registers , program counter ,
+                                thread ID , errno
+    ```
+
+    Why threads exist
+    - `Responsiveness` — a GUI keeps answering the user while a worker thread does the slow job.
+    - `Low cost` — creating and switching threads is far cheaper than processes.
+    - `Easy sharing` — no IPC layer is needed; the threads simply use the same variables.
+    - `True parallelism` — different threads run on different cores at once.
+
+    The trade-off
+    ```
+       Sharing memory is both the ADVANTAGE and the DANGER.
+
+       Two threads doing  count = count + 1  at the same time can
+       both read the old value, so one increment is LOST - a RACE
+       CONDITION. A MUTEX or SEMAPHORE is needed.
+
+       A segmentation fault in ONE thread kills the WHOLE process and
+       every other thread in it. A crashing PROCESS leaves its siblings
+       alive.
+    ```
+    - That last point is why a browser like Chrome puts every tab in a separate `process`, not a thread: one page crashing must not take the whole browser down. The cost is more memory and IPC — a deliberate trade of efficiency for isolation.
 
 ## Concurrency, Threads & Synchronization (11)
 
