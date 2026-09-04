@@ -7965,7 +7965,218 @@ class Test {
 ```
 [SO IT 25-07-2026]
 
+   Answer: The output is `19`.
+
+   The key point
+   - `x` is a `static` variable, so there is `one copy shared by every call`. Each call adds 2 to that single shared value.
+   - In `return fun(n-1) + x;` Java evaluates `left to right`. So `fun(n-1)` runs completely `first` — increasing x further — and only `then` is x read.
+
+   Trace
+   ```
+      Initially x = 5
+
+      main calls fun(3)
+      ------------------
+      fun(3) : n = 3, not <= 1
+               x = 5 + 2 = 7
+               evaluate fun(2) FIRST
+
+          fun(2) : n = 2, not <= 1
+                   x = 7 + 2 = 9
+                   evaluate fun(1) FIRST
+
+              fun(1) : n = 1 <= 1  ->  return 1
+
+                   return 1 + x
+                        = 1 + 9        (x is 9 NOW)
+                        = 10
+
+               return 10 + x
+                    = 10 + 9           (x is still 9)
+                    = 19
+   ```
+   ```
+      Output : 19
+   ```
+
+   Step-by-step table
+   ```
+      Call      x before   x after   value of fun(n-1)   returns
+      --------  ---------  --------  -----------------   -------
+      fun(3)        5         7            10            10 + 9 = 19
+      fun(2)        7         9             1             1 + 9 = 10
+      fun(1)        9         9             -             1
+   ```
+   - Note that by the time either `+ x` is evaluated, x has already reached its final value of `9`, because the recursion had already finished increasing it.
+
+   The trap in this question
+   ```
+      A common WRONG answer is 17, obtained by assuming x is read BEFORE
+      the recursive call :
+
+           fun(3) : x = 7 , return fun(2) + 7
+           fun(2) : x = 9 , return fun(1) + 9 = 10
+           total  : 10 + 7 = 17          <- WRONG
+
+      Java's left-to-right evaluation means fun(n-1) is fully evaluated
+      first, so x has already become 9 when it is read. The answer is 19.
+   ```
+
+   What makes it behave this way
+   ```
+      static int x        one copy shared by ALL calls, not one per call
+                          If x were a LOCAL variable, each call would have
+                          its own and the answer would be different.
+
+      left-to-right       Java guarantees that in a + b, a is evaluated
+                          completely before b. C and C++ do NOT guarantee
+                          this, so the same program is undefined there.
+   ```
+
 2. **(খ) কোন object-oriented programming language ব্যবহার করে একটি program লিখুন, যা recursive function ব্যবহার করে Fibonacci series প্রদান করবে।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+   Answer: (Answered in English, as required for IT topics.) The `Fibonacci series` is a sequence in which each term is the sum of the two before it.
+   ```
+      F(0) = 0
+      F(1) = 1
+      F(n) = F(n-1) + F(n-2)     for n >= 2
+
+      0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+   ```
+
+   Java program using recursion
+   ```java
+   import java.util.Scanner;
+
+   class Fibonacci {
+
+       // recursive method
+       public int fib(int n) {
+           if (n == 0) return 0;               // base case 1
+           if (n == 1) return 1;               // base case 2
+           return fib(n - 1) + fib(n - 2);     // recursive case
+       }
+
+       // print the whole series
+       public void printSeries(int count) {
+           System.out.print("Fibonacci series: ");
+           for (int i = 0; i < count; i++)
+               System.out.print(fib(i) + " ");
+           System.out.println();
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           Scanner sc = new Scanner(System.in);
+           System.out.print("How many terms? ");
+           int n = sc.nextInt();
+
+           Fibonacci f = new Fibonacci();       // object of the class
+           f.printSeries(n);
+
+           sc.close();
+       }
+   }
+   ```
+
+   Sample run
+   ```
+      How many terms? 10
+      Fibonacci series: 0 1 1 2 3 5 8 13 21 34
+   ```
+
+   How the recursion works for fib(5)
+   ```
+                          fib(5)
+                         /      \
+                    fib(4)      fib(3)
+                   /     \      /     \
+               fib(3)  fib(2) fib(2) fib(1)
+               /   \    /  \   /  \
+           fib(2) fib(1)...  ...
+           /   \
+       fib(1) fib(0)
+
+      fib(5) = fib(4) + fib(3)
+             = (fib(3)+fib(2)) + (fib(2)+fib(1))
+             = ...
+             = 5
+   ```
+
+   The problem with plain recursion
+   ```
+      fib(2) is computed 3 times, fib(3) twice, and so on.
+      Time complexity is EXPONENTIAL : O(2^n)
+
+      fib(40) takes about a second; fib(50) takes minutes.
+   ```
+
+   Efficient version — recursion with memoization
+   ```java
+   class Fibonacci {
+       private long[] memo;
+
+       public long fib(int n) {
+           if (memo == null) memo = new long[100];
+           if (n <= 1) return n;
+           if (memo[n] != 0) return memo[n];        // already computed
+           memo[n] = fib(n - 1) + fib(n - 2);       // store it
+           return memo[n];
+       }
+   }
+   ```
+   - Each value is computed once, so the time falls from `O(2^n)` to `O(n)`.
+
+   Iterative version, for comparison
+   ```java
+   public void printIterative(int count) {
+       long a = 0, b = 1;
+       for (int i = 0; i < count; i++) {
+           System.out.print(a + " ");
+           long next = a + b;
+           a = b;
+           b = next;
+       }
+   }
+   ```
+   - `O(n)` time and `O(1)` space — the best of the three, but recursion is what the question asks for.
+
+   C++ version
+   ```cpp
+   #include <iostream>
+   using namespace std;
+
+   class Fibonacci {
+   public:
+       int fib(int n) {
+           if (n <= 1) return n;
+           return fib(n - 1) + fib(n - 2);
+       }
+   };
+
+   int main() {
+       Fibonacci f;
+       int n;
+       cout << "How many terms? ";
+       cin >> n;
+       for (int i = 0; i < n; i++) cout << f.fib(i) << " ";
+       return 0;
+   }
+   ```
+
+   Points worth stating
+   ```
+      Every recursion needs a BASE CASE, or it never stops and the program
+           dies with StackOverflowError
+
+      Each recursive call adds a FRAME to the call stack, so deep recursion
+           costs memory as well as time
+
+      Recursion is elegant here but INEFFICIENT; memoization or iteration
+           should be used for any real value of n
+   ```
 
 3. **6.13 Consider the following Java program and determine the integer value printed by the execution of the main() method:** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 ```java
@@ -7983,6 +8194,68 @@ class Test {
     }
 }
 ```
+
+   Answer: The output is `19`.
+
+   Why `x` behaves as it does
+   - `x` is declared `static`, so there is `one copy shared by every call` of `fun`. Each call adds 2 to that same variable.
+   - In `return fun(n-1) + x;` Java evaluates `strictly left to right`. The recursive call `fun(n-1)` therefore runs to completion first — pushing x higher — and `only then` is x read.
+
+   Trace
+   ```
+      Initially x = 5
+
+      fun(3) : n = 3
+               x = 5 + 2 = 7
+               evaluate fun(2) first
+
+           fun(2) : n = 2
+                    x = 7 + 2 = 9
+                    evaluate fun(1) first
+
+                fun(1) : n = 1 <= 1  ->  return 1
+
+                    return 1 + x  =  1 + 9  =  10      (x is 9 now)
+
+               return 10 + x  =  10 + 9  =  19         (x is still 9)
+   ```
+   ```
+      Output : 19
+   ```
+
+   Summary table
+   ```
+      Call      x before   x after   fun(n-1) returns   this call returns
+      --------  ---------  --------  ----------------   -----------------
+      fun(3)        5         7            10           10 + 9 = 19
+      fun(2)        7         9             1            1 + 9 = 10
+      fun(1)        9         9             -            1
+   ```
+   - By the time either `+ x` is evaluated, the recursion has already finished raising x to `9`, so both additions use 9.
+
+   The trap
+   ```
+      A common WRONG answer is 17, from assuming x is read BEFORE the
+      recursive call :
+
+           fun(3) : x = 7 , "return fun(2) + 7"
+           fun(2) : x = 9 , "return fun(1) + 9" = 10
+           total  = 10 + 7 = 17          <- WRONG
+   ```
+   - Java's evaluation order settles it: `a + b` evaluates `a` completely before `b`, so `fun(n-1)` finishes first and x is already 9.
+
+   What the question is testing
+   ```
+      static variable : ONE copy shared by all calls, not one per call.
+                        If x were local, each call would keep its own value.
+
+      evaluation order: Java guarantees left to right in an expression.
+                        C and C++ do NOT, so the same program is
+                        undefined behaviour there.
+
+      recursion       : the calls unwind from the base case upward, and the
+                        additions happen on the way back up.
+   ```
 
 4. **Show the output following program.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1115-1116 (ET: DU)]*
 ```java
@@ -8008,6 +8281,101 @@ public class main {
 }
 ```
 
+   Answer: The program prints an `inverted right triangle` of asterisks: 10 stars on the first line, then 9, and so on down to 1.
+
+   Output
+   ```
+      **********
+      *********
+      ********
+      *******
+      ******
+      *****
+      ****
+      ***
+      **
+      *
+   ```
+
+   How it works
+   ```
+      Outer loop : i = 1 to 10       (one line per value of i)
+      Inner loop : j = 10 down to 1
+
+      Inside the inner loop :
+           a '*' is printed EITHER way - in the if branch and in the else
+           the ONLY difference is that the if branch also BREAKS
+
+      So the inner loop prints one star per iteration and stops as soon
+      as j reaches i.
+   ```
+
+   Counting the stars on each line
+   ```
+      j runs 10, 9, 8, ... down to i, and stops there.
+
+      Number of iterations = 10 - i + 1 = 11 - i
+
+      i = 1  ->  j = 10 down to 1   ->  10 stars
+      i = 2  ->  j = 10 down to 2   ->   9 stars
+      i = 3  ->  j = 10 down to 3   ->   8 stars
+      ...
+      i = 10 ->  j = 10 only        ->   1 star
+   ```
+
+   Trace of the first two lines
+   ```
+      i = 1 :
+         j=10 : 10 != 1 -> print '*'      (1)
+         j=9  :  9 != 1 -> print '*'      (2)
+         ...
+         j=2  :  2 != 1 -> print '*'      (9)
+         j=1  :  1 == 1 -> print '*' and BREAK   (10)
+         newline
+         -> 10 stars
+
+      i = 2 :
+         j=10 down to 3 : 8 stars
+         j=2  :  2 == 2 -> print '*' and BREAK   (9th)
+         newline
+         -> 9 stars
+   ```
+
+   Why the if and the else look pointless
+   ```java
+      if (i == j) { System.out.print("*"); break; }
+      else        { System.out.print("*"); }
+   ```
+   - Both branches print the same thing. The `break` is the only real effect, so the code is equivalent to the much clearer:
+   ```java
+      for (j = n; j >= i; j--)
+          System.out.print("*");
+   ```
+   - Written that way, the inner loop obviously runs `n - i + 1` times, which is the same count.
+
+   A cleaner equivalent program
+   ```java
+   public class Pattern {
+       public static void findOutput(int n) {
+           for (int i = 1; i <= n; i++) {
+               for (int j = n; j >= i; j--)
+                   System.out.print("*");
+               System.out.println();
+           }
+       }
+       public static void main(String[] args) {
+           findOutput(10);
+       }
+   }
+   ```
+
+   Total number of stars printed
+   ```
+      10 + 9 + 8 + ... + 1  =  n(n+1)/2  =  10 x 11 / 2  =  55
+   ```
+
+   - Points worth noting: the inner loop counts `downward`, which is what makes the triangle inverted. Changing it to `for (j = 1; j <= i; j++)` would produce the usual increasing triangle instead.
+
 5. **What is the output of the following java code?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1117 (ET: BUET)]*
 ```java
 class car {
@@ -8026,6 +8394,78 @@ public class Audi extends car {
 }
 ```
 
+   Answer: The output is
+   ```
+      Audi is running
+   ```
+
+   Why
+   - This is `runtime polymorphism`, achieved by `method overriding`.
+   ```java
+      car b = new Audi();
+      b.run();
+   ```
+   - The `reference type` is `car`, but the `actual object` is an `Audi`. In Java the method that runs is decided by the `object`, not by the reference — this is called `dynamic method dispatch`.
+   - `Audi.run()` overrides `car.run()`, so the Audi version executes.
+
+   Step by step
+   ```
+      1. new Audi()      creates an Audi object on the heap
+      2. car b = ...     a car reference is allowed to hold it, because
+                         Audi IS-A car (upcasting, and it is automatic)
+      3. b.run()         the compiler checks that car HAS a run() method - it does
+                         the JVM then looks at the ACTUAL object (Audi)
+                         and calls Audi's run()
+   ```
+   ```
+      Compile time : is run() available on type 'car'?   YES  -> compiles
+      Run time     : what is the real object?            Audi -> Audi.run()
+   ```
+
+   What would change the answer
+   ```java
+      car b = new car();
+      b.run();               // "Car is running" - the object really is a car
+
+      Audi a = new Audi();
+      a.run();               // "Audi is running"
+   ```
+
+   If `run()` were `static`, the answer would be different
+   ```java
+      class car { static void run() { System.out.println("Car is running"); } }
+      class Audi extends car { static void run() { System.out.println("Audi is running"); } }
+
+      car b = new Audi();
+      b.run();               // "Car is running"  <- HIDING, not overriding
+   ```
+   - A static method cannot be overridden, only `hidden`, and hiding is resolved by the `reference type` at compile time. The same is true of `fields`:
+   ```java
+      class car  { String name = "Car"; }
+      class Audi extends car { String name = "Audi"; }
+
+      car b = new Audi();
+      System.out.println(b.name);     // "Car"  - fields are NOT polymorphic
+   ```
+
+   In C++ the base method must be `virtual`
+   ```cpp
+      class car {
+      public:
+          void run() { cout << "Car is running"; }        // NOT virtual
+      };
+      class Audi : public car {
+      public:
+          void run() { cout << "Audi is running"; }
+      };
+
+      car* b = new Audi();
+      b->run();          // "Car is running"  <- because run() is not virtual
+   ```
+   - Adding `virtual` to `car::run()` makes C++ behave like Java. In Java every non-static, non-final method is virtual automatically.
+
+   - The rule to remember: `overridden instance methods are chosen by the OBJECT; static methods and fields are chosen by the REFERENCE`.
+
 6. **Find the output of Java program:** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 ```java
 public class Main{
@@ -8037,6 +8477,67 @@ public class Main{
     }
 }
 ```
+
+   Answer: The output is
+   ```
+       0 5 1 6 2 7
+   ```
+
+   The loop
+   ```java
+      int i = 0;
+      for (int j = 5; i < 3 && j < 10; i++, j++) {
+          System.out.print(" " + i + " " + j);
+      }
+   ```
+   - Note the unusual shape: `i` is declared `outside` the loop, `j` inside it, and the condition tests `both`. The update section increments both with the comma operator.
+
+   Trace
+   ```
+      Initialisation : i = 0 (before the loop) , j = 5
+
+      Iteration 1 : condition  0 < 3 && 5 < 10  -> true
+                    print " 0 5"
+                    update    i = 1 , j = 6
+
+      Iteration 2 : condition  1 < 3 && 6 < 10  -> true
+                    print " 1 6"
+                    update    i = 2 , j = 7
+
+      Iteration 3 : condition  2 < 3 && 7 < 10  -> true
+                    print " 2 7"
+                    update    i = 3 , j = 8
+
+      Iteration 4 : condition  3 < 3  -> FALSE   -> loop ends
+   ```
+   ```
+      Output :  0 5 1 6 2 7
+   ```
+   - Note there is no newline anywhere, so everything appears on one line, and each pair is preceded by a space because the print begins with `" "`.
+
+   Which condition stops the loop
+   ```
+      i < 3   fails first, when i reaches 3
+      j < 10  would not fail until j reached 10, which needs 5 iterations
+
+      Since && requires BOTH to be true, the loop stops after 3 iterations.
+   ```
+   - The `&&` operator also `short-circuits`: once `i < 3` is false, `j < 10` is not even evaluated.
+
+   Variants worth noticing
+   ```
+      If the condition were  i < 3 || j < 10  :
+           the loop would continue while EITHER holds, so it would run
+           5 times, until j reached 10 :
+           " 0 5 1 6 2 7 3 8 4 9"
+
+      If i were declared INSIDE the for statement :
+           for (int i = 0, j = 5; ...)
+           the behaviour would be identical here, but i would then be
+           invisible after the loop.
+   ```
+
+   - Points the question is testing: the `comma operator` in the update section, a `compound condition` with `&&`, and the fact that a variable declared before the loop `survives` it — after the loop, `i` is 3 and `j` is out of scope.
 
 7. **What will be the output of following program?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1192-1193 (ET: N/A)]*
 ```cpp
@@ -8068,6 +8569,80 @@ int main() {
 }
 ```
 
+   Answer: The output is
+   ```
+      a=100 ,b=100
+   ```
+
+   Why b is 100 and not 200
+   - The bug is in `getValues`:
+   ```cpp
+      void getValues(int x, int y) {
+          set_a(x);      // passes x  = 100   correct
+          set_b(x);      // passes x  again!  should be set_b(y)
+      }
+   ```
+   - `set_b(x)` is called instead of `set_b(y)`, so `b` receives 100 as well. The parameter `y` is never used at all.
+
+   Trace
+   ```
+      objA.getValues(100, 200)
+           x = 100 , y = 200
+
+           set_a(x)  ->  set_a(100)  ->  this->a = 100
+           set_b(x)  ->  set_b(100)  ->  this->b = 100      <- y ignored
+
+      objA.putValues()
+           prints  a=100 ,b=100
+   ```
+
+   The corrected program
+   ```cpp
+      void getValues(int x, int y) {
+          set_a(x);
+          set_b(y);        // now b gets 200
+      }
+   ```
+   ```
+      Corrected output :  a=100 ,b=200
+   ```
+
+   Other points the program demonstrates
+
+   `Private member functions`
+   ```cpp
+      private:
+          void set_a(int a) { this->a = a; }
+          void set_b(int b) { this->b = b; }
+   ```
+   - `set_a` and `set_b` are `private`, so they cannot be called from `main`:
+   ```cpp
+      objA.set_a(100);      // COMPILE ERROR - set_a is private
+   ```
+   - But a `public` member function of the same class `can` call them, which is exactly what `getValues()` does. This is legal and is a normal way to keep an internal helper hidden while exposing a controlled public entry point.
+
+   `The this pointer`
+   ```cpp
+      void set_a(int a) { this->a = a; }
+   ```
+   - The parameter `a` and the data member `a` have the same name, so the parameter `shadows` the member. `this->a` refers unambiguously to the member. Without `this->`, the statement `a = a;` would assign the parameter to itself and leave the member uninitialised.
+
+   `Encapsulation`
+   - `a` and `b` are private, so `main` cannot touch them directly:
+   ```cpp
+      objA.a = 500;         // COMPILE ERROR
+   ```
+   - Everything must go through `getValues()` and `putValues()`.
+
+   A note on the code as printed
+   ```
+      The program is missing  #include <iostream>  before
+      'using namespace std;'. Without it, cout and endl are undefined
+      and the program will not compile.
+   ```
+
+   - The lesson the question is teaching: a `copy-paste error` of exactly this kind — passing the wrong parameter — compiles cleanly and produces a silently wrong result. It is the sort of bug that unit tests catch and the compiler cannot.
+
 8. **Find the output below following code.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1194 (ET: N/A)]*
 ```java
 public class Test {
@@ -8082,6 +8657,98 @@ public class Test {
     }
 }
 ```
+
+   Answer: The output is
+   ```
+      false
+      false
+      true
+   ```
+
+   The code
+   ```java
+      String s1 = "test1";                    // string LITERAL  -> string pool
+      String s2 = new String("test1");        // new  -> a fresh HEAP object
+
+      System.out.println(s1 == s2);           // false
+      String s3 = new String("test1");        // another fresh HEAP object
+      System.out.println(s2 == s3);           // false
+      s3 = s1;                                // s3 now points where s1 points
+      System.out.println(s3 == s1);           // true
+   ```
+
+   Why — `==` compares references, not contents
+   ```
+      ==       compares whether two references point to the SAME object
+      .equals() compares the CONTENTS of the two strings
+   ```
+
+   Memory picture
+   ```
+      ---- String pool ----          ---- Heap ----
+         "test1"  <---- s1              [ "test1" ]  <---- s2
+             ^                          [ "test1" ]  <---- s3
+             |
+           s3 (after s3 = s1)
+   ```
+
+   Line by line
+   ```
+      1. String s1 = "test1";
+           A literal. The JVM interns it in the STRING POOL and s1 points there.
+
+      2. String s2 = new String("test1");
+           'new' ALWAYS creates a fresh object on the heap, even though an
+           identical string already exists in the pool.
+
+      3. s1 == s2   ->  FALSE
+           Different objects : one in the pool, one on the heap.
+
+      4. String s3 = new String("test1");
+           Another fresh heap object, separate from s2.
+
+      5. s2 == s3   ->  FALSE
+           Two distinct heap objects, with identical contents.
+
+      6. s3 = s1;
+           s3 now holds the same REFERENCE as s1 - both point to the pooled
+           "test1". The old heap object s3 pointed to becomes garbage.
+
+      7. s3 == s1   ->  TRUE
+           The same object, so the same reference.
+   ```
+
+   What `.equals()` would have given
+   ```java
+      s1.equals(s2)      // TRUE  - the contents are identical
+      s2.equals(s3)      // TRUE
+      s3.equals(s1)      // TRUE
+   ```
+   - All three are true, because `equals()` compares character by character.
+
+   The string pool, demonstrated
+   ```java
+      String a = "hello";
+      String b = "hello";
+      System.out.println(a == b);        // TRUE - both point to the pooled object
+
+      String c = new String("hello");
+      System.out.println(a == c);        // FALSE - c is a new heap object
+
+      String d = c.intern();             // put/find it in the pool
+      System.out.println(a == d);        // TRUE
+   ```
+
+   The practical rule
+   ```
+      ALWAYS compare strings with .equals() , never with ==
+
+      if (name == "Rahim")        // WRONG - may be false even when the
+                                  //         text matches
+      if (name.equals("Rahim"))   // CORRECT
+      if ("Rahim".equals(name))   // BEST - also safe when name is null
+   ```
+   - Comparing with `==` sometimes appears to work, because literals are pooled. That is exactly what makes it dangerous: the bug shows up only when the string came from user input, a file or a database rather than from a literal.
 
 9. **Consider the following program and perform the task that follow:** *[Combined 3 Banks Assistant Programmer 2018 compact it 1194-1195 (ET: N/A)]*
 ```java
@@ -8120,6 +8787,107 @@ public class WhatTheOutput{
     }
 }
 ```
+
+   Answer: The program as printed will `not compile`, because the array is declared as `number` but referred to as `numbers` inside the loop. Once that typing error is corrected, the output is the following.
+
+   Output
+   ```
+      The chosen number, 4, isacceptable
+      The chosen number, 8, isacceptable
+      The chosen number, 12, isacceptable
+      The chosen number, 21, isacceptable
+      The chosen number, 30, isacceptable
+   ```
+   - Note that `100` is never printed, because the loop condition is `i < 5` while the array holds `6` elements.
+   - Note also the missing space: the string is `" is" + result(...)`, so it reads `isacceptable`.
+
+   Why every number gives the same answer
+
+   The method
+   ```java
+      public static int performOperations(int i) {
+          int original = i;
+          return i = ((10 + (i * 2)) / 2 - original);
+      }
+   ```
+   Simplify it algebraically
+   ```
+      (10 + 2i) / 2 - i
+           = 5 + i - i
+           = 5
+   ```
+   - The result is `always 5`, whatever `i` is. The `i * 2` and the `/ 2` cancel exactly, and subtracting `original` removes the remaining `i`.
+
+   Verification for each element
+   ```
+      i = 4   :  (10 + 8)/2  - 4  = 9  - 4  = 5
+      i = 8   :  (10 + 16)/2 - 8  = 13 - 8  = 5
+      i = 12  :  (10 + 24)/2 - 12 = 17 - 12 = 5
+      i = 21  :  (10 + 42)/2 - 21 = 26 - 21 = 5
+      i = 30  :  (10 + 60)/2 - 30 = 35 - 30 = 5
+   ```
+   - Integer division causes no trouble here, because `10 + 2i` is always even.
+
+   The switch then always takes the same branch
+   ```java
+      switch (5) {
+          case 3: ... 
+          case 5: result = "acceptable"; break;      // <- always this one
+          case 7: ...
+          default: ...
+      }
+   ```
+
+   The three defects in the program
+   ```
+      1. numbers[i] should be number[i]        -> compile error as written
+
+      2. i < 5 should be i < number.length     -> the last element (100)
+                                                  is silently skipped
+
+      3. " is" + result(...)                   -> missing a space, so the
+                                                  output reads "isacceptable"
+   ```
+
+   The corrected program
+   ```java
+   public class WhatTheOutput {
+
+       public static int performOperations(int i) {
+           int original = i;
+           return ((10 + (i * 2)) / 2) - original;
+       }
+
+       public static String result(int i) {
+           switch (i) {
+               case 3:  return "a multiple of 3";
+               case 5:  return "acceptable";
+               case 7:  return "a multiple of 7";
+               default: return "unacceptable";
+           }
+       }
+
+       public static void main(String[] args) {
+           int[] number = {4, 8, 12, 21, 30, 100};
+
+           for (int i = 0; i < number.length; i++) {
+               System.out.println("The chosen number, " + number[i] +
+                                  ", is " + result(performOperations(number[i])));
+           }
+       }
+   }
+   ```
+   Corrected output
+   ```
+      The chosen number, 4, is acceptable
+      The chosen number, 8, is acceptable
+      The chosen number, 12, is acceptable
+      The chosen number, 21, is acceptable
+      The chosen number, 30, is acceptable
+      The chosen number, 100, is acceptable
+   ```
+
+   - What the question is really testing: whether the candidate `simplifies the expression` instead of computing it six times. Once `(10 + 2i)/2 - i = 5` is seen, the whole program collapses to a single answer. It is also testing the habit of using `array.length` rather than a hard-coded bound.
 
 10. **You are required to trace the changes in value for each of the numbers, before and after each method are called for each of iterations and finally write down output of the program.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1195-1196 (ET: N/A)]*
 
