@@ -5495,41 +5495,502 @@ ii) 211.10.15.4
 
 1. Describe the functions of a Switch and a Router and explain two key differences between these networking devices. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+   Answer:
+
+   Functions of a switch (Layer 2)
+   - Learns the MAC address of every device by reading the source address of incoming frames, and stores it against a port in the MAC address table.
+   - Forwards each frame only out of the port where the destination MAC lives, instead of flooding it everywhere.
+   - Floods a frame out of all ports when the destination MAC is unknown, or when it is a broadcast or multicast.
+   - Gives every port its own collision domain, so full-duplex operation is possible and collisions disappear.
+   - Runs Spanning Tree Protocol to prevent loops, supports VLANs, port security and QoS on a managed switch.
+
+   Functions of a router (Layer 3)
+   - Connects different networks and forwards packets between them using the destination IP address.
+   - Builds and maintains a routing table, learned statically or through RIP, OSPF, EIGRP or BGP, and chooses the best path by longest prefix match.
+   - Blocks broadcasts, so each interface bounds its own broadcast domain.
+   - Performs NAT, DHCP service, ACL filtering, fragmentation and TTL decrement.
+   - Rewrites the Layer 2 header at every hop while leaving the IP addresses unchanged.
+
+   Two key differences
+
+   | Point | Switch | Router |
+   |---|---|---|
+   | Layer and address used | Layer 2, forwards on `MAC address` | Layer 3, forwards on `IP address` |
+   | Domains | Separates collision domains but keeps one broadcast domain | Separates both collision and broadcast domains |
+
+   - Third difference worth stating: a switch connects devices `within` one network, while a router connects `different` networks — which is why a LAN needs a switch and internet access needs a router.
+
 2. **Briefly describe the following network devices: Repeater, Hub, Bridge, Switch and Router.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 325 (ET: BIBM)]*
+
+   Answer:
+
+   Repeater — Layer 1
+   - Receives a weakened signal, regenerates and retimes it, and sends it on. It extends the distance a segment can cover, for example beyond the 100 m limit of UTP.
+   - It has two ports, understands nothing about addresses, and simply amplifies everything — including noise and collisions.
+
+   Hub — Layer 1
+   - A multi-port repeater. A frame arriving on one port is sent out of every other port.
+   - All ports share one collision domain and one broadcast domain, so it works in half duplex and uses CSMA/CD. Performance collapses as devices are added.
+   - Obsolete today; switches replaced hubs entirely.
+
+   Bridge — Layer 2
+   - Connects two LAN segments and forwards frames between them based on MAC addresses.
+   - It learns which addresses live on which side and filters traffic, so local traffic stays local. This splits the collision domain in two while keeping one broadcast domain.
+   - Usually has two ports; a switch is the modern multi-port version.
+
+   Switch — Layer 2
+   - A multi-port bridge with hardware forwarding. It learns MAC addresses into a table and sends each frame only to the correct port.
+   - Every port is its own collision domain, so full duplex is possible and there are no collisions. All ports remain in one broadcast domain unless VLANs are configured.
+   - Managed switches add VLANs, STP, port security, QoS and link aggregation.
+
+   Router — Layer 3
+   - Connects different networks and forwards packets using the destination IP address and a routing table.
+   - It does not forward broadcasts, so it separates broadcast domains as well as collision domains.
+   - Also performs NAT, DHCP, ACL filtering and fragmentation, and runs routing protocols.
+
+   Summary
+
+   | Device | Layer | Address used | Collision domains | Broadcast domains |
+   |---|---|---|---|---|
+   | Repeater | 1 | None | 1 | 1 |
+   | Hub | 1 | None | 1 | 1 |
+   | Bridge | 2 | MAC | One per port | 1 |
+   | Switch | 2 | MAC | One per port | 1 (or one per VLAN) |
+   | Router | 3 | IP | One per port | One per interface |
 
 3. **How many collision domians are created when you segment a network with a 12-port switch?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
+   Answer: A 12-port switch creates `12 collision domains` — one per port.
+
+   Reason
+   - A switch gives each port its own dedicated bandwidth and its own collision domain. Two devices on different ports can transmit at the same instant without colliding, because the switch buffers and forwards each frame independently.
+   - With full-duplex links there are effectively no collisions at all, but the count of collision domains is still one per port.
+
+   Broadcast domains
+   - The same switch creates only `1 broadcast domain`, because a switch forwards broadcasts out of every port. Only a router — or VLANs configured on the switch — can split the broadcast domain.
+   - If the 12 ports were divided into 3 VLANs, there would be 12 collision domains and 3 broadcast domains.
+
+   Comparison
+
+   | Device | Collision domains | Broadcast domains |
+   |---|---|---|
+   | 12-port hub | 1 | 1 |
+   | 12-port switch | `12` | `1` |
+   | 12-port switch with 3 VLANs | 12 | 3 |
+   | Router with 12 interfaces | 12 | 12 |
+
 4. **Difference among Switch, Bridge and Router.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 524 (ET: MIST)]*
+
+   Answer:
+
+   | Point | Bridge | Switch | Router |
+   |---|---|---|---|
+   | OSI layer | 2 (Data Link) | 2 (Data Link) | 3 (Network) |
+   | Address used | MAC | MAC | IP |
+   | Ports | Usually 2 | Many — 8, 24, 48 | Few, typically 2–8 |
+   | Forwarding | Software based | Hardware (ASIC), very fast | Software and hardware, slower per packet |
+   | Purpose | Joins two LAN segments | Connects many devices in one LAN | Connects different networks |
+   | Collision domain | One per port | One per port | One per interface |
+   | Broadcast domain | One (shared) | One, or one per VLAN | One per interface — it blocks broadcasts |
+   | Routing table | No | No (a Layer 3 switch does) | Yes, with RIP, OSPF, BGP |
+   | NAT / DHCP / firewall | No | No | Yes |
+   | Speed | Slow | Very fast | Slower, because it inspects Layer 3 |
+   | Cost | Low | Moderate | High |
+
+   Short summary
+   - A bridge is the ancestor: two ports, learns MAC addresses, splits a collision domain.
+   - A switch is a multi-port bridge in hardware — it is what every LAN uses today.
+   - A router works one layer higher, joining separate networks and stopping broadcasts. It is what connects the LAN to the internet.
 
 5. **Differentiate between Collision Domain and Broadcast Domain in computer network. What is the function of DNS and DHCP?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 535 (ET: MIST)]*
 
+   Answer:
+
+   (a) Collision domain vs broadcast domain
+
+   | Point | Collision domain | Broadcast domain |
+   |---|---|---|
+   | Definition | The set of devices whose frames can collide with each other | The set of devices that receive a broadcast sent by any one of them |
+   | Layer | Physical / Data Link | Data Link / Network |
+   | Caused by | Shared medium and half duplex | The nature of a broadcast address |
+   | Broken by | Switch, bridge, router | Router, or VLANs on a switch |
+   | Not broken by | Hub, repeater | Hub, switch, bridge |
+   | Address | — | FF:FF:FF:FF:FF:FF or 255.255.255.255 |
+   | Effect of being large | Many collisions, retransmissions, poor throughput | Broadcast storms, wasted CPU on every host |
+
+   Device summary
+
+   | Device | Collision domains | Broadcast domains |
+   |---|---|---|
+   | Hub (8 ports) | 1 | 1 |
+   | Switch (8 ports) | 8 | 1 |
+   | Switch with 3 VLANs | 8 | 3 |
+   | Router (4 interfaces) | 4 | 4 |
+
+   (b) Function of DNS
+   - Translates domain names into IP addresses (A and AAAA records) and IP addresses back into names (PTR records).
+   - Routes email using MX records, supports aliases with CNAME, and distributes load across servers.
+   - Works hierarchically — root, TLD, authoritative — and caches answers for the TTL. Port 53, UDP for queries and TCP for zone transfers.
+
+   (c) Function of DHCP
+   - Automatically assigns an IP address, subnet mask, default gateway and DNS servers to a device joining the network.
+   - Uses the DORA exchange — Discover, Offer, Request, Acknowledge — on UDP ports 67 and 68.
+   - Leases addresses for a limited time and reuses them, removing manual configuration and duplicate-address errors.
+
 6. **Write down the difference between gateway and firewall.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Gateway | Firewall |
+   |---|---|---|
+   | Purpose | Connects two networks that use different protocols or architectures, translating between them | Controls and filters traffic to protect a network from unauthorised access |
+   | Main job | Connectivity and protocol conversion | Security enforcement |
+   | OSI layer | Can operate at all seven layers | Layer 3 and 4 for a packet filter, up to Layer 7 for an NGFW or WAF |
+   | Traffic handling | Passes traffic through, converting formats | Permits or denies traffic against a rule set |
+   | Decision basis | Protocol and address translation rules | Source, destination, port, protocol, state, and content |
+   | Direction | Usually bidirectional pass-through | Inspects both directions, blocking what is not allowed |
+   | Examples | Default gateway (router), VoIP gateway (IP to PSTN), email gateway, API gateway | Packet filter, stateful firewall, proxy firewall, NGFW, WAF |
+   | Without it | Two dissimilar networks cannot communicate | The network is exposed to attack |
+
+   Relationship
+   - They are complementary, not alternatives. A gateway makes communication possible; a firewall decides which of that communication is allowed.
+   - In practice a single box often does both: a home router is a gateway (NAT to the ISP) and a firewall (blocking unsolicited inbound traffic) at the same time. In an enterprise a "security gateway" or UTM device combines routing, NAT, firewall, IPS and content filtering.
 
 7. **What is gateway? Is router and gateway have any difference?** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
+   Answer:
+
+   What is a gateway
+   - A gateway is a device that joins two networks that use different protocols, architectures or data formats, and translates between them so they can communicate.
+   - It can operate at any layer of the OSI model, up to Layer 7, because full protocol conversion may need the payload to be rewritten.
+   - Examples: a VoIP gateway between an IP network and the PSTN, an email gateway between SMTP and a proprietary mail system, an IoT gateway between Zigbee sensors and the internet, and an API gateway in front of microservices.
+   - The `default gateway` on a PC is a special, common case: it is simply the router the host sends traffic to when the destination is outside its own subnet.
+
+   Is there a difference from a router?
+   - Yes. Every router is a kind of gateway, but not every gateway is a router.
+
+   | Point | Router | Gateway |
+   |---|---|---|
+   | Primary job | Forward packets between networks by IP address | Translate between different protocols or architectures |
+   | Requirement | Both networks must use the same protocol suite (IP) | The networks may use entirely different protocols |
+   | OSI layer | Layer 3 | Any layer, up to Layer 7 |
+   | Complexity | Reads the IP header only | May rewrite the entire message |
+   | Speed | Fast, hardware assisted | Slower, because of translation |
+   | Example | Joining 192.168.1.0/24 to 10.0.0.0/8 | Joining an IP network to the PSTN |
+
+   Why the terms are used interchangeably
+   - In an IP-only world, the device you send off-network traffic to is a router, and it is conventionally called the "default gateway". So in everyday networking the two words describe the same box. The distinction only becomes real when actual protocol translation is involved.
+
 8. **অথবা, (ক) ডেটা ট্রান্সমিশনে Router ও Gateway এর মধ্যে কোনটি অধিকতর সুবিধাজনক-মতামত ব্যক্ত করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 615 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) Which is more advantageous for data transmission, a router or a gateway?
+
+   The short answer
+   - For ordinary data transmission on an IP network, a `router is more advantageous`. A gateway is only preferable when the two networks genuinely speak different protocols.
+
+   Reasons a router is better for normal transmission
+
+   | Point | Router | Gateway |
+   |---|---|---|
+   | Speed | Very fast — reads only the IP header, and forwarding is done in hardware | Slower — may have to parse and rewrite the whole message |
+   | Complexity | Simple and well standardised | Complex, often application specific |
+   | Cost | Lower | Higher |
+   | Scalability | Handles millions of packets per second | Becomes a bottleneck under load |
+   | Reliability | Mature protocols, well understood failure modes | More moving parts, more failure points |
+   | Standardisation | Universal — IP, OSPF, BGP | Often proprietary to the pair of protocols involved |
+
+   When a gateway is the better choice
+   - The two networks use different protocol suites, for example an IP network and the PSTN, or a Zigbee sensor network and the internet. A router simply cannot do this.
+   - Data format conversion is required, such as an email gateway or a protocol translator between an old mainframe system and a modern one.
+   - Application-layer inspection or mediation is needed, as with an API gateway or a security gateway.
+
+   Conclusion
+   - If both networks speak IP — which is almost always the case today — use a router: it is faster, cheaper, simpler and more scalable.
+   - Use a gateway only where translation is unavoidable, accepting the performance cost as the price of connectivity that would otherwise be impossible.
+   - In practice modern devices blur the line: a single enterprise box routes, does NAT, filters and translates, so the real design question is which functions you enable rather than which device you buy.
 
 9. **Write the Difference among Network Switch, Hub and Router.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1023 (ET: N/A)], [DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
+   Answer:
+
+   | Point | Hub | Switch | Router |
+   |---|---|---|---|
+   | OSI layer | 1 — Physical | 2 — Data Link | 3 — Network |
+   | Address used | None | MAC address | IP address |
+   | Forwarding | Broadcasts to all ports | Sends only to the correct port | Routes between networks by best path |
+   | Intelligence | None | Learns a MAC address table | Maintains a routing table |
+   | Collision domains | 1 for the whole device | One per port | One per interface |
+   | Broadcast domains | 1 | 1 (or one per VLAN) | One per interface |
+   | Duplex | Half only | Full duplex | Full duplex |
+   | Bandwidth | Shared among all ports | Dedicated per port | Depends on the link |
+   | Security | None — every device sees every frame | Better, frames go only where needed | Best — ACLs, NAT, firewall |
+   | Speed | Slowest | Very fast (hardware ASIC) | Slower per packet, more processing |
+   | Cost | Cheapest | Moderate | Highest |
+   | Use | Obsolete | Connects devices within a LAN | Connects different networks, LAN to internet |
+
+   In one line each
+   - Hub — a dumb repeater that shouts everything to everyone.
+   - Switch — learns who is where and speaks only to the right port.
+   - Router — knows about whole networks and finds the path between them.
+
 10. **(iii) Router and Gateway এর ফাংশন লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 789 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.)
+
+    Functions of a router
+    - Forwards packets between different networks using the destination IP address.
+    - Maintains a routing table, learned statically or through RIP, OSPF, EIGRP or BGP, and selects the best path by longest prefix match.
+    - Determines the path — choosing the best of several possible routes by metric.
+    - Blocks broadcasts, so each interface is a separate broadcast domain.
+    - Performs NAT, translating private addresses to a public one.
+    - Acts as a DHCP server, handing out addresses on the LAN.
+    - Filters traffic with access control lists, and often includes firewall functions.
+    - Fragments packets that exceed the next link's MTU, and decrements the TTL to kill looping packets.
+    - Rewrites the Layer 2 header at every hop while leaving the IP header addresses unchanged.
+
+    Functions of a gateway
+    - Connects two networks that use different protocols or architectures, and translates between them.
+    - Converts data formats, character sets and message structures where required.
+    - Can operate at every layer up to Layer 7, since full conversion may require rewriting the payload.
+    - Acts as the entry and exit point for a network — the `default gateway` is the router a host uses for anything outside its own subnet.
+    - Often adds security functions: filtering, authentication and logging at the network boundary.
+    - Examples: VoIP gateway (IP to PSTN), email gateway, IoT gateway, API gateway, payment gateway.
+
+    Relationship
+    - Every router is a gateway, but a gateway may do far more than route: it may translate protocols entirely. On an all-IP network the two words are used for the same device.
 
 11. **Write down the difference between Hub and Switch.** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Hub | Switch |
+    |---|---|---|
+    | OSI layer | 1 — Physical | 2 — Data Link |
+    | Address used | None | MAC address |
+    | Frame handling | Broadcasts to every port | Forwards only to the destination port |
+    | Intelligence | None; it is a multi-port repeater | Learns and stores a MAC address table |
+    | Collision domain | One for the whole device | One per port |
+    | Duplex | Half duplex only, uses CSMA/CD | Full duplex, so no collisions |
+    | Bandwidth | Shared — a 100 Mbps hub with 10 users gives about 10 Mbps each | Dedicated — every port gets the full 100 Mbps |
+    | Security | Poor; any device can sniff all traffic | Better; frames go only where they are needed |
+    | Performance | Falls sharply as devices are added | Stays high |
+    | Cost | Cheaper | Slightly more expensive |
+    | Status | Obsolete | Standard in every network today |
+
+    Example
+    - On a 100 Mbps hub with 10 active users, all 10 share one 100 Mbps collision domain, so each gets roughly 10 Mbps and collisions are constant.
+    - On a 100 Mbps switch, each of the 10 users has a private 100 Mbps full-duplex link and there are no collisions at all.
+
 12. **Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.)
+
+    What is a Wi-Fi access point
+    - An access point (AP) is a device that creates a wireless LAN and lets Wi-Fi clients join a wired network. It is the bridge between the radio side (802.11) and the cable side (Ethernet).
+    - It broadcasts an SSID, authenticates clients with WPA2 or WPA3, and converts wireless frames into Ethernet frames and back.
+    - It works at Layer 2 and is effectively a wireless switch port; it does not route.
+    - Types: standalone (configured individually), controller-based (managed centrally in an enterprise), and mesh (APs relay for each other). Most are powered over Ethernet (PoE).
+    - Multiple APs on different channels give roaming coverage across a building, and clients hand over between them.
+    - A home "Wi-Fi router" is really three devices in one box: a router, a switch and an access point.
+
+    Router vs Switch
+
+    | Point | Switch | Router |
+    |---|---|---|
+    | OSI layer | 2 — Data Link | 3 — Network |
+    | Address used | MAC | IP |
+    | Purpose | Connects devices within one network | Connects different networks |
+    | Table kept | MAC address table | Routing table |
+    | Broadcast domain | One (or one per VLAN) | One per interface — it blocks broadcasts |
+    | Ports | Many (24, 48) | Few |
+    | Speed | Very fast, hardware forwarding | Slower, more processing per packet |
+    | Extra functions | VLANs, STP, port security | NAT, DHCP, ACL, firewall, routing protocols |
+    | Placement | Inside the LAN | At the network boundary |
+    | Cost | Lower | Higher |
 
 13. **হাব, সুইচ ও রাউটার এর মধ্যে পার্থক্য লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    | Point | Hub | Switch | Router |
+    |---|---|---|---|
+    | OSI layer | 1 — Physical | 2 — Data Link | 3 — Network |
+    | Address used | None | MAC address | IP address |
+    | Forwarding | Sends to every port | Sends only to the destination port | Routes between networks |
+    | Intelligence | None | Learns a MAC table | Maintains a routing table |
+    | Collision domain | 1 total | One per port | One per interface |
+    | Broadcast domain | 1 | 1 (or per VLAN) | One per interface |
+    | Duplex | Half only | Full | Full |
+    | Bandwidth | Shared | Dedicated per port | Depends on the link |
+    | Security | None | Moderate | Highest — ACL, NAT, firewall |
+    | Cost | Lowest | Moderate | Highest |
+    | Use | Obsolete | Building a LAN | Joining LAN to internet, or LAN to LAN |
+
+    Simple summary
+    - Hub — repeats everything to everyone, wasting bandwidth.
+    - Switch — learns which device is on which port and delivers precisely.
+    - Router — connects entire networks and chooses the best path between them.
+
 14. **(c) Briefly describe three devices using which different LANs can be connected.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
+
+    Answer: Three devices used to connect different LANs together.
+
+    1. Bridge (Layer 2)
+    - Connects two LAN segments that use the same protocol, and forwards frames between them based on MAC addresses.
+    - It learns which addresses are on each side and filters local traffic, so only frames destined for the other side cross.
+    - Effect: splits the collision domain in two but keeps a single broadcast domain.
+    - Suitable when two segments of the same network need to be joined and local traffic kept local.
+
+    2. Switch (Layer 2)
+    - A multi-port bridge implemented in hardware. It connects many devices and many segments, forwarding each frame only to the correct port using its MAC address table.
+    - Every port is its own collision domain, and full duplex removes collisions entirely.
+    - With VLANs it can also create several logical LANs on one physical switch, which are then joined by a router.
+    - Suitable for connecting LAN segments within one building at high speed.
+
+    3. Router (Layer 3)
+    - Connects LANs that are on different IP networks, forwarding packets by IP address using a routing table.
+    - It blocks broadcasts, so each connected LAN keeps its own broadcast domain — this is what stops a broadcast storm in one LAN from affecting the others.
+    - It can also join networks over a WAN link, and it adds NAT, DHCP and ACL filtering.
+    - Suitable for connecting LANs in different buildings, cities, or with different addressing.
+
+    Also worth mentioning
+    - Gateway — needed when the two LANs use different protocol suites, since it translates between them.
+    - Repeater or hub (Layer 1) — extends a segment but does not really "connect LANs"; it merely enlarges one.
+
+    | Device | Layer | Joins | Separates broadcasts |
+    |---|---|---|---|
+    | Bridge | 2 | Two segments of one LAN | No |
+    | Switch | 2 | Many segments and devices | No (yes with VLANs) |
+    | Router | 3 | Different IP networks | Yes |
 
 15. **(ক) Hub এবং Switch কী? কোনটির ব্যবহার সুবিধাজনক সপক্ষে যুক্তি দিন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    What is a hub
+    - A Layer 1 device — a multi-port repeater. A frame arriving on one port is regenerated and sent out of every other port.
+    - It has no intelligence, keeps no address table, and cannot tell one device from another.
+    - All ports share one collision domain and one broadcast domain, so it must run half duplex with CSMA/CD.
+
+    What is a switch
+    - A Layer 2 device — a multi-port bridge implemented in hardware. It learns the MAC address behind each port and forwards a frame only to the port where its destination lives.
+    - Every port is a separate collision domain, so full-duplex operation is possible and collisions disappear.
+    - Managed switches add VLANs, STP, port security and QoS.
+
+    Which is preferable, and why — the `switch`, decisively
+
+    - Bandwidth. A 100 Mbps hub with 10 users shares one 100 Mbps pipe, so each user gets roughly 10 Mbps. On a switch each user has a private 100 Mbps full-duplex link.
+    - Collisions. A hub's single collision domain means constant collisions and retransmissions as users increase; a switch has none.
+    - Security. On a hub every device receives every frame, so any machine can sniff passwords. A switch sends frames only where they belong.
+    - Scalability. Hub performance collapses beyond a handful of active users; a switch stays fast.
+    - Features. VLANs, QoS, link aggregation and port security exist only on switches.
+    - Cost. Switches are now so cheap that hubs have no price advantage at all, and hubs are effectively no longer manufactured.
+
+    - The only argument ever made for a hub is that it repeats all traffic to all ports, which is occasionally convenient for packet capture — and even that is now done with a switch's port-mirroring (SPAN) feature.
+    - Conclusion: use a switch in every practical situation.
+
 16. **Difference among HUB, Switch and Router.** *[DESCO Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
+
+    Answer:
+
+    | Point | Hub | Switch | Router |
+    |---|---|---|---|
+    | OSI layer | 1 — Physical | 2 — Data Link | 3 — Network |
+    | Address used | None | MAC | IP |
+    | How it forwards | Floods every port | Consults a learned MAC table | Consults a routing table |
+    | Collision domains | 1 | One per port | One per interface |
+    | Broadcast domains | 1 | 1 (or one per VLAN) | One per interface |
+    | Duplex | Half only | Full | Full |
+    | Bandwidth per user | Shared | Dedicated | Depends on the link |
+    | Filtering | None | By MAC | By IP, port, protocol (ACL) |
+    | Extra features | None | VLAN, STP, port security, QoS | NAT, DHCP, firewall, routing protocols |
+    | Connects | Devices in one segment | Devices in one LAN | Different networks |
+    | Speed | Slowest | Fastest (ASIC) | Slower per packet |
+    | Cost | Lowest | Moderate | Highest |
+    | Status | Obsolete | Standard | Essential for internet access |
 
 17. **(a) What are the difference among Hub, Switch and Routers?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1144 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Hub | Switch | Router |
+    |---|---|---|---|
+    | OSI layer | 1 — Physical | 2 — Data Link | 3 — Network |
+    | Decision based on | Nothing; it just repeats | MAC address | IP address |
+    | Table maintained | None | MAC address table | Routing table |
+    | Traffic sent to | All ports | Only the destination port | The best next hop towards the destination network |
+    | Collision domain | One for the device | One per port | One per interface |
+    | Broadcast domain | One | One (VLANs can split it) | One per interface — blocks broadcasts |
+    | Duplex | Half duplex, CSMA/CD | Full duplex, no collisions | Full duplex |
+    | Security | None; everyone sees everything | Frames go only where needed | ACLs, NAT, firewall |
+    | Typical use | Obsolete | Building the LAN | Connecting LAN to internet or LAN to LAN |
+    | Cost | Lowest | Moderate | Highest |
+
+    Practical illustration
+    ```
+    Internet
+       |
+    [ROUTER]        <- joins the LAN to the internet, blocks broadcasts, does NAT
+       |
+    [SWITCH]        <- connects all internal devices, one collision domain per port
+     / | \
+    PC PC PC
+    ```
+    - A hub would sit where the switch is, but would share bandwidth and let every PC see every frame — which is why it is no longer used.
+
 18. **Difference between Router and Switch.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
+    Answer:
+
+    | Point | Switch | Router |
+    |---|---|---|
+    | OSI layer | 2 — Data Link | 3 — Network |
+    | Address used | MAC address | IP address |
+    | Table kept | MAC address table | Routing table |
+    | Purpose | Connects devices within the same network | Connects different networks |
+    | Broadcast handling | Forwards broadcasts to all ports | Blocks broadcasts |
+    | Broadcast domain | One (or one per VLAN) | One per interface |
+    | Ports | Many — 8, 24, 48 | Few — 2 to 8 |
+    | Speed | Very fast, hardware ASIC forwarding | Slower, more processing per packet |
+    | Protocols run | STP, VLAN (802.1Q), LACP | RIP, OSPF, EIGRP, BGP |
+    | Extra functions | Port security, QoS, link aggregation | NAT, DHCP, ACL, firewall, VPN |
+    | Placement | Inside the LAN | At the boundary of the network |
+    | Cost | Lower | Higher |
+    | WAN support | No | Yes |
+
+    Key point
+    - A switch works `inside` a network; a router works `between` networks. That single distinction explains almost every other difference in the table — the addresses used, the tables kept, the handling of broadcasts and the placement in the topology.
+    - A Layer 3 switch blurs the line: it does hardware routing between VLANs, combining switch speed with basic router function, but it still lacks WAN interfaces and the full feature set of a router.
+
 19. **Describe about Hub, Switch and Router.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1214 (ET: N/A)]*
+
+    Answer:
+
+    Hub — Layer 1
+    - A multi-port repeater. Any frame received on one port is regenerated and sent out of every other port, with no examination of addresses.
+    - All ports share one collision domain and one broadcast domain, so it must work in half duplex using CSMA/CD, and bandwidth is shared among all users.
+    - No intelligence, no filtering, no security — every device sees every frame.
+    - Types were passive, active and intelligent. It is obsolete today, completely replaced by switches.
+
+    Switch — Layer 2
+    - A multi-port bridge built in hardware. It reads the source MAC address of every incoming frame and records which port it came from, building a MAC address table.
+    - A frame is then forwarded only out of the port where its destination lives. Unknown, broadcast and multicast frames are flooded.
+    - Each port is its own collision domain with dedicated bandwidth, and full duplex means no collisions at all.
+    - Forwarding methods: store-and-forward (checks the CRC first, safest), cut-through (fastest) and fragment-free.
+    - Managed switches add VLANs to split broadcast domains, Spanning Tree Protocol to prevent loops, port security, QoS and link aggregation.
+
+    Router — Layer 3
+    - Connects different networks and forwards packets between them using the destination IP address and a routing table, choosing the best path by longest prefix match.
+    - Routes are learned statically or dynamically through RIP, OSPF, EIGRP or BGP.
+    - It does not forward broadcasts, so every interface bounds a separate broadcast domain — this is what stops a broadcast storm spreading.
+    - Additional functions: NAT, DHCP server, ACL filtering, VPN termination, fragmentation and TTL decrement.
+    - It rewrites the Layer 2 frame at each hop while leaving the IP addresses untouched, which is why the IP header identifies the endpoints and the MAC header identifies only the current hop.
+
+    ```
+    Internet --- [ROUTER] --- [SWITCH] --- PC, PC, PC, Printer
+                 Layer 3       Layer 2
+                 IP, NAT       MAC, VLAN
+    ```
 
 ## Multiplexing & Bandwidth (18)
 
