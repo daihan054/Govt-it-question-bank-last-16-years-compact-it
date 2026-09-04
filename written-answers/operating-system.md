@@ -12617,9 +12617,181 @@ The content of the matrix. Need is defined to be Max – Allocation.
 
 1. Multi-threaded processing and distributed computing have become essential. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
+   Answer: The question is `incomplete` — only a statement is given, with no actual question following it. The topic it points to is answered below.
+
+   Multi-threaded processing
+   - `Multithreading` means running several `threads` inside one process. All threads share the process's code, data and heap; each has only its own `stack`, `registers` and `program counter`.
+   ```
+      ONE PROCESS , THREE THREADS
+      +---------------------------------------+
+      | stk T1 |  stk T2  |  stk T3           |  PRIVATE
+      +---------------------------------------+
+      |         HEAP , DATA , TEXT            |  SHARED
+      +---------------------------------------+
+   ```
+   - Why it has become essential: `multicore CPUs`. A single-threaded program uses only one core, so on an 8-core machine it wastes 7 of them. Threads are the way a program gets `real parallelism`.
+   - Other reasons: `responsiveness` — a GUI or a server keeps answering while a worker thread does the slow job; `low cost` — creating a thread and switching between threads is far cheaper than for a process; and `easy sharing` — threads use the same variables directly, with no IPC layer.
+   - The price: shared memory brings `race conditions`, so `mutexes` and `semaphores` are needed; and a crash in one thread kills the whole process.
+
+   Distributed computing
+   - `Distributed computing` spreads work across `many machines` connected by a network, which appear to the user as one system.
+   ```
+           +---------+   +---------+   +---------+
+           | Node 1  |   | Node 2  |   | Node 3  |
+           +---------+   +---------+   +---------+
+                |             |             |
+                +------- network -----------+
+                              |
+                       +-------------+
+                       |   Client    |
+                       +-------------+
+   ```
+   - Why it has become essential: one machine cannot be made fast enough or large enough for modern workloads. Adding machines (`horizontal scaling`) is cheaper and has no ceiling, and multiple machines give `fault tolerance` — if one dies the others carry on.
+   - Examples: `Hadoop` and `Spark` for large data sets, `Kubernetes` for containers, cloud services, and bank core systems replicated across data centres for disaster recovery.
+   - The price: the `network` may fail or be slow, keeping data `consistent` across nodes is hard (the `CAP theorem` says you cannot have consistency, availability and partition tolerance all at once), and debugging is much harder than on one machine.
+
+   How the two relate
+   ```
+      MULTITHREADING  : parallelism INSIDE one machine , shared memory
+      DISTRIBUTED     : parallelism ACROSS many machines , message
+                        passing over a network
+
+      Real systems use BOTH : each node in a cluster runs a
+      multi-threaded server process.
+   ```
+
 2. **What is Multithreading programming? Why Multithreading used in programming?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 296 (ET: BIBM)]*
 
+   Answer: What multithreaded programming is
+   - `Multithreading` is writing a program so that several `threads` run inside one process. Each thread is a separate path of execution, but they all share the process's memory.
+   ```
+      SHARED among threads : code (TEXT) , globals and statics (DATA) ,
+                             HEAP , open files , signal handlers
+      PRIVATE to a thread  : STACK , registers , program counter ,
+                             thread ID
+   ```
+   ```
+      ONE PROCESS , THREE THREADS
+      +----------------------------------------+
+      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
+      +----------------------------------------+
+      |        HEAP    (shared)                |
+      |        DATA    (shared)                |  SHARED
+      |        TEXT    (shared)                |
+      +----------------------------------------+
+   ```
+   - A single-threaded program does one thing at a time; a multithreaded one can download a file, update the screen and write a log at the same time.
+
+   Why multithreading is used
+
+   (a) Responsiveness
+   ```
+      A single-threaded GUI that starts a 10-second file save FREEZES -
+      it cannot repaint or accept clicks until the save ends.
+
+      With threads : the worker thread saves the file while the UI
+      thread keeps answering the user.
+   ```
+
+   (b) Use of multiple cores — real parallelism
+   ```
+      On an 8-core CPU a single-threaded program uses ONE core and
+      wastes seven. Eight threads can genuinely run at the same instant,
+      one per core.
+   ```
+
+   (c) Cheaper than processes
+   ```
+      Creating a process : new address space , new page table , copy
+           the parent - EXPENSIVE.
+      Creating a thread  : just a stack and a register set - CHEAP,
+           roughly 10 to 100 times faster.
+
+      A context switch between threads of the same process needs NO
+      page table change and NO TLB flush, so it is far quicker too.
+   ```
+
+   (d) Easy sharing of data
+   - Threads share the heap and globals, so they exchange data by simply writing a variable. Processes need `IPC` — pipes, shared memory or sockets — which is slower and more code.
+
+   (e) Better use of waiting time
+   - While one thread blocks on disk or network I/O, another thread of the same process keeps the CPU busy. A web server usually gives one thread per request for exactly this reason.
+
+   The cost, which should be mentioned
+   ```
+      RACE CONDITION - two threads doing  count = count + 1  can both
+           read the old value, so one increment is LOST.
+           -> MUTEX or SEMAPHORE is needed.
+
+      DEADLOCK       - two threads each holding a lock the other wants.
+
+      HARD TO DEBUG  - bugs depend on timing and may not repeat.
+
+      NO ISOLATION   - a segmentation fault in one thread kills the
+           WHOLE process and every thread in it.
+   ```
+   - That last point explains why a browser like Chrome puts each tab in a separate `process` rather than a thread: one crashing page must not take the whole browser down.
+
 3. **What is Multithreading System?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1460 (ET: N/A)]*
+
+   Answer: What a multithreading system is
+   - A `multithreading system` is one in which a single process is divided into several `threads`, each running its own path of execution, while they all share the process's memory and resources. The OS can schedule those threads independently, so several can run at once on different cores.
+   ```
+      ONE PROCESS , THREE THREADS
+      +----------------------------------------+
+      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
+      +----------------------------------------+
+      |         HEAP   (shared)                |
+      |         DATA   (shared)                |  SHARED
+      |         TEXT   (shared)                |
+      +----------------------------------------+
+      Each thread has its own PROGRAM COUNTER and REGISTERS.
+   ```
+   - A thread is called a `lightweight process` because it carries far less state than a process: no separate address space, no page table of its own.
+
+   Multithreading models
+   ```
+      MANY-TO-ONE
+           Many user threads mapped to ONE kernel thread.
+           Cheap, but ONE blocking call blocks ALL of them, and it
+           cannot use multiple cores.
+
+      ONE-TO-ONE
+           Each user thread has its OWN kernel thread.
+           True parallelism and no blocking problem, but each thread
+           costs kernel resources. Used by Linux and Windows.
+
+      MANY-TO-MANY
+           Many user threads multiplexed onto a smaller number of
+           kernel threads. Combines the advantages, but is complex.
+   ```
+
+   Types of thread
+   ```
+      USER-LEVEL THREADS
+           Managed by a library in user space. Fast to create and
+           switch, but the kernel does not know they exist, so a
+           blocking system call stops all of them.
+
+      KERNEL-LEVEL THREADS
+           Managed by the OS. Slower to create, but they can run on
+           different cores and one blocking does not stop the rest.
+   ```
+
+   Benefits
+   - `Responsiveness` — a GUI or a server keeps answering while a worker thread does the slow job.
+   - `Resource sharing` — threads share code, data and files by default, with no IPC layer.
+   - `Economy` — creating a thread and switching between threads is much cheaper than for a process, since the address space does not change and the TLB is not flushed.
+   - `Scalability` — different threads run on different cores, giving real parallelism on a multicore CPU.
+
+   Problems
+   ```
+      RACE CONDITION : shared data written by two threads at once.
+                       Needs a MUTEX or SEMAPHORE.
+      DEADLOCK       : each thread holds the lock the other wants.
+      NO ISOLATION   : a crash in one thread kills the whole process.
+      DEBUGGING      : bugs depend on timing and may not repeat.
+   ```
 
 4. **What is the output of the following code?** *[BAERA Assistant Engineer (CSE) 2023 compact it 574 (ET: BUET)]*
 ```c
@@ -12643,19 +12815,542 @@ int main(int argc, char *argv[]){
 }
 ```
 
+   Answer: Output
+   ```
+      0
+      1
+      2
+      3
+
+      Four lines - the numbers 0, 1, 2 and 3, each once.
+      The ORDER is NOT guaranteed, because the four children are
+      separate processes scheduled independently. On most systems it
+      comes out in order, but 2 1 0 3 is equally legal.
+   ```
+
+   Why — the key point
+   ```
+      The child does  printf  and then  exit(0) , so a child NEVER
+      returns to the loop. Only the PARENT keeps looping.
+
+      Therefore exactly FOUR children are created, one per iteration :
+
+           i = 0 : parent forks -> child C0 prints 0 , exits
+           i = 1 : parent forks -> child C1 prints 1 , exits
+           i = 2 : parent forks -> child C2 prints 2 , exits
+           i = 3 : parent forks -> child C3 prints 3 , exits
+
+      Total processes = 1 parent + 4 children = 5
+   ```
+
+   Process tree
+   ```
+                       PARENT
+                    /   |   |   \
+                  C0   C1  C2   C3
+                (0)   (1) (2)   (3)
+
+      A FLAT tree - every child is a direct child of the parent.
+   ```
+
+   How fork() behaves here
+   ```
+      fork() returns TWICE :
+           in the CHILD  -> 0        so  if(pid==0)  is TRUE
+           in the PARENT -> child's PID (> 0)   so the if is FALSE
+
+      The child inherits a COPY of the parent's memory, so it has its
+      own copy of  i  with the value at the moment of the fork. That is
+      why C2 prints 2 and not something else.
+   ```
+
+   The second loop
+   ```
+      for(i=0;i<4;i++) wait(NULL);
+
+      The parent waits for all 4 children before returning. This
+      prevents ZOMBIE processes - a finished child stays as a zombie
+      until its parent reaps it with wait(). It also guarantees the
+      parent exits LAST.
+   ```
+
+   If the child did not call exit(0)
+   ```
+      Without exit(0) the child would CONTINUE THE LOOP and fork again.
+      The count would then double at every iteration :
+
+           total processes = 2^4 = 16
+           printed lines   = 15
+
+      That single exit(0) is what keeps the answer at 4 instead of 15.
+   ```
+   - One note on the code as written: `printf` is used but `<stdio.h>` is not included. Older compilers accept it with an implicit-declaration warning and the program still prints correctly; a strict C99 or later compiler will warn or refuse. The intended output is unaffected.
+
 5. **অথবা, (ক) Thread এর সংজ্ঞা দিন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) Definition
+   - A `thread` is the smallest unit of execution that the CPU can schedule. It is a single path of execution `inside a process`. Several threads can exist in one process, and they all share the process's code, data and open files while each keeps its own stack and registers.
+   - A thread is also called a `lightweight process (LWP)`, because it carries far less state than a full process — no separate address space and no page table of its own.
+
+   What a thread owns and what it shares
+   ```
+      PRIVATE to each thread :
+           STACK  (its own function calls and local variables)
+           REGISTERS
+           PROGRAM COUNTER
+           thread ID , errno
+
+      SHARED with the other threads of the same process :
+           TEXT  - the code
+           DATA  - globals and statics
+           HEAP  - memory from malloc / new
+           open files , signal handlers , the address space
+   ```
+   ```
+      ONE PROCESS , THREE THREADS
+      +----------------------------------------+
+      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
+      +----------------------------------------+
+      |         HEAP   (shared)                |
+      |         DATA   (shared)                |  SHARED
+      |         TEXT   (shared)                |
+      +----------------------------------------+
+   ```
+
+   Types
+   ```
+      USER-LEVEL THREAD  - managed by a library in user space. Fast to
+           create and switch, but the kernel cannot see it, so ONE
+           blocking system call stops every thread.
+
+      KERNEL-LEVEL THREAD - managed by the OS. Slower to create, but it
+           can be scheduled on a different core and blocking affects
+           only itself.
+   ```
+
+   Why threads are used
+   - `Responsiveness` — a GUI keeps answering while a worker thread does the slow job.
+   - `Economy` — creating a thread, and switching between threads of the same process, is much cheaper than for a process, because the address space does not change and the TLB is not flushed.
+   - `Resource sharing` — threads share data directly, with no `IPC` layer.
+   - `Parallelism` — different threads run on different cores at the same time.
+
+   The danger
+   ```
+      Because the heap and globals are shared, two threads writing the
+      same variable create a RACE CONDITION, so a MUTEX or SEMAPHORE is
+      required. And a crash in ONE thread kills the WHOLE process.
+   ```
 
 6. **Write down the thread life cycle.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
 
+   Answer: What the thread life cycle is
+   - The `thread life cycle` is the set of states a thread passes through from creation until it finishes. The thread scheduler moves it from one state to the next.
+
+   The states
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Runnable: start()
+       Runnable --> Running: scheduler picks it
+       Running --> Runnable: yield() / time slice over
+       Running --> Blocked: waiting for a lock
+       Running --> Waiting: wait() / join()
+       Blocked --> Runnable: lock acquired
+       Waiting --> Runnable: notify() / timeout
+       Running --> Terminated: run() ends
+       Terminated --> [*]
+   ```
+   ```
+      1. NEW (born)
+           The thread object has been created but has not started. No
+           CPU and no stack are assigned yet.
+           In Java :  Thread t = new Thread(r);
+
+      2. RUNNABLE (ready)
+           start() has been called. The thread is ready and waiting in
+           the READY QUEUE for the scheduler to pick it.
+
+      3. RUNNING
+           The scheduler gave it the CPU and run() is executing. Only
+           one thread per core at a time.
+
+      4. BLOCKED / WAITING (not runnable)
+           The thread cannot proceed. Three common reasons :
+               BLOCKED       - waiting for a MONITOR LOCK held by
+                               another thread (a synchronized block)
+               WAITING       - wait() or join() with no timeout ,
+                               waiting indefinitely for another thread
+               TIMED WAITING - sleep(ms) , wait(ms) , join(ms)
+           It is NOT in the ready queue, so it cannot be scheduled.
+
+      5. TERMINATED (dead)
+           run() has returned, or an unhandled exception ended the
+           thread. It cannot be restarted - calling start() again
+           throws an error.
+   ```
+
+   The transitions
+   ```
+      New -> Runnable          start()
+      Runnable -> Running      the scheduler dispatches it
+      Running -> Runnable      yield() , or the time slice expired -
+                               INVOLUNTARY , it could still run
+      Running -> Blocked       it tried to enter a synchronized block
+                               whose lock is held
+      Running -> Waiting       wait() , join() , sleep()
+      Blocked -> Runnable      the lock was released and acquired
+      Waiting -> Runnable      notify() , notifyAll() , or the sleep
+                               timeout expired
+      Running -> Terminated    run() returned , or an exception escaped
+   ```
+
+   Points examiners look for
+   ```
+      1. There is NO  Blocked -> Running  edge. A woken thread goes to
+         RUNNABLE and must be scheduled again.
+
+      2. A TERMINATED thread CANNOT be restarted. To run the same work
+         again, create a NEW thread object.
+
+      3. RUNNABLE covers both "ready" and "running" in the Java enum -
+         Java does not expose a separate RUNNING state, because
+         whether a thread holds the CPU is decided by the OS.
+
+      4. sleep() keeps any LOCK the thread holds ; wait() RELEASES the
+         lock. This difference is asked very often.
+   ```
+
 7. **What is Multi-threading and multi-tasking? Difference between Multi-threading and Multi-tasking?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 854 (ET: N/A)]*
+
+   Answer: What multithreading is
+   - `Multithreading` means running several `threads` inside `one process`. The threads share the process's code, data and heap; each keeps only its own stack, registers and program counter.
+   ```
+      ONE PROCESS , THREE THREADS
+      +----------------------------------------+
+      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
+      +----------------------------------------+
+      |        HEAP , DATA , TEXT              |  SHARED
+      +----------------------------------------+
+   ```
+   - Example: a web browser where one thread renders the page, one downloads images and one runs JavaScript — all inside the same tab process.
+
+   What multitasking is
+   - `Multitasking` means the OS runs several `processes` at the same time on one CPU, switching between them so quickly that they appear to run together.
+   ```
+      PROCESS A     PROCESS B     PROCESS C
+      +--------+    +--------+    +--------+
+      | own    |    | own    |    | own    |
+      | memory |    | memory |    | memory |
+      +--------+    +--------+    +--------+
+           \            |            /
+            +---- CPU time-sliced ---+
+
+      time -> | A | B | C | A | B | C | ...
+   ```
+   - Example: an editor, a music player and a browser all running while you work.
+   ```
+      Two forms :
+        PREEMPTIVE   - the OS takes the CPU back after a time slice.
+                       Windows, Linux, UNIX.
+        COOPERATIVE  - a process keeps the CPU until it yields
+                       voluntarily. One bad program freezes the machine.
+   ```
+
+   Difference between multithreading and multitasking
+
+   | Point | Multithreading | Multitasking |
+   |---|---|---|
+   | Unit involved | `Threads` inside one process | Separate `processes` |
+   | Memory | Threads `share` one address space | Each process has its `own` memory |
+   | Switching cost | `Low` — no page table change, no TLB flush | `High` — full context switch |
+   | Creation cost | `Cheap` — a stack and registers | `Expensive` — a whole address space |
+   | Communication | Direct, through `shared variables` | Through `IPC` — pipes, sockets, shared memory |
+   | Isolation | `Weak` — one crash kills the whole process | `Strong` — a crash affects only that process |
+   | Synchronisation | `Needed` — mutex, semaphore | Rarely needed |
+   | Granularity | Fine — inside one application | Coarse — between applications |
+
+   - How they relate: they are `levels`, not alternatives. A modern OS multitasks between processes, and each of those processes may itself be multithreaded. Multitasking gives `isolation`; multithreading gives `speed and sharing`. Chrome uses both — a separate process per tab for safety, and many threads inside each tab for speed.
 
 8. **(c) What is thread? Give some benefits of multi-threaded programming.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 889-890 (ET: N/A)]*
 
+   Answer: What a thread is
+   - A `thread` is the smallest unit of execution the CPU can schedule — a single path of execution `inside a process`. Several threads can live in one process, sharing its memory while each keeps its own stack and registers.
+   ```
+      PRIVATE to a thread : STACK , REGISTERS , PROGRAM COUNTER ,
+                            thread ID
+      SHARED with others  : TEXT (code) , DATA (globals) , HEAP ,
+                            open files , signal handlers
+   ```
+   ```
+      ONE PROCESS , THREE THREADS
+      +----------------------------------------+
+      | stack T1 |  stack T2  |  stack T3      |  PRIVATE
+      +----------------------------------------+
+      |        HEAP , DATA , TEXT              |  SHARED
+      +----------------------------------------+
+   ```
+   - It is called a `lightweight process`, because it carries no separate address space and no page table of its own.
+
+   Benefits of multithreaded programming
+
+   (a) Responsiveness
+   ```
+      A single-threaded GUI that starts a 10-second save FREEZES - no
+      repaint, no clicks accepted, until the save finishes.
+
+      With threads : a worker thread saves while the UI thread keeps
+      answering the user.
+   ```
+
+   (b) Resource sharing
+   - Threads share code, data and the heap `by default`. Processes must set up `IPC` — shared memory or message passing — which is more code and slower.
+
+   (c) Economy
+   ```
+      Creating a process : new address space , new page table , copy
+           the parent's structures - EXPENSIVE.
+      Creating a thread  : a stack and a register set - roughly 10 to
+           100 times cheaper.
+
+      Switching between threads of the SAME process needs NO page table
+      change and NO TLB flush, so it is far faster than a process
+      switch.
+   ```
+
+   (d) Scalability — use of multiple cores
+   ```
+      On an 8-core CPU a single-threaded program uses ONE core and
+      wastes seven. Eight threads can genuinely execute at the same
+      instant, one per core. This is REAL parallelism, not just
+      interleaving.
+   ```
+
+   (e) Better use of blocking time
+   - While one thread waits on disk or network I/O, another thread of the same process keeps the CPU busy. A web server gives one thread per request for exactly this reason.
+
+   The cost, worth one line
+   ```
+      Sharing memory brings RACE CONDITIONS, so MUTEXES and SEMAPHORES
+      are needed ; and a crash in ONE thread kills the WHOLE process.
+   ```
+
 9. **(d) Differentiate between thread and process.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
+
+   Answer: Difference between a thread and a process
+
+   | Point | Process | Thread |
+   |---|---|---|
+   | What it is | A program in `execution`, with its own memory | A path of execution `inside` a process |
+   | Address space | `Own` address space and page table | `Shares` the process's address space |
+   | Private data | Everything belongs to it | Only the `stack`, registers, program counter |
+   | Creation cost | `High` — build an address space and a PCB | `Low` — a stack and a register set |
+   | Context switch | `Slow` — page table switch, TLB flush | `Fast` — no address space change |
+   | Communication | Through `IPC` — pipes, shared memory, sockets | Directly through `shared variables` |
+   | Isolation | `Strong` — a crash affects only itself | `Weak` — a crash kills the whole process |
+   | Synchronisation | Rarely needed | `Required` — mutex, semaphore |
+   | Dependence | Independent | Cannot exist without its parent process |
+   | Also called | Heavyweight process | Lightweight process (LWP) |
+
+   Memory picture
+   ```
+      TWO PROCESSES                ONE PROCESS , THREE THREADS
+      +----------+ +----------+    +-----------------------------+
+      |  STACK   | |  STACK   |    | stk T1 | stk T2 | stk T3    | private
+      |  HEAP    | |  HEAP    |    +-----------------------------+
+      |  DATA    | |  DATA    |    |        HEAP  (shared)       |
+      |  TEXT    | |  TEXT    |    |        DATA  (shared)       | shared
+      +----------+ +----------+    |        TEXT  (shared)       |
+       SEPARATE - no sharing       +-----------------------------+
+   ```
+   ```
+      SHARED between threads : code , globals and statics , heap ,
+                               open files , signal handlers
+      PRIVATE to each thread : stack , registers , program counter ,
+                               thread ID , errno
+   ```
+
+   Why the difference matters
+   ```
+      SPEED      : a thread switch skips the page table change and the
+                   TLB flush, so it is far cheaper than a process switch.
+
+      SAFETY     : two processes cannot corrupt each other's memory -
+                   the MMU forbids it. Two threads CAN, because they
+                   share the heap. Hence RACE CONDITIONS and the need
+                   for locks.
+
+      CRASH      : a segmentation fault in one thread kills EVERY thread
+                   in the process. A crashing process leaves its
+                   siblings alive.
+   ```
+   - That last point is the practical reason a browser like Chrome puts each tab in its own `process`, not a thread: one crashing page must not bring down the whole browser. The cost is more memory and IPC — isolation bought at the price of efficiency.
 
 10. **What is multitasking and multithreading? What are the advantage threads over process?** *[Bangladesh Competition Commission Programmer 2019 compact it 1060 (ET: DU)]*
 
+    Answer: What multitasking is
+    - `Multitasking` is the OS running several `processes` at once on one CPU, switching between them so fast that they seem to run together.
+    ```
+       PROCESS A     PROCESS B     PROCESS C
+       +--------+    +--------+    +--------+
+       | own    |    | own    |    | own    |
+       | memory |    | memory |    | memory |
+       +--------+    +--------+    +--------+
+            \            |            /
+             +--- CPU time-sliced ----+
+
+       time -> | A | B | C | A | B | C | ...
+    ```
+    - Two forms: `preemptive`, where the OS takes the CPU back when the time slice ends (Windows, Linux, UNIX), and `cooperative`, where a process keeps the CPU until it yields — so one badly written program can freeze the machine.
+
+    What multithreading is
+    - `Multithreading` is running several `threads` inside one process. They share the code, data and heap; each has only its own stack, registers and program counter.
+    ```
+       ONE PROCESS , THREE THREADS
+       +----------------------------------------+
+       | stack T1 |  stack T2  |  stack T3      |  PRIVATE
+       +----------------------------------------+
+       |        HEAP , DATA , TEXT              |  SHARED
+       +----------------------------------------+
+    ```
+
+    Advantages of threads over processes
+
+    (a) Cheaper to create
+    ```
+       A process : new address space , new page table , copy the
+            parent's structures - EXPENSIVE.
+       A thread  : a stack and a register set - roughly 10 to 100 times
+            cheaper.
+    ```
+
+    (b) Cheaper to switch
+    ```
+       PROCESS switch : save registers , CHANGE the page table base
+            register , FLUSH the TLB , and the cache is cold afterwards.
+       THREAD  switch : save registers only. The address space, the page
+            table and the TLB are UNCHANGED.
+    ```
+
+    (c) Easy data sharing
+    - Threads share the heap and globals, so they exchange data by simply writing a variable. Processes need `IPC` — pipes, shared memory or sockets — which is slower and much more code.
+
+    (d) Responsiveness
+    - One thread can keep a GUI or a server answering while another does the slow work. A single-threaded program freezes for the whole duration of a long operation.
+
+    (e) Better use of blocking time and of multiple cores
+    - While one thread waits on I/O another keeps the CPU busy, and different threads can run on different cores at the same instant, giving real parallelism.
+
+    (f) Less memory
+    - Ten threads share one copy of the code and the heap. Ten processes need ten copies of everything.
+
+    The trade-off
+    ```
+       What threads GAIN in speed and sharing, they LOSE in safety :
+
+         RACE CONDITIONS - shared data needs MUTEXES and SEMAPHORES
+         NO ISOLATION    - a crash in one thread kills the whole process
+         HARD DEBUGGING  - bugs depend on timing and may not repeat
+    ```
+    - This is why a browser like Chrome uses `processes` for tabs and `threads` inside each tab: isolation where a crash would matter, speed where it would not.
+
 11. **Define thread cancellation, target thread. Enumerate the different RAID level.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1106-1107 (ET: AUST)]*
+
+    Answer: Thread cancellation
+    - `Thread cancellation` is terminating a thread `before it has finished` its work. The thread being cancelled is called the `target thread`.
+    ```
+       Example : ten threads search a database in parallel. The moment
+       one finds the record, the other nine are USELESS and are
+       cancelled. The same happens when a user presses "Stop" on a
+       page that is still loading.
+    ```
+
+    Target thread
+    - The `target thread` is the thread that is to be cancelled — the one that receives the cancellation request. In POSIX it is named in `pthread_cancel(target)`.
+
+    The two ways to cancel
+    ```
+       ASYNCHRONOUS CANCELLATION
+            One thread terminates the target IMMEDIATELY.
+            Problem : the target may be holding a LOCK, or half-way
+            through updating shared data, or may have memory and files
+            it never released. The system is left INCONSISTENT and
+            resources LEAK.
+
+       DEFERRED CANCELLATION  (the safe and usual method)
+            The request is only MARKED. The target checks a flag at
+            safe points called CANCELLATION POINTS, and terminates
+            itself in an orderly way - releasing locks, freeing memory
+            and closing files first.
+            This is the DEFAULT in POSIX threads.
+    ```
+    ```
+       Cancellation state in POSIX :
+            PTHREAD_CANCEL_ENABLE  / PTHREAD_CANCEL_DISABLE
+            PTHREAD_CANCEL_DEFERRED / PTHREAD_CANCEL_ASYNCHRONOUS
+
+       A thread can DISABLE cancellation while in a critical section,
+       and re-enable it afterwards. Cleanup handlers pushed with
+       pthread_cleanup_push() are run in reverse order when the
+       cancellation is finally acted upon.
+    ```
+    - Java takes the same view: `Thread.stop()` was deprecated because it was asynchronous and unsafe. The supported way is `interrupt()`, which sets a flag the thread checks itself — deferred cancellation by another name.
+
+    RAID levels
+    ```
+       RAID 0  STRIPING , no redundancy
+            Data split across N disks. Fastest read and write, full
+            capacity, but ONE disk failure loses EVERYTHING.
+            Minimum 2 disks. Usable = 100 %.
+
+       RAID 1  MIRRORING
+            Every disk has an exact copy. Survives one disk failure per
+            mirror pair, fast reads, but half the capacity is lost.
+            Minimum 2 disks. Usable = 50 %.
+
+       RAID 2  Bit-level striping with HAMMING CODE error correction.
+            Needs many disks and is OBSOLETE - modern drives detect
+            their own errors.
+
+       RAID 3  Byte-level striping with a DEDICATED PARITY disk.
+            All disks must move together, so only one I/O at a time.
+            Good for large sequential transfers, poor for small ones.
+
+       RAID 4  BLOCK-level striping with a DEDICATED PARITY disk.
+            Allows independent reads, but the single parity disk is a
+            BOTTLENECK - every write touches it.
+
+       RAID 5  Block-level striping with DISTRIBUTED PARITY.
+            Parity spread over all disks, so no bottleneck. Survives
+            ONE disk failure. Minimum 3 disks.
+            Usable = (N - 1) / N.   THE MOST COMMON LEVEL.
+
+       RAID 6  Block-level striping with DOUBLE distributed parity.
+            Survives TWO simultaneous disk failures. Minimum 4 disks.
+            Usable = (N - 2) / N. Slower writes than RAID 5.
+
+       NESTED
+       RAID 10 (1+0)  Mirror first, then stripe the mirrors.
+            Fast and highly reliable ; 50 per cent usable.
+            Used for DATABASES.
+       RAID 01 (0+1)  Stripe first, then mirror. Less fault-tolerant
+            than RAID 10 for the same disks.
+    ```
+    ```
+       +-------+-----------+--------+----------------+-------------+
+       | Level | Technique | Min    | Usable space   | Failures    |
+       |       |           | disks  |                | survived    |
+       +-------+-----------+--------+----------------+-------------+
+       |   0   | striping  |   2    |    100 %       |     0       |
+       |   1   | mirroring |   2    |     50 %       |     1       |
+       |   5   | stripe +  |   3    |  (N-1)/N       |     1       |
+       |       | parity    |        |                |             |
+       |   6   | stripe +  |   4    |  (N-2)/N       |     2       |
+       |       | 2 parity  |        |                |             |
+       |  10   | mirror +  |   4    |     50 %       | 1 per mirror|
+       |       | stripe    |        |                |             |
+       +-------+-----------+--------+----------------+-------------+
+    ```
+    - The point to state plainly: `RAID is not a backup`. It protects against a `disk` failing, not against deletion, corruption, ransomware or fire. A separate backup is still required.
 
 ## File Systems & Disk Management (7)
 
