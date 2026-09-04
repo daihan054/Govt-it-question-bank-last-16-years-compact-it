@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 111 questions
+**Table of Contents** — 10 subtopics · 113 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,7 +8,7 @@
 | 3 | [Arrays & Functions](#arrays--functions-15) | 15 |
 | 4 | [Data Types & Variables](#data-types--variables-14) | 14 |
 | 5 | [Operators & Expressions](#operators--expressions-11) | 11 |
-| 6 | [Programming Concepts](#programming-concepts-6) | 6 |
+| 6 | [Programming Concepts](#programming-concepts-8) | 8 |
 | 7 | [Pointers & Memory Allocation](#pointers--memory-allocation-5) | 5 |
 | 8 | [Recursion](#recursion-4) | 4 |
 | 9 | [Storage Classes & Scope](#storage-classes--scope-3) | 3 |
@@ -854,7 +854,7 @@
    c. ||
    d. |
 
-## Programming Concepts (6)
+## Programming Concepts (8)
 1. **Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
    (a) Polymorphism
    (b) Inheritance
@@ -886,6 +886,18 @@
    (b) To optimize a system for maximum efficiency
    (c) To make predinction based on historical data
    (d) To learn optima actions through trail and error
+
+7. **Which for loop has range of similar indexes of ‘i’ used in for(i=0; i<n; i++)?[ for(i=0; i<n; i++) লুপের সমান ইনডেক্স রেঞ্জ নিচের কোন লুপটিতে ব্যবহৃত হয়েছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*
+   (a) for (i=n; i>0; i--)
+   (b) for (i=n-1; i>0; i--)
+   (c) for (i=0; i=0; i--)
+   (d) for (i=n-1; i>=0; i--)
+
+8. **A collection of objects that use common structure and a common behavior is known as—[ একই কাঠামো এবং একই আচরণ ব্যবহার করে এমন অবজেক্টের সংগ্রহকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*
+   (a) Object
+   (b) Entity
+   (c) Instance
+   (d) Class
 
 ## Pointers & Memory Allocation (5)
 

@@ -1,13 +1,13 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 77 questions
+**Table of Contents** — 6 subtopics · 79 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Number Systems & Binary Arithmetic](#number-systems--binary-arithmetic-45) | 45 |
 | 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-16) | 16 |
 | 3 | [Sequential Circuits (Flip-Flops)](#sequential-circuits-flip-flops-6) | 6 |
-| 4 | [Boolean Algebra & Simplification](#boolean-algebra--simplification-4) | 4 |
-| 5 | [Digital Logic & Number Systems](#digital-logic--number-systems-4) | 4 |
+| 4 | [Digital Logic & Number Systems](#digital-logic--number-systems-6) | 6 |
+| 5 | [Boolean Algebra & Simplification](#boolean-algebra--simplification-4) | 4 |
 | 6 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder-2) | 2 |
 
 <!-- TOC END -->
@@ -452,6 +452,43 @@
    C) ডিকোডার
    D) ফ্লিপ-ফ্লপ
 
+## Digital Logic & Number Systems (6)
+1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
+   (a) 2AF3
+   (b) 6AF3
+   (c) AF34
+   (d) EAF3
+
+2. **Which of the following is the Octal equivalent of the hexadecimal number 7B5? [ নিচের হেক্সাডেসিমাল সংখ্যা 7B5-এর সমতুল্য অক্টাল সংখ্যা কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
+   (a) 735
+   (b) 7551
+   (c) 3665
+   (d) 7561
+
+3. **Which number system is used internally by a computer? [ কম্পিউটার অভ্যন্তরে কোন সংখ্যা পদ্ধতি ব্যবহার করে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
+   (a) Decimal
+   (b) Octal
+   (c) Binary
+   (d) Hexadecimal
+
+4. **What is the result of the binary sum?[ নিচের বাইনারি যোগফলের ফলাফল কত? ] 10101 + 1011** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*
+   (a) 10000
+   (b) 101010
+   (c) 100000
+   (d) 111100
+
+5. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree.The binary search tree uses the usual ordering on natural numbers.What is the in-order traversal sequence of the resultant tree?[ যদি ৭, ৫, ১, ৮, ৩, ৬, ০, ৯, ৪, ২ সংখ্যাগুলো এই ক্রম অনুযায়ী একটি খালি বাইনারি সার্চ ট্রিতে (BST) প্রবেশ করানো হয়, তবে ইন-অর্ডার ট্রাভার্সাল (In-order traversal) সিকোয়েন্স কী হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*
+   (a) 9 8 6 4 2 3 0 1 5 7
+   (b) 0 2 4 3 1 6 5 9 8 7
+   (c) 7 5 1 0 3 2 4 6 8 9
+   (d) 0 1 2 3 4 5 6 7 8 9
+
+6. **A binary search tree is constructed by inserting the numbers: 60, 25, 72, 15, 30, 68, 13, 18 in order. The number of nodes in the left sub tree is [ ৬০, ২৫, ৭২, ১৫, ৩০, ৬৮, ১৩, ১৮ এই সংখ্যাগুলো দিয়ে একটি BST তৈরি করলে বাম সাব-ট্রিতে (Left sub tree) কতটি নোড থাকবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*
+   (a) 4
+   (b) 5
+   (c) 6
+   (d) 8
+
 ## Boolean Algebra & Simplification (4)
 
 1. **The simplified form of the Boolean expression (A+B+AB) (A+C) is–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*
@@ -477,31 +514,6 @@
    B) B
    C) AB
    D) 1
-
-## Digital Logic & Number Systems (4)
-1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
-   (a) 2AF3
-   (b) 6AF3
-   (c) AF34
-   (d) EAF3
-
-2. **Which of the following is the Octal equivalent of the hexadecimal number 7B5? [ নিচের হেক্সাডেসিমাল সংখ্যা 7B5-এর সমতুল্য অক্টাল সংখ্যা কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
-   (a) 735
-   (b) 7551
-   (c) 3665
-   (d) 7561
-
-3. **Which number system is used internally by a computer? [ কম্পিউটার অভ্যন্তরে কোন সংখ্যা পদ্ধতি ব্যবহার করে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
-   (a) Decimal
-   (b) Octal
-   (c) Binary
-   (d) Hexadecimal
-
-4. **What is the result of the binary sum?[ নিচের বাইনারি যোগফলের ফলাফল কত? ] 10101 + 1011** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*
-   (a) 10000
-   (b) 101010
-   (c) 100000
-   (d) 111100
 
 ## Combinational Circuits (MUX, Decoder) (2)
 

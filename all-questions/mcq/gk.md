@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 538 questions
+**Table of Contents** — 6 subtopics · 555 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Everyday Science](#everyday-science-177) | 177 |
+| 1 | [Everyday Science](#everyday-science-194) | 194 |
 | 2 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
 | 3 | [International Affairs](#international-affairs-119) | 119 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Everyday Science (177)
+## Everyday Science (194)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -1185,6 +1185,165 @@ __Q = next output__
    (b) 2
    (c) 3
    (d) 4
+
+178. **In the worst case, the number of comparisons needed to search a singly linked list of length n for a given element is—[ 'n' দৈর্ঘ্যের একটি সিংগলি লিঙ্কড লিস্টে (Singly Linked List) কোনো নির্দিষ্ট উপাদান খোঁজার জন্য ওর্স্ট কেসে (Worst case) কতটি তুলনার প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*
+   (a) \\log_2 n
+   (b) n/2
+   (c) n
+   (d) \\log(2^\{\*n\}) - 1
+
+179. **Given a hash table with 25 slots that stores 2000 elements, the load factor for the hash table is—[ একটি হ্যাশ টেবিলে ২৫টি স্লট আছে এবং এতে ২০০০টি এলিমেন্ট জমা রাখা হয়। ওই হ্যাশ টেবিলের লোড ফ্যাক্টর (Load factor) কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*
+   (a) 
+   0. 012506
+   (b) 
+   1. 25
+   (c) 80
+   (d) 8000
+
+180. **Which of the following symbol table implementation is best suited if access time is to be minimum?[ যদি অ্যাক্সেস টাইম সর্বনিম্ন করতে হয়, তবে সিম্বল টেবিল (Symbol table) ইমপ্লিমেন্টেশনের জন্য কোনটি সবচেয়ে উপযুক্ত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*
+   (a) Linear list
+   (b) Linked list
+   (c) Hash table
+   (d) Self-organizing list
+
+181. **If attribute A determines both attributes B and C then, it is also true that—[ যদি অ্যাট্রিবিউট A, B এবং C উভয়কেই নির্ধারণ (Determine) করে, তবে নিচের কোনটি সত্য? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*
+   (a) A \\to B
+   (b) B \\to A
+   (c) C \\to A
+   (d) 
+   (BC) \\to A
+
+182. **If a table is normalized so that all its determinants are candidate keys then, the table is in—[ যদি একটি টেবিল এমনভাবে নরম্যালাইজ করা হয় যাতে তার সমস্ত ডিটারমিন্যান্ট (Determinant) ক্যান্ডিডেট কী (Candidate key) হয়, তবে টেবিলটি কোন ফর্মে আছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*
+   (a) 1NF
+   (b) 2NF
+   (c) 3NF
+   (d) BCNF
+
+183. **Which statements are used to create the database structure?[ ডাটাবেজের গঠন বা কাঠামো (Structure) তৈরি করতে কোন স্টেটমেন্টগুলো ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*
+   (a) DML
+   (b) DDL
+   (c) BNF
+   (d) None of these
+
+184. **Which of the following is not a DDL statement?[ নিচের কোনটি একটি DDL স্টেটমেন্ট নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*
+   (a) Create
+   (b) Alter
+   (c) Drop
+   (d) Select
+
+185. **Which one of these is not included in ACID property of database?[ নিচের কোনটি ডাটাবেজের ACID প্রোপার্টির অন্তর্ভুক্ত নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*
+   (a) Atomicity
+   (b) Consistency
+   (c) Display
+   (d) Durability
+
+186. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int x = 20, y = 10, z = 5;
+
+printf("%d", x > y > z);
+
+return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*
+   (a) 1
+   (b) 0
+   (c) 10
+   (d) 20
+
+187. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
+
+    int k = 0;
+
+    for(k =** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509-510]]*
+   0. 0; k <
+   3. 0; k++)
+
+        printf("multi");
+
+    return 0;
+
+\}
+   (a) run time error
+   (b) multi is printed infinitely
+   (c) multi is printed twice
+   (d) multi is printed thrice
+
+188. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int i, j, count;
+
+count = 0;
+
+for(i = 0; i < 5; i++) \{
+
+    for(j = 0; j < i; j++)
+
+        count++;
+
+\}
+
+printf("%d", count);
+
+return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 510]]*
+   (a) 1
+   (b) 5
+   (c) 10
+   (d) 25
+
+189. **Which of the operation is illegible in Push Down Automate?[ পুশ ডাউন অটোমেটা (Push Down Automata) এর ক্ষেত্রে কোন অপারেশনটি বৈধ (Legible)? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 510]]*
+   (a) Delete
+   (b) Push
+   (c) Insert
+   (d) None of these
+
+190. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
+
+    int x = 107;
+
+    char y = 'Q';
+
+    printf("%d %d", x, y);
+
+    return 0;
+
+\}** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 511]]*
+   (a) 107, Q
+   (b) k, 81
+   (c) k, Q
+   (d) Q, k
+
+191. **What will be the output of the following C code?[ নিচের ৩ডি অ্যারে কোডটির আউটপুট কী হবে? ] int data[2][3][2] = \{0,1,2,3,4,5,6,7,8,9,10,11\};
+
+int i=0, j=2, k=1;
+
+printf("%d\\n", data[i][j][k]);
+
+return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 511]]*
+   (a) 0
+   (b) 5
+   (c) 6
+   (d) 11
+
+192. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
+
+    int i = 11, j = 3;
+
+    printf("%d\\n", i | j);
+
+    return 0;
+
+\}** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 511]]*
+   (a) 0
+   (b) 5
+   (c) 6
+   (d) 11
+
+193. **An unsolicited e-mail message sent to many recipients at once is a—[ একসাথে অনেক প্রাপককে পাঠানো অনাকাঙ্ক্ষিত ইমেইল বার্তাকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*
+   (a) worm
+   (b) virus
+   (c) spam
+   (d) dump
+
+194. **Read the following statement in a Java program that compiles and executes: submarine.dive(depth); What can you say for sure?[ জাভা প্রোগ্রামের submarine.dive(depth); স্টেটমেন্টটি থেকে আপনি নিশ্চিতভাবে কী বলতে পারেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*
+   (a) depth must be an int
+   (b) dive must be the name of an instance field
+   (c) dive must be a method
+   (d) submarine must be the name of a class
 
 ## Bangladesh Affairs (171)
 

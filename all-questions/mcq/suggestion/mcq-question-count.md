@@ -1,11 +1,11 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **3008** questions.
+Sorted by count, highest first. Total **3038** questions.
 
 ## IT questions
 
-Total: **1692** questions.
+Total: **1701** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -23,7 +23,7 @@ Total: **1692** questions.
 | | Routing Protocols | 13 |
 | | Error Detection & Correction | 3 |
 | | Switching Techniques | 3 |
-| **Database** | **— all subcategories —** | **184** |
+| **Database** | **— all subcategories —** | **185** |
 | | SQL Commands & Queries | 52 |
 | | DBMS Concepts & Architecture | 34 |
 | | Normalization | 16 |
@@ -33,13 +33,13 @@ Total: **1692** questions.
 | | ER Diagram & Data Modeling | 9 |
 | | Relational Model & Terminology | 8 |
 | | PL/SQL & Triggers | 7 |
+| | Database Fundamentals & SQL | 7 |
 | | Indexing & Query Optimization | 6 |
-| | Database Fundamentals & SQL | 6 |
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **170** |
-| | Hardware Components & Peripherals | 68 |
+| **Computer Fundamentals** | **— all subcategories —** | **171** |
+| | Hardware Components & Peripherals | 69 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -50,13 +50,13 @@ Total: **1692** questions.
 | | Power Systems & Generation | 18 |
 | | Signals & Systems | 11 |
 | | Diodes & Rectifiers | 4 |
-| **C Programming** | **— all subcategories —** | **111** |
+| **C Programming** | **— all subcategories —** | **113** |
 | | Output Tracing | 36 |
 | | Control Statements & Loops | 16 |
 | | Arrays & Functions | 15 |
 | | Data Types & Variables | 14 |
 | | Operators & Expressions | 11 |
-| | Programming Concepts | 6 |
+| | Programming Concepts | 8 |
 | | Pointers & Memory Allocation | 5 |
 | | Recursion | 4 |
 | | Storage Classes & Scope | 3 |
@@ -69,12 +69,12 @@ Total: **1692** questions.
 | | Inheritance | 6 |
 | | Constructors & Destructors | 6 |
 | | Exception Handling | 6 |
-| **Data Structure** | **— all subcategories —** | **92** |
+| **Data Structure** | **— all subcategories —** | **95** |
 | | Data Structure Basics | 25 |
 | | Stack & Queue | 23 |
 | | Tree & Binary Search Tree | 20 |
+| | Data Structures & Algorithms | 12 |
 | | Linked List | 10 |
-| | Data Structures & Algorithms | 9 |
 | | Priority Queue & Heap | 3 |
 | | Hashing & Hash Tables | 2 |
 | **Microprocessor & Computer Architecture** | **— all subcategories —** | **85** |
@@ -83,12 +83,12 @@ Total: **1692** questions.
 | | Secondary Storage (HDD & Disk Organization) | 13 |
 | | RAID & Storage Architecture | 5 |
 | | Assembly Language & Machine Code | 4 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **77** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **79** |
 | | Number Systems & Binary Arithmetic | 45 |
 | | Logic Gates & Universal Gates | 16 |
 | | Sequential Circuits (Flip-Flops) | 6 |
+| | Digital Logic & Number Systems | 6 |
 | | Boolean Algebra & Simplification | 4 |
-| | Digital Logic & Number Systems | 4 |
 | | Combinational Circuits (MUX, Decoder) | 2 |
 | **Operating System** | **— all subcategories —** | **74** |
 | | Process Management & Scheduling | 24 |
@@ -157,12 +157,12 @@ Total: **1692** questions.
 
 ## General Questions
 
-Total: **1316** questions.
+Total: **1337** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **538** |
-| | Everyday Science | 177 |
+| **General Knowledge** | **— all subcategories —** | **555** |
+| | Everyday Science | 194 |
 | | Bangladesh Affairs | 171 |
 | | International Affairs | 119 |
 | | Geography & Environment | 26 |
@@ -178,21 +178,21 @@ Total: **1316** questions.
 | | সমাস | 2 |
 | | বানান ও শুদ্ধিকরণ | 2 |
 | | বাংলা ভাষা বিষয়ক তথ্য | 1 |
-| **English** | **— all subcategories —** | **285** |
-| | English Grammar | 167 |
+| **English** | **— all subcategories —** | **286** |
+| | English Grammar | 168 |
 | | Vocabulary, Synonyms & Antonyms | 58 |
 | | Idioms & Phrases | 26 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Math** | **— all subcategories —** | **183** |
-| | Algebra | 47 |
+| **Math** | **— all subcategories —** | **186** |
+| | Algebra | 48 |
 | | Geometry | 27 |
 | | Percentage, Profit & Loss | 25 |
 | | Arithmetic & Number Series | 16 |
 | | Time, Work & Distance | 11 |
-| | Analytical Reasoning | 9 |
+| | Analytical Reasoning | 10 |
+| | Time & Work | 9 |
 | | Set Theory | 8 |
-| | Time & Work | 8 |
 | | Average & Age Problems | 6 |
 | | Ratio & Proportion | 6 |
 | | Permutation & Combination | 5 |

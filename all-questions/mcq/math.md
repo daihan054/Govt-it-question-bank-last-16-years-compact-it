@@ -1,16 +1,16 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 183 questions
+**Table of Contents** — 15 subtopics · 186 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Algebra](#algebra-47) | 47 |
+| 1 | [Algebra](#algebra-48) | 48 |
 | 2 | [Geometry](#geometry-27) | 27 |
 | 3 | [Percentage, Profit & Loss](#percentage-profit--loss-25) | 25 |
 | 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
 | 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
-| 6 | [Analytical Reasoning](#analytical-reasoning-9) | 9 |
-| 7 | [Set Theory](#set-theory-8) | 8 |
-| 8 | [Time & Work](#time--work-8) | 8 |
+| 6 | [Analytical Reasoning](#analytical-reasoning-10) | 10 |
+| 7 | [Time & Work](#time--work-9) | 9 |
+| 8 | [Set Theory](#set-theory-8) | 8 |
 | 9 | [Average & Age Problems](#average--age-problems-6) | 6 |
 | 10 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
 | 11 | [Permutation & Combination](#permutation--combination-5) | 5 |
@@ -23,7 +23,7 @@
 
 ---
 
-## Algebra (47)
+## Algebra (48)
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -317,6 +317,12 @@
    (b) SMTP
    (c) SSL
    (d) HTTP
+
+48. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?[ একটি র‍্যান্ডম লিঙ্কড লিস্টকে সর্বনিম্ন টাইম কমপ্লেক্সিটিতে সর্ট (Sort) করার জন্য নিচের কোন অ্যালগরিদমটি ব্যবহার করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*
+   (a) Insertion sort
+   (b) Quick sort
+   (c) Heap sort
+   (d) Merge sort
 
 ## Geometry (27)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -789,7 +795,7 @@
    c. 38 sec
    d. 40 sec
 
-## Analytical Reasoning (9)
+## Analytical Reasoning (10)
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) 4.24 meters
    (b) 5.24 meters
@@ -876,57 +882,13 @@
    (c) Unit testing
    (d) None of these
 
-## Set Theory (8)
+10. **Data about data is also called—[ ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*
+   (a) Data store
+   (b) Data bank
+   (c) Meta Data
+   (d) Warehouse
 
-1. **Two sets are called disjoint if their ______ is an empty set.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*
-   (ক) Union
-   (খ) Difference
-   (গ) Intersection
-   (ঘ) Complement
-
-2. **Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
-   a) 7
-   b) 5
-   c) 15
-   d) 10
-
-3. **In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
-   a) 1/5
-   b) 4/15
-   c) 1/3
-   d) 7/15
-
-4. **In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
-   a. 48
-   b. 20
-   c. 12
-   d. 28
-
-5. **Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
-   A) 4 is even or -9 is not negative
-   B) 4 is odd or -9 is not negative
-   C) 4 is even and -9 is negative
-   D) 4 is odd and -9 is not negative
-
-6. **If A= {1,2,3} and B= {1,2,5} then A-B=?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
-   A) {1}
-   B) {5}
-   C) {3}
-   D) {2}
-
-7. **If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*
-   A) 4, 8
-   B) 8, 12
-   C) 4, 12
-   D) 6, 12
-
-8. **Two sets are called disjoint if the ________ is an empty set.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
-   A) intersection
-   B) union
-   C) difference
-   D) complement
-
-## Time & Work (8)
+## Time & Work (9)
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. ৪ দিন
    খ. ৫ দিন
@@ -976,6 +938,62 @@
    (b) Tk. 16,000
    (c) Tk. 15,000
    (d) None of these
+
+9. **Bluetooth is a type of radio wave information transmission system that is good for about—[ ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত কত দূর পর্যন্ত কাজ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*
+   (a) 30 feet
+   (b) 30 yards
+   (c) 30 miles
+   (d) 300 miles
+
+## Set Theory (8)
+
+1. **Two sets are called disjoint if their ______ is an empty set.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*
+   (ক) Union
+   (খ) Difference
+   (গ) Intersection
+   (ঘ) Complement
+
+2. **Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
+   a) 7
+   b) 5
+   c) 15
+   d) 10
+
+3. **In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
+   a) 1/5
+   b) 4/15
+   c) 1/3
+   d) 7/15
+
+4. **In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
+   a. 48
+   b. 20
+   c. 12
+   d. 28
+
+5. **Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
+   A) 4 is even or -9 is not negative
+   B) 4 is odd or -9 is not negative
+   C) 4 is even and -9 is negative
+   D) 4 is odd and -9 is not negative
+
+6. **If A= {1,2,3} and B= {1,2,5} then A-B=?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
+   A) {1}
+   B) {5}
+   C) {3}
+   D) {2}
+
+7. **If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*
+   A) 4, 8
+   B) 8, 12
+   C) 4, 12
+   D) 6, 12
+
+8. **Two sets are called disjoint if the ________ is an empty set.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
+   A) intersection
+   B) union
+   C) difference
+   D) complement
 
 ## Average & Age Problems (6)
 

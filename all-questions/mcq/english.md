@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 285 questions
+**Table of Contents** — 5 subtopics · 286 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [English Grammar](#english-grammar-167) | 167 |
+| 1 | [English Grammar](#english-grammar-168) | 168 |
 | 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-58) | 58 |
 | 3 | [Idioms & Phrases](#idioms--phrases-26) | 26 |
 | 4 | [English Literature](#english-literature-17) | 17 |
@@ -13,7 +13,7 @@
 
 ---
 
-## English Grammar (167)
+## English Grammar (168)
 1. **Fill in the blank: The scientist looked _____ the microscope.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **The concert was cancelled _____ the heavy rain.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
@@ -1021,6 +1021,12 @@
    (b) on
    (c) by
    (d) for
+
+168. **Which clause is required in an SQL query for getting information from a database?[ ডাটাবেজ থেকে তথ্য পাওয়ার জন্য SQL কুয়েরিতে কোন ক্লজটি প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*
+   (a) Update
+   (b) Select
+   (c) Create
+   (d) Isolation
 
 ## Vocabulary, Synonyms & Antonyms (58)
 1. **What is the antonym of 'famous '?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*

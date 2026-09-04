@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 184 questions
+**Table of Contents** — 14 subtopics · 185 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -12,8 +12,8 @@
 | 7 | [ER Diagram & Data Modeling](#er-diagram--data-modeling-9) | 9 |
 | 8 | [Relational Model & Terminology](#relational-model--terminology-8) | 8 |
 | 9 | [PL/SQL & Triggers](#plsql--triggers-7) | 7 |
-| 10 | [Indexing & Query Optimization](#indexing--query-optimization-6) | 6 |
-| 11 | [Database Fundamentals & SQL](#database-fundamentals--sql-6) | 6 |
+| 10 | [Database Fundamentals & SQL](#database-fundamentals--sql-7) | 7 |
+| 11 | [Indexing & Query Optimization](#indexing--query-optimization-6) | 6 |
 | 12 | [Database Connectivity (JDBC/ODBC)](#database-connectivity-jdbcodbc-5) | 5 |
 | 13 | [Concurrency Control & Locking](#concurrency-control--locking-5) | 5 |
 | 14 | [SQL Joins](#sql-joins-2) | 2 |
@@ -1062,6 +1062,35 @@
    C) Close the cursor
    D) None of this
 
+## Database Fundamentals & SQL (7)
+1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+
+2. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
+   (a) Can have duplicate values
+   (b) Can be NULL
+   (c) Must be unique
+   (d) Can store multiple values
+
+3. **See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400-401]]*
+   a) Create table name Servers with attributes ID, DaysRunning, OsName, RamCapacity.
+   b) Write SQL query to update the server to Unix where the RamCapacity than 16GB.
+   c) Write SQL query to select the OSName for which Servers are running more than 365 days.
+
+4. **Write the following queries** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+   (a) Write an SQL query to show the top 10 highest marks from the Result table.
+   (b) Write an SQL query to show the number of male and female students who passed, individually.
+   (c) Write an SQL query to show the absent students in the Result table.
+
+5. **b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+
+6. **একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+
+7. **Which one is in case of normalization—[ নরম্যালাইজেশন (Normalization)-এর ক্ষেত্রে কোনটি সঠিক— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*
+   (a) Normalization maximizes duplicates
+   (b) Normalization reduces duplicates
+   (c) Normalization eliminates duplicates
+   (d) Normalization increases duplicates
+
 ## Indexing & Query Optimization (6)
 
 1. **Which one make data access from a database faster?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*
@@ -1112,29 +1141,6 @@
    b) Sequential file organization
    c) Hashing file organization
    d) Clustering file organization
-
-## Database Fundamentals & SQL (6)
-1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
-
-2. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
-   (a) Can have duplicate values
-   (b) Can be NULL
-   (c) Must be unique
-   (d) Can store multiple values
-
-3. **See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400-401]]*
-   a) Create table name Servers with attributes ID, DaysRunning, OsName, RamCapacity.
-   b) Write SQL query to update the server to Unix where the RamCapacity than 16GB.
-   c) Write SQL query to select the OSName for which Servers are running more than 365 days.
-
-4. **Write the following queries** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
-   (a) Write an SQL query to show the top 10 highest marks from the Result table.
-   (b) Write an SQL query to show the number of male and female students who passed, individually.
-   (c) Write an SQL query to show the absent students in the Result table.
-
-5. **b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
-
-6. **একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
 
 ## Database Connectivity (JDBC/ODBC) (5)
 

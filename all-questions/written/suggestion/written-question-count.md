@@ -1,20 +1,20 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3394** questions.
+Sorted by count, highest first. Total **3397** questions.
 
 ## IT questions
 
-Total: **2832** questions.
+Total: **2835** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **544** |
+| **Computer Networks** | **— all subcategories —** | **545** |
 | | Subnetting & IP Addressing | 119 |
 | | OSI & TCP/IP Reference Model | 57 |
 | | Networking Fundamentals & Terminology | 32 |
+| | Networking Devices | 24 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 23 |
-| | Networking Devices | 23 |
 | | Transport Layer (TCP & UDP) | 22 |
 | | Physical Layer & Transmission Media (Cables & Wiring) | 21 |
 | | Wireless Networks & IoT (mmWave) | 19 |
@@ -74,7 +74,7 @@ Total: **2832** questions.
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **207** |
+| **Operating System** | **— all subcategories —** | **208** |
 | | Linux / Unix Commands & Administration | 47 |
 | | CPU Scheduling Algorithms | 26 |
 | | OS Concepts & System Software | 24 |
@@ -84,14 +84,14 @@ Total: **2832** questions.
 | | Process Management & Process States | 12 |
 | | Concurrency, Threads & Synchronization | 11 |
 | | File Systems & Disk Management | 7 |
+| | OS Concepts & Process Management | 7 |
 | | CPU Scheduling | 6 |
-| | OS Concepts & Process Management | 6 |
 | | Windows & System Administration | 5 |
 | | Process Synchronization & Concurrency | 4 |
 | | Deadlock & Concurrency Control | 2 |
 | | Linux, Shell & System Commands | 0 |
-| **Computer Fundamentals** | **— all subcategories —** | **206** |
-| | Computer Fundamentals & Acronyms | 112 |
+| **Computer Fundamentals** | **— all subcategories —** | **207** |
+| | Computer Fundamentals & Acronyms | 113 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |

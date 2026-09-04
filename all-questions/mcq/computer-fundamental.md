@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 170 questions
+**Table of Contents** — 6 subtopics · 171 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-68) | 68 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-69) | 69 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (68)
+## Hardware Components & Peripherals (69)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -410,6 +410,12 @@ int main ()\{
    (b) A method variable
    (c) An instance variable
    (d) A parameter variable
+
+69. **Level order traversal of a rooted tree can be done by starting from root and performing—[ একটি রুটেড ট্রির লেভেল অর্ডার ট্রাভার্সাল (Level order traversal) নিচের কোনটি সম্পাদন করে করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*
+   (a) Deep search
+   (b) Root search
+   (c) Depth first search
+   (d) Breadth first search
 
 ## Software Types & Classification (40)
 
