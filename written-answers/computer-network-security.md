@@ -4844,19 +4844,245 @@
 
 1. What does CIA stand for in information security? Explain each component briefly. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer: **CIA stands for Confidentiality, Integrity and Availability** — the three fundamental goals of information security, known as the CIA triad.
+
+   **Confidentiality**
+   - Ensures that information is accessible only to those authorised to see it.
+   - Protects against unauthorised disclosure.
+   - Controls: encryption, access control, authentication, least privilege, data classification.
+   - Violated by: data breach, eavesdropping, shoulder surfing, stolen credentials.
+
+   **Integrity**
+   - Ensures that information is accurate, complete and has not been altered by anyone unauthorised.
+   - Protects against unauthorised modification.
+   - Controls: hashing, digital signatures, checksums, version control, access control, audit logs.
+   - Violated by: unauthorised modification of records, man-in-the-middle alteration, malware corruption.
+
+   **Availability**
+   - Ensures that information and systems are accessible to authorised users whenever needed.
+   - Protects against disruption of access.
+   - Controls: redundancy, backups, failover clusters, DDoS protection, UPS and generators, disaster recovery.
+   - Violated by: DDoS attack, ransomware, hardware failure, natural disaster.
+
+   How they interact
+   - The three often pull against each other. Heavy encryption and strict access control strengthen confidentiality but can reduce availability. A completely open system is highly available but has no confidentiality.
+   - Security design is therefore about BALANCE, chosen according to the data's sensitivity. A hospital emergency system prioritises availability; a classified document prioritises confidentiality.
+
 2. What is authentication and authorization? What is the CIA triad in cyber security? How does it work? *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
+
+   Answer:
+
+   (a) Authentication vs Authorisation
+
+   | Point | Authentication | Authorisation |
+   |---|---|---|
+   | Question answered | **Who are you?** | **What are you allowed to do?** |
+   | Purpose | Verify identity | Grant or deny permissions |
+   | Order | Comes first | Comes after authentication |
+   | Method | Password, OTP, biometrics, certificate | Access control lists, roles, permissions |
+   | Visible to user | Yes — the user actively proves identity | Usually invisible, enforced silently |
+   | Example | Logging into internet banking | Being allowed to view your own account but not another customer's |
+
+   - Related terms: **identification** (claiming an identity) precedes authentication; **accounting/auditing** (recording what was done) follows authorisation. Together they form AAA.
+
+   (b) The CIA triad
+   - **Confidentiality** — only authorised people can access the information.
+   - **Integrity** — the information is accurate and unaltered.
+   - **Availability** — the information is accessible when needed.
+
+   (c) How it works in practice — an online banking example
+   - **Confidentiality** is enforced by TLS encrypting the session, by the password and OTP restricting access, and by the account being visible only to its owner.
+   - **Integrity** is enforced by the transaction being hashed and signed, so the amount cannot be altered in transit, and by audit logs recording every change.
+   - **Availability** is enforced by redundant servers, a DR site, DDoS protection and 24/7 monitoring, so the service is reachable when the customer needs it.
+
+   - Each control usually serves one leg of the triad primarily, and a complete security design must address all three deliberately rather than assuming one covers the others.
 
 3. **(a) What is the CIA triad of information system? Briefly describe its each component.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+   Answer: The CIA triad is the foundational model of information security, defining the three properties every security control ultimately serves.
+
+   ```mermaid
+   flowchart TD
+       C[Confidentiality<br/>only authorised access] --- I[Integrity<br/>accurate and unaltered]
+       I --- A[Availability<br/>accessible when needed]
+       A --- C
+   ```
+
+   **(a) Confidentiality**
+   - Prevents unauthorised disclosure of information.
+   - Achieved by: encryption at rest and in transit, strong authentication, role-based access control, least privilege, data classification and labelling, physical security.
+   - Threats: data breach, eavesdropping, phishing, insider disclosure, stolen device.
+   - Banking example: a customer's account balance must be visible only to that customer and authorised staff.
+
+   **(b) Integrity**
+   - Ensures data is accurate, complete and modified only by authorised parties in authorised ways.
+   - Achieved by: cryptographic hashing, digital signatures, message authentication codes, checksums, database constraints, audit trails, version control, maker-checker approval.
+   - Threats: unauthorised modification, man-in-the-middle tampering, malware corruption, human error.
+   - Banking example: a transfer of 5,000 taka must not become 50,000 taka in transit or in storage.
+
+   **(c) Availability**
+   - Ensures authorised users can access systems and data whenever required.
+   - Achieved by: redundancy and clustering, load balancing, backups with tested restores, DR site, UPS and generators, DDoS protection, capacity planning, patching.
+   - Threats: DDoS, ransomware, hardware failure, power outage, natural disaster.
+   - Banking example: ATMs and internet banking must work at 2 a.m. on a holiday.
+
+   - Two further principles are often added to the triad: **Authenticity** (the data really is from who it claims) and **Non-repudiation** (the sender cannot deny sending it). Together these five are sometimes called the Parkerian or extended model.
+
 4. **Describe how the principles of Confidentiality, Integrity, and Availability work together to protect organizational data, and provide one real-world example of a security breach where one or more of these principles were compromised.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1428 (ET: E-Zone)]*
+
+   Answer:
+
+   (a) How the three work together
+   - **All three are required simultaneously.** Protecting only one leaves the data effectively unprotected.
+   - **Confidentiality without availability is useless** — data encrypted so thoroughly that nobody can retrieve it serves no business purpose.
+   - **Availability without confidentiality is dangerous** — a database open to everyone is always available and completely insecure.
+   - **Integrity underpins both** — data that is available and secret but WRONG causes decisions to fail. A bank whose balances are accurate is more important than one whose balances are merely secret.
+
+   The balance is set by context
+   - A hospital emergency system weights **availability** highest — a doctor must reach the record instantly.
+   - A classified intelligence document weights **confidentiality** highest — better inaccessible than disclosed.
+   - A banking ledger weights **integrity** highest — a wrong balance is worse than a slow one.
+
+   Layered controls serve all three at once
+   - Encryption serves confidentiality; hashing and signatures serve integrity; redundancy and backups serve availability. Access control and monitoring serve all three.
+
+   (b) Real-world example — the **Bangladesh Bank heist, February 2016**
+   - Attackers compromised the bank's SWIFT terminal and issued 35 fraudulent transfer instructions totalling about USD 951 million, of which USD 81 million reached accounts in the Philippines.
+
+   Which principles were compromised
+   - **Confidentiality** — attackers obtained SWIFT operator credentials and had read access to the payment system and internal network for weeks beforehand.
+   - **Integrity** — fraudulent payment instructions were INJECTED into the system and appeared legitimate. Malware also altered the SWIFT software's database checks so the fraudulent messages passed validation.
+   - **Availability** — malware manipulated the printer that produced confirmation slips, so staff did not see the transactions. The attack was also timed across a weekend and holidays to delay detection.
+
+   Contributing weaknesses
+   - Flat network with no segmentation between the SWIFT terminal and the general network, weak second-hand network equipment, no multi-factor authentication on critical systems, and insufficient monitoring.
+
+   - The lesson: the attack succeeded not by breaking cryptography but by breaching all three principles through ordinary control failures — segmentation, authentication, monitoring and logging.
 
 5. **What is CIA Triad?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)], [Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
 
+   Answer: The CIA triad is the core model of information security, consisting of three principles that every security control exists to protect.
+
+   | Principle | Meaning | Achieved by | Violated by |
+   |---|---|---|---|
+   | **Confidentiality** | Only authorised people can access the data | Encryption, access control, authentication, least privilege | Data breach, eavesdropping, phishing |
+   | **Integrity** | Data is accurate and unaltered | Hashing, digital signatures, checksums, audit logs | Unauthorised modification, MITM tampering |
+   | **Availability** | Data and systems are accessible when needed | Redundancy, backups, DR site, DDoS protection | DDoS, ransomware, hardware failure |
+
+   Why the triad matters
+   - It gives a complete framework for assessing security. Every threat can be classified by which leg it attacks, and every control by which leg it protects.
+   - It forces balance. Strengthening one leg often weakens another, so the design must be deliberate rather than accidental.
+
+   Extended model
+   - Two further properties are commonly added: **Authenticity** (the data genuinely originates from the claimed source) and **Non-repudiation** (the originator cannot later deny it).
+
+   Mapping attacks to the triad
+
+   | Attack | Principle violated |
+   |---|---|
+   | Eavesdropping, data theft | Confidentiality |
+   | Data tampering, MITM modification | Integrity |
+   | DDoS, ransomware | Availability |
+
 6. **Preserving confidentiality integrity and availability of data is a restatement of the concern over falsification, interception, masquerade and denial of service. Explain how the first three concepts relate to the last four.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 435 (ET: BIBM)]*
+
+   Answer: Each of the four threats attacks one or more of the three principles. The mapping is as follows.
+
+   | Threat | Principle violated | Explanation |
+   |---|---|---|
+   | **Interception** | **Confidentiality** | An unauthorised party gains access to data in transit or at rest. Nothing is changed and nothing stops working — only secrecy is lost. This is a passive attack |
+   | **Falsification** | **Integrity** | Data is created, altered or deleted without authorisation, so it is no longer accurate. An active attack |
+   | **Masquerade** | **Confidentiality AND Integrity** | An attacker impersonates a legitimate entity. Posing as a valid user gives them access to data they should not see (confidentiality) and lets them issue instructions as that user (integrity). It also violates **authenticity** |
+   | **Denial of Service** | **Availability** | Legitimate users are prevented from accessing the system. No data is read or altered — only access is destroyed |
+
+   Detailed relationships
+
+   **Confidentiality ← Interception and Masquerade**
+   - Interception breaks confidentiality directly, by reading data in transit. Countermeasure: encryption.
+   - Masquerade breaks it indirectly, by obtaining authorised access under a false identity. Countermeasure: strong authentication and MFA.
+
+   **Integrity ← Falsification and Masquerade**
+   - Falsification is the direct attack — modifying a payment amount or a database record. Countermeasure: hashing, digital signatures, audit trails.
+   - Masquerade enables it, because an attacker acting as an authorised user can make changes that appear legitimate. Countermeasure: authentication plus segregation of duties and maker-checker approval.
+
+   **Availability ← Denial of Service**
+   - The only one of the four that attacks availability. Countermeasure: redundancy, DDoS protection, capacity planning, backups.
+
+   Grouping by attack nature
+   - **Passive** — interception only. Hard to detect, easy to prevent with encryption.
+   - **Active** — falsification, masquerade and DoS. Harder to prevent, easier to detect with integrity checks and monitoring.
+
+   - The statement in the question is therefore accurate: the three positive goals (C, I, A) and the four negative threats describe the same security problem from opposite directions — what we want to preserve, and what would destroy it.
 
 7. **Information System কী? Information Syetem -এর সুরক্ষায় প্রয়োজনীয় পদক্ষেপ সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 883-884 (ET: N/A)]*
 
+   Answer:
+
+   (a) Information System
+   - An organised combination of people, hardware, software, data, networks and procedures that collects, processes, stores and distributes information to support decision making and operations in an organisation.
+
+   Five components
+   - **Hardware** — servers, computers, network devices, storage.
+   - **Software** — operating systems, databases, applications.
+   - **Data** — the raw facts and the information produced from them.
+   - **People** — users, operators, analysts, administrators.
+   - **Procedures** — the documented rules for operating the system.
+
+   Types
+   - TPS (transaction processing), MIS (management reporting), DSS (decision support), ESS (executive support), ERP, CRM.
+
+   (b) Necessary steps to secure an information system
+
+   **Technical measures**
+   - **Access control** — strong authentication, multi-factor authentication, role-based permissions, least privilege.
+   - **Encryption** of data at rest and in transit.
+   - **Firewall, IPS and network segmentation** to contain any breach.
+   - **Antivirus and EDR** on every endpoint.
+   - **Patch management** — the single most effective technical control.
+   - **Backup** following the 3-2-1 rule, with tested restores.
+   - **Logging and monitoring** through a SIEM.
+
+   **Physical measures**
+   - Controlled access to server rooms with biometrics and CCTV, UPS and generator, fire detection and clean-agent suppression, environmental monitoring.
+
+   **Administrative measures**
+   - Written **security policy** and acceptable use policy.
+   - **Security awareness training** for all staff, with simulated phishing.
+   - **Incident response plan** and **business continuity / DR plan**, both tested.
+   - **Segregation of duties** and maker-checker approval for financial operations.
+   - Regular **audit and VAPT**.
+   - **Vendor risk assessment** and background verification at recruitment.
+
+   **Legal and compliance**
+   - Compliance with the Bangladesh Bank ICT Security Guideline, ISO 27001 and applicable data protection law.
+
+   - Guiding principle: **defence in depth** — technical, physical and administrative layers together, since no single control is sufficient.
+
 8. **What is non-repudiation in network security? Give a proper example.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
+
+   Answer: **Non-repudiation** is the assurance that someone cannot later DENY having sent a message or performed an action. It provides undeniable proof of origin and of delivery.
+
+   Why it is needed
+   - Authentication proves who someone is at the time of the transaction. Non-repudiation proves it AFTERWARDS, to a third party such as a court or auditor, even if the person now denies it.
+
+   How it is achieved
+   - **Digital signatures** — the primary mechanism. The sender signs with their PRIVATE key, which only they possess. Anyone can verify it with the public key, so the sender cannot credibly claim someone else produced it.
+   - **Digital certificates from a trusted CA**, binding that key to a verified identity.
+   - **Audit logs and timestamps**, ideally from a trusted timestamping authority.
+   - **Blockchain**, where records are immutable and publicly verifiable.
+
+   Proper example — a bank payment instruction
+   - A corporate customer sends an instruction to transfer 50 lakh taka, signed with their private key.
+   - The bank verifies the signature with the customer's public key from their certificate and executes the transfer.
+   - Later the customer claims they never authorised it and demands a refund.
+   - The bank produces the signed instruction. Since only the customer holds that private key, the signature could not have been produced by anyone else. **The customer cannot repudiate the transaction.**
+   - Without a digital signature, the bank would have only its own logs, which the customer could argue were fabricated.
+
+   Second example — email
+   - A digitally signed email proves the sender wrote it. An ordinary unsigned email proves nothing, because the From address is trivially forged.
+
+   Where non-repudiation sits
+   - It is not part of the original CIA triad; it is added in the extended model alongside authenticity. It is the property that makes electronic contracts, e-tendering and digital banking legally workable, and it is why the ICT Act 2006 gives digital signatures legal recognition in Bangladesh.
 
 ## VPN & Tunneling Protocols (IPsec, SSL VPN) (6)
 
