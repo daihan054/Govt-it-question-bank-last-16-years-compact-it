@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 193 questions
+**Table of Contents** — 10 subtopics · 196 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-99) | 99 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-102) | 102 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
 | 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (99)
+## Computer Fundamentals & Acronyms (102)
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -281,6 +281,12 @@ a) Write a funtcion using any language that calculates a person tax. b) If three
 99. **16.0.10
 
 ?**
+
+100. **Question: Matching with Definition** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398-399]]*
+
+101. **Find roots of Quadratic equality equation ax^2+bx+c=0 in C or Any other language.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 399]]*
+
+102. **What are the data units of the Physical layer, Data Link layer, Network layer, and Transport layer?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
 
 ## ICT in Society & Governance (24)
 

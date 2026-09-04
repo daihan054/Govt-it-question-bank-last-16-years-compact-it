@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 125 questions
+**Table of Contents** — 10 subtopics · 127 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,8 +7,8 @@
 | 2 | [Java Programming & Methods](#java-programming--methods-18) | 18 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-11) | 11 |
 | 4 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
-| 5 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
-| 6 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-8) | 8 |
+| 5 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-10) | 10 |
+| 6 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
 | 7 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
 | 8 | [Exception Handling](#exception-handling-4) | 4 |
 | 9 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
@@ -429,25 +429,7 @@ public class WhatTheOutput{
 
 10. **You are required to trace the changes in value for each of the numbers, before and after each method are called for each of iterations and finally write down output of the program.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1195-1196 (ET: N/A)]*
 
-## Constructors & Destructors (8)
-
-1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
-
-2. **Define copy constructor. What Static binding and Dynamic binding?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
-
-3. **What is the constructor invoked in OOP?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
-
-4. **What is constructor?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
-
-5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
-
-6. **What is Constructor function? Write an example of Constructor function?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
-
-7. **Differentiate constructor and destructor with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1167-1168 (ET: N/A)]*
-
-8. **What is main difference Destructor and constructor with example?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
-
-## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (8)
+## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (10)
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
 class myclass \{
 
@@ -474,6 +456,28 @@ Hints: Introduction — kinds of education — importance of vocational educatio
 
 8. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
 a) What is Series? b) Write a program using C/C++ to find n^\{th\} Fibonacci.
+
+9. **What is polymorphism in the context of OOP? Explain with example.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400]]*
+
+10. **Write down the concept about inheritance with example.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
+
+## Constructors & Destructors (8)
+
+1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
+
+2. **Define copy constructor. What Static binding and Dynamic binding?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
+
+3. **What is the constructor invoked in OOP?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
+
+4. **What is constructor?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
+
+5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
+
+6. **What is Constructor function? Write an example of Constructor function?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+7. **Differentiate constructor and destructor with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1167-1168 (ET: N/A)]*
+
+8. **What is main difference Destructor and constructor with example?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
 
 ## Encapsulation & Access Modifiers (7)
 

@@ -1,21 +1,21 @@
 <!-- TOC START -->
-**Table of Contents** — 33 subtopics · 541 questions
+**Table of Contents** — 33 subtopics · 544 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-118) | 118 |
+| 1 | [Subnetting & IP Addressing](#subnetting--ip-addressing-119) | 119 |
 | 2 | [OSI & TCP/IP Reference Model](#osi--tcpip-reference-model-57) | 57 |
 | 3 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-32) | 32 |
 | 4 | [Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https-23) | 23 |
 | 5 | [Networking Devices](#networking-devices-23) | 23 |
 | 6 | [Transport Layer (TCP & UDP)](#transport-layer-tcp--udp-22) | 22 |
-| 7 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-20) | 20 |
+| 7 | [Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring-21) | 21 |
 | 8 | [Wireless Networks & IoT (mmWave)](#wireless-networks--iot-mmwave-19) | 19 |
 | 9 | [Multiplexing & Bandwidth](#multiplexing--bandwidth-19) | 19 |
 | 10 | [Routing Protocols & Route Configuration](#routing-protocols--route-configuration-19) | 19 |
 | 11 | [Communication System & Transmission Modes](#communication-system--transmission-modes-17) | 17 |
-| 12 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-16) | 16 |
-| 13 | [Network Address Translation (NAT)](#network-address-translation-nat-16) | 16 |
+| 12 | [Network Address Translation (NAT)](#network-address-translation-nat-17) | 17 |
+| 13 | [Data Rate & Channel Capacity (Nyquist, Shannon)](#data-rate--channel-capacity-nyquist-shannon-16) | 16 |
 | 14 | [Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput-14) | 14 |
 | 15 | [Network Topologies](#network-topologies-14) | 14 |
 | 16 | [IPv6 Addressing](#ipv6-addressing-13) | 13 |
@@ -41,7 +41,7 @@
 
 ---
 
-## Subnetting & IP Addressing (118)
+## Subnetting & IP Addressing (119)
 1. An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets. [SO IT 25-07-2026]
 
 2. An organization has been assigned the IPv4 network address 192.168.1.0/24. As part of the network deployment, the network administrator is required to divide the address space into four equal-sized subnets to support different departments. Determine the Network Address, Subnet Mask (both CIDR and dotted-decimal notation). *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
@@ -325,6 +325,9 @@ ii) 211.10.15.4
 
 118. **Given the IP address 192.2.1.0/24** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 386-387]]*
 (i) Design subnets for each of the 5 floors in a building. Determine the IP address and IP address range for each subnet. Provide a brief explanation for your subnetting choices. (ii) What is the usable host of the IP address 20.20.20.20/20?
+
+119. **Given an IP address: 212.15.180.0/24 and wants to divide into 16 subnet.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 401]]*
+a) What will be the subnet mask and how many hosts belongs to every subnet. b) What is the first and last address of first and last subnet address?
 
 ## OSI & TCP/IP Reference Model (57)
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
@@ -703,7 +706,7 @@ Devices: Router, Switch, Network Interface Card (NIC), Web Server. Protocols: HT
 
 22. **Write the full form of the protocols: NAT, DHCP, MAC, TCP-IP, HTTPS** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 379]]*
 
-## Physical Layer & Transmission Media (Cables & Wiring) (20)
+## Physical Layer & Transmission Media (Cables & Wiring) (21)
 1. **Straight through connection vs Crossover connection.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
 2. **Which transmission medium is used in LAN? Write their maximum length and capacity (bps).** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1452 (ET: N/A)]*
@@ -797,6 +800,8 @@ int main() \{
 
 20. **Solve the following problem:** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 387]]*
 What is the output of V_o, and I_D
+
+21. **Write a program for sum of digits of a number. Without using library function other than basic input output.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 402]]*
 
 ## Wireless Networks & IoT (mmWave) (19)
 
@@ -982,41 +987,7 @@ What is the output of V_o, and I_D
 
 17. **What is data communication? Define Simplex, half duplex and full duplex.** *[ICT Ministry Assistant Programmer 2017 compact it 1239 (ET: N/A)]*
 
-## Data Rate & Channel Capacity (Nyquist, Shannon) (16)
-
-1. **Nyquist math: See in Data Communication & Networking Chapter** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
-
-2. **Suppose that a digitized TV picture is to be transmitted from a source that uses a matrix of 480 × 500 picture elements (pixels), where each pixel can take on one of 32 intensity values. Assume that 30 pictures are sent per second. (This digital source is roughly equivalent to broadcast TV standards that have been adopted). Find the source rate R (bps).** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
-
-3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
-
-4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
-
-5. **The power of signal is 10\text{mW} and the power of the noise is 1\mu\text{W}; What are the values of \text{SNR} and \text{SNR}_{\text{dB}}?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 651 (ET: BUET)]*
-
-6. **We need to send 265\text{ kbps} over a noiseless channel with a bandwidth of 20\text{kHz}. How many signal levels do we need?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 652 (ET: BUET)]*
-
-7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** *[RPGCL Assistant Manager (ICT) 2022 compact it 656 (ET: BUET)]*
-
-8. **Consider that a signal is transmitted over a channel of bandwidth 200kHz and the total path loss in the channel is found to be 60dB. The noise power per hertz at the receiver is- 100 dBm. Determine the required transmit power to achieve data rate of 40kb/s.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
-
-9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
-
-10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
-
-11. **Using the Nyquist theorem, we can sample 12 million times/sec. Four–level signals provide 2 bits per sample, for a total data rate of 24 Mbps.** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
-
-12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** *[BAUST Assistant Programmer 2021 compact it 918 (ET: N/A)]*
-
-13. **Find signal bit per second bound rate 1000 and 16-QAM signal.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
-
-14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
-
-15. **a) Determine the Nyquist sampling rate and the Nyquist sampling interval for the signal $X(t) = \sin(2100\pi t)$** *[38th BCS 2018 compact it 1177 (ET: N/A)]*
-
-16. **Consider a noiseless channel with a bandwidth of 3 KHz transmitting a signal with two signal levels. What is the maximum bit rate?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
-
-## Network Address Translation (NAT) (16)
+## Network Address Translation (NAT) (17)
 1. Network Address Translation (NAT) maps internal networks to the public internet.
    * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
    * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
@@ -1051,6 +1022,42 @@ What is the output of V_o, and I_D
 15. **জাতীয় ক্রীড়া পরিষদ (National Sports Council) কী? এর দায়িত্ব কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
 
 16. **NATO কী? এর সদস্য রাষ্ট্রসমূহের মধ্যে বর্তমান বিশ্ব প্রেক্ষাপটে কী ধরনের বিভক্তি লক্ষ্য করা যায়?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+17. **Prove that n^2 < 2^n, for all natural number n \\ge 5.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398]]*
+
+## Data Rate & Channel Capacity (Nyquist, Shannon) (16)
+
+1. **Nyquist math: See in Data Communication & Networking Chapter** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
+
+2. **Suppose that a digitized TV picture is to be transmitted from a source that uses a matrix of 480 × 500 picture elements (pixels), where each pixel can take on one of 32 intensity values. Assume that 30 pictures are sent per second. (This digital source is roughly equivalent to broadcast TV standards that have been adopted). Find the source rate R (bps).** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
+
+3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
+
+4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
+
+5. **The power of signal is 10\text{mW} and the power of the noise is 1\mu\text{W}; What are the values of \text{SNR} and \text{SNR}_{\text{dB}}?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 651 (ET: BUET)]*
+
+6. **We need to send 265\text{ kbps} over a noiseless channel with a bandwidth of 20\text{kHz}. How many signal levels do we need?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 652 (ET: BUET)]*
+
+7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** *[RPGCL Assistant Manager (ICT) 2022 compact it 656 (ET: BUET)]*
+
+8. **Consider that a signal is transmitted over a channel of bandwidth 200kHz and the total path loss in the channel is found to be 60dB. The noise power per hertz at the receiver is- 100 dBm. Determine the required transmit power to achieve data rate of 40kb/s.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
+
+10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
+
+11. **Using the Nyquist theorem, we can sample 12 million times/sec. Four–level signals provide 2 bits per sample, for a total data rate of 24 Mbps.** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
+
+12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** *[BAUST Assistant Programmer 2021 compact it 918 (ET: N/A)]*
+
+13. **Find signal bit per second bound rate 1000 and 16-QAM signal.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
+
+14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
+
+15. **a) Determine the Nyquist sampling rate and the Nyquist sampling interval for the signal $X(t) = \sin(2100\pi t)$** *[38th BCS 2018 compact it 1177 (ET: N/A)]*
+
+16. **Consider a noiseless channel with a bandwidth of 3 KHz transmitting a signal with two signal levels. What is the maximum bit rate?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
 
 ## Error Detection & Data Communication (CRC, Throughput) (14)
 

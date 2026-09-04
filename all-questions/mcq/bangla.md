@@ -1,22 +1,23 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 286 questions
+**Table of Contents** — 9 subtopics · 297 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-154) | 154 |
-| 2 | [বাংলা সাহিত্য](#বাংলা-সাহিত্য-108) | 108 |
+| 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-159) | 159 |
+| 2 | [বাংলা সাহিত্য](#বাংলা-সাহিত্য-113) | 113 |
 | 3 | [বাগধারা ও প্রবাদ](#বাগধারা-ও-প্রবাদ-13) | 13 |
 | 4 | [এক কথায় প্রকাশ](#এক-কথায়-প্রকাশ-5) | 5 |
-| 5 | [কারক ও বিভক্তি](#কারক-ও-বিভক্তি-3) | 3 |
+| 5 | [কারক ও বিভক্তি](#কারক-ও-বিভক্তি-4) | 4 |
 | 6 | [সন্ধি ও বিচ্ছেদ](#সন্ধি-ও-বিচ্ছেদ-2) | 2 |
 | 7 | [বাংলা ভাষা বিষয়ক তথ্য](#বাংলা-ভাষা-বিষয়ক-তথ্য-1) | 1 |
 | 8 | [বানান ও শুদ্ধিকরণ](#বানান-ও-শুদ্ধিকরণ-0) | 0 |
+| 9 | [সমাস](#সমাস-0) | 0 |
 
 <!-- TOC END -->
 
 ---
 
-## বাংলা ব্যাকরণ (154)
+## বাংলা ব্যাকরণ (159)
 1. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
    a) কর্মকারকে শূন্য
    b) করণকারকে শূন্য
@@ -940,7 +941,37 @@
    (c) Shamsur Rahman
    (d) Rabindranath Tagore
 
-## বাংলা সাহিত্য (108)
+155. **"কিন্ডারগার্টেন" কোন ভাষার শব্দ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. জার্মান
+   খ. আরবি
+   গ. ফারসি
+   ঘ. স্প্যানিশ
+
+156. **"Lyric" শব্দের প্রতিশব্দ-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. সংগীত
+   খ. সুর
+   গ. গীতি কবিতা
+   ঘ. গান
+
+157. **'কাঁদতে আসিনি ফাঁসির দাবি নিয়ে এসেছি' এই কবিতাটির রচয়িতা কে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
+   ক. জহির রায়হান
+   খ. শামসুর রাহমান
+   গ. মাহবুব-উল-আলম
+   ঘ. সৈয়দ শামসুল হক
+
+158. **ভাষাভাষী জনসংখ্যার দিক থেকে বাংলা পৃথিবীর কোন স্থানে অবস্থান করছে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
+   ক. সপ্তম
+   খ. ষষ্ঠ
+   গ. চতুর্থ
+   ঘ. পঞ্চম
+
+159. **নিচের কোনটি রূঢ়ি শব্দ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
+   ক. জলদ
+   খ. প্রবীণ
+   গ. সুহৃদ
+   ঘ. জ্যাঠামী
+
+## বাংলা সাহিত্য (113)
 1. **মীর মশাররফ হোসেনের “বিষাদ সিন্ধু” একটি-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
    ক. কাব্যগ্রন্থ
    খ. ইতিহাসগ্রন্থ
@@ -1574,6 +1605,36 @@
    (c) উপন্যাস
    (d) কবিতা
 
+109. **মীর মোশাররফ হোসেন এর 'বিষাদ সিন্ধু' একটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. কাব্যগ্রন্থ
+   খ. ইতিহাসগ্রন্থ
+   গ. উপন্যাস
+   ঘ. জীবনীগ্রন্থ
+
+110. **বাংলা সাহিত্যের প্রথম ইতিহাস গ্রন্থ কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. বাংলা সাহিত্যের ইতিহাস
+   খ. বঙ্গভাষা ও সাহিত্য
+   গ. বাংলা সাহিত্যের রূপরেখা
+   ঘ. বাংলা সাহিত্যের গল্প
+
+111. **'ধনধান্য পুষ্প ভরা আমাদের এই বসুন্ধরা' চরনের রচয়িতা -** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. দ্বিজেন্দ্রলাল রায়
+   খ. কামিনী রায়
+   গ. শামসুর রহমান
+   ঘ. রবীন্দ্রনাথ ঠাকুর
+
+112. **অমিত্রাক্ষর ছন্দের প্রবর্তক -** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. মাইকেল মধুসূদন
+   খ. বঙ্কিমচন্দ্র
+   গ. রবীন্দ্রনাথ
+   ঘ. বিহারীলাল
+
+113. **বাংলা সাহিত্যে 'ভোরের পাখি' বলা হয় কাকে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
+   ক. রবীন্দ্রনাথ ঠাকুর
+   খ. রাজশেখর বসু
+   গ. ঈশ্বরচন্দ্র বিদ্যাসাগর
+   ঘ. বিহারীলাল চক্রবর্তী
+
 ## বাগধারা ও প্রবাদ (13)
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
    ক. দুর্বৃত্ত
@@ -1677,7 +1738,7 @@
    c. সমক্ষ
    d. চাক্ষুস
 
-## কারক ও বিভক্তি (3)
+## কারক ও বিভক্তি (4)
 1. **'ঘোড়া গাড়ি টানে।' কোন কারক?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
    ক. কর্তৃকারক
    খ. কর্মকারক
@@ -1694,6 +1755,12 @@
    (b) করণ কারকে পঞ্চমী
    (c) অধিকরণ কারকে সপ্তমী
    (d) অপাদান কারকে সপ্তমী
+
+4. **'দেবতার ধন কে যায় ফিরায়ে লয়ে' কোন কারকে কোন বিভক্তি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
+   ক. কর্তায় ৬ষ্ঠী
+   খ. কর্মে ৬ষ্ঠী
+   গ. করণে ৬ষ্ঠী
+   ঘ. সম্প্রদানে ৬ষ্ঠী
 
 ## সন্ধি ও বিচ্ছেদ (2)
 1. **'মাথাঘষা' শব্দটির সঠিক সন্ধি-বিচ্ছেদ কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
@@ -1722,3 +1789,10 @@
    খ মুমূর্ষ
    গ. মুমূর্ষু
    ঘ মুমুষর্
+
+## সমাস (0)
+**'সপ্তাহ' কোন সমাস?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. দ্বন্দ্ব
+   খ. তৎপুরুষ
+   গ. কর্মধারয়
+   ঘ. দ্বিগু

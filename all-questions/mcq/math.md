@@ -1,23 +1,23 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 160 questions
+**Table of Contents** — 15 subtopics · 164 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Algebra](#algebra-45) | 45 |
 | 2 | [Geometry](#geometry-24) | 24 |
-| 3 | [Percentage, Profit & Loss](#percentage-profit--loss-21) | 21 |
+| 3 | [Percentage, Profit & Loss](#percentage-profit--loss-22) | 22 |
 | 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
 | 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
 | 6 | [Set Theory](#set-theory-8) | 8 |
-| 7 | [Average & Age Problems](#average--age-problems-6) | 6 |
-| 8 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
-| 9 | [Analytical Reasoning](#analytical-reasoning-6) | 6 |
+| 7 | [Analytical Reasoning](#analytical-reasoning-7) | 7 |
+| 8 | [Average & Age Problems](#average--age-problems-6) | 6 |
+| 9 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
 | 10 | [Permutation & Combination](#permutation--combination-5) | 5 |
 | 11 | [Trigonometry](#trigonometry-4) | 4 |
 | 12 | [Probability & Statistics](#probability--statistics-4) | 4 |
 | 13 | [Time & Work](#time--work-4) | 4 |
-| 14 | [Speed, Time & Distance](#speed-time--distance-0) | 0 |
-| 15 | [Basic Arithmetic](#basic-arithmetic-0) | 0 |
+| 14 | [Basic Arithmetic](#basic-arithmetic-2) | 2 |
+| 15 | [Speed, Time & Distance](#speed-time--distance-0) | 0 |
 
 <!-- TOC END -->
 
@@ -451,7 +451,7 @@
    (c) 80 cm
    (d) Cannot be determined
 
-## Percentage, Profit & Loss (21)
+## Percentage, Profit & Loss (22)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
@@ -578,6 +578,12 @@
    খ. ২২০০ টাকা
    গ. ২৪০০ টাকা
    ঘ. ২৩০০ টাকা
+
+22. **কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. নাপাম
+   খ. নিউট্রন
+   গ. হাইড্রোজেন
+   ঘ. এটম
 
 ## Arithmetic & Number Series (16)
 
@@ -793,6 +799,81 @@
    C) difference
    D) complement
 
+## Analytical Reasoning (7)
+1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
+   (a) 4.24 meters
+   (b) 5.24 meters
+   (c) 3.24 meters
+   (d) 4 meters
+
+2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
+   (a) 1
+   (b) 2
+   (c) 3
+   (d) 4
+
+3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+**বিদ্যুৎ আবিষ্কার কততম শিল্প বিপ্লবের সূচনা সম্পর্কিত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ২য়
+   খ. ৩য়
+   গ. ৬ষ্ঠ
+   ঘ. ৪র্থ
+
+**ম্যারাথন যেমন একটি দৌড়, ঠিক তেমনি শীতঘুমদাতা (hibernation) হলো-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. শীত
+   খ. গ্রীষ্ম
+   গ. ঘুম
+   ঘ. জেগে থাকা
+
+**রামন বলছে 'অনূজের মা হলো আমার মায়ের একমাত্র মেয়ে' তাহলে রামনের সাথে অনূজের সম্পর্ক কি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক ভাই
+   খ ভাগিনা
+   গ বাবা
+   ঘ কোনটি নয়
+
+**এই চিত্রটিতে মোট কতটি ত্রিভুজ আছে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ২০
+   খ. ২০ এর অধিক
+   গ. ১৬
+   ঘ. ১৮
+
+**নিচের সংখ্যার ধারাটিতে ভুল সংখ্যা খুঁজে বের করুন: ৮,১৩, ২১, ৩২, ৪৭, ৬৩, ৮৩** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ৪৭
+   খ. ৬৩
+   গ. ৩২
+   ঘ. ৮৩
+
+**একটি সারিতে ব্যক্তিদের মধ্যে, সাবিকের অবস্থান বাম দিক থেকে ২৬তম এবং ডান দিক থেকে ৩৫তম। তাহলে সারিতে মোট ছাত্রছাত্রীর সংখ্যা হবে:** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ৩২
+   খ. ৪৬
+   গ. ৬০
+   ঘ. ৭২
+
+4. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
+   (a) When a cache hit occurs, the CPU fetches data from ROM.
+   (b) When a cache hit occurs, the CPU fetches data from main memory.
+   (c) When a cache miss occurs, the CPU fetches data from cache memory.
+   (d) When a cache miss occurs, the CPU fetches data from main memory.
+
+5. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
+   (a) DRAM requires more power than SRAM
+   (b) SRAM requires fewer transistors per bit than DRAM
+   (c) SRAM does not need refreshing while DRAM does
+   (d) SRAM stores data in capacitors while DRAM uses flip-flops
+
+6. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*
+   (a) Its content can be erased electrically in blocks
+   (b) It requires periodin rewriting of data.
+   (c) It can be rewritten at high speed and used as CPU cache
+   (d) Its entire content is erased by ultraviolet light
+
+7. **বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. হাইড্রোজেন
+   খ. তামা
+   গ. কার্বন ডাই-অক্সাইড
+   ঘ. নাইট্রোজেন
+
 ## Average & Age Problems (6)
 
 1. **The father's age is 36 and the son's age is 16. How many years ago was the father's age three times the son's age?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
@@ -869,75 +950,6 @@
    b. 80
    c. 91
    d. 114
-
-## Analytical Reasoning (6)
-1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
-   (a) 4.24 meters
-   (b) 5.24 meters
-   (c) 3.24 meters
-   (d) 4 meters
-
-2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
-   (a) 1
-   (b) 2
-   (c) 3
-   (d) 4
-
-3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
-
-**বিদ্যুৎ আবিষ্কার কততম শিল্প বিপ্লবের সূচনা সম্পর্কিত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
-   ক. ২য়
-   খ. ৩য়
-   গ. ৬ষ্ঠ
-   ঘ. ৪র্থ
-
-**ম্যারাথন যেমন একটি দৌড়, ঠিক তেমনি শীতঘুমদাতা (hibernation) হলো-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. শীত
-   খ. গ্রীষ্ম
-   গ. ঘুম
-   ঘ. জেগে থাকা
-
-**রামন বলছে 'অনূজের মা হলো আমার মায়ের একমাত্র মেয়ে' তাহলে রামনের সাথে অনূজের সম্পর্ক কি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক ভাই
-   খ ভাগিনা
-   গ বাবা
-   ঘ কোনটি নয়
-
-**এই চিত্রটিতে মোট কতটি ত্রিভুজ আছে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. ২০
-   খ. ২০ এর অধিক
-   গ. ১৬
-   ঘ. ১৮
-
-**নিচের সংখ্যার ধারাটিতে ভুল সংখ্যা খুঁজে বের করুন: ৮,১৩, ২১, ৩২, ৪৭, ৬৩, ৮৩** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. ৪৭
-   খ. ৬৩
-   গ. ৩২
-   ঘ. ৮৩
-
-**একটি সারিতে ব্যক্তিদের মধ্যে, সাবিকের অবস্থান বাম দিক থেকে ২৬তম এবং ডান দিক থেকে ৩৫তম। তাহলে সারিতে মোট ছাত্রছাত্রীর সংখ্যা হবে:** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ৩২
-   খ. ৪৬
-   গ. ৬০
-   ঘ. ৭২
-
-4. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
-   (a) When a cache hit occurs, the CPU fetches data from ROM.
-   (b) When a cache hit occurs, the CPU fetches data from main memory.
-   (c) When a cache miss occurs, the CPU fetches data from cache memory.
-   (d) When a cache miss occurs, the CPU fetches data from main memory.
-
-5. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
-   (a) DRAM requires more power than SRAM
-   (b) SRAM requires fewer transistors per bit than DRAM
-   (c) SRAM does not need refreshing while DRAM does
-   (d) SRAM stores data in capacitors while DRAM uses flip-flops
-
-6. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*
-   (a) Its content can be erased electrically in blocks
-   (b) It requires periodin rewriting of data.
-   (c) It can be rewritten at high speed and used as CPU cache
-   (d) Its entire content is erased by ultraviolet light
 
 ## Permutation & Combination (5)
 
@@ -1052,6 +1064,19 @@
    (C) Help
    (D) Save
 
+## Basic Arithmetic (2)
+1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ৩৫ বছর
+   খ. ৪০ বছর
+   গ. ৫০ বছর
+   ঘ. কোনটিই নয়
+
+2. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. প্রোষিতভর্তৃকা
+   খ. প্রোষিতা
+   গ. প্রবাসিনী
+   ঘ. প্রোষিতপত্নীক
+
 ## Speed, Time & Distance (0)
 **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
    ক. তরলের প্রবাহের মসৃণতা
@@ -1064,10 +1089,3 @@
    খ. ২২৪ কি.মি.
    গ. ২৩০ কি.মি.
    ঘ. ২৩৪ কি.মি.
-
-## Basic Arithmetic (0)
-**তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ৩৫ বছর
-   খ. ৪০ বছর
-   গ. ৫০ বছর
-   ঘ. কোনটিই নয়

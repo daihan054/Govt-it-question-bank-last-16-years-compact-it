@@ -1,17 +1,17 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 154 questions
+**Table of Contents** — 10 subtopics · 157 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-34) | 34 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-26) | 26 |
-| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
-| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-22) | 22 |
+| 3 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-24) | 24 |
+| 4 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
 | 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-19) | 19 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-17) | 17 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
 | 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-4) | 4 |
-| 9 | [Number Systems & Codes](#number-systems--codes-2) | 2 |
+| 9 | [Number Systems & Codes](#number-systems--codes-3) | 3 |
 | 10 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
 
 <!-- TOC END -->
@@ -150,6 +150,62 @@
    ii. $(\text{AB8C})_{16}$ to Decimal number
    iii. $(1101111010)_2$ to Hexadecimal
 
+## Karnaugh Map (K-Map) (24)
+1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
+
+2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
+
+3. **(a) Consider the following logic circuit-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
+ * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
+ * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
+
+4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
+
+5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)], [BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
+
+6. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+7. **(b) Simplify the following Boolean function using K-map.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 489 (ET: N/A)]*
+
+8. **Minimize the following function in SOP minimal form using K-map:** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
+
+9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
+
+10. **Simplify using K-map with logic circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
+
+11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 798 (ET: N/A)]*
+
+12. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
+
+13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879 (ET: BUET)]*
+
+14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
+   F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
+
+15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
+
+16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038-1039 (ET: DPI)]*
+
+17. **(গ) Min term কী? K-map-এর সাহায্যে সরল করুন: $\bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+
+18. **Simplify the expression: $F(A,B,C) = \bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$, using k-map.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
+
+19. **(a) Simplify $F(A,B,C,D) = ACD+AB+\bar{D}+A\bar{C}D$ using K-map and draw the simplified circuit diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+20. **Sentence correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+ক) (a+b)^4 - (a-b)^4 = 8ab(a^2+b^2) __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
+
+খ) একজন দোকানদার ৭ ১/২% ক্ষতিতে একটি দ্রব্য বিক্রয় করল যদি দ্রব্যটির ক্রয়মূল্য ১০% কম হতো এবংবিক্রয়মূল্য ৩১ টাকা বেশি হতো তাহলে ২০% লাভ হতো। দ্রব্যটির ক্রয়মূল্য কত? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
+
+21. **If you are CEO of a software company. You need a software from following three options:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+(a) Buy: Buy a software with cost 50 Lakh. (b) Building: Developed by developer cost 30 lakhs, possibility is 30% to develop complete software. (c) Modification: Buy and small modifications cost 30 lakh, for large modifications cost 80% increase.
+
+22. **Using a Karnaugh map, simplify the function (A,B,C,D) = \\Sigma 0,1,2,5,7,8,9,10,13,15 into Sum of Products form.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 385]]*
+
+23. **Traversing the tree and calculate Pre-order and post-order from below Tree.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
+
+24. **Simplify using K-Map/SOP F = \\Sigma(1,3,5,9,11,12,13,14)** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398]]*
+
 ## Combinational Circuits (Adders, Encoders, MUX) (23)
 
 1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
@@ -209,58 +265,6 @@
 22. **চিত্রে প্রদর্শিত 7 segment display দেওয়া আছে এখন 7 ও 2 display এর জন্য কোন LED High হবে?** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
 23. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
-
-## Karnaugh Map (K-Map) (22)
-1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
-
-2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
-
-3. **(a) Consider the following logic circuit-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
- * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
- * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
-
-4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
-
-5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)], [BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
-
-6. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
-
-7. **(b) Simplify the following Boolean function using K-map.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 489 (ET: N/A)]*
-
-8. **Minimize the following function in SOP minimal form using K-map:** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
-
-9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
-
-10. **Simplify using K-map with logic circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
-
-11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 798 (ET: N/A)]*
-
-12. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
-
-13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879 (ET: BUET)]*
-
-14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
-   F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
-
-15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
-
-16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038-1039 (ET: DPI)]*
-
-17. **(গ) Min term কী? K-map-এর সাহায্যে সরল করুন: $\bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
-
-18. **Simplify the expression: $F(A,B,C) = \bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$, using k-map.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
-
-19. **(a) Simplify $F(A,B,C,D) = ACD+AB+\bar{D}+A\bar{C}D$ using K-map and draw the simplified circuit diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
-
-20. **Sentence correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
-ক) (a+b)^4 - (a-b)^4 = 8ab(a^2+b^2) __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
-
-খ) একজন দোকানদার ৭ ১/২% ক্ষতিতে একটি দ্রব্য বিক্রয় করল যদি দ্রব্যটির ক্রয়মূল্য ১০% কম হতো এবংবিক্রয়মূল্য ৩১ টাকা বেশি হতো তাহলে ২০% লাভ হতো। দ্রব্যটির ক্রয়মূল্য কত? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
-
-21. **If you are CEO of a software company. You need a software from following three options:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
-(a) Buy: Buy a software with cost 50 Lakh. (b) Building: Developed by developer cost 30 lakhs, possibility is 30% to develop complete software. (c) Modification: Buy and small modifications cost 30 lakh, for large modifications cost 80% increase.
-
-22. **Using a Karnaugh map, simplify the function (A,B,C,D) = \\Sigma 0,1,2,5,7,8,9,10,13,15 into Sum of Products form.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 385]]*
 
 ## Boolean Algebra & De Morgan’s Theorem (19)
 
@@ -365,10 +369,12 @@
 
 4. **How many bits have to change to convert int A to int B. Sample A=31 and B=14.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1164 (ET: N/A)]*
 
-## Number Systems & Codes (2)
+## Number Systems & Codes (3)
 1. **(b) Represent - 25 in 8 bit binary using 2's complement.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 76]]*
 
 2. **X = 00110, Y = 11100 are represented in 5-bit signed 2's complement system. Then their sum X + Y in 6-bit signed 2's complemented representation is? (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 310]]*
+
+3. **Convert the following octal number into decimal and hexadecimal: (651.124)_8.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
 
 ## Finite State Machines (FSM) (1)
 

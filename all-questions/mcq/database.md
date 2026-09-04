@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 180 questions
+**Table of Contents** — 14 subtopics · 181 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -15,8 +15,8 @@
 | 10 | [Indexing & Query Optimization](#indexing--query-optimization-6) | 6 |
 | 11 | [Database Connectivity (JDBC/ODBC)](#database-connectivity-jdbcodbc-5) | 5 |
 | 12 | [Concurrency Control & Locking](#concurrency-control--locking-5) | 5 |
-| 13 | [SQL Joins](#sql-joins-2) | 2 |
-| 14 | [Database Fundamentals & SQL](#database-fundamentals--sql-2) | 2 |
+| 13 | [Database Fundamentals & SQL](#database-fundamentals--sql-3) | 3 |
+| 14 | [SQL Joins](#sql-joins-2) | 2 |
 
 <!-- TOC END -->
 
@@ -1177,6 +1177,20 @@
    C) Read
    D) Update
 
+## Database Fundamentals & SQL (3)
+1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+
+2. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
+   (a) Can have duplicate values
+   (b) Can be NULL
+   (c) Must be unique
+   (d) Can store multiple values
+
+3. **See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400-401]]*
+   a) Create table name Servers with attributes ID, DaysRunning, OsName, RamCapacity.
+   b) Write SQL query to update the server to Unix where the RamCapacity than 16GB.
+   c) Write SQL query to select the OSName for which Servers are running more than 365 days.
+
 ## SQL Joins (2)
 
 1. **What type of join in needed when you wish to include rows that do not have matching values?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
@@ -1190,12 +1204,3 @@
    b) EQUI Join
    c) Outer Join
    d) All of the above
-
-## Database Fundamentals & SQL (2)
-1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
-
-2. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
-   (a) Can have duplicate values
-   (b) Can be NULL
-   (c) Must be unique
-   (d) Can store multiple values

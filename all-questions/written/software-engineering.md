@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 155 questions
+**Table of Contents** — 15 subtopics · 156 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-47) | 47 |
+| 1 | [SDLC Phases & Models](#sdlc-phases--models-48) | 48 |
 | 2 | [Software Testing & Evaluation](#software-testing--evaluation-41) | 41 |
 | 3 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-14) | 14 |
 | 4 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-13) | 13 |
@@ -23,7 +23,7 @@
 
 ---
 
-## SDLC Phases & Models (47)
+## SDLC Phases & Models (48)
 1. A software company has been hired to develop an Online Library Management System for a university. The librarian wants the system to be delivered in phases so that feedback from users can be incorporated after each release. As a software developer, identify the most suitable Software Development Life Cycle (SDLC) model for this project. Justify your choice by mentioning two advantages of the selected model. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
 2. What are the main phases of the Software Development Life Cycle (SDLC)? Explain each phase briefly. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
@@ -119,6 +119,8 @@
 46. **What is SDLC? Write down the Phases of SDLC?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317-318]]*
 
 47. **(d) Compare Agile model and Waterfall model of software development. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
+
+48. **Which software development model is more suitable when a company has only a few months to complete a project: Agile or Waterfall? Justify your answer.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
 
 ## Software Testing & Evaluation (41)
 1. Explain the difference between Unit Testing and Integration Testing. [SO IT 25-07-2026]

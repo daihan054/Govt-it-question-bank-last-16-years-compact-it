@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 472 questions
+**Table of Contents** — 6 subtopics · 485 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
-| 2 | [Everyday Science](#everyday-science-124) | 124 |
-| 3 | [International Affairs](#international-affairs-106) | 106 |
+| 2 | [Everyday Science](#everyday-science-136) | 136 |
+| 3 | [International Affairs](#international-affairs-107) | 107 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -987,7 +987,7 @@
    C. রোবটি
    D. জেনেটিক্স
 
-## Everyday Science (124)
+## Everyday Science (136)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -1006,7 +1006,7 @@
    গ. নাইট্রোজেন
    ঘ. ক্লোরোপিকরিন
 
-4. **ওজোন স্তর বায়ুমণ্ডলের কোন স্তরে অবস্থিত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
+4. **ওজোন স্তর বায়ুমণ্ডলের কোন স্তরে অবস্থিত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*, *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
    ক. ট্রপোমণ্ডল
    খ. স্ট্র্যাটোমণ্ডল
    গ. মেসোমণ্ডল
@@ -1851,7 +1851,79 @@ int main() \{
 
 124. **Find the shortest path.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395-396]]*
 
-## International Affairs (106)
+125. **কাঁদুনে গ্যাসের অপর নাম কী?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. মিথেন
+   খ. ইথেন
+   গ. নাইট্রোজেন
+   ঘ. ক্লোরোপিক্রিন
+
+126. **৩ ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট ০ হলে আউটপুট কত?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. ০
+   খ. ১
+   গ. ৩
+   ঘ. কোনটিই নয়
+
+127. **কোন যৌগটি ক্যালসিয়াম দাত গঠনে সাহায্য করে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. সোডিয়াম কার্বোনেট
+   খ. সোডিয়াম বাই কার্বোনেট
+   গ. ক্যালসিয়াম বাই কার্বোনেট
+   ঘ. ক্যালসিয়াম হাইড্রোক্সাইড
+
+128. **নিউক্লিয়াসে কি থাকে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. নিউট্রন
+   খ. ইলেকট্রন
+   গ. প্রোটন ও নিউট্রন
+   ঘ. ইলেকট্রন ও প্রোটন
+
+129. **রক্তের টিস্যুতে যাকে রক্তকণিকা বলে তা'র নাম?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. লোহিত রক্তকণিকা
+   খ. শ্বেত রক্তকণিকা
+   গ. রক্তরস
+   ঘ. প্লাজমা
+
+130. **"ইতর-বিশেষ" বলতে বুঝায়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. দুর্বৃত্ত
+   খ. অপদার্থ
+   গ. চালাকি
+   ঘ. পার্থক্য
+
+131. **বড্ড থেকে বড্ড কোন ধরনের পরিবর্তন?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. বিষমীভবন
+   খ. সমীভবন
+   গ. ব্যঞ্জন বিকৃতি
+   ঘ. ব্যঞ্জন দ্বিত্ব
+
+132. **যা সহজে উত্তীর্ণ হওয়া যায় না-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. দুর্জয়
+   খ. দুর্জন
+   গ. দুস্তর
+   ঘ. দুর্লভ
+
+133. **বাংলা একাডেমির 'আঞ্চলিক অভিধান' সম্পাদনা কে করেন?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. মুহম্মদ শহীদুল্লাহ
+   খ. মুহম্মদ এনামুল হক
+   গ. মুহম্মদ মনসুর উদ্দীন
+   ঘ. মুহম্মদ আবদুল হাই
+
+134. **'তামার বিষ' বাগধারাটির অর্থ কি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. গভীর আঘাত
+   খ. ধাতব পদার্থের আঘাত
+   গ. পুরানা ক্ষত
+   ঘ. অর্থের কুপ্রভাব
+
+135. **William Shakespeare was born in ....** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
+   a. 1546
+   b. 1564
+   c. 1616
+   d. 1761
+
+136. **In a 3-input logic circuit (inputs A, B, and** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 436]]*
+   C) , the output F is 1 if at least two or all three inputs are
+   1. 
+   (a) Construct the truth table.
+   (b) Use the truth table to find the POS (Product of Sums) expression using K-map simplification.
+
+## International Affairs (107)
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) David Baker
    (b) John Jumper
@@ -2565,6 +2637,12 @@ int main() \{
    (b) Implemented
    (c) Overridden
    (d) Used by creating object
+
+107. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছেন -** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. লাইবেরিয়া
+   খ. নামিবিয়া
+   গ. ভুটান
+   ঘ. সিয়েরা লিওন
 
 ## Geography & Environment (26)
 

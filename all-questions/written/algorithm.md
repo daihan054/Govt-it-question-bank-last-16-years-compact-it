@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 143 questions
+**Table of Contents** — 15 subtopics · 144 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-39) | 39 |
+| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-40) | 40 |
 | 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
 | 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-15) | 15 |
 | 4 | [Searching Algorithms](#searching-algorithms-14) | 14 |
@@ -23,7 +23,7 @@
 
 ---
 
-## Sorting Algorithms & Complexity (39)
+## Sorting Algorithms & Complexity (40)
 1. (a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -134,6 +134,8 @@ void findDuplicates(int arr[], int n) \{
 \}
 
 39. **Explain the Quick Sort algorithm with a suitable example. What is the worst-case time complexity, and in which scenario does it occur?** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 220]]*
+
+40. **Apply the Merge Sort algorithm using the divide and conquer approach to sort the following list of numbers: 5, 1, 6, 3, 7, 2, 8, and 4.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
 
 ## Graph Traversal Algorithms (BFS & DFS) (17)
 

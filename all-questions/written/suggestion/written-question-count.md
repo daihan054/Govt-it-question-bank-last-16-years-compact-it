@@ -1,28 +1,28 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3360** questions.
+Sorted by count, highest first. Total **3378** questions.
 
 ## IT questions
 
-Total: **2799** questions.
+Total: **2817** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **541** |
-| | Subnetting & IP Addressing | 118 |
+| **Computer Networks** | **— all subcategories —** | **544** |
+| | Subnetting & IP Addressing | 119 |
 | | OSI & TCP/IP Reference Model | 57 |
 | | Networking Fundamentals & Terminology | 32 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 23 |
 | | Networking Devices | 23 |
 | | Transport Layer (TCP & UDP) | 22 |
-| | Physical Layer & Transmission Media (Cables & Wiring) | 20 |
+| | Physical Layer & Transmission Media (Cables & Wiring) | 21 |
 | | Wireless Networks & IoT (mmWave) | 19 |
 | | Multiplexing & Bandwidth | 19 |
 | | Routing Protocols & Route Configuration | 19 |
 | | Communication System & Transmission Modes | 17 |
+| | Network Address Translation (NAT) | 17 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
-| | Network Address Translation (NAT) | 16 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
 | | Network Topologies | 14 |
 | | IPv6 Addressing | 13 |
@@ -43,8 +43,8 @@ Total: **2799** questions.
 | | Address Resolution (ARP & RARP) | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **304** |
-| | SQL Queries | 94 |
+| **Database** | **— all subcategories —** | **305** |
+| | SQL Queries | 95 |
 | | Keys in DBMS | 34 |
 | | DBMS Architecture & Features | 26 |
 | | ER Diagram & Database Design | 25 |
@@ -64,8 +64,8 @@ Total: **2799** questions.
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
 | | Keys, Constraints & Database Objects | 0 |
-| **C Programming** | **— all subcategories —** | **281** |
-| | Basic Programs & Control Statements | 121 |
+| **C Programming** | **— all subcategories —** | **283** |
+| | Basic Programs & Control Statements | 123 |
 | | Output Tracing & Control Flow | 57 |
 | | Recursion & Functions | 39 |
 | | Operators, Data Types & Language Concepts | 25 |
@@ -74,7 +74,7 @@ Total: **2799** questions.
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
-| **Operating System** | **— all subcategories —** | **203** |
+| **Operating System** | **— all subcategories —** | **204** |
 | | Linux / Unix Commands & Administration | 47 |
 | | CPU Scheduling Algorithms | 26 |
 | | OS Concepts & System Software | 24 |
@@ -86,8 +86,8 @@ Total: **2799** questions.
 | | File Systems & Disk Management | 7 |
 | | CPU Scheduling | 6 |
 | | Windows & System Administration | 5 |
+| | OS Concepts & Process Management | 5 |
 | | Process Synchronization & Concurrency | 4 |
-| | OS Concepts & Process Management | 4 |
 | | Deadlock & Concurrency Control | 0 |
 | | Linux, Shell & System Commands | 0 |
 | **Computer & Network Security** | **— all subcategories —** | **197** |
@@ -106,8 +106,8 @@ Total: **2799** questions.
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **193** |
-| | Computer Fundamentals & Acronyms | 99 |
+| **Computer Fundamentals** | **— all subcategories —** | **196** |
+| | Computer Fundamentals & Acronyms | 102 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
@@ -117,8 +117,19 @@ Total: **2799** questions.
 | | Quantum Computing & Emerging Technologies | 3 |
 | | Digital Banking & Financial Inclusion | 2 |
 | | User Interfaces (CLI vs GUI) | 1 |
-| **Software Engineering** | **— all subcategories —** | **155** |
-| | SDLC Phases & Models | 47 |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **157** |
+| | Logic Gates & Universal Gates | 34 |
+| | Number Systems & Base Conversions | 26 |
+| | Karnaugh Map (K-Map) | 24 |
+| | Combinational Circuits (Adders, Encoders, MUX) | 23 |
+| | Boolean Algebra & De Morgan’s Theorem | 19 |
+| | Sequential Circuits (Latches & Flip-Flops) | 17 |
+| | Logic Families (TTL vs CMOS) | 6 |
+| | 2's Complement & Binary Arithmetic | 4 |
+| | Number Systems & Codes | 3 |
+| | Finite State Machines (FSM) | 1 |
+| **Software Engineering** | **— all subcategories —** | **156** |
+| | SDLC Phases & Models | 48 |
 | | Software Testing & Evaluation | 41 |
 | | UML Diagrams (Class, Use Case, Sequence) | 14 |
 | | Software Architecture & Design Patterns (MVC) | 13 |
@@ -133,19 +144,8 @@ Total: **2799** questions.
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
 | | Software Design, Architecture & Patterns | 0 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **154** |
-| | Logic Gates & Universal Gates | 34 |
-| | Number Systems & Base Conversions | 26 |
-| | Combinational Circuits (Adders, Encoders, MUX) | 23 |
-| | Karnaugh Map (K-Map) | 22 |
-| | Boolean Algebra & De Morgan’s Theorem | 19 |
-| | Sequential Circuits (Latches & Flip-Flops) | 17 |
-| | Logic Families (TTL vs CMOS) | 6 |
-| | 2's Complement & Binary Arithmetic | 4 |
-| | Number Systems & Codes | 2 |
-| | Finite State Machines (FSM) | 1 |
-| **Algorithm** | **— all subcategories —** | **143** |
-| | Sorting Algorithms & Complexity | 39 |
+| **Algorithm** | **— all subcategories —** | **144** |
+| | Sorting Algorithms & Complexity | 40 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 15 |
 | | Searching Algorithms | 14 |
@@ -172,13 +172,13 @@ Total: **2799** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **125** |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **127** |
 | | OOP Concepts (Inheritance & Polymorphism) | 54 |
 | | Java Programming & Methods | 18 |
 | | Class Design & Object-Oriented Modeling | 11 |
 | | Output Tracing & Recursion | 10 |
+| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 10 |
 | | Constructors & Destructors | 8 |
-| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 8 |
 | | Encapsulation & Access Modifiers | 7 |
 | | Exception Handling | 4 |
 | | C++ OOP Concepts & Friend Functions | 3 |
@@ -242,9 +242,9 @@ Total: **2799** questions.
 | | Lexical Analysis & Compiler Phases | 5 |
 | | Linker & Loader | 1 |
 | | Compiler Design & Theory of Computation | 0 |
-| **Programming Languages** | **— all subcategories —** | **12** |
+| **Programming Languages** | **— all subcategories —** | **13** |
+| | Core Programming Languages | 7 |
 | | Visual Basic & .NET | 6 |
-| | Core Programming Languages | 6 |
 | **Image Processing** | **— all subcategories —** | **7** |
 | | Computer Graphics (Vector & Raster) | 3 |
 | | Color Models | 1 |

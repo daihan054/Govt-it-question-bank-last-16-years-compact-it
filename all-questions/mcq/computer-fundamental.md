@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 159 questions
+**Table of Contents** — 6 subtopics · 161 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-57) | 57 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-59) | 59 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (57)
+## Hardware Components & Peripherals (59)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -356,6 +356,18 @@ int main ()\{
 56. **Write the name of the 8086 block diagram in following table.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 382]]*
 
 57. **Multi Programming (Or Multi-tasking) enables more than a single process to apparently execute simultaneously. How is this achieved on a uniprocessor?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 383]]*
+
+58. **মাদার বোর্ডে কোনটি 'বিদ্যুৎ নিয়ন্ত্রণ' করে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
+   ক. BIOS
+   খ. UPS
+   গ. CPU
+   ঘ. MPSU
+
+59. **Who is the author of the drama 'You never can tell'?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
+   a. William Shakespeare
+   b. George Bernard Shaw
+   c. Ben Jonson
+   d. Christopher Marlowe
 
 ## Software Types & Classification (40)
 

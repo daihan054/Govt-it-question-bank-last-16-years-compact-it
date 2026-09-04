@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 312 questions
+**Table of Contents** — 13 subtopics · 314 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-67) | 67 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-69) | 69 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (67)
+## Networking Fundamentals & Terminology (69)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -434,6 +434,20 @@
    d) What is the subnet mask?
 
 67. **From the given table of IP addresses, identify which address is a Loopback address. Explain the reason behind your answer and mention the standard range of loopback addresses.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 382]]*
+
+68. **Given, IP address: 102.168.1.50 and Subnet Mask: 255.255.255.240** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
+   i. Find the range of valid host address?
+   ii. Find Network Address?
+   iii. Find Broadcast address?
+
+69. **a) Write full form: DHCP and ARP** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 402]]*
+   b) Answer the following question give IP
+   192. 168.10.100/26
+   (i) Find Network address.
+   (ii) Maximum Number of Host.
+   (iii) Broadcast address of the IP address
+   9. 1.5.31 and default subnet mask
+   250. 0.0.0
 
 ## Application Layer Protocols (58)
 

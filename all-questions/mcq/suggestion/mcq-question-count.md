@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2862** questions.
+Sorted by count, highest first. Total **2896** questions.
 
 ## IT questions
 
-Total: **1661** questions.
+Total: **1667** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **312** |
-| | Networking Fundamentals & Terminology | 67 |
+| **Computer Networks** | **— all subcategories —** | **314** |
+| | Networking Fundamentals & Terminology | 69 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
@@ -23,7 +23,7 @@ Total: **1661** questions.
 | | Routing Protocols | 13 |
 | | Error Detection & Correction | 3 |
 | | Switching Techniques | 3 |
-| **Database** | **— all subcategories —** | **180** |
+| **Database** | **— all subcategories —** | **181** |
 | | SQL Commands & Queries | 52 |
 | | DBMS Concepts & Architecture | 34 |
 | | Normalization | 16 |
@@ -36,10 +36,10 @@ Total: **1661** questions.
 | | Indexing & Query Optimization | 6 |
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | Concurrency Control & Locking | 5 |
+| | Database Fundamentals & SQL | 3 |
 | | SQL Joins | 2 |
-| | Database Fundamentals & SQL | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **159** |
-| | Hardware Components & Peripherals | 57 |
+| **Computer Fundamentals** | **— all subcategories —** | **161** |
+| | Hardware Components & Peripherals | 59 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -140,11 +140,11 @@ Total: **1661** questions.
 | | Python | 10 |
 | | Mobile & Android Development | 7 |
 | | Visual Basic & .NET | 7 |
-| **MS Office** | **— all subcategories —** | **21** |
+| **MS Office** | **— all subcategories —** | **22** |
 | | MS Excel | 10 |
 | | MS Word | 5 |
 | | MS PowerPoint | 3 |
-| | MS Office & Shortcuts | 2 |
+| | MS Office & Shortcuts | 3 |
 | | MS Access | 1 |
 | **Cloud Computing** | **— all subcategories —** | **20** |
 | | Cloud Computing Fundamentals | 14 |
@@ -157,45 +157,46 @@ Total: **1661** questions.
 
 ## General Questions
 
-Total: **1201** questions.
+Total: **1229** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **472** |
+| **General Knowledge** | **— all subcategories —** | **485** |
 | | Bangladesh Affairs | 171 |
-| | Everyday Science | 124 |
-| | International Affairs | 106 |
+| | Everyday Science | 136 |
+| | International Affairs | 107 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
-| **Bangla** | **— all subcategories —** | **286** |
-| | বাংলা ব্যাকরণ | 154 |
-| | বাংলা সাহিত্য | 108 |
+| **Bangla** | **— all subcategories —** | **297** |
+| | বাংলা ব্যাকরণ | 159 |
+| | বাংলা সাহিত্য | 113 |
 | | বাগধারা ও প্রবাদ | 13 |
 | | এক কথায় প্রকাশ | 5 |
-| | কারক ও বিভক্তি | 3 |
+| | কারক ও বিভক্তি | 4 |
 | | সন্ধি ও বিচ্ছেদ | 2 |
 | | বাংলা ভাষা বিষয়ক তথ্য | 1 |
 | | বানান ও শুদ্ধিকরণ | 0 |
+| | সমাস | 0 |
 | **English** | **— all subcategories —** | **283** |
 | | English Grammar | 166 |
 | | Vocabulary, Synonyms & Antonyms | 58 |
 | | Idioms & Phrases | 25 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Math** | **— all subcategories —** | **160** |
+| **Math** | **— all subcategories —** | **164** |
 | | Algebra | 45 |
 | | Geometry | 24 |
-| | Percentage, Profit & Loss | 21 |
+| | Percentage, Profit & Loss | 22 |
 | | Arithmetic & Number Series | 16 |
 | | Time, Work & Distance | 11 |
 | | Set Theory | 8 |
+| | Analytical Reasoning | 7 |
 | | Average & Age Problems | 6 |
 | | Ratio & Proportion | 6 |
-| | Analytical Reasoning | 6 |
 | | Permutation & Combination | 5 |
 | | Trigonometry | 4 |
 | | Probability & Statistics | 4 |
 | | Time & Work | 4 |
+| | Basic Arithmetic | 2 |
 | | Speed, Time & Distance | 0 |
-| | Basic Arithmetic | 0 |

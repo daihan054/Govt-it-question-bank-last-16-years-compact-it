@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 20 subtopics · 304 questions
+**Table of Contents** — 20 subtopics · 305 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-94) | 94 |
+| 1 | [SQL Queries](#sql-queries-95) | 95 |
 | 2 | [Keys in DBMS](#keys-in-dbms-34) | 34 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-26) | 26 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
@@ -28,7 +28,7 @@
 
 ---
 
-## SQL Queries (94)
+## SQL Queries (95)
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
 2. Consider a STUDENTS table with the following attributes: StudentID, Name, Department, Marks (10 Marks)
@@ -481,6 +481,8 @@ monetary_value
 DECIMAL
 
 i) Find first name of all customer whose order type is as ‘B’ on March 15, 2024. ii) Find total sum of monetary money of order between March 01, 2024 and march 15, 2024.
+
+95. **What do you understand by database view? Write a simple example to create, update and drop a view.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 401]]*
 
 ## Keys in DBMS (34)
 
