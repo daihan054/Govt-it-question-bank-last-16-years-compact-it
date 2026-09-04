@@ -15785,3 +15785,43 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 ## High Availability & Redundancy Protocols (VRRP, HSRP) (1)
 
 1. **State the network protocol of VRRP?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1359 (ET: BUET)]*
+
+   Answer: VRRP (Virtual Router Redundancy Protocol) is a `Network layer (Layer 3)` first-hop redundancy protocol.
+
+   Protocol details
+   - It runs `directly over IP` as `IP protocol number 112` — it does not use TCP or UDP.
+   - Advertisements are sent to the multicast address `224.0.0.18` (IPv6: FF02::12), once per second by default.
+   - It is an `open IETF standard`, defined in RFC 5798 (VRRPv3), so it works between different vendors' routers. This is its main advantage over Cisco's proprietary HSRP.
+
+   What it does
+   - Several physical routers share one `virtual IP address` and one virtual MAC address (`00:00:5E:00:01:XX`, where XX is the VRRP group ID). Hosts use that virtual IP as their default gateway and never know which physical router is actually serving them.
+   - One router is elected `Master` and forwards the traffic; the others are `Backup`. Election is by the highest `priority` (1–254, default 100), with the highest IP address as the tie-breaker. Priority 255 is reserved for the router that actually owns the virtual IP.
+   - The Master sends advertisements every second. If the Backup misses them for the Master Down Interval (about 3 seconds), it promotes itself, takes over the virtual IP and MAC, and sends a `gratuitous ARP` so that the switches update their MAC tables.
+   - The result is that a gateway failure is invisible to the hosts — no reconfiguration and no DHCP renewal is needed.
+
+   ```
+           Host default gateway = 192.168.1.1 (virtual IP)
+                           |
+           +---------------+---------------+
+           |                               |
+      [Router A]                      [Router B]
+      192.168.1.2                     192.168.1.3
+      priority 110  --- MASTER        priority 100 --- BACKUP
+           \_______ virtual IP 192.168.1.1 _______/
+                   virtual MAC 00:00:5E:00:01:01
+   ```
+
+   Comparison with the alternatives
+
+   | Point | VRRP | HSRP | GLBP |
+   |---|---|---|---|
+   | Standard | Open, RFC 5798 | Cisco proprietary | Cisco proprietary |
+   | Protocol / port | `IP protocol 112` | UDP port 1985 | UDP port 3222 |
+   | Multicast address | `224.0.0.18` | 224.0.0.2 (v1), 224.0.0.102 (v2) | 224.0.0.102 |
+   | Roles | Master and Backup | Active and Standby | AVG and AVF |
+   | Default priority | 100 | 100 | 100 |
+   | Hello / hold | 1 s / ~3 s | 3 s / 10 s | 3 s / 10 s |
+   | Load balancing | No, one master forwards | No | `Yes`, across several routers |
+   | Virtual MAC | 00:00:5E:00:01:XX | 00:00:0C:07:AC:XX | 00:07:B4:00:XX:XX |
+
+   - Related feature: `interface tracking` lowers a router's priority automatically if its uplink fails, so that mastership moves to a router that still has a working path upstream. Without it, the master could keep the virtual IP while having no route to the internet.
