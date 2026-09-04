@@ -5707,11 +5707,66 @@ Answer:
 
 19. **Write the difference between TCP and UDP.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 241]]*
 
+Answer:
+
+    | Feature | TCP (Transmission Control Protocol) | UDP (User Datagram Protocol) |
+    |---|---|---|
+    | Connection Type | Connection-oriented (Requires 3-way handshake before data transfer) | Connectionless (Sends data packets directly without establishing connection) |
+    | Reliability | Highly reliable; guarantees packet delivery via acknowledgments and retransmissions | Unreliable (Best-effort delivery); no delivery confirmation or retransmission |
+    | Packet Ordering | Strictly preserves packet order using sequence numbers | Does not guarantee ordering; packets may arrive out of order |
+    | Speed & Overhead | Slower speed with higher computational overhead | Extremely fast and lightweight with minimal latency |
+    | Header Size | 20 to 60 bytes (Variable header with control flags and options) | Fixed 8 bytes |
+    | Flow & Congestion Control | Implements windowing, flow control, and adaptive congestion avoidance | No flow or congestion control mechanisms |
+    | Protocols / Applications | HTTP/HTTPS, FTP, SMTP, SSH | DNS, DHCP, VoIP, Video Streaming, Online Gaming |
+
 20. **a) Explain Three-Way Handshaking in TCP Protocol.** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 379]]*
+
+Answer:
+    The TCP Three-Way Handshake is the connection establishment mechanism used by TCP to synchronize sequence numbers and establish a reliable, full-duplex communication channel between client and server before data transmission begins.
+
+    ```mermaid
+    sequenceDiagram
+        autonumber
+        Client->>Server: SYN (seq = x)
+        Server->>Client: SYN-ACK (seq = y, ack = x + 1)
+        Client->>Server: ACK (seq = x + 1, ack = y + 1)
+    ```
+
+    Three Steps:
+    - Step 1 (SYN): The client sends a TCP segment with the SYN (Synchronize) flag set to 1 and an initial sequence number `seq = x` to initiate connection.
+    - Step 2 (SYN-ACK): The server receives the SYN, allocates buffer resources, and replies with SYN = 1 and ACK (Acknowledgment) = 1, setting its own sequence number `seq = y` and acknowledgment number `ack = x + 1`.
+    - Step 3 (ACK): The client confirms receipt by sending an ACK segment with `ack = y + 1` and `seq = x + 1`. The connection enters the ESTABLISHED state on both sides, allowing application data to flow.
 
 21. **b) Draw the TCP/IP and OSI reference Model diagram.** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 379]]*
 
+Answer:
+
+    ```
+    +---------------------------+       +---------------------------+
+    |      OSI 7-Layer Model    |       |     TCP/IP 4-Layer Model  |
+    +---------------------------+       +---------------------------+
+    | 7. Application Layer      | ----    | 6. Presentation Layer     | ----->| 4. Application Layer      |
+    | 5. Session Layer          | ----/ |    (HTTP, DNS, SSH, FTP)  |
+    +---------------------------+       +---------------------------+
+    | 4. Transport Layer        | ----> | 3. Transport Layer        |
+    |    (TCP, UDP)             |       |    (TCP, UDP)             |
+    +---------------------------+       +---------------------------+
+    | 3. Network Layer          | ----> | 2. Internet Layer         |
+    |    (IP, ICMP, ARP)        |       |    (IP, ICMP, IGMP)       |
+    +---------------------------+       +---------------------------+
+    | 2. Data Link Layer        | ----\ | 1. Network Access Layer   |
+    | 1. Physical Layer         | ----->|    (Ethernet, Wi-Fi, MAC) |
+    +---------------------------+       +---------------------------+
+    ```
+
 22. **Write the full form of the protocols: NAT, DHCP, MAC, TCP-IP, HTTPS** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 379]]*
+
+Answer:
+    - **NAT** — Network Address Translation
+    - **DHCP** — Dynamic Host Configuration Protocol
+    - **MAC** — Media Access Control
+    - **TCP/IP** — Transmission Control Protocol / Internet Protocol
+    - **HTTPS** — HyperText Transfer Protocol Secure
 
 ## Physical Layer & Transmission Media (Cables & Wiring) (21)
 
