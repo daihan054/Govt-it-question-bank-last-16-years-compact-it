@@ -9056,55 +9056,1349 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
    (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) The main features of a DBMS.
+
+   1. `Data storage, retrieval and update`
+   - The core function: adding, reading, modifying and deleting data through SQL, without the user knowing anything about how the data is physically stored.
+
+   2. `Reduced data redundancy and inconsistency`
+   - Data is stored once in a normalised structure and shared by every application. In a file-based system the same customer address is duplicated in several files, and updating one but not the others produces inconsistency.
+
+   3. `Data integrity`
+   - Constraints keep the data valid: `PRIMARY KEY` (entity integrity), `FOREIGN KEY` (referential integrity), `CHECK`, `NOT NULL`, `UNIQUE` and `DEFAULT`.
+
+   4. `Data security and access control`
+   - Users, roles and privileges (`GRANT`, `REVOKE`) restrict who can see or change what. Views hide sensitive columns, and data can be encrypted at rest and in transit.
+
+   5. `Concurrency control`
+   - Many users can work simultaneously without corrupting each other's data, through locking, timestamps or multi-version concurrency control (MVCC).
+
+   6. `Transaction management with ACID properties`
+   - `Atomicity` — all or nothing; `Consistency` — the database moves from one valid state to another; `Isolation` — concurrent transactions do not interfere; `Durability` — committed changes survive a crash.
+
+   7. `Backup and recovery`
+   - Automatic logging, checkpointing and recovery restore the database after a failure, using the transaction log to roll forward or roll back.
+
+   8. `Data independence`
+   - `Physical` independence — storage structures can change without altering the logical schema. `Logical` independence — the logical schema can change without rewriting applications. This is what the three-level architecture exists to provide.
+
+   9. `Data sharing and multi-user support`
+   - One database serves many applications and many users at once, with a consistent view of the data.
+
+   10. `Query language and query optimisation`
+   - A declarative language (SQL) lets the user state `what` is wanted; the optimiser decides `how` to fetch it, choosing indexes and join orders automatically.
+
+   11. `Metadata management — the data dictionary`
+   - The DBMS stores a description of the database itself: tables, columns, types, constraints, indexes and privileges.
+
+   12. `Views and abstraction`
+   - Virtual tables present the data differently to different users without duplicating it.
+
+   13. `Scalability, indexing and performance tuning`
+   - Indexes, partitioning, caching and replication support large data volumes.
+
+   - Taken together, these features are what distinguish a DBMS from a collection of files: the data becomes shared, controlled, consistent and recoverable rather than scattered and fragile.
+
 2. **ODBC এর পূর্ণ রূপ কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: ODBC stands for `Open Database Connectivity`.
+
+   What it is
+   - A `standard API` developed by Microsoft in 1992 that lets an application access data in `any` database management system, provided a driver for that system exists.
+   - Its purpose is to make the application independent of the particular database: the same program can talk to Oracle, MySQL, SQL Server or PostgreSQL simply by changing the driver, with no change to the code.
+
+   How it works
+   ```
+   +-------------+     +--------------+     +------------+     +----------+
+   | Application |---->| ODBC Driver  |---->| ODBC       |---->| Database |
+   |             |     | Manager      |     | Driver     |     |          |
+   +-------------+     +--------------+     +------------+     +----------+
+      standard API      selects the driver   translates to      MySQL,
+      calls             for the target DB    the DB's own       Oracle,
+                                             protocol           SQL Server
+   ```
+   - The application issues standard ODBC calls; the driver manager routes them to the correct driver; the driver translates them into the database's native calls and returns the results in a standard form.
+
+   Components
+   - `Application` — the program making the calls.
+   - `Driver Manager` — loads and manages the drivers.
+   - `Driver` — database-specific translation layer.
+   - `Data Source (DSN)` — a named configuration holding the server address, database name and credentials.
+
+   Advantages
+   - One API for every database; the application is portable; the driver can be swapped without recompiling; and it is supported on Windows, Linux and macOS.
+
+   Disadvantage
+   - The extra layer costs some performance compared with a native driver, and vendor-specific features may be unreachable through the generic API.
+
+   Related abbreviations often asked with it
+
+   | Abbreviation | Full form |
+   |---|---|
+   | `ODBC` | Open Database Connectivity |
+   | `JDBC` | Java Database Connectivity |
+   | `OLE DB` | Object Linking and Embedding, Database |
+   | `ADO.NET` | ActiveX Data Objects for .NET |
+   | `DSN` | Data Source Name |
 
 3. **Data about data is Called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: Data about data is called `metadata`.
+
+   What it is
+   - Metadata is data that `describes other data` — its structure, meaning, origin, format and constraints — rather than being the data itself.
+
+   In a database
+   - The DBMS stores its metadata in the `data dictionary` (also called the system catalogue). It records:
+     - table names, column names and data types
+     - primary keys, foreign keys and other constraints
+     - indexes and views
+     - user accounts and privileges
+     - storage locations and statistics used by the query optimiser
+
+   ```sql
+   -- querying the metadata itself
+   SELECT table_name, column_name, data_type
+   FROM   information_schema.columns
+   WHERE  table_schema = 'company';
+
+   DESCRIBE Employee;      -- the structure, not the data
+   SHOW TABLES;
+   ```
+
+   Example of the distinction
+   ```
+   DATA                                METADATA
+   +--------+----------+--------+      Table name : Employee
+   | emp_id | emp_name | salary |      Columns    : emp_id INT, emp_name VARCHAR(100),
+   +--------+----------+--------+                   salary DECIMAL(10,2)
+   |  101   | Karim    | 50000  |      Primary key: emp_id
+   |  102   | Rahim    | 60000  |      Rows       : 2
+   +--------+----------+--------+      Created on : 2025-01-15
+   ```
+
+   Types of metadata
+   - `Descriptive` — title, author, keywords; used for discovery.
+   - `Structural` — how the parts fit together: tables, columns, relationships, page order in a document.
+   - `Administrative` — creation date, owner, permissions, retention rules.
+   - `Technical` — file format, size, encoding, compression.
+
+   Everyday examples outside databases
+   - A photograph's EXIF data: camera model, date, exposure, GPS location.
+   - A music file's tags: artist, album, track number, duration.
+   - An email's headers: sender, recipient, timestamp, routing path.
+   - A file's properties: size, type, created and modified dates, permissions.
+
+   Why it matters
+   - The query optimiser relies on statistics held as metadata to choose an execution plan; without accurate statistics, queries run badly.
+   - Data governance, lineage tracking and compliance auditing are all metadata problems.
+   - Metadata is also a privacy concern: call metadata — who called whom, when, and for how long — can be as revealing as the conversation itself.
+
 4. **Difference between MSAccess and MS FoxPro in SQL.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 317 (ET: N/A)]*
+
+   Answer: Both are Microsoft desktop database products, but they belong to different generations and different models.
+
+   | Point | MS Access | MS FoxPro (Visual FoxPro) |
+   |---|---|---|
+   | Type | Relational DBMS with a graphical front end | Procedural DBMS with an integrated programming language (xBase) |
+   | Data engine | Jet / ACE database engine | Native FoxPro / Rushmore engine |
+   | File format | Single `.accdb` (or `.mdb`) file holding everything | Separate files: `.dbf` for tables, `.cdx` for indexes, `.fpt` for memos |
+   | SQL support | Full support, close to ANSI SQL | Supported, but blended with xBase commands such as `USE`, `SEEK`, `SKIP` |
+   | Programming | VBA (Visual Basic for Applications) | FoxPro's own procedural and object-oriented language |
+   | Data access style | `Set-based` — write a query, get a result set | `Record-based` — move a pointer through the table with SKIP and SEEK |
+   | Interface | Strong visual designers for forms and reports | Also has designers, but code-centred |
+   | Performance | Slower on very large tables | Faster, thanks to the Rushmore query optimisation technology |
+   | Concurrent users | Practical limit around 10–20 | Handled more users, but still file-based |
+   | Ease of use | `Very easy` — designed for non-programmers | Steeper learning curve; aimed at developers |
+   | Status | Still shipped as part of Microsoft Office | `Discontinued` — Visual FoxPro 9 was the last version, support ended in 2015 |
+   | Typical use | Small office databases, prototypes, front end to SQL Server | Legacy business applications from the 1990s |
+
+   The SQL difference in practice
+   ```sql
+   -- MS Access: set-based, SQL-first
+   SELECT emp_name, salary FROM Employee WHERE salary > 50000;
+
+   -- FoxPro: SQL is available ...
+   SELECT emp_name, salary FROM Employee WHERE salary > 50000 INTO CURSOR result
+
+   -- ... but the traditional xBase style is record-by-record
+   USE Employee
+   SET FILTER TO salary > 50000
+   GO TOP
+   DO WHILE NOT EOF()
+       ? emp_name, salary
+       SKIP
+   ENDDO
+   ```
+   - That contrast is the essential one: `Access thinks in result sets, FoxPro thinks in record pointers`.
+
+   Common limitations of both
+   - Both are `file-based` rather than client-server, so the whole file travels across the network and concurrency is limited. Neither is suitable for a large multi-user system, where SQL Server, MySQL or PostgreSQL should be used instead. In practice Access is now most often used as a front end to a proper server database rather than as the database itself.
 
 5. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What is a DBMS
+   - A `Database Management System` is software that lets users create, store, retrieve, update and manage data in a database while controlling access to it.
+   - It sits between the user or application and the physical data files, so users work with tables and queries rather than with storage.
+   - Examples: MySQL, PostgreSQL, Oracle, SQL Server, SQLite, MongoDB.
+
+   Two advantages (with a fuller list for completeness)
+
+   1. `Reduced data redundancy and inconsistency`
+   - Data is stored once in a normalised structure and shared by every application, instead of being duplicated in separate files. In a file-based system the same customer address appears in the sales file, the billing file and the delivery file; updating one and forgetting the others makes the data inconsistent. A DBMS removes that risk.
+
+   2. `Data security and controlled access`
+   - Users, roles and privileges determine exactly who may read or change which data. `GRANT` and `REVOKE` control access at table and column level, views hide sensitive columns, and the database can be encrypted. A collection of files offers only the operating system's file permissions, which are far coarser.
+
+   Other advantages worth naming
+   - `Data integrity` — constraints such as PRIMARY KEY, FOREIGN KEY, CHECK and NOT NULL keep the data valid automatically.
+   - `Concurrency control` — many users work at once without corrupting each other's data.
+   - `Transaction support with ACID properties` — Atomicity, Consistency, Isolation, Durability.
+   - `Backup and recovery` — the transaction log allows the database to be restored to a consistent state after a crash.
+   - `Data independence` — storage structures can change without rewriting applications.
+   - `Efficient querying` — a declarative language plus an optimiser that chooses indexes and join orders.
+   - `Data sharing` — one database serves many applications simultaneously.
+
+   Disadvantages, for balance
+   - Higher cost of software, hardware and skilled staff; greater complexity; and a single point of failure if the server is not made redundant.
+
 6. **What is Database?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
+
+   Answer: A `database` is an organised collection of related data, stored electronically so that it can be efficiently accessed, managed and updated.
+
+   Key characteristics
+   - The data is `structured` — usually into tables of rows and columns in a relational database.
+   - The data is `related` — it describes some part of the real world, such as a bank's customers and their accounts.
+   - It is `persistent` — it survives program termination and power loss.
+   - It is `shared` — many users and applications use the same data simultaneously.
+   - It is managed by a `DBMS`, which controls access, enforces integrity and provides recovery.
+
+   Example
+   ```
+   Database: University
+
+   Table: Student                        Table: Course
+   +------------+-------+------+         +-----------+------------------+
+   | student_id | name  | dept |         | course_id | course_name      |
+   +------------+-------+------+         +-----------+------------------+
+   |    101     | Karim | CSE  |         |   CS101   | Database Systems |
+   |    102     | Rahim | EEE  |         |   CS102   | Networking       |
+   +------------+-------+------+         +-----------+------------------+
+   ```
+
+   Terminology
+   - `Table (relation)` — a two-dimensional structure holding data about one kind of thing.
+   - `Row (tuple / record)` — one instance, such as one student.
+   - `Column (attribute / field)` — one property, such as the name.
+   - `Field` — the smallest unit of data: the value of one column in one row.
+   - `Schema` — the structural definition of the database.
+
+   Types of database
+   - `Relational` — tables linked by keys, queried with SQL: MySQL, PostgreSQL, Oracle.
+   - `NoSQL` — document (MongoDB), key-value (Redis), column-family (Cassandra), graph (Neo4j).
+   - By location: centralised, distributed, cloud.
+   - By use: OLTP for day-to-day transactions, OLAP data warehouses for analysis.
+
+   Why a database rather than files
+   - Less redundancy and inconsistency, enforced integrity, controlled security, concurrent multi-user access, transactions with ACID guarantees, backup and recovery, and a query language with an optimiser.
+
+   - Note the distinction examiners look for: the `database` is the data itself, while the `DBMS` is the software that manages it. Oracle is a DBMS; the payroll data stored in it is the database.
 
 7. **What is data about data?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+   Answer: Data about data is called `metadata`.
+
+   Definition
+   - Metadata `describes` other data — its structure, meaning, origin, format, ownership and constraints — rather than being the subject data itself.
+
+   In a database
+   - The DBMS keeps its metadata in the `data dictionary`, also called the system catalogue. It holds:
+     - table and column names with their data types and sizes
+     - primary keys, foreign keys, and CHECK, NOT NULL and UNIQUE constraints
+     - indexes, views, triggers and stored procedures
+     - user accounts, roles and privileges
+     - storage locations, row counts and the statistics the query optimiser depends on
+
+   ```sql
+   DESCRIBE Employee;                        -- the structure, not the rows
+
+   SELECT table_name, column_name, data_type
+   FROM   information_schema.columns
+   WHERE  table_schema = 'company';          -- querying the metadata directly
+   ```
+
+   The distinction, illustrated
+   ```
+   DATA                                  METADATA
+   +--------+----------+--------+        Table name  : Employee
+   | emp_id | emp_name | salary |        Column      : emp_id, type INT, primary key
+   +--------+----------+--------+        Column      : emp_name, VARCHAR(100), not null
+   |  101   | Karim    | 50000  |        Column      : salary, DECIMAL(10,2)
+   |  102   | Rahim    | 60000  |        Row count   : 2
+   +--------+----------+--------+        Last modified: 2025-01-15
+   ```
+
+   Types
+   - `Descriptive` — title, author, keywords; supports discovery and search.
+   - `Structural` — how components relate: tables, relationships, page order.
+   - `Administrative` — creation date, owner, permissions, retention policy.
+   - `Technical` — format, size, encoding, compression.
+
+   Everyday examples
+   - A photograph's EXIF data: camera, date, shutter speed, GPS coordinates.
+   - A music file's ID3 tags: artist, album, duration.
+   - An email's headers: sender, recipient, timestamp, routing.
+   - A file's properties: size, type, created and modified dates.
+
+   Why it matters
+   - The query `optimiser` chooses its execution plan from statistical metadata; stale statistics cause slow queries.
+   - Data governance, lineage and compliance auditing are all metadata questions.
+   - Metadata carries real privacy weight: knowing who called whom, when and for how long can reveal as much as the conversation itself.
+
 8. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.)
+
+   Centralised system
+   - All the data and all the processing reside on `one central computer`, usually a mainframe. Users connect through terminals that do no processing of their own — "dumb terminals".
+
+   ```
+                       +---------------------+
+                       |   CENTRAL COMPUTER  |
+                       |   (mainframe)       |
+                       |  - Database         |
+                       |  - Application      |
+                       |  - Processing       |
+                       +----------+----------+
+                                  |
+             +--------------------+--------------------+
+             |                    |                    |
+         [Terminal]          [Terminal]           [Terminal]
+         (no processing)     (no processing)      (no processing)
+   ```
+
+   - Advantages: a single point of control and administration; strong security, since everything is in one place; no data inconsistency; simple backup; and low cost per terminal.
+   - Disadvantages: a `single point of failure` — if the central machine fails, everything stops; a performance bottleneck as users increase; expensive central hardware; and terminals cannot work offline.
+
+   Client-server system
+   - Processing is `divided`. The client handles the user interface and some logic; the server holds the database and executes queries. The two communicate over a network.
+
+   ```
+      [Client 1]        [Client 2]        [Client 3]
+      - UI              - UI              - UI
+      - some logic      - some logic      - some logic
+           \                |                /
+            \               |               /
+             \______________|______________/
+                            |
+                      (network requests)
+                            |
+                 +----------+----------+
+                 |      SERVER         |
+                 |  - Database         |
+                 |  - Business logic   |
+                 |  - Query processing |
+                 +---------------------+
+   ```
+
+   - Advantages: the load is shared, so the server does less work per user; clients can be ordinary PCs; the system scales by adding clients or servers; the network carries only requests and results rather than whole files; and servers can be replicated for availability.
+   - Disadvantages: more complex to build and administer; the server is still a bottleneck and a failure point unless clustered; and network latency affects every operation.
+
+   Comparison
+
+   | Point | Centralised | Client-server |
+   |---|---|---|
+   | Processing | Entirely on the central machine | Divided between client and server |
+   | Client hardware | Dumb terminal | Full computer |
+   | Scalability | Poor | Good |
+   | Cost of central machine | Very high | Moderate |
+   | Single point of failure | Yes | The server, unless clustered |
+   | Network traffic | Screen output only | Requests and result sets |
+   | Maintenance | One machine | Server plus every client |
+   | Example | Mainframe banking systems of the 1970s and 1980s | MySQL or Oracle serving desktop and web applications |
+
+   - The modern extension is the `three-tier` architecture: presentation (browser), application (web or app server) and data (database server). Separating the middle tier lets business logic be changed without touching either the client or the database, and it is the standard shape of web applications today.
 
 9. **(ক) একজন ডাটাবেস এডমিন এর কাজ কী? কিছু ডাটাবেস সিস্টেম অ্যাপ্লিকেশনের নাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   Work of a Database Administrator (DBA)
+
+   1. `Database design and implementation`
+   - Designing the schema, choosing data types, defining primary and foreign keys, and normalising the tables. Creating databases, tables, views and indexes.
+
+   2. `Installation, configuration and upgrades`
+   - Installing the DBMS, tuning its configuration parameters, applying patches and planning version upgrades.
+
+   3. `Security administration`
+   - Creating users and roles, granting and revoking privileges, enforcing password policy, configuring encryption, and auditing who accessed what.
+
+   4. `Backup and recovery`
+   - Designing the backup strategy (full, incremental, differential), scheduling and verifying backups, and — critically — `testing the restore`. A backup that has never been restored is not a backup.
+
+   5. `Performance monitoring and tuning`
+   - Finding slow queries, examining execution plans, creating and removing indexes, tuning memory and buffer settings, and partitioning large tables.
+
+   6. `Capacity planning and storage management`
+   - Forecasting growth, allocating tablespaces, archiving old data.
+
+   7. `Data integrity`
+   - Defining and maintaining constraints, and running consistency checks.
+
+   8. `Availability and disaster recovery`
+   - Configuring replication, clustering, failover and standby servers; defining and testing the DR plan.
+
+   9. `Troubleshooting and user support`
+   - Diagnosing deadlocks, blocked sessions, corruption and connection failures; helping developers write efficient SQL.
+
+   10. `Documentation and compliance`
+   - Maintaining the data dictionary and schema documentation, and meeting regulatory requirements for retention and audit.
+
+   Database system applications
+   - `Banking` — accounts, transactions, loans, ATM networks.
+   - `Airlines and railways` — reservations, schedules, seat allocation.
+   - `Universities` — student registration, courses, results.
+   - `Telecommunications` — call records, billing, prepaid balances.
+   - `Sales and e-commerce` — customers, products, orders, inventory.
+   - `Human resources and payroll` — employees, salaries, leave, taxation.
+   - `Healthcare` — patient records, prescriptions, laboratory results.
+   - `Manufacturing` — production planning, supply chain, stock control.
+   - `Government` — national ID, land records, tax administration.
+   - `Libraries` — catalogues, members, loans.
+   - `Social media and search` — user profiles, posts, relationships, indexes.
+
+   - Related roles worth distinguishing: a `Data Administrator` decides policy and standards for data as a corporate asset, while the `Database Administrator` implements and operates the databases themselves.
+
 10. **(খ) ডাটাবেস ব্যবস্থাপনা সিস্টেমের তিন স্তরবিশিষ্ট আর্কিটেকচার ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The `three-level (three-schema) architecture` was proposed by ANSI/SPARC to separate a user's view of the data from how it is actually stored.
+
+    The diagram
+    ```
+    +-------------------------------------------------------------+
+    |  EXTERNAL LEVEL  (view level)                               |
+    |                                                             |
+    |   [User View 1]      [User View 2]      [User View 3]       |
+    |   Clerk sees name    HR sees salary     Manager sees        |
+    |   and phone only     and leave          department totals   |
+    +-------------------------------------------------------------+
+                              |  external / conceptual mapping
+    +-------------------------------------------------------------+
+    |  CONCEPTUAL LEVEL  (logical level)                          |
+    |                                                             |
+    |   The whole database as one logical structure:              |
+    |   Employee(emp_id, name, salary, dept_id)                   |
+    |   Department(dept_id, dept_name)                            |
+    |   plus all constraints and relationships                    |
+    +-------------------------------------------------------------+
+                              |  conceptual / internal mapping
+    +-------------------------------------------------------------+
+    |  INTERNAL LEVEL  (physical level)                           |
+    |                                                             |
+    |   How the data is actually stored:                          |
+    |   file organisation, B-tree indexes, pages, compression,    |
+    |   record placement on disk                                  |
+    +-------------------------------------------------------------+
+                              |
+                        [ Physical database ]
+    ```
+
+    1. External level (view level)
+    - The `highest` level, closest to the user. Each user or group sees only the part of the database that concerns them, in the form that suits them.
+    - There are `many` external schemas, one per user group.
+    - It provides `security` (sensitive columns are simply absent from the view) and `simplicity` (a complex join is presented as one virtual table).
+    - Implemented in SQL with `views`.
+
+    2. Conceptual level (logical level)
+    - The `middle` level, describing the `whole` database logically: all the entities, attributes, relationships and constraints, but nothing about how they are stored.
+    - There is exactly `one` conceptual schema, and it is the DBA's central design.
+
+    3. Internal level (physical level)
+    - The `lowest` level, describing `how` the data is stored: file organisation, record layout, index structures, compression, page size and placement on disk.
+    - There is exactly `one` internal schema. Users and application programmers never see it.
+
+    Data independence — the reason for the architecture
+
+    | Type | Meaning | Example |
+    |---|---|---|
+    | `Logical data independence` | The conceptual schema can change without altering the external schemas or the applications | Adding a column to Employee does not break existing views |
+    | `Physical data independence` | The internal schema can change without altering the conceptual schema | Adding an index or moving the data to a new disk does not affect any query's meaning |
+
+    - `Physical` independence is easier to achieve and is well supported by every DBMS; `logical` independence is harder, because a change to the logical structure often does affect what the applications expect.
+
+    Advantages of the architecture
+    - Users are shielded from storage details; several customised views can exist over the same data; security is enforced by restricting views; storage can be reorganised for performance without touching applications; and the DBA can tune the system independently of the developers.
 
 11. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Advantages of a DBMS over an ordinary file-based system.
+
+    1. `Reduced data redundancy`
+    - In a file system the same data is duplicated across files — the customer address appears in the sales file, the billing file and the delivery file. A DBMS stores it once in a normalised structure and shares it.
+
+    2. `Elimination of data inconsistency`
+    - Because the data exists once, updating it updates it everywhere. In a file system, changing the address in one file and forgetting the others leaves the organisation with two contradictory answers to the same question.
+
+    3. `Data integrity`
+    - Constraints — PRIMARY KEY, FOREIGN KEY, CHECK, NOT NULL, UNIQUE — are enforced by the DBMS itself. A file system enforces nothing; every application must re-implement the rules, and any one of them can get it wrong.
+
+    4. `Data security and access control`
+    - Users, roles and privileges control access at table and even column level; views hide sensitive data. A file system offers only coarse file permissions.
+
+    5. `Concurrent multi-user access`
+    - Locking or MVCC lets many users read and write simultaneously without corrupting each other's work. In a file system two programs writing the same file at once will corrupt it.
+
+    6. `Transaction support — the ACID properties`
+    - A transfer that debits one account and credits another either completes entirely or not at all. A file system has no notion of a transaction, so a crash midway leaves the money missing.
+
+    7. `Backup and recovery`
+    - The transaction log allows automatic recovery to a consistent state after a crash. File-based recovery means restoring yesterday's copy and losing a day's work.
+
+    8. `Data independence`
+    - Storage structures and even the logical schema can change without rewriting the applications. In a file system, changing a record layout means changing every program that reads the file.
+
+    9. `Efficient querying`
+    - SQL states `what` is wanted and the optimiser decides `how` to get it, using indexes and join strategies. In a file system every query must be written as a program.
+
+    10. `Data sharing`
+    - One database serves many applications and departments with a single consistent version of the truth, rather than each department keeping its own files.
+
+    11. `Enforcement of standards`
+    - Naming conventions, data formats and documentation are centralised in the data dictionary.
+
+    Summary
+
+    | Point | File system | DBMS |
+    |---|---|---|
+    | Redundancy | High | Controlled |
+    | Consistency | Hard to maintain | Enforced |
+    | Integrity rules | In each application | In the database |
+    | Security | File-level only | User, role, table and column level |
+    | Concurrency | Unsafe | Managed |
+    | Transactions | None | ACID |
+    | Recovery | Manual | Automatic, log-based |
+    | Querying | Program per query | Declarative SQL |
+    | Data independence | None | Physical and logical |
+
+    Disadvantages of a DBMS, for balance
+    - Higher cost of software, hardware and skilled staff; greater complexity; and a single point of failure unless replicated. For a very small, single-user, read-only dataset, a file may genuinely be the better choice.
+
 12. **What is Database administrator role?** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 662 (ET: N/A)]*
+
+    Answer: The `Database Administrator (DBA)` is the person responsible for the design, implementation, security, performance and availability of an organisation's databases.
+
+    Main roles
+
+    1. `Schema design and implementation`
+    - Designing tables, choosing data types, defining keys, normalising the structure, and creating databases, views and indexes.
+
+    2. `Installation, configuration and upgrades`
+    - Installing the DBMS, tuning configuration parameters, applying security patches, and planning version migrations.
+
+    3. `Security administration`
+    - Creating users and roles; granting and revoking privileges with `GRANT` and `REVOKE`; enforcing password policy; configuring encryption at rest and in transit; and auditing access.
+
+    4. `Backup and recovery`
+    - Choosing a backup strategy — full, incremental, differential — scheduling it, monitoring it, and `regularly testing the restore`. An untested backup is not a backup.
+
+    5. `Performance monitoring and tuning`
+    - Identifying slow queries, reading execution plans, adding or removing indexes, tuning buffer and memory settings, partitioning large tables, and updating optimiser statistics.
+
+    6. `Capacity planning and storage management`
+    - Forecasting growth, allocating storage, archiving and purging old data.
+
+    7. `Availability and disaster recovery`
+    - Configuring replication, clustering and failover; maintaining a standby site; defining and rehearsing the DR plan against agreed RPO and RTO targets.
+
+    8. `Data integrity`
+    - Defining and maintaining constraints, and running consistency checks.
+
+    9. `Troubleshooting`
+    - Diagnosing deadlocks, blocking, connection exhaustion, corruption and failed jobs.
+
+    10. `Supporting developers and users`
+    - Reviewing SQL for efficiency and safety, advising on schema changes, and managing the migration of changes from development to production.
+
+    11. `Documentation and compliance`
+    - Maintaining the data dictionary and schema documentation; meeting regulatory obligations for retention, privacy and audit.
+
+    Types of DBA
+    - `System DBA` — installation, patching, configuration, storage.
+    - `Application DBA` — schema and SQL for one particular application.
+    - `Development DBA` — design and code review during development.
+    - `Cloud DBA` — managed services such as RDS, Azure SQL and Cloud SQL.
+
+    Skills required
+    - SQL and the internals of at least one DBMS; performance tuning; backup and recovery; operating systems and storage; scripting for automation; and security practice.
+
+    - A useful distinction: a `Data Administrator` sets policy and standards for data as a corporate asset — what data is held, what it means, who owns it — while the `Database Administrator` builds and operates the systems that store it.
 
 13. **Explain difference between Data Administrator and Database Administrator.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Data Administrator (DA) | Database Administrator (DBA) |
+    |---|---|---|
+    | Focus | `Data as a corporate asset` — policy and meaning | `The database systems` — implementation and operation |
+    | Orientation | Managerial and strategic | Technical and operational |
+    | Main concern | What data the organisation holds, what it means, who owns it | How that data is stored, secured and made to perform |
+    | Level | Conceptual and logical | Logical and physical |
+    | Typical tasks | Data policy, standards, naming conventions, the enterprise data model, data ownership and stewardship, data quality rules, regulatory compliance | Installation, schema creation, indexing, tuning, backup and recovery, security administration, replication, troubleshooting |
+    | Deliverables | Data dictionary, data governance policy, enterprise data model | A running, secure, fast, recoverable database |
+    | Tools | Modelling and governance tools, documentation | The DBMS itself, monitoring and backup tools, SQL |
+    | Technical depth | Moderate | High |
+    | Reports to | Usually senior management or the CIO | Usually IT operations |
+    | Number in an organisation | Few — often one | Several, sometimes per system |
+    | Time horizon | Long term | Day to day |
+
+    The relationship between them
+    ```
+    DATA ADMINISTRATOR
+      decides: "Customer address must be stored once, in a standard format,
+                owned by the Sales department, retained for 7 years."
+                                  |
+                                  v
+    DATABASE ADMINISTRATOR
+      implements: CREATE TABLE Customer (... address VARCHAR(200) ...);
+                  adds constraints, indexes, permissions, backups,
+                  and an archival job that purges after 7 years.
+    ```
+
+    In one line each
+    - The `Data Administrator` decides `what` data the organisation keeps and what the rules are.
+    - The `Database Administrator` decides `how` it is stored and makes it work.
+
+    Practical note
+    - In a small organisation one person performs both roles. The separation matters in large enterprises and in government, where data governance, ownership and regulatory compliance are substantial responsibilities in their own right, quite separate from keeping a server running.
+    - A third related role, the `Data Architect`, sits between them, designing the overall data landscape and integration between systems.
+
 14. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 684 (ET: N/A)]*
+
+    Answer: Security can be enforced by the DBMS itself, or written into the application, and each approach has real strengths and weaknesses.
+
+    DBMS-provided security
+    - The database enforces access control directly: users, roles, privileges, views, row-level security and encryption.
+    ```sql
+    CREATE USER clerk IDENTIFIED BY 'password';
+    GRANT SELECT ON Employee(emp_name, designation) TO clerk;   -- no salary column
+    REVOKE DELETE ON Employee FROM clerk;
+    ```
+
+    `Advantages`
+    - `Centralised and consistent` — one set of rules applies no matter which application, report tool or command-line client connects. This is the decisive advantage.
+    - `Cannot be bypassed` — a user connecting with SQL directly is still subject to the same privileges.
+    - `Reliable and well tested` — the vendor's implementation is mature and audited, rather than home-written.
+    - `Granular` — control at database, table, column and even row level, plus views that hide data entirely.
+    - `Built-in auditing` of who accessed what and when.
+    - `Less code to write and maintain`, and the rules survive when applications are rewritten.
+
+    `Disadvantages`
+    - `Limited expressiveness` — it enforces "who may see which rows and columns", but not complex business rules such as "a manager may approve a loan only up to their sanction limit, and only during office hours".
+    - `Administrative overhead` — every user needs a database account, which is impractical for a public web application with a million users.
+    - `Vendor-specific` — the syntax and capabilities differ between Oracle, SQL Server and PostgreSQL, so migration is harder.
+    - `Connection pooling conflicts` — modern applications share one pooled database login, which defeats per-user database privileges.
+
+    Application-provided security
+    - The application authenticates users and decides what each may do, connecting to the database with a single privileged account.
+
+    `Advantages`
+    - `Flexible and expressive` — arbitrary business logic, workflow states, time-of-day rules and approval limits can all be encoded.
+    - `Scales to many users` without creating a database account for each one.
+    - `Portable` — independent of the DBMS, so the database can be changed without rewriting the security model.
+    - `Better user experience` — friendly error messages, single sign-on, multi-factor authentication.
+    - `Works with connection pooling`, which is essential for web performance.
+
+    `Disadvantages`
+    - `Bypassable` — this is the fundamental weakness. Anyone who obtains the application's database credentials, or connects with a SQL client, has full access. The database itself is defenceless.
+    - `Duplicated effort` — every application touching the database must re-implement the same rules, and any one of them may implement them wrongly.
+    - `Bug-prone` — a single missing authorisation check exposes data. This is the commonest cause of real breaches.
+    - `Weaker auditing`, since the database sees only the shared account.
+
+    Comparison
+
+    | Point | DBMS-provided | Application-provided |
+    |---|---|---|
+    | Enforcement point | The database | The application |
+    | Can be bypassed | No | `Yes` |
+    | Business-rule complexity | Limited | Unlimited |
+    | Scales to many users | Poorly | Well |
+    | Consistency across applications | Guaranteed | Must be re-implemented |
+    | Portability | Vendor-specific | Portable |
+    | Auditing | Built in | Must be written |
+
+    The practical answer — `defence in depth`
+    - Real systems use `both`. The application enforces the rich business rules and the user experience, while the database still restricts the application's own account to the minimum privileges it needs, uses views to hide sensitive columns, encrypts data at rest, and audits access. Neither layer alone is sufficient: the application layer is bypassable, and the database layer cannot express the business rules.
 
 15. **(a) What is database schema? What are dangling tuple and descriptive attribute?** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
 
+    Answer:
+
+    Database schema
+    - A `schema` is the `logical structure` of a database — its design or blueprint. It defines the tables, the columns and their data types, the keys, the relationships and the constraints, but not the data itself.
+    - It is defined with DDL statements and is stored in the data dictionary.
+    - The `schema` is the definition; the `instance` is the data actually held at a given moment. The schema changes rarely; the instance changes constantly.
+
+    ```sql
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100) NOT NULL,
+        salary   DECIMAL(10,2) CHECK (salary > 0),
+        dept_id  INT REFERENCES Department(dept_id)
+    );
+    ```
+    - Three levels of schema exist in the ANSI/SPARC architecture: `external` (individual user views), `conceptual` (the whole database logically) and `internal` (physical storage).
+
+    Dangling tuple
+    - A `dangling tuple` is a row that is lost, or fails to combine, when relations are joined — a row in one relation with `no matching row` in the other.
+    - It arises in two important contexts:
+
+    1. `In a natural or inner join`
+    ```
+    Employee                       Department
+    +--------+---------+           +---------+-----------+
+    | emp_id | dept_id |           | dept_id | dept_name |
+    +--------+---------+           +---------+-----------+
+    |  101   |   10    |           |   10    | IT        |
+    |  102   |  NULL   | <- dangling|   20   | HR        |
+    |  103   |   99    | <- dangling+---------+-----------+
+    +--------+---------+
+    ```
+    - Employees 102 and 103 disappear from an inner join. An `outer join` preserves them, padding the missing side with NULLs — which is exactly what outer joins exist for.
+
+    2. `In a lossy decomposition`
+    - When a relation is split into two and the common attribute is not a superkey of either, rejoining them produces `spurious tuples` and may lose genuine ones. Dangling tuples are the symptom that the decomposition was not lossless.
+
+    - Practical significance: a dangling tuple usually signals a `referential integrity` problem — a foreign key pointing at a row that no longer exists, which a properly declared FOREIGN KEY constraint would have prevented.
+
+    Descriptive attribute
+    - A `descriptive attribute` is an attribute that belongs to a `relationship` rather than to either of the entities it connects.
+    - It describes the relationship itself, and it cannot sensibly be stored in either entity alone.
+
+    ```
+       Student  -------< Enrolls >-------  Course
+                            |
+                         [grade]           <- descriptive attribute
+                         [date]
+    ```
+    - `grade` belongs neither to the student (a student has many grades) nor to the course (a course gives many grades). It exists only for the `pairing` of one student with one course.
+
+    ```sql
+    CREATE TABLE Enrollment (
+        student_id INT,
+        course_id  INT,
+        grade      CHAR(2),        -- descriptive attribute
+        enrol_date DATE,           -- descriptive attribute
+        PRIMARY KEY (student_id, course_id),
+        FOREIGN KEY (student_id) REFERENCES Student(student_id),
+        FOREIGN KEY (course_id)  REFERENCES Course(course_id)
+    );
+    ```
+    - Other examples: `quantity` on the relationship between an order and a product; `salary` on the relationship between an employee and a project they are assigned to; `borrow_date` between a member and a book.
+    - In the ER diagram, a descriptive attribute is drawn as an oval attached to the `diamond`, not to either rectangle.
+
 16. **What is data Independence? How many types of data independence?** *[BDCCL Assistant Engineer (Network) 2022 compact it 742 (ET: N/A)]*
+
+    Answer:
+
+    What is data independence
+    - `Data independence` is the ability to change the schema at one level of a database system `without` having to change the schema at the level above, and therefore without rewriting the applications.
+    - It is the main reason the ANSI/SPARC three-level architecture exists: external, conceptual and internal levels are separated by `mappings`, and a change is absorbed by adjusting a mapping rather than by changing everything above it.
+
+    ```
+    +-------------------------------------------+
+    |  EXTERNAL LEVEL  (user views)             |
+    +-------------------------------------------+
+            ^  LOGICAL data independence
+    +-------------------------------------------+
+    |  CONCEPTUAL LEVEL  (whole logical schema) |
+    +-------------------------------------------+
+            ^  PHYSICAL data independence
+    +-------------------------------------------+
+    |  INTERNAL LEVEL  (physical storage)       |
+    +-------------------------------------------+
+    ```
+
+    There are `two` types.
+
+    1. Physical data independence
+    - The ability to change the `internal (physical) schema` without changing the conceptual schema.
+    - Examples of such changes: creating or dropping an index, moving the database to a different disk or file system, changing the file organisation from heap to clustered, altering the page size, enabling compression, or partitioning a table.
+    - Effect on applications: `none`. A query means exactly the same thing before and after; only its execution plan changes.
+    ```sql
+    CREATE INDEX idx_salary ON Employee(salary);
+    -- every existing query still works, unchanged; some simply run faster
+    ```
+    - This form is `easier to achieve` and every modern DBMS provides it fully.
+
+    2. Logical data independence
+    - The ability to change the `conceptual schema` without changing the external schemas or the application programs.
+    - Examples: adding a new column or table, splitting one table into two, merging two tables, renaming an attribute, or changing a relationship.
+    - Applications are protected by `views`: if the underlying tables change, the view definition is rewritten and the applications querying the view continue to work.
+    ```sql
+    -- the conceptual schema changes: Employee is split into two tables
+    -- but the old view is redefined, so applications see no difference
+    CREATE VIEW Employee AS
+    SELECT p.emp_id, p.emp_name, j.salary, j.dept_id
+    FROM   Employee_Personal p JOIN Employee_Job j ON p.emp_id = j.emp_id;
+    ```
+    - This form is `harder to achieve`, because a change to the logical structure often genuinely changes what the application needs to know — for example, removing a column that an application displays cannot be hidden by any view.
+
+    Comparison
+
+    | Point | Physical data independence | Logical data independence |
+    |---|---|---|
+    | Levels separated | Internal and conceptual | Conceptual and external |
+    | Changes absorbed | Storage, indexes, files | Tables, columns, relationships |
+    | Difficulty | Easier | Harder |
+    | Mechanism | The DBMS storage layer | Views |
+    | Support in practice | Complete | Partial |
+
+    Why it matters
+    - Without it, adding an index or reorganising storage would require every application to be recompiled. Data independence is what allows a DBA to tune a production system for performance while the applications above it carry on unchanged.
 
 17. **(ii) Database এর Table and View এর মধ্যে পার্থক্য লিখুন। E-R diagram এর প্রয়োজনীয়তা লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 785 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    Table vs View
+
+    | Point | Table | View |
+    |---|---|---|
+    | Nature | A `real` object that physically stores data | A `virtual` table defined by a stored SELECT statement |
+    | Storage | Occupies disk space | Stores no data; only the query definition is saved |
+    | Data source | Its own rows | Derived from one or more base tables each time it is used |
+    | Created with | `CREATE TABLE` | `CREATE VIEW` |
+    | Updatable | Always | Only under restrictions — no aggregates, GROUP BY, DISTINCT or (usually) joins |
+    | Indexes | Can be indexed | Cannot be indexed directly (except SQL Server indexed views and materialised views) |
+    | Performance | Direct access | The underlying query runs each time, so it can be slower |
+    | Purpose | Store data | Simplify complex queries, restrict access, present data differently |
+    | Effect of dropping | The data is lost | Only the definition is lost; the base data is untouched |
+    | Security use | Coarse — table-level permissions | `Fine` — expose only chosen columns and rows |
+
+    ```sql
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100),
+        salary   DECIMAL(10,2),
+        dept_id  INT
+    );
+
+    CREATE VIEW PublicStaff AS
+    SELECT emp_id, emp_name, dept_id       -- salary deliberately excluded
+    FROM   Employee;
+
+    GRANT SELECT ON PublicStaff TO clerk;  -- the clerk cannot reach Employee at all
+    ```
+
+    Why views are used
+    - `Security` — expose only permitted columns and rows.
+    - `Simplicity` — a five-table join is presented as one virtual table.
+    - `Logical data independence` — the base tables can be restructured and the view redefined, so applications continue to work.
+    - `Consistency` — one definition of a business figure, used by everyone.
+
+    Necessity of an E-R diagram
+    - An `Entity-Relationship diagram` is a graphical model of the data: entities (rectangles), attributes (ovals) and relationships (diamonds), with cardinality marked on each relationship.
+
+    Why it is needed
+    - `Communication` — it lets designers, developers and non-technical stakeholders discuss the data model in one picture, before any code exists. Errors caught here cost nothing; the same errors caught after implementation are expensive.
+    - `Blueprint for the database` — entities become tables, attributes become columns, and relationships become foreign keys or junction tables. The conversion is mechanical once the diagram is right.
+    - `Reveals the relationships and their cardinality` — one-to-one, one-to-many and many-to-many, which decides where each foreign key goes and whether a junction table is required.
+    - `Supports normalisation` — a clear model exposes redundancy and update anomalies early.
+    - `Documentation` — it remains the reference for anyone maintaining or extending the system.
+    - `Completeness check` — it makes missing entities and forgotten relationships visible in a way that a list of tables does not.
+
+    ```
+       +----------+       /-----------\       +----------+
+       | Student  |------<  Enrolls    >------| Course   |
+       +----------+  M    \-----------/   N   +----------+
+            |                    |                  |
+        [student_id]          [grade]           [course_id]
+        [name]                                  [title]
+    ```
+    - The M:N relationship shown here tells the designer immediately that a third table, `Enrollment(student_id, course_id, grade)`, is required — which is exactly the kind of decision the diagram exists to make obvious.
+
 18. **(a) Distinguish between table and view in database management system.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Table | View |
+    |---|---|---|
+    | Definition | A database object that `physically stores` rows and columns | A `virtual table` defined by a stored SELECT statement |
+    | Physical storage | Occupies disk space | Stores no data — only the query text |
+    | Data | Its own | Derived from one or more base tables at the moment of use |
+    | Created by | `CREATE TABLE` | `CREATE VIEW` |
+    | Contains | Actual records | A saved query |
+    | Updatable | Always | Only when the mapping to one base table is unambiguous |
+    | Indexes | Yes | Not directly, except SQL Server indexed views and Oracle materialised views |
+    | Constraints | Can carry PRIMARY KEY, FOREIGN KEY, CHECK | Cannot; the base tables carry them |
+    | Performance | Direct read | The underlying query executes each time |
+    | Effect of DROP | Data is destroyed | Only the definition is removed |
+    | Security role | Table-level grants only | Column-level and row-level restriction |
+    | Maintenance | Data must be maintained | Automatically reflects the current base data |
+
+    Example
+    ```sql
+    -- base table
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100),
+        salary   DECIMAL(10,2),
+        dept_id  INT
+    );
+
+    -- view: hides salary and shows only one department
+    CREATE VIEW IT_Staff AS
+    SELECT emp_id, emp_name, dept_id
+    FROM   Employee
+    WHERE  dept_id = 10;
+
+    SELECT * FROM IT_Staff;      -- used exactly like a table
+    ```
+    - If a new employee is inserted into `Employee` with `dept_id = 10`, they appear in `IT_Staff` immediately, because the view is recomputed on every use.
+
+    When a view can be updated
+    - Generally only if it selects from a `single` base table and contains no `DISTINCT`, `GROUP BY`, aggregate function, `UNION` or set operator, and includes every NOT NULL column of the base table without a default.
+    ```sql
+    UPDATE IT_Staff SET emp_name = 'Karim Ahmed' WHERE emp_id = 101;   -- allowed
+    ```
+    - A view containing `AVG(salary) GROUP BY dept_id` cannot be updated, because there is no single row to change.
+
+    Materialised view — the middle case
+    - A `materialised view` actually `stores` the result, and is refreshed on a schedule or on commit. It behaves like a table for reading (fast, indexable) but like a view for definition (derived from base tables). The trade-off is freshness against speed. Oracle and PostgreSQL support them; MySQL does not.
+
+    Why views are used
+    - Security (hide columns and rows), simplicity (encapsulate a complex join), logical data independence (redefine the view when base tables change), and consistency (one agreed definition of a derived figure).
 
 19. **Database এর সর্বনিম্ন Unit কোনটি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) The smallest unit of a database is a `field` — also called a `data item` or `attribute value`.
+
+    The hierarchy, smallest to largest
+    ```
+    Bit  ->  Character  ->  Field  ->  Record  ->  File (Table)  ->  Database
+    ```
+
+    | Level | Meaning | Example |
+    |---|---|---|
+    | `Bit` | A single 0 or 1 — the smallest unit of storage | 1 |
+    | `Character (byte)` | A single letter, digit or symbol | 'K' |
+    | `Field` | `The smallest meaningful unit of data` — one attribute value | "Karim" |
+    | `Record (tuple / row)` | A collection of related fields describing one entity | 101, Karim, 50000 |
+    | `Table (file / relation)` | A collection of related records | The whole Employee table |
+    | `Database` | A collection of related tables | The company database |
+
+    Illustration
+    ```
+    Employee table
+    +--------+----------+--------+
+    | emp_id | emp_name | salary |     <- column names (attributes)
+    +--------+----------+--------+
+    |  101   | Karim    | 50000  |     <- one RECORD (row)
+    |  102   | Rahim    | 60000  |
+    +--------+----------+--------+
+        ^        ^
+        |        +--- one FIELD: the value "Karim"
+        +--- one FIELD: the value 101
+    ```
+
+    Two readings of the question, both worth stating
+    - If the question means the smallest unit that carries `meaning`, the answer is the `field` — a single attribute value, which is the smallest thing a user can address in SQL.
+    - If it means the smallest unit of `storage`, the answer is the `bit`, or the `character` for text.
+    - Examination papers on database concepts normally intend the `field`, because the hierarchy field → record → file → database is the standard one taught.
+
+    Related point — atomicity
+    - `First normal form` requires that every field hold an `atomic` (indivisible) value. Storing "Dhaka, Bangladesh, 1207" in one address field breaks 1NF, because the field is then not the smallest unit — it should be split into city, country and postcode.
+
 20. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** *[40th BCS 2020 compact it 971-972 (ET: BPSC)]*
+
+    Answer: (Answered in English, as required for IT topics.)
+
+    What is a DBMS
+    - A `Database Management System` is software that allows users to create, store, retrieve, update and manage data in a database, while controlling access to it.
+    - It sits between the user or application and the physical data files, so users work with tables and queries instead of storage.
+    - Functions: data definition, data manipulation, security, integrity, concurrency control, transaction management with ACID guarantees, backup and recovery, and metadata management.
+    - Examples: MySQL, PostgreSQL, Oracle, SQL Server, MongoDB.
+
+    Classification of DBMS
+
+    1. `By data model` — the most important classification
+    - `Hierarchical` — data in a tree, each child having exactly one parent. Fast for one-to-many but rigid, and many-to-many is impossible. Example: IBM IMS.
+    - `Network` — a graph in which a record can have several parents, so many-to-many is supported. More flexible but complex. Example: IDMS, CODASYL.
+    - `Relational (RDBMS)` — data in tables linked by keys, queried with SQL. Simple, mathematically grounded, and dominant today. Examples: Oracle, MySQL, PostgreSQL, SQL Server.
+    - `Object-oriented` — data stored as objects with attributes and methods, matching object-oriented programming. Example: ObjectDB, db4o.
+    - `Object-relational` — relational plus user-defined types and inheritance. Example: PostgreSQL, Oracle.
+    - `NoSQL` — non-relational, designed for scale and flexible schemas:
+      - Document: MongoDB, CouchDB
+      - Key-value: Redis, DynamoDB
+      - Column-family: Cassandra, HBase
+      - Graph: Neo4j
+
+    2. `By number of users`
+    - `Single-user` — one user at a time (MS Access, SQLite).
+    - `Multi-user` — many concurrent users (Oracle, MySQL).
+
+    3. `By location of the data`
+    - `Centralised` — the whole database on one machine.
+    - `Distributed` — spread across several machines. `Homogeneous` if all sites run the same DBMS, `heterogeneous` if they differ.
+    - `Cloud` — hosted as a managed service (Amazon RDS, Azure SQL).
+
+    4. `By purpose`
+    - `OLTP` — online transaction processing, optimised for many small fast writes: banking, ticketing.
+    - `OLAP` — online analytical processing, optimised for large read-only analytical queries: data warehouses.
+
+    5. `By licensing`
+    - `Open source` — MySQL, PostgreSQL, MariaDB, SQLite.
+    - `Commercial` — Oracle, SQL Server, IBM Db2.
+
+    Comparison of the three classical models
+
+    | Point | Hierarchical | Network | Relational |
+    |---|---|---|---|
+    | Structure | Tree | Graph | Tables |
+    | Parent per child | One | Many | Not applicable |
+    | Many-to-many | Not supported | Supported | Supported via a junction table |
+    | Navigation | Pointer-based, procedural | Pointer-based | Declarative, using SQL |
+    | Flexibility | Low | Medium | High |
+    | Status | Legacy | Legacy | Dominant |
 
 21. **Define View, Materialized View. Difference between View and Materialized View and Usage of two.** *[RAKUB Assistant Database Administrator 2020 compact it 1012-1013 (ET: E-Zone)]*
 
+    Answer:
+
+    View
+    - A `view` is a virtual table defined by a stored SELECT statement. It holds `no data of its own`; the underlying query runs every time the view is used, so it always reflects the current state of the base tables.
+    ```sql
+    CREATE VIEW DeptSummary AS
+    SELECT dept_id, COUNT(*) AS staff, AVG(salary) AS avg_salary
+    FROM   Employee
+    GROUP  BY dept_id;
+
+    SELECT * FROM DeptSummary;      -- the SELECT above executes now
+    ```
+
+    Materialised view
+    - A `materialised view` stores the `result` of the query physically on disk, like a table. It is not recomputed on each access; instead it is `refreshed` — on a schedule, on demand, or on commit.
+    ```sql
+    -- Oracle / PostgreSQL
+    CREATE MATERIALIZED VIEW DeptSummary_MV AS
+    SELECT dept_id, COUNT(*) AS staff, AVG(salary) AS avg_salary
+    FROM   Employee
+    GROUP  BY dept_id;
+
+    REFRESH MATERIALIZED VIEW DeptSummary_MV;      -- update it
+    ```
+
+    Comparison
+
+    | Point | View | Materialised view |
+    |---|---|---|
+    | Data stored | `No` — definition only | `Yes` — the result is stored |
+    | Disk space | Negligible | Same as a table |
+    | Freshness | `Always current` | Stale until refreshed |
+    | Query speed | Slower — recomputed each time | `Much faster` — a simple read |
+    | Indexes | Not possible directly | `Possible` |
+    | Refresh needed | Never | Yes, manually or on a schedule |
+    | Effect of base-table changes | Seen immediately | Not seen until refresh |
+    | Overhead on writes | None | Refresh cost |
+    | Supported by | Every DBMS | Oracle, PostgreSQL, SQL Server (indexed views); `not MySQL` |
+
+    When to use each
+
+    Use a `view` when
+    - The data must always be `current` — account balances, order status, anything transactional.
+    - The purpose is `security`, hiding columns or rows from certain users.
+    - The purpose is `simplification`, giving a complex join a friendly name.
+    - The base tables change frequently, so any stored copy would be stale immediately.
+    - Storage is a concern.
+
+    Use a `materialised view` when
+    - The query is `expensive` — large aggregations, joins across many tables, or a data-warehouse summary.
+    - The same expensive result is `read many times` between updates.
+    - Slightly stale data is `acceptable` — a daily sales summary, a monthly report, a dashboard refreshed hourly.
+    - The result must be `indexed` for fast filtering.
+    - The underlying tables are in a remote or distributed database, so recomputing is costly.
+
+    Refresh strategies
+    - `COMPLETE` — rebuild the whole thing; simple but expensive.
+    - `FAST / INCREMENTAL` — apply only the changes, using a materialised view log.
+    - `ON COMMIT` — refresh as soon as a base table changes; always current but slows every write.
+    - `ON DEMAND` — refresh when asked, typically overnight.
+
+    - The trade-off in one line: a view trades `speed` for `freshness`; a materialised view trades `freshness` for `speed`.
+
 22. **What are the roles of Database Engineer?** *[RAKUB Assistant Database Administrator 2020 compact it 1014 (ET: E-Zone)]*
+
+    Answer: A `Database Engineer` designs, builds and maintains the data systems on which applications and analytics depend. The role sits between a DBA and a software engineer.
+
+    Main roles
+
+    1. `Database design and data modelling`
+    - Designing schemas, choosing data types, normalising tables, and deciding when to denormalise deliberately for performance. Producing ER diagrams and documenting the model.
+
+    2. `Building and maintaining data pipelines`
+    - Writing ETL or ELT processes that extract data from source systems, transform it and load it into the database or warehouse. Scheduling and monitoring those jobs.
+
+    3. `Writing and optimising SQL`
+    - Producing stored procedures, functions, triggers and complex queries; reading execution plans and rewriting queries that perform badly.
+
+    4. `Performance tuning`
+    - Designing indexes, partitioning large tables, tuning configuration, managing statistics, and diagnosing slow or blocking queries.
+
+    5. `Automation and scripting`
+    - Automating deployments, backups, monitoring and routine maintenance with shell, Python or the DBMS's own scripting.
+
+    6. `Schema migration and version control`
+    - Managing schema changes through migration tools such as Flyway or Liquibase, so that changes move safely from development to production and can be rolled back.
+
+    7. `Data integrity and quality`
+    - Defining constraints, validation rules and reconciliation checks; investigating and correcting data quality problems.
+
+    8. `Security implementation`
+    - Applying least-privilege access, encryption, masking of sensitive columns and audit logging.
+
+    9. `Backup, recovery and high availability`
+    - Implementing backup strategies, replication, clustering and failover, and testing recovery.
+
+    10. `Capacity planning and scaling`
+    - Forecasting growth; implementing sharding, partitioning, read replicas and caching layers.
+
+    11. `Supporting developers`
+    - Reviewing SQL and schema changes proposed by application teams, and advising on efficient access patterns.
+
+    12. `Working with modern data platforms`
+    - Cloud databases (RDS, Aurora, Cloud SQL), NoSQL stores, data warehouses (Snowflake, BigQuery, Redshift), and streaming systems (Kafka).
+
+    Skills required
+    - Strong SQL and knowledge of at least one DBMS internally; data modelling; a programming language, usually Python; Linux; cloud platforms; and version control.
+
+    How the related roles differ
+
+    | Role | Primary concern |
+    |---|---|
+    | `Database Administrator` | Keeping databases running: backup, security, tuning, availability |
+    | `Database Engineer` | Building and evolving the database and its pipelines |
+    | `Data Engineer` | Large-scale data movement and processing, warehouses and streaming |
+    | `Data Architect` | The overall data strategy and how systems fit together |
+    | `Data Analyst / Scientist` | Extracting meaning from the data |
+
+    - In many organisations, especially smaller ones, one person performs several of these roles.
 
 23. **A company needs key person for DBMS. What is his/her duty as key person?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
 
+    Answer: The key person for a company's DBMS is the `Database Administrator (DBA)`. Their duties are as follows.
+
+    1. `Database design and implementation`
+    - Designing the schema, choosing data types, defining primary and foreign keys, normalising the tables, and creating databases, views and indexes.
+
+    2. `Installation, configuration and upgrades`
+    - Installing the DBMS, tuning its configuration, applying security patches, and planning version migrations with minimal downtime.
+
+    3. `Security administration`
+    - Creating users and roles; granting the `minimum necessary` privileges; enforcing password policy; configuring encryption at rest and in transit; and auditing access to sensitive data.
+
+    4. `Backup and recovery` — the most critical duty
+    - Designing the backup strategy, scheduling and monitoring it, and `regularly testing the restore`. An untested backup is not a backup. Defining recovery point and recovery time objectives with the business.
+
+    5. `Performance monitoring and tuning`
+    - Identifying slow queries, reading execution plans, adding or removing indexes, tuning memory and buffer settings, partitioning large tables, and keeping optimiser statistics current.
+
+    6. `Ensuring availability`
+    - Configuring replication, clustering and failover so that a hardware failure does not stop the business; maintaining a disaster recovery site and rehearsing the switch-over.
+
+    7. `Capacity planning`
+    - Forecasting data growth, allocating storage, archiving and purging old data before space becomes a crisis.
+
+    8. `Maintaining data integrity`
+    - Defining and enforcing constraints, running consistency checks, and investigating anomalies.
+
+    9. `Troubleshooting`
+    - Diagnosing deadlocks, blocking, connection exhaustion, corruption and failed jobs, usually under time pressure.
+
+    10. `Supporting developers and users`
+    - Reviewing SQL and schema changes for efficiency and safety; advising on access patterns; managing the promotion of changes from development to production.
+
+    11. `Documentation and compliance`
+    - Maintaining the data dictionary and schema documentation; meeting regulatory obligations for data retention, privacy and audit.
+
+    12. `Change management`
+    - Controlling how schema changes reach production, with a tested rollback for every change.
+
+    The three duties that matter most
+    - If the role had to be reduced to three things: `keep the data safe` (backup, recovery, security), `keep it correct` (integrity constraints), and `keep it available and fast` (high availability and tuning). Everything else supports those.
+
+    Skills the person needs
+    - SQL and DBMS internals, performance tuning, backup and recovery, operating systems and storage, scripting for automation, security practice, and the judgement to say no to a risky change.
+
 24. **What is RDBMS? Why data are stored in database system instead of file?** *[ICT Ministry Assistant Programmer 2017 compact it 1236 (ET: N/A)]*
+
+    Answer:
+
+    What is an RDBMS
+    - A `Relational Database Management System` is software that stores data in `tables` (relations) of rows and columns, and manages the relationships between those tables using `keys`.
+    - It is based on E. F. Codd's relational model of 1970 and is accessed through `SQL`.
+
+    Characteristics
+    - Data held in two-dimensional tables; every row uniquely identified by a `primary key`; tables linked by `foreign keys`; constraints enforcing integrity; support for `normalisation`; and `ACID` transaction guarantees.
+    - Examples: Oracle, MySQL, PostgreSQL, SQL Server, IBM Db2, SQLite.
+    - A plain `DBMS` may store data as files or in a hierarchy with no enforced relationships; an `RDBMS` enforces the relational model, keys and referential integrity.
+
+    Why data is stored in a database rather than in files
+
+    1. `Reduced redundancy`
+    - In a file system the same customer address is duplicated across the sales, billing and delivery files. A database stores it once, normalised, and shares it.
+
+    2. `No inconsistency`
+    - Because the data exists once, an update is seen everywhere. In a file system, updating one copy and forgetting the others leaves two contradictory answers.
+
+    3. `Integrity is enforced by the system`
+    - PRIMARY KEY, FOREIGN KEY, CHECK, NOT NULL and UNIQUE are enforced by the database itself. A file system enforces nothing; every program must implement the rules, and any one of them can get it wrong.
+
+    4. `Security and access control`
+    - Users, roles and privileges control access at table and column level, and views hide sensitive data. Files offer only coarse operating-system permissions.
+
+    5. `Concurrent multi-user access`
+    - Locking or MVCC lets many users read and write simultaneously. Two programs writing the same file at once will corrupt it.
+
+    6. `Transactions with ACID guarantees`
+    - A bank transfer either debits and credits both accounts or does neither. A file system has no concept of a transaction, so a crash midway loses money.
+
+    7. `Backup and recovery`
+    - The transaction log allows automatic recovery to a consistent state after a crash. File-based recovery means restoring yesterday's copy and losing a day's work.
+
+    8. `Efficient querying`
+    - SQL states what is wanted; the optimiser chooses indexes and join strategies. In a file system every query must be programmed by hand and every search is a full scan.
+
+    9. `Data independence`
+    - Storage structures can change without rewriting applications. In a file system, changing a record layout means changing every program that reads it.
+
+    10. `Data sharing`
+    - One database serves many applications with a single consistent version of the truth.
+
+    Summary
+
+    | Point | File system | RDBMS |
+    |---|---|---|
+    | Redundancy | High | Controlled |
+    | Consistency | Fragile | Enforced |
+    | Integrity | In each program | In the database |
+    | Security | File-level | User, role, table, column |
+    | Concurrency | Unsafe | Managed |
+    | Transactions | None | ACID |
+    | Recovery | Manual | Automatic |
+    | Querying | Program per query | Declarative SQL |
+
+    - When a file is still the better choice: a small, single-user, read-only dataset, or a configuration file. The overhead of a database is only worth paying when the data is shared, changing and important.
 
 25. **a) What is a database? Discuss the importance of database.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
 
+    Answer:
+
+    What is a database
+    - A `database` is an organised collection of related data, stored electronically so that it can be efficiently accessed, managed and updated.
+    - It is `structured` (usually into tables), `related` (it describes some part of the real world), `persistent` (it survives program termination), `shared` (many users and applications use it at once) and `managed` by a DBMS.
+
+    ```
+    Database: Bank
+
+    Table: Customer                     Table: Account
+    +---------+--------+-------+        +---------+---------+---------+
+    | cust_id | name   | city  |        | acc_no  | cust_id | balance |
+    +---------+--------+-------+        +---------+---------+---------+
+    |  101    | Karim  | Dhaka |        | A1001   |  101    | 50000   |
+    |  102    | Rahim  | Sylhet|        | A1002   |  101    | 25000   |
+    +---------+--------+-------+        +---------+---------+---------+
+    ```
+
+    Importance of a database
+
+    1. `Single source of truth`
+    - Data is stored once and shared, so every department works from the same figures. Without it, sales, finance and delivery each keep their own version and they disagree.
+
+    2. `Accuracy and consistency`
+    - Constraints prevent invalid data from ever being stored, and an update is seen immediately by every application.
+
+    3. `Efficient retrieval`
+    - Indexes and query optimisation find one record among millions in milliseconds. A file-based search would scan everything.
+
+    4. `Security and controlled access`
+    - Users, roles and privileges determine exactly who may see or change what, and every access can be audited. This is essential for financial and personal data.
+
+    5. `Concurrent multi-user working`
+    - Hundreds of tellers, ATMs and web users can transact simultaneously without corrupting each other's work.
+
+    6. `Transaction reliability`
+    - ACID guarantees mean a transfer either completes fully or not at all — no money is created or destroyed by a crash.
+
+    7. `Backup and recovery`
+    - Logging and replication allow the organisation to survive hardware failure, and to meet regulatory obligations for retention.
+
+    8. `Supports decision-making`
+    - Reporting, analytics and data warehousing turn stored transactions into information for management.
+
+    9. `Scalability and growth`
+    - Volume can grow from thousands to billions of rows through indexing, partitioning, replication and sharding.
+
+    10. `Reduced cost and duplicated effort`
+    - One well-designed store replaces many overlapping files and the staff time spent reconciling them.
+
+    11. `Enables modern applications`
+    - Every banking system, e-commerce site, airline reservation system, hospital record system, mobile application and government register rests on a database. Almost no significant software exists without one.
+
+    - In one sentence: a database turns raw data into a `shared, reliable, secure and queryable organisational asset`, which is why it is the foundation of essentially every information system in use today.
+
 26. **b) Specify the functions of the database administration.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
+
+    Answer: `Database administration` is the function responsible for the design, security, performance, availability and integrity of an organisation's databases. Its specific functions are as follows.
+
+    1. `Database design and implementation`
+    - Defining the schema, choosing data types, establishing primary and foreign keys, normalising the structure, and creating the databases, tables, views and indexes.
+
+    2. `Installation and configuration`
+    - Installing the DBMS, setting configuration parameters, applying patches and planning upgrades.
+
+    3. `Security administration`
+    - Creating users and roles; granting and revoking privileges on the principle of least privilege; enforcing password policy; configuring encryption; and auditing access to sensitive data.
+
+    4. `Backup and recovery`
+    - Designing the backup strategy — full, incremental, differential — scheduling and monitoring it, and testing the restore procedure regularly. Defining recovery point and recovery time objectives with the business.
+
+    5. `Performance monitoring and tuning`
+    - Identifying slow queries and reading their execution plans; creating and removing indexes; tuning memory, buffers and connection limits; partitioning large tables; and refreshing optimiser statistics.
+
+    6. `Capacity planning and storage management`
+    - Forecasting growth, allocating tablespaces and file groups, archiving and purging historical data.
+
+    7. `Ensuring data integrity`
+    - Defining and maintaining constraints, and running consistency and reconciliation checks.
+
+    8. `High availability and disaster recovery`
+    - Configuring replication, clustering, log shipping and failover; maintaining and rehearsing a disaster recovery plan.
+
+    9. `Concurrency and transaction management`
+    - Choosing isolation levels, monitoring locks and deadlocks, and resolving blocking.
+
+    10. `Change and version control`
+    - Managing how schema changes move from development through testing to production, with a tested rollback for each.
+
+    11. `Documentation and metadata management`
+    - Maintaining the data dictionary, schema documentation and operational runbooks.
+
+    12. `User support and training`
+    - Helping developers write efficient and safe SQL, and advising on access patterns and schema design.
+
+    13. `Regulatory compliance`
+    - Meeting obligations for data retention, privacy, audit trails and reporting.
+
+    14. `Monitoring and alerting`
+    - Watching space, performance, replication lag, failed jobs and error logs, with alerts before problems become outages.
+
+    The functions ranked by importance
+    - If reduced to three: `protect the data` (backup, recovery, security), `keep it correct` (integrity), and `keep it available and responsive` (high availability, tuning). Every other function supports one of these three.
+
+    - Related distinction: `data administration` is the policy-level function — deciding what data the organisation holds, what it means and who owns it — while `database administration` is the technical function of building and running the systems that store it.
 
 ## ER Diagram & Database Design (25)
 
