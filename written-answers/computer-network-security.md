@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 184 questions
+**Table of Contents** — 15 subtopics · 198 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,14 +9,15 @@
 | 4 | [Malware & Security Threats](#malware--security-threats-20) | 20 |
 | 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-19) | 19 |
 | 6 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
-| 7 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
-| 8 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
-| 9 | [Security Principles (CIA Triad)](#security-principles-cia-triad-8) | 8 |
-| 10 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
-| 11 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
-| 12 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
-| 13 | [Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing-3) | 3 |
-| 14 | [Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities-1) | 1 |
+| 7 | [Cryptography & Network Security](#cryptography--network-security-14) | 14 |
+| 8 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
+| 9 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
+| 10 | [Security Principles (CIA Triad)](#security-principles-cia-triad-8) | 8 |
+| 11 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
+| 12 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
+| 13 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
+| 14 | [Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing-3) | 3 |
+| 15 | [Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities-1) | 1 |
 
 <!-- TOC END -->
 
@@ -24,9 +25,9 @@
 
 ## Social Engineering & Cyber Attacks (32)
 
-1. What is a phishing attack? Explain its types and discuss methods to prevent it. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+1. **What is a phishing attack? Explain its types and discuss methods to prevent it.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: Phishing is a social engineering attack in which the attacker impersonates a trusted entity — a bank, a colleague, a service provider — to trick the victim into revealing credentials, card details or installing malware.
+Answer: Phishing is a social engineering attack in which the attacker impersonates a trusted entity — a bank, a colleague, a service provider — to trick the victim into revealing credentials, card details or installing malware.
 
    Types of phishing
    - **Email phishing** — a mass email pretending to be from a bank, asking the user to "verify" the account through a fake link.
@@ -58,7 +59,7 @@
 
 2. **(b) What is an ARP poisoning attack, and how does it work?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-   Answer: ARP poisoning (also called ARP spoofing) is a LAN attack in which the attacker sends forged ARP reply messages to associate their own MAC address with the IP address of another device — usually the default gateway — so that traffic meant for that device is delivered to the attacker instead.
+Answer: ARP poisoning (also called ARP spoofing) is a LAN attack in which the attacker sends forged ARP reply messages to associate their own MAC address with the IP address of another device — usually the default gateway — so that traffic meant for that device is delivered to the attacker instead.
 
    Why it works
    - ARP has NO authentication. Any host can send an ARP reply at any time, and receiving hosts accept it and update their ARP cache without verification. This design flaw is what the attack exploits.
@@ -91,7 +92,7 @@
 
 3. **What is a Man-in-the-Middle (MITM) attack? Describe two countermeasures to prevent it.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-   Answer: A Man-in-the-Middle attack is one in which the attacker secretly positions themselves between two communicating parties, relaying and possibly altering the messages, while both parties believe they are talking directly to each other.
+Answer: A Man-in-the-Middle attack is one in which the attacker secretly positions themselves between two communicating parties, relaying and possibly altering the messages, while both parties believe they are talking directly to each other.
 
    ```mermaid
    flowchart LR
@@ -123,7 +124,7 @@
 
 4. **What is a DoS attack? Explain the mechanism of a DDoS attack and how it differs from a simple DoS attack.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-   Answer: A **DoS (Denial of Service)** attack aims to make a service unavailable to its legitimate users by exhausting its resources — bandwidth, CPU, memory or connection table.
+Answer: A **DoS (Denial of Service)** attack aims to make a service unavailable to its legitimate users by exhausting its resources — bandwidth, CPU, memory or connection table.
 
    Mechanism of a DDoS (Distributed Denial of Service) attack
    ```mermaid
@@ -164,7 +165,7 @@
 
 5. **What is a Man-inThe Middle (MitM) attack? How can it be prevented?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1337 (ET: N/A)]*
 
-   Answer: A Man-in-the-Middle attack is one where the attacker inserts themselves between two parties, intercepting and possibly altering their communication while both believe they are talking directly to each other.
+Answer: A Man-in-the-Middle attack is one where the attacker inserts themselves between two parties, intercepting and possibly altering their communication while both believe they are talking directly to each other.
 
    Common techniques used
    - **ARP spoofing** on a LAN — poisoning ARP caches so traffic routes through the attacker.
@@ -195,7 +196,7 @@
 
 6. **Briefly explain phishing attack and denial-of-service (DoS) attack.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1341 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    **Phishing attack**
    - A social engineering attack in which the attacker impersonates a trusted organisation to trick the victim into revealing credentials, card details or OTP, or into installing malware.
@@ -214,7 +215,7 @@
 
 7. **How to attack DHCP server in MIMA?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
 
-   Answer: The question asks how DHCP is abused to set up a Man-in-the-Middle Attack. The technique has two stages: DHCP starvation, then a rogue DHCP server.
+Answer: The question asks how DHCP is abused to set up a Man-in-the-Middle Attack. The technique has two stages: DHCP starvation, then a rogue DHCP server.
 
    **Stage 1 — DHCP starvation**
    - The attacker floods the legitimate DHCP server with thousands of DHCPDISCOVER requests, each with a randomly generated spoofed MAC address.
@@ -248,7 +249,7 @@
 
 8. **Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps would you take to mitigate the threats?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
 
-   Answer:
+Answer:
 
    (a) Threats to be aware of
 
@@ -308,7 +309,7 @@
 
 9. **Write down the 10 most Cyber attacks. Difference among Black Hat hacker, Grey hat hacker and white hat hacker.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 526 (ET: MIST)]*
 
-   Answer:
+Answer:
 
    (a) Ten most common cyber attacks
    - **Phishing** — impersonating a trusted party to steal credentials.
@@ -339,7 +340,7 @@
 
 10. **What is Cyber Security? Write down the top 10 cyber attack. Discuss about Ransomware and DDoS attack.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 512 (ET: MIST)]*
 
-    Answer:
+Answer:
 
     (a) Cyber security
     - The practice of protecting computers, networks, programs and data from unauthorised access, attack, damage and disruption.
@@ -368,7 +369,7 @@
 
 11. **What is meant by Encryption and Decryption? What is Cyber security? Write down the top 10 cyber attack.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
 
-    Answer:
+Answer:
 
     (a) Encryption and Decryption
     - **Encryption** converts readable data (plaintext) into an unreadable form (ciphertext) using an algorithm and a key, so that anyone intercepting it cannot understand it.
@@ -391,7 +392,7 @@
 
 12. **Difference between active and passive atack.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Passive Attack | Active Attack |
     |---|---|---|
@@ -409,7 +410,7 @@
 
 13. **Describe a man-in the middle attack on the Diffie-Hellman key exchange protocol in which the adversary generates two public key pairs for the attack.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
 
-    Answer: Diffie-Hellman lets two parties agree a shared secret over an insecure channel, but in its basic form it provides NO AUTHENTICATION. That is exactly the weakness the attack exploits.
+Answer: Diffie-Hellman lets two parties agree a shared secret over an insecure channel, but in its basic form it provides NO AUTHENTICATION. That is exactly the weakness the attack exploits.
 
     Normal Diffie-Hellman
     - Public parameters: a prime `p` and a generator `g`.
@@ -452,7 +453,7 @@
 
 14. **What is MAC flooding? How to prevent MAC flooding?** *[Teletalk Assistant Manager (IT) 2023 compact it 466 (ET: N/A)], [Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
 
-    Answer: MAC flooding is a Layer 2 attack in which the attacker floods a switch with frames carrying thousands of fake source MAC addresses, overflowing the switch's **CAM table** (MAC address table).
+Answer: MAC flooding is a Layer 2 attack in which the attacker floods a switch with frames carrying thousands of fake source MAC addresses, overflowing the switch's **CAM table** (MAC address table).
 
     How it works
     - A switch learns which MAC address is on which port and stores it in the CAM table, which has a fixed size.
@@ -486,7 +487,7 @@
 
 15. **What is Denial of Service (DoS) is and NAT?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **DoS (Denial of Service)**
     - An attack that makes a service unavailable to its legitimate users by exhausting bandwidth, CPU, memory or the connection table.
@@ -505,7 +506,7 @@
 
 16. **What do you understand by DOS attack and Man-in-the-middle attack? Please explain how it can be occurred?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **DoS attack**
     - An attack that denies legitimate users access to a service by exhausting its resources.
@@ -532,7 +533,7 @@
 
 17. **What do you mean by a DNS poisoning attack, and how does it work?** *[GTCL Assistant Engineer (CSE) 2022 compact it 685 (ET: BUET)]*
 
-    Answer: DNS poisoning (also called DNS cache poisoning or DNS spoofing) is an attack in which false address records are inserted into a DNS resolver's cache, so that users who type a legitimate domain name are silently sent to the attacker's server.
+Answer: DNS poisoning (also called DNS cache poisoning or DNS spoofing) is an attack in which false address records are inserted into a DNS resolver's cache, so that users who type a legitimate domain name are silently sent to the attacker's server.
 
     How it works
     ```mermaid
@@ -564,7 +565,7 @@
 
 18. **Write down the difference between Active and Passive attack.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Active Attack | Passive Attack |
     |---|---|---|
@@ -594,7 +595,7 @@
 
 19. **What is DHCP starvation and how DHCP starvation work with diagram? Write down the related attack introduced by DHCP starvation?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
 
-    Answer: **DHCP starvation** is a denial-of-service attack in which the attacker exhausts the DHCP server's pool of IP addresses by flooding it with requests carrying spoofed MAC addresses, so legitimate clients can no longer obtain an address.
+Answer: **DHCP starvation** is a denial-of-service attack in which the attacker exhausts the DHCP server's pool of IP addresses by flooding it with requests carrying spoofed MAC addresses, so legitimate clients can no longer obtain an address.
 
     How it works
     ```mermaid
@@ -626,7 +627,7 @@
 
 20. **What is MAC flooding attack? What is the impact of this switch?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
 
-    Answer: MAC flooding is an attack that overflows a switch's CAM (MAC address) table by sending a rapid stream of frames with thousands of forged source MAC addresses.
+Answer: MAC flooding is an attack that overflows a switch's CAM (MAC address) table by sending a rapid stream of frames with thousands of forged source MAC addresses.
 
     How the attack works
     - A switch normally learns which MAC address sits on which port and stores that mapping in a fixed-size CAM table.
@@ -651,7 +652,7 @@
 
 21. **(b) Distinguish between phishing and pharming. Give examples to explain.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 801 (ET: N/A)]*
 
-    Answer: Both send the victim to a fake website to steal credentials, but they differ in HOW the victim gets there.
+Answer: Both send the victim to a fake website to steal credentials, but they differ in HOW the victim gets there.
 
     | Point | Phishing | Pharming |
     |---|---|---|
@@ -676,7 +677,7 @@
 
 22. **What is DDoS and SQL Injection attack?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **DDoS (Distributed Denial of Service)**
     - An attack that floods a target service from thousands of compromised machines — a botnet — so that legitimate users cannot access it.
@@ -712,7 +713,7 @@
 
 23. **Phishing attack এর মাধ্যমে কীভাবে attack করা হয়। উহার কারণে কি ক্ষতি হতে পারে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     (a) How a phishing attack is carried out
     - **Step 1 — Preparation.** The attacker registers a look-alike domain and builds a pixel-perfect copy of a real login page.
@@ -743,7 +744,7 @@
 
 24. **Explain ARP Spoofing attack with diagram. Why ARP spoofing attacker used to launch Man-in-the-Middle attack.** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
 
-    Answer: ARP spoofing is an attack in which forged ARP reply messages are sent on a LAN to bind the attacker's MAC address to another host's IP address, so traffic for that host is delivered to the attacker.
+Answer: ARP spoofing is an attack in which forged ARP reply messages are sent on a LAN to bind the attacker's MAC address to another host's IP address, so traffic for that host is delivered to the attacker.
 
     Diagram
     ```mermaid
@@ -779,7 +780,7 @@
 
 25. **Difference between spoofing and sniffing** *[Combined 4 Banks Assistant Programmer 2020 compact it 1002 (ET: DU)]*
 
-    Answer:
+Answer:
 
     | Point | Sniffing | Spoofing |
     |---|---|---|
@@ -800,7 +801,7 @@
 
 26. **Which security attacks (given) occur on client side or server side?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
 
-    Answer: The specific list was not printed with the question, so the standard classification is given.
+Answer: The specific list was not printed with the question, so the standard classification is given.
 
     **Client-side attacks** — execute in the user's browser or on the user's machine
 
@@ -834,7 +835,7 @@
 
 27. **Write down ten name of different attack through internet.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105-1106 (ET: AUST)]*, *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
-    Answer: Ten common internet-based attacks:
+Answer: Ten common internet-based attacks:
 
     - **Phishing** — impersonating a trusted party by email or SMS to steal credentials.
     - **Malware** — virus, worm, trojan or spyware installed to damage or spy on a system.
@@ -852,7 +853,7 @@
 
 28. **(d) Explain the principle of man in the middle and session hijacking attack with appropriate diagrams.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **(a) Man-in-the-Middle attack**
     - The attacker secretly positions themselves between two communicating parties, relaying and possibly altering the messages, while both believe they are talking directly to each other.
@@ -898,7 +899,7 @@
 
 29. **(b) What is DHCP Starvation Attack? Explain briefly.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
 
-    Answer: DHCP starvation is a denial-of-service attack in which the attacker exhausts the DHCP server's entire pool of IP addresses, so no legitimate client can obtain one.
+Answer: DHCP starvation is a denial-of-service attack in which the attacker exhausts the DHCP server's entire pool of IP addresses, so no legitimate client can obtain one.
 
     How it works
     - The attacker sends a rapid flood of DHCPDISCOVER messages, each carrying a different randomly generated (spoofed) source MAC address.
@@ -918,7 +919,7 @@
 
 30. **Write down the name of different attack through internet.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*, *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 
-    Answer: Internet attacks grouped by type.
+Answer: Internet attacks grouped by type.
 
     **Social engineering attacks**
     - Phishing, spear phishing, whaling, smishing (SMS), vishing (voice), pretexting, baiting.
@@ -940,7 +941,7 @@
 
 31. **Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **(a) DoS — Denial of Service**
     - Makes a service unavailable to legitimate users by exhausting bandwidth, CPU, memory or the connection table.
@@ -964,7 +965,7 @@
 
 32. **What is MAC Flood in Switch? How attacker gets benefitted from it?** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
 
-    Answer: MAC flooding is an attack that overflows a switch's CAM (MAC address) table by sending thousands of frames with forged source MAC addresses, forcing the switch to abandon selective forwarding.
+Answer: MAC flooding is an attack that overflows a switch's CAM (MAC address) table by sending thousands of frames with forged source MAC addresses, forcing the switch to abandon selective forwarding.
 
     How it works
     - A switch keeps a fixed-size table mapping MAC addresses to ports.
@@ -986,9 +987,9 @@
 
 ## Cryptography (31)
 
-1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026] *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)], [BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
+1. **Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026]** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)], [BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
-   Answer: The core difference is reversibility. Encryption is a TWO-WAY process designed to be undone; hashing is a ONE-WAY process designed never to be undone.
+Answer: The core difference is reversibility. Encryption is a TWO-WAY process designed to be undone; hashing is a ONE-WAY process designed never to be undone.
 
    | Point | Encryption | Hashing |
    |---|---|---|
@@ -1010,9 +1011,9 @@
    - Login works by hashing the entered password and comparing the two hashes — the system never needs to know the actual password.
    - A **salt** (a random value added before hashing) is used so that two users with the same password get different hashes, defeating rainbow tables.
 
-2. Explain the concepts of encryption and decryption with an example. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+2. **Explain the concepts of encryption and decryption with an example.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer:
+Answer:
    - **Encryption** converts readable data (plaintext) into an unreadable form (ciphertext) using an algorithm and a key.
    - **Decryption** reverses that process, converting ciphertext back to plaintext with the correct key.
 
@@ -1038,9 +1039,9 @@
    - **Asymmetric** — a public key encrypts and a private key decrypts. Slower, but solves key distribution. RSA, ECC.
    - HTTPS uses both: asymmetric encryption to exchange a session key, then symmetric encryption for the actual data.
 
-3. What is social engineering? What is hashing? How is it different from encryption? *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
+3. **What is social engineering? What is hashing? How is it different from encryption?** *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Social engineering
    - The art of manipulating PEOPLE into revealing confidential information or performing actions that compromise security. It attacks human psychology rather than technology.
@@ -1066,7 +1067,7 @@
 
 4. **What is Encryption? What are the types? Explain the role of Encryption in security.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Encryption
    - The process of converting plaintext into ciphertext using an algorithm and a key, so that only someone with the correct key can read it.
@@ -1099,7 +1100,7 @@
 
 5. **Write the differences among encryption, hashing, and digital signatures. Mention their uses in cybersecurity.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Encryption | Hashing | Digital Signature |
    |---|---|---|---|
@@ -1130,7 +1131,7 @@
 
 6. **How many bits MD5 encryption?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: **MD5 produces a 128-bit hash value** (16 bytes), usually written as 32 hexadecimal characters.
+Answer: **MD5 produces a 128-bit hash value** (16 bytes), usually written as 32 hexadecimal characters.
 
    - MD5 stands for **Message Digest algorithm 5**, designed by Ron Rivest in 1991.
    - Note the terminology: MD5 is a HASH function, not encryption. It is one-way and uses no key.
@@ -1150,7 +1151,7 @@
 
 7. **What type of key used for decrypt message of PKI?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-   Answer: In PKI (Public Key Infrastructure), a message is decrypted with the **receiver's PRIVATE key**.
+Answer: In PKI (Public Key Infrastructure), a message is decrypted with the **receiver's PRIVATE key**.
 
    How the key pair is used
    - The **sender encrypts** with the receiver's **PUBLIC key** — which is freely available to everyone.
@@ -1169,7 +1170,7 @@
 
 8. **6.2 Explain the operational difference between Hashing and Encryption.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-   Answer: Operationally, encryption is designed to be UNDONE and hashing is designed never to be undone.
+Answer: Operationally, encryption is designed to be UNDONE and hashing is designed never to be undone.
 
    | Aspect | Encryption | Hashing |
    |---|---|---|
@@ -1189,7 +1190,7 @@
 
 9. **Breifly Explain Asymmetric encryption.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)]*
 
-   Answer: Asymmetric encryption, also called public key cryptography, uses a MATHEMATICALLY LINKED PAIR of keys — a public key that anyone may hold, and a private key kept secret by the owner.
+Answer: Asymmetric encryption, also called public key cryptography, uses a MATHEMATICALLY LINKED PAIR of keys — a public key that anyone may hold, and a private key kept secret by the owner.
 
    The rule
    - Whatever one key encrypts, only the OTHER key can decrypt.
@@ -1219,7 +1220,7 @@
 
 10. **Distinguish between Symmetric Encryption and Asymmetric Encryption. Give some examples of encryption algorithm. What are the different types of ciphers in cryptography? What are the factors to be considered for cryptographic strength?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 533 (ET: MIST)]*
 
-    Answer:
+Answer:
 
     (a) Symmetric vs Asymmetric
 
@@ -1269,7 +1270,7 @@
 
 11. **What is Symmetric and Asymmetric Encryption? Explain with example.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 499 (ET: IBA)]*
 
-    Answer:
+Answer:
 
     **Symmetric encryption**
     - Uses ONE shared secret key for both encryption and decryption. Both parties must already have the same key.
@@ -1301,7 +1302,7 @@
 
 12. **What is symmetric and Asymmetric key explain with example?** *[Mongla Port Authority Assistant Programmer 2023 compact it 573 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **Symmetric key**
     - A single secret key shared by both parties, used for both encryption and decryption.
@@ -1324,7 +1325,7 @@
 
 13. **What is Cryptography? Difference between Symmetric and Asymmetric encryption with example. Draw and design public key encryption using Hash function. Draw a diagram for e-commerce online transactions.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 512 (ET: MIST)]*
 
-    Answer:
+Answer:
 
     (a) Cryptography
     - The science of securing information by transforming it so that only the intended recipient can understand it. It provides confidentiality, integrity, authentication and non-repudiation.
@@ -1381,7 +1382,7 @@
 
 14. **The high level method of DES...** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 450 (ET: BUET)]*
 
-    Answer: **DES (Data Encryption Standard)** is a symmetric block cipher adopted in 1977. It encrypts 64-bit blocks with a 56-bit effective key (64 bits including 8 parity bits) through 16 rounds of a Feistel network.
+Answer: **DES (Data Encryption Standard)** is a symmetric block cipher adopted in 1977. It encrypts 64-bit blocks with a 56-bit effective key (64 bits including 8 parity bits) through 16 rounds of a Feistel network.
 
     High-level method
     ```mermaid
@@ -1414,7 +1415,7 @@
 
 15. **Difference between symmetric and asymetric key encryption.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Symmetric key encryption | Asymmetric key encryption |
     |---|---|---|
@@ -1433,7 +1434,7 @@
 
 16. **Identify the type of algorithm? (i) MD5 (ii) AES (iii) RSA (iv) Diffie-Hellman** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 461 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     | Algorithm | Type | Details |
     |---|---|---|
@@ -1449,7 +1450,7 @@
 
 17. **Describe RSA Algorithm and how it works?** *[Teletalk Assistant Manager (IT) 2023 compact it 467 (ET: N/A)]*
 
-    Answer: RSA is an asymmetric encryption algorithm developed by Rivest, Shamir and Adleman in 1977. Its security rests on the fact that multiplying two large primes is easy, but factoring the product back into those primes is computationally infeasible.
+Answer: RSA is an asymmetric encryption algorithm developed by Rivest, Shamir and Adleman in 1977. Its security rests on the fact that multiplying two large primes is easy, but factoring the product back into those primes is computationally infeasible.
 
     Key generation
     - **Step 1** — choose two large distinct prime numbers `p` and `q`.
@@ -1481,7 +1482,7 @@
 
 18. **অথবা, (ক) Private key এবং Public key উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
 
-    Answer: In asymmetric cryptography every user has a mathematically linked PAIR of keys.
+Answer: In asymmetric cryptography every user has a mathematically linked PAIR of keys.
 
     **Public key**
     - Distributed openly to anyone. It can be published on a website or in a directory.
@@ -1513,7 +1514,7 @@
 
 19. **(খ) Plaintext ও Cipher text এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Plaintext | Ciphertext |
     |---|---|---|
@@ -1535,7 +1536,7 @@
 
 20. **What is SHA-256 and SHA-512 in network security, what is avalanche effect, is it desirable or undesirable.** *[RPGCL Assistant Manager (ICT) 2022 compact it 655 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     **SHA-256 and SHA-512**
     - Both belong to the **SHA-2 (Secure Hash Algorithm 2)** family, designed by the NSA and published by NIST in 2001.
@@ -1567,7 +1568,7 @@
 
 21. **(ii) Symmetric Key Encryption and Asymmetric Key Encryption ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 790 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **Symmetric key encryption**
     - A single secret key performs both encryption and decryption. Both sender and receiver must possess the same key.
@@ -1590,7 +1591,7 @@
 
 22. **(a) What is meant by Encryption and Decryption?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 796 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **Encryption** is the process of converting readable data (plaintext) into an unreadable form (ciphertext) using a cryptographic algorithm and a key, so that unauthorised people cannot understand it.
     - **Decryption** is the reverse process — converting ciphertext back into the original plaintext using the correct key.
 
@@ -1610,7 +1611,7 @@
 
 23. **Difference between private key and public key.** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Private Key | Public Key |
     |---|---|---|
@@ -1631,7 +1632,7 @@
 
 24. **Write two symmetric key algorithm name.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
-    Answer: Two symmetric key algorithms:
+Answer: Two symmetric key algorithms:
 
     - **AES (Advanced Encryption Standard)** — the current global standard, adopted by NIST in 2001. A block cipher with 128-bit blocks and key sizes of 128, 192 or 256 bits. Fast, secure and hardware-accelerated on modern CPUs.
     - **DES (Data Encryption Standard)** — the older standard from 1977. A 64-bit block cipher with a 56-bit effective key. Now considered broken, because the key space is small enough to brute-force.
@@ -1644,7 +1645,7 @@
 
 25. **(b) Describe secret key and public key encryption.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **Secret key encryption (symmetric)**
     - One shared secret key is used for both encryption and decryption, so both parties must hold the same key.
@@ -1669,7 +1670,7 @@
 
 26. **The Caesar Cipher is a type of shift cipher. Shift Ciphers work by using the modulo operator to encrypt and decrypt messages. The Shift Cipher has a key K, which is an integer from 0 to 25. How to Encrypt, How to decrypt.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1009-1010 (ET: N/A)]*
 
-    Answer: The Caesar cipher replaces each letter by another letter a fixed number of positions along the alphabet, wrapping around at Z.
+Answer: The Caesar cipher replaces each letter by another letter a fixed number of positions along the alphabet, wrapping around at Z.
 
     Letter-to-number mapping
     - `A = 0, B = 1, C = 2, ... Z = 25`
@@ -1718,7 +1719,7 @@
 
 27. **Public key cryptography কীভাবে কাজ করে?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020 (ET: N/A)]*
 
-    Answer: Public key cryptography works by giving every user a mathematically linked PAIR of keys, where what one key does only the other can undo.
+Answer: Public key cryptography works by giving every user a mathematically linked PAIR of keys, where what one key does only the other can undo.
 
     Key generation
     - Large prime numbers or elliptic curve points are used to generate a public key and a private key together.
@@ -1748,7 +1749,7 @@
 
 28. **(গ) Plain Text and Cipher Text-এর মধ্যে মূল পার্থক্য কী? লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069 (ET: N/A)]*
 
-    Answer: The fundamental difference is READABILITY — plaintext can be understood by anyone, ciphertext cannot be understood without the key.
+Answer: The fundamental difference is READABILITY — plaintext can be understood by anyone, ciphertext cannot be understood without the key.
 
     | Point | Plaintext | Ciphertext |
     |---|---|---|
@@ -1768,7 +1769,7 @@
 
 29. **(ক) Data encryption বলতে কী বোঝায়? বহুল ব্যবহৃত কয়েকটি encryption পদ্ধতির নাম লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Data encryption
     - The process of converting readable data into an unreadable coded form using a mathematical algorithm and a key, so that only authorised parties holding the correct key can read it.
@@ -1798,7 +1799,7 @@
 
 30. **What is public key encryption? Explain digital signature with example.** *[ICT Ministry Assistant Programmer 2017 compact it 1238-1239 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Public key encryption
     - An encryption scheme using a mathematically linked key pair: a PUBLIC key distributed openly and a PRIVATE key kept secret.
@@ -1838,7 +1839,7 @@
 
 31. **b) What is a digital signature? And why is that important?** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
 
-    Answer: A digital signature is a cryptographic value attached to a digital document that proves who created it and that it has not been altered since. It is created by hashing the document and encrypting that hash with the signer's PRIVATE key.
+Answer: A digital signature is a cryptographic value attached to a digital document that proves who created it and that it has not been altered since. It is created by hashing the document and encrypting that hash with the signer's PRIVATE key.
 
     How it works in brief
     - Sign: `Signature = Encrypt(Hash(document), sender's private key)`
@@ -1862,7 +1863,7 @@
 
 1. **As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-   Answer: A nuclear plant is Critical Information Infrastructure with an OT (Operational Technology) network controlling physical processes. A safety failure here is not a data loss but a physical hazard, so the IDS strategy must be built around that.
+Answer: A nuclear plant is Critical Information Infrastructure with an OT (Operational Technology) network controlling physical processes. A safety failure here is not a data loss but a physical hazard, so the IDS strategy must be built around that.
 
    (a) IDS placement strategy
    - **Network IDS (NIDS)** at the IT/OT boundary, inside the DMZ, and on each control-network segment — deployed on a SPAN/mirror port or a network TAP so it is passive and cannot itself disturb the process.
@@ -1897,7 +1898,7 @@
 
 2. **What is Packet Filter of Firewall?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: A packet-filtering firewall is the simplest type of firewall. It examines each packet INDEPENDENTLY against a set of rules and decides to allow or drop it, without remembering anything about previous packets.
+Answer: A packet-filtering firewall is the simplest type of firewall. It examines each packet INDEPENDENTLY against a set of rules and decides to allow or drop it, without remembering anything about previous packets.
 
    What it inspects
    - Source IP address and destination IP address
@@ -1934,6 +1935,13 @@
 
 | NGFW | WAF |
 |---|---|
+| নেটওয়ার্ক-ভিত্তিক সুরক্ষা | ওয়েব অ্যাপ্লিকেশন সুরক্ষা |
+| Layer 3, 4, 7 | Layer 7 |
+| Network-based Attacks (DDoS, Malware, IPS) | Web-based Attacks (SQL Injection, XSS, CSRF) |
+| Palo Alto, Fortinet, Cisco Firepower | Cloudflare WAF, AWS WAF, Imperva WAF |
+
+| NGFW | WAF |
+|---|---|
 | নেটওয়ার্ক-ভিত্তিক সুরক্ষা | ওয়েব অ্যাপ্লিকেশন সুরক্ষা |
 | Layer 3, 4, 7 | Layer 7 |
 | Network-based Attacks (DDoS, Malware, IPS) | Web-based Attacks (SQL Injection, XSS, CSRF) |
@@ -1959,7 +1967,7 @@
 
 4. **Bangladesh Bank have client server and the communication with Mail Server, DNS server, Web server. Bangladesh Bank want to ensure the security using firewall on those server. Draw a diagram with the scenario.** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1323 (ET: DU)]*
 
-   Answer: The correct design is a **dual-firewall DMZ architecture** — public-facing servers in a DMZ, internal systems behind a second firewall.
+Answer: The correct design is a **dual-firewall DMZ architecture** — public-facing servers in a DMZ, internal systems behind a second firewall.
 
    ```mermaid
    flowchart TD
@@ -2000,7 +2008,7 @@
 
 5. **What is Demilitarized Zone (DMZ) and sandbox for security test?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 398 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    **(a) DMZ (Demilitarized Zone)**
    - A separate network segment that sits between the untrusted internet and the trusted internal LAN, holding the servers that must be reachable from outside.
@@ -2026,7 +2034,7 @@
 
 6. **Different types of network firewalls. Explain NGFW compared to traditional firewall.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 301 (ET: BIBM)]*
 
-   Answer:
+Answer:
 
    (a) Types of network firewall
 
@@ -2060,7 +2068,7 @@
 
 7. **What is Firewall? Discuss about different types of Firewall.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 528 (ET: MIST)]*
 
-   Answer: A firewall is a network security device — hardware, software or both — that monitors incoming and outgoing traffic and permits or blocks it according to a defined rule set. It is the barrier between a trusted internal network and an untrusted external one.
+Answer: A firewall is a network security device — hardware, software or both — that monitors incoming and outgoing traffic and permits or blocks it according to a defined rule set. It is the barrier between a trusted internal network and an untrusted external one.
 
    Types of firewall
 
@@ -2095,7 +2103,7 @@
 
 8. **Draw a diagram of LAN including network Firewall. Why is firewall important in network security? List 5 major types of network firewalls. Differentiate between Traditional Firewall and Next Generation Firewall.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 532 (ET: MIST)]*
 
-   Answer:
+Answer:
 
    (a) LAN diagram with firewall
    ```mermaid
@@ -2140,7 +2148,7 @@
 
 9. **What is firewall and why it is used?** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 475 (ET: N/A)]*
 
-   Answer: A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules, forming a barrier between a trusted internal network and untrusted external networks.
+Answer: A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules, forming a barrier between a trusted internal network and untrusted external networks.
 
    Why it is used
    - **Block unauthorised access** — prevents attackers on the internet from reaching internal systems.
@@ -2157,7 +2165,7 @@
 
 10. **What is the function of a firewall?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
-    Answer: The primary function of a firewall is to **filter network traffic** — inspecting every packet entering or leaving a network and allowing or blocking it according to a defined rule set.
+Answer: The primary function of a firewall is to **filter network traffic** — inspecting every packet entering or leaving a network and allowing or blocking it according to a defined rule set.
 
     Its specific functions
     - **Traffic filtering** — permit or deny based on source and destination IP, port and protocol.
@@ -2174,7 +2182,7 @@
 
 11. **DMZ and firewall placement in a diagram. (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 651 (ET: BUET)]*
 
-    Answer: Two standard architectures.
+Answer: Two standard architectures.
 
     **Design A — dual firewall (screened subnet), the more secure option**
     ```mermaid
@@ -2209,7 +2217,7 @@
 
 12. **What is Blacklist and Whitelist? Write down the difference between Black list and White list.** *[SPCB Sub-Assistant Programmer 2022 compact it 737 (ET: N/A)]*
 
-    Answer:
+Answer:
     - **Blacklist** — a list of entities that are explicitly BLOCKED. Everything else is allowed by default.
     - **Whitelist** — a list of entities that are explicitly ALLOWED. Everything else is blocked by default.
 
@@ -2230,7 +2238,7 @@
 
 13. **What is DMZ in data center? Describe using diagram? Write the network devices in this system?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
 
-    Answer: In a data centre, a DMZ is a separate, isolated network segment that hosts the servers which must be reachable from the internet, kept apart from the internal trusted network by firewalls.
+Answer: In a data centre, a DMZ is a separate, isolated network segment that hosts the servers which must be reachable from the internet, kept apart from the internal trusted network by firewalls.
 
     Diagram
     ```mermaid
@@ -2281,7 +2289,7 @@
 
 14. **Difference between blacklisting and whitelisting. Which is more secure and why?** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     | Point | Blacklisting | Whitelisting |
     |---|---|---|
@@ -2307,7 +2315,7 @@
 
 15. **Write difference between Antivirus and Firewall.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Firewall | Antivirus |
     |---|---|---|
@@ -2328,7 +2336,7 @@
 
 16. **What is firewell? Draw a LAN network to showing firewall.** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-    Answer: A firewall is a security device that filters network traffic between a trusted internal network and an untrusted external network, allowing or blocking packets according to a defined rule set.
+Answer: A firewall is a security device that filters network traffic between a trusted internal network and an untrusted external network, allowing or blocking packets according to a defined rule set.
 
     LAN diagram with firewall
     ```mermaid
@@ -2359,7 +2367,7 @@
 
 17. **What is proxy server? Explain it.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123 (ET: BREB)]*
 
-    Answer: A proxy server is an intermediary that sits between a client and a destination server. The client sends its request to the proxy, the proxy forwards it on its own behalf, receives the response and returns it to the client. The destination server never sees the client directly.
+Answer: A proxy server is an intermediary that sits between a client and a destination server. The client sends its request to the proxy, the proxy forwards it on its own behalf, receives the response and returns it to the client. The destination server never sees the client directly.
 
     ```mermaid
     flowchart LR
@@ -2391,7 +2399,7 @@
 
 18. **What is firewall? explain its work. Draw a LAN network and a firewall where firewall will be situated.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1156 (ET: DU)]*
 
-    Answer:
+Answer:
 
     (a) Firewall
     - A security device that monitors and filters network traffic between a trusted internal network and an untrusted external one, permitting or blocking packets according to a configured rule set.
@@ -2428,7 +2436,7 @@
 
 19. **What is Stateful and Stateless Firewall?** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     **Stateless firewall**
     - Examines each packet **in isolation**, with no memory of anything that came before.
@@ -2460,7 +2468,7 @@
 
 20. **What is DMZ? Explain with appropriate figure.** *[NESCO Manager (Software) 2018 compact it 1207 (ET: N/A)]*
 
-    Answer: A **DMZ (Demilitarized Zone)** is a separate network segment placed between the untrusted internet and the trusted internal network. It hosts the servers that must be reachable from outside, keeping them isolated from internal systems.
+Answer: A **DMZ (Demilitarized Zone)** is a separate network segment placed between the untrusted internet and the trusted internal network. It hosts the servers that must be reachable from outside, keeping them isolated from internal systems.
 
     The name comes from the military idea of a neutral buffer zone between two opposing forces.
 
@@ -2508,9 +2516,9 @@
 
 ## Malware & Security Threats (20)
 
-1. Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **Differentiate between a Computer Virus and a Computer Worm based on how they spread and replicate across host networks.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer: The essential difference is that a virus needs a HOST FILE and a USER ACTION to spread; a worm is self-contained and self-propagating.
+Answer: The essential difference is that a virus needs a HOST FILE and a USER ACTION to spread; a worm is self-contained and self-propagating.
 
    | Point | Virus | Worm |
    |---|---|---|
@@ -2532,7 +2540,7 @@
 
 2. **What is exfiltration?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
-   Answer: **Data exfiltration** is the unauthorised transfer of data OUT of an organisation's systems to a location controlled by an attacker. It is the "theft" stage of a breach — the point at which a compromise turns into an actual data loss.
+Answer: **Data exfiltration** is the unauthorised transfer of data OUT of an organisation's systems to a location controlled by an attacker. It is the "theft" stage of a breach — the point at which a compromise turns into an actual data loss.
 
    Common exfiltration methods
    - **Over the network** — uploading to an external server, often over HTTPS so it blends with normal traffic.
@@ -2556,7 +2564,7 @@
 
 3. **Software downloaded from internet and installed that is not malicious is called?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: Software downloaded and installed from the internet that is NOT malicious is called **Freeware**, **Shareware** or generally **legitimate software**, depending on its licensing.
+Answer: Software downloaded and installed from the internet that is NOT malicious is called **Freeware**, **Shareware** or generally **legitimate software**, depending on its licensing.
 
    | Term | Meaning |
    |---|---|
@@ -2571,7 +2579,7 @@
 
 4. **একটি Virus ও Ransomware এর নাম লিখ?** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    **Virus** — **CIH (Chernobyl)** virus, which overwrote the BIOS and hard disk of infected Windows machines in 1998.
    - Other well-known viruses: Melissa, ILOVEYOU, Michelangelo, Stoned, Brain (the first PC virus, 1986).
@@ -2585,7 +2593,7 @@
 
 5. **What is Trojan horse virus?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
-   Answer: A Trojan horse is malware that DISGUISES itself as legitimate, useful software to trick the user into installing it. Once running, it performs malicious actions in the background.
+Answer: A Trojan horse is malware that DISGUISES itself as legitimate, useful software to trick the user into installing it. Once running, it performs malicious actions in the background.
 
    The name comes from the Greek legend of the wooden horse used to enter Troy — the danger is hidden inside something the victim willingly brings in.
 
@@ -2609,7 +2617,7 @@
 
 6. **Computer এর Virus কি?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
 
-   Answer: A computer virus is a malicious program that attaches itself to a legitimate file or program and replicates by inserting copies of itself into other files, damaging data or disrupting the system as it spreads.
+Answer: A computer virus is a malicious program that attaches itself to a legitimate file or program and replicates by inserting copies of itself into other files, damaging data or disrupting the system as it spreads.
 
    - **VIRUS** stands for **Vital Information Resources Under Seize**.
    - It cannot run on its own. The infected host file must be executed before the virus becomes active.
@@ -2633,7 +2641,7 @@
 
 7. **Trojan Horse কি?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-   Answer: A Trojan horse is malware that pretends to be legitimate software so the user installs it voluntarily, and then performs harmful actions secretly in the background.
+Answer: A Trojan horse is malware that pretends to be legitimate software so the user installs it voluntarily, and then performs harmful actions secretly in the background.
 
    Main characteristics
    - **Disguised** as a useful program — a game, utility, cracked software or an attachment that looks like an invoice.
@@ -2651,7 +2659,7 @@
 
 8. **What is QR code? What is Rootkit and bootkit?** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 820-821 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    **(a) QR code**
    - **QR = Quick Response code**, a two-dimensional matrix barcode invented by Denso Wave in Japan in 1994.
@@ -2677,7 +2685,7 @@
 
 9. **Suppose your computer system is attack by a VIRUS and it's also copy into the six neighbor computer. Then it encrypts your all data in your all data in your system so that you can’t detect your data. What is the name of the VIRUS, how can you detect it?** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 821 (ET: BUET)]*
 
-   Answer: The described behaviour — self-copying to neighbouring computers on the network AND encrypting all data — identifies it as a **ransomware worm**, most characteristically **WannaCry** (also called WannaCrypt).
+Answer: The described behaviour — self-copying to neighbouring computers on the network AND encrypting all data — identifies it as a **ransomware worm**, most characteristically **WannaCry** (also called WannaCrypt).
 
    Why the classification fits
    - **Self-propagation to six neighbouring computers** without user action is worm behaviour, not virus behaviour. WannaCry used the EternalBlue exploit against the SMBv1 protocol to spread automatically across the LAN.
@@ -2706,7 +2714,7 @@
 
 10. **‘Trojan Horse’ এর একটি বৈশিষ্ট্য লিখুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
-    Answer: The defining characteristic of a Trojan horse is that **it disguises itself as legitimate, useful software to deceive the user into installing it voluntarily** — and it does NOT self-replicate.
+Answer: The defining characteristic of a Trojan horse is that **it disguises itself as legitimate, useful software to deceive the user into installing it voluntarily** — and it does NOT self-replicate.
 
     Expanding on that single characteristic
     - Unlike a virus, it does not attach to other files. Unlike a worm, it does not spread across the network by itself.
@@ -2718,7 +2726,7 @@
 
 11. **Explain: Worm, Botnet, Ransomware and Trojan horse.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     **(a) Worm**
     - A standalone malicious program that replicates itself and spreads across a network WITHOUT needing a host file or any user action.
@@ -2750,7 +2758,7 @@
 
 12. **Malware বলতে কী বুঝানো হয়? উদাহরণসহ সংক্ষেপে বর্ণনা করুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
 
-    Answer: **Malware** (malicious software) is any program or code deliberately written to damage, disrupt or gain unauthorised access to a computer system, network or data.
+Answer: **Malware** (malicious software) is any program or code deliberately written to damage, disrupt or gain unauthorised access to a computer system, network or data.
 
     Types with examples
 
@@ -2775,7 +2783,7 @@
 
 13. **Define component of computer virus.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
-    Answer: A computer virus is built from three functional components.
+Answer: A computer virus is built from three functional components.
 
     **(a) Infection mechanism (infection vector)**
     - The part that finds new targets and inserts a copy of the virus into them.
@@ -2801,7 +2809,7 @@
 
 14. **দুটি এন্টিভাইরাস সফটওয়্যার এর নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
-    Answer: Two antivirus software:
+Answer: Two antivirus software:
 
     - **Kaspersky Anti-Virus**
     - **Norton Antivirus** (Symantec)
@@ -2820,7 +2828,7 @@
 
 15. **কম্পিউটার ভাইরাস, ওয়ার্ম এবং ট্রোজান হর্স এর মধ্যে পার্থক্য লিখ।** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     | Point | Virus | Worm | Trojan Horse |
     |---|---|---|---|
@@ -2845,7 +2853,7 @@
 
 16. **Write down possible threats to a computer systems and how to provide security?** *[BTRC Assistant Director (Technical) 2019 compact it 1146 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Possible threats
 
@@ -2890,7 +2898,7 @@
 
 17. **What protection do you provide for your computer from malware?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
 
-    Answer: Malware protection works best as several layers, not one product.
+Answer: Malware protection works best as several layers, not one product.
 
     (a) Software protection
     - **Install antivirus / anti-malware** and keep its definitions updated automatically. Enable real-time scanning.
@@ -2923,7 +2931,7 @@
 
 18. **Describe five types of malware threats and mention five known countermeasures.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1197-1198 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Five types of malware threat
 
@@ -2968,7 +2976,7 @@
 
 19. **Define ransomware attack.** *[NESCO Manager (Software) 2018 compact it 1209 (ET: N/A)]*
 
-    Answer: A ransomware attack is a cyber attack in which malware encrypts the victim's files or locks the entire system, making the data inaccessible, and the attacker then demands a ransom — usually in cryptocurrency — in exchange for the decryption key.
+Answer: A ransomware attack is a cyber attack in which malware encrypts the victim's files or locks the entire system, making the data inaccessible, and the attacker then demands a ransom — usually in cryptocurrency — in exchange for the decryption key.
 
     How the attack proceeds
     - **Infection** — arrives through a phishing attachment, a malicious link, an unpatched vulnerability, or a compromised RDP session with a weak password.
@@ -2992,7 +3000,7 @@
 
 20. **c) What is a computer virus? Name of the two software that are used to prevent the virus.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Computer virus
     - A malicious program that attaches itself to a legitimate file or program and replicates by copying itself into other files, damaging data or disrupting the system.
@@ -3017,9 +3025,9 @@
 
 ## Web Security Vulnerabilities (19)
 
-1. Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **Describe the SQL Injection and Cross-Site Scripting (XSS) web security threats and suggest preventive measures for each.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    **(a) SQL Injection**
    - A vulnerability where an attacker inserts malicious SQL into a user input field, so the database executes commands the developer never intended. It happens whenever user input is concatenated directly into a query string.
@@ -3069,9 +3077,9 @@
 
    - Key distinction: SQL injection targets the SERVER's database; XSS targets ANOTHER USER's browser.
 
-2. Explain the vulnerability of SQL Injection. How can it be prevented? *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+2. **Explain the vulnerability of SQL Injection. How can it be prevented?** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer:
+Answer:
 
    The vulnerability
    - SQL injection exists when an application builds a SQL query by concatenating user input directly into the query string. The database cannot tell where the developer's instruction ends and the user's data begins, so specially crafted input becomes executable SQL.
@@ -3110,7 +3118,7 @@
 
 3. **What is Cross site script and SQL injection?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    **Cross-Site Scripting (XSS)**
    - Injecting malicious JavaScript into a web page so that it executes in other users' browsers.
@@ -3137,7 +3145,7 @@
 
 4. **What is CSRF attack?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
 
-   Answer: **CSRF (Cross-Site Request Forgery)** is an attack that tricks a logged-in user's browser into sending an unwanted, authenticated request to a website, so an action is performed without the user's knowledge or consent.
+Answer: **CSRF (Cross-Site Request Forgery)** is an attack that tricks a logged-in user's browser into sending an unwanted, authenticated request to a website, so an action is performed without the user's knowledge or consent.
 
    Why it works
    - Browsers automatically attach the session cookie to every request to a site, regardless of which page triggered the request.
@@ -3171,7 +3179,7 @@
 
 5. **What is CSRF and XSS?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1361 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    **XSS (Cross-Site Scripting)**
    - Injecting malicious script into a web page so it runs in another user's browser.
@@ -3199,7 +3207,7 @@
 
 6. **What is SQL Injection? How to Prevent against SQL Injection Attacks?** *[RAKUB Programmer (PO) 12.10.2021 compact it 853-854 (ET: N/A)], [RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)], [Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
-   Answer: SQL injection is a web attack in which malicious SQL statements are inserted into an application's input fields and executed by the backend database, allowing an attacker to view, modify or delete data they should not be able to reach.
+Answer: SQL injection is a web attack in which malicious SQL statements are inserted into an application's input fields and executed by the backend database, allowing an attacker to view, modify or delete data they should not be able to reach.
 
    Root cause
    - User input concatenated directly into a SQL string, so the database cannot distinguish the developer's command from the attacker's data.
@@ -3242,7 +3250,7 @@
 
 7. **(b) Explain XSS and CSRF (how do you prevent these attacks).** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 415 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    **(a) XSS — Cross-Site Scripting**
    - The attacker injects malicious JavaScript into a web page; when another user loads the page, the script runs in their browser with their session.
@@ -3274,7 +3282,7 @@
 
 8. **Your bank wants to secure an e-banking online system and wants to configure a web server in your data center. What kind of tools and technology do you use for this?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 309 (ET: BIBM)]*
 
-   Answer: A layered set of tools and technologies is needed, organised by where each control sits.
+Answer: A layered set of tools and technologies is needed, organised by where each control sits.
 
    (a) Network perimeter
    - **Next-Generation Firewall** (Palo Alto, FortiGate, Cisco Firepower) with integrated IPS.
@@ -3321,7 +3329,7 @@
 
 9. **What is SQL Injection attack? How it launched?** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 588 (ET: BUET)]*
 
-   Answer: SQL injection is an attack in which malicious SQL is inserted into an application's input, causing the database to execute commands the developer never intended.
+Answer: SQL injection is an attack in which malicious SQL is inserted into an application's input, causing the database to execute commands the developer never intended.
 
    How it is launched — the attacker's process
 
@@ -3352,7 +3360,7 @@
 
 10. **Write the difference types of Web application attacks?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
 
-    Answer: The standard reference is the **OWASP Top 10**. The main web application attacks:
+Answer: The standard reference is the **OWASP Top 10**. The main web application attacks:
 
     **Injection attacks**
     - **SQL Injection** — malicious SQL executed by the database.
@@ -3389,7 +3397,7 @@
 
 11. **Write two differences between SQL Injection and cross site scripting (XSS).** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
 
-    Answer: Two key differences:
+Answer: Two key differences:
 
     **1. Target and execution location**
     - **SQL injection** targets the SERVER's database. The malicious code executes on the server, inside the database engine.
@@ -3414,7 +3422,7 @@
 
 12. **What is SQL injection? How to prevent it?** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
-    Answer: SQL injection is a vulnerability where an attacker inserts malicious SQL through a user input field, causing the database to run unintended commands. It occurs whenever user input is concatenated directly into a SQL query.
+Answer: SQL injection is a vulnerability where an attacker inserts malicious SQL through a user input field, causing the database to run unintended commands. It occurs whenever user input is concatenated directly into a SQL query.
 
     Example
     ```sql
@@ -3440,7 +3448,7 @@
 
 13. **What is Cross site script XSS and how can fix it?** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
-    Answer: XSS is a vulnerability that lets an attacker inject malicious script into a web page, which then executes in the browsers of other users who view that page, running with those users' privileges and session.
+Answer: XSS is a vulnerability that lets an attacker inject malicious script into a web page, which then executes in the browsers of other users who view that page, running with those users' privileges and session.
 
     Types
     - **Stored (persistent)** — the script is saved on the server, in a comment, profile or forum post, and served to every visitor. Most dangerous.
@@ -3478,7 +3486,7 @@
 
 14. **Write down the counter measure of SQL injection attack.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
 
-    Answer: Countermeasures in order of effectiveness.
+Answer: Countermeasures in order of effectiveness.
 
     **1. Parameterised queries / prepared statements — the primary countermeasure**
     ```java
@@ -3517,7 +3525,7 @@
 
 15. **What is SQL Injection? How can we protect web Application from SQL Injection attack?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
-    Answer: SQL injection is a web application vulnerability in which an attacker submits crafted input containing SQL syntax, which the application concatenates into a query, causing the database to execute the attacker's commands.
+Answer: SQL injection is a web application vulnerability in which an attacker submits crafted input containing SQL syntax, which the application concatenates into a query, causing the database to execute the attacker's commands.
 
     What an attacker can achieve
     - Bypass login without a password, read the entire database including password hashes, modify or delete records, escalate privileges, and in poorly configured systems execute operating system commands.
@@ -3556,7 +3564,7 @@
 
 16. **What is SQL injection? How many ways to prevent it?** *[Bangladesh Television Assistant Programmer 2019 compact it 1064 (ET: N/A)]*
 
-    Answer: SQL injection is a code injection attack in which malicious SQL statements are inserted into an application's input fields and then executed by the backend database, allowing unauthorised access to or manipulation of data.
+Answer: SQL injection is a code injection attack in which malicious SQL statements are inserted into an application's input fields and then executed by the backend database, allowing unauthorised access to or manipulation of data.
 
     Ways to prevent it — eight main methods
 
@@ -3581,7 +3589,7 @@
 
 17. **(খ) Cross Site Scripting (XSS) বলতে কী বোঝায়? এর হাত থেকে রক্ষা পাওয়ার পদ্ধতিগুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1090 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) What XSS means
     - Cross-Site Scripting is a web vulnerability in which an attacker injects malicious script (usually JavaScript) into a web page. When another user loads that page, the script executes in THEIR browser, with their session and their privileges.
@@ -3610,7 +3618,7 @@
 
 18. **What is session hijacking and how to encrypt username and password in PHP?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227-1228 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Session hijacking
     - An attack in which the attacker takes over an already authenticated session by stealing or predicting the session identifier. No password is needed — possessing the session token IS being the user, as far as the server is concerned.
@@ -3658,7 +3666,7 @@
 
 19. **What are the important steps to secure a web server?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1228 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Operating system hardening
     - Install only what is needed; remove unnecessary packages and services.
@@ -3707,9 +3715,9 @@
 
 ## Authentication & Access Control (16)
 
-1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+1. **Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Definition of MFA
    - Multi-Factor Authentication requires a user to present **two or more independent credentials from DIFFERENT categories** before access is granted.
@@ -3740,7 +3748,7 @@
 
 2. **টু-ফ্যাক্টর অথেনটিকেশন এবং ডিজিটাল সিগনেচার দিয়ে ডেটার সুরক্ষা কীভাবে করা হয়?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) How Two-Factor Authentication protects data
    - It protects **ACCESS** to data by requiring two independent proofs of identity from different categories.
@@ -3768,7 +3776,7 @@
 
 3. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer: A digital signature is a cryptographic value attached to an electronic document that proves who created it and that it has not been altered since. It is created by hashing the document and encrypting that hash with the signer's private key.
+Answer: A digital signature is a cryptographic value attached to an electronic document that proves who created it and that it has not been altered since. It is created by hashing the document and encrypting that hash with the signer's private key.
 
    How it works
    ```mermaid
@@ -3804,7 +3812,7 @@
 
 4. **(a) What is 2-factor authentication? Describe it with an example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)], [BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 
-   Answer: Two-Factor Authentication (2FA) is a security process requiring exactly two DIFFERENT categories of credential before access is granted. It is the most common form of multi-factor authentication.
+Answer: Two-Factor Authentication (2FA) is a security process requiring exactly two DIFFERENT categories of credential before access is granted. It is the most common form of multi-factor authentication.
 
    The three factor categories, of which 2FA uses two
    - **Something you know** — password, PIN.
@@ -3835,7 +3843,7 @@
 
 5. **Write down the full form of LDAP?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: **LDAP — Lightweight Directory Access Protocol.**
+Answer: **LDAP — Lightweight Directory Access Protocol.**
 
    - An application-layer protocol for accessing and maintaining distributed directory information services over a network.
    - Default port **389**; **636** for LDAPS (LDAP over SSL/TLS).
@@ -3852,7 +3860,7 @@
 
 6. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 306 (ET: BIBM)]*
 
-   Answer: SMS and email OTP alone is no longer adequate — SMS OTP is vulnerable to SIM swap and SS7 interception, and email OTP falls with the email account. Without adding biometrics, security can be strengthened substantially in the following ways.
+Answer: SMS and email OTP alone is no longer adequate — SMS OTP is vulnerable to SIM swap and SS7 interception, and email OTP falls with the email account. Without adding biometrics, security can be strengthened substantially in the following ways.
 
    (a) Replace or supplement SMS OTP with stronger possession factors
    - **Authenticator app TOTP** (Google Authenticator, Microsoft Authenticator) — generated on the device, never transmitted, so it cannot be intercepted.
@@ -3892,7 +3900,7 @@
 
 7. **Difference between Digital signature and Digital certificate.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 527 (ET: MIST)]*
 
-   Answer:
+Answer:
 
    | Point | Digital Signature | Digital Certificate |
    |---|---|---|
@@ -3914,7 +3922,7 @@
 
 8. **How to work two factor authentication?** *[Mongla Port Authority Assistant Programmer 2023 compact it 574 (ET: N/A)]*
 
-   Answer: 2FA works by requiring the user to prove identity twice, using two credentials from different categories.
+Answer: 2FA works by requiring the user to prove identity twice, using two credentials from different categories.
 
    Step-by-step working
    ```mermaid
@@ -3949,7 +3957,7 @@
 
 9. **(b) How do you define 2 factor authentication? Give example.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
 
-   Answer: Two-Factor Authentication is a security mechanism that grants access only after the user successfully presents two pieces of evidence from two DIFFERENT categories of authentication factor.
+Answer: Two-Factor Authentication is a security mechanism that grants access only after the user successfully presents two pieces of evidence from two DIFFERENT categories of authentication factor.
 
    The three categories
    - **Knowledge** — something you know: password, PIN.
@@ -3979,7 +3987,7 @@
 
 10. **What is digital signature? Where is it used?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Digital signature
     - A cryptographic value attached to an electronic document, created by hashing the document and encrypting that hash with the signer's private key. It proves who signed the document and that it has not been altered.
@@ -4014,7 +4022,7 @@
 
 11. **What is a digital signature? Describe its role in digital security?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Digital signature
     - A mathematical scheme for verifying the authenticity and integrity of a digital message or document. The signer hashes the content and encrypts the hash with their private key; anyone can verify it with the corresponding public key.
@@ -4043,7 +4051,7 @@
 
 12. **What is Digital signature? Explain shortly.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
 
-    Answer: A digital signature is an electronic, cryptographic value attached to a document that proves who created it and that it has not been changed since signing.
+Answer: A digital signature is an electronic, cryptographic value attached to a document that proves who created it and that it has not been changed since signing.
 
     How it works
     - The sender computes a hash of the document, then encrypts that hash with their **private key**. The result is the signature.
@@ -4065,7 +4073,7 @@
 
 13. **(খ) Authentication বলতে কি বুঝায়? Two Factor Authenticating কি? উদাহরণসহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Authentication
     - The process of verifying that a user, device or system genuinely is who or what it claims to be, before granting access.
@@ -4097,7 +4105,7 @@
 
 14. **(b) Write down the purpose of Certification Authority (CA) in Digital Signature.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
 
-    Answer: A **Certification Authority (CA)** is a trusted third party that issues, manages and revokes digital certificates, binding a public key to a verified identity.
+Answer: A **Certification Authority (CA)** is a trusted third party that issues, manages and revokes digital certificates, binding a public key to a verified identity.
 
     Purposes of the CA
 
@@ -4129,7 +4137,7 @@
 
 15. **১৮. পাসওয়ার্ড সুরক্ষা জন্য যে পদ্ধতি ব্যবহার করা হয় তার নাম কী?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-    Answer: The method used to protect passwords is **hashing with a salt** — commonly called **salted hashing**.
+Answer: The method used to protect passwords is **hashing with a salt** — commonly called **salted hashing**.
 
     How it works
     - The password is never stored. Instead, a random value called a **salt** is generated for each user and appended to the password, and the combination is passed through a one-way hash function.
@@ -4156,7 +4164,7 @@
 
 16. **What do you mean by two factor authentication? Explain with example.** *[BTRC Assistant Director (Technical) 2019 compact it 1147-1148 (ET: N/A)]*
 
-    Answer: Two-Factor Authentication means verifying a user's identity using two independent credentials drawn from two DIFFERENT categories of authentication factor, so that compromising one does not grant access.
+Answer: Two-Factor Authentication means verifying a user's identity using two independent credentials drawn from two DIFFERENT categories of authentication factor, so that compromising one does not grant access.
 
     The three categories
     - **Something you know** — password, PIN, passphrase.
@@ -4182,11 +4190,147 @@
     Practical caution
     - **SMS OTP is the weakest second factor**, being vulnerable to SIM swap and SS7 interception. An authenticator app, push approval, or a FIDO2 hardware key provides substantially stronger protection.
 
+## Cryptography & Network Security (14)
+
+1. **What is difference between SHA and RSA algorithm?** *[EGCB Sub-Assistant Engineer (ICT) 08.10.2021 compact it 838 (ET: BUET)]*
+
+Answer:
+
+    | Feature | SHA (Secure Hash Algorithm) | RSA (Rivest-Shamir-Adleman) |
+    |---|---|---|
+    | Nature of Algorithm | Cryptographic Hash Function (One-way) | Asymmetric Cryptographic Algorithm (Two-way) |
+    | Key Requirement | Keyless (Generates fixed digest from input) | Uses a Public-Private Key Pair (Public key encrypts, Private key decrypts) |
+    | Reversibility | Irreversible; original text cannot be retrieved from hash | Reversible; ciphertext can be decrypted back to plaintext |
+    | Output Size | Fixed length regardless of input (e.g., 256 bits for SHA-256) | Variable, depends on key length (e.g., 2048 or 4096 bits) |
+    | Primary Purpose | Integrity verification and password hashing | Data encryption, digital signatures, and key exchange |
+
+2. **Focus Witting: Banking Security (English) [Discuss the key security measures used in modern banking applications to protect customer data and prevent fraud.]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+Answer: Modern banking applications operate under continuous cybersecurity threats, requiring robust defense mechanisms across data transmission, storage, and transaction processing. Core security measures include:
+
+    - End-to-End Encryption: Sensitive financial records and PINs are secured using AES-256 at rest and TLS 1.3 in transit to prevent sniffing and man-in-the-middle attacks.
+    - Multi-Factor Authentication (MFA): Financial portals mandate time-based OTPs, biometrics, or hardware tokens alongside passwords.
+    - Real-Time AI Fraud Detection: Machine learning algorithms analyze transaction anomalies, geolocation shifts, and velocity patterns to block fraudulent attempts immediately.
+    - Role-Based Access Control (RBAC): Strict least-privilege policies enforce separation of duties for bank employees and database administrators.
+    - Secure APIs and WAFs: Web Application Firewalls and signed API gateways protect core banking software from SQL injection, Cross-Site Scripting, and credential stuffing.
+    - Regular VAPT and Red Teaming: Routine vulnerability assessments and compliance audits ensure compliance with central bank cybersecurity mandates.
+
+3. **What is IPSec? Describe components of IPSec. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+
+Answer: IPsec (Internet Protocol Security) is a framework of open standards developed by the IETF that secures communications across IP networks by providing network-layer authentication, data integrity, anti-replay, and encryption.
+
+    Key Components of IPsec:
+    - Authentication Header (AH): Provides data origin authentication and connectionless integrity for IP packets. AH computes a cryptographic hash over the packet headers and payload to verify sender identity, but it does not provide encryption.
+    - Encapsulating Security Payload (ESP): Provides data confidentiality via symmetric encryption (e.g., AES), integrity, origin authentication, and anti-replay protection by encapsulating the packet payload.
+    - Internet Key Exchange (IKE / ISAKMP): An automated key management protocol that negotiates security associations (SAs), exchanges public keys, and derives shared session keys. Operates in Phase 1 (establishing a secure channel) and Phase 2 (negotiating IPsec tunnel parameters).
+    - Security Association (SA): A unidirectional agreement between communicating peers defining the active encryption algorithms, keys, and security parameters identified by a Security Parameter Index (SPI).
+
+4. **What is Operating System? Describe functions of Operating System and its services. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 315]]*
+
+Answer: An Operating System (OS) is system software that acts as an intermediary between computer hardware and user applications. It manages hardware resources, provides an execution environment, and abstract machine complexities.
+
+    Core Functions of an OS:
+    - Processor Management: Allocates CPU time to competing processes using scheduling algorithms (e.g., Round Robin, FCFS, Priority).
+    - Memory Management: Tracks allocated and free memory blocks, performing dynamic allocation and virtual memory paging.
+    - File System Management: Organizes files into directories, controlling file access, reading, writing, and permissions.
+    - Device Management: Coordinates input/output devices through device drivers and interrupt handling.
+    - Security and Protection: Enforces user authentication, process isolation, and resource access authorization.
+
+    Key OS Services:
+    - Program execution, I/O operations management, file system manipulation, inter-process communications (IPC), error detection and handling, and system resource accounting.
+
+5. **Write a paragraph on "Tourism Development in Bangladesh". (07)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+
+Answer: Bangladesh holds immense potential for tourism with its rich cultural heritage, historical landmarks, and diverse natural landscapes. The country is home to Cox's Bazar, the world's longest unbroken sea beach, the Sundarbans, the largest mangrove forest and royal Bengal tiger habitat, the scenic hill tracts of Bandarban and Sajek Valley, and archaeological treasures like Paharpur Buddhist Vihara. Strategic tourism development requires upgrading road, rail, and air connectivity, establishing modern eco-friendly resorts, and expanding online booking and digital payment facilities. Ensuring tourist safety, simplifying visa processes, and actively promoting community-based eco-tourism through international digital campaigns can significantly accelerate foreign exchange earnings and employment generation in Bangladesh.
+
+6. **What is a spoofed packet, and how can it be used in network attacks?** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 325]]*
+
+Answer: A spoofed packet is an IP packet where the sender deliberately modifies the source IP address in the packet header to disguise their true identity or impersonate another legitimate network device.
+
+    Mechanisms in Network Attacks:
+    - Denial-of-Service (DoS) and DDoS Amplification: Attackers send small requests with the victim's spoofed IP to reflection servers (like open DNS or NTP resolvers), causing massive responses to flood and overwhelm the victim's bandwidth.
+    - TCP SYN Flood Attacks: Sending SYN packets with unreachable spoofed source IPs forces the target server to allocate resources and hold half-open connections until memory is exhausted.
+    - Blind Spoofing and Unauthorized Access: Attackers bypass firewall rules that trust specific internal IP addresses by forging legitimate internal addresses.
+    - Man-in-the-Middle (MitM) Attacks: Combined with ARP spoofing, forged packets intercept and alter communication between trusted endpoints.
+
+7. **List and briefly describe five principal functions of an operating system.** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 325]]*
+
+Answer: The five principal functions of an Operating System are:
+
+    - Process Management: Creates, schedules, synchronizes, and terminates processes while preventing deadlocks using CPU scheduling.
+    - Memory Management: Allocates and deallocates primary memory spaces to running processes and handles virtual memory via paging and segmentation.
+    - File Management: Manages structured secondary storage, handling file creation, deletion, directory navigation, and file access control.
+    - I/O and Device Management: Manages hardware peripherals using dedicated device drivers, buffering, caching, and spooling.
+    - Security and Access Protection: Protects system data against unauthorized access through authentication, privilege levels (Kernel vs User mode), and access control lists.
+
+8. **(a) What is authentication? With example write a short note on “Two factor authentication”. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 335]]*
+
+Answer: Authentication is the security verification process of confirming the true identity of a user, device, or system entity before granting access to resources.
+
+    Two-Factor Authentication (2FA):
+    - 2FA is an identity verification mechanism requiring users to present two distinct authentication factors before gaining access.
+    - The three standard authentication factors are:
+      1. Knowledge factor (Something you know): Password, PIN.
+      2. Possession factor (Something you have): Smartphone OTP, hardware token, smart card.
+      3. Inherence factor (Something you are): Fingerprint, facial biometrics, retina scan.
+    - Practical Example: When logging into an internet banking portal, the user first inputs their username and password (Knowledge factor). The system then generates and transmits a 6-digit Time-based One-Time Password (TOTP) to the user's registered mobile device (Possession factor). Access is granted only when both factors are verified, rendering stolen passwords useless on their own.
+
+9. **Role of computer on education system in Bangladesh.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
+
+Answer: Computers and information technology have transformed the education ecosystem in Bangladesh, democratizing learning and modernizing administrative workflows:
+
+    - Multimedia Classrooms: Digital content and smart boards simplify abstract concepts in science, technology, and mathematics for primary and secondary students.
+    - Distance Learning and MOOC Platforms: Platforms like Muktopaath, Shikkhok Batayon, and online university portals deliver courses to remote rural areas.
+    - Digital Examination and Administration: Automated student registration, result processing, e-admit cards, and digital transcripts streamline institutional management.
+    - Interactive E-Books: The National Curriculum and Textbook Board (NCTB) provides digital access to all school textbooks, ensuring uninterrupted availability.
+    - Research and Skill Development: Computer labs foster coding, software development, and freelance technical skills among tertiary students.
+
+10. **English: “50 years of bangladesh achievement and progress”** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+
+Answer: Since gaining independence in 1971, Bangladesh has achieved remarkable socio-economic transformations across five decades. Emerging from war devastation and poverty, the nation has evolved into a rapidly growing developing economy. Key milestones include achieving food self-sufficiency, reducing maternal and infant mortality rates, and attaining near-universal primary school enrollment with gender parity. The ready-made garments (RMG) sector and remittance inflows from migrant workers serve as economic pillars. In infrastructure, mega-projects such as the Padma Multipurpose Bridge, Dhaka Metro Rail, Bangabandhu Tunnel, and Rooppur Nuclear Power Plant demonstrate growing self-reliance. In information technology, widespread mobile financial services (bKash, Nagad), submarine cable expansions, and nationwide digitisation have laid the foundation for an inclusive digital economy.
+
+11. **As a programmer when you release a software What security should you check before release your software.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376-377]]*
+
+Answer: Before deploying software to production, a programmer must execute the following security verifications:
+
+    - Input Validation & Output Sanitization: Ensure all incoming user inputs are strictly validated, parameterized against SQL injection, and sanitized against Cross-Site Scripting (XSS).
+    - Authentication and Session Security: Verify strong password policies, secure session timeouts, HTTPS-only cookie attributes (Secure, HttpOnly, SameSite), and multi-factor authentication.
+    - Authorization and Access Control: Test role-based access control (RBAC) to ensure unauthorized users cannot access privileged API endpoints or tamper with object references (IDOR).
+    - Secret and Key Management: Verify that API keys, database credentials, and cryptographic keys are removed from source code and loaded from secure environment variables.
+    - Dependency and Vulnerability Scanning: Run Software Composition Analysis (SCA) to identify known CVEs in third-party libraries and execute Static/Dynamic Application Security Testing (SAST/DAST).
+    - Cryptographic Implementation: Confirm that sensitive data at rest is encrypted with standard algorithms (AES-256) and passwords are hashed using salted functions like bcrypt or Argon2.
+    - Error Handling and Logging: Ensure detailed system error traces and stack traces are suppressed in user responses while audit logs are securely recorded.
+
+12. **“Smart Bangladesh” সংক্ষেপে আলোচনা করুন।** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 377]]*
+
+Answer: "স্মার্ট বাংলাদেশ" হলো ২০৪১ সালের মধ্যে বাংলাদেশকে একটি সাশ্রয়ী, টেকসই, জ্ঞানভিত্তিক ও উদ্ভাবনী উন্নত রাষ্ট্রে রূপান্তরের জাতীয় ভিশন। এটি মূলত চারটি মূল স্তম্ভের ওপর প্রতিষ্ঠিত:
+
+    - ১. স্মার্ট সিটিজেন (Smart Citizen): প্রতিটি নাগরিক প্রযুক্তি ব্যবহারে দক্ষ হবেন, ডিজিটাল সাক্ষরতা অর্জন করবেন এবং উদ্ভাবনী মানসিকতা ধারণ করবেন।
+    - ২. স্মার্ট গভর্নমেন্ট (Smart Government): সরকারি সব সেবা শতভাগ পেপারলেস, স্বয়ংক্রিয়, স্বচ্ছ ও ইন্টারঅপারেবল প্ল্যাটফর্মে রূপান্তর করা।
+    - ৩. স্মার্ট ইকোনমি (Smart Economy): ক্যাশলেস লেনদেন, ব্লকচেইন, এআই ও আইওটিভিত্তিক আধুনিক শিল্পায়ন, ফ্রিল্যান্সিং এবং স্টার্টআপ ইকোসিস্টেম গড়ে তোলা।
+    - ৪. স্মার্ট সোসাইটি (Smart Society): অন্তর্ভুক্তিমূলক ও বৈষম্যহীন সমাজ যেখানে নাগরিক অধিকার, সাইবার নিরাপত্তা এবং ডিজিটাল স্বাস্থ্যসেবা নিশ্চিত থাকবে।
+
+13. **Write the difference between WPA firewall and Network Firewall.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 385]]*
+
+Answer: (Note: In network security, WPA refers to Web Application Firewall - WAF / Wireless Protected Access. In the context of firewalls, it compares Web Application Firewall vs Network Firewall):
+
+    | Feature | Web Application Firewall (WAF) | Traditional Network Firewall |
+    |---|---|---|
+    | OSI Layer | Operates at Layer 7 (Application Layer) | Operates at Layers 3 (Network) and 4 (Transport) |
+    | Traffic Inspected | Deeply inspects HTTP/HTTPS traffic, payloads, URLs, and cookies | Inspects packet IP headers, port numbers, and TCP/UDP flags |
+    | Attack Defense | Defends against SQLi, XSS, CSRF, and OWASP Top 10 vulnerabilities | Defends against port scanning, unauthorized IP access, and DoS attacks |
+    | Inspection Depth | Deep packet and content inspection (understands application logic) | Packet filtering and stateful connection tracking |
+    | Deployment Position | Positioned in front of web servers and web applications | Positioned at network perimeters, routers, and gateway boundaries |
+
+14. **Focus Writing in English “Technology and Banking Sector of Bangladesh”** *[compact it 523]*
+
+Answer: Technology has revolutionized the banking sector of Bangladesh, transitioning conventional branch-based banking into an agile, digital financial ecosystem. The widespread adoption of core banking solutions (CBS), automated teller machines (ATMs), and national payment switches (NPSB, BEFTN, RTGS) allows instant interbank clearing and electronic funds settlement. Moreover, Mobile Financial Services (MFS) platforms like bKash and Nagad, along with Agent Banking, have driven financial inclusion by connecting millions of unbanked rural citizens to formal financial systems. Bangladeshi commercial banks are actively deploying artificial intelligence for automated fraud detection, biometric e-KYC for instant paperless account opening, and mobile banking apps for 24/7 utility and retail payments. As digital transaction volume surges, strict adherence to cybersecurity guidelines, data privacy frameworks, and cloud infrastructure adoption remain imperative for maintaining long-term systemic stability.
+
 ## Security Protocols (SSL/TLS, HTTPS) (12)
 
 1. **What is SSL?** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*, *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
-   Answer: **SSL (Secure Sockets Layer)** is a cryptographic protocol that provides a secure, encrypted channel between a client and a server over an insecure network. It was developed by Netscape in 1995.
+Answer: **SSL (Secure Sockets Layer)** is a cryptographic protocol that provides a secure, encrypted channel between a client and a server over an insecure network. It was developed by Netscape in 1995.
 
    What it provides
    - **Encryption** — data in transit cannot be read by anyone intercepting it.
@@ -4209,7 +4353,7 @@
 
 2. **Which client is used to security cannot to a remote server?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
-   Answer: The question appears to ask which client is used to connect SECURELY to a remote server. The answer is **SSH (Secure Shell)**.
+Answer: The question appears to ask which client is used to connect SECURELY to a remote server. The answer is **SSH (Secure Shell)**.
 
    - SSH provides an encrypted terminal session to a remote server, on **port 22**.
    - Common SSH clients: **PuTTY** (Windows), **OpenSSH** (`ssh` command on Linux, macOS and modern Windows), MobaXterm, Termius.
@@ -4230,7 +4374,7 @@
 
 3. **Ensure secure communication between a client application and the database server.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 314 (ET: N/A)]*
 
-   Answer: Securing the client-to-database channel requires controls at several layers.
+Answer: Securing the client-to-database channel requires controls at several layers.
 
    (a) Encryption in transit
    - **Enable TLS/SSL on the database listener.** MySQL, PostgreSQL, SQL Server and Oracle all support it — `require_secure_transport=ON` in MySQL, `ssl=on` in PostgreSQL, "Force Encryption" in SQL Server.
@@ -4266,7 +4410,7 @@
 
 4. **Difference between HTTP and HTTPs.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 398 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    | Point | HTTP | HTTPS |
    |---|---|---|
@@ -4291,7 +4435,7 @@
 
 5. **(গ) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে কোনটি কার্যকর?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: **HTTPS is effective from a security standpoint; HTTP provides no security at all.**
+Answer: **HTTPS is effective from a security standpoint; HTTP provides no security at all.**
 
    Why HTTPS is secure
    - **Encryption** — SSL/TLS encrypts everything, so an attacker sniffing the network sees only unreadable ciphertext. Passwords, card numbers and personal data are protected.
@@ -4311,6 +4455,8 @@
 
 6. **Write down the basic differences of the following:**
    **(ii) TLS 1.2 vs. 1.3** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 535 (ET: MIST)]*
+
+**(ii) TLS 1.2 vs. 1.3** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 535 (ET: MIST)]*
 
    Answer:
 
@@ -4334,7 +4480,7 @@
 
 7. **What is SSL, TLS, and HTTPs?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 594 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    **SSL (Secure Sockets Layer)**
    - The original cryptographic protocol for securing network communication, developed by Netscape in 1995.
@@ -4361,7 +4507,7 @@
 
 8. **Attacker steals private key of website that uses transport layer security and remains undetected what can be done with private key?** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
 
-   Answer: A stolen TLS private key is a catastrophic compromise. What the attacker can do depends on which key exchange the server uses.
+Answer: A stolen TLS private key is a catastrophic compromise. What the attacker can do depends on which key exchange the server uses.
 
    (a) Impersonate the website — always possible
    - The attacker can set up a server that presents the genuine certificate and prove possession of the matching private key.
@@ -4389,7 +4535,7 @@
 
 9. **(a) Write the full form of those: (i) SSL (ii) TSL** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
 
-   Answer:
+Answer:
    - **(i) SSL — Secure Sockets Layer.** The original protocol for encrypted network communication, developed by Netscape in 1995. All versions are now deprecated and insecure.
    - **(ii) TLS — Transport Layer Security.** (The question writes "TSL", which is a transposition of TLS.) The successor to SSL, standardised by the IETF. TLS 1.2 and TLS 1.3 are the current secure versions.
 
@@ -4411,6 +4557,13 @@
 
 10. **(b) Which IP address may have secured via SSL and publicly by the Certificate Authority(CA). If secured Write Yes or otherwise No.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
    1.1.1.1
+   8.8.4.1
+   192.168.10.2
+   8.8.8.8
+   172.16.8.1
+   10.0.0.1
+
+1.1.1.1
    8.8.4.1
    192.168.10.2
    8.8.8.8
@@ -4441,7 +4594,7 @@
 
 11. **HTTPs কীভাবে একটি Website-এর সুরক্ষা দেয়? ব্লক ডায়াফ্রামের মাধ্যমে উত্তর দিন।** *[40th BCS 2020 compact it 971 (ET: BPSC)]*
 
-    Answer: HTTPS secures a website by wrapping ordinary HTTP inside a TLS encrypted tunnel.
+Answer: HTTPS secures a website by wrapping ordinary HTTP inside a TLS encrypted tunnel.
 
     Block diagram
     ```mermaid
@@ -4479,7 +4632,7 @@
 
 12. **What is the difference among threat, vulnerability and risk? Explain SSL and TLS.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1050 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     (a) Threat, vulnerability and risk
 
@@ -4517,7 +4670,7 @@
 
 1. **সাইবার অপরাধের প্রকারভেদ পরিবেশের স্থায়িত্ব বর্ণনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer: Cybercrime is any criminal activity that targets or uses a computer, network or digital device.
+Answer: Cybercrime is any criminal activity that targets or uses a computer, network or digital device.
 
    Types of cybercrime
 
@@ -4551,7 +4704,7 @@
 
 2. **Why is cyber security important? What are the common types of cyber threats? Explain cyber security measures.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Why cyber security is important
    - **Protects sensitive data** — customer records, financial data, national ID information and intellectual property.
@@ -4598,7 +4751,7 @@
 
 3. **Hacking a system without cracking the system, only for finding bugs and vulgarities is called?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
-   Answer: It is called **Ethical Hacking**, and the person doing it is a **White Hat Hacker** or **penetration tester**.
+Answer: It is called **Ethical Hacking**, and the person doing it is a **White Hat Hacker** or **penetration tester**.
 
    - Ethical hacking means testing a system for vulnerabilities **with the owner's explicit written permission**, in order to find and fix weaknesses before a criminal finds them.
    - The findings are reported to the owner, never exploited or sold.
@@ -4622,7 +4775,7 @@
 
 4. **What is Cybercrime? Cybercrime রোধে প্রয়োজনীয় পদক্ষেপ গুলো লিখ।** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    (a) Cybercrime
    - Any illegal activity carried out using a computer, network or digital device — either as the tool of the crime, its target, or both.
@@ -4659,7 +4812,7 @@
 
 5. **What is Cyber space? Write some threats of cyber space.** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    (a) Cyberspace
    - The virtual environment created by interconnected computer networks, systems, data and users — the global domain in which digital communication, transactions and interaction take place.
@@ -4698,7 +4851,7 @@
 
 6. **Write the cyber security threats.** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
-   Answer: The main cyber security threats, grouped by type.
+Answer: The main cyber security threats, grouped by type.
 
    **Malware threats**
    - Virus, worm, trojan horse, ransomware, spyware, adware, rootkit, keylogger, botnet, cryptojacking, fileless malware.
@@ -4728,7 +4881,7 @@
 
 7. **What is Vulnerability?** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
-   Answer: A vulnerability is a **weakness or flaw** in a system, application, network, process or person that could be exploited by a threat to gain unauthorised access or cause harm.
+Answer: A vulnerability is a **weakness or flaw** in a system, application, network, process or person that could be exploited by a threat to gain unauthorised access or cause harm.
 
    Types of vulnerability
    - **Software** — unpatched systems, coding errors such as buffer overflow, SQL injection flaws, insecure APIs.
@@ -4752,7 +4905,7 @@
 
 8. **What is cyber threat intelligence database? What is the use of this in corporate office network?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 752 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Cyber Threat Intelligence (CTI) database
    - A curated, continuously updated repository of information about current and emerging cyber threats — who the attackers are, what tools and techniques they use, and what technical indicators identify their activity.
@@ -4782,7 +4935,7 @@
 
 9. **সাইবার অপরাধ কি? ৮টি সাইবার অপরাধ এর নাম লিখুন। সাইবার অপরাধ দূর করার জন্য ৬টি পন্থার নাম লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948-949 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Cybercrime
    - Any criminal act committed using a computer, network or digital device — where the device is the tool of the crime, the target, or both.
@@ -4809,7 +4962,7 @@
 
 10. **Employee causes the most risk of fraud and computer compromises- do you agree with the statement. Justify your answer.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
-    Answer: **Broadly yes — but with an important qualification.** Employees are the largest source of risk, though most of that risk comes from NEGLIGENCE rather than malice.
+Answer: **Broadly yes — but with an important qualification.** Employees are the largest source of risk, though most of that risk comes from NEGLIGENCE rather than malice.
 
     (a) Arguments supporting the statement
 
@@ -4842,9 +4995,9 @@
 
 ## Security Principles (CIA Triad) (8)
 
-1. What does CIA stand for in information security? Explain each component briefly. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+1. **What does CIA stand for in information security? Explain each component briefly.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: **CIA stands for Confidentiality, Integrity and Availability** — the three fundamental goals of information security, known as the CIA triad.
+Answer: **CIA stands for Confidentiality, Integrity and Availability** — the three fundamental goals of information security, known as the CIA triad.
 
    **Confidentiality**
    - Ensures that information is accessible only to those authorised to see it.
@@ -4868,9 +5021,9 @@
    - The three often pull against each other. Heavy encryption and strict access control strengthen confidentiality but can reduce availability. A completely open system is highly available but has no confidentiality.
    - Security design is therefore about BALANCE, chosen according to the data's sensitivity. A hospital emergency system prioritises availability; a classified document prioritises confidentiality.
 
-2. What is authentication and authorization? What is the CIA triad in cyber security? How does it work? *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
+2. **What is authentication and authorization? What is the CIA triad in cyber security? How does it work?** *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Authentication vs Authorisation
 
@@ -4899,7 +5052,7 @@
 
 3. **(a) What is the CIA triad of information system? Briefly describe its each component.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-   Answer: The CIA triad is the foundational model of information security, defining the three properties every security control ultimately serves.
+Answer: The CIA triad is the foundational model of information security, defining the three properties every security control ultimately serves.
 
    ```mermaid
    flowchart TD
@@ -4930,7 +5083,7 @@
 
 4. **Describe how the principles of Confidentiality, Integrity, and Availability work together to protect organizational data, and provide one real-world example of a security breach where one or more of these principles were compromised.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1428 (ET: E-Zone)]*
 
-   Answer:
+Answer:
 
    (a) How the three work together
    - **All three are required simultaneously.** Protecting only one leaves the data effectively unprotected.
@@ -4961,7 +5114,7 @@
 
 5. **What is CIA Triad?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)], [Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
 
-   Answer: The CIA triad is the core model of information security, consisting of three principles that every security control exists to protect.
+Answer: The CIA triad is the core model of information security, consisting of three principles that every security control exists to protect.
 
    | Principle | Meaning | Achieved by | Violated by |
    |---|---|---|---|
@@ -4986,7 +5139,7 @@
 
 6. **Preserving confidentiality integrity and availability of data is a restatement of the concern over falsification, interception, masquerade and denial of service. Explain how the first three concepts relate to the last four.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 435 (ET: BIBM)]*
 
-   Answer: Each of the four threats attacks one or more of the three principles. The mapping is as follows.
+Answer: Each of the four threats attacks one or more of the three principles. The mapping is as follows.
 
    | Threat | Principle violated | Explanation |
    |---|---|---|
@@ -5016,7 +5169,7 @@
 
 7. **Information System কী? Information Syetem -এর সুরক্ষায় প্রয়োজনীয় পদক্ষেপ সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 883-884 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Information System
    - An organised combination of people, hardware, software, data, networks and procedures that collects, processes, stores and distributes information to support decision making and operations in an organisation.
@@ -5060,7 +5213,7 @@
 
 8. **What is non-repudiation in network security? Give a proper example.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
-   Answer: **Non-repudiation** is the assurance that someone cannot later DENY having sent a message or performed an action. It provides undeniable proof of origin and of delivery.
+Answer: **Non-repudiation** is the assurance that someone cannot later DENY having sent a message or performed an action. It provides undeniable proof of origin and of delivery.
 
    Why it is needed
    - Authentication proves who someone is at the time of the transaction. Non-repudiation proves it AFTERWARDS, to a third party such as a court or auditor, even if the person now denies it.
@@ -5088,7 +5241,7 @@
 
 1. **What is the purpose of VPN used in computer security?** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
-   Answer: A **VPN (Virtual Private Network)** creates an encrypted tunnel across a public network, so that data travels as if it were on a private network.
+Answer: A **VPN (Virtual Private Network)** creates an encrypted tunnel across a public network, so that data travels as if it were on a private network.
 
    Purposes in computer security
    - **Confidentiality** — all traffic inside the tunnel is encrypted, so an attacker on public Wi-Fi or an ISP cannot read it.
@@ -5108,7 +5261,7 @@
 
 2. **In which layer IPsec works?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: **IPsec works at the Network layer (Layer 3)** of the OSI model, and at the Internet layer of the TCP/IP model.
+Answer: **IPsec works at the Network layer (Layer 3)** of the OSI model, and at the Internet layer of the TCP/IP model.
 
    Why the layer matters
    - Operating at layer 3 means IPsec protects **every application automatically**, without any change to the applications themselves. HTTP, FTP, SMTP and any other protocol carried over IP are all secured.
@@ -5130,7 +5283,7 @@
 
 3. **What is VPN? How it is working.** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
 
-   Answer: A VPN is a technology that creates a secure encrypted tunnel over a public network, allowing private data to travel across the internet as if it were on a private link.
+Answer: A VPN is a technology that creates a secure encrypted tunnel over a public network, allowing private data to travel across the internet as if it were on a private link.
 
    How it works
    ```mermaid
@@ -5158,7 +5311,7 @@
 
 4. **(a) How can VPN provide secure communication platform? Explain site-to-site VPN and remote-access VPN using necessary figures.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 800 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) How a VPN provides secure communication
    - **Encryption** — AES or ChaCha20 encrypts everything inside the tunnel, so interception yields only ciphertext.
@@ -5214,7 +5367,7 @@
 
 5. **What is VPN? Difference between site to site VPN and Remote access VPN.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) VPN
    - A Virtual Private Network creates an encrypted tunnel across a public network, so private data travels securely as if on a dedicated private link. It provides confidentiality, authentication and integrity.
@@ -5243,7 +5396,7 @@
 
 6. **What is VPN? Why we use it?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) VPN
    - A Virtual Private Network is a technology that establishes an encrypted tunnel over a public network such as the internet, so that data travels privately and securely between two points.
@@ -5272,9 +5425,9 @@
 
 ## Critical Information Infrastructure (CII) & Cyber Governance (3)
 
-1. What is CII? How many CII organizations? Name 10 CII organization name. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+1. **What is CII? How many CII organizations? Name 10 CII organization name.** *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) What CII is
    - **Critical Information Infrastructure** means the computer systems, networks and data whose destruction or disruption would have a debilitating effect on national security, the economy, public health or public safety.
@@ -5305,7 +5458,7 @@
 
 2. **CTC কী? কী কাজে ব্যবহার হয়?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer: The abbreviation **CTC** has several meanings, and the intended one depends on context. In a cyber security and immigration context the most likely readings are:
+Answer: The abbreviation **CTC** has several meanings, and the intended one depends on context. In a cyber security and immigration context the most likely readings are:
 
    **(a) Counter Terrorism Centre / Counter Terrorism and Transnational Crime (CTTC)**
    - In Bangladesh, the **Counter Terrorism and Transnational Crime (CTTC)** unit of Dhaka Metropolitan Police handles terrorism, cybercrime and transnational organised crime.
@@ -5321,7 +5474,7 @@
 
 3. **(c) Briefly write about the cybersecurity laws of Bangladesh.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-   Answer: Bangladesh's cyber law has changed repeatedly, so the sequence matters.
+Answer: Bangladesh's cyber law has changed repeatedly, so the sequence matters.
 
    **(a) ICT Act 2006 (Information and Communication Technology Act)**
    - The first comprehensive law. It gave legal recognition to electronic records and **digital signatures**, established the **Controller of Certifying Authorities (CCA)**, and created offences for hacking, data theft and publishing obscene material electronically.
@@ -5352,9 +5505,9 @@
 
 ## Cryptography & Network Security Scenarios (3)
 
-1. Cryptography and Network Security Scenario: [BSCCPL AME 21-08-2026 (BUET)] Cox's Bazar wants to send confidential information to Kuakata through an insecure network. Cox's Bazar first generates a hash value using a Hash Function (H). The message, hash value, and routing data are combined and encrypted using Kuakata's Public Key (Ku). The encrypted ciphertext is transmitted through the network. During transmission, an attacker positioned between Cox's Bazar and Kuakata intercepts the encrypted data. The attacker captures the ciphertext and deliberately blocks it so that Kuakata never receives the message. However, the attacker is unable to read or decrypt the original message because Kuakata's Private Key (\text{Ku}^{-1}) is not available to the attacker. Kuakata is expected to decrypt the received ciphertext using its Private Key (\text{Ku}^{-1}) and verify the integrity of the message using the hash value whenever the message is successfully delivered. Questions: (a) Is there any digital signature? (b) Identify attack. (c) How to identify origin of the? (d) How to manage the attack. (e) Does the described communication provide a Digital Signature? Give reasons. If not, explain how Cox's Bazar can add a Digital Signature using Cox's Bazar's Private Key (\text{Kc}^{-1}) and verification using Cox's Bazar's Public Key (\text{Kc}). (f) Which security services are provided by the system among Confidentiality, Integrity, Authentication, Non-repudiation, and Availability? (g) Suggest suitable techniques or mechanisms to protect the communication against the attack identified in question (b). (h) Draw a complete communication diagram showing \text{Message} \to \text{Hash} \to \text{Routing Data} \to \text{Encryption with Ku} \to \text{Attacker} \to \text{Kuakata} \to \text{Decryption with } \text{Ku}^{-1}, and indicate the keys used in each stage.
+1. **Cryptography and Network Security Scenario: [BSCCPL AME 21-08-2026 (BUET)] Cox's Bazar wants to send confidential information to Kuakata through an insecure network. Cox's Bazar first generates a hash value using a Hash Function (H). The message, hash value, and routing data are combined and encrypted using Kuakata's Public Key (Ku). The encrypted ciphertext is transmitted through the network. During transmission, an attacker positioned between Cox's Bazar and Kuakata intercepts the encrypted data. The attacker captures the ciphertext and deliberately blocks it so that Kuakata never receives the message. However, the attacker is unable to read or decrypt the original message because Kuakata's Private Key (\text{Ku}^{-1}) is not available to the attacker. Kuakata is expected to decrypt the received ciphertext using its Private Key (\text{Ku}^{-1}) and verify the integrity of the message using the hash value whenever the message is successfully delivered. Questions: (a) Is there any digital signature? (b) Identify attack. (c) How to identify origin of the? (d) How to manage the attack. (e) Does the described communication provide a Digital Signature? Give reasons. If not, explain how Cox's Bazar can add a Digital Signature using Cox's Bazar's Private Key (\text{Kc}^{-1}) and verification using Cox's Bazar's Public Key (\text{Kc}). (f) Which security services are provided by the system among Confidentiality, Integrity, Authentication, Non-repudiation, and Availability? (g) Suggest suitable techniques or mechanisms to protect the communication against the attack identified in question (b). (h) Draw a complete communication diagram showing \text{Message} \to \text{Hash} \to \text{Routing Data} \to \text{Encryption with Ku} \to \text{Attacker} \to \text{Kuakata} \to \text{Decryption with } \text{Ku}^{-1}, and indicate the keys used in each stage.**
 
-   Answer:
+Answer:
 
    **(a) and (e) Is there a digital signature? — NO.**
    - The hash is computed and sent, but it is encrypted with **Kuakata's PUBLIC key (Ku)**, not with **Cox's Bazar's PRIVATE key (Kc⁻¹)**.
@@ -5431,7 +5584,7 @@
 
 2. **Explain Cyber Attack Scenario-** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1441 (ET: BUET)]*
 
-   Answer: The specific scenario was not printed with the question, so a representative attack scenario for a power distribution utility is described, following the standard **Cyber Kill Chain**.
+Answer: The specific scenario was not printed with the question, so a representative attack scenario for a power distribution utility is described, following the standard **Cyber Kill Chain**.
 
    Scenario — ransomware attack on a distribution utility
 
@@ -5477,7 +5630,7 @@
 
 3. **Imagine yu should design a secure transmission protocol for sending data from one node to another node. You should divide the message in the multiple packets and this packets will be using different path so that any one cannot decrypt the message.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
 
-   Answer: The design combines **secret sharing / message splitting** with **multipath routing**, so that capturing traffic on any single path yields nothing useful.
+Answer: The design combines **secret sharing / message splitting** with **multipath routing**, so that capturing traffic on any single path yields nothing useful.
 
    Design overview
    ```mermaid
@@ -5539,7 +5692,7 @@
 
 1. **Unsoliciated email is called?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-   Answer: Unsolicited email is called **SPAM** (also called junk email or Unsolicited Bulk Email, UBE).
+Answer: Unsolicited email is called **SPAM** (also called junk email or Unsolicited Bulk Email, UBE).
 
    - Spam is unwanted email sent in bulk to a large number of recipients who never requested it, usually for advertising, scams or malware distribution.
    - The name comes from a Monty Python sketch in which the word "spam" is repeated endlessly, drowning out everything else.
@@ -5561,7 +5714,7 @@
 
 2. **If you downloaded the email, you will be able to face the problem. Which attack do you face?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
-   Answer: Downloading or opening an email attachment from an unknown source most commonly leads to a **Malware attack**, delivered through a **Phishing email**.
+Answer: Downloading or opening an email attachment from an unknown source most commonly leads to a **Malware attack**, delivered through a **Phishing email**.
 
    The specific attacks faced
    - **Malware infection** — the attachment carries a virus, trojan, spyware or **ransomware** that installs when opened.
@@ -5588,7 +5741,7 @@
 
 3. **e) What is email? What precautions can be taken to prevent unnecessary and unwanted e-mails?** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    (a) Email
    - **Electronic mail** is a method of exchanging digital messages over a computer network. A message is composed by the sender, transmitted through mail servers, and stored in the recipient's mailbox until read.
@@ -5622,7 +5775,7 @@
 
 1. **Explain buffer overflow attack with an example.** *[BTCL Assistant Manager (Technical) 2023 compact it 592 (ET: BUET)]*
 
-   Answer: A buffer overflow occurs when a program writes more data into a fixed-size memory buffer than it can hold, so the excess spills into ADJACENT memory. An attacker exploits this to overwrite critical values and take control of execution.
+Answer: A buffer overflow occurs when a program writes more data into a fixed-size memory buffer than it can hold, so the excess spills into ADJACENT memory. An attacker exploits this to overwrite critical values and take control of execution.
 
    Why it happens
    - Languages such as C and C++ do not perform automatic bounds checking. Functions like `gets()`, `strcpy()` and `scanf("%s")` copy until they find a terminator, regardless of the destination size.
