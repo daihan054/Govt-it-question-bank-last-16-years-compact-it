@@ -589,45 +589,112 @@ ii. The data were collected and it were analyzed carefully.
 1. Translate the following passage into English:
 "এক কুখ্যাত চোর একটি আঙুর ক্ষেতের পাশ দিয়ে যাচ্ছিল। উঁচুতে ঝুলানো আঙুর দেখে সে তা খাওয়ার চেষ্টা করল, কিন্তু বারবার চেষ্টা করেও ব্যর্থ হলো। অবশেষে সে হতাশ হয়ে চলে গেল। যাওয়ার সময় বলল, আঙুরগুলো আসলেও টক।" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
+   Answer: A notorious thief was passing by a vineyard. Seeing the grapes hanging high, he tried to eat them, but despite repeated attempts, he failed. Finally, he walked away in despair. While leaving, he remarked, "The grapes are indeed sour."
+
 2. **Translation English to Bangla:** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
+
+   Answer:
+   - English: Information technology has revolutionized modern communication and accelerated global development.
+   - Bangla: তথ্যপ্রযুক্তি আধুনিক যোগাযোগ ব্যবস্থায় বৈপ্লবিক পরিবর্তন এনেছে এবং বৈশ্বিক উন্নয়নকে ত্বরান্বিত করেছে।
 
 3. **Bengali to English:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
    * **(a)** শনিবার হতে সে অফিসে আসছে না।
    * **(b)** আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন
 
+   Answer:
+   - (a) He has not been coming to the office since Saturday.
+   - (b) Log in to the mobile banking application to check your bank account balance.
+
 4. **Earth Day inspires green innovation through participatory and collective action and encourages the adoption of ho sustainable practices across the financial system. It, therefore, serves as an opportunity for financial institutions to engage with their stakeholders and demonstrates their commitment to sustainable practices. Thus, Earth Day carries a deep significance in proproting sustainable and responsible financing which is an example of environmentally conscious investment practices, Positive environmental outcomes will be easily achieved if all financial sectors, stakeholders and investors alike are part of a long-term plan to improve the environmental health of this planet, along with the financial and human health. We celebrate Earth Day around the world, let us reaffirm our commitment towards building a greener, more tolerant, liveable and sustainable future for our next generations.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 322 (ET: BIBM)]*
 
+   Answer: ধরিত্রী দিবস অংশগ্রহণমূলক ও সম্মিলিত পদক্ষেপের মাধ্যমে সবুজ উদ্ভাবনকে অনুপ্রাণিত করে এবং সমগ্র আর্থিক ব্যবস্থায় টেকসই অনুশীলনের প্রসারকে উৎসাহিত করে। ফলে এটি আর্থিক প্রতিষ্ঠানসমূহের জন্য তাদের অংশীজনদের সাথে সম্পৃক্ত হওয়া এবং টেকসই চর্চায় নিজস্ব দায়বদ্ধতা প্রমাণের একটি সুযোগ তৈরি করে। এভাবে ধরিত্রী দিবস টেকসই ও দায়িত্বশীল অর্থায়নের প্রসারে গভীর তাৎপর্য বহন করে, যা পরিবেশ-সচেতন বিনিয়োগের একটি উজ্জ্বল দৃষ্টান্ত। আর্থিক ও মানব স্বাস্থ্যের পাশাপাশি যদি সকল আর্থিক খাত, অংশীজন ও বিনিয়োগকারী পৃথিবীর পরিবেশগত স্বাস্থ্য পুনরুদ্ধারের দীর্ঘমেয়াদী পরিকল্পনার অংশীদার হয়, তবে ইতিবাচক পরিবেশগত ফলাফল সহজেই অর্জিত হবে। বিশ্বব্যাপী ধরিত্রী দিবস উদযাপনের এই ক্ষণে আসুন আমরা ভবিষ্যৎ প্রজন্মের জন্য একটি অধিকতর সবুজ, সহনশীল, বাসযোগ্য ও টেকসই ভবিষ্যৎ বিনির্মাণে আমাদের অঙ্গীকার পুনর্ব্যক্ত করি।
+
 5. **Translation Bangla to English** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)], [NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 660 (ET: N/A)], [Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)], [Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)], [Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)], [RAKUB Network System Engineer (PO) 10.10.2021 compact it 844 (ET: N/A)], [RAKUB Programmer (PO) 12.10.2021 compact it 854 (ET: N/A)], [RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)], [BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)], [BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)], [Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
+
+   Answer:
+   - Bangla: বাংলাদেশ দ্রুত গতিতে ডিজিটাল রূপান্তরের পথে এগিয়ে যাচ্ছে। প্রযুক্তির সর্বোত্তম ব্যবহার নিশ্চিত করে জনগণের দোরগোড়ায় সেবা পৌঁছে দেওয়াই সরকারের মূল লক্ষ্য।
+   - English: Bangladesh is progressing rapidly along the path of digital transformation. The primary objective of the government is to ensure the optimal utilization of technology and deliver public services directly to citizens' doorsteps.
 
 6. **Bengali to English Translation:** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
    > পরীক্ষায় ভালো করতে হলে অবশ্যই আত্মবিশ্বাস রাখতে হবে। মনে এ বিশ্বাস রাখবেন যে, আমি ভালোভাবে সব প্রশ্নের উত্তর দিতে পারব বা আমার পরীক্ষাটা অবশ্যই ভালো হবে। একজন শিক্ষার্থীর মনেই যদি আত্মবিশ্বাস না থাকে বা আত্মবিশ্বাস কম থাকে, তাহলে পরীক্ষা নিয়ে তার মনে আগেই দুর্বলতা তৈরী হয়ে যায়। এর ফলে পড়ায় মন বসে না, মনোযোগও বাড়ে না, প্রস্তুতিও ভালো হয়না। তাই মনোযোগ বাড়াতে দরকার আত্মবিশ্বাস, যেদিকে অবশ্যই খেয়াল রাখতে হবে।
 
+   Answer: To perform well in examinations, one must possess self-confidence. You must hold the belief in your mind that "I will be able to answer all questions properly" or "My examination will definitely go well." If a student lacks self-confidence or has low confidence, a sense of weakness regarding the examination develops beforehand in their mind. Consequently, they lose focus on their studies, concentration does not improve, and preparation remains inadequate. Therefore, self-confidence is essential to enhance concentration, which must definitely be kept in mind.
+
 7. **Translation [Bangla to English]** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 431 (ET: BIBM)]*
+
+   Answer:
+   - Bangla: ডিজিটাল ব্যাংকিং ব্যবস্থা সাধারণ মানুষের আর্থিক লেনদেনকে সহজ ও ঝুঁকিমুক্ত করেছে।
+   - English: Digital banking systems have made financial transactions easy and risk-free for common people.
 
 8. **Translate the following passage into English:** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 “কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।”
 
+   Answer: As the proverb goes, "A stitch in time saves nine." Yet we often procrastinate by putting off today's work for tomorrow and prefer to blame destiny. One cannot achieve overnight success in life merely by building castles in the air. The more industrious a nation is, the more prosperous it becomes. Therefore, instead of making excuses at every step, we should get down to work right now.
+
 9. **Translation (Bangla to English)**
     **যুব উন্নয়ন বিষয়ক......** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+   Answer:
+   - Bangla: যুব সমাজ যেকোনো দেশের সবচেয়ে শক্তিশালী চালিকাশক্তি। উপযুক্ত কারিগরি প্রশিক্ষণ ও কর্মসংস্থানের সুযোগ সৃষ্টির মাধ্যমে তাদেরকে জাতীয় উন্নয়নের মূল স্রোতে সম্পৃক্ত করা সম্ভব।
+   - English: The youth represent the most potent driving force of any nation. By creating opportunities for appropriate technical training and employment, it is possible to integrate them into the mainstream of national development.
+
 10. **Bangla to English Translation (Bank, Economy Related)** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
+
+    Answer:
+    - Bangla: টেকসই অর্থনৈতিক উন্নয়ন নিশ্চিত করতে মূল্যস্ফীতি নিয়ন্ত্রণ এবং বৈদেশিক মুদ্রার রিজার্ভ স্থিতিশীল রাখা অত্যন্ত জরুরি।
+    - English: To ensure sustainable economic development, controlling inflation and stabilizing foreign exchange reserves are of paramount importance.
 
 11. **Translate Bangla to English:** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
+    Answer:
+    - Bangla: তথ্যপ্রযুক্তির অবকাঠামোগত উন্নয়ন ব্যাংকিং খাতের সার্বিক দক্ষতা উল্লেখযোগ্যভাবে বৃদ্ধি করেছে।
+    - English: The infrastructural development of information technology has significantly enhanced the overall efficiency of the banking sector.
+
 12. **বাংলা থেকে ইংরেজিতে অনুবাদ।** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 658 (ET: N/A)]*
+
+    Answer:
+    - Bangla: দক্ষ জনশক্তি গড়ে তুলতে জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ গুরুত্বপূর্ণ ভূমিকা পালন করছে।
+    - English: The National Skills Development Authority is playing a crucial role in developing a skilled workforce.
 
 13. **ইংরেজিতে অনুবাদ করুন: অভাবে স্বভাব নষ্ট, তেল এর চেয়ে পানি ভারী, তুমি আমাকে কেন এড়িয়ে চলছো?, তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন, আমি তাকে উপহাস করিনি।** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+    Answer:
+    - অভাবে স্বভাব নষ্ট: Necessity knows no law. (or: Poverty ruins character.)
+    - তেলের চেয়ে পানি ভারী: Water is heavier than oil.
+    - তুমি আমাকে কেন এড়িয়ে চলছো?: Why are you avoiding me?
+    - তিনি এতোক্ষণে ঢাকায় পৌঁছে থাকবেন: He will have reached Dhaka by now.
+    - আমি তাকে উপহাস করিনি: I did not mock him. (or: I did not laugh at him.)
+
 14. **Translate into English: (a) আমি যদি পরীক্ষায় প্রথম হতাম (b) পাপের ধন প্রায়শ্চিত্তে যায়। (c) আয় বুঝে ব্যয় কর। (d) যেমন বাপ, তেমন ব্যাটা।** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
+
+    Answer:
+    - (a) আমি যদি পরীক্ষায় প্রথম হতাম: If only I stood first in the examination! (or: Had I stood first in the examination!)
+    - (b) পাপের ধন প্রায়শ্চিত্তে যায়: Ill got, ill spent.
+    - (c) আয় বুঝে ব্যয় কর: Cut your coat according to your cloth.
+    - (d) যেমন বাপ, তেমন ব্যাটা: Like father, like son.
 
 15. **৩. অনুবাদ কর: (a) তুমি কি গাড়ী চালাতে পারো? (b) মিথ্যা বলি ওনা।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
+    Answer:
+    - (a) Can you drive a car?
+    - (b) Do not tell a lie.
+
 16. **৯. মহিলা ও শিশু বিষয়ক মন্ত্রণালয়ের নাম ইংরেজিতে লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+    Answer: Ministry of Women and Children Affairs
 
 17. **বঙ্গবন্ধুকে নিয়ে চারটি বাংলা বাক্য ছিলো, সেগুলোর ইংরেজিতে ট্রান্সলেশন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
+    Answer:
+    - (১) বঙ্গবন্ধু শেখ মুজিবুর রহমান আমাদের জাতির পিতা। -> Bangabandhu Sheikh Mujibur Rahman is our Father of the Nation.
+    - (২) তিনি ১৯৭১ সালের ৭ই মার্চ স্বাধীনতার ঐতিহাসিক ডাক দেন। -> He made the historic call for independence on 7th March 1971.
+    - (৩) তাঁর বলিষ্ঠ নেতৃত্বে বাংলাদেশ স্বাধীনতা অর্জন করে। -> Bangladesh achieved independence under his dynamic leadership.
+    - (৪) তিনি আজীবন নিপীড়িত মানুষের মুক্তির জন্য সংগ্রাম করেছেন। -> Throughout his life, he struggled for the emancipation of oppressed people.
+
 18. **Translate the following passage into English.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 করোনার টিকা বাজারে এলে দেশের সবার জন্য তা সংগ্রহ করতে চায় সরকার। ধারণা করা হচ্ছে, সবার জন্য টিকা সংগ্রহে ১৭ হাজার কোটি টাকার প্রয়োজন হবে। এই অর্থ সংগ্রহে উন্নয়ন সহযোগীদের সহায়তা চাওয়ার সিদ্ধান্ত নিয়েছে সরকার। ধারণা করা হচ্ছে, জনপ্রতি দুই ডোজ টিকার প্রয়োজন হতে পারে। এর দাম পড়তে পারে ১০ থেকে ১২ ডলার বা কমবেশি এক হাজার টাকা। পরিসংখ্যান ব্যুরো (বিবিএস) তথ্য অনুযায়ী দেশের জনসংখ্যা এখন ১৬ কোটি ৫০ লাখ। সে হিসাবে মোট ১৭ হাজার ২০০ কোটি টাকার প্রয়োজন হবে। স্বাস্থ্য মন্ত্রণালয় থেকে প্রাথমিক এই হিসাব করা হয়েছে বলে ইতোমধ্যে সূত্র জানিয়েছে। এই অর্থের চাহিদা মাথায় রেখেই উন্নয়ন সহযোগীদের সহায়তা চাওয়া হচ্ছে।
+
+    Answer: Once the coronavirus vaccine enters the market, the government intends to procure it for everyone in the country. It is estimated that 17,000 crore taka will be needed to procure vaccines for all. The government has decided to seek assistance from development partners to raise these funds. It is estimated that two doses of vaccine may be required per person, costing around $10 to $12 or approximately 1,000 taka. According to data from the Bangladesh Bureau of Statistics (BBS), the country's population now stands at 16.5 crore (165 million). Accordingly, a total of 17,200 crore taka will be required. Sources have indicated that this preliminary calculation was formulated by the Ministry of Health. Assistance from development partners is being sought keeping this financial requirement in view.
 
 ## Idioms & Phrases (9)
 
