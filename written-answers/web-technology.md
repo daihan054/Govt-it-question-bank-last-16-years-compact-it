@@ -6328,17 +6328,826 @@
 
 1. **Write appropriate program client and database using any language and a login page using ID and password. [Approximate Web page login code]** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 320 (ET: N/A)]*
 
+   Answer: A login page with a client side, a server side and a database. `PHP` and `MySQL` are used, and the same structure applies in any language.
+
+   1. The database
+   ```sql
+      CREATE DATABASE bankdb;
+      USE bankdb;
+
+      CREATE TABLE users (
+          id            INT AUTO_INCREMENT PRIMARY KEY,
+          username      VARCHAR(50)  NOT NULL UNIQUE,
+          password_hash VARCHAR(255) NOT NULL,
+          full_name     VARCHAR(100),
+          is_active     TINYINT(1) DEFAULT 1,
+          failed_count  INT DEFAULT 0,
+          created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+
+      -- the password is stored as a HASH, never in plain text
+      INSERT INTO users (username, password_hash, full_name)
+      VALUES ('rahim',
+              '$2y$10$abcdefghijklmnopqrstuv...',   -- password_hash()
+              'Rahim Uddin');
+   ```
+   ```
+      THE COLUMN IS password_hash , NOT password.
+      A plain-text password column is the single worst defect a
+      login system can have - one database leak exposes every
+      user's password, including the ones they reuse elsewhere.
+   ```
+
+   2. The client — `login.html`
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>Login</title>
+       <style>
+           body  { font-family: Arial, sans-serif; }
+           .box  { width: 300px; margin: 80px auto;
+                   border: 1px solid #ccc; border-radius: 8px;
+                   padding: 25px; }
+           input { width: 100%; padding: 8px; margin-bottom: 12px; }
+           button{ width: 100%; padding: 9px; }
+           .error{ color: red; font-size: 13px; }
+       </style>
+   </head>
+   <body>
+
+   <div class="box">
+       <h3>Bank Login</h3>
+
+       <form id="loginForm" action="login.php" method="post">
+           <label for="username">Username</label>
+           <input type="text" id="username" name="username" required>
+
+           <label for="password">Password</label>
+           <input type="password" id="password" name="password"
+                  required>
+
+           <button type="submit">Login</button>
+           <p id="msg" class="error"></p>
+       </form>
+   </div>
+
+   <script>
+       document.getElementById("loginForm")
+           .addEventListener("submit", function (e) {
+
+           var u = document.getElementById("username").value.trim();
+           var p = document.getElementById("password").value;
+
+           if (u === "" || p === "") {
+               e.preventDefault();
+               document.getElementById("msg").textContent =
+                   "Both fields are required";
+               return;
+           }
+           if (p.length < 8) {
+               e.preventDefault();
+               document.getElementById("msg").textContent =
+                   "Password must be at least 8 characters";
+           }
+       });
+   </script>
+
+   </body>
+   </html>
+   ```
+   - Note `method="post"`: with `get` the password would appear in the address bar, in the browser history and in the server log.
+
+   3. The server — `login.php`
+   ```php
+   <?php
+   session_start();
+
+   $host = "localhost"; $db = "bankdb";
+   $user = "dbuser";    $pass = "dbpass";
+
+   // PDO with exceptions turned on
+   try {
+       $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4",
+                      $user, $pass,
+                      [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                       PDO::ATTR_EMULATE_PREPARES => false]);
+   } catch (PDOException $e) {
+       die("Database connection failed");   // never echo $e here
+   }
+
+   $username = trim($_POST["username"] ?? "");
+   $password = $_POST["password"] ?? "";
+
+   if ($username === "" || $password === "") {
+       header("Location: login.html?error=empty");
+       exit;
+   }
+
+   // PREPARED STATEMENT - this is what stops SQL injection
+   $stmt = $pdo->prepare(
+       "SELECT id, username, password_hash, full_name, is_active
+        FROM users WHERE username = :u LIMIT 1");
+   $stmt->execute([":u" => $username]);
+   $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+   // ONE generic message for BOTH a wrong username and a wrong
+   // password - saying which would reveal who has an account
+   if (!$row || !password_verify($password, $row["password_hash"])) {
+       if ($row) {
+           $pdo->prepare("UPDATE users SET failed_count =
+                          failed_count + 1 WHERE id = ?")
+               ->execute([$row["id"]]);
+       }
+       header("Location: login.html?error=invalid");
+       exit;
+   }
+
+   if (!$row["is_active"]) {
+       header("Location: login.html?error=inactive");
+       exit;
+   }
+
+   // SUCCESS
+   session_regenerate_id(true);        // prevents session fixation
+   $_SESSION["user_id"]  = $row["id"];
+   $_SESSION["username"] = $row["username"];
+   $_SESSION["name"]     = $row["full_name"];
+
+   $pdo->prepare("UPDATE users SET failed_count = 0 WHERE id = ?")
+       ->execute([$row["id"]]);
+
+   header("Location: dashboard.php");   // POST-redirect-GET
+   exit;
+   ?>
+   ```
+
+   4. The protected page — `dashboard.php`
+   ```php
+   <?php
+   session_start();
+
+   // EVERY protected page must check this
+   if (!isset($_SESSION["user_id"])) {
+       header("Location: login.html");
+       exit;
+   }
+   ?>
+   <!DOCTYPE html>
+   <html><head><meta charset="UTF-8"><title>Dashboard</title></head>
+   <body>
+       <h2>Welcome,
+           <?= htmlspecialchars($_SESSION["name"]) ?>
+       </h2>
+       <a href="logout.php">Logout</a>
+   </body>
+   </html>
+   ```
+
+   5. Logout — `logout.php`
+   ```php
+   <?php
+   session_start();
+   $_SESSION = [];
+   session_destroy();
+   header("Location: login.html");
+   exit;
+   ?>
+   ```
+
+   The security points, which is what this question really tests
+   ```
+      1. HASH THE PASSWORD, never store it
+           password_hash($p, PASSWORD_DEFAULT)   to store
+           password_verify($p, $hash)            to check
+         bcrypt is DELIBERATELY SLOW, which is what makes brute
+         force impractical. MD5 and SHA1 are UNSUITABLE - they are
+         fast, which helps the attacker.
+
+      2. PREPARED STATEMENTS, never string concatenation
+           WRONG : "SELECT * FROM users WHERE username = '$u'"
+                   username  ' OR '1'='1  logs in as anyone
+           RIGHT : prepare(... WHERE username = :u)
+
+      3. ONE GENERIC ERROR MESSAGE
+           "Invalid username or password" for BOTH cases.
+           "No such user" reveals which accounts exist - USER
+           ENUMERATION.
+
+      4. session_regenerate_id(true) on login
+           Without it, a session ID an attacker planted before the
+           login remains valid afterwards - SESSION FIXATION.
+
+      5. htmlspecialchars() on ALL output
+           Prevents XSS if a username contains <script>.
+
+      6. HTTPS ONLY
+           POST hides the password from the address bar but NOT
+           from the network. Only TLS encrypts it.
+
+      7. LOCK THE ACCOUNT after repeated failures, and RATE LIMIT
+         by IP address.
+
+      8. NEVER echo the database error to the user - it reveals the
+         schema.
+
+      9. VALIDATE ON THE SERVER. The JavaScript check is for the
+         user's convenience only ; anyone can disable it.
+   ```
+   - The complete flow: `login.html` → POST → `login.php` verifies against the database → creates a `session` → redirects to `dashboard.php`, which checks the session on every request. The `POST-redirect-GET` pattern in step 3 is what stops the browser re-submitting the login when the user presses refresh.
+
 2. **(খ) Client-side scripting এর তুলনায় Server-side scripting এর সুবিধাগুলো কী কী?** *[Software Assistant Programmer 13.10.2022 compact it 709 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) The distinction
+   ```
+      CLIENT-SIDE SCRIPTING   runs in the BROWSER , on the user's
+           machine.  JavaScript.
+      SERVER-SIDE SCRIPTING   runs on the SERVER , before the page
+           is sent.  PHP , Python , Java , Node.js , ASP.NET.
+   ```
+
+   Advantages of server-side scripting over client-side
+
+   1. Security — the decisive advantage
+   ```
+      The CODE IS NEVER SENT to the browser. The user receives only
+      the OUTPUT - the finished HTML.
+
+           CLIENT-SIDE : press Ctrl+U and the entire script is
+                visible. Any logic, any constant, any threshold is
+                open to inspection - and to modification.
+           SERVER-SIDE : the source stays on the server. The user
+                sees the result and nothing else.
+
+      THE CONSEQUENCE : all BUSINESS RULES, PASSWORD CHECKING,
+      PRICE CALCULATION and AUTHORISATION must be on the server.
+      A discount rule enforced only in JavaScript can be edited by
+      the user in the developer console.
+   ```
+
+   2. Database access
+   - Only server-side code can connect to the database. Credentials placed in client-side code would be visible to everyone. Every query, insert and update therefore happens on the server.
+
+   3. It cannot be disabled or bypassed
+   ```
+      A user can disable JavaScript, edit it in the browser
+      console, or send an HTTP request directly with curl -
+      skipping the page entirely.
+
+      SERVER-SIDE CODE ALWAYS RUNS. This is why VALIDATION MUST BE
+      REPEATED ON THE SERVER : the client-side check is for the
+      user's convenience, and the server-side check is the one
+      that actually protects the application.
+   ```
+
+   4. Browser independence
+   - The server produces plain HTML, so the result is identical in every browser. Client-side scripts must contend with differences between browsers and versions, and with users who have scripting turned off.
+
+   5. It can access server resources
+   - The file system, other servers, internal APIs, email and SMS gateways, and payment gateways. A browser is confined by the `same-origin policy` and the sandbox.
+
+   6. Session management and authentication
+   - Sessions are stored on the server, where the user cannot read or alter them. A role held in client-side storage could simply be changed to `admin`.
+
+   7. Heavy processing
+   - Report generation, image processing and large calculations run on server hardware rather than on whatever device the visitor happens to hold. It also does not matter whether that device is a slow phone.
+
+   8. Search engine visibility
+   - Content generated on the server is present in the HTML the crawler receives. Content inserted later by JavaScript may not be indexed.
+
+   9. Centralised change
+   - Fixing the code on the server fixes it for every user at once. Client-side code is already cached in thousands of browsers.
+
+   Where client-side scripting is better
+   ```
+      IMMEDIATE RESPONSE     no network round trip, so validation
+           and interaction feel instant
+      LESS SERVER LOAD       the work is done on the user's machine
+      LESS BANDWIDTH         no request needed for every small
+           interaction
+      RICH INTERACTIVITY     animation, drag and drop, canvas,
+           instant filtering
+      WORKS OFFLINE          with service workers and localStorage
+   ```
+
+   The correct division
+   ```
+      +---------------------------+---------------------------+
+      | CLIENT-SIDE (JavaScript)  | SERVER-SIDE (PHP / Java)  |
+      +---------------------------+---------------------------+
+      | quick input validation    | AUTHENTICATION            |
+      |   for convenience         | AUTHORISATION             |
+      | UI interaction, animation | ALL business rules        |
+      | showing and hiding fields | DATABASE access           |
+      | sorting a visible table   | PRICE and total           |
+      | fetching data by AJAX     |   calculation             |
+      | instant feedback          | SESSION management       |
+      |                           | FINAL validation          |
+      +---------------------------+---------------------------+
+
+      THE RULE : validate on the client for SPEED, and on the
+      server for CORRECTNESS AND SECURITY. Never only on the
+      client.
+   ```
+   - The one-line summary: `server-side scripting is authoritative, client-side scripting is advisory`. A real application uses both — the client for responsiveness, the server for every decision that matters.
 
 3. **(খ) PHP কি? Web Development এ Java Script এর প্রয়োজনীয়তা সম্পর্কে বিবরণ দিন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 771 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What PHP is
+   - `PHP` stands for `PHP: Hypertext Preprocessor` — a recursive acronym; the original name was Personal Home Page. It is a `server-side scripting language` designed for web development. The code runs on the `server`, and only its `output` — plain HTML — is sent to the browser.
+   ```php
+      <!DOCTYPE html>
+      <html>
+      <body>
+          <h1>Welcome</h1>
+          <?php
+              $name = "Rahim";
+              echo "<p>Hello, " . htmlspecialchars($name) . "</p>";
+          ?>
+      </body>
+      </html>
+   ```
+   ```
+      FEATURES
+        SERVER-SIDE - the source is never sent to the browser
+        OPEN SOURCE and free
+        CROSS-PLATFORM - Windows, Linux, macOS
+        EMBEDDED IN HTML , between <?php and ?>
+        supports MySQL, PostgreSQL, Oracle and more
+        handles forms, sessions, cookies, file uploads and email
+        runs about 75 per cent of websites, including WordPress,
+             Facebook's original codebase, and Wikipedia
+        files carry the .php extension
+
+      THE LAMP / LEMP STACK
+           Linux + Apache (or Nginx) + MySQL + PHP
+   ```
+
+   The necessity of JavaScript in web development
+
+   1. It is the only language the browser runs
+   - Every browser has a JavaScript engine and no other. Whatever the server is written in — PHP, Java, Python — anything happening `in the browser` must be JavaScript. That alone makes it unavoidable.
+
+   2. Immediate interaction with no round trip
+   ```
+      Form validation, a dropdown menu, a tab switch, a modal
+      dialogue, an image slider - all instant, because nothing
+      crosses the network.
+
+      Without JavaScript, checking whether an email field is
+      valid would need a full page reload.
+   ```
+
+   3. DOM manipulation — changing the page after it loads
+   ```javascript
+      document.getElementById("total").textContent = "1500 Tk";
+      document.querySelector(".card").classList.add("selected");
+   ```
+   - PHP produces the page `once`; after that only JavaScript can change it. Every cart total that updates without a reload works this way.
+
+   4. AJAX — talking to the server without reloading
+   ```javascript
+      const res  = await fetch("getPrice.php?id=5");
+      const data = await res.json();
+   ```
+   - This is what makes live search suggestions, infinite scroll, auto-save, chat and dependent dropdowns possible. It is `PHP and JavaScript together`: JavaScript asks, PHP answers with data.
+
+   5. Client-side validation, for the user's convenience
+   - Mistakes are caught before the form is submitted, which saves the user a round trip and saves the server a request. The same checks must still be repeated in PHP, because JavaScript can be disabled.
+
+   6. Modern front-end applications
+   - `React`, `Angular` and `Vue` are all JavaScript, and single-page applications exist only because of it.
+
+   7. It now runs on the server too
+   - `Node.js` allows JavaScript on the server, so one language can serve both ends of the application.
+
+   8. Facilities PHP cannot reach
+   - Geolocation, the camera and microphone, `localStorage`, `canvas` for graphics, drag and drop, notifications, `WebSocket` for real-time updates, and offline working through service workers. All of these are browser capabilities, and only JavaScript can use them.
+
+   How the two work together
+   ```
+      PHP  (server)                 JavaScript (browser)
+      ---------------------------   ---------------------------
+      database access               DOM manipulation
+      authentication, sessions      instant validation
+      business rules                animation and interaction
+      generating the HTML           AJAX requests
+      file handling, email          browser APIs - camera, GPS,
+      payment gateway calls              storage
+      FINAL validation              first-line validation
+   ```
+   ```mermaid
+   flowchart LR
+       A[Browser: JavaScript] -->|AJAX request| B[Server: PHP]
+       B --> C[(MySQL)]
+       C --> B
+       B -->|JSON| A
+       A -->|update the DOM| A
+   ```
+   - The division to state clearly: `PHP is authoritative, JavaScript is advisory`. Every decision that matters — who is logged in, what price is charged, what may be deleted — is made in PHP, because the user can edit or disable JavaScript at will. JavaScript's job is to make the application `responsive`, not to make it `correct`.
+
 4. **(b) What are the resources you need to access a web enabled application?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
+
+   Answer: The resources needed to access a web-enabled application, grouped by layer.
+
+   1. Client-side resources
+   ```
+      A DEVICE          a computer, laptop, tablet or smartphone
+      A WEB BROWSER     Chrome , Firefox , Edge , Safari - the
+           CLIENT SOFTWARE. It must support the HTML, CSS and
+           JavaScript the application uses.
+      AN OPERATING SYSTEM to run the browser
+      AN INTERNET CONNECTION with adequate bandwidth
+      INPUT and DISPLAY hardware - keyboard, mouse or touch screen
+      Sometimes a PLUG-IN or a specific browser version, and for a
+           banking application a supported TLS version
+   ```
+
+   2. Network resources
+   ```
+      AN INTERNET SERVICE PROVIDER (ISP)
+      A DNS SERVICE       to turn www.example.com into an IP
+           address. Without DNS the site is reachable only by IP.
+      TCP/IP              the protocol stack the whole exchange
+           rests on
+      BANDWIDTH           enough for the page and its images
+      ROUTERS , SWITCHES , a FIREWALL along the path
+      An SSL/TLS certificate for HTTPS, so the connection is
+           encrypted
+   ```
+
+   3. Server-side resources
+   ```
+      A WEB SERVER        Apache , Nginx , IIS - receives the HTTP
+           request and returns the response
+      AN APPLICATION SERVER or RUNTIME  PHP , Tomcat for Java ,
+           Node.js , .NET - runs the business logic for a DYNAMIC
+           application
+      A DATABASE SERVER   MySQL , PostgreSQL , Oracle , SQL Server
+      AN OPERATING SYSTEM Linux or Windows Server
+      HARDWARE            CPU, RAM, storage - or a cloud instance
+      A DOMAIN NAME       registered and renewed
+      HOSTING             shared, VPS, dedicated or cloud
+      POWER and COOLING   UPS and generator ; in Bangladesh this is
+           not optional
+   ```
+
+   4. Application resources
+   ```
+      THE APPLICATION CODE itself
+      USER CREDENTIALS     a username and password, and for a bank
+           an OTP or a hardware token
+      AUTHORISATION        the account must have the ROLE
+           permitting the action
+      THE URL              the address of the application
+      Any required LICENCE for the software
+   ```
+
+   5. Supporting resources
+   ```
+      BACKUP and DISASTER RECOVERY - and a TESTED restore
+      MONITORING and LOGGING
+      TECHNICAL SUPPORT and an SLA
+      SECURITY - firewall, intrusion detection, patch management
+      DOCUMENTATION and user TRAINING
+   ```
+
+   The path a request actually takes, showing where each resource is used
+   ```mermaid
+   flowchart LR
+       A[Device + browser] -->|internet| B[DNS]
+       B --> C[Web server: Apache/Nginx]
+       C --> D[Application runtime: PHP/Java]
+       D --> E[(Database server)]
+       E --> D
+       D --> C
+       C -->|HTTP response| A
+   ```
+   ```
+      1. The USER has a device, a browser and a connection.
+      2. DNS resolves the domain to an IP address.
+      3. TCP - and TLS for HTTPS - opens the connection.
+      4. The WEB SERVER receives the HTTP request.
+      5. The APPLICATION RUNTIME executes the business logic.
+      6. The DATABASE SERVER supplies the data.
+      7. The response returns as HTML, which the browser renders.
+
+      REMOVE ANY ONE of these and the application is unreachable -
+      which is the point the question is testing.
+   ```
+
+   The minimum, if a short answer is wanted
+   ```
+      1. a DEVICE with a WEB BROWSER
+      2. an INTERNET CONNECTION
+      3. the URL or domain name  (and DNS to resolve it)
+      4. valid USER CREDENTIALS , if the application requires login
+      5. on the other side : a WEB SERVER , an APPLICATION SERVER
+         and a DATABASE SERVER, all running
+   ```
+   - The single point that distinguishes a web-enabled application from a desktop one: `nothing is installed on the client`. The browser is the only client software required, which is why the same application serves Windows, Linux, macOS, Android and iOS without any per-platform work — and it is why the `browser` and the `connection` are the only resources the user has to supply.
 
 5. **Apache কোন ধরনের Server এক কথায় লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
 
+   Answer: `Apache` is a `web server`.
+   ```
+      Its full name is the APACHE HTTP SERVER, often written as
+      "Apache httpd".
+   ```
+
+   What that means
+   ```
+      A WEB SERVER receives an HTTP request and returns an HTTP
+      response - a web page, an image, a stylesheet, or the output
+      of a script.
+
+           browser --HTTP request--> APACHE --HTTP response-->
+                                         |
+                                         +--> passes .php files to
+                                              the PHP interpreter
+   ```
+
+   Key facts
+   ```
+      TYPE          Web server (HTTP server)
+      DEVELOPED BY  the Apache Software Foundation
+      RELEASED      1995
+      LICENCE       Open source and free - Apache License 2.0
+      PLATFORM      Cross-platform : Linux , Windows , macOS
+      DEFAULT PORT  80 for HTTP , 443 for HTTPS
+      ARCHITECTURE  PROCESS or THREAD based - one worker per
+                    connection
+      CONFIGURATION httpd.conf , and per-directory .htaccess files
+      MODULES       mod_rewrite for URL rewriting , mod_ssl for
+                    HTTPS , mod_php , mod_security
+      PART OF       the LAMP stack :
+                    Linux + APACHE + MySQL + PHP
+   ```
+   - It was for many years the most widely used web server in the world, and it remains one of the two dominant ones.
+
+   Apache compared with Nginx — the usual follow-up
+   ```
+      +----------------+--------------------+--------------------+
+      | Point          | APACHE             | NGINX              |
+      +----------------+--------------------+--------------------+
+      | Architecture   | process / thread   | EVENT-DRIVEN ,     |
+      |                | per connection     | asynchronous       |
+      | Static files   | slower             | FASTER             |
+      | Many concurrent| more memory per    | handles thousands  |
+      |   connections  | connection         | efficiently        |
+      | .htaccess      | SUPPORTED - per-   | not supported      |
+      |                | directory config   |                    |
+      | Dynamic content| built-in modules   | passes to PHP-FPM  |
+      | Configuration  | more flexible      | simpler, central   |
+      | Common role    | application server | REVERSE PROXY and  |
+      |                |                    | load balancer      |
+      +----------------+--------------------+--------------------+
+
+      They are frequently used TOGETHER : Nginx in front as a
+      reverse proxy serving static files, with Apache behind it
+      handling the application.
+   ```
+
+   Other server types, so the answer is not confused
+   ```
+      WEB SERVER          Apache , Nginx , IIS , LiteSpeed
+      APPLICATION SERVER  Tomcat , JBoss , WebLogic , WebSphere
+      DATABASE SERVER     MySQL , PostgreSQL , Oracle
+      MAIL SERVER         Postfix , Sendmail , Exchange
+      FILE SERVER         Samba , NFS
+      DNS SERVER          BIND
+      PROXY SERVER        Squid , HAProxy
+   ```
+   - The distinction worth adding in one line: a `web server` serves HTTP content and hands dynamic requests to an interpreter; an `application server` such as Tomcat runs the application code itself and provides services like transactions and connection pooling. Apache is the former — though with `mod_php` loaded it performs part of the latter's job, which is why the two terms are often blurred in practice.
+
 6. **Discuss the necessary of using application framework in web application development.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1053 (ET: BUET)]*
 
+   Answer: What an application framework is
+   - An `application framework` is a ready-made skeleton for an application. It provides the routing, request handling, database layer, templating and security, so the developer writes only the parts specific to the application.
+   ```
+      EXAMPLES
+        PHP      Laravel , Symfony , CodeIgniter
+        Java     Spring Boot , Struts
+        Python   Django , Flask
+        .NET     ASP.NET MVC / Core
+        Ruby     Rails
+        JS       Express (server) , React / Angular / Vue (client)
+   ```
+
+   Why a framework is necessary
+
+   1. It removes repetitive work
+   ```
+      Every web application needs the same machinery :
+           routing a URL to some code
+           reading form input and validating it
+           connecting to the database
+           managing sessions and logins
+           rendering templates
+           handling and logging errors
+           sending email
+
+      Written by hand, this is weeks of work BEFORE the first
+      business feature. A framework supplies all of it on the
+      first day.
+   ```
+
+   2. Security by default — the strongest argument
+   ```
+      A framework already defends against the standard attacks :
+
+        SQL INJECTION   the ORM and query builder use PREPARED
+             STATEMENTS automatically
+        XSS             the template engine ESCAPES output by
+             default, so {{ $name }} is safe even if $name
+             contains <script>
+        CSRF            a token is inserted into every form and
+             verified on every POST
+        PASSWORD HASHING with bcrypt, not MD5
+        SESSION FIXATION the session ID is regenerated on login
+
+      Hand-written code gets these wrong, and the mistakes are not
+      visible until they are exploited. This is the single most
+      important reason to use a framework rather than start from
+      nothing.
+   ```
+
+   3. It enforces a structure — usually MVC
+   ```
+      MODEL       data and business rules
+      VIEW        presentation
+      CONTROLLER  request handling
+
+      The framework's CONVENTIONS decide where each kind of code
+      belongs, so a new developer knows where to look, and code
+      review has a standard to measure against. Without one, every
+      project invents its own arrangement.
+   ```
+
+   4. Faster development, and a shorter time to market
+   - Scaffolding, migrations, an admin panel and a command-line generator mean a working prototype in days rather than weeks.
+
+   5. Maintainability
+   - Standard structure, standard naming and a large body of documentation. When a developer leaves, the replacement already knows the framework — which is not true of a bespoke architecture.
+
+   6. Testability
+   - Frameworks ship with a testing setup, dependency injection and factories for test data, so unit and integration tests are practical rather than aspirational.
+
+   7. Database abstraction
+   ```
+      An ORM - Eloquent, Hibernate, Django ORM - lets the code work
+      with objects instead of SQL, and MIGRATIONS keep the schema
+      under version control :
+
+           php artisan migrate
+
+      Changing from MySQL to PostgreSQL becomes a configuration
+      change rather than a rewrite.
+   ```
+
+   8. A community, and third-party packages
+   - Bugs are found and fixed by thousands of users; a package exists for payment gateways, PDF generation, image handling, queues and reporting; and answers to problems are already written down.
+
+   9. Scalability features built in
+   - Caching, queues, background jobs, session drivers and API rate limiting are configuration rather than code.
+
+   10. Modern practices come with it
+   - Routing, middleware, dependency injection, API versioning, validation rules and a `CI/CD`-friendly project layout.
+
+   The costs, which a complete answer should state
+   ```
+      LEARNING CURVE       the framework's conventions must be
+           learnt before anything can be built
+      PERFORMANCE OVERHEAD a framework does more work per request
+           than hand-written code
+      LESS CONTROL         you work the framework's way ; fighting
+           it is worse than following it
+      DEPENDENCY           the project is tied to the framework's
+           upgrade cycle and its continued maintenance
+      OVERKILL for a very small site - a three-page brochure needs
+           no framework at all
+      SECURITY OF THE FRAMEWORK ITSELF - a vulnerability in a
+           popular framework affects every site using it, so it
+           must be kept PATCHED
+   ```
+   - The judgement to state: for anything with a `login and a database`, a framework is the right choice, and the deciding reason is `security` rather than speed. Hand-written authentication, escaping and CSRF protection are where real applications fail, and a framework gets all three right by default. For a static brochure site, a framework adds cost with no benefit.
+
 7. **(b) Draw three tier architecture of web technology.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1142 (ET: N/A)]*
+
+   Answer: Three-tier architecture of web technology
+   ```mermaid
+   flowchart TD
+       A["TIER 1 - PRESENTATION<br/>Browser: HTML, CSS, JavaScript"] -->|HTTP request| B["TIER 2 - APPLICATION / LOGIC<br/>Web server + PHP, Java, .NET"]
+       B -->|HTTP response| A
+       B -->|SQL query| C["TIER 3 - DATA<br/>MySQL, Oracle, SQL Server"]
+       C -->|result set| B
+   ```
+   ```
+      +==============================================================+
+      |            TIER 1  -  PRESENTATION TIER                      |
+      |                     (CLIENT TIER)                            |
+      |                                                              |
+      |     +----------------------------------------------+         |
+      |     |   WEB BROWSER                                |         |
+      |     |   HTML  -  structure                         |         |
+      |     |   CSS   -  presentation                      |         |
+      |     |   JavaScript - client-side behaviour         |         |
+      |     +----------------------------------------------+         |
+      |     Runs on the USER'S MACHINE                               |
+      +==============================================================+
+                 |   HTTP / HTTPS request       ^   HTML response
+                 v                              |
+      +==============================================================+
+      |         TIER 2  -  APPLICATION TIER                          |
+      |              (BUSINESS LOGIC / MIDDLE TIER)                  |
+      |                                                              |
+      |     +----------------------------------------------+         |
+      |     |   WEB SERVER      Apache , Nginx , IIS       |         |
+      |     +----------------------------------------------+         |
+      |     +----------------------------------------------+         |
+      |     |   APPLICATION SERVER / RUNTIME               |         |
+      |     |   PHP , Java (Tomcat) , .NET , Node.js       |         |
+      |     |                                              |         |
+      |     |   - authentication and authorisation         |         |
+      |     |   - ALL business rules                       |         |
+      |     |   - input validation                        |         |
+      |     |   - session management                       |         |
+      |     |   - builds the HTML response                 |         |
+      |     +----------------------------------------------+         |
+      +==============================================================+
+                 |   SQL query                  ^   result set
+                 v                              |
+      +==============================================================+
+      |             TIER 3  -  DATA TIER                             |
+      |                   (DATABASE TIER)                            |
+      |                                                              |
+      |     +----------------------------------------------+         |
+      |     |   DATABASE SERVER                            |         |
+      |     |   MySQL , PostgreSQL , Oracle , SQL Server   |         |
+      |     |                                              |         |
+      |     |   - stores and retrieves the data            |         |
+      |     |   - enforces integrity constraints           |         |
+      |     |   - transactions , indexes , backup          |         |
+      |     +----------------------------------------------+         |
+      +==============================================================+
+   ```
+
+   What each tier does
+   ```
+      TIER 1 - PRESENTATION
+           Everything the user sees and interacts with. It contains
+           NO business rules and NO database access. Runs in the
+           BROWSER, on the user's own device.
+
+      TIER 2 - APPLICATION
+           The only tier that makes DECISIONS. It receives the
+           request, authenticates the user, applies the business
+           rules, queries the database, and builds the response.
+           It is the ONLY tier that talks to the database.
+
+      TIER 3 - DATA
+           Stores the data and guarantees its integrity. It never
+           talks to the browser directly.
+   ```
+
+   The rule the architecture depends on
+   ```
+      EACH TIER TALKS ONLY TO THE ONE NEXT TO IT.
+
+           Tier 1  <->  Tier 2  <->  Tier 3
+
+      The BROWSER MUST NEVER REACH THE DATABASE DIRECTLY. If it
+      could, the database credentials would have to be in the
+      client code, where every user can read them. This single
+      rule is what makes the design secure.
+   ```
+
+   Advantages
+   - `Security` — the database is not exposed to the client, and every rule is enforced in tier 2 where the user cannot alter it.
+   - `Scalability` — each tier is scaled independently: more application servers behind a load balancer, or a database replica.
+   - `Maintainability` — a change to the interface touches tier 1 only; a change to a business rule touches tier 2 only.
+   - `Reusability` — the same tier 2 serves a web page, a mobile application and an API.
+   - `Parallel development` — front-end, back-end and database teams work simultaneously against agreed interfaces.
+   - `Flexibility` — the database can be replaced without touching the browser code.
+
+   Comparison with the other tier counts
+   ```
+      1-TIER   everything on one machine - a desktop application
+           with a local database.
+
+      2-TIER   CLIENT-SERVER. A thick client talks DIRECTLY to the
+           database. Simple, but the database credentials live in
+           the client, business logic is duplicated in every
+           client, and it does not scale.
+
+      3-TIER   as above - the standard for web applications.
+
+      N-TIER   tier 2 is subdivided further : a web tier, a
+           service tier, a caching tier, a message queue, a
+           reporting service. Microservices are the extreme case.
+   ```
+   - Where the tiers physically run in practice: tier 1 on the user's device, tier 2 and tier 3 on `separate servers` — which is what allows the database to sit behind its own firewall, reachable only from the application servers. Putting tiers 2 and 3 on one machine still counts as three-tier logically, but it forfeits that protection.
 
 ## CSS & Styling (Inline, Internal, External) (4)
 
