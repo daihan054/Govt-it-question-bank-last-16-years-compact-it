@@ -6701,67 +6701,2199 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Primary Key | Foreign Key | Candidate Key |
+   |---|---|---|---|
+   | Definition | The candidate key chosen to identify each row | A column referring to the primary key of another table | A minimal set of attributes that uniquely identifies a row |
+   | Uniqueness | Always unique | May repeat | Always unique |
+   | NULL allowed | `Never` | Yes, unless declared NOT NULL | No |
+   | Number per table | Exactly `one` | Many | One or many |
+   | Purpose | Entity integrity — identify a row | Referential integrity — link two tables | The pool from which the primary key is chosen |
+   | Belongs to | Its own table | Refers to another table | Its own table |
+   | Index | Clustered index created automatically in most systems | Non-clustered, must usually be created manually | Only if chosen as primary or unique |
+   | Relationship | Is one of the candidate keys | Points at a primary key elsewhere | Superset that includes the primary key |
+
+   The relationship between them
+   ```
+   Super Key       -> any attribute set that identifies a row uniquely
+      |
+   Candidate Key   -> a MINIMAL super key (no attribute can be removed)
+      |
+   Primary Key     -> the ONE candidate key the designer selects
+      |
+   Alternate Key   -> the candidate keys not selected
+   ```
+
+   Example
+   ```
+   Student (student_id, national_id, email, name, dept_id)
+
+   Super keys      : {student_id}, {student_id, name}, {national_id, email}, ...
+   Candidate keys  : {student_id}, {national_id}, {email}     -- each minimal
+   Primary key     : student_id                                -- chosen
+   Alternate keys  : national_id, email
+   Foreign key     : dept_id  -> Department(dept_id)
+   ```
+
+   ```sql
+   CREATE TABLE Department (
+       dept_id   INT PRIMARY KEY,
+       dept_name VARCHAR(50)
+   );
+
+   CREATE TABLE Student (
+       student_id  INT PRIMARY KEY,              -- primary key
+       national_id VARCHAR(20) UNIQUE,           -- alternate (candidate) key
+       email       VARCHAR(100) UNIQUE,          -- alternate (candidate) key
+       name        VARCHAR(100) NOT NULL,
+       dept_id     INT,
+       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- foreign key
+   );
+   ```
+
+   What each one enforces
+   - `Primary key` — entity integrity: no two rows are identical and no row is unidentifiable, so it can never be NULL.
+   - `Foreign key` — referential integrity: a value must already exist in the referenced table, so an order cannot point at a customer who does not exist.
+   - `Candidate key` — every attribute set capable of being the primary key; the designer picks one, usually the smallest and most stable.
+
 2. **(a) Define RDBMS. Explain the different key and primary key, candidate key, super key, and foreign key DBMS.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1445 (ET: N/A)]*
+
+   Answer:
+
+   RDBMS
+   - A `Relational Database Management System` is software that stores data in `tables` (relations) made of rows (tuples) and columns (attributes), and manages the relationships between those tables using keys.
+   - It is based on E. F. Codd's relational model (1970) and is accessed with `SQL`.
+   - Characteristics: data in two-dimensional tables; every row uniquely identified by a primary key; tables linked by foreign keys; support for constraints; and `ACID` transaction guarantees.
+   - Examples: Oracle, MySQL, PostgreSQL, SQL Server, IBM Db2, SQLite.
+   - Difference from a plain DBMS: a DBMS may store data as files or in a hierarchy with no enforced relationships, whereas an RDBMS enforces the relational model, normalisation and referential integrity.
+
+   The keys
+
+   `Super key`
+   - Any set of one or more attributes that `uniquely identifies` a row. It may contain redundant attributes.
+   - Example, for Student(student_id, national_id, email, name):
+   ```
+   {student_id}, {national_id}, {student_id, name}, {student_id, national_id, email, name}
+   ```
+   - All of these identify a row uniquely, so all are super keys. Note that adding extra attributes to a super key still gives a super key.
+
+   `Candidate key`
+   - A `minimal` super key — remove any attribute and it stops being unique.
+   ```
+   Candidate keys: {student_id}, {national_id}, {email}
+   ```
+   - `{student_id, name}` is a super key but not a candidate key, because `name` is unnecessary.
+   - Every candidate key is a super key; not every super key is a candidate key.
+
+   `Primary key`
+   - The `one` candidate key the designer selects to identify rows. It can never be NULL and never repeat, and a table has exactly one.
+   ```
+   Primary key: student_id
+   ```
+   - The candidate keys not chosen become `alternate keys` and are usually declared UNIQUE.
+
+   `Foreign key`
+   - An attribute in one table whose values must exist as the primary key of another table. It enforces `referential integrity`.
+   - It may be NULL (meaning "no related row yet") and may repeat, since many students can be in one department.
+   ```
+   Student.dept_id -> Department.dept_id
+   ```
+
+   Complete example
+   ```sql
+   CREATE TABLE Department (
+       dept_id   INT PRIMARY KEY,
+       dept_name VARCHAR(50) NOT NULL UNIQUE
+   );
+
+   CREATE TABLE Student (
+       student_id  INT PRIMARY KEY,            -- primary key
+       national_id VARCHAR(20) UNIQUE,         -- alternate key
+       email       VARCHAR(100) UNIQUE,        -- alternate key
+       name        VARCHAR(100) NOT NULL,
+       dept_id     INT,
+       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+   );
+   ```
+
+   Two other keys often asked alongside
+   - `Composite key` — a primary key made of more than one attribute, for example `(order_id, product_id)` in an order-line table.
+   - `Alternate key` — a candidate key not chosen as the primary key.
 
 3. **Difference between primary key, foreign key? What is trigger?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
 
+   Answer:
+
+   Primary key vs foreign key
+
+   | Point | Primary Key | Foreign Key |
+   |---|---|---|
+   | Purpose | Uniquely identifies each row of its own table | Links a row to a row in another table |
+   | Integrity enforced | `Entity integrity` | `Referential integrity` |
+   | Uniqueness | Must be unique | May repeat |
+   | NULL | `Not allowed` | Allowed, unless declared NOT NULL |
+   | Number per table | Exactly one | Many |
+   | Refers to | Nothing; it is the reference | The primary key of another table |
+   | Index | Clustered index created automatically | Must usually be indexed manually |
+   | Deleting a referenced row | Restricted if child rows exist | The child row is the dependent one |
+
+   Example
+   ```sql
+   CREATE TABLE Department (
+       dept_id   INT PRIMARY KEY,          -- primary key
+       dept_name VARCHAR(50)
+   );
+
+   CREATE TABLE Employee (
+       emp_id   INT PRIMARY KEY,           -- primary key of this table
+       emp_name VARCHAR(100),
+       dept_id  INT,
+       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- foreign key
+   );
+   ```
+   - `Employee.dept_id` may repeat, because many employees work in one department, and it may be NULL for an unassigned employee. `Department.dept_id` may do neither.
+
+   What is a trigger
+   - A `trigger` is a block of code stored in the database that runs `automatically` in response to an event on a table — an INSERT, UPDATE or DELETE. It is never called explicitly.
+
+   ```sql
+   CREATE TRIGGER audit_salary_change
+   AFTER UPDATE ON Employee
+   FOR EACH ROW
+   BEGIN
+       INSERT INTO Salary_Audit (emp_id, old_salary, new_salary, changed_on)
+       VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW());
+   END;
+   ```
+   - `OLD` refers to the row before the change and `NEW` to the row after it.
+
+   Classification
+   - By timing: `BEFORE` (validate or modify the data before it is written) and `AFTER` (react once the change is committed to the table).
+   - By event: `INSERT`, `UPDATE`, `DELETE`.
+   - By granularity: `ROW-level` (once per affected row) and `STATEMENT-level` (once per statement).
+
+   Uses
+   - Maintaining an `audit trail` of who changed what and when.
+   - Enforcing complex business rules that a CHECK constraint cannot express.
+   - Keeping `derived data` consistent, such as a running total or a stock level.
+   - Cascading changes to related tables, and preventing invalid operations.
+
+   Drawbacks
+   - They are `invisible` — an application developer may not realise a trigger is firing, which makes debugging hard.
+   - They add overhead to every write, and a trigger that fires another trigger can cascade unexpectedly.
+   - Business logic hidden in the database is harder to test and version-control than logic in the application.
+
 4. **Define primary key, super key, and Candidate key.** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
+
+   Answer:
+
+   `Super key`
+   - Any set of one or more attributes whose values `uniquely identify` a row in a relation. It is allowed to contain redundant attributes.
+   - Adding any attribute to a super key produces another super key, so a table usually has many of them.
+
+   `Candidate key`
+   - A `minimal` super key: no attribute can be removed from it without destroying uniqueness.
+   - Every candidate key is a super key, but not every super key is a candidate key.
+
+   `Primary key`
+   - The `one` candidate key that the designer chooses to identify rows in the table.
+   - It can never be NULL and never repeat, and there is exactly one per table. The candidate keys not chosen become `alternate keys`.
+
+   Worked example
+   ```
+   Student (student_id, national_id, email, name, phone)
+
+   Assume student_id, national_id and email are each unique on their own.
+   ```
+
+   Super keys — many
+   ```
+   {student_id}
+   {national_id}
+   {email}
+   {student_id, name}
+   {national_id, phone}
+   {student_id, national_id, email, name, phone}
+   ```
+   - All identify a row uniquely, so all are super keys. Most contain unnecessary attributes.
+
+   Candidate keys — the minimal ones
+   ```
+   {student_id}
+   {national_id}
+   {email}
+   ```
+   - `{student_id, name}` is `not` a candidate key: removing `name` still gives uniqueness, so it is not minimal.
+
+   Primary key — the one chosen
+   ```
+   student_id
+   ```
+   - Chosen because it is short, numeric, never changes and is generated by the system. `national_id` and `email` become alternate keys and are declared UNIQUE.
+
+   The hierarchy
+   ```
+   +-------------------------------------------+
+   |              SUPER KEYS                   |
+   |   +-----------------------------------+   |
+   |   |        CANDIDATE KEYS             |   |
+   |   |   +-------------------------+     |   |
+   |   |   |      PRIMARY KEY        |     |   |
+   |   |   +-------------------------+     |   |
+   |   +-----------------------------------+   |
+   +-------------------------------------------+
+   ```
+
+   In SQL
+   ```sql
+   CREATE TABLE Student (
+       student_id  INT PRIMARY KEY,          -- primary key
+       national_id VARCHAR(20) UNIQUE,       -- alternate (candidate) key
+       email       VARCHAR(100) UNIQUE,      -- alternate (candidate) key
+       name        VARCHAR(100) NOT NULL,
+       phone       VARCHAR(15)
+   );
+   ```
+
+   Choosing a primary key in practice
+   - Prefer one that is `short`, `numeric`, `never changes` and is `never NULL`. That is why a surrogate `id` is usually preferred to a natural key such as an email address, which a person may change.
 
 5. **What is primary key and foreign key with example?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
+   Answer:
+
+   Primary key
+   - The column, or set of columns, that `uniquely identifies` each row of a table.
+   - Rules: values must be `unique`, can `never be NULL`, and there is exactly `one` primary key per table.
+   - It enforces `entity integrity` — the guarantee that every row is distinct and identifiable.
+   - Most database systems create a clustered index on it automatically, which is why lookups by primary key are fast.
+
+   Foreign key
+   - A column in one table whose values must match the `primary key` of another table.
+   - It enforces `referential integrity` — the guarantee that a reference points at something that actually exists.
+   - Values may `repeat` and may be `NULL` (meaning "not related to anything yet"). A table may have many foreign keys.
+
+   Example
+   ```sql
+   CREATE TABLE Department (
+       dept_id   INT PRIMARY KEY,               -- PRIMARY KEY
+       dept_name VARCHAR(50) NOT NULL
+   );
+
+   CREATE TABLE Employee (
+       emp_id   INT PRIMARY KEY,                -- PRIMARY KEY of Employee
+       emp_name VARCHAR(100) NOT NULL,
+       salary   DECIMAL(10,2),
+       dept_id  INT,
+       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+   );
+   ```
+
+   The data
+   ```
+   Department (parent)                Employee (child)
+   +---------+-----------+            +--------+----------+---------+
+   | dept_id | dept_name |            | emp_id | emp_name | dept_id |
+   +---------+-----------+            +--------+----------+---------+
+   |   10    | IT        |  <-------- |  101   | Karim    |   10    |
+   |   20    | HR        |  <-------- |  102   | Rahim    |   10    |  repeats
+   +---------+-----------+  <-------- |  103   | Sumi     |   20    |
+                                      |  104   | Nabil    |  NULL   |  allowed
+                                      +--------+----------+---------+
+   ```
+
+   What the constraints prevent
+   ```sql
+   -- rejected: dept 99 does not exist in Department
+   INSERT INTO Employee VALUES (105, 'Jamil', 40000, 99);
+      -> ERROR: foreign key constraint fails
+
+   -- rejected: emp_id 101 already exists
+   INSERT INTO Employee VALUES (101, 'Farida', 50000, 10);
+      -> ERROR: duplicate primary key
+
+   -- rejected: employees still reference department 10
+   DELETE FROM Department WHERE dept_id = 10;
+      -> ERROR: cannot delete a parent row
+   ```
+
+   Comparison
+
+   | Point | Primary key | Foreign key |
+   |---|---|---|
+   | Uniqueness | Required | Not required |
+   | NULL | Never | Allowed |
+   | Count per table | One | Many |
+   | Integrity enforced | Entity | Referential |
+   | Points at | Nothing | The parent table's primary key |
+
 6. **Explain Primary key, Candidate key, and Foreign key.** *[Teletalk Assistant Manager (IT) 2023 compact it 468 (ET: N/A)]*
+
+   Answer:
+
+   `Primary key`
+   - The candidate key chosen to uniquely identify each row of a table.
+   - It must be `unique`, can `never be NULL`, and there is exactly one per table.
+   - It enforces `entity integrity`, and it is normally indexed automatically.
+   ```sql
+   student_id INT PRIMARY KEY
+   ```
+
+   `Candidate key`
+   - Any `minimal` set of attributes that uniquely identifies a row — remove one attribute and uniqueness is lost.
+   - A table may have several. The designer selects one as the primary key, and the rest become `alternate keys`, usually declared UNIQUE.
+   ```
+   Student(student_id, national_id, email, name)
+   Candidate keys: {student_id}, {national_id}, {email}
+   ```
+
+   `Foreign key`
+   - An attribute in one table whose values must already exist as the primary key of another table.
+   - It enforces `referential integrity`, may `repeat`, and may be `NULL`.
+   ```sql
+   dept_id INT REFERENCES Department(dept_id)
+   ```
+
+   Complete worked example
+   ```sql
+   CREATE TABLE Department (
+       dept_id   INT PRIMARY KEY,
+       dept_name VARCHAR(50) NOT NULL UNIQUE
+   );
+
+   CREATE TABLE Student (
+       student_id  INT PRIMARY KEY,           -- PRIMARY KEY (chosen candidate)
+       national_id VARCHAR(20) UNIQUE,        -- CANDIDATE KEY (alternate)
+       email       VARCHAR(100) UNIQUE,       -- CANDIDATE KEY (alternate)
+       name        VARCHAR(100) NOT NULL,
+       dept_id     INT,
+       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+   );
+   ```
+
+   Comparison
+
+   | Point | Primary key | Candidate key | Foreign key |
+   |---|---|---|---|
+   | Uniqueness | Yes | Yes | No |
+   | NULL allowed | No | No | Yes |
+   | Number per table | One | One or many | Many |
+   | Minimal | Yes | Yes | Not applicable |
+   | Refers to another table | No | No | Yes |
+   | Integrity enforced | Entity | — | Referential |
+   | Chosen by | The designer, from the candidates | Determined by the data | The designer |
+
+   The relationship in one line
+   - Every `primary key` is a `candidate key`, and every candidate key is a `super key`. A `foreign key` is different in kind — it is not about identifying rows in its own table but about pointing at rows in another.
 
 7. **(খ) Primary key এবং Super key এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   | Point | Primary Key | Super Key |
+   |---|---|---|
+   | Definition | The candidate key chosen to identify rows | Any attribute set that identifies rows uniquely |
+   | Minimality | `Must be minimal` — no attribute can be removed | `May contain redundant attributes` |
+   | Number per table | Exactly `one` | Usually `many` |
+   | NULL allowed | Never | Its attributes could be NULL unless constrained |
+   | Chosen by | The designer | Determined by the data; not chosen |
+   | Declared in SQL | Yes, with `PRIMARY KEY` | No SQL keyword exists for it |
+   | Index created | Yes, automatically | No |
+   | Relationship | Every primary key is a super key | Not every super key is a primary key |
+
+   Worked example
+   ```
+   Student (student_id, national_id, email, name, phone)
+   ```
+
+   Super keys — many of them
+   ```
+   {student_id}
+   {national_id}
+   {email}
+   {student_id, name}
+   {student_id, national_id}
+   {national_id, phone, name}
+   {student_id, national_id, email, name, phone}
+   ```
+   - Any set containing a unique attribute is a super key, and adding more attributes keeps it a super key. A table with n attributes can have a very large number of them.
+
+   Primary key — exactly one
+   ```
+   student_id
+   ```
+   - Chosen from the minimal super keys (the candidate keys) because it is short, numeric and never changes.
+
+   Why `{student_id, name}` is a super key but not a primary key
+   - It does identify a row uniquely, so it qualifies as a super key.
+   - But `name` is redundant — `student_id` alone is already sufficient. A primary key must be `minimal`, so this set is disqualified.
+
+   The containment relationship
+   ```
+   +----------------------------------------------+
+   |                 SUPER KEYS                   |
+   |   (any set that uniquely identifies a row)   |
+   |   +--------------------------------------+   |
+   |   |          CANDIDATE KEYS              |   |
+   |   |     (minimal super keys)             |   |
+   |   |   +------------------------------+   |   |
+   |   |   |        PRIMARY KEY           |   |   |
+   |   |   |   (the one that is chosen)   |   |   |
+   |   |   +------------------------------+   |   |
+   |   +--------------------------------------+   |
+   +----------------------------------------------+
+   ```
+   - In one sentence: `every primary key is a super key, but a super key becomes a primary key only if it is minimal and is the one selected`.
+
 8. **Super key and Candidate key finding from table.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 648 (ET: BUET)]*
+
+   Answer: Super keys and candidate keys are found from the data by testing which attribute sets are unique, and then removing the ones that are not minimal.
+
+   The method
+   - Step 1 — identify which single attributes are unique across all rows.
+   - Step 2 — every set containing such an attribute is a `super key`.
+   - Step 3 — a super key is a `candidate key` only if it is `minimal`: no attribute can be dropped without losing uniqueness.
+   - Step 4 — the designer picks one candidate key as the `primary key`.
+
+   Worked example
+   ```
+   Student
+   +------------+-------------+---------------------+-------+-------+
+   | student_id | national_id | email               | name  | dept  |
+   +------------+-------------+---------------------+-------+-------+
+   |    101     | 1234567890  | karim@mail.com      | Karim | CSE   |
+   |    102     | 2345678901  | rahim@mail.com      | Rahim | EEE   |
+   |    103     | 3456789012  | sumi@mail.com       | Sumi  | CSE   |
+   |    104     | 4567890123  | nabil@mail.com      | Karim | BBA   |
+   +------------+-------------+---------------------+-------+-------+
+   ```
+
+   Step 1 — test each attribute for uniqueness
+   ```
+   student_id  : 101, 102, 103, 104   -> all different  -> UNIQUE
+   national_id : all different                          -> UNIQUE
+   email       : all different                          -> UNIQUE
+   name        : Karim appears twice                    -> NOT unique
+   dept        : CSE appears twice                      -> NOT unique
+   ```
+
+   Step 2 — super keys
+   ```
+   {student_id}
+   {national_id}
+   {email}
+   {student_id, name}
+   {student_id, dept}
+   {national_id, email}
+   {email, name, dept}
+   {student_id, national_id, email, name, dept}
+   ... and every other set containing at least one unique attribute
+   ```
+
+   Step 3 — candidate keys (minimal super keys)
+   ```
+   {student_id}
+   {national_id}
+   {email}
+   ```
+   - `{student_id, name}` is rejected because dropping `name` still gives uniqueness — it is not minimal.
+   - `{name, dept}` is not even a super key: Karim/CSE would not distinguish rows if a second Karim joined CSE.
+
+   Step 4 — primary key
+   ```
+   student_id       (chosen; short, numeric, stable, system-generated)
+   Alternate keys: national_id, email
+   ```
+
+   A composite example, where no single attribute is unique
+   ```
+   Enrollment
+   +------------+-----------+-------+
+   | student_id | course_id | grade |
+   +------------+-----------+-------+
+   |    101     |   CS101   |   A   |
+   |    101     |   CS102   |   B   |
+   |    102     |   CS101   |   A   |
+   +------------+-----------+-------+
+
+   student_id alone : repeats -> not unique
+   course_id  alone : repeats -> not unique
+   {student_id, course_id} : unique -> candidate key (composite)
+   ```
+   - Here the candidate key is `composite`, and it is also the primary key. This is the normal shape of a junction table implementing a many-to-many relationship.
+
+   The counting rule often asked
+   - If a relation has one candidate key of size 1 and `n` attributes in total, the number of super keys is `2^(n−1)` — every subset of the remaining n−1 attributes combined with that key.
 
 9. **From Functional Dependency for determine candidate key.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 661 (ET: N/A)]*
 
+   Answer: A candidate key is found from a set of functional dependencies by computing `attribute closures`. The rule is that a set X is a candidate key when `X⁺` contains every attribute of the relation and no proper subset of X has that property.
+
+   The method
+   - Step 1 — classify the attributes:
+     - appearing `only on the left` of the FDs — must be in every candidate key.
+     - appearing `only on the right` — can never be in a candidate key.
+     - appearing on `both sides` or in `neither` — may or may not be.
+   - Step 2 — start with the attributes that appear only on the left. Compute their closure.
+   - Step 3 — if that closure already contains all attributes, it is the only candidate key.
+   - Step 4 — otherwise add the "both sides" attributes one at a time and recompute, keeping only the minimal sets.
+
+   Worked example 1
+   ```
+   R(A, B, C, D)
+   FDs: A -> B,  B -> C,  C -> D
+   ```
+   - `A` appears only on the left, so it must be in every candidate key.
+   ```
+   A+ = {A}
+      A -> B  gives {A, B}
+      B -> C  gives {A, B, C}
+      C -> D  gives {A, B, C, D}   = all attributes
+   ```
+   - `Candidate key: {A}`. It is the only one, since no other attribute or set has a closure covering R.
+
+   Worked example 2
+   ```
+   R(A, B, C, D, E)
+   FDs: AB -> C,  C -> D,  D -> A,  E -> B
+   ```
+   - Attribute `E` appears only on the left of `E -> B` and never on the right, so `E must be in every candidate key`.
+   ```
+   E+ = {E, B}                      -- not all attributes, so E alone is not a key
+
+   Try {A, E}: A+ ... AE+ = {A,E,B} then AB -> C gives {A,B,C,E}, C -> D gives {A,B,C,D,E}  ✓
+   Try {C, E}: CE+ = {C,E,B}, C -> D gives {C,D,E,B}, D -> A gives {A,B,C,D,E}              ✓
+   Try {D, E}: DE+ = {D,E,B}, D -> A gives {A,B,D,E}, AB -> C gives {A,B,C,D,E}             ✓
+   ```
+   - `Candidate keys: {A,E}, {C,E}, {D,E}` — all minimal, all covering R.
+
+   Worked example 3 — the classic exam form
+   ```
+   R(A, B, C, D, E, F)
+   FDs: A -> BC,  CD -> E,  B -> D,  E -> A
+   ```
+   - `F` appears in no FD at all, so it must be in every candidate key.
+   ```
+   AF+ = {A,F} -> BC gives {A,B,C,F} -> B->D gives {A,B,C,D,F} -> CD->E gives all  ✓
+   BF+ = {B,F} -> D gives {B,D,F}                                -- not all, so not a key
+   EF+ = {E,F} -> A gives {A,E,F} -> BC, D ... gives all          ✓
+   CDF+ = {C,D,F} -> E gives {C,D,E,F} -> A gives all             ✓
+   ```
+   - `Candidate keys: {A,F}, {E,F}, {C,D,F}`.
+
+   The closure algorithm itself
+   ```
+   X+ = X
+   repeat:
+       for each FD  Y -> Z :
+           if Y is a subset of X+ then X+ = X+ ∪ Z
+   until X+ stops changing
+   ```
+
+   Practical shortcuts
+   - An attribute appearing `only on the right` of every FD can never be part of any candidate key.
+   - An attribute appearing on `neither` side must be part of `every` candidate key.
+   - Always verify `minimality`: after finding a set whose closure is R, check that no proper subset also works.
+
 10. **Relation to find primary key, candidate key, super key.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
+
+    Answer: All three are found from the same table by testing which attribute sets are unique.
+
+    The definitions
+    - `Super key` — any attribute set that uniquely identifies a row; redundant attributes are allowed.
+    - `Candidate key` — a `minimal` super key; removing any attribute destroys uniqueness.
+    - `Primary key` — the `one` candidate key the designer selects.
+
+    Worked example
+    ```
+    Employee
+    +--------+-------------+-------------------+-------+---------+
+    | emp_id | national_id | email             | name  | dept_id |
+    +--------+-------------+-------------------+-------+---------+
+    |  101   | 1234567890  | karim@mail.com    | Karim |   10    |
+    |  102   | 2345678901  | rahim@mail.com    | Rahim |   10    |
+    |  103   | 3456789012  | sumi@mail.com     | Sumi  |   20    |
+    |  104   | 4567890123  | nabil@mail.com    | Karim |   20    |
+    +--------+-------------+-------------------+-------+---------+
+    ```
+
+    Step 1 — which single attributes are unique?
+    ```
+    emp_id      -> all different   -> UNIQUE
+    national_id -> all different   -> UNIQUE
+    email       -> all different   -> UNIQUE
+    name        -> Karim twice     -> not unique
+    dept_id     -> 10, 20 repeat   -> not unique
+    ```
+
+    Step 2 — super keys
+    ```
+    {emp_id}, {national_id}, {email}
+    {emp_id, name}, {emp_id, dept_id}, {national_id, email}
+    {email, name, dept_id}
+    {emp_id, national_id, email, name, dept_id}
+    ...
+    ```
+    - Any set containing at least one of the three unique attributes is a super key.
+
+    Step 3 — candidate keys (the minimal super keys)
+    ```
+    {emp_id}
+    {national_id}
+    {email}
+    ```
+    - `{emp_id, name}` fails minimality: `name` can be dropped and uniqueness survives.
+
+    Step 4 — primary key
+    ```
+    emp_id
+    ```
+    - Chosen because it is short, numeric, system-generated and never changes. A person can change their email, so `email` is a poor primary key even though it is a valid candidate key.
+    - `national_id` and `email` become `alternate keys`, declared UNIQUE.
+
+    In SQL
+    ```sql
+    CREATE TABLE Employee (
+        emp_id      INT PRIMARY KEY,          -- primary key
+        national_id VARCHAR(20) UNIQUE,       -- alternate key
+        email       VARCHAR(100) UNIQUE,      -- alternate key
+        name        VARCHAR(100) NOT NULL,
+        dept_id     INT REFERENCES Department(dept_id)   -- foreign key
+    );
+    ```
+
+    The counting rule
+    - If a relation has `n` attributes and a single-attribute candidate key K, the number of super keys is `2^(n−1)`: K combined with any subset of the remaining n−1 attributes. Here n = 5 and there are three such keys, so the count is larger and must be worked out by inclusion-exclusion.
 
 11. **(a) Differentiate among foreign key, candidate key, and primary key.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Foreign Key | Candidate Key | Primary Key |
+    |---|---|---|---|
+    | Definition | An attribute referring to another table's primary key | A minimal set of attributes that uniquely identifies a row | The candidate key chosen to identify rows |
+    | Uniqueness | Not required | Required | Required |
+    | NULL allowed | `Yes` | `No` | `No` |
+    | Number per table | Many | One or many | Exactly one |
+    | Minimal | Not applicable | `Yes` | Yes |
+    | Refers to another table | `Yes` | No | No |
+    | Integrity enforced | `Referential` | — | `Entity` |
+    | Chosen by | The designer | Determined by the data | The designer, from the candidates |
+    | Index created automatically | No, usually manual | Only if declared UNIQUE | Yes, clustered |
+    | Purpose | Link two tables | Show which sets could identify rows | Identify each row |
+
+    The relationship between them
+    ```
+    Super keys  ⊃  Candidate keys  ⊃  Primary key   (all about identifying rows in THIS table)
+
+    Foreign key —  a different concept: it points at another table's primary key
+    ```
+
+    Worked example
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,
+        dept_name VARCHAR(50) NOT NULL UNIQUE
+    );
+
+    CREATE TABLE Employee (
+        emp_id      INT PRIMARY KEY,          -- PRIMARY KEY (a chosen candidate key)
+        national_id VARCHAR(20) UNIQUE,       -- CANDIDATE KEY (alternate)
+        email       VARCHAR(100) UNIQUE,      -- CANDIDATE KEY (alternate)
+        emp_name    VARCHAR(100) NOT NULL,
+        dept_id     INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+    );
+    ```
+
+    The data, showing the difference in behaviour
+    ```
+    Department                        Employee
+    +---------+-----------+           +--------+----------+---------+
+    | dept_id | dept_name |           | emp_id | emp_name | dept_id |
+    +---------+-----------+           +--------+----------+---------+
+    |   10    | IT        | <-------- |  101   | Karim    |   10    |
+    |   20    | HR        | <-------- |  102   | Rahim    |   10    |  repeats — allowed
+    +---------+-----------+ <-------- |  103   | Sumi     |   20    |
+                                      |  104   | Nabil    |  NULL   |  NULL — allowed
+                                      +--------+----------+---------+
+    ```
+    - `emp_id` (primary key) can neither repeat nor be NULL.
+    - `dept_id` (foreign key) can do both, because many employees share a department and a new employee may not yet be assigned one.
+
+    What each prevents
+    ```sql
+    INSERT INTO Employee VALUES (101, ...);           -- rejected: duplicate primary key
+    INSERT INTO Employee VALUES (105, ..., 99);       -- rejected: dept 99 does not exist
+    DELETE FROM Department WHERE dept_id = 10;        -- rejected: child rows still refer to it
+    ```
+
 12. **Explain the primary key and composite key with respect to database.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
+
+    Answer:
+
+    Primary key
+    - The column or set of columns that `uniquely identifies` each row of a table.
+    - Rules: values must be `unique`, may `never be NULL`, and a table has exactly `one`.
+    - It enforces `entity integrity` — every row is distinct and identifiable — and is normally given a clustered index automatically.
+    ```sql
+    CREATE TABLE Student (
+        student_id INT PRIMARY KEY,
+        name       VARCHAR(100)
+    );
+    ```
+
+    Composite key
+    - A `primary key made of two or more attributes`, used when no single attribute is unique on its own but a combination is.
+    - Also called a `compound key`. It follows the same rules as any primary key: the `combination` must be unique, and `none` of its columns may be NULL.
+    ```sql
+    CREATE TABLE Enrollment (
+        student_id INT,
+        course_id  INT,
+        grade      CHAR(2),
+        PRIMARY KEY (student_id, course_id),          -- COMPOSITE KEY
+        FOREIGN KEY (student_id) REFERENCES Student(student_id),
+        FOREIGN KEY (course_id)  REFERENCES Course(course_id)
+    );
+    ```
+
+    Why the composite key is needed here
+    ```
+    Enrollment
+    +------------+-----------+-------+
+    | student_id | course_id | grade |
+    +------------+-----------+-------+
+    |    101     |   CS101   |   A   |
+    |    101     |   CS102   |   B   |   <- same student, different course
+    |    102     |   CS101   |   A   |   <- same course, different student
+    +------------+-----------+-------+
+
+    student_id alone : 101 repeats  -> not unique
+    course_id  alone : CS101 repeats -> not unique
+    {student_id, course_id} : every pair distinct -> unique  ✓
+    ```
+    - This shape — a junction table implementing a many-to-many relationship — is where composite keys are most often found.
+
+    Comparison
+
+    | Point | Primary key (single column) | Composite key |
+    |---|---|---|
+    | Number of columns | One | Two or more |
+    | Uniqueness | Of that one column | Of the `combination` |
+    | NULL | Not allowed | Not allowed in any of the columns |
+    | Typical use | Ordinary entity table | Junction table for many-to-many |
+    | Foreign keys referring to it | One column | Must repeat all the columns |
+    | Index size | Small | Larger, so joins are more costly |
+
+    Practical trade-off
+    - A composite key is logically correct but makes every referencing foreign key wider and every join more expensive. Many designers therefore add a `surrogate key` — a single auto-increment `enrollment_id` — as the primary key, and keep `UNIQUE(student_id, course_id)` to preserve the business rule:
+    ```sql
+    CREATE TABLE Enrollment (
+        enrollment_id INT PRIMARY KEY AUTO_INCREMENT,   -- surrogate key
+        student_id    INT NOT NULL,
+        course_id     INT NOT NULL,
+        grade         CHAR(2),
+        UNIQUE (student_id, course_id)                  -- the real business rule
+    );
+    ```
 
 13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    Primary key
+    - The attribute, or set of attributes, that `uniquely identifies` each row of a table.
+    - It must be `unique`, can `never be NULL`, and there is exactly `one` per table.
+    - It enforces `entity integrity` — the rule that no two rows are identical and every row can be located.
+    - In relational database design it is what makes a row addressable, and it is what foreign keys elsewhere point at.
+
+    Foreign key
+    - An attribute in one table whose values must match a value of the `primary key` in another table.
+    - It enforces `referential integrity` — the rule that a reference must point at something that exists.
+    - It `may repeat` and `may be NULL`, and a table may have many foreign keys.
+    - It is what actually implements a relationship between two tables in the relational model.
+
+    Example
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,                  -- PRIMARY KEY
+        dept_name VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,                   -- PRIMARY KEY of Employee
+        emp_name VARCHAR(100) NOT NULL,
+        salary   DECIMAL(10,2),
+        dept_id  INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+    );
+    ```
+
+    The data
+    ```
+    Department (parent)                 Employee (child)
+    +---------+-----------+             +--------+----------+---------+
+    | dept_id | dept_name |             | emp_id | emp_name | dept_id |
+    +---------+-----------+             +--------+----------+---------+
+    |   10    | IT        |  <--------  |  101   | Karim    |   10    |
+    |   20    | HR        |  <--------  |  102   | Rahim    |   10    |
+    +---------+-----------+  <--------  |  103   | Sumi     |   20    |
+                                        |  104   | Nabil    |  NULL   |
+                                        +--------+----------+---------+
+    ```
+
+    What the two constraints prevent
+    ```sql
+    INSERT INTO Employee VALUES (101, 'Farida', 50000, 10);
+       -> rejected: emp_id 101 already exists (primary key violation)
+
+    INSERT INTO Employee VALUES (105, 'Jamil', 40000, 99);
+       -> rejected: department 99 does not exist (foreign key violation)
+
+    DELETE FROM Department WHERE dept_id = 10;
+       -> rejected: employees still reference it
+    ```
+
+    Comparison
+
+    | Point | Primary key | Foreign key |
+    |---|---|---|
+    | Uniqueness | Required | Not required |
+    | NULL | Never | Allowed |
+    | Count per table | One | Many |
+    | Integrity | Entity | Referential |
+    | Points at | Nothing | Another table's primary key |
+    | Index | Automatic | Usually manual |
+
 14. **(b) What are purpose of using foreign key in a database? Give suitable example.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
+
+    Answer:
+
+    Purposes of a foreign key
+
+    1. `Enforcing referential integrity` — the primary purpose
+    - It guarantees that a value in the child table actually exists in the parent table. An order cannot refer to a customer who was never created, and an employee cannot belong to a department that does not exist.
+
+    2. `Establishing relationships between tables`
+    - The foreign key is what physically implements a one-to-many or many-to-many relationship in the relational model. Without it, the tables are merely separate lists with no connection.
+
+    3. `Preventing orphan records`
+    - A parent row cannot be deleted while child rows still refer to it, unless a cascading action is defined. This stops rows being left pointing at nothing.
+
+    4. `Enabling joins`
+    - The foreign key is the natural join column, which is how data spread across normalised tables is reassembled.
+
+    5. `Supporting normalisation`
+    - Splitting data into separate tables to remove redundancy only works because foreign keys can put it back together. They are what makes 2NF and 3NF practical.
+
+    6. `Documenting the data model`
+    - The constraint records the intended relationship in the schema itself, so it is visible to every developer and to design tools, not merely implied by naming.
+
+    7. `Allowing controlled cascading actions`
+    - `ON DELETE CASCADE`, `SET NULL` and `RESTRICT` let the designer state what should happen automatically when a parent disappears.
+
+    Example
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,
+        dept_name VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100) NOT NULL,
+        dept_id  INT,
+        CONSTRAINT fk_dept FOREIGN KEY (dept_id)
+            REFERENCES Department(dept_id)
+            ON DELETE SET NULL
+            ON UPDATE CASCADE
+    );
+    ```
+
+    What it prevents in practice
+    ```sql
+    -- 1. an invalid reference is rejected
+    INSERT INTO Employee VALUES (105, 'Jamil', 99);
+       -> ERROR: department 99 does not exist
+
+    -- 2. deleting a referenced parent is controlled
+    DELETE FROM Department WHERE dept_id = 10;
+       -> with the default RESTRICT: rejected
+       -> with ON DELETE CASCADE : the employees are deleted too
+       -> with ON DELETE SET NULL: the employees' dept_id becomes NULL
+    ```
+
+    The referential actions
+
+    | Action | Effect when the parent row is deleted or updated |
+    |---|---|
+    | `RESTRICT` / `NO ACTION` | The operation is rejected. This is the default |
+    | `CASCADE` | The child rows are deleted or updated to match |
+    | `SET NULL` | The child's foreign key becomes NULL (the column must allow NULL) |
+    | `SET DEFAULT` | The child's foreign key takes its default value |
+
+    - Choosing between them is a design decision: `CASCADE` suits an order and its order-lines, where the lines are meaningless without the order; `SET NULL` suits an employee and a department, where the employee still exists after the department is dissolved.
 
 15. **What is primary key?** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
 
+    Answer: A `primary key` is the column, or set of columns, that uniquely identifies each row of a table.
+
+    Rules it must satisfy
+    - `Unique` — no two rows may hold the same value.
+    - `Not NULL` — the value can never be missing, since a row must always be identifiable.
+    - `One per table` — a table may have many candidate keys, but only one of them is designated the primary key.
+    - `Immutable in practice` — it should never change, because other tables refer to it.
+
+    What it enforces
+    - `Entity integrity`: the guarantee that every row in the table is distinct and can be located.
+
+    Example
+    ```sql
+    CREATE TABLE Student (
+        student_id INT PRIMARY KEY,           -- primary key
+        name       VARCHAR(100) NOT NULL,
+        email      VARCHAR(100) UNIQUE,
+        dept_id    INT
+    );
+    ```
+    ```
+    Student
+    +------------+-------+------------------+
+    | student_id | name  | email            |
+    +------------+-------+------------------+
+    |    101     | Karim | karim@mail.com   |
+    |    102     | Rahim | rahim@mail.com   |
+    |    103     | Karim | karim2@mail.com  |   <- same name is fine
+    +------------+-------+------------------+
+    ```
+    - Two students may share a name; they may not share a `student_id`.
+
+    Composite primary key
+    - When no single column is unique, several are combined:
+    ```sql
+    CREATE TABLE Enrollment (
+        student_id INT,
+        course_id  INT,
+        grade      CHAR(2),
+        PRIMARY KEY (student_id, course_id)
+    );
+    ```
+    - The `combination` must be unique, and none of the columns may be NULL.
+
+    How to choose one
+    - Prefer a value that is `short`, `numeric`, `never changes` and is `never NULL`.
+    - A `surrogate key` — an auto-increment id generated by the system — is usually better than a `natural key` such as an email address or national ID, because natural values can change, can be entered wrongly, and may carry privacy concerns.
+
+    Primary key vs unique key
+
+    | Point | Primary key | Unique key |
+    |---|---|---|
+    | NULL allowed | No | Yes, usually one NULL |
+    | Number per table | One | Many |
+    | Index type | Clustered, by default | Non-clustered |
+    | Purpose | Identify the row | Prevent duplicate values in a column |
+
+    - Related terms: a `super key` is any set that identifies a row; a `candidate key` is a minimal super key; the primary key is the candidate key chosen; the remaining candidates are `alternate keys`.
+
 16. **What is Primary key, Unique key and Forgein key.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
+
+    Answer:
+
+    `Primary key`
+    - The column or set of columns that uniquely identifies each row.
+    - Must be `unique`, can `never be NULL`, and there is exactly `one` per table.
+    - Enforces `entity integrity`, and normally receives a clustered index automatically.
+
+    `Unique key`
+    - A constraint that prevents duplicate values in a column, but `allows NULL` (usually one NULL, though SQL Server permits only one and Oracle permits several).
+    - A table may have `many` unique keys. They are the candidate keys not chosen as the primary key, also called `alternate keys`.
+    - Receives a non-clustered index.
+
+    `Foreign key`
+    - A column whose values must exist as the primary key of another table.
+    - Enforces `referential integrity`. Values `may repeat` and `may be NULL`, and a table may have many.
+
+    Example
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,
+        dept_name VARCHAR(50) NOT NULL UNIQUE
+    );
+
+    CREATE TABLE Employee (
+        emp_id      INT PRIMARY KEY,               -- PRIMARY KEY
+        national_id VARCHAR(20) UNIQUE,            -- UNIQUE KEY
+        email       VARCHAR(100) UNIQUE,           -- UNIQUE KEY
+        emp_name    VARCHAR(100) NOT NULL,
+        dept_id     INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+    );
+    ```
+
+    Comparison
+
+    | Point | Primary key | Unique key | Foreign key |
+    |---|---|---|---|
+    | Uniqueness | Required | Required | Not required |
+    | NULL allowed | `Never` | `Yes` | `Yes` |
+    | Number per table | One | Many | Many |
+    | Index | Clustered | Non-clustered | Manual |
+    | Integrity enforced | Entity | Uniqueness of a column | Referential |
+    | Refers to another table | No | No | Yes |
+    | Can be a composite | Yes | Yes | Yes |
+
+    The behaviour that distinguishes them
+    ```sql
+    -- primary key: neither duplicate nor NULL
+    INSERT INTO Employee VALUES (101, ...);   -- second time -> rejected, duplicate
+    INSERT INTO Employee VALUES (NULL, ...);  -- rejected, NULL not allowed
+
+    -- unique key: duplicates rejected, but NULL accepted
+    INSERT INTO Employee (emp_id, national_id) VALUES (105, NULL);   -- accepted
+    INSERT INTO Employee (emp_id, national_id) VALUES (106, NULL);   -- accepted in MySQL
+
+    -- foreign key: must exist in the parent
+    INSERT INTO Employee (emp_id, dept_id) VALUES (107, 99);   -- rejected if dept 99 absent
+    INSERT INTO Employee (emp_id, dept_id) VALUES (108, NULL); -- accepted
+    ```
+
+    - The single most examined point: `a primary key is a unique key that additionally forbids NULL and is limited to one per table`.
 
 17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 882 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    What is a DBMS
+    - A `Database Management System` is software that lets users define, create, store, retrieve, update and manage data in a database, while controlling access to it.
+    - It sits between the user or application and the physical data files, so the user never deals with storage directly.
+
+    What a DBMS provides
+    - `Data definition` — creating tables, columns, data types and constraints (DDL).
+    - `Data manipulation` — inserting, querying, updating and deleting rows (DML).
+    - `Data security` — users, roles, privileges and views that restrict what each person can see.
+    - `Data integrity` — constraints that keep the data correct and consistent.
+    - `Concurrency control` — many users working at once without corrupting each other's work.
+    - `Backup and recovery` — restoring the database after a failure.
+    - `Transaction management` with the `ACID` properties: Atomicity, Consistency, Isolation, Durability.
+    - `Reduced redundancy` and `data independence`, so applications survive changes in storage structure.
+    - Examples: MySQL, PostgreSQL, Oracle, SQL Server, MongoDB (NoSQL).
+
+    Role of the primary key in a relational database
+    - It `uniquely identifies` each row, so no two rows are indistinguishable and any row can be located.
+    - It enforces `entity integrity`: the value can never be NULL and never repeat.
+    - It is the target that foreign keys elsewhere point at, so it is what makes relationships possible.
+    - It normally carries a clustered index, so lookups and joins on it are fast.
+
+    Role of the foreign key
+    - It links a row in one table to a row in another, `implementing the relationship` between them.
+    - It enforces `referential integrity`: a value must already exist in the parent table, which prevents orphan records.
+    - It permits controlled cascading — `ON DELETE CASCADE` or `SET NULL` — when a parent row is removed.
+
+    Example
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,                 -- PRIMARY KEY
+        dept_name VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,                  -- PRIMARY KEY
+        emp_name VARCHAR(100) NOT NULL,
+        dept_id  INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+    );
+    ```
+    ```
+    Department                         Employee
+    +---------+-----------+            +--------+----------+---------+
+    | dept_id | dept_name |            | emp_id | emp_name | dept_id |
+    +---------+-----------+  <-------- |  101   | Karim    |   10    |
+    |   10    | IT        |  <-------- |  102   | Rahim    |   10    |
+    |   20    | HR        |  <-------- |  103   | Sumi     |   20    |
+    +---------+-----------+            +--------+----------+---------+
+    ```
+    - `emp_id` and `dept_id` (in Department) can neither repeat nor be NULL.
+    - `dept_id` in Employee may repeat, because many employees share a department, and may be NULL for someone unassigned.
+    - The database will reject an employee whose `dept_id` does not exist, and will refuse to delete a department that still has employees.
+
 18. **(b) Explain the different type of database keys with examples.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
+
+    Answer: A relational database defines several kinds of key, each with a distinct job.
+
+    Example table used throughout
+    ```
+    Student (student_id, national_id, email, name, dept_id, roll, session)
+    ```
+
+    1. `Super key`
+    - Any attribute set that uniquely identifies a row. Redundant attributes are allowed.
+    ```
+    {student_id}, {national_id}, {student_id, name}, {email, dept_id, session}, ...
+    ```
+
+    2. `Candidate key`
+    - A `minimal` super key — remove any attribute and uniqueness is lost.
+    ```
+    {student_id}, {national_id}, {email}, {roll, session}
+    ```
+    - `{student_id, name}` is a super key but not a candidate key, because `name` is unnecessary.
+
+    3. `Primary key`
+    - The `one` candidate key chosen to identify rows. Never NULL, never duplicated, one per table.
+    ```sql
+    student_id INT PRIMARY KEY
+    ```
+
+    4. `Alternate key`
+    - The candidate keys not chosen as primary. Usually declared UNIQUE.
+    ```sql
+    national_id VARCHAR(20) UNIQUE,
+    email       VARCHAR(100) UNIQUE
+    ```
+
+    5. `Composite (compound) key`
+    - A key made of two or more attributes, used when no single attribute is unique.
+    ```sql
+    PRIMARY KEY (roll, session)          -- roll repeats across sessions
+    PRIMARY KEY (student_id, course_id)  -- in an Enrollment table
+    ```
+
+    6. `Foreign key`
+    - An attribute whose values must exist as the primary key of another table. Enforces referential integrity; may repeat and may be NULL.
+    ```sql
+    dept_id INT REFERENCES Department(dept_id)
+    ```
+
+    7. `Surrogate key`
+    - A meaningless, system-generated value — usually an auto-increment integer — used as the primary key instead of real-world data.
+    ```sql
+    student_id INT PRIMARY KEY AUTO_INCREMENT
+    ```
+    - Preferred because it never changes, is short, and carries no privacy risk.
+
+    8. `Natural key`
+    - A key taken from real-world data, such as a national ID or an email address. Meaningful but fragile, because such values can change.
+
+    9. `Unique key`
+    - A constraint forbidding duplicates but `allowing NULL`. Several per table.
+
+    10. `Partial (discriminator) key`
+    - Used in a `weak entity` to distinguish rows within one parent. It is unique only among the children of the same owner, so the full primary key is the parent's key plus this one.
+    ```sql
+    CREATE TABLE Dependent (
+        emp_id    INT,
+        dep_name  VARCHAR(50),           -- partial key
+        PRIMARY KEY (emp_id, dep_name),
+        FOREIGN KEY (emp_id) REFERENCES Employee(emp_id)
+    );
+    ```
+
+    The hierarchy
+    ```
+    Super keys  ⊃  Candidate keys  ⊃  Primary key
+                          |
+                          +--> the rest become Alternate keys
+
+    Foreign key — separate concept: points at another table's primary key
+    ```
+
+    Complete example
+    ```sql
+    CREATE TABLE Student (
+        student_id  INT PRIMARY KEY AUTO_INCREMENT,   -- primary + surrogate
+        national_id VARCHAR(20) UNIQUE,               -- alternate + natural
+        email       VARCHAR(100) UNIQUE,              -- alternate
+        name        VARCHAR(100) NOT NULL,
+        roll        INT,
+        session     VARCHAR(10),
+        dept_id     INT,
+        UNIQUE (roll, session),                       -- composite candidate key
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- foreign key
+    );
+    ```
 
 19. **What is the Primary key, Candidate key and Super key?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 921 (ET: N/A)]*
 
+    Answer:
+
+    `Super key`
+    - Any set of one or more attributes whose values `uniquely identify` a row. Redundant attributes are permitted, so a table typically has many super keys.
+
+    `Candidate key`
+    - A `minimal` super key: removing any attribute from it destroys uniqueness. Every candidate key is a super key, but not conversely.
+
+    `Primary key`
+    - The `one` candidate key chosen by the designer to identify rows. It can never be NULL, never repeat, and there is exactly one per table.
+
+    Worked example
+    ```
+    Employee (emp_id, national_id, email, name, dept_id)
+    where emp_id, national_id and email are each unique on their own.
+    ```
+
+    Super keys
+    ```
+    {emp_id}
+    {national_id}
+    {email}
+    {emp_id, name}
+    {national_id, dept_id}
+    {emp_id, national_id, email, name, dept_id}
+    ```
+
+    Candidate keys — the minimal ones
+    ```
+    {emp_id}
+    {national_id}
+    {email}
+    ```
+    - `{emp_id, name}` is rejected: `name` can be dropped and uniqueness survives, so it is not minimal.
+
+    Primary key
+    ```
+    emp_id
+    ```
+    - Chosen because it is short, numeric, system-generated and never changes. `national_id` and `email` become `alternate keys`.
+
+    The containment relationship
+    ```
+    +---------------------------------------------+
+    |                SUPER KEYS                   |
+    |  +--------------------------------------+   |
+    |  |          CANDIDATE KEYS              |   |
+    |  |   (minimal super keys)               |   |
+    |  |    +----------------------------+    |   |
+    |  |    |      PRIMARY KEY           |    |   |
+    |  |    |   (the one selected)       |    |   |
+    |  |    +----------------------------+    |   |
+    |  +--------------------------------------+   |
+    +---------------------------------------------+
+    ```
+
+    Comparison
+
+    | Point | Super key | Candidate key | Primary key |
+    |---|---|---|---|
+    | Uniqueness | Yes | Yes | Yes |
+    | Minimal | Not necessarily | `Yes` | Yes |
+    | Number per table | Many | One or many | Exactly one |
+    | NULL allowed | Depends on the columns | No | `Never` |
+    | Declared in SQL | No keyword | `UNIQUE` for the alternates | `PRIMARY KEY` |
+    | Chosen by | Not chosen — implied by the data | Implied by the data | The designer |
+
+    In SQL
+    ```sql
+    CREATE TABLE Employee (
+        emp_id      INT PRIMARY KEY,        -- primary key
+        national_id VARCHAR(20) UNIQUE,     -- alternate (candidate) key
+        email       VARCHAR(100) UNIQUE,    -- alternate (candidate) key
+        name        VARCHAR(100) NOT NULL,
+        dept_id     INT
+    );
+    ```
+    - Note that SQL has no keyword for a super key; only candidate keys (as UNIQUE) and the primary key are declared.
+
 20. **Difference between Primary key and Unique Key, Drop and Purge, Delete and Truncate.** *[RAKUB Assistant Database Administrator 2020 compact it 1013-1014 (ET: E-Zone)]*
+
+    Answer:
+
+    (a) Primary key vs Unique key
+
+    | Point | Primary key | Unique key |
+    |---|---|---|
+    | NULL allowed | `Never` | `Yes` (one NULL in SQL Server, several in Oracle and MySQL) |
+    | Number per table | Exactly one | Many |
+    | Index created | `Clustered` by default | `Non-clustered` |
+    | Purpose | Identify each row — entity integrity | Prevent duplicate values in a column |
+    | Implicit constraints | NOT NULL + UNIQUE | UNIQUE only |
+    | Referenced by foreign keys | Normally yes | Possible, but unusual |
+    | Relationship | It is a chosen candidate key | The candidate keys not chosen (alternate keys) |
+
+    ```sql
+    CREATE TABLE Employee (
+        emp_id      INT PRIMARY KEY,          -- unique + not null, one per table
+        national_id VARCHAR(20) UNIQUE,       -- unique, but may be NULL
+        email       VARCHAR(100) UNIQUE       -- another unique key
+    );
+    ```
+
+    (b) DROP vs PURGE
+
+    | Point | DROP | PURGE |
+    |---|---|---|
+    | Effect | Removes the table from the database | Permanently removes it from the recycle bin |
+    | Recoverable | Yes in Oracle — it goes to the recycle bin and can be restored with `FLASHBACK TABLE` | `No` — the space is released and the object is gone |
+    | Space released | Not immediately in Oracle | Immediately |
+    | Syntax | `DROP TABLE Employee;` | `PURGE TABLE Employee;` or `DROP TABLE Employee PURGE;` |
+
+    ```sql
+    DROP TABLE Employee;                     -- goes to the recycle bin (Oracle)
+    FLASHBACK TABLE Employee TO BEFORE DROP; -- recoverable
+    PURGE RECYCLEBIN;                        -- now permanently gone
+    DROP TABLE Employee PURGE;               -- drop and purge in one step
+    ```
+    - This distinction is specific to `Oracle`. MySQL and SQL Server have no recycle bin, so DROP is immediate and irreversible there.
+
+    (c) DELETE vs TRUNCATE
+
+    | Point | DELETE | TRUNCATE |
+    |---|---|---|
+    | Command type | `DML` | `DDL` |
+    | WHERE clause | Supported | Not supported — removes all rows |
+    | Rollback | Yes, it is transactional | Normally no (auto-commits in MySQL and Oracle; rollback is possible in SQL Server and PostgreSQL) |
+    | Speed | Slow — row by row, each logged | `Fast` — deallocates whole data pages |
+    | Triggers fired | `Yes` | `No` |
+    | Identity / AUTO_INCREMENT | Not reset | `Reset to the starting value` |
+    | Transaction log | One entry per row | Only the page deallocations |
+    | Space reclaimed | Not immediately | Immediately |
+    | Foreign key references | Allowed | Rejected if the table is referenced by a foreign key |
+
+    ```sql
+    DELETE FROM Employee WHERE dept_id = 10;   -- selective, undoable, slow
+    DELETE FROM Employee;                       -- all rows, still undoable
+    TRUNCATE TABLE Employee;                    -- all rows, fast, resets identity
+    DROP TABLE Employee;                        -- rows AND structure gone
+    ```
+
+    The three compared in one line each
+    - `DELETE` — removes chosen rows; the table and its structure remain.
+    - `TRUNCATE` — removes every row quickly; the table and its structure remain.
+    - `DROP` — removes the rows, the structure, the indexes and the constraints together.
 
 21. **Example Foreign key in RDBMS.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035 (ET: BUET)]*
 
+    Answer: A `foreign key` is an attribute in one table whose values must exist as the primary key of another table. It is what implements a relationship in an RDBMS and what enforces `referential integrity`.
+
+    Example — Department and Employee
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,
+        dept_name VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100) NOT NULL,
+        salary   DECIMAL(10,2),
+        dept_id  INT,
+        CONSTRAINT fk_employee_dept
+            FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+    );
+    ```
+
+    The data
+    ```
+    Department (parent / referenced)      Employee (child / referencing)
+    +---------+-----------+               +--------+----------+---------+
+    | dept_id | dept_name |               | emp_id | emp_name | dept_id |
+    +---------+-----------+   <---------- |  101   | Karim    |   10    |
+    |   10    | IT        |   <---------- |  102   | Rahim    |   10    |
+    |   20    | HR        |   <---------- |  103   | Sumi     |   20    |
+    +---------+-----------+               |  104   | Nabil    |  NULL   |
+                                          +--------+----------+---------+
+    ```
+    - `dept_id` in Employee `repeats` (two employees in IT) and may be `NULL` (Nabil is unassigned). Both are allowed for a foreign key, and neither would be allowed for a primary key.
+
+    What the constraint enforces
+    ```sql
+    -- rejected: department 99 does not exist
+    INSERT INTO Employee VALUES (105, 'Jamil', 40000, 99);
+       ERROR: Cannot add or update a child row: a foreign key constraint fails
+
+    -- rejected: employees still reference department 10
+    DELETE FROM Department WHERE dept_id = 10;
+       ERROR: Cannot delete or update a parent row
+    ```
+
+    Another example — a many-to-many relationship
+    ```sql
+    CREATE TABLE Enrollment (
+        student_id INT,
+        course_id  INT,
+        grade      CHAR(2),
+        PRIMARY KEY (student_id, course_id),                      -- composite key
+        FOREIGN KEY (student_id) REFERENCES Student(student_id),  -- FK 1
+        FOREIGN KEY (course_id)  REFERENCES Course(course_id)     -- FK 2
+    );
+    ```
+    - Two foreign keys in one table, which is how a many-to-many relationship is implemented.
+
+    Referential actions
+    ```sql
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+        ON DELETE CASCADE      -- delete the employees too
+        ON UPDATE CASCADE;     -- follow a change of dept_id
+    ```
+
+    | Action | Effect on the child when the parent is deleted |
+    |---|---|
+    | `RESTRICT` / `NO ACTION` | The delete is rejected (default) |
+    | `CASCADE` | The child rows are deleted as well |
+    | `SET NULL` | The child's foreign key becomes NULL |
+    | `SET DEFAULT` | The child's foreign key takes its default |
+
+    - A self-referencing foreign key is also possible and common: `Employee.manager_id REFERENCES Employee(emp_id)` builds a reporting hierarchy inside one table.
+
 22. **What is the difference between primary key and candidate key? Explain the foreign key with an example.** *[Bangladesh Competition Commission Programmer 2019 compact it 1061-1062 (ET: DU)]*
+
+    Answer:
+
+    Primary key vs candidate key
+
+    | Point | Primary key | Candidate key |
+    |---|---|---|
+    | Definition | The candidate key chosen to identify rows | Any minimal set of attributes that identifies rows uniquely |
+    | Number per table | Exactly `one` | `One or many` |
+    | NULL allowed | Never | No |
+    | Minimal | Yes | Yes |
+    | Selected by | The designer | Determined by the data, not chosen |
+    | Declared in SQL | `PRIMARY KEY` | `UNIQUE` for the ones not chosen |
+    | Index | Clustered, automatically | Non-clustered, if declared UNIQUE |
+    | Relationship | It `is` one of the candidate keys | The pool the primary key is drawn from |
+
+    Example
+    ```
+    Student (student_id, national_id, email, name)
+
+    Candidate keys : {student_id}, {national_id}, {email}
+    Primary key    : student_id            <- the designer's choice
+    Alternate keys : national_id, email    <- the candidates not chosen
+    ```
+    ```sql
+    CREATE TABLE Student (
+        student_id  INT PRIMARY KEY,        -- primary key
+        national_id VARCHAR(20) UNIQUE,     -- alternate (candidate) key
+        email       VARCHAR(100) UNIQUE,    -- alternate (candidate) key
+        name        VARCHAR(100) NOT NULL
+    );
+    ```
+    - In one sentence: `every primary key is a candidate key, but only one candidate key can be the primary key`.
+
+    Foreign key, with an example
+    - A `foreign key` is a column in one table whose values must exist as the primary key of another. It enforces `referential integrity` and is what implements a relationship between tables.
+
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,
+        dept_name VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100) NOT NULL,
+        dept_id  INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+    );
+    ```
+    ```
+    Department                        Employee
+    +---------+-----------+           +--------+----------+---------+
+    | dept_id | dept_name |  <------- | emp_id | emp_name | dept_id |
+    +---------+-----------+  <------- +--------+----------+---------+
+    |   10    | IT        |           |  101   | Karim    |   10    |
+    |   20    | HR        |           |  102   | Rahim    |   10    |   repeats
+    +---------+-----------+           |  103   | Nabil    |  NULL   |   NULL allowed
+                                      +--------+----------+---------+
+    ```
+
+    What it enforces
+    ```sql
+    INSERT INTO Employee VALUES (104, 'Jamil', 99);
+       -> rejected: department 99 does not exist
+
+    DELETE FROM Department WHERE dept_id = 10;
+       -> rejected: employees still reference it
+    ```
+    - Unlike a primary key, a foreign key `may repeat` and `may be NULL`, and a table may have several of them.
 
 23. **(খ) Candidate key and Composite key কাকে বলে?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.)
+
+    `Candidate key`
+    - Any `minimal` set of attributes that uniquely identifies a row in a relation. Minimal means no attribute can be removed without losing uniqueness.
+    - A table may have several candidate keys; the designer selects one as the `primary key`, and the rest become `alternate keys`.
+    - Every candidate key is a super key; not every super key is a candidate key.
+
+    Example
+    ```
+    Student (student_id, national_id, email, name)
+
+    Candidate keys : {student_id}, {national_id}, {email}
+    Not a candidate key: {student_id, name}   -- 'name' is redundant, so not minimal
+    ```
+
+    `Composite key`
+    - A key made of `two or more attributes` combined, used when no single attribute is unique on its own but the combination is. Also called a compound key.
+    - It follows the same rules as any primary key: the combination must be unique and none of its columns may be NULL.
+
+    Example
+    ```
+    Enrollment
+    +------------+-----------+-------+
+    | student_id | course_id | grade |
+    +------------+-----------+-------+
+    |    101     |   CS101   |   A   |
+    |    101     |   CS102   |   B   |    same student, different course
+    |    102     |   CS101   |   A   |    same course, different student
+    +------------+-----------+-------+
+
+    student_id alone : repeats -> not unique
+    course_id  alone : repeats -> not unique
+    {student_id, course_id}    -> unique  ✓  composite key
+    ```
+
+    ```sql
+    CREATE TABLE Enrollment (
+        student_id INT,
+        course_id  INT,
+        grade      CHAR(2),
+        PRIMARY KEY (student_id, course_id),      -- composite key
+        FOREIGN KEY (student_id) REFERENCES Student(student_id),
+        FOREIGN KEY (course_id)  REFERENCES Course(course_id)
+    );
+    ```
+
+    Relationship between the two
+    - A composite key `can also be` a candidate key — in the Enrollment table, `{student_id, course_id}` is both.
+    - The two terms answer different questions: `candidate key` is about `minimality and uniqueness`; `composite key` is about `how many columns` it contains.
+
+    | Point | Candidate key | Composite key |
+    |---|---|---|
+    | Defined by | Minimality and uniqueness | Having more than one column |
+    | Columns | One or more | Always two or more |
+    | Number per table | One or many | Depends |
+    | Can be the primary key | Yes | Yes |
+    | Example | {student_id} | {student_id, course_id} |
+
+    - Where composite keys appear: junction tables for many-to-many relationships, weak entities (owner key plus partial key), and any natural key that needs several attributes such as `{roll, session, department}`.
+
 24. **(b) What happens when someone tries to delete an entry of a table that has referential integrity constraint? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
+
+    Answer: What happens depends on the `referential action` declared on the foreign key. By default the delete is `rejected`.
+
+    The situation
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,
+        dept_name VARCHAR(50)
+    );
+
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100),
+        dept_id  INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+    );
+    ```
+    ```
+    Department                    Employee
+    +---------+-----------+       +--------+----------+---------+
+    | dept_id | dept_name |       | emp_id | emp_name | dept_id |
+    +---------+-----------+       +--------+----------+---------+
+    |   10    | IT        |  <--- |  101   | Karim    |   10    |
+    |   20    | HR        |  <--- |  102   | Rahim    |   10    |
+    +---------+-----------+  <--- |  103   | Sumi     |   20    |
+                                  +--------+----------+---------+
+    ```
+
+    Attempting the delete
+    ```sql
+    DELETE FROM Department WHERE dept_id = 10;
+    ```
+
+    1. `RESTRICT` / `NO ACTION` — the default
+    ```
+    ERROR 1451 (23000): Cannot delete or update a parent row:
+    a foreign key constraint fails (`Employee`, CONSTRAINT `fk_dept`
+    FOREIGN KEY (`dept_id`) REFERENCES `Department` (`dept_id`))
+    ```
+    - The delete is refused, and nothing changes. This protects the data from becoming inconsistent, since Karim and Rahim would otherwise point at a department that no longer exists — an `orphan record`.
+
+    2. `ON DELETE CASCADE`
+    ```sql
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id) ON DELETE CASCADE
+    ```
+    - The department is deleted `and so are Karim and Rahim`.
+    ```
+    Employee after
+    +--------+----------+---------+
+    | emp_id | emp_name | dept_id |
+    +--------+----------+---------+
+    |  103   | Sumi     |   20    |
+    +--------+----------+---------+
+    ```
+    - Powerful but dangerous: it can delete far more than intended, and cascades can chain through several tables.
+
+    3. `ON DELETE SET NULL`
+    ```sql
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id) ON DELETE SET NULL
+    ```
+    - The department is deleted and the children survive with `dept_id` set to NULL.
+    ```
+    +--------+----------+---------+
+    | emp_id | emp_name | dept_id |
+    +--------+----------+---------+
+    |  101   | Karim    |  NULL   |
+    |  102   | Rahim    |  NULL   |
+    |  103   | Sumi     |   20    |
+    +--------+----------+---------+
+    ```
+    - The column must allow NULL for this to be legal.
+
+    4. `ON DELETE SET DEFAULT`
+    - The child's foreign key takes its declared default value. Supported by PostgreSQL and SQL Server, not by MySQL's InnoDB.
+
+    Summary
+
+    | Action | Parent row | Child rows |
+    |---|---|---|
+    | RESTRICT / NO ACTION | Not deleted | Unchanged — the operation fails |
+    | CASCADE | Deleted | Deleted too |
+    | SET NULL | Deleted | Kept, foreign key becomes NULL |
+    | SET DEFAULT | Deleted | Kept, foreign key takes its default |
+
+    Choosing between them
+    - `CASCADE` fits a genuine ownership relationship — an order and its order-lines, where a line has no meaning without its order.
+    - `SET NULL` fits an association — an employee still exists after their department is dissolved.
+    - `RESTRICT` is the safe default, forcing the application to deal with the children deliberately.
+
+    Working around a RESTRICT manually
+    ```sql
+    UPDATE Employee SET dept_id = NULL WHERE dept_id = 10;   -- or reassign them
+    DELETE FROM Department WHERE dept_id = 10;                -- now succeeds
+    ```
+    - The same rules apply to `ON UPDATE` when the parent's primary key value changes.
 
 25. **What is foreign key? When foreign key used?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
+    Answer:
+
+    What is a foreign key
+    - A `foreign key` is a column, or set of columns, in one table whose values must match a `primary key` value in another table (or be NULL).
+    - The table containing it is the `child` or referencing table; the table it points at is the `parent` or referenced table.
+    - It enforces `referential integrity` — the guarantee that a reference points at a row that actually exists.
+
+    Properties
+    - Values `may repeat`, since many children can share one parent.
+    - Values `may be NULL`, meaning "not related to anything yet", unless declared NOT NULL.
+    - A table may have `many` foreign keys.
+    - It must reference a primary key or a unique key in the parent table.
+
+    ```sql
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100),
+        dept_id  INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+    );
+    ```
+
+    When a foreign key is used
+
+    1. `To implement a one-to-many relationship` — the commonest case. The foreign key goes in the `many` side.
+    ```
+    Department (1) ----< Employee (many)      Employee.dept_id -> Department.dept_id
+    Customer   (1) ----< Order    (many)      Order.cust_id    -> Customer.cust_id
+    ```
+
+    2. `To implement a many-to-many relationship`, through a junction table holding two foreign keys.
+    ```sql
+    CREATE TABLE Enrollment (
+        student_id INT,
+        course_id  INT,
+        PRIMARY KEY (student_id, course_id),
+        FOREIGN KEY (student_id) REFERENCES Student(student_id),
+        FOREIGN KEY (course_id)  REFERENCES Course(course_id)
+    );
+    ```
+
+    3. `To implement a self-referencing hierarchy` — a manager is also an employee.
+    ```sql
+    manager_id INT REFERENCES Employee(emp_id)
+    ```
+
+    4. `To support normalisation` — splitting a table to remove redundancy only works if foreign keys can rejoin the pieces.
+
+    5. `To prevent orphan records` — the parent cannot be deleted while children still refer to it, unless a cascading action is defined.
+
+    6. `To document the data model` — the constraint records the intended relationship in the schema itself.
+
+    7. `To enable reliable joins` — the foreign key is the natural join column.
+
+    What it enforces in practice
+    ```sql
+    INSERT INTO Employee VALUES (105, 'Jamil', 99);
+       -> rejected: department 99 does not exist
+
+    DELETE FROM Department WHERE dept_id = 10;
+       -> rejected by default; or cascades / sets NULL if so declared
+    ```
+
+    When `not` to use one
+    - In a data warehouse or a bulk-load staging table, foreign keys are sometimes omitted because the integrity check slows every insert, and the data is validated in the ETL process instead. Some very-high-volume OLTP systems do the same and enforce integrity in the application — a deliberate trade of safety for speed.
+
 26. **Difference between primary key, foreign key and candidate key.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Primary Key | Foreign Key | Candidate Key |
+    |---|---|---|---|
+    | Definition | The candidate key chosen to identify each row | A column referencing another table's primary key | A minimal set of attributes that uniquely identifies a row |
+    | Uniqueness | Required | Not required | Required |
+    | NULL allowed | `Never` | `Yes` | `No` |
+    | Number per table | Exactly one | Many | One or many |
+    | Minimal | Yes | Not applicable | Yes |
+    | Refers to another table | No | `Yes` | No |
+    | Integrity enforced | `Entity integrity` | `Referential integrity` | — |
+    | SQL declaration | `PRIMARY KEY` | `FOREIGN KEY ... REFERENCES` | `UNIQUE` for the alternates |
+    | Index | Clustered, automatic | Usually manual | Non-clustered if UNIQUE |
+    | Chosen by | The designer | The designer | Determined by the data |
+    | Can be composite | Yes | Yes | Yes |
+
+    The relationship
+    ```
+    Super keys ⊃ Candidate keys ⊃ Primary key      (identify rows in THIS table)
+                        |
+                        +--> the unchosen ones become Alternate keys
+
+    Foreign key — points OUT, at another table's primary key
+    ```
+
+    Worked example
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,
+        dept_name VARCHAR(50) NOT NULL UNIQUE
+    );
+
+    CREATE TABLE Employee (
+        emp_id      INT PRIMARY KEY,        -- PRIMARY KEY (a chosen candidate key)
+        national_id VARCHAR(20) UNIQUE,     -- CANDIDATE KEY (alternate)
+        email       VARCHAR(100) UNIQUE,    -- CANDIDATE KEY (alternate)
+        emp_name    VARCHAR(100) NOT NULL,
+        dept_id     INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+    );
+    ```
+    ```
+    Department                       Employee
+    +---------+-----------+          +--------+-------------+----------+---------+
+    | dept_id | dept_name |  <-----  | emp_id | national_id | emp_name | dept_id |
+    +---------+-----------+  <-----  +--------+-------------+----------+---------+
+    |   10    | IT        |          |  101   | 1234567890  | Karim    |   10    |
+    |   20    | HR        |          |  102   | 2345678901  | Rahim    |   10    |
+    +---------+-----------+          |  103   | 3456789012  | Nabil    |  NULL   |
+                                     +--------+-------------+----------+---------+
+    ```
+    - `emp_id` never repeats and is never NULL. `dept_id` does both, which is exactly what distinguishes a foreign key from a primary key.
+    - `national_id` and `email` are candidate keys that were not chosen, so they are declared UNIQUE rather than PRIMARY KEY.
+
+    Three sentences to remember
+    - A `candidate key` is any minimal way of identifying a row.
+    - The `primary key` is the one candidate key the designer picks.
+    - A `foreign key` does not identify rows at all — it links this table to another.
 
 27. **Define weak Entity? What are the difference between primary key and super key?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
 
+    Answer:
+
+    Weak entity
+    - A `weak entity` is an entity that `cannot be uniquely identified by its own attributes alone`. It depends on another entity, called the `owner` or `identifying entity`, for its identity.
+    - It has a `partial key` (also called a discriminator) that distinguishes it only `among the children of the same owner`. Its full primary key is the owner's primary key plus that partial key.
+    - It participates in an `identifying relationship` with its owner, and that participation is `total` — a weak entity cannot exist without its owner.
+    - If the owner is deleted, its weak entities must be deleted too.
+
+    ER notation
+    ```
+    +-----------+        /------------\        +==========+
+    | Employee  |=======<  Has         >=======| Dependent|
+    +-----------+        \------------/        +==========+
+      (strong)          identifying relationship  (weak — double rectangle)
+                         (double diamond)
+    ```
+    - Double rectangle for the weak entity, double diamond for the identifying relationship, and a dashed underline for the partial key.
+
+    Example
+    ```sql
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,                 -- strong entity
+        emp_name VARCHAR(100)
+    );
+
+    CREATE TABLE Dependent (
+        emp_id       INT,                         -- owner's key
+        dep_name     VARCHAR(50),                 -- PARTIAL KEY
+        relationship VARCHAR(20),
+        PRIMARY KEY (emp_id, dep_name),           -- composite primary key
+        FOREIGN KEY (emp_id) REFERENCES Employee(emp_id) ON DELETE CASCADE
+    );
+    ```
+    ```
+    Dependent
+    +--------+----------+--------------+
+    | emp_id | dep_name | relationship |
+    +--------+----------+--------------+
+    |  101   | Rina     | Daughter     |
+    |  101   | Sabbir   | Son          |
+    |  102   | Rina     | Daughter     |   <- same name, different employee: allowed
+    +--------+----------+--------------+
+    ```
+    - `dep_name` alone is not unique — two employees may both have a daughter named Rina. Only `{emp_id, dep_name}` identifies a row.
+    - Other typical weak entities: order-lines belonging to an order, room numbers within a hotel, and chapter numbers within a book.
+
+    Primary key vs super key
+
+    | Point | Primary key | Super key |
+    |---|---|---|
+    | Minimality | `Must be minimal` | May contain redundant attributes |
+    | Number per table | Exactly one | Usually many |
+    | NULL allowed | Never | Depends on the columns |
+    | Chosen by | The designer | Not chosen; implied by the data |
+    | SQL keyword | `PRIMARY KEY` | None exists |
+    | Index | Created automatically | None |
+    | Relationship | Every primary key is a super key | Not every super key is a primary key |
+
+    Example
+    ```
+    Student (student_id, national_id, email, name)
+
+    Super keys   : {student_id}, {student_id, name}, {national_id, email, name}, ...
+    Candidate keys (minimal super keys): {student_id}, {national_id}, {email}
+    Primary key  : student_id
+    ```
+    - `{student_id, name}` is a super key but cannot be the primary key, because dropping `name` still gives uniqueness — it fails the minimality test.
+
 28. **Difference between Super Key and UNIQUE key?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Super Key | Unique Key |
+    |---|---|---|
+    | Nature | A `theoretical` concept from the relational model | A `practical` SQL constraint |
+    | Definition | Any attribute set that uniquely identifies a row | A constraint forbidding duplicate values in a column or set of columns |
+    | Minimality | Not required — redundant attributes allowed | Not required either, but usually minimal in practice |
+    | NULL allowed | Depends on the columns involved | `Yes` — one NULL in SQL Server, several in MySQL and Oracle |
+    | Declared in SQL | `No keyword exists` | `UNIQUE` |
+    | Number per table | Many, often very many | Many |
+    | Index created | None — it is not a physical object | `Non-clustered index` created automatically |
+    | Enforced by the DBMS | No | `Yes` |
+    | Purpose | To reason about identification during design | To prevent duplicate data at run time |
+    | Can be referenced by a foreign key | Not as such | Yes |
+
+    Example
+    ```
+    Student (student_id, national_id, email, name, phone)
+    ```
+
+    Super keys — a design-time concept
+    ```
+    {student_id}
+    {national_id}
+    {email}
+    {student_id, name}
+    {national_id, phone}
+    {student_id, national_id, email, name, phone}
+    ```
+    - All of these identify a row uniquely. None of them is declared anywhere in SQL; they exist only as a property of the data.
+
+    Unique keys — what is actually written
+    ```sql
+    CREATE TABLE Student (
+        student_id  INT PRIMARY KEY,          -- primary key
+        national_id VARCHAR(20) UNIQUE,       -- UNIQUE KEY
+        email       VARCHAR(100) UNIQUE,      -- UNIQUE KEY
+        name        VARCHAR(100),
+        phone       VARCHAR(15),
+        UNIQUE (name, phone)                  -- composite UNIQUE KEY
+    );
+    ```
+
+    The behaviour that distinguishes them
+    ```sql
+    -- unique key rejects duplicates
+    INSERT INTO Student (student_id, email) VALUES (101, 'a@mail.com');
+    INSERT INTO Student (student_id, email) VALUES (102, 'a@mail.com');
+       -> ERROR: Duplicate entry for key 'email'
+
+    -- but accepts NULL
+    INSERT INTO Student (student_id, email) VALUES (103, NULL);
+    INSERT INTO Student (student_id, email) VALUES (104, NULL);
+       -> both accepted in MySQL, because NULL is not equal to NULL
+    ```
+
+    The key relationship
+    - A `unique key` is the SQL mechanism used to `enforce` a candidate key, and every candidate key is a minimal super key. So a unique key is the practical implementation of the theoretical idea, restricted to the minimal cases that are worth enforcing.
+    - One important difference remains: a super key by definition cannot have NULLs in a way that breaks identification, whereas a unique key in SQL tolerates NULLs precisely because SQL treats NULL as "unknown" rather than as a value.
 
 29. **Define Super key and Primary key.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211 (ET: N/A)]*
 
+    Answer:
+
+    `Super key`
+    - Any set of one or more attributes whose values `uniquely identify` a row in a relation.
+    - It may contain `redundant` attributes — adding any attribute to a super key produces another super key — so a table typically has many of them.
+    - It is a design-time concept from the relational model, with no SQL keyword of its own.
+
+    `Primary key`
+    - The `one` candidate key chosen by the designer to identify rows in a table.
+    - It must be `unique`, can `never be NULL`, and there is exactly one per table.
+    - It must be `minimal` — no attribute can be removed from it.
+    - It enforces `entity integrity`, is declared with `PRIMARY KEY`, and normally receives a clustered index.
+
+    Worked example
+    ```
+    Student (student_id, national_id, email, name, phone)
+    where student_id, national_id and email are each unique on their own.
+    ```
+
+    Super keys
+    ```
+    {student_id}
+    {national_id}
+    {email}
+    {student_id, name}
+    {student_id, national_id}
+    {email, phone, name}
+    {student_id, national_id, email, name, phone}
+    ```
+
+    Primary key
+    ```
+    student_id
+    ```
+
+    Why `{student_id, name}` is a super key but not a primary key
+    - It identifies a row uniquely, so it satisfies the super key definition.
+    - But `name` is unnecessary — `student_id` alone suffices — so it is not minimal, and a primary key must be minimal.
+
+    The containment relationship
+    ```
+    +---------------------------------------------+
+    |                SUPER KEYS                   |
+    |  +--------------------------------------+   |
+    |  |         CANDIDATE KEYS               |   |
+    |  |     (the minimal super keys)         |   |
+    |  |    +----------------------------+    |   |
+    |  |    |       PRIMARY KEY          |    |   |
+    |  |    |    (the one selected)      |    |   |
+    |  |    +----------------------------+    |   |
+    |  +--------------------------------------+   |
+    +---------------------------------------------+
+    ```
+
+    Comparison
+
+    | Point | Super key | Primary key |
+    |---|---|---|
+    | Minimal | Not necessarily | `Required` |
+    | Number per table | Many | Exactly one |
+    | NULL | Depends on the columns | Never |
+    | SQL keyword | None | `PRIMARY KEY` |
+    | Index | None | Automatic |
+    | Chosen | No — implied by the data | Yes — by the designer |
+
+    - In one line: `every primary key is a super key, but a super key becomes a primary key only if it is minimal and is the one the designer selects`.
+
 30. **What are the difference among Candidate key, Primary key and Foreign key?** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Candidate Key | Primary Key | Foreign Key |
+    |---|---|---|---|
+    | Definition | A minimal set of attributes uniquely identifying a row | The candidate key chosen for identification | A column referencing another table's primary key |
+    | Uniqueness | Required | Required | Not required |
+    | NULL allowed | `No` | `Never` | `Yes` |
+    | Number per table | One or many | Exactly one | Many |
+    | Minimal | Yes | Yes | Not applicable |
+    | Refers to another table | No | No | `Yes` |
+    | Integrity enforced | — | `Entity` | `Referential` |
+    | SQL declaration | `UNIQUE` (for alternates) | `PRIMARY KEY` | `FOREIGN KEY ... REFERENCES` |
+    | Index | Non-clustered if declared | Clustered, automatic | Usually manual |
+    | Selected by | Determined by the data | The designer | The designer |
+
+    Worked example
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,
+        dept_name VARCHAR(50) NOT NULL UNIQUE
+    );
+
+    CREATE TABLE Student (
+        student_id  INT PRIMARY KEY,          -- PRIMARY KEY  (chosen candidate)
+        national_id VARCHAR(20) UNIQUE,       -- CANDIDATE KEY (alternate)
+        email       VARCHAR(100) UNIQUE,      -- CANDIDATE KEY (alternate)
+        name        VARCHAR(100) NOT NULL,
+        dept_id     INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+    );
+    ```
+
+    The data
+    ```
+    Department                       Student
+    +---------+-----------+          +------------+-------------+-------+---------+
+    | dept_id | dept_name |  <-----  | student_id | national_id | name  | dept_id |
+    +---------+-----------+  <-----  +------------+-------------+-------+---------+
+    |   10    | CSE       |          |    101     | 1234567890  | Karim |   10    |
+    |   20    | EEE       |          |    102     | 2345678901  | Rahim |   10    |
+    +---------+-----------+          |    103     | 3456789012  | Sumi  |  NULL   |
+                                     +------------+-------------+-------+---------+
+    ```
+
+    Behaviour that separates them
+    ```sql
+    INSERT INTO Student VALUES (101, ...);        -- rejected: duplicate primary key
+    INSERT INTO Student VALUES (104, NULL, ...);  -- accepted: national_id UNIQUE allows NULL
+    INSERT INTO Student (student_id, dept_id) VALUES (105, 99);
+                                                  -- rejected: department 99 does not exist
+    ```
+
+    The relationship in three lines
+    - `Candidate keys` are all the minimal ways of identifying a row — determined by the data, not chosen.
+    - The `primary key` is the single candidate key the designer selects; the rest become alternate keys, declared UNIQUE.
+    - The `foreign key` is a different kind of thing altogether: it does not identify rows in its own table, but links them to rows in another.
 
 31. **Explain with examples: Candidate key, foreign key and horizontal scaling.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1223 (ET: N/A)]*
 
+    Answer:
+
+    Candidate key
+    - A `minimal` set of attributes that uniquely identifies a row in a relation. Minimal means no attribute can be dropped without losing uniqueness.
+    - A table may have several; the designer picks one as the primary key and declares the rest `UNIQUE`.
+    ```
+    Student (student_id, national_id, email, name)
+
+    Candidate keys : {student_id}, {national_id}, {email}
+    Not a candidate key: {student_id, name}   -- 'name' is redundant
+    ```
+    ```sql
+    CREATE TABLE Student (
+        student_id  INT PRIMARY KEY,        -- chosen candidate key
+        national_id VARCHAR(20) UNIQUE,     -- alternate candidate key
+        email       VARCHAR(100) UNIQUE,    -- alternate candidate key
+        name        VARCHAR(100) NOT NULL
+    );
+    ```
+
+    Foreign key
+    - A column in one table whose values must exist as the `primary key` of another table. It enforces `referential integrity` and is what implements a relationship between tables.
+    - Values `may repeat` and `may be NULL`, and a table may have many.
+    ```sql
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,
+        emp_name VARCHAR(100),
+        dept_id  INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+    );
+    ```
+    ```
+    Department                   Employee
+    +---------+-----------+      +--------+----------+---------+
+    | dept_id | dept_name | <--- | emp_id | emp_name | dept_id |
+    +---------+-----------+ <--- +--------+----------+---------+
+    |   10    | IT        |      |  101   | Karim    |   10    |
+    |   20    | HR        |      |  102   | Rahim    |   10    |  repeats
+    +---------+-----------+      |  103   | Sumi     |  NULL   |  NULL allowed
+                                 +--------+----------+---------+
+    ```
+    - Inserting an employee with `dept_id = 99` is rejected, because no such department exists.
+
+    Horizontal scaling
+    - `Horizontal scaling` (scaling `out`) means adding `more machines` to share the load, rather than making one machine bigger.
+    - The contrast is `vertical scaling` (scaling `up`): adding more CPU, RAM or disk to a single server.
+
+    ```
+    VERTICAL SCALING (scale up)          HORIZONTAL SCALING (scale out)
+
+         +-----------+                    +------+  +------+  +------+
+         |  Server   |                    |Server|  |Server|  |Server|
+         |  8 CPU    |  ->  16 CPU        |  1   |  |  2   |  |  3   |
+         |  32 GB    |      128 GB        +------+  +------+  +------+
+         +-----------+                         \      |      /
+                                                [Load balancer]
+    ```
+
+    | Point | Vertical scaling | Horizontal scaling |
+    |---|---|---|
+    | Method | Bigger machine | More machines |
+    | Limit | Hardware ceiling | Practically unlimited |
+    | Cost | Rises steeply at the high end | Commodity hardware, linear |
+    | Downtime to scale | Usually required | None — add a node |
+    | Fault tolerance | Single point of failure | Redundant by design |
+    | Complexity | Simple | Needs load balancing, replication, sharding |
+    | Data consistency | Easy | Hard — this is the real cost |
+
+    - In databases, horizontal scaling is achieved by `sharding` (splitting rows across servers) and `replication` (copies for read scaling). NoSQL systems such as MongoDB and Cassandra were designed for it, while traditional relational databases scale vertically more naturally, which is one of the main reasons NoSQL emerged.
+
 32. **Write down the differences between super key and candidate key with example.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1225 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Super Key | Candidate Key |
+    |---|---|---|
+    | Definition | Any attribute set that uniquely identifies a row | A `minimal` super key |
+    | Minimality | `Not required` — redundant attributes allowed | `Required` — no attribute can be removed |
+    | Number per table | Many, often very many | Fewer; one or a handful |
+    | Relationship | The superset | A subset of the super keys |
+    | Contains extra attributes | Possibly | Never |
+    | Chosen as primary key | Only if it is also a candidate key | One of them is chosen |
+    | SQL declaration | No keyword exists | `PRIMARY KEY` or `UNIQUE` |
+    | Nature | Theoretical, used in design | Practical, enforced by the DBMS |
+
+    Worked example
+    ```
+    Employee (emp_id, national_id, email, name, dept_id)
+
+    Assume emp_id, national_id and email are each unique on their own.
+    ```
+
+    Super keys
+    ```
+    {emp_id}
+    {national_id}
+    {email}
+    {emp_id, name}
+    {emp_id, national_id}
+    {national_id, dept_id, name}
+    {emp_id, national_id, email, name, dept_id}
+    ```
+    - Every one of these identifies a row uniquely. Most carry attributes that are not needed for that purpose.
+
+    Candidate keys — only the minimal ones survive
+    ```
+    {emp_id}
+    {national_id}
+    {email}
+    ```
+
+    Why the others are excluded
+    ```
+    {emp_id, name}           -> drop 'name'  -> still unique -> NOT minimal -> not a candidate key
+    {national_id, dept_id}   -> drop 'dept_id' -> still unique -> NOT minimal
+    {name, dept_id}          -> not unique at all -> not even a super key
+    ```
+
+    The containment picture
+    ```
+    +-----------------------------------------------+
+    |                 SUPER KEYS                    |
+    |   (any set that identifies a row uniquely)    |
+    |                                               |
+    |   +---------------------------------------+   |
+    |   |          CANDIDATE KEYS               |   |
+    |   |     (the minimal super keys)          |   |
+    |   |   {emp_id}, {national_id}, {email}    |   |
+    |   +---------------------------------------+   |
+    +-----------------------------------------------+
+    ```
+
+    The counting rule
+    - If a relation has `n` attributes and exactly one single-attribute candidate key K, the number of super keys is `2^(n−1)` — K combined with any subset of the other n−1 attributes.
+    - Example: `R(A, B, C, D)` with candidate key `{A}` has 2³ = `8` super keys: {A}, {A,B}, {A,C}, {A,D}, {A,B,C}, {A,B,D}, {A,C,D}, {A,B,C,D}.
+
+    - In one sentence: `every candidate key is a super key, but a super key is a candidate key only when nothing can be removed from it`.
 
 33. **What do you mean by primary key and foreign key?** *[Multiple Ministry Assistant Programmer 2017 compact it 1230 (ET: N/A)]*
 
@@ -6785,7 +8917,139 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 | C06 | 103 |
 | C07 | 102 |
 
+    Answer:
+
+    Primary key
+    - The column, or set of columns, that `uniquely identifies` each row of a table.
+    - Rules: values must be `unique`, may `never be NULL`, and there is exactly `one` per table.
+    - It enforces `entity integrity` — the guarantee that every row is distinct and can be located — and normally carries a clustered index.
+    - It is the value that foreign keys in other tables point at.
+
+    Foreign key
+    - A column in one table whose values must match a `primary key` value in another table.
+    - It enforces `referential integrity` — the guarantee that a reference points at a row that exists.
+    - Values `may repeat` and `may be NULL`, and a table may have several foreign keys.
+    - It is what physically implements a relationship between two tables.
+
+    Example
+    ```sql
+    CREATE TABLE Department (
+        dept_id   INT PRIMARY KEY,               -- PRIMARY KEY
+        dept_name VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE Employee (
+        emp_id   INT PRIMARY KEY,                -- PRIMARY KEY of this table
+        emp_name VARCHAR(100) NOT NULL,
+        dept_id  INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
+    );
+    ```
+    ```
+    Department (parent)             Employee (child)
+    +---------+-----------+         +--------+----------+---------+
+    | dept_id | dept_name |  <----- | emp_id | emp_name | dept_id |
+    +---------+-----------+  <----- +--------+----------+---------+
+    |   10    | IT        |         |  101   | Karim    |   10    |
+    |   20    | HR        |         |  102   | Rahim    |   10    |   repeats
+    +---------+-----------+         |  103   | Sumi     |  NULL   |   NULL allowed
+                                    +--------+----------+---------+
+    ```
+
+    What each prevents
+    ```sql
+    INSERT INTO Employee VALUES (101, 'Farida', 10);
+       -> rejected: emp_id 101 already exists (primary key violation)
+
+    INSERT INTO Employee VALUES (104, 'Jamil', 99);
+       -> rejected: department 99 does not exist (foreign key violation)
+
+    DELETE FROM Department WHERE dept_id = 10;
+       -> rejected by default: employees still reference it
+    ```
+
+    Comparison
+
+    | Point | Primary key | Foreign key |
+    |---|---|---|
+    | Uniqueness | Required | Not required |
+    | NULL | Never | Allowed |
+    | Number per table | One | Many |
+    | Integrity | Entity | Referential |
+    | Points at | Nothing | Another table's primary key |
+    | Index | Automatic and clustered | Usually created manually |
+
+    - A foreign key may also point back into its own table — `Employee.manager_id REFERENCES Employee(emp_id)` — which is how a reporting hierarchy is stored in a single table.
+
 34. **Define ‘integrity rules’ of database systems. Write a SQL query to get the second highest salary from Employee table.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
+
+    Answer:
+
+    Integrity rules of a database system
+
+    Integrity rules are the constraints that keep the data `accurate, consistent and valid` at all times. There are three fundamental categories.
+
+    1. `Entity integrity`
+    - Every table must have a `primary key`, and no part of that primary key may be `NULL`.
+    - Reason: a row that cannot be identified cannot be referenced, updated or deleted reliably.
+    ```sql
+    student_id INT PRIMARY KEY        -- implies UNIQUE + NOT NULL
+    ```
+
+    2. `Referential integrity`
+    - A `foreign key` value must either match an existing primary key value in the referenced table, or be entirely NULL.
+    - Reason: it prevents `orphan records` — a row pointing at something that does not exist.
+    ```sql
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+    ```
+    - It also governs what happens when the parent is deleted: `RESTRICT`, `CASCADE`, `SET NULL` or `SET DEFAULT`.
+
+    3. `Domain integrity`
+    - Every value in a column must belong to the column's defined `domain` — its data type, length, format and permitted range.
+    ```sql
+    salary DECIMAL(10,2) CHECK (salary > 0),
+    gender CHAR(1) CHECK (gender IN ('M','F')),
+    email  VARCHAR(100) NOT NULL
+    ```
+
+    Other constraints usually grouped with them
+    - `Key (uniqueness) integrity` — `UNIQUE` prevents duplicate values in a candidate key.
+    - `User-defined or business integrity` — rules specific to the organisation, enforced by CHECK constraints, triggers or stored procedures. For example, a loan may not exceed ten times the applicant's salary.
+    - `Null integrity` — `NOT NULL` where a value is mandatory.
+
+    Summary
+
+    | Rule | Enforced by | Prevents |
+    |---|---|---|
+    | Entity integrity | `PRIMARY KEY` | Duplicate or unidentifiable rows |
+    | Referential integrity | `FOREIGN KEY` | Orphan records |
+    | Domain integrity | Data type, `CHECK`, `NOT NULL`, `DEFAULT` | Invalid values |
+    | Key integrity | `UNIQUE` | Duplicate candidate-key values |
+    | Business integrity | `CHECK`, triggers, procedures | Violations of organisation-specific rules |
+
+    Second highest salary from the Employee table
+    ```sql
+    SELECT MAX(salary) AS second_highest_salary
+    FROM   Employee
+    WHERE  salary < (SELECT MAX(salary) FROM Employee);
+    ```
+    - The subquery finds the highest salary; the outer query finds the highest value strictly below it.
+    - Duplicates cause no problem: if several employees share the top salary, `<` excludes them all and the genuine second distinct value is returned.
+
+    Alternative forms
+    ```sql
+    -- LIMIT with OFFSET; DISTINCT is essential
+    SELECT DISTINCT salary FROM Employee
+    ORDER  BY salary DESC LIMIT 1 OFFSET 1;
+
+    -- DENSE_RANK, which generalises to the Nth highest
+    SELECT DISTINCT salary FROM (
+        SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
+        FROM   Employee
+    ) t
+    WHERE rnk = 2;
+    ```
+    - `DENSE_RANK` rather than `RANK`: with salaries 90000, 90000, 75000, RANK gives 1, 1, 3 so no row has rank 2 at all, whereas DENSE_RANK gives 1, 1, 2 and correctly returns 75000.
 
 ## DBMS Architecture & Features (26)
 
