@@ -972,11 +972,244 @@
 
 1. Explain the working principle of a PN junction diode. Draw its symbol and describe the difference between forward bias and reverse bias. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
+   Answer: A `PN junction diode` is formed by joining a `P-type` semiconductor (rich in holes) to an `N-type` semiconductor (rich in free electrons) on the same crystal. It conducts current in `one direction only`.
+
+   Formation of the depletion region
+   - At the moment of joining, electrons from the N side diffuse across and fill holes on the P side.
+   - This leaves fixed positive ions on the N side and fixed negative ions on the P side, forming a `depletion region` empty of free carriers.
+   - The exposed ions set up an internal `barrier potential` that stops further diffusion.
+   ```
+      Barrier potential :  Silicon 0.7 V ,  Germanium 0.3 V
+   ```
+   ```
+           P side                 N side
+      +  +  +  +  |- - + +|  -  -  -  -
+      holes       | depletion |   free electrons
+                  |  region   |
+                  <---------->
+                 barrier potential
+   ```
+
+   Symbol
+   ```
+           anode          cathode
+         P ----|>|---- N
+
+      Current flows in the direction the triangle points, from anode to cathode.
+      The bar marks the cathode; on a real diode it is the painted ring.
+   ```
+
+   Forward bias
+   - The `positive` terminal of the supply is connected to the `P` side and the negative to the N side.
+   ```
+      +  ---| P | N |--- -
+   ```
+   - The applied voltage `opposes` the barrier potential, so the depletion region narrows.
+   - Once the supply exceeds about `0.7 V` (silicon), the barrier collapses and a large current flows.
+   - The diode acts almost like a `closed switch` with a small fixed drop of 0.7 V.
+   - Resistance is very low, a few ohms.
+
+   Reverse bias
+   - The `positive` terminal is connected to the `N` side and the negative to the P side.
+   ```
+      -  ---| P | N |--- +
+   ```
+   - The applied voltage `adds` to the barrier potential, so the depletion region widens.
+   - Almost no current flows — only a tiny `reverse saturation current` of nanoamperes, caused by minority carriers.
+   - The diode acts like an `open switch`. Resistance is very high, megohms.
+   - If the reverse voltage is raised too far, the junction `breaks down` (avalanche or Zener breakdown) and a large current flows, usually destroying an ordinary diode.
+
+   V-I characteristic
+   ```
+           I (mA)
+             |               forward
+             |                 /
+             |                /
+             |               /
+      -------+--------------+--------- V
+         breakdown      0.7 V (knee)
+             |
+      -------|  reverse, only microamperes
+             |
+             | (uA)
+   ```
+
+   Difference
+
+   | Point | Forward bias | Reverse bias |
+   |---|---|---|
+   | Connection | P to +, N to - | P to -, N to + |
+   | Depletion region | Narrows | Widens |
+   | Barrier potential | Reduced | Increased |
+   | Current | Large, in mA | Negligible, in uA or nA |
+   | Resistance | Very low | Very high |
+   | Behaves as | Closed switch | Open switch |
+   | Voltage drop | About 0.7 V (Si) | Nearly the whole supply |
+   | Carriers involved | Majority carriers | Minority carriers only |
+
+   - Uses: rectification (AC to DC), clipping and clamping, protection against reverse polarity, and — in special forms — the `Zener` diode for voltage regulation and the `LED` for light emission.
+
 2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
+
+   Answer: A diode in series with a resistor forms a simple series circuit. The diode drops a fixed forward voltage, and the rest of the supply appears across the resistor.
+
+   Circuit
+   ```
+           Vs
+           (+)
+            |
+           ---
+           |>|   diode , forward drop VD = 0.75 V
+           ---
+            |
+           ###
+           ### R = 10 k ohm
+           ###
+            |
+           GND
+   ```
+
+   The supply voltage is not stated in the question, so the usual laboratory value `Vs = 5 V` is assumed. The method is the same for any supply.
+
+   Step 1 — apply Kirchhoff's voltage law round the loop
+   ```
+      Vs = VD + VR
+
+      VR = Vs - VD
+         = 5 - 0.75
+         = 4.25 V
+   ```
+
+   Step 2 — apply Ohm's law to the resistor
+   ```
+      I = VR / R
+        = 4.25 / 10,000
+        = 0.000425 A
+   ```
+   ```
+      I = 0.425 mA = 425 microamperes
+   ```
+
+   Step 3 — check
+   ```
+      Voltage across R : I x R = 0.000425 x 10,000 = 4.25 V
+      Voltage across D :                             0.75 V
+      Total            :                             5.00 V = Vs      correct
+   ```
+
+   The general formula
+   ```
+      I = (Vs - VD) / R
+   ```
+
+   Result for other common supply voltages
+   ```
+      Vs = 5 V   ->  I = (5 - 0.75) / 10k   = 0.425 mA
+      Vs = 9 V   ->  I = (9 - 0.75) / 10k   = 0.825 mA
+      Vs = 12 V  ->  I = (12 - 0.75) / 10k  = 1.125 mA
+   ```
+
+   Points to note
+   - The diode is modelled as a `constant 0.75 V drop` once it conducts. This is the standard "practical diode" model used in exams; the ideal model takes VD = 0, and the full model adds a small bulk resistance.
+   - If the diode were `reverse biased`, it would block, and the current would be only the reverse leakage — a few nanoamperes, effectively zero.
+   - The supply must exceed the forward drop for any current to flow at all. With `Vs = 0.5 V` the diode never turns on and `I = 0`. <!-- verify -->
 
 3. **What is Diode and Inductor?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
+   Answer: Diode
+   - A `diode` is a two-terminal semiconductor device that lets current flow in `one direction only`. It is made by joining a P-type and an N-type semiconductor to form a `PN junction`.
+   ```
+           anode          cathode
+         P ----|>|---- N
+   ```
+   - `Forward bias` (P to +, N to -): once the supply exceeds about `0.7 V` for silicon, the depletion region collapses and a large current flows. The diode acts as a closed switch.
+   - `Reverse bias` (P to -, N to +): the depletion region widens and only a few nanoamperes of leakage flow. The diode acts as an open switch.
+   - Types and uses:
+   ```
+   Rectifier diode : converts AC to DC in every power supply
+   Zener diode     : deliberately operated in reverse breakdown, for voltage regulation
+   LED             : emits light when forward biased
+   Photodiode      : converts light into current
+   Schottky diode  : very fast switching, low forward drop (0.3 V)
+   Varactor diode  : acts as a voltage-controlled capacitor, used for tuning
+   ```
+   - Other uses: clipping, clamping, protection against reverse polarity, and free-wheeling across a relay coil.
+
+   Inductor
+   - An `inductor` is a passive two-terminal component — usually a coil of wire, often on a magnetic core — that stores energy in a `magnetic field` when current flows through it.
+   ```
+      ---(((((---            symbol : a coil, sometimes with core lines
+   ```
+   ```
+      V = L . (dI / dt)              Faraday's law of induction
+      Energy stored = (1/2) L I^2
+      Unit : henry (H)
+   ```
+   - Its defining behaviour: an inductor `opposes any change in current`. When the current tries to rise, the inductor generates a back EMF that resists it; when the current is cut off, it generates a large voltage spike trying to keep it flowing.
+   ```
+      DC (steady)    : acts as a plain wire, impedance = 0
+      AC             : impedance XL = 2 pi f L , rises with frequency
+      High frequency : acts as an open circuit -> it blocks AC, passes DC
+   ```
+   - Uses: filters and chokes in power supplies, tuned circuits in radios (with a capacitor), transformers, relays, motors, and energy storage in switching converters.
+
+   Difference
+
+   | Point | Diode | Inductor |
+   |---|---|---|
+   | Type | Active semiconductor | Passive component |
+   | Terminals | 2 (anode, cathode) | 2 |
+   | Polarity | Polarised — direction matters | Not polarised |
+   | Stores | Nothing | Energy in a magnetic field |
+   | Main property | Conducts one way only | Opposes a change in current |
+   | Behaviour with DC | Conducts or blocks by polarity | Acts as a wire |
+   | Behaviour with AC | Rectifies | Impedance rises with frequency |
+   | Unit | Volt drop (0.7 V) | Henry (H) |
+   | Main use | Rectification, protection | Filtering, tuning, energy storage |
+
+   - The two are often used together: in a switching power supply the inductor stores energy while the switch is on, and the diode gives that energy a path to the load when the switch turns off.
+
 4. **How does LED differ from Laser Diod? What are the function of Diode?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
+
+   Answer: Both an `LED` and a `laser diode` are forward-biased PN junctions that emit light when electrons and holes recombine. The difference is `how` the light is produced.
+
+   LED (Light Emitting Diode)
+   - Light is produced by `spontaneous emission`: each electron falls across the band gap at a random moment and in a random direction.
+   - The result is `incoherent`, spread over a `wide spectrum` (about 30-50 nm) and emitted in all directions.
+   - It has no optical cavity and no threshold current — it starts glowing as soon as it conducts, and brightness rises smoothly with current.
+
+   Laser diode
+   - Light is produced by `stimulated emission`: one photon triggers the release of an identical photon, in the same direction and phase.
+   - The chip has a `resonant cavity` formed by two mirrored end facets, which reflects photons back and forth so the effect multiplies.
+   - It needs a minimum `threshold current`; below it the device behaves like a poor LED, above it the output rises steeply and becomes laser light.
+   - The result is `coherent`, `monochromatic` (about 1-2 nm wide) and a narrow directional beam.
+
+   | Point | LED | Laser diode |
+   |---|---|---|
+   | Emission | Spontaneous | Stimulated |
+   | Light | Incoherent | Coherent |
+   | Spectral width | Wide, 30-50 nm | Very narrow, 1-2 nm |
+   | Beam | Spreads in all directions | Narrow, highly directional |
+   | Threshold current | None | Yes — lases only above it |
+   | Optical cavity | None | Two mirrored facets |
+   | Output power | Low, a few mW | High, tens of mW to watts |
+   | Modulation speed | Up to ~200 Mbps | Several Gbps |
+   | Fibre used with | Multimode, short distance | Single-mode, long distance |
+   | Cost | Very low | High |
+   | Temperature sensitivity | Low | High, needs a controlled circuit |
+   | Safety | Safe to look at | Can damage the eye |
+   | Uses | Indicators, displays, lighting, remote controls, short-haul fibre | Long-haul fibre, CD/DVD, barcode readers, printers, surgery |
+
+   Functions of a diode
+   - `Rectification` — converting AC to DC. This is the main use, in half-wave, full-wave and bridge rectifiers.
+   - `Voltage regulation` — a Zener diode held in reverse breakdown keeps a fixed voltage.
+   - `Clipping` — cutting off part of a waveform above or below a set level, used to protect inputs.
+   - `Clamping` — shifting a waveform up or down to a chosen DC level.
+   - `Protection` — a diode in series blocks a reversed supply; a `free-wheeling` diode across a relay or motor coil absorbs the inductive spike when the current is switched off.
+   - `Switching` — a fast diode acts as an electronic on/off element in logic and converter circuits.
+   - `Light emission and detection` — LED and laser diode emit; photodiode and solar cell absorb.
+   - `Tuning` — a varactor diode acts as a voltage-controlled capacitor in radio tuners and PLLs.
+   - `Demodulation` — recovering the audio signal from an AM radio carrier.
 
 ## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)
 
