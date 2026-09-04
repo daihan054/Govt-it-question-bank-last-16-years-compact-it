@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2962** questions.
+Sorted by count, highest first. Total **3008** questions.
 
 ## IT questions
 
-Total: **1680** questions.
+Total: **1692** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **315** |
-| | Networking Fundamentals & Terminology | 70 |
+| **Computer Networks** | **— all subcategories —** | **319** |
+| | Networking Fundamentals & Terminology | 74 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
@@ -38,8 +38,8 @@ Total: **1680** questions.
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **165** |
-| | Hardware Components & Peripherals | 63 |
+| **Computer Fundamentals** | **— all subcategories —** | **170** |
+| | Hardware Components & Peripherals | 68 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -50,15 +50,15 @@ Total: **1680** questions.
 | | Power Systems & Generation | 18 |
 | | Signals & Systems | 11 |
 | | Diodes & Rectifiers | 4 |
-| **C Programming** | **— all subcategories —** | **109** |
+| **C Programming** | **— all subcategories —** | **111** |
 | | Output Tracing | 36 |
 | | Control Statements & Loops | 16 |
 | | Arrays & Functions | 15 |
 | | Data Types & Variables | 14 |
 | | Operators & Expressions | 11 |
+| | Programming Concepts | 6 |
 | | Pointers & Memory Allocation | 5 |
 | | Recursion | 4 |
-| | Programming Concepts | 4 |
 | | Storage Classes & Scope | 3 |
 | | Flowcharts & Algorithms | 1 |
 | **Object Oriented Programming (OOP)** | **— all subcategories —** | **100** |
@@ -83,12 +83,12 @@ Total: **1680** questions.
 | | Secondary Storage (HDD & Disk Organization) | 13 |
 | | RAID & Storage Architecture | 5 |
 | | Assembly Language & Machine Code | 4 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **76** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **77** |
 | | Number Systems & Binary Arithmetic | 45 |
 | | Logic Gates & Universal Gates | 16 |
 | | Sequential Circuits (Flip-Flops) | 6 |
 | | Boolean Algebra & Simplification | 4 |
-| | Digital Logic & Number Systems | 3 |
+| | Digital Logic & Number Systems | 4 |
 | | Combinational Circuits (MUX, Decoder) | 2 |
 | **Operating System** | **— all subcategories —** | **74** |
 | | Process Management & Scheduling | 24 |
@@ -157,14 +157,14 @@ Total: **1680** questions.
 
 ## General Questions
 
-Total: **1282** questions.
+Total: **1316** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **513** |
+| **General Knowledge** | **— all subcategories —** | **538** |
+| | Everyday Science | 177 |
 | | Bangladesh Affairs | 171 |
-| | Everyday Science | 158 |
-| | International Affairs | 113 |
+| | International Affairs | 119 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
@@ -184,19 +184,19 @@ Total: **1282** questions.
 | | Idioms & Phrases | 26 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Math** | **— all subcategories —** | **174** |
-| | Algebra | 45 |
-| | Geometry | 25 |
+| **Math** | **— all subcategories —** | **183** |
+| | Algebra | 47 |
+| | Geometry | 27 |
 | | Percentage, Profit & Loss | 25 |
 | | Arithmetic & Number Series | 16 |
 | | Time, Work & Distance | 11 |
+| | Analytical Reasoning | 9 |
 | | Set Theory | 8 |
-| | Analytical Reasoning | 8 |
-| | Time & Work | 7 |
+| | Time & Work | 8 |
 | | Average & Age Problems | 6 |
 | | Ratio & Proportion | 6 |
 | | Permutation & Combination | 5 |
 | | Trigonometry | 4 |
 | | Probability & Statistics | 4 |
-| | Basic Arithmetic | 2 |
-| | Speed, Time & Distance | 2 |
+| | Speed, Time & Distance | 4 |
+| | Basic Arithmetic | 3 |

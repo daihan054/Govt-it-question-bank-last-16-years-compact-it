@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 315 questions
+**Table of Contents** — 13 subtopics · 319 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-70) | 70 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-74) | 74 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (70)
+## Networking Fundamentals & Terminology (74)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -454,6 +454,30 @@
    (b) 1000
    (c) 5000
    (d) 5001
+
+71. **Which of the following ecosystem covers the largest area of the earth’s surface?[ পৃথিবীর সর্বাধিক এলাকা আচ্ছাদিত ইকোসিস্টেম কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*
+   (a) Desert Ecosystem
+   (b) Grassland Ecosystem
+   (c) Mountain Ecosystem
+   (d) Marine Ecosystem
+
+72. **Which of these is the default port number when using HTTPS?[ HTTPS ব্যবহারের সময় ডিফল্ট পোর্ট নম্বর কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*
+   (a) 443
+   (b) 80
+   (c) 20
+   (d) 40
+
+73. **In a network, the response and transit time is used to assess—[ নেটওয়ার্কে রেসপন্স এবং ট্রানজিট টাইম কী মূল্যায়নের জন্য ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*
+   (a) Reliability
+   (b) Longevity
+   (c) Performance
+   (d) Security
+
+74. **What does Cross-validation mean in AI?[ AI-তে ক্রস-ভ্যালিডেশন (Cross-validation) বলতে কী বোঝায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*
+   (a) The process of training a model on a neural network
+   (b) The process of training model on multiple datasets
+   (c) The process of splitting data into training and testing sets
+   (d) The technique for evaluating model performance using multiple subsets of data
 
 ## Application Layer Protocols (58)
 

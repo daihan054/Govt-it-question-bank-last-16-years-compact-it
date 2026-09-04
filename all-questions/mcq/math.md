@@ -1,29 +1,29 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 174 questions
+**Table of Contents** — 15 subtopics · 183 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Algebra](#algebra-45) | 45 |
-| 2 | [Geometry](#geometry-25) | 25 |
+| 1 | [Algebra](#algebra-47) | 47 |
+| 2 | [Geometry](#geometry-27) | 27 |
 | 3 | [Percentage, Profit & Loss](#percentage-profit--loss-25) | 25 |
 | 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
 | 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
-| 6 | [Set Theory](#set-theory-8) | 8 |
-| 7 | [Analytical Reasoning](#analytical-reasoning-8) | 8 |
-| 8 | [Time & Work](#time--work-7) | 7 |
+| 6 | [Analytical Reasoning](#analytical-reasoning-9) | 9 |
+| 7 | [Set Theory](#set-theory-8) | 8 |
+| 8 | [Time & Work](#time--work-8) | 8 |
 | 9 | [Average & Age Problems](#average--age-problems-6) | 6 |
 | 10 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
 | 11 | [Permutation & Combination](#permutation--combination-5) | 5 |
 | 12 | [Trigonometry](#trigonometry-4) | 4 |
 | 13 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 14 | [Basic Arithmetic](#basic-arithmetic-2) | 2 |
-| 15 | [Speed, Time & Distance](#speed-time--distance-2) | 2 |
+| 14 | [Speed, Time & Distance](#speed-time--distance-4) | 4 |
+| 15 | [Basic Arithmetic](#basic-arithmetic-3) | 3 |
 
 <!-- TOC END -->
 
 ---
 
-## Algebra (45)
+## Algebra (47)
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -44,7 +44,7 @@
    (c) 120
    (d) Cannot be determined
 
-5. **In a T-20 cricket match, the number of boundaries scored was twice the number of over boundaries by a team. The team took 22 single runs, no two or three runs and could not score from 38 deliveries. How many runs did the team score?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*
+5. **In a T-20 cricket match, the number of boundaries scored was twice the number of over boundaries by a team. The team took 22 single runs, no two or three runs and could not score from 38 deliveries. How many runs did the team score?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*, *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*
    (a) 124
    (b) 144
    (c) 150
@@ -306,7 +306,19 @@
    (c) Priority Scheduling
    (d) FIFO
 
-## Geometry (25)
+46. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on the semaphore. The resulting value of the semaphore is—[ Semaphore শুরুতে ১০ ছিল। ৬টি wait এবং ৪টি signal অপারেশন হলে শেষ মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*
+   (a) 0
+   (b) 10
+   (c) 8
+   (d) 12
+
+47. **Which of the items listed below is the least strong security protocol?[ নিচের তালিকায় থাকা সিকিউরিটি প্রোটোকলগুলোর মধ্যে কোনটি সবচেয়ে দুর্বল? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*
+   (a) SFTP
+   (b) SMTP
+   (c) SSL
+   (d) HTTP
+
+## Geometry (27)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ১২০°
    খ. ১৮০°
@@ -456,6 +468,18 @@
    খ) ৮
    গ) ৯
    ঘ) ১০
+
+26. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks? [ দুইটি ছোট বৃত্তাকার পার্কের ব্যাসার্ধ 16m এবং 12m। এই দুটি পার্ক মিলিয়ে নতুন বড় পার্ক বানালে নতুন পার্কের ব্যাসার্ধ কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*
+   (a) 10 meter
+   (b) 14 meter
+   (c) 20 meter
+   (d) 100 meter
+
+27. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is— [ একটি আয়তক্ষেত্র R যার প্রস্থ 4 ft, এটি একটি বর্গক্ষেত্র S এর সমান এলাকা যার পরিধি 24 ft। আয়তক্ষেত্র R এর পরিধি কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*
+   (a) 9 ft
+   (b) 16 ft
+   (c) 24 ft
+   (d) 26 ft
 
 ## Percentage, Profit & Loss (25)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
@@ -765,57 +789,7 @@
    c. 38 sec
    d. 40 sec
 
-## Set Theory (8)
-
-1. **Two sets are called disjoint if their ______ is an empty set.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*
-   (ক) Union
-   (খ) Difference
-   (গ) Intersection
-   (ঘ) Complement
-
-2. **Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
-   a) 7
-   b) 5
-   c) 15
-   d) 10
-
-3. **In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
-   a) 1/5
-   b) 4/15
-   c) 1/3
-   d) 7/15
-
-4. **In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
-   a. 48
-   b. 20
-   c. 12
-   d. 28
-
-5. **Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
-   A) 4 is even or -9 is not negative
-   B) 4 is odd or -9 is not negative
-   C) 4 is even and -9 is negative
-   D) 4 is odd and -9 is not negative
-
-6. **If A= {1,2,3} and B= {1,2,5} then A-B=?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
-   A) {1}
-   B) {5}
-   C) {3}
-   D) {2}
-
-7. **If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*
-   A) 4, 8
-   B) 8, 12
-   C) 4, 12
-   D) 6, 12
-
-8. **Two sets are called disjoint if the ________ is an empty set.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
-   A) intersection
-   B) union
-   C) difference
-   D) complement
-
-## Analytical Reasoning (8)
+## Analytical Reasoning (9)
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) 4.24 meters
    (b) 5.24 meters
@@ -896,7 +870,63 @@
    (c) Title : Estate
    (d) Job : Loyalty
 
-## Time & Work (7)
+9. **Which of the following testing strategy is related to the boundary value analysis?[ নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analysis)-এর সাথে সম্পর্কিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*
+   (a) White-box testing
+   (b) Black box testing
+   (c) Unit testing
+   (d) None of these
+
+## Set Theory (8)
+
+1. **Two sets are called disjoint if their ______ is an empty set.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*
+   (ক) Union
+   (খ) Difference
+   (গ) Intersection
+   (ঘ) Complement
+
+2. **Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
+   a) 7
+   b) 5
+   c) 15
+   d) 10
+
+3. **In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
+   a) 1/5
+   b) 4/15
+   c) 1/3
+   d) 7/15
+
+4. **In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
+   a. 48
+   b. 20
+   c. 12
+   d. 28
+
+5. **Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
+   A) 4 is even or -9 is not negative
+   B) 4 is odd or -9 is not negative
+   C) 4 is even and -9 is negative
+   D) 4 is odd and -9 is not negative
+
+6. **If A= {1,2,3} and B= {1,2,5} then A-B=?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
+   A) {1}
+   B) {5}
+   C) {3}
+   D) {2}
+
+7. **If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*
+   A) 4, 8
+   B) 8, 12
+   C) 4, 12
+   D) 6, 12
+
+8. **Two sets are called disjoint if the ________ is an empty set.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
+   A) intersection
+   B) union
+   C) difference
+   D) complement
+
+## Time & Work (8)
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. ৪ দিন
    খ. ৫ দিন
@@ -939,6 +969,13 @@
    i. যদি x^a = y^b = z^c এবং xyz = 1 হয় তবে ab + bc + ca এর মান নির্ণয় করুন।
    ii. একটি বৃত্তের ব্যাসার্ধ ২ সেমি ঐ বৃত্তের অন্তস্থ বর্গের ক্ষেত্রফল কত?
    iii. কোন একটি গ্রামের জনসংখ্যার ৯০% পুরুষ ৫০% যদি ৩০% পুরুষ বিবাহিত তাহলে ঐ গ্রামের মোট জনসংখ্যার কত ভাগ মহিলা অবিবাহিত।
+
+8. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed?[ একজন ব্যক্তি ১২০ দিনের জন্য কিছু টাকা ধার নিলেন। ব্যাংক 6% বার্ষিক হারে 360 টাকা সুদ চার্জ করল। তিনি কত টাকা ধার নিয়েছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*
+   (a) Tk.
+   18. 000
+   (b) Tk. 16,000
+   (c) Tk. 15,000
+   (d) None of these
 
 ## Average & Age Problems (6)
 
@@ -1099,20 +1136,7 @@
    c. 5/6
    d. 1/6
 
-## Basic Arithmetic (2)
-1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ৩৫ বছর
-   খ. ৪০ বছর
-   গ. ৫০ বছর
-   ঘ. কোনটিই নয়
-
-2. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
-   ক. প্রোষিতভর্তৃকা
-   খ. প্রোষিতা
-   গ. প্রবাসিনী
-   ঘ. প্রোষিতপত্নীক
-
-## Speed, Time & Distance (2)
+## Speed, Time & Distance (4)
 1. **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
    ক. তরলের প্রবাহের মসৃণতা
    খ. তরলের প্রবাহের আপেক্ষিক গতি
@@ -1126,3 +1150,34 @@
    ঘ. ২৩৪ কি.মি.
 
 2. **a) নিম্নোক্ত মেমোরিগুলোকে গতির দ্রুততার ভিত্তিতে ক্রমানুসারে সাজিয়ে লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+
+3. **Considering computer memory speed, which one is correct order from highest to lowest?[ কম্পিউটার মেমোরির গতির দিক থেকে (speed) সর্বোচ্চ থেকে সর্বনিম্ন কোন ক্রমটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*
+   (a) RAM > Cache > SSD > HDD
+   (b) Cache > RAM > SSD > HDD
+   (c) RAM > SSD > Cache > HDD
+   (d) Cache > RAM > HDD > SSD
+
+4. **In a class definition with 10 methods, to make the class maximally cohesive number of connections required among the methods are—[ ১০টি মেথড বিশিষ্ট একটি ক্লাস সংজ্ঞায়, ক্লাসটিকে সর্বোচ্চ সংগতিপূর্ণ (Maximally Cohesive) করতে মেথডগুলোর মধ্যে কতটি সংযোগ প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*
+   (a) 90
+   (b) 100
+   (c) 10
+   (d) 45
+
+## Basic Arithmetic (3)
+1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ৩৫ বছর
+   খ. ৪০ বছর
+   গ. ৫০ বছর
+   ঘ. কোনটিই নয়
+
+2. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. প্রোষিতভর্তৃকা
+   খ. প্রোষিতা
+   গ. প্রবাসিনী
+   ঘ. প্রোষিতপত্নীক
+
+3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? [ M বয়সে N থেকে বড়, O থেকে ছোট। M, N, O-এর বয়স m, n, o। কোনটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*
+   (a) m > n > o
+   (b) o > m > n
+   (c) n > m > o
+   (d) o > n > m

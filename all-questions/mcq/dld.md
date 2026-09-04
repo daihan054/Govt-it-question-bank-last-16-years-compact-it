@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 76 questions
+**Table of Contents** — 6 subtopics · 77 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,7 +7,7 @@
 | 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-16) | 16 |
 | 3 | [Sequential Circuits (Flip-Flops)](#sequential-circuits-flip-flops-6) | 6 |
 | 4 | [Boolean Algebra & Simplification](#boolean-algebra--simplification-4) | 4 |
-| 5 | [Digital Logic & Number Systems](#digital-logic--number-systems-3) | 3 |
+| 5 | [Digital Logic & Number Systems](#digital-logic--number-systems-4) | 4 |
 | 6 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder-2) | 2 |
 
 <!-- TOC END -->
@@ -478,7 +478,7 @@
    C) AB
    D) 1
 
-## Digital Logic & Number Systems (3)
+## Digital Logic & Number Systems (4)
 1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
    (a) 2AF3
    (b) 6AF3
@@ -496,6 +496,12 @@
    (b) Octal
    (c) Binary
    (d) Hexadecimal
+
+4. **What is the result of the binary sum?[ নিচের বাইনারি যোগফলের ফলাফল কত? ] 10101 + 1011** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*
+   (a) 10000
+   (b) 101010
+   (c) 100000
+   (d) 111100
 
 ## Combinational Circuits (MUX, Decoder) (2)
 

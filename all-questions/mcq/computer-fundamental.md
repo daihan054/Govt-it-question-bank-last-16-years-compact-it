@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 165 questions
+**Table of Contents** — 6 subtopics · 170 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-63) | 63 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-68) | 68 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (63)
+## Hardware Components & Peripherals (68)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -380,6 +380,36 @@ int main ()\{
    (b) The man stole my bag who was tall
    (c) The man who stole my bag was tall
    (d) The man was tall who is stealing my bag
+
+64. **Number of steps required to reach ‘aab’ from A \\to aA \\mid a \\mid b—[ A \\to aA \\mid a \\mid b থেকে ‘aab’ পেতে কয়টি ধাপ লাগে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*
+   (a) 4
+   (b) 3
+   (c) 2
+   (d) 1
+
+65. **To keep track of how many frames have been allocated, how many are there, and how many are available, the operating system maintains a—[ কতগুলো ফ্রেম বরাদ্দ হয়েছে, কতগুলো আছে এবং কতগুলো খালি—এগুলো ট্র্যাক করার জন্য OS কী রাখে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*
+   (a) Memory table
+   (b) Page table
+   (c) Mapping table
+   (d) Frame table
+
+66. **An increase in a computer’s RAM leads to a typical improvement in performance because—[ RAM বাড়ালে সাধারণত পারফরম্যান্স কেন বাড়ে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*
+   (a) Virtual memory increases
+   (b) Fewer segmentation faults occur
+   (c) A larger RAM is faster
+   (d) Fewer page faults occur
+
+67. **Out of all the following, which one isn’t a form of memory?[ নিচের কোনটি মেমোরির একটি রূপ নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*
+   (a) Translation lookaside buffer
+   (b) instruction opcode
+   (c) Instruction cache
+   (d) Instruction Register
+
+68. **What type of variable should be used to store data that is important throughout an object’s life span?[ একটি অবজেক্টের জীবনকাল জুড়ে গুরুত্বপূর্ণ ডেটা সংরক্ষণ করতে কোন ধরনের ভেরিয়েবল ব্যবহার করা উচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*
+   (a) A reference variable
+   (b) A method variable
+   (c) An instance variable
+   (d) A parameter variable
 
 ## Software Types & Classification (40)
 
