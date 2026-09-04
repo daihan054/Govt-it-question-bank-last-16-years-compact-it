@@ -14655,13 +14655,197 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **White short notes on: (i) SONET/SDH; (ii) IP telephony; (iii) WDM technology; (iv) ATM network** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
 
+   Answer:
+
+   (i) SONET / SDH
+   - SONET (Synchronous Optical Network, the North American standard) and SDH (Synchronous Digital Hierarchy, the international standard) are TDM-based optical transport standards for carrying many digital streams synchronously over fibre.
+   - Hierarchy: SONET OC-1 = 51.84 Mbps, OC-3 = 155.52, OC-12 = 622, OC-48 = 2.5 Gbps, OC-192 = 10 Gbps. The SDH equivalents are STM-1 = 155.52 Mbps, STM-4, STM-16, STM-64.
+   - Frame: 810 bytes sent 8000 times a second, giving the 51.84 Mbps base rate. Rich overhead bytes carry management, performance monitoring and fault information.
+   - Topology: usually a `dual counter-rotating ring`, which gives automatic protection switching in under `50 ms` after a fibre cut. This resilience is its main selling point.
+   - Uses: carrier backbones, metro rings, leased-line delivery. It is now being displaced by packet-optical transport (OTN and carrier Ethernet), because rigid TDM channels suit voice better than bursty data.
+
+   (ii) IP telephony
+   - IP telephony (VoIP) carries voice as IP packets rather than over a dedicated circuit.
+   - Process: the analogue voice is digitised and compressed by a codec (G.711, G.729, Opus), packetised into 20 ms chunks, carried by `RTP over UDP`, and reassembled and played out at the far end.
+   - Signalling: `SIP` (most common), H.323, or Cisco's SCCP. RTCP reports quality back.
+   - Advantages: far lower cost, especially for international calls; one network for voice and data; rich features (voicemail to email, presence, conferencing); easy scaling.
+   - Challenges: it needs QoS, because voice tolerates only about 150 ms of one-way delay, 30 ms of jitter and 1 percent loss; it depends on power and on the data network; and emergency-call location is harder.
+   - Equipment: IP phones or softphones, a VoIP gateway to the PSTN, an IP PBX, and a QoS-capable network.
+
+   (iii) WDM technology
+   - WDM (Wavelength Division Multiplexing) sends several optical signals of different wavelengths down one fibre at the same time. It is FDM applied to light.
+   - `CWDM` — coarse WDM, up to 18 channels spaced 20 nm apart; cheap, uncooled lasers, short reach.
+   - `DWDM` — dense WDM, 40 to 160 channels on a 100 or 50 GHz grid in the C band around 1550 nm; each channel carries 10, 100 or 400 Gbps, so one fibre carries tens of terabits.
+   - Components: DFB lasers, arrayed waveguide grating multiplexers, EDFA amplifiers (which amplify every channel at once), dispersion compensators and optical add-drop multiplexers.
+   - Advantages: multiplies the capacity of installed fibre without laying new cable, is protocol and bit-rate transparent, and one EDFA serves all channels.
+   - It is what makes submarine cables and internet backbones economically possible.
+
+   (iv) ATM network
+   - ATM (Asynchronous Transfer Mode) is a `virtual-circuit`, cell-switched technology designed to carry voice, video and data on one network.
+   - It uses a fixed `53-byte cell`: 5 bytes of header and 48 bytes of payload. The small fixed size makes switching simple and fast in hardware, and bounds the delay for voice.
+   - Header fields: VPI and VCI identify the virtual path and channel; the switch swaps these labels at each hop.
+   - Connection-oriented: a virtual circuit is set up before data flows, so cells always arrive in order.
+   - Service classes give real QoS: CBR (constant bit rate, for voice), VBR, ABR and UBR.
+   - Advantages: guaranteed QoS, high speed, and one network for all traffic types.
+   - Disadvantages: the 5-byte header on a 48-byte payload is about 10 percent overhead — the so-called "cell tax" — and it is complex and expensive. It has been largely replaced by IP and MPLS, though it survives in some DSL and carrier networks.
+
 2. **(c) Explain IPTV and VOIP.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
+
+   Answer:
+
+   IPTV — Internet Protocol Television
+   - IPTV delivers television content as IP packets over a managed network, instead of by terrestrial broadcast, satellite or cable RF.
+   - It is normally carried on the operator's own network with QoS guarantees, which distinguishes it from ordinary internet video (OTT services such as YouTube or Netflix, which cross the public internet with no guarantee).
+
+   How it works
+   - Live channels are encoded (H.264 or H.265), then delivered by `IP multicast` — one stream serves every viewer of that channel, so bandwidth does not grow with the audience. `IGMP` is used by set-top boxes to join and leave channel groups, which is what channel changing actually does.
+   - Video on demand uses unicast, since each viewer watches a different point in a different programme.
+   - Equipment: an encoder and streaming server, a QoS-enabled multicast-capable network, and a set-top box or smart TV at the customer.
+
+   Three service types
+   - Live television, video on demand (VOD), and time-shifted TV such as catch-up and network PVR.
+
+   Advantages
+   - Two-way and interactive: pause, rewind, VOD, electronic programme guide, and personalisation.
+   - Efficient use of bandwidth through multicast; unlimited channel capacity, unlike the fixed spectrum of RF broadcast.
+   - Integrates with the operator's voice and internet services on one access line (triple play).
+
+   Challenges
+   - Needs sustained bandwidth (about 5 Mbps for HD, 25 Mbps for 4K) and strict QoS — packet loss produces visible blocking.
+   - Requires multicast support throughout the network, and content protection (DRM).
+
+   VoIP — Voice over Internet Protocol
+   - VoIP carries telephone calls as IP packets rather than over a circuit-switched line.
+
+   How it works
+   - The analogue voice is sampled and compressed by a `codec` — G.711 (64 kbps, toll quality), G.729 (8 kbps), Opus (adaptive).
+   - Samples are packetised into roughly 20 ms chunks and carried by `RTP over UDP`. UDP is chosen because a retransmitted late packet is useless; a lost one is concealed instead.
+   - `SIP` handles signalling — registration, call setup, ringing, teardown. H.323 and SCCP are alternatives. `RTCP` reports quality statistics back.
+   - A jitter buffer at the receiver absorbs variation in arrival time before playback.
+
+   Equipment needed
+   - IP phones or softphones, an IP PBX or SIP server, a VoIP gateway to reach the PSTN, an internet connection with adequate upstream bandwidth, and a QoS-capable router.
+
+   Advantages
+   - Much lower cost, especially internationally; one network for voice and data; features such as voicemail to email, presence, call recording and conferencing; easy to add extensions; and mobility, since a number follows the user anywhere.
+
+   Challenges and quality targets
+   - One-way delay should stay under `150 ms`, jitter under `30 ms`, and packet loss under `1 percent`. Beyond these, quality is noticeably poor.
+   - It depends on power and on the data network, so a failure takes down the telephones too. Emergency-call location and lawful interception are harder than on the PSTN, and security requires SRTP and TLS to prevent eavesdropping and toll fraud.
 
 3. **Write the full form of the given technologies CX, IGW and IIG. Write feature of there technologies.** *[BTRC Assistant Director (Technical) 2021 compact it 806 (ET: IBA)]*
 
+   Answer:
+
+   Full forms
+
+   | Abbreviation | Full form |
+   |---|---|
+   | ICX | `Interconnection Exchange` (the question's "CX" is the ICX licence) |
+   | IGW | `International Gateway` |
+   | IIG | `International Internet Gateway` |
+
+   - These are the three licence categories created by BTRC to structure Bangladesh's international and interconnection telecom traffic.
+
+   ICX — Interconnection Exchange
+   - Sits `inside` the country and interconnects domestic operators. Calls between two different mobile operators, or between a mobile network and a PSTN, are routed through an ICX rather than directly.
+   - Features: switches domestic voice traffic between operators; records call detail for revenue sharing and settlement; enforces the regulator's tariff and revenue-sharing rules; provides a single controlled point where domestic interconnection can be monitored; and passes international calls from an IGW down to the terminating operator.
+   - Benefit of the model: operators need one connection to an ICX instead of separate links to every other operator, which greatly reduces the number of interconnection links required.
+
+   IGW — International Gateway
+   - The gateway for `international voice` traffic entering and leaving Bangladesh.
+   - Features: originates outgoing and terminates incoming international calls; interfaces with foreign carriers over both TDM and IP; handles settlement with those carriers; applies the regulator's approved termination rate; and provides the lawful-interception and monitoring point required for international voice.
+   - Incoming international calls flow: foreign carrier -> IGW -> ICX -> the terminating mobile or PSTN operator.
+
+   IIG — International Internet Gateway
+   - The gateway for `international internet and data` traffic.
+   - Features: connects the country's ISPs to the global internet through submarine cables (SEA-ME-WE 4, 5 and 6) and terrestrial cross-border links (ITC); provides bandwidth wholesale to ISPs; peers with international carriers and content providers; hosts caches and CDN nodes to keep popular content local; and provides the monitoring and filtering point for international data.
+   - It is the data counterpart of the IGW, which handles only voice.
+
+   Traffic flow through the three
+   ```
+   INTERNATIONAL VOICE
+   foreign carrier --> IGW --> ICX --> mobile / PSTN operator --> subscriber
+
+   INTERNATIONAL INTERNET
+   global internet --> submarine cable / ITC --> IIG --> ISP --> subscriber
+   ```
+
+   - Note on current policy: BTRC has been consolidating these layers, and IGW, ICX and IIG licences are being phased out on expiry in favour of a broader international-connectivity licence, so the structure described here is the classical one that exam questions are set on. <!-- verify -->
+
 4. **TSCM এর কাজ কী? VoIP পরিচালনায় কী কী সরঞ্জামের প্রয়োজন হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   TSCM — Technical Surveillance Counter-Measures
+   - TSCM is the practice of `detecting and neutralising illicit surveillance devices` — hidden microphones, cameras, GPS trackers, phone taps and other eavesdropping equipment. It is commonly called a "bug sweep".
+
+   What TSCM work involves
+   - `Radio frequency spectrum analysis` to detect transmitters hidden in a room.
+   - `Physical inspection` of furniture, ceilings, power outlets, telephone instruments and cabling.
+   - `Non-linear junction detection`, which finds electronic components even when they are switched off.
+   - `Thermal imaging` to spot devices generating heat behind surfaces.
+   - `Telephone and line analysis` to detect taps and unauthorised connections.
+   - `Wi-Fi and network scanning` for unauthorised access points and covert devices.
+   - Producing a report and recommending physical and procedural countermeasures.
+
+   Where it is used: government offices, boardrooms, embassies, courts, and any place where confidential discussions take place. For a regulator such as BTRC it also covers verifying that telecom facilities are free of unauthorised interception equipment. <!-- verify -->
+
+   Equipment needed to operate VoIP
+
+   Terminal equipment
+   - `IP phones` — handsets with a built-in Ethernet port and codec, usually powered over Ethernet (PoE).
+   - `Softphones` — software on a PC or smartphone, with a headset or the device's own microphone.
+   - `ATA (Analogue Telephone Adapter)` — lets an ordinary analogue telephone connect to a VoIP service.
+
+   Call control
+   - `IP PBX or SIP server` — Asterisk, FreePBX, 3CX or a hosted service. It handles registration, dial plans, extensions, voicemail, call routing and conferencing.
+   - `SIP trunk` from a provider, replacing traditional telephone lines.
+
+   Interconnection
+   - `VoIP gateway` — converts between IP and the PSTN, so calls can reach ordinary telephone numbers. It houses FXS ports (to analogue phones) and FXO ports (to telephone lines), or E1/T1 interfaces.
+   - `Session Border Controller (SBC)` — sits at the network edge for security, NAT traversal, topology hiding and codec conversion.
+
+   Network infrastructure
+   - `Internet connection` with adequate and stable upstream bandwidth — about 100 kbps per concurrent call with G.711, 30 kbps with G.729.
+   - `Router and switch with QoS`, marking voice traffic with DSCP EF so it is queued ahead of data. This is essential, not optional.
+   - `PoE switch` to power the phones over the same cable.
+   - `UPS`, because unlike a traditional telephone, an IP phone stops working in a power cut.
+
+   Software and protocols
+   - `SIP` for signalling, `RTP` over UDP for the media, `RTCP` for quality reporting, and codecs G.711, G.729 or Opus.
+   - `SRTP and TLS` for encryption, and a firewall configured for VoIP.
+
+   Quality targets to design for
+   - One-way delay under 150 ms, jitter under 30 ms, packet loss under 1 percent.
+
 5. **Write down the difference between IPoE and PPPoE.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839-840 (ET: N/A)]*
+
+   Answer:
+
+   | Point | PPPoE | IPoE |
+   |---|---|---|
+   | Full form | Point-to-Point Protocol over Ethernet | Internet Protocol over Ethernet |
+   | Nature | Connection-oriented — a PPP session is established first | Connectionless — IP packets go straight into Ethernet frames |
+   | Encapsulation | PPP frame inside an Ethernet frame | IP packet directly inside an Ethernet frame |
+   | Address assignment | Through IPCP during PPP negotiation | Through `DHCP` |
+   | Authentication | Built in — PAP or CHAP with username and password | None inherent; identity is derived from DHCP option 82, the MAC address, or the physical port |
+   | Client software | Required (a PPPoE dialler on the router or PC) | Not required — the device just uses DHCP |
+   | Overhead | 8 extra bytes, reducing the MTU from 1500 to `1492` | None; full 1500-byte MTU |
+   | MTU problems | Common — fragmentation and "black hole" issues need MSS clamping | None |
+   | Session state | The BRAS keeps per-subscriber session state | Stateless, or light DHCP lease state |
+   | Accounting | Easy and precise, per session | Harder; relies on DHCP lease and port mapping |
+   | Multicast / IPTV | Poorly suited; multicast must be replicated per session | Well suited — native multicast, which is why IPTV uses it |
+   | Scalability | Session table limits the BRAS | Higher; less state per subscriber |
+   | Setup speed | Slower — discovery, session and authentication stages | Faster; DHCP only |
+   | Typical use | Traditional DSL broadband | Fibre (GPON), cable, and triple-play networks |
+
+   PPPoE session stages
+   - Discovery (PADI, PADO, PADR, PADS) to find the access concentrator and open a session, then the PPP session itself with LCP, authentication and IPCP.
+
+   Which is better
+   - `IPoE` is preferred for modern fibre and triple-play networks: no client software, full 1500-byte MTU, faster connection, and native multicast for IPTV. Subscriber identification is handled instead by DHCP option 82, which tells the server exactly which port and which device the request came from.
+   - `PPPoE` remains valuable where per-subscriber authentication and accounting must be built into the access protocol itself, particularly on legacy DSL networks, and where the operator wants a username and password rather than trusting the physical port.
 
 ## Network Layer (Packet Fragmentation & Tunneling) (4)
 
