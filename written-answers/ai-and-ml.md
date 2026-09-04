@@ -1,29 +1,394 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 43 questions
+**Table of Contents** — 12 subtopics · 66 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
-| 2 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
-| 3 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
-| 4 | [Model Evaluation & Datasets](#model-evaluation--datasets-5) | 5 |
-| 5 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees-4) | 4 |
-| 6 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai-4) | 4 |
-| 7 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3) | 3 |
-| 8 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search-2) | 2 |
-| 9 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization-1) | 1 |
-| 10 | [Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis-1) | 1 |
-| 11 | [Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical-1) | 1 |
+| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-23) | 23 |
+| 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
+| 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
+| 4 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
+| 5 | [Model Evaluation & Datasets](#model-evaluation--datasets-5) | 5 |
+| 6 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees-4) | 4 |
+| 7 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai-4) | 4 |
+| 8 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3) | 3 |
+| 9 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search-2) | 2 |
+| 10 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization-1) | 1 |
+| 11 | [Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis-1) | 1 |
+| 12 | [Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
+## Artificial Intelligence & Machine Learning (23)
+
+1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
+(i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
+
+   Answer:
+
+   (i) Supervised Learning
+   - The model learns from a labeled dataset where each training example is mapped to a known target output.
+   - The goal is to learn a mapping function y = f(x) to predict outcomes for unseen data.
+   - Key categories: Classification (predicting discrete classes, e.g., Spam vs Ham) and Regression (predicting continuous numerical values, e.g., house prices).
+   - Common algorithms: Linear Regression, Logistic Regression, Decision Trees, SVM, Random Forest.
+
+   (ii) Unsupervised Learning
+   - The model is trained on unlabeled data without any predefined target outputs.
+   - It discovers hidden patterns, underlying structures, or natural groupings in the data.
+   - Key categories: Clustering (grouping similar items) and Dimensionality Reduction (compressing features while retaining variance).
+   - Common algorithms: K-Means Clustering, Hierarchical Clustering, PCA, Apriori.
+
+   (iii) Reinforcement Learning
+   - An agent learns through trial and error by interacting with an environment to maximize cumulative numerical rewards.
+   - It relies on feedback signals: rewards for desirable actions and penalties for sub-optimal actions.
+   - Core components: Agent, Environment, State, Action, Reward, Policy.
+   - Applications: Game playing (AlphaGo, Chess), autonomous robotics, self-driving navigation.
+
+2. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 70]]*
+
+   Answer: An activation function is applied to the weighted sum inside a neuron and decides the neuron's output. Its job is to introduce non-linearity so that the network can learn complex patterns.
+
+   - For one neuron: `output = f(w1*x1 + w2*x2 + ... + b)`, where `f` is the activation function.
+
+   Usability
+   - Adds non-linearity. Without it, a network of any depth collapses into a single linear equation, and real-world data is rarely linearly separable.
+   - Lets the network form curved decision boundaries instead of only straight ones.
+   - Keeps outputs in a usable range, so values do not blow up layer after layer.
+   - Must be differentiable, because backpropagation needs its derivative to update weights.
+
+   Common activation functions
+
+   | Function | Formula | Output range | Used in |
+   |---|---|---|---|
+   | Sigmoid | `s(x) = 1/(1 + e^(-x))` | (0, 1) | Binary classification output |
+   | Tanh | `f(x) = (e^x - e^(-x))/(e^x + e^(-x))` | (-1, +1) | Hidden layers, zero-centred |
+   | ReLU | `f(x) = max(0, x)` | [0, inf) | Hidden layers, the default |
+   | Leaky ReLU | `f(x) = x if x>0, else ax` | (-inf, inf) | Fixes the dying ReLU problem |
+   | Softmax | Converts scores to probabilities summing to 1 | (0, 1) | Multi-class output |
+
+   - ReLU trains faster because it avoids the vanishing gradient problem, while sigmoid and tanh slow down convergence in deep networks.
+
+3. **What is the difference between Supervised and Unsupervised learning?** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*
+
+   Answer:
+
+   | Feature | Supervised Learning | Unsupervised Learning |
+   |---|---|---|
+   | Training Data | Labeled dataset (Inputs paired with known outputs) | Unlabeled dataset (Only raw input features provided) |
+   | Goal | Predict target label or numerical value for new data | Discover hidden patterns, clusters, and structures |
+   | Feedback | Direct feedback (Calculates loss against true ground truth) | No feedback (Evaluates cluster cohesion or density) |
+   | Core Problem Types | Classification and Regression | Clustering and Dimensionality Reduction |
+   | Algorithm Examples | Linear Regression, SVM, Decision Trees, Naive Bayes | K-Means, Hierarchical Clustering, PCA, Isolation Forest |
+   | Real-World Use | Email spam detection, medical disease diagnosis | Customer market segmentation, anomaly detection |
+
+4. **Explain Different types of Cyber-attack.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 84-85]]*
+
+   Answer: A cyber attack is an intentional malicious attempt to breach, compromise, or disrupt computer systems, networks, or digital data.
+
+   Major Types of Cyber Attacks:
+   - Malware Attacks: Malicious software—including Viruses, Worms, Trojan Horses, Spyware, and Ransomware—designed to damage, steal, or lock sensitive digital assets.
+   - Phishing Attacks: Social engineering where attackers masquerade as trusted entities via email or websites to steal credentials, credit card details, or sensitive records.
+   - Denial of Service (DoS / DDoS): Flooding target servers, services, or network links with overwhelming traffic from multiple compromised zombie systems (botnets), exhausting resources and denying service to legitimate users.
+   - Man-in-the-Middle (MitM) Attacks: An attacker secretly intercepts, relays, and alters communication between two parties on an insecure network (e.g., via ARP spoofing or rogue Wi-Fi).
+   - SQL Injection (SQLi): Injecting malicious SQL statements into web input fields to manipulate backend relational databases and bypass authentication or dump data.
+   - Cross-Site Scripting (XSS): Injecting malicious client-side JavaScript scripts into trusted web applications viewed by other users to hijack sessions.
+
+5. **What is the CIA Triad? Explain its three components with examples.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222]]*
+
+   Answer: The CIA Triad is a foundational information security benchmark model designed to guide organizations in securing their data and computing assets.
+
+   Three Components:
+   - 1. Confidentiality:
+     - Ensures that sensitive data is accessible only to authorized personnel and protected from unauthorized disclosure.
+     - Mechanisms: Strong symmetric/asymmetric encryption (AES-256), multi-factor authentication (MFA), role-based access control (RBAC).
+     - Example: Encrypting customer banking transaction records so unauthorized third parties cannot read them.
+   - 2. Integrity:
+     - Guarantees that data remains accurate, complete, and uncorrupted throughout its lifecycle, protected from unauthorized modification or tampering.
+     - Mechanisms: Cryptographic hashing (SHA-256), digital signatures, message authentication codes (MAC), checksums.
+     - Example: Ensuring a financial wire transfer amount of $1,000 cannot be tampered with or altered to $10,000 in transit.
+   - 3. Availability:
+     - Ensures that systems, networks, and applications are reliably accessible to authorized users whenever needed.
+     - Mechanisms: Redundant hardware components, load balancers, regular data backups, disaster recovery sites, DDoS mitigation.
+     - Example: A commercial banking website remaining operational 24/7 with 99.99% uptime during peak business hours.
+
+6. **AI related Question [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+7. **A banking application requires a 4-digit PIN fo. login. If a wrong PIN is entered, an error message should be displayed. Design a test case for this scenario and explain with examples. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+   Answer:
+
+   Test Case Design for 4-Digit PIN Authentication:
+
+   | Test Case ID | Test Scenario | Input PIN | Expected Result | Pass/Fail Criteria |
+   |---|---|---|---|---|
+   | TC_PIN_01 | Valid PIN Entry | `1234` (Correct 4 digits) | Login successful; redirected to user dashboard | Pass |
+   | TC_PIN_02 | Invalid PIN Value | `9999` (Incorrect 4 digits) | Error message: "Invalid PIN. Please try again." | Pass |
+   | TC_PIN_03 | Short PIN Length | `123` (Only 3 digits) | Error message: "PIN must be exactly 4 digits." | Pass |
+   | TC_PIN_04 | Long PIN Length | `12345` (5 digits) | Truncated to 4 digits or rejects input | Pass |
+   | TC_PIN_05 | Non-Numeric Characters | `12A4` or `12#4` | Error message: "PIN must contain only numbers." | Pass |
+   | TC_PIN_06 | Blank / Null Input | ` ` (Empty field) | Error message: "PIN is required." | Pass |
+   | TC_PIN_07 | Account Lockout | 3 consecutive wrong attempts | Account locked: "Too many attempts. Account locked for 15 mins." | Pass |
+
+8. **Determine which pair of graphs are isomorphic. Justify your answer with reasoning or proof. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+   Answer: Two graphs G1 = (V1, E1) and G2 = (V2, E2) are isomorphic if there exists a bijective mapping f: V1 -> V2 such that any two vertices u, v in V1 are adjacent in G1 if and only if f(u), f(v) are adjacent in G2.
+
+   Necessary Invariant Conditions for Graph Isomorphism:
+   - Equal Number of Vertices: |V1| = |V2|
+   - Equal Number of Edges: |E1| = |E2|
+   - Identical Degree Sequence: The sorted list of vertex degrees must match exactly in both graphs.
+   - Cycle Structure Preservation: If G1 contains a cycle of length k, G2 must contain a corresponding cycle of length k.
+   - Subgraph Isomorphism: Complement graphs must also be isomorphic.
+
+9. **Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+   Answer:
+   কৃত্রিম বুদ্ধিমত্তা (AI) একবিংশ শতাব্দীর চতুর্থ শিল্পবিপ্লবের চালিকাশক্তি। এটি ডেটা প্রক্রিয়াকরণ, অটোমেশন এবং প্যাটার্ন বিশ্লেষণের মাধ্যমে উৎপাদনশীলতা ও কর্মদক্ষতা অভাবনীয় হারে বৃদ্ধি করেছে। তবে AI এর সুবিধার পাশাপাশি ডেটা গোপনীয়তা, অ্যালগরিদমিক পক্ষপাত (bias) এবং কর্মসংস্থান হারানোর মতো নৈতিক চ্যালেঞ্জ তৈরি হয়েছে। দায়িত্বশীল AI ব্যবহারের জন্য আন্তর্জাতিক মানদণ্ড, ডেটা সুরক্ষা আইন এবং কঠোর নৈতিক নীতিমালা প্রণয়ন অপরিহার্য। দক্ষ মানবসম্পদ ও নীতিগত কাঠামোর সুষম সমন্বয়ই প্রযুক্তির নিরাপদ ও টেকসই বিকাশ নিশ্চিত করতে পারে।
+
+10. **Write various types of information security against cyber threats.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 321]]*
+
+    Answer:
+    - Network Security: Deploying firewalls, Next-Gen IPS/IDS, and VPNs to secure network boundaries from unauthorized intrusions.
+    - Application Security: Adopting secure SDLC, input sanitization, vulnerability scanning, and Web Application Firewalls (WAF) to prevent SQLi and XSS.
+    - Endpoint Security: Protecting client workstations and mobile devices using Antivirus/EDR, patch management, and full-disk encryption.
+    - Cloud Security: Enforcing Zero Trust architecture, Identity and Access Management (IAM), and data isolation in cloud environments.
+    - Cryptographic Security: Using strong encryption algorithms (AES, RSA) and TLS protocols to secure data-at-rest and data-in-transit.
+    - Operational & Backup Security: Maintaining air-gapped immutable offline backups and regular disaster recovery audits.
+
+11. **What is trigger, explain with example. Why trigger needed?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 322]]*
+
+    Answer: A Database Trigger is a stored procedural code block in DBMS that automatically executes (fires) in response to specific events (such as `INSERT`, `UPDATE`, or `DELETE`) on a designated table or view.
+
+    Why Triggers are Needed:
+    - Enforcing Complex Business Rules: Validating conditions beyond simple SQL constraints.
+    - Automated Audit Logging: Tracking historical changes and tracking who modified records.
+    - Data Synchronization: Automatically updating related tables (e.g., maintaining denormalized total columns).
+    - Preventing Invalid Transactions: Aborting operations when business thresholds are violated.
+
+    Example (Audit Log Trigger):
+    ```sql
+    CREATE TRIGGER trg_employee_audit
+    AFTER UPDATE ON Employee
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO Employee_Audit (emp_id, old_salary, new_salary, change_date)
+        VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW());
+    END;
+    ```
+
+12. **The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days For example, if the given array is \{100, 180, 260, 310, 40, 535, 695\}, the maximum profit can be earned by buying on day 0, and selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 323]]*
+
+    Answer:
+
+    Problem Breakdown and Transactions:
+    - Transaction 1: Buy on Day 0 (price = 100) and Sell on Day 3 (price = 310) -> Profit = 310 - 100 = 210.
+    - Transaction 2: Buy on Day 4 (price = 40) and Sell on Day 6 (price = 695) -> Profit = 695 - 40 = 655.
+    - Total Maximum Profit = 210 + 655 = 865.
+
+    Algorithm (Greedy Approach):
+    - Whenever the stock price increases from day i-1 to day i, we accumulate the profit (price[i] - price[i-1]).
+
+    ```c
+    #include <stdio.h>
+
+    int maxProfit(int price[], int n) {
+        int profit = 0;
+        for (int i = 1; i < n; i++) {
+            if (price[i] > price[i - 1])
+                profit += (price[i] - price[i - 1]);
+        }
+        return profit;
+    }
+
+    int main(void) {
+        int prices[] = {100, 180, 260, 310, 40, 535, 695};
+        printf("Max Profit = %d\n", maxProfit(prices, 7)); // Output: 865
+        return 0;
+    }
+    ```
+    - Time Complexity: O(n), Space Complexity: O(1).
+
+13. **Children's addiction to smart mobile phones has become a concern in recent years. So write a letter to the editor of an English daily expressing your views on the responsible use of smart phones. (5 \times 1 = 5)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+
+    Answer:
+    To
+    The Editor,
+    The Daily Star, Dhaka.
+
+    Subject: Growing concern over children's addiction to smartphones.
+
+    Sir,
+    Through your esteemed newspaper, I wish to voice concern over the alarming surge in smartphone addiction among children. Excessive screen time impairs cognitive growth, disrupts sleep cycles, causes eye strain, and restricts physical outdoor activities. While digital literacy is valuable, uncontrolled exposure to video games and social media hampers real-world social development.
+
+    Parents must enforce strict screen-time limits, cultivate reading habits, and encourage outdoor sports. Simultaneously, academic institutions and media should promote responsible digital habits.
+
+    Yours sincerely,
+    A Concerned Citizen
+
+14. **ক) Deep Blue কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+খ) Android কী? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
+
+গ) Vitamin D এর ঘাটতি মানবদেহে কী ধরনের প্রভাব ফেলে? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
+
+    Answer:
+    - (a) Deep Blue: Deep Blue was an advanced chess-playing supercomputer developed by IBM. In May 1997, it made history by becoming the first computer system to defeat a reigning world chess champion, Garry Kasparov, in a six-game match under tournament conditions.
+    - (b) Android: Android is a Linux kernel-based, open-source operating system primarily designed for touchscreen mobile devices such as smartphones and tablets, developed by the Open Handset Alliance and commercially sponsored by Google.
+    - (c) Effects of Vitamin D Deficiency: Vitamin D deficiency impairs calcium absorption, leading to Rickets in children (soft, weak, and deformed bones) and Osteomalacia / Osteoporosis in adults (bone pain, reduced bone density, and higher fracture risk), alongside weakened immune defense.
+
+15. **(b) An organization is planning to deploy a wireless network. Explain the security considerations for setting up a secure Wi-Fi network including the authentication methods, encryption protocols and best practices to prevent unauthorized access. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331-332]]*
+
+    Answer:
+
+    Security Considerations for Enterprise Wi-Fi:
+    - 1. Authentication Methods:
+      - WPA3-Enterprise / 802.1X: Uses centralized RADIUS/EAP authentication with individual user credentials and digital certificates rather than shared passwords.
+      - Captive Portals with MFA: Enforcing multi-factor authentication for guest and corporate users.
+    - 2. Encryption Protocols:
+      - WPA3 with 192-bit cryptographic suite (or WPA2-Enterprise with AES-CCMP) to ensure confidentiality and protect against dictionary and KRACK attacks.
+    - 3. Best Practices to Prevent Unauthorized Access:
+      - Network Segmentation: Separating corporate data, IoT hardware, and guest users into distinct isolated VLANs.
+      - Rogue AP Detection: Enabling Wireless Intrusion Prevention Systems (WIPS) to detect unauthorized access points.
+      - Disabling WPS and Legacy Protocols: Turning off WPS, WEP, and TKIP.
+      - Changing Default Credentials & Firmware Patching: Enforcing complex administrative passwords and keeping AP firmware updated.
+
+16. **(b) What are the main security vulnerabilities commonly found in web applications? How would you address them? [3 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
+
+    Answer:
+
+    Main Vulnerabilities (OWASP Top 10) & Remedies:
+    - 1. SQL Injection (SQLi): Attackers insert malicious SQL queries via user inputs.
+      - Remedy: Use Parameterized Queries (Prepared Statements) and Object-Relational Mapping (ORM).
+    - 2. Cross-Site Scripting (XSS): Injecting malicious scripts into web pages viewed by other users.
+      - Remedy: Context-aware output encoding, strict input sanitization, and Content Security Policy (CSP).
+    - 3. Broken Authentication & Session Hijacking: Weak password policies and exposed session tokens.
+      - Remedy: Enforce Multi-Factor Authentication (MFA), `HttpOnly` and `Secure` cookie flags, and short session timeouts.
+    - 4. Cross-Site Request Forgery (CSRF): Forcing authenticated users to execute unintended actions.
+      - Remedy: Use unique, cryptographically secure anti-CSRF tokens and `SameSite` cookies.
+
+17. **(a) Explain the concept of social engineering. What are the common social engineering techniques? How can you define them? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
+
+    Answer: Social engineering is the psychological manipulation of people into performing actions or divulging confidential information (such as passwords and banking credentials) rather than hacking technical software vulnerabilities.
+
+    Common Techniques:
+    - Phishing: Sending deceptive emails mimicking legitimate organizations to lure victims into clicking malicious links or entering credentials.
+    - Spear Phishing: Highly personalized phishing targeted at a specific individual or organization.
+    - Pretexting: Fabricating an invented scenario (e.g., impersonating an IT technician) to manipulate the victim into disclosing sensitive access.
+    - Baiting: Offering a false promise (e.g., leaving an infected USB drive labeled "Salary Bonuses" in a public hallway) to entice the victim into executing malware.
+    - Vishing / Smishing: Voice phishing via phone calls or SMS phishing to extract sensitive data.
+    - Shoulder Surfing: Directly observing a person entering passwords or PINs in public.
+
+18. **(c) What are the main components of flowchart? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
+
+    Answer: A flowchart is a graphical representation of an algorithm or stepwise process using standardized geometric symbols.
+
+    Main Symbols and Components:
+    - 1. Oval (Terminal): Represents the `Start` or `Stop` (End) of the program execution.
+    - 2. Parallelogram (Input/Output): Represents data `Read` (input) or `Print`/Display (output) operations.
+    - 3. Rectangle (Process): Represents computational calculations, arithmetic assignments, or data processing.
+    - 4. Diamond (Decision): Represents a conditional branching statement (`True`/`False` or `Yes`/`No`).
+    - 5. Flowlines (Arrows): Indicate the exact direction of the logical program flow.
+    - 6. Circle (Connector): Connects overlapping or distant flow paths on the same page.
+
+19. **Three friends A, B, and C invest money in a business in the ratio 3:4:5. After 1 year, the profit is Tk36,000. How much profit gain by B?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+    Answer:
+    - Given investment ratio of A : B : C = 3 : 4 : 5.
+    - Sum of the ratio terms = 3 + 4 + 5 = 12.
+    - Total annual profit = Tk 36,000.
+
+    - Share of profit for B:
+      Profit of B = (4 / 12) * 36,000 = (1 / 3) * 36,000 = Tk 12,000.
+
+    - Result: B gains Tk 12,000.
+
+20. **Letter your younger brother about the importance of vocational training.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
+
+    Answer:
+    Dhaka, Bangladesh
+    Date: 15 February 2024
+
+    Dear Brother,
+    I hope you are doing well with your studies. Today I am writing to highlight the immense value of vocational and technical training in building a prosperous career.
+
+    While traditional academic degrees provide theoretical knowledge, vocational training equips you with practical, industry-ready skills such as software development, electrical engineering, network administration, and graphic design. These specialized technical competencies lead to faster employment, self-reliance, and lucrative freelancing opportunities in the competitive modern job market.
+
+    I encourage you to enroll in a practical vocational course alongside your regular education.
+
+    With love and best wishes,
+    Your elder brother
+
+21. **Draw bit error rate curve and comparison between BER and SNR and QPSK with explained.** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 373-374]]*
+
+    Answer: Bit Error Rate (BER) represents the ratio of errored bits received to total bits transmitted: BER = (Number of Error Bits) / (Total Bits).
+
+    BER vs SNR (Signal-to-Noise Ratio, Eb/N0):
+    - As SNR increases, signal clarity improves over background noise, causing the Bit Error Rate (BER) to decrease exponentially (waterfall curve).
+
+    ```
+    BER (log scale)
+    10^0  |\
+    10^-2 | \
+    10^-4 |  \    QPSK Waterfall Curve
+    10^-6 |   \
+          +------------------------- SNR (Eb/N0 in dB)
+    ```
+
+    QPSK (Quadrature Phase Shift Keying) Characteristics:
+    - Transmits 2 bits per symbol across 4 distinct carrier phases (45 deg, 135 deg, 225 deg, 315 deg).
+    - Theoretical BER formula: `Pb = Q(sqrt(2*Eb/N0))`.
+    - Offers double the bandwidth efficiency of BPSK while maintaining the exact same bit error rate performance for a given Eb/N0.
+
+22. **You have 1Gb data, but your computer can handle 64 kb data at a time. No how can you sort them. Explain your answer and write the pseudocode of the sorting code.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+
+    Answer: When dataset size (1 GB) exceeds available RAM (64 KB), **External Merge Sort** is used. It operates in two phases:
+
+    1. Sorting Phase:
+    - Read 64 KB chunks into RAM, sort each chunk using an in-memory sorting algorithm (e.g., QuickSort), and save it as a temporary sorted run on disk (giving 1 GB / 64 KB = 16,384 sorted files).
+
+    2. Merge Phase:
+    - Perform a K-way merge using a Min-Heap (priority queue) by reading input buffers from sorted runs and streaming the minimum elements to the final output file.
+
+    Pseudocode:
+    ```text
+    function ExternalMergeSort(inputFile, runSize = 64KB):
+        // Phase 1: Create sorted runs
+        runs = []
+        while not EOF(inputFile):
+            chunk = readBytes(inputFile, runSize)
+            sortInMemory(chunk) // QuickSort
+            runFile = createTempFile(chunk)
+            runs.append(runFile)
+
+        // Phase 2: K-Way Merge
+        minHeap = createMinHeap()
+        for each runFile in runs:
+            minHeap.insert(readNext(runFile), runFile)
+
+        while not minHeap.isEmpty():
+            minVal, runFile = minHeap.popMin()
+            writeToFinalOutput(minVal)
+            if not EOF(runFile):
+                minHeap.insert(readNext(runFile), runFile)
+    ```
+
+23. **A box contains 10 red and 10 black marbles. If you close your eyes and pick 3 marbles, what is the probability that all 3 marbles will be black?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+    Answer:
+    - Total marbles in box = 10 Red + 10 Black = 20 marbles.
+    - Number of ways to choose any 3 marbles from 20:
+      C(20, 3) = (20 * 19 * 18) / (3 * 2 * 1) = 1140
+    - Number of favorable ways to choose 3 black marbles from 10:
+      C(10, 3) = (10 * 9 * 8) / (3 * 2 * 1) = 120
+
+    - Probability:
+      P(3 Black) = C(10, 3) / C(20, 3) = 120 / 1140 = 12 / 114 = 2 / 19 = 0.1053 (or 10.53%)
+
 ## Artificial Intelligence & Expert Systems (8)
 
 1. **What is Artificial Intelligence?** *[Mongla Port Authority Assistant Programmer 2023 compact it 573 (ET: N/A)]*
 
-   Answer: Artificial Intelligence (AI) is the technology that lets machines perform tasks which normally need human intelligence — learning, reasoning, understanding language and making decisions.
+Answer: Artificial Intelligence (AI) is the technology that lets machines perform tasks which normally need human intelligence — learning, reasoning, understanding language and making decisions.
 
    How an AI system works
    - Data collection — a large dataset of images, text or sensor readings is gathered.
@@ -45,7 +410,7 @@
 
 2. **An artificial intelligence is an agent is an entity that continuously revious its enviornment.....** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 449 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the sentence was cut off in the paper. It is the standard definition of an `intelligent agent`, and the full statement and its explanation are given below.
+Answer: The question is `incomplete` — the sentence was cut off in the paper. It is the standard definition of an `intelligent agent`, and the full statement and its explanation are given below.
 
    The complete definition
    ```
@@ -142,7 +507,7 @@
 
 3. **Write PEAS for (a) Auto taxi (b) Automatic clinical test.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
 
-   Answer: PEAS is the standard way to describe the task environment of a rational agent. It stands for Performance measure, Environment, Actuators and Sensors — set these four and the agent's job is fully specified.
+Answer: PEAS is the standard way to describe the task environment of a rational agent. It stands for Performance measure, Environment, Actuators and Sensors — set these four and the agent's job is fully specified.
 
    | PEAS | (a) Auto taxi | (b) Automatic clinical test |
    |---|---|---|
@@ -157,13 +522,13 @@
 
 4. **Intelligence can not be measured only by intelligence test because it is related to other subjects. (True or False)** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
-   Answer: True.
+Answer: True.
 
    - An IQ test measures only a few abilities — logic, pattern recognition and memory. Intelligence also includes creativity, emotional intelligence, language skill and practical problem solving, so a single test cannot capture all of it.
 
 5. **Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)], [BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-   Answer: False.
+Answer: False.
 
    - Machine learning is a subset of Artificial Intelligence, not of cloud computing.
    - The correct nesting is `AI ⊃ Machine Learning ⊃ Deep Learning`.
@@ -171,14 +536,14 @@
 
 6. **What is the father of AI?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-   Answer: John McCarthy is known as the Father of Artificial Intelligence.
+Answer: John McCarthy is known as the Father of Artificial Intelligence.
 
    - He coined the term "Artificial Intelligence" in the 1955 proposal for the Dartmouth Summer Research Project, held in 1956 — the event that founded AI as a field.
    - He also created the LISP programming language (1958), which became the standard language of AI research for decades.
 
 7. **(i) ‘Knowledge’ কী? Human Knowledge কে Computer এ প্রকাশ করার একটি flow diagram দেখান।** *[BPSC Assistant Network Engineer 2020 compact it 952 (ET: N/A)]*
 
-   Answer: Knowledge is processed information along with the rules and relations that let a system reason and take a decision. Data is raw, information is data with meaning, and knowledge is information a system can actually act upon.
+Answer: Knowledge is processed information along with the rules and relations that let a system reason and take a decision. Data is raw, information is data with meaning, and knowledge is information a system can actually act upon.
 
    Types of knowledge
    - Declarative — facts, "what is true" (Dhaka is the capital of Bangladesh).
@@ -205,7 +570,7 @@
 
 8. **Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?** *[Sadharan Bima Corporation Programmer/ AP/AME 2020 compact it 1002 (ET: DU)]*
 
-   Answer: Alan Turing.
+Answer: Alan Turing.
 
    - He led the team at Bletchley Park that broke the German Enigma cipher during World War II, building the electro-mechanical machine called the Bombe.
    - His Turing machine model and the Turing Test (1950) became a foundation of computer science and AI. He is called the Father of Computer Science, while John McCarthy is called the Father of AI.
@@ -214,7 +579,7 @@
 
 1. **(c) What is activation function in Deep Neural Network? What is the usability of this?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
 
-   Answer: An activation function is applied to the weighted sum inside a neuron and decides the neuron's output. Its job is to introduce non-linearity so that the network can learn complex patterns.
+Answer: An activation function is applied to the weighted sum inside a neuron and decides the neuron's output. Its job is to introduce non-linearity so that the network can learn complex patterns.
 
    - For one neuron: `output = f(w₁x₁ + w₂x₂ + ... + b)`, where `f` is the activation function.
 
@@ -239,7 +604,7 @@
 
 2. **What does the axon of neural network do?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
-   Answer: The axon is the output line of a neuron. It carries the signal produced by the cell body away to other neurons.
+Answer: The axon is the output line of a neuron. It carries the signal produced by the cell body away to other neurons.
 
    - A biological neuron has three parts: dendrites receive incoming impulses, the soma (cell body) sums them, and the axon transmits the result onward.
    - The junction where an axon meets the next dendrite is called a synapse.
@@ -258,7 +623,7 @@
 
 3. **Write difference between machine learning and deep learning.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
 
-   Answer: Deep learning is a subset of machine learning that uses multi-layer neural networks instead of statistical algorithms.
+Answer: Deep learning is a subset of machine learning that uses multi-layer neural networks instead of statistical algorithms.
 
    | Point | Machine Learning | Deep Learning |
    |---|---|---|
@@ -273,7 +638,7 @@
 
 4. **What is Deep learning?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-   Answer: Deep learning is a branch of machine learning that mimics the neural network of the human brain. It uses networks with many hidden layers to discover patterns directly from large amounts of unstructured data, without being told which features to look at.
+Answer: Deep learning is a branch of machine learning that mimics the neural network of the human brain. It uses networks with many hidden layers to discover patterns directly from large amounts of unstructured data, without being told which features to look at.
 
    - "Deep" refers to the number of hidden layers stacked between input and output.
    - Each layer learns a higher-level feature — early layers find edges, middle layers find shapes, later layers find whole objects.
@@ -291,7 +656,7 @@
 
 5. **What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
-   Answer: An Artificial Neural Network (ANN) is a computing model built from layers of connected nodes called neurons, designed after the way the human brain processes signals.
+Answer: An Artificial Neural Network (ANN) is a computing model built from layers of connected nodes called neurons, designed after the way the human brain processes signals.
 
    - Structure: input layer → one or more hidden layers → output layer.
    - Every connection carries a weight. A neuron computes `Σ(wᵢxᵢ) + b`, applies an activation function, and passes the result forward.
@@ -310,7 +675,7 @@
 
 6. **Write LSTM gates name in AI.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
 
-   Answer: LSTM (Long Short-Term Memory) has three gates.
+Answer: LSTM (Long Short-Term Memory) has three gates.
 
    - Forget gate — looks at the previous state and the new input and decides which parts of the old cell state are no longer relevant. Output near 0 means forget, near 1 means keep.
    - Input gate — acts as a filter on the new candidate memory, deciding which parts of the new information are worth storing in the cell state.
@@ -322,7 +687,7 @@
 
 7. **Draw the single layer of ANN.** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
 
-   Answer: A single layer ANN, called a perceptron, is a feed-forward network with only an input layer and an output layer — no hidden layer.
+Answer: A single layer ANN, called a perceptron, is a feed-forward network with only an input layer and an output layer — no hidden layer.
 
    ```mermaid
    flowchart LR
@@ -341,7 +706,7 @@
 
 8. **What is artificial Neural Network (ANN)? Based on ANN, describe input & hidden layer, weight and activation function.** *[ICT Ministry Assistant Programmer 2017 compact it 1237-1238 (ET: N/A)]*
 
-   Answer: An Artificial Neural Network is a model made of layers of connected neurons that learns a mapping from input to output by adjusting the weights on its connections.
+Answer: An Artificial Neural Network is a model made of layers of connected neurons that learns a mapping from input to output by adjusting the weights on its connections.
 
    ```mermaid
    flowchart LR
@@ -376,6 +741,10 @@
  * **(ii) Unsupervised learning**
  * **(iii) Reinforcement learning**
 
+* **(i) Supervised learning**
+ * **(ii) Unsupervised learning**
+ * **(iii) Reinforcement learning**
+
    Answer:
 
    (i) Supervised learning
@@ -401,7 +770,7 @@
 
 2. **a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
-   Answer: Data mining is the process of discovering useful patterns, rules and relationships hidden inside a large dataset so that the result can support a business decision. It is often used as a synonym for KDD (Knowledge Discovery from Data), although strictly it is one step of the KDD process.
+Answer: Data mining is the process of discovering useful patterns, rules and relationships hidden inside a large dataset so that the result can support a business decision. It is often used as a synonym for KDD (Knowledge Discovery from Data), although strictly it is one step of the KDD process.
 
    KDD process steps
    - Selection — pick the relevant subset of data.
@@ -422,7 +791,7 @@
 
 3. **Briefly explain supervised learning, unsupervised learning & reinforcement learning.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1341 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    - Supervised learning — learns from labelled data where both input and correct output are given. The model learns to predict the output for new input. Used for classification and regression. Example: predicting whether an email is spam.
    - Unsupervised learning — learns from unlabelled data and finds hidden groups or patterns by itself. Used for clustering, association and dimensionality reduction. Example: grouping customers by buying habit.
@@ -438,7 +807,7 @@
 
 4. **(b) What is the difference between supervised and unsupervised learning? Explain with examples.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)], [SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)], [DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    | Point | Supervised learning | Unsupervised learning |
    |---|---|---|
@@ -456,14 +825,14 @@
 
 5. **Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised learning or unsupervised learning problem. Explain in one sentence.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 
-   Answer: It is a supervised learning problem — the dataset already carries the correct label (diabetic / not diabetic), so the model learns from those labelled examples to predict the class of a new patient.
+Answer: It is a supervised learning problem — the dataset already carries the correct label (diabetic / not diabetic), so the model learns from those labelled examples to predict the class of a new patient.
 
    - More precisely it is binary classification, because the output has only two possible classes.
    - Suitable algorithms: logistic regression, decision tree, random forest, SVM, KNN.
 
 6. **What do you mean by machine learning? Name three machine learning application in our daily life?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 680 (ET: N/A)]*
 
-   Answer: Machine learning is a branch of Artificial Intelligence in which a computer learns patterns from data and improves its performance with experience, instead of being programmed with a fixed rule for every case.
+Answer: Machine learning is a branch of Artificial Intelligence in which a computer learns patterns from data and improves its performance with experience, instead of being programmed with a fixed rule for every case.
 
    - The algorithm is given training data, it builds a model from that data, and the model then makes predictions on new data.
    - Main types: supervised, unsupervised and reinforcement learning.
@@ -477,7 +846,7 @@
 
 1. **Write down the Role of Validation set in ML.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
-   Answer: The validation set is the part of the data kept aside to tune the model and to judge its performance on data it did not train on — all before the final test.
+Answer: The validation set is the part of the data kept aside to tune the model and to judge its performance on data it did not train on — all before the final test.
 
    - Hyperparameter tuning — choose the learning rate, number of layers, tree depth, value of K, and so on.
    - Model selection — compare several trained models and keep the one that scores best on validation.
@@ -490,6 +859,12 @@
 
 2. **(b) Given following values:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*
  * **True Positive \text{(TP)} = 560**
+ * **True Negative \text{(TN)} = 330**
+ * **False Positive \text{(FP)} = 60**
+ * **False Negative \text{(FN)} = 50**
+**Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score**
+
+* **True Positive \text{(TP)} = 560**
  * **True Negative \text{(TN)} = 330**
  * **False Positive \text{(FP)} = 60**
  * **False Negative \text{(FN)} = 50**
@@ -527,7 +902,7 @@
 
 3. **b) How can we validate and check reliability of a machine learning model?** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
-   Answer: A model is validated by testing it on data it has never seen, and by checking that the score stays stable across different splits of that data.
+Answer: A model is validated by testing it on data it has never seen, and by checking that the score stays stable across different splits of that data.
 
    (a) Data splitting
    - Hold-out method — split into train, validation and test sets, roughly 70:15:15.
@@ -548,7 +923,7 @@
 
 4. **You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss function for this problem.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 746 (ET: N/A)]*
 
-   Answer: For binary classification with three features, the standard model is logistic regression.
+Answer: For binary classification with three features, the standard model is logistic regression.
 
    Step 1 - linear combination of the features
    - `z = w₁·f₁ + w₂·f₂ + w₃·f₃ + b`
@@ -582,7 +957,7 @@
 
 5. **Write down the difference between test set and validation set.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    | Point | Validation set | Test set |
    |---|---|---|
@@ -600,7 +975,7 @@
 
 1. **What is Machine Learning? Mention some real-life applications.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: Machine learning is a field of Artificial Intelligence in which a computer learns rules from data and improves with experience, instead of being given a fixed rule for every case.
+Answer: Machine learning is a field of Artificial Intelligence in which a computer learns rules from data and improves with experience, instead of being given a fixed rule for every case.
 
    - A learning algorithm is fed training data, builds a model from it, and the model then predicts results for new data.
    - Three types: supervised (labelled data), unsupervised (unlabelled data) and reinforcement (learning from reward).
@@ -616,7 +991,7 @@
 
 2. **Decisiontree model in Machine Learning.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
-   Answer: A decision tree is a supervised learning model shaped like a tree, where each internal node tests one feature, each branch is an outcome of that test, and each leaf gives the final class or value.
+Answer: A decision tree is a supervised learning model shaped like a tree, where each internal node tests one feature, each branch is an outcome of that test, and each leaf gives the final class or value.
 
    Structure
    - Root node — the starting point, holding the whole training set.
@@ -637,7 +1012,7 @@
 
 3. **What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 339 (ET: BIBM)]*
 
-   Answer: Machine learning is the branch of AI in which a system learns patterns from data and improves its performance on a task without being explicitly programmed for every rule.
+Answer: Machine learning is the branch of AI in which a system learns patterns from data and improves its performance on a task without being explicitly programmed for every rule.
 
    | Point | Supervised | Unsupervised | Reinforcement |
    |---|---|---|---|
@@ -651,7 +1026,7 @@
 
 4. **(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 605 (ET: N/A)]*
 
-   Answer: A decision tree is a supervised learning model that reaches a decision by asking a series of questions about the features, one at a time, until it arrives at a leaf holding the answer.
+Answer: A decision tree is a supervised learning model that reaches a decision by asking a series of questions about the features, one at a time, until it arrives at a leaf holding the answer.
 
    - Root node — the first and most informative question.
    - Internal node — a test on one feature.
@@ -679,7 +1054,7 @@
 
 1. **Imagine a government agency is developing an AI-based citizen service chatbot that can automatically generate responses, summarize documents, and provide policy information to citizens. Explain how Generative AI can be used to power such a system, and how Explainable AI (XAI) techniques can ensure that its responses are transparent, reliable, and accountable.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1428 (ET: E-Zone)]*
 
-   Answer:
+Answer:
 
    (a) How Generative AI powers the chatbot
    - A Large Language Model built on the Transformer architecture can write a fresh reply for each citizen question instead of picking from fixed templates.
@@ -701,7 +1076,7 @@
 
 2. **b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1346 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Generative AI (GAI)
    - AI that creates original content — text, image, audio, video or code — in response to a user's prompt, rather than only classifying or predicting.
@@ -723,11 +1098,11 @@
 
 3. **LLM stands for __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: Large Language Model.
+Answer: Large Language Model.
 
 4. **What is ChatGPT? Write down the Pros and cons of ChatGPT.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
-   Answer: ChatGPT is a conversational AI chatbot developed by OpenAI. It is built on the GPT (Generative Pre-trained Transformer) family of large language models and replies to questions in natural language.
+Answer: ChatGPT is a conversational AI chatbot developed by OpenAI. It is built on the GPT (Generative Pre-trained Transformer) family of large language models and replies to questions in natural language.
 
    - It is pre-trained on a very large text corpus, then refined with RLHF (Reinforcement Learning from Human Feedback) so its replies stay helpful and safe.
    - It keeps conversation context, so follow-up questions work naturally.
@@ -751,7 +1126,7 @@
 
 1. **Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how each approach differs in its learning mechanism, data usage, and real-world applications.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1427 (ET: E-Zone)]*
 
-   Answer:
+Answer:
 
    Reinforcement Learning (RL)
    - An agent learns by acting inside an environment and receiving a reward or penalty for every action.
@@ -777,7 +1152,7 @@
 
 2. **Explain reinforcement learning in the field of Machine Learning?** *[BTCL Assistant Manager (Technical) 2023 compact it 593 (ET: BUET)]*
 
-   Answer: Reinforcement learning is a type of machine learning in which an agent learns a sequence of decisions by interacting with an environment, receiving a reward for good actions and a penalty for bad ones.
+Answer: Reinforcement learning is a type of machine learning in which an agent learns a sequence of decisions by interacting with an environment, receiving a reward for good actions and a penalty for bad ones.
 
    Main elements
    - Agent — the learner or decision maker.
@@ -803,7 +1178,7 @@
 
 3. **Weak and strong learner ensemble learning in Machine learning.** *[GTCL Assistant Engineer (CSE) 2022 compact it 686 (ET: BUET)]*
 
-   Answer: Ensemble learning combines several base models so that the group performs better than any single model alone.
+Answer: Ensemble learning combines several base models so that the group performs better than any single model alone.
 
    Weak learner
    - A model that performs only slightly better than random guessing — just above 50% on a balanced binary problem.
@@ -829,7 +1204,7 @@
 
 1. **Write down the difference between informed and uninformed search algorithm.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
-   Answer: Uninformed search explores the state space blindly using only the problem definition, while informed search uses extra domain knowledge — a heuristic — to move towards the goal faster.
+Answer: Uninformed search explores the state space blindly using only the problem definition, while informed search uses extra domain knowledge — a heuristic — to move towards the goal faster.
 
    | Point | Uninformed (Blind) Search | Informed (Heuristic) Search |
    |---|---|---|
@@ -846,7 +1221,7 @@
 
 2. **How $\alpha$-$\beta$ pruning is better than minimax search in game planning?** *[ICT Ministry Assistant Programmer 2017 compact it 1243 (ET: N/A)]*
 
-   Answer: Alpha-beta pruning is minimax with a cut-off rule. It returns exactly the same move as minimax but skips branches that cannot change the result.
+Answer: Alpha-beta pruning is minimax with a cut-off rule. It returns exactly the same move as minimax but skips branches that cannot change the result.
 
    How it works
    - Alpha (α) — the best score the Maximizer can guarantee so far. Starts at `−∞`.
@@ -867,7 +1242,7 @@
 
 1. **In machine learning. What will happen, when a machine is highly trained up a slight trained up?** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 395 (ET: BUET)]*
 
-   Answer: Training a model too much causes overfitting, and training it too little causes underfitting. Both give poor results on new, unseen data.
+Answer: Training a model too much causes overfitting, and training it too little causes underfitting. Both give poor results on new, unseen data.
 
    Highly trained — overfitting
    - The model learns the noise and quirks of the training data along with the real pattern.
@@ -892,7 +1267,7 @@
 
 1. **Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1364 (ET: BUET)]*
 
-   Answer: The Apriori algorithm is used for market basket analysis. It is an unsupervised association rule mining algorithm that finds which items customers buy together. FP-Growth is a faster alternative on very large datasets.
+Answer: The Apriori algorithm is used for market basket analysis. It is an unsupervised association rule mining algorithm that finds which items customers buy together. FP-Growth is a faster alternative on very large datasets.
 
    Three measures used
    - Support — how often an itemset appears: `Support(X) = (transactions containing X) / (total transactions)`
@@ -920,7 +1295,7 @@
 
 1. **Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-linkage hierarchical clustering technique.** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 473 (ET: N/A)]*
 
-   Answer: In agglomerative hierarchical clustering every point starts as its own cluster, and the two closest clusters are merged first. Single linkage means the distance between two clusters is the shortest distance between any of their members. So the first merge is simply the closest pair of points.
+Answer: In agglomerative hierarchical clustering every point starts as its own cluster, and the two closest clusters are merged first. Single linkage means the distance between two clusters is the shortest distance between any of their members. So the first merge is simply the closest pair of points.
 
    Formula: `d(A, B) = √[(x₂ − x₁)² + (y₂ − y₁)²]`
 

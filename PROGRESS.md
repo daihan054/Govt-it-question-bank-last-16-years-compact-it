@@ -2,35 +2,35 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 243 / 243 done**  ·  **Questions: 3168 answered, 0 skipped, 3168 total**
+**Subtopics: 216 / 257 done**  ·  **Questions: 3184 answered, 3 skipped, 3404 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
-| `ai-and-ml.md` | IT | 11 / 11 | 43 | 0 | 43 |
-| `algorithm.md` | IT | 14 / 14 | 134 | 0 | 134 |
-| `bangla.md` | General | 6 / 6 | 123 | 0 | 123 |
-| `c-programming.md` | IT | 9 / 9 | 270 | 0 | 270 |
+| `ai-and-ml.md` | IT | 12 / 12 | 65 | 1 | 66 |
+| `algorithm.md` | IT | 13 / 15 | 134 | 0 | 144 |
+| `bangla.md` | General | 5 / 6 | 124 | 0 | 139 |
+| `c-programming.md` | IT | 7 / 9 | 270 | 0 | 284 |
 | `cloud-computing.md` | IT | 9 / 9 | 38 | 0 | 38 |
-| `compiler-and-toc.md` | IT | 5 / 5 | 25 | 0 | 25 |
-| `computer-fundamental.md` | IT | 10 / 10 | 153 | 0 | 153 |
-| `computer-network-security.md` | IT | 14 / 14 | 184 | 0 | 184 |
-| `computer-networks.md` | IT | 33 / 33 | 507 | 0 | 507 |
-| `data-structure.md` | IT | 8 / 8 | 97 | 0 | 97 |
-| `database.md` | IT | 19 / 19 | 294 | 0 | 294 |
-| `dld.md` | IT | 9 / 9 | 148 | 0 | 148 |
+| `compiler-and-toc.md` | IT | 5 / 6 | 25 | 0 | 26 |
+| `computer-fundamental.md` | IT | 9 / 10 | 153 | 1 | 208 |
+| `computer-network-security.md` | IT | 14 / 15 | 185 | 0 | 198 |
+| `computer-networks.md` | IT | 24 / 33 | 508 | 0 | 545 |
+| `data-structure.md` | IT | 7 / 10 | 97 | 0 | 102 |
+| `database.md` | IT | 16 / 20 | 294 | 0 | 306 |
+| `dld.md` | IT | 8 / 10 | 147 | 0 | 154 |
 | `electrical-and-electronics.md` | IT | 9 / 9 | 39 | 0 | 39 |
-| `english.md` | General | 8 / 8 | 112 | 0 | 112 |
+| `english.md` | General | 7 / 8 | 112 | 0 | 113 |
 | `gk.md` | General | 4 / 4 | 214 | 0 | 214 |
 | `image-processing.md` | IT | 5 / 5 | 7 | 0 | 7 |
-| `math.md` | General | 15 / 15 | 96 | 0 | 96 |
-| `microprocessor-and-computer-architecture.md` | IT | 11 / 11 | 135 | 0 | 135 |
+| `math.md` | General | 12 / 15 | 85 | 1 | 97 |
+| `microprocessor-and-computer-architecture.md` | IT | 10 / 11 | 135 | 0 | 136 |
 | `ms-office.md` | IT | 1 / 1 | 1 | 0 | 1 |
-| `oop.md` | IT | 9 / 9 | 117 | 0 | 117 |
-| `operating-system.md` | IT | 12 / 12 | 196 | 0 | 196 |
-| `programming-languages.md` | IT | 1 / 1 | 6 | 0 | 6 |
-| `software-engineering.md` | IT | 14 / 14 | 152 | 0 | 152 |
-| `web-technology.md` | IT | 7 / 7 | 77 | 0 | 77 |
+| `oop.md` | IT | 9 / 10 | 118 | 0 | 128 |
+| `operating-system.md` | IT | 11 / 15 | 198 | 0 | 209 |
+| `programming-languages.md` | IT | 1 / 2 | 6 | 0 | 13 |
+| `software-engineering.md` | IT | 12 / 15 | 152 | 0 | 157 |
+| `web-technology.md` | IT | 6 / 7 | 77 | 0 | 80 |
 
 ## Skipped questions
 
-None yet.
+3 incomplete questions skipped.
