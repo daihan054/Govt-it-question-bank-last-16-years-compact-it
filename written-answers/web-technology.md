@@ -802,25 +802,16 @@ Answer: (Answered in English, as required for IT topics.) Structure of an HTML w
     - The tree structure this creates is exactly what the browser builds as the `DOM`: `<html>` is the root, `<head>` and `<body>` are its children and each other's siblings, and every nested element becomes a child node. JavaScript then manipulates that same tree.
 
 11. **(খ) নিচের লিস্টটি তৈরি করার জন্য HTML কোড লিখুন :** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 609 (ET: N/A)]*
-   1. Fruits
-      (a) Mango
-      (b) Orange
-   2. Vagetables
-      - Green Capsicum
-      - Yellow Capsicum
-      - Red Capsicum
+    1. Fruits
+       (a) Mango
+       (b) Orange
+    2. Vegetables
+       - Green Capsicum
+       - Yellow Capsicum
+       - Red Capsicum
 
-1. Fruits
-      (a) Mango
-      (b) Orange
-   2. Vagetables
-      - Green Capsicum
-      - Yellow Capsicum
-      - Red Capsicum
+Answer: The list requires an ordered list (`<ol>`) at the outer level, with a nested ordered list using lower-case letters under "Fruits" and a nested unordered list (`<ul>`) under "Vegetables".
 
-    Answer: (Answered in English, as required for IT topics.) The list needs an `ordered list` at the outer level, with a `nested ordered list` using lower-case letters under "Fruits" and a `nested unordered list` under "Vegetables".
-
-    The HTML code
     ```html
     <ol type="1">
         <li>Fruits
