@@ -8480,35 +8480,603 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **Nyquist math: See in Data Communication & Networking Chapter** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
+   Answer: The question points at the standard Nyquist material, so the theorem and the worked forms used in exams are given.
+
+   Two Nyquist results — do not confuse them
+
+   1. Nyquist bit rate (maximum data rate of a NOISELESS channel)
+   ```
+   C = 2 × B × log2(L)
+   ```
+   - C = capacity in bps, B = bandwidth in Hz, L = number of signal (voltage) levels.
+   - Increasing L increases the bit rate, but the receiver must distinguish more levels, so noise sets a practical limit.
+
+   2. Nyquist sampling theorem (for digitising an analogue signal)
+   ```
+   Sampling rate >= 2 × f_max
+   ```
+   - Sampling below this rate causes aliasing, which cannot be undone afterwards.
+   - Nyquist interval = 1 ÷ (2 f_max).
+
+   Shannon capacity (for a NOISY channel), always used alongside
+   ```
+   C = B × log2(1 + SNR)      where SNR = signal power / noise power
+   SNR(dB) = 10 log10(SNR)    and   SNR = 10^(SNR_dB / 10)
+   ```
+
+   Worked examples
+
+   - Noiseless, B = 3 kHz, 2 levels: C = 2 × 3000 × log2(2) = `6000 bps`.
+   - Noiseless, B = 3 kHz, 4 levels: C = 2 × 3000 × log2(4) = `12,000 bps`.
+   - Noisy telephone line, B = 3000 Hz, SNR = 3162: C = 3000 × log2(3163) ≈ `34,860 bps`.
+   - Digitising voice limited to 4 kHz: sampling rate >= 8000 samples/s; with 8-bit PCM this gives 64 kbps, the DS-0 rate.
+
+   How to use them together
+   - Compute both. Shannon gives the theoretical ceiling set by noise; Nyquist tells you how many levels are needed to reach a chosen rate. The lower of the two is the practical limit, and the number of levels is then rounded to a power of 2.
+
 2. **Suppose that a digitized TV picture is to be transmitted from a source that uses a matrix of 480 × 500 picture elements (pixels), where each pixel can take on one of 32 intensity values. Assume that 30 pictures are sent per second. (This digital source is roughly equivalent to broadcast TV standards that have been adopted). Find the source rate R (bps).** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
+
+   Answer:
+
+   Given
+   - Picture matrix = 480 × 500 pixels
+   - Each pixel has one of 32 intensity values
+   - 30 pictures per second
+
+   Step 1 — pixels per picture
+   ```
+   480 × 500 = 240,000 pixels
+   ```
+
+   Step 2 — bits per pixel
+   - 32 possible values need log2(32) bits.
+   ```
+   log2(32) = 5 bits per pixel
+   ```
+
+   Step 3 — bits per picture
+   ```
+   240,000 × 5 = 1,200,000 bits per picture
+   ```
+
+   Step 4 — source rate
+   ```
+   R = 1,200,000 × 30 = 36,000,000 bps = 36 Mbps
+   ```
+
+   - Answer: `R = 36 Mbps`.
+   - The general formula is R = (rows × columns) × log2(levels) × frames per second.
+   - This is why raw video must be compressed: 36 Mbps is far more than a broadcast channel can carry, so MPEG and H.264/H.265 reduce it by an order of magnitude or more.
 
 3. **One of the drawbacks of a small packet size is that a large function of link bandwidth is consumed by overhead bytes. To this end, supposed that the packet consists of P bytes and 5 bytes of header. Consider sending a digitally encoded voice source directly. Suppose the source is encoded a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the packetization delay. Determine the packetization delay for length L-1500 bytes (roughly corresponding to maximum-sized Ethernet packet).** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
 
+   Answer: Packetization delay is the time taken to fill one packet with data at the source's encoding rate.
+
+   Given
+   - Source encoding rate = 128 kbps = 128,000 bits per second
+   - Packet payload L = 1500 bytes
+   - Header = 5 bytes (this does not affect the filling time, only the overhead)
+
+   Step 1 — convert the payload to bits
+   ```
+   1500 bytes × 8 = 12,000 bits
+   ```
+
+   Step 2 — time to fill the packet
+   ```
+   Packetization delay = payload bits / source rate
+                       = 12,000 / 128,000
+                       = 0.09375 s
+                       = 93.75 milliseconds
+   ```
+
+   - Answer: `93.75 ms`.
+
+   Overhead for comparison
+   ```
+   Overhead fraction = 5 / (1500 + 5) = 0.332 %
+   ```
+
+   The trade-off the question is illustrating
+
+   | Payload L | Packetization delay | Header overhead |
+   |---|---|---|
+   | 50 bytes | 3.125 ms | 9.09 % |
+   | 200 bytes | 12.5 ms | 2.44 % |
+   | 1500 bytes | 93.75 ms | 0.33 % |
+
+   - A large packet is very efficient in bandwidth but adds a long delay before transmission even begins.
+   - For voice this matters enormously: total one-way delay should stay under about 150 ms for a natural conversation, and 93.75 ms of packetization alone would leave almost no budget for propagation, queuing and jitter buffering.
+   - That is exactly why VoIP uses small packets — typically 20 ms of audio, about 160 bytes at 64 kbps — accepting the higher header overhead in exchange for low delay.
+   - If the 1500 bytes is taken to include the 5-byte header, the payload is 1495 bytes and the delay is 93.4375 ms; the conclusion is unchanged.
+
 4. **(ক) Bandwidth এবং Through put এর মধ্যে পার্থক্য কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 628 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.)
+
+   | Point | Bandwidth | Throughput |
+   |---|---|---|
+   | Meaning | The maximum capacity of the link — theoretical | The data rate actually achieved — practical |
+   | Nature | A fixed property of the link | Varies moment to moment |
+   | Value | Always the higher figure | Always lower than bandwidth |
+   | Measured in | bps, Mbps, Gbps (or Hz for analogue) | bps, Mbps, Gbps |
+   | Determined by | Medium, hardware and technology | Congestion, errors, protocol overhead, distance, device performance |
+   | Example | A 100 Mbps Ethernet port | 85 Mbps measured by a file copy on that port |
+   | Can it be changed | Only by upgrading the link | Improves by reducing congestion, errors and overhead |
+
+   Why throughput is always lower
+   - Protocol overhead — Ethernet, IP and TCP headers consume part of every frame.
+   - Congestion and queuing when several users share the link.
+   - Retransmissions caused by errors or loss.
+   - The slowest link on the path (the bottleneck) caps the whole route.
+   - Processing limits in the end devices themselves.
+   - Half-duplex operation, collisions and, on wireless, interference and airtime sharing.
+
+   Related term
+   - `Goodput` is narrower still: it counts only the useful application data delivered, excluding headers and retransmissions.
+
+   - Analogy: bandwidth is the number of lanes on a road; throughput is how many cars actually get through in an hour, given traffic lights, congestion and accidents.
 
 5. **The power of signal is 10\text{mW} and the power of the noise is 1\mu\text{W}; What are the values of \text{SNR} and \text{SNR}_{\text{dB}}?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 651 (ET: BUET)]*
 
+   Answer:
+
+   Given
+   - Signal power = 10 mW = 10 × 10^-3 W = 0.01 W
+   - Noise power = 1 µW = 1 × 10^-6 W
+
+   Step 1 — SNR (a ratio, so it has no unit)
+   ```
+   SNR = signal power / noise power
+       = (10 × 10^-3) / (1 × 10^-6)
+       = 10 × 10^3
+       = 10,000
+   ```
+
+   Step 2 — SNR in decibels
+   ```
+   SNR(dB) = 10 × log10(SNR)
+           = 10 × log10(10,000)
+           = 10 × 4
+           = 40 dB
+   ```
+
+   | Quantity | Value |
+   |---|---|
+   | SNR | `10,000` |
+   | SNR(dB) | `40 dB` |
+
+   - Both powers must be in the same unit before dividing; that is the usual source of error.
+   - Useful check: every factor of 10 in the power ratio adds 10 dB, so 10,000 = 10^4 gives exactly 40 dB.
+   - A higher SNR means a cleaner channel and, by Shannon's formula C = B log2(1 + SNR), a higher possible data rate.
+
 6. **We need to send 265\text{ kbps} over a noiseless channel with a bandwidth of 20\text{kHz}. How many signal levels do we need?** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 652 (ET: BUET)]*
+
+   Answer: The channel is noiseless, so Nyquist's formula applies.
+
+   Given
+   - Bit rate C = 265 kbps = 265,000 bps
+   - Bandwidth B = 20 kHz = 20,000 Hz
+
+   Nyquist formula
+   ```
+   C = 2 × B × log2(L)
+   ```
+
+   Step 1 — solve for log2(L)
+   ```
+   265,000 = 2 × 20,000 × log2(L)
+   265,000 = 40,000 × log2(L)
+   log2(L) = 265,000 / 40,000 = 6.625
+   ```
+
+   Step 2 — solve for L
+   ```
+   L = 2^6.625 = 98.7
+   ```
+
+   Step 3 — interpret the result
+   - `L = 98.7`, but the number of signal levels must be a whole number, and in practice a power of 2 so that each level carries a whole number of bits.
+   - Rounding down to 64 levels gives 2 × 20,000 × 6 = 240 kbps, which is `not enough`.
+   - Rounding up to `128 levels` gives 2 × 20,000 × 7 = `280 kbps`, which covers the requirement.
+
+   Answer
+   - Use `L = 128 signal levels` (7 bits per symbol), giving a capacity of 280 kbps against the 265 kbps required.
+   - Alternatively, keep fewer levels and increase the bandwidth, or reduce the required bit rate to 240 kbps.
+   - Practical caution: 128 levels means the receiver must distinguish 128 distinct voltages. No real channel is truly noiseless, so Shannon's limit would have to be checked as well — in practice such a high level count demands a very high SNR.
 
 7. **A telephone line normally has a bandwidth of 3000\text{ Hz} (300\text{ to } 3300\text{ Hz}) assigned foe data communications. The signal-to-noise ratio is usually 3162. Calculate the capacity for this channel?** *[RPGCL Assistant Manager (ICT) 2022 compact it 656 (ET: BUET)]*
 
+   Answer: The channel is noisy, so Shannon's formula applies.
+
+   Given
+   - Bandwidth B = 3000 Hz (3300 − 300)
+   - SNR = 3162
+
+   Shannon capacity formula
+   ```
+   C = B × log2(1 + SNR)
+   ```
+
+   Step 1 — substitute
+   ```
+   C = 3000 × log2(1 + 3162)
+     = 3000 × log2(3163)
+   ```
+
+   Step 2 — evaluate the logarithm
+   ```
+   log2(3163) = ln(3163) / ln(2) = 8.0593 / 0.6931 = 11.627
+   ```
+
+   Step 3 — capacity
+   ```
+   C = 3000 × 11.627 = 34,881 bps ≈ 34.88 kbps
+   ```
+
+   - Answer: about `34,860 bps` (commonly quoted as ~34.86 kbps; the small difference comes from rounding the logarithm).
+
+   Interpretation
+   - This is the theoretical maximum for an ordinary telephone line, and it explains why dial-up modems stopped at 33.6 kbps for symmetric use.
+   - SNR = 3162 corresponds to 10 log10(3162) ≈ 35 dB, a typical value for a good telephone circuit.
+   - Shannon gives only the ceiling. It says nothing about how many signal levels to use — that comes from Nyquist. To reach 34.88 kbps over 3000 Hz, Nyquist requires 2 × 3000 × log2(L) = 34,881, so log2(L) ≈ 5.8, meaning about 64 levels.
+
 8. **Consider that a signal is transmitted over a channel of bandwidth 200kHz and the total path loss in the channel is found to be 60dB. The noise power per hertz at the receiver is- 100 dBm. Determine the required transmit power to achieve data rate of 40kb/s.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+   Answer: Use Shannon's formula to find the required SNR, then work back through the noise power and the path loss.
+
+   Given
+   - Bandwidth B = 200 kHz = 200,000 Hz
+   - Path loss = 60 dB
+   - Noise power spectral density N0 = −100 dBm/Hz
+   - Required data rate C = 40 kbps = 40,000 bps
+
+   Step 1 — required SNR from Shannon
+   ```
+   C = B log2(1 + SNR)
+   40,000 = 200,000 × log2(1 + SNR)
+   log2(1 + SNR) = 0.2
+   1 + SNR = 2^0.2 = 1.1487
+   SNR = 0.1487
+   ```
+
+   Step 2 — SNR in dB
+   ```
+   SNR(dB) = 10 log10(0.1487) = −8.28 dB
+   ```
+
+   Step 3 — total noise power at the receiver
+   ```
+   N = N0 + 10 log10(B)
+     = −100 + 10 log10(200,000)
+     = −100 + 53.01
+     = −46.99 dBm
+   ```
+
+   Step 4 — required received signal power
+   ```
+   S = N + SNR(dB)
+     = −46.99 + (−8.28)
+     = −55.27 dBm
+   ```
+
+   Step 5 — required transmit power
+   ```
+   Pt = S + path loss
+      = −55.27 + 60
+      = 4.73 dBm
+   ```
+
+   Step 6 — convert to watts
+   ```
+   Pt = 10^(4.73/10) mW = 2.97 mW ≈ 3 mW
+   ```
+
+   | Quantity | Value |
+   |---|---|
+   | Required SNR | 0.1487 (−8.28 dB) |
+   | Noise power | −46.99 dBm |
+   | Required received power | −55.27 dBm |
+   | Required transmit power | `4.73 dBm ≈ 2.97 mW` |
+
+   - Note the SNR is below 1, which is perfectly valid: Shannon shows that data can be sent reliably even when the signal is weaker than the noise, provided the bandwidth is generous relative to the data rate. Here 200 kHz carries only 40 kbps, so the system is heavily bandwidth-rich.
+   - Working in dBm throughout is what makes the arithmetic simple: multiplication and division become addition and subtraction.
 
 9. **(গ) নিম্নে উল্লিখিত ডাটা ট্রান্সফার রেট গুলিকে bit/sec এর পরিণত করুন 50Mb/S; 10KB/S; 20MB/S; 10Kb/S.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Convert each to bits per second. Note the capital B means bytes, the small b means bits, so a factor of 8 is involved.
+
+   (i) 50 Mb/s
+   ```
+   50 Mb/s = 50 × 10^6 bits/s = 50,000,000 bps
+   ```
+
+   (ii) 10 KB/s
+   ```
+   10 KB/s = 10 × 1000 bytes/s = 10,000 bytes/s
+           = 10,000 × 8 = 80,000 bps
+   ```
+
+   (iii) 20 MB/s
+   ```
+   20 MB/s = 20 × 10^6 bytes/s
+           = 20,000,000 × 8 = 160,000,000 bps = 160 Mbps
+   ```
+
+   (iv) 10 Kb/s
+   ```
+   10 Kb/s = 10 × 1000 = 10,000 bps
+   ```
+
+   Summary
+
+   | Given | In bits per second |
+   |---|---|
+   | 50 Mb/s | 50,000,000 bps |
+   | 10 KB/s | 80,000 bps |
+   | 20 MB/s | 160,000,000 bps |
+   | 10 Kb/s | 10,000 bps |
+
+   - The two rules to remember: 1 byte = 8 bits, and in data-rate units the prefixes are decimal (k = 1000, M = 10^6). Binary prefixes (KiB = 1024) are used for memory and file sizes, not for link speeds. If 1 KB were taken as 1024 bytes, 10 KB/s would be 81,920 bps.
+   - This is why a "20 MB/s" download needs a 160 Mbps link, and a 100 Mbps connection delivers at most about 12.5 MB/s.
+
 10. **What is the channel capacity for a teleprinter channel with a 300 Hz bandwidth and a signal-to-noise ratio of 3 dB?** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
+
+    Answer: The channel is noisy, so Shannon's formula applies. The SNR is given in decibels, so it must be converted to a plain ratio first.
+
+    Given
+    - Bandwidth B = 300 Hz
+    - SNR = 3 dB
+
+    Step 1 — convert SNR from dB to a ratio
+    ```
+    SNR = 10^(SNR_dB / 10)
+        = 10^(3/10)
+        = 10^0.3
+        = 1.995 ≈ 2
+    ```
+    - The useful shortcut: 3 dB means approximately a factor of 2.
+
+    Step 2 — apply Shannon's formula
+    ```
+    C = B × log2(1 + SNR)
+      = 300 × log2(1 + 2)
+      = 300 × log2(3)
+      = 300 × 1.585
+      = 475.5 bps
+    ```
+
+    - Answer: about `475 bps` (474.8 bps using the exact ratio 1.995).
+
+    Interpretation
+    - A teleprinter channel is deliberately narrow, and with an SNR of only 3 dB the achievable rate is very low — well under 500 bps.
+    - This is why old telex systems ran at 50 to 75 baud: they were designed to work within exactly this kind of limit.
+    - The common mistake is to put 3 straight into the formula as the SNR. The dB value must always be converted first.
 
 11. **Using the Nyquist theorem, we can sample 12 million times/sec. Four–level signals provide 2 bits per sample, for a total data rate of 24 Mbps.** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
+    Answer: The statement is `correct`. Here is the verification.
+
+    Given
+    - Sampling rate = 12 million samples per second
+    - Four-level signalling
+
+    Step 1 — bits per sample
+    - With L signal levels, each sample carries log2(L) bits.
+    ```
+    log2(4) = 2 bits per sample
+    ```
+
+    Step 2 — data rate
+    ```
+    Data rate = samples per second × bits per sample
+              = 12,000,000 × 2
+              = 24,000,000 bps
+              = 24 Mbps
+    ```
+    - This confirms the stated 24 Mbps.
+
+    Step 3 — the implied bandwidth
+    - Nyquist says the maximum useful sampling rate is twice the bandwidth:
+    ```
+    Sampling rate = 2B  ->  12,000,000 = 2B  ->  B = 6 MHz
+    ```
+    - Checking with the Nyquist bit-rate formula: C = 2 × B × log2(L) = 2 × 6,000,000 × 2 = 24 Mbps. The two routes agree.
+
+    What changes with more levels
+
+    | Levels L | Bits per sample | Data rate at 12 Msamples/s |
+    |---|---|---|
+    | 2 | 1 | 12 Mbps |
+    | 4 | 2 | `24 Mbps` |
+    | 8 | 3 | 36 Mbps |
+    | 16 | 4 | 48 Mbps |
+
+    - The catch: more levels means the voltages are closer together, so the receiver needs a much better signal-to-noise ratio. Nyquist sets no limit on L, but Shannon's formula does, through the noise.
+
 12. **In serial communication employing 8 data bits, a parity bit and 2 stop bits. What is the minimum band rate requested to sustain a transfer rate of 300 characters per second?** *[BAUST Assistant Programmer 2021 compact it 918 (ET: N/A)]*
+
+    Answer:
+
+    Given
+    - 8 data bits, 1 parity bit, 2 stop bits
+    - Transfer rate = 300 characters per second
+
+    Step 1 — total bits per character
+    - Asynchronous serial transmission always adds `1 start bit` at the beginning of every character. This is the part most often forgotten.
+    ```
+    Start bit      = 1
+    Data bits      = 8
+    Parity bit     = 1
+    Stop bits      = 2
+    -------------------
+    Total          = 12 bits per character
+    ```
+
+    Step 2 — required bit rate
+    ```
+    Bit rate = 300 characters/s × 12 bits/character
+             = 3600 bits per second
+    ```
+
+    Step 3 — baud rate
+    - In simple binary serial signalling one signal element carries one bit, so the baud rate equals the bit rate.
+    ```
+    Minimum baud rate = 3600 baud
+    ```
+
+    - Answer: `3600 baud` (3600 bps).
+
+    ```
+    | S | d d d d d d d d | P | E E |   = 12 bit times per character
+      ^ start   8 data     parity  2 stop
+    ```
+    - Efficiency check: only 8 of the 12 bits carry data, so 33 percent of the capacity is framing overhead. This is the classic weakness of asynchronous transmission.
+    - Note the distinction: bit rate is bits per second; baud rate is signal changes per second. They are equal only when each symbol carries exactly one bit.
 
 13. **Find signal bit per second bound rate 1000 and 16-QAM signal.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
+    Answer:
+
+    Given
+    - Baud rate (symbol rate) = 1000 baud
+    - Modulation = 16-QAM
+
+    Step 1 — bits per symbol
+    - QAM with M constellation points carries log2(M) bits per symbol.
+    ```
+    16-QAM -> log2(16) = 4 bits per symbol
+    ```
+
+    Step 2 — bit rate
+    ```
+    Bit rate = baud rate × bits per symbol
+             = 1000 × 4
+             = 4000 bits per second
+    ```
+
+    - Answer: `4000 bps` (4 kbps).
+
+    Bits per symbol for common modulations
+
+    | Modulation | Points | Bits per symbol | Bit rate at 1000 baud |
+    |---|---|---|---|
+    | ASK / FSK / BPSK | 2 | 1 | 1000 bps |
+    | QPSK / 4-QAM | 4 | 2 | 2000 bps |
+    | 8-PSK | 8 | 3 | 3000 bps |
+    | `16-QAM` | 16 | `4` | `4000 bps` |
+    | 64-QAM | 64 | 6 | 6000 bps |
+    | 256-QAM | 256 | 8 | 8000 bps |
+
+    - Key relationship: `bit rate = baud rate × log2(M)`. Baud rate is limited by bandwidth, so higher-order modulation is the way to raise the bit rate without more bandwidth — at the cost of needing a much higher SNR, because the constellation points sit closer together.
+
 14. **Channel capacity related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
+
+    Answer: The exact question could not be collected, so the two channel-capacity formulas and the standard worked patterns are given.
+
+    Nyquist — maximum data rate of a NOISELESS channel
+    ```
+    C = 2 × B × log2(L)
+    ```
+    - B = bandwidth in Hz, L = number of signal levels.
+    - Also written as bit rate = baud rate × log2(L), where baud rate = 2B.
+
+    Shannon — capacity of a NOISY channel
+    ```
+    C = B × log2(1 + SNR)
+    SNR(dB) = 10 log10(SNR)        SNR = 10^(SNR_dB / 10)
+    ```
+
+    Worked patterns
+
+    Type 1 — noiseless, find the bit rate
+    - B = 3 kHz, 2 levels: C = 2 × 3000 × log2(2) = `6000 bps`.
+    - B = 3 kHz, 4 levels: C = 2 × 3000 × 2 = `12,000 bps`.
+
+    Type 2 — noiseless, find the number of levels
+    - Need 265 kbps over 20 kHz: log2(L) = 265,000 / 40,000 = 6.625, so L = 98.7 -> use `128 levels`.
+
+    Type 3 — noisy, find the capacity
+    - B = 3000 Hz, SNR = 3162: C = 3000 × log2(3163) ≈ `34,880 bps`.
+    - B = 300 Hz, SNR = 3 dB: convert first, SNR = 10^0.3 ≈ 2, so C = 300 × log2(3) ≈ `475 bps`.
+
+    Type 4 — combine both
+    - Shannon gives the ceiling; Nyquist then tells you the number of levels needed to reach a chosen rate below that ceiling. Always compute both and take the lower.
+    - Example: B = 1 MHz, SNR = 63. Shannon: C = 10^6 × log2(64) = 6 Mbps. Choosing to run at 4 Mbps, Nyquist gives 4,000,000 = 2 × 10^6 × log2(L), so log2(L) = 2 and L = 4 levels.
+
+    Type 5 — sampling
+    - Nyquist sampling rate >= 2 × f_max; Nyquist interval = 1 ÷ (2 f_max).
+    - Voice limited to 4 kHz: 8000 samples/s, 8 bits each, giving the 64 kbps DS-0 rate. <!-- verify -->
 
 15. **a) Determine the Nyquist sampling rate and the Nyquist sampling interval for the signal $X(t) = \sin(2100\pi t)$** *[38th BCS 2018 compact it 1177 (ET: N/A)]*
 
+    Answer:
+
+    Given
+    ```
+    X(t) = sin(2100 π t)
+    ```
+
+    Step 1 — find the signal frequency
+    - The general form is sin(2π f t), so compare the arguments:
+    ```
+    2π f t = 2100 π t
+    2π f   = 2100 π
+    f      = 2100 / 2 = 1050 Hz
+    ```
+
+    Step 2 — Nyquist sampling rate
+    - The sampling rate must be at least twice the highest frequency present.
+    ```
+    fs = 2 × f_max = 2 × 1050 = 2100 samples per second (2100 Hz)
+    ```
+
+    Step 3 — Nyquist sampling interval
+    ```
+    Ts = 1 / fs = 1 / 2100 = 4.762 × 10^-4 s = 476.19 microseconds
+    ```
+
+    | Quantity | Value |
+    |---|---|
+    | Signal frequency | 1050 Hz |
+    | Nyquist sampling rate | `2100 Hz` (2100 samples/s) |
+    | Nyquist sampling interval | `476.19 µs` |
+
+    - Why it matters: sampling any slower than 2100 Hz causes `aliasing`, where the 1050 Hz tone is reconstructed as a different, lower frequency. Aliasing cannot be removed afterwards, which is why an anti-aliasing low-pass filter is placed before every analogue-to-digital converter.
+    - The common slip is to read 2100π as the frequency. It is the angular frequency ω; the frequency is ω ÷ 2π.
+
 16. **Consider a noiseless channel with a bandwidth of 3 KHz transmitting a signal with two signal levels. What is the maximum bit rate?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
+
+    Answer: The channel is noiseless, so Nyquist's formula applies.
+
+    Given
+    - Bandwidth B = 3 kHz = 3000 Hz
+    - Number of signal levels L = 2
+
+    Nyquist formula
+    ```
+    C = 2 × B × log2(L)
+    ```
+
+    Calculation
+    ```
+    C = 2 × 3000 × log2(2)
+      = 2 × 3000 × 1
+      = 6000 bps
+    ```
+
+    - Answer: maximum bit rate = `6000 bps` (6 kbps).
+
+    Effect of more levels on the same 3 kHz channel
+
+    | Levels L | log2(L) | Maximum bit rate |
+    |---|---|---|
+    | 2 | 1 | `6000 bps` |
+    | 4 | 2 | 12,000 bps |
+    | 8 | 3 | 18,000 bps |
+    | 16 | 4 | 24,000 bps |
+
+    - The Nyquist formula puts no ceiling on L, so in theory the rate could be raised indefinitely by adding levels. In reality noise limits how finely the receiver can distinguish voltages, and that limit is given by Shannon's formula, C = B log2(1 + SNR).
 
 ## Physical Layer & Transmission Media (Cables & Wiring) (15)
 
