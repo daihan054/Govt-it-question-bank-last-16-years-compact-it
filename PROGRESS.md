@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 171 / 243 done**  ·  **Questions: 2127 answered, 41 skipped, 3168 total**
+**Subtopics: 172 / 243 done**  ·  **Questions: 2135 answered, 41 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -25,7 +25,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `math.md` | General | 0 / 15 | 0 | 0 | 96 |
 | `microprocessor-and-computer-architecture.md` | IT | 11 / 11 | 133 | 2 | 135 |
 | `ms-office.md` | IT | 1 / 1 | 1 | 0 | 1 |
-| `oop.md` | IT | 4 / 9 | 90 | 3 | 117 |
+| `oop.md` | IT | 5 / 9 | 98 | 3 | 117 |
 | `operating-system.md` | IT | 0 / 12 | 0 | 0 | 196 |
 | `programming-languages.md` | IT | 0 / 1 | 0 | 0 | 6 |
 | `software-engineering.md` | IT | 0 / 14 | 0 | 0 | 152 |
@@ -63,8 +63,8 @@ Content-free or truncated entries — no answer written.
 - `dld.md → Karnaugh Map (K-Map)` — question 13
 - `dld.md → Karnaugh Map (K-Map)` — question 14
 - `dld.md → Combinational Circuits (Adders, Encoders, MUX)` — question 16
-- `electrical-and-electronics.md → Circuit Theorems (Thevenin, Norton, Superposition)` — question 1
 - `electrical-and-electronics.md → Operational Amplifiers (Op-Amp)` — question 1
+- `electrical-and-electronics.md → Circuit Theorems (Thevenin, Norton, Superposition)` — question 1
 - `electrical-and-electronics.md → Circuit Theorems (Thevenin, Norton, Superposition)` — question 2
 - `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 6
 - `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 9

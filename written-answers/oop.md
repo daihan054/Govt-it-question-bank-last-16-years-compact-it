@@ -8895,19 +8895,867 @@ public class WhatTheOutput{
 
 1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
 
+   Answer: A `constructor` is a special member function that is called `automatically` when an object is created. Its job is to `initialise` the object, so that it is never used in an uninitialised state.
+
+   ```java
+   class Student {
+       String name;
+       int    roll;
+
+       Student(String name, int roll) {      // constructor
+           this.name = name;
+           this.roll = roll;
+       }
+   }
+
+   Student s = new Student("Rahim", 101);    // the constructor runs here
+   ```
+
+   Properties of a constructor
+   ```
+      1. Its NAME is exactly the same as the class name.
+
+      2. It has NO RETURN TYPE - not even void. Writing a return type
+         turns it into an ordinary method, which is a classic silent bug :
+
+              void Student() { ... }     // this is a METHOD, not a constructor
+
+      3. It is called AUTOMATICALLY when the object is created; it cannot
+         be called explicitly like a normal method.
+
+      4. It is called ONLY ONCE per object, at the moment of creation.
+
+      5. It can be OVERLOADED - several constructors with different
+         parameter lists, so an object can be created in different ways.
+
+      6. It can take PARAMETERS, but cannot return a value.
+
+      7. It CANNOT be inherited, though a subclass constructor calls its
+         parent's with super(...).
+
+      8. It CANNOT be virtual, static, final or abstract.
+
+      9. If NO constructor is written, the compiler supplies a DEFAULT
+         no-argument constructor that sets fields to their default values
+         (0, 0.0, false, null).
+
+     10. Once ANY constructor is written, that free default constructor
+         disappears. This causes the common error "constructor X in class X
+         cannot be applied to given types" when 'new X()' is then used.
+
+     11. It is usually PUBLIC, but may be private - which is how the
+         Singleton pattern prevents outside code from creating objects.
+   ```
+
+   Types of constructor
+   ```java
+   class Student {
+       String name;  int roll;
+
+       // 1. DEFAULT (no-argument) constructor
+       Student() {
+           name = "Unknown";
+           roll = 0;
+       }
+
+       // 2. PARAMETERISED constructor
+       Student(String name, int roll) {
+           this.name = name;
+           this.roll = roll;
+       }
+
+       // 3. COPY constructor - build one object from another
+       Student(Student other) {
+           this.name = other.name;
+           this.roll = other.roll;
+       }
+   }
+   ```
+   ```java
+      Student s1 = new Student();                  // default
+      Student s2 = new Student("Rahim", 101);      // parameterised
+      Student s3 = new Student(s2);                // copy
+   ```
+
+   Constructor chaining
+   ```java
+   class Student {
+       String name;  int roll;  double cgpa;
+
+       Student() {
+           this("Unknown", 0, 0.0);       // this(...) calls another constructor
+       }
+       Student(String name, int roll, double cgpa) {
+           this.name = name;  this.roll = roll;  this.cgpa = cgpa;
+       }
+   }
+   ```
+   - `this(...)` calls another constructor of the `same` class; `super(...)` calls the `parent's`. Either must be the `first statement`.
+
+   - The complementary function is the `destructor`. C++ has one, `~ClassName()`, called automatically when the object is destroyed. Java has none, because the `garbage collector` frees memory; cleanup is done with `try-with-resources` instead.
+
 2. **Define copy constructor. What Static binding and Dynamic binding?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
+
+   Answer: Copy constructor
+   - A `copy constructor` creates a new object as a `copy of an existing object of the same class`. It takes a single parameter: a reference to another object of that class.
+   ```cpp
+      ClassName(const ClassName &obj) { ... }
+   ```
+
+   ```cpp
+   #include <iostream>
+   #include <cstring>
+   using namespace std;
+
+   class Student {
+   private:
+       char* name;
+       int roll;
+
+   public:
+       // parameterised constructor
+       Student(const char* n, int r) {
+           roll = r;
+           name = new char[strlen(n) + 1];
+           strcpy(name, n);
+       }
+
+       // COPY CONSTRUCTOR - deep copy
+       Student(const Student &other) {
+           roll = other.roll;
+           name = new char[strlen(other.name) + 1];   // NEW memory
+           strcpy(name, other.name);                  // copy the CONTENTS
+       }
+
+       ~Student() { delete[] name; }
+
+       void display() { cout << roll << " - " << name << endl; }
+   };
+
+   int main() {
+       Student s1("Rahim", 101);
+       Student s2 = s1;          // the COPY CONSTRUCTOR is called here
+       Student s3(s1);           // and here
+
+       s2.display();             // 101 - Rahim
+       return 0;
+   }
+   ```
+
+   When it is called
+   ```
+      1. Student s2 = s1;             initialising one object from another
+      2. Student s3(s1);              explicit construction
+      3. passing an object BY VALUE to a function
+      4. returning an object BY VALUE from a function
+   ```
+
+   Why it matters — shallow versus deep copy
+   ```
+      If no copy constructor is written, C++ supplies a DEFAULT one that
+      copies member by member - a SHALLOW copy.
+
+      With a pointer member, both objects then point to the SAME memory :
+
+           s1.name ----+
+                       +----> "Rahim"
+           s2.name ----+
+
+      Consequences : changing one changes the other, and when both
+      destructors run, the same memory is deleted TWICE - a crash.
+
+      A user-written copy constructor allocates NEW memory and copies the
+      contents - a DEEP copy - so the two objects are independent.
+   ```
+   - The `rule of three` in C++: a class that needs a destructor almost certainly needs a copy constructor and a copy assignment operator too.
+   - Java has no copy constructor keyword; the same effect is written by hand, or `clone()` is used, though a hand-written copy constructor is preferred.
+
+   Static binding versus dynamic binding
+   - `Binding` means connecting a method call to the actual method body that will run. The question is `when` that connection is made.
+
+   `Static binding` (early binding, compile-time binding)
+   - Decided by the `compiler`, from the `declared type` of the reference.
+   - Applies to methods that cannot be overridden:
+   ```
+      static methods , private methods , final methods ,
+      overloaded methods , and all FIELDS
+   ```
+
+   `Dynamic binding` (late binding, runtime binding)
+   - Decided by the `JVM` at run time, from the `actual object`.
+   - Applies to `overridden` instance methods, and is what makes runtime polymorphism possible.
+
+   Example showing both
+   ```java
+   class Base {
+       static void staticMethod()   { System.out.println("Base static"); }
+       void instanceMethod()        { System.out.println("Base instance"); }
+       int x = 10;
+   }
+   class Derived extends Base {
+       static void staticMethod()   { System.out.println("Derived static"); }
+       @Override void instanceMethod() { System.out.println("Derived instance"); }
+       int x = 20;
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Base b = new Derived();
+
+           b.instanceMethod();      // "Derived instance"  -> DYNAMIC binding
+           b.staticMethod();        // "Base static"       -> STATIC binding
+           System.out.println(b.x); // 10                  -> STATIC binding
+       }
+   }
+   ```
+
+   Comparison
+
+   | Point | Static binding | Dynamic binding |
+   |---|---|---|
+   | Also called | Early binding | Late binding |
+   | Decided at | Compile time | Run time |
+   | Decided by | The compiler | The JVM |
+   | Based on | The reference type | The actual object |
+   | Applies to | static, private, final, overloaded methods, fields | Overridden instance methods |
+   | Speed | Faster — no lookup | Slightly slower — a vtable lookup |
+   | Polymorphism | Compile-time (overloading) | Runtime (overriding) |
+   | C++ equivalent | Non-virtual functions | `virtual` functions |
+
+   - The trap to remember: `fields and static methods are never polymorphic`. Only overridden instance methods are chosen by the object.
 
 3. **What is the constructor invoked in OOP?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
 
+   Answer: A `constructor` is invoked `automatically at the moment an object is created` — that is, when the `new` keyword allocates memory for the object.
+   ```java
+      Student s = new Student("Rahim", 101);
+                    ^^^
+                    the constructor runs here, immediately after the memory
+                    is allocated and before the reference is handed back
+   ```
+
+   The exact sequence
+   ```
+      1. 'new' allocates memory on the heap for the object
+      2. All fields are set to their DEFAULT values (0, 0.0, false, null)
+      3. If the class has a superclass, super(...) runs first, so the
+         PARENT is fully constructed before the child
+      4. Instance initialiser blocks and field initialisers run, in the
+         order they appear in the source
+      5. The constructor BODY runs
+      6. The reference to the finished object is returned
+   ```
+
+   Order in an inheritance chain
+   ```java
+   class A {
+       A() { System.out.println("A's constructor"); }
+   }
+   class B extends A {
+       B() { System.out.println("B's constructor"); }
+   }
+   class C extends B {
+       C() { System.out.println("C's constructor"); }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           new C();
+       }
+   }
+   ```
+   Output
+   ```
+      A's constructor
+      B's constructor
+      C's constructor
+   ```
+   - Construction proceeds `top-down`: the most general class is built first, so a subclass constructor can safely rely on its parent's fields already being initialised. In C++ `destruction` then happens in the opposite order, bottom-up.
+
+   Other occasions on which a constructor is invoked
+   ```java
+      new Student(...)              // 1. the normal case
+
+      Student[] a = new Student[3]; // NO constructor runs - only 3 null
+                                    //    references are created
+      a[0] = new Student(...);      //    the constructor runs HERE
+
+      Class.forName("Student").newInstance();   // 2. reflection
+
+      Student s2 = new Student(s1);             // 3. a copy constructor
+   ```
+   - Note that `new Student[3]` does `not` call the constructor. It creates an array of three `null` references, and each element must still be given an object.
+
+   When it is `not` invoked
+   ```
+      Deserialization - reading an object back from a stream does NOT call
+           the constructor; the fields are restored directly
+
+      clone() - copies the fields without running the constructor
+
+      A static method call on the class does not create an object at all
+   ```
+
+   Points worth noting
+   ```
+      The constructor has the SAME NAME as the class and NO return type
+      It runs exactly ONCE per object
+      It cannot be called explicitly like an ordinary method
+      this(...) calls another constructor of the same class, and
+           super(...) calls the parent's - either must be the FIRST statement
+      If no constructor is written, the compiler supplies a default one;
+           writing any constructor removes that free default
+   ```
+
 4. **What is constructor?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
+
+   Answer: A `constructor` is a special member function that is called `automatically` when an object is created. Its purpose is to `initialise` the object, so that it is never used in an uninitialised state.
+
+   ```java
+   class Student {
+       String name;
+       int    roll;
+
+       Student(String name, int roll) {       // constructor
+           this.name = name;
+           this.roll = roll;
+       }
+   }
+
+   Student s = new Student("Rahim", 101);     // the constructor runs here
+   ```
+
+   Key properties
+   ```
+      Same NAME as the class
+      NO return type - not even void
+      Called AUTOMATICALLY at object creation, exactly once
+      Can be OVERLOADED, so an object can be created in several ways
+      Cannot be inherited, virtual, static, final or abstract
+      If none is written, the compiler supplies a default no-argument one;
+           writing any constructor removes that free default
+   ```
+
+   Types
+   ```java
+   class Student {
+       String name;  int roll;
+
+       Student() {                            // 1. DEFAULT constructor
+           name = "Unknown";  roll = 0;
+       }
+
+       Student(String name, int roll) {       // 2. PARAMETERISED constructor
+           this.name = name;  this.roll = roll;
+       }
+
+       Student(Student other) {               // 3. COPY constructor
+           this.name = other.name;  this.roll = other.roll;
+       }
+   }
+   ```
+   ```java
+      Student s1 = new Student();                 // default
+      Student s2 = new Student("Rahim", 101);     // parameterised
+      Student s3 = new Student(s2);               // copy
+   ```
+
+   Why a constructor is needed
+   ```
+      WITHOUT one, an object starts with default values and every caller
+      must remember to set each field :
+
+           Student s = new Student();
+           s.name = "Rahim";
+           s.roll = 101;          // easy to forget one, leaving it invalid
+
+      WITH one, the object cannot exist in an incomplete state :
+
+           Student s = new Student("Rahim", 101);
+   ```
+   - It also gives one place to `validate` the initial values, which is exactly what encapsulation requires.
+
+   The complementary function
+   ```
+      C++  : ~ClassName()  - the DESTRUCTOR, called automatically when the
+             object goes out of scope or is deleted. Used to release memory
+             and other resources.
+
+      Java : no destructor. The GARBAGE COLLECTOR frees memory, and
+             try-with-resources handles other cleanup.
+   ```
 
 5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
+   Answer: Why constructors are used
+   - To `initialise an object automatically` at the moment it is created, so it can never be used in an incomplete or invalid state.
+   - To give a `single place to validate` the initial values, which is what encapsulation requires.
+   - To allow an object to be created in `several ways`, through constructor overloading.
+   - To `acquire the resources` the object needs — open a file, obtain a connection, allocate memory.
+   - To ensure the `parent part` of an inherited object is built first, through `super(...)`.
+
+   Why destructors are used
+   - To `release the resources` the object acquired, at the moment it is destroyed.
+   - To `free dynamically allocated memory`, which in C++ the programmer must do explicitly.
+   - To close files, sockets and database connections deterministically.
+   - Without one, a program that creates and destroys many objects `leaks memory` until it exhausts the heap.
+
+   C++ example — both together
+   ```cpp
+   #include <iostream>
+   #include <cstring>
+   using namespace std;
+
+   class Student {
+   private:
+       char* name;
+       int   roll;
+
+   public:
+       // ---------- CONSTRUCTOR ----------
+       Student(const char* n, int r) {
+           roll = r;
+           name = new char[strlen(n) + 1];      // acquire memory
+           strcpy(name, n);
+           cout << "Constructor called for " << name << endl;
+       }
+
+       // ---------- DESTRUCTOR ----------
+       ~Student() {
+           cout << "Destructor called for " << name << endl;
+           delete[] name;                       // release memory
+       }
+
+       void display() { cout << roll << " - " << name << endl; }
+   };
+
+   int main() {
+       cout << "--- entering block ---" << endl;
+       {
+           Student s1("Rahim", 101);
+           Student s2("Karim", 102);
+           s1.display();
+           s2.display();
+       }                                  // both destructors run HERE
+       cout << "--- left block ---" << endl;
+       return 0;
+   }
+   ```
+   Output
+   ```
+      --- entering block ---
+      Constructor called for Rahim
+      Constructor called for Karim
+      101 - Rahim
+      102 - Karim
+      Destructor called for Karim
+      Destructor called for Rahim
+      --- left block ---
+   ```
+   - Note that destruction happens in `reverse order` of construction — the last object created is the first destroyed, because the objects live on the stack.
+
+   Java example — constructor, and cleanup without a destructor
+   ```java
+   class Student {
+       String name;
+       int    roll;
+
+       // ---------- CONSTRUCTOR ----------
+       Student(String name, int roll) {
+           this.name = name;
+           this.roll = roll;
+           System.out.println("Constructor called for " + name);
+       }
+
+       void display() { System.out.println(roll + " - " + name); }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Student s = new Student("Rahim", 101);
+           s.display();
+           s = null;                 // now eligible for garbage collection
+       }
+   }
+   ```
+   - Java has `no destructor`. The `garbage collector` frees the memory at some unspecified later time, so cleanup of other resources is done with `try-with-resources`:
+   ```java
+      try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+          System.out.println(br.readLine());
+      }   // br.close() runs here automatically, even if an exception is thrown
+   ```
+   - `finalize()` existed for this purpose but was deprecated in Java 9 and removed in Java 18, because it gave no guarantee of when — or whether — it would run.
+
+   Comparison
+
+   | Point | Constructor | Destructor |
+   |---|---|---|
+   | Purpose | Initialise, acquire resources | Clean up, release resources |
+   | Name | Same as the class | `~ClassName` |
+   | Called when | The object is created | The object is destroyed |
+   | Parameters | Allowed | `Never` |
+   | Overloading | Allowed | `Not allowed` — only one per class |
+   | Return type | None | None |
+   | Order in a hierarchy | Base first, then derived | Derived first, then base |
+   | In Java | Yes | `No` — the GC frees memory instead |
+
 6. **What is Constructor function? Write an example of Constructor function?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+   Answer: A `constructor` is a special member function that is called `automatically` when an object is created, in order to `initialise` it.
+   ```
+      Same NAME as the class
+      NO return type, not even void
+      Called AUTOMATICALLY, exactly once per object
+      Can be OVERLOADED, so objects can be created in several ways
+      Cannot be inherited, static, final or virtual
+   ```
+
+   Example — all three kinds of constructor in one class
+   ```java
+   class BankAccount {
+
+       private String accountNumber;
+       private String holderName;
+       private double balance;
+
+       // ---- 1. DEFAULT (no-argument) constructor ----
+       public BankAccount() {
+           accountNumber = "UNKNOWN";
+           holderName    = "UNKNOWN";
+           balance       = 0.0;
+           System.out.println("Default constructor called");
+       }
+
+       // ---- 2. PARAMETERISED constructor ----
+       public BankAccount(String accNo, String name, double opening) {
+           accountNumber = accNo;
+           holderName    = name;
+           balance       = (opening > 0) ? opening : 0;   // validation
+           System.out.println("Parameterised constructor called");
+       }
+
+       // ---- 3. COPY constructor ----
+       public BankAccount(BankAccount other) {
+           this.accountNumber = other.accountNumber;
+           this.holderName    = other.holderName;
+           this.balance       = other.balance;
+           System.out.println("Copy constructor called");
+       }
+
+       public void display() {
+           System.out.println(accountNumber + " | " + holderName +
+                              " | " + balance);
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           BankAccount a1 = new BankAccount();
+           a1.display();
+
+           BankAccount a2 = new BankAccount("AC1001", "Rahim Uddin", 5000);
+           a2.display();
+
+           BankAccount a3 = new BankAccount(a2);        // copy of a2
+           a3.display();
+       }
+   }
+   ```
+
+   Output
+   ```
+      Default constructor called
+      UNKNOWN | UNKNOWN | 0.0
+      Parameterised constructor called
+      AC1001 | Rahim Uddin | 5000.0
+      Copy constructor called
+      AC1001 | Rahim Uddin | 5000.0
+   ```
+
+   C++ version, with a destructor as well
+   ```cpp
+   #include <iostream>
+   using namespace std;
+
+   class BankAccount {
+   private:
+       string accountNumber;
+       double balance;
+
+   public:
+       BankAccount() {                                  // default
+           accountNumber = "UNKNOWN";
+           balance = 0;
+       }
+
+       BankAccount(string accNo, double opening) {      // parameterised
+           accountNumber = accNo;
+           balance = (opening > 0) ? opening : 0;
+       }
+
+       ~BankAccount() {                                 // DESTRUCTOR
+           cout << "Account " << accountNumber << " closed" << endl;
+       }
+
+       void display() { cout << accountNumber << " : " << balance << endl; }
+   };
+   ```
+
+   Constructor chaining with `this(...)`
+   ```java
+   class Student {
+       String name;  int roll;  double cgpa;
+
+       Student() {
+           this("Unknown", 0, 0.0);          // calls the three-argument one
+       }
+       Student(String name, int roll, double cgpa) {
+           this.name = name;  this.roll = roll;  this.cgpa = cgpa;
+       }
+   }
+   ```
+   - `this(...)` calls another constructor of the same class; `super(...)` calls the parent's. Either must be the `first statement` in the constructor.
+
+   Common mistakes
+   ```java
+      void Student() { ... }        // a METHOD, not a constructor -
+                                    // the return type gives it away
+
+      class Student {
+          Student(String n) { ... } // once ANY constructor is written,
+      }                             // the free default one disappears
+
+      Student s = new Student();    // COMPILE ERROR - no such constructor
+   ```
 
 7. **Differentiate constructor and destructor with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1167-1168 (ET: N/A)]*
 
+   Answer: A `constructor` initialises an object when it is created; a `destructor` cleans it up when it is destroyed. They are the two ends of an object's life.
+
+   Constructor
+   ```
+      Same NAME as the class
+      No return type
+      Called AUTOMATICALLY when the object is created
+      May take parameters, and may be OVERLOADED
+      Purpose : initialise the fields, acquire resources
+   ```
+
+   Destructor
+   ```
+      Name is  ~ClassName  - the class name preceded by a tilde
+      No return type and NO PARAMETERS
+      Called AUTOMATICALLY when the object goes out of scope or is deleted
+      Only ONE per class - it cannot be overloaded
+      Purpose : release memory and other resources
+   ```
+
+   C++ example showing both
+   ```cpp
+   #include <iostream>
+   #include <cstring>
+   using namespace std;
+
+   class Student {
+   private:
+       char* name;
+       int   roll;
+
+   public:
+       // ---------- CONSTRUCTOR ----------
+       Student(const char* n, int r) {
+           roll = r;
+           name = new char[strlen(n) + 1];         // ACQUIRE memory
+           strcpy(name, n);
+           cout << "Constructor : " << name << " created" << endl;
+       }
+
+       // ---------- DESTRUCTOR ----------
+       ~Student() {
+           cout << "Destructor  : " << name << " destroyed" << endl;
+           delete[] name;                          // RELEASE memory
+       }
+
+       void display() { cout << roll << " - " << name << endl; }
+   };
+
+   int main() {
+       cout << "--- entering block ---" << endl;
+       {
+           Student s1("Rahim", 101);
+           Student s2("Karim", 102);
+           s1.display();
+           s2.display();
+       }                                  // both destructors run HERE
+       cout << "--- left block ---" << endl;
+       return 0;
+   }
+   ```
+   Output
+   ```
+      --- entering block ---
+      Constructor : Rahim created
+      Constructor : Karim created
+      101 - Rahim
+      102 - Karim
+      Destructor  : Karim destroyed
+      Destructor  : Rahim destroyed
+      --- left block ---
+   ```
+   - Note the `reverse order` of destruction: the last object created is destroyed first, because objects on the stack are removed in LIFO order.
+
+   Difference
+
+   | Point | Constructor | Destructor |
+   |---|---|---|
+   | Purpose | Initialise, acquire resources | Clean up, release resources |
+   | Name | Same as the class | `~ClassName` |
+   | Called when | The object is created | The object is destroyed |
+   | Parameters | Allowed | `Never` |
+   | Overloading | Allowed | `Not allowed` — only one |
+   | Return type | None | None |
+   | Number per class | Many (overloaded) | Exactly one |
+   | Order in a hierarchy | Base first, then derived | Derived first, then base |
+   | Can be virtual | No | `Yes`, and it usually should be |
+   | Called explicitly | No | Rarely, and only in unusual cases |
+   | In Java | Yes | `No` — the garbage collector frees memory |
+
+   Why a base destructor should be `virtual`
+   ```cpp
+      class Base  { public: ~Base()  { } };            // NOT virtual
+      class Derived : public Base { public: ~Derived() { } };
+
+      Base* p = new Derived();
+      delete p;          // only ~Base() runs - ~Derived() is SKIPPED
+                         // any resource the Derived part held is LEAKED
+   ```
+   - Declaring `virtual ~Base()` makes `delete p` run `~Derived()` first and then `~Base()`, which is correct. This is a standard rule for any class meant to be inherited from.
+
+   The Java position
+   ```
+      Java has NO destructor. The garbage collector frees memory
+      automatically at an unspecified later time.
+
+      For other resources - files, sockets, connections - use
+      try-with-resources :
+
+           try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+               ...
+           }   // close() runs here automatically
+
+      finalize() existed for this purpose but was deprecated in Java 9
+      and REMOVED in Java 18, because it guaranteed neither when nor
+      whether it would run.
+   ```
+
 8. **What is main difference Destructor and constructor with example?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
+
+   Answer: The main difference is `purpose and timing`: a constructor `builds` an object when it is created, and a destructor `cleans it up` when it is destroyed.
+   ```
+      CONSTRUCTOR : initialise fields, acquire resources   -> at creation
+      DESTRUCTOR  : release those resources                -> at destruction
+   ```
+
+   Constructor
+   ```
+      Same NAME as the class
+      No return type
+      May take parameters, and may be OVERLOADED
+      Called automatically when the object is created
+   ```
+
+   Destructor
+   ```
+      Name is  ~ClassName
+      No return type and NO PARAMETERS
+      Cannot be overloaded - exactly ONE per class
+      Called automatically when the object goes out of scope or is deleted
+   ```
+
+   C++ example
+   ```cpp
+   #include <iostream>
+   using namespace std;
+
+   class FileHandler {
+   private:
+       string filename;
+       int*   buffer;
+
+   public:
+       // ---------- CONSTRUCTOR ----------
+       FileHandler(string fname, int size) {
+           filename = fname;
+           buffer   = new int[size];            // ACQUIRE
+           cout << "Constructor: opened " << filename << endl;
+       }
+
+       // ---------- DESTRUCTOR ----------
+       ~FileHandler() {
+           delete[] buffer;                     // RELEASE
+           cout << "Destructor : closed " << filename << endl;
+       }
+   };
+
+   int main() {
+       cout << "start" << endl;
+       {
+           FileHandler f1("data.txt", 100);
+           FileHandler f2("log.txt", 50);
+       }                                        // destructors run HERE
+       cout << "end" << endl;
+       return 0;
+   }
+   ```
+   Output
+   ```
+      start
+      Constructor: opened data.txt
+      Constructor: opened log.txt
+      Destructor : closed log.txt
+      Destructor : closed data.txt
+      end
+   ```
+   - Destruction is in `reverse order` of construction — the objects live on the stack, which is LIFO.
+
+   Full comparison
+
+   | Point | Constructor | Destructor |
+   |---|---|---|
+   | Purpose | Initialise and acquire | Clean up and release |
+   | Name | Same as the class | `~ClassName` |
+   | When called | Object creation | Object destruction |
+   | Parameters | Allowed | `Never` |
+   | Overloading | Allowed | `Not allowed` |
+   | Return type | None | None |
+   | Number per class | Many | Exactly one |
+   | Order in inheritance | Base -> Derived | Derived -> Base |
+   | Can be virtual | No | Yes, and usually should be |
+   | Present in Java | Yes | No |
+
+   What happens without a destructor
+   ```cpp
+      class Student {
+          char* name;
+      public:
+          Student(const char* n) { name = new char[strlen(n)+1]; strcpy(name,n); }
+          // NO destructor
+      };
+
+      for (int i = 0; i < 1000000; i++) {
+          Student s("Rahim");     // each object leaks its char array
+      }                           // -> the program eventually runs out of memory
+   ```
+   - This is a `memory leak`. In C++ the programmer must release what was acquired; in Java the garbage collector does it, which is why Java has no destructor at all.
+
+   Java's replacement
+   ```java
+      try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+          System.out.println(br.readLine());
+      }   // close() runs here automatically, even if an exception is thrown
+   ```
+   - `try-with-resources` gives the deterministic cleanup that a C++ destructor provides, without the risk of forgetting it.
 
 ## Encapsulation & Access Modifiers (7)
 
