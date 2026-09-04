@@ -8825,6 +8825,35 @@ Answer:
 
 39. **a) Using recursion, develop a computer program to find the n-th Fibonacci number using this rule. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 340]]*
 
+    Answer: A recursive function calls itself to compute the n-th Fibonacci number using the mathematical recurrence relation:
+    - Base case: `F(0) = 0`, `F(1) = 1`
+    - Recursive case: `F(n) = F(n - 1) + F(n - 2)` for `n >= 2`
+
+    ```c
+    #include <stdio.h>
+
+    int fibonacci(int n) {
+        if (n <= 0)
+            return 0;
+        if (n == 1)
+            return 1;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    int main(void) {
+        int n;
+        printf("Enter n: ");
+        scanf("%d", &n);
+
+        printf("The %d-th Fibonacci number is: %d\n", n, fibonacci(n));
+        return 0;
+    }
+    ```
+
+    - For `n = 6`, the sequence is `0, 1, 1, 2, 3, 5, 8`, so output is `8`.
+    - Time complexity: `O(2^n)` due to overlapping subproblems in naive recursion.
+    - Space complexity: `O(n)` for the recursion call stack.
+
 ## Operators, Data Types & Language Concepts (25)
 
 1. **(b) What is the difference between sizeof c+1 and sizeof (c+1)?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
