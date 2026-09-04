@@ -7021,7 +7021,26 @@ Answer: The figure was not printed with the question. The standard version of th
 
     - The pattern to remember: the frame rate always equals the input bit rate, and the output bit rate is always n times one input rate. <!-- verify -->
 
-19. **What are the propagation time and the transmission time for a 2.5-Kbyte message and if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 12,000 km and that light travels at 2.4\*10^8 m/s.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317]]*
+19. **What are the propagation time and the transmission time for a 2.5-Kbyte message and if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 12,000 km and that light travels at 2.4*10^8 m/s.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317]]*
+
+Answer:
+
+    Given Data:
+    - Message Size ($L$) = $2.5\text{ KB} = 2.5 \times 1024 \times 8 = 20,480\text{ bits}$ (or $2.5 \times 1000 \times 8 = 20,000\text{ bits}$)
+    - Bandwidth ($B$) = $1\text{ Gbps} = 10^9\text{ bps}$
+    - Distance ($d$) = $12,000\text{ km} = 12,000 \times 10^3\text{ m} = 1.2 \times 10^7\text{ m}$
+    - Propagation Speed ($v$) = $2.4 \times 10^8\text{ m/s}$
+
+    1. Propagation Time ($T_{prop}$):
+    $$T_{prop} = \frac{\text{Distance } (d)}{\text{Propagation Speed } (v)} = \frac{1.2 \times 10^7\text{ m}}{2.4 \times 10^8\text{ m/s}} = 0.05\text{ seconds} = 50\text{ ms}$$
+
+    2. Transmission Time ($T_{trans}$):
+    $$T_{trans} = \frac{\text{Message Size } (L)}{\text{Bandwidth } (B)} = \frac{20,480\text{ bits}}{10^9\text{ bps}} = 2.048 \times 10^{-5}\text{ seconds} = 0.02048\text{ ms} = 20.48\text{ }\mu\text{s}$$
+    *(Note: Using decimal $2.5 \times 1000 \times 8 = 20,000\text{ bits}$, $T_{trans} = 20\text{ }\mu\text{s}$ or $0.02\text{ ms}$)*
+
+    Summary:
+    - Propagation Time = **50 ms** (or $0.05\text{ s}$)
+    - Transmission Time = **0.02048 ms** (or $20.48\text{ }\mu\text{s}$)
 
 ## Routing Protocols & Route Configuration (19)
 
