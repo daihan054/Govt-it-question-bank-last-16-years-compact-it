@@ -20018,13 +20018,231 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) `Speedup` and `scaleup` are the two measures used to judge how well a parallel or distributed database uses extra hardware.
+
+   Speedup — same work, more machines
+   - `Speedup` means running the `same fixed task` faster by adding more resources. The problem size stays constant; only the hardware grows.
+   ```
+   Speedup = (time taken on the small system) / (time taken on the large system)
+   ```
+   - Example: a query takes 100 seconds on 1 node. On 10 nodes it takes 10 seconds → speedup = 10.
+   - `Linear speedup` is the ideal: n times the hardware gives n times the speed. Real systems fall short (`sublinear`) because of start-up cost, interference for shared resources, and skew, where one node gets more data than the others.
+
+   ```
+      Speedup
+         |            ideal (linear)
+      10 |          /
+         |        /
+       5 |      /  . . . . actual (sublinear)
+         |    / . '
+       1 |__/_'________________________
+         1    5    10   -> number of nodes
+         (problem size FIXED)
+   ```
+
+   Scaleup — more work and more machines together
+   - `Scaleup` means handling a `larger task` in the `same time` by adding proportionally more resources. Both the problem and the hardware grow together.
+   ```
+   Scaleup = (small problem on small system time) / (big problem on big system time)
+   ```
+   - Example: 1 node processes 1 GB in 60 seconds. If 10 nodes process 10 GB also in 60 seconds → scaleup = 1, which is linear.
+
+   ```
+      Time
+         |
+      60 |. . . . . . . . . .  ideal (linear scaleup, flat line)
+         |            . '
+         |      . '            actual (sublinear, time creeps up)
+         |__________________________
+         1GB/1node  5GB/5nodes  10GB/10nodes
+         (problem size GROWS with the hardware)
+   ```
+
+   Two forms of each
+   ```
+   Batch scaleup       : the database size grows (bigger tables, same query)
+   Transaction scaleup : the number of transactions grows (more users)
+   ```
+
+   | Point | Speedup | Scaleup |
+   |---|---|---|
+   | Problem size | Fixed | Grows with the hardware |
+   | Hardware | Increased | Increased |
+   | Goal | Finish the same job faster | Finish a bigger job in the same time |
+   | Ideal value | n (linear) | 1 (flat) |
+   | Measures | Response time | Capacity |
+   | Example | 100 s on 1 node → 10 s on 10 nodes | 1 GB/1 node and 10 GB/10 nodes both 60 s |
+
+   - Why the ideal is never reached: `start-up cost` of launching many processes, `interference` on shared disks and network, and `skew` — an uneven split of data means the slowest node decides the finish time. Good partitioning of the data is what keeps skew low.
+
 2. **(ক) Data Fragmentation কী? ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) `Data fragmentation` is the process of dividing one logical table into smaller pieces, called `fragments`, and storing those pieces at different sites of a distributed database.
+
+   - The purpose is to keep data `close to the users who use it`, so most queries are answered locally instead of over the network.
+   - Three rules must hold for the fragmentation to be correct:
+   ```
+   Completeness : every row and column of the original table is in some fragment
+   Reconstruction : the original table can be rebuilt exactly from the fragments
+   Disjointness : a data item is not stored twice (except the key in vertical
+                  fragmentation, and except where replication is deliberate)
+   ```
+
+   Types
+
+   (a) Horizontal fragmentation — split by `rows`
+   - The table is divided by a condition on the rows, using the `selection` operation.
+   ```sql
+   Employee_Dhaka     = SELECT * FROM Employee WHERE branch = 'Dhaka';
+   Employee_Chattogram= SELECT * FROM Employee WHERE branch = 'Chattogram';
+   ```
+   ```
+             Employee (whole table)
+      +--------+-------+-------------+
+      | emp_id | name  | branch      |
+      +--------+-------+-------------+
+      | 101    | Rahim | Dhaka       |  --> fragment 1, stored in Dhaka
+      | 102    | Karim | Dhaka       |  --> fragment 1
+      | 103    | Jamal | Chattogram  |  --> fragment 2, stored in Chattogram
+      +--------+-------+-------------+
+   ```
+   - Rebuilt with `UNION`. Best when different sites use different sets of rows — the normal case for a bank's branches.
+   - `Derived horizontal fragmentation` splits a child table the same way as its parent, so that a join stays local.
+
+   (b) Vertical fragmentation — split by `columns`
+   - The table is divided by columns, using the `projection` operation. The `primary key is repeated in every fragment`, otherwise the table cannot be rebuilt.
+   ```sql
+   Emp_Personal = SELECT emp_id, name, address FROM Employee;   -- HR site
+   Emp_Payroll  = SELECT emp_id, salary, tax   FROM Employee;   -- Accounts site
+   ```
+   - Rebuilt with a `natural join` on the key. Best when different departments use different columns, and it also helps security — payroll columns are simply not stored at the HR site.
+
+   (c) Mixed (hybrid) fragmentation
+   - Both applied together: first split by rows, then split those pieces by columns, or the reverse.
+   - Example: split `Employee` by branch, then split each branch's fragment into personal and payroll columns.
+
+   ```mermaid
+   flowchart TD
+       A[Employee table] --> B[Horizontal: by branch]
+       B --> C[Dhaka rows]
+       B --> D[Chattogram rows]
+       C --> E[Personal columns]
+       C --> F[Payroll columns]
+   ```
+
+   Advantages
+   - Faster local queries, because most data needed at a site is stored there.
+   - Less network traffic and lower cost.
+   - Better security — a site holds only what it needs.
+   - Parallel processing, since fragments can be scanned at the same time.
+
+   Disadvantages
+   - A query that needs several fragments must join across the network, which is slow.
+   - Harder to keep consistent, and recursive fragmentation makes the design complex.
 
 3. **What is distributed database?** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)]*
 
+   Answer: A `distributed database` is a single logical database whose data is physically stored across several computers, at different locations, connected by a network. To the user it looks and behaves like one ordinary database — the fact that the data is spread out is hidden.
+
+   - The software that manages it is a `DDBMS` (Distributed Database Management System). It handles where the data lives, how a query is split, and how the sites are kept consistent.
+
+   ```mermaid
+   flowchart LR
+       U[User / application] --> D[DDBMS]
+       D --> A[(Site 1 - Dhaka)]
+       D --> B[(Site 2 - Chattogram)]
+       D --> C[(Site 3 - Khulna)]
+   ```
+
+   Key ideas
+   - `Fragmentation` — one table is split into pieces: `horizontal` by rows (Dhaka branch rows in Dhaka), `vertical` by columns, or `mixed`.
+   - `Replication` — the same data is kept at more than one site, which improves availability and read speed but makes updates harder.
+   - `Transparency` — the user does not need to know any of this:
+   ```
+   Location transparency   : no need to know which site holds the data
+   Fragmentation transparency : the table looks whole
+   Replication transparency : the user does not know how many copies exist
+   ```
+
+   Types
+   - `Homogeneous` — every site runs the same DBMS product and schema. Easier to manage.
+   - `Heterogeneous` — sites run different products (Oracle at one, MySQL at another). Needs a translation layer.
+
+   Advantages
+   - `Reliability and availability` — one site failing does not stop the whole system.
+   - `Faster local access`, because data sits near the users who use it.
+   - `Modular growth` — a new branch is added by adding a site, without replacing the central machine.
+   - `Lower communication cost`, since most queries are answered locally.
+   - Matches how an organisation is actually organised, branch by branch.
+
+   Disadvantages
+   - `Complex` design, query optimisation and administration.
+   - Keeping copies consistent needs `two-phase commit`, which is slow and blocks if a site fails.
+   - Higher software cost and a larger `security surface`, because data travels over the network.
+   - A query that needs several sites can be very slow.
+
+   - Real example: a bank keeping each branch's accounts on that branch's server, while head office can still query all branches as one table. A centralized database, by contrast, keeps everything on one machine — simpler, but a single point of failure.
+
 4. **Which of the following distributed database system over centralized database system? (a) Software cost (b) Software complexity (c) Slow response (d) Modular growth** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
+   Answer: (d) Modular growth
+
+   - `Modular growth` is the clear advantage of a distributed database over a centralized one. A new branch or region is added simply by adding another site to the network — the existing sites keep running and nothing has to be replaced. In a centralized system, growth means buying a bigger machine and taking downtime to migrate to it.
+
+   Why the other options are wrong — they are `disadvantages`, not advantages
+   - `(a) Software cost` — a DDBMS costs `more`, not less. Extra licences, extra hardware and extra staff are needed at each site.
+   - `(b) Software complexity` — a distributed system is far `more` complex: distributed query optimisation, two-phase commit, replication control and distributed deadlock detection all have to be handled.
+   - `(c) Slow response` — response is generally `faster`, because data is stored near the users who use it and most queries are answered locally.
+
+   Other genuine advantages of a distributed database
+   - `Reliability and availability` — one site failing does not bring down the whole system, whereas a centralized database is a single point of failure.
+   - `Local autonomy` — each site controls and manages its own data.
+   - `Lower communication cost`, since most access is local.
+   - `Parallel processing` — a query can be answered by several sites at once.
+   - It matches the way an organisation is actually structured, branch by branch.
+
+   The real disadvantages, for completeness
+   ```
+   Higher software and hardware cost
+   Much greater complexity in design and administration
+   Harder to keep data consistent (needs two-phase commit)
+   Larger security surface, because data crosses the network
+   Slow cross-site queries when several sites must be joined
+   ```
+
 5. **Explain the concept distributed DBMS. What are the features of DBMS?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1054 (ET: BUET)]*
+
+   Answer: Concept of a distributed DBMS
+   - A `distributed DBMS (DDBMS)` is the software that manages a single logical database whose data is physically stored on several computers at different locations, connected by a network. The user sees one ordinary database; the distribution is hidden.
+
+   ```mermaid
+   flowchart LR
+       U[User / application] --> D[DDBMS]
+       D --> A[(Site 1 - Dhaka)]
+       D --> B[(Site 2 - Chattogram)]
+       D --> C[(Site 3 - Khulna)]
+   ```
+
+   - `Fragmentation` splits a table into pieces: `horizontal` by rows, `vertical` by columns, or `mixed`.
+   - `Replication` keeps the same data at more than one site, improving availability and read speed at the cost of harder updates.
+   - `Transparency` hides the details — location, fragmentation and replication transparency all mean the user writes an ordinary SQL query.
+   - `Homogeneous` DDBMS runs the same product everywhere; `heterogeneous` mixes different products and needs a translation layer.
+   - A transaction spanning several sites is committed with `two-phase commit`, so either all sites commit or none does.
+   - Advantages: reliability, local speed, modular growth. Disadvantages: complexity, cost, and slow cross-site joins.
+
+   Features of a DBMS
+   - `Data storage and retrieval` — the DBMS manages files, pages and buffers, so the user never handles files directly.
+   - `Data independence` — `logical` independence means the application survives a schema change; `physical` independence means it survives a change in storage or indexing.
+   - `Reduced redundancy and consistency` — data is stored once and shared, so the same fact does not disagree between two files.
+   - `Data integrity` — primary key, foreign key, `CHECK` and `NOT NULL` constraints are enforced by the DBMS itself.
+   - `Transaction management with ACID` — atomicity, consistency, isolation and durability for every unit of work.
+   - `Concurrency control` — locking or MVCC lets many users work at once without seeing each other's half-finished changes.
+   - `Recovery` — write-ahead logging, checkpoints, undo and redo bring the database back after a crash.
+   - `Security` — user accounts, `GRANT` and `REVOKE` privileges, views that expose only certain columns, and encryption.
+   - `Query language` — SQL, a declarative language, plus a query optimiser that decides how to run the query.
+   - `Multiple views` — each user group sees only the part of the schema it needs.
+   - `Backup and restore utilities`, an active `data dictionary`, and import/export tools.
+   - `Multi-user access` with authentication and an audit trail.
 
 ## Database Design & Data Types (3)
 
