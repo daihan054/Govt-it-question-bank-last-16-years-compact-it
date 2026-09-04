@@ -11622,11 +11622,588 @@
 
 1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 310 (ET: BIBM)]*
 
+   Answer: Difference between policy, guideline and procedure
+
+   | Point | Policy | Guideline | Procedure |
+   |---|---|---|---|
+   | What it is | A `high-level statement` of intent and rule | `Recommended` best practice | `Step-by-step` instructions |
+   | Answers | `Why` and `what` | `How, suggested` | `How, exactly` |
+   | Mandatory? | `Yes` — compulsory | `No` — advisory | `Yes` — compulsory |
+   | Detail | Low | Medium | `High` |
+   | Approved by | `Board` / senior management | Department or subject expert | Process owner |
+   | Changes | Rarely | Often | When the process changes |
+   | Length | Short — a page | Varies | Long — a checklist |
+   | Audience | Everyone | Anyone needing advice | The person doing the task |
+
+   Example — the same subject at three levels
+   ```
+      POLICY
+           "All user passwords must be strong and must be changed
+            every 90 days."
+           -> the RULE. Short, mandatory, rarely changed.
+
+      GUIDELINE
+           "A strong password is best made from a passphrase of four
+            unrelated words. Avoid names, dates and dictionary
+            words."
+           -> ADVICE. Helpful, not enforceable.
+
+      PROCEDURE
+           "To change your password :
+              1. Log in to the portal
+              2. Click Settings, then Security
+              3. Enter the old password
+              4. Enter the new password twice
+              5. Click Save and log in again"
+           -> the EXACT STEPS. Mandatory, and it changes whenever
+              the portal changes.
+   ```
+   ```
+      The related term is a STANDARD :
+           "Passwords must be at least 12 characters and contain an
+            upper case letter, a digit and a symbol."
+           -> a MANDATORY, MEASURABLE specification that supports
+              the policy. Between a policy and a procedure in level.
+
+      HIERARCHY :  POLICY -> STANDARD -> PROCEDURE
+                          -> GUIDELINE (advisory, alongside)
+   ```
+
+   Why the auditor must focus on control as a system
+   - An auditor cannot test every transaction. A bank posts millions of them, so testing each one is impossible. Instead the auditor tests the `system of controls` that governs them, and infers the reliability of the transactions from the reliability of the system.
+   ```
+      THE REASONS
+
+      1. VOLUME MAKES 100 PER CENT TESTING IMPOSSIBLE.
+           Testing a SAMPLE tells you about the sample. Testing the
+           CONTROL SYSTEM tells you about the whole population -
+           provided the system operated consistently.
+
+      2. CONTROLS ARE INTERDEPENDENT.
+           No single control is sufficient. A strong password policy
+           is worthless if the leavers' process does not disable
+           accounts. Controls only work as a SET, so they must be
+           evaluated as a set.
+           A COMPENSATING control elsewhere may cover a weak one -
+           which the auditor cannot see by examining controls in
+           isolation.
+
+      3. A WEAKNESS IN THE SYSTEM IS SYSTEMATIC.
+           One wrong transaction is an error. A broken control
+           produces wrong transactions CONTINUOUSLY, in every period,
+           past and future. Finding the broken control is worth far
+           more than finding one error.
+
+      4. PREVENTION IS THE OBJECTIVE, NOT DETECTION.
+           Detecting errors after the fact corrects the past. Fixing
+           the control prevents recurrence. An audit that lists
+           errors without identifying the control failure has not
+           done its job.
+
+      5. IT DETERMINES HOW MUCH SUBSTANTIVE TESTING IS NEEDED.
+           Strong, tested controls -> the auditor may rely on them
+                and reduce detailed testing.
+           Weak controls -> far more substantive testing is required.
+           This assessment IS the audit plan.
+
+      6. AUTOMATED CONTROLS ARE ALL-OR-NOTHING.
+           A manual clerk makes occasional mistakes. A program with
+           a logic error makes the SAME mistake every single time.
+           So in an IT environment the control system matters more,
+           not less.
+
+      7. THE THREE LAYERS MUST HOLD TOGETHER.
+           PREVENTIVE  - stop it happening (access control,
+                validation, SEGREGATION OF DUTIES)
+           DETECTIVE   - find it if it happens (reconciliation,
+                exception report, audit log)
+           CORRECTIVE  - put it right (backup, recovery, incident
+                response)
+           A system with prevention but no detection cannot tell
+           whether prevention is working.
+   ```
+
+   Four types of risk the auditor faces
+
+   1. Inherent risk
+   ```
+      The risk of material misstatement BEFORE considering any
+      internal control - the risk arising from the NATURE of the
+      business and the transaction itself.
+
+      The auditor CANNOT REDUCE inherent risk ; it can only be
+      ASSESSED.
+
+      HIGH inherent risk :
+           cash and card transactions - liquid and easily stolen
+           complex financial instruments requiring judgement
+           estimates and provisions
+           a new payment channel with no operating history
+           a heavily regulated activity
+
+      LOW inherent risk :
+           fixed assets , simple recurring rent payments
+   ```
+
+   2. Control risk
+   ```
+      The risk that the entity's INTERNAL CONTROLS FAIL to prevent
+      or detect a material misstatement.
+
+      The auditor does not create the controls, so cannot reduce
+      this risk either - only ASSESS it, by testing the controls.
+
+      CAUSES :
+           no SEGREGATION OF DUTIES - one person initiates and
+                approves
+           management OVERRIDE of controls
+           a control that exists on paper but is not performed
+           shared or excessive user privileges
+           no reconciliation, no exception review
+           COLLUSION between two people, which defeats even good
+                segregation
+   ```
+
+   3. Detection risk
+   ```
+      The risk that THE AUDITOR fails to detect a material
+      misstatement that exists.
+
+      This is the ONLY component the auditor CONTROLS, and it is
+      controlled by the amount, timing and nature of the audit
+      work.
+
+      CAUSES :
+           too small a sample
+           the wrong audit procedure for the risk
+           insufficient time or an inexperienced audit team
+           misinterpreting the evidence obtained
+
+      REDUCED BY : a larger sample , better procedures , more
+           experienced staff , and review of the audit work itself.
+   ```
+   ```
+      THE AUDIT RISK MODEL
+
+           AUDIT RISK = INHERENT RISK * CONTROL RISK * DETECTION RISK
+
+      The auditor sets ACCEPTABLE AUDIT RISK (say 5 per cent),
+      ASSESSES inherent and control risk, and then works out how low
+      DETECTION RISK must be - which decides how much testing to do.
+
+           High inherent + high control risk
+                -> detection risk must be LOW
+                -> MORE testing, larger samples
+
+           Low inherent + low control risk
+                -> detection risk may be higher
+                -> LESS testing
+   ```
+
+   4. Business risk
+   ```
+      The risk that the AUDITOR SUFFERS LOSS from the engagement,
+      even if the audit itself was properly performed :
+           litigation and damages
+           loss of reputation
+           regulatory sanction
+           loss of the client, or non-payment of fees
+
+      It is managed by client screening, engagement letters,
+      professional indemnity insurance, and documenting the work
+      thoroughly.
+   ```
+   - The relationship worth stating: the first three multiply to give `audit risk`, and only `detection risk` is within the auditor's control. Inherent and control risk are properties of the `client`, which the auditor `assesses` and then responds to by adjusting the depth of testing. `Business risk` is separate — it is the auditor's own exposure, not the client's.
+
 2. **A bank has association with two different service providers as their payment gateways. The bank hires Mr. X to audit the payment gateway based on risk and threat detection. Which possible scenarios Mr. X will face?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 443 (ET: BIBM)]*
+
+   Answer: The scenario: a bank uses `two different payment gateway service providers`, and Mr. X audits them for risk and threat detection. The scenarios he will face fall into the following groups.
+
+   1. Inconsistency between the two providers
+   ```
+      Two providers means TWO of everything, and the differences are
+      themselves a risk :
+
+        different SECURITY STANDARDS - one PCI-DSS certified, the
+             other not
+        different ENCRYPTION - one on TLS 1.3, the other still on
+             TLS 1.0 or 1.1
+        different AUTHENTICATION - one enforcing 3D Secure and OTP,
+             the other not
+        different LOG FORMATS and retention periods, so a
+             transaction cannot be traced end to end across both
+        different SLA and incident-response commitments
+        ONE PROVIDER BECOMES THE WEAK LINK - an attacker will use
+             the weaker gateway, so the bank's security is that of
+             its WEAKEST provider, not its average
+   ```
+
+   2. Transaction integrity and reconciliation risk
+   ```
+      DOUBLE DEBIT       the customer is charged twice because a
+           retry was not IDEMPOTENT
+      DEBIT WITHOUT
+           CREDIT        money leaves the account but the merchant
+           is never credited - the network failed after the debit
+           and NO REVERSAL was sent
+      ORPHAN TRANSACTION recorded at the gateway but not in the core
+           banking system, or the reverse
+      AMOUNT or CURRENCY MISMATCH between the two systems
+      SETTLEMENT MISMATCH  the gateway's settlement file does not
+           agree with the bank's ledger
+      RECONCILIATION      does the bank reconcile with BOTH
+           providers DAILY, and who investigates a break ?
+   ```
+   - This group is where real money is lost, and it is the first thing to test: `pick a failure point deliberately and check what state the account, the gateway and the ledger are left in`.
+
+   3. Security and threat scenarios
+   ```
+      DATA AT REST and IN TRANSIT
+           Is card data ENCRYPTED ? Is the CVV STORED anywhere - it
+           must NOT be. Is TOKENISATION used instead of raw card
+           numbers ?
+      MAN IN THE MIDDLE on the bank-to-gateway link
+      API KEY and CREDENTIAL MANAGEMENT
+           Are the gateway API keys hard-coded in the application ?
+           Are they rotated ? Who can see them ?
+      REPLAY ATTACK - can a captured transaction message be resent
+           and processed again ?
+      INJECTION and application-layer attacks on the payment page
+      PHISHING and fake payment pages impersonating the bank
+      CARD TESTING / ENUMERATION - many small transactions probing
+           stolen card numbers
+      DDoS on one gateway, and whether traffic fails over safely
+      INSIDER THREAT - can a bank or provider employee alter or view
+           transaction data ?
+   ```
+
+   4. Access control and segregation of duties
+   ```
+      Who at the bank can change the GATEWAY ROUTING RULES ?
+      Can one person both INITIATE and APPROVE a refund ?
+      Are there SHARED or GENERIC accounts on the gateway console ?
+      Are LEAVERS' accounts disabled promptly ?
+      Is PRIVILEGED ACCESS logged and reviewed ?
+      Is MULTI-FACTOR AUTHENTICATION enforced on administrative
+           access ?
+   ```
+
+   5. Third-party and vendor risk
+   ```
+      Is each provider PCI-DSS certified, and is the certificate
+           CURRENT ?
+      Has an independent security assessment or penetration test
+           been done, and were the findings closed ?
+      What does the CONTRACT say about liability for a breach ?
+      Does the provider SUBCONTRACT any part of the processing - the
+           FOURTH-PARTY risk the bank cannot see ?
+      WHERE IS THE DATA HOSTED ? Offshore hosting raises data-
+           sovereignty and regulatory questions.
+      What is the EXIT PLAN if a provider fails or the contract
+           ends ?
+      CONCENTRATION RISK - what share of volume goes through each ?
+   ```
+
+   6. Availability and continuity
+   ```
+      If gateway A fails, does traffic FAIL OVER to gateway B
+           automatically, and is the failover TESTED ?
+      Is there a documented RTO and RPO ?
+      Are transactions in flight at the moment of failure LOST,
+           DUPLICATED, or correctly recovered ?
+      Is there enough capacity at PEAK - salary day, Eid ?
+   ```
+
+   7. Compliance and regulatory
+   ```
+      BANGLADESH BANK guidelines on ICT security and payment
+           systems
+      PCI-DSS for card data
+      AML and CFT - is transaction monitoring in place for
+           suspicious patterns, on BOTH gateways ?
+      AUDIT TRAIL retention - is it complete, immutable, and kept
+           for the required period ?
+      CUSTOMER DATA PRIVACY and consent
+   ```
+
+   8. Monitoring and threat detection — the specific brief
+   ```
+      Is there REAL-TIME FRAUD MONITORING, and does it cover both
+           providers or only one ?
+      Are ALERTS defined for : velocity (many transactions in
+           seconds), unusual geography, high-value transactions,
+           repeated declines from one card ?
+      Is there a SIEM collecting logs from both gateways, and does
+           anyone actually read the alerts ?
+      Is there a documented INCIDENT RESPONSE plan, and has it been
+           rehearsed ?
+      Are logs TAMPER-PROOF - can an insider delete evidence ?
+   ```
+
+   9. Practical obstacles Mr. X will face during the audit itself
+   ```
+      The providers may REFUSE ACCESS to their systems, offering
+           only a SOC 2 report or a certificate - so the auditor
+           must rely on third-party assurance rather than direct
+           testing.
+      No TEST ENVIRONMENT, so failure scenarios cannot be driven
+           deliberately.
+      INCOMPLETE DOCUMENTATION of the integration.
+      LOGS in different formats that cannot be correlated across the
+           two gateways.
+      Testing on the LIVE system risks real customer transactions.
+      COMMERCIAL PRESSURE not to report findings against a provider
+           the bank depends on.
+   ```
+
+   - The finding most likely to matter: with two providers the bank's exposure is set by the `weaker` of the two, and the `boundary between them` — routing, failover and reconciliation — is where nobody's controls apply. That gap between two well-controlled systems is exactly where an auditor should look first, and it is the scenario a single-provider audit would never reveal.
 
 3. **(ক) Software risk কত প্রকার ও কী কী? Risk management process চিত্রের মাধ্যমে বুঝিয়ে লিখুন।** *[Software Assistant Programmer 13.10.2022 compact it 709 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Types of software risk
+
+   Risk is classified by `what it threatens`.
+   ```
+      1. PROJECT RISK
+           Threatens the SCHEDULE and the BUDGET.
+             staff turnover , unrealistic estimates , requirement
+             creep , loss of a key person , customer unavailable ,
+             budget cut , late delivery by a supplier
+           EFFECT : the project is late or over cost.
+
+      2. PRODUCT RISK  (technical risk)
+           Threatens the QUALITY of the software being built.
+             unproven technology , performance target that cannot be
+             met , integration with a legacy system , defective
+             third-party component , changing specification
+           EFFECT : the product is delivered but does not work well
+             enough.
+
+      3. BUSINESS RISK
+           Threatens the VIABILITY of the product or the
+           organisation.
+             the market changes and the product is no longer wanted
+             a competitor releases first
+             the sponsor loses interest or leaves
+             management support is withdrawn
+             regulation changes and makes the product illegal
+           EFFECT : the software is built correctly and is
+             worthless. THE MOST DANGEROUS CATEGORY, because
+             technical excellence cannot cure it.
+   ```
+   ```
+      The same risk can fall in more than one category :
+
+           "The lead developer resigns"
+                -> PROJECT risk (delay) AND PRODUCT risk (their
+                   knowledge of the design is lost)
+   ```
+
+   Other classifications used
+   ```
+      BY SOURCE
+        KNOWN risks       identifiable from the plan and experience
+        PREDICTABLE risks likely from past projects - staff
+                          turnover, poor communication
+        UNPREDICTABLE     cannot be foreseen - a natural disaster
+
+      BY AREA
+        requirement risk , estimation risk , technology risk ,
+        people risk , organisational risk , tools risk , security
+        risk , legal risk
+   ```
+
+   The risk management process
+   ```mermaid
+   flowchart LR
+       A[1. Risk identification] --> B[2. Risk analysis]
+       B --> C[3. Risk planning]
+       C --> D[4. Risk monitoring]
+       D --> A
+   ```
+   ```
+      +---------------------+     +---------------------+
+      | 1. RISK             |---->| 2. RISK             |
+      |    IDENTIFICATION   |     |    ANALYSIS         |
+      | - checklists        |     | - PROBABILITY       |
+      | - brainstorming     |     | - IMPACT            |
+      | - past projects     |     | - risk EXPOSURE     |
+      | - expert judgement  |     |   = P * I           |
+      +---------------------+     +---------------------+
+                ^                            |
+                |                            v
+      +---------------------+     +---------------------+
+      | 4. RISK MONITORING  |<----| 3. RISK PLANNING    |
+      | - track each risk   |     | - AVOID             |
+      | - has probability   |     | - TRANSFER          |
+      |   changed ?         |     | - MITIGATE          |
+      | - new risks ?       |     | - ACCEPT            |
+      | - trigger the plan  |     | - CONTINGENCY plan  |
+      +---------------------+     +---------------------+
+
+      THE LOOP IS CONTINUOUS - it runs through the whole project,
+      not once at the start.
+   ```
+
+   Step 1 — Risk identification
+   - List everything that could go wrong, using checklists, brainstorming with the team, the record of past projects, and expert judgement. The output is the `risk register`.
+
+   Step 2 — Risk analysis
+   ```
+      Each risk is given a PROBABILITY and an IMPACT :
+
+           RISK EXPOSURE = PROBABILITY * IMPACT
+
+      Example :
+           Risk : the lead developer resigns
+           Probability = 0.3     Impact = 20 lakh delay cost
+           Exposure = 0.3 * 20 = 6 lakh
+
+      Risks are then RANKED by exposure, and attention goes to the
+      top few. A register of fifty risks all treated equally is a
+      register nobody uses.
+   ```
+   ```
+      THE RISK MATRIX
+
+                 IMPACT ->
+                 LOW      MEDIUM     HIGH
+      HIGH   |  monitor | mitigate | AVOID or
+      P      |          |          | MITIGATE NOW
+      R  MED |  accept  | monitor  | mitigate
+      O      |          |          |
+      B  LOW |  accept  | accept   | TRANSFER
+             |          |          | (insure)
+   ```
+
+   Step 3 — Risk planning
+   ```
+      FOUR RESPONSES
+
+      AVOID      change the plan so the risk cannot occur.
+           "Use a proven database instead of the new one."
+      TRANSFER   move the risk to someone else - insurance, a fixed-
+           price subcontract, a penalty clause.
+      MITIGATE   reduce the probability or the impact.
+           "Cross-train a second developer on the payment module."
+      ACCEPT     do nothing, but prepare a CONTINGENCY PLAN and
+           reserve budget for it.
+
+      Each risk also needs a TRIGGER - the observable sign that it
+      is materialising - and an OWNER responsible for watching it.
+   ```
+
+   Step 4 — Risk monitoring
+   - Review the register regularly. Has any probability or impact changed? Have new risks appeared? Has a trigger fired? Retire risks that have passed. In Agile this review happens at every `sprint retrospective`.
+
+   - The judgement worth stating: risk management is not about eliminating risk, which is impossible, but about `knowing which risks matter and having a prepared response`. A project that identifies its top five risks and plans for them will outperform one that identifies fifty and plans for none.
+
 4. **Draw risk analysis digram.** *[NESCO Manager (Software) 2018 compact it 1210 (ET: N/A)]*
+
+   Answer: Risk analysis diagram
+
+   The risk management cycle
+   ```mermaid
+   flowchart LR
+       A[1. Risk identification] --> B[2. Risk analysis:<br/>probability x impact]
+       B --> C[3. Risk prioritisation]
+       C --> D[4. Risk planning:<br/>avoid, transfer, mitigate, accept]
+       D --> E[5. Risk monitoring]
+       E --> A
+   ```
+   ```
+      +---------------------+       +---------------------+
+      | 1. RISK             |------>| 2. RISK ANALYSIS    |
+      |    IDENTIFICATION   |       |  - PROBABILITY (P)  |
+      |  - checklists       |       |  - IMPACT (I)       |
+      |  - brainstorming    |       |  - EXPOSURE = P * I |
+      |  - past projects    |       +---------------------+
+      +---------------------+                  |
+                ^                              v
+                |                    +---------------------+
+                |                    | 3. PRIORITISATION   |
+                |                    |  rank by exposure   |
+                |                    +---------------------+
+                |                              |
+      +---------------------+                  v
+      | 5. RISK MONITORING  |       +---------------------+
+      |  - track exposure   |<------| 4. RISK PLANNING    |
+      |  - watch TRIGGERS   |       |  AVOID / TRANSFER / |
+      |  - find new risks   |       |  MITIGATE / ACCEPT  |
+      +---------------------+       |  + contingency plan |
+                                    +---------------------+
+   ```
+
+   The risk matrix
+   ```
+                             I M P A C T
+                    LOW         MEDIUM        HIGH
+               +------------+------------+---------------+
+         HIGH  |  MONITOR   |  MITIGATE  |   AVOID or    |
+               |            |            |   MITIGATE    |
+      P        |            |            |   IMMEDIATELY |
+      R        +------------+------------+---------------+
+      O   MED  |  ACCEPT    |  MONITOR   |   MITIGATE    |
+      B        |            |            |               |
+      A        +------------+------------+---------------+
+      B   LOW  |  ACCEPT    |  ACCEPT    |   TRANSFER    |
+      I        |            |            |   (insure)    |
+      L        +------------+------------+---------------+
+      I
+      T
+      Y
+   ```
+
+   The risk register — how analysis is recorded
+   ```
+      +----+------------------+------+--------+----------+-----------+
+      | ID | Risk             | Prob | Impact | Exposure | Response  |
+      +----+------------------+------+--------+----------+-----------+
+      | R1 | Lead developer   | 0.30 | 20 L   |   6.0 L  | MITIGATE  |
+      |    | resigns          |      |        |          | cross-    |
+      |    |                  |      |        |          | train     |
+      | R2 | Requirements     | 0.60 |  8 L   |   4.8 L  | MITIGATE  |
+      |    | change late      |      |        |          | change    |
+      |    |                  |      |        |          | control   |
+      | R3 | Legacy system    | 0.40 | 10 L   |   4.0 L  | MITIGATE  |
+      |    | integration      |      |        |          | build an  |
+      |    | fails            |      |        |          | adapter   |
+      | R4 | Vendor delivers  | 0.20 | 15 L   |   3.0 L  | TRANSFER  |
+      |    | late             |      |        |          | penalty   |
+      |    |                  |      |        |          | clause    |
+      | R5 | Server hardware  | 0.10 | 12 L   |   1.2 L  | ACCEPT    |
+      |    | failure          |      |        |          | + backup  |
+      +----+------------------+------+--------+----------+-----------+
+
+      RISK EXPOSURE = PROBABILITY * IMPACT
+      The register is sorted by EXPOSURE, and effort goes to the top.
+   ```
+
+   The risk-exposure calculation
+   ```
+      Example : R1 , the lead developer resigns
+
+           Probability = 0.30
+           Impact      = 20 lakh  (delay and re-work cost)
+
+           Exposure = 0.30 * 20 = 6.0 lakh
+
+      This is the amount it is worth spending to remove the risk.
+      Spending 2 lakh to cross-train a second developer is clearly
+      worthwhile ; spending 10 lakh would not be.
+   ```
+
+   The four responses
+   ```
+      AVOID      change the plan so the risk cannot arise
+      TRANSFER   pass it to someone else - insurance, a fixed-price
+                 subcontract, a penalty clause
+      MITIGATE   reduce the probability or the impact
+      ACCEPT     take it knowingly, with a CONTINGENCY PLAN and
+                 reserved budget
+   ```
+   - Two things every entry needs besides the numbers: a `trigger` — the observable sign that the risk is materialising — and an `owner` responsible for watching it. A register with exposures but no triggers and no owners records risk without managing it.
+   - The purpose of the whole diagram is the `loop`. Risk analysis is not done once at the start; probabilities change, risks retire and new ones appear, so the cycle runs for the life of the project — at every `sprint retrospective` in an Agile project, and at every phase review in a Waterfall one.
 
 ## Data Flow Diagrams (DFD) (2)
 
