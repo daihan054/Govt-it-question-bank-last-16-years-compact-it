@@ -27,35 +27,170 @@
 
 1. **তিন ক্রমের ম্যাজিক সংখ্যা কোনটি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
+   Answer:
+   - সূত্র: $n$ ক্রমের ম্যাজিক সংখ্যা $= \frac{n(n^2 + 1)}{2}$
+   - $n = 3$ হলে:
+     $$\text{Magic Number} = \frac{3(3^2 + 1)}{2} = \frac{3 \times 10}{2} = 15$$
+   - উত্তর: ১৫ (15)
+
 2. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝাটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+
+   Answer:
+   - ধরি, মেঝের প্রস্থ $= w$ মিটার।
+   - মেঝের ক্ষেত্রফল $= 20 \times w = 20w$ বর্গমিটার।
+   - প্রস্থ ৪ মিটার কম হলে ক্ষেত্রফল $= 20(w - 4)$ বর্গমিটার।
+   - শর্তমতে, খরচের অনুপাত ক্ষেত্রফলের অনুপাতের সমান:
+     $$\frac{20(w - 4)}{20w} = \frac{6000}{7500}$$
+     $$\implies \frac{w - 4}{w} = \frac{4}{5}$$
+     $$\implies 5(w - 4) = 4w$$
+     $$\implies 5w - 20 = 4w$$
+     $$\implies w = 20$$
+   - উত্তর: ২০ মিটার (20 meters)
 
 3. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
+   Answer:
+   - প্রারম্ভিক জনসংখ্যা $P = 80,00,000$
+   - বার্ষিক বৃদ্ধির হার $r = \frac{30}{1000} = 0.03 = 3\%$
+   - ৩ বছর পর মোট জনসংখ্যা:
+     $$A = P(1 + r)^n = 80,00,000 \times (1 + 0.03)^3$$
+     $$A = 80,00,000 \times (1.03)^3 = 80,00,000 \times 1.092727 = 87,41,816$$
+   - উত্তর: ৮৭,৪১,৮১৬ জন (87,41,816)
+
 4. **প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+
+   Answer:
+   - সূত্র: প্রথম $n$ সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি $= n^2$
+   - অতএব, প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি $= \text{ক}^2$ (বা $k^2$)
+   - উত্তর: $\text{ক}^2$
 
 5. **A man could buy a certain number of notebooks for Rs.300. If each notebook cost is Rs.5 more, he could have bought 10 notebooks less for the same amount. Find the price of each notebook?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
-6. **If x is an Integer and x + \frac{1}{x} = \frac{17}{4}, then value of x - \frac{1}{x} = ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
+   Answer:
+   - Let the original price of each notebook be Rs. $x$.
+   - Original number of notebooks bought $= \frac{300}{x}$
+   - When price increases by Rs. 5, new number of notebooks $= \frac{300}{x + 5}$
+   - According to the problem:
+     $$\frac{300}{x} - \frac{300}{x + 5} = 10$$
+     $$300 \left(\frac{x + 5 - x}{x(x + 5)}\right) = 10$$
+     $$\frac{1500}{x^2 + 5x} = 10$$
+     $$x^2 + 5x - 150 = 0$$
+     $$(x + 15)(x - 10) = 0$$
+   - Since price cannot be negative, $x = 10$.
+   - Answer: Rs. 10 (or 10 Taka)
+
+6. **If x is an Integer and x + rac{1}{x} = rac{17}{4}, then value of x - rac{1}{x} = ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
+
+   Answer:
+   - Given: $x + \frac{1}{x} = \frac{17}{4} = 4 + \frac{1}{4} \implies x = 4$ (as $x$ is an integer).
+   - Using algebraic identity:
+     $$\left(x - \frac{1}{x}\right)^2 = \left(x + \frac{1}{x}\right)^2 - 4$$
+     $$\left(x - \frac{1}{x}\right)^2 = \left(\frac{17}{4}\right)^2 - 4 = \frac{289}{16} - 4 = \frac{225}{16}$$
+     $$x - \frac{1}{x} = \sqrt{\frac{225}{16}} = \frac{15}{4}$$
+   - For $x = 4$: $4 - \frac{1}{4} = \frac{15}{4}$.
+   - Answer: $\frac{15}{4}$ (or $3.75$)
 
 7. **Students of a class are made to stand in rows. If students are extra in each row, then there would be 2 rows less. If four students are less in each row, then there would be 4 more rows. What is the number of students in the class?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
-8. **\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - \frac{2+\sqrt{3}}{2-\sqrt{3}} = ?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
+   Answer:
+   - Let the number of students in each row be $x$ and the number of rows be $y$.
+   - Total number of students $N = xy$.
+   - Case 1 (4 extra students per row $\implies 2$ fewer rows):
+     $$(x + 4)(y - 2) = xy \implies xy - 2x + 4y - 8 = xy \implies -2x + 4y = 8 \implies -x + 2y = 4 \quad \text{--- (1)}$$
+   - Case 2 (4 fewer students per row $\implies 4$ more rows):
+     $$(x - 4)(y + 4) = xy \implies xy + 4x - 4y - 16 = xy \implies 4x - 4y = 16 \implies x - y = 4 \quad \text{--- (2)}$$
+   - Adding (1) and (2):
+     $$y = 8$$
+   - From (2): $x = 8 + 4 = 12$.
+   - Total number of students $= xy = 12 \times 8 = 96$.
+   - Answer: 96 students
+
+8. **rac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - rac{2+\sqrt{3}}{2-\sqrt{3}} = ?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
+
+   Answer:
+   - Rationalizing the first term:
+     $$\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} = \frac{4(\sqrt{6}+\sqrt{2})^2}{(\sqrt{6})^2 - (\sqrt{2})^2} = \frac{4(6 + 2 + 2\sqrt{12})}{6 - 2} = \frac{4(8 + 4\sqrt{3})}{4} = 8 + 4\sqrt{3}$$
+   - Rationalizing the second term:
+     $$\frac{2+\sqrt{3}}{2-\sqrt{3}} = \frac{(2+\sqrt{3})^2}{2^2 - (\sqrt{3})^2} = \frac{4 + 3 + 4\sqrt{3}}{4 - 3} = 7 + 4\sqrt{3}$$
+   - Subtracting the two terms:
+     $$(8 + 4\sqrt{3}) - (7 + 4\sqrt{3}) = 8 - 7 = 1$$
+   - Answer: 1
 
 9. **9+7+5+.......ধারাটির যোগফল -১৪৪ হলে, n = কত?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
+   Answer:
+   - প্রথম পদ $a = 9$, সাধারণ অন্তর $d = 7 - 9 = -2$, সমষ্টি $S_n = -144$
+   - সমষ্টির সূত্র: $S_n = \frac{n}{2}[2a + (n - 1)d]$
+     $$-144 = \frac{n}{2}[2(9) + (n - 1)(-2)]$$
+     $$-144 = \frac{n}{2}[18 - 2n + 2] = \frac{n}{2}[20 - 2n] = n(10 - n)$$
+     $$-144 = 10n - n^2$$
+     $$n^2 - 10n - 144 = 0$$
+     $$(n - 18)(n + 8) = 0$$
+   - যেহেতু পদসংখ্যা $n$ ঋণাত্মক হতে পারে না, তাই $n = 18$।
+   - উত্তর: 18
+
 10. **পিতার বর্তমান বয়স পুত্রের বয়সের ৩ গুণ। ৫ বছর আগে পিতার বয়স পুত্রের বয়সের ৪ গুণ ছিল। পিতা ও পুত্রের বর্তমান বয়স কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+    Answer:
+    - ধরি, পুত্রের বর্তমান বয়স $= x$ বছর।
+    - অতএব, পিতার বর্তমান বয়স $= 3x$ বছর।
+    - ৫ বছর পূর্বে পুত্রের বয়স ছিল $(x - 5)$ বছর এবং পিতার বয়স ছিল $(3x - 5)$ বছর।
+    - শর্তমতে:
+      $$3x - 5 = 4(x - 5)$$
+      $$3x - 5 = 4x - 20$$
+      $$4x - 3x = 20 - 5$$
+      $$x = 15$$
+    - পুত্রের বর্তমান বয়স $= 15$ বছর এবং পিতার বর্তমান বয়স $= 3 \times 15 = 45$ বছর।
+    - উত্তর: পিতার বয়স ৪৫ বছর এবং পুত্রের বয়স ১৫ বছর
 
 11. **দুইটি সংখ্যার যোগফল ১১২০ এবং বিয়োগফল বড় সংখ্যাটির ২/৩ অংশ। সংখ্যা দুইটি কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-12. **\log_3 \frac{1}{81} এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+    Answer:
+    - ধরি, বড় সংখ্যাটি $x$ এবং ছোট সংখ্যাটি $y$।
+    - শর্তানুসারে:
+      $$x + y = 1120 \quad \text{--- (1)}$$
+      $$x - y = \frac{2}{3}x \implies x - \frac{2}{3}x = y \implies y = \frac{1}{3}x \implies x = 3y$$
+    - (1) নং সমীকরণে $x = 3y$ বসিয়ে:
+      $$3y + y = 1120 \implies 4y = 1120 \implies y = 280$$
+    - অতএব, $x = 3 \times 280 = 840$
+    - উত্তর: ৮৪০ এবং ২৮০ (840 and 280)
+
+12. **\log_3 rac{1}{81} এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+    Answer:
+    $$\log_3 \left(\frac{1}{81}\right) = \log_3 (81^{-1}) = \log_3 (3^4)^{-1} = \log_3 (3^{-4}) = -4 \log_3 3 = -4 \times 1 = -4$$
+    - উত্তর: -4
 
 13. **x + y = 7 এবং xy = 10 হলে এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-14. **২. x + \frac{1}{x} = 4 হলে, x^2 + \frac{1}{x^2} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+    Answer:
+    - $(x - y)^2 = (x + y)^2 - 4xy = 7^2 - 4(10) = 49 - 40 = 9 \implies x - y = \pm 3$
+    - $x^2 + y^2 = (x + y)^2 - 2xy = 7^2 - 2(10) = 49 - 20 = 29$
+    - $x^3 + y^3 = (x + y)^3 - 3xy(x + y) = 7^3 - 3(10)(7) = 343 - 210 = 133$
+    - উত্তর: $x^2 + y^2 = 29$, $(x - y)^2 = 9$, $x^3 + y^3 = 133$
 
-15. **২. x + \frac{1}{x} = \sqrt{3} হলে x^3 + \frac{1}{x^3} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+14. **২. x + rac{1}{x} = 4 হলে, x^2 + rac{1}{x^2} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
 
-16. **M^0 + \sqrt[3]{8} + \text{Logs}_5{125} + (0100)^2 + 5** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+    Answer:
+    $$x^2 + \frac{1}{x^2} = \left(x + \frac{1}{x}\right)^2 - 2 = 4^2 - 2 = 16 - 2 = 14$$
+    - উত্তর: 14
+
+15. **২. x + rac{1}{x} = \sqrt{3} হলে x^3 + rac{1}{x^3} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+    Answer:
+    $$x^3 + \frac{1}{x^3} = \left(x + \frac{1}{x}\right)^3 - 3\left(x + \frac{1}{x}\right) = (\sqrt{3})^3 - 3(\sqrt{3}) = 3\sqrt{3} - 3\sqrt{3} = 0$$
+    - উত্তর: 0
+
+16. **M^0 + \sqrt[3]{8} + 	ext{Logs}_5{125} + (0100)^2 + 5** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+    Answer:
+    - $M^0 = 1$
+    - $\sqrt[3]{8} = 2$
+    - $\log_5 125 = \log_5 (5^3) = 3$
+    - বাইনারি মান $(0100)_2 = 4_{10} \implies 4^2 = 16$
+    - রাশিমালার মান: $1 + 2 + 3 + 16 + 5 = 27$
+    - (দশমিক ১০০ বিবেচনা করলে: $1 + 2 + 3 + 10000 + 5 = 10011$)
+    - উত্তর: 27 (বা 10011)
 
 ## Set Theory & Discrete Math (13)
 
