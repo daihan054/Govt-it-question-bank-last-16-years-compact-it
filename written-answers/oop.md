@@ -1,17 +1,18 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 117 questions
+**Table of Contents** — 10 subtopics · 128 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-54) | 54 |
 | 2 | [Java Programming & Methods](#java-programming--methods-18) | 18 |
 | 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-11) | 11 |
-| 4 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
-| 5 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
-| 6 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
-| 7 | [Exception Handling](#exception-handling-4) | 4 |
-| 8 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
-| 9 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
+| 4 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-11) | 11 |
+| 5 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
+| 6 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
+| 7 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
+| 8 | [Exception Handling](#exception-handling-4) | 4 |
+| 9 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
+| 10 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
 
 <!-- TOC END -->
 
@@ -19,9 +20,9 @@
 
 ## OOP Concepts (Inheritance & Polymorphism) (54)
 
-1. Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **Explain the concepts of Inheritance and Polymorphism in Java. Write a Java program to demonstrate method overriding.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer: Inheritance
+Answer: Inheritance
    - `Inheritance` lets one class acquire the fields and methods of another. The existing class is the `superclass` (parent) and the new one the `subclass` (child).
    - Its purpose is `code reuse` and expressing an "is-a" relationship: a Dog `is a` Animal.
    ```java
@@ -125,7 +126,7 @@
 
 2. **What is Object-Oriented Programming (OOP)? What are the main principles of OOP? What is the difference between Method Overloading and Method Overriding?** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
-   Answer: What OOP is
+Answer: What OOP is
    - `Object-Oriented Programming` organises a program around `objects` — bundles of `data` (attributes) and the `methods` that operate on that data — rather than around functions and logic.
    - A `class` is the blueprint; an `object` is an instance made from it.
    ```java
@@ -216,7 +217,7 @@
 
 3. **What is runtime polymorphism and compile time polymorphism? Explain it's with example.** *[IFIC Bank Officer IT 2025 compact it 1448 (ET: IFIC)]*
 
-   Answer: `Polymorphism` means "many forms" — the same method name behaves differently depending on the context. It comes in two kinds, distinguished by `when` the decision is made.
+Answer: `Polymorphism` means "many forms" — the same method name behaves differently depending on the context. It comes in two kinds, distinguished by `when` the decision is made.
 
    Compile-time polymorphism (static, early binding)
    - The compiler decides which method to call, by looking at the `number, types and order of the arguments`.
@@ -297,7 +298,7 @@
 
 4. **What is polymorphism?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: `Polymorphism` comes from Greek — "poly" means many and "morph" means form. In programming it means that the `same method name behaves differently` depending on the object it acts on or the arguments it is given.
+Answer: `Polymorphism` comes from Greek — "poly" means many and "morph" means form. In programming it means that the `same method name behaves differently` depending on the object it acts on or the arguments it is given.
 
    - A single interface serves many implementations, so the caller does not need to know which one it is using.
 
@@ -359,7 +360,7 @@
 
 5. **Explain OOP Feature.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: `Object-Oriented Programming` organises a program around `objects` — bundles of data and the methods that act on that data — instead of around functions and logic. Its features are the following.
+Answer: `Object-Oriented Programming` organises a program around `objects` — bundles of data and the methods that act on that data — instead of around functions and logic. Its features are the following.
 
    1. Class and Object
    - A `class` is a blueprint that defines attributes and methods. An `object` is an instance created from it, occupying real memory.
@@ -437,6 +438,10 @@
 
 6. **Write a program using any object-oriented language (e.g., C++ / Java / Python) to represent a Bank Account. Your program should include:**
  * **A class BankAccount with data members for account holder's name, account number, and balance.**
+ * **Member functions to deposit() money, withdraw() money (ensuring sufficient balance), and display() account details.**
+**Demonstrate the concept of encapsulation by keeping data member's private and providing appropriate public methods for accessing and modifying them.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
+
+* **A class BankAccount with data members for account holder's name, account number, and balance.**
  * **Member functions to deposit() money, withdraw() money (ensuring sufficient balance), and display() account details.**
 **Demonstrate the concept of encapsulation by keeping data member's private and providing appropriate public methods for accessing and modifying them.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
 
@@ -604,7 +609,7 @@
 
 7. **b) What is polymorphism in the context of an object-oriented paradigm? Explain the method of overloading and method of overriding with suitable examples.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1344 (ET: N/A)]*
 
-   Answer: What polymorphism is
+Answer: What polymorphism is
    - `Polymorphism` means "many forms". The same method name behaves differently depending on the object it acts on or the arguments it is given, so one interface serves many implementations.
    - It is one of the four pillars of OOP, with encapsulation, inheritance and abstraction.
    ```
@@ -695,7 +700,7 @@
 
 8. **Explain the concept of polymorphism in Object-oriented Programming with example?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1336 (ET: N/A)]*
 
-   Answer: `Polymorphism` means "many forms". In OOP it means the same method name behaves differently depending on the object it is called on or the arguments given to it, so that `one interface serves many implementations`.
+Answer: `Polymorphism` means "many forms". In OOP it means the same method name behaves differently depending on the object it is called on or the arguments given to it, so that `one interface serves many implementations`.
 
    Two types
    ```
@@ -777,7 +782,7 @@
 
 9. **Write down the difference between Structure and Class.** *[BCIC Assistant Programmer 14.02.2025 compact it 1324 (ET: BUET)]*
 
-   Answer: A `structure` and a `class` both group related data together. In C++ the only technical difference is the `default access level`; in C they are far more different, and in Java and C# a struct is a value type.
+Answer: A `structure` and a `class` both group related data together. In C++ the only technical difference is the `default access level`; in C they are far more different, and in Java and C# a struct is a value type.
 
    In C++
 
@@ -862,7 +867,7 @@
 
 10. **What is Polymorphism? Discuss about different types of Polymorphism with example?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 296 (ET: BIBM)]*
 
-    Answer: `Polymorphism` means "many forms". The same method name behaves differently depending on the object it acts on or the arguments it is given, so one interface serves many implementations.
+Answer: `Polymorphism` means "many forms". The same method name behaves differently depending on the object it acts on or the arguments it is given, so one interface serves many implementations.
 
     Types of polymorphism
     ```
@@ -958,7 +963,7 @@
 
 11. **Explain how encapsulation and inheritance are advantageous in object oriented programming.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
 
-    Answer: Encapsulation
+Answer: Encapsulation
     - `Encapsulation` binds the data and the methods that operate on it into a single unit, and `hides the internal state` behind private fields with public accessor methods.
     ```java
     class Account {
@@ -1030,7 +1035,7 @@
 
 12. **(খ) Function Overloading উদাহরণসহ ব্যাখ্যা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) `Function overloading` means defining two or more functions with the `same name` in the same scope, distinguished by their `parameter lists`. The compiler decides which one to call from the arguments supplied.
+Answer: (Answered in English, as required for IT topics.) `Function overloading` means defining two or more functions with the `same name` in the same scope, distinguished by their `parameter lists`. The compiler decides which one to call from the arguments supplied.
 
     - It is a form of `compile-time (static) polymorphism`.
 
@@ -1118,7 +1123,7 @@
 
 13. **Write down the advantages of OOP over traditional structured programming language** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 527 (ET: MIST)]*
 
-    Answer: `Structured (procedural) programming` organises a program around `functions` that act on data held separately. `OOP` organises it around `objects` that hold data and behaviour together.
+Answer: `Structured (procedural) programming` organises a program around `functions` that act on data held separately. `OOP` organises it around `objects` that hold data and behaviour together.
 
     Advantages of OOP over structured programming
 
@@ -1195,7 +1200,7 @@
 
 14. **Write down the Principle of OOP. What is Polymorphism? Write the name of 3 OOP language.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
 
-    Answer: Principles of OOP
+Answer: Principles of OOP
 
     The four pillars.
 
@@ -1258,7 +1263,7 @@
 
 15. **(b) What is the diamond problem of multiple inheritance in C++?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 487 (ET: N/A)]*
 
-    Answer: The `diamond problem` is the ambiguity that arises in `multiple inheritance` when a class inherits from two classes that share a common base class. The inheritance graph forms a diamond shape.
+Answer: The `diamond problem` is the ambiguity that arises in `multiple inheritance` when a class inherits from two classes that share a common base class. The inheritance graph forms a diamond shape.
 
     The situation
     ```
@@ -1351,7 +1356,7 @@
 
 16. **(a) Define function overloading and function overriding with examples.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
-    Answer: Function overloading
+Answer: Function overloading
     - Two or more functions in the `same scope` share a name but have `different parameter lists`. The compiler chooses which one to call from the arguments supplied.
     - It is `compile-time (static) polymorphism`, and needs no inheritance.
     ```
@@ -1450,7 +1455,7 @@
 
 17. **What is virtual function with example?** *[BITAC Assistant Programmer 27.10.2023 compact it 560 (ET: BUTEX)], [Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 506 (ET: N/A)]*
 
-    Answer: A `virtual function` is a member function declared with the `virtual` keyword in a base class, so that a call through a base-class `pointer or reference` is resolved at `run time` according to the object's actual type, not the pointer's declared type.
+Answer: A `virtual function` is a member function declared with the `virtual` keyword in a base class, so that a call through a base-class `pointer or reference` is resolved at `run time` according to the object's actual type, not the pointer's declared type.
 
     - This is what makes `runtime polymorphism` possible in C++.
 
@@ -1554,7 +1559,7 @@
 
 18. **How many classes can be used in Hybrid Inheritance?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-    Answer: `Hybrid inheritance` is a combination of two or more types of inheritance in one program — for example hierarchical inheritance together with multiple inheritance.
+Answer: `Hybrid inheritance` is a combination of two or more types of inheritance in one program — for example hierarchical inheritance together with multiple inheritance.
 
     - There is `no fixed number` of classes. A hybrid arrangement needs `at least four` classes to be meaningful, because it must combine at least two inheritance types, and in practice it may involve any number.
 
@@ -1632,7 +1637,7 @@
 
 19. **What is Abstraction and Polymorphism expalin with example?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 497 (ET: N/A)]*
 
-    Answer: Abstraction
+Answer: Abstraction
     - `Abstraction` means showing only the `essential features` of an object and hiding the implementation details. The user is told `what` a class does, not `how` it does it.
     - Achieved with `abstract classes` and `interfaces`.
     ```java
@@ -1725,7 +1730,7 @@
 
 20. **(খ) কী কী ধারণার উপর ভিত্তি করে OOP প্রতিষ্ঠিত? ধারণাগুলো ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 601 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Object-Oriented Programming is founded on `four` core concepts, usually called the four pillars.
+Answer: (Answered in English, as required for IT topics.) Object-Oriented Programming is founded on `four` core concepts, usually called the four pillars.
 
     1. Encapsulation
     - Binding the `data` and the `methods` that operate on it into a single unit — the class — and `hiding` the internal state behind private fields with public accessor methods.
@@ -1803,7 +1808,7 @@
 
 21. **(গ) Inheritance কী? উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 602 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) `Inheritance` is the mechanism by which one class acquires the fields and methods of another. The existing class is the `superclass` (parent, base) and the new one the `subclass` (child, derived).
+Answer: (Answered in English, as required for IT topics.) `Inheritance` is the mechanism by which one class acquires the fields and methods of another. The existing class is the `superclass` (parent, base) and the new one the `subclass` (child, derived).
 
     - It expresses an `is-a` relationship: a `Dog is an Animal`, a `Manager is an Employee`.
     - Its purposes are `code reuse` and the creation of a natural hierarchy. It is also what makes runtime polymorphism possible.
@@ -1917,7 +1922,7 @@
 
 22. **(ক) অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিং কী? এটা কেন দরকার? অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিং এর মৌলিক ধারণাগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) What OOP is
+Answer: (Answered in English, as required for IT topics.) What OOP is
     - `Object-Oriented Programming` organises a program around `objects` — bundles of `data` and the `methods` that act on that data — rather than around functions operating on separate data.
     - A `class` is the blueprint; an `object` is an instance of it, occupying real memory.
     ```java
@@ -1987,7 +1992,7 @@
 
 23. **(গ) Overloading এবং overriding এর মধ্যে পার্থক্য কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Both are forms of `polymorphism`, but they differ in `where` they occur and `when` the decision is made.
+Answer: (Answered in English, as required for IT topics.) Both are forms of `polymorphism`, but they differ in `where` they occur and `when` the decision is made.
 
     Overloading
     - Several methods in the `same class` share a name but take `different parameter lists`. The `compiler` chooses which one to call.
@@ -2060,7 +2065,7 @@
 
 24. **What is Polymorphism? Java language এর আলোকে ব্যাখ্যা কর।** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) `Polymorphism` means "many forms". The same method name behaves differently depending on the object it is called on or the arguments it is given, so one interface serves many implementations.
+Answer: (Answered in English, as required for IT topics.) `Polymorphism` means "many forms". The same method name behaves differently depending on the object it is called on or the arguments it is given, so one interface serves many implementations.
 
     In Java it takes two forms.
 
@@ -2135,7 +2140,7 @@
 
 25. **(a) What is Polymorphism? Distinguish between compile time and runtime polymorphisms.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
 
-    Answer: What polymorphism is
+Answer: What polymorphism is
     - `Polymorphism` means "many forms". The same method name behaves differently depending on the object it is called on or the arguments given to it, so `one interface serves many implementations`.
     - It is one of the four pillars of OOP, alongside encapsulation, inheritance and abstraction.
 
@@ -2206,7 +2211,7 @@
 
 26. **Write down the principle of OOP?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)], [BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-    Answer: OOP rests on `four` core principles, usually called the four pillars.
+Answer: OOP rests on `four` core principles, usually called the four pillars.
 
     1. Encapsulation
     - Binding the data and the methods that operate on it into one unit, and `hiding` the internal state behind private fields with public accessor methods.
@@ -2272,7 +2277,7 @@
 
 27. **Write down the properties/function of OOP?** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 718 (ET: N/A)]*
 
-    Answer: The properties of OOP are the four pillars together with the mechanisms that support them.
+Answer: The properties of OOP are the four pillars together with the mechanisms that support them.
 
     1. Encapsulation
     - Binds data and the methods that act on it into a single unit, and `hides` the internal state.
@@ -2353,7 +2358,7 @@
 
 28. **Write down the main feature of Object Oriented Programming (OOP).** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
-    Answer: The main features of OOP are the four pillars, plus the class and object mechanism on which they rest.
+Answer: The main features of OOP are the four pillars, plus the class and object mechanism on which they rest.
 
     1. Class and Object
     ```
@@ -2436,7 +2441,7 @@
 
 29. **Write a Java code with a case where you have to mentioned functionalities with override method.** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 757 (ET: N/A)]*
 
-    Answer: The example below models a bank's payment system, in which each payment type overrides the general behaviour with its own.
+Answer: The example below models a bank's payment system, in which each payment type overrides the general behaviour with its own.
 
     ```java
     // ---------- superclass ----------
@@ -2577,7 +2582,7 @@
 
 30. **(ক) Procedural Oriented ও Object Oriented Programming Languages মধ্যে পার্থক্য কি? উভয় Language এর ২টি করে উদাহরণ দিন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) `Procedure-oriented programming (POP)` organises a program around `functions` that act on data held separately. `Object-oriented programming (OOP)` organises it around `objects` that hold data and behaviour together.
+Answer: (Answered in English, as required for IT topics.) `Procedure-oriented programming (POP)` organises a program around `functions` that act on data held separately. `Object-oriented programming (OOP)` organises it around `objects` that hold data and behaviour together.
 
     Procedure-oriented programming
     - The program is a sequence of `functions` or procedures, designed `top-down`: the problem is broken into smaller tasks, each a function.
@@ -2645,7 +2650,7 @@
 
 31. **(i) Object Oriented Programming এর যেকোন দুটি বৈশিষ্ট্য উদাহরণসহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 781 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Two features of OOP are explained below.
+Answer: (Answered in English, as required for IT topics.) Two features of OOP are explained below.
 
     1. Encapsulation
     - `Encapsulation` binds the data and the methods that act on it into a single unit — the class — and `hides` the internal state behind private fields, exposing only controlled public methods.
@@ -2745,7 +2750,7 @@
 
 32. **(i) Object Oriented Programming এ Static binding and Dynamic binding কি? ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 789 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) `Binding` means connecting a method call to the actual method body that will run. The question is `when` that connection is made.
+Answer: (Answered in English, as required for IT topics.) `Binding` means connecting a method call to the actual method body that will run. The question is `when` that connection is made.
 
     Static binding (early binding, compile-time binding)
     - The link is decided by the `compiler`, before the program runs, from the `declared type` of the reference.
@@ -2868,6 +2873,38 @@ public class main{
 }
 ```
 
+```java
+class A{
+    int alpha;
+    int beta;
+    public A(int alpha, int beta){
+        this.alpha = alpha;
+        this.beta = beta;
+    }
+    public void display(){
+        System.out.println("Alpha"+alpha+ "\nBeta"+beta);
+    }
+}
+class Gamma extends A{
+    int gamma;
+    public Gamma(int alpha, int beta, int gamma){
+        super(alpha, beta);
+        this.gamma = gamma;
+    }
+    @Override
+    public void display(){
+        super.display();
+        System.out.println("Gamma"+gamma);
+    }
+}
+public class main{
+    public static void main(String[]args){
+        Gamma g = new Gamma(3,30,10);
+        g.display();
+    }
+}
+```
+
     Answer: The program as printed is already complete and compiles. The only fault is a `formatting` one — the print statements run the label and the value together, giving `Alpha3` instead of `Alpha: 3`.
 
     The completed and corrected program
@@ -2955,7 +2992,7 @@ public class main{
 
 34. **Write a C/C++ Program that has a Class Account, Subclass Savings Account, Current Account etc with related hierarchy way.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 834 (ET: N/A)]*
 
-    Answer: A `Savings Account` and a `Current Account` are both kinds of `Account`, so the hierarchy is a natural case of inheritance. The common data and behaviour live in the base class; each subclass supplies only what differs.
+Answer: A `Savings Account` and a `Current Account` are both kinds of `Account`, so the hierarchy is a natural case of inheritance. The common data and behaviour live in the base class; each subclass supplies only what differs.
 
     Class hierarchy
     ```
@@ -3145,7 +3182,7 @@ public class main{
 
 35. **Write the definition of Inheritance, Polymorphism with coding example.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 835 (ET: N/A)]*
 
-    Answer: Inheritance
+Answer: Inheritance
     - `Inheritance` is the mechanism by which one class acquires the fields and methods of another. The existing class is the `superclass` (parent) and the new one the `subclass` (child).
     - It expresses an `is-a` relationship and gives `code reuse`.
     ```java
@@ -3241,7 +3278,7 @@ public class main{
 
 36. **Explain method overloading and Method overriding with example.** *[RAKUB Programmer (PO) 12.10.2021 compact it 850-851 (ET: N/A)]*
 
-    Answer: Both are forms of polymorphism, but they occur in different places and are resolved at different times.
+Answer: Both are forms of polymorphism, but they occur in different places and are resolved at different times.
 
     Method overloading
     - Several methods in the `same class` share a name but take `different parameter lists`. The `compiler` picks the right one from the arguments supplied.
@@ -3331,7 +3368,7 @@ public class main{
 
 37. **OOP problem (Inheritance related) [হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the paper itself records that the exact problem could not be collected. It is an inheritance problem, and the complete treatment is given below.
+Answer: The question is `incomplete` — the paper itself records that the exact problem could not be collected. It is an inheritance problem, and the complete treatment is given below.
 
     What inheritance is
     - `Inheritance` lets a new class acquire the fields and methods of an existing one. The existing class is the `superclass` (parent, base) and the new one the `subclass` (child, derived). The relationship is `is-a`.
@@ -3460,7 +3497,7 @@ public class main{
 
 38. **Object Oriented Programming (OOP) language -এর প্রধান বৈশিষ্ট্য গুলো কী কী? দুটি OOP language -এর নাম লিখুন।** *[41th BCS 2021 compact it 881 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The main features of an object-oriented programming language are the four pillars, together with the class and object mechanism they rest on.
+Answer: (Answered in English, as required for IT topics.) The main features of an object-oriented programming language are the four pillars, together with the class and object mechanism they rest on.
 
     1. Class and Object
     ```
@@ -3531,7 +3568,7 @@ public class main{
 
 39. **(b) What is function overloading and operator overloading. Give example.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 892 (ET: N/A)]*
 
-    Answer: Function overloading
+Answer: Function overloading
     - Defining two or more functions with the `same name` in the same scope, distinguished by their `parameter lists`. The compiler chooses which to call from the arguments supplied.
     ```
        Distinguished by : different NUMBER, TYPE or ORDER of parameters
@@ -3644,7 +3681,7 @@ public class main{
 
 40. **১. সাব-ক্লাস এর অপর নাম কি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `subclass` is also called a
+Answer: (Answered in English, as required for IT topics.) A `subclass` is also called a
     ```
        Derived class
        Child class
@@ -3688,7 +3725,7 @@ public class main{
 
 41. **৮. অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিং এর বৈশিষ্ট্য লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The characteristics of object-oriented programming are the four pillars, together with the mechanisms that support them.
+Answer: (Answered in English, as required for IT topics.) The characteristics of object-oriented programming are the four pillars, together with the mechanisms that support them.
 
     1. Encapsulation
     - Binding data and the methods that operate on it into one unit, and `hiding` the internal state behind private fields with public accessors.
@@ -3759,7 +3796,7 @@ public class main{
 
 42. **Inheritance is one of important issues for any object oriented programming language. The main advantage of Inheritance is the ability to reuse the code. Explain in brief different types of Inheritance.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 981 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer: The main types of inheritance are the following. In each, the arrow points from the superclass to the subclass.
+Answer: The main types of inheritance are the following. In each, the arrow points from the superclass to the subclass.
 
     1. Single inheritance
     ```
@@ -3859,7 +3896,7 @@ public class main{
 
 43. **Object Oriented Programming এর চারটি গুরুত্বপূর্ণ বৈশিষ্ট্য লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020-1021 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The four important characteristics of OOP are the following.
+Answer: (Answered in English, as required for IT topics.) The four important characteristics of OOP are the following.
 
     1. Encapsulation
     - Binding the `data` and the `methods` that operate on it into a single unit — the class — and `hiding` the internal state behind private fields with public accessor methods.
@@ -3924,7 +3961,7 @@ public class main{
 
 44. **What are the difference between Structure Programming and Objest Oriented Progrmamming?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1023 (ET: N/A)]*
 
-    Answer: `Structured (procedural) programming` organises a program around `functions` acting on separately held data. `Object-oriented programming` organises it around `objects` that hold data and behaviour together.
+Answer: `Structured (procedural) programming` organises a program around `functions` acting on separately held data. `Object-oriented programming` organises it around `objects` that hold data and behaviour together.
 
     Structured programming
     - The program is a set of `functions`, designed `top-down`: the problem is split into tasks, each becoming a function.
@@ -3992,7 +4029,7 @@ public class main{
 
 45. **Object Oriented Programming এ Method Overloading and Method Overriding এর মধ্যে পার্থক্য কী?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1023 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Both are forms of polymorphism, but they occur in different places and are resolved at different times.
+Answer: (Answered in English, as required for IT topics.) Both are forms of polymorphism, but they occur in different places and are resolved at different times.
 
     Method overloading
     - Several methods in the `same class` share a name but take `different parameter lists`. The `compiler` chooses which to call.
@@ -4065,7 +4102,7 @@ public class main{
 
 46. **Inheritance, Polymorphism and Encapsulation ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1078 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Inheritance
+Answer: (Answered in English, as required for IT topics.) Inheritance
     - `Inheritance` is the mechanism by which one class acquires the fields and methods of another. The existing class is the `superclass` and the new one the `subclass`, and the relationship is `is-a`.
     ```java
     class Animal {
@@ -4144,7 +4181,7 @@ public class main{
 
 47. **Function overloading and Operator overloading বলতে কী বুঝেন? উদাহরণ দিন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1082 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Function overloading
+Answer: (Answered in English, as required for IT topics.) Function overloading
     - Defining two or more functions with the `same name` in the same scope, distinguished by their `parameter lists`. The compiler chooses which to call from the arguments given.
     ```
        Distinguished by : different NUMBER, TYPE or ORDER of parameters
@@ -4237,7 +4274,7 @@ public class main{
 
 48. **(a) What is method overloading?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
-    Answer: `Method overloading` means defining two or more methods with the `same name` in the same class, distinguished by their `parameter lists`. The compiler chooses which one to call from the arguments supplied.
+Answer: `Method overloading` means defining two or more methods with the `same name` in the same class, distinguished by their `parameter lists`. The compiler chooses which one to call from the arguments supplied.
 
     - It is a form of `compile-time (static) polymorphism`, also called `early binding`.
 
@@ -4320,7 +4357,7 @@ public class main{
 
 49. **(b) Explain Polymorphism concept of OOP language.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1140 (ET: N/A)]*
 
-    Answer: `Polymorphism` means "many forms". The same method name behaves differently depending on the object it is called on or the arguments it is given, so `one interface serves many implementations`.
+Answer: `Polymorphism` means "many forms". The same method name behaves differently depending on the object it is called on or the arguments it is given, so `one interface serves many implementations`.
 
     - It is one of the four pillars of OOP, with encapsulation, inheritance and abstraction.
 
@@ -4408,7 +4445,7 @@ public class main{
 
 50. **Explain feature of OOP.** *[Palli Sanchay Bank Programmer 2018 compact it 1170-1171 (ET: N/A)]*
 
-    Answer: The features of OOP are the four pillars, together with the class and object mechanism on which they rest.
+Answer: The features of OOP are the four pillars, together with the class and object mechanism on which they rest.
 
     1. Class and Object
     ```
@@ -4500,7 +4537,7 @@ public class main{
 
 51. **What do you mean by Polymorphism and Inheritance in Object Oriented Programming (OOP)? Give appropriate example.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
 
-    Answer: Polymorphism
+Answer: Polymorphism
     - `Polymorphism` means "many forms": the same method name behaves differently depending on the object it acts on or the arguments given.
     ```
        Compile-time (static)  : method OVERLOADING - the compiler decides
@@ -4602,7 +4639,7 @@ public class main{
 
 52. **Consider a base class Shape and its derived class Rectangle. Design a code inheritance code using C++.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1193 (ET: N/A)]*
 
-    Answer: `Rectangle` is a kind of `Shape`, so the relationship is `is-a` and inheritance is the right tool. The base class declares what every shape must provide; the derived class supplies the formulas.
+Answer: `Rectangle` is a kind of `Shape`, so the relationship is `is-a` and inheritance is the right tool. The base class declares what every shape must provide; the derived class supplies the formulas.
 
     ```cpp
     #include <iostream>
@@ -4743,7 +4780,7 @@ public class main{
 
 53. **Difference between method overloading and overriding in java.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220 (ET: N/A)]*
 
-    Answer: Both are forms of polymorphism in Java, but they occur in different places and are resolved at different times.
+Answer: Both are forms of polymorphism in Java, but they occur in different places and are resolved at different times.
 
     Method overloading
     - Several methods in the `same class` share a name but take `different parameter lists`. The `compiler` chooses which to call.
@@ -4833,7 +4870,7 @@ public class main{
 
 54. **What is polymorphism? What is the difference between method overriding and method overloading?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
 
-    Answer: What polymorphism is
+Answer: What polymorphism is
     - `Polymorphism` means "many forms". The same method name behaves differently depending on the object it is called on or the arguments it is given, so `one interface serves many implementations`.
     - It is one of the four pillars of OOP, with encapsulation, inheritance and abstraction.
     ```
@@ -4902,7 +4939,7 @@ public class main{
 
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
-   Answer: A method that returns a value must declare a `return type` other than `void`, and every path through it must execute a `return` statement.
+Answer: A method that returns a value must declare a `return type` other than `void`, and every path through it must execute a `return` statement.
    ```java
       returnType methodName(parameters) {
           ...
@@ -5009,7 +5046,7 @@ public class main{
 
 2. **Write a Java Code....** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the paper printed only "Write a Java Code...." and the requirement was not captured. The programs that this paper asks for elsewhere are given below, so the answer covers whichever was intended.
+Answer: The question is `incomplete` — the paper printed only "Write a Java Code...." and the requirement was not captured. The programs that this paper asks for elsewhere are given below, so the answer covers whichever was intended.
 
    Program 1 — a class with encapsulation, constructor, getters and setters
    ```java
@@ -5166,7 +5203,7 @@ public class main{
 
 3. **What does run Finalization do?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: `System.runFinalization()` asks the JVM to run the `finalize()` methods of objects that have been found unreachable and are waiting for finalization.
+Answer: `System.runFinalization()` asks the JVM to run the `finalize()` methods of objects that have been found unreachable and are waiting for finalization.
 
    What finalization is
    - `finalize()` is a method inherited from `Object`. Before the garbage collector reclaims an object's memory, the JVM was designed to call the object's `finalize()` once, giving it a last chance to release resources such as a file handle or a socket.
@@ -5225,7 +5262,7 @@ public class main{
 
 4. **What syntax is used for calling static methods in class?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-   Answer: A `static` method belongs to the `class` itself, not to any object, so it is called through the class name.
+Answer: A `static` method belongs to the `class` itself, not to any object, so it is called through the class name.
    ```java
       ClassName.methodName(arguments);
    ```
@@ -5311,6 +5348,22 @@ public class main{
    - `Counter.count` belongs to the class; `c1.id` belongs to an object. Using the class name for one and an object reference for the other makes the intent obvious to the reader.
 
 5. **Consider the following code:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
+```java
+Public class Class A {
+    Public void m1() {}
+    Public void m2(int i) {}
+    Public void m3(int i) {}
+    Public static void m4(int i) {}
+}
+Public class class B extends class A {
+    Public static void m1(int i) {}
+    Public void m2(int i) {}
+    Public void m3(string s) {}
+    Public static void m4(int i) {}
+}
+```
+**Mention which of the methods overload, override and hied supper class methods. What about the remaining method?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
+
 ```java
 Public class Class A {
     Public void m1() {}
@@ -5422,7 +5475,7 @@ Public class class B extends class A {
 
 6. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 620 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) The `static` keyword means a member belongs to the `class itself` rather than to any individual object. There is exactly `one copy`, created when the class is loaded, shared by every object.
+Answer: (Answered in English, as required for IT topics.) The `static` keyword means a member belongs to the `class itself` rather than to any individual object. There is exactly `one copy`, created when the class is loaded, shared by every object.
 
    Static variable
    - One copy shared by all objects. Changing it through one object changes it for all.
@@ -5533,7 +5586,7 @@ Public class class B extends class A {
 
 7. **Write a java program to counting the vowel and consonant into a given strings.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
-   Answer: A `vowel` is one of a, e, i, o, u (in either case); every other alphabetic character is a `consonant`. Digits, spaces and punctuation are neither.
+Answer: A `vowel` is one of a, e, i, o, u (in either case); every other alphabetic character is a `consonant`. Digits, spaces and punctuation are neither.
 
    ```java
    import java.util.Scanner;
@@ -5641,7 +5694,7 @@ Public class class B extends class A {
 
 8. **Where will be the most chance of the grabage collector being invoked?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
 
-   Answer: The garbage collector is most likely to be invoked when an object becomes `unreachable` and the JVM is under `memory pressure` — that is, when the heap is nearly full and a new allocation cannot be satisfied.
+Answer: The garbage collector is most likely to be invoked when an object becomes `unreachable` and the JVM is under `memory pressure` — that is, when the heap is nearly full and a new allocation cannot be satisfied.
 
    The main trigger
    ```
@@ -5707,7 +5760,7 @@ Public class class B extends class A {
 
 9. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** *[BPDB Assistant Engineer (CSE) 2021 compact it 816-817 (ET: BUET)]*
 
-   Answer: The tariff is `slab-wise`: each block of units is charged at its own rate, and only the units above a slab boundary attract the higher rate.
+Answer: The tariff is `slab-wise`: each block of units is charged at its own rate, and only the units above a slab boundary attract the higher rate.
    ```
       First 100 units          : 4.00 taka per unit
       Next 100 units (101-200) : 5.50 taka per unit
@@ -5811,7 +5864,7 @@ Public class class B extends class A {
 
 10. **C# language এর একটি প্রোগ্রাম লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) A complete C# program demonstrating classes, objects, encapsulation and inheritance.
+Answer: (Answered in English, as required for IT topics.) A complete C# program demonstrating classes, objects, encapsulation and inheritance.
 
     ```csharp
     using System;
@@ -5984,7 +6037,7 @@ Public class class B extends class A {
 
 11. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
 
-    Answer: The program uses a `class` to hold the customer's data and the billing logic, and an `object` for each customer.
+Answer: The program uses a `class` to hold the customer's data and the billing logic, and an `object` for each customer.
     ```
        Slab tariff :  first 100 units       -> 4.00 taka per unit
                       next 100 (101-200)    -> 5.50 taka per unit
@@ -6129,7 +6182,7 @@ Public class class B extends class A {
 
 12. **What are the difference among JDK, JRE and JVM?** *[Islami Bank Bangladesh Limited Officer (Software Engineer) 2019 compact it 1098 (ET: N/A)]*
 
-    Answer: The three are separate pieces of the Java platform, and they nest inside one another.
+Answer: The three are separate pieces of the Java platform, and they nest inside one another.
     ```
        +---------------------------------------------------+
        |  JDK  (Java Development Kit)                      |
@@ -6214,7 +6267,7 @@ Public class class B extends class A {
 
 13. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
-    Answer: Java is called `platform independent` because a Java program is compiled once into `bytecode`, and that same bytecode runs unchanged on any operating system that has a `JVM`.
+Answer: Java is called `platform independent` because a Java program is compiled once into `bytecode`, and that same bytecode runs unchanged on any operating system that has a `JVM`.
 
     - The slogan is `WORA` — Write Once, Run Anywhere.
 
@@ -6284,7 +6337,7 @@ Public class class B extends class A {
 
 14. **Suppose you've a method name “totalAmount” and there three properties (transactionName, transactionType, amount). Write down the full code using JAVA where totalAmount method return total balance after debit or credited.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
 
-    Answer: The class holds the three properties, and `totalAmount` returns the computed value.
+Answer: The class holds the three properties, and `totalAmount` returns the computed value.
 
     ```java
     import java.util.ArrayList;
@@ -6423,6 +6476,11 @@ Public class class B extends class A {
    iii) WAR
    iv) JDK
 
+i) JAR
+   ii) JRE
+   iii) WAR
+   iv) JDK
+
     Answer: The four full forms.
     ```
        i)   JAR  =  Java ARchive
@@ -6495,6 +6553,14 @@ Public class class B extends class A {
     | Used for | Libraries and desktop applications | Web applications |
 
 16. **Write a java program using 2D array and array output will be-** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191 (ET: N/A)]*
+```text
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+```
+
 ```text
 1
 1 2
@@ -6631,7 +6697,7 @@ Public class class B extends class A {
 
 17. **Write simple Java program to convert string into camel case and display camel case string.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191-1192 (ET: N/A)]*
 
-    Answer: `Camel case` writes the first word in lower case and capitalises the first letter of every following word, with all spaces removed.
+Answer: `Camel case` writes the first word in lower case and capitalises the first letter of every following word, with all spaces removed.
     ```
        "hello world program"  ->  "helloWorldProgram"        lower camel case
        "hello world program"  ->  "HelloWorldProgram"        upper camel case (Pascal)
@@ -6747,7 +6813,7 @@ Public class class B extends class A {
 
 18. **Discus architecture of Java virtual machine.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1218-1219 (ET: N/A)]*
 
-    Answer: The `JVM (Java Virtual Machine)` is an abstract machine that loads, verifies and executes Java bytecode. It is a `specification`, implemented by HotSpot, OpenJ9 and others.
+Answer: The `JVM (Java Virtual Machine)` is an abstract machine that loads, verifies and executes Java bytecode. It is a `specification`, implemented by HotSpot, OpenJ9 and others.
 
     Architecture
     ```mermaid
@@ -6880,7 +6946,7 @@ Public class class B extends class A {
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 425 (ET: BIBM)]*
 
-   Answer: Data requirements (attributes)
+Answer: Data requirements (attributes)
    ```
       double x       : the x-coordinate of the centre
       double y       : the y-coordinate of the centre
@@ -7003,7 +7069,7 @@ Public class class B extends class A {
 
 2. **What are the built in classes?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
 
-   Answer: `Built-in classes` are the ready-made classes supplied with the language in its standard library. They are already written, tested and optimised, so a programmer uses them instead of writing the same code again.
+Answer: `Built-in classes` are the ready-made classes supplied with the language in its standard library. They are already written, tested and optimised, so a programmer uses them instead of writing the same code again.
 
    - In Java they are organised into `packages` and shipped in the JDK.
 
@@ -7105,7 +7171,7 @@ Public class class B extends class A {
 
 3. **অথবা, (ক) উদাহরণসহ Class এবং Object এর মধ্যে পার্থক্য ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 602 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Class
+Answer: (Answered in English, as required for IT topics.) Class
    - A `class` is a `blueprint` or template that defines what data an object will hold and what it will be able to do. It is a `logical` entity — writing a class allocates no memory for data.
    ```java
    class Student {
@@ -7193,7 +7259,7 @@ Public class class B extends class A {
 
 4. **(খ) উদাহরণসহ ক্লাস এবং অবজেক্ট এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Class
+Answer: (Answered in English, as required for IT topics.) Class
    - A `class` is a blueprint or template that defines what data an object will hold and what it can do. It is a `logical` entity — declaring a class allocates no memory for data.
    ```java
    class Car {
@@ -7277,7 +7343,7 @@ Public class class B extends class A {
 
 5. **Define Class and Object in C++ with example.** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
-   Answer: Class
+Answer: Class
    - A `class` in C++ is a user-defined data type that binds `data members` and `member functions` into one unit. It is a `blueprint` — declaring a class allocates no memory for data.
    - Members are `private by default`, which is what distinguishes a class from a `struct`.
    ```cpp
@@ -7395,7 +7461,7 @@ Public class class B extends class A {
 
 6. **What are the common activities on OOP design process?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 756 (ET: N/A)]*
 
-   Answer: `Object-oriented design` is the stage between analysis and coding, in which the problem is expressed as a set of collaborating objects. The common activities are the following.
+Answer: `Object-oriented design` is the stage between analysis and coding, in which the problem is expressed as a set of collaborating objects. The common activities are the following.
 
    1. Identify the objects and classes
    - Read the requirement statement and pick out the `nouns`. Each significant noun is a candidate class.
@@ -7491,7 +7557,7 @@ Public class class B extends class A {
 
 7. **Write a programme to create an object of type batsman and calculate the average runs scored by the player.** *[RAKUB Programmer (PO) 12.10.2021 compact it 846-847 (ET: N/A)]*
 
-   Answer: The `Batsman` class holds the player's data, and `calculateAverage()` returns the batting average.
+Answer: The `Batsman` class holds the player's data, and `calculateAverage()` returns the batting average.
    ```
       Batting average = total runs / number of times OUT
    ```
@@ -7657,7 +7723,7 @@ Public class class B extends class A {
 
 8. **(ক) Object কী? কীভাবে Object তৈরি করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1085 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What an object is
+Answer: (Answered in English, as required for IT topics.) What an object is
    - An `object` is a real entity created from a `class`. It is an `instance` of the class, occupying memory on the heap, and it has three characteristics:
    ```
       STATE    : the values of its attributes  (what it HAS)
@@ -7771,7 +7837,7 @@ Public class class B extends class A {
 
 9. **Suppose, you are implementing “Overdraft Account (OD)” class using java for a banking app. An OD type account is opened with an approved loan limit (ex. 100000/-). The account holder can deposit any amount of money in the OD account at any time. S/he can draw an amount of money from the account (acn) until sufficient acn balance. S/he allowed to draw money beyond his/her acn balance if the total over-drawing amount remains within the loan limit. A java sketch for OD acn is given bellow & code is expected to run in multi-threading mode. (same code with run by different counter in the Bank)** *[Bangladesh Bank Assistant Programmer 2019 compact it 1157 (ET: DU)]*
 
-   Answer: The account must allow the balance to go negative, but only as far as the approved `loan limit`. Because several bank counters run the same code at the same time, the withdrawal must be `thread-safe` — otherwise two tellers could both pass the limit check and overdraw the account.
+Answer: The account must allow the balance to go negative, but only as far as the approved `loan limit`. Because several bank counters run the same code at the same time, the withdrawal must be `thread-safe` — otherwise two tellers could both pass the limit check and overdraw the account.
 
    ```java
    class OverdraftAccount {
@@ -7947,7 +8013,7 @@ Public class class B extends class A {
 
 10. **There was a java program where you have to create a class, constructor, setter function, getter function.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1214-1215 (ET: N/A)]*
 
-    Answer: The program below shows the standard structure of a Java class: `private` fields, a `constructor`, `setter` methods that validate, and `getter` methods that read.
+Answer: The program below shows the standard structure of a Java class: `private` fields, a `constructor`, `setter` methods that validate, and `getter` methods that read.
 
     ```java
     class Student {
@@ -8088,7 +8154,7 @@ Public class class B extends class A {
 
 11. **In java language: write a class named Bicycle having 3 integer variables (speed, gear, cost) and a constructor to initialize the variables. Also write a class named MountBike that inherits Bicycle class, having an extra variable speedcost and a constructor to initialize the variable.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1269 (ET: N/A)]*
 
-    Answer: `MountBike` extends `Bicycle`, so it inherits `speed`, `gear` and `cost` and adds `speedcost` of its own.
+Answer: `MountBike` extends `Bicycle`, so it inherits `speed`, `gear` and `cost` and adds `speedcost` of its own.
 
     ```java
     // ---------------- SUPERCLASS ----------------
@@ -8226,9 +8292,382 @@ Public class class B extends class A {
        CODE REUSE           : speed, gear and cost are declared once
     ```
 
+## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (11)
+
+1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
+class myclass \{
+
+    int num;
+
+public:
+
+    myclass(int i) \{ num=i; \}
+
+\};
+
+```cpp
+class myclass{
+    int num;
+public:
+    myclass (int i) {num = i;}
+};
+```
+
+   Answer: What a friend function is
+   - A `friend function` is a function that is `not a member` of a class but is granted access to its `private` and `protected` members.
+   - It is declared inside the class with the `friend` keyword, but defined outside it and called like an ordinary function — with no object and no `::`.
+   ```cpp
+      class X {
+          friend returnType functionName(parameters);   // declaration only
+      };
+   ```
+
+   Adding `isneg()` to the given class
+   ```cpp
+   #include <iostream>
+   using namespace std;
+
+   class myclass {
+       int num;                                    // PRIVATE
+
+   public:
+       myclass(int i) { num = i; }
+
+       // ---- declare the friend ----
+       friend bool isneg(myclass obj);
+   };
+
+   // ---- define it OUTSIDE the class, with NO 'friend' keyword ----
+   bool isneg(myclass obj) {
+       return (obj.num < 0);          // legal: it is a friend, so it sees num
+   }
+
+   int main() {
+       myclass a(10);
+       myclass b(-25);
+       myclass c(0);
+
+       cout << boolalpha;                       // print true/false, not 1/0
+       cout << "a is negative : " << isneg(a) << endl;   // false
+       cout << "b is negative : " << isneg(b) << endl;   // true
+       cout << "c is negative : " << isneg(c) << endl;   // false
+
+       return 0;
+   }
+   ```
+   Output
+   ```
+      a is negative : false
+      b is negative : true
+      c is negative : false
+   ```
+
+   Points about the code
+   ```
+      The declaration goes INSIDE the class, in any section - public,
+           private or protected. Its position makes no difference.
+
+      The definition goes OUTSIDE, WITHOUT the 'friend' keyword and
+           WITHOUT myclass:: - it is not a member function.
+
+      It is called as  isneg(a)  , not  a.isneg()  , because it has
+           no 'this' pointer and belongs to no object.
+
+      Passing by const reference is better for a large object :
+
+           friend bool isneg(const myclass &obj);
+           bool isneg(const myclass &obj) { return obj.num < 0; }
+   ```
+
+   Passing by reference, to avoid copying
+   ```cpp
+      friend bool isneg(const myclass &obj);
+
+      bool isneg(const myclass &obj) {
+          return obj.num < 0;
+      }
+   ```
+
+   Why a friend is sometimes needed
+   ```cpp
+      // Overloading << requires the left operand to be an ostream, so the
+      // function CANNOT be a member of myclass. A friend is the only way.
+
+      class myclass {
+          int num;
+      public:
+          myclass(int i) { num = i; }
+          friend ostream& operator<<(ostream &out, const myclass &obj);
+      };
+
+      ostream& operator<<(ostream &out, const myclass &obj) {
+          out << obj.num;
+          return out;
+      }
+
+      // now : cout << a;   works directly
+   ```
+   - The other classic case is a function that needs the private data of `two different classes` at once, such as adding a `Matrix` to a `Vector`.
+
+   Properties of a friend function
+   ```
+      NOT a member of the class - it has no 'this' pointer
+      Can be a global function, or a member of another class
+      Access is NOT reciprocal : if A declares B a friend, B is not
+           automatically a friend of A
+      Friendship is NOT inherited by derived classes
+      Friendship is NOT transitive : a friend of a friend is not a friend
+      It can be declared in any section; access specifiers do not apply to it
+   ```
+
+   - Disadvantage: it `breaks encapsulation` deliberately. Every friend is a hole in the class's wall, so friends should be few, named explicitly and used only where a member function genuinely cannot do the job. Java has no equivalent at all.
+
+2. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*
+
+Answer:
+
+    | Feature | while Loop | do-while Loop |
+    |---|---|---|
+    | Loop Type | Entry-Controlled Loop (Pre-test) | Exit-Controlled Loop (Post-test) |
+    | Condition Check | Condition is evaluated **before** executing the loop body | Condition is evaluated **after** executing the loop body |
+    | Minimum Execution | 0 times (If condition is initially false, body never executes) | At least 1 time (Body always executes once before testing condition) |
+    | Semicolon Syntax | No semicolon after condition: `while (condition) { ... }` | Semicolon required at end: `do { ... } while (condition);` |
+    | Primary Use Case | When exact iteration count depends on dynamic preconditions | When user input or menu selection must be prompted at least once |
+
+3. **Write an essay on the following topic using the hints given below: Objectives of Education (15 \times 1 = 15)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
+
+Answer:
+    Education is the systematic process of facilitating learning, acquiring knowledge, and cultivating values. Broadly categorized into formal, informal, and non-formal streams, modern education must transcend rote memorization to fulfill holistic developmental objectives.
+
+    In a rapidly advancing world, vocational and competency-based education are indispensable. Vocational training equips learners with practical technical skills, enhancing employability, self-reliance, and economic productivity. Simultaneously, competency-based learning ensures mastery of demonstrable skills rather than mere theoretical exposure.
+
+    However, material prosperity without ethical foundations breeds societal decline. Moral education, empathy, and civic responsibility must be integrated into curricula. True education balances intellectual capability with moral integrity, harmonizing technological innovation with humanistic values. The ultimate objective of education is the all-round physical, intellectual, moral, and spiritual development of an individual, creating responsible global citizens capable of steering societal progress.
+
+4. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
+
+Answer:
+    The four fundamental pillars of Object-Oriented Programming (OOP) are:
+
+    - 1. Encapsulation: Bundling data (variables) and methods operating on that data into a single unit (class) while restricting direct outside access using private access modifiers.
+      ```java
+      class Account {
+          private double balance;
+          public void deposit(double amt) { if(amt > 0) balance += amt; }
+          public double getBalance() { return balance; }
+      }
+      ```
+    - 2. Abstraction: Hiding internal implementation complexities and exposing only essential functional interfaces using abstract classes or interfaces.
+      ```java
+      abstract class Shape { abstract void draw(); }
+      ```
+    - 3. Inheritance: Mechanism where a child class inherits properties and behaviors from a parent class, promoting code reusability.
+      ```java
+      class Dog extends Animal { void bark() { System.out.println("Bark"); } }
+      ```
+    - 4. Polymorphism: Ability of an entity or method to take on multiple forms (Compile-time via Overloading, Runtime via Overriding).
+      ```java
+      class Cat extends Animal { @Override void sound() { System.out.println("Meow"); } }
+      ```
+
+5. **Write a C/C++/ Java program to find sum of the series 1+2+4+7+11+16+.....+n** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351-352]]*
+
+Answer:
+    In this series, the difference between consecutive terms increases by 1 each step ($+1, +2, +3, +4, +5, \dots$).
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int n; // Number of terms
+        long long sum = 0;
+        long long current_term = 1;
+
+        printf("Enter the number of terms (n): ");
+        scanf("%d", &n);
+
+        for (int i = 1; i <= n; i++) {
+            sum += current_term;
+            current_term += i; // Increment difference by 1 each step
+        }
+
+        printf("Sum of first %d terms = %lld\n", n, sum);
+        return 0;
+    }
+    ```
+
+6. **What is polymorphism? Differences in types of polymorphism. Define.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353-354]]*
+
+Answer:
+    Polymorphism (Greek for "many forms") is the OOP capability that allows entities such as functions, operators, or objects to behave differently depending on the context or data types passed.
+
+    Comparison of Polymorphism Types:
+
+    | Feature | Compile-Time (Static) Polymorphism | Run-Time (Dynamic) Polymorphism |
+    |---|---|---|
+    | Resolution Time | Resolved by compiler during compile time | Resolved by JVM/runtime environment during program execution |
+    | Mechanism | Method Overloading, Operator Overloading | Method Overriding via inheritance and dynamic method dispatch |
+    | Execution Speed | Faster execution due to early static binding | Slightly slower due to virtual method table lookup at runtime |
+    | Inheritance | Does not require inheritance | Strictly requires class inheritance and virtual methods |
+    | Example | `int add(int a, int b)` vs `double add(double a, double b)` | `Animal a = new Dog(); a.sound();` |
+
+7. **The ratio of boys to girls in a classroom is 2:3. After 3 more boys enter the classroom, the ratio is 3:4. How many people were there in the room at the start?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+Answer:
+    Step 1: Set up equations:
+    - Let initial number of boys $= 2x$ and initial number of girls $= 3x$.
+    - Total initial people in the classroom $= 2x + 3x = 5x$.
+
+    Step 2: Apply the condition after 3 boys enter:
+    $$\frac{2x + 3}{3x} = \frac{3}{4}$$
+
+    Step 3: Solve for $x$:
+    $$4(2x + 3) = 3(3x)$$
+    $$8x + 12 = 9x$$
+    $$9x - 8x = 12 \implies x = 12$$
+
+    Step 4: Find initial count:
+    - Initial Boys $= 2 \times 12 = 24$
+    - Initial Girls $= 3 \times 12 = 36$
+    - Total Initial People $= 24 + 36 = 60$.
+
+    Final Answer: **60 people** were in the room at the start.
+
+8. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
+a) What is Series? b) Write a program using C/C++ to find n^{th} Fibonacci.
+
+Answer:
+    a) Series:
+    - A series is the cumulative sum of the terms of an ordered sequence of numbers following a specific mathematical rule or recurrence pattern (e.g., Arithmetic, Geometric, or Fibonacci series).
+
+    b) C Program to find $n^{\text{th}}$ Fibonacci Number:
+    ```c
+    #include <stdio.h>
+
+    long long get_nth_fibonacci(int n) {
+        if (n <= 0) return 0;
+        if (n == 1) return 1;
+
+        long long a = 0, b = 1, c;
+        for (int i = 2; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+    }
+
+    int main(void) {
+        int n;
+        printf("Enter n: ");
+        scanf("%d", &n);
+        printf("%d-th Fibonacci number = %lld\n", n, get_nth_fibonacci(n));
+        return 0;
+    }
+    ```
+
+9. **What is polymorphism in the context of OOP? Explain with example.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400]]*
+
+Answer:
+    In OOP, Polymorphism enables a single method or interface to perform different actions based on the specific object that invokes it at runtime.
+
+    Example (Dynamic Method Dispatch in Java):
+    ```java
+    class Notification {
+        void send() {
+            System.out.println("Sending a generic notification.");
+        }
+    }
+
+    class SMSNotification extends Notification {
+        @Override
+        void send() {
+            System.out.println("Sending an SMS OTP alert to phone.");
+        }
+    }
+
+    class EmailNotification extends Notification {
+        @Override
+        void send() {
+            System.out.println("Sending an Email verification link.");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Notification n1 = new SMSNotification();
+            Notification n2 = new EmailNotification();
+            n1.send(); // Output: Sending an SMS OTP alert to phone.
+            n2.send(); // Output: Sending an Email verification link.
+        }
+    }
+    ```
+
+10. **Write down the concept about inheritance with example.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
+
+Answer:
+    Inheritance is the OOP mechanism where a new class (Subclass/Derived class) acquires the fields and methods of an existing class (Superclass/Base class). It creates an "IS-A" hierarchical relationship and maximizes code reusability.
+
+    Types of Inheritance:
+    - Single Inheritance (Class B extends Class A)
+    - Multilevel Inheritance (Class C extends Class B, which extends Class A)
+    - Hierarchical Inheritance (Classes B and C both extend Class A)
+    - Multiple Inheritance (Implemented via interfaces in Java/C#)
+
+    Code Example:
+    ```java
+    class Employee {
+        String name;
+        double baseSalary;
+        void displayRole() { System.out.println("Role: General Employee"); }
+    }
+
+    class SoftwareEngineer extends Employee {
+        String programmingLanguage;
+        @Override
+        void displayRole() { System.out.println("Role: Software Engineer (" + programmingLanguage + ")"); }
+    }
+    ```
+
+11. **In a class of 100 students, 80 passed in Bengali, 88 passed in English, and 70 passed in both subjects. How many students failed in both subjects?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+Answer:
+    Step 1: Define Given Values:
+    - Total Students $n(U) = 100$
+    - Students passed in Bengali $n(B) = 80$
+    - Students passed in English $n(E) = 88$
+    - Students passed in both subjects $n(B \cap E) = 70$
+
+    Step 2: Calculate students passed in at least one subject:
+    $$n(B \cup E) = n(B) + n(E) - n(B \cap E)$$
+    $$n(B \cup E) = 80 + 88 - 70 = 168 - 70 = 98$$
+
+    Step 3: Calculate students who failed in both subjects:
+    $$\text{Failed in both} = n(U) - n(B \cup E) = 100 - 98 = 2$$
+
+    Final Answer: **2 students** failed in both subjects.
+
 ## Output Tracing & Recursion (10)
 
-1. Consider the following Java program and determine the integer value printed by the execution of the main() method:
+1. **Consider the following Java program and determine the integer value printed by the execution of the main() method:**
+```java
+class Test {
+    static int x = 5;
+    public static int fun(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        x = x + 2;
+        return fun(n - 1) + x;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fun(3));
+    }
+}
+```
+[SO IT 25-07-2026]
+
 ```java
 class Test {
     static int x = 5;
@@ -8317,7 +8756,7 @@ class Test {
 
 2. **(খ) কোন object-oriented programming language ব্যবহার করে একটি program লিখুন, যা recursive function ব্যবহার করে Fibonacci series প্রদান করবে।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: (Answered in English, as required for IT topics.) The `Fibonacci series` is a sequence in which each term is the sum of the two before it.
+Answer: (Answered in English, as required for IT topics.) The `Fibonacci series` is a sequence in which each term is the sum of the two before it.
    ```
       F(0) = 0
       F(1) = 1
@@ -8477,6 +8916,22 @@ class Test {
 }
 ```
 
+```java
+class Test {
+    static int x = 5;
+    public static int fun(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        x = x + 2;
+        return fun(n - 1) + x;
+    }
+    public static void main(String[] args) {
+        System.out.println(fun(3));
+    }
+}
+```
+
    Answer: The output is `19`.
 
    Why `x` behaves as it does
@@ -8540,6 +8995,29 @@ class Test {
    ```
 
 4. **Show the output following program.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1115-1116 (ET: DU)]*
+```java
+public class main {
+    public static void find_output(int n) {
+        int i, j;
+        for(i=1; i<=n; i++) {
+            for(j=n; j>0; j--) {
+                if(i==j) {
+                    System.out.print("*");
+                    break;
+                }
+                else {
+                    System.out.print("*");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+    public static void main(String[] args) {
+        find_output(10);
+    }
+}
+```
+
 ```java
 public class main {
     public static void find_output(int n) {
@@ -8676,6 +9154,23 @@ public class Audi extends car {
 }
 ```
 
+```java
+class car {
+    void run() {
+        System.out.println("Car is running");
+    }
+}
+public class Audi extends car {
+    void run() {
+        System.out.println("Audi is running");
+    }
+    public static void main(String[] args) {
+        car b = new Audi();
+        b.run();
+    }
+}
+```
+
    Answer: The output is
    ```
       Audi is running
@@ -8760,6 +9255,17 @@ public class Main{
 }
 ```
 
+```java
+public class Main{
+    public static void main(String[] args) {
+        int i=0;
+        for(int j=5; i<3 && j<10; i++, j++) {
+            System.out.print(" "+i + " "+j);
+        }
+    }
+}
+```
+
    Answer: The output is
    ```
        0 5 1 6 2 7
@@ -8822,6 +9328,35 @@ public class Main{
    - Points the question is testing: the `comma operator` in the update section, a `compound condition` with `&&`, and the fact that a variable declared before the loop `survives` it — after the loop, `i` is 3 and `j` is out of scope.
 
 7. **What will be the output of following program?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1192-1193 (ET: N/A)]*
+```cpp
+using namespace std;
+class A{
+    private:
+        int a;
+        int b;
+        void set_a(int a) {
+            this->a=a;
+        }
+        void set_b(int b) {
+            this->b=b;
+        }
+    public:
+        void getValues(int x, int y) {
+            set_a(x); //calling private number
+            set_b(x); //calling private number
+        }
+        void putValues() {
+            cout << "a=" << a << " ,b=" << b << endl;
+        }
+};
+int main() {
+    A objA; //creating object
+    objA.getValues(100,200);
+    objA.putValues(); //print values
+    return 0;
+}
+```
+
 ```cpp
 using namespace std;
 class A{
@@ -8926,6 +9461,20 @@ int main() {
    - The lesson the question is teaching: a `copy-paste error` of exactly this kind — passing the wrong parameter — compiles cleanly and produces a silently wrong result. It is the sort of bug that unit tests catch and the compiler cannot.
 
 8. **Find the output below following code.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1194 (ET: N/A)]*
+```java
+public class Test {
+    public static void main(String[] args) {
+        String s1 = "test1";
+        String s2 = new String("test1");
+        System.out.println(s1==s2);
+        String s3 = new String("test1");
+        System.out.println(s2==s3);
+        s3 = s1;
+        System.out.println(s3==s1);
+    }
+}
+```
+
 ```java
 public class Test {
     public static void main(String[] args) {
@@ -9070,6 +9619,43 @@ public class WhatTheOutput{
 }
 ```
 
+```java
+public class WhatTheOutput{
+    public static int performOperations(int i){
+        int original=i;
+        return i=((10+(i*2))/2-original);
+    }
+    public static String result(int i){
+        String result;
+        switch(i){
+            case 3:{
+                result="a multiple of 3";
+                break;
+            }
+            case 5:{
+                result ="acceptable";
+                break;
+            }
+            case 7:{
+                result="a multiple of 7";
+                break;
+            }
+            default:{
+                result="unacceptable";
+                break;
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args){
+        int number[]={4,8,12,21,30,100};
+        for(int i=0; i<5; i++){
+            System.out.println("The chosen number, "+number[i]+", is" +result(performOperations (numbers[i])));
+        }
+    }
+}
+```
+
    Answer: The program as printed will `not compile`, because the array is declared as `number` but referred to as `numbers` inside the loop. Once that typing error is corrected, the output is the following.
 
    Output
@@ -9173,7 +9759,7 @@ public class WhatTheOutput{
 
 10. **You are required to trace the changes in value for each of the numbers, before and after each method are called for each of iterations and finally write down output of the program.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1195-1196 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the program whose values were to be traced is not present. The complete method for tracing a program, and the traces that such a question uses, are given below.
+Answer: The question is `incomplete` — the program whose values were to be traced is not present. The complete method for tracing a program, and the traces that such a question uses, are given below.
 
     How to trace a program
     ```
@@ -9317,7 +9903,7 @@ public class WhatTheOutput{
 
 1. **What is constructor function? Write the properties of it.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 505 (ET: N/A)]*
 
-   Answer: A `constructor` is a special member function that is called `automatically` when an object is created. Its job is to `initialise` the object, so that it is never used in an uninitialised state.
+Answer: A `constructor` is a special member function that is called `automatically` when an object is created. Its job is to `initialise` the object, so that it is never used in an uninitialised state.
 
    ```java
    class Student {
@@ -9418,7 +10004,7 @@ public class WhatTheOutput{
 
 2. **Define copy constructor. What Static binding and Dynamic binding?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
-   Answer: Copy constructor
+Answer: Copy constructor
    - A `copy constructor` creates a new object as a `copy of an existing object of the same class`. It takes a single parameter: a reference to another object of that class.
    ```cpp
       ClassName(const ClassName &obj) { ... }
@@ -9548,7 +10134,7 @@ public class WhatTheOutput{
 
 3. **What is the constructor invoked in OOP?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
 
-   Answer: A `constructor` is invoked `automatically at the moment an object is created` — that is, when the `new` keyword allocates memory for the object.
+Answer: A `constructor` is invoked `automatically at the moment an object is created` — that is, when the `new` keyword allocates memory for the object.
    ```java
       Student s = new Student("Rahim", 101);
                     ^^^
@@ -9631,7 +10217,7 @@ public class WhatTheOutput{
 
 4. **What is constructor?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
-   Answer: A `constructor` is a special member function that is called `automatically` when an object is created. Its purpose is to `initialise` the object, so that it is never used in an uninitialised state.
+Answer: A `constructor` is a special member function that is called `automatically` when an object is created. Its purpose is to `initialise` the object, so that it is never used in an uninitialised state.
 
    ```java
    class Student {
@@ -9709,7 +10295,7 @@ public class WhatTheOutput{
 
 5. **(b) Why are constructor and destructor functions used in object oriented programming? Give examples of each function in C++ or java language.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
 
-   Answer: Why constructors are used
+Answer: Why constructors are used
    - To `initialise an object automatically` at the moment it is created, so it can never be used in an incomplete or invalid state.
    - To give a `single place to validate` the initial values, which is what encapsulation requires.
    - To allow an object to be created in `several ways`, through constructor overloading.
@@ -9823,7 +10409,7 @@ public class WhatTheOutput{
 
 6. **What is Constructor function? Write an example of Constructor function?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
 
-   Answer: A `constructor` is a special member function that is called `automatically` when an object is created, in order to `initialise` it.
+Answer: A `constructor` is a special member function that is called `automatically` when an object is created, in order to `initialise` it.
    ```
       Same NAME as the class
       NO return type, not even void
@@ -9953,7 +10539,7 @@ public class WhatTheOutput{
 
 7. **Differentiate constructor and destructor with example.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1167-1168 (ET: N/A)]*
 
-   Answer: A `constructor` initialises an object when it is created; a `destructor` cleans it up when it is destroyed. They are the two ends of an object's life.
+Answer: A `constructor` initialises an object when it is created; a `destructor` cleans it up when it is destroyed. They are the two ends of an object's life.
 
    Constructor
    ```
@@ -10073,7 +10659,7 @@ public class WhatTheOutput{
 
 8. **What is main difference Destructor and constructor with example?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
 
-   Answer: The main difference is `purpose and timing`: a constructor `builds` an object when it is created, and a destructor `cleans it up` when it is destroyed.
+Answer: The main difference is `purpose and timing`: a constructor `builds` an object when it is created, and a destructor `cleans it up` when it is destroyed.
    ```
       CONSTRUCTOR : initialise fields, acquire resources   -> at creation
       DESTRUCTOR  : release those resources                -> at destruction
@@ -10183,7 +10769,7 @@ public class WhatTheOutput{
 
 1. **You have three access specifiers in java object oriented language. You have to find which access specifiers are worked with Public, Private and Protected Mode. If yes you have to right Y and if No you have to write N.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
 
-   Answer: Java has `four` access levels, of which three have keywords — `public`, `private` and `protected` — plus the `default` (package-private) level, which has no keyword.
+Answer: Java has `four` access levels, of which three have keywords — `public`, `private` and `protected` — plus the `default` (package-private) level, which has no keyword.
 
    The access table, marked Y (accessible) and N (not accessible)
    ```
@@ -10286,7 +10872,7 @@ public class WhatTheOutput{
 
 2. **Explain the various types of access specifiers.** *[DESCO Assistant Engineer 20.05.2023 compact it 579 (ET: DESCO)]*
 
-   Answer: An `access specifier` (access modifier) controls `where` a class member may be used. It is the mechanism by which `encapsulation` is actually enforced.
+Answer: An `access specifier` (access modifier) controls `where` a class member may be used. It is the mechanism by which `encapsulation` is actually enforced.
 
    Java has `four` levels
    ```
@@ -10390,7 +10976,7 @@ public class WhatTheOutput{
 
 3. **Which type of variable violates encapsulation rules?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)], [BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-   Answer: A `public instance variable` violates encapsulation.
+Answer: A `public instance variable` violates encapsulation.
 
    - `Encapsulation` requires that an object's data be `hidden` and reachable only through its own methods. A public field is directly readable and writable by any code anywhere, so the class loses all control over its own state.
 
@@ -10470,7 +11056,7 @@ public class WhatTheOutput{
 
 4. **Which members of base class cannot access to derived class?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: The `private` members of a base class cannot be accessed by a derived class.
+Answer: The `private` members of a base class cannot be accessed by a derived class.
 
    - A `private` member belongs to the class that declares it and to nothing else — not even to its own subclasses. This is what keeps encapsulation intact through an inheritance chain.
 
@@ -10556,7 +11142,7 @@ public class WhatTheOutput{
 
 5. **What are the various Access Specification in C++? Explain their purpose with are example.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 673 (ET: N/A)]*
 
-   Answer: C++ has `three` access specifiers, and their purpose is to enforce `encapsulation` by controlling where each member may be used.
+Answer: C++ has `three` access specifiers, and their purpose is to enforce `encapsulation` by controlling where each member may be used.
    ```
       private    : accessible only inside the class itself   (the DEFAULT)
       protected  : the class and its DERIVED classes
@@ -10683,7 +11269,7 @@ public class WhatTheOutput{
 
 6. **How many specifiers are used in C++ programing?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
-   Answer: C++ uses `three` access specifiers.
+Answer: C++ uses `three` access specifiers.
    ```
       1. private
       2. protected
@@ -10754,7 +11340,7 @@ public class WhatTheOutput{
 
 7. **Briefly Describe Abstraction, Encapsulation.** *[Bangladesh Competition Commission Programmer 2019 compact it 1059-1060 (ET: DU)]*
 
-   Answer: Abstraction
+Answer: Abstraction
    - `Abstraction` means showing only the `essential features` of an object and hiding the implementation. The user learns `what` a class does, not `how` it does it.
    - Achieved in Java with `abstract classes` and `interfaces`.
    ```java
@@ -10836,7 +11422,7 @@ public class WhatTheOutput{
 
 1. **(b) What is exception? Explain how it can be used for debugging a program.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
 
-   Answer: What an exception is
+Answer: What an exception is
    - An `exception` is an `abnormal event that occurs during execution` and disrupts the normal flow of the program. It is not a syntax error — the program compiles perfectly and then fails while running.
    ```java
       int[] a = new int[5];
@@ -10962,7 +11548,7 @@ public class WhatTheOutput{
 
 2. **What is difference between exception and error in Java?** *[SPCB Sub-Assistant Programmer 2022 compact it 737 (ET: N/A)]*
 
-   Answer: Both `Exception` and `Error` are subclasses of `Throwable`, but they represent completely different kinds of problem.
+Answer: Both `Exception` and `Error` are subclasses of `Throwable`, but they represent completely different kinds of problem.
    ```
                     Throwable
                    /         \
@@ -11055,7 +11641,7 @@ public class WhatTheOutput{
 
 3. **What is exception handling? Write with an example.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
 
-   Answer: `Exception handling` is the mechanism that lets a program `detect an abnormal condition at run time and respond to it`, instead of terminating abruptly.
+Answer: `Exception handling` is the mechanism that lets a program `detect an abnormal condition at run time and respond to it`, instead of terminating abruptly.
 
    - Without it, a single bad input crashes the whole program and any work in progress is lost.
 
@@ -11221,7 +11807,7 @@ public class WhatTheOutput{
 
 4. **Write the difference between throw and throws using Exception handling?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1172-1173 (ET: N/A)]*
 
-   Answer: `throw` and `throws` look alike but do entirely different jobs. The single letter `s` is the whole difference.
+Answer: `throw` and `throws` look alike but do entirely different jobs. The single letter `s` is the whole difference.
 
    `throw` — raises an exception
    ```
@@ -11349,6 +11935,14 @@ public:
 };
 ```
 
+```cpp
+class myclass{
+    int num;
+public:
+    myclass (int i) {num = i;}
+};
+```
+
    Answer: What a friend function is
    - A `friend function` is a function that is `not a member` of a class but is granted access to its `private` and `protected` members.
    - It is declared inside the class with the `friend` keyword, but defined outside it and called like an ordinary function — with no object and no `::`.
@@ -11460,7 +12054,7 @@ public:
 
 2. **(ক) Friend Function কী? উহার সুবিধা অসুবিধাগুলো লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What a friend function is
+Answer: (Answered in English, as required for IT topics.) What a friend function is
    - A `friend function` is a function that is `not a member` of a class but is granted access to its `private` and `protected` members.
    - It is declared inside the class with the `friend` keyword, but defined outside it and called like an ordinary function.
    ```cpp
@@ -11528,7 +12122,7 @@ public:
 
 3. **(খ) Friend Function কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1086 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) What a friend function is
+Answer: (Answered in English, as required for IT topics.) What a friend function is
    - A `friend function` is a non-member function that is granted access to the `private` and `protected` members of a class.
    - It is declared inside the class with the `friend` keyword, defined outside it, and called like an ordinary function — with no object and no `::`.
    ```cpp
@@ -11613,7 +12207,7 @@ public:
 
 1. **Class/Interface implementation of code?** *[BCIC Assistant Programmer 14.02.2025 compact it 1329 (ET: BUET)]*
 
-   Answer: An `interface` declares `what` a class must be able to do, without saying `how`. A class then `implements` it and supplies the bodies. This gives complete abstraction, and it is Java's way of achieving multiple inheritance of type.
+Answer: An `interface` declares `what` a class must be able to do, without saying `how`. A class then `implements` it and supplies the bodies. This gives complete abstraction, and it is Java's way of achieving multiple inheritance of type.
 
    ```java
    // ---------------- INTERFACE ----------------
@@ -11749,7 +12343,7 @@ public:
 
 2. **An Abstract class Player with two sub classes Bowler and Batsman, Abstract class has one abstract method average, also have constructor and a string function that display name bowler or batsman. Batsman class implement abstract function average and display result, Batsman class have run and number match data. Now write a Java Program and show Batsman average run.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-   Answer: The abstract class `Player` declares the contract; `Batsman` and `Bowler` supply their own `average()`.
+Answer: The abstract class `Player` declares the contract; `Batsman` and `Bowler` supply their own `average()`.
 
    ```java
    // ---------------- ABSTRACT CLASS ----------------
