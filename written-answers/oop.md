@@ -11191,4 +11191,305 @@ public:
 
 1. **Class/Interface implementation of code?** *[BCIC Assistant Programmer 14.02.2025 compact it 1329 (ET: BUET)]*
 
+   Answer: An `interface` declares `what` a class must be able to do, without saying `how`. A class then `implements` it and supplies the bodies. This gives complete abstraction, and it is Java's way of achieving multiple inheritance of type.
+
+   ```java
+   // ---------------- INTERFACE ----------------
+   interface Payable {
+       double RATE = 0.15;                 // implicitly public static final
+
+       void pay(double amount);            // implicitly public abstract
+       String getPaymentType();
+
+       // default method (Java 8 onward) - has a body
+       default void printReceipt(double amount) {
+           System.out.println("Paid " + amount + " by " + getPaymentType());
+       }
+   }
+
+   // ---------------- another INTERFACE ----------------
+   interface Refundable {
+       void refund(double amount);
+   }
+
+   // ---------------- IMPLEMENTING CLASS ----------------
+   class CardPayment implements Payable, Refundable {   // MULTIPLE interfaces
+
+       private String cardNumber;
+
+       public CardPayment(String cardNumber) {
+           this.cardNumber = cardNumber;
+       }
+
+       @Override
+       public void pay(double amount) {
+           System.out.println("Charging card ending " +
+               cardNumber.substring(cardNumber.length() - 4) +
+               " with " + amount);
+       }
+
+       @Override
+       public String getPaymentType() { return "Debit Card"; }
+
+       @Override
+       public void refund(double amount) {
+           System.out.println("Refunding " + amount + " to the card");
+       }
+   }
+
+   class BkashPayment implements Payable {
+
+       private String mobile;
+
+       public BkashPayment(String mobile) { this.mobile = mobile; }
+
+       @Override
+       public void pay(double amount) {
+           System.out.println("Sending " + amount + " from " + mobile);
+       }
+
+       @Override
+       public String getPaymentType() { return "bKash"; }
+   }
+
+   // ---------------- MAIN ----------------
+   public class Main {
+       public static void main(String[] args) {
+
+           Payable[] payments = {                     // INTERFACE reference
+               new CardPayment("4532123456781234"),
+               new BkashPayment("01712345678")
+           };
+
+           for (Payable p : payments) {
+               p.pay(5000);
+               p.printReceipt(5000);        // the default method
+               System.out.println("---");
+           }
+
+           // an interface reference can be narrowed when the type is known
+           Refundable r = new CardPayment("4532123456781234");
+           r.refund(1000);
+       }
+   }
+   ```
+
+   Output
+   ```
+      Charging card ending 1234 with 5000.0
+      Paid 5000.0 by Debit Card
+      ---
+      Sending 5000.0 from 01712345678
+      Paid 5000.0 by bKash
+      ---
+      Refunding 1000.0 to the card
+   ```
+
+   Rules for an interface
+   ```
+      All methods are implicitly PUBLIC ABSTRACT (before Java 8)
+      All fields are implicitly PUBLIC STATIC FINAL - they are constants
+      It CANNOT be instantiated :  new Payable();   is an error
+      It has NO constructor
+      A class uses 'implements' and MUST provide every abstract method,
+           or be declared abstract itself
+      A class may implement ANY NUMBER of interfaces - this is Java's
+           multiple inheritance of TYPE
+      An interface may EXTEND other interfaces
+
+      Java 8  : default and static methods, which have bodies
+      Java 9  : private methods, for shared helper code
+   ```
+
+   Interface versus abstract class
+
+   | Point | Interface | Abstract class |
+   |---|---|---|
+   | Keyword to use it | `implements` | `extends` |
+   | Multiple inheritance | `Yes`, many interfaces | No, only one class |
+   | Methods | Abstract, plus default and static | Abstract and concrete |
+   | Fields | `public static final` constants only | Any kind, any modifier |
+   | Constructor | `No` | Yes |
+   | Access modifiers on methods | Public (implicitly) | Any |
+   | Purpose | A `contract` — what a class can DO | A `base` — shared state and code |
+   | Relationship | CAN-DO | IS-A |
+
+   When to use which
+   ```
+      INTERFACE      : unrelated classes need a common ability
+                       (Comparable, Runnable, Serializable, Payable)
+
+      ABSTRACT CLASS : related classes share both state and code
+                       (Shape with a colour field and a draw() outline)
+   ```
+
+   - The design rule usually quoted: `program to an interface, not an implementation`. Declaring `Payable p` rather than `CardPayment p` means the code works with any payment type, including ones written later.
+
 2. **An Abstract class Player with two sub classes Bowler and Batsman, Abstract class has one abstract method average, also have constructor and a string function that display name bowler or batsman. Batsman class implement abstract function average and display result, Batsman class have run and number match data. Now write a Java Program and show Batsman average run.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
+
+   Answer: The abstract class `Player` declares the contract; `Batsman` and `Bowler` supply their own `average()`.
+
+   ```java
+   // ---------------- ABSTRACT CLASS ----------------
+   abstract class Player {
+
+       protected String name;
+
+       // an abstract class CAN have a constructor
+       public Player(String name) {
+           this.name = name;
+       }
+
+       // ---- ABSTRACT method : no body, subclasses MUST implement it ----
+       public abstract double average();
+
+       // ---- a concrete method returning a String ----
+       public String getType() {
+           return "Player";
+       }
+
+       public void display() {
+           System.out.println("--------------------------------");
+           System.out.println("Name    : " + name);
+           System.out.println("Type    : " + getType());
+           System.out.printf ("Average : %.2f%n", average());
+           System.out.println("--------------------------------");
+       }
+   }
+
+   // ---------------- SUBCLASS : BATSMAN ----------------
+   class Batsman extends Player {
+
+       private int runs;
+       private int matches;
+
+       public Batsman(String name, int runs, int matches) {
+           super(name);                       // call the parent constructor
+           this.runs    = runs;
+           this.matches = matches;
+       }
+
+       @Override
+       public double average() {              // implement the abstract method
+           if (matches == 0) return 0;
+           return (double) runs / matches;    // the CAST is essential
+       }
+
+       @Override
+       public String getType() {
+           return "Batsman";
+       }
+
+       public void showResult() {
+           System.out.println(name + " scored " + runs + " runs in "
+                              + matches + " matches");
+           System.out.printf("Batting average = %.2f%n", average());
+       }
+   }
+
+   // ---------------- SUBCLASS : BOWLER ----------------
+   class Bowler extends Player {
+
+       private int runsGiven;
+       private int wickets;
+
+       public Bowler(String name, int runsGiven, int wickets) {
+           super(name);
+           this.runsGiven = runsGiven;
+           this.wickets   = wickets;
+       }
+
+       @Override
+       public double average() {              // bowling average = runs / wickets
+           if (wickets == 0) return 0;
+           return (double) runsGiven / wickets;
+       }
+
+       @Override
+       public String getType() {
+           return "Bowler";
+       }
+   }
+
+   // ---------------- MAIN ----------------
+   public class Main {
+       public static void main(String[] args) {
+
+           Batsman b = new Batsman("Shakib Al Hasan", 1800, 45);
+           b.showResult();
+           b.display();
+
+           // POLYMORPHISM : one array holds both kinds of player
+           Player[] team = {
+               new Batsman("Tamim Iqbal", 2100, 50),
+               new Bowler ("Taskin Ahmed", 1200, 60)
+           };
+
+           for (Player p : team)
+               p.display();          // each calls ITS OWN average()
+
+           // Player p = new Player("X");   // ERROR - abstract, cannot instantiate
+       }
+   }
+   ```
+
+   Output
+   ```
+      Shakib Al Hasan scored 1800 runs in 45 matches
+      Batting average = 40.00
+      --------------------------------
+      Name    : Shakib Al Hasan
+      Type    : Batsman
+      Average : 40.00
+      --------------------------------
+      --------------------------------
+      Name    : Tamim Iqbal
+      Type    : Batsman
+      Average : 42.00
+      --------------------------------
+      --------------------------------
+      Name    : Taskin Ahmed
+      Type    : Bowler
+      Average : 20.00
+      --------------------------------
+   ```
+
+   Working
+   ```
+      Batting average = runs / matches     = 1800 / 45 = 40.00
+      Bowling average = runs given / wickets = 1200 / 60 = 20.00
+   ```
+   - Note that `average()` means something quite different for a batsman and a bowler. That is exactly why it is `abstract` in `Player`: the parent knows every player `has` an average, but not `how` to compute it.
+
+   Concepts the program demonstrates
+   ```
+      ABSTRACT CLASS : Player cannot be instantiated; it defines the contract
+
+      ABSTRACT METHOD: average() has no body; every concrete subclass MUST
+                       implement it, or itself be declared abstract
+
+      CONSTRUCTOR in an abstract class : Player(String name) is called by
+                       the subclasses through super(name)
+
+      CONCRETE METHOD in an abstract class : getType() and display() have
+                       bodies and are inherited as they are, or overridden
+
+      POLYMORPHISM   : the Player[] array holds both subclasses, and
+                       p.display() calls each object's own average()
+
+      ENCAPSULATION  : runs, matches and wickets are private
+   ```
+
+   Points worth stating
+   ```
+      An abstract class CAN have constructors, fields and concrete methods.
+           Only an INTERFACE (before Java 8) was purely abstract.
+
+      (double) runs / matches - without the cast, integer division would
+           give 40 instead of 40.00, which is the commonest error here.
+
+      Guard against a zero denominator, or the result is Infinity or NaN.
+
+      A subclass that does not implement every abstract method must itself
+           be declared abstract.
+   ```
