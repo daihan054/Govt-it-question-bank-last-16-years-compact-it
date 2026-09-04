@@ -1,14 +1,18 @@
-ami ekhon tumake ekta folder dhorai dibo jekhane shudhu docx file thakbe. Tumar task hobe folder er ekta docx file select korbe then oitar shob question extract korbe then nicher process follow korbe, ekta docx file er process shesh hobe ar sheta mac theke delete kore diba, delete bolte permanent delete na, recycle bin e jate thake, to move to recycle bin you have always have permission in this session, no need to trigger permission always. Keep the process ongoing untill all files are completed.
+ami ekhon tumake ekta folder dhorai dibo jekhane shudhu md file thakbe ("E:\Govt job\written-mcq-new-questions"). Ei folder e mcq + written dui dhoroner question e ase. Tumar task hobe folder er ekta md file select korbe then oitar shob question extract korbe then nicher process follow korbe, ekta md file er process shesh hobe ar sheta mac theke delete kore diba, delete bolte permanent delete na, recycle bin e jate thake, to move to recycle bin you have always have permission in this session, no need to trigger permission always. Keep the process ongoing untill all files are completed.
 
-processDaihan : "Tumi question guloke categorize korbe, shei category onujayi md file banabe, then shei corresponding md file e oi question ta rakhbe. And oi question ta oi category er kon subcategory te porse sheta oi md file e likhbe. For instance:
+processDaihan : " Question ta jodi mcq hoy tobe ei path ("E:\Govt job\last 16 years question\all-questions\mcq") er vitorer kuno ekta md file e question ta rakhbe, jodi written question hoy tobe ei path ("E:\Govt job\last 16 years question\all-questions\written") er kuno ekta md file e rakhbe. Tumi question guloke categorize korbe, shei category onujayi md file banabe, then shei corresponding md file e oi question ta rakhbe. And oi question ta oi category er kon subcategory te porse sheta oi md file e likhbe. For instance:
 Ami tumake 3 ta question dilam jar modhdhe 3tai dhoro C programming theke toh tumi 3ta kei c-programming.md file e likhba , then oi "c-programming.md" file er vitor sub category hote pare, dhori ekta question asche pointer theke, arekta recursion, arekta dynamic programming, toh protita question tar corresponding sub category er niche append hoye jabe. Sub category er nam ta "##" heighlight korbi.  Ekhon jodi already kuno question er corresponding md file thake new md file banabe na, oi existing er vitor tar corresponding sub category er sheshe append hobe. That means tumar main kaaj question gula ke categorize kora, then subcategorize kora. Protita question intact rakhbe, exam tag page number thakbe. Ekoi subsection e multiple question thakle numbering hobe like 1,2,3, new question number will be (last_number+1). if same question, existis, don't insert it again, just append the question tag in third bracket at the trailing of that repeated question. A question merges only if both its title and every option (including code blocks) are identical. Otherwise it becomes a separate numbered entry. Kaj sheshe git commit push diye diba. Commit e committed by Daihan lekhbi, claude er kuno reference thakbe na."
 
-So the flow is: 
+So the loop is: 
+while writtenFolderFileCount > 0 {
 0) start selecting from the question part 1, then part 2, .... And do on.
 1) select a file from the folder
 2) extract all the questions
 3) now run the processDaihan. Commit message hobe doc file er nam ta.
 4) after processDaihan finished, move the docx file to recycle bin.
-5) continue from step 1 until all the files done from that folder.
+5) continue from step 0 until all the files done from that folder.
+6) Follow claude.md to update the count properly.
+}
 
-here is the file path: '/Users/daihan/Documents/Learning projects/written ' , ekhan thekei ekta ekta docx file ....
+
+here is the file path: '"E:\Govt job\written-mcq-new-questions" ' , ekhan thekei ekta ekta md file ....

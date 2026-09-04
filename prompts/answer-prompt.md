@@ -1,7 +1,5 @@
 ## answer prompt
-TASK
-'/Users/daihan/Documents/Insurance/govt-it-question-answer/all-questions/written'
-folder-er protita question-er answer lekha.
+New add kora protita question er answer lekha.
 
 Question count HARDCODE korbe na. Koyta question ache seta shobshomoy ei file
 theke dekhe nibe (eta update hote thake):
