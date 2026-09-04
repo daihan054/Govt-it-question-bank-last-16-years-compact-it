@@ -4775,11 +4775,258 @@ public class main{
 
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
+   Answer: A method that returns a value must declare a `return type` other than `void`, and every path through it must execute a `return` statement.
+   ```java
+      returnType methodName(parameters) {
+          ...
+          return value;         // the type must match returnType
+      }
+   ```
+
+   Simple example — returning an int
+   ```java
+   public class Calculator {
+
+       // returns the sum of two integers
+       public int add(int a, int b) {
+           return a + b;                    // returns an int
+       }
+
+       // returns a double
+       public double average(int a, int b, int c) {
+           return (a + b + c) / 3.0;
+       }
+
+       // returns a boolean
+       public boolean isEven(int n) {
+           return n % 2 == 0;
+       }
+
+       // returns a String
+       public String grade(int marks) {
+           if (marks >= 80) return "A+";
+           else if (marks >= 70) return "A";
+           else if (marks >= 60) return "A-";
+           else if (marks >= 33) return "Pass";
+           else return "Fail";
+       }
+
+       public static void main(String[] args) {
+           Calculator c = new Calculator();
+
+           int sum = c.add(10, 20);
+           System.out.println("Sum      : " + sum);            // 30
+           System.out.println("Average  : " + c.average(10,20,30));  // 20.0
+           System.out.println("Is even  : " + c.isEven(10));   // true
+           System.out.println("Grade    : " + c.grade(75));    // A
+       }
+   }
+   ```
+   Output
+   ```
+      Sum      : 30
+      Average  : 20.0
+      Is even  : true
+      Grade    : A
+   ```
+
+   Returning an array
+   ```java
+   public int[] getEvenNumbers(int limit) {
+       int count = limit / 2;
+       int[] result = new int[count];
+       int index = 0;
+       for (int i = 2; i <= limit; i += 2)
+           result[index++] = i;
+       return result;                       // returns an array
+   }
+   ```
+
+   Returning an object
+   ```java
+   class Student {
+       String name;  int roll;
+       Student(String name, int roll) { this.name = name; this.roll = roll; }
+   }
+
+   public Student createStudent(String name, int roll) {
+       return new Student(name, roll);      // returns an object
+   }
+   ```
+
+   Rules for `return`
+   ```
+      The returned value's type must MATCH the declared return type, or be
+           automatically convertible to it (int -> long -> double)
+
+      A method declared void must not return a value; a bare 'return;' is
+           allowed, to exit early
+
+      Every path must return : a missing return on one branch is a
+           compile error, "missing return statement"
+
+      return ends the method IMMEDIATELY - code after it is unreachable
+
+      Only ONE value can be returned. To return several, use an array,
+           an object, or a collection.
+   ```
+
+   Common mistake
+   ```java
+      public int check(int n) {
+          if (n > 0) return 1;
+          // ERROR: missing return statement - the else path returns nothing
+      }
+   ```
+   - The fix is to add a `return` for every path, or a single `return` at the end.
+
 2. **Write a Java Code....** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
 3. **What does run Finalization do?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
+   Answer: `System.runFinalization()` asks the JVM to run the `finalize()` methods of objects that have been found unreachable and are waiting for finalization.
+
+   What finalization is
+   - `finalize()` is a method inherited from `Object`. Before the garbage collector reclaims an object's memory, the JVM was designed to call the object's `finalize()` once, giving it a last chance to release resources such as a file handle or a socket.
+   ```java
+   class Resource {
+       @Override
+       protected void finalize() throws Throwable {
+           System.out.println("Cleaning up before collection");
+           super.finalize();
+       }
+   }
+   ```
+
+   What runFinalization does
+   ```java
+      System.gc();                 // SUGGEST that garbage collection runs
+      System.runFinalization();    // SUGGEST that pending finalizers run
+   ```
+   - It is only a `request`, never a command. The JVM is free to ignore it, exactly as it may ignore `System.gc()`.
+   - It does not itself collect anything; it only asks that finalizers already queued be executed sooner rather than later.
+   - `Runtime.getRuntime().runFinalization()` is the same call through the Runtime object.
+
+   The order of events
+   ```
+      1. The object becomes unreachable.
+      2. The GC notices it and, if the class overrides finalize(),
+         places it on the FINALIZATION QUEUE instead of freeing it.
+      3. A finalizer thread runs finalize() at some unspecified later time.
+      4. Only on the NEXT collection cycle is the memory actually freed.
+   ```
+   - This is why a finalizable object needs `at least two` GC cycles to disappear.
+
+   Why finalization is deprecated and should not be used
+   ```
+      No guarantee it ever runs. If the program exits first, it never does.
+      No guarantee of WHEN it runs, or in what order.
+      It SLOWS DOWN garbage collection badly - a finalizable object survives
+           an extra cycle and needs an extra thread.
+      An exception thrown inside finalize() is silently swallowed.
+      An object can RESURRECT itself inside finalize() by storing 'this'
+           somewhere reachable, which breaks the collector's assumptions.
+      It has caused real security vulnerabilities (finalizer attacks).
+   ```
+   - `finalize()` was deprecated in `Java 9` and `removed in Java 18`.
+
+   What to use instead
+   ```java
+      // try-with-resources : close() is called automatically, always
+      try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+          System.out.println(br.readLine());
+      }   // br.close() runs here even if an exception is thrown
+   ```
+   - Implement `AutoCloseable` and let `try-with-resources` handle cleanup, or use `java.lang.ref.Cleaner` for the rare case where a native resource must be released as a safety net.
+
+   - Short answer: `System.runFinalization()` requests that any pending `finalize()` methods be run. It guarantees nothing, and the whole finalization mechanism is deprecated in favour of `try-with-resources`.
+
 4. **What syntax is used for calling static methods in class?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+   Answer: A `static` method belongs to the `class` itself, not to any object, so it is called through the class name.
+   ```java
+      ClassName.methodName(arguments);
+   ```
+
+   Example
+   ```java
+   class MathUtil {
+
+       static int square(int n) {          // static method
+           return n * n;
+       }
+
+       static double PI = 3.1416;          // static variable
+
+       static double areaOfCircle(double r) {
+           return PI * r * r;
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           int s = MathUtil.square(5);              // CLASS NAME . METHOD
+           System.out.println(s);                   // 25
+
+           System.out.println(MathUtil.areaOfCircle(3));   // 28.2744
+           System.out.println(MathUtil.PI);                // 3.1416
+       }
+   }
+   ```
+
+   Built-in examples of the same syntax
+   ```java
+      Math.sqrt(25)                 // 5.0
+      Math.max(10, 20)              // 20
+      Integer.parseInt("123")       // 123
+      String.valueOf(45)            // "45"
+      Arrays.sort(myArray)
+      System.currentTimeMillis()
+   ```
+
+   Calling from inside the same class
+   ```java
+   class Demo {
+       static void greet() { System.out.println("Hello"); }
+
+       public static void main(String[] args) {
+           greet();              // no class name needed inside the same class
+           Demo.greet();         // also valid, and clearer
+       }
+   }
+   ```
+
+   Calling through an object — legal but bad practice
+   ```java
+      MathUtil m = new MathUtil();
+      m.square(5);              // COMPILES, but misleading
+   ```
+   - The compiler allows it and simply resolves it to `MathUtil.square(5)`, but it suggests the method belongs to the object when it does not. Most style guides and IDE warnings forbid it.
+
+   Key rules about static methods
+   ```
+      Called by CLASS NAME, no object needed
+      Can access only STATIC variables and other STATIC methods directly
+      CANNOT use 'this' or 'super', because there is no object
+      Cannot be OVERRIDDEN - a subclass method with the same signature
+           HIDES it, and is resolved by the REFERENCE type
+      Can be OVERLOADED normally
+      Loaded when the class is loaded, before any object exists
+      main() is static precisely so the JVM can call it without creating
+           an object first
+   ```
+
+   Why the distinction matters
+   ```java
+   class Counter {
+       static int count = 0;         // ONE copy, shared by all objects
+       int id;                       // one copy PER OBJECT
+
+       Counter() { count++; id = count; }
+   }
+   ```
+   - `Counter.count` belongs to the class; `c1.id` belongs to an object. Using the class name for one and an object reference for the other makes the intent obvious to the reader.
 
 5. **Consider the following code:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 ```java
@@ -4798,29 +5045,1172 @@ Public class class B extends class A {
 ```
 **Mention which of the methods overload, override and hied supper class methods. What about the remaining method?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
+   Answer: The code as printed contains typing errors — `Public` should be `public`, `class Class A` should be `class A`, and `string` should be `String`. Corrected, it reads:
+   ```java
+   public class A {
+       public void m1() { }
+       public void m2(int i) { }
+       public void m3(int i) { }
+       public static void m4(int i) { }
+   }
+
+   public class B extends A {
+       public static void m1(int i) { }
+       public void m2(int i) { }
+       public void m3(String s) { }
+       public static void m4(int i) { }
+   }
+   ```
+
+   Analysis, method by method
+
+   `m1` — OVERLOADING
+   ```
+      A : public void m1()             no parameters, instance method
+      B : public static void m1(int i) one int parameter, static
+
+      The SIGNATURES DIFFER (no parameters versus one int), so B's method
+      does not override or hide A's - it OVERLOADS it.
+
+      Class B therefore has BOTH m1() (inherited) and m1(int) (its own).
+   ```
+   - This is legal. A compile error would occur only if a static method had the `same` signature as an inherited instance method.
+
+   `m2` — OVERRIDING
+   ```
+      A : public void m2(int i)        instance method
+      B : public void m2(int i)        SAME signature, also an instance method
+
+      -> B.m2(int) OVERRIDES A.m2(int).
+
+      The version that runs is decided at RUN TIME by the actual object :
+
+           A obj = new B();
+           obj.m2(5);            // B's version runs
+   ```
+
+   `m3` — OVERLOADING
+   ```
+      A : public void m3(int i)        parameter is int
+      B : public void m3(String s)     parameter is String
+
+      Different parameter TYPE, so the signatures differ.
+      -> B.m3(String) OVERLOADS A.m3(int).
+
+      Class B has BOTH m3(int) (inherited) and m3(String) (its own).
+   ```
+
+   `m4` — HIDING
+   ```
+      A : public static void m4(int i)
+      B : public static void m4(int i)   SAME signature, BOTH static
+
+      A static method cannot be overridden. When a subclass declares a
+      static method with the same signature, it HIDES the superclass one.
+
+      Hiding is resolved by the REFERENCE type, not the object :
+
+           A obj = new B();
+           A.m4(5);         // A's version
+           B.m4(5);         // B's version
+           obj.m4(5);       // A's version - decided by the REFERENCE type
+   ```
+
+   Summary
+
+   | Method | In A | In B | Relationship |
+   |---|---|---|---|
+   | `m1` | `void m1()` | `static void m1(int)` | `Overloading` |
+   | `m2` | `void m2(int)` | `void m2(int)` | `Overriding` |
+   | `m3` | `void m3(int)` | `void m3(String)` | `Overloading` |
+   | `m4` | `static void m4(int)` | `static void m4(int)` | `Hiding` |
+
+   The remaining methods
+   - `A.m1()` and `A.m3(int)` are simply `inherited` by B unchanged. B does not replace them; it adds new overloads beside them. So an object of B can call all of:
+   ```java
+      B b = new B();
+      b.m1();          // inherited from A
+      B.m1(5);         // B's own static overload
+      b.m2(5);         // B's override
+      b.m3(5);         // inherited from A
+      b.m3("hi");      // B's own overload
+   ```
+
+   - The essential distinction to state: `overriding` replaces an instance method and is resolved at run time by the object; `hiding` replaces a static method and is resolved at compile time by the reference type; `overloading` adds a new method beside the old one, since the signatures differ.
+
 6. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 620 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) The `static` keyword means a member belongs to the `class itself` rather than to any individual object. There is exactly `one copy`, created when the class is loaded, shared by every object.
+
+   Static variable
+   - One copy shared by all objects. Changing it through one object changes it for all.
+   - Used for a value common to every instance — a counter, a constant, a bank's interest rate.
+
+   Static method
+   - Belongs to the class, so it can be called `without creating an object`.
+   - Can access only `static` members directly, and cannot use `this` or `super`, because there is no object.
+
+   Program using both
+   ```java
+   class Student {
+
+       // ---- STATIC variable : one copy shared by every object ----
+       static String collegeName = "Dhaka College";
+       static int    studentCount = 0;
+
+       // ---- INSTANCE variables : one copy per object ----
+       String name;
+       int    roll;
+
+       Student(String name, int roll) {
+           this.name = name;
+           this.roll = roll;
+           studentCount++;                 // the SHARED counter increases
+       }
+
+       // ---- INSTANCE method : needs an object ----
+       void display() {
+           System.out.println(roll + " - " + name + " - " + collegeName);
+       }
+
+       // ---- STATIC method : called without any object ----
+       static void showCount() {
+           System.out.println("Total students: " + studentCount);
+           // System.out.println(name);    // ERROR - name is an instance field
+       }
+
+       static void changeCollege(String newName) {
+           collegeName = newName;          // affects EVERY object at once
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           Student.showCount();            // 0 - called with NO object
+
+           Student s1 = new Student("Rahim", 101);
+           Student s2 = new Student("Karim", 102);
+           Student s3 = new Student("Jamal", 103);
+
+           s1.display();
+           s2.display();
+           s3.display();
+
+           Student.showCount();            // 3
+
+           Student.changeCollege("Notre Dame College");
+           System.out.println("After the change:");
+           s1.display();                   // every object sees the new name
+           s2.display();
+       }
+   }
+   ```
+
+   Output
+   ```
+      Total students: 0
+      101 - Rahim - Dhaka College
+      102 - Karim - Dhaka College
+      103 - Jamal - Dhaka College
+      Total students: 3
+      After the change:
+      101 - Rahim - Notre Dame College
+      102 - Karim - Notre Dame College
+   ```
+
+   What the program shows
+   - `studentCount` is `static`, so all three constructor calls increase the same variable. An instance variable would have given each object its own count of 1.
+   - `collegeName` is `static`, so changing it once changes what every object reports.
+   - `showCount()` is `static`, so it is called as `Student.showCount()` before any object exists.
+   - `name` and `roll` are instance variables, so each object has its own.
+
+   Memory picture
+   ```
+      ---- Class area (one copy) ----
+           collegeName , studentCount
+
+      ---- Heap (one copy per object) ----
+           s1 : name="Rahim" , roll=101
+           s2 : name="Karim" , roll=102
+           s3 : name="Jamal" , roll=103
+   ```
+
+   Rules to state
+   ```
+      A static method can access only STATIC members directly
+      'this' and 'super' cannot be used inside a static method
+      A static method cannot be OVERRIDDEN, only HIDDEN
+      main() is static so the JVM can call it before any object exists
+      A STATIC BLOCK runs once, when the class is loaded :
+
+           static { System.out.println("Class loaded"); }
+
+      'static final' makes a constant :  static final double PI = 3.1416;
+   ```
 
 7. **Write a java program to counting the vowel and consonant into a given strings.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
+   Answer: A `vowel` is one of a, e, i, o, u (in either case); every other alphabetic character is a `consonant`. Digits, spaces and punctuation are neither.
+
+   ```java
+   import java.util.Scanner;
+
+   public class VowelConsonant {
+
+       public static void main(String[] args) {
+
+           Scanner sc = new Scanner(System.in);
+           System.out.print("Enter a string: ");
+           String str = sc.nextLine();
+
+           int vowels = 0, consonants = 0, digits = 0, others = 0;
+
+           // make the comparison case-insensitive
+           str = str.toLowerCase();
+
+           for (int i = 0; i < str.length(); i++) {
+               char ch = str.charAt(i);
+
+               if (ch >= 'a' && ch <= 'z') {              // it is a letter
+                   if (ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+                       vowels++;
+                   else
+                       consonants++;
+               }
+               else if (ch >= '0' && ch <= '9')
+                   digits++;
+               else
+                   others++;                              // space, punctuation
+           }
+
+           System.out.println("Vowels     : " + vowels);
+           System.out.println("Consonants : " + consonants);
+           System.out.println("Digits     : " + digits);
+           System.out.println("Others     : " + others);
+
+           sc.close();
+       }
+   }
+   ```
+
+   Sample run
+   ```
+      Enter a string: Bangladesh is my country 2024
+
+      Vowels     : 8
+      Consonants : 14
+      Digits     : 4
+      Others     : 4
+   ```
+
+   Shorter version using `Character` methods
+   ```java
+   public class VowelConsonant {
+       public static void main(String[] args) {
+
+           String str = "Bangladesh is my country";
+           int vowels = 0, consonants = 0;
+
+           for (char ch : str.toLowerCase().toCharArray()) {
+               if (Character.isLetter(ch)) {
+                   if ("aeiou".indexOf(ch) >= 0) vowels++;
+                   else                          consonants++;
+               }
+           }
+
+           System.out.println("Vowels     : " + vowels);
+           System.out.println("Consonants : " + consonants);
+       }
+   }
+   ```
+   - `"aeiou".indexOf(ch)` returns -1 when the character is not a vowel, which makes the test a single line.
+
+   Version using a method, so the logic can be reused
+   ```java
+   public class VowelConsonant {
+
+       static boolean isVowel(char ch) {
+           ch = Character.toLowerCase(ch);
+           return ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u';
+       }
+
+       public static void main(String[] args) {
+           String str = "Bangladesh";
+           int v = 0, c = 0;
+
+           for (char ch : str.toCharArray()) {
+               if (!Character.isLetter(ch)) continue;
+               if (isVowel(ch)) v++; else c++;
+           }
+           System.out.println("Vowels: " + v + ", Consonants: " + c);
+       }
+   }
+   ```
+
+   Points worth noting
+   ```
+      Convert to lower case FIRST, or 'A' and 'a' will be counted differently
+      Check isLetter() before classifying, so digits and spaces are not
+           counted as consonants - the commonest mistake in this question
+      str.charAt(i) reads one character; str.toCharArray() gives them all
+      The loop runs in O(n) time and uses O(1) extra space
+   ```
+
 8. **Where will be the most chance of the grabage collector being invoked?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
+
+   Answer: The garbage collector is most likely to be invoked when an object becomes `unreachable` and the JVM is under `memory pressure` — that is, when the heap is nearly full and a new allocation cannot be satisfied.
+
+   The main trigger
+   ```
+      A new object is allocated, the young generation (Eden space) is FULL,
+      and the JVM must free space  ->  a MINOR GC runs.
+   ```
+   - This is by far the commonest cause. Garbage collection in Java is `allocation-driven`: it happens because memory is needed, not because objects became garbage.
+
+   Situations that make collection likely
+   - `An object goes out of scope` — a local variable's object becomes unreachable when the method returns.
+   ```java
+      void method() {
+          Student s = new Student();     // created on the heap
+      }                                  // s is now unreachable -> eligible
+   ```
+   - `A reference is set to null`
+   ```java
+      Student s = new Student();
+      s = null;                          // the object is now eligible
+   ```
+   - `A reference is reassigned`
+   ```java
+      Student s = new Student("A");
+      s = new Student("B");              // the first object is now unreachable
+   ```
+   - `An island of isolation` — two objects referring only to each other, with nothing outside referring to either. Both are unreachable, so both are collected. Reference-counting collectors miss this case; Java's reachability-based collector does not.
+   - `The heap is nearly full`, which is the actual trigger for the collector to run.
+   - `System.gc()` or `Runtime.getRuntime().gc()` is called — but this is only a `request`, and the JVM may ignore it entirely. It is considered bad practice.
+
+   Where in the program it is most likely
+   ```
+      Inside a loop that creates many short-lived objects :
+
+           for (int i = 0; i < 1000000; i++) {
+               String s = new String("temp");    // becomes garbage immediately
+           }
+
+      This fills Eden space quickly, so minor collections run repeatedly.
+      Short-lived objects are exactly what the generational collector is
+      designed for, and collecting them is very cheap.
+   ```
+
+   The generational model
+   ```
+      YOUNG generation : Eden + two Survivor spaces
+           Most objects die young, so MINOR GC runs here often and fast.
+
+      OLD generation (tenured)
+           Objects that survive several minor collections are promoted here.
+           MAJOR / FULL GC runs here rarely and is much slower.
+   ```
+
+   What is NOT a trigger
+   ```
+      An object is NOT collected merely because finalize() exists
+      Setting a reference to null does not COLLECT the object; it only makes
+           it eligible
+      System.gc() does not guarantee collection
+      The JVM shutting down does not guarantee finalizers run
+   ```
+
+   - The precise answer: the garbage collector is invoked when `an allocation fails because the heap (usually Eden space) is full`. The objects it then removes are those that have become `unreachable` from any live thread — most often short-lived local objects created inside loops.
 
 9. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** *[BPDB Assistant Engineer (CSE) 2021 compact it 816-817 (ET: BUET)]*
 
+   Answer: The tariff is `slab-wise`: each block of units is charged at its own rate, and only the units above a slab boundary attract the higher rate.
+   ```
+      First 100 units          : 4.00 taka per unit
+      Next 100 units (101-200) : 5.50 taka per unit
+      Above 200 units          : 6.00 taka per unit
+   ```
+
+   The method
+   ```java
+   public static double calculateBill(int unit) {
+
+       double bill = 0;
+
+       if (unit <= 100) {
+           bill = unit * 4.0;
+       }
+       else if (unit <= 200) {
+           bill = (100 * 4.0)                      // the first 100 units
+                + ((unit - 100) * 5.50);           // the rest at 5.50
+       }
+       else {
+           bill = (100 * 4.0)                      // the first 100
+                + (100 * 5.50)                     // the next 100
+                + ((unit - 200) * 6.00);           // the remainder at 6.00
+       }
+
+       return bill;
+   }
+   ```
+
+   Complete program
+   ```java
+   import java.util.Scanner;
+
+   public class ElectricBill {
+
+       public static double calculateBill(int unit) {
+           double bill;
+
+           if (unit <= 100)
+               bill = unit * 4.0;
+           else if (unit <= 200)
+               bill = (100 * 4.0) + ((unit - 100) * 5.50);
+           else
+               bill = (100 * 4.0) + (100 * 5.50) + ((unit - 200) * 6.00);
+
+           return bill;
+       }
+
+       public static void main(String[] args) {
+           Scanner sc = new Scanner(System.in);
+           System.out.print("Enter units consumed: ");
+           int unit = sc.nextInt();
+
+           if (unit < 0) {
+               System.out.println("Units cannot be negative");
+           } else {
+               System.out.println("Units : " + unit);
+               System.out.println("Bill  : " + calculateBill(unit) + " taka");
+           }
+           sc.close();
+       }
+   }
+   ```
+
+   Worked examples
+   ```
+      unit = 80    ->  80 x 4.00                              = 320.00 taka
+
+      unit = 150   ->  100 x 4.00  = 400.00
+                       50  x 5.50  = 275.00
+                                   --------
+                                     675.00 taka
+
+      unit = 350   ->  100 x 4.00  = 400.00
+                       100 x 5.50  = 550.00
+                       150 x 6.00  = 900.00
+                                   --------
+                                    1850.00 taka
+   ```
+
+   Alternative reading — a flat rate for the whole consumption
+   - If the tariff means the `entire` consumption is charged at one rate determined by the slab, the method is simpler:
+   ```java
+   public static double calculateBillFlat(int unit) {
+       double rate;
+       if (unit <= 100)      rate = 4.00;
+       else if (unit <= 200) rate = 5.50;
+       else                  rate = 6.00;
+       return unit * rate;
+   }
+   ```
+   ```
+      unit = 150  ->  150 x 5.50 = 825.00 taka
+      unit = 350  ->  350 x 6.00 = 2100.00 taka
+   ```
+   - The `slab-wise` version is how real electricity tariffs work in Bangladesh, and is the answer normally expected. Stating the assumption is what earns the marks.
+
+   Points to note
+   - A flat-rate tariff has a discontinuity at the boundary: 100 units costs 400 taka but 101 units costs 555.50 — a jump of 155 taka for one extra unit. The slab-wise method avoids this, which is exactly why real tariffs use it.
+   - Validate the input: negative units are meaningless, and the method should reject them.
+
 10. **C# language এর একটি প্রোগ্রাম লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
+
+    Answer: (Answered in English, as required for IT topics.) A complete C# program demonstrating classes, objects, encapsulation and inheritance.
+
+    ```csharp
+    using System;
+
+    namespace BankApplication
+    {
+        // ---------------- BASE CLASS ----------------
+        class Account
+        {
+            // private fields - encapsulation
+            private string accountNumber;
+            private string holderName;
+            private double balance;
+
+            // constructor
+            public Account(string accNo, string name, double opening)
+            {
+                accountNumber = accNo;
+                holderName    = name;
+                balance       = (opening > 0) ? opening : 0;
+            }
+
+            // property : controlled access to a private field
+            public double Balance
+            {
+                get { return balance; }
+                protected set { balance = value; }
+            }
+
+            public string AccountNumber { get { return accountNumber; } }
+
+            public void Deposit(double amount)
+            {
+                if (amount <= 0) {
+                    Console.WriteLine("Deposit must be positive");
+                    return;
+                }
+                balance += amount;
+                Console.WriteLine($"Deposited {amount:F2}");
+            }
+
+            public virtual void Withdraw(double amount)      // virtual
+            {
+                if (amount > 0 && amount <= balance) {
+                    balance -= amount;
+                    Console.WriteLine($"Withdrawn {amount:F2}");
+                } else {
+                    Console.WriteLine("Insufficient balance");
+                }
+            }
+
+            public virtual double CalculateInterest() { return 0; }
+
+            public virtual void Display()
+            {
+                Console.WriteLine("--------------------------------");
+                Console.WriteLine($"Account : {accountNumber}");
+                Console.WriteLine($"Holder  : {holderName}");
+                Console.WriteLine($"Balance : {balance:F2}");
+            }
+        }
+
+        // ---------------- DERIVED CLASS ----------------
+        class SavingsAccount : Account
+        {
+            private double rate;
+
+            public SavingsAccount(string accNo, string name, double opening,
+                                  double r = 6.0)
+                : base(accNo, name, opening)          // call the base constructor
+            {
+                rate = r;
+            }
+
+            public override double CalculateInterest()
+            {
+                return Balance * rate / 100;
+            }
+
+            public override void Display()
+            {
+                base.Display();                       // reuse the base version
+                Console.WriteLine($"Type    : Savings");
+                Console.WriteLine($"Interest: {CalculateInterest():F2}");
+            }
+        }
+
+        // ---------------- MAIN ----------------
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Console.Write("Enter account holder name: ");
+                string name = Console.ReadLine();
+
+                Console.Write("Enter opening balance: ");
+                double opening = Convert.ToDouble(Console.ReadLine());
+
+                SavingsAccount acc = new SavingsAccount("SB1001", name, opening);
+
+                acc.Deposit(5000);
+                acc.Withdraw(2000);
+                acc.Withdraw(1000000);        // rejected
+                acc.Display();
+
+                Console.ReadKey();
+            }
+        }
+    }
+    ```
+
+    Sample run
+    ```
+       Enter account holder name: Rahim Uddin
+       Enter opening balance: 10000
+
+       Deposited 5000.00
+       Withdrawn 2000.00
+       Insufficient balance
+       --------------------------------
+       Account : SB1001
+       Holder  : Rahim Uddin
+       Balance : 13000.00
+       Type    : Savings
+       Interest: 780.00
+    ```
+
+    A shorter program, if only the basics are wanted
+    ```csharp
+    using System;
+
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Enter first number : ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter second number: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Sum        = {a + b}");
+            Console.WriteLine($"Difference = {a - b}");
+            Console.WriteLine($"Product    = {a * b}");
+
+            if (b != 0)
+                Console.WriteLine($"Quotient   = {(double)a / b:F2}");
+            else
+                Console.WriteLine("Division by zero is not allowed");
+
+            Console.ReadKey();
+        }
+    }
+    ```
+
+    C# features worth pointing out
+    ```
+       using System;        imports the base namespace
+       namespace            groups related classes
+       Console.WriteLine    output;  Console.ReadLine  input
+       $"{...}"             string interpolation, like printf
+       :F2                  format to two decimal places
+       Property             get/set accessors replace Java's getX()/setX()
+       virtual / override   explicit keywords - unlike Java, C# requires
+                            'virtual' in the base class, exactly like C++
+       base                 refers to the superclass, like Java's 'super'
+       : base(...)          calls the base constructor
+    ```
+    - C# is developed by Microsoft and runs on the `.NET` platform. It is very close to Java in design, with properties, `virtual`/`override` and value-type `struct` as its main differences.
 
 11. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
 
+    Answer: The program uses a `class` to hold the customer's data and the billing logic, and an `object` for each customer.
+    ```
+       Slab tariff :  first 100 units       -> 4.00 taka per unit
+                      next 100 (101-200)    -> 5.50 taka per unit
+                      above 200             -> 6.00 taka per unit
+    ```
+
+    ```java
+    import java.util.Scanner;
+
+    class ElectricityBill {
+
+        // ---- private data members : encapsulation ----
+        private String customerName;
+        private String meterNumber;
+        private int    unitsConsumed;
+        private double billAmount;
+
+        // ---- constructor ----
+        public ElectricityBill(String name, String meter, int units) {
+            this.customerName  = name;
+            this.meterNumber   = meter;
+            this.unitsConsumed = (units > 0) ? units : 0;
+        }
+
+        // ---- slab-wise bill calculation ----
+        public void calculateBill() {
+            int units = unitsConsumed;
+
+            if (units <= 100)
+                billAmount = units * 4.0;
+            else if (units <= 200)
+                billAmount = (100 * 4.0) + ((units - 100) * 5.50);
+            else
+                billAmount = (100 * 4.0) + (100 * 5.50) + ((units - 200) * 6.00);
+        }
+
+        // ---- add the service charge and VAT ----
+        public double totalPayable() {
+            double serviceCharge = 20.0;
+            double vat = billAmount * 0.05;          // 5 % VAT
+            return billAmount + serviceCharge + vat;
+        }
+
+        // ---- display the bill ----
+        public void display() {
+            System.out.println("========================================");
+            System.out.println("Customer      : " + customerName);
+            System.out.println("Meter Number  : " + meterNumber);
+            System.out.println("Units         : " + unitsConsumed);
+            System.out.println("Energy Charge : " + billAmount);
+            System.out.println("Service Charge: 20.0");
+            System.out.printf ("VAT (5%%)      : %.2f%n", billAmount * 0.05);
+            System.out.printf ("Total Payable : %.2f taka%n", totalPayable());
+            System.out.println("========================================");
+        }
+
+        public double getBillAmount() { return billAmount; }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter customer name : ");
+            String name = sc.nextLine();
+
+            System.out.print("Enter meter number  : ");
+            String meter = sc.nextLine();
+
+            System.out.print("Enter units consumed: ");
+            int units = sc.nextInt();
+
+            // create the OBJECT
+            ElectricityBill bill = new ElectricityBill(name, meter, units);
+
+            bill.calculateBill();
+            bill.display();
+
+            sc.close();
+        }
+    }
+    ```
+
+    Sample run
+    ```
+       Enter customer name : Rahim Uddin
+       Enter meter number  : DESCO-45231
+       Enter units consumed: 350
+
+       ========================================
+       Customer      : Rahim Uddin
+       Meter Number  : DESCO-45231
+       Units         : 350
+       Energy Charge : 1850.0
+       Service Charge: 20.0
+       VAT (5%)      : 92.50
+       Total Payable : 1962.50 taka
+       ========================================
+    ```
+
+    Working of the slab calculation for 350 units
+    ```
+       First 100 units  : 100 x 4.00 =  400.00
+       Next 100 units   : 100 x 5.50 =  550.00
+       Remaining 150    : 150 x 6.00 =  900.00
+                                      ---------
+       Energy charge                  = 1850.00
+       Service charge                 =   20.00
+       VAT 5 % of 1850                =   92.50
+                                      ---------
+       Total payable                  = 1962.50 taka
+    ```
+
+    Handling several customers with an array of objects
+    ```java
+    ElectricityBill[] customers = {
+        new ElectricityBill("Rahim", "M-101", 80),
+        new ElectricityBill("Karim", "M-102", 150),
+        new ElectricityBill("Jamal", "M-103", 350)
+    };
+
+    double total = 0;
+    for (ElectricityBill c : customers) {
+        c.calculateBill();
+        c.display();
+        total += c.getBillAmount();
+    }
+    System.out.println("Total revenue: " + total);
+    ```
+
+    OOP concepts the program uses
+    ```
+       CLASS         : ElectricityBill is the blueprint
+       OBJECT        : each customer is an instance
+       ENCAPSULATION : the data members are private; all access is through
+                       public methods, so units can never be set negative
+       CONSTRUCTOR   : initialises the object at creation
+       METHODS       : calculateBill(), totalPayable() and display() keep
+                       the logic beside the data it works on
+    ```
+
 12. **What are the difference among JDK, JRE and JVM?** *[Islami Bank Bangladesh Limited Officer (Software Engineer) 2019 compact it 1098 (ET: N/A)]*
+
+    Answer: The three are separate pieces of the Java platform, and they nest inside one another.
+    ```
+       +---------------------------------------------------+
+       |  JDK  (Java Development Kit)                      |
+       |   compiler (javac), debugger, jar, javadoc ...    |
+       |   +-------------------------------------------+   |
+       |   |  JRE  (Java Runtime Environment)          |   |
+       |   |   class libraries (rt.jar), property files|   |
+       |   |   +-----------------------------------+   |   |
+       |   |   |  JVM  (Java Virtual Machine)      |   |   |
+       |   |   |   class loader, bytecode verifier,|   |   |
+       |   |   |   interpreter, JIT, GC            |   |   |
+       |   |   +-----------------------------------+   |   |
+       |   +-------------------------------------------+   |
+       +---------------------------------------------------+
+
+       JDK = JRE + development tools
+       JRE = JVM + class libraries
+    ```
+
+    JVM — Java Virtual Machine
+    - An `abstract machine` that actually `executes` the bytecode. It is a `specification`, and different vendors provide different implementations (HotSpot, OpenJ9).
+    - It is `platform dependent` — a separate JVM exists for Windows, Linux and macOS — and this is exactly what makes `Java itself platform independent`.
+    ```
+       Main components :
+          Class loader     : loads .class files into memory
+          Bytecode verifier: checks the code is safe and well formed
+          Runtime areas    : method area, heap, stacks, PC register
+          Execution engine : interpreter + JIT compiler
+          Garbage collector: reclaims unreachable objects
+    ```
+    - It cannot compile source code and cannot run a program on its own; it needs the libraries.
+
+    JRE — Java Runtime Environment
+    - The `JVM plus the standard class libraries` and supporting files needed to `run` a Java application.
+    - It is what an `end user` installs to run a Java program. It cannot compile anything.
+    ```
+       JRE = JVM + java.lang, java.util, java.io, java.net ... + property files
+    ```
+
+    JDK — Java Development Kit
+    - The `JRE plus the development tools` needed to `write and build` Java programs.
+    - It is what a `developer` installs.
+    ```
+       Tools included :
+          javac     : the compiler, .java -> .class bytecode
+          java      : launcher, runs a program
+          javadoc   : generates documentation
+          jar       : packages classes into a .jar archive
+          jdb       : debugger
+          javap     : disassembler
+    ```
+
+    Comparison
+
+    | Point | JDK | JRE | JVM |
+    |---|---|---|---|
+    | Full form | Java Development Kit | Java Runtime Environment | Java Virtual Machine |
+    | Contains | JRE + development tools | JVM + class libraries | Class loader, verifier, engine, GC |
+    | Purpose | Develop and run | Run only | Execute bytecode |
+    | Can compile | `Yes` (javac) | No | No |
+    | Can run a program | Yes | Yes | Only with libraries |
+    | Installed by | Developers | End users | Comes inside the JRE |
+    | Platform dependent | Yes | Yes | Yes |
+    | Physical or abstract | Physical (a set of files) | Physical | `Abstract` — a specification |
+
+    How a program flows through them
+    ```
+       Hello.java
+          |  javac   (JDK tool)
+          v
+       Hello.class  (bytecode - platform INDEPENDENT)
+          |  java    (JRE launcher)
+          v
+       JVM : class loader -> verifier -> interpreter / JIT -> machine code
+          |
+          v
+       Output
+    ```
+
+    - The key idea: bytecode is `written once` and runs on `any` JVM. The platform difference is absorbed by the JVM, not by the program — which is what "write once, run anywhere" means.
+    - From Java 11 onward Oracle no longer ships a separate JRE; the JDK is the single distribution, and `jlink` builds a trimmed runtime when one is needed.
 
 13. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
 
+    Answer: Java is called `platform independent` because a Java program is compiled once into `bytecode`, and that same bytecode runs unchanged on any operating system that has a `JVM`.
+
+    - The slogan is `WORA` — Write Once, Run Anywhere.
+
+    How it works
+    ```
+       Hello.java          (source code)
+            |
+            |  javac  - the Java compiler
+            v
+       Hello.class         (BYTECODE - platform INDEPENDENT)
+            |
+            +--------------+--------------+
+            |              |              |
+         JVM for        JVM for        JVM for
+         Windows         Linux          macOS
+            |              |              |
+            v              v              v
+       Windows        Linux          macOS
+       machine code   machine code   machine code
+    ```
+    - The `same Hello.class` file is copied to any machine and runs there. Nothing is recompiled.
+
+    The two-stage compilation
+    ```
+       Stage 1 : javac converts source to BYTECODE
+                 - an intermediate instruction set for a virtual machine
+                 - not tied to any real processor
+
+       Stage 2 : the JVM converts bytecode to the NATIVE machine code of
+                 whatever processor it is running on, by interpreting it and
+                 by compiling the hot paths with the JIT compiler
+    ```
+
+    The key point that examiners look for
+    ```
+       JAVA is platform independent.
+       The JVM is platform DEPENDENT.
+
+       A different JVM is written for each operating system and processor.
+       That JVM absorbs all the differences, so the program does not have to.
+    ```
+    - This is the opposite of C or C++, where the compiler produces machine code for one specific platform, and the program must be `recompiled` — often with source changes — for every other one.
+    ```
+       C program   : source -> Windows .exe   (runs only on Windows)
+                     source -> Linux binary   (must be recompiled)
+
+       Java program: source -> ONE .class file (runs on all of them)
+    ```
+
+    What else supports the independence
+    - `Fixed data type sizes.` In Java an `int` is always 32 bits and a `char` always 16 bits, on every platform. In C the size of `int` varies with the compiler and machine.
+    - `Standard class libraries.` `java.io`, `java.net` and the rest behave identically everywhere, so file and network code needs no changes.
+    - `No pointers and no direct memory access`, so a program cannot depend on a particular memory layout.
+    - `Unicode` for characters, so text behaves the same in every locale.
+
+    Limits worth stating honestly
+    ```
+       The JVM itself must be installed, and it is platform specific.
+       Native code called through JNI is NOT portable.
+       File paths, line separators and GUI look-and-feel still differ, so
+            File.separator and System.lineSeparator() must be used rather
+            than hard-coded "\\" or "\n".
+       Performance depends on the JVM implementation.
+    ```
+
+    - So the accurate statement is: Java achieves platform independence by `moving the platform-specific work out of the program and into the JVM`. The program is portable; the runtime is not.
+
 14. **Suppose you've a method name “totalAmount” and there three properties (transactionName, transactionType, amount). Write down the full code using JAVA where totalAmount method return total balance after debit or credited.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+    Answer: The class holds the three properties, and `totalAmount` returns the computed value.
+
+    ```java
+    import java.util.ArrayList;
+    import java.util.List;
+
+    class Transaction {
+
+        // ---- the three properties ----
+        private String transactionName;
+        private String transactionType;      // "credit" or "debit"
+        private double amount;
+
+        // ---- constructor ----
+        public Transaction(String transactionName, String transactionType,
+                           double amount) {
+            this.transactionName = transactionName;
+            this.transactionType = transactionType;
+            this.amount = amount;
+        }
+
+        // ---- getters ----
+        public String getTransactionName() { return transactionName; }
+        public String getTransactionType() { return transactionType; }
+        public double getAmount()          { return amount; }
+
+        // ---- setters ----
+        public void setAmount(double amount) {
+            if (amount >= 0) this.amount = amount;
+        }
+
+        // ---- the method that RETURNS a value ----
+        public double totalAmount() {
+            if (transactionType.equalsIgnoreCase("credit"))
+                return amount;               // money in  -> positive
+            else
+                return -amount;              // money out -> negative
+        }
+
+        public void display() {
+            System.out.printf("%-15s %-10s %10.2f%n",
+                              transactionName, transactionType, amount);
+        }
+    }
+
+    public class Main {
+
+        // a static version that totals a whole list
+        public static double totalAmount(List<Transaction> list) {
+            double total = 0;
+            for (Transaction t : list)
+                total += t.totalAmount();
+            return total;                    // returns the net total
+        }
+
+        public static void main(String[] args) {
+
+            List<Transaction> transactions = new ArrayList<>();
+            transactions.add(new Transaction("Salary",   "credit", 50000));
+            transactions.add(new Transaction("Rent",     "debit",  15000));
+            transactions.add(new Transaction("Bonus",    "credit", 10000));
+            transactions.add(new Transaction("Utility",  "debit",   3500));
+
+            System.out.printf("%-15s %-10s %10s%n", "NAME", "TYPE", "AMOUNT");
+            System.out.println("-------------------------------------");
+            for (Transaction t : transactions)
+                t.display();
+            System.out.println("-------------------------------------");
+
+            double net = totalAmount(transactions);
+            System.out.printf("Net total : %.2f taka%n", net);
+        }
+    }
+    ```
+
+    Output
+    ```
+       NAME            TYPE           AMOUNT
+       -------------------------------------
+       Salary          credit       50000.00
+       Rent            debit        15000.00
+       Bonus           credit       10000.00
+       Utility         debit         3500.00
+       -------------------------------------
+       Net total : 41500.00 taka
+    ```
+
+    Working
+    ```
+       Salary   credit  +50000
+       Rent     debit   -15000
+       Bonus    credit  +10000
+       Utility  debit    -3500
+                        -------
+       Net total        +41500
+    ```
+
+    Simpler version, if `totalAmount` should just return the amount
+    ```java
+    class Transaction {
+        private String transactionName;
+        private String transactionType;
+        private double amount;
+
+        public Transaction(String name, String type, double amount) {
+            this.transactionName = name;
+            this.transactionType = type;
+            this.amount = amount;
+        }
+
+        public double totalAmount() {
+            return amount;               // returns the value
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Transaction t = new Transaction("Salary", "credit", 50000);
+            System.out.println("Total: " + t.totalAmount());   // 50000.0
+        }
+    }
+    ```
+
+    Points to note
+    ```
+       The return type is 'double', not 'void', so the method can return a value
+       Every path through the method must return - the if/else above does
+       The properties are PRIVATE with public getters : encapsulation
+       equalsIgnoreCase() is used, not ==, because Strings must be compared
+            by VALUE and the type may be typed in any case
+       printf with %-15s and %10.2f aligns the output into columns
+    ```
 
 15. **Write the full form of following topics:** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
    i) JAR
    ii) JRE
    iii) WAR
    iv) JDK
+
+    Answer: The four full forms.
+    ```
+       i)   JAR  =  Java ARchive
+       ii)  JRE  =  Java Runtime Environment
+       iii) WAR  =  Web Application aRchive
+       iv)  JDK  =  Java Development Kit
+    ```
+
+    i) JAR — Java Archive
+    - A single compressed file, in ZIP format, that packages `.class` files, images, configuration files and a `MANIFEST.MF` together.
+    - Purpose: distribute a whole library or application as one file, with compression and optional digital signing.
+    ```
+       MyApp.jar
+          +-- META-INF/MANIFEST.MF        (declares the Main-Class)
+          +-- com/example/Main.class
+          +-- com/example/Helper.class
+          +-- resources/logo.png
+    ```
+    ```bash
+       jar cf MyApp.jar *.class          # create
+       java -jar MyApp.jar               # run an executable jar
+    ```
+
+    ii) JRE — Java Runtime Environment
+    - The `JVM plus the standard class libraries` needed to `run` a Java program.
+    - Installed by an `end user`. It cannot compile source code.
+    ```
+       JRE = JVM + java.lang, java.util, java.io, java.net ...
+    ```
+
+    iii) WAR — Web Application Archive
+    - A JAR file with a fixed internal structure, holding a complete `web application`: servlets, JSPs, HTML, CSS, JavaScript and their configuration.
+    - Deployed to a servlet container such as `Tomcat`, `JBoss` or `WebLogic`.
+    ```
+       MyWeb.war
+          +-- index.html , style.css
+          +-- WEB-INF/
+                 +-- web.xml              (deployment descriptor)
+                 +-- classes/             (compiled servlets)
+                 +-- lib/                 (dependency jar files)
+    ```
+    - The related `EAR` (Enterprise Archive) packages several WAR and JAR modules into one enterprise application.
+
+    iv) JDK — Java Development Kit
+    - The `JRE plus the development tools` needed to `write and build` Java programs.
+    - Installed by a `developer`.
+    ```
+       Tools : javac (compiler) , java (launcher) , javadoc , jar , jdb , javap
+    ```
+
+    How they relate
+    ```
+       JDK = JRE + development tools
+       JRE = JVM + class libraries
+
+       JAR = a package of classes and resources
+       WAR = a JAR with the standard web-application layout
+       EAR = a package of WAR and JAR modules
+    ```
+
+    Comparison of the archive types
+
+    | Point | JAR | WAR |
+    |---|---|---|
+    | Full form | Java Archive | Web Application Archive |
+    | Contains | Classes, resources, manifest | Servlets, JSP, HTML, CSS, `WEB-INF` |
+    | Structure | Free | Fixed — `WEB-INF` is required |
+    | Deployed to | Any JVM | A servlet container (Tomcat, JBoss) |
+    | Runs standalone | Yes, with `Main-Class` | No — needs a web server |
+    | Used for | Libraries and desktop applications | Web applications |
 
 16. **Write a java program using 2D array and array output will be-** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191 (ET: N/A)]*
 ```text
@@ -4831,9 +6221,378 @@ Public class class B extends class A {
 1 2 3 4 5
 ```
 
+    Answer: The required output is a `right triangle` of numbers, in which row `i` prints the numbers 1 to `i`.
+    ```
+       1
+       1 2
+       1 2 3
+       1 2 3 4
+       1 2 3 4 5
+    ```
+
+    Program using a 2-D array
+    ```java
+    public class TrianglePattern {
+
+        public static void main(String[] args) {
+
+            int n = 5;
+
+            // a JAGGED array : row i has i+1 columns
+            int[][] arr = new int[n][];
+
+            // ---- fill the array ----
+            for (int i = 0; i < n; i++) {
+                arr[i] = new int[i + 1];              // row i has i+1 elements
+                for (int j = 0; j <= i; j++) {
+                    arr[i][j] = j + 1;                // values 1, 2, 3, ...
+                }
+            }
+
+            // ---- print the array ----
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < arr[i].length; j++) {
+                    System.out.print(arr[i][j] + " ");
+                }
+                System.out.println();
+            }
+        }
+    }
+    ```
+
+    Output
+    ```
+       1
+       1 2
+       1 2 3
+       1 2 3 4
+       1 2 3 4 5
+    ```
+
+    How it works
+    ```
+       i = 0 : arr[0] has 1 element  -> 1
+       i = 1 : arr[1] has 2 elements -> 1 2
+       i = 2 : arr[2] has 3 elements -> 1 2 3
+       i = 3 : arr[3] has 4 elements -> 1 2 3 4
+       i = 4 : arr[4] has 5 elements -> 1 2 3 4 5
+    ```
+    - `int[][] arr = new int[n][]` creates a `jagged` array — the number of rows is fixed but each row's length is decided separately. This matches the triangle exactly, with no wasted memory.
+
+    Version using a rectangular 2-D array
+    ```java
+    public class TrianglePattern {
+        public static void main(String[] args) {
+
+            int n = 5;
+            int[][] arr = new int[n][n];              // full 5 x 5 array
+
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j <= i; j++)
+                    arr[i][j] = j + 1;                // upper cells stay 0
+
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j <= i; j++)          // print only up to j = i
+                    System.out.print(arr[i][j] + " ");
+                System.out.println();
+            }
+        }
+    }
+    ```
+    - This wastes the cells above the diagonal, which stay 0, but it is simpler to write.
+
+    Version taking the size from the user
+    ```java
+    import java.util.Scanner;
+
+    public class TrianglePattern {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter number of rows: ");
+            int n = sc.nextInt();
+
+            int[][] arr = new int[n][];
+            for (int i = 0; i < n; i++) {
+                arr[i] = new int[i + 1];
+                for (int j = 0; j <= i; j++) arr[i][j] = j + 1;
+            }
+
+            for (int[] row : arr) {
+                for (int value : row) System.out.print(value + " ");
+                System.out.println();
+            }
+            sc.close();
+        }
+    }
+    ```
+
+    Related patterns produced by changing one line
+    ```
+       arr[i][j] = i + 1;      ->   1
+                                    2 2
+                                    3 3 3
+                                    4 4 4 4
+
+       arr[i][j] = 1;          ->   1
+                                    1 1
+                                    1 1 1
+    ```
+
+    Points worth noting
+    ```
+       A jagged array uses exactly n(n+1)/2 cells; a rectangular one uses n^2
+       The inner loop condition j <= i is what makes the triangle
+       arr[i].length gives the length of that particular row
+       The enhanced for loop (for (int[] row : arr)) is the cleanest way
+            to walk a jagged array
+    ```
+
 17. **Write simple Java program to convert string into camel case and display camel case string.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191-1192 (ET: N/A)]*
 
+    Answer: `Camel case` writes the first word in lower case and capitalises the first letter of every following word, with all spaces removed.
+    ```
+       "hello world program"  ->  "helloWorldProgram"        lower camel case
+       "hello world program"  ->  "HelloWorldProgram"        upper camel case (Pascal)
+    ```
+
+    Program
+    ```java
+    import java.util.Scanner;
+
+    public class CamelCase {
+
+        public static String toCamelCase(String str) {
+
+            if (str == null || str.isEmpty()) return str;
+
+            String[] words = str.trim().toLowerCase().split("\\s+");
+            StringBuilder result = new StringBuilder();
+
+            // the FIRST word stays entirely in lower case
+            result.append(words[0]);
+
+            // every later word gets its first letter capitalised
+            for (int i = 1; i < words.length; i++) {
+                result.append(Character.toUpperCase(words[i].charAt(0)));
+                result.append(words[i].substring(1));
+            }
+
+            return result.toString();
+        }
+
+        public static void main(String[] args) {
+
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter a string: ");
+            String input = sc.nextLine();
+
+            System.out.println("Original  : " + input);
+            System.out.println("CamelCase : " + toCamelCase(input));
+
+            sc.close();
+        }
+    }
+    ```
+
+    Sample run
+    ```
+       Enter a string: bangladesh water development board
+
+       Original  : bangladesh water development board
+       CamelCase : bangladeshWaterDevelopmentBoard
+    ```
+
+    How it works
+    ```
+       1. trim()        removes leading and trailing spaces
+       2. toLowerCase() normalises everything, so "HELLO World" behaves
+                        the same as "hello world"
+       3. split("\\s+") splits on ONE OR MORE whitespace characters, so
+                        multiple spaces and tabs are handled correctly
+       4. The first word is appended unchanged.
+       5. For each later word, its first character is upper-cased and the
+          rest appended with substring(1).
+    ```
+
+    Step by step for "hello world program"
+    ```
+       words = ["hello", "world", "program"]
+
+       result = "hello"
+       i = 1 : 'w' -> 'W' , + "orld"    -> "helloWorld"
+       i = 2 : 'p' -> 'P' , + "rogram"  -> "helloWorldProgram"
+    ```
+
+    Upper camel case (Pascal case) — capitalise the first word too
+    ```java
+    public static String toPascalCase(String str) {
+        String[] words = str.trim().toLowerCase().split("\\s+");
+        StringBuilder result = new StringBuilder();
+
+        for (String w : words) {
+            result.append(Character.toUpperCase(w.charAt(0)));
+            result.append(w.substring(1));
+        }
+        return result.toString();
+    }
+    ```
+    ```
+       "hello world program"  ->  "HelloWorldProgram"
+    ```
+
+    Version handling other separators as well
+    ```java
+       String[] words = str.trim().toLowerCase().split("[\\s_\\-]+");
+    ```
+    - This also splits on underscores and hyphens, so `snake_case` and `kebab-case` convert too.
+
+    Points worth noting
+    ```
+       Use StringBuilder, not repeated string concatenation. In a loop,
+            s = s + x creates a new String object every time - O(n^2) work.
+
+       split("\\s+") rather than split(" ") : the first handles multiple
+            consecutive spaces, the second produces empty strings.
+
+       Guard against an empty input, or charAt(0) throws
+            StringIndexOutOfBoundsException.
+
+       Java's own naming convention IS camel case for variables and methods
+            (totalAmount, calculateBill) and Pascal case for class names
+            (ElectricityBill), which is why this conversion is a common
+            interview question.
+    ```
+
 18. **Discus architecture of Java virtual machine.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1218-1219 (ET: N/A)]*
+
+    Answer: The `JVM (Java Virtual Machine)` is an abstract machine that loads, verifies and executes Java bytecode. It is a `specification`, implemented by HotSpot, OpenJ9 and others.
+
+    Architecture
+    ```mermaid
+    flowchart TB
+        A[.class bytecode] --> B[Class Loader Subsystem]
+        B --> C[Runtime Data Areas]
+        C --> D[Execution Engine]
+        D --> E[Native Method Interface JNI]
+        E --> F[Native Method Libraries]
+    ```
+    ```
+       +---------------------------------------------------------+
+       |                    CLASS LOADER SUBSYSTEM               |
+       |     Loading  ->  Linking  ->  Initialization            |
+       +---------------------------------------------------------+
+                                |
+       +---------------------------------------------------------+
+       |                   RUNTIME DATA AREAS                    |
+       |  +-------------+  +--------+  +----------------------+  |
+       |  | Method Area |  |  Heap  |  |  JVM Stacks          |  |
+       |  |  (shared)   |  |(shared)|  |  (per thread)        |  |
+       |  +-------------+  +--------+  +----------------------+  |
+       |  +----------------------+  +------------------------+   |
+       |  | PC Register(per thr) |  | Native Method Stacks   |   |
+       |  +----------------------+  +------------------------+   |
+       +---------------------------------------------------------+
+                                |
+       +---------------------------------------------------------+
+       |                    EXECUTION ENGINE                     |
+       |   Interpreter  |  JIT Compiler  |  Garbage Collector    |
+       +---------------------------------------------------------+
+                                |
+       +---------------------------------------------------------+
+       |     JNI  ->  Native Method Libraries (.dll / .so)       |
+       +---------------------------------------------------------+
+    ```
+
+    1. Class Loader Subsystem
+
+    `Loading` — reads the `.class` file and creates a `Class` object in the method area. Three built-in loaders work by delegation:
+    ```
+       Bootstrap loader  : loads the core API (java.lang, java.util) from rt.jar
+       Extension loader  : loads from the ext directory
+       Application loader: loads the application's own classes from the classpath
+
+       Delegation : a request goes UP to the parent first, so a user class
+                    cannot replace java.lang.String
+    ```
+
+    `Linking` — three steps
+    ```
+       Verification : the bytecode verifier checks the code is well formed and
+                      safe - no stack overflow, no illegal type conversion.
+                      This is the heart of Java's security.
+       Preparation  : static variables are allocated and set to default values
+       Resolution   : symbolic references are replaced by direct references
+    ```
+
+    `Initialization` — static variables get their real values and `static` blocks run.
+
+    2. Runtime Data Areas
+    ```
+       METHOD AREA (shared by all threads)
+            Class-level data : the runtime constant pool, field and method
+            data, the code of methods, and static variables.
+            Called METASPACE from Java 8 onward, and it lives in native memory.
+
+       HEAP (shared by all threads)
+            All OBJECTS and ARRAYS. This is what the garbage collector manages.
+            Divided into Young (Eden + 2 Survivor spaces) and Old generations.
+            Throws OutOfMemoryError when exhausted.
+
+       JVM STACK (one per thread)
+            One FRAME per method call, holding the local variables, the
+            operand stack and a reference to the constant pool.
+            The frame is popped when the method returns.
+            Throws StackOverflowError on unbounded recursion.
+
+       PC REGISTER (one per thread)
+            Holds the address of the instruction currently executing.
+
+       NATIVE METHOD STACK (one per thread)
+            For methods written in C or C++ and called through JNI.
+    ```
+
+    3. Execution Engine
+    ```
+       INTERPRETER
+            Reads and executes bytecode one instruction at a time.
+            Starts immediately, but is slow for code that repeats.
+
+       JIT COMPILER (Just-In-Time)
+            Detects HOT SPOTS - methods and loops executed many times - and
+            compiles them to native machine code, which is then cached and
+            reused. This is what gives Java near-native speed.
+            Includes the intermediate code generator, code optimiser and
+            the target code generator, plus a profiler to find the hot spots.
+
+       GARBAGE COLLECTOR
+            Reclaims objects on the heap that are no longer REACHABLE.
+            Generational : minor GC on the young generation is frequent and
+            cheap; major/full GC on the old generation is rare and costly.
+            Collectors : Serial, Parallel, CMS, G1, ZGC.
+    ```
+
+    4. Java Native Interface (JNI) and native libraries
+    - The bridge that lets Java call functions written in C or C++, and lets native code call back into Java. Used for hardware access and for parts of the standard library itself.
+
+    How a program flows through it
+    ```
+       Hello.java --javac--> Hello.class
+            |
+            v
+       Class loader : load -> verify -> prepare -> resolve -> initialise
+            |
+            v
+       Runtime data areas : the class goes to the method area,
+                            objects to the heap, the call to a stack frame
+            |
+            v
+       Execution engine : interpret, JIT-compile the hot paths, collect garbage
+            |
+            v
+       Output
+    ```
+
+    - The essential point: `bytecode is platform independent, the JVM is platform dependent`. A separate JVM implementation exists for each operating system, and it absorbs every platform difference so the program need not.
 
 ## Class Design & Object-Oriented Modeling (11)
 
