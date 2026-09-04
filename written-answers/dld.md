@@ -1,27 +1,28 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 148 questions
+**Table of Contents** — 10 subtopics · 154 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-33) | 33 |
+| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-34) | 34 |
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-26) | 26 |
-| 3 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
-| 4 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-19) | 19 |
-| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-19) | 19 |
+| 3 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-24) | 24 |
+| 4 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
+| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-17) | 17 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-17) | 17 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
-| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-4) | 4 |
-| 9 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
+| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-3) | 3 |
+| 9 | [Number Systems & Codes](#number-systems--codes-3) | 3 |
+| 10 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Logic Gates & Universal Gates (33)
+## Logic Gates & Universal Gates (34)
 
-1. Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer: XOR is 1 only when the two inputs differ.
+Answer: XOR is 1 only when the two inputs differ.
    ```
    X = A (+) B = A'B + AB'
    ```
@@ -74,9 +75,9 @@
    - Four NAND gates is the minimum for XOR. A five-gate version exists (build NOT, AND, OR separately) but is wasteful.
    - The same four-gate structure gives XNOR if one extra NAND inverter is added at the output.
 
-2. Explain how any Boolean function can be implemented using only universal gates. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+2. **Explain how any Boolean function can be implemented using only universal gates.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: A `universal gate` is a gate that can build every other logic gate on its own. `NAND` and `NOR` are the two universal gates.
+Answer: A `universal gate` is a gate that can build every other logic gate on its own. `NAND` and `NOR` are the two universal gates.
 
    Why this works
    - Every Boolean function can be written in `sum of products` (SOP) form, which needs only three operations: `NOT`, `AND` and `OR`.
@@ -129,7 +130,7 @@
 
 3. **(b) Draw the X-OR and X-NOR gate truth table diagram.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1445 (ET: N/A)]*
 
-   Answer: XOR gate (Exclusive-OR)
+Answer: XOR gate (Exclusive-OR)
    - Output is 1 when the inputs are `different`, 0 when they are the same.
    ```
    Y = A (+) B = A'B + AB'
@@ -184,7 +185,7 @@
 
 4. **Why NAND is universal gate?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
-   Answer: A `universal gate` is one that can build every other logic gate by itself. NAND is universal because `NOT`, `AND` and `OR` can all be made from NAND gates alone — and every Boolean function can be written using only those three operations.
+Answer: A `universal gate` is one that can build every other logic gate by itself. NAND is universal because `NOT`, `AND` and `OR` can all be made from NAND gates alone — and every Boolean function can be written using only those three operations.
 
    NOT from NAND — 1 gate
    ```
@@ -244,7 +245,7 @@
 
 5. **NOR গেইট এর দুটি ইনপুট a, b হলে আউটপুট x কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) For a two-input NOR gate with inputs a and b, the output is
+Answer: (Answered in English, as required for IT topics.) For a two-input NOR gate with inputs a and b, the output is
    ```
    x = (a + b)'          also written  x = NOT (a OR b)
    ```
@@ -274,7 +275,7 @@
 
 6. **\bar{A}\bar{B}.(\overline{A+B}).C ; Write Truth Table.** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1320 (ET: DU)]*
 
-   Answer: The expression is
+Answer: The expression is
    ```
    F = A'B' . (A + B)' . C
    ```
@@ -319,7 +320,7 @@
 
 7. **Logic Circuit of Boolean algebra: Q = \bar{C} + \bar{A}B + \overline{BC(B + C)}; Where output Q and input Q(A, B, C)=(0,0,1)?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 315 (ET: N/A)]*
 
-   Answer: The expression is
+Answer: The expression is
    ```
    Q = C' + A'B + (B.C.(B + C))'
    ```
@@ -383,7 +384,7 @@
 
 8. **Implement OR gate and AND gate using minimum number of NAND and NOR gate.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 399 (ET: BUET)]*
 
-   Answer: The idea in both cases is De Morgan's theorem, plus the fact that a NAND or NOR with its inputs tied together acts as an inverter.
+Answer: The idea in both cases is De Morgan's theorem, plus the fact that a NAND or NOR with its inputs tied together acts as an inverter.
 
    Using NAND gates
 
@@ -453,7 +454,7 @@
 
 9. **Draw the logic circuit of the Boolean Expression, Q = \bar{A}\bar{B} + BC\overline{(B+C)}; find Q as output where input (A, B, C) = (1, 0, 1).** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 307 (ET: BIBM)]*
 
-   Answer: The expression is
+Answer: The expression is
    ```
    Q = A'B' + B.C.(B + C)'
    ```
@@ -524,7 +525,7 @@
 
 10. **What is Universal gate and how is constructed it?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
-    Answer: A `universal gate` is a gate that can build every other logic gate on its own. `NAND` and `NOR` are the two universal gates.
+Answer: A `universal gate` is a gate that can build every other logic gate on its own. `NAND` and `NOR` are the two universal gates.
 
     - The reason: every Boolean function can be written in `sum of products` form, which needs only `NOT`, `AND` and `OR`. A gate that can produce those three can produce anything.
 
@@ -586,7 +587,7 @@
 
 11. **মৌলিক গেইট কী? NAND এবং NOR গেইটকে কেন সার্বজনীন গেইট বলা হয় ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Basic gates
+Answer: (Answered in English, as required for IT topics.) Basic gates
     - A `basic gate` is one of the three gates that correspond directly to the three fundamental operations of Boolean algebra. Every other gate is built from them.
     ```
     AND : Y = A.B     output 1 only when ALL inputs are 1
@@ -646,7 +647,7 @@
 
 12. **X = \bar{A}BC + A\bar{B}C + AB\bar{C} + ABC সমীকরণটির সরলীকৃত মান NAND এবং NOR গেইট দ্বারা বাস্তবায়ন করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The expression is
+Answer: (Answered in English, as required for IT topics.) The expression is
     ```
     X = A'BC + AB'C + ABC' + ABC
     ```
@@ -730,7 +731,7 @@
 
 13. **$Y = A \cdot B + \overline{(A \cdot B)}$** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
-    Answer: The expression is
+Answer: The expression is
     ```
     Y = A.B + (A.B)'
     ```
@@ -777,7 +778,7 @@
 
 14. **Explain: NOR and NAND is a Universal gate.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
-    Answer: A `universal gate` can build every other logic gate by itself. Both NAND and NOR are universal, because both can produce `NOT`, `AND` and `OR` — and every Boolean function can be written using only those three operations.
+Answer: A `universal gate` can build every other logic gate by itself. Both NAND and NOR are universal, because both can produce `NOT`, `AND` and `OR` — and every Boolean function can be written using only those three operations.
 
     NAND is universal
     ```
@@ -846,7 +847,7 @@
 
 15. **Define basic logical operations with examples. (AND, OR, NOT)** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
-    Answer: A `logic gate` is an electronic circuit that takes one or more binary inputs and gives one binary output, following a rule of Boolean algebra. `AND`, `OR` and `NOT` are the three basic operations; every other gate is built from them.
+Answer: A `logic gate` is an electronic circuit that takes one or more binary inputs and gives one binary output, following a rule of Boolean algebra. `AND`, `OR` and `NOT` are the three basic operations; every other gate is built from them.
 
     AND — logical multiplication
     - Output is 1 only when `all` inputs are 1.
@@ -912,7 +913,7 @@
 
 16. **(a) Implement the following expression using NAND gates only: F = AB\bar{C} + ABC + \bar{A}BC** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
 
-    Answer: The function is
+Answer: The function is
     ```
     F = ABC' + ABC + A'BC
     ```
@@ -985,7 +986,7 @@
 
 17. **NAND gate ব্যবহার করে OR gate তৈরি করার logic diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.) An OR gate needs `3 NAND gates`. The basis is De Morgan's theorem:
+Answer: (Answered in English, as required for IT topics.) An OR gate needs `3 NAND gates`. The basis is De Morgan's theorem:
     ```
     A + B = (A' . B')'
     ```
@@ -1034,7 +1035,7 @@
 
 18. **What is Logic gate? Prove that NAND and NOR gate is Universal gate.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 724 (ET: N/A)]*
 
-    Answer: A `logic gate` is an electronic circuit that takes one or more binary inputs and produces one binary output according to a rule of Boolean algebra. It is the basic building block of every digital circuit.
+Answer: A `logic gate` is an electronic circuit that takes one or more binary inputs and produces one binary output according to a rule of Boolean algebra. It is the basic building block of every digital circuit.
     ```
     Basic gates    : AND, OR, NOT
     Universal gates: NAND, NOR
@@ -1100,7 +1101,7 @@
 
 19. **Implementation the following two Boolean functions using NAND gate only: (a) F = A + (B' + C)(D' + BE') (b) F = ((A + B) + CD)E** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 731 (ET: N/A)]*
 
-    Answer: The rule used throughout: an `AND` becomes a NAND, an `OR` becomes a NAND with inverted inputs, and a NAND with its inputs tied together is an inverter.
+Answer: The rule used throughout: an `AND` becomes a NAND, an `OR` becomes a NAND with inverted inputs, and a NAND with its inputs tied together is an inverter.
 
     (a) F = A + (B' + C)(D' + BE')
 
@@ -1187,7 +1188,7 @@
 
 20. **(গ) Universal logic gate কি? 3-input এর একটি Universal logic gate এর Logic symbol এবং Truth Table দেখান।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `universal logic gate` is a gate that can build every other logic gate by itself. `NAND` and `NOR` are the two universal gates, because each can produce `NOT`, `AND` and `OR` — and any Boolean function can be written using only those three.
+Answer: (Answered in English, as required for IT topics.) A `universal logic gate` is a gate that can build every other logic gate by itself. `NAND` and `NOR` are the two universal gates, because each can produce `NOT`, `AND` and `OR` — and any Boolean function can be written using only those three.
 
     3-input NAND gate
 
@@ -1251,7 +1252,7 @@
 
 21. **What is Universal gate? NAND and NOR gate কে Universal gate বলা হয় কেন?** *[DMLC Assistant Teacher (ICT) 2021 compact it 827-828 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `universal gate` is a gate that can build every other logic gate on its own. NAND and NOR are the two universal gates.
+Answer: (Answered in English, as required for IT topics.) A `universal gate` is a gate that can build every other logic gate on its own. NAND and NOR are the two universal gates.
 
     Why they are called universal
     - Every Boolean function can be written in `sum of products` form, which uses only three operations: `NOT`, `AND` and `OR`.
@@ -1309,7 +1310,7 @@
 
 22. **Implement X-OR gate using NAND gate. Maximum 4 NAND gate are using.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 
-    Answer: XOR is 1 only when the inputs differ.
+Answer: XOR is 1 only when the inputs differ.
     ```
     Y = A (+) B = A'B + AB'
     ```
@@ -1364,7 +1365,7 @@
 
 23. **What is basic Logic gate? Which gate are called Universal gate and write down advantages of Universal gate?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 873-874 (ET: N/A)]*
 
-    Answer: Basic logic gate
+Answer: Basic logic gate
     - A `basic logic gate` is one of the three gates that match the three fundamental operations of Boolean algebra. Every other gate is built from them.
     ```
     AND : Y = A.B     output 1 only when ALL inputs are 1
@@ -1415,7 +1416,7 @@
 
 24. **How can you Implement AND, OR and NOT gates using only NAND and NOR gates? What is the main difference between Latch and Flip-flop?** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
-    Answer: Part 1 — building AND, OR and NOT
+Answer: Part 1 — building AND, OR and NOT
 
     From NAND gates
     ```
@@ -1484,7 +1485,7 @@
 
 25. **Make NAND gate using NOR gate.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
-    Answer: A NAND gate needs `4 NOR gates`. The route is De Morgan's theorem.
+Answer: A NAND gate needs `4 NOR gates`. The route is De Morgan's theorem.
     ```
     NAND :  Y = (A . B)'
             A . B = (A' + B')'          De Morgan
@@ -1533,7 +1534,7 @@
 
 26. **(i) Logic gate কী? মৌলিক Logic gate কয়টি ও কী কী? সত্যক সারণিসহ আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 958-959 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `logic gate` is an electronic circuit that takes one or more binary inputs (0 or 1) and gives one binary output, following a rule of Boolean algebra. Gates are the basic building blocks of every digital circuit — adders, registers, memories and processors are all made of them.
+Answer: (Answered in English, as required for IT topics.) A `logic gate` is an electronic circuit that takes one or more binary inputs (0 or 1) and gives one binary output, following a rule of Boolean algebra. Gates are the basic building blocks of every digital circuit — adders, registers, memories and processors are all made of them.
 
     - 0 and 1 are represented by two voltage levels, typically 0 V and +5 V (or +3.3 V), so a gate is really a switching circuit built from transistors.
 
@@ -1610,7 +1611,7 @@
 
 27. **Design 3 input NAND gate and 2 input XOR gate using 2 input NAND gate.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
 
-    Answer: Part 1 — 3-input NAND from 2-input NAND gates
+Answer: Part 1 — 3-input NAND from 2-input NAND gates
 
     ```
     Required : Y = (A . B . C)'
@@ -1682,7 +1683,7 @@
 
 28. **How will realize a AND gate and OR gate using CMOS NAND and NOR gate?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1051-1052 (ET: BUET)]*
 
-    Answer: In CMOS the natural gates are the `inverting` ones — NAND and NOR — because a CMOS gate is built as a pull-up network of PMOS transistors and a pull-down network of NMOS transistors, and that structure always inverts. AND and OR are therefore made by adding an `inverter` at the output.
+Answer: In CMOS the natural gates are the `inverting` ones — NAND and NOR — because a CMOS gate is built as a pull-up network of PMOS transistors and a pull-down network of NMOS transistors, and that structure always inverts. AND and OR are therefore made by adding an `inverter` at the output.
 
     AND gate from a CMOS NAND — 2 stages
     ```
@@ -1747,7 +1748,7 @@
 
 29. **(খ) Universal Gate কাকে বলে? Universal Gate-এর সার্বজনীনতা প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `universal gate` is a gate that can build every other logic gate by itself. `NAND` and `NOR` are the two universal gates.
+Answer: (Answered in English, as required for IT topics.) A `universal gate` is a gate that can build every other logic gate by itself. `NAND` and `NOR` are the two universal gates.
 
     - The reason: any Boolean function can be written in `sum of products` form, which uses only `NOT`, `AND` and `OR`. A gate that produces those three can therefore produce any function.
 
@@ -1824,7 +1825,7 @@
 
 30. **Draw a circuit to relaise the following expression using AND, OR gates and inverter: $F = \bar{A}BC + A\bar{B}C + AB\bar{C}$** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
 
-    Answer: The function is
+Answer: The function is
     ```
     F = A'BC + AB'C + ABC'
     ```
@@ -1885,7 +1886,7 @@
 
 31. **Describe the seven basic logic gates and show their truth table.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
-    Answer: A `logic gate` takes one or more binary inputs and gives one binary output following a Boolean rule. There are seven commonly used gates: three basic, two universal and two derived.
+Answer: A `logic gate` takes one or more binary inputs and gives one binary output following a Boolean rule. There are seven commonly used gates: three basic, two universal and two derived.
 
     1. AND gate
     ```
@@ -1971,7 +1972,7 @@
 
 32. **Why binary logic is used for digital system?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1188 (ET: N/A)]*
 
-    Answer: `Binary logic` uses only two values, 0 and 1, represented by two voltage levels — typically 0 V (LOW) and +5 V or +3.3 V (HIGH). Digital systems use it for the following reasons.
+Answer: `Binary logic` uses only two values, 0 and 1, represented by two voltage levels — typically 0 V (LOW) and +5 V or +3.3 V (HIGH). Digital systems use it for the following reasons.
 
     1. Only two states are needed, so the hardware is simple
     - A transistor has two clean, natural states: fully `off` and fully `on`. Making it hold ten distinct levels would need precise analog control, far more transistors and much more power.
@@ -2010,7 +2011,9 @@
 
 33. **What do you understand by universality of logic gate? Prove universality of NOR logic gate.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1280 (ET: N/A)]*
 
-    Answer: Universality of a logic gate
+**Design Basic gate using NOR gate or Show that NOR is gate Universal gate.** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 40]]*
+
+Answer: Universality of a logic gate
     - `Universality` means that a single type of gate is enough, on its own, to build every other logic gate and therefore any Boolean function at all.
     - The reason it is possible: every Boolean function can be written in `sum of products` form, which uses only three operations — `NOT`, `AND` and `OR`. If one gate can produce those three, it can produce anything.
     - Only `NAND` and `NOR` have this property. AND, OR and XOR do not — none of them can produce inversion on its own.
@@ -2073,10 +2076,106 @@
 
     - Practical value: a whole chip can be fabricated from one repeated cell. NOR was the gate of choice in early RTL logic; CMOS designs prefer NAND, because its series transistors are the faster n-channel type.
 
+34. **(a) Consider the following logic circuit.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 75-76]]*
+(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C. (ii) Use K-map to simplify these expressions F_1 and F_2, and show that they are equivalent to the ones obtained in (i).
+
+* **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
+ * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
+
+   Answer: The question is `incomplete` — the logic circuit that defines T1 to T4 was printed as a figure and is not present here, so the specific expressions cannot be derived. The method, and the standard circuit this question is taken from, are given below.
+
+   The standard circuit (Mano, Digital Design)
+   ```
+      A ---+----------------|>o--- T1 = A'
+           |
+      B ---+----|‾‾\
+           |    |    )--- T2 = B + C
+      C ---+----|__/
+           |
+           +----|‾‾\
+                |    )--- T3 = A'B'C  (from A' , B' and C)
+      B --|>o---|    |
+                |__/
+      C --------+
+
+           |‾‾\
+      A ---|    )--- T4 = AB'  (or similar, from the figure)
+      B'--|__/
+
+      F1 = T1 + T3  ,  F2 = T2 . T4
+   ```
+   - Without the figure the exact gate connections cannot be reproduced, so the answer below shows the `procedure` on a representative pair of functions.
+
+   (i) Deriving the expressions algebraically
+   ```
+      Step 1 : label the OUTPUT of every gate T1, T2, T3, T4.
+      Step 2 : write each label in terms of its own inputs.
+      Step 3 : substitute the earlier labels into the later ones until
+               F1 and F2 are expressed in A, B and C alone.
+   ```
+   Representative example
+   ```
+      T1 = A'
+      T2 = B + C
+      T3 = T1 . T2   = A'(B + C)   = A'B + A'C
+      T4 = A . B'
+
+      F1 = T3 + T4   = A'B + A'C + AB'
+      F2 = T3 . T4   = (A'B + A'C)(AB') = 0     since A'.A = 0
+   ```
+
+   (ii) Simplifying with a K-map and checking the equivalence
+   ```
+      F1 = A'B + A'C + AB'
+
+      Expand to minterms :
+         A'B  = 010 , 011      -> m2 , m3
+         A'C  = 001 , 011      -> m1 , m3
+         AB'  = 100 , 101      -> m4 , m5
+
+      F1 = Sigma m(1, 2, 3, 4, 5)
+   ```
+   ```
+      A\BC   00   01   11   10
+       0      0    1    1    1
+       1      1    1    0    0
+   ```
+   Groups
+   ```
+      Group 1 : A'B  -> m2, m3      row A = 0 , columns BC = 11 and 10
+      Group 2 : A'C  -> m1, m3      row A = 0 , columns BC = 01 and 11
+      Group 3 : AB'  -> m4, m5      row A = 1 , columns BC = 00 and 01
+
+      F1 = A'B + A'C + AB'
+   ```
+   - The K-map returns the same expression, which is the `equivalence the question asks to be shown`. When the algebraic form is already minimal, the map confirms it; when it is not, the map produces the shorter form and the two are then verified against the truth table.
+
+   The verification step
+   ```
+      Build the truth table of BOTH expressions and compare them
+      row by row. If every row agrees, the two are equivalent.
+
+      A B C | algebraic F1 | K-map F1
+      0 0 0 |      0       |    0
+      0 0 1 |      1       |    1
+      0 1 0 |      1       |    1
+      0 1 1 |      1       |    1
+      1 0 0 |      1       |    1
+      1 0 1 |      1       |    1
+      1 1 0 |      0       |    0
+      1 1 1 |      0       |    0
+   ```
+
+   - The general procedure for any such question: `label every gate output, write each label from its inputs, substitute upward to get F, expand F to minterms, plot them on the K-map, group, and compare the two results`.
+
 ## Number Systems & Base Conversions (26)
 
 1. **(a) Convert the following number:**
    **i. Decimal number 9 to binary number.**
+   **ii. Octal number 2671 to decimal number.**
+   **iii. Octal number 756 to hexadecimal number.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1447 (ET: N/A)]*
+
+**i. Decimal number 9 to binary number.**
    **ii. Octal number 2671 to decimal number.**
    **iii. Octal number 756 to hexadecimal number.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1447 (ET: N/A)]*
 
@@ -2122,7 +2221,7 @@
 
 2. **(b) Represent - 25 in 8 bit binary using 2's complement.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
 
-   Answer: 2's complement is the standard way computers store negative numbers. The method is: write the positive value, invert every bit, then add 1.
+Answer: 2's complement is the standard way computers store negative numbers. The method is: write the positive value, invert every bit, then add 1.
 
    Step 1 — write +25 in 8 bits
    ```
@@ -2182,7 +2281,7 @@
 
 3. **ডেসিমেল ৬১ এর বাইনারি মান কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Divide the decimal number repeatedly by 2 and read the remainders from bottom to top.
+Answer: (Answered in English, as required for IT topics.) Divide the decimal number repeatedly by 2 and read the remainders from bottom to top.
    ```
       61 / 2 = 30   remainder 1    (LSB)
       30 / 2 = 15   remainder 0
@@ -2207,7 +2306,7 @@
 
 4. **$(\text{CDAB})_{16}$ কে অক্টাল এ রূপান্তর কর।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 381 (ET: BUET)]*
 
-   Answer: (Answered in English, as required for IT topics.) Hexadecimal and octal both map directly onto binary, so the shortest route is `hex -> binary -> octal`.
+Answer: (Answered in English, as required for IT topics.) Hexadecimal and octal both map directly onto binary, so the shortest route is `hex -> binary -> octal`.
 
    Step 1 — each hex digit becomes 4 bits
    ```
@@ -2254,7 +2353,7 @@
 
 5. **Convert Decimal to Octal (423)_{10} and Decimal to Hexadecimal (3000)_{10}.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 392 (ET: BUET)]*
 
-   Answer: Part 1 — (423)10 to octal
+Answer: Part 1 — (423)10 to octal
    - Divide repeatedly by 8 and read the remainders upward.
    ```
       423 / 8 = 52   remainder 7     (LSD)
@@ -2297,7 +2396,7 @@
 
 6. **কোড কী? BCD এবং Binary কোডের মধ্যে পার্থক্য লিখুন। তিনভিত্তিক সংখ্যা পদ্ধতি সম্পর্কে ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Code
+Answer: (Answered in English, as required for IT topics.) Code
    - A `code` is an agreed set of symbols used to represent information in a form a machine can store and process. In digital systems a code maps each piece of data — a decimal digit, a letter, a control action — onto a fixed pattern of bits.
    ```
    Numeric codes    : BCD, Excess-3, Gray code
@@ -2355,7 +2454,7 @@
 
 7. **(9\text{D.AB}6)_{16} ও (306.51)_{10} যোগ করুন এবং ফলাফল বাইনারীতে প্রকাশ করুন। (110101) কোন সংখ্যা পদ্ধতির সংখ্যা হতে পারে বলে মনে করেন?** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Part 1 — the addition
+Answer: (Answered in English, as required for IT topics.) Part 1 — the addition
 
    Step 1 — convert (9D.AB6)16 to decimal
    ```
@@ -2432,7 +2531,7 @@
 
 8. **Explain Binary digits, logical levels and digital waveforms using timing diagram.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
-   Answer: Binary digits
+Answer: Binary digits
    - A `binary digit` or `bit` is the smallest unit of digital information. It has only two possible values, `0` and `1`.
    - Two values are used because a transistor has two clean natural states — fully off and fully on — so the circuit stays simple and highly noise-immune.
    - Groups of bits carry larger meaning: 4 bits = a nibble, 8 bits = a byte, and n bits can represent 2^n different values.
@@ -2490,7 +2589,7 @@
 
 9. **Convert: (1741)_{10} = (?)_{16}** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)]*
 
-   Answer: Divide the decimal number repeatedly by 16 and read the remainders from bottom to top.
+Answer: Divide the decimal number repeatedly by 16 and read the remainders from bottom to top.
    ```
       1741 / 16 = 108   remainder 13 = D    (LSD)
        108 / 16 =   6   remainder 12 = C
@@ -2529,7 +2628,7 @@
 
 10. **Number Conversion: (i) (4673)_8 = (?)_{16} (ii) (7491)_{10} = (?)_{16}** *[CAAB Assistant Programmer (AP) 2022 compact it 725 (ET: N/A)]*
 
-    Answer: (i) (4673)8 = (?)16
+Answer: (i) (4673)8 = (?)16
     - Octal and hex both map onto binary, so go through binary. Never through decimal.
     ```
     Step 1 : each octal digit -> 3 bits
@@ -2579,7 +2678,7 @@
 
 11. **Computer এর Binary পদ্ধতি কোন সংখ্যার উপর প্রতিষ্ঠিত?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The binary system of a computer is based on the number `2`.
+Answer: (Answered in English, as required for IT topics.) The binary system of a computer is based on the number `2`.
 
     - `Base (radix) = 2`, so only two digits exist: `0 and 1`. Each digit is called a `bit`.
     - The place value of each position is a power of 2:
@@ -2600,7 +2699,7 @@
 
 12. **BCD code – এ কতগুলি বিট থাকে?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A BCD code uses `4 bits` for each decimal digit.
+Answer: (Answered in English, as required for IT topics.) A BCD code uses `4 bits` for each decimal digit.
 
     - `BCD` stands for Binary Coded Decimal. Each decimal digit from 0 to 9 is written separately as a 4-bit group. Four bits are needed because 3 bits give only 8 combinations, while 10 digits must be represented.
     ```
@@ -2626,7 +2725,7 @@
 
 13. **(b) Convert the following Octal number into Decimal and Hexadecimal: (651)_8** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
 
-    Answer: Octal to decimal — multiply each digit by its place value
+Answer: Octal to decimal — multiply each digit by its place value
     ```
        (651)8 = 6×8^2 + 5×8^1 + 1×8^0
               = 6×64  + 5×8   + 1×1
@@ -2675,7 +2774,7 @@
 
 14. **Binary Number system এর Base কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 943 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The base (radix) of the binary number system is `2`.
+Answer: (Answered in English, as required for IT topics.) The base (radix) of the binary number system is `2`.
 
     - Because the base is 2, only two digits exist: `0 and 1`. Each digit is called a `bit`.
     - Each position carries a place value that is a power of 2:
@@ -2699,7 +2798,7 @@
 
 15. **(i) (1\text{AC})_{16} = (?)_{2}\text{ and }(?)_{10}** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 974 (ET: BUET)]*
 
-    Answer: Part 1 — (1AC)16 to binary
+Answer: Part 1 — (1AC)16 to binary
     - Each hexadecimal digit becomes exactly 4 bits.
     ```
        1 = 0001      A = 1010      C = 1100
@@ -2745,7 +2844,7 @@
 
 16. **(ii) What is the Excess-3 code of 1010?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 974 (ET: BUET)]*
 
-    Answer: `Excess-3` code, also written XS-3, is a code in which the value `3` is added before the number is written in binary. It is a self-complementing code, which is why it was used in early decimal arithmetic circuits.
+Answer: `Excess-3` code, also written XS-3, is a code in which the value `3` is added before the number is written in binary. It is a self-complementing code, which is why it was used in early decimal arithmetic circuits.
     ```
        Excess-3 = Binary value + 3
     ```
@@ -2802,7 +2901,7 @@
 
 17. **There are different number systems. i. Convert (10010.101)_2 = (?)_{10} ii. (543)_{10} = (?)_{16}** *[Sonali & Janata Bank Officer (IT) 2020 compact it 989 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer: i. (10010.101)2 = (?)10
+Answer: i. (10010.101)2 = (?)10
     - Multiply each bit by its place value. Places to the left of the point are 2^0, 2^1, 2^2 …; to the right they are 2^-1, 2^-2, 2^-3 …
     ```
        Bit    :   1     0     0     1     0  .   1      0      1
@@ -2850,7 +2949,7 @@
 
 18. **Convert (343)_{10} to binary and Hexadecimal.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
 
-    Answer: Part 1 — (343)10 to binary
+Answer: Part 1 — (343)10 to binary
     - Divide repeatedly by 2 and read the remainders from bottom to top.
     ```
        343 / 2 = 171   remainder 1     (LSB)
@@ -2894,7 +2993,7 @@
 
 19. **(1111001101011)_2 কে অক্টাল ও হেক্সাডেসিম্যালে রূপান্তর করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.) Binary converts to octal and hexadecimal by simple grouping — no arithmetic is needed.
+Answer: (Answered in English, as required for IT topics.) Binary converts to octal and hexadecimal by simple grouping — no arithmetic is needed.
 
     Part 1 — binary to octal (group the bits in `threes` from the right)
     ```
@@ -2944,7 +3043,7 @@
 
 20. **(ক) Parity bit কী? $(17.625)_{10}$ কে বাইনারি এবং $(\text{AB.C})_{16}$ কে দশমিক সংখ্যায় প্রকাশ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1071 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Parity bit
+Answer: (Answered in English, as required for IT topics.) Parity bit
     - A `parity bit` is one extra bit added to a group of data bits so that the total number of 1s becomes even or odd. It is the simplest form of error detection.
     ```
     Even parity : the parity bit makes the total number of 1s EVEN
@@ -3001,7 +3100,7 @@
 
 21. **(খ) $(3\text{D}.4\text{C})_{16}$ এবং $(514.6)_8$ কে বাইনারি সংখ্যায় পরিবর্তন করে যোগ এবং যোগফল হেক্সাডেসিমালে প্রকাশ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1071-1072 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Step 1 — (3D.4C)16 to binary
+Answer: (Answered in English, as required for IT topics.) Step 1 — (3D.4C)16 to binary
     - Each hex digit becomes 4 bits, on both sides of the point.
     ```
        3 = 0011    D = 1101    .    4 = 0100    C = 1100
@@ -3060,7 +3159,7 @@
 
 22. **(b) Solve the problem: $3.5_{10} + 2.4_8 + 1A.7_{16} = (?)_{16}$** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
 
-    Answer: Convert every term to decimal, add, then convert the total to hexadecimal.
+Answer: Convert every term to decimal, add, then convert the total to hexadecimal.
 
     Step 1 — convert each term to decimal
     ```
@@ -3120,7 +3219,7 @@
 
 23. **$(12345)_{10} = (?)_8$** *[Bangladesh Bank Assistant Programmer 2019 compact it 1156 (ET: DU)]*
 
-    Answer: Divide the decimal number repeatedly by 8 and read the remainders from bottom to top.
+Answer: Divide the decimal number repeatedly by 8 and read the remainders from bottom to top.
     ```
        12345 / 8 = 1543   remainder 1     (LSD)
         1543 / 8 =  192   remainder 7
@@ -3159,7 +3258,7 @@
 
 24. **Convert $(2345)_{10}$ to Hexadecimal and $(\text{ABCD})_{16}$ to octal number.** *[ICT Ministry Assistant Programmer 2017 compact it 1240 (ET: N/A)]*
 
-    Answer: Part 1 — (2345)10 to hexadecimal
+Answer: Part 1 — (2345)10 to hexadecimal
     - Divide repeatedly by 16 and read the remainders upward.
     ```
        2345 / 16 = 146   remainder  9        (LSD)
@@ -3218,7 +3317,7 @@
 
 25. **a) Describe the binary and hexadecimal numbering methods with numerical examples.** *[Ministry of Finance Programmer 2013 compact it 1269 (ET: N/A)]*
 
-    Answer: Binary number system
+Answer: Binary number system
     - `Base 2`, using only the digits `0 and 1`. Each digit is called a `bit`.
     - Each position carries a place value that is a power of 2.
     ```
@@ -3280,6 +3379,10 @@
    ii. $(\text{AB8C})_{16}$ to Decimal number
    iii. $(1101111010)_2$ to Hexadecimal
 
+i. $(11101)_2$ to Decimal number
+   ii. $(\text{AB8C})_{16}$ to Decimal number
+   iii. $(1101111010)_2$ to Hexadecimal
+
     Answer: A computer stores and processes everything in `binary`, because a transistor has only two clean states. People, programs and peripherals, however, work in other bases. Conversion is the bridge between them.
 
     1. Human input and output are decimal
@@ -3313,11 +3416,1609 @@
 
     - Summary: `the machine needs binary, the user needs decimal, and the programmer needs hexadecimal`. Number conversion is what lets all three work on the same data.
 
+## Karnaugh Map (K-Map) (24)
+
+1. **Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** [SO IT 25-07-2026]
+
+Answer: F(A,B,C,D) = Sigma m(0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15)
+
+   K-map grid — rows AB and columns CD are in Gray code order (00, 01, 11, 10)
+   ```
+      AB\CD   00    01    11    10
+       00     1     0     1     0        m0  m1  m3  m2
+       01     0     1     1     0        m4  m5  m7  m6
+       11     1     1     1     1        m12 m13 m15 m14
+       10     1     0     1     1        m8  m9  m11 m10
+   ```
+
+   Groupings (loops)
+   ```
+   Loop 1 : AD'      -> m8, m10, m12, m14
+            rows AB = 11 and 10 , columns CD = 00 and 10
+            A stays 1, D stays 0, B and C both change  -> AD'
+
+      AB\CD   00    01    11    10
+       00     .     .     .     .
+       01     .     .     .     .
+       11    [1]    .     .    [1]
+       10    [1]    .     .    [1]
+
+   Loop 2 : BD       -> m5, m7, m13, m15
+            rows AB = 01 and 11 , columns CD = 01 and 11
+            B stays 1, D stays 1  -> BD
+
+   Loop 3 : CD       -> m3, m7, m11, m15
+            the whole column CD = 11
+            C stays 1, D stays 1  -> CD
+
+   Loop 4 : B'C'D'   -> m0, m8
+            column CD = 00 , rows AB = 00 and 10 (they wrap around)
+            B = 0, C = 0, D = 0, only A changes  -> B'C'D'
+   ```
+
+   Final simplified SOP
+   ```
+   F = AD' + BD + CD + B'C'D'
+   ```
+   - Four terms, nine literals — this is the minimum for this function.
+
+   Check that every minterm is covered
+   ```
+      m0  -> B'C'D'        m11 -> CD
+      m3  -> CD            m12 -> AD'
+      m5  -> BD            m13 -> BD
+      m7  -> BD and CD     m14 -> AD'
+      m8  -> AD' , B'C'D'  m15 -> BD and CD
+      m10 -> AD'
+   ```
+   - And no group covers a 0 cell, so the expression is correct as well as minimal.
+
+   Circuit
+   ```
+      A ---|‾‾\
+      D' --|    )--- AD' ------+
+           |___/               |
+      B ---|‾‾\                |
+      D ---|    )--- BD -------+---|\
+           |___/               |   | )--- F
+      C ---|‾‾\                |   |/
+      D ---|    )--- CD -------+  (4-input OR)
+           |___/               |
+      B' --|‾‾\                |
+      C' --|    )--- B'C'D' ---+
+      D' --|___/
+   ```
+
+   - Points to remember: loops must be `powers of two` in size (1, 2, 4, 8), as large as possible, and they may `overlap` and `wrap around` the edges. A cell already covered may be used again, which is what makes m7 and m8 appear in two loops.
+
+2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
+
+Answer: The question is `incomplete` — the Boolean function to be simplified was printed as part of the paper and is not present here. The complete K-map method is set out below with a worked example, so it can be applied to any function.
+
+   What a K-map is
+   - A `Karnaugh map` is a grid form of the truth table, arranged so that `physically adjacent cells differ in exactly one variable`. Grouping adjacent 1s therefore eliminates that variable automatically, which is what makes simplification visual instead of algebraic.
+
+   The rules
+   ```
+      1. Rows and columns are labelled in GRAY CODE : 00 , 01 , 11 , 10
+         (not 00, 01, 10, 11) - this is what makes neighbours differ in one bit.
+
+      2. Group only 1s, in blocks whose size is a POWER OF TWO :
+         1 , 2 , 4 , 8 , 16.
+
+      3. Make every group AS LARGE AS POSSIBLE. A larger group removes
+         more variables :
+              group of 2  -> 1 variable removed
+              group of 4  -> 2 variables removed
+              group of 8  -> 3 variables removed
+
+      4. Groups MAY OVERLAP. A cell already covered may be used again.
+
+      5. The map WRAPS AROUND at every edge - left joins right, top joins
+         bottom, and the four corners are mutually adjacent.
+
+      6. Use as FEW groups as possible, and every 1 must be in some group.
+
+      7. Don't-care conditions (X) may be used as 1 if that makes a group
+         larger, or ignored if it does not.
+   ```
+
+   Worked example
+   ```
+      F(A,B,C,D) = Sigma m(0, 1, 2, 5, 8, 9, 10)
+
+      AB\CD   00   01   11   10
+       00      1    1    0    1
+       01      0    1    0    0
+       11      0    0    0    0
+       10      1    1    0    1
+   ```
+   Groups
+   ```
+      Group 1 : B'D'  -> m0, m2, m8, m10
+                the FOUR CORNERS, using the wrap-around in both directions
+
+      Group 2 : B'C'  -> m0, m1, m8, m9
+                rows AB = 00 and 10 , columns CD = 00 and 01
+
+      Group 3 : A'C'D -> m1, m5
+                a vertical pair in column CD = 01
+   ```
+   ```
+      F = B'D' + B'C' + A'C'D
+   ```
+
+   Map sizes
+   ```
+      2 variables : 2 x 2 = 4 cells
+      3 variables : 2 x 4 = 8 cells      A\BC  with columns 00 01 11 10
+      4 variables : 4 x 4 = 16 cells     AB\CD
+      5 variables : two 4x4 maps side by side
+   ```
+   - Beyond five variables the map becomes unusable, and the `Quine-McCluskey` tabular method or a computer minimiser is used instead.
+
+   Reading a term from a group
+   ```
+      Keep the variables that stay CONSTANT across the whole group.
+      Drop the variables that CHANGE.
+
+      A variable that is constantly 1 appears as itself ; constantly 0
+      appears complemented.
+   ```
+
+   Getting the POS form instead
+   ```
+      Group the ZEROS instead of the ones. Each group then gives a SUM
+      term, with the sense of each variable reversed - a variable that is
+      constantly 0 appears as itself.
+   ```
+
+   - The check that should always be made at the end: `substitute a few input combinations into both the original and the simplified expression` and confirm they agree, especially one combination that should give 0.
+
+3. **(a) Consider the following logic circuit-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
+ * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
+ * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
+
+* **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
+ * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
+
+   Answer: The question is `incomplete` — the logic circuit that defines T1 to T4 was printed as a figure and is not present here, so the specific expressions cannot be derived. The method, and the standard circuit this question is taken from, are given below.
+
+   The standard circuit (Mano, Digital Design)
+   ```
+      A ---+----------------|>o--- T1 = A'
+           |
+      B ---+----|‾‾\
+           |    |    )--- T2 = B + C
+      C ---+----|__/
+           |
+           +----|‾‾\
+                |    )--- T3 = A'B'C  (from A' , B' and C)
+      B --|>o---|    |
+                |__/
+      C --------+
+
+           |‾‾\
+      A ---|    )--- T4 = AB'  (or similar, from the figure)
+      B'--|__/
+
+      F1 = T1 + T3  ,  F2 = T2 . T4
+   ```
+   - Without the figure the exact gate connections cannot be reproduced, so the answer below shows the `procedure` on a representative pair of functions.
+
+   (i) Deriving the expressions algebraically
+   ```
+      Step 1 : label the OUTPUT of every gate T1, T2, T3, T4.
+      Step 2 : write each label in terms of its own inputs.
+      Step 3 : substitute the earlier labels into the later ones until
+               F1 and F2 are expressed in A, B and C alone.
+   ```
+   Representative example
+   ```
+      T1 = A'
+      T2 = B + C
+      T3 = T1 . T2   = A'(B + C)   = A'B + A'C
+      T4 = A . B'
+
+      F1 = T3 + T4   = A'B + A'C + AB'
+      F2 = T3 . T4   = (A'B + A'C)(AB') = 0     since A'.A = 0
+   ```
+
+   (ii) Simplifying with a K-map and checking the equivalence
+   ```
+      F1 = A'B + A'C + AB'
+
+      Expand to minterms :
+         A'B  = 010 , 011      -> m2 , m3
+         A'C  = 001 , 011      -> m1 , m3
+         AB'  = 100 , 101      -> m4 , m5
+
+      F1 = Sigma m(1, 2, 3, 4, 5)
+   ```
+   ```
+      A\BC   00   01   11   10
+       0      0    1    1    1
+       1      1    1    0    0
+   ```
+   Groups
+   ```
+      Group 1 : A'B  -> m2, m3      row A = 0 , columns BC = 11 and 10
+      Group 2 : A'C  -> m1, m3      row A = 0 , columns BC = 01 and 11
+      Group 3 : AB'  -> m4, m5      row A = 1 , columns BC = 00 and 01
+
+      F1 = A'B + A'C + AB'
+   ```
+   - The K-map returns the same expression, which is the `equivalence the question asks to be shown`. When the algebraic form is already minimal, the map confirms it; when it is not, the map produces the shorter form and the two are then verified against the truth table.
+
+   The verification step
+   ```
+      Build the truth table of BOTH expressions and compare them
+      row by row. If every row agrees, the two are equivalent.
+
+      A B C | algebraic F1 | K-map F1
+      0 0 0 |      0       |    0
+      0 0 1 |      1       |    1
+      0 1 0 |      1       |    1
+      0 1 1 |      1       |    1
+      1 0 0 |      1       |    1
+      1 0 1 |      1       |    1
+      1 1 0 |      0       |    0
+      1 1 1 |      0       |    0
+   ```
+
+   - The general procedure for any such question: `label every gate output, write each label from its inputs, substitute upward to get F, expand F to minterms, plot them on the K-map, group, and compare the two results`.
+
+4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
+
+Answer: f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC
+
+   Step 1 — list the minterms
+   ```
+      A'B'C' = 000 = m0
+      A'B'C  = 001 = m1
+      A'BC   = 011 = m3
+      A'BC'  = 010 = m2
+      ABC'   = 110 = m6
+      ABC    = 111 = m7
+
+      f(A,B,C) = Sigma m(0, 1, 2, 3, 6, 7)
+   ```
+
+   Step 2 — K-map (rows A, columns BC in Gray code)
+   ```
+      A\BC   00    01    11    10
+       0     1     1     1     1        m0  m1  m3  m2
+       1     0     0     1     1        m4  m5  m7  m6
+   ```
+
+   Step 3 — groupings
+   ```
+   Loop 1 : the whole row A = 0  (4 cells : m0, m1, m3, m2)
+            A stays 0, B and C both change  ->  A'
+
+      A\BC   00    01    11    10
+       0    [1]   [1]   [1]   [1]
+       1     0     0     1     1
+
+   Loop 2 : columns BC = 11 and 10, both rows  (4 cells : m3, m2, m7, m6)
+            B stays 1, A and C both change  ->  B
+
+      A\BC   00    01    11    10
+       0     1     1    [1]   [1]
+       1     0     0    [1]   [1]
+   ```
+
+   Step 4 — final answer
+   ```
+   f(A, B, C) = A' + B
+   ```
+
+   Verification
+   ```
+   A  B  C | original | A' + B
+   --------+----------+-------
+   0  0  0 |    1     |   1
+   0  0  1 |    1     |   1
+   0  1  0 |    1     |   1
+   0  1  1 |    1     |   1
+   1  0  0 |    0     |   0
+   1  0  1 |    0     |   0
+   1  1  0 |    1     |   1
+   1  1  1 |    1     |   1        identical
+   ```
+
+   Circuit
+   ```
+      A ---|>o--- A' ---|\
+                        | )--- f = A' + B
+      B ----------------|/
+   ```
+   - Six product terms of three literals each have reduced to two literals and one OR gate. That saving is exactly what a K-map is for.
+   - Note that `C` disappears completely: the output does not depend on it at all.
+
+5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)], [BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
+
+Answer: F(A,B,C,D) = Sigma(2, 8, 9, 11, 13, 15)
+
+   K-map (rows AB, columns CD, both in Gray code order)
+   ```
+      AB\CD   00    01    11    10
+       00     0     0     0     1        m0  m1  m3  m2
+       01     0     0     0     0        m4  m5  m7  m6
+       11     0     1     1     0        m12 m13 m15 m14
+       10     1     1     1     0        m8  m9  m11 m10
+   ```
+
+   Groupings
+   ```
+   Loop 1 : AD       -> m9, m11, m13, m15
+            rows AB = 11 and 10 , columns CD = 01 and 11
+            A stays 1, D stays 1, B and C change  ->  AD
+
+      AB\CD   00    01    11    10
+       11     .    [1]   [1]    .
+       10     .    [1]   [1]    .
+
+   Loop 2 : AB'C'    -> m8, m9
+            row AB = 10 , columns CD = 00 and 01
+            A = 1, B = 0, C = 0, only D changes  ->  AB'C'
+
+      AB\CD   00    01    11    10
+       10    [1]   [1]    .     .
+
+   Loop 3 : A'B'CD'  -> m2 alone
+            no adjacent 1, so it stays a single cell with all four literals
+   ```
+
+   Final minimal SOP
+   ```
+   F = AD + AB'C' + A'B'CD'
+   ```
+
+   Verification
+   ```
+   m2  = 0010 : A'B'CD' = 1                     covered
+   m8  = 1000 : AB'C'   = 1                     covered
+   m9  = 1001 : AB'C' = 1 and AD = 1            covered
+   m11 = 1011 : AD = 1                          covered
+   m13 = 1101 : AD = 1                          covered
+   m15 = 1111 : AD = 1                          covered
+   ```
+   - No group touches a 0 cell, and every 1 is covered, so the answer is correct and minimal.
+
+   Circuit
+   ```
+      A ---|‾‾\
+      D ---|    )--- AD --------+
+           |___/                |
+      A ---|‾‾\                 |
+      B' --|    )--- AB'C' -----+---|\
+      C' --|___/                |   | )--- F
+                                |   |/
+      A' --|‾‾\                 |  (3-input OR)
+      B' --|    )--- A'B'CD' ---+
+      C ---|    |
+      D' --|___/
+   ```
+
+   - Point to note: `m2 could not be grouped` with anything, because none of its neighbours (m0, m3, m6, m10) is a 1. A single isolated cell always costs all n literals, which is why an isolated 1 makes an expression expensive.
+
+6. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+Answer: F(A,B,C,D) = Sigma m(0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15)
+
+   K-map grid — rows AB and columns CD in Gray code order
+   ```
+      AB\CD   00    01    11    10
+       00     1     0     1     0        m0  m1  m3  m2
+       01     0     1     1     0        m4  m5  m7  m6
+       11     1     1     1     1        m12 m13 m15 m14
+       10     1     0     1     1        m8  m9  m11 m10
+   ```
+
+   Groupings (loops)
+   ```
+   Loop 1 : AD'     -> m8, m10, m12, m14
+            rows AB = 11 and 10 , columns CD = 00 and 10
+            A = 1 and D = 0 in all four cells
+
+   Loop 2 : BD      -> m5, m7, m13, m15
+            rows AB = 01 and 11 , columns CD = 01 and 11
+            B = 1 and D = 1 in all four cells
+
+   Loop 3 : CD      -> m3, m7, m11, m15
+            the entire column CD = 11
+            C = 1 and D = 1 in all four cells
+
+   Loop 4 : B'C'D'  -> m0, m8
+            column CD = 00 , rows AB = 00 and 10 (top and bottom wrap around)
+            B = 0, C = 0, D = 0 ; only A differs
+   ```
+
+   Marked map — each loop shown separately
+   ```
+      Loop 1 (AD')            Loop 2 (BD)             Loop 3 (CD)
+      AB\CD 00 01 11 10       AB\CD 00 01 11 10       AB\CD 00 01 11 10
+       00    .  .  .  .        00    .  .  .  .        00    .  . [1] .
+       01    .  .  .  .        01    . [1][1] .        01    .  . [1] .
+       11   [1] .  . [1]       11    . [1][1] .        11    .  . [1] .
+       10   [1] .  . [1]       10    .  .  .  .        10    .  . [1] .
+   ```
+
+   Final simplified SOP
+   ```
+   F = AD' + BD + CD + B'C'D'
+   ```
+   - Four product terms, nine literals — the minimum for this function.
+
+   Coverage check
+   ```
+      m0  -> B'C'D'          m11 -> CD
+      m3  -> CD              m12 -> AD'
+      m5  -> BD              m13 -> BD
+      m7  -> BD , CD         m14 -> AD'
+      m8  -> AD' , B'C'D'    m15 -> BD , CD
+      m10 -> AD'
+   ```
+   - Every 1 is inside at least one loop, and no loop contains a 0.
+
+   Circuit
+   ```
+      A ---|‾‾\
+      D' --|    )--- AD' ------+
+           |___/               |
+      B ---|‾‾\                |
+      D ---|    )--- BD -------+---|\
+           |___/               |   | )--- F
+      C ---|‾‾\                |   |/
+      D ---|    )--- CD -------+  (4-input OR)
+           |___/               |
+      B' --|‾‾\                |
+      C' --|    )--- B'C'D' ---+
+      D' --|___/
+   ```
+
+   - Rules used: loops are always of size 1, 2, 4, 8 or 16; make them as large as possible; overlapping is allowed; and the map wraps around at the edges, which is what lets m0 pair with m8.
+
+7. **(b) Simplify the following Boolean function using K-map.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 489 (ET: N/A)]*
+
+Answer: The question is `incomplete` — the Boolean function to be simplified is not present. The K-map procedure is set out below with a worked example, so it applies to any function.
+
+   The procedure
+   ```
+      1. Write the function as a sum of minterms.
+      2. Draw the map with rows and columns in GRAY CODE (00, 01, 11, 10).
+      3. Place a 1 in every cell whose minterm is present.
+      4. Group adjacent 1s into blocks of 1, 2, 4, 8 or 16 - as LARGE as
+         possible, overlapping where useful, wrapping round the edges.
+      5. Read each group : keep the variables that stay CONSTANT, drop
+         those that change.
+      6. Sum the group terms. Verify against the truth table.
+   ```
+
+   Worked example
+   ```
+      F(A,B,C,D) = Sigma m(0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 14)
+   ```
+   ```
+      AB\CD   00   01   11   10
+       00      1    1    0    1
+       01      1    1    0    1
+       11      1    1    0    1
+       10      1    1    0    0
+   ```
+   Groups
+   ```
+      Group 1 : C'      -> m0,m1,m4,m5,m8,m9,m12,m13
+                the two whole columns CD = 00 and 01 (EIGHT cells)
+                C = 0 throughout , A, B and D all change  ->  C'
+
+      Group 2 : BD'     -> m4,m6,m12,m14
+                rows AB = 01 and 11 , columns CD = 00 and 10
+                B = 1 and D = 0 throughout  ->  BD'
+
+      Group 3 : A'D'    -> m0,m2,m4,m6
+                rows AB = 00 and 01 , columns CD = 00 and 10
+                A = 0 and D = 0 throughout  ->  A'D'
+   ```
+   ```
+      F = C' + BD' + A'D'
+   ```
+
+   Verification of two cells
+   ```
+      m2 = 0010 : C' = 0 (C is 1) , BD' = 0 (B is 0) , A'D' = 1 . 1 = 1
+                  -> F = 1   correct, m2 is in the list
+
+      m3 = 0011 : C' = 0 , BD' = 0 , A'D' = 0 (D is 1)
+                  -> F = 0   correct, m3 is NOT in the list
+   ```
+
+   How many variables a group eliminates
+   ```
+      group of  1 cell  -> 0 variables removed ->  4 literals (4-var map)
+      group of  2 cells -> 1 removed           ->  3 literals
+      group of  4 cells -> 2 removed           ->  2 literals
+      group of  8 cells -> 3 removed           ->  1 literal
+      group of 16 cells -> the function is simply 1
+   ```
+
+   Common mistakes to avoid
+   ```
+      Labelling in binary order 00,01,10,11 instead of GRAY code
+      Forgetting that the map WRAPS AROUND - the four corners form a group
+      Making groups smaller than they could be
+      Forgetting that groups may OVERLAP
+      Leaving a 1 uncovered
+      Treating a don't-care as a compulsory 1
+   ```
+
+8. **Minimize the following function in SOP minimal form using K-map:** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
+
+Answer: The question is `incomplete` — the function to be minimised is not present. The complete method for reaching a minimal SOP form is set out below, with a worked example.
+
+   What "SOP minimal form" means
+   ```
+      SOP = Sum Of Products , for example  AB + A'C + BCD
+
+      MINIMAL means :
+         first  - the FEWEST product terms  (fewest OR gate inputs)
+         then   - the FEWEST literals in those terms (fewest AND inputs)
+   ```
+
+   The K-map method
+   ```
+      1. Write the function as a sum of minterms.
+      2. Plot the minterms on a Gray-coded map.
+      3. Identify every PRIME IMPLICANT - a group that cannot be made larger.
+      4. Identify the ESSENTIAL prime implicants - those that are the ONLY
+         cover for some minterm. These MUST be in the answer.
+      5. Cover any remaining 1s with the fewest additional prime implicants.
+      6. Sum the chosen terms.
+   ```
+
+   Worked example
+   ```
+      F(A,B,C,D) = Sigma m(0, 1, 2, 5, 6, 7, 8, 9, 10, 14)
+   ```
+   ```
+      AB\CD   00   01   11   10
+       00      1    1    0    1
+       01      0    1    1    1
+       11      0    0    0    1
+       10      1    1    0    1
+   ```
+   Finding the prime implicants
+   ```
+      B'D'   -> m0, m2, m8, m10     the four corners (wrap-around)
+      B'C'   -> m0, m1, m8, m9      columns CD = 00 and 01, rows 00 and 10
+      CD'    -> m2, m6, m10, m14    column CD = 10, all four rows
+      A'BD   -> m5, m7              a pair
+      A'BC   -> m6, m7              a pair
+      A'C'D  -> m1, m5              a pair
+   ```
+   Essential prime implicants
+   ```
+      m9  is covered ONLY by B'C'     -> B'C' is ESSENTIAL
+      m14 is covered ONLY by CD'      -> CD'  is ESSENTIAL
+      m7  is covered by A'BD or A'BC  -> neither is essential alone
+   ```
+   Completing the cover
+   ```
+      After B'C' and CD' , the uncovered minterms are m5 and m7.
+      A'BD covers m5 and m7 together - one term instead of two.
+
+      F = B'C' + CD' + A'BD
+   ```
+
+   Verification
+   ```
+      Covered : B'C' -> 0,1,8,9        CD' -> 2,6,10,14      A'BD -> 5,7
+      Union   : {0,1,2,5,6,7,8,9,10,14}   - exactly the given set
+
+      Check a zero : m3 = 0011
+           B'C' = 0 (C is 1) , CD' = 0 (D is 1) , A'BD = 0 (B is 0)
+           -> F = 0    correct
+   ```
+
+   The alternative when the map is too large
+   ```
+      For more than five variables, use the QUINE-McCLUSKEY tabular method:
+
+      1. Group the minterms by the number of 1s in their binary form.
+      2. Combine pairs differing in ONE bit, marking both as used.
+      3. Repeat until no more combinations are possible.
+      4. The unmarked terms are the PRIME IMPLICANTS.
+      5. Build a prime-implicant CHART and choose a minimum cover.
+
+      It is slower by hand but systematic, and it is what a computer
+      minimiser implements.
+   ```
+
+9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
+
+Answer: F(A, B, C, D) = ACD + AB + D' + ACD'
+
+   Step 1 — simplify algebraically first, to see the shape
+   ```
+      ACD + ACD' = AC(D + D') = AC
+      F = AC + AB + D'
+   ```
+   - The K-map below confirms this.
+
+   Step 2 — expand each term into minterms
+   ```
+      ACD  = A=1, C=1, D=1        -> m11 , m15
+      AB   = A=1, B=1             -> m12 , m13 , m14 , m15
+      D'   = D=0                  -> m0, m2, m4, m6, m8, m10, m12, m14
+      ACD' = A=1, C=1, D=0        -> m10 , m14
+
+      F = Sigma m(0, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15)
+   ```
+
+   Step 3 — K-map
+   ```
+      AB\CD   00    01    11    10
+       00     1     0     0     1        m0  m1  m3  m2
+       01     1     0     0     1        m4  m5  m7  m6
+       11     1     1     1     1        m12 m13 m15 m14
+       10     1     0     1     1        m8  m9  m11 m10
+   ```
+
+   Step 4 — groupings
+   ```
+   Loop 1 : D'   -> m0, m2, m4, m6, m8, m10, m12, m14
+            the two whole columns CD = 00 and CD = 10 (8 cells)
+            D = 0 everywhere in them  ->  D'
+
+      AB\CD   00    01    11    10
+       00    [1]    .     .    [1]
+       01    [1]    .     .    [1]
+       11    [1]    .     .    [1]
+       10    [1]    .     .    [1]
+
+   Loop 2 : AB   -> m12, m13, m15, m14
+            the whole row AB = 11 (4 cells)
+
+   Loop 3 : AC   -> m10, m11, m14, m15
+            rows AB = 11 and 10 , columns CD = 11 and 10
+            A = 1 and C = 1 in all four
+   ```
+
+   Final answer
+   ```
+   F = D' + AB + AC
+     = D' + A(B + C)
+   ```
+
+   Verification of a 0 cell
+   ```
+      m9 = 1001 : A=1, B=0, C=0, D=1
+           D'  = 0 ,  AB = 0 ,  AC = 0   ->  F = 0     correct
+   ```
+
+   Logic circuit
+   ```
+      D ---|>o--- D' -----------------+
+                                      |
+      A ---|‾‾\                       |---|\
+      B ---|    )--- AB --------------+   | )--- F
+           |___/                      |   |/
+                                      |  (3-input OR)
+      A ---|‾‾\                       |
+      C ---|    )--- AC --------------+
+           |___/
+   ```
+   - The factored form `F = D' + A(B + C)` uses one OR, one AND, one inverter and one more OR — four gates instead of five, and is often preferred when gate count matters more than depth.
+
+10. **Simplify using K-map with logic circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
+
+Answer: The question is `incomplete` — the function to be simplified is not present. The method, from expression to K-map to circuit, is set out below with a worked example.
+
+    Worked example
+    ```
+       F(A,B,C) = A'B'C + A'BC' + A'BC + ABC' + ABC
+                = Sigma m(1, 2, 3, 6, 7)
+    ```
+
+    Step 1 — plot the K-map
+    ```
+       A\BC   00   01   11   10
+        0      0    1    1    1
+        1      0    0    1    1
+    ```
+
+    Step 2 — group
+    ```
+       Group 1 : B    -> m2, m3, m6, m7
+                 columns BC = 11 and 10 , both rows
+                 B = 1 throughout , A and C change   ->  B
+
+       Group 2 : A'C  -> m1, m3
+                 row A = 0 , columns BC = 01 and 11
+                 A = 0 and C = 1                     ->  A'C
+    ```
+
+    Step 3 — the simplified expression
+    ```
+       F = B + A'C
+    ```
+    - Ten literals have become three.
+
+    Step 4 — verification
+    ```
+       A B C | original | B + A'C
+       0 0 0 |    0     |    0
+       0 0 1 |    1     |    1
+       0 1 0 |    1     |    1
+       0 1 1 |    1     |    1
+       1 0 0 |    0     |    0
+       1 0 1 |    0     |    0
+       1 1 0 |    1     |    1
+       1 1 1 |    1     |    1        identical
+    ```
+
+    Step 5 — the logic circuit
+    ```
+       A ---|>o--- A' ---|‾‾\
+                         |    )--- A'C ---|\
+       C ----------------|__/             | )--- F = B + A'C
+                                          |/
+       B ---------------------------------+
+    ```
+    ```
+       Components : 1 inverter , 1 two-input AND gate , 1 two-input OR gate
+    ```
+    - Implementing the original expression directly would need 3 inverters, five 3-input AND gates and one 5-input OR gate — nine gates instead of three. That saving is the whole purpose of simplification.
+
+    The NAND-only version, which examiners often ask for next
+    ```
+       F = B + A'C
+         = ((B + A'C)')'
+         = (B' . (A'C)')'          De Morgan
+
+       A ---+--|\
+            +--| )o--- A' ---|\
+                              | )o--- (A'C)' ---+
+       C ---------------------|/                |---|\
+                                                |   | )o--- F
+       B ---+--|\                               |---|/
+            +--| )o--- B' ----------------------+
+    ```
+    ```
+       4 NAND gates : two used as inverters, one for A'C, one for the OR
+    ```
+
+    The general procedure to state
+    ```
+       1. Expand the function into minterms.
+       2. Plot them on a Gray-coded K-map.
+       3. Group adjacent 1s into the largest possible blocks of 2^n,
+          overlapping and wrapping round the edges as needed.
+       4. Read each group : keep the constant variables, drop the changing ones.
+       5. Sum the terms - that is the minimal SOP.
+       6. Verify against the truth table.
+       7. Draw the circuit : one AND gate per product term, feeding one OR gate,
+          with inverters for the complemented inputs.
+    ```
+
+11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 798 (ET: N/A)]*
+
+Answer: (i) Truth table
+
+    - A = A1A0 and B = B1B0 are 2-bit numbers, so each takes the values 0, 1, 2, 3. Output F = 1 whenever A > B.
+    ```
+    A1 A0 | A | B1 B0 | B | F        A1 A0 | A | B1 B0 | B | F
+    ------+---+-------+---+---       ------+---+-------+---+---
+     0  0 | 0 |  0  0 | 0 | 0         1  0 | 2 |  0  0 | 0 | 1
+     0  0 | 0 |  0  1 | 1 | 0         1  0 | 2 |  0  1 | 1 | 1
+     0  0 | 0 |  1  1 | 3 | 0         1  0 | 2 |  1  1 | 3 | 0
+     0  0 | 0 |  1  0 | 2 | 0         1  0 | 2 |  1  0 | 2 | 0
+     0  1 | 1 |  0  0 | 0 | 1         1  1 | 3 |  0  0 | 0 | 1
+     0  1 | 1 |  0  1 | 1 | 0         1  1 | 3 |  0  1 | 1 | 1
+     0  1 | 1 |  1  1 | 3 | 0         1  1 | 3 |  1  1 | 3 | 0
+     0  1 | 1 |  1  0 | 2 | 0         1  1 | 3 |  1  0 | 2 | 1
+    ```
+    ```
+    F = 1 for the input combinations  0100, 1000, 1001, 1100, 1101, 1110
+      = Sigma m(4, 8, 9, 12, 13, 14)      with the order A1 A0 B1 B0
+    ```
+
+    (ii) K-map (rows A1A0, columns B1B0, both in Gray code order)
+    ```
+       A1A0\B1B0   00    01    11    10
+          00        0     0     0     0
+          01        1     0     0     0
+          11        1     1     0     1
+          10        1     1     0     0
+    ```
+
+    Groupings
+    ```
+    Loop 1 : A1 B1'          -> the four cells in rows 11, 10 and columns 00, 01
+             A1 = 1 and B1 = 0 in all four
+             meaning : A's high bit is 1 and B's high bit is 0, so A > B
+
+       A1A0\B1B0  00    01    11    10
+          11     [1]   [1]    .     .
+          10     [1]   [1]    .     .
+
+    Loop 2 : A0 B1' B0'      -> rows 01 and 11 , column 00
+             A0 = 1, B1 = 0, B0 = 0
+             meaning : B is 0 and A is odd, so A >= 1 > 0
+
+    Loop 3 : A1 A0 B0'       -> row 11 , columns 00 and 10
+             A1 = 1, A0 = 1, B0 = 0
+             meaning : A is 3 and B is even (0 or 2), so A > B
+    ```
+
+    Simplified expression
+    ```
+    F = A1 B1' + A0 B1' B0' + A1 A0 B0'
+    ```
+
+    Circuit
+    ```
+       A1 --|‾‾\
+       B1'--|    )--- A1B1' --------+
+            |___/                   |
+       A0 --|‾‾\                    |---|\
+       B1'--|    )--- A0B1'B0' -----+   | )--- F  (A > B)
+       B0'--|___/                   |   |/
+                                    |  (3-input OR)
+       A1 --|‾‾\                    |
+       A0 --|    )--- A1A0B0' ------+
+       B0'--|___/
+    ```
+
+    - This is the standard 2-bit magnitude comparator "greater than" output. The `A < B` output is the mirror image, `A1'B1 + A0'B1B0 + A1'A0'B0`, and `A = B` is `(A1 XNOR B1)(A0 XNOR B0)`.
+
+12. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
+
+Answer: F = A'B'C' + ABC + AB'C'
+
+    Step 1 — list the minterms
+    ```
+       A'B'C' = 000 = m0
+       ABC    = 111 = m7
+       AB'C'  = 100 = m4
+
+       F(A,B,C) = Sigma m(0, 4, 7)
+    ```
+
+    Step 2 — K-map (rows A, columns BC in Gray code)
+    ```
+       A\BC   00    01    11    10
+        0     1     0     0     0        m0  m1  m3  m2
+        1     1     0     1     0        m4  m5  m7  m6
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : B'C'   -> m0, m4
+             column BC = 00 , both rows
+             B = 0 and C = 0 ; only A changes  ->  B'C'
+
+       A\BC   00    01    11    10
+        0    [1]    .     .     .
+        1    [1]    .     .     .
+
+    Loop 2 : ABC    -> m7 alone
+             no adjacent 1 (its neighbours m3, m5, m6 are all 0),
+             so it stays a single cell with all three literals
+    ```
+
+    Final simplified expression
+    ```
+    F = B'C' + ABC
+    ```
+
+    Verification
+    ```
+    A  B  C | original | B'C' + ABC
+    --------+----------+-----------
+    0  0  0 |    1     |     1
+    0  0  1 |    0     |     0
+    0  1  0 |    0     |     0
+    0  1  1 |    0     |     0
+    1  0  0 |    1     |     1
+    1  0  1 |    0     |     0
+    1  1  0 |    0     |     0
+    1  1  1 |    1     |     1        identical
+    ```
+
+    Circuit
+    ```
+       B ---|>o--- B' ---|‾‾\
+                         |    )--- B'C' ---+
+       C ---|>o--- C' ---|___/             |---|\
+                                           |   | )--- F
+       A ---|‾‾\                           |   |/
+       B ---|    )--- ABC ------------ ----+  (OR)
+       C ---|___/
+    ```
+
+    - Nine literals have reduced to five. `m7 could not be grouped`, because none of its three neighbours on the map is a 1 — an isolated cell always costs the full n literals, which is a useful thing to state in the exam.
+
+13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879 (ET: BUET)]*
+
+Answer: The question is `incomplete` — the two K-maps, which were printed as filled grids, are not present. The method for reading a completed K-map is set out below with worked examples.
+
+    How to read a K-map that is already filled in
+    ```
+       1. Confirm the labelling is in GRAY CODE : 00 , 01 , 11 , 10.
+          If it is not, the adjacency property does not hold and no
+          grouping is valid.
+
+       2. Group the 1s into blocks of 1, 2, 4, 8 or 16 - as LARGE as
+          possible, overlapping freely, and wrapping round every edge.
+
+       3. Read each group : keep the variables that stay CONSTANT across
+          it, and drop those that change. A constant 1 gives the variable
+          itself ; a constant 0 gives its complement.
+
+       4. Sum the group terms to get the minimal SOP.
+    ```
+
+    Example (i) — a 4-variable map
+    ```
+       AB\CD   00   01   11   10
+        00      1    1    0    0
+        01      1    1    0    0
+        11      1    1    1    1
+        10      1    1    1    1
+    ```
+    Groups
+    ```
+       Group 1 : C'   -> the two whole columns CD = 00 and 01 (8 cells)
+                         C = 0 throughout  ->  C'
+
+       Group 2 : A    -> the two whole rows AB = 11 and 10 (8 cells)
+                         A = 1 throughout  ->  A
+
+       F = A + C'
+    ```
+
+    Example (ii) — a map with a wrap-around group
+    ```
+       AB\CD   00   01   11   10
+        00      1    0    0    1
+        01      0    0    0    0
+        11      0    0    0    0
+        10      1    0    0    1
+    ```
+    Group
+    ```
+       The FOUR CORNERS are all adjacent, because the map wraps in both
+       directions. They form one group of four.
+
+       B = 0 and D = 0 throughout ; A and C change.
+
+       F = B'D'
+    ```
+    - The four-corner group is the single most commonly missed pattern in K-map questions.
+
+    Example (iii) — a 3-variable map with don't-cares
+    ```
+       A\BC   00   01   11   10
+        0      1    1    X    0
+        1      0    X    1    1
+    ```
+    ```
+       A don't-care X may be treated as 1 if that ENLARGES a group, or
+       ignored if it does not.
+
+       Taking both X as 1 :
+           Group A'B'  -> m0, m1
+           Group C     -> m1, m3, m5, m7   (columns BC = 01 and 11)
+           Group AB    -> m6, m7
+
+       F = A'B' + C + AB      (a shorter cover than ignoring the X)
+    ```
+
+    Getting the POS form from the same map
+    ```
+       Group the ZEROS instead of the ones, and reverse the sense of each
+       variable : a variable constantly 0 appears as ITSELF, and one
+       constantly 1 appears complemented. Each group then gives a SUM term,
+       and the terms are multiplied together.
+    ```
+
+    Common errors
+    ```
+       Binary labelling (00,01,10,11) instead of Gray code
+       Missing the wrap-around groups, especially the four corners
+       Making a group smaller than it could be
+       Grouping a number of cells that is not a power of two
+       Leaving a 1 uncovered
+       Treating a don't-care as a compulsory 1
+    ```
+
+14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
+   F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
+
+F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
+
+    Answer: The function is
+    ```
+       F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD
+         + AB'C'D'  + AB'CD'  + ABCD'  + ABCD
+    ```
+
+    Step 1 — convert each term to its minterm number
+    ```
+       A'B'C'D' = 0000 = m0          AB'C'D' = 1000 = m8
+       A'B'CD'  = 0010 = m2          AB'CD'  = 1010 = m10
+       A'BCD'   = 0110 = m6          ABCD'   = 1110 = m14
+       A'BCD    = 0111 = m7          ABCD    = 1111 = m15
+
+       F(A,B,C,D) = Sigma m(0, 2, 6, 7, 8, 10, 14, 15)
+    ```
+
+    Step 2 — draw the K-map
+    ```
+       AB\CD   00   01   11   10
+        00      1    0    0    1        m0  m1  m3  m2
+        01      0    0    1    1        m4  m5  m7  m6
+        11      0    0    1    1        m12 m13 m15 m14
+        10      1    0    0    1        m8  m9  m11 m10
+    ```
+
+    Step 3 — group the 1s
+    ```
+       Group 1 : B'D'  ->  m0 , m2 , m8 , m10
+
+          AB\CD   00   01   11   10
+           00     [1]   .    .   [1]
+           01      .    .    .    .
+           11      .    .    .    .
+           10     [1]   .    .   [1]
+
+          Rows AB = 00 and 10 , columns CD = 00 and 10.
+          The map wraps in BOTH directions, so these four corner-like
+          cells are adjacent. B = 0 and D = 0 throughout  ->  B'D'
+
+       Group 2 : BC    ->  m6 , m7 , m14 , m15
+
+          AB\CD   00   01   11   10
+           00      .    .    .    .
+           01      .    .   [1]  [1]
+           11      .    .   [1]  [1]
+           10      .    .    .    .
+
+          Rows AB = 01 and 11 , columns CD = 11 and 10.
+          B = 1 and C = 1 throughout  ->  BC
+    ```
+
+    Step 4 — the simplified expression
+    ```
+       F = B'D' + BC
+    ```
+    - Thirty-two literals have become four.
+
+    Step 5 — verification
+    ```
+       Covered by B'D' : m0 , m2 , m8 , m10
+       Covered by BC   : m6 , m7 , m14 , m15
+       Union            : {0, 2, 6, 7, 8, 10, 14, 15}   - exactly the given set
+
+       Check a zero cell :
+          m5 = 0101 : B'D' = 0 (B is 1 and D is 1) , BC = 0 (C is 0)
+                      -> F = 0     correct, m5 is not in the list
+          m3 = 0011 : B'D' = 0 (D is 1) , BC = 0 (B is 0)
+                      -> F = 0     correct
+    ```
+
+    Step 6 — the logic circuit
+    ```
+       B ---|>o--- B' ---|‾‾\
+                         |    )--- B'D' ---+
+       D ---|>o--- D' ---|__/              |---|\
+                                           |   | )--- F = B'D' + BC
+       B ---------------|‾‾\               |---|/
+                        |    )--- BC ------+  (OR)
+       C ---------------|__/
+    ```
+    ```
+       Components : 2 inverters , 2 two-input AND gates , 1 two-input OR gate
+    ```
+
+    - Points worth noting: the `wrap-around` grouping is what makes `B'D'` a four-cell block rather than two separate pairs — missing it would give the longer answer `B'C'D' + B'CD'` instead. The map wraps at the left and right edges and at the top and bottom, so the four corners of a 4-variable map are always mutually adjacent.
+
+15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
+
+Answer: F = A'B'C' + AB'C' + A'B'C + A'BC + ABC
+
+    Step 1 — list the minterms
+    ```
+       A'B'C' = 000 = m0
+       AB'C'  = 100 = m4
+       A'B'C  = 001 = m1
+       A'BC   = 011 = m3
+       ABC    = 111 = m7
+
+       F(A,B,C) = Sigma m(0, 1, 3, 4, 7)
+    ```
+
+    Step 2 — K-map (rows A, columns BC in Gray code order)
+    ```
+       A\BC   00    01    11    10
+        0     1     1     1     0        m0  m1  m3  m2
+        1     1     0     1     0        m4  m5  m7  m6
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : A'B'   -> m0, m1
+             row A = 0 , columns BC = 00 and 01
+             A = 0, B = 0 ; only C changes
+
+    Loop 2 : B'C'   -> m0, m4
+             column BC = 00 , both rows
+             B = 0, C = 0 ; only A changes
+
+    Loop 3 : BC     -> m3, m7
+             column BC = 11 , both rows
+             B = 1, C = 1 ; only A changes
+
+       A\BC   00    01    11    10
+        0    [1]   [1]   [1]    0
+        1    [1]    0    [1]    0
+    ```
+
+    Final simplified expression
+    ```
+    F = A'B' + B'C' + BC
+    ```
+
+    Verification
+    ```
+    A  B  C | original | A'B' + B'C' + BC
+    --------+----------+-----------------
+    0  0  0 |    1     |   1 + 1 + 0 = 1
+    0  0  1 |    1     |   1 + 0 + 0 = 1
+    0  1  0 |    0     |   0 + 0 + 0 = 0
+    0  1  1 |    1     |   0 + 0 + 1 = 1
+    1  0  0 |    1     |   0 + 1 + 0 = 1
+    1  0  1 |    0     |   0 + 0 + 0 = 0
+    1  1  0 |    0     |   0 + 0 + 0 = 0
+    1  1  1 |    1     |   0 + 0 + 1 = 1        identical
+    ```
+
+    Logic circuit
+    ```
+       A ---|>o--- A' ---|‾‾\
+                         |    )--- A'B' ---+
+       B ---|>o--- B' ---|___/             |
+                  |                        |
+                  +------|‾‾\              |---|\
+                         |    )--- B'C' ---+   | )--- F
+       C ---|>o--- C' ---|___/             |   |/
+                                           |  (3-input OR)
+       B ---|‾‾\                           |
+            |    )--- BC --------- --------+
+       C ---|__/
+    ```
+
+    - Fifteen literals have reduced to six. Note that `m0 is used twice`, in Loop 1 and Loop 2 — overlapping loops are allowed and often give a smaller result.
+
+16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038-1039 (ET: DPI)]*
+
+Answer: (Answered in English, as required for IT topics.) f(a,b,c,d) = a'bc'd' + a'b'c'd + a'bc'd + abc'd'
+
+    Step 1 — list the minterms
+    ```
+       a'bc'd' = 0100 = m4
+       a'b'c'd = 0001 = m1
+       a'bc'd  = 0101 = m5
+       abc'd'  = 1100 = m12
+
+       f(a,b,c,d) = Sigma m(1, 4, 5, 12)
+    ```
+
+    Step 2 — K-map (rows ab, columns cd, both in Gray code order)
+    ```
+       ab\cd   00    01    11    10
+        00     0     1     0     0        m0  m1  m3  m2
+        01     1     1     0     0        m4  m5  m7  m6
+        11     1     0     0     0        m12 m13 m15 m14
+        10     0     0     0     0        m8  m9  m11 m10
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : a'c'd   -> m1, m5
+             rows ab = 00 and 01 , column cd = 01
+             a = 0, c = 0, d = 1 ; only b changes
+
+       ab\cd   00    01    11    10
+        00     .    [1]    .     .
+        01     .    [1]    .     .
+
+    Loop 2 : bc'd'   -> m4, m12
+             rows ab = 01 and 11 , column cd = 00
+             b = 1, c = 0, d = 0 ; only a changes
+
+       ab\cd   00    01    11    10
+        01    [1]    .     .     .
+        11    [1]    .     .     .
+    ```
+
+    Final simplified expression
+    ```
+    f(a, b, c, d) = a'c'd + bc'd'
+                  = c'(a'd + bd')
+    ```
+
+    Verification
+    ```
+    m1  = 0001 : a'c'd  = 1.1.1 = 1                covered
+    m4  = 0100 : bc'd'  = 1.1.1 = 1                covered
+    m5  = 0101 : a'c'd  = 1.1.1 = 1                covered
+    m12 = 1100 : bc'd'  = 1.1.1 = 1                covered
+
+    m0  = 0000 : a'c'd = 0 (d=0) , bc'd' = 0 (b=0)  ->  f = 0   correct
+    m13 = 1101 : a'c'd = 0 (a=1) , bc'd' = 0 (d=1)  ->  f = 0   correct
+    ```
+
+    Circuit
+    ```
+       a' --|‾‾\
+       c' --|    )--- a'c'd ---+
+       d ---|___/              |---|\
+                               |   | )--- f
+       b ---|‾‾\               |   |/
+       c' --|    )--- bc'd' ---+  (OR)
+       d' --|___/
+    ```
+
+    - Sixteen literals have reduced to six. Note that `c' appears in both terms`, so the factored form `c'(a'd + bd')` saves one more gate input, though it adds a level of delay.
+
+17. **(গ) Min term কী? K-map-এর সাহায্যে সরল করুন: $\bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Minterm
+    - A `minterm` is a product (AND) term that contains `every variable of the function exactly once`, either in true or in complemented form.
+    - For n variables there are 2^n minterms, and each one is `1 for exactly one row` of the truth table and 0 for all the others.
+    ```
+    For three variables A, B, C :
+
+       Row  A B C | minterm  | symbol
+       -----------+----------+-------
+        0   0 0 0 | A'B'C'   | m0
+        1   0 0 1 | A'B'C    | m1
+        2   0 1 0 | A'BC'    | m2
+        3   0 1 1 | A'BC     | m3
+        4   1 0 0 | AB'C'    | m4
+        5   1 0 1 | AB'C     | m5
+        6   1 1 0 | ABC'     | m6
+        7   1 1 1 | ABC      | m7
+    ```
+    - Rule: a variable appears `complemented` where its bit is 0 and `uncomplemented` where its bit is 1.
+    - Any function can be written as the `sum of the minterms` of the rows where it is 1 — this is the canonical SOP form. The opposite is the `maxterm`, a sum term used for the canonical POS form.
+
+    Simplification of F = A'B'C' + A'B + ABC' + AC
+
+    Step 1 — expand every term to minterms
+    ```
+       A'B'C' = 000                  -> m0
+       A'B    = 010 , 011            -> m2 , m3
+       ABC'   = 110                  -> m6
+       AC     = 101 , 111            -> m5 , m7
+
+       F = Sigma m(0, 2, 3, 5, 6, 7)
+    ```
+
+    Step 2 — K-map (rows A, columns BC in Gray code order)
+    ```
+       A\BC   00    01    11    10
+        0     1     0     1     1        m0  m1  m3  m2
+        1     0     1     1     1        m4  m5  m7  m6
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : B      -> m2, m3, m6, m7
+             columns BC = 11 and 10 , both rows ; B = 1 in all four
+
+       A\BC   00    01    11    10
+        0     .     .    [1]   [1]
+        1     .     .    [1]   [1]
+
+    Loop 2 : A'C'   -> m0, m2
+             row A = 0 , columns BC = 00 and 10 (they wrap around)
+             A = 0 and C = 0
+
+    Loop 3 : AC     -> m5, m7
+             row A = 1 , columns BC = 01 and 11 ; A = 1 and C = 1
+    ```
+
+    Final simplified expression
+    ```
+    F = B + A'C' + AC
+      = B + (A XNOR C)
+    ```
+
+    Verification
+    ```
+    A  B  C | original | B + A'C' + AC
+    --------+----------+--------------
+    0  0  0 |    1     |  0 + 1 + 0 = 1
+    0  0  1 |    0     |  0 + 0 + 0 = 0
+    0  1  0 |    1     |  1 + 1 + 0 = 1
+    0  1  1 |    1     |  1 + 0 + 0 = 1
+    1  0  0 |    0     |  0 + 0 + 0 = 0
+    1  0  1 |    1     |  0 + 0 + 1 = 1
+    1  1  0 |    1     |  1 + 0 + 0 = 1
+    1  1  1 |    1     |  1 + 0 + 1 = 1        identical
+    ```
+
+    - The map `wraps around` horizontally, which is what allows m0 and m2 to be grouped even though they sit at opposite ends of the row. Forgetting this wrap-around is the commonest K-map mistake.
+
+18. **Simplify the expression: $F(A,B,C) = \bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$, using k-map.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
+
+Answer: F(A,B,C) = A'B'C' + A'B + ABC' + AC
+
+    Step 1 — expand every term to minterms
+    ```
+       A'B'C' = 000                  -> m0
+       A'B    = 010 , 011            -> m2 , m3
+       ABC'   = 110                  -> m6
+       AC     = 101 , 111            -> m5 , m7
+
+       F = Sigma m(0, 2, 3, 5, 6, 7)
+    ```
+
+    Step 2 — K-map (rows A, columns BC in Gray code order)
+    ```
+       A\BC   00    01    11    10
+        0     1     0     1     1        m0  m1  m3  m2
+        1     0     1     1     1        m4  m5  m7  m6
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : B      -> m2, m3, m6, m7
+             the two columns BC = 11 and 10 , both rows
+
+       A\BC   00    01    11    10
+        0     .     .    [1]   [1]
+        1     .     .    [1]   [1]
+
+    Loop 2 : A'C'   -> m0, m2
+             row A = 0 , columns BC = 00 and 10 , wrapping round the edge
+
+       A\BC   00    01    11    10
+        0    [1]    .     .    [1]
+        1     .     .     .     .
+
+    Loop 3 : AC     -> m5, m7
+             row A = 1 , columns BC = 01 and 11
+
+       A\BC   00    01    11    10
+        0     .     .     .     .
+        1     .    [1]   [1]    .
+    ```
+
+    Final simplified expression
+    ```
+    F = B + A'C' + AC
+    ```
+    - The last two terms are the XNOR of A and C, so the answer can also be written `F = B + (A XNOR C)`.
+
+    Verification
+    ```
+    A  B  C | original | B + A'C' + AC
+    --------+----------+--------------
+    0  0  0 |    1     |       1
+    0  0  1 |    0     |       0
+    0  1  0 |    1     |       1
+    0  1  1 |    1     |       1
+    1  0  0 |    0     |       0
+    1  0  1 |    1     |       1
+    1  1  0 |    1     |       1
+    1  1  1 |    1     |       1        identical
+    ```
+
+    Circuit
+    ```
+       A ---|>o--- A' ---|‾‾\
+                         |    )--- A'C' ---+
+       C ---|>o--- C' ---|___/             |
+                                           |---|\
+       B ---------------------------------+   | )--- F
+                                           |   |/
+       A ---|‾‾\                           |  (3-input OR)
+            |    )--- AC ------------------+
+       C ---|__/
+    ```
+
+    - Nine literals have reduced to five. Remember that the K-map `wraps around` at the left and right edges, which is what makes the m0-m2 pair legal.
+
+19. **(a) Simplify $F(A,B,C,D) = ACD+AB+\bar{D}+A\bar{C}D$ using K-map and draw the simplified circuit diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+Answer: F(A, B, C, D) = ACD + AB + D' + AC'D
+
+    Step 1 — simplify algebraically first, as a check
+    ```
+       ACD + AC'D = AD(C + C') = AD
+       F = AD + AB + D'
+       Now  AD + D' = A + D'        since X + X'Y = X + Y
+       F = A + AB + D' = A + D'     since A + AB = A  (absorption)
+    ```
+
+    Step 2 — expand each term into minterms
+    ```
+       ACD  = A=1, C=1, D=1     -> m11 , m15
+       AB   = A=1, B=1          -> m12 , m13 , m14 , m15
+       D'   = D=0               -> m0, m2, m4, m6, m8, m10, m12, m14
+       AC'D = A=1, C=0, D=1     -> m9 , m13
+
+       F = Sigma m(0, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15)
+    ```
+
+    Step 3 — K-map (rows AB, columns CD in Gray code order)
+    ```
+       AB\CD   00    01    11    10
+        00     1     0     0     1        m0  m1  m3  m2
+        01     1     0     0     1        m4  m5  m7  m6
+        11     1     1     1     1        m12 m13 m15 m14
+        10     1     1     1     1        m8  m9  m11 m10
+    ```
+
+    Step 4 — groupings
+    ```
+    Loop 1 : A    -> m8 to m15 , the two whole rows AB = 11 and 10 (8 cells)
+             A = 1 everywhere in them
+
+       AB\CD   00    01    11    10
+        00     .     .     .     .
+        01     .     .     .     .
+        11    [1]   [1]   [1]   [1]
+        10    [1]   [1]   [1]   [1]
+
+    Loop 2 : D'   -> the two whole columns CD = 00 and CD = 10 (8 cells)
+             D = 0 everywhere in them
+
+       AB\CD   00    01    11    10
+        00    [1]    .     .    [1]
+        01    [1]    .     .    [1]
+        11    [1]    .     .    [1]
+        10    [1]    .     .    [1]
+    ```
+
+    Final answer
+    ```
+    F = A + D'
+    ```
+
+    Verification of the 0 cells
+    ```
+       m1 = 0001 : A = 0 , D' = 0   ->  F = 0    correct
+       m3 = 0011 : A = 0 , D' = 0   ->  F = 0    correct
+       m5 = 0101 : A = 0 , D' = 0   ->  F = 0    correct
+       m7 = 0111 : A = 0 , D' = 0   ->  F = 0    correct
+    ```
+    - The only 0s are the four cells with A = 0 and D = 1, which is exactly `(A + D')' = A'D`.
+
+    Simplified circuit
+    ```
+       A --------------|\
+                       | )--- F = A + D'
+       D ---|>o--- D' -|/
+    ```
+    - The whole expression reduces to `one inverter and one OR gate`. B and C disappear completely — the output does not depend on them at all.
+
+20. **Sentence correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+ক) (a+b)^4 - (a-b)^4 = 8ab(a^2+b^2) __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
+
+খ) একজন দোকানদার ৭ ১/২% ক্ষতিতে একটি দ্রব্য বিক্রয় করল যদি দ্রব্যটির ক্রয়মূল্য ১০% কম হতো এবংবিক্রয়মূল্য ৩১ টাকা বেশি হতো তাহলে ২০% লাভ হতো। দ্রব্যটির ক্রয়মূল্য কত? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
+
+Answer:
+    Sentence Correction (5 sentences):
+    - 1. Incorrect: One of the boy is absent. -> Correct: One of the **boys is** absent.
+    - 2. Incorrect: He is senior than me. -> Correct: He is senior **to** me.
+    - 3. Incorrect: I prefer tea than coffee. -> Correct: I prefer tea **to** coffee.
+    - 4. Incorrect: Neither of them were present. -> Correct: Neither of them **was** present.
+    - 5. Incorrect: He died from malaria. -> Correct: He died **of** malaria.
+
+    ক) প্রমাণ:
+    - বামপক্ষ (LHS) $= (a+b)^4 - (a-b)^4 = [(a+b)^2]^2 - [(a-b)^2]^2$
+    - $A^2 - B^2 = (A + B)(A - B)$ সূত্র প্রয়োগ করে:
+      $$= [(a+b)^2 + (a-b)^2] \times [(a+b)^2 - (a-b)^2]$$
+    - আমরা জানি: $(a+b)^2 + (a-b)^2 = 2(a^2+b^2)$ এবং $(a+b)^2 - (a-b)^2 = 4ab$
+      $$= [2(a^2 + b^2)] \times [4ab] = 8ab(a^2 + b^2) = \text{RHS (প্রমাণিত)}$$
+
+    খ) সমাধান:
+    - ধরি, দ্রব্যটির মূল ক্রয়মূল্য $= 100$ টাকা।
+    - $7\frac{1}{2}\% = 7.5\%$ ক্ষতিতে প্রথম বিক্রয়মূল্য $= 100 - 7.5 = 92.5$ টাকা।
+    - ক্রয়মূল্য $10\%$ কম হলে নতুন ক্রয়মূল্য $= 100 - 10 = 90$ টাকা।
+    - এই মূল্যের ওপর $20\%$ লাভে নতুন বিক্রয়মূল্য $= 90 + (90 \times 0.20) = 90 + 18 = 108$ টাকা।
+    - বিক্রয়মূল্যের পার্থক্য $= 108 - 92.5 = 15.5$ টাকা।
+    - বিক্রয়মূল্য $15.5$ টাকা বেশি হলে ক্রয়মূল্য $= 100$ টাকা।
+    - বিক্রয়মূল্য $31$ টাকা বেশি হলে ক্রয়মূল্য $= \frac{100 \times 31}{15.5} = \frac{100 \times 310}{155} = 200$ টাকা।
+    - উত্তর: দ্রব্যটির ক্রয়মূল্য **২০০ টাকা**।
+
+21. **If you are CEO of a software company. You need a software from following three options:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+(a) Buy: Buy a software with cost 50 Lakh. (b) Building: Developed by developer cost 30 lakhs, possibility is 30% to develop complete software. (c) Modification: Buy and small modifications cost 30 lakh, for large modifications cost 80% increase.
+
+Answer:
+    Option Evaluation & Decision Analysis:
+    - Option (a) Commercial-off-the-Shelf (COTS / Buy): Fixed cost BDT 50 Lakhs. 100% certainty, zero development risk, immediate deployment.
+    - Option (b) Custom In-House Build: Cost BDT 30 Lakhs, but success probability is only 30% (70% failure risk). High probability of project stalling and schedule overrun.
+    - Option (c) Buy & Customize: Base cost BDT 30 Lakhs. For large modifications, cost increases by 80% $\implies 30 \times 1.80 =$ BDT 54 Lakhs.
+
+    Strategic Recommendation:
+    - Select **Option (c) (Buy & Modify with bounded small customizations)** if tailored features are strictly required at BDT 30–35 Lakhs.
+    - Otherwise, select **Option (a) (Direct Buy)** to eliminate all project failure risks and ensure guaranteed production stability. Avoid Option (b) due to unacceptable failure probability (70%).
+
+22. **Using a Karnaugh map, simplify the function (A,B,C,D) = \Sigma 0,1,2,5,7,8,9,10,13,15 into Sum of Products form.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 385]]*
+
+Answer:
+    Given: $F(A,B,C,D) = \Sigma m(0, 1, 2, 5, 7, 8, 9, 10, 13, 15)$
+
+    4-Variable K-Map Layout:
+    ```
+          CD  00   01   11   10
+      AB    +----+----+----+----+
+      00    |  1 |  1 |  0 |  1 |  (m0, m1, m2)
+            +----+----+----+----+
+      01    |  0 |  1 |  1 |  0 |  (m5, m7)
+            +----+----+----+----+
+      11    |  0 |  1 |  1 |  0 |  (m13, m15)
+            +----+----+----+----+
+      10    |  1 |  1 |  0 |  1 |  (m8, m9, m10)
+            +----+----+----+----+
+    ```
+
+    Grouping:
+    - Group 1 (Quad of m5, m7, m13, m15): Middle column with $C=0, D=1$ and $C=1, D=1$ for $B=1 \implies$ **$B D$**
+    - Group 2 (Quad of m0, m1, m8, m9): Top and bottom rows for $C=0 \implies$ **$\bar{B} \bar{C}$**
+    - Group 3 (Quad of 4 Corners: m0, m2, m8, m10): Four corner cells with $B=0, D=0 \implies$ **$\bar{B} \bar{D}$**
+
+    Minimal SOP Expression:
+    $$F(A, B, C, D) = B D + \bar{B} \bar{C} + \bar{B} \bar{D}$$
+
+23. **Traversing the tree and calculate Pre-order and post-order from below Tree.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
+
+Answer:
+    For a standard binary tree with Root $R$, Left Subtree $L$, and Right Subtree $P$:
+    - Pre-order Traversal (Root $\to$ Left $\to$ Right): Visit root first, traverse left subtree recursively, then traverse right subtree recursively.
+    - Post-order Traversal (Left $\to$ Right $\to$ Root): Traverse left subtree recursively, traverse right subtree recursively, then visit root last.
+    - In-order Traversal (Left $\to$ Root $\to$ Right): Left subtree $\to$ Root $\to$ Right subtree.
+
+24. **Simplify using K-Map/SOP F = \Sigma(1,3,5,9,11,12,13,14)** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398]]*
+
+Answer:
+    Given: $F(A,B,C,D) = \Sigma m(1, 3, 5, 9, 11, 12, 13, 14)$
+
+    4-Variable K-Map:
+    ```
+          CD  00   01   11   10
+      AB    +----+----+----+----+
+      00    |  0 |  1 |  1 |  0 |  (m1, m3)
+            +----+----+----+----+
+      01    |  0 |  1 |  0 |  0 |  (m5)
+            +----+----+----+----+
+      11    |  1 |  1 |  0 |  1 |  (m12, m13, m14)
+            +----+----+----+----+
+      10    |  0 |  1 |  1 |  0 |  (m9, m11)
+            +----+----+----+----+
+    ```
+
+    Grouping:
+    - Group 1 (Quad of m1, m3, m9, m11): Cells where $B=0$ and $D=1 \implies$ **$\bar{B} D$**
+    - Group 2 (Quad of m1, m5, m9, m13): Column $01$ where $C=0, D=1 \implies$ **$\bar{C} D$**
+    - Group 3 (Pair of m12, m13): $AB=11, CD=00, 01 \implies$ **$A B \bar{C}$**
+    - Group 4 (Pair of m12, m14): $AB=11, CD=00, 10 \implies$ **$A B \bar{D}$**
+
+    Minimal SOP Expression:
+    $$F(A, B, C, D) = \bar{B} D + \bar{C} D + A B \bar{D}$$
+
 ## Combinational Circuits (Adders, Encoders, MUX) (23)
 
-1. What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer: A `multiplexer (MUX)` selects one of many inputs and sends it to a single output. A `demultiplexer (DEMUX)` takes one input and sends it to one of many outputs. They are exact opposites, and both are controlled by `select lines`.
+Answer: A `multiplexer (MUX)` selects one of many inputs and sends it to a single output. A `demultiplexer (DEMUX)` takes one input and sends it to one of many outputs. They are exact opposites, and both are controlled by `select lines`.
 
    Multiplexer — many to one
    ```
@@ -3385,7 +5086,7 @@
 
 2. **Design a Full Adder circuit using basic logic gates (AND, OR, NOT). Draw the truth table, derive the Boolean expressions for the Sum (S) and Carry (C_{out}), and draw the complete circuit diagram.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
 
-   Answer: A `full adder` adds three one-bit inputs — A, B and a carry from the previous stage, `Cin` — and produces two outputs, a `Sum` and a `carry out`, `Cout`.
+Answer: A `full adder` adds three one-bit inputs — A, B and a carry from the previous stage, `Cin` — and produces two outputs, a `Sum` and a `carry out`, `Cout`.
 
    Truth table
    ```
@@ -3489,7 +5190,7 @@
 
 3. **What is half adder?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: A `half adder` is a combinational circuit that adds `two` one-bit binary numbers and produces two outputs — a `Sum` and a `Carry`.
+Answer: A `half adder` is a combinational circuit that adds `two` one-bit binary numbers and produces two outputs — a `Sum` and a `Carry`.
 
    - It is called "half" because it cannot accept a carry coming in from a previous stage. That is why it can only be used for the least significant bit of an addition.
 
@@ -3538,7 +5239,7 @@
 
 4. **Design a full adder using NAND gates only.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
-   Answer: A full adder needs `9 NAND gates`. The design is two NAND half adders plus one extra NAND to combine the carries.
+Answer: A full adder needs `9 NAND gates`. The design is two NAND half adders plus one extra NAND to combine the carries.
 
    Required functions
    ```
@@ -3616,7 +5317,7 @@
 
 5. **Design a full adder using two half adders and an OR gate?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
 
-   Answer: A `full adder` adds three bits — A, B and `Cin` — giving a `Sum` and a `Cout`. A `half adder` adds only two bits. Two half adders and one OR gate build a full adder.
+Answer: A `full adder` adds three bits — A, B and `Cin` — giving a `Sum` and a `Cout`. A `half adder` adds only two bits. Two half adders and one OR gate build a full adder.
 
    Half adder recap
    ```
@@ -3702,6 +5403,19 @@
                 S_1 S_0
 ```
 
+```
+          +-----------+
+    A ---|>|---| I_3       |
+          | I_2  4x1  |--- F(A, B, C)
+    1 --------| I_1  MUX  |
+    0 --------| I_0       |
+          +-----------+
+                 |  |
+                 B  C
+                 |  |
+                S_1 S_0
+```
+
    Answer: The circuit is a `4x1 multiplexer` with
    ```
       S1 = B  ,  S0 = C          (the two selection lines)
@@ -3759,7 +5473,7 @@
 
 7. **Truth Table from the following circuit (2-bit input A, B full adder with carry bit C_{in}).** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 314 (ET: N/A)]*
 
-   Answer: A `full adder` adds three one-bit inputs — A, B and the carry from the previous stage, `Cin` — and produces a `Sum` and a `carry out`, `Cout`.
+Answer: A `full adder` adds three one-bit inputs — A, B and the carry from the previous stage, `Cin` — and produces a `Sum` and a `carry out`, `Cout`.
 
    Circuit
    ```
@@ -3812,7 +5526,7 @@
 
 8. **একটি 2:4 ডিকোডার ও একটি OR গেট ব্যবহার করে একটি হাফ এডার ডিজাইন কর।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
 
-   Answer: (Answered in English, as required for IT topics.) A `half adder` adds two bits A and B, producing
+Answer: (Answered in English, as required for IT topics.) A `half adder` adds two bits A and B, producing
    ```
    Sum   = A (+) B = A'B + AB'   = Sigma m(1, 2)
    Carry = A . B                  = Sigma m(3)
@@ -3864,7 +5578,7 @@
 
 9. **Design 6 \times 1 MUX by using 2 \times 1 MUX** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 460 (ET: BUET)]*
 
-   Answer: A `6x1 MUX` selects one of six inputs. It needs `3 select lines` (since 2^2 = 4 is too few and 2^3 = 8 covers 6), of which two combinations stay unused.
+Answer: A `6x1 MUX` selects one of six inputs. It needs `3 select lines` (since 2^2 = 4 is too few and 2^3 = 8 covers 6), of which two combinations stay unused.
 
    Requirement
    ```
@@ -3925,7 +5639,7 @@
 
 10. **What is Half Adder circuit? Expalin with block diagram with logic circuit.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 497 (ET: N/A)]*
 
-    Answer: A `half adder` is a combinational circuit that adds two one-bit binary numbers A and B, producing a `Sum` bit and a `Carry` bit.
+Answer: A `half adder` is a combinational circuit that adds two one-bit binary numbers A and B, producing a `Sum` bit and a `Carry` bit.
 
     - It is called "half" because it has no input for a carry coming from the previous stage. Two half adders plus an OR gate make a `full adder`, which does have one.
 
@@ -3987,7 +5701,7 @@
 
 11. **Desugn a logic circuit that counts the number of 1s in 3 inputs (A, B, C) and outputs a two-bit binary number representing that count of 1s?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 683 (ET: N/A)]*
 
-    Answer: The circuit counts how many of A, B, C are 1 and writes that count as a 2-bit number `Y1 Y0`. The count can be 0, 1, 2 or 3, which needs exactly two output bits.
+Answer: The circuit counts how many of A, B, C are 1 and writes that count as a 2-bit number `Y1 Y0`. The count can be 0, 1, 2 or 3, which needs exactly two output bits.
 
     Truth table
     ```
@@ -4061,7 +5775,7 @@
 
 12. **একটি 4:1 Multiplexer এর Logic Diagram অঙ্কন করে দেখান?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`. The select value decides which input reaches the output.
+Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`. The select value decides which input reaches the output.
 
     Boolean expression
     ```
@@ -4127,7 +5841,7 @@
 
 13. **How do you design a logic circuit that has three inputs A, B, C and whose output will be high only when majority of the inputs are high. (a) Find truth table and (b) Show SOP and POS equation.** *[EGCB Assistant Engineer (CSE) 2022 compact it 715 (ET: BUET)]*
 
-    Answer: The output is high when a `majority` of the three inputs are high — that is, when two or three of them are 1.
+Answer: The output is high when a `majority` of the three inputs are high — that is, when two or three of them are 1.
 
     (a) Truth table
     ```
@@ -4213,7 +5927,7 @@
 
 14. **Design a 8\times 1 MUX and explain working procedure.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 720 (ET: N/A)]*
 
-    Answer: An `8x1 multiplexer` selects one of eight data inputs `I0-I7` and passes it to a single output `Y`. It needs `3 selection lines` `S2 S1 S0`, since 2^3 = 8.
+Answer: An `8x1 multiplexer` selects one of eight data inputs `I0-I7` and passes it to a single output `Y`. It needs `3 selection lines` `S2 S1 S0`, since 2^3 = 8.
 
     Boolean expression
     ```
@@ -4291,7 +6005,7 @@
 
 15. **(a) Draw the logic diagram of Half-Adder the truth table of Full-Adder and use half Adder (S) and basic gates to build a Full-Adder.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
 
-    Answer: Half adder — logic diagram
+Answer: Half adder — logic diagram
     - A half adder adds two bits A and B.
     ```
     Sum   = A (+) B          XOR gate
@@ -4366,7 +6080,7 @@
 
 16. **Circuit of the following figure uses 4:1 Multiplexer, what is output of the function f?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — the figure showing which signals are wired to the MUX inputs and select lines is not present. The method for reading any such circuit is set out below with a worked example.
+Answer: The question is `incomplete` — the figure showing which signals are wired to the MUX inputs and select lines is not present. The method for reading any such circuit is set out below with a worked example.
 
     The 4:1 MUX equation
     ```
@@ -4447,7 +6161,7 @@
 
 17. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927-928 (ET: CTI)]*
 
-    Answer: A `2-to-4 line decoder` takes 2 input lines and activates exactly one of its 4 output lines. Each output corresponds to one `minterm` of the inputs. The same circuit with an added data line works as a `1-to-4 demultiplexer`.
+Answer: A `2-to-4 line decoder` takes 2 input lines and activates exactly one of its 4 output lines. Each output corresponds to one `minterm` of the inputs. The same circuit with an added data line works as a `1-to-4 demultiplexer`.
 
     Truth table (with enable E)
     ```
@@ -4523,7 +6237,7 @@
 
 18. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`.
+Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`.
 
     Boolean expression
     ```
@@ -4578,7 +6292,7 @@
 
 19. **Half adder এর সাহায্যে Full adder বাস্তবায়ন করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `full adder` adds three bits — A, B and a carry-in `Cin` — while a `half adder` adds only two. Two half adders and one OR gate build a full adder.
+Answer: (Answered in English, as required for IT topics.) A `full adder` adds three bits — A, B and a carry-in `Cin` — while a `half adder` adds only two. Two half adders and one OR gate build a full adder.
 
     Half adder recap
     ```
@@ -4649,7 +6363,7 @@
 
 20. **(খ) Multiplexer কি? চিত্রসহ একটি Multiplexer এর গঠন ও কাজ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `multiplexer (MUX)` is a combinational circuit that has `many data inputs and one output`. Selection lines decide which input is connected to the output at that moment. It is also called a `data selector`.
+Answer: (Answered in English, as required for IT topics.) A `multiplexer (MUX)` is a combinational circuit that has `many data inputs and one output`. Selection lines decide which input is connected to the output at that moment. It is also called a `data selector`.
 
     - With `n` selection lines it can handle `2^n` data inputs, so 2 lines give a 4:1 MUX and 3 lines an 8:1 MUX.
 
@@ -4717,7 +6431,7 @@
 
 21. **দুটি 1-bit full adder এর মাধ্যমে 2-bit full adder তৈরি করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) A 2-bit adder adds two 2-bit numbers `A1A0` and `B1B0`, with a carry-in `C0`, giving a 2-bit sum `S1S0` and a carry-out `C2`. Two 1-bit full adders chained together do this. The result is a `ripple carry adder`.
+Answer: (Answered in English, as required for IT topics.) A 2-bit adder adds two 2-bit numbers `A1A0` and `B1B0`, with a carry-in `C0`, giving a 2-bit sum `S1S0` and a carry-out `C2`. Two 1-bit full adders chained together do this. The result is a `ripple carry adder`.
 
     Connection
     ```
@@ -4780,7 +6494,7 @@
 
 22. **চিত্রে প্রদর্শিত 7 segment display দেওয়া আছে এখন 7 ও 2 display এর জন্য কোন LED High হবে?** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `seven segment display` has seven LEDs named `a` to `g`. In a common-cathode display, a segment lights when its input is `HIGH (1)`.
+Answer: (Answered in English, as required for IT topics.) A `seven segment display` has seven LEDs named `a` to `g`. In a common-cathode display, a segment lights when its input is `HIGH (1)`.
 
     Segment layout
     ```
@@ -4865,7 +6579,7 @@
 
 23. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
 
-    Answer: The function is
+Answer: The function is
     ```
     F(A, B, C, D) = Sigma m(0, 3, 4, 5, 6, 7)
     ```
@@ -4941,1498 +6655,11 @@
 
     - Method to remember: put the `higher-order` variables on the select lines, split the truth table into one block per select value, and read off what the output does in terms of the remaining variables — it can only be `0`, `1`, a variable, or its complement. A 4x1 MUX can therefore realise any function of 3 variables directly, and many functions of 4 variables as here.
 
-## Karnaugh Map (K-Map) (19)
-
-1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
-
-   Answer: F(A,B,C,D) = Sigma m(0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15)
-
-   K-map grid — rows AB and columns CD are in Gray code order (00, 01, 11, 10)
-   ```
-      AB\CD   00    01    11    10
-       00     1     0     1     0        m0  m1  m3  m2
-       01     0     1     1     0        m4  m5  m7  m6
-       11     1     1     1     1        m12 m13 m15 m14
-       10     1     0     1     1        m8  m9  m11 m10
-   ```
-
-   Groupings (loops)
-   ```
-   Loop 1 : AD'      -> m8, m10, m12, m14
-            rows AB = 11 and 10 , columns CD = 00 and 10
-            A stays 1, D stays 0, B and C both change  -> AD'
-
-      AB\CD   00    01    11    10
-       00     .     .     .     .
-       01     .     .     .     .
-       11    [1]    .     .    [1]
-       10    [1]    .     .    [1]
-
-   Loop 2 : BD       -> m5, m7, m13, m15
-            rows AB = 01 and 11 , columns CD = 01 and 11
-            B stays 1, D stays 1  -> BD
-
-   Loop 3 : CD       -> m3, m7, m11, m15
-            the whole column CD = 11
-            C stays 1, D stays 1  -> CD
-
-   Loop 4 : B'C'D'   -> m0, m8
-            column CD = 00 , rows AB = 00 and 10 (they wrap around)
-            B = 0, C = 0, D = 0, only A changes  -> B'C'D'
-   ```
-
-   Final simplified SOP
-   ```
-   F = AD' + BD + CD + B'C'D'
-   ```
-   - Four terms, nine literals — this is the minimum for this function.
-
-   Check that every minterm is covered
-   ```
-      m0  -> B'C'D'        m11 -> CD
-      m3  -> CD            m12 -> AD'
-      m5  -> BD            m13 -> BD
-      m7  -> BD and CD     m14 -> AD'
-      m8  -> AD' , B'C'D'  m15 -> BD and CD
-      m10 -> AD'
-   ```
-   - And no group covers a 0 cell, so the expression is correct as well as minimal.
-
-   Circuit
-   ```
-      A ---|‾‾\
-      D' --|    )--- AD' ------+
-           |___/               |
-      B ---|‾‾\                |
-      D ---|    )--- BD -------+---|\
-           |___/               |   | )--- F
-      C ---|‾‾\                |   |/
-      D ---|    )--- CD -------+  (4-input OR)
-           |___/               |
-      B' --|‾‾\                |
-      C' --|    )--- B'C'D' ---+
-      D' --|___/
-   ```
-
-   - Points to remember: loops must be `powers of two` in size (1, 2, 4, 8), as large as possible, and they may `overlap` and `wrap around` the edges. A cell already covered may be used again, which is what makes m7 and m8 appear in two loops.
-
-2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
-
-   Answer: The question is `incomplete` — the Boolean function to be simplified was printed as part of the paper and is not present here. The complete K-map method is set out below with a worked example, so it can be applied to any function.
-
-   What a K-map is
-   - A `Karnaugh map` is a grid form of the truth table, arranged so that `physically adjacent cells differ in exactly one variable`. Grouping adjacent 1s therefore eliminates that variable automatically, which is what makes simplification visual instead of algebraic.
-
-   The rules
-   ```
-      1. Rows and columns are labelled in GRAY CODE : 00 , 01 , 11 , 10
-         (not 00, 01, 10, 11) - this is what makes neighbours differ in one bit.
-
-      2. Group only 1s, in blocks whose size is a POWER OF TWO :
-         1 , 2 , 4 , 8 , 16.
-
-      3. Make every group AS LARGE AS POSSIBLE. A larger group removes
-         more variables :
-              group of 2  -> 1 variable removed
-              group of 4  -> 2 variables removed
-              group of 8  -> 3 variables removed
-
-      4. Groups MAY OVERLAP. A cell already covered may be used again.
-
-      5. The map WRAPS AROUND at every edge - left joins right, top joins
-         bottom, and the four corners are mutually adjacent.
-
-      6. Use as FEW groups as possible, and every 1 must be in some group.
-
-      7. Don't-care conditions (X) may be used as 1 if that makes a group
-         larger, or ignored if it does not.
-   ```
-
-   Worked example
-   ```
-      F(A,B,C,D) = Sigma m(0, 1, 2, 5, 8, 9, 10)
-
-      AB\CD   00   01   11   10
-       00      1    1    0    1
-       01      0    1    0    0
-       11      0    0    0    0
-       10      1    1    0    1
-   ```
-   Groups
-   ```
-      Group 1 : B'D'  -> m0, m2, m8, m10
-                the FOUR CORNERS, using the wrap-around in both directions
-
-      Group 2 : B'C'  -> m0, m1, m8, m9
-                rows AB = 00 and 10 , columns CD = 00 and 01
-
-      Group 3 : A'C'D -> m1, m5
-                a vertical pair in column CD = 01
-   ```
-   ```
-      F = B'D' + B'C' + A'C'D
-   ```
-
-   Map sizes
-   ```
-      2 variables : 2 x 2 = 4 cells
-      3 variables : 2 x 4 = 8 cells      A\BC  with columns 00 01 11 10
-      4 variables : 4 x 4 = 16 cells     AB\CD
-      5 variables : two 4x4 maps side by side
-   ```
-   - Beyond five variables the map becomes unusable, and the `Quine-McCluskey` tabular method or a computer minimiser is used instead.
-
-   Reading a term from a group
-   ```
-      Keep the variables that stay CONSTANT across the whole group.
-      Drop the variables that CHANGE.
-
-      A variable that is constantly 1 appears as itself ; constantly 0
-      appears complemented.
-   ```
-
-   Getting the POS form instead
-   ```
-      Group the ZEROS instead of the ones. Each group then gives a SUM
-      term, with the sense of each variable reversed - a variable that is
-      constantly 0 appears as itself.
-   ```
-
-   - The check that should always be made at the end: `substitute a few input combinations into both the original and the simplified expression` and confirm they agree, especially one combination that should give 0.
-
-3. **(a) Consider the following logic circuit-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
- * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
- * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
-
-   Answer: The question is `incomplete` — the logic circuit that defines T1 to T4 was printed as a figure and is not present here, so the specific expressions cannot be derived. The method, and the standard circuit this question is taken from, are given below.
-
-   The standard circuit (Mano, Digital Design)
-   ```
-      A ---+----------------|>o--- T1 = A'
-           |
-      B ---+----|‾‾\
-           |    |    )--- T2 = B + C
-      C ---+----|__/
-           |
-           +----|‾‾\
-                |    )--- T3 = A'B'C  (from A' , B' and C)
-      B --|>o---|    |
-                |__/
-      C --------+
-
-           |‾‾\
-      A ---|    )--- T4 = AB'  (or similar, from the figure)
-      B'--|__/
-
-      F1 = T1 + T3  ,  F2 = T2 . T4
-   ```
-   - Without the figure the exact gate connections cannot be reproduced, so the answer below shows the `procedure` on a representative pair of functions.
-
-   (i) Deriving the expressions algebraically
-   ```
-      Step 1 : label the OUTPUT of every gate T1, T2, T3, T4.
-      Step 2 : write each label in terms of its own inputs.
-      Step 3 : substitute the earlier labels into the later ones until
-               F1 and F2 are expressed in A, B and C alone.
-   ```
-   Representative example
-   ```
-      T1 = A'
-      T2 = B + C
-      T3 = T1 . T2   = A'(B + C)   = A'B + A'C
-      T4 = A . B'
-
-      F1 = T3 + T4   = A'B + A'C + AB'
-      F2 = T3 . T4   = (A'B + A'C)(AB') = 0     since A'.A = 0
-   ```
-
-   (ii) Simplifying with a K-map and checking the equivalence
-   ```
-      F1 = A'B + A'C + AB'
-
-      Expand to minterms :
-         A'B  = 010 , 011      -> m2 , m3
-         A'C  = 001 , 011      -> m1 , m3
-         AB'  = 100 , 101      -> m4 , m5
-
-      F1 = Sigma m(1, 2, 3, 4, 5)
-   ```
-   ```
-      A\BC   00   01   11   10
-       0      0    1    1    1
-       1      1    1    0    0
-   ```
-   Groups
-   ```
-      Group 1 : A'B  -> m2, m3      row A = 0 , columns BC = 11 and 10
-      Group 2 : A'C  -> m1, m3      row A = 0 , columns BC = 01 and 11
-      Group 3 : AB'  -> m4, m5      row A = 1 , columns BC = 00 and 01
-
-      F1 = A'B + A'C + AB'
-   ```
-   - The K-map returns the same expression, which is the `equivalence the question asks to be shown`. When the algebraic form is already minimal, the map confirms it; when it is not, the map produces the shorter form and the two are then verified against the truth table.
-
-   The verification step
-   ```
-      Build the truth table of BOTH expressions and compare them
-      row by row. If every row agrees, the two are equivalent.
-
-      A B C | algebraic F1 | K-map F1
-      0 0 0 |      0       |    0
-      0 0 1 |      1       |    1
-      0 1 0 |      1       |    1
-      0 1 1 |      1       |    1
-      1 0 0 |      1       |    1
-      1 0 1 |      1       |    1
-      1 1 0 |      0       |    0
-      1 1 1 |      0       |    0
-   ```
-
-   - The general procedure for any such question: `label every gate output, write each label from its inputs, substitute upward to get F, expand F to minterms, plot them on the K-map, group, and compare the two results`.
-
-4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
-
-   Answer: f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC
-
-   Step 1 — list the minterms
-   ```
-      A'B'C' = 000 = m0
-      A'B'C  = 001 = m1
-      A'BC   = 011 = m3
-      A'BC'  = 010 = m2
-      ABC'   = 110 = m6
-      ABC    = 111 = m7
-
-      f(A,B,C) = Sigma m(0, 1, 2, 3, 6, 7)
-   ```
-
-   Step 2 — K-map (rows A, columns BC in Gray code)
-   ```
-      A\BC   00    01    11    10
-       0     1     1     1     1        m0  m1  m3  m2
-       1     0     0     1     1        m4  m5  m7  m6
-   ```
-
-   Step 3 — groupings
-   ```
-   Loop 1 : the whole row A = 0  (4 cells : m0, m1, m3, m2)
-            A stays 0, B and C both change  ->  A'
-
-      A\BC   00    01    11    10
-       0    [1]   [1]   [1]   [1]
-       1     0     0     1     1
-
-   Loop 2 : columns BC = 11 and 10, both rows  (4 cells : m3, m2, m7, m6)
-            B stays 1, A and C both change  ->  B
-
-      A\BC   00    01    11    10
-       0     1     1    [1]   [1]
-       1     0     0    [1]   [1]
-   ```
-
-   Step 4 — final answer
-   ```
-   f(A, B, C) = A' + B
-   ```
-
-   Verification
-   ```
-   A  B  C | original | A' + B
-   --------+----------+-------
-   0  0  0 |    1     |   1
-   0  0  1 |    1     |   1
-   0  1  0 |    1     |   1
-   0  1  1 |    1     |   1
-   1  0  0 |    0     |   0
-   1  0  1 |    0     |   0
-   1  1  0 |    1     |   1
-   1  1  1 |    1     |   1        identical
-   ```
-
-   Circuit
-   ```
-      A ---|>o--- A' ---|\
-                        | )--- f = A' + B
-      B ----------------|/
-   ```
-   - Six product terms of three literals each have reduced to two literals and one OR gate. That saving is exactly what a K-map is for.
-   - Note that `C` disappears completely: the output does not depend on it at all.
-
-5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)], [BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
-
-   Answer: F(A,B,C,D) = Sigma(2, 8, 9, 11, 13, 15)
-
-   K-map (rows AB, columns CD, both in Gray code order)
-   ```
-      AB\CD   00    01    11    10
-       00     0     0     0     1        m0  m1  m3  m2
-       01     0     0     0     0        m4  m5  m7  m6
-       11     0     1     1     0        m12 m13 m15 m14
-       10     1     1     1     0        m8  m9  m11 m10
-   ```
-
-   Groupings
-   ```
-   Loop 1 : AD       -> m9, m11, m13, m15
-            rows AB = 11 and 10 , columns CD = 01 and 11
-            A stays 1, D stays 1, B and C change  ->  AD
-
-      AB\CD   00    01    11    10
-       11     .    [1]   [1]    .
-       10     .    [1]   [1]    .
-
-   Loop 2 : AB'C'    -> m8, m9
-            row AB = 10 , columns CD = 00 and 01
-            A = 1, B = 0, C = 0, only D changes  ->  AB'C'
-
-      AB\CD   00    01    11    10
-       10    [1]   [1]    .     .
-
-   Loop 3 : A'B'CD'  -> m2 alone
-            no adjacent 1, so it stays a single cell with all four literals
-   ```
-
-   Final minimal SOP
-   ```
-   F = AD + AB'C' + A'B'CD'
-   ```
-
-   Verification
-   ```
-   m2  = 0010 : A'B'CD' = 1                     covered
-   m8  = 1000 : AB'C'   = 1                     covered
-   m9  = 1001 : AB'C' = 1 and AD = 1            covered
-   m11 = 1011 : AD = 1                          covered
-   m13 = 1101 : AD = 1                          covered
-   m15 = 1111 : AD = 1                          covered
-   ```
-   - No group touches a 0 cell, and every 1 is covered, so the answer is correct and minimal.
-
-   Circuit
-   ```
-      A ---|‾‾\
-      D ---|    )--- AD --------+
-           |___/                |
-      A ---|‾‾\                 |
-      B' --|    )--- AB'C' -----+---|\
-      C' --|___/                |   | )--- F
-                                |   |/
-      A' --|‾‾\                 |  (3-input OR)
-      B' --|    )--- A'B'CD' ---+
-      C ---|    |
-      D' --|___/
-   ```
-
-   - Point to note: `m2 could not be grouped` with anything, because none of its neighbours (m0, m3, m6, m10) is a 1. A single isolated cell always costs all n literals, which is why an isolated 1 makes an expression expensive.
-
-6. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
-
-   Answer: F(A,B,C,D) = Sigma m(0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15)
-
-   K-map grid — rows AB and columns CD in Gray code order
-   ```
-      AB\CD   00    01    11    10
-       00     1     0     1     0        m0  m1  m3  m2
-       01     0     1     1     0        m4  m5  m7  m6
-       11     1     1     1     1        m12 m13 m15 m14
-       10     1     0     1     1        m8  m9  m11 m10
-   ```
-
-   Groupings (loops)
-   ```
-   Loop 1 : AD'     -> m8, m10, m12, m14
-            rows AB = 11 and 10 , columns CD = 00 and 10
-            A = 1 and D = 0 in all four cells
-
-   Loop 2 : BD      -> m5, m7, m13, m15
-            rows AB = 01 and 11 , columns CD = 01 and 11
-            B = 1 and D = 1 in all four cells
-
-   Loop 3 : CD      -> m3, m7, m11, m15
-            the entire column CD = 11
-            C = 1 and D = 1 in all four cells
-
-   Loop 4 : B'C'D'  -> m0, m8
-            column CD = 00 , rows AB = 00 and 10 (top and bottom wrap around)
-            B = 0, C = 0, D = 0 ; only A differs
-   ```
-
-   Marked map — each loop shown separately
-   ```
-      Loop 1 (AD')            Loop 2 (BD)             Loop 3 (CD)
-      AB\CD 00 01 11 10       AB\CD 00 01 11 10       AB\CD 00 01 11 10
-       00    .  .  .  .        00    .  .  .  .        00    .  . [1] .
-       01    .  .  .  .        01    . [1][1] .        01    .  . [1] .
-       11   [1] .  . [1]       11    . [1][1] .        11    .  . [1] .
-       10   [1] .  . [1]       10    .  .  .  .        10    .  . [1] .
-   ```
-
-   Final simplified SOP
-   ```
-   F = AD' + BD + CD + B'C'D'
-   ```
-   - Four product terms, nine literals — the minimum for this function.
-
-   Coverage check
-   ```
-      m0  -> B'C'D'          m11 -> CD
-      m3  -> CD              m12 -> AD'
-      m5  -> BD              m13 -> BD
-      m7  -> BD , CD         m14 -> AD'
-      m8  -> AD' , B'C'D'    m15 -> BD , CD
-      m10 -> AD'
-   ```
-   - Every 1 is inside at least one loop, and no loop contains a 0.
-
-   Circuit
-   ```
-      A ---|‾‾\
-      D' --|    )--- AD' ------+
-           |___/               |
-      B ---|‾‾\                |
-      D ---|    )--- BD -------+---|\
-           |___/               |   | )--- F
-      C ---|‾‾\                |   |/
-      D ---|    )--- CD -------+  (4-input OR)
-           |___/               |
-      B' --|‾‾\                |
-      C' --|    )--- B'C'D' ---+
-      D' --|___/
-   ```
-
-   - Rules used: loops are always of size 1, 2, 4, 8 or 16; make them as large as possible; overlapping is allowed; and the map wraps around at the edges, which is what lets m0 pair with m8.
-
-7. **(b) Simplify the following Boolean function using K-map.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 489 (ET: N/A)]*
-
-   Answer: The question is `incomplete` — the Boolean function to be simplified is not present. The K-map procedure is set out below with a worked example, so it applies to any function.
-
-   The procedure
-   ```
-      1. Write the function as a sum of minterms.
-      2. Draw the map with rows and columns in GRAY CODE (00, 01, 11, 10).
-      3. Place a 1 in every cell whose minterm is present.
-      4. Group adjacent 1s into blocks of 1, 2, 4, 8 or 16 - as LARGE as
-         possible, overlapping where useful, wrapping round the edges.
-      5. Read each group : keep the variables that stay CONSTANT, drop
-         those that change.
-      6. Sum the group terms. Verify against the truth table.
-   ```
-
-   Worked example
-   ```
-      F(A,B,C,D) = Sigma m(0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 14)
-   ```
-   ```
-      AB\CD   00   01   11   10
-       00      1    1    0    1
-       01      1    1    0    1
-       11      1    1    0    1
-       10      1    1    0    0
-   ```
-   Groups
-   ```
-      Group 1 : C'      -> m0,m1,m4,m5,m8,m9,m12,m13
-                the two whole columns CD = 00 and 01 (EIGHT cells)
-                C = 0 throughout , A, B and D all change  ->  C'
-
-      Group 2 : BD'     -> m4,m6,m12,m14
-                rows AB = 01 and 11 , columns CD = 00 and 10
-                B = 1 and D = 0 throughout  ->  BD'
-
-      Group 3 : A'D'    -> m0,m2,m4,m6
-                rows AB = 00 and 01 , columns CD = 00 and 10
-                A = 0 and D = 0 throughout  ->  A'D'
-   ```
-   ```
-      F = C' + BD' + A'D'
-   ```
-
-   Verification of two cells
-   ```
-      m2 = 0010 : C' = 0 (C is 1) , BD' = 0 (B is 0) , A'D' = 1 . 1 = 1
-                  -> F = 1   correct, m2 is in the list
-
-      m3 = 0011 : C' = 0 , BD' = 0 , A'D' = 0 (D is 1)
-                  -> F = 0   correct, m3 is NOT in the list
-   ```
-
-   How many variables a group eliminates
-   ```
-      group of  1 cell  -> 0 variables removed ->  4 literals (4-var map)
-      group of  2 cells -> 1 removed           ->  3 literals
-      group of  4 cells -> 2 removed           ->  2 literals
-      group of  8 cells -> 3 removed           ->  1 literal
-      group of 16 cells -> the function is simply 1
-   ```
-
-   Common mistakes to avoid
-   ```
-      Labelling in binary order 00,01,10,11 instead of GRAY code
-      Forgetting that the map WRAPS AROUND - the four corners form a group
-      Making groups smaller than they could be
-      Forgetting that groups may OVERLAP
-      Leaving a 1 uncovered
-      Treating a don't-care as a compulsory 1
-   ```
-
-8. **Minimize the following function in SOP minimal form using K-map:** *[Teletalk Assistant Manager (IT) 2023 compact it 465 (ET: N/A)]*
-
-   Answer: The question is `incomplete` — the function to be minimised is not present. The complete method for reaching a minimal SOP form is set out below, with a worked example.
-
-   What "SOP minimal form" means
-   ```
-      SOP = Sum Of Products , for example  AB + A'C + BCD
-
-      MINIMAL means :
-         first  - the FEWEST product terms  (fewest OR gate inputs)
-         then   - the FEWEST literals in those terms (fewest AND inputs)
-   ```
-
-   The K-map method
-   ```
-      1. Write the function as a sum of minterms.
-      2. Plot the minterms on a Gray-coded map.
-      3. Identify every PRIME IMPLICANT - a group that cannot be made larger.
-      4. Identify the ESSENTIAL prime implicants - those that are the ONLY
-         cover for some minterm. These MUST be in the answer.
-      5. Cover any remaining 1s with the fewest additional prime implicants.
-      6. Sum the chosen terms.
-   ```
-
-   Worked example
-   ```
-      F(A,B,C,D) = Sigma m(0, 1, 2, 5, 6, 7, 8, 9, 10, 14)
-   ```
-   ```
-      AB\CD   00   01   11   10
-       00      1    1    0    1
-       01      0    1    1    1
-       11      0    0    0    1
-       10      1    1    0    1
-   ```
-   Finding the prime implicants
-   ```
-      B'D'   -> m0, m2, m8, m10     the four corners (wrap-around)
-      B'C'   -> m0, m1, m8, m9      columns CD = 00 and 01, rows 00 and 10
-      CD'    -> m2, m6, m10, m14    column CD = 10, all four rows
-      A'BD   -> m5, m7              a pair
-      A'BC   -> m6, m7              a pair
-      A'C'D  -> m1, m5              a pair
-   ```
-   Essential prime implicants
-   ```
-      m9  is covered ONLY by B'C'     -> B'C' is ESSENTIAL
-      m14 is covered ONLY by CD'      -> CD'  is ESSENTIAL
-      m7  is covered by A'BD or A'BC  -> neither is essential alone
-   ```
-   Completing the cover
-   ```
-      After B'C' and CD' , the uncovered minterms are m5 and m7.
-      A'BD covers m5 and m7 together - one term instead of two.
-
-      F = B'C' + CD' + A'BD
-   ```
-
-   Verification
-   ```
-      Covered : B'C' -> 0,1,8,9        CD' -> 2,6,10,14      A'BD -> 5,7
-      Union   : {0,1,2,5,6,7,8,9,10,14}   - exactly the given set
-
-      Check a zero : m3 = 0011
-           B'C' = 0 (C is 1) , CD' = 0 (D is 1) , A'BD = 0 (B is 0)
-           -> F = 0    correct
-   ```
-
-   The alternative when the map is too large
-   ```
-      For more than five variables, use the QUINE-McCLUSKEY tabular method:
-
-      1. Group the minterms by the number of 1s in their binary form.
-      2. Combine pairs differing in ONE bit, marking both as used.
-      3. Repeat until no more combinations are possible.
-      4. The unmarked terms are the PRIME IMPLICANTS.
-      5. Build a prime-implicant CHART and choose a minimum cover.
-
-      It is slower by hand but systematic, and it is what a computer
-      minimiser implements.
-   ```
-
-9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
-
-   Answer: F(A, B, C, D) = ACD + AB + D' + ACD'
-
-   Step 1 — simplify algebraically first, to see the shape
-   ```
-      ACD + ACD' = AC(D + D') = AC
-      F = AC + AB + D'
-   ```
-   - The K-map below confirms this.
-
-   Step 2 — expand each term into minterms
-   ```
-      ACD  = A=1, C=1, D=1        -> m11 , m15
-      AB   = A=1, B=1             -> m12 , m13 , m14 , m15
-      D'   = D=0                  -> m0, m2, m4, m6, m8, m10, m12, m14
-      ACD' = A=1, C=1, D=0        -> m10 , m14
-
-      F = Sigma m(0, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15)
-   ```
-
-   Step 3 — K-map
-   ```
-      AB\CD   00    01    11    10
-       00     1     0     0     1        m0  m1  m3  m2
-       01     1     0     0     1        m4  m5  m7  m6
-       11     1     1     1     1        m12 m13 m15 m14
-       10     1     0     1     1        m8  m9  m11 m10
-   ```
-
-   Step 4 — groupings
-   ```
-   Loop 1 : D'   -> m0, m2, m4, m6, m8, m10, m12, m14
-            the two whole columns CD = 00 and CD = 10 (8 cells)
-            D = 0 everywhere in them  ->  D'
-
-      AB\CD   00    01    11    10
-       00    [1]    .     .    [1]
-       01    [1]    .     .    [1]
-       11    [1]    .     .    [1]
-       10    [1]    .     .    [1]
-
-   Loop 2 : AB   -> m12, m13, m15, m14
-            the whole row AB = 11 (4 cells)
-
-   Loop 3 : AC   -> m10, m11, m14, m15
-            rows AB = 11 and 10 , columns CD = 11 and 10
-            A = 1 and C = 1 in all four
-   ```
-
-   Final answer
-   ```
-   F = D' + AB + AC
-     = D' + A(B + C)
-   ```
-
-   Verification of a 0 cell
-   ```
-      m9 = 1001 : A=1, B=0, C=0, D=1
-           D'  = 0 ,  AB = 0 ,  AC = 0   ->  F = 0     correct
-   ```
-
-   Logic circuit
-   ```
-      D ---|>o--- D' -----------------+
-                                      |
-      A ---|‾‾\                       |---|\
-      B ---|    )--- AB --------------+   | )--- F
-           |___/                      |   |/
-                                      |  (3-input OR)
-      A ---|‾‾\                       |
-      C ---|    )--- AC --------------+
-           |___/
-   ```
-   - The factored form `F = D' + A(B + C)` uses one OR, one AND, one inverter and one more OR — four gates instead of five, and is often preferred when gate count matters more than depth.
-
-10. **Simplify using K-map with logic circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
-
-    Answer: The question is `incomplete` — the function to be simplified is not present. The method, from expression to K-map to circuit, is set out below with a worked example.
-
-    Worked example
-    ```
-       F(A,B,C) = A'B'C + A'BC' + A'BC + ABC' + ABC
-                = Sigma m(1, 2, 3, 6, 7)
-    ```
-
-    Step 1 — plot the K-map
-    ```
-       A\BC   00   01   11   10
-        0      0    1    1    1
-        1      0    0    1    1
-    ```
-
-    Step 2 — group
-    ```
-       Group 1 : B    -> m2, m3, m6, m7
-                 columns BC = 11 and 10 , both rows
-                 B = 1 throughout , A and C change   ->  B
-
-       Group 2 : A'C  -> m1, m3
-                 row A = 0 , columns BC = 01 and 11
-                 A = 0 and C = 1                     ->  A'C
-    ```
-
-    Step 3 — the simplified expression
-    ```
-       F = B + A'C
-    ```
-    - Ten literals have become three.
-
-    Step 4 — verification
-    ```
-       A B C | original | B + A'C
-       0 0 0 |    0     |    0
-       0 0 1 |    1     |    1
-       0 1 0 |    1     |    1
-       0 1 1 |    1     |    1
-       1 0 0 |    0     |    0
-       1 0 1 |    0     |    0
-       1 1 0 |    1     |    1
-       1 1 1 |    1     |    1        identical
-    ```
-
-    Step 5 — the logic circuit
-    ```
-       A ---|>o--- A' ---|‾‾\
-                         |    )--- A'C ---|\
-       C ----------------|__/             | )--- F = B + A'C
-                                          |/
-       B ---------------------------------+
-    ```
-    ```
-       Components : 1 inverter , 1 two-input AND gate , 1 two-input OR gate
-    ```
-    - Implementing the original expression directly would need 3 inverters, five 3-input AND gates and one 5-input OR gate — nine gates instead of three. That saving is the whole purpose of simplification.
-
-    The NAND-only version, which examiners often ask for next
-    ```
-       F = B + A'C
-         = ((B + A'C)')'
-         = (B' . (A'C)')'          De Morgan
-
-       A ---+--|\
-            +--| )o--- A' ---|\
-                              | )o--- (A'C)' ---+
-       C ---------------------|/                |---|\
-                                                |   | )o--- F
-       B ---+--|\                               |---|/
-            +--| )o--- B' ----------------------+
-    ```
-    ```
-       4 NAND gates : two used as inverters, one for A'C, one for the OR
-    ```
-
-    The general procedure to state
-    ```
-       1. Expand the function into minterms.
-       2. Plot them on a Gray-coded K-map.
-       3. Group adjacent 1s into the largest possible blocks of 2^n,
-          overlapping and wrapping round the edges as needed.
-       4. Read each group : keep the constant variables, drop the changing ones.
-       5. Sum the terms - that is the minimal SOP.
-       6. Verify against the truth table.
-       7. Draw the circuit : one AND gate per product term, feeding one OR gate,
-          with inverters for the complemented inputs.
-    ```
-
-11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 798 (ET: N/A)]*
-
-    Answer: (i) Truth table
-
-    - A = A1A0 and B = B1B0 are 2-bit numbers, so each takes the values 0, 1, 2, 3. Output F = 1 whenever A > B.
-    ```
-    A1 A0 | A | B1 B0 | B | F        A1 A0 | A | B1 B0 | B | F
-    ------+---+-------+---+---       ------+---+-------+---+---
-     0  0 | 0 |  0  0 | 0 | 0         1  0 | 2 |  0  0 | 0 | 1
-     0  0 | 0 |  0  1 | 1 | 0         1  0 | 2 |  0  1 | 1 | 1
-     0  0 | 0 |  1  1 | 3 | 0         1  0 | 2 |  1  1 | 3 | 0
-     0  0 | 0 |  1  0 | 2 | 0         1  0 | 2 |  1  0 | 2 | 0
-     0  1 | 1 |  0  0 | 0 | 1         1  1 | 3 |  0  0 | 0 | 1
-     0  1 | 1 |  0  1 | 1 | 0         1  1 | 3 |  0  1 | 1 | 1
-     0  1 | 1 |  1  1 | 3 | 0         1  1 | 3 |  1  1 | 3 | 0
-     0  1 | 1 |  1  0 | 2 | 0         1  1 | 3 |  1  0 | 2 | 1
-    ```
-    ```
-    F = 1 for the input combinations  0100, 1000, 1001, 1100, 1101, 1110
-      = Sigma m(4, 8, 9, 12, 13, 14)      with the order A1 A0 B1 B0
-    ```
-
-    (ii) K-map (rows A1A0, columns B1B0, both in Gray code order)
-    ```
-       A1A0\B1B0   00    01    11    10
-          00        0     0     0     0
-          01        1     0     0     0
-          11        1     1     0     1
-          10        1     1     0     0
-    ```
-
-    Groupings
-    ```
-    Loop 1 : A1 B1'          -> the four cells in rows 11, 10 and columns 00, 01
-             A1 = 1 and B1 = 0 in all four
-             meaning : A's high bit is 1 and B's high bit is 0, so A > B
-
-       A1A0\B1B0  00    01    11    10
-          11     [1]   [1]    .     .
-          10     [1]   [1]    .     .
-
-    Loop 2 : A0 B1' B0'      -> rows 01 and 11 , column 00
-             A0 = 1, B1 = 0, B0 = 0
-             meaning : B is 0 and A is odd, so A >= 1 > 0
-
-    Loop 3 : A1 A0 B0'       -> row 11 , columns 00 and 10
-             A1 = 1, A0 = 1, B0 = 0
-             meaning : A is 3 and B is even (0 or 2), so A > B
-    ```
-
-    Simplified expression
-    ```
-    F = A1 B1' + A0 B1' B0' + A1 A0 B0'
-    ```
-
-    Circuit
-    ```
-       A1 --|‾‾\
-       B1'--|    )--- A1B1' --------+
-            |___/                   |
-       A0 --|‾‾\                    |---|\
-       B1'--|    )--- A0B1'B0' -----+   | )--- F  (A > B)
-       B0'--|___/                   |   |/
-                                    |  (3-input OR)
-       A1 --|‾‾\                    |
-       A0 --|    )--- A1A0B0' ------+
-       B0'--|___/
-    ```
-
-    - This is the standard 2-bit magnitude comparator "greater than" output. The `A < B` output is the mirror image, `A1'B1 + A0'B1B0 + A1'A0'B0`, and `A = B` is `(A1 XNOR B1)(A0 XNOR B0)`.
-
-12. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
-
-    Answer: F = A'B'C' + ABC + AB'C'
-
-    Step 1 — list the minterms
-    ```
-       A'B'C' = 000 = m0
-       ABC    = 111 = m7
-       AB'C'  = 100 = m4
-
-       F(A,B,C) = Sigma m(0, 4, 7)
-    ```
-
-    Step 2 — K-map (rows A, columns BC in Gray code)
-    ```
-       A\BC   00    01    11    10
-        0     1     0     0     0        m0  m1  m3  m2
-        1     1     0     1     0        m4  m5  m7  m6
-    ```
-
-    Step 3 — groupings
-    ```
-    Loop 1 : B'C'   -> m0, m4
-             column BC = 00 , both rows
-             B = 0 and C = 0 ; only A changes  ->  B'C'
-
-       A\BC   00    01    11    10
-        0    [1]    .     .     .
-        1    [1]    .     .     .
-
-    Loop 2 : ABC    -> m7 alone
-             no adjacent 1 (its neighbours m3, m5, m6 are all 0),
-             so it stays a single cell with all three literals
-    ```
-
-    Final simplified expression
-    ```
-    F = B'C' + ABC
-    ```
-
-    Verification
-    ```
-    A  B  C | original | B'C' + ABC
-    --------+----------+-----------
-    0  0  0 |    1     |     1
-    0  0  1 |    0     |     0
-    0  1  0 |    0     |     0
-    0  1  1 |    0     |     0
-    1  0  0 |    1     |     1
-    1  0  1 |    0     |     0
-    1  1  0 |    0     |     0
-    1  1  1 |    1     |     1        identical
-    ```
-
-    Circuit
-    ```
-       B ---|>o--- B' ---|‾‾\
-                         |    )--- B'C' ---+
-       C ---|>o--- C' ---|___/             |---|\
-                                           |   | )--- F
-       A ---|‾‾\                           |   |/
-       B ---|    )--- ABC ------------ ----+  (OR)
-       C ---|___/
-    ```
-
-    - Nine literals have reduced to five. `m7 could not be grouped`, because none of its three neighbours on the map is a 1 — an isolated cell always costs the full n literals, which is a useful thing to state in the exam.
-
-13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879 (ET: BUET)]*
-
-    Answer: The question is `incomplete` — the two K-maps, which were printed as filled grids, are not present. The method for reading a completed K-map is set out below with worked examples.
-
-    How to read a K-map that is already filled in
-    ```
-       1. Confirm the labelling is in GRAY CODE : 00 , 01 , 11 , 10.
-          If it is not, the adjacency property does not hold and no
-          grouping is valid.
-
-       2. Group the 1s into blocks of 1, 2, 4, 8 or 16 - as LARGE as
-          possible, overlapping freely, and wrapping round every edge.
-
-       3. Read each group : keep the variables that stay CONSTANT across
-          it, and drop those that change. A constant 1 gives the variable
-          itself ; a constant 0 gives its complement.
-
-       4. Sum the group terms to get the minimal SOP.
-    ```
-
-    Example (i) — a 4-variable map
-    ```
-       AB\CD   00   01   11   10
-        00      1    1    0    0
-        01      1    1    0    0
-        11      1    1    1    1
-        10      1    1    1    1
-    ```
-    Groups
-    ```
-       Group 1 : C'   -> the two whole columns CD = 00 and 01 (8 cells)
-                         C = 0 throughout  ->  C'
-
-       Group 2 : A    -> the two whole rows AB = 11 and 10 (8 cells)
-                         A = 1 throughout  ->  A
-
-       F = A + C'
-    ```
-
-    Example (ii) — a map with a wrap-around group
-    ```
-       AB\CD   00   01   11   10
-        00      1    0    0    1
-        01      0    0    0    0
-        11      0    0    0    0
-        10      1    0    0    1
-    ```
-    Group
-    ```
-       The FOUR CORNERS are all adjacent, because the map wraps in both
-       directions. They form one group of four.
-
-       B = 0 and D = 0 throughout ; A and C change.
-
-       F = B'D'
-    ```
-    - The four-corner group is the single most commonly missed pattern in K-map questions.
-
-    Example (iii) — a 3-variable map with don't-cares
-    ```
-       A\BC   00   01   11   10
-        0      1    1    X    0
-        1      0    X    1    1
-    ```
-    ```
-       A don't-care X may be treated as 1 if that ENLARGES a group, or
-       ignored if it does not.
-
-       Taking both X as 1 :
-           Group A'B'  -> m0, m1
-           Group C     -> m1, m3, m5, m7   (columns BC = 01 and 11)
-           Group AB    -> m6, m7
-
-       F = A'B' + C + AB      (a shorter cover than ignoring the X)
-    ```
-
-    Getting the POS form from the same map
-    ```
-       Group the ZEROS instead of the ones, and reverse the sense of each
-       variable : a variable constantly 0 appears as ITSELF, and one
-       constantly 1 appears complemented. Each group then gives a SUM term,
-       and the terms are multiplied together.
-    ```
-
-    Common errors
-    ```
-       Binary labelling (00,01,10,11) instead of Gray code
-       Missing the wrap-around groups, especially the four corners
-       Making a group smaller than it could be
-       Grouping a number of cells that is not a power of two
-       Leaving a 1 uncovered
-       Treating a don't-care as a compulsory 1
-    ```
-
-14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
-   F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
-
-    Answer: The function is
-    ```
-       F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD
-         + AB'C'D'  + AB'CD'  + ABCD'  + ABCD
-    ```
-
-    Step 1 — convert each term to its minterm number
-    ```
-       A'B'C'D' = 0000 = m0          AB'C'D' = 1000 = m8
-       A'B'CD'  = 0010 = m2          AB'CD'  = 1010 = m10
-       A'BCD'   = 0110 = m6          ABCD'   = 1110 = m14
-       A'BCD    = 0111 = m7          ABCD    = 1111 = m15
-
-       F(A,B,C,D) = Sigma m(0, 2, 6, 7, 8, 10, 14, 15)
-    ```
-
-    Step 2 — draw the K-map
-    ```
-       AB\CD   00   01   11   10
-        00      1    0    0    1        m0  m1  m3  m2
-        01      0    0    1    1        m4  m5  m7  m6
-        11      0    0    1    1        m12 m13 m15 m14
-        10      1    0    0    1        m8  m9  m11 m10
-    ```
-
-    Step 3 — group the 1s
-    ```
-       Group 1 : B'D'  ->  m0 , m2 , m8 , m10
-
-          AB\CD   00   01   11   10
-           00     [1]   .    .   [1]
-           01      .    .    .    .
-           11      .    .    .    .
-           10     [1]   .    .   [1]
-
-          Rows AB = 00 and 10 , columns CD = 00 and 10.
-          The map wraps in BOTH directions, so these four corner-like
-          cells are adjacent. B = 0 and D = 0 throughout  ->  B'D'
-
-       Group 2 : BC    ->  m6 , m7 , m14 , m15
-
-          AB\CD   00   01   11   10
-           00      .    .    .    .
-           01      .    .   [1]  [1]
-           11      .    .   [1]  [1]
-           10      .    .    .    .
-
-          Rows AB = 01 and 11 , columns CD = 11 and 10.
-          B = 1 and C = 1 throughout  ->  BC
-    ```
-
-    Step 4 — the simplified expression
-    ```
-       F = B'D' + BC
-    ```
-    - Thirty-two literals have become four.
-
-    Step 5 — verification
-    ```
-       Covered by B'D' : m0 , m2 , m8 , m10
-       Covered by BC   : m6 , m7 , m14 , m15
-       Union            : {0, 2, 6, 7, 8, 10, 14, 15}   - exactly the given set
-
-       Check a zero cell :
-          m5 = 0101 : B'D' = 0 (B is 1 and D is 1) , BC = 0 (C is 0)
-                      -> F = 0     correct, m5 is not in the list
-          m3 = 0011 : B'D' = 0 (D is 1) , BC = 0 (B is 0)
-                      -> F = 0     correct
-    ```
-
-    Step 6 — the logic circuit
-    ```
-       B ---|>o--- B' ---|‾‾\
-                         |    )--- B'D' ---+
-       D ---|>o--- D' ---|__/              |---|\
-                                           |   | )--- F = B'D' + BC
-       B ---------------|‾‾\               |---|/
-                        |    )--- BC ------+  (OR)
-       C ---------------|__/
-    ```
-    ```
-       Components : 2 inverters , 2 two-input AND gates , 1 two-input OR gate
-    ```
-
-    - Points worth noting: the `wrap-around` grouping is what makes `B'D'` a four-cell block rather than two separate pairs — missing it would give the longer answer `B'C'D' + B'CD'` instead. The map wraps at the left and right edges and at the top and bottom, so the four corners of a 4-variable map are always mutually adjacent.
-
-15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
-
-    Answer: F = A'B'C' + AB'C' + A'B'C + A'BC + ABC
-
-    Step 1 — list the minterms
-    ```
-       A'B'C' = 000 = m0
-       AB'C'  = 100 = m4
-       A'B'C  = 001 = m1
-       A'BC   = 011 = m3
-       ABC    = 111 = m7
-
-       F(A,B,C) = Sigma m(0, 1, 3, 4, 7)
-    ```
-
-    Step 2 — K-map (rows A, columns BC in Gray code order)
-    ```
-       A\BC   00    01    11    10
-        0     1     1     1     0        m0  m1  m3  m2
-        1     1     0     1     0        m4  m5  m7  m6
-    ```
-
-    Step 3 — groupings
-    ```
-    Loop 1 : A'B'   -> m0, m1
-             row A = 0 , columns BC = 00 and 01
-             A = 0, B = 0 ; only C changes
-
-    Loop 2 : B'C'   -> m0, m4
-             column BC = 00 , both rows
-             B = 0, C = 0 ; only A changes
-
-    Loop 3 : BC     -> m3, m7
-             column BC = 11 , both rows
-             B = 1, C = 1 ; only A changes
-
-       A\BC   00    01    11    10
-        0    [1]   [1]   [1]    0
-        1    [1]    0    [1]    0
-    ```
-
-    Final simplified expression
-    ```
-    F = A'B' + B'C' + BC
-    ```
-
-    Verification
-    ```
-    A  B  C | original | A'B' + B'C' + BC
-    --------+----------+-----------------
-    0  0  0 |    1     |   1 + 1 + 0 = 1
-    0  0  1 |    1     |   1 + 0 + 0 = 1
-    0  1  0 |    0     |   0 + 0 + 0 = 0
-    0  1  1 |    1     |   0 + 0 + 1 = 1
-    1  0  0 |    1     |   0 + 1 + 0 = 1
-    1  0  1 |    0     |   0 + 0 + 0 = 0
-    1  1  0 |    0     |   0 + 0 + 0 = 0
-    1  1  1 |    1     |   0 + 0 + 1 = 1        identical
-    ```
-
-    Logic circuit
-    ```
-       A ---|>o--- A' ---|‾‾\
-                         |    )--- A'B' ---+
-       B ---|>o--- B' ---|___/             |
-                  |                        |
-                  +------|‾‾\              |---|\
-                         |    )--- B'C' ---+   | )--- F
-       C ---|>o--- C' ---|___/             |   |/
-                                           |  (3-input OR)
-       B ---|‾‾\                           |
-            |    )--- BC --------- --------+
-       C ---|__/
-    ```
-
-    - Fifteen literals have reduced to six. Note that `m0 is used twice`, in Loop 1 and Loop 2 — overlapping loops are allowed and often give a smaller result.
-
-16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038-1039 (ET: DPI)]*
-
-    Answer: (Answered in English, as required for IT topics.) f(a,b,c,d) = a'bc'd' + a'b'c'd + a'bc'd + abc'd'
-
-    Step 1 — list the minterms
-    ```
-       a'bc'd' = 0100 = m4
-       a'b'c'd = 0001 = m1
-       a'bc'd  = 0101 = m5
-       abc'd'  = 1100 = m12
-
-       f(a,b,c,d) = Sigma m(1, 4, 5, 12)
-    ```
-
-    Step 2 — K-map (rows ab, columns cd, both in Gray code order)
-    ```
-       ab\cd   00    01    11    10
-        00     0     1     0     0        m0  m1  m3  m2
-        01     1     1     0     0        m4  m5  m7  m6
-        11     1     0     0     0        m12 m13 m15 m14
-        10     0     0     0     0        m8  m9  m11 m10
-    ```
-
-    Step 3 — groupings
-    ```
-    Loop 1 : a'c'd   -> m1, m5
-             rows ab = 00 and 01 , column cd = 01
-             a = 0, c = 0, d = 1 ; only b changes
-
-       ab\cd   00    01    11    10
-        00     .    [1]    .     .
-        01     .    [1]    .     .
-
-    Loop 2 : bc'd'   -> m4, m12
-             rows ab = 01 and 11 , column cd = 00
-             b = 1, c = 0, d = 0 ; only a changes
-
-       ab\cd   00    01    11    10
-        01    [1]    .     .     .
-        11    [1]    .     .     .
-    ```
-
-    Final simplified expression
-    ```
-    f(a, b, c, d) = a'c'd + bc'd'
-                  = c'(a'd + bd')
-    ```
-
-    Verification
-    ```
-    m1  = 0001 : a'c'd  = 1.1.1 = 1                covered
-    m4  = 0100 : bc'd'  = 1.1.1 = 1                covered
-    m5  = 0101 : a'c'd  = 1.1.1 = 1                covered
-    m12 = 1100 : bc'd'  = 1.1.1 = 1                covered
-
-    m0  = 0000 : a'c'd = 0 (d=0) , bc'd' = 0 (b=0)  ->  f = 0   correct
-    m13 = 1101 : a'c'd = 0 (a=1) , bc'd' = 0 (d=1)  ->  f = 0   correct
-    ```
-
-    Circuit
-    ```
-       a' --|‾‾\
-       c' --|    )--- a'c'd ---+
-       d ---|___/              |---|\
-                               |   | )--- f
-       b ---|‾‾\               |   |/
-       c' --|    )--- bc'd' ---+  (OR)
-       d' --|___/
-    ```
-
-    - Sixteen literals have reduced to six. Note that `c' appears in both terms`, so the factored form `c'(a'd + bd')` saves one more gate input, though it adds a level of delay.
-
-17. **(গ) Min term কী? K-map-এর সাহায্যে সরল করুন: $\bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) Minterm
-    - A `minterm` is a product (AND) term that contains `every variable of the function exactly once`, either in true or in complemented form.
-    - For n variables there are 2^n minterms, and each one is `1 for exactly one row` of the truth table and 0 for all the others.
-    ```
-    For three variables A, B, C :
-
-       Row  A B C | minterm  | symbol
-       -----------+----------+-------
-        0   0 0 0 | A'B'C'   | m0
-        1   0 0 1 | A'B'C    | m1
-        2   0 1 0 | A'BC'    | m2
-        3   0 1 1 | A'BC     | m3
-        4   1 0 0 | AB'C'    | m4
-        5   1 0 1 | AB'C     | m5
-        6   1 1 0 | ABC'     | m6
-        7   1 1 1 | ABC      | m7
-    ```
-    - Rule: a variable appears `complemented` where its bit is 0 and `uncomplemented` where its bit is 1.
-    - Any function can be written as the `sum of the minterms` of the rows where it is 1 — this is the canonical SOP form. The opposite is the `maxterm`, a sum term used for the canonical POS form.
-
-    Simplification of F = A'B'C' + A'B + ABC' + AC
-
-    Step 1 — expand every term to minterms
-    ```
-       A'B'C' = 000                  -> m0
-       A'B    = 010 , 011            -> m2 , m3
-       ABC'   = 110                  -> m6
-       AC     = 101 , 111            -> m5 , m7
-
-       F = Sigma m(0, 2, 3, 5, 6, 7)
-    ```
-
-    Step 2 — K-map (rows A, columns BC in Gray code order)
-    ```
-       A\BC   00    01    11    10
-        0     1     0     1     1        m0  m1  m3  m2
-        1     0     1     1     1        m4  m5  m7  m6
-    ```
-
-    Step 3 — groupings
-    ```
-    Loop 1 : B      -> m2, m3, m6, m7
-             columns BC = 11 and 10 , both rows ; B = 1 in all four
-
-       A\BC   00    01    11    10
-        0     .     .    [1]   [1]
-        1     .     .    [1]   [1]
-
-    Loop 2 : A'C'   -> m0, m2
-             row A = 0 , columns BC = 00 and 10 (they wrap around)
-             A = 0 and C = 0
-
-    Loop 3 : AC     -> m5, m7
-             row A = 1 , columns BC = 01 and 11 ; A = 1 and C = 1
-    ```
-
-    Final simplified expression
-    ```
-    F = B + A'C' + AC
-      = B + (A XNOR C)
-    ```
-
-    Verification
-    ```
-    A  B  C | original | B + A'C' + AC
-    --------+----------+--------------
-    0  0  0 |    1     |  0 + 1 + 0 = 1
-    0  0  1 |    0     |  0 + 0 + 0 = 0
-    0  1  0 |    1     |  1 + 1 + 0 = 1
-    0  1  1 |    1     |  1 + 0 + 0 = 1
-    1  0  0 |    0     |  0 + 0 + 0 = 0
-    1  0  1 |    1     |  0 + 0 + 1 = 1
-    1  1  0 |    1     |  1 + 0 + 0 = 1
-    1  1  1 |    1     |  1 + 0 + 1 = 1        identical
-    ```
-
-    - The map `wraps around` horizontally, which is what allows m0 and m2 to be grouped even though they sit at opposite ends of the row. Forgetting this wrap-around is the commonest K-map mistake.
-
-18. **Simplify the expression: $F(A,B,C) = \bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$, using k-map.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
-
-    Answer: F(A,B,C) = A'B'C' + A'B + ABC' + AC
-
-    Step 1 — expand every term to minterms
-    ```
-       A'B'C' = 000                  -> m0
-       A'B    = 010 , 011            -> m2 , m3
-       ABC'   = 110                  -> m6
-       AC     = 101 , 111            -> m5 , m7
-
-       F = Sigma m(0, 2, 3, 5, 6, 7)
-    ```
-
-    Step 2 — K-map (rows A, columns BC in Gray code order)
-    ```
-       A\BC   00    01    11    10
-        0     1     0     1     1        m0  m1  m3  m2
-        1     0     1     1     1        m4  m5  m7  m6
-    ```
-
-    Step 3 — groupings
-    ```
-    Loop 1 : B      -> m2, m3, m6, m7
-             the two columns BC = 11 and 10 , both rows
-
-       A\BC   00    01    11    10
-        0     .     .    [1]   [1]
-        1     .     .    [1]   [1]
-
-    Loop 2 : A'C'   -> m0, m2
-             row A = 0 , columns BC = 00 and 10 , wrapping round the edge
-
-       A\BC   00    01    11    10
-        0    [1]    .     .    [1]
-        1     .     .     .     .
-
-    Loop 3 : AC     -> m5, m7
-             row A = 1 , columns BC = 01 and 11
-
-       A\BC   00    01    11    10
-        0     .     .     .     .
-        1     .    [1]   [1]    .
-    ```
-
-    Final simplified expression
-    ```
-    F = B + A'C' + AC
-    ```
-    - The last two terms are the XNOR of A and C, so the answer can also be written `F = B + (A XNOR C)`.
-
-    Verification
-    ```
-    A  B  C | original | B + A'C' + AC
-    --------+----------+--------------
-    0  0  0 |    1     |       1
-    0  0  1 |    0     |       0
-    0  1  0 |    1     |       1
-    0  1  1 |    1     |       1
-    1  0  0 |    0     |       0
-    1  0  1 |    1     |       1
-    1  1  0 |    1     |       1
-    1  1  1 |    1     |       1        identical
-    ```
-
-    Circuit
-    ```
-       A ---|>o--- A' ---|‾‾\
-                         |    )--- A'C' ---+
-       C ---|>o--- C' ---|___/             |
-                                           |---|\
-       B ---------------------------------+   | )--- F
-                                           |   |/
-       A ---|‾‾\                           |  (3-input OR)
-            |    )--- AC ------------------+
-       C ---|__/
-    ```
-
-    - Nine literals have reduced to five. Remember that the K-map `wraps around` at the left and right edges, which is what makes the m0-m2 pair legal.
-
-19. **(a) Simplify $F(A,B,C,D) = ACD+AB+\bar{D}+A\bar{C}D$ using K-map and draw the simplified circuit diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
-
-    Answer: F(A, B, C, D) = ACD + AB + D' + AC'D
-
-    Step 1 — simplify algebraically first, as a check
-    ```
-       ACD + AC'D = AD(C + C') = AD
-       F = AD + AB + D'
-       Now  AD + D' = A + D'        since X + X'Y = X + Y
-       F = A + AB + D' = A + D'     since A + AB = A  (absorption)
-    ```
-
-    Step 2 — expand each term into minterms
-    ```
-       ACD  = A=1, C=1, D=1     -> m11 , m15
-       AB   = A=1, B=1          -> m12 , m13 , m14 , m15
-       D'   = D=0               -> m0, m2, m4, m6, m8, m10, m12, m14
-       AC'D = A=1, C=0, D=1     -> m9 , m13
-
-       F = Sigma m(0, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15)
-    ```
-
-    Step 3 — K-map (rows AB, columns CD in Gray code order)
-    ```
-       AB\CD   00    01    11    10
-        00     1     0     0     1        m0  m1  m3  m2
-        01     1     0     0     1        m4  m5  m7  m6
-        11     1     1     1     1        m12 m13 m15 m14
-        10     1     1     1     1        m8  m9  m11 m10
-    ```
-
-    Step 4 — groupings
-    ```
-    Loop 1 : A    -> m8 to m15 , the two whole rows AB = 11 and 10 (8 cells)
-             A = 1 everywhere in them
-
-       AB\CD   00    01    11    10
-        00     .     .     .     .
-        01     .     .     .     .
-        11    [1]   [1]   [1]   [1]
-        10    [1]   [1]   [1]   [1]
-
-    Loop 2 : D'   -> the two whole columns CD = 00 and CD = 10 (8 cells)
-             D = 0 everywhere in them
-
-       AB\CD   00    01    11    10
-        00    [1]    .     .    [1]
-        01    [1]    .     .    [1]
-        11    [1]    .     .    [1]
-        10    [1]    .     .    [1]
-    ```
-
-    Final answer
-    ```
-    F = A + D'
-    ```
-
-    Verification of the 0 cells
-    ```
-       m1 = 0001 : A = 0 , D' = 0   ->  F = 0    correct
-       m3 = 0011 : A = 0 , D' = 0   ->  F = 0    correct
-       m5 = 0101 : A = 0 , D' = 0   ->  F = 0    correct
-       m7 = 0111 : A = 0 , D' = 0   ->  F = 0    correct
-    ```
-    - The only 0s are the four cells with A = 0 and D = 1, which is exactly `(A + D')' = A'D`.
-
-    Simplified circuit
-    ```
-       A --------------|\
-                       | )--- F = A + D'
-       D ---|>o--- D' -|/
-    ```
-    - The whole expression reduces to `one inverter and one OR gate`. B and C disappear completely — the output does not depend on them at all.
-
-## Boolean Algebra & De Morgan’s Theorem (19)
+## Boolean Algebra & De Morgan’s Theorem (17)
 
 1. **(a) State De-Morgan’s law with an appropriate example.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
-   Answer: `De Morgan's laws` say how a complement is distributed over an AND or an OR. They are the most used rules in digital design, because they let AND be turned into OR and back.
+Answer: `De Morgan's laws` say how a complement is distributed over an AND or an OR. They are the most used rules in digital design, because they let AND be turned into OR and back.
 
    The two laws
    ```
@@ -6492,7 +6719,7 @@
 
 2. **AB + (A(\overline{BC}))(AC + \overline{B}C)** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
-   Answer: The expression is
+Answer: The expression is
    ```
    F = AB + (A . (BC)') . (AC + B'C)
    ```
@@ -6560,7 +6787,7 @@
 
 3. **Simplify Y = A\bar{B} + \overline{(\bar{A} + B)}C in digital logic design.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 671 (ET: N/A)]*
 
-   Answer: The expression is
+Answer: The expression is
    ```
    Y = AB' + (A' + B)' C
    ```
@@ -6613,7 +6840,7 @@
 
 4. **X+\bar{X}Y = ?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
-   Answer: The identity is
+Answer: The identity is
    ```
    X + X'Y = X + Y
    ```
@@ -6671,7 +6898,7 @@
 
 5. **(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 773 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) The function is
+Answer: (Answered in English, as required for IT topics.) The function is
    ```
    F(A,B,C,D) = A'B'C' + B'CD' + A'B'CD' + AB'C'
    ```
@@ -6743,71 +6970,9 @@
    ```
    - Twelve literals have reduced to four, and the circuit is one NAND plus one inverter and one AND gate.
 
-6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\,\bar{w} + (zw)(\overline{xy})** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
+6. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
 
-   Answer: The equation is
-   ```
-      y(z + w') + x(z' + y')w' + (zw)(xy)'
-   ```
-   - Sum-of-products form means a sum of AND terms, with every complement bar sitting over a single variable only.
-
-   Step 1 — expand the first term
-   ```
-      y(z + w') = yz + yw'
-   ```
-
-   Step 2 — expand the second term
-   ```
-      x(z' + y')w' = xz'w' + xy'w'
-   ```
-
-   Step 3 — remove the bar over the product in the third term
-   ```
-      (xy)' = x' + y'                   De Morgan
-
-      (zw)(xy)' = zw(x' + y')
-                = x'zw + y'zw
-   ```
-
-   Step 4 — put the SOP form together
-   ```
-      F = yz + yw' + xz'w' + xy'w' + x'zw + y'zw
-   ```
-   - This is the answer the question asks for: a sum of products with no bar over more than one variable.
-
-   Step 5 — the minimal form, as a check
-   - Expanding to minterms over the order `w x y z`:
-   ```
-      F = Sigma m(2, 3, 4, 5, 6, 7, 9, 11, 13, 15)
-   ```
-   - K-map (rows wx, columns yz)
-   ```
-      wx\yz   00    01    11    10
-       00     0     0     1     1        m0  m1  m3  m2
-       01     1     1     1     1        m4  m5  m7  m6
-       11     0     1     1     0        m12 m13 m15 m14
-       10     0     1     1     0        m8  m9  m11 m10
-
-      Loop w'x : the whole row wx = 01
-      Loop w'y : rows wx = 00 and 01 , columns yz = 11 and 10
-      Loop wz  : rows wx = 11 and 10 , columns yz = 01 and 11
-   ```
-   ```
-      F = w'x + w'y + wz
-   ```
-
-   Verification of one cell
-   ```
-      m9 = w=1, x=0, y=0, z=1
-      original : y(z+w') = 0 ,  x(...)w' = 0 ,  (zw)(xy)' = 1.1 = 1  ->  F = 1
-      minimal  : wz = 1                                              ->  F = 1   correct
-   ```
-
-   - Laws used: distributive `A(B + C) = AB + AC`, and De Morgan `(XY)' = X' + Y'` to break the bar over the product. The minimal form `w'x + w'y + wz` is far cheaper, but the question only asked for the SOP conversion.
-
-7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
-
-   Answer: The expression is
+Answer: The expression is
    ```
       ABC'D + ABCD + A'BD
    ```
@@ -6866,9 +7031,9 @@
    ```
    - A single AND gate replaces three 4-input AND gates and one OR gate. A and C disappear completely — the output does not depend on them.
 
-8. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 876 (ET: BUET)]*
+7. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 876 (ET: BUET)]*
 
-   Answer: The expression is
+Answer: The expression is
    ```
       ABC'D + A'B'C'D + ABCD + A'B'CD + ABCD' + A'B'CD'
    ```
@@ -6937,9 +7102,9 @@
    ```
    - Laws used: `X + X' = 1`, `X + X = X`, and the distributive law to factor `(C + D)` out of both groups.
 
-9. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
+8. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
 
-   Answer: The expression is
+Answer: The expression is
    ```
       x'y'z + x'yz + xy'
    ```
@@ -7003,73 +7168,9 @@
    ```
    - Laws used: distributive to factor `x'z`, and `y + y' = 1`. Seven literals have reduced to four.
 
-10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 890-891 (ET: N/A)]*
+9. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
-    Answer: The expression is
-    ```
-       (x + y + xy)(x + z)
-    ```
-
-    Step 1 — simplify the first bracket
-    ```
-       x + y + xy
-     = x + (y + xy)
-     = x + y                            since y + xy = y  (absorption law)
-    ```
-    - Or equally, `x + xy = x`, giving `x + y` directly.
-
-    Step 2 — multiply out the two brackets
-    ```
-       (x + y)(x + z)
-     = x.x + x.z + y.x + y.z            distributive law
-     = x + xz + xy + yz                 since x.x = x
-     = x(1 + z + y) + yz
-     = x . 1 + yz
-     = x + yz
-    ```
-
-    Step 3 — the shortcut
-    - The distributive law in its second form, `(A + B)(A + C) = A + BC`, gives the same result in one line:
-    ```
-       (x + y)(x + z) = x + yz
-    ```
-
-    Final answer
-    ```
-       F = x + yz
-    ```
-
-    Verification
-    ```
-    x  y  z | x+y+xy | x+z | product | x + yz
-    --------+--------+-----+---------+-------
-    0  0  0 |   0    |  0  |    0    |   0
-    0  0  1 |   0    |  1  |    0    |   0
-    0  1  0 |   1    |  0  |    0    |   0
-    0  1  1 |   1    |  1  |    1    |   1
-    1  0  0 |   1    |  1  |    1    |   1
-    1  0  1 |   1    |  1  |    1    |   1
-    1  1  0 |   1    |  1  |    1    |   1
-    1  1  1 |   1    |  1  |    1    |   1
-    ```
-    ```
-       F = Sigma m(3, 4, 5, 6, 7)
-    ```
-    - The two right-hand columns are identical, so the simplification is correct.
-
-    Circuit
-    ```
-       y ---|‾‾\
-            |    )--- yz ---|\
-       z ---|__/            | )--- F = x + yz
-                            |/
-       x --------------------+
-    ```
-    - Laws used: absorption `X + XY = X`, and the distributive law `(A + B)(A + C) = A + BC`. Seven literals have reduced to three.
-
-11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
-
-    Answer: The expression is
+Answer: The expression is
     ```
        ABC'D + A'BD + ABCD
     ```
@@ -7132,9 +7233,9 @@
     ```
     - One AND gate replaces three multi-input AND gates and a 3-input OR gate. `A and C disappear` — the output does not depend on them at all.
 
-12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
+10. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
-    Answer: The expression is
+Answer: The expression is
     ```
        ABCD + A'BD + ABC'D
     ```
@@ -7197,9 +7298,9 @@
     ```
     - Eleven literals reduce to two, and the whole circuit becomes a single AND gate. Both `A and C are redundant`.
 
-13. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
+11. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) `De Morgan's laws` state how a complement bar is removed from over an AND or an OR term. They are the most used rules in digital logic design.
+Answer: (Answered in English, as required for IT topics.) `De Morgan's laws` state how a complement bar is removed from over an AND or an OR term. They are the most used rules in digital logic design.
 
     The two laws
     ```
@@ -7264,9 +7365,9 @@
     - They convert a two-level AND-OR circuit into an all-NAND circuit with no change of structure.
     - They also let a designer move bubbles across a circuit diagram, which is how real schematics are simplified.
 
-14. **(ক) বুলিয়ান অ্যালজেবরার সাহায্যে সরল করুন: $\overline{x+y(x+z)}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
+12. **(ক) বুলিয়ান অ্যালজেবরার সাহায্যে সরল করুন: $\overline{x+y(x+z)}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The expression is
+Answer: (Answered in English, as required for IT topics.) The expression is
     ```
        ( x + y(x + z) )'
     ```
@@ -7323,9 +7424,9 @@
     - One NAND, one inverter and one AND gate.
     - Laws used: distributive, absorption `x + xy = x`, `1 + y = 1`, and both forms of De Morgan.
 
-15. **(খ) প্রমাণ করুন: $A \oplus B = AB + \bar{A}\bar{B}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073-1074 (ET: N/A)]*
+13. **(খ) প্রমাণ করুন: $A \oplus B = AB + \bar{A}\bar{B}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073-1074 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The statement to prove is
+Answer: (Answered in English, as required for IT topics.) The statement to prove is
     ```
        A (+) B  =  AB + A'B'
     ```
@@ -7378,9 +7479,9 @@
 
     - If the question intends the statement as printed, the correct exam answer is to say that `AB + A'B'` is the `XNOR` (equivalence) function, and that XOR is `A'B + AB'`. XNOR is used in comparators, because it outputs 1 when the two bits are equal.
 
-16. **(ক) তিন চলকের De Morgan's উপপাদ্য দুইটি লিখুন এবং Truth table-এর সাহায্যে প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+14. **(ক) তিন চলকের De Morgan's উপপাদ্য দুইটি লিখুন এবং Truth table-এর সাহায্যে প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) De Morgan's theorems for three variables are
+Answer: (Answered in English, as required for IT topics.) De Morgan's theorems for three variables are
     ```
     Theorem 1 :  (A . B . C)' = A' + B' + C'
     Theorem 2 :  (A + B + C)' = A' . B' . C'
@@ -7443,9 +7544,9 @@
 
     - Importance: these theorems are the reason `NAND and NOR are universal gates`, and they let a two-level AND-OR circuit be converted into an all-NAND circuit without changing its structure.
 
-17. **Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
+15. **Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
 
-    Answer: The expression is
+Answer: The expression is
     ```
        F = A'C + AB' + BC' + ABC
     ```
@@ -7509,9 +7610,9 @@
        C ---|/
     ```
 
-18. **Construct a truth table for the following function: $(r \lor (q \land \neg p)) \land \neg(r \land (q \land \neg p))$ is the same as $r \oplus (q \land \neg p)$ where $\lor = \text{OR}, \land = \text{AND}, \neg = \text{NOT}, \oplus = \text{XOR}$** *[Combined 3 Banks Assistant Programmer 2018 compact it 1198 (ET: N/A)]*
+16. **Construct a truth table for the following function: $(r \lor (q \land \neg p)) \land \neg(r \land (q \land \neg p))$ is the same as $r \oplus (q \land \neg p)$ where $\lor = \text{OR}, \land = \text{AND}, \neg = \text{NOT}, \oplus = \text{XOR}$** *[Combined 3 Banks Assistant Programmer 2018 compact it 1198 (ET: N/A)]*
 
-    Answer: The expression is
+Answer: The expression is
     ```
        ( r OR (q AND NOT p) )  AND  NOT( r AND (q AND NOT p) )
     ```
@@ -7563,9 +7664,9 @@
 
     - Point worth noting: `(X + Y)(XY)'` is one of the standard alternative forms of XOR, along with `X'Y + XY'` and `(X (+) Y) = (X' + Y')(X + Y)`. Recognising it saves the whole truth table in an exam.
 
-19. **Trouth table construction for $f(A,B,C,D) = (A+B) \oplus (CD)$** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+17. **Trouth table construction for $f(A,B,C,D) = (A+B) \oplus (CD)$** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
 
-    Answer: The function is
+Answer: The function is
     ```
        f(A, B, C, D) = (A + B) (+) (C . D)
     ```
@@ -7637,7 +7738,7 @@
 
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
-   Answer: Multiplexer
+Answer: Multiplexer
    - A `multiplexer (MUX)` is a combinational circuit with many data inputs and one output. Selection lines decide which input reaches the output, so it is also called a `data selector`.
    - With `n` select lines it handles `2^n` inputs.
    ```
@@ -7683,7 +7784,7 @@
 
 2. **Difference between combinational and sequential circuits.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
-   Answer: Combinational circuit
+Answer: Combinational circuit
    - The output depends `only on the present inputs`. There is no memory and no clock.
    - Change an input and the output changes after the gate delay only.
    ```
@@ -7735,7 +7836,7 @@
 
 3. **(b) Design a 4-bit ring counter using flip-flops. Write down its working principle using.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
 
-   Answer: A `ring counter` is a shift register whose output is fed back to its input, so a single 1 circulates round the ring. A 4-bit ring counter has `4 states`, one per flip-flop.
+Answer: A `ring counter` is a shift register whose output is fed back to its input, so a single 1 circulates round the ring. A 4-bit ring counter has `4 states`, one per flip-flop.
 
    Circuit — 4 D flip-flops in a loop
    ```
@@ -7790,7 +7891,7 @@
 
 4. **(খ) Combinational এবং Sequential circuit এর মধ্যে পার্থক্য ডায়াগ্রাম সহকারে লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 773 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Combinational circuit
+Answer: (Answered in English, as required for IT topics.) Combinational circuit
    - The output depends `only on the present input`. There is no memory element and no clock, so the same input always gives the same output.
    ```
            +--------------------+
@@ -7837,7 +7938,7 @@
 
 5. **Given a 100MHz clock signal derive a circuit using T-flip flops of generate 50MHz and 25MHz clock signals. Draw a timing diagram for all the three clock signal.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823-824 (ET: BUET)]*
 
-   Answer: A `T flip-flop` with T tied to logic 1 toggles on every active clock edge. Its output therefore completes one full cycle for every `two` input cycles, so it divides the frequency by 2.
+Answer: A `T flip-flop` with T tied to logic 1 toggles on every active clock edge. Its output therefore completes one full cycle for every `two` input cycles, so it divides the frequency by 2.
 
    Circuit — two T flip-flops in cascade
    ```
@@ -7905,52 +8006,53 @@
 
 6. **What is the difference between latch and flip-flop?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
-   Answer: Both a `latch` and a `flip-flop` store one bit. The difference is `when` they respond to their inputs.
+Answer: Both store one bit of data. The difference is `when` each responds to its input.
 
-   Latch
-   - `Level-triggered`: it responds while the enable line is at its active level.
-   - It is `transparent` during that whole period — the output follows every change of the input.
-   - Built directly from cross-coupled NAND or NOR gates, so it is small and fast.
+    Latch
+    - `Level-triggered` — it responds throughout the time its enable line is active.
+    - It is `transparent` during that period: the output follows every change of the input.
+    - Built directly from cross-coupled NAND or NOR gates, so it is small, fast and cheap.
+    - Types: SR latch, D latch, gated SR latch.
 
-   Flip-flop
-   - `Edge-triggered`: it samples the input only at the instant the clock changes from 0 to 1 (or 1 to 0), and ignores it at every other moment.
-   - It is never transparent — the output changes at one predictable instant per clock cycle.
-   - Built from `two latches` in a master-slave arrangement.
+    Flip-flop
+    - `Edge-triggered` — it samples the input only at the instant the clock changes from 0 to 1 (or 1 to 0), and ignores it at every other moment.
+    - It is never transparent; the output can change at only one predictable instant per clock cycle.
+    - Built from `two latches` in a master-slave arrangement, so it costs roughly twice the area.
+    - Types: D, JK, T, master-slave.
 
-   ```
-      CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
+    ```
+       CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
 
-      D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
+       D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
 
-      Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________   follows D while EN is HIGH
+       Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________
 
-      FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________   changes only at the edge
-                    ^                ^
-                    rising edge      rising edge
-   ```
+       FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________
+                     ^                ^
+                     rising edge      rising edge
+    ```
 
-   Difference
+    Difference
 
-   | Point | Latch | Flip-flop |
-   |---|---|---|
-   | Triggering | Level (enable HIGH or LOW) | Clock edge, rising or falling |
-   | Transparency | Transparent while enabled | Never transparent |
-   | Clock | Not strictly needed | Required |
-   | Built from | Cross-coupled gates | Two latches (master-slave) |
-   | Gate count and area | Fewer, smaller | About double |
-   | Speed | Faster | Slower |
-   | Power | Lower | Higher, the clock switches every cycle |
-   | Timing analysis | Difficult; data can race through | Simple and predictable |
-   | Output glitches | Can pass through | Blocked |
-   | Used in | Asynchronous circuits, simple storage | Registers, counters, shift registers |
-   | Examples | SR latch, D latch, gated latch | D, JK, T, master-slave flip-flop |
+    | Point | Latch | Flip-flop |
+    |---|---|---|
+    | Triggering | Level | Clock edge |
+    | Transparency | Transparent while enabled | Never transparent |
+    | Clock required | No | Yes |
+    | Built from | Cross-coupled gates | Two latches (master-slave) |
+    | Area and gate count | Fewer | About double |
+    | Speed | Faster | Slower |
+    | Power | Lower | Higher |
+    | Timing analysis | Difficult, data can race through | Simple and predictable |
+    | Glitch behaviour | A glitch on the input can pass | Blocked between edges |
+    | Used in | Asynchronous circuits, buffering | Registers, counters, shift registers, FSMs |
 
-   - Why flip-flops dominate real designs: in a synchronous system every stage must change at the same instant. A latch's transparency lets a new value race forward through several stages inside one clock period, which produces unpredictable results. The flip-flop's edge trigger closes that door.
-   - Latches are still used where area and power matter more than timing safety, for example in low-power ASIC pipelines and inside the flip-flops themselves.
+    - Why flip-flops dominate practical design: a latch stays open for a whole half-cycle, so a new value can race forward through several stages in one clock period, giving unpredictable results. The flip-flop's edge trigger allows exactly one stage of movement per cycle, which is what makes a synchronous system analysable.
+    - Latches are still used where area and power matter more than timing safety, for example in low-power pipelines — and every flip-flop is itself made of two of them.
 
 7. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
 
-   Answer: The question asks which clock scheme is `cheapest` to build for a company's digital system. The answer depends on what the clock has to do.
+Answer: The question asks which clock scheme is `cheapest` to build for a company's digital system. The answer depends on what the clock has to do.
 
    For a digital counter or divider — use an `asynchronous (ripple) clock`
    - In a ripple counter only the first flip-flop receives the external clock; each later stage is clocked by the previous stage's output.
@@ -7987,7 +8089,7 @@
 
 8. **(ii) R-S Flip-flop এর সত্যস্য সারণি ও বৈশিষ্ট আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 959-960 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) An `SR flip-flop` (Set-Reset) is the most basic memory element. `S` sets the output to 1 and `R` resets it to 0.
+Answer: (Answered in English, as required for IT topics.) An `SR flip-flop` (Set-Reset) is the most basic memory element. `S` sets the output to 1 and `R` resets it to 0.
 
    Circuit — cross-coupled NOR gates
    ```
@@ -8055,7 +8157,7 @@
 
 9. **MOD-6 বাইনারি কাউন্টার এর Block Diagram অংকন করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039 (ET: DPI)]*
 
-   Answer: (Answered in English, as required for IT topics.) A `MOD-6` counter has 6 states, counting 000 to 101 and then resetting to 000. It needs `3 flip-flops`, because 2^2 = 4 is too few and 2^3 = 8 is enough.
+Answer: (Answered in English, as required for IT topics.) A `MOD-6` counter has 6 states, counting 000 to 101 and then resetting to 000. It needs `3 flip-flops`, because 2^2 = 4 is too few and 2^3 = 8 is enough.
    ```
       Number of flip-flops : 2^n >= 6  ->  n = 3
       Count sequence       : 000, 001, 010, 011, 100, 101, back to 000
@@ -8124,7 +8226,7 @@
 
 10. **(গ) Flip-Flop কী? একটি Multiplexer এর কার্যপদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1075 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) Flip-flop
+Answer: (Answered in English, as required for IT topics.) Flip-flop
     - A `flip-flop` is a `bistable` sequential circuit that stores `one bit` of information. It has two stable states, 1 and 0, and stays in one until a clock edge tells it to change.
     - It is `edge-triggered`: it samples its inputs only at the instant the clock goes from 0 to 1 (or 1 to 0). This is what makes a synchronous system predictable.
     - The outputs `Q` and `Q'` are always complementary.
@@ -8184,7 +8286,7 @@
 
 11. **Ripple counter কী? একটি তিন বিটের Asynchronous up ripple counter এর গঠন লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077-1078 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A `ripple counter` is an `asynchronous` counter in which only the first flip-flop receives the external clock. Each following flip-flop is clocked by the output of the one before it, so the count change `ripples` from the least significant bit towards the most significant.
+Answer: (Answered in English, as required for IT topics.) A `ripple counter` is an `asynchronous` counter in which only the first flip-flop receives the external clock. Each following flip-flop is clocked by the output of the one before it, so the count change `ripples` from the least significant bit towards the most significant.
 
     - It is built from `toggle` flip-flops — a JK flip-flop with J = K = 1, or a D flip-flop with D tied to Q'.
     - An `n-bit` ripple counter has `2^n` states and divides the input frequency by 2^n.
@@ -8243,7 +8345,7 @@
 
 12. **(c) Draw the circuit diagram of a mod-10 asynchronous ripple up counter and explain its operation.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
 
-    Answer: A `mod-10` (decade) counter counts 0000 to 1001 and then returns to 0000, giving ten states. It needs `4 flip-flops`, since 2^3 = 8 is too few and 2^4 = 16 is enough.
+Answer: A `mod-10` (decade) counter counts 0000 to 1001 and then returns to 0000, giving ten states. It needs `4 flip-flops`, since 2^3 = 8 is too few and 2^4 = 16 is enough.
     ```
        Count sequence : 0000 ... 1001 (0 to 9), then reset
        State 1010 (decimal 10) must fire the reset
@@ -8320,7 +8422,7 @@
 
 13. **Difference between Register and Latch.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
-    Answer: A `latch` stores `one bit`. A `register` stores a `group of bits` — usually 8, 16, 32 or 64 — and is built from several flip-flops sharing one clock.
+Answer: A `latch` stores `one bit`. A `register` stores a `group of bits` — usually 8, 16, 32 or 64 — and is built from several flip-flops sharing one clock.
 
     Latch
     - A level-triggered 1-bit memory element made from cross-coupled gates.
@@ -8370,7 +8472,7 @@
 
 14. **Main difference between Combinational and Sequential circuits.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
-    Answer: The main difference is `memory`. A combinational circuit has none; a sequential circuit has memory and therefore remembers what happened before.
+Answer: The main difference is `memory`. A combinational circuit has none; a sequential circuit has memory and therefore remembers what happened before.
 
     Combinational circuit
     - Output = f(present inputs) only. Feed the same inputs and you always get the same output.
@@ -8419,7 +8521,7 @@
 
 15. **What is synchronous? Why sequential circuit use synchronization.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
-    Answer: Synchronous
+Answer: Synchronous
     - `Synchronous` means that all the parts of a circuit change state `at the same instant`, controlled by a common `clock` signal. Every flip-flop receives the same clock and acts on the same edge.
     - The opposite is `asynchronous`, where one element's output triggers the next, so the changes happen one after another and at unpredictable moments.
     ```
@@ -8452,7 +8554,7 @@
 
 16. **What is the difference between flip-flop and latch with figure?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190-1191 (ET: N/A)]*
 
-    Answer: Both a `latch` and a `flip-flop` are 1-bit memory elements. The difference is `when` they accept new data — a latch responds to the `level` of its control signal, a flip-flop to its `edge`.
+Answer: Both a `latch` and a `flip-flop` are 1-bit memory elements. The difference is `when` they accept new data — a latch responds to the `level` of its control signal, a flip-flop to its `edge`.
 
     D latch — level-triggered
     ```
@@ -8516,7 +8618,7 @@
 
 17. **What is the difference between latch and flip-flop?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227 (ET: N/A)]*
 
-    Answer: Both store one bit of data. The difference is `when` each responds to its input.
+Answer: Both store one bit of data. The difference is `when` each responds to its input.
 
     Latch
     - `Level-triggered` — it responds throughout the time its enable line is active.
@@ -8564,6 +8666,10 @@
 
 1. **(c) Compare TTL and CMOS logic family in terms of-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1351 (ET: N/A)]*
  * **(i) Speed**
+ * **(ii) Noise**
+ * **(iii) Power consumption.**
+
+* **(i) Speed**
  * **(ii) Noise**
  * **(iii) Power consumption.**
 
@@ -8620,7 +8726,7 @@
 
 2. **Describe the important characteristics of digital IC's.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 556 (ET: BIBM)]*
 
-   Answer: A `digital IC` (integrated circuit) contains many logic gates fabricated on one silicon chip. When choosing one, these are the characteristics that matter.
+Answer: A `digital IC` (integrated circuit) contains many logic gates fabricated on one silicon chip. When choosing one, these are the characteristics that matter.
 
    1. Propagation delay (t_pd)
    - The time between an input change and the corresponding output change. It decides the maximum operating speed.
@@ -8683,7 +8789,7 @@
 
 3. **Difference between Analog and Digital Circuit.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 873 (ET: N/A)]*
 
-   Answer: An `analog circuit` works with signals that vary `continuously` over a range of values. A `digital circuit` works with signals that take only `two discrete` values, 0 and 1.
+Answer: An `analog circuit` works with signals that vary `continuously` over a range of values. A `digital circuit` works with signals that take only `two discrete` values, 0 and 1.
 
    Analog circuit
    - The signal can take any value between its limits — 0 V, 1.37 V, 2.891 V and so on.
@@ -8729,7 +8835,7 @@
 
 4. **(c) What is fan-in and fan out?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
 
-   Answer: Fan-in
+Answer: Fan-in
    - `Fan-in` is the `number of inputs` a logic gate can accept.
    - A 2-input NAND has a fan-in of 2; a 3-input AND has a fan-in of 3.
    ```
@@ -8786,7 +8892,7 @@
 
 5. **Sources of transient fault and permanent fault in a digital system consists of hardware and software? Example based on Hardware and software.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
-   Answer: A `fault` is a defect that can make a digital system behave incorrectly. Faults are classified by `how long they last`.
+Answer: A `fault` is a defect that can make a digital system behave incorrectly. Faults are classified by `how long they last`.
    ```
    Transient fault : appears for a short time and then disappears by itself.
                      The hardware is not damaged. Also called a soft error.
@@ -8842,7 +8948,7 @@
 
 6. **What is IC? Advantages of IC over discrete component circuit. Why do IC's need small power for their operation?** *[BTRC Assistant Director (Technical) 2019 compact it 1147 (ET: N/A)]*
 
-   Answer: What an IC is
+Answer: What an IC is
    - An `integrated circuit (IC)` is a complete electronic circuit — transistors, diodes, resistors and their interconnections — fabricated together on a single small piece of semiconductor, usually silicon.
    - Invented by `Jack Kilby` (1958) and `Robert Noyce` (1959). A modern processor holds billions of transistors on a chip a few square centimetres in size.
    ```
@@ -8883,11 +8989,11 @@
 
    - The result: a discrete gate built from transistors and resistors might dissipate tens of milliwatts, while an equivalent CMOS gate on a chip dissipates nanowatts when idle. That difference is exactly what makes a battery-powered smartphone possible.
 
-## 2's Complement & Binary Arithmetic (4)
+## 2's Complement & Binary Arithmetic (3)
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) 2's complement method
+Answer: (Answered in English, as required for IT topics.) 2's complement method
    - `2's complement` is the standard way a computer stores negative numbers and performs subtraction.
    - To find the 2's complement of a number: `invert every bit (1's complement), then add 1`.
    ```
@@ -8962,7 +9068,7 @@
 
 2. **BCD Addition: 00010011 + 00100110** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 644 (ET: BUET)]*
 
-   Answer: `BCD` (Binary Coded Decimal) writes each decimal digit separately as a 4-bit group. Only `0000 to 1001` are valid; the six patterns `1010 to 1111` are illegal.
+Answer: `BCD` (Binary Coded Decimal) writes each decimal digit separately as a 4-bit group. Only `0000 to 1001` are valid; the six patterns `1010 to 1111` are illegal.
 
    The problem
    ```
@@ -9028,106 +9134,9 @@
 
    - In this question `no correction was needed`, because both groups stayed within 0 to 9. Stating the correction rule anyway shows the examiner that the method is understood.
 
-3. **(a) For two 8bit binary numbers. What will be output values in 2’s complement format: (i) (10000000+10000000) (ii) (11111111-01111111)** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
+3. **How many bits have to change to convert int A to int B. Sample A=31 and B=14.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1164 (ET: N/A)]*
 
-   Answer: (i) 10000000 + 10000000
-
-   Step 1 — read the operands as 8-bit 2's complement
-   ```
-      1000 0000 : the MSB is 1, so the number is negative.
-      2's complement : invert -> 0111 1111 , add 1 -> 1000 0000 = 128
-
-      1000 0000 = -128        (the most negative value an 8-bit register holds)
-   ```
-
-   Step 2 — add
-   ```
-         1000 0000        (-128)
-      +  1000 0000        (-128)
-      ------------------
-       1 0000 0000
-       ^
-       carry out is discarded in 8-bit arithmetic
-
-      Stored result = 0000 0000 = 0
-   ```
-
-   Step 3 — check for overflow
-   ```
-      True answer  : -128 + (-128) = -256
-      8-bit range  : -128 to +127
-      -256 is outside the range  ->  OVERFLOW
-
-      Sign rule : two NEGATIVE operands gave a POSITIVE (zero) result  ->  overflow
-      Carry rule: carry INTO the sign bit = 0 , carry OUT of it = 1 ; they
-                  differ, which also signals overflow
-   ```
-   ```
-      Output value  = 0000 0000  (decimal 0)
-      Overflow flag = 1  ->  the stored answer is WRONG
-   ```
-
-   (ii) 11111111 - 01111111
-
-   Step 1 — read the operands
-   ```
-      1111 1111 : MSB is 1, negative.
-      invert -> 0000 0000 , add 1 -> 0000 0001 = 1
-      1111 1111 = -1
-
-      0111 1111 : MSB is 0, positive = 127
-   ```
-
-   Step 2 — turn the subtraction into an addition
-   ```
-      A - B = A + (2's complement of B)
-
-      B      = 0111 1111
-      invert = 1000 0000
-      add 1  = 1000 0001        (this is -127)
-   ```
-
-   Step 3 — add
-   ```
-         1111 1111        (-1)
-      +  1000 0001        (-127)
-      ------------------
-       1 1000 0000
-       ^
-       carry out is discarded
-
-      Stored result = 1000 0000
-   ```
-
-   Step 4 — read the result and check overflow
-   ```
-      MSB is 1, so the result is negative.
-      invert -> 0111 1111 , add 1 -> 1000 0000 = 128
-
-      Result = -128
-
-      True answer : -1 - 127 = -128
-      -128 IS inside the 8-bit range, so there is NO overflow.
-
-      Sign rule : negative + negative gave negative  ->  no overflow
-   ```
-   ```
-      Output value  = 1000 0000  (decimal -128)
-      Overflow flag = 0  ->  the answer is CORRECT
-   ```
-
-   Summary
-
-   | Case | Stored result | Decimal | Overflow |
-   |---|---|---|---|
-   | (i) 10000000 + 10000000 | 0000 0000 | 0 | Yes — true answer -256 |
-   | (ii) 11111111 - 01111111 | 1000 0000 | -128 | No |
-
-   - Key point to state: the `carry out is always discarded` and is never by itself proof of an error. Overflow is decided by the sign rule — two operands of the same sign giving a result of the opposite sign.
-
-4. **How many bits have to change to convert int A to int B. Sample A=31 and B=14.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1164 (ET: N/A)]*
-
-   Answer: The number of bit positions in which two numbers differ is called their `Hamming distance`. It is found by taking the `XOR` of the two numbers and counting the 1s in the result.
+Answer: The number of bit positions in which two numbers differ is called their `Hamming distance`. It is found by taking the `XOR` of the two numbers and counting the 1s in the result.
 
    Step 1 — write both numbers in binary
    ```
@@ -9183,11 +9192,109 @@
 
    - Point worth noting: this is exactly how `Hamming distance` is defined in coding theory. An error-correcting code keeps a minimum distance `d` between valid codewords so that up to `d-1` errors can be detected and up to `(d-1)/2` corrected.
 
+## Number Systems & Codes (3)
+
+1. **(b) Represent - 25 in 8 bit binary using 2's complement.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 76]]*
+
+Answer: 2's complement is the standard way computers store negative numbers. The method is: write the positive value, invert every bit, then add 1.
+
+   Step 1 — write +25 in 8 bits
+   ```
+      25 / 2 = 12  r 1
+      12 / 2 =  6  r 0
+       6 / 2 =  3  r 0
+       3 / 2 =  1  r 1
+       1 / 2 =  0  r 1
+
+      (25)10 = (11001)2  ->  in 8 bits :  0001 1001
+   ```
+
+   Step 2 — take the 1's complement (invert every bit)
+   ```
+      +25       :  0 0 0 1 1 0 0 1
+      invert    :  1 1 1 0 0 1 1 0        <- 1's complement
+   ```
+
+   Step 3 — add 1
+   ```
+        1 1 1 0 0 1 1 0
+      +             0 1
+      -----------------
+        1 1 1 0 0 1 1 1
+   ```
+
+   Answer
+   ```
+      -25  =  (11100111)2  =  (E7)16
+   ```
+
+   Verification — add +25 and -25; the result must be 0
+   ```
+        0 0 0 1 1 0 0 1     (+25)
+      + 1 1 1 0 0 1 1 1     (-25)
+      -----------------
+      1 0 0 0 0 0 0 0 0
+      ^
+      carry out is discarded in 8-bit arithmetic
+
+      Result = 0000 0000 = 0     correct
+   ```
+
+   Verification by place value
+   ```
+   In 2's complement the MSB carries a NEGATIVE weight:
+
+      1      1     1    0    0   1  1  1
+    -128    64    32   16    8   4  2  1
+    -128 + 64 + 32 + 0 + 0 + 4 + 2 + 1 = -25     correct
+   ```
+
+   Points to note
+   - The MSB is the `sign bit`: 0 means positive, 1 means negative. Here it is 1, as expected.
+   - An 8-bit 2's complement register holds the range `-128 to +127`.
+   - 2's complement is used because subtraction becomes addition — the same adder circuit handles both — and because it has only one representation of zero, unlike 1's complement and sign-magnitude.
+
+2. **X = 00110, Y = 11100 are represented in 5-bit signed 2's complement system. Then their sum X + Y in 6-bit signed 2's complemented representation is? (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 310]]*
+
+Answer:
+    Step 1: Determine Decimal Values:
+    - $X = 00110_2 \implies$ Sign bit is $0$ (Positive) $\implies +(0110_2) = +6_{10}$.
+    - $Y = 11100_2 \implies$ Sign bit is $1$ (Negative).
+      To find magnitude, take 2's complement: Invert bits ($00011$) $+ 1 = 00100_2 = 4_{10}$.
+      So $Y = -4_{10}$.
+
+    Step 2: Calculate Sum:
+    $$X + Y = +6 + (-4) = +2_{10}$$
+
+    Step 3: Represent $+2_{10}$ in 6-bit Signed 2's Complement:
+    - $+2_{10} = 000010_2$.
+    - (Using 6-bit binary sign-extension addition: $000110 + 111100 = 1000010 \implies$ discard overflow carry bit $\implies$ **000010**).
+
+    Final Answer: **000010**
+
+3. **Convert the following octal number into decimal and hexadecimal: (651.124)_8.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
+
+Answer:
+
+    1. Conversion to Decimal:
+    $$\text{Integer part: } 6 \times 8^2 + 5 \times 8^1 + 1 \times 8^0 = 6 \times 64 + 5 \times 8 + 1 = 384 + 40 + 1 = 425$$
+    $$\text{Fractional part: } 1 \times 8^{-1} + 2 \times 8^{-2} + 4 \times 8^{-3} = \frac{1}{8} + \frac{2}{64} + \frac{4}{512} = 0.125 + 0.03125 + 0.0078125 = 0.1640625$$
+    - Decimal Value: **$(425.1640625)_{10}$**
+
+    2. Conversion to Hexadecimal:
+    - Convert each octal digit to 3-bit binary:
+      $$6 \to 110, \quad 5 \to 101, \quad 1 \to 001, \quad . \quad 1 \to 001, \quad 2 \to 010, \quad 4 \to 100$$
+      $$(651.124)_8 = (110101001.001010100)_2$$
+    - Regroup into 4-bit nibbles:
+      - Integer: $0001 \quad 1010 \quad 1001 \implies 1 \quad \text{A} \quad 9$
+      - Fractional: $0010 \quad 1010 \quad 1000 \implies 2 \quad \text{A} \quad 8$
+    - Hexadecimal Value: **$(1\text{A}9.2\text{A}8)_{16}$** (or **$(1\text{A}9.2\text{A})_{16}$**)
+
 ## Finite State Machines (FSM) (1)
 
 1. **A traffic signal cycles from RED to YELLOW, YELLOW to GREEN and GREEN to RED. In each cycle RED is turned for 100 seconds, YELLOW is turned for 40 seconds and GREEN is turned for 80 seconds. The traffic has to be implemented using FSM. The only input to this FSM is a clock of 10 second period. The minimum number of flip-flops require to implement this FSM is?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
 
-   Answer: The number of flip-flops is decided by the `number of distinct states` the FSM must hold, and each clock tick is one state.
+Answer: The number of flip-flops is decided by the `number of distinct states` the FSM must hold, and each clock tick is one state.
 
    Step 1 — find how many clock ticks each colour lasts
    ```
