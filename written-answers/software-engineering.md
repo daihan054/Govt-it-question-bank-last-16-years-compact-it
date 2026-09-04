@@ -12863,6 +12863,110 @@
 
 1. **What is CI/DI development model?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
 
+   Answer: The question writes "CI/DI"; the standard term is `CI/CD` — `Continuous Integration` and `Continuous Delivery` or `Continuous Deployment`. It is a development model in which code is integrated, tested and released `automatically and frequently` rather than in large manual batches.
+
+   Continuous Integration (CI)
+   ```
+      Every developer merges their work into the shared main branch
+      SEVERAL TIMES A DAY, and each merge triggers an AUTOMATED
+      BUILD AND TEST.
+
+      THE PIPELINE ON EVERY COMMIT
+           1. developer pushes code
+           2. the CI server checks it out
+           3. COMPILE / BUILD
+           4. run UNIT TESTS
+           5. run STATIC ANALYSIS and a security scan
+           6. report PASS or FAIL within minutes
+
+      If the build breaks, FIXING IT IS THE TEAM'S FIRST PRIORITY.
+      That rule is what makes CI work ; without it the pipeline
+      becomes noise everyone ignores.
+   ```
+   - What it solves: `integration hell`. Without CI, developers work separately for weeks and then discover, at merge time, that their changes conflict. With CI the divergence is at most a few hours, so conflicts are small and cheap.
+
+   Continuous Delivery (CD)
+   ```
+      Every change that passes the pipeline is automatically built,
+      tested and made READY TO RELEASE - but the release itself is
+      a MANUAL DECISION, made by pressing a button.
+
+      The pipeline extends to :
+           integration tests -> acceptance tests -> deploy to
+           STAGING -> ready for production
+   ```
+
+   Continuous Deployment
+   ```
+      The same, but the final step is AUTOMATIC TOO. Every change
+      that passes all tests goes STRAIGHT TO PRODUCTION with no
+      human approval.
+
+      THE DIFFERENCE BETWEEN THE TWO Cs
+           CONTINUOUS DELIVERY  : ready to deploy , released
+                MANUALLY   <- what most organisations do, and what
+                a bank or government system requires
+           CONTINUOUS DEPLOYMENT: deployed AUTOMATICALLY
+                <- requires very high test confidence and the
+                ability to roll back instantly
+   ```
+
+   The pipeline
+   ```mermaid
+   flowchart LR
+       A[Commit] --> B[Build]
+       B --> C[Unit tests]
+       C --> D[Static analysis / security scan]
+       D --> E[Integration tests]
+       E --> F[Deploy to staging]
+       F --> G[Acceptance tests]
+       G --> H{Release?}
+       H -->|manual: Delivery| I[Production]
+       H -->|automatic: Deployment| I
+   ```
+   ```
+      CODE  ->  BUILD  ->  TEST  ->  STAGING  ->  PRODUCTION
+        |         |          |          |             |
+      commit   compile    unit +     deploy       release
+               package    integr.    + accept.
+                          tests      tests
+
+      <------------ CONTINUOUS INTEGRATION ------->
+      <------------------ CONTINUOUS DELIVERY --------------->
+      <------------------ CONTINUOUS DEPLOYMENT ------------->
+                                           (fully automatic)
+   ```
+
+   What it requires — the preconditions
+   ```
+      VERSION CONTROL          one shared repository ; short-lived
+           branches, merged daily
+      AUTOMATED TESTS          the foundation. CI/CD without a
+           reliable test suite only ships defects faster.
+      BUILD AUTOMATION         one command builds everything
+      A CI SERVER              Jenkins , GitLab CI , GitHub Actions ,
+           Azure DevOps , CircleCI
+      ENVIRONMENT PARITY       staging must resemble production ;
+           Docker and infrastructure-as-code make this practical
+      FAST FEEDBACK            the pipeline must finish in minutes.
+           A two-hour pipeline is not continuous.
+      ROLLBACK CAPABILITY      and a tested rollback procedure
+   ```
+
+   Benefits
+   - `Defects are found within minutes` of being written, where they are cheapest to fix.
+   - `Small releases` mean small risk — a change of ten lines is far easier to diagnose than a change of ten thousand.
+   - `No integration hell`, because divergence never exceeds a day.
+   - `Faster time to market`, and a `repeatable, auditable` release process instead of a manual one that depends on one person's memory.
+   - Developers get `confidence to refactor`, because the suite catches regressions.
+
+   Costs and risks
+   - Substantial `initial investment` in test automation and infrastructure.
+   - The pipeline needs `maintenance`; a `flaky test` that fails randomly destroys trust in the whole system faster than anything else.
+   - Continuous deployment is `unsuitable` where a regulator requires formal change approval — which is why banks use continuous `delivery` with a manual release gate.
+
+   - Related terms worth naming: `DevOps` is the broader culture of developers and operations sharing responsibility for running the software, of which CI/CD is the technical core; `blue-green` and `canary` releases limit the blast radius of a bad deployment; and `feature flags` let unfinished code be merged safely by keeping it switched off in production.
+
 ## UI/UX Design (1)
 
 1. **What is UI/UX? What is the difference between them?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123-1124 (ET: BREB)]*
