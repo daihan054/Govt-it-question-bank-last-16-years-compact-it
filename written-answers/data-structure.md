@@ -4197,21 +4197,617 @@ Output: Not Balanced
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
+   Answer: A binary search tree can be rebuilt from its postorder alone, because a BST's `inorder is always the sorted order` — so sorting the postorder supplies the missing second traversal.
+
+   The method
+   - Step 1 — sort the postorder values; that gives the `inorder` traversal.
+   - Step 2 — the `last` element of postorder is the root.
+   - Step 3 — split the inorder at the root: smaller values form the left subtree, larger values the right.
+   - Step 4 — recurse, consuming postorder from right to left.
+
+   Worked example
+   ```
+   Postorder given : 20, 40, 30, 60, 80, 70, 50
+   ```
+
+   Step 1 — inorder = the sorted values
+   ```
+   Inorder: 20, 30, 40, 50, 60, 70, 80
+   ```
+
+   Step 2 — construction
+   - Last postorder element `50` is the root. Inorder splits as `20 30 40 | 50 | 60 70 80`.
+   - Right subtree: postorder `60, 80, 70` → root `70`, with `60` left and `80` right.
+   - Left subtree: postorder `20, 40, 30` → root `30`, with `20` left and `40` right.
+
+   The binary search tree
+   ```
+                       50
+                    /      \
+                  30        70
+                 /  \      /   \
+               20    40  60     80
+   ```
+
+   Step 3 — the required traversals
+   ```
+   Preorder (Root, Left, Right) : 50, 30, 20, 40, 70, 60, 80
+   Inorder  (Left, Root, Right) : 20, 30, 40, 50, 60, 70, 80
+   Postorder (given)            : 20, 40, 30, 60, 80, 70, 50
+   ```
+
+   Verification
+   - The inorder is in ascending order, which confirms the tree is a valid BST ✓
+   - Recomputing postorder from the tree reproduces the given sequence ✓
+
+   Shortcut worth knowing
+   - `Preorder of a BST` can be obtained directly from the postorder without drawing the tree at all, but drawing it is safer in an exam and is usually what the question asks for.
+   - The same trick works in reverse: given the `preorder` of a BST, sorting it gives the inorder, and the tree follows.
+   - Note that this shortcut works `only for a BST`. For an ordinary binary tree, postorder alone is not enough — the inorder must be supplied separately.
+
 2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
+
+   Answer:
+
+   Given items: `40, 45, 80, 90, 50, 70`
+
+   Part 1 — Binary Search Tree
+
+   BST rule: everything in the left subtree is smaller than the node, everything in the right subtree is larger. Each item is inserted as a new leaf, in the order given.
+
+   ```
+   Insert 40 -> root
+   Insert 45 -> 45 > 40, right of 40
+   Insert 80 -> 80 > 40 right, 80 > 45 right
+   Insert 90 -> 90 > 40, > 45, > 80 -> right of 80
+   Insert 50 -> 50 > 40 right, 50 > 45 right, 50 < 80 -> left of 80
+   Insert 70 -> 70 > 40, > 45, < 80 left, 70 > 50 -> right of 50
+   ```
+
+   ```
+                 40
+                   \
+                    45
+                      \
+                       80
+                      /   \
+                    50     90
+                      \
+                       70
+   ```
+
+   - Inorder check: 40, 45, 50, 70, 80, 90 — sorted ✓, so the BST is valid.
+   - Note the shape: because the data arrives almost in ascending order, the tree is badly skewed, and its height is 4 instead of the ideal 2. This is exactly the situation AVL and Red-Black trees exist to prevent.
+
+   Part 2 — Heap (max heap)
+
+   A heap is a `complete binary tree` — every level filled left to right — in which every parent is greater than or equal to its children (max heap). Each item is inserted at the next free position and then `sifted up`.
+
+   ```
+   Insert 40:                    40
+
+   Insert 45:                    40            45 > 40, swap        45
+                                /                                  /
+                              45                                 40
+
+   Insert 80:                    45            80 > 45, swap        80
+                                /  \                               /  \
+                              40    80                           40    45
+
+   Insert 90:                    80            90 > 40, swap  ->  90 > 80, swap
+                                /  \                                  90
+                              40    45                               /  \
+                             /                                     80    45
+                           90                                     /
+                                                                40
+
+   Insert 50:                    90            50 > 40? no swap needed with 80
+                                /  \                               90
+                              80    45                            /  \
+                             /  \                               80    45
+                           40    50                             /  \
+                                                              40    50
+
+   Insert 70:                    90            70 > 45, swap        90
+                                /  \                               /  \
+                              80    45                           80    70
+                             /  \   /                           /  \   /
+                           40    50 70                        40    50 45
+   ```
+
+   Final max heap
+   ```
+                       90
+                    /      \
+                  80        70
+                 /  \      /
+               40    50   45
+   ```
+   - Array form: `[90, 80, 70, 40, 50, 45]`
+   - Check the heap property: 90 >= 80 and 70 ✓; 80 >= 40 and 50 ✓; 70 >= 45 ✓
+
+   For comparison — the min heap of the same data
+   ```
+                       40
+                    /      \
+                  45        70
+                 /  \      /
+               90    50   80
+
+   Array: [40, 45, 70, 90, 50, 80]
+   ```
+
+   Key difference between the two structures
+   - A `BST` is ordered left to right, so inorder gives sorted output and search is O(log n) when balanced.
+   - A `heap` is ordered top to bottom only, so it says nothing about left versus right. It gives O(1) access to the maximum (or minimum) and O(log n) insertion and deletion, which is why it implements priority queues and heap sort.
 
 3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What is a binary search tree
+   - A BST is a binary tree in which, for `every` node:
+     - all values in the `left` subtree are `smaller` than the node's value, and
+     - all values in the `right` subtree are `larger`.
+   - The property must hold at every node, not just the root — that is the most common mistake.
+   - Consequence: the `inorder traversal always produces the values in sorted order`, which is the standard test of validity.
+
+   Example
+   ```
+                       50
+                    /      \
+                  30        70
+                 /  \      /   \
+               20    40  60     80
+
+   Inorder: 20, 30, 40, 50, 60, 70, 80    -> sorted ✓
+   ```
+
+   Operations
+
+   1. Search
+   ```
+   SEARCH(root, key)
+       IF root = NULL OR root.data = key THEN RETURN root
+       IF key < root.data THEN RETURN SEARCH(root.left, key)
+       ELSE RETURN SEARCH(root.right, key)
+   ```
+   - At each step half the remaining tree is discarded, so it is `O(h)` — O(log n) when balanced.
+
+   2. Insertion
+   - Search for the value; when NULL is reached, insert the new node there. `A new node is always inserted as a leaf`, so the structure of the existing tree is never disturbed.
+   ```
+   Insert 45 into the tree above:
+   45 < 50 -> left ; 45 > 30 -> right ; 45 > 40 -> right of 40
+   ```
+   - Complexity `O(h)`.
+
+   3. Deletion — three cases
+   - `Leaf node` — remove it directly.
+   - `One child` — replace the node with its child.
+   - `Two children` — replace the node's value with its `inorder successor` (the smallest value in the right subtree) or its inorder predecessor, then delete that node from its old position.
+   ```
+   Deleting 50 (two children): successor is 60
+                   50                          60
+                 /    \                      /    \
+               30      70       ->         30      70
+              /  \    /  \                /  \       \
+             20  40  60   80             20  40       80
+   ```
+   - Complexity `O(h)`.
+
+   4. Traversals
+   ```
+   Inorder   : 20, 30, 40, 50, 60, 70, 80   (sorted — the defining property)
+   Preorder  : 50, 30, 20, 40, 70, 60, 80
+   Postorder : 20, 40, 30, 60, 80, 70, 50
+   ```
+
+   5. Minimum and maximum
+   - The `leftmost` node holds the minimum, the `rightmost` node the maximum. Both are O(h).
+
+   Complexity
+
+   | Operation | Best / Average (balanced) | Worst (skewed) |
+   |---|---|---|
+   | Search | O(log n) | O(n) |
+   | Insert | O(log n) | O(n) |
+   | Delete | O(log n) | O(n) |
+   | Traversal | O(n) | O(n) |
+
+   - The worst case occurs when data is inserted already sorted, producing a chain. `AVL` and `Red-Black` trees fix this by rebalancing after every insertion and deletion, guaranteeing O(log n).
+
 4. **Construct a Binary Search tree, then post order, ....... (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
+
+   Answer: The exact data was not printed, so a complete worked example is given using a standard set of values.
+
+   Data used: `50, 30, 70, 20, 40, 60, 80`
+
+   Part 1 — construct the BST
+   - Rule: smaller values go left, larger values go right, at every node. Each value is inserted as a new leaf.
+   ```
+   Insert 50 -> root
+   Insert 30 -> 30 < 50, left
+   Insert 70 -> 70 > 50, right
+   Insert 20 -> < 50 left, < 30 left
+   Insert 40 -> < 50 left, > 30 right
+   Insert 60 -> > 50 right, < 70 left
+   Insert 80 -> > 50 right, > 70 right
+   ```
+   ```
+                       50
+                    /      \
+                  30        70
+                 /  \      /   \
+               20    40  60     80
+   ```
+
+   Part 2 — the traversals
+
+   `Postorder` (Left, Right, Root)
+   ```
+   Left subtree of 50 : 20, 40, 30
+   Right subtree of 50: 60, 80, 70
+   Root               : 50
+
+   Postorder = 20, 40, 30, 60, 80, 70, 50
+   ```
+
+   `Inorder` (Left, Root, Right)
+   ```
+   Inorder = 20, 30, 40, 50, 60, 70, 80
+   ```
+   - It is sorted, which confirms the tree is a valid BST.
+
+   `Preorder` (Root, Left, Right)
+   ```
+   Preorder = 50, 30, 20, 40, 70, 60, 80
+   ```
+
+   `Level order` (breadth first, using a queue)
+   ```
+   Level order = 50, 30, 70, 20, 40, 60, 80
+   ```
+
+   Part 3 — properties of this tree
+
+   | Property | Value |
+   |---|---|
+   | Number of nodes | 7 |
+   | Height (edges) | 2 |
+   | Leaves | 20, 40, 60, 80 |
+   | Internal nodes | 50, 30, 70 |
+   | Minimum value | 20 (leftmost node) |
+   | Maximum value | 80 (rightmost node) |
+   | Is it balanced? | Yes — it is a perfect binary tree |
+
+   - The height is 2, the minimum possible for 7 nodes, so search costs only 3 comparisons in the worst case. Had the same values been inserted in sorted order (20, 30, 40, 50, 60, 70, 80) the tree would have degenerated into a chain of height 6, and search would have cost 7 comparisons — the O(n) worst case.
 
 5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
 
+   Answer:
+
+   Given elements: `1, 2, 3, 4, 5`
+
+   Constructing the BST
+   - The values arrive in `ascending order`, and in a BST every new value larger than all previous ones goes to the right. So each insertion becomes the right child of the previous node.
+   ```
+   Insert 1 -> root
+   Insert 2 -> 2 > 1, right of 1
+   Insert 3 -> 3 > 1 right, 3 > 2 right of 2
+   Insert 4 -> right of 3
+   Insert 5 -> right of 4
+   ```
+
+   The binary search tree
+   ```
+           1
+            \
+             2
+              \
+               3
+                \
+                 4
+                  \
+                   5
+   ```
+   - This is a `right-skewed` tree — the worst possible shape. It has degenerated into a linked list.
+
+   The traversals
+
+   `Inorder` (Left, Root, Right)
+   ```
+   Inorder = 1, 2, 3, 4, 5
+   ```
+   - Sorted, as it must be for any BST.
+
+   `Preorder` (Root, Left, Right)
+   ```
+   Preorder = 1, 2, 3, 4, 5
+   ```
+   - Identical to inorder here, because there are no left subtrees at all.
+
+   `Postorder` (Left, Right, Root)
+   ```
+   Postorder = 5, 4, 3, 2, 1
+   ```
+   - Exactly the reverse, because every node is visited only after its single right subtree is finished.
+
+   Summary
+
+   | Traversal | Result |
+   |---|---|
+   | Inorder | 1, 2, 3, 4, 5 |
+   | Preorder | 1, 2, 3, 4, 5 |
+   | Postorder | 5, 4, 3, 2, 1 |
+
+   The important lesson in this question
+   - Height is `4` (edges), the maximum possible for 5 nodes, so searching for 5 takes 5 comparisons — `O(n)`, no better than a linked list.
+   - The ideal tree for the same 5 values would be
+   ```
+               3
+             /   \
+            2     4
+           /       \
+          1         5
+   ```
+   with height 2 and O(log n) search.
+   - This is precisely why `self-balancing` trees exist. An AVL tree would have rotated during insertion and produced the balanced shape automatically. Inserting sorted data into a plain BST is the classic worst case.
+
 6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
+
+   Answer:
+
+   Given
+   ```
+   Preorder : 1, 5, 8, 7, 4, 9, 3
+   Inorder  : 8, 5, 7, 1, 9, 4, 3
+   ```
+
+   Method
+   - The first unused element of `preorder` is the root of the current subtree.
+   - Find it in `inorder`: everything to its left is the left subtree, everything to its right is the right subtree.
+   - Recurse on both halves.
+
+   Step-by-step construction
+
+   Step 1 — root
+   - Preorder begins with `1`. In inorder: `8 5 7 | 1 | 9 4 3`
+   - Left subtree = {8, 5, 7}; right subtree = {9, 4, 3}.
+
+   Step 2 — left subtree
+   - Next preorder element is `5`. In inorder: `8 | 5 | 7`
+   - So 8 is the left child of 5 and 7 is the right child.
+
+   Step 3 — right subtree
+   - Next preorder element after the left subtree is consumed is `4`. In inorder: `9 | 4 | 3`
+   - So 9 is the left child of 4 and 3 is the right child.
+
+   The tree
+   ```
+                       1
+                    /     \
+                   5       4
+                  / \     / \
+                 8   7   9   3
+   ```
+
+   Verification
+   - `Preorder` (Root, Left, Right): 1, 5, 8, 7, 4, 9, 3 ✓
+   - `Inorder` (Left, Root, Right): 8, 5, 7, 1, 9, 4, 3 ✓
+   - `Postorder` for this tree: 8, 7, 5, 9, 3, 4, 1
+
+   An important observation
+   - The question calls this a BST, but the tree produced is `not` a valid binary search tree. The test is simple: the inorder traversal of a BST must be in ascending order, and `8, 5, 7, 1, 9, 4, 3` is not sorted.
+   - Concretely, node 8 sits in the left subtree of 5 although 8 > 5, and 9 sits in the left subtree of 4 although 9 > 4. Both violate the BST property.
+   - So the two traversals do determine a unique `binary tree`, and it is drawn above, but that tree is a general binary tree rather than a search tree.
+   - For contrast, a genuine BST with these seven values would have the inorder 1, 3, 4, 5, 7, 8, 9. <!-- verify -->
 
 7. **Write an algorithm to find a node in a binary search tree.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
 
+   Answer: Searching a BST exploits its ordering: at every node, half the remaining tree can be discarded.
+
+   Recursive algorithm
+   ```
+   ALGORITHM search(root, key)
+   INPUT : the root of a BST and the key to find
+   OUTPUT: a pointer to the node, or NULL if it is not present
+
+   BEGIN
+       IF root = NULL THEN
+           RETURN NULL                     // not found — reached an empty subtree
+       END IF
+
+       IF key = root.data THEN
+           RETURN root                     // found
+       ELSE IF key < root.data THEN
+           RETURN search(root.left, key)   // must be in the left subtree
+       ELSE
+           RETURN search(root.right, key)  // must be in the right subtree
+       END IF
+   END
+   ```
+
+   Iterative algorithm — preferred in practice, as it uses no stack
+   ```
+   ALGORITHM searchIterative(root, key)
+   BEGIN
+       current = root
+       WHILE current ≠ NULL DO
+           IF key = current.data THEN RETURN current
+           ELSE IF key < current.data THEN current = current.left
+           ELSE current = current.right
+       END WHILE
+       RETURN NULL
+   END
+   ```
+
+   C implementation
+   ```c
+   struct Node* search(struct Node *root, int key) {
+       while (root != NULL) {
+           if (key == root->data) return root;
+           root = (key < root->data) ? root->left : root->right;
+       }
+       return NULL;                        // not found
+   }
+   ```
+
+   Worked example — searching for 60
+   ```
+                       50
+                    /      \
+                  30        70
+                 /  \      /   \
+               20    40  60     80
+
+   Step 1: 60 > 50  -> go right       (30, 20, 40 discarded)
+   Step 2: 60 < 70  -> go left        (80 discarded)
+   Step 3: 60 = 60  -> FOUND
+   ```
+   - Only 3 comparisons were needed for 7 nodes, because each step eliminated roughly half of what remained.
+
+   Searching for a value that is absent, say 45
+   ```
+   45 < 50 -> left ; 45 > 30 -> right ; 45 > 40 -> right of 40 is NULL -> NOT FOUND
+   ```
+
+   Complexity
+
+   | Case | Tree shape | Complexity |
+   |---|---|---|
+   | Best | Key at the root | O(1) |
+   | Average / balanced | Height ≈ log n | `O(log n)` |
+   | Worst | Skewed (sorted input) | `O(n)` |
+
+   - Space: `O(h)` for the recursive version (the call stack) and `O(1)` for the iterative version.
+   - The worst case appears when values are inserted already sorted, producing a chain. AVL and Red-Black trees rebalance automatically and guarantee O(log n).
+
 8. **Complexity of BST (Binary Search Tree) best and worst case.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
 
+   Answer: Every BST operation walks down a single path from the root, so its cost is proportional to the `height h` of the tree. Everything therefore depends on how balanced the tree is.
+
+   Complexity table
+
+   | Operation | Best case | Average case | Worst case |
+   |---|---|---|---|
+   | Search | O(1) — key at the root | `O(log n)` | `O(n)` |
+   | Insert | O(1) | `O(log n)` | `O(n)` |
+   | Delete | O(1) | `O(log n)` | `O(n)` |
+   | Find minimum / maximum | O(1) | O(log n) | O(n) |
+   | Traversal (in/pre/post order) | O(n) | O(n) | O(n) |
+   | Space | O(n) | O(n) | O(n) |
+
+   Best case — a `balanced` tree
+   - Every level is full, so the height is `⌊log2 n⌋`.
+   ```
+                       50
+                    /      \
+                  30        70
+                 /  \      /   \
+               20    40  60     80
+
+   n = 7, height = 2, so at most 3 comparisons.
+   ```
+   - Each comparison discards half the remaining nodes, exactly as in binary search, giving `O(log n)`.
+   - For a million nodes, only about 20 comparisons are needed.
+
+   Worst case — a `skewed` tree
+   - Occurs when the data is inserted in `sorted` (or reverse-sorted) order, so every new node hangs off the same side.
+   ```
+   Insert 10, 20, 30, 40, 50 in that order:
+
+           10
+             \
+              20
+                \
+                 30
+                   \
+                    40
+                      \
+                       50
+
+   n = 5, height = 4. Searching for 50 needs 5 comparisons.
+   ```
+   - The tree has degenerated into a `linked list`, so search, insert and delete all become `O(n)` — no better than sequential search.
+   - For a million nodes, a million comparisons.
+
+   Why the difference is so large
+   ```
+   n = 1,000,000
+   Balanced BST : ~20 comparisons
+   Skewed BST   : ~1,000,000 comparisons
+   ```
+
+   The remedy — self-balancing trees
+
+   | Tree | Balance rule | Guaranteed complexity |
+   |---|---|---|
+   | `AVL tree` | Height difference of the two subtrees ≤ 1 at every node | O(log n) |
+   | `Red-Black tree` | Colour rules keep the longest path ≤ 2 × the shortest | O(log n) |
+   | B-tree / B+ tree | Multi-way, all leaves at the same level | O(log n), few disk reads |
+
+   - These rebalance with `rotations` after every insertion and deletion, so the worst case is eliminated. Red-Black trees are what `std::map` in C++ and `TreeMap` in Java are built on, precisely to avoid the skewed case.
+
 9. **What is Binary Search Tree? Explain the complexity of BST?** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
+
+   Answer:
+
+   What is a binary search tree
+   - A BST is a binary tree in which, for `every` node:
+     - every value in the `left` subtree is `smaller` than the node's value, and
+     - every value in the `right` subtree is `larger`.
+   - The rule must hold at every node, not merely at the root.
+   - Duplicates are normally not allowed, or are pushed consistently to one side.
+
+   Example
+   ```
+                       50
+                    /      \
+                  30        70
+                 /  \      /   \
+               20    40  60     80
+   ```
+   - The defining consequence: the `inorder traversal is always sorted` — here 20, 30, 40, 50, 60, 70, 80. That is the standard way to verify a BST.
+
+   Operations
+   - `Search` — compare with the node; go left if smaller, right if larger. Half the remaining tree is discarded at each step.
+   - `Insert` — search until NULL is reached and place the new node there. A new node always becomes a `leaf`.
+   - `Delete` — three cases: a leaf is removed directly; a node with one child is replaced by that child; a node with two children is replaced by its inorder successor, which is then deleted from its old position.
+   - `Minimum` is the leftmost node, `maximum` the rightmost.
+
+   Complexity — it depends entirely on the height
+
+   | Operation | Best / Average (balanced) | Worst (skewed) |
+   |---|---|---|
+   | Search | `O(log n)` | `O(n)` |
+   | Insert | `O(log n)` | `O(n)` |
+   | Delete | `O(log n)` | `O(n)` |
+   | Traversal | O(n) | O(n) |
+   | Space | O(n) | O(n) |
+
+   Why the two extremes exist
+   - `Balanced case` — the height is about log2 n. Every comparison halves the search space, exactly as in binary search. For a million nodes, about 20 comparisons.
+   - `Worst case` — inserting `sorted` data makes every node the right child of the previous one, so the tree becomes a chain of height n − 1 and behaves like a linked list. For a million nodes, a million comparisons.
+   ```
+   Sorted input 10, 20, 30, 40, 50 gives:
+
+       10
+         \
+          20
+            \
+             30
+               \
+                40
+                  \
+                   50
+   ```
+
+   Remedy
+   - `Self-balancing` trees rebalance with rotations after every insertion and deletion, guaranteeing O(log n) in all cases: `AVL` (strict height balance), `Red-Black` (used by C++ `std::map` and Java `TreeMap`), and `B-trees` for disk-based indexes.
+
+   Applications
+   - Sorted-order storage and retrieval, dictionaries and symbol tables in compilers, database indexing, range queries, priority scheduling, and any situation where both fast search and sorted output are required.
 
 ## Priority Queues & Heaps (Min/Max Heap) (8)
 
