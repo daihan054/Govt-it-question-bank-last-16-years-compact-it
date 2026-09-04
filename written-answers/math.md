@@ -683,15 +683,72 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **CARBON word permutations that vowel must occupy odd positions?** *[BCIC Assistant Programmer 14.02.2025 compact it 1329 (ET: BUET)]*
 
+   Answer:
+   - The word "CARBON" has 6 letters:
+     - Vowels (2): A, O
+     - Consonants (4): C, R, B, N
+   - Total positions $= 6$ (Positions: 1, 2, 3, 4, 5, 6).
+   - Odd positions (3): 1, 3, 5.
+   - Number of ways to place 2 vowels in 3 odd positions:
+     $$^3P_2 = \frac{3!}{(3-2)!} = 3 \times 2 = 6$$
+   - Number of ways to place remaining 4 consonants in remaining 4 positions:
+     $$4! = 4 \times 3 \times 2 \times 1 = 24$$
+   - Total number of permutations $= 6 \times 24 = 144$
+   - Answer: 144
+
 2. **PROBLEMS শব্দটির P ও S কে প্রথমে এবং শেষে যথাক্রমে রেখে কতগুলো শব্দ গঠন করা যায়?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
+
+   Answer:
+   - "PROBLEMS" শব্দে মোট ৮টি বর্ণ আছে এবং প্রতিটি বর্ণ ভিন্ন।
+   - শর্তমতে, প্রথম স্থানে P এবং শেষ স্থানে S নির্দিষ্ট থাকবে।
+   - অতএব, P ও S এর স্থান নির্দিষ্ট (১টি উপায়)।
+   - অবশিষ্ট ৬টি স্থানে বাকি ৬টি বর্ণ (R, O, B, L, E, M) নিজেদের মধ্যে সাজানো যাবে:
+     $$6! = 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720\text{ উপায়ে}$$
+   - মোট গঠিত শব্দের সংখ্যা $= 1 \times 720 = 720$
+   - উত্তর: 720
 
 3. **In how many ways you can distribute 3 identical green shirt and 3 identical red shirt among 6 individual persons.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 402 (ET: BUET)]*
 
+   Answer:
+   - Total persons $= 6$, each getting exactly 1 shirt.
+   - We need to choose 3 persons out of 6 to receive identical green shirts (the other 3 automatically receive identical red shirts).
+   - Number of ways $= \binom{6}{3} = \frac{6!}{3! \times 3!} = \frac{6 \times 5 \times 4}{3 \times 2 \times 1} = 20$
+   - Answer: 20
+
 4. **Suppose we have 6 hospital and 4 police station. Need to select a 4 stations for interrupted power supply. How many ways can we select where at least one hospital on the uninterrupted power supply list?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 454 (ET: BUET)]*
+
+   Answer:
+   - Total stations $= 6\text{ hospitals} + 4\text{ police stations} = 10\text{ stations}$.
+   - Number of stations to be chosen $= 4$.
+   - Total ways to select 4 stations from 10 without restriction:
+     $$\binom{10}{4} = \frac{10 \times 9 \times 8 \times 7}{4 \times 3 \times 2 \times 1} = 210$$
+   - Number of ways to select 4 stations with NO hospital (all 4 are police stations):
+     $$\binom{4}{4} = 1$$
+   - Number of ways with at least one hospital:
+     $$\text{Total ways} - \text{No hospital ways} = 210 - 1 = 209$$
+   - Answer: 209
 
 5. **Reliability, Permutation related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1038 (ET: BUET)]*
 
+   Answer:
+   - Standard concepts for system reliability and component arrangement:
+     - Series system (all $n$ components must work):
+       $$R_{\text{series}} = R_1 \times R_2 \times \dots \times R_n$$
+     - Parallel system (at least 1 component works):
+       $$R_{\text{parallel}} = 1 - (1 - R_1)(1 - R_2)\dots(1 - R_n)$$
+     - Permutation of $n$ distinct components in sequence $= n!$.
+
 6. **If 10 people meet each other and each shakes hands only once with each of the others, how many handshakes will there be?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1173 (ET: N/A)]*
+
+   Answer:
+   - Each handshake requires 2 distinct people.
+   - Total number of handshakes among $n$ people:
+     $$\binom{n}{2} = \frac{n(n - 1)}{2}$$
+   - For $n = 10$:
+     $$\text{Total handshakes} = \frac{10 \times (10 - 1)}{2} = \frac{10 \times 9}{2} = 45$$
+   - Answer: 45
+
+
 
 ## Ratio, Proportion & Mixtures (4)
 
