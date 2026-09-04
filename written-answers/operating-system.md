@@ -14221,14 +14221,272 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 1. **How to check the IP address in the Windows Command Prompt?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: The command is `ipconfig`.
+   ```
+      C:\> ipconfig
+
+      Windows IP Configuration
+
+      Ethernet adapter Ethernet:
+         Connection-specific DNS Suffix  . :
+         IPv4 Address. . . . . . . . . . . : 192.168.1.10
+         Subnet Mask . . . . . . . . . . . : 255.255.255.0
+         Default Gateway . . . . . . . . . : 192.168.1.1
+   ```
+
+   Useful variants
+   ```
+      ipconfig             IP address , subnet mask , default gateway
+      ipconfig /all        adds MAC address , DHCP server , DNS servers ,
+                           lease times , host name
+      ipconfig /release    give up the DHCP lease
+      ipconfig /renew      request a new DHCP lease
+      ipconfig /flushdns   clear the DNS resolver cache
+      ipconfig /displaydns show the DNS cache
+   ```
+
+   Other ways
+   ```
+      GUI     : Settings -> Network & Internet -> Properties
+      PowerShell : Get-NetIPAddress      or    Get-NetIPConfiguration
+      Older   : netsh interface ip show config
+   ```
+   - Note the difference between the `private` and the `public` address. `ipconfig` shows the private LAN address given by the router, such as `192.168.1.10`. The public address the internet sees belongs to the router and is found from a site like `whatismyip.com`.
+   - The Linux and macOS equivalent is `ip addr show` (or the older `ifconfig`).
+
 2. **Assume that an office has three departments and each department has 50 to 70 employees who are using computers with Windows operating systems. The office space is designed in such a way that an employee can use any computer within a department. Once an employee logs in from a computer, he/she will get access to his files from the server. Let you are planning for network and server setup for this company.**
    * **(a) What is Active Directory? Do you need an Active Directory for such an office? If yes, briefly explain its use under this circumstance.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 323 (ET: BIBM)]*
 
+   Answer: (a) What Active Directory is
+   - `Active Directory (AD)` is Microsoft's directory service, running on a Windows Server called a `Domain Controller`. It keeps a central database of all users, computers, printers and groups on the network, and it handles `authentication` (who are you) and `authorisation` (what may you do).
+   ```
+                       +----------------------+
+                       |  DOMAIN CONTROLLER   |
+                       |  Active Directory    |
+                       |  users , groups ,    |
+                       |  computers , policy  |
+                       +----------------------+
+                          /       |       \
+                         /        |        \
+                +--------+   +--------+   +--------+
+                |  PC 1  |   |  PC 2  |   |  PC 3  |
+                +--------+   +--------+   +--------+
+                any employee may log in at ANY of these
+   ```
+   - Its structure: `objects` (users, computers) sit in `Organisational Units (OUs)`, which sit in a `domain`; domains form a `tree`, and trees form a `forest`. It uses `LDAP` for queries and `Kerberos` for authentication.
+
+   Is Active Directory needed here? `Yes`
+
+   The office has three departments with `150 to 210 users` and computers that any employee may sit at. That is exactly the case a domain is built for.
+   ```
+      WITHOUT AD (a WORKGROUP) :
+           every user would need a separate local account on EVERY
+           computer in the department.
+           70 users * 70 PCs = up to 4,900 accounts to create by hand.
+           A password change would have to be repeated on every machine.
+           UNMANAGEABLE.
+
+      WITH AD :
+           ONE account per user, held centrally.
+           The user logs in at ANY computer with the SAME credentials.
+   ```
+
+   How it is used in this office
+   ```
+      1. SINGLE SIGN-ON
+           One username and password works on every PC and on the file
+           server. This is what makes "sit at any computer" possible.
+
+      2. ROAMING PROFILES and FOLDER REDIRECTION
+           The user's Documents and Desktop live on the SERVER, not on
+           the PC. So the files follow the user to whichever machine
+           they use - which is precisely what the question requires.
+
+      3. GROUP-BASED PERMISSIONS
+           Create a security group per department :
+                Accounts , Sales , HR
+           Give each group rights only to its own share :
+                \\server\accounts   -> Accounts group only
+           A transfer between departments is one group change, not a
+           rewrite of every folder's permissions.
+
+      4. GROUP POLICY (GPO)
+           Push settings to all PCs at once - password length and expiry,
+           screen lock timeout, USB blocking, mapped drives, printer
+           installation, software deployment, Windows Update policy.
+
+      5. CENTRAL ACCOUNT LIFECYCLE
+           A new employee gets one account. A leaver is DISABLED ONCE
+           and is instantly locked out of every machine and share - a
+           serious security point that a workgroup cannot deliver.
+
+      6. AUDITING
+           Every logon and file access is logged centrally, which
+           matters for any organisation under audit requirements.
+   ```
+
+   Recommended setup
+   ```
+      Domain Controller  : Windows Server with AD DS , DNS and DHCP.
+                           A SECOND DC for redundancy - if the only DC
+                           fails, nobody can log in.
+      File Server        : department shares, with folder redirection.
+      OU structure       : one OU per department, with a GPO on each.
+      Groups             : one security group per department.
+   ```
+   - The rule of thumb: a `workgroup` is workable up to roughly 10 to 20 computers. Beyond that the manual account management collapses. With 150 or more users across three departments, `Active Directory is not optional but necessary`.
+
 3. **Describe the booting process in windows system.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
+
+   Answer: The Windows boot process runs in `four` stages.
+
+   Diagram
+   ```mermaid
+   flowchart TD
+       A[Power on: POST] --> B[BIOS / UEFI firmware]
+       B --> C[Boot Manager: bootmgr / bootmgfw.efi]
+       C --> D[OS Loader: winload.exe]
+       D --> E[Kernel: ntoskrnl.exe + HAL]
+       E --> F[Session Manager: smss.exe]
+       F --> G[Winlogon: login screen]
+   ```
+
+   1. PreBoot — firmware
+   ```
+      POWER ON
+        -> POST (Power On Self Test) checks RAM, CPU, keyboard, disks
+        -> the FIRMWARE initialises the hardware
+
+      BIOS system  : reads the MASTER BOOT RECORD (MBR) from the first
+           sector of the disk , which points to the active partition.
+      UEFI system  : reads the EFI SYSTEM PARTITION and starts
+           bootmgfw.efi directly. UEFI also supports SECURE BOOT, which
+           refuses to run an unsigned boot loader.
+   ```
+
+   2. Windows Boot Manager
+   ```
+      BIOS  -> bootmgr
+      UEFI  -> bootmgfw.efi
+
+      It reads the BOOT CONFIGURATION DATA (BCD) store , which lists
+      the installed operating systems.
+        - one OS  -> load it straight away
+        - several -> show the boot menu
+        - resuming from hibernation -> hand over to winresume.exe,
+          which restores hiberfil.sys instead of booting fresh
+   ```
+
+   3. Windows OS Loader — winload.exe
+   ```
+      - loads the KERNEL , ntoskrnl.exe
+      - loads the HAL , hal.dll , which hides hardware differences
+      - loads the SYSTEM registry hive
+      - loads the BOOT_START drivers - the ones needed to reach the
+        disk , such as the storage controller driver
+      - VERIFIES DRIVER SIGNATURES ; an unsigned boot driver is
+        refused
+      - it does NOT start the kernel yet, only prepares it
+   ```
+
+   4. Kernel initialisation and session start
+   ```
+      ntoskrnl.exe takes control :
+        - initialises memory management, the scheduler and the object
+          manager
+        - starts the remaining drivers that are not BOOT_START
+        - starts the SESSION MANAGER , smss.exe
+
+      smss.exe :
+        - creates the paging file and the environment
+        - starts csrss.exe (the Windows subsystem)
+        - starts wininit.exe for session 0 - services , the SCM
+          (services.exe) and lsass.exe for security
+        - starts winlogon.exe for the user session
+
+      winlogon.exe shows the LOGIN SCREEN. After the credentials are
+      checked by lsass.exe, userinit.exe runs, explorer.exe starts,
+      and the DESKTOP appears.
+   ```
+
+   Summary line
+   ```
+      POST -> BIOS/UEFI -> bootmgr -> winload.exe -> ntoskrnl.exe
+           -> smss.exe -> winlogon.exe -> explorer.exe -> DESKTOP
+   ```
+   - Where to intervene when it fails: `F8` or `Shift+Restart` reaches the `Advanced Startup` options — Safe Mode, Startup Repair and the recovery console. Startup Repair fixes a damaged `BCD` or `MBR`, which is the commonest cause of a machine that stops before the login screen.
 
 4. **১৯. বর্তমানে উইন্ডোজ অপারেটিং সিস্টেম এর কত তম ভার্সন বাজারজাত করা হয়েছে?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) The version currently on the market is `Windows 11`, released in October 2021. It is the latest Windows version for personal computers.
+   ```
+      Major desktop versions, in order :
+
+        Windows 1.0  (1985)      Windows 2.0  (1987)
+        Windows 3.0 / 3.1        Windows 95 , 98 , ME
+        Windows NT , 2000        Windows XP   (2001)
+        Windows Vista (2007)     Windows 7    (2009)
+        Windows 8 / 8.1 (2012)   Windows 10   (2015)
+        Windows 11   (2021)      <- CURRENT
+   ```
+   - Note on the numbering: there is `no Windows 9`. Microsoft went straight from 8.1 to 10.
+   - Windows 10 support ended in `October 2025`, so Windows 11 is now the supported desktop version.
+   - On the server side the current release is `Windows Server 2025`. Server and desktop versions are numbered separately.
+   - Windows 11's main requirements, which were new: `TPM 2.0`, `UEFI with Secure Boot`, a 64-bit processor, 4 GB RAM and 64 GB storage. Many older machines cannot run it for the TPM reason alone.
+
 5. **What is main difference between Domain and Workgroup?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
+
+   Answer: Difference between a domain and a workgroup
+
+   | Point | Workgroup | Domain |
+   |---|---|---|
+   | Network model | `Peer-to-peer` — every PC is equal | `Client-server` — a central controller |
+   | Management | `Decentralised` — each PC manages itself | `Centralised` — a Domain Controller manages all |
+   | User accounts | A separate `local` account on every PC | `One` account, held centrally in Active Directory |
+   | Login | Works only on `that one` computer | Works on `any` computer in the domain |
+   | Server needed? | `No` | `Yes` — Windows Server running Active Directory |
+   | Security policy | Set on each PC `by hand` | Pushed to all PCs by `Group Policy` |
+   | Practical size | Up to about `10–20` computers | `Thousands` of users and machines |
+   | Network scope | One `local` network only | Can span `many sites` |
+   | Cost | Free | Needs a server licence and an administrator |
+   | Typical use | Home, small office | Company, bank, university, government office |
+
+   Workgroup
+   ```
+      +------+   +------+   +------+
+      | PC 1 |---| PC 2 |---| PC 3 |
+      +------+   +------+   +------+
+      Every PC keeps its OWN user list and its OWN permissions.
+      To use PC 2's shared folder, you need an account ON PC 2.
+   ```
+
+   Domain
+   ```
+                 +----------------------+
+                 |  DOMAIN CONTROLLER   |
+                 |  Active Directory    |
+                 +----------------------+
+                   /        |         \
+            +------+   +------+   +------+
+            | PC 1 |   | PC 2 |   | PC 3 |
+            +------+   +------+   +------+
+      ONE account per user. The same login works on every PC, and
+      the user's files follow them from the server.
+   ```
+
+   Why the difference matters in practice
+   ```
+      70 users and 70 PCs in a WORKGROUP :
+           up to 4,900 local accounts to create by hand, and a
+           password change must be repeated on every machine.
+           UNWORKABLE.
+
+      The same office as a DOMAIN :
+           70 accounts, created once. A leaver is DISABLED ONCE and is
+           instantly locked out of every machine and every share.
+   ```
+   - What a domain adds beyond accounts: `Group Policy` to enforce password rules, screen locks and USB restrictions on every PC at once; `roaming profiles` and `folder redirection` so files follow the user; `group-based permissions` per department; and central `auditing` of logons and file access.
+   - The rule of thumb: use a `workgroup` for a home or a very small office; move to a `domain` once there are more than about 10 to 20 computers, or as soon as central control of accounts and security is required.
 
 ## Process Synchronization & Concurrency (4)
 
