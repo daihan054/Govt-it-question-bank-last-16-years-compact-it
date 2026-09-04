@@ -980,3 +980,6 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 ## English Literature & Authors (1)
 
 1. **Who is the writer of “Gulliver's Travels”?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+   Answer: Jonathan Swift.
+
