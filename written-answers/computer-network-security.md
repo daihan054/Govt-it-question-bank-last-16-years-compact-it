@@ -988,65 +988,875 @@
 
 1. Explain the operational difference between Hashing and Encryption. [SO IT 25-07-2026] *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)], [BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
+   Answer: The core difference is reversibility. Encryption is a TWO-WAY process designed to be undone; hashing is a ONE-WAY process designed never to be undone.
+
+   | Point | Encryption | Hashing |
+   |---|---|---|
+   | Direction | Two-way — reversible with the key | One-way — cannot be reversed |
+   | Key required | Yes, for both encryption and decryption | No key |
+   | Output length | Same size as input or larger | Fixed length, regardless of input size |
+   | Purpose | Confidentiality — keep data secret | Integrity — prove data has not changed |
+   | Recovering the original | Possible with the correct key | Impossible; can only compare hashes |
+   | Same input twice | May give different output (with a random IV) | Always gives the identical output |
+   | Algorithms | AES, DES, 3DES, RSA, Blowfish | MD5, SHA-1, SHA-256, SHA-512, bcrypt |
+   | Typical use | Encrypting a message, file or database column | Password storage, file integrity check, digital signature |
+
+   Operational example
+   - **Encryption**: `"Hello"` + key → `"X8#kL2p"` → decrypt with the key → `"Hello"` again.
+   - **Hashing**: `"Hello"` → `185f8db32271fe25...` (64 hex characters for SHA-256). There is no way to get `"Hello"` back from that value.
+
+   Why passwords are HASHED, not encrypted
+   - If a password database is stolen, encrypted passwords can be decrypted once the key is found. Hashed passwords cannot be reversed at all.
+   - Login works by hashing the entered password and comparing the two hashes — the system never needs to know the actual password.
+   - A **salt** (a random value added before hashing) is used so that two users with the same password get different hashes, defeating rainbow tables.
+
 2. Explain the concepts of encryption and decryption with an example. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+   Answer:
+   - **Encryption** converts readable data (plaintext) into an unreadable form (ciphertext) using an algorithm and a key.
+   - **Decryption** reverses that process, converting ciphertext back to plaintext with the correct key.
+
+   ```
+   Plaintext  --[Encryption algorithm + Key]-->  Ciphertext
+   Ciphertext --[Decryption algorithm + Key]-->  Plaintext
+   ```
+
+   Simple example — Caesar cipher with a shift of 3
+   - Plaintext: `HELLO`
+   - Encryption: each letter moves 3 places forward → `KHOOR`
+   - Anyone intercepting sees only `KHOOR`, which is meaningless.
+   - Decryption: each letter moves 3 places back → `HELLO`
+
+   Real-world example — online banking
+   - The customer types their password on the bank's HTTPS page.
+   - The browser encrypts it with a session key before it leaves the machine.
+   - It travels the internet as ciphertext, so anyone sniffing the network sees only random bytes.
+   - The bank's server decrypts it with the same session key and verifies it.
+
+   Two types
+   - **Symmetric** — one key both encrypts and decrypts. Fast, used for bulk data. AES, DES.
+   - **Asymmetric** — a public key encrypts and a private key decrypts. Slower, but solves key distribution. RSA, ECC.
+   - HTTPS uses both: asymmetric encryption to exchange a session key, then symmetric encryption for the actual data.
 
 3. What is social engineering? What is hashing? How is it different from encryption? *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
+   Answer:
+
+   (a) Social engineering
+   - The art of manipulating PEOPLE into revealing confidential information or performing actions that compromise security. It attacks human psychology rather than technology.
+   - Techniques: phishing, vishing (phone), smishing (SMS), pretexting (inventing a scenario), baiting (a malware-loaded USB left in a car park), tailgating (following someone through a secure door), and quid pro quo.
+   - It exploits trust, fear, urgency, authority and curiosity.
+   - Defence: awareness training, verification through a second channel, strict procedures for payment and credential requests, and multi-factor authentication.
+
+   (b) Hashing
+   - A one-way mathematical function that converts input of any size into a fixed-length string called a hash or digest.
+   - Properties: deterministic (same input always gives the same hash), fast to compute, infeasible to reverse, collision resistant, and exhibiting the **avalanche effect** (a one-bit change in input completely changes the output).
+   - Algorithms: MD5 (128-bit, broken), SHA-1 (160-bit, deprecated), SHA-256 and SHA-512 (secure), bcrypt and Argon2 (designed for passwords).
+   - Uses: password storage, file integrity verification, digital signatures, blockchain.
+
+   (c) Difference from encryption
+
+   | Point | Hashing | Encryption |
+   |---|---|---|
+   | Reversible | No | Yes, with the key |
+   | Key needed | No | Yes |
+   | Output size | Fixed | Varies with input |
+   | Goal | Integrity | Confidentiality |
+   | Example use | Storing a password | Sending a secret message |
+
 4. **What is Encryption? What are the types? Explain the role of Encryption in security.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
+
+   Answer:
+
+   (a) Encryption
+   - The process of converting plaintext into ciphertext using an algorithm and a key, so that only someone with the correct key can read it.
+
+   (b) Types
+
+   **By key structure**
+   - **Symmetric encryption** — one shared secret key for both encryption and decryption. Fast, ideal for bulk data. Examples: AES, DES, 3DES, Blowfish. Problem: securely distributing the key.
+   - **Asymmetric encryption** — a public key encrypts and a private key decrypts. Solves key distribution and enables digital signatures. Slow, so it is used only on small data. Examples: RSA, ECC, Diffie-Hellman.
+
+   **By data state**
+   - **Encryption at rest** — stored data: full-disk encryption, database column encryption.
+   - **Encryption in transit** — data moving over a network: TLS/HTTPS, VPN.
+   - **End-to-end encryption** — only the two endpoints can read it; even the service provider cannot. WhatsApp, Signal.
+
+   **By operation**
+   - **Block cipher** — encrypts fixed-size blocks (AES uses 128-bit blocks).
+   - **Stream cipher** — encrypts one bit or byte at a time (RC4, ChaCha20).
+
+   (c) Role of encryption in security
+   - **Confidentiality** — the primary role. Intercepted data is unreadable.
+   - **Integrity** — combined with hashing (as in AES-GCM), it detects tampering.
+   - **Authentication** — digital certificates prove a server's identity in HTTPS.
+   - **Non-repudiation** — a digital signature proves who sent a message and prevents them denying it.
+   - **Regulatory compliance** — PCI DSS, GDPR and the Bangladesh Bank ICT Security Guideline all mandate encryption of sensitive data.
+   - **Safe communication over untrusted networks** — makes public Wi-Fi and the open internet usable for banking.
+   - **Protection after a breach** — encrypted stolen data is worthless to the attacker.
+
+   - Limitation to state: encryption protects DATA, not the endpoints. Weak key management, stolen keys and compromised devices defeat it entirely.
 
 5. **Write the differences among encryption, hashing, and digital signatures. Mention their uses in cybersecurity.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Encryption | Hashing | Digital Signature |
+   |---|---|---|---|
+   | Direction | Two-way, reversible | One-way, irreversible | One-way verification |
+   | Key used | Symmetric or asymmetric key | No key | Sender's PRIVATE key to sign, PUBLIC key to verify |
+   | Output | Ciphertext, size varies | Fixed-length digest | A signature block attached to the message |
+   | Main goal | Confidentiality | Integrity | Authentication, integrity and non-repudiation |
+   | Can the original be recovered | Yes, with the key | Never | Not applicable — the message travels alongside |
+   | Algorithms | AES, RSA, 3DES | SHA-256, MD5, bcrypt | RSA, DSA, ECDSA |
+
+   How a digital signature COMBINES the other two
+   - The sender hashes the message → gets a digest.
+   - The sender encrypts that digest with their PRIVATE key → this is the signature.
+   - The receiver decrypts the signature with the sender's PUBLIC key → recovers the digest.
+   - The receiver independently hashes the received message and compares the two digests.
+   - If they match, the message is unaltered (integrity) and it genuinely came from the holder of the private key (authentication and non-repudiation).
+
+   Uses in cybersecurity
+
+   **Encryption**
+   - HTTPS/TLS for web traffic, VPN tunnels, full-disk encryption, encrypted databases, end-to-end messaging.
+
+   **Hashing**
+   - Password storage (with salt), file integrity checking and malware detection, blockchain block linking, HMAC for message authentication, digital forensics evidence integrity.
+
+   **Digital signatures**
+   - SSL/TLS certificates, signed software updates (so malware cannot masquerade as an update), e-tendering and e-GP documents, legally binding electronic contracts, and blockchain transactions.
+
 6. **How many bits MD5 encryption?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: **MD5 produces a 128-bit hash value** (16 bytes), usually written as 32 hexadecimal characters.
+
+   - MD5 stands for **Message Digest algorithm 5**, designed by Ron Rivest in 1991.
+   - Note the terminology: MD5 is a HASH function, not encryption. It is one-way and uses no key.
+   - Example: `MD5("hello")` = `5d41402abc4b2a76b9719d911017c592`
+
+   Comparison of hash sizes
+
+   | Algorithm | Output size | Status |
+   |---|---|---|
+   | MD5 | 128 bits | **Broken** — collisions found in 2004, do not use for security |
+   | SHA-1 | 160 bits | Deprecated — collision demonstrated in 2017 |
+   | SHA-256 | 256 bits | Secure, widely used |
+   | SHA-512 | 512 bits | Secure |
+   | bcrypt / Argon2 | variable | Designed specifically for passwords |
+
+   - MD5 is still acceptable for non-security uses such as checksums to detect accidental file corruption, but never for passwords or signatures.
 
 7. **What type of key used for decrypt message of PKI?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+   Answer: In PKI (Public Key Infrastructure), a message is decrypted with the **receiver's PRIVATE key**.
+
+   How the key pair is used
+   - The **sender encrypts** with the receiver's **PUBLIC key** — which is freely available to everyone.
+   - The **receiver decrypts** with their own **PRIVATE key** — which never leaves the receiver.
+   - Only the private key can undo what its matching public key encrypted, which is what makes the scheme secure.
+
+   | Operation | Key used |
+   |---|---|
+   | Encrypt a message | Receiver's PUBLIC key |
+   | Decrypt a message | Receiver's PRIVATE key |
+   | Create a digital signature | Sender's PRIVATE key |
+   | Verify a digital signature | Sender's PUBLIC key |
+
+   - Note the reversal for signatures: encryption uses the receiver's keys, signing uses the sender's keys. Confusing these two is the most common mistake in this topic.
+   - PKI components: Certificate Authority (CA) which issues certificates, Registration Authority (RA), digital certificates (X.509), and the Certificate Revocation List (CRL).
+
 8. **6.2 Explain the operational difference between Hashing and Encryption.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+   Answer: Operationally, encryption is designed to be UNDONE and hashing is designed never to be undone.
+
+   | Aspect | Encryption | Hashing |
+   |---|---|---|
+   | Operation | Plaintext → ciphertext → plaintext | Input → digest, and stops there |
+   | Reversibility | Reversible with the correct key | Mathematically irreversible |
+   | Key | Required | None |
+   | Output size | Proportional to input | Always fixed (SHA-256 → 256 bits, whatever the input) |
+   | Determinism | Same input may give different ciphertext, if a random IV is used | Same input always gives the identical digest |
+   | Security goal | Confidentiality | Integrity |
+   | Verification method | Decrypt and read | Re-hash and compare digests |
+
+   Operational example — how each is used at a bank
+   - **Encryption**: a customer's account number stored in the database is encrypted. When the application needs it, it decrypts it with the key and displays it. The original value must be recoverable.
+   - **Hashing**: the customer's login password is hashed with a salt. When they log in, the entered password is hashed the same way and the digests are compared. The bank never stores or recovers the actual password — even a full database theft does not reveal it.
+
+   - The design rule that follows: if you need the original value back, encrypt. If you only ever need to CHECK a value, hash.
 
 9. **Breifly Explain Asymmetric encryption.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)]*
 
+   Answer: Asymmetric encryption, also called public key cryptography, uses a MATHEMATICALLY LINKED PAIR of keys — a public key that anyone may hold, and a private key kept secret by the owner.
+
+   The rule
+   - Whatever one key encrypts, only the OTHER key can decrypt.
+   - Encrypt with the receiver's public key → only the receiver's private key can open it. This gives confidentiality.
+   - Encrypt (sign) with the sender's private key → anyone can verify it with the sender's public key. This gives authentication.
+
+   ```mermaid
+   flowchart LR
+       P[Plaintext] -->|encrypt with<br/>receiver's PUBLIC key| C[Ciphertext]
+       C -->|decrypt with<br/>receiver's PRIVATE key| P2[Plaintext]
+   ```
+
+   Advantages
+   - Solves the key distribution problem — no secret needs to be shared in advance.
+   - Enables digital signatures and non-repudiation.
+   - Scales well: `n` users need only `n` key pairs, whereas symmetric encryption needs `n(n−1)/2` shared keys.
+
+   Disadvantages
+   - Far slower than symmetric encryption — roughly 100 to 1000 times slower.
+   - Requires a PKI with a trusted Certificate Authority to bind keys to identities.
+   - Larger key sizes: RSA needs 2048 bits for the security AES gets from 128.
+
+   Algorithms and uses
+   - **RSA** (based on the difficulty of factoring large primes), **ECC** (elliptic curves, same security with much smaller keys), **Diffie-Hellman** (key exchange only), **DSA/ECDSA** (signatures only).
+   - Used in HTTPS/TLS, SSH, PGP email, digital certificates, code signing and blockchain.
+   - In practice it is combined with symmetric encryption: RSA or ECDH exchanges an AES session key, then AES encrypts the actual data. This gets the security of asymmetric with the speed of symmetric.
+
 10. **Distinguish between Symmetric Encryption and Asymmetric Encryption. Give some examples of encryption algorithm. What are the different types of ciphers in cryptography? What are the factors to be considered for cryptographic strength?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 533 (ET: MIST)]*
+
+    Answer:
+
+    (a) Symmetric vs Asymmetric
+
+    | Point | Symmetric | Asymmetric |
+    |---|---|---|
+    | Keys | ONE shared secret key | A PAIR — public and private |
+    | Encrypt / decrypt | Same key for both | Public encrypts, private decrypts |
+    | Speed | Very fast | 100-1000 times slower |
+    | Key distribution | Difficult — the secret must be shared safely | Easy — the public key is published |
+    | Number of keys for n users | `n(n−1)/2` | `2n` |
+    | Key length for equivalent security | 128-256 bits | 2048-4096 bits (RSA) |
+    | Digital signature support | No | Yes |
+    | Best for | Bulk data encryption | Key exchange, signatures, small data |
+    | Examples | AES, DES, 3DES, Blowfish, RC4 | RSA, ECC, Diffie-Hellman, DSA, ElGamal |
+
+    (b) Example algorithms
+    - **Symmetric**: AES (128/192/256-bit, the current standard), DES (56-bit, broken), 3DES (deprecated), Blowfish, Twofish, ChaCha20.
+    - **Asymmetric**: RSA, ECC, Diffie-Hellman, DSA, ElGamal.
+    - **Hash (no key)**: SHA-256, SHA-512, MD5, bcrypt, Argon2.
+
+    (c) Types of cipher
+
+    **By technique**
+    - **Substitution cipher** — each element is replaced by another. Caesar, Vigenère, monoalphabetic.
+    - **Transposition cipher** — elements are rearranged, not replaced. Rail fence, columnar transposition.
+    - **Product cipher** — combines both, which is what modern block ciphers do.
+
+    **By unit of operation**
+    - **Block cipher** — encrypts fixed-size blocks (AES: 128-bit blocks). Modes: ECB, CBC, CTR, GCM.
+    - **Stream cipher** — encrypts one bit or byte at a time (RC4, ChaCha20). Faster, used where data arrives continuously.
+
+    **Classical vs modern**
+    - Classical: Caesar, Playfair, Hill, Vigenère — all broken by frequency analysis.
+    - Modern: AES, RSA, ECC — based on computational hardness.
+
+    (d) Factors affecting cryptographic strength
+    - **Key length** — the most important single factor. Each extra bit doubles the brute-force effort. AES-128 requires 2¹²⁸ attempts.
+    - **Algorithm strength** — a peer-reviewed, standardised algorithm. Never invent your own.
+    - **Key randomness** — keys must come from a cryptographically secure random source, not a predictable one.
+    - **Key management** — generation, storage, rotation and destruction. Most real breaches come from stolen keys, not broken maths.
+    - **Mode of operation** — ECB mode leaks patterns and must be avoided; GCM provides both confidentiality and integrity.
+    - **Initialization Vector (IV)** — must be random and never reused with the same key.
+    - **Salting** for password hashes, and a slow hash function (bcrypt, Argon2) to resist brute force.
+    - **Implementation quality** — side-channel attacks on timing and power can defeat perfect maths.
+    - **Resistance to known attacks** — differential and linear cryptanalysis, birthday attacks.
+    - **Future proofing** — quantum resistance, since Shor's algorithm threatens RSA and ECC.
 
 11. **What is Symmetric and Asymmetric Encryption? Explain with example.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 499 (ET: IBA)]*
 
+    Answer:
+
+    **Symmetric encryption**
+    - Uses ONE shared secret key for both encryption and decryption. Both parties must already have the same key.
+    - Fast and efficient, so it is used for bulk data.
+    - Examples: AES, DES, 3DES, Blowfish.
+
+    Example
+    - Alice and Bob agree on the secret key `K = 7` in advance.
+    - Alice encrypts `HELLO` by shifting each letter 7 places → `OLSSV`, and sends it.
+    - Bob decrypts by shifting back 7 → `HELLO`.
+    - Problem: how did they agree on `K = 7` safely in the first place? This is the key distribution problem.
+
+    **Asymmetric encryption**
+    - Uses a PAIR of mathematically linked keys — a public key that is published, and a private key kept secret.
+    - What one key encrypts, only the other can decrypt.
+    - Slow, so it is used for small data and key exchange.
+    - Examples: RSA, ECC, Diffie-Hellman.
+
+    Example
+    - Bob publishes his public key openly. He keeps his private key secret.
+    - Alice encrypts her message with **Bob's public key** and sends it.
+    - Only **Bob's private key** can decrypt it — not even Alice can decrypt it once sent.
+    - No secret had to be shared beforehand, which solves the key distribution problem.
+
+    How they work together in practice — HTTPS
+    - The browser and server use **asymmetric** encryption (RSA or ECDH) to agree on a random **session key**.
+    - Then all page data is encrypted with **symmetric** AES using that session key.
+    - This gives the key-distribution advantage of asymmetric encryption with the speed of symmetric encryption.
+
 12. **What is symmetric and Asymmetric key explain with example?** *[Mongla Port Authority Assistant Programmer 2023 compact it 573 (ET: N/A)]*
+
+    Answer:
+
+    **Symmetric key**
+    - A single secret key shared by both parties, used for both encryption and decryption.
+    - Analogy: a door lock where both people have identical copies of the same key.
+    - Example: a ZIP file protected with the password `bank123`. Anyone with that same password can open it. AES and DES work this way.
+
+    **Asymmetric key**
+    - A pair of keys — a **public key** distributed openly, and a **private key** kept secret by the owner.
+    - Analogy: a letterbox. Anyone can drop a letter in through the public slot, but only the owner's key opens it to take letters out.
+    - Example: Bob publishes his public key on his website. Anyone can encrypt a message to him with it, but only Bob's private key can decrypt it. RSA and ECC work this way.
+
+    | Point | Symmetric key | Asymmetric key |
+    |---|---|---|
+    | Number of keys | One, shared | Two, a linked pair |
+    | Speed | Fast | Slow |
+    | Key sharing | Must be shared secretly | Public key is shared openly |
+    | Keys for 100 users | 4,950 | 200 |
+    | Digital signatures | Not possible | Possible |
+    | Algorithms | AES, DES, 3DES, Blowfish | RSA, ECC, Diffie-Hellman |
 
 13. **What is Cryptography? Difference between Symmetric and Asymmetric encryption with example. Draw and design public key encryption using Hash function. Draw a diagram for e-commerce online transactions.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 512 (ET: MIST)]*
 
+    Answer:
+
+    (a) Cryptography
+    - The science of securing information by transforming it so that only the intended recipient can understand it. It provides confidentiality, integrity, authentication and non-repudiation.
+
+    (b) Symmetric vs asymmetric
+
+    | Point | Symmetric | Asymmetric |
+    |---|---|---|
+    | Key | One shared secret | Public + private pair |
+    | Speed | Fast | Slow |
+    | Key distribution | Hard | Easy |
+    | Use | Bulk data | Key exchange, signatures |
+    | Examples | AES, DES, 3DES | RSA, ECC, Diffie-Hellman |
+
+    - Example: a ZIP password protects a file symmetrically; HTTPS uses RSA asymmetrically to agree an AES session key.
+
+    (c) Public key encryption combined with a hash function — the digital signature
+
+    ```mermaid
+    flowchart TD
+        M[Message] --> H[Hash function<br/>SHA-256]
+        H --> D[Message digest]
+        D --> E[Encrypt with<br/>SENDER'S PRIVATE key]
+        E --> S[Digital Signature]
+        M --> T[Send message + signature]
+        S --> T
+        T --> R1[Receiver hashes the message<br/>to get digest 1]
+        T --> R2[Receiver decrypts signature with<br/>SENDER'S PUBLIC key to get digest 2]
+        R1 --> C{digest 1 = digest 2?}
+        R2 --> C
+        C -->|Yes| V[Valid — authentic and unaltered]
+        C -->|No| X[Invalid — tampered or forged]
+    ```
+
+    - Hashing gives integrity, and encrypting the hash with the private key gives authentication and non-repudiation. Together they form the digital signature.
+
+    (d) E-commerce online transaction flow
+
+    ```mermaid
+    flowchart LR
+        C[Customer] -->|1. order + card details over HTTPS| M[Merchant site]
+        M -->|2. payment request| G[Payment Gateway]
+        G -->|3. forward| A[Acquiring Bank]
+        A -->|4. via VISA/Mastercard/NPSB| I[Issuing Bank]
+        I -->|5. verify balance, OTP, authorise| A
+        A -->|6. response| G
+        G -->|7. approved / declined| M
+        M -->|8. order confirmation| C
+        A -.->|9. settlement later, in batch| M
+    ```
+
+    - Steps 1-8 are **authorisation** and complete in seconds. Step 9, **settlement**, is the actual movement of funds and happens later in a batch.
+    - Security at each stage: TLS encrypts the channel, the card number is tokenised so the merchant never stores it, an OTP or 3-D Secure provides second-factor authentication, and the whole chain must be PCI DSS compliant.
+
 14. **The high level method of DES...** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 450 (ET: BUET)]*
+
+    Answer: **DES (Data Encryption Standard)** is a symmetric block cipher adopted in 1977. It encrypts 64-bit blocks with a 56-bit effective key (64 bits including 8 parity bits) through 16 rounds of a Feistel network.
+
+    High-level method
+    ```mermaid
+    flowchart TD
+        A[64-bit plaintext block] --> B[Initial Permutation IP]
+        B --> C[Split into L0 and R0<br/>32 bits each]
+        C --> D[16 Feistel rounds<br/>with subkeys K1..K16]
+        D --> E[32-bit swap]
+        E --> F[Inverse Initial Permutation IP-1]
+        F --> G[64-bit ciphertext block]
+    ```
+
+    - **Step 1 — Initial Permutation (IP).** The 64 input bits are rearranged in a fixed pattern.
+    - **Step 2 — Split.** The block is divided into a left half `L0` and right half `R0`, 32 bits each.
+    - **Step 3 — 16 rounds.** In each round `i`:
+      - `Lᵢ = Rᵢ₋₁`
+      - `Rᵢ = Lᵢ₋₁ ⊕ F(Rᵢ₋₁, Kᵢ)`
+      - The function `F` expands the 32-bit half to 48 bits, XORs it with the 48-bit round subkey, passes it through eight **S-boxes** (which provide the non-linearity and are the heart of DES security), and then applies a P-box permutation.
+    - **Step 4 — Key schedule.** The 56-bit key produces 16 different 48-bit subkeys through permuted choice and left circular shifts.
+    - **Step 5 — Final swap and inverse permutation** produce the ciphertext.
+
+    Properties
+    - Decryption uses the SAME algorithm with the subkeys applied in reverse order — a property of Feistel structures that halves the hardware needed.
+    - It achieves **confusion** (through S-boxes) and **diffusion** (through permutation and the Feistel structure).
+
+    Why DES is obsolete
+    - A 56-bit key gives only `2⁵⁶` possibilities, brute-forced in under a day since 1998.
+    - **3DES** applied DES three times for a 112-bit effective key, but is slow and now also deprecated.
+    - **AES** replaced it in 2001, with 128-bit blocks and 128/192/256-bit keys.
 
 15. **Difference between symmetric and asymetric key encryption.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Symmetric key encryption | Asymmetric key encryption |
+    |---|---|---|
+    | Number of keys | One shared secret key | Two — a public and a private key |
+    | Key for encryption | The shared key | Receiver's public key |
+    | Key for decryption | The same shared key | Receiver's private key |
+    | Speed | Very fast | Much slower |
+    | Key distribution | The hard problem — the key must reach the other party securely | Solved — the public key is published openly |
+    | Keys needed for n users | `n(n−1)/2` | `2n` |
+    | Typical key size | 128-256 bits | 2048-4096 bits (RSA) |
+    | Digital signature | Not supported | Supported |
+    | Suitable for | Encrypting large volumes of data | Key exchange, signatures, small messages |
+    | Algorithms | AES, DES, 3DES, Blowfish, RC4 | RSA, ECC, Diffie-Hellman, DSA |
+
+    - Practical reality: neither is used alone. Real systems such as TLS, PGP and SSH use **hybrid encryption** — asymmetric to establish a shared session key, then symmetric to encrypt the traffic.
+
 16. **Identify the type of algorithm? (i) MD5 (ii) AES (iii) RSA (iv) Diffie-Hellman** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 461 (ET: BUET)]*
+
+    Answer:
+
+    | Algorithm | Type | Details |
+    |---|---|---|
+    | **(i) MD5** | **Hash function** (not encryption) | Message Digest 5, produces a 128-bit digest. One-way, no key. Broken since 2004 — collisions can be produced |
+    | **(ii) AES** | **Symmetric block cipher** | Advanced Encryption Standard. 128-bit blocks, keys of 128/192/256 bits. The current global standard |
+    | **(iii) RSA** | **Asymmetric encryption + digital signature** | Named after Rivest, Shamir, Adleman. Security rests on the difficulty of factoring large primes |
+    | **(iv) Diffie-Hellman** | **Asymmetric KEY EXCHANGE protocol** | Lets two parties agree a shared secret over an insecure channel. It does NOT encrypt data itself |
+
+    Important distinctions to state
+    - MD5 is often wrongly called "encryption". It is hashing — irreversible, keyless.
+    - Diffie-Hellman is not an encryption algorithm. It only establishes a shared key, which is then used with a symmetric cipher such as AES.
+    - RSA can both encrypt and sign; Diffie-Hellman can do neither, only key agreement.
 
 17. **Describe RSA Algorithm and how it works?** *[Teletalk Assistant Manager (IT) 2023 compact it 467 (ET: N/A)]*
 
+    Answer: RSA is an asymmetric encryption algorithm developed by Rivest, Shamir and Adleman in 1977. Its security rests on the fact that multiplying two large primes is easy, but factoring the product back into those primes is computationally infeasible.
+
+    Key generation
+    - **Step 1** — choose two large distinct prime numbers `p` and `q`.
+    - **Step 2** — compute `n = p × q`. This `n` is the modulus and is part of both keys.
+    - **Step 3** — compute Euler's totient `φ(n) = (p−1)(q−1)`.
+    - **Step 4** — choose `e` such that `1 < e < φ(n)` and `gcd(e, φ(n)) = 1`. Commonly `e = 65537`.
+    - **Step 5** — compute `d` such that `(d × e) mod φ(n) = 1`, that is `d` is the modular inverse of `e`.
+    - **Public key = (e, n)**, **Private key = (d, n)**.
+
+    Encryption and decryption
+    - Encrypt: `C = Mᵉ mod n`
+    - Decrypt: `M = Cᵈ mod n`
+
+    Worked example with small numbers
+    - Let `p = 3`, `q = 11` → `n = 33`, `φ(n) = 2 × 10 = 20`
+    - Choose `e = 7` (since `gcd(7, 20) = 1`)
+    - Find `d` such that `7d mod 20 = 1` → `d = 3` (because `21 mod 20 = 1`)
+    - Public key `(7, 33)`, private key `(3, 33)`
+    - Encrypt message `M = 5`: `C = 5⁷ mod 33 = 78125 mod 33 = 14`
+    - Decrypt: `M = 14³ mod 33 = 2744 mod 33 = 5` ✓
+
+    Uses
+    - Encrypting small data, exchanging symmetric session keys in TLS, digital signatures, and SSL certificates.
+
+    Limitations
+    - Very slow compared with AES, so it is never used for bulk data.
+    - Needs large keys (2048 bits minimum, 4096 preferred).
+    - Threatened by quantum computing — Shor's algorithm can factor large numbers efficiently, which is driving the move to post-quantum cryptography.
+
 18. **অথবা, (ক) Private key এবং Public key উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
+
+    Answer: In asymmetric cryptography every user has a mathematically linked PAIR of keys.
+
+    **Public key**
+    - Distributed openly to anyone. It can be published on a website or in a directory.
+    - Used to ENCRYPT a message being sent to the owner, and to VERIFY a signature made by the owner.
+
+    **Private key**
+    - Kept absolutely secret by the owner and never shared.
+    - Used to DECRYPT messages sent to the owner, and to CREATE a digital signature.
+
+    | Operation | Key used |
+    |---|---|
+    | Encrypt a message to Bob | Bob's PUBLIC key |
+    | Decrypt that message | Bob's PRIVATE key |
+    | Sign a document | Sender's PRIVATE key |
+    | Verify that signature | Sender's PUBLIC key |
+
+    Example — sending a confidential message
+    - Karim wants to send a secret message to Rahim.
+    - Rahim's public key is published on the company website, so Karim downloads it.
+    - Karim encrypts the message with **Rahim's public key** and sends it.
+    - Only **Rahim's private key** can decrypt it. Even Karim cannot decrypt it after sending.
+
+    Example — signing a document
+    - Rahim signs a contract with **his own private key**.
+    - Anyone can verify it with **Rahim's public key**, which proves the document came from Rahim and has not been altered.
+    - Rahim cannot later deny signing it, because only he holds that private key — this is non-repudiation.
+
+    - Analogy: a letterbox. The public key is the open slot — anyone can post a letter in. The private key is the key to the box — only the owner can take letters out.
 
 19. **(খ) Plaintext ও Cipher text এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Plaintext | Ciphertext |
+    |---|---|---|
+    | Meaning | The original readable message | The encrypted, unreadable form |
+    | Readability | Human readable and understandable | Meaningless without the key |
+    | Stage | Input to encryption, output of decryption | Output of encryption, input to decryption |
+    | Security | Not secure — anyone who sees it understands it | Secure — useless without the key |
+    | Transmission | Should never be sent over an insecure network | Safe to send over a public network |
+    | Also called | Cleartext | Cryptogram, encrypted text |
+    | Example | `HELLO` | `KHOOR` (Caesar shift 3) or `X8#kL2p@` (AES) |
+
+    Relationship
+    ```
+    Plaintext  --[Encryption + Key]-->  Ciphertext
+    Ciphertext --[Decryption + Key]-->  Plaintext
+    ```
+
+    - The whole purpose of cryptography is to keep data as ciphertext whenever it is exposed — travelling over a network or stored on a disk — and convert it to plaintext only inside the trusted endpoint that is authorised to read it.
+
 20. **What is SHA-256 and SHA-512 in network security, what is avalanche effect, is it desirable or undesirable.** *[RPGCL Assistant Manager (ICT) 2022 compact it 655 (ET: BUET)]*
+
+    Answer:
+
+    **SHA-256 and SHA-512**
+    - Both belong to the **SHA-2 (Secure Hash Algorithm 2)** family, designed by the NSA and published by NIST in 2001.
+    - **SHA-256** produces a **256-bit** (32-byte) digest, written as 64 hexadecimal characters. It processes 512-bit blocks in 64 rounds using 32-bit words.
+    - **SHA-512** produces a **512-bit** (64-byte) digest, 128 hexadecimal characters. It processes 1024-bit blocks in 80 rounds using 64-bit words.
+    - SHA-512 is actually FASTER than SHA-256 on 64-bit processors, because it works with 64-bit words natively.
+
+    Uses in network security
+    - Password storage (combined with a salt), digital signatures and certificates, TLS handshake integrity, file and software integrity verification, HMAC message authentication, blockchain block hashing (Bitcoin uses SHA-256), and forensic evidence integrity.
+
+    **Avalanche effect**
+    - The property that a SMALL change in the input produces a COMPLETELY DIFFERENT output — statistically, changing one input bit should flip about half the output bits.
+
+    Example
+    ```
+    SHA-256("hello") = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+    SHA-256("hellp") = a4b7d... (entirely different, though only one letter changed)
+    ```
+
+    **Is it desirable?** — **Highly DESIRABLE.** It is an essential property of any secure hash function.
+
+    Why it is desirable
+    - **Prevents inference** — an attacker cannot learn anything about the input by observing how the output changes.
+    - **Makes tampering detectable** — altering a single character of a document changes the hash completely, so the change cannot be hidden.
+    - **Defeats partial matching** — an attacker cannot get "closer" to the right answer by guessing, because near-misses produce entirely unrelated outputs.
+    - **Supports collision resistance** — it is what makes finding two inputs with the same hash infeasible.
+
+    - Without the avalanche effect, similar passwords would produce similar hashes, and an attacker could work towards the correct value incrementally. A hash function lacking it would be worthless for security.
 
 21. **(ii) Symmetric Key Encryption and Asymmetric Key Encryption ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 790 (ET: N/A)]*
 
+    Answer:
+
+    **Symmetric key encryption**
+    - A single secret key performs both encryption and decryption. Both sender and receiver must possess the same key.
+    - Working: `Ciphertext = E(Plaintext, K)` and `Plaintext = D(Ciphertext, K)`, with the same `K` in both.
+    - Advantages: very fast, low computational cost, ideal for large volumes of data.
+    - Disadvantages: the key must be shared securely beforehand, and `n(n−1)/2` keys are needed for `n` users.
+    - Algorithms: AES (current standard), DES, 3DES, Blowfish, RC4.
+
+    **Asymmetric key encryption**
+    - A mathematically linked pair of keys: a public key that is published, and a private key kept secret.
+    - Working: `Ciphertext = E(Plaintext, Public key)` and `Plaintext = D(Ciphertext, Private key)`.
+    - Advantages: no secret needs to be shared in advance, supports digital signatures and non-repudiation, needs only `2n` keys for `n` users.
+    - Disadvantages: 100-1000 times slower, requires much larger keys, and needs a PKI with a trusted Certificate Authority.
+    - Algorithms: RSA, ECC, Diffie-Hellman, DSA.
+
+    How they are combined in practice — hybrid encryption
+    - Asymmetric encryption exchanges a random symmetric session key.
+    - Symmetric encryption then protects the actual data with that key.
+    - This is exactly how HTTPS, SSH and PGP work, taking the key-distribution benefit of one and the speed of the other.
+
 22. **(a) What is meant by Encryption and Decryption?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 796 (ET: N/A)]*
+
+    Answer:
+    - **Encryption** is the process of converting readable data (plaintext) into an unreadable form (ciphertext) using a cryptographic algorithm and a key, so that unauthorised people cannot understand it.
+    - **Decryption** is the reverse process — converting ciphertext back into the original plaintext using the correct key.
+
+    ```
+    Plaintext  --[Encryption algorithm + Key]-->  Ciphertext
+    Ciphertext --[Decryption algorithm + Key]-->  Plaintext
+    ```
+
+    Example
+    - Plaintext `HELLO`, encrypted with a Caesar shift of 3, becomes `KHOOR`.
+    - `KHOOR` decrypted with the same shift of 3 returns `HELLO`.
+
+    Purpose
+    - **Confidentiality** — data intercepted in transit or stolen from storage is unreadable.
+    - Encryption protects data **in transit** (HTTPS, VPN) and **at rest** (disk and database encryption).
+    - Two types: symmetric (one shared key — AES, DES) and asymmetric (public and private key pair — RSA, ECC).
 
 23. **Difference between private key and public key.** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
 
+    Answer:
+
+    | Point | Private Key | Public Key |
+    |---|---|---|
+    | Distribution | Kept absolutely secret by the owner | Distributed openly to anyone |
+    | Who holds it | Only the owner | Everyone |
+    | Used to | Decrypt received messages, and CREATE digital signatures | Encrypt messages to the owner, and VERIFY the owner's signatures |
+    | If exposed | Total compromise — security is lost | No harm — it is meant to be public |
+    | Storage | In a secure keystore, HSM or smart card | In a certificate, directory or website |
+    | Generated | As a mathematically linked pair, together | As a mathematically linked pair, together |
+    | Also called | Secret key | — |
+
+    Rules to remember
+    - Encrypt with the RECEIVER'S PUBLIC key → decrypt with the RECEIVER'S PRIVATE key. (Confidentiality)
+    - Sign with the SENDER'S PRIVATE key → verify with the SENDER'S PUBLIC key. (Authentication)
+
+    - Note the direction reverses between encryption and signing, which is the point students most often confuse.
+    - The pair is generated together and is mathematically linked, but deriving the private key from the public key is computationally infeasible — that is the entire basis of public-key cryptography.
+
 24. **Write two symmetric key algorithm name.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
+
+    Answer: Two symmetric key algorithms:
+
+    - **AES (Advanced Encryption Standard)** — the current global standard, adopted by NIST in 2001. A block cipher with 128-bit blocks and key sizes of 128, 192 or 256 bits. Fast, secure and hardware-accelerated on modern CPUs.
+    - **DES (Data Encryption Standard)** — the older standard from 1977. A 64-bit block cipher with a 56-bit effective key. Now considered broken, because the key space is small enough to brute-force.
+
+    Other symmetric algorithms
+    - **3DES (Triple DES)** — applies DES three times for a 112-bit effective key; deprecated.
+    - **Blowfish** and **Twofish** — free alternatives designed by Bruce Schneier.
+    - **RC4** — a stream cipher, now broken and removed from TLS.
+    - **ChaCha20** — a modern stream cipher, used in TLS alongside AES.
 
 25. **(b) Describe secret key and public key encryption.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)]*
 
+    Answer:
+
+    **Secret key encryption (symmetric)**
+    - One shared secret key is used for both encryption and decryption, so both parties must hold the same key.
+    - Process: `C = E(P, K)` to encrypt, `P = D(C, K)` to decrypt, with the same `K`.
+    - Strengths: very fast, low computational load, suitable for encrypting large files and network streams.
+    - Weaknesses: the key must be delivered to the other party over a secure channel, which is the classic key distribution problem. Key count grows as `n(n−1)/2`.
+    - Algorithms: AES, DES, 3DES, Blowfish.
+
+    **Public key encryption (asymmetric)**
+    - A mathematically linked key pair. The public key is published; the private key is kept secret.
+    - Process: encrypt with the receiver's public key, decrypt with the receiver's private key.
+    - Strengths: no prior secret sharing, supports digital signatures and non-repudiation, key count is only `2n`.
+    - Weaknesses: much slower, requires larger keys, needs a PKI and trusted Certificate Authority.
+    - Algorithms: RSA, ECC, Diffie-Hellman, DSA.
+
+    Combined use
+    ```mermaid
+    flowchart LR
+        A[Public key crypto<br/>exchanges the session key] --> B[Symmetric crypto<br/>encrypts the actual data]
+    ```
+    - This hybrid model is used by TLS, SSH, PGP and virtually every secure protocol, because it gets the security properties of public key cryptography at the speed of secret key cryptography.
+
 26. **The Caesar Cipher is a type of shift cipher. Shift Ciphers work by using the modulo operator to encrypt and decrypt messages. The Shift Cipher has a key K, which is an integer from 0 to 25. How to Encrypt, How to decrypt.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1009-1010 (ET: N/A)]*
+
+    Answer: The Caesar cipher replaces each letter by another letter a fixed number of positions along the alphabet, wrapping around at Z.
+
+    Letter-to-number mapping
+    - `A = 0, B = 1, C = 2, ... Z = 25`
+
+    **Encryption formula**
+    ```
+    C = (P + K) mod 26
+    ```
+    - `P` is the numeric value of the plaintext letter, `K` is the key, `C` is the numeric value of the ciphertext letter.
+
+    **Decryption formula**
+    ```
+    P = (C − K + 26) mod 26
+    ```
+    - Adding 26 before the modulo keeps the result non-negative in languages where `%` can return a negative value.
+
+    Worked example — encrypt `HELLO` with `K = 3`
+
+    | Letter | P | (P + 3) mod 26 | C | Cipher letter |
+    |---|---|---|---|---|
+    | H | 7 | 10 | 10 | K |
+    | E | 4 | 7 | 7 | H |
+    | L | 11 | 14 | 14 | O |
+    | L | 11 | 14 | 14 | O |
+    | O | 14 | 17 | 17 | R |
+
+    - Ciphertext: **KHOOR**
+
+    Decrypting `KHOOR` with `K = 3`
+
+    | Letter | C | (C − 3 + 26) mod 26 | P | Plain letter |
+    |---|---|---|---|---|
+    | K | 10 | 7 | 7 | H |
+    | H | 7 | 4 | 4 | E |
+    | O | 14 | 11 | 11 | L |
+    | O | 14 | 11 | 11 | L |
+    | R | 17 | 14 | 14 | O |
+
+    - Plaintext: **HELLO** ✓
+
+    Wrap-around example
+    - `Z` with `K = 3`: `(25 + 3) mod 26 = 28 mod 26 = 2` → `C`. The `mod 26` is what makes the alphabet circular.
+
+    Weakness
+    - Only 25 possible keys, so it is broken instantly by brute force. It is also trivially broken by frequency analysis, since the letter distribution of the plaintext is preserved. It has no practical security value today and is taught only to illustrate substitution.
 
 27. **Public key cryptography কীভাবে কাজ করে?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020 (ET: N/A)]*
 
+    Answer: Public key cryptography works by giving every user a mathematically linked PAIR of keys, where what one key does only the other can undo.
+
+    Key generation
+    - Large prime numbers or elliptic curve points are used to generate a public key and a private key together.
+    - Deriving the private key from the public key is computationally infeasible — this asymmetry is the entire foundation.
+
+    For confidentiality
+    ```mermaid
+    flowchart LR
+        A[Sender] -->|1. gets receiver's PUBLIC key| K[Public key directory]
+        A -->|2. encrypts message| C[Ciphertext]
+        C -->|3. sent over insecure network| B[Receiver]
+        B -->|4. decrypts with own PRIVATE key| P[Original message]
+    ```
+    - Anyone can encrypt to the receiver, but only the receiver can read it.
+
+    For authentication — digital signature
+    - The sender hashes the message and encrypts the digest with their PRIVATE key.
+    - The receiver decrypts it with the sender's PUBLIC key and compares it with a freshly computed hash.
+    - A match proves the sender's identity and that the message is unaltered.
+
+    Why it is secure
+    - It relies on mathematical problems that are easy in one direction and hard in reverse: factoring large primes (RSA), the discrete logarithm problem (Diffie-Hellman), or the elliptic curve discrete logarithm problem (ECC).
+
+    Practical use
+    - HTTPS/TLS, SSH, PGP email, digital certificates, code signing, blockchain wallets.
+    - Because it is slow, it is used only to exchange a symmetric session key or to sign a small hash, never to encrypt bulk data directly.
+
 28. **(গ) Plain Text and Cipher Text-এর মধ্যে মূল পার্থক্য কী? লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069 (ET: N/A)]*
+
+    Answer: The fundamental difference is READABILITY — plaintext can be understood by anyone, ciphertext cannot be understood without the key.
+
+    | Point | Plaintext | Ciphertext |
+    |---|---|---|
+    | Definition | The original, unencrypted message | The encrypted, scrambled message |
+    | Readable | Yes, by anyone | No, only after decryption |
+    | Position in the process | Before encryption, after decryption | After encryption, before decryption |
+    | Requires a key to understand | No | Yes |
+    | Safe to transmit publicly | No | Yes |
+    | Example | `Account balance is 50000` | `X8#kL2p@9mQ!vZ` |
+
+    Relationship
+    ```
+    Plaintext --[Encryption]--> Ciphertext --[Decryption]--> Plaintext
+    ```
+
+    - The essential security principle: sensitive data should exist as plaintext ONLY inside the trusted endpoint that is authorised to process it. Everywhere else — on the network, on disk, in backups — it should exist as ciphertext.
 
 29. **(ক) Data encryption বলতে কী বোঝায়? বহুল ব্যবহৃত কয়েকটি encryption পদ্ধতির নাম লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
 
+    Answer:
+
+    (a) Data encryption
+    - The process of converting readable data into an unreadable coded form using a mathematical algorithm and a key, so that only authorised parties holding the correct key can read it.
+    - Its purpose is to protect confidentiality of data both **in transit** (moving over a network) and **at rest** (stored on disk or in a database).
+
+    (b) Widely used encryption methods
+
+    **Symmetric key algorithms**
+    - **AES (Advanced Encryption Standard)** — the current global standard. 128-bit blocks with 128/192/256-bit keys.
+    - **DES (Data Encryption Standard)** — the 1977 standard, now broken due to its 56-bit key.
+    - **3DES (Triple DES)** — DES applied three times; deprecated.
+    - **Blowfish** and **Twofish** — free, well-regarded alternatives.
+    - **RC4** — a stream cipher, now removed from TLS as insecure.
+
+    **Asymmetric key algorithms**
+    - **RSA** — the most widely used public key algorithm, based on prime factorisation.
+    - **ECC (Elliptic Curve Cryptography)** — the same security as RSA with much smaller keys, used on mobile devices.
+    - **Diffie-Hellman** — key exchange only.
+    - **DSA / ECDSA** — digital signatures only.
+
+    **Hash functions (one-way, keyless)**
+    - **SHA-256, SHA-512** — secure and standard.
+    - **MD5, SHA-1** — broken, no longer acceptable for security.
+    - **bcrypt, Argon2** — deliberately slow, designed for password storage.
+
+    - Practical note: real systems use hybrid encryption — RSA or ECDH to exchange a key, then AES to protect the data.
+
 30. **What is public key encryption? Explain digital signature with example.** *[ICT Ministry Assistant Programmer 2017 compact it 1238-1239 (ET: N/A)]*
 
+    Answer:
+
+    (a) Public key encryption
+    - An encryption scheme using a mathematically linked key pair: a PUBLIC key distributed openly and a PRIVATE key kept secret.
+    - A message encrypted with the receiver's public key can be decrypted only by the receiver's private key, so no secret has to be shared in advance.
+    - Algorithms: RSA, ECC, Diffie-Hellman, DSA.
+
+    (b) Digital signature
+    - An electronic mechanism that proves who created a message and that it has not been altered. It uses the key pair in the REVERSE direction from encryption — sign with the private key, verify with the public key.
+
+    ```mermaid
+    flowchart TD
+        M[Original document] --> H1[Hash with SHA-256]
+        H1 --> D1[Digest]
+        D1 --> S[Encrypt digest with<br/>SENDER'S PRIVATE key]
+        S --> SIG[Digital Signature]
+        M --> SEND[Send document + signature]
+        SIG --> SEND
+        SEND --> V1[Receiver hashes the document → Digest A]
+        SEND --> V2[Receiver decrypts signature with<br/>SENDER'S PUBLIC key → Digest B]
+        V1 --> CMP{Digest A = Digest B ?}
+        V2 --> CMP
+        CMP -->|Yes| OK[Valid — authentic and unaltered]
+        CMP -->|No| BAD[Invalid — tampered or forged]
+    ```
+
+    Example — a bank loan approval letter
+    - The branch manager writes the approval letter and signs it digitally with **his private key**.
+    - The head office receives the letter plus the signature.
+    - It hashes the received letter and separately decrypts the signature with the **manager's public key**.
+    - If both digests match, head office knows (a) the letter really came from that manager, (b) not a word has been changed, and (c) the manager cannot later deny sending it.
+    - If even one character of the letter were altered in transit, the two digests would differ completely (the avalanche effect) and the signature would fail.
+
+    Three guarantees provided
+    - **Authentication** — only the holder of the private key could have produced the signature.
+    - **Integrity** — any change to the document breaks the match.
+    - **Non-repudiation** — the sender cannot deny having signed it.
+
 31. **b) What is a digital signature? And why is that important?** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
+
+    Answer: A digital signature is a cryptographic value attached to a digital document that proves who created it and that it has not been altered since. It is created by hashing the document and encrypting that hash with the signer's PRIVATE key.
+
+    How it works in brief
+    - Sign: `Signature = Encrypt(Hash(document), sender's private key)`
+    - Verify: decrypt the signature with the sender's public key to recover the hash, independently hash the received document, and compare. A match confirms validity.
+
+    Why it is important
+
+    - **Authentication** — it proves the identity of the sender. Only the holder of the private key could have produced that signature.
+    - **Integrity** — any change to the document, even a single character, breaks the hash match, so tampering is immediately detected.
+    - **Non-repudiation** — the signer cannot later deny having signed, because nobody else holds the private key. This is the property a handwritten signature is supposed to provide, and it is what makes digital contracts enforceable.
+    - **Legal validity** — recognised by law. In Bangladesh, digital signatures are legally valid under the **ICT Act 2006**, with licensed Certifying Authorities issuing certificates under the Controller of Certifying Authorities (CCA).
+    - **Efficiency** — documents are signed and transmitted in seconds, removing courier time, printing and physical storage.
+    - **Cost saving** — no paper, no postage, no physical archive.
+
+    Where it is used
+    - SSL/TLS certificates that secure every HTTPS website, signed software updates (so malware cannot pose as a legitimate update), e-tendering and e-GP, income tax and VAT returns, banking instructions, and blockchain transactions.
+
+    - Important distinction: a **digital signature** is cryptographic and verifiable; a scanned image of a handwritten signature (an "electronic signature") is neither — it can be copied and pasted onto any document.
 
 ## Firewalls & Network Defense (20)
 
