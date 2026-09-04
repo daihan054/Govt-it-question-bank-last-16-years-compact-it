@@ -6598,25 +6598,1351 @@ Public class class B extends class A {
 
 1. **Suppose we want to develop software for a graphic package and we are given the task to implement circle class. The circle class has to be translatable from its origin. And it should also be able to give perimeter and area of the circle. Identify the data and method requirements for the class and give the data flow of translation method.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 425 (ET: BIBM)]*
 
+   Answer: Data requirements (attributes)
+   ```
+      double x       : the x-coordinate of the centre
+      double y       : the y-coordinate of the centre
+      double radius  : the radius of the circle
+
+      static final double PI = 3.14159   (a shared constant)
+   ```
+   - The centre is needed because the circle must be `translatable`; the radius because it must give area and perimeter. Nothing else is required.
+
+   Method requirements
+   ```
+      Circle(x, y, radius)          constructor - create and initialise
+      translate(dx, dy)             move the circle by dx and dy
+      double area()                 PI x r^2
+      double perimeter()            2 x PI x r
+      getX() , getY() , getRadius() accessors
+      setRadius(r)                  mutator, with validation
+      display()                     show the current state
+   ```
+
+   Implementation
+   ```java
+   class Circle {
+
+       // ---- data members ----
+       private double x;
+       private double y;
+       private double radius;
+       private static final double PI = 3.14159;
+
+       // ---- constructor ----
+       public Circle(double x, double y, double radius) {
+           this.x = x;
+           this.y = y;
+           this.radius = (radius > 0) ? radius : 1;
+       }
+
+       // ---- TRANSLATION : move the centre, radius unchanged ----
+       public void translate(double dx, double dy) {
+           this.x = this.x + dx;
+           this.y = this.y + dy;
+       }
+
+       // ---- area and perimeter ----
+       public double area()      { return PI * radius * radius; }
+       public double perimeter() { return 2 * PI * radius; }
+
+       // ---- accessors ----
+       public double getX()      { return x; }
+       public double getY()      { return y; }
+       public double getRadius() { return radius; }
+
+       public void setRadius(double r) {
+           if (r > 0) this.radius = r;
+       }
+
+       public void display() {
+           System.out.printf("Centre (%.1f, %.1f)  radius %.1f%n", x, y, radius);
+           System.out.printf("Area %.2f   Perimeter %.2f%n", area(), perimeter());
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Circle c = new Circle(0, 0, 5);
+           c.display();
+
+           c.translate(3, 4);          // move 3 right and 4 up
+           System.out.println("After translation by (3, 4):");
+           c.display();
+       }
+   }
+   ```
+
+   Output
+   ```
+      Centre (0.0, 0.0)  radius 5.0
+      Area 78.54   Perimeter 31.42
+      After translation by (3, 4):
+      Centre (3.0, 4.0)  radius 5.0
+      Area 78.54   Perimeter 31.42
+   ```
+   - Note that area and perimeter are unchanged. `Translation moves a shape without changing its size` — that is exactly what makes it a translation rather than a scaling.
+
+   Data flow of the translate method
+   ```mermaid
+   flowchart LR
+       A[Caller supplies dx, dy] --> B[translate dx, dy]
+       B --> C[read current x, y]
+       C --> D[x_new = x + dx<br/>y_new = y + dy]
+       D --> E[write back to x, y]
+       E --> F[radius UNCHANGED]
+   ```
+   ```
+      INPUT                PROCESS                    OUTPUT / STATE CHANGE
+      -----                -------                    ---------------------
+      dx, dy      -->   read current x, y      -->    x = x + dx
+      (parameters)      compute x + dx                y = y + dy
+                        compute y + dy                radius unchanged
+                                                      area unchanged
+                                                      perimeter unchanged
+   ```
+
+   Worked trace
+   ```
+      Before : x = 0 , y = 0 , radius = 5
+      Call   : translate(3, 4)
+
+           x = 0 + 3 = 3
+           y = 0 + 4 = 4
+
+      After  : x = 3 , y = 4 , radius = 5
+   ```
+
+   Design points worth stating
+   - The data members are `private`, so the circle cannot be given a negative radius from outside — encapsulation.
+   - `area()` and `perimeter()` are `computed on demand` rather than stored. Storing them would create a second copy of the same information, which could fall out of step when the radius changes.
+   - `PI` is `static final`, so there is one shared copy and it cannot be altered.
+   - If the package needs many shapes, `Circle` should extend an abstract `Shape` class declaring `area()`, `perimeter()` and `translate()`, so that all shapes can be handled polymorphically.
+
 2. **What are the built in classes?** *[BCC Assistant Programmer 11.11.2023 compact it 546 (ET: N/A)]*
+
+   Answer: `Built-in classes` are the ready-made classes supplied with the language in its standard library. They are already written, tested and optimised, so a programmer uses them instead of writing the same code again.
+
+   - In Java they are organised into `packages` and shipped in the JDK.
+
+   Main built-in packages and their classes
+
+   `java.lang` — imported automatically, no `import` needed
+   ```
+      Object       the root of every class hierarchy
+      String       immutable text
+      StringBuilder / StringBuffer   mutable text
+      Math         sqrt, pow, abs, max, min, random
+      System       in, out, err, currentTimeMillis, exit
+      Thread       threads
+      Exception , RuntimeException , Throwable
+      Wrapper classes : Integer, Double, Float, Long, Short,
+                        Byte, Character, Boolean
+   ```
+
+   `java.util` — collections and utilities
+   ```
+      ArrayList , LinkedList , Vector , Stack
+      HashMap , TreeMap , LinkedHashMap , Hashtable
+      HashSet , TreeSet , LinkedHashSet
+      Scanner      keyboard input
+      Arrays       sort, search, fill, copy
+      Collections  sort, reverse, shuffle
+      Date , Calendar , Random , Optional
+   ```
+
+   `java.io` and `java.nio` — input and output
+   ```
+      File , FileReader , FileWriter
+      BufferedReader , BufferedWriter
+      InputStream , OutputStream
+      FileInputStream , FileOutputStream
+      PrintWriter , ObjectInputStream
+   ```
+
+   `java.net` — networking
+   ```
+      Socket , ServerSocket , URL , URLConnection , InetAddress
+   ```
+
+   `java.sql` — database access
+   ```
+      Connection , Statement , PreparedStatement , ResultSet , DriverManager
+   ```
+
+   `java.time` — modern date and time (Java 8 onward)
+   ```
+      LocalDate , LocalTime , LocalDateTime , Duration , Period
+   ```
+
+   Others
+   ```
+      java.awt , javax.swing , javafx    graphical user interfaces
+      java.text                          formatting numbers and dates
+      java.security                      cryptography
+   ```
+
+   Example using several of them
+   ```java
+   import java.util.*;
+
+   public class Demo {
+       public static void main(String[] args) {
+
+           String s = "Bangladesh";                 // java.lang.String
+           System.out.println(s.toUpperCase());     // BANGLADESH
+           System.out.println(s.length());          // 10
+
+           System.out.println(Math.sqrt(25));       // java.lang.Math -> 5.0
+           System.out.println(Math.max(10, 20));    // 20
+
+           ArrayList<String> list = new ArrayList<>();   // java.util
+           list.add("Dhaka");
+           list.add("Chattogram");
+           Collections.sort(list);
+           System.out.println(list);                // [Chattogram, Dhaka]
+
+           Scanner sc = new Scanner(System.in);     // java.util.Scanner
+           // int n = sc.nextInt();
+
+           int x = Integer.parseInt("123");         // wrapper class
+           System.out.println(x + 1);               // 124
+       }
+   }
+   ```
+
+   Why they matter
+   ```
+      No need to reinvent common data structures and algorithms
+      Already TESTED and OPTIMISED by the platform's own engineers
+      STANDARD, so any Java developer recognises them immediately
+      Portable - they behave identically on every platform
+   ```
+
+   - The corresponding term in C++ is the `Standard Template Library (STL)`, with `vector`, `map`, `set`, `string`, `iostream` and the algorithm header. In C#, the `.NET Base Class Library` plays the same role.
 
 3. **অথবা, (ক) উদাহরণসহ Class এবং Object এর মধ্যে পার্থক্য ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 602 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Class
+   - A `class` is a `blueprint` or template that defines what data an object will hold and what it will be able to do. It is a `logical` entity — writing a class allocates no memory for data.
+   ```java
+   class Student {
+       String name;                    // attribute (what it HAS)
+       int    roll;
+       double cgpa;
+
+       void display() {                // method (what it DOES)
+           System.out.println(roll + " " + name + " " + cgpa);
+       }
+   }
+   ```
+
+   Object
+   - An `object` is an `instance` of a class — a real thing created from the blueprint, occupying memory on the heap. Each object has its `own copy` of the instance variables.
+   ```java
+   Student s1 = new Student();         // object 1
+   Student s2 = new Student();         // object 2
+   ```
+
+   Complete example
+   ```java
+   class Student {
+       String name;
+       int    roll;
+
+       Student(String name, int roll) {
+           this.name = name;
+           this.roll = roll;
+       }
+
+       void display() {
+           System.out.println(roll + " - " + name);
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           Student s1 = new Student("Rahim", 101);   // object 1
+           Student s2 = new Student("Karim", 102);   // object 2
+
+           s1.display();       // 101 - Rahim
+           s2.display();       // 102 - Karim
+       }
+   }
+   ```
+   - One class, two objects, each with its own `name` and `roll`.
+
+   An everyday analogy
+   ```
+      CLASS                       OBJECT
+      -----                       ------
+      The plan of a house         The houses actually built from it
+      A cake recipe               The cakes baked from it
+      The design of a car         The individual cars produced
+      A blank passport form       Each person's completed passport
+   ```
+   - One plan can produce any number of houses, and each house is separate: repainting one does not repaint the others.
+
+   Difference
+
+   | Point | Class | Object |
+   |---|---|---|
+   | Nature | A blueprint or template | An instance of the class |
+   | Entity | `Logical` | `Physical` — it exists in memory |
+   | Memory | None allocated for data | Allocated on the heap |
+   | Created by | The `class` keyword | The `new` keyword |
+   | Declared | Once | Any number of times |
+   | Contains | Attributes and methods | Actual values for those attributes |
+   | Analogy | The recipe | The cake |
+   | Example | `class Student { ... }` | `Student s1 = new Student();` |
+   | Destroyed | Never during the program | By the garbage collector when unreachable |
+
+   Memory picture
+   ```
+      ---- Class area ----
+           Student : the method code, static members
+
+      ---- Heap ----
+           s1 -> [ name = "Rahim" , roll = 101 ]
+           s2 -> [ name = "Karim" , roll = 102 ]
+   ```
+   - The `method code exists once` in the class area and is shared. Only the `data` is duplicated per object, which is why creating many objects is inexpensive.
+
 4. **(খ) উদাহরণসহ ক্লাস এবং অবজেক্ট এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) Class
+   - A `class` is a blueprint or template that defines what data an object will hold and what it can do. It is a `logical` entity — declaring a class allocates no memory for data.
+   ```java
+   class Car {
+       String brand;                // attribute
+       int    speed;
+
+       void drive() {               // method
+           System.out.println(brand + " is running at " + speed + " km/h");
+       }
+   }
+   ```
+
+   Object
+   - An `object` is an `instance` of a class — a real entity created from the blueprint, occupying memory on the heap. Each object keeps its `own copy` of the instance variables.
+   ```java
+   Car c1 = new Car();          // object 1
+   Car c2 = new Car();          // object 2
+   ```
+
+   Full example
+   ```java
+   class Car {
+       String brand;
+       int    speed;
+
+       Car(String brand, int speed) {
+           this.brand = brand;
+           this.speed = speed;
+       }
+
+       void drive() {
+           System.out.println(brand + " is running at " + speed + " km/h");
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           Car c1 = new Car("Toyota", 120);     // object 1
+           Car c2 = new Car("Honda", 100);      // object 2
+
+           c1.drive();      // Toyota is running at 120 km/h
+           c2.drive();      // Honda is running at 100 km/h
+       }
+   }
+   ```
+
+   Analogy
+   ```
+      CLASS                     OBJECT
+      -----                     ------
+      A house plan              The houses built from it
+      A cake recipe             The cakes baked from it
+      A blank passport form     Each person's completed passport
+   ```
+   - One plan, many houses. Painting one house does not change the others, because each is a separate object with its own state.
+
+   Difference
+
+   | Point | Class | Object |
+   |---|---|---|
+   | Nature | Blueprint or template | Instance of the class |
+   | Entity | `Logical` | `Physical` — exists in memory |
+   | Memory | None allocated for data | Allocated on the heap |
+   | Created with | The `class` keyword | The `new` keyword |
+   | How many | Declared once | Any number |
+   | Contains | Attributes and methods | Actual values for those attributes |
+   | Example | `class Car { ... }` | `Car c1 = new Car();` |
+   | Destroyed | Never during the program | By the garbage collector |
+
+   Memory picture
+   ```
+      ---- Class area ----
+           Car : the method code, static members  (ONE copy)
+
+      ---- Heap ----
+           c1 -> [ brand = "Toyota" , speed = 120 ]
+           c2 -> [ brand = "Honda"  , speed = 100 ]
+   ```
+   - The method `code` exists once and is shared by every object; only the `data` is duplicated. That is why creating many objects is cheap.
 
 5. **Define Class and Object in C++ with example.** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
+   Answer: Class
+   - A `class` in C++ is a user-defined data type that binds `data members` and `member functions` into one unit. It is a `blueprint` — declaring a class allocates no memory for data.
+   - Members are `private by default`, which is what distinguishes a class from a `struct`.
+   ```cpp
+   class ClassName {
+   private:
+       // data members - hidden
+   public:
+       // member functions - the interface
+   };
+   ```
+
+   Object
+   - An `object` is an `instance` of a class — a real entity occupying memory. Each object has its own copy of the data members.
+   ```cpp
+      ClassName objectName;
+   ```
+
+   Complete example
+   ```cpp
+   #include <iostream>
+   #include <string>
+   using namespace std;
+
+   class Student {
+   private:                              // encapsulation
+       string name;
+       int    roll;
+       double cgpa;
+
+   public:
+       // ---- constructor ----
+       Student(string n, int r, double c) {
+           name = n;
+           roll = r;
+           cgpa = (c >= 0 && c <= 4.0) ? c : 0;
+       }
+
+       // ---- member functions ----
+       void display() {
+           cout << roll << " - " << name << " - CGPA " << cgpa << endl;
+       }
+
+       void setCgpa(double c) {
+           if (c >= 0 && c <= 4.0) cgpa = c;
+       }
+
+       double getCgpa() { return cgpa; }
+   };
+
+   int main() {
+       Student s1("Rahim", 101, 3.75);      // object 1
+       Student s2("Karim", 102, 3.40);      // object 2
+
+       s1.display();                        // 101 - Rahim - CGPA 3.75
+       s2.display();                        // 102 - Karim - CGPA 3.4
+
+       s1.setCgpa(3.90);
+       s1.display();                        // 101 - Rahim - CGPA 3.9
+
+       // s1.cgpa = 5.0;    // COMPILE ERROR - cgpa is private
+
+       return 0;
+   }
+   ```
+
+   Defining a member function outside the class, with the scope resolution operator
+   ```cpp
+   class Rectangle {
+   private:
+       double length, width;
+   public:
+       void setDimensions(double l, double w);   // declaration only
+       double area();
+   };
+
+   void Rectangle::setDimensions(double l, double w) {   // definition
+       length = l;
+       width  = w;
+   }
+
+   double Rectangle::area() {
+       return length * width;
+   }
+   ```
+
+   Creating objects in C++
+   ```cpp
+      Student s1("Rahim", 101, 3.75);          // on the STACK, automatic
+      Student* p = new Student("Karim",102,3.4); // on the HEAP, needs delete
+      p->display();
+      delete p;                                // C++ has no garbage collector
+      Student arr[3] = { ... };                // an array of objects
+   ```
+
+   Difference
+
+   | Point | Class | Object |
+   |---|---|---|
+   | Nature | Blueprint or template | Instance of the class |
+   | Entity | Logical | Physical — occupies memory |
+   | Memory | None for data | Allocated when created |
+   | Declared | Once | Any number of times |
+   | Contains | Members and functions | Actual values |
+   | Default access | `private` | — |
+   | Created by | The `class` keyword | `ClassName obj;` or `new` |
+
+   Access specifiers in C++
+   ```
+      private   : accessible inside the class only          (the default)
+      protected : the class and its derived classes
+      public    : accessible everywhere
+   ```
+
+   - The difference from `struct` is only the default: a struct's members are `public` by default and a class's are `private`. Everything else — methods, constructors, inheritance — is available to both.
+
 6. **What are the common activities on OOP design process?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 756 (ET: N/A)]*
+
+   Answer: `Object-oriented design` is the stage between analysis and coding, in which the problem is expressed as a set of collaborating objects. The common activities are the following.
+
+   1. Identify the objects and classes
+   - Read the requirement statement and pick out the `nouns`. Each significant noun is a candidate class.
+   ```
+      "A CUSTOMER opens an ACCOUNT at a BRANCH and makes TRANSACTIONS."
+
+      Candidate classes : Customer , Account , Branch , Transaction
+   ```
+   - Discard nouns that are attributes rather than entities, and those outside the system's scope.
+
+   2. Identify the attributes
+   - For each class, decide what data it must hold — its `state`.
+   ```
+      Account : accountNumber , balance , openingDate , type
+   ```
+
+   3. Identify the methods (responsibilities)
+   - Pick out the `verbs`. Each becomes a method on the class that owns the data it needs.
+   ```
+      "The customer DEPOSITS and WITHDRAWS money."
+
+      Account : deposit() , withdraw() , getBalance() , calculateInterest()
+   ```
+
+   4. Identify the relationships between classes
+   ```
+      IS-A       -> inheritance      : SavingsAccount IS-A Account
+      HAS-A      -> composition      : Account HAS-A Customer
+      USES-A     -> association      : Teller USES-A Account
+      Aggregation -> a weaker HAS-A, where the part can outlive the whole
+   ```
+
+   5. Determine the cardinality of each relationship
+   ```
+      One customer  --  many accounts        (1 : N)
+      One account   --  many transactions    (1 : N)
+   ```
+
+   6. Build the class hierarchy
+   - Factor the common attributes and behaviour into a `superclass`, and specialise in subclasses.
+   ```
+                   Account
+                  /       \
+       SavingsAccount   CurrentAccount
+   ```
+
+   7. Apply encapsulation and define the interface
+   - Decide which members are `private` and which `public`. The public members are the class's `contract` with the rest of the system, and should be as small as possible.
+
+   8. Identify abstraction points
+   - Where several classes share a responsibility but implement it differently, declare an `abstract class` or an `interface`.
+
+   9. Draw the design
+   ```
+      Class diagram        : classes, attributes, methods, relationships
+      Sequence diagram     : the order of messages between objects
+      Use case diagram     : what the actors need the system to do
+      State diagram        : how one object's state changes
+   ```
+   - `UML` is the standard notation for all of these.
+
+   10. Apply design principles and patterns
+   ```
+      SOLID :
+         S - Single Responsibility : one class, one reason to change
+         O - Open-Closed           : open for extension, closed for modification
+         L - Liskov Substitution   : a subclass must be usable as its superclass
+         I - Interface Segregation : many small interfaces beat one large one
+         D - Dependency Inversion  : depend on abstractions, not concretions
+
+      Patterns : Factory, Singleton, Observer, Strategy, MVC
+   ```
+
+   11. Review, refine and iterate
+   - Check for classes with too many responsibilities, duplicated code, deep inheritance chains and circular dependencies. Object-oriented design is `iterative`, not a single pass.
+
+   12. Implement and test
+   - Translate the design into code, and write unit tests for each class in isolation.
+
+   Worked illustration — a small banking system
+   ```
+      Nouns -> classes      : Customer, Account, Transaction, Branch
+      Verbs -> methods      : deposit, withdraw, transfer, calculateInterest
+      Relationships         : Customer HAS-A Account (1:N)
+                              SavingsAccount IS-A Account
+                              Account HAS-MANY Transaction
+      Abstraction           : abstract class Account with abstract
+                              calculateInterest()
+      Encapsulation         : balance is private; deposit() validates
+   ```
+
+   - The core question the whole process answers is: `what things exist in this problem, what does each know, and what is each responsible for doing?` Getting the responsibilities in the right place is what makes an object-oriented design good or bad.
 
 7. **Write a programme to create an object of type batsman and calculate the average runs scored by the player.** *[RAKUB Programmer (PO) 12.10.2021 compact it 846-847 (ET: N/A)]*
 
+   Answer: The `Batsman` class holds the player's data, and `calculateAverage()` returns the batting average.
+   ```
+      Batting average = total runs / number of times OUT
+   ```
+   - Note that the divisor is the number of `dismissals`, not the number of innings — an innings in which the batsman was `not out` does not count in the denominator. This is the point the question is really testing.
+
+   ```java
+   import java.util.Scanner;
+
+   class Batsman {
+
+       // ---- data members ----
+       private String name;
+       private int    innings;
+       private int    notOuts;
+       private int    totalRuns;
+
+       // ---- constructor ----
+       public Batsman(String name, int innings, int notOuts, int totalRuns) {
+           this.name      = name;
+           this.innings   = innings;
+           this.notOuts   = notOuts;
+           this.totalRuns = totalRuns;
+       }
+
+       // ---- calculate the batting average ----
+       public double calculateAverage() {
+           int dismissals = innings - notOuts;
+
+           if (dismissals == 0)
+               return totalRuns;          // never out - average is the runs
+           return (double) totalRuns / dismissals;
+       }
+
+       // ---- simple average per innings, for comparison ----
+       public double runsPerInnings() {
+           if (innings == 0) return 0;
+           return (double) totalRuns / innings;
+       }
+
+       public void display() {
+           System.out.println("=================================");
+           System.out.println("Player      : " + name);
+           System.out.println("Innings     : " + innings);
+           System.out.println("Not outs    : " + notOuts);
+           System.out.println("Total runs  : " + totalRuns);
+           System.out.printf ("Average     : %.2f%n", calculateAverage());
+           System.out.printf ("Runs/innings: %.2f%n", runsPerInnings());
+           System.out.println("=================================");
+       }
+
+       public String getName()          { return name; }
+       public double getAverageValue()  { return calculateAverage(); }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           Scanner sc = new Scanner(System.in);
+
+           System.out.print("Enter player name : ");
+           String name = sc.nextLine();
+
+           System.out.print("Enter innings     : ");
+           int innings = sc.nextInt();
+
+           System.out.print("Enter not outs    : ");
+           int notOuts = sc.nextInt();
+
+           System.out.print("Enter total runs  : ");
+           int runs = sc.nextInt();
+
+           // create the OBJECT of type Batsman
+           Batsman player = new Batsman(name, innings, notOuts, runs);
+           player.display();
+
+           sc.close();
+       }
+   }
+   ```
+
+   Sample run
+   ```
+      Enter player name : Shakib Al Hasan
+      Enter innings     : 50
+      Enter not outs    : 5
+      Enter total runs  : 1800
+
+      =================================
+      Player      : Shakib Al Hasan
+      Innings     : 50
+      Not outs    : 5
+      Total runs  : 1800
+      Average     : 40.00
+      Runs/innings: 36.00
+      =================================
+   ```
+
+   Working
+   ```
+      Dismissals = innings - not outs = 50 - 5 = 45
+
+      Batting average = 1800 / 45 = 40.00
+      Runs per innings = 1800 / 50 = 36.00
+   ```
+
+   Version taking the score of each innings
+   ```java
+   class Batsman {
+       private String name;
+       private int[]  scores;
+       private boolean[] notOut;
+
+       public Batsman(String name, int[] scores, boolean[] notOut) {
+           this.name   = name;
+           this.scores = scores;
+           this.notOut = notOut;
+       }
+
+       public double calculateAverage() {
+           int total = 0, dismissals = 0;
+
+           for (int i = 0; i < scores.length; i++) {
+               total += scores[i];
+               if (!notOut[i]) dismissals++;
+           }
+           return (dismissals == 0) ? total : (double) total / dismissals;
+       }
+
+       public int highestScore() {
+           int max = 0;
+           for (int s : scores) if (s > max) max = s;
+           return max;
+       }
+   }
+   ```
+
+   Several players, compared
+   ```java
+   Batsman[] team = {
+       new Batsman("Shakib", 50, 5, 1800),
+       new Batsman("Tamim",  60, 3, 2100),
+       new Batsman("Mushfiq",55, 8, 1650)
+   };
+
+   Batsman best = team[0];
+   for (Batsman b : team) {
+       b.display();
+       if (b.getAverageValue() > best.getAverageValue()) best = b;
+   }
+   System.out.println("Best average: " + best.getName());
+   ```
+
+   Points worth noting
+   ```
+      (double) totalRuns / dismissals - the CAST is essential, or integer
+           division would discard the fraction and give 40 instead of 40.00
+
+      Guard against dismissals == 0, or the program throws
+           ArithmeticException (for integers) or returns Infinity
+
+      The data members are private with public methods : encapsulation
+   ```
+
 8. **(ক) Object কী? কীভাবে Object তৈরি করতে হয় উদাহরণসহ ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1085 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) What an object is
+   - An `object` is a real entity created from a `class`. It is an `instance` of the class, occupying memory on the heap, and it has three characteristics:
+   ```
+      STATE    : the values of its attributes  (what it HAS)
+      BEHAVIOUR: the methods it can perform    (what it DOES)
+      IDENTITY : a unique reference, so two objects with identical values
+                 are still two different objects
+   ```
+   ```
+      Object : a Car
+         State     : brand = "Toyota" , colour = "white" , speed = 0
+         Behaviour : start() , accelerate() , brake()
+         Identity  : the reference held in the variable c1
+   ```
+
+   How an object is created
+   ```java
+      ClassName referenceVariable = new ClassName(arguments);
+           |            |            |      |
+           |            |            |      +-- calls the CONSTRUCTOR
+           |            |            +--------- allocates memory on the HEAP
+           |            +---------------------- the reference variable
+           +----------------------------------- the type
+   ```
+
+   Three steps
+   ```
+      1. DECLARATION  : Student s1;
+                        creates a reference variable; it holds null so far
+
+      2. INSTANTIATION: new Student(...)
+                        allocates memory on the heap for the object
+
+      3. INITIALISATION: the CONSTRUCTOR runs and sets the initial values
+   ```
+
+   Complete example
+   ```java
+   class Student {
+       String name;
+       int    roll;
+
+       // constructor
+       Student(String name, int roll) {
+           this.name = name;
+           this.roll = roll;
+       }
+
+       void display() {
+           System.out.println(roll + " - " + name);
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           // creating objects
+           Student s1 = new Student("Rahim", 101);
+           Student s2 = new Student("Karim", 102);
+
+           s1.display();       // 101 - Rahim
+           s2.display();       // 102 - Karim
+       }
+   }
+   ```
+
+   Other ways to create an object in Java
+   ```java
+      // 1. the new keyword - the normal way
+      Student s = new Student("Rahim", 101);
+
+      // 2. Class.forName() with reflection
+      Student s = (Student) Class.forName("Student").newInstance();
+
+      // 3. clone() - copy an existing object
+      Student s2 = (Student) s1.clone();
+
+      // 4. deserialization - read an object back from a file or stream
+      ObjectInputStream in = new ObjectInputStream(new FileInputStream("f.ser"));
+      Student s = (Student) in.readObject();
+
+      // 5. a factory method
+      Student s = Student.create("Rahim", 101);
+   ```
+   - The `new` keyword is by far the commonest; the others exist for specific purposes such as frameworks, copying and persistence.
+
+   An array of objects
+   ```java
+      Student[] batch = new Student[3];              // 3 REFERENCES, all null
+      batch[0] = new Student("Rahim", 101);          // now the objects
+      batch[1] = new Student("Karim", 102);
+      batch[2] = new Student("Jamal", 103);
+
+      for (Student s : batch) s.display();
+   ```
+   - Note that `new Student[3]` creates only the array of references. Each element must still be given an object, or using it throws `NullPointerException`.
+
+   Memory picture
+   ```
+      ---- Stack ----              ---- Heap ----
+        s1  ----------------->  [ name="Rahim" , roll=101 ]
+        s2  ----------------->  [ name="Karim" , roll=102 ]
+   ```
+   - The `reference` lives on the stack; the `object` lives on the heap. When no reference points to an object any more, it becomes eligible for garbage collection.
+
+   In C++
+   ```cpp
+      Student s1("Rahim", 101);              // on the stack - destroyed automatically
+      Student* p = new Student("Karim",102); // on the heap - needs delete
+      delete p;                              // C++ has no garbage collector
+   ```
 
 9. **Suppose, you are implementing “Overdraft Account (OD)” class using java for a banking app. An OD type account is opened with an approved loan limit (ex. 100000/-). The account holder can deposit any amount of money in the OD account at any time. S/he can draw an amount of money from the account (acn) until sufficient acn balance. S/he allowed to draw money beyond his/her acn balance if the total over-drawing amount remains within the loan limit. A java sketch for OD acn is given bellow & code is expected to run in multi-threading mode. (same code with run by different counter in the Bank)** *[Bangladesh Bank Assistant Programmer 2019 compact it 1157 (ET: DU)]*
 
+   Answer: The account must allow the balance to go negative, but only as far as the approved `loan limit`. Because several bank counters run the same code at the same time, the withdrawal must be `thread-safe` — otherwise two tellers could both pass the limit check and overdraw the account.
+
+   ```java
+   class OverdraftAccount {
+
+       private final String accountNumber;
+       private final String holderName;
+       private final double loanLimit;        // e.g. 100000
+       private double balance;                // may go NEGATIVE
+
+       public OverdraftAccount(String accNo, String name,
+                               double openingBalance, double loanLimit) {
+           this.accountNumber = accNo;
+           this.holderName    = name;
+           this.balance       = openingBalance;
+           this.loanLimit     = loanLimit;
+       }
+
+       // ---------- DEPOSIT : any amount, at any time ----------
+       public synchronized void deposit(double amount) {
+           if (amount <= 0) {
+               System.out.println("Deposit must be positive");
+               return;
+           }
+           balance += amount;
+           System.out.println(Thread.currentThread().getName() +
+                              " deposited " + amount + " | balance = " + balance);
+       }
+
+       // ---------- WITHDRAW : allowed down to -loanLimit ----------
+       public synchronized boolean withdraw(double amount) {
+           if (amount <= 0) {
+               System.out.println("Withdrawal must be positive");
+               return false;
+           }
+
+           // the CHECK and the UPDATE must be ATOMIC
+           if (balance - amount >= -loanLimit) {
+               balance -= amount;
+               System.out.println(Thread.currentThread().getName() +
+                                  " withdrew " + amount + " | balance = " + balance);
+               if (balance < 0)
+                   System.out.println("   (overdrawn by " + (-balance) + ")");
+               return true;
+           } else {
+               System.out.println(Thread.currentThread().getName() +
+                   " DENIED " + amount + " : would exceed the loan limit. " +
+                   "Available = " + availableFunds());
+               return false;
+           }
+       }
+
+       // total money the holder may still draw
+       public synchronized double availableFunds() {
+           return balance + loanLimit;
+       }
+
+       public synchronized double getBalance() { return balance; }
+
+       public synchronized void display() {
+           System.out.println("--------------------------------");
+           System.out.println("Account   : " + accountNumber);
+           System.out.println("Holder    : " + holderName);
+           System.out.println("Balance   : " + balance);
+           System.out.println("Loan limit: " + loanLimit);
+           System.out.println("Available : " + availableFunds());
+           System.out.println("--------------------------------");
+       }
+   }
+   ```
+
+   Testing it with several counters running at once
+   ```java
+   public class Main {
+       public static void main(String[] args) throws InterruptedException {
+
+           OverdraftAccount acc =
+               new OverdraftAccount("OD-1001", "Karim Traders", 20000, 100000);
+
+           acc.display();     // balance 20000, available 120000
+
+           Runnable counter = () -> {
+               for (int i = 0; i < 3; i++) {
+                   acc.withdraw(30000);
+                   try { Thread.sleep(10); } catch (InterruptedException e) { }
+               }
+           };
+
+           Thread t1 = new Thread(counter, "Counter-1");
+           Thread t2 = new Thread(counter, "Counter-2");
+
+           t1.start();  t2.start();
+           t1.join();   t2.join();
+
+           acc.display();
+       }
+   }
+   ```
+
+   Sample output
+   ```
+      Counter-1 withdrew 30000.0 | balance = -10000.0
+         (overdrawn by 10000.0)
+      Counter-2 withdrew 30000.0 | balance = -40000.0
+         (overdrawn by 40000.0)
+      Counter-1 withdrew 30000.0 | balance = -70000.0
+         (overdrawn by 70000.0)
+      Counter-2 DENIED 30000.0 : would exceed the loan limit. Available = 30000.0
+      ...
+      --------------------------------
+      Balance   : -100000.0
+      Available : 0.0
+      --------------------------------
+   ```
+   - The balance never falls below `-100000`, whatever order the threads run in.
+
+   Why `synchronized` is essential — the race condition it prevents
+   ```
+      WITHOUT synchronized, with balance = 20000 and limit = 100000 :
+
+      Counter-1 : reads balance 20000, checks 20000-100000 >= -100000  OK
+      Counter-2 : reads balance 20000, checks 20000-100000 >= -100000  OK
+                               <- both passed the check
+      Counter-1 : balance = 20000 - 100000 = -80000
+      Counter-2 : balance = -80000 - 100000 = -180000   <- LIMIT BREACHED
+
+      The check and the update are two separate steps. Another thread can
+      act BETWEEN them - a "check-then-act" race condition.
+   ```
+   - `synchronized` makes the whole check-and-update sequence `atomic`: only one thread may be inside any synchronized method of that object at a time.
+
+   An alternative using an explicit lock
+   ```java
+   import java.util.concurrent.locks.ReentrantLock;
+
+   private final ReentrantLock lock = new ReentrantLock();
+
+   public boolean withdraw(double amount) {
+       lock.lock();
+       try {
+           if (balance - amount >= -loanLimit) {
+               balance -= amount;
+               return true;
+           }
+           return false;
+       } finally {
+           lock.unlock();          // ALWAYS in a finally block
+       }
+   }
+   ```
+   - `ReentrantLock` adds `tryLock()` with a timeout and fairness options, which `synchronized` does not offer.
+
+   Design points worth stating
+   ```
+      The balance is PRIVATE and may only be changed through synchronized
+           methods - encapsulation is what makes thread safety possible at all
+
+      Only the BALANCE needs protection; accountNumber, holderName and
+           loanLimit are final and never change
+
+      getBalance() and availableFunds() are also synchronized, so a reader
+           never sees a half-completed update
+
+      Interest on an overdraft is charged on the NEGATIVE balance only :
+
+           double overdraftInterest() {
+               return (balance < 0) ? -balance * rate / 100 : 0;
+           }
+
+      In a real banking system this logic would sit in a DATABASE
+           TRANSACTION, so that atomicity survives a crash as well as
+           concurrency. Java-level synchronization protects one JVM only.
+   ```
+
 10. **There was a java program where you have to create a class, constructor, setter function, getter function.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1214-1215 (ET: N/A)]*
 
+    Answer: The program below shows the standard structure of a Java class: `private` fields, a `constructor`, `setter` methods that validate, and `getter` methods that read.
+
+    ```java
+    class Student {
+
+        // ---- 1. PRIVATE data members : encapsulation ----
+        private String name;
+        private int    roll;
+        private double cgpa;
+
+        // ---- 2. CONSTRUCTORS ----
+
+        // default constructor
+        public Student() {
+            this.name = "Unknown";
+            this.roll = 0;
+            this.cgpa = 0.0;
+        }
+
+        // parameterised constructor
+        public Student(String name, int roll, double cgpa) {
+            this.name = name;
+            this.roll = roll;
+            setCgpa(cgpa);                 // reuse the setter, so it is validated
+        }
+
+        // ---- 3. SETTER methods : write, with validation ----
+        public void setName(String name) {
+            if (name != null && !name.trim().isEmpty())
+                this.name = name;
+            else
+                System.out.println("Name cannot be empty");
+        }
+
+        public void setRoll(int roll) {
+            if (roll > 0)
+                this.roll = roll;
+            else
+                System.out.println("Roll must be positive");
+        }
+
+        public void setCgpa(double cgpa) {
+            if (cgpa >= 0.0 && cgpa <= 4.0)
+                this.cgpa = cgpa;
+            else
+                System.out.println("CGPA must be between 0.00 and 4.00");
+        }
+
+        // ---- 4. GETTER methods : read only ----
+        public String getName() { return name; }
+        public int    getRoll() { return roll; }
+        public double getCgpa() { return cgpa; }
+
+        // ---- 5. other behaviour ----
+        public String getGrade() {
+            if (cgpa >= 3.75) return "A+";
+            else if (cgpa >= 3.50) return "A";
+            else if (cgpa >= 3.00) return "B";
+            else if (cgpa >= 2.00) return "C";
+            else return "F";
+        }
+
+        public void display() {
+            System.out.println("--------------------------------");
+            System.out.println("Roll  : " + roll);
+            System.out.println("Name  : " + name);
+            System.out.println("CGPA  : " + cgpa);
+            System.out.println("Grade : " + getGrade());
+            System.out.println("--------------------------------");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+
+            // using the parameterised constructor
+            Student s1 = new Student("Rahim Uddin", 101, 3.75);
+            s1.display();
+
+            // using the default constructor and setters
+            Student s2 = new Student();
+            s2.setName("Karim Ali");
+            s2.setRoll(102);
+            s2.setCgpa(3.40);
+            s2.display();
+
+            // the setters REJECT invalid values
+            s2.setCgpa(5.0);            // "CGPA must be between 0.00 and 4.00"
+            s2.setRoll(-5);             // "Roll must be positive"
+            System.out.println("CGPA is still: " + s2.getCgpa());   // 3.4
+
+            // direct access is impossible
+            // s2.cgpa = 5.0;           // COMPILE ERROR - cgpa is private
+        }
+    }
+    ```
+
+    Output
+    ```
+       --------------------------------
+       Roll  : 101
+       Name  : Rahim Uddin
+       CGPA  : 3.75
+       Grade : A+
+       --------------------------------
+       --------------------------------
+       Roll  : 102
+       Name  : Karim Ali
+       CGPA  : 3.4
+       Grade : B
+       --------------------------------
+       CGPA must be between 0.00 and 4.00
+       Roll must be positive
+       CGPA is still: 3.4
+    ```
+
+    The four elements the question asks for
+    ```
+       CLASS       : Student - the blueprint holding data and behaviour
+       CONSTRUCTOR : runs automatically when an object is created;
+                     same name as the class, no return type;
+                     can be OVERLOADED, as shown by the two versions here
+       SETTER      : setX(value) - writes a private field, after validating
+       GETTER      : getX()      - reads a private field
+    ```
+
+    Why getters and setters matter
+    ```
+       Without them the field must be public :
+
+            student.cgpa = 5.0;      // legal, and the data is now corrupt
+
+       With them, every write passes through ONE validation point, so an
+       invalid value can never enter the object. The internal representation
+       can also be changed later without breaking a single caller.
+    ```
+    - Naming convention: `getX()` / `setX()` for ordinary fields, and `isX()` for a boolean. Following it exactly is what makes a class a `JavaBean`, which frameworks such as Spring and Hibernate rely on.
+    - A field that should be read but never changed simply has a getter and `no setter` — that is how a read-only property is expressed.
+
 11. **In java language: write a class named Bicycle having 3 integer variables (speed, gear, cost) and a constructor to initialize the variables. Also write a class named MountBike that inherits Bicycle class, having an extra variable speedcost and a constructor to initialize the variable.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1269 (ET: N/A)]*
+
+    Answer: `MountBike` extends `Bicycle`, so it inherits `speed`, `gear` and `cost` and adds `speedcost` of its own.
+
+    ```java
+    // ---------------- SUPERCLASS ----------------
+    class Bicycle {
+
+        int speed;
+        int gear;
+        int cost;
+
+        // constructor to initialise the three variables
+        public Bicycle(int speed, int gear, int cost) {
+            this.speed = speed;
+            this.gear  = gear;
+            this.cost  = cost;
+        }
+
+        public void display() {
+            System.out.println("Speed : " + speed);
+            System.out.println("Gear  : " + gear);
+            System.out.println("Cost  : " + cost);
+        }
+    }
+
+    // ---------------- SUBCLASS ----------------
+    class MountBike extends Bicycle {
+
+        int speedcost;                  // the extra variable
+
+        // constructor to initialise all four variables
+        public MountBike(int speed, int gear, int cost, int speedcost) {
+            super(speed, gear, cost);   // MUST be the first statement
+            this.speedcost = speedcost;
+        }
+
+        @Override
+        public void display() {
+            super.display();            // print the inherited values first
+            System.out.println("SpeedCost : " + speedcost);
+        }
+    }
+
+    // ---------------- MAIN ----------------
+    public class Main {
+        public static void main(String[] args) {
+
+            Bicycle b = new Bicycle(20, 5, 15000);
+            System.out.println("--- Bicycle ---");
+            b.display();
+
+            MountBike m = new MountBike(35, 8, 45000, 1200);
+            System.out.println("--- MountBike ---");
+            m.display();
+        }
+    }
+    ```
+
+    Output
+    ```
+       --- Bicycle ---
+       Speed : 20
+       Gear  : 5
+       Cost  : 15000
+       --- MountBike ---
+       Speed : 35
+       Gear  : 8
+       Cost  : 45000
+       SpeedCost : 1200
+    ```
+
+    How the constructors chain
+    ```
+       new MountBike(35, 8, 45000, 1200)
+            |
+            v
+       MountBike constructor
+            |
+            +--> super(35, 8, 45000)  ---> Bicycle constructor
+            |                                 speed = 35
+            |                                 gear  = 8
+            |                                 cost  = 45000
+            |
+            +--> this.speedcost = 1200
+    ```
+    - `super(...)` must be the `first statement` in the subclass constructor. If it is omitted, Java inserts an implicit `super()` — which would fail here, because `Bicycle` has no no-argument constructor.
+
+    Better version, with encapsulation
+    ```java
+    class Bicycle {
+        private int speed, gear, cost;
+
+        public Bicycle(int speed, int gear, int cost) {
+            this.speed = speed;
+            this.gear  = gear;
+            this.cost  = cost;
+        }
+
+        public int getSpeed() { return speed; }
+        public int getGear()  { return gear; }
+        public int getCost()  { return cost; }
+
+        public void display() {
+            System.out.println("Speed: " + speed + ", Gear: " + gear +
+                               ", Cost: " + cost);
+        }
+    }
+
+    class MountBike extends Bicycle {
+        private int speedcost;
+
+        public MountBike(int speed, int gear, int cost, int speedcost) {
+            super(speed, gear, cost);
+            this.speedcost = speedcost;
+        }
+
+        public int totalCost() { return getCost() + speedcost; }
+
+        @Override
+        public void display() {
+            super.display();
+            System.out.println("SpeedCost: " + speedcost +
+                               ", Total: " + totalCost());
+        }
+    }
+    ```
+    - With `private` fields the subclass must use the getters. Declaring them `protected` instead would let the subclass access them directly, which is often preferred inside a class hierarchy.
+
+    Concepts the program demonstrates
+    ```
+       INHERITANCE          : MountBike extends Bicycle - an IS-A relationship
+       CONSTRUCTOR CHAINING : super(...) passes values up to the parent
+       METHOD OVERRIDING    : MountBike.display() replaces Bicycle.display()
+       super KEYWORD        : super(...) for the constructor,
+                              super.display() for the method
+       this KEYWORD         : distinguishes a field from a parameter
+       CODE REUSE           : speed, gear and cost are declared once
+    ```
 
 ## Output Tracing & Recursion (10)
 
