@@ -8222,11 +8222,301 @@
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) 2's complement method
+   - `2's complement` is the standard way a computer stores negative numbers and performs subtraction.
+   - To find the 2's complement of a number: `invert every bit (1's complement), then add 1`.
+   ```
+      2's complement of N = (1's complement of N) + 1
+   ```
+   - Why it is used:
+   ```
+   Subtraction becomes addition : A - B = A + (2's complement of B)
+                                  so one adder circuit does both jobs
+   Only ONE representation of zero (unlike 1's complement, which has +0 and -0)
+   The MSB is automatically the sign bit : 0 = positive , 1 = negative
+   An 8-bit register holds the range -128 to +127
+   ```
+
+   The problem: subtract (+11) from (-15), that is `-15 - 11`
+
+   Step 1 — write both numbers in 8-bit 2's complement
+   ```
+      +15 =  0000 1111
+      invert : 1111 0000
+      add 1  : 1111 0001
+      -15    = 1111 0001
+
+      +11 =  0000 1011
+      invert : 1111 0100
+      add 1  : 1111 0101
+      -11    = 1111 0101
+   ```
+
+   Step 2 — turn the subtraction into an addition
+   ```
+      (-15) - (+11) = (-15) + (-11)
+   ```
+
+   Step 3 — add
+   ```
+         1111 0001        (-15)
+      +  1111 0101        (-11)
+      ------------------
+       1 1110 0110
+       ^
+       carry out of the 8th bit is DISCARDED in 8-bit arithmetic
+
+      Result = 1110 0110
+   ```
+
+   Step 4 — read the result back
+   ```
+      The MSB is 1, so the result is negative.
+      Take the 2's complement to find its magnitude :
+
+         1110 0110
+      invert : 0001 1001
+      add 1  : 0001 1010  =  16 + 8 + 2 = 26
+
+      Result = -26
+   ```
+
+   Check
+   ```
+      -15 - 11 = -26        correct
+   ```
+
+   Overflow check
+   ```
+      Both operands are negative and the result is negative  ->  no overflow.
+      Overflow in 2's complement occurs only when two numbers of the SAME sign
+      give a result of the OPPOSITE sign.
+   ```
+
+   - Point worth noting: the `carry out is simply thrown away`; it is not an error. Overflow is detected by the sign rule above, or equivalently when the carry `into` the sign bit differs from the carry `out` of it.
+
 2. **BCD Addition: 00010011 + 00100110** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 644 (ET: BUET)]*
+
+   Answer: `BCD` (Binary Coded Decimal) writes each decimal digit separately as a 4-bit group. Only `0000 to 1001` are valid; the six patterns `1010 to 1111` are illegal.
+
+   The problem
+   ```
+      0001 0011  +  0010 0110
+   ```
+
+   Step 1 — read the two BCD numbers
+   ```
+      0001 0011  ->  0001 = 1 , 0011 = 3  ->  decimal 13
+      0010 0110  ->  0010 = 2 , 0110 = 6  ->  decimal 26
+
+      Expected answer : 13 + 26 = 39
+   ```
+
+   Step 2 — add the groups as ordinary binary, right group first
+   ```
+      Units group :      0011      (3)
+                       + 0110      (6)
+                       --------
+                         1001      (9)     valid, 9 <= 9, no correction
+
+      Tens group  :      0001      (1)
+                       + 0010      (2)
+                       --------
+                         0011      (3)     valid, no correction
+   ```
+
+   Step 3 — result
+   ```
+         0001 0011        (13)
+      +  0010 0110        (26)
+      -----------------
+         0011 1001        (39)
+
+      0011 = 3 ,  1001 = 9   ->   39        correct
+   ```
+
+   The BCD correction rule (needed when a group is invalid)
+   ```
+      If a 4-bit group exceeds 9, or produces a carry out,
+      ADD 0110 (decimal 6) to that group and carry 1 to the next group.
+   ```
+   - Reason: 4 bits hold 16 combinations but a decimal digit uses only 10, so the six unused patterns must be skipped.
+
+   Example where the correction is needed — 18 + 15
+   ```
+      Units :   1000  (8)
+              + 0101  (5)
+              -------
+                1101  (13)  ->  INVALID, greater than 9
+              + 0110  (add 6)
+              -------
+              1 0011  ->  digit 3, carry 1 to the tens group
+
+      Tens  :   0001  (1)
+              + 0001  (1)
+              + 0001  (carry)
+              -------
+                0011  (3)  valid
+
+      Result : 0011 0011 = 33        and 18 + 15 = 33     correct
+   ```
+
+   - In this question `no correction was needed`, because both groups stayed within 0 to 9. Stating the correction rule anyway shows the examiner that the method is understood.
 
 3. **(a) For two 8bit binary numbers. What will be output values in 2’s complement format: (i) (10000000+10000000) (ii) (11111111-01111111)** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
 
+   Answer: (i) 10000000 + 10000000
+
+   Step 1 — read the operands as 8-bit 2's complement
+   ```
+      1000 0000 : the MSB is 1, so the number is negative.
+      2's complement : invert -> 0111 1111 , add 1 -> 1000 0000 = 128
+
+      1000 0000 = -128        (the most negative value an 8-bit register holds)
+   ```
+
+   Step 2 — add
+   ```
+         1000 0000        (-128)
+      +  1000 0000        (-128)
+      ------------------
+       1 0000 0000
+       ^
+       carry out is discarded in 8-bit arithmetic
+
+      Stored result = 0000 0000 = 0
+   ```
+
+   Step 3 — check for overflow
+   ```
+      True answer  : -128 + (-128) = -256
+      8-bit range  : -128 to +127
+      -256 is outside the range  ->  OVERFLOW
+
+      Sign rule : two NEGATIVE operands gave a POSITIVE (zero) result  ->  overflow
+      Carry rule: carry INTO the sign bit = 0 , carry OUT of it = 1 ; they
+                  differ, which also signals overflow
+   ```
+   ```
+      Output value  = 0000 0000  (decimal 0)
+      Overflow flag = 1  ->  the stored answer is WRONG
+   ```
+
+   (ii) 11111111 - 01111111
+
+   Step 1 — read the operands
+   ```
+      1111 1111 : MSB is 1, negative.
+      invert -> 0000 0000 , add 1 -> 0000 0001 = 1
+      1111 1111 = -1
+
+      0111 1111 : MSB is 0, positive = 127
+   ```
+
+   Step 2 — turn the subtraction into an addition
+   ```
+      A - B = A + (2's complement of B)
+
+      B      = 0111 1111
+      invert = 1000 0000
+      add 1  = 1000 0001        (this is -127)
+   ```
+
+   Step 3 — add
+   ```
+         1111 1111        (-1)
+      +  1000 0001        (-127)
+      ------------------
+       1 1000 0000
+       ^
+       carry out is discarded
+
+      Stored result = 1000 0000
+   ```
+
+   Step 4 — read the result and check overflow
+   ```
+      MSB is 1, so the result is negative.
+      invert -> 0111 1111 , add 1 -> 1000 0000 = 128
+
+      Result = -128
+
+      True answer : -1 - 127 = -128
+      -128 IS inside the 8-bit range, so there is NO overflow.
+
+      Sign rule : negative + negative gave negative  ->  no overflow
+   ```
+   ```
+      Output value  = 1000 0000  (decimal -128)
+      Overflow flag = 0  ->  the answer is CORRECT
+   ```
+
+   Summary
+
+   | Case | Stored result | Decimal | Overflow |
+   |---|---|---|---|
+   | (i) 10000000 + 10000000 | 0000 0000 | 0 | Yes — true answer -256 |
+   | (ii) 11111111 - 01111111 | 1000 0000 | -128 | No |
+
+   - Key point to state: the `carry out is always discarded` and is never by itself proof of an error. Overflow is decided by the sign rule — two operands of the same sign giving a result of the opposite sign.
+
 4. **How many bits have to change to convert int A to int B. Sample A=31 and B=14.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1164 (ET: N/A)]*
+
+   Answer: The number of bit positions in which two numbers differ is called their `Hamming distance`. It is found by taking the `XOR` of the two numbers and counting the 1s in the result.
+
+   Step 1 — write both numbers in binary
+   ```
+      A = 31 = 0001 1111
+      B = 14 = 0000 1110
+   ```
+
+   Step 2 — take the XOR
+   ```
+         0001 1111        (A = 31)
+      XOR
+         0000 1110        (B = 14)
+      ------------------
+         0001 0001
+
+      XOR gives 1 wherever the two bits DIFFER and 0 where they are the same.
+   ```
+
+   Step 3 — count the 1s in the result
+   ```
+      0001 0001  ->  two 1s
+   ```
+   ```
+      Answer : 2 bits have to change
+   ```
+
+   Verification, position by position
+   ```
+      bit position :  7  6  5  4  3  2  1  0
+      A = 31       :  0  0  0  1  1  1  1  1
+      B = 14       :  0  0  0  0  1  1  1  0
+      differ?      :  .  .  .  X  .  .  .  X
+                                ^           ^
+                             bit 4       bit 0
+   ```
+   - Bit 4 must change from 1 to 0, and bit 0 from 1 to 0. All the other bits already match.
+
+   General method
+   ```
+      count = popcount(A XOR B)
+   ```
+   ```c
+   int bitsToChange(int a, int b) {
+       int x = a ^ b, count = 0;
+       while (x) {
+           count += x & 1;
+           x >>= 1;
+       }
+       return count;
+   }
+   ```
+   - A faster version uses `x = x & (x - 1)` in the loop, which clears the lowest set bit each time, so the loop runs once per set bit rather than once per bit position. In C++ the built-in `__builtin_popcount(a ^ b)` does the same in one instruction.
+
+   - Point worth noting: this is exactly how `Hamming distance` is defined in coding theory. An error-correcting code keeps a minimum distance `d` between valid codewords so that up to `d-1` errors can be detected and up to `(d-1)/2` corrected.
 
 ## Finite State Machines (FSM) (1)
 
