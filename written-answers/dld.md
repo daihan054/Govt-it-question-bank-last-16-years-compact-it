@@ -4866,6 +4866,77 @@
 
 1. Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression. [SO IT 25-07-2026]
 
+   Answer: F(A,B,C,D) = Sigma m(0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15)
+
+   K-map grid — rows AB and columns CD are in Gray code order (00, 01, 11, 10)
+   ```
+      AB\CD   00    01    11    10
+       00     1     0     1     0        m0  m1  m3  m2
+       01     0     1     1     0        m4  m5  m7  m6
+       11     1     1     1     1        m12 m13 m15 m14
+       10     1     0     1     1        m8  m9  m11 m10
+   ```
+
+   Groupings (loops)
+   ```
+   Loop 1 : AD'      -> m8, m10, m12, m14
+            rows AB = 11 and 10 , columns CD = 00 and 10
+            A stays 1, D stays 0, B and C both change  -> AD'
+
+      AB\CD   00    01    11    10
+       00     .     .     .     .
+       01     .     .     .     .
+       11    [1]    .     .    [1]
+       10    [1]    .     .    [1]
+
+   Loop 2 : BD       -> m5, m7, m13, m15
+            rows AB = 01 and 11 , columns CD = 01 and 11
+            B stays 1, D stays 1  -> BD
+
+   Loop 3 : CD       -> m3, m7, m11, m15
+            the whole column CD = 11
+            C stays 1, D stays 1  -> CD
+
+   Loop 4 : B'C'D'   -> m0, m8
+            column CD = 00 , rows AB = 00 and 10 (they wrap around)
+            B = 0, C = 0, D = 0, only A changes  -> B'C'D'
+   ```
+
+   Final simplified SOP
+   ```
+   F = AD' + BD + CD + B'C'D'
+   ```
+   - Four terms, nine literals — this is the minimum for this function.
+
+   Check that every minterm is covered
+   ```
+      m0  -> B'C'D'        m11 -> CD
+      m3  -> CD            m12 -> AD'
+      m5  -> BD            m13 -> BD
+      m7  -> BD and CD     m14 -> AD'
+      m8  -> AD' , B'C'D'  m15 -> BD and CD
+      m10 -> AD'
+   ```
+   - And no group covers a 0 cell, so the expression is correct as well as minimal.
+
+   Circuit
+   ```
+      A ---|‾‾\
+      D' --|    )--- AD' ------+
+           |___/               |
+      B ---|‾‾\                |
+      D ---|    )--- BD -------+---|\
+           |___/               |   | )--- F
+      C ---|‾‾\                |   |/
+      D ---|    )--- CD -------+  (4-input OR)
+           |___/               |
+      B' --|‾‾\                |
+      C' --|    )--- B'C'D' ---+
+      D' --|___/
+   ```
+
+   - Points to remember: loops must be `powers of two` in size (1, 2, 4, 8), as large as possible, and they may `overlap` and `wrap around` the edges. A cell already covered may be used again, which is what makes m7 and m8 appear in two loops.
+
 2. **Simplification using K-map?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
 3. **(a) Consider the following logic circuit-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
@@ -4874,9 +4945,215 @@
 
 4. **b) Use the Karnaugh Map to simplify the following function. f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
 
+   Answer: f(A,B,C) = A'B'C' + A'B'C + A'BC + A'BC' + ABC' + ABC
+
+   Step 1 — list the minterms
+   ```
+      A'B'C' = 000 = m0
+      A'B'C  = 001 = m1
+      A'BC   = 011 = m3
+      A'BC'  = 010 = m2
+      ABC'   = 110 = m6
+      ABC    = 111 = m7
+
+      f(A,B,C) = Sigma m(0, 1, 2, 3, 6, 7)
+   ```
+
+   Step 2 — K-map (rows A, columns BC in Gray code)
+   ```
+      A\BC   00    01    11    10
+       0     1     1     1     1        m0  m1  m3  m2
+       1     0     0     1     1        m4  m5  m7  m6
+   ```
+
+   Step 3 — groupings
+   ```
+   Loop 1 : the whole row A = 0  (4 cells : m0, m1, m3, m2)
+            A stays 0, B and C both change  ->  A'
+
+      A\BC   00    01    11    10
+       0    [1]   [1]   [1]   [1]
+       1     0     0     1     1
+
+   Loop 2 : columns BC = 11 and 10, both rows  (4 cells : m3, m2, m7, m6)
+            B stays 1, A and C both change  ->  B
+
+      A\BC   00    01    11    10
+       0     1     1    [1]   [1]
+       1     0     0    [1]   [1]
+   ```
+
+   Step 4 — final answer
+   ```
+   f(A, B, C) = A' + B
+   ```
+
+   Verification
+   ```
+   A  B  C | original | A' + B
+   --------+----------+-------
+   0  0  0 |    1     |   1
+   0  0  1 |    1     |   1
+   0  1  0 |    1     |   1
+   0  1  1 |    1     |   1
+   1  0  0 |    0     |   0
+   1  0  1 |    0     |   0
+   1  1  0 |    1     |   1
+   1  1  1 |    1     |   1        identical
+   ```
+
+   Circuit
+   ```
+      A ---|>o--- A' ---|\
+                        | )--- f = A' + B
+      B ----------------|/
+   ```
+   - Six product terms of three literals each have reduced to two literals and one OR gate. That saving is exactly what a K-map is for.
+   - Note that `C` disappears completely: the output does not depend on it at all.
+
 5. **Show minimal function using K-Map: F(A, B, C, D) = \sum(2, 8, 9, 11, 13, 15).** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)], [BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
 
+   Answer: F(A,B,C,D) = Sigma(2, 8, 9, 11, 13, 15)
+
+   K-map (rows AB, columns CD, both in Gray code order)
+   ```
+      AB\CD   00    01    11    10
+       00     0     0     0     1        m0  m1  m3  m2
+       01     0     0     0     0        m4  m5  m7  m6
+       11     0     1     1     0        m12 m13 m15 m14
+       10     1     1     1     0        m8  m9  m11 m10
+   ```
+
+   Groupings
+   ```
+   Loop 1 : AD       -> m9, m11, m13, m15
+            rows AB = 11 and 10 , columns CD = 01 and 11
+            A stays 1, D stays 1, B and C change  ->  AD
+
+      AB\CD   00    01    11    10
+       11     .    [1]   [1]    .
+       10     .    [1]   [1]    .
+
+   Loop 2 : AB'C'    -> m8, m9
+            row AB = 10 , columns CD = 00 and 01
+            A = 1, B = 0, C = 0, only D changes  ->  AB'C'
+
+      AB\CD   00    01    11    10
+       10    [1]   [1]    .     .
+
+   Loop 3 : A'B'CD'  -> m2 alone
+            no adjacent 1, so it stays a single cell with all four literals
+   ```
+
+   Final minimal SOP
+   ```
+   F = AD + AB'C' + A'B'CD'
+   ```
+
+   Verification
+   ```
+   m2  = 0010 : A'B'CD' = 1                     covered
+   m8  = 1000 : AB'C'   = 1                     covered
+   m9  = 1001 : AB'C' = 1 and AD = 1            covered
+   m11 = 1011 : AD = 1                          covered
+   m13 = 1101 : AD = 1                          covered
+   m15 = 1111 : AD = 1                          covered
+   ```
+   - No group touches a 0 cell, and every 1 is covered, so the answer is correct and minimal.
+
+   Circuit
+   ```
+      A ---|‾‾\
+      D ---|    )--- AD --------+
+           |___/                |
+      A ---|‾‾\                 |
+      B' --|    )--- AB'C' -----+---|\
+      C' --|___/                |   | )--- F
+                                |   |/
+      A' --|‾‾\                 |  (3-input OR)
+      B' --|    )--- A'B'CD' ---+
+      C ---|    |
+      D' --|___/
+   ```
+
+   - Point to note: `m2 could not be grouped` with anything, because none of its neighbours (m0, m3, m6, m10) is a 1. A single isolated cell always costs all n literals, which is why an isolated 1 makes an expression expensive.
+
 6. **6.8 Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D)= \sum m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+   Answer: F(A,B,C,D) = Sigma m(0, 3, 5, 7, 8, 10, 11, 12, 13, 14, 15)
+
+   K-map grid — rows AB and columns CD in Gray code order
+   ```
+      AB\CD   00    01    11    10
+       00     1     0     1     0        m0  m1  m3  m2
+       01     0     1     1     0        m4  m5  m7  m6
+       11     1     1     1     1        m12 m13 m15 m14
+       10     1     0     1     1        m8  m9  m11 m10
+   ```
+
+   Groupings (loops)
+   ```
+   Loop 1 : AD'     -> m8, m10, m12, m14
+            rows AB = 11 and 10 , columns CD = 00 and 10
+            A = 1 and D = 0 in all four cells
+
+   Loop 2 : BD      -> m5, m7, m13, m15
+            rows AB = 01 and 11 , columns CD = 01 and 11
+            B = 1 and D = 1 in all four cells
+
+   Loop 3 : CD      -> m3, m7, m11, m15
+            the entire column CD = 11
+            C = 1 and D = 1 in all four cells
+
+   Loop 4 : B'C'D'  -> m0, m8
+            column CD = 00 , rows AB = 00 and 10 (top and bottom wrap around)
+            B = 0, C = 0, D = 0 ; only A differs
+   ```
+
+   Marked map — each loop shown separately
+   ```
+      Loop 1 (AD')            Loop 2 (BD)             Loop 3 (CD)
+      AB\CD 00 01 11 10       AB\CD 00 01 11 10       AB\CD 00 01 11 10
+       00    .  .  .  .        00    .  .  .  .        00    .  . [1] .
+       01    .  .  .  .        01    . [1][1] .        01    .  . [1] .
+       11   [1] .  . [1]       11    . [1][1] .        11    .  . [1] .
+       10   [1] .  . [1]       10    .  .  .  .        10    .  . [1] .
+   ```
+
+   Final simplified SOP
+   ```
+   F = AD' + BD + CD + B'C'D'
+   ```
+   - Four product terms, nine literals — the minimum for this function.
+
+   Coverage check
+   ```
+      m0  -> B'C'D'          m11 -> CD
+      m3  -> CD              m12 -> AD'
+      m5  -> BD              m13 -> BD
+      m7  -> BD , CD         m14 -> AD'
+      m8  -> AD' , B'C'D'    m15 -> BD , CD
+      m10 -> AD'
+   ```
+   - Every 1 is inside at least one loop, and no loop contains a 0.
+
+   Circuit
+   ```
+      A ---|‾‾\
+      D' --|    )--- AD' ------+
+           |___/               |
+      B ---|‾‾\                |
+      D ---|    )--- BD -------+---|\
+           |___/               |   | )--- F
+      C ---|‾‾\                |   |/
+      D ---|    )--- CD -------+  (4-input OR)
+           |___/               |
+      B' --|‾‾\                |
+      C' --|    )--- B'C'D' ---+
+      D' --|___/
+   ```
+
+   - Rules used: loops are always of size 1, 2, 4, 8 or 16; make them as large as possible; overlapping is allowed; and the map wraps around at the edges, which is what lets m0 pair with m8.
 
 7. **(b) Simplify the following Boolean function using K-map.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 489 (ET: N/A)]*
 
@@ -4884,11 +5161,219 @@
 
 9. **Simplify F(A, B, C, D) = ACD + AB + \overline{D} + AC\overline{D} using K-map and draw the logic circuits.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
 
+   Answer: F(A, B, C, D) = ACD + AB + D' + ACD'
+
+   Step 1 — simplify algebraically first, to see the shape
+   ```
+      ACD + ACD' = AC(D + D') = AC
+      F = AC + AB + D'
+   ```
+   - The K-map below confirms this.
+
+   Step 2 — expand each term into minterms
+   ```
+      ACD  = A=1, C=1, D=1        -> m11 , m15
+      AB   = A=1, B=1             -> m12 , m13 , m14 , m15
+      D'   = D=0                  -> m0, m2, m4, m6, m8, m10, m12, m14
+      ACD' = A=1, C=1, D=0        -> m10 , m14
+
+      F = Sigma m(0, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15)
+   ```
+
+   Step 3 — K-map
+   ```
+      AB\CD   00    01    11    10
+       00     1     0     0     1        m0  m1  m3  m2
+       01     1     0     0     1        m4  m5  m7  m6
+       11     1     1     1     1        m12 m13 m15 m14
+       10     1     0     1     1        m8  m9  m11 m10
+   ```
+
+   Step 4 — groupings
+   ```
+   Loop 1 : D'   -> m0, m2, m4, m6, m8, m10, m12, m14
+            the two whole columns CD = 00 and CD = 10 (8 cells)
+            D = 0 everywhere in them  ->  D'
+
+      AB\CD   00    01    11    10
+       00    [1]    .     .    [1]
+       01    [1]    .     .    [1]
+       11    [1]    .     .    [1]
+       10    [1]    .     .    [1]
+
+   Loop 2 : AB   -> m12, m13, m15, m14
+            the whole row AB = 11 (4 cells)
+
+   Loop 3 : AC   -> m10, m11, m14, m15
+            rows AB = 11 and 10 , columns CD = 11 and 10
+            A = 1 and C = 1 in all four
+   ```
+
+   Final answer
+   ```
+   F = D' + AB + AC
+     = D' + A(B + C)
+   ```
+
+   Verification of a 0 cell
+   ```
+      m9 = 1001 : A=1, B=0, C=0, D=1
+           D'  = 0 ,  AB = 0 ,  AC = 0   ->  F = 0     correct
+   ```
+
+   Logic circuit
+   ```
+      D ---|>o--- D' -----------------+
+                                      |
+      A ---|‾‾\                       |---|\
+      B ---|    )--- AB --------------+   | )--- F
+           |___/                      |   |/
+                                      |  (3-input OR)
+      A ---|‾‾\                       |
+      C ---|    )--- AC --------------+
+           |___/
+   ```
+   - The factored form `F = D' + A(B + C)` uses one OR, one AND, one inverter and one more OR — four gates instead of five, and is often preferred when gate count matters more than depth.
+
 10. **Simplify using K-map with logic circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 713 (ET: BUET)]*
 
 11. **(a) A comparator has two inputs A = A_1 A_0 and B = B_1 B_0 and one output F. Output becomes one whenever the value of A > B (i) Show the truth table for F. (ii) Simplify the function using K-Map.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 798 (ET: N/A)]*
 
+    Answer: (i) Truth table
+
+    - A = A1A0 and B = B1B0 are 2-bit numbers, so each takes the values 0, 1, 2, 3. Output F = 1 whenever A > B.
+    ```
+    A1 A0 | A | B1 B0 | B | F        A1 A0 | A | B1 B0 | B | F
+    ------+---+-------+---+---       ------+---+-------+---+---
+     0  0 | 0 |  0  0 | 0 | 0         1  0 | 2 |  0  0 | 0 | 1
+     0  0 | 0 |  0  1 | 1 | 0         1  0 | 2 |  0  1 | 1 | 1
+     0  0 | 0 |  1  1 | 3 | 0         1  0 | 2 |  1  1 | 3 | 0
+     0  0 | 0 |  1  0 | 2 | 0         1  0 | 2 |  1  0 | 2 | 0
+     0  1 | 1 |  0  0 | 0 | 1         1  1 | 3 |  0  0 | 0 | 1
+     0  1 | 1 |  0  1 | 1 | 0         1  1 | 3 |  0  1 | 1 | 1
+     0  1 | 1 |  1  1 | 3 | 0         1  1 | 3 |  1  1 | 3 | 0
+     0  1 | 1 |  1  0 | 2 | 0         1  1 | 3 |  1  0 | 2 | 1
+    ```
+    ```
+    F = 1 for the input combinations  0100, 1000, 1001, 1100, 1101, 1110
+      = Sigma m(4, 8, 9, 12, 13, 14)      with the order A1 A0 B1 B0
+    ```
+
+    (ii) K-map (rows A1A0, columns B1B0, both in Gray code order)
+    ```
+       A1A0\B1B0   00    01    11    10
+          00        0     0     0     0
+          01        1     0     0     0
+          11        1     1     0     1
+          10        1     1     0     0
+    ```
+
+    Groupings
+    ```
+    Loop 1 : A1 B1'          -> the four cells in rows 11, 10 and columns 00, 01
+             A1 = 1 and B1 = 0 in all four
+             meaning : A's high bit is 1 and B's high bit is 0, so A > B
+
+       A1A0\B1B0  00    01    11    10
+          11     [1]   [1]    .     .
+          10     [1]   [1]    .     .
+
+    Loop 2 : A0 B1' B0'      -> rows 01 and 11 , column 00
+             A0 = 1, B1 = 0, B0 = 0
+             meaning : B is 0 and A is odd, so A >= 1 > 0
+
+    Loop 3 : A1 A0 B0'       -> row 11 , columns 00 and 10
+             A1 = 1, A0 = 1, B0 = 0
+             meaning : A is 3 and B is even (0 or 2), so A > B
+    ```
+
+    Simplified expression
+    ```
+    F = A1 B1' + A0 B1' B0' + A1 A0 B0'
+    ```
+
+    Circuit
+    ```
+       A1 --|‾‾\
+       B1'--|    )--- A1B1' --------+
+            |___/                   |
+       A0 --|‾‾\                    |---|\
+       B1'--|    )--- A0B1'B0' -----+   | )--- F  (A > B)
+       B0'--|___/                   |   |/
+                                    |  (3-input OR)
+       A1 --|‾‾\                    |
+       A0 --|    )--- A1A0B0' ------+
+       B0'--|___/
+    ```
+
+    - This is the standard 2-bit magnitude comparator "greater than" output. The `A < B` output is the mirror image, `A1'B1 + A0'B1B0 + A1'A0'B0`, and `A = B` is `(A1 XNOR B1)(A0 XNOR B0)`.
+
 12. **Simplify \bar{A}\,\bar{B}\,\bar{C} + ABC + A\bar{B}\,\bar{C} using K-map.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
+
+    Answer: F = A'B'C' + ABC + AB'C'
+
+    Step 1 — list the minterms
+    ```
+       A'B'C' = 000 = m0
+       ABC    = 111 = m7
+       AB'C'  = 100 = m4
+
+       F(A,B,C) = Sigma m(0, 4, 7)
+    ```
+
+    Step 2 — K-map (rows A, columns BC in Gray code)
+    ```
+       A\BC   00    01    11    10
+        0     1     0     0     0        m0  m1  m3  m2
+        1     1     0     1     0        m4  m5  m7  m6
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : B'C'   -> m0, m4
+             column BC = 00 , both rows
+             B = 0 and C = 0 ; only A changes  ->  B'C'
+
+       A\BC   00    01    11    10
+        0    [1]    .     .     .
+        1    [1]    .     .     .
+
+    Loop 2 : ABC    -> m7 alone
+             no adjacent 1 (its neighbours m3, m5, m6 are all 0),
+             so it stays a single cell with all three literals
+    ```
+
+    Final simplified expression
+    ```
+    F = B'C' + ABC
+    ```
+
+    Verification
+    ```
+    A  B  C | original | B'C' + ABC
+    --------+----------+-----------
+    0  0  0 |    1     |     1
+    0  0  1 |    0     |     0
+    0  1  0 |    0     |     0
+    0  1  1 |    0     |     0
+    1  0  0 |    1     |     1
+    1  0  1 |    0     |     0
+    1  1  0 |    0     |     0
+    1  1  1 |    1     |     1        identical
+    ```
+
+    Circuit
+    ```
+       B ---|>o--- B' ---|‾‾\
+                         |    )--- B'C' ---+
+       C ---|>o--- C' ---|___/             |---|\
+                                           |   | )--- F
+       A ---|‾‾\                           |   |/
+       B ---|    )--- ABC ------------ ----+  (OR)
+       C ---|___/
+    ```
+
+    - Nine literals have reduced to five. `m7 could not be grouped`, because none of its three neighbours on the map is a 1 — an isolated cell always costs the full n literals, which is a useful thing to state in the exam.
 
 13. **Simplify the following K-map: (i) K-map for function F (ii) K-map for function F** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 879 (ET: BUET)]*
 
@@ -4897,13 +5382,386 @@
 
 15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
 
+    Answer: F = A'B'C' + AB'C' + A'B'C + A'BC + ABC
+
+    Step 1 — list the minterms
+    ```
+       A'B'C' = 000 = m0
+       AB'C'  = 100 = m4
+       A'B'C  = 001 = m1
+       A'BC   = 011 = m3
+       ABC    = 111 = m7
+
+       F(A,B,C) = Sigma m(0, 1, 3, 4, 7)
+    ```
+
+    Step 2 — K-map (rows A, columns BC in Gray code order)
+    ```
+       A\BC   00    01    11    10
+        0     1     1     1     0        m0  m1  m3  m2
+        1     1     0     1     0        m4  m5  m7  m6
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : A'B'   -> m0, m1
+             row A = 0 , columns BC = 00 and 01
+             A = 0, B = 0 ; only C changes
+
+    Loop 2 : B'C'   -> m0, m4
+             column BC = 00 , both rows
+             B = 0, C = 0 ; only A changes
+
+    Loop 3 : BC     -> m3, m7
+             column BC = 11 , both rows
+             B = 1, C = 1 ; only A changes
+
+       A\BC   00    01    11    10
+        0    [1]   [1]   [1]    0
+        1    [1]    0    [1]    0
+    ```
+
+    Final simplified expression
+    ```
+    F = A'B' + B'C' + BC
+    ```
+
+    Verification
+    ```
+    A  B  C | original | A'B' + B'C' + BC
+    --------+----------+-----------------
+    0  0  0 |    1     |   1 + 1 + 0 = 1
+    0  0  1 |    1     |   1 + 0 + 0 = 1
+    0  1  0 |    0     |   0 + 0 + 0 = 0
+    0  1  1 |    1     |   0 + 0 + 1 = 1
+    1  0  0 |    1     |   0 + 1 + 0 = 1
+    1  0  1 |    0     |   0 + 0 + 0 = 0
+    1  1  0 |    0     |   0 + 0 + 0 = 0
+    1  1  1 |    1     |   0 + 0 + 1 = 1        identical
+    ```
+
+    Logic circuit
+    ```
+       A ---|>o--- A' ---|‾‾\
+                         |    )--- A'B' ---+
+       B ---|>o--- B' ---|___/             |
+                  |                        |
+                  +------|‾‾\              |---|\
+                         |    )--- B'C' ---+   | )--- F
+       C ---|>o--- C' ---|___/             |   |/
+                                           |  (3-input OR)
+       B ---|‾‾\                           |
+            |    )--- BC --------- --------+
+       C ---|__/
+    ```
+
+    - Fifteen literals have reduced to six. Note that `m0 is used twice`, in Loop 1 and Loop 2 — overlapping loops are allowed and often give a smaller result.
+
 16. **f(a, b, c, d) = \bar{a}b\bar{c}\bar{d} + \bar{a}\bar{b}\bar{c}d + \bar{a}b\bar{c}d + ab\bar{c}\bar{d} কে K-map এর সাহায্যে Simplify করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038-1039 (ET: DPI)]*
+
+    Answer: (Answered in English, as required for IT topics.) f(a,b,c,d) = a'bc'd' + a'b'c'd + a'bc'd + abc'd'
+
+    Step 1 — list the minterms
+    ```
+       a'bc'd' = 0100 = m4
+       a'b'c'd = 0001 = m1
+       a'bc'd  = 0101 = m5
+       abc'd'  = 1100 = m12
+
+       f(a,b,c,d) = Sigma m(1, 4, 5, 12)
+    ```
+
+    Step 2 — K-map (rows ab, columns cd, both in Gray code order)
+    ```
+       ab\cd   00    01    11    10
+        00     0     1     0     0        m0  m1  m3  m2
+        01     1     1     0     0        m4  m5  m7  m6
+        11     1     0     0     0        m12 m13 m15 m14
+        10     0     0     0     0        m8  m9  m11 m10
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : a'c'd   -> m1, m5
+             rows ab = 00 and 01 , column cd = 01
+             a = 0, c = 0, d = 1 ; only b changes
+
+       ab\cd   00    01    11    10
+        00     .    [1]    .     .
+        01     .    [1]    .     .
+
+    Loop 2 : bc'd'   -> m4, m12
+             rows ab = 01 and 11 , column cd = 00
+             b = 1, c = 0, d = 0 ; only a changes
+
+       ab\cd   00    01    11    10
+        01    [1]    .     .     .
+        11    [1]    .     .     .
+    ```
+
+    Final simplified expression
+    ```
+    f(a, b, c, d) = a'c'd + bc'd'
+                  = c'(a'd + bd')
+    ```
+
+    Verification
+    ```
+    m1  = 0001 : a'c'd  = 1.1.1 = 1                covered
+    m4  = 0100 : bc'd'  = 1.1.1 = 1                covered
+    m5  = 0101 : a'c'd  = 1.1.1 = 1                covered
+    m12 = 1100 : bc'd'  = 1.1.1 = 1                covered
+
+    m0  = 0000 : a'c'd = 0 (d=0) , bc'd' = 0 (b=0)  ->  f = 0   correct
+    m13 = 1101 : a'c'd = 0 (a=1) , bc'd' = 0 (d=1)  ->  f = 0   correct
+    ```
+
+    Circuit
+    ```
+       a' --|‾‾\
+       c' --|    )--- a'c'd ---+
+       d ---|___/              |---|\
+                               |   | )--- f
+       b ---|‾‾\               |   |/
+       c' --|    )--- bc'd' ---+  (OR)
+       d' --|___/
+    ```
+
+    - Sixteen literals have reduced to six. Note that `c' appears in both terms`, so the factored form `c'(a'd + bd')` saves one more gate input, though it adds a level of delay.
 
 17. **(গ) Min term কী? K-map-এর সাহায্যে সরল করুন: $\bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) Minterm
+    - A `minterm` is a product (AND) term that contains `every variable of the function exactly once`, either in true or in complemented form.
+    - For n variables there are 2^n minterms, and each one is `1 for exactly one row` of the truth table and 0 for all the others.
+    ```
+    For three variables A, B, C :
+
+       Row  A B C | minterm  | symbol
+       -----------+----------+-------
+        0   0 0 0 | A'B'C'   | m0
+        1   0 0 1 | A'B'C    | m1
+        2   0 1 0 | A'BC'    | m2
+        3   0 1 1 | A'BC     | m3
+        4   1 0 0 | AB'C'    | m4
+        5   1 0 1 | AB'C     | m5
+        6   1 1 0 | ABC'     | m6
+        7   1 1 1 | ABC      | m7
+    ```
+    - Rule: a variable appears `complemented` where its bit is 0 and `uncomplemented` where its bit is 1.
+    - Any function can be written as the `sum of the minterms` of the rows where it is 1 — this is the canonical SOP form. The opposite is the `maxterm`, a sum term used for the canonical POS form.
+
+    Simplification of F = A'B'C' + A'B + ABC' + AC
+
+    Step 1 — expand every term to minterms
+    ```
+       A'B'C' = 000                  -> m0
+       A'B    = 010 , 011            -> m2 , m3
+       ABC'   = 110                  -> m6
+       AC     = 101 , 111            -> m5 , m7
+
+       F = Sigma m(0, 2, 3, 5, 6, 7)
+    ```
+
+    Step 2 — K-map (rows A, columns BC in Gray code order)
+    ```
+       A\BC   00    01    11    10
+        0     1     0     1     1        m0  m1  m3  m2
+        1     0     1     1     1        m4  m5  m7  m6
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : B      -> m2, m3, m6, m7
+             columns BC = 11 and 10 , both rows ; B = 1 in all four
+
+       A\BC   00    01    11    10
+        0     .     .    [1]   [1]
+        1     .     .    [1]   [1]
+
+    Loop 2 : A'C'   -> m0, m2
+             row A = 0 , columns BC = 00 and 10 (they wrap around)
+             A = 0 and C = 0
+
+    Loop 3 : AC     -> m5, m7
+             row A = 1 , columns BC = 01 and 11 ; A = 1 and C = 1
+    ```
+
+    Final simplified expression
+    ```
+    F = B + A'C' + AC
+      = B + (A XNOR C)
+    ```
+
+    Verification
+    ```
+    A  B  C | original | B + A'C' + AC
+    --------+----------+--------------
+    0  0  0 |    1     |  0 + 1 + 0 = 1
+    0  0  1 |    0     |  0 + 0 + 0 = 0
+    0  1  0 |    1     |  1 + 1 + 0 = 1
+    0  1  1 |    1     |  1 + 0 + 0 = 1
+    1  0  0 |    0     |  0 + 0 + 0 = 0
+    1  0  1 |    1     |  0 + 0 + 1 = 1
+    1  1  0 |    1     |  1 + 0 + 0 = 1
+    1  1  1 |    1     |  1 + 0 + 1 = 1        identical
+    ```
+
+    - The map `wraps around` horizontally, which is what allows m0 and m2 to be grouped even though they sit at opposite ends of the row. Forgetting this wrap-around is the commonest K-map mistake.
+
 18. **Simplify the expression: $F(A,B,C) = \bar{A}\bar{B}\bar{C} + \bar{A}B + AB\bar{C} + AC$, using k-map.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
+    Answer: F(A,B,C) = A'B'C' + A'B + ABC' + AC
+
+    Step 1 — expand every term to minterms
+    ```
+       A'B'C' = 000                  -> m0
+       A'B    = 010 , 011            -> m2 , m3
+       ABC'   = 110                  -> m6
+       AC     = 101 , 111            -> m5 , m7
+
+       F = Sigma m(0, 2, 3, 5, 6, 7)
+    ```
+
+    Step 2 — K-map (rows A, columns BC in Gray code order)
+    ```
+       A\BC   00    01    11    10
+        0     1     0     1     1        m0  m1  m3  m2
+        1     0     1     1     1        m4  m5  m7  m6
+    ```
+
+    Step 3 — groupings
+    ```
+    Loop 1 : B      -> m2, m3, m6, m7
+             the two columns BC = 11 and 10 , both rows
+
+       A\BC   00    01    11    10
+        0     .     .    [1]   [1]
+        1     .     .    [1]   [1]
+
+    Loop 2 : A'C'   -> m0, m2
+             row A = 0 , columns BC = 00 and 10 , wrapping round the edge
+
+       A\BC   00    01    11    10
+        0    [1]    .     .    [1]
+        1     .     .     .     .
+
+    Loop 3 : AC     -> m5, m7
+             row A = 1 , columns BC = 01 and 11
+
+       A\BC   00    01    11    10
+        0     .     .     .     .
+        1     .    [1]   [1]    .
+    ```
+
+    Final simplified expression
+    ```
+    F = B + A'C' + AC
+    ```
+    - The last two terms are the XNOR of A and C, so the answer can also be written `F = B + (A XNOR C)`.
+
+    Verification
+    ```
+    A  B  C | original | B + A'C' + AC
+    --------+----------+--------------
+    0  0  0 |    1     |       1
+    0  0  1 |    0     |       0
+    0  1  0 |    1     |       1
+    0  1  1 |    1     |       1
+    1  0  0 |    0     |       0
+    1  0  1 |    1     |       1
+    1  1  0 |    1     |       1
+    1  1  1 |    1     |       1        identical
+    ```
+
+    Circuit
+    ```
+       A ---|>o--- A' ---|‾‾\
+                         |    )--- A'C' ---+
+       C ---|>o--- C' ---|___/             |
+                                           |---|\
+       B ---------------------------------+   | )--- F
+                                           |   |/
+       A ---|‾‾\                           |  (3-input OR)
+            |    )--- AC ------------------+
+       C ---|__/
+    ```
+
+    - Nine literals have reduced to five. Remember that the K-map `wraps around` at the left and right edges, which is what makes the m0-m2 pair legal.
+
 19. **(a) Simplify $F(A,B,C,D) = ACD+AB+\bar{D}+A\bar{C}D$ using K-map and draw the simplified circuit diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+
+    Answer: F(A, B, C, D) = ACD + AB + D' + AC'D
+
+    Step 1 — simplify algebraically first, as a check
+    ```
+       ACD + AC'D = AD(C + C') = AD
+       F = AD + AB + D'
+       Now  AD + D' = A + D'        since X + X'Y = X + Y
+       F = A + AB + D' = A + D'     since A + AB = A  (absorption)
+    ```
+
+    Step 2 — expand each term into minterms
+    ```
+       ACD  = A=1, C=1, D=1     -> m11 , m15
+       AB   = A=1, B=1          -> m12 , m13 , m14 , m15
+       D'   = D=0               -> m0, m2, m4, m6, m8, m10, m12, m14
+       AC'D = A=1, C=0, D=1     -> m9 , m13
+
+       F = Sigma m(0, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15)
+    ```
+
+    Step 3 — K-map (rows AB, columns CD in Gray code order)
+    ```
+       AB\CD   00    01    11    10
+        00     1     0     0     1        m0  m1  m3  m2
+        01     1     0     0     1        m4  m5  m7  m6
+        11     1     1     1     1        m12 m13 m15 m14
+        10     1     1     1     1        m8  m9  m11 m10
+    ```
+
+    Step 4 — groupings
+    ```
+    Loop 1 : A    -> m8 to m15 , the two whole rows AB = 11 and 10 (8 cells)
+             A = 1 everywhere in them
+
+       AB\CD   00    01    11    10
+        00     .     .     .     .
+        01     .     .     .     .
+        11    [1]   [1]   [1]   [1]
+        10    [1]   [1]   [1]   [1]
+
+    Loop 2 : D'   -> the two whole columns CD = 00 and CD = 10 (8 cells)
+             D = 0 everywhere in them
+
+       AB\CD   00    01    11    10
+        00    [1]    .     .    [1]
+        01    [1]    .     .    [1]
+        11    [1]    .     .    [1]
+        10    [1]    .     .    [1]
+    ```
+
+    Final answer
+    ```
+    F = A + D'
+    ```
+
+    Verification of the 0 cells
+    ```
+       m1 = 0001 : A = 0 , D' = 0   ->  F = 0    correct
+       m3 = 0011 : A = 0 , D' = 0   ->  F = 0    correct
+       m5 = 0101 : A = 0 , D' = 0   ->  F = 0    correct
+       m7 = 0111 : A = 0 , D' = 0   ->  F = 0    correct
+    ```
+    - The only 0s are the four cells with A = 0 and D = 1, which is exactly `(A + D')' = A'D`.
+
+    Simplified circuit
+    ```
+       A --------------|\
+                       | )--- F = A + D'
+       D ---|>o--- D' -|/
+    ```
+    - The whole expression reduces to `one inverter and one OR gate`. B and C disappear completely — the output does not depend on them at all.
 
 ## Boolean Algebra & De Morgan’s Theorem (19)
 
