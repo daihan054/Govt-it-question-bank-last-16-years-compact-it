@@ -10645,13 +10645,527 @@
 
 1. **Write concepts of Coupling and Cohesion with Example?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
 
+   Answer: Coupling
+   - `Coupling` measures `how much one module depends on another`. Low coupling is good — a change in one module should not force a change in another.
+   ```
+      TYPES OF COUPLING , from BEST to WORST
+
+      DATA COUPLING          modules pass only simple DATA items
+           calculateTax(income, rate)          <- BEST
+
+      STAMP COUPLING         a whole RECORD is passed but only part
+                             of it is used
+           printName(employee)   when only employee.name is needed
+
+      CONTROL COUPLING       a FLAG is passed that tells the callee
+                             WHAT TO DO
+           process(data, flag)   if flag==1 print else save
+
+      EXTERNAL COUPLING      modules share an external device,
+                             protocol or file format
+
+      COMMON COUPLING        modules share GLOBAL DATA
+           int total;   used and modified by many modules
+
+      CONTENT COUPLING       one module directly changes ANOTHER'S
+                             internal data or jumps inside its code
+                                                        <- WORST
+   ```
+   ```
+      EXAMPLE
+
+      HIGH COUPLING (bad)
+           class Order {
+               void save() {
+                   MySQLConnection c = new MySQLConnection(...);
+                   c.execute("INSERT INTO orders ...");
+               }
+           }
+           Order knows the DATABASE TYPE and the SQL. Changing to
+           PostgreSQL means changing Order.
+
+      LOW COUPLING (good)
+           class Order {
+               private Repository repo;              // an INTERFACE
+               void save() { repo.save(this); }
+           }
+           Order knows only the INTERFACE. The database can be
+           swapped with no change to Order.
+   ```
+
+   Cohesion
+   - `Cohesion` measures `how closely the elements inside one module belong together`. High cohesion is good — a module should do `one` well-defined job.
+   ```
+      TYPES OF COHESION , from BEST to WORST
+
+      FUNCTIONAL       every element contributes to ONE task
+           calculateInterest()                  <- BEST
+
+      SEQUENTIAL       the output of one element is the input to the
+                       next
+           readFile() -> parse() -> validate()
+
+      COMMUNICATIONAL  elements work on the SAME DATA
+           readRecord() and updateRecord() on the same record
+
+      PROCEDURAL       elements follow a certain ORDER of execution
+                       but are otherwise unrelated
+
+      TEMPORAL         elements are grouped only because they happen
+                       at the SAME TIME
+           init() : open file , clear screen , set timer , read
+                    config
+
+      LOGICAL          elements do SIMILAR KINDS of thing, selected
+                       by a flag
+           handleInput(type)   keyboard , mouse , file
+
+      COINCIDENTAL     no relationship at all - a "Utility" class
+           Utils : calculateTax() , sendEmail() , printReport()
+                                                        <- WORST
+   ```
+   ```
+      EXAMPLE
+
+      LOW COHESION (bad)
+           class Employee {
+               void calculateSalary() { ... }
+               void sendEmail()       { ... }
+               void printReport()     { ... }
+               void connectToDatabase() { ... }
+           }
+           Four unrelated jobs in one class.
+
+      HIGH COHESION (good)
+           class SalaryCalculator { void calculate() {...} }
+           class EmailService     { void send() {...} }
+           class ReportPrinter    { void print() {...} }
+           Each class does ONE thing.
+   ```
+
+   The rule
+   ```
+      AIM FOR :   HIGH COHESION  ,  LOW COUPLING
+
+      Cohesion is about what is INSIDE one module.
+      Coupling is about what is BETWEEN modules.
+   ```
+   - Why the pair matters more than either alone: `high cohesion causes low coupling`. When each module does one job, it needs little from the others, so the dependencies naturally shrink. The two properties are the single best predictor of how expensive a system will be to maintain — and maintenance is `60 to 80 per cent` of a product's lifetime cost.
+
 2. **Software design table matching.......** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
+
+   Answer: The question is `incomplete` — the matching table was not captured, so the exact pairing cannot be given. The material such a question is set on is below, in the form a matching question uses.
+
+   Design principles and their meanings
+   ```
+      MODULARITY          divide the system into independent
+                          modules, each with one job
+      ABSTRACTION         hide the detail behind an interface -
+                          show WHAT, not HOW
+      INFORMATION HIDING  a module's internal data is private
+      COHESION            how closely elements INSIDE one module
+                          belong together - HIGH is good
+      COUPLING            how much one module DEPENDS on another -
+                          LOW is good
+      REFINEMENT          top-down decomposition, adding detail at
+                          each level
+      REFACTORING         improve the internal structure WITHOUT
+                          changing behaviour
+   ```
+
+   Coupling types, best to worst
+   ```
+      DATA COUPLING     only simple data items are passed    BEST
+      STAMP COUPLING    a whole record is passed, part used
+      CONTROL COUPLING  a flag is passed that decides behaviour
+      EXTERNAL COUPLING a shared device, protocol or format
+      COMMON COUPLING   shared GLOBAL data
+      CONTENT COUPLING  one module changes another's internals WORST
+   ```
+
+   Cohesion types, best to worst
+   ```
+      FUNCTIONAL       one single task                       BEST
+      SEQUENTIAL       output of one element feeds the next
+      COMMUNICATIONAL  elements work on the same data
+      PROCEDURAL       elements follow an order of execution
+      TEMPORAL         elements happen at the same time
+      LOGICAL          similar kinds of thing, chosen by a flag
+      COINCIDENTAL     no relationship at all                WORST
+   ```
+
+   Architectural and design patterns
+   ```
+      MVC          separates data , presentation and input handling
+      LAYERED      presentation -> business -> data access
+      SINGLETON    exactly one instance of a class
+      FACTORY      creates objects without naming the concrete class
+      OBSERVER     one-to-many notification when state changes
+      STRATEGY     interchangeable algorithms, chosen at run time
+      FACADE       one simple interface to a complex subsystem
+      ADAPTER      converts one interface into another
+      DECORATOR    adds behaviour to an object at run time
+      TEMPLATE
+           METHOD  fixes the SEQUENCE, lets subclasses vary the STEPS
+      COMPOSITE    treats a single object and a group identically
+   ```
+
+   Design documents and diagrams
+   ```
+      SRS               what the system must do
+      SDD               how it will be built
+      DFD               how DATA FLOWS between processes and stores
+      ER DIAGRAM        entities and their relationships
+      STRUCTURE CHART   the module hierarchy
+      CLASS DIAGRAM     classes, attributes and relationships
+      SEQUENCE DIAGRAM  the ORDER of interactions over time
+      USE CASE DIAGRAM  what the system does and who uses it
+      DATA DICTIONARY   the definition of every data item
+   ```
+
+   The SOLID principles
+   ```
+      S  SINGLE RESPONSIBILITY  a class should have one reason to
+                                change
+      O  OPEN-CLOSED            open for EXTENSION, closed for
+                                MODIFICATION
+      L  LISKOV SUBSTITUTION    a subclass must be usable wherever
+                                its parent is
+      I  INTERFACE SEGREGATION  many small interfaces beat one large
+                                one
+      D  DEPENDENCY INVERSION   depend on ABSTRACTIONS, not on
+                                concrete classes
+   ```
+   - The method for any matching question of this kind: read each item on the left, identify its `defining property`, and find the description naming that property. The traps are always the `similar-looking pairs` — coupling against cohesion, aggregation against composition, SRS against SDD, verification against validation — so those are worth learning as pairs rather than separately.
 
 3. **(ক) Modularization কী? উহার সুবিধা সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 602 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What modularisation is
+   - `Modularisation` is dividing a software system into `separate, independent modules`, each with a single well-defined job and a clear interface. Each module can be developed, tested and changed on its own.
+   ```
+                     +---------------------+
+                     |   Banking System    |
+                     +---------------------+
+                        /       |        \
+               +--------+  +---------+  +----------+
+               |Account |  |Transact-|  | Report   |
+               |Module  |  |ion Mod. |  | Module   |
+               +--------+  +---------+  +----------+
+
+      Each module HIDES its internal working and exposes only an
+      INTERFACE. Another module needs to know WHAT it does, not HOW.
+   ```
+   ```
+      THE TWO MEASURES OF GOOD MODULARISATION
+
+      COHESION - HIGH is good
+           How closely the elements INSIDE one module belong
+           together. A module that only validates a PIN has high
+           cohesion ; a "Utility" module that validates PINs, prints
+           reports and sends email has LOW cohesion.
+
+      COUPLING - LOW is good
+           How much one module DEPENDS on another. Modules that talk
+           only through a small, well-defined interface are loosely
+           coupled ; modules sharing global variables are tightly
+           coupled.
+
+      THE RULE :  HIGH COHESION , LOW COUPLING.
+   ```
+
+   Advantages
+
+   1. Maintainability
+   - A change stays inside one module instead of rippling through the system. Since `maintenance is 60 to 80 per cent` of a product's lifetime cost, this is the largest single benefit.
+
+   2. Testability
+   - Each module can be `unit tested alone`, with `stubs` and `drivers` standing in for its neighbours. A defect is located in one module rather than hunted through the whole program.
+
+   3. Parallel development
+   - Different people build different modules `at the same time`, once the interfaces are agreed. This is what makes a large project possible at all.
+
+   4. Reusability
+   - A well-defined module — a date library, an authentication service — can be used in another system without modification.
+
+   5. Comprehensibility
+   - A person can understand `one module` without holding the whole system in mind. Human working memory is the real constraint on program size.
+
+   6. Easier debugging
+   - A failure is traced to the module whose interface produced the wrong value, rather than to any line in the program.
+
+   7. Reduced complexity
+   - A large problem becomes several small ones. This is `divide and conquer` applied to design.
+
+   8. Flexibility and easier enhancement
+   - A module can be `replaced` by a better implementation as long as the interface is unchanged — a MySQL data module swapped for a PostgreSQL one, with nothing else altered.
+
+   9. Team specialisation
+   - A database expert takes the data module, a UI specialist takes the presentation module.
+
+   Disadvantages, briefly
+   ```
+      more files and more interfaces to design and document
+      a small performance cost in the calls between modules
+      OVER-MODULARISATION - too many tiny modules make the system
+           harder to follow, not easier
+      getting the DECOMPOSITION wrong is expensive to correct later
+   ```
+   - The judgement worth stating: modularisation is not free, and the benefit comes from decomposing `along the right boundaries`. A system split into ten modules that constantly call each other is worse than one split into four that rarely do — which is why `low coupling`, not the module count, is the measure of success.
+
 4. **(খ) Software interface কত প্রকার ও কী কী? Interfacing এর ক্ষেত্রে কী কী error পাওয়া যেতে পারে?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Types of software interface
+
+   1. User interface (UI)
+   ```
+      Between the SYSTEM and the HUMAN user.
+        GUI              windows, buttons, forms
+        CLI              command line
+        WEB interface    browser-based
+        TOUCH , VOICE , form-based , menu-driven
+   ```
+
+   2. Hardware interface
+   ```
+      Between the SOFTWARE and the PHYSICAL DEVICES - printer,
+      scanner, card reader, sensor, disk. It defines the ports,
+      signals and device driver protocol.
+   ```
+
+   3. Software interface
+   ```
+      Between one PROGRAM and another - operating system calls,
+      database drivers, libraries, other applications.
+        API     Application Programming Interface
+        ODBC / JDBC for databases
+        Web services : REST , SOAP
+   ```
+
+   4. Communication interface
+   ```
+      Between systems across a NETWORK - the protocols, message
+      formats and rates used. HTTP , TCP/IP , FTP , SMTP , ISO 8583
+      for banking messages.
+   ```
+
+   5. Module (internal) interface
+   ```
+      Between the MODULES of the same program - the function
+      signatures, parameters and return values through which one
+      module calls another.
+
+      THREE FORMS
+        PARAMETER interface   data passed in a function call - the
+             usual and best form
+        SHARED MEMORY interface  a block of memory both modules read
+             and write
+        PROCEDURAL interface  one module offers a set of procedures
+             for others to call
+        MESSAGE PASSING interface  used between subsystems and in
+             distributed systems
+   ```
+
+   Interfacing errors
+
+   1. Interface misuse
+   ```
+      The caller uses the interface WRONGLY - wrong parameter
+      ORDER, wrong TYPE, or wrong NUMBER of parameters.
+
+           declared :  transfer(fromAccount, toAccount, amount)
+           called   :  transfer(toAccount, fromAccount, amount)
+
+      The code COMPILES and the money goes the wrong way.
+   ```
+
+   2. Interface misunderstanding
+   ```
+      The caller misunderstands what the called module DOES or
+      ASSUMES.
+
+           binarySearch(array, key)  requires a SORTED array.
+           A caller who passes an unsorted array gets a wrong
+           answer with NO error message.
+   ```
+
+   3. Timing errors
+   ```
+      In real-time and concurrent systems, the two sides operate at
+      different SPEEDS, so one reads data before it is written or
+      after it has been overwritten - a RACE CONDITION on the
+      interface.
+   ```
+
+   4. Unit and format mismatch
+   ```
+      One module sends METRES, the other expects FEET. One sends
+      dd/mm/yyyy, the other reads mm/dd/yyyy. One sends taka, the
+      other expects paisa.
+
+      This class of error is the classic cause of expensive failure,
+      and no amount of UNIT testing finds it - only INTEGRATION
+      testing does.
+   ```
+
+   5. Other common interface errors
+   ```
+      WRONG RETURN VALUE HANDLING   the caller ignores an error code
+      NULL / uninitialised parameter passed
+      BUFFER SIZE mismatch - the caller's buffer is smaller than the
+           data returned
+      PRECISION LOSS - a double truncated to an int
+      VERSION MISMATCH - the interface changed but one side was not
+           rebuilt
+      PROTOCOL VIOLATION - calls made in the wrong ORDER, such as
+           read() before open()
+   ```
+
+   How these errors are prevented and detected
+   ```
+      PREVENT
+        define the interface PRECISELY - types, units, valid ranges,
+             pre-conditions and post-conditions, IN WRITING
+        use STRONG TYPING and named types rather than plain int
+        validate parameters at the boundary of every module
+        keep the interface SMALL - fewer parameters, fewer mistakes
+        use VERSIONED APIs so a change does not silently break a
+             caller
+
+      DETECT
+        INTEGRATION TESTING - the level that exists precisely to find
+             interface errors
+        CODE REVIEW of the interface specification
+        STATIC ANALYSIS for type and parameter mismatches
+        CONTRACT TESTING between services
+   ```
+   - The point that matters: unit testing `cannot` find interface errors by definition — every module can pass its own tests while the assumptions they make about each other are wrong. Interface faults are the commonest defect in large systems, which is why `integration testing` is a separate level and not an optional extra.
+
 5. **What is the common mistake of UI design?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+
+   Answer: Common mistakes in UI design
+
+   1. Cluttered screen — too much on one page
+   ```
+      Every feature crammed onto one screen, so the user cannot find
+      the one thing they came for.
+      FIX : group related items, use white space, hide advanced
+           options behind "More", and follow PROGRESSIVE DISCLOSURE -
+           show what is needed now.
+   ```
+
+   2. Inconsistency
+   ```
+      The Save button is bottom-right on one screen and top-left on
+      the next ; "Delete" on one page and "Remove" on another ; a
+      different font on every form.
+      FIX : a STYLE GUIDE and a component library, so the same
+           action always looks and sits the same way.
+   ```
+
+   3. Poor or missing error messages
+   ```
+      BAD  : "Error 0x8007007E"
+             "Invalid input"
+      GOOD : "Password must be at least 8 characters and contain a
+             number."
+
+      An error message must say WHAT went wrong, WHERE, and HOW to
+      fix it - in the user's language, not the system's.
+   ```
+
+   4. Ignoring the user's context and vocabulary
+   ```
+      Technical jargon on a screen used by clerks ; English-only
+      labels for users who work in Bangla ; assuming a fast
+      connection and a large monitor.
+      FIX : design for the ACTUAL user, and test with them.
+   ```
+
+   5. No feedback for an action
+   ```
+      The user clicks Submit and nothing happens, so they click
+      again - and the payment is made twice.
+      FIX : disable the button, show a spinner, and confirm the
+           result. Every action needs visible feedback within
+           about a second.
+   ```
+
+   6. No undo, and no confirmation for destructive actions
+   ```
+      A record is deleted with one click and cannot be recovered.
+      FIX : confirm destructive actions, and prefer UNDO to a
+           confirmation dialogue - people click "Yes" without
+           reading.
+   ```
+
+   7. Poor navigation
+   ```
+      The user cannot tell where they are or how to get back. Deep
+      menus with no breadcrumb ; a Back button that loses the form
+      data.
+      FIX : clear labels, breadcrumbs, a visible current location,
+           and a maximum of three levels.
+   ```
+
+   8. Not designing for mobile
+   ```
+      Fixed-width layouts, buttons too small for a thumb, tables
+      that need horizontal scrolling. Most users in Bangladesh are
+      on a phone.
+      FIX : RESPONSIVE design, touch targets of at least 44 pixels.
+   ```
+
+   9. Ignoring accessibility
+   ```
+      Low colour contrast, colour used as the ONLY signal (invisible
+      to a colour-blind user), images with no alternative text, no
+      keyboard navigation.
+      FIX : follow WCAG - contrast ratio at least 4.5 : 1 , label
+           every field, and never rely on colour alone.
+   ```
+
+   10. Too many required fields, and bad form design
+   ```
+      A registration form asking for twenty fields when five would
+      do. Validation shown only AFTER submission, with the entered
+      data lost.
+      FIX : ask for the minimum, validate INLINE as the user types,
+           and never clear the form on an error.
+   ```
+
+   11. Designing for the designer rather than the user
+   ```
+      Beautiful animations that slow the work down ; a novel layout
+      that ignores what users already know. USERS SPEND MOST OF
+      THEIR TIME ON OTHER SITES, so they expect the conventions of
+      those sites.
+      FIX : follow established conventions, and USABILITY TEST with
+           real users. The designer is never a representative user.
+   ```
+
+   12. No visual hierarchy
+   ```
+      Everything the same size and weight, so nothing stands out and
+      the primary action is invisible.
+      FIX : one clear PRIMARY action per screen, made visually
+           dominant.
+   ```
+
+   The principles these mistakes violate
+   ```
+      Nielsen's heuristics, in short :
+        visibility of system status        - give feedback
+        match the real world               - the user's language
+        user control and freedom           - undo, and an exit
+        consistency and standards
+        error PREVENTION                   - better than a message
+        recognition rather than recall     - show the options
+        flexibility - shortcuts for experts
+        aesthetic and MINIMALIST design
+        help users recover from errors
+        help and documentation
+   ```
+   - The single most valuable corrective is `usability testing` with five real users. It finds most of the serious problems, costs very little, and is skipped on almost every project — which is why these same mistakes recur.
 
 ## Software Cost Estimation & Build vs Buy Decisions (4)
 
