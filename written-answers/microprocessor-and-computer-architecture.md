@@ -5244,23 +5244,663 @@
 
 1. Storage technology selection directly impacts banking operations. Server A will host the Core Banking Database. Server B will host 10 years of immutable archive data. Compare Hard Disk Drives (HDD) and Solid State Drives (SSD). *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer: Server A — the Core Banking Database → use `SSD` (NVMe)
+   Server B — 10 years of immutable archive → use `HDD`
+
+   Comparison of the two technologies
+
+   | Point | HDD (Hard Disk Drive) | SSD (Solid State Drive) |
+   |---|---|---|
+   | Technology | Spinning magnetic platters, moving head | NAND flash, no moving parts |
+   | Sequential read | 100-200 MB/s | 500 MB/s (SATA) to 7,000 MB/s (NVMe) |
+   | Random IOPS | 100-200 | 100,000 to 1,000,000 |
+   | Access latency | 5-10 ms | 20-100 microseconds |
+   | Cost per TB | Very low | 3 to 6 times higher |
+   | Capacity per drive | Up to 24 TB | Up to 30 TB, but costlier |
+   | Power | 6-10 W | 2-5 W |
+   | Shock resistance | Poor — mechanical | Excellent |
+   | Noise and heat | Yes | Minimal |
+   | Endurance limit | None; mechanical wear | Limited program/erase cycles per cell |
+   | Data retention unpowered | Decades | Falls after a few years without power |
+   | Failure mode | Gradual, often warned by SMART | Sudden, once the controller or cells fail |
+
+   Server A — Core Banking Database: `NVMe SSD`
+   ```
+      Workload  : small RANDOM reads and writes, thousands of concurrent
+                  transactions, latency-critical
+      Decisive  : random IOPS and latency, not capacity
+   ```
+   - A core banking system does mostly `random` 8 KB page reads and writes. An HDD delivers about 150 random IOPS; an NVMe SSD delivers hundreds of thousands. That is the difference between a transaction taking 10 ms and 0.1 ms.
+   - Every `COMMIT` must reach stable storage before it returns, so write latency directly sets the transaction rate. This is where the mechanical seek and rotational delay of an HDD are fatal.
+   - Concurrency: an HDD's single head serialises requests; an SSD serves many queues in parallel.
+   - Capacity is not the constraint — a core banking database is usually a few terabytes, which is affordable in SSD.
+   - Recommended configuration: `NVMe SSDs in RAID 10`, with the transaction log on its own array, and enterprise-grade drives with power-loss protection and high DWPD (drive writes per day) endurance.
+
+   Server B — 10 years of immutable archive: `HDD`
+   ```
+      Workload  : write once, read rarely, sequential, enormous volume
+      Decisive  : cost per terabyte and long-term retention, not speed
+   ```
+   - The data is written once and almost never read, so the SSD's random-access advantage is worth nothing here.
+   - `Cost per terabyte` dominates. Ten years of banking archive runs to hundreds of terabytes; HDDs cost a third to a sixth as much, and that difference is the whole budget.
+   - `Long-term retention`: an unpowered SSD gradually loses charge from its floating gates and can lose data after a few years. Magnetic media holds its state for decades, which suits an archive that may sit untouched.
+   - `Endurance` is irrelevant, because the data is written once. The SSD's limited write cycles are not a factor either way.
+   - Sequential throughput of 150-200 MB/s is perfectly adequate for the occasional bulk retrieval or audit.
+   - Recommended configuration: high-capacity `nearline HDDs in RAID 6` (double parity, because rebuilds on large drives take many hours), with WORM or object-lock storage for immutability, plus tape or cloud cold storage as the off-site copy.
+
+   Summary
+   ```
+      Server A : NVMe SSD  -> buy IOPS and latency
+      Server B : HDD       -> buy capacity per taka and long-term retention
+   ```
+   - The reasoning to state clearly: `match the storage to the access pattern`. Random, latency-critical, high-value data justifies the SSD premium; sequential, cold, high-volume data does not. Using SSDs for the archive would waste money without improving anything, and using HDDs for the core database would throttle the whole bank.
+
 2. **a) Define the term "SSD". Briefly describe the working principle of "SSD".** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1342 (ET: N/A)]*
+
+   Answer: Definition
+   - An `SSD (Solid State Drive)` is a storage device that keeps data in `NAND flash memory` instead of on spinning magnetic platters. It has `no moving parts` at all — hence "solid state".
+
+   Main components
+   ```
+      NAND flash chips : where the data is actually stored
+      Controller       : the processor that manages everything
+      DRAM cache       : holds the mapping table and buffers writes
+      Host interface   : SATA, or PCIe/NVMe for high performance
+   ```
+
+   Working principle
+
+   1. The storage cell — a floating-gate transistor
+   ```
+           Control gate
+         ================
+         ~~~~~~~~~~~~~~~~   oxide insulator
+         ################   FLOATING GATE  <- charge is trapped here
+         ~~~~~~~~~~~~~~~~   oxide insulator
+         +--------------+
+         | N+ |      | N+|   channel
+         +--------------+
+   ```
+   - The floating gate is completely surrounded by insulating oxide, so any charge placed on it `stays there without power`. That is what makes the drive non-volatile.
+   ```
+      Charge trapped on the floating gate  ->  raises the threshold voltage  ->  bit = 0
+      No charge on the floating gate       ->  low threshold voltage         ->  bit = 1
+   ```
+
+   2. Writing (programming)
+   - A high voltage on the control gate forces electrons through the oxide onto the floating gate by `Fowler-Nordheim tunnelling`. This is what sets the bit.
+
+   3. Reading
+   - A moderate voltage is applied to the control gate and the controller checks whether the channel conducts. A charged floating gate blocks conduction; an uncharged one allows it. The cell is not disturbed by reading.
+
+   4. Erasing
+   - Electrons are pulled off the floating gate by the reverse voltage. Erasing works only on a whole `block` (typically 128 KB to 4 MB), never on a single cell — this is the key limitation of flash.
+   ```
+      Read  and PROGRAM : per PAGE  (4-16 KB)
+      ERASE             : per BLOCK (many pages)
+   ```
+   - Because a page cannot be overwritten in place, the controller writes the new data to a fresh page and marks the old one invalid. This is called `out-of-place writing`.
+
+   5. What the controller does
+   ```
+      Flash Translation Layer (FTL) : maps logical block addresses used by the
+           OS onto the constantly changing physical pages
+      Wear levelling  : spreads writes evenly, since each cell survives only a
+           limited number of program/erase cycles
+      Garbage collection : consolidates valid pages and erases stale blocks
+      TRIM support    : lets the OS tell the drive which blocks are deleted,
+           so they can be erased in advance
+      ECC             : corrects the bit errors that flash naturally produces
+      Over-provisioning : hidden spare capacity used for the above
+   ```
+
+   Cell types
+   ```
+      SLC : 1 bit per cell  - fastest, ~100,000 cycles, most expensive
+      MLC : 2 bits per cell
+      TLC : 3 bits per cell - the common consumer choice
+      QLC : 4 bits per cell - cheapest, slowest, lowest endurance
+   ```
+   - More bits per cell means more voltage levels to distinguish, so speed, endurance and reliability all fall as density rises.
+
+   Why it is fast
+   - No seek time and no rotational delay: any page is reached electrically in microseconds.
+   - Many flash chips are accessed `in parallel` across several channels.
+   - NVMe over PCIe replaces the old SATA/AHCI stack with deep parallel queues, raising throughput to several gigabytes per second.
+
+   - Practical consequence: an SSD's advantage over an HDD is largest in `random` access — roughly a hundredfold — and smallest in long sequential transfers, where it is three or four times faster. Since operating systems and databases do mostly random access, the real-world difference is enormous.
 
 3. **Write two SSD characteristics?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+   Answer: Two characteristics of an SSD
+   ```
+      1. It has NO MOVING PARTS.
+         Data is stored in NAND flash memory rather than on spinning platters,
+         so there is no seek time and no rotational delay. This is why an SSD
+         is shock resistant, silent, cool and low in power.
+
+      2. It is VERY FAST, especially for RANDOM access.
+         Access latency is 20-100 microseconds against 5-10 milliseconds for a
+         hard disk, and it delivers 100,000+ IOPS against about 150 for an HDD.
+   ```
+
+   Further characteristics, if more are wanted
+   ```
+      Non-volatile      : charge trapped on a floating gate keeps the data
+                          without power
+      Limited endurance : each cell survives a fixed number of program/erase
+                          cycles, so the controller performs wear levelling
+      Sequential speed  : 500 MB/s (SATA) to 7,000 MB/s (NVMe)
+      Low power         : 2-5 W against 6-10 W for an HDD
+      Silent and cool   : no motor, no head assembly
+      Compact           : available in the small M.2 form factor
+      Higher cost per TB: 3 to 6 times an HDD
+      Sudden failure    : it usually fails without the gradual warning signs
+                          an HDD gives
+   ```
+
+   - The one-line version for an exam: an SSD is `non-volatile flash storage with no moving parts, giving microsecond access times and very high random IOPS`.
+
 4. **How can you define SSD?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
+
+   Answer: An `SSD (Solid State Drive)` is a storage device that stores data in `NAND flash memory` chips instead of on spinning magnetic platters. It has `no moving parts`, which is where the name "solid state" comes from.
+
+   How it stores a bit
+   - Each cell is a `floating-gate transistor`. The floating gate is surrounded by insulating oxide, so charge placed on it stays there with no power at all — that is what makes the drive non-volatile.
+   ```
+      Charge trapped on the floating gate  ->  bit = 0
+      No charge                            ->  bit = 1
+   ```
+   - Writing forces electrons onto the gate by `tunnelling`; erasing pulls them off, and erasing works only on a whole `block`, never on a single cell.
+
+   Main components
+   ```
+      NAND flash chips : the storage itself
+      Controller       : runs the flash translation layer, wear levelling,
+                         garbage collection and error correction
+      DRAM cache       : holds the mapping table and buffers writes
+      Interface        : SATA, or PCIe / NVMe for high performance
+   ```
+
+   Key characteristics
+   ```
+      No moving parts   : no seek time, no rotational delay
+      Access latency    : 20-100 microseconds (HDD: 5-10 milliseconds)
+      Random IOPS       : 100,000 to 1,000,000 (HDD: about 150)
+      Sequential speed  : 500 MB/s SATA to 7,000 MB/s NVMe
+      Power             : 2-5 W (HDD: 6-10 W)
+      Shock resistance  : excellent
+      Noise and heat    : minimal
+      Cost per TB       : 3 to 6 times an HDD
+      Endurance         : each cell survives a limited number of write cycles
+   ```
+
+   Cell types
+   ```
+      SLC : 1 bit per cell - fastest, longest life, most expensive
+      MLC : 2 bits per cell
+      TLC : 3 bits per cell - the common consumer choice
+      QLC : 4 bits per cell - cheapest, slowest, lowest endurance
+   ```
+
+   - Where it is used: operating system and application drives, database servers, laptops, and anywhere random access dominates. `HDDs` remain the choice for bulk archives, where cost per terabyte matters more than speed.
 
 5. **(খ) Solid State Drives (SSD) এর কার্যপ্রণালী ও ব্যবহার লিখুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 704 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Working principle of an SSD
+
+   An `SSD (Solid State Drive)` stores data in `NAND flash` memory chips and has no moving parts.
+
+   The storage cell — a floating-gate transistor
+   ```
+           Control gate
+         ================
+         ~~~~~~~~~~~~~~~~   oxide insulator
+         ################   FLOATING GATE  <- charge is trapped here
+         ~~~~~~~~~~~~~~~~   oxide insulator
+         +--------------+
+         | N+ |      | N+|
+         +--------------+
+   ```
+   - The floating gate is completely enclosed by insulating oxide, so charge placed on it remains without power. That is what makes the drive `non-volatile`.
+   ```
+      Charge on the floating gate   ->  high threshold voltage  ->  bit = 0
+      No charge                     ->  low threshold voltage   ->  bit = 1
+   ```
+
+   Operations
+   ```
+      PROGRAM (write) : a high voltage on the control gate forces electrons
+           through the oxide onto the floating gate by Fowler-Nordheim
+           tunnelling. Done a PAGE at a time (4-16 KB).
+
+      READ : a moderate voltage is applied and the controller checks whether
+           the channel conducts. A charged gate blocks conduction. Reading
+           does not disturb the cell.
+
+      ERASE : the reverse voltage pulls the electrons off. Erasing works only
+           on a whole BLOCK (128 KB to 4 MB), never on one cell. This is
+           flash's fundamental limitation.
+   ```
+   - Because a page cannot be overwritten in place, the controller writes new data to a fresh page and marks the old one invalid — `out-of-place writing`.
+
+   What the controller does
+   ```
+      Flash Translation Layer : maps the OS's logical addresses onto the
+           constantly changing physical pages
+      Wear levelling          : spreads writes evenly, since each cell has a
+           limited number of program/erase cycles
+      Garbage collection      : consolidates valid pages and erases stale blocks
+      TRIM                    : the OS tells the drive which blocks are deleted
+      ECC                     : corrects the bit errors flash naturally produces
+      Over-provisioning       : hidden spare capacity used for the above
+   ```
+
+   Components
+   ```
+      NAND flash chips + Controller + DRAM cache + Interface (SATA or NVMe)
+   ```
+
+   Cell types
+   ```
+      SLC 1 bit/cell , MLC 2 , TLC 3 , QLC 4
+      More bits per cell -> cheaper and denser, but slower and less durable
+   ```
+
+   Uses of an SSD
+   - `Operating system and application drives` — boot time falls from a minute to a few seconds, and applications launch almost instantly.
+   - `Database and transaction servers` — random IOPS is the decisive factor, and an SSD gives hundreds of thousands against an HDD's 150.
+   - `Laptops and portable devices` — light, shock resistant, silent, cool and low in power, which extends battery life.
+   - `Virtualisation hosts`, where many virtual machines generate heavily random I/O.
+   - `Video editing and content creation`, for high sequential throughput.
+   - `Caching tier` in front of an HDD array — a hybrid or tiered storage design.
+   - `Embedded and industrial systems`, where vibration would destroy a hard disk.
+   - `Data centres and cloud storage` for hot data, with HDDs kept for cold archives.
+
+   - Where an HDD is still preferred: `bulk archives and backups`, because cost per terabyte is three to six times lower and magnetic media retains data for decades without power, whereas an unpowered SSD gradually loses charge.
+
 6. **In a solid state drive data is sarved to a pool of NAND flash. NAND itself is made up of what are called floating gate transmission. How does floating gate transmission store 0 and 1?** *[BTRC Assistant Director (Technical) 2021 compact it 808-809 (ET: IBA)]*
+
+   Answer: A `floating-gate transistor` is the storage cell of NAND flash. It is an ordinary MOSFET with a second, completely insulated gate placed between the control gate and the channel.
+
+   Structure
+   ```
+           Control gate      <- the gate the circuit drives
+         ==================
+         ~~~~~~~~~~~~~~~~~~   oxide insulator
+         ##################   FLOATING GATE  <- charge is trapped here
+         ~~~~~~~~~~~~~~~~~~   tunnel oxide
+         +----------------+
+         | N+ |        | N+|   source          drain
+         +----------------+
+                 channel
+   ```
+   - The floating gate is surrounded on all sides by insulating silicon dioxide. Once electrons are placed on it they have `nowhere to go`, so the charge stays for years `with no power at all`. That is exactly why flash is non-volatile.
+
+   How a 0 and a 1 are stored
+   ```
+      Bit = 1  :  NO charge on the floating gate
+                  The control gate's field reaches the channel normally, so the
+                  transistor turns ON at a LOW threshold voltage.
+                  This is the ERASED state - a fresh block is all 1s.
+
+      Bit = 0  :  ELECTRONS TRAPPED on the floating gate
+                  The trapped negative charge partly cancels the control gate's
+                  field, so a HIGHER voltage is needed to turn the transistor on.
+                  The threshold voltage has been RAISED.
+   ```
+   ```
+      Threshold voltage
+           |
+           |        1 (erased)        0 (programmed)
+           |          /\                    /\
+           |         /  \                  /  \
+           |________/____\________________/____\_______ Vt
+                    low                  high
+                           ^
+                        read voltage applied here
+   ```
+
+   Writing a 0 — programming
+   - A high positive voltage (about 20 V) is applied to the control gate. Electrons in the channel gain enough energy to cross the thin tunnel oxide onto the floating gate. This is `Fowler-Nordheim tunnelling`, or hot-electron injection in some designs.
+
+   Writing a 1 — erasing
+   - A high voltage is applied in the reverse direction, pulling the electrons back off the floating gate. Erasing works only on a `whole block`, never on one cell — which is why flash cannot overwrite in place.
+
+   Reading
+   - A fixed `read voltage` between the two thresholds is applied to the control gate.
+   ```
+      Transistor CONDUCTS      ->  low threshold  ->  no charge   ->  bit = 1
+      Transistor does NOT conduct -> high threshold -> charge present -> bit = 0
+   ```
+   - Reading does not disturb the stored charge, so a cell can be read an unlimited number of times.
+
+   Storing more than one bit per cell
+   - The amount of charge can be controlled precisely, giving several distinguishable threshold levels.
+   ```
+      SLC : 2 levels  = 1 bit per cell   - fastest, ~100,000 cycles
+      MLC : 4 levels  = 2 bits per cell
+      TLC : 8 levels  = 3 bits per cell  - the common consumer choice
+      QLC : 16 levels = 4 bits per cell  - cheapest, slowest, least durable
+   ```
+   - The more levels are packed into the same voltage range, the narrower the margin between them, so speed, endurance and reliability all fall as density rises.
+
+   Why the cells wear out
+   - Every program and erase cycle drives electrons through the `tunnel oxide` at high voltage, and each passage damages it slightly. After thousands of cycles the oxide leaks and the cell can no longer hold charge reliably.
+   ```
+      SLC : ~100,000 cycles     MLC : ~10,000
+      TLC : ~3,000              QLC : ~1,000
+   ```
+   - This is why the SSD controller performs `wear levelling`, spreading writes evenly across all blocks so that no small area is exhausted while the rest of the drive is untouched.
+   - It is also why an `unpowered` SSD gradually loses data: the trapped charge slowly leaks away over a few years, whereas magnetic media holds its state for decades.
 
 7. **Which of the following is the unit of Hard Disk Drive? (a) Megaharz (b) Kiloharz (c) Gigabyte (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
+   Answer: The answer is `(c) Gigabyte`.
+
+   - The `gigabyte (GB)` is a unit of `storage capacity`, which is what a hard disk drive is measured in. Capacity is the amount of data the disk can hold.
+   ```
+      1 KB = 1024 bytes
+      1 MB = 1024 KB
+      1 GB = 1024 MB
+      1 TB = 1024 GB
+   ```
+   - Modern hard disks are sold in sizes from 500 GB up to 24 TB.
+
+   Why the other options are wrong
+   ```
+      (a) Megahertz : a unit of FREQUENCY, one million cycles per second.
+          It measures clock speed - the CPU, the bus, the RAM - not capacity.
+
+      (b) Kilohertz  : also a unit of frequency, one thousand cycles per second.
+          Used for audio and low-frequency signals.
+
+      (d) None       : incorrect, since (c) is right.
+   ```
+
+   Units actually used to describe a hard disk
+   ```
+      Capacity        : gigabytes (GB), terabytes (TB)
+      Rotational speed: revolutions per minute (RPM) - 5400, 7200, 10000, 15000
+      Transfer rate   : megabytes per second (MB/s)
+      Seek time       : milliseconds (ms)
+      Cache buffer    : megabytes (MB)
+      Interface speed : gigabits per second (Gbps) for SATA
+   ```
+   - Note that `RPM` and `Gbps` do appear in a disk's specification, but they describe its speed, not its size. The question asks for the unit of the drive itself, which is capacity.
+
+   - One practical point worth knowing: manufacturers advertise capacity in `decimal` units where 1 GB = 1,000,000,000 bytes, while an operating system reports `binary` units where 1 GiB = 1,073,741,824 bytes. That is why a "1 TB" disk shows as about 931 GB in Windows — nothing is missing, the two are simply counting differently.
+
 8. **Consider a magnetic disk consisting of 16 heads and 400 cylinders. This disk has four 100-cylinder zones with the cylinders in different zones containing 160, 200, 240. and 280 sectors, respectively. Assume that each sector contains 512 bytes, average seek time between adjacent cylinders is 1 msec, and the disk rotates at 7200 RPM. Calculate the (a) disk capacity (b) maximum data transfer rate.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
+
+   Answer: Given
+   ```
+      Heads (surfaces)      = 16
+      Cylinders             = 400, divided into 4 zones of 100 cylinders
+      Sectors per track     = 160, 200, 240, 280 in the four zones
+      Bytes per sector      = 512
+      Rotational speed      = 7200 RPM
+      Seek time (adjacent)  = 1 ms
+   ```
+   - One `cylinder` is the set of tracks at the same radius on all 16 surfaces, so each cylinder holds 16 tracks.
+
+   (a) Disk capacity
+
+   Capacity of each zone
+   ```
+      Zone capacity = cylinders x heads x sectors/track x bytes/sector
+
+      Zone 1 : 100 x 16 x 160 x 512 =  131,072,000 bytes
+      Zone 2 : 100 x 16 x 200 x 512 =  163,840,000 bytes
+      Zone 3 : 100 x 16 x 240 x 512 =  196,608,000 bytes
+      Zone 4 : 100 x 16 x 280 x 512 =  229,376,000 bytes
+   ```
+
+   Total
+   ```
+      Total = 131,072,000 + 163,840,000 + 196,608,000 + 229,376,000
+
+            = 720,896,000 bytes
+   ```
+
+   In convenient units
+   ```
+      720,896,000 / 1024          = 704,000 KB
+                 / 1024           = 687.5  MB
+                 / 1024           = 0.6714 GB   (binary, GiB)
+
+      In decimal units : 0.72 GB
+   ```
+   ```
+      Disk capacity = 720,896,000 bytes = 687.5 MB (binary) = 0.72 GB (decimal)
+   ```
+
+   Shortcut
+   ```
+      Total sectors per cylinder-set is the same in every zone structure, so
+
+      Total = 100 x 16 x (160 + 200 + 240 + 280) x 512
+            = 100 x 16 x 880 x 512
+            = 720,896,000 bytes           same answer
+   ```
+
+   (b) Maximum data transfer rate
+
+   - The maximum rate comes from the `outermost zone`, which has the most sectors per track — 280.
+   ```
+      Rotational speed = 7200 RPM
+                       = 7200 / 60 = 120 revolutions per second
+
+      Time for one revolution = 1 / 120 = 8.333 ms
+   ```
+   - In one revolution the head reads one entire track.
+   ```
+      Data per track (zone 4) = 280 sectors x 512 bytes = 143,360 bytes
+   ```
+   ```
+      Maximum transfer rate = data per track x revolutions per second
+
+                            = 143,360 x 120
+
+                            = 17,203,200 bytes per second
+   ```
+   ```
+      Maximum data transfer rate = 17,203,200 B/s
+                                 = 17.2 MB/s  (decimal)
+                                 = 16.4 MiB/s (binary)
+                                 = 137.6 Mbps
+   ```
+
+   Minimum rate, for comparison
+   ```
+      Innermost zone : 160 x 512 x 120 = 9,830,400 B/s = 9.83 MB/s
+   ```
+   - The rate varies with the zone, which is exactly why `zone bit recording` is used: outer tracks are physically longer, so more sectors fit on them and they deliver more data per revolution.
+
+   Other useful figures
+   ```
+      Average rotational latency = half a revolution = 8.333 / 2 = 4.17 ms
+      Full-stroke seek (400 cylinders x 1 ms)        = 400 ms
+      Sector transfer time (zone 4) = 8.333 ms / 280 = 0.0298 ms
+   ```
 
 9. **Consider a disk pack with the following specifications- 16 surfaces, 128 tracks per surface, 256 sectors per track and 512 bytes per sector. Answer the following questions: (a) What is the capacity of disk pack? (b) If the format overhead is 32 bytes per sector, what is the formatted disk space? (c) If the disk is rotating at 3600 rpm, what is the data transfer rate?** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 924-925 (ET: CTI)]*
 
+   Answer: Given
+   ```
+      Surfaces           = 16
+      Tracks per surface = 128
+      Sectors per track  = 256
+      Bytes per sector   = 512
+      Rotational speed   = 3600 RPM
+   ```
+
+   (a) Capacity of the disk pack
+   ```
+      Capacity = surfaces x tracks/surface x sectors/track x bytes/sector
+
+               = 16 x 128 x 256 x 512
+   ```
+   Step by step
+   ```
+      16 x 128        =     2,048 tracks in total
+      2,048 x 256     =   524,288 sectors in total
+      524,288 x 512   = 268,435,456 bytes
+   ```
+   ```
+      Capacity = 268,435,456 bytes
+               = 262,144 KB
+               = 256 MB
+   ```
+   - Neatly, `16 x 128 x 256 x 512 = 2^4 x 2^7 x 2^8 x 2^9 = 2^28 = 256 MB`.
+
+   (b) Formatted disk space, with 32 bytes of overhead per sector
+   - The overhead is the sector header, the address mark and the ECC field. It occupies space on the disk but cannot hold user data.
+   ```
+      Usable bytes per sector = 512 - 32 = 480 bytes
+
+      Formatted capacity = 524,288 sectors x 480 bytes
+
+                         = 251,658,240 bytes
+   ```
+   ```
+      Formatted disk space = 251,658,240 bytes
+                           = 245,760 KB
+                           = 240 MB
+   ```
+   Check
+   ```
+      Overhead lost = 524,288 x 32 = 16,777,216 bytes = 16 MB
+
+      256 MB - 16 MB = 240 MB          correct
+
+      Overhead percentage = 32 / 512 = 6.25 %
+   ```
+
+   (c) Data transfer rate at 3600 RPM
+   ```
+      Rotational speed = 3600 RPM
+                       = 3600 / 60 = 60 revolutions per second
+
+      Time for one revolution = 1 / 60 = 16.67 ms
+   ```
+   - In one revolution the head reads one complete track.
+   ```
+      Data per track = 256 sectors x 512 bytes = 131,072 bytes = 128 KB
+   ```
+   ```
+      Transfer rate = data per track x revolutions per second
+
+                    = 131,072 x 60
+
+                    = 7,864,320 bytes per second
+   ```
+   ```
+      Data transfer rate = 7,864,320 B/s
+                         = 7,680 KB/s
+                         = 7.5 MB/s (binary)
+                         = 7.86 MB/s (decimal)
+                         = 62.9 Mbps
+   ```
+
+   Formatted transfer rate, if the overhead is excluded
+   ```
+      Useful data per track = 256 x 480 = 122,880 bytes
+      Rate = 122,880 x 60 = 7,372,800 B/s = 7.03 MB/s
+   ```
+
+   Other useful figures
+   ```
+      Average rotational latency = half a revolution = 16.67 / 2 = 8.33 ms
+      One sector's transfer time = 16.67 ms / 256   = 0.065 ms
+      Capacity of one surface    = 128 x 256 x 512  = 16 MB
+      Capacity of one cylinder   = 16 x 256 x 512   = 2 MB
+   ```
+   - The formula to remember: `transfer rate = bytes per track x rotations per second`. It follows directly from the fact that one full revolution passes exactly one track under the head.
+
 10. **(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 951 (ET: N/A)], [BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) An `optical disc` — CD, DVD or Blu-ray — stores data as microscopic marks on a spiral track, and reads them with a `laser beam`. There are no magnetic fields and no contact with the surface.
+
+    Physical structure
+    ```
+       +---------------------------+  protective lacquer / label
+       +---------------------------+  reflective aluminium layer
+       ~~~~~~ pits and lands ~~~~~~   the data layer
+       +---------------------------+
+       |    polycarbonate plastic  |  1.2 mm, the laser reads through this
+       +---------------------------+
+                    ^
+                  LASER
+    ```
+    - The data sits on one continuous `spiral track` running from the centre outward — unlike a hard disk, which has concentric circular tracks.
+
+    How data is represented
+    ```
+       PIT  : a microscopic depression burned or moulded into the surface
+       LAND : the flat area between pits
+
+       A TRANSITION from pit to land, or land to pit  ->  binary 1
+       NO transition along a fixed length             ->  binary 0
+    ```
+    - Note that a pit is not "1" and a land "0". It is the `change` that encodes a 1. This scheme is `NRZI` encoding, and it is used because the laser detects edges far more reliably than absolute levels.
+    - The actual bits are further encoded — `EFM` (eight-to-fourteen modulation) on a CD — so that runs of identical symbols never become too long for the timing circuit to track.
+
+    Reading
+    ```
+       1. A low-power laser beam is focused through the plastic onto the
+          reflective layer.
+       2. A LAND reflects the beam strongly straight back.
+       3. A PIT is about a quarter of a wavelength deep, so the light reflected
+          from it interferes destructively with light from the surrounding land,
+          and much less returns.
+       4. A photodiode measures the reflected intensity.
+       5. The changes in intensity are decoded into a bit stream, then
+          error-corrected and passed to the computer.
+    ```
+    ```
+       Strong reflection  ->  land
+       Weak reflection    ->  pit
+       Transition between them -> a 1 bit
+    ```
+
+    Writing
+    ```
+       Pressed discs (CD-ROM, DVD-ROM)
+            Pits are physically STAMPED into the plastic during manufacture
+            from a glass master. Cheap in volume, and unchangeable.
+
+       Recordable (CD-R, DVD-R)
+            A layer of ORGANIC DYE sits above the reflective layer. A
+            high-power laser burns dark spots into it, which absorb light and
+            so behave like pits. Permanent - write once.
+
+       Rewritable (CD-RW, DVD-RW)
+            A PHASE-CHANGE alloy is used. A high-power laser melts a spot and
+            it cools into the AMORPHOUS state, which reflects poorly (a pit).
+            A medium-power laser anneals it back into the CRYSTALLINE state,
+            which reflects well (a land). This can be repeated about 1,000 times.
+    ```
+
+    Capacity depends on the laser's wavelength
+    ```
+       CD        : 780 nm infrared laser  -> 700 MB
+       DVD       : 650 nm red laser       -> 4.7 GB (single layer)
+       Blu-ray   : 405 nm blue-violet     -> 25 GB per layer
+    ```
+    - A shorter wavelength can be focused to a smaller spot, so the pits and the track spacing can be made smaller and more data fits on the same 12 cm disc.
+
+    Rotation
+    ```
+       CLV (Constant Linear Velocity)  : the disc slows as the head moves
+            outward, so the data passes the laser at a constant speed.
+            Used for audio and video, where a steady data rate is needed.
+
+       CAV (Constant Angular Velocity) : constant RPM, so the outer tracks
+            deliver data faster. Used in data drives.
+    ```
+
+    - Advantages: cheap to duplicate, removable, immune to magnetic fields, and long-lived if stored properly. Disadvantages: slow (1-22 MB/s), small capacity by modern standards, and easily damaged by scratches — which is why optical media has largely been replaced by pen drives and cloud storage.
 
 ## Instruction Pipelining & Hazards (9)
 
