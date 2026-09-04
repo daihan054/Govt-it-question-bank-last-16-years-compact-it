@@ -154,6 +154,62 @@
 
 1. **(ক) বিভিন্ন Color model-এর নাম লিখুন। CMY color model-এর ব্যবহার কী?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
+   Answer: (Answered in English, as required for IT topics.) A `colour model` is a mathematical way of describing a colour as a set of numbers, so a computer can store, transmit and reproduce it.
+
+   Names of the main colour models
+
+   `RGB` (Red, Green, Blue)
+   - An `additive` model: colours are made by adding light. All three at full gives white; all three off gives black.
+   - Used by anything that `emits` light — monitors, TVs, cameras, scanners, projectors.
+
+   `CMY / CMYK` (Cyan, Magenta, Yellow, and Key = black)
+   - A `subtractive` model: colours are made by removing wavelengths from white light with ink. All three at full gives black; none gives white (the paper).
+   - Used by anything that `prints` — inkjet and laser printers, offset printing.
+
+   `HSV / HSI / HSB` (Hue, Saturation, Value / Intensity / Brightness)
+   - Describes colour the way people do: `hue` is the colour name, `saturation` its purity, `value` its brightness.
+   - Used in image editing tools, colour pickers, and in image processing where colour must be separated from lighting.
+
+   `YUV / YCbCr / YIQ`
+   - Separates `luminance (Y)` — the brightness — from `chrominance (U, V)` — the colour.
+   - Used in television broadcasting, JPEG and MPEG compression, because the eye is far more sensitive to brightness than to colour, so the colour channels can be compressed harder.
+
+   `CIE XYZ and CIE Lab`
+   - Device-independent models based on how the human eye actually responds. `Lab` is perceptually uniform, so equal numeric changes look like equal colour changes.
+   - Used as the reference for colour management and conversion between devices.
+
+   `Grayscale`
+   - A single intensity value per pixel, 0 to 255. Used in medical imaging, document scanning and most image-processing algorithms.
+
+   Use of the CMY colour model
+   - `Colour printing` is its purpose. Ink on paper does not emit light; it `absorbs` some wavelengths and reflects the rest, so the arithmetic is subtractive.
+   ```
+      Cyan    absorbs RED     ->  reflects green + blue
+      Magenta absorbs GREEN   ->  reflects red + blue
+      Yellow  absorbs BLUE    ->  reflects red + green
+   ```
+   - Conversion from RGB is simply the complement:
+   ```
+      C = 1 - R
+      M = 1 - G
+      Y = 1 - B          (with all values normalised to 0-1)
+   ```
+   ```
+      Additive (RGB)             Subtractive (CMY)
+         R + G = Yellow             C + M = Blue
+         G + B = Cyan               M + Y = Red
+         R + B = Magenta            C + Y = Green
+         R+G+B = White              C+M+Y = Black (in theory)
+   ```
+
+   Why printers actually use CMYK, not CMY
+   - Mixing all three inks in practice gives a `muddy dark brown`, not a true black, because real inks are not perfect.
+   - Printing three layers of ink to make black wastes expensive colour ink, soaks the paper and dries slowly.
+   - Black text would look blurred, since three plates would have to register perfectly.
+   - So a separate `K` (black) ink is added — cheaper, sharper and genuinely black. This is called `black generation` and `under-colour removal`.
+
+   - Practical consequence: a design that looks bright on an RGB monitor often looks duller when printed, because the CMYK `gamut` — the set of colours it can reproduce — is smaller than the RGB gamut. That is why designers work in CMYK for anything destined for print.
+
 ## Frequency Domain Filtering (1)
 
 1. **How does Butterworth High pass Filter works?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
