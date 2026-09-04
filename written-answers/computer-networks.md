@@ -14851,11 +14851,204 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 481 (ET: N/A)]*
 
+   Answer:
+
+   What is packet fragmentation
+   - Fragmentation is the process of dividing a packet into smaller pieces so that it can pass through a network whose `MTU` (Maximum Transmission Unit) is smaller than the packet.
+   - It is needed because different networks have different MTUs: Ethernet 1500 bytes, PPPoE 1492, FDDI 4352, and some WAN links far less. A packet crossing from one to another may simply be too large.
+   - Each fragment becomes a packet in its own right, carrying the same identification number, its own fragment offset, and a More Fragments (MF) flag which is 1 on every fragment except the last.
+
+   Transparent fragmentation
+   - The network that fragments a packet also `reassembles it before the packet leaves`. The exit gateway of that network rebuilds the original packet, so the next network never knows fragmentation occurred.
+   ```
+           NETWORK 1 (MTU 1500)        NETWORK 2 (MTU 512)         NETWORK 3 (MTU 1500)
+     Host --[G1]------------------->[G2]---F1--F2--F3--->[G3]------------------->Host
+             full packet          fragments here      reassembles here
+                                                      full packet again
+   ```
+   - Advantages: each network is independent; the destination host is not burdened with reassembly; and every fragment must follow the same path, so ordering is simple.
+   - Disadvantages: every exit gateway needs buffers and timers for reassembly; all fragments are forced through one exit gateway, which prevents multipath routing; and if the packet must be fragmented again in the next network, the work is repeated. It is slower overall.
+   - Used by: ATM and X.25.
+
+   Non-transparent fragmentation
+   - The fragments are `not reassembled` by the exit gateway. Each travels independently as a full datagram, and reassembly is done only at the `destination host`.
+   ```
+           NETWORK 1              NETWORK 2 (MTU 512)         NETWORK 3
+     Host --[G1]------------->[G2] --F1--> ... --> [G3] --F1--> 
+                                   --F2-->            --F2-->    Destination
+                                   --F3-->            --F3-->    reassembles
+   ```
+   - Advantages: gateways stay simple and stateless; fragments may take different routes; and there is no need for all fragments to converge on one exit gateway. This suits a datagram network.
+   - Disadvantages: every fragment carries a full header, so overhead is higher; the destination must buffer fragments and run a reassembly timer; and if any single fragment is lost, the whole original packet is discarded.
+   - Used by: `IPv4`, which is the important case.
+
+   | Point | Transparent | Non-transparent |
+   |---|---|---|
+   | Reassembled by | The exit gateway of each network | The destination host only |
+   | Gateway complexity | High — buffers and timers | Low |
+   | Routing | All fragments must use one exit gateway | Fragments may take different paths |
+   | Overhead | Lower, repeated per network | Higher, header on every fragment |
+   | Repeated fragmentation | Yes, in each network | No, fragments stay fragmented |
+   | Used by | ATM, X.25 | IPv4 |
+
+   - Note on IPv6: routers are `not allowed` to fragment at all. Only the source may fragment, using a Fragment extension header, and Path MTU Discovery is used to find the smallest MTU on the route in advance. This keeps routers simple and fast.
+
 2. **(b) Describe briefly the TCP/IP tunneling using appropriate diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 482 (ET: N/A)]*
+
+   Answer: Tunnelling is the technique of `encapsulating one protocol's packet inside another protocol's packet`, so that it can travel across an intermediate network that does not support it.
+
+   Why it is needed
+   - Two networks running one protocol may be separated by a network that speaks a different one. Rather than translating, the original packet is wrapped up, carried across as ordinary payload, and unwrapped at the far end. The intermediate network never has to understand it.
+
+   Diagram — two IPv6 islands joined across an IPv4 internet
+   ```
+      IPv6 NETWORK A                                     IPv6 NETWORK B
+     +--------------+     +------------+   +------------+   +--------------+
+     | Host A       |     | Router R1  |   | Router R2  |   | Host B       |
+     | 2001:db8::1  |---->| entry point|   | exit point |-->| 2001:db8::2  |
+     +--------------+     +------+-----+   +-----+------+   +--------------+
+                                 |               |
+                                 |   IPv4 INTERNET (the tunnel)
+                                 +===============+
+                           encapsulate      decapsulate
+   ```
+
+   The packet as it travels
+   ```
+   Inside network A:      | IPv6 hdr | payload |
+
+   Inside the tunnel:     | IPv4 hdr | IPv6 hdr | payload |
+                            ^ src = R1, dst = R2 (both IPv4 addresses)
+
+   Inside network B:      | IPv6 hdr | payload |   (original packet restored)
+   ```
+
+   Step by step
+   - Step 1 — Host A sends an ordinary IPv6 packet towards Host B.
+   - Step 2 — Router R1, the tunnel entry point, sees that the next network cannot carry IPv6. It `encapsulates` the whole IPv6 packet as the payload of a new IPv4 packet addressed from R1 to R2.
+   - Step 3 — the IPv4 internet forwards it like any other IPv4 packet. It has no idea what the payload is.
+   - Step 4 — Router R2, the tunnel exit point, receives it, strips the IPv4 header, and recovers the original IPv6 packet unchanged.
+   - Step 5 — R2 forwards the IPv6 packet natively to Host B.
+
+   Common tunnelling protocols
+
+   | Protocol | Carries | Typical use |
+   |---|---|---|
+   | 6to4, 6in4, Teredo, ISATAP | IPv6 over IPv4 | IPv6 transition |
+   | GRE | Almost anything over IP | Site-to-site links, carrying routing protocols |
+   | IPsec (tunnel mode) | IP over IP, encrypted | Secure site-to-site VPN |
+   | L2TP, PPTP | Layer 2 frames over IP | Remote-access VPN |
+   | VXLAN | Ethernet over UDP | Data centre network virtualisation |
+   | MPLS | Labelled IP | Carrier backbones |
+   | SSH tunnel | TCP over SSH | Secure port forwarding |
+
+   Advantages and drawbacks
+   - Advantages: allows incompatible networks to interconnect; supports gradual migration (IPv4 to IPv6); creates private virtual links across a public network; and, with IPsec, adds encryption and authentication.
+   - Drawbacks: the extra header reduces the effective MTU and can cause fragmentation (MSS clamping is the usual remedy); it adds processing overhead at both endpoints; and it can bypass firewall inspection, which is a genuine security concern — an unmonitored Teredo or 6to4 tunnel can carry traffic straight past an IPv4-only firewall.
 
 3. **Why network need packet fragmentation? Define different types of packet fragmentation with necessary diagram.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 666 (ET: N/A)]*
 
+   Answer:
+
+   Why a network needs packet fragmentation
+   - Different networks have different `MTU` values — the largest packet they can carry. Ethernet allows 1500 bytes, PPPoE 1492, FDDI 4352, and some WAN and tunnel links considerably less.
+   - When a packet has to cross from a network with a large MTU into one with a smaller MTU, it is simply too big to pass. The choice is to discard it or to divide it. Fragmentation divides it.
+   - Without fragmentation, hosts would have to know the smallest MTU on every possible path in advance, and any change of route could break communication.
+   - It also lets a single large transfer proceed across a heterogeneous internetwork without the application having to know anything about the underlying media.
+
+   The IPv4 header fields used
+   - `Identification` (16 bits) — the same value in every fragment of one original packet, so the destination knows which fragments belong together.
+   - `Flags` — DF (Don't Fragment) and MF (More Fragments). MF is 1 in every fragment except the last.
+   - `Fragment Offset` (13 bits) — the position of this fragment's data within the original packet, measured in units of `8 bytes`. This is why every fragment except the last must contain a multiple of 8 bytes of data.
+
+   Types of fragmentation
+
+   1. Transparent fragmentation
+   - The network that fragments the packet also `reassembles it at its own exit gateway`, so the next network receives the original whole packet and never learns that fragmentation happened.
+   ```
+      NETWORK 1              NETWORK 2 (small MTU)          NETWORK 3
+   Host--[G1]--full packet-->[G2]--F1-F2-F3-->[G3]--full packet-->Host
+                           fragments        reassembles
+   ```
+   - Advantages: networks stay independent; the destination host does no reassembly work; only one fragmentation stage per network.
+   - Disadvantages: every exit gateway needs reassembly buffers and timers; all fragments must pass through the same exit gateway, which forbids multipath routing; and repeated fragmentation and reassembly is slow.
+   - Used by ATM and X.25.
+
+   2. Non-transparent fragmentation
+   - Fragments are `never reassembled in transit`. Each becomes an independent datagram and travels on its own, and only the `destination host` reassembles.
+   ```
+      NETWORK 1         NETWORK 2 (small MTU)      NETWORK 3
+   Host--[G1]------->[G2]--F1-->  ...  -->[G3]--F1--> Destination
+                         --F2-->              --F2--> reassembles
+                         --F3-->              --F3-->
+   ```
+   - Advantages: gateways stay simple and stateless; fragments may take different routes; no convergence on a single exit gateway is required.
+   - Disadvantages: every fragment carries a full header, so overhead is greater; the destination must buffer and run a reassembly timer; and losing one fragment destroys the entire original packet.
+   - Used by `IPv4`.
+
+   | Point | Transparent | Non-transparent |
+   |---|---|---|
+   | Reassembly point | Exit gateway of each network | Destination host |
+   | Gateway state | Buffers and timers needed | Stateless |
+   | Routing of fragments | All through one exit gateway | Independent paths allowed |
+   | Header overhead | Lower | Higher |
+   | Used by | ATM, X.25 | IPv4 |
+
+   - IPv6 removed router fragmentation entirely: only the source may fragment, using a Fragment extension header, and hosts use `Path MTU Discovery` to learn the smallest MTU on the route beforehand. This keeps routers simple and fast, and it is one of the main reasons the IPv6 header dropped from 13 fields to 8.
+
 4. **Suppose a 22-byte packet is to be transmitted through a network of \text{MTU} = 3\text{ byte}. The elementary fragment size is 1\text{ byte}. Show the segment numbering of the above packet. Packet number is 217.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
+
+   Answer:
+
+   Given
+   - Original packet size = 22 bytes of data
+   - MTU = 3 bytes (data per fragment)
+   - Elementary fragment size = 1 byte, so the offset is counted in units of 1 byte
+   - Packet identification number = 217
+
+   Step 1 — number of fragments
+   ```
+   22 ÷ 3 = 7 remainder 1
+   So 7 full fragments of 3 bytes + 1 fragment of 1 byte = 8 fragments
+   ```
+
+   Step 2 — fragment numbering
+
+   | Fragment | Bytes carried | Size | Offset | MF flag | Identification |
+   |---|---|---|---|---|---|
+   | 1 | 0 – 2 | 3 | `0` | 1 | 217 |
+   | 2 | 3 – 5 | 3 | `3` | 1 | 217 |
+   | 3 | 6 – 8 | 3 | `6` | 1 | 217 |
+   | 4 | 9 – 11 | 3 | `9` | 1 | 217 |
+   | 5 | 12 – 14 | 3 | `12` | 1 | 217 |
+   | 6 | 15 – 17 | 3 | `15` | 1 | 217 |
+   | 7 | 18 – 20 | 3 | `18` | 1 | 217 |
+   | 8 | 21 | 1 | `21` | `0` | 217 |
+
+   Step 3 — the three header fields explained
+   - `Identification = 217` in every fragment, so the destination knows they all belong to the same original packet.
+   - `Fragment offset` is the position of the fragment's first byte within the original packet, measured in elementary fragment units. Since the elementary fragment size is 1 byte here, the offset is simply the byte position: 0, 3, 6, 9, 12, 15, 18, 21.
+   - `MF (More Fragments)` is 1 for fragments 1 to 7, telling the receiver that more are coming, and `0` for fragment 8, marking the end.
+
+   Diagram
+   ```
+   Original packet 217, 22 bytes:
+   | 0 1 2 | 3 4 5 | 6 7 8 | 9 10 11 | 12 13 14 | 15 16 17 | 18 19 20 | 21 |
+
+   Fragment 1: ID=217 off=0  MF=1   data bytes 0-2
+   Fragment 2: ID=217 off=3  MF=1   data bytes 3-5
+   Fragment 3: ID=217 off=6  MF=1   data bytes 6-8
+   Fragment 4: ID=217 off=9  MF=1   data bytes 9-11
+   Fragment 5: ID=217 off=12 MF=1   data bytes 12-14
+   Fragment 6: ID=217 off=15 MF=1   data bytes 15-17
+   Fragment 7: ID=217 off=18 MF=1   data bytes 18-20
+   Fragment 8: ID=217 off=21 MF=0   data byte  21      <- last
+   ```
+
+   Step 4 — reassembly at the destination
+   - Fragments are collected by identification number, sorted by offset, and joined. The MF=0 fragment marks the end, and its offset plus its length gives the original size: 21 + 1 = 22 bytes. If any fragment fails to arrive before the reassembly timer expires, the whole packet is discarded.
+
+   - Note on real IPv4: the offset field there counts in units of `8 bytes`, so every fragment except the last must carry a multiple of 8 bytes of data. This question deliberately sets the elementary fragment size to 1 byte to keep the arithmetic simple.
 
 ## Satellite Communication (4)
 
