@@ -18200,11 +18200,135 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 517 (ET: MIST)]*
 
+   Answer: The three are different stages of the same journey: a `database` records what happens, a `data warehouse` stores the history of what happened, and `data mining` finds the hidden pattern inside that history.
+
+   Database
+   - A store of `current, operational` data used to run day-to-day work. Optimised for many small reads and writes (`OLTP`), and kept `normalized` so nothing is duplicated.
+   - Real example: the core banking system of Sonali Bank. When a customer withdraws Tk 5,000 from an ATM, the balance row is updated in a second.
+
+   Data warehouse
+   - A large store of `historical, integrated` data brought together from many source databases through `ETL` (Extract, Transform, Load). Optimised for reading and aggregating huge volumes (`OLAP`), and deliberately `denormalized` into a star schema.
+   - It is subject-oriented, integrated, time-variant and non-volatile — data is loaded and then never updated.
+   - Real example: ten years of every branch's deposits, loans and card transactions in one place, so management can compare branch performance by quarter.
+
+   Data mining
+   - The `process` of digging through that stored data to find patterns, rules and predictions that nobody asked for in advance. It uses statistics and machine learning: classification, clustering, association rules, regression.
+   - Real example: mining the warehouse shows that customers who take a car loan and hold a credit card are 3 times more likely to default in the first year, or that a card used in two cities within one hour is probably fraud.
+
+   ```mermaid
+   flowchart LR
+       A[Operational databases<br/>ATM, branch, cards] -->|ETL| B[Data warehouse<br/>10 years of history]
+       B --> C[Data mining<br/>patterns and prediction]
+       C --> D[Business decision]
+   ```
+
+   | Point | Database | Data warehouse | Data mining |
+   |---|---|---|---|
+   | What it is | A storage system | A storage system | A process / technique |
+   | Data | Current, detailed | Historical, summarised | Uses the warehouse's data |
+   | Purpose | Run the business (OLTP) | Analyse the business (OLAP) | Discover unknown patterns |
+   | Operations | INSERT, UPDATE, DELETE | Mostly SELECT and aggregate | Classification, clustering, association |
+   | Design | Normalized | Denormalized, star schema | No storage of its own |
+   | Size | GB | TB to PB | — |
+   | Users | Clerks, applications | Analysts, management | Data scientists |
+   | Bank example | Today's ATM withdrawal | 10 years of all transactions | Fraud detection, churn prediction |
+
+   - The order is fixed: databases feed the warehouse, and the warehouse feeds the mining. Mining directly on the live operational database is avoided, because heavy analytical queries would slow down customer service.
+
 2. **Discuss different tools and techniques to develop a Business Intelligence Dashboard for a bank. How can data be captured and aggregated from various sources within the bank to monitor the business performance?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 519 (ET: MIST)]*
+
+   Answer: A `Business Intelligence (BI) dashboard` is a single screen that shows a bank's key numbers — deposits, loans, NPL, income, branch performance — as charts and indicators, refreshed automatically from the bank's own systems.
+
+   Part 1 — Tools
+
+   Data integration (ETL / ELT)
+   - `Informatica PowerCenter`, `Talend`, `SSIS`, `Apache NiFi`, `Pentaho` for scheduled extraction and transformation.
+   - `Apache Kafka` with `Debezium` for change-data-capture, when the dashboard must be near real time.
+
+   Storage
+   - Data warehouse: `Oracle Exadata`, `Teradata`, `SQL Server`, `Snowflake`, `Amazon Redshift`, `Google BigQuery`.
+   - Data lake for raw and unstructured data: `Hadoop HDFS`, `Amazon S3`.
+   - `Data marts` per department — retail, credit, treasury — built on top of the warehouse.
+
+   OLAP and modelling
+   - `Star` or `snowflake` schema, OLAP cubes in `SSAS` or `Oracle OLAP`, with roll-up, drill-down, slice and dice.
+
+   Visualisation
+   - `Power BI`, `Tableau`, `Qlik Sense`, `Oracle OBIEE`, `SAP BusinessObjects`, or open source `Apache Superset` and `Metabase`.
+
+   Part 2 — Techniques for capturing and aggregating data
+
+   ```mermaid
+   flowchart LR
+       A[Core banking] --> E[Staging area]
+       B[ATM / POS switch] --> E
+       C[Cards, loans, treasury] --> E
+       D[CRM, HR, complaints] --> E
+       E -->|clean, standardise| F[Data warehouse<br/>star schema]
+       F --> G[Data marts / OLAP cube]
+       G --> H[BI dashboard]
+   ```
+
+   - `Identify the sources` — core banking, card switch, ATM/POS, loan origination, treasury, CRM, call centre, HR, and external feeds such as Bangladesh Bank rates.
+   - `Extract` — nightly batch for the core system, and `change-data-capture` from the redo log for tables that must be current. CDC is preferred because it does not load the production database.
+   - `Stage and clean` — remove duplicate customer records, standardise date, currency and branch codes, handle nulls, and run a `single customer view` match on NID and mobile number.
+   - `Transform and conform` — build shared dimensions (Customer, Branch, Product, Time, Employee) so that "branch" means the same thing in every report. This step is what makes cross-source comparison possible.
+   - `Load into fact tables` — one row per transaction or per daily balance, with foreign keys to the dimensions.
+   - `Aggregate` — pre-compute daily, monthly and quarterly totals per branch and per product into summary tables, so the dashboard does not aggregate millions of rows at query time.
+   - `Define the KPIs` — total deposit, advance-deposit ratio, NPL percentage, cost of fund, net interest margin, CASA ratio, new accounts per day, ATM uptime, transactions per channel.
+   - `Publish` — role-based dashboards: a branch manager sees only that branch, the MD sees the whole bank. Drill-down goes from bank to zone to branch to account.
+   - `Refresh` — most figures nightly, a few (cash position, ATM status, fraud alerts) in near real time.
+
+   Points to note
+   - `Data quality` is the main risk. A dashboard built on unmatched customer records gives confident but wrong numbers.
+   - `Security` — mask account numbers and NID, encrypt at rest and in transit, and keep an audit log of who viewed what, as required by the bank's regulator.
+   - Keep the dashboard to `5-8 KPIs` per screen. A crowded dashboard is not read.
 
 3. **Software scenario question- Business Intelligence Model** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
 4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) `Big data` means datasets so large, so fast-arriving or so varied that ordinary databases and tools cannot store or process them in a reasonable time. It needs distributed systems such as `Hadoop` and `Spark` that spread the data and the computation across many machines.
+
+   - Example: the transaction logs of all mobile financial services in Bangladesh, or every post and click on a social network.
+
+   Characteristics — the 5 V's
+
+   `Volume` — the size
+   - Data measured in terabytes and petabytes rather than gigabytes. A single bank's card and ATM logs alone run to billions of rows a year.
+   - Handled by storing across many nodes (`HDFS`, object storage) instead of one big server.
+
+   `Velocity` — the speed
+   - Data arrives continuously and must often be processed as it arrives: card swipes, sensor readings, clickstreams, mobile money transfers.
+   - Handled by streaming tools such as `Kafka`, `Spark Streaming` and `Flink`.
+
+   `Variety` — the different forms
+   ```
+   Structured    : tables, rows and columns  (core banking)
+   Semi-structured: JSON, XML, CSV, log files
+   Unstructured  : text, e-mail, image, audio, video, CCTV
+   ```
+   - Traditional relational databases handle only the first kind well, which is the main reason big data tools exist.
+
+   `Veracity` — the trustworthiness
+   - Large data is dirty: duplicates, missing fields, wrong entries, biased samples. Cleaning and validating it is a major part of the work, because a wrong conclusion is worse than no conclusion.
+
+   `Value` — the usefulness
+   - Data has no worth until analysis turns it into a decision. This is the V that justifies the cost of the other four.
+   - Example: fraud detection, credit scoring, customer churn prediction, targeted offers.
+
+   Two more V's often added
+   - `Variability` — the meaning and the arrival rate change over time (festival season traffic differs from an ordinary week).
+   - `Visualization` — the result must be shown as a chart or dashboard, because nobody can read a billion rows.
+
+   Technologies used
+   ```
+   Storage     : HDFS, Amazon S3, NoSQL (Cassandra, MongoDB, HBase)
+   Processing  : MapReduce, Apache Spark
+   Streaming   : Kafka, Flink
+   Query       : Hive, Presto, BigQuery
+   ```
+   - The common design idea is `move the computation to the data`, not the data to the computation, because moving petabytes across a network is impossible.
 
 5. **Write down different stage of data mining?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
    a) Data Purification
@@ -18215,13 +18339,266 @@ SELECT *FROM students ORDER BY ID, NAME DESC
    f) Pattern Evaluation
    g) Knowledge Representation
 
+   Answer: `Data mining` is the process of finding useful, previously unknown patterns in large amounts of data. It is one step inside the larger process called `KDD` — Knowledge Discovery in Databases — and the stages below are usually asked as "the stages of data mining".
+
+   ```mermaid
+   flowchart LR
+       A[Data cleaning] --> B[Data integration]
+       B --> C[Data selection]
+       C --> D[Data transformation]
+       D --> E[Data mining]
+       E --> F[Pattern evaluation]
+       F --> G[Knowledge presentation]
+   ```
+
+   1. Data cleaning
+   - Remove noise, duplicate rows and clearly wrong values, and decide what to do with missing fields — drop them, or fill them with the mean or a predicted value.
+   - Usually the longest stage. Dirty data gives a confident but wrong answer.
+
+   2. Data integration
+   - Combine data from several sources — the core banking system, the card switch, the CRM — into one store, resolving conflicts where the same thing is named differently in each source.
+
+   3. Data selection
+   - Pick only the rows and columns relevant to the question being asked. Mining the whole warehouse is slow and adds noise.
+   - Example: to predict loan default, select loan history and repayment behaviour, not marketing e-mails.
+
+   4. Data transformation
+   - Convert the selected data into the form the mining algorithm needs: `normalization` to a common scale, `aggregation` to monthly totals, `discretization` of age into bands, and encoding of categorical values into numbers.
+
+   5. Data mining
+   - The core step. Apply the algorithm that fits the goal:
+   ```
+   Classification    : decision tree, Naive Bayes  -> will this customer default?
+   Clustering        : k-means                     -> which customer groups exist?
+   Association rules : Apriori, FP-Growth          -> what is bought together?
+   Regression        : linear, logistic            -> how much will sales be?
+   Anomaly detection : outlier analysis            -> is this transaction fraud?
+   ```
+
+   6. Pattern evaluation
+   - Judge which of the discovered patterns are actually `interesting` — valid, new, useful and understandable. Accuracy, precision, recall, support and confidence are used here, and the model is tested on data it has never seen.
+   - Most patterns found are trivial or already known; this stage filters them out.
+
+   7. Knowledge presentation
+   - Show the surviving results as charts, rules, reports or a dashboard so that a manager who is not a data scientist can act on them.
+
+   - Points to note: the process is `iterative`, not a straight line — a poor result sends the work back to selection or transformation. Roughly 60-70 per cent of the total effort goes into stages 1 to 4, not into the mining algorithm itself.
+
 6. **Database tuning and database mining বলতে কী বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) The two terms sound similar but belong to different areas: tuning is about `speed`, mining is about `knowledge`.
+
+   Database tuning
+   - The work of adjusting a database so that it runs faster and uses hardware efficiently, without changing what it stores.
+   - It works at several levels:
+   ```
+   Query tuning    : rewrite slow SQL, avoid SELECT *, replace a correlated
+                     subquery with a join, read the EXPLAIN plan
+   Index tuning    : add missing indexes, fix composite column order,
+                     drop unused indexes, rebuild fragmented ones
+   Schema tuning   : normalize to remove redundancy, or denormalize a
+                     reporting table to remove joins; partition huge tables
+   Memory tuning   : size the buffer cache, sort area and shared pool
+   Disk tuning     : spread files over disks, separate data from log,
+                     use faster storage for hot tables
+   Concurrency     : shorter transactions, right isolation level, fewer locks
+   Statistics      : keep optimiser statistics fresh so plans stay correct
+   ```
+   - Measured by `response time`, `throughput` and the number of disk I/Os. The method is always: measure, change one thing, measure again.
+
+   Database mining (data mining)
+   - The process of searching large stored data for patterns and relationships that nobody knew were there, using statistics and machine learning.
+   - Main techniques:
+   ```
+   Classification    : predict a class    -> will this customer default?
+   Clustering        : find natural groups -> which customer segments exist?
+   Association rules : find items that occur together -> market basket analysis
+   Regression        : predict a number   -> next month's sales
+   Anomaly detection : find the odd one   -> fraudulent card use
+   ```
+   - It normally runs on a `data warehouse`, not on the live operational database, because heavy analytical queries would slow down day-to-day work.
+
+   | Point | Database tuning | Database mining |
+   |---|---|---|
+   | Goal | Make the system faster | Find hidden knowledge |
+   | Concerned with | Performance, resources | Patterns, prediction |
+   | Changes the data? | No — only how it is stored and accessed | No — only reads it |
+   | Done by | DBA | Data analyst, data scientist |
+   | Tools | EXPLAIN, index advisor, AWR reports | Weka, R, Python, SQL Server Analysis Services |
+   | Output | Lower response time | Rules, models, predictions |
+   | Runs on | The live production database | Usually the data warehouse |
+
+   - They meet at one point: mining queries are heavy, so a well-tuned warehouse — partitioned tables, summary tables, the right indexes — is what makes mining practical at all.
 
 7. **(ক) Data Mining and Data Warehousing বলতে কী বোঝায়? এদের মধ্যে সম্পর্ক কী? এদের উপকারিতা কী?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095-1096 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) Data warehousing
+   - A `data warehouse` is a large central store of historical data collected from many different source systems, built for analysis and reporting rather than for daily transactions.
+   - Bill Inmon's four properties: it is `subject-oriented` (organised around sales or customers, not around an application), `integrated` (codes and formats made uniform across sources), `time-variant` (it keeps years of history) and `non-volatile` (data is loaded, then read, never updated by users).
+   - Data reaches it through `ETL` — Extract from the sources, Transform and clean, Load into the warehouse — and is stored denormalized as a `star schema` of one fact table surrounded by dimension tables.
+
+   Data mining
+   - `Data mining` is the process of searching that stored data for patterns, rules and predictions that were not known in advance.
+   - Main techniques: `classification` (will this customer default?), `clustering` (which customer groups exist?), `association rules` (what is bought together?), `regression` (how much will we sell?) and `anomaly detection` (is this transaction fraud?).
+
+   The relationship between them
+   - The warehouse `stores`, the mining `analyses`. One is a place, the other is a process.
+   - Mining needs clean, integrated, historical data covering years and many sources — which is exactly what a warehouse provides. Mining directly on operational databases fails, because the data is scattered, inconsistent and holds only current values.
+   - The warehouse is also what protects the live system: heavy mining queries run on the warehouse, so customer service is never slowed down.
+
+   ```mermaid
+   flowchart LR
+       A[Operational databases] -->|ETL| B[Data warehouse]
+       B --> C[Data mining]
+       C --> D[Knowledge and decisions]
+   ```
+
+   Benefits of data warehousing
+   - One `single version of the truth` — every department reports the same number.
+   - Fast analytical and historical queries, because the design is built for reading and aggregating.
+   - Keeps years of history that operational systems overwrite.
+   - Removes the analysis load from the production database.
+   - Provides the clean base for BI dashboards, OLAP and mining.
+
+   Benefits of data mining
+   - Finds relationships nobody thought to look for.
+   - Predicts future behaviour: default risk, churn, demand.
+   - Detects fraud by spotting transactions that do not fit the usual pattern.
+   - Supports targeted marketing and cross-selling, so campaigns cost less and work better.
+   - Turns stored data, which is a cost, into decisions, which are a return.
+
+   - In short: `the warehouse gives clean historical data, mining turns it into knowledge`. Neither is much use without the other.
+
 8. **What is Data warehouse? Why We Need Data Warehouse? Advantages of Data warehousing.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
+   Answer: A `data warehouse` is a large central store of historical data brought together from many different source systems, built for analysis and reporting rather than for running daily transactions.
+
+   - W. H. Inmon's definition gives its four properties:
+   ```
+   Subject-oriented : organised around a subject (sales, customer, loan),
+                      not around an application
+   Integrated       : codes, units and formats are made uniform across sources
+   Time-variant     : it holds years of history, every record stamped with time
+   Non-volatile     : data is loaded and then read; users never update or delete it
+   ```
+   - Data enters through `ETL` — Extract from the sources, Transform and clean, Load — and is stored denormalized as a `star schema`: one central fact table holding the measures, surrounded by dimension tables holding the descriptions.
+
+   ```mermaid
+   flowchart LR
+       A[Core banking] -->|ETL| D[Data warehouse]
+       B[Card / ATM switch] -->|ETL| D
+       C[CRM, HR] -->|ETL| D
+       D --> E[Data marts]
+       E --> F[OLAP / BI reports]
+   ```
+
+   Why we need a data warehouse
+   - `Data is scattered.` A bank keeps customer data in the core system, card data in the switch and complaints in the CRM. No single query can cross them until they are brought together.
+   - `Operational databases keep only current data.` They overwrite the old balance. Trend analysis needs years of history.
+   - `Analytical queries would kill the live system.` A report that scans ten years of transactions would slow down the ATM network if it ran on production.
+   - `Normalized OLTP design is wrong for analysis.` A report joining fifteen normalized tables is slow; a star schema needs two or three joins.
+   - `Different systems disagree.` Each department reports a different figure until the definitions are conformed in one place — the `single version of the truth`.
+   - `BI, OLAP and data mining need a clean, integrated base` to work on at all.
+
+   Advantages
+   - One consistent set of numbers for the whole organisation.
+   - Fast historical and aggregated queries; a summary that took hours takes seconds.
+   - Keeps long-term history that source systems delete or overwrite.
+   - Removes the reporting load from production databases.
+   - Improves data quality, because errors are found and fixed during ETL.
+   - Supports OLAP operations — roll-up, drill-down, slice and dice — and data mining.
+   - Gives management fast, evidence-based decisions instead of guesswork.
+
+   Limitations to mention
+   - Expensive to build and to maintain, and the ETL work is far larger than people expect.
+   - Data is usually one day old, so it does not replace real-time systems.
+   - It needs continuous care: source systems change, and the ETL must change with them.
+
 9. **Explain data warehouse with figure. Describe fact table and dimension table with example.** *[ICT Ministry Assistant Programmer 2017 compact it 1243-1244 (ET: N/A)]*
+
+   Answer: A `data warehouse` is a central store of historical data collected from many source systems, built for analysis rather than for daily transactions. It is subject-oriented, integrated, time-variant and non-volatile.
+
+   Architecture
+
+   ```mermaid
+   flowchart LR
+       A[Core banking DB] -->|Extract| S[Staging area]
+       B[ATM / card switch] -->|Extract| S
+       C[CRM, Excel, external feeds] -->|Extract| S
+       S -->|Transform: clean, standardise| W[(Data warehouse<br/>star schema)]
+       W --> M1[Sales data mart]
+       W --> M2[Finance data mart]
+       M1 --> R[OLAP / BI dashboard]
+       M2 --> R
+   ```
+
+   ```
+   +-------------+     +---------+     +-------------+     +----------+
+   |   Source    | ETL | Staging | ETL |    Data     |     | OLAP /   |
+   |  systems    |---->|  area   |---->|  warehouse  |---->| reports  |
+   | OLTP, files |     | (clean) |     | (star schema)|    | dashboard|
+   +-------------+     +---------+     +-------------+     +----------+
+                                             |
+                                       +-----------+
+                                       | Data marts|
+                                       +-----------+
+   ```
+   - `Source layer` — the operational databases and files where the data is created.
+   - `Staging area` — a working space where data is cleaned, de-duplicated and standardised. Nothing is reported from here.
+   - `Warehouse layer` — the permanent store, held as a star schema.
+   - `Data marts` — department-sized subsets (sales, finance) for faster access.
+   - `Presentation layer` — OLAP cubes, reports and dashboards.
+
+   Fact table
+   - The central table. It holds the `measures` — the numbers being analysed — plus foreign keys to the dimension tables.
+   - Its primary key is the combination of those foreign keys.
+   - It is `long and thin`: few columns but millions or billions of rows, and it grows every day.
+   - The measures should be `additive`, so they can be summed across any dimension.
+
+   Dimension table
+   - Describes the `context` of a fact: who, what, when, where.
+   - It is `short and wide`: many descriptive columns, relatively few rows, and it changes slowly.
+   - It is deliberately `denormalized` — the whole hierarchy sits in one table — so that a report needs only one join.
+   - The key is a `surrogate key`, a meaningless integer, so that a changed business code does not break history.
+
+   Example — a bank's sales star schema
+   ```
+           Dim_Time                 Dim_Branch
+      +--------------+          +----------------+
+      | time_key PK  |          | branch_key PK  |
+      | date, month  |          | branch_name    |
+      | quarter,year |          | city, zone     |
+      +------+-------+          +--------+-------+
+             |                           |
+             |    +------------------+   |
+             +----|   Fact_Sales     |---+
+                  +------------------+
+                  | time_key    FK   |
+                  | branch_key  FK   |    <- keys
+                  | product_key FK   |
+                  | customer_key FK  |
+                  +------------------+
+                  | quantity_sold    |
+                  | amount           |    <- measures (facts)
+                  | discount         |
+                  +--------+---------+
+             |                           |
+      +------+-------+          +--------+-------+
+      | product_key PK|         | customer_key PK|
+      | product_name  |         | customer_name  |
+      | category      |         | occupation     |
+      +--------------+          +----------------+
+          Dim_Product               Dim_Customer
+   ```
+   - A query such as "total sales of the Savings product in Dhaka zone during Q1 2025" joins the fact table to three dimensions and sums one column.
+
+   | Point | Fact table | Dimension table |
+   |---|---|---|
+   | Holds | Numeric measures | Descriptive attributes |
+   | Size | Millions of rows, few columns | Few rows, many columns |
+   | Key | Composite of foreign keys | Single surrogate key |
+   | Growth | Grows constantly | Changes slowly |
+   | Example columns | amount, quantity, discount | product_name, city, month |
 
 ## Database Backup & Disaster Recovery (8)
 
