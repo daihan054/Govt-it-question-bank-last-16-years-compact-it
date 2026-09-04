@@ -795,15 +795,119 @@ ii. The data were collected and it were analyzed carefully.
 
 1. **Write a letter to the editor of a Newspaper drawing public attention against the ‘Wide spread of corruption’ in every sphere of life.** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer 2024 (ET: N/A)]*
 
+   Answer:
+   15 September 2024
+   The Editor
+   The Daily Star
+   Dhaka, Bangladesh
+
+   Subject: Widespread corruption in public and private spheres.
+
+   Sir,
+   I shall be grateful if you kindly publish the following letter in the columns of your esteemed daily.
+
+   Corruption has permeated almost every sector of our society, crippling administrative efficiency and undermining socioeconomic development. From public procurement and healthcare to education and law enforcement, bribery and nepotism have become pervasive. Ordinary citizens face immense harassment while accessing basic civic services, while honest businesses struggle against corrupt competitors.
+
+   To curb this menace, the Anti-Corruption Commission (ACC) must be granted absolute independence and authority. Stringent enforcement of laws, digital governance through automated public service delivery, and severe punishment for corrupt individuals are urgently needed. We must cultivate zero tolerance against corruption to ensure justice and fair progress.
+
+   Yours faithfully,
+   Tanvir Ahmed
+   Dhanmondi, Dhaka.
+
 2. **Imagine that you have purchased a laptop from a local showroom a week back. The warranty period is on and the laptop is not functioning well. Write a letter of complaint to the manager of the showroom about it. Your letter should contain information about the problem and what you want.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1357 (ET: N/A)]*
+
+   Answer:
+   10 June 2025
+   The Branch Manager
+   Techland Electronics Showroom
+   Multiplan Center, New Elephant Road, Dhaka.
+
+   Subject: Complaint regarding malfunctioning laptop (Invoice No: TL-89421).
+
+   Dear Sir,
+   I am writing to lodge a formal complaint regarding a Dell Inspiron 15 laptop that I purchased from your showroom on 3 June 2025 (Cash Memo & Warranty Card attached).
+
+   Within just four days of regular use, the device began experiencing severe technical issues. The screen repeatedly flickers and freezes during boot-up, and the cooling fan emits an unusually loud grinding noise. Furthermore, the laptop abruptly shuts down after 20 minutes of operation despite a full battery charge.
+
+   Since the laptop is well within its 2-year comprehensive replacement warranty, I request you to inspect the unit and provide an immediate replacement with a brand-new, defect-free device at your earliest convenience.
+
+   Yours sincerely,
+   Farhan Kabir
+   Contact: 01712-XXXXXX
 
 3. **Write a letter to the officer-in-charge of your police station to provide regular police patrol in your locality to prevent crimes.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
 
+   Answer:
+   25 May 2025
+   The Officer-in-Charge
+   Mirpur Police Station, Dhaka.
+
+   Subject: Request for regular police patrolling in Section-10, Mirpur.
+
+   Sir,
+   We, the residents of Block-C, Section-10, Mirpur, would like to draw your urgent attention to the deteriorating law and order situation in our area.
+
+   Over the past few weeks, incidents of mugging, motorcycle theft, and drug peddling have increased alarmingly, especially after dusk. Anti-social elements gather near street corners and harass pedestrians, commuters, and female students returning home in the evening. Residents feel extremely insecure stepping out after nightfall.
+
+   Therefore, we earnestly request you to deploy regular police patrol teams and establish a mobile checkpoint in our locality during evening and night hours to curb criminal activities and restore public safety.
+
+   Yours faithfully,
+   Rafiqul Islam
+   On behalf of the residents of Block-C, Section-10, Mirpur, Dhaka.
+
 4. **Write a Letter to your younger brother about Importance of professional vocational training.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
+
+   Answer:
+   15 March 2024
+   Dhaka, Bangladesh
+
+   Dear Nabil,
+   I hope this letter finds you in good health. I am writing to share some important advice regarding your future career path.
+
+   In today's highly competitive job market, conventional academic degrees alone are often insufficient to secure rewarding employment. This is where professional vocational training becomes invaluable. Vocational courses in areas like software development, networking, web design, or electrical engineering provide practical, industry-oriented skills that employers actively seek. Hands-on expertise makes you job-ready immediately and opens lucrative avenues for freelancing and entrepreneurship.
+
+   I strongly advise you to enroll in a reputed technical training program alongside your regular studies. Practical skills will give you a decisive edge in your career.
+
+   Your loving brother,
+   Imran
 
 5. **(a) Write a letter to your friend condoling the death of his/her mother. Or, (b) Write an application to the Upazila Nirbahi Officer for taking steps to repair damaged road in your locality.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 668 (ET: N/A)]*
 
+   Answer:
+   (a) Letter of condolence:
+   12 August 2022
+   Dhaka, Bangladesh
+
+   Dear Sajjad,
+   I was deeply shocked and saddened to hear about the sudden passing of your beloved mother yesterday. I cannot find adequate words to express the grief I felt upon receiving this heartbreaking news.
+
+   Aunty was a woman of immense kindness, warmth, and grace. Her affectionate hospitality whenever I visited your home will always remain etched in my memory. Losing a mother is an irreparable loss that leaves an irreplaceable void in life.
+
+   Please accept my heartfelt condolences. I pray to the Almighty to grant her eternal peace and provide you and your family the strength to bear this profound sorrow.
+
+   Your loving friend,
+   Mahmud
+
 6. **Write an application to the Mayor of Dhaka south City Corporation (DSCC) to take measures against illegal chemical storages in your locality.** *[Software Assistant Programmer 13.10.2022 compact it 711 (ET: N/A)]*
+
+   Answer:
+   20 October 2022
+   The Honorable Mayor
+   Dhaka South City Corporation (DSCC)
+   Nagar Bhaban, Fulbaria, Dhaka.
+
+   Subject: Application for immediate removal of illegal chemical warehouses in Chawkbazar.
+
+   Sir,
+   We, the inhabitants of Ward No. 30, Chawkbazar, respectfully submit this application regarding the grave hazard posed by illegal chemical warehouses operating in our residential area.
+
+   Despite previous tragic fire disasters, several multi-storey buildings in our neighborhood continue to house flammable and hazardous chemicals on ground floors and basements. These unauthorized godowns operate without fire clearance or safety protocols, turning our dense residential zone into a catastrophic fire trap.
+
+   We earnestly appeal to your kind authority to conduct urgent inspection drives, seal all illegal chemical storage facilities, and relocate them to designated industrial zones immediately to safeguard innocent lives.
+
+   Yours faithfully,
+   Asaduzzaman Khan
+   On behalf of the residents of Chawkbazar, Dhaka.
 
 ## Reading Comprehension (5)
 
