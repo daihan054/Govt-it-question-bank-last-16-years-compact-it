@@ -14001,15 +14001,168 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
+   Answer:
+
+   | Protocol | Full form | Port | Transport | Purpose |
+   |---|---|---|---|---|
+   | SSH | Secure Shell | `22` | TCP | Encrypted remote login and secure file transfer (SCP, SFTP) |
+   | FTP | File Transfer Protocol | `20` (data), `21` (control) | TCP | Transferring files between client and server |
+   | SMTP | Simple Mail Transfer Protocol | `25` (relay), 587 (submission), 465 (implicit TLS) | TCP | Sending and relaying email |
+   | DNS | Domain Name System | `53` | UDP (queries), TCP (zone transfers, large replies) | Translating names to IP addresses |
+   | IMAP | Internet Message Access Protocol | `143`, 993 with SSL | TCP | Retrieving email while keeping it on the server |
+
+   Points to note
+   - FTP uses `two` ports: 21 carries the commands and 20 carries the data in active mode. In passive mode the data port is negotiated dynamically.
+   - SSH replaced Telnet (port 23) because Telnet sends everything, including the password, in plain text.
+   - DNS is the only one of these that normally uses UDP, chosen for speed on a single small query and reply.
+   - IMAP keeps mail on the server and synchronises across devices; POP3 (port 110) downloads and deletes instead.
+   - Secure variants: FTPS 990, SFTP over SSH 22, SMTPS 465, IMAPS 993, POP3S 995, DNS over TLS 853.
+
 2. **What is the port number used by DNS?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)], [BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)], [BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: DNS uses port `53`.
+
+   - `UDP port 53` for ordinary queries and responses. UDP is chosen because a lookup is a single small exchange, and the three-way handshake of TCP would triple the delay for no benefit.
+   - `TCP port 53` in two cases: zone transfers between primary and secondary name servers (AXFR/IXFR), and any response larger than 512 bytes. In the latter case the server sets the TC (truncated) flag and the resolver retries over TCP. DNSSEC and IPv6 records often exceed the limit.
+
+   Encrypted variants
+   - `DoT` — DNS over TLS, TCP port 853.
+   - `DoH` — DNS over HTTPS, TCP port 443.
+   - `DNSCrypt` — port 443 or 5353.
+
+   Related port numbers
+
+   | Service | Port |
+   |---|---|
+   | FTP | 20, 21 |
+   | SSH | 22 |
+   | Telnet | 23 |
+   | SMTP | 25 |
+   | `DNS` | `53` |
+   | DHCP | 67, 68 |
+   | HTTP | 80 |
+   | POP3 | 110 |
+   | IMAP | 143 |
+   | HTTPS | 443 |
 
 3. **HTTPS এর পোর্ট নাম্বার কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) The port number for HTTPS is `443`.
+
+   - HTTPS (HyperText Transfer Protocol Secure) is HTTP carried inside a TLS-encrypted channel, and it runs over `TCP port 443`.
+   - Plain HTTP uses TCP port 80.
+   - The TLS handshake happens first: the server presents a certificate signed by a trusted CA, the two sides agree a symmetric session key, and every HTTP message after that is encrypted.
+   - HTTP/3 also uses port 443, but over UDP rather than TCP, because it runs on QUIC.
+
+   Common port numbers to remember
+
+   | Service | Port |
+   |---|---|
+   | FTP | 20, 21 |
+   | SSH | 22 |
+   | Telnet | 23 |
+   | SMTP | 25 |
+   | DNS | 53 |
+   | DHCP | 67, 68 |
+   | HTTP | 80 |
+   | POP3 | 110 |
+   | IMAP | 143 |
+   | SNMP | 161, 162 |
+   | `HTTPS` | `443` |
+   | RDP | 3389 |
+
 4. **Write the port address of the following applications of data communications. (i) HTTP; (ii) HTTPS; (iii) FTP; (iv) SMTP; (v) POP** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 671 (ET: N/A)]*
+
+   Answer:
+
+   | # | Application | Port | Transport |
+   |---|---|---|---|
+   | i | HTTP | `80` | TCP |
+   | ii | HTTPS | `443` | TCP |
+   | iii | FTP | `20` (data) and `21` (control) | TCP |
+   | iv | SMTP | `25` (relay); 587 submission, 465 implicit TLS | TCP |
+   | v | POP (POP3) | `110`; 995 with SSL | TCP |
+
+   Notes
+   - HTTP transfers web pages in plain text; HTTPS is the same protocol inside a TLS-encrypted channel, which is why it needs a separate port.
+   - FTP is unusual in using two ports: 21 carries the commands and 20 carries the data in active mode.
+   - SMTP sends mail; POP3 and IMAP (143) retrieve it. All three run over TCP because a lost byte would corrupt the message.
+   - Port ranges: 0–1023 are well known, 1024–49151 registered, 49152–65535 dynamic or ephemeral (used as the client's source port).
 
 5. **Describe TCP/IP protocols and its ports.** *[BDCCL Assistant Engineer (Network) 2022 compact it 742 (ET: N/A)]*
 
+   Answer:
+
+   The TCP/IP protocol suite by layer
+
+   Application layer
+
+   | Protocol | Full form | Port | Transport | Function |
+   |---|---|---|---|---|
+   | HTTP | HyperText Transfer Protocol | 80 | TCP | Web pages |
+   | HTTPS | HTTP Secure | 443 | TCP | Encrypted web |
+   | FTP | File Transfer Protocol | 20, 21 | TCP | File transfer |
+   | TFTP | Trivial FTP | 69 | UDP | Simple transfer, device booting |
+   | SSH | Secure Shell | 22 | TCP | Encrypted remote login |
+   | Telnet | — | 23 | TCP | Plain-text remote login |
+   | SMTP | Simple Mail Transfer Protocol | 25, 587 | TCP | Sending email |
+   | POP3 | Post Office Protocol 3 | 110 | TCP | Downloading email |
+   | IMAP | Internet Message Access Protocol | 143 | TCP | Synchronised email |
+   | DNS | Domain Name System | 53 | UDP/TCP | Name resolution |
+   | DHCP | Dynamic Host Configuration Protocol | 67, 68 | UDP | Automatic IP configuration |
+   | SNMP | Simple Network Management Protocol | 161, 162 | UDP | Device monitoring |
+   | NTP | Network Time Protocol | 123 | UDP | Time synchronisation |
+   | LDAP | Lightweight Directory Access Protocol | 389 | TCP | Directory services |
+   | RDP | Remote Desktop Protocol | 3389 | TCP | Graphical remote access |
+
+   Transport layer
+   - `TCP` — connection-oriented, reliable, ordered; three-way handshake, acknowledgements, retransmission, flow control and congestion control. 20-byte header. Used where every byte matters.
+   - `UDP` — connectionless, unreliable, fast; 8-byte header, no handshake. Used where timeliness beats completeness.
+   - Port ranges: 0–1023 well known, 1024–49151 registered, 49152–65535 dynamic/ephemeral.
+
+   Internet layer
+   - `IP` — logical addressing and routing; connectionless and best effort.
+   - `ICMP` — error reporting and diagnostics (ping, traceroute); protocol number 1, no ports.
+   - `IGMP` — multicast group membership.
+   - `ARP` — maps an IP address to a MAC address.
+   - Routing protocols: OSPF (IP protocol 89), RIP (UDP 520), BGP (TCP 179), EIGRP (IP protocol 88).
+
+   Network Access layer
+   - Ethernet (802.3), Wi-Fi (802.11), PPP, Frame Relay — framing, MAC addressing and physical transmission. No port numbers exist at this layer.
+
+   - A socket is the pair `IP address : port number`, and a TCP connection is uniquely identified by the four-tuple of source IP, source port, destination IP and destination port.
+
 6. **A server has port number 1223. A user is requesting the server (www.example.com) but it is showing server is not reached. How can you solve this?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+   Answer: The site is unreachable because the browser is not being told which port to use.
+
+   The cause
+   - A browser assumes the default ports: `80` for http:// and `443` for https://. When the user types `www.example.com`, the browser connects to port 80 (or 443), but the server is listening on `1223`. Nothing is listening on the default port, so the connection is refused and the browser reports that the server cannot be reached.
+
+   Solutions, in order of preference
+
+   - 1. `Specify the port in the URL` — the immediate fix:
+   ```
+   http://www.example.com:1223
+   ```
+   This works at once and proves the diagnosis.
+
+   - 2. `Move the service to the standard port` — configure the web server to listen on 80 or 443. This is the right long-term answer for a public site, since users will not type a port number.
+
+   - 3. `Use port forwarding on the router or firewall` — map incoming traffic on port 80 to internal port 1223:
+   ```
+   external 203.0.113.5:80  ->  internal 192.168.1.10:1223
+   ```
+
+   - 4. `Use a reverse proxy` — Nginx or Apache listens on 80/443 and forwards to 1223 internally. This is the standard production approach, and it also allows TLS termination and multiple sites on one address.
+
+   Other checks if it still fails
+   - Confirm the service is actually listening: `netstat -an | grep 1223` or `ss -tlnp`.
+   - Confirm the firewall allows port 1223 inbound (`ufw allow 1223`, or the Windows Firewall rule).
+   - Confirm DNS resolves the name to the right address: `nslookup www.example.com`.
+   - Test connectivity to the port directly: `telnet www.example.com 1223` or `curl -v http://www.example.com:1223`.
+   - Check that the server is bound to the correct interface — a service bound only to 127.0.0.1 is unreachable from outside even with the right port.
+   - Verify that no other process already holds the port, and that SELinux or similar policy is not blocking it.
 
 ## Pulse Code Modulation (PCM) & Signal Processing (6)
 
