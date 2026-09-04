@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2934** questions.
+Sorted by count, highest first. Total **2962** questions.
 
 ## IT questions
 
-Total: **1676** questions.
+Total: **1680** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **314** |
-| | Networking Fundamentals & Terminology | 69 |
+| **Computer Networks** | **— all subcategories —** | **315** |
+| | Networking Fundamentals & Terminology | 70 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
@@ -38,8 +38,8 @@ Total: **1676** questions.
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **163** |
-| | Hardware Components & Peripherals | 61 |
+| **Computer Fundamentals** | **— all subcategories —** | **165** |
+| | Hardware Components & Peripherals | 63 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -69,12 +69,12 @@ Total: **1676** questions.
 | | Inheritance | 6 |
 | | Constructors & Destructors | 6 |
 | | Exception Handling | 6 |
-| **Data Structure** | **— all subcategories —** | **91** |
+| **Data Structure** | **— all subcategories —** | **92** |
 | | Data Structure Basics | 25 |
 | | Stack & Queue | 23 |
 | | Tree & Binary Search Tree | 20 |
 | | Linked List | 10 |
-| | Data Structures & Algorithms | 8 |
+| | Data Structures & Algorithms | 9 |
 | | Priority Queue & Heap | 3 |
 | | Hashing & Hash Tables | 2 |
 | **Microprocessor & Computer Architecture** | **— all subcategories —** | **85** |
@@ -157,44 +157,44 @@ Total: **1676** questions.
 
 ## General Questions
 
-Total: **1258** questions.
+Total: **1282** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **503** |
+| **General Knowledge** | **— all subcategories —** | **513** |
 | | Bangladesh Affairs | 171 |
-| | Everyday Science | 151 |
-| | International Affairs | 110 |
+| | Everyday Science | 158 |
+| | International Affairs | 113 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
-| **Bangla** | **— all subcategories —** | **300** |
-| | বাংলা ব্যাকরণ | 162 |
+| **Bangla** | **— all subcategories —** | **310** |
+| | বাংলা ব্যাকরণ | 167 |
 | | বাংলা সাহিত্য | 113 |
 | | বাগধারা ও প্রবাদ | 13 |
 | | এক কথায় প্রকাশ | 5 |
 | | কারক ও বিভক্তি | 4 |
-| | সন্ধি ও বিচ্ছেদ | 2 |
+| | সন্ধি ও বিচ্ছেদ | 3 |
+| | সমাস | 2 |
+| | বানান ও শুদ্ধিকরণ | 2 |
 | | বাংলা ভাষা বিষয়ক তথ্য | 1 |
-| | বানান ও শুদ্ধিকরণ | 0 |
-| | সমাস | 0 |
-| **English** | **— all subcategories —** | **283** |
-| | English Grammar | 166 |
+| **English** | **— all subcategories —** | **285** |
+| | English Grammar | 167 |
 | | Vocabulary, Synonyms & Antonyms | 58 |
-| | Idioms & Phrases | 25 |
+| | Idioms & Phrases | 26 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Math** | **— all subcategories —** | **172** |
+| **Math** | **— all subcategories —** | **174** |
 | | Algebra | 45 |
 | | Geometry | 25 |
 | | Percentage, Profit & Loss | 25 |
 | | Arithmetic & Number Series | 16 |
 | | Time, Work & Distance | 11 |
 | | Set Theory | 8 |
-| | Analytical Reasoning | 7 |
+| | Analytical Reasoning | 8 |
+| | Time & Work | 7 |
 | | Average & Age Problems | 6 |
 | | Ratio & Proportion | 6 |
-| | Time & Work | 6 |
 | | Permutation & Combination | 5 |
 | | Trigonometry | 4 |
 | | Probability & Statistics | 4 |

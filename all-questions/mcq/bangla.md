@@ -1,23 +1,23 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 300 questions
+**Table of Contents** — 9 subtopics · 310 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-162) | 162 |
+| 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-167) | 167 |
 | 2 | [বাংলা সাহিত্য](#বাংলা-সাহিত্য-113) | 113 |
 | 3 | [বাগধারা ও প্রবাদ](#বাগধারা-ও-প্রবাদ-13) | 13 |
 | 4 | [এক কথায় প্রকাশ](#এক-কথায়-প্রকাশ-5) | 5 |
 | 5 | [কারক ও বিভক্তি](#কারক-ও-বিভক্তি-4) | 4 |
-| 6 | [সন্ধি ও বিচ্ছেদ](#সন্ধি-ও-বিচ্ছেদ-2) | 2 |
-| 7 | [বাংলা ভাষা বিষয়ক তথ্য](#বাংলা-ভাষা-বিষয়ক-তথ্য-1) | 1 |
-| 8 | [বানান ও শুদ্ধিকরণ](#বানান-ও-শুদ্ধিকরণ-0) | 0 |
-| 9 | [সমাস](#সমাস-0) | 0 |
+| 6 | [সন্ধি ও বিচ্ছেদ](#সন্ধি-ও-বিচ্ছেদ-3) | 3 |
+| 7 | [সমাস](#সমাস-2) | 2 |
+| 8 | [বানান ও শুদ্ধিকরণ](#বানান-ও-শুদ্ধিকরণ-2) | 2 |
+| 9 | [বাংলা ভাষা বিষয়ক তথ্য](#বাংলা-ভাষা-বিষয়ক-তথ্য-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## বাংলা ব্যাকরণ (162)
+## বাংলা ব্যাকরণ (167)
 1. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
    a) কর্মকারকে শূন্য
    b) করণকারকে শূন্য
@@ -134,7 +134,7 @@
    (c) জটিল
    (d) নির্দেশক
 
-21. **'শম' শব্দের অর্থ কি?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*
+21. **'শম' শব্দের অর্থ কি?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*, *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*
    (a) সমীরন
    (b) শব
    (c) শান্তি
@@ -985,6 +985,36 @@
 
 162. **c) একটি Array তে সংখ্যক n পুর্নসংখ্যা রয়েছে, সেখান থেকে সর্বোচ্চবার রয়েছে এমন সংখ্যা বের করার জন্য পছন্দমত ভাষায় কোড লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450-451]]*
 
+163. **নিচের কোনটি বাগযন্ত্রের সাহায্যে উচ্চারিত হয়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*
+   (a) শব্দ
+   (b) বর্ণ
+   (c) ধ্বনি
+   (d) ভাষা
+
+164. **Which of the following is the opposite of the word INGENIOUS? [ INGENIOUS শব্দটির বিপরীত অর্থ কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*
+   (a) Crafty
+   (b) Inane
+   (c) Incompetent
+   (d) Skillful
+
+165. **The synonym of ENIGMA is— [ ENIGMA শব্দটির সমার্থক শব্দ কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*
+   (a) Obstruction
+   (b) Nonsense
+   (c) Flaw
+   (d) Puzzle
+
+166. **Pick appropriate word and complete the sentence: [ উপযুক্ত শব্দ বেছে নিয়ে বাক্যটি সম্পূর্ণ করো— ] ‘We asked him why he telephoned earlier.’** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*
+   (a) did not
+   (b) has not
+   (c) had not
+   (d) would not
+
+167. **Fill in the blank with right option: [ শূন্যস্থানে সঠিক শব্দ বসাও— ] ‘I am looking forward ___ you.’** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*
+   (a) to seeing
+   (b) seeing
+   (c) to see
+   (d) to have seen
+
 ## বাংলা সাহিত্য (113)
 1. **মীর মশাররফ হোসেনের “বিষাদ সিন্ধু” একটি-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
    ক. কাব্যগ্রন্থ
@@ -1052,7 +1082,7 @@
    (c) কর্মবাস
    (d) জসিমউদ্দীন
 
-12. **কোন পত্রিকাটি কাজী নজরুল ইসলাম কর্তৃক সম্পাদিত?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*
+12. **কোন পত্রিকাটি কাজী নজরুল ইসলাম কর্তৃক সম্পাদিত?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*, *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*
    (a) সবুজপত্র
    (b) বিজলী
    (c) কল্লোল
@@ -1776,7 +1806,7 @@
    গ. করণে ৬ষ্ঠী
    ঘ. সম্প্রদানে ৬ষ্ঠী
 
-## সন্ধি ও বিচ্ছেদ (2)
+## সন্ধি ও বিচ্ছেদ (3)
 1. **'মাথাঘষা' শব্দটির সঠিক সন্ধি-বিচ্ছেদ কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
    ক. মাথা+আয়
    খ মাথা+য়
@@ -1789,6 +1819,38 @@
    (c) সন্ধি দ্বারা
    (d) বিভক্তি দ্বারা
 
+3. **'গীতাঞ্জলি' কোন সন্ধির উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*
+   (a) সংস্কৃত স্বরসন্ধি
+   (b) সংস্কৃত ব্যঞ্জনসন্ধি
+   (c) সংস্কৃত বিসর্গ সন্ধি
+   (d) কোনটিই নয়
+
+## সমাস (2)
+1. **'সপ্তাহ' কোন সমাস?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
+   ক. দ্বন্দ্ব
+   খ. তৎপুরুষ
+   গ. কর্মধারয়
+   ঘ. দ্বিগু
+
+2. **তৎপুরুষ সমাসের উদাহরণ কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*
+   (a) বি-ভাত
+   (b) গমনাগমন
+   (c) তেমাথা
+   (d) জীবনানন্দ
+
+## বানান ও শুদ্ধিকরণ (2)
+1. **নিচের কোন বানানটি শুদ্ধ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. মুমুর্ষু
+   খ মুমূর্ষ
+   গ. মুমূর্ষু
+   ঘ মুমুষর্
+
+2. **Identify the word with correct spelling from the following options. [ নিচের কোন শব্দটির বানান সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*
+   (a) Counterfiet
+   (b) Counterfiet
+   (c) Counterfite
+   (d) Counterfeit
+
 ## বাংলা ভাষা বিষয়ক তথ্য (1)
 
 1. **ভাষাভাষী জনসংখ্যার দিক দিয়ে বাংলা ভাষার অবস্থান-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*
@@ -1796,17 +1858,3 @@
    খ. ৬ষ্ঠ
    গ. ৭ম
    ঘ. ৮ম
-
-## বানান ও শুদ্ধিকরণ (0)
-**নিচের কোন বানানটি শুদ্ধ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
-   ক. মুমুর্ষু
-   খ মুমূর্ষ
-   গ. মুমূর্ষু
-   ঘ মুমুষর্
-
-## সমাস (0)
-**'সপ্তাহ' কোন সমাস?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
-   ক. দ্বন্দ্ব
-   খ. তৎপুরুষ
-   গ. কর্মধারয়
-   ঘ. দ্বিগু

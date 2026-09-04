@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 503 questions
+**Table of Contents** — 6 subtopics · 513 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
-| 2 | [Everyday Science](#everyday-science-151) | 151 |
-| 3 | [International Affairs](#international-affairs-110) | 110 |
+| 2 | [Everyday Science](#everyday-science-158) | 158 |
+| 3 | [International Affairs](#international-affairs-113) | 113 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -987,7 +987,7 @@
    C. রোবটি
    D. জেনেটিক্স
 
-## Everyday Science (151)
+## Everyday Science (158)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -1993,7 +1993,45 @@ int main() \{
 
 151. **Cache মেমোরি কি? Cache মেমোরি কম্পিউটারের কোন অংশে আছে? Cache মেমোরি ছোটো হলে অসুবিধা কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
 
-## International Affairs (110)
+152. **নিম্নে অঙ্কিত 4x1 Multiplexer এর আউটপুট লিখুন।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 477]]*
+
+153. **'কথাটা অপূর্ব ঠিক বিশ্বাস করিতে পারিল না'-এটি কোন বাচ্যের উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*
+   (a) ভাববাচ্য
+   (b) কর্তৃবাচ্য
+   (c) কর্মবাচ্য
+   (d) কর্মকর্তৃবাচ্য
+
+154. **কোন কবিকে 'নির্জনতার কবি' বলা হয়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*
+   (a) বুদ্ধদেব বসু
+   (b) বিভূতিভূষণ
+   (c) কর্মবাস
+   (d) জসিমউদ্দীন
+
+155. **নিচের কোনটি শুদ্ধ বাক্য?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*
+   (a) ইহার আবশ্যকতা নাই
+   (b) ইহা প্রমাণ হইয়াছে
+   (c) আমি সন্তোষ হইলাম
+   (d) তুমি নির্দোষীন
+
+156. **Which underlined part of the following sentence is incorrect? [ নিচের বাক্যটির কোন আন্ডারলাইন করা অংশটি ভুল? ] “I will always remember you standing by me and offering me encouragement.”** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*
+   (a) I will
+   (b) always
+   (c) remember
+   (d) standing
+
+157. **If \\frac\{x\}\{y\} = \\frac\{1\}\{3\}, then the value of \\frac\{x^2+y^2\}\{x^2-y^2\} is—?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*
+   (a) -10/9
+   (b) 5/4
+   (c) -5/4
+   (d) -5/3
+
+158. **The total number obtained by a student in Physics, Chemistry and Mathematics together is 120 more than the marks obtained by him in Chemistry. What is the average mark obtained by him in Physics and Mathematics together? [ একজন ছাত্র পদার্থবিদ্যা (Physics), রসায়ন (Chemistry) এবং গণিত (Mathematics)—এই তিন বিষয়ের মোট প্রাপ্ত নম্বর রসায়নের প্রাপ্ত নম্বরের চেয়ে ১২০ বেশি। তাহলে পদার্থবিদ্যা ও গণিত—এই দুই বিষয়ের গড় নম্বর কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*
+   (a) 40
+   (b) 60
+   (c) 120
+   (d) Cannot be determined
+
+## International Affairs (113)
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) David Baker
    (b) John Jumper
@@ -2731,6 +2769,25 @@ int main() \{
    খ) ২
    গ) ৩
    ঘ) ৫
+
+111. **সাধারণ জ্ঞানঃ** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*
+   i. ওজোন দিবস কত তারিখ?
+   ii. বিশ্ব সাক্ষরতা দিবস কত তারিখ?
+   iii. জার্মানির বর্তমান চ্যান্সেলর এর নাম কি?
+   iv. বাংলাদেশকে স্বীকৃতিদানকারী প্রথম আফ্রিকান দেশ কোনটি?
+   v. সর্বশেষ জনশুমারী অনুযায়ী বাংলাদেশের সাক্ষরতার হার কত?
+
+112. **'আবাদ' শব্দটি কোন ধরনের শব্দ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*
+   (a) দেশী
+   (b) বিদেশী
+   (c) তৎসম
+   (d) তদ্ভব
+
+113. **"বিবাহ করিতে আসিয়াছি বিবাহ করিয়া যাইব" কোন বাক্যের উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*
+   (a) যৌগিক
+   (b) সরল
+   (c) জটিল
+   (d) নির্দেশক
 
 ## Geography & Environment (26)
 

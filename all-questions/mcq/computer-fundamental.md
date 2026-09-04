@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 163 questions
+**Table of Contents** — 6 subtopics · 165 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-61) | 61 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-63) | 63 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (61)
+## Hardware Components & Peripherals (63)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -372,6 +372,14 @@ int main ()\{
 60. **c) CPU Scheduling কি? ২টি CPU Scheduling algorithm এর নাম লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
 
 61. **c) তিনটি Optical Storage এর নাম লিখুন** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+
+62. **Read the passage and answer the following questions.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 482]]*
+
+63. **Select the correct sentence from the following options. [ নিচের কোন বাক্যটি ব্যাকরণগতভাবে সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*
+   (a) The man was tall who stole my bag
+   (b) The man stole my bag who was tall
+   (c) The man who stole my bag was tall
+   (d) The man was tall who is stealing my bag
 
 ## Software Types & Classification (40)
 

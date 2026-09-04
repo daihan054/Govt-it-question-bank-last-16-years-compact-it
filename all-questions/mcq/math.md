@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 172 questions
+**Table of Contents** — 15 subtopics · 174 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,10 +9,10 @@
 | 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
 | 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
 | 6 | [Set Theory](#set-theory-8) | 8 |
-| 7 | [Analytical Reasoning](#analytical-reasoning-7) | 7 |
-| 8 | [Average & Age Problems](#average--age-problems-6) | 6 |
-| 9 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
-| 10 | [Time & Work](#time--work-6) | 6 |
+| 7 | [Analytical Reasoning](#analytical-reasoning-8) | 8 |
+| 8 | [Time & Work](#time--work-7) | 7 |
+| 9 | [Average & Age Problems](#average--age-problems-6) | 6 |
+| 10 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
 | 11 | [Permutation & Combination](#permutation--combination-5) | 5 |
 | 12 | [Trigonometry](#trigonometry-4) | 4 |
 | 13 | [Probability & Statistics](#probability--statistics-4) | 4 |
@@ -815,7 +815,7 @@
    C) difference
    D) complement
 
-## Analytical Reasoning (7)
+## Analytical Reasoning (8)
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) 4.24 meters
    (b) 5.24 meters
@@ -889,6 +889,56 @@
    খ. তামা
    গ. কার্বন ডাই-অক্সাইড
    ঘ. নাইট্রোজেন
+
+8. **Which of the following resembles OATH: PROMISE? [ নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*
+   (a) Contract : Agreement
+   (b) Deed : Attorney
+   (c) Title : Estate
+   (d) Job : Loyalty
+
+## Time & Work (7)
+1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ৪ দিন
+   খ. ৫ দিন
+   গ. ৬ দিন
+   ঘ. ৭ দিন
+
+**পাইপ A একটি ট্যাঙ্ক ২০ মিনিটে ভর্তি করতে পারে, পাইপ B ৩০ মিনিটে ভর্তি করতে পারে এবং পাইপ C সেই ট্যাঙ্কটি ৪০ মিনিটে খালি করতে পারে। যদি এই তিনটি পাইপ একসাথে চালু করা হয়, তাহলে ট্যাঙ্কটি ভর্তি হতে কত সময় লাগবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ১৭.১৪ মিনিট
+   খ. ২০ মিনিট
+   গ. ৮ মিনিট
+   ঘ. কোনোটিই নয়
+
+2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Switch
+   (b) Hub
+   (c) Router
+   (d) Modem
+
+3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
+   (a) 45
+   (b) 90
+   (c) 63
+   (d) 126
+
+4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
+   (A) Print screen
+   (B) File open
+   (C) Help
+   (D) Save
+
+5. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
+   ক) ফজলুর রহমান
+   খ) ইউসুফ আলী
+   গ) তাজউদ্দিন আহমেদ
+   ঘ) মনসুর আলী
+
+6. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+7. **Math: 15 marks** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*
+   i. যদি x^a = y^b = z^c এবং xyz = 1 হয় তবে ab + bc + ca এর মান নির্ণয় করুন।
+   ii. একটি বৃত্তের ব্যাসার্ধ ২ সেমি ঐ বৃত্তের অন্তস্থ বর্গের ক্ষেত্রফল কত?
+   iii. কোন একটি গ্রামের জনসংখ্যার ৯০% পুরুষ ৫০% যদি ৩০% পুরুষ বিবাহিত তাহলে ঐ গ্রামের মোট জনসংখ্যার কত ভাগ মহিলা অবিবাহিত।
 
 ## Average & Age Problems (6)
 
@@ -966,45 +1016,6 @@
    b. 80
    c. 91
    d. 114
-
-## Time & Work (6)
-1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. ৪ দিন
-   খ. ৫ দিন
-   গ. ৬ দিন
-   ঘ. ৭ দিন
-
-**পাইপ A একটি ট্যাঙ্ক ২০ মিনিটে ভর্তি করতে পারে, পাইপ B ৩০ মিনিটে ভর্তি করতে পারে এবং পাইপ C সেই ট্যাঙ্কটি ৪০ মিনিটে খালি করতে পারে। যদি এই তিনটি পাইপ একসাথে চালু করা হয়, তাহলে ট্যাঙ্কটি ভর্তি হতে কত সময় লাগবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ১৭.১৪ মিনিট
-   খ. ২০ মিনিট
-   গ. ৮ মিনিট
-   ঘ. কোনোটিই নয়
-
-2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
-   (a) Switch
-   (b) Hub
-   (c) Router
-   (d) Modem
-
-3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
-   (a) 45
-   (b) 90
-   (c) 63
-   (d) 126
-
-4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
-   (A) Print screen
-   (B) File open
-   (C) Help
-   (D) Save
-
-5. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
-   ক) ফজলুর রহমান
-   খ) ইউসুফ আলী
-   গ) তাজউদ্দিন আহমেদ
-   ঘ) মনসুর আলী
-
-6. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
 
 ## Permutation & Combination (5)
 

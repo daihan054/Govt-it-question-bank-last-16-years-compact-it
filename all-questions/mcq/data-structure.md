@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 91 questions
+**Table of Contents** — 7 subtopics · 92 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,7 +7,7 @@
 | 2 | [Stack & Queue](#stack--queue-23) | 23 |
 | 3 | [Tree & Binary Search Tree](#tree--binary-search-tree-20) | 20 |
 | 4 | [Linked List](#linked-list-10) | 10 |
-| 5 | [Data Structures & Algorithms](#data-structures--algorithms-8) | 8 |
+| 5 | [Data Structures & Algorithms](#data-structures--algorithms-9) | 9 |
 | 6 | [Priority Queue & Heap](#priority-queue--heap-3) | 3 |
 | 7 | [Hashing & Hash Tables](#hashing--hash-tables-2) | 2 |
 
@@ -499,7 +499,7 @@
    C) O(\log n)
    D) O(n \log n)
 
-## Data Structures & Algorithms (8)
+## Data Structures & Algorithms (9)
 1. **When sorting an array using randomized quicksort (pivot chosen randomly), what are the average-case and worst-case time complexities? [ যখন একটি অ্যারে randomized quicksort ব্যবহার করে sort করা হয় (pivot র‍্যান্ডমভাবে নির্বাচন করা হয়), তখন এর average-case এবং worst-case time complexity কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
    (a) O(n \\log n), O(n)
    (b) O(n \\log n), O(n^2)
@@ -531,6 +531,8 @@
 7. **a) একটি Stack এ 1, 2, 2, 3, 3, 3 push করা হলো। এরপর পর পর দুইবার pop করা হলো। এর পর আবারো pop করা হলে কোন সংখ্যা বের হবে।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
 
 8. **b) মনে কর একটি Sorted array রয়েছে। সেখান থেকে একটি সংখ্যা খুঁজে বের করতে হবে যা minimum সময় নিবে তখন তুমি কোন সার্চিং Algorithm ব্যবহার করবে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+
+9. **BIDS published many Monographs every year. Now write an algorithm to sort them.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 485]]*
 
 ## Priority Queue & Heap (3)
 

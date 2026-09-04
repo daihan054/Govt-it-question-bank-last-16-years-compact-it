@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 314 questions
+**Table of Contents** — 13 subtopics · 315 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-69) | 69 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-70) | 70 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (69)
+## Networking Fundamentals & Terminology (70)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -448,6 +448,12 @@
    (iii) Broadcast address of the IP address
    9. 1.5.31 and default subnet mask
    250. 0.0.0
+
+70. **On a 2 km road, a total of 201 trees are planted on the side of the road at equal distances. How many such trees will be planted on a 50 km road such that the distance between two consecutive trees is the same as that of the consecutive trees on the 2 km road. [ একটি ২ কিমি রাস্তার পাশে সমান দূরত্বে মোট ২০১টি গাছ লাগানো হয়েছে। যদি ৫০ কিমি রাস্তার পাশে একই ধরণের গাছ লাগানো হয়, যেখানে দুটি গাছের মধ্যে দূরত্ব একই থাকে, কতটি গাছ লাগানো হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*
+   (a) 501
+   (b) 1000
+   (c) 5000
+   (d) 5001
 
 ## Application Layer Protocols (58)
 

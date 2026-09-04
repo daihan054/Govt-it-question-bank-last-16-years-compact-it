@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 283 questions
+**Table of Contents** — 5 subtopics · 285 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [English Grammar](#english-grammar-166) | 166 |
+| 1 | [English Grammar](#english-grammar-167) | 167 |
 | 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-58) | 58 |
-| 3 | [Idioms & Phrases](#idioms--phrases-25) | 25 |
+| 3 | [Idioms & Phrases](#idioms--phrases-26) | 26 |
 | 4 | [English Literature](#english-literature-17) | 17 |
 | 5 | [Spelling](#spelling-17) | 17 |
 
@@ -13,7 +13,7 @@
 
 ---
 
-## English Grammar (166)
+## English Grammar (167)
 1. **Fill in the blank: The scientist looked _____ the microscope.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **The concert was cancelled _____ the heavy rain.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
@@ -1016,6 +1016,12 @@
    (c) Rapid Access Machine
    (d) Read Active Memory
 
+167. **Pick appropriate preposition and complete: [ উপযুক্ত preposition বসিয়ে বাক্যটি সম্পূর্ণ করো— ] ‘The man is absorbed ___ meditation.’** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*
+   (a) in
+   (b) on
+   (c) by
+   (d) for
+
 ## Vocabulary, Synonyms & Antonyms (58)
 1. **What is the antonym of 'famous '?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*
    ক. Opeque
@@ -1360,7 +1366,7 @@
    (b) In the face of
    (c) Barking on
 
-## Idioms & Phrases (25)
+## Idioms & Phrases (26)
 1. **'Cut and dry' means:** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*
    ক. Humorous
    খ. Fixed
@@ -1501,6 +1507,12 @@
    a) Black Ship
    b) Ins and Outs
    c) Fresh Blood
+
+26. **The phrase ‘Prima facie’ means— [ ‘Prima facie’ বাক্যাংশটির অর্থ কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*
+   (a) Primal face
+   (b) At first sight
+   (c) Main facilities
+   (d) Primitive man
 
 ## English Literature (17)
 
