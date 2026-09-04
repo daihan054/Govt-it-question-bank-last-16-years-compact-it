@@ -12699,7 +12699,165 @@
 
 1. **Write down the advantages and disadvantages of Open source software with example.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 549 (ET: BIBM)]*
 
+   Answer: What open source software is
+   - `Open source software` is software whose `source code is publicly available`, and which anyone may use, read, modify and redistribute under the terms of its licence.
+   ```
+      EXAMPLES
+        Operating system : Linux (Ubuntu , CentOS , Debian)
+        Database         : MySQL , PostgreSQL , MongoDB
+        Web server       : Apache , Nginx
+        Browser          : Firefox , Chromium
+        Programming      : Python , PHP , OpenJDK , GCC
+        Office           : LibreOffice , OpenOffice
+        Other            : WordPress , Git , Docker , Kubernetes ,
+                           VLC , GIMP , Blender
+   ```
+
+   Advantages
+
+   1. No licence cost
+   - The software is free to acquire, which matters most where budgets are tight. A bank running `Linux` and `PostgreSQL` on a hundred servers avoids a very large licence bill.
+
+   2. Freedom to modify
+   - The source is available, so the software can be adapted to a specific need. This is what makes `open source modification` a genuine third option beside buy and build.
+
+   3. No vendor lock-in
+   - The organisation is not dependent on one supplier's pricing, roadmap or survival. If a vendor's support becomes unacceptable, another can be engaged, or the work brought in-house.
+
+   4. Security through transparency
+   - Anyone can inspect the code, so vulnerabilities and back doors are more likely to be found. `Linus's law` — "given enough eyeballs, all bugs are shallow" — is the argument; it holds for widely used projects.
+
+   5. Quality and reliability of major projects
+   - `Linux`, `Apache`, `PostgreSQL` and `Git` run a large part of the world's infrastructure and are examined by thousands of developers.
+
+   6. Community support
+   - Very large communities, extensive documentation, forums and mailing lists. Answers are often faster than a commercial support queue.
+
+   7. Fast fixes and rapid innovation
+   - A serious defect in a major project is often patched within hours, because anyone can submit the fix — no waiting for a vendor's release cycle.
+
+   8. Standards compliance and interoperability
+   - Open source projects generally follow open standards and open file formats, so data is not trapped in a proprietary format.
+
+   9. Learning value
+   - Students and developers can read production-quality code — impossible with closed software.
+
+   Disadvantages
+
+   1. No guaranteed support
+   - There is no vendor obliged to answer. Community help is voluntary and may not arrive. For a critical system this is the decisive objection — mitigated by buying `commercial support` from Red Hat, Canonical or EnterpriseDB, which is the usual answer.
+
+   2. No single accountability
+   - If the software causes a loss, there is nobody to hold liable. Most open source licences disclaim all warranty explicitly.
+
+   3. Hidden total cost
+   - "Free" refers to the licence only. Integration, customisation, training, in-house expertise and support all cost money, and the `total cost of ownership` may exceed a commercial product's.
+
+   4. Requires in-house skill
+   - Modifying or even tuning open source software needs capable staff. An organisation without them cannot realise the advantages.
+
+   5. Usability and documentation are often weaker
+   - Developer-facing projects are frequently better engineered than they are documented, and interfaces can be unpolished compared with commercial equivalents.
+
+   6. Compatibility and hardware support
+   - Some commercial hardware and specialised software lacks Linux drivers or support. Interoperability with proprietary formats is imperfect.
+
+   7. Licence obligations — the risk that is most often overlooked
+   ```
+      GPL is COPYLEFT : if you distribute software containing GPL
+      code, you must release YOUR SOURCE CODE under the GPL too.
+
+      A company that builds a commercial product on GPL code and
+      distributes it may be legally required to publish its own
+      source. This has ended products.
+
+      PERMISSIVE licences - MIT , Apache , BSD - do NOT impose this,
+      and are safe for commercial use.
+
+      LICENCE COMPATIBILITY between several open source components
+      in one product must be checked before, not after, building.
+   ```
+
+   8. Abandonment risk
+   - A small project may lose its maintainers and stop receiving security updates, leaving the user to maintain it or migrate away.
+
+   9. Fragmentation
+   - Many competing distributions and forks make choosing and standardising harder.
+
+   - The practical conclusion: open source is the right choice for `infrastructure` — operating systems, databases, web servers, development tools — where the projects are mature, the communities large and commercial support available. It is riskier for a `small, single-maintainer` project on which a critical system would depend, and the `licence terms must be read before adoption`, not after.
+
 2. **Open source এবং Proprietary Software -এর মধ্যে পার্থক্য লিখুন। একটি Open source এবং একটি Proprietary Operating system এর উদাহরণ দিন।** *[41th BCS 2021 compact it 881-882 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) Difference between open source and proprietary software
+
+   | Point | Open source software | Proprietary software |
+   |---|---|---|
+   | Source code | `Publicly available` | `Secret` — closed |
+   | Cost | Usually `free` to acquire | `Paid` licence |
+   | Right to modify | `Yes` | `No` — prohibited by licence |
+   | Redistribution | `Allowed` under the licence | Prohibited |
+   | Developed by | A `community`, or a company plus community | A single `company` |
+   | Support | Community; commercial support optional | `Vendor` support, under contract |
+   | Accountability | `None` — no warranty | The `vendor` is liable |
+   | Update speed | Often very fast | On the vendor's release cycle |
+   | Vendor lock-in | `No` | `Yes` |
+   | Security model | Transparency — many reviewers | `Security through obscurity`, plus a paid audit |
+   | Customisation | `Unlimited` | Only what the vendor allows |
+   | Standards | Usually `open` formats | Often proprietary formats |
+   | Examples | Linux, MySQL, Apache, Firefox, Python | Windows, Oracle, MS Office, Photoshop |
+
+   Operating system examples
+   ```
+      OPEN SOURCE OPERATING SYSTEM :  LINUX
+           e.g. Ubuntu , Debian , CentOS , Fedora , Red Hat
+           Source freely available under the GPL. Free to use, and
+           modifiable. Also : FreeBSD , OpenBSD , and Android's
+           AOSP base.
+
+      PROPRIETARY OPERATING SYSTEM :  MICROSOFT WINDOWS
+           e.g. Windows 10 , Windows 11 , Windows Server
+           Source is closed ; a paid licence is required ; the user
+           may not modify or redistribute it. Also : macOS , iOS.
+   ```
+
+   The licence types
+   ```
+      OPEN SOURCE
+        COPYLEFT     GPL , AGPL - if you distribute software
+             containing this code, YOUR source must also be released
+             under the same licence. This obligation has ended
+             commercial products, and must be checked BEFORE
+             adoption.
+        PERMISSIVE   MIT , Apache 2.0 , BSD - use it in a commercial
+             closed product freely, with attribution. SAFE for
+             commercial use.
+
+      PROPRIETARY
+        EULA         per user , per device , per core , or
+             subscription. Reverse engineering is normally
+             forbidden.
+        FREEWARE     free to use but source is CLOSED - not open
+             source. Skype and Adobe Reader are freeware, not open
+             source.
+   ```
+   - The distinction that is most often confused: `free` and `open source` are not the same. `Freeware` costs nothing but keeps its source closed. Open source is about the `freedom to read and modify the code`, not about the price — which is why the phrase is "free as in speech, not free as in beer".
+
+   Which to choose
+   ```
+      OPEN SOURCE suits :
+           infrastructure - OS , database , web server , dev tools
+           where in-house skill exists
+           where vendor lock-in must be avoided
+           where the budget is limited
+
+      PROPRIETARY suits :
+           where a GUARANTEED SLA and legal liability are required
+           specialised industry software with no open equivalent
+           where the organisation lacks the in-house skill
+           where a regulator or an auditor requires a supported,
+                certified product
+   ```
+   - The pragmatic answer used in practice is a `mixture`: Linux and PostgreSQL for the infrastructure, with `commercial support` purchased from Red Hat or a similar vendor, alongside proprietary products where no adequate open alternative exists. That combination gives the cost and freedom of open source together with the accountability of a support contract.
 
 ## CI/CD & DevOps Methodologies (1)
 
