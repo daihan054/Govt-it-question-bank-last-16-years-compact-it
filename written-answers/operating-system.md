@@ -149,6 +149,85 @@
 
 3. **Linux command:** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1361 (ET: BUET)], [GTCL Assistant Engineer (CSE) 2022 compact it 685 (ET: BUET)], [PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
 
+   Answer: The question is `incomplete` — the paper printed only the heading "Linux command:" and the list of specific commands asked for was not captured. The commands that appear most often in this paper are given below, so the answer is usable whichever sub-questions were intended.
+
+   File and directory commands
+   ```bash
+      ls -la                  # list all files with details, including hidden
+      pwd                     # print the current working directory
+      cd /path                # change directory ; cd .. up , cd ~ home
+      mkdir -p a/b/c          # create a directory, with parents
+      rmdir folder            # remove an EMPTY directory
+      rm file                 # remove a file
+      rm -r folder            # remove a directory and its contents
+      cp file dest            # copy ; cp -r for a directory
+      mv old new              # move, or RENAME
+      touch file              # create an empty file
+      find / -name "*.txt"    # search for files by name
+   ```
+
+   Viewing and searching file contents
+   ```bash
+      cat file                # display the whole file
+      head -10 file           # first 10 lines
+      tail -10 file           # last 10 lines
+      tail -f logfile         # follow a log as it grows
+      less file               # page through a file
+      grep -n "text" file     # search for a string, with line numbers
+      grep -r "text" /path    # search recursively
+      wc -l file              # count lines ; -w words , -c bytes
+      sed -n '10,20p' file    # print lines 10 to 20
+   ```
+
+   Permission and ownership
+   ```bash
+      chmod 755 file          # set permissions (r=4 , w=2 , x=1)
+      chmod u+x file          # symbolic form
+      chown user:group file   # change owner and group
+      ls -l file              # view the current permissions
+   ```
+
+   Process and system information
+   ```bash
+      ps aux                  # every running process
+      top                     # live CPU, memory and process view
+      kill -9 PID             # terminate a process
+      df -h                   # disk space of all filesystems
+      du -sh folder           # size of a folder
+      free -h                 # RAM and swap
+      uname -a                # kernel and system information
+      uptime                  # how long the system has been up
+   ```
+
+   Network commands
+   ```bash
+      ip addr show            # IP addresses  (older: ifconfig)
+      ping -c 4 host          # test connectivity
+      traceroute host         # the path packets take
+      netstat -tuln           # listening ports  (modern: ss -tuln)
+      ssh user@host           # secure remote login
+      scp file user@host:/dir # copy a file over SSH
+      wget URL                # download a file
+   ```
+
+   User management
+   ```bash
+      sudo useradd -m user    # create a user with a home directory
+      sudo passwd user        # set the password
+      sudo usermod -aG grp u  # add the user to a group
+      whoami , id , groups    # who am I, and what groups am I in
+   ```
+
+   Archiving and packages
+   ```bash
+      tar -czvf a.tar.gz dir  # create a compressed archive
+      tar -xzvf a.tar.gz      # extract it
+      sudo apt install pkg    # Debian and Ubuntu
+      sudo yum install pkg    # RHEL and CentOS
+   ```
+
+   - The permission arithmetic, which almost every version of this question needs: `r = 4, w = 2, x = 1`, so `rwx = 7`, `r-x = 5` and `r-- = 4`, giving the familiar `755` and `644`.
+
 4. **Write Linux command:** *[BCIC Assistant Programmer 14.02.2025 compact it 1324 (ET: BUET)]*
    * **(a) Displays real-time system statistics, including CPU usage, memory usage, running processes, and system load.**
    * **(b) Searches for a specified pattern in a file or output.**
@@ -2973,6 +3052,128 @@
     | v. Full permission to everyone | `chmod 777 DPDC2.txt` |
 
 42. **A bash shell script using for loop to give output of given pattern:** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035 (ET: BUET)]*
+
+    Answer: The question is `incomplete` — the pattern the script should produce was printed as a figure and is not present in the text. The three patterns that appear in such papers are given below, each with a `for` loop, so the method covers whichever was intended.
+
+    Pattern 1 — increasing right triangle
+    ```
+       *
+       * *
+       * * *
+       * * * *
+       * * * * *
+    ```
+    ```bash
+    #!/bin/bash
+
+    read -p "Enter number of rows: " n
+
+    for (( i=1; i<=n; i++ ))
+    do
+        for (( j=1; j<=i; j++ ))
+        do
+            echo -n "* "
+        done
+        echo                       # newline at the end of each row
+    done
+    ```
+    ```
+       The OUTER loop controls the ROWS.
+       The INNER loop controls how many stars are printed in that row.
+       echo -n suppresses the newline, so stars stay on one line.
+    ```
+
+    Pattern 2 — decreasing (inverted) triangle
+    ```
+       * * * * *
+       * * * *
+       * * *
+       * *
+       *
+    ```
+    ```bash
+    #!/bin/bash
+
+    n=5
+    for (( i=n; i>=1; i-- ))
+    do
+        for (( j=1; j<=i; j++ ))
+        do
+            echo -n "* "
+        done
+        echo
+    done
+    ```
+
+    Pattern 3 — number pyramid
+    ```
+       1
+       1 2
+       1 2 3
+       1 2 3 4
+       1 2 3 4 5
+    ```
+    ```bash
+    #!/bin/bash
+
+    n=5
+    for (( i=1; i<=n; i++ ))
+    do
+        for (( j=1; j<=i; j++ ))
+        do
+            echo -n "$j "
+        done
+        echo
+    done
+    ```
+
+    Pattern 4 — a centred pyramid, if spaces are required
+    ```
+           *
+          * *
+         * * *
+        * * * *
+       * * * * *
+    ```
+    ```bash
+    #!/bin/bash
+
+    n=5
+    for (( i=1; i<=n; i++ ))
+    do
+        for (( s=n; s>i; s-- )); do echo -n " "; done      # leading spaces
+        for (( j=1; j<=i; j++ )); do echo -n "* "; done    # the stars
+        echo
+    done
+    ```
+
+    Running the script
+    ```bash
+       chmod +x pattern.sh          # make it executable
+       ./pattern.sh                 # run it
+       bash pattern.sh              # or run it through bash directly
+    ```
+
+    The two `for` loop forms in bash
+    ```bash
+       # C-style, best for counting
+       for (( i=1; i<=5; i++ )); do echo $i; done
+
+       # list form, best for iterating over items
+       for i in 1 2 3 4 5;    do echo $i; done
+       for i in {1..5};       do echo $i; done
+       for f in *.txt;        do echo "$f"; done
+       for i in $(seq 1 5);   do echo $i; done
+    ```
+
+    Points worth stating
+    ```
+       #!/bin/bash          the SHEBANG - tells the kernel which interpreter
+       echo -n              print without a trailing newline
+       $(( ))               arithmetic expansion
+       Always QUOTE "$var"  so that a value containing a space is not split
+       chmod +x             the script must be executable before ./ works
+    ```
 
 43. **Answer the following linux command:** *[DESCO Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
    i. Rename a file test.docs to test.txt
