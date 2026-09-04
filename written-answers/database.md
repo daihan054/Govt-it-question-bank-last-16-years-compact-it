@@ -1,15 +1,15 @@
 <!-- TOC START -->
-**Table of Contents** — 19 subtopics · 294 questions
+**Table of Contents** — 20 subtopics · 306 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-87) | 87 |
+| 1 | [SQL Queries](#sql-queries-95) | 95 |
 | 2 | [Keys in DBMS](#keys-in-dbms-34) | 34 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-26) | 26 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
-| 5 | [Normalization & Database Design](#normalization--database-design-21) | 21 |
+| 5 | [Normalization & Database Design](#normalization--database-design-23) | 23 |
 | 6 | [SQL Commands (DDL, DML, DCL, TCL)](#sql-commands-ddl-dml-dcl-tcl-18) | 18 |
-| 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-14) | 14 |
+| 7 | [Transaction Management & ACID Properties](#transaction-management--acid-properties-15) | 15 |
 | 8 | [Relational Data Model & ER Relationships](#relational-data-model--er-relationships-14) | 14 |
 | 9 | [Indexing & Query Optimization (B-Tree, B+ Tree)](#indexing--query-optimization-b-tree-b-tree-10) | 10 |
 | 10 | [Data Warehousing, Data Mining & Business Intelligence](#data-warehousing-data-mining--business-intelligence-9) | 9 |
@@ -22,16 +22,17 @@
 | 17 | [Database Connectivity (JDBC)](#database-connectivity-jdbc-2) | 2 |
 | 18 | [Relational Keys (Candidate, Super, Primary, Foreign Key)](#relational-keys-candidate-super-primary-foreign-key-1) | 1 |
 | 19 | [Indexing in DBMS](#indexing-in-dbms-1) | 1 |
+| 20 | [Keys, Constraints & Database Objects](#keys-constraints--database-objects-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## SQL Queries (87)
+## SQL Queries (95)
 
-1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
+1. **Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department.** [SO IT 25-07-2026]
 
-   Answer: The requirement is one row per department, so `GROUP BY Department` with the aggregate functions `COUNT` and `AVG`.
+Answer: The requirement is one row per department, so `GROUP BY Department` with the aggregate functions `COUNT` and `AVG`.
 
    Query
    ```sql
@@ -90,8 +91,11 @@
    - Note the distinction: `WHERE` filters individual rows `before` grouping; `HAVING` filters groups `after` aggregation.
    - `COUNT(*)` counts every row, while `COUNT(Salary)` would ignore rows where Salary is NULL. AVG also ignores NULLs, so a department where every salary is NULL would return NULL rather than 0.
 
-2. Consider a STUDENTS table with the following attributes: StudentID, Name, Department, Marks (10 Marks)
+2. **Consider a STUDENTS table with the following attributes: StudentID, Name, Department, Marks (10 Marks)**
    * **I.** Write an SQL query to display only StudentID, Name, and Marks for students scoring more than 80 marks.
+   * **II.** Write an SQL query to count how many students scored more than 80 marks in each Department. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+* **I.** Write an SQL query to display only StudentID, Name, and Marks for students scoring more than 80 marks.
    * **II.** Write an SQL query to count how many students scored more than 80 marks in each Department. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
    Answer:
@@ -158,6 +162,11 @@
 
 3. **SQL Query: Find department name and Average salary form 2 table Department and Employee.......** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
    Department table
+   Department (dept_id, dept_name)
+   Employee table
+   Employee (emp_id, emp_name, salary, dept_id)
+
+Department table
    Department (dept_id, dept_name)
    Employee table
    Employee (emp_id, emp_name, salary, dept_id)
@@ -238,6 +247,16 @@ JOB_HISTORY (EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID)
 JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 ```
 
+```sql
+REGIONS (REGION_ID, REGION_NAME)
+COUNTRIES (COUNTRY_ID, COUNTRY_NAME, REGION_ID)
+LOCATIONS (LOCATION_ID, STREET_ADDRESS, POSTAL_CODE, CITY, STATE_PROVINCE, COUNTRY_ID)
+DEPARTMENTS (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID)
+EMPLOYEES (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID)
+JOB_HISTORY (EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID)
+JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
+```
+
    Answer: An employee's region and their manager's region must be compared, so the EMPLOYEES table has to be joined to `itself` (a self join), and each side then traced through DEPARTMENTS, LOCATIONS and COUNTRIES to reach REGIONS.
 
    The chain of joins needed
@@ -298,7 +317,7 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 
 5. **Database Query related problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: The specific problem was not printed, so the standard database-query patterns that appear in these examinations are worked through, with the schema used throughout being:
+Answer: The specific problem was not printed, so the standard database-query patterns that appear in these examinations are worked through, with the schema used throughout being:
    ```
    Employee   (emp_id, emp_name, salary, dept_id, hire_date, manager_id)
    Department (dept_id, dept_name, location)
@@ -396,6 +415,9 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
    **(a) Find out the employees who join the same date:** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
    **(b) Find those employees whose salary greater than 8,000 and Less than 25,000** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
+**(a) Find out the employees who join the same date:** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
+   **(b) Find those employees whose salary greater than 8,000 and Less than 25,000** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
+
    Answer:
 
    (a) Employees who joined on the same date
@@ -460,6 +482,17 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
    ```
 
 7. **Write down the Query for the following table?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1361 (ET: BUET)]*
+
+| StudentID | StudentName | Age | Department |
+|---|---|---|---|
+| 1 | Alice | 20 | CSE |
+| 2 | Bob | 22 | EEE |
+| 3 | Charlie | 21 | CSE |
+| 4 | David | 23 | BBA |
+
+* **(i) Shows only students in the CSE department.**
+* **(ii) Shows all students sorted by age (highest first).**
+* **(iii) Shows how many students are in each department.**
 
 | StudentID | StudentName | Age | Department |
 |---|---|---|---|
@@ -559,6 +592,8 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
 
 **Write an SQL query to display the region, average sale amount, and total number of sales for each region where: The average sale amount exceeds BDT 50,000 and the total number of sales in that region is at least 5.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
 
+**Write an SQL query to display the region, average sale amount, and total number of sales for each region where: The average sale amount exceeds BDT 50,000 and the total number of sales in that region is at least 5.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
+
    Answer: Two conditions must be applied to the `groups`, not to individual rows, so both belong in the `HAVING` clause.
 
    Assumed relation
@@ -619,6 +654,9 @@ JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
    - This shows the division of labour clearly: `WHERE` narrows the rows that enter the grouping, `HAVING` discards whole groups afterwards.
 
 9. **Given two tables:**
+
+**a) Write an SQL query to retrieve all student names, their courses, and grades.**
+**b) Write an SQL query to retrieve names of students who obtained grade 'A'.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
 
 **a) Write an SQL query to retrieve all student names, their courses, and grades.**
 **b) Write an SQL query to retrieve names of students who obtained grade 'A'.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
@@ -714,6 +752,15 @@ company (employee_name, city)
  * **(i) Find the names of all employees who live in the city 'Dhaka'.**
  * **(ii) Find the names of all employees whose salary in greater than BDT 1,00,000.**
 
+```sql
+employee (employee_name, street, city)
+works (employee_name, company_name, salary)
+company (employee_name, city)
+```
+**Write the SQL commands to perform the following operations:**
+ * **(i) Find the names of all employees who live in the city 'Dhaka'.**
+ * **(ii) Find the names of all employees whose salary in greater than BDT 1,00,000.**
+
     Answer:
 
     Schema
@@ -783,6 +830,34 @@ company (employee_name, city)
     ```
 
 11. **Given the following two tables (Students and Marks) in a database, write down the output of the given SQL queries and write down the SQL queries for the outputs:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1344 (ET: N/A)]*
+
+| Students |  |
+|---|---|
+| StudentId | StudentName |
+| 1 | Mr. A |
+| 2 | Mr. B |
+| 3 | Mr. C |
+| 4 | Mr. D |
+
+| Marks |  |  |
+|---|---|---|
+| StudentId | Subject | Mark |
+| 1 | Math | 70 |
+| 2 | Math | 90 |
+| 3 | Math | 30 |
+| 1 | Bangali | 50 |
+| 2 | Bangali | 60 |
+| 3 | Bangali | 70 |
+| 1 | Physics | 80 |
+| 2 | Physics | 70 |
+| 3 | Physics | 60 |
+
+ * **(i) SELECT Count (*) FROM Students S LEFT JOIN Marks M;**
+ * **(ii) SELECT StudentName From Students S JOIN Marks M**
+**ON S.StudentId=M.StudentId GROUP BY S.StudentId, S.StudentName HAVING SUM (Mark)>=200;**
+ * **(iii) List all the students name and number of subjects they have completed.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
+ * **(iv) List all the students who have not completed any subject.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
+ * **(v) List all the subject names.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
 | Students |  |
 |---|---|
@@ -936,6 +1011,15 @@ company (employee_name, city)
 
 Write down an SQL query to display the total number of patients under each disease category.
 
+| Patient_ID | Disease_Name |
+|---|---|
+| 1 | Covid-19 |
+| 2 | Dialysis |
+| 3 | Covid-19 |
+| 4 | Dengue |
+
+Write down an SQL query to display the total number of patients under each disease category.
+
     Answer: The requirement is a count per disease category, which is a `GROUP BY` with `COUNT`.
 
     The data
@@ -1000,7 +1084,7 @@ Write down an SQL query to display the total number of patients under each disea
 
 13. **SQL OUTPUT Problem: Find Employee salary from a table where salary more than 5000.** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     Query
     ```sql
@@ -1059,7 +1143,7 @@ Write down an SQL query to display the total number of patients under each disea
 
 14. **Write SQL code to get duplicate names from employee table.** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
-    Answer: A name is a duplicate when it appears more than once, so the rows are grouped by name and the groups with a count above one are kept.
+Answer: A name is a duplicate when it appears more than once, so the rows are grouped by name and the groups with a count above one are kept.
 
     Query — list the duplicate names and how often each occurs
     ```sql
@@ -1137,7 +1221,7 @@ Write down an SQL query to display the total number of patients under each disea
 
 15. **Write an SQL query to find duplicate names in the employee table.** *[BBA Assistant Programmer 12.07.2025 compact it 1433 (ET: BUET)]*
 
-    Answer: A duplicate name is one that appears in more than one row, so the table is grouped by name and only groups with a count above one are kept.
+Answer: A duplicate name is one that appears in more than one row, so the table is grouped by name and only groups with a count above one are kept.
 
     Query
     ```sql
@@ -1212,7 +1296,7 @@ Write down an SQL query to display the total number of patients under each disea
 
 16. **SUM, Avg, Max these function are subnet of __________ function.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
-    Answer: SUM, AVG and MAX are a subset of `AGGREGATE` functions.
+Answer: SUM, AVG and MAX are a subset of `AGGREGATE` functions.
 
     - An aggregate function takes many rows as input and returns a `single` summary value. That is what distinguishes them from scalar functions, which return one value per row.
 
@@ -1254,7 +1338,7 @@ Write down an SQL query to display the total number of patients under each disea
 
 17. **SQL Query.....** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 592 (ET: BUET)], [RAKUB Assistant Network System Engineer 03.11.2023 compact it 553 (ET: BIBM)], [BREB Assistant Programmer (AP) 21.02.2025 compact it 1335 (ET: N/A)], [Water Supply and Sewerage Authority (WASA); Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
 
-    Answer: The specific query was not printed, so the SQL query patterns that these examinations set repeatedly are given, with a common schema:
+Answer: The specific query was not printed, so the SQL query patterns that these examinations set repeatedly are given, with a common schema:
     ```
     Employee   (emp_id, emp_name, salary, dept_id, hire_date, manager_id, job)
     Department (dept_id, dept_name, location)
@@ -1353,6 +1437,10 @@ Write down an SQL query to display the total number of patients under each disea
     * **Supplier** (sid, sname, address)
     * **Product** (pid, pname, etc)
 
+* **Catalog** (sid, pid, price)
+    * **Supplier** (sid, sname, address)
+    * **Product** (pid, pname, etc)
+
     Answer:
 
     Schema
@@ -1427,6 +1515,26 @@ Write down an SQL query to display the total number of patients under each disea
     ```
 
 19. **Let a database has two tables, Customers and Orders. The following figure shows the partial data of these two tables. Based on this partial data, explain Inner, Left, Right and Full join. Show the result set of each join operation.**
+
+**Table: Customers**
+| ID | First name |
+|---|---|
+| 1 | Rahim |
+| 2 | Karim |
+| 3 | Belal |
+| 4 | Rony |
+| 5 | Helal |
+
+**Table: Orders**
+| Order id | Amount | Customer id |
+|---|---|---|
+| 1 | 200 | 10 |
+| 2 | 500 | 3 |
+| 3 | 300 | 6 |
+| 4 | 800 | 5 |
+| 5 | 150 | 8 |
+
+*[Combined Bank Senior Officer (IT) 17.05.2024 compact it 335 (ET: BIBM)]*
 
 **Table: Customers**
 | ID | First name |
@@ -1562,6 +1670,9 @@ Write down an SQL query to display the total number of patients under each disea
    * **(i) Group by**
    * **(ii) Average Salary** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
+* **(i) Group by**
+   * **(ii) Average Salary** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
+
     Answer:
 
     (i) GROUP BY
@@ -1635,6 +1746,11 @@ Write down an SQL query to display the total number of patients under each disea
    * **Adoption(*AnimalID*: integer, *PSIN*: integer, *AdoptDate*: date, *chipNo*: integer)**
    **Give a sql query that list total number of adoptions on June 30, 2024 for each animal type.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 429 (ET: BIBM)]*
 
+* **Animals(*ID*: integer, *Name*: string, *PrevOwner*: string, *DateAdmitted*: date, *Type*: string)**
+   * **Adopter(*PSIN*: integer, *Name*: string, *Address*: string, *OtherAnimals*: integer)**
+   * **Adoption(*AnimalID*: integer, *PSIN*: integer, *AdoptDate*: date, *chipNo*: integer)**
+   **Give a sql query that list total number of adoptions on June 30, 2024 for each animal type.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 429 (ET: BIBM)]*
+
     Answer:
 
     Schema
@@ -1702,7 +1818,7 @@ Write down an SQL query to display the total number of patients under each disea
 
 22. **How many row will return when we do i) Inner Join ii) Left Outer Join iii) Right Outer join and v) Full Outer join.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 392 (ET: BUET)]*
 
-    Answer: The number of rows each join returns depends entirely on how many rows match. Using the two tables from the accompanying question:
+Answer: The number of rows each join returns depends entirely on how many rows match. Using the two tables from the accompanying question:
 
     The data
     ```
@@ -1760,7 +1876,7 @@ Write down an SQL query to display the total number of patients under each disea
 
 23. **Write SQL Query For create, insert of a table Emp (id, name, designation, Dept_name, Salary). Write SQL Query that show department wise salary of Employee.** *[BKSP Assistant Programmer 13.07.2024 compact it 1459 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Part 1 — create the table
     ```sql
@@ -1832,6 +1948,9 @@ Write down an SQL query to display the total number of patients under each disea
 
 24. **Query's: Employee & department table given-**
    * **(i) Write the employee name who got same salary named Rahim but not same job of Rahim.**
+   * **(ii) Write the employee's name who's average salary is more than company's average salary** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 380 (ET: BUET)]*
+
+* **(i) Write the employee name who got same salary named Rahim but not same job of Rahim.**
    * **(ii) Write the employee's name who's average salary is more than company's average salary** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 380 (ET: BUET)]*
 
     Answer:
@@ -1910,6 +2029,10 @@ Write down an SQL query to display the total number of patients under each disea
 
 25. **EMPLOYEES (Emp_ID, Emp_Name, Manager_ID, Dept_ID);**
    **DEPARTMENTS (Dept ID, Salary, Dept Name, Emp_ID);**
+   * **(a) Find out the names of the manager for each employee:**
+   * **(b) Sort the employees total salary of each department based on salary in descending order.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 431 (ET: BUET)]*
+
+**DEPARTMENTS (Dept ID, Salary, Dept Name, Emp_ID);**
    * **(a) Find out the names of the manager for each employee:**
    * **(b) Sort the employees total salary of each department based on salary in descending order.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 431 (ET: BUET)]*
 
@@ -2004,6 +2127,14 @@ Write down an SQL query to display the total number of patients under each disea
    * **(a) Find Departments with Average Monthly Salary Greater than 1000.**
    * **(b) Find Courses with More Than 2 Offerings.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
 
+* **Employee (empno(PK), empname, monthlysalary, deptno, mqrnd(FK))**
+   * **Department(deptno, deptname, deptlocation)**
+   * **Course(erscode(pk) erd dese, ers category, ers duration)**
+   * **Offering (of begingate, erscode fk, offeringlocation, empno fk)**
+   **Write query for:**
+   * **(a) Find Departments with Average Monthly Salary Greater than 1000.**
+   * **(b) Find Courses with More Than 2 Offerings.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
+
     Answer:
 
     Schema (as given, with the obvious typographical errors corrected)
@@ -2079,7 +2210,7 @@ Write down an SQL query to display the total number of patients under each disea
 
 27. **6.4 Consider the following relation: Employee(EmpID, Name, Department, Salary). Write an SQL query to retrieve the Department, the total number of employees, and the average salary for each department. The output should display one record for each department.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-    Answer: One row per department is required, which means `GROUP BY Department` together with the aggregates `COUNT` and `AVG`.
+Answer: One row per department is required, which means `GROUP BY Department` together with the aggregates `COUNT` and `AVG`.
 
     Query
     ```sql
@@ -2138,6 +2269,17 @@ Write down an SQL query to display the total number of patients under each disea
     ```
 
 28. **Analize the following code:**
+```sql
+SELECT department_name, AVG(salary) as average_salary
+FROM employees
+JOIN department d ON e.department_id = d.department_id
+WHERE salary > (SELECT AVG(salary) FROM employees )
+GROUP BY department_name
+HAVING COUNT(*) > 2
+ORDER BY average_salary desc
+```
+*[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 521 (ET: MIST)]*
+
 ```sql
 SELECT department_name, AVG(salary) as average_salary
 FROM employees
@@ -2209,7 +2351,7 @@ ORDER BY average_salary desc
 
 29. **Employee Salary sql query a. Sum b. Avg. C. Employee_Name all 2nd letter 'a'......** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
-    Answer: Assuming the table `Employee(emp_id, Employee_Name, Salary, dept_id)`.
+Answer: Assuming the table `Employee(emp_id, Employee_Name, Salary, dept_id)`.
 
     (a) Sum of salaries
     ```sql
@@ -2282,6 +2424,16 @@ ORDER BY average_salary desc
     ```
 
 30. **Analyze the output of the following SQL :** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 543 (ET: MIST)]*
+```sql
+SELECT department_name, AVG(salary) AS average_salary
+FROM employees e
+JOIN departments d ON e.department_id=d.department_id
+WHERE salary> (SELECT AVG(salary) FROM employees WHERE department_id=d.department_id)
+GROUP BY department_name
+HAVING COUNT(*)>2
+ORDER BY average_salary DESC;
+```
+
 ```sql
 SELECT department_name, AVG(salary) AS average_salary
 FROM employees e
@@ -2377,7 +2529,7 @@ ORDER BY average_salary DESC;
 
 31. **Consider the employee tables: Create a SQL view that shows the details of Employee information who have the salary equivalent to the maximum, minimum and average salary of employee.** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 473 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Query
     ```sql
@@ -2457,7 +2609,7 @@ ORDER BY average_salary DESC;
 
 32. **SQL query for employee table. (Approximate)** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
-    Answer: The exact query was not printed, so the employee-table queries that appear repeatedly in these examinations are worked through, using
+Answer: The exact query was not printed, so the employee-table queries that appear repeatedly in these examinations are worked through, using
     ```
     Employee (emp_id, emp_name, salary, dept_id, job, hire_date, manager_id, city)
     ```
@@ -2545,6 +2697,9 @@ ORDER BY average_salary DESC;
    **(A) Write an SQL query that returns all records of the form sid, uid where sid is the key of an S- record and uid is the key of a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.**
    **(B) Write an SQL query that returns records of the form A, C where the A-value is from an S- record and the C-value is from a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 496 (ET: N/A)]*
 
+**(A) Write an SQL query that returns all records of the form sid, uid where sid is the key of an S- record and uid is the key of a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.**
+   **(B) Write an SQL query that returns records of the form A, C where the A-value is from an S- record and the C-value is from a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 496 (ET: N/A)]*
+
     Answer:
 
     Schema
@@ -2609,7 +2764,7 @@ ORDER BY average_salary DESC;
 
 34. **Write following EMPLOYEE database table write an SQL query to find employee who work is a department where the average salary is lower then the average salary all the department......** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 452 (ET: BUET)]*
 
-    Answer: The requirement is to find employees working in a department whose `average salary is lower than the overall average of all departments`. Two subqueries are needed, one nested inside the other.
+Answer: The requirement is to find employees working in a department whose `average salary is lower than the overall average of all departments`. Two subqueries are needed, one nested inside the other.
 
     Query
     ```sql
@@ -2694,7 +2849,7 @@ ORDER BY average_salary DESC;
 
 35. **Consider the two schema employees (id, first_name, last_name, designation, oining_date, salary, dept_id) and department (dept_id, dept_name). Where detp_id is forgeign key. Find the first_name and department name whose salary is maximum.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 459 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -2776,6 +2931,13 @@ ORDER BY average_salary DESC;
    **Has Genre (\underline{\text{gid}, \text{mid}})**
    **Write a SQL query to return the number of movies that are romantic comedies.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 
+**Movies (\underline{\text{mid}}, title, year)**
+   **People (\underline{\text{pid}}, name)**
+   **Genres (\underline{\text{gid}}, genre)**
+   **HasRole (\underline{\text{pid}, \text{mid}}, role)**
+   **Has Genre (\underline{\text{gid}, \text{mid}})**
+   **Write a SQL query to return the number of movies that are romantic comedies.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
+
     Answer:
 
     Schema
@@ -2851,7 +3013,7 @@ ORDER BY average_salary DESC;
 
 37. **(গ) ডাটাবেস সিস্টেমে view কী? এটি কী কী কাজে লাগে?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     What is a view
     - A `view` is a virtual table defined by a stored `SELECT` statement. It has a name and columns like a real table, but it holds `no data of its own` — the underlying query is executed each time the view is used.
@@ -2906,6 +3068,13 @@ ORDER BY average_salary DESC;
 
 38. **অথবা, নিম্নোক্ত টেবিলগুলো হতে (ক), (খ) এবং (গ) এর উত্তর দিন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)]*
    Restaurant (rid, rname, rcity, phone, seat-capacity)
+   Dishes (did, dname, dtype)
+   Customer (cid, cname, ccity)
+   Serves (rid, did)
+
+   **(ক) যে যে রেস্টুরেন্টগুলো ‘Burger’ পরিবেশন করে সেগুলোর নাম খুঁজে বের করার জন্য SQL Query লিখুন। (খ) ‘Ziman’ নামক একজন Customer যে যে খাবারগুলো অ্যালার্জি সংক্রান্ত সমস্যা এড়িয়ে খেতে পারেন তার তালিকা তৈরি করুন। (গ) যে যে খাবারগুলো ঢাকার সকল রেস্টুরেন্টে পাওয়া যায় তার তালিকা তৈরি করুন।**
+
+Restaurant (rid, rname, rcity, phone, seat-capacity)
    Dishes (did, dname, dtype)
    Customer (cid, cname, ccity)
    Serves (rid, did)
@@ -2987,7 +3156,7 @@ ORDER BY average_salary DESC;
 
 39. **SQL query from a given table.** *[BICIC Assistant Programmer 2022 compact it 634 (ET: BUET)]*
 
-    Answer: The table was not printed, so the query forms these examinations set on a single table are worked through, using
+Answer: The table was not printed, so the query forms these examinations set on a single table are worked through, using
     ```
     Employee (emp_id, emp_name, salary, dept_id, job, city, hire_date)
     ```
@@ -3056,7 +3225,7 @@ ORDER BY average_salary DESC;
 
 40. **Employee table হতে Employee_id, Employee কে খোঁজে বের করার SQL Command লিখ যাদের গড় salary 2000 উপরে।** *[BTCL Junior Assistant Manager 2022 compact it 641 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) The requirement is employees whose average salary is above 2000. Since an individual has one salary, "average salary above 2000" is read at the `department` level — the standard interpretation of this question.
+Answer: (Answered in English, as required for IT topics.) The requirement is employees whose average salary is above 2000. Since an individual has one salary, "average salary above 2000" is read at the `department` level — the standard interpretation of this question.
 
     Reading 1 — departments whose average salary exceeds 2000, with their employees
     ```sql
@@ -3114,7 +3283,7 @@ ORDER BY average_salary DESC;
 
 41. **Employee Table টেবিল হতে যে সকল কর্মচারীদের বেতন 30000 টাকার বেশি তাদের নাম পদবী আলাদা করার SQLCommand লিখুন।** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 699 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.) The requirement is the name and designation of employees earning more than 30,000, with the two columns shown separately.
+Answer: (Answered in English, as required for IT topics.) The requirement is the name and designation of employees earning more than 30,000, with the two columns shown separately.
 
     Query
     ```sql
@@ -3174,7 +3343,7 @@ ORDER BY average_salary DESC;
 
 42. **There are two tables like Employees (Employee_ID, First_name, Last_name, Email, Phone_number, Hire_date, Job_Id) and Departments (Department_Id, Department_name, Manager_Id, Location_Id). Now, write a query to find the name (first_name, last_name), Department Id and name of all the employees.** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 718 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -3245,7 +3414,7 @@ ORDER BY average_salary DESC;
 
 43. **For employee table: (a) Write a SQL query to find those employees who earn more than the average salary. Return employee ID, first name, last name. (b) Write a SQL query to find those employees who earn the highest salary in a department. Return department ID, employee name, and salary.** *[CAAB Programmer 2022 compact it 722 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) Employees earning more than the average salary
     ```sql
@@ -3319,7 +3488,7 @@ ORDER BY average_salary DESC;
 
 44. **Write down the SQL command into the following two: (a) Find out the all information of employees from emp_info table. Where employee's salary is more than 20,000 and city is Dhaka. (b) Update employee name ‘Mr.X’ in emp_info, whose epm_id is 2.** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 730 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     (a) All information about employees earning more than 20,000 in Dhaka
     ```sql
@@ -3386,7 +3555,7 @@ ORDER BY average_salary DESC;
 
 45. **Write down the equivalent SQL from following relational algebra. [full question not collected]** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 760 (ET: N/A)]*
 
-    Answer: The relational algebra expression was not printed, so the systematic translation from relational algebra to SQL is given, with a worked example for each operator.
+Answer: The relational algebra expression was not printed, so the systematic translation from relational algebra to SQL is given, with a worked example for each operator.
 
     The correspondence
 
@@ -3490,7 +3659,7 @@ ORDER BY average_salary DESC;
 
 46. **Write a SQL query to find same salary but job not same?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
 
-    Answer: The requirement is pairs of employees who earn the `same salary` but hold `different jobs`. A self join is the natural tool.
+Answer: The requirement is pairs of employees who earn the `same salary` but hold `different jobs`. A self join is the natural tool.
 
     Query — list the matching pairs
     ```sql
@@ -3555,7 +3724,7 @@ ORDER BY average_salary DESC;
 
 47. **This returns the names of the staff where timestampdiff is greater than 25 so it returns total 3 rows.** *[Water Supply and Sewerage Authority (WASA); Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
 
-    Answer: The statement describes the `result` of a query rather than asking for one, so the query it refers to is reconstructed and explained.
+Answer: The statement describes the `result` of a query rather than asking for one, so the query it refers to is reconstructed and explained.
 
     What `TIMESTAMPDIFF` does
     - It is a MySQL function that returns the difference between two dates or times, expressed in a stated unit.
@@ -3620,7 +3789,7 @@ ORDER BY average_salary DESC;
 
 48. **(c) In a SQL query, while performing string matching when do we use operator and when we use LIKE operator? Give examples.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 803 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     The `=` operator
     - Used for an `exact` match of the whole value. The comparison succeeds only if the two strings are identical.
@@ -3685,7 +3854,7 @@ ORDER BY average_salary DESC;
 
 49. **Consider the Electrical Powr company database which has the following tables: Powerplant(Powerplant_ID, location, type, capacity.unit_price) Customer(Customer_ID, name, address, DoB, monthly_demand) Customer_usage_profile(ID, month_name, Customer_ID, Powrplant_ID) The powerplant relation has attributes powerplan_ID, loation, Type{Thrmal power, hydro power, nuclear power, nuclear power, capacity, and unit_price of power generated by the powerplant. The customer relation has attributes Customer_ID, name, address, date of birth(DoB) and monthly_demand of electrical power. The customer_usesge_profile relation stores the user profile of a customer. A customer more usage hydropower during the rainy season and thermal or nuclear power during the dry season. Write the relational algebra expressions for the following queries: (i) List the customers with a yearly bill of more than taka 5,000. (ii) List the customers who uses nuclear power during December and has a monthly bill less then 500 in December.** *[BPDB Assistant Engineer (CSE) 2021 compact it 818 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -3772,6 +3941,18 @@ SELECT count(Distinct val) val_count
 From t;
 ```
 
+```sql
+CREATE Table t(
+val INT
+);
+INSERT INTO t(val)
+values (1), (2), (3), (null), (null), (4), (5);
+SELECT count (*) val_count
+From t;
+SELECT count(Distinct val) val_count
+From t;
+```
+
     Answer:
 
     The statements
@@ -3840,7 +4021,7 @@ From t;
 
 51. **Write SQL command from the following tables. Employee (ename, street, city) Works (ename, cname, salary, joindate) Company (cname, city) Manages (ename, mname) (a) Find name, street, city who work for First Corporation Bank and earn more than 30000 (b) Find name of all employees, who live in the same city and company for which they work. (c) Give all employees of First Century Bank 10 percent salary raise (d) Find the company with payroll less than 100000.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 835-836 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -3917,7 +4098,7 @@ From t;
 
 52. **DB schema: book (book_id, book_title, book_type, publication_name) author (book_name, author_name) publicher (publication_name, publication_address, est_year) copies (book_id, branch_name, no_of-copies) [database query লিখতে আসছিল]** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
-    Answer: The specific query was not printed, so the standard queries on this library schema are given.
+Answer: The specific query was not printed, so the standard queries on this library schema are given.
 
     Schema (with the obvious typographical corrections)
     ```
@@ -4010,7 +4191,7 @@ From t;
 
 53. **Given Table: Project (Project_id, Project_name, Manager_name) Location (location_id, Location_name, project_id) Employee (Employee_id, Employee_Name, Location_id, Joning date, Salary) Write a query to show project_name, Location_name, Total_salary of each projects employee who joined before ‘January 2021’.** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 868 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -4073,7 +4254,7 @@ From t;
 
 54. **(i) SQL Query for finding Dept names for departments Find out the employees whose salaries are greater than the salaries of their managers.** *[NESCO Assistant Manager (ICT) 2021 compact it 907 (ET: BUET)]*
 
-    Answer: Employees and their managers are both rows of the same table, linked by `manager_id`, so a `self join` is required.
+Answer: Employees and their managers are both rows of the same table, linked by `manager_id`, so a `self join` is required.
 
     Query — employees earning more than their manager
     ```sql
@@ -4150,7 +4331,7 @@ From t;
 
 55. **Two SQL query from given table (date and join related).** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
 
-    Answer: The tables were not printed, so the two categories the question names — `date-related` and `join-related` queries — are covered with worked examples, using
+Answer: The tables were not printed, so the two categories the question names — `date-related` and `join-related` queries — are covered with worked examples, using
     ```
     Employee   (emp_id, emp_name, salary, dept_id, hire_date, manager_id)
     Department (dept_id, dept_name)
@@ -4233,7 +4414,7 @@ From t;
 
 56. **emp [e_id, e_name, dept_id, salary, DOB], dept [dept_id, city, dept_name]; প্রত্যেকটি Department এর নাম এবং ঐ Department এর employee দের গড় Salary দেখার SQL Query লিখ।** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 911 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     Schema
     ```
@@ -4309,6 +4490,12 @@ From t;
     ```
 
 57. **Database table by name Loan Records is given below: What is the output of the following SQL query?** *[BAUST Assistant Programmer 2021 compact it 919-920 (ET: N/A)]*
+```sql
+SELECT count (*) FROM (
+(SELECT Borrower, Bank_Manager, FROM Loan_Records) AS S NATURAL JOIN
+(SELECT Bank_Manager, Loan_Amount FROM Loan_Records) AS T);
+```
+
 ```sql
 SELECT count (*) FROM (
 (SELECT Borrower, Bank_Manager, FROM Loan_Records) AS S NATURAL JOIN
@@ -4392,7 +4579,7 @@ SELECT count (*) FROM (
 
 58. **Below tables are given, Employee (employee_id, name, salary, department) Leave (employee_id, date, reason, no_leaves) Holiday (Date, description) (i) Write mapping cardinality between 'Employee' and 'Holiday' table. (ii) Write query to show all employee's leave count. (iii) Write query to show employees who are in 'HR' department and have taken at least 5 leaves.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 928 (ET: CTI)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -4459,7 +4646,7 @@ SELECT count (*) FROM (
 
 59. **Find the Query for the Instructor table a. Find the average salary of instructors in each department. b. Find the names and average salaries of all departments whose average salary is greater than 42000. c. Find names of instructors with salary greater than that of some (at least one) instructor in the CSE department.** *[NRCC Assistant Programmer 2021 compact it 930 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Assumed schema
     ```
@@ -4537,7 +4724,7 @@ SELECT count (*) FROM (
 
 60. **Consider the following relational database schema consisting of the four relation schemas: passenger (pid, ppname, pgender, pcity) agency (aid, aname, acity) flight (fid, fdate, time, src, dest) booking (pid, aid, fid, fdate) a) Get the complete details of all flights to New Delhi b) Get the details about all flights from Chennai to New Delhi.** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -4620,7 +4807,7 @@ SELECT count (*) FROM (
 
 61. **৫. সম্পূর্ণ টেবিলের ডেটা প্রদর্শন এর জন্য কোনটি ব্যবহার করা হয়?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) To display all the data of a complete table, the statement used is:
+Answer: (Answered in English, as required for IT topics.) To display all the data of a complete table, the statement used is:
 
     ```sql
     SELECT * FROM table_name;
@@ -4672,7 +4859,7 @@ SELECT count (*) FROM (
 
 62. **Write a SQL query to find those employees who report that manager whose first name is ‘abc’. Return first name, last name, employee ID and salary.** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
 
-    Answer: The employee and the manager are both rows of the same table, so a `self join` is required.
+Answer: The employee and the manager are both rows of the same table, so a `self join` is required.
 
     Query
     ```sql
@@ -4739,7 +4926,7 @@ SELECT count (*) FROM (
 
 63. **Given a database schema and worker table with fully code: Now writes SQL Query from the following questions.** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
 
-    Answer: The specific schema was not printed, so a `Worker` table in the standard form used by this question is assumed, together with the queries usually set on it.
+Answer: The specific schema was not printed, so a `Worker` table in the standard form used by this question is assumed, together with the queries usually set on it.
 
     Schema
     ```sql
@@ -4846,7 +5033,7 @@ SELECT count (*) FROM (
 
 64. **(b) SQL Query: commission greater than 10%** *[National University Assistant Programmer 2020 compact it 976 (ET: DU)]*
 
-    Answer: "Commission greater than 10 percent" depends on how the commission is stored, and both forms appear in real schemas.
+Answer: "Commission greater than 10 percent" depends on how the commission is stored, and both forms appear in real schemas.
 
     If commission is stored as a `fraction` (0.10 means 10 percent)
     ```sql
@@ -4921,7 +5108,7 @@ SELECT count (*) FROM (
 
 65. **(c) Remove duplicate data from table** *[National University Assistant Programmer 2020 compact it 976 (ET: DU)]*
 
-    Answer: Duplicates are removed by keeping one row of each group — usually the one with the lowest primary key — and deleting the rest.
+Answer: Duplicates are removed by keeping one row of each group — usually the one with the lowest primary key — and deleting the rest.
 
     Method 1 — DELETE using a subquery on the minimum id
     ```sql
@@ -4995,7 +5182,7 @@ SELECT count (*) FROM (
 
 66. **What is the full meaning of SQL? List of the aggregate function. Write SQL Query of a table and its output.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1002-1003 (ET: DU)]*
 
-    Answer:
+Answer:
 
     Full form of SQL
     - `SQL` stands for `Structured Query Language`. It is the standard language for defining, manipulating and querying data in a relational database, standardised by ANSI in 1986 and ISO in 1987.
@@ -5068,7 +5255,7 @@ SELECT count (*) FROM (
 
 67. **Query to find out even number from given table.** *[RAKUB Assistant Database Administrator 2020 compact it 1014 (ET: E-Zone)]*
 
-    Answer: A number is even when it leaves no remainder on division by 2, so the `modulo` operator is used.
+Answer: A number is even when it leaves no remainder on division by 2, so the `modulo` operator is used.
 
     Query
     ```sql
@@ -5154,7 +5341,7 @@ SELECT count (*) FROM (
 
 68. **How to copy from Parent table to Child Table with 1 column dividing into 3 different columns?** *[RAKUB Assistant Database Administrator 2020 compact it 1014-1015 (ET: E-Zone)]*
 
-    Answer: The requirement is to copy rows from a parent table into a child table while `splitting one column into three`. The tool for this is `INSERT ... SELECT` with string functions.
+Answer: The requirement is to copy rows from a parent table into a child table while `splitting one column into three`. The tool for this is `INSERT ... SELECT` with string functions.
 
     The situation
     ```
@@ -5241,7 +5428,7 @@ SELECT count (*) FROM (
 
 69. **Design and Queries from HR schema. (i) Display details of jobs where the minimum salary is greater than 10000. (ii) Display the first name and join date of the employees who joined between 2002 and 2005. (iii) Display first name and join date of the employees who is either IT Programmer or Sales Man. (iv) Display first name, salary, commission pct, and hire date for employees with salary less than 10000. (v) Display job Title, the difference between minimum and maximum salaries for jobs with max salary in the range 10000 to 20000. (vi) Display first name, salary, and round the salary to thousands. (vii) Display employees where the first name or last name starts with S. (viii) Display details of the employees where commission percentage is null and salary in the range 5000 to 10000 and department is 30. (ix) Display first name and date of first salary of the employees. (x) Display first name and last name after converting the first letter of each name to upper case and the rest to lower case.** *[RAKUB Assistant Database Administrator 2020 compact it 1016-1017 (ET: E-Zone)]*
 
-    Answer: The Oracle `HR` schema is assumed: `employees(employee_id, first_name, last_name, salary, commission_pct, hire_date, job_id, department_id)` and `jobs(job_id, job_title, min_salary, max_salary)`.
+Answer: The Oracle `HR` schema is assumed: `employees(employee_id, first_name, last_name, salary, commission_pct, hire_date, job_id, department_id)` and `jobs(job_id, job_title, min_salary, max_salary)`.
 
     (i) Jobs where the minimum salary is greater than 10000
     ```sql
@@ -5325,7 +5512,7 @@ SELECT count (*) FROM (
 
 70. **Query for retrieving UNCOMMON Name from Name column of two given tables.** *[RAKUB Assistant Database Administrator 2020 compact it 1017 (ET: E-Zone)]*
 
-    Answer: "Uncommon" names are those appearing in one table but not the other — the `symmetric difference` of the two sets.
+Answer: "Uncommon" names are those appearing in one table but not the other — the `symmetric difference` of the two sets.
 
     The two tables
     ```
@@ -5422,7 +5609,7 @@ SELECT count (*) FROM (
 
 71. **Employee টেবিল থেকে যেসকল Employee এর Salary 25000 থেকে 50000 এর মধ্যে এবং Designation হচ্ছে officer এবং City হচ্ছে Dhaka তাদের দেখার জন্য SQL টেবিল দেখান।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1042 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.) Three conditions must all hold, so they are combined with `AND`.
+Answer: (Answered in English, as required for IT topics.) Three conditions must all hold, so they are combined with `AND`.
 
     Query
     ```sql
@@ -5486,7 +5673,7 @@ SELECT count (*) FROM (
 
 72. **Design a database of student with the gpa of a university. Find the top 10% gpa holder from the different department of the university.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
 
-    Answer:
+Answer:
 
     Part 1 — designing the database
     ```sql
@@ -5562,7 +5749,7 @@ SELECT count (*) FROM (
 
 73. **(খ) SQL ব্যবহার করে Student নামে একটি টেবিল তৈরি করুন। টেবিলে Std-id, Std-name, Std-address এবং GPA নামে চারটি field থাকবে। Student টেবিল হতে যে সকল ছাত্রের ফলাফল GPA-5 তাদের সকল রেকর্ড দেখানোর জন্য SQL Query লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1097 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     Part 1 — creating the Student table
     ```sql
@@ -5630,7 +5817,7 @@ SELECT count (*) FROM (
 
 74. **There is a student table: Student (s_id, name, gender, age, phone, department, cgpa) find a query to get each department maximum CGPA of student. Which student gets highest cgpa in maximum of each department?** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -5709,7 +5896,7 @@ SELECT count (*) FROM (
 
 75. **Given two tables are employee (id, name, salary, dept_id) and department (dept_id, dept_name), write SQL to find MAX salary and average salay of specific department.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     Schema
     ```
@@ -5792,7 +5979,7 @@ SELECT count (*) FROM (
 
 76. **একটি Branch Employee Table; Employee (ID, name, salary); এখন নতুন sub branch তৈরি করার যুক্তিক command লিখুন যার branch name একই হবে এবং Employee এর min ও avg salary বের করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     Part 1 — creating the new sub-branch table with the same structure
 
@@ -5878,7 +6065,7 @@ SELECT count (*) FROM (
 
 77. **Write an SQL Query for 2nd highest score for the table T.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
-    Answer: The second highest value is the maximum of everything below the maximum.
+Answer: The second highest value is the maximum of everything below the maximum.
 
     Method 1 — nested MAX, the classic answer
     ```sql
@@ -5945,7 +6132,7 @@ SELECT count (*) FROM (
 
 78. **Write the SQL from employee table where average salary of all employee is greater than the salary of each department. Employee (emp_Id, emp_name, salary, city, dept_name).** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1161 (ET: BUET)]*
 
-    Answer: The wording is ambiguous, so both readings are given. The natural database reading is: find the departments whose average salary is `below` the overall average of all employees.
+Answer: The wording is ambiguous, so both readings are given. The natural database reading is: find the departments whose average salary is `below` the overall average of all employees.
 
     Reading 1 — departments below the company average, with their employees
     ```sql
@@ -6022,7 +6209,7 @@ SELECT count (*) FROM (
 
 79. **Write a query to select top 10% row from grade table.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
-    Answer: "Top 10 percent" means a fraction of the row count, which varies with the size of the table, so the number cannot simply be hard-coded.
+Answer: "Top 10 percent" means a fraction of the row count, which varies with the size of the table, so the number cannot simply be hard-coded.
 
     Method 1 — LIMIT with a computed count (MySQL 8, PostgreSQL)
     ```sql
@@ -6097,6 +6284,9 @@ SELECT count (*) FROM (
 
 80. **Three table are given: Customer (cust_id, Name, Address, Sales_id), Order (Order_id, cust_id, Date, sales_id), Salesman (Sales_id, commission)** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1170 (ET: N/A)]*
    (i) Find the customer details for those salesman get commission greater than 12% commission.
+   (ii) Count the salesman by their order_id and date.
+
+(i) Find the customer details for those salesman get commission greater than 12% commission.
    (ii) Count the salesman by their order_id and date.
 
     Answer:
@@ -6186,7 +6376,7 @@ SELECT count (*) FROM (
 
 81. **Suppose you've two table (Employee, Department) in a Database and Employee table three cell (emp_name, dept_id, salary) also Department table two cell (dept_id, dept_name), now update the salary 10% increase value from Department table. Give the appropriate example.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
 
-    Answer: The salary lives in `Employee`, but the department must be identified through `Department`, so a join is needed inside the UPDATE.
+Answer: The salary lives in `Employee`, but the department must be identified through `Department`, so a join is needed inside the UPDATE.
 
     MySQL — UPDATE with a JOIN
     ```sql
@@ -6279,7 +6469,7 @@ SELECT count (*) FROM (
 
 82. **What is the SQL query for showing only the duplicate lists in student (id, name, gpa) table?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1223 (ET: N/A)]*
 
-    Answer: Duplicate rows are found by grouping on the columns that define a duplicate and keeping only the groups with a count above one.
+Answer: Duplicate rows are found by grouping on the columns that define a duplicate and keeping only the groups with a count above one.
 
     Duplicates by name
     ```sql
@@ -6371,6 +6561,9 @@ SELECT count (*) FROM (
    a. find out the min salary from table
    b. find out a matched string
 
+a. find out the min salary from table
+   b. find out a matched string
+
     Answer: The table was not printed, so a standard `Employee(emp_id, emp_name, salary, city, designation)` is assumed.
 
     (a) Minimum salary from the table
@@ -6432,6 +6625,9 @@ SELECT count (*) FROM (
 
 84. **Probably a SQL query** *[BTCL Assistant Manager (Technical) 2017 compact it 1256 (ET: N/A)]*
    (a) Show the branch name with the minimum balance
+   (b) Select all dept_name, roll from Student
+
+(a) Show the branch name with the minimum balance
    (b) Select all dept_name, roll from Student
 
     Answer:
@@ -6511,7 +6707,7 @@ SELECT count (*) FROM (
 
 85. **Write a SQL query to get second highest salary from Employee table.** *[BCC Assistant Programmer 2017 compact it 1257 (ET: N/A)]*
 
-    Answer: The second highest salary is the maximum of everything strictly below the maximum.
+Answer: The second highest salary is the maximum of everything strictly below the maximum.
 
     Method 1 — nested MAX, the classic answer
     ```sql
@@ -6578,7 +6774,7 @@ SELECT count (*) FROM (
 
 86. **Which modifier should be used to remove duplicate rows in SQL query?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1266 (ET: N/A)]*
 
-    Answer: The modifier used to remove duplicate rows is `DISTINCT`.
+Answer: The modifier used to remove duplicate rows is `DISTINCT`.
 
     - It is placed immediately after `SELECT` and eliminates duplicate rows from the result set, returning only unique combinations of the selected columns.
 
@@ -6641,6 +6837,10 @@ SELECT count (*) FROM (
 SELECT *FROM students ORDER BY ID, NAME DESC
 ```
 
+```sql
+SELECT *FROM students ORDER BY ID, NAME DESC
+```
+
     Answer:
 
     The query
@@ -6697,6687 +6897,166 @@ SELECT *FROM students ORDER BY ID, NAME DESC
     - Sorting by column position is also legal but discouraged: `ORDER BY 1, 2 DESC` means the first and second selected columns.
     - NULL ordering differs by system: MySQL and PostgreSQL place NULLs first in ascending order by default, Oracle places them last. `NULLS FIRST` or `NULLS LAST` makes it explicit where supported.
 
-## Keys in DBMS (34)
+88. **(b) Consider the following database schema** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 74]]*
+employee (employee_name, street, city) works (employee_name, company_name, salary) company (employee_name, city) Write the SQL commands to perform the following operations: (i) Find the names of all employees who live in the city 'Dhaka'. (ii) Find the names of all employees whose salary in greater than BDT 1,00,000. (iii) Find the names of all employees who live in 'Dhaka' and whose salary in less than 1,00,000.
 
-1. Difference Between Primary Key, Foreign Key, Candidate Key. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+Answer:
 
-   Answer:
-
-   | Point | Primary Key | Foreign Key | Candidate Key |
-   |---|---|---|---|
-   | Definition | The candidate key chosen to identify each row | A column referring to the primary key of another table | A minimal set of attributes that uniquely identifies a row |
-   | Uniqueness | Always unique | May repeat | Always unique |
-   | NULL allowed | `Never` | Yes, unless declared NOT NULL | No |
-   | Number per table | Exactly `one` | Many | One or many |
-   | Purpose | Entity integrity — identify a row | Referential integrity — link two tables | The pool from which the primary key is chosen |
-   | Belongs to | Its own table | Refers to another table | Its own table |
-   | Index | Clustered index created automatically in most systems | Non-clustered, must usually be created manually | Only if chosen as primary or unique |
-   | Relationship | Is one of the candidate keys | Points at a primary key elsewhere | Superset that includes the primary key |
-
-   The relationship between them
-   ```
-   Super Key       -> any attribute set that identifies a row uniquely
-      |
-   Candidate Key   -> a MINIMAL super key (no attribute can be removed)
-      |
-   Primary Key     -> the ONE candidate key the designer selects
-      |
-   Alternate Key   -> the candidate keys not selected
-   ```
-
-   Example
-   ```
-   Student (student_id, national_id, email, name, dept_id)
-
-   Super keys      : {student_id}, {student_id, name}, {national_id, email}, ...
-   Candidate keys  : {student_id}, {national_id}, {email}     -- each minimal
-   Primary key     : student_id                                -- chosen
-   Alternate keys  : national_id, email
-   Foreign key     : dept_id  -> Department(dept_id)
-   ```
-
-   ```sql
-   CREATE TABLE Department (
-       dept_id   INT PRIMARY KEY,
-       dept_name VARCHAR(50)
-   );
-
-   CREATE TABLE Student (
-       student_id  INT PRIMARY KEY,              -- primary key
-       national_id VARCHAR(20) UNIQUE,           -- alternate (candidate) key
-       email       VARCHAR(100) UNIQUE,          -- alternate (candidate) key
-       name        VARCHAR(100) NOT NULL,
-       dept_id     INT,
-       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- foreign key
-   );
-   ```
-
-   What each one enforces
-   - `Primary key` — entity integrity: no two rows are identical and no row is unidentifiable, so it can never be NULL.
-   - `Foreign key` — referential integrity: a value must already exist in the referenced table, so an order cannot point at a customer who does not exist.
-   - `Candidate key` — every attribute set capable of being the primary key; the designer picks one, usually the smallest and most stable.
-
-2. **(a) Define RDBMS. Explain the different key and primary key, candidate key, super key, and foreign key DBMS.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1445 (ET: N/A)]*
-
-   Answer:
-
-   RDBMS
-   - A `Relational Database Management System` is software that stores data in `tables` (relations) made of rows (tuples) and columns (attributes), and manages the relationships between those tables using keys.
-   - It is based on E. F. Codd's relational model (1970) and is accessed with `SQL`.
-   - Characteristics: data in two-dimensional tables; every row uniquely identified by a primary key; tables linked by foreign keys; support for constraints; and `ACID` transaction guarantees.
-   - Examples: Oracle, MySQL, PostgreSQL, SQL Server, IBM Db2, SQLite.
-   - Difference from a plain DBMS: a DBMS may store data as files or in a hierarchy with no enforced relationships, whereas an RDBMS enforces the relational model, normalisation and referential integrity.
-
-   The keys
-
-   `Super key`
-   - Any set of one or more attributes that `uniquely identifies` a row. It may contain redundant attributes.
-   - Example, for Student(student_id, national_id, email, name):
-   ```
-   {student_id}, {national_id}, {student_id, name}, {student_id, national_id, email, name}
-   ```
-   - All of these identify a row uniquely, so all are super keys. Note that adding extra attributes to a super key still gives a super key.
-
-   `Candidate key`
-   - A `minimal` super key — remove any attribute and it stops being unique.
-   ```
-   Candidate keys: {student_id}, {national_id}, {email}
-   ```
-   - `{student_id, name}` is a super key but not a candidate key, because `name` is unnecessary.
-   - Every candidate key is a super key; not every super key is a candidate key.
-
-   `Primary key`
-   - The `one` candidate key the designer selects to identify rows. It can never be NULL and never repeat, and a table has exactly one.
-   ```
-   Primary key: student_id
-   ```
-   - The candidate keys not chosen become `alternate keys` and are usually declared UNIQUE.
-
-   `Foreign key`
-   - An attribute in one table whose values must exist as the primary key of another table. It enforces `referential integrity`.
-   - It may be NULL (meaning "no related row yet") and may repeat, since many students can be in one department.
-   ```
-   Student.dept_id -> Department.dept_id
-   ```
-
-   Complete example
-   ```sql
-   CREATE TABLE Department (
-       dept_id   INT PRIMARY KEY,
-       dept_name VARCHAR(50) NOT NULL UNIQUE
-   );
-
-   CREATE TABLE Student (
-       student_id  INT PRIMARY KEY,            -- primary key
-       national_id VARCHAR(20) UNIQUE,         -- alternate key
-       email       VARCHAR(100) UNIQUE,        -- alternate key
-       name        VARCHAR(100) NOT NULL,
-       dept_id     INT,
-       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
-   );
-   ```
-
-   Two other keys often asked alongside
-   - `Composite key` — a primary key made of more than one attribute, for example `(order_id, product_id)` in an order-line table.
-   - `Alternate key` — a candidate key not chosen as the primary key.
-
-3. **Difference between primary key, foreign key? What is trigger?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
-
-   Answer:
-
-   Primary key vs foreign key
-
-   | Point | Primary Key | Foreign Key |
-   |---|---|---|
-   | Purpose | Uniquely identifies each row of its own table | Links a row to a row in another table |
-   | Integrity enforced | `Entity integrity` | `Referential integrity` |
-   | Uniqueness | Must be unique | May repeat |
-   | NULL | `Not allowed` | Allowed, unless declared NOT NULL |
-   | Number per table | Exactly one | Many |
-   | Refers to | Nothing; it is the reference | The primary key of another table |
-   | Index | Clustered index created automatically | Must usually be indexed manually |
-   | Deleting a referenced row | Restricted if child rows exist | The child row is the dependent one |
-
-   Example
-   ```sql
-   CREATE TABLE Department (
-       dept_id   INT PRIMARY KEY,          -- primary key
-       dept_name VARCHAR(50)
-   );
-
-   CREATE TABLE Employee (
-       emp_id   INT PRIMARY KEY,           -- primary key of this table
-       emp_name VARCHAR(100),
-       dept_id  INT,
-       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- foreign key
-   );
-   ```
-   - `Employee.dept_id` may repeat, because many employees work in one department, and it may be NULL for an unassigned employee. `Department.dept_id` may do neither.
-
-   What is a trigger
-   - A `trigger` is a block of code stored in the database that runs `automatically` in response to an event on a table — an INSERT, UPDATE or DELETE. It is never called explicitly.
-
-   ```sql
-   CREATE TRIGGER audit_salary_change
-   AFTER UPDATE ON Employee
-   FOR EACH ROW
-   BEGIN
-       INSERT INTO Salary_Audit (emp_id, old_salary, new_salary, changed_on)
-       VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW());
-   END;
-   ```
-   - `OLD` refers to the row before the change and `NEW` to the row after it.
-
-   Classification
-   - By timing: `BEFORE` (validate or modify the data before it is written) and `AFTER` (react once the change is committed to the table).
-   - By event: `INSERT`, `UPDATE`, `DELETE`.
-   - By granularity: `ROW-level` (once per affected row) and `STATEMENT-level` (once per statement).
-
-   Uses
-   - Maintaining an `audit trail` of who changed what and when.
-   - Enforcing complex business rules that a CHECK constraint cannot express.
-   - Keeping `derived data` consistent, such as a running total or a stock level.
-   - Cascading changes to related tables, and preventing invalid operations.
-
-   Drawbacks
-   - They are `invisible` — an application developer may not realise a trigger is firing, which makes debugging hard.
-   - They add overhead to every write, and a trigger that fires another trigger can cascade unexpectedly.
-   - Business logic hidden in the database is harder to test and version-control than logic in the application.
-
-4. **Define primary key, super key, and Candidate key.** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
-
-   Answer:
-
-   `Super key`
-   - Any set of one or more attributes whose values `uniquely identify` a row in a relation. It is allowed to contain redundant attributes.
-   - Adding any attribute to a super key produces another super key, so a table usually has many of them.
-
-   `Candidate key`
-   - A `minimal` super key: no attribute can be removed from it without destroying uniqueness.
-   - Every candidate key is a super key, but not every super key is a candidate key.
-
-   `Primary key`
-   - The `one` candidate key that the designer chooses to identify rows in the table.
-   - It can never be NULL and never repeat, and there is exactly one per table. The candidate keys not chosen become `alternate keys`.
-
-   Worked example
-   ```
-   Student (student_id, national_id, email, name, phone)
-
-   Assume student_id, national_id and email are each unique on their own.
-   ```
-
-   Super keys — many
-   ```
-   {student_id}
-   {national_id}
-   {email}
-   {student_id, name}
-   {national_id, phone}
-   {student_id, national_id, email, name, phone}
-   ```
-   - All identify a row uniquely, so all are super keys. Most contain unnecessary attributes.
-
-   Candidate keys — the minimal ones
-   ```
-   {student_id}
-   {national_id}
-   {email}
-   ```
-   - `{student_id, name}` is `not` a candidate key: removing `name` still gives uniqueness, so it is not minimal.
-
-   Primary key — the one chosen
-   ```
-   student_id
-   ```
-   - Chosen because it is short, numeric, never changes and is generated by the system. `national_id` and `email` become alternate keys and are declared UNIQUE.
-
-   The hierarchy
-   ```
-   +-------------------------------------------+
-   |              SUPER KEYS                   |
-   |   +-----------------------------------+   |
-   |   |        CANDIDATE KEYS             |   |
-   |   |   +-------------------------+     |   |
-   |   |   |      PRIMARY KEY        |     |   |
-   |   |   +-------------------------+     |   |
-   |   +-----------------------------------+   |
-   +-------------------------------------------+
-   ```
-
-   In SQL
-   ```sql
-   CREATE TABLE Student (
-       student_id  INT PRIMARY KEY,          -- primary key
-       national_id VARCHAR(20) UNIQUE,       -- alternate (candidate) key
-       email       VARCHAR(100) UNIQUE,      -- alternate (candidate) key
-       name        VARCHAR(100) NOT NULL,
-       phone       VARCHAR(15)
-   );
-   ```
-
-   Choosing a primary key in practice
-   - Prefer one that is `short`, `numeric`, `never changes` and is `never NULL`. That is why a surrogate `id` is usually preferred to a natural key such as an email address, which a person may change.
-
-5. **What is primary key and foreign key with example?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
-
-   Answer:
-
-   Primary key
-   - The column, or set of columns, that `uniquely identifies` each row of a table.
-   - Rules: values must be `unique`, can `never be NULL`, and there is exactly `one` primary key per table.
-   - It enforces `entity integrity` — the guarantee that every row is distinct and identifiable.
-   - Most database systems create a clustered index on it automatically, which is why lookups by primary key are fast.
-
-   Foreign key
-   - A column in one table whose values must match the `primary key` of another table.
-   - It enforces `referential integrity` — the guarantee that a reference points at something that actually exists.
-   - Values may `repeat` and may be `NULL` (meaning "not related to anything yet"). A table may have many foreign keys.
-
-   Example
-   ```sql
-   CREATE TABLE Department (
-       dept_id   INT PRIMARY KEY,               -- PRIMARY KEY
-       dept_name VARCHAR(50) NOT NULL
-   );
-
-   CREATE TABLE Employee (
-       emp_id   INT PRIMARY KEY,                -- PRIMARY KEY of Employee
-       emp_name VARCHAR(100) NOT NULL,
-       salary   DECIMAL(10,2),
-       dept_id  INT,
-       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-   );
-   ```
-
-   The data
-   ```
-   Department (parent)                Employee (child)
-   +---------+-----------+            +--------+----------+---------+
-   | dept_id | dept_name |            | emp_id | emp_name | dept_id |
-   +---------+-----------+            +--------+----------+---------+
-   |   10    | IT        |  <-------- |  101   | Karim    |   10    |
-   |   20    | HR        |  <-------- |  102   | Rahim    |   10    |  repeats
-   +---------+-----------+  <-------- |  103   | Sumi     |   20    |
-                                      |  104   | Nabil    |  NULL   |  allowed
-                                      +--------+----------+---------+
-   ```
-
-   What the constraints prevent
-   ```sql
-   -- rejected: dept 99 does not exist in Department
-   INSERT INTO Employee VALUES (105, 'Jamil', 40000, 99);
-      -> ERROR: foreign key constraint fails
-
-   -- rejected: emp_id 101 already exists
-   INSERT INTO Employee VALUES (101, 'Farida', 50000, 10);
-      -> ERROR: duplicate primary key
-
-   -- rejected: employees still reference department 10
-   DELETE FROM Department WHERE dept_id = 10;
-      -> ERROR: cannot delete a parent row
-   ```
-
-   Comparison
-
-   | Point | Primary key | Foreign key |
-   |---|---|---|
-   | Uniqueness | Required | Not required |
-   | NULL | Never | Allowed |
-   | Count per table | One | Many |
-   | Integrity enforced | Entity | Referential |
-   | Points at | Nothing | The parent table's primary key |
-
-6. **Explain Primary key, Candidate key, and Foreign key.** *[Teletalk Assistant Manager (IT) 2023 compact it 468 (ET: N/A)]*
-
-   Answer:
-
-   `Primary key`
-   - The candidate key chosen to uniquely identify each row of a table.
-   - It must be `unique`, can `never be NULL`, and there is exactly one per table.
-   - It enforces `entity integrity`, and it is normally indexed automatically.
-   ```sql
-   student_id INT PRIMARY KEY
-   ```
-
-   `Candidate key`
-   - Any `minimal` set of attributes that uniquely identifies a row — remove one attribute and uniqueness is lost.
-   - A table may have several. The designer selects one as the primary key, and the rest become `alternate keys`, usually declared UNIQUE.
-   ```
-   Student(student_id, national_id, email, name)
-   Candidate keys: {student_id}, {national_id}, {email}
-   ```
-
-   `Foreign key`
-   - An attribute in one table whose values must already exist as the primary key of another table.
-   - It enforces `referential integrity`, may `repeat`, and may be `NULL`.
-   ```sql
-   dept_id INT REFERENCES Department(dept_id)
-   ```
-
-   Complete worked example
-   ```sql
-   CREATE TABLE Department (
-       dept_id   INT PRIMARY KEY,
-       dept_name VARCHAR(50) NOT NULL UNIQUE
-   );
-
-   CREATE TABLE Student (
-       student_id  INT PRIMARY KEY,           -- PRIMARY KEY (chosen candidate)
-       national_id VARCHAR(20) UNIQUE,        -- CANDIDATE KEY (alternate)
-       email       VARCHAR(100) UNIQUE,       -- CANDIDATE KEY (alternate)
-       name        VARCHAR(100) NOT NULL,
-       dept_id     INT,
-       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-   );
-   ```
-
-   Comparison
-
-   | Point | Primary key | Candidate key | Foreign key |
-   |---|---|---|---|
-   | Uniqueness | Yes | Yes | No |
-   | NULL allowed | No | No | Yes |
-   | Number per table | One | One or many | Many |
-   | Minimal | Yes | Yes | Not applicable |
-   | Refers to another table | No | No | Yes |
-   | Integrity enforced | Entity | — | Referential |
-   | Chosen by | The designer, from the candidates | Determined by the data | The designer |
-
-   The relationship in one line
-   - Every `primary key` is a `candidate key`, and every candidate key is a `super key`. A `foreign key` is different in kind — it is not about identifying rows in its own table but about pointing at rows in another.
-
-7. **(খ) Primary key এবং Super key এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.)
-
-   | Point | Primary Key | Super Key |
-   |---|---|---|
-   | Definition | The candidate key chosen to identify rows | Any attribute set that identifies rows uniquely |
-   | Minimality | `Must be minimal` — no attribute can be removed | `May contain redundant attributes` |
-   | Number per table | Exactly `one` | Usually `many` |
-   | NULL allowed | Never | Its attributes could be NULL unless constrained |
-   | Chosen by | The designer | Determined by the data; not chosen |
-   | Declared in SQL | Yes, with `PRIMARY KEY` | No SQL keyword exists for it |
-   | Index created | Yes, automatically | No |
-   | Relationship | Every primary key is a super key | Not every super key is a primary key |
-
-   Worked example
-   ```
-   Student (student_id, national_id, email, name, phone)
-   ```
-
-   Super keys — many of them
-   ```
-   {student_id}
-   {national_id}
-   {email}
-   {student_id, name}
-   {student_id, national_id}
-   {national_id, phone, name}
-   {student_id, national_id, email, name, phone}
-   ```
-   - Any set containing a unique attribute is a super key, and adding more attributes keeps it a super key. A table with n attributes can have a very large number of them.
-
-   Primary key — exactly one
-   ```
-   student_id
-   ```
-   - Chosen from the minimal super keys (the candidate keys) because it is short, numeric and never changes.
-
-   Why `{student_id, name}` is a super key but not a primary key
-   - It does identify a row uniquely, so it qualifies as a super key.
-   - But `name` is redundant — `student_id` alone is already sufficient. A primary key must be `minimal`, so this set is disqualified.
-
-   The containment relationship
-   ```
-   +----------------------------------------------+
-   |                 SUPER KEYS                   |
-   |   (any set that uniquely identifies a row)   |
-   |   +--------------------------------------+   |
-   |   |          CANDIDATE KEYS              |   |
-   |   |     (minimal super keys)             |   |
-   |   |   +------------------------------+   |   |
-   |   |   |        PRIMARY KEY           |   |   |
-   |   |   |   (the one that is chosen)   |   |   |
-   |   |   +------------------------------+   |   |
-   |   +--------------------------------------+   |
-   +----------------------------------------------+
-   ```
-   - In one sentence: `every primary key is a super key, but a super key becomes a primary key only if it is minimal and is the one selected`.
-
-8. **Super key and Candidate key finding from table.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 648 (ET: BUET)]*
-
-   Answer: Super keys and candidate keys are found from the data by testing which attribute sets are unique, and then removing the ones that are not minimal.
-
-   The method
-   - Step 1 — identify which single attributes are unique across all rows.
-   - Step 2 — every set containing such an attribute is a `super key`.
-   - Step 3 — a super key is a `candidate key` only if it is `minimal`: no attribute can be dropped without losing uniqueness.
-   - Step 4 — the designer picks one candidate key as the `primary key`.
-
-   Worked example
-   ```
-   Student
-   +------------+-------------+---------------------+-------+-------+
-   | student_id | national_id | email               | name  | dept  |
-   +------------+-------------+---------------------+-------+-------+
-   |    101     | 1234567890  | karim@mail.com      | Karim | CSE   |
-   |    102     | 2345678901  | rahim@mail.com      | Rahim | EEE   |
-   |    103     | 3456789012  | sumi@mail.com       | Sumi  | CSE   |
-   |    104     | 4567890123  | nabil@mail.com      | Karim | BBA   |
-   +------------+-------------+---------------------+-------+-------+
-   ```
-
-   Step 1 — test each attribute for uniqueness
-   ```
-   student_id  : 101, 102, 103, 104   -> all different  -> UNIQUE
-   national_id : all different                          -> UNIQUE
-   email       : all different                          -> UNIQUE
-   name        : Karim appears twice                    -> NOT unique
-   dept        : CSE appears twice                      -> NOT unique
-   ```
-
-   Step 2 — super keys
-   ```
-   {student_id}
-   {national_id}
-   {email}
-   {student_id, name}
-   {student_id, dept}
-   {national_id, email}
-   {email, name, dept}
-   {student_id, national_id, email, name, dept}
-   ... and every other set containing at least one unique attribute
-   ```
-
-   Step 3 — candidate keys (minimal super keys)
-   ```
-   {student_id}
-   {national_id}
-   {email}
-   ```
-   - `{student_id, name}` is rejected because dropping `name` still gives uniqueness — it is not minimal.
-   - `{name, dept}` is not even a super key: Karim/CSE would not distinguish rows if a second Karim joined CSE.
-
-   Step 4 — primary key
-   ```
-   student_id       (chosen; short, numeric, stable, system-generated)
-   Alternate keys: national_id, email
-   ```
-
-   A composite example, where no single attribute is unique
-   ```
-   Enrollment
-   +------------+-----------+-------+
-   | student_id | course_id | grade |
-   +------------+-----------+-------+
-   |    101     |   CS101   |   A   |
-   |    101     |   CS102   |   B   |
-   |    102     |   CS101   |   A   |
-   +------------+-----------+-------+
-
-   student_id alone : repeats -> not unique
-   course_id  alone : repeats -> not unique
-   {student_id, course_id} : unique -> candidate key (composite)
-   ```
-   - Here the candidate key is `composite`, and it is also the primary key. This is the normal shape of a junction table implementing a many-to-many relationship.
-
-   The counting rule often asked
-   - If a relation has one candidate key of size 1 and `n` attributes in total, the number of super keys is `2^(n−1)` — every subset of the remaining n−1 attributes combined with that key.
-
-9. **From Functional Dependency for determine candidate key.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 661 (ET: N/A)]*
-
-   Answer: A candidate key is found from a set of functional dependencies by computing `attribute closures`. The rule is that a set X is a candidate key when `X⁺` contains every attribute of the relation and no proper subset of X has that property.
-
-   The method
-   - Step 1 — classify the attributes:
-     - appearing `only on the left` of the FDs — must be in every candidate key.
-     - appearing `only on the right` — can never be in a candidate key.
-     - appearing on `both sides` or in `neither` — may or may not be.
-   - Step 2 — start with the attributes that appear only on the left. Compute their closure.
-   - Step 3 — if that closure already contains all attributes, it is the only candidate key.
-   - Step 4 — otherwise add the "both sides" attributes one at a time and recompute, keeping only the minimal sets.
-
-   Worked example 1
-   ```
-   R(A, B, C, D)
-   FDs: A -> B,  B -> C,  C -> D
-   ```
-   - `A` appears only on the left, so it must be in every candidate key.
-   ```
-   A+ = {A}
-      A -> B  gives {A, B}
-      B -> C  gives {A, B, C}
-      C -> D  gives {A, B, C, D}   = all attributes
-   ```
-   - `Candidate key: {A}`. It is the only one, since no other attribute or set has a closure covering R.
-
-   Worked example 2
-   ```
-   R(A, B, C, D, E)
-   FDs: AB -> C,  C -> D,  D -> A,  E -> B
-   ```
-   - Attribute `E` appears only on the left of `E -> B` and never on the right, so `E must be in every candidate key`.
-   ```
-   E+ = {E, B}                      -- not all attributes, so E alone is not a key
-
-   Try {A, E}: A+ ... AE+ = {A,E,B} then AB -> C gives {A,B,C,E}, C -> D gives {A,B,C,D,E}  ✓
-   Try {C, E}: CE+ = {C,E,B}, C -> D gives {C,D,E,B}, D -> A gives {A,B,C,D,E}              ✓
-   Try {D, E}: DE+ = {D,E,B}, D -> A gives {A,B,D,E}, AB -> C gives {A,B,C,D,E}             ✓
-   ```
-   - `Candidate keys: {A,E}, {C,E}, {D,E}` — all minimal, all covering R.
-
-   Worked example 3 — the classic exam form
-   ```
-   R(A, B, C, D, E, F)
-   FDs: A -> BC,  CD -> E,  B -> D,  E -> A
-   ```
-   - `F` appears in no FD at all, so it must be in every candidate key.
-   ```
-   AF+ = {A,F} -> BC gives {A,B,C,F} -> B->D gives {A,B,C,D,F} -> CD->E gives all  ✓
-   BF+ = {B,F} -> D gives {B,D,F}                                -- not all, so not a key
-   EF+ = {E,F} -> A gives {A,E,F} -> BC, D ... gives all          ✓
-   CDF+ = {C,D,F} -> E gives {C,D,E,F} -> A gives all             ✓
-   ```
-   - `Candidate keys: {A,F}, {E,F}, {C,D,F}`.
-
-   The closure algorithm itself
-   ```
-   X+ = X
-   repeat:
-       for each FD  Y -> Z :
-           if Y is a subset of X+ then X+ = X+ ∪ Z
-   until X+ stops changing
-   ```
-
-   Practical shortcuts
-   - An attribute appearing `only on the right` of every FD can never be part of any candidate key.
-   - An attribute appearing on `neither` side must be part of `every` candidate key.
-   - Always verify `minimality`: after finding a set whose closure is R, check that no proper subset also works.
-
-10. **Relation to find primary key, candidate key, super key.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
-
-    Answer: All three are found from the same table by testing which attribute sets are unique.
-
-    The definitions
-    - `Super key` — any attribute set that uniquely identifies a row; redundant attributes are allowed.
-    - `Candidate key` — a `minimal` super key; removing any attribute destroys uniqueness.
-    - `Primary key` — the `one` candidate key the designer selects.
-
-    Worked example
-    ```
-    Employee
-    +--------+-------------+-------------------+-------+---------+
-    | emp_id | national_id | email             | name  | dept_id |
-    +--------+-------------+-------------------+-------+---------+
-    |  101   | 1234567890  | karim@mail.com    | Karim |   10    |
-    |  102   | 2345678901  | rahim@mail.com    | Rahim |   10    |
-    |  103   | 3456789012  | sumi@mail.com     | Sumi  |   20    |
-    |  104   | 4567890123  | nabil@mail.com    | Karim |   20    |
-    +--------+-------------+-------------------+-------+---------+
-    ```
-
-    Step 1 — which single attributes are unique?
-    ```
-    emp_id      -> all different   -> UNIQUE
-    national_id -> all different   -> UNIQUE
-    email       -> all different   -> UNIQUE
-    name        -> Karim twice     -> not unique
-    dept_id     -> 10, 20 repeat   -> not unique
-    ```
-
-    Step 2 — super keys
-    ```
-    {emp_id}, {national_id}, {email}
-    {emp_id, name}, {emp_id, dept_id}, {national_id, email}
-    {email, name, dept_id}
-    {emp_id, national_id, email, name, dept_id}
-    ...
-    ```
-    - Any set containing at least one of the three unique attributes is a super key.
-
-    Step 3 — candidate keys (the minimal super keys)
-    ```
-    {emp_id}
-    {national_id}
-    {email}
-    ```
-    - `{emp_id, name}` fails minimality: `name` can be dropped and uniqueness survives.
-
-    Step 4 — primary key
-    ```
-    emp_id
-    ```
-    - Chosen because it is short, numeric, system-generated and never changes. A person can change their email, so `email` is a poor primary key even though it is a valid candidate key.
-    - `national_id` and `email` become `alternate keys`, declared UNIQUE.
-
-    In SQL
+    (i) Names of all employees living in 'Dhaka':
     ```sql
-    CREATE TABLE Employee (
-        emp_id      INT PRIMARY KEY,          -- primary key
-        national_id VARCHAR(20) UNIQUE,       -- alternate key
-        email       VARCHAR(100) UNIQUE,      -- alternate key
-        name        VARCHAR(100) NOT NULL,
-        dept_id     INT REFERENCES Department(dept_id)   -- foreign key
-    );
+    SELECT employee_name 
+    FROM employee 
+    WHERE city = 'Dhaka';
     ```
 
-    The counting rule
-    - If a relation has `n` attributes and a single-attribute candidate key K, the number of super keys is `2^(n−1)`: K combined with any subset of the remaining n−1 attributes. Here n = 5 and there are three such keys, so the count is larger and must be worked out by inclusion-exclusion.
-
-11. **(a) Differentiate among foreign key, candidate key, and primary key.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
-
-    Answer:
-
-    | Point | Foreign Key | Candidate Key | Primary Key |
-    |---|---|---|---|
-    | Definition | An attribute referring to another table's primary key | A minimal set of attributes that uniquely identifies a row | The candidate key chosen to identify rows |
-    | Uniqueness | Not required | Required | Required |
-    | NULL allowed | `Yes` | `No` | `No` |
-    | Number per table | Many | One or many | Exactly one |
-    | Minimal | Not applicable | `Yes` | Yes |
-    | Refers to another table | `Yes` | No | No |
-    | Integrity enforced | `Referential` | — | `Entity` |
-    | Chosen by | The designer | Determined by the data | The designer, from the candidates |
-    | Index created automatically | No, usually manual | Only if declared UNIQUE | Yes, clustered |
-    | Purpose | Link two tables | Show which sets could identify rows | Identify each row |
-
-    The relationship between them
-    ```
-    Super keys  ⊃  Candidate keys  ⊃  Primary key   (all about identifying rows in THIS table)
-
-    Foreign key —  a different concept: it points at another table's primary key
-    ```
-
-    Worked example
+    (ii) Names of all employees with salary > BDT 1,00,000:
     ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,
-        dept_name VARCHAR(50) NOT NULL UNIQUE
-    );
-
-    CREATE TABLE Employee (
-        emp_id      INT PRIMARY KEY,          -- PRIMARY KEY (a chosen candidate key)
-        national_id VARCHAR(20) UNIQUE,       -- CANDIDATE KEY (alternate)
-        email       VARCHAR(100) UNIQUE,      -- CANDIDATE KEY (alternate)
-        emp_name    VARCHAR(100) NOT NULL,
-        dept_id     INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-    );
+    SELECT employee_name 
+    FROM works 
+    WHERE salary > 100000;
     ```
 
-    The data, showing the difference in behaviour
-    ```
-    Department                        Employee
-    +---------+-----------+           +--------+----------+---------+
-    | dept_id | dept_name |           | emp_id | emp_name | dept_id |
-    +---------+-----------+           +--------+----------+---------+
-    |   10    | IT        | <-------- |  101   | Karim    |   10    |
-    |   20    | HR        | <-------- |  102   | Rahim    |   10    |  repeats — allowed
-    +---------+-----------+ <-------- |  103   | Sumi     |   20    |
-                                      |  104   | Nabil    |  NULL   |  NULL — allowed
-                                      +--------+----------+---------+
-    ```
-    - `emp_id` (primary key) can neither repeat nor be NULL.
-    - `dept_id` (foreign key) can do both, because many employees share a department and a new employee may not yet be assigned one.
-
-    What each prevents
+    (iii) Names of all employees living in 'Dhaka' with salary < BDT 1,00,000:
     ```sql
-    INSERT INTO Employee VALUES (101, ...);           -- rejected: duplicate primary key
-    INSERT INTO Employee VALUES (105, ..., 99);       -- rejected: dept 99 does not exist
-    DELETE FROM Department WHERE dept_id = 10;        -- rejected: child rows still refer to it
+    SELECT e.employee_name 
+    FROM employee e 
+    JOIN works w ON e.employee_name = w.employee_name 
+    WHERE e.city = 'Dhaka' AND w.salary < 100000;
     ```
 
-12. **Explain the primary key and composite key with respect to database.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
+89. **SQL to find duplicate names from employee Table.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
 
-    Answer:
-
-    Primary key
-    - The column or set of columns that `uniquely identifies` each row of a table.
-    - Rules: values must be `unique`, may `never be NULL`, and a table has exactly `one`.
-    - It enforces `entity integrity` — every row is distinct and identifiable — and is normally given a clustered index automatically.
-    ```sql
-    CREATE TABLE Student (
-        student_id INT PRIMARY KEY,
-        name       VARCHAR(100)
-    );
-    ```
-
-    Composite key
-    - A `primary key made of two or more attributes`, used when no single attribute is unique on its own but a combination is.
-    - Also called a `compound key`. It follows the same rules as any primary key: the `combination` must be unique, and `none` of its columns may be NULL.
-    ```sql
-    CREATE TABLE Enrollment (
-        student_id INT,
-        course_id  INT,
-        grade      CHAR(2),
-        PRIMARY KEY (student_id, course_id),          -- COMPOSITE KEY
-        FOREIGN KEY (student_id) REFERENCES Student(student_id),
-        FOREIGN KEY (course_id)  REFERENCES Course(course_id)
-    );
-    ```
-
-    Why the composite key is needed here
-    ```
-    Enrollment
-    +------------+-----------+-------+
-    | student_id | course_id | grade |
-    +------------+-----------+-------+
-    |    101     |   CS101   |   A   |
-    |    101     |   CS102   |   B   |   <- same student, different course
-    |    102     |   CS101   |   A   |   <- same course, different student
-    +------------+-----------+-------+
-
-    student_id alone : 101 repeats  -> not unique
-    course_id  alone : CS101 repeats -> not unique
-    {student_id, course_id} : every pair distinct -> unique  ✓
-    ```
-    - This shape — a junction table implementing a many-to-many relationship — is where composite keys are most often found.
-
-    Comparison
-
-    | Point | Primary key (single column) | Composite key |
-    |---|---|---|
-    | Number of columns | One | Two or more |
-    | Uniqueness | Of that one column | Of the `combination` |
-    | NULL | Not allowed | Not allowed in any of the columns |
-    | Typical use | Ordinary entity table | Junction table for many-to-many |
-    | Foreign keys referring to it | One column | Must repeat all the columns |
-    | Index size | Small | Larger, so joins are more costly |
-
-    Practical trade-off
-    - A composite key is logically correct but makes every referencing foreign key wider and every join more expensive. Many designers therefore add a `surrogate key` — a single auto-increment `enrollment_id` — as the primary key, and keep `UNIQUE(student_id, course_id)` to preserve the business rule:
-    ```sql
-    CREATE TABLE Enrollment (
-        enrollment_id INT PRIMARY KEY AUTO_INCREMENT,   -- surrogate key
-        student_id    INT NOT NULL,
-        course_id     INT NOT NULL,
-        grade         CHAR(2),
-        UNIQUE (student_id, course_id)                  -- the real business rule
-    );
-    ```
-
-13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.)
-
-    Primary key
-    - The attribute, or set of attributes, that `uniquely identifies` each row of a table.
-    - It must be `unique`, can `never be NULL`, and there is exactly `one` per table.
-    - It enforces `entity integrity` — the rule that no two rows are identical and every row can be located.
-    - In relational database design it is what makes a row addressable, and it is what foreign keys elsewhere point at.
-
-    Foreign key
-    - An attribute in one table whose values must match a value of the `primary key` in another table.
-    - It enforces `referential integrity` — the rule that a reference must point at something that exists.
-    - It `may repeat` and `may be NULL`, and a table may have many foreign keys.
-    - It is what actually implements a relationship between two tables in the relational model.
-
-    Example
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,                  -- PRIMARY KEY
-        dept_name VARCHAR(50) NOT NULL
-    );
-
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,                   -- PRIMARY KEY of Employee
-        emp_name VARCHAR(100) NOT NULL,
-        salary   DECIMAL(10,2),
-        dept_id  INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-    );
-    ```
-
-    The data
-    ```
-    Department (parent)                 Employee (child)
-    +---------+-----------+             +--------+----------+---------+
-    | dept_id | dept_name |             | emp_id | emp_name | dept_id |
-    +---------+-----------+             +--------+----------+---------+
-    |   10    | IT        |  <--------  |  101   | Karim    |   10    |
-    |   20    | HR        |  <--------  |  102   | Rahim    |   10    |
-    +---------+-----------+  <--------  |  103   | Sumi     |   20    |
-                                        |  104   | Nabil    |  NULL   |
-                                        +--------+----------+---------+
-    ```
-
-    What the two constraints prevent
-    ```sql
-    INSERT INTO Employee VALUES (101, 'Farida', 50000, 10);
-       -> rejected: emp_id 101 already exists (primary key violation)
-
-    INSERT INTO Employee VALUES (105, 'Jamil', 40000, 99);
-       -> rejected: department 99 does not exist (foreign key violation)
-
-    DELETE FROM Department WHERE dept_id = 10;
-       -> rejected: employees still reference it
-    ```
-
-    Comparison
-
-    | Point | Primary key | Foreign key |
-    |---|---|---|
-    | Uniqueness | Required | Not required |
-    | NULL | Never | Allowed |
-    | Count per table | One | Many |
-    | Integrity | Entity | Referential |
-    | Points at | Nothing | Another table's primary key |
-    | Index | Automatic | Usually manual |
-
-14. **(b) What are purpose of using foreign key in a database? Give suitable example.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
-
-    Answer:
-
-    Purposes of a foreign key
-
-    1. `Enforcing referential integrity` — the primary purpose
-    - It guarantees that a value in the child table actually exists in the parent table. An order cannot refer to a customer who was never created, and an employee cannot belong to a department that does not exist.
-
-    2. `Establishing relationships between tables`
-    - The foreign key is what physically implements a one-to-many or many-to-many relationship in the relational model. Without it, the tables are merely separate lists with no connection.
-
-    3. `Preventing orphan records`
-    - A parent row cannot be deleted while child rows still refer to it, unless a cascading action is defined. This stops rows being left pointing at nothing.
-
-    4. `Enabling joins`
-    - The foreign key is the natural join column, which is how data spread across normalised tables is reassembled.
-
-    5. `Supporting normalisation`
-    - Splitting data into separate tables to remove redundancy only works because foreign keys can put it back together. They are what makes 2NF and 3NF practical.
-
-    6. `Documenting the data model`
-    - The constraint records the intended relationship in the schema itself, so it is visible to every developer and to design tools, not merely implied by naming.
-
-    7. `Allowing controlled cascading actions`
-    - `ON DELETE CASCADE`, `SET NULL` and `RESTRICT` let the designer state what should happen automatically when a parent disappears.
-
-    Example
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,
-        dept_name VARCHAR(50) NOT NULL
-    );
-
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100) NOT NULL,
-        dept_id  INT,
-        CONSTRAINT fk_dept FOREIGN KEY (dept_id)
-            REFERENCES Department(dept_id)
-            ON DELETE SET NULL
-            ON UPDATE CASCADE
-    );
-    ```
-
-    What it prevents in practice
-    ```sql
-    -- 1. an invalid reference is rejected
-    INSERT INTO Employee VALUES (105, 'Jamil', 99);
-       -> ERROR: department 99 does not exist
-
-    -- 2. deleting a referenced parent is controlled
-    DELETE FROM Department WHERE dept_id = 10;
-       -> with the default RESTRICT: rejected
-       -> with ON DELETE CASCADE : the employees are deleted too
-       -> with ON DELETE SET NULL: the employees' dept_id becomes NULL
-    ```
-
-    The referential actions
-
-    | Action | Effect when the parent row is deleted or updated |
-    |---|---|
-    | `RESTRICT` / `NO ACTION` | The operation is rejected. This is the default |
-    | `CASCADE` | The child rows are deleted or updated to match |
-    | `SET NULL` | The child's foreign key becomes NULL (the column must allow NULL) |
-    | `SET DEFAULT` | The child's foreign key takes its default value |
-
-    - Choosing between them is a design decision: `CASCADE` suits an order and its order-lines, where the lines are meaningless without the order; `SET NULL` suits an employee and a department, where the employee still exists after the department is dissolved.
-
-15. **What is primary key?** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
-
-    Answer: A `primary key` is the column, or set of columns, that uniquely identifies each row of a table.
-
-    Rules it must satisfy
-    - `Unique` — no two rows may hold the same value.
-    - `Not NULL` — the value can never be missing, since a row must always be identifiable.
-    - `One per table` — a table may have many candidate keys, but only one of them is designated the primary key.
-    - `Immutable in practice` — it should never change, because other tables refer to it.
-
-    What it enforces
-    - `Entity integrity`: the guarantee that every row in the table is distinct and can be located.
-
-    Example
-    ```sql
-    CREATE TABLE Student (
-        student_id INT PRIMARY KEY,           -- primary key
-        name       VARCHAR(100) NOT NULL,
-        email      VARCHAR(100) UNIQUE,
-        dept_id    INT
-    );
-    ```
-    ```
-    Student
-    +------------+-------+------------------+
-    | student_id | name  | email            |
-    +------------+-------+------------------+
-    |    101     | Karim | karim@mail.com   |
-    |    102     | Rahim | rahim@mail.com   |
-    |    103     | Karim | karim2@mail.com  |   <- same name is fine
-    +------------+-------+------------------+
-    ```
-    - Two students may share a name; they may not share a `student_id`.
-
-    Composite primary key
-    - When no single column is unique, several are combined:
-    ```sql
-    CREATE TABLE Enrollment (
-        student_id INT,
-        course_id  INT,
-        grade      CHAR(2),
-        PRIMARY KEY (student_id, course_id)
-    );
-    ```
-    - The `combination` must be unique, and none of the columns may be NULL.
-
-    How to choose one
-    - Prefer a value that is `short`, `numeric`, `never changes` and is `never NULL`.
-    - A `surrogate key` — an auto-increment id generated by the system — is usually better than a `natural key` such as an email address or national ID, because natural values can change, can be entered wrongly, and may carry privacy concerns.
-
-    Primary key vs unique key
-
-    | Point | Primary key | Unique key |
-    |---|---|---|
-    | NULL allowed | No | Yes, usually one NULL |
-    | Number per table | One | Many |
-    | Index type | Clustered, by default | Non-clustered |
-    | Purpose | Identify the row | Prevent duplicate values in a column |
-
-    - Related terms: a `super key` is any set that identifies a row; a `candidate key` is a minimal super key; the primary key is the candidate key chosen; the remaining candidates are `alternate keys`.
-
-16. **What is Primary key, Unique key and Forgein key.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
-
-    Answer:
-
-    `Primary key`
-    - The column or set of columns that uniquely identifies each row.
-    - Must be `unique`, can `never be NULL`, and there is exactly `one` per table.
-    - Enforces `entity integrity`, and normally receives a clustered index automatically.
-
-    `Unique key`
-    - A constraint that prevents duplicate values in a column, but `allows NULL` (usually one NULL, though SQL Server permits only one and Oracle permits several).
-    - A table may have `many` unique keys. They are the candidate keys not chosen as the primary key, also called `alternate keys`.
-    - Receives a non-clustered index.
-
-    `Foreign key`
-    - A column whose values must exist as the primary key of another table.
-    - Enforces `referential integrity`. Values `may repeat` and `may be NULL`, and a table may have many.
-
-    Example
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,
-        dept_name VARCHAR(50) NOT NULL UNIQUE
-    );
-
-    CREATE TABLE Employee (
-        emp_id      INT PRIMARY KEY,               -- PRIMARY KEY
-        national_id VARCHAR(20) UNIQUE,            -- UNIQUE KEY
-        email       VARCHAR(100) UNIQUE,           -- UNIQUE KEY
-        emp_name    VARCHAR(100) NOT NULL,
-        dept_id     INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-    );
-    ```
-
-    Comparison
-
-    | Point | Primary key | Unique key | Foreign key |
-    |---|---|---|---|
-    | Uniqueness | Required | Required | Not required |
-    | NULL allowed | `Never` | `Yes` | `Yes` |
-    | Number per table | One | Many | Many |
-    | Index | Clustered | Non-clustered | Manual |
-    | Integrity enforced | Entity | Uniqueness of a column | Referential |
-    | Refers to another table | No | No | Yes |
-    | Can be a composite | Yes | Yes | Yes |
-
-    The behaviour that distinguishes them
-    ```sql
-    -- primary key: neither duplicate nor NULL
-    INSERT INTO Employee VALUES (101, ...);   -- second time -> rejected, duplicate
-    INSERT INTO Employee VALUES (NULL, ...);  -- rejected, NULL not allowed
-
-    -- unique key: duplicates rejected, but NULL accepted
-    INSERT INTO Employee (emp_id, national_id) VALUES (105, NULL);   -- accepted
-    INSERT INTO Employee (emp_id, national_id) VALUES (106, NULL);   -- accepted in MySQL
-
-    -- foreign key: must exist in the parent
-    INSERT INTO Employee (emp_id, dept_id) VALUES (107, 99);   -- rejected if dept 99 absent
-    INSERT INTO Employee (emp_id, dept_id) VALUES (108, NULL); -- accepted
-    ```
-
-    - The single most examined point: `a primary key is a unique key that additionally forbids NULL and is limited to one per table`.
-
-17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 882 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.)
-
-    What is a DBMS
-    - A `Database Management System` is software that lets users define, create, store, retrieve, update and manage data in a database, while controlling access to it.
-    - It sits between the user or application and the physical data files, so the user never deals with storage directly.
-
-    What a DBMS provides
-    - `Data definition` — creating tables, columns, data types and constraints (DDL).
-    - `Data manipulation` — inserting, querying, updating and deleting rows (DML).
-    - `Data security` — users, roles, privileges and views that restrict what each person can see.
-    - `Data integrity` — constraints that keep the data correct and consistent.
-    - `Concurrency control` — many users working at once without corrupting each other's work.
-    - `Backup and recovery` — restoring the database after a failure.
-    - `Transaction management` with the `ACID` properties: Atomicity, Consistency, Isolation, Durability.
-    - `Reduced redundancy` and `data independence`, so applications survive changes in storage structure.
-    - Examples: MySQL, PostgreSQL, Oracle, SQL Server, MongoDB (NoSQL).
-
-    Role of the primary key in a relational database
-    - It `uniquely identifies` each row, so no two rows are indistinguishable and any row can be located.
-    - It enforces `entity integrity`: the value can never be NULL and never repeat.
-    - It is the target that foreign keys elsewhere point at, so it is what makes relationships possible.
-    - It normally carries a clustered index, so lookups and joins on it are fast.
-
-    Role of the foreign key
-    - It links a row in one table to a row in another, `implementing the relationship` between them.
-    - It enforces `referential integrity`: a value must already exist in the parent table, which prevents orphan records.
-    - It permits controlled cascading — `ON DELETE CASCADE` or `SET NULL` — when a parent row is removed.
-
-    Example
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,                 -- PRIMARY KEY
-        dept_name VARCHAR(50) NOT NULL
-    );
-
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,                  -- PRIMARY KEY
-        emp_name VARCHAR(100) NOT NULL,
-        dept_id  INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-    );
-    ```
-    ```
-    Department                         Employee
-    +---------+-----------+            +--------+----------+---------+
-    | dept_id | dept_name |            | emp_id | emp_name | dept_id |
-    +---------+-----------+  <-------- |  101   | Karim    |   10    |
-    |   10    | IT        |  <-------- |  102   | Rahim    |   10    |
-    |   20    | HR        |  <-------- |  103   | Sumi     |   20    |
-    +---------+-----------+            +--------+----------+---------+
-    ```
-    - `emp_id` and `dept_id` (in Department) can neither repeat nor be NULL.
-    - `dept_id` in Employee may repeat, because many employees share a department, and may be NULL for someone unassigned.
-    - The database will reject an employee whose `dept_id` does not exist, and will refuse to delete a department that still has employees.
-
-18. **(b) Explain the different type of database keys with examples.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
-
-    Answer: A relational database defines several kinds of key, each with a distinct job.
-
-    Example table used throughout
-    ```
-    Student (student_id, national_id, email, name, dept_id, roll, session)
-    ```
-
-    1. `Super key`
-    - Any attribute set that uniquely identifies a row. Redundant attributes are allowed.
-    ```
-    {student_id}, {national_id}, {student_id, name}, {email, dept_id, session}, ...
-    ```
-
-    2. `Candidate key`
-    - A `minimal` super key — remove any attribute and uniqueness is lost.
-    ```
-    {student_id}, {national_id}, {email}, {roll, session}
-    ```
-    - `{student_id, name}` is a super key but not a candidate key, because `name` is unnecessary.
-
-    3. `Primary key`
-    - The `one` candidate key chosen to identify rows. Never NULL, never duplicated, one per table.
-    ```sql
-    student_id INT PRIMARY KEY
-    ```
-
-    4. `Alternate key`
-    - The candidate keys not chosen as primary. Usually declared UNIQUE.
-    ```sql
-    national_id VARCHAR(20) UNIQUE,
-    email       VARCHAR(100) UNIQUE
-    ```
-
-    5. `Composite (compound) key`
-    - A key made of two or more attributes, used when no single attribute is unique.
-    ```sql
-    PRIMARY KEY (roll, session)          -- roll repeats across sessions
-    PRIMARY KEY (student_id, course_id)  -- in an Enrollment table
-    ```
-
-    6. `Foreign key`
-    - An attribute whose values must exist as the primary key of another table. Enforces referential integrity; may repeat and may be NULL.
-    ```sql
-    dept_id INT REFERENCES Department(dept_id)
-    ```
-
-    7. `Surrogate key`
-    - A meaningless, system-generated value — usually an auto-increment integer — used as the primary key instead of real-world data.
-    ```sql
-    student_id INT PRIMARY KEY AUTO_INCREMENT
-    ```
-    - Preferred because it never changes, is short, and carries no privacy risk.
-
-    8. `Natural key`
-    - A key taken from real-world data, such as a national ID or an email address. Meaningful but fragile, because such values can change.
-
-    9. `Unique key`
-    - A constraint forbidding duplicates but `allowing NULL`. Several per table.
-
-    10. `Partial (discriminator) key`
-    - Used in a `weak entity` to distinguish rows within one parent. It is unique only among the children of the same owner, so the full primary key is the parent's key plus this one.
-    ```sql
-    CREATE TABLE Dependent (
-        emp_id    INT,
-        dep_name  VARCHAR(50),           -- partial key
-        PRIMARY KEY (emp_id, dep_name),
-        FOREIGN KEY (emp_id) REFERENCES Employee(emp_id)
-    );
-    ```
-
-    The hierarchy
-    ```
-    Super keys  ⊃  Candidate keys  ⊃  Primary key
-                          |
-                          +--> the rest become Alternate keys
-
-    Foreign key — separate concept: points at another table's primary key
-    ```
-
-    Complete example
-    ```sql
-    CREATE TABLE Student (
-        student_id  INT PRIMARY KEY AUTO_INCREMENT,   -- primary + surrogate
-        national_id VARCHAR(20) UNIQUE,               -- alternate + natural
-        email       VARCHAR(100) UNIQUE,              -- alternate
-        name        VARCHAR(100) NOT NULL,
-        roll        INT,
-        session     VARCHAR(10),
-        dept_id     INT,
-        UNIQUE (roll, session),                       -- composite candidate key
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- foreign key
-    );
-    ```
-
-19. **What is the Primary key, Candidate key and Super key?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 921 (ET: N/A)]*
-
-    Answer:
-
-    `Super key`
-    - Any set of one or more attributes whose values `uniquely identify` a row. Redundant attributes are permitted, so a table typically has many super keys.
-
-    `Candidate key`
-    - A `minimal` super key: removing any attribute from it destroys uniqueness. Every candidate key is a super key, but not conversely.
-
-    `Primary key`
-    - The `one` candidate key chosen by the designer to identify rows. It can never be NULL, never repeat, and there is exactly one per table.
-
-    Worked example
-    ```
-    Employee (emp_id, national_id, email, name, dept_id)
-    where emp_id, national_id and email are each unique on their own.
-    ```
-
-    Super keys
-    ```
-    {emp_id}
-    {national_id}
-    {email}
-    {emp_id, name}
-    {national_id, dept_id}
-    {emp_id, national_id, email, name, dept_id}
-    ```
-
-    Candidate keys — the minimal ones
-    ```
-    {emp_id}
-    {national_id}
-    {email}
-    ```
-    - `{emp_id, name}` is rejected: `name` can be dropped and uniqueness survives, so it is not minimal.
-
-    Primary key
-    ```
-    emp_id
-    ```
-    - Chosen because it is short, numeric, system-generated and never changes. `national_id` and `email` become `alternate keys`.
-
-    The containment relationship
-    ```
-    +---------------------------------------------+
-    |                SUPER KEYS                   |
-    |  +--------------------------------------+   |
-    |  |          CANDIDATE KEYS              |   |
-    |  |   (minimal super keys)               |   |
-    |  |    +----------------------------+    |   |
-    |  |    |      PRIMARY KEY           |    |   |
-    |  |    |   (the one selected)       |    |   |
-    |  |    +----------------------------+    |   |
-    |  +--------------------------------------+   |
-    +---------------------------------------------+
-    ```
-
-    Comparison
-
-    | Point | Super key | Candidate key | Primary key |
-    |---|---|---|---|
-    | Uniqueness | Yes | Yes | Yes |
-    | Minimal | Not necessarily | `Yes` | Yes |
-    | Number per table | Many | One or many | Exactly one |
-    | NULL allowed | Depends on the columns | No | `Never` |
-    | Declared in SQL | No keyword | `UNIQUE` for the alternates | `PRIMARY KEY` |
-    | Chosen by | Not chosen — implied by the data | Implied by the data | The designer |
-
-    In SQL
-    ```sql
-    CREATE TABLE Employee (
-        emp_id      INT PRIMARY KEY,        -- primary key
-        national_id VARCHAR(20) UNIQUE,     -- alternate (candidate) key
-        email       VARCHAR(100) UNIQUE,    -- alternate (candidate) key
-        name        VARCHAR(100) NOT NULL,
-        dept_id     INT
-    );
-    ```
-    - Note that SQL has no keyword for a super key; only candidate keys (as UNIQUE) and the primary key are declared.
-
-20. **Difference between Primary key and Unique Key, Drop and Purge, Delete and Truncate.** *[RAKUB Assistant Database Administrator 2020 compact it 1013-1014 (ET: E-Zone)]*
-
-    Answer:
-
-    (a) Primary key vs Unique key
-
-    | Point | Primary key | Unique key |
-    |---|---|---|
-    | NULL allowed | `Never` | `Yes` (one NULL in SQL Server, several in Oracle and MySQL) |
-    | Number per table | Exactly one | Many |
-    | Index created | `Clustered` by default | `Non-clustered` |
-    | Purpose | Identify each row — entity integrity | Prevent duplicate values in a column |
-    | Implicit constraints | NOT NULL + UNIQUE | UNIQUE only |
-    | Referenced by foreign keys | Normally yes | Possible, but unusual |
-    | Relationship | It is a chosen candidate key | The candidate keys not chosen (alternate keys) |
+Answer:
 
     ```sql
-    CREATE TABLE Employee (
-        emp_id      INT PRIMARY KEY,          -- unique + not null, one per table
-        national_id VARCHAR(20) UNIQUE,       -- unique, but may be NULL
-        email       VARCHAR(100) UNIQUE       -- another unique key
-    );
+    SELECT name, COUNT(*) AS duplicate_count
+    FROM employee
+    GROUP BY name
+    HAVING COUNT(*) > 1;
     ```
 
-    (b) DROP vs PURGE
+90. **Given a table Sales (sales_id, salesman, region, sales_amount, sales_date), Write an SQL query to: Display sales_id, region, and MAX(sales_amount), Where the average sales_amount > 50000 and each region has at least 5 sales.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 226]]*
 
-    | Point | DROP | PURGE |
-    |---|---|---|
-    | Effect | Removes the table from the database | Permanently removes it from the recycle bin |
-    | Recoverable | Yes in Oracle — it goes to the recycle bin and can be restored with `FLASHBACK TABLE` | `No` — the space is released and the object is gone |
-    | Space released | Not immediately in Oracle | Immediately |
-    | Syntax | `DROP TABLE Employee;` | `PURGE TABLE Employee;` or `DROP TABLE Employee PURGE;` |
+Answer:
 
     ```sql
-    DROP TABLE Employee;                     -- goes to the recycle bin (Oracle)
-    FLASHBACK TABLE Employee TO BEFORE DROP; -- recoverable
-    PURGE RECYCLEBIN;                        -- now permanently gone
-    DROP TABLE Employee PURGE;               -- drop and purge in one step
+    SELECT region, MAX(sales_amount) AS max_sales_amount
+    FROM Sales
+    GROUP BY region
+    HAVING AVG(sales_amount) > 50000 
+       AND COUNT(sales_id) >= 5;
     ```
-    - This distinction is specific to `Oracle`. MySQL and SQL Server have no recycle bin, so DROP is immediate and irreversible there.
 
-    (c) DELETE vs TRUNCATE
+91. **Write an SQL query to get duplicate names from the employee table.** *[Bangladesh Computer Council (BCC) Post: AP/TW Mark: 4*10=40; Date: 18 Oct 2025 [bitbox it book 242]]*
 
-    | Point | DELETE | TRUNCATE |
-    |---|---|---|
-    | Command type | `DML` | `DDL` |
-    | WHERE clause | Supported | Not supported — removes all rows |
-    | Rollback | Yes, it is transactional | Normally no (auto-commits in MySQL and Oracle; rollback is possible in SQL Server and PostgreSQL) |
-    | Speed | Slow — row by row, each logged | `Fast` — deallocates whole data pages |
-    | Triggers fired | `Yes` | `No` |
-    | Identity / AUTO_INCREMENT | Not reset | `Reset to the starting value` |
-    | Transaction log | One entry per row | Only the page deallocations |
-    | Space reclaimed | Not immediately | Immediately |
-    | Foreign key references | Allowed | Rejected if the table is referenced by a foreign key |
+Answer:
 
     ```sql
-    DELETE FROM Employee WHERE dept_id = 10;   -- selective, undoable, slow
-    DELETE FROM Employee;                       -- all rows, still undoable
-    TRUNCATE TABLE Employee;                    -- all rows, fast, resets identity
-    DROP TABLE Employee;                        -- rows AND structure gone
+    SELECT employee_name, COUNT(*) AS occurrence_count
+    FROM employee
+    GROUP BY employee_name
+    HAVING COUNT(*) > 1;
     ```
 
-    The three compared in one line each
-    - `DELETE` — removes chosen rows; the table and its structure remain.
-    - `TRUNCATE` — removes every row quickly; the table and its structure remain.
-    - `DROP` — removes the rows, the structure, the indexes and the constraints together.
+92. **Consider the following schema:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 371-372]]*
+Product(pid, name, price, category, maker_cid) Purchase(buyer-ssn, seller-ssn, store, pid) Company(cid, name, stock_price, country) Person(ssn, name, phone_number, city) In purchase: buyer-ssn, seller-ssn are foreign keys in person, pid is foreign key in Product; In Product maker-cid is a foreign key in Company. Write the following queries in SQL: (a) Find names of people who bought American Products. (b) Find total numbers and sum of products that are sold in the city where they are manufactured.
 
-21. **Example Foreign key in RDBMS.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035 (ET: BUET)]*
+Answer:
 
-    Answer: A `foreign key` is an attribute in one table whose values must exist as the primary key of another table. It is what implements a relationship in an RDBMS and what enforces `referential integrity`.
-
-    Example — Department and Employee
+    (a) Names of people who bought American products:
     ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,
-        dept_name VARCHAR(50) NOT NULL
-    );
-
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100) NOT NULL,
-        salary   DECIMAL(10,2),
-        dept_id  INT,
-        CONSTRAINT fk_employee_dept
-            FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
-    );
+    SELECT DISTINCT pe.name
+    FROM Person pe
+    JOIN Purchase pu ON pe.ssn = pu.buyer_ssn
+    JOIN Product pr ON pu.pid = pr.pid
+    JOIN Company c ON pr.maker_cid = c.cid
+    WHERE c.country = 'USA';
     ```
 
-    The data
-    ```
-    Department (parent / referenced)      Employee (child / referencing)
-    +---------+-----------+               +--------+----------+---------+
-    | dept_id | dept_name |               | emp_id | emp_name | dept_id |
-    +---------+-----------+   <---------- |  101   | Karim    |   10    |
-    |   10    | IT        |   <---------- |  102   | Rahim    |   10    |
-    |   20    | HR        |   <---------- |  103   | Sumi     |   20    |
-    +---------+-----------+               |  104   | Nabil    |  NULL   |
-                                          +--------+----------+---------+
-    ```
-    - `dept_id` in Employee `repeats` (two employees in IT) and may be `NULL` (Nabil is unassigned). Both are allowed for a foreign key, and neither would be allowed for a primary key.
-
-    What the constraint enforces
+    (b) Total quantity and total price of products sold in the same city where manufactured:
     ```sql
-    -- rejected: department 99 does not exist
-    INSERT INTO Employee VALUES (105, 'Jamil', 40000, 99);
-       ERROR: Cannot add or update a child row: a foreign key constraint fails
-
-    -- rejected: employees still reference department 10
-    DELETE FROM Department WHERE dept_id = 10;
-       ERROR: Cannot delete or update a parent row
+    SELECT COUNT(pu.pid) AS total_products_sold, 
+           SUM(pr.price) AS total_sales_value
+    FROM Purchase pu
+    JOIN Product pr ON pu.pid = pr.pid
+    JOIN Company c ON pr.maker_cid = c.cid
+    JOIN Person seller ON pu.seller_ssn = seller.ssn
+    WHERE seller.city = c.city;
     ```
 
-    Another example — a many-to-many relationship
+93. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+a) Write a SQL Query to find the duplicate phone number of employee table. b) Write a SQL query to find the Second largest salary from Employee table.
+
+Answer:
+
+    a) SQL Query to find duplicate phone numbers:
     ```sql
-    CREATE TABLE Enrollment (
-        student_id INT,
-        course_id  INT,
-        grade      CHAR(2),
-        PRIMARY KEY (student_id, course_id),                      -- composite key
-        FOREIGN KEY (student_id) REFERENCES Student(student_id),  -- FK 1
-        FOREIGN KEY (course_id)  REFERENCES Course(course_id)     -- FK 2
-    );
+    SELECT phone_number, COUNT(*) AS duplicate_count
+    FROM employee
+    GROUP BY phone_number
+    HAVING COUNT(*) > 1;
     ```
-    - Two foreign keys in one table, which is how a many-to-many relationship is implemented.
 
-    Referential actions
-    ```sql
-    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
-        ON DELETE CASCADE      -- delete the employees too
-        ON UPDATE CASCADE;     -- follow a change of dept_id
-    ```
-
-    | Action | Effect on the child when the parent is deleted |
-    |---|---|
-    | `RESTRICT` / `NO ACTION` | The delete is rejected (default) |
-    | `CASCADE` | The child rows are deleted as well |
-    | `SET NULL` | The child's foreign key becomes NULL |
-    | `SET DEFAULT` | The child's foreign key takes its default |
-
-    - A self-referencing foreign key is also possible and common: `Employee.manager_id REFERENCES Employee(emp_id)` builds a reporting hierarchy inside one table.
-
-22. **What is the difference between primary key and candidate key? Explain the foreign key with an example.** *[Bangladesh Competition Commission Programmer 2019 compact it 1061-1062 (ET: DU)]*
-
-    Answer:
-
-    Primary key vs candidate key
-
-    | Point | Primary key | Candidate key |
-    |---|---|---|
-    | Definition | The candidate key chosen to identify rows | Any minimal set of attributes that identifies rows uniquely |
-    | Number per table | Exactly `one` | `One or many` |
-    | NULL allowed | Never | No |
-    | Minimal | Yes | Yes |
-    | Selected by | The designer | Determined by the data, not chosen |
-    | Declared in SQL | `PRIMARY KEY` | `UNIQUE` for the ones not chosen |
-    | Index | Clustered, automatically | Non-clustered, if declared UNIQUE |
-    | Relationship | It `is` one of the candidate keys | The pool the primary key is drawn from |
-
-    Example
-    ```
-    Student (student_id, national_id, email, name)
-
-    Candidate keys : {student_id}, {national_id}, {email}
-    Primary key    : student_id            <- the designer's choice
-    Alternate keys : national_id, email    <- the candidates not chosen
-    ```
-    ```sql
-    CREATE TABLE Student (
-        student_id  INT PRIMARY KEY,        -- primary key
-        national_id VARCHAR(20) UNIQUE,     -- alternate (candidate) key
-        email       VARCHAR(100) UNIQUE,    -- alternate (candidate) key
-        name        VARCHAR(100) NOT NULL
-    );
-    ```
-    - In one sentence: `every primary key is a candidate key, but only one candidate key can be the primary key`.
-
-    Foreign key, with an example
-    - A `foreign key` is a column in one table whose values must exist as the primary key of another. It enforces `referential integrity` and is what implements a relationship between tables.
-
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,
-        dept_name VARCHAR(50) NOT NULL
-    );
-
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100) NOT NULL,
-        dept_id  INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
-    );
-    ```
-    ```
-    Department                        Employee
-    +---------+-----------+           +--------+----------+---------+
-    | dept_id | dept_name |  <------- | emp_id | emp_name | dept_id |
-    +---------+-----------+  <------- +--------+----------+---------+
-    |   10    | IT        |           |  101   | Karim    |   10    |
-    |   20    | HR        |           |  102   | Rahim    |   10    |   repeats
-    +---------+-----------+           |  103   | Nabil    |  NULL   |   NULL allowed
-                                      +--------+----------+---------+
-    ```
-
-    What it enforces
-    ```sql
-    INSERT INTO Employee VALUES (104, 'Jamil', 99);
-       -> rejected: department 99 does not exist
-
-    DELETE FROM Department WHERE dept_id = 10;
-       -> rejected: employees still reference it
-    ```
-    - Unlike a primary key, a foreign key `may repeat` and `may be NULL`, and a table may have several of them.
-
-23. **(খ) Candidate key and Composite key কাকে বলে?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.)
-
-    `Candidate key`
-    - Any `minimal` set of attributes that uniquely identifies a row in a relation. Minimal means no attribute can be removed without losing uniqueness.
-    - A table may have several candidate keys; the designer selects one as the `primary key`, and the rest become `alternate keys`.
-    - Every candidate key is a super key; not every super key is a candidate key.
-
-    Example
-    ```
-    Student (student_id, national_id, email, name)
-
-    Candidate keys : {student_id}, {national_id}, {email}
-    Not a candidate key: {student_id, name}   -- 'name' is redundant, so not minimal
-    ```
-
-    `Composite key`
-    - A key made of `two or more attributes` combined, used when no single attribute is unique on its own but the combination is. Also called a compound key.
-    - It follows the same rules as any primary key: the combination must be unique and none of its columns may be NULL.
-
-    Example
-    ```
-    Enrollment
-    +------------+-----------+-------+
-    | student_id | course_id | grade |
-    +------------+-----------+-------+
-    |    101     |   CS101   |   A   |
-    |    101     |   CS102   |   B   |    same student, different course
-    |    102     |   CS101   |   A   |    same course, different student
-    +------------+-----------+-------+
-
-    student_id alone : repeats -> not unique
-    course_id  alone : repeats -> not unique
-    {student_id, course_id}    -> unique  ✓  composite key
-    ```
-
-    ```sql
-    CREATE TABLE Enrollment (
-        student_id INT,
-        course_id  INT,
-        grade      CHAR(2),
-        PRIMARY KEY (student_id, course_id),      -- composite key
-        FOREIGN KEY (student_id) REFERENCES Student(student_id),
-        FOREIGN KEY (course_id)  REFERENCES Course(course_id)
-    );
-    ```
-
-    Relationship between the two
-    - A composite key `can also be` a candidate key — in the Enrollment table, `{student_id, course_id}` is both.
-    - The two terms answer different questions: `candidate key` is about `minimality and uniqueness`; `composite key` is about `how many columns` it contains.
-
-    | Point | Candidate key | Composite key |
-    |---|---|---|
-    | Defined by | Minimality and uniqueness | Having more than one column |
-    | Columns | One or more | Always two or more |
-    | Number per table | One or many | Depends |
-    | Can be the primary key | Yes | Yes |
-    | Example | {student_id} | {student_id, course_id} |
-
-    - Where composite keys appear: junction tables for many-to-many relationships, weak entities (owner key plus partial key), and any natural key that needs several attributes such as `{roll, session, department}`.
-
-24. **(b) What happens when someone tries to delete an entry of a table that has referential integrity constraint? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
-
-    Answer: What happens depends on the `referential action` declared on the foreign key. By default the delete is `rejected`.
-
-    The situation
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,
-        dept_name VARCHAR(50)
-    );
-
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100),
-        dept_id  INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
-    );
-    ```
-    ```
-    Department                    Employee
-    +---------+-----------+       +--------+----------+---------+
-    | dept_id | dept_name |       | emp_id | emp_name | dept_id |
-    +---------+-----------+       +--------+----------+---------+
-    |   10    | IT        |  <--- |  101   | Karim    |   10    |
-    |   20    | HR        |  <--- |  102   | Rahim    |   10    |
-    +---------+-----------+  <--- |  103   | Sumi     |   20    |
-                                  +--------+----------+---------+
-    ```
-
-    Attempting the delete
-    ```sql
-    DELETE FROM Department WHERE dept_id = 10;
-    ```
-
-    1. `RESTRICT` / `NO ACTION` — the default
-    ```
-    ERROR 1451 (23000): Cannot delete or update a parent row:
-    a foreign key constraint fails (`Employee`, CONSTRAINT `fk_dept`
-    FOREIGN KEY (`dept_id`) REFERENCES `Department` (`dept_id`))
-    ```
-    - The delete is refused, and nothing changes. This protects the data from becoming inconsistent, since Karim and Rahim would otherwise point at a department that no longer exists — an `orphan record`.
-
-    2. `ON DELETE CASCADE`
-    ```sql
-    FOREIGN KEY (dept_id) REFERENCES Department(dept_id) ON DELETE CASCADE
-    ```
-    - The department is deleted `and so are Karim and Rahim`.
-    ```
-    Employee after
-    +--------+----------+---------+
-    | emp_id | emp_name | dept_id |
-    +--------+----------+---------+
-    |  103   | Sumi     |   20    |
-    +--------+----------+---------+
-    ```
-    - Powerful but dangerous: it can delete far more than intended, and cascades can chain through several tables.
-
-    3. `ON DELETE SET NULL`
-    ```sql
-    FOREIGN KEY (dept_id) REFERENCES Department(dept_id) ON DELETE SET NULL
-    ```
-    - The department is deleted and the children survive with `dept_id` set to NULL.
-    ```
-    +--------+----------+---------+
-    | emp_id | emp_name | dept_id |
-    +--------+----------+---------+
-    |  101   | Karim    |  NULL   |
-    |  102   | Rahim    |  NULL   |
-    |  103   | Sumi     |   20    |
-    +--------+----------+---------+
-    ```
-    - The column must allow NULL for this to be legal.
-
-    4. `ON DELETE SET DEFAULT`
-    - The child's foreign key takes its declared default value. Supported by PostgreSQL and SQL Server, not by MySQL's InnoDB.
-
-    Summary
-
-    | Action | Parent row | Child rows |
-    |---|---|---|
-    | RESTRICT / NO ACTION | Not deleted | Unchanged — the operation fails |
-    | CASCADE | Deleted | Deleted too |
-    | SET NULL | Deleted | Kept, foreign key becomes NULL |
-    | SET DEFAULT | Deleted | Kept, foreign key takes its default |
-
-    Choosing between them
-    - `CASCADE` fits a genuine ownership relationship — an order and its order-lines, where a line has no meaning without its order.
-    - `SET NULL` fits an association — an employee still exists after their department is dissolved.
-    - `RESTRICT` is the safe default, forcing the application to deal with the children deliberately.
-
-    Working around a RESTRICT manually
-    ```sql
-    UPDATE Employee SET dept_id = NULL WHERE dept_id = 10;   -- or reassign them
-    DELETE FROM Department WHERE dept_id = 10;                -- now succeeds
-    ```
-    - The same rules apply to `ON UPDATE` when the parent's primary key value changes.
-
-25. **What is foreign key? When foreign key used?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
-
-    Answer:
-
-    What is a foreign key
-    - A `foreign key` is a column, or set of columns, in one table whose values must match a `primary key` value in another table (or be NULL).
-    - The table containing it is the `child` or referencing table; the table it points at is the `parent` or referenced table.
-    - It enforces `referential integrity` — the guarantee that a reference points at a row that actually exists.
-
-    Properties
-    - Values `may repeat`, since many children can share one parent.
-    - Values `may be NULL`, meaning "not related to anything yet", unless declared NOT NULL.
-    - A table may have `many` foreign keys.
-    - It must reference a primary key or a unique key in the parent table.
-
-    ```sql
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100),
-        dept_id  INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
-    );
-    ```
-
-    When a foreign key is used
-
-    1. `To implement a one-to-many relationship` — the commonest case. The foreign key goes in the `many` side.
-    ```
-    Department (1) ----< Employee (many)      Employee.dept_id -> Department.dept_id
-    Customer   (1) ----< Order    (many)      Order.cust_id    -> Customer.cust_id
-    ```
-
-    2. `To implement a many-to-many relationship`, through a junction table holding two foreign keys.
-    ```sql
-    CREATE TABLE Enrollment (
-        student_id INT,
-        course_id  INT,
-        PRIMARY KEY (student_id, course_id),
-        FOREIGN KEY (student_id) REFERENCES Student(student_id),
-        FOREIGN KEY (course_id)  REFERENCES Course(course_id)
-    );
-    ```
-
-    3. `To implement a self-referencing hierarchy` — a manager is also an employee.
-    ```sql
-    manager_id INT REFERENCES Employee(emp_id)
-    ```
-
-    4. `To support normalisation` — splitting a table to remove redundancy only works if foreign keys can rejoin the pieces.
-
-    5. `To prevent orphan records` — the parent cannot be deleted while children still refer to it, unless a cascading action is defined.
-
-    6. `To document the data model` — the constraint records the intended relationship in the schema itself.
-
-    7. `To enable reliable joins` — the foreign key is the natural join column.
-
-    What it enforces in practice
-    ```sql
-    INSERT INTO Employee VALUES (105, 'Jamil', 99);
-       -> rejected: department 99 does not exist
-
-    DELETE FROM Department WHERE dept_id = 10;
-       -> rejected by default; or cascades / sets NULL if so declared
-    ```
-
-    When `not` to use one
-    - In a data warehouse or a bulk-load staging table, foreign keys are sometimes omitted because the integrity check slows every insert, and the data is validated in the ETL process instead. Some very-high-volume OLTP systems do the same and enforce integrity in the application — a deliberate trade of safety for speed.
-
-26. **Difference between primary key, foreign key and candidate key.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
-
-    Answer:
-
-    | Point | Primary Key | Foreign Key | Candidate Key |
-    |---|---|---|---|
-    | Definition | The candidate key chosen to identify each row | A column referencing another table's primary key | A minimal set of attributes that uniquely identifies a row |
-    | Uniqueness | Required | Not required | Required |
-    | NULL allowed | `Never` | `Yes` | `No` |
-    | Number per table | Exactly one | Many | One or many |
-    | Minimal | Yes | Not applicable | Yes |
-    | Refers to another table | No | `Yes` | No |
-    | Integrity enforced | `Entity integrity` | `Referential integrity` | — |
-    | SQL declaration | `PRIMARY KEY` | `FOREIGN KEY ... REFERENCES` | `UNIQUE` for the alternates |
-    | Index | Clustered, automatic | Usually manual | Non-clustered if UNIQUE |
-    | Chosen by | The designer | The designer | Determined by the data |
-    | Can be composite | Yes | Yes | Yes |
-
-    The relationship
-    ```
-    Super keys ⊃ Candidate keys ⊃ Primary key      (identify rows in THIS table)
-                        |
-                        +--> the unchosen ones become Alternate keys
-
-    Foreign key — points OUT, at another table's primary key
-    ```
-
-    Worked example
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,
-        dept_name VARCHAR(50) NOT NULL UNIQUE
-    );
-
-    CREATE TABLE Employee (
-        emp_id      INT PRIMARY KEY,        -- PRIMARY KEY (a chosen candidate key)
-        national_id VARCHAR(20) UNIQUE,     -- CANDIDATE KEY (alternate)
-        email       VARCHAR(100) UNIQUE,    -- CANDIDATE KEY (alternate)
-        emp_name    VARCHAR(100) NOT NULL,
-        dept_id     INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-    );
-    ```
-    ```
-    Department                       Employee
-    +---------+-----------+          +--------+-------------+----------+---------+
-    | dept_id | dept_name |  <-----  | emp_id | national_id | emp_name | dept_id |
-    +---------+-----------+  <-----  +--------+-------------+----------+---------+
-    |   10    | IT        |          |  101   | 1234567890  | Karim    |   10    |
-    |   20    | HR        |          |  102   | 2345678901  | Rahim    |   10    |
-    +---------+-----------+          |  103   | 3456789012  | Nabil    |  NULL   |
-                                     +--------+-------------+----------+---------+
-    ```
-    - `emp_id` never repeats and is never NULL. `dept_id` does both, which is exactly what distinguishes a foreign key from a primary key.
-    - `national_id` and `email` are candidate keys that were not chosen, so they are declared UNIQUE rather than PRIMARY KEY.
-
-    Three sentences to remember
-    - A `candidate key` is any minimal way of identifying a row.
-    - The `primary key` is the one candidate key the designer picks.
-    - A `foreign key` does not identify rows at all — it links this table to another.
-
-27. **Define weak Entity? What are the difference between primary key and super key?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
-
-    Answer:
-
-    Weak entity
-    - A `weak entity` is an entity that `cannot be uniquely identified by its own attributes alone`. It depends on another entity, called the `owner` or `identifying entity`, for its identity.
-    - It has a `partial key` (also called a discriminator) that distinguishes it only `among the children of the same owner`. Its full primary key is the owner's primary key plus that partial key.
-    - It participates in an `identifying relationship` with its owner, and that participation is `total` — a weak entity cannot exist without its owner.
-    - If the owner is deleted, its weak entities must be deleted too.
-
-    ER notation
-    ```
-    +-----------+        /------------\        +==========+
-    | Employee  |=======<  Has         >=======| Dependent|
-    +-----------+        \------------/        +==========+
-      (strong)          identifying relationship  (weak — double rectangle)
-                         (double diamond)
-    ```
-    - Double rectangle for the weak entity, double diamond for the identifying relationship, and a dashed underline for the partial key.
-
-    Example
-    ```sql
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,                 -- strong entity
-        emp_name VARCHAR(100)
-    );
-
-    CREATE TABLE Dependent (
-        emp_id       INT,                         -- owner's key
-        dep_name     VARCHAR(50),                 -- PARTIAL KEY
-        relationship VARCHAR(20),
-        PRIMARY KEY (emp_id, dep_name),           -- composite primary key
-        FOREIGN KEY (emp_id) REFERENCES Employee(emp_id) ON DELETE CASCADE
-    );
-    ```
-    ```
-    Dependent
-    +--------+----------+--------------+
-    | emp_id | dep_name | relationship |
-    +--------+----------+--------------+
-    |  101   | Rina     | Daughter     |
-    |  101   | Sabbir   | Son          |
-    |  102   | Rina     | Daughter     |   <- same name, different employee: allowed
-    +--------+----------+--------------+
-    ```
-    - `dep_name` alone is not unique — two employees may both have a daughter named Rina. Only `{emp_id, dep_name}` identifies a row.
-    - Other typical weak entities: order-lines belonging to an order, room numbers within a hotel, and chapter numbers within a book.
-
-    Primary key vs super key
-
-    | Point | Primary key | Super key |
-    |---|---|---|
-    | Minimality | `Must be minimal` | May contain redundant attributes |
-    | Number per table | Exactly one | Usually many |
-    | NULL allowed | Never | Depends on the columns |
-    | Chosen by | The designer | Not chosen; implied by the data |
-    | SQL keyword | `PRIMARY KEY` | None exists |
-    | Index | Created automatically | None |
-    | Relationship | Every primary key is a super key | Not every super key is a primary key |
-
-    Example
-    ```
-    Student (student_id, national_id, email, name)
-
-    Super keys   : {student_id}, {student_id, name}, {national_id, email, name}, ...
-    Candidate keys (minimal super keys): {student_id}, {national_id}, {email}
-    Primary key  : student_id
-    ```
-    - `{student_id, name}` is a super key but cannot be the primary key, because dropping `name` still gives uniqueness — it fails the minimality test.
-
-28. **Difference between Super Key and UNIQUE key?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
-
-    Answer:
-
-    | Point | Super Key | Unique Key |
-    |---|---|---|
-    | Nature | A `theoretical` concept from the relational model | A `practical` SQL constraint |
-    | Definition | Any attribute set that uniquely identifies a row | A constraint forbidding duplicate values in a column or set of columns |
-    | Minimality | Not required — redundant attributes allowed | Not required either, but usually minimal in practice |
-    | NULL allowed | Depends on the columns involved | `Yes` — one NULL in SQL Server, several in MySQL and Oracle |
-    | Declared in SQL | `No keyword exists` | `UNIQUE` |
-    | Number per table | Many, often very many | Many |
-    | Index created | None — it is not a physical object | `Non-clustered index` created automatically |
-    | Enforced by the DBMS | No | `Yes` |
-    | Purpose | To reason about identification during design | To prevent duplicate data at run time |
-    | Can be referenced by a foreign key | Not as such | Yes |
-
-    Example
-    ```
-    Student (student_id, national_id, email, name, phone)
-    ```
-
-    Super keys — a design-time concept
-    ```
-    {student_id}
-    {national_id}
-    {email}
-    {student_id, name}
-    {national_id, phone}
-    {student_id, national_id, email, name, phone}
-    ```
-    - All of these identify a row uniquely. None of them is declared anywhere in SQL; they exist only as a property of the data.
-
-    Unique keys — what is actually written
-    ```sql
-    CREATE TABLE Student (
-        student_id  INT PRIMARY KEY,          -- primary key
-        national_id VARCHAR(20) UNIQUE,       -- UNIQUE KEY
-        email       VARCHAR(100) UNIQUE,      -- UNIQUE KEY
-        name        VARCHAR(100),
-        phone       VARCHAR(15),
-        UNIQUE (name, phone)                  -- composite UNIQUE KEY
-    );
-    ```
-
-    The behaviour that distinguishes them
-    ```sql
-    -- unique key rejects duplicates
-    INSERT INTO Student (student_id, email) VALUES (101, 'a@mail.com');
-    INSERT INTO Student (student_id, email) VALUES (102, 'a@mail.com');
-       -> ERROR: Duplicate entry for key 'email'
-
-    -- but accepts NULL
-    INSERT INTO Student (student_id, email) VALUES (103, NULL);
-    INSERT INTO Student (student_id, email) VALUES (104, NULL);
-       -> both accepted in MySQL, because NULL is not equal to NULL
-    ```
-
-    The key relationship
-    - A `unique key` is the SQL mechanism used to `enforce` a candidate key, and every candidate key is a minimal super key. So a unique key is the practical implementation of the theoretical idea, restricted to the minimal cases that are worth enforcing.
-    - One important difference remains: a super key by definition cannot have NULLs in a way that breaks identification, whereas a unique key in SQL tolerates NULLs precisely because SQL treats NULL as "unknown" rather than as a value.
-
-29. **Define Super key and Primary key.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211 (ET: N/A)]*
-
-    Answer:
-
-    `Super key`
-    - Any set of one or more attributes whose values `uniquely identify` a row in a relation.
-    - It may contain `redundant` attributes — adding any attribute to a super key produces another super key — so a table typically has many of them.
-    - It is a design-time concept from the relational model, with no SQL keyword of its own.
-
-    `Primary key`
-    - The `one` candidate key chosen by the designer to identify rows in a table.
-    - It must be `unique`, can `never be NULL`, and there is exactly one per table.
-    - It must be `minimal` — no attribute can be removed from it.
-    - It enforces `entity integrity`, is declared with `PRIMARY KEY`, and normally receives a clustered index.
-
-    Worked example
-    ```
-    Student (student_id, national_id, email, name, phone)
-    where student_id, national_id and email are each unique on their own.
-    ```
-
-    Super keys
-    ```
-    {student_id}
-    {national_id}
-    {email}
-    {student_id, name}
-    {student_id, national_id}
-    {email, phone, name}
-    {student_id, national_id, email, name, phone}
-    ```
-
-    Primary key
-    ```
-    student_id
-    ```
-
-    Why `{student_id, name}` is a super key but not a primary key
-    - It identifies a row uniquely, so it satisfies the super key definition.
-    - But `name` is unnecessary — `student_id` alone suffices — so it is not minimal, and a primary key must be minimal.
-
-    The containment relationship
-    ```
-    +---------------------------------------------+
-    |                SUPER KEYS                   |
-    |  +--------------------------------------+   |
-    |  |         CANDIDATE KEYS               |   |
-    |  |     (the minimal super keys)         |   |
-    |  |    +----------------------------+    |   |
-    |  |    |       PRIMARY KEY          |    |   |
-    |  |    |    (the one selected)      |    |   |
-    |  |    +----------------------------+    |   |
-    |  +--------------------------------------+   |
-    +---------------------------------------------+
-    ```
-
-    Comparison
-
-    | Point | Super key | Primary key |
-    |---|---|---|
-    | Minimal | Not necessarily | `Required` |
-    | Number per table | Many | Exactly one |
-    | NULL | Depends on the columns | Never |
-    | SQL keyword | None | `PRIMARY KEY` |
-    | Index | None | Automatic |
-    | Chosen | No — implied by the data | Yes — by the designer |
-
-    - In one line: `every primary key is a super key, but a super key becomes a primary key only if it is minimal and is the one the designer selects`.
-
-30. **What are the difference among Candidate key, Primary key and Foreign key?** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
-
-    Answer:
-
-    | Point | Candidate Key | Primary Key | Foreign Key |
-    |---|---|---|---|
-    | Definition | A minimal set of attributes uniquely identifying a row | The candidate key chosen for identification | A column referencing another table's primary key |
-    | Uniqueness | Required | Required | Not required |
-    | NULL allowed | `No` | `Never` | `Yes` |
-    | Number per table | One or many | Exactly one | Many |
-    | Minimal | Yes | Yes | Not applicable |
-    | Refers to another table | No | No | `Yes` |
-    | Integrity enforced | — | `Entity` | `Referential` |
-    | SQL declaration | `UNIQUE` (for alternates) | `PRIMARY KEY` | `FOREIGN KEY ... REFERENCES` |
-    | Index | Non-clustered if declared | Clustered, automatic | Usually manual |
-    | Selected by | Determined by the data | The designer | The designer |
-
-    Worked example
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,
-        dept_name VARCHAR(50) NOT NULL UNIQUE
-    );
-
-    CREATE TABLE Student (
-        student_id  INT PRIMARY KEY,          -- PRIMARY KEY  (chosen candidate)
-        national_id VARCHAR(20) UNIQUE,       -- CANDIDATE KEY (alternate)
-        email       VARCHAR(100) UNIQUE,      -- CANDIDATE KEY (alternate)
-        name        VARCHAR(100) NOT NULL,
-        dept_id     INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-    );
-    ```
-
-    The data
-    ```
-    Department                       Student
-    +---------+-----------+          +------------+-------------+-------+---------+
-    | dept_id | dept_name |  <-----  | student_id | national_id | name  | dept_id |
-    +---------+-----------+  <-----  +------------+-------------+-------+---------+
-    |   10    | CSE       |          |    101     | 1234567890  | Karim |   10    |
-    |   20    | EEE       |          |    102     | 2345678901  | Rahim |   10    |
-    +---------+-----------+          |    103     | 3456789012  | Sumi  |  NULL   |
-                                     +------------+-------------+-------+---------+
-    ```
-
-    Behaviour that separates them
-    ```sql
-    INSERT INTO Student VALUES (101, ...);        -- rejected: duplicate primary key
-    INSERT INTO Student VALUES (104, NULL, ...);  -- accepted: national_id UNIQUE allows NULL
-    INSERT INTO Student (student_id, dept_id) VALUES (105, 99);
-                                                  -- rejected: department 99 does not exist
-    ```
-
-    The relationship in three lines
-    - `Candidate keys` are all the minimal ways of identifying a row — determined by the data, not chosen.
-    - The `primary key` is the single candidate key the designer selects; the rest become alternate keys, declared UNIQUE.
-    - The `foreign key` is a different kind of thing altogether: it does not identify rows in its own table, but links them to rows in another.
-
-31. **Explain with examples: Candidate key, foreign key and horizontal scaling.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1223 (ET: N/A)]*
-
-    Answer:
-
-    Candidate key
-    - A `minimal` set of attributes that uniquely identifies a row in a relation. Minimal means no attribute can be dropped without losing uniqueness.
-    - A table may have several; the designer picks one as the primary key and declares the rest `UNIQUE`.
-    ```
-    Student (student_id, national_id, email, name)
-
-    Candidate keys : {student_id}, {national_id}, {email}
-    Not a candidate key: {student_id, name}   -- 'name' is redundant
-    ```
-    ```sql
-    CREATE TABLE Student (
-        student_id  INT PRIMARY KEY,        -- chosen candidate key
-        national_id VARCHAR(20) UNIQUE,     -- alternate candidate key
-        email       VARCHAR(100) UNIQUE,    -- alternate candidate key
-        name        VARCHAR(100) NOT NULL
-    );
-    ```
-
-    Foreign key
-    - A column in one table whose values must exist as the `primary key` of another table. It enforces `referential integrity` and is what implements a relationship between tables.
-    - Values `may repeat` and `may be NULL`, and a table may have many.
-    ```sql
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100),
-        dept_id  INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
-    );
-    ```
-    ```
-    Department                   Employee
-    +---------+-----------+      +--------+----------+---------+
-    | dept_id | dept_name | <--- | emp_id | emp_name | dept_id |
-    +---------+-----------+ <--- +--------+----------+---------+
-    |   10    | IT        |      |  101   | Karim    |   10    |
-    |   20    | HR        |      |  102   | Rahim    |   10    |  repeats
-    +---------+-----------+      |  103   | Sumi     |  NULL   |  NULL allowed
-                                 +--------+----------+---------+
-    ```
-    - Inserting an employee with `dept_id = 99` is rejected, because no such department exists.
-
-    Horizontal scaling
-    - `Horizontal scaling` (scaling `out`) means adding `more machines` to share the load, rather than making one machine bigger.
-    - The contrast is `vertical scaling` (scaling `up`): adding more CPU, RAM or disk to a single server.
-
-    ```
-    VERTICAL SCALING (scale up)          HORIZONTAL SCALING (scale out)
-
-         +-----------+                    +------+  +------+  +------+
-         |  Server   |                    |Server|  |Server|  |Server|
-         |  8 CPU    |  ->  16 CPU        |  1   |  |  2   |  |  3   |
-         |  32 GB    |      128 GB        +------+  +------+  +------+
-         +-----------+                         \      |      /
-                                                [Load balancer]
-    ```
-
-    | Point | Vertical scaling | Horizontal scaling |
-    |---|---|---|
-    | Method | Bigger machine | More machines |
-    | Limit | Hardware ceiling | Practically unlimited |
-    | Cost | Rises steeply at the high end | Commodity hardware, linear |
-    | Downtime to scale | Usually required | None — add a node |
-    | Fault tolerance | Single point of failure | Redundant by design |
-    | Complexity | Simple | Needs load balancing, replication, sharding |
-    | Data consistency | Easy | Hard — this is the real cost |
-
-    - In databases, horizontal scaling is achieved by `sharding` (splitting rows across servers) and `replication` (copies for read scaling). NoSQL systems such as MongoDB and Cassandra were designed for it, while traditional relational databases scale vertically more naturally, which is one of the main reasons NoSQL emerged.
-
-32. **Write down the differences between super key and candidate key with example.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1225 (ET: N/A)]*
-
-    Answer:
-
-    | Point | Super Key | Candidate Key |
-    |---|---|---|
-    | Definition | Any attribute set that uniquely identifies a row | A `minimal` super key |
-    | Minimality | `Not required` — redundant attributes allowed | `Required` — no attribute can be removed |
-    | Number per table | Many, often very many | Fewer; one or a handful |
-    | Relationship | The superset | A subset of the super keys |
-    | Contains extra attributes | Possibly | Never |
-    | Chosen as primary key | Only if it is also a candidate key | One of them is chosen |
-    | SQL declaration | No keyword exists | `PRIMARY KEY` or `UNIQUE` |
-    | Nature | Theoretical, used in design | Practical, enforced by the DBMS |
-
-    Worked example
-    ```
-    Employee (emp_id, national_id, email, name, dept_id)
-
-    Assume emp_id, national_id and email are each unique on their own.
-    ```
-
-    Super keys
-    ```
-    {emp_id}
-    {national_id}
-    {email}
-    {emp_id, name}
-    {emp_id, national_id}
-    {national_id, dept_id, name}
-    {emp_id, national_id, email, name, dept_id}
-    ```
-    - Every one of these identifies a row uniquely. Most carry attributes that are not needed for that purpose.
-
-    Candidate keys — only the minimal ones survive
-    ```
-    {emp_id}
-    {national_id}
-    {email}
-    ```
-
-    Why the others are excluded
-    ```
-    {emp_id, name}           -> drop 'name'  -> still unique -> NOT minimal -> not a candidate key
-    {national_id, dept_id}   -> drop 'dept_id' -> still unique -> NOT minimal
-    {name, dept_id}          -> not unique at all -> not even a super key
-    ```
-
-    The containment picture
-    ```
-    +-----------------------------------------------+
-    |                 SUPER KEYS                    |
-    |   (any set that identifies a row uniquely)    |
-    |                                               |
-    |   +---------------------------------------+   |
-    |   |          CANDIDATE KEYS               |   |
-    |   |     (the minimal super keys)          |   |
-    |   |   {emp_id}, {national_id}, {email}    |   |
-    |   +---------------------------------------+   |
-    +-----------------------------------------------+
-    ```
-
-    The counting rule
-    - If a relation has `n` attributes and exactly one single-attribute candidate key K, the number of super keys is `2^(n−1)` — K combined with any subset of the other n−1 attributes.
-    - Example: `R(A, B, C, D)` with candidate key `{A}` has 2³ = `8` super keys: {A}, {A,B}, {A,C}, {A,D}, {A,B,C}, {A,B,D}, {A,C,D}, {A,B,C,D}.
-
-    - In one sentence: `every candidate key is a super key, but a super key is a candidate key only when nothing can be removed from it`.
-
-33. **What do you mean by primary key and foreign key?** *[Multiple Ministry Assistant Programmer 2017 compact it 1230 (ET: N/A)]*
-
-**Table Name: STUDENT**
-
-| Stu_Id | Stu_Name | Stu_Age |
-|---|---|---|
-| 101 | Steve | 23 |
-| 102 | John | 24 |
-| 103 | Robert | 28 |
-| 104 | Steve | 29 |
-
-**Course_enrollment table:**
-
-| Course_Id | Stu_Id |
-|---|---|
-| C01 | 101 |
-| C02 | 102 |
-| C03 | 101 |
-| C05 | 102 |
-| C06 | 103 |
-| C07 | 102 |
-
-    Answer:
-
-    Primary key
-    - The column, or set of columns, that `uniquely identifies` each row of a table.
-    - Rules: values must be `unique`, may `never be NULL`, and there is exactly `one` per table.
-    - It enforces `entity integrity` — the guarantee that every row is distinct and can be located — and normally carries a clustered index.
-    - It is the value that foreign keys in other tables point at.
-
-    Foreign key
-    - A column in one table whose values must match a `primary key` value in another table.
-    - It enforces `referential integrity` — the guarantee that a reference points at a row that exists.
-    - Values `may repeat` and `may be NULL`, and a table may have several foreign keys.
-    - It is what physically implements a relationship between two tables.
-
-    Example
-    ```sql
-    CREATE TABLE Department (
-        dept_id   INT PRIMARY KEY,               -- PRIMARY KEY
-        dept_name VARCHAR(50) NOT NULL
-    );
-
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,                -- PRIMARY KEY of this table
-        emp_name VARCHAR(100) NOT NULL,
-        dept_id  INT,
-        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)   -- FOREIGN KEY
-    );
-    ```
-    ```
-    Department (parent)             Employee (child)
-    +---------+-----------+         +--------+----------+---------+
-    | dept_id | dept_name |  <----- | emp_id | emp_name | dept_id |
-    +---------+-----------+  <----- +--------+----------+---------+
-    |   10    | IT        |         |  101   | Karim    |   10    |
-    |   20    | HR        |         |  102   | Rahim    |   10    |   repeats
-    +---------+-----------+         |  103   | Sumi     |  NULL   |   NULL allowed
-                                    +--------+----------+---------+
-    ```
-
-    What each prevents
-    ```sql
-    INSERT INTO Employee VALUES (101, 'Farida', 10);
-       -> rejected: emp_id 101 already exists (primary key violation)
-
-    INSERT INTO Employee VALUES (104, 'Jamil', 99);
-       -> rejected: department 99 does not exist (foreign key violation)
-
-    DELETE FROM Department WHERE dept_id = 10;
-       -> rejected by default: employees still reference it
-    ```
-
-    Comparison
-
-    | Point | Primary key | Foreign key |
-    |---|---|---|
-    | Uniqueness | Required | Not required |
-    | NULL | Never | Allowed |
-    | Number per table | One | Many |
-    | Integrity | Entity | Referential |
-    | Points at | Nothing | Another table's primary key |
-    | Index | Automatic and clustered | Usually created manually |
-
-    - A foreign key may also point back into its own table — `Employee.manager_id REFERENCES Employee(emp_id)` — which is how a reporting hierarchy is stored in a single table.
-
-34. **Define ‘integrity rules’ of database systems. Write a SQL query to get the second highest salary from Employee table.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
-
-    Answer:
-
-    Integrity rules of a database system
-
-    Integrity rules are the constraints that keep the data `accurate, consistent and valid` at all times. There are three fundamental categories.
-
-    1. `Entity integrity`
-    - Every table must have a `primary key`, and no part of that primary key may be `NULL`.
-    - Reason: a row that cannot be identified cannot be referenced, updated or deleted reliably.
-    ```sql
-    student_id INT PRIMARY KEY        -- implies UNIQUE + NOT NULL
-    ```
-
-    2. `Referential integrity`
-    - A `foreign key` value must either match an existing primary key value in the referenced table, or be entirely NULL.
-    - Reason: it prevents `orphan records` — a row pointing at something that does not exist.
-    ```sql
-    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
-    ```
-    - It also governs what happens when the parent is deleted: `RESTRICT`, `CASCADE`, `SET NULL` or `SET DEFAULT`.
-
-    3. `Domain integrity`
-    - Every value in a column must belong to the column's defined `domain` — its data type, length, format and permitted range.
-    ```sql
-    salary DECIMAL(10,2) CHECK (salary > 0),
-    gender CHAR(1) CHECK (gender IN ('M','F')),
-    email  VARCHAR(100) NOT NULL
-    ```
-
-    Other constraints usually grouped with them
-    - `Key (uniqueness) integrity` — `UNIQUE` prevents duplicate values in a candidate key.
-    - `User-defined or business integrity` — rules specific to the organisation, enforced by CHECK constraints, triggers or stored procedures. For example, a loan may not exceed ten times the applicant's salary.
-    - `Null integrity` — `NOT NULL` where a value is mandatory.
-
-    Summary
-
-    | Rule | Enforced by | Prevents |
-    |---|---|---|
-    | Entity integrity | `PRIMARY KEY` | Duplicate or unidentifiable rows |
-    | Referential integrity | `FOREIGN KEY` | Orphan records |
-    | Domain integrity | Data type, `CHECK`, `NOT NULL`, `DEFAULT` | Invalid values |
-    | Key integrity | `UNIQUE` | Duplicate candidate-key values |
-    | Business integrity | `CHECK`, triggers, procedures | Violations of organisation-specific rules |
-
-    Second highest salary from the Employee table
+    b) SQL Query to find 2nd largest salary:
     ```sql
     SELECT MAX(salary) AS second_highest_salary
-    FROM   Employee
-    WHERE  salary < (SELECT MAX(salary) FROM Employee);
+    FROM Employee
+    WHERE salary < (SELECT MAX(salary) FROM Employee);
     ```
-    - The subquery finds the highest salary; the outer query finds the highest value strictly below it.
-    - Duplicates cause no problem: if several employees share the top salary, `<` excludes them all and the genuine second distinct value is returned.
 
-    Alternative forms
+94. **There are Given 4 tables, Customer, Products, Order, Order Details of Ecommerce company. From the relation find out the following queries.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 387]]*
+i) Find first name of all customer whose order type is as ‘B’ on March 15, 2024. ii) Find total sum of monetary money of order between March 01, 2024 and march 15, 2024.
+
+Answer:
+
+    i) First name of customers with order type 'B' on March 15, 2024:
     ```sql
-    -- LIMIT with OFFSET; DISTINCT is essential
-    SELECT DISTINCT salary FROM Employee
-    ORDER  BY salary DESC LIMIT 1 OFFSET 1;
-
-    -- DENSE_RANK, which generalises to the Nth highest
-    SELECT DISTINCT salary FROM (
-        SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
-        FROM   Employee
-    ) t
-    WHERE rnk = 2;
-    ```
-    - `DENSE_RANK` rather than `RANK`: with salaries 90000, 90000, 75000, RANK gives 1, 1, 3 so no row has rank 2 at all, whereas DENSE_RANK gives 1, 1, 2 and correctly returns 75000.
-
-## DBMS Architecture & Features (26)
-
-1. (a) DBMS এর মূল বৈশিষ্ট্য লিখুন।
-   (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.) The main features of a DBMS.
-
-   1. `Data storage, retrieval and update`
-   - The core function: adding, reading, modifying and deleting data through SQL, without the user knowing anything about how the data is physically stored.
-
-   2. `Reduced data redundancy and inconsistency`
-   - Data is stored once in a normalised structure and shared by every application. In a file-based system the same customer address is duplicated in several files, and updating one but not the others produces inconsistency.
-
-   3. `Data integrity`
-   - Constraints keep the data valid: `PRIMARY KEY` (entity integrity), `FOREIGN KEY` (referential integrity), `CHECK`, `NOT NULL`, `UNIQUE` and `DEFAULT`.
-
-   4. `Data security and access control`
-   - Users, roles and privileges (`GRANT`, `REVOKE`) restrict who can see or change what. Views hide sensitive columns, and data can be encrypted at rest and in transit.
-
-   5. `Concurrency control`
-   - Many users can work simultaneously without corrupting each other's data, through locking, timestamps or multi-version concurrency control (MVCC).
-
-   6. `Transaction management with ACID properties`
-   - `Atomicity` — all or nothing; `Consistency` — the database moves from one valid state to another; `Isolation` — concurrent transactions do not interfere; `Durability` — committed changes survive a crash.
-
-   7. `Backup and recovery`
-   - Automatic logging, checkpointing and recovery restore the database after a failure, using the transaction log to roll forward or roll back.
-
-   8. `Data independence`
-   - `Physical` independence — storage structures can change without altering the logical schema. `Logical` independence — the logical schema can change without rewriting applications. This is what the three-level architecture exists to provide.
-
-   9. `Data sharing and multi-user support`
-   - One database serves many applications and many users at once, with a consistent view of the data.
-
-   10. `Query language and query optimisation`
-   - A declarative language (SQL) lets the user state `what` is wanted; the optimiser decides `how` to fetch it, choosing indexes and join orders automatically.
-
-   11. `Metadata management — the data dictionary`
-   - The DBMS stores a description of the database itself: tables, columns, types, constraints, indexes and privileges.
-
-   12. `Views and abstraction`
-   - Virtual tables present the data differently to different users without duplicating it.
-
-   13. `Scalability, indexing and performance tuning`
-   - Indexes, partitioning, caching and replication support large data volumes.
-
-   - Taken together, these features are what distinguish a DBMS from a collection of files: the data becomes shared, controlled, consistent and recoverable rather than scattered and fragile.
-
-2. **ODBC এর পূর্ণ রূপ কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
-
-   Answer: ODBC stands for `Open Database Connectivity`.
-
-   What it is
-   - A `standard API` developed by Microsoft in 1992 that lets an application access data in `any` database management system, provided a driver for that system exists.
-   - Its purpose is to make the application independent of the particular database: the same program can talk to Oracle, MySQL, SQL Server or PostgreSQL simply by changing the driver, with no change to the code.
-
-   How it works
-   ```
-   +-------------+     +--------------+     +------------+     +----------+
-   | Application |---->| ODBC Driver  |---->| ODBC       |---->| Database |
-   |             |     | Manager      |     | Driver     |     |          |
-   +-------------+     +--------------+     +------------+     +----------+
-      standard API      selects the driver   translates to      MySQL,
-      calls             for the target DB    the DB's own       Oracle,
-                                             protocol           SQL Server
-   ```
-   - The application issues standard ODBC calls; the driver manager routes them to the correct driver; the driver translates them into the database's native calls and returns the results in a standard form.
-
-   Components
-   - `Application` — the program making the calls.
-   - `Driver Manager` — loads and manages the drivers.
-   - `Driver` — database-specific translation layer.
-   - `Data Source (DSN)` — a named configuration holding the server address, database name and credentials.
-
-   Advantages
-   - One API for every database; the application is portable; the driver can be swapped without recompiling; and it is supported on Windows, Linux and macOS.
-
-   Disadvantage
-   - The extra layer costs some performance compared with a native driver, and vendor-specific features may be unreachable through the generic API.
-
-   Related abbreviations often asked with it
-
-   | Abbreviation | Full form |
-   |---|---|
-   | `ODBC` | Open Database Connectivity |
-   | `JDBC` | Java Database Connectivity |
-   | `OLE DB` | Object Linking and Embedding, Database |
-   | `ADO.NET` | ActiveX Data Objects for .NET |
-   | `DSN` | Data Source Name |
-
-3. **Data about data is Called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
-
-   Answer: Data about data is called `metadata`.
-
-   What it is
-   - Metadata is data that `describes other data` — its structure, meaning, origin, format and constraints — rather than being the data itself.
-
-   In a database
-   - The DBMS stores its metadata in the `data dictionary` (also called the system catalogue). It records:
-     - table names, column names and data types
-     - primary keys, foreign keys and other constraints
-     - indexes and views
-     - user accounts and privileges
-     - storage locations and statistics used by the query optimiser
-
-   ```sql
-   -- querying the metadata itself
-   SELECT table_name, column_name, data_type
-   FROM   information_schema.columns
-   WHERE  table_schema = 'company';
-
-   DESCRIBE Employee;      -- the structure, not the data
-   SHOW TABLES;
-   ```
-
-   Example of the distinction
-   ```
-   DATA                                METADATA
-   +--------+----------+--------+      Table name : Employee
-   | emp_id | emp_name | salary |      Columns    : emp_id INT, emp_name VARCHAR(100),
-   +--------+----------+--------+                   salary DECIMAL(10,2)
-   |  101   | Karim    | 50000  |      Primary key: emp_id
-   |  102   | Rahim    | 60000  |      Rows       : 2
-   +--------+----------+--------+      Created on : 2025-01-15
-   ```
-
-   Types of metadata
-   - `Descriptive` — title, author, keywords; used for discovery.
-   - `Structural` — how the parts fit together: tables, columns, relationships, page order in a document.
-   - `Administrative` — creation date, owner, permissions, retention rules.
-   - `Technical` — file format, size, encoding, compression.
-
-   Everyday examples outside databases
-   - A photograph's EXIF data: camera model, date, exposure, GPS location.
-   - A music file's tags: artist, album, track number, duration.
-   - An email's headers: sender, recipient, timestamp, routing path.
-   - A file's properties: size, type, created and modified dates, permissions.
-
-   Why it matters
-   - The query optimiser relies on statistics held as metadata to choose an execution plan; without accurate statistics, queries run badly.
-   - Data governance, lineage tracking and compliance auditing are all metadata problems.
-   - Metadata is also a privacy concern: call metadata — who called whom, when, and for how long — can be as revealing as the conversation itself.
-
-4. **Difference between MSAccess and MS FoxPro in SQL.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 317 (ET: N/A)]*
-
-   Answer: Both are Microsoft desktop database products, but they belong to different generations and different models.
-
-   | Point | MS Access | MS FoxPro (Visual FoxPro) |
-   |---|---|---|
-   | Type | Relational DBMS with a graphical front end | Procedural DBMS with an integrated programming language (xBase) |
-   | Data engine | Jet / ACE database engine | Native FoxPro / Rushmore engine |
-   | File format | Single `.accdb` (or `.mdb`) file holding everything | Separate files: `.dbf` for tables, `.cdx` for indexes, `.fpt` for memos |
-   | SQL support | Full support, close to ANSI SQL | Supported, but blended with xBase commands such as `USE`, `SEEK`, `SKIP` |
-   | Programming | VBA (Visual Basic for Applications) | FoxPro's own procedural and object-oriented language |
-   | Data access style | `Set-based` — write a query, get a result set | `Record-based` — move a pointer through the table with SKIP and SEEK |
-   | Interface | Strong visual designers for forms and reports | Also has designers, but code-centred |
-   | Performance | Slower on very large tables | Faster, thanks to the Rushmore query optimisation technology |
-   | Concurrent users | Practical limit around 10–20 | Handled more users, but still file-based |
-   | Ease of use | `Very easy` — designed for non-programmers | Steeper learning curve; aimed at developers |
-   | Status | Still shipped as part of Microsoft Office | `Discontinued` — Visual FoxPro 9 was the last version, support ended in 2015 |
-   | Typical use | Small office databases, prototypes, front end to SQL Server | Legacy business applications from the 1990s |
-
-   The SQL difference in practice
-   ```sql
-   -- MS Access: set-based, SQL-first
-   SELECT emp_name, salary FROM Employee WHERE salary > 50000;
-
-   -- FoxPro: SQL is available ...
-   SELECT emp_name, salary FROM Employee WHERE salary > 50000 INTO CURSOR result
-
-   -- ... but the traditional xBase style is record-by-record
-   USE Employee
-   SET FILTER TO salary > 50000
-   GO TOP
-   DO WHILE NOT EOF()
-       ? emp_name, salary
-       SKIP
-   ENDDO
-   ```
-   - That contrast is the essential one: `Access thinks in result sets, FoxPro thinks in record pointers`.
-
-   Common limitations of both
-   - Both are `file-based` rather than client-server, so the whole file travels across the network and concurrency is limited. Neither is suitable for a large multi-user system, where SQL Server, MySQL or PostgreSQL should be used instead. In practice Access is now most often used as a front end to a proper server database rather than as the database itself.
-
-5. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-
-   Answer: (Answered in English, as required for IT topics.)
-
-   What is a DBMS
-   - A `Database Management System` is software that lets users create, store, retrieve, update and manage data in a database while controlling access to it.
-   - It sits between the user or application and the physical data files, so users work with tables and queries rather than with storage.
-   - Examples: MySQL, PostgreSQL, Oracle, SQL Server, SQLite, MongoDB.
-
-   Two advantages (with a fuller list for completeness)
-
-   1. `Reduced data redundancy and inconsistency`
-   - Data is stored once in a normalised structure and shared by every application, instead of being duplicated in separate files. In a file-based system the same customer address appears in the sales file, the billing file and the delivery file; updating one and forgetting the others makes the data inconsistent. A DBMS removes that risk.
-
-   2. `Data security and controlled access`
-   - Users, roles and privileges determine exactly who may read or change which data. `GRANT` and `REVOKE` control access at table and column level, views hide sensitive columns, and the database can be encrypted. A collection of files offers only the operating system's file permissions, which are far coarser.
-
-   Other advantages worth naming
-   - `Data integrity` — constraints such as PRIMARY KEY, FOREIGN KEY, CHECK and NOT NULL keep the data valid automatically.
-   - `Concurrency control` — many users work at once without corrupting each other's data.
-   - `Transaction support with ACID properties` — Atomicity, Consistency, Isolation, Durability.
-   - `Backup and recovery` — the transaction log allows the database to be restored to a consistent state after a crash.
-   - `Data independence` — storage structures can change without rewriting applications.
-   - `Efficient querying` — a declarative language plus an optimiser that chooses indexes and join orders.
-   - `Data sharing` — one database serves many applications simultaneously.
-
-   Disadvantages, for balance
-   - Higher cost of software, hardware and skilled staff; greater complexity; and a single point of failure if the server is not made redundant.
-
-6. **What is Database?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
-
-   Answer: A `database` is an organised collection of related data, stored electronically so that it can be efficiently accessed, managed and updated.
-
-   Key characteristics
-   - The data is `structured` — usually into tables of rows and columns in a relational database.
-   - The data is `related` — it describes some part of the real world, such as a bank's customers and their accounts.
-   - It is `persistent` — it survives program termination and power loss.
-   - It is `shared` — many users and applications use the same data simultaneously.
-   - It is managed by a `DBMS`, which controls access, enforces integrity and provides recovery.
-
-   Example
-   ```
-   Database: University
-
-   Table: Student                        Table: Course
-   +------------+-------+------+         +-----------+------------------+
-   | student_id | name  | dept |         | course_id | course_name      |
-   +------------+-------+------+         +-----------+------------------+
-   |    101     | Karim | CSE  |         |   CS101   | Database Systems |
-   |    102     | Rahim | EEE  |         |   CS102   | Networking       |
-   +------------+-------+------+         +-----------+------------------+
-   ```
-
-   Terminology
-   - `Table (relation)` — a two-dimensional structure holding data about one kind of thing.
-   - `Row (tuple / record)` — one instance, such as one student.
-   - `Column (attribute / field)` — one property, such as the name.
-   - `Field` — the smallest unit of data: the value of one column in one row.
-   - `Schema` — the structural definition of the database.
-
-   Types of database
-   - `Relational` — tables linked by keys, queried with SQL: MySQL, PostgreSQL, Oracle.
-   - `NoSQL` — document (MongoDB), key-value (Redis), column-family (Cassandra), graph (Neo4j).
-   - By location: centralised, distributed, cloud.
-   - By use: OLTP for day-to-day transactions, OLAP data warehouses for analysis.
-
-   Why a database rather than files
-   - Less redundancy and inconsistency, enforced integrity, controlled security, concurrent multi-user access, transactions with ACID guarantees, backup and recovery, and a query language with an optimiser.
-
-   - Note the distinction examiners look for: the `database` is the data itself, while the `DBMS` is the software that manages it. Oracle is a DBMS; the payroll data stored in it is the database.
-
-7. **What is data about data?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
-
-   Answer: Data about data is called `metadata`.
-
-   Definition
-   - Metadata `describes` other data — its structure, meaning, origin, format, ownership and constraints — rather than being the subject data itself.
-
-   In a database
-   - The DBMS keeps its metadata in the `data dictionary`, also called the system catalogue. It holds:
-     - table and column names with their data types and sizes
-     - primary keys, foreign keys, and CHECK, NOT NULL and UNIQUE constraints
-     - indexes, views, triggers and stored procedures
-     - user accounts, roles and privileges
-     - storage locations, row counts and the statistics the query optimiser depends on
-
-   ```sql
-   DESCRIBE Employee;                        -- the structure, not the rows
-
-   SELECT table_name, column_name, data_type
-   FROM   information_schema.columns
-   WHERE  table_schema = 'company';          -- querying the metadata directly
-   ```
-
-   The distinction, illustrated
-   ```
-   DATA                                  METADATA
-   +--------+----------+--------+        Table name  : Employee
-   | emp_id | emp_name | salary |        Column      : emp_id, type INT, primary key
-   +--------+----------+--------+        Column      : emp_name, VARCHAR(100), not null
-   |  101   | Karim    | 50000  |        Column      : salary, DECIMAL(10,2)
-   |  102   | Rahim    | 60000  |        Row count   : 2
-   +--------+----------+--------+        Last modified: 2025-01-15
-   ```
-
-   Types
-   - `Descriptive` — title, author, keywords; supports discovery and search.
-   - `Structural` — how components relate: tables, relationships, page order.
-   - `Administrative` — creation date, owner, permissions, retention policy.
-   - `Technical` — format, size, encoding, compression.
-
-   Everyday examples
-   - A photograph's EXIF data: camera, date, shutter speed, GPS coordinates.
-   - A music file's ID3 tags: artist, album, duration.
-   - An email's headers: sender, recipient, timestamp, routing.
-   - A file's properties: size, type, created and modified dates.
-
-   Why it matters
-   - The query `optimiser` chooses its execution plan from statistical metadata; stale statistics cause slow queries.
-   - Data governance, lineage and compliance auditing are all metadata questions.
-   - Metadata carries real privacy weight: knowing who called whom, when and for how long can reveal as much as the conversation itself.
-
-8. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.)
-
-   Centralised system
-   - All the data and all the processing reside on `one central computer`, usually a mainframe. Users connect through terminals that do no processing of their own — "dumb terminals".
-
-   ```
-                       +---------------------+
-                       |   CENTRAL COMPUTER  |
-                       |   (mainframe)       |
-                       |  - Database         |
-                       |  - Application      |
-                       |  - Processing       |
-                       +----------+----------+
-                                  |
-             +--------------------+--------------------+
-             |                    |                    |
-         [Terminal]          [Terminal]           [Terminal]
-         (no processing)     (no processing)      (no processing)
-   ```
-
-   - Advantages: a single point of control and administration; strong security, since everything is in one place; no data inconsistency; simple backup; and low cost per terminal.
-   - Disadvantages: a `single point of failure` — if the central machine fails, everything stops; a performance bottleneck as users increase; expensive central hardware; and terminals cannot work offline.
-
-   Client-server system
-   - Processing is `divided`. The client handles the user interface and some logic; the server holds the database and executes queries. The two communicate over a network.
-
-   ```
-      [Client 1]        [Client 2]        [Client 3]
-      - UI              - UI              - UI
-      - some logic      - some logic      - some logic
-           \                |                /
-            \               |               /
-             \______________|______________/
-                            |
-                      (network requests)
-                            |
-                 +----------+----------+
-                 |      SERVER         |
-                 |  - Database         |
-                 |  - Business logic   |
-                 |  - Query processing |
-                 +---------------------+
-   ```
-
-   - Advantages: the load is shared, so the server does less work per user; clients can be ordinary PCs; the system scales by adding clients or servers; the network carries only requests and results rather than whole files; and servers can be replicated for availability.
-   - Disadvantages: more complex to build and administer; the server is still a bottleneck and a failure point unless clustered; and network latency affects every operation.
-
-   Comparison
-
-   | Point | Centralised | Client-server |
-   |---|---|---|
-   | Processing | Entirely on the central machine | Divided between client and server |
-   | Client hardware | Dumb terminal | Full computer |
-   | Scalability | Poor | Good |
-   | Cost of central machine | Very high | Moderate |
-   | Single point of failure | Yes | The server, unless clustered |
-   | Network traffic | Screen output only | Requests and result sets |
-   | Maintenance | One machine | Server plus every client |
-   | Example | Mainframe banking systems of the 1970s and 1980s | MySQL or Oracle serving desktop and web applications |
-
-   - The modern extension is the `three-tier` architecture: presentation (browser), application (web or app server) and data (database server). Separating the middle tier lets business logic be changed without touching either the client or the database, and it is the standard shape of web applications today.
-
-9. **(ক) একজন ডাটাবেস এডমিন এর কাজ কী? কিছু ডাটাবেস সিস্টেম অ্যাপ্লিকেশনের নাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.)
-
-   Work of a Database Administrator (DBA)
-
-   1. `Database design and implementation`
-   - Designing the schema, choosing data types, defining primary and foreign keys, and normalising the tables. Creating databases, tables, views and indexes.
-
-   2. `Installation, configuration and upgrades`
-   - Installing the DBMS, tuning its configuration parameters, applying patches and planning version upgrades.
-
-   3. `Security administration`
-   - Creating users and roles, granting and revoking privileges, enforcing password policy, configuring encryption, and auditing who accessed what.
-
-   4. `Backup and recovery`
-   - Designing the backup strategy (full, incremental, differential), scheduling and verifying backups, and — critically — `testing the restore`. A backup that has never been restored is not a backup.
-
-   5. `Performance monitoring and tuning`
-   - Finding slow queries, examining execution plans, creating and removing indexes, tuning memory and buffer settings, and partitioning large tables.
-
-   6. `Capacity planning and storage management`
-   - Forecasting growth, allocating tablespaces, archiving old data.
-
-   7. `Data integrity`
-   - Defining and maintaining constraints, and running consistency checks.
-
-   8. `Availability and disaster recovery`
-   - Configuring replication, clustering, failover and standby servers; defining and testing the DR plan.
-
-   9. `Troubleshooting and user support`
-   - Diagnosing deadlocks, blocked sessions, corruption and connection failures; helping developers write efficient SQL.
-
-   10. `Documentation and compliance`
-   - Maintaining the data dictionary and schema documentation, and meeting regulatory requirements for retention and audit.
-
-   Database system applications
-   - `Banking` — accounts, transactions, loans, ATM networks.
-   - `Airlines and railways` — reservations, schedules, seat allocation.
-   - `Universities` — student registration, courses, results.
-   - `Telecommunications` — call records, billing, prepaid balances.
-   - `Sales and e-commerce` — customers, products, orders, inventory.
-   - `Human resources and payroll` — employees, salaries, leave, taxation.
-   - `Healthcare` — patient records, prescriptions, laboratory results.
-   - `Manufacturing` — production planning, supply chain, stock control.
-   - `Government` — national ID, land records, tax administration.
-   - `Libraries` — catalogues, members, loans.
-   - `Social media and search` — user profiles, posts, relationships, indexes.
-
-   - Related roles worth distinguishing: a `Data Administrator` decides policy and standards for data as a corporate asset, while the `Database Administrator` implements and operates the databases themselves.
-
-10. **(খ) ডাটাবেস ব্যবস্থাপনা সিস্টেমের তিন স্তরবিশিষ্ট আর্কিটেকচার ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) The `three-level (three-schema) architecture` was proposed by ANSI/SPARC to separate a user's view of the data from how it is actually stored.
-
-    The diagram
-    ```
-    +-------------------------------------------------------------+
-    |  EXTERNAL LEVEL  (view level)                               |
-    |                                                             |
-    |   [User View 1]      [User View 2]      [User View 3]       |
-    |   Clerk sees name    HR sees salary     Manager sees        |
-    |   and phone only     and leave          department totals   |
-    +-------------------------------------------------------------+
-                              |  external / conceptual mapping
-    +-------------------------------------------------------------+
-    |  CONCEPTUAL LEVEL  (logical level)                          |
-    |                                                             |
-    |   The whole database as one logical structure:              |
-    |   Employee(emp_id, name, salary, dept_id)                   |
-    |   Department(dept_id, dept_name)                            |
-    |   plus all constraints and relationships                    |
-    +-------------------------------------------------------------+
-                              |  conceptual / internal mapping
-    +-------------------------------------------------------------+
-    |  INTERNAL LEVEL  (physical level)                           |
-    |                                                             |
-    |   How the data is actually stored:                          |
-    |   file organisation, B-tree indexes, pages, compression,    |
-    |   record placement on disk                                  |
-    +-------------------------------------------------------------+
-                              |
-                        [ Physical database ]
+    SELECT DISTINCT c.first_name
+    FROM Customer c
+    JOIN "Order" o ON c.customer_id = o.customer_id
+    WHERE o.order_type = 'B' 
+      AND o.order_date = '2024-03-15';
     ```
 
-    1. External level (view level)
-    - The `highest` level, closest to the user. Each user or group sees only the part of the database that concerns them, in the form that suits them.
-    - There are `many` external schemas, one per user group.
-    - It provides `security` (sensitive columns are simply absent from the view) and `simplicity` (a complex join is presented as one virtual table).
-    - Implemented in SQL with `views`.
-
-    2. Conceptual level (logical level)
-    - The `middle` level, describing the `whole` database logically: all the entities, attributes, relationships and constraints, but nothing about how they are stored.
-    - There is exactly `one` conceptual schema, and it is the DBA's central design.
-
-    3. Internal level (physical level)
-    - The `lowest` level, describing `how` the data is stored: file organisation, record layout, index structures, compression, page size and placement on disk.
-    - There is exactly `one` internal schema. Users and application programmers never see it.
-
-    Data independence — the reason for the architecture
-
-    | Type | Meaning | Example |
-    |---|---|---|
-    | `Logical data independence` | The conceptual schema can change without altering the external schemas or the applications | Adding a column to Employee does not break existing views |
-    | `Physical data independence` | The internal schema can change without altering the conceptual schema | Adding an index or moving the data to a new disk does not affect any query's meaning |
-
-    - `Physical` independence is easier to achieve and is well supported by every DBMS; `logical` independence is harder, because a change to the logical structure often does affect what the applications expect.
-
-    Advantages of the architecture
-    - Users are shielded from storage details; several customised views can exist over the same data; security is enforced by restricting views; storage can be reorganised for performance without touching applications; and the DBA can tune the system independently of the developers.
-
-11. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) Advantages of a DBMS over an ordinary file-based system.
-
-    1. `Reduced data redundancy`
-    - In a file system the same data is duplicated across files — the customer address appears in the sales file, the billing file and the delivery file. A DBMS stores it once in a normalised structure and shares it.
-
-    2. `Elimination of data inconsistency`
-    - Because the data exists once, updating it updates it everywhere. In a file system, changing the address in one file and forgetting the others leaves the organisation with two contradictory answers to the same question.
-
-    3. `Data integrity`
-    - Constraints — PRIMARY KEY, FOREIGN KEY, CHECK, NOT NULL, UNIQUE — are enforced by the DBMS itself. A file system enforces nothing; every application must re-implement the rules, and any one of them can get it wrong.
-
-    4. `Data security and access control`
-    - Users, roles and privileges control access at table and even column level; views hide sensitive data. A file system offers only coarse file permissions.
-
-    5. `Concurrent multi-user access`
-    - Locking or MVCC lets many users read and write simultaneously without corrupting each other's work. In a file system two programs writing the same file at once will corrupt it.
-
-    6. `Transaction support — the ACID properties`
-    - A transfer that debits one account and credits another either completes entirely or not at all. A file system has no notion of a transaction, so a crash midway leaves the money missing.
-
-    7. `Backup and recovery`
-    - The transaction log allows automatic recovery to a consistent state after a crash. File-based recovery means restoring yesterday's copy and losing a day's work.
-
-    8. `Data independence`
-    - Storage structures and even the logical schema can change without rewriting the applications. In a file system, changing a record layout means changing every program that reads the file.
-
-    9. `Efficient querying`
-    - SQL states `what` is wanted and the optimiser decides `how` to get it, using indexes and join strategies. In a file system every query must be written as a program.
-
-    10. `Data sharing`
-    - One database serves many applications and departments with a single consistent version of the truth, rather than each department keeping its own files.
-
-    11. `Enforcement of standards`
-    - Naming conventions, data formats and documentation are centralised in the data dictionary.
-
-    Summary
-
-    | Point | File system | DBMS |
-    |---|---|---|
-    | Redundancy | High | Controlled |
-    | Consistency | Hard to maintain | Enforced |
-    | Integrity rules | In each application | In the database |
-    | Security | File-level only | User, role, table and column level |
-    | Concurrency | Unsafe | Managed |
-    | Transactions | None | ACID |
-    | Recovery | Manual | Automatic, log-based |
-    | Querying | Program per query | Declarative SQL |
-    | Data independence | None | Physical and logical |
-
-    Disadvantages of a DBMS, for balance
-    - Higher cost of software, hardware and skilled staff; greater complexity; and a single point of failure unless replicated. For a very small, single-user, read-only dataset, a file may genuinely be the better choice.
-
-12. **What is Database administrator role?** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 662 (ET: N/A)]*
-
-    Answer: The `Database Administrator (DBA)` is the person responsible for the design, implementation, security, performance and availability of an organisation's databases.
-
-    Main roles
-
-    1. `Schema design and implementation`
-    - Designing tables, choosing data types, defining keys, normalising the structure, and creating databases, views and indexes.
-
-    2. `Installation, configuration and upgrades`
-    - Installing the DBMS, tuning configuration parameters, applying security patches, and planning version migrations.
-
-    3. `Security administration`
-    - Creating users and roles; granting and revoking privileges with `GRANT` and `REVOKE`; enforcing password policy; configuring encryption at rest and in transit; and auditing access.
-
-    4. `Backup and recovery`
-    - Choosing a backup strategy — full, incremental, differential — scheduling it, monitoring it, and `regularly testing the restore`. An untested backup is not a backup.
-
-    5. `Performance monitoring and tuning`
-    - Identifying slow queries, reading execution plans, adding or removing indexes, tuning buffer and memory settings, partitioning large tables, and updating optimiser statistics.
-
-    6. `Capacity planning and storage management`
-    - Forecasting growth, allocating storage, archiving and purging old data.
-
-    7. `Availability and disaster recovery`
-    - Configuring replication, clustering and failover; maintaining a standby site; defining and rehearsing the DR plan against agreed RPO and RTO targets.
-
-    8. `Data integrity`
-    - Defining and maintaining constraints, and running consistency checks.
-
-    9. `Troubleshooting`
-    - Diagnosing deadlocks, blocking, connection exhaustion, corruption and failed jobs.
-
-    10. `Supporting developers and users`
-    - Reviewing SQL for efficiency and safety, advising on schema changes, and managing the migration of changes from development to production.
-
-    11. `Documentation and compliance`
-    - Maintaining the data dictionary and schema documentation; meeting regulatory obligations for retention, privacy and audit.
-
-    Types of DBA
-    - `System DBA` — installation, patching, configuration, storage.
-    - `Application DBA` — schema and SQL for one particular application.
-    - `Development DBA` — design and code review during development.
-    - `Cloud DBA` — managed services such as RDS, Azure SQL and Cloud SQL.
-
-    Skills required
-    - SQL and the internals of at least one DBMS; performance tuning; backup and recovery; operating systems and storage; scripting for automation; and security practice.
-
-    - A useful distinction: a `Data Administrator` sets policy and standards for data as a corporate asset — what data is held, what it means, who owns it — while the `Database Administrator` builds and operates the systems that store it.
-
-13. **Explain difference between Data Administrator and Database Administrator.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
-
-    Answer:
-
-    | Point | Data Administrator (DA) | Database Administrator (DBA) |
-    |---|---|---|
-    | Focus | `Data as a corporate asset` — policy and meaning | `The database systems` — implementation and operation |
-    | Orientation | Managerial and strategic | Technical and operational |
-    | Main concern | What data the organisation holds, what it means, who owns it | How that data is stored, secured and made to perform |
-    | Level | Conceptual and logical | Logical and physical |
-    | Typical tasks | Data policy, standards, naming conventions, the enterprise data model, data ownership and stewardship, data quality rules, regulatory compliance | Installation, schema creation, indexing, tuning, backup and recovery, security administration, replication, troubleshooting |
-    | Deliverables | Data dictionary, data governance policy, enterprise data model | A running, secure, fast, recoverable database |
-    | Tools | Modelling and governance tools, documentation | The DBMS itself, monitoring and backup tools, SQL |
-    | Technical depth | Moderate | High |
-    | Reports to | Usually senior management or the CIO | Usually IT operations |
-    | Number in an organisation | Few — often one | Several, sometimes per system |
-    | Time horizon | Long term | Day to day |
-
-    The relationship between them
-    ```
-    DATA ADMINISTRATOR
-      decides: "Customer address must be stored once, in a standard format,
-                owned by the Sales department, retained for 7 years."
-                                  |
-                                  v
-    DATABASE ADMINISTRATOR
-      implements: CREATE TABLE Customer (... address VARCHAR(200) ...);
-                  adds constraints, indexes, permissions, backups,
-                  and an archival job that purges after 7 years.
-    ```
-
-    In one line each
-    - The `Data Administrator` decides `what` data the organisation keeps and what the rules are.
-    - The `Database Administrator` decides `how` it is stored and makes it work.
-
-    Practical note
-    - In a small organisation one person performs both roles. The separation matters in large enterprises and in government, where data governance, ownership and regulatory compliance are substantial responsibilities in their own right, quite separate from keeping a server running.
-    - A third related role, the `Data Architect`, sits between them, designing the overall data landscape and integration between systems.
-
-14. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 684 (ET: N/A)]*
-
-    Answer: Security can be enforced by the DBMS itself, or written into the application, and each approach has real strengths and weaknesses.
-
-    DBMS-provided security
-    - The database enforces access control directly: users, roles, privileges, views, row-level security and encryption.
+    ii) Total monetary sum of orders between March 01, 2024 and March 15, 2024:
     ```sql
-    CREATE USER clerk IDENTIFIED BY 'password';
-    GRANT SELECT ON Employee(emp_name, designation) TO clerk;   -- no salary column
-    REVOKE DELETE ON Employee FROM clerk;
+    SELECT SUM(monetary_value) AS total_monetary_amount
+    FROM "Order"
+    WHERE order_date BETWEEN '2024-03-01' AND '2024-03-15';
     ```
 
-    `Advantages`
-    - `Centralised and consistent` — one set of rules applies no matter which application, report tool or command-line client connects. This is the decisive advantage.
-    - `Cannot be bypassed` — a user connecting with SQL directly is still subject to the same privileges.
-    - `Reliable and well tested` — the vendor's implementation is mature and audited, rather than home-written.
-    - `Granular` — control at database, table, column and even row level, plus views that hide data entirely.
-    - `Built-in auditing` of who accessed what and when.
-    - `Less code to write and maintain`, and the rules survive when applications are rewritten.
+95. **What do you understand by database view? Write a simple example to create, update and drop a view.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 401]]*
 
-    `Disadvantages`
-    - `Limited expressiveness` — it enforces "who may see which rows and columns", but not complex business rules such as "a manager may approve a loan only up to their sanction limit, and only during office hours".
-    - `Administrative overhead` — every user needs a database account, which is impractical for a public web application with a million users.
-    - `Vendor-specific` — the syntax and capabilities differ between Oracle, SQL Server and PostgreSQL, so migration is harder.
-    - `Connection pooling conflicts` — modern applications share one pooled database login, which defeats per-user database privileges.
+Answer:
+    A Database View is a virtual table based on the result-set of a predefined SQL query. A view does not store physical data itself (unless materialized); it dynamically pulls data from the underlying base tables each time it is queried.
 
-    Application-provided security
-    - The application authenticates users and decides what each may do, connecting to the database with a single privileged account.
+    Benefits:
+    - Enhances security by restricting user access to specific columns/rows.
+    - Simplifies complex multi-table joins and aggregation queries.
 
-    `Advantages`
-    - `Flexible and expressive` — arbitrary business logic, workflow states, time-of-day rules and approval limits can all be encoded.
-    - `Scales to many users` without creating a database account for each one.
-    - `Portable` — independent of the DBMS, so the database can be changed without rewriting the security model.
-    - `Better user experience` — friendly error messages, single sign-on, multi-factor authentication.
-    - `Works with connection pooling`, which is essential for web performance.
-
-    `Disadvantages`
-    - `Bypassable` — this is the fundamental weakness. Anyone who obtains the application's database credentials, or connects with a SQL client, has full access. The database itself is defenceless.
-    - `Duplicated effort` — every application touching the database must re-implement the same rules, and any one of them may implement them wrongly.
-    - `Bug-prone` — a single missing authorisation check exposes data. This is the commonest cause of real breaches.
-    - `Weaker auditing`, since the database sees only the shared account.
-
-    Comparison
-
-    | Point | DBMS-provided | Application-provided |
-    |---|---|---|
-    | Enforcement point | The database | The application |
-    | Can be bypassed | No | `Yes` |
-    | Business-rule complexity | Limited | Unlimited |
-    | Scales to many users | Poorly | Well |
-    | Consistency across applications | Guaranteed | Must be re-implemented |
-    | Portability | Vendor-specific | Portable |
-    | Auditing | Built in | Must be written |
-
-    The practical answer — `defence in depth`
-    - Real systems use `both`. The application enforces the rich business rules and the user experience, while the database still restricts the application's own account to the minimum privileges it needs, uses views to hide sensitive columns, encrypts data at rest, and audits access. Neither layer alone is sufficient: the application layer is bypassable, and the database layer cannot express the business rules.
-
-15. **(a) What is database schema? What are dangling tuple and descriptive attribute?** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
-
-    Answer:
-
-    Database schema
-    - A `schema` is the `logical structure` of a database — its design or blueprint. It defines the tables, the columns and their data types, the keys, the relationships and the constraints, but not the data itself.
-    - It is defined with DDL statements and is stored in the data dictionary.
-    - The `schema` is the definition; the `instance` is the data actually held at a given moment. The schema changes rarely; the instance changes constantly.
-
+    SQL Examples:
     ```sql
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100) NOT NULL,
-        salary   DECIMAL(10,2) CHECK (salary > 0),
-        dept_id  INT REFERENCES Department(dept_id)
-    );
-    ```
-    - Three levels of schema exist in the ANSI/SPARC architecture: `external` (individual user views), `conceptual` (the whole database logically) and `internal` (physical storage).
-
-    Dangling tuple
-    - A `dangling tuple` is a row that is lost, or fails to combine, when relations are joined — a row in one relation with `no matching row` in the other.
-    - It arises in two important contexts:
-
-    1. `In a natural or inner join`
-    ```
-    Employee                       Department
-    +--------+---------+           +---------+-----------+
-    | emp_id | dept_id |           | dept_id | dept_name |
-    +--------+---------+           +---------+-----------+
-    |  101   |   10    |           |   10    | IT        |
-    |  102   |  NULL   | <- dangling|   20   | HR        |
-    |  103   |   99    | <- dangling+---------+-----------+
-    +--------+---------+
-    ```
-    - Employees 102 and 103 disappear from an inner join. An `outer join` preserves them, padding the missing side with NULLs — which is exactly what outer joins exist for.
-
-    2. `In a lossy decomposition`
-    - When a relation is split into two and the common attribute is not a superkey of either, rejoining them produces `spurious tuples` and may lose genuine ones. Dangling tuples are the symptom that the decomposition was not lossless.
-
-    - Practical significance: a dangling tuple usually signals a `referential integrity` problem — a foreign key pointing at a row that no longer exists, which a properly declared FOREIGN KEY constraint would have prevented.
-
-    Descriptive attribute
-    - A `descriptive attribute` is an attribute that belongs to a `relationship` rather than to either of the entities it connects.
-    - It describes the relationship itself, and it cannot sensibly be stored in either entity alone.
-
-    ```
-       Student  -------< Enrolls >-------  Course
-                            |
-                         [grade]           <- descriptive attribute
-                         [date]
-    ```
-    - `grade` belongs neither to the student (a student has many grades) nor to the course (a course gives many grades). It exists only for the `pairing` of one student with one course.
-
-    ```sql
-    CREATE TABLE Enrollment (
-        student_id INT,
-        course_id  INT,
-        grade      CHAR(2),        -- descriptive attribute
-        enrol_date DATE,           -- descriptive attribute
-        PRIMARY KEY (student_id, course_id),
-        FOREIGN KEY (student_id) REFERENCES Student(student_id),
-        FOREIGN KEY (course_id)  REFERENCES Course(course_id)
-    );
-    ```
-    - Other examples: `quantity` on the relationship between an order and a product; `salary` on the relationship between an employee and a project they are assigned to; `borrow_date` between a member and a book.
-    - In the ER diagram, a descriptive attribute is drawn as an oval attached to the `diamond`, not to either rectangle.
-
-16. **What is data Independence? How many types of data independence?** *[BDCCL Assistant Engineer (Network) 2022 compact it 742 (ET: N/A)]*
-
-    Answer:
-
-    What is data independence
-    - `Data independence` is the ability to change the schema at one level of a database system `without` having to change the schema at the level above, and therefore without rewriting the applications.
-    - It is the main reason the ANSI/SPARC three-level architecture exists: external, conceptual and internal levels are separated by `mappings`, and a change is absorbed by adjusting a mapping rather than by changing everything above it.
-
-    ```
-    +-------------------------------------------+
-    |  EXTERNAL LEVEL  (user views)             |
-    +-------------------------------------------+
-            ^  LOGICAL data independence
-    +-------------------------------------------+
-    |  CONCEPTUAL LEVEL  (whole logical schema) |
-    +-------------------------------------------+
-            ^  PHYSICAL data independence
-    +-------------------------------------------+
-    |  INTERNAL LEVEL  (physical storage)       |
-    +-------------------------------------------+
-    ```
-
-    There are `two` types.
-
-    1. Physical data independence
-    - The ability to change the `internal (physical) schema` without changing the conceptual schema.
-    - Examples of such changes: creating or dropping an index, moving the database to a different disk or file system, changing the file organisation from heap to clustered, altering the page size, enabling compression, or partitioning a table.
-    - Effect on applications: `none`. A query means exactly the same thing before and after; only its execution plan changes.
-    ```sql
-    CREATE INDEX idx_salary ON Employee(salary);
-    -- every existing query still works, unchanged; some simply run faster
-    ```
-    - This form is `easier to achieve` and every modern DBMS provides it fully.
-
-    2. Logical data independence
-    - The ability to change the `conceptual schema` without changing the external schemas or the application programs.
-    - Examples: adding a new column or table, splitting one table into two, merging two tables, renaming an attribute, or changing a relationship.
-    - Applications are protected by `views`: if the underlying tables change, the view definition is rewritten and the applications querying the view continue to work.
-    ```sql
-    -- the conceptual schema changes: Employee is split into two tables
-    -- but the old view is redefined, so applications see no difference
-    CREATE VIEW Employee AS
-    SELECT p.emp_id, p.emp_name, j.salary, j.dept_id
-    FROM   Employee_Personal p JOIN Employee_Job j ON p.emp_id = j.emp_id;
-    ```
-    - This form is `harder to achieve`, because a change to the logical structure often genuinely changes what the application needs to know — for example, removing a column that an application displays cannot be hidden by any view.
-
-    Comparison
-
-    | Point | Physical data independence | Logical data independence |
-    |---|---|---|
-    | Levels separated | Internal and conceptual | Conceptual and external |
-    | Changes absorbed | Storage, indexes, files | Tables, columns, relationships |
-    | Difficulty | Easier | Harder |
-    | Mechanism | The DBMS storage layer | Views |
-    | Support in practice | Complete | Partial |
-
-    Why it matters
-    - Without it, adding an index or reorganising storage would require every application to be recompiled. Data independence is what allows a DBA to tune a production system for performance while the applications above it carry on unchanged.
-
-17. **(ii) Database এর Table and View এর মধ্যে পার্থক্য লিখুন। E-R diagram এর প্রয়োজনীয়তা লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 785 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.)
-
-    Table vs View
-
-    | Point | Table | View |
-    |---|---|---|
-    | Nature | A `real` object that physically stores data | A `virtual` table defined by a stored SELECT statement |
-    | Storage | Occupies disk space | Stores no data; only the query definition is saved |
-    | Data source | Its own rows | Derived from one or more base tables each time it is used |
-    | Created with | `CREATE TABLE` | `CREATE VIEW` |
-    | Updatable | Always | Only under restrictions — no aggregates, GROUP BY, DISTINCT or (usually) joins |
-    | Indexes | Can be indexed | Cannot be indexed directly (except SQL Server indexed views and materialised views) |
-    | Performance | Direct access | The underlying query runs each time, so it can be slower |
-    | Purpose | Store data | Simplify complex queries, restrict access, present data differently |
-    | Effect of dropping | The data is lost | Only the definition is lost; the base data is untouched |
-    | Security use | Coarse — table-level permissions | `Fine` — expose only chosen columns and rows |
-
-    ```sql
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100),
-        salary   DECIMAL(10,2),
-        dept_id  INT
-    );
-
-    CREATE VIEW PublicStaff AS
-    SELECT emp_id, emp_name, dept_id       -- salary deliberately excluded
-    FROM   Employee;
-
-    GRANT SELECT ON PublicStaff TO clerk;  -- the clerk cannot reach Employee at all
-    ```
-
-    Why views are used
-    - `Security` — expose only permitted columns and rows.
-    - `Simplicity` — a five-table join is presented as one virtual table.
-    - `Logical data independence` — the base tables can be restructured and the view redefined, so applications continue to work.
-    - `Consistency` — one definition of a business figure, used by everyone.
-
-    Necessity of an E-R diagram
-    - An `Entity-Relationship diagram` is a graphical model of the data: entities (rectangles), attributes (ovals) and relationships (diamonds), with cardinality marked on each relationship.
-
-    Why it is needed
-    - `Communication` — it lets designers, developers and non-technical stakeholders discuss the data model in one picture, before any code exists. Errors caught here cost nothing; the same errors caught after implementation are expensive.
-    - `Blueprint for the database` — entities become tables, attributes become columns, and relationships become foreign keys or junction tables. The conversion is mechanical once the diagram is right.
-    - `Reveals the relationships and their cardinality` — one-to-one, one-to-many and many-to-many, which decides where each foreign key goes and whether a junction table is required.
-    - `Supports normalisation` — a clear model exposes redundancy and update anomalies early.
-    - `Documentation` — it remains the reference for anyone maintaining or extending the system.
-    - `Completeness check` — it makes missing entities and forgotten relationships visible in a way that a list of tables does not.
-
-    ```
-       +----------+       /-----------\       +----------+
-       | Student  |------<  Enrolls    >------| Course   |
-       +----------+  M    \-----------/   N   +----------+
-            |                    |                  |
-        [student_id]          [grade]           [course_id]
-        [name]                                  [title]
-    ```
-    - The M:N relationship shown here tells the designer immediately that a third table, `Enrollment(student_id, course_id, grade)`, is required — which is exactly the kind of decision the diagram exists to make obvious.
-
-18. **(a) Distinguish between table and view in database management system.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
-
-    Answer:
-
-    | Point | Table | View |
-    |---|---|---|
-    | Definition | A database object that `physically stores` rows and columns | A `virtual table` defined by a stored SELECT statement |
-    | Physical storage | Occupies disk space | Stores no data — only the query text |
-    | Data | Its own | Derived from one or more base tables at the moment of use |
-    | Created by | `CREATE TABLE` | `CREATE VIEW` |
-    | Contains | Actual records | A saved query |
-    | Updatable | Always | Only when the mapping to one base table is unambiguous |
-    | Indexes | Yes | Not directly, except SQL Server indexed views and Oracle materialised views |
-    | Constraints | Can carry PRIMARY KEY, FOREIGN KEY, CHECK | Cannot; the base tables carry them |
-    | Performance | Direct read | The underlying query executes each time |
-    | Effect of DROP | Data is destroyed | Only the definition is removed |
-    | Security role | Table-level grants only | Column-level and row-level restriction |
-    | Maintenance | Data must be maintained | Automatically reflects the current base data |
-
-    Example
-    ```sql
-    -- base table
-    CREATE TABLE Employee (
-        emp_id   INT PRIMARY KEY,
-        emp_name VARCHAR(100),
-        salary   DECIMAL(10,2),
-        dept_id  INT
-    );
-
-    -- view: hides salary and shows only one department
-    CREATE VIEW IT_Staff AS
-    SELECT emp_id, emp_name, dept_id
-    FROM   Employee
-    WHERE  dept_id = 10;
-
-    SELECT * FROM IT_Staff;      -- used exactly like a table
-    ```
-    - If a new employee is inserted into `Employee` with `dept_id = 10`, they appear in `IT_Staff` immediately, because the view is recomputed on every use.
-
-    When a view can be updated
-    - Generally only if it selects from a `single` base table and contains no `DISTINCT`, `GROUP BY`, aggregate function, `UNION` or set operator, and includes every NOT NULL column of the base table without a default.
-    ```sql
-    UPDATE IT_Staff SET emp_name = 'Karim Ahmed' WHERE emp_id = 101;   -- allowed
-    ```
-    - A view containing `AVG(salary) GROUP BY dept_id` cannot be updated, because there is no single row to change.
-
-    Materialised view — the middle case
-    - A `materialised view` actually `stores` the result, and is refreshed on a schedule or on commit. It behaves like a table for reading (fast, indexable) but like a view for definition (derived from base tables). The trade-off is freshness against speed. Oracle and PostgreSQL support them; MySQL does not.
-
-    Why views are used
-    - Security (hide columns and rows), simplicity (encapsulate a complex join), logical data independence (redefine the view when base tables change), and consistency (one agreed definition of a derived figure).
-
-19. **Database এর সর্বনিম্ন Unit কোনটি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.) The smallest unit of a database is a `field` — also called a `data item` or `attribute value`.
-
-    The hierarchy, smallest to largest
-    ```
-    Bit  ->  Character  ->  Field  ->  Record  ->  File (Table)  ->  Database
-    ```
-
-    | Level | Meaning | Example |
-    |---|---|---|
-    | `Bit` | A single 0 or 1 — the smallest unit of storage | 1 |
-    | `Character (byte)` | A single letter, digit or symbol | 'K' |
-    | `Field` | `The smallest meaningful unit of data` — one attribute value | "Karim" |
-    | `Record (tuple / row)` | A collection of related fields describing one entity | 101, Karim, 50000 |
-    | `Table (file / relation)` | A collection of related records | The whole Employee table |
-    | `Database` | A collection of related tables | The company database |
-
-    Illustration
-    ```
-    Employee table
-    +--------+----------+--------+
-    | emp_id | emp_name | salary |     <- column names (attributes)
-    +--------+----------+--------+
-    |  101   | Karim    | 50000  |     <- one RECORD (row)
-    |  102   | Rahim    | 60000  |
-    +--------+----------+--------+
-        ^        ^
-        |        +--- one FIELD: the value "Karim"
-        +--- one FIELD: the value 101
-    ```
-
-    Two readings of the question, both worth stating
-    - If the question means the smallest unit that carries `meaning`, the answer is the `field` — a single attribute value, which is the smallest thing a user can address in SQL.
-    - If it means the smallest unit of `storage`, the answer is the `bit`, or the `character` for text.
-    - Examination papers on database concepts normally intend the `field`, because the hierarchy field → record → file → database is the standard one taught.
-
-    Related point — atomicity
-    - `First normal form` requires that every field hold an `atomic` (indivisible) value. Storing "Dhaka, Bangladesh, 1207" in one address field breaks 1NF, because the field is then not the smallest unit — it should be split into city, country and postcode.
-
-20. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** *[40th BCS 2020 compact it 971-972 (ET: BPSC)]*
-
-    Answer: (Answered in English, as required for IT topics.)
-
-    What is a DBMS
-    - A `Database Management System` is software that allows users to create, store, retrieve, update and manage data in a database, while controlling access to it.
-    - It sits between the user or application and the physical data files, so users work with tables and queries instead of storage.
-    - Functions: data definition, data manipulation, security, integrity, concurrency control, transaction management with ACID guarantees, backup and recovery, and metadata management.
-    - Examples: MySQL, PostgreSQL, Oracle, SQL Server, MongoDB.
-
-    Classification of DBMS
-
-    1. `By data model` — the most important classification
-    - `Hierarchical` — data in a tree, each child having exactly one parent. Fast for one-to-many but rigid, and many-to-many is impossible. Example: IBM IMS.
-    - `Network` — a graph in which a record can have several parents, so many-to-many is supported. More flexible but complex. Example: IDMS, CODASYL.
-    - `Relational (RDBMS)` — data in tables linked by keys, queried with SQL. Simple, mathematically grounded, and dominant today. Examples: Oracle, MySQL, PostgreSQL, SQL Server.
-    - `Object-oriented` — data stored as objects with attributes and methods, matching object-oriented programming. Example: ObjectDB, db4o.
-    - `Object-relational` — relational plus user-defined types and inheritance. Example: PostgreSQL, Oracle.
-    - `NoSQL` — non-relational, designed for scale and flexible schemas:
-      - Document: MongoDB, CouchDB
-      - Key-value: Redis, DynamoDB
-      - Column-family: Cassandra, HBase
-      - Graph: Neo4j
-
-    2. `By number of users`
-    - `Single-user` — one user at a time (MS Access, SQLite).
-    - `Multi-user` — many concurrent users (Oracle, MySQL).
-
-    3. `By location of the data`
-    - `Centralised` — the whole database on one machine.
-    - `Distributed` — spread across several machines. `Homogeneous` if all sites run the same DBMS, `heterogeneous` if they differ.
-    - `Cloud` — hosted as a managed service (Amazon RDS, Azure SQL).
-
-    4. `By purpose`
-    - `OLTP` — online transaction processing, optimised for many small fast writes: banking, ticketing.
-    - `OLAP` — online analytical processing, optimised for large read-only analytical queries: data warehouses.
-
-    5. `By licensing`
-    - `Open source` — MySQL, PostgreSQL, MariaDB, SQLite.
-    - `Commercial` — Oracle, SQL Server, IBM Db2.
-
-    Comparison of the three classical models
-
-    | Point | Hierarchical | Network | Relational |
-    |---|---|---|---|
-    | Structure | Tree | Graph | Tables |
-    | Parent per child | One | Many | Not applicable |
-    | Many-to-many | Not supported | Supported | Supported via a junction table |
-    | Navigation | Pointer-based, procedural | Pointer-based | Declarative, using SQL |
-    | Flexibility | Low | Medium | High |
-    | Status | Legacy | Legacy | Dominant |
-
-21. **Define View, Materialized View. Difference between View and Materialized View and Usage of two.** *[RAKUB Assistant Database Administrator 2020 compact it 1012-1013 (ET: E-Zone)]*
-
-    Answer:
-
-    View
-    - A `view` is a virtual table defined by a stored SELECT statement. It holds `no data of its own`; the underlying query runs every time the view is used, so it always reflects the current state of the base tables.
-    ```sql
-    CREATE VIEW DeptSummary AS
-    SELECT dept_id, COUNT(*) AS staff, AVG(salary) AS avg_salary
-    FROM   Employee
-    GROUP  BY dept_id;
-
-    SELECT * FROM DeptSummary;      -- the SELECT above executes now
-    ```
-
-    Materialised view
-    - A `materialised view` stores the `result` of the query physically on disk, like a table. It is not recomputed on each access; instead it is `refreshed` — on a schedule, on demand, or on commit.
-    ```sql
-    -- Oracle / PostgreSQL
-    CREATE MATERIALIZED VIEW DeptSummary_MV AS
-    SELECT dept_id, COUNT(*) AS staff, AVG(salary) AS avg_salary
-    FROM   Employee
-    GROUP  BY dept_id;
-
-    REFRESH MATERIALIZED VIEW DeptSummary_MV;      -- update it
-    ```
-
-    Comparison
-
-    | Point | View | Materialised view |
-    |---|---|---|
-    | Data stored | `No` — definition only | `Yes` — the result is stored |
-    | Disk space | Negligible | Same as a table |
-    | Freshness | `Always current` | Stale until refreshed |
-    | Query speed | Slower — recomputed each time | `Much faster` — a simple read |
-    | Indexes | Not possible directly | `Possible` |
-    | Refresh needed | Never | Yes, manually or on a schedule |
-    | Effect of base-table changes | Seen immediately | Not seen until refresh |
-    | Overhead on writes | None | Refresh cost |
-    | Supported by | Every DBMS | Oracle, PostgreSQL, SQL Server (indexed views); `not MySQL` |
-
-    When to use each
-
-    Use a `view` when
-    - The data must always be `current` — account balances, order status, anything transactional.
-    - The purpose is `security`, hiding columns or rows from certain users.
-    - The purpose is `simplification`, giving a complex join a friendly name.
-    - The base tables change frequently, so any stored copy would be stale immediately.
-    - Storage is a concern.
-
-    Use a `materialised view` when
-    - The query is `expensive` — large aggregations, joins across many tables, or a data-warehouse summary.
-    - The same expensive result is `read many times` between updates.
-    - Slightly stale data is `acceptable` — a daily sales summary, a monthly report, a dashboard refreshed hourly.
-    - The result must be `indexed` for fast filtering.
-    - The underlying tables are in a remote or distributed database, so recomputing is costly.
-
-    Refresh strategies
-    - `COMPLETE` — rebuild the whole thing; simple but expensive.
-    - `FAST / INCREMENTAL` — apply only the changes, using a materialised view log.
-    - `ON COMMIT` — refresh as soon as a base table changes; always current but slows every write.
-    - `ON DEMAND` — refresh when asked, typically overnight.
-
-    - The trade-off in one line: a view trades `speed` for `freshness`; a materialised view trades `freshness` for `speed`.
-
-22. **What are the roles of Database Engineer?** *[RAKUB Assistant Database Administrator 2020 compact it 1014 (ET: E-Zone)]*
-
-    Answer: A `Database Engineer` designs, builds and maintains the data systems on which applications and analytics depend. The role sits between a DBA and a software engineer.
-
-    Main roles
-
-    1. `Database design and data modelling`
-    - Designing schemas, choosing data types, normalising tables, and deciding when to denormalise deliberately for performance. Producing ER diagrams and documenting the model.
-
-    2. `Building and maintaining data pipelines`
-    - Writing ETL or ELT processes that extract data from source systems, transform it and load it into the database or warehouse. Scheduling and monitoring those jobs.
-
-    3. `Writing and optimising SQL`
-    - Producing stored procedures, functions, triggers and complex queries; reading execution plans and rewriting queries that perform badly.
-
-    4. `Performance tuning`
-    - Designing indexes, partitioning large tables, tuning configuration, managing statistics, and diagnosing slow or blocking queries.
-
-    5. `Automation and scripting`
-    - Automating deployments, backups, monitoring and routine maintenance with shell, Python or the DBMS's own scripting.
-
-    6. `Schema migration and version control`
-    - Managing schema changes through migration tools such as Flyway or Liquibase, so that changes move safely from development to production and can be rolled back.
-
-    7. `Data integrity and quality`
-    - Defining constraints, validation rules and reconciliation checks; investigating and correcting data quality problems.
-
-    8. `Security implementation`
-    - Applying least-privilege access, encryption, masking of sensitive columns and audit logging.
-
-    9. `Backup, recovery and high availability`
-    - Implementing backup strategies, replication, clustering and failover, and testing recovery.
-
-    10. `Capacity planning and scaling`
-    - Forecasting growth; implementing sharding, partitioning, read replicas and caching layers.
-
-    11. `Supporting developers`
-    - Reviewing SQL and schema changes proposed by application teams, and advising on efficient access patterns.
-
-    12. `Working with modern data platforms`
-    - Cloud databases (RDS, Aurora, Cloud SQL), NoSQL stores, data warehouses (Snowflake, BigQuery, Redshift), and streaming systems (Kafka).
-
-    Skills required
-    - Strong SQL and knowledge of at least one DBMS internally; data modelling; a programming language, usually Python; Linux; cloud platforms; and version control.
-
-    How the related roles differ
-
-    | Role | Primary concern |
-    |---|---|
-    | `Database Administrator` | Keeping databases running: backup, security, tuning, availability |
-    | `Database Engineer` | Building and evolving the database and its pipelines |
-    | `Data Engineer` | Large-scale data movement and processing, warehouses and streaming |
-    | `Data Architect` | The overall data strategy and how systems fit together |
-    | `Data Analyst / Scientist` | Extracting meaning from the data |
-
-    - In many organisations, especially smaller ones, one person performs several of these roles.
-
-23. **A company needs key person for DBMS. What is his/her duty as key person?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
-
-    Answer: The key person for a company's DBMS is the `Database Administrator (DBA)`. Their duties are as follows.
-
-    1. `Database design and implementation`
-    - Designing the schema, choosing data types, defining primary and foreign keys, normalising the tables, and creating databases, views and indexes.
-
-    2. `Installation, configuration and upgrades`
-    - Installing the DBMS, tuning its configuration, applying security patches, and planning version migrations with minimal downtime.
-
-    3. `Security administration`
-    - Creating users and roles; granting the `minimum necessary` privileges; enforcing password policy; configuring encryption at rest and in transit; and auditing access to sensitive data.
-
-    4. `Backup and recovery` — the most critical duty
-    - Designing the backup strategy, scheduling and monitoring it, and `regularly testing the restore`. An untested backup is not a backup. Defining recovery point and recovery time objectives with the business.
-
-    5. `Performance monitoring and tuning`
-    - Identifying slow queries, reading execution plans, adding or removing indexes, tuning memory and buffer settings, partitioning large tables, and keeping optimiser statistics current.
-
-    6. `Ensuring availability`
-    - Configuring replication, clustering and failover so that a hardware failure does not stop the business; maintaining a disaster recovery site and rehearsing the switch-over.
-
-    7. `Capacity planning`
-    - Forecasting data growth, allocating storage, archiving and purging old data before space becomes a crisis.
-
-    8. `Maintaining data integrity`
-    - Defining and enforcing constraints, running consistency checks, and investigating anomalies.
-
-    9. `Troubleshooting`
-    - Diagnosing deadlocks, blocking, connection exhaustion, corruption and failed jobs, usually under time pressure.
-
-    10. `Supporting developers and users`
-    - Reviewing SQL and schema changes for efficiency and safety; advising on access patterns; managing the promotion of changes from development to production.
-
-    11. `Documentation and compliance`
-    - Maintaining the data dictionary and schema documentation; meeting regulatory obligations for data retention, privacy and audit.
-
-    12. `Change management`
-    - Controlling how schema changes reach production, with a tested rollback for every change.
-
-    The three duties that matter most
-    - If the role had to be reduced to three things: `keep the data safe` (backup, recovery, security), `keep it correct` (integrity constraints), and `keep it available and fast` (high availability and tuning). Everything else supports those.
-
-    Skills the person needs
-    - SQL and DBMS internals, performance tuning, backup and recovery, operating systems and storage, scripting for automation, security practice, and the judgement to say no to a risky change.
-
-24. **What is RDBMS? Why data are stored in database system instead of file?** *[ICT Ministry Assistant Programmer 2017 compact it 1236 (ET: N/A)]*
-
-    Answer:
-
-    What is an RDBMS
-    - A `Relational Database Management System` is software that stores data in `tables` (relations) of rows and columns, and manages the relationships between those tables using `keys`.
-    - It is based on E. F. Codd's relational model of 1970 and is accessed through `SQL`.
-
-    Characteristics
-    - Data held in two-dimensional tables; every row uniquely identified by a `primary key`; tables linked by `foreign keys`; constraints enforcing integrity; support for `normalisation`; and `ACID` transaction guarantees.
-    - Examples: Oracle, MySQL, PostgreSQL, SQL Server, IBM Db2, SQLite.
-    - A plain `DBMS` may store data as files or in a hierarchy with no enforced relationships; an `RDBMS` enforces the relational model, keys and referential integrity.
-
-    Why data is stored in a database rather than in files
-
-    1. `Reduced redundancy`
-    - In a file system the same customer address is duplicated across the sales, billing and delivery files. A database stores it once, normalised, and shares it.
-
-    2. `No inconsistency`
-    - Because the data exists once, an update is seen everywhere. In a file system, updating one copy and forgetting the others leaves two contradictory answers.
-
-    3. `Integrity is enforced by the system`
-    - PRIMARY KEY, FOREIGN KEY, CHECK, NOT NULL and UNIQUE are enforced by the database itself. A file system enforces nothing; every program must implement the rules, and any one of them can get it wrong.
-
-    4. `Security and access control`
-    - Users, roles and privileges control access at table and column level, and views hide sensitive data. Files offer only coarse operating-system permissions.
-
-    5. `Concurrent multi-user access`
-    - Locking or MVCC lets many users read and write simultaneously. Two programs writing the same file at once will corrupt it.
-
-    6. `Transactions with ACID guarantees`
-    - A bank transfer either debits and credits both accounts or does neither. A file system has no concept of a transaction, so a crash midway loses money.
-
-    7. `Backup and recovery`
-    - The transaction log allows automatic recovery to a consistent state after a crash. File-based recovery means restoring yesterday's copy and losing a day's work.
-
-    8. `Efficient querying`
-    - SQL states what is wanted; the optimiser chooses indexes and join strategies. In a file system every query must be programmed by hand and every search is a full scan.
-
-    9. `Data independence`
-    - Storage structures can change without rewriting applications. In a file system, changing a record layout means changing every program that reads it.
-
-    10. `Data sharing`
-    - One database serves many applications with a single consistent version of the truth.
-
-    Summary
-
-    | Point | File system | RDBMS |
-    |---|---|---|
-    | Redundancy | High | Controlled |
-    | Consistency | Fragile | Enforced |
-    | Integrity | In each program | In the database |
-    | Security | File-level | User, role, table, column |
-    | Concurrency | Unsafe | Managed |
-    | Transactions | None | ACID |
-    | Recovery | Manual | Automatic |
-    | Querying | Program per query | Declarative SQL |
-
-    - When a file is still the better choice: a small, single-user, read-only dataset, or a configuration file. The overhead of a database is only worth paying when the data is shared, changing and important.
-
-25. **a) What is a database? Discuss the importance of database.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
-
-    Answer:
-
-    What is a database
-    - A `database` is an organised collection of related data, stored electronically so that it can be efficiently accessed, managed and updated.
-    - It is `structured` (usually into tables), `related` (it describes some part of the real world), `persistent` (it survives program termination), `shared` (many users and applications use it at once) and `managed` by a DBMS.
-
-    ```
-    Database: Bank
-
-    Table: Customer                     Table: Account
-    +---------+--------+-------+        +---------+---------+---------+
-    | cust_id | name   | city  |        | acc_no  | cust_id | balance |
-    +---------+--------+-------+        +---------+---------+---------+
-    |  101    | Karim  | Dhaka |        | A1001   |  101    | 50000   |
-    |  102    | Rahim  | Sylhet|        | A1002   |  101    | 25000   |
-    +---------+--------+-------+        +---------+---------+---------+
-    ```
-
-    Importance of a database
-
-    1. `Single source of truth`
-    - Data is stored once and shared, so every department works from the same figures. Without it, sales, finance and delivery each keep their own version and they disagree.
-
-    2. `Accuracy and consistency`
-    - Constraints prevent invalid data from ever being stored, and an update is seen immediately by every application.
-
-    3. `Efficient retrieval`
-    - Indexes and query optimisation find one record among millions in milliseconds. A file-based search would scan everything.
-
-    4. `Security and controlled access`
-    - Users, roles and privileges determine exactly who may see or change what, and every access can be audited. This is essential for financial and personal data.
-
-    5. `Concurrent multi-user working`
-    - Hundreds of tellers, ATMs and web users can transact simultaneously without corrupting each other's work.
-
-    6. `Transaction reliability`
-    - ACID guarantees mean a transfer either completes fully or not at all — no money is created or destroyed by a crash.
-
-    7. `Backup and recovery`
-    - Logging and replication allow the organisation to survive hardware failure, and to meet regulatory obligations for retention.
-
-    8. `Supports decision-making`
-    - Reporting, analytics and data warehousing turn stored transactions into information for management.
-
-    9. `Scalability and growth`
-    - Volume can grow from thousands to billions of rows through indexing, partitioning, replication and sharding.
-
-    10. `Reduced cost and duplicated effort`
-    - One well-designed store replaces many overlapping files and the staff time spent reconciling them.
-
-    11. `Enables modern applications`
-    - Every banking system, e-commerce site, airline reservation system, hospital record system, mobile application and government register rests on a database. Almost no significant software exists without one.
-
-    - In one sentence: a database turns raw data into a `shared, reliable, secure and queryable organisational asset`, which is why it is the foundation of essentially every information system in use today.
-
-26. **b) Specify the functions of the database administration.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
-
-    Answer: `Database administration` is the function responsible for the design, security, performance, availability and integrity of an organisation's databases. Its specific functions are as follows.
-
-    1. `Database design and implementation`
-    - Defining the schema, choosing data types, establishing primary and foreign keys, normalising the structure, and creating the databases, tables, views and indexes.
-
-    2. `Installation and configuration`
-    - Installing the DBMS, setting configuration parameters, applying patches and planning upgrades.
-
-    3. `Security administration`
-    - Creating users and roles; granting and revoking privileges on the principle of least privilege; enforcing password policy; configuring encryption; and auditing access to sensitive data.
-
-    4. `Backup and recovery`
-    - Designing the backup strategy — full, incremental, differential — scheduling and monitoring it, and testing the restore procedure regularly. Defining recovery point and recovery time objectives with the business.
-
-    5. `Performance monitoring and tuning`
-    - Identifying slow queries and reading their execution plans; creating and removing indexes; tuning memory, buffers and connection limits; partitioning large tables; and refreshing optimiser statistics.
-
-    6. `Capacity planning and storage management`
-    - Forecasting growth, allocating tablespaces and file groups, archiving and purging historical data.
-
-    7. `Ensuring data integrity`
-    - Defining and maintaining constraints, and running consistency and reconciliation checks.
-
-    8. `High availability and disaster recovery`
-    - Configuring replication, clustering, log shipping and failover; maintaining and rehearsing a disaster recovery plan.
-
-    9. `Concurrency and transaction management`
-    - Choosing isolation levels, monitoring locks and deadlocks, and resolving blocking.
-
-    10. `Change and version control`
-    - Managing how schema changes move from development through testing to production, with a tested rollback for each.
-
-    11. `Documentation and metadata management`
-    - Maintaining the data dictionary, schema documentation and operational runbooks.
-
-    12. `User support and training`
-    - Helping developers write efficient and safe SQL, and advising on access patterns and schema design.
-
-    13. `Regulatory compliance`
-    - Meeting obligations for data retention, privacy, audit trails and reporting.
-
-    14. `Monitoring and alerting`
-    - Watching space, performance, replication lag, failed jobs and error logs, with alerts before problems become outages.
-
-    The functions ranked by importance
-    - If reduced to three: `protect the data` (backup, recovery, security), `keep it correct` (integrity), and `keep it available and responsive` (high availability, tuning). Every other function supports one of these three.
-
-    - Related distinction: `data administration` is the policy-level function — deciding what data the organisation holds, what it means and who owns it — while `database administration` is the technical function of building and running the systems that store it.
-
-## ER Diagram & Database Design (25)
-
-1. BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints. [BSCCPL AME 21-08-2026 (BUET)]
-
-   Answer: An applicant applies for `only one` job, while a job receives `many` applications, so the relationship is `1:N` from Job to Applicant.
-
-   ER diagram
-   ```mermaid
-   erDiagram
-       JOB ||--o{ APPLICANT : "receives application from"
-       JOB {
-           int Job_ID PK
-           string Job_Title
-           decimal Starting_Salary
-           string Job_Description
-           date Posting_Date
-           int Vacancies
-       }
-       APPLICANT {
-           int Applicant_ID PK
-           string Name
-           date Date_of_Birth
-           date Joining_Date
-           string Contact_Info
-           string Qualification
-           int Job_ID FK
-       }
-   ```
-
-   Chen notation, as drawn in the examination
-   ```
-       +-------------+                                 +---------------+
-       |    JOB      |                                 |   APPLICANT   |
-       +-------------+                                 +---------------+
-             |                                                 |
-             |            /---------------\                    |
-             +===========<   Applies_For   >-------------------+
-                1        \---------------/           N
-           (double line =                        (single line =
-            total participation)                  partial participation)
-
-     JOB attributes:                     APPLICANT attributes:
-      (Job_ID)  <- underlined, PK         (Applicant_ID) <- underlined, PK
-      (Job_Title)                         (Name)
-      (Starting_Salary)                   (Date_of_Birth)
-      (Job_Description)                   (Joining_Date)
-      (Posting_Date)                      (Contact_Info)
-   ```
-
-   The four things the question asks for
-
-   `Entities and primary keys`
-   - `JOB` — primary key `Job_ID`
-   - `APPLICANT` — primary key `Applicant_ID`
-
-   `Attributes`
-   - Job: Job_ID, Job_Title, Starting_Salary, Job_Description, Posting_Date, Vacancies.
-   - Applicant: Applicant_ID, Name, Date_of_Birth, Joining_Date, Contact_Info, Qualification.
-   - `Contact_Info` is a `composite` attribute (phone, email, address) and could be decomposed; `Age` would be a `derived` attribute, computed from Date_of_Birth.
-
-   `Cardinality — 1 : N`
-   - One Job → many Applicants.
-   - One Applicant → exactly one Job.
-
-   `Participation constraints`
-   - `APPLICANT: total participation` (drawn as a double line). Every applicant must apply for some job — an applicant who has applied for nothing does not exist in this system.
-   - `JOB: partial participation` (single line). A newly posted job may have no applicants yet.
-
-   Converting to tables
-   - For a 1:N relationship, the primary key of the `1` side becomes a `foreign key` on the `N` side. No separate relationship table is needed.
-   ```sql
-   CREATE TABLE Job (
-       Job_ID          INT PRIMARY KEY,
-       Job_Title       VARCHAR(100) NOT NULL,
-       Starting_Salary DECIMAL(10,2),
-       Job_Description TEXT,
-       Posting_Date    DATE
-   );
-
-   CREATE TABLE Applicant (
-       Applicant_ID  INT PRIMARY KEY,
-       Name          VARCHAR(100) NOT NULL,
-       Date_of_Birth DATE,
-       Joining_Date  DATE,
-       Contact_Info  VARCHAR(200),
-       Job_ID        INT NOT NULL,          -- NOT NULL enforces total participation
-       FOREIGN KEY (Job_ID) REFERENCES Job(Job_ID)
-   );
-   ```
-   - Note how `NOT NULL` on the foreign key is what implements the total participation constraint in SQL.
-
-   Design note
-   - If the requirement changed so that an applicant `could apply for several jobs`, the relationship would become `M:N` and a third table would be required:
-   ```sql
-   CREATE TABLE Application (
-       Job_ID       INT,
-       Applicant_ID INT,
-       Applied_Date DATE,
-       Status       VARCHAR(20),
-       PRIMARY KEY (Job_ID, Applicant_ID),
-       FOREIGN KEY (Job_ID)       REFERENCES Job(Job_ID),
-       FOREIGN KEY (Applicant_ID) REFERENCES Applicant(Applicant_ID)
-   );
-   ```
-
-2. **(a) Design an ER diagram for a library management systems where-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1349 (ET: N/A)]*
-   * **(i) A library has multiple books.**
-   * **(ii) Each book can have multiple copies.**
-
-   Answer: The important design point is the distinction between a `Book` (the title, with its ISBN and author) and a `Copy` (a physical volume on the shelf). A library holds many books, and each book has many copies.
-
-   ER diagram
-   ```mermaid
-   erDiagram
-       LIBRARY  ||--o{ BOOK     : "holds"
-       BOOK     ||--o{ COPY     : "has physical"
-       MEMBER   ||--o{ LOAN     : "borrows"
-       COPY     ||--o{ LOAN     : "is issued in"
-       AUTHOR   ||--o{ BOOK     : "writes"
-
-       LIBRARY {
-           int Library_ID PK
-           string Name
-           string Address
-       }
-       BOOK {
-           string ISBN PK
-           string Title
-           string Publisher
-           int Year
-           string Category
-           int Library_ID FK
-       }
-       COPY {
-           int Copy_ID PK
-           string ISBN FK
-           string Shelf_Location
-           string Status
-       }
-       MEMBER {
-           int Member_ID PK
-           string Name
-           string Address
-           string Phone
-           date Membership_Date
-       }
-       LOAN {
-           int Loan_ID PK
-           int Copy_ID FK
-           int Member_ID FK
-           date Issue_Date
-           date Due_Date
-           date Return_Date
-       }
-   ```
-
-   Chen notation for the two relationships the question names
-   ```
-     +----------+          /--------\          +--------+          /------\        +========+
-     | LIBRARY  |=========<  Holds   >=========|  BOOK  |=========<  Has   >=======|  COPY  |
-     +----------+   1      \--------/     N    +--------+    1     \------/    N   +========+
-                                                                                 (weak entity)
-
-     LIBRARY attributes           BOOK attributes            COPY attributes
-      (Library_ID) PK              (ISBN) PK                  (Copy_ID) partial key
-      (Name)                       (Title)                    (Shelf_Location)
-      (Address)                    (Publisher)                (Status)
-                                   (Year)
-   ```
-
-   Cardinalities
-   - `Library : Book` = `1 : N` — one library holds many books; each book belongs to one library.
-   - `Book : Copy` = `1 : N` — one title has many physical copies; each copy is of one title.
-   - `Member : Loan` = `1 : N`, and `Copy : Loan` = `1 : N`. Together these implement the M:N relationship between members and copies, with `Loan` as the associative entity carrying the dates.
-
-   Participation
-   - `Copy` has `total` participation in "Has" — a copy cannot exist without a book. It is arguably a `weak entity`, identified by ISBN plus a copy number.
-   - `Book` has partial participation in "Holds" from the library's side, since a library may briefly hold no books.
-
-   Converting to tables
-   ```sql
-   CREATE TABLE Library (
-       Library_ID INT PRIMARY KEY,
-       Name       VARCHAR(100) NOT NULL,
-       Address    VARCHAR(200)
-   );
-
-   CREATE TABLE Book (
-       ISBN       VARCHAR(20) PRIMARY KEY,
-       Title      VARCHAR(200) NOT NULL,
-       Publisher  VARCHAR(100),
-       Year       INT,
-       Library_ID INT,
-       FOREIGN KEY (Library_ID) REFERENCES Library(Library_ID)
-   );
-
-   CREATE TABLE Copy (
-       Copy_ID        INT PRIMARY KEY,
-       ISBN           VARCHAR(20) NOT NULL,
-       Shelf_Location VARCHAR(50),
-       Status         VARCHAR(20) DEFAULT 'Available',
-       FOREIGN KEY (ISBN) REFERENCES Book(ISBN)
-   );
-
-   CREATE TABLE Loan (
-       Loan_ID     INT PRIMARY KEY,
-       Copy_ID     INT NOT NULL,
-       Member_ID   INT NOT NULL,
-       Issue_Date  DATE NOT NULL,
-       Due_Date    DATE NOT NULL,
-       Return_Date DATE,
-       FOREIGN KEY (Copy_ID)   REFERENCES Copy(Copy_ID),
-       FOREIGN KEY (Member_ID) REFERENCES Member(Member_ID)
-   );
-   ```
-   - Why the separation matters: a loan must record `which physical copy` went out, not merely which title, so that the library knows exactly which volume is missing. Modelling `Book` and `Copy` as one entity would make that impossible.
-
-3. **(খ) নিচের ডেটাবেস অনুযায়ী ER ডায়াগ্রাম তৈরি করুন :** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
-   * **Worker** (Worker ID, Worker Name, Hour Rate, Skill Type)
-   * **Assignment** (Worker ID, Building ID, Start Date, Num Days)
-   * **Building** (Building ID, Address, Building Type)
-
-   Answer: (Answered in English, as required for IT topics.) The `Assignment` relation contains only foreign keys plus descriptive attributes, which is the signature of an `M:N relationship` between Worker and Building.
-
-   ER diagram
-   ```mermaid
-   erDiagram
-       WORKER   ||--o{ ASSIGNMENT : "is assigned"
-       BUILDING ||--o{ ASSIGNMENT : "receives"
-
-       WORKER {
-           int Worker_ID PK
-           string Worker_Name
-           decimal Hour_Rate
-           string Skill_Type
-       }
-       BUILDING {
-           int Building_ID PK
-           string Address
-           string Building_Type
-       }
-       ASSIGNMENT {
-           int Worker_ID PK-FK
-           int Building_ID PK-FK
-           date Start_Date
-           int Num_Days
-       }
-   ```
-
-   Chen notation, as drawn in the examination
-   ```
-      +-----------+                                    +------------+
-      |  WORKER   |                                    |  BUILDING  |
-      +-----------+                                    +------------+
-           |                                                  |
-           |             /----------------\                   |
-           +------------<   ASSIGNED_TO    >------------------+
-                M        \----------------/          N
-                                 |
-                       +---------+---------+
-                       |                   |
-                 (Start_Date)         (Num_Days)     <- descriptive attributes
-
-     WORKER attributes:                  BUILDING attributes:
-      (Worker_ID)  <- underlined, PK      (Building_ID) <- underlined, PK
-      (Worker_Name)                       (Address)
-      (Hour_Rate)                         (Building_Type)
-   ```
-
-   Reading the design
-   - `WORKER` — primary key `Worker_ID`; attributes Worker_Name, Hour_Rate, Skill_Type.
-   - `BUILDING` — primary key `Building_ID`; attributes Address, Building_Type.
-   - `ASSIGNMENT` is not an entity in the conceptual model but the `M:N relationship` between them. `Start_Date` and `Num_Days` are `descriptive attributes` of the relationship — they belong to the pairing of a worker with a building, not to either alone.
-
-   Cardinality
-   - One worker can be assigned to `many` buildings.
-   - One building can have `many` workers assigned.
-   - Therefore `M : N`, which is exactly why a third table is needed.
-
-   Converting to tables
-   - The rule for an M:N relationship: create a `separate table` whose primary key is the combination of both foreign keys, and place any descriptive attributes there.
-   ```sql
-   CREATE TABLE Worker (
-       Worker_ID   INT PRIMARY KEY,
-       Worker_Name VARCHAR(100) NOT NULL,
-       Hour_Rate   DECIMAL(8,2),
-       Skill_Type  VARCHAR(50)
-   );
-
-   CREATE TABLE Building (
-       Building_ID   INT PRIMARY KEY,
-       Address       VARCHAR(200),
-       Building_Type VARCHAR(50)
-   );
-
-   CREATE TABLE Assignment (
-       Worker_ID   INT,
-       Building_ID INT,
-       Start_Date  DATE,
-       Num_Days    INT,
-       PRIMARY KEY (Worker_ID, Building_ID),          -- composite key
-       FOREIGN KEY (Worker_ID)   REFERENCES Worker(Worker_ID),
-       FOREIGN KEY (Building_ID) REFERENCES Building(Building_ID)
-   );
-   ```
-
-   A refinement worth mentioning
-   - The composite key `(Worker_ID, Building_ID)` allows a worker to be assigned to a building only `once`. If the same worker could return to the same building on a later date, `Start_Date` must join the key:
-   ```sql
-   PRIMARY KEY (Worker_ID, Building_ID, Start_Date)
-   ```
-   - This is the kind of question the cardinality alone does not answer, and it is worth stating explicitly in a design answer.
-
-4. **Consider the Schema employee(id, name, salary), equipment(id, name, price), hire(employee_id, equipment_id)**
-   **(i) Draw the ERD digram for the relation**
-   **(ii) Write the SQL query to show the name of employee who borrow the maximum equipment?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 462 (ET: BUET)]*
-
-   Answer:
-
-   Schema
-   ```
-   employee (id, name, salary)
-   equipment (id, name, price)
-   hire (employee_id, equipment_id)
-   ```
-   - `hire` contains nothing but two foreign keys, which is the signature of an `M:N` relationship between employee and equipment.
-
-   (i) ER diagram
-   ```mermaid
-   erDiagram
-       EMPLOYEE  ||--o{ HIRE : "borrows"
-       EQUIPMENT ||--o{ HIRE : "is borrowed in"
-
-       EMPLOYEE {
-           int id PK
-           string name
-           decimal salary
-       }
-       EQUIPMENT {
-           int id PK
-           string name
-           decimal price
-       }
-       HIRE {
-           int employee_id PK-FK
-           int equipment_id PK-FK
-       }
-   ```
-
-   Chen notation
-   ```
-      +------------+                                  +-------------+
-      |  EMPLOYEE  |                                  |  EQUIPMENT  |
-      +------------+                                  +-------------+
-           |                                                 |
-           |              /----------\                       |
-           +-------------<   HIRE     >----------------------+
-                M         \----------/            N
-
-     EMPLOYEE attributes:               EQUIPMENT attributes:
-      (id)  <- underlined, PK            (id)  <- underlined, PK
-      (name)                             (name)
-      (salary)                           (price)
-   ```
-   - Cardinality: one employee may borrow many pieces of equipment, and one piece of equipment may be borrowed by many employees — `M : N`.
-   - The relationship becomes the `hire` table, whose primary key is the pair `(employee_id, equipment_id)`.
-
-   (ii) The employee who borrowed the most equipment
-   ```sql
-   SELECT   e.name,
-            COUNT(*) AS items_borrowed
-   FROM     employee e
-   JOIN     hire     h ON e.id = h.employee_id
-   GROUP BY e.id, e.name
-   ORDER BY items_borrowed DESC
-   LIMIT    1;
-   ```
-
-   Version that correctly handles a tie
-   ```sql
-   SELECT   e.name, COUNT(*) AS items_borrowed
-   FROM     employee e
-   JOIN     hire     h ON e.id = h.employee_id
-   GROUP BY e.id, e.name
-   HAVING   COUNT(*) = (
-               SELECT MAX(cnt) FROM (
-                   SELECT COUNT(*) AS cnt FROM hire GROUP BY employee_id
-               ) t
-            );
-   ```
-   - `ORDER BY ... LIMIT 1` returns only one employee even when several are tied at the top; the `HAVING = MAX` form returns them all. Which is correct depends on the question, and stating the difference is worth marks.
-
-   Sample output
-   ```
-   hire
-   +-------------+--------------+
-   | employee_id | equipment_id |
-   +-------------+--------------+
-   |     101     |      1       |
-   |     101     |      2       |
-   |     101     |      3       |
-   |     102     |      1       |
-   +-------------+--------------+
-
-   Result
-   +-------+-----------------+
-   | name  | items_borrowed  |
-   +-------+-----------------+
-   | Karim |        3        |
-   +-------+-----------------+
-   ```
-
-   Related queries on this schema
-   ```sql
-   -- total value of equipment each employee has borrowed
-   SELECT   e.name, SUM(q.price) AS total_value
-   FROM     employee e JOIN hire h ON e.id = h.employee_id
-   JOIN     equipment q ON h.equipment_id = q.id
-   GROUP BY e.id, e.name;
-
-   -- equipment never borrowed by anyone
-   SELECT q.name FROM equipment q
-   LEFT JOIN hire h ON q.id = h.equipment_id
-   WHERE  h.equipment_id IS NULL;
-   ```
-
-5. **Develop an entity relationship diagram that describes data objects, relationships and attributes of the following system: -A web based order processing system for a computer store.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
-
-   Answer: An order-processing system for a computer store centres on Customers placing Orders for Products, with each order containing several line items.
-
-   ER diagram
-   ```mermaid
-   erDiagram
-       CUSTOMER ||--o{ ORDER      : places
-       ORDER    ||--|{ ORDER_ITEM : contains
-       PRODUCT  ||--o{ ORDER_ITEM : "appears in"
-       CATEGORY ||--o{ PRODUCT    : classifies
-       ORDER    ||--|| PAYMENT    : "is paid by"
-       ORDER    ||--o| SHIPMENT   : "is shipped as"
-       SUPPLIER ||--o{ PRODUCT    : supplies
-
-       CUSTOMER {
-           int Customer_ID PK
-           string Name
-           string Email
-           string Phone
-           string Address
-           string Password_Hash
-       }
-       ORDER {
-           int Order_ID PK
-           int Customer_ID FK
-           datetime Order_Date
-           decimal Total_Amount
-           string Status
-       }
-       ORDER_ITEM {
-           int Order_ID PK-FK
-           int Product_ID PK-FK
-           int Quantity
-           decimal Unit_Price
-       }
-       PRODUCT {
-           int Product_ID PK
-           string Name
-           string Description
-           decimal Price
-           int Stock_Quantity
-           int Category_ID FK
-           int Supplier_ID FK
-       }
-       CATEGORY {
-           int Category_ID PK
-           string Category_Name
-       }
-       PAYMENT {
-           int Payment_ID PK
-           int Order_ID FK
-           decimal Amount
-           string Method
-           datetime Payment_Date
-           string Status
-       }
-       SHIPMENT {
-           int Shipment_ID PK
-           int Order_ID FK
-           string Courier
-           string Tracking_No
-           date Dispatch_Date
-           date Delivery_Date
-       }
-       SUPPLIER {
-           int Supplier_ID PK
-           string Supplier_Name
-           string Contact
-       }
-   ```
-
-   The relationships and their cardinality
-
-   | Relationship | Cardinality | Explanation |
-   |---|---|---|
-   | Customer places Order | `1 : N` | One customer may place many orders; each order belongs to one customer |
-   | Order contains Order_Item | `1 : N` | An order has at least one line item |
-   | Product appears in Order_Item | `1 : N` | A product may appear in many orders |
-   | Customer buys Product | `M : N` | Resolved through Order and Order_Item |
-   | Category classifies Product | `1 : N` | One category has many products |
-   | Supplier supplies Product | `1 : N` | One supplier supplies many products |
-   | Order has Payment | `1 : 1` | Each order is paid once |
-   | Order has Shipment | `1 : 0..1` | An order is shipped once, or not yet at all |
-
-   The three design points worth stating
-   - `ORDER_ITEM is the associative entity` that resolves the M:N relationship between Order and Product. Its descriptive attributes are `Quantity` and `Unit_Price`.
-   - `Unit_Price is stored on the order line, not read from Product`. This is essential: the price at the time of purchase must be preserved, because the product's price will change later and old invoices must not change with it.
-   - `Order has total participation` in "contains" — an order with no items is meaningless.
-
-   Core tables
-   ```sql
-   CREATE TABLE Customer (
-       Customer_ID INT PRIMARY KEY,
-       Name        VARCHAR(100) NOT NULL,
-       Email       VARCHAR(100) UNIQUE,
-       Address     VARCHAR(200)
-   );
-
-   CREATE TABLE Orders (
-       Order_ID     INT PRIMARY KEY,
-       Customer_ID  INT NOT NULL,
-       Order_Date   DATETIME NOT NULL,
-       Total_Amount DECIMAL(12,2),
-       Status       VARCHAR(20) DEFAULT 'Pending',
-       FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
-   );
-
-   CREATE TABLE Order_Item (
-       Order_ID   INT,
-       Product_ID INT,
-       Quantity   INT NOT NULL CHECK (Quantity > 0),
-       Unit_Price DECIMAL(10,2) NOT NULL,
-       PRIMARY KEY (Order_ID, Product_ID),
-       FOREIGN KEY (Order_ID)   REFERENCES Orders(Order_ID) ON DELETE CASCADE,
-       FOREIGN KEY (Product_ID) REFERENCES Product(Product_ID)
-   );
-   ```
-   - `ON DELETE CASCADE` on Order_Item is correct here: a line item has no meaning once its order is deleted. That is a genuine ownership relationship.
-
-6. **Draw a ER diagram for BPL.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 662 (ET: N/A)]*
-
-   Answer: A cricket league such as the BPL is modelled around Teams, Players, Matches and Venues, with a player belonging to a team and a match played between two teams.
-
-   ER diagram
-   ```mermaid
-   erDiagram
-       TEAM     ||--o{ PLAYER       : "has"
-       TEAM     ||--o{ MATCH_TEAM   : "plays in"
-       MATCH    ||--|{ MATCH_TEAM   : "involves"
-       VENUE    ||--o{ MATCH        : hosts
-       MATCH    ||--o{ PERFORMANCE  : records
-       PLAYER   ||--o{ PERFORMANCE  : achieves
-       COACH    ||--|| TEAM         : coaches
-       UMPIRE   ||--o{ MATCH        : officiates
-
-       TEAM {
-           int Team_ID PK
-           string Team_Name
-           string City
-           string Owner
-           int Coach_ID FK
-       }
-       PLAYER {
-           int Player_ID PK
-           string Name
-           date DOB
-           string Role
-           string Country
-           int Team_ID FK
-       }
-       MATCH {
-           int Match_ID PK
-           date Match_Date
-           time Start_Time
-           int Venue_ID FK
-           int Winner_Team_ID FK
-           string Result
-       }
-       MATCH_TEAM {
-           int Match_ID PK-FK
-           int Team_ID PK-FK
-           int Score
-           int Wickets
-           decimal Overs
-       }
-       VENUE {
-           int Venue_ID PK
-           string Stadium_Name
-           string City
-           int Capacity
-       }
-       PERFORMANCE {
-           int Match_ID PK-FK
-           int Player_ID PK-FK
-           int Runs_Scored
-           int Balls_Faced
-           int Wickets_Taken
-           decimal Overs_Bowled
-       }
-       COACH {
-           int Coach_ID PK
-           string Coach_Name
-           string Nationality
-       }
-       UMPIRE {
-           int Umpire_ID PK
-           string Umpire_Name
-           string Country
-       }
-   ```
-
-   Relationships and cardinality
-
-   | Relationship | Cardinality | Note |
-   |---|---|---|
-   | Team has Player | `1 : N` | A player belongs to one team in a season |
-   | Team plays Match | `M : N` | Resolved by MATCH_TEAM; each match involves exactly 2 teams |
-   | Venue hosts Match | `1 : N` | One stadium hosts many matches |
-   | Player performs in Match | `M : N` | Resolved by PERFORMANCE, holding the scorecard |
-   | Coach coaches Team | `1 : 1` | One coach per team |
-   | Umpire officiates Match | `M : N` | Several umpires per match; simplify to 1:N if required |
-
-   The design decisions worth explaining
-   - `MATCH_TEAM` is the associative entity resolving the M:N between Match and Team. It also carries the descriptive attributes `Score`, `Wickets` and `Overs`, which belong to the pairing of a team with a match, not to either alone.
-   - `PERFORMANCE` does the same for Player and Match, holding the individual scorecard — runs, balls faced, wickets taken. This is the table every statistic in the tournament is computed from.
-   - `Winner_Team_ID` in MATCH is a `derived` attribute — it could be computed from the scores, but storing it makes standings queries far simpler. Storing it is a deliberate denormalisation.
-   - A `player transferring between teams across seasons` would break the simple 1:N from Team to Player; the correct model would then add a `Team_Player(Team_ID, Player_ID, Season)` table.
-
-   Key tables
-   ```sql
-   CREATE TABLE Team (
-       Team_ID   INT PRIMARY KEY,
-       Team_Name VARCHAR(100) NOT NULL UNIQUE,
-       City      VARCHAR(50),
-       Owner     VARCHAR(100)
-   );
-
-   CREATE TABLE Player (
-       Player_ID INT PRIMARY KEY,
-       Name      VARCHAR(100) NOT NULL,
-       Role      VARCHAR(30),
-       Team_ID   INT,
-       FOREIGN KEY (Team_ID) REFERENCES Team(Team_ID)
-   );
-
-   CREATE TABLE Match_Team (
-       Match_ID INT,
-       Team_ID  INT,
-       Score    INT,
-       Wickets  INT,
-       PRIMARY KEY (Match_ID, Team_ID),
-       FOREIGN KEY (Match_ID) REFERENCES Matches(Match_ID),
-       FOREIGN KEY (Team_ID)  REFERENCES Team(Team_ID)
-   );
-   ```
-
-   Typical query the design supports
-   ```sql
-   -- leading run scorer of the tournament
-   SELECT   p.Name, SUM(pf.Runs_Scored) AS total_runs
-   FROM     Player p JOIN Performance pf ON p.Player_ID = pf.Player_ID
-   GROUP BY p.Player_ID, p.Name
-   ORDER BY total_runs DESC
-   LIMIT    1;
-   ```
-
-7. **How can you define the ER model in DBMS?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
-
-   Answer:
-
-   What the ER model is
-   - The `Entity-Relationship model`, introduced by Peter Chen in 1976, is a `conceptual` data model that describes the data of a system as `entities`, their `attributes`, and the `relationships` between them.
-   - It is drawn as a diagram, independent of any particular DBMS, and is the standard first step in database design: the ER diagram is produced, agreed with the stakeholders, and only then converted into tables.
-
-   The components
-
-   `Entity`
-   - A real-world object or concept about which data is stored — Student, Employee, Course.
-   - An `entity set` is the collection of all such entities. Drawn as a `rectangle`.
-   - A `strong entity` has its own primary key; a `weak entity` does not and depends on an owner — drawn as a `double rectangle`.
-
-   `Attribute`
-   - A property of an entity. Drawn as an `oval` connected to its entity.
-   - Types:
-     - `Key` attribute — underlined; uniquely identifies the entity (Student_ID).
-     - `Composite` — divisible into parts (Name → First, Last; Address → City, Road).
-     - `Multivalued` — may hold several values, drawn as a double oval (Phone_Numbers).
-     - `Derived` — computed from others, drawn as a dashed oval (Age from Date_of_Birth).
-     - `Simple` — atomic and indivisible.
-
-   `Relationship`
-   - An association between entities, drawn as a `diamond`.
-   - A relationship may have its own `descriptive attributes` — for example `grade` on the Enrolls relationship between Student and Course.
-   - `Degree`: unary (an employee manages an employee), binary (the usual case), ternary (three entities).
-
-   `Cardinality`
-   - `1 : 1` — one person has one passport.
-   - `1 : N` — one department has many employees.
-   - `M : N` — many students take many courses.
-
-   `Participation`
-   - `Total` (double line) — every entity must participate; an employee must belong to a department.
-   - `Partial` (single line) — participation is optional; a department may exist with no employees.
-
-   Example
-   ```mermaid
-   erDiagram
-       DEPARTMENT ||--o{ EMPLOYEE : employs
-       STUDENT    }o--o{ COURSE   : enrolls
-
-       DEPARTMENT {
-           int Dept_ID PK
-           string Dept_Name
-       }
-       EMPLOYEE {
-           int Emp_ID PK
-           string Name
-           date DOB
-           int Dept_ID FK
-       }
-       STUDENT {
-           int Student_ID PK
-           string Name
-       }
-       COURSE {
-           string Course_ID PK
-           string Title
-       }
-   ```
-
-   Chen notation for the same
-   ```
-      +------------+        /---------\        +-----------+
-      | DEPARTMENT |=======<  Employs   >------| EMPLOYEE  |
-      +------------+   1    \---------/    N   +-----------+
-           |                                        |
-      (Dept_ID) PK                             (Emp_ID) PK
-      (Dept_Name)                              (Name)
-   ```
-
-   Converting an ER diagram to tables
-   - Each `strong entity` becomes a table, with the key attribute as the primary key.
-   - Each `weak entity` becomes a table whose primary key is the owner's key plus its own partial key.
-   - A `1 : N` relationship puts the primary key of the `1` side as a foreign key on the `N` side.
-   - A `1 : 1` relationship puts the foreign key on either side, preferably the one with total participation.
-   - An `M : N` relationship becomes a `separate table` holding both foreign keys as a composite primary key, plus any descriptive attributes.
-   - A `multivalued attribute` becomes its own table.
-
-   Extended ER (EER) concepts
-   - `Generalisation` — combining similar entities into a superclass (Car and Truck → Vehicle).
-   - `Specialisation` — the reverse, splitting a superclass into subclasses.
-   - `Aggregation` — treating a whole relationship as an entity so that another relationship can attach to it.
-
-8. **Draw an entity diagram Student database management systemfrom following statement: Student (data); Course (data); Report (data); Registration; Staff (data)** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 759 (ET: N/A)]*
-
-   Answer: The system covers Students registering for Courses, Staff teaching them, and Reports (results) produced from that registration.
-
-   ER diagram
-   ```mermaid
-   erDiagram
-       STUDENT ||--o{ REGISTRATION : makes
-       COURSE  ||--o{ REGISTRATION : "is registered in"
-       STAFF   ||--o{ COURSE       : teaches
-       REGISTRATION ||--|| REPORT  : produces
-       DEPARTMENT   ||--o{ STUDENT : enrolls
-       DEPARTMENT   ||--o{ STAFF   : employs
-
-       STUDENT {
-           int Student_ID PK
-           string Name
-           date DOB
-           string Address
-           string Phone
-           int Dept_ID FK
-       }
-       COURSE {
-           string Course_ID PK
-           string Course_Name
-           int Credit_Hours
-           string Semester
-           int Staff_ID FK
-       }
-       REGISTRATION {
-           int Reg_ID PK
-           int Student_ID FK
-           string Course_ID FK
-           date Reg_Date
-           string Session
-       }
-       REPORT {
-           int Report_ID PK
-           int Reg_ID FK
-           decimal Marks
-           char Grade
-           decimal GPA
-           date Publish_Date
-       }
-       STAFF {
-           int Staff_ID PK
-           string Name
-           string Designation
-           string Specialization
-           int Dept_ID FK
-       }
-       DEPARTMENT {
-           int Dept_ID PK
-           string Dept_Name
-       }
-   ```
-
-   Chen notation for the central part
-   ```
-      +----------+        /---------------\        +----------+
-      | STUDENT  |-------<  REGISTRATION   >-------|  COURSE  |
-      +----------+   M    \---------------/    N   +----------+
-                                 |                       |
-                           (Reg_Date)                    |
-                                 |                 /----------\
-                           +-----------+          <   Teaches  >
-                           |  REPORT   |           \----------/
-                           +-----------+                 |
-                           (Marks)                  +---------+
-                           (Grade)                  |  STAFF  |
-                                                    +---------+
-   ```
-
-   Relationships and cardinality
-
-   | Relationship | Cardinality | Explanation |
-   |---|---|---|
-   | Student registers for Course | `M : N` | A student takes many courses; a course has many students. Resolved by REGISTRATION |
-   | Registration produces Report | `1 : 1` | Each registration yields one result record |
-   | Staff teaches Course | `1 : N` | One teacher takes several courses; each course has one primary teacher |
-   | Department enrolls Student | `1 : N` | |
-   | Department employs Staff | `1 : N` | |
-
-   Design points
-   - `REGISTRATION` is the associative entity resolving the M:N between Student and Course. Its descriptive attributes — registration date, session — belong to the pairing, not to either entity.
-   - `REPORT` depends on a registration, not directly on a student or a course. Attaching marks to a student alone would lose which subject they belong to; attaching them to a course alone would lose which student. This is the design point the question is really testing.
-   - If a course can be taught by `several` staff members, `Teaches` becomes M:N and needs its own table.
-
-   Tables
-   ```sql
-   CREATE TABLE Student (
-       Student_ID INT PRIMARY KEY,
-       Name       VARCHAR(100) NOT NULL,
-       DOB        DATE,
-       Dept_ID    INT REFERENCES Department(Dept_ID)
-   );
-
-   CREATE TABLE Course (
-       Course_ID    VARCHAR(10) PRIMARY KEY,
-       Course_Name  VARCHAR(100) NOT NULL,
-       Credit_Hours INT,
-       Staff_ID     INT REFERENCES Staff(Staff_ID)
-   );
-
-   CREATE TABLE Registration (
-       Reg_ID     INT PRIMARY KEY,
-       Student_ID INT NOT NULL,
-       Course_ID  VARCHAR(10) NOT NULL,
-       Reg_Date   DATE,
-       Session    VARCHAR(10),
-       UNIQUE (Student_ID, Course_ID, Session),
-       FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
-       FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID)
-   );
-
-   CREATE TABLE Report (
-       Report_ID INT PRIMARY KEY,
-       Reg_ID    INT NOT NULL UNIQUE,          -- UNIQUE enforces the 1:1
-       Marks     DECIMAL(5,2),
-       Grade     CHAR(2),
-       FOREIGN KEY (Reg_ID) REFERENCES Registration(Reg_ID)
-   );
-   ```
-   - Note the `UNIQUE` on `Reg_ID` in Report: that is how a `1:1` relationship is enforced in SQL, since a plain foreign key would allow many reports per registration.
-
-9. **(ক) Entity-Relationship (ER) Diagram কেন ব্যবহার করা হয়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 768 (ET: N/A)]*
-
-   Answer: (Answered in English, as required for IT topics.)
-
-   Why an ER diagram is used
-
-   1. `Conceptual design before implementation`
-   - It models the data at a level everyone can discuss, independent of any DBMS. Design errors caught in a diagram cost nothing; the same errors found after the database is built and populated are expensive to fix.
-
-   2. `Communication between technical and non-technical people`
-   - A librarian, a bank manager or a hospital administrator can look at an ER diagram and say "no, a patient can see several doctors" — which they could never do from a set of CREATE TABLE statements.
-
-   3. `Blueprint for the tables`
-   - The conversion is mechanical once the diagram is right: entities become tables, attributes become columns, and relationships become foreign keys or junction tables.
-
-   4. `Reveals cardinality and participation`
-   - Whether a relationship is 1:1, 1:N or M:N decides where each foreign key goes and whether an extra table is needed. This is the single most important thing the diagram settles.
-
-   5. `Supports normalisation`
-   - A clear model exposes redundancy and update anomalies before any data exists.
-
-   6. `Documentation`
-   - It remains the reference for everyone who later maintains or extends the system.
-
-   7. `Completeness check`
-   - Missing entities and forgotten relationships are visible in a picture in a way that they are not in a list of tables.
-
-   Worked example — a university
-
-   ```mermaid
-   erDiagram
-       DEPARTMENT ||--o{ STUDENT      : enrolls
-       DEPARTMENT ||--o{ TEACHER      : employs
-       STUDENT    ||--o{ ENROLLMENT   : registers
-       COURSE     ||--o{ ENROLLMENT   : "has"
-       TEACHER    ||--o{ COURSE       : teaches
-
-       DEPARTMENT {
-           int Dept_ID PK
-           string Dept_Name
-       }
-       STUDENT {
-           int Student_ID PK
-           string Name
-           date DOB
-           int Dept_ID FK
-       }
-       COURSE {
-           string Course_ID PK
-           string Title
-           int Credits
-           int Teacher_ID FK
-       }
-       ENROLLMENT {
-           int Student_ID PK-FK
-           string Course_ID PK-FK
-           char Grade
-           string Semester
-       }
-       TEACHER {
-           int Teacher_ID PK
-           string Name
-           int Dept_ID FK
-       }
-   ```
-
-   Chen notation for the central relationship
-   ```
-      +----------+          /-------------\          +----------+
-      | STUDENT  |---------<   ENROLLS     >---------|  COURSE  |
-      +----------+   M      \-------------/     N    +----------+
-           |                       |                       |
-     (Student_ID) PK           (Grade)                (Course_ID) PK
-     (Name)                    (Semester)             (Title)
-     (DOB)                                            (Credits)
-   ```
-
-   What this diagram immediately tells the designer
-   - Student and Course are `M:N`, so a third table `Enrollment` is unavoidable. Without the diagram this is easy to miss, and a designer might wrongly put `Course_ID` in the Student table, which would allow only one course per student.
-   - `Grade` is a `descriptive attribute` of the relationship — it belongs neither to the student nor to the course, but to the pairing.
-   - `Department to Student` is `1:N`, so `Dept_ID` becomes a foreign key in Student. No extra table is needed.
-
-   The resulting tables
-   ```sql
-   CREATE TABLE Student (
-       Student_ID INT PRIMARY KEY,
-       Name       VARCHAR(100) NOT NULL,
-       Dept_ID    INT REFERENCES Department(Dept_ID)
-   );
-
-   CREATE TABLE Enrollment (
-       Student_ID INT,
-       Course_ID  VARCHAR(10),
-       Grade      CHAR(2),
-       Semester   VARCHAR(10),
-       PRIMARY KEY (Student_ID, Course_ID),
-       FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
-       FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID)
-   );
-   ```
-   - The diagram to the schema is a direct translation, which is exactly why the diagram is drawn first.
-
-10. **(a) While converting E-R diagram into Tables, how is a Many-to-many relationship set between entities A and B is converted into database tables?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
-
-    Answer: An `M:N` relationship cannot be represented by a foreign key in either table. It requires a `third table`.
-
-    Why a foreign key will not work
-    - Suppose A is Student and B is Course, and the relationship is "enrolls".
-    - Putting `Course_ID` in Student would allow each student `one` course only.
-    - Putting `Student_ID` in Course would allow each course `one` student only.
-    - Neither captures many-to-many, so a separate relation is unavoidable.
-
-    The rule
-    > For an `M:N` relationship between A and B, create a `new table` whose attributes are the primary key of A plus the primary key of B, both as foreign keys, with their combination as the composite primary key. Any descriptive attributes of the relationship go into this table as well.
-
-    Structure
-    ```
-    Entity A                Relationship table            Entity B
-    +--------+           +--------------------+        +--------+
-    | A_ID PK|<----------| A_ID  PK, FK       |        | B_ID PK|
-    | attr1  |           | B_ID  PK, FK       |------->| attr1  |
-    +--------+           | descriptive attrs  |        +--------+
-                         +--------------------+
-    ```
-
-    Worked example
-    ```mermaid
-    erDiagram
-        STUDENT ||--o{ ENROLLMENT : has
-        COURSE  ||--o{ ENROLLMENT : has
-        STUDENT {
-            int Student_ID PK
-            string Name
-        }
-        COURSE {
-            string Course_ID PK
-            string Title
-        }
-        ENROLLMENT {
-            int Student_ID PK-FK
-            string Course_ID PK-FK
-            char Grade
-            date Enrol_Date
-        }
-    ```
-
-    ```sql
-    CREATE TABLE Student (
-        Student_ID INT PRIMARY KEY,
-        Name       VARCHAR(100) NOT NULL
-    );
-
-    CREATE TABLE Course (
-        Course_ID VARCHAR(10) PRIMARY KEY,
-        Title     VARCHAR(100) NOT NULL
-    );
-
-    CREATE TABLE Enrollment (              -- the relationship table
-        Student_ID INT,
-        Course_ID  VARCHAR(10),
-        Grade      CHAR(2),                -- descriptive attribute
-        Enrol_Date DATE,                   -- descriptive attribute
-        PRIMARY KEY (Student_ID, Course_ID),
-        FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
-        FOREIGN KEY (Course_ID)  REFERENCES Course(Course_ID)
-    );
-    ```
-
-    The data
-    ```
-    Student              Course                Enrollment
-    +-----+-------+      +-------+-------+     +-----+-------+-------+
-    | ID  | Name  |      | ID    | Title |     | SID | CID   | Grade |
-    +-----+-------+      +-------+-------+     +-----+-------+-------+
-    | 101 | Karim |      | CS101 | DB    |     | 101 | CS101 |   A   |
-    | 102 | Rahim |      | CS102 | Net   |     | 101 | CS102 |   B   |  one student, two courses
-    +-----+-------+      +-------+-------+     | 102 | CS101 |   A   |  one course, two students
-                                               +-----+-------+-------+
-    ```
-
-    Three points that earn marks
-    - The `composite primary key (A_ID, B_ID)` is what prevents the same pairing from being recorded twice.
-    - `Descriptive attributes` of the relationship belong in this table and nowhere else — Grade belongs neither to the student nor to the course.
-    - The M:N relationship is thereby `decomposed into two 1:N relationships`, which is what the relational model can actually express.
-
-    Comparison with the other cardinalities
-
-    | Relationship | How it is converted |
-    |---|---|
-    | `1 : 1` | Foreign key in either table, preferably the one with total participation; declare it UNIQUE |
-    | `1 : N` | Foreign key on the `N` side, referring to the `1` side. No extra table |
-    | `M : N` | `A separate table` with both keys as a composite primary key |
-
-    - A variant sometimes preferred in practice adds a `surrogate key` — `Enrollment_ID INT PRIMARY KEY` — and keeps `UNIQUE(Student_ID, Course_ID)` to preserve the rule, which simplifies any table that needs to refer to a particular enrolment.
-
-11. **Draw ER diagram for Titas Gas Transmission and Distribution Company limited. Relation between customer and meter. (full question টা পাওয়া যায়নি।)** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
-
-    Answer: The core of a gas distribution company's data model is the relationship between a `Customer` and the `Meter` installed at their premises, with `Bills` generated from meter readings.
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        CUSTOMER ||--|| METER    : "is installed with"
-        METER    ||--o{ READING  : records
-        CUSTOMER ||--o{ BILL     : receives
-        BILL     ||--o{ PAYMENT  : "is settled by"
-        ZONE     ||--o{ CUSTOMER : serves
-        METER    }o--|| METER_TYPE : "is of"
-
-        CUSTOMER {
-            int Customer_ID PK
-            string Name
-            string Address
-            string Phone
-            string Customer_Type
-            date Connection_Date
-            int Zone_ID FK
-        }
-        METER {
-            int Meter_No PK
-            int Customer_ID FK
-            string Model
-            string Producer_Name
-            date Install_Date
-            string Status
-        }
-        READING {
-            int Reading_ID PK
-            int Meter_No FK
-            date Reading_Date
-            decimal Previous_Reading
-            decimal Current_Reading
-            decimal Consumption
-        }
-        BILL {
-            int Bill_ID PK
-            int Customer_ID FK
-            int Reading_ID FK
-            string Billing_Month
-            decimal Amount
-            date Due_Date
-            string Status
-        }
-        PAYMENT {
-            int Payment_ID PK
-            int Bill_ID FK
-            decimal Amount_Paid
-            date Payment_Date
-            string Method
-        }
-        ZONE {
-            int Zone_ID PK
-            string Zone_Name
-            string Region
-        }
-    ```
-
-    Chen notation for the relationship the question asks about
-    ```
-       +------------+                                +----------+
-       |  CUSTOMER  |================================|  METER   |
-       +------------+   1     /-------------\   1    +----------+
-            |               =<   Installed   >=           |
-       (Customer_ID) PK      \-------------/         (Meter_No) PK
-       (Name)                                        (Model)
-       (Address)             double lines =          (Producer_Name)
-       (Customer_Type)       TOTAL participation     (Install_Date)
-                             on both sides
-    ```
-
-    Customer to Meter — the cardinality
-    - `1 : 1`. Every customer has exactly one meter, and every meter serves exactly one customer.
-    - `Participation is total on both sides`: a customer without a meter has no gas supply, and a meter not assigned to a customer is not in service.
-    - Because participation is total on both sides, the two could in principle be merged into one table — but they are kept separate because a meter has its own life cycle: it is manufactured, installed, replaced and scrapped, and a customer may receive a replacement meter.
-
-    Converting the 1:1 relationship to tables
-    - Place the foreign key on `either` side and declare it `UNIQUE`, which is what enforces the 1:1.
-    ```sql
-    CREATE TABLE Customer (
-        Customer_ID     INT PRIMARY KEY,
-        Name            VARCHAR(100) NOT NULL,
-        Address         VARCHAR(200),
-        Customer_Type   VARCHAR(20),
-        Connection_Date DATE
-    );
-
-    CREATE TABLE Meter (
-        Meter_No      INT PRIMARY KEY,
-        Customer_ID   INT NOT NULL UNIQUE,       -- UNIQUE enforces 1:1
-        Model         VARCHAR(50),
-        Producer_Name VARCHAR(100),
-        Install_Date  DATE,
-        FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
-    );
-    ```
-    - Without `UNIQUE`, the constraint would be 1:N and one customer could hold several meters.
-
-    Other relationships
-    - `Meter records Reading` — 1:N. Each monthly reading belongs to one meter.
-    - `Customer receives Bill` — 1:N. One bill per month.
-    - `Bill is settled by Payment` — 1:N, since a bill may be paid in instalments.
-    - `Zone serves Customer` — 1:N, for meter-reading routes and regional reporting.
-
-    A typical query the design supports
-    ```sql
-    -- current month's unpaid bills in one zone
-    SELECT c.Name, c.Address, b.Amount, b.Due_Date
-    FROM   Customer c JOIN Bill b ON c.Customer_ID = b.Customer_ID
-    WHERE  b.Status = 'Unpaid' AND c.Zone_ID = 3;
-    ```
-
-12. **Draw ER diagram from a story.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 837 (ET: N/A)]*
-
-    Answer: The specific story was not printed, so the `method` for converting a narrative into an ER diagram is given, with a worked example.
-
-    The method — how to read a story
-
-    | In the story | In the ER diagram |
-    |---|---|
-    | A `noun` that the system stores data about | An `entity` |
-    | A noun describing a property of another noun | An `attribute` |
-    | A `verb` connecting two nouns | A `relationship` |
-    | "each", "only one", "exactly one" | Cardinality `1` |
-    | "many", "several", "one or more" | Cardinality `N` |
-    | "must", "always" | `Total` participation (double line) |
-    | "may", "optionally", "sometimes" | `Partial` participation (single line) |
-    | A noun that cannot exist alone | A `weak entity` |
-    | A property of the connection itself | A `descriptive attribute` on the relationship |
-    | "is a kind of" | Generalisation / specialisation |
-
-    Worked example — a typical bank story
-    > "A bank has several branches, each identified by a branch code and having a name and an address. A customer, identified by a customer ID, may open one or more accounts. Each account belongs to exactly one branch. A customer may also take loans. Every account has an account number, a type and a balance. Each transaction on an account records a date, a type and an amount."
-
-    Step 1 — extract the entities (the nouns the system stores data about)
-    ```
-    BRANCH, CUSTOMER, ACCOUNT, LOAN, TRANSACTION
-    ```
-
-    Step 2 — extract the attributes and mark the keys
-    ```
-    BRANCH      : Branch_Code (PK), Name, Address
-    CUSTOMER    : Customer_ID (PK), Name, Address, Phone
-    ACCOUNT     : Account_No (PK), Type, Balance, Open_Date
-    LOAN        : Loan_ID (PK), Amount, Interest_Rate, Term
-    TRANSACTION : Txn_ID (PK), Date, Type, Amount
-    ```
-
-    Step 3 — extract the relationships and their cardinality from the verbs
-    ```
-    BRANCH  has        ACCOUNT      1 : N    ("each account belongs to exactly one branch")
-    CUSTOMER opens     ACCOUNT      M : N    ("one or more"; joint accounts make it M:N)
-    CUSTOMER takes     LOAN         1 : N
-    ACCOUNT  records   TRANSACTION  1 : N    (TRANSACTION is weak — it cannot exist alone)
-    ```
-
-    Step 4 — draw it
-    ```mermaid
-    erDiagram
-        BRANCH   ||--o{ ACCOUNT     : maintains
-        CUSTOMER ||--o{ ACC_HOLDER  : holds
-        ACCOUNT  ||--o{ ACC_HOLDER  : "is held by"
-        CUSTOMER ||--o{ LOAN        : takes
-        ACCOUNT  ||--o{ TRANSACTION : records
-
-        BRANCH {
-            string Branch_Code PK
-            string Name
-            string Address
-        }
-        CUSTOMER {
-            int Customer_ID PK
-            string Name
-            string Address
-            string Phone
-        }
-        ACCOUNT {
-            string Account_No PK
-            string Type
-            decimal Balance
-            string Branch_Code FK
-        }
-        ACC_HOLDER {
-            int Customer_ID PK-FK
-            string Account_No PK-FK
-            date Since
-        }
-        LOAN {
-            int Loan_ID PK
-            int Customer_ID FK
-            decimal Amount
-            decimal Interest_Rate
-        }
-        TRANSACTION {
-            int Txn_ID PK
-            string Account_No FK
-            datetime Txn_Date
-            string Txn_Type
-            decimal Amount
-        }
-    ```
-
-    Step 5 — convert to tables
-    - `1:N` → foreign key on the N side. `M:N` → a separate table. Weak entity → owner's key plus its own partial key.
-    ```sql
-    CREATE TABLE Account (
-        Account_No  VARCHAR(20) PRIMARY KEY,
-        Type        VARCHAR(20),
-        Balance     DECIMAL(15,2) DEFAULT 0,
-        Branch_Code VARCHAR(10) NOT NULL REFERENCES Branch(Branch_Code)
-    );
-
-    CREATE TABLE Acc_Holder (
-        Customer_ID INT,
-        Account_No  VARCHAR(20),
-        Since       DATE,
-        PRIMARY KEY (Customer_ID, Account_No),
-        FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID),
-        FOREIGN KEY (Account_No)  REFERENCES Account(Account_No)
-    );
-    ```
-
-    The two mistakes to avoid
-    - Treating an attribute as an entity, or vice versa. A rule of thumb: if the noun has properties of its own and can be listed, it is an entity; if it is just a value, it is an attribute.
-    - Missing an `M:N` relationship and trying to represent it with a foreign key. Any relationship where both sides can be "many" needs its own table. <!-- verify -->
-
-13. **Draw E-R diagram of hospital management system. Hospital name “SKY Hospital Ltd.”.** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
-
-    Answer: A hospital system centres on Patients, Doctors, Appointments and Treatments, with departments, wards and billing around them.
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        DEPARTMENT  ||--o{ DOCTOR       : employs
-        DOCTOR      ||--o{ APPOINTMENT  : attends
-        PATIENT     ||--o{ APPOINTMENT  : books
-        APPOINTMENT ||--o{ PRESCRIPTION : produces
-        PRESCRIPTION||--o{ MEDICINE_ITEM: contains
-        MEDICINE    ||--o{ MEDICINE_ITEM: "is prescribed as"
-        PATIENT     ||--o{ ADMISSION    : "is admitted by"
-        WARD        ||--o{ ADMISSION    : accommodates
-        PATIENT     ||--o{ BILL         : receives
-        NURSE       }o--|| WARD         : "works in"
-        PATIENT     ||--o{ TEST_REPORT  : undergoes
-
-        PATIENT {
-            int Patient_ID PK
-            string Name
-            int Age
-            string Gender
-            string Blood_Group
-            string Phone
-            string Address
-        }
-        DOCTOR {
-            int Doctor_ID PK
-            string Name
-            string Specialization
-            string Phone
-            decimal Consultation_Fee
-            int Dept_ID FK
-        }
-        DEPARTMENT {
-            int Dept_ID PK
-            string Dept_Name
-            string Location
-        }
-        APPOINTMENT {
-            int Appt_ID PK
-            int Patient_ID FK
-            int Doctor_ID FK
-            datetime Appt_DateTime
-            string Status
-        }
-        PRESCRIPTION {
-            int Presc_ID PK
-            int Appt_ID FK
-            string Diagnosis
-            string Advice
-            date Presc_Date
-        }
-        MEDICINE {
-            int Medicine_ID PK
-            string Name
-            string Type
-            decimal Price
-        }
-        MEDICINE_ITEM {
-            int Presc_ID PK-FK
-            int Medicine_ID PK-FK
-            string Dosage
-            int Duration_Days
-        }
-        WARD {
-            int Ward_ID PK
-            string Ward_Name
-            string Ward_Type
-            int Total_Beds
-        }
-        ADMISSION {
-            int Admission_ID PK
-            int Patient_ID FK
-            int Ward_ID FK
-            int Bed_No
-            date Admit_Date
-            date Discharge_Date
-        }
-        NURSE {
-            int Nurse_ID PK
-            string Name
-            string Shift
-            int Ward_ID FK
-        }
-        TEST_REPORT {
-            int Report_ID PK
-            int Patient_ID FK
-            string Test_Name
-            date Test_Date
-            string Result
-        }
-        BILL {
-            int Bill_ID PK
-            int Patient_ID FK
-            decimal Total_Amount
-            date Bill_Date
-            string Payment_Status
-        }
-    ```
-
-    Relationships and cardinality
-
-    | Relationship | Cardinality | Note |
-    |---|---|---|
-    | Department employs Doctor | `1 : N` | A doctor belongs to one department |
-    | Patient books Appointment | `1 : N` | |
-    | Doctor attends Appointment | `1 : N` | |
-    | Patient consults Doctor | `M : N` | Resolved by APPOINTMENT |
-    | Appointment produces Prescription | `1 : N` | |
-    | Prescription contains Medicine | `M : N` | Resolved by MEDICINE_ITEM, with dosage as a descriptive attribute |
-    | Ward accommodates Admission | `1 : N` | |
-    | Nurse works in Ward | `N : 1` | |
-    | Patient receives Bill | `1 : N` | |
-
-    Design points worth stating
-    - `APPOINTMENT` is the associative entity that resolves the M:N between Patient and Doctor, with `date and time` as its descriptive attributes.
-    - `MEDICINE_ITEM` does the same for Prescription and Medicine, holding `dosage` and `duration` — which belong to the pairing of a particular medicine with a particular prescription, not to either alone.
-    - `ADMISSION` records the stay rather than putting `Ward_ID` on Patient, because a patient may be admitted several times and to different wards.
-    - A `Bed` could be modelled as a `weak entity` of Ward, identified by Ward_ID plus bed number.
-
-    Core tables
-    ```sql
-    CREATE TABLE Patient (
-        Patient_ID INT PRIMARY KEY,
-        Name       VARCHAR(100) NOT NULL,
-        Age        INT,
-        Gender     CHAR(1),
-        Phone      VARCHAR(15)
-    );
-
-    CREATE TABLE Appointment (
-        Appt_ID       INT PRIMARY KEY,
-        Patient_ID    INT NOT NULL,
-        Doctor_ID     INT NOT NULL,
-        Appt_DateTime DATETIME NOT NULL,
-        Status        VARCHAR(20) DEFAULT 'Scheduled',
-        UNIQUE (Doctor_ID, Appt_DateTime),        -- no double-booking a doctor
-        FOREIGN KEY (Patient_ID) REFERENCES Patient(Patient_ID),
-        FOREIGN KEY (Doctor_ID)  REFERENCES Doctor(Doctor_ID)
-    );
-    ```
-    - The `UNIQUE (Doctor_ID, Appt_DateTime)` constraint is worth highlighting: it enforces a real business rule — one doctor cannot have two appointments at the same instant — directly in the database rather than in application code.
-
-14. **Draw E-R diagram of Banking Management system. Bank name “SKY Bank Ltd.”.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
-
-    Answer: A banking system centres on Customers holding Accounts at Branches, with Transactions, Loans and Employees around them.
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        BRANCH      ||--o{ ACCOUNT     : maintains
-        BRANCH      ||--o{ EMPLOYEE    : employs
-        BRANCH      ||--o{ LOAN        : sanctions
-        CUSTOMER    ||--o{ ACC_HOLDER  : holds
-        ACCOUNT     ||--o{ ACC_HOLDER  : "is held by"
-        ACCOUNT     ||--o{ TRANSACTION : records
-        CUSTOMER    ||--o{ LOAN        : takes
-        LOAN        ||--o{ INSTALLMENT : "is repaid by"
-        EMPLOYEE    ||--o{ CUSTOMER    : manages
-
-        BRANCH {
-            string Branch_Code PK
-            string Branch_Name
-            string Address
-            string City
-            decimal Assets
-        }
-        CUSTOMER {
-            int Customer_ID PK
-            string Name
-            string Address
-            string Phone
-            string NID
-            date DOB
-        }
-        ACCOUNT {
-            string Account_No PK
-            string Account_Type
-            decimal Balance
-            date Open_Date
-            string Status
-            string Branch_Code FK
-        }
-        ACC_HOLDER {
-            int Customer_ID PK-FK
-            string Account_No PK-FK
-            date Since
-        }
-        TRANSACTION {
-            int Txn_ID PK
-            string Account_No FK
-            datetime Txn_DateTime
-            string Txn_Type
-            decimal Amount
-            decimal Balance_After
-        }
-        LOAN {
-            int Loan_ID PK
-            int Customer_ID FK
-            string Branch_Code FK
-            decimal Amount
-            decimal Interest_Rate
-            int Term_Months
-            date Sanction_Date
-        }
-        INSTALLMENT {
-            int Inst_ID PK
-            int Loan_ID FK
-            date Due_Date
-            decimal Amount
-            date Paid_Date
-            string Status
-        }
-        EMPLOYEE {
-            int Emp_ID PK
-            string Name
-            string Designation
-            decimal Salary
-            string Branch_Code FK
-        }
-    ```
-
-    Chen notation for the central relationships
-    ```
-       +----------+       /----------\       +----------+       /-----------\      +-------------+
-       | CUSTOMER |------<  HOLDS     >------| ACCOUNT  |======<  RECORDS    >=====| TRANSACTION |
-       +----------+  M   \----------/   N    +----------+  1   \-----------/   N   +=============+
-            |                                      |                                (weak entity)
-            |            /----------\              |
-            +-----------<   TAKES    >             | maintained by
-                 1       \----------/              |
-                              | N            +----------+
-                         +--------+          |  BRANCH  |
-                         |  LOAN  |          +----------+
-                         +--------+
-    ```
-
-    Relationships and cardinality
-
-    | Relationship | Cardinality | Explanation |
-    |---|---|---|
-    | Branch maintains Account | `1 : N` | Each account belongs to one branch |
-    | Customer holds Account | `M : N` | A customer may have several accounts; a joint account has several customers. Resolved by ACC_HOLDER |
-    | Account records Transaction | `1 : N` | TRANSACTION is a weak entity — it cannot exist without its account |
-    | Customer takes Loan | `1 : N` | |
-    | Loan is repaid by Installment | `1 : N` | |
-    | Branch employs Employee | `1 : N` | |
-
-    Design points worth explaining
-    - `ACC_HOLDER` is essential rather than optional: without it, a `joint account` could not be represented, and neither could a customer with both a savings and a current account. Putting `Customer_ID` directly in Account would force 1:N and lose joint accounts.
-    - `TRANSACTION` is a `weak entity`: a transaction has no meaning apart from the account it belongs to, and its participation is total.
-    - `Balance` in Account is a `derived` attribute — it can be computed by summing transactions. It is stored anyway, because recomputing it on every enquiry would be far too slow. This is a deliberate, justified denormalisation.
-    - A `self-referencing` relationship could be added: `Employee manages Employee`.
-
-    Core tables
-    ```sql
-    CREATE TABLE Account (
-        Account_No   VARCHAR(20) PRIMARY KEY,
-        Account_Type VARCHAR(20) CHECK (Account_Type IN ('Savings','Current','Fixed')),
-        Balance      DECIMAL(15,2) NOT NULL DEFAULT 0 CHECK (Balance >= 0),
-        Branch_Code  VARCHAR(10) NOT NULL REFERENCES Branch(Branch_Code)
-    );
-
-    CREATE TABLE Acc_Holder (
-        Customer_ID INT,
-        Account_No  VARCHAR(20),
-        Since       DATE,
-        PRIMARY KEY (Customer_ID, Account_No),
-        FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID),
-        FOREIGN KEY (Account_No)  REFERENCES Account(Account_No)
-    );
-
-    CREATE TABLE Transaction (
-        Txn_ID        INT PRIMARY KEY,
-        Account_No    VARCHAR(20) NOT NULL,
-        Txn_DateTime  DATETIME NOT NULL,
-        Txn_Type      VARCHAR(10) CHECK (Txn_Type IN ('Deposit','Withdrawal','Transfer')),
-        Amount        DECIMAL(15,2) NOT NULL CHECK (Amount > 0),
-        FOREIGN KEY (Account_No) REFERENCES Account(Account_No)
-    );
-    ```
-    - `CHECK (Balance >= 0)` and `CHECK (Amount > 0)` push real banking rules into the database, where no application bug can bypass them.
-
-15. **Draw ER diagram for details of gas company data described. Bakharbad gas distribution Compeny has two types of customers i.e General and Industrial. General customer has customer ID, name, DOB, age (calculated from DOB). Industrial customer has all attributes of general customer with TAX number additionally. Meter has model and producer name. Every customer has one meter.** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 877 (ET: BUET)]*
-
-    Answer: The distinguishing feature of this problem is that an `Industrial customer has every attribute of a General customer plus a TAX number` — which is the textbook signal for `generalisation and specialisation`.
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        CUSTOMER ||--|| METER : "is installed with"
-        CUSTOMER ||--o| GENERAL_CUSTOMER    : "is a"
-        CUSTOMER ||--o| INDUSTRIAL_CUSTOMER : "is a"
-
-        CUSTOMER {
-            int Customer_ID PK
-            string Name
-            date DOB
-            string Address
-            string Customer_Type
-        }
-        GENERAL_CUSTOMER {
-            int Customer_ID PK-FK
-        }
-        INDUSTRIAL_CUSTOMER {
-            int Customer_ID PK-FK
-            string TAX_Number
-        }
-        METER {
-            int Meter_No PK
-            int Customer_ID FK
-            string Model
-            string Producer_Name
-            date Install_Date
-        }
-    ```
-
-    Chen notation with the specialisation triangle
-    ```
-                        +--------------+
-                        |   CUSTOMER   |
-                        +--------------+
-                        (Customer_ID) PK
-                        (Name)
-                        (DOB)
-                        (Age)  <- dashed oval: DERIVED from DOB
-                               |
-                               |
-                             /   \
-                            /  d  \      <- specialisation triangle
-                           /_______\        (d = disjoint)
-                            |     |
-                  +---------+     +----------+
-                  |                          |
-        +-------------------+     +----------------------+
-        | GENERAL_CUSTOMER  |     | INDUSTRIAL_CUSTOMER  |
-        +-------------------+     +----------------------+
-                                    (TAX_Number)  <- extra attribute
-
-
-        +--------------+                          +-----------+
-        |   CUSTOMER   |==========================|   METER   |
-        +--------------+   1   /---------\   1    +-----------+
-                              =<  HAS     >=       (Meter_No) PK
-                               \---------/         (Model)
-                            total participation    (Producer_Name)
-                            on both sides
-    ```
-
-    The three modelling decisions the question is testing
-
-    1. `Generalisation / specialisation`
-    - `CUSTOMER` is the superclass holding the common attributes (Customer_ID, Name, DOB, Address).
-    - `GENERAL_CUSTOMER` and `INDUSTRIAL_CUSTOMER` are subclasses. Only the industrial subclass adds `TAX_Number`.
-    - The specialisation is `disjoint` (a customer is one type or the other, never both) and `total` (every customer is one of the two).
-
-    2. `Derived attribute`
-    - `Age` is computed from `DOB` and is `not stored`. In a diagram it is drawn as a `dashed oval`; in SQL it is a computed column or a view:
-    ```sql
-    SELECT Customer_ID, Name, TIMESTAMPDIFF(YEAR, DOB, CURDATE()) AS Age FROM Customer;
-    ```
-    - Storing age would be a design error, because it becomes wrong the day after it is written.
-
-    3. `1 : 1 relationship with total participation`
-    - "Every customer has one meter" gives `1:1`, with double lines on both sides.
-
-    Converting to tables — three possible strategies for the specialisation
-
-    `Strategy A — one table per subclass plus the superclass` (the normalised choice, shown above)
-    ```sql
-    CREATE TABLE Customer (
-        Customer_ID   INT PRIMARY KEY,
-        Name          VARCHAR(100) NOT NULL,
-        DOB           DATE,
-        Customer_Type VARCHAR(20) CHECK (Customer_Type IN ('General','Industrial'))
-    );
-
-    CREATE TABLE Industrial_Customer (
-        Customer_ID INT PRIMARY KEY,
-        TAX_Number  VARCHAR(30) NOT NULL UNIQUE,
-        FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
-    );
-
-    CREATE TABLE Meter (
-        Meter_No      INT PRIMARY KEY,
-        Customer_ID   INT NOT NULL UNIQUE,        -- UNIQUE enforces the 1:1
-        Model         VARCHAR(50),
-        Producer_Name VARCHAR(100),
-        FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
-    );
-    ```
-    - `General_Customer` needs no table of its own, since it adds no attributes.
-
-    `Strategy B — a single table with a type discriminator`
-    ```sql
-    CREATE TABLE Customer (
-        Customer_ID   INT PRIMARY KEY,
-        Name          VARCHAR(100),
-        DOB           DATE,
-        Customer_Type VARCHAR(20),
-        TAX_Number    VARCHAR(30) NULL          -- NULL for general customers
-    );
-    ```
-    - Simpler and faster to query, but it permits a general customer to be given a TAX number, so the constraint has to be enforced by a CHECK:
-    ```sql
-    CHECK ((Customer_Type = 'Industrial' AND TAX_Number IS NOT NULL)
-        OR (Customer_Type = 'General'    AND TAX_Number IS NULL))
-    ```
-    - `Strategy A` is preferred when the subclasses differ substantially; `Strategy B` when they differ by only one or two columns, as here.
-
-16. **Draw the ER diagram where their relation named TEAM, PLAYER, MATCH** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
-
-    Answer: The relationships are a Team having Players, and a Match being played between two Teams — which is an `M:N` relationship that Players contribute performances to.
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        TEAM   ||--o{ PLAYER      : "has"
-        TEAM   ||--o{ MATCH_TEAM  : "plays in"
-        MATCH  ||--|{ MATCH_TEAM  : involves
-        PLAYER ||--o{ PERFORMANCE : achieves
-        MATCH  ||--o{ PERFORMANCE : records
-
-        TEAM {
-            int Team_ID PK
-            string Team_Name
-            string City
-            string Coach_Name
-            date Founded
-        }
-        PLAYER {
-            int Player_ID PK
-            string Player_Name
-            date DOB
-            string Position
-            int Jersey_No
-            int Team_ID FK
-        }
-        MATCH {
-            int Match_ID PK
-            date Match_Date
-            time Start_Time
-            string Venue
-            int Winner_Team_ID FK
-            string Result
-        }
-        MATCH_TEAM {
-            int Match_ID PK-FK
-            int Team_ID PK-FK
-            int Score
-            string Home_Away
-        }
-        PERFORMANCE {
-            int Match_ID PK-FK
-            int Player_ID PK-FK
-            int Goals
-            int Assists
-            int Minutes_Played
-        }
-    ```
-
-    Chen notation
-    ```
-       +--------+       /--------\       +----------+
-       |  TEAM  |------<   HAS    >------|  PLAYER  |
-       +--------+  1    \--------/    N  +----------+
-           |                                   |
-           | M                                 | M
-       /--------\                          /-------------\
-      <  PLAYS   >                        <  PERFORMS_IN  >
-       \--------/                          \-------------/
-           | N                                 | N
-       +---------+                             |
-       |  MATCH  |-----------------------------+
-       +---------+
-       (Match_ID) PK
-       (Match_Date)
-       (Venue)
-    ```
-
-    Relationships and cardinality
-
-    | Relationship | Cardinality | Explanation |
-    |---|---|---|
-    | Team has Player | `1 : N` | One team has many players; a player belongs to one team |
-    | Team plays Match | `M : N` | One team plays many matches; each match involves exactly two teams |
-    | Player performs in Match | `M : N` | One player features in many matches; each match involves many players |
-
-    Design points worth stating
-    - `MATCH_TEAM` is the associative entity resolving the M:N between Match and Team. It also holds the descriptive attributes `Score` and `Home_Away`, which belong to the pairing of one team with one match.
-    - A constraint that a match must have `exactly two` teams cannot be expressed by cardinality alone; it needs a trigger or an application rule.
-    - `PERFORMANCE` resolves the M:N between Player and Match, holding the individual statistics. This is the table every player statistic is computed from.
-    - `Winner_Team_ID` is a `derived` attribute — computable from the scores — stored deliberately because it makes league-table queries far simpler.
-
-    Tables
-    ```sql
-    CREATE TABLE Team (
-        Team_ID   INT PRIMARY KEY,
-        Team_Name VARCHAR(100) NOT NULL UNIQUE,
-        City      VARCHAR(50)
-    );
-
-    CREATE TABLE Player (
-        Player_ID   INT PRIMARY KEY,
-        Player_Name VARCHAR(100) NOT NULL,
-        Position    VARCHAR(30),
-        Jersey_No   INT,
-        Team_ID     INT REFERENCES Team(Team_ID),
-        UNIQUE (Team_ID, Jersey_No)               -- no two players share a shirt number
-    );
-
-    CREATE TABLE Match_Team (
-        Match_ID  INT,
-        Team_ID   INT,
-        Score     INT DEFAULT 0,
-        Home_Away CHAR(1) CHECK (Home_Away IN ('H','A')),
-        PRIMARY KEY (Match_ID, Team_ID),
-        FOREIGN KEY (Match_ID) REFERENCES Matches(Match_ID),
-        FOREIGN KEY (Team_ID)  REFERENCES Team(Team_ID)
-    );
-    ```
-
-    Typical query the design supports
-    ```sql
-    -- league table
-    SELECT   t.Team_Name,
-             COUNT(*) AS played,
-             SUM(CASE WHEN m.Winner_Team_ID = t.Team_ID THEN 3 ELSE 0 END) AS points
-    FROM     Team t
-    JOIN     Match_Team mt ON t.Team_ID = mt.Team_ID
-    JOIN     Matches    m  ON mt.Match_ID = m.Match_ID
-    GROUP BY t.Team_ID, t.Team_Name
-    ORDER BY points DESC;
-    ```
-
-17. **Railway Service system ER diagram.** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
-
-    Answer: A railway reservation system centres on Trains running on Routes, Passengers making Bookings on a particular journey date.
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        TRAIN     ||--o{ SCHEDULE    : "runs on"
-        STATION   ||--o{ SCHEDULE    : "is stop in"
-        TRAIN     ||--o{ COACH       : "has"
-        COACH     ||--o{ SEAT        : contains
-        PASSENGER ||--o{ BOOKING     : makes
-        TRAIN     ||--o{ BOOKING     : "is booked on"
-        BOOKING   ||--|{ TICKET      : issues
-        SEAT      ||--o{ TICKET      : "is allocated to"
-        BOOKING   ||--|| PAYMENT     : "is paid by"
-
-        TRAIN {
-            int Train_No PK
-            string Train_Name
-            string Train_Type
-            string Source_Station
-            string Dest_Station
-            string Running_Days
-        }
-        STATION {
-            string Station_Code PK
-            string Station_Name
-            string City
-            string Zone
-        }
-        SCHEDULE {
-            int Schedule_ID PK
-            int Train_No FK
-            string Station_Code FK
-            int Stop_No
-            time Arrival_Time
-            time Departure_Time
-            int Distance_KM
-        }
-        COACH {
-            int Coach_ID PK
-            int Train_No FK
-            string Coach_No
-            string Class_Type
-            int Total_Seats
-        }
-        SEAT {
-            int Seat_ID PK
-            int Coach_ID FK
-            string Seat_No
-            string Berth_Type
-        }
-        PASSENGER {
-            int Passenger_ID PK
-            string Name
-            int Age
-            string Gender
-            string Phone
-            string NID
-        }
-        BOOKING {
-            int PNR PK
-            int Passenger_ID FK
-            int Train_No FK
-            date Journey_Date
-            string From_Station
-            string To_Station
-            decimal Total_Fare
-            string Status
-        }
-        TICKET {
-            int Ticket_ID PK
-            int PNR FK
-            int Seat_ID FK
-            string Passenger_Name
-            int Age
-            string Status
-        }
-        PAYMENT {
-            int Payment_ID PK
-            int PNR FK
-            decimal Amount
-            string Method
-            datetime Paid_On
-        }
-    ```
-
-    Relationships and cardinality
-
-    | Relationship | Cardinality | Explanation |
-    |---|---|---|
-    | Train runs on Schedule | `1 : N` | A train stops at many stations in order |
-    | Station is stop in Schedule | `1 : N` | A station serves many trains |
-    | Train stops at Station | `M : N` | Resolved by SCHEDULE, carrying arrival and departure times |
-    | Train has Coach | `1 : N` | |
-    | Coach contains Seat | `1 : N` | SEAT is a weak entity of Coach |
-    | Passenger makes Booking | `1 : N` | |
-    | Booking issues Ticket | `1 : N` | One PNR may cover several travellers |
-    | Seat is allocated to Ticket | `1 : N` | The same seat on different dates |
-    | Booking has Payment | `1 : 1` | |
-
-    Design points worth stating
-    - `SCHEDULE` is the associative entity resolving the M:N between Train and Station. Its descriptive attributes — stop number, arrival and departure times, distance — belong to the pairing of a train with a station, not to either alone.
-    - A single `PNR` covering several passengers is why `BOOKING` and `TICKET` are separate. Merging them would make a family booking impossible to represent.
-    - `Journey_Date` must be part of any seat-availability constraint: the same seat is bookable again on a different date, so uniqueness is over `(Seat_ID, Journey_Date)`, not `Seat_ID` alone. This is the subtlest point in the design.
-
-    Key constraint
-    ```sql
-    CREATE TABLE Ticket (
-        Ticket_ID INT PRIMARY KEY,
-        PNR       INT NOT NULL REFERENCES Booking(PNR),
-        Seat_ID   INT NOT NULL REFERENCES Seat(Seat_ID),
-        Journey_Date DATE NOT NULL,
-        Status    VARCHAR(20) DEFAULT 'Confirmed',
-        UNIQUE (Seat_ID, Journey_Date)      -- one seat cannot be double-booked on a date
-    );
-    ```
-
-    Typical query
-    ```sql
-    -- seats still free on a train for a given date and class
-    SELECT s.Seat_No, c.Coach_No
-    FROM   Seat s JOIN Coach c ON s.Coach_ID = c.Coach_ID
-    WHERE  c.Train_No = 705 AND c.Class_Type = 'AC'
-      AND  s.Seat_ID NOT IN (SELECT Seat_ID FROM Ticket
-                             WHERE Journey_Date = '2025-08-15' AND Status = 'Confirmed');
-    ```
-
-18. **(i) Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Referee (Referee-id, Referee-name) Player (player-id, palyername, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result).** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 928-929 (ET: CTI)], [Janata Bank Assistant System Administrator 2021 compact it 939 (ET: N/A)]*
-   **(ii) Convert the ER diagram to relations (Table)** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 929-930 (ET: CTI)]*
-
-    Answer:
-
-    Entities and attributes as given
-    ```
-    Game    (Game_no, game_time, game_name)
-    Team    (Team_ID, Coach_ID, Team_Name)
-    Referee (Referee_ID, Referee_Name)
-    Player  (Player_ID, Player_Name, Player_Position)
-    Stadium (Stadium_ID, Stadium_Name, Stadium_Loc)
-    Match   (Match_ID, Match_Date, Match_Result)
-    ```
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        TEAM    ||--o{ PLAYER      : "has"
-        COACH   ||--|| TEAM        : coaches
-        TEAM    ||--o{ MATCH_TEAM  : "plays in"
-        MATCH   ||--|{ MATCH_TEAM  : involves
-        STADIUM ||--o{ MATCH       : hosts
-        REFEREE ||--o{ MATCH_REF   : officiates
-        MATCH   ||--o{ MATCH_REF   : "is officiated by"
-        GAME    ||--o{ MATCH       : "is played as"
-        PLAYER  ||--o{ PERFORMANCE : achieves
-        MATCH   ||--o{ PERFORMANCE : records
-
-        GAME {
-            int Game_no PK
-            string Game_Name
-            time Game_Time
-        }
-        TEAM {
-            int Team_ID PK
-            string Team_Name
-            int Coach_ID FK
-        }
-        COACH {
-            int Coach_ID PK
-            string Coach_Name
-        }
-        PLAYER {
-            int Player_ID PK
-            string Player_Name
-            string Player_Position
-            int Team_ID FK
-        }
-        REFEREE {
-            int Referee_ID PK
-            string Referee_Name
-        }
-        STADIUM {
-            int Stadium_ID PK
-            string Stadium_Name
-            string Stadium_Loc
-        }
-        MATCH {
-            int Match_ID PK
-            date Match_Date
-            string Match_Result
-            int Stadium_ID FK
-            int Game_no FK
-        }
-        MATCH_TEAM {
-            int Match_ID PK-FK
-            int Team_ID PK-FK
-            int Goals_Scored
-            string Home_Away
-        }
-        MATCH_REF {
-            int Match_ID PK-FK
-            int Referee_ID PK-FK
-            string Role
-        }
-        PERFORMANCE {
-            int Match_ID PK-FK
-            int Player_ID PK-FK
-            int Goals
-            int Cards
-        }
-    ```
-
-    Chen notation for the central structure
-    ```
-       +---------+       /---------\       +----------+
-       |  TEAM   |------<    HAS    >------|  PLAYER  |
-       +---------+  1    \---------/    N  +----------+
-           | M
-       /---------\
-      <   PLAYS   >   (with Goals_Scored as a descriptive attribute)
-       \---------/
-           | N
-       +---------+       /----------\       +-----------+
-       |  MATCH  |------<  HOSTED_AT >------|  STADIUM  |
-       +---------+  N    \----------/   1   +-----------+
-           | M
-       /-------------\
-      <  OFFICIATES   >
-       \-------------/
-           | N
-       +-----------+
-       |  REFEREE  |
-       +-----------+
-    ```
-
-    Relationships and cardinality
-
-    | Relationship | Cardinality | Note |
-    |---|---|---|
-    | Team has Player | `1 : N` | A player belongs to one team |
-    | Coach coaches Team | `1 : 1` | Coach_ID appears in Team, so one coach per team |
-    | Team plays Match | `M : N` | Resolved by MATCH_TEAM; exactly two teams per match |
-    | Stadium hosts Match | `1 : N` | One stadium, many matches |
-    | Referee officiates Match | `M : N` | Several referees per match, and a referee works many matches |
-    | Player performs in Match | `M : N` | Resolved by PERFORMANCE |
-    | Game is played as Match | `1 : N` | A game type has many match instances |
-
-    Design points
-    - Both `Team–Match` and `Referee–Match` are `M:N`, so each needs its own table. This is the main thing the question tests.
-    - `MATCH_TEAM` carries `Goals_Scored` and `Home_Away`, which belong to the pairing rather than to either entity.
-    - `Coach_ID` is listed as an attribute of Team, which implies 1:1. If a coach could manage several teams over time, a separate `Coach_Team(Coach_ID, Team_ID, Season)` table would be needed.
-    - `Match_Result` is `derived` from the goals in MATCH_TEAM, but is stored for query convenience.
-
-    Tables
-    ```sql
-    CREATE TABLE Match_Team (
-        Match_ID     INT,
-        Team_ID      INT,
-        Goals_Scored INT DEFAULT 0,
-        Home_Away    CHAR(1) CHECK (Home_Away IN ('H','A')),
-        PRIMARY KEY (Match_ID, Team_ID),
-        FOREIGN KEY (Match_ID) REFERENCES Matches(Match_ID),
-        FOREIGN KEY (Team_ID)  REFERENCES Team(Team_ID)
-    );
-
-    CREATE TABLE Match_Ref (
-        Match_ID   INT,
-        Referee_ID INT,
-        Role       VARCHAR(20),          -- Main, Assistant, Fourth official
-        PRIMARY KEY (Match_ID, Referee_ID),
-        FOREIGN KEY (Match_ID)   REFERENCES Matches(Match_ID),
-        FOREIGN KEY (Referee_ID) REFERENCES Referee(Referee_ID)
-    );
-    ```
-
-19. **Draw ER diagram (Self test)** *[Combined 4 Banks Assistant Programmer 2020 compact it 1009 (ET: DU)]*
-
-    Answer: The scenario was not printed, so the general method for drawing an ER diagram is given with a complete worked example, so it can be applied to any question of this type.
-
-    The five steps
-
-    - Step 1 — `Identify the entities`. Look for nouns the system stores data about. Each becomes a rectangle.
-    - Step 2 — `Identify the attributes` of each entity, and underline the key attribute.
-    - Step 3 — `Identify the relationships` from the verbs joining the nouns. Each becomes a diamond.
-    - Step 4 — `Determine the cardinality` of every relationship: 1:1, 1:N or M:N.
-    - Step 5 — `Determine participation`: total (double line) if every entity must participate, partial (single line) otherwise.
-
-    Worked example — an employee and project system
-    > "A company has several departments. Each department has many employees, and each employee works in exactly one department. Employees may be assigned to several projects, and a project may have several employees working on it, with the number of hours recorded. Each department is managed by one employee."
-
-    ```mermaid
-    erDiagram
-        DEPARTMENT ||--o{ EMPLOYEE   : employs
-        EMPLOYEE   ||--o| DEPARTMENT : manages
-        EMPLOYEE   ||--o{ WORKS_ON   : "is assigned"
-        PROJECT    ||--o{ WORKS_ON   : "has"
-        EMPLOYEE   ||--o{ DEPENDENT  : supports
-
-        DEPARTMENT {
-            int Dept_ID PK
-            string Dept_Name
-            string Location
-            int Manager_ID FK
-        }
-        EMPLOYEE {
-            int Emp_ID PK
-            string Name
-            date DOB
-            decimal Salary
-            int Dept_ID FK
-        }
-        PROJECT {
-            int Project_ID PK
-            string Project_Name
-            decimal Budget
-        }
-        WORKS_ON {
-            int Emp_ID PK-FK
-            int Project_ID PK-FK
-            decimal Hours
-        }
-        DEPENDENT {
-            int Emp_ID PK-FK
-            string Dep_Name PK
-            string Relationship
-        }
-    ```
-
-    Chen notation
-    ```
-       +-------------+       /----------\       +------------+
-       | DEPARTMENT  |======<   EMPLOYS   >-----|  EMPLOYEE  |
-       +-------------+   1   \----------/    N  +------------+
-       (Dept_ID) PK                                    | M
-       (Dept_Name)                                /----------\
-                                                 <  WORKS_ON  >---(Hours)
-                                                  \----------/
-                                                        | N
-                                                 +------------+
-                                                 |  PROJECT   |
-                                                 +------------+
-
-                                                 +============+
-                                                 | DEPENDENT  |  <- weak entity
-                                                 +============+
-    ```
-
-    Reading the four kinds of construct in this one diagram
-    - `1 : N` — Department employs Employee. The department's key becomes a foreign key on Employee.
-    - `M : N` — Employee works on Project, with `Hours` as a descriptive attribute. This needs its own table.
-    - `1 : 1` — Employee manages Department. The foreign key goes on Department, declared UNIQUE.
-    - `Weak entity` — Dependent has no key of its own; it is identified by `Emp_ID` plus the partial key `Dep_Name`.
-
-    Converting to tables
-    ```sql
-    CREATE TABLE Department (
-        Dept_ID    INT PRIMARY KEY,
-        Dept_Name  VARCHAR(50) NOT NULL,
-        Manager_ID INT UNIQUE REFERENCES Employee(Emp_ID)   -- UNIQUE gives the 1:1
-    );
-
-    CREATE TABLE Employee (
-        Emp_ID  INT PRIMARY KEY,
-        Name    VARCHAR(100) NOT NULL,
-        Salary  DECIMAL(10,2),
-        Dept_ID INT NOT NULL REFERENCES Department(Dept_ID) -- NOT NULL = total participation
-    );
-
-    CREATE TABLE Works_On (
-        Emp_ID     INT,
-        Project_ID INT,
-        Hours      DECIMAL(6,2),
-        PRIMARY KEY (Emp_ID, Project_ID),                   -- M:N resolved
-        FOREIGN KEY (Emp_ID)     REFERENCES Employee(Emp_ID),
-        FOREIGN KEY (Project_ID) REFERENCES Project(Project_ID)
-    );
-
-    CREATE TABLE Dependent (
-        Emp_ID       INT,
-        Dep_Name     VARCHAR(50),
-        Relationship VARCHAR(20),
-        PRIMARY KEY (Emp_ID, Dep_Name),                     -- weak entity key
-        FOREIGN KEY (Emp_ID) REFERENCES Employee(Emp_ID) ON DELETE CASCADE
-    );
-    ```
-    - The conversion rules in one line each: `1:N` puts the foreign key on the many side; `1:1` puts it on either side with UNIQUE; `M:N` needs a new table; a weak entity's key is the owner's key plus its partial key.
-
-20. **E-R Diagram কী? উদাহরণসহ লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019-1020 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.)
-
-    What an E-R diagram is
-    - An `Entity-Relationship diagram` is a graphical, conceptual model of the data in a system. It shows the `entities` (things data is kept about), their `attributes` (properties) and the `relationships` between them.
-    - Introduced by Peter Chen in 1976. It is independent of any DBMS, and it is the standard first step in database design: draw the diagram, agree it with the stakeholders, then convert it into tables.
-
-    The notation
-
-    | Symbol | Meaning |
-    |---|---|
-    | `Rectangle` | Entity |
-    | `Double rectangle` | Weak entity |
-    | `Oval` | Attribute |
-    | `Underlined oval` | Key attribute (primary key) |
-    | `Double oval` | Multivalued attribute |
-    | `Dashed oval` | Derived attribute |
-    | `Diamond` | Relationship |
-    | `Double diamond` | Identifying relationship (to a weak entity) |
-    | `Line` | Connects entity to attribute or relationship |
-    | `Double line` | Total participation |
-    | `1, N, M` on a line | Cardinality |
-
-    Example — a university
-    ```mermaid
-    erDiagram
-        DEPARTMENT ||--o{ STUDENT    : enrolls
-        STUDENT    ||--o{ ENROLLMENT : registers
-        COURSE     ||--o{ ENROLLMENT : "has"
-        TEACHER    ||--o{ COURSE     : teaches
-
-        DEPARTMENT {
-            int Dept_ID PK
-            string Dept_Name
-        }
-        STUDENT {
-            int Student_ID PK
-            string Name
-            date DOB
-            int Dept_ID FK
-        }
-        COURSE {
-            string Course_ID PK
-            string Title
-            int Credits
-        }
-        ENROLLMENT {
-            int Student_ID PK-FK
-            string Course_ID PK-FK
-            char Grade
-        }
-        TEACHER {
-            int Teacher_ID PK
-            string Name
-        }
-    ```
-
-    Chen notation for the central relationship
-    ```
-                    (Student_ID)  (Name)   (Age)
-                         |          |     .'
-                         |          |    ' (dashed = derived from DOB)
-                    +----------+          
-                    | STUDENT  |
-                    +----------+
-                         | M
-                    /----------\
-                   <  ENROLLS   >----(Grade)   <- descriptive attribute
-                    \----------/
-                         | N
-                    +----------+
-                    |  COURSE  |
-                    +----------+
-                         |
-                 (Course_ID)  (Title)  (Credits)
-    ```
-
-    Reading the example
-    - `Entities`: Student, Course, Teacher, Department.
-    - `Key attributes`: Student_ID, Course_ID, Teacher_ID, Dept_ID — each underlined.
-    - `Derived attribute`: Age, computed from DOB, drawn with a dashed outline.
-    - `Relationship`: Enrolls, between Student and Course.
-    - `Cardinality`: M:N — a student takes many courses and a course has many students.
-    - `Descriptive attribute`: Grade, belonging to the relationship rather than to either entity.
-
-    Why the diagram matters
-    - It settles, before any code is written, whether a relationship is 1:1, 1:N or M:N — which decides where every foreign key goes and whether an extra table is needed. Here the M:N immediately requires an `Enrollment` table.
-    - It can be discussed with non-technical stakeholders, who can spot a wrong assumption that would be invisible in SQL.
-    - The conversion to tables is then mechanical: entities become tables, attributes become columns, 1:N becomes a foreign key, and M:N becomes a junction table.
-
-21. **Draw an ER diagram of a Library Management System.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036-1037 (ET: BUET)]*
-
-    Answer: A library system centres on Members borrowing physical Copies of Books, with the important distinction between a `Book` (a title) and a `Copy` (a physical volume).
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        AUTHOR   ||--o{ BOOK_AUTHOR : writes
-        BOOK     ||--o{ BOOK_AUTHOR : "is written by"
-        PUBLISHER||--o{ BOOK        : publishes
-        CATEGORY ||--o{ BOOK        : classifies
-        BOOK     ||--o{ COPY        : "has physical"
-        MEMBER   ||--o{ LOAN        : borrows
-        COPY     ||--o{ LOAN        : "is issued in"
-        LOAN     ||--o| FINE        : incurs
-        MEMBER   ||--o{ RESERVATION : makes
-        BOOK     ||--o{ RESERVATION : "is reserved"
-        STAFF    ||--o{ LOAN        : issues
-
-        BOOK {
-            string ISBN PK
-            string Title
-            int Publication_Year
-            int Publisher_ID FK
-            int Category_ID FK
-        }
-        AUTHOR {
-            int Author_ID PK
-            string Author_Name
-            string Nationality
-        }
-        BOOK_AUTHOR {
-            string ISBN PK-FK
-            int Author_ID PK-FK
-        }
-        COPY {
-            int Copy_ID PK
-            string ISBN FK
-            string Shelf_Location
-            string Status
-            date Acquired_Date
-        }
-        MEMBER {
-            int Member_ID PK
-            string Name
-            string Address
-            string Phone
-            date Membership_Date
-            string Member_Type
-        }
-        LOAN {
-            int Loan_ID PK
-            int Copy_ID FK
-            int Member_ID FK
-            int Staff_ID FK
-            date Issue_Date
-            date Due_Date
-            date Return_Date
-        }
-        FINE {
-            int Fine_ID PK
-            int Loan_ID FK
-            decimal Amount
-            string Status
-        }
-        RESERVATION {
-            int Res_ID PK
-            int Member_ID FK
-            string ISBN FK
-            date Res_Date
-            string Status
-        }
-        PUBLISHER {
-            int Publisher_ID PK
-            string Publisher_Name
-            string Address
-        }
-        CATEGORY {
-            int Category_ID PK
-            string Category_Name
-        }
-        STAFF {
-            int Staff_ID PK
-            string Name
-            string Designation
-        }
-    ```
-
-    Chen notation for the core
-    ```
-       +----------+       /---------\       +========+
-       |   BOOK   |======<    HAS    >======|  COPY  |
-       +----------+   1   \---------/    N  +========+
-       (ISBN) PK                                 | N
-       (Title)                              /---------\
-                                           <   LOAN    >----(Issue_Date)
-                                            \---------/     (Due_Date)
-                                                 | N        (Return_Date)
-                                           +----------+
-                                           |  MEMBER  |
-                                           +----------+
-    ```
-
-    Relationships and cardinality
-
-    | Relationship | Cardinality | Note |
-    |---|---|---|
-    | Book has Copy | `1 : N` | One title, many physical volumes |
-    | Author writes Book | `M : N` | Resolved by BOOK_AUTHOR |
-    | Publisher publishes Book | `1 : N` | |
-    | Member borrows Copy | `M : N` | Resolved by LOAN, holding the dates |
-    | Loan incurs Fine | `1 : 0..1` | Only overdue loans generate a fine |
-    | Member reserves Book | `M : N` | Reservation is against the title, not a copy |
-    | Staff issues Loan | `1 : N` | |
-
-    The three design decisions worth explaining
-    - `BOOK versus COPY` is the central one. A loan must record `which physical volume` left the building, so that the library knows exactly which one is missing. Merging them would make that impossible.
-    - `RESERVATION is against the ISBN, not the Copy_ID`, because a member wants `any` copy of the title, not one particular volume.
-    - `LOAN` is the associative entity resolving the M:N between Member and Copy, and its dates are descriptive attributes of that pairing.
-
-    Core tables
-    ```sql
-    CREATE TABLE Copy (
-        Copy_ID        INT PRIMARY KEY,
-        ISBN           VARCHAR(20) NOT NULL REFERENCES Book(ISBN),
-        Shelf_Location VARCHAR(50),
-        Status         VARCHAR(20) DEFAULT 'Available'
-                       CHECK (Status IN ('Available','Issued','Lost','Damaged'))
-    );
-
-    CREATE TABLE Loan (
-        Loan_ID     INT PRIMARY KEY,
-        Copy_ID     INT NOT NULL REFERENCES Copy(Copy_ID),
-        Member_ID   INT NOT NULL REFERENCES Member(Member_ID),
-        Issue_Date  DATE NOT NULL,
-        Due_Date    DATE NOT NULL,
-        Return_Date DATE,
-        CHECK (Due_Date > Issue_Date)
-    );
-    ```
-
-    Typical query
-    ```sql
-    -- overdue loans with the member's contact details
-    SELECT m.Name, m.Phone, b.Title, l.Due_Date,
-           DATEDIFF(CURDATE(), l.Due_Date) AS days_overdue
-    FROM   Loan l
-    JOIN   Member m ON l.Member_ID = m.Member_ID
-    JOIN   Copy   c ON l.Copy_ID   = c.Copy_ID
-    JOIN   Book   b ON c.ISBN      = b.ISBN
-    WHERE  l.Return_Date IS NULL AND l.Due_Date < CURDATE();
-    ```
-
-22. **(ক) Database এর ক্ষেত্রে E-R Diagram বলতে কী বোঝায়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
-
-    Answer: (Answered in English, as required for IT topics.)
-
-    What an E-R diagram means in a database context
-    - An `Entity-Relationship diagram` is a graphical, conceptual model of the data a system must store. It shows `entities` (the things data is kept about), their `attributes` (properties) and the `relationships` between them, together with the cardinality of each relationship.
-    - It is drawn before any table is created, is independent of any DBMS, and forms the blueprint from which the tables are derived.
-    - Introduced by Peter Chen in 1976.
-
-    The symbols
-
-    | Symbol | Meaning |
-    |---|---|
-    | Rectangle | Entity |
-    | Double rectangle | Weak entity |
-    | Oval | Attribute |
-    | Underlined oval | Key attribute |
-    | Double oval | Multivalued attribute |
-    | Dashed oval | Derived attribute |
-    | Diamond | Relationship |
-    | Double line | Total participation |
-    | 1, N, M | Cardinality |
-
-    Worked example — a hospital
-    ```mermaid
-    erDiagram
-        DEPARTMENT  ||--o{ DOCTOR      : employs
-        DOCTOR      ||--o{ APPOINTMENT : attends
-        PATIENT     ||--o{ APPOINTMENT : books
-
-        DEPARTMENT {
-            int Dept_ID PK
-            string Dept_Name
-        }
-        DOCTOR {
-            int Doctor_ID PK
-            string Name
-            string Specialization
-            int Dept_ID FK
-        }
-        PATIENT {
-            int Patient_ID PK
-            string Name
-            date DOB
-            string Phone
-        }
-        APPOINTMENT {
-            int Appt_ID PK
-            int Patient_ID FK
-            int Doctor_ID FK
-            datetime Appt_DateTime
-            string Diagnosis
-        }
-    ```
-
-    Chen notation for the same
-    ```
-                  (Patient_ID)   (Name)   (Age)
-                        |          |      .'  (dashed = derived from DOB)
-                   +-----------+
-                   |  PATIENT  |
-                   +-----------+
-                         | M
-                    /-------------\
-                   <  APPOINTMENT  >----(Appt_DateTime)
-                    \-------------/     (Diagnosis)
-                         | N
-                   +-----------+          /----------\        +--------------+
-                   |  DOCTOR   |=========<  BELONGS   >=======| DEPARTMENT   |
-                   +-----------+    N     \----------/    1   +--------------+
-                         |
-              (Doctor_ID)  (Name)  (Specialization)
-    ```
-
-    Reading it
-    - `Entities`: Patient, Doctor, Department.
-    - `Key attributes`: Patient_ID, Doctor_ID, Dept_ID — underlined.
-    - `Derived attribute`: Age, computed from DOB, drawn dashed.
-    - `Relationship`: Appointment, between Patient and Doctor.
-    - `Cardinality`: `M : N` — a patient sees many doctors over time, and a doctor sees many patients.
-    - `Descriptive attributes`: Appt_DateTime and Diagnosis, belonging to the appointment itself.
-    - `Participation`: Doctor's participation in "belongs to a department" is `total` (double line) — every doctor must be in a department.
-
-    Converting it to tables
-    ```sql
-    CREATE TABLE Doctor (
-        Doctor_ID      INT PRIMARY KEY,
-        Name           VARCHAR(100) NOT NULL,
-        Specialization VARCHAR(50),
-        Dept_ID        INT NOT NULL REFERENCES Department(Dept_ID)   -- 1:N -> FK
-    );
-
-    CREATE TABLE Appointment (                                       -- M:N -> new table
-        Appt_ID       INT PRIMARY KEY,
-        Patient_ID    INT NOT NULL REFERENCES Patient(Patient_ID),
-        Doctor_ID     INT NOT NULL REFERENCES Doctor(Doctor_ID),
-        Appt_DateTime DATETIME NOT NULL,
-        Diagnosis     TEXT,
-        UNIQUE (Doctor_ID, Appt_DateTime)
-    );
-    ```
-    - The conversion rules: an entity becomes a table; a `1:N` relationship becomes a foreign key on the many side; an `M:N` relationship becomes its own table with a composite key; and a descriptive attribute goes into that table.
-
-23. **Explain E-R diagram with example?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
-
-    Answer:
-
-    What an E-R diagram is
-    - An `Entity-Relationship diagram` is a conceptual, graphical model of the data in a system, showing `entities`, their `attributes` and the `relationships` between them, with cardinality and participation marked.
-    - It is drawn before implementation, is independent of any DBMS, and is the blueprint from which tables are derived. Introduced by Peter Chen in 1976.
-
-    Components
-
-    `Entity` — a thing data is stored about. Drawn as a rectangle. A `weak entity`, which has no key of its own, is drawn as a double rectangle.
-
-    `Attribute` — a property of an entity. Drawn as an oval.
-    - `Key` (underlined), `composite` (divisible into parts), `multivalued` (double oval), `derived` (dashed oval), `simple` (atomic).
-
-    `Relationship` — an association between entities. Drawn as a diamond. It may have its own `descriptive attributes`.
-
-    `Cardinality` — 1:1, 1:N or M:N.
-
-    `Participation` — total (double line) if every entity must take part, partial (single line) otherwise.
-
-    Worked example — an online bookshop
-    ```mermaid
-    erDiagram
-        CUSTOMER ||--o{ ORDER      : places
-        ORDER    ||--|{ ORDER_ITEM : contains
-        BOOK     ||--o{ ORDER_ITEM : "appears in"
-        AUTHOR   ||--o{ BOOK       : writes
-
-        CUSTOMER {
-            int Customer_ID PK
-            string Name
-            string Email
-            string Address
-        }
-        ORDER {
-            int Order_ID PK
-            int Customer_ID FK
-            date Order_Date
-            decimal Total
-        }
-        ORDER_ITEM {
-            int Order_ID PK-FK
-            string ISBN PK-FK
-            int Quantity
-            decimal Unit_Price
-        }
-        BOOK {
-            string ISBN PK
-            string Title
-            decimal Price
-            int Author_ID FK
-        }
-        AUTHOR {
-            int Author_ID PK
-            string Author_Name
-        }
-    ```
-
-    Chen notation
-    ```
-         (Customer_ID)  (Name)  (Email)
-                |         |       |
-            +------------+
-            |  CUSTOMER  |
-            +------------+
-                 | 1
-            /---------\
-           <  PLACES   >
-            \---------/
-                 | N
-            +---------+       /------------\       +--------+
-            |  ORDER  |======<   CONTAINS   >------|  BOOK  |
-            +---------+   M   \------------/    N  +--------+
-                                     |
-                              +------+------+
-                              |             |
-                         (Quantity)   (Unit_Price)   <- descriptive attributes
-    ```
-
-    Reading it
-    - `Customer places Order` is `1:N` — one customer, many orders. The customer's key becomes a foreign key on Order.
-    - `Order contains Book` is `M:N` — an order holds several books and a book appears in many orders. This needs the `ORDER_ITEM` table.
-    - `Quantity` and `Unit_Price` are `descriptive attributes` of that relationship. Storing `Unit_Price` here rather than reading it from Book is deliberate: the price on an old invoice must not change when the book's price changes.
-    - `Order has total participation` in "contains" — an order with no items is meaningless.
-
-    Converting to tables
-    ```sql
-    CREATE TABLE Orders (
-        Order_ID    INT PRIMARY KEY,
-        Customer_ID INT NOT NULL REFERENCES Customer(Customer_ID),   -- 1:N
-        Order_Date  DATE NOT NULL,
-        Total       DECIMAL(12,2)
-    );
-
-    CREATE TABLE Order_Item (                                        -- M:N
-        Order_ID   INT,
-        ISBN       VARCHAR(20),
-        Quantity   INT NOT NULL CHECK (Quantity > 0),
-        Unit_Price DECIMAL(10,2) NOT NULL,
-        PRIMARY KEY (Order_ID, ISBN),
-        FOREIGN KEY (Order_ID) REFERENCES Orders(Order_ID) ON DELETE CASCADE,
-        FOREIGN KEY (ISBN)     REFERENCES Book(ISBN)
-    );
-    ```
-    - The rules in summary: entity → table; `1:N` → foreign key on the many side; `1:1` → foreign key with UNIQUE; `M:N` → a new table with a composite key; multivalued attribute → its own table; weak entity → owner's key plus partial key.
-
-24. **Daraz is proud of having up-to-date information on the processing and current location of each shipped item. Daraz relies on a company-wide information system. Shipped items are the heart of the Daraz product tracking information system. Shipped items can be characterized by item number, weight, dimensions, insurance amount, destination and final delivery date. Shipped items are received into the Daraz system at a single retail center. Retail center are characterized by their type, ID and address. Shipped items make their way to their destination via one or more standard Daraz transportation events (flights, truck deliveries). These transportation events are characterized by a schedule number, a type (e.g. flight, truck), and a delivery route. Please create an entity relationship diagram that captures this information about the Daraz system. Be certain to indicate identifiers and cardinality constraints.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1166 (ET: N/A)]*
-
-    Answer: The system tracks `Shipped Items` that enter at a `Retail Center` and travel to their destination through one or more `Transportation Events`.
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        RETAIL_CENTER ||--o{ SHIPPED_ITEM      : receives
-        SHIPPED_ITEM  ||--|{ ITEM_TRANSPORT    : "travels via"
-        TRANSPORT_EVENT ||--o{ ITEM_TRANSPORT  : carries
-        SHIPPED_ITEM  ||--o{ TRACKING_LOG      : "is tracked in"
-
-        SHIPPED_ITEM {
-            int Item_Number PK
-            decimal Weight
-            string Dimensions
-            decimal Insurance_Amount
-            string Destination
-            date Final_Delivery_Date
-            int Center_ID FK
-        }
-        RETAIL_CENTER {
-            int Center_ID PK
-            string Center_Type
-            string Address
-        }
-        TRANSPORT_EVENT {
-            int Schedule_Number PK
-            string Event_Type
-            string Delivery_Route
-            datetime Departure_Time
-            datetime Arrival_Time
-        }
-        ITEM_TRANSPORT {
-            int Item_Number PK-FK
-            int Schedule_Number PK-FK
-            int Leg_Sequence
-            datetime Loaded_At
-        }
-        TRACKING_LOG {
-            int Log_ID PK
-            int Item_Number FK
-            string Current_Location
-            datetime Scan_Time
-            string Status
-        }
-    ```
-
-    Chen notation
-    ```
-       +==================+        /-----------\        +-----------------+
-       |  RETAIL_CENTER   |=======<  RECEIVES   >======>|  SHIPPED_ITEM   |
-       +==================+   1    \-----------/    N   +-----------------+
-       (Center_ID) PK                                   (Item_Number) PK
-       (Center_Type)                                    (Weight)
-       (Address)                                        (Dimensions)
-                                                        (Insurance_Amount)
-                                                        (Destination)
-                                                        (Final_Delivery_Date)
-                                                                | M
-                                                         /-------------\
-                                                        <  TRAVELS_VIA  >---(Leg_Sequence)
-                                                         \-------------/
-                                                                | N
-                                                      +---------------------+
-                                                      |  TRANSPORT_EVENT    |
-                                                      +---------------------+
-                                                      (Schedule_Number) PK
-                                                      (Event_Type)
-                                                      (Delivery_Route)
-    ```
-
-    Identifiers, as the question requires
-    - `SHIPPED_ITEM` — `Item_Number`
-    - `RETAIL_CENTER` — `Center_ID`
-    - `TRANSPORT_EVENT` — `Schedule_Number`
-    - `ITEM_TRANSPORT` — the composite key `(Item_Number, Schedule_Number)`
-
-    Cardinality constraints, as the question requires
-
-    | Relationship | Cardinality | Reason from the text |
-    |---|---|---|
-    | Retail Center receives Shipped Item | `1 : N` | "received into the system at a `single` retail center" |
-    | Shipped Item travels via Transport Event | `M : N` | "via `one or more` standard transportation events"; a flight or truck also carries many items |
-    | Shipped Item has Tracking Log | `1 : N` | Each scan along the route produces one entry |
-
-    Participation constraints
-    - `SHIPPED_ITEM has total participation` in "receives" — every item enters at exactly one centre, so the double line and a `NOT NULL` foreign key.
-    - `SHIPPED_ITEM has total participation` in "travels via" — an item must make at least one transportation event to reach its destination. This is why the mermaid diagram uses `||--|{`.
-    - `RETAIL_CENTER` and `TRANSPORT_EVENT` have `partial` participation: a newly opened centre may hold no items, and a scheduled flight may be carrying none.
-
-    The key design decision
-    - `ITEM_TRANSPORT` is the associative entity resolving the `M:N` between item and transport event. Its descriptive attribute `Leg_Sequence` records the `order` of the legs, which is essential — an item flying Dhaka → Dubai → London must know which leg came first. Without this attribute the route could not be reconstructed.
-
-    Tables
-    ```sql
-    CREATE TABLE Shipped_Item (
-        Item_Number         INT PRIMARY KEY,
-        Weight              DECIMAL(10,2),
-        Dimensions          VARCHAR(50),
-        Insurance_Amount    DECIMAL(12,2),
-        Destination         VARCHAR(200) NOT NULL,
-        Final_Delivery_Date DATE,
-        Center_ID           INT NOT NULL REFERENCES Retail_Center(Center_ID)
-    );
-
-    CREATE TABLE Item_Transport (
-        Item_Number     INT,
-        Schedule_Number INT,
-        Leg_Sequence    INT NOT NULL,
-        Loaded_At       DATETIME,
-        PRIMARY KEY (Item_Number, Schedule_Number),
-        UNIQUE (Item_Number, Leg_Sequence),           -- no two legs share a position
-        FOREIGN KEY (Item_Number)     REFERENCES Shipped_Item(Item_Number),
-        FOREIGN KEY (Schedule_Number) REFERENCES Transport_Event(Schedule_Number)
-    );
-    ```
-
-    Query the design supports
-    ```sql
-    -- full route of one parcel, in order
-    SELECT te.Event_Type, te.Delivery_Route, it.Leg_Sequence, it.Loaded_At
-    FROM   Item_Transport it JOIN Transport_Event te
-           ON it.Schedule_Number = te.Schedule_Number
-    WHERE  it.Item_Number = 100234
-    ORDER  BY it.Leg_Sequence;
-    ```
-
-25. **Design ER diagram for Online MCQ examination portal. Your design must contain separate entities for student, examination, question, solution and submission. Ensure that normalization is ful-fill in your design and identify the primary and foreign key.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1196-1197 (ET: N/A)]*
-
-    Answer: The design must contain separate entities for Student, Examination, Question, Solution and Submission, and must be normalised with keys identified.
-
-    ER diagram
-    ```mermaid
-    erDiagram
-        STUDENT     ||--o{ SUBMISSION  : makes
-        EXAMINATION ||--o{ SUBMISSION  : receives
-        EXAMINATION ||--o{ EXAM_QUESTION : contains
-        QUESTION    ||--o{ EXAM_QUESTION : "appears in"
-        QUESTION    ||--|{ OPTION      : "has"
-        QUESTION    ||--|| SOLUTION    : "has correct"
-        SUBMISSION  ||--o{ ANSWER      : contains
-        QUESTION    ||--o{ ANSWER      : "is answered in"
-        SUBJECT     ||--o{ QUESTION    : classifies
-
-        STUDENT {
-            int Student_ID PK
-            string Name
-            string Email
-            string Password_Hash
-            date Registration_Date
-        }
-        EXAMINATION {
-            int Exam_ID PK
-            string Exam_Title
-            datetime Start_Time
-            int Duration_Minutes
-            int Total_Marks
-            decimal Negative_Marking
-        }
-        QUESTION {
-            int Question_ID PK
-            text Question_Text
-            int Subject_ID FK
-            string Difficulty
-            decimal Marks
-        }
-        OPTION {
-            int Option_ID PK
-            int Question_ID FK
-            char Option_Label
-            text Option_Text
-        }
-        SOLUTION {
-            int Solution_ID PK
-            int Question_ID FK
-            int Correct_Option_ID FK
-            text Explanation
-        }
-        EXAM_QUESTION {
-            int Exam_ID PK-FK
-            int Question_ID PK-FK
-            int Question_Order
-        }
-        SUBMISSION {
-            int Submission_ID PK
-            int Student_ID FK
-            int Exam_ID FK
-            datetime Started_At
-            datetime Submitted_At
-            decimal Total_Score
-        }
-        ANSWER {
-            int Submission_ID PK-FK
-            int Question_ID PK-FK
-            int Chosen_Option_ID FK
-            boolean Is_Correct
-            decimal Marks_Awarded
-        }
-        SUBJECT {
-            int Subject_ID PK
-            string Subject_Name
-        }
-    ```
-
-    Primary and foreign keys
-
-    | Entity | Primary key | Foreign keys |
-    |---|---|---|
-    | STUDENT | Student_ID | — |
-    | EXAMINATION | Exam_ID | — |
-    | SUBJECT | Subject_ID | — |
-    | QUESTION | Question_ID | Subject_ID → Subject |
-    | OPTION | Option_ID | Question_ID → Question |
-    | SOLUTION | Solution_ID | Question_ID → Question, Correct_Option_ID → Option |
-    | EXAM_QUESTION | (Exam_ID, Question_ID) | both, to Examination and Question |
-    | SUBMISSION | Submission_ID | Student_ID → Student, Exam_ID → Examination |
-    | ANSWER | (Submission_ID, Question_ID) | both, plus Chosen_Option_ID → Option |
-
-    Cardinality
-
-    | Relationship | Cardinality |
-    |---|---|
-    | Student makes Submission | 1 : N |
-    | Examination receives Submission | 1 : N |
-    | Examination contains Question | `M : N` — resolved by EXAM_QUESTION |
-    | Question has Option | 1 : N (typically 4) |
-    | Question has Solution | `1 : 1` |
-    | Submission contains Answer | 1 : N |
-
-    How normalisation is satisfied
-    - `1NF` — every attribute is atomic. The four options are `not` stored as four columns in Question; they are rows in a separate `OPTION` table. Storing option_a, option_b, option_c, option_d would be a repeating group and would also make five-option questions impossible.
-    - `2NF` — in the composite-key tables `EXAM_QUESTION` and `ANSWER`, every non-key attribute depends on the `whole` key. `Question_Order` depends on both the exam and the question; `Is_Correct` depends on both the submission and the question.
-    - `3NF` — no transitive dependency. `Subject_Name` lives in SUBJECT, not repeated in QUESTION; the student's name lives in STUDENT, not copied into SUBMISSION.
-    - The `SOLUTION` entity is separated from QUESTION so that the correct answer and explanation can be `hidden` from the student's session — a security benefit as well as a normalisation one.
-
-    Key tables
-    ```sql
-    CREATE TABLE Question (
-        Question_ID   INT PRIMARY KEY,
-        Question_Text TEXT NOT NULL,
-        Subject_ID    INT NOT NULL REFERENCES Subject(Subject_ID),
-        Marks         DECIMAL(4,2) DEFAULT 1
-    );
-
-    CREATE TABLE Option (
-        Option_ID    INT PRIMARY KEY,
-        Question_ID  INT NOT NULL REFERENCES Question(Question_ID) ON DELETE CASCADE,
-        Option_Label CHAR(1) NOT NULL,
-        Option_Text  TEXT NOT NULL,
-        UNIQUE (Question_ID, Option_Label)
-    );
-
-    CREATE TABLE Solution (
-        Solution_ID       INT PRIMARY KEY,
-        Question_ID       INT NOT NULL UNIQUE REFERENCES Question(Question_ID),
-        Correct_Option_ID INT NOT NULL REFERENCES Option(Option_ID),
-        Explanation       TEXT
-    );
-
-    CREATE TABLE Submission (
-        Submission_ID INT PRIMARY KEY,
-        Student_ID    INT NOT NULL REFERENCES Student(Student_ID),
-        Exam_ID       INT NOT NULL REFERENCES Examination(Exam_ID),
-        Started_At    DATETIME NOT NULL,
-        Submitted_At  DATETIME,
-        Total_Score   DECIMAL(6,2),
-        UNIQUE (Student_ID, Exam_ID)          -- one attempt per student per exam
-    );
-
-    CREATE TABLE Answer (
-        Submission_ID    INT,
-        Question_ID      INT,
-        Chosen_Option_ID INT REFERENCES Option(Option_ID),
-        Is_Correct       BOOLEAN,
-        Marks_Awarded    DECIMAL(4,2),
-        PRIMARY KEY (Submission_ID, Question_ID),
-        FOREIGN KEY (Submission_ID) REFERENCES Submission(Submission_ID) ON DELETE CASCADE,
-        FOREIGN KEY (Question_ID)   REFERENCES Question(Question_ID)
-    );
-    ```
-    - `UNIQUE (Question_ID)` on Solution is what enforces the `1:1` relationship. `UNIQUE (Student_ID, Exam_ID)` on Submission enforces one attempt per exam — a genuine business rule pushed into the database rather than left to application code.
-
-## Normalization & Database Design (21)
+    -- 1. Create a View
+    CREATE VIEW HighSalaryEmployees AS
+    SELECT employee_id, name, department, salary
+    FROM Employees
+    WHERE salary > 80000;
+
+    -- 2. Update/Replace a View
+    CREATE OR REPLACE VIEW HighSalaryEmployees AS
+    SELECT employee_id, name, department, salary, email
+    FROM Employees
+    WHERE salary > 90000;
+
+    -- 3. Drop a View
+    DROP VIEW HighSalaryEmployees;
+    ```
+
+## Normalization & Database Design (23)
 
 1. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    What is normalisation
    - `Normalisation` is the process of organising the columns and tables of a relational database to `reduce redundancy` and eliminate `update anomalies`, by decomposing a large table into smaller related tables joined by keys.
@@ -13454,7 +7133,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **Why normalization is required in Database? Write shortly about 3NF?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Why normalisation is required
 
@@ -13522,6 +7201,15 @@ SELECT *FROM students ORDER BY ID, NAME DESC
    - Normalisation reduces redundancy but increases the number of `joins`. In a read-heavy reporting system or a data warehouse, deliberate `denormalisation` is sometimes chosen to avoid those joins — accepting controlled redundancy in exchange for speed. That is a considered decision, not an excuse for a badly designed transactional schema.
 
 3. **Explain the differences between Second Normal Form (2NF) and Third Normal Form (3NF) with examples.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
+
+| 2NF(Second Normal Form) | 3NF(Third Normal Form) |
+|---|---|
+| It is already in 1NF. | It is already in 1NF as well as in 2NF also. |
+| In 2NF, non-prime attributes (attributes that are not part of any candidate key) must depend on the entire candidate key. | In 3NF non-prime attributes are only allowed to be functionally dependent on Super key of relation. |
+| No partial functional dependency of non-prime attributes on any proper subset of a candidate key is allowed. | No transitive functional dependency of non-prime attributes on any super key is allowed. |
+| Stronger normal form than 1NF but lesser than 3NF. | Stronger normal form than 1NF and 2NF. |
+| It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
+| The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
 
 | 2NF(Second Normal Form) | 3NF(Third Normal Form) |
 |---|---|
@@ -13607,7 +7295,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **What is Logical design database is called?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: The logical design of a database is called the `schema` — more precisely, the `logical schema` or `conceptual schema`.
+Answer: The logical design of a database is called the `schema` — more precisely, the `logical schema` or `conceptual schema`.
 
    The three levels of design
 
@@ -13646,6 +7334,10 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **A Bank schema is given below:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1322 (ET: DU)]*
    $$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
+   * (a) Provided and Normalize and point out Primary and Foreign Key?
+   * (b) Show that is the schema and state that why your schema is in good form.
+
+$$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
    * (a) Provided and Normalize and point out Primary and Foreign Key?
    * (b) Show that is the schema and state that why your schema is in good form.
 
@@ -13754,7 +7446,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **What is Normalize a database? Used containers if needed, draw an ER Diagram.** **[See WZPGCL, Assistant Engineer (CSE), Exam: 27.05.2023]** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 315 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    What normalising a database means
    - `Normalisation` is the process of restructuring tables so that each fact is stored exactly `once`, by decomposing a large table into smaller related tables joined by keys.
@@ -13873,7 +7565,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **(ক) Normalization কী? কত প্রকার ও কী কী? ব্যাখ্যা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    What normalisation is
    - `Normalisation` is the process of organising the tables and columns of a relational database to `minimise redundancy` and eliminate `update anomalies`, by decomposing a large table into smaller related tables connected by keys.
@@ -13937,7 +7629,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 8. **What is database Normalization? Write down the types of database Normalization.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 504 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    What database normalisation is
    - `Normalisation` is the process of organising the tables and columns of a relational database to `reduce redundancy` and eliminate `anomalies`, by decomposing a large table into smaller related tables joined by keys.
@@ -13993,7 +7685,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 9. **Which normalization is related to functional dependency?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-   Answer: The normal forms `directly based on functional dependency` are `2NF`, `3NF` and `BCNF`.
+Answer: The normal forms `directly based on functional dependency` are `2NF`, `3NF` and `BCNF`.
 
    Why
    - A `functional dependency` `X → Y` means that the value of X determines the value of Y: any two rows agreeing on X must agree on Y.
@@ -14035,7 +7727,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 10. **Functional dependency use in which normalizations?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-    Answer: Functional dependency is used in `2NF`, `3NF` and `BCNF`.
+Answer: Functional dependency is used in `2NF`, `3NF` and `BCNF`.
 
     What a functional dependency is
     - `X → Y` means the value of X `determines` the value of Y: any two rows that agree on X must agree on Y.
@@ -14091,7 +7783,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 11. **What in First and Second Normal form is DBMS?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     First Normal Form (1NF)
     - Rule: every attribute must contain an `atomic` (indivisible) value; there must be `no repeating groups`; each row must be unique; and each column must have a unique name and hold values of a single type.
@@ -14171,7 +7863,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 12. **অথবা, (ক) “BCNF is stricter than 3NF” এই উক্তিটি উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The statement is correct: `every relation in BCNF is in 3NF, but not every relation in 3NF is in BCNF`.
+Answer: (Answered in English, as required for IT topics.) The statement is correct: `every relation in BCNF is in 3NF, but not every relation in 3NF is in BCNF`.
 
     The two definitions, side by side
     - `3NF` — for every non-trivial functional dependency `X → Y`, either
@@ -14255,7 +7947,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 13. **Why Normalization is used in database? Explain 1^{\text{st}} Normal form using an example.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 665 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Why normalisation is used
 
@@ -14331,7 +8023,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 14. **Why do you need database Normalization?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
-    Answer: Normalisation is needed because an unnormalised table stores the same fact many times, and that redundancy causes three specific failures.
+Answer: Normalisation is needed because an unnormalised table stores the same fact many times, and that redundancy causes three specific failures.
 
     1. `To eliminate data redundancy`
     - Without it, the same value is repeated in every row that mentions it. A department name stored beside each employee is written once per employee — wasted space, and worse, the copies can drift apart.
@@ -14394,6 +8086,10 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 15. **Let a relational function is R(A, B, C, D, E), Write Yes or No based on those are the follow n functional dependency.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 822 (ET: BUET)]*
    AB \to C
+   B \to B
+   DE \to A
+
+AB \to C
    B \to B
    DE \to A
 
@@ -14499,7 +8195,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 16. **What is DBMS? Write down the purpose of normalization in DBMS.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     What is a DBMS
     - A `Database Management System` is software that lets users create, store, retrieve, update and manage data in a database while controlling access to it.
@@ -14556,7 +8252,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 17. **(b) What is normalization? Why is it needed?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     What normalisation is
     - `Normalisation` is the process of organising the tables and columns of a relational database so that each fact is stored exactly `once`, by decomposing a large table into smaller related tables joined by keys.
@@ -14623,7 +8319,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 18. **(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 953-954 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     What is a DBMS
     - A `Database Management System` is software that lets users define, create, store, retrieve, update and manage data in a database while controlling access to it.
@@ -14720,7 +8416,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 19. **What is normalization? Explain composite key with example.** *[Bangladesh Television Assistant Programmer 2019 compact it 1063 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     What normalisation is
     - `Normalisation` is the process of organising the tables and columns of a relational database to `reduce redundancy` and eliminate the `insertion, update and deletion anomalies`, by decomposing a large table into smaller related tables joined by keys.
@@ -14791,7 +8487,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 20. **(a) What do you mean by Normalization in RDBMS? Explain with an example.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     What normalisation means in an RDBMS
     - `Normalisation` is the process of organising the tables and columns of a relational database so that each fact is stored exactly `once`, by decomposing a large table into smaller related tables joined by keys.
@@ -14889,7 +8585,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 21. **What do you mean by Database properties using Normalization?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
 
-    Answer: The properties a database gains from normalisation are the guarantees that its decomposition is correct and its data consistent.
+Answer: The properties a database gains from normalisation are the guarantees that its decomposition is correct and its data consistent.
 
     The two essential properties of a good decomposition
 
@@ -14949,11 +8645,16 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
     - The practical conclusion: aim for a decomposition that is `lossless` above all, `dependency-preserving` where possible, and normalised to `3NF or BCNF`.
 
+22. **(a) Draw an E-R diagram of a Library Management System. Where** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 74]]*
+(i) A library has multiple books. (ii) Each book can have multiple copies.
+
+23. **(c) Why normalization is required in Database? Write shortly about 3NF.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 75]]*
+
 ## SQL Commands (DDL, DML, DCL, TCL) (18)
 
-1. Example Query of DDL, DML, DCL. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+1. **Example Query of DDL, DML, DCL.** *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    DDL — Data Definition Language
    - Defines and modifies the `structure` of the database. All DDL commands are `auto-committed` and cannot be rolled back in most systems.
@@ -15042,7 +8743,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **What is SQL?** *[BBA Assistant Programmer 12.07.2025 compact it 1433 (ET: BUET)]*
 
-   Answer: `SQL` stands for `Structured Query Language`. It is the standard language for defining, manipulating and querying data in a relational database.
+Answer: `SQL` stands for `Structured Query Language`. It is the standard language for defining, manipulating and querying data in a relational database.
 
    Key facts
    - Developed at IBM in the 1970s, originally called SEQUEL. Standardised by ANSI in 1986 and ISO in 1987.
@@ -15098,7 +8799,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) To delete only the `structure` of a table — the table itself and everything in it — the command is `DROP TABLE`.
+Answer: (Answered in English, as required for IT topics.) To delete only the `structure` of a table — the table itself and everything in it — the command is `DROP TABLE`.
 
    ```sql
    DROP TABLE table_name;
@@ -15139,7 +8840,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)], [17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 611 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    | Point | DDL — Data Definition Language | DML — Data Manipulation Language |
    |---|---|---|
@@ -15210,7 +8911,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **SQL query to insert data into table. (A table was given with 3 row)** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 657 (ET: N/A)]*
 
-   Answer: The table was not printed, so a three-row insert is shown in every form.
+Answer: The table was not printed, so a three-row insert is shown in every form.
 
    Basic INSERT — one row, naming the columns
    ```sql
@@ -15288,7 +8989,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **How can you Revoke permissions from a database table? Give SQL command for it.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 666 (ET: N/A)]*
 
-   Answer: Permissions are removed with the `REVOKE` command, which belongs to `DCL` (Data Control Language).
+Answer: Permissions are removed with the `REVOKE` command, which belongs to `DCL` (Data Control Language).
 
    Basic syntax
    ```sql
@@ -15362,7 +9063,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **What is DDL and DML?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    DDL — Data Definition Language
    - Commands that define and modify the `structure` of the database, not its contents.
@@ -15438,7 +9139,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 8. **(i) নিচের Table টি তৈরি করার SQL কমান্ড লিখুন। student_info (std_id, name, department, phone_number) (a) Table তে ২টি record (insert) প্রবেশ করার SQL কমান্ড লিখুন। (b) Table টি থেকে CSE বিভাগের ছাত্র/ছাত্রীদের নামের তালিকা বের করার SQL command লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 785 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    Creating the table
    ```sql
@@ -15511,7 +9212,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 9. **Write the create table command for the ‘Employee’ table with the following column: Emp_ID, Emp_Name, Date_of_Birth.** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    The command
    ```sql
@@ -15572,7 +9273,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 10. **৪. ডাটাবেইজে টেবিল ডিলেট করার কমান্ড লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) To delete a table from a database, the command is:
+Answer: (Answered in English, as required for IT topics.) To delete a table from a database, the command is:
 
     ```sql
     DROP TABLE table_name;
@@ -15624,7 +9325,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 11. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
 
-    Answer: (Answered in English, as required for IT topics.) `CRUD` stands for `Create, Read, Update, Delete` — the four basic operations that any persistent-storage system must support.
+Answer: (Answered in English, as required for IT topics.) `CRUD` stands for `Create, Read, Update, Delete` — the four basic operations that any persistent-storage system must support.
 
     The four operations and their SQL commands
 
@@ -15679,7 +9380,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 12. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 988-989 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     DDL — Data Definition Language
     - Defines and modifies the `structure` of the database. All DDL commands are `auto-committed`.
@@ -15762,7 +9463,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 13. **How to find duplicate data in database? Explain DDL and DML.** *[RAKUB Assistant Database Administrator 2020 compact it 1017-1018 (ET: E-Zone)]*
 
-    Answer:
+Answer:
 
     Part 1 — finding duplicate data
     - A duplicate is a value that appears more than once, so the rows are grouped and the groups with a count above one are kept.
@@ -15845,7 +9546,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 14. **(a) How can you revoke permissions from a database table? Give SQL command for it.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
 
-    Answer: Permissions are removed with the `REVOKE` command, which belongs to `DCL` (Data Control Language).
+Answer: Permissions are removed with the `REVOKE` command, which belongs to `DCL` (Data Control Language).
 
     Syntax
     ```sql
@@ -15925,7 +9626,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 15. **(c) Differentiate between “delete from” and “drop table” SQL statement.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | DELETE FROM | DROP TABLE |
     |---|---|---|
@@ -15997,7 +9698,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 16. **Write an SQL query to insert a tuple in the table: Employee (ID, Name, Designation, and Salary).** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     The command
     ```sql
@@ -16074,6 +9775,12 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 | 2 | Tamim | Barisal | 2100 |
 | 3 | Musfiq | Dhaka | 1205 |
 
+| CustomerID | CustomerName | Address | PostCode |
+|---|---|---|---|
+| 1 | Sakib | Khulna | 1212 |
+| 2 | Tamim | Barisal | 2100 |
+| 3 | Musfiq | Dhaka | 1205 |
+
     Answer:
 
     The command
@@ -16143,7 +9850,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 18. **What are the difference among DDL, DML and DCL?** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | DDL | DML | DCL |
     |---|---|---|---|
@@ -16206,11 +9913,11 @@ SELECT *FROM students ORDER BY ID, NAME DESC
     The point examiners test most
     - DDL and DCL are `auto-committed`; DML is not. A mistaken `DELETE` inside a transaction can be undone with `ROLLBACK`, but a mistaken `DROP TABLE` or `REVOKE` cannot.
 
-## Transaction Management & ACID Properties (14)
+## Transaction Management & ACID Properties (15)
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
 
-   Answer: A `transaction` is a single logical unit of work made up of one or more SQL statements, which must either complete entirely or have no effect at all. The `ACID` properties are the four guarantees a DBMS gives about every transaction.
+Answer: A `transaction` is a single logical unit of work made up of one or more SQL statements, which must either complete entirely or have no effect at all. The `ACID` properties are the four guarantees a DBMS gives about every transaction.
 
    The standard example used throughout
    ```sql
@@ -16269,7 +9976,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **How many process of Transaction complete?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 
-   Answer: A transaction passes through `five` states, from the moment it begins to the moment it ends.
+Answer: A transaction passes through `five` states, from the moment it begins to the moment it ends.
 
    The state diagram
    ```mermaid
@@ -16339,7 +10046,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **ACID এর প্রোপার্টি কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) `ACID` stands for `Atomicity, Consistency, Isolation, Durability` — the four properties that every database transaction must guarantee.
+Answer: (Answered in English, as required for IT topics.) `ACID` stands for `Atomicity, Consistency, Isolation, Durability` — the four properties that every database transaction must guarantee.
 
    Example used throughout — a bank transfer
    ```sql
@@ -16380,7 +10087,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **(খ) Transaction কী? Transaction Management এর ACID properties সমূহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    What a transaction is
    - A `transaction` is a single logical unit of work consisting of one or more SQL statements, which must either complete `entirely` or have `no effect at all`.
@@ -16434,7 +10141,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **Case Study type Database-related problem (Solve: ACID)** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
-   Answer: The case study was not printed, so the standard ACID case study — a bank transfer — is worked through in full, which is what these questions invariably present.
+Answer: The case study was not printed, so the standard ACID case study — a bank transfer — is worked through in full, which is what these questions invariably present.
 
    The scenario
    > Karim transfers 5,000 taka from account A101 to account A102. A101 holds 20,000 and A102 holds 8,000. Explain how the DBMS guarantees correctness.
@@ -16508,7 +10215,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **What are the ACID properties of transaction to ensure data reliability and integrity?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 472 (ET: N/A)]*
 
-   Answer: The `ACID` properties are the four guarantees a DBMS gives about every transaction, and together they are what make a database trustworthy for data such as money and medical records.
+Answer: The `ACID` properties are the four guarantees a DBMS gives about every transaction, and together they are what make a database trustworthy for data such as money and medical records.
 
    `Atomicity` — all or nothing
    - A transaction is `indivisible`: either every one of its statements takes effect, or none does.
@@ -16561,7 +10268,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **(a) What is ACID mean in database system?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
-   Answer: `ACID` is the set of four properties that a database transaction must satisfy: `Atomicity, Consistency, Isolation and Durability`.
+Answer: `ACID` is the set of four properties that a database transaction must satisfy: `Atomicity, Consistency, Isolation and Durability`.
 
    A `transaction` is a single logical unit of work made of one or more SQL statements, which must either complete entirely or have no effect at all.
 
@@ -16611,7 +10318,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 8. **(গ) ডাটাবেস ট্রানজেকশনের ACID Properties সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) A `transaction` is a single logical unit of work that must complete entirely or have no effect at all. The `ACID` properties are the four guarantees the DBMS makes about it.
+Answer: (Answered in English, as required for IT topics.) A `transaction` is a single logical unit of work that must complete entirely or have no effect at all. The `ACID` properties are the four guarantees the DBMS makes about it.
 
    `Atomicity` — all or nothing
    - The transaction is indivisible. Either all its statements take effect or none do.
@@ -16662,7 +10369,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 9. **What do you mean by Rollback and Roll forward?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
 
-   Answer: `Rollback` and `roll forward` are the two recovery operations a DBMS performs after a failure, using the `transaction log`.
+Answer: `Rollback` and `roll forward` are the two recovery operations a DBMS performs after a failure, using the `transaction log`.
 
    Rollback (UNDO)
    - Reversing the changes made by a transaction, restoring the database to the state it was in before the transaction began.
@@ -16729,7 +10436,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 10. **Describe ACID properties of DBMS.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 860 (ET: N/A)]*
 
-    Answer: The `ACID` properties are the four guarantees a DBMS makes about every transaction — a transaction being a single logical unit of work that must complete entirely or not at all.
+Answer: The `ACID` properties are the four guarantees a DBMS makes about every transaction — a transaction being a single logical unit of work that must complete entirely or not at all.
 
     `Atomicity`
     - All or nothing. Either every statement of the transaction takes effect or none does.
@@ -16783,7 +10490,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 11. **A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required to end the transaction and also write their functions.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 984-985 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-    Answer: The SQL statements that end a transaction are `COMMIT` and `ROLLBACK`. `SAVEPOINT` and `SET TRANSACTION` are used within one.
+Answer: The SQL statements that end a transaction are `COMMIT` and `ROLLBACK`. `SAVEPOINT` and `SET TRANSACTION` are used within one.
 
     `COMMIT`
     ```sql
@@ -16852,7 +10559,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 12. **Describe Database ACID properties.** *[RAKUB Assistant Database Administrator 2020 compact it 1012 (ET: E-Zone)]*
 
-    Answer: A `transaction` is one logical unit of work — a group of SQL statements that must succeed or fail together. `ACID` is the set of four properties the DBMS guarantees for every transaction.
+Answer: A `transaction` is one logical unit of work — a group of SQL statements that must succeed or fail together. `ACID` is the set of four properties the DBMS guarantees for every transaction.
 
     `A — Atomicity`
     - All or nothing. Either every statement of the transaction takes effect, or none of them does.
@@ -16902,7 +10609,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 13. **Describe the ACID properties in a database. When does a deadlock occur and how do you prevent it, in a database?** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1116 (ET: DU)]*
 
-    Answer: Part 1 — the ACID properties
+Answer: Part 1 — the ACID properties
 
     `Atomicity` — all or nothing. Either every statement of the transaction takes effect or none does. If a transfer debits one account and the system crashes before the credit, recovery uses the `undo log` to reverse the debit.
 
@@ -16957,7 +10664,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 14. **Describe the ACID properties of database.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 
-    Answer: A `transaction` is one logical unit of work whose statements must all succeed or all fail. `ACID` is the four guarantees a DBMS gives every transaction, proposed by Härder and Reuter in 1983.
+Answer: A `transaction` is one logical unit of work whose statements must all succeed or all fail. `ACID` is the four guarantees a DBMS gives every transaction, proposed by Härder and Reuter in 1983.
 
     `Atomicity` — all or nothing
     - Either every statement of the transaction takes effect or none of them does. There is no half-done transaction.
@@ -16999,11 +10706,13 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
     - ACID is what makes a relational database trustworthy for banking, ticketing and accounting. Systems that need extreme scale often relax it to `BASE` — Basically Available, Soft state, Eventual consistency.
 
+15. **Explain ACID properties in the context of database transactions.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 221-222]]*
+
 ## Relational Data Model & ER Relationships (14)
 
-1. What are the different types of relationships in a relational database? Explain each with examples. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+1. **What are the different types of relationships in a relational database? Explain each with examples.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: A `relationship` is a link between two tables, created by a foreign key. There are three types, decided by how many rows on one side can match how many rows on the other.
+Answer: A `relationship` is a link between two tables, created by a foreign key. There are three types, decided by how many rows on one side can match how many rows on the other.
 
    (a) One-to-One (1:1)
    - One row in table A matches at most one row in table B, and the reverse is also true.
@@ -17061,7 +10770,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **Discuss about different types of relations in DBMS.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
 
-   Answer: The word `relation` has two meanings in DBMS, and both are asked in exams.
+Answer: The word `relation` has two meanings in DBMS, and both are asked in exams.
 
    Part 1 — a relation as a table
    - In the relational model a `relation` is a table: a set of rows (tuples) over a fixed set of columns (attributes).
@@ -17112,7 +10821,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **What is the degree of relation in dbms?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
-   Answer: The word `degree` is used in two different senses, so the answer depends on which one the question means. Both are given below.
+Answer: The word `degree` is used in two different senses, so the answer depends on which one the question means. Both are given below.
 
    (a) Degree of a relation (a table)
    - The `degree` of a relation is the `number of attributes (columns)` in it. It is also called the `arity` of the relation.
@@ -17154,7 +10863,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **(খ) One-to-one এবং One-to-many রিলেশন উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) `Cardinality` decides how many rows on one side of a relationship may match rows on the other side. One-to-one and one-to-many are two of its three forms.
+Answer: (Answered in English, as required for IT topics.) `Cardinality` decides how many rows on one side of a relationship may match rows on the other side. One-to-one and one-to-many are two of its three forms.
 
    One-to-One (1:1)
    - One row in table A matches at most one row in table B, and one row in B matches at most one row in A.
@@ -17217,7 +10926,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **Weak Entity and strong entity difference with relation.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)]*
 
-   Answer: An `entity` is a real-world object stored as a table. Entities are of two kinds, decided by whether the entity can identify itself.
+Answer: An `entity` is a real-world object stored as a table. Entities are of two kinds, decided by whether the entity can identify itself.
 
    Strong entity
    - An entity that has its `own primary key`, so each of its rows can be identified without help from any other table.
@@ -17266,7 +10975,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **(b) Give example of week and strong entity sets.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
 
-   Answer: A `strong entity set` has its own primary key and can be identified on its own. A `weak entity set` has no primary key of its own and depends on an owner entity for identification.
+Answer: A `strong entity set` has its own primary key and can be identified on its own. A `weak entity set` has no primary key of its own and depends on an owner entity for identification.
 
    Example 1 — Employee and Dependent
    - `Employee(emp_id, name, salary)` is strong: `emp_id` alone identifies a row.
@@ -17307,7 +11016,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **(a) What is referential integrity? How do you impose in your database design?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
-   Answer: `Referential integrity` is the rule that a foreign key value must either match an existing primary key value in the parent table or be `NULL`. It stops rows that point at something that does not exist.
+Answer: `Referential integrity` is the rule that a foreign key value must either match an existing primary key value in the parent table or be `NULL`. It stops rows that point at something that does not exist.
 
    - Example: an `Employee` row with `dept_id = 50` is invalid if no department 50 exists in `Department`. Such a row is called an `orphan row`.
    - The child table is called the `referencing` table, the parent the `referenced` table.
@@ -17360,7 +11069,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 8. **What is a weak entity for data modeling using the entity relationship model find out any weak entity and its identify relationship for the school database? Which of the following table? Student(student_id, student_name, admission_year) Teacher(teacher_id, teacher_name, teacher_joindate) Course(course_id, subject_name, credit)** *[BCC Assistant Programmer 12.02.2021 compact it 814 (ET: BUET)]*
 
-   Answer: A `weak entity` is an entity that has no primary key of its own. It cannot be identified on its own, so it depends on a `strong` (owner) entity. It has only a `partial key` (discriminator), which is unique inside one owner, and its real primary key is `owner's primary key + partial key`. The relationship joining it to its owner is the `identifying relationship`, drawn as a double diamond, and the weak entity always has total participation.
+Answer: A `weak entity` is an entity that has no primary key of its own. It cannot be identified on its own, so it depends on a `strong` (owner) entity. It has only a `partial key` (discriminator), which is unique inside one owner, and its real primary key is `owner's primary key + partial key`. The relationship joining it to its owner is the `identifying relationship`, drawn as a double diamond, and the weak entity always has total participation.
 
    Answer to the question asked
    - None of the three tables given is a weak entity:
@@ -17410,7 +11119,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)]*
 
-   Answer: A `weak entity set` is a set of entities that has `no primary key of its own`. Its rows cannot be identified without the help of another entity, called the `owner` or identifying entity set.
+Answer: A `weak entity set` is a set of entities that has `no primary key of its own`. Its rows cannot be identified without the help of another entity, called the `owner` or identifying entity set.
 
    - Example: `Dependent(name, age, relation)` of an employee. Two employees may each have a son named "Rahim", so `name` alone cannot identify a row.
    - It is drawn as a `double rectangle`. The link to its owner is the `identifying relationship`, drawn as a `double diamond`.
@@ -17452,7 +11161,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 10. **(a) Write down Integrity rules in database.** *[National University Assistant Programmer 2020 compact it 976 (ET: DU)]*
 
-    Answer: `Integrity rules` are the conditions that keep the data in a database correct and meaningful. The relational model defines two rules that every DBMS must enforce, plus user-defined rules.
+Answer: `Integrity rules` are the conditions that keep the data in a database correct and meaningful. The relational model defines two rules that every DBMS must enforce, plus user-defined rules.
 
     1. Entity integrity
     - The `primary key of a table can never be NULL`, and it must be unique.
@@ -17511,7 +11220,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 11. **What is constraints? Why use constraint? Difference between table level Cosntraint and column level Cosntraint.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
 
-    Answer: A `constraint` is a rule attached to a table column that the DBMS enforces on every insert, update and delete. If a statement breaks the rule, the DBMS rejects it.
+Answer: A `constraint` is a rule attached to a table column that the DBMS enforces on every insert, update and delete. If a statement breaks the rule, the DBMS rejects it.
 
     Why constraints are used
     - They keep the data `accurate and valid` — no negative salary, no invalid grade.
@@ -17574,7 +11283,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 12. **(ক) Relationship degree কাকে বলে? উহা কত প্রকার ও কি কি? সংক্ষেপে লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1068 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The `degree of a relationship` is the number of entity types that take part in it. If two entity types are joined, the degree is 2; if three, the degree is 3.
+Answer: (Answered in English, as required for IT topics.) The `degree of a relationship` is the number of entity types that take part in it. If two entity types are joined, the degree is 2; if three, the degree is 3.
 
     - Do not confuse it with cardinality. Degree counts `how many entity types` join a relationship. Cardinality (1:1, 1:N, M:N) says `how many instances` of one may relate to the other.
 
@@ -17629,7 +11338,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 13. **(খ) Relational Database Model কী? অন্যান্য মডেলের তুলনায় এর সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094-1095 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The `Relational Database Model`, given by E. F. Codd in 1970, stores all data in `tables` (relations). A table has rows called `tuples` and columns called `attributes`. Tables are linked not by pointers but by `common values` — a foreign key in one table matching a primary key in another.
+Answer: (Answered in English, as required for IT topics.) The `Relational Database Model`, given by E. F. Codd in 1970, stores all data in `tables` (relations). A table has rows called `tuples` and columns called `attributes`. Tables are linked not by pointers but by `common values` — a foreign key in one table matching a primary key in another.
 
     Its main features
     - Every row is identified by a `primary key`, which is unique and never NULL.
@@ -17669,7 +11378,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 14. **What is cardinality and modality?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265-1266 (ET: N/A)]*
 
-    Answer: `Cardinality` and `modality` are the two numbers written on a relationship line in an ER diagram. Cardinality gives the `maximum` number of related rows; modality gives the `minimum`.
+Answer: `Cardinality` and `modality` are the two numbers written on a relationship line in an ER diagram. Cardinality gives the `maximum` number of related rows; modality gives the `minimum`.
 
     Cardinality — how many
     - The maximum number of instances of one entity that may relate to one instance of another.
@@ -17729,7 +11438,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **How indexing improve query performance?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
 
-   Answer: An `index` is a separate, sorted structure that stores the values of one or more columns together with a pointer to the row that holds them. It works like the index at the back of a book — instead of reading every page, you look up the word and jump straight to the page number.
+Answer: An `index` is a separate, sorted structure that stores the values of one or more columns together with a pointer to the row that holds them. It works like the index at the back of a book — instead of reading every page, you look up the word and jump straight to the page number.
 
    How it speeds up a query
    - `It removes the full table scan.` Without an index the DBMS reads every row (a `full table scan`, cost O(n)). With a B+ tree index it walks 3 or 4 levels down the tree, cost O(log n).
@@ -17760,6 +11469,26 @@ SELECT *FROM students ORDER BY ID, NAME DESC
    - Rule of thumb: index the primary key, the foreign keys, and the columns that appear in `WHERE`, `JOIN` and `ORDER BY`. Do not index every column.
 
 2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
+
+**Table Name: STUDENT**
+| Stu_Id | Stu_Name | Stu_Age |
+|---|---|---|
+| 101 | Steve | 23 |
+| 102 | John | 24 |
+| 103 | Robert | 28 |
+| 104 | Steve | 29 |
+
+**Course_enrollment table:**
+| Course_Id | Stu_Id |
+|---|---|
+| C01 | 101 |
+| C02 | 102 |
+| C03 | 101 |
+| C05 | 102 |
+| C06 | 103 |
+| C07 | 102 |
+
+*[Combined Bank Senior Officer (IT) 17.05.2024 compact it 337 (ET: BIBM)]*
 
 **Table Name: STUDENT**
 | Stu_Id | Stu_Name | Stu_Age |
@@ -17822,7 +11551,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) `Indexing` and `hashing` are the two ways a DBMS finds a row without reading the whole table.
+Answer: (Answered in English, as required for IT topics.) `Indexing` and `hashing` are the two ways a DBMS finds a row without reading the whole table.
 
    Part 1 — Indexing methods
 
@@ -17886,7 +11615,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **How does index tuning help in improving query performance?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 747 (ET: N/A)]*
 
-   Answer: `Index tuning` is the work of choosing which indexes a database should have — adding the missing ones, dropping the useless ones, and fixing the shape of the ones that exist — so that queries run faster without making writes too slow.
+Answer: `Index tuning` is the work of choosing which indexes a database should have — adding the missing ones, dropping the useless ones, and fixing the shape of the ones that exist — so that queries run faster without making writes too slow.
 
    How it improves performance
    - `Removes full table scans.` Adding an index on a filtered column turns a scan of a million rows into a 3-4 level tree walk.
@@ -17921,7 +11650,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
 
-   Answer: The employee rows are not printed with the question, so the standard set of `emp_id` values below is used. The method is the same for any data.
+Answer: The employee rows are not printed with the question, so the standard set of `emp_id` values below is used. The method is the same for any data.
    ```
    emp_id values inserted in order:  10, 20, 30, 40, 50, 60, 70, 80
    ```
@@ -17998,7 +11727,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **What is Indexing? Write down the usages of Indexing.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
 
-   Answer: `Indexing` is a technique that creates a small, sorted structure holding the values of one or more columns together with a pointer to the row that contains them. The DBMS searches this structure instead of reading the whole table — the same idea as the index at the back of a book.
+Answer: `Indexing` is a technique that creates a small, sorted structure holding the values of one or more columns together with a pointer to the row that contains them. The DBMS searches this structure instead of reading the whole table — the same idea as the index at the back of a book.
 
    - The structure used in practice is a `B+ tree`. All the keys sit in the leaves, the leaves are linked in sorted order, and the tree stays 3-4 levels deep even for millions of rows.
    ```
@@ -18041,7 +11770,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **(খ) Database এর ক্ষেত্রে Indexing এর কার্যকারিতা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) An `index` is a small sorted structure that holds column values plus a pointer to the row that contains them. The DBMS searches the index instead of the table, exactly as a reader uses the index at the back of a book.
+Answer: (Answered in English, as required for IT topics.) An `index` is a small sorted structure that holds column values plus a pointer to the row that contains them. The DBMS searches the index instead of the table, exactly as a reader uses the index at the back of a book.
 
    Effectiveness of indexing
    - `It removes the full table scan.` A table of one million rows costs about one million reads without an index. With a B+ tree index the search walks 3-4 levels, so it costs 3-4 node reads.
@@ -18073,7 +11802,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 8. **(ক) Sorting and Indexing-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) `Sorting` arranges the data records themselves in order. `Indexing` leaves the data where it is and builds a separate sorted structure that points to it.
+Answer: (Answered in English, as required for IT topics.) `Sorting` arranges the data records themselves in order. `Indexing` leaves the data where it is and builds a separate sorted structure that points to it.
 
    Sorting
    - The rows are physically rearranged in the file so that the values of one column appear in ascending or descending order.
@@ -18115,7 +11844,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 9. **What is the purpose of index in database?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
 
-   Answer: An `index` is a small sorted structure that stores the values of one or more columns together with a pointer to the row holding them. Its purpose is to let the DBMS find rows `without reading the whole table`.
+Answer: An `index` is a small sorted structure that stores the values of one or more columns together with a pointer to the row holding them. Its purpose is to let the DBMS find rows `without reading the whole table`.
 
    Purposes of an index
    - `Speed up searching.` Without an index the DBMS performs a full table scan, cost O(n). With a B+ tree index it walks 3-4 levels, cost O(log n). On a million-row table that is the difference between a million reads and four.
@@ -18151,7 +11880,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 10. **How hashtable is used in database?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
 
-    Answer: A `hash table` maps a key to a storage address directly, using a `hash function`: h(key) → bucket number. There is no searching and no tree to walk, so an exact-match lookup costs O(1). A database uses this idea in several places.
+Answer: A `hash table` maps a key to a storage address directly, using a `hash function`: h(key) → bucket number. There is no searching and no tree to walk, so an exact-match lookup costs O(1). A database uses this idea in several places.
 
     1. Hash file organisation (hash index)
     - The rows themselves are stored in `buckets` chosen by the hash of the key column.
@@ -18200,7 +11929,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 517 (ET: MIST)]*
 
-   Answer: The three are different stages of the same journey: a `database` records what happens, a `data warehouse` stores the history of what happened, and `data mining` finds the hidden pattern inside that history.
+Answer: The three are different stages of the same journey: a `database` records what happens, a `data warehouse` stores the history of what happened, and `data mining` finds the hidden pattern inside that history.
 
    Database
    - A store of `current, operational` data used to run day-to-day work. Optimised for many small reads and writes (`OLTP`), and kept `normalized` so nothing is duplicated.
@@ -18237,7 +11966,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **Discuss different tools and techniques to develop a Business Intelligence Dashboard for a bank. How can data be captured and aggregated from various sources within the bank to monitor the business performance?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 519 (ET: MIST)]*
 
-   Answer: A `Business Intelligence (BI) dashboard` is a single screen that shows a bank's key numbers — deposits, loans, NPL, income, branch performance — as charts and indicators, refreshed automatically from the bank's own systems.
+Answer: A `Business Intelligence (BI) dashboard` is a single screen that shows a bank's key numbers — deposits, loans, NPL, income, branch performance — as charts and indicators, refreshed automatically from the bank's own systems.
 
    Part 1 — Tools
 
@@ -18286,7 +12015,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **Software scenario question- Business Intelligence Model** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
-   Answer: The question is `incomplete` — it was a scenario-based question and the scenario itself was not captured. The `Business Intelligence model` it refers to is set out below, together with the way such a scenario is answered.
+Answer: The question is `incomplete` — it was a scenario-based question and the scenario itself was not captured. The `Business Intelligence model` it refers to is set out below, together with the way such a scenario is answered.
 
    What a BI model is
    - A `Business Intelligence model` is the architecture and the data design that turn an organisation's raw operational data into information managers can act on.
@@ -18401,7 +12130,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) `Big data` means datasets so large, so fast-arriving or so varied that ordinary databases and tools cannot store or process them in a reasonable time. It needs distributed systems such as `Hadoop` and `Spark` that spread the data and the computation across many machines.
+Answer: (Answered in English, as required for IT topics.) `Big data` means datasets so large, so fast-arriving or so varied that ordinary databases and tools cannot store or process them in a reasonable time. It needs distributed systems such as `Hadoop` and `Spark` that spread the data and the computation across many machines.
 
    - Example: the transaction logs of all mobile financial services in Bangladesh, or every post and click on a social network.
 
@@ -18445,6 +12174,14 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **Write down different stage of data mining?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
    a) Data Purification
+   b) Data Integration
+   c) Data Selection
+   d) Data Transformation
+   e) Data Mining (The Final Stage)
+   f) Pattern Evaluation
+   g) Knowledge Representation
+
+a) Data Purification
    b) Data Integration
    c) Data Selection
    d) Data Transformation
@@ -18499,7 +12236,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **Database tuning and database mining বলতে কী বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) The two terms sound similar but belong to different areas: tuning is about `speed`, mining is about `knowledge`.
+Answer: (Answered in English, as required for IT topics.) The two terms sound similar but belong to different areas: tuning is about `speed`, mining is about `knowledge`.
 
    Database tuning
    - The work of adjusting a database so that it runs faster and uses hardware efficiently, without changing what it stores.
@@ -18545,7 +12282,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **(ক) Data Mining and Data Warehousing বলতে কী বোঝায়? এদের মধ্যে সম্পর্ক কী? এদের উপকারিতা কী?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095-1096 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) Data warehousing
+Answer: (Answered in English, as required for IT topics.) Data warehousing
    - A `data warehouse` is a large central store of historical data collected from many different source systems, built for analysis and reporting rather than for daily transactions.
    - Bill Inmon's four properties: it is `subject-oriented` (organised around sales or customers, not around an application), `integrated` (codes and formats made uniform across sources), `time-variant` (it keeps years of history) and `non-volatile` (data is loaded, then read, never updated by users).
    - Data reaches it through `ETL` — Extract from the sources, Transform and clean, Load into the warehouse — and is stored denormalized as a `star schema` of one fact table surrounded by dimension tables.
@@ -18584,7 +12321,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 8. **What is Data warehouse? Why We Need Data Warehouse? Advantages of Data warehousing.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
-   Answer: A `data warehouse` is a large central store of historical data brought together from many different source systems, built for analysis and reporting rather than for running daily transactions.
+Answer: A `data warehouse` is a large central store of historical data brought together from many different source systems, built for analysis and reporting rather than for running daily transactions.
 
    - W. H. Inmon's definition gives its four properties:
    ```
@@ -18629,7 +12366,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 9. **Explain data warehouse with figure. Describe fact table and dimension table with example.** *[ICT Ministry Assistant Programmer 2017 compact it 1243-1244 (ET: N/A)]*
 
-   Answer: A `data warehouse` is a central store of historical data collected from many source systems, built for analysis rather than for daily transactions. It is subject-oriented, integrated, time-variant and non-volatile.
+Answer: A `data warehouse` is a central store of historical data collected from many source systems, built for analysis rather than for daily transactions. It is subject-oriented, integrated, time-variant and non-volatile.
 
    Architecture
 
@@ -18717,7 +12454,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)]*
 
-   Answer: Both are partial backups taken between two full backups. The difference is what they measure the change against.
+Answer: Both are partial backups taken between two full backups. The difference is what they measure the change against.
 
    Incremental backup
    - Copies only the data changed `since the last backup of any kind` — full or incremental.
@@ -18764,7 +12501,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **Database Data Loss based case study type question......** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
-   Answer: The question is `incomplete` — it was a case study and the scenario was not captured. The complete framework for answering a database data-loss case study is set out below.
+Answer: The question is `incomplete` — it was a case study and the scenario was not captured. The complete framework for answering a database data-loss case study is set out below.
 
    Step 1 — identify the cause of loss
    ```
@@ -18890,7 +12627,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 333 (ET: BIBM)]*
 
-   Answer: An `IT disaster recovery (DR) plan` is a written, tested procedure that says how IT systems and data will be brought back after a disaster — fire, flood, power failure, hardware failure, cyber attack or human error. `Business continuity planning (BCP)` is wider: it covers how the whole organisation keeps working while IT is being restored.
+Answer: An `IT disaster recovery (DR) plan` is a written, tested procedure that says how IT systems and data will be brought back after a disaster — fire, flood, power failure, hardware failure, cyber attack or human error. `Business continuity planning (BCP)` is wider: it covers how the whole organisation keeps working while IT is being restored.
 
    Two numbers drive every DR plan
    ```
@@ -18946,7 +12683,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **একটি MySQL database এর ডাটা ব্যাক আপ ও ব্যাক আপ করা ডাটা রিস্টোর করার কমান্ড লিখ।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
 
-   Answer: (Answered in English, as required for IT topics.) MySQL uses the `mysqldump` utility to take a logical backup and the `mysql` client to restore it. These are run from the operating system shell, not from inside the MySQL prompt.
+Answer: (Answered in English, as required for IT topics.) MySQL uses the `mysqldump` utility to take a logical backup and the `mysql` client to restore it. These are run from the operating system shell, not from inside the MySQL prompt.
 
    Backup — mysqldump
 
@@ -19023,7 +12760,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 539 (ET: MIST)]*
 
-   Answer: `Data backup` is the act of making an extra copy of data before anything goes wrong. `Data recovery` is the act of bringing data back after something has gone wrong. Backup is preventive and planned; recovery is corrective and reactive.
+Answer: `Data backup` is the act of making an extra copy of data before anything goes wrong. `Data recovery` is the act of bringing data back after something has gone wrong. Backup is preventive and planned; recovery is corrective and reactive.
 
    Data backup
    - A copy of the data kept on separate storage — disk, tape, or cloud — so that the original can be replaced if lost.
@@ -19059,7 +12796,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **To achieve a '0-bit data loss' for its 24 x 7 x 365 banking operation, what steps or technology should an online bank employ to safeguard its data against any potential threats of data loss?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 518 (ET: MIST)]*
 
-   Answer: `Zero data loss` means `RPO = 0` — not a single committed transaction is lost, even if the primary site is destroyed. For a 24×7 bank this needs several layers working together; no single product gives it.
+Answer: `Zero data loss` means `RPO = 0` — not a single committed transaction is lost, even if the primary site is destroyed. For a 24×7 bank this needs several layers working together; no single product gives it.
 
    1. Synchronous replication to a DR site
    - The single most important step. A transaction commits `only after` the standby site has confirmed that the redo/log record is written on its own disk.
@@ -19120,7 +12857,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **MySQL database এর ক্ষেত্রে Backup and Restore করার কমান্ড লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
 
-   Answer: (Answered in English, as required for IT topics.) MySQL is backed up with the `mysqldump` utility and restored with the `mysql` client. Both are run from the operating system shell.
+Answer: (Answered in English, as required for IT topics.) MySQL is backed up with the `mysqldump` utility and restored with the `mysql` client. Both are run from the operating system shell.
 
    Backup commands
    ```bash
@@ -19181,7 +12918,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 8. **Describe what are the ways for no data loss?** *[RAKUB Assistant Database Administrator 2020 compact it 1015-1016 (ET: E-Zone)]*
 
-   Answer: No single technique prevents data loss. Protection is built in layers, so that when one layer fails another still holds. The target is `RPO = 0` — not one committed transaction lost.
+Answer: No single technique prevents data loss. Protection is built in layers, so that when one layer fails another still holds. The target is `RPO = 0` — not one committed transaction lost.
 
    1. Regular, tested backups
    ```
@@ -19236,7 +12973,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Explain Database Trigger with example.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-   Answer: A `database trigger` is a block of code stored in the database that runs `automatically` when a defined event happens on a table — an `INSERT`, `UPDATE` or `DELETE`. Nobody calls it; the DBMS fires it.
+Answer: A `database trigger` is a block of code stored in the database that runs `automatically` when a defined event happens on a table — an `INSERT`, `UPDATE` or `DELETE`. Nobody calls it; the DBMS fires it.
 
    - Unlike a stored procedure, a trigger cannot be executed by name and cannot take parameters.
 
@@ -19307,7 +13044,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **Database program with base and high- level language (SQL) to find out the interest rate from the given database table.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
-   Answer: The table is not printed with the question, so the usual `Loan` table is assumed. The method is the same for any table.
+Answer: The table is not printed with the question, so the usual `Loan` table is assumed. The method is the same for any table.
    ```sql
    CREATE TABLE Loan (
        loan_id      NUMBER PRIMARY KEY,
@@ -19400,7 +13137,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **(c) Define dynamic SQL and trigger with examples.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
 
-   Answer: Dynamic SQL
+Answer: Dynamic SQL
    - `Dynamic SQL` is SQL that is `built as a text string while the program is running` and executed at that moment, instead of being written and compiled in advance.
    - It is needed when the table name, column name or the whole `WHERE` clause is not known until run time, and for `DDL` statements, which cannot be written directly inside a PL/SQL block.
    - In Oracle it is run with `EXECUTE IMMEDIATE`.
@@ -19465,7 +13202,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **(b) Describe the application of trigger in database.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
-   Answer: A `trigger` is a stored block of code that the DBMS runs automatically when an `INSERT`, `UPDATE` or `DELETE` happens on a table. Its applications are the jobs that must happen every time, regardless of which program made the change.
+Answer: A `trigger` is a stored block of code that the DBMS runs automatically when an `INSERT`, `UPDATE` or `DELETE` happens on a table. Its applications are the jobs that must happen every time, regardless of which program made the change.
 
    1. Auditing — who changed what and when
    - The most common use. Banks and government systems are required to keep this trail.
@@ -19531,7 +13268,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **Suppose, ‘Employee’ table (emp_id, emp_name, dept_id, salary) and ‘Department’ table (dept_id, dept_name, increment_dept). Create a tigger to increment the salary of the employee by 10% whose salary is above 30000.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 
-   Answer: The question as written cannot be done exactly as stated, and the exam answer should say why and then give the working version.
+Answer: The question as written cannot be done exactly as stated, and the exam answer should say why and then give the working version.
 
    - A trigger on `Employee` cannot `UPDATE Employee` itself in a row-level trigger. Oracle raises the `mutating table` error `ORA-04091`, because the table is in the middle of being changed.
    - The correct way is a `BEFORE` trigger that changes `:NEW.salary` directly. In a `BEFORE` trigger the row has not been written yet, so assigning to `:NEW` is allowed and costs no extra statement.
@@ -19605,7 +13342,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **(a) What is the purpose of database trigger? Explain with an example.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
-   Answer: Purpose of a database trigger
+Answer: Purpose of a database trigger
    - A `trigger` is a block of code stored in the database that runs `automatically` when a defined event — `INSERT`, `UPDATE` or `DELETE` — happens on a table. It cannot be called by name and takes no parameters.
    - Its purpose is to make a rule apply `every time, to every program`. Logic written in one application can be bypassed by a second application, a script or a direct SQL session; logic in a trigger cannot.
 
@@ -19669,7 +13406,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **Write a program in pl/SQL to find the heighest paid employees from employee table and store the data in HighestPaidEmp table.** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
 
-   Answer: Tables assumed
+Answer: Tables assumed
    ```sql
    CREATE TABLE Employee (
        emp_id   NUMBER PRIMARY KEY,
@@ -19775,7 +13512,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **What are the different types of join in SQL?** *[DESCO Assistant Engineer 20.05.2023 compact it 580 (ET: DESCO)]*
 
-   Answer: A `JOIN` combines rows from two or more tables based on a related column between them, usually a foreign key.
+Answer: A `JOIN` combines rows from two or more tables based on a related column between them, usually a foreign key.
 
    Sample tables
    ```
@@ -19859,7 +13596,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **Left joning and inner joining of a table.** *[BTCL Assistant Manager (Technical) 2023 compact it 594 (ET: BUET)]*
 
-   Answer: Both combine rows from two tables using a matching column. The difference is what happens to rows that have `no match`.
+Answer: Both combine rows from two tables using a matching column. The difference is what happens to rows that have `no match`.
 
    Sample tables
    ```
@@ -19936,7 +13673,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **Which join is used for including not matching all records with output?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-   Answer: The `FULL OUTER JOIN` includes all records from both tables, matching or not.
+Answer: The `FULL OUTER JOIN` includes all records from both tables, matching or not.
 
    - It returns every row from the left table and every row from the right table. Where a row on one side has no partner on the other, the missing columns come back as `NULL`.
 
@@ -19993,7 +13730,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **What is inner join? Explain with syntax and example.** *[Bangladesh Television Assistant Programmer 2019 compact it 1065 (ET: N/A)]*
 
-   Answer: An `INNER JOIN` combines rows from two tables and returns only the rows where the join condition is `true on both sides`. Any row without a partner in the other table is left out.
+Answer: An `INNER JOIN` combines rows from two tables and returns only the rows where the join condition is `true on both sides`. Any row without a partner in the other table is left out.
 
    Syntax
    ```sql
@@ -20061,7 +13798,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **(b) Explain JOIN and INNER-JOIN procedure.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
-   Answer: JOIN
+Answer: JOIN
    - A `JOIN` is the SQL operation that combines rows from two or more tables using a related column, normally a foreign key matching a primary key. It is what makes a normalized design usable: data is split across tables to avoid redundancy, and joins put it back together for a report.
    - General form:
    ```sql
@@ -20122,7 +13859,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 6. **Define: (i) Left outer join (ii) Right outer join (iii) Full outer join (iv) One to many and (v) Many to many** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
 
-   Answer: (i) Left outer join
+Answer: (i) Left outer join
    - Returns `all rows from the left table`, plus the matching rows from the right table. Where the right table has no match, its columns come back as `NULL`.
    ```sql
    SELECT e.name, d.dept_name
@@ -20194,7 +13931,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 7. **What join should use when there is no match between two tables?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1266 (ET: N/A)]*
 
-   Answer: When rows that have `no match` in the other table must still appear, an `OUTER JOIN` is used. Which one depends on which side's unmatched rows are needed.
+Answer: When rows that have `no match` in the other table must still appear, an `OUTER JOIN` is used. Which one depends on which side's unmatched rows are needed.
 
    ```
    FULL OUTER JOIN  -> keeps unmatched rows from BOTH tables
@@ -20255,7 +13992,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) `Speedup` and `scaleup` are the two measures used to judge how well a parallel or distributed database uses extra hardware.
+Answer: (Answered in English, as required for IT topics.) `Speedup` and `scaleup` are the two measures used to judge how well a parallel or distributed database uses extra hardware.
 
    Speedup — same work, more machines
    - `Speedup` means running the `same fixed task` faster by adding more resources. The problem size stays constant; only the hardware grows.
@@ -20314,7 +14051,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **(ক) Data Fragmentation কী? ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) `Data fragmentation` is the process of dividing one logical table into smaller pieces, called `fragments`, and storing those pieces at different sites of a distributed database.
+Answer: (Answered in English, as required for IT topics.) `Data fragmentation` is the process of dividing one logical table into smaller pieces, called `fragments`, and storing those pieces at different sites of a distributed database.
 
    - The purpose is to keep data `close to the users who use it`, so most queries are answered locally instead of over the network.
    - Three rules must hold for the fragmentation to be correct:
@@ -20379,7 +14116,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **What is distributed database?** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)]*
 
-   Answer: A `distributed database` is a single logical database whose data is physically stored across several computers, at different locations, connected by a network. To the user it looks and behaves like one ordinary database — the fact that the data is spread out is hidden.
+Answer: A `distributed database` is a single logical database whose data is physically stored across several computers, at different locations, connected by a network. To the user it looks and behaves like one ordinary database — the fact that the data is spread out is hidden.
 
    - The software that manages it is a `DDBMS` (Distributed Database Management System). It handles where the data lives, how a query is split, and how the sites are kept consistent.
 
@@ -20422,7 +14159,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 4. **Which of the following distributed database system over centralized database system? (a) Software cost (b) Software complexity (c) Slow response (d) Modular growth** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-   Answer: (d) Modular growth
+Answer: (d) Modular growth
 
    - `Modular growth` is the clear advantage of a distributed database over a centralized one. A new branch or region is added simply by adding another site to the network — the existing sites keep running and nothing has to be replaced. In a centralized system, growth means buying a bigger machine and taking downtime to migrate to it.
 
@@ -20449,7 +14186,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 5. **Explain the concept distributed DBMS. What are the features of DBMS?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1054 (ET: BUET)]*
 
-   Answer: Concept of a distributed DBMS
+Answer: Concept of a distributed DBMS
    - A `distributed DBMS (DDBMS)` is the software that manages a single logical database whose data is physically stored on several computers at different locations, connected by a network. The user sees one ordinary database; the distribution is hidden.
 
    ```mermaid
@@ -20483,9 +14220,9 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 ## Database Design & Data Types (3)
 
-1. An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice. *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
+1. **An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice.** *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
 
-   Answer: Table design
+Answer: Table design
    ```sql
    CREATE TABLE Student (
        roll_number    INT           PRIMARY KEY,
@@ -20521,7 +14258,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **(c) Describe the difference between CHAR and VARCHAR data type.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
-   Answer: Both store character strings. The difference is whether the length is `fixed` or `variable`.
+Answer: Both store character strings. The difference is whether the length is `fixed` or `variable`.
 
    CHAR(n)
    - A `fixed-length` type. Every value takes exactly n characters. A shorter value is padded with trailing spaces.
@@ -20561,7 +14298,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 3. **What is the domain in a relational database? Explain with an example. Show how you would use Alter table SQL command to add a domain on a database table.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 916 (ET: N/A)]*
 
-   Answer: A `domain` is the set of all `permitted values` that an attribute (column) may take. It defines the data type, the length, the format and the range that a value must satisfy to be valid.
+Answer: A `domain` is the set of all `permitted values` that an attribute (column) may take. It defines the data type, the length, the format and the range that a value must satisfy to be valid.
 
    - Example domains:
    ```
@@ -20634,7 +14371,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1332 (ET: BUET)]*
 
-   Answer: Limitations of a traditional DBMS (relational, SQL)
+Answer: Limitations of a traditional DBMS (relational, SQL)
    - `Hard to scale out.` It scales up on one bigger machine well, but spreading one database across many machines is difficult, because joins and ACID must then hold across a network.
    - `Rigid schema.` The structure must be fixed before data is loaded, and altering a large live table is slow and risky.
    - `Poor fit for unstructured data` — documents, images, logs, social graphs and sensor streams do not fit rows and columns.
@@ -20677,7 +14414,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **Write difference between relational database and NoSQL database.** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
-   Answer: A `relational database` stores data in tables with a fixed schema and links them by keys. A `NoSQL database` stores data in flexible formats — documents, key-value pairs, wide columns or graphs — and is built to spread across many machines.
+Answer: A `relational database` stores data in tables with a fixed schema and links them by keys. A `NoSQL database` stores data in flexible formats — documents, key-value pairs, wide columns or graphs — and is built to spread across many machines.
 
    Relational database
    - Data is held in `tables` of rows and columns; the structure must be defined before data is loaded.
@@ -20728,9 +14465,9 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 ## Database Connectivity (JDBC) (2)
 
-1. What is JDBC? Explain the steps required to connect a Java application to a MySQL database. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **What is JDBC? Explain the steps required to connect a Java application to a MySQL database.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer: `JDBC` (Java Database Connectivity) is the standard Java API that lets a Java program connect to a database, send SQL statements and read the results. It sits in the `java.sql` package and hides the differences between database products — the same Java code works with MySQL, Oracle or PostgreSQL by changing only the driver and the URL.
+Answer: `JDBC` (Java Database Connectivity) is the standard Java API that lets a Java program connect to a database, send SQL statements and read the results. It sits in the `java.sql` package and hides the differences between database products — the same Java code works with MySQL, Oracle or PostgreSQL by changing only the driver and the URL.
 
    ```mermaid
    flowchart LR
@@ -20827,7 +14564,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 2. **(b) Explain embedded SQL with an appropriate example.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
 
-   Answer: `Embedded SQL` means SQL statements written directly inside the source code of a `host language` such as C, C++, COBOL or Java. The program gets the computing power of the host language and the data-handling power of SQL in one place.
+Answer: `Embedded SQL` means SQL statements written directly inside the source code of a `host language` such as C, C++, COBOL or Java. The program gets the computing power of the host language and the data-handling power of SQL in one place.
 
    - The SQL is `static` — written and known at compile time — so it can be checked and optimised in advance. This is the opposite of `dynamic SQL`, which is built as a string at run time.
 
@@ -20909,7 +14646,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 399 (ET: BUET)]*
 
-   Answer: Given
+Answer: Given
    ```
    Employee(NID, Company_ID, Name, Mobile_Number)
 
@@ -20979,7 +14716,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) An `index` is a small sorted structure holding column values plus a pointer to the row that contains them, so the DBMS can find a row without reading the whole table.
+Answer: (Answered in English, as required for IT topics.) An `index` is a small sorted structure holding column values plus a pointer to the row that contains them, so the DBMS can find a row without reading the whole table.
 
    Types of index
 
@@ -21035,3 +14772,7 @@ SELECT *FROM students ORDER BY ID, NAME DESC
    | Composite | Multi-column filters | Only leftmost columns usable |
 
    - The cost of any index: every `INSERT`, `UPDATE` and `DELETE` must update it, and it takes disk space. Index the primary key, the foreign keys, and the columns used in `WHERE`, `JOIN` and `ORDER BY` — not every column.
+
+## Keys, Constraints & Database Objects (1)
+
+1. **(d) What are the purpose of Primary Key and Foreign Key in context with ‘Relational Database’? Write in short with examples. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334-335]]*
