@@ -214,6 +214,75 @@
 
 1. **How does Butterworth High pass Filter works?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
+   Answer: A `high-pass filter` in the frequency domain keeps the `high frequencies` — edges, fine detail and noise — and suppresses the `low frequencies`, which carry the smooth, slowly varying background. The result is a sharpened image with edges standing out.
+
+   The Butterworth high-pass filter transfer function
+   ```
+                        1
+      H(u,v) = ---------------------------
+                1 + [ D0 / D(u,v) ]^(2n)
+   ```
+   ```
+      D(u,v) = sqrt( (u - M/2)^2 + (v - N/2)^2 )
+               the distance of the point (u,v) from the centre of the
+               frequency rectangle
+
+      D0 = cut-off frequency (the radius of the stop band)
+      n  = order of the filter
+   ```
+
+   Behaviour
+   ```
+      D(u,v) = 0    ->  H = 0        the DC term is removed
+      D(u,v) = D0   ->  H = 0.5      the half-power point
+      D(u,v) >> D0  ->  H -> 1       high frequencies pass unchanged
+   ```
+
+   Response curve
+   ```
+      H(u,v)
+        1 |                    _____________________
+          |               ___/
+      0.5 |............../....................... n = 4 (sharp)
+          |          ___/
+          |      ___/                              n = 1 (gentle)
+        0 |____/________________________________ D(u,v)
+          0        D0
+   ```
+   - The `order n` controls how sharp the transition is. A low n gives a gradual roll-off; a high n approaches the ideal brick-wall filter.
+
+   How it is applied
+   ```
+      1. Read the image f(x,y)
+      2. Multiply by (-1)^(x+y) to centre the spectrum
+      3. Take the 2-D FFT  ->  F(u,v)
+      4. Multiply point by point :  G(u,v) = H(u,v) . F(u,v)
+      5. Take the inverse FFT
+      6. Take the real part and multiply by (-1)^(x+y) again
+      7. The result g(x,y) is the sharpened image
+   ```
+
+   ```mermaid
+   flowchart LR
+       A[Input image] --> B[2-D FFT]
+       B --> C[Multiply by H u,v]
+       C --> D[Inverse FFT]
+       D --> E[Sharpened image]
+   ```
+
+   Why Butterworth is preferred over the ideal filter
+   - An `ideal` high-pass filter cuts everything below D0 abruptly. That sharp cut in the frequency domain becomes a `sinc` function in the spatial domain, which produces visible `ringing` — false ripples along every edge.
+   - The Butterworth response is `smooth and monotonic`, with no ripple in either band, so ringing is greatly reduced. At n = 1 there is essentially none; it reappears mildly at n = 4 or higher.
+   - A `Gaussian` high-pass filter removes ringing completely but cuts less sharply, so Butterworth is the usual compromise.
+
+   Uses
+   - Sharpening blurred images and enhancing edges before edge detection.
+   - Removing slowly varying illumination or shading across a photograph.
+   - Medical and satellite image enhancement, where fine detail matters.
+   - As part of `homomorphic filtering`, which compresses brightness range and enhances contrast at the same time.
+
+   - Practical point: because the DC term is set to zero, the output loses its average brightness and looks dark. A `high-frequency emphasis` filter fixes this by using `H' = a + b.H(u,v)`, which keeps some of the low frequencies while still boosting the detail.
+
 ## Edge Detection (1)
 
 1. **What are the basic objectives of canny edge detection method?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
