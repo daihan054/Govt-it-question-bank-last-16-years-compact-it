@@ -12338,27 +12338,473 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. A single-mode optical fiber communication link connects two locations 250\text{ km} apart using WDM technology with 50 channels, where each channel provides a bit rate of 10\text{ Gbps}. The refractive index of the fiber is 1.5, and data is transmitted using the Stop-and-Wait protocol. A 1\text{ GB} file is divided into suitable data frames, and after successfully receiving each frame, the receiver sends a 54-byte acknowledgment (ACK) back to the sender. Assuming no processing or queuing delay, determine the total time required to completely transfer the 1\text{ GB} file, including data transmission time, propagation delay, ACK transmission time, and the Stop-and-Wait waiting time. [BSCCPL AME 21-08-2026 (BUET)]
 
+   Answer: Stop-and-Wait sends one frame, then waits idle for a full round trip before sending the next. The whole answer turns on that.
+
+   Assumptions stated (the frame size is not given in the question)
+   - Frame size = 1500 bytes, the standard Ethernet MTU. The 54-byte ACK is consistent with a minimum Ethernet + IP + TCP acknowledgement.
+   - 1 GB = 10^9 bytes.
+   - Speed of light in vacuum c = 3 × 10^8 m/s.
+
+   Step 1 — total link bandwidth
+   ```
+   BW = 50 channels × 10 Gbps = 500 Gbps = 5 × 10^11 bps
+   ```
+
+   Step 2 — propagation speed and delay
+   ```
+   v  = c / n = (3 × 10^8) / 1.5 = 2 × 10^8 m/s
+   Tp = distance / v = 250,000 / (2 × 10^8) = 1.25 × 10^-3 s = 1.25 ms
+   ```
+
+   Step 3 — transmission time of one data frame
+   ```
+   Tt(data) = 1500 × 8 / (5 × 10^11) = 12,000 / (5 × 10^11)
+            = 2.4 × 10^-8 s = 24 nanoseconds
+   ```
+
+   Step 4 — transmission time of the ACK
+   ```
+   Tt(ack) = 54 × 8 / (5 × 10^11) = 432 / (5 × 10^11)
+           = 8.64 × 10^-10 s = 0.864 nanoseconds
+   ```
+
+   Step 5 — time for one complete Stop-and-Wait cycle
+   ```
+   Tcycle = Tt(data) + Tp + Tt(ack) + Tp
+          = 24 ns + 1.25 ms + 0.864 ns + 1.25 ms
+          = 2.500024864 ms
+   ```
+
+   Step 6 — number of frames
+   ```
+   Number of frames = 10^9 / 1500 = 666,666.67  ->  666,667 frames
+   ```
+
+   Step 7 — total transfer time
+   ```
+   Total = 666,667 × 2.500024864 ms
+         = 1,666,684 ms
+         = 1666.68 seconds
+         ≈ 27.8 minutes
+   ```
+
+   Summary
+
+   | Quantity | Value |
+   |---|---|
+   | Total bandwidth | 500 Gbps |
+   | Propagation speed | 2 × 10^8 m/s |
+   | Propagation delay (one way) | 1.25 ms |
+   | Data frame transmission time | 24 ns |
+   | ACK transmission time | 0.864 ns |
+   | One Stop-and-Wait cycle | 2.500025 ms |
+   | Number of frames | 666,667 |
+   | `Total transfer time` | `≈ 1666.7 s ≈ 27.8 minutes` |
+
+   What the numbers show — the real point of the question
+
+   - Protocol efficiency
+   ```
+   η = Tt(data) / Tcycle = 24 ns / 2.500025 ms = 0.00096 %
+   ```
+   - Effective throughput
+   ```
+   = (10^9 × 8 bits) / 1666.7 s ≈ 4.8 Mbps
+   ```
+   - So a 500 Gbps link delivers about `4.8 Mbps` — roughly `one hundred-thousandth` of its capacity. The link spends 99.999 percent of its time idle, waiting for acknowledgements.
+   - The cause is the enormous bandwidth-delay product. `BDP = 500 Gbps × 2.5 ms = 1.25 Gbit = 156 MB` of data could be in flight, yet Stop-and-Wait allows only 1500 bytes at a time.
+
+   The fix
+   - Use a sliding window with a window large enough to fill the pipe:
+   ```
+   Window needed = BDP / frame size = 156 MB / 1500 B ≈ 104,000 frames
+   ```
+   - With such a window the transfer would take about `16 ms` instead of 27.8 minutes. This is exactly why real high-speed links use Go-Back-N or Selective Repeat with window scaling, never Stop-and-Wait.
+   - Note also that a much larger frame size (jumbo frames, or aggregating the file into far fewer frames) would reduce the frame count proportionally, since the cost is per frame, not per byte.
+
 2. **Using an explanation of the difference between flow-control and congestion control, discuss the impact of a stable end-to-end latency.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 424 (ET: BIBM)]*
+
+   Answer:
+
+   Flow control vs congestion control
+
+   | Point | Flow control | Congestion control |
+   |---|---|---|
+   | Problem solved | A fast `sender` overwhelming a slow `receiver` | Too much traffic overwhelming the `network` |
+   | Scope | End to end, between two hosts | Network wide, involving all flows |
+   | Who is protected | The receiver's buffer | The routers and links in between |
+   | Signal used | The receiver's advertised window in each ACK | Inferred from packet loss, delay or ECN marks |
+   | Mechanism | Sliding window, receive window (rwnd) | Congestion window (cwnd), slow start, AIMD |
+   | Layer | Transport (TCP), and Data Link on a single hop | Transport, with help from the Network layer |
+   | Analogy | Do not pour faster than the glass can hold | Do not send more cars than the road can carry |
+
+   - In TCP both act together: the sender may have in flight at most `min(rwnd, cwnd)` bytes. Flow control comes from the receiver, congestion control from the sender's own estimate of the network.
+
+   Impact of stable end-to-end latency
+
+   - `Accurate RTO estimation.` TCP computes its retransmission timeout from a smoothed RTT and its variance: `RTO = SRTT + 4 × RTTVAR`. When latency is stable, RTTVAR is small, so the timeout is tight and a genuine loss is detected quickly. When latency swings, RTTVAR grows and the timeout becomes conservative, so recovery from real loss is slow.
+
+   - `Fewer spurious retransmissions.` A sudden latency spike can make an ACK arrive after the timer expires, so the sender retransmits a packet that was never lost. That wastes bandwidth and, worse, halves the congestion window unnecessarily. Stable latency avoids this entirely.
+
+   - `Congestion control behaves correctly.` Loss-based algorithms interpret delay and loss as congestion signals. Stable latency means the signals are trustworthy, so the congestion window grows smoothly instead of oscillating. Delay-based algorithms such as BBR and Vegas depend on stable measurements even more directly.
+
+   - `Higher and steadier throughput.` Throughput is roughly `window / RTT`. A stable RTT gives a stable, predictable rate; a fluctuating RTT makes throughput fluctuate even when no packets are lost.
+
+   - `Flow control windows can be sized correctly.` The right receive window is the bandwidth-delay product. If the RTT is stable, one buffer size is correct all the time. If it varies, the window is either too small (wasting capacity) or too large (adding queuing delay and bufferbloat).
+
+   - `Real-time applications work properly.` Voice and video care about `jitter`, which is precisely the variation in latency. Stable latency means a small jitter buffer, which means low end-to-end delay and natural conversation. Unstable latency forces a large jitter buffer, adding delay, or causes audible gaps.
+
+   - `Predictable application behaviour.` Timeouts, retries and SLA guarantees can all be set tightly. Databases, financial trading and industrial control depend on this.
+
+   - Conclusion: stable latency is worth more than merely low average latency. A link with 100 ms constant delay is easier to work with, and often performs better, than one averaging 50 ms but swinging between 10 and 300 ms.
 
 3. **(খ) Congestion কী? Network-এ কীভাবে Congestion নিয়ন্ত্রণ করা যায়? আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What is congestion
+   - Congestion occurs when the amount of traffic offered to a network exceeds its capacity to carry it. Router buffers fill, queuing delay rises, and once the buffers overflow, packets are dropped.
+   - The consequences: increased delay and jitter, packet loss, retransmissions that add still more traffic, and falling throughput. If unchecked this leads to `congestion collapse`, where the network is fully occupied yet almost no useful data is delivered.
+   - Causes: too many sources sending at once, a bottleneck link, insufficient router buffer or CPU, a slow outgoing link fed by fast incoming ones, and broadcast storms.
+
+   How congestion is controlled
+
+   Open-loop methods — prevent it before it happens
+   - `Admission control` — a new flow is admitted only if the network has spare capacity. Used in connection-oriented networks such as ATM and MPLS.
+   - `Traffic shaping` — smooth bursty traffic to a steady rate before it enters the network.
+     - `Leaky bucket` — output is at a constant rate regardless of how bursty the input is. Simple, but it cannot pass a legitimate burst.
+     - `Token bucket` — tokens accumulate at a fixed rate up to a limit; a packet needs a token to be sent. This allows controlled bursts, which is why it is preferred in practice.
+   - `Traffic policing` — measure and drop or mark traffic that exceeds an agreed rate at the network boundary.
+   - `Resource reservation` — RSVP reserves bandwidth along the path before the flow starts.
+
+   Closed-loop methods — react once it is detected
+   - `TCP congestion control` — the main mechanism on the internet:
+     - Slow start: the congestion window doubles each RTT until it reaches the threshold.
+     - Congestion avoidance: growth becomes linear, about one MSS per RTT.
+     - Fast retransmit and fast recovery: three duplicate ACKs cause immediate retransmission and the window is halved rather than reset.
+     - The overall pattern is `AIMD` — additive increase, multiplicative decrease.
+   - `Choke packets` — a congested router sends a message back telling the source to slow down.
+   - `ECN (Explicit Congestion Notification)` — routers mark packets instead of dropping them, so the sender reduces its rate before any loss occurs.
+   - `Backpressure` — congestion is signalled hop by hop back towards the source.
+   - `Random Early Detection (RED)` — routers drop packets randomly as the queue grows, before it is full, so that TCP flows slow down at different moments instead of all together (avoiding global synchronisation).
+
+   Supporting measures
+   - `QoS and priority queuing` — protect voice and video with defined classes.
+   - `Load balancing` across multiple paths, and `capacity upgrade` where the bottleneck is permanent.
+   - `Network segmentation and VLANs` to limit broadcast traffic.
+   - `Caching and CDNs` to keep traffic local instead of crossing congested links.
+
 4. **Unit of data link layer?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+   Answer: The unit of data at the Data Link layer is the `frame`.
+
+   - A frame is the PDU (Protocol Data Unit) of Layer 2. The Data Link layer takes a packet from the Network layer and wraps it with a header and a trailer.
+   - Header: destination MAC address, source MAC address and a type/length field.
+   - Trailer: the `FCS` (Frame Check Sequence), a CRC used for error detection.
+   ```
+   | Dest MAC | Src MAC | Type | Data (packet) | FCS |
+   ```
+
+   PDU names at every layer
+
+   | Layer | PDU |
+   |---|---|
+   | Application / Presentation / Session | Data |
+   | Transport | Segment (TCP) / Datagram (UDP) |
+   | Network | Packet |
+   | `Data Link` | `Frame` |
+   | Physical | Bit |
+
+   - Memory aid: Data, Segment, Packet, Frame, Bits.
+   - Ethernet frame sizes: minimum 64 bytes, maximum 1518 bytes (1522 with a VLAN tag), of which the payload is 46 to 1500 bytes.
 
 5. **(ক) নেটওয়ার্কে ডাটা প্যাকেটে trailer কোথায় এবং কেন ব্যবহার করা হয়? উদাহরণ দিন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 775 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   Where the trailer is used
+   - The `trailer` is placed at the `end` of a frame, after the data, and it is added by the `Data Link layer` (Layer 2). Only Layer 2 adds a trailer; every other layer adds a header only.
+   ```
+   | Header (MAC addresses, type) | Data (payload) | TRAILER (FCS) |
+   ```
+
+   Why a trailer is used
+   - `Error detection.` The trailer carries the FCS (Frame Check Sequence), a 32-bit CRC computed over the whole frame. The receiver recomputes the CRC and compares. If they differ, the frame was corrupted in transit and is discarded.
+   - `It must come last.` The sender can only compute the CRC once every byte of the frame is known, so it is appended at the end rather than placed in the header. This also lets the receiver compute the CRC on the fly as the bits arrive, and check it the moment the frame ends — which is what makes hardware CRC checking possible at line rate.
+   - `Frame delimiting.` In some protocols the trailer also marks where the frame ends, for example the closing flag `01111110` in HDLC and PPP.
+
+   Examples
+
+   | Protocol | Trailer contents |
+   |---|---|
+   | Ethernet (IEEE 802.3) | 4-byte FCS (CRC-32) |
+   | HDLC | 2-byte FCS plus the closing flag 01111110 |
+   | PPP | 2 or 4-byte FCS plus the flag |
+   | Token Ring | FCS, end delimiter, frame status |
+
+   Ethernet frame with the trailer shown
+   ```
+   | Preamble 7 | SFD 1 | Dest MAC 6 | Src MAC 6 | Type 2 | Data 46-1500 | FCS 4 |
+                                                                           ^^^^^
+                                                                          TRAILER
+   ```
+
+   - Note the contrast: TCP and IP put their checksums inside the header, because those checksums cover only the header (IP) or can be computed in advance. Layer 2 covers the entire frame, so its check value can only be a trailer.
+
 6. **How STP works? Explain congestion control algorithm.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 842-843 (ET: N/A)]*
+
+   Answer:
+
+   (a) How STP works
+   - STP (Spanning Tree Protocol, IEEE 802.1D) prevents `switching loops` in a network with redundant links. Without it, a loop causes a broadcast storm, MAC table instability and multiple frame copies — and because an Ethernet frame has no TTL, the storm never stops on its own.
+
+   Steps
+   - Step 1 — `Elect the root bridge.` Every switch sends BPDUs containing its Bridge ID (priority + MAC address). The switch with the `lowest Bridge ID` becomes the root. Default priority is 32768, so the lowest MAC wins unless priority is configured.
+   - Step 2 — `Choose a root port on every non-root switch.` This is the port with the lowest cumulative path cost to the root. Cost is based on bandwidth: 10 Gbps = 2, 1 Gbps = 4, 100 Mbps = 19, 10 Mbps = 100.
+   - Step 3 — `Choose a designated port on every segment.` The port on the switch with the lowest cost to the root forwards for that segment.
+   - Step 4 — `Block every remaining port.` These become blocking ports; they receive BPDUs but forward no data. The result is a loop-free tree.
+   - Step 5 — `Reconverge on failure.` If a link fails, BPDUs stop arriving, and a previously blocked port is brought into forwarding.
+
+   Port states: Blocking (20 s) -> Listening (15 s) -> Learning (15 s) -> Forwarding, so classic STP takes about `50 seconds` to converge.
+
+   Improvements
+   - `RSTP` (802.1w) converges in a few seconds; `MSTP` (802.1s) runs one instance per group of VLANs; PortFast, UplinkFast and BackboneFast speed up specific cases.
+
+   (b) Congestion control algorithm
+   - TCP infers congestion from packet loss and adjusts its congestion window (cwnd). It sends the minimum of cwnd and the receiver's advertised window.
+
+   - `1. Slow start` — cwnd starts at 1 MSS and doubles every RTT (it increases by 1 MSS per ACK). Growth is exponential and continues until cwnd reaches ssthresh or a loss occurs.
+   - `2. Congestion avoidance` — beyond ssthresh, cwnd grows linearly, about 1 MSS per RTT, probing carefully for extra capacity.
+   - `3. Fast retransmit` — three duplicate ACKs indicate a single lost segment; it is resent immediately without waiting for the timer.
+   - `4. Fast recovery` — after a fast retransmit, ssthresh is halved and cwnd is set to it, so transmission continues at a reduced rate. A full timeout is treated as far more serious: cwnd drops to 1 MSS and slow start begins again.
+
+   ```
+   cwnd
+     |          /\        /\
+     |         /  \      /  \      <- halve on loss, continue (fast recovery)
+     |    ____/    \    /
+     |   /  linear  \  /
+     |  / exponential\/
+     +--------------------------> time
+   ```
+   - The overall behaviour is `AIMD` — additive increase, multiplicative decrease — which shares capacity roughly fairly and prevents congestion collapse.
+   - Modern variants: Reno, NewReno, CUBIC (the Linux default) and BBR (which models bandwidth and RTT rather than relying on loss).
+   - Network-side help: RED drops packets early to avoid global synchronisation, and ECN marks packets instead of dropping them.
 
 7. **Host A is sending data to Host B over a full duplex link. A and B are using the sliding window protocol for flow control. The send and receive window size are 5 packets each. Data packets (sent only from A to B) are all 1000 bytes long and transmission time for such a packet is 50\mu\text{s}. Acknowledgement packets (sent only from B to A) are very small and require negligible transmission time. The propagation delay over the link is 200\mu\text{s}. What is the maximum achievable throughput in this communication?** *[BAUST Assistant Programmer 2021 compact it 918 (ET: N/A)]*
 
+   Answer:
+
+   Given
+   - Window size N = 5 packets
+   - Packet size = 1000 bytes = 8000 bits
+   - Transmission time Tt = 50 µs
+   - Propagation delay Tp = 200 µs
+   - ACK transmission time = negligible
+
+   Step 1 — time for one complete cycle
+   - The sender transmits, the first packet propagates, and the ACK propagates back:
+   ```
+   Tcycle = Tt + 2 × Tp
+          = 50 + 2(200)
+          = 450 µs
+   ```
+
+   Step 2 — data sent in one cycle
+   - The sliding window allows 5 packets before an acknowledgement is required:
+   ```
+   Data = 5 × 1000 bytes = 5000 bytes = 40,000 bits
+   ```
+
+   Step 3 — maximum achievable throughput
+   ```
+   Throughput = data per cycle / cycle time
+              = 40,000 bits / 450 × 10^-6 s
+              = 88.89 × 10^6 bps
+              = 88.89 Mbps
+   ```
+
+   - Answer: `88.89 Mbps` (about 88.9 Mbps).
+
+   Verification by the efficiency formula
+   ```
+   a  = Tp / Tt = 200 / 50 = 4
+   η  = N / (1 + 2a) = 5 / (1 + 8) = 5/9 = 0.5556
+
+   Link bandwidth = 8000 bits / 50 µs = 160 Mbps
+   Throughput     = η × bandwidth = 0.5556 × 160 = 88.89 Mbps
+   ```
+   - The two methods agree.
+
+   Interpretation
+   - The link itself can carry 160 Mbps, but only 88.89 Mbps is achieved — an efficiency of 55.6 percent — because the window is too small to keep the pipe full.
+   - To reach 100 percent efficiency the window must satisfy `N >= 1 + 2a = 9`, so a window of `9 packets` would fill the link completely and give the full 160 Mbps.
+   - With N = 1 the protocol becomes Stop-and-Wait, giving 1/9 = 11.1 percent efficiency and only 17.8 Mbps.
+
 8. **What is the piggybacking and MAC Address?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 921 (ET: N/A)]*
+
+   Answer:
+
+   Piggybacking
+   - Piggybacking is the technique of `carrying an acknowledgement inside an outgoing data frame` rather than sending a separate ACK frame.
+   - It is possible because most communication is bidirectional. When B receives data from A and also has data of its own to send to A, B attaches the acknowledgement for A's frame to its own data frame, in the ACK field of the header.
+
+   ```
+   WITHOUT piggybacking          WITH piggybacking
+   A --- data ------> B          A --- data --------> B
+   A <-- ACK -------- B          A <-- data + ACK --- B
+   A <-- data ------- B
+   A --- ACK -------> B
+   ```
+
+   - Advantages: fewer frames on the medium, better bandwidth utilisation, and less processing overhead. The saving is significant, because an ACK frame carries almost no payload but still pays the full header cost.
+   - Disadvantage: the receiver must wait a little for outgoing data to appear. If it waits too long, the sender's timer expires and the frame is retransmitted unnecessarily. The solution is a short timer — if no data is ready before it expires, a separate ACK is sent anyway.
+   - Where it is used: TCP (the ACK field is part of every segment header), HDLC, and sliding window protocols generally.
+
+   MAC address
+   - A MAC (Media Access Control) address is the 48-bit physical address burned into a network interface card by its manufacturer, used to identify a device inside a local network.
+   - Format: 12 hexadecimal digits, `00:1A:2B:3C:4D:5E`. The first 24 bits are the OUI identifying the vendor; the last 24 bits are the card's serial number.
+   - It works at the Data Link layer (Layer 2), and switches use it to forward frames to the correct port.
+   - It is valid only within one local segment — it is never carried across a router, and is rewritten at every hop.
+   - Types: unicast (I/G bit = 0), multicast (I/G bit = 1) and broadcast (FF:FF:FF:FF:FF:FF).
+   - ARP is the protocol that finds the MAC address belonging to a known IP address. `ipconfig /all` or `ip link` shows it.
 
 9. **(i) Congestion Control কী? কী কী ভাবে Congestion Control করা যায়?** *[BPSC Assistant Network Engineer 2020 compact it 950 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What is congestion control
+   - Congestion occurs when the traffic offered to the network exceeds its capacity. Router queues fill, delay rises, and when the buffers overflow, packets are dropped.
+   - Congestion control is the set of techniques that keep the total load within the network's capacity. It protects the `network`, which is what distinguishes it from flow control, which protects the `receiver`.
+   - Without it, retransmissions add further traffic and the network can reach `congestion collapse`, in which the links are fully busy yet almost no useful data is delivered.
+
+   Methods of congestion control
+
+   Open-loop (prevention)
+   - `Admission control` — accept a new flow only if capacity exists. Used in ATM and MPLS.
+   - `Traffic shaping` — smooth bursts before they enter the network.
+     - `Leaky bucket`: output flows at a constant rate whatever the input. Simple, but cannot pass a legitimate burst.
+     - `Token bucket`: tokens accumulate at a fixed rate; a packet needs a token. Allows controlled bursts, so it is preferred.
+   - `Traffic policing` — measure at the boundary and drop or mark traffic above the agreed rate.
+   - `Resource reservation` — RSVP reserves bandwidth along the path in advance.
+
+   Closed-loop (reaction)
+   - `TCP congestion control`, the mechanism that actually keeps the internet stable:
+     - Slow start — cwnd doubles every RTT.
+     - Congestion avoidance — cwnd grows by about 1 MSS per RTT.
+     - Fast retransmit — three duplicate ACKs trigger immediate retransmission.
+     - Fast recovery — ssthresh is halved and sending continues, instead of restarting from 1.
+     - The overall pattern is AIMD: additive increase, multiplicative decrease.
+   - `Choke packets` — a congested router asks the source directly to slow down.
+   - `ECN` — routers mark packets instead of dropping them, so senders react before any loss.
+   - `Backpressure` — congestion is propagated hop by hop back towards the source.
+   - `RED (Random Early Detection)` — routers drop packets randomly as the queue grows, before it is full, so flows back off at different times rather than all at once.
+
+   Supporting measures
+   - QoS classes and priority queuing to protect voice and video; load balancing across paths; upgrading a permanent bottleneck; segmentation and VLANs to limit broadcast traffic; and caching or CDNs to keep traffic local.
+
 10. **Two OSI layers which known as “flow Control” which are those? Write them and explain.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1156 (ET: DU)]*
+
+    Answer: Flow control is performed at `two` OSI layers: the `Data Link layer (Layer 2)` and the `Transport layer (Layer 4)`.
+
+    Data Link layer flow control (hop by hop)
+    - Scope: between two directly connected nodes on a single link — for example a PC and the switch it is plugged into.
+    - Purpose: stop a fast transmitter from overrunning the receiving node's frame buffer on that one link.
+    - Mechanisms:
+      - `Stop-and-Wait` — send one frame, wait for its acknowledgement, then send the next. Simple, but very inefficient on a long or fast link.
+      - `Sliding window` — send up to N frames before an acknowledgement is required, which keeps the link busy. Go-Back-N and Selective Repeat are the two variants.
+      - `Ethernet PAUSE frames` (IEEE 802.3x) — the receiver sends a PAUSE frame telling the sender to stop transmitting for a stated time.
+    - Data unit: the frame. Failure mode if it is absent: buffer overflow and dropped frames at the next hop.
+
+    Transport layer flow control (end to end)
+    - Scope: between the two end hosts, across the whole path, regardless of how many routers lie in between.
+    - Purpose: stop a fast sender from overrunning the receiving `application's` buffer.
+    - Mechanism: TCP's `sliding window`. Every ACK carries a `receive window (rwnd)` field stating how much free buffer space the receiver has. The sender may have at most that many unacknowledged bytes outstanding.
+      - If the application is slow to read, rwnd shrinks; if it reaches zero, the sender stops entirely and sends periodic window probes until the receiver advertises space again.
+      - `Window scaling` (RFC 7323) extends the 16-bit field so that high bandwidth-delay-product links can be filled.
+    - Data unit: the segment.
+
+    | Point | Data Link layer | Transport layer |
+    |---|---|---|
+    | Scope | One hop | End to end |
+    | Protects | The next node's buffer | The receiving application's buffer |
+    | Mechanism | Stop-and-wait, sliding window, PAUSE frames | TCP sliding window with rwnd |
+    | Data unit | Frame | Segment |
+    | Addressing | MAC | Port |
+
+    - Do not confuse flow control with `congestion control`. Flow control protects the receiver and is driven by the receiver's advertised window; congestion control protects the network and is driven by the sender's own estimate (cwnd). TCP obeys both, sending at most `min(rwnd, cwnd)`.
 
 11. **What is piggybacking in Networking? Difference among Hub, Switch and Router.** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
 
+    Answer:
+
+    (a) Piggybacking in networking
+    - Piggybacking is the technique of `attaching an acknowledgement to an outgoing data frame` instead of sending a separate ACK frame.
+    - Because most communication is two-way, when B receives data from A and also has its own data to send back, B places the acknowledgement in the ACK field of its data frame. One frame then does two jobs.
+
+    ```
+    WITHOUT piggybacking             WITH piggybacking
+    A --- data --------> B           A --- data ---------> B
+    A <-- ACK ---------- B           A <-- data + ACK ---- B
+    A <-- data --------- B
+    A --- ACK ---------> B
+    ```
+    - Advantages: fewer frames on the wire, better bandwidth utilisation, and less per-frame processing. The saving is large because an ACK carries almost no payload yet pays the full header cost.
+    - Disadvantage: the receiver must wait for outgoing data to appear. If it waits too long the sender's timer expires and retransmits unnecessarily, so a short timer forces a standalone ACK if nothing is ready.
+    - Used by TCP (the ACK field is in every segment header), HDLC, and sliding-window protocols generally.
+
+    (b) Hub vs Switch vs Router
+
+    | Point | Hub | Switch | Router |
+    |---|---|---|---|
+    | OSI layer | 1 — Physical | 2 — Data Link | 3 — Network |
+    | Address used | None | MAC | IP |
+    | Forwarding | Floods every port | Only to the correct port, using a MAC table | Between networks, using a routing table |
+    | Collision domains | 1 for the whole device | One per port | One per interface |
+    | Broadcast domains | 1 | 1 (or one per VLAN) | One per interface |
+    | Duplex | Half only | Full | Full |
+    | Bandwidth | Shared | Dedicated per port | Depends on the link |
+    | Security | None | Better | Best — ACLs, NAT, firewall |
+    | Extra functions | None | VLAN, STP, port security, QoS | NAT, DHCP, routing protocols, VPN |
+    | Cost | Lowest | Moderate | Highest |
+    | Status | Obsolete | Standard in every LAN | Essential for internet access |
+
+    - In one line each: a hub repeats blindly, a switch learns and delivers precisely, and a router connects whole networks and chooses the best path between them.
+
 12. **Explain IEEE 802.3 frame format.** *[Multiple Ministry Assistant Programmer 2017 compact it 1233 (ET: N/A)]*
+
+    Answer: IEEE 802.3 defines the Ethernet frame. Its total size is 64 to 1518 bytes, excluding the preamble.
+
+    Frame format
+    ```
+    +----------+-----+----------+----------+--------+---------------+-----+
+    | Preamble | SFD | Dest MAC | Src MAC  | Length | Data + Pad    | FCS |
+    |  7 bytes | 1 B |  6 bytes |  6 bytes | /Type  |  46-1500 B    | 4 B |
+    |          |     |          |          |  2 B   |               |     |
+    +----------+-----+----------+----------+--------+---------------+-----+
+     <-- not counted -->|<--------- 64 to 1518 bytes counted ------------->|
+    ```
+
+    Field by field
+
+    | Field | Size | Purpose |
+    |---|---|---|
+    | Preamble | 7 bytes | Alternating 10101010, seven times. Lets the receiver's clock synchronise with the incoming bit stream |
+    | SFD (Start Frame Delimiter) | 1 byte | 10101011. The final two 1s mark that the frame proper begins with the next bit |
+    | Destination MAC | 6 bytes | Physical address of the receiving NIC; may be unicast, multicast or broadcast (FF:FF:FF:FF:FF:FF) |
+    | Source MAC | 6 bytes | Physical address of the sending NIC; always unicast |
+    | Length / Type | 2 bytes | Value 1500 or below = length of the data field (802.3); value 1536 (0x0600) or above = EtherType identifying the upper protocol — 0x0800 IPv4, 0x0806 ARP, 0x86DD IPv6 |
+    | Data + Padding | 46–1500 bytes | The Network-layer packet. If it is shorter than 46 bytes, padding is added |
+    | FCS (Frame Check Sequence) | 4 bytes | CRC-32 over all fields from the destination MAC onwards. The receiver recomputes it and discards the frame if it does not match |
+
+    Key sizes and rules
+    - `Minimum frame = 64 bytes` (6 + 6 + 2 + 46 + 4). This minimum exists so that a collision on a maximum-length CSMA/CD segment is detected while the sender is still transmitting. It is why padding is required.
+    - `Maximum frame = 1518 bytes`, giving the familiar 1500-byte MTU. With an 802.1Q VLAN tag (4 extra bytes) the maximum becomes 1522.
+    - `Interframe gap` — a mandatory idle period of 96 bit times between frames.
+    - Jumbo frames of up to 9000 bytes are a non-standard extension used in data centres.
+
+    802.3 vs Ethernet II
+    - Ethernet II uses the 2-byte field as a `Type`; 802.3 uses it as a `Length` and expects an 802.2 LLC header inside the data field. In practice almost all traffic today uses Ethernet II framing, and the two are distinguished by whether the value is above or below 1536.
 
 ## Network Services (DHCP, NAT) (11)
 
