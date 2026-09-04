@@ -1,22 +1,22 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 280 questions
+**Table of Contents** — 8 subtopics · 285 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-153) | 153 |
-| 2 | [বাংলা সাহিত্য](#বাংলা-সাহিত্য-107) | 107 |
+| 1 | [বাংলা ব্যাকরণ](#বাংলা-ব্যাকরণ-154) | 154 |
+| 2 | [বাংলা সাহিত্য](#বাংলা-সাহিত্য-108) | 108 |
 | 3 | [বাগধারা ও প্রবাদ](#বাগধারা-ও-প্রবাদ-12) | 12 |
 | 4 | [এক কথায় প্রকাশ](#এক-কথায়-প্রকাশ-5) | 5 |
-| 5 | [কারক ও বিভক্তি](#কারক-ও-বিভক্তি-2) | 2 |
-| 6 | [বাংলা ভাষা বিষয়ক তথ্য](#বাংলা-ভাষা-বিষয়ক-তথ্য-1) | 1 |
-| 7 | [সন্ধি ও বিচ্ছেদ](#সন্ধি-ও-বিচ্ছেদ-0) | 0 |
+| 5 | [কারক ও বিভক্তি](#কারক-ও-বিভক্তি-3) | 3 |
+| 6 | [সন্ধি ও বিচ্ছেদ](#সন্ধি-ও-বিচ্ছেদ-2) | 2 |
+| 7 | [বাংলা ভাষা বিষয়ক তথ্য](#বাংলা-ভাষা-বিষয়ক-তথ্য-1) | 1 |
 | 8 | [বানান ও শুদ্ধিকরণ](#বানান-ও-শুদ্ধিকরণ-0) | 0 |
 
 <!-- TOC END -->
 
 ---
 
-## বাংলা ব্যাকরণ (153)
+## বাংলা ব্যাকরণ (154)
 1. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
    a) কর্মকারকে শূন্য
    b) করণকারকে শূন্য
@@ -934,7 +934,13 @@
    গ. Stale : Fresh
    ঘ. Truth : Lie
 
-## বাংলা সাহিত্য (107)
+154. **The poem 'Shadhinota Tumi' is written by— [ ‘স্বাধীনতা তুমি’ কবিতাটি কার লেখা? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*
+   (a) Kazi Nazrul Islam
+   (b) Ahmed Sofa
+   (c) Shamsur Rahman
+   (d) Rabindranath Tagore
+
+## বাংলা সাহিত্য (108)
 1. **মীর মশাররফ হোসেনের “বিষাদ সিন্ধু” একটি-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
    ক. কাব্যগ্রন্থ
    খ. ইতিহাসগ্রন্থ
@@ -1562,6 +1568,12 @@
    গ. বলাকা
    ঘ. সোনার তরি
 
+108. **‘জীবন আমার বোন’ কোন ধরণের সাহিত্যকর্ম?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*
+   (a) নাটক
+   (b) প্রবন্ধ
+   (c) উপন্যাস
+   (d) কবিতা
+
 ## বাগধারা ও প্রবাদ (12)
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
    ক. দুর্বৃত্ত
@@ -1660,7 +1672,7 @@
    c. সমক্ষ
    d. চাক্ষুস
 
-## কারক ও বিভক্তি (2)
+## কারক ও বিভক্তি (3)
 1. **'ঘোড়া গাড়ি টানে।' কোন কারক?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
    ক. কর্তৃকারক
    খ. কর্মকারক
@@ -1672,6 +1684,25 @@
    (খ) চিত্ত যেথা ভয়শূন্য উচ্চ সেথা শির
    (গ) গগনে গরজে মেঘ ঘন বর্ষা
 
+3. **‘আপন পাঠেতে করহ নিবেশ’, বাক্যে ‘পাঠেতে’ শব্দটি কোন কারকে কোন বিভক্তি?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*
+   (a) কর্মকারকে তৃতীয়া
+   (b) করণ কারকে পঞ্চমী
+   (c) অধিকরণ কারকে সপ্তমী
+   (d) অপাদান কারকে সপ্তমী
+
+## সন্ধি ও বিচ্ছেদ (2)
+1. **'মাথাঘষা' শব্দটির সঠিক সন্ধি-বিচ্ছেদ কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. মাথা+আয়
+   খ মাথা+য়
+   গ. মাথা+অয়া
+   ঘ মাথা+এ
+
+2. **'আবির্ভাব' শব্দটি গঠিত হয়েছে-** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*
+   (a) প্রত্যয় দ্বারা
+   (b) উপসর্গ দ্বারা
+   (c) সন্ধি দ্বারা
+   (d) বিভক্তি দ্বারা
+
 ## বাংলা ভাষা বিষয়ক তথ্য (1)
 
 1. **ভাষাভাষী জনসংখ্যার দিক দিয়ে বাংলা ভাষার অবস্থান-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*
@@ -1679,13 +1710,6 @@
    খ. ৬ষ্ঠ
    গ. ৭ম
    ঘ. ৮ম
-
-## সন্ধি ও বিচ্ছেদ (0)
-**'মাথাঘষা' শব্দটির সঠিক সন্ধি-বিচ্ছেদ কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
-   ক. মাথা+আয়
-   খ মাথা+য়
-   গ. মাথা+অয়া
-   ঘ মাথা+এ
 
 ## বানান ও শুদ্ধিকরণ (0)
 **নিচের কোন বানানটি শুদ্ধ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*

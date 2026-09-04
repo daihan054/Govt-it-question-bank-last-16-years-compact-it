@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2795** questions.
+Sorted by count, highest first. Total **2829** questions.
 
 ## IT questions
 
-Total: **1636** questions.
+Total: **1642** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **307** |
-| | Networking Fundamentals & Terminology | 62 |
+| **Computer Networks** | **— all subcategories —** | **309** |
+| | Networking Fundamentals & Terminology | 64 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
@@ -38,8 +38,8 @@ Total: **1636** questions.
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
 | | Database Fundamentals & SQL | 0 |
-| **Computer Fundamentals** | **— all subcategories —** | **150** |
-| | Hardware Components & Peripherals | 48 |
+| **Computer Fundamentals** | **— all subcategories —** | **152** |
+| | Hardware Components & Peripherals | 50 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -50,7 +50,7 @@ Total: **1636** questions.
 | | Power Systems & Generation | 18 |
 | | Signals & Systems | 11 |
 | | Diodes & Rectifiers | 4 |
-| **C Programming** | **— all subcategories —** | **107** |
+| **C Programming** | **— all subcategories —** | **108** |
 | | Output Tracing | 36 |
 | | Control Statements & Loops | 16 |
 | | Arrays & Functions | 15 |
@@ -59,7 +59,7 @@ Total: **1636** questions.
 | | Pointers & Memory Allocation | 5 |
 | | Recursion | 4 |
 | | Storage Classes & Scope | 3 |
-| | Programming Concepts | 2 |
+| | Programming Concepts | 3 |
 | | Flowcharts & Algorithms | 1 |
 | **Object Oriented Programming (OOP)** | **— all subcategories —** | **100** |
 | | Java Programming | 48 |
@@ -128,9 +128,9 @@ Total: **1636** questions.
 | | Software Design & Metrics | 8 |
 | | Design Patterns | 3 |
 | | Software Requirements Engineering | 1 |
-| **Mechanical Engineering** | **— all subcategories —** | **36** |
+| **Mechanical Engineering** | **— all subcategories —** | **37** |
 | | Engineering Mechanics & Strength of Materials | 10 |
-| | Thermodynamics & Heat Transfer | 8 |
+| | Thermodynamics & Heat Transfer | 9 |
 | | Engineering Materials & Manufacturing | 7 |
 | | Machining & Workshop Practice | 6 |
 | | Industrial & Production Engineering | 3 |
@@ -157,35 +157,35 @@ Total: **1636** questions.
 
 ## General Questions
 
-Total: **1159** questions.
+Total: **1187** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **446** |
+| **General Knowledge** | **— all subcategories —** | **463** |
 | | Bangladesh Affairs | 171 |
-| | International Affairs | 104 |
-| | Everyday Science | 100 |
+| | Everyday Science | 115 |
+| | International Affairs | 106 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
-| **Bangla** | **— all subcategories —** | **280** |
-| | বাংলা ব্যাকরণ | 153 |
-| | বাংলা সাহিত্য | 107 |
+| **Bangla** | **— all subcategories —** | **285** |
+| | বাংলা ব্যাকরণ | 154 |
+| | বাংলা সাহিত্য | 108 |
 | | বাগধারা ও প্রবাদ | 12 |
 | | এক কথায় প্রকাশ | 5 |
-| | কারক ও বিভক্তি | 2 |
+| | কারক ও বিভক্তি | 3 |
+| | সন্ধি ও বিচ্ছেদ | 2 |
 | | বাংলা ভাষা বিষয়ক তথ্য | 1 |
-| | সন্ধি ও বিচ্ছেদ | 0 |
 | | বানান ও শুদ্ধিকরণ | 0 |
-| **English** | **— all subcategories —** | **279** |
-| | English Grammar | 163 |
+| **English** | **— all subcategories —** | **281** |
+| | English Grammar | 165 |
 | | Vocabulary, Synonyms & Antonyms | 58 |
 | | Idioms & Phrases | 24 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Math** | **— all subcategories —** | **154** |
-| | Algebra | 42 |
-| | Geometry | 23 |
+| **Math** | **— all subcategories —** | **158** |
+| | Algebra | 44 |
+| | Geometry | 24 |
 | | Percentage, Profit & Loss | 21 |
 | | Arithmetic & Number Series | 16 |
 | | Time, Work & Distance | 11 |
@@ -196,6 +196,6 @@ Total: **1159** questions.
 | | Permutation & Combination | 5 |
 | | Trigonometry | 4 |
 | | Probability & Statistics | 4 |
-| | Time & Work | 2 |
+| | Time & Work | 3 |
 | | Speed, Time & Distance | 0 |
 | | Basic Arithmetic | 0 |

@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 36 questions
+**Table of Contents** — 7 subtopics · 37 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Engineering Mechanics & Strength of Materials](#engineering-mechanics--strength-of-materials-10) | 10 |
-| 2 | [Thermodynamics & Heat Transfer](#thermodynamics--heat-transfer-8) | 8 |
+| 2 | [Thermodynamics & Heat Transfer](#thermodynamics--heat-transfer-9) | 9 |
 | 3 | [Engineering Materials & Manufacturing](#engineering-materials--manufacturing-7) | 7 |
 | 4 | [Machining & Workshop Practice](#machining--workshop-practice-6) | 6 |
 | 5 | [Industrial & Production Engineering](#industrial--production-engineering-3) | 3 |
@@ -77,7 +77,7 @@
    (গ) সর্বনিম্ন
    (ঘ) সর্বনিম্ন অথবা সর্বোচ্চ
 
-## Thermodynamics & Heat Transfer (8)
+## Thermodynamics & Heat Transfer (9)
 1. **একটি হিমায়ন চক্রের হিমায়ক কর্তৃক তাপ শোষিত হয়** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*
    (ক) কন্ডেন্সারে
    (খ) ইভাপোরেটরে
@@ -131,6 +131,12 @@
    খ. \\text\{Pa-5\}
    গ. \\text\{J/Kg-K\}
    ঘ. উপরের সবগুলি
+
+9. **Which one is the first search engine? [ বিশ্বের প্রথম সার্চ ইঞ্জিন কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
+   (a) Google
+   (b) Archie
+   (c) Alta vista
+   (d) WAIS
 
 ## Engineering Materials & Manufacturing (7)
 

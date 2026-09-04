@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 279 questions
+**Table of Contents** — 5 subtopics · 281 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [English Grammar](#english-grammar-163) | 163 |
+| 1 | [English Grammar](#english-grammar-165) | 165 |
 | 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-58) | 58 |
 | 3 | [Idioms & Phrases](#idioms--phrases-24) | 24 |
 | 4 | [English Literature](#english-literature-17) | 17 |
@@ -13,7 +13,7 @@
 
 ---
 
-## English Grammar (163)
+## English Grammar (165)
 1. **Fill in the blank: The scientist looked _____ the microscope.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **The concert was cancelled _____ the heavy rain.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
@@ -997,6 +997,18 @@
    খ. His pen has been stolen.
    গ. His pen was being stolen.
    ঘ. None of above.
+
+164. **Who taught her such things? [ (Passive Voice) ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*
+   (a) She was taught such things by boy.
+   (b) She was taught such things by who.
+   (c) By whom she was taught such things?
+   (d) By whom was she taught such things?
+
+165. **We hope that we shall win the match. (Passive Voice)** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*
+   (a) It is hoped to be won by us.
+   (b) It is hoped that the match will be won by us.
+   (c) Winning the match is hoped by us.
+   (d) Match winning is our hope.
 
 ## Vocabulary, Synonyms & Antonyms (58)
 1. **What is the antonym of 'famous '?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*

@@ -1,15 +1,15 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3312** questions.
+Sorted by count, highest first. Total **3315** questions.
 
 ## IT questions
 
-Total: **2752** questions.
+Total: **2755** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **530** |
+| **Computer Networks** | **— all subcategories —** | **531** |
 | | Subnetting & IP Addressing | 115 |
 | | OSI & TCP/IP Reference Model | 56 |
 | | Networking Fundamentals & Terminology | 32 |
@@ -19,8 +19,8 @@ Total: **2752** questions.
 | | Transport Layer (TCP & UDP) | 19 |
 | | Multiplexing & Bandwidth | 19 |
 | | Routing Protocols & Route Configuration | 18 |
+| | Physical Layer & Transmission Media (Cables & Wiring) | 18 |
 | | Communication System & Transmission Modes | 17 |
-| | Physical Layer & Transmission Media (Cables & Wiring) | 17 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
 | | Network Address Translation (NAT) | 16 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
@@ -64,10 +64,10 @@ Total: **2752** questions.
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
 | | Keys, Constraints & Database Objects | 0 |
-| **C Programming** | **— all subcategories —** | **276** |
-| | Basic Programs & Control Statements | 117 |
+| **C Programming** | **— all subcategories —** | **278** |
+| | Basic Programs & Control Statements | 118 |
 | | Output Tracing & Control Flow | 57 |
-| | Recursion & Functions | 38 |
+| | Recursion & Functions | 39 |
 | | Operators, Data Types & Language Concepts | 25 |
 | | Flowcharts & Algorithms | 16 |
 | | String Manipulation & Algorithms | 14 |

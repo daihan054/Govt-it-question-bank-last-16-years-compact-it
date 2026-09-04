@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 154 questions
+**Table of Contents** — 15 subtopics · 158 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Algebra](#algebra-42) | 42 |
-| 2 | [Geometry](#geometry-23) | 23 |
+| 1 | [Algebra](#algebra-44) | 44 |
+| 2 | [Geometry](#geometry-24) | 24 |
 | 3 | [Percentage, Profit & Loss](#percentage-profit--loss-21) | 21 |
 | 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
 | 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
@@ -15,7 +15,7 @@
 | 10 | [Permutation & Combination](#permutation--combination-5) | 5 |
 | 11 | [Trigonometry](#trigonometry-4) | 4 |
 | 12 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 13 | [Time & Work](#time--work-2) | 2 |
+| 13 | [Time & Work](#time--work-3) | 3 |
 | 14 | [Speed, Time & Distance](#speed-time--distance-0) | 0 |
 | 15 | [Basic Arithmetic](#basic-arithmetic-0) | 0 |
 
@@ -23,7 +23,7 @@
 
 ---
 
-## Algebra (42)
+## Algebra (44)
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -288,7 +288,19 @@
    (c) Hill climbing
    (d) A\*
 
-## Geometry (23)
+43. **The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’? [ ৩ দিয়ে ‘a’-কে ভাগ করলে ভাগফল হয় ‘b’ এবং ভাগশেষ ২। ৩ দিয়ে ‘b’-কে ভাগ করলে ভাগফল ২ এবং ভাগশেষ ১। ‘a’ এর মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
+   (a) 13
+   (b) 17
+   (c) 23
+   (d) 21
+
+44. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity? [ র‍্যান্ডম লিঙ্কড লিস্ট সর্ট করার জন্য সবচেয়ে কম টাইম কমপ্লেক্সিটির অ্যালগরিদম কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
+   (a) Bubble Sort
+   (b) Quick Sort
+   (c) Heap Sort
+   (d) Merge Sort
+
+## Geometry (24)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ১২০°
    খ. ১৮০°
@@ -426,6 +438,12 @@
    খ. ৪.৪৬
    গ ৬.৪৫
    ঘ ৫.৪৫
+
+24. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm. What is the perimeter of the square? [ একটি বর্গক্ষেত্রের ক্ষেত্রফল একটি আয়তক্ষেত্রের ক্ষেত্রফলের তিন-পঞ্চমাংশ। আয়তক্ষেত্রটির দৈর্ঘ্য ২৫ সেমি এবং প্রস্থ ১০ সেমি হলে বর্গক্ষেত্রটির পরিসীমা কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
+   (a) 60 cm
+   (b) 44 cm
+   (c) 80 cm
+   (d) Cannot be determined
 
 ## Percentage, Profit & Loss (21)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
@@ -997,7 +1015,7 @@
    c. 5/6
    d. 1/6
 
-## Time & Work (2)
+## Time & Work (3)
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. ৪ দিন
    খ. ৫ দিন
@@ -1015,6 +1033,12 @@
    (b) Hub
    (c) Router
    (d) Modem
+
+3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
+   (a) 45
+   (b) 90
+   (c) 63
+   (d) 126
 
 ## Speed, Time & Distance (0)
 **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*

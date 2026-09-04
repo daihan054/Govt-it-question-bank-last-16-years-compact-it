@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 150 questions
+**Table of Contents** — 6 subtopics · 152 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-48) | 48 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-50) | 50 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (48)
+## Hardware Components & Peripherals (50)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -314,6 +314,18 @@ int main ()\{
     return 0;
 
 \}
+
+49. **GPT stands for— [ GPT এর পূর্ণরূপ হলো— ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*
+   (a) Generative Pre-trained Transformer
+   (b) Generative Program Technology
+   (c) Generative Process Technology
+   (d) Generative Pre-trained Technology
+
+50. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node x from the list? [ সিংগলি লিঙ্কড লিস্ট থেকে একটি নোড (x) ডিলিট করার ওর্স্ট-কেস টাইম কমপ্লেক্সিটি কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
+   (A) O(n)
+   (B) O(log2 n)
+   (C) O(log n)
+   (D) O(1)
 
 ## Software Types & Classification (40)
 

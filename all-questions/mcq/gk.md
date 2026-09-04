@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 446 questions
+**Table of Contents** — 6 subtopics · 463 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
-| 2 | [International Affairs](#international-affairs-104) | 104 |
-| 3 | [Everyday Science](#everyday-science-100) | 100 |
+| 2 | [Everyday Science](#everyday-science-115) | 115 |
+| 3 | [International Affairs](#international-affairs-106) | 106 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -987,7 +987,804 @@
    C. রোবটি
    D. জেনেটিক্স
 
-## International Affairs (104)
+## Everyday Science (115)
+1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
+   ক. সিলভার ব্রোমাইড
+   খ. সিলভার ফ্লোরাইড
+   গ. সিলভার ক্লোরাইড
+   ঘ. অ্যামোনিয়াম ক্লোরাইড
+
+2. **কোন রঙের কাপে চা তাড়াতাড়ি ঠান্ডা হয়?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
+   ক. সাদা
+   খ. কালো
+   গ. লাল
+   ঘ. বেগুনি
+
+3. **কাঁদানে গ্যাসের অপর নাম কী?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
+   ক. মিথেন
+   খ. ইথেন
+   গ. নাইট্রোজেন
+   ঘ. ক্লোরোপিকরিন
+
+4. **ওজোন স্তর বায়ুমণ্ডলের কোন স্তরে অবস্থিত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
+   ক. ট্রপোমণ্ডল
+   খ. স্ট্র্যাটোমণ্ডল
+   গ. মেসোমণ্ডল
+   ঘ. তাপমণ্ডল
+
+5. **বিশ্বব্রহ্মাণ্ডে সবচেয়ে বেশি প্রাপ্ত গ্যাস কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
+   ক. নাইট্রোজেন
+   খ. অক্সিজেন
+   গ. হাইড্রোজেন
+   ঘ. কার্বন ডাই-অক্সাইড
+
+6. **কোন যৌগটি কাপড়ের দাগ তুলতে সাহায্য করে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
+   ক. সোডিয়াম কার্বনেট
+   খ. সোডিয়াম বাই কার্বনেট
+   গ. ক্যালসিয়াম কার্বনেট
+   ঘ. ক্যালসিয়াম বাই কার্বনেট
+
+7. **রঙিন টেলিভিশন থেকে যে ক্ষতিকর রশি বের হয় তার নাম?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
+   ক. গামা রশি
+   খ. রঞ্জন রশ্মি
+   গ. বিটা রশ্মি
+   ঘ. কসমিক রশ্মি
+
+8. **কোন বোমায় মানুষ মরে, কিন্তু কোনো স্থাপনার ক্ষতি হয় না?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
+   ক. নাপাম
+   খ. নিউট্রন
+   গ. হাইড্রোজেন
+   ঘ. এটম
+
+9. **'Thalassemia' is a hereditary disease affecting-** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*
+   (a) Lungs
+   (b) Blood
+   (c) Heart
+   (d) Kidney
+
+10. **কোন রংগুলিকে মৌলিক রং বলা হয়?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
+   **Ans:** লাল, নীল, হলুদ
+
+11. **যে সর্বোচ্চ শ্রুতি সীমার উপরে মানুষ বধির হতে পারে তা হচ্ছে-** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
+   **Ans:** ১০৫ ডিবি
+
+12. **সূর্য গ্রহণের সময় কোনটি হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
+   a) পৃথিবী সূর্য ও চাঁদের মাঝে থাকে
+   b) পূর্ণিমা তিথি
+   c) চাঁদ পৃথিবী ও সূর্যের মাঝে থাকে
+   d) চাঁদ পৃথিবী ও চাঁদের মাঝে ৯০° কোন তৈরি করে।
+
+13. **ইদানিং সুপার ফুড বলে পরিচিত খাদ্য কি বৈশিষ্ট্য বহন করে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
+   a) অনিদ্রা দূর করে
+   b) মানসিক চাপ দূর করে
+   c) উচ্চ রক্তচাপ নিয়ন্ত্রণ করে
+   d) এটি একটি প্রাকৃতিক প্রতিবিধান
+
+14. **পৃথিবী পৃষ্ঠের গড় তাপমাত্রা কত ডিগ্রী সেলসিয়াস?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
+   a) ১৪
+   b) ২৪
+   c) ১৮
+   d) ১৫
+
+15. **মহাবিশ্বে মৌলিক বল কয়টি?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
+   (ক) ৩ টি
+   (খ) ৪ টি
+   (গ) ৫ টি
+   (ঘ) ৬ টি
+   **উত্তর: ক**
+
+16. **কোন রশ্মির ভেদন ক্ষমতা বেশি?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
+   (ক) আলফা
+   (খ) বিটা
+   (গ) গামা
+   (ঘ) সমগুলিরসমান
+   **উত্তর: গ**
+
+17. **পৃথিবীর কেন্দ্রে অভিকর্ষক ত্বরনের মান কত?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
+   (ক) শূন্য
+   (খ) 9.8\text{ m/s}^2
+   (গ) 4.9\text{ m/s}^2
+   (ঘ) অসীম
+   **উত্তর: ক**
+
+18. **কোনটি গ্রীন হাউজ গ্যাস নয়?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
+   (ক) \text{O}_2
+   (খ) \text{O}_3
+   (গ) \text{CO}_3
+   (ঘ) Water Vapor
+   **উত্তর: গ**
+
+19. **লেন্সের ক্ষমতার একক কী?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
+   (ক) ডায়াপটার
+   (খ) ডেসিবেল
+   (গ) ওয়াট
+   (ঘ) মিটার
+   **উত্তর: ক**
+
+20. **কোন বস্তুকে ভূ-পৃষ্ঠ হতে 19.6\text{m} উপর থেকে ছেড়ে পৌঁছাতে বস্তুটি কত সময় লাগবে?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
+   (ক) 2\text{ sec}
+   (খ) 1\text{ sec}
+   (গ) \frac{1}{2}\text{ sec}
+   (ঘ) 9\text{ sec}
+   **উত্তর: ক**
+
+21. **কোনটি মুদ্রা ধাতু নয়?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
+   (ক) কপার
+   (খ) সিলভার
+   (গ) গোল্ড
+   (ঘ) রন্টজেনিয়াম
+   **উত্তর: ঘ**
+
+22. **CNG এর মূল উপাদান কী?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
+   (ক) অক্সিজেন
+   (খ) মিথেন
+   (গ) ইথেন
+   (ঘ) অকটেন
+   **উত্তর: খ**
+
+23. **তাপমাত্রা বাড়লে পরিবাহীর রোধ ---** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
+   (ক) বাড়ে
+   (খ) কমে
+   (গ) অপরিবর্তিত থাকে
+   (ঘ) শূন্যহয়
+   **উত্তর: খ**
+
+24. **কোন ধাতু কক্ষ তাপমাত্রার তরল থাকে?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
+   (ক) রেডিয়াম
+   (খ) জিং
+   (গ) প্রোটনিয়াম
+   (ঘ) মারকারী
+   **উত্তর: ঘ**
+
+25. **পাকস্থলীতে কোন এসিড উৎপন্ন হয়?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
+   (ক) \text{HClO}
+   (খ) \text{HClO}_4
+   (গ) \text{HCl}
+   (ঘ) \text{HNO}_3
+   **উত্তর: গ**
+
+26. **কোন পদার্থ আন্তকণা আকর্ষণ বেশি?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
+   (ক) চিনি
+   (খ) পানি
+   (গ) তেল
+   (ঘ) অক্সিজেন
+   **উত্তর: ক**
+
+27. **কোনটির তরঙ্গ দৈর্ঘ্য বেশি?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
+   (ক) লাল আলো
+   (খ) নীল আলো
+   (গ) মাইক্রোওয়েভ
+   (ঘ) রেডিও ওয়েভ
+   **উত্তর: ক**
+
+28. **শুষ্ক বাতাসের তুলনায় ঘনত্ব :** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
+   (ক) বেশি
+   (খ) কম
+   (গ) সমান
+   (ঘ) কোন সম্পর্ক নেই
+   **উত্তর: ক**
+
+29. **স্থিতি শক্তি আছে কোন পদার্থের?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) তরল
+   (খ) বায়বীয়
+   (গ) অষ্ট্রীয়
+   (ঘ) কঠিন
+   **উত্তর: ঘ**
+
+30. **নীচের কোনটি মৃদু তড়িৎ বিশ্লেষ্য?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) \text{NaCl}
+   (খ) \text{H}_2\text{O}
+   (গ) \text{CaSO}_4
+   (ঘ) \text{H}_2\text{SO}_4
+   **উত্তর: ক**
+
+31. **২২ ক্যারেট স্বর্ণে কতভাগ স্বর্ণ থাকে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) 100%
+   (খ) 95.37%
+   (গ) 91.67%
+   (ঘ) 75%
+   **উত্তর: গ**
+
+32. **\text{H}_2\text{SO}_4-এ সালফারের জারণ সংখ্যা কত?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) +2
+   (খ) +4
+   (গ) +6
+   (ঘ) 0
+   **উত্তর: গ**
+
+33. **কোনটি শব্দের তীব্রতা লেভেল পরিমাপের একক?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) হার্টজ
+   (খ) ডেসিবেল
+   (গ) প্যাসকেল
+   (ঘ) টেসলা
+   **উত্তর: খ**
+
+34. **ক্রোমোসমের গঠন কি?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) DNA
+   (খ) প্রোটিন
+   (গ) RAN
+   (ঘ) DNA এবং প্রোটিন
+   **উত্তর: ঘ**
+
+35. **Knot কিসের একক?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) গতিবেগ
+   (খ) দূরত্ব
+   (গ) গভীর
+   (ঘ) ত্বরণ
+   **উত্তর: ক**
+
+36. **পরম শূন্য তাপমাত্রায় অর্ধপরিবাহী কিসের মত আচরণ করে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) পরিবাহী
+   (খ) অপরিবাহী
+   (গ) অর্ধপরিবাহী
+   (ঘ) কোনটিই নয়
+   **উত্তর: গ**
+
+37. **রক্ত কোষের ক্যান্সারকে কি বলে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) লিওকেমিয়া
+   (খ) এনিমিয়া
+   (গ) Blood Clotting
+   (ঘ) অ্যানজিনা
+   **উত্তর: ক**
+
+38. **কোন কারণে শব্দের প্রতিধ্বনি সৃষ্টি হয়?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
+   (ক) প্রতিফলন
+   (খ) প্রতিসরণ
+   (গ) উপরিপাতন
+   (ঘ) সমপাতন
+   **উত্তর: ক**
+
+39. **সমতল দর্পণ ব্যবহৃত হয় কোন যন্ত্র তৈরিতে?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*
+   (ক) পেরিস্কোপ
+   (খ) টেলিস্কোপ
+   (গ) ক্যামেরা
+   (ঘ) মাইক্রোস্কোপ
+   **উত্তর: ক**
+
+40. **ব্রোঞ্জ কোন দুটি ধাতুর সংকর?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*
+   (ক) অ্যালুমিনিয়াম ও টিন
+   (খ) কপার ও টিন
+   (গ) কপার ও গোল্ড
+   (ঘ) কপার ও সিলভার
+   **উত্তর: খ**
+
+41. **কোনটি পদার্থের জড়তা পরিমাপকের একক?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*
+   (ক) ভর
+   (খ) গতিবেগ
+   (গ) তাপমাত্রা
+   (ঘ) কৌনিকবেগ
+   **উত্তর: ক**
+
+42. **১ লিটার বিশুদ্ধ পানিতে H এর পরিমাণ কত?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*
+   (ক) 10^{-7}\text{ মোল}
+   (খ) 10^7\text{ মোল}
+   (গ) 10^{-6}\text{ মোল}
+   (ঘ) 10^{-5}\text{ মোল}
+   **উত্তর: ক**
+
+43. **কোনটি ক্ষার?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
+   (ক) \text{NH}_3
+   (খ) \text{NaSO}_4
+   (গ) \text{NaCl}
+   (ঘ) \text{HNO}_2
+   **উত্তর: ক**
+
+44. **কোন গ্যাসের ব্যাপন হার বেশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
+   (ক) \text{N}_2
+   (খ) \text{O}_2
+   (গ) \text{CO}_2
+   (ঘ) \text{H}_2
+   **উত্তর: ঘ**
+
+45. **কোনটি ভেক্টর রাশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
+   (ক) চাপ
+   (খ) ভরবেগ
+   (গ) কাজ
+   (ঘ) বল
+   **উত্তর: খ**
+
+46. **কোন পদার্থের আপেক্ষিক তাপ সর্বাধিক?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
+   (ক) বায়ু
+   (খ) পানি
+   (গ) লোহা
+   (ঘ) তামা
+   **উত্তর: খ**
+
+47. **প্রকৃতিতে প্রাপ্ত হাইড্রোজেনের আইসোটোপ কয়টি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
+   (ক) ২টি
+   (খ) ৩টি
+   (গ) ৪টি
+   (ঘ) ৫টি
+   **উত্তর: খ**
+
+48. **কত তাপমাত্রায় পানির ঘনত্ব বেশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
+   (ক) 10^\circ\text{C}
+   (খ) 4^\circ\text{C}
+   (গ) 85^\circ\text{C}
+   (ঘ) 100^\circ\text{C}
+   **উত্তর: খ**
+
+49. **ব্লিচিং পাউডারের সংকেত কোনটি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
+   (ক) \text{Ca(OCI)Cl}
+   (খ) \text{C}_6\text{H}_6\text{O}
+   (গ) \text{CaCO}_3
+   (ঘ) \text{HCl}
+   **উত্তর: ক**
+
+50. **কোন আলোতে সালোক সংশ্লেষণ ভালো হয় না?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
+   (ক) লাল
+   (খ) নীল
+   (গ) কমলা
+   (ঘ) হলুদ
+   **উত্তর: ঘ**
+
+51. **সূর্যের আলো পৃথিবীতে আসতে সময় লাগে প্রায়—** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*
+   (ক) ১০ মিনিট
+   (খ) ৮ মিনিট
+   (গ) ১২ মিনিট
+   (ঘ) ১৪ মিনিট
+
+52. **প্রকৃতিতে সবচেয়ে শক্ত পদার্থ কোনটি?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*
+   (ক) পিতল
+   (খ) ইস্পাত
+   (গ) গ্রানাইট
+   (ঘ) হীরা
+
+53. **গ্রিন হাউজ ইফেক্টের পরিপ্রেক্ষিতে বাংলাদেশের সবচেয়ে গুরুতর প্রত্যক্ষ ক্ষতি কী হবে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*
+   (ক) বৃষ্টিপাত কমে যাবে
+   (খ) সাইক্লোনের প্রবণতা বাড়বে
+   (গ) উত্তাপ অনেক বেড়ে যাবে
+   (ঘ) নিম্নভূমি নিমজ্জিত হবে
+
+54. **আল্ট্রাভায়োলেট রশ্মি নিম্নের কোন রোগ সৃষ্টি করে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 50 (ET: N/A)]*
+   (ক) এইডস
+   (খ) ব্রেন ক্যান্সার
+   (গ) ব্লাড ক্যান্সার
+   (ঘ) চর্ম ক্যান্সার
+
+55. **কোন পাখিকে 'অন্যপুষ্ট' বলা হয়?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*
+   (ক) কাক
+   (খ) কোকিল
+   (গ) কবুতর
+   (ঘ) কাকাতুয়া
+
+56. **কোলাজেন কী?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*
+   (ক) একটি কার্বোহাইড্রেট
+   (খ) একটি প্রোটিন
+   (গ) একটি লিপিড
+   (ঘ) একটি নিউক্লিক এসিড
+
+57. **তেজস্ক্রিয়তার একক কি?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*
+   (ক) রন্টজেন
+   (খ) কুরি
+   (গ) হেনরি
+   (ঘ) রেডিয়াম
+   **Ans: খ**
+
+58. **নিউক্লিয়ার রিয়েক্টর ব্যবহৃত কন্ট্রোল রড কি দিয়ে তৈরি? ক্যাডমিয়াম** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*
+
+59. **পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটে যখন আলো-** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*
+
+60. **তেজস্ক্রিয়তার একক কি?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*
+   (ক) রনজেন
+   (খ) কুরি
+   (গ) হেনরি
+   (ঘ) রেডিয়াম
+
+61. **Oncology কিসের সাথে জড়িত?** *[BCIC Assistant Programmer 2022 compact it 61 (ET: BUET)]*
+   (ক) চোখের গবেষণায়
+   (খ) ক্যান্সার গবেষণায়
+   (গ) হাড়ের সাথে জড়িত
+   (ঘ) হার্টের সাথে সম্পর্কিত
+
+62. **নিচের কোনটি সর্বোচ্চ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*
+   (ক) ১ গিগাবাইট
+   (খ) ১০০ মেগাবাইট
+   (গ) ১০০০ মেগাবাইট
+   (ঘ) ১০০০০ মেগাবাইট
+
+63. **When a beam of light travels through media of two different densities, if the angle of incidence is greater than the critical angle, ____ occurs.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*
+   (a) Refraction
+   (b) Reflection
+   (c) Incidence
+   (d) Criticism
+
+64. **বায়ুমণ্ডলের যে স্তরে বেতার তরঙ্গ প্রতিফলিত হয়-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*
+   (a) স্ট্র্যাটোস্ফিয়ার
+   (b) ট্রপোস্ফিয়ার
+   (c) আয়নোস্ফিয়ার
+   (d) ওজোনস্তর
+
+65. **What is the brightest planet seen from Earth?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*
+   a) Venus
+   b) Mars
+   c) Mercury
+   d) Jupiter
+
+66. **What is the noun of the extent Rover sent by NASA to the man?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*
+   a. Superior
+   b. Opporunity
+   c. Perseverance
+   d. Sprit
+
+67. **3\text{N} ও 4\text{N} মানের দুটি বল লম্বভাবে ক্রিয়া করলে লব্ধির মান কত?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
+   A. 2\text{N}
+   B. 3\text{N}
+   C. 5\text{N}
+   D. 7\text{N}
+
+68. **একটি তেজস্ক্রিয় মৌলের অর্ধায়ু ২০০ বছর। মৌলটির ৭৫% ক্ষয় হতে কত বছর লাগবে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
+   A. 150
+   B. 300
+   C. 400
+   D. 450
+
+69. **If an atom loses an e- it will be turned into?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*
+   a) Neutral
+   b) Anion
+   c) Proton
+   d) Cation
+
+70. **'Dry Ice' is produced from;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*
+   ক. Oxygen
+   খ. Sulphur di oxide
+   গ. Nitrogen
+   ঘ. Carbon di oxide
+
+71. **DNA is found in;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*
+   ক. Chromosome
+   খ. Lissomes
+   গ. Ribosome
+   ঘ. Galel Complex
+
+72. **কোনটি এন্টিবায়োটিক?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*
+   ক. ইনসুলিন
+   খ. পেপসিন
+   গ. ইথিলিন
+   ঘ. পেনিসিলিন
+
+73. **What is the power required by a pump to draw 10 liters of water to a height of 10 meters, every second?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*
+   A. 980J
+   B. 100 kw
+   C. 900 w
+   D. 960 kw
+
+74. **What kind of energy is stored in a stressed spring?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*
+   A. Potential energy
+   B. Kinetic energy
+   C. Chemical Energy
+   D. thermal energy
+
+75. **Which time of the following properties of a body cannot be changed with an applied force?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*
+   A. length
+   B. mass
+   C. shape
+   D. volume
+
+76. **How much force should be exerted on a steel wire of cross-sectional area 0.1\text{cm}^2 in order to double its length? (Y = 2 \times 10^{11}\text{ N/m}^2)** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*
+   A. 2 \times 10^6\text{ N}
+   B. 2 \times 10^7\text{ N}
+   C. 2 \times 10^8\text{ N}
+   D. 2 \times 10^9\text{ N}
+
+77. **What is the angular momentum of the election in the lowest orbit of hydrogen atom?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*
+   A. h
+   B. h/2
+   C. \text{h}/2\pi
+   D. 2\pi/\text{h}
+
+**Answer the following questions, Assume table name: Employee** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 44]]*
+   a. Find the details of employees whose name starts with "A".
+   b. Find the details employes whose name ended with "y".
+   c. Find the name and phone of employees who lives in "Savar"?
+   d. Find the name, phone number and salary of employees whose salary is greater than 40000 tk and who live in "Dhaka"? e. Find all the details of employees, displaying the name as "My Name", who live in "Savar".
+
+**তরল পদার্থে তাপ স্থানান্তর প্রক্রিয়ার নাম কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. পরিচালন
+   খ. পরিবহন
+   গ. বিকিরণ
+   ঘ. উপরের সবগুলি
+
+**'কপর্দকহীন' অর্থ-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. বোকা
+   খ. নিঃস্ব
+   গ. অসহায়
+   ঘ. মলিন
+
+**Please look ... the word in the dictionary.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. Up
+   খ. into
+   গ. To
+   ঘ for
+
+**I took an aspirin to ... the pain in my knee.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. accelerate
+   খ. deviate
+   গ. alleviate
+   ঘ. Accompany
+
+**Omar Khayyam is seldom born.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. A
+   খ. The
+   গ. An
+   ঘ. Only
+
+**পরম শূন্য তাপমাত্রা কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ২৭৩± সেন্টিগ্রেড
+   খ. -২৭৩± ফারেনহাইট
+   গ. ০± সেন্টিগ্রেড
+   ঘ. ০± কেলভিন
+
+**বাতাসের আর্দ্রতা মাপার যন্ত্রের নাম কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. মাইক্রোমিটার
+   খ. জেনারেটর
+   গ. আর্দ্রতামিটার
+   ঘ. হাইগ্রোমিটার
+
+**আকাশে রংধনু সৃষ্টির কারণ-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ধূলিকণা
+   খ. বৃষ্টির কণা
+   গ. বায়োস্তর
+   ঘ. অতিবেগুনি রশ্মি
+
+**কোনটি মৌলিক পদার্থ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. লোহা
+   খ. ব্রোঞ্জ
+   গ. পানি
+   ঘ. ইস্পাত
+
+**কোনটি চুম্বক পদার্থ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. পারদ
+   খ. কোবাল্ট
+   গ. বিসমাথ
+   ঘ. অ্যান্টিমনি
+
+**কোন ঋতুতে শব্দ বায়ু মাধ্যমে দ্রুততম চলে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. শীতকালে
+   খ. গ্রীষ্মকালে
+   গ. বর্ষাকালে
+   ঘ. বসন্তকালে
+
+78. **A communication channel has a signal power of P_s = 50\\text\{ mW\} and a noise power of P_n = 5\\text\{ mW\}** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 85]]*
+   a) Find the Signal-to-Noise Ratio (SNR) in linear form and decibels
+   (dB) .
+   b) If the bandwidth of the channel is B=3 MHz, calculate the channel capacity using Shannon's formula.
+
+79. **Which of the following is a variable-length, letter-and-number error-detection scheme, where on the sender side, the data is appended with the remainder obtained by dividing the data bits by a predetermined polynomial, and on the receiver side, error detection is performed by checking whether the received sequence is divisible by the same polynomial? [ নিচের কোনটি একটি variable-length, অক্ষর ও সংখ্যাভিত্তিক error-detection পদ্ধতি, যেখানে-প্রেরক (sender) পাশে ডাটা বিটকে একটি পূর্বনির্ধারিত polynomial দ্বারা ভাগ করে যে remainder পাওয়া যায় তা ডাটার সাথে যুক্ত করা হয়। গ্রাহক (receiver) পাশে প্রাপ্ত ডাটা একই polynomial দ্বারা ভাগ করে দেখা হয় ডাটা নিঃশেষে বিভাজ্য কি না]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
+   (a) CRC
+   (b) Hamming code
+   (c) Horizontal parity check
+   (d) Vertical parity check
+
+80. **Which of the following in the RAID configuration for achieving the highest-speed disk access at the cost of reliability? [ নিচের কোন RAID configuration সবচেয়ে বেশি disk access speed প্রদান করে, তবে Reliability( নির্ভরযোগ্যতা) কম থাকে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
+   (a) RAID 0
+   (b) RAID 1
+   (c) RAID 5
+   (d) RAID 6
+
+81. **For two 8-bit signed integers A and B in 2's complement format, which of the following will cause an overflow when A and B are added? [ দুই 8-bit signed integer A এবং B (2's complement ফরম্যাটে) যোগ করার সময় নিচের কোন ক্ষেত্রে overflow ঘটবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
+   (a) 0111 1111 and 1111 1110
+   (b) 0111 1111 and 0111 1110
+   (c) 1000 0000 and 0111 0000
+   (d) 1111 1111 and 1111 1111
+
+82. **The following postfix expression is evaluated where A = 14, B = 3, C = 5, and D = 6. What is its result? [ নিচের postfix expression টি evaluate করো, যেখানে A = 4, B = 3, C = 5, D = 6] A B C \\times + D B - C \\times -** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
+   (a) -3
+   (b) 0
+   (c) 14
+   (d) 403
+
+83. **Which of the following RAID levels allows data recovery if one disk fails? [ নিচের কোন RAID level এ এক ডিস্ক ব্যর্থ হলে ডাটা পুনরুদ্ধার সম্ভব?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
+   (a) RAID 0
+   (b) RAID 1
+   (c) RAID 6
+   (d) RAID 5
+
+84. **Which of the following is a computer architecture where multiple instructions execute in parallel by slightly offsetting the execution of different instructions? [ নিচের কোন কম্পিউটার আর্কিটেকচারে একাধিক instruction parallelভাবে execute হয়, কিন্তু execution কিছুটা offset (অল্প সময়ের ব্যবধান) দিয়ে হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*
+   (a) RISC
+   (b) Pipeline
+   (c) VLIW
+   (d) Von Neumann Architecture
+
+85. **For a non-negative integer X, which of the following operations gives the remainder after division of X by 8? [ একটি অঋণাত্মক পূর্ণসংখ্যা X-এর জন্য, নিচের কোন অপারেশনটি X কে 8 দিয়ে ভাগ করার পর অবশিষ্ট (remainder) দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
+   (a) Bitwise AND with 7
+   (b) Bitwise AND with 8
+   (c) Bitwise OR with 8
+   (d) Right shift X by 3 bits
+
+86. **Which of the following correctly describes RAID 5? [ নিচের কোনটি RAID 5-এর সঠিক বর্ণনা?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*
+   (a) Disk striping without parity
+   (b) Block-level striping with a dedicated parity disk
+   (c) Block-level striping with distributed parity disks
+   (d) Mirroring without parity
+
+87. **A transaction that leaves the database in an inconsistent state if partially executed violates— [কোন transaction database কে inconsistent state-এ ফেলে, যদি এটি partial execute হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Atomicity
+   (b) Consistency
+   (c) Isolation
+   (d) Durability
+
+88. **(123.4)_\{10\} = ()_\{16\}?** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
+   (a) (7B.4)_\{16\}
+   (b) (7B.6)_\{16\}
+   (c) (7B.8)_\{16\}
+   (d) (7C.6)_\{16\}
+
+89. **If x = 2 and y = 3, what is the value of 2x^2 + 3y^2? [ যদি x = 2 এবং y = 3, তাহলে 2x^2 + 3y^2 কত হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
+   (a) 25
+   (b) 30
+   (c) 35
+   (d) 40
+
+90. **Explain the concepts of:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222-223]]*
+   a. Reinforcement Learning (RL)
+   b. Deep Learning (DL)
+   c. Federated Learning (FL) Differentiate them in terms of learning method, data usage, and provide one real-world example for each.
+
+91. **Explain the following addressing modes in the 8086 microprocessors:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 225]]*
+   a. Direct Addressing
+   b. Immediate Addressing
+   c. Register Addressing Differentiate among them with examples.
+
+92. **(b) Simplify using K-map. F(A,B,C) = A'BC' + A'BC + AB'C' + AB'C + ABC' + ABC** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
+
+93. **(a) Create an example of a trigger.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+
+94. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
+   (a) You are given the network
+   128. 0.0.0/16. You need to create 492 subnets.
+   (i) Calculate the number of hosts per subnet.
+   (ii) Determine the subnet mask.
+
+95. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
+   (b) Alice wants to send a message to Bob using asymmetric key cryptography.
+   (i) Which key is used for encryption?
+   (ii) Which key is used for decryption?
+
+96. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
+   (a) Given the following traversals of a binary tree: Preorder: 3, 9, 20, 17,
+   6. In order: 9, 3, 17, 20,
+   6. Determine whether a binary tree can be constructed from the given traversals. If possible, construct the tree.
+
+97. **(b) Write a real-life example where Depth-First Search (DFS) performs more efficiently than Breadth-First Search (BFS). Why is DFS better in that situation?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 234]]*
+
+98. **(b) What is the advantage of the Agile methodology over the Waterfall methodology?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
+
+99. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?
+   (02) 
+   (খ) দুটি মহাদেশের অংশ এমন একটি দেশের নাম লিখুন।
+   (গ) IRRI এর পূর্ণরূপ লিখুন।
+   (03)
+
+100. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?
+   (02) 
+   (খ) পরিবেশ রক্ষায় কোন ধরনের উৎস হতে বিদ্যুৎ উৎপাদনের মনোযোগ দেয়া আবশ্যক বলে আপনি মনে করেন।
+   (02)
+
+101. **একাধিক স্বাধীন বাক্যকে একটি বাক্যে লিখলে সেগুলোর মাঝখানে কোন চিহ্ন বসে?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*
+   (a) হাইফেন
+   (b) সেমিকোলন
+   (c) ড্যাশ
+   (d) কমা
+
+102. **কোনটি অস্তিবাচক বাক্য?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*
+   (a) সে কিছুতেই সন্তুষ্ট নয়
+   (b) দুবারের বেশী ফোন করিনি
+   (c) আমি অন্য কোথাও যাব না
+   (d) আপনি আমায় অবিশ্বাস করেছেন
+
+103. **সাদাটে হলুদ বর্ণকে কী বলা হয়?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*
+   (a) হলদেটে
+   (b) ফিকে
+   (c) পাণ্ডুর
+   (d) বাসন্তি
+
+104. **Which one of the following is true? [ নিচের কোনটি সত্য? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*
+   (a) Bangladesh is a lower middle-income country
+   (b) Bangladesh is a upper middle-income country
+   (c) Bangladesh is a low-income country
+   (d) Bangladesh is a high-income country
+
+105. **The Mona Lisa portrait was painted by Leonardo da Vinci in the— [ লিওনার্দো দা ভিঞ্চি মোনালিসা প্রতিকৃতিটি কোন শতাব্দীতে এঁকেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*
+   (a) 15th century
+   (b) 14th century
+   (c) 16th century
+   (d) 17th century
+
+106. **Who wrote the book 'Politics'? [ 'Politics' বইটি কে লিখেছেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*
+   (a) Aristotle
+   (b) Socrates
+   (c) Plato
+   (d) Pythagoras
+
+107. **Pythagoras was a Greek— [ পিথাগোরাস ছিলেন একজন গ্রিক— ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*
+   (a) Philosopher
+   (b) Mathematician
+   (c) Accountant
+   (d) a & b
+
+108. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Games Championship held in January 2024? [ ২০২৪ সালের জানুয়ারিতে অনুষ্ঠিত ৪৪তম জাতীয় অ্যাথলেটিক্স প্রতিযোগিতায় ১০০ মিটার স্প্রিন্টে দ্রুততম মানবী কে হয়েছেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*
+   (a) Tahmina Rahman
+   (b) Sonia Akhtar
+   (c) Sharifa Khatun
+   (d) Shirin Akhtar
+
+109. **He said, “Can you sing?” And I said, “No.”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*
+   (a) He asked me that could I sing and I refused.
+   (b) He asked me if I could sing and I said that I couldn't.
+   (c) I denied, when he asked me if I could sing.
+   (d) He asked me if I could sing and I said no.
+
+110. **He said, “Will you listen to such a man?”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*
+   (a) He asked them will you listen to such a man.
+   (b) He asked them are you listening to such a man.
+   (c) He asked them whether they would listen to such a man.
+   (d) He asked them whether they will listen to such a man.
+
+111. **The following is not a prime number that is divisible only by itself and 1. Which of the following is a not prime number? [ নিচের কোনটি মৌলিক সংখ্যা (Prime Number)? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
+   (a) 2
+   (b) 7
+   (c) 99
+   (d) 181
+
+112. **What will be the output of this C program? [ নিচের C প্রোগ্রামটির আউটপুট কী হবে? ] \#include <stdio.h>
+
+int main() \{
+
+    float p=10.5;
+
+    int a = 5\*p+5.0;
+
+    printf("%d\\n",** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 346]]*
+   a) ;
+
+    return 0;
+
+\}
+   (a) 
+   57. 500000
+   (b) 57
+   (c) 
+   57. 000000
+   (d) The program has errors and will not run.
+
+113. **What is the output of this Java program? [ নিচের Java প্রোগ্রামটির আউটপুট কী হবে? ] class Test \{
+
+    int i = 1;
+
+\}
+
+public class main\{
+
+    public static void main(String args[]) \{
+
+        Test t ;
+
+        System.out.println(t.i);
+
+    \}
+
+\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 346]]*
+   a) The program will cause an runtime exception because the variable “i” was not initialized.
+   b) The program will cause an compile error because the object “t” was not initialized.
+   c) 0
+   d) A garbage value
+
+114. **Which one is the first high level programming language? [ প্রথম উচ্চ-স্তরের (High level) প্রোগ্রামিং ভাষা কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
+   (a) C
+   (b) COBOL
+   (c) FORTRAN
+   (d) C++
+
+115. **The time required to search an element in a linked list of length n is— [ n দৈর্ঘ্যের লিঙ্কড লিস্টে কোনো এলিমেন্ট সার্চ করার সময় কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
+   (A) O(log n)
+   (B) O(n)
+   (C) O(1)
+   (D) O(n^2)
+
+## International Affairs (106)
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) David Baker
    (b) John Jumper
@@ -1690,681 +2487,17 @@
 ১০। War & Peace কার লেখা? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
    40) [bitbox it book 163]__
 
-## Everyday Science (100)
-1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
-   ক. সিলভার ব্রোমাইড
-   খ. সিলভার ফ্লোরাইড
-   গ. সিলভার ক্লোরাইড
-   ঘ. অ্যামোনিয়াম ক্লোরাইড
-
-2. **কোন রঙের কাপে চা তাড়াতাড়ি ঠান্ডা হয়?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
-   ক. সাদা
-   খ. কালো
-   গ. লাল
-   ঘ. বেগুনি
-
-3. **কাঁদানে গ্যাসের অপর নাম কী?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
-   ক. মিথেন
-   খ. ইথেন
-   গ. নাইট্রোজেন
-   ঘ. ক্লোরোপিকরিন
-
-4. **ওজোন স্তর বায়ুমণ্ডলের কোন স্তরে অবস্থিত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
-   ক. ট্রপোমণ্ডল
-   খ. স্ট্র্যাটোমণ্ডল
-   গ. মেসোমণ্ডল
-   ঘ. তাপমণ্ডল
-
-5. **বিশ্বব্রহ্মাণ্ডে সবচেয়ে বেশি প্রাপ্ত গ্যাস কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
-   ক. নাইট্রোজেন
-   খ. অক্সিজেন
-   গ. হাইড্রোজেন
-   ঘ. কার্বন ডাই-অক্সাইড
-
-6. **কোন যৌগটি কাপড়ের দাগ তুলতে সাহায্য করে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
-   ক. সোডিয়াম কার্বনেট
-   খ. সোডিয়াম বাই কার্বনেট
-   গ. ক্যালসিয়াম কার্বনেট
-   ঘ. ক্যালসিয়াম বাই কার্বনেট
-
-7. **রঙিন টেলিভিশন থেকে যে ক্ষতিকর রশি বের হয় তার নাম?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
-   ক. গামা রশি
-   খ. রঞ্জন রশ্মি
-   গ. বিটা রশ্মি
-   ঘ. কসমিক রশ্মি
-
-8. **কোন বোমায় মানুষ মরে, কিন্তু কোনো স্থাপনার ক্ষতি হয় না?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
-   ক. নাপাম
-   খ. নিউট্রন
-   গ. হাইড্রোজেন
-   ঘ. এটম
-
-9. **'Thalassemia' is a hereditary disease affecting-** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*
-   (a) Lungs
-   (b) Blood
-   (c) Heart
-   (d) Kidney
-
-10. **কোন রংগুলিকে মৌলিক রং বলা হয়?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
-   **Ans:** লাল, নীল, হলুদ
-
-11. **যে সর্বোচ্চ শ্রুতি সীমার উপরে মানুষ বধির হতে পারে তা হচ্ছে-** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
-   **Ans:** ১০৫ ডিবি
-
-12. **সূর্য গ্রহণের সময় কোনটি হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
-   a) পৃথিবী সূর্য ও চাঁদের মাঝে থাকে
-   b) পূর্ণিমা তিথি
-   c) চাঁদ পৃথিবী ও সূর্যের মাঝে থাকে
-   d) চাঁদ পৃথিবী ও চাঁদের মাঝে ৯০° কোন তৈরি করে।
-
-13. **ইদানিং সুপার ফুড বলে পরিচিত খাদ্য কি বৈশিষ্ট্য বহন করে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
-   a) অনিদ্রা দূর করে
-   b) মানসিক চাপ দূর করে
-   c) উচ্চ রক্তচাপ নিয়ন্ত্রণ করে
-   d) এটি একটি প্রাকৃতিক প্রতিবিধান
-
-14. **পৃথিবী পৃষ্ঠের গড় তাপমাত্রা কত ডিগ্রী সেলসিয়াস?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
-   a) ১৪
-   b) ২৪
-   c) ১৮
-   d) ১৫
-
-15. **মহাবিশ্বে মৌলিক বল কয়টি?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
-   (ক) ৩ টি
-   (খ) ৪ টি
-   (গ) ৫ টি
-   (ঘ) ৬ টি
-   **উত্তর: ক**
-
-16. **কোন রশ্মির ভেদন ক্ষমতা বেশি?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
-   (ক) আলফা
-   (খ) বিটা
-   (গ) গামা
-   (ঘ) সমগুলিরসমান
-   **উত্তর: গ**
-
-17. **পৃথিবীর কেন্দ্রে অভিকর্ষক ত্বরনের মান কত?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
-   (ক) শূন্য
-   (খ) 9.8\text{ m/s}^2
-   (গ) 4.9\text{ m/s}^2
-   (ঘ) অসীম
-   **উত্তর: ক**
-
-18. **কোনটি গ্রীন হাউজ গ্যাস নয়?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
-   (ক) \text{O}_2
-   (খ) \text{O}_3
-   (গ) \text{CO}_3
-   (ঘ) Water Vapor
-   **উত্তর: গ**
-
-19. **লেন্সের ক্ষমতার একক কী?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
-   (ক) ডায়াপটার
-   (খ) ডেসিবেল
-   (গ) ওয়াট
-   (ঘ) মিটার
-   **উত্তর: ক**
-
-20. **কোন বস্তুকে ভূ-পৃষ্ঠ হতে 19.6\text{m} উপর থেকে ছেড়ে পৌঁছাতে বস্তুটি কত সময় লাগবে?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
-   (ক) 2\text{ sec}
-   (খ) 1\text{ sec}
-   (গ) \frac{1}{2}\text{ sec}
-   (ঘ) 9\text{ sec}
-   **উত্তর: ক**
-
-21. **কোনটি মুদ্রা ধাতু নয়?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
-   (ক) কপার
-   (খ) সিলভার
-   (গ) গোল্ড
-   (ঘ) রন্টজেনিয়াম
-   **উত্তর: ঘ**
-
-22. **CNG এর মূল উপাদান কী?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
-   (ক) অক্সিজেন
-   (খ) মিথেন
-   (গ) ইথেন
-   (ঘ) অকটেন
-   **উত্তর: খ**
-
-23. **তাপমাত্রা বাড়লে পরিবাহীর রোধ ---** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
-   (ক) বাড়ে
-   (খ) কমে
-   (গ) অপরিবর্তিত থাকে
-   (ঘ) শূন্যহয়
-   **উত্তর: খ**
-
-24. **কোন ধাতু কক্ষ তাপমাত্রার তরল থাকে?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
-   (ক) রেডিয়াম
-   (খ) জিং
-   (গ) প্রোটনিয়াম
-   (ঘ) মারকারী
-   **উত্তর: ঘ**
-
-25. **পাকস্থলীতে কোন এসিড উৎপন্ন হয়?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
-   (ক) \text{HClO}
-   (খ) \text{HClO}_4
-   (গ) \text{HCl}
-   (ঘ) \text{HNO}_3
-   **উত্তর: গ**
-
-26. **কোন পদার্থ আন্তকণা আকর্ষণ বেশি?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
-   (ক) চিনি
-   (খ) পানি
-   (গ) তেল
-   (ঘ) অক্সিজেন
-   **উত্তর: ক**
-
-27. **কোনটির তরঙ্গ দৈর্ঘ্য বেশি?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
-   (ক) লাল আলো
-   (খ) নীল আলো
-   (গ) মাইক্রোওয়েভ
-   (ঘ) রেডিও ওয়েভ
-   **উত্তর: ক**
-
-28. **শুষ্ক বাতাসের তুলনায় ঘনত্ব :** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
-   (ক) বেশি
-   (খ) কম
-   (গ) সমান
-   (ঘ) কোন সম্পর্ক নেই
-   **উত্তর: ক**
-
-29. **স্থিতি শক্তি আছে কোন পদার্থের?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) তরল
-   (খ) বায়বীয়
-   (গ) অষ্ট্রীয়
-   (ঘ) কঠিন
-   **উত্তর: ঘ**
-
-30. **নীচের কোনটি মৃদু তড়িৎ বিশ্লেষ্য?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) \text{NaCl}
-   (খ) \text{H}_2\text{O}
-   (গ) \text{CaSO}_4
-   (ঘ) \text{H}_2\text{SO}_4
-   **উত্তর: ক**
-
-31. **২২ ক্যারেট স্বর্ণে কতভাগ স্বর্ণ থাকে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) 100%
-   (খ) 95.37%
-   (গ) 91.67%
-   (ঘ) 75%
-   **উত্তর: গ**
-
-32. **\text{H}_2\text{SO}_4-এ সালফারের জারণ সংখ্যা কত?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) +2
-   (খ) +4
-   (গ) +6
-   (ঘ) 0
-   **উত্তর: গ**
-
-33. **কোনটি শব্দের তীব্রতা লেভেল পরিমাপের একক?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) হার্টজ
-   (খ) ডেসিবেল
-   (গ) প্যাসকেল
-   (ঘ) টেসলা
-   **উত্তর: খ**
-
-34. **ক্রোমোসমের গঠন কি?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) DNA
-   (খ) প্রোটিন
-   (গ) RAN
-   (ঘ) DNA এবং প্রোটিন
-   **উত্তর: ঘ**
-
-35. **Knot কিসের একক?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) গতিবেগ
-   (খ) দূরত্ব
-   (গ) গভীর
-   (ঘ) ত্বরণ
-   **উত্তর: ক**
-
-36. **পরম শূন্য তাপমাত্রায় অর্ধপরিবাহী কিসের মত আচরণ করে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) পরিবাহী
-   (খ) অপরিবাহী
-   (গ) অর্ধপরিবাহী
-   (ঘ) কোনটিই নয়
-   **উত্তর: গ**
-
-37. **রক্ত কোষের ক্যান্সারকে কি বলে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) লিওকেমিয়া
-   (খ) এনিমিয়া
-   (গ) Blood Clotting
-   (ঘ) অ্যানজিনা
-   **উত্তর: ক**
-
-38. **কোন কারণে শব্দের প্রতিধ্বনি সৃষ্টি হয়?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) প্রতিফলন
-   (খ) প্রতিসরণ
-   (গ) উপরিপাতন
-   (ঘ) সমপাতন
-   **উত্তর: ক**
-
-39. **সমতল দর্পণ ব্যবহৃত হয় কোন যন্ত্র তৈরিতে?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*
-   (ক) পেরিস্কোপ
-   (খ) টেলিস্কোপ
-   (গ) ক্যামেরা
-   (ঘ) মাইক্রোস্কোপ
-   **উত্তর: ক**
-
-40. **ব্রোঞ্জ কোন দুটি ধাতুর সংকর?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*
-   (ক) অ্যালুমিনিয়াম ও টিন
-   (খ) কপার ও টিন
-   (গ) কপার ও গোল্ড
-   (ঘ) কপার ও সিলভার
-   **উত্তর: খ**
-
-41. **কোনটি পদার্থের জড়তা পরিমাপকের একক?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*
-   (ক) ভর
-   (খ) গতিবেগ
-   (গ) তাপমাত্রা
-   (ঘ) কৌনিকবেগ
-   **উত্তর: ক**
-
-42. **১ লিটার বিশুদ্ধ পানিতে H এর পরিমাণ কত?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*
-   (ক) 10^{-7}\text{ মোল}
-   (খ) 10^7\text{ মোল}
-   (গ) 10^{-6}\text{ মোল}
-   (ঘ) 10^{-5}\text{ মোল}
-   **উত্তর: ক**
-
-43. **কোনটি ক্ষার?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
-   (ক) \text{NH}_3
-   (খ) \text{NaSO}_4
-   (গ) \text{NaCl}
-   (ঘ) \text{HNO}_2
-   **উত্তর: ক**
-
-44. **কোন গ্যাসের ব্যাপন হার বেশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
-   (ক) \text{N}_2
-   (খ) \text{O}_2
-   (গ) \text{CO}_2
-   (ঘ) \text{H}_2
-   **উত্তর: ঘ**
-
-45. **কোনটি ভেক্টর রাশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
-   (ক) চাপ
-   (খ) ভরবেগ
-   (গ) কাজ
-   (ঘ) বল
-   **উত্তর: খ**
-
-46. **কোন পদার্থের আপেক্ষিক তাপ সর্বাধিক?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
-   (ক) বায়ু
-   (খ) পানি
-   (গ) লোহা
-   (ঘ) তামা
-   **উত্তর: খ**
-
-47. **প্রকৃতিতে প্রাপ্ত হাইড্রোজেনের আইসোটোপ কয়টি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
-   (ক) ২টি
-   (খ) ৩টি
-   (গ) ৪টি
-   (ঘ) ৫টি
-   **উত্তর: খ**
-
-48. **কত তাপমাত্রায় পানির ঘনত্ব বেশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
-   (ক) 10^\circ\text{C}
-   (খ) 4^\circ\text{C}
-   (গ) 85^\circ\text{C}
-   (ঘ) 100^\circ\text{C}
-   **উত্তর: খ**
-
-49. **ব্লিচিং পাউডারের সংকেত কোনটি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
-   (ক) \text{Ca(OCI)Cl}
-   (খ) \text{C}_6\text{H}_6\text{O}
-   (গ) \text{CaCO}_3
-   (ঘ) \text{HCl}
-   **উত্তর: ক**
-
-50. **কোন আলোতে সালোক সংশ্লেষণ ভালো হয় না?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
-   (ক) লাল
-   (খ) নীল
-   (গ) কমলা
-   (ঘ) হলুদ
-   **উত্তর: ঘ**
-
-51. **সূর্যের আলো পৃথিবীতে আসতে সময় লাগে প্রায়—** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*
-   (ক) ১০ মিনিট
-   (খ) ৮ মিনিট
-   (গ) ১২ মিনিট
-   (ঘ) ১৪ মিনিট
-
-52. **প্রকৃতিতে সবচেয়ে শক্ত পদার্থ কোনটি?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*
-   (ক) পিতল
-   (খ) ইস্পাত
-   (গ) গ্রানাইট
-   (ঘ) হীরা
-
-53. **গ্রিন হাউজ ইফেক্টের পরিপ্রেক্ষিতে বাংলাদেশের সবচেয়ে গুরুতর প্রত্যক্ষ ক্ষতি কী হবে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*
-   (ক) বৃষ্টিপাত কমে যাবে
-   (খ) সাইক্লোনের প্রবণতা বাড়বে
-   (গ) উত্তাপ অনেক বেড়ে যাবে
-   (ঘ) নিম্নভূমি নিমজ্জিত হবে
-
-54. **আল্ট্রাভায়োলেট রশ্মি নিম্নের কোন রোগ সৃষ্টি করে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 50 (ET: N/A)]*
-   (ক) এইডস
-   (খ) ব্রেন ক্যান্সার
-   (গ) ব্লাড ক্যান্সার
-   (ঘ) চর্ম ক্যান্সার
-
-55. **কোন পাখিকে 'অন্যপুষ্ট' বলা হয়?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*
-   (ক) কাক
-   (খ) কোকিল
-   (গ) কবুতর
-   (ঘ) কাকাতুয়া
-
-56. **কোলাজেন কী?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*
-   (ক) একটি কার্বোহাইড্রেট
-   (খ) একটি প্রোটিন
-   (গ) একটি লিপিড
-   (ঘ) একটি নিউক্লিক এসিড
-
-57. **তেজস্ক্রিয়তার একক কি?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*
-   (ক) রন্টজেন
-   (খ) কুরি
-   (গ) হেনরি
-   (ঘ) রেডিয়াম
-   **Ans: খ**
-
-58. **নিউক্লিয়ার রিয়েক্টর ব্যবহৃত কন্ট্রোল রড কি দিয়ে তৈরি? ক্যাডমিয়াম** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*
-
-59. **পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটে যখন আলো-** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*
-
-60. **তেজস্ক্রিয়তার একক কি?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*
-   (ক) রনজেন
-   (খ) কুরি
-   (গ) হেনরি
-   (ঘ) রেডিয়াম
-
-61. **Oncology কিসের সাথে জড়িত?** *[BCIC Assistant Programmer 2022 compact it 61 (ET: BUET)]*
-   (ক) চোখের গবেষণায়
-   (খ) ক্যান্সার গবেষণায়
-   (গ) হাড়ের সাথে জড়িত
-   (ঘ) হার্টের সাথে সম্পর্কিত
-
-62. **নিচের কোনটি সর্বোচ্চ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*
-   (ক) ১ গিগাবাইট
-   (খ) ১০০ মেগাবাইট
-   (গ) ১০০০ মেগাবাইট
-   (ঘ) ১০০০০ মেগাবাইট
-
-63. **When a beam of light travels through media of two different densities, if the angle of incidence is greater than the critical angle, ____ occurs.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*
-   (a) Refraction
-   (b) Reflection
-   (c) Incidence
-   (d) Criticism
-
-64. **বায়ুমণ্ডলের যে স্তরে বেতার তরঙ্গ প্রতিফলিত হয়-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*
-   (a) স্ট্র্যাটোস্ফিয়ার
-   (b) ট্রপোস্ফিয়ার
-   (c) আয়নোস্ফিয়ার
-   (d) ওজোনস্তর
-
-65. **What is the brightest planet seen from Earth?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*
-   a) Venus
-   b) Mars
-   c) Mercury
-   d) Jupiter
-
-66. **What is the noun of the extent Rover sent by NASA to the man?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*
-   a. Superior
-   b. Opporunity
-   c. Perseverance
-   d. Sprit
-
-67. **3\text{N} ও 4\text{N} মানের দুটি বল লম্বভাবে ক্রিয়া করলে লব্ধির মান কত?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
-   A. 2\text{N}
-   B. 3\text{N}
-   C. 5\text{N}
-   D. 7\text{N}
-
-68. **একটি তেজস্ক্রিয় মৌলের অর্ধায়ু ২০০ বছর। মৌলটির ৭৫% ক্ষয় হতে কত বছর লাগবে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
-   A. 150
-   B. 300
-   C. 400
-   D. 450
-
-69. **If an atom loses an e- it will be turned into?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*
-   a) Neutral
-   b) Anion
-   c) Proton
-   d) Cation
-
-70. **'Dry Ice' is produced from;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*
-   ক. Oxygen
-   খ. Sulphur di oxide
-   গ. Nitrogen
-   ঘ. Carbon di oxide
-
-71. **DNA is found in;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*
-   ক. Chromosome
-   খ. Lissomes
-   গ. Ribosome
-   ঘ. Galel Complex
-
-72. **কোনটি এন্টিবায়োটিক?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*
-   ক. ইনসুলিন
-   খ. পেপসিন
-   গ. ইথিলিন
-   ঘ. পেনিসিলিন
-
-73. **What is the power required by a pump to draw 10 liters of water to a height of 10 meters, every second?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*
-   A. 980J
-   B. 100 kw
-   C. 900 w
-   D. 960 kw
-
-74. **What kind of energy is stored in a stressed spring?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*
-   A. Potential energy
-   B. Kinetic energy
-   C. Chemical Energy
-   D. thermal energy
-
-75. **Which time of the following properties of a body cannot be changed with an applied force?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*
-   A. length
-   B. mass
-   C. shape
-   D. volume
-
-76. **How much force should be exerted on a steel wire of cross-sectional area 0.1\text{cm}^2 in order to double its length? (Y = 2 \times 10^{11}\text{ N/m}^2)** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*
-   A. 2 \times 10^6\text{ N}
-   B. 2 \times 10^7\text{ N}
-   C. 2 \times 10^8\text{ N}
-   D. 2 \times 10^9\text{ N}
-
-77. **What is the angular momentum of the election in the lowest orbit of hydrogen atom?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*
-   A. h
-   B. h/2
-   C. \text{h}/2\pi
-   D. 2\pi/\text{h}
-
-**Answer the following questions, Assume table name: Employee** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 44]]*
-   a. Find the details of employees whose name starts with "A".
-   b. Find the details employes whose name ended with "y".
-   c. Find the name and phone of employees who lives in "Savar"?
-   d. Find the name, phone number and salary of employees whose salary is greater than 40000 tk and who live in "Dhaka"? e. Find all the details of employees, displaying the name as "My Name", who live in "Savar".
-
-**তরল পদার্থে তাপ স্থানান্তর প্রক্রিয়ার নাম কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
-   ক. পরিচালন
-   খ. পরিবহন
-   গ. বিকিরণ
-   ঘ. উপরের সবগুলি
-
-**'কপর্দকহীন' অর্থ-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
-   ক. বোকা
-   খ. নিঃস্ব
-   গ. অসহায়
-   ঘ. মলিন
-
-**Please look ... the word in the dictionary.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
-   ক. Up
-   খ. into
-   গ. To
-   ঘ for
-
-**I took an aspirin to ... the pain in my knee.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
-   ক. accelerate
-   খ. deviate
-   গ. alleviate
-   ঘ. Accompany
-
-**Omar Khayyam is seldom born.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. A
-   খ. The
-   গ. An
-   ঘ. Only
-
-**পরম শূন্য তাপমাত্রা কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ২৭৩± সেন্টিগ্রেড
-   খ. -২৭৩± ফারেনহাইট
-   গ. ০± সেন্টিগ্রেড
-   ঘ. ০± কেলভিন
-
-**বাতাসের আর্দ্রতা মাপার যন্ত্রের নাম কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. মাইক্রোমিটার
-   খ. জেনারেটর
-   গ. আর্দ্রতামিটার
-   ঘ. হাইগ্রোমিটার
-
-**আকাশে রংধনু সৃষ্টির কারণ-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ধূলিকণা
-   খ. বৃষ্টির কণা
-   গ. বায়োস্তর
-   ঘ. অতিবেগুনি রশ্মি
-
-**কোনটি মৌলিক পদার্থ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. লোহা
-   খ. ব্রোঞ্জ
-   গ. পানি
-   ঘ. ইস্পাত
-
-**কোনটি চুম্বক পদার্থ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. পারদ
-   খ. কোবাল্ট
-   গ. বিসমাথ
-   ঘ. অ্যান্টিমনি
-
-**কোন ঋতুতে শব্দ বায়ু মাধ্যমে দ্রুততম চলে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. শীতকালে
-   খ. গ্রীষ্মকালে
-   গ. বর্ষাকালে
-   ঘ. বসন্তকালে
-
-78. **A communication channel has a signal power of P_s = 50\\text\{ mW\} and a noise power of P_n = 5\\text\{ mW\}** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 85]]*
-   a) Find the Signal-to-Noise Ratio (SNR) in linear form and decibels
-   (dB) .
-   b) If the bandwidth of the channel is B=3 MHz, calculate the channel capacity using Shannon's formula.
-
-79. **Which of the following is a variable-length, letter-and-number error-detection scheme, where on the sender side, the data is appended with the remainder obtained by dividing the data bits by a predetermined polynomial, and on the receiver side, error detection is performed by checking whether the received sequence is divisible by the same polynomial? [ নিচের কোনটি একটি variable-length, অক্ষর ও সংখ্যাভিত্তিক error-detection পদ্ধতি, যেখানে-প্রেরক (sender) পাশে ডাটা বিটকে একটি পূর্বনির্ধারিত polynomial দ্বারা ভাগ করে যে remainder পাওয়া যায় তা ডাটার সাথে যুক্ত করা হয়। গ্রাহক (receiver) পাশে প্রাপ্ত ডাটা একই polynomial দ্বারা ভাগ করে দেখা হয় ডাটা নিঃশেষে বিভাজ্য কি না]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
-   (a) CRC
-   (b) Hamming code
-   (c) Horizontal parity check
-   (d) Vertical parity check
-
-80. **Which of the following in the RAID configuration for achieving the highest-speed disk access at the cost of reliability? [ নিচের কোন RAID configuration সবচেয়ে বেশি disk access speed প্রদান করে, তবে Reliability( নির্ভরযোগ্যতা) কম থাকে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
-   (a) RAID 0
-   (b) RAID 1
-   (c) RAID 5
-   (d) RAID 6
-
-81. **For two 8-bit signed integers A and B in 2's complement format, which of the following will cause an overflow when A and B are added? [ দুই 8-bit signed integer A এবং B (2's complement ফরম্যাটে) যোগ করার সময় নিচের কোন ক্ষেত্রে overflow ঘটবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
-   (a) 0111 1111 and 1111 1110
-   (b) 0111 1111 and 0111 1110
-   (c) 1000 0000 and 0111 0000
-   (d) 1111 1111 and 1111 1111
-
-82. **The following postfix expression is evaluated where A = 14, B = 3, C = 5, and D = 6. What is its result? [ নিচের postfix expression টি evaluate করো, যেখানে A = 4, B = 3, C = 5, D = 6] A B C \\times + D B - C \\times -** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
-   (a) -3
-   (b) 0
-   (c) 14
-   (d) 403
-
-83. **Which of the following RAID levels allows data recovery if one disk fails? [ নিচের কোন RAID level এ এক ডিস্ক ব্যর্থ হলে ডাটা পুনরুদ্ধার সম্ভব?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
-   (a) RAID 0
-   (b) RAID 1
-   (c) RAID 6
-   (d) RAID 5
-
-84. **Which of the following is a computer architecture where multiple instructions execute in parallel by slightly offsetting the execution of different instructions? [ নিচের কোন কম্পিউটার আর্কিটেকচারে একাধিক instruction parallelভাবে execute হয়, কিন্তু execution কিছুটা offset (অল্প সময়ের ব্যবধান) দিয়ে হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*
-   (a) RISC
-   (b) Pipeline
-   (c) VLIW
-   (d) Von Neumann Architecture
-
-85. **For a non-negative integer X, which of the following operations gives the remainder after division of X by 8? [ একটি অঋণাত্মক পূর্ণসংখ্যা X-এর জন্য, নিচের কোন অপারেশনটি X কে 8 দিয়ে ভাগ করার পর অবশিষ্ট (remainder) দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
-   (a) Bitwise AND with 7
-   (b) Bitwise AND with 8
-   (c) Bitwise OR with 8
-   (d) Right shift X by 3 bits
-
-86. **Which of the following correctly describes RAID 5? [ নিচের কোনটি RAID 5-এর সঠিক বর্ণনা?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*
-   (a) Disk striping without parity
-   (b) Block-level striping with a dedicated parity disk
-   (c) Block-level striping with distributed parity disks
-   (d) Mirroring without parity
-
-87. **A transaction that leaves the database in an inconsistent state if partially executed violates— [কোন transaction database কে inconsistent state-এ ফেলে, যদি এটি partial execute হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
-   (a) Atomicity
-   (b) Consistency
-   (c) Isolation
-   (d) Durability
-
-88. **(123.4)_\{10\} = ()_\{16\}?** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
-   (a) (7B.4)_\{16\}
-   (b) (7B.6)_\{16\}
-   (c) (7B.8)_\{16\}
-   (d) (7C.6)_\{16\}
-
-89. **If x = 2 and y = 3, what is the value of 2x^2 + 3y^2? [ যদি x = 2 এবং y = 3, তাহলে 2x^2 + 3y^2 কত হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
-   (a) 25
-   (b) 30
-   (c) 35
-   (d) 40
-
-90. **Explain the concepts of:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222-223]]*
-   a. Reinforcement Learning (RL)
-   b. Deep Learning (DL)
-   c. Federated Learning (FL) Differentiate them in terms of learning method, data usage, and provide one real-world example for each.
-
-91. **Explain the following addressing modes in the 8086 microprocessors:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 225]]*
-   a. Direct Addressing
-   b. Immediate Addressing
-   c. Register Addressing Differentiate among them with examples.
-
-92. **(b) Simplify using K-map. F(A,B,C) = A'BC' + A'BC + AB'C' + AB'C + ABC' + ABC** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
-
-93. **(a) Create an example of a trigger.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
-
-94. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
-   (a) You are given the network
-   128. 0.0.0/16. You need to create 492 subnets.
-   (i) Calculate the number of hosts per subnet.
-   (ii) Determine the subnet mask.
-
-95. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
-   (b) Alice wants to send a message to Bob using asymmetric key cryptography.
-   (i) Which key is used for encryption?
-   (ii) Which key is used for decryption?
-
-96. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*
-   (a) Given the following traversals of a binary tree: Preorder: 3, 9, 20, 17,
-   6. In order: 9, 3, 17, 20,
-   6. Determine whether a binary tree can be constructed from the given traversals. If possible, construct the tree.
-
-97. **(b) Write a real-life example where Depth-First Search (DFS) performs more efficiently than Breadth-First Search (BFS). Why is DFS better in that situation?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 234]]*
-
-98. **(b) What is the advantage of the Agile methodology over the Waterfall methodology?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
-
-99. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
-   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?
-   (02) 
-   (খ) দুটি মহাদেশের অংশ এমন একটি দেশের নাম লিখুন।
-   (গ) IRRI এর পূর্ণরূপ লিখুন।
-   (03)
-
-100. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
-   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?
-   (02) 
-   (খ) পরিবেশ রক্ষায় কোন ধরনের উৎস হতে বিদ্যুৎ উৎপাদনের মনোযোগ দেয়া আবশ্যক বলে আপনি মনে করেন।
-   (02) 
+105. **কোনটি বাংলা একাডেমি থেকে প্রকাশিত মাসিক পত্রিকা?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*
+   (a) ধান শালিকের দেশ
+   (b) লাঙল
+   (c) বার্তা
+   (d) উত্তরাধিকার
+
+106. **Interfaces in Java are meant to be— [ জাভাতে ইন্টারফেস (Interfaces) ব্যবহারের উদ্দেশ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 346]]*
+   (a) Extended
+   (b) Implemented
+   (c) Overridden
+   (d) Used by creating object
 
 ## Geography & Environment (26)
 

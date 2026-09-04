@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 276 questions
+**Table of Contents** — 9 subtopics · 278 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-117) | 117 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-118) | 118 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
-| 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
+| 3 | [Recursion & Functions](#recursion--functions-39) | 39 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
 | 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-14) | 14 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (117)
+## Basic Programs & Control Statements (118)
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -485,6 +485,8 @@ for (S = 1, P = -x, I = 1; I < a; I++)
 What will be the approximation of f(x)?
 
 117. **Write a program that read n number string and print these strings in ascending order.** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 326]]*
+
+118. **(b) What are the rules for calculating the n-th Fibonacci number, and what is the recurrence relation that defines this sequence?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 339]]*
 
 ## Output Tracing & Control Flow (57)
 
@@ -1178,8 +1180,7 @@ int main() {
 }
 ```
 
-## Recursion & Functions (38)
-
+## Recursion & Functions (39)
 1. (a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -1305,6 +1306,8 @@ int main() {
 37. **Write the performance of a non-recursive function which is written in recursive way.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
 38. **Write a program in C with recursive function to compute the value $X^n$ where n is a positive integer and x has real value.** *[Multiple Ministry Assistant Programmer 2017 compact it 1235-1236 (ET: N/A)]*
+
+39. **a) Using recursion, develop a computer program to find the n-th Fibonacci number using this rule. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 340]]*
 
 ## Operators, Data Types & Language Concepts (25)
 

@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 307 questions
+**Table of Contents** — 13 subtopics · 309 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-62) | 62 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-64) | 64 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (62)
+## Networking Fundamentals & Terminology (64)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -407,6 +407,18 @@
    (b) We must adapt ourselves ________ all circumstances.
    (c) No sooner had I seen the bird ________ it flew away.
    (d) He speaks ________ he were a scientist. (e) If I ________ you, I wouldn't risk it.
+
+63. **What is the name of American built spacecraft landed in the lunar's southern polar region on February 22, 2024? [ ২২শে ফেব্রুয়ারি ২০২৪ সালে চাঁদের দক্ষিণ মেরু অঞ্চলে অবতরণকারী আমেরিকান মহাকাশযানটির নাম কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*
+   (a) Apollo-17
+   (b) Odysseus
+   (c) Chandrayaan-3
+   (d) Luna-25
+
+64. **The Manager said, “Well, what can I do for you?”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*
+   (a) The Manager asked what he could do for him.
+   (b) The Manager wondered what he could do for him.
+   (c) The Manager wanted to know what he could do for him.
+   (d) The Manager said that he could do anything for him.
 
 ## Application Layer Protocols (58)
 
