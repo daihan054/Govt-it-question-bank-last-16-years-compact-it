@@ -9082,33 +9082,534 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **Straight through connection vs Crossover connection.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1448 (ET: N/A)]*
 
+   Answer: The difference is in how the two ends of the cable are wired.
+
+   | Point | Straight-through | Crossover |
+   |---|---|---|
+   | Wiring | Both ends use the same standard (T568A–T568A or T568B–T568B) | One end T568A, the other end T568B |
+   | Effect | Pin 1 to pin 1, pin 2 to pin 2, and so on | Transmit and receive pairs are swapped |
+   | Connects | Unlike devices | Like devices |
+   | Examples | PC to switch, PC to hub, router to switch, switch to router | PC to PC, switch to switch, router to router, PC to router |
+   | Pins swapped | None | 1↔3 and 2↔6 |
+   | Common use | Almost all normal cabling | Rare today |
+
+   T568B colour order (the common standard)
+   ```
+   Pin 1  White/Orange      Pin 5  White/Blue
+   Pin 2  Orange            Pin 6  Green
+   Pin 3  White/Green       Pin 7  White/Brown
+   Pin 4  Blue              Pin 8  Brown
+   ```
+   - T568A swaps the orange and green pairs. Both are electrically identical; only the colour order differs.
+
+   Why the crossover exists
+   - On a PC, pins 1 and 2 transmit while 3 and 6 receive. A switch is wired the opposite way (MDI-X), so a straight cable already lines up transmit with receive.
+   - Connect two PCs directly and both would transmit on 1 and 2, so nothing is received. The crossover swaps the pairs to fix this.
+
+   ```
+   STRAIGHT-THROUGH        CROSSOVER
+   1 --------- 1           1 ----\ /---- 1
+   2 --------- 2           2 ---\ X /--- 2
+   3 --------- 3           3 ----/ \---- 3
+   6 --------- 6           6 ---------- 6
+   ```
+
+   - Modern relevance: almost every device made since about 2005 supports `Auto-MDI/MDIX`, which detects the wiring and adjusts automatically. In practice a straight-through cable now works everywhere, and crossover cables survive mainly on legacy equipment and in exam questions.
+
 2. **Which transmission medium is used in LAN? Write their maximum length and capacity (bps).** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1452 (ET: N/A)]*
+
+   Answer: The transmission media used in a LAN, with their limits.
+
+   | Medium | Standard | Maximum length | Maximum capacity |
+   |---|---|---|---|
+   | UTP Cat5e | 1000BASE-T | 100 m | 1 Gbps |
+   | UTP Cat6 | 1000BASE-T / 10GBASE-T | 100 m at 1 Gbps, 55 m at 10 Gbps | 10 Gbps |
+   | UTP Cat6a | 10GBASE-T | 100 m | 10 Gbps |
+   | UTP Cat7 / Cat8 | 40GBASE-T | 100 m / 30 m | 10–40 Gbps |
+   | Coaxial (10BASE2, thin) | 10BASE2 | 185 m | 10 Mbps |
+   | Coaxial (10BASE5, thick) | 10BASE5 | 500 m | 10 Mbps |
+   | Multimode fibre | 1000BASE-SX, 10GBASE-SR | 550 m (1 Gbps), 300 m (10 Gbps) | 10–100 Gbps |
+   | Single-mode fibre | 1000BASE-LX, 10GBASE-LR | 10 km, up to 80 km with ZR optics | 100 Gbps and beyond |
+   | Wireless (Wi-Fi 6) | IEEE 802.11ax | 30–100 m indoors | Up to about 9.6 Gbps shared |
+
+   The most common LAN medium
+   - `UTP Cat5e or Cat6 with RJ45 connectors` is the standard choice for the horizontal cabling that reaches each desk: cheap, easy to terminate, and adequate at 1 Gbps to 100 m.
+   - Optical fibre is used for the backbone between floors and buildings, because it has no distance limit at LAN scale and is immune to electrical interference.
+
+   Why 100 m is the limit for UTP
+   - The standard allows 90 m of solid horizontal cable plus 5 m of stranded patch cable at each end. Beyond that, attenuation weakens the signal and propagation delay breaks the collision-detection timing of the original Ethernet design.
+   - A repeater, switch or media converter is used to go further.
 
 3. **IEEE __________ Standard used Ethernet LAN?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: Ethernet LAN uses the `IEEE 802.3` standard.
+
+   - IEEE 802.3 defines both the physical layer and the MAC sub-layer of wired Ethernet, including frame format, addressing and the CSMA/CD access method used on shared media.
+
+   The IEEE 802 family
+
+   | Standard | Technology |
+   |---|---|
+   | 802.1 | Bridging, VLANs (802.1Q), Spanning Tree |
+   | 802.2 | LLC (Logical Link Control) |
+   | `802.3` | `Ethernet` (CSMA/CD) |
+   | 802.4 | Token Bus (obsolete) |
+   | 802.5 | Token Ring (obsolete) |
+   | 802.11 | Wireless LAN (Wi-Fi) |
+   | 802.15.1 | Bluetooth |
+   | 802.15.4 | Zigbee, low-rate WPAN |
+   | 802.16 | WiMAX |
+   | 802.3af / 802.3at | Power over Ethernet |
+
+   Common 802.3 variants
+   - 10BASE-T (10 Mbps), 100BASE-TX (Fast Ethernet), 1000BASE-T (Gigabit), 10GBASE-T (10 Gigabit), and the fibre versions 1000BASE-SX and 1000BASE-LX.
+   - The naming reads as: speed, BASE for baseband signalling, and then the medium or reach — T for twisted pair, F or S/L for fibre.
+
 4. **What is the connector name copper cable in LAN?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
+
+   Answer: The connector used with copper cable in a LAN is the `RJ45` connector.
+
+   - Full form: Registered Jack 45. It is an 8-position, 8-contact (8P8C) modular plug used to terminate UTP and STP twisted-pair cable.
+   - It carries four pairs — eight wires — wired to either the T568A or the T568B colour standard.
+   - It is used with Cat5e, Cat6, Cat6a and Cat7 cables for 10BASE-T through 10GBASE-T Ethernet.
+   - Tools: a crimping tool to attach it, and a cable tester to verify continuity and pair order.
+
+   Other connectors worth knowing
+
+   | Connector | Used with |
+   |---|---|
+   | `RJ45` | UTP/STP Ethernet — 8 pins |
+   | RJ11 | Telephone line and DSL — 4 or 6 pins, physically smaller |
+   | BNC | Thin coaxial cable, 10BASE2 |
+   | AUI / Vampire tap | Thick coaxial cable, 10BASE5 |
+   | F-type | Cable TV and cable modem coaxial |
+   | SC, LC, ST, MTRJ | Optical fibre |
+   | GBIC / SFP / SFP+ | Transceiver modules in switches |
+
+   - Note that RJ45 and RJ11 look similar but are not interchangeable — RJ11 is narrower and will damage an RJ45 port's contacts if forced in.
 
 5. **What are the different types of transmission media used for data communication? Explain their advantages and disadvantages.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 326 (ET: BIBM)]*
 
+   Answer: Transmission media are divided into guided (wired) and unguided (wireless).
+
+   GUIDED MEDIA
+
+   1. Twisted pair (UTP and STP)
+   - Pairs of insulated copper wires twisted together; the twisting cancels external noise and reduces crosstalk.
+   - Categories: Cat5e (1 Gbps), Cat6 (10 Gbps to 55 m), Cat6a (10 Gbps to 100 m). Maximum run 100 m, RJ45 connector.
+   - Advantages: cheapest, easy to install and terminate, flexible, lightweight, universally supported, and adequate for almost all desk connections.
+   - Disadvantages: limited to 100 m, susceptible to EMI and crosstalk (especially UTP), lower bandwidth than fibre, and can be tapped for eavesdropping.
+
+   2. Coaxial cable
+   - A central copper conductor, insulation, a braided metal shield and an outer jacket. The shield gives good noise immunity.
+   - Types: thinnet 10BASE2 (185 m) and thicknet 10BASE5 (500 m); also used for cable TV and cable internet.
+   - Advantages: better noise immunity and longer runs than twisted pair, higher bandwidth than early twisted pair, still widely used for CATV and HFC broadband.
+   - Disadvantages: bulky and inflexible, more expensive than UTP, harder to install, and obsolete for LANs.
+
+   3. Optical fibre
+   - A glass or plastic core carrying light by total internal reflection, surrounded by cladding and a protective jacket.
+   - Single-mode (small core, laser source, tens of kilometres) and multimode (larger core, LED or VCSEL source, hundreds of metres).
+   - Advantages: by far the highest bandwidth (terabits per fibre with WDM), extremely low attenuation so runs of kilometres are routine, complete immunity to EMI and RFI, no crosstalk, very hard to tap undetected, light and thin, no electrical hazard.
+   - Disadvantages: expensive cable and equipment, fragile — it breaks if bent too sharply, splicing and termination need skilled technicians and costly tools, and it cannot carry power.
+
+   UNGUIDED MEDIA
+
+   4. Radio waves (3 kHz – 1 GHz)
+   - Omnidirectional, pass through walls, used for Wi-Fi, Bluetooth, AM/FM radio and mobile networks.
+   - Advantages: mobility, no cabling cost, easy to deploy, covers difficult areas.
+   - Disadvantages: shared bandwidth, interference, weaker security, and range limited by obstacles.
+
+   5. Microwave (1–300 GHz)
+   - Highly directional and line-of-sight, used for point-to-point links and satellite uplinks.
+   - Advantages: high bandwidth over long distances without laying cable, useful across rivers and mountains.
+   - Disadvantages: needs clear line of sight, affected by rain and atmospheric conditions, needs licences and tall towers.
+
+   6. Infrared
+   - Short range and line of sight, blocked by walls, used for remote controls and some device-to-device links.
+   - Advantages: cheap, secure because it cannot leave the room, no licence needed. Disadvantages: very short range, no obstacle penetration, disturbed by sunlight.
+
+   7. Satellite
+   - Reaches anywhere on earth, including oceans and remote regions.
+   - Advantages: enormous coverage, useful for broadcast and disaster recovery. Disadvantages: very high cost, and geostationary satellites add about 250 ms one-way latency (LEO constellations reduce this greatly).
+
+   Choosing between them
+
+   | Requirement | Best choice |
+   |---|---|
+   | Cheap desk connection | UTP Cat6 |
+   | Long distance, high bandwidth | Single-mode fibre |
+   | Immunity to interference | Fibre |
+   | Mobility | Wi-Fi or cellular |
+   | Remote area, no infrastructure | Satellite |
+
 6. **Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 523 (ET: MIST)]*
+
+   Answer:
+
+   (a) Guided vs unguided media
+
+   | Point | Guided (wired) | Unguided (wireless) |
+   |---|---|---|
+   | Path | A physical conductor confines the signal | The signal travels through free space |
+   | Direction | Point to point along the cable | Broadcast in all directions (or a beam) |
+   | Examples | Twisted pair, coaxial, optical fibre | Radio, microwave, infrared, satellite |
+   | Bandwidth | Very high, especially fibre | Lower and shared |
+   | Interference | Low, and shielded further in STP and fibre | High — other signals, weather, obstacles |
+   | Security | Better; physical access is needed to tap | Weaker; anyone in range can capture the signal |
+   | Installation | Cabling cost and effort | Quick, no cabling |
+   | Mobility | None | Full |
+   | Distance | Limited by attenuation, but fibre reaches far | Limited by power, obstacles and frequency |
+   | Cost | Higher installation, lower running cost | Lower installation, licence fees possible |
+
+   (b) STP vs UTP
+
+   | Point | UTP (Unshielded Twisted Pair) | STP (Shielded Twisted Pair) |
+   |---|---|---|
+   | Shielding | None — twisting alone resists noise | Foil or braid around each pair and/or the whole bundle |
+   | Noise immunity | Moderate | High |
+   | Cost | Cheaper | More expensive |
+   | Diameter and weight | Thin, light | Thick, heavy |
+   | Flexibility | Easy to pull round corners | Stiff, larger bend radius |
+   | Installation | Simple; no earthing needed | Must be properly grounded at one end, or the shield becomes an antenna |
+   | Termination | Standard RJ45, quick | Needs shielded connectors and more care |
+   | Speed and distance | 1–10 Gbps to 100 m | Same, but more reliable in noisy places |
+   | Typical use | Offices, homes, most LANs | Factories, hospitals, near heavy machinery, data centres |
+
+   (c) Why UTP is preferred over STP
+   - `Lower cost` — both the cable and the connectors are significantly cheaper, and in a building with hundreds of runs this dominates the decision.
+   - `Easier installation` — thinner, lighter and more flexible, so it pulls through conduit easily and needs no grounding scheme.
+   - `No grounding risk` — an improperly earthed STP shield can pick up noise instead of blocking it, or create a ground loop, making the situation worse than plain UTP.
+   - `Sufficient performance` — in a normal office the twisting alone gives enough noise rejection for 1 Gbps and even 10 Gbps over Cat6a.
+   - `Standard connectors and tools` — ordinary RJ45 plugs and crimpers, which every technician already has.
+   - `Smaller bend radius and less conduit space`, which matters in crowded cable trays.
+
+   - STP is still the right choice where interference is genuinely severe: near motors, welding equipment, X-ray machines, or long parallel runs beside power cables.
 
 7. **What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair, co-axial cable and fiber optics in tabular form.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
+   Answer:
+
+   (a) Main benefit of broadband over baseband
+
+   | Point | Baseband | Broadband |
+   |---|---|---|
+   | Signal | The digital signal is placed directly on the medium | Signals are modulated onto different carrier frequencies |
+   | Channels | One channel uses the whole medium | Many channels share the medium by FDM |
+   | Direction | Usually bidirectional (half duplex) | Usually unidirectional per channel |
+   | Distance | Shorter; needs repeaters | Longer; uses amplifiers |
+   | Example | Ethernet (10BASE-T) | Cable TV, ADSL, cable internet |
+
+   - The main benefit of broadband is that it can carry `multiple simultaneous signals over one medium` by dividing it into frequency channels. One coaxial cable can therefore carry dozens of TV channels plus internet data at the same time, and it can also reach much further because amplifiers handle analogue signals over long distances.
+
+   (b) Attenuation of transmission media
+   - Attenuation is the loss of signal strength as the signal travels through a medium, caused by absorption and resistance in the material.
+   - It is measured in decibels: `Attenuation (dB) = 10 log10(P2 / P1)`, a negative value indicating loss.
+   - It increases with distance and with frequency, so higher-speed signals fade faster — this is why cable length limits exist.
+   - Remedies: amplifiers for analogue signals, and repeaters for digital signals, which regenerate a clean new signal instead of amplifying the noise as well.
+
+   Typical attenuation
+   - UTP Cat5e/Cat6: high, hence the 100 m limit.
+   - Coaxial: lower than twisted pair, so 185 m and 500 m runs were possible.
+   - Optical fibre: extremely low, about 0.2 dB per kilometre at 1550 nm, which is why fibre spans tens of kilometres without regeneration.
+
+   (c) Twisted pair vs coaxial vs fibre optic
+
+   | Point | Twisted pair | Coaxial cable | Optical fibre |
+   |---|---|---|---|
+   | Signal carried | Electrical | Electrical | Light |
+   | Bandwidth | Up to about 10 Gbps | Up to about 1 Gbps typical | Terabits with WDM |
+   | Distance | 100 m | 185 m (thin), 500 m (thick) | 300 m to 80 km and beyond |
+   | Attenuation | High | Medium | Very low |
+   | EMI immunity | Poor (UTP), better (STP) | Good, thanks to the shield | Complete immunity |
+   | Crosstalk | Present | Very low | None |
+   | Security | Easy to tap | Can be tapped | Very hard to tap undetected |
+   | Cost | Lowest | Medium | Highest (cable and equipment) |
+   | Installation | Easy | Moderate | Skilled work; splicing needs a fusion splicer |
+   | Flexibility | Very flexible | Stiff | Fragile, minimum bend radius |
+   | Weight | Light | Heavy | Very light |
+   | Connector | RJ45 | BNC, F-type | SC, LC, ST |
+   | Typical use | Desk connections in a LAN | Cable TV, HFC broadband | Backbone, WAN, submarine cables |
+
 8. **Why we used straight-through and cross cable with example?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
+
+   Answer:
+
+   Why the two cable types exist
+   - A network interface transmits on one pair and receives on another. On a PC or router (MDI), pins 1 and 2 transmit and pins 3 and 6 receive. On a switch or hub (MDI-X), the roles are reversed internally.
+   - Connecting two devices therefore requires that one side's transmit reaches the other side's receive. Whether the crossing is needed in the cable depends on whether the two devices are of the same type or not.
+
+   Straight-through cable
+   - Both ends wired identically (T568A–T568A or T568B–T568B). Pin 1 to pin 1, and so on.
+   - Used to connect `unlike` devices, where one is MDI and the other MDI-X, so the crossing already happens inside the switch.
+   - Examples:
+     - PC to switch
+     - PC to hub
+     - Router to switch
+     - Switch to router
+     - Wireless access point to switch
+
+   Crossover cable
+   - One end T568A, the other T568B, which swaps pins 1↔3 and 2↔6.
+   - Used to connect `like` devices, where both would otherwise transmit on the same pins.
+   - Examples:
+     - PC to PC directly
+     - Switch to switch
+     - Router to router
+     - Hub to hub
+     - PC to router (both are MDI, so this needs a crossover)
+
+   ```
+   STRAIGHT-THROUGH                CROSSOVER
+   PC  1 TX ------- 1 RX  Switch   PC-A 1 TX ---\ /--- 1 TX PC-B
+   PC  2 TX ------- 2 RX  Switch   PC-A 2 TX --\ X /-- 2 TX PC-B
+   PC  3 RX ------- 3 TX  Switch   PC-A 3 RX --/ \--- 3 RX PC-B
+   PC  6 RX ------- 6 TX  Switch   PC-A 6 RX -------- 6 RX PC-B
+      (switch crosses internally)     (cable does the crossing)
+   ```
+
+   Memory rule
+   - Different devices -> straight-through. Same devices -> crossover.
+   - The one exception people forget is PC to router: although they look different, both are MDI, so a crossover is required on old equipment.
+
+   Modern practice
+   - Almost all equipment made since around 2005 supports `Auto-MDI/MDIX`, which senses the wiring and switches internally. With such equipment either cable works, and crossover cables have largely disappeared from use.
 
 9. **(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 629 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   Optical fibre cable — advantages
+   - Enormous bandwidth: terabits per second on a single fibre using WDM, far beyond any copper medium.
+   - Very low attenuation, about 0.2 dB per kilometre, so signals travel tens of kilometres without regeneration.
+   - Complete immunity to electromagnetic and radio interference, since it carries light, not electricity. It can run beside power cables safely.
+   - No crosstalk between fibres.
+   - Very high security: tapping a fibre without being detected is extremely difficult.
+   - Light and thin, so a single duct carries far more capacity than with copper.
+   - No electrical hazard, no spark risk, and no earthing problems — it is safe in explosive or high-voltage environments.
+   - Not affected by corrosion or moisture in the way copper is.
+
+   Twisted pair cable — advantages
+   - Cheapest of all media, both cable and connectors.
+   - Very easy to install, terminate and test; ordinary RJ45 plugs and a crimping tool are enough.
+   - Thin, light and flexible, so it pulls easily through conduit and around corners.
+   - Universally supported — every PC, switch and printer has an RJ45 port.
+   - Adequate performance for almost all desk connections: 1 Gbps on Cat5e and 10 Gbps on Cat6a, both to 100 m.
+   - Supports Power over Ethernet, so a single cable powers an IP phone, camera or access point.
+   - Twisting itself cancels much of the external noise, and the shielded version (STP) handles noisy environments.
+
+   Coaxial cable — advantages
+   - Better noise immunity than unshielded twisted pair, because of the braided shield around the conductor.
+   - Longer runs than twisted pair: 185 m for thinnet and 500 m for thicknet.
+   - Higher bandwidth than early twisted pair, and a broadband coaxial system carries many frequency-division channels at once — this is how cable TV delivers dozens of channels plus internet on one cable.
+   - Robust and durable; the construction resists physical damage.
+   - Well suited to CATV and HFC broadband distribution, where it is still in wide use.
+
+   - Summary of when each is chosen: fibre for backbone and long distance, twisted pair for the last hundred metres to the desk, coaxial for television and cable-broadband distribution.
+
 10. **What happens when you use cables longer than the prescribed length in a network?** *[BOF Assistant Programmer 2022 compact it 732 (ET: MIST)]*
+
+    Answer: Exceeding the specified cable length causes the signal to degrade beyond what the receiver can correctly interpret. Several distinct problems appear.
+
+    1. Attenuation
+    - The signal loses strength with distance. Past the limit it becomes too weak for the receiver to distinguish 1 from 0, so bits are misread.
+
+    2. Increased errors and retransmissions
+    - Frames fail their CRC and are discarded. TCP retransmits them, so throughput falls sharply even though the link appears to be up.
+
+    3. Intermittent or no connectivity
+    - The link may fail to come up at all, or come up and drop repeatedly — the hardest kind of fault to diagnose, because it works sometimes.
+
+    4. Timing and collision-detection failure (on shared Ethernet)
+    - Classic Ethernet requires that a station still be transmitting when a collision reaches it. Excess length increases propagation delay, so collisions are detected too late — `late collisions` — and the frame is lost without retransmission by the MAC layer.
+
+    5. Distortion and jitter
+    - Different frequency components attenuate differently and arrive at slightly different times, spreading pulses into one another (intersymbol interference) and making the receiver's clock recovery unreliable.
+
+    6. Speed negotiation dropping
+    - A gigabit link may negotiate down to 100 Mbps, or a 10 Gbps link to 1 Gbps, because the higher speed cannot be sustained over the distance.
+
+    7. More noise pickup
+    - A longer run acts as a longer antenna, collecting more EMI and crosstalk.
+
+    Standard limits
+
+    | Medium | Limit |
+    |---|---|
+    | UTP Cat5e/Cat6 | 100 m (90 m solid + 2 × 5 m patch) |
+    | Coaxial 10BASE2 | 185 m |
+    | Coaxial 10BASE5 | 500 m |
+    | Multimode fibre | 550 m at 1 Gbps, 300 m at 10 Gbps |
+    | Single-mode fibre | 10 km, more with specialised optics |
+
+    Solutions
+    - Insert a `repeater` or, better, a `switch` at the midpoint to regenerate the signal.
+    - Use `optical fibre` for the long run and a media converter at each end.
+    - Redesign the cabling so that each horizontal run stays within 100 m by placing an intermediate distribution frame.
+    - For a link that must be long and cheap, consider a wireless bridge instead.
 
 11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 789 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) The naming convention reads as `<speed> BASE <medium or segment length>`.
+
+    (a) 10BASE5 — "Thick Ethernet" or Thicknet
+    - `10` = 10 Mbps data rate.
+    - `BASE` = baseband signalling, meaning the digital signal occupies the whole medium with no modulation.
+    - `5` = maximum segment length of 500 metres.
+    - Medium: thick coaxial cable, about 10 mm diameter, rigid and yellow, hence the nickname "frozen yellow garden hose".
+    - Topology: bus. Stations attach with a `vampire tap` that pierces the jacket to reach the core, connected through an AUI cable to a transceiver.
+    - Rules: maximum 100 stations per segment, taps at least 2.5 m apart, both ends terminated with 50-ohm terminators, and the 5-4-3 rule (up to 5 segments, 4 repeaters, 3 populated).
+    - It was the original Ethernet (IEEE 802.3, 1983), and it is completely obsolete: expensive, hard to install, and a single break brought down the entire segment.
+
+    (b) 10BASE-F — Fibre Ethernet
+    - `10` = 10 Mbps.
+    - `BASE` = baseband.
+    - `F` = optical fibre as the medium.
+    - Uses two multimode fibres, one for transmit and one for receive, so it is naturally full duplex capable.
+    - Segment length up to 2000 m, far beyond copper, because fibre attenuation is very low.
+    - Complete immunity to EMI, so it suits runs between buildings, through industrial areas, or anywhere lightning or ground-potential differences make copper dangerous.
+    - Variants: 10BASE-FL (link, 2 km, the common one), 10BASE-FB (backbone, for repeater interconnection) and 10BASE-FP (passive star).
+
+    Comparison
+
+    | Point | 10BASE5 | 10BASE-F |
+    |---|---|---|
+    | Medium | Thick coaxial | Optical fibre |
+    | Segment length | 500 m | 2000 m |
+    | Topology | Bus | Point to point / star |
+    | EMI immunity | Moderate | Complete |
+    | Installation | Very difficult | Skilled, needs splicing |
+    | Status | Obsolete | Superseded by 100BASE-FX and gigabit fibre |
+
 12. **Explain 10baseT.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839 (ET: N/A)]*
+
+    Answer: 10BASE-T is the IEEE 802.3i Ethernet standard that runs at 10 Mbps over twisted-pair cable. It is the version that made Ethernet universal.
+
+    Reading the name
+    - `10` = 10 Mbps data rate.
+    - `BASE` = baseband signalling; the digital signal uses the entire medium with no carrier modulation.
+    - `T` = twisted pair as the medium.
+
+    Specifications
+    - Medium: Category 3 or better UTP, using two of the four pairs — one for transmit (pins 1 and 2) and one for receive (pins 3 and 6).
+    - Connector: RJ45.
+    - Maximum segment length: `100 m` from the station to the hub or switch.
+    - Topology: physical `star` — every station has its own cable to a central hub or switch. Logically it behaved as a bus when hubs were used.
+    - Encoding: Manchester, which is self-clocking, so no separate clock line is needed. This costs bandwidth: 10 Mbps of data needs 20 Mbaud of signalling.
+    - Access method: CSMA/CD on a hub; not needed on a full-duplex switched link.
+    - Rules: the 5-4-3 rule for repeaters, and a minimum frame size of 64 bytes so that collisions are always detected in time.
+
+    Why it replaced coaxial Ethernet
+    - Star topology means one broken cable affects only one station, whereas a break in a 10BASE2 or 10BASE5 bus killed the whole segment.
+    - Cheap, thin, flexible cable that is easy to install and terminate.
+    - Easy to add or move a station — just patch a new port.
+    - Central management and easy fault isolation; a link light shows immediately whether a station is connected.
+    - It made structured cabling possible, which is why every modern building is wired this way.
+
+    The family that followed
+    - 100BASE-TX (Fast Ethernet, Cat5, 100 Mbps), 1000BASE-T (Gigabit, Cat5e, uses all four pairs), 10GBASE-T (Cat6a). All keep the 100 m limit and the RJ45 connector.
 
 13. **Which media transfer data with higher bandwidth? Advantages of this media.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843 (ET: N/A)]*
 
+    Answer: `Optical fibre` transfers data with the highest bandwidth of any transmission medium.
+
+    Capacity
+    - A single fibre carries terabits per second when wavelength division multiplexing is used: DWDM puts 40 to 160 separate wavelengths on one strand, each carrying 100 Gbps or more.
+    - Individual links: 10, 40, 100 and 400 Gbps Ethernet are all standard, and submarine cables carry hundreds of terabits per fibre pair.
+    - Copper, by comparison, tops out at about 10–40 Gbps over 30–100 m.
+
+    Advantages of optical fibre
+
+    - Enormous bandwidth — the usable optical spectrum is vastly wider than anything copper can support, and WDM multiplies it further.
+    - Very low attenuation, about 0.2 dB per kilometre at 1550 nm, so signals travel 80 km or more without regeneration. Copper needs a repeater every 100 m.
+    - Complete immunity to electromagnetic and radio interference, because it carries light rather than current. It can be run beside power cables, motors and radio transmitters with no effect.
+    - No crosstalk between fibres in the same cable.
+    - High security: tapping a fibre requires physically bending or breaking it, which is detectable, so eavesdropping is very difficult.
+    - Light and thin — a fibre cable of the same capacity weighs a fraction of copper, so ducts hold far more capacity.
+    - No electrical hazard: no sparks, no short circuits, no ground loops and no lightning-induced surges. It is safe in explosive atmospheres and between buildings at different ground potentials.
+    - Not corroded by moisture the way copper conductors are.
+    - Long service life and excellent future-proofing — the same installed fibre supports higher speeds simply by changing the transceivers at each end.
+
+    Disadvantages, for balance
+    - Higher cost of cable, transceivers and test equipment; fragile with a minimum bend radius; splicing and termination need trained technicians and a fusion splicer; and it cannot deliver power the way PoE does over copper.
+
+    - Uses: internet backbones, submarine cables, metro and campus backbones, data centre interconnects, FTTH broadband, and CCTV or industrial links in electrically noisy places.
+
 14. **(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026-1027 (ET: N/A)]*
 
+    Answer: Transmission lines suffer from three principal problems — `attenuation`, `distortion` and `noise`. Any of these can corrupt the signal enough to cause bit errors.
+
+    The problems in brief
+    - Attenuation — the signal weakens with distance as energy is absorbed by the medium.
+    - Distortion — the signal changes shape, because different frequency components travel at different speeds and are attenuated by different amounts.
+    - Noise — unwanted energy added to the signal: thermal, intermodulation, crosstalk and impulse noise.
+    - Related effects: jitter (timing variation), echo (reflections from impedance mismatches), fading (varying strength on radio links) and limited bandwidth.
+
+    Described in detail — Attenuation
+
+    - Definition: attenuation is the loss of signal strength as the signal propagates. Electrical energy is converted to heat by the resistance of the conductor, and optical energy is absorbed and scattered in the fibre.
+
+    - Measurement, in decibels:
+    ```
+    Attenuation (dB) = 10 × log10 (P2 / P1)
+    ```
+    where P1 is the transmitted power and P2 the received power. A negative result indicates loss; −3 dB means half the power has been lost.
+
+    - Two properties that matter in practice
+      - It grows with `distance`. Every metre of cable removes some energy, which is exactly why maximum cable lengths are specified: 100 m for UTP, 185 m for thin coaxial.
+      - It grows with `frequency`. High-frequency components fade faster than low-frequency ones, so a square pulse arrives rounded and spread. This is why higher data rates are limited to shorter distances — Cat6 supports 10 Gbps at 55 m but only 1 Gbps at 100 m.
+
+    - Consequence: once the received power falls near the noise level, the receiver can no longer decide reliably between 0 and 1. Errors rise, CRC checks fail, frames are retransmitted, and throughput collapses even though the link still appears connected.
+
+    - Remedies
+      - `Amplifier` for analogue signals — but it amplifies the accumulated noise as well, so noise builds up over every span.
+      - `Repeater` for digital signals — it decides each bit and generates a completely clean new signal, discarding the noise entirely. This is the decisive advantage of digital transmission.
+      - `Equaliser`, to boost high frequencies more than low ones and flatten the response.
+      - Choosing a lower-loss medium: optical fibre loses only about 0.2 dB per kilometre, against tens of dB per hundred metres for copper.
+      - Keeping runs within the specified length, and using thicker conductors where practical.
+
 15. **Explain 10Base2, 10Base5, 10BaseT and Ethernet.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276-1277 (ET: N/A)]*
+
+    Answer: The naming convention is `<speed> BASE <medium or maximum segment length>`, where BASE means baseband signalling.
+
+    Ethernet
+    - The dominant LAN technology, standardised as `IEEE 802.3`. It defines the frame format, 48-bit MAC addressing and, on shared media, the CSMA/CD access method.
+    - Frame: preamble, destination MAC, source MAC, type/length, data (46–1500 bytes) and FCS. Minimum frame 64 bytes, maximum 1518 bytes.
+    - Invented by Robert Metcalfe at Xerox PARC in 1973 and standardised in 1983.
+    - It has scaled from 10 Mbps to 400 Gbps while keeping the same frame format, which is the main reason it displaced every competing LAN technology.
+
+    10BASE2 — Thin Ethernet, "Cheapernet"
+    - 10 Mbps, baseband, `185 m` maximum segment (the 2 stands for approximately 200 m).
+    - Medium: thin RG-58 coaxial cable, about 5 mm, flexible.
+    - Connector: BNC, with T-connectors at each station and 50-ohm terminators at both ends.
+    - Topology: bus. Maximum 30 stations per segment, minimum 0.5 m between taps.
+    - Cheaper and easier than 10BASE5, but a single break or a missing terminator brought down the whole segment.
+
+    10BASE5 — Thick Ethernet, "Thicknet"
+    - 10 Mbps, baseband, `500 m` maximum segment.
+    - Medium: thick, rigid yellow coaxial cable about 10 mm in diameter.
+    - Stations attach with a `vampire tap` piercing the jacket, linked by an AUI drop cable to a transceiver.
+    - Topology: bus. Maximum 100 stations per segment, taps at least 2.5 m apart, terminators at both ends.
+    - The original Ethernet. Expensive and very hard to install, and equally vulnerable to a single cable break.
+
+    10BASE-T — Twisted Pair Ethernet
+    - 10 Mbps, baseband, twisted-pair medium, `100 m` maximum from station to hub or switch.
+    - Medium: Cat3 or better UTP with RJ45 connectors, using two of the four pairs.
+    - Topology: physical `star` around a hub or switch.
+    - Encoding: Manchester, which is self-clocking.
+    - This is the version that made Ethernet universal, because a broken cable affects only one station, cabling is cheap and flexible, moves and additions are trivial, and faults are easy to isolate.
+
+    Comparison
+
+    | Point | 10BASE5 | 10BASE2 | 10BASE-T |
+    |---|---|---|---|
+    | Medium | Thick coax | Thin coax | UTP |
+    | Segment length | 500 m | 185 m | 100 m |
+    | Topology | Bus | Bus | Star |
+    | Connector | Vampire tap / AUI | BNC | RJ45 |
+    | Stations per segment | 100 | 30 | 1 per port |
+    | Effect of a break | Whole segment down | Whole segment down | One station only |
+    | Cost | High | Medium | Low |
+    | Status | Obsolete | Obsolete | Superseded by 100BASE-TX and gigabit |
 
 ## Error Detection & Data Communication (CRC, Throughput) (14)
 
