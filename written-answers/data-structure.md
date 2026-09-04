@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 97 questions
+**Table of Contents** — 10 subtopics · 102 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,9 +8,11 @@
 | 3 | [Linked List](#linked-list-15) | 15 |
 | 4 | [Binary Search Tree (BST)](#binary-search-tree-bst-9) | 9 |
 | 5 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
-| 6 | [Queue](#queue-6) | 6 |
-| 7 | [Hashing & Hash Tables](#hashing--hash-tables-6) | 6 |
+| 6 | [Hashing & Hash Tables](#hashing--hash-tables-7) | 7 |
+| 7 | [Queue](#queue-6) | 6 |
 | 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
+| 9 | [Tree Data Structures (BST, AVL, B-Tree, Heaps)](#tree-data-structures-bst-avl-b-tree-heaps-2) | 2 |
+| 10 | [Linear Data Structures (Arrays, Stacks, Queues, Linked Lists)](#linear-data-structures-arrays-stacks-queues-linked-lists-2) | 2 |
 
 <!-- TOC END -->
 
@@ -18,9 +20,9 @@
 
 ## Tree (27)
 
-1. Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term. [SO IT 25-07-2026]
+1. **Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** [SO IT 25-07-2026]
 
-   Answer:
+Answer:
 
    Example tree used throughout
    ```
@@ -66,9 +68,9 @@
    | Level | Depth of a node, root at level 0 | B is at level 1 |
    | Subtree | A node together with all its descendants | B, D, E, G, H |
 
-2. In BSCPL, all branches manage their records using a preorder traversal system, while data collection follows an inorder traversal system. The branches report their management sequence as 1, 5, 7, 6, 3, 4, 2, whereas the corresponding data collection sequence is 7, 5, 6, 1, 4, 3, 2. Based on these two traversal sequences, construct the complete binary tree representing the branch hierarchy and show the tree clearly. [BSCCPL AME 21-08-2026 (BUET)]
+2. **In BSCPL, all branches manage their records using a preorder traversal system, while data collection follows an inorder traversal system. The branches report their management sequence as 1, 5, 7, 6, 3, 4, 2, whereas the corresponding data collection sequence is 7, 5, 6, 1, 4, 3, 2. Based on these two traversal sequences, construct the complete binary tree representing the branch hierarchy and show the tree clearly.** [BSCCPL AME 21-08-2026 (BUET)]
 
-   Answer: A binary tree can be reconstructed uniquely from its `preorder` and `inorder` traversals, because preorder identifies the root and inorder shows what lies to its left and right.
+Answer: A binary tree can be reconstructed uniquely from its `preorder` and `inorder` traversals, because preorder identifies the root and inorder shows what lies to its left and right.
 
    Given
    ```
@@ -122,7 +124,7 @@
 
 3. **You have to right the traversal order for the new algorithm which will traverse the following tree right child first, then left child and finally the root.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1363 (ET: BUET)]*
 
-   Answer: The new traversal visits `right child, then left child, then root`. This is the exact `mirror image of postorder`, sometimes called reverse postorder or right-to-left postorder.
+Answer: The new traversal visits `right child, then left child, then root`. This is the exact `mirror image of postorder`, sometimes called reverse postorder or right-to-left postorder.
 
    The four orders compared
 
@@ -185,7 +187,7 @@
 
 4. **Proper binary tree is one more node is Internal node prove it.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
 
-   Answer: The property to prove is:
+Answer: The property to prove is:
 
    > In a proper (full) binary tree, the number of `leaf nodes` is exactly `one more than` the number of `internal nodes`.
    ```
@@ -245,7 +247,7 @@
 
 5. **Inserting data to BST. Print the tree in post order traversal. Delete one of the node and redraw the valid BST again.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 400 (ET: BUET)]*
 
-   Answer: The specific data was not printed, so a complete worked example is given using a standard set of values, showing insertion, postorder traversal and deletion.
+Answer: The specific data was not printed, so a complete worked example is given using a standard set of values, showing insertion, postorder traversal and deletion.
 
    Part 1 — Inserting into a BST
    - BST rule: for every node, all values in the `left` subtree are smaller and all values in the `right` subtree are larger. Insertion always creates a new `leaf`.
@@ -319,7 +321,7 @@
 
 6. **Consider the two given arrays as pre[]={1,2,4,8,9,5,3,6,7} and post[]={8,9,4,5,2,6,7,3,1}; Draw a binary tree from above array.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 390 (ET: BUET)]*
 
-   Answer: A binary tree cannot generally be reconstructed from preorder and postorder alone, but it can if the tree is `full` (every node has 0 or 2 children). The arrays given here describe such a tree.
+Answer: A binary tree cannot generally be reconstructed from preorder and postorder alone, but it can if the tree is `full` (every node has 0 or 2 children). The arrays given here describe such a tree.
 
    Given
    ```
@@ -376,7 +378,7 @@
 
 7. **How to represent binary tree using array?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
-   Answer: A binary tree can be stored in a simple array by fixing each node's index according to its position in the tree, so no pointers are needed at all.
+Answer: A binary tree can be stored in a simple array by fixing each node's index according to its position in the tree, so no pointers are needed at all.
 
    The indexing rule
 
@@ -455,7 +457,7 @@
 
 8. **You are given a binary tree (a, b, c, d, e, f, g, h, i) nodes. The post order of the binary tree is: a b f c h d e g i nodes. Now draw the binary tree and show the array representation of this binary tree.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1457 (ET: BUET)]*
 
-   Answer: Postorder alone does `not` determine a binary tree uniquely — many different trees share the same postorder. One consistent tree is therefore constructed and the reasoning shown.
+Answer: Postorder alone does `not` determine a binary tree uniquely — many different trees share the same postorder. One consistent tree is therefore constructed and the reasoning shown.
 
    Given
    ```
@@ -525,7 +527,7 @@
 
 9. **(ক) Binary Tree কী? Binary Tree Traversing এর পদ্ধতিসমূহ আলোচনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    What is a binary tree
    - A binary tree is a hierarchical data structure in which every node has `at most two` children, called the left child and the right child.
@@ -582,7 +584,7 @@
 
 10. **6.12 Define the following terms used in tree data structures: (i) Tree, (ii) Leaf Node, (iii) Internal Node, and (iv) Height of a Tree. Provide a suitable example to illustrate each term.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Example tree used throughout
     ```
@@ -630,7 +632,7 @@
 
 11. **Explain binary tree with example.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     What is a binary tree
     - A binary tree is a hierarchical data structure in which each node has `at most two` children, referred to as the left child and the right child.
@@ -688,7 +690,7 @@
 
 12. **What is Pre-order and Post order?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
 
-    Answer: Preorder and postorder are two of the three depth-first ways of visiting every node in a binary tree. They differ only in `when the root is visited`.
+Answer: Preorder and postorder are two of the three depth-first ways of visiting every node in a binary tree. They differ only in `when the root is visited`.
 
     Example tree used for both
     ```
@@ -744,7 +746,7 @@
 
 13. **Explain with example Post order traversal.** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 508 (ET: N/A)]*
 
-    Answer: Postorder traversal visits the nodes in the order `Left subtree, Right subtree, Root` — the root is always visited last.
+Answer: Postorder traversal visits the nodes in the order `Left subtree, Right subtree, Root` — the root is always visited last.
 
     Algorithm
     ```
@@ -808,7 +810,7 @@
 
 14. **(b) Draw a binary tree of 15 elements in (a) Preorder (b) In-order (c) Post order traversals.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
 
-    Answer: A binary tree of 15 elements is drawn, and then listed in all three traversals.
+Answer: A binary tree of 15 elements is drawn, and then listed in all three traversals.
 
     The tree — a `perfect` binary tree of 15 nodes (height 3)
     ```
@@ -866,7 +868,7 @@
 
 15. **What is the minimum number of nodes in a binary tree?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)]*
 
-    Answer: The answer depends on which "minimum" is being asked, so both readings are given.
+Answer: The answer depends on which "minimum" is being asked, so both readings are given.
 
     Reading 1 — minimum nodes in a binary tree of height h
 
@@ -909,7 +911,7 @@
 
 16. **(ক) B-tree data structure কী? এর প্রয়োগ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     What is a B-tree
     - A B-tree is a `self-balancing, multi-way search tree` designed for storage systems where data is read in large blocks from disk. Unlike a binary tree, each node can hold `many keys` and have `many children`.
@@ -959,7 +961,7 @@
 
 17. **(গ) নিচের ছবির Tree এর Inorder, Preorder এবং Postorder Traversal লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The figure was not printed with the question, so a standard tree is used and the method shown in full, so that any tree can be read the same way.
+Answer: (Answered in English, as required for IT topics.) The figure was not printed with the question, so a standard tree is used and the method shown in full, so that any tree can be read the same way.
 
     The tree
     ```
@@ -1019,7 +1021,7 @@
 
 18. **Write C++ function that will invert mirror a binary tree.** *[BICIC Assistant Programmer 2022 compact it 630 (ET: BUET)]*
 
-    Answer: Inverting (mirroring) a binary tree means swapping the left and right child of every node, so the tree becomes its mirror image.
+Answer: Inverting (mirroring) a binary tree means swapping the left and right child of every node, so the tree becomes its mirror image.
 
     ```
           Original                  Inverted
@@ -1110,7 +1112,7 @@
 
 19. **X = (a^2 - 5b).(7a + b^5) এক্সপ্রেশনটিকে tree stracture-এ অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     The expression
     ```
@@ -1174,7 +1176,7 @@
 
 20. **Write a Pseudocode of postorder by recursion and generate postorder, preorder inorder from the tree.** *[BIWTA; Assistant Programmer 25.11.2022 compact it 762 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Pseudocode of postorder by recursion
     ```
@@ -1259,7 +1261,7 @@
 
 21. **(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
 
-    Answer: A binary tree of 5 elements is drawn, then listed in all three traversals.
+Answer: A binary tree of 5 elements is drawn, then listed in all three traversals.
 
     The tree
     ```
@@ -1314,7 +1316,7 @@
 
 22. **Mathematically derive the maximum and minimum height of a binary tree consisting of n nodes. Note that the height of a tree with a single node is considered as 1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 849-850 (ET: N/A)]*
 
-    Answer: The convention stated is that a tree with a single node has height `1`, so the height is being counted in `nodes`, not edges.
+Answer: The convention stated is that a tree with a single node has height `1`, so the height is being counted in `nodes`, not edges.
 
     Maximum height of a binary tree with n nodes
 
@@ -1384,7 +1386,7 @@
 
 23. **(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
-    Answer: The convention stated is that the `root is at height 0`, so height is counted in `edges` and a tree of height 7 has `8 levels` (levels 0 through 7).
+Answer: The convention stated is that the `root is at height 0`, so height is counted in `edges` and a tree of height 7 has `8 levels` (levels 0 through 7).
 
     Maximum number of nodes
 
@@ -1442,6 +1444,9 @@
 
 24. **Construct a full binary tree from the given inorder and preorder traversal as follows:** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
    Inorder: B A D C F E J H K G I
+   Preorder: A B C D E F G H J K I
+
+Inorder: B A D C F E J H K G I
    Preorder: A B C D E F G H J K I
 
     Answer: A binary tree is uniquely determined by its `inorder` and `preorder` traversals. Preorder supplies the root; inorder shows what lies to its left and right.
@@ -1515,6 +1520,9 @@
 
 25. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925-926 (ET: CTI)]*
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
+   Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
+
+In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
    Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
     Answer:
@@ -1609,7 +1617,7 @@
 
 26. **Making binary a tree from the given expression: 3 + ((5+9)*2)** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
-    Answer:
+Answer:
 
     The expression
     ```
@@ -1671,7 +1679,7 @@
 
 27. **Evaluate the prefix and postfix notation with binary tree evaluation and find out its final value.** *[DESCO Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
-    Answer: An expression tree is evaluated by `postorder` recursion: compute both operands, then apply the operator. Prefix and postfix notations are simply the preorder and postorder traversals of that same tree.
+Answer: An expression tree is evaluated by `postorder` recursion: compute both operands, then apply the operator. Prefix and postfix notations are simply the preorder and postorder traversals of that same tree.
 
     Example expression
     ```
@@ -1763,7 +1771,7 @@
 
 1. **Explain the push and pop operations of the stack.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
-   Answer: A stack is a linear data structure that follows the `LIFO` (Last In, First Out) principle: the element inserted most recently is the first to be removed. All operations happen at one end, called the `top`.
+Answer: A stack is a linear data structure that follows the `LIFO` (Last In, First Out) principle: the element inserted most recently is the first to be removed. All operations happen at one end, called the `top`.
 
    PUSH — inserting an element
    - Adds a new element to the `top` of the stack.
@@ -1844,7 +1852,7 @@
 
 2. **Implementation of Stack using two Queues?** *[BCIC Assistant Programmer 14.02.2025 compact it 1326 (ET: BUET)]*
 
-   Answer: A stack (LIFO) can be simulated with two queues (FIFO). There are two standard designs, differing in which operation carries the cost.
+Answer: A stack (LIFO) can be simulated with two queues (FIFO). There are two standard designs, differing in which operation carries the cost.
 
    Method 1 — costly PUSH, O(1) POP
 
@@ -1947,7 +1955,7 @@
 
 3. **Correct of correct parentheses if it is written proper show matched if it does not show unmatched.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 
-   Answer: Checking whether parentheses are balanced is the classic application of a stack, because the most recently opened bracket must be the first one closed — exactly LIFO behaviour.
+Answer: Checking whether parentheses are balanced is the classic application of a stack, because the most recently opened bracket must be the first one closed — exactly LIFO behaviour.
 
    Rules for a balanced expression
    - Every opening bracket has a matching closing bracket of the `same type`.
@@ -2050,7 +2058,7 @@
 
 4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
 
-   Answer:
+Answer:
 
    Difference between stack and queue
 
@@ -2102,7 +2110,7 @@
 
 5. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
 
-   Answer:
+Answer:
 
    Given
    ```
@@ -2172,7 +2180,7 @@
 
 6. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    | Point | Stack | Queue |
    |---|---|---|
@@ -2205,7 +2213,7 @@
 
 7. **Write down the difference between Stack and Queue.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    | Point | Stack | Queue |
    |---|---|---|
@@ -2240,7 +2248,7 @@
 
 8. **Prefix Conversion A+ B * C+D expression?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Given
    ```
@@ -2310,7 +2318,7 @@
 
 9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
-   Answer: A stack works on the `LIFO` principle — the element pushed most recently is the first one popped.
+Answer: A stack works on the `LIFO` principle — the element pushed most recently is the first one popped.
 
    Trace of the operations
 
@@ -2348,7 +2356,7 @@
 
 10. **Expalin: Infix, Prefix, Postfix notation.** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
 
-    Answer: These are the three ways of writing an arithmetic expression, differing only in `where the operator is placed` relative to its operands.
+Answer: These are the three ways of writing an arithmetic expression, differing only in `where the operator is placed` relative to its operands.
 
     Infix notation
     - The operator sits `between` its two operands — the normal human way of writing arithmetic.
@@ -2408,7 +2416,7 @@
 
 11. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     Stack
     - A linear data structure following `LIFO` — Last In, First Out. Insertion and deletion both take place at the same end, called the `top`.
@@ -2451,7 +2459,7 @@
 
 12. **Difference between LIFO and FIFO in data structure.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     LIFO — Last In, First Out
     - The element inserted `most recently` is removed first.
@@ -2499,7 +2507,7 @@
 
 13. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) A stack is a LIFO structure in which all operations take place at one end, the `top`.
+Answer: (Answered in English, as required for IT topics.) A stack is a LIFO structure in which all operations take place at one end, the `top`.
 
     1. PUSH — insert an element
     - Places a new element on the top of the stack.
@@ -2573,7 +2581,7 @@
 
 14. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) This is a postfix expression, evaluated with a stack.
+Answer: (Answered in English, as required for IT topics.) This is a postfix expression, evaluated with a stack.
 
     Given
     ```
@@ -2621,7 +2629,7 @@
 
 15. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     C program to check balanced parentheses
     ```c
@@ -2727,6 +2735,13 @@
     - `Time O(n)`, one pass over the string. `Space O(n)` in the worst case, when every character is an opening bracket.
 
 16. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
+```text
+Input: [0]{[00]0}
+Output: Balanced
+Input: [())
+Output: Not Balanced
+```
+
 ```text
 Input: [0]{[00]0}
 Output: Balanced
@@ -2844,7 +2859,7 @@ Output: Not Balanced
 
 17. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The structure in which insertion and deletion both take place at the `same end` is the `Stack`.
+Answer: (Answered in English, as required for IT topics.) The structure in which insertion and deletion both take place at the `same end` is the `Stack`.
 
     Why
     - A stack is a LIFO (Last In, First Out) structure. Both `push` (insertion) and `pop` (deletion) operate at one end only, called the `top`. Only a single pointer, `top`, is therefore needed.
@@ -2875,7 +2890,7 @@ Output: Not Balanced
 
 18. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     C program
     ```c
@@ -2966,7 +2981,7 @@ Output: Not Balanced
 
 19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     PUSH procedure — inserting data into a stack
     ```
@@ -3043,7 +3058,7 @@ Output: Not Balanced
 
 20. **Write prefix and postfix notations from the statement like $((A+B)*C-(D-E)^F)$** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Given
     ```
@@ -3131,7 +3146,7 @@ Output: Not Balanced
 
 1. **Explain with proper example of singly linked list.** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
 
-   Answer: A singly linked list is a linear data structure in which elements, called `nodes`, are stored in separate memory locations and linked together by pointers. Each node points only to the `next` node, so the list can be traversed in one direction only.
+Answer: A singly linked list is a linear data structure in which elements, called `nodes`, are stored in separate memory locations and linked together by pointers. Each node points only to the `next` node, so the list can be traversed in one direction only.
 
    Structure of a node
    ```c
@@ -3220,7 +3235,7 @@ Output: Not Balanced
 
 2. **Explain the difference between a singly linked list and a doubly linked list data structure.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 426 (ET: BIBM)]*
 
-   Answer:
+Answer:
 
    | Point | Singly linked list | Doubly linked list |
    |---|---|---|
@@ -3283,7 +3298,7 @@ Output: Not Balanced
 
 3. **(ক) Linked list কী? উহার প্রকারভেদ চিত্রসহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    What is a linked list
    - A linked list is a linear data structure in which elements, called `nodes`, are stored at scattered memory locations and joined together by `pointers`. Each node holds the data and the address of the next node.
@@ -3355,7 +3370,7 @@ Output: Not Balanced
 
 4. **(a) Compare array and linked list with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Diagrams
    ```
@@ -3417,7 +3432,7 @@ Output: Not Balanced
 
 5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    What is a linked list
    - A linked list is a linear data structure whose elements, called `nodes`, are stored in scattered memory locations and joined by `pointers`. Each node contains the data and the address of the next node.
@@ -3488,7 +3503,7 @@ Output: Not Balanced
 
 6. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    Diagrams
    ```
@@ -3560,7 +3575,7 @@ Output: Not Balanced
 
 7. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 636 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    What is a linked list
    - A linked list is a linear data structure whose elements, called `nodes`, are stored in scattered memory and joined by `pointers`. Each node holds data and the address of the next node.
@@ -3672,7 +3687,7 @@ Output: Not Balanced
 
 8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Advantages of linked lists over arrays
 
@@ -3711,7 +3726,7 @@ Output: Not Balanced
 
 9. **(a) Computer and contrast between array and linked list.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Comparison
    ```
@@ -3769,7 +3784,7 @@ Output: Not Balanced
 
 10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851-852 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     C program — recursive reverse printing
     ```c
@@ -3880,7 +3895,7 @@ Output: Not Balanced
 
 11. **(a) What are the differences between linked list and array data structure?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     | Point | Array | Linked list |
     |---|---|---|
@@ -3920,7 +3935,7 @@ Output: Not Balanced
 
 12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
-    Answer: A linked list is better than an array for `Insert` and `Delete`, but `not` for `Search`.
+Answer: A linked list is better than an array for `Insert` and `Delete`, but `not` for `Search`.
 
     Insert — `linked list is better`
     - Inserting at the beginning of a linked list is `O(1)`: create the node, set `new->next = head`, then `head = new`. Two assignments, nothing else moves.
@@ -3960,7 +3975,7 @@ Output: Not Balanced
 
 13. **Linked list, doubly linked list and circular linked list explains with diagram.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1004-1005 (ET: DU)]*
 
-    Answer:
+Answer:
 
     1. Singly linked list
     - Each node has one pointer, `next`, holding the address of the following node. The last node's `next` is `NULL`.
@@ -4050,7 +4065,7 @@ Output: Not Balanced
 
 14. **In a doubly linked list write the function of Traversing from the tail.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
-    Answer: Traversing a doubly linked list from the tail is possible because every node stores a `prev` pointer holding the address of its predecessor. This is the operation a singly linked list cannot perform at all.
+Answer: Traversing a doubly linked list from the tail is possible because every node stores a `prev` pointer holding the address of its predecessor. This is the operation a singly linked list cannot perform at all.
 
     Node structure
     ```c
@@ -4145,7 +4160,7 @@ Output: Not Balanced
 
 15. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
     A linked list is a `linear data structure` in which the elements, called `nodes`, are stored at scattered memory locations and joined together by `pointers`. Each node contains two parts: the data, and the address of the next node.
 
@@ -4197,7 +4212,7 @@ Output: Not Balanced
 
 1. **Given a post order data strings of a binaray search tree. Find pre-order and in-order of this this tree and draw the binary search tree.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
 
-   Answer: A binary search tree can be rebuilt from its postorder alone, because a BST's `inorder is always the sorted order` — so sorting the postorder supplies the missing second traversal.
+Answer: A binary search tree can be rebuilt from its postorder alone, because a BST's `inorder is always the sorted order` — so sorting the postorder supplies the missing second traversal.
 
    The method
    - Step 1 — sort the postorder values; that gives the `inorder` traversal.
@@ -4247,7 +4262,7 @@ Output: Not Balanced
 
 2. **Given item- 40, 45, 80, 90, 50, 70. Draw Heap and Binary search tree (BST).** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    Given items: `40, 45, 80, 90, 50, 70`
 
@@ -4343,7 +4358,7 @@ Output: Not Balanced
 
 3. **(খ) Binary Search tree উহার অপারেশনগুলো বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    What is a binary search tree
    - A BST is a binary tree in which, for `every` node:
@@ -4419,7 +4434,7 @@ Output: Not Balanced
 
 4. **Construct a Binary Search tree, then post order, ....... (Approximate)** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
 
-   Answer: The exact data was not printed, so a complete worked example is given using a standard set of values.
+Answer: The exact data was not printed, so a complete worked example is given using a standard set of values.
 
    Data used: `50, 30, 70, 20, 40, 60, 80`
 
@@ -4485,7 +4500,7 @@ Output: Not Balanced
 
 5. **(a) Draw the binary search tree for the following elements and write the output of In-order, Preorder and Postorder traversal. 1, 2, 3, 4, 5** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Given elements: `1, 2, 3, 4, 5`
 
@@ -4556,7 +4571,7 @@ Output: Not Balanced
 
 6. **Construct a BST from Pre-order and In-order: Pre: 1587493 In: 8571943** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    Given
    ```
@@ -4605,7 +4620,7 @@ Output: Not Balanced
 
 7. **Write an algorithm to find a node in a binary search tree.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
 
-   Answer: Searching a BST exploits its ordering: at every node, half the remaining tree can be discarded.
+Answer: Searching a BST exploits its ordering: at every node, half the remaining tree can be discarded.
 
    Recursive algorithm
    ```
@@ -4685,7 +4700,7 @@ Output: Not Balanced
 
 8. **Complexity of BST (Binary Search Tree) best and worst case.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
 
-   Answer: Every BST operation walks down a single path from the root, so its cost is proportional to the `height h` of the tree. Everything therefore depends on how balanced the tree is.
+Answer: Every BST operation walks down a single path from the root, so its cost is proportional to the `height h` of the tree. Everything therefore depends on how balanced the tree is.
 
    Complexity table
 
@@ -4751,7 +4766,7 @@ Output: Not Balanced
 
 9. **What is Binary Search Tree? Explain the complexity of BST?** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1217 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    What is a binary search tree
    - A BST is a binary tree in which, for `every` node:
@@ -4813,7 +4828,7 @@ Output: Not Balanced
 
 1. **Max heap:** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
-   Answer: A `max heap` is a `complete binary tree` in which every parent node is greater than or equal to both of its children, so the largest element is always at the root.
+Answer: A `max heap` is a `complete binary tree` in which every parent node is greater than or equal to both of its children, so the largest element is always at the root.
 
    The two defining properties
    - `Structural property` — the tree is complete: every level is filled from the left, and only the last level may be partly filled. This is what allows an array representation with no gaps.
@@ -4888,7 +4903,7 @@ Output: Not Balanced
 
 2. **Max Heap Operation [a-j] show heap.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
 
-   Answer: The ten letters `a` to `j` are inserted one at a time into a max heap. Since a heap stores comparable items, the alphabetical order applies, so `j` is the largest and `a` the smallest.
+Answer: The ten letters `a` to `j` are inserted one at a time into a max heap. Since a heap stores comparable items, the alphabetical order applies, so `j` is the largest and `a` the smallest.
 
    Rule for insertion
    - Place the new item at the next free position (keeping the tree complete), then `sift up`: while it is greater than its parent, swap with the parent.
@@ -5000,7 +5015,7 @@ Output: Not Balanced
 
 3. **অথবা, (ক) Heap data structure কী? কোন ক্ষেত্রে Heap ব্যবহার করা হয়?** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 606 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    What is a heap
    - A heap is a `complete binary tree` that satisfies the `heap property`:
@@ -5050,7 +5065,7 @@ Output: Not Balanced
 
 4. **Write down the properties of Max heap. Also write down the heapsort algorithm.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 686 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Properties of a max heap
 
@@ -5177,7 +5192,7 @@ Output: Not Balanced
 
 5. **Given an array of 6 elements: \{15, 19, 10, 7, 17, 16\}. Draw heap tree and again draw the tree after deletion of element 7 from this tree.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 863 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    Given array: `{15, 19, 10, 7, 17, 16}`
 
@@ -5265,7 +5280,7 @@ Output: Not Balanced
 
 6. **Binary tree টিকে heapify করুন যেন maximum heap -এ রূপান্তরিত হয়:** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) The figure was not printed, so a standard example is used and the full heapify method is shown so that any tree can be converted the same way.
+Answer: (Answered in English, as required for IT topics.) The figure was not printed, so a standard example is used and the full heapify method is shown so that any tree can be converted the same way.
 
    What heapify means
    - Converting an arbitrary binary tree (stored as a complete tree) into a `max heap`, in which every parent is greater than or equal to both of its children.
@@ -5347,7 +5362,7 @@ Output: Not Balanced
 
 7. **Heapify the MAX heap tree.** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1043, 1045 (ET: BUET)]*
 
-   Answer: The tree was not printed, so a standard example is used, with the general method shown so any tree can be converted.
+Answer: The tree was not printed, so a standard example is used, with the general method shown so any tree can be converted.
 
    What heapifying to a max heap means
    - Rearranging a complete binary tree so that `every parent is greater than or equal to both of its children`. The largest value then sits at the root.
@@ -5432,7 +5447,7 @@ Output: Not Balanced
 
 8. **Draw (max/min) heap binay tree using 11 nodes.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
-   Answer: A heap with 11 nodes has 4 levels: levels 0, 1 and 2 are full (1 + 2 + 4 = 7 nodes) and the last level holds the remaining 4 nodes, filled from the left.
+Answer: A heap with 11 nodes has 4 levels: levels 0, 1 and 2 are full (1 + 2 + 4 = 7 nodes) and the last level holds the remaining 4 nodes, filled from the left.
 
    Structure of a complete binary tree with 11 nodes
    ```
@@ -5499,423 +5514,11 @@ Output: Not Balanced
    - Index rules used throughout: `left = 2i + 1`, `right = 2i + 2`, `parent = (i − 1)/2`.
    - Because the tree is complete, the array has no empty slots at all — which is precisely why heaps are stored as arrays rather than with pointers.
 
-## Queue (6)
-
-1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
-
-   Answer: A circular queue is preferred because it `reuses the space freed by dequeued elements`, which a linear queue cannot.
-
-   The problem with a linear queue
-   - In a linear queue, `front` and `rear` only ever move forward. When an element is dequeued, front advances and the slot it leaves behind is `permanently wasted`.
-   - Eventually `rear` reaches the end of the array and the queue reports "full", even though several slots at the front are empty. This is called `false overflow` or the `queue full but not full` problem.
-   ```
-   Array of size 5. Enqueue A, B, C, D, E then dequeue three times:
-
-   index :   0     1     2     3     4
-           +-----+-----+-----+-----+-----+
-           |  X  |  X  |  X  |  D  |  E  |
-           +-----+-----+-----+-----+-----+
-                               ^     ^
-                             front  rear
-
-   rear = 4 = last index, so enqueue F is REJECTED as "Queue Full",
-   even though indices 0, 1 and 2 are free.
-   ```
-   - The only remedies are to shift every element left after each dequeue, which costs `O(n)` per operation, or to accept the waste.
-
-   How a circular queue solves it
-   - The array is treated as a ring: after the last index, the next position is index 0 again.
-   ```
-   rear  = (rear  + 1) % SIZE
-   front = (front + 1) % SIZE
-   ```
-   ```
-   index :   0     1     2     3     4
-           +-----+-----+-----+-----+-----+
-           |  F  |     |     |  D  |  E  |
-           +-----+-----+-----+-----+-----+
-              ^                 ^
-             rear             front
-
-   F wraps around into index 0 — the freed space is reused.
-   ```
-   - Enqueue and dequeue both stay `O(1)`, with no shifting at all.
-
-   Comparison
-
-   | Point | Linear queue | Circular queue |
-   |---|---|---|
-   | Space reuse | No — freed slots are wasted | `Yes` — wraps around |
-   | False overflow | Occurs | Cannot occur |
-   | Memory efficiency | Poor | Excellent |
-   | Enqueue / dequeue cost | O(1), or O(n) if shifting is used | `O(1)` |
-   | Implementation | Simpler | Slightly more complex (modulo arithmetic) |
-   | Full condition | rear = SIZE − 1 | (rear + 1) % SIZE = front |
-
-   Example from operating systems — the `keyboard buffer`
-   - The keyboard driver stores keystrokes in a small fixed buffer, say 32 bytes. The producer is the interrupt handler adding keystrokes; the consumer is the application reading them.
-   - With a linear queue, after 32 keystrokes have been typed and read, the buffer would declare itself full and refuse further input, even though every slot had been consumed. The system would have to reset or shift the buffer constantly.
-   - With a circular queue the buffer never fills spuriously: as the application consumes characters, those slots become available again for new keystrokes, indefinitely. The buffer is genuinely full only when the application falls behind by 32 characters.
-
-   Other operating-system uses of circular queues
-   - `CPU scheduling` — the round-robin ready queue naturally cycles through processes.
-   - `Printer and disk I/O buffers`, and the network card's ring buffer for incoming packets.
-   - `Producer–consumer buffers` between threads, and `traffic shaping` queues.
-   - `Streaming and audio buffers`, where data flows continuously through a fixed block of memory.
-
-2. **FIFO is used which data structure?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
-
-   Answer: `FIFO` — First In, First Out — is the principle used by the `Queue` data structure.
-
-   - In a queue, the element inserted `first` is the one removed `first`, exactly as in a line at a ticket counter.
-   - Insertion (`enqueue`) happens at the `rear`; deletion (`dequeue`) happens at the `front`. Two different ends are used, so two pointers, `front` and `rear`, are needed.
-
-   ```
-      enqueue -->  [ A | B | C ]  --> dequeue
-                   rear       front
-
-   A entered first, so A leaves first.
-   ```
-
-   Operations and complexity
-
-   | Operation | Meaning | Cost |
-   |---|---|---|
-   | enqueue | Insert at the rear | O(1) |
-   | dequeue | Remove from the front | O(1) |
-   | front / peek | Read the front element | O(1) |
-   | isEmpty / isFull | Test the state | O(1) |
-
-   Types of queue
-   - `Simple (linear) queue` — the basic form; suffers from wasted space at the front.
-   - `Circular queue` — the rear wraps around to index 0, so freed space is reused.
-   - `Priority queue` — served by priority rather than arrival order; usually built on a heap.
-   - `Deque` — insertion and deletion at both ends.
-
-   Applications
-   - CPU and disk scheduling, printer spooling, the keyboard buffer, breadth-first search, message queues, call-centre waiting lines, and network packet buffering.
-
-   - For contrast, `LIFO` (Last In, First Out) is the principle of the `Stack`, where insertion and deletion both occur at the same end, the top.
-
-3. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
-
-   Answer: A circular queue is preferred because it `reuses the memory freed by dequeued elements`, which a linear queue cannot do.
-
-   The weakness of a linear queue
-   - `front` and `rear` only move forward. Every dequeue advances front and leaves the vacated slot `permanently unusable`.
-   - Once rear reaches the last index the queue reports "Queue Full", even when slots at the beginning are free. This is `false overflow`.
-   ```
-   Array of size 5:
-   Enqueue A, B, C, D, E ; then Dequeue three times
-
-   index :   0     1     2     3     4
-           +-----+-----+-----+-----+-----+
-           |  -  |  -  |  -  |  D  |  E  |
-           +-----+-----+-----+-----+-----+
-                               ^     ^
-                             front  rear = 4
-
-   Enqueue F -> REJECTED ("Queue Full") although 3 slots are empty.
-   ```
-   - The alternative is to shift all elements left after every dequeue, which turns an O(1) operation into O(n).
-
-   How a circular queue fixes it
-   - The array is treated as a ring. Modulo arithmetic makes position 0 follow the last index:
-   ```
-   rear  = (rear  + 1) % SIZE
-   front = (front + 1) % SIZE
-
-   Full  : (rear + 1) % SIZE == front
-   Empty : front == -1   (or a separate count == 0)
-   ```
-   ```
-   index :   0     1     2     3     4
-           +-----+-----+-----+-----+-----+
-           |  F  |     |     |  D  |  E  |
-           +-----+-----+-----+-----+-----+
-              ^                 ^
-            rear              front
-
-   F wraps into index 0 — the freed space is reused, and enqueue stays O(1).
-   ```
-
-   Comparison
-
-   | Point | Linear queue | Circular queue |
-   |---|---|---|
-   | Reuses freed space | No | `Yes` |
-   | False overflow | Yes | No |
-   | Memory efficiency | Poor | Excellent |
-   | Enqueue / dequeue | O(1), or O(n) with shifting | `O(1)` |
-   | Complexity of code | Simpler | Modulo arithmetic needed |
-
-   Example — the CPU ready queue in round-robin scheduling
-   - The scheduler keeps ready processes in a fixed-size queue. A process is dequeued, given one time slice, and if it has not finished it is enqueued again at the rear.
-   - With a linear queue, every such cycle would consume a fresh slot and the queue would exhaust the array within a few rounds, even though processes are constantly leaving the front. The scheduler would have to compact the queue continually.
-   - With a circular queue, the processes simply circulate around the ring indefinitely, at O(1) cost per operation. This behaviour is exactly what round-robin scheduling means, which is why operating systems use circular structures for it.
-
-   Other operating-system examples
-   - Keyboard and terminal input buffers, printer spool queues, disk I/O request queues, the network interface's packet ring buffer, and producer–consumer buffers shared between threads.
-
-4. **What is a Circular Queue? Describe its implementation.** *[BDCCL Assistant Engineer (Network) 2022 compact it 743 (ET: N/A)]*
-
-   Answer:
-
-   What is a circular queue
-   - A circular queue is a linear queue in which the last position is connected back to the first, forming a ring. It is also called a `ring buffer`.
-   - Its purpose is to solve the `false overflow` problem of a linear queue, in which slots freed by dequeue operations can never be reused and the queue reports "full" while empty space remains at the front.
-   ```
-                [0]  [1]  [2]  [3]  [4]
-               +----+----+----+----+----+
-               |    |    |    |    |    |
-               +----+----+----+----+----+
-                 ^                    |
-                 |____________________|
-                    after index 4 comes index 0 again
-   ```
-
-   Key formulas
-   ```
-   Enqueue : rear  = (rear  + 1) % SIZE
-   Dequeue : front = (front + 1) % SIZE
-
-   Empty   : front == -1
-   Full    : (rear + 1) % SIZE == front
-   ```
-
-   Implementation in C
-   ```c
-   #include <stdio.h>
-   #define SIZE 5
-
-   int queue[SIZE];
-   int front = -1, rear = -1;
-
-   int isEmpty(void) { return front == -1; }
-   int isFull(void)  { return (rear + 1) % SIZE == front; }
-
-   void enqueue(int value) {
-       if (isFull()) { printf("Queue is Full\n"); return; }
-       if (isEmpty()) front = 0;                 // first element
-       rear = (rear + 1) % SIZE;                 // wrap around
-       queue[rear] = value;
-       printf("%d enqueued\n", value);
-   }
-
-   int dequeue(void) {
-       if (isEmpty()) { printf("Queue is Empty\n"); return -1; }
-       int value = queue[front];
-       if (front == rear) {                      // last element removed
-           front = rear = -1;                    // reset to empty
-       } else {
-           front = (front + 1) % SIZE;           // wrap around
-       }
-       return value;
-   }
-
-   void display(void) {
-       if (isEmpty()) { printf("Queue is Empty\n"); return; }
-       int i = front;
-       while (1) {
-           printf("%d ", queue[i]);
-           if (i == rear) break;
-           i = (i + 1) % SIZE;
-       }
-       printf("\n");
-   }
-   ```
-
-   Worked trace with SIZE = 5
-   ```
-   Initially front = rear = −1  (empty)
-
-   enqueue(10): front=0, rear=0   -> [10, _, _, _, _]
-   enqueue(20): rear=1            -> [10, 20, _, _, _]
-   enqueue(30): rear=2            -> [10, 20, 30, _, _]
-   enqueue(40): rear=3            -> [10, 20, 30, 40, _]
-
-   dequeue():   returns 10, front=1 -> [_, 20, 30, 40, _]
-   dequeue():   returns 20, front=2 -> [_, _, 30, 40, _]
-
-   enqueue(50): rear=4            -> [_, _, 30, 40, 50]
-   enqueue(60): rear=(4+1)%5=0    -> [60, _, 30, 40, 50]     <- WRAPPED AROUND
-   enqueue(70): rear=1            -> [60, 70, 30, 40, 50]
-
-   Now (rear+1)%5 = 2 = front  -> the queue is genuinely FULL
-   ```
-   - A linear queue would have refused to enqueue 50 onwards, because rear had reached the end of the array. The circular version keeps every slot usable.
-
-   Why one slot is sacrificed
-   - With the test `(rear + 1) % SIZE == front` for full and `front == −1` for empty, the two conditions stay distinguishable. Some implementations instead keep an explicit `count` variable, which allows all SIZE slots to be used at the cost of one extra integer.
-
-   Complexity and uses
-   - `Enqueue O(1)`, `dequeue O(1)`, `space O(n)` with no wastage.
-   - Uses: round-robin CPU scheduling, keyboard and printer buffers, network interface ring buffers, producer–consumer buffers between threads, audio and video streaming buffers, and traffic shaping.
-
-5. **Circular Queue and Priority Queue কীভাবে কাজ করে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 912-913 (ET: BUET)]*
-
-   Answer: (Answered in English, as required for IT topics.)
-
-   Circular queue — how it works
-   - A circular queue treats the array as a ring: the position after the last index is index 0 again. Its purpose is to reuse the space freed by dequeued elements, which a linear queue wastes.
-   ```
-                [0]  [1]  [2]  [3]  [4]
-               +----+----+----+----+----+
-               |    |    |    |    |    |
-               +----+----+----+----+----+
-                 ^                    |
-                 |____________________|
-   ```
-
-   Working formulas
-   ```
-   Enqueue : rear  = (rear  + 1) % SIZE ;  queue[rear] = value
-   Dequeue : value = queue[front] ; front = (front + 1) % SIZE
-   Empty   : front == −1
-   Full    : (rear + 1) % SIZE == front
-   ```
-
-   Trace with SIZE = 5
-   ```
-   enqueue 10,20,30,40  -> [10,20,30,40,_]   front=0 rear=3
-   dequeue, dequeue     -> [_, _,30,40,_]    front=2 rear=3
-   enqueue 50           -> [_, _,30,40,50]   rear=4
-   enqueue 60           -> [60,_,30,40,50]   rear=(4+1)%5=0   <- WRAPS AROUND
-   ```
-   - A linear queue would have declared itself full at this point, wasting indices 0 and 1. The circular version keeps every slot usable, and both operations remain `O(1)`.
-   - Uses: round-robin CPU scheduling, keyboard and printer buffers, network ring buffers, and producer–consumer buffers between threads.
-
-   Priority queue — how it works
-   - A priority queue serves elements by `priority`, not by arrival order. The element with the highest priority is always removed first; among equal priorities, arrival order decides.
-   - The two operations are `insert(item, priority)` and `extract` (remove the highest-priority item).
-
-   Implementation choices
-
-   | Implementation | Insert | Extract highest priority |
-   |---|---|---|
-   | Unsorted array or list | O(1) | O(n) — scan for the best |
-   | Sorted array or list | O(n) — find the position | O(1) |
-   | `Binary heap` | `O(log n)` | `O(log n)` |
-   | Fibonacci heap | O(1) amortised | O(log n) |
-
-   - The `binary heap` is the standard choice, because it balances both operations. A max heap serves the largest value first; a min heap the smallest.
-
-   Example — a max-priority queue as a heap
-   ```
-   Insert (Job A, 5), (Job B, 9), (Job C, 3), (Job D, 7)
-
-                       9 (B)
-                     /      \
-                 7 (D)      3 (C)
-                 /
-             5 (A)
-
-   extract -> B (priority 9), then D (7), then A (5), then C (3)
-   ```
-
-   Uses of a priority queue
-   - Operating-system process scheduling, where a real-time process pre-empts a background one.
-   - `Dijkstra's` shortest-path and `Prim's` minimum-spanning-tree algorithms.
-   - `Huffman coding`, which repeatedly takes the two least frequent symbols.
-   - Hospital emergency triage, print job priorities, event-driven simulation, and A* search.
-
-   Comparison of the two
-
-   | Point | Circular queue | Priority queue |
-   |---|---|---|
-   | Order of service | Arrival order (FIFO) | Priority order |
-   | Structure | Array treated as a ring | Usually a binary heap |
-   | Enqueue | O(1) | O(log n) |
-   | Dequeue | O(1) | O(log n) |
-   | Fairness | Strictly fair | Unfair by design; a low-priority item may starve |
-   | Typical use | Round-robin scheduling, buffers | Priority scheduling, Dijkstra, Huffman |
-
-6. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
-
-   Answer: `Enqueue` inserts an element at the `rear` of a queue.
-
-   Steps of the enqueue operation
-
-   ```
-   ALGORITHM enqueue(queue, front, rear, MAX, item)
-   BEGIN
-       // Step 1: check for overflow
-       IF rear = MAX − 1 THEN
-           PRINT "Queue Overflow — cannot insert"
-           RETURN
-       END IF
-
-       // Step 2: if the queue is empty, initialise front
-       IF front = −1 THEN
-           front = 0
-       END IF
-
-       // Step 3: advance the rear pointer
-       rear = rear + 1
-
-       // Step 4: place the item at the new rear position
-       queue[rear] = item
-
-       PRINT item, " enqueued successfully"
-   END
-   ```
-
-   In words
-   - Step 1 — `Check for overflow.` If rear has reached the last index, the queue is full and nothing can be inserted. This test must come first.
-   - Step 2 — `Handle the empty case.` If the queue is empty (front = −1), set front = 0, because the first element inserted is also the first to be served.
-   - Step 3 — `Increment rear` so it points at the next free position.
-   - Step 4 — `Store the item` at queue[rear].
-
-   C implementation
-   ```c
-   #define MAX 100
-   int queue[MAX];
-   int front = -1, rear = -1;
-
-   void enqueue(int item) {
-       if (rear == MAX - 1) {              // overflow
-           printf("Queue Overflow\n");
-           return;
-       }
-       if (front == -1) front = 0;         // first element
-       queue[++rear] = item;
-       printf("%d enqueued\n", item);
-   }
-   ```
-
-   Worked example
-   ```
-   Initially: front = −1, rear = −1  (empty)
-
-   enqueue(10): front = 0, rear = 0   ->  [10]
-   enqueue(20): rear = 1              ->  [10, 20]
-   enqueue(30): rear = 2              ->  [10, 20, 30]
-
-                 front             rear
-                   |                 |
-                 [10] [20] [30]
-   ```
-
-   Circular queue version, which reuses freed space
-   ```c
-   void enqueueCircular(int item) {
-       if ((rear + 1) % MAX == front) { printf("Queue is Full\n"); return; }
-       if (front == -1) front = 0;
-       rear = (rear + 1) % MAX;            // wrap around
-       queue[rear] = item;
-   }
-   ```
-
-   Points to note
-   - Enqueue always operates at the `rear`; the matching `dequeue` operates at the `front`. That separation is what makes a queue FIFO.
-   - Complexity: `O(1)` time and `O(1)` extra space.
-   - In a `linear` queue, rear reaching MAX − 1 causes overflow even when slots at the front are free — the `false overflow` problem, which the circular version above eliminates.
-
-## Hashing & Hash Tables (6)
+## Hashing & Hash Tables (7)
 
 1. **(b) What is hash table? What are the advantages of using hash table?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    What is a hash table
    - A hash table is a data structure that stores `key–value` pairs in an array, using a `hash function` to convert each key directly into an array index.
@@ -5967,7 +5570,7 @@ Output: Not Balanced
 
 2. **Consider a hash table of size 13 strong entries with integer keys. Suppose the hash function is h(k) = k \bmod 13. Insert in the given order entries with keys 10, 3, 6, 16, 17, 19 in to the hash table using linear probing to resolve collisions. Show all the work.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
 
-   Answer:
+Answer:
 
    Given
    ```
@@ -6043,7 +5646,7 @@ Output: Not Balanced
 
 3. **অথবা, Hashing বলতে কী বোঝায়? Hash ফাংশন গঠনের জন্যে যে কোনো তিনটি পদ্ধতি বিস্তারিত লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.)
+Answer: (Answered in English, as required for IT topics.)
 
    What hashing means
    - Hashing is the technique of converting a key of any size into a fixed-size integer, the `hash value`, which is then used directly as an index into an array called a `hash table`.
@@ -6099,7 +5702,7 @@ Output: Not Balanced
 
 4. **Separate chaining hash function math.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
 
-   Answer: The specific data was not printed, so separate chaining is explained and worked through with a complete example.
+Answer: The specific data was not printed, so separate chaining is explained and worked through with a complete example.
 
    What separate chaining is
    - Each slot of the hash table holds a `pointer to a linked list` (a "chain") containing every key that hashes to that index. Collisions are therefore never a problem — the new key is simply appended to the chain.
@@ -6182,7 +5785,7 @@ Output: Not Balanced
 
 5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** *[BCC Assistant Programmer 12.02.2021 compact it 815 (ET: BUET)]*
 
-   Answer: The suitable data structure is a `hash table` (also called a hash map or dictionary).
+Answer: The suitable data structure is a `hash table` (also called a hash map or dictionary).
 
    Why
    - A hash table computes the storage position directly from the key using a `hash function`:
@@ -6219,7 +5822,7 @@ Output: Not Balanced
 
 6. **Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Given
    ```
@@ -6314,411 +5917,26 @@ Output: Not Balanced
    - `Quadratic probing` (offset i²) or `double hashing` (offset i·h₂(x)) would spread the probes out and avoid these long runs.
    - Deletion must use a `tombstone` marker rather than emptying the slot, or the probe chains through that slot would break and later keys would become unfindable.
 
-## Data Structure Fundamentals (6)
+7. **(b) What is hash table? What are the advantages of using hash table.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65-66]]*
 
-1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
+Answer:
+    A Hash Table (Hash Map) is a non-linear associative data structure that stores key-value pairs. It uses a mathematical hash function to compute an index (hash code) into an array of buckets or slots, from which the desired value can be found directly.
 
-   Answer: (Answered in English, as required for IT topics.)
+    Key Advantages of Using a Hash Table:
+    - Constant-Time Operations: Provides $O(1)$ average time complexity for Search, Insert, and Delete operations, outperforming linear structures ($O(N)$) and balanced binary search trees ($O(\log N)$).
+    - Direct Key-Value Mapping: Enables rapid lookups using non-integer keys such as strings, symbols, or object references.
+    - High Search Efficiency: Ideal for massive datasets where quick retrieval is critical (e.g., database indexing, symbol tables in compilers, browser caching).
+    - Flexible Capacity: Can dynamically resize and rehash entries to maintain a low load factor ($lpha \le 0.75$) for optimal performance.
+    - Effective Collision Resolution: Handles hash collisions systematically using Chaining (Linked Lists/Trees) or Open Addressing (Linear Probing, Quadratic Probing, Double Hashing).
 
-   What is a data structure
-   - A data structure is a systematic way of `organising, storing and managing data` in memory so that it can be accessed and modified efficiently.
-   - It defines both the arrangement of the data and the operations allowed on it — insertion, deletion, traversal, searching, sorting and merging.
-   - The right choice of data structure is what determines whether an algorithm runs in O(1), O(log n) or O(n).
+## Tree Data Structures (BST, AVL, B-Tree, Heaps) (2)
 
-   Classification
-   ```
-                       DATA STRUCTURES
-                       /            \
-                 PRIMITIVE        NON-PRIMITIVE
-             (int, float,          /          \
-              char, pointer)   LINEAR      NON-LINEAR
-                               /   |  \      /    \
-                          Array Stack Queue Tree  Graph
-                               Linked List
-   ```
+1. **Explain Abstraction with a simple code example.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 228-229]]*
 
-   Linear data structures
-   - Elements are arranged in a `sequence`, one after another, and each element has exactly one predecessor and one successor (except the first and last).
-   - The whole structure can be traversed in a `single pass`.
-   - Memory may be contiguous (array) or linked (linked list).
+2. **Compare an Interface and an Abstract Class in OOP. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
 
-   Examples
-   - `Array` — elements in contiguous memory, accessed by index in O(1). Example: `int marks[50];`
-   - `Linked list` — nodes scattered in memory, joined by pointers. Dynamic size, O(1) insertion at the front.
-   - `Stack` — LIFO. Used for function calls, expression evaluation, undo/redo.
-   - `Queue` — FIFO. Used for CPU scheduling, printer spooling, BFS.
+## Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) (2)
 
-   Non-linear data structures
-   - Elements are arranged `hierarchically` or in a network, so one element may connect to `many` others.
-   - The structure cannot be traversed in a single straight pass; recursion or an explicit stack or queue is needed.
-   - They represent relationships that are not sequential.
+1. **(a) Compare Stack and Queue in context with data structure. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333-334]]*
 
-   Examples
-   - `Tree` — a hierarchy with one root and no cycles. Examples: binary tree, BST, AVL, B-tree, heap. Used in file systems, database indexes, and the parse trees inside compilers.
-   - `Graph` — vertices joined by edges, with cycles permitted. Used for road networks, social networks, routing protocols and dependency resolution.
-
-   Comparison
-
-   | Point | Linear | Non-linear |
-   |---|---|---|
-   | Arrangement | Sequential | Hierarchical or networked |
-   | Neighbours per element | One before, one after | Possibly many |
-   | Traversal | Single pass | Multiple paths; recursion needed |
-   | Memory use | Can be wasteful (array) or efficient | Generally efficient |
-   | Implementation | Simple | More complex |
-   | Levels | Single | Multiple |
-   | Examples | Array, linked list, stack, queue | Tree, graph, heap |
-   | Typical use | Ordered data, buffering, scheduling | Hierarchies, networks, fast search |
-
-   - Rule of thumb: use a `linear` structure when the data has a natural order; use a `non-linear` structure when it has a natural hierarchy or a network of relationships.
-
-2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
-
-   Answer: (Answered in English, as required for IT topics.)
-
-   Linear data structure
-   - A data structure in which the elements are arranged in a `sequence`, one after another. Every element has exactly one predecessor and one successor, apart from the first and the last.
-   - The entire structure can be traversed `in a single pass`, from beginning to end.
-   - It exists at a single "level" — there is no hierarchy.
-
-   Examples
-   - `Array` — elements in contiguous memory, reached by index in O(1).
-   - `Linked list` — nodes scattered in memory, joined by pointers; dynamic in size.
-   - `Stack` — LIFO; insertion and deletion at one end.
-   - `Queue` — FIFO; insertion at the rear, deletion at the front.
-   ```
-   ARRAY / LIST:   [10] - [20] - [30] - [40]
-                    one straight sequence
-   ```
-
-   Non-linear data structure
-   - A data structure in which elements are arranged `hierarchically` or as a network, so that one element may be connected to `many` others.
-   - It cannot be traversed in a single straight pass; recursion, or an explicit stack or queue, is required.
-   - It represents relationships that are not sequential.
-
-   Examples
-   - `Tree` — a hierarchy with one root and no cycles: binary tree, BST, AVL, B-tree, heap.
-   - `Graph` — vertices joined by edges, cycles allowed: road networks, social networks, routing tables.
-   ```
-   TREE                          GRAPH
-           A                       A ---- B
-         /   \                     |  \   |
-        B     C                    |    \ |
-       / \     \                   D ---- C
-      D   E     F
-   ```
-
-   Comparison
-
-   | Point | Linear | Non-linear |
-   |---|---|---|
-   | Arrangement | Sequential, one after another | Hierarchical or networked |
-   | Connections per element | One predecessor, one successor | Possibly many |
-   | Traversal | One pass, straightforward | Multiple paths; needs recursion |
-   | Levels | Single | Multiple |
-   | Memory utilisation | Often less efficient | Generally more efficient |
-   | Complexity of implementation | Simple | More complex |
-   | Search performance | O(n) typically | O(log n) in a balanced tree |
-   | Examples | Array, linked list, stack, queue | Tree, graph, heap |
-   | Applications | Buffering, scheduling, ordered lists | File systems, databases, networks, AI |
-
-   - Practical distinction: choose a `linear` structure when the data has a natural order, and a `non-linear` structure when it has a natural hierarchy (a file system, an organisation chart) or a network of relationships (a road map, a social network).
-
-3. **What are the operations performed on a data structure? What is Prefix, Postfix and Infix operation?** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105 (ET: AUST)]*
-
-   Answer:
-
-   Part 1 — operations performed on a data structure
-
-   - `Traversal` — visiting every element exactly once, to display or process it. Example: printing all elements of an array, or an inorder walk of a tree.
-   - `Search` — finding whether a given element is present and where. Linear search is O(n); binary search on sorted data is O(log n); a hash table gives O(1).
-   - `Insertion` — adding a new element at a specified position. Cost varies greatly: O(1) at the front of a linked list, O(n) at the front of an array.
-   - `Deletion` — removing an element and closing the gap.
-   - `Sorting` — arranging elements in ascending or descending order, using bubble, insertion, merge, quick or heap sort.
-   - `Merging` — combining two structures into one, as merge sort does.
-   - `Updating` — changing the value of an existing element.
-   - `Splitting` — dividing one structure into two, the counterpart of merging.
-   - `Copying` — duplicating the whole structure.
-
-   Cost of the main operations
-
-   | Structure | Access | Search | Insert | Delete |
-   |---|---|---|---|---|
-   | Array | O(1) | O(n) | O(n) | O(n) |
-   | Sorted array | O(1) | O(log n) | O(n) | O(n) |
-   | Linked list | O(n) | O(n) | O(1) at head | O(1) at head |
-   | Stack / Queue | O(n) | O(n) | O(1) | O(1) |
-   | Balanced BST | O(log n) | O(log n) | O(log n) | O(log n) |
-   | Hash table | – | O(1) avg | O(1) avg | O(1) avg |
-
-   Part 2 — infix, prefix and postfix
-
-   These are three notations for an arithmetic expression, differing only in `where the operator sits` relative to its operands.
-
-   `Infix` — operator `between` the operands
-   ```
-   A + B          (A + B) * C
-   ```
-   - The natural human form, but it needs precedence rules, associativity rules and brackets. A machine must parse all of that before it can evaluate anything.
-
-   `Prefix` (Polish notation) — operator `before` the operands
-   ```
-   + A B          * + A B C
-   ```
-   - No brackets and no precedence rules needed. Evaluated by scanning `right to left` with a stack.
-   - It is the `preorder` traversal of the expression tree.
-
-   `Postfix` (Reverse Polish notation) — operator `after` the operands
-   ```
-   A B +          A B + C *
-   ```
-   - Also needs no brackets. Evaluated by scanning `left to right` with a stack, which is why compilers and calculators use it.
-   - It is the `postorder` traversal of the expression tree.
-
-   Conversion examples
-
-   | Infix | Prefix | Postfix |
-   |---|---|---|
-   | A + B | + A B | A B + |
-   | A + B * C | + A * B C | A B C * + |
-   | (A + B) * C | * + A B C | A B + C * |
-   | A + B * C + D | + + A * B C D | A B C * + D + |
-
-   Evaluating a postfix expression
-   ```
-   12 7 3 − / 2 +
-
-   12       push          [12]
-    7       push          [12, 7]
-    3       push          [12, 7, 3]
-    −       pop 3, 7 -> 4 [12, 4]
-    /       pop 4, 12 -> 3 [3]
-    2       push          [3, 2]
-    +       pop 2, 3 -> 5 [5]
-
-   Result = 5      (check: 12 / (7−3) + 2 = 3 + 2 = 5 ✓)
-   ```
-   - A `stack` is used for all of these conversions and evaluations, which is why the topic always appears alongside stacks.
-
-4. **(b) Implement Array List using following integer value and show operational method of the following: 52, 50, 27, 66, 82.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
-   i) Insert data into array list
-   ii) Remove 27 from array list
-   iii) Insert 99 into 2nd position
-   iv) Show array list
-
-   Answer:
-
-   Given values: `52, 50, 27, 66, 82`
-
-   An ArrayList is a `dynamic array` — an array that grows automatically when it fills. It keeps the O(1) random access of an array while removing the fixed-size limitation.
-
-   Implementation
-   ```java
-   import java.util.ArrayList;
-
-   public class ArrayListDemo {
-       public static void main(String[] args) {
-           ArrayList<Integer> list = new ArrayList<>();
-
-           // Insert the given values
-           list.add(52);
-           list.add(50);
-           list.add(27);
-           list.add(66);
-           list.add(82);
-
-           System.out.println(list);        // [52, 50, 27, 66, 82]
-       }
-   }
-   ```
-   ```
-   index :   0     1     2     3     4
-           +-----+-----+-----+-----+-----+
-           | 52  | 50  | 27  | 66  | 82  |
-           +-----+-----+-----+-----+-----+
-   size = 5
-   ```
-
-   Operations demonstrated
-
-   1. `add(element)` — append at the end
-   ```java
-   list.add(95);          // [52, 50, 27, 66, 82, 95]
-   ```
-   - Cost `O(1)` amortised. When the internal array is full it is replaced by one of double the size and everything is copied, which is O(n), but this happens rarely enough that the average stays O(1).
-
-   2. `add(index, element)` — insert at a position
-   ```java
-   list.add(2, 40);       // [52, 50, 40, 27, 66, 82]
-   ```
-   - Cost `O(n)`, because every element from that index onwards shifts right.
-
-   3. `get(index)` — read
-   ```java
-   list.get(3);           // 66
-   ```
-   - Cost `O(1)` — this is the advantage of an array-backed list.
-
-   4. `set(index, element)` — update
-   ```java
-   list.set(1, 55);       // [52, 55, 27, 66, 82]
-   ```
-   - Cost `O(1)`.
-
-   5. `remove(index)` — delete by position
-   ```java
-   list.remove(0);        // [50, 27, 66, 82]
-   ```
-   - Cost `O(n)`, because the following elements shift left.
-
-   6. `indexOf(element)` — search
-   ```java
-   list.indexOf(66);      // 3
-   list.contains(27);     // true
-   ```
-   - Cost `O(n)` — a linear scan, since the list is not sorted.
-
-   7. `size()` and traversal
-   ```java
-   System.out.println(list.size());            // 5
-   for (int x : list) System.out.print(x + " ");   // 52 50 27 66 82
-   ```
-
-   8. `sort()`
-   ```java
-   Collections.sort(list);     // [27, 50, 52, 66, 82]
-   ```
-   - Cost `O(n log n)`.
-
-   Complexity summary
-
-   | Operation | Cost | Reason |
-   |---|---|---|
-   | get / set by index | `O(1)` | Direct index arithmetic |
-   | add at the end | `O(1)` amortised | Occasional doubling and copy |
-   | add at a position | O(n) | Shifting |
-   | remove by index | O(n) | Shifting |
-   | search (unsorted) | O(n) | Linear scan |
-   | sort | O(n log n) | Comparison sort |
-
-   ArrayList compared with an ordinary array and a LinkedList
-
-   | Point | Array | ArrayList | LinkedList |
-   |---|---|---|---|
-   | Size | Fixed | Grows automatically | Grows automatically |
-   | Access by index | O(1) | O(1) | O(n) |
-   | Insert at the front | O(n) | O(n) | `O(1)` |
-   | Insert at the end | O(1) | O(1) amortised | O(1) |
-   | Memory overhead | None | Some spare capacity | Pointer per node |
-   | Cache performance | Excellent | Excellent | Poor |
-
-   - Choose an `ArrayList` when random access dominates, and a `LinkedList` when insertions and deletions at the front dominate.
-
-5. **What is linear and Non-linear data structure? Write an example of data structure which represents logarithmic complexity?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
-
-   Answer:
-
-   Part 1 — linear and non-linear data structures
-
-   `Linear data structure`
-   - Elements are arranged in a `sequence`, one after another. Each element has exactly one predecessor and one successor, apart from the first and last.
-   - The whole structure can be traversed in a `single pass`.
-   - Examples: `array`, `linked list`, `stack`, `queue`.
-   ```
-   [10] - [20] - [30] - [40]      one straight sequence
-   ```
-
-   `Non-linear data structure`
-   - Elements are arranged `hierarchically` or as a network, so one element may be connected to `many` others.
-   - Traversal requires recursion, or an explicit stack or queue; a single straight pass is not possible.
-   - Examples: `tree` (binary tree, BST, AVL, B-tree, heap) and `graph`.
-   ```
-   TREE                      GRAPH
-         A                     A ---- B
-       /   \                   |   \  |
-      B     C                  D ---- C
-     / \
-    D   E
-   ```
-
-   Comparison
-
-   | Point | Linear | Non-linear |
-   |---|---|---|
-   | Arrangement | Sequential | Hierarchical or networked |
-   | Connections | One before, one after | Possibly many |
-   | Traversal | Single pass | Multiple paths, recursive |
-   | Levels | One | Many |
-   | Complexity | Simple | More complex |
-   | Search | Typically O(n) | O(log n) in a balanced tree |
-   | Examples | Array, linked list, stack, queue | Tree, graph, heap |
-
-   Part 2 — a data structure with logarithmic complexity
-
-   The clearest examples are:
-
-   - `Balanced Binary Search Tree` — AVL tree or Red-Black tree. Search, insertion and deletion are all `O(log n)`, because the tree's height is kept at log₂ n and each comparison discards half the remaining nodes.
-   ```
-                       50
-                    /      \
-                  30        70
-                 /  \      /   \
-               20    40  60     80
-
-   Searching for 60: 60 > 50 -> right ; 60 < 70 -> left ; found.
-   3 comparisons for 7 nodes; about 20 for a million.
-   ```
-
-   - `Heap` — insertion and deletion of the root are `O(log n)`, since the element travels at most the height of the tree.
-
-   - `Sorted array with binary search` — search is `O(log n)`, although insertion and deletion remain O(n).
-
-   - `B-tree and B+ tree` — `O(log n)` with a very large base, so a database index of a million records needs only about 3 disk reads.
-
-   - `Skip list` — probabilistically O(log n), used in Redis and LevelDB.
-
-   Why the logarithm appears
-   - Each step `halves` the amount of data still to consider. After k steps, n/2^k items remain, so the search ends when 2^k = n, giving k = log₂ n.
-   - Practical significance: doubling the data adds only `one` extra step. Going from a thousand to a million records raises the cost from about 10 comparisons to about 20 — which is why balanced trees and B-trees underpin every database index.
-
-6. **Difference between linear and nonlinear data structure.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
-
-   Answer:
-
-   | Point | Linear data structure | Non-linear data structure |
-   |---|---|---|
-   | Arrangement of elements | `Sequential` — one after another | `Hierarchical or networked` |
-   | Relationship | Each element has one predecessor and one successor | An element may connect to many others |
-   | Levels | Single level | Multiple levels |
-   | Traversal | Complete in a `single pass` | Needs multiple paths; recursion or an explicit stack or queue |
-   | Ease of implementation | Simple | More complex |
-   | Memory utilisation | Often inefficient — an array wastes unused slots | Generally more efficient |
-   | Search complexity | Typically O(n) | O(log n) in a balanced tree |
-   | Time to traverse | Grows linearly with size | Depends on the structure |
-   | Data volume suited to | Small to moderate | Large and hierarchical |
-   | Examples | Array, linked list, stack, queue | Tree, graph, heap, trie |
-   | Applications | Ordered lists, buffering, scheduling, undo/redo | File systems, database indexes, routing tables, social networks, AI |
-
-   Diagrams
-   ```
-   LINEAR                                 NON-LINEAR
-
-   Array / Linked list:                   Tree:
-     [10] - [20] - [30] - [40]                    A
-                                                /   \
-   Stack (LIFO):                               B     C
-      [30]                                    / \     \
-      [20]                                   D   E     F
-      [10]
-                                          Graph:
-   Queue (FIFO):                            A ---- B
-      in -> [10][20][30] -> out             |  \   |
-                                            D ---- C
-   ```
-
-   The essential difference
-   - In a `linear` structure the data has one natural order, so it can be walked from start to finish. In a `non-linear` structure the data has branches, so at each step there may be several directions to go — which is why traversal needs recursion and why several different traversal orders (preorder, inorder, postorder, level order, DFS, BFS) exist at all.
-
-   Choosing between them
-   - Use a `linear` structure when the data is naturally sequential: a list of records, a buffer, a task queue.
-   - Use a `non-linear` structure when the data is naturally hierarchical (a file system, an organisation chart, an XML document) or a network (a road map, a social graph, a routing table), or when O(log n) search is required.
+2. **Different data structures are used based on how data needs to be accessed and processed. Compare Stack and Queue in terms of how they handle data. Then, provide two real-life scenarios — one where a Stack is the most appropriate solution, and one where a Queue would be more effective.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*
