@@ -12970,3 +12970,87 @@
 ## UI/UX Design (1)
 
 1. **What is UI/UX? What is the difference between them?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123-1124 (ET: BREB)]*
+
+   Answer: What UI is
+   - `UI` stands for `User Interface`. It is everything the user `sees and interacts with` — the screens, buttons, icons, colours, fonts, spacing and layout. It is the `visual and interactive surface` of the product.
+   ```
+      UI covers :
+           layout and visual hierarchy
+           colour scheme and typography
+           buttons , forms , icons , menus
+           spacing , alignment , responsiveness
+           animation and visual feedback
+           design system and component library
+   ```
+
+   What UX is
+   - `UX` stands for `User Experience`. It is the `whole feeling` a user has while using the product — whether it is easy, efficient and satisfying to achieve their goal. It covers everything from first discovery to support after purchase.
+   ```
+      UX covers :
+           user research - who the users are and what they need
+           personas and user journeys
+           information architecture - how content is organised
+           wireframes and prototypes
+           usability testing
+           accessibility
+           the whole journey, INCLUDING what happens outside the
+                screen
+   ```
+
+   The difference
+
+   | Point | UI | UX |
+   |---|---|---|
+   | Full form | `User Interface` | `User Experience` |
+   | Concerns | How it `looks` and responds | How it `feels` to use |
+   | Question asked | Is it `attractive` and clear? | Is it `easy` and useful? |
+   | Scope | The `screen` | The `whole journey` |
+   | Nature | `Visual` design | `Process` and research design |
+   | Deliverables | Mock-ups, style guide, component library | Personas, user journeys, wireframes, usability reports |
+   | Tools | Figma, Sketch, Adobe XD | Surveys, interviews, analytics, A/B tests, usability testing |
+   | Measured by | Visual consistency, brand fit | `Task completion rate`, time on task, error rate, satisfaction |
+   | Comes first | `Second` — after the UX is decided | `First` — research and structure |
+   | Skills | Graphic and interaction design | Psychology, research, analysis |
+
+   The relationship
+   ```
+      UX  ->  decides WHAT screens are needed and HOW they connect
+      UI  ->  decides WHAT THEY LOOK LIKE
+
+      The order matters : UX research and wireframes come FIRST,
+      then the UI is designed on top of that structure. Designing
+      the UI first and fitting a journey to it afterwards is the
+      commonest way products end up beautiful and unusable.
+   ```
+   ```
+      THE ANALOGY USUALLY GIVEN - a house
+
+           UX = the FLOOR PLAN
+                Are the rooms in sensible places ? Is the kitchen
+                near the dining room ? Can you reach the bathroom
+                at night without crossing the living room ?
+
+           UI = the PAINT, FURNITURE AND FITTINGS
+                Do the colours work ? Are the switches where the
+                hand expects them ?
+
+      A beautiful house with a terrible floor plan is UNPLEASANT TO
+      LIVE IN.  Good UI , bad UX.
+      A perfect floor plan with bare concrete walls is USABLE BUT
+      UNAPPEALING.  Good UX , bad UI.
+   ```
+   - Examples of each failing alone:
+   ```
+      GOOD UI , BAD UX
+           A banking app with a beautiful screen, where transferring
+           money takes seven steps and the confirmation is unclear.
+           It looks excellent and nobody wants to use it.
+
+      GOOD UX , BAD UI
+           A government form that is logically ordered, validates
+           as you type and finishes in three fields - but is plain,
+           with clashing colours and an old font. It works ; it
+           just does not inspire confidence.
+   ```
+
+   - The point that decides most exam answers: `UI is a part of UX, not a synonym for it`. UX is the larger discipline, and it includes things that are not on a screen at all — how quickly the page loads, whether the confirmation SMS arrives, how easy it is to get help when something goes wrong. A single person often does both jobs, and the roles are frequently advertised together, but they answer different questions.
