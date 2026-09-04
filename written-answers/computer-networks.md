@@ -15494,7 +15494,100 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 638 (ET: N/A)]*
 
+   Answer:
+
+   (i) NRZ-L for 01001110
+   - NRZ-L (Non-Return-to-Zero, Level): the voltage level for the whole bit period represents the bit value, and the signal never returns to zero within a bit.
+   - Convention used here: `1 = high`, `0 = low`.
+   ```
+     bits:   0     1     0     0     1     1     1     0
+     high:       ______            __________________
+     low : ______      ____________                  ______
+   ```
+   - Note: Forouzan's textbook uses the inverse convention (0 = positive, 1 = negative). Either is acceptable provided it is stated; the shape of the waveform is the same, only inverted.
+   - Problem: a long run of identical bits produces a constant level with no transitions, so the receiver's clock can drift out of synchronisation. It also has a DC component.
+
+   (ii) Manchester for 01001110
+   - Manchester: `every bit has a transition in the middle`, which carries both the data and the clock. Convention (IEEE 802.3): `0 = high-to-low`, `1 = low-to-high`.
+   ```
+     bits:   0     1     0     0     1     1     1     0
+     high: ___      ______   ___      ___   ___   ______
+     low :    ______      ___   ______   ___   ___      ___
+   ```
+   - Advantages: it is `self-clocking`, since there is a guaranteed transition in every bit, and it has `no DC component`.
+   - Disadvantage: it needs `twice the bandwidth` of NRZ, because there can be two signal changes per bit. This is why it was used in 10BASE-T Ethernet but replaced at higher speeds by 4B/5B and 8B/10B, which are more bandwidth-efficient.
+
+   (iii) Unipolar RZ for 11011000100
+   - Unipolar RZ (Return to Zero): `1` = positive for the first half of the bit then returns to zero; `0` = zero for the whole bit.
+   ```
+     bits:   1     1     0     1     1     0     0     0     1     0     0
+     high: ___   ___         ___   ___                     ___
+     zero:    ___   _________   ___   _____________________   _______________
+   ```
+   - Advantage: the return to zero in every 1-bit provides some synchronisation.
+   - Disadvantages: it has a large DC component; it needs twice the bandwidth of NRZ; and a long run of 0s still gives no transitions at all, so synchronisation is lost. Polar RZ, which uses positive for 1 and negative for 0, fixes the DC problem.
+
+   Comparison of the three
+
+   | Point | NRZ-L | Manchester | Unipolar RZ |
+   |---|---|---|---|
+   | Transitions per bit | 0 or 1 | Always 1, in the middle | 1 for a 1-bit, 0 for a 0-bit |
+   | Self-clocking | No | `Yes` | Partially |
+   | DC component | Yes | `No` | Yes, large |
+   | Bandwidth needed | Lowest (B = N/2) | Highest (B = N) | High (B = N) |
+   | Synchronisation on long runs | Lost | Never lost | Lost on a run of 0s |
+   | Used in | Serial links, internal buses | 10BASE-T Ethernet, RFID | Obsolete, teaching only |
+
 2. **What is Line coding? What is the different line coding techniques?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 869-870 (ET: N/A)]*
+
+   Answer:
+
+   What is line coding
+   - Line coding is the process of converting a sequence of binary data into a sequence of `digital signal elements` — voltage levels — suitable for transmission over a `baseband` channel, with no carrier.
+   - It defines how a 1 and a 0 are represented as voltages, and how transitions are placed.
+
+   What a good line code must provide
+   - `Self-synchronisation` — enough transitions for the receiver to recover the sender's clock, so that long runs of the same bit do not cause drift.
+   - `No DC component` — a zero average voltage, so the signal can pass through transformers and AC-coupled circuits without baseline wandering.
+   - `Low bandwidth` for a given bit rate.
+   - `Error detection` capability where possible.
+   - `Noise and interference immunity`.
+   - Low complexity and cost.
+
+   Line coding techniques
+
+   1. Unipolar
+   - `Unipolar NRZ` — 1 = positive voltage, 0 = zero voltage. Simplest possible, but it has a large DC component, no synchronisation on long runs, and poor noise immunity. Rarely used.
+   - `Unipolar RZ` — 1 = positive for the first half then zero, 0 = zero throughout. Adds some synchronisation but doubles the bandwidth and keeps the DC problem.
+
+   2. Polar
+   - `NRZ-L (Level)` — the level itself represents the bit: one polarity for 1, the other for 0. Simple and bandwidth-efficient, but no transitions on long runs.
+   - `NRZ-I (Invert)` — a `transition` at the start of a bit means 1, no transition means 0. Because the meaning is in the change, it is immune to polarity inversion of the cable, and long runs of 1s are self-clocking, though long runs of 0s are still a problem.
+   - `RZ (Return to Zero)` — 1 = positive for the first half then zero, 0 = negative for the first half then zero. Always has a transition, so it is self-clocking, but it uses three levels and twice the bandwidth.
+   - `Manchester` — the level changes in the `middle` of every bit: 0 = high-to-low, 1 = low-to-high. Self-clocking with no DC component, at the cost of double the bandwidth. Used in 10BASE-T Ethernet.
+   - `Differential Manchester` — there is always a mid-bit transition for clocking, and the bit value is given by whether there is `also` a transition at the start: transition at the start = 0, none = 1. It combines self-clocking with polarity independence. Used in Token Ring.
+
+   3. Bipolar (multilevel)
+   - `AMI (Alternate Mark Inversion)` — 0 = zero voltage; 1 = alternately positive and negative. Because successive 1s alternate in polarity, the average is zero, so there is `no DC component`, and a violation of the alternation reveals an error. Long runs of 0s remain a problem, solved by `B8ZS` (North America) and `HDB3` (Europe), which substitute a recognisable pattern containing deliberate violations.
+   - `Pseudoternary` — the inverse of AMI: 1 = zero, 0 = alternating polarity.
+
+   4. Multilevel and block codes used at high speed
+   - `2B1Q` — two bits per signal element, four levels; used in ISDN and DSL.
+   - `4B/5B, 8B/10B, 64B/66B` — every group of data bits is mapped to a slightly longer code group chosen to guarantee transitions and DC balance. Used in Fast Ethernet, Gigabit Ethernet and 10 Gigabit Ethernet.
+   - `PAM-5, PAM-4` — multilevel amplitude coding used in 1000BASE-T and in 400G optics.
+
+   Comparison
+
+   | Scheme | Self-clocking | DC component | Bandwidth | Used in |
+   |---|---|---|---|---|
+   | Unipolar NRZ | No | Large | N/2 | Obsolete |
+   | NRZ-L | No | Yes | N/2 | Serial links, internal buses |
+   | NRZ-I | Partly | Yes | N/2 | USB |
+   | RZ | Yes | No | N | Rare |
+   | Manchester | `Yes` | `No` | N | 10BASE-T, RFID |
+   | Differential Manchester | `Yes` | `No` | N | Token Ring |
+   | AMI | Partly | `No` | N/2 | T1/E1 carriers |
+   | 4B/5B, 8B/10B | Yes | Balanced | Slightly above N/2 | Fast and Gigabit Ethernet |
 
 ## Address Resolution (ARP & RARP) (2)
 
