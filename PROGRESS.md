@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 161 / 243 done**  ·  **Questions: 2012 answered, 36 skipped, 3168 total**
+**Subtopics: 162 / 243 done**  ·  **Questions: 2020 answered, 36 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -23,7 +23,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `gk.md` | General | 0 / 4 | 0 | 0 | 214 |
 | `image-processing.md` | IT | 5 / 5 | 7 | 0 | 7 |
 | `math.md` | General | 0 / 15 | 0 | 0 | 96 |
-| `microprocessor-and-computer-architecture.md` | IT | 6 / 11 | 109 | 0 | 135 |
+| `microprocessor-and-computer-architecture.md` | IT | 7 / 11 | 117 | 0 | 135 |
 | `ms-office.md` | IT | 0 / 1 | 0 | 0 | 1 |
 | `oop.md` | IT | 0 / 9 | 0 | 0 | 117 |
 | `operating-system.md` | IT | 0 / 12 | 0 | 0 | 196 |

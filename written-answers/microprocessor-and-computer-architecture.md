@@ -6649,20 +6649,680 @@
 1. (a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;
    (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: (a) Propagation delay and transmission delay
+
+   `Propagation delay`
+   - The time a bit takes to `travel` from the sender to the receiver along the medium. It depends on the `distance` and on the speed of the signal in that medium.
+   ```
+      Propagation delay = distance / propagation speed
+
+      Speed : ~3 x 10^8 m/s in vacuum
+              ~2 x 10^8 m/s in copper cable and optical fibre
+   ```
+   - Example: 2,000 km of fibre
+   ```
+      = 2,000,000 m / (2 x 10^8) = 0.01 s = 10 ms
+   ```
+   - It does `not` depend on how large the packet is.
+
+   `Transmission delay`
+   - The time the sender takes to `push all the bits` of the packet onto the link. It depends on the `packet size` and the `bandwidth`.
+   ```
+      Transmission delay = packet size / bandwidth
+   ```
+   - Example: a 1000-byte packet on a 1 Mbps link
+   ```
+      = 8000 bits / 1,000,000 bps = 0.008 s = 8 ms
+   ```
+   - It does `not` depend on the distance.
+
+   | Point | Propagation delay | Transmission delay |
+   |---|---|---|
+   | Meaning | Time for a bit to travel the distance | Time to place all bits on the link |
+   | Formula | distance / speed | packet size / bandwidth |
+   | Depends on | Distance and medium | Packet size and bandwidth |
+   | Independent of | Packet size and bandwidth | Distance |
+   | Reduced by | A shorter path | A faster link or smaller packets |
+   | Dominant in | Satellite and long-haul links | Low-bandwidth links |
+   ```
+      Total delay = transmission + propagation + queuing + processing
+   ```
+
+   (b) MOV AX, A534H versus MOV AX, [A534H]
+
+   These two look almost identical but use `different addressing modes`, and the square brackets are the whole difference.
+
+   `MOV AX, A534H` — immediate addressing
+   ```
+      The value A534H ITSELF is loaded into AX.
+
+      AX  <-  A534H
+
+      The operand is part of the instruction, so no memory access is needed
+      beyond the instruction fetch. This is the FASTEST form.
+   ```
+
+   `MOV AX, [A534H]` — direct (memory) addressing
+   ```
+      A534H is an ADDRESS. The CONTENTS of that memory location are loaded.
+
+      AX  <-  [DS:A534H]     the word stored at offset A534H in the data segment
+
+      Two bytes are read, low byte first (little-endian) :
+           AL <- byte at A534H
+           AH <- byte at A535H
+   ```
+
+   Illustration
+   ```
+      Suppose the memory holds :
+
+           Address   Content
+           A534H      78H
+           A535H      56H
+
+      MOV AX, A534H     ->  AX = A534H     (the number itself)
+      MOV AX, [A534H]   ->  AX = 5678H     (what is stored there)
+   ```
+
+   | Point | MOV AX, A534H | MOV AX, [A534H] |
+   |---|---|---|
+   | Addressing mode | Immediate | Direct |
+   | A534H means | A constant value | A memory offset |
+   | Loaded into AX | A534H | The contents of that location |
+   | Memory access | None | One word read from the data segment |
+   | Segment used | — | DS by default |
+   | Speed | Fastest | Slower |
+   | Written with brackets | No | `Yes` |
+
+   - The `square brackets in 8086 assembly always mean "the contents of"`. Forgetting them is one of the most common beginner errors, because the instruction still assembles — it simply loads the wrong thing.
+
 2. **Explain the difference between direct, immediate, and register addressing modes in the 8086 microprocessor.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1424 (ET: E-Zone)]*
+
+   Answer: An `addressing mode` is the way an instruction specifies where its operand is. The 8086 has several; three of them are asked here.
+
+   Immediate addressing
+   - The operand is a `constant contained in the instruction itself`. No memory access is needed beyond fetching the instruction.
+   ```asm
+      MOV  AX, 1234H      ; AX <- 1234H  (the value itself)
+      ADD  BL, 05H        ; BL <- BL + 5
+      MOV  CX, 0FFH       ; CX <- 00FFH
+   ```
+   - Fastest of all modes, because the operand travels with the instruction. It can only be a source, never a destination — `MOV 1234H, AX` is meaningless.
+
+   Register addressing
+   - The operand is `in a CPU register`. Both source and destination may be registers.
+   ```asm
+      MOV  AX, BX         ; AX <- BX
+      ADD  CL, DL         ; CL <- CL + DL
+      MOV  DS, AX         ; segment register loaded from AX
+   ```
+   - The `fastest for repeated use`, because no memory access occurs at all. Both operands must be the same size — `MOV AX, BL` is illegal.
+
+   Direct addressing
+   - The instruction contains the `16-bit offset` of the memory location. The operand is the `contents` of that address, taken from the data segment by default.
+   ```asm
+      MOV  AX, [1234H]    ; AX <- the word stored at DS:1234H
+      MOV  [5000H], BL    ; the byte at DS:5000H <- BL
+      MOV  AX, TOTAL      ; TOTAL is a label, so this is direct addressing
+   ```
+   - The square brackets are what distinguish it from immediate addressing.
+   ```
+      Physical address = DS x 16 + offset
+   ```
+   - Slower, because it needs an extra memory cycle.
+
+   Worked comparison
+   ```
+      Suppose memory holds :  address 1234H -> 78H , address 1235H -> 56H
+                        and :  BX = 9999H
+
+      MOV AX, 1234H      -> AX = 1234H      immediate : the number itself
+      MOV AX, BX         -> AX = 9999H      register  : the register's contents
+      MOV AX, [1234H]    -> AX = 5678H      direct    : the memory contents
+   ```
+
+   | Point | Immediate | Register | Direct |
+   |---|---|---|---|
+   | Operand is | A constant in the instruction | In a CPU register | In memory |
+   | Memory access | None | None | One, in the data segment |
+   | Speed | Fast | `Fastest` | Slowest of the three |
+   | Instruction length | Longer (carries the constant) | Shortest | Longer (carries the address) |
+   | Can be a destination | No | Yes | Yes |
+   | Syntax | `MOV AX, 1234H` | `MOV AX, BX` | `MOV AX, [1234H]` |
+   | Segment used | — | — | DS by default |
+
+   The other 8086 addressing modes, for completeness
+   ```
+      Register indirect : MOV AX, [BX]            address held in BX, SI or DI
+      Based             : MOV AX, [BX + 4]        base register plus displacement
+      Indexed           : MOV AX, [SI + 4]        index register plus displacement
+      Based indexed     : MOV AX, [BX + SI]       base plus index
+      Based indexed with displacement : MOV AX, [BX + SI + 4]
+      Implied           : CLC , STC               the operand is understood
+      String            : MOVSB , LODSB           uses SI and DI automatically
+   ```
 
 3. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 MOV AX, A534H এবং MOV AX, [A534H]
 
+   Answer: (Answered in English, as required for IT topics.) The two instructions differ only by the `square brackets`, and that changes the addressing mode completely.
+
+   `MOV AX, A534H` — immediate addressing
+   ```
+      The value A534H ITSELF is loaded into AX.
+
+      AX  <-  A534H
+
+      The operand is part of the instruction, so no memory access is needed
+      beyond the instruction fetch. This is the fastest form.
+   ```
+
+   `MOV AX, [A534H]` — direct (memory) addressing
+   ```
+      A534H is treated as an ADDRESS. The CONTENTS of that memory location
+      are loaded into AX.
+
+      AX  <-  [DS : A534H]
+
+      Two bytes are read, low byte first (little-endian) :
+           AL  <-  the byte at offset A534H
+           AH  <-  the byte at offset A535H
+
+      Physical address = DS x 16 + A534H
+   ```
+
+   Illustration
+   ```
+      Suppose the data segment contains :
+
+           Offset    Content
+           A534H       78H
+           A535H       56H
+
+      MOV AX, A534H     ->  AX = A534H     (the number itself)
+      MOV AX, [A534H]   ->  AX = 5678H     (what is stored there)
+   ```
+
+   Difference
+
+   | Point | MOV AX, A534H | MOV AX, [A534H] |
+   |---|---|---|
+   | Addressing mode | Immediate | Direct |
+   | A534H means | A constant value | A memory offset |
+   | Value placed in AX | A534H | The word stored at that address |
+   | Memory accessed | No | Yes, one word read |
+   | Segment register used | None | DS (by default) |
+   | Machine cycles | Fewer | More |
+   | Speed | Faster | Slower |
+   | Square brackets | Absent | `Present` |
+   | Result changes if memory changes | No | Yes |
+
+   - The rule to remember: in 8086 assembly, `square brackets always mean "the contents of"`. Omitting them is a common and dangerous mistake, because the instruction still assembles correctly — it simply loads the wrong thing.
+   - The default segment can be overridden if needed: `MOV AX, ES:[A534H]` reads from the extra segment instead of the data segment.
+
 4. **(b) Explain the operations of the following instructions: (i) ADC (ii) CMP (iii) JBE** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
+
+   Answer: (i) ADC — Add with Carry
+   ```
+      Syntax  :  ADC destination, source
+
+      Operation : destination <- destination + source + CF
+   ```
+   - It adds the source, the destination `and the carry flag`, then stores the result in the destination.
+   - Purpose: adding numbers `larger than the register size`. A 32-bit addition on a 16-bit 8086 is done as a normal `ADD` on the low words followed by an `ADC` on the high words, so that the carry produced by the first addition is carried into the second.
+   ```asm
+      ; 32-bit addition : (DX:AX) = (DX:AX) + (CX:BX)
+      ADD  AX, BX          ; add the LOW words, may generate a carry
+      ADC  DX, CX          ; add the HIGH words PLUS that carry
+   ```
+   - Flags affected: `CF, PF, AF, ZF, SF, OF`.
+   ```
+      Example : AX = 0FFFFH , BX = 0001H , CF = 1
+                ADC AX, BX  ->  AX = 0001H , CF = 1
+   ```
+
+   (ii) CMP — Compare
+   ```
+      Syntax  :  CMP destination, source
+
+      Operation : destination - source     (the result is DISCARDED)
+   ```
+   - It performs a `subtraction purely to set the flags`. Neither operand is changed — this is what distinguishes it from `SUB`.
+   - Purpose: to make a decision. `CMP` is almost always followed immediately by a conditional jump.
+   ```
+      After CMP A, B :
+
+         ZF = 1                ->  A = B
+         ZF = 0                ->  A is not equal to B
+         CF = 1                ->  A < B   (unsigned)
+         CF = 0 and ZF = 0     ->  A > B   (unsigned)
+         SF <> OF              ->  A < B   (signed)
+   ```
+   ```asm
+      CMP  AX, BX
+      JE   equal_label        ; jump if AX = BX
+      JA   above_label        ; jump if AX > BX (unsigned)
+      JB   below_label        ; jump if AX < BX (unsigned)
+   ```
+   - Flags affected: `CF, PF, AF, ZF, SF, OF`. No register or memory location is modified.
+
+   (iii) JBE — Jump if Below or Equal
+   ```
+      Syntax  :  JBE label          (same opcode as JNA - Jump if Not Above)
+
+      Condition : jump if  CF = 1  OR  ZF = 1
+   ```
+   - It is an `unsigned` conditional jump, taken when the first operand of the preceding comparison was `less than or equal to` the second.
+   ```
+      CF = 1  ->  the destination was below the source
+      ZF = 1  ->  they were equal
+   ```
+   ```asm
+      CMP  AX, 10
+      JBE  small_value        ; jump if AX <= 10  (unsigned)
+   ```
+   - It is a short jump, so the target must lie within -128 to +127 bytes of the next instruction.
+   - Flags affected: `none`. A conditional jump reads the flags but does not change them.
+
+   The signed and unsigned families, which are often confused
+   ```
+      UNSIGNED comparisons        SIGNED comparisons
+      JA   / JNBE   above         JG   / JNLE   greater
+      JAE  / JNB    above or equal JGE / JNL    greater or equal
+      JB   / JNAE   below          JL  / JNGE   less
+      JBE  / JNA    below or equal JLE / JNG    less or equal
+   ```
+   - Using `JBE` where `JLE` was needed, or the reverse, is a classic bug: with AX = -1 (FFFFH) and BX = 1, the unsigned comparison says AX is `above` BX, while the signed one says it is `below`.
+
+   Summary
+
+   | Instruction | Full name | Operation | Flags affected |
+   |---|---|---|---|
+   | `ADC` | Add with Carry | dest = dest + src + CF | All arithmetic flags |
+   | `CMP` | Compare | dest - src, result discarded | All arithmetic flags |
+   | `JBE` | Jump if Below or Equal | Jump if CF = 1 or ZF = 1 | None |
 
 5. **Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
+   Answer: (Answered in English, as required for IT topics.) ADC — Add with Carry
+   ```
+      Syntax    : ADC destination, source
+      Operation : destination <- destination + source + CF
+   ```
+   - Adds the source, the destination `and the carry flag`, storing the result in the destination.
+   - Purpose: adding numbers `wider than the register`. A 32-bit addition on the 16-bit 8086 uses `ADD` on the low words then `ADC` on the high words, so the carry from the first is included in the second.
+   ```asm
+      ; 32-bit addition : (DX:AX) = (DX:AX) + (CX:BX)
+      ADD  AX, BX          ; low words, may generate a carry
+      ADC  DX, CX          ; high words PLUS that carry
+   ```
+   - Flags affected: `CF, PF, AF, ZF, SF, OF`.
+
+   XCHG — Exchange
+   ```
+      Syntax    : XCHG destination, source
+      Operation : the two operands SWAP their contents
+   ```
+   - It exchanges the values without needing a temporary register, which would otherwise take three MOV instructions.
+   ```asm
+      XCHG  AX, BX         ; AX and BX swap contents
+      XCHG  AL, AH         ; swap the two halves of AX
+      XCHG  AX, [1234H]    ; swap AX with a memory word
+   ```
+   - Restrictions: both operands must be the same size, and both cannot be memory locations. Segment registers cannot be exchanged.
+   - Flags affected: `none`.
+   - Useful for byte-order reversal and for implementing a simple lock, since `XCHG` on the 8086 is atomic.
+
+   POP — Pop from the stack
+   ```
+      Syntax    : POP destination
+      Operation : destination <- [SS:SP]
+                  SP <- SP + 2
+   ```
+   - Removes the word at the top of the stack and places it in the destination, then moves the stack pointer `up` by two bytes.
+   ```asm
+      POP  AX              ; AX <- top of stack, SP = SP + 2
+      POP  DS              ; restore a segment register
+      POPF                 ; restore the flag register
+   ```
+   - The 8086 stack grows `downward`: `PUSH` decrements SP, `POP` increments it. The stack is `LIFO`, so pops must mirror pushes in reverse order.
+   ```asm
+      PUSH AX
+      PUSH BX
+      ...
+      POP  BX              ; note the REVERSE order
+      POP  AX
+   ```
+   - Flags affected: `none`, except `POPF`, which restores all of them. `POP CS` is illegal, since it would break the instruction flow.
+
+   JNZ — Jump if Not Zero
+   ```
+      Syntax    : JNZ label          (same opcode as JNE - Jump if Not Equal)
+      Condition : jump if ZF = 0
+   ```
+   - Transfers control to the label when the previous operation produced a `non-zero` result, or when a comparison found the operands `unequal`.
+   ```asm
+      ; a countdown loop
+      MOV  CX, 10
+      again:
+           ...              ; body of the loop
+           DEC  CX          ; DEC sets ZF when CX reaches 0
+           JNZ  again       ; repeat while CX is not zero
+
+      ; a comparison
+      CMP  AX, BX
+      JNZ  not_equal        ; jump if AX <> BX
+   ```
+   - It is a short jump, so the target must lie within -128 to +127 bytes.
+   - Flags affected: `none`. A conditional jump reads the flags but does not modify them.
+
+   Summary
+
+   | Instruction | Full name | Operation | Flags affected |
+   |---|---|---|---|
+   | `ADC` | Add with Carry | dest = dest + src + CF | All arithmetic flags |
+   | `XCHG` | Exchange | The two operands swap | None |
+   | `POP` | Pop from stack | dest = [SP], then SP = SP + 2 | None (except POPF) |
+   | `JNZ` | Jump if Not Zero | Jump if ZF = 0 | None |
+
 6. **Write down four common rules of Assembly language. Write different type of hazard.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
+
+   Answer: Four common rules of assembly language
+
+   1. `One statement per line, in a fixed field format`
+   ```
+      [label:]   mnemonic   [operands]   [; comment]
+
+      START:     MOV  AX, BX       ; copy BX into AX
+   ```
+   - The `label` is optional and marks the address; the `mnemonic` is the operation; the `operands` are what it acts on; anything after a `;` is a comment.
+
+   2. `Operands must match in size and in type`
+   ```
+      MOV  AX, BX      ; legal   - both 16-bit
+      MOV  AL, BL      ; legal   - both 8-bit
+      MOV  AX, BL      ; ILLEGAL - size mismatch
+   ```
+   - Also, `both operands cannot be memory locations` — one must be a register. `MOV [1000H], [2000H]` is illegal, and must be done in two steps through a register.
+   - An immediate value cannot be the destination: `MOV 1234H, AX` is meaningless.
+
+   3. `Every program must define its segments and end properly`
+   ```asm
+      .MODEL SMALL
+      .STACK 100H
+      .DATA
+           MSG  DB  'Hello$'
+      .CODE
+      MAIN PROC
+           MOV  AX, @DATA
+           MOV  DS, AX          ; DS must be initialised by the program
+           ...
+           MOV  AH, 4CH
+           INT  21H             ; return to DOS
+      MAIN ENDP
+      END  MAIN                 ; END directive marks the entry point
+   ```
+   - Segment registers are not set automatically; the program must load `DS` itself.
+
+   4. `Names, numbers and comments follow strict rules`
+   ```
+      Labels  : begin with a letter or _ ; letters, digits, _ , $ , ? allowed
+                not a reserved word (AX, MOV, ADD are reserved)
+                usually up to 31 characters, and case-insensitive
+
+      Numbers : must BEGIN WITH A DIGIT
+                1234H  legal        A534H  ILLEGAL -> write 0A534H
+                suffix H = hex, B = binary, D or none = decimal, O/Q = octal
+
+      Strings : enclosed in single or double quotes -> 'Hello'
+      Comments: everything after a semicolon on the line
+   ```
+
+   Other rules worth knowing
+   ```
+      Square brackets mean "the contents of" : MOV AX,[BX] is not MOV AX,BX
+      Directives (DB, DW, EQU, .DATA) are instructions to the ASSEMBLER,
+          not to the CPU, and generate no machine code themselves
+      Labels must be unique within a module
+   ```
+
+   Types of hazard in a pipeline
+
+   A `hazard` is a situation in which the next instruction cannot execute in the following clock cycle. There are three kinds.
+
+   1. `Structural hazard` (resource hazard)
+   - Two instructions need the `same hardware unit` in the same cycle.
+   ```
+      I1 is in MEM, reading data from memory
+      I4 is in IF, fetching an instruction from the same memory
+      -> a single-ported memory cannot serve both
+   ```
+   - Solved by `duplicating the resource` — separate instruction and data caches (the Harvard arrangement), or a multi-ported register file.
+
+   2. `Data hazard`
+   - An instruction needs a value that an earlier instruction has computed but not yet written back.
+   ```asm
+      ADD  R1, R2, R3      ; R1 written back in cycle 5
+      SUB  R4, R1, R5      ; needs R1 in cycle 4 - too early
+   ```
+   ```
+      RAW (Read After Write)  : the true dependency, shown above
+      WAR (Write After Read)  : only with out-of-order execution
+      WAW (Write After Write) : only with out-of-order execution
+   ```
+   - Solved by `forwarding` (routing the ALU result straight to the next instruction's input), by `stalling` one cycle when a load is immediately used, and by compiler scheduling.
+
+   3. `Control hazard` (branch hazard)
+   - A branch is not resolved until the EX stage, so the instructions already fetched behind it may be the wrong ones.
+   ```
+      BEQ  R1, R2, TARGET
+      ---- which instruction should be fetched next? Not known yet ----
+   ```
+   - Solved by `branch prediction` (static or dynamic, with a branch history table), `delayed branching` (the compiler fills the slot with a useful instruction), and `speculative execution`, with a pipeline flush when the prediction turns out wrong.
+
+   | Hazard | Cause | Solution |
+   |---|---|---|
+   | Structural | Two stages want the same unit | Duplicate the resource, separate caches |
+   | Data | A result is not ready yet | Forwarding, stalling, compiler scheduling |
+   | Control | The branch outcome is unknown | Branch prediction, delayed branch, flush |
 
 7. **Describe addressing mode of 8086 microprocessors.** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1225-1226 (ET: N/A)]*
 
+   Answer: An `addressing mode` is the way an instruction specifies where its operand is. The 8086 supports the following modes.
+
+   1. Immediate addressing
+   - The operand is a `constant carried inside the instruction`.
+   ```asm
+      MOV  AX, 1234H       ; AX <- 1234H
+      ADD  BL, 05H         ; BL <- BL + 5
+   ```
+   - Fastest, since no memory access is needed. It can only be a source, never a destination.
+
+   2. Register addressing
+   - The operand is `in a CPU register`.
+   ```asm
+      MOV  AX, BX          ; AX <- BX
+      ADD  CL, DL
+   ```
+   - Fastest for repeated use — no memory cycle at all. Both operands must be the same size.
+
+   3. Direct addressing
+   - The instruction carries the `16-bit offset` of the memory location.
+   ```asm
+      MOV  AX, [1234H]     ; AX <- the word at DS:1234H
+      MOV  TOTAL, BL       ; TOTAL is a label, so this is direct
+   ```
+   ```
+      Physical address = DS x 16 + offset
+   ```
+
+   4. Register indirect addressing
+   - The `offset is held in a register` — BX, SI, DI or BP.
+   ```asm
+      MOV  AX, [BX]        ; AX <- the word at DS:BX
+      MOV  AX, [SI]
+      MOV  AX, [BP]        ; NOTE: BP uses the STACK segment SS by default
+   ```
+   - Essential for arrays and pointers, since the register can be incremented in a loop.
+
+   5. Based addressing
+   - A `base register (BX or BP) plus a displacement`.
+   ```asm
+      MOV  AX, [BX + 4]
+      MOV  AX, [BP + 6]    ; typical way to reach a parameter on the stack
+   ```
+   - Used for accessing fields of a record or structure.
+
+   6. Indexed addressing
+   - An `index register (SI or DI) plus a displacement`.
+   ```asm
+      MOV  AX, [SI + 4]
+      MOV  AX, ARRAY[DI]
+   ```
+   - Used for stepping through an array: the displacement gives the array's start, the index gives the element.
+
+   7. Based indexed addressing
+   - A `base register plus an index register`.
+   ```asm
+      MOV  AX, [BX + SI]
+      MOV  AX, [BP + DI]
+   ```
+   - Used for two-dimensional arrays: the base holds the row, the index the column.
+
+   8. Based indexed with displacement
+   - All three components together.
+   ```asm
+      MOV  AX, [BX + SI + 4]
+      MOV  AX, ARRAY[BX][SI]
+   ```
+   - The most general form, used for arrays of records.
+
+   9. Implied (implicit) addressing
+   - The operand is `understood from the opcode` and is not written at all.
+   ```asm
+      CLC                  ; clear the carry flag
+      STC , CLD , STD , NOP , CBW
+   ```
+
+   10. String addressing
+   - The 8086 string instructions use `SI` and `DI` automatically, with `DS:SI` as the source and `ES:DI` as the destination, and increment or decrement them according to the direction flag.
+   ```asm
+      MOVSB , MOVSW        ; move a byte or word
+      LODSB , STOSB , CMPSB , SCASB
+   ```
+
+   Default segment registers
+   ```
+      Offset in BX, SI, DI        ->  DS
+      Offset in BP or SP          ->  SS
+      Destination of a string op  ->  ES
+      Instruction fetch           ->  CS
+
+      Any of these may be overridden : MOV AX, ES:[BX]
+   ```
+
+   Summary
+
+   | Mode | Example | Operand is |
+   |---|---|---|
+   | Immediate | `MOV AX, 1234H` | A constant in the instruction |
+   | Register | `MOV AX, BX` | In a register |
+   | Direct | `MOV AX, [1234H]` | In memory, address in the instruction |
+   | Register indirect | `MOV AX, [BX]` | In memory, address in a register |
+   | Based | `MOV AX, [BX+4]` | Base register + displacement |
+   | Indexed | `MOV AX, [SI+4]` | Index register + displacement |
+   | Based indexed | `MOV AX, [BX+SI]` | Base + index |
+   | Based indexed + disp | `MOV AX, [BX+SI+4]` | Base + index + displacement |
+   | Implied | `CLC` | Understood from the opcode |
+   | String | `MOVSB` | DS:SI and ES:DI, automatically |
+
+   - Why so many modes exist: each maps naturally onto a programming construct — immediate for constants, register indirect for pointers, indexed for arrays, based for record fields, based indexed for two-dimensional arrays. This richness is characteristic of a `CISC` design; RISC machines typically offer only two or three.
+
 8. **Explain the instructions LDS, PUSHF, TEST and CLD.** *[Multiple Ministry Assistant Programmer 2017 compact it 1235 (ET: N/A)]*
+
+   Answer: LDS — Load pointer using DS
+   ```
+      Syntax    : LDS destination, source
+
+      Operation : destination <- [source]        the low word  (the offset)
+                  DS          <- [source + 2]    the high word (the segment)
+   ```
+   - It loads a `32-bit far pointer` from memory in one instruction: the offset into the named register and the segment into `DS`.
+   ```asm
+      LDS  SI, POINTER     ; SI <- the word at POINTER
+                           ; DS <- the word at POINTER+2
+                           ; now DS:SI addresses the target data
+   ```
+   - Purpose: setting up access to data in another segment, typically when a far pointer has been passed to a procedure.
+   - The companion instruction `LES` does the same but loads `ES` instead of DS, which is what string destinations need.
+   - Flags affected: `none`.
+
+   PUSHF — Push flags onto the stack
+   ```
+      Operation : SP <- SP - 2
+                  [SS:SP] <- the 16-bit flag register
+   ```
+   - Saves the entire flag register — CF, PF, AF, ZF, SF, TF, IF, DF, OF — onto the stack.
+   ```asm
+      PUSHF                ; save the flags
+      ...                  ; code that alters the flags
+      POPF                 ; restore them exactly as they were
+   ```
+   - Purpose: preserving the processor state at the start of an interrupt service routine or a procedure, so the interrupted code resumes with its flags intact.
+   - It is also the only way to `modify the trap flag`, since no instruction sets TF directly:
+   ```asm
+      PUSHF
+      POP  AX
+      OR   AX, 0100H       ; set bit 8 = TF, enabling single-step mode
+      PUSH AX
+      POPF
+   ```
+   - Flags affected: `none` by PUSHF itself; `POPF` restores all of them.
+
+   TEST — Logical compare
+   ```
+      Syntax    : TEST destination, source
+
+      Operation : destination AND source     (the result is DISCARDED)
+   ```
+   - Performs a bitwise AND `purely to set the flags`. Neither operand is changed — this is exactly what distinguishes it from `AND`.
+   - Purpose: checking whether particular `bits` are set, without disturbing the data.
+   ```asm
+      TEST AL, 01H
+      JNZ  odd_number      ; bit 0 set -> the value is odd
+
+      TEST AL, 80H
+      JNZ  negative        ; bit 7 set -> sign bit is 1
+
+      TEST AX, AX
+      JZ   is_zero         ; a fast way to test AX for zero
+   ```
+   - Flags affected: `SF, ZF, PF` are set from the result; `CF and OF are cleared`; AF is undefined.
+   - `TEST` is to `AND` exactly what `CMP` is to `SUB`: the operation is performed only for its effect on the flags.
+
+   CLD — Clear Direction flag
+   ```
+      Operation : DF <- 0
+   ```
+   - Sets the direction of the `string instructions` to `forward`: after each operation, `SI` and `DI` are `auto-incremented`.
+   ```asm
+      CLD                  ; forward direction
+      MOV  CX, 100
+      REP  MOVSB           ; copy 100 bytes from DS:SI to ES:DI, moving forward
+   ```
+   - Its counterpart `STD` sets DF = 1, making the string instructions move `backward` by auto-decrementing SI and DI.
+   - Why the backward direction exists: when copying `overlapping` memory blocks, copying forward would overwrite bytes that have not yet been read, so the copy must be made from the end.
+   - Flags affected: only `DF`.
+
+   Summary
+
+   | Instruction | Full name | Operation | Flags affected |
+   |---|---|---|---|
+   | `LDS` | Load pointer using DS | reg <- [src], DS <- [src+2] | None |
+   | `PUSHF` | Push flags | Push the flag register onto the stack | None |
+   | `TEST` | Logical compare | dest AND src, result discarded | SF, ZF, PF set; CF, OF cleared |
+   | `CLD` | Clear direction flag | DF <- 0, string ops go forward | DF only |
 
 ## CPU Performance & Instruction Cycle (6)
 
