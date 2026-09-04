@@ -5767,41 +5767,1206 @@
 
 1. **(a) State De-Morgan’s law with an appropriate example.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
+   Answer: `De Morgan's laws` say how a complement is distributed over an AND or an OR. They are the most used rules in digital design, because they let AND be turned into OR and back.
+
+   The two laws
+   ```
+   Law 1 :  (A . B)' = A' + B'        the complement of a product is the sum of the complements
+   Law 2 :  (A + B)' = A' . B'        the complement of a sum is the product of the complements
+   ```
+   - In words: `break the bar and change the sign`. Break the long bar over the expression and swap AND with OR.
+
+   Proof of Law 1 by truth table
+   ```
+   A  B | A.B | (A.B)' | A' | B' | A'+B'
+   -----+-----+--------+----+----+------
+   0  0 |  0  |   1    | 1  | 1  |   1
+   0  1 |  0  |   1    | 1  | 0  |   1
+   1  0 |  0  |   1    | 0  | 1  |   1
+   1  1 |  1  |   0    | 0  | 0  |   0
+   ```
+   - Columns `(A.B)'` and `A'+B'` are identical, so the law holds.
+
+   Proof of Law 2 by truth table
+   ```
+   A  B | A+B | (A+B)' | A' | B' | A'.B'
+   -----+-----+--------+----+----+------
+   0  0 |  0  |   1    | 1  | 1  |   1
+   0  1 |  1  |   0    | 1  | 0  |   0
+   1  0 |  1  |   0    | 0  | 1  |   0
+   1  1 |  1  |   0    | 0  | 0  |   0
+   ```
+   - Identical again.
+
+   Example — simplify an expression
+   ```
+      F = (A + B'C)'
+        = A' . (B'C)'            Law 2
+        = A' . (B + C')          Law 1
+        = A'B + A'C'
+   ```
+
+   Gate equivalence
+   ```
+      NAND = bubbled OR                 NOR = bubbled AND
+
+      A ---|‾‾\               A ---|>o---|\
+           |    )o--- (AB)'  ==          | )--- A' + B'
+      B ---|__/               B ---|>o---|/
+
+
+      A ---|\                 A ---|>o---|‾‾\
+           | )o--- (A+B)'    ==          |    )--- A'.B'
+      B ---|/                 B ---|>o---|__/
+   ```
+
+   Why it matters
+   - It is what makes `NAND and NOR universal gates`: `A + B = (A'.B')'` builds an OR from NAND gates alone.
+   - It converts a two-level AND-OR circuit into a NAND-NAND circuit with no structural change.
+   - The laws extend to any number of variables: `(A.B.C)' = A' + B' + C'` and `(A+B+C)' = A'.B'.C'`.
+
 2. **AB + (A(\overline{BC}))(AC + \overline{B}C)** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
+
+   Answer: The expression is
+   ```
+   F = AB + (A . (BC)') . (AC + B'C)
+   ```
+
+   Step 1 — simplify the second bracket
+   ```
+      AC + B'C = C(A + B')                distributive law
+   ```
+
+   Step 2 — expand (BC)'
+   ```
+      (BC)' = B' + C'                     De Morgan's law
+   ```
+
+   Step 3 — build the product term
+   ```
+      A . (BC)' . C(A + B')
+    = A . (B' + C') . C . (A + B')
+    = A . C . (B' + C') . (A + B')
+
+      A.C.C' = 0 , so the C' part vanishes :
+      (B' + C') . C = B'C + C'C = B'C + 0 = B'C
+
+    = A . B'C . (A + B')
+    = AB'C . (A + B')
+    = A.A.B'C + A.B'.B'C            distributive
+    = AB'C + AB'C                   since A.A = A and B'.B' = B'
+    = AB'C
+   ```
+
+   Step 4 — combine with the first term
+   ```
+      F = AB + AB'C
+        = A(B + B'C)
+        = A(B + C)                   since X + X'Y = X + Y
+      F = AB + AC
+   ```
+
+   Verification by truth table
+   ```
+   A  B  C | original | AB + AC
+   --------+----------+--------
+   0  0  0 |    0     |    0
+   0  0  1 |    0     |    0
+   0  1  0 |    0     |    0
+   0  1  1 |    0     |    0
+   1  0  0 |    0     |    0
+   1  0  1 |    1     |    1
+   1  1  0 |    1     |    1
+   1  1  1 |    1     |    1        identical
+   ```
+   ```
+   F = Sigma m(5, 6, 7)
+   ```
+
+   Simplified circuit
+   ```
+      B ---|\
+           | )--- B + C ---|‾‾\
+      C ---|/               |    )--- F = A(B + C)
+                       A ---|__/
+   ```
+   - Or, as a two-level SOP, `F = AB + AC` needs two AND gates and one OR gate.
+   - Laws used: De Morgan, distributive, `X.X' = 0`, `X.X = X`, and the absorption form `X + X'Y = X + Y`.
 
 3. **Simplify Y = A\bar{B} + \overline{(\bar{A} + B)}C in digital logic design.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 671 (ET: N/A)]*
 
+   Answer: The expression is
+   ```
+   Y = AB' + (A' + B)' C
+   ```
+
+   Step 1 — apply De Morgan to the complemented bracket
+   ```
+      (A' + B)' = (A')' . B'          De Morgan : (X + Y)' = X'Y'
+                = A . B'              double complement
+   ```
+
+   Step 2 — substitute
+   ```
+      Y = AB' + (AB')C
+        = AB' + AB'C
+   ```
+
+   Step 3 — factor and absorb
+   ```
+      Y = AB'(1 + C)
+        = AB' . 1                     since 1 + C = 1
+      Y = AB'
+   ```
+
+   Verification
+   ```
+   A  B  C | (A'+B)' | AB' | Y = AB' + (A'+B)'C
+   --------+---------+-----+-------------------
+   0  0  0 |    0    |  0  |         0
+   0  0  1 |    0    |  0  |         0
+   0  1  0 |    0    |  0  |         0
+   0  1  1 |    0    |  0  |         0
+   1  0  0 |    1    |  1  |         1
+   1  0  1 |    1    |  1  |         1
+   1  1  0 |    0    |  0  |         0
+   1  1  1 |    0    |  0  |         0
+   ```
+   ```
+   Y = Sigma m(4, 5) = AB'
+   ```
+   - The output does not depend on C at all, so the whole C input can be removed from the circuit.
+
+   Simplified circuit
+   ```
+      A ---------------|‾‾\
+                       |    )--- Y = AB'
+      B ---|>o--- B' --|__/
+   ```
+
+   - Laws used: De Morgan `(X + Y)' = X'Y'`, double complement `(X')' = X`, distributive, and `1 + X = 1`. The absorption law `X + XY = X` gives the same result in one step, since `AB' + AB'C = AB'`.
+
 4. **X+\bar{X}Y = ?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
+
+   Answer: The identity is
+   ```
+   X + X'Y = X + Y
+   ```
+   - This is the `absorption law` in its second form, sometimes called the redundancy law.
+
+   Algebraic proof
+   ```
+      X + X'Y
+    = (X + X')(X + Y)            distributive law : A + BC = (A+B)(A+C)
+    = 1 . (X + Y)                since X + X' = 1
+    = X + Y
+   ```
+
+   Alternative proof
+   ```
+      X + X'Y
+    = X.1 + X'Y
+    = X(1 + Y) + X'Y             since 1 + Y = 1
+    = X + XY + X'Y
+    = X + Y(X + X')
+    = X + Y.1
+    = X + Y
+   ```
+
+   Verification by truth table
+   ```
+   X  Y | X' | X'Y | X + X'Y | X + Y
+   -----+----+-----+---------+------
+   0  0 | 1  |  0  |    0    |   0
+   0  1 | 1  |  1  |    1    |   1
+   1  0 | 0  |  0  |    1    |   1
+   1  1 | 0  |  0  |    1    |   1
+   ```
+   - The last two columns are identical, so the identity holds.
+
+   Why it works in plain words
+   - If `X = 1`, the whole expression is already 1, and the second term adds nothing.
+   - If `X = 0`, then `X' = 1`, so `X'Y` becomes `Y`.
+   - Either way the result is `X + Y`.
+
+   The dual form
+   ```
+      X . (X' + Y) = X . Y
+   ```
+   - Every Boolean identity has a dual, obtained by swapping AND with OR and 0 with 1.
+
+   Related absorption laws worth remembering
+   ```
+      X + XY  = X
+      X(X + Y) = X
+      X + X'Y = X + Y
+      X(X' + Y) = XY
+   ```
+   - These four remove redundant terms quickly and are the fastest route through most simplification questions.
 
 5. **(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 773 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) The function is
+   ```
+   F(A,B,C,D) = A'B'C' + B'CD' + A'B'CD' + AB'C'
+   ```
+
+   Step 1 — remove the redundant term
+   ```
+      B'CD' + A'B'CD'
+    = B'CD'(1 + A')
+    = B'CD'                            since 1 + A' = 1
+
+      F = A'B'C' + B'CD' + AB'C'
+   ```
+
+   Step 2 — combine the two C' terms
+   ```
+      A'B'C' + AB'C'
+    = B'C'(A' + A)
+    = B'C'                             since A' + A = 1
+
+      F = B'C' + B'CD'
+   ```
+
+   Step 3 — factor B' and absorb
+   ```
+      F = B'(C' + CD')
+        = B'(C' + D')                  since X' + XY = X' + Y
+      F = B'C' + B'D'
+        = B'(C' + D')
+        = B'(CD)'                      De Morgan
+   ```
+
+   Final answer
+   ```
+   F = B'C' + B'D'  =  B'(C' + D')  =  B'(CD)'
+   ```
+
+   Verification
+   ```
+      F = Sigma m(0, 1, 2, 8, 9, 10)
+
+      m0  = 0000 : B'C' = 1        m8  = 1000 : B'C' = 1
+      m1  = 0001 : B'C' = 1        m9  = 1001 : B'C' = 1
+      m2  = 0010 : B'D' = 1        m10 = 1010 : B'D' = 1
+
+      m3  = 0011 : B' = 1 but C = 1 and D = 1  ->  F = 0   correct
+      m4  = 0100 : B = 1  ->  F = 0                        correct
+   ```
+
+   K-map check
+   ```
+      AB\CD   00    01    11    10
+       00     1     1     0     1
+       01     0     0     0     0
+       11     0     0     0     0
+       10     1     1     0     1
+
+      Loop B'C' : rows AB = 00 and 10 , columns CD = 00 and 01
+      Loop B'D' : rows AB = 00 and 10 , columns CD = 00 and 10
+   ```
+   - Both loops are 4-cell groups, confirming the two-term answer.
+
+   Circuit
+   ```
+      C ---|‾‾\
+           |    )o--- (CD)' ---|‾‾\
+      D ---|___/                |    )--- F
+                                |___/
+      B ---|>o--- B' -----------+
+   ```
+   - Twelve literals have reduced to four, and the circuit is one NAND plus one inverter and one AND gate.
+
 6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\,\bar{w} + (zw)(\overline{xy})** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
+
+   Answer: The equation is
+   ```
+      y(z + w') + x(z' + y')w' + (zw)(xy)'
+   ```
+   - Sum-of-products form means a sum of AND terms, with every complement bar sitting over a single variable only.
+
+   Step 1 — expand the first term
+   ```
+      y(z + w') = yz + yw'
+   ```
+
+   Step 2 — expand the second term
+   ```
+      x(z' + y')w' = xz'w' + xy'w'
+   ```
+
+   Step 3 — remove the bar over the product in the third term
+   ```
+      (xy)' = x' + y'                   De Morgan
+
+      (zw)(xy)' = zw(x' + y')
+                = x'zw + y'zw
+   ```
+
+   Step 4 — put the SOP form together
+   ```
+      F = yz + yw' + xz'w' + xy'w' + x'zw + y'zw
+   ```
+   - This is the answer the question asks for: a sum of products with no bar over more than one variable.
+
+   Step 5 — the minimal form, as a check
+   - Expanding to minterms over the order `w x y z`:
+   ```
+      F = Sigma m(2, 3, 4, 5, 6, 7, 9, 11, 13, 15)
+   ```
+   - K-map (rows wx, columns yz)
+   ```
+      wx\yz   00    01    11    10
+       00     0     0     1     1        m0  m1  m3  m2
+       01     1     1     1     1        m4  m5  m7  m6
+       11     0     1     1     0        m12 m13 m15 m14
+       10     0     1     1     0        m8  m9  m11 m10
+
+      Loop w'x : the whole row wx = 01
+      Loop w'y : rows wx = 00 and 01 , columns yz = 11 and 10
+      Loop wz  : rows wx = 11 and 10 , columns yz = 01 and 11
+   ```
+   ```
+      F = w'x + w'y + wz
+   ```
+
+   Verification of one cell
+   ```
+      m9 = w=1, x=0, y=0, z=1
+      original : y(z+w') = 0 ,  x(...)w' = 0 ,  (zw)(xy)' = 1.1 = 1  ->  F = 1
+      minimal  : wz = 1                                              ->  F = 1   correct
+   ```
+
+   - Laws used: distributive `A(B + C) = AB + AC`, and De Morgan `(XY)' = X' + Y'` to break the bar over the product. The minimal form `w'x + w'y + wz` is far cheaper, but the question only asked for the SOP conversion.
 
 7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
 
+   Answer: The expression is
+   ```
+      ABC'D + ABCD + A'BD
+   ```
+
+   Step 1 — combine the first two terms
+   ```
+      ABC'D + ABCD
+    = ABD(C' + C)
+    = ABD . 1
+    = ABD                              since C' + C = 1
+   ```
+
+   Step 2 — combine what remains
+   ```
+      ABD + A'BD
+    = BD(A + A')
+    = BD . 1
+    = BD                               since A + A' = 1
+   ```
+
+   Final answer
+   ```
+      F = BD
+   ```
+   - Eleven literals have reduced to two.
+
+   Verification
+   ```
+      ABC'D + ABCD + A'BD  =  Sigma m(5, 7, 13, 15)
+
+      ABC'D = 1101 = m13
+      ABCD  = 1111 = m15
+      A'BD  = 0101 , 0111 = m5 , m7
+
+      BD    = B=1 , D=1  ->  m5 (0101), m7 (0111), m13 (1101), m15 (1111)
+   ```
+   - The same four minterms, so the simplification is correct.
+
+   K-map check
+   ```
+      AB\CD   00    01    11    10
+       00     0     0     0     0
+       01     0     1     1     0        m5  m7
+       11     0     1     1     0        m13 m15
+       10     0     0     0     0
+
+      One 4-cell loop covering rows AB = 01 and 11, columns CD = 01 and 11
+      B stays 1 and D stays 1  ->  BD
+   ```
+
+   Circuit
+   ```
+      B ---|‾‾\
+           |    )--- F = BD
+      D ---|__/
+   ```
+   - A single AND gate replaces three 4-input AND gates and one OR gate. A and C disappear completely — the output does not depend on them.
+
 8. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 876 (ET: BUET)]*
+
+   Answer: The expression is
+   ```
+      ABC'D + A'B'C'D + ABCD + A'B'CD + ABCD' + A'B'CD'
+   ```
+
+   Step 1 — group the terms with the same AB pattern
+   ```
+      AB terms  :  ABC'D + ABCD + ABCD'
+      A'B' terms:  A'B'C'D + A'B'CD + A'B'CD'
+   ```
+
+   Step 2 — simplify the AB group
+   ```
+      ABC'D + ABCD = ABD(C' + C) = ABD
+      ABCD  + ABCD' = ABC(D + D') = ABC
+
+      AB group = ABD + ABC = AB(C + D)
+   ```
+   - `ABCD` is used twice, which is allowed since `X + X = X`.
+
+   Step 3 — simplify the A'B' group, the same way
+   ```
+      A'B'C'D + A'B'CD = A'B'D(C' + C) = A'B'D
+      A'B'CD  + A'B'CD' = A'B'C(D + D') = A'B'C
+
+      A'B' group = A'B'D + A'B'C = A'B'(C + D)
+   ```
+
+   Step 4 — combine
+   ```
+      F = AB(C + D) + A'B'(C + D)
+        = (C + D)(AB + A'B')
+        = (C + D) . (A XNOR B)
+   ```
+
+   Final answer
+   ```
+      F = AB(C + D) + A'B'(C + D)  =  (AB + A'B')(C + D)  =  (A XNOR B)(C + D)
+   ```
+   - In pure SOP form: `F = ABC + ABD + A'B'C + A'B'D`.
+   - Twenty-four literals have reduced to eight, or to a factored form with six.
+
+   Verification
+   ```
+      F = Sigma m(1, 2, 3, 13, 14, 15)
+
+      m1  = 0001 : A'B'D = 1
+      m2  = 0010 : A'B'C = 1
+      m3  = 0011 : both
+      m13 = 1101 : ABD = 1
+      m14 = 1110 : ABC = 1
+      m15 = 1111 : both
+
+      m0 = 0000 : A'B' = 1 but C + D = 0  ->  F = 0        correct
+      m5 = 0101 : C + D = 1 but A XNOR B = 0  ->  F = 0    correct
+   ```
+
+   Circuit
+   ```
+      A ---|\
+           | ))o--- (A XNOR B) ---|‾‾\
+      B ---|/                      |    )--- F
+                                   |___/
+      C ---|\                      |
+           | )--- C + D -----------+
+      D ---|/
+   ```
+   - Laws used: `X + X' = 1`, `X + X = X`, and the distributive law to factor `(C + D)` out of both groups.
 
 9. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
 
+   Answer: The expression is
+   ```
+      x'y'z + x'yz + xy'
+   ```
+
+   Step 1 — combine the first two terms
+   ```
+      x'y'z + x'yz
+    = x'z(y' + y)
+    = x'z . 1
+    = x'z                              since y' + y = 1
+   ```
+
+   Step 2 — the expression becomes
+   ```
+      F = x'z + xy'
+   ```
+   - No further reduction is possible: the two terms share no variable in the same form, and neither absorbs the other.
+
+   Final answer
+   ```
+      F = x'z + xy'
+   ```
+
+   Verification
+   ```
+   x  y  z | x'y'z | x'yz | xy' | original | x'z + xy'
+   --------+-------+------+-----+----------+----------
+   0  0  0 |   0   |  0   |  0  |    0     |     0
+   0  0  1 |   1   |  0   |  0  |    1     |     1
+   0  1  0 |   0   |  0   |  0  |    0     |     0
+   0  1  1 |   0   |  1   |  0  |    1     |     1
+   1  0  0 |   0   |  0   |  1  |    1     |     1
+   1  0  1 |   0   |  0   |  1  |    1     |     1
+   1  1  0 |   0   |  0   |  0  |    0     |     0
+   1  1  1 |   0   |  0   |  0  |    0     |     0
+   ```
+   ```
+      F = Sigma m(1, 3, 4, 5)
+   ```
+
+   K-map check
+   ```
+      x\yz   00    01    11    10
+       0     0     1     1     0        m0  m1  m3  m2
+       1     1     1     0     0        m4  m5  m7  m6
+
+      Loop x'z : row x = 0 , columns yz = 01 and 11   ->  x'z
+      Loop xy' : row x = 1 , columns yz = 00 and 01   ->  xy'
+   ```
+   - Both loops are 2-cell groups, and the two-term answer is confirmed as minimal.
+
+   Circuit
+   ```
+      x ---|>o--- x' ---|‾‾\
+                        |    )--- x'z ---+
+      z ----------------|___/            |---|\
+                                         |   | )--- F
+      x ----------------|‾‾\             |   |/
+                        |    )--- xy' ---+  (OR)
+      y ---|>o--- y' ---|___/
+   ```
+   - Laws used: distributive to factor `x'z`, and `y + y' = 1`. Seven literals have reduced to four.
+
 10. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 890-891 (ET: N/A)]*
+
+    Answer: The expression is
+    ```
+       (x + y + xy)(x + z)
+    ```
+
+    Step 1 — simplify the first bracket
+    ```
+       x + y + xy
+     = x + (y + xy)
+     = x + y                            since y + xy = y  (absorption law)
+    ```
+    - Or equally, `x + xy = x`, giving `x + y` directly.
+
+    Step 2 — multiply out the two brackets
+    ```
+       (x + y)(x + z)
+     = x.x + x.z + y.x + y.z            distributive law
+     = x + xz + xy + yz                 since x.x = x
+     = x(1 + z + y) + yz
+     = x . 1 + yz
+     = x + yz
+    ```
+
+    Step 3 — the shortcut
+    - The distributive law in its second form, `(A + B)(A + C) = A + BC`, gives the same result in one line:
+    ```
+       (x + y)(x + z) = x + yz
+    ```
+
+    Final answer
+    ```
+       F = x + yz
+    ```
+
+    Verification
+    ```
+    x  y  z | x+y+xy | x+z | product | x + yz
+    --------+--------+-----+---------+-------
+    0  0  0 |   0    |  0  |    0    |   0
+    0  0  1 |   0    |  1  |    0    |   0
+    0  1  0 |   1    |  0  |    0    |   0
+    0  1  1 |   1    |  1  |    1    |   1
+    1  0  0 |   1    |  1  |    1    |   1
+    1  0  1 |   1    |  1  |    1    |   1
+    1  1  0 |   1    |  1  |    1    |   1
+    1  1  1 |   1    |  1  |    1    |   1
+    ```
+    ```
+       F = Sigma m(3, 4, 5, 6, 7)
+    ```
+    - The two right-hand columns are identical, so the simplification is correct.
+
+    Circuit
+    ```
+       y ---|‾‾\
+            |    )--- yz ---|\
+       z ---|__/            | )--- F = x + yz
+                            |/
+       x --------------------+
+    ```
+    - Laws used: absorption `X + XY = X`, and the distributive law `(A + B)(A + C) = A + BC`. Seven literals have reduced to three.
 
 11. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
+    Answer: The expression is
+    ```
+       ABC'D + A'BD + ABCD
+    ```
+    - "Minimum literal" form means the expression with the smallest total count of variable appearances.
+
+    Step 1 — combine the two terms that differ only in C
+    ```
+       ABC'D + ABCD
+     = ABD(C' + C)
+     = ABD . 1
+     = ABD                              since C' + C = 1
+    ```
+
+    Step 2 — combine what remains, which differ only in A
+    ```
+       ABD + A'BD
+     = BD(A + A')
+     = BD . 1
+     = BD                               since A + A' = 1
+    ```
+
+    Final answer
+    ```
+       F = BD
+    ```
+    ```
+       literals before : 4 + 3 + 4 = 11
+       literals after  : 2
+    ```
+
+    Verification
+    ```
+       ABC'D = 1101 = m13
+       ABCD  = 1111 = m15
+       A'BD  = 0101 , 0111 = m5 , m7
+
+       F = Sigma m(5, 7, 13, 15)
+
+       BD = B=1 and D=1  ->  0101, 0111, 1101, 1111 = m5, m7, m13, m15
+    ```
+    - Exactly the same set of minterms, so the reduction is correct.
+
+    K-map check
+    ```
+       AB\CD   00    01    11    10
+        00     0     0     0     0
+        01     0    [1]   [1]    0        m5  m7
+        11     0    [1]   [1]    0        m13 m15
+        10     0     0     0     0
+
+       One 4-cell loop : rows AB = 01 and 11 , columns CD = 01 and 11
+       B stays 1, D stays 1  ->  BD
+    ```
+
+    Circuit
+    ```
+       B ---|‾‾\
+            |    )--- F = BD
+       D ---|__/
+    ```
+    - One AND gate replaces three multi-input AND gates and a 3-input OR gate. `A and C disappear` — the output does not depend on them at all.
+
 12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
+
+    Answer: The expression is
+    ```
+       ABCD + A'BD + ABC'D
+    ```
+
+    Step 1 — combine the two terms that differ only in C
+    ```
+       ABCD + ABC'D
+     = ABD(C + C')
+     = ABD . 1
+     = ABD                              since C + C' = 1
+    ```
+
+    Step 2 — combine what remains, which differ only in A
+    ```
+       ABD + A'BD
+     = BD(A + A')
+     = BD . 1
+     = BD                               since A + A' = 1
+    ```
+
+    Final answer
+    ```
+       F = BD
+    ```
+
+    Verification
+    ```
+       ABCD  = 1111 = m15
+       A'BD  = 0101 , 0111 = m5 , m7
+       ABC'D = 1101 = m13
+
+       F = Sigma m(5, 7, 13, 15)
+
+       BD covers B=1, D=1  ->  0101, 0111, 1101, 1111       same set
+    ```
+
+    K-map check
+    ```
+       AB\CD   00    01    11    10
+        00     0     0     0     0
+        01     0    [1]   [1]    0
+        11     0    [1]   [1]    0
+        10     0     0     0     0
+
+       A single 4-cell loop gives BD
+    ```
+
+    Truth check of one 0 cell
+    ```
+       m4 = 0100 : A=0, B=1, C=0, D=0
+       ABCD = 0 , A'BD = 0 (D=0) , ABC'D = 0   ->  F = 0
+       BD   = 1 . 0 = 0                        ->  F = 0     correct
+    ```
+
+    Circuit
+    ```
+       B ---|‾‾\
+            |    )--- F = BD
+       D ---|__/
+    ```
+    - Eleven literals reduce to two, and the whole circuit becomes a single AND gate. Both `A and C are redundant`.
 
 13. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) `De Morgan's laws` state how a complement bar is removed from over an AND or an OR term. They are the most used rules in digital logic design.
+
+    The two laws
+    ```
+    Law 1 :  (A . B)' = A' + B'
+             The complement of a product equals the sum of the complements.
+
+    Law 2 :  (A + B)' = A' . B'
+             The complement of a sum equals the product of the complements.
+    ```
+    - The working rule: `break the bar and change the operation`. AND becomes OR, OR becomes AND.
+
+    Proof of Law 1
+    ```
+    A  B | A.B | (A.B)' | A' | B' | A'+B'
+    -----+-----+--------+----+----+------
+    0  0 |  0  |   1    | 1  | 1  |   1
+    0  1 |  0  |   1    | 1  | 0  |   1
+    1  0 |  0  |   1    | 0  | 1  |   1
+    1  1 |  1  |   0    | 0  | 0  |   0
+    ```
+
+    Proof of Law 2
+    ```
+    A  B | A+B | (A+B)' | A' | B' | A'.B'
+    -----+-----+--------+----+----+------
+    0  0 |  0  |   1    | 1  | 1  |   1
+    0  1 |  1  |   0    | 1  | 0  |   0
+    1  0 |  1  |   0    | 0  | 1  |   0
+    1  1 |  1  |   0    | 0  | 0  |   0
+    ```
+    - In both cases the two right-hand columns match exactly.
+
+    Extension to n variables
+    ```
+       (A . B . C)' = A' + B' + C'
+       (A + B + C)' = A' . B' . C'
+    ```
+
+    Gate interpretation
+    ```
+       NAND is a bubbled OR              NOR is a bubbled AND
+
+       A ---|‾‾\                A ---|>o---|\
+            |    )o--- (AB)' ==            | )--- A' + B'
+       B ---|__/                B ---|>o---|/
+
+       A ---|\                  A ---|>o---|‾‾\
+            | )o--- (A+B)'   ==            |    )--- A' . B'
+       B ---|/                  B ---|>o---|__/
+    ```
+
+    Example
+    ```
+       F = (A + B'C)'
+         = A' . (B'C)'          Law 2
+         = A' . (B + C')        Law 1
+         = A'B + A'C'
+    ```
+
+    Importance
+    - The laws are what make `NAND and NOR universal gates`: `A + B = (A'.B')'` builds an OR from NAND alone.
+    - They convert a two-level AND-OR circuit into an all-NAND circuit with no change of structure.
+    - They also let a designer move bubbles across a circuit diagram, which is how real schematics are simplified.
+
 14. **(ক) বুলিয়ান অ্যালজেবরার সাহায্যে সরল করুন: $\overline{x+y(x+z)}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) The expression is
+    ```
+       ( x + y(x + z) )'
+    ```
+
+    Step 1 — simplify what is inside the bar first
+    ```
+       x + y(x + z)
+     = x + xy + yz                      distributive law
+     = x(1 + y) + yz
+     = x . 1 + yz                       since 1 + y = 1
+     = x + yz
+    ```
+    - The `absorption law` `x + xy = x` gives the same result in one step.
+
+    Step 2 — take the complement using De Morgan
+    ```
+       (x + yz)'
+     = x' . (yz)'                       Law 2 : (A + B)' = A'B'
+     = x' . (y' + z')                   Law 1 : (AB)' = A' + B'
+     = x'y' + x'z'                      distributive
+    ```
+
+    Final answer
+    ```
+       F = x'(y' + z')  =  x'y' + x'z'  =  x'(yz)'
+    ```
+
+    Verification
+    ```
+    x  y  z | x+y(x+z) | complement | x'y' + x'z'
+    --------+----------+------------+------------
+    0  0  0 |    0     |     1      |  1 + 1 = 1
+    0  0  1 |    0     |     1      |  1 + 1 = 1
+    0  1  0 |    0     |     1      |  0 + 1 = 1
+    0  1  1 |    1     |     0      |  0 + 0 = 0
+    1  0  0 |    1     |     0      |  0 + 0 = 0
+    1  0  1 |    1     |     0      |  0 + 0 = 0
+    1  1  0 |    1     |     0      |  0 + 0 = 0
+    1  1  1 |    1     |     0      |  0 + 0 = 0
+    ```
+    ```
+       F = Sigma m(0, 1, 2)
+    ```
+    - The last two columns agree in every row.
+
+    Circuit
+    ```
+       y ---|‾‾\
+            |    )o--- (yz)' ---|‾‾\
+       z ---|___/                |    )--- F
+                                 |___/
+       x ---|>o--- x' -----------+
+    ```
+    - One NAND, one inverter and one AND gate.
+    - Laws used: distributive, absorption `x + xy = x`, `1 + y = 1`, and both forms of De Morgan.
 
 15. **(খ) প্রমাণ করুন: $A \oplus B = AB + \bar{A}\bar{B}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073-1074 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) The statement to prove is
+    ```
+       A (+) B  =  AB + A'B'
+    ```
+    - This is `false as written`. The right-hand side is `XNOR`, not XOR. The correct identities are
+    ```
+       XOR  :  A (+) B      = A'B + AB'
+       XNOR : (A (+) B)'    = AB + A'B'
+    ```
+
+    Proof by truth table
+    ```
+    A  B | A (+) B | A'B + AB' | AB + A'B'
+    -----+---------+-----------+----------
+    0  0 |    0    |     0     |     1
+    0  1 |    1    |     1     |     0
+    1  0 |    1    |     1     |     0
+    1  1 |    0    |     0     |     1
+    ```
+    - Column 2 matches column 3, so `A (+) B = A'B + AB'`.
+    - Column 4 is the exact opposite of column 2, so `AB + A'B' = (A (+) B)'`, the XNOR.
+
+    Algebraic proof that AB + A'B' is the complement of XOR
+    ```
+       (A (+) B)'
+     = (A'B + AB')'
+     = (A'B)' . (AB')'                  De Morgan
+     = (A + B') . (A' + B)              De Morgan again
+     = AA' + AB + B'A' + B'B            distributive
+     = 0 + AB + A'B' + 0                since AA' = 0 and BB' = 0
+     = AB + A'B'                        proved
+    ```
+
+    Algebraic proof of the correct XOR identity
+    ```
+       A (+) B = A'B + AB'
+
+       Meaning : the output is 1 when the inputs differ.
+       A'B  is 1 when A = 0 and B = 1
+       AB'  is 1 when A = 1 and B = 0
+       Their sum covers exactly the two rows where A and B differ.
+    ```
+
+    Symbols
+    ```
+       A ---|\                       A ---|\
+            | ))--- A (+) B               | ))o-- (A (+) B)'
+       B ---|/                       B ---|/
+            XOR                           XNOR
+    ```
+
+    - If the question intends the statement as printed, the correct exam answer is to say that `AB + A'B'` is the `XNOR` (equivalence) function, and that XOR is `A'B + AB'`. XNOR is used in comparators, because it outputs 1 when the two bits are equal.
+
 16. **(ক) তিন চলকের De Morgan's উপপাদ্য দুইটি লিখুন এবং Truth table-এর সাহায্যে প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) De Morgan's theorems for three variables are
+    ```
+    Theorem 1 :  (A . B . C)' = A' + B' + C'
+    Theorem 2 :  (A + B + C)' = A' . B' . C'
+    ```
+    - The rule in words: `break the bar and change the operation` — AND becomes OR and OR becomes AND, and every variable is complemented.
+
+    Proof of Theorem 1 by truth table
+    ```
+    A  B  C | A.B.C | (A.B.C)' | A' | B' | C' | A'+B'+C'
+    --------+-------+----------+----+----+----+---------
+    0  0  0 |   0   |    1     | 1  | 1  | 1  |    1
+    0  0  1 |   0   |    1     | 1  | 1  | 0  |    1
+    0  1  0 |   0   |    1     | 1  | 0  | 1  |    1
+    0  1  1 |   0   |    1     | 1  | 0  | 0  |    1
+    1  0  0 |   0   |    1     | 0  | 1  | 1  |    1
+    1  0  1 |   0   |    1     | 0  | 1  | 0  |    1
+    1  1  0 |   0   |    1     | 0  | 0  | 1  |    1
+    1  1  1 |   1   |    0     | 0  | 0  | 0  |    0
+    ```
+    - The column `(A.B.C)'` and the column `A'+B'+C'` are identical in all eight rows, so Theorem 1 is proved.
+
+    Proof of Theorem 2 by truth table
+    ```
+    A  B  C | A+B+C | (A+B+C)' | A' | B' | C' | A'.B'.C'
+    --------+-------+----------+----+----+----+---------
+    0  0  0 |   0   |    1     | 1  | 1  | 1  |    1
+    0  0  1 |   1   |    0     | 1  | 1  | 0  |    0
+    0  1  0 |   1   |    0     | 1  | 0  | 1  |    0
+    0  1  1 |   1   |    0     | 1  | 0  | 0  |    0
+    1  0  0 |   1   |    0     | 0  | 1  | 1  |    0
+    1  0  1 |   1   |    0     | 0  | 1  | 0  |    0
+    1  1  0 |   1   |    0     | 0  | 0  | 1  |    0
+    1  1  1 |   1   |    0     | 0  | 0  | 0  |    0
+    ```
+    - Identical in all eight rows, so Theorem 2 is proved.
+
+    Gate interpretation
+    ```
+       3-input NAND  =  3-input OR with all inputs inverted
+
+       A ---|‾‾\               A ---|>o---|\
+       B ---|    )o--- (ABC)'      B ---|>o---| )--- A'+B'+C'
+       C ---|___/               C ---|>o---|/
+
+
+       3-input NOR   =  3-input AND with all inputs inverted
+
+       A ---|\                 A ---|>o---|‾‾\
+       B ---| )o--- (A+B+C)'   B ---|>o---|    )--- A'.B'.C'
+       C ---|/                 C ---|>o---|___/
+    ```
+
+    Example
+    ```
+       F = (A + B'C)'
+         = A' . (B'C)'                Theorem 2
+         = A' . (B + C')              Theorem 1
+         = A'B + A'C'
+    ```
+
+    - Importance: these theorems are the reason `NAND and NOR are universal gates`, and they let a two-level AND-OR circuit be converted into an all-NAND circuit without changing its structure.
 
 17. **Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
 
+    Answer: The expression is
+    ```
+       F = A'C + AB' + BC' + ABC
+    ```
+
+    Step 1 — expand every term into minterms
+    ```
+       A'C  = 001 , 011                  -> m1 , m3
+       AB'  = 100 , 101                  -> m4 , m5
+       BC'  = 010 , 110                  -> m2 , m6
+       ABC  = 111                        -> m7
+
+       F = Sigma m(1, 2, 3, 4, 5, 6, 7)
+    ```
+    - Every minterm except `m0 (000)` is present.
+
+    Step 2 — recognise the result
+    ```
+       F = 1 for every input except A = B = C = 0
+       F' = A'B'C'
+       F  = (A'B'C')' = A + B + C           De Morgan
+    ```
+
+    Step 3 — the same result algebraically
+    ```
+       F = A'C + AB' + BC' + ABC
+
+       AB' + ABC = A(B' + BC) = A(B' + C)   since X' + XY = X' + Y
+                 = AB' + AC
+
+       F = A'C + AC + AB' + BC'
+         = C(A' + A) + AB' + BC'
+         = C + AB' + BC'
+         = C + AB' + B                      since C + BC' = C + B
+         = C + B + A                        since B + AB' = B + A
+       F = A + B + C
+    ```
+
+    K-map check
+    ```
+       A\BC   00    01    11    10
+        0     0     1     1     1        m0  m1  m3  m2
+        1     1     1     1     1        m4  m5  m7  m6
+
+       Loop A : the whole row A = 1
+       Loop B : columns BC = 11 and 10 , both rows
+       Loop C : columns BC = 01 and 11 , both rows
+
+       F = A + B + C
+    ```
+
+    Final answer
+    ```
+       F = A + B + C
+    ```
+    - Nine literals have reduced to three, and four AND gates plus an OR gate become a single 3-input OR gate.
+
+    Circuit
+    ```
+       A ---|\
+       B ---| )--- F = A + B + C
+       C ---|/
+    ```
+
 18. **Construct a truth table for the following function: $(r \lor (q \land \neg p)) \land \neg(r \land (q \land \neg p))$ is the same as $r \oplus (q \land \neg p)$ where $\lor = \text{OR}, \land = \text{AND}, \neg = \text{NOT}, \oplus = \text{XOR}$** *[Combined 3 Banks Assistant Programmer 2018 compact it 1198 (ET: N/A)]*
 
+    Answer: The expression is
+    ```
+       ( r OR (q AND NOT p) )  AND  NOT( r AND (q AND NOT p) )
+    ```
+    - Let `t = q AND NOT p`, so the expression is `(r OR t) AND NOT(r AND t)`.
+    - That pattern — "at least one is true, but not both" — is the definition of `exclusive OR`. So the claim is that the expression equals `r XOR t`.
+
+    Truth table
+    ```
+    p  q  r | ¬p | t = q ^ ¬p | r v t | r ^ t | ¬(r ^ t) | (r v t) ^ ¬(r ^ t) | r (+) t
+    --------+----+------------+-------+-------+----------+--------------------+--------
+    0  0  0 | 1  |     0      |   0   |   0   |    1     |         0          |    0
+    0  0  1 | 1  |     0      |   1   |   0   |    1     |         1          |    1
+    0  1  0 | 1  |     1      |   1   |   0   |    1     |         1          |    1
+    0  1  1 | 1  |     1      |   1   |   1   |    0     |         0          |    0
+    1  0  0 | 0  |     0      |   0   |   0   |    1     |         0          |    0
+    1  0  1 | 0  |     0      |   1   |   0   |    1     |         1          |    1
+    1  1  0 | 0  |     0      |   0   |   0   |    1     |         0          |    0
+    1  1  1 | 0  |     0      |   1   |   0   |    1     |         1          |    1
+    ```
+    - The last two columns are identical in all eight rows, so the two expressions are equivalent.
+
+    Algebraic proof
+    ```
+       (r + t)(rt)'
+     = (r + t)(r' + t')                 De Morgan
+     = rr' + rt' + tr' + tt'            distributive
+     = 0 + rt' + r't + 0                since rr' = 0 and tt' = 0
+     = rt' + r't
+     = r (+) t                          the definition of XOR
+    ```
+
+    Substituting back
+    ```
+       t = q . p'
+
+       F = r (+) (q . p')
+         = r'(qp') + r(qp')'
+         = qp'r' + r(q' + p)
+         = p'qr' + q'r + pr
+    ```
+
+    Result as minterms in p, q, r
+    ```
+       F = Sigma m(1, 2, 5, 7)
+
+       m1 = 001 , m2 = 010 , m5 = 101 , m7 = 111
+    ```
+    - Matches the rows where the truth table gives 1.
+
+    - Point worth noting: `(X + Y)(XY)'` is one of the standard alternative forms of XOR, along with `X'Y + XY'` and `(X (+) Y) = (X' + Y')(X + Y)`. Recognising it saves the whole truth table in an exam.
+
 19. **Trouth table construction for $f(A,B,C,D) = (A+B) \oplus (CD)$** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+
+    Answer: The function is
+    ```
+       f(A, B, C, D) = (A + B) (+) (C . D)
+    ```
+    - Let `X = A + B` (an OR gate) and `Y = C . D` (an AND gate). Then `f = X (+) Y`, which is 1 when X and Y `differ`.
+
+    Truth table
+    ```
+    A  B  C  D | X = A+B | Y = CD | f = X (+) Y
+    -----------+---------+--------+------------
+    0  0  0  0 |    0    |   0    |     0
+    0  0  0  1 |    0    |   0    |     0
+    0  0  1  0 |    0    |   0    |     0
+    0  0  1  1 |    0    |   1    |     1
+    0  1  0  0 |    1    |   0    |     1
+    0  1  0  1 |    1    |   0    |     1
+    0  1  1  0 |    1    |   0    |     1
+    0  1  1  1 |    1    |   1    |     0
+    1  0  0  0 |    1    |   0    |     1
+    1  0  0  1 |    1    |   0    |     1
+    1  0  1  0 |    1    |   0    |     1
+    1  0  1  1 |    1    |   1    |     0
+    1  1  0  0 |    1    |   0    |     1
+    1  1  0  1 |    1    |   0    |     1
+    1  1  1  0 |    1    |   0    |     1
+    1  1  1  1 |    1    |   1    |     0
+    ```
+    ```
+       f = Sigma m(3, 4, 5, 6, 8, 9, 10, 12, 13, 14)
+    ```
+
+    Boolean expression
+    ```
+       f = X'Y + XY'
+         = (A + B)'(CD) + (A + B)(CD)'
+         = A'B'CD + (A + B)(C' + D')          De Morgan
+         = A'B'CD + AC' + AD' + BC' + BD'
+    ```
+
+    K-map check
+    ```
+       AB\CD   00    01    11    10
+        00     0     0     1     0        m0  m1  m3  m2
+        01     1     1     0     1        m4  m5  m7  m6
+        11     1     1     0     1        m12 m13 m15 m14
+        10     1     1     0     1        m8  m9  m11 m10
+
+       Loop AC'  : rows AB = 11, 10 , columns CD = 00, 01   -> AC'  (m8,m9,m12,m13)
+       Loop AD'  : rows AB = 11, 10 , columns CD = 00, 10   -> AD'  (m8,m10,m12,m14)
+       Loop BC'  : rows AB = 01, 11 , columns CD = 00, 01   -> BC'  (m4,m5,m12,m13)
+       Loop BD'  : rows AB = 01, 11 , columns CD = 00, 10   -> BD'  (m4,m6,m12,m14)
+       Cell m3   : A'B'CD , isolated
+    ```
+
+    Circuit
+    ```
+       A ---|\
+            | )--- X = A + B ---|\
+       B ---|/                  | ))--- f
+                                |
+       C ---|‾‾\                |
+            |    )--- Y = CD ---|/
+       D ---|__/
+    ```
+    - Three gates only: one OR, one AND and one XOR.
+
+    - Point worth noting: writing the function as `X (+) Y` first, then filling in X and Y column by column, is far faster and safer than expanding all sixteen minterms by hand. The output is 1 in ten of the sixteen rows, so the SOP form is long while the gate-level form stays tiny.
 
 ## Sequential Circuits (Latches & Flip-Flops) (17)
 
