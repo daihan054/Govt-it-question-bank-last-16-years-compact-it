@@ -287,6 +287,64 @@
 
 1. **What are the basic objectives of canny edge detection method?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
+   Answer: The `Canny edge detector`, given by John F. Canny in 1986, was designed by first writing down mathematically what an ideal edge detector should do, and then finding the operator that satisfies it. Those three requirements are its basic objectives.
+
+   1. Good detection (low error rate)
+   - Find `as many real edges as possible` while producing `as few false edges as possible`.
+   - A false edge is noise mistaken for an edge; a missed edge is a real boundary the detector failed to mark. Both must be minimised.
+   - Achieved by smoothing the image with a `Gaussian filter` first, which removes the noise that would otherwise be reported as edges.
+
+   2. Good localization
+   - The marked edge pixel should lie `as close as possible to the centre of the true edge` in the original image.
+   - Achieved by computing the gradient after smoothing, and then applying `non-maximum suppression`, which keeps only the pixel at the exact ridge of the gradient and deletes its neighbours.
+
+   3. Minimal response (single response per edge)
+   - A single real edge must be marked `only once`. The detector must not return a thick band or several parallel lines for one boundary.
+   - Achieved again by `non-maximum suppression`, which thins the gradient ridge down to a one-pixel-wide line.
+
+   The five steps that implement these objectives
+   ```mermaid
+   flowchart LR
+       A[Input image] --> B[1. Gaussian smoothing]
+       B --> C[2. Gradient magnitude<br/>and direction]
+       C --> D[3. Non-maximum<br/>suppression]
+       D --> E[4. Double thresholding]
+       E --> F[5. Hysteresis<br/>edge tracking]
+       F --> G[Final edges]
+   ```
+   ```
+      1. Smooth with a Gaussian of standard deviation sigma  -> removes noise
+      2. Compute the gradient, usually with Sobel masks
+
+            G = sqrt(Gx^2 + Gy^2)        theta = arctan(Gy / Gx)
+
+      3. Non-maximum suppression : along the gradient direction, keep a pixel
+         only if it is larger than both its neighbours; otherwise set it to 0
+      4. Double threshold : classify each surviving pixel
+
+            G > T(high)              -> strong edge, definitely keep
+            T(low) < G < T(high)     -> weak edge, keep only if connected
+            G < T(low)               -> discard
+
+      5. Hysteresis : keep a weak edge only if it touches a strong edge,
+         directly or through a chain of weak ones
+   ```
+
+   Why hysteresis matters
+   - A single threshold either breaks real edges into fragments (threshold too high) or lets noise through (too low). Using two thresholds with connectivity gets both: strong evidence starts an edge, and weaker evidence is trusted only where it continues one.
+   - The usual ratio is `T(high) : T(low) = 2:1 or 3:1`.
+
+   Advantages and cost
+   ```
+      Advantages : accurate localisation, one-pixel-thin edges, strong noise
+                   immunity, adjustable through sigma and the two thresholds
+      Cost       : slower and more complex than Sobel or Prewitt;
+                   results depend on choosing sigma and the thresholds well
+   ```
+   - Choosing `sigma` is a trade-off: a large sigma removes more noise but blurs and displaces the edges; a small sigma keeps fine detail but lets noise through.
+
+   - In short: Canny's three objectives are `detect every real edge and nothing else`, `mark it in the right place`, and `mark it exactly once` — and the five processing steps above exist purely to satisfy them.
+
 ## Morphological Operations (1)
 
 1. **Define: (i) Erosion and Dilation; (ii) Opening and Closing.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
