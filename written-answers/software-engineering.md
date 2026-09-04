@@ -11175,6 +11175,103 @@
    * **c) Open Source and Modification: Buy and small modifications cost 30 lac, for large modifications cost 50 lac. Possibility is 80% for large.**
    **What way you choose and why? Explain with calculation.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 292 (ET: BUET)]*
 
+   Answer: This is a `decision tree` problem. The option with the `lowest expected cost` is chosen, and the expected cost of a branch is the sum of each outcome multiplied by its probability.
+
+   The decision tree
+   ```
+                                       +---- 50 lac (certain)
+                           (i) BUY ----+     EV = 50 lac
+                             |
+                             |                   0.30
+                             |               +--------- easy    40 lac
+          CHOOSE ------ (ii) BUILD ---------+
+                             |               +--------- hard    50 lac
+                             |                   0.70
+                             |                   EV = 47 lac
+                             |
+                             |                   0.20
+                             |               +--------- small mod 30 lac
+                   (iii) OPEN SOURCE --------+
+                                             +--------- large mod 50 lac
+                                                 0.80
+                                                 EV = 46 lac
+   ```
+
+   Option (i) — Buy
+   ```
+      Cost = 50 lac , with certainty (probability 1.0)
+
+      Expected cost = 50 lac
+   ```
+
+   Option (ii) — Build
+   ```
+      Easy process : 40 lac , probability = 30 % = 0.30
+      Hard process : 50 lac , probability = 100 - 30 = 70 % = 0.70
+
+      Expected cost = (0.30 * 40) + (0.70 * 50)
+
+                    = 12 + 35
+
+                    = 47 lac
+   ```
+
+   Option (iii) — Open source and modification
+   ```
+      Large modification : 50 lac , probability = 80 % = 0.80
+      Small modification : 30 lac , probability = 100 - 80 = 20 % = 0.20
+
+      Expected cost = (0.80 * 50) + (0.20 * 30)
+
+                    = 40 + 6
+
+                    = 46 lac
+   ```
+
+   Comparison
+   ```
+      +--------------------------------+------------------+
+      | Option                         | Expected cost    |
+      +--------------------------------+------------------+
+      | (i)   Buy                      |     50 lac       |
+      | (ii)  Build                    |     47 lac       |
+      | (iii) Open source + modify     |     46 lac  <--  |
+      +--------------------------------+------------------+
+   ```
+
+   Decision
+   ```
+      CHOOSE OPTION (iii) - OPEN SOURCE AND MODIFICATION
+
+      It has the LOWEST EXPECTED COST : 46 lac , which is 1 lac less
+      than building and 4 lac less than buying.
+   ```
+
+   Points to state alongside the calculation
+   ```
+      1. The margin is NARROW. 46 against 47 lac is a 2 per cent
+         difference - well inside the error of any software
+         estimate. So the numbers alone should not decide it.
+
+      2. RISK differs between the options.
+           BUY is CERTAIN at 50 lac - no variance at all.
+           BUILD ranges 40 to 50 lac.
+           OPEN SOURCE ranges 30 to 50 lac - the widest spread.
+         A risk-averse CEO facing a fixed budget might prefer the
+         certainty of BUY despite its higher expected cost.
+
+      3. NON-COST FACTORS not in the tree :
+           LICENCE terms of the open source ERP - GPL obligations
+                may be unacceptable for a commercial product
+           SUPPORT and maintenance cost after year one
+           TIME TO MARKET - buying is fastest
+           FIT to requirements - a bought ERP may not match the
+                business, and BUILDING gives the exact fit
+           IN-HOUSE SKILL to modify a large open source codebase
+           VENDOR LOCK-IN if bought
+   ```
+   - The answer to give: `option (iii), open source with modification, on expected cost` — while noting that the 1 lac margin over building is not decisive, and that licence terms, support and in-house capability should be checked before committing.
+
 2. **Given the following values, compute function point when all complexity adjustment factor (CAF) and weighting factors are average.**
    * **User Input = 50**
    * **User Output = 40**
@@ -11182,9 +11279,344 @@
    * **User Files = 6**
    * **External Interface = 4** *[Combined Bank Assistant Programmer 09.06.2023 compact it 492 (ET: N/A)]*
 
+   Answer: Given
+   ```
+      User Input          = 50
+      User Output         = 40
+      User Inquiries      = 35
+      User Files          = 6
+      External Interface  = 4
+
+      All weighting factors are AVERAGE.
+      All complexity adjustment factors are AVERAGE.
+   ```
+
+   Step 1 — the average weighting factors
+   ```
+      +----------------------------+--------+---------+--------+
+      | Function type              | Simple | AVERAGE | Complex|
+      +----------------------------+--------+---------+--------+
+      | External Input   (EI)      |   3    |    4    |   6    |
+      | External Output  (EO)      |   4    |    5    |   7    |
+      | External Inquiry (EQ)      |   3    |    4    |   6    |
+      | Internal Logical File(ILF) |   7    |   10    |  15    |
+      | External Interface   (EIF) |   5    |    7    |  10    |
+      +----------------------------+--------+---------+--------+
+   ```
+
+   Step 2 — Unadjusted Function Points (UFP)
+   ```
+      UFP = SUM ( count * weight )
+
+      +-------------------+-------+---------+------------------+
+      | Function type     | Count | Weight  | Count * Weight   |
+      +-------------------+-------+---------+------------------+
+      | User Input        |  50   |    4    |  50 * 4  = 200   |
+      | User Output       |  40   |    5    |  40 * 5  = 200   |
+      | User Inquiries    |  35   |    4    |  35 * 4  = 140   |
+      | User Files        |   6   |   10    |   6 * 10 =  60   |
+      | External Interface|   4   |    7    |   4 * 7  =  28   |
+      +-------------------+-------+---------+------------------+
+      |                       UFP (total)   =         628      |
+      +-------------------------------------+------------------+
+   ```
+
+   Step 3 — Complexity Adjustment Factor (CAF)
+   ```
+      There are 14 general system characteristics (Fi), each rated
+      from 0 to 5 :
+
+           0 = no influence     3 = AVERAGE
+           1 = incidental       4 = significant
+           2 = moderate         5 = essential
+
+      All are AVERAGE, so every Fi = 3.
+
+      Sum of Fi = 14 * 3 = 42
+
+      CAF = 0.65 + ( 0.01 * sum of Fi )
+
+          = 0.65 + ( 0.01 * 42 )
+
+          = 0.65 + 0.42
+
+          = 1.07
+   ```
+
+   Step 4 — Function Points
+   ```
+      FP = UFP * CAF
+
+         = 628 * 1.07
+
+         = 671.96
+
+         = 672     (rounded)
+   ```
+
+   Answer
+   ```
+      Unadjusted Function Points , UFP = 628
+      Complexity Adjustment Factor, CAF = 1.07
+      FUNCTION POINTS , FP = 671.96 , approximately 672
+   ```
+
+   Notes worth adding
+   ```
+      THE RANGE OF CAF
+           All Fi = 0  ->  CAF = 0.65   (minimum)
+           All Fi = 5  ->  CAF = 0.65 + 0.70 = 1.35   (maximum)
+           So the adjustment can only move the estimate by about
+           +/- 35 per cent.
+
+      WHY FUNCTION POINTS AT ALL
+           They measure the SIZE of the FUNCTIONALITY delivered, not
+           the lines of code. So they can be estimated from the SRS,
+           BEFORE any code exists - which LOC cannot - and they do
+           not depend on the programming language.
+
+      CONVERTING TO EFFORT
+           LOC = FP * (lines per FP for the language)
+                 e.g. about 53 for Java , 128 for C
+           Effort is then estimated from LOC using COCOMO, or
+           directly from FP using the organisation's own
+           productivity figure in FP per person-month.
+   ```
+
 3. **Your company earn a contract to develop a system for a government agency. The project team is considering whether to build the system from scratch, or reuse existing partial-experience components, or buy an available software product and modify it to meet the requirement. As analyst you have made a decision tree as a figure.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 459 (ET: BUET)]*
 
+   Answer: The figure referred to was not captured with the question, so the standard textbook decision tree for the build-or-reuse-or-buy problem is worked below. The `method` is what the question tests, and it applies unchanged to whatever figures the actual tree carries.
+
+   The decision tree
+   ```
+                                                0.30
+                                           +---------- simple   380,000
+                          BUILD -----------+
+                            |              +---------- difficult 450,000
+                            |                  0.70
+                            |                  EV = 429,000
+                            |
+                            |                  0.40
+                            |              +---------- reusable  275,000
+                          REUSE -----------+
+                            |              |     0.60      0.30
+      SYSTEM ---------------+              +--- major ---+------ minor  310,000
+                            |                  changes   |
+                            |                            +------ extensive 490,000
+                            |                                0.70
+                            |                            EV(major) = 436,000
+                            |                            EV(reuse) = 371,600
+                            |
+                            |                  0.70
+                            |              +---------- minor changes  210,000
+                          BUY -------------+
+                            |              +---------- major changes  400,000
+                            |                  0.30
+                            |                  EV = 267,000
+                            |
+                            |                  0.60
+                            |              +---------- without changes 350,000
+                          CONTRACT --------+
+                                           +---------- with changes    500,000
+                                               0.40
+                                               EV = 410,000
+   ```
+
+   The rule
+   ```
+      EXPECTED VALUE of a path
+           = SUM over outcomes of  ( probability * cost )
+
+      Work from the RIGHT of the tree to the LEFT. Fold each chance
+      node into a single expected value, then compare the decision
+      branches. Choose the LOWEST expected cost.
+   ```
+
+   Path 1 — Build
+   ```
+      EV = (0.30 * 380,000) + (0.70 * 450,000)
+
+         = 114,000 + 315,000
+
+         = 429,000
+   ```
+
+   Path 2 — Reuse
+   ```
+      First fold the INNER chance node - "major changes" :
+
+      EV(major changes) = (0.30 * 310,000) + (0.70 * 490,000)
+                        = 93,000 + 343,000
+                        = 436,000
+
+      Now the outer node :
+
+      EV(reuse) = (0.40 * 275,000) + (0.60 * 436,000)
+                = 110,000 + 261,600
+                = 371,600
+   ```
+
+   Path 3 — Buy
+   ```
+      EV = (0.70 * 210,000) + (0.30 * 400,000)
+
+         = 147,000 + 120,000
+
+         = 267,000
+   ```
+
+   Path 4 — Contract out
+   ```
+      EV = (0.60 * 350,000) + (0.40 * 500,000)
+
+         = 210,000 + 200,000
+
+         = 410,000
+   ```
+
+   Comparison and decision
+   ```
+      +----------------+--------------------+
+      | Option         | Expected cost      |
+      +----------------+--------------------+
+      | Build          |      429,000       |
+      | Reuse          |      371,600       |
+      | BUY            |      267,000  <--  |
+      | Contract       |      410,000       |
+      +----------------+--------------------+
+
+      DECISION : BUY the available product and modify it - the
+      lowest expected cost at 267,000.
+   ```
+
+   What the expected value does NOT capture, and must be stated
+   ```
+      1. RISK / VARIANCE
+           Expected value treats a certain 267,000 and a gamble
+           averaging 267,000 as identical. They are not. Compare the
+           SPREAD as well :
+                Buy   ranges 210,000 to 400,000
+                Build ranges 380,000 to 450,000 - higher, but
+                      NARROWER
+           An organisation with a fixed budget may prefer the
+           narrower spread.
+
+      2. NON-FINANCIAL FACTORS
+           FIT to the requirement - building gives an exact fit
+           TIME TO MARKET - buying is fastest
+           VENDOR LOCK-IN and long-term support cost
+           LICENCE terms
+           IN-HOUSE CAPABILITY built by developing it yourself
+           For a GOVERNMENT AGENCY : data sovereignty, procurement
+                rules, and long-term maintainability may outweigh
+                the cost difference entirely.
+
+      3. THE PROBABILITIES ARE ESTIMATES
+           They come from expert judgement, not measurement. A
+           SENSITIVITY ANALYSIS - recomputing with the probabilities
+           moved by 10 per cent - shows whether the decision is
+           robust or balanced on a knife edge.
+   ```
+   - The answer to give in an exam: state the expected-value calculation for each branch, name the lowest as the recommendation, and then add the qualification that `expected value ignores risk and non-financial factors`, which for a government contract may be decisive.
+
 4. **Which factors are to be consider as software pricing?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
+
+   Answer: Software pricing is not the same as software costing. `Cost` is what it takes to build; `price` is what the customer is charged, and it is set by market and strategic factors as well as by cost.
+   ```
+      PRICE = COST + PROFIT + adjustments for market, risk and
+              strategy
+   ```
+
+   Development cost factors
+   ```
+      EFFORT           person-months of development, testing,
+           analysis and documentation - usually the largest single
+           component
+      SALARY and OVERHEAD   staff cost plus office, electricity,
+           equipment, administration
+      HARDWARE and SOFTWARE tools, licences, servers, test
+           environments
+      TRAINING         of the development team
+      TRAVEL and communication
+      SUBCONTRACTING   any work bought in
+   ```
+
+   Project factors
+   ```
+      SIZE and COMPLEXITY   estimated in function points or KLOC
+      REQUIRED RELIABILITY  a banking system costs far more per
+           function than a website, because the testing and review
+           burden is higher
+      SCHEDULE PRESSURE     compressing a schedule RAISES cost more
+           than proportionally - adding people to a late project
+           makes it later
+      TECHNOLOGY            an unfamiliar platform costs more
+      REUSE                 existing components lower the cost
+   ```
+
+   Risk and contingency
+   ```
+      REQUIREMENT VOLATILITY  unclear or changing requirements
+           justify a contingency margin
+      TECHNICAL RISK          unproven technology
+      CONTRACT TYPE
+           FIXED PRICE - the developer carries the risk, so the
+                price must include a margin for it
+           TIME AND MATERIALS - the customer carries the risk, so
+                the rate can be lower
+      PENALTY CLAUSES for late delivery must be priced in
+   ```
+
+   Market and business factors — where pricing differs from costing
+   ```
+      COMPETITION        what competitors charge for the same thing
+      MARKET OPPORTUNITY a company may price BELOW cost to enter a
+           new market, or to win a first reference customer,
+           expecting to profit on later contracts
+      CUSTOMER'S ABILITY and WILLINGNESS TO PAY
+      CONTRACTUAL TERMS  a customer may accept a lower price in
+           return for the right to reuse the software
+      COST-PLUS PRICING  cost plus an agreed percentage - common in
+           government contracts
+      VALUE-BASED PRICING  priced by the VALUE to the customer, not
+           the cost to build. A system saving a bank 10 crore a year
+           can be priced far above its build cost.
+   ```
+
+   Lifetime and post-delivery factors
+   ```
+      MAINTENANCE and SUPPORT - 60 to 80 per cent of lifetime cost,
+           and often the real source of profit
+      ANNUAL MAINTENANCE CONTRACT , typically 15 to 20 per cent of
+           the licence value per year
+      UPGRADES and future versions
+      SLA level - 24x7 support costs far more than office hours
+      HOSTING and infrastructure, for a cloud product
+   ```
+
+   Licensing model
+   ```
+      PERPETUAL LICENCE     one payment, plus annual maintenance
+      SUBSCRIPTION / SaaS   monthly or yearly per user
+      PER USER , PER CORE , PER SITE , or ENTERPRISE-WIDE
+      FREEMIUM              free basic version, paid features
+      OPEN SOURCE + SUPPORT the software is free, the support is
+           charged
+   ```
+
+   Legal, tax and local factors
+   ```
+      VAT and income tax , customs duty on imported software
+      currency fluctuation on an export contract
+      regulatory compliance cost - Bangladesh Bank, NBR
+      INTELLECTUAL PROPERTY : does the customer own the code, or
+           licence it ? Transferring ownership commands a higher
+           price
+      SOURCE-CODE ESCROW and warranty obligations
+   ```
+
+   - The point that distinguishes a good answer: `price is not a function of cost alone`. Two projects with the same development cost can be priced very differently — one priced low to win a strategic customer, the other priced high because it saves the customer far more than it costs. Cost sets the `floor`; the market and the value to the customer set the `ceiling`.
+   - The practical warning: pricing below cost to win a contract, then relying on `change requests` to recover the loss, is a common and damaging practice. It is why fixed-price contracts must include a `clear scope` and a `formal change-control process` — without them the developer absorbs every change and the project fails commercially even when it succeeds technically.
 
 ## IT Governance, Audit & Risk Management (4)
 
