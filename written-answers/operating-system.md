@@ -14492,8 +14492,399 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 1. Two independent applications running concurrently attempt to update the same file located at a same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution. [BSCCPL AME 21-08-2026 (BUET)]
 
+   Answer: The consistency problem
+   - This is a `race condition` leading to a `lost update`. Two applications read the same file, each modifies its own copy, and each writes back. The second write overwrites the first, so one update disappears with no error reported.
+   ```
+      File holds the value 100.
+
+      t1  App A reads   100
+      t2  App B reads   100
+      t3  App A writes  100 + 50 = 150
+      t4  App B writes  100 + 30 = 130       <- A's update is LOST
+
+      Correct result should have been 180.
+   ```
+   - The related problems that can occur with the same file are:
+   ```
+      LOST UPDATE        one writer's change is silently overwritten
+      DIRTY READ         a reader sees a half-written file
+      INCONSISTENT READ  a reader gets part of the old data and part of
+                         the new, so the file is internally inconsistent
+      TORN WRITE         two writers interleave and the file is left
+                         corrupt, matching neither version
+   ```
+   - The root cause: `read - modify - write` is not `atomic`. The file is a `shared resource`, and the section of code that touches it is a `critical section`. What is required is `mutual exclusion` — only one application inside the critical section at a time.
+
+   Synchronisation techniques that solve it
+
+   (a) File locking — the right answer here
+   ```
+      The two applications are SEPARATE PROCESSES, possibly written in
+      different languages and started independently. They share no
+      memory, so an in-process mutex is useless. The lock must live
+      where BOTH can see it - in the FILE SYSTEM, enforced by the
+      operating system.
+
+      POSIX / Linux :  flock(fd, LOCK_EX)     or  fcntl(F_SETLKW)
+      Windows       :  LockFileEx()
+
+      Shared (read) lock    : many readers together , no writer
+      Exclusive (write) lock: one writer , no readers
+   ```
+   ```
+      App A                        App B
+      -----                        -----
+      acquire EXCLUSIVE lock       acquire EXCLUSIVE lock -> BLOCKS
+      read file                            (waits)
+      modify
+      write file
+      release lock                 -> acquires the lock
+                                   read file  (now sees 150)
+                                   modify , write 180
+                                   release lock
+   ```
+
+   (b) Mutex or binary semaphore, for threads of one process
+   ```
+      wait(S)                  // P operation , S = 1 initially
+         critical section      // read - modify - write the file
+      signal(V)                // V operation
+
+      Correct for THREADS sharing memory. It does NOT work across
+      independent processes, which is why file locking is preferred
+      in this case.
+   ```
+
+   (c) Named semaphore or lock file, across processes
+   ```
+      A NAMED semaphore (sem_open) is visible by name to unrelated
+      processes and works across them.
+
+      A LOCK FILE created with O_CREAT | O_EXCL is atomic - the second
+      process's create FAILS, telling it the resource is taken. It is
+      simple but leaves a STALE LOCK if the holder crashes, so a
+      timeout or a PID check is needed.
+   ```
+
+   (d) Atomic write by rename
+   ```
+      Write to a temporary file, then rename() it over the original.
+      rename() is ATOMIC in POSIX, so a reader always sees either the
+      complete OLD file or the complete NEW one - never a half-written
+      one. This removes DIRTY READS, but on its own it does NOT stop
+      LOST UPDATES.
+   ```
+
+   Justification — the most appropriate solution
+   ```
+      Use an OS-LEVEL ADVISORY FILE LOCK (flock / fcntl / LockFileEx)
+      around the whole read-modify-write, and write through a
+      TEMPORARY FILE plus rename().
+
+      Why :
+      1. The two applications are independent processes with no shared
+         memory, so only a file-system-level lock is visible to both.
+      2. The KERNEL releases the lock automatically if a process
+         crashes - a plain lock file would stay stuck.
+      3. The lock covers the ENTIRE read-modify-write, so the update is
+         atomic and nothing is lost.
+      4. rename() guarantees no reader ever sees a partial file.
+      5. Readers can take a SHARED lock, so many may read at once while
+         a writer still gets exclusive access.
+   ```
+   - What must be avoided: locking only around the `write`. The read must be inside the same lock, or both processes will still read the same stale value and one update will be lost — exactly the original bug.
+   - If the data is genuinely important, the better answer is to stop using a plain file and use a `database`, which provides `ACID transactions` and row-level locking designed for exactly this problem.
+
 2. **What is Semaphore? How would you improve performance when using semaphores?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 504 (ET: N/A)]*
+
+   Answer: What a semaphore is
+   - A `semaphore` is an integer variable shared by processes, used to control access to a shared resource. It is changed only by two `atomic` operations, so no two processes can update it at the same time.
+   ```
+      wait(S)   or P(S)          signal(S)  or V(S)
+      ------------------          ------------------
+      while (S <= 0)              S = S + 1
+          ;      // wait
+      S = S - 1
+   ```
+   - `wait` is used before entering the critical section and `signal` after leaving it. Being `atomic` is the whole point — if two processes could decrement `S` at once, the semaphore itself would have a race condition.
+
+   Two kinds
+   ```
+      BINARY SEMAPHORE (mutex)   S = 0 or 1
+           Only ONE process in the critical section at a time.
+           Used for MUTUAL EXCLUSION.
+
+      COUNTING SEMAPHORE         S = 0 , 1 , 2 , ... N
+           Up to N processes may hold the resource together.
+           Used when there are N identical instances - say 3 printers,
+           so S starts at 3.
+   ```
+
+   Example — the classic use
+   ```
+      semaphore mutex = 1;
+
+      Process Pi :
+           wait(mutex);
+                critical section        // read - modify - write
+           signal(mutex);
+                remainder section
+
+      The second process to call wait() finds mutex = 0 and BLOCKS
+      until the first calls signal().
+   ```
+
+   How performance is improved when using semaphores
+
+   (a) Replace busy waiting with block and wake up
+   ```
+      The naive implementation SPINS :
+           while (S <= 0) ;      <- burns the CPU doing nothing
+      This is a SPINLOCK, and it wastes a whole time slice.
+
+      The efficient implementation keeps a WAITING QUEUE :
+
+           wait(S)   : S--;  if (S < 0) { add this process to S.queue;
+                                          block(); }
+           signal(S) : S++;  if (S <= 0) { remove P from S.queue;
+                                           wakeup(P); }
+
+      A blocked process consumes NO CPU. A negative S now tells you
+      how many processes are waiting.
+
+      Spinlocks are still better for VERY short critical sections on a
+      multiprocessor, where blocking would cost more than spinning.
+   ```
+
+   (b) Keep the critical section short
+   - Do the slow work — file I/O, computation, logging — `outside` the lock, and hold the semaphore only for the few instructions that actually touch the shared data. A long critical section serialises the whole program.
+
+   (c) Use finer-grained locking
+   - One semaphore per record or per bucket instead of one for the entire table. Independent operations then proceed in parallel instead of queueing behind a single global lock.
+
+   (d) Use a reader-writer lock where reads dominate
+   ```
+      Many readers may share the data ; only a writer needs exclusive
+      access. A plain mutex would serialise the readers too, which is
+      pure waste when most operations are reads.
+   ```
+
+   (e) Use a counting semaphore rather than a binary one where the resource has several instances
+   - With 3 printers, a binary semaphore lets only 1 job print. `S = 3` lets 3 run together.
+
+   (f) Avoid deadlock and priority inversion
+   ```
+      DEADLOCK : always acquire semaphores in the SAME ORDER in every
+           process. Two processes taking S and Q in opposite orders
+           deadlock at once.
+
+      PRIORITY INVERSION : a low-priority process holding a semaphore
+           blocks a high-priority one. Fixed by PRIORITY INHERITANCE -
+           the holder temporarily inherits the waiter's priority.
+
+      STARVATION : release the queue in FIFO order, not LIFO.
+   ```
+
+   (g) Prefer a lock-free operation where one exists
+   - For a simple counter an `atomic increment` instruction is far faster than a semaphore, because it needs no system call and no context switch at all.
 
 3. **(গ) Process Synchronization এর ক্ষেত্রে Race condition ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.) What a race condition is
+   - A `race condition` happens when two or more processes access shared data at the same time, and the final result depends on the `order in which they happen to run`. The same program can give a different answer on every run.
+
+   The classic example
+   ```
+      Shared variable :  count = 5
+      Both processes execute  count = count + 1
+
+      In machine code this is THREE steps, not one :
+
+           load   register , count
+           add    register , 1
+           store  count , register
+
+      INTERLEAVING THAT WORKS
+      ---------------------------------------------
+      P1 : load  R1 <- 5
+      P1 : add   R1 = 6
+      P1 : store count = 6
+      P2 : load  R2 <- 6
+      P2 : add   R2 = 7
+      P2 : store count = 7        CORRECT
+
+      INTERLEAVING THAT FAILS
+      ---------------------------------------------
+      P1 : load  R1 <- 5
+      P2 : load  R2 <- 5          <- reads the OLD value
+      P1 : add   R1 = 6
+      P2 : add   R2 = 6
+      P1 : store count = 6
+      P2 : store count = 6        WRONG - should be 7
+                                     ONE INCREMENT IS LOST
+   ```
+   - The result was correct in one case and wrong in the other, with the `same code and the same data`. Only the timing changed. That is what makes race conditions so hard to find — the bug may not repeat.
+
+   The banking example
+   ```
+      Balance = 1000. Two ATMs withdraw 500 each at the same moment.
+
+      ATM 1 reads 1000        ATM 2 reads 1000
+      ATM 1 : 1000-500 = 500  ATM 2 : 1000-500 = 500
+      ATM 1 writes 500        ATM 2 writes 500
+
+      1000 was withdrawn but the balance shows 500.
+      The bank has LOST 500.
+   ```
+
+   Why it happens
+   ```
+      1. SHARED DATA - two processes touch the same variable or file.
+      2. AT LEAST ONE WRITES - two readers can never race.
+      3. NO SYNCHRONISATION - the read-modify-write is not ATOMIC, so
+         the OS can preempt in the middle of it.
+   ```
+
+   The critical section
+   ```
+      The piece of code that touches the shared data is the CRITICAL
+      SECTION. The cure is MUTUAL EXCLUSION - only one process inside
+      at a time.
+
+           entry section        // wait(mutex)
+                CRITICAL SECTION
+           exit section         // signal(mutex)
+                remainder section
+   ```
+
+   How it is prevented
+   ```
+      MUTEX / BINARY SEMAPHORE
+           wait(mutex); count = count + 1; signal(mutex);
+           The second process blocks until the first has finished.
+
+      ATOMIC INSTRUCTION
+           Test-and-set , compare-and-swap , atomic increment - the
+           hardware guarantees the whole operation is indivisible.
+
+      PETERSON'S ALGORITHM
+           A software solution for two processes, using flag[] and
+           turn. Correct in theory, but modern CPUs reorder memory
+           accesses, so it needs memory barriers to work in practice.
+
+      MONITOR
+           A high-level construct that locks automatically on entry -
+           used in Java as the synchronized keyword.
+
+      DISABLE INTERRUPTS
+           Works only on a single processor, and only for kernel code.
+   ```
+   - Two distinctions worth making. A `race condition` gives a `wrong answer`, while a `deadlock` gives `no answer at all` — the processes simply stop. And two processes reading the same value never race; a race needs at least one `writer`.
+
 4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) What the critical section problem is
+   - A `critical section` is the part of a program that accesses `shared data` — a variable, a file, a table. The `critical section problem` is designing a protocol that lets several processes share that data without corrupting it.
+   ```
+      Structure of a process :
+
+           do {
+                ENTRY SECTION          // ask permission
+                     CRITICAL SECTION  // touch the shared data
+                EXIT SECTION           // release permission
+                     REMAINDER SECTION // other work
+           } while (true);
+   ```
+   - The problem exists because a `read - modify - write` is not atomic. If two processes interleave inside it, an update is lost:
+   ```
+      count = 5 , both processes do  count = count + 1
+
+      P1 loads 5 , P2 loads 5 , both compute 6 , both store 6.
+      Result is 6, but it should be 7 - ONE UPDATE IS LOST.
+   ```
+
+   The three requirements a solution must satisfy
+   ```
+      1. MUTUAL EXCLUSION
+           If one process is inside its critical section, no other
+           process may be inside its own.
+
+      2. PROGRESS
+           If no process is in its critical section and some want to
+           enter, only those wanting to enter may decide who goes next,
+           and the decision cannot be postponed indefinitely. A process
+           in its REMAINDER section must not block others.
+
+      3. BOUNDED WAITING
+           There is a limit on how many times other processes may enter
+           after a process has made its request. This is what prevents
+           STARVATION.
+   ```
+   - A solution that gives mutual exclusion but not progress or bounded waiting is `not` a valid solution — this is the point examiners test.
+
+   How it is solved
+
+   (a) Peterson's algorithm — a software solution for two processes
+   ```
+      shared : boolean flag[2] = {false, false};
+               int     turn;
+
+      Process Pi (j is the other process) :
+
+           flag[i] = true;        // I want to enter
+           turn    = j;           // but you go first
+           while (flag[j] && turn == j)
+                ;                 // wait
+                CRITICAL SECTION
+           flag[i] = false;
+                REMAINDER SECTION
+   ```
+   - It satisfies all three requirements. Its weaknesses: it works for `two` processes only, it uses `busy waiting`, and on a modern CPU that reorders memory accesses it needs `memory barriers` to be correct.
+
+   (b) Hardware support — atomic instructions
+   ```
+      TEST-AND-SET , COMPARE-AND-SWAP , SWAP - the CPU performs the
+      whole read-modify-write as ONE indivisible operation.
+
+           while (test_and_set(&lock))
+                ;      // spin
+                CRITICAL SECTION
+           lock = false;
+
+      Simple and fast, but it BUSY WAITS and, in this plain form,
+      does not guarantee bounded waiting.
+   ```
+
+   (c) Mutex lock
+   ```
+      acquire(lock);
+           CRITICAL SECTION
+      release(lock);
+
+      The usual solution in application code. A blocking mutex puts
+      the waiter to sleep instead of spinning, so no CPU is wasted.
+   ```
+
+   (d) Semaphore
+   ```
+      semaphore mutex = 1;
+
+      wait(mutex);
+           CRITICAL SECTION
+      signal(mutex);
+
+      A COUNTING semaphore extends this to N instances of a resource,
+      which a mutex cannot express.
+   ```
+
+   (e) Monitor
+   ```
+      A high-level construct in which the lock is taken and released
+      AUTOMATICALLY on entry and exit, so the programmer cannot forget
+      the release. Java's  synchronized  keyword is a monitor.
+   ```
+
+   (f) Disabling interrupts
+   - Prevents any context switch during the critical section. It works only for `kernel` code on a `single processor`, and is unusable on a multicore machine, so it is never a general answer.
+
+   - Which to use in practice: a `mutex` or a `semaphore` for ordinary application code, a `spinlock` only for very short critical sections in the kernel, and a `monitor` where the language provides one. Whichever is chosen, the critical section must be kept `short`, and locks must always be acquired in the `same order` to avoid deadlock.
