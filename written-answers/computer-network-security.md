@@ -3709,35 +3709,478 @@
 
 1. Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
+   Answer:
+
+   (a) Definition of MFA
+   - Multi-Factor Authentication requires a user to present **two or more independent credentials from DIFFERENT categories** before access is granted.
+   - The point is independence: compromising one factor must not compromise the other. Two passwords are not MFA, because both come from the same category.
+
+   (b) The three globally recognised categories
+
+   **1. Something you KNOW (knowledge factor)**
+   - Password, PIN, security question answer, passphrase.
+   - Weakness: can be guessed, phished, shoulder-surfed or reused across sites.
+
+   **2. Something you HAVE (possession factor)**
+   - Mobile phone receiving an OTP, hardware token, smart card, security key (YubiKey), authenticator app generating a TOTP.
+   - Weakness: can be lost, stolen, or in the case of SMS, intercepted by SIM swap.
+
+   **3. Something you ARE (inherence factor)**
+   - Fingerprint, face recognition, iris scan, voice pattern, retina scan.
+   - Weakness: cannot be changed if compromised, and can produce false accept/reject errors.
+
+   Two further factors sometimes listed
+   - **Somewhere you are** (location) — GPS or IP geolocation, used for risk-based authentication.
+   - **Something you do** (behaviour) — typing rhythm, gait, signature dynamics.
+
+   Why MFA is mandatory in banking
+   - Passwords alone fail constantly through phishing, reuse and breach. MFA means a stolen password is not sufficient to take over an account.
+   - Bangladesh Bank's ICT Security Guideline and PCI DSS both require it for administrative and remote access.
+   - Typical banking implementation: password (know) + OTP to registered mobile (have), with fingerprint (are) for app login.
+
 2. **টু-ফ্যাক্টর অথেনটিকেশন এবং ডিজিটাল সিগনেচার দিয়ে ডেটার সুরক্ষা কীভাবে করা হয়?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+   Answer:
+
+   (a) How Two-Factor Authentication protects data
+   - It protects **ACCESS** to data by requiring two independent proofs of identity from different categories.
+   - Even if an attacker steals the password through phishing or a breach, they still lack the second factor — the physical phone or the fingerprint — so they cannot log in.
+   - It defeats the most common attack chain entirely: credential theft followed by account takeover.
+   - In banking it also protects individual TRANSACTIONS, since an OTP is required per transfer, not just at login.
+
+   Example
+   - A customer logs in with a password (something they know), then enters an OTP sent to their registered mobile (something they have). A stolen password alone achieves nothing.
+
+   (b) How Digital Signature protects data
+   - It protects the **DATA ITSELF**, providing three guarantees:
+   - **Integrity** — the document hash is signed, so any alteration, even a single character, breaks the verification.
+   - **Authentication** — only the holder of the private key could have produced the signature, proving who sent it.
+   - **Non-repudiation** — the signer cannot later deny signing, because nobody else holds that private key.
+
+   How it works
+   - Sign: `Signature = Encrypt(Hash(document), sender's private key)`
+   - Verify: decrypt the signature with the sender's public key, independently hash the received document, and compare.
+
+   (c) How they complement each other
+   - **2FA answers "who is accessing?"** — it controls entry.
+   - **Digital signature answers "is this data genuine and unaltered?"** — it protects the content and its origin.
+   - A secure system needs both: 2FA stops an impostor logging in, and a digital signature ensures that even an authorised user's instructions cannot be tampered with in transit or later denied.
 
 3. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: A digital signature is a cryptographic value attached to an electronic document that proves who created it and that it has not been altered since. It is created by hashing the document and encrypting that hash with the signer's private key.
+
+   How it works
+   ```mermaid
+   flowchart TD
+       M[Document] --> H[Hash function SHA-256]
+       H --> D[Message digest]
+       D --> E[Encrypt with SENDER'S PRIVATE key]
+       E --> S[Digital Signature]
+       S --> T[Send document + signature]
+       T --> V1[Receiver hashes document → Digest A]
+       T --> V2[Receiver decrypts signature with<br/>SENDER'S PUBLIC key → Digest B]
+       V1 --> C{A = B ?}
+       V2 --> C
+       C -->|Yes| OK[Valid]
+       C -->|No| NO[Invalid — tampered or forged]
+   ```
+
+   Effectiveness — the three guarantees it provides
+   - **Authentication** — proves the identity of the signer, since only their private key could produce that signature.
+   - **Integrity** — any change to the document produces a completely different hash (the avalanche effect), so tampering is detected immediately.
+   - **Non-repudiation** — the signer cannot deny having signed. This is legally the most valuable property, and it is what a scanned handwritten signature cannot provide.
+
+   Additional benefits
+   - **Speed** — signing and transmission take seconds instead of days by courier.
+   - **Cost saving** — no paper, printing, postage or physical archive.
+   - **Legal validity** — recognised under the **ICT Act 2006** in Bangladesh, administered by the Controller of Certifying Authorities.
+   - **Verifiability by anyone** holding the public key, with no need to contact the signer.
+
+   Where it is used
+   - SSL/TLS certificates securing every HTTPS site, signed software updates, e-GP and e-tendering, income tax and VAT returns, banking instructions, and blockchain transactions.
+
+   - Important distinction: a digital signature is a cryptographic construct that can be mathematically verified. An "electronic signature" such as a scanned image of a handwritten signature is neither unique nor verifiable, and can simply be copied onto another document.
+
 4. **(a) What is 2-factor authentication? Describe it with an example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)], [BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
+
+   Answer: Two-Factor Authentication (2FA) is a security process requiring exactly two DIFFERENT categories of credential before access is granted. It is the most common form of multi-factor authentication.
+
+   The three factor categories, of which 2FA uses two
+   - **Something you know** — password, PIN.
+   - **Something you have** — mobile phone, hardware token, smart card.
+   - **Something you are** — fingerprint, face, iris.
+
+   Critical rule
+   - The two factors must come from DIFFERENT categories. A password plus a security question is NOT 2FA — both are knowledge factors, and both can be phished in a single conversation.
+
+   Example — online banking transfer
+   - **Step 1** — the customer enters their username and password on the bank's website. *(Factor 1: something you know)*
+   - **Step 2** — the bank sends a 6-digit OTP to the customer's registered mobile number.
+   - **Step 3** — the customer enters that OTP. *(Factor 2: something you have — the phone)*
+   - **Step 4** — only after both succeed is the transfer executed.
+
+   Why this is effective
+   - An attacker who has phished the password still cannot log in, because they do not have the customer's physical phone.
+   - Conversely, someone who steals the phone still needs the password.
+
+   Other common implementations
+   - Gmail: password + Google Authenticator TOTP code.
+   - ATM: card (have) + PIN (know) — the oldest widely deployed 2FA.
+   - Corporate VPN: password + hardware token.
+   - Mobile banking app: PIN + fingerprint.
+
+   Weaknesses to note
+   - **SMS-based OTP is the weakest form** — vulnerable to SIM swap fraud and SS7 interception. An authenticator app or hardware security key is considerably stronger.
 
 5. **Write down the full form of LDAP?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
+   Answer: **LDAP — Lightweight Directory Access Protocol.**
+
+   - An application-layer protocol for accessing and maintaining distributed directory information services over a network.
+   - Default port **389**; **636** for LDAPS (LDAP over SSL/TLS).
+   - It stores information in a hierarchical tree structure called a Directory Information Tree (DIT), organised as `dc` (domain component), `ou` (organisational unit) and `cn` (common name).
+   - Example distinguished name: `cn=Rahim,ou=IT,dc=bank,dc=com`
+
+   Uses
+   - **Centralised authentication** — one username and password works across email, file servers, VPN and applications (single sign-on).
+   - **User and group management** — a single directory of employees, roles and permissions.
+   - **Address book services** for email clients.
+
+   Implementations
+   - **Microsoft Active Directory** (the most widely deployed), OpenLDAP, Apache Directory Server, Novell eDirectory.
+
 6. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 306 (ET: BIBM)]*
+
+   Answer: SMS and email OTP alone is no longer adequate — SMS OTP is vulnerable to SIM swap and SS7 interception, and email OTP falls with the email account. Without adding biometrics, security can be strengthened substantially in the following ways.
+
+   (a) Replace or supplement SMS OTP with stronger possession factors
+   - **Authenticator app TOTP** (Google Authenticator, Microsoft Authenticator) — generated on the device, never transmitted, so it cannot be intercepted.
+   - **Push-based approval** in the bank's own app, showing the transaction details, so the customer approves a specific transfer rather than typing a code that could be relayed by a phisher.
+   - **Hardware security key (FIDO2/WebAuthn)** — phishing-resistant by design, because the key verifies the site's domain before responding.
+   - **Transaction signing** — the OTP is derived from the transaction amount and beneficiary, so an intercepted code cannot authorise a different transfer.
+
+   (b) Device and session controls
+   - **Device binding / registration** — new devices require additional verification.
+   - **Device fingerprinting** to detect a login from an unrecognised device.
+   - **Short session timeouts** and automatic logout.
+   - **Certificate pinning** in the mobile app to defeat man-in-the-middle attacks.
+   - **Root/jailbreak detection** and refusal to run on a compromised device.
+
+   (c) Risk-based (adaptive) authentication
+   - Score each transaction on amount, beneficiary history, location, device, time of day and velocity.
+   - Low risk → proceed; medium risk → step-up authentication; high risk → block and call the customer.
+   - This is the single highest-value addition, because it applies friction only where it is warranted.
+
+   (d) Transaction-level controls
+   - **Beneficiary cooling-off period** — a newly added beneficiary cannot receive a large transfer for a defined number of hours. This alone defeats most account-takeover fraud.
+   - **Per-transaction and daily limits**, adjustable by the customer with verification.
+   - **Dual authorisation** for corporate accounts above a threshold.
+   - **Immediate notification** by SMS, email and push for every debit, so the customer can report fraud within minutes.
+
+   (e) Backend controls
+   - **Fraud detection engine** with machine learning on transaction patterns.
+   - **Velocity checks** — several transfers in quick succession trigger review.
+   - **WAF, rate limiting and bot detection** on the login endpoint.
+   - **Full audit logging** into a SIEM with 24/7 monitoring.
+
+   (f) Customer-side measures
+   - **Awareness campaigns** — the bank will never ask for an OTP; most fraud in Bangladesh succeeds through vishing, not technical compromise.
+   - **Self-service controls** — the customer can disable online transfer, set limits, or lock the card from the app.
+
+   - Priority if only three things could be added: risk-based authentication, beneficiary cooling-off, and push-based transaction approval replacing SMS OTP.
 
 7. **Difference between Digital signature and Digital certificate.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 527 (ET: MIST)]*
 
+   Answer:
+
+   | Point | Digital Signature | Digital Certificate |
+   |---|---|---|
+   | What it is | A cryptographic value attached to a document | An electronic document binding a public key to an identity |
+   | Purpose | Prove who signed a document and that it is unaltered | Prove that a public key genuinely belongs to a named entity |
+   | Created by | The sender, using their own private key | A Certificate Authority (CA) |
+   | Contains | An encrypted hash of the document | Owner name, public key, CA name, validity period, serial number, CA's signature |
+   | Standard | RSA, DSA, ECDSA | X.509 |
+   | Provides | Authentication, integrity, non-repudiation | Trust and identity binding |
+   | Validity | Tied to one specific document | Valid for a period, typically 1-3 years |
+   | Analogy | A signature on a letter | A passport proving who you are |
+
+   How they work together
+   - A digital signature is only meaningful if the verifier trusts the public key used to check it.
+   - The digital certificate is what supplies that trust: it is issued by a trusted CA and itself carries the CA's signature, confirming that this public key really belongs to the named person or server.
+   - In HTTPS: the server presents its **certificate** (proving identity), and uses its private key to create **signatures** during the TLS handshake (proving it actually holds the matching private key).
+
+   - In short: the certificate establishes WHO owns a key; the signature proves that the key's owner produced this particular document.
+
 8. **How to work two factor authentication?** *[Mongla Port Authority Assistant Programmer 2023 compact it 574 (ET: N/A)]*
+
+   Answer: 2FA works by requiring the user to prove identity twice, using two credentials from different categories.
+
+   Step-by-step working
+   ```mermaid
+   flowchart TD
+       A[User enters username + password] --> B{Password correct?}
+       B -->|No| X[Access denied]
+       B -->|Yes| C[Server generates a second challenge]
+       C --> D[OTP sent to registered mobile<br/>or TOTP generated in the app]
+       D --> E[User enters the code]
+       E --> F{Code correct and within time window?}
+       F -->|No| X
+       F -->|Yes| G[Access granted]
+   ```
+
+   - **Step 1** — the user submits the first factor, usually username and password (something they know).
+   - **Step 2** — the server verifies it. Failure ends the process here.
+   - **Step 3** — the server issues a second challenge tied to something the user HAS.
+   - **Step 4** — the code arrives by SMS or push, or is generated locally by an authenticator app.
+   - **Step 5** — the user enters it within a short validity window, usually 30 to 60 seconds.
+   - **Step 6** — the server verifies it and grants access.
+
+   How TOTP works internally
+   - The server and the app share a secret key, established once at setup by scanning a QR code.
+   - Both compute `HMAC(secret, current 30-second time window)` and take six digits from the result.
+   - Because both sides derive the same code independently from the shared secret and the clock, no code is ever transmitted — which is exactly why TOTP resists interception, unlike SMS.
+
+   Why it is secure
+   - An attacker with only the password cannot pass step 3; an attacker with only the phone cannot pass step 1.
+
+   Weakest form to avoid where possible
+   - **SMS OTP** — vulnerable to SIM swap fraud and SS7 network interception. Authenticator apps and FIDO2 hardware keys are considerably stronger.
 
 9. **(b) How do you define 2 factor authentication? Give example.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
 
+   Answer: Two-Factor Authentication is a security mechanism that grants access only after the user successfully presents two pieces of evidence from two DIFFERENT categories of authentication factor.
+
+   The three categories
+   - **Knowledge** — something you know: password, PIN.
+   - **Possession** — something you have: phone, token, smart card.
+   - **Inherence** — something you are: fingerprint, face, iris.
+
+   The defining rule
+   - The two factors must be from different categories. Password + security question is not 2FA, because both are knowledge and both fall to a single phishing call.
+
+   Examples
+
+   | System | Factor 1 (know) | Factor 2 |
+   |---|---|---|
+   | ATM withdrawal | PIN | The physical card (have) |
+   | Online banking | Password | OTP to registered mobile (have) |
+   | Gmail | Password | Authenticator app code (have) |
+   | Mobile banking app | App PIN | Fingerprint (are) |
+   | Corporate VPN | Domain password | Hardware token (have) |
+
+   Worked example — bKash transfer
+   - The customer opens the app and enters their PIN — factor 1, knowledge.
+   - The transaction is authorised only from the registered SIM on the registered device — factor 2, possession.
+   - Someone who learns the PIN cannot use it from their own phone; someone who steals the phone does not know the PIN.
+
+   Benefit
+   - Even if the password database of a service is breached entirely, accounts protected by 2FA remain secure, because the stolen passwords alone are not enough to log in.
+
 10. **What is digital signature? Where is it used?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
+
+    Answer:
+
+    (a) Digital signature
+    - A cryptographic value attached to an electronic document, created by hashing the document and encrypting that hash with the signer's private key. It proves who signed the document and that it has not been altered.
+    - It provides three guarantees: **authentication**, **integrity** and **non-repudiation**.
+
+    Working
+    - Sign: `Signature = Encrypt(Hash(document), private key)`
+    - Verify: decrypt the signature with the signer's public key, hash the received document independently, and compare the two.
+
+    (b) Where it is used
+
+    **Internet security**
+    - **SSL/TLS certificates** — every HTTPS website relies on digitally signed certificates.
+    - **Code signing** — Windows, Android and macOS verify the signature of software before installing, so malware cannot masquerade as a legitimate update.
+    - **Signed email** (S/MIME, PGP).
+
+    **Government and legal**
+    - **e-GP electronic tendering** in Bangladesh — bids are digitally signed.
+    - Income tax and VAT return filing.
+    - Digitally signed government circulars and notifications.
+    - Legally valid under the **ICT Act 2006**, with certificates issued by licensed Certifying Authorities under the CCA.
+
+    **Banking and finance**
+    - Payment instructions and fund transfer authorisation.
+    - Inter-bank messaging (SWIFT).
+    - Digitally signed statements and contracts.
+
+    **Other**
+    - **Blockchain** — every cryptocurrency transaction is a digital signature.
+    - E-passports and national ID chips.
+    - Document management systems and digital contracts.
 
 11. **What is a digital signature? Describe its role in digital security?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
+    Answer:
+
+    (a) Digital signature
+    - A mathematical scheme for verifying the authenticity and integrity of a digital message or document. The signer hashes the content and encrypts the hash with their private key; anyone can verify it with the corresponding public key.
+
+    (b) Role in digital security
+
+    **1. Authentication**
+    - Proves the identity of the sender. Since only the signer holds the private key, a valid signature could only have been produced by them. This prevents impersonation.
+
+    **2. Integrity**
+    - Any modification to the document, however small, produces an entirely different hash. The verification then fails, so tampering is detected with certainty rather than suspicion.
+
+    **3. Non-repudiation**
+    - The signer cannot later deny having signed, because nobody else possesses that private key. This is what makes digital contracts and payment instructions legally enforceable, and it is a property that no physical measure provides as strongly.
+
+    **4. Trust in an untrusted medium**
+    - The internet is an open network where anyone can claim to be anyone. Digital signatures, combined with certificates from a trusted CA, are what allow a browser to be confident it is really talking to the bank.
+
+    **5. Software supply chain protection**
+    - Code signing means an operating system will refuse to install an update whose signature does not verify, blocking a major malware distribution route.
+
+    **6. Enabling paperless processes**
+    - E-tendering, tax filing, digital contracts and e-governance all depend on it. Without non-repudiation, none of these could replace paper.
+
+    - Limitation worth stating: a digital signature proves who holds the private key, not who was physically at the keyboard. Protecting the private key — in an HSM, smart card or secure enclave — is therefore essential to the whole scheme.
+
 12. **What is Digital signature? Explain shortly.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
+
+    Answer: A digital signature is an electronic, cryptographic value attached to a document that proves who created it and that it has not been changed since signing.
+
+    How it works
+    - The sender computes a hash of the document, then encrypts that hash with their **private key**. The result is the signature.
+    - The receiver decrypts the signature with the sender's **public key** to recover the hash, hashes the received document independently, and compares the two values.
+    - A match confirms both the sender's identity and the document's integrity.
+
+    What it guarantees
+    - **Authentication** — confirms who signed.
+    - **Integrity** — confirms nothing was altered.
+    - **Non-repudiation** — the signer cannot deny signing.
+
+    Algorithms
+    - RSA, DSA, ECDSA, combined with a hash function such as SHA-256.
+
+    Uses
+    - SSL/TLS certificates, signed software updates, e-tendering, tax returns, banking instructions, and blockchain transactions.
+
+    - It is legally recognised in Bangladesh under the ICT Act 2006, and it is fundamentally different from a scanned image of a handwritten signature, which can simply be copied onto any document.
 
 13. **(খ) Authentication বলতে কি বুঝায়? Two Factor Authenticating কি? উদাহরণসহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
 
+    Answer:
+
+    (a) Authentication
+    - The process of verifying that a user, device or system genuinely is who or what it claims to be, before granting access.
+    - It answers the question **"Who are you?"**.
+
+    Related but distinct terms
+    - **Identification** — claiming an identity, such as entering a username.
+    - **Authentication** — proving that claim, such as entering the password.
+    - **Authorisation** — deciding what the authenticated user is permitted to do.
+    - **Accounting / auditing** — recording what they actually did.
+
+    Authentication methods
+    - Password and PIN, OTP, biometrics, smart cards, digital certificates, security tokens.
+
+    (b) Two-Factor Authentication
+    - Requiring two credentials from two DIFFERENT categories: something you know, something you have, something you are.
+    - The categories must differ — a password plus a security question is not 2FA, since both are knowledge factors.
+
+    Example — internet banking
+    - **Factor 1**: the customer enters their password (something they know).
+    - **Factor 2**: the bank sends a 6-digit OTP to the registered mobile, and the customer enters it (something they have).
+    - Access is granted only when both succeed.
+
+    Second example — ATM
+    - The card is something you have; the PIN is something you know. This is the oldest and most familiar 2FA in daily life.
+
+    Why it matters
+    - Passwords are routinely stolen through phishing, reuse and data breaches. 2FA ensures that a stolen password alone is worthless to the attacker.
+
 14. **(b) Write down the purpose of Certification Authority (CA) in Digital Signature.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
+
+    Answer: A **Certification Authority (CA)** is a trusted third party that issues, manages and revokes digital certificates, binding a public key to a verified identity.
+
+    Purposes of the CA
+
+    **1. Identity verification**
+    - Before issuing a certificate, the CA verifies that the applicant genuinely is the person or organisation they claim to be. This is the foundation of the whole trust model.
+
+    **2. Binding a public key to an identity**
+    - The core problem in public key cryptography is knowing that a public key really belongs to the claimed owner. Without a CA, an attacker could publish their own key labelled "Bangladesh Bank". The certificate, signed by the CA, is the proof of that binding.
+
+    **3. Issuing digital certificates**
+    - The CA issues an X.509 certificate containing the owner's name, public key, validity period, serial number and the CA's own digital signature.
+
+    **4. Signing certificates with its own private key**
+    - The CA's signature is what makes the certificate trustworthy. Verifiers already trust the CA's root certificate, which is pre-installed in browsers and operating systems.
+
+    **5. Maintaining a Certificate Revocation List (CRL) / OCSP**
+    - If a private key is compromised or an employee leaves, the certificate must be invalidated before its expiry date. The CA publishes revocation information so verifiers can check current status.
+
+    **6. Establishing the chain of trust**
+    - Root CA → Intermediate CA → End-entity certificate. A verifier follows this chain up to a root it already trusts.
+
+    **7. Key lifecycle management**
+    - Renewal, re-issuance and archival of certificates.
+
+    In Bangladesh
+    - Licensed Certifying Authorities operate under the **Controller of Certifying Authorities (CCA)**, established under the ICT Act 2006. Their certificates give digital signatures legal standing.
+
+    - Without a CA, digital signatures would still prove that the SAME key signed two documents, but not WHOSE key it is — which is precisely what makes a man-in-the-middle attack on unauthenticated key exchange possible.
 
 15. **১৮. পাসওয়ার্ড সুরক্ষা জন্য যে পদ্ধতি ব্যবহার করা হয় তার নাম কী?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
+    Answer: The method used to protect passwords is **hashing with a salt** — commonly called **salted hashing**.
+
+    How it works
+    - The password is never stored. Instead, a random value called a **salt** is generated for each user and appended to the password, and the combination is passed through a one-way hash function.
+    - Only the salt and the resulting hash are stored.
+    - At login, the entered password is combined with the stored salt, hashed the same way, and the two hashes are compared.
+
+    ```
+    Stored = salt + Hash(password + salt)
+    ```
+
+    Why hashing rather than encryption
+    - Hashing is one-way. Even if the entire database is stolen, the original passwords cannot be recovered. Encryption is reversible, so a stolen key would expose every password.
+
+    Why the salt is essential
+    - Without a salt, two users with the same password produce the same hash, and pre-computed **rainbow tables** can reverse common passwords instantly.
+    - A unique random salt per user makes every hash different and renders rainbow tables useless.
+
+    Recommended algorithms
+    - **bcrypt**, **Argon2** and **PBKDF2** — deliberately SLOW, which limits an attacker to a few thousand guesses per second instead of billions.
+    - MD5 and SHA-1 must not be used for passwords: they are fast by design, which is exactly the wrong property here.
+
+    Supporting measures
+    - Strong password policy, account lockout after failed attempts, multi-factor authentication, and never transmitting passwords except over TLS.
+
 16. **What do you mean by two factor authentication? Explain with example.** *[BTRC Assistant Director (Technical) 2019 compact it 1147-1148 (ET: N/A)]*
+
+    Answer: Two-Factor Authentication means verifying a user's identity using two independent credentials drawn from two DIFFERENT categories of authentication factor, so that compromising one does not grant access.
+
+    The three categories
+    - **Something you know** — password, PIN, passphrase.
+    - **Something you have** — mobile phone, hardware token, smart card, security key.
+    - **Something you are** — fingerprint, face, iris, voice.
+
+    Example 1 — mobile banking transfer
+    - The customer opens the app and enters the PIN. *(know)*
+    - The bank sends an OTP to the registered mobile number; the customer enters it. *(have)*
+    - Only then is the transfer executed.
+    - An attacker who phished the PIN cannot complete the transfer without the physical phone.
+
+    Example 2 — ATM withdrawal
+    - Insert the card *(have)*, enter the PIN *(know)*. A stolen card without the PIN, or a known PIN without the card, is useless.
+
+    Example 3 — corporate email
+    - Password *(know)* plus a code from Microsoft Authenticator *(have)*.
+
+    Why organisations mandate it
+    - Passwords fail constantly through phishing, reuse across sites, and large-scale breaches. 2FA means a leaked password database does not translate into account takeover.
+    - Both PCI DSS and the Bangladesh Bank ICT Security Guideline require MFA for administrative and remote access.
+
+    Practical caution
+    - **SMS OTP is the weakest second factor**, being vulnerable to SIM swap and SS7 interception. An authenticator app, push approval, or a FIDO2 hardware key provides substantially stronger protection.
 
 ## Security Protocols (SSL/TLS, HTTPS) (12)
 
