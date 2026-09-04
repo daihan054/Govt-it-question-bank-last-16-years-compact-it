@@ -919,6 +919,13 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 (d) What would be the appropriate title of the above passage? Justify the title in two sentences.
 (e) What is the consequence of radiation?
 
+   Answer:
+   - (a) The result of a nuclear war will be the extermination of most of the world's population, massive destruction of infrastructure, acute food shortages, and catastrophic environmental contamination.
+   - (b) The survivors of a nuclear war will live an agonizing life—sick, hungry, homeless, and constantly exposed to lethal radiation.
+   - (c) The best way to avoid nuclear war is for nations and people to learn to live in mutual peace, tolerance, and harmony with one another.
+   - (d) Title: "The Catastrophic Consequences of Nuclear War". Justification: The passage vividly illustrates how nuclear war threatens human existence through extermination and lingering radiation. It emphasizes that peaceful coexistence is humanity's only defense.
+   - (e) Radiation causes many new incurable diseases, inflicts harmful electrical ray damage on living tissue, and ruins the natural environment.
+
 2. **Read the following passage and answer the questions that follow:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1357 (ET: N/A)]*
 > I am convinced that inculcating of discipline at home and in the educational institutions is essential for the growth of every individual. It is however unfortunate that the need for discipline in the youth is not sufficiently appreciated in this country. People seem to believe that to insist on discipline is to be unkind to the young. I have a different opinion. For me, what is unkind is to let a young person indulge in whatever s/he wants to do without parental, educational and ethical guidance. Discipline does not mean illogical harshness or oppressive imposition of law. Discipline involves ethics, i.e. responsible concern for the well-being of oneself and the other. Discipline involves guidance from the outside and control from the inside (self-control). Lack of guidance and control may lead a young person to waste her/his strength because s/he is yet to experience things in full. I feel sad when I see our youth-often individuals of talent, spirit and imagination-talking, behaving and acting as if they are their own judge and have the vision of predicting the future. I consider it as a wrong trend because it is detrimental to the physical, mental and social well-being of theirs and others as well.
 > 
@@ -927,6 +934,13 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * **(c) What according to the author, may befall when a youth lacks discipline?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
  * **(d) What do you think is the dominant tone of the passage prescriptive dialogic? Engaging or distant? Why do you think so?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
  * **(e) Write in brief your response to the author's take on discipline.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
+
+   Answer:
+   - (a) Most people believe that enforcing discipline on the young is unkind, whereas the author believes that leaving youth without ethical and parental guidance is the true unkindness.
+   - (b) The author perceives discipline not as harsh oppression, but as an ethical balance between external guidance and internal self-control that nurtures personal well-being.
+   - (c) When youth lack discipline, they waste their energy and talents, act impulsively as their own judges, and harm their physical, mental, and social well-being.
+   - (d) The tone is engaging and evaluative (prescriptive). The author uses sincere first-person expressions ("I am convinced", "For me", "I feel sad") to directly challenge conventional misperceptions and urge constructive guidance for youth.
+   - (e) The author's view is highly realistic and constructive. Meaningful discipline is not punitive restriction but empathetic mentoring that helps young individuals harness their full creative potential safely.
 
 3. **Read the following passage and then answer the questions that follow:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
 > The Change of Climate is a major concern nowadays. The worst of all the problems that affects all the flora and fauna is the climate change. There are many plants and animals that are vulnerable to climate change. As a result of increasing temperature, they are likely to be extinct from nature. The reasons of increasing temperature are multifarious. Every day many industries, mills and factories in different countries are excreting Carbon Dioxide. Besides, a significant number of vehicles ply on the roads creating smoke which emits Carbon Dioxide. In addition to these, industrially developed countries are emitting tons of Carbon on the sea, which is indirectly responsible for producing Carbon Dioxide. The more Carbon Dioxide will increase, the more the temperature will increase. Over the last century, the sea level had risen by 10-20 cm possibly in response to global warming.
@@ -938,9 +952,30 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * (d) How does global warming affect the sea level?
  * (e) What message does the passage convey?
 
+   Answer:
+   - (a) Climate change is the worst problem affecting plants and animals.
+   - (b) Due to rising temperatures, many vulnerable species of flora and fauna face the risk of extinction.
+   - (c) The two major reasons are industrial emissions from factories and vehicle smoke emissions containing carbon dioxide.
+   - (d) Global warming causes sea levels to rise; it has already risen by 10 to 20 cm over the last century.
+   - (e) The passage conveys an urgent warning that excessive carbon dioxide emissions and global warming threaten biodiversity and marine ecosystems, demanding immediate environmental action.
+
 4. **Read the following passage and then answer the questions given below: War is the worst of all evils of human civilisation. It is an ancient institution which has existed for at least six thousand years. It was always wicked and usually foolish, but in the past, human race managed to live with it. Modern ingenuity has changed this drastically. Either man will abolish war or war will abolish man. In the present, it is nuclear weapons that cause the gravest danger, but bacteriological or chemical weapons may, before long, offer an even greater threat. If we succeed at any cost in abolishing nuclear weapons, our work will not be done completely. It will never be completed until we have succeeded in abolishing war for ever. To do this, we need to persuade mankind to look upon international disputes in a new intellectual and mutual way, not as contest of force or power, in which the victory goes to the side which is the most skillful in massacre, but by arbitration in accordance with agreed principles of law. It is not easy to change age-old mental habits, but this is what must be attempted. It is the destructive war that must be checked for the existence of life on earth. Questions: a) Why should we avoid war? b) Why is war more dangerous at present? c) What should we do to abolish war forever? d) How should all international problems be solved? e) Why should we check the destructive war at any cost?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 668 (ET: N/A)]*
 
+   Answer:
+   - a) We must avoid war because it is the most wicked evil of civilization, causing widespread massacre and threatening the total extinction of human life.
+   - b) War is more dangerous today because modern technological weapons—such as nuclear, chemical, and biological arms—possess absolute destructive capacity.
+   - c) To abolish war forever, we must eliminate all weapons of mass destruction and persuade nations to resolve conflicts through legal arbitration rather than armed force.
+   - d) International disputes should be resolved peacefully through arbitration in accordance with established principles of international law.
+   - e) We must check destructive war at any cost to ensure the survival and continuation of life on Earth.
+
 5. **Read the following passage crefully and answer the questions below in your words : “To be good is noble, but to teach others how to be good is nobler - and no trouble” said a well known writer. This may explain why in this world there is more of preaching than of practice. We do not mean the preaching which are get in church, but that which is given freely and without stint, on buses, in the streets and even in the homes of our land. Where is the parent who does not discover himself telling his child to do just what he himself does regularly? How many people are there who are certain that they have never made anything but financial mistakes? The man who never swam a stroke feels perfectly competent to tell another how to swim. The man who can not find his way to modest livelihood pretends to know just how to save the nation from all economic ills. It is no trouble to preach. But it is a considerable trouble to carry out what we preach. This is so the man who is striving to climb the loftiest heights know just how difficult is the way. Questions: (a) What does the quoted expression mean? (b) Why is practicing more difficult than preaching? (c) What does the writer mean by preaching? (d) What do the parents tell their children to do? (e) How does the honest preacher preach to himself?** *[Software Assistant Programmer 13.10.2022 compact it 711 (ET: N/A)]*
+
+   Answer:
+   - (a) The quoted expression ironically highlights that practicing virtue requires hard personal effort, whereas advising others to be good is effortless and carries no personal burden.
+   - (b) Practicing is more difficult because it demands real discipline, personal sacrifice, and overcoming practical struggles, while preaching involves only words.
+   - (c) The writer means giving unsolicited moral advice and lecturing others in daily life on matters one does not practice personally.
+   - (d) Parents often instruct their children to do things that they themselves fail to do or contradict in their own daily conduct.
+   - (e) An honest preacher examines his own actions first, striving to live up to moral standards through hard personal practice before giving advice to others.
 
 ## English Literature & Authors (1)
 
