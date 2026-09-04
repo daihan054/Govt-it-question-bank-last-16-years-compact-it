@@ -4813,19 +4813,691 @@ Output: Not Balanced
 
 1. **Max heap:** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
+   Answer: A `max heap` is a `complete binary tree` in which every parent node is greater than or equal to both of its children, so the largest element is always at the root.
+
+   The two defining properties
+   - `Structural property` — the tree is complete: every level is filled from the left, and only the last level may be partly filled. This is what allows an array representation with no gaps.
+   - `Ordering property` — for every node i: `parent(i) >= child(i)`. Note that this says nothing about left versus right, which is what distinguishes a heap from a BST.
+
+   Array representation (0-based)
+   ```
+   Left child  = 2i + 1
+   Right child = 2i + 2
+   Parent      = (i − 1) / 2
+   ```
+
+   Example
+   ```
+                       90
+                    /      \
+                  80        70
+                 /  \      /   \
+               40    50  60     45
+
+   Array: [90, 80, 70, 40, 50, 60, 45]
+   ```
+   - Check: 90 >= 80, 70 ✓ ; 80 >= 40, 50 ✓ ; 70 >= 60, 45 ✓
+
+   Operations
+
+   `Insert` — O(log n)
+   - Place the new element at the next free position (the end of the array), then `sift up`: while it is larger than its parent, swap.
+   ```
+   Insert 95 into [90, 80, 70, 40, 50, 60, 45]
+   place at the end      -> [90, 80, 70, 40, 50, 60, 45, 95]
+   95 > 40 (parent)      -> swap
+   95 > 80 (new parent)  -> swap
+   95 > 90 (new parent)  -> swap
+   result                -> [95, 90, 70, 80, 50, 60, 45, 40]
+   ```
+
+   `Extract max (delete root)` — O(log n)
+   - The root is the answer. Move the last element to the root, shrink the array, then `heapify down`: repeatedly swap with the larger child while it is bigger.
+   ```
+   Extract 90 from [90, 80, 70, 40, 50, 60, 45]
+   move 45 to the root -> [45, 80, 70, 40, 50, 60]
+   45 < 80 -> swap     -> [80, 45, 70, 40, 50, 60]
+   45 < 50 -> swap     -> [80, 50, 70, 40, 45, 60]
+   ```
+
+   `Peek max` — `O(1)`, simply the root.
+
+   `Build heap` from an unsorted array — `O(n)`, by calling heapify on every non-leaf node from the last one backwards.
+
+   Complexity summary
+
+   | Operation | Complexity |
+   |---|---|
+   | Peek maximum | O(1) |
+   | Insert | O(log n) |
+   | Extract maximum | O(log n) |
+   | Build heap from n items | O(n) |
+   | Heap sort | O(n log n) |
+   | Search for an arbitrary value | O(n) |
+
+   Max heap vs min heap
+
+   | Point | Max heap | Min heap |
+   |---|---|---|
+   | Root holds | The largest value | The smallest value |
+   | Property | parent >= children | parent <= children |
+   | Used for | Descending heap sort, maximum-priority queues | Ascending heap sort, Dijkstra, Huffman coding |
+
+   Applications
+   - `Priority queues`, `heap sort`, finding the kth largest element, Dijkstra's and Prim's algorithms, Huffman coding, and job scheduling in operating systems.
+
 2. **Max Heap Operation [a-j] show heap.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
+
+   Answer: The ten letters `a` to `j` are inserted one at a time into a max heap. Since a heap stores comparable items, the alphabetical order applies, so `j` is the largest and `a` the smallest.
+
+   Rule for insertion
+   - Place the new item at the next free position (keeping the tree complete), then `sift up`: while it is greater than its parent, swap with the parent.
+
+   Step-by-step
+
+   ```
+   Insert a:   a
+               [a]
+
+   Insert b:   b is placed under a, b > a -> swap
+                    b
+                   /
+                  a
+               [b, a]
+
+   Insert c:   c placed as right child of b, c > b -> swap
+                    c
+                   / \
+                  a   b
+               [c, a, b]
+
+   Insert d:   d placed under a, d > a -> swap, d > c -> swap
+                    d
+                   / \
+                  c   b
+                 /
+                a
+               [d, c, b, a]
+
+   Insert e:   e placed under c, e > c -> swap, e > d -> swap
+                    e
+                   / \
+                  d   b
+                 / \
+                a   c
+               [e, d, b, a, c]
+
+   Insert f:   f placed under b, f > b -> swap, f > e -> swap
+                    f
+                   / \
+                  d   e
+                 / \  /
+                a   c b
+               [f, d, e, a, c, b]
+
+   Insert g:   g placed as right child of e, g > e -> swap, g > f -> swap
+                    g
+                   / \
+                  d   f
+                 / \  / \
+                a   c b   e
+               [g, d, f, a, c, b, e]
+
+   Insert h:   h placed under a, h > a -> swap, h > d -> swap, h > g -> swap
+                    h
+                   / \
+                  g   f
+                 / \  / \
+                d   c b   e
+               /
+              a
+               [h, g, f, d, c, b, e, a]
+
+   Insert i:   i placed as right child of d, i > d -> swap, i > g -> swap, i > h -> swap
+                    i
+                   / \
+                  h   f
+                 / \  / \
+                g   c b   e
+               / \
+              a   d
+               [i, h, f, g, c, b, e, a, d]
+
+   Insert j:   j placed under g, j > g -> swap, j > h -> swap, j > i -> swap
+                    j
+                   / \
+                  i   f
+                 / \  / \
+                g   h b   e
+               / \  /
+              a   d c
+               [j, i, f, g, h, b, e, a, d, c]
+   ```
+
+   Final max heap
+   ```
+                           j
+                       /       \
+                      i         f
+                    /   \      /  \
+                   g     h    b     e
+                  / \   /
+                 a   d c
+
+   Array: [j, i, f, g, h, b, e, a, d, c]
+   ```
+
+   Verification of the heap property
+   ```
+   j >= i, f   ✓        i >= g, h   ✓        f >= b, e   ✓
+   g >= a, d   ✓        h >= c      ✓
+   ```
+   - Every parent is greater than or equal to its children, and the tree is complete (all levels full except the last, which is filled from the left) ✓
+
+   Complexity
+   - Each insertion is `O(log n)`, so building the heap by ten successive insertions costs `O(n log n)`.
+   - Building a heap from an existing array with the bottom-up heapify method would cost only `O(n)`, which is the faster route when all the data is available at once.
 
 3. **অথবা, (ক) Heap data structure কী? কোন ক্ষেত্রে Heap ব্যবহার করা হয়?** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 606 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   What is a heap
+   - A heap is a `complete binary tree` that satisfies the `heap property`:
+     - `Max heap` — every parent is greater than or equal to its children, so the largest value is at the root.
+     - `Min heap` — every parent is less than or equal to its children, so the smallest value is at the root.
+   - Being complete (all levels filled from the left) means it can be stored in a plain `array` with no gaps and no pointers:
+   ```
+   Left child  = 2i + 1        Right child = 2i + 2        Parent = (i − 1)/2
+   ```
+
+   Example
+   ```
+   MAX HEAP                          MIN HEAP
+           90                              10
+         /    \                          /    \
+       80      70                      20      30
+      /  \    /  \                    /  \    /  \
+    40    50 60   45                40    50 60   45
+
+   [90,80,70,40,50,60,45]          [10,20,30,40,50,60,45]
+   ```
+
+   Important distinction from a BST
+   - A heap is ordered `only vertically` — parent versus child. It says nothing about left versus right, so it cannot be searched efficiently for an arbitrary value (that is O(n)).
+   - What it does give is `O(1)` access to the maximum or minimum, which is exactly what a priority queue needs.
+
+   Complexity
+
+   | Operation | Cost |
+   |---|---|
+   | Peek maximum / minimum | `O(1)` |
+   | Insert | O(log n) |
+   | Delete the root | O(log n) |
+   | Build a heap from n items | O(n) |
+   | Search an arbitrary value | O(n) |
+
+   Where heaps are used
+
+   - `Priority queue` — the primary use. Items are served by priority rather than arrival order, which is what emergency-room triage, print scheduling and operating-system process scheduling require.
+   - `Heap sort` — build a max heap, then repeatedly extract the root. `O(n log n)` in every case, and it sorts in place with O(1) extra space.
+   - `Dijkstra's shortest path` and `Prim's minimum spanning tree` — a min heap supplies the next nearest vertex in O(log n), which is what reduces Dijkstra from O(V²) to O(E log V).
+   - `Huffman coding` — a min heap repeatedly supplies the two least frequent symbols while the code tree is built.
+   - `Kth largest or smallest element` — keep a heap of size k, giving O(n log k) instead of sorting everything.
+   - `Median maintenance in a stream` — a max heap for the lower half and a min heap for the upper half.
+   - `Memory management` — the "heap" region in a program is a different concept, but heap structures are used inside some allocators and garbage collectors.
+   - `Job and event scheduling`, load balancing, and merging k sorted lists.
+
 4. **Write down the properties of Max heap. Also write down the heapsort algorithm.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 686 (ET: N/A)]*
+
+   Answer:
+
+   Properties of a max heap
+
+   1. `Structural property — it is a complete binary tree.`
+   - Every level is completely filled except possibly the last, and the last level is filled from `left to right` with no gaps.
+   - This is what allows the heap to be stored in a plain array with no wasted slots.
+
+   2. `Ordering property — parent >= children.`
+   - For every node, `A[parent(i)] >= A[i]`. The property is `vertical only`; it says nothing about the relationship between a left child and a right child.
+
+   3. `The root holds the maximum` of the whole heap. It follows from the ordering property applied repeatedly.
+
+   4. `Array representation` (0-based indexing)
+   ```
+   Left child  = 2i + 1
+   Right child = 2i + 2
+   Parent      = (i − 1) / 2
+   ```
+   - For n elements, the leaves occupy indices from `⌊n/2⌋` to `n − 1`, so heapify need only be applied to the first ⌊n/2⌋ nodes.
+
+   5. `Height` of a heap with n nodes is `⌊log2 n⌋`, which bounds the cost of insertion and deletion at O(log n).
+
+   6. `Every subtree is itself a max heap`, which is what makes the recursive heapify correct.
+
+   7. `It is not a search structure.` Finding an arbitrary value requires scanning all n elements.
+
+   Example
+   ```
+                       90
+                    /      \
+                  80        70
+                 /  \      /   \
+               40    50  60     45
+
+   Array: [90, 80, 70, 40, 50, 60, 45]
+   Checks: 90>=80,70 ✓  80>=40,50 ✓  70>=60,45 ✓
+   ```
+
+   Heap sort algorithm
+
+   The idea: build a max heap, then repeatedly swap the root (the largest remaining value) with the last element of the heap and shrink the heap by one.
+
+   ```
+   ALGORITHM heapSort(A, n)
+   BEGIN
+       // Phase 1: build a max heap — O(n)
+       FOR i = n/2 − 1 DOWNTO 0 DO
+           heapify(A, n, i)
+       END FOR
+
+       // Phase 2: extract elements one by one — O(n log n)
+       FOR i = n − 1 DOWNTO 1 DO
+           swap A[0] and A[i]        // largest goes to its final position
+           heapify(A, i, 0)          // restore the heap over the first i elements
+       END FOR
+   END
+
+
+   ALGORITHM heapify(A, n, i)        // sift down from index i
+   BEGIN
+       largest = i
+       left    = 2i + 1
+       right   = 2i + 2
+
+       IF left  < n AND A[left]  > A[largest] THEN largest = left
+       IF right < n AND A[right] > A[largest] THEN largest = right
+
+       IF largest ≠ i THEN
+           swap A[i] and A[largest]
+           heapify(A, n, largest)     // continue down the affected subtree
+       END IF
+   END
+   ```
+
+   C implementation
+   ```c
+   void heapify(int A[], int n, int i) {
+       int largest = i, l = 2*i + 1, r = 2*i + 2, tmp;
+       if (l < n && A[l] > A[largest]) largest = l;
+       if (r < n && A[r] > A[largest]) largest = r;
+       if (largest != i) {
+           tmp = A[i]; A[i] = A[largest]; A[largest] = tmp;
+           heapify(A, n, largest);
+       }
+   }
+
+   void heapSort(int A[], int n) {
+       for (int i = n/2 - 1; i >= 0; i--) heapify(A, n, i);
+       for (int i = n - 1; i > 0; i--) {
+           int tmp = A[0]; A[0] = A[i]; A[i] = tmp;
+           heapify(A, i, 0);
+       }
+   }
+   ```
+
+   Worked example on `[4, 10, 3, 5, 1]`
+   ```
+   Build max heap:
+     heapify at i=1: 10 > 5, 1 -> already largest
+     heapify at i=0: 4 < 10 -> swap -> [10, 4, 3, 5, 1]
+                     heapify at 1: 4 < 5 -> swap -> [10, 5, 3, 4, 1]
+   Max heap: [10, 5, 3, 4, 1]
+
+   Extract:
+     swap 10 and 1 -> [1, 5, 3, 4, | 10], heapify -> [5, 4, 3, 1, | 10]
+     swap 5 and 1  -> [1, 4, 3, | 5, 10], heapify -> [4, 1, 3, | 5, 10]
+     swap 4 and 3  -> [3, 1, | 4, 5, 10], heapify -> [3, 1, | ...]
+     swap 3 and 1  -> [1, | 3, 4, 5, 10]
+
+   Sorted: 1, 3, 4, 5, 10
+   ```
+
+   Complexity
+
+   | Aspect | Value |
+   |---|---|
+   | Build heap | O(n) |
+   | Each extraction | O(log n), done n times |
+   | `Time — all cases` | `O(n log n)` |
+   | `Space` | `O(1)` — sorts in place |
+   | Stable? | No |
+
+   - Heap sort's guarantee of O(n log n) in the `worst` case, with O(1) extra space, is its advantage over quick sort (O(n²) worst case) and merge sort (O(n) extra space). In practice quick sort is usually faster because of better cache behaviour.
 
 5. **Given an array of 6 elements: \{15, 19, 10, 7, 17, 16\}. Draw heap tree and again draw the tree after deletion of element 7 from this tree.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 863 (ET: BUET)]*
 
+   Answer:
+
+   Given array: `{15, 19, 10, 7, 17, 16}`
+
+   Part 1 — build the heap (max heap, by successive insertion)
+
+   ```
+   Insert 15:              15
+
+   Insert 19:              15         19 > 15, swap        19
+                          /                                /
+                        19                               15
+
+   Insert 10:              19                            (10 < 19, no swap)
+                          /  \
+                        15    10
+
+   Insert 7:               19                            (7 < 15, no swap)
+                          /  \
+                        15    10
+                       /
+                     7
+
+   Insert 17:              19          17 > 15, swap        19
+                          /  \                             /  \
+                        15    10                         17    10
+                       /  \                             /  \
+                     7     17                          7    15
+
+   Insert 16:              19          16 > 10, swap        19
+                          /  \                             /  \
+                        17    10                         17    16
+                       /  \   /                         /  \   /
+                     7    15 16                       7    15 10
+   ```
+
+   The max heap
+   ```
+                       19
+                    /      \
+                  17        16
+                 /  \      /
+                7    15   10
+
+   Array: [19, 17, 16, 7, 15, 10]
+   ```
+   - Verification: 19 >= 17 and 16 ✓ ; 17 >= 7 and 15 ✓ ; 16 >= 10 ✓ ; the tree is complete ✓
+
+   Part 2 — delete the element 7
+
+   - 7 sits at array index 3, a leaf on the last level.
+   - Standard procedure for deleting an arbitrary element from a heap:
+     - Step 1 — replace it with the `last` element of the heap, so the tree stays complete.
+     - Step 2 — reduce the heap size by one.
+     - Step 3 — restore the heap property by sifting the replacement `up` or `down` as needed.
+
+   ```
+   Step 1: the last element is 10. Move 10 into index 3 (where 7 was).
+           [19, 17, 16, 10, 15, 10]  ->  remove the duplicate last slot
+
+   Step 2: heap size becomes 5:
+           [19, 17, 16, 10, 15]
+
+   Step 3: check 10 at index 3.
+           Its parent is index 1, which holds 17. 10 < 17, so no sift up.
+           It has no children, so no sift down.
+           The heap property already holds.
+   ```
+
+   The heap after deleting 7
+   ```
+                       19
+                    /      \
+                  17        16
+                 /  \
+               10    15
+
+   Array: [19, 17, 16, 10, 15]
+   ```
+   - Verification: 19 >= 17 and 16 ✓ ; 17 >= 10 and 15 ✓ ; complete tree ✓
+
+   Points to note
+   - The `last` element must be used as the replacement, not simply the removed node's child. Anything else would break the completeness of the tree, and completeness is what makes the array representation valid.
+   - After the replacement, the new value may be too large (sift up) or too small (sift down); both must be considered when deleting an arbitrary node. When deleting the `root`, only sifting down is possible.
+   - Complexity of deletion: `O(log n)` for the sift, plus `O(n)` to locate an arbitrary element in the first place — a heap cannot be searched efficiently.
+
 6. **Binary tree টিকে heapify করুন যেন maximum heap -এ রূপান্তরিত হয়:** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) The figure was not printed, so a standard example is used and the full heapify method is shown so that any tree can be converted the same way.
+
+   What heapify means
+   - Converting an arbitrary binary tree (stored as a complete tree) into a `max heap`, in which every parent is greater than or equal to both of its children.
+
+   Bottom-up build-heap method — the efficient one
+   - Start at the `last non-leaf node`, index `⌊n/2⌋ − 1`, and work backwards to the root, applying `sift down` at each node.
+   - Leaves need no work, because a single node is already a valid heap.
+
+   The sift-down procedure
+   ```
+   heapify(A, n, i):
+       largest = i
+       left    = 2i + 1
+       right   = 2i + 2
+       IF left  < n AND A[left]  > A[largest] THEN largest = left
+       IF right < n AND A[right] > A[largest] THEN largest = right
+       IF largest ≠ i THEN
+           swap A[i], A[largest]
+           heapify(A, n, largest)
+   ```
+
+   Worked example
+   ```
+   Initial tree (array [4, 10, 3, 5, 1]):
+
+                 4
+               /   \
+             10     3
+            /  \
+           5    1
+   ```
+
+   - n = 5, so the last non-leaf node is at index ⌊5/2⌋ − 1 = 1.
+
+   ```
+   Step 1 — heapify at index 1 (value 10)
+     children are 5 and 1; 10 is already the largest -> no change
+
+                 4
+               /   \
+             10     3
+            /  \
+           5    1
+
+   Step 2 — heapify at index 0 (value 4)
+     children are 10 and 3; 10 is larger -> swap 4 and 10
+
+                10
+               /   \
+              4     3
+            /  \
+           5    1
+
+     now heapify at index 1 (value 4)
+     children are 5 and 1; 5 is larger -> swap 4 and 5
+
+                10
+               /   \
+              5     3
+            /  \
+           4    1
+   ```
+
+   Final max heap
+   ```
+                10
+               /   \
+              5     3
+             /  \
+            4    1
+
+   Array: [10, 5, 3, 4, 1]
+   ```
+   - Verification: 10 >= 5 and 3 ✓ ; 5 >= 4 and 1 ✓ ; the tree is complete ✓
+
+   Complexity
+   - Building a heap this way is `O(n)`, not O(n log n). The reason is that most nodes are near the bottom and sift down only a short distance: the sum over all levels works out to O(n).
+   - Building the same heap by n successive insertions would cost O(n log n), so the bottom-up method is preferred whenever all the data is available at once.
 
 7. **Heapify the MAX heap tree.** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1043, 1045 (ET: BUET)]*
 
+   Answer: The tree was not printed, so a standard example is used, with the general method shown so any tree can be converted.
+
+   What heapifying to a max heap means
+   - Rearranging a complete binary tree so that `every parent is greater than or equal to both of its children`. The largest value then sits at the root.
+   - The tree's `shape` never changes — only the values are swapped, so the tree remains complete.
+
+   Method — bottom-up build heap
+   - Apply `sift down` starting at the last non-leaf node, index `⌊n/2⌋ − 1`, and work backwards to index 0.
+   - Leaves are skipped, since a single node is already a heap.
+
+   ```
+   heapify(A, n, i):                    // sift down from index i
+       largest = i
+       left  = 2i + 1
+       right = 2i + 2
+       IF left  < n AND A[left]  > A[largest] THEN largest = left
+       IF right < n AND A[right] > A[largest] THEN largest = right
+       IF largest ≠ i THEN
+           swap A[i], A[largest]
+           heapify(A, n, largest)       // recurse into the affected subtree
+   ```
+
+   Worked example
+   ```
+   Initial tree — array [3, 9, 2, 1, 4, 5], n = 6
+
+                 3
+               /   \
+             9      2
+            / \    /
+           1   4  5
+   ```
+   - Last non-leaf node: ⌊6/2⌋ − 1 = index 2.
+
+   ```
+   Step 1 — heapify at index 2 (value 2)
+     its only child is 5; 5 > 2 -> swap
+
+                 3
+               /   \
+             9      5
+            / \    /
+           1   4  2
+
+   Step 2 — heapify at index 1 (value 9)
+     children 1 and 4; 9 is already largest -> no change
+
+   Step 3 — heapify at index 0 (value 3)
+     children 9 and 5; 9 is larger -> swap 3 and 9
+
+                 9
+               /   \
+             3      5
+            / \    /
+           1   4  2
+
+     continue at index 1 (value 3)
+     children 1 and 4; 4 is larger -> swap 3 and 4
+
+                 9
+               /   \
+             4      5
+            / \    /
+           1   3  2
+   ```
+
+   Final max heap
+   ```
+                 9
+               /   \
+             4      5
+            / \    /
+           1   3  2
+
+   Array: [9, 4, 5, 1, 3, 2]
+   ```
+   - Verification: 9 >= 4 and 5 ✓ ; 4 >= 1 and 3 ✓ ; 5 >= 2 ✓ ; the tree is complete ✓
+
+   Points to remember
+   - Work `bottom-up`, not top-down. Heapifying from the root downwards does not produce a valid heap in one pass.
+   - Only the first `⌊n/2⌋` nodes need processing; the rest are leaves.
+   - Complexity is `O(n)` for the whole build, and `O(log n)` for a single sift down.
+
 8. **Draw (max/min) heap binay tree using 11 nodes.** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
+
+   Answer: A heap with 11 nodes has 4 levels: levels 0, 1 and 2 are full (1 + 2 + 4 = 7 nodes) and the last level holds the remaining 4 nodes, filled from the left.
+
+   Structure of a complete binary tree with 11 nodes
+   ```
+                        index 0
+                       /       \
+                 index 1        index 2
+                 /     \        /      \
+           index 3   index 4  index 5  index 6
+           /   \      /  \
+      index 7 index 8 index 9 index 10
+   ```
+   - Levels 0–2 are complete; the last level holds indices 7, 8, 9 and 10, filled left to right with no gaps. This is the `completeness` requirement.
+
+   MAX HEAP with 11 nodes — using values 1 to 11
+   ```
+                           11
+                       /        \
+                     10          9
+                   /    \       /   \
+                 8       7     6     5
+               /  \     / \
+              4    3   2   1
+
+   Array: [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+   ```
+   Verification
+   ```
+   11 >= 10, 9  ✓        10 >= 8, 7  ✓        9 >= 6, 5  ✓
+    8 >= 4, 3   ✓         7 >= 2, 1  ✓
+   ```
+   - The root holds the maximum, 11.
+
+   MIN HEAP with 11 nodes — using values 1 to 11
+   ```
+                            1
+                        /       \
+                      2           3
+                    /   \       /    \
+                  4      5     6      7
+                /  \    / \
+               8    9  10  11
+
+   Array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+   ```
+   Verification
+   ```
+   1 <= 2, 3   ✓         2 <= 4, 5   ✓        3 <= 6, 7   ✓
+   4 <= 8, 9   ✓         5 <= 10, 11 ✓
+   ```
+   - The root holds the minimum, 1.
+
+   Properties of an 11-node heap
+
+   | Property | Value |
+   |---|---|
+   | Number of nodes | 11 |
+   | Height (edges) | 3 |
+   | Number of levels | 4 |
+   | Leaf nodes | indices 5 to 10 — that is 6 leaves |
+   | Internal nodes | indices 0 to 4 — that is 5 nodes |
+   | Last non-leaf node | index ⌊11/2⌋ − 1 = 4 |
+   | Array size needed | exactly 11 — no gaps |
+
+   - Index rules used throughout: `left = 2i + 1`, `right = 2i + 2`, `parent = (i − 1)/2`.
+   - Because the tree is complete, the array has no empty slots at all — which is precisely why heaps are stored as arrays rather than with pointers.
 
 ## Queue (6)
 
