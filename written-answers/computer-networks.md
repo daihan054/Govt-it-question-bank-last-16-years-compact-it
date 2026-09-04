@@ -5014,7 +5014,13 @@ Answer:
     - Components: the Mail User Agent (the client program), the Mail Transfer Agent (Postfix, Sendmail, Exchange) and the Mail Delivery Agent that puts the message in the mailbox.
     - Weakness: SMTP by itself does not verify the sender, which is why spam and spoofing are possible. SPF, DKIM and DMARC were added to authenticate the sending domain.
 
-23. **a. What is SQL, b. What is API c. What is recursion d. DNS port number?** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91-92]]*
+23. **a. What is SQL, b. What is API c. What is recursion d. DNS port number?** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91-92]]*
+
+Answer:
+    - a. SQL (Structured Query Language): A domain-specific standard programming language designed for managing, querying, defining, and manipulating data held in Relational Database Management Systems (RDBMS). Includes DDL (CREATE, ALTER), DML (SELECT, INSERT, UPDATE, DELETE), and DCL (GRANT, REVOKE).
+    - b. API (Application Programming Interface): A formalized set of definitions, rules, and communication protocols that enables disparate software systems to interact, exchange data, and leverage each other's functionalities (e.g., RESTful APIs, SOAP, GraphQL).
+    - c. Recursion: A computational method where a function solves a problem by calling itself repeatedly on smaller sub-problems until it reaches a terminating base case (e.g., factorial computation, DFS graph traversal).
+    - d. DNS Port Number: **Port 53**. Standard name resolution queries use **UDP port 53** for low-latency lookups; zone transfers and responses exceeding 512 bytes use **TCP port 53**.
 
 ## Transport Layer (TCP & UDP) (22)
 
