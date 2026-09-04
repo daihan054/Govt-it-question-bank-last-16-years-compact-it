@@ -20397,7 +20397,97 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 
 1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1332 (ET: BUET)]*
 
+   Answer: Limitations of a traditional DBMS (relational, SQL)
+   - `Hard to scale out.` It scales up on one bigger machine well, but spreading one database across many machines is difficult, because joins and ACID must then hold across a network.
+   - `Rigid schema.` The structure must be fixed before data is loaded, and altering a large live table is slow and risky.
+   - `Poor fit for unstructured data` — documents, images, logs, social graphs and sensor streams do not fit rows and columns.
+   - `Joins get expensive` as tables grow; a heavily normalized design can need a dozen joins for one report.
+   - `Cost` — commercial licences, powerful hardware and trained DBAs.
+   - `Impedance mismatch` — program objects must be flattened into rows and rebuilt, which is why ORM tools exist.
+   - `Single point of failure` in a centralized deployment, and limited write throughput because one node owns the writes.
+
+   NoSQL — the answer to scale, at a price
+   - Drops the fixed schema and, usually, joins. Data is stored as documents, key-value pairs, wide columns or graphs.
+   - Scales `horizontally` across cheap machines by sharding, and handles very large, fast, varied data.
+   - Relaxes ACID to `BASE` — Basically Available, Soft state, Eventual consistency. By the CAP theorem, when the network partitions, it usually keeps availability and gives up strict consistency.
+   - The price: `no strong transactional guarantee`, limited query power, no standard language, and application code must handle the data that used to be handled by joins and constraints. That is unacceptable for a bank ledger.
+
+   NewSQL — the bridge between the two
+   - `NewSQL` is a class of modern relational systems that keep the `relational model, SQL and full ACID`, but obtain NoSQL-style `horizontal scalability` for OLTP workloads.
+   - How it does this:
+   ```
+   Sharding / partitioning the data across many nodes automatically
+   Distributed consensus (Raft, Paxos) instead of a single master
+   In-memory or log-structured storage, so no disk seek per transaction
+   Lock-free concurrency control (MVCC, optimistic, or deterministic scheduling)
+   ```
+   - Examples: `Google Spanner`, `CockroachDB`, `VoltDB`, `TiDB`, `YugabyteDB`, `MemSQL/SingleStore`, `NuoDB`, and MySQL Cluster.
+
+   How the three relate
+
+   | Point | SQL (RDBMS) | NoSQL | NewSQL |
+   |---|---|---|---|
+   | Data model | Tables, fixed schema | Document, key-value, column, graph | Tables, fixed schema |
+   | Query language | SQL | Product-specific API | SQL |
+   | Transactions | Full ACID | BASE, eventual consistency | Full ACID |
+   | Scaling | Vertical (scale up) | Horizontal (scale out) | Horizontal (scale out) |
+   | Joins | Yes | Usually not | Yes |
+   | Best for | Banking, ERP, accounting | Big data, feeds, IoT, catalogues | High-volume OLTP that still needs ACID |
+   | Maturity | Very mature | Mature | Newest, fewest tools |
+
+   - The relationship in one line: `NewSQL = the correctness and SQL of a relational database + the horizontal scalability of NoSQL`. It exists because SQL could not scale out and NoSQL could not guarantee correctness.
+   - NewSQL's own limitations: fewer features and tools than a mature RDBMS, a smaller pool of skilled people, and the extra latency that distributed consensus adds to every commit. It is chosen only when the workload genuinely outgrows a single relational server.
+
 2. **Write difference between relational database and NoSQL database.** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
+
+   Answer: A `relational database` stores data in tables with a fixed schema and links them by keys. A `NoSQL database` stores data in flexible formats — documents, key-value pairs, wide columns or graphs — and is built to spread across many machines.
+
+   Relational database
+   - Data is held in `tables` of rows and columns; the structure must be defined before data is loaded.
+   - Tables are linked by `foreign keys` and combined with `joins`.
+   - Queried with `SQL`, a standard declarative language.
+   - Guarantees `ACID` for every transaction.
+   - Designed by `normalization`, so a fact is stored once.
+   - Scales `vertically` — a bigger server.
+   - Examples: Oracle, MySQL, PostgreSQL, SQL Server.
+
+   NoSQL database
+   - `Schema-free`: two documents in the same collection may have different fields, so the structure can change without an `ALTER TABLE`.
+   - Four families:
+   ```
+   Document    : MongoDB, CouchDB          -> JSON-like documents
+   Key-value   : Redis, DynamoDB           -> a value fetched by its key
+   Column-family: Cassandra, HBase         -> wide rows, huge write volume
+   Graph       : Neo4j                     -> nodes and edges, relationship queries
+   ```
+   - Usually no joins; related data is `embedded` in the same document instead.
+   - Follows `BASE` — Basically Available, Soft state, Eventual consistency — rather than strict ACID.
+   - Scales `horizontally` by sharding across cheap servers.
+
+   ```
+   Relational                     NoSQL (document)
+   +--------+-------+---------+   {
+   | emp_id | name  | dept_id |     "emp_id": 101,
+   +--------+-------+---------+     "name": "Rahim",
+   | 101    | Rahim | 10      |     "dept": { "id": 10, "name": "CSE" },
+   +--------+-------+---------+     "skills": ["SQL", "Java"]
+      plus a Department table     }
+   ```
+
+   | Point | Relational database | NoSQL database |
+   |---|---|---|
+   | Data model | Tables, rows, columns | Document, key-value, column, graph |
+   | Schema | Fixed, defined in advance | Flexible, can differ per record |
+   | Query language | SQL, standard | Product-specific API or query language |
+   | Transactions | Full ACID | BASE, usually eventual consistency |
+   | Joins | Yes | Usually none; data is embedded |
+   | Scaling | Vertical — a bigger machine | Horizontal — more machines |
+   | Data type suited | Structured | Semi-structured and unstructured |
+   | Consistency | Strong | Eventual, mostly |
+   | Best for | Banking, ERP, accounting, reporting | Big data, real-time feeds, IoT, catalogues |
+   | Examples | Oracle, MySQL, PostgreSQL | MongoDB, Cassandra, Redis, Neo4j |
+
+   - How to choose: if the data is structured and every transaction must be exactly right, use `relational`. If the volume is huge, the shape varies and losing a second of consistency is acceptable, use `NoSQL`. Large systems often use both — the ledger in an RDBMS, the activity log and search index in NoSQL.
 
 ## Database Connectivity (JDBC) (2)
 
