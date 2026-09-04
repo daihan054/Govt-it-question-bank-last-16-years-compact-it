@@ -7534,29 +7534,1289 @@
 
 1. **Why is it essential to maintain proper MVC structure in web applications?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
 
+   Answer: What MVC is
+   - `MVC (Model–View–Controller)` splits an application into three parts: the `Model` holds the data and business rules, the `View` displays them, and the `Controller` handles user input and connects the two.
+   ```mermaid
+   flowchart LR
+       U[User] -->|request| C[Controller]
+       C -->|update / query| M[Model]
+       M -->|data| C
+       C -->|selects| V[View]
+       V -->|response| U
+   ```
+
+   Why maintaining the structure properly matters
+
+   1. Separation of concerns
+   ```
+      MODEL      data , validation , business rules , database access
+      VIEW       HTML , templates , formatting - PRESENTATION ONLY
+      CONTROLLER receives the request , calls the model , chooses
+                 the view
+
+      Each layer has ONE job. When SQL queries are written inside a
+      view template, the separation is gone and every benefit below
+      is lost with it.
+   ```
+
+   2. Maintainability
+   - A change stays in one layer. Redesigning the user interface touches only `views`; changing a business rule touches only the `model`. Without the separation, one change ripples through the whole application.
+
+   3. Testability
+   - The `model` can be unit tested with no browser and no HTTP request, because it has no dependency on the view. Business logic buried inside a template can only be tested by driving the UI, which is slow and fragile.
+
+   4. Parallel development
+   - A front-end developer works on views while a back-end developer works on models and controllers, at the same time, with the interface between them fixed.
+
+   5. Reusability
+   - One `model` serves a web page, a mobile app and an API — three views over the same business logic. If the logic lives in the view, it must be written three times.
+
+   6. Security
+   - Input validation and authorisation belong in the `model` and `controller`. Scattering them through views is how checks get missed. A single, known place for validation is what makes it auditable.
+
+   7. Team discipline and onboarding
+   - A new developer knows where to look, because the framework's conventions say where each kind of code belongs. This is the practical reason frameworks enforce the structure.
+
+   What goes wrong when it is not maintained
+   ```
+      FAT CONTROLLER   business logic creeping into the controller,
+           so it cannot be reused or tested independently.
+      LOGIC IN THE VIEW  SQL or calculations inside a template - the
+           classic sign of a broken MVC application.
+      ANAEMIC MODEL    a model that is only a data holder, with all
+           the rules elsewhere.
+
+      The result in every case is the same : code that cannot be
+      changed safely, cannot be tested, and cannot be reused.
+   ```
+   - The rule of thumb worth stating: `views should contain no decisions and controllers should contain no business rules`. A controller should read as a short list of calls — validate the request, ask the model, pick a view. Anything longer means logic has leaked out of the model.
+
 2. **What is MVC? Write down the MVC design pattern.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
+
+   Answer: What MVC is
+   - `MVC` stands for `Model–View–Controller`. It is an architectural pattern that divides an application into three connected parts, so that the data, the display and the input handling are kept separate.
+
+   The three components
+   ```
+      MODEL
+           The DATA and the BUSINESS LOGIC. It handles validation,
+           calculation and database access. It knows nothing about
+           how it will be displayed.
+           Example : User , Account , Order classes ; the rule that
+           a withdrawal may not exceed the balance.
+
+      VIEW
+           The PRESENTATION - what the user sees. HTML templates,
+           forms, reports. It only DISPLAYS data ; it contains no
+           business rules.
+           Example : login.html , dashboard.jsp , invoice template.
+
+      CONTROLLER
+           The INPUT HANDLER. It receives the user's request,
+           validates it, calls the appropriate model, and chooses
+           which view to return.
+           Example : LoginController , OrderController.
+   ```
+
+   The pattern
+   ```mermaid
+   flowchart LR
+       U[User] -->|1. request| C[Controller]
+       C -->|2. update or query| M[Model]
+       M -->|3. data| C
+       C -->|4. selects with data| V[View]
+       V -->|5. rendered page| U
+   ```
+   ```
+                   +----------------+
+                   |    CONTROLLER  |
+           request |  - handles     | selects view
+         --------->|    input       |------------+
+                   |  - calls model |            |
+                   +----------------+            |
+                       |        ^                v
+           update /    |        | data     +-----------+
+           query       v        |          |   VIEW    |
+                   +----------------+      |  display  |
+                   |     MODEL      |      +-----------+
+                   |  - data        |            |
+                   |  - business    |            v
+                   |    rules       |        to the USER
+                   |  - database    |
+                   +----------------+
+   ```
+
+   Flow of one request — a login
+   ```
+      1. The user submits the login form.
+      2. The CONTROLLER receives POST /login and reads the fields.
+      3. The controller calls the MODEL : User.authenticate(u, p).
+      4. The MODEL checks the database and returns success or
+         failure.
+      5. On success the controller selects the DASHBOARD VIEW ; on
+         failure it selects the LOGIN VIEW with an error message.
+      6. The VIEW renders HTML and it is returned to the user.
+   ```
+
+   Advantages
+   - `Separation of concerns` — each part has one responsibility, so a change stays in one place.
+   - `Maintainability` — redesigning the UI touches only views; changing a business rule touches only the model.
+   - `Testability` — the model can be unit tested with no browser and no HTTP request.
+   - `Parallel development` — front-end and back-end developers work at the same time.
+   - `Reusability` — one model serves a web page, a mobile app and an API.
+
+   Disadvantages
+   - More files and more structure, which is overhead for a very small application.
+   - A learning curve, and a tendency toward `fat controllers` if business logic is put in the wrong layer.
+   - Navigating the layers is harder for someone new to the codebase.
+
+   - Frameworks that implement it: `Spring MVC` and `Struts` (Java), `ASP.NET MVC` (.NET), `Laravel` and `CodeIgniter` (PHP), `Django` (Python, which calls it MTV — Model, Template, View), `Ruby on Rails`.
+   - Two variants worth naming: `MVP (Model–View–Presenter)`, where the presenter holds all the display logic and the view is passive, used in Android; and `MVVM (Model–View–ViewModel)`, which adds two-way `data binding`, used in Angular, Vue and WPF.
 
 3. **Name of few architecture in design pattern.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 503 (ET: N/A)]*
 
+   Answer: Architectural patterns
+   ```
+      1. LAYERED (n-tier)
+           Presentation -> Business logic -> Data access -> Database.
+           Each layer talks only to the one below it.
+           Used in : most enterprise and banking applications.
+
+      2. CLIENT-SERVER
+           A client requests, a server responds.
+           Used in : web applications, email, database systems.
+
+      3. MVC (Model-View-Controller)
+           Data , presentation and input handling kept separate.
+           Used in : Spring MVC , Laravel , Django , ASP.NET MVC.
+
+      4. MICROSERVICES
+           The application is split into small, independently
+           deployable services, each with its own database,
+           communicating over the network.
+           Used in : Netflix , Amazon , Uber.
+
+      5. MONOLITHIC
+           The whole application built and deployed as ONE unit.
+           Simple, and still correct for small systems.
+
+      6. EVENT-DRIVEN (publish-subscribe)
+           Components emit EVENTS ; others subscribe and react. The
+           producer does not know who the consumers are.
+           Used in : Kafka , message queues , GUI toolkits.
+
+      7. PIPE AND FILTER
+           Data flows through a chain of independent processing
+           stages, each transforming it.
+           Used in : UNIX pipes , compilers , ETL pipelines.
+
+      8. REPOSITORY (data-centred)
+           All components share one central data store.
+           Used in : IDEs , CASE tools , information systems.
+
+      9. BROKER
+           A broker sits between clients and distributed servers and
+           routes the requests.
+           Used in : CORBA , message brokers.
+
+     10. SERVICE-ORIENTED ARCHITECTURE (SOA)
+           Coarse-grained business services, usually over an
+           enterprise service bus.
+
+     11. PEER-TO-PEER
+           Every node is both client and server.
+           Used in : BitTorrent , blockchain.
+
+     12. MASTER-SLAVE
+           A master divides work among slaves and combines the
+           results.
+           Used in : database replication , parallel processing.
+   ```
+
+   Design patterns — the GoF classification, for contrast
+   ```
+      CREATIONAL   how objects are created
+           Singleton , Factory Method , Abstract Factory , Builder ,
+           Prototype
+
+      STRUCTURAL   how objects are composed
+           Adapter , Bridge , Composite , Decorator , Facade ,
+           Flyweight , Proxy
+
+      BEHAVIOURAL  how objects interact
+           Observer , Strategy , Command , Iterator , State ,
+           Template Method , Chain of Responsibility , Mediator ,
+           Memento , Visitor , Interpreter
+   ```
+
+   The distinction worth stating
+   ```
+      ARCHITECTURAL PATTERN
+           System-wide. Decides the STRUCTURE of the whole
+           application - how it is divided and deployed.
+           Chosen ONCE, at the start, and expensive to change.
+           Example : layered , microservices , MVC.
+
+      DESIGN PATTERN
+           Class-level. Solves a RECURRING problem inside one part
+           of the code.
+           Many are used within a single application.
+           Example : Singleton , Observer , Factory.
+   ```
+   - Where the two meet: `MVC` is usually called an architectural pattern, because it organises the whole application, but it is built out of design patterns — the `Observer` pattern connects model to view, `Strategy` selects a controller action, and `Composite` builds the view hierarchy. That is why some books list MVC under both headings.
+
 4. **What is software design pattern? What are the advantages?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 471 (ET: N/A)]*
+
+   Answer: What a software design pattern is
+   - A `design pattern` is a general, reusable `solution to a recurring design problem`. It is not code that can be pasted in — it is a described `structure of classes and their interactions` that can be adapted to a particular situation.
+   ```
+      The idea comes from Christopher Alexander's work on building
+      architecture and was brought into software by the "Gang of
+      Four" - Gamma, Helm, Johnson and Vlissides - in DESIGN
+      PATTERNS (1994), which documented 23 patterns.
+
+      A pattern is documented with four parts :
+           NAME      - so designers can name the idea in one word
+           PROBLEM   - when to use it
+           SOLUTION  - the classes and their relationships
+           CONSEQUENCES - what it costs
+   ```
+
+   The three categories
+   ```
+      CREATIONAL   how objects are CREATED
+           Singleton , Factory Method , Abstract Factory , Builder ,
+           Prototype
+
+      STRUCTURAL   how objects are COMPOSED
+           Adapter , Bridge , Composite , Decorator , Facade ,
+           Flyweight , Proxy
+
+      BEHAVIOURAL  how objects INTERACT
+           Observer , Strategy , Command , Iterator , State ,
+           Template Method , Chain of Responsibility , Mediator ,
+           Memento , Visitor
+   ```
+
+   Advantages
+
+   1. Proven solutions
+   - The pattern has already been tried in many systems, so its strengths and weaknesses are known. Inventing a design from scratch means discovering those weaknesses in production.
+
+   2. A shared vocabulary
+   - Saying "use a `Factory` here" conveys in one word what would otherwise take a page of explanation. This is arguably the single biggest practical benefit — patterns give designers a language.
+
+   3. Maintainability and flexibility
+   - Patterns are built around `programming to an interface`, so a new variant is added as a new class rather than by editing existing code. That is the `open–closed principle`.
+   ```
+      Without a pattern :
+           if (type == "card")      payByCard();
+           else if (type == "cash") payByCash();
+           else if (type == "bkash") payByBkash();   <- edit every
+                                                        time
+      With STRATEGY :
+           payment.pay();     <- a new method is a NEW CLASS ;
+                                 this line never changes
+   ```
+
+   4. Reusability
+   - The same structure applies across domains. `Observer` serves a GUI button, a stock-price feed and a database trigger equally well.
+
+   5. Faster development, and better communication
+   - A designer who knows the catalogue reaches a workable design faster, and a reviewer recognises the intent immediately from the pattern name.
+
+   6. Easier testing
+   - Patterns that use interfaces make it simple to substitute a `mock` object, so units can be tested in isolation.
+
+   Disadvantages, which a complete answer should mention
+   ```
+      OVER-ENGINEERING - the commonest misuse. Applying a pattern
+           where a simple function would do adds classes, indirection
+           and confusion for no benefit.
+      COMPLEXITY - more classes to understand.
+      LEARNING CURVE - the code is unreadable to someone who does not
+           know the pattern.
+      NOT A SUBSTITUTE FOR DESIGN - a pattern answers a specific
+           question ; it does not tell you what to build.
+   ```
+   - The rule to state at the end: `a pattern should be applied when the problem it solves has actually appeared`, not in anticipation. Patterns are a response to a recurring problem, and using one before the problem exists is how simple code becomes complicated.
 
 5. **Define design pattern. Write about singleton pattern.** *[BREB Assistant Programmer 18.02.2023 compact it 469 (ET: N/A)]*
 
+   Answer: Definition of a design pattern
+   - A `design pattern` is a general, reusable `solution to a recurring design problem`. It is not code to be pasted in but a described `structure of classes and their interactions`, which is adapted to the situation at hand. The catalogue of 23 patterns from the `Gang of Four` (1994) divides them into `creational`, `structural` and `behavioural`.
+
+   The Singleton pattern
+   - `Singleton` is a `creational` pattern that ensures a class has `exactly one instance` and provides a single global point of access to it.
+   ```
+      THE PROBLEM it solves : some resources must exist only once -
+      a database connection pool, a configuration object, a logger,
+      a print spooler. Creating several would waste resources or
+      produce inconsistent state.
+   ```
+
+   Structure
+   ```mermaid
+   classDiagram
+       class Singleton {
+           -static Singleton instance
+           -Singleton()
+           +static getInstance() Singleton
+           +doSomething()
+       }
+       Singleton --> Singleton : holds its own instance
+   ```
+   ```
+      +--------------------------------------+
+      |             Singleton                |
+      +--------------------------------------+
+      | -static instance : Singleton         |
+      +--------------------------------------+
+      | -Singleton()          <- PRIVATE     |
+      | +static getInstance() : Singleton    |
+      | +doSomething()                       |
+      +--------------------------------------+
+   ```
+
+   The three essential parts
+   ```
+      1. A PRIVATE CONSTRUCTOR
+           so no other class can write  new Singleton()
+
+      2. A PRIVATE STATIC FIELD
+           holding the single instance
+
+      3. A PUBLIC STATIC METHOD  getInstance()
+           which creates the instance on first call and returns the
+           same one every time afterwards
+   ```
+
+   Implementation
+   ```java
+      // LAZY initialisation - created on first use
+      public class Logger {
+          private static Logger instance;
+          private Logger() { }                       // private
+
+          public static Logger getInstance() {
+              if (instance == null)
+                  instance = new Logger();
+              return instance;
+          }
+          public void log(String msg) {
+              System.out.println(msg);
+          }
+      }
+
+      // usage
+      Logger.getInstance().log("started");
+   ```
+   ```java
+      // THREAD-SAFE version - double-checked locking
+      public class Logger {
+          private static volatile Logger instance;
+          private Logger() { }
+
+          public static Logger getInstance() {
+              if (instance == null) {
+                  synchronized (Logger.class) {
+                      if (instance == null)
+                          instance = new Logger();
+                  }
+              }
+              return instance;
+          }
+      }
+   ```
+   - Why the plain lazy version is unsafe: two threads can both find `instance == null` and both create an object, so two instances exist. `volatile` plus the second check inside the lock fixes it. In Java the simplest correct form is an `enum` singleton, which the language guarantees to be single and thread-safe.
+
+   Where it is used
+   ```
+      database CONNECTION POOL      one pool for the application
+      CONFIGURATION object          one set of settings
+      LOGGER                        one log file, written in order
+      CACHE                         one shared cache
+      PRINT SPOOLER                 one queue for the printer
+      java.lang.Runtime             a real Singleton in the JDK
+   ```
+
+   Advantages and criticisms
+   ```
+      ADVANTAGES
+        guarantees ONE instance
+        a single global access point
+        saves memory and resources
+        LAZY creation - built only when first needed
+
+      CRITICISMS - and they are serious
+        it is GLOBAL STATE in disguise, which couples every user of
+             it to the class
+        it makes UNIT TESTING hard : the instance cannot easily be
+             replaced by a mock, and state leaks between tests
+        it hides DEPENDENCIES - a class using Logger.getInstance()
+             does not declare that it needs a logger
+        it VIOLATES the single-responsibility principle : the class
+             controls both its own logic and its own lifetime
+        it needs care in a MULTI-THREADED program, and breaks under
+             serialisation and reflection unless guarded
+   ```
+   - The modern alternative worth naming: `dependency injection`. The object is created once by a container and `passed in` to whoever needs it. This gives the same single instance while keeping the dependency visible and replaceable in tests — which is why Singleton is often described as the pattern most frequently misused.
+
 6. **We are going to create a Shape interface and concrete classes implementing the Shape interface. A facade class ShapeMaker is defined as a next step. ShapeMaker class uses the concrete classes to delegate user calls to these classes. FacadePatternDemo, our demo class, will use ShapeMaker class to show the results.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 450 (ET: BUET)]*
+
+   Answer: This describes the `Facade` pattern — a `structural` pattern that provides one simple interface to a set of classes, so the client does not deal with them individually.
+
+   Structure
+   ```mermaid
+   classDiagram
+       class Shape {
+           <<interface>>
+           +draw()
+       }
+       class Rectangle {
+           +draw()
+       }
+       class Square {
+           +draw()
+       }
+       class Circle {
+           +draw()
+       }
+       class ShapeMaker {
+           -Shape circle
+           -Shape rectangle
+           -Shape square
+           +drawCircle()
+           +drawRectangle()
+           +drawSquare()
+       }
+       class FacadePatternDemo
+       Shape <|.. Rectangle
+       Shape <|.. Square
+       Shape <|.. Circle
+       ShapeMaker --> Shape : uses
+       FacadePatternDemo --> ShapeMaker : uses
+   ```
+   ```
+      +---------------------+        +----------------------------+
+      | FacadePatternDemo   |------->|        ShapeMaker          |
+      |     (client)        |  uses  |        (FACADE)            |
+      +---------------------+        +----------------------------+
+                                     | -circle    : Shape         |
+                                     | -rectangle : Shape         |
+                                     | -square    : Shape         |
+                                     +----------------------------+
+                                     | +drawCircle()              |
+                                     | +drawRectangle()           |
+                                     | +drawSquare()              |
+                                     +----------------------------+
+                                                 | uses
+                                                 v
+                                     +----------------------------+
+                                     |     <<interface>> Shape    |
+                                     +----------------------------+
+                                     | +draw()                    |
+                                     +----------------------------+
+                                               /_\  (dashed -
+                                                :   realisation)
+                                 +--------------+--------------+
+                                 |              |              |
+                       +-----------+   +-----------+   +-----------+
+                       | Rectangle |   |  Square   |   |  Circle   |
+                       +-----------+   +-----------+   +-----------+
+                       | +draw()   |   | +draw()   |   | +draw()   |
+                       +-----------+   +-----------+   +-----------+
+   ```
+
+   The code
+   ```java
+      // 1. the interface
+      interface Shape {
+          void draw();
+      }
+
+      // 2. the concrete classes
+      class Rectangle implements Shape {
+          public void draw() { System.out.println("Rectangle::draw()"); }
+      }
+      class Square implements Shape {
+          public void draw() { System.out.println("Square::draw()"); }
+      }
+      class Circle implements Shape {
+          public void draw() { System.out.println("Circle::draw()"); }
+      }
+
+      // 3. the FACADE
+      class ShapeMaker {
+          private Shape circle, rectangle, square;
+
+          public ShapeMaker() {
+              circle    = new Circle();
+              rectangle = new Rectangle();
+              square    = new Square();
+          }
+          public void drawCircle()    { circle.draw();    }
+          public void drawRectangle() { rectangle.draw(); }
+          public void drawSquare()    { square.draw();    }
+      }
+
+      // 4. the client
+      public class FacadePatternDemo {
+          public static void main(String[] args) {
+              ShapeMaker shapeMaker = new ShapeMaker();
+              shapeMaker.drawCircle();
+              shapeMaker.drawRectangle();
+              shapeMaker.drawSquare();
+          }
+      }
+   ```
+
+   Output
+   ```
+      Circle::draw()
+      Rectangle::draw()
+      Square::draw()
+   ```
+
+   How the four roles map onto the pattern
+   ```
+      Shape                     the SUBSYSTEM INTERFACE
+      Rectangle, Square, Circle the SUBSYSTEM classes - the complex
+                                part the client should not have to
+                                know about
+      ShapeMaker                the FACADE - it CREATES the concrete
+                                objects and DELEGATES the calls
+      FacadePatternDemo         the CLIENT - it talks only to the
+                                facade
+   ```
+   - What the facade buys: the client writes `shapeMaker.drawCircle()` and never uses `new Circle()`. It does not know which classes exist, how they are constructed, or in what order. If `Triangle` is added, or `Circle` is renamed, `only ShapeMaker changes` — the client is untouched.
+   - What the pattern is `not`. `Facade` simplifies an existing interface; `Adapter` converts an interface into a different one the client expects. Facade's purpose is `simplicity`, Adapter's is `compatibility`. Also note that a facade does not hide the subsystem — a client that needs the detail can still use `Circle` directly, which is exactly what distinguishes a facade from an encapsulating wrapper.
 
 7. **Imagine a scenario where new child classes are introduced frequently from a basic class. The method calling sequences for every child class are the same but the implementation is different among the child classes. Here which design pattern would you like to apply? Explain the reasons with examples to support your answer.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
 
+   Answer: Pattern to apply: the `Template Method` pattern.
+
+   Why it fits the scenario exactly
+   ```
+      The scenario states two things :
+
+      1. "The method calling SEQUENCE for every child class is the
+          SAME"                 -> the ALGORITHM is fixed
+      2. "the IMPLEMENTATION is DIFFERENT among the child classes"
+                                -> the STEPS vary
+      3. "new child classes are introduced FREQUENTLY"
+                                -> extension must be cheap
+
+      TEMPLATE METHOD is defined as : keep the SKELETON of an
+      algorithm in a base class, and let subclasses override the
+      individual STEPS without changing the sequence.
+
+      That is a one-to-one match with the requirement.
+   ```
+
+   Structure
+   ```mermaid
+   classDiagram
+       class AbstractClass {
+           <<abstract>>
+           +templateMethod()
+           #step1()*
+           #step2()*
+           #step3()
+       }
+       class ChildA {
+           #step1()
+           #step2()
+       }
+       class ChildB {
+           #step1()
+           #step2()
+       }
+       AbstractClass <|-- ChildA
+       AbstractClass <|-- ChildB
+   ```
+   ```
+      +------------------------------------------+
+      |            AbstractClass                 |
+      |              {abstract}                  |
+      +------------------------------------------+
+      | +templateMethod()   <- FINAL : fixes the |
+      |                        SEQUENCE          |
+      | #step1()  {abstract} <- subclass MUST    |
+      | #step2()  {abstract}    implement        |
+      | #step3()             <- default , MAY be |
+      |                         overridden       |
+      +------------------------------------------+
+                       /_\
+                        |
+             +----------+----------+
+             |                     |
+      +-------------+       +-------------+
+      |   ChildA    |       |   ChildB    |
+      +-------------+       +-------------+
+      | #step1()    |       | #step1()    |
+      | #step2()    |       | #step2()    |
+      +-------------+       +-------------+
+   ```
+
+   Example — a report generator
+   ```java
+      abstract class ReportGenerator {
+
+          // THE TEMPLATE METHOD - the sequence is fixed here,
+          // and final so no subclass can change the order
+          public final void generate() {
+              openConnection();      // common - implemented here
+              fetchData();           // varies  - subclass
+              formatData();          // varies  - subclass
+              addHeaderFooter();     // common , may be overridden
+              export();              // varies  - subclass
+              closeConnection();     // common - implemented here
+          }
+
+          private void openConnection()  { /* common code */ }
+          private void closeConnection() { /* common code */ }
+          protected void addHeaderFooter() { /* default */ }
+
+          protected abstract void fetchData();
+          protected abstract void formatData();
+          protected abstract void export();
+      }
+
+      class SalesReport extends ReportGenerator {
+          protected void fetchData()  { /* query the sales tables */ }
+          protected void formatData() { /* group by region */ }
+          protected void export()     { /* write a PDF */ }
+      }
+
+      class PayrollReport extends ReportGenerator {
+          protected void fetchData()  { /* query the payroll tables */ }
+          protected void formatData() { /* group by department */ }
+          protected void export()     { /* write an Excel file */ }
+      }
+   ```
+   ```
+      Adding a TaxReport means writing ONE new class with three
+      methods. Nothing existing is edited, and the sequence cannot
+      accidentally be got wrong - because the base class owns it.
+   ```
+
+   Second example — the one everybody knows
+   ```
+      A COFFEE and TEA maker :
+
+           prepare() {
+                boilWater();      // same for both
+                brew();           // DIFFERS - coffee vs tea leaves
+                pourInCup();      // same for both
+                addCondiments();  // DIFFERS - sugar+milk vs lemon
+           }
+
+      The sequence is identical ; only two steps differ.
+   ```
+
+   Why the alternatives are worse here
+   ```
+      STRATEGY
+           Also swaps behaviour, but it replaces the WHOLE algorithm
+           with a different object, and it uses COMPOSITION. It does
+           not fix a shared SEQUENCE - and a shared sequence is
+           exactly what the scenario specifies. Strategy is the right
+           answer when the algorithms have nothing in common.
+
+      FACTORY METHOD
+           Decides WHICH object to create. It says nothing about a
+           calling sequence. Useful ALONGSIDE Template Method, not
+           instead of it.
+
+      ABSTRACT FACTORY
+           Creates FAMILIES of related objects - a different problem
+           entirely.
+
+      PLAIN INHERITANCE WITH NO TEMPLATE
+           Each child writes its own full method. The common steps
+           get DUPLICATED in every child, and a new developer can
+           easily put them in the wrong order. This is precisely what
+           Template Method prevents.
+   ```
+
+   - The mechanism that makes it work is the `Hollywood principle` — "don't call us, we'll call you". The base class calls down into the subclass, not the reverse. `Inversion of control` of this kind is why the sequence cannot be violated: the subclass never sees the order at all.
+   - One caution worth adding: Template Method uses `inheritance`, so a subclass is tightly bound to its parent, and a change in the base class affects every child. Where the variation is large or must change at run time, `Strategy` — which uses composition — is the better choice. Here, with a fixed sequence and frequent new subclasses, Template Method is correct.
+
 8. **(ক) 'ATM machine' এর Software Structure আঁকুন।** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) Software structure of an ATM machine — a `layered architecture`.
+   ```
+      +==============================================================+
+      |                  PRESENTATION LAYER                          |
+      |   +----------------+  +----------------+  +---------------+  |
+      |   | Screen / UI    |  | Keypad Handler |  | Voice Prompt  |  |
+      |   | Manager        |  |                |  |               |  |
+      |   +----------------+  +----------------+  +---------------+  |
+      +==============================================================+
+                                    |
+      +==============================================================+
+      |               APPLICATION / CONTROL LAYER                    |
+      |   +----------------+  +----------------+  +---------------+  |
+      |   | Session        |  | Transaction    |  | Menu / Flow   |  |
+      |   | Manager        |  | Controller     |  | Controller    |  |
+      |   +----------------+  +----------------+  +---------------+  |
+      +==============================================================+
+                                    |
+      +==============================================================+
+      |                 BUSINESS LOGIC LAYER                         |
+      |   +----------------+  +----------------+  +---------------+  |
+      |   | Authentication |  | Withdrawal     |  | Deposit       |  |
+      |   | Module (PIN)   |  | Module         |  | Module        |  |
+      |   +----------------+  +----------------+  +---------------+  |
+      |   +----------------+  +----------------+  +---------------+  |
+      |   | Balance /      |  | Fund Transfer  |  | Limit & Rule  |  |
+      |   | Statement      |  | Module         |  | Validator     |  |
+      |   +----------------+  +----------------+  +---------------+  |
+      +==============================================================+
+                                    |
+      +==============================================================+
+      |            DEVICE / HARDWARE ABSTRACTION LAYER               |
+      |   +------------+ +------------+ +-----------+ +-----------+  |
+      |   | Card       | | Cash       | | Receipt   | | Cash      |  |
+      |   | Reader Drv | | Dispenser  | | Printer   | | Acceptor  |  |
+      |   +------------+ +------------+ +-----------+ +-----------+  |
+      +==============================================================+
+                                    |
+      +==============================================================+
+      |          COMMUNICATION / NETWORK LAYER                       |
+      |   +----------------+  +----------------+  +---------------+  |
+      |   | Encryption /   |  | Message        |  | Network       |  |
+      |   | HSM Interface  |  | Formatter      |  | Client        |  |
+      |   |                |  | (ISO 8583)     |  |               |  |
+      |   +----------------+  +----------------+  +---------------+  |
+      +==============================================================+
+                                    |
+      +==============================================================+
+      |         DATA / LOGGING LAYER                                 |
+      |   +----------------+  +----------------+  +---------------+  |
+      |   | Local Journal  |  | Audit Trail    |  | Config Store  |  |
+      |   +----------------+  +----------------+  +---------------+  |
+      +==============================================================+
+                                    |
+                                    v
+                       +---------------------------+
+                       |   BANK SWITCH  ->  CORE   |
+                       |   BANKING SYSTEM          |
+                       |   (external)              |
+                       +---------------------------+
+   ```
+   ```mermaid
+   flowchart TD
+       A[Presentation: screen, keypad] --> B[Control: session, transaction]
+       B --> C[Business logic: auth, withdraw, deposit, limits]
+       C --> D[Device layer: card reader, dispenser, printer]
+       C --> E[Communication: encryption, ISO 8583, network]
+       C --> F[Data: journal, audit log]
+       E --> G[(Bank switch / Core banking)]
+   ```
+
+   What each layer does
+   ```
+      PRESENTATION
+           Draws the screens, reads the keypad, plays prompts. It
+           contains NO business rules - only display and input.
+
+      APPLICATION / CONTROL
+           SESSION MANAGER owns one customer's visit from card
+           insertion to card return, and enforces the timeouts.
+           TRANSACTION CONTROLLER sequences the steps of one
+           transaction and is responsible for ROLLBACK if a step
+           fails.
+
+      BUSINESS LOGIC
+           The rules : PIN verification, three-failure lockout,
+           per-transaction and daily limits, valid note multiples,
+           available balance. This layer is where the money rules
+           live, and it is the layer that must be unit tested
+           hardest.
+
+      DEVICE / HARDWARE ABSTRACTION
+           One driver per physical device, hiding the hardware behind
+           a uniform interface. This is what lets the same software
+           run on ATMs from different manufacturers.
+
+      COMMUNICATION
+           Formats the request as an ISO 8583 message, encrypts the
+           PIN block through the HSM, sends it to the bank switch and
+           handles timeouts and RETRIES.
+
+      DATA / LOGGING
+           The local JOURNAL - an append-only record of every
+           transaction, used for end-of-day reconciliation and
+           disputes. It must survive a power cut.
+   ```
+
+   The design points that matter
+   ```
+      TRANSACTION ATOMICITY
+           Debit and dispense must both happen or neither. If the
+           network drops after the debit, the Transaction Controller
+           sends a REVERSAL. This single requirement shapes the whole
+           control layer.
+
+      SECURITY BOUNDARY
+           The PIN is encrypted inside the HSM and never appears in
+           plain form in any other layer or in any log.
+
+      FAIL-SAFE DEFAULT
+           On any doubt the ATM refuses service. It must never
+           dispense on an unconfirmed authorisation.
+
+      LAYER RULE
+           Each layer talks ONLY to the layer directly below it. The
+           presentation layer must never call the cash dispenser -
+           that is what keeps the money rules in one place.
+   ```
+   - Why a `layered` architecture is the right choice here rather than, say, microservices: an ATM is a single physical device with hard real-time and safety constraints, and the layers map cleanly onto the separation the security requirements demand — presentation cannot reach the dispenser, and nothing can reach the network without passing through the encryption layer.
 
 9. **(ii) Design the communication for the user login system for an MVC pattern framework.** *[NESCO Assistant Manager (ICT) 2021 compact it 907 (ET: BUET)]*
 
+   Answer: Communication design for a login system in an MVC framework
+   ```mermaid
+   sequenceDiagram
+       actor User
+       participant V as View (login page)
+       participant C as Controller (LoginController)
+       participant M as Model (User)
+       participant DB as Database
+       User->>V: enter username, password
+       V->>C: POST /login (form data)
+       C->>C: validate input not empty
+       C->>M: authenticate(username, password)
+       M->>DB: SELECT * FROM users WHERE username=?
+       DB-->>M: user row + password hash
+       M->>M: hash(password) and compare
+       alt valid credentials
+           M-->>C: User object
+           C->>C: create session, store user id
+           C-->>V: redirect to dashboard view
+           V-->>User: dashboard page
+       else invalid credentials
+           M->>DB: increment failed_attempts
+           M-->>C: null / AuthException
+           C-->>V: login view + error message
+           V-->>User: "Invalid username or password"
+       end
+   ```
+   ```
+      User        VIEW        CONTROLLER      MODEL        DATABASE
+       |            |             |             |             |
+       | enter      |             |             |             |
+       | u/p        |             |             |             |
+       |----------->|             |             |             |
+       |            | POST /login |             |             |
+       |            |------------>|             |             |
+       |            |             | [validate   |             |
+       |            |             |  not empty] |             |
+       |            |             | authenticate|             |
+       |            |             |------------>|             |
+       |            |             |             | SELECT user |
+       |            |             |             |------------>|
+       |            |             |             |<- - - - - - |
+       |            |             |             | row + hash  |
+       |            |             |             | [hash and   |
+       |            |             |             |  compare]   |
+       |            |             |<- - - - - - |             |
+       |            |             | User object |             |
+       |            |             | [create     |             |
+       |            |             |  session]   |             |
+       |            |<- - - - - - |             |             |
+       |            | redirect to |             |             |
+       |            | dashboard   |             |             |
+       |<- - - - - -|             |             |             |
+       | dashboard  |             |             |             |
+
+      ------>  call        - - ->  return       [ ]  self-call
+   ```
+
+   Responsibility of each component
+   ```
+      VIEW  -  login.html / login.jsp
+           Displays the username and password fields and any error
+           message passed to it.
+           It contains NO business logic and NO database access -
+           presentation only.
+
+      CONTROLLER  -  LoginController
+           1. receives POST /login
+           2. reads the form fields
+           3. performs SHALLOW validation - are the fields present ?
+           4. calls the MODEL to authenticate
+           5. on success, CREATES THE SESSION and redirects
+           6. on failure, returns the login view with an error
+           It contains NO SQL and no password checking of its own.
+
+      MODEL  -  User
+           authenticate(username, password) :
+                fetch the stored SALT and PASSWORD HASH
+                hash the submitted password with that salt
+                compare in CONSTANT TIME
+                increment failed_attempts on failure ; lock after
+                     three
+                return the User object or null
+           ALL business rules live here : the lockout rule, the
+           account-active check, the password policy.
+
+      DATABASE
+           Stores username, password HASH, salt, failed_attempts,
+           account status. The plain password is stored NOWHERE.
+   ```
+
+   Where each rule belongs — the design decision being tested
+   ```
+      Field is empty              -> CONTROLLER  (input validation)
+      Password comparison         -> MODEL       (business rule)
+      Lock after 3 failures       -> MODEL       (business rule)
+      Which page to show next     -> CONTROLLER  (flow control)
+      How the error looks         -> VIEW        (presentation)
+
+      Putting the password check in the controller, or SQL in the
+      view, is the classic MVC violation. It makes the logic
+      untestable and unreusable.
+   ```
+
+   The route table
+   ```
+      GET  /login     LoginController.showForm()   -> login view
+      POST /login     LoginController.doLogin()    -> redirect or
+                                                      login view
+      GET  /logout    LoginController.logout()     -> destroy session
+      GET  /dashboard DashboardController.index()  -> requires an
+                                                      active session
+   ```
+   - Two points that carry marks. First, the error message must be a `single generic message` — "Invalid username or password" — for both a wrong username and a wrong password; distinguishing them reveals which accounts exist, which is `user enumeration`. Second, on success the response must be a `redirect`, not a rendered page: the `POST-redirect-GET` pattern stops the browser from re-submitting the login on refresh.
+   - Why this layering pays off: because `authenticate()` lives in the model with no dependency on HTTP, the same method serves the web login, a mobile API and an admin console, and it can be `unit tested` with no browser at all.
+
 10. **(i) MVC framework কী? এর সুবিধাগুলো লিখুন।** *[BPSC Assistant Network Engineer 2020 compact it 960 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) What an MVC framework is
+    - An `MVC framework` is a ready-made application skeleton built on the `Model–View–Controller` pattern. It supplies the routing, the request handling, the template engine and the database layer, so the developer writes only the models, views and controllers.
+    ```
+       MODEL       data and business rules ; database access
+       VIEW        presentation - what the user sees
+       CONTROLLER  receives the request , calls the model , chooses
+                   the view
+    ```
+    ```mermaid
+    flowchart LR
+        U[User] -->|1. request| C[Controller]
+        C -->|2. query/update| M[Model]
+        M -->|3. data| C
+        C -->|4. selects| V[View]
+        V -->|5. page| U
+    ```
+    - Examples: `Spring MVC` and `Struts` (Java), `ASP.NET MVC` (.NET), `Laravel` and `CodeIgniter` (PHP), `Django` (Python), `Ruby on Rails`.
+
+    Advantages
+
+    1. Separation of concerns
+    - Each part has one job. Changing the screen design touches only `views`; changing a business rule touches only the `model`. Without the separation, one change ripples through the whole application.
+
+    2. Maintainability
+    - Code has a known place, so a defect is found and fixed faster. A new developer knows where to look because the framework's conventions decide it.
+
+    3. Testability
+    - The `model` can be unit tested with no browser and no HTTP request, because it does not depend on the view. Logic buried in a template can only be tested by driving the UI.
+
+    4. Parallel development
+    - Front-end developers work on views while back-end developers work on models and controllers, at the same time.
+
+    5. Reusability
+    - One `model` serves a web page, a mobile app and an API — three views over the same business logic.
+
+    6. Multiple views of the same data
+    - The same data appears as an HTML table, a PDF and a chart, with no change to the model.
+
+    7. Built-in facilities
+    - The framework already provides routing, `ORM`, form validation, session handling, authentication, `CSRF` protection, caching and a template engine — so the developer does not write them again.
+
+    8. Security
+    - Validation and authorisation live in known places, so they can be reviewed and audited. Frameworks also supply protection against `SQL injection`, `XSS` and `CSRF` by default.
+
+    9. Faster development, and a common structure
+    - Conventions mean less configuration, and every project in the framework looks the same — which matters when a team changes.
+
+    Disadvantages, to note briefly
+    ```
+       more files and more structure - overhead for a very small site
+       a learning curve for the framework's conventions
+       a tendency toward FAT CONTROLLERS if logic is put in the wrong
+            layer
+       navigating the layers is harder for a newcomer
+    ```
+    - The rule of thumb: `views should contain no decisions and controllers should contain no business rules`. A controller ought to read as a short list of calls — validate, ask the model, pick a view. Anything longer means logic has leaked out of the model, and the benefits above are lost.
 
 11. **MVC framework কী? MVC Framework এর সুবিধাসমূহ লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
 
+    Answer: (Answered in English, as required for IT topics.) What the MVC framework is
+    - An `MVC framework` is a ready-made application skeleton built on the `Model–View–Controller` architectural pattern. It provides the routing, request handling, template engine and database layer, so the developer writes only the models, views and controllers.
+    ```
+       MODEL       the DATA and the BUSINESS RULES - validation,
+                   calculation, database access. It knows nothing
+                   about how it will be displayed.
+
+       VIEW        the PRESENTATION - HTML templates, forms, reports.
+                   It only displays ; it holds no business rules.
+
+       CONTROLLER  the INPUT HANDLER - receives the request, calls
+                   the model, and selects which view to return.
+    ```
+    ```mermaid
+    flowchart LR
+        U[User] -->|1. request| C[Controller]
+        C -->|2. query or update| M[Model]
+        M -->|3. data| C
+        C -->|4. selects with data| V[View]
+        V -->|5. rendered page| U
+    ```
+    ```
+                    +----------------+
+            request |   CONTROLLER   | selects view
+          --------->|  handles input |------------+
+                    |  calls model   |            |
+                    +----------------+            v
+                        |        ^          +-----------+
+            update /    |        | data     |   VIEW    |
+            query       v        |          +-----------+
+                    +----------------+            |
+                    |     MODEL      |            v
+                    | data , rules , |        to the USER
+                    | database       |
+                    +----------------+
+    ```
+    - Examples: `Spring MVC` and `Struts` (Java), `ASP.NET MVC` (.NET), `Laravel` and `CodeIgniter` (PHP), `Django` (Python), `Ruby on Rails`.
+
+    The advantages
+    ```
+       1. SEPARATION OF CONCERNS
+            Each layer has ONE job, so a change stays in one place.
+
+       2. MAINTAINABILITY
+            Redesigning the interface touches only views ; changing a
+            business rule touches only the model.
+
+       3. TESTABILITY
+            The model can be unit tested with no browser and no HTTP
+            request. Logic inside a template can only be tested by
+            driving the UI.
+
+       4. PARALLEL DEVELOPMENT
+            Front-end and back-end developers work simultaneously,
+            with the interface between them fixed.
+
+       5. REUSABILITY
+            One model serves a web page, a mobile app and an API.
+
+       6. MULTIPLE VIEWS of the same data - an HTML table, a PDF and
+            a chart, with no change to the model.
+
+       7. BUILT-IN FACILITIES
+            Routing, ORM, form validation, sessions, authentication,
+            CSRF protection, caching and templating come with the
+            framework.
+
+       8. SECURITY
+            Validation and authorisation sit in known places and can
+            be audited. Frameworks give SQL-injection, XSS and CSRF
+            protection by default.
+
+       9. FASTER DEVELOPMENT and a COMMON STRUCTURE, so every project
+            looks the same and a new developer knows where to look.
+    ```
+
+    Disadvantages
+    ```
+       more files and structure - overhead for a very small site
+       a learning curve for the framework's conventions
+       FAT CONTROLLERS if business logic is put in the wrong layer
+       harder for a newcomer to trace a request through the layers
+    ```
+    - Two variants worth naming: `MVP (Model–View–Presenter)`, where the presenter holds all display logic and the view is passive, used in Android; and `MVVM (Model–View–ViewModel)`, which adds two-way `data binding`, used in Angular, Vue and WPF.
+
 12. **What is MVC? Write down the MVC design pattern.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175-1176 (ET: N/A)]*
 
+    Answer: What MVC is
+    - `MVC` stands for `Model–View–Controller`. It is an architectural pattern that divides an application into three connected parts, so that the data, the display and the input handling are kept separate.
+
+    The three components
+    ```
+       MODEL
+            The DATA and the BUSINESS LOGIC - validation, calculation,
+            database access. It knows nothing about how it will be
+            displayed.
+            Example : User , Account , Order classes ; the rule that a
+            withdrawal may not exceed the balance.
+
+       VIEW
+            The PRESENTATION - HTML templates, forms, reports. It only
+            DISPLAYS data ; it contains no business rules.
+            Example : login.html , dashboard.jsp , invoice template.
+
+       CONTROLLER
+            The INPUT HANDLER - receives the user's request, validates
+            it, calls the model, and chooses which view to return.
+            Example : LoginController , OrderController.
+    ```
+
+    The MVC design pattern
+    ```mermaid
+    flowchart LR
+        U[User] -->|1. request| C[Controller]
+        C -->|2. update or query| M[Model]
+        M -->|3. data| C
+        C -->|4. selects with data| V[View]
+        V -->|5. rendered page| U
+    ```
+    ```
+                    +----------------+
+            request |   CONTROLLER   | selects view
+          --------->|  handles input |------------+
+                    |  calls model   |            |
+                    +----------------+            v
+                        |        ^          +-----------+
+            update /    |        | data     |   VIEW    |
+            query       v        |          |  display  |
+                    +----------------+      +-----------+
+                    |     MODEL      |            |
+                    | data           |            v
+                    | business rules |        to the USER
+                    | database       |
+                    +----------------+
+    ```
+
+    Flow of one request — a login
+    ```
+       1. The user submits the login form.
+       2. The CONTROLLER receives POST /login and reads the fields.
+       3. It calls the MODEL : User.authenticate(username, password).
+       4. The MODEL checks the database and returns success or
+          failure.
+       5. On success the controller creates a session and selects the
+          DASHBOARD view ; on failure it selects the LOGIN view with
+          an error message.
+       6. The VIEW renders the page and it is returned to the user.
+    ```
+
+    Where each responsibility belongs
+    ```
+       Field is empty              -> CONTROLLER  (input validation)
+       Password comparison         -> MODEL       (business rule)
+       Lock after three failures   -> MODEL       (business rule)
+       Which page to show next     -> CONTROLLER  (flow control)
+       How the error looks         -> VIEW        (presentation)
+
+       Putting the password check in the controller, or SQL in the
+       view, is the classic MVC violation - it makes the logic
+       untestable and unreusable.
+    ```
+
+    Advantages
+    - `Separation of concerns` — each part has one job, so a change stays in one place.
+    - `Maintainability` — redesigning the UI touches only views; changing a rule touches only the model.
+    - `Testability` — the model can be unit tested with no browser.
+    - `Parallel development` — front-end and back-end work simultaneously.
+    - `Reusability` — one model serves a web page, a mobile app and an API.
+
+    Disadvantages
+    - More files and structure, which is overhead for a very small application; a learning curve; and a tendency toward `fat controllers` when logic is placed in the wrong layer.
+
+    - Frameworks: `Spring MVC`, `Struts`, `ASP.NET MVC`, `Laravel`, `CodeIgniter`, `Django` (which calls it MTV), `Ruby on Rails`. Variants: `MVP`, where a presenter holds the display logic and the view is passive, and `MVVM`, which adds two-way `data binding`.
+
 13. **Explain desin pattern MVC with appropriate figure.** *[NESCO Manager (Software) 2018 compact it 1209 (ET: N/A)]*
+
+    Answer: The MVC design pattern
+    - `MVC (Model–View–Controller)` divides an application into three connected parts, so that the data, the display and the input handling are kept separate. It is the standard architecture for web applications.
+
+    The figure
+    ```mermaid
+    flowchart LR
+        U([User]) -->|1. request| C[CONTROLLER<br/>handles input<br/>selects view]
+        C -->|2. update / query| M[(MODEL<br/>data<br/>business rules<br/>database)]
+        M -->|3. returns data| C
+        C -->|4. selects, passes data| V[VIEW<br/>presentation<br/>HTML template]
+        V -->|5. rendered page| U
+    ```
+    ```
+                              +---------------------+
+                              |     CONTROLLER      |
+                  request     |  - receives input   |   selects view
+       USER ----------------->|  - validates        |------------------+
+         ^                    |  - calls the model  |                  |
+         |                    |  - picks the view   |                  |
+         |                    +---------------------+                  |
+         |                         |            ^                      |
+         |            update /     |            |  data                |
+         |            query        v            |                      v
+         |                    +---------------------+        +--------------------+
+         |                    |       MODEL         |        |       VIEW         |
+         |                    |  - data             |        |  - HTML template   |
+         |                    |  - business rules   |        |  - formatting      |
+         |                    |  - validation       |        |  - NO logic        |
+         |                    |  - database access  |        +--------------------+
+         |                    +---------------------+                  |
+         |                             |                               |
+         |                             v                               |
+         |                        +---------+                          |
+         |                        | DATABASE|                          |
+         |                        +---------+                          |
+         |                                                             |
+         +-------------------------- rendered page --------------------+
+    ```
+
+    The three components
+    ```
+       MODEL       the DATA and the BUSINESS RULES. Validation,
+                   calculation and database access live here. It
+                   knows NOTHING about how it will be displayed -
+                   which is what makes it reusable and testable.
+
+       VIEW        the PRESENTATION. Templates, forms and reports.
+                   It only DISPLAYS what it is given, and contains no
+                   business rules and no database access.
+
+       CONTROLLER  the INPUT HANDLER. Receives the request, performs
+                   shallow input validation, calls the model, and
+                   chooses which view to return. It contains no SQL
+                   and no business rules of its own.
+    ```
+
+    Flow of one request
+    ```
+       1. The user submits a form or clicks a link.
+       2. The CONTROLLER receives the request and reads the input.
+       3. It calls the MODEL, which applies the business rules and
+          reads or writes the database.
+       4. The MODEL returns the result.
+       5. The CONTROLLER selects a VIEW and hands it the data.
+       6. The VIEW renders the page, which is returned to the user.
+    ```
+
+    Example — a login
+    ```
+       POST /login
+            CONTROLLER  LoginController.doLogin()
+                        - checks the fields are not empty
+            MODEL       User.authenticate(username, password)
+                        - fetches the stored hash, compares, applies
+                          the three-failure lockout rule
+            VIEW        dashboard.html on success ,
+                        login.html with an error on failure
+    ```
+
+    Advantages
+    - `Separation of concerns` — each part has one job, so a change stays in one place.
+    - `Maintainability` — redesigning the interface touches only views; changing a rule touches only the model.
+    - `Testability` — the model can be unit tested with no browser and no HTTP request.
+    - `Parallel development` — front-end and back-end developers work at the same time.
+    - `Reusability` — one model serves a web page, a mobile app and an API.
+
+    - The rule that keeps the pattern intact: `views contain no decisions and controllers contain no business rules`. A controller should read as a short list of calls. Anything longer means logic has leaked out of the model — the `fat controller` problem, and the commonest way MVC is broken in practice.
 
 ## Software Requirements Engineering (10)
 
