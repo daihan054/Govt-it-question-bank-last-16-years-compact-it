@@ -754,11 +754,60 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **Math : Gold purity** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
+   Answer:
+   - Gold purity is measured in Karats (K), where pure gold is 24 Karats (100% gold):
+     - Purity Percentage $= \frac{\text{Karat}}{24} \times 100\%$
+     - 24K Gold $= \frac{24}{24} \times 100\% = 100\%$ pure gold
+     - 22K Gold $= \frac{22}{24} \times 100\% = 91.67\%$ gold (Ratio of Gold : Alloy $= 11 : 1$)
+     - 18K Gold $= \frac{18}{24} \times 100\% = 75.00\%$ gold (Ratio of Gold : Alloy $= 3 : 1$)
+   - Rule of Alligation for mixing two gold alloys of purities $K_1$ and $K_2$ to get target purity $K_m$:
+     $$\frac{\text{Weight}_1}{\text{Weight}_2} = \frac{K_2 - K_m}{K_m - K_1}$$
+
 2. **In the group of boys and girls, 4 of girls and 13 of boys are 12 years younger. If the members are girls from total members then what would be the strongest group between 12 years younger or more?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
+
+   Answer:
+   - Let total members $= N$, consisting of $B$ boys and $G$ girls ($N = B + G$).
+   - Number of members who are 12 years younger:
+     $$\text{Younger group} = 4\text{ (girls)} + 13\text{ (boys)} = 17\text{ members}$$
+   - Number of members who are older than 12 years:
+     $$\text{Older group} = N - 17\text{ members}$$
+   - Comparison:
+     - If $N > 34$: The "older than 12 years" group is larger (strongest).
+     - If $N < 34$: The "12 years younger" group ($17$ members) is larger (strongest).
+     - If $N = 34$: Both groups are equal in size ($17$ each).
 
 3. **In the three jars, milk and water are mixed with the ratio 1:2, 2:3, and 3:4. If all are mixed into one jar, what will be the ratio of milk and water?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
 
+   Answer:
+   - Assume equal capacity for each of the three jars.
+   - Let the capacity of each jar be $\text{LCM}(1+2, 2+3, 3+4) = \text{LCM}(3, 5, 7) = 105\text{ units}$.
+   - Quantity of Milk and Water in each jar:
+     - Jar 1 (Ratio 1:2):
+       $$\text{Milk}_1 = \frac{1}{3} \times 105 = 35\text{ units}, \quad \text{Water}_1 = \frac{2}{3} \times 105 = 70\text{ units}$$
+     - Jar 2 (Ratio 2:3):
+       $$\text{Milk}_2 = \frac{2}{5} \times 105 = 42\text{ units}, \quad \text{Water}_2 = \frac{3}{5} \times 105 = 63\text{ units}$$
+     - Jar 3 (Ratio 3:4):
+       $$\text{Milk}_3 = \frac{3}{7} \times 105 = 45\text{ units}, \quad \text{Water}_3 = \frac{4}{7} \times 105 = 60\text{ units}$$
+   - Combining all into one jar:
+     - $\text{Total Milk} = 35 + 42 + 45 = 122\text{ units}$
+     - $\text{Total Water} = 70 + 63 + 60 = 193\text{ units}$
+   - Resulting Ratio of Milk to Water $= 122 : 193$
+   - Answer: $122 : 193$
+
 4. **১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+   Answer:
+   - সূত্র: $M_1 \times D_1 = M_2 \times D_2$
+   - এখানে,
+     - $M_1 = 12\text{ জন}$
+     - $D_1 = 9\text{ দিন}$
+     - $M_2 = 18\text{ জন}$
+     - $D_2 = ?\text{ দিন}$
+   - মান বসিয়ে পাই:
+     $$12 \times 9 = 18 \times D_2 \implies D_2 = \frac{12 \times 9}{18} = \frac{108}{18} = 6\text{ দিন}$$
+   - উত্তর: 6 দিন
+
+
 
 ## Speed, Time, Distance & Boats (4)
 
