@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 105 questions
+**Table of Contents** — 10 subtopics · 105 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -12,6 +12,7 @@
 | 7 | [Recursion](#recursion-4) | 4 |
 | 8 | [Storage Classes & Scope](#storage-classes--scope-3) | 3 |
 | 9 | [Flowcharts & Algorithms](#flowcharts--algorithms-1) | 1 |
+| 10 | [Programming Concepts](#programming-concepts-0) | 0 |
 
 <!-- TOC END -->
 
@@ -957,3 +958,10 @@
    b. Database
    c. Terminal
    d. Process
+
+## Programming Concepts (0)
+**Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Polymorphism
+   (b) Inheritance
+   (c) Abstraction
+   (d) Encapsulation

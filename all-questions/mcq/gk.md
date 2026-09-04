@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 423 questions
+**Table of Contents** — 6 subtopics · 435 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
-| 2 | [International Affairs](#international-affairs-103) | 103 |
-| 3 | [Everyday Science](#everyday-science-78) | 78 |
+| 2 | [International Affairs](#international-affairs-104) | 104 |
+| 3 | [Everyday Science](#everyday-science-89) | 89 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -987,7 +987,7 @@
    C. রোবটি
    D. জেনেটিক্স
 
-## International Affairs (103)
+## International Affairs (104)
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) David Baker
    (b) John Jumper
@@ -1642,7 +1642,55 @@
    গ. ২৩০ কেভি
    ঘ. ১৩২ কেভি
 
-## Everyday Science (78)
+104. **গ) কোনো বিক্রেতাকে ৩.২৫ টাকা, ৪.৭৫ টাকা এবং ১১.৫০ টাকা একই ধরনের মুদ্রা দ্বারা পরিশোধ করতে গেলে সবচেয়ে বড় কত পয়সার মুদ্রার প্রয়োজন?** *[BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40 [bitbox it book 162]]*
+   ঘ) নদী ও স্রোতের ম্যাথ। __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 162]__
+   ক) কম্পিউটার নেটওয়ার্কিং এ OSI Layer এর ধাপ কয়টি? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 162]__
+   খ) C programming এ লেখা প্রোগ্রামকে Machine code এ রূপান্তর করা হয় কিসের সাহায্যে? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 162]__
+   গ) C programming এ ASCII keyword কতটি? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 162]__
+   ঘ) In Java, new object declear করার জন্য operator কোনটি ব্যবহার করা হয়? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 162]__
+
+ঙ) OOP তে একই মেথড একাধিক ভাবে ব্যবহার করার পদ্ধতিকে কি বলে? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+চ) IPv6 এর bit সংখ্যা কতটি? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+ছ) প্রোগ্রামিং এ সবচেয়ে কম Priority কোন Operator এর? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+জ) 1+1+1 এর বাইনারি যোগফল কত? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+ঝ) নেটওয়ার্কিং এর কোন লেয়ার এ Encryption/ Decryption করা হয়? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+ঞ) Array access করার পদ্ধতি কেমন? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+৫। Translation Bangla to English. __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+৬। Fill in the gap. __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+৭। Translate this sentence into negative. __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+৮। Knowledge কি ওয়ার্ড? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+৯। How many eggs have your hens - - - this month? -which of the following words best completes the above sentence __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+১০। War & Peace কার লেখা? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
+   40) [bitbox it book 163]__
+
+## Everyday Science (89)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -2204,6 +2252,72 @@
    a) Find the Signal-to-Noise Ratio (SNR) in linear form and decibels
    (dB) .
    b) If the bandwidth of the channel is B=3 MHz, calculate the channel capacity using Shannon's formula.
+
+79. **Which of the following is a variable-length, letter-and-number error-detection scheme, where on the sender side, the data is appended with the remainder obtained by dividing the data bits by a predetermined polynomial, and on the receiver side, error detection is performed by checking whether the received sequence is divisible by the same polynomial? [ নিচের কোনটি একটি variable-length, অক্ষর ও সংখ্যাভিত্তিক error-detection পদ্ধতি, যেখানে-প্রেরক (sender) পাশে ডাটা বিটকে একটি পূর্বনির্ধারিত polynomial দ্বারা ভাগ করে যে remainder পাওয়া যায় তা ডাটার সাথে যুক্ত করা হয়। গ্রাহক (receiver) পাশে প্রাপ্ত ডাটা একই polynomial দ্বারা ভাগ করে দেখা হয় ডাটা নিঃশেষে বিভাজ্য কি না]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
+   (a) CRC
+   (b) Hamming code
+   (c) Horizontal parity check
+   (d) Vertical parity check
+
+80. **Which of the following in the RAID configuration for achieving the highest-speed disk access at the cost of reliability? [ নিচের কোন RAID configuration সবচেয়ে বেশি disk access speed প্রদান করে, তবে Reliability( নির্ভরযোগ্যতা) কম থাকে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
+   (a) RAID 0
+   (b) RAID 1
+   (c) RAID 5
+   (d) RAID 6
+
+81. **For two 8-bit signed integers A and B in 2's complement format, which of the following will cause an overflow when A and B are added? [ দুই 8-bit signed integer A এবং B (2's complement ফরম্যাটে) যোগ করার সময় নিচের কোন ক্ষেত্রে overflow ঘটবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
+   (a) 0111 1111 and 1111 1110
+   (b) 0111 1111 and 0111 1110
+   (c) 1000 0000 and 0111 0000
+   (d) 1111 1111 and 1111 1111
+
+82. **The following postfix expression is evaluated where A = 14, B = 3, C = 5, and D = 6. What is its result? [ নিচের postfix expression টি evaluate করো, যেখানে A = 4, B = 3, C = 5, D = 6] A B C \\times + D B - C \\times -** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
+   (a) -3
+   (b) 0
+   (c) 14
+   (d) 403
+
+83. **Which of the following RAID levels allows data recovery if one disk fails? [ নিচের কোন RAID level এ এক ডিস্ক ব্যর্থ হলে ডাটা পুনরুদ্ধার সম্ভব?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
+   (a) RAID 0
+   (b) RAID 1
+   (c) RAID 6
+   (d) RAID 5
+
+84. **Which of the following is a computer architecture where multiple instructions execute in parallel by slightly offsetting the execution of different instructions? [ নিচের কোন কম্পিউটার আর্কিটেকচারে একাধিক instruction parallelভাবে execute হয়, কিন্তু execution কিছুটা offset (অল্প সময়ের ব্যবধান) দিয়ে হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*
+   (a) RISC
+   (b) Pipeline
+   (c) VLIW
+   (d) Von Neumann Architecture
+
+85. **For a non-negative integer X, which of the following operations gives the remainder after division of X by 8? [ একটি অঋণাত্মক পূর্ণসংখ্যা X-এর জন্য, নিচের কোন অপারেশনটি X কে 8 দিয়ে ভাগ করার পর অবশিষ্ট (remainder) দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
+   (a) Bitwise AND with 7
+   (b) Bitwise AND with 8
+   (c) Bitwise OR with 8
+   (d) Right shift X by 3 bits
+
+86. **Which of the following correctly describes RAID 5? [ নিচের কোনটি RAID 5-এর সঠিক বর্ণনা?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*
+   (a) Disk striping without parity
+   (b) Block-level striping with a dedicated parity disk
+   (c) Block-level striping with distributed parity disks
+   (d) Mirroring without parity
+
+87. **A transaction that leaves the database in an inconsistent state if partially executed violates— [কোন transaction database কে inconsistent state-এ ফেলে, যদি এটি partial execute হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Atomicity
+   (b) Consistency
+   (c) Isolation
+   (d) Durability
+
+88. **(123.4)_\{10\} = ()_\{16\}?** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
+   (a) (7B.4)_\{16\}
+   (b) (7B.6)_\{16\}
+   (c) (7B.8)_\{16\}
+   (d) (7C.6)_\{16\}
+
+89. **If x = 2 and y = 3, what is the value of 2x^2 + 3y^2? [ যদি x = 2 এবং y = 3, তাহলে 2x^2 + 3y^2 কত হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
+   (a) 25
+   (b) 30
+   (c) 35
+   (d) 40
 
 ## Geography & Environment (26)
 

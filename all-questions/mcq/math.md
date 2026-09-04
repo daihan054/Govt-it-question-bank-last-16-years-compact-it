@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 148 questions
+**Table of Contents** — 15 subtopics · 154 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Algebra](#algebra-41) | 41 |
+| 1 | [Algebra](#algebra-42) | 42 |
 | 2 | [Geometry](#geometry-23) | 23 |
 | 3 | [Percentage, Profit & Loss](#percentage-profit--loss-21) | 21 |
 | 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
@@ -11,19 +11,19 @@
 | 6 | [Set Theory](#set-theory-8) | 8 |
 | 7 | [Average & Age Problems](#average--age-problems-6) | 6 |
 | 8 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
-| 9 | [Permutation & Combination](#permutation--combination-5) | 5 |
-| 10 | [Trigonometry](#trigonometry-4) | 4 |
-| 11 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 12 | [Analytical Reasoning](#analytical-reasoning-3) | 3 |
-| 13 | [Speed, Time & Distance](#speed-time--distance-0) | 0 |
-| 14 | [Time & Work](#time--work-0) | 0 |
+| 9 | [Analytical Reasoning](#analytical-reasoning-6) | 6 |
+| 10 | [Permutation & Combination](#permutation--combination-5) | 5 |
+| 11 | [Trigonometry](#trigonometry-4) | 4 |
+| 12 | [Probability & Statistics](#probability--statistics-4) | 4 |
+| 13 | [Time & Work](#time--work-2) | 2 |
+| 14 | [Speed, Time & Distance](#speed-time--distance-0) | 0 |
 | 15 | [Basic Arithmetic](#basic-arithmetic-0) | 0 |
 
 <!-- TOC END -->
 
 ---
 
-## Algebra (41)
+## Algebra (42)
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -281,6 +281,12 @@
    খ. ১০
    গ. ১৭
    ঘ. ২০
+
+42. **Which search algorithm expands nodes level by level before moving deeper? [ কোন সার্চ অ্যালগরিদমটি নোডগুলোকে স্তর (level) অনুযায়ী প্রসারিত করে তারপর গভীরে যায়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*
+   (a) DFS
+   (b) BFS
+   (c) Hill climbing
+   (d) A\*
 
 ## Geometry (23)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -840,6 +846,75 @@
    c. 91
    d. 114
 
+## Analytical Reasoning (6)
+1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
+   (a) 4.24 meters
+   (b) 5.24 meters
+   (c) 3.24 meters
+   (d) 4 meters
+
+2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
+   (a) 1
+   (b) 2
+   (c) 3
+   (d) 4
+
+3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+**বিদ্যুৎ আবিষ্কার কততম শিল্প বিপ্লবের সূচনা সম্পর্কিত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ২য়
+   খ. ৩য়
+   গ. ৬ষ্ঠ
+   ঘ. ৪র্থ
+
+**ম্যারাথন যেমন একটি দৌড়, ঠিক তেমনি শীতঘুমদাতা (hibernation) হলো-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. শীত
+   খ. গ্রীষ্ম
+   গ. ঘুম
+   ঘ. জেগে থাকা
+
+**রামন বলছে 'অনূজের মা হলো আমার মায়ের একমাত্র মেয়ে' তাহলে রামনের সাথে অনূজের সম্পর্ক কি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক ভাই
+   খ ভাগিনা
+   গ বাবা
+   ঘ কোনটি নয়
+
+**এই চিত্রটিতে মোট কতটি ত্রিভুজ আছে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ২০
+   খ. ২০ এর অধিক
+   গ. ১৬
+   ঘ. ১৮
+
+**নিচের সংখ্যার ধারাটিতে ভুল সংখ্যা খুঁজে বের করুন: ৮,১৩, ২১, ৩২, ৪৭, ৬৩, ৮৩** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ৪৭
+   খ. ৬৩
+   গ. ৩২
+   ঘ. ৮৩
+
+**একটি সারিতে ব্যক্তিদের মধ্যে, সাবিকের অবস্থান বাম দিক থেকে ২৬তম এবং ডান দিক থেকে ৩৫তম। তাহলে সারিতে মোট ছাত্রছাত্রীর সংখ্যা হবে:** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ৩২
+   খ. ৪৬
+   গ. ৬০
+   ঘ. ৭২
+
+4. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
+   (a) When a cache hit occurs, the CPU fetches data from ROM.
+   (b) When a cache hit occurs, the CPU fetches data from main memory.
+   (c) When a cache miss occurs, the CPU fetches data from cache memory.
+   (d) When a cache miss occurs, the CPU fetches data from main memory.
+
+5. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
+   (a) DRAM requires more power than SRAM
+   (b) SRAM requires fewer transistors per bit than DRAM
+   (c) SRAM does not need refreshing while DRAM does
+   (d) SRAM stores data in capacitors while DRAM uses flip-flops
+
+6. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*
+   (a) Its content can be erased electrically in blocks
+   (b) It requires periodin rewriting of data.
+   (c) It can be rewritten at high speed and used as CPU cache
+   (d) Its entire content is erased by ultraviolet light
+
 ## Permutation & Combination (5)
 
 1. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*
@@ -922,56 +997,24 @@
    c. 5/6
    d. 1/6
 
-## Analytical Reasoning (3)
-1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
-   (a) 4.24 meters
-   (b) 5.24 meters
-   (c) 3.24 meters
-   (d) 4 meters
+## Time & Work (2)
+1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ৪ দিন
+   খ. ৫ দিন
+   গ. ৬ দিন
+   ঘ. ৭ দিন
 
-2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
-   (a) 1
-   (b) 2
-   (c) 3
-   (d) 4
+**পাইপ A একটি ট্যাঙ্ক ২০ মিনিটে ভর্তি করতে পারে, পাইপ B ৩০ মিনিটে ভর্তি করতে পারে এবং পাইপ C সেই ট্যাঙ্কটি ৪০ মিনিটে খালি করতে পারে। যদি এই তিনটি পাইপ একসাথে চালু করা হয়, তাহলে ট্যাঙ্কটি ভর্তি হতে কত সময় লাগবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ১৭.১৪ মিনিট
+   খ. ২০ মিনিট
+   গ. ৮ মিনিট
+   ঘ. কোনোটিই নয়
 
-3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
-
-**বিদ্যুৎ আবিষ্কার কততম শিল্প বিপ্লবের সূচনা সম্পর্কিত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
-   ক. ২য়
-   খ. ৩য়
-   গ. ৬ষ্ঠ
-   ঘ. ৪র্থ
-
-**ম্যারাথন যেমন একটি দৌড়, ঠিক তেমনি শীতঘুমদাতা (hibernation) হলো-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. শীত
-   খ. গ্রীষ্ম
-   গ. ঘুম
-   ঘ. জেগে থাকা
-
-**রামন বলছে 'অনূজের মা হলো আমার মায়ের একমাত্র মেয়ে' তাহলে রামনের সাথে অনূজের সম্পর্ক কি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক ভাই
-   খ ভাগিনা
-   গ বাবা
-   ঘ কোনটি নয়
-
-**এই চিত্রটিতে মোট কতটি ত্রিভুজ আছে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. ২০
-   খ. ২০ এর অধিক
-   গ. ১৬
-   ঘ. ১৮
-
-**নিচের সংখ্যার ধারাটিতে ভুল সংখ্যা খুঁজে বের করুন: ৮,১৩, ২১, ৩২, ৪৭, ৬৩, ৮৩** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. ৪৭
-   খ. ৬৩
-   গ. ৩২
-   ঘ. ৮৩
-
-**একটি সারিতে ব্যক্তিদের মধ্যে, সাবিকের অবস্থান বাম দিক থেকে ২৬তম এবং ডান দিক থেকে ৩৫তম। তাহলে সারিতে মোট ছাত্রছাত্রীর সংখ্যা হবে:** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ৩২
-   খ. ৪৬
-   গ. ৬০
-   ঘ. ৭২
+2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Switch
+   (b) Hub
+   (c) Router
+   (d) Modem
 
 ## Speed, Time & Distance (0)
 **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
@@ -985,19 +1028,6 @@
    খ. ২২৪ কি.মি.
    গ. ২৩০ কি.মি.
    ঘ. ২৩৪ কি.মি.
-
-## Time & Work (0)
-**যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
-   ক. ৪ দিন
-   খ. ৫ দিন
-   গ. ৬ দিন
-   ঘ. ৭ দিন
-
-**পাইপ A একটি ট্যাঙ্ক ২০ মিনিটে ভর্তি করতে পারে, পাইপ B ৩০ মিনিটে ভর্তি করতে পারে এবং পাইপ C সেই ট্যাঙ্কটি ৪০ মিনিটে খালি করতে পারে। যদি এই তিনটি পাইপ একসাথে চালু করা হয়, তাহলে ট্যাঙ্কটি ভর্তি হতে কত সময় লাগবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
-   ক. ১৭.১৪ মিনিট
-   খ. ২০ মিনিট
-   গ. ৮ মিনিট
-   ঘ. কোনোটিই নয়
 
 ## Basic Arithmetic (0)
 **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*

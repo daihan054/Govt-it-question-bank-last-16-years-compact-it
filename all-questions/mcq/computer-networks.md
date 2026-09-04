@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 302 questions
+**Table of Contents** — 13 subtopics · 303 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
-| 2 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-57) | 57 |
+| 2 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
 | 5 | [Wireless & Mobile Communication](#wireless--mobile-communication-23) | 23 |
@@ -375,7 +375,7 @@
    c. Variable Optical Internet Protocol
    d. None of these
 
-## Networking Fundamentals & Terminology (57)
+## Networking Fundamentals & Terminology (58)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -735,6 +735,12 @@
    খ. সফটওয়্যার
    গ. স্যাটেলাইট
    ঘ. ইন্টারনেট সেবাদানকারী প্রতিষ্ঠান
+
+58. **What is the primary function of a Repeater in a computer network?** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*
+   (a) To filter network traffic and manage bandwidth
+   (b) To route data packets between different networks based on IP addresses
+   (c) To regenerate and amplify signals to extend the physical length of the network
+   (d) To connect networks with different architectures or protocols
 
 ## Network Devices & Configuration (38)
 

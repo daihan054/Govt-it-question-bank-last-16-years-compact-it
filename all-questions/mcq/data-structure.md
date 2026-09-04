@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 83 questions
+**Table of Contents** — 7 subtopics · 86 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,7 +8,8 @@
 | 3 | [Tree & Binary Search Tree](#tree--binary-search-tree-20) | 20 |
 | 4 | [Linked List](#linked-list-10) | 10 |
 | 5 | [Priority Queue & Heap](#priority-queue--heap-3) | 3 |
-| 6 | [Hashing & Hash Tables](#hashing--hash-tables-2) | 2 |
+| 6 | [Data Structures & Algorithms](#data-structures--algorithms-3) | 3 |
+| 7 | [Hashing & Hash Tables](#hashing--hash-tables-2) | 2 |
 
 <!-- TOC END -->
 
@@ -517,6 +518,25 @@
    b) Only at the front end
    c) Only at the rear end
    d) Any position
+
+## Data Structures & Algorithms (3)
+1. **When sorting an array using randomized quicksort (pivot chosen randomly), what are the average-case and worst-case time complexities? [ যখন একটি অ্যারে randomized quicksort ব্যবহার করে sort করা হয় (pivot র‍্যান্ডমভাবে নির্বাচন করা হয়), তখন এর average-case এবং worst-case time complexity কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
+   (a) O(n \\log n), O(n)
+   (b) O(n \\log n), O(n^2)
+   (c) O(n), O(n \\log n)
+   (d) O(n^2), O(n^2)
+
+2. **Which of the following is not a linear data structure? [ নিচের কোনটি linear data structure নয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
+   (a) Queue
+   (b) Stack
+   (c) Tree
+   (d) Linked List
+
+3. **Which OS concept allows multiple processes to run simultaneously? [ কোন OS concept একাধিক process একসাথে চলার অনুমতি দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
+   (a) Multithreading
+   (b) Multiprocessing
+   (c) Multilevel Queue
+   (d) Time slicing
 
 ## Hashing & Hash Tables (2)
 

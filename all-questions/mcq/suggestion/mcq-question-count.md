@@ -1,17 +1,17 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2743** questions.
+Sorted by count, highest first. Total **2769** questions.
 
 ## IT questions
 
-Total: **1617** questions.
+Total: **1625** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **302** |
+| **Computer Networks** | **— all subcategories —** | **303** |
 | | Application Layer Protocols | 58 |
-| | Networking Fundamentals & Terminology | 57 |
+| | Networking Fundamentals & Terminology | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
 | | Wireless & Mobile Communication | 23 |
@@ -37,8 +37,8 @@ Total: **1617** questions.
 | | Database Connectivity (JDBC/ODBC) | 5 |
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
-| **Computer Fundamentals** | **— all subcategories —** | **143** |
-| | Hardware Components & Peripherals | 41 |
+| **Computer Fundamentals** | **— all subcategories —** | **145** |
+| | Hardware Components & Peripherals | 43 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -59,6 +59,7 @@ Total: **1617** questions.
 | | Recursion | 4 |
 | | Storage Classes & Scope | 3 |
 | | Flowcharts & Algorithms | 1 |
+| | Programming Concepts | 0 |
 | **Object Oriented Programming (OOP)** | **— all subcategories —** | **100** |
 | | Java Programming | 48 |
 | | Polymorphism & Overloading | 16 |
@@ -67,19 +68,27 @@ Total: **1617** questions.
 | | Inheritance | 6 |
 | | Constructors & Destructors | 6 |
 | | Exception Handling | 6 |
+| **Data Structure** | **— all subcategories —** | **86** |
+| | Data Structure Basics | 25 |
+| | Stack & Queue | 23 |
+| | Tree & Binary Search Tree | 20 |
+| | Linked List | 10 |
+| | Priority Queue & Heap | 3 |
+| | Data Structures & Algorithms | 3 |
+| | Hashing & Hash Tables | 2 |
 | **Microprocessor & Computer Architecture** | **— all subcategories —** | **85** |
 | | CPU & Registers | 35 |
 | | Memory Hierarchy | 28 |
 | | Secondary Storage (HDD & Disk Organization) | 13 |
 | | RAID & Storage Architecture | 5 |
 | | Assembly Language & Machine Code | 4 |
-| **Data Structure** | **— all subcategories —** | **83** |
-| | Data Structure Basics | 25 |
-| | Stack & Queue | 23 |
-| | Tree & Binary Search Tree | 20 |
-| | Linked List | 10 |
-| | Priority Queue & Heap | 3 |
-| | Hashing & Hash Tables | 2 |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **75** |
+| | Number Systems & Binary Arithmetic | 45 |
+| | Logic Gates & Universal Gates | 16 |
+| | Sequential Circuits (Flip-Flops) | 6 |
+| | Boolean Algebra & Simplification | 4 |
+| | Combinational Circuits (MUX, Decoder) | 2 |
+| | Digital Logic & Number Systems | 2 |
 | **Operating System** | **— all subcategories —** | **74** |
 | | Process Management & Scheduling | 24 |
 | | OS Concepts & Multiprogramming | 16 |
@@ -88,12 +97,6 @@ Total: **1617** questions.
 | | Deadlock | 6 |
 | | File Systems & Disk Management | 4 |
 | | Process Synchronization | 2 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **73** |
-| | Number Systems & Binary Arithmetic | 45 |
-| | Logic Gates & Universal Gates | 16 |
-| | Sequential Circuits (Flip-Flops) | 6 |
-| | Boolean Algebra & Simplification | 4 |
-| | Combinational Circuits (MUX, Decoder) | 2 |
 | **Algorithm** | **— all subcategories —** | **70** |
 | | Sorting Algorithms | 20 |
 | | Searching Algorithms | 18 |
@@ -152,14 +155,14 @@ Total: **1617** questions.
 
 ## General Questions
 
-Total: **1126** questions.
+Total: **1144** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **423** |
+| **General Knowledge** | **— all subcategories —** | **435** |
 | | Bangladesh Affairs | 171 |
-| | International Affairs | 103 |
-| | Everyday Science | 78 |
+| | International Affairs | 104 |
+| | Everyday Science | 89 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
@@ -178,8 +181,8 @@ Total: **1126** questions.
 | | কারক ও বিভক্তি | 0 |
 | | সন্ধি ও বিচ্ছেদ | 0 |
 | | বানান ও শুদ্ধিকরণ | 0 |
-| **Math** | **— all subcategories —** | **148** |
-| | Algebra | 41 |
+| **Math** | **— all subcategories —** | **154** |
+| | Algebra | 42 |
 | | Geometry | 23 |
 | | Percentage, Profit & Loss | 21 |
 | | Arithmetic & Number Series | 16 |
@@ -187,10 +190,10 @@ Total: **1126** questions.
 | | Set Theory | 8 |
 | | Average & Age Problems | 6 |
 | | Ratio & Proportion | 6 |
+| | Analytical Reasoning | 6 |
 | | Permutation & Combination | 5 |
 | | Trigonometry | 4 |
 | | Probability & Statistics | 4 |
-| | Analytical Reasoning | 3 |
+| | Time & Work | 2 |
 | | Speed, Time & Distance | 0 |
-| | Time & Work | 0 |
 | | Basic Arithmetic | 0 |

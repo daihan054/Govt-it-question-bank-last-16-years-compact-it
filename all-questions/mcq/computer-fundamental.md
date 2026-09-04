@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 143 questions
+**Table of Contents** — 6 subtopics · 145 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-41) | 41 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-43) | 43 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (41)
+## Hardware Components & Peripherals (43)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -267,6 +267,18 @@
    খ. microphone
    গ. printer
    ঘ. Speaker
+
+42. **In a CPU, which of the following is a special register that contains the address of the next instruction to be fetched? [ CPU-তে কোনটি এমন একটি বিশেষ রেজিস্টার যা পরবর্তী যে instructionটি fetch করা হবে তার ঠিকানা (address) সংরক্ষণ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
+   (a) Instruction Register
+   (b) Program Counter
+   (c) Index Register
+   (d) General Purpose Register
+
+43. **The main drawback of hill climbing is— [Hill climbing-এর প্রধান দুর্বলতা কী?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
+   (a) Expands all nodes
+   (b) Requires heuristic functions
+   (c) Can get stuck in local optima
+   (d) Uses too much memory
 
 ## Software Types & Classification (40)
 
