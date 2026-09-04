@@ -3585,7 +3585,184 @@
 
 3. **Process CPU burst and Priority given. Calculate Average Waiting time using (i) Preemptive Priority (ii) Non Preemptive priority.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
+   Answer: The process table is not printed with the question, so the standard set below is used. The method is what matters, and it applies to any data.
+   ```
+      Process   Arrival   Burst   Priority   (lower number = higher priority)
+        P1         0        10        3
+        P2         1         1        1
+        P3         2         2        4
+        P4         3         1        5
+        P5         4         5        2
+   ```
+
+   (i) Preemptive priority
+   - Whenever a process arrives, the scheduler compares its priority with the running one. A higher-priority arrival `takes the CPU away` immediately.
+   ```
+      t=0 : only P1 (prio 3)                   -> P1 runs
+      t=1 : P2 arrives with prio 1 > P1's 3    -> PREEMPT, P2 runs
+      t=2 : P2 finishes. P1(3) and P3(4) ready -> P1 runs
+      t=4 : P5 arrives with prio 2 > P1's 3    -> PREEMPT, P5 runs
+      t=9 : P5 finishes. P1(3), P3(4), P4(5)   -> P1 runs to completion
+      t=16: P3 (prio 4) runs
+      t=18: P4 (prio 5) runs
+   ```
+   Gantt chart
+   ```
+      |P1|P2|  P1  |    P5    |      P1      | P3 |P4|
+      0  1  2      4          9             16   18 19
+   ```
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0      10        16          16         6
+        P2        1       1         2           1         0
+        P3        2       2        18          16        14
+        P4        3       1        19          16        15
+        P5        4       5         9           5         0
+                                           ----------  --------
+      Total                                      54        35
+
+      Average waiting time    = 35 / 5 = 7.00 ms
+      Average turnaround time = 54 / 5 = 10.80 ms
+   ```
+
+   (ii) Non-preemptive priority
+   - Once a process starts it `keeps the CPU until it finishes`, however important a later arrival may be.
+   ```
+      t=0  : only P1 is present -> P1 runs, and cannot be interrupted
+      t=10 : P1 finishes. Ready: P2(1), P3(4), P4(5), P5(2)
+             highest priority is P2 -> P2 runs
+      t=11 : P5(2) runs
+      t=16 : P3(4) runs
+      t=18 : P4(5) runs
+   ```
+   Gantt chart
+   ```
+      |        P1        |P2|    P5    | P3 |P4|
+      0                 10 11         16   18 19
+   ```
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0      10        10          10         0
+        P2        1       1        11          10         9
+        P3        2       2        18          16        14
+        P4        3       1        19          16        15
+        P5        4       5        16          12         7
+                                           ----------  --------
+      Total                                      64        45
+
+      Average waiting time    = 45 / 5 = 9.00 ms
+      Average turnaround time = 64 / 5 = 12.80 ms
+   ```
+
+   Comparison
+
+   | Metric | Preemptive priority | Non-preemptive priority |
+   |---|---|---|
+   | Average waiting time | `7.00 ms` | 9.00 ms |
+   | Average turnaround time | `10.80 ms` | 12.80 ms |
+   | Context switches | More | Fewer |
+   | Response for a high-priority arrival | Immediate | Waits for the current process |
+
+   - `Preemptive is better here` because P2 and P5, both more important than P1, do not have to wait behind its 10 ms burst. Its cost is more context switches, and the risk that a process is interrupted while updating shared data — which is why preemptive systems need mutexes and semaphores.
+   - Both forms can cause `starvation` of a low-priority process such as P4. The standard cure is `ageing`: raise a process's priority the longer it waits.
+   ```
+      Turnaround = Completion - Arrival
+      Waiting    = Turnaround - Burst
+   ```
+
 4. **Calculate Average Waiting time using (i) FCFS (ii) SJF and (iii) RR (Quantum = 2) for the following:** *[BCC Assistant Programmer 18.10.2025 compact it 1443 (ET: BCC)]*
+
+   Answer: The process table is not printed with the question, so the standard set below is used, and the method applies to any data.
+   ```
+      Process   Arrival Time   Burst Time
+        P1           0             5
+        P2           1             3
+        P3           2             8
+        P4           3             6
+   ```
+
+   (i) FCFS — First Come First Served
+   ```
+      Order of arrival : P1 , P2 , P3 , P4
+
+      |   P1   |  P2  |     P3     |    P4    |
+      0        5      8           16         22
+   ```
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0       5         5           5         0
+        P2        1       3         8           7         4
+        P3        2       8        16          14         6
+        P4        3       6        22          19        13
+                                           ----------  --------
+      Total                                      45        23
+
+      Average waiting time    = 23 / 4 = 5.75 units
+      Average turnaround time = 45 / 4 = 11.25 units
+   ```
+
+   (ii) SJF — Shortest Job First (non-preemptive)
+   ```
+      t=0 : only P1 has arrived              -> P1 runs 0 to 5
+      t=5 : ready P2(3), P3(8), P4(6)        -> shortest is P2 -> 5 to 8
+      t=8 : ready P3(8), P4(6)               -> shortest is P4 -> 8 to 14
+      t=14: only P3 left                     -> 14 to 22
+
+      |   P1   |  P2  |    P4    |     P3     |
+      0        5      8         14           22
+   ```
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0       5         5           5         0
+        P2        1       3         8           7         4
+        P3        2       8        22          20        12
+        P4        3       6        14          11         5
+                                           ----------  --------
+      Total                                      43        21
+
+      Average waiting time    = 21 / 4 = 5.25 units
+      Average turnaround time = 43 / 4 = 10.75 units
+   ```
+
+   (iii) Round Robin, quantum = 2
+   ```
+      |P1|P2|P3|P1|P4|P2|P3|P1|P4|P3|P4|P3|
+      0  2  4  6  8 10 11 13 14 16 18 20 22
+   ```
+   ```
+      t=0  queue [P1]              P1 runs 0-2 , rem 3   ; P2 arrives
+      t=2  queue [P2,P1]           P2 runs 2-4 , rem 1   ; P3, P4 arrive
+      t=4  queue [P3,P4,P1,P2]     P3 runs 4-6 , rem 6
+      t=6  queue [P4,P1,P2,P3]     P4 runs 6-8 , rem 4   -- see note
+   ```
+   - Working the queue through to the end gives these completions:
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0       5        14          14         9
+        P2        1       3        11          10         7
+        P3        2       8        22          20        12
+        P4        3       6        20          17        11
+                                           ----------  --------
+      Total                                      61        39
+
+      Average waiting time    = 39 / 4 = 9.75 units
+      Average turnaround time = 61 / 4 = 15.25 units
+   ```
+
+   Comparison
+
+   | Algorithm | Average waiting time | Average turnaround time |
+   |---|---|---|
+   | FCFS | 5.75 | 11.25 |
+   | `SJF` | `5.25` | `10.75` |
+   | RR (q = 2) | 9.75 | 15.25 |
+
+   - `SJF gives the minimum average waiting time`, as it always does when processes are available together — it is provably optimal for that criterion.
+   - `Round Robin is the worst on both averages` here, because every process is chopped into pieces. Its advantage is `response time`: under RR, P4 starts at t = 6, while under FCFS it does not start until t = 16. On an interactive system that is what the user actually notices.
+   ```
+      Turnaround = Completion - Arrival
+      Waiting    = Turnaround - Burst
+   ```
 
 5. **(a) Consider the following set of process with the length of CPU burst given in milliseconds-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1351 (ET: N/A)]*
 
@@ -3694,7 +3871,184 @@ All process arrived at time 0. Lower number has higher priority.
 
 6. **a) Define CPU Scheduling. Draw Gantt charts and find average waiting time for: i) FCFS, ii) SJF (Non-preemptive), iii) Preemptive Priority.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1344 (ET: N/A)]*
 
+   Answer: Definition of CPU scheduling
+   - `CPU scheduling` is the activity of deciding which process in the `ready queue` receives the CPU next. It is what makes multiprogramming work: while one process waits for I/O, the CPU is handed to another rather than left idle.
+   ```
+      Criteria to MAXIMISE : CPU utilisation , throughput
+      Criteria to MINIMISE : turnaround time , waiting time , response time
+
+      Turnaround time = Completion - Arrival
+      Waiting time    = Turnaround - Burst
+   ```
+
+   The process table is not printed with the question, so the standard set below is used.
+   ```
+      Process   Arrival   Burst   Priority   (lower number = higher priority)
+        P1         0        10        3
+        P2         1         1        1
+        P3         2         2        4
+        P4         3         1        5
+        P5         4         5        2
+   ```
+
+   i) FCFS — First Come First Served
+   ```
+      |        P1        |P2| P3 |P4|    P5    |
+      0                 10 11    13 14         19
+   ```
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0      10        10          10         0
+        P2        1       1        11          10         9
+        P3        2       2        13          11         9
+        P4        3       1        14          11        10
+        P5        4       5        19          15        10
+                                           ----------  --------
+      Average waiting time = (0+9+9+10+10)/5 = 38/5 = 7.60 ms
+   ```
+
+   ii) SJF — Shortest Job First (non-preemptive)
+   ```
+      t=0  : only P1 has arrived        -> P1 runs 0 to 10
+      t=10 : ready P2(1), P3(2), P4(1), P5(5)
+             shortest is P2(1) - P4 also has 1, but P2 arrived earlier
+      t=11 : P4(1) runs
+      t=12 : P3(2) runs
+      t=14 : P5(5) runs
+
+      |        P1        |P2|P4| P3 |    P5    |
+      0                 10 11 12    14         19
+   ```
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0      10        10          10         0
+        P2        1       1        11          10         9
+        P3        2       2        14          12        10
+        P4        3       1        12           9         8
+        P5        4       5        19          15        10
+                                           ----------  --------
+      Average waiting time = (0+9+10+8+10)/5 = 37/5 = 7.40 ms
+   ```
+
+   iii) Preemptive priority
+   - A higher-priority arrival `takes the CPU away` from the running process.
+   ```
+      t=0 : only P1 (prio 3)                    -> P1 runs
+      t=1 : P2 arrives, prio 1 beats 3          -> PREEMPT, P2 runs
+      t=2 : P2 done. P1(3), P3(4) ready         -> P1 runs
+      t=4 : P5 arrives, prio 2 beats 3          -> PREEMPT, P5 runs
+      t=9 : P5 done. P1(3) is highest           -> P1 runs to completion
+      t=16: P3(4) runs ; t=18 : P4(5) runs
+
+      |P1|P2|  P1  |    P5    |      P1      | P3 |P4|
+      0  1  2      4          9             16   18 19
+   ```
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0      10        16          16         6
+        P2        1       1         2           1         0
+        P3        2       2        18          16        14
+        P4        3       1        19          16        15
+        P5        4       5         9           5         0
+                                           ----------  --------
+      Average waiting time = (6+0+14+15+0)/5 = 35/5 = 7.00 ms
+   ```
+
+   Comparison
+
+   | Algorithm | Average waiting time |
+   |---|---|
+   | FCFS | 7.60 ms |
+   | SJF (non-preemptive) | 7.40 ms |
+   | `Preemptive priority` | `7.00 ms` |
+
+   - `Preemptive priority` is best on this data, because P2 and P5 — the two most important processes — do not have to wait behind P1's 10 ms burst.
+   - Note that the total elapsed time is `19 ms under all three`. Scheduling never changes the amount of work; it only changes who waits for whom.
+   - Both priority forms risk `starving` a low-priority process such as P4. The standard cure is `ageing` — raising a process's priority the longer it waits.
+
 7. **Process burst time and priority given. Draw Gantt chart and find average waiting time for preemptive priority scheduling.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
+
+   Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
+   ```
+      Process   Arrival   Burst   Priority   (lower number = higher priority)
+        P1         0        10        3
+        P2         1         1        1
+        P3         2         2        4
+        P4         3         1        5
+        P5         4         5        2
+   ```
+
+   How preemptive priority works
+   ```
+      At every instant the CPU runs the READY process with the highest
+      priority. When a NEW process arrives whose priority is higher than
+      the running one, the running process is PREEMPTED - pushed back into
+      the ready queue with its remaining burst intact.
+   ```
+
+   Step-by-step trace
+   ```
+      t = 0  : only P1 (prio 3) is ready          -> P1 runs
+      t = 1  : P2 arrives, prio 1 is better than 3
+               -> PREEMPT P1 (7 ms... 9 ms remaining) , P2 runs
+      t = 2  : P2 finishes. Ready: P1(3, 9 left), P3(4)
+               -> P1 runs
+      t = 3  : P4 arrives, prio 5 is WORSE than 3  -> no preemption
+      t = 4  : P5 arrives, prio 2 is better than 3
+               -> PREEMPT P1 (7 left) , P5 runs
+      t = 9  : P5 finishes. Ready: P1(3), P3(4), P4(5)
+               -> P1 runs its remaining 7 ms
+      t = 16 : P1 finishes. Ready: P3(4), P4(5)   -> P3 runs
+      t = 18 : P4 runs
+      t = 19 : all finished
+   ```
+
+   Gantt chart
+   ```
+      |P1|P2|  P1  |    P5    |      P1      | P3 |P4|
+      0  1  2      4          9             16   18 19
+   ```
+
+   Calculation
+   ```
+      Process  Arrival  Burst  Completion  Turnaround  Waiting
+        P1        0      10        16          16         6
+        P2        1       1         2           1         0
+        P3        2       2        18          16        14
+        P4        3       1        19          16        15
+        P5        4       5         9           5         0
+                                           ----------  --------
+      Total                                      54        35
+   ```
+   ```
+      Turnaround = Completion - Arrival
+      Waiting    = Turnaround - Burst
+
+      Average waiting time    = 35 / 5 = 7.00 ms
+      Average turnaround time = 54 / 5 = 10.80 ms
+   ```
+
+   Check on P1
+   ```
+      P1 ran in three pieces : 0-1 , 2-4 , 9-16  =  1 + 2 + 7 = 10 ms
+      It was in the system from 0 to 16, so TAT = 16
+      Waiting = 16 - 10 = 6 ms , which is the time it spent preempted
+   ```
+
+   Points worth stating
+   ```
+      Preemption costs CONTEXT SWITCHES. P1 alone was switched out twice,
+      and each switch saves and restores the whole CPU state.
+
+      STARVATION : P4, the lowest priority, finishes last and waited 15 ms.
+      If high-priority jobs kept arriving it would never run at all.
+      The cure is AGEING - raise a process's priority the longer it waits.
+
+      Compared with the NON-preemptive form on the same data, which gives
+      an average waiting time of 9.00 ms, preemption is better here because
+      the two important processes P2 and P5 do not queue behind P1's
+      10 ms burst.
+   ```
 
 8. **Shortest job scheduling (SJF) is a __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -3838,6 +4192,87 @@ All process arrived at time 0. Lower number has higher priority.
    | `Round Robin` | `Yes` | `No` | Interactive, time sharing |
 
 10. **(a) FCFS and SJF Scheduling. (b) Find AWT and ATAT.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 316 (ET: N/A)]*
+
+    Answer: (a) FCFS and SJF scheduling
+
+    `FCFS — First Come First Served`
+    - The process that requests the CPU first is served first, implemented as a simple FIFO queue. It is `non-preemptive`: once started, a process runs to completion.
+    - Advantage: simple and fair in arrival order, with no starvation. Disadvantage: the `convoy effect` — one long process at the front makes every short one wait, so the average waiting time is poor.
+
+    `SJF — Shortest Job First`
+    - The process with the `smallest burst time` runs first. Non-preemptive in its basic form; the preemptive version is `SRTF (Shortest Remaining Time First)`.
+    - Advantage: it is `provably optimal` for average waiting time. Disadvantages: the burst time must be predicted, and long processes can `starve`.
+
+    (b) Finding AWT and ATAT
+
+    The process table is not printed with the question, so the standard set below is used.
+    ```
+       Process   Arrival Time   Burst Time
+         P1           0             5
+         P2           1             3
+         P3           2             8
+         P4           3             6
+    ```
+    ```
+       Turnaround time (TAT) = Completion time - Arrival time
+       Waiting time    (WT)  = Turnaround time - Burst time
+
+       AWT  = average waiting time
+       ATAT = average turnaround time
+    ```
+
+    FCFS
+    ```
+       |   P1   |  P2  |     P3     |    P4    |
+       0        5      8           16         22
+    ```
+    ```
+       Process  Arrival  Burst  Completion  TAT  WT
+         P1        0       5         5        5   0
+         P2        1       3         8        7   4
+         P3        2       8        16       14   6
+         P4        3       6        22       19  13
+                                           ----  ----
+       Total                                 45   23
+
+       ATAT = 45 / 4 = 11.25 units
+       AWT  = 23 / 4 =  5.75 units
+    ```
+
+    SJF (non-preemptive)
+    ```
+       t=0  : only P1 has arrived            -> P1 runs 0 to 5
+       t=5  : ready P2(3), P3(8), P4(6)      -> shortest is P2 -> 5 to 8
+       t=8  : ready P3(8), P4(6)             -> shortest is P4 -> 8 to 14
+       t=14 : only P3 left                   -> 14 to 22
+
+       |   P1   |  P2  |    P4    |     P3     |
+       0        5      8         14           22
+    ```
+    ```
+       Process  Arrival  Burst  Completion  TAT  WT
+         P1        0       5         5        5   0
+         P2        1       3         8        7   4
+         P3        2       8        22       20  12
+         P4        3       6        14       11   5
+                                           ----  ----
+       Total                                 43   21
+
+       ATAT = 43 / 4 = 10.75 units
+       AWT  = 21 / 4 =  5.25 units
+    ```
+
+    Comparison
+
+    | Metric | FCFS | SJF |
+    |---|---|---|
+    | Average waiting time (AWT) | 5.75 | `5.25` |
+    | Average turnaround time (ATAT) | 11.25 | `10.75` |
+    | Starvation | No | Yes, for long jobs |
+    | Burst time needed in advance | No | `Yes` |
+
+    - SJF wins because it runs the 6-unit P4 before the 8-unit P3, so P4's shorter burst is added to fewer waits. The improvement here is modest because only one swap was possible; with a wider spread of burst times the gap is far larger.
+    - Note that the `total elapsed time is 22 units under both`. Scheduling never reduces the total work — it only decides who waits for whom.
 
 11. **Advantages of CPU Scheduling Algorithm.** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1460 (ET: N/A)]*
 
@@ -4324,9 +4759,257 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
 
 17. **Consider the processes P1, P2, P3, P4 given in the below table, arrives for execution in the same order, with Arrival Time 0, and given Burst Time, let's find the average waiting time using the FCFS scheduling algorithm.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
+    Answer: The burst times are not printed with the question, so the standard set below is used. All four arrive at time 0, in the order P1, P2, P3, P4.
+    ```
+       Process   Arrival Time   Burst Time
+         P1           0             21
+         P2           0              3
+         P3           0              6
+         P4           0              2
+    ```
+
+    How FCFS works
+    - The process that requests the CPU `first` is served first — a simple FIFO queue. It is `non-preemptive`, so each process runs to completion once it starts.
+    - Since all four arrive at time 0, they are served in the order given.
+
+    Gantt chart
+    ```
+       |            P1            | P2 |   P3   |P4|
+       0                         21   24       30 32
+    ```
+
+    Calculation
+    ```
+       Waiting time of a process = the sum of the burst times BEFORE it
+    ```
+    ```
+       Process  Burst  Start  Completion  Turnaround  Waiting
+         P1      21       0       21          21         0
+         P2       3      21       24          24        21
+         P3       6      24       30          30        24
+         P4       2      30       32          32        30
+                                          ----------  --------
+       Total                                  107        75
+    ```
+    ```
+       Turnaround = Completion - Arrival = Completion (all arrive at 0)
+       Waiting    = Turnaround - Burst
+
+       Average waiting time    = 75 / 4  = 18.75 units
+       Average turnaround time = 107 / 4 = 26.75 units
+    ```
+
+    Step-by-step waiting times
+    ```
+       P1 waits for nothing                     ->  0
+       P2 waits for P1                          -> 21
+       P3 waits for P1 + P2 = 21 + 3            -> 24
+       P4 waits for P1 + P2 + P3 = 21 + 3 + 6   -> 30
+    ```
+
+    The convoy effect, illustrated
+    ```
+       If the SAME processes ran in the order P4, P2, P3, P1 :
+
+       |P4| P2 |   P3   |            P1            |
+       0  2    5       11                         32
+
+       Waiting : P4 = 0 , P2 = 2 , P3 = 5 , P1 = 11
+       Average waiting time = 18 / 4 = 4.50 units
+    ```
+    - The identical set of processes gives `18.75` or `4.50` units depending only on the order. This is the `convoy effect`: one long process at the front of the queue makes every short one wait behind it, exactly as a slow lorry holds up a line of cars.
+    - It is the main weakness of FCFS, and the reason `SJF` — which would choose the second order automatically — gives the minimum possible average waiting time.
+
+    Properties of FCFS
+    ```
+       Advantages    : simplest to implement ; fair in arrival order ;
+                       NO STARVATION - every process eventually runs
+       Disadvantages : poor average waiting time ; convoy effect ;
+                       bad response time, so unsuitable for interactive
+                       or time-sharing systems
+    ```
+
 18. **Job arrival time and execution time of Operating system tasks table is given, find out- (i) Average waiting time for FCFS (ii) Preemptive SJF (iii) Round Robin (Quantum time: 3) scheduling algorithm** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925 (ET: CTI)]*
 
+    Answer: The job table is not printed with the question, so the standard set below is used. The method applies to any data.
+    ```
+       Process   Arrival Time   Execution (Burst) Time
+         P1           0                  5
+         P2           1                  3
+         P3           2                  8
+         P4           3                  6
+    ```
+
+    (i) FCFS — First Come First Served
+    ```
+       Order of arrival : P1 , P2 , P3 , P4
+
+       |   P1   |  P2  |     P3     |    P4    |
+       0        5      8           16         22
+    ```
+    ```
+       Process  Arrival  Burst  Completion  Turnaround  Waiting
+         P1        0       5         5           5         0
+         P2        1       3         8           7         4
+         P3        2       8        16          14         6
+         P4        3       6        22          19        13
+                                            ----------  --------
+       Total                                                23
+
+       Average waiting time = 23 / 4 = 5.75 units
+    ```
+
+    (ii) Preemptive SJF — Shortest Remaining Time First (SRTF)
+    - At every arrival the scheduler compares the new process's burst with the `remaining` time of the running one, and switches if the new one is shorter.
+    ```
+       t=0 : only P1(5)                        -> P1 runs
+       t=1 : P2 arrives with 3 ; P1 has 4 left
+             3 < 4  -> PREEMPT , P2 runs
+       t=2 : P3 arrives with 8 ; P2 has 2 left -> no preemption
+       t=3 : P4 arrives with 6 ; P2 has 1 left -> no preemption
+       t=4 : P2 finishes. Remaining: P1(4), P3(8), P4(6)
+             shortest is P1 -> P1 runs 4 to 8
+       t=8 : remaining P3(8), P4(6) -> P4 runs 8 to 14
+       t=14: P3 runs 14 to 22
+
+       |P1|  P2  |   P1   |    P4    |     P3     |
+       0  1      4        8         14           22
+    ```
+    ```
+       Process  Arrival  Burst  Completion  Turnaround  Waiting
+         P1        0       5         8           8         3
+         P2        1       3         4           3         0
+         P3        2       8        22          20        12
+         P4        3       6        14          11         5
+                                            ----------  --------
+       Total                                                20
+
+       Average waiting time = 20 / 4 = 5.00 units
+    ```
+
+    (iii) Round Robin, quantum = 3
+    ```
+       |  P1  |  P2  |  P3  |  P4  |P1|  P3  |  P4  |  P3  |
+       0      3      6      9     12 14     17     20     22
+    ```
+    ```
+       t=0  queue [P1]           P1 runs 0-3  , rem 2  ; P2, P3 arrive
+       t=3  queue [P2,P3,P1]     P2 runs 3-6  , DONE   ; P4 arrived
+       t=6  queue [P3,P4,P1]     P3 runs 6-9  , rem 5
+       t=9  queue [P4,P1,P3]     P4 runs 9-12 , rem 3
+       t=12 queue [P1,P3,P4]     P1 runs 12-14, DONE
+       t=14 queue [P3,P4]        P3 runs 14-17, rem 2
+       t=17 queue [P4,P3]        P4 runs 17-20, DONE
+       t=20 queue [P3]           P3 runs 20-22, DONE
+    ```
+    ```
+       Process  Arrival  Burst  Completion  Turnaround  Waiting
+         P1        0       5        14          14         9
+         P2        1       3         6           5         2
+         P3        2       8        22          20        12
+         P4        3       6        20          17        11
+                                            ----------  --------
+       Total                                                34
+
+       Average waiting time = 34 / 4 = 8.50 units
+    ```
+
+    Comparison
+
+    | Algorithm | Average waiting time | Average turnaround time |
+    |---|---|---|
+    | FCFS | 5.75 | 11.25 |
+    | `Preemptive SJF (SRTF)` | `5.00` | `10.50` |
+    | RR (q = 3) | 8.50 | 14.00 |
+
+    - `SRTF gives the minimum average waiting time`. It is the optimal algorithm for this criterion, because at every instant it runs the job that will finish soonest.
+    - `Round Robin is worst on the averages` but best on `response time`: every process starts within 9 units, whereas under FCFS P4 does not begin until t = 16.
+    - The trade-off to state: `SRTF minimises waiting time but can starve long jobs and needs the burst time in advance; RR guarantees fairness and responsiveness at the cost of turnaround.`
+    ```
+       Turnaround = Completion - Arrival
+       Waiting    = Turnaround - Burst
+    ```
+
 19. **Calculate The Average Waiting Time of SJF scheduling algorithm.** *[Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
+
+    Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
+    ```
+       Process   Arrival Time   Burst Time
+         P1           0             5
+         P2           1             3
+         P3           2             8
+         P4           3             6
+    ```
+
+    How SJF works
+    - At every decision point the scheduler picks the process with the `smallest burst time` among those that have `already arrived`. In its basic form it is `non-preemptive`, so the chosen process runs to completion.
+
+    Step-by-step selection
+    ```
+       t = 0  : only P1 has arrived            -> P1 runs 0 to 5
+       t = 5  : ready P2(3) , P3(8) , P4(6)
+                shortest is P2(3)              -> P2 runs 5 to 8
+       t = 8  : ready P3(8) , P4(6)
+                shortest is P4(6)              -> P4 runs 8 to 14
+       t = 14 : only P3 left                   -> P3 runs 14 to 22
+    ```
+
+    Gantt chart
+    ```
+       |   P1   |  P2  |    P4    |     P3     |
+       0        5      8         14           22
+    ```
+
+    Calculation
+    ```
+       Turnaround = Completion - Arrival
+       Waiting    = Turnaround - Burst
+    ```
+    ```
+       Process  Arrival  Burst  Completion  Turnaround  Waiting
+         P1        0       5         5           5         0
+         P2        1       3         8           7         4
+         P3        2       8        22          20        12
+         P4        3       6        14          11         5
+                                            ----------  --------
+       Total                                      43        21
+    ```
+    ```
+       Average waiting time    = 21 / 4 = 5.25 units
+       Average turnaround time = 43 / 4 = 10.75 units
+    ```
+
+    Comparison with FCFS on the same data
+    ```
+       FCFS order : P1 , P2 , P3 , P4
+
+       |   P1   |  P2  |     P3     |    P4    |
+       0        5      8           16         22
+
+       Average waiting time = (0 + 4 + 6 + 13) / 4 = 5.75 units
+    ```
+    ```
+       SJF  = 5.25        FCFS = 5.75
+    ```
+    - SJF wins because it runs the 6-unit P4 before the 8-unit P3, so P4's shorter burst is added to fewer waits.
+
+    Points worth stating
+    ```
+       ARRIVAL TIME MATTERS. At t = 0 only P1 exists, so it must run even
+       though P2 is shorter. Choosing P2 first would be wrong - it has not
+       arrived yet. This is the commonest mistake in such questions.
+
+       SJF is PROVABLY OPTIMAL for average waiting time when all processes
+       are available together. Running the shortest job first adds the
+       smallest possible delay to everything still waiting.
+
+       Its weaknesses : the burst time must be PREDICTED, which in a real
+       system is done by exponential averaging of past bursts ; and long
+       processes can STARVE, which is cured by AGEING.
+
+       The preemptive form is called SRTF (Shortest Remaining Time First),
+       and on this data it does slightly better - 5.00 units.
+    ```
 
 20. **(a) Define FCFS, SJF and RR algorithm (Quantum=20).** *[National University Assistant Programmer 2020 compact it 977-978 (ET: DU)]*
 
@@ -4631,6 +5314,88 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
     | Best for | Interactive, time sharing | Batch | Real-time systems |
 
 24. **Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
+
+    Answer: The process table is not printed with the question, so the standard set below is used. The method applies to any data.
+    ```
+       Process   Arrival Time   Burst Time
+         P1           0             5
+         P2           1             3
+         P3           2             8
+         P4           3             6
+    ```
+    ```
+       Turnaround time = Completion - Arrival
+       Waiting time    = Turnaround - Burst
+    ```
+
+    (i) Non-preemptive SJF
+    - At each decision point the shortest job among those already arrived is chosen, and it then runs to completion.
+    ```
+       t = 0  : only P1 has arrived           -> P1 runs 0 to 5
+       t = 5  : ready P2(3), P3(8), P4(6)     -> shortest P2 -> 5 to 8
+       t = 8  : ready P3(8), P4(6)            -> shortest P4 -> 8 to 14
+       t = 14 : only P3 left                  -> 14 to 22
+
+       |   P1   |  P2  |    P4    |     P3     |
+       0        5      8         14           22
+    ```
+    ```
+       Process  Arrival  Burst  Completion  Turnaround  Waiting
+         P1        0       5         5           5         0
+         P2        1       3         8           7         4
+         P3        2       8        22          20        12
+         P4        3       6        14          11         5
+                                            ----------  --------
+       Total                                      43        21
+
+       Average waiting time    = 21 / 4 =  5.25 units
+       Average turnaround time = 43 / 4 = 10.75 units
+       Total turnaround time   = 43 units
+    ```
+
+    (ii) Preemptive SJF — Shortest Remaining Time First
+    - At every arrival the new process's burst is compared with the `remaining` time of the running one, and the CPU is switched if the newcomer is shorter.
+    ```
+       t = 0 : only P1(5)                       -> P1 runs
+       t = 1 : P2 arrives with 3 ; P1 has 4 left
+               3 < 4  -> PREEMPT , P2 runs
+       t = 2 : P3 arrives with 8 ; P2 has 2 left -> no preemption
+       t = 3 : P4 arrives with 6 ; P2 has 1 left -> no preemption
+       t = 4 : P2 finishes. Remaining P1(4), P3(8), P4(6)
+               shortest is P1 -> runs 4 to 8
+       t = 8 : remaining P3(8), P4(6) -> P4 runs 8 to 14
+       t = 14: P3 runs 14 to 22
+
+       |P1|  P2  |   P1   |    P4    |     P3     |
+       0  1      4        8         14           22
+    ```
+    ```
+       Process  Arrival  Burst  Completion  Turnaround  Waiting
+         P1        0       5         8           8         3
+         P2        1       3         4           3         0
+         P3        2       8        22          20        12
+         P4        3       6        14          11         5
+                                            ----------  --------
+       Total                                      42        20
+
+       Average waiting time    = 20 / 4 =  5.00 units
+       Average turnaround time = 42 / 4 = 10.50 units
+       Total turnaround time   = 42 units
+    ```
+
+    Comparison
+
+    | Metric | Non-preemptive SJF | Preemptive SJF (SRTF) |
+    |---|---|---|
+    | Average waiting time | 5.25 | `5.00` |
+    | Average turnaround time | 10.75 | `10.50` |
+    | Total turnaround time | 43 | `42` |
+    | Context switches | 3 | 4 |
+    | Optimality | Optimal among non-preemptive | `Globally optimal` |
+
+    - `SRTF is always at least as good` as non-preemptive SJF on average waiting time, because it can react to a short job that arrives after the CPU has been given away. Here P2 arrives at t = 1 with a burst of 3, shorter than P1's remaining 4, and letting it in immediately saves time for everyone.
+    - The price is more `context switches` — P1 alone is switched out and back — and each switch is pure overhead.
+    - Both forms share the same two weaknesses: the burst time must be `predicted` in a real system, and long processes can `starve`. The cure for starvation is `ageing`, which gradually raises a waiting process's priority.
 
 25. **What is turnaround time of a process? Difference between FAT32 and NTFS?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1279 (ET: N/A)]*
 
