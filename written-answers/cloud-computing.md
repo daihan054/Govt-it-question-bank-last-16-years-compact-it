@@ -19,9 +19,9 @@
 
 ## Cloud Service Models (13)
 
-1. A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service. [SO IT 25-07-2026]
+1. **A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service.** [SO IT 25-07-2026]
 
-   Answer: **PaaS (Platform as a Service)** is the right model.
+Answer: **PaaS (Platform as a Service)** is the right model.
 
    Why PaaS fits exactly
    - The startup wants to write and deploy code only, and PaaS provides a ready-made platform where the provider manages servers, storage, operating system and runtime environment.
@@ -41,9 +41,9 @@
 
    - Trade-off to note: PaaS reduces customisation of the underlying infrastructure and creates some vendor lock-in, which is usually an acceptable price for a small startup.
 
-2. What is cloud computing? Mention its service models. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
+2. **What is cloud computing? Mention its service models.** *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
-   Answer: Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the internet, on a pay-as-you-go basis, instead of owning and running physical hardware.
+Answer: Cloud computing is the delivery of computing services — servers, storage, databases, networking, software and analytics — over the internet, on a pay-as-you-go basis, instead of owning and running physical hardware.
 
    Essential characteristics
    - On-demand self-service, broad network access, resource pooling, rapid elasticity and measured service (pay per use).
@@ -60,7 +60,7 @@
 
 3. **What is SaaS and multi-tenant architecture? How are they related? What are the advantages and disadvantages of multi-tenancy? For a multi-vendor e-commerce application, you can choose a database architecture where you can put all the vendors in a single database or each vendor in a separate database. Which architecture will you follow and why?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 328 (ET: BIBM)]*
 
-   Answer:
+Answer:
 
    (a) SaaS
    - Software as a Service delivers a complete application over the internet, accessed through a browser. The provider owns and maintains the code, infrastructure, security and updates; the customer simply subscribes and uses it.
@@ -99,7 +99,7 @@
 
 4. **6.11 A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-   Answer: **PaaS (Platform as a Service)** is the appropriate model.
+Answer: **PaaS (Platform as a Service)** is the appropriate model.
 
    Justification
    - The requirement names exactly what PaaS removes — hardware, operating system and runtime environment are all managed by the provider.
@@ -124,7 +124,7 @@
 
 5. **Describe SaaS, IaaS and PaaS.** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
 
-   Answer: These are the three cloud service models, each abstracting away a different amount of the technology stack.
+Answer: These are the three cloud service models, each abstracting away a different amount of the technology stack.
 
    IaaS — Infrastructure as a Service
    - Provides virtualised computing resources over the internet: virtual machines, storage, networks and load balancers.
@@ -151,7 +151,7 @@
 
 6. **Explain IaaS, PaaS, and SaaS with respect to cloud computing.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
 
-   Answer: The three models differ in how much of the stack the cloud provider takes over.
+Answer: The three models differ in how much of the stack the cloud provider takes over.
 
    IaaS — the lowest layer
    - Rents raw virtualised infrastructure: compute, storage and networking.
@@ -178,7 +178,7 @@
 
 7. **What do you mean by multi-tenancy in the cloud? Why is it beneficial for cloud service providers?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 749 (ET: N/A)]*
 
-   Answer: Multi-tenancy means a single instance of an application and its supporting infrastructure serves multiple customers, called tenants, at the same time. Each tenant's data and configuration are kept logically separate, so no tenant can see another's data even though the underlying resources are shared.
+Answer: Multi-tenancy means a single instance of an application and its supporting infrastructure serves multiple customers, called tenants, at the same time. Each tenant's data and configuration are kept logically separate, so no tenant can see another's data even though the underlying resources are shared.
 
    How isolation is achieved
    - A `tenant_id` column on every table, enforced by row-level security, or
@@ -202,7 +202,7 @@
 
 8. **(ক) Cloud Computing এর সার্ভিসগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
-   Answer: Cloud computing offers three main service models.
+Answer: Cloud computing offers three main service models.
 
    - **IaaS (Infrastructure as a Service)** — virtual machines, storage, networking and load balancers rented on demand. Examples: AWS EC2, Azure VMs, Google Compute Engine.
    - **PaaS (Platform as a Service)** — a development and deployment platform including the OS, runtime and middleware. Examples: Google App Engine, AWS Elastic Beanstalk, Heroku.
@@ -224,6 +224,12 @@
    Drop box
    Amazon Web Services (AWS)
 
+Search engine for a web server
+   Google Docs
+   Microsoft Azure
+   Drop box
+   Amazon Web Services (AWS)
+
    Answer:
 
    | Cloud service | Category | Reason |
@@ -238,7 +244,7 @@
 
 10. **(c) What are the three types of services provided by the cloud?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 888 (ET: N/A)]*
 
-    Answer: The cloud provides three service types.
+Answer: The cloud provides three service types.
 
     - **IaaS — Infrastructure as a Service.** Rents virtualised hardware: servers, storage and networks. The customer manages the OS, runtime, applications and data. Examples: AWS EC2, Azure VMs.
     - **PaaS — Platform as a Service.** Provides a ready platform with OS, runtime and development tools. The customer manages only the application and its data. Examples: Google App Engine, Heroku.
@@ -252,7 +258,7 @@
 
 11. **Write the three basic function of cloud services?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
-    Answer: The three basic functions delivered by cloud services are:
+Answer: The three basic functions delivered by cloud services are:
 
     - **Computing (processing)** — providing CPU power and memory to run applications, through virtual machines, containers or serverless functions. Delivered mainly by IaaS and PaaS.
     - **Storage** — keeping data safely and retrieving it on demand, through object storage, block storage, file storage and managed databases. Examples: Amazon S3, Google Drive, Azure Blob Storage.
@@ -265,7 +271,7 @@
 
 12. **ক্লাউড কম্পিউটিং এর সুবিধা ও অসুবিধা লিখুন।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Advantages
     - **Cost saving** — no capital spending on servers and data centres; pay only for what is used.
@@ -287,7 +293,7 @@
 
 13. **What is cloud computing? Mention five advantages threat of cloud computing. Describe IaaS, PaaS and SaaS.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1196 (ET: N/A)]*
 
-    Answer:
+Answer:
 
     Cloud computing
     - The delivery of computing services — servers, storage, databases, networking and software — over the internet on a pay-per-use basis, instead of owning physical infrastructure.
@@ -314,7 +320,11 @@
 
 ## Virtualization & Containers (VM vs Container) (8)
 
-1. VM vs Container in Submarine Cable Network: [BSCCPL AME 21-08-2026 (BUET)] A national submarine cable landing station provides international connectivity to several organizations. The organization wants to deploy DNS, Web, Database, Monitoring, and Network Management services on a shared physical server. The network administrator is considering two approaches:
+1. **VM vs Container in Submarine Cable Network: [BSCCPL AME 21-08-2026 (BUET)] A national submarine cable landing station provides international connectivity to several organizations. The organization wants to deploy DNS, Web, Database, Monitoring, and Network Management services on a shared physical server. The network administrator is considering two approaches:**
+Approach A: Deploy each service in a separate Virtual Machine.
+Approach B: Deploy each service in a separate Container.
+A submarine cable connects Bangladesh to an international data center. At the cable landing station, a server hosts 4 VMs, while another server runs 4 containers. Which one and why? [BSCCPL AME 21-08-2026 (BUET)]
+
 Approach A: Deploy each service in a separate Virtual Machine.
 Approach B: Deploy each service in a separate Container.
 A submarine cable connects Bangladesh to an international data center. At the cable landing station, a server hosts 4 VMs, while another server runs 4 containers. Which one and why? [BSCCPL AME 21-08-2026 (BUET)]
@@ -349,7 +359,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 2. **What is Virtualization? Write down the benefits of Virtualization. Write down the top 5 virtual platform software.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
-   Answer: Virtualization is the technology that creates a software-based (virtual) version of a physical resource — a server, storage device, network or operating system — so that one physical machine can run several isolated virtual machines at the same time. A software layer called the hypervisor sits between the hardware and the virtual machines and shares the CPU, memory and disk among them.
+Answer: Virtualization is the technology that creates a software-based (virtual) version of a physical resource — a server, storage device, network or operating system — so that one physical machine can run several isolated virtual machines at the same time. A software layer called the hypervisor sits between the hardware and the virtual machines and shares the CPU, memory and disk among them.
 
    Benefits of virtualization
    - **Server consolidation** — one physical server replaces many under-used ones, cutting hardware cost, rack space and power consumption.
@@ -370,7 +380,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 3. **What is Server Virtualization? Explain with example of its.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 551 (ET: BIBM)]*
 
-   Answer: Server virtualization is the process of dividing one physical server into several isolated virtual servers, each running its own operating system and applications as if it were a separate machine. A hypervisor sits between the hardware and the virtual servers and allocates CPU, memory, disk and network to each.
+Answer: Server virtualization is the process of dividing one physical server into several isolated virtual servers, each running its own operating system and applications as if it were a separate machine. A hypervisor sits between the hardware and the virtual servers and allocates CPU, memory, disk and network to each.
 
    ```mermaid
    flowchart TD
@@ -394,7 +404,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 4. **How virtualization help physical server.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 566 (ET: N/A)]*
 
-   Answer: Virtualization helps a physical server mainly by turning wasted capacity into useful work.
+Answer: Virtualization helps a physical server mainly by turning wasted capacity into useful work.
 
    - **Raises utilisation** — a dedicated physical server usually runs at 10-15% of its capacity. Hosting several VMs on it pushes utilisation to 70-80%, so the same hardware does far more work.
    - **Server consolidation** — ten lightly loaded physical servers can become ten VMs on one or two physical machines, cutting purchase cost, rack space, power and cooling.
@@ -409,7 +419,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 5. **Define a virtual machine with a neat diagram, explain the working of VM. What are the benefits of a VM?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
 
-   Answer: A virtual machine (VM) is a software emulation of a complete physical computer. It has its own virtual CPU, memory, disk and network interface, and runs its own operating system, called the guest OS, completely isolated from other VMs on the same hardware.
+Answer: A virtual machine (VM) is a software emulation of a complete physical computer. It has its own virtual CPU, memory, disk and network interface, and runs its own operating system, called the guest OS, completely isolated from other VMs on the same hardware.
 
    Diagram
    ```mermaid
@@ -443,7 +453,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 6. **What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
-   Answer:
+Answer:
 
    What Docker is
    - Docker is a containerization platform that packages an application together with all its dependencies — libraries, configuration files and runtime — into a single unit called a container image.
@@ -466,7 +476,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 7. **What is type 2 hypervisors in virtual machine?** *[Probashi Kallyan Bank Programmer 2019 compact it 1157 (ET: AUST)]*
 
-   Answer: A Type 2 hypervisor, also called a hosted hypervisor, is installed as an ordinary application ON TOP of an existing host operating system, rather than directly on the hardware.
+Answer: A Type 2 hypervisor, also called a hosted hypervisor, is installed as an ordinary application ON TOP of an existing host operating system, rather than directly on the hardware.
 
    How it works
    - The stack is: Hardware → Host OS → Type 2 Hypervisor → Guest OS.
@@ -491,7 +501,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 8. **Explain Type 1 and Type 2 hypervisors in virtual machine operating system with figure.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220 (ET: N/A)]*
 
-   Answer: A hypervisor, or Virtual Machine Monitor, is the software that creates and runs virtual machines. There are two types, distinguished by where the hypervisor sits.
+Answer: A hypervisor, or Virtual Machine Monitor, is the software that creates and runs virtual machines. There are two types, distinguished by where the hypervisor sits.
 
    Type 1 — bare-metal hypervisor
    ```mermaid
@@ -532,9 +542,9 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 ## Cloud Storage & Fundamentals (6)
 
-1. What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+1. **What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-   Answer: Cloud computing is the delivery of computing services — servers, storage, databases, networking and software — over the internet on a pay-as-you-go basis, instead of owning and maintaining physical hardware.
+Answer: Cloud computing is the delivery of computing services — servers, storage, databases, networking and software — over the internet on a pay-as-you-go basis, instead of owning and maintaining physical hardware.
 
    Why it is used
    - Removes the large upfront cost of buying servers and building a data centre.
@@ -562,7 +572,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 2. **What is Cloud Computing? What are its characteristics? Briefly describe the types of cloud computing.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
 
-   Answer: Cloud computing delivers computing resources — compute, storage, networking, databases and software — as an on-demand service over the internet, billed by usage.
+Answer: Cloud computing delivers computing resources — compute, storage, networking, databases and software — as an on-demand service over the internet, billed by usage.
 
    Five essential characteristics (the NIST definition)
    - **On-demand self-service** — a user provisions resources without contacting a person.
@@ -584,7 +594,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 3. **Explain cloud computing and evaluate its advantages and disadvantages.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-   Answer: Cloud computing means using computing resources — servers, storage, databases, networking and software — over the internet, provided on demand and paid for by usage, rather than owning the physical infrastructure.
+Answer: Cloud computing means using computing resources — servers, storage, databases, networking and software — over the internet, provided on demand and paid for by usage, rather than owning the physical infrastructure.
 
    Advantages
    - **Cost efficiency** — capital expenditure on hardware becomes an operating expense; pay only for what is used.
@@ -608,7 +618,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 4. **(খ) Cloud computing কী? উহার বৈশিষ্ট্য ও সুবিধা বর্ণনা করুন ।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 616 (ET: N/A)]*
 
-   Answer: Cloud computing is the on-demand delivery of computing services — servers, storage, databases, networking, software and analytics — over the internet, charged according to usage.
+Answer: Cloud computing is the on-demand delivery of computing services — servers, storage, databases, networking, software and analytics — over the internet, charged according to usage.
 
    Characteristics
    - **On-demand self-service** — resources are provisioned automatically without human interaction with the provider.
@@ -630,7 +640,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 5. **What is Cloud Computing? Write its adventages and Disadventages?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
-   Answer: Cloud computing is the delivery of IT resources — computing power, storage, databases and software — over the internet, on demand and billed by usage, instead of owning physical servers.
+Answer: Cloud computing is the delivery of IT resources — computing power, storage, databases and software — over the internet, on demand and billed by usage, instead of owning physical servers.
 
    Advantages
    - Low upfront cost, since no hardware has to be purchased.
@@ -654,7 +664,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 6. **Describe the cloud base database briefly.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 677 (ET: N/A)]*
 
-   Answer: A cloud database is a database that runs on cloud infrastructure and is accessed over the internet. The provider handles the hardware, the operating system and usually the database software itself, so the customer works only with the data and the schema.
+Answer: A cloud database is a database that runs on cloud infrastructure and is accessed over the internet. The provider handles the hardware, the operating system and usually the database software itself, so the customer works only with the data and the schema.
 
    Two ways it is offered
    - **DBaaS (Database as a Service)** — fully managed. The provider handles installation, patching, backup, replication and scaling. Examples: Amazon RDS, Azure SQL Database, Google Cloud SQL, MongoDB Atlas.
@@ -682,7 +692,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **(ক) উদাহরণসহ distributed এবং centralized computing -এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer:
+Answer:
 
    Centralized computing
    - All processing, storage and control happen on a single central computer. Users connect to it through terminals or thin clients that do little or no processing themselves.
@@ -707,7 +717,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 2. **Difference between cluster computing and grid computing.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
 
-   Answer: Both connect multiple computers to work as one, but they differ in how similar the machines are and how far apart they sit.
+Answer: Both connect multiple computers to work as one, but they differ in how similar the machines are and how far apart they sit.
 
    | Point | Cluster computing | Grid computing |
    |---|---|---|
@@ -726,7 +736,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 3. **Imagine data in a system is green, red, yellow and blue in the system using distributed server in parallel. Design the system using reduce map.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
 
-   Answer: MapReduce processes large data in parallel across many servers in two phases — Map produces key-value pairs, and Reduce aggregates the values for each key. Counting the occurrences of the colours green, red, yellow and blue fits this model exactly.
+Answer: MapReduce processes large data in parallel across many servers in two phases — Map produces key-value pairs, and Reduce aggregates the values for each key. Counting the occurrences of the colours green, red, yellow and blue fits this model exactly.
 
    ```mermaid
    flowchart LR
@@ -783,7 +793,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 4. **(খ) Distributed processing কী? উহার বৈশিষ্ট্য ও সুবিধাগুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
 
-   Answer: Distributed processing means dividing a computing task among several computers connected by a network, so that they work on it simultaneously and appear to the user as a single system.
+Answer: Distributed processing means dividing a computing task among several computers connected by a network, so that they work on it simultaneously and appear to the user as a single system.
 
    Characteristics
    - **Resource sharing** — CPU, storage, printers and data are shared across the network.
@@ -812,7 +822,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **Server rack digram to draw horizontal and vertical scalling.** *[RPGCL Assistant Manager (ICT) 2022 compact it 655 (ET: BUET)]*
 
-   Answer: Vertical scaling makes ONE server bigger; horizontal scaling adds MORE servers.
+Answer: Vertical scaling makes ONE server bigger; horizontal scaling adds MORE servers.
 
    Vertical scaling (scale up) — same rack slot, stronger machine
    ```
@@ -856,7 +866,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 2. **Difference between elasticity and scalability of resources in the cloud.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 749 (ET: N/A)]*
 
-   Answer: Both describe growth of capacity, but scalability is about long-term CAPABILITY while elasticity is about short-term AUTOMATIC adjustment.
+Answer: Both describe growth of capacity, but scalability is about long-term CAPABILITY while elasticity is about short-term AUTOMATIC adjustment.
 
    Scalability
    - The ability of a system to handle a growing workload by adding resources.
@@ -886,7 +896,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **What is the need of edge server?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
 
-   Answer: An edge server is a computing node placed close to where the data is produced and consumed, instead of in a distant central data centre. It processes data locally and sends only what is necessary to the cloud.
+Answer: An edge server is a computing node placed close to where the data is produced and consumed, instead of in a distant central data centre. It processes data locally and sends only what is necessary to the cloud.
 
    Why edge servers are needed
    - **Low latency** — a round trip to a central cloud can take 100 ms or more. A self-driving car, an industrial robot or a remote surgery system cannot wait that long. An edge server responds in a few milliseconds.
@@ -907,7 +917,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 2. **(গ) Edge Computing এর ধারণা সংক্ষেপে উপস্থাপন করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: Edge computing is a distributed model in which data is processed near the place it is generated — at the "edge" of the network — instead of being sent to a centralised cloud data centre.
+Answer: Edge computing is a distributed model in which data is processed near the place it is generated — at the "edge" of the network — instead of being sent to a centralised cloud data centre.
 
    Basic idea
    - Traditional model: device → internet → cloud → process → send result back. This costs latency and bandwidth.
@@ -931,9 +941,9 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 ## Virtualization & Resource Allocation (1)
 
-1. A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ GB} storage. Calculate the maximum number of VMs that can be hosted on the server without overcommitting resources. Identify which hardware resource limits the number of VMs. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ GB} storage. Calculate the maximum number of VMs that can be hosted on the server without overcommitting resources. Identify which hardware resource limits the number of VMs.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer:
+Answer:
 
    Given
 
@@ -970,9 +980,9 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 ## High Availability & System Redundancy (1)
 
-1. High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.
+1. **High-Availability Design: [BSCCPL AME 21-08-2026 (BUET)] A submarine cable operator wants to ensure that a DNS service remains available even if one physical server fails. where VM/container technology helps and where network redundancy is required.**
 
-   Answer: High availability means the service keeps running even when a component fails. For DNS at a cable landing station, redundancy is needed at BOTH the server layer and the network layer — one alone is not enough.
+Answer: High availability means the service keeps running even when a component fails. For DNS at a cable landing station, redundancy is needed at BOTH the server layer and the network layer — one alone is not enough.
 
    Where VM / container technology helps
    - **Fast failover** — DNS runs as a VM or container on two or more physical hosts. If one host fails, a clustered hypervisor (VMware HA, Proxmox HA) restarts the VM on the surviving host automatically within seconds.
@@ -1010,7 +1020,7 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 
 1. **How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
 
-   Answer: Assessment and audit reports turn the cloud's invisible configuration into a written, checkable record. They are the main evidence that security controls actually exist and work.
+Answer: Assessment and audit reports turn the cloud's invisible configuration into a written, checkable record. They are the main evidence that security controls actually exist and work.
 
    How they help DETECT vulnerabilities
    - **Configuration assessment** — automated scanners (AWS Security Hub, Azure Defender for Cloud, CSPM tools) compare live settings against a benchmark such as CIS, and report misconfigurations like a public S3 bucket, an open port 22 or an unencrypted database.

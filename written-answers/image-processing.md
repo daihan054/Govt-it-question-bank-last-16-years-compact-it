@@ -17,7 +17,7 @@
 
 1. **(ক) Vector এবং Raster graphics- এর সংজ্ঞাসহ পার্থক্য লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: (Answered in English, as required for IT topics.) Vector graphics
+Answer: (Answered in English, as required for IT topics.) Vector graphics
    - An image described by `mathematical objects` — points, lines, curves and polygons — each with its own coordinates, colour and thickness. The file stores the `instructions to draw` the picture, not the picture itself.
    - Because the picture is redrawn from equations at whatever size is asked for, it can be scaled to any size with `no loss of quality`.
    - Formats: `SVG, AI, EPS, PDF, CDR`.
@@ -59,7 +59,7 @@
 
 2. **(b) Differentiate between vector graphics and raster graphics. What are the applications of computer Graphics?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 888-889 (ET: N/A)]*
 
-   Answer: Vector graphics
+Answer: Vector graphics
    - The image is described by `mathematical objects` — points, lines, curves and polygons — each with coordinates, colour and thickness. The file stores the instructions to draw the picture.
    - It is redrawn from those equations at whatever size is requested, so it scales to any size with `no loss of quality`.
    - Formats: `SVG, AI, EPS, PDF, CDR`.
@@ -101,7 +101,7 @@
 
 3. **Raster Image কাকে বলে?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) A `raster image` is an image stored as a rectangular `grid of pixels`, where each pixel holds a colour value. It is also called a `bitmap` image.
+Answer: (Answered in English, as required for IT topics.) A `raster image` is an image stored as a rectangular `grid of pixels`, where each pixel holds a colour value. It is also called a `bitmap` image.
 
    - The word raster comes from the way the picture is drawn — row by row, left to right and top to bottom, exactly as a CRT screen scans.
    ```
@@ -154,7 +154,7 @@
 
 1. **(ক) বিভিন্ন Color model-এর নাম লিখুন। CMY color model-এর ব্যবহার কী?** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-   Answer: (Answered in English, as required for IT topics.) A `colour model` is a mathematical way of describing a colour as a set of numbers, so a computer can store, transmit and reproduce it.
+Answer: (Answered in English, as required for IT topics.) A `colour model` is a mathematical way of describing a colour as a set of numbers, so a computer can store, transmit and reproduce it.
 
    Names of the main colour models
 
@@ -214,7 +214,7 @@
 
 1. **How does Butterworth High pass Filter works?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
-   Answer: A `high-pass filter` in the frequency domain keeps the `high frequencies` — edges, fine detail and noise — and suppresses the `low frequencies`, which carry the smooth, slowly varying background. The result is a sharpened image with edges standing out.
+Answer: A `high-pass filter` in the frequency domain keeps the `high frequencies` — edges, fine detail and noise — and suppresses the `low frequencies`, which carry the smooth, slowly varying background. The result is a sharpened image with edges standing out.
 
    The Butterworth high-pass filter transfer function
    ```
@@ -287,7 +287,7 @@
 
 1. **What are the basic objectives of canny edge detection method?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
-   Answer: The `Canny edge detector`, given by John F. Canny in 1986, was designed by first writing down mathematically what an ideal edge detector should do, and then finding the operator that satisfies it. Those three requirements are its basic objectives.
+Answer: The `Canny edge detector`, given by John F. Canny in 1986, was designed by first writing down mathematically what an ideal edge detector should do, and then finding the operator that satisfies it. Those three requirements are its basic objectives.
 
    1. Good detection (low error rate)
    - Find `as many real edges as possible` while producing `as few false edges as possible`.
@@ -349,7 +349,7 @@
 
 1. **Define: (i) Erosion and Dilation; (ii) Opening and Closing.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
-   Answer: `Morphological operations` process the `shape` of objects in a binary (or grayscale) image. Each one slides a small shape called a `structuring element (SE)` over the image and decides each output pixel from the neighbourhood the SE covers.
+Answer: `Morphological operations` process the `shape` of objects in a binary (or grayscale) image. Each one slides a small shape called a `structuring element (SE)` over the image and decides each output pixel from the neighbourhood the SE covers.
 
    (i) Erosion and Dilation
 

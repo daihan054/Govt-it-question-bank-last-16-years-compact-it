@@ -13,7 +13,7 @@
 
 1. **In an excel sheet cell A1, A2, A3, A4 contains the value of power generation by four plants. Write a function in A5 to show the average of best three power plants.** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
-   Answer: The task is to average the `three largest` of the four values in A1:A4 — that is, ignore the worst plant.
+Answer: The task is to average the `three largest` of the four values in A1:A4 — that is, ignore the worst plant.
 
    Method 1 — subtract the smallest from the total (simplest and safest)
    ```excel

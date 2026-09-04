@@ -19,9 +19,9 @@
 
 ## Electrical Circuits & Protection Devices (13)
 
-1. Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why? *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why?** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer: Both protect a circuit from `overcurrent`. The difference is how they do it and whether they survive the event.
+Answer: Both protect a circuit from `overcurrent`. The difference is how they do it and whether they survive the event.
 
    Fuse
    - A thin metal wire or strip that `melts` when the current exceeds its rating, breaking the circuit.
@@ -67,7 +67,7 @@
 
 2. **Find the Norton equivalent circuit for a DC power supply that has a 30 V terminal voltage when delivering 400mA and a 28V terminal voltage. When delivering 600mA.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1436 (ET: BUET)]*
 
-   Answer: A real DC supply behaves as an ideal source with an internal resistance. Its terminal voltage falls as the load current rises.
+Answer: A real DC supply behaves as an ideal source with an internal resistance. Its terminal voltage falls as the load current rises.
    ```
       V(terminal) = V(Thevenin) - I . R(internal)
    ```
@@ -143,7 +143,7 @@
 
 3. **Which Transformer is used in computer?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
-   Answer: A computer's power supply uses a `step-down transformer`.
+Answer: A computer's power supply uses a `step-down transformer`.
 
    - The mains supply in Bangladesh is `220 V AC, 50 Hz`, but the internal circuits need low DC voltages:
    ```
@@ -177,7 +177,7 @@
 
 4. **What is the name of AC current to DC current?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
-   Answer: The process of converting AC to DC is called `rectification`, and the circuit that does it is a `rectifier`.
+Answer: The process of converting AC to DC is called `rectification`, and the circuit that does it is a `rectifier`.
 
    ```
       AC input  ---->  [ RECTIFIER ]  ---->  pulsating DC
@@ -227,7 +227,7 @@
 
 5. **How to AC converted into DC?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
 
-   Answer: AC is converted to DC by `rectification`. A complete supply has four stages.
+Answer: AC is converted to DC by `rectification`. A complete supply has four stages.
    ```
       AC 220 V --> Transformer --> Rectifier --> Filter --> Regulator --> steady DC
                    (step down)    (AC to DC)   (smooth)   (hold fixed)
@@ -290,7 +290,7 @@
 
 6. **Find R and I from a circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the circuit diagram is not present. The complete method for finding an unknown resistance and current is given below with a worked example.
+Answer: The question is `incomplete` — the circuit diagram is not present. The complete method for finding an unknown resistance and current is given below with a worked example.
 
    The three laws every such problem uses
    ```
@@ -383,7 +383,7 @@
 
 7. **Audio Frequency ও Radio Frequency এর মধ্যেকার পার্থক্য লিখুন। ১০ ওহমের ১০টি ট্রানজিস্টর কোন সিরিজে সংযুক্ত হলে তাতে রেজিস্ট্যান্স কত হবে?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
 
-   Answer: (Answered in English, as required for IT topics.) Part 1 — Audio frequency versus Radio frequency
+Answer: (Answered in English, as required for IT topics.) Part 1 — Audio frequency versus Radio frequency
 
    `Audio frequency (AF)`
    - The band of frequencies the human ear can hear: `20 Hz to 20 kHz`.
@@ -435,7 +435,7 @@
 
 8. **Write down the function of Relay, Fuse and Circuit Breaker.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
-   Answer: All three are protection or control devices in a circuit, but each does a different job.
+Answer: All three are protection or control devices in a circuit, but each does a different job.
 
    Relay
    - A `relay` is an electrically operated switch. A small current through its coil creates a magnetic field that pulls an armature and closes (or opens) a separate set of contacts, switching a much larger current in another circuit.
@@ -497,7 +497,7 @@
 
 9. **Find the Value of I.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the circuit diagram is not present. The methods for finding an unknown current are given below with worked examples.
+Answer: The question is `incomplete` — the circuit diagram is not present. The methods for finding an unknown current are given below with worked examples.
 
    Method 1 — Ohm's law, for a single branch
    ```
@@ -603,7 +603,7 @@
 
 10. **BREB power transmission interrupt related.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — only the topic "BREB power transmission interrupt related" was recorded, not the question itself. `BREB` is the Bangladesh Rural Electrification Board, so the subject is `interruptions in power transmission and distribution`, which is covered below.
+Answer: The question is `incomplete` — only the topic "BREB power transmission interrupt related" was recorded, not the question itself. `BREB` is the Bangladesh Rural Electrification Board, so the subject is `interruptions in power transmission and distribution`, which is covered below.
 
     Types of interruption
     ```
@@ -705,7 +705,7 @@
 
 11. **EEE related 3 math question.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
-    Answer: The question is `incomplete` — only "EEE related 3 math question" was recorded, not the three problems. The three topics that such a paper almost always draws them from are worked below, so the methods are available.
+Answer: The question is `incomplete` — only "EEE related 3 math question" was recorded, not the three problems. The three topics that such a paper almost always draws them from are worked below, so the methods are available.
 
     Problem type 1 — DC network analysis
     ```
@@ -811,7 +811,7 @@
 
 12. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-    Answer: (Answered in English, as required for IT topics.) The question is `incomplete` — the circuit diagram is not present. The method for finding the total resistance and then a particular branch current is set out below with a worked example.
+Answer: (Answered in English, as required for IT topics.) The question is `incomplete` — the circuit diagram is not present. The method for finding the total resistance and then a particular branch current is set out below with a worked example.
 
     Step 1 — reduce the network to find the total resistance
     ```
@@ -921,7 +921,11 @@
 
 13. **What is the difference between battery and capacitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
 
-    Answer: Both store electrical energy, but in completely different ways — a `battery` stores it chemically, a `capacitor` stores it in an electric field.
+**Which types of transformer is used in computer?** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 41]]*
+
+**What is the name of components which convert AC current to DC current?** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 41]]*
+
+Answer: Both store electrical energy, but in completely different ways — a `battery` stores it chemically, a `capacitor` stores it in an electric field.
 
     Battery
     - Two electrodes and an electrolyte. Energy is stored as `chemical` energy and released by a chemical reaction that drives electrons through the external circuit.
@@ -967,7 +971,7 @@
 
 1. **What does BJT stand for?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: `BJT` stands for `Bipolar Junction Transistor`.
+Answer: `BJT` stands for `Bipolar Junction Transistor`.
 
    - "Bipolar" because `both` types of charge carrier take part in conduction — electrons and holes. A FET, by contrast, is unipolar and uses only one type.
    - "Junction" because it is built from two `PN junctions` placed back to back.
@@ -990,7 +994,7 @@
 
 2. **How many terminals does a BJT have?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: A BJT has `three` terminals.
+Answer: A BJT has `three` terminals.
    ```
       Emitter   (E)  : heavily doped, emits the charge carriers
       Base      (B)  : very thin and lightly doped, controls the flow
@@ -1019,7 +1023,7 @@
 
 3. **In an NPN transistor, the current flows from _____** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: In an `NPN` transistor, conventional current flows `from the collector to the emitter` inside the device, and the base current also flows `from the base to the emitter`.
+Answer: In an `NPN` transistor, conventional current flows `from the collector to the emitter` inside the device, and the base current also flows `from the base to the emitter`.
 
    - The emitter is the terminal through which all the current leaves, which is why the arrow on the NPN symbol points `out` of the emitter.
    ```
@@ -1052,7 +1056,7 @@
 
 4. **Which BJT configuration gives maximum voltage gain?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: The `common-emitter (CE)` configuration gives the maximum voltage gain — and it is the only configuration that gives high voltage gain `and` high current gain together, so it is also the highest power gain.
+Answer: The `common-emitter (CE)` configuration gives the maximum voltage gain — and it is the only configuration that gives high voltage gain `and` high current gain together, so it is also the highest power gain.
 
    Comparison of the three configurations
 
@@ -1093,7 +1097,7 @@
 
 5. **Collector current (Ic) is related to base current (Ib) by _____** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
-   Answer: The collector current is related to the base current by the `current gain beta`.
+Answer: The collector current is related to the base current by the `current gain beta`.
    ```
       IC = beta . IB
    ```
@@ -1141,7 +1145,7 @@
 
 6. **N-Channel MOS operating in the linear region. Calculate the current passing through the channel of the transistor. Given: \mu_n C_{ox} (W/L) = 1.3\text{ mA/V}^2, V_{GS} = 2.5\text{ V}, V_t = 0.95\text{ V}. Assume reasonable values for missing parameters if necessary.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
-   Answer: An NMOS transistor in the `linear` (triode) region behaves like a voltage-controlled resistor. The drain current is
+Answer: An NMOS transistor in the `linear` (triode) region behaves like a voltage-controlled resistor. The drain current is
    ```
       ID = mu_n Cox (W/L) [ (VGS - Vt) VDS - VDS^2 / 2 ]
 
@@ -1220,7 +1224,7 @@
 
 7. **Describe cut off, saturation and active region of operation of a transistor with diagram. Explain the working principal of ab n-channel JFET with various values of V_{GS} and V_{DS}.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 445 (ET: BIBM)]*
 
-   Answer: Part 1 — the three regions of BJT operation
+Answer: Part 1 — the three regions of BJT operation
 
    The region is decided by how the `two junctions` are biased.
    ```
@@ -1332,7 +1336,7 @@
 
 8. **(a) Draw and explain the operation of NMOS transistor.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 688 (ET: N/A)]*
 
-   Answer: An `NMOS` transistor is a MOSFET whose channel carries `electrons`. It has four terminals — Gate, Source, Drain and Body (substrate) — and the body is normally tied to the source.
+Answer: An `NMOS` transistor is a MOSFET whose channel carries `electrons`. It has four terminals — Gate, Source, Drain and Body (substrate) — and the body is normally tied to the source.
 
    Structure
    ```
@@ -1425,7 +1429,7 @@
 
 9. **ইমিটার কারেন্টের মান 1 Amp, কালেক্টর কারেন্ট 0.95 A হলে বেইস (Base) কারেন্টের মান কত? একটি চিত্র দেওয়া ছিল!!** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) For a transistor, Kirchhoff's current law gives
+Answer: (Answered in English, as required for IT topics.) For a transistor, Kirchhoff's current law gives
    ```
       IE = IB + IC
    ```
@@ -1477,9 +1481,9 @@
 
 ## Semiconductor Devices & Diodes (4)
 
-1. Explain the working principle of a PN junction diode. Draw its symbol and describe the difference between forward bias and reverse bias. *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+1. **Explain the working principle of a PN junction diode. Draw its symbol and describe the difference between forward bias and reverse bias.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-   Answer: A `PN junction diode` is formed by joining a `P-type` semiconductor (rich in holes) to an `N-type` semiconductor (rich in free electrons) on the same crystal. It conducts current in `one direction only`.
+Answer: A `PN junction diode` is formed by joining a `P-type` semiconductor (rich in holes) to an `N-type` semiconductor (rich in free electrons) on the same crystal. It conducts current in `one direction only`.
 
    Formation of the depletion region
    - At the moment of joining, electrons from the N side diffuse across and fill holes on the P side.
@@ -1558,7 +1562,7 @@
 
 2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
-   Answer: A diode in series with a resistor forms a simple series circuit. The diode drops a fixed forward voltage, and the rest of the supply appears across the resistor.
+Answer: A diode in series with a resistor forms a simple series circuit. The diode drops a fixed forward voltage, and the rest of the supply appears across the resistor.
 
    Circuit
    ```
@@ -1623,7 +1627,7 @@
 
 3. **What is Diode and Inductor?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
-   Answer: Diode
+Answer: Diode
    - A `diode` is a two-terminal semiconductor device that lets current flow in `one direction only`. It is made by joining a P-type and an N-type semiconductor to form a `PN junction`.
    ```
            anode          cathode
@@ -1678,7 +1682,7 @@
 
 4. **How does LED differ from Laser Diod? What are the function of Diode?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
 
-   Answer: Both an `LED` and a `laser diode` are forward-biased PN junctions that emit light when electrons and holes recombine. The difference is `how` the light is produced.
+Answer: Both an `LED` and a `laser diode` are forward-biased PN junctions that emit light when electrons and holes recombine. The difference is `how` the light is produced.
 
    LED (Light Emitting Diode)
    - Light is produced by `spontaneous emission`: each electron falls across the band gap at a random moment and in a random direction.
@@ -1722,7 +1726,7 @@
 
 1. **You are required to convert a 12-bit digital number to an analogue voltage over the voltage range of 0 to 3.3V with a Digital-to-Analogue Converter (DAC). What is the resolution of the analogue output?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 419 (ET: BIBM)]*
 
-   Answer: The `resolution` of a DAC is the smallest change in output voltage produced by a change of `1` in the digital input — the size of one step.
+Answer: The `resolution` of a DAC is the smallest change in output voltage produced by a change of `1` in the digital input — the size of one step.
    ```
       Resolution = Full-scale voltage range / (2^n - 1)
    ```
@@ -1784,7 +1788,7 @@
 
 2. **An 8 bit (Analog to Digital Converter) = 2.56v. Let the minimum analog voltage = 0v. Calculate binary data output if analog input=1.7** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)]*
 
-   Answer: An ADC divides its full-scale input range into `2^n` equal steps and outputs the code corresponding to the input level.
+Answer: An ADC divides its full-scale input range into `2^n` equal steps and outputs the code corresponding to the input level.
    ```
       Step size (resolution) = (V(max) - V(min)) / 2^n
 
@@ -1861,7 +1865,7 @@
 
 3. **Draw an ADC converter circuit which convert an analog signal to digital signal.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
-   Answer: An `ADC` converts a continuously varying analogue voltage into a binary number. The most common exam circuit is the `successive approximation` type, which is what almost every microcontroller uses.
+Answer: An `ADC` converts a continuously varying analogue voltage into a binary number. The most common exam circuit is the `successive approximation` type, which is what almost every microcontroller uses.
 
    Complete signal chain
    ```mermaid
@@ -1960,7 +1964,7 @@
 
 4. **(ক) A/D Converter দ্বারা কিভাবে একটি Analog signal Digital signal এ রূপান্তরিত করা হয়। ডায়াগ্রাম সহ লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 776 (ET: N/A)]*
 
-   Answer: (Answered in English, as required for IT topics.) An `A/D converter` turns a continuously varying analogue voltage into a binary number a computer can process. The conversion has four stages.
+Answer: (Answered in English, as required for IT topics.) An `A/D converter` turns a continuously varying analogue voltage into a binary number a computer can process. The conversion has four stages.
 
    ```mermaid
    flowchart LR
@@ -2041,7 +2045,7 @@
 
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
-   Answer: A `leading` power factor means the current leads the voltage, so the circuit is `resistive-capacitive` — a resistor in series with a capacitor.
+Answer: A `leading` power factor means the current leads the voltage, so the circuit is `resistive-capacitive` — a resistor in series with a capacitor.
 
    Given
    ```
@@ -2128,7 +2132,7 @@
 
 2. **RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809-810 (ET: IBA)]*
 
-   Answer: (Answered in English, as required for IT topics.) RLC circuit
+Answer: (Answered in English, as required for IT topics.) RLC circuit
    - An `RLC circuit` contains a `resistor (R)`, an `inductor (L)` and a `capacitor (C)` connected together. It is the basic circuit for tuning, filtering and oscillation.
    ```
       Series RLC
@@ -2197,7 +2201,7 @@
 
 1. **Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the op-amp circuit diagram is not present. The gain of every standard ideal op-amp configuration is derived below, so the right formula can be applied to whichever circuit was printed.
+Answer: The question is `incomplete` — the op-amp circuit diagram is not present. The gain of every standard ideal op-amp configuration is derived below, so the right formula can be applied to whichever circuit was printed.
 
    The two golden rules for an ideal op-amp
    ```
@@ -2329,7 +2333,7 @@
 
 2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
 
-   Answer: (Answered in English, as required for IT topics.) Main characteristics of an operational amplifier
+Answer: (Answered in English, as required for IT topics.) Main characteristics of an operational amplifier
    - An `op-amp` is a high-gain DC-coupled differential amplifier with two inputs — inverting (-) and non-inverting (+) — and one output.
    ```
       V1 ---|-\
@@ -2404,7 +2408,7 @@
 
 1. **Design and implement an automated street light control system. The system should ensure that the street lights remain off during the presence of sunlight and automatically turn on in the absence of sunlight (i.e., during nighttime or low ambient light conditions).** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
 
-   Answer: The system must turn the street light `off in daylight` and `on in darkness`, automatically. The sensing element is an `LDR` (Light Dependent Resistor), whose resistance falls when light falls on it.
+Answer: The system must turn the street light `off in daylight` and `on in darkness`, automatically. The sensing element is an `LDR` (Light Dependent Resistor), whose resistance falls when light falls on it.
    ```
       Bright light  ->  LDR resistance LOW   (about 1 k ohm)
       Darkness      ->  LDR resistance HIGH  (about 1 M ohm)
@@ -2502,7 +2506,7 @@
 
 2. **Which signal a sensor could to send the signal to microcontroller if the sensor finds any gas leakage point?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 861 (ET: N/A)]*
 
-   Answer: A gas sensor sends the microcontroller either an `analogue voltage` or a `digital HIGH/LOW`, depending on which output pin is used. Almost every gas sensor module — the `MQ` series is the standard — provides `both`.
+Answer: A gas sensor sends the microcontroller either an `analogue voltage` or a `digital HIGH/LOW`, depending on which output pin is used. Almost every gas sensor module — the `MQ` series is the standard — provides `both`.
 
    The two output signals
    ```
@@ -2580,7 +2584,7 @@
 
 1. **Find current across 2 \Omega resistor using Thevenin Theorem:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 417 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the circuit diagram is not present. Thevenin's theorem and the full procedure are set out below with a worked example, so it can be applied to whichever circuit was printed.
+Answer: The question is `incomplete` — the circuit diagram is not present. Thevenin's theorem and the full procedure are set out below with a worked example, so it can be applied to whichever circuit was printed.
 
    Thevenin's theorem
    ```
@@ -2699,7 +2703,7 @@
 
 2. **Find the Value of I_{ab} using Norton's Theorem.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
-   Answer: The question is `incomplete` — the circuit diagram is not present. Norton's theorem and the complete procedure are set out below with a worked example.
+Answer: The question is `incomplete` — the circuit diagram is not present. Norton's theorem and the complete procedure are set out below with a worked example.
 
    Norton's theorem
    ```
@@ -2819,7 +2823,7 @@
 
 1. **A 3phase 12 pole alternator running at 500 rpm supplying power to an 8 pole induction motor. If ship is 3% what is the full load speed of the motor?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1054 (ET: BUET)]*
 
-   Answer: The alternator sets the supply frequency; that frequency then sets the induction motor's synchronous speed, and the slip reduces it to the actual running speed.
+Answer: The alternator sets the supply frequency; that frequency then sets the induction motor's synchronous speed, and the slip reduces it to the actual running speed.
 
    Given
    ```
