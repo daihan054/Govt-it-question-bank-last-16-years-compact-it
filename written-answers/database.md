@@ -20741,3 +20741,60 @@ SELECT *FROM students ORDER BY ID, NAME DESC
 ## Indexing in DBMS (1)
 
 1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) An `index` is a small sorted structure holding column values plus a pointer to the row that contains them, so the DBMS can find a row without reading the whole table.
+
+   Types of index
+
+   (a) By the physical order of the data
+   - `Primary (clustered) index` — built on the column the table is `physically sorted` by, usually the primary key. Only one per table, because data can be laid out in one order only. Range scans are fastest here.
+   - `Secondary (non-clustered) index` — built on any other column. A table may have many. It stores a pointer to the row, so an extra lookup is needed to fetch the data.
+   - `Clustering index` — built on a non-key column that the file is ordered by, where many rows share the same value.
+
+   (b) By how many entries are stored
+   - `Dense index` — one entry for `every` row. Fast, but large.
+   - `Sparse index` — one entry per `block` of rows. Smaller, but the block must then be scanned. Possible only on a sorted file.
+   ```
+   Sparse index          Data file (sorted)
+   +-----+-----+         +----+----+----+
+   | 10  | ----+-------> | 10 | 20 | 30 |
+   | 40  | ----+-------> | 40 | 50 | 60 |
+   +-----+-----+         +----+----+----+
+   ```
+
+   (c) By the number of levels
+   - `Single-level index` — one flat list.
+   - `Multi-level index` — an index built on the index, repeated until the top fits in one block. Repeating this idea gives the `B+ tree`.
+
+   (d) By the number of columns
+   - `Single-column index` — on one column.
+   - `Composite (multi-column) index` — on several columns, for example `(dept_id, salary)`. It is usable only when the query filters on the `leftmost` columns.
+
+   (e) By uniqueness
+   - `Unique index` — no duplicate values. Created automatically by `PRIMARY KEY` and `UNIQUE`.
+   - `Non-unique index` — duplicates allowed.
+
+   (f) By the data structure used
+   - `B-tree / B+ tree index` — the default in every major DBMS. Balanced, 3-4 levels deep, and the linked leaves make range queries fast.
+   - `Hash index` — computes the address directly, O(1) for `=` lookups, but useless for ranges and `ORDER BY`.
+   - `Bitmap index` — one bit string per distinct value. Excellent for columns with few distinct values (gender, status) in a data warehouse; poor for tables with heavy writes.
+   - `Function-based index` — built on an expression, such as `UPPER(name)`, so that a query using that expression can still use an index.
+   - `Full-text index` — for searching words inside long text.
+   - `Spatial index` (R-tree) — for geographic and geometric data.
+
+   ```sql
+   CREATE INDEX idx_dept          ON Employee(dept_id);
+   CREATE UNIQUE INDEX idx_email  ON Employee(email);
+   CREATE INDEX idx_dept_sal      ON Employee(dept_id, salary);   -- composite
+   CREATE INDEX idx_upper_name    ON Employee(UPPER(name));       -- function-based
+   ```
+
+   | Type | Best for | Weakness |
+   |---|---|---|
+   | B+ tree | General use, ranges, sorting | Slightly slower than hash for `=` |
+   | Hash | Exact-match lookup | No range or sorted access |
+   | Bitmap | Few distinct values, warehouses | Locks badly under heavy writes |
+   | Clustered | Range scans on the key | Only one per table |
+   | Composite | Multi-column filters | Only leftmost columns usable |
+
+   - The cost of any index: every `INSERT`, `UPDATE` and `DELETE` must update it, and it takes disk space. Index the primary key, the foreign keys, and the columns used in `WHERE`, `JOIN` and `ORDER BY` — not every column.
