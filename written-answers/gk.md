@@ -1139,16 +1139,41 @@
 
 1. What is the full form of NPSB in the banking sector of Bangladesh? [SO IT 25-07-2026]
 
+   Answer: National Payment Switch Bangladesh.
+
 2. **(b) Write the full forms of OTP and VPN.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
+
+   Answer:
+   - OTP: One-Time Password
+   - VPN: Virtual Private Network
 
 3. **Full meaning: ASEAN, SPARRSO, BERC** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 
+   Answer:
+   - ASEAN: Association of Southeast Asian Nations
+   - SPARRSO: Space Research and Remote Sensing Organization
+   - BERC: Bangladesh Energy Regulatory Commission
+
 4. **পূর্ণরূপ লিখুন: a) DFOF b) THAAD c) BIMSTEC** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
+
+   Answer:
+   - a) DFOF / DFQF: Duty-Free Quota-Free
+   - b) THAAD: Terminal High Altitude Area Defense
+   - c) BIMSTEC: Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation
 
 5. **NATA এর পূর্ণ রূপ কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: National Agricultural Training Academy (জাতীয় কৃষি প্রশিক্ষণ একাডেমি)।
+
 6. **5.1 What is the full form of NPSB in the banking sector of Bangladesh?** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+   Answer: National Payment Switch Bangladesh.
 
 7. **What Is RTGS related to?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
+   Answer: Real-Time Gross Settlement — an electronic fund transfer system where the transfer of money takes place from one bank to another on a real-time and gross basis (used for high-value immediate transactions).
+
 8. **What is the full form BDCCL?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+   Answer: Bangladesh Data Center Company Limited.
+
