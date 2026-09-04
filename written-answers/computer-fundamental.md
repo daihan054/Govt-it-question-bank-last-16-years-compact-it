@@ -2992,9 +2992,74 @@
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
+   Answer: Quantum computing uses the principles of quantum mechanics to process information. Instead of the classical **bit**, which is either 0 or 1, it uses the **qubit**, which can be 0, 1, or both at the same time.
+
+   Two principles that give it power
+   - **Superposition** — a qubit can hold 0 and 1 simultaneously. `n` qubits represent `2ⁿ` states at once, so 300 qubits hold more states than there are atoms in the observable universe.
+   - **Entanglement** — two qubits become linked so that measuring one instantly determines the other, however far apart they are. This lets qubits work together rather than independently.
+   - A third property, **interference**, is used to amplify correct answers and cancel wrong ones.
+
+   Importance
+   - **Cryptography** — Shor's algorithm can factor large numbers efficiently, which would break RSA and ECC encryption. This is driving the move to post-quantum cryptography today.
+   - **Drug discovery and chemistry** — simulating molecules is naturally a quantum problem, currently impossible at scale on classical machines.
+   - **Optimisation** — routing, scheduling, portfolio optimisation and supply chain problems with enormous search spaces.
+   - **Machine learning** — potentially faster training on certain problem classes.
+   - **Search** — Grover's algorithm searches an unsorted database in `√N` steps instead of `N`.
+   - **Weather and climate modelling**, and materials science.
+
+   Disadvantages and limitations
+   - **Decoherence** — qubits lose their quantum state within microseconds from the slightest environmental disturbance.
+   - **Extreme cooling** — most designs need temperatures near absolute zero (about 15 millikelvin), requiring dilution refrigerators.
+   - **High error rates** — quantum error correction may need thousands of physical qubits to make one reliable logical qubit.
+   - **Enormous cost** — tens of millions of dollars per machine, plus specialised facilities.
+   - **Not general purpose** — a quantum computer is faster only for specific algorithm classes; for everyday computing a classical machine is far better.
+   - **Shortage of expertise** and immature programming tools.
+   - **Security threat** — it will break today's public-key cryptography, forcing a global migration.
+
+   - Current status: machines exist from IBM, Google, IonQ and others with hundreds to a few thousand physical qubits, but they are noisy and experimental. Practical, fault-tolerant quantum computing is still years away.
+
 2. **What is the name of molecular scale computer?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
+   Answer: A molecular-scale computer is called a **Molecular Computer**, also known as a **DNA computer** or **biocomputer**.
+
+   - **DNA computing** was demonstrated by Leonard Adleman in 1994, who solved a small Hamiltonian path problem using DNA strands in a test tube.
+   - It works by encoding data in DNA base sequences (A, T, G, C) and using biochemical reactions to perform the computation. Because billions of DNA strands react in parallel, it offers massive parallelism.
+   - Advantages: extremely high storage density (a gram of DNA can theoretically hold exabytes), massive parallelism, and very low energy consumption.
+   - Limitations: extremely slow for a single operation, error-prone, hard to read the result, and not general purpose.
+
+   Related terms sometimes expected
+   - **Nanocomputer** — any computer built at nanometre scale, including molecular, quantum-dot and nanotube designs.
+   - **Molecular electronics** — using single molecules as switches and wires.
+   - **Optical computer** — uses photons instead of electrons.
+
 3. **Virtual Reality বলতে কি বুঝায় ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
+
+   Answer: **Virtual Reality (VR)** is a computer-generated simulation of a three-dimensional environment that a user can explore and interact with as if it were real, usually through a head-mounted display that replaces the view of the physical world entirely.
+
+   How it works
+   - A **headset (HMD)** shows a slightly different image to each eye, producing stereoscopic depth.
+   - **Motion sensors and head tracking** update the view instantly as the user turns, which creates the sense of presence.
+   - **Controllers, gloves or hand tracking** let the user reach out and manipulate objects.
+   - **Spatial audio** and sometimes haptic feedback complete the illusion.
+
+   Key characteristics
+   - **Immersion** — the real world is shut out.
+   - **Interaction** — the user changes the environment, rather than only watching it.
+   - **Real-time response** — latency must stay under about 20 ms or the user feels motion sickness.
+
+   Applications
+   - **Education and training** — virtual laboratories, historical reconstructions, field trips.
+   - **Medical** — surgical training and rehearsal, phobia and PTSD therapy, rehabilitation.
+   - **Military and aviation** — flight and combat simulators, which are far cheaper and safer than real training.
+   - **Architecture and real estate** — walk through a building before it is built.
+   - **Gaming and entertainment**, **virtual tourism**, and remote collaboration.
+
+   Related technologies
+   - **AR (Augmented Reality)** — adds digital objects on top of the real world, seen through a phone or glasses. Example: Pokémon Go.
+   - **MR (Mixed Reality)** — digital and real objects interact with each other.
+   - **XR (Extended Reality)** — the umbrella term covering VR, AR and MR.
+
+   - Limitations: expensive hardware, motion sickness, limited content, physical space requirement, and eye strain during long sessions.
 
 ## Digital Banking & Financial Inclusion (2)
 
