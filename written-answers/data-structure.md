@@ -5503,15 +5503,413 @@ Output: Not Balanced
 
 1. Why is a **Circular Queue** preferred over a **Linear Queue** in many operating systems? Explain with one example. [SO IT 25-07-2026]
 
+   Answer: A circular queue is preferred because it `reuses the space freed by dequeued elements`, which a linear queue cannot.
+
+   The problem with a linear queue
+   - In a linear queue, `front` and `rear` only ever move forward. When an element is dequeued, front advances and the slot it leaves behind is `permanently wasted`.
+   - Eventually `rear` reaches the end of the array and the queue reports "full", even though several slots at the front are empty. This is called `false overflow` or the `queue full but not full` problem.
+   ```
+   Array of size 5. Enqueue A, B, C, D, E then dequeue three times:
+
+   index :   0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           |  X  |  X  |  X  |  D  |  E  |
+           +-----+-----+-----+-----+-----+
+                               ^     ^
+                             front  rear
+
+   rear = 4 = last index, so enqueue F is REJECTED as "Queue Full",
+   even though indices 0, 1 and 2 are free.
+   ```
+   - The only remedies are to shift every element left after each dequeue, which costs `O(n)` per operation, or to accept the waste.
+
+   How a circular queue solves it
+   - The array is treated as a ring: after the last index, the next position is index 0 again.
+   ```
+   rear  = (rear  + 1) % SIZE
+   front = (front + 1) % SIZE
+   ```
+   ```
+   index :   0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           |  F  |     |     |  D  |  E  |
+           +-----+-----+-----+-----+-----+
+              ^                 ^
+             rear             front
+
+   F wraps around into index 0 — the freed space is reused.
+   ```
+   - Enqueue and dequeue both stay `O(1)`, with no shifting at all.
+
+   Comparison
+
+   | Point | Linear queue | Circular queue |
+   |---|---|---|
+   | Space reuse | No — freed slots are wasted | `Yes` — wraps around |
+   | False overflow | Occurs | Cannot occur |
+   | Memory efficiency | Poor | Excellent |
+   | Enqueue / dequeue cost | O(1), or O(n) if shifting is used | `O(1)` |
+   | Implementation | Simpler | Slightly more complex (modulo arithmetic) |
+   | Full condition | rear = SIZE − 1 | (rear + 1) % SIZE = front |
+
+   Example from operating systems — the `keyboard buffer`
+   - The keyboard driver stores keystrokes in a small fixed buffer, say 32 bytes. The producer is the interrupt handler adding keystrokes; the consumer is the application reading them.
+   - With a linear queue, after 32 keystrokes have been typed and read, the buffer would declare itself full and refuse further input, even though every slot had been consumed. The system would have to reset or shift the buffer constantly.
+   - With a circular queue the buffer never fills spuriously: as the application consumes characters, those slots become available again for new keystrokes, indefinitely. The buffer is genuinely full only when the application falls behind by 32 characters.
+
+   Other operating-system uses of circular queues
+   - `CPU scheduling` — the round-robin ready queue naturally cycles through processes.
+   - `Printer and disk I/O buffers`, and the network card's ring buffer for incoming packets.
+   - `Producer–consumer buffers` between threads, and `traffic shaping` queues.
+   - `Streaming and audio buffers`, where data flows continuously through a fixed block of memory.
+
 2. **FIFO is used which data structure?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
+
+   Answer: `FIFO` — First In, First Out — is the principle used by the `Queue` data structure.
+
+   - In a queue, the element inserted `first` is the one removed `first`, exactly as in a line at a ticket counter.
+   - Insertion (`enqueue`) happens at the `rear`; deletion (`dequeue`) happens at the `front`. Two different ends are used, so two pointers, `front` and `rear`, are needed.
+
+   ```
+      enqueue -->  [ A | B | C ]  --> dequeue
+                   rear       front
+
+   A entered first, so A leaves first.
+   ```
+
+   Operations and complexity
+
+   | Operation | Meaning | Cost |
+   |---|---|---|
+   | enqueue | Insert at the rear | O(1) |
+   | dequeue | Remove from the front | O(1) |
+   | front / peek | Read the front element | O(1) |
+   | isEmpty / isFull | Test the state | O(1) |
+
+   Types of queue
+   - `Simple (linear) queue` — the basic form; suffers from wasted space at the front.
+   - `Circular queue` — the rear wraps around to index 0, so freed space is reused.
+   - `Priority queue` — served by priority rather than arrival order; usually built on a heap.
+   - `Deque` — insertion and deletion at both ends.
+
+   Applications
+   - CPU and disk scheduling, printer spooling, the keyboard buffer, breadth-first search, message queues, call-centre waiting lines, and network packet buffering.
+
+   - For contrast, `LIFO` (Last In, First Out) is the principle of the `Stack`, where insertion and deletion both occur at the same end, the top.
 
 3. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
+   Answer: A circular queue is preferred because it `reuses the memory freed by dequeued elements`, which a linear queue cannot do.
+
+   The weakness of a linear queue
+   - `front` and `rear` only move forward. Every dequeue advances front and leaves the vacated slot `permanently unusable`.
+   - Once rear reaches the last index the queue reports "Queue Full", even when slots at the beginning are free. This is `false overflow`.
+   ```
+   Array of size 5:
+   Enqueue A, B, C, D, E ; then Dequeue three times
+
+   index :   0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           |  -  |  -  |  -  |  D  |  E  |
+           +-----+-----+-----+-----+-----+
+                               ^     ^
+                             front  rear = 4
+
+   Enqueue F -> REJECTED ("Queue Full") although 3 slots are empty.
+   ```
+   - The alternative is to shift all elements left after every dequeue, which turns an O(1) operation into O(n).
+
+   How a circular queue fixes it
+   - The array is treated as a ring. Modulo arithmetic makes position 0 follow the last index:
+   ```
+   rear  = (rear  + 1) % SIZE
+   front = (front + 1) % SIZE
+
+   Full  : (rear + 1) % SIZE == front
+   Empty : front == -1   (or a separate count == 0)
+   ```
+   ```
+   index :   0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           |  F  |     |     |  D  |  E  |
+           +-----+-----+-----+-----+-----+
+              ^                 ^
+            rear              front
+
+   F wraps into index 0 — the freed space is reused, and enqueue stays O(1).
+   ```
+
+   Comparison
+
+   | Point | Linear queue | Circular queue |
+   |---|---|---|
+   | Reuses freed space | No | `Yes` |
+   | False overflow | Yes | No |
+   | Memory efficiency | Poor | Excellent |
+   | Enqueue / dequeue | O(1), or O(n) with shifting | `O(1)` |
+   | Complexity of code | Simpler | Modulo arithmetic needed |
+
+   Example — the CPU ready queue in round-robin scheduling
+   - The scheduler keeps ready processes in a fixed-size queue. A process is dequeued, given one time slice, and if it has not finished it is enqueued again at the rear.
+   - With a linear queue, every such cycle would consume a fresh slot and the queue would exhaust the array within a few rounds, even though processes are constantly leaving the front. The scheduler would have to compact the queue continually.
+   - With a circular queue, the processes simply circulate around the ring indefinitely, at O(1) cost per operation. This behaviour is exactly what round-robin scheduling means, which is why operating systems use circular structures for it.
+
+   Other operating-system examples
+   - Keyboard and terminal input buffers, printer spool queues, disk I/O request queues, the network interface's packet ring buffer, and producer–consumer buffers shared between threads.
+
 4. **What is a Circular Queue? Describe its implementation.** *[BDCCL Assistant Engineer (Network) 2022 compact it 743 (ET: N/A)]*
+
+   Answer:
+
+   What is a circular queue
+   - A circular queue is a linear queue in which the last position is connected back to the first, forming a ring. It is also called a `ring buffer`.
+   - Its purpose is to solve the `false overflow` problem of a linear queue, in which slots freed by dequeue operations can never be reused and the queue reports "full" while empty space remains at the front.
+   ```
+                [0]  [1]  [2]  [3]  [4]
+               +----+----+----+----+----+
+               |    |    |    |    |    |
+               +----+----+----+----+----+
+                 ^                    |
+                 |____________________|
+                    after index 4 comes index 0 again
+   ```
+
+   Key formulas
+   ```
+   Enqueue : rear  = (rear  + 1) % SIZE
+   Dequeue : front = (front + 1) % SIZE
+
+   Empty   : front == -1
+   Full    : (rear + 1) % SIZE == front
+   ```
+
+   Implementation in C
+   ```c
+   #include <stdio.h>
+   #define SIZE 5
+
+   int queue[SIZE];
+   int front = -1, rear = -1;
+
+   int isEmpty(void) { return front == -1; }
+   int isFull(void)  { return (rear + 1) % SIZE == front; }
+
+   void enqueue(int value) {
+       if (isFull()) { printf("Queue is Full\n"); return; }
+       if (isEmpty()) front = 0;                 // first element
+       rear = (rear + 1) % SIZE;                 // wrap around
+       queue[rear] = value;
+       printf("%d enqueued\n", value);
+   }
+
+   int dequeue(void) {
+       if (isEmpty()) { printf("Queue is Empty\n"); return -1; }
+       int value = queue[front];
+       if (front == rear) {                      // last element removed
+           front = rear = -1;                    // reset to empty
+       } else {
+           front = (front + 1) % SIZE;           // wrap around
+       }
+       return value;
+   }
+
+   void display(void) {
+       if (isEmpty()) { printf("Queue is Empty\n"); return; }
+       int i = front;
+       while (1) {
+           printf("%d ", queue[i]);
+           if (i == rear) break;
+           i = (i + 1) % SIZE;
+       }
+       printf("\n");
+   }
+   ```
+
+   Worked trace with SIZE = 5
+   ```
+   Initially front = rear = −1  (empty)
+
+   enqueue(10): front=0, rear=0   -> [10, _, _, _, _]
+   enqueue(20): rear=1            -> [10, 20, _, _, _]
+   enqueue(30): rear=2            -> [10, 20, 30, _, _]
+   enqueue(40): rear=3            -> [10, 20, 30, 40, _]
+
+   dequeue():   returns 10, front=1 -> [_, 20, 30, 40, _]
+   dequeue():   returns 20, front=2 -> [_, _, 30, 40, _]
+
+   enqueue(50): rear=4            -> [_, _, 30, 40, 50]
+   enqueue(60): rear=(4+1)%5=0    -> [60, _, 30, 40, 50]     <- WRAPPED AROUND
+   enqueue(70): rear=1            -> [60, 70, 30, 40, 50]
+
+   Now (rear+1)%5 = 2 = front  -> the queue is genuinely FULL
+   ```
+   - A linear queue would have refused to enqueue 50 onwards, because rear had reached the end of the array. The circular version keeps every slot usable.
+
+   Why one slot is sacrificed
+   - With the test `(rear + 1) % SIZE == front` for full and `front == −1` for empty, the two conditions stay distinguishable. Some implementations instead keep an explicit `count` variable, which allows all SIZE slots to be used at the cost of one extra integer.
+
+   Complexity and uses
+   - `Enqueue O(1)`, `dequeue O(1)`, `space O(n)` with no wastage.
+   - Uses: round-robin CPU scheduling, keyboard and printer buffers, network interface ring buffers, producer–consumer buffers between threads, audio and video streaming buffers, and traffic shaping.
 
 5. **Circular Queue and Priority Queue কীভাবে কাজ করে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 912-913 (ET: BUET)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   Circular queue — how it works
+   - A circular queue treats the array as a ring: the position after the last index is index 0 again. Its purpose is to reuse the space freed by dequeued elements, which a linear queue wastes.
+   ```
+                [0]  [1]  [2]  [3]  [4]
+               +----+----+----+----+----+
+               |    |    |    |    |    |
+               +----+----+----+----+----+
+                 ^                    |
+                 |____________________|
+   ```
+
+   Working formulas
+   ```
+   Enqueue : rear  = (rear  + 1) % SIZE ;  queue[rear] = value
+   Dequeue : value = queue[front] ; front = (front + 1) % SIZE
+   Empty   : front == −1
+   Full    : (rear + 1) % SIZE == front
+   ```
+
+   Trace with SIZE = 5
+   ```
+   enqueue 10,20,30,40  -> [10,20,30,40,_]   front=0 rear=3
+   dequeue, dequeue     -> [_, _,30,40,_]    front=2 rear=3
+   enqueue 50           -> [_, _,30,40,50]   rear=4
+   enqueue 60           -> [60,_,30,40,50]   rear=(4+1)%5=0   <- WRAPS AROUND
+   ```
+   - A linear queue would have declared itself full at this point, wasting indices 0 and 1. The circular version keeps every slot usable, and both operations remain `O(1)`.
+   - Uses: round-robin CPU scheduling, keyboard and printer buffers, network ring buffers, and producer–consumer buffers between threads.
+
+   Priority queue — how it works
+   - A priority queue serves elements by `priority`, not by arrival order. The element with the highest priority is always removed first; among equal priorities, arrival order decides.
+   - The two operations are `insert(item, priority)` and `extract` (remove the highest-priority item).
+
+   Implementation choices
+
+   | Implementation | Insert | Extract highest priority |
+   |---|---|---|
+   | Unsorted array or list | O(1) | O(n) — scan for the best |
+   | Sorted array or list | O(n) — find the position | O(1) |
+   | `Binary heap` | `O(log n)` | `O(log n)` |
+   | Fibonacci heap | O(1) amortised | O(log n) |
+
+   - The `binary heap` is the standard choice, because it balances both operations. A max heap serves the largest value first; a min heap the smallest.
+
+   Example — a max-priority queue as a heap
+   ```
+   Insert (Job A, 5), (Job B, 9), (Job C, 3), (Job D, 7)
+
+                       9 (B)
+                     /      \
+                 7 (D)      3 (C)
+                 /
+             5 (A)
+
+   extract -> B (priority 9), then D (7), then A (5), then C (3)
+   ```
+
+   Uses of a priority queue
+   - Operating-system process scheduling, where a real-time process pre-empts a background one.
+   - `Dijkstra's` shortest-path and `Prim's` minimum-spanning-tree algorithms.
+   - `Huffman coding`, which repeatedly takes the two least frequent symbols.
+   - Hospital emergency triage, print job priorities, event-driven simulation, and A* search.
+
+   Comparison of the two
+
+   | Point | Circular queue | Priority queue |
+   |---|---|---|
+   | Order of service | Arrival order (FIFO) | Priority order |
+   | Structure | Array treated as a ring | Usually a binary heap |
+   | Enqueue | O(1) | O(log n) |
+   | Dequeue | O(1) | O(log n) |
+   | Fairness | Strictly fair | Unfair by design; a low-priority item may starve |
+   | Typical use | Round-robin scheduling, buffers | Priority scheduling, Dijkstra, Huffman |
+
 6. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+   Answer: `Enqueue` inserts an element at the `rear` of a queue.
+
+   Steps of the enqueue operation
+
+   ```
+   ALGORITHM enqueue(queue, front, rear, MAX, item)
+   BEGIN
+       // Step 1: check for overflow
+       IF rear = MAX − 1 THEN
+           PRINT "Queue Overflow — cannot insert"
+           RETURN
+       END IF
+
+       // Step 2: if the queue is empty, initialise front
+       IF front = −1 THEN
+           front = 0
+       END IF
+
+       // Step 3: advance the rear pointer
+       rear = rear + 1
+
+       // Step 4: place the item at the new rear position
+       queue[rear] = item
+
+       PRINT item, " enqueued successfully"
+   END
+   ```
+
+   In words
+   - Step 1 — `Check for overflow.` If rear has reached the last index, the queue is full and nothing can be inserted. This test must come first.
+   - Step 2 — `Handle the empty case.` If the queue is empty (front = −1), set front = 0, because the first element inserted is also the first to be served.
+   - Step 3 — `Increment rear` so it points at the next free position.
+   - Step 4 — `Store the item` at queue[rear].
+
+   C implementation
+   ```c
+   #define MAX 100
+   int queue[MAX];
+   int front = -1, rear = -1;
+
+   void enqueue(int item) {
+       if (rear == MAX - 1) {              // overflow
+           printf("Queue Overflow\n");
+           return;
+       }
+       if (front == -1) front = 0;         // first element
+       queue[++rear] = item;
+       printf("%d enqueued\n", item);
+   }
+   ```
+
+   Worked example
+   ```
+   Initially: front = −1, rear = −1  (empty)
+
+   enqueue(10): front = 0, rear = 0   ->  [10]
+   enqueue(20): rear = 1              ->  [10, 20]
+   enqueue(30): rear = 2              ->  [10, 20, 30]
+
+                 front             rear
+                   |                 |
+                 [10] [20] [30]
+   ```
+
+   Circular queue version, which reuses freed space
+   ```c
+   void enqueueCircular(int item) {
+       if ((rear + 1) % MAX == front) { printf("Queue is Full\n"); return; }
+       if (front == -1) front = 0;
+       rear = (rear + 1) % MAX;            // wrap around
+       queue[rear] = item;
+   }
+   ```
+
+   Points to note
+   - Enqueue always operates at the `rear`; the matching `dequeue` operates at the `front`. That separation is what makes a queue FIFO.
+   - Complexity: `O(1)` time and `O(1)` extra space.
+   - In a `linear` queue, rear reaching MAX − 1 causes overflow even when slots at the front are free — the `false overflow` problem, which the circular version above eliminates.
 
 ## Hashing & Hash Tables (6)
 
