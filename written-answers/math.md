@@ -979,9 +979,50 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 592 (ET: BUET)]*
 
+   Answer:
+   - Let $a_n$ be the number of valid bit strings of length $n$ without two consecutive $0$s.
+   - Any valid string of length $n$ must end in either $1$ or $0$:
+     - Case 1 (Ends with $1$): The preceding $n-1$ bits form any valid string of length $n-1$. Total ways $= a_{n-1}$.
+     - Case 2 (Ends with $0$): The $(n-1)^{\text{th}}$ bit must be $1$ (ending in $10$) to prevent $00$. The first $n-2$ bits form any valid string of length $n-2$. Total ways $= a_{n-2}$.
+   - Recurrence Relation:
+     $$a_n = a_{n-1} + a_{n-2} \quad \text{for } n \ge 3$$
+   - Initial Conditions:
+     - $a_1 = 2$ (Strings: `0`, `1`)
+     - $a_2 = 3$ (Strings: `01`, `10`, `11`)
+
 2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
+   Answer:
+   - Let $P(n): 3^n - 1 \text{ is a multiple of } 2$.
+   - Base Step ($n = 1$):
+     $$3^1 - 1 = 3 - 1 = 2 = 2 \times 1$$
+     Since $2$ is a multiple of $2$, $P(1)$ is true.
+   - Inductive Hypothesis:
+     Assume $P(k)$ is true for some integer $k \ge 1$:
+     $$3^k - 1 = 2m \implies 3^k = 2m + 1 \quad (\text{for some integer } m)$$
+   - Inductive Step ($n = k + 1$):
+     $$3^{k+1} - 1 = 3 \cdot 3^k - 1 = 3(2m + 1) - 1 = 6m + 3 - 1 = 6m + 2 = 2(3m + 1)$$
+     Since $3m + 1$ is an integer, $3^{k+1} - 1$ is a multiple of $2$.
+   - Conclusion: By mathematical induction, $3^n - 1$ is a multiple of $2$ for all $n \ge 1$.
+
 3. **Proved that $1+2+3+4+\dots\dots\dots\dots+n = \frac{n(n+1)}{2}$** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
+
+   Answer:
+   - Proof by Mathematical Induction:
+     - Let $P(n): 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}$.
+     - Base Case ($n = 1$):
+       $$\text{LHS} = 1, \quad \text{RHS} = \frac{1(1+1)}{2} = 1 \implies \text{LHS} = \text{RHS}$$
+       Hence, $P(1)$ is true.
+     - Inductive Hypothesis:
+       Assume $P(k)$ is true for some $k \ge 1$:
+       $$1 + 2 + 3 + \dots + k = \frac{k(k+1)}{2}$$
+     - Inductive Step ($n = k + 1$):
+       $$\text{LHS} = (1 + 2 + \dots + k) + (k+1) = \frac{k(k+1)}{2} + (k+1)$$
+       $$\text{LHS} = (k+1)\left(\frac{k}{2} + 1\right) = (k+1)\left(\frac{k+2}{2}\right) = \frac{(k+1)((k+1)+1)}{2} = \text{RHS}$$
+   - Therefore, $P(k+1)$ is true whenever $P(k)$ is true.
+   - By mathematical induction, $1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}$ holds for all $n \ge 1$. (Proved)
+
+
 
 ## Analytical Ability & Logical Reasoning (3)
 
