@@ -7582,4 +7582,256 @@
 
 1. **A & B two frames in a browser loaded from different origins. Why is it a reasonable security policy to allow A to navigate B to another origin base only on whether the display area of A contains dis-pare of B and A has the control over area.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 494 (ET: N/A)]*
 
+   Answer: The question, restated
+   - Two frames `A` and `B` are loaded from `different origins`. The browser permits `A` to navigate `B` to another URL, and the stated justification is that `A's display area contains B's display area, and A controls that area`. The question asks why that is a reasonable security policy.
+
+   The rule the browser actually applies
+   ```
+      The SAME-ORIGIN POLICY normally forbids a frame from one
+      origin to READ or WRITE another origin's content :
+
+           A cannot read B's DOM
+           A cannot read B's cookies
+           A cannot call B's JavaScript
+           A cannot read text a user typed into B
+
+      But there is a DELIBERATE EXCEPTION :
+
+           A frame MAY NAVIGATE a frame it is the ANCESTOR of -
+           that is, one it embedded - to any URL, even
+           cross-origin.
+   ```
+
+   Why the exception is reasonable — the argument
+
+   1. A already controls that region of the screen
+   ```
+      A EMBEDDED B in the first place. A chose B's URL, its
+      position and its size :
+
+           <iframe src="https://b.example.com" width="600"
+                   height="400"></iframe>
+
+      A COULD SIMPLY REMOVE THE IFRAME ALTOGETHER, or point it
+      somewhere else at creation time, or cover it with an opaque
+      div.
+
+      So navigating B GRANTS A NO POWER IT DID NOT ALREADY HAVE.
+      The policy denies A nothing it could not achieve by other
+      means, which is the test of whether a restriction is
+      worthwhile.
+   ```
+
+   2. Navigation is not access
+   ```
+      Navigating B DESTROYS B's document and loads a new one. It
+      does NOT let A read the old one.
+
+           A can say  "B, go to that URL"
+           A CANNOT   read what was in B , read B's cookies, or
+                      read what the user typed into B
+
+      The confidentiality of B's data is never breached, because
+      the old document is gone rather than exposed.
+   ```
+
+   3. The screen region is A's responsibility
+   ```
+      The user sees ONE page - A's page. Every pixel inside A's
+      area is, from the user's point of view, part of A's content.
+      B occupies that area only because A allowed it to.
+
+      Giving A control over its own screen region is therefore
+      consistent with what the user already believes, and A is
+      already accountable for what appears there.
+   ```
+
+   4. It is necessary in practice
+   ```
+      Real applications depend on it :
+
+        an OAUTH or PAYMENT flow inside an iframe must be able to
+             redirect after the step completes
+        a page with a navigation pane and a content pane needs the
+             pane to change
+        a CAPTCHA or a widget must be replaceable
+
+      Forbidding it would break a great deal without protecting
+      anything.
+   ```
+
+   Where the boundary is drawn — what is still forbidden
+   ```
+      ALLOWED
+           A frame may navigate itself, its own DESCENDANTS, and
+           the TOP frame if it is the only frame on the page.
+
+      FORBIDDEN
+           A frame may NOT navigate an UNRELATED frame - a sibling
+           it did not embed, or a frame in another tab or window it
+           did not open.
+
+      WHY : an unrelated frame's screen area is NOT A's
+      responsibility, and A has no existing power over it. Allowing
+      that would let any embedded advertisement redirect the whole
+      page, which is exactly the abuse the restriction prevents.
+   ```
+
+   The attacks the policy still leaves open, and their defences
+   ```
+      CLICKJACKING
+           A embeds B invisibly and tricks the user into clicking
+           B's "Transfer" button while believing they are clicking
+           A's page.
+           DEFENCE : B refuses to be framed -
+                X-Frame-Options: DENY  or  SAMEORIGIN
+                Content-Security-Policy: frame-ancestors 'self'
+           A site handling money must send one of these.
+
+      FRAME PHISHING
+           A navigates B to a look-alike login page.
+           DEFENCE : the same headers, plus HTTPS and a visible
+                address bar the user can check.
+
+      TABNABBING
+           A page opened with target="_blank" navigates its opener
+           to a phishing site.
+           DEFENCE : rel="noopener noreferrer" on every such link.
+   ```
+   - The principle underlying the whole policy, stated plainly: `the same-origin policy protects data, not layout`. Reading another origin's content is forbidden because it leaks `information`; navigating a frame you embedded is permitted because it changes only `what is displayed in your own area` — and the site being framed retains the power to refuse framing entirely through `X-Frame-Options` or `frame-ancestors`.
+
 2. **What is CORS in web development?** *[BIWTA; Assistant Programmer 25.11.2022 compact it 761 (ET: N/A)]*
+
+   Answer: What CORS is
+   - `CORS` stands for `Cross-Origin Resource Sharing`. It is a browser mechanism that lets a server `explicitly permit` a web page from one origin to make requests to a different origin — relaxing the `same-origin policy` in a controlled way.
+   ```
+      AN ORIGIN = SCHEME + HOST + PORT , all three.
+
+           https://example.com          the origin
+           http://example.com           DIFFERENT - scheme differs
+           https://api.example.com      DIFFERENT - host differs
+           https://example.com:8080     DIFFERENT - port differs
+   ```
+
+   The problem it solves
+   ```
+      THE SAME-ORIGIN POLICY blocks JavaScript on one origin from
+      READING a response from another origin :
+
+           page on   https://myapp.com
+           calls     https://api.other.com/data
+           -> the browser BLOCKS the JavaScript from reading it :
+              "No 'Access-Control-Allow-Origin' header is present
+               on the requested resource."
+
+      WHY THE POLICY EXISTS : without it, any malicious page you
+      visited could call https://yourbank.com/api/balance with
+      YOUR COOKIES ATTACHED and read your balance. The same-origin
+      policy is what makes cookie-based sessions safe at all.
+   ```
+
+   How CORS works — the server decides
+   ```
+      The SERVER adds response headers granting permission :
+
+           Access-Control-Allow-Origin: https://myapp.com
+           Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+           Access-Control-Allow-Headers: Content-Type, Authorization
+           Access-Control-Allow-Credentials: true
+           Access-Control-Max-Age: 86400
+
+      The BROWSER then permits the JavaScript to read the response.
+   ```
+   ```
+      THE KEY POINT, and the one most often misunderstood :
+
+      CORS IS ENFORCED BY THE BROWSER, AND GRANTED BY THE SERVER.
+
+      It is NOT a server-side protection. curl , Postman and a
+      Python script IGNORE CORS COMPLETELY, because they are not
+      browsers. CORS protects the USER from a malicious page ; it
+      does NOT protect the API from an attacker.
+   ```
+
+   Simple requests and preflighted requests
+   ```
+      A SIMPLE REQUEST goes straight through :
+           method is GET , HEAD or POST
+           and only safe headers are used
+           and Content-Type is one of :
+                text/plain
+                application/x-www-form-urlencoded
+                multipart/form-data
+
+      ANYTHING ELSE IS PREFLIGHTED. The browser first sends an
+      OPTIONS request to ask permission :
+
+           OPTIONS /api/data HTTP/1.1
+           Origin: https://myapp.com
+           Access-Control-Request-Method: PUT
+           Access-Control-Request-Headers: Content-Type
+
+           HTTP/1.1 204 No Content
+           Access-Control-Allow-Origin: https://myapp.com
+           Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+           Access-Control-Allow-Headers: Content-Type
+           Access-Control-Max-Age: 86400
+
+      Only if that succeeds does the real PUT follow.
+      Note that Content-Type: application/json - which every REST
+      API uses - TRIGGERS A PREFLIGHT. This is why "it works in
+      Postman but not in the browser" is such a common complaint.
+   ```
+   ```mermaid
+   sequenceDiagram
+       participant B as Browser (myapp.com)
+       participant S as API (api.other.com)
+       B->>S: OPTIONS /api/data (preflight)
+       S-->>B: 204 + Access-Control-Allow-* headers
+       B->>S: PUT /api/data (the real request)
+       S-->>B: 200 + Access-Control-Allow-Origin
+       B->>B: JavaScript may now read the response
+   ```
+
+   Enabling it on the server
+   ```javascript
+      // Node.js / Express
+      const cors = require("cors");
+      app.use(cors({ origin: "https://myapp.com",
+                     credentials: true }));
+   ```
+   ```php
+      // PHP
+      header("Access-Control-Allow-Origin: https://myapp.com");
+      header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+      header("Access-Control-Allow-Headers: Content-Type,
+              Authorization");
+   ```
+
+   The security mistakes to avoid
+   ```
+      1. Access-Control-Allow-Origin: *
+           Allows ANY site to call the API. Acceptable for a
+           PUBLIC, read-only API with no authentication. NEVER
+           acceptable for an authenticated one.
+
+      2. "*" TOGETHER WITH credentials
+           Access-Control-Allow-Origin: *
+           Access-Control-Allow-Credentials: true
+           The browser REJECTS this combination outright - and
+           rightly, because it would let any site read an
+           authenticated response. An explicit origin must be
+           named.
+
+      3. REFLECTING THE Origin HEADER BACK
+           header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_ORIGIN"]);
+           This accepts EVERY origin while appearing specific. It
+           is a real vulnerability, and a common one.
+
+      4. TREATING CORS AS SECURITY
+           It is not. AUTHENTICATION, AUTHORISATION, INPUT
+           VALIDATION and RATE LIMITING must all be enforced on the
+           server regardless of CORS, because a non-browser client
+           ignores CORS entirely.
+   ```
+   - The related mechanism worth naming: `JSONP` was the pre-CORS workaround, exploiting the fact that `<script>` tags are not subject to the same-origin policy. It works only for `GET`, hands the remote server the ability to run arbitrary code in your page, and is `obsolete` — CORS replaced it and should always be used instead.
