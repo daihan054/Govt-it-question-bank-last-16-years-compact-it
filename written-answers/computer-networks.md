@@ -15054,11 +15054,142 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
 
 1. **(b) Difference between active and passive satellites.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
 
+   Answer:
+
+   | Point | Passive satellite | Active satellite |
+   |---|---|---|
+   | Function | Simply reflects the signal back to earth | Receives, amplifies, processes and retransmits the signal |
+   | Power source | None; entirely passive | Solar panels and batteries on board |
+   | Electronics | None | Transponders, amplifiers, frequency converters, antennas |
+   | Signal strength | Very weak on return, since only reflected energy comes back | Strong; amplified before retransmission |
+   | Transmitter power needed on earth | Very high | Moderate |
+   | Frequency | Returned on the same frequency | Uplink and downlink use `different` frequencies, so the two do not interfere |
+   | Cost | Low to build | High |
+   | Complexity | Very simple | Complex |
+   | Lifetime | Long, nothing to fail | Limited by fuel and component life, typically 15 years |
+   | Usable bandwidth | Very limited | High |
+   | Example | Echo 1 and Echo 2 (1960s reflective balloons), the Moon | All modern communication satellites — Intelsat, INSAT, Bangabandhu-1 |
+   | Status | Obsolete | Universal today |
+
+   Key points
+   - A passive satellite is nothing more than a mirror in orbit. Because the reflected signal spreads out in all directions, only a minute fraction returns to earth, so enormous transmit power and huge dish antennas are required. This is why the approach was abandoned.
+   - An active satellite carries `transponders`: each receives on the uplink frequency (say 6 GHz), converts it to the downlink frequency (4 GHz), amplifies it and retransmits. The frequency change is essential, since otherwise the powerful downlink would swamp the receiver listening for the weak uplink.
+   - Modern satellites go further with on-board processing, regenerating the signal digitally and switching between spot beams, which improves quality and allows flexible capacity allocation.
+
 2. **(c) Briefly describe different types of earth orbital satellite.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
+
+   Answer: Satellites are classified by the altitude of their orbit, and altitude determines almost every other property.
+
+   1. GEO — Geostationary Earth Orbit
+   - Altitude: `35,786 km` above the equator, orbital period exactly 24 hours.
+   - The satellite appears `stationary` in the sky, so ground antennas can be fixed and need no tracking. This is its decisive advantage.
+   - Coverage: one satellite covers about one third of the earth's surface, so `3 satellites` give near-global coverage (excluding the polar regions).
+   - Latency: about `250 ms one way`, 500 ms round trip — the great drawback, which makes interactive use awkward and cripples TCP throughput.
+   - Uses: television broadcast, weather monitoring, VSAT networks, long-distance telephony.
+   - Examples: Intelsat, INSAT, and Bangladesh's Bangabandhu-1.
+
+   2. MEO — Medium Earth Orbit
+   - Altitude: roughly `2,000 to 35,786 km`, typically around 20,000 km. Period 6 to 12 hours.
+   - Latency: 60–150 ms — much better than GEO.
+   - The satellite moves relative to the ground, so tracking antennas and handover between satellites are required. About 10 to 20 satellites give global coverage.
+   - Uses: navigation — `GPS` at 20,200 km, GLONASS, Galileo — and some communication constellations such as O3b.
+
+   3. LEO — Low Earth Orbit
+   - Altitude: `160 to 2,000 km`, period about 90 to 120 minutes.
+   - Latency: `20–40 ms`, close to terrestrial fibre, which is why LEO has revived satellite internet.
+   - Each satellite is visible for only a few minutes, so a large constellation and frequent handover are needed — Starlink and OneWeb use hundreds to thousands.
+   - Lower launch cost per satellite, smaller ground terminals, but shorter operational life because of atmospheric drag.
+   - Uses: broadband internet (Starlink), earth observation, the International Space Station at about 400 km, Iridium telephony.
+
+   4. HEO / Molniya — Highly Elliptical Orbit
+   - A very elliptical orbit with a low perigee and a high apogee, around 40,000 km.
+   - The satellite spends most of its period near apogee, giving long dwell time over high latitudes that GEO cannot reach at all.
+   - Uses: coverage of Russia, Canada and the polar regions; some military and scientific missions.
+
+   Comparison
+
+   | Point | LEO | MEO | GEO |
+   |---|---|---|---|
+   | Altitude | 160–2,000 km | 2,000–35,786 km | 35,786 km |
+   | Period | 90–120 min | 6–12 hours | 24 hours |
+   | One-way latency | 20–40 ms | 60–150 ms | ~250 ms |
+   | Satellites for global coverage | Hundreds | 10–20 | 3 |
+   | Antenna | Must track | Must track | Fixed |
+   | Handover needed | Frequent | Occasional | None |
+   | Launch cost each | Low | Medium | High |
+   | Lifetime | 5–7 years | 10–15 years | ~15 years |
+   | Main use | Broadband, imaging | Navigation | Broadcast, VSAT |
 
 3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
+   Answer: (Answered in English, as required for IT topics.)
+
+   The single greatest disadvantage of satellite-based communication is `very high propagation delay (latency)`.
+
+   - A geostationary satellite orbits at 35,786 km. The signal must travel up and down, a total of about 71,600 km, at the speed of light:
+   ```
+   Delay = 71,600 km / (3 × 10^5 km/s) ≈ 240 ms one way
+   Round trip ≈ 500 ms
+   ```
+   - Consequences: telephone conversations feel unnatural, with each speaker waiting half a second for a reply; interactive applications and online gaming become unusable; and TCP throughput falls sharply, because TCP's rate is governed by the round-trip time.
+   - Terrestrial fibre over the same distance would take roughly 20–30 ms, more than ten times less.
+
+   Other important disadvantages
+   - `Very high cost` — building and launching a satellite runs into hundreds of millions of dollars, and ground stations are expensive too.
+   - `Weather dependence` — rain fade at Ku and Ka band can interrupt the link entirely during heavy rain, which matters greatly in a monsoon climate.
+   - `Limited bandwidth` compared with fibre, and it is shared among all users in the footprint.
+   - `Security` — the downlink is a broadcast that anyone with a dish in the footprint can receive, so encryption is mandatory.
+   - `Limited lifetime` of about 15 years, set by station-keeping fuel, after which the satellite must be replaced.
+   - `No repair possible` once launched, so any fault is permanent.
+   - `Solar interference` twice a year, when the sun passes directly behind the satellite and drowns the signal.
+   - `Poor polar coverage` from geostationary orbit, and a low look angle at high latitudes.
+
+   - Low Earth Orbit constellations such as Starlink reduce the latency problem to 20–40 ms, but at the cost of needing hundreds or thousands of satellites, frequent handover and continual replacement.
+
 4. **How does mobile work? How many satellites are required to cover the earth?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1279-1280 (ET: N/A)]*
+
+   Answer:
+
+   (a) How a mobile phone works
+
+   - Step 1 — `Cellular structure.` The coverage area is divided into cells, each served by a base station (BTS or eNodeB). Frequencies are reused in distant cells, which is what allows a limited spectrum to serve millions of users.
+   - Step 2 — `Registration.` When switched on, the handset scans for the strongest control channel, identifies itself with the IMSI on its SIM, and is authenticated by the AUC. Its location is recorded in the HLR and the local VLR.
+   - Step 3 — `Making a call.` The handset requests a channel on the control channel. The BTS allocates a traffic channel, and the request passes through the BSC to the MSC.
+   - Step 4 — `Routing.` The MSC queries the HLR to find where the called party currently is, then routes the call — to another cell in its own network, to another operator, or out to the PSTN or an international gateway.
+   - Step 5 — `Conversion and transmission.` The voice is digitised, compressed by a codec, error-protected, modulated and transmitted over the air interface. GSM uses TDMA and FDMA; 3G uses CDMA; 4G and 5G use OFDMA.
+   - Step 6 — `Handover.` As the user moves, the network measures signal strength from neighbouring cells and transfers the call to a stronger one without interruption.
+   - Step 7 — `Roaming.` In another operator's area, the visited VLR contacts the home HLR, and service continues.
+   - Step 8 — `Data.` For internet use the packet core (GPRS/EPC) carries IP packets rather than a voice circuit, and modern voice itself runs as VoLTE over that packet core.
+
+   ```
+   Handset --radio--> BTS --> BSC --> MSC --> PSTN / other operator / internet
+                                        |
+                                 HLR  VLR  AUC  EIR
+   ```
+
+   (b) How many satellites are required to cover the earth
+
+   - From `geostationary orbit`, `3 satellites` are sufficient.
+   - Reason: at 35,786 km each satellite sees about 120 degrees of longitude, roughly one third of the earth's surface. Three satellites placed 120 degrees apart above the equator therefore cover the whole globe, with overlap.
+   ```
+           Sat A (0 deg)
+              /  \
+             /    \
+      Sat C -------- Sat B
+      (240)          (120)
+      Each covers ~120 degrees -> 3 x 120 = 360 degrees
+   ```
+   - `Limitation`: this covers the earth only up to about 70–75 degrees of latitude. The polar regions are not covered at all, because the satellite sits too low on the horizon. Polar coverage requires highly elliptical (Molniya) or polar-orbiting satellites.
+
+   Numbers for the other orbits
+
+   | Orbit | Altitude | Satellites for global coverage |
+   |---|---|---|
+   | GEO | 35,786 km | `3` (no polar coverage) |
+   | MEO | ~20,000 km | 10–20 (GPS uses 24) |
+   | LEO | 500–1,200 km | Hundreds to thousands (Iridium 66, Starlink several thousand) |
+
+   - The trade-off is direct: the lower the orbit, the smaller the footprint of each satellite and the more of them are needed, but the lower the latency and the cheaper each launch.
 
 ## Analog Modulation & Radio Receivers (3)
 
