@@ -460,21 +460,513 @@
 
 1. **What does BJT stand for?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: `BJT` stands for `Bipolar Junction Transistor`.
+
+   - "Bipolar" because `both` types of charge carrier take part in conduction — electrons and holes. A FET, by contrast, is unipolar and uses only one type.
+   - "Junction" because it is built from two `PN junctions` placed back to back.
+   - It has three terminals: `Emitter (E)`, `Base (B)` and `Collector (C)`.
+   ```
+      NPN                         PNP
+           C                           C
+           |                           |
+      B ---|<                     B ---|>
+           |                           |
+           E   (arrow out on E)        E   (arrow in on E)
+   ```
+   - Two types: `NPN` (a thin P base between two N regions) and `PNP` (a thin N base between two P regions).
+   - It is a `current-controlled` device: a small base current controls a much larger collector current.
+   ```
+      IC = beta . IB           beta is typically 50 to 300
+      IE = IB + IC
+   ```
+   - Uses: amplification, switching, oscillators, and as the basis of the TTL logic family.
+
 2. **How many terminals does a BJT have?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
+
+   Answer: A BJT has `three` terminals.
+   ```
+      Emitter   (E)  : heavily doped, emits the charge carriers
+      Base      (B)  : very thin and lightly doped, controls the flow
+      Collector (C)  : moderately doped and physically largest, collects the carriers
+   ```
+   ```
+      NPN                         PNP
+           C                           C
+           |                           |
+      B ---|<                     B ---|>
+           |                           |
+           E                           E
+      arrow points OUT of E       arrow points IN to E
+   ```
+   - The `arrow is always on the emitter` and shows the direction of conventional current; that is how NPN and PNP are told apart on a diagram.
+   - The three terminals give three possible amplifier configurations:
+   ```
+      Common Emitter  (CE)  : the most used; high voltage and current gain
+      Common Base     (CB)  : high voltage gain, current gain slightly under 1
+      Common Collector (CC) : emitter follower; used as a buffer, gain about 1
+   ```
+   - Current relationship:
+   ```
+      IE = IB + IC            Kirchhoff's current law at the transistor
+   ```
 
 3. **In an NPN transistor, the current flows from _____** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: In an `NPN` transistor, conventional current flows `from the collector to the emitter` inside the device, and the base current also flows `from the base to the emitter`.
+
+   - The emitter is the terminal through which all the current leaves, which is why the arrow on the NPN symbol points `out` of the emitter.
+   ```
+           C   (collector)
+           |
+           |   IC flows IN at the collector
+      B ---|<  IB flows IN at the base
+           |
+           |   IE flows OUT at the emitter
+           E   (emitter)
+
+      IE = IB + IC
+   ```
+   - Electron flow is the opposite: electrons move from the `emitter to the collector`. That is where the name comes from — the emitter emits electrons and the collector collects them.
+
+   Biasing for normal (active) operation
+   ```
+      Emitter-Base junction   : FORWARD biased   (base positive with respect to emitter)
+      Collector-Base junction : REVERSE biased   (collector positive with respect to base)
+
+      For silicon : V(BE) is about 0.7 V when conducting
+   ```
+
+   Comparison with PNP
+   ```
+      NPN : current flows collector -> emitter ; the emitter is grounded
+      PNP : current flows emitter -> collector ; the emitter goes to the positive rail
+   ```
+   - Short answer: `from collector to emitter` (conventional current), and `from base to emitter` for the control current.
+
 4. **Which BJT configuration gives maximum voltage gain?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
+
+   Answer: The `common-emitter (CE)` configuration gives the maximum voltage gain — and it is the only configuration that gives high voltage gain `and` high current gain together, so it is also the highest power gain.
+
+   Comparison of the three configurations
+
+   | Point | Common Base (CB) | Common Emitter (CE) | Common Collector (CC) |
+   |---|---|---|---|
+   | Voltage gain | High | `High` (highest overall) | Less than 1 (about 0.99) |
+   | Current gain | Less than 1 (alpha) | High (beta) | High (1 + beta) |
+   | Power gain | Moderate | `Highest` | Moderate |
+   | Input resistance | Very low (~50 ohm) | Medium (~1 k) | Very high (~500 k) |
+   | Output resistance | Very high (~1 M) | High (~50 k) | Very low (~50 ohm) |
+   | Phase shift | 0 degrees | `180 degrees` | 0 degrees |
+   | Typical use | High-frequency, RF stages | General amplification, switching | Impedance buffer, emitter follower |
+
+   Why CE gives the largest voltage gain
+   ```
+      Av = -beta . (Rc / r_in)
+
+      beta is 50 to 300 , so a small base signal produces a large collector current
+      change, which develops a large voltage across the collector resistor Rc.
+   ```
+   - The minus sign is the `180 degree phase inversion`, a signature of the CE stage.
+
+   Common-emitter circuit
+   ```
+                 +Vcc
+                   |
+                  ###  Rc
+                   |
+                   +-------- Vout
+                   |
+      Vin ---||----|<
+             C1    |
+                   |
+                  GND  (emitter common to input and output)
+   ```
+
+   - Points worth noting: `CB` also gives a high voltage gain, but its current gain is below 1, so its power gain is much lower. `CC` (emitter follower) has essentially no voltage gain; it is used as a buffer, to match a high-impedance source to a low-impedance load.
 
 5. **Collector current (Ic) is related to base current (Ib) by _____** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
+   Answer: The collector current is related to the base current by the `current gain beta`.
+   ```
+      IC = beta . IB
+   ```
+   - `beta` (also written h_FE) is the common-emitter DC current gain. Typical silicon transistors have beta between `50 and 300`.
+   - The relationship means a BJT is a `current-controlled` device: a small base current controls a much larger collector current, which is what makes amplification possible.
+
+   The full set of relationships
+   ```
+      IE = IB + IC                        Kirchhoff's current law
+
+      IC = beta . IB                      common-emitter current gain
+      IC = alpha . IE                     common-base current gain
+
+      alpha = IC / IE       (0.95 to 0.995, always just under 1)
+      beta  = IC / IB       (50 to 300)
+
+      beta  = alpha / (1 - alpha)
+      alpha = beta / (1 + beta)
+   ```
+
+   Worked example
+   ```
+      IB = 20 uA , beta = 100
+
+      IC = beta . IB = 100 x 20 uA = 2 mA
+      IE = IB + IC  = 0.02 + 2 = 2.02 mA
+      alpha = IC / IE = 2 / 2.02 = 0.990
+   ```
+
+   Circuit view
+   ```
+                   +Vcc
+                     |
+                    ### Rc      IC (large)
+                     |
+                     +------- Vout
+           IB        |
+      -----/\/\/\----|<
+           Rb        |
+                     |  IE = IB + IC
+                    GND
+   ```
+
+   - Points to note: `beta varies` widely between individual transistors of the same type, and it also changes with temperature and with the collector current. Practical amplifier circuits therefore use `emitter degeneration` and a stable bias network so the operating point does not depend on beta.
+
 6. **N-Channel MOS operating in the linear region. Calculate the current passing through the channel of the transistor. Given: \mu_n C_{ox} (W/L) = 1.3\text{ mA/V}^2, V_{GS} = 2.5\text{ V}, V_t = 0.95\text{ V}. Assume reasonable values for missing parameters if necessary.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
+
+   Answer: An NMOS transistor in the `linear` (triode) region behaves like a voltage-controlled resistor. The drain current is
+   ```
+      ID = mu_n Cox (W/L) [ (VGS - Vt) VDS - VDS^2 / 2 ]
+
+   valid while  VDS < VGS - Vt   (the linear / triode condition)
+   ```
+
+   Given
+   ```
+      mu_n Cox (W/L) = 1.3 mA/V^2
+      VGS            = 2.5 V
+      Vt             = 0.95 V
+      VDS            = not given -> assume 0.1 V, a small value typical of the
+                       deep linear region
+   ```
+
+   Step 1 — find the overdrive voltage
+   ```
+      V(ov) = VGS - Vt = 2.5 - 0.95 = 1.55 V
+   ```
+
+   Step 2 — check that the device really is in the linear region
+   ```
+      VDS = 0.1 V  <  V(ov) = 1.55 V        yes, linear region confirmed
+   ```
+
+   Step 3 — substitute into the formula
+   ```
+      ID = 1.3 mA/V^2 x [ (1.55)(0.1) - (0.1)^2 / 2 ]
+         = 1.3 x [ 0.155 - 0.005 ]
+         = 1.3 x 0.150
+         = 0.195 mA
+   ```
+   ```
+      ID = 0.195 mA = 195 microamperes
+   ```
+
+   Check with the small-signal (deep triode) approximation
+   ```
+      When VDS is very small, the VDS^2/2 term is negligible :
+
+      ID ~= mu_n Cox (W/L) (VGS - Vt) VDS
+          = 1.3 x 1.55 x 0.1
+          = 0.2015 mA
+
+      Close to the exact 0.195 mA, so the working is consistent.
+   ```
+
+   Equivalent channel resistance
+   ```
+      r(DS) = VDS / ID = 0.1 / 0.195 mA = 513 ohms
+   ```
+   - This is the useful property of the linear region: the MOSFET acts as a resistor whose value is set by VGS. It is the basis of the CMOS transmission gate and the analogue switch.
+
+   For comparison — the same device at the edge of saturation
+   ```
+      If VDS >= V(ov) = 1.55 V the device saturates :
+
+      ID = (1/2) mu_n Cox (W/L) (VGS - Vt)^2
+         = 0.5 x 1.3 x (1.55)^2
+         = 0.5 x 1.3 x 2.4025
+         = 1.562 mA
+   ```
+
+   Output characteristic
+   ```
+      ID
+       |          saturation region (ID nearly constant)
+       |        ___________________
+       |      /
+       |    /   linear (triode) region
+       |  /
+       |/________________________________ VDS
+       0        V(ov) = 1.55 V
+   ```
+   - Since VDS was not stated in the question, the assumed value must be written down explicitly, as done above; the method and the formula are what carry the marks. <!-- verify -->
 
 7. **Describe cut off, saturation and active region of operation of a transistor with diagram. Explain the working principal of ab n-channel JFET with various values of V_{GS} and V_{DS}.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 445 (ET: BIBM)]*
 
+   Answer: Part 1 — the three regions of BJT operation
+
+   The region is decided by how the `two junctions` are biased.
+   ```
+   Region      | Emitter-Base | Collector-Base | Behaviour
+   ------------+--------------+----------------+---------------------------
+   Cut-off     | Reverse      | Reverse        | OFF, acts as an open switch
+   Active      | Forward      | Reverse        | Amplifier, IC = beta . IB
+   Saturation  | Forward      | Forward        | ON, acts as a closed switch
+   ```
+
+   `Cut-off region`
+   - Both junctions reverse biased, `V(BE) < 0.7 V`, so `IB = 0` and `IC = 0` (only a tiny leakage).
+   - `V(CE) = Vcc`, the full supply appears across the transistor.
+   - The transistor is an `open switch` — logic 1 at the collector.
+
+   `Active region`
+   - Emitter-base forward, collector-base reverse. `IC = beta . IB`, independent of V(CE).
+   - Used for `amplification`, because the output faithfully follows the input.
+   - `0.2 V < V(CE) < Vcc`.
+
+   `Saturation region`
+   - Both junctions forward biased. The base current is so large that the collector cannot take any more current, so `IC < beta . IB`.
+   - `V(CE,sat) is about 0.2 V`, essentially zero.
+   - The transistor is a `closed switch` — logic 0 at the collector.
+
+   Output characteristics
+   ```
+      IC
+       |                                       IB4
+       |    saturation |  active region        ______
+       |  <----------->|<--------------------  IB3
+       |               |  ____________________
+       |    /|         |  ____________________ IB2
+       |   / |         |  ____________________ IB1
+       |  /  |         |
+       | /   |         |______________________ IB = 0  (cut-off)
+       |/____|_________________________________ VCE
+       0    0.2 V                      Vcc
+   ```
+   - A switching circuit works only at the two ends — cut-off and saturation. An amplifier is biased in the middle of the active region.
+
+   Part 2 — n-channel JFET operation
+
+   Structure
+   ```
+         Drain (D)
+           |
+      +----+----+
+      |    N    |          Gate (G) is a P region on each side
+    G-|=========|-G        of the N channel
+      |    N    |
+      +----+----+
+           |
+         Source (S)
+   ```
+   - The `gate-source junction is always reverse biased`, so gate current is essentially zero. This is why a JFET has a very high input impedance, unlike a BJT.
+   - It is a `voltage-controlled` device: V(GS) widens or narrows the depletion region, which changes the width of the channel.
+
+   Effect of V(GS) with V(DS) fixed and small
+   ```
+      VGS = 0        : depletion region thin, channel widest, ID maximum = I(DSS)
+      VGS = -1 V     : depletion region grows, channel narrows, ID falls
+      VGS = -2 V     : channel narrower still, ID smaller
+      VGS = V(P)     : the two depletion regions meet, channel PINCHED OFF,
+                       ID = 0.  V(P) is the pinch-off (cut-off) voltage,
+                       negative for an n-channel JFET
+   ```
+   - For an n-channel JFET, V(GS) is always `zero or negative`. Making it positive would forward-bias the gate junction and destroy the high input impedance.
+
+   Effect of V(DS) with V(GS) fixed at 0
+   ```
+      Small VDS (0 to VP)   : OHMIC region. The channel behaves as a resistor,
+                              ID rises almost linearly with VDS.
+
+      VDS = |VP|            : PINCH-OFF point. The depletion region touches near
+                              the drain end.
+
+      VDS > |VP|            : SATURATION (constant-current) region. ID stays
+                              almost constant at I(DSS) even as VDS rises.
+
+      VDS very large        : BREAKDOWN. The junction breaks down and ID rises
+                              sharply; the device is damaged.
+   ```
+
+   Drain characteristics
+   ```
+      ID
+       |  ohmic |         saturation           | breakdown
+       | region |                              |
+       |   /|   |____________________  VGS = 0 |  /
+       |  / |   |____________________  VGS=-1V | /
+       | /  |   |____________________  VGS=-2V |/
+       |/___|________________________  VGS=VP _|______ VDS
+       0   |VP|
+   ```
+
+   Governing equation in saturation
+   ```
+      ID = I(DSS) [ 1 - (VGS / VP) ]^2           Shockley's equation
+   ```
+
+   | Point | BJT | JFET |
+   |---|---|---|
+   | Controlled by | Base current | Gate voltage |
+   | Input impedance | Low (~1 k) | Very high (~10^8 ohm) |
+   | Carriers | Both electrons and holes | One type only (unipolar) |
+   | Noise | Higher | Lower |
+   | Gain | Higher | Lower |
+
 8. **(a) Draw and explain the operation of NMOS transistor.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 688 (ET: N/A)]*
 
+   Answer: An `NMOS` transistor is a MOSFET whose channel carries `electrons`. It has four terminals — Gate, Source, Drain and Body (substrate) — and the body is normally tied to the source.
+
+   Structure
+   ```
+               Gate (G)
+                  |
+           +--------------+
+           |   metal      |
+           |==============|  <- thin SiO2 insulating layer
+      +----+--------------+----+
+      |    |              |    |
+      | N+ |   P-substrate| N+ |
+      +----+--------------+----+
+        |                   |
+      Source (S)          Drain (D)
+                        Body (B) -> tied to source
+   ```
+   - Two heavily doped `N+` regions (source and drain) sit in a lightly doped `P` substrate.
+   - The gate is a metal or polysilicon plate `insulated` from the substrate by a very thin silicon-dioxide layer, so the gate draws `no DC current` at all. That is why a MOSFET's input impedance is enormous — about 10^12 ohms.
+   - It is an `enhancement-type` device: with no gate voltage there is no channel and the transistor is off.
+
+   Operation
+
+   Case 1 — V(GS) = 0 : cut-off
+   ```
+      No channel exists. The source and drain are two back-to-back PN junctions,
+      one of which is always reverse biased.
+
+      ID = 0   ->  the transistor is OFF (an open switch)
+   ```
+
+   Case 2 — 0 < V(GS) < Vt : still off
+   ```
+      The positive gate voltage pushes holes away from the surface, leaving a
+      depletion region, but not enough electrons have been attracted yet.
+
+      ID is still essentially 0
+   ```
+
+   Case 3 — V(GS) > Vt : the channel forms
+   ```
+      The positive gate attracts minority electrons from the P substrate to the
+      surface. They form a thin layer of N-type material joining source to drain
+      -- the INVERSION LAYER or CHANNEL.
+
+      Vt = threshold voltage, typically 0.4 to 1 V.
+      V(ov) = VGS - Vt is the overdrive voltage; it sets how thick the channel is.
+   ```
+
+   Case 4 — apply V(DS), small : linear (triode) region
+   ```
+      Condition : VDS < VGS - Vt
+
+      ID = mu_n Cox (W/L) [ (VGS - Vt) VDS - VDS^2 / 2 ]
+
+      The channel is a uniform resistor whose value is set by VGS,
+      so ID rises almost linearly with VDS. This is the region used by the
+      CMOS transmission gate and the analogue switch.
+   ```
+
+   Case 5 — V(DS) >= V(GS) - Vt : saturation region
+   ```
+      The voltage across the oxide at the drain end falls to Vt, so the channel
+      PINCHES OFF near the drain. Raising VDS further does not widen the channel;
+      it only extends the pinch-off point.
+
+      ID = (1/2) mu_n Cox (W/L) (VGS - Vt)^2
+
+      ID is now almost independent of VDS -- a constant-current source.
+      This is the region used for amplification.
+   ```
+
+   Output characteristics
+   ```
+      ID
+       |  linear |        saturation
+       | region  |
+       |    /|   |_____________________  VGS = 3.0 V
+       |   / |   |_____________________  VGS = 2.5 V
+       |  /  |   |_____________________  VGS = 2.0 V
+       | /   |   |
+       |/____|___|_____________________  VGS < Vt  (cut-off)
+       0   V(ov)                          VDS
+   ```
+
+   Key points
+   - `Voltage controlled` — the gate current is zero, unlike a BJT where base current does the controlling.
+   - `Enhancement mode` — the channel has to be created; the device is normally off. A depletion-mode NMOS has a channel built in and is normally on.
+   - In `digital logic`, only cut-off and deep linear are used: VGS = 0 is an open switch, VGS = Vdd is a closed switch of a few hundred ohms.
+   - Pairing an NMOS with a `PMOS` gives `CMOS`, in which one of the two is always off, so no static current flows. This is why CMOS consumes almost no power when idle.
+
 9. **ইমিটার কারেন্টের মান 1 Amp, কালেক্টর কারেন্ট 0.95 A হলে বেইস (Base) কারেন্টের মান কত? একটি চিত্র দেওয়া ছিল!!** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+   Answer: (Answered in English, as required for IT topics.) For a transistor, Kirchhoff's current law gives
+   ```
+      IE = IB + IC
+   ```
+   - The emitter current is the sum of the base current and the collector current, because all the current entering at the base and the collector leaves through the emitter.
+
+   Given
+   ```
+      IE = 1 A          (emitter current)
+      IC = 0.95 A       (collector current)
+      IB = ?            (base current)
+   ```
+
+   Calculation
+   ```
+      IE = IB + IC
+
+      IB = IE - IC
+         = 1 - 0.95
+         = 0.05 A
+   ```
+   ```
+      IB = 0.05 A = 50 mA
+   ```
+
+   Current gains, from the same figures
+   ```
+      alpha = IC / IE = 0.95 / 1    = 0.95
+
+      beta  = IC / IB = 0.95 / 0.05 = 19
+
+      check : beta = alpha / (1 - alpha) = 0.95 / 0.05 = 19        consistent
+   ```
+
+   Circuit
+   ```
+                 IC = 0.95 A
+                     |
+                     C
+                     |
+      IB = 0.05 A ---|<
+                     |
+                     E
+                     |
+                 IE = 1 A
+   ```
+
+   - Points worth noting: the base current is always the `smallest` of the three, typically 1 to 5 per cent of the emitter current, because the base is very thin and lightly doped so most carriers pass straight through to the collector.
+   - `alpha` is always just under 1 (0.95 to 0.995), while `beta` is large (here 19, and 50 to 300 in a modern transistor). A low beta of 19 means this device is a power transistor rather than a small-signal one.
 
 ## Semiconductor Devices & Diodes (4)
 
