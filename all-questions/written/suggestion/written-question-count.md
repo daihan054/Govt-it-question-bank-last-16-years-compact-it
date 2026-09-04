@@ -1,11 +1,11 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3397** questions.
+Sorted by count, highest first. Total **3402** questions.
 
 ## IT questions
 
-Total: **2835** questions.
+Total: **2839** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -64,8 +64,8 @@ Total: **2835** questions.
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
 | | Keys, Constraints & Database Objects | 0 |
-| **C Programming** | **— all subcategories —** | **283** |
-| | Basic Programs & Control Statements | 123 |
+| **C Programming** | **— all subcategories —** | **284** |
+| | Basic Programs & Control Statements | 124 |
 | | Output Tracing & Control Flow | 57 |
 | | Recursion & Functions | 39 |
 | | Operators, Data Types & Language Concepts | 25 |
@@ -74,6 +74,17 @@ Total: **2835** questions.
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |
+| **Computer Fundamentals** | **— all subcategories —** | **208** |
+| | Computer Fundamentals & Acronyms | 114 |
+| | ICT in Society & Governance | 24 |
+| | Hardware Components & BIOS (CMOS Battery) | 24 |
+| | Software Types & Classification | 17 |
+| | Data Center Infrastructure & Power Management | 10 |
+| | Blockchain & Emerging Technologies | 8 |
+| | Server Hardware & Enterprise Systems | 5 |
+| | Quantum Computing & Emerging Technologies | 3 |
+| | Digital Banking & Financial Inclusion | 2 |
+| | User Interfaces (CLI vs GUI) | 1 |
 | **Operating System** | **— all subcategories —** | **208** |
 | | Linux / Unix Commands & Administration | 47 |
 | | CPU Scheduling Algorithms | 26 |
@@ -90,25 +101,14 @@ Total: **2835** questions.
 | | Process Synchronization & Concurrency | 4 |
 | | Deadlock & Concurrency Control | 2 |
 | | Linux, Shell & System Commands | 0 |
-| **Computer Fundamentals** | **— all subcategories —** | **207** |
-| | Computer Fundamentals & Acronyms | 113 |
-| | ICT in Society & Governance | 24 |
-| | Hardware Components & BIOS (CMOS Battery) | 24 |
-| | Software Types & Classification | 17 |
-| | Data Center Infrastructure & Power Management | 10 |
-| | Blockchain & Emerging Technologies | 8 |
-| | Server Hardware & Enterprise Systems | 5 |
-| | Quantum Computing & Emerging Technologies | 3 |
-| | Digital Banking & Financial Inclusion | 2 |
-| | User Interfaces (CLI vs GUI) | 1 |
-| **Computer & Network Security** | **— all subcategories —** | **197** |
+| **Computer & Network Security** | **— all subcategories —** | **198** |
 | | Social Engineering & Cyber Attacks | 32 |
 | | Cryptography | 31 |
 | | Firewalls & Network Defense | 20 |
 | | Malware & Security Threats | 20 |
 | | Web Security Vulnerabilities | 19 |
 | | Authentication & Access Control | 16 |
-| | Cryptography & Network Security | 13 |
+| | Cryptography & Network Security | 14 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
 | | Cyber Crime & Security | 10 |
 | | Security Principles (CIA Triad) | 8 |
@@ -194,8 +194,8 @@ Total: **2835** questions.
 | | Data Structure Fundamentals | 6 |
 | | Tree Data Structures (BST, AVL, B-Tree, Heaps) | 2 |
 | | Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) | 2 |
-| **Web Technology** | **— all subcategories —** | **78** |
-| | HTML & Web Fundamentals | 31 |
+| **Web Technology** | **— all subcategories —** | **79** |
+| | HTML & Web Fundamentals | 32 |
 | | JavaScript & jQuery (DOM & Validation) | 16 |
 | | HTTP Protocol | 10 |
 | | Web Services & APIs (SOAP vs REST) | 8 |
@@ -256,7 +256,7 @@ Total: **2835** questions.
 
 ## General Questions
 
-Total: **562** questions.
+Total: **563** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -265,9 +265,9 @@ Total: **562** questions.
 | | International Affairs | 70 |
 | | Everyday Science & Environment | 22 |
 | | Banking & ICT Abbreviations | 8 |
-| **Bangla** | **— all subcategories —** | **138** |
+| **Bangla** | **— all subcategories —** | **139** |
 | | বাংলা ব্যাকরণ ও সাহিত্য | 61 |
-| | Focus Writing | 40 |
+| | Focus Writing | 41 |
 | | Translation | 19 |
 | | পত্র লিখন | 7 |
 | | সারমর্ম / সারাংশ | 6 |

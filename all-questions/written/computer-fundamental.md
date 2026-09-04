@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 207 questions
+**Table of Contents** — 10 subtopics · 208 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-113) | 113 |
+| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-114) | 114 |
 | 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
 | 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
 | 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
@@ -18,7 +18,7 @@
 
 ---
 
-## Computer Fundamentals & Acronyms (113)
+## Computer Fundamentals & Acronyms (114)
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -309,6 +309,8 @@ a) Write a funtcion using any language that calculates a person tax. b) If three
 112. **A product is sold at a loss of 8%. If the product is sold at a price of 800 Taka more than its original price, then there is a profit of 8%. What is the original price of the product?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
 113. **Differentiate among TDM, FDM, and WDM. How does synchronous TDM work?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 514-515]]*
+
+114. **Focus Writing in Bangla “কৃষি, ভূমি ও তথ্যানুযায়ী বাজারজাত”** *[compact it 523]*
 
 ## ICT in Society & Governance (24)
 

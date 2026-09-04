@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 197 questions
+**Table of Contents** — 15 subtopics · 198 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -9,7 +9,7 @@
 | 4 | [Malware & Security Threats](#malware--security-threats-20) | 20 |
 | 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-19) | 19 |
 | 6 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
-| 7 | [Cryptography & Network Security](#cryptography--network-security-13) | 13 |
+| 7 | [Cryptography & Network Security](#cryptography--network-security-14) | 14 |
 | 8 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
 | 9 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
 | 10 | [Security Principles (CIA Triad)](#security-principles-cia-triad-8) | 8 |
@@ -318,7 +318,7 @@
 
 16. **What do you mean by two factor authentication? Explain with example.** *[BTRC Assistant Director (Technical) 2019 compact it 1147-1148 (ET: N/A)]*
 
-## Cryptography & Network Security (13)
+## Cryptography & Network Security (14)
 1. **(a) What is 2-factor authentication? Describe it with an example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65]]*
 
 2. **Focus Witting: Banking Security (English) [Discuss the key security measures used in modern banking applications to protect customer data and prevent fraud.]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
@@ -344,6 +344,8 @@
 12. **“Smart Bangladesh” সংক্ষেপে আলোচনা করুন।** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 377]]*
 
 13. **Write the difference between WPA firewall and Network Firewall.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 385]]*
+
+14. **Focus Writing in English “Technology and Banking Sector of Bangladesh”** *[compact it 523]*
 
 ## Security Protocols (SSL/TLS, HTTPS) (12)
 

@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 138 questions
+**Table of Contents** — 6 subtopics · 139 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [বাংলা ব্যাকরণ ও সাহিত্য](#বাংলা-ব্যাকরণ-ও-সাহিত্য-61) | 61 |
-| 2 | [Focus Writing](#focus-writing-40) | 40 |
+| 2 | [Focus Writing](#focus-writing-41) | 41 |
 | 3 | [Translation](#translation-19) | 19 |
 | 4 | [পত্র লিখন](#পত্র-লিখন-7) | 7 |
 | 5 | [সারমর্ম / সারাংশ](#সারমর্ম--সারাংশ-6) | 6 |
@@ -156,7 +156,7 @@
 
 **৫ টা ম্যাথ, বাংলা ব্যাকরণ, অনুবাদ ইত্যাদি।** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 42]]*
 
-## Focus Writing (40)
+## Focus Writing (41)
 1. Focus Writing in Bangla: "বাংলাদেশের অর্থনীতিতে মোবাইল ব্যাংকিং: সম্ভাবনা, বাধা ও উত্তরণের উপায়" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
 2. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ বিষয়ক একটি প্রবন্ধ রচনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
@@ -238,6 +238,9 @@
 39. **Bangla: রচনা “আন্তর্জাতিক প্রযুক্তিতে বৈদেশিক আয়”** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
 
 40. **বাংলাদেশের দীর্ঘতম নদী কোনটি?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+41. **Translation [Bangla to English]** *[compact it 523]*
+মুক্তিযুদ্ধের ফল সরূপ নীতিগত ভিত্তিতে ব্যাংক খাতের প্রতিষ্ঠানসমূহ জাতীয়করণ করা হয় ১৯৭২ সালে। এ সময়ে ব্যাংক খাতের প্রতিষ্ঠান ও বেসরকারি শেয়ার কেটে নিয়ে সাঙ্গভাবে অর্থনীতির রপ্তানির প্রয়োজনে শিক্ষিতদের নিয়ে একটি প্রস্তাবনার উপর ভিত্তি করে বাংলাদেশ অর্থনৈতিক পুনর্গঠনের মধ্য দিয়ে মৌলিক চাহিদাগুলো মেটাতে একটি সরকার গঠন করে। বাস্তবতায়, জাতীয়করণ কার্যক্রমের আগে ও পরে ব্যাংক ও শিল্পখাতের মধ্যে যথার্থভাবে তত্ব না দেয়ার অবস্থান ছিল। এ অবস্থায় সময়ের বড় একটি ফ্যাক্টর সরকারপ্রধান অর্থে মুক্তিযুদ্ধ ছিল।
 
 ## Translation (19)
 

@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **3038** questions.
+Sorted by count, highest first. Total **3039** questions.
 
 ## IT questions
 
-Total: **1701** questions.
+Total: **1702** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **319** |
-| | Networking Fundamentals & Terminology | 74 |
+| **Computer Networks** | **— all subcategories —** | **320** |
+| | Networking Fundamentals & Terminology | 75 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |

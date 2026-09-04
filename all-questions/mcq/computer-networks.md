@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 319 questions
+**Table of Contents** — 13 subtopics · 320 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-74) | 74 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-75) | 75 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (74)
+## Networking Fundamentals & Terminology (75)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -478,6 +478,18 @@
    (b) The process of training model on multiple datasets
    (c) The process of splitting data into training and testing sets
    (d) The technique for evaluating model performance using multiple subsets of data
+
+75. **Answer the following questions (i–x)** *[compact it 522]*
+   i. Which organization was created as a result of the language movement?
+   ii. UNDP works in different countries and territories to eradicate poverty while protecting the planet. The headquarters of UNDP is located in which country?
+   iii. On 17 November 2015, UNESCO declared International Day for Universal Access to Information. Which day is observed as International Information Day?
+   iv. In which year did the first coal-fired Ultra Super Critical Thermal Power Plant start the commercial power supply to the national grid of Bangladesh?
+   v. What is the name of the first Bangladeshi film at the Oscars?
+   vi. Which campaign works toward building an international consensus and sustained global movement of leaders and citizens to eliminate nuclear weapons?
+   vii. American poet and activist Allen Ginsberg wrote a poem, inspired by the plight of the East Bengali refugees from the 1971 Bangladesh Liberation War. What is the name of the poem?
+   viii. How many priority sector(s) fall under the Blue Economy for Bangladesh?
+   ix. What is the hardest substance available on earth?
+   x. As per the declaration of the government, Bangladesh will turn into ‘Smart Bangladesh’ by which year?
 
 ## Application Layer Protocols (58)
 

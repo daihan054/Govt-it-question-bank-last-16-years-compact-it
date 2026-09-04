@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 283 questions
+**Table of Contents** — 9 subtopics · 284 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-123) | 123 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-124) | 124 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
 | 3 | [Recursion & Functions](#recursion--functions-39) | 39 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (123)
+## Basic Programs & Control Statements (124)
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -503,6 +503,8 @@ a) What is call by reference? b) Write a program that indicate the example of re
 122. **Write a program for login using database in PHP. Use various parameters (username, hostname, database name and database user)** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
 
 123. **Write a program that takes a single alphanumeric string as input. The string may contain both letters (a-z, A-Z) and digits (0-9). Your task is to calculate and print the sum of all numeric digit characters in the string.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+
+124. **Write a C program that performs this matrices problem. Calculate and display the sum of the elements on the main diagonal and the sum of the elements on the anti-diagonal of the product matrix.** *[compact it 520]*
 
 ## Output Tracing & Control Flow (57)
 
