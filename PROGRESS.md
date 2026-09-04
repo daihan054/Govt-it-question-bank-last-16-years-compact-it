@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 145 / 243 done**  ·  **Questions: 1890 answered, 33 skipped, 3168 total**
+**Subtopics: 146 / 243 done**  ·  **Questions: 1892 answered, 33 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -18,7 +18,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `data-structure.md` | IT | 8 / 8 | 97 | 0 | 97 |
 | `database.md` | IT | 19 / 19 | 292 | 2 | 294 |
 | `dld.md` | IT | 9 / 9 | 140 | 8 | 148 |
-| `electrical-and-electronics.md` | IT | 4 / 9 | 25 | 5 | 39 |
+| `electrical-and-electronics.md` | IT | 5 / 9 | 27 | 5 | 39 |
 | `english.md` | General | 0 / 8 | 0 | 0 | 112 |
 | `gk.md` | General | 0 / 4 | 0 | 0 | 214 |
 | `image-processing.md` | IT | 0 / 5 | 0 | 0 | 7 |

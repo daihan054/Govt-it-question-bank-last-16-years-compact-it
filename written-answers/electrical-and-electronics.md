@@ -1534,7 +1534,157 @@
 
 1. **A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is V = 99\cos(600t + 30^\circ)\text{V}.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
+   Answer: A `leading` power factor means the current leads the voltage, so the circuit is `resistive-capacitive` — a resistor in series with a capacitor.
+
+   Given
+   ```
+      P    = 940 W
+      pf   = 0.707 leading   ->  theta = -45 degrees  (current leads)
+      v(t) = 99 cos(600t + 30) V
+
+      Vm = 99 V ,  omega = 600 rad/s
+   ```
+
+   Step 1 — RMS voltage and frequency
+   ```
+      V(rms) = Vm / sqrt(2) = 99 / 1.4142 = 70.00 V
+
+      omega = 600 rad/s
+      f = omega / (2 pi) = 600 / 6.2832 = 95.49 Hz
+   ```
+
+   Step 2 — magnitude of the impedance
+   ```
+      P = V(rms)^2 . cos(theta) / |Z|
+
+      |Z| = V(rms)^2 . cos(theta) / P
+          = (70.00)^2 x 0.707 / 940
+          = 4900 x 0.707 / 940
+          = 3464.3 / 940
+      |Z| = 3.686 ohms
+   ```
+
+   Step 3 — RMS current, as a check
+   ```
+      I(rms) = V(rms) / |Z| = 70.00 / 3.686 = 18.99 A
+
+      check : P = V I cos(theta) = 70.00 x 18.99 x 0.707 = 940 W      correct
+   ```
+
+   Step 4 — resistance
+   ```
+      R = |Z| . cos(theta)
+        = 3.686 x 0.707
+      R = 2.606 ohms
+   ```
+
+   Step 5 — capacitive reactance
+   ```
+      sin(45) = 0.707 , so for a 45 degree angle  X = R
+
+      Xc = |Z| . sin(theta)
+         = 3.686 x 0.707
+      Xc = 2.606 ohms
+   ```
+
+   Step 6 — the capacitance
+   ```
+      Xc = 1 / (omega C)
+
+      C = 1 / (omega . Xc)
+        = 1 / (600 x 2.606)
+        = 1 / 1563.6
+      C = 0.0006395 F
+   ```
+   ```
+      C = 639.5 microfarads
+   ```
+
+   Answer
+   ```
+      The two elements are
+
+         R = 2.61 ohms          (resistor)
+         C = 639.5 uF           (capacitor)
+
+      connected in series.
+   ```
+
+   Verification
+   ```
+      Z = R - j Xc = 2.606 - j 2.606 = 3.686 angle -45 degrees      correct
+      pf = cos(-45) = 0.707 leading                                 correct
+      P  = I(rms)^2 . R = (18.99)^2 x 2.606 = 940 W                 correct
+   ```
+
+   - Points to note: a `leading` power factor always means a capacitive circuit; a `lagging` one would mean an inductor, and step 6 would then use `L = XL / omega`. At exactly 0.707 the phase angle is 45 degrees, so `R and X are equal` — a useful shortcut worth spotting immediately.
+
 2. **RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809-810 (ET: IBA)]*
+
+   Answer: (Answered in English, as required for IT topics.) RLC circuit
+   - An `RLC circuit` contains a `resistor (R)`, an `inductor (L)` and a `capacitor (C)` connected together. It is the basic circuit for tuning, filtering and oscillation.
+   ```
+      Series RLC
+      ---/\/\/\---(((((---||---
+           R         L      C
+   ```
+   - Each element behaves differently with frequency:
+   ```
+      R  : opposition = R              , independent of frequency
+      L  : reactance  X(L) = 2 pi f L  , rises with frequency
+      C  : reactance  X(C) = 1/(2 pi f C) , falls with frequency
+   ```
+   - Total opposition is the `impedance`:
+   ```
+      Z = sqrt( R^2 + (XL - XC)^2 )
+
+      phase angle  theta = arctan( (XL - XC) / R )
+   ```
+
+   Resonance
+   - At one particular frequency the two reactances cancel exactly.
+   ```
+      XL = XC   ->   2 pi f L = 1 / (2 pi f C)
+
+      f(r) = 1 / (2 pi sqrt(LC))
+   ```
+   - At resonance in a `series` RLC circuit: `Z = R` (minimum), current is `maximum`, and the power factor is 1. In a `parallel` RLC circuit the opposite happens — impedance is maximum and current minimum.
+   - `Quality factor` measures how sharp the resonance is:
+   ```
+      Q = (1/R) sqrt(L/C)          Bandwidth = f(r) / Q
+   ```
+
+   Uses
+   - Tuning a radio or television to one station, band-pass and band-stop filters, oscillators, and impedance matching.
+
+   Role of a transistor in an electrical circuit
+   - A `transistor` is a three-terminal semiconductor device that uses a small input signal to control a much larger current. Its two fundamental roles are `switching` and `amplification`.
+
+   `Switching`
+   ```
+      Cut-off region    : the transistor is OFF -> an open switch  -> logic 1 at output
+      Saturation region : the transistor is ON  -> a closed switch -> logic 0 at output
+   ```
+   - A 5 V microcontroller pin can therefore control a relay, a motor or a lamp. This on/off behaviour is the basis of every logic gate, and hence of every processor and memory chip.
+
+   `Amplification`
+   - Biased in the `active region`, the transistor makes the collector current a faithful, magnified copy of the base current.
+   ```
+      IC = beta . IB           beta is 50 to 300
+   ```
+   - Used in audio amplifiers, radio receivers, sensor signal conditioning and instrumentation.
+
+   Other roles
+   ```
+   Oscillator      : with an RLC or crystal feedback network, it generates a waveform
+   Voltage regulator : a series-pass transistor holds the output steady
+   Current source  : supplies a fixed current regardless of load
+   Buffer          : an emitter follower matches a high-impedance source
+                     to a low-impedance load
+   Modulation and demodulation in communication circuits
+   ```
+
+   - The two meet in a `tuned amplifier`: an RLC circuit selects one frequency, and the transistor amplifies it. That combination is what makes a radio receiver work.
 
 ## Operational Amplifiers (Op-Amp) (2)
 
