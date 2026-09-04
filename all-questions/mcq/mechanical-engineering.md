@@ -78,7 +78,6 @@
    (ঘ) সর্বনিম্ন অথবা সর্বোচ্চ
 
 ## Thermodynamics & Heat Transfer (8)
-
 1. **একটি হিমায়ন চক্রের হিমায়ক কর্তৃক তাপ শোষিত হয়** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*
    (ক) কন্ডেন্সারে
    (খ) ইভাপোরেটরে
@@ -126,6 +125,12 @@
    (b) \text{PV}^\gamma = \text{constant}
    (c) \text{PV}^\alpha = \text{constant}
    (d) \text{PV}^\circ = \text{constant}
+
+**আপেক্ষিক তাপের একক কি ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. \\text\{J/Kg\}
+   খ. \\text\{Pa-5\}
+   গ. \\text\{J/Kg-K\}
+   ঘ. উপরের সবগুলি
 
 ## Engineering Materials & Manufacturing (7)
 

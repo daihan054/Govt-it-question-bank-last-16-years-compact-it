@@ -13,7 +13,6 @@
 ---
 
 ## Circuits & Components (83)
-
 1. **What does inductance depend on?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*
    (a) Number of turns in the coil
    (b) Permeability of the core material
@@ -492,6 +491,12 @@
    b. Increases the gain
    c. Is harmful
    d. Converts the amplifier into an oscillator
+
+**আদর্শ ভোল্টেজ উৎসের অভ্যন্তরীণ রোধ কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. অসীম
+   খ. অতি ক্ষুদ্র
+   গ. শূন্য
+   ঘ. অনেক বড়
 
 ## Power Systems & Generation (18)
 

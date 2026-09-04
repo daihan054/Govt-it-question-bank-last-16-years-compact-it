@@ -1,6 +1,6 @@
 # MCQ Question Count (Last 16 Years)
 
-Category and subcategory wise question count from every MCQ paper in the [`mcq/`](../) folder.
+Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
 Sorted by count, highest first. Total **2742** questions.
 
 ## IT questions
@@ -34,8 +34,8 @@ Total: **1617** questions.
 | | Relational Model & Terminology | 8 |
 | | PL/SQL & Triggers | 7 |
 | | Indexing & Query Optimization | 6 |
-| | Concurrency Control & Locking | 5 |
 | | Database Connectivity (JDBC/ODBC) | 5 |
+| | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
 | **Computer Fundamentals** | **— all subcategories —** | **143** |
 | | Hardware Components & Peripherals | 41 |
@@ -64,9 +64,9 @@ Total: **1617** questions.
 | | Polymorphism & Overloading | 16 |
 | | OOP Concepts & Principles | 11 |
 | | Encapsulation & Access Modifiers | 7 |
+| | Inheritance | 6 |
 | | Constructors & Destructors | 6 |
 | | Exception Handling | 6 |
-| | Inheritance | 6 |
 | **Microprocessor & Computer Architecture** | **— all subcategories —** | **85** |
 | | CPU & Registers | 35 |
 | | Memory Hierarchy | 28 |
@@ -175,6 +175,9 @@ Total: **1125** questions.
 | | বাগধারা ও প্রবাদ | 11 |
 | | এক কথায় প্রকাশ | 5 |
 | | বাংলা ভাষা বিষয়ক তথ্য | 1 |
+| | কারক ও বিভক্তি | 0 |
+| | সন্ধি ও বিচ্ছেদ | 0 |
+| | বানান ও শুদ্ধিকরণ | 0 |
 | **Math** | **— all subcategories —** | **148** |
 | | Algebra | 41 |
 | | Geometry | 23 |
@@ -185,6 +188,9 @@ Total: **1125** questions.
 | | Average & Age Problems | 6 |
 | | Ratio & Proportion | 6 |
 | | Permutation & Combination | 5 |
-| | Probability & Statistics | 4 |
 | | Trigonometry | 4 |
+| | Probability & Statistics | 4 |
 | | Analytical Reasoning | 3 |
+| | Speed, Time & Distance | 0 |
+| | Time & Work | 0 |
+| | Basic Arithmetic | 0 |

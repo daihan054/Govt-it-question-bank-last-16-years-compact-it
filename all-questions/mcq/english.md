@@ -14,7 +14,6 @@
 ---
 
 ## English Grammar (163)
-
 1. **Fill in the blank: The scientist looked _____ the microscope.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **The concert was cancelled _____ the heavy rain.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
@@ -981,8 +980,25 @@
    (c) for
    (d) in
 
-## Vocabulary, Synonyms & Antonyms (57)
+**What is the plural of the word 'index'?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. indices
+   খ. Indexes
+   গ. Index
+   ঘ Indexs
 
+**The word 'Friendly' is-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. adverb
+   খ. adjective
+   গ. noun
+   ঘ. Verb
+
+**The correct passive form of 'Someone has stolen his pen'.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. His pen was stolen.
+   খ. His pen has been stolen.
+   গ. His pen was being stolen.
+   ঘ. None of above.
+
+## Vocabulary, Synonyms & Antonyms (57)
 1. **What is the antonym of 'famous '?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*
    ক. Opeque
    খ. illiterate
@@ -1314,6 +1330,12 @@
    (b) Quarrel
    (c) Stipulation
    (d) Confrontations
+
+**The synonym of 'Mutiny'** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. Malignity
+   খ. Revolt
+   গ. Moron
+   ঘ. Deep
 
 ## Idioms & Phrases (24)
 

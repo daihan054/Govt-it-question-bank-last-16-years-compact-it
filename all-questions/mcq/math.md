@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 148 questions
+**Table of Contents** — 15 subtopics · 148 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -15,13 +15,15 @@
 | 10 | [Trigonometry](#trigonometry-4) | 4 |
 | 11 | [Probability & Statistics](#probability--statistics-4) | 4 |
 | 12 | [Analytical Reasoning](#analytical-reasoning-3) | 3 |
+| 13 | [Speed, Time & Distance](#speed-time--distance-0) | 0 |
+| 14 | [Time & Work](#time--work-0) | 0 |
+| 15 | [Basic Arithmetic](#basic-arithmetic-0) | 0 |
 
 <!-- TOC END -->
 
 ---
 
 ## Algebra (41)
-
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
@@ -256,8 +258,31 @@
    C) it is the set of natural numbers for which a function is defined
    D) Any set of positive number
 
-## Geometry (23)
+**(১১.৯৮ \\times ১১.৯৮ + ১১.৯৮ \\times X + ০.০২ \\times ০.০২) এই রাশিটি একটি নিখুঁত বর্গ হবে যদি X এর মান হয়:** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ০.২
+   খ. ১/০.২
+   গ. ০.২/১
+   ঘ. ০.২ \\times ০.২
 
+**একটি দুই অঙ্কের সংখ্যা এবং তার অঙ্কদ্বয়ের অবস্থান পরিবর্তন করে গঠিত সংখ্যার মধ্যে পার্থক্য ৩৬। ওই সংখ্যাটির দুই অঙ্কের মধ্যে পার্থক্য কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ৩
+   খ. ৪
+   গ. ৯
+   ঘ. কোনোটিই নয়
+
+**৪.০০৬ কে ০.০৪ দিয়ে ভাগ করলে ফলাফল হবে-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ১.০০৯
+   খ. ১০.০৯
+   গ. ১০০.৯
+   ঘ. কোনোটিই নয়
+
+**'একটি ধনাত্মক সংখ্যা নির্ণয় কর যা ১৭ যোগ করলে, সংখ্যাটির বিপরীতের ৬০ গুণের সমান হয়'** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ৩
+   খ. ১০
+   গ. ১৭
+   ঘ. ২০
+
+## Geometry (23)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ১২০°
    খ. ১৮০°
@@ -390,8 +415,13 @@
    C. 2
    D. 6
 
-## Percentage, Profit & Loss (21)
+**১ বর্গ ইঞ্চি সমান কত বর্গ সেন্টিমিটার?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ১
+   খ. ৪.৪৬
+   গ ৬.৪৫
+   ঘ ৫.৪৫
 
+## Percentage, Profit & Loss (21)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
@@ -512,6 +542,12 @@
    খ. 0.21
    গ. 0.021
    ঘ. 0.0021
+
+**একটি দ্রব্য ১৯২০ টাকায় বিক্রি করে যে শতাংশ লাভ হয়, তা একই দ্রব্য ১২৮০ টাকায় বিক্রি করলে যে শতাংশ ক্ষতি হয়, সেই শতাংশের সমান। তাহলে ২৫% লাভ করতে হলে দ্রব্যটি কত টাকায় বিক্রি করতে হবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ২০০০ টাকা
+   খ. ২২০০ টাকা
+   গ. ২৪০০ টাকা
+   ঘ. ২৩০০ টাকা
 
 ## Arithmetic & Number Series (16)
 
@@ -887,7 +923,6 @@
    d. 1/6
 
 ## Analytical Reasoning (3)
-
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) 4.24 meters
    (b) 5.24 meters
@@ -901,3 +936,72 @@
    (d) 4
 
 3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+**বিদ্যুৎ আবিষ্কার কততম শিল্প বিপ্লবের সূচনা সম্পর্কিত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ২য়
+   খ. ৩য়
+   গ. ৬ষ্ঠ
+   ঘ. ৪র্থ
+
+**ম্যারাথন যেমন একটি দৌড়, ঠিক তেমনি শীতঘুমদাতা (hibernation) হলো-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. শীত
+   খ. গ্রীষ্ম
+   গ. ঘুম
+   ঘ. জেগে থাকা
+
+**রামন বলছে 'অনূজের মা হলো আমার মায়ের একমাত্র মেয়ে' তাহলে রামনের সাথে অনূজের সম্পর্ক কি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক ভাই
+   খ ভাগিনা
+   গ বাবা
+   ঘ কোনটি নয়
+
+**এই চিত্রটিতে মোট কতটি ত্রিভুজ আছে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ২০
+   খ. ২০ এর অধিক
+   গ. ১৬
+   ঘ. ১৮
+
+**নিচের সংখ্যার ধারাটিতে ভুল সংখ্যা খুঁজে বের করুন: ৮,১৩, ২১, ৩২, ৪৭, ৬৩, ৮৩** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ৪৭
+   খ. ৬৩
+   গ. ৩২
+   ঘ. ৮৩
+
+**একটি সারিতে ব্যক্তিদের মধ্যে, সাবিকের অবস্থান বাম দিক থেকে ২৬তম এবং ডান দিক থেকে ৩৫তম। তাহলে সারিতে মোট ছাত্রছাত্রীর সংখ্যা হবে:** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ৩২
+   খ. ৪৬
+   গ. ৬০
+   ঘ. ৭২
+
+## Speed, Time & Distance (0)
+**সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. তরলের প্রবাহের মসৃণতা
+   খ. তরলের প্রবাহের আপেক্ষিক গতি
+   গ. তরলের প্রবাহে বাধা দেওয়ার ধর্ম
+   ঘ. সবকটি
+
+**একজন ব্যক্তি ১০ ঘণ্টায় একটি যাত্রা সম্পন্ন করেন। তিনি যাত্রার প্রথম অর্ধেক ২১ কি.মি./ঘণ্টা গতিতে এবং দ্বিতীয় অর্ধেক ২৪ কিমি./ঘণ্টা গতিতে অতিক্রম করেন। সম্পূর্ণ যাত্রার দৈর্ঘ্য কত কিমি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ২২০ কি.মি.
+   খ. ২২৪ কি.মি.
+   গ. ২৩০ কি.মি.
+   ঘ. ২৩৪ কি.মি.
+
+## Time & Work (0)
+**যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ৪ দিন
+   খ. ৫ দিন
+   গ. ৬ দিন
+   ঘ. ৭ দিন
+
+**পাইপ A একটি ট্যাঙ্ক ২০ মিনিটে ভর্তি করতে পারে, পাইপ B ৩০ মিনিটে ভর্তি করতে পারে এবং পাইপ C সেই ট্যাঙ্কটি ৪০ মিনিটে খালি করতে পারে। যদি এই তিনটি পাইপ একসাথে চালু করা হয়, তাহলে ট্যাঙ্কটি ভর্তি হতে কত সময় লাগবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ১৭.১৪ মিনিট
+   খ. ২০ মিনিট
+   গ. ৮ মিনিট
+   ঘ. কোনোটিই নয়
+
+## Basic Arithmetic (0)
+**তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ৩৫ বছর
+   খ. ৪০ বছর
+   গ. ৫০ বছর
+   ঘ. কোনটিই নয়

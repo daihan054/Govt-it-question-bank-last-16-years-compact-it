@@ -14,19 +14,19 @@ Total: **2623** questions.
 | | OSI & TCP/IP Reference Model | 52 |
 | | Networking Fundamentals & Terminology | 32 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 22 |
-| | Networking Devices | 19 |
 | | Wireless Networks & IoT (mmWave) | 19 |
+| | Networking Devices | 19 |
 | | Multiplexing & Bandwidth | 18 |
 | | Routing Protocols & Route Configuration | 18 |
-| | Communication System & Transmission Modes | 17 |
 | | Transport Layer (TCP & UDP) | 17 |
+| | Communication System & Transmission Modes | 17 |
 | | Data Rate & Channel Capacity (Nyquist, Shannon) | 16 |
 | | Physical Layer & Transmission Media (Cables & Wiring) | 15 |
 | | Error Detection & Data Communication (CRC, Throughput) | 14 |
 | | Network Topologies | 14 |
 | | IPv6 Addressing | 13 |
-| | Network Address Translation (NAT) | 13 |
 | | Physical Layer & Optical Fiber (Attenuation & Power Budget) | 13 |
+| | Network Address Translation (NAT) | 13 |
 | | Flow Control & Data Link Layer (Stop-and-Wait) | 12 |
 | | Network Services (DHCP, NAT) | 11 |
 | | Digital Modulation & Signal Processing (BPSK, QPSK) | 10 |
@@ -39,8 +39,8 @@ Total: **2623** questions.
 | | Satellite Communication | 4 |
 | | Analog Modulation & Radio Receivers | 3 |
 | | Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) | 3 |
-| | Address Resolution (ARP & RARP) | 2 |
 | | Line Coding & Digital Encoding | 2 |
+| | Address Resolution (ARP & RARP) | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
 | **Database** | **— all subcategories —** | **294** |
@@ -50,8 +50,8 @@ Total: **2623** questions.
 | | ER Diagram & Database Design | 25 |
 | | Normalization & Database Design | 21 |
 | | SQL Commands (DDL, DML, DCL, TCL) | 18 |
-| | Relational Data Model & ER Relationships | 14 |
 | | Transaction Management & ACID Properties | 14 |
+| | Relational Data Model & ER Relationships | 14 |
 | | Indexing & Query Optimization (B-Tree, B+ Tree) | 10 |
 | | Data Warehousing, Data Mining & Business Intelligence | 9 |
 | | Database Backup & Disaster Recovery | 8 |
@@ -59,10 +59,10 @@ Total: **2623** questions.
 | | SQL Joins & Operations | 7 |
 | | Distributed & Parallel Databases | 5 |
 | | Database Design & Data Types | 3 |
-| | Database Connectivity (JDBC) | 2 |
 | | NoSQL, NewSQL & Modern Databases | 2 |
-| | Indexing in DBMS | 1 |
+| | Database Connectivity (JDBC) | 2 |
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
+| | Indexing in DBMS | 1 |
 | **C Programming** | **— all subcategories —** | **270** |
 | | Basic Programs & Control Statements | 111 |
 | | Output Tracing & Control Flow | 57 |
@@ -78,8 +78,8 @@ Total: **2623** questions.
 | | CPU Scheduling Algorithms | 25 |
 | | OS Concepts & System Software | 24 |
 | | Deadlock & Resource Allocation | 23 |
-| | Memory Management & Paging | 16 |
 | | Virtual Memory & Page Replacement (Thrashing) | 16 |
+| | Memory Management & Paging | 16 |
 | | Process Management & Process States | 12 |
 | | Concurrency, Threads & Synchronization | 11 |
 | | File Systems & Disk Management | 7 |
@@ -103,8 +103,8 @@ Total: **2623** questions.
 | | Buffer Overflow & Software Vulnerabilities | 1 |
 | **Computer Fundamentals** | **— all subcategories —** | **153** |
 | | Computer Fundamentals & Acronyms | 59 |
-| | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | ICT in Society & Governance | 24 |
+| | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
 | | Data Center Infrastructure & Power Management | 10 |
 | | Blockchain & Emerging Technologies | 8 |
@@ -120,10 +120,10 @@ Total: **2623** questions.
 | | Software Requirements Engineering | 10 |
 | | Software Project Management & Organization | 9 |
 | | Software Design Principles (Coupling & Cohesion) | 5 |
-| | IT Governance, Audit & Risk Management | 4 |
 | | Software Cost Estimation & Build vs Buy Decisions | 4 |
-| | Code Smells & Refactoring | 2 |
+| | IT Governance, Audit & Risk Management | 4 |
 | | Data Flow Diagrams (DFD) | 2 |
+| | Code Smells & Refactoring | 2 |
 | | Open Source Software & Licensing | 2 |
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
@@ -131,8 +131,8 @@ Total: **2623** questions.
 | | Logic Gates & Universal Gates | 33 |
 | | Number Systems & Base Conversions | 26 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 23 |
-| | Boolean Algebra & De Morgan’s Theorem | 19 |
 | | Karnaugh Map (K-Map) | 19 |
+| | Boolean Algebra & De Morgan’s Theorem | 19 |
 | | Sequential Circuits (Latches & Flip-Flops) | 17 |
 | | Logic Families (TTL vs CMOS) | 6 |
 | | 2's Complement & Binary Arithmetic | 4 |
@@ -153,8 +153,8 @@ Total: **2623** questions.
 | | Sorting Algorithms & Complexity | 36 |
 | | Graph Traversal Algorithms (BFS & DFS) | 17 |
 | | Graph Algorithms (Shortest Path & Minimum Spanning Tree) | 15 |
-| | Algorithm Analysis & Asymptotic Complexity | 14 |
 | | Searching Algorithms | 14 |
+| | Algorithm Analysis & Asymptotic Complexity | 14 |
 | | Dynamic Programming & Greedy Algorithms | 9 |
 | | Graph Theory & Isomorphism | 7 |
 | | Greedy Algorithms (Fractional Knapsack) | 6 |
@@ -180,9 +180,9 @@ Total: **2623** questions.
 | | Linked List | 15 |
 | | Binary Search Tree (BST) | 9 |
 | | Priority Queues & Heaps (Min/Max Heap) | 8 |
-| | Data Structure Fundamentals | 6 |
-| | Hashing & Hash Tables | 6 |
 | | Queue | 6 |
+| | Hashing & Hash Tables | 6 |
+| | Data Structure Fundamentals | 6 |
 | **Web Technology** | **— all subcategories —** | **77** |
 | | HTML & Web Fundamentals | 30 |
 | | JavaScript & jQuery (DOM & Validation) | 16 |
@@ -196,44 +196,44 @@ Total: **2623** questions.
 | | Deep Learning & Neural Networks (ANN, CNN, RNN) | 8 |
 | | Machine Learning Paradigms (Supervised vs Unsupervised) | 6 |
 | | Model Evaluation & Datasets | 5 |
-| | Generative AI & Explainable AI (XAI) | 4 |
 | | Supervised Learning (Decision Trees) | 4 |
+| | Generative AI & Explainable AI (XAI) | 4 |
 | | Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) | 3 |
 | | Search Algorithms (Informed vs Uninformed Search) | 2 |
+| | Overfitting, Underfitting & Model Generalization | 1 |
 | | Association Rule Learning (Market Basket Analysis) | 1 |
 | | Clustering & Unsupervised Learning (K-Means, Hierarchical) | 1 |
-| | Overfitting, Underfitting & Model Generalization | 1 |
 | **Electrical & Electronics** | **— all subcategories —** | **39** |
 | | Electrical Circuits & Protection Devices | 13 |
 | | Transistors (BJT & FET) | 9 |
-| | Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) | 4 |
 | | Semiconductor Devices & Diodes | 4 |
+| | Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) | 4 |
 | | AC Circuits & Power Analysis | 2 |
-| | Circuit Theorems (Thevenin, Norton, Superposition) | 2 |
 | | Operational Amplifiers (Op-Amp) | 2 |
 | | Sensor Circuits & Automated Control Systems | 2 |
+| | Circuit Theorems (Thevenin, Norton, Superposition) | 2 |
 | | Electrical Machines (Motors & Alternators) | 1 |
 | **Cloud Computing** | **— all subcategories —** | **38** |
 | | Cloud Service Models | 13 |
 | | Virtualization & Containers (VM vs Container) | 8 |
 | | Cloud Storage & Fundamentals | 6 |
 | | Cluster, Grid & Distributed Computing | 4 |
-| | Edge Computing & Fog Computing | 2 |
 | | Scalability (Horizontal & Vertical Scaling) | 2 |
-| | Cloud Security & Compliance | 1 |
-| | High Availability & System Redundancy | 1 |
+| | Edge Computing & Fog Computing | 2 |
 | | Virtualization & Resource Allocation | 1 |
+| | High Availability & System Redundancy | 1 |
+| | Cloud Security & Compliance | 1 |
 | **Compiler & Theory of Computation** | **— all subcategories —** | **25** |
-| | Compiler vs Interpreter | 7 |
 | | Regular Expressions & Finite Automata | 7 |
+| | Compiler vs Interpreter | 7 |
 | | Grammar & Ambiguity | 5 |
 | | Lexical Analysis & Compiler Phases | 5 |
 | | Linker & Loader | 1 |
 | **Image Processing** | **— all subcategories —** | **7** |
 | | Computer Graphics (Vector & Raster) | 3 |
 | | Color Models | 1 |
-| | Edge Detection | 1 |
 | | Frequency Domain Filtering | 1 |
+| | Edge Detection | 1 |
 | | Morphological Operations | 1 |
 | **Programming Languages** | **— all subcategories —** | **6** |
 | | Visual Basic & .NET | 6 |
@@ -274,12 +274,12 @@ Total: **545** questions.
 | | Basic Arithmetic & Average | 11 |
 | | Geometry & Coordinate Geometry | 10 |
 | | Permutations & Combinations | 6 |
-| | Probability & Statistics | 4 |
-| | Propositional Logic & Logical Equivalence | 4 |
 | | Ratio, Proportion & Mixtures | 4 |
 | | Speed, Time, Distance & Boats | 4 |
-| | Analytical Ability & Logical Reasoning | 3 |
+| | Probability & Statistics | 4 |
+| | Propositional Logic & Logical Equivalence | 4 |
 | | Discrete Mathematics & Recurrence Relations | 3 |
+| | Analytical Ability & Logical Reasoning | 3 |
 | | Calculus & Integration | 2 |
 | | Comprehensive Math Problems | 2 |
 | | Numerical Methods & Root Finding | 2 |

@@ -988,7 +988,6 @@
    D. জেনেটিক্স
 
 ## International Affairs (103)
-
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) David Baker
    (b) John Jumper
@@ -1571,8 +1570,79 @@
    (c) Portuguese
    (d) Spanish
 
-## Everyday Science (77)
+**বিশ্ব শরণার্থী দিবস কোনটি** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ৫ জুন
+   খ. ২১ জুন
+   গ. ২৫ জুন
+   ঘ. ২০ জুন
 
+**আন্তর্জাতিক ধান গবেষণা ইনিস্টিউট অবস্থিত-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. টোকিও
+   খ. ম্যানিলা
+   গ. নয়াদিল্লি
+   ঘ. কাঠমান্ডু
+
+**মার্কিন প্রেসিডেন্ট 'ডোনাল্ড ট্রাম্প' কততম প্রেসিডেন্ট?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ৪৩ তম
+   খ. ৪৭তম
+   গ. ৪৮তম
+   ঘ. ৪৯তম
+
+**বাংলাদেশের জাতীয় প্রতীকের ডিজাইনার কে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. জয়নুল আবেদীন
+   খ. কামরুল হাসান
+   গ. নভেরা আহমেদ
+   ঘ. শামিম সিকদার
+
+**বাংলাদেশ স্ট্রিট কোথায় অবস্থিত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. সিয়েরালিওন
+   খ. লাইবেরিয়া
+   গ. তানজানিয়া
+   ঘ. কঙ্গো
+
+**প্রফেসর ড. মুহাম্মদ ইউনুস কত সালে নোবেল পুরষ্কার লাভ** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ২০০৬
+   খ. ২০০৭
+   গ. ২০০৮
+   ঘ. ২০১২
+
+**খ্রিস্টান ধর্মের ধর্মীয় গুরু পোপ ফ্রান্সিস মারা যান--** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ২০ এপ্রিল ২০২৫
+   খ. ২১ এপ্রিল ২০২৫
+   গ ২২ এপ্রিল ২০২৫
+   ঘ. ২৩ এপ্রিল ২০২৫
+
+**বাংলাদেশে পারমাণবিক বিদ্যুৎ কেন্দ্র স্থাপিত হয় –** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. রামপাল
+   খ. মাতারবাড়ি
+   গ রুপপুর
+   ঘ. সোনাদিয়া
+
+**বর্তমানে দেশে কত শতাংশ বিদ্যুৎ গ্যাসের মাধ্যমে উৎপাদিত হয়?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ৩৮%
+   খ. ৪০%
+   গ. ৪৭%
+   ঘ. ৫২%
+
+**ভারত থেকে আমদানিকৃত বিদ্যুৎ HVDC লাইন দেশের কোন জেলা দিয়ে প্রবেশ করেছে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. কুমিল্লা
+   খ. পঞ্চগড়
+   গ. কুড়িগ্রাম
+   ঘ. কুষ্টিয়া
+
+**বাংলাদেশে নবায়নযোগ্য জ্বালানির প্রধান উৎস কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. সৌর বিদ্যুৎ
+   খ. বায়োগ্যাস
+   গ. বায়ু বিদ্যুৎ
+   ঘ. বর্জ্য থেকে বিদ্যুৎ
+
+**বাংলাদেশে সর্বোচ্চ ভোল্টেজ লেভেল সঞ্চালন লাইন কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. ৭৬৫ কেভি
+   খ. ৪০০ কেভি
+   গ. ২৩০ কেভি
+   ঘ. ১৩২ কেভি
+
+## Everyday Science (77)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -2058,6 +2128,78 @@
    C. \text{h}/2\pi
    D. 2\pi/\text{h}
 
+**Answer the following questions, Assume table name: Employee** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 44]]*
+   a. Find the details of employees whose name starts with "A".
+   b. Find the details employes whose name ended with "y".
+   c. Find the name and phone of employees who lives in "Savar"?
+   d. Find the name, phone number and salary of employees whose salary is greater than 40000 tk and who live in "Dhaka"? e. Find all the details of employees, displaying the name as "My Name", who live in "Savar".
+
+**তরল পদার্থে তাপ স্থানান্তর প্রক্রিয়ার নাম কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. পরিচালন
+   খ. পরিবহন
+   গ. বিকিরণ
+   ঘ. উপরের সবগুলি
+
+**'কপর্দকহীন' অর্থ-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. বোকা
+   খ. নিঃস্ব
+   গ. অসহায়
+   ঘ. মলিন
+
+**Please look ... the word in the dictionary.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. Up
+   খ. into
+   গ. To
+   ঘ for
+
+**I took an aspirin to ... the pain in my knee.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. accelerate
+   খ. deviate
+   গ. alleviate
+   ঘ. Accompany
+
+**Omar Khayyam is seldom born.** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. A
+   খ. The
+   গ. An
+   ঘ. Only
+
+**পরম শূন্য তাপমাত্রা কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ২৭৩± সেন্টিগ্রেড
+   খ. -২৭৩± ফারেনহাইট
+   গ. ০± সেন্টিগ্রেড
+   ঘ. ০± কেলভিন
+
+**বাতাসের আর্দ্রতা মাপার যন্ত্রের নাম কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. মাইক্রোমিটার
+   খ. জেনারেটর
+   গ. আর্দ্রতামিটার
+   ঘ. হাইগ্রোমিটার
+
+**আকাশে রংধনু সৃষ্টির কারণ-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. ধূলিকণা
+   খ. বৃষ্টির কণা
+   গ. বায়োস্তর
+   ঘ. অতিবেগুনি রশ্মি
+
+**কোনটি মৌলিক পদার্থ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. লোহা
+   খ. ব্রোঞ্জ
+   গ. পানি
+   ঘ. ইস্পাত
+
+**কোনটি চুম্বক পদার্থ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. পারদ
+   খ. কোবাল্ট
+   গ. বিসমাথ
+   ঘ. অ্যান্টিমনি
+
+**কোন ঋতুতে শব্দ বায়ু মাধ্যমে দ্রুততম চলে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. শীতকালে
+   খ. গ্রীষ্মকালে
+   গ. বর্ষাকালে
+   ঘ. বসন্তকালে
+
 ## Geography & Environment (26)
 
 1. **Which connect the two Sea in Suez Canal?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
@@ -2218,7 +2360,6 @@
    (d) Dead Sea
 
 ## Power Sector & Energy (Bangladesh) (25)
-
 1. **ইজিসিবি'র মোট বিদ্যুৎ ক্ষমতা প্রায় কত মেগাওয়াট (প্রায়)?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 63 (ET: BUET)]*
    (ক) ৮৫০ মে: ও:
    (খ) ৯০০ মে: ও:
@@ -2349,6 +2490,18 @@
    খ. 80%
    গ. 85%
    ঘ. 90%
+
+**কোন জ্বালানিতে বিদ্যুৎ উৎপাদন খরচ সবচেয়ে বেশি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. কয়লা
+   খ. তরল জ্বালানি
+   গ. গ্যাস
+   ঘ. জল বিদ্যুৎ
+
+**কোন সংস্থা কর্তৃক বিদ্যুতের ট্যারিফ নির্ধারিত হয়?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. বিপিডিবি
+   খ. পেট্রোবাংলা
+   গ. বিইআরসি
+   ঘ. বিপিএমআই
 
 ## Sports (20)
 

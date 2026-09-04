@@ -18,7 +18,6 @@
 ---
 
 ## Basic Programs & Control Statements (111)
-
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -403,6 +402,21 @@ for(a=1; a<=100; a++)
 110. **Write a structured program to display Fibonacci series up to 100 Numbers.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
 
 111. **Write a program in any language to find out maximum among three numbers.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
+
+**Write a program to find the summation and average of an integer and float number.** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 43]]*
+
+**Write a code to reverse a string.** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 43-44]]*
+
+**Write a code to print the following pattern.** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 25 April, 2025 Exam Taker: BPSC; Lab [bitbox it book 44]]*
+1
+
+1 2
+
+1 2 3
+
+1 2 3 4
+
+1 2 3 4 5
 
 ## Output Tracing & Control Flow (57)
 

@@ -376,7 +376,6 @@
    d. None of these
 
 ## Networking Fundamentals & Terminology (57)
-
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -730,6 +729,12 @@
    b. Fax
    c. Webiner
    d. Video conferencing
+
+**Starlink একটি-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
+   ক. কম্পিউটার
+   খ. সফটওয়্যার
+   গ. স্যাটেলাইট
+   ঘ. ইন্টারনেট সেবাদানকারী প্রতিষ্ঠান
 
 ## Network Devices & Configuration (38)
 

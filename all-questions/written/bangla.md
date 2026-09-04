@@ -15,7 +15,6 @@
 ---
 
 ## বাংলা ব্যাকরণ ও সাহিত্য (61)
-
 1. **নিচের প্রশ্নগুলোর উত্তর লিখুন:** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)]*
 (ক) উপস্বর্গাত্নক ধাতুর সংজ্ঞা লিখুন।
 (খ) বাংলা সাহিত্যের যে কোন দুই প্রতিষ্ঠান সংক্রান্ত লিখুন।
@@ -154,6 +153,8 @@
 60. **৬. বাক্য শুদ্ধ কর: আপনি স্ববান্ধবে আমন্ত্রিত।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
 61. **৭. চক্রবাক কাব্যগ্রন্থ কার লেখা?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+**৫ টা ম্যাথ, বাংলা ব্যাকরণ, অনুবাদ ইত্যাদি।** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 42]]*
 
 ## Focus Writing (25)
 

@@ -15,7 +15,6 @@
 ---
 
 ## Hardware Components & Peripherals (41)
-
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -262,6 +261,12 @@
    b. Disabling the power supply unit
    c. Disabling the power system
    d. Disabling some of driver software
+
+**নিচের কোনটি output device নয়?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
+   ক. monitor
+   খ. microphone
+   গ. printer
+   ঘ. Speaker
 
 ## Software Types & Classification (40)
 

@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 277 questions
+**Table of Contents** — 8 subtopics · 277 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -8,13 +8,15 @@
 | 3 | [বাগধারা ও প্রবাদ](#বাগধারা-ও-প্রবাদ-11) | 11 |
 | 4 | [এক কথায় প্রকাশ](#এক-কথায়-প্রকাশ-5) | 5 |
 | 5 | [বাংলা ভাষা বিষয়ক তথ্য](#বাংলা-ভাষা-বিষয়ক-তথ্য-1) | 1 |
+| 6 | [কারক ও বিভক্তি](#কারক-ও-বিভক্তি-0) | 0 |
+| 7 | [সন্ধি ও বিচ্ছেদ](#সন্ধি-ও-বিচ্ছেদ-0) | 0 |
+| 8 | [বানান ও শুদ্ধিকরণ](#বানান-ও-শুদ্ধিকরণ-0) | 0 |
 
 <!-- TOC END -->
 
 ---
 
 ## বাংলা ব্যাকরণ (153)
-
 1. **আরিফ বই পড়ে। "বই" শব্দটি কোন কারক ও বিভক্তি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
    a) কর্মকারকে শূন্য
    b) করণকারকে শূন্য
@@ -890,8 +892,49 @@
    (c) সংলাপের অনুপযোগী
    (d) শব্দবিন্যাস সুনির্দিষ্ট
 
-## বাংলা সাহিত্য (107)
+**কোনটি ফারসি শব্দ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. মুসাফির
+   খ. তকদির
+   গ. পেরেশান
+   ঘ. মজলুম
 
+**নিচের কোন শব্দটি অন্যদের সঙ্গে সঙ্গতিপূর্ণ নয়?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ত্রিভুজ
+   খ বৃত্ত
+   গ. ডিম্বাকার
+   ঘ গোলক
+
+**সঙ্গতিপূর্ণ শব্দ দিয়ে শূন্যস্থান পূরণ করুন- কাপ : ঠোঁট :: পাখি : ...?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. ঘাস
+   খ. বন
+   গ. ঠোঁট
+   ঘ ঝোপঝাড়
+
+**সঙ্গতিপূর্ণ শব্দ দিয়ে শূন্যস্থান পূরণ কর- দ্বিপদ : চতুষ্পদ :: উটপাখি : ........?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. বিড়াল
+   খ ক্যাঙ্গারু
+   গ. পেঙ্গুইন
+   ঘ হাঁস
+
+**নিচের বিকল্পগুলোর মধ্যে থেকে প্রদত্ত শব্দটির সমার্থক শব্দ বেছে নিন। 'Autopsy'** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. Diagnosis
+   খ Rebuild
+   গ. Manufacture
+   ঘ Postmortem
+
+**নিচে প্রদত্ত শব্দটির সম্পূর্ণ বিপরীত অর্থ প্রকাশ করে এমন শব্দটি নির্বাচন করুন। 'FRAUDULENT'** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. Candid
+   খ. Direct
+   গ. Forthright
+   ঘ. Genuine
+
+**নিচের শব্দজোড়াগুলোর মধ্যে কোনটি ভিন্ন ধরনের সম্পর্কযুক্ত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
+   ক. Kind : Cruel
+   খ. Slow : Sluggish
+   গ. Stale : Fresh
+   ঘ. Truth : Lie
+
+## বাংলা সাহিত্য (107)
 1. **মীর মশাররফ হোসেনের “বিষাদ সিন্ধু” একটি-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
    ক. কাব্যগ্রন্থ
    খ. ইতিহাসগ্রন্থ
@@ -1513,6 +1556,12 @@
    (c) সেলিম আল দীন
    (d) মুনীর চৌধুরী
 
+**কোনটি রবীন্দ্রনাথ ঠাকুরের প্রবন্ধগ্রন্থ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. কালান্তর
+   খ. চিত্রা
+   গ. বলাকা
+   ঘ. সোনার তরি
+
 ## বাগধারা ও প্রবাদ (11)
 
 1. **‘ইতর-বিশেষ’ বলতে বুঝায়-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*
@@ -1614,3 +1663,24 @@
    খ. ৬ষ্ঠ
    গ. ৭ম
    ঘ. ৮ম
+
+## কারক ও বিভক্তি (0)
+**'ঘোড়া গাড়ি টানে।' কোন কারক?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. কর্তৃকারক
+   খ. কর্মকারক
+   গ. অপাদান কারক
+   ঘ. অধিকরণ কারক
+
+## সন্ধি ও বিচ্ছেদ (0)
+**'মাথাঘষা' শব্দটির সঠিক সন্ধি-বিচ্ছেদ কোনটি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. মাথা+আয়
+   খ মাথা+য়
+   গ. মাথা+অয়া
+   ঘ মাথা+এ
+
+## বানান ও শুদ্ধিকরণ (0)
+**নিচের কোন বানানটি শুদ্ধ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
+   ক. মুমুর্ষু
+   খ মুমূর্ষ
+   গ. মুমূর্ষু
+   ঘ মুমুষর্
