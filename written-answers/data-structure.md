@@ -5933,7 +5933,53 @@ Answer:
 
 1. **Explain Abstraction with a simple code example.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 228-229]]*
 
+Answer:
+    Data Abstraction is a core Object-Oriented Programming concept where the internal implementation details and complex logic are hidden from the user, exposing only essential functionalities through clean interfaces.
+
+    Key Benefits:
+    - Reduces system complexity by isolating interface from implementation.
+    - Enhances security and maintainability since internal changes do not affect client code.
+
+    Code Example (Java):
+    ```java
+    // Abstract Class defining interface
+    abstract class Vehicle {
+        abstract void startEngine(); // Abstract method (no implementation)
+        
+        void fuelStatus() {        // Concrete method
+            System.out.println("Fuel level is normal.");
+        }
+    }
+
+    // Concrete Subclass providing implementation
+    class Car extends Vehicle {
+        @Override
+        void startEngine() {
+            System.out.println("Car engine started via push-button ignition.");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Vehicle myCar = new Car();
+            myCar.startEngine(); // User calls method without needing to know engine mechanics
+            myCar.fuelStatus();
+        }
+    }
+    ```
+
 2. **Compare an Interface and an Abstract Class in OOP. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
+
+Answer:
+
+    | Feature | Abstract Class | Interface |
+    |---|---|---|
+    | Definition | A class declared with the `abstract` keyword that cannot be instantiated directly | A complete abstraction contract defining a set of method prototypes |
+    | Multiple Inheritance | Does not support multiple inheritance; a class can extend only one abstract class | Fully supports multiple inheritance; a class can implement multiple interfaces |
+    | Method Implementation | Can contain both abstract methods (without body) and concrete methods (with body) | Primarily contains abstract methods (Java 8+ allows `default` and `static` methods) |
+    | Variables & Fields | Can have instance variables, constants, static, and non-static fields with any access modifier | Can only have `public static final` constants |
+    | Constructors | Can declare constructors invoked by subclasses via `super()` | Cannot declare constructors or maintain state |
+    | Speed & Performance | Slightly faster execution than interfaces | Slightly slower due to dynamic method lookup and indirection |
 
 ## Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) (2)
 
