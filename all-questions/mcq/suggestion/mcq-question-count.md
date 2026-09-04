@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2785** questions.
+Sorted by count, highest first. Total **2795** questions.
 
 ## IT questions
 
-Total: **1632** questions.
+Total: **1636** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **304** |
-| | Networking Fundamentals & Terminology | 59 |
+| **Computer Networks** | **— all subcategories —** | **307** |
+| | Networking Fundamentals & Terminology | 62 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
@@ -38,8 +38,8 @@ Total: **1632** questions.
 | | Concurrency Control & Locking | 5 |
 | | SQL Joins | 2 |
 | | Database Fundamentals & SQL | 0 |
-| **Computer Fundamentals** | **— all subcategories —** | **149** |
-| | Hardware Components & Peripherals | 47 |
+| **Computer Fundamentals** | **— all subcategories —** | **150** |
+| | Hardware Components & Peripherals | 48 |
 | | Software Types & Classification | 40 |
 | | Computer Fundamentals & Generations | 29 |
 | | ICT & Emerging Technology | 16 |
@@ -157,32 +157,32 @@ Total: **1632** questions.
 
 ## General Questions
 
-Total: **1153** questions.
+Total: **1159** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **General Knowledge** | **— all subcategories —** | **444** |
+| **General Knowledge** | **— all subcategories —** | **446** |
 | | Bangladesh Affairs | 171 |
 | | International Affairs | 104 |
-| | Everyday Science | 98 |
+| | Everyday Science | 100 |
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
-| **English** | **— all subcategories —** | **278** |
+| **Bangla** | **— all subcategories —** | **280** |
+| | বাংলা ব্যাকরণ | 153 |
+| | বাংলা সাহিত্য | 107 |
+| | বাগধারা ও প্রবাদ | 12 |
+| | এক কথায় প্রকাশ | 5 |
+| | কারক ও বিভক্তি | 2 |
+| | বাংলা ভাষা বিষয়ক তথ্য | 1 |
+| | সন্ধি ও বিচ্ছেদ | 0 |
+| | বানান ও শুদ্ধিকরণ | 0 |
+| **English** | **— all subcategories —** | **279** |
 | | English Grammar | 163 |
-| | Vocabulary, Synonyms & Antonyms | 57 |
+| | Vocabulary, Synonyms & Antonyms | 58 |
 | | Idioms & Phrases | 24 |
 | | English Literature | 17 |
 | | Spelling | 17 |
-| **Bangla** | **— all subcategories —** | **277** |
-| | বাংলা ব্যাকরণ | 153 |
-| | বাংলা সাহিত্য | 107 |
-| | বাগধারা ও প্রবাদ | 11 |
-| | এক কথায় প্রকাশ | 5 |
-| | বাংলা ভাষা বিষয়ক তথ্য | 1 |
-| | কারক ও বিভক্তি | 0 |
-| | সন্ধি ও বিচ্ছেদ | 0 |
-| | বানান ও শুদ্ধিকরণ | 0 |
 | **Math** | **— all subcategories —** | **154** |
 | | Algebra | 42 |
 | | Geometry | 23 |

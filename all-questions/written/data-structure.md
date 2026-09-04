@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 98 questions
+**Table of Contents** — 9 subtopics · 100 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -11,7 +11,7 @@
 | 6 | [Hashing & Hash Tables](#hashing--hash-tables-7) | 7 |
 | 7 | [Queue](#queue-6) | 6 |
 | 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
-| 9 | [Tree Data Structures (BST, AVL, B-Tree, Heaps)](#tree-data-structures-bst-avl-b-tree-heaps-0) | 0 |
+| 9 | [Tree Data Structures (BST, AVL, B-Tree, Heaps)](#tree-data-structures-bst-avl-b-tree-heaps-2) | 2 |
 
 <!-- TOC END -->
 
@@ -242,5 +242,7 @@ Output: Not Balanced
 
 6. **Difference between linear and nonlinear data structure.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
 
-## Tree Data Structures (BST, AVL, B-Tree, Heaps) (0)
-**Explain Abstraction with a simple code example.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 228-229]]*
+## Tree Data Structures (BST, AVL, B-Tree, Heaps) (2)
+1. **Explain Abstraction with a simple code example.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 228-229]]*
+
+2. **Compare an Interface and an Abstract Class in OOP. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*

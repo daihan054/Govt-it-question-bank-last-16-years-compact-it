@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 198 questions
+**Table of Contents** — 14 subtopics · 200 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -15,7 +15,8 @@
 | 10 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
 | 11 | [Windows & System Administration](#windows--system-administration-5) | 5 |
 | 12 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
-| 13 | [OS Concepts & Process Management](#os-concepts--process-management-0) | 0 |
+| 13 | [OS Concepts & Process Management](#os-concepts--process-management-2) | 2 |
+| 14 | [Deadlock & Concurrency Control](#deadlock--concurrency-control-0) | 0 |
 
 <!-- TOC END -->
 
@@ -598,5 +599,10 @@ Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the
 
 4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
 
-## OS Concepts & Process Management (0)
-**(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
+## OS Concepts & Process Management (2)
+1. **(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
+
+2. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+
+## Deadlock & Concurrency Control (0)
+**Describe three basic techniques that exist to control deadlocks in databases. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 312-313]]*

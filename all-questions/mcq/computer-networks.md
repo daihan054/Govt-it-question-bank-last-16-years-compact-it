@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 304 questions
+**Table of Contents** — 13 subtopics · 307 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-59) | 59 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-62) | 62 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (59)
+## Networking Fundamentals & Terminology (62)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -389,6 +389,24 @@
    (d) To connect networks with different architectures or protocols
 
 59. **(b) Which transmission medium is usually used in a LAN? What is its maximum length and bit rate? Write the name of data at different layers of the TCP/IP model.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
+
+60. **Short Questions: 5\*2=10** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 240]]*
+   a) Which are the transmission protocols?
+   b) What is SSL?
+   c) What is DHCP?
+   d) In which layer does routing occur? e) [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]
+
+61. **Answer the following short questions: 5*2=10 \*\*(Bangladesh Computer Council (BCC) Post: AP/TW Mark: 4*10=40; Date: 18 Oct 2025) \*\*** *[bitbox it book 242]*
+   a. What is API?
+   b. What is the port number of DNS?
+   c. Why is NAND called a universal gate?
+   d. What is the private IP address range for Class B? e. Which protocol is used to send mail?
+
+62. **Fill in the blanks: (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+   (a) You cannot count ________ him to get the job done.
+   (b) We must adapt ourselves ________ all circumstances.
+   (c) No sooner had I seen the bird ________ it flew away.
+   (d) He speaks ________ he were a scientist. (e) If I ________ you, I wouldn't risk it.
 
 ## Application Layer Protocols (58)
 

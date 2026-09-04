@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 149 questions
+**Table of Contents** — 6 subtopics · 150 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-47) | 47 |
+| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-48) | 48 |
 | 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
 | 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
 | 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
@@ -14,7 +14,7 @@
 
 ---
 
-## Hardware Components & Peripherals (47)
+## Hardware Components & Peripherals (48)
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Slots of CPU
    (b) Hard Disk of CPU
@@ -287,6 +287,33 @@
 46. **(a) Let A= \{1,2,3,4,5,6,7,8\}. If five integers are selected from A, prove that at least one pair of the selected integers has a sum of 9. Use the Pigeonhole Principle.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
 
 47. **A signal has a frequency range of 300 Hz to 3400 Hz. A Pulse Code Modulation (PCM) system is used to digitize the signal. The maximum quantization error is \\pm\\Delta/2 = \\pm 1\\% full scale, and the signal voltage ranges from -1 V to +1 V. Determine the number of bits per sample (n) and the bit rate of the PCM system.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 237]]*
+
+48. **What is the value printed by the following program? (05) \#include <stdio.h>
+
+int f(int \*a, int n)\{
+
+    if (n <=** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 311]]*
+   0) return 0;
+
+    else if (\*a % 2 ==
+   0) return \*a + f(a+1, n-1);
+
+    else
+
+        return \*a - f(a+1, n-1);
+
+\}
+
+int main ()\{
+
+    int a[] = \{12, 7, 13, 4, 11, 6\};
+
+    printf("%d", f(a,
+   6) );
+
+    return 0;
+
+\}
 
 ## Software Types & Classification (40)
 

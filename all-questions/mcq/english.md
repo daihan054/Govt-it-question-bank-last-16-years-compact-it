@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 278 questions
+**Table of Contents** — 5 subtopics · 279 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [English Grammar](#english-grammar-163) | 163 |
-| 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-57) | 57 |
+| 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-58) | 58 |
 | 3 | [Idioms & Phrases](#idioms--phrases-24) | 24 |
 | 4 | [English Literature](#english-literature-17) | 17 |
 | 5 | [Spelling](#spelling-17) | 17 |
@@ -998,7 +998,7 @@
    গ. His pen was being stolen.
    ঘ. None of above.
 
-## Vocabulary, Synonyms & Antonyms (57)
+## Vocabulary, Synonyms & Antonyms (58)
 1. **What is the antonym of 'famous '?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*
    ক. Opeque
    খ. illiterate
@@ -1336,6 +1336,11 @@
    খ. Revolt
    গ. Moron
    ঘ. Deep
+
+58. **Make sentences with meaning: (03)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+   (a) Look up from
+   (b) In the face of
+   (c) Barking on
 
 ## Idioms & Phrases (24)
 

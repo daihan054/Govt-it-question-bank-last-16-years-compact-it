@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 273 questions
+**Table of Contents** — 9 subtopics · 275 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-114) | 114 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-116) | 116 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
 | 3 | [Recursion & Functions](#recursion--functions-38) | 38 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
@@ -17,7 +17,7 @@
 
 ---
 
-## Basic Programs & Control Statements (114)
+## Basic Programs & Control Statements (116)
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -430,6 +430,59 @@ for(a=1; a<=100; a++)
 113. **Write a C program to get max element of an array.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
 
 114. **Write a program (in C or any language) to find the sum of even numbers from 1 to n.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 221]]*
+
+115. **Write a program/code to find the largest number in an array of 10 elements.** *[Bangladesh Computer Council (BCC) Post: AP/TW Mark: 4\*10=40; Date: 18 Oct 2025 [bitbox it book 241]]*
+
+116. **When the statement numbered 4,5,6,7 are replaced by** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 311-312]]*
+\{for(S=1,P=-x, I=1; I<a; I++)
+
+P = P\*X\*X-1;
+
+S = S+P/f(I);
+
+What will be the approximation of f(x)? (05) [প্রশ্নটি অসম্পূর্ণ ছিল, প্রশ্নটি নিচের মত হতে পারত] Consider the following C program used to approximate a mathematical function f(x):
+
+\#include <stdio.h>
+
+int f(int n)\{
+
+    int i, fact = 1;
+
+    for(i = 1; i <= n; i++)
+
+        fact = fact \* i;
+
+    return fact;
+
+\}
+
+int main()\{
+
+    float x, S = 1, P = -x;
+
+    int I, a;
+
+    /\* statements numbered 4, 5, 6, 7 \*/
+
+    printf("%f", S);
+
+    return 0;
+
+\}
+
+When the statements numbered 4, 5, 6, and 7 are replaced by:
+
+for (S = 1, P = -x, I = 1; I < a; I++)
+
+\{
+
+    P = P \* x \* x \* (-1);
+
+    S = S + P / f(2 \* I);
+
+\}
+
+What will be the approximation of f(x)?
 
 ## Output Tracing & Control Flow (57)
 

@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 444 questions
+**Table of Contents** — 6 subtopics · 446 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
 | 2 | [International Affairs](#international-affairs-104) | 104 |
-| 3 | [Everyday Science](#everyday-science-98) | 98 |
+| 3 | [Everyday Science](#everyday-science-100) | 100 |
 | 4 | [Geography & Environment](#geography--environment-26) | 26 |
 | 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
 | 6 | [Sports](#sports-20) | 20 |
@@ -1690,7 +1690,7 @@
 ১০। War & Peace কার লেখা? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
    40) [bitbox it book 163]__
 
-## Everyday Science (98)
+## Everyday Science (100)
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. সিলভার ব্রোমাইড
    খ. সিলভার ফ্লোরাইড
@@ -2352,6 +2352,19 @@
 97. **(b) Write a real-life example where Depth-First Search (DFS) performs more efficiently than Breadth-First Search (BFS). Why is DFS better in that situation?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 234]]*
 
 98. **(b) What is the advantage of the Agile methodology over the Waterfall methodology?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
+
+99. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?
+   (02) 
+   (খ) দুটি মহাদেশের অংশ এমন একটি দেশের নাম লিখুন।
+   (গ) IRRI এর পূর্ণরূপ লিখুন।
+   (03)
+
+100. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?
+   (02) 
+   (খ) পরিবেশ রক্ষায় কোন ধরনের উৎস হতে বিদ্যুৎ উৎপাদনের মনোযোগ দেয়া আবশ্যক বলে আপনি মনে করেন।
+   (02) 
 
 ## Geography & Environment (26)
 
