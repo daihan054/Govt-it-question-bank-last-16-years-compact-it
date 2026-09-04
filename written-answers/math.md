@@ -1118,7 +1118,23 @@ eg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assista
 
 1. **৫ টা ম্যাথ সংক্রান্ত প্রশ্নাবলি।** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
+   Answer:
+   - সরকারি নিয়োগ পরীক্ষায় আসা প্রধান ৫টি গাণিতিক ক্ষেত্রের সারসংক্ষেপ:
+     - পাটিগণিত ও লাভ-ক্ষতি: শতকরা, সরল ও চক্রবৃদ্ধি মুনাফা ($I = Pnr, C = P(1+r)^n$) এবং ক্রয়মূল্য-বিক্রয়মূল্য।
+     - সময়, কাজ ও গতিবেগ: ঐকিক নিয়ম, নল ও চৌবাচ্চা, ট্রেন ও নৌকার আপেক্ষিক বেগ ($d = v \times t$)।
+     - বীজগণিত ও সেট: সমীকরণ সমাধান, সূচক-লগারিদম এবং ভেনচিত্র ($n(A \cup B) = n(A) + n(B) - n(A \cap B)$)।
+     - জ্যামিতি ও পরিমিতি: সমকোণী ও সমদ্বিবাহু ত্রিভুজ, আয়তক্ষেত্র, বর্গক্ষেত্র ও বৃত্তের ক্ষেত্রফল।
+     - বিন্যাস, সমাবেশ ও সম্ভাবনা: বর্ণ বিন্যাস ($^nP_r$), কমিটি গঠন ($^nC_r$) এবং ঘটনার সম্ভাবনা ($P(E) = \frac{n(E)}{n(S)}$)।
+
 2. **Math: 3 \times 5 = 15 Marks** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
+
+   Answer:
+   - Core mathematical problem types typical in 15-mark written exams (3 problems $\times$ 5 marks):
+     - Time & Work: If $A$ completes a job in $x$ days and $B$ in $y$ days, their combined rate is $\frac{1}{x} + \frac{1}{y} = \frac{x+y}{xy}$, taking $\frac{xy}{x+y}$ days.
+     - Profit & Loss with Discount: $\text{Selling Price} = \text{Cost Price} \times (1 + \text{Profit\%}) = \text{Marked Price} \times (1 - \text{Discount\%})$.
+     - Weighted Average & Mixtures: Rule of alligation $\frac{Q_A}{Q_B} = \frac{P_B - P_m}{P_m - P_A}$ to blend two concentrations into a target ratio.
+
+
 
 ## Numerical Methods & Root Finding (2)
 
