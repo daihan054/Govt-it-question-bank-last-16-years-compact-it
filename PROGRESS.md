@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/written/`](all-questions/written/), written into [`written-answers/`](written-answers/). Regenerated on every commit.
 
-**Subtopics: 141 / 243 done**  ·  **Questions: 1865 answered, 28 skipped, 3168 total**
+**Subtopics: 142 / 243 done**  ·  **Questions: 1873 answered, 33 skipped, 3168 total**
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -18,7 +18,7 @@ Answers for [`all-questions/written/`](all-questions/written/), written into [`w
 | `data-structure.md` | IT | 8 / 8 | 97 | 0 | 97 |
 | `database.md` | IT | 19 / 19 | 292 | 2 | 294 |
 | `dld.md` | IT | 9 / 9 | 140 | 8 | 148 |
-| `electrical-and-electronics.md` | IT | 0 / 9 | 0 | 0 | 39 |
+| `electrical-and-electronics.md` | IT | 1 / 9 | 8 | 5 | 39 |
 | `english.md` | General | 0 / 8 | 0 | 0 | 112 |
 | `gk.md` | General | 0 / 4 | 0 | 0 | 214 |
 | `image-processing.md` | IT | 0 / 5 | 0 | 0 | 7 |
@@ -63,3 +63,8 @@ Content-free or truncated entries — no answer written.
 - `dld.md → Karnaugh Map (K-Map)` — question 13
 - `dld.md → Karnaugh Map (K-Map)` — question 14
 - `dld.md → Combinational Circuits (Adders, Encoders, MUX)` — question 16
+- `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 6
+- `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 9
+- `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 10
+- `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 11
+- `electrical-and-electronics.md → Electrical Circuits & Protection Devices` — question 12
