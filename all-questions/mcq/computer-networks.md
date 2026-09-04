@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 310 questions
+**Table of Contents** — 13 subtopics · 311 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-65) | 65 |
+| 1 | [Networking Fundamentals & Terminology](#networking-fundamentals--terminology-66) | 66 |
 | 2 | [Application Layer Protocols](#application-layer-protocols-58) | 58 |
 | 3 | [Network Devices & Configuration](#network-devices--configuration-38) | 38 |
 | 4 | [Subnetting & IP Addressing](#subnetting--ip-addressing-33) | 33 |
@@ -21,7 +21,7 @@
 
 ---
 
-## Networking Fundamentals & Terminology (65)
+## Networking Fundamentals & Terminology (66)
 1. **Set of rules is called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) domain
    b) resource locator
@@ -425,6 +425,13 @@
    (b) HTTP
    (c) SMTP
    (d) SNMP
+
+66. **You are given the IP address 192.168.10.100/26. Answer the following question.** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378]]*
+   a) What is the subnet address?
+   b) What is the first valid host address?
+   b) What is the last valid host address?
+   c) What is the broadcast address?
+   d) What is the subnet mask?
 
 ## Application Layer Protocols (58)
 

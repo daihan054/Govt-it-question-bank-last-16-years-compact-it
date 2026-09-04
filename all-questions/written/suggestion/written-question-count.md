@@ -1,22 +1,22 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3331** questions.
+Sorted by count, highest first. Total **3349** questions.
 
 ## IT questions
 
-Total: **2771** questions.
+Total: **2788** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **533** |
-| | Subnetting & IP Addressing | 115 |
-| | OSI & TCP/IP Reference Model | 56 |
+| **Computer Networks** | **— all subcategories —** | **539** |
+| | Subnetting & IP Addressing | 117 |
+| | OSI & TCP/IP Reference Model | 57 |
 | | Networking Fundamentals & Terminology | 32 |
 | | Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) | 23 |
 | | Networking Devices | 23 |
+| | Transport Layer (TCP & UDP) | 22 |
 | | Wireless Networks & IoT (mmWave) | 19 |
-| | Transport Layer (TCP & UDP) | 19 |
 | | Multiplexing & Bandwidth | 19 |
 | | Physical Layer & Transmission Media (Cables & Wiring) | 19 |
 | | Routing Protocols & Route Configuration | 19 |
@@ -43,8 +43,8 @@ Total: **2771** questions.
 | | Address Resolution (ARP & RARP) | 2 |
 | | VLANs & Subnetting Comparison | 2 |
 | | High Availability & Redundancy Protocols (VRRP, HSRP) | 1 |
-| **Database** | **— all subcategories —** | **301** |
-| | SQL Queries | 91 |
+| **Database** | **— all subcategories —** | **303** |
+| | SQL Queries | 93 |
 | | Keys in DBMS | 34 |
 | | DBMS Architecture & Features | 26 |
 | | ER Diagram & Database Design | 25 |
@@ -64,8 +64,8 @@ Total: **2771** questions.
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
 | | Keys, Constraints & Database Objects | 0 |
-| **C Programming** | **— all subcategories —** | **279** |
-| | Basic Programs & Control Statements | 119 |
+| **C Programming** | **— all subcategories —** | **280** |
+| | Basic Programs & Control Statements | 120 |
 | | Output Tracing & Control Flow | 57 |
 | | Recursion & Functions | 39 |
 | | Operators, Data Types & Language Concepts | 25 |
@@ -89,7 +89,7 @@ Total: **2771** questions.
 | | Process Synchronization & Concurrency | 4 |
 | | OS Concepts & Process Management | 4 |
 | | Deadlock & Concurrency Control | 0 |
-| **Computer & Network Security** | **— all subcategories —** | **193** |
+| **Computer & Network Security** | **— all subcategories —** | **196** |
 | | Social Engineering & Cyber Attacks | 32 |
 | | Cryptography | 31 |
 | | Firewalls & Network Defense | 20 |
@@ -97,16 +97,16 @@ Total: **2771** questions.
 | | Web Security Vulnerabilities | 19 |
 | | Authentication & Access Control | 16 |
 | | Security Protocols (SSL/TLS, HTTPS) | 12 |
+| | Cryptography & Network Security | 12 |
 | | Cyber Crime & Security | 10 |
-| | Cryptography & Network Security | 9 |
 | | Security Principles (CIA Triad) | 8 |
 | | VPN & Tunneling Protocols (IPsec, SSL VPN) | 6 |
 | | Critical Information Infrastructure (CII) & Cyber Governance | 3 |
 | | Cryptography & Network Security Scenarios | 3 |
 | | Email & Messaging Security (Spam, Phishing) | 3 |
 | | Buffer Overflow & Software Vulnerabilities | 1 |
-| **Computer Fundamentals** | **— all subcategories —** | **188** |
-| | Computer Fundamentals & Acronyms | 94 |
+| **Computer Fundamentals** | **— all subcategories —** | **189** |
+| | Computer Fundamentals & Acronyms | 95 |
 | | ICT in Society & Governance | 24 |
 | | Hardware Components & BIOS (CMOS Battery) | 24 |
 | | Software Types & Classification | 17 |
@@ -132,11 +132,11 @@ Total: **2771** questions.
 | | CI/CD & DevOps Methodologies | 1 |
 | | UI/UX Design | 1 |
 | | Software Design, Architecture & Patterns | 0 |
-| **Digital Logic Design (DLD)** | **— all subcategories —** | **152** |
+| **Digital Logic Design (DLD)** | **— all subcategories —** | **153** |
 | | Logic Gates & Universal Gates | 34 |
 | | Number Systems & Base Conversions | 26 |
 | | Combinational Circuits (Adders, Encoders, MUX) | 23 |
-| | Karnaugh Map (K-Map) | 20 |
+| | Karnaugh Map (K-Map) | 21 |
 | | Boolean Algebra & De Morgan’s Theorem | 19 |
 | | Sequential Circuits (Latches & Flip-Flops) | 17 |
 | | Logic Families (TTL vs CMOS) | 6 |
@@ -171,14 +171,14 @@ Total: **2771** questions.
 | | Multi-Core & Multi-Threading | 5 |
 | | RISC vs CISC Architecture | 4 |
 | | 8085 Microprocessor & Edge Computing | 3 |
-| **Object Oriented Programming (OOP)** | **— all subcategories —** | **124** |
+| **Object Oriented Programming (OOP)** | **— all subcategories —** | **125** |
 | | OOP Concepts (Inheritance & Polymorphism) | 54 |
 | | Java Programming & Methods | 18 |
 | | Class Design & Object-Oriented Modeling | 11 |
 | | Output Tracing & Recursion | 10 |
 | | Constructors & Destructors | 8 |
+| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 8 |
 | | Encapsulation & Access Modifiers | 7 |
-| | OOP Concepts (Inheritance, Polymorphism, Encapsulation) | 7 |
 | | Exception Handling | 4 |
 | | C++ OOP Concepts & Friend Functions | 3 |
 | | Interfaces & Abstract Classes | 2 |
@@ -201,8 +201,8 @@ Total: **2771** questions.
 | | Full Stack & Backend Web Development | 7 |
 | | CSS & Styling (Inline, Internal, External) | 4 |
 | | Web Security & Browser Same-Origin Policy (Iframe) | 2 |
-| **AI & Machine Learning** | **— all subcategories —** | **63** |
-| | Artificial Intelligence & Machine Learning | 20 |
+| **AI & Machine Learning** | **— all subcategories —** | **65** |
+| | Artificial Intelligence & Machine Learning | 22 |
 | | Artificial Intelligence & Expert Systems | 8 |
 | | Deep Learning & Neural Networks (ANN, CNN, RNN) | 8 |
 | | Machine Learning Paradigms (Supervised vs Unsupervised) | 6 |
@@ -255,7 +255,7 @@ Total: **2771** questions.
 
 ## General Questions
 
-Total: **560** questions.
+Total: **561** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -264,9 +264,9 @@ Total: **560** questions.
 | | International Affairs | 70 |
 | | Everyday Science & Environment | 22 |
 | | Banking & ICT Abbreviations | 8 |
-| **Bangla** | **— all subcategories —** | **136** |
+| **Bangla** | **— all subcategories —** | **137** |
 | | বাংলা ব্যাকরণ ও সাহিত্য | 61 |
-| | Focus Writing | 38 |
+| | Focus Writing | 39 |
 | | Translation | 19 |
 | | পত্র লিখন | 7 |
 | | সারমর্ম / সারাংশ | 6 |

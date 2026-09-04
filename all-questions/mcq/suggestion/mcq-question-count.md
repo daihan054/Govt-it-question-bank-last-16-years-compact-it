@@ -1,16 +1,16 @@
 # MCQ Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every mcq paper in the [`mcq/`](../) folder.
-Sorted by count, highest first. Total **2849** questions.
+Sorted by count, highest first. Total **2852** questions.
 
 ## IT questions
 
-Total: **1654** questions.
+Total: **1655** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
-| **Computer Networks** | **— all subcategories —** | **310** |
-| | Networking Fundamentals & Terminology | 65 |
+| **Computer Networks** | **— all subcategories —** | **311** |
+| | Networking Fundamentals & Terminology | 66 |
 | | Application Layer Protocols | 58 |
 | | Network Devices & Configuration | 38 |
 | | Subnetting & IP Addressing | 33 |
@@ -157,7 +157,7 @@ Total: **1654** questions.
 
 ## General Questions
 
-Total: **1195** questions.
+Total: **1197** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -168,19 +168,19 @@ Total: **1195** questions.
 | | Geography & Environment | 26 |
 | | Power Sector & Energy (Bangladesh) | 25 |
 | | Sports | 20 |
-| **Bangla** | **— all subcategories —** | **285** |
+| **Bangla** | **— all subcategories —** | **286** |
 | | বাংলা ব্যাকরণ | 154 |
 | | বাংলা সাহিত্য | 108 |
-| | বাগধারা ও প্রবাদ | 12 |
+| | বাগধারা ও প্রবাদ | 13 |
 | | এক কথায় প্রকাশ | 5 |
 | | কারক ও বিভক্তি | 3 |
 | | সন্ধি ও বিচ্ছেদ | 2 |
 | | বাংলা ভাষা বিষয়ক তথ্য | 1 |
 | | বানান ও শুদ্ধিকরণ | 0 |
-| **English** | **— all subcategories —** | **282** |
+| **English** | **— all subcategories —** | **283** |
 | | English Grammar | 166 |
 | | Vocabulary, Synonyms & Antonyms | 58 |
-| | Idioms & Phrases | 24 |
+| | Idioms & Phrases | 25 |
 | | English Literature | 17 |
 | | Spelling | 17 |
 | **Math** | **— all subcategories —** | **160** |

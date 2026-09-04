@@ -1,11 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 282 questions
+**Table of Contents** — 5 subtopics · 283 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [English Grammar](#english-grammar-166) | 166 |
 | 2 | [Vocabulary, Synonyms & Antonyms](#vocabulary-synonyms--antonyms-58) | 58 |
-| 3 | [Idioms & Phrases](#idioms--phrases-24) | 24 |
+| 3 | [Idioms & Phrases](#idioms--phrases-25) | 25 |
 | 4 | [English Literature](#english-literature-17) | 17 |
 | 5 | [Spelling](#spelling-17) | 17 |
 
@@ -1360,8 +1360,7 @@
    (b) In the face of
    (c) Barking on
 
-## Idioms & Phrases (24)
-
+## Idioms & Phrases (25)
 1. **'Cut and dry' means:** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*
    ক. Humorous
    খ. Fixed
@@ -1497,6 +1496,11 @@
    (b) wcount
    (c) attacks
    (d) none
+
+25. **Phrase and idioms:** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+   a) Black Ship
+   b) Ins and Outs
+   c) Fresh Blood
 
 ## English Literature (17)
 

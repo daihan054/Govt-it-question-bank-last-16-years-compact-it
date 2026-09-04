@@ -1,10 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 136 questions
+**Table of Contents** — 6 subtopics · 137 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
 | 1 | [বাংলা ব্যাকরণ ও সাহিত্য](#বাংলা-ব্যাকরণ-ও-সাহিত্য-61) | 61 |
-| 2 | [Focus Writing](#focus-writing-38) | 38 |
+| 2 | [Focus Writing](#focus-writing-39) | 39 |
 | 3 | [Translation](#translation-19) | 19 |
 | 4 | [পত্র লিখন](#পত্র-লিখন-7) | 7 |
 | 5 | [সারমর্ম / সারাংশ](#সারমর্ম--সারাংশ-6) | 6 |
@@ -156,7 +156,7 @@
 
 **৫ টা ম্যাথ, বাংলা ব্যাকরণ, অনুবাদ ইত্যাদি।** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 42]]*
 
-## Focus Writing (38)
+## Focus Writing (39)
 1. Focus Writing in Bangla: "বাংলাদেশের অর্থনীতিতে মোবাইল ব্যাংকিং: সম্ভাবনা, বাধা ও উত্তরণের উপায়" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
 2. **‘প্রযুক্তি নির্ভর বর্তমান প্রজন্ম’ বিষয়ক একটি প্রবন্ধ রচনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
@@ -234,6 +234,8 @@
 37. **বাংলাদেশের জাতীয় সংসদে কয়টি আসন রয়েছে এবং সংরক্ষিত মহিলা আসনের সংখ্যা কত?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
 
 38. **বাংলাদেশে বর্তমানে জাতীয় সংসদের বিরোধীদল কারা? তারা সংসদে কতটি আসন পেয়েছে?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+39. **Bangla: রচনা “আন্তর্জাতিক প্রযুক্তিতে বৈদেশিক আয়”** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
 
 ## Translation (19)
 

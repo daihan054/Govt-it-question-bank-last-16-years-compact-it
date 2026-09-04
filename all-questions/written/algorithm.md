@@ -367,7 +367,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 
 4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
 
-5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*
+5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*, *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378-379]]*
 
 ## Graph Representation (Adjacency Matrix vs List) (4)
 

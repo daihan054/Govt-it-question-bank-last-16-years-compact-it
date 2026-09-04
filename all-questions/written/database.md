@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 20 subtopics · 301 questions
+**Table of Contents** — 20 subtopics · 303 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [SQL Queries](#sql-queries-91) | 91 |
+| 1 | [SQL Queries](#sql-queries-93) | 93 |
 | 2 | [Keys in DBMS](#keys-in-dbms-34) | 34 |
 | 3 | [DBMS Architecture & Features](#dbms-architecture--features-26) | 26 |
 | 4 | [ER Diagram & Database Design](#er-diagram--database-design-25) | 25 |
@@ -28,7 +28,7 @@
 
 ---
 
-## SQL Queries (91)
+## SQL Queries (93)
 1. Consider the following relation: **Employee(EmpID, Name, Department, Salary)**. Write an SQL query to retrieve the **Department**, the **total number of employees**, and the **average salary** for each department. The output should display one record for each department. [SO IT 25-07-2026]
 
 2. Consider a STUDENTS table with the following attributes: StudentID, Name, Department, Marks (10 Marks)
@@ -388,6 +388,12 @@ employee (employee_name, street, city) works (employee_name, company_name, salar
 90. **Given a table Sales (sales_id, salesman, region, sales_amount, sales_date), Write an SQL query to: Display sales_id, region, and MAX(sales_amount), Where the average sales_amount > 50000 and each region has at least 5 sales.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 226]]*
 
 91. **Write an SQL query to get duplicate names from the employee table.** *[Bangladesh Computer Council (BCC) Post: AP/TW Mark: 4\*10=40; Date: 18 Oct 2025 [bitbox it book 242]]*
+
+92. **Consider the following schema:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 371-372]]*
+Product(pid, name, price, category, maker_cid) Purchase(buyer-ssn, seller-ssn, store, pid) Company(cid, name, stock_price, country) Person(ssn, name, phone_number, city) In purchase: buyer-ssn, seller-ssn are foreign keys in person, pid is foreign key in Product; In Product maker-cid is a foreign key in Company. Write the following queries in SQL: (a) Find names of people who bought American Products. (b) Find total numbers and sum of products that are sold in the city where they are manufactured.
+
+93. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+a) Write a SQL Query to find the duplicate phone number of employee table. b) Write a SQL query to find the Second largest salary from Employee table.
 
 ## Keys in DBMS (34)
 
