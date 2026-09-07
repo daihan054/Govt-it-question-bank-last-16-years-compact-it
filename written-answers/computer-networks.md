@@ -2645,19 +2645,19 @@ Answer: The OSI model has `7 layers`.
 
 Answer: A router works at the `Network layer, Layer 3` of the OSI model.
 
-    - It reads the destination IP address in the packet header and uses its routing table to choose the best path to the destination network.
-    - It joins different networks together, and it does not forward broadcasts, so each of its interfaces is a separate broadcast domain.
-    - Other functions at Layer 3: fragmentation, TTL decrement, NAT and ACL filtering.
+- It reads the destination IP address in the packet header and uses its routing table to choose the best path to the destination network.
+- It joins different networks together, and it does not forward broadcasts, so each of its interfaces is a separate broadcast domain.
+- Other functions at Layer 3: fragmentation, TTL decrement, NAT and ACL filtering.
 
-    Devices by layer
+Devices by layer:
 
-    | Layer | Devices |
-    |---|---|
-    | 1 Physical | Hub, repeater, cable, modem |
-    | 2 Data Link | Switch, bridge, NIC, access point |
-    | 3 Network | `Router`, Layer 3 switch |
-    | 4 Transport | Firewall (stateful), load balancer |
-    | 7 Application | Proxy server, gateway, WAF |
+| Layer | Devices |
+|---|---|
+| 1 Physical | Hub, repeater, cable, modem |
+| 2 Data Link | Switch, bridge, NIC, access point |
+| 3 Network | `Router`, Layer 3 switch |
+| 4 Transport | Firewall (stateful), load balancer |
+| 7 Application | Proxy server, gateway, WAF |
 
 11. **Write the name of OSI layers.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
