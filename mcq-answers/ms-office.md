@@ -199,3 +199,5 @@ explanation: The physical action of pressing and holding down the left mouse but
    b. Form
    c. Worksheets
    d. Modules
+answer: C
+explanation: The standard database objects in Microsoft Access comprise Tables, Queries, Forms, Reports, Macros, and Modules. Worksheets are components of spreadsheet applications like Microsoft Excel, not database objects in MS Access.
