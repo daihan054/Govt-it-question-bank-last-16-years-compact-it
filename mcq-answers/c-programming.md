@@ -1144,6 +1144,8 @@ explanation: C ভাষায় ডাইনামিক মেমোরি অ�
 
 1. **When a function is called more than one time that is called?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** This is known as function reusability or recursion or Idempotence
+answer: A
+explanation: কোনো ফাংশন নিজেকে বারবার কল করলে তাকে রিকার্শন (Recursion) এবং একাধিকবার কার্যকর হওয়াকে ফাংশন রিইউজেবিলিটি (Function reusability) বলে।
 
 2. **How many function calls will be performed to execute the following recursive function?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*
    ```c
@@ -1157,6 +1159,8 @@ explanation: C ভাষায় ডাইনামিক মেমোরি অ�
    b) 2*N
    c) Infinite
    d) The answer can vary depending on the initial value of N
+answer: D
+explanation: `N`-এর প্রাথমিক মানের ওপর ভিত্তি করে কল সংখ্যা নির্ভর করে। যেমন: $N \le 0$ হলে এটি 0-তে পৌঁছে স্বাভাবিকভাবে থামবে, কিন্তু $N > 0$ হলে $N+1$ বৃদ্ধি পেয়ে স্ট্যাক ওভারফ্লো বা অসীম লুপ হবে।
 
 3. **Consider the following recursive function fun (x,y) . What is the value of fun (4,3) ?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*
    ```c
@@ -1170,12 +1174,16 @@ explanation: C ভাষায় ডাইনামিক মেমোরি অ�
    B) 10
    C) 12
    D) 13
+answer: D
+explanation: `fun(4, 3) = fun(3, 7) = fun(2, 10) = fun(1, 12) = fun(0, 13)`। যেহেতু `x == 0`, তাই $y = 13$ রিটার্ন হবে।
 
 4. **An algorithm that calls itself directly or indirectly is known as?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)], [Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*
    A) Sub Algorithm
    B) Recursion
    C) Polish Notation
    D) Traversal algorithm
+answer: B
+explanation: যে অ্যালগরিদম বা ফাংশন প্রত্যক্ষ বা পরোক্ষভাবে নিজেকেই পুনরায় কল করে তাকে রিকার্শন (Recursion) বলে।
 
 ## Storage Classes & Scope (3)
 
