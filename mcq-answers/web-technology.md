@@ -387,30 +387,40 @@ explanation: সিসকো মিডিয়া কনভারজেন্�
    (b) Unauthorized Access
    (c) Internal Server Error
    (d) Not Found
+answer: C
+explanation: HTTP স্ট্যাটাস কোড 500 নির্দেশ করে "Internal Server Error", অর্থাৎ কোনো অভ্যন্তরীণ ও অপ্রত্যাশিত ত্রুটির কারণে সার্ভার ক্লায়েন্টের রিকোয়েস্ট পূরণ করতে ব্যর্থ হয়েছে।
 
 2. **When we browse internet, browser store some data in the computer. We are talking about-** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)]*
    a. Session
    b. File
    c. Memory
    d. Cookie
+answer: D
+explanation: ইন্টারনেট ব্রাউজ করার সময় ব্যবহারকারীর অগ্রাধিকার, লগইন অবস্থা বা ব্রাউজিং হিস্ট্রি ট্র্যাক করার জন্য ব্রাউজার ক্লায়েন্ট কম্পিউটারে কুকি (Cookie) আকারে ডেটা সংরক্ষণ করে।
 
 3. **While browsing, internet browser stores some data in the computer. Which is called by?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*
    A) Session
    B) File
    C) Memory
    D) Cookie
+answer: D
+explanation: ক্লায়েন্ট মেশিনে ব্রাউজার কর্তৃক সংরক্ষিত ছোট ডেটা ফাইল বা তথ্যখণ্ডকে কুকি (Cookie) বলা হয়।
 
 4. **Programs that is automatically loaded and operates as a part of browser ----** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*
    A) Plug in
    B) Add ones
    C) Widgets
    D) Utilities
+answer: A
+explanation: প্লাগ-ইন (Plug-in) হলো বিশেষ সফটওয়্যার মডিউল যা ব্রাউজারের সাথে সমন্বিত হয়ে স্বয়ংক্রিয়ভাবে অতিরিক্ত মাল্টিমিডিয়া বা বিশেষ কার্যক্ষমতা প্রদান করে।
 
 5. **Which of the following statements is true regarding Cookies?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*
    A) It is stored in web-client
    B) It is stored in server
    C) Each browsing time cookies become reset
    D) It is client-side program
+answer: A
+explanation: কুকি (Cookie) ওয়েব সার্ভার দ্বারা প্রেরিত হয় এবং এটি ব্যবহারকারীর নিজস্ব ব্রাউজারে বা ওয়েব-ক্লায়েন্টে (Web-client) টেক্সট ফাইল আকারে সংরক্ষিত থাকে।
 
 ## CSS & Styling (1)
 
