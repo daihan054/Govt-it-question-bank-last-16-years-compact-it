@@ -362,78 +362,104 @@ explanation: মাল্টিপ্রোগ্রামিং সিস্ট
    b) LRU
    c) Optimal Page Replacement
    d) Both LRU and FIFO
+answer: A
+explanation: বেলাডির অ্যানোমালি (Belady's Anomaly) হলো মেমোরিতে ফ্রেম সংখ্যা বৃদ্ধি করলেও পেজ ফল্টের সংখ্যা বেড়ে যাওয়ার ঘটনা; FIFO অ্যালগরিদম বেলাডির অ্যানোমালিতে আক্রান্ত হয় (LRU ও Optimal কখনো আক্রান্ত হয় না)।
 
 2. **To keep track of how many frames have been allocated, how many are there, and how many are available, operating system maintain a—** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*
    (a) Memory table
    (b) Page table
    (c) mapping table
    (d) frame table
+answer: D
+explanation: অপারেটিং সিস্টেম ফিজিক্যাল মেমোরির ফ্রেমগুলোর বরাদ্দ ও লভ্যতা ট্র্যাক করার জন্য একটি ডেটা স্ট্রাকচার হিসেবে 'ফ্রেম টেবিল' (Frame table) সংরক্ষণ করে।
 
 3. **Logical Memory is broken into blocks of the same size called-** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*
    a) Frames
    b) Pages
    c) raids
    d) Blocks
+answer: B
+explanation: অপারেটিং সিস্টেমে লজিক্যাল মেমোরিকে নির্দিষ্ট সমান আকারের ব্লকে বিভক্ত করা হলে সেগুলোকে 'পেজ' (Pages) বলা হয়, আর ফিজিক্যাল মেমোরির ব্লককে 'ফ্রেম' (Frames) বলে।
 
 4. **A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*
    (a) 11 bits
    (b) 13 bits
    (c) 15 bits
    (d) 20 bits
+answer: C
+explanation: ভার্চুয়াল অ্যাড্রেস ৩২-বিট এবং পেজ সাইজ ৪ KB ($2^{12}$ B), তাই অফসেট ১২-বিট এবং ভার্চুয়াল পেজ নম্বর (VPN) = $32 - 12 = 20$ বিট। TLB-তে ১২৮টি এন্ট্রি ৪-ওয়ে সেট অ্যাসোসিয়েটিভ হওয়ায় সেট সংখ্যা = $128 / 4 = 32 = 2^5$, অর্থাৎ ইনডেক্স ৫-বিট। সুতরাং ট্যাগ সাইজ = $20 - 5 = 15$ বিট।
 
 5. **What is the relationship between Paging and Virtual memory?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*
    (ক) Virtual memory came before Paging
    (খ) When pages are created in disks, it is called a virtual memory
    (গ) Virtual memory can never be implemented without paging
    (ঘ) Both have the same concepts
+answer: B
+explanation: পেজিং হলো নন-কন্টিগুয়াস মেমোরি বরাদ্দের কৌশল; তবে যখন মেমোরির পেজগুলোকে সেকেন্ডারি স্টোরেজ বা ডিস্কে সংরক্ষণ করে সোয়াপিংয়ের মাধ্যমে মেমোরি সম্প্রসারণ করা হয়, তখন তাকে ভার্চুয়াল মেমোরি বলা হয়।
 
 6. **Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) Always decrease the number of page faults
    b) Always increase the number of page faults
    c) Sometimes increase the number of page faults
    d) Never affect the number of page faults
+answer: C
+explanation: FIFO পেজ রিপ্লেসমেন্ট পলিসিতে বেলাডির অ্যানোমালির কারণে মেমোরিতে ফ্রেমের সংখ্যা বৃদ্ধি করলেও বিশেষ কিছু ক্ষেত্রে পেজ ফল্টের সংখ্যা কমে যাওয়ার পরিবর্তে বৃদ্ধি পেতে পারে (Sometimes increase the number of page faults)।
 
 7. **Applying the LRU page replacement to the reference string 1 2 4 5 2 1 2 4. The main memory can accommodate pages and it already has pages and 2. Pape I came in before page 2 How many page faults will court?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*
    a) 3
    b) 4
    c) 5
    d) 6
+answer: B
+explanation: মেমোরিতে শুরুতে ১ ও ২ থাকার পর ৩ ফ্রেমের মেমোরিতে প্রদত্ত রেফারেন্স স্ট্রিং ১, ২, ৪, ৫, ২, ১, ২, ৪ এর জন্য ৪, ৫, ১ এবং ৪ অ্যাক্সেসকালে মোট ৪টি পেজ ফল্ট (Page faults) ঘটবে।
 
 8. **Consider a virtual memory system where three pages are allocated for real memory. If the page replacement algorithm used is FIFO, how many page replacements take place for the access sequence: 1, 3, 2, 1, 4, 5, 2, 3, 4, 5?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)]*
    a. 2
    b. 3
    c. 4
    d. 6
+answer: B
+explanation: ৩টি ফ্রেমে প্রাথমিক লোডের পর মেমোরি পূর্ণ হয় (পেজ ১, ৩, ২)। এরপর পেজ ৪ (১ কে প্রতিস্থাপন করে), পেজ ৫ (৩ কে প্রতিস্থাপন করে) এবং পেজ ৩ (২ কে প্রতিস্থাপন করে)—এই ৩টি পেজ রিপ্লেসমেন্ট (Replacements) সংঘটিত হয় (মোট পেজ ফল্ট ৬টি)।
 
 9. **Virtual memory located on:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*
    a) RAM
    b) CPU
    c) Flash drive
    d) Hard drive
+answer: D
+explanation: ভার্চুয়াল মেমোরির সোয়াপ বা পেজিং স্পেস সেকেন্ডারি মেমোরি অর্থাৎ হার্ড ড্রাইভে (Hard drive) অবস্থান করে।
 
 10. **Virtually memory হিসেবে RAM এর পাশাপাশি কোনটি ব্যবহার হয়?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*
-   A) Cache
-   B) CPU Register
-   C) CD-ROM
-   D) Hard disk
+    A) Cache
+    B) CPU Register
+    C) CD-ROM
+    D) Hard disk
+answer: D
+explanation: ভার্চুয়াল মেমোরি বাস্তবায়নের জন্য মূল মেমোরি বা RAM-এর সহযোগী স্টোরেজ হিসেবে হার্ডডিস্ক (Hard disk) ব্যবহৃত হয়।
 
 11. **Memory management scheme by which a computer stores and retrieves data from secondary storage for use in main memory is-** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*
-   A) Paging
-   B) Scheduling
-   C) Batch processing
-   D) Virtual storage
+    A) Paging
+    B) Scheduling
+    C) Batch processing
+    D) Virtual storage
+answer: A
+explanation: পেজিং (Paging) হলো মেমোরি ম্যানেজমেন্টের একটি প্রমিত স্কিম যার মাধ্যমে কম্পিউটার সেকেন্ডারি স্টোরেজ থেকে নির্দিষ্ট আকারের ব্লকে (Pages) ডেটা এনে মূল মেমোরিতে লোড করে।
 
 12. **Swap space exists in ---** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*
-   A) CPU
-   B) random memory
-   C) primary memory
-   D) secondary memory
+    A) CPU
+    B) random memory
+    C) primary memory
+    D) secondary memory
+answer: D
+explanation: সোয়াপ স্পেস (Swap space) মূল মেমোরির অংশ নয়, বরং এটি সেকেন্ডারি মেমোরি বা হার্ডডিস্কে (Secondary memory) অবস্থিত।
 
 13. **A page fault occurs ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
-   a. When the page is not in the memory
-   b. When the page is in the memory
-   c. When the process inters into the blocked state
-   d. When the process is in the ready state
+    a. When the page is not in the memory
+    b. When the page is in the memory
+    c. When the process inters into the blocked state
+    d. When the process is in the ready state
+answer: A
+explanation: কোনো প্রসেস এমন একটি মেমোরি পেজ অ্যাক্সেসের চেষ্টা করলে যা বর্তমানে মূল মেমোরিতে (RAM) উপস্থিত নেই, তখন পেজ ফল্ট (Page fault) ইন্টারাপ্ট ঘটে।
 
 ## Linux Commands & Administration (9)
 
