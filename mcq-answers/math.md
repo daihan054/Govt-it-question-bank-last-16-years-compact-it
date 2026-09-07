@@ -976,66 +976,88 @@ explanation: সমান্তর ধারার প্রথম পদ $a = 5
    (b) 4.5 hours
    (c) 2.4 hours
    (d) 5 hours
+answer: (c)
+explanation: দুটি পাইপ একত্রে ১ ঘণ্টায় পূর্ণ করে $\frac{1}{4} + \frac{1}{6} = \frac{3+2}{12} = \frac{5}{12}$ অংশ। সুতরাং সম্পূর্ণ ট্যাংক পূর্ণ হতে সময় লাগবে $\frac{12}{5} = 2.4$ ঘণ্টা।
 
 2. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ১৫ মিনিট
    খ. ১১ মিনিট
    গ. ১৩ মিনিট
    ঘ. ১৪ মিনিট
+answer: গ
+explanation: বানরটি প্রতি ২ মিনিটে উঠে $4 - 1 = 3$ ফুট। শেষ মিনিটে সে ৪ ফুট উঠে শীর্ষে পৌঁছে যাবে, তাই বাকি থাকে $22 - 4 = 18$ ফুট। ১৮ ফুট উঠতে সময় লাগে $\frac{18}{3} \times 2 = 12$ মিনিট। শেষ ১ মিনিটে ৪ ফুট উঠে মোট ২২ ফুটে পৌঁছাবে। অতএব মোট সময় $= 12 + 1 = 13$ মিনিট।
 
 3. **If a man rows at 5km/hr in still water and 3.5 km/hr against the current, find his rate along the current.** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
    a) 4 .25 km
    b) 4.5 km
    c) 6 km
    d) 6.5km
+answer: d
+explanation: স্থির পানিতে গতিবেগ $u = 5$ km/hr, স্রোতের প্রতিকূলে গতিবেগ $u - v = 3.5 \implies v = 5 - 3.5 = 1.5$ km/hr। স্রোতের অনুকূলে গতিবেগ (along the current) $= u + v = 5 + 1.5 = 6.5$ km/hr।
 
 4. **A floor with dimension of 20 feet to 35 feet is needed to be tiled. Two workers can tile that floor in 2 hours and 30 minutes. If they are joined by three other workers of similar ability. How many hours will it take to tile the floor?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*
    a) 1 hr
    b) 1.25 hr
    c) 1.5 hr
    d) 1.75 hr
+answer: a
+explanation: ২ জন শ্রমিকের সময় লাগে ২ ঘণ্টা ৩০ মিনিট বা ২.৫ ঘণ্টা। মোট কাজের পরিমাণ $= 2 \times 2.5 = 5$ ম্যান-আওয়ার। আরও ৩ জন যোগ দিলে মোট শ্রমিক হয় $2 + 3 = 5$ জন। অতএব প্রয়োজনীয় সময় $= \frac{5}{5} = 1$ ঘণ্টা।
 
 5. **A train went 300 km from city X to city Y at an average speed of 100 km/h. At what speed did it travel on the way back if its average speed for the whole trip was 120 km/h.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
    a) 120 km/h
    b) 125 km/h
    c) 130 km/h
    d) 150 km/h
+answer: d
+explanation: যাওয়া ও আসা মিলিয়ে মোট দূরত্ব $= 300 + 300 = 600$ কিমি। মোট সময় $= \frac{600}{120} = 5$ ঘণ্টা। যাওয়ার সময় লেগেছে $\frac{300}{100} = 3$ ঘণ্টা। ফেরার সময় লেগেছে $5 - 3 = 2$ ঘণ্টা। অতএব ফেরার গতিবেগ $= \frac{300}{2} = 150$ km/h।
 
 6. **A boat sailing against a stream of river takes 6 hours to travel 24 kms, while sailing with the stream it takes 4 hours to travel the same distance. What is the speed of the stream?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
    a) 2.5 km/hr
    b) 1.5 km/hr
    c) 1 km/hr
    d) 0.5 km / hr
+answer: c
+explanation: প্রতিকূলে বেগ $= \frac{24}{6} = 4$ km/hr এবং অনুকূলে বেগ $= \frac{24}{4} = 6$ km/hr। স্রোতের বেগ $= \frac{\text{অনুকূলে বেগ} - \text{প্রতিকূলে বেগ}}{2} = \frac{6 - 4}{2} = 1$ km/hr।
 
 7. **Length of a train is 170 meters and speed of train is 63 km/hour. This train can pass a bridge in 30 seconds, then find the length of the bridge.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*
    (a) 355 m
    (b) 325 m
    (c) 365 m
    (d) 312 m
+answer: (a)
+explanation: ট্রেনের বেগ $= 63 \times \frac{5}{18} = 17.5$ m/s। ৩০ সেকেন্ডে অতিক্রান্ত দূরত্ব $= 17.5 \times 30 = 525$ মিটার। ব্রিজের দৈর্ঘ্য $= 525 - 170 = 355$ মিটার।
 
 8. **It takes 5 hours to fill a container using machine A. The same container can be filled suing Machin B in 10 hours. When the container is full, Machine C can fully empty the container in 20 containers how long will it take for the container to be completely filled?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*
    a. 1/4 hours
    b. 4 hours
    c. 2 hours
    d. 15 hours
+answer: b
+explanation: তিনটি মেশিন একসাথে কাজ করলে ১ ঘণ্টায় পূর্ণ হয় $\frac{1}{5} + \frac{1}{10} - \frac{1}{20} = \frac{4 + 2 - 1}{20} = \frac{5}{20} = \frac{1}{4}$ অংশ। অতএব সম্পূর্ণ পাত্রটি পূর্ণ হতে সময় লাগবে ৪ ঘণ্টা।
 
 9. **Two trucks 300 km away are travelling towards each other with a constant speed. Truck A is moving at a constant speed of 50 km/h. How long does it take for them to meet?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*
    a. 5 hours
    b. 3 hours
    c. 2.5 hours
    d. 6 hours
+answer: b
+explanation: উভয় ট্রাক সমান গতিবেগে (৫০ কিমি/ঘণ্টা) একে অপরের দিকে অগ্রসর হলে আপেক্ষিক বেগ $= 50 + 50 = 100$ কিমি/ঘণ্টা। অতএব সাক্ষাতের সময় $= \frac{300}{100} = 3$ ঘণ্টা।
 
 10. **If 12 men work on a particular task. it takes them 24 days to complete it. On the other hand, 12 women can complete the same task in 12 days. How many days it takes if the 12 men and 12 women cooperated with each other to finish to finish the same task?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*
    a. 5 days
    b. 6 days
    c. 8 days
    d. 16 days
+answer: c
+explanation: ১২ জন পুরুষ ১ দিনে করে $\frac{1}{24}$ অংশ এবং ১২ জন মহিলা ১ দিনে করে $\frac{1}{12}$ অংশ। তারা একত্রে ১ দিনে করে $\frac{1}{24} + \frac{1}{12} = \frac{1+2}{24} = \frac{3}{24} = \frac{1}{8}$ অংশ। সুতরাং কাজটি শেষ হতে সময় লাগবে ৮ দিন।
 
 11. **A train 220 m long is moving at 45km/h. The time taken by the train to cross a tunnel 260m long. Is** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. 25 sec
    b. 35 sec
    c. 38 sec
    d. 40 sec
+answer: c
+explanation: মোট অতিক্রান্ত দূরত্ব $= 220 + 260 = 480$ মিটার। গতিবেগ $= 45 \times \frac{5}{18} = 12.5$ m/s। সময় $= \frac{480}{12.5} = 38.4 \approx 38$ সেকেন্ড।
 
 ## Analytical Reasoning (10)
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
