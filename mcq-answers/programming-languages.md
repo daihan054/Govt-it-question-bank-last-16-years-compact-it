@@ -103,42 +103,56 @@ explanation: The exponent operator `**` evaluates right-to-left in Python: `2**(
    (b) 25
    (c) 31
    (d) None of the above
+answer: D
+explanation: Android 11 corresponds to API Level 30. (API level 24 is Android 7.0, API 25 is Android 7.1, and API 31 is Android 12). Since API level 30 is absent from options (a), (b), and (c), the correct choice is (d) None of the above.
 
 2. **What is the Internal Codename of Android version 8.0?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*
    (a) Red Velvet Cake
    (b) Oatmeal Cookie
    (c) Snow Cone
    (d) Jelly Bean
+answer: B
+explanation: Prior to its public release as Android Oreo, Google's internal development codename for Android 8.0 was "Oatmeal Cookie".
 
 3. **আইওএস (IOS) মোবাইল অপারেটিং সিস্টেমটি কোন প্রতিষ্ঠান বাজারজাত করে?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*
    (a) অ্যাপেল
    (b) গুগল
    (c) মাইক্রোসফট
    (d) আইবিএম
+answer: A
+explanation: iOS হলো অ্যাপল (Apple Inc.) কর্তৃক তাদের আইফোন ডিভাইসের জন্য প্রস্তুতকৃত এবং নিয়ন্ত্রিত স্বত্বাধিকারযুক্ত (proprietary) মোবাইল অপারেটিং সিস্টেম।
 
 4. **Which language was used to build Android Operating System?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
    a) Java
    b) Python
    c) Kotlin
    d) Android is not an operating system
+answer: A
+explanation: The Android OS framework, system services, and APIs were primarily developed in Java (with the underlying kernel written in C/C++). Among the given options, Java is the recognized answer.
 
 5. **Which of the following programming language helps you to learn Android programming?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*
    A) C
    B) SQL
    C) Java
    D) Python
+answer: C
+explanation: Java is the primary object-oriented programming language historically utilized for developing native Android mobile applications.
 
 6. **Which of the following program helps you to learn Android programming?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) C
    B) SQL
    C) Java
    D) HTML
+answer: C
+explanation: Knowledge of Java is fundamental for developing native Android applications.
 
 7. **What smart phones are compatible of .apk file?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*
    A) Microsoft
    B) IOS
    C) Symbian
    D) Android
+answer: D
+explanation: The `.apk` (Android Package Kit) file extension is the native executable and installation file format used by Android smartphones.
 
 ## Visual Basic & .NET (7)
 
