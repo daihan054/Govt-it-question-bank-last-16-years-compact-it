@@ -103,66 +103,88 @@ explanation: বীমে dM/dx = V সূত্রানুযায়ী, যে
    (খ) ইভাপোরেটরে
    (গ) কম্প্রেসরে
    (ঘ) থ্রোটল ভালবে
+answer: B
+explanation: বাষ্প সংকোচন হিমায়ন চক্রে (VCRS), রেফ্রিজারেন্ট ইভাপোরেটরে (Evaporator) কম চাপ ও তাপমাত্রায় বাষ্পীভূত হওয়ার সময় শীতলীকরণ স্থান থেকে সুপ্ততাপ শোষণ করে।
 
 2. **এক বায়ুমন্ডলীয় চাপ সমান-** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*
    (ক) ১৪.৭ কেজি/সে.মি
    (খ) ১ কেজি/মি.
    (গ) ১.০৩৩ কেজি/সে.মি
    (ঘ) ১.০৩৩ কেজি/মি
+answer: C
+explanation: ১ প্রমাণ বায়ুমণ্ডলীয় চাপ (1 atm) = 1.033 kg/cm² (বা 14.7 psi বা 101.325 kPa)।
 
 3. **IC ইঞ্জিনের জ্বালানী দহন ঘটে-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) সিলিন্ডারের বাইরে
    (খ) সিলিন্ডারের অভ্যন্তরে
    (গ) কোথাও দহন ঘটে না
    (ঘ) উপরের কোনটি নয়।
+answer: B
+explanation: Internal Combustion (IC) ইঞ্জিনে জ্বালানীর দহন সরাসরি সিলিন্ডারের ভেতরের কম্বাশন চেম্বারে সম্পন্ন হয়।
 
 4. **যে কোন মুহূর্তে বয়লারের পানির সঠিক লেভেল জানা যায় যে যন্ত্রের সাহায্যে সেটি হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) ওয়াটার লেভেল ইন্ডিকেটর
    (খ) ফিড চেক ভালব
    (গ) ব্লো অফ-কক
    (ঘ) স্টপ ভালব
+answer: A
+explanation: বয়লারে পানির সঠিক উচ্চতা বা স্তর সার্বক্ষণিক পর্যবেক্ষণ করার জন্য বয়লার মাউন্টিং হিসেবে ওয়াটার লেভেল ইন্ডিকেটর ব্যবহৃত হয়।
 
 5. **ডোমেস্টিক রেফ্রিজারেটরের কো-এফিসিয়েন্ট অফ পারফরমেন্স (COP) হলো-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) ১.০ এর সমান
    (খ) ১.০ কম
    (গ) ১.০ এর বেশি
    (ঘ) ক, খ, গ এর যে কোন মান
+answer: C
+explanation: রেফ্রিজারেটরের কার্যসম্পাদন গুণাঙ্ক বা COP (Coefficient of Performance = Refrigeration Effect / Work Input) সর্বদা ১.০ এর বেশি (সাধারণত ২ থেকে ৪ এর মধ্যে) হয়।
 
 6. **কোনটি নন-পজিটিভ ডিসপ্লেসমেন্ট কম্প্রেসর** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) রেসিপ্রোকেটিং কম্প্রেসর
    (খ) সেন্ট্রিফিউগাল কম্প্রেসর
    (গ) এক্সিয়াল কম্প্রেসর
    (ঘ) খ ও গ উভয়টি সঠিক
+answer: D
+explanation: ডাইনামিক বা নন-পজিটিভ ডিসপ্লেসমেন্ট কম্প্রেসরের প্রধান দুটি উদাহরণ হলো সেন্ট্রিফিউগাল কম্প্রেসর এবং এক্সিয়াল ফ্লো কম্প্রেসর।
 
 7. **থার্মোডাইনামিক্স এর প্রথম সূত্রটি কোন সমীকরণ দ্বারা প্রকাশ করা হয়।** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*
    (ক) W = JH
    (খ) H = JW
    (গ) W = J + H
    (ঘ) H = J + W
+answer: A
+explanation: জুলের প্রথম সূত্রানুসারে কৃতকাজ ও উৎপন্ন তাপ পরস্পরের সমানুপাতিক (W ∝ H), অর্থাৎ W = JH (যেখানে J হলো যান্ত্রিক সমতা)।
 
 8. **একটি গ্যাসের রুদ্ধতাপীয় প্রসারণ কোন সূত্র দ্বারা প্রকাশ করা হয়-** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*
    (a) \text{PV} = \text{constant}
    (b) \text{PV}^\gamma = \text{constant}
    (c) \text{PV}^\alpha = \text{constant}
    (d) \text{PV}^\circ = \text{constant}
+answer: B
+explanation: রুদ্ধতাপীয় (Adiabatic) প্রক্রিয়ার সমীকরণ হলো PV^γ = constant, যেখানে γ হলো মোলার আপেক্ষিক তাপদ্বয়ের অনুপাত (Cp/Cv)।
 
 **আপেক্ষিক তাপের একক কি ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
-   ক. \\text\{J/Kg\}
-   খ. \\text\{Pa-5\}
-   গ. \\text\{J/Kg-K\}
+   ক. \text{J/Kg}
+   খ. \text{Pa-5}
+   গ. \text{J/Kg-K}
    ঘ. উপরের সবগুলি
+answer: C
+explanation: আপেক্ষিক তাপ (s = Q / (m·ΔT)) এর এসআই একক হলো J/(kg·K)।
 
 9. **Which one is the first search engine? [ বিশ্বের প্রথম সার্চ ইঞ্জিন কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
    (a) Google
    (b) Archie
    (c) Alta vista
    (d) WAIS
+answer: B
+explanation: ১৯৯০ সালে অ্যালান এমটেজ (Alan Emtage) কর্তৃক উদ্ভাবিত 'Archie' হলো ইন্টারনেটের সর্বপ্রথম সার্চ ইঞ্জিন।
 
 10. **'একুশ মানে মাথা নত না করা' এই প্রতিজ্ঞা কে করেছেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
    ক) আবুল ফজল
    খ) শেখর আহমদ
    গ) অর্থ অপুর্বর
    ঘ) সিরাজুল ইসলাম চৌধুরী
+answer: A
+explanation: বিখ্যাত উক্তি ও প্রতিজ্ঞা 'একুশ মানে মাথা নত না করা' সাহিত্যিক ও বুদ্ধিজীবী আবুল ফজলের সৃষ্টি।
 
 ## Engineering Materials & Manufacturing (7)
 
