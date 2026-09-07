@@ -1101,54 +1101,72 @@ explanation: SQL-এ নির্দিষ্ট কলামে নতুন �
    (b) Logical system
    (c) Decision support system
    (d) None
+answer: C
+explanation: ব্যবসায়িক বিশ্লেষণ, ঐতিহাসিক উপাত্ত পর্যালোচনা এবং সিদ্ধান্ত গ্রহণের সুবিধার্থে ডিসিশন সাপোর্ট সিস্টেমে (DSS) ডেটা ওয়্যারহাউস ব্যবহৃত হয়।
 
 2. **What is the use of data cleaning?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*
    (a) To remove the noisy data
    (b) Transformations to correct the wrong data
    (c) Correct the inconsistencies in data
    (d) All of the above
+answer: D
+explanation: ডেটা ক্লিনিং হলো প্রিপ্রসেসিংয়ের এমন এক প্রক্রিয়া যার মাধ্যমে নয়েজি ডেটা মুছে ফেলা, ভুল তথ্য সংশোধন ও তথ্যের সামগ্রিক অসঙ্গতি দূর করা হয় (All of the above)।
 
 3. **Small logical units where data warehouse hold large amounts of data is known as ______.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*
    (a) Access layers
    (b) Data marts
    (c) Data storage
    (d) Data miners
+answer: B
+explanation: কোনো নির্দিষ্ট ব্যবসায়িক ইউনিট বা বিভাগের প্রয়োজনে ডেটা ওয়্যারহাউসের একটি নির্দিষ্ট সাবসেট বা ক্ষুদ্র লজিক্যাল ইউনিটকে ডেটা মার্ট (Data Mart) বলা হয়।
 
 4. **Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*
    (a) Warehousing
    (b) Data Mining
    (c) Text Mining
    (d) Data Selection
+answer: B
+explanation: মেশিন লার্নিং ও পরিসংখ্যানের বুদ্ধিদীপ্ত অ্যালগরিদম প্রয়োগ করে ডেটাসেট থেকে গোপন প্যাটার্ন ও জ্ঞান আহরণের প্রক্রিয়াকে ডেটা মাইনিং (Data Mining) বলে।
 
 5. **Hadoop written in which language?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*
    (a) Java
    (b) C++
    (c) Pascal
    (d) Kotlin
+answer: A
+explanation: অ্যাপাচির বিখ্যাত বিগ ডেটা ডিস্ট্রিবিউটেড প্রসেসিং ফ্রেমওয়ার্ক হাডুপ (Hadoop) মূলত জাভা (Java) ভাষায় রচিত।
 
 6. **Business Intelligence (BI) reporting analyses can be performed using** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    a) standard SQL only
    b) extensions to SQL only
    c) OLAP only
    d) Both standard SQL and extensions to SQL
+answer: D
+explanation: বিআই (BI) রিপোর্টিং ও বিশ্লেষণের কাজ সাধারণ SQL কুয়েরি এবং এর অ্যানালিটিক্যাল এক্সটেনশন (যেমন CUBE, ROLLUP ও উইন্ডোয়িং ফাংশন) উভয়ের সাহায্যেই করা সম্ভব।
 
 7. **A star schema has what type of relationship between a dimension and fact table?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*
    a) Many-to-many
    b) One-to-one
    c) One-to-many
    d) All of the above
+answer: C
+explanation: স্টার স্কিমায় প্রতিটি ডাইমেনশন টেবিলের সাথে মূল ফ্যাক্ট (Fact) টেবিলের এক-থেকে-বহু (One-to-many বা 1:N) রিলেশনশিপ বিদ্যমান থাকে।
 
 8. **Finding useful pattern from the data in a database is known as-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*
    (a) Data Visualization
    (b) Data Mining
    (c) Data Analytics
    (d) All of the above
+answer: B
+explanation: ডেটাবেসে থাকা বিশালাকার অবিন্যস্ত ডেটা থেকে অর্থপূর্ণ ও প্রয়োজনীয় প্যাটার্ন খুঁজে বের করার প্রক্রিয়াকে ডেটা মাইনিং (Data Mining) বলে।
 
 9. **Dark data represents ________.** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*
    A) Unused data
    B) Harmful data
    C) Highlighted data
    D) Important data
+answer: A
+explanation: ডার্ক ডেটা (Dark data) হলো সেই সকল ডেটা যা সংস্থাগুলো বিভিন্ন কার্যক্রমের সময় সংগ্রহ ও সংরক্ষণ করে কিন্তু কোনো ব্যবসায়িক বা বিশ্লেষণমূলক কাজে ব্যবহার করে না (Unused data)।
 
 ## ER Diagram & Data Modeling (9)
 
