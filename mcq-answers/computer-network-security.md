@@ -573,9 +573,13 @@ explanation: মেটাসপ্লয়েট (Metasploit) ফ্রেম�
    (b) Asymmetric Encryption
    (c) TLS (Transport Layer Security)
    (d) Hashing
+answer: C
+explanation: ট্রানজিটে (ক্লায়েন্ট ও সার্ভার বা দুটি মেইল সার্ভারের মধ্যে স্থানান্তরের সময়) ইমেইল সুরক্ষিত রাখতে ট্রান্সপোর্ট লেয়ার সিকিউরিটি বা TLS (STARTTLS) এনক্রিপশন ব্যবহার করা হয়।
 
 2. **An unsolicited e-mail message sent to many recipients at once is a-** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    (a) worm
    (b) virus
    (c) threat
    (d) spamug
+answer: D
+explanation: প্রাপকের অনুমতি ছাড়া একসাথে বিপুল সংখ্যক ব্যক্তির কাছে পাঠানো অযাচিত বা অনাকাঙ্ক্ষিত ইমেইলকে 'স্প্যাম' (Spam; মূল প্রশ্নে 'spamug' মুদ্রিত) বলা হয়।
