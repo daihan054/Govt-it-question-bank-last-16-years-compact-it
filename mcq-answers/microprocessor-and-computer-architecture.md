@@ -528,78 +528,104 @@ explanation: কম্পিউটার সিস্টেমে সরাস�
    (b) Clusters
    (c) Sectors
    (d) None of the above
+answer: c
+explanation: হার্ড ডিস্কের প্রতিটি প্ল্যাটার কতগুলো এককেন্দ্রিক বৃত্তাকার ট্র্যাকে (Tracks) বিভক্ত থাকে এবং প্রতিটি ট্র্যাক আরও ছোট অংশে বিভক্ত থাকে যাকে সেক্টর (Sectors) বলা হয়।
 
 2. **Consider a magnetic disk packed with 32 surfaces. Each surface is divided into 128 tracks while 256 sectors per track. If the size of a sector is 1024 bytes, then what is the total capacity of the disk?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) 2³⁰ bytes
    b) 2³³ bytes
    c) 2²⁷ bytes
    d) 2²⁰ bytes
+answer: a
+explanation: মোট ক্যাপাসিটি = Surfaces × Tracks × Sectors × Sector size = 32 × 128 × 256 × 1024 = 2^5 × 2^7 × 2^8 × 2^10 = 2^30 bytes (বা 1 GB)।
 
 3. **DVD এর চেয়ে বেশী Data store করা যায় কোনটিতে?** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*
    (a) CD Rom
    (b) Floppy
    (c) Blue Ray disk
    (d) Red Ray disk
+answer: c
+explanation: Blu-ray ডিস্কের ধারণক্ষমতা একক লেয়ারে ২৫ জিবি এবং ডুয়াল লেয়ারে ৫০ জিবি পর্যন্ত হয়, যা ডিভিডির (৪.৭ জিবি - ৮.৫ জিবি) চেয়ে অনেক বেশি।
 
 4. **Which of the following is major part of time taken when accessing data on the disk?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*
    A) Settle time
    B) Rotational delay
    C) Waiting time
    D) Seek time
+answer: D
+explanation: ডিস্কের রিড/রাইট হেডকে কাঙ্ক্ষিত সিলিন্ডার বা ট্র্যাকে মুভ করাতে যে সময় লাগে তাকে Seek time বলা হয়, এবং এটি ডিস্ক অ্যাক্সেস সময়ের সবচেয়ে বড় অংশ।
 
 5. **Place where large amount of data is stored outside central processing unit is called** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) Peripherals
    B) Control unit
    C) AI unit
    D) Backing store
+answer: D
+explanation: CPU ও মূল মেমরির বাইরে বিপুল পরিমাণ ডেটা দীর্ঘমেয়াদে স্থায়ীভাবে সংরক্ষণ করার অক্সিলিয়ারি বা সেকেন্ডারি স্টোরেজকে Backing store বলা হয়।
 
 6. **Which are not performance characteristics of hard disk?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*
    A) data transfer time
    B) response time
    C) power consumption
    D) shelf life
+answer: D
+explanation: Data transfer rate, response time এবং power consumption হলো হার্ড ডিস্কের কার্যক্ষমতা বা অপারেশনের বৈশিষ্ট্য। কিন্তু Shelf life হলো দীর্ঘমেয়াদে সংরক্ষণের স্থায়িত্বকাল, যা পারফরম্যান্স বৈশিষ্ট্য নয়।
 
 7. **Which of the following is used for manufacturing chips?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*
    A) Control bus
    B) Control unit
    C) Parity unit
    D) Semiconductor
+answer: D
+explanation: কম্পিউটারের ইন্টিগ্রেটেড সার্কিট বা চিপ তৈরিতে অর্ধপরিবাহী বা সেমিকন্ডাক্টর (যেমন সিলিকন) উপাদান ব্যবহৃত হয়।
 
 8. **Before a disk can be used to store data, it must be-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*
    A) Formatted
    B) Reformatted
    C) Addressed
    D) None
+answer: A
+explanation: নতুন কোনো ডিস্কে ডেটা সংরক্ষণের পূর্বে অপারেটিং সিস্টেমের ব্যবহারোপযোগী ফাইল সিস্টেম এবং ট্র্যাক-সেক্টর কাঠামো তৈরির জন্য ডিস্ক ফরম্যাট (Formatted) করতে হয়।
 
 9. **Which technology is used in Compact disks?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*
    A) Mechanical
    B) Electrical
    C) Electromagnetic
    D) Laser
+answer: D
+explanation: Compact Disc (CD) একটি অপটিক্যাল মিডিয়া, যাতে ডেটা রিড ও রাইট করতে লেজার রশ্মি (Laser technology) ব্যবহৃত হয়।
 
 10. **Which of the following is a storage device?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*
-   A) Tape
-   B) Hard Disk
-   C) Floppy Disk
-   D) All of them
+    A) Tape
+    B) Hard Disk
+    C) Floppy Disk
+    D) All of them
+answer: D
+explanation: ম্যাগনেটিক টেপ, হার্ড ডিস্ক এবং ফ্লপি ডিস্ক—সবগুলোই কম্পিউটার সিস্টেমে সেকেন্ডারি স্টোরেজ ডিভাইস হিসেবে ব্যবহৃত হয়।
 
 11. **What does the disk drive of computer do?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*
-   A) Rotate the Disk
-   B) Read the disk
-   C) Load a program form the disk into the memory
-   D) Both B and C
+    A) Rotate the Disk
+    B) Read the disk
+    C) Load a program form the disk into the memory
+    D) Both B and C
+answer: D
+explanation: ডিস্ক ড্রাইভ ডিস্ক থেকে সংরক্ষিত ডেটা ও নির্দেশ রিড করে এবং প্রয়োজনীয় প্রোগ্রামকে মেমরিতে (RAM) লোড করতে সহায়তা করে।
 
 12. **Which of the items below are considered removable storage media?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*
-   A) Removable hard disk cartridges
-   B) (Magneto-optical) disk
-   C) Flexible disks cartridges
-   D) All of them
+    A) Removable hard disk cartridges
+    B) (Magneto-optical) disk
+    C) Flexible disks cartridges
+    D) All of them
+answer: D
+explanation: Removable hard disk, Magneto-optical disk এবং Flexible disk (ফ্লপি কার্ট্রিজ)—সবগুলোই সিস্টেম থেকে সহজে আলাদা ও পরিবহনযোগ্য রিমুভেবল স্টোরেজ মিডিয়া।
 
 13. **A hard disk is divided into tracks which are further subdivided into ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
-   a. Clusters
-   b. Sectors
-   c. Vectors
-   d. Heads
+    a. Clusters
+    b. Sectors
+    c. Vectors
+    d. Heads
+answer: b
+explanation: হার্ড ডিস্কের ট্র্যাকসমূহ ছোট ছোট নির্দিষ্ট আকারের ব্লকে বিভক্ত থাকে, যাদের সেক্টর (Sectors) বলা হয়।
 
 ## RAID & Storage Architecture (5)
 
