@@ -1226,3 +1226,5 @@ explanation: `extern` স্টোরেজ ক্লাস কোনো ভ্�
    b. Database
    c. Terminal
    d. Process
+answer: C
+explanation: ফ্লোচার্টে গোলাকার প্রান্তবিশিষ্ট প্রতীক (oval / rounded rectangle) টার্মিনাল (Terminal) নির্দেশ করে, যা প্রোগ্রামের শুরু (Start) বা শেষ (End/Stop) চিহ্নিত করতে ব্যবহৃত হয়।
