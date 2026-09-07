@@ -267,7 +267,10 @@ explanation: প্রোগ্রামিংয়ে রিকার্সিভ
 7. **What is the prefix conversion of the expression 	ext{A}+(	ext{B}-	ext{C})*	ext{D}?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** +	ext{A}*-	ext{BCD}
 answer: +	ext{A}*-	ext{BCD}
-explanation: অগ্রাধিকারের ক্রমানুসারে: প্রথমে বন্ধনীর ভেতরের `(B - C)` $ightarrow$ `-BC`; এরপর গুণ `-BC * D` $ightarrow$ `*-BCD`; সর্বশেষে যোগ `A + (*-BCD)` $ightarrow$ `+A*-BCD`।
+explanation: অগ্রাধিকারের ক্রমানুসারে: প্রথমে বন্ধনীর ভেতরের `(B - C)` $
+ightarrow$ `-BC`; এরপর গুণ `-BC * D` $
+ightarrow$ `*-BCD`; সর্বশেষে যোগ `A + (*-BCD)` $
+ightarrow$ `+A*-BCD`।
 
 8. **An example of a hierarchical data structure is ______** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*
    (ক) Array
@@ -299,7 +302,8 @@ explanation: স্ট্যাককে LIFO (Last In First Out) বা FILO (F
     c) ad* bc -
     d) abc – d+*
 answer: a
-explanation: অগ্রাধিকার অনুসারে: `(b-c)` $ightarrow$ `bc-`; গুণের ফলে `bc-d*`; এবং সবশেষে যোগের ফলে `abc-d*+`।
+explanation: অগ্রাধিকার অনুসারে: `(b-c)` $
+ightarrow$ `bc-`; গুণের ফলে `bc-d*`; এবং সবশেষে যোগের ফলে `abc-d*+`।
 
 12. **In a shop, customers are provided the service as a first come first serve policy. But some special customers can be served at any time based on their importance. Which data structure most fits this scenario?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*
     a. Stack
@@ -348,7 +352,11 @@ explanation: Stack Abstract Data Type (ADT)-এর প্রধান বৈশ�
     c) 4, 5
     d) 1, 4
 answer: c
-explanation: FIFO নিয়মে: push(1), push(2) $ightarrow$ [1, 2]; pop() $ightarrow$ 1 বের হয়ে থাকে [2]; push(4), push(5) $ightarrow$ [2, 4, 5]; pop() $ightarrow$ 2 বের হয়ে অবশেষে কিউতে থাকে [4, 5]।
+explanation: FIFO নিয়মে: push(1), push(2) $
+ightarrow$ [1, 2]; pop() $
+ightarrow$ 1 বের হয়ে থাকে [2]; push(4), push(5) $
+ightarrow$ [2, 4, 5]; pop() $
+ightarrow$ 2 বের হয়ে অবশেষে কিউতে থাকে [4, 5]।
 
 17. **Suppose you want to insert n elements into an empty linked list while maintaining the shorted order. What is the worst-case time complexity?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*
     a) \theta(n)
@@ -413,117 +421,157 @@ explanation: স্ট্যাকে উপাদান সংযোজন ও 
    (b) 0 2 4 3 1 6 5 9 8 7
    (c) 7 5 1 0 3 2 4 6 8 9
    (d) 0 1 2 3 4 5 6 7 8 9
+answer: d
+explanation: বাইনারি সার্চ ট্রির (BST) ইন-অর্ডার ট্রাভার্সাল (In-order traversal: Left-Root-Right) সবসময় উপাদানগুলোকে আরোহী বা ছোট থেকে বড় ক্রমানুসারে (Ascending sorted order) বিন্যস্ত করে।
 
 2. **A binary search tree is constructed by inserting the numbers, 60 25 72 15 30 68 13 18 in order. The number of nodes in the left sub tree is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) 4
    (b) 5
    (c) 6
    (d) 8
+answer: b
+explanation: প্রথম সংখ্যা 60 হলো ট্রির মূল বা রুট (Root)। BST-এর নিয়মানুযায়ী রুটের চেয়ে ছোট সকল উপাদান বাম সাব-ট্রিতে যাবে। এখানে 60-এর চেয়ে ছোট সংখ্যাগুলো হলো: 25, 15, 30, 13, 18 (মোট ৫টি)।
 
 3. **Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) 2
    (b) 3
    (c) 4
    (d) 5
+answer: d
+explanation: প্রতিটি নোডের ০ অথবা ২টি চাইল্ড থাকলে তাকে Full Binary Tree বলে। উচ্চতা h হলে সর্বনিম্ন নোড সংখ্যা N = 2h + 1 (যেখানে রুটের উচ্চতা ০)। সুতরাং 2h + 1 = 11 => 2h = 10 => h = 5।
 
 4. **Level order traversal of a rooted tree can be done by starting from root and performing-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) Deep search
    (b) Root search
    (c) Depth first search
    (d) Breadth first search
+answer: d
+explanation: লেভেল অর্ডার ট্রাভার্সাল কিউ (Queue) ডেটা স্ট্রাকচার ব্যবহারের মাধ্যমে Breadth First Search (BFS) পদ্ধতিতে স্তরে স্তরে সম্পন্ন করা হয়।
 
 5. **Which data structure is suitable to represent hierarchical relationship between elements?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*
    a) Stack
    b) Queue
    c) List
    d) Tree
+answer: d
+explanation: উপাদানসমূহের মধ্যকার পদানুক্রমিক বা স্তরভিত্তিক সম্পর্ক (Hierarchical relationship) উপস্থাপনের জন্য Tree ডেটা স্ট্রাকচার আদর্শ।
 
 6. **How many children does a binary tree have?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*
    a) 2
    b) 0
    c) 0 or 1 or 2
    d) Any number of children
+answer: c
+explanation: বাইনারি ট্রির সংজ্ঞানুসারে প্রতিটি নোডে সর্বোচ্চ ২টি চাইল্ড থাকতে পারে, অর্থাৎ চাইল্ড সংখ্যা ০, ১ বা ২ হতে পারে (at most 2)।
 
 7. **A B* tree can contain a maximum of 7 pointers in a node. What is the minimum number keys in leaves?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*
    a) 6
    b) 3
    c) 4
    d) 7
+answer: c
+explanation: m অর্ডারের B* Tree-তে প্রতিটি নন-রুট নোড কমপক্ষে 2/3 পূর্ণ থাকে। সর্বোচ্চ ৭টি পয়েন্টার থাকলে নোডের ন্যূনতম কী সংখ্যা হয় floor((2m - 1) / 3) = floor(13 / 3) = 4।
 
 8. **In a completer k-array, every internal node has exactly k children. The number of leaves in such a tree with n internal nodes is-** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*
    (a) (n-1)k+1
    (b) nk
    (c) n(k-1)
    (d) n(k-1)+1
+answer: d
+explanation: মোট নোড N = n + L। এজ সংখ্যা = N - 1 = n * k। ফলে n + L - 1 = n * k => L = n(k - 1) + 1।
 
 9. **Access time of the symbolic table will be logarithmic if it is implemented by-** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*
    (a) Linear list
    (b) Search tree
    (c) Hash table
    (d) Self organization list
+answer: b
+explanation: ব্যালান্সড সার্চ ট্রি (যেমন AVL বা Red-Black Tree) দিয়ে সিম্বল টেবিল বানালে এর সার্চিং সময় O(log n) বা লগারিদমিক হয়।
 
 10. **What is the minimum node for binary tree?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
-   **Ans:** For a binary tree, max node = [2^{\text{h}} + 1] and min node = [2\text{h} + 1].
+    **Ans:** For a binary tree, max node = [2^{	ext{h}} + 1] and min node = [2	ext{h} + 1].
+answer: 2h + 1 (or h + 1)
+explanation: উচ্চতা h হলে একটি সাধারণ বাইনারি ট্রির সর্বনিম্ন নোড সংখ্যা h + 1 (বা ফুল বাইনারি ট্রির ক্ষেত্রে 2h + 1) এবং সর্বোচ্চ নোড সংখ্যা 2^(h+1) - 1।
 
 11. **The Post-order traversal of a binary tree is 8, 9, 6, 7, 4, 5, 2, 3, 1, The In-order traversal of the same tree is 8, 6, 9, 4, 7, 2, 5, 1, 3. What is the height of the above binary tree?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 89 (ET: N/A)]*
-   a. 2
-   b. 3
-   c. 4
-   d. 1
+    a. 2
+    b. 3
+    c. 4
+    d. 1
+answer: c
+explanation: ট্রি পুনর্গঠন করলে দেখা যায়: রুট 1, এর বাম চাইল্ড 2, 2-এর বামে 4, 4-এর বামে 6, এবং 6-এর সন্তান 8 ও 9। রুট থেকে গভীরতম লিফ (8 বা 9) পর্যন্ত সর্বোচ্চ এজ দূরত্ব বা উচ্চতা হলো 4।
 
 12. **The pre order traversal of binary tree is 40, 20, 10, 30, 60, 50, 70. Which one of the is the post-order traversal of the tree?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*
-   a) 10,20,30,40,50,60,70
-   b) 10,30,20,50,70,60,40
-   c) 40,20,60,10,30,50,70
-   d) 70,50,60,30,10,20,40
+    a) 10,20,30,40,50,60,70
+    b) 10,30,20,50,70,60,40
+    c) 40,20,60,10,30,50,70
+    d) 70,50,60,30,10,20,40
+answer: b
+explanation: BST-এর নিয়মে রুট 40; বাম সাব-ট্রি {20, 10, 30}-এর পোস্ট-অর্ডার 10, 30, 20; ডান সাব-ট্রি {60, 50, 70}-এর পোস্ট-অর্ডার 50, 70, 60। সম্পূর্ণ পোস্ট-অর্ডার (Left-Right-Root): 10, 30, 20, 50, 70, 60, 40।
 
 13. **Suppose we have a Binary Search Tree where each node has an integer value. Which of the following tree traversal techniques can give us a sorted list (in ascending order) of those integers?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 180 (ET: N/A)]*
-   a) Pre-order traversal
-   b) In-order traversal
-   c) Post-order traversal
-   d) BFS traversal
+    a) Pre-order traversal
+    b) In-order traversal
+    c) Post-order traversal
+    d) BFS traversal
+answer: b
+explanation: BST-তে ইন-অর্ডার ট্রাভার্সাল (In-order traversal) সর্বদা আরোহী বা ছোট থেকে বড় (Ascending) সাজানো তালিকা প্রদান করে।
 
 14. **If we represent a binary tree using array, what will be the children of node “n”-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*
-   a) 2n & 2n+1
-   b) 2n & 2-n
-   c) (n+1)2
-   d) 2n & 2n-1
+    a) 2n & 2n+1
+    b) 2n & 2-n
+    c) (n+1)2
+    d) 2n & 2n-1
+answer: a
+explanation: ১-ভিত্তিক অ্যারে উপস্থাপনায় n তম নোডের বাম চাইল্ড 2n এবং ডান চাইল্ড 2n+1 এ অবস্থান করে।
 
 15. **In which tree structure left to right subtree height differs not more than 1?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*
-   a) Binary tree
-   b) BST
-   c) AVL tree
-   d) Binary Heap
+    a) Binary tree
+    b) BST
+    c) AVL tree
+    d) Binary Heap
+answer: c
+explanation: AVL Tree হলো একটি সেলফ-ব্যালান্সিং BST, যার প্রতিটি নোডের ব্যালান্স ফ্যাক্টর (বাম ও ডান সাব-ট্রির উচ্চতার পার্থক্য) -১, ০ বা +১ এর মধ্যে সীমাবদ্ধ থাকে।
 
 16. **Maximum how many nodes can be placed in a binary Tree of N levels?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*
-   a) 2^N
-   b) 2^N - 1
-   c) 2^{N-1} - 1
-   d) N^2
+    a) 2^N
+    b) 2^N - 1
+    c) 2^{N-1} - 1
+    d) N^2
+answer: b
+explanation: N টি লেভেলবিশিষ্ট (Level 1 থেকে N) একটি বাইনারি ট্রিতে সর্বোচ্চ নোড সংখ্যা হতে পারে 2^N - 1।
 
 17. **Max-Heap data structure এর সবচেয়ে বড় নম্বরটি কোথায় থাকে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*
-   A) Leaf
-   B) Internal node
-   C) Root
-   D) Outside
+    A) Leaf
+    B) Internal node
+    C) Root
+    D) Outside
+answer: C
+explanation: Max-Heap-এর বৈশিষ্ট্য অনুযায়ী প্যারেন্টের মান চাইল্ডের মানের চেয়ে বড় বা সমান হয়, তাই সমগ্র ট্রির বৃহত্তম মানটি সর্বদা রুট (Root) নোডে থাকে।
 
 18. **Complete Binary tree যার height n, তার মধ্যে node কতটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*
-   A) n
-   B) 2^n
-   C) 2^{n-1}
-   D) 2^{n+1}-1
+    A) n
+    B) 2^n
+    C) 2^{n-1}
+    D) 2^{n+1}-1
+answer: D
+explanation: উচ্চতা n বিশিষ্ট একটি পারফেক্ট/ফুল বাইনারি ট্রিতে (রুটের উচ্চতা ০ ধরে) সর্বোচ্চ 2^(n+1) - 1 টি নোড থাকতে পারে।
 
 19. **Binary Search Tree-এর Time complexity কত?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*
-   A) O(n)
-   B) O(n \log n)
-   C) O(\log n)
-   D) O(n^2)
+    A) O(n)
+    B) O(n \log n)
+    C) O(\log n)
+    D) O(n^2)
+answer: C
+explanation: ব্যালান্সড বাইনারি সার্চ ট্রিতে অনুসন্ধান (Search), সংযোজন (Insert) এবং অপসারণ (Delete) অপারেশনের গড় সময় কমপ্লেক্সিটি হলো O(log n)।
 
 20. **Which of the following is false about a binary search tree?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*
-   A) The left child is always lesser than its parent
-   B) The right child is always greater than its parent
-   C) The left and right subtrees should also be binary search trees
-   D) In order sequence gives decreasing order of elements
+    A) The left child is always lesser than its parent
+    B) The right child is always greater than its parent
+    C) The left and right subtrees should also be binary search trees
+    D) In order sequence gives decreasing order of elements
+answer: D
+explanation: BST-এর ইন-অর্ডার ট্রাভার্সাল উপাদানগুলোকে ঊর্ধ্বক্রমে বা ক্রমবর্ধমান (Increasing / Ascending order) আকারে দেয়, নিম্নক্রমে (Decreasing) নয়। সুতরাং D উক্তিটি মিথ্যা।
 
 ## Data Structures & Algorithms (12)
 1. **When sorting an array using randomized quicksort (pivot chosen randomly), what are the average-case and worst-case time complexities? [ যখন একটি অ্যারে randomized quicksort ব্যবহার করে sort করা হয় (pivot র‍্যান্ডমভাবে নির্বাচন করা হয়), তখন এর average-case এবং worst-case time complexity কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
