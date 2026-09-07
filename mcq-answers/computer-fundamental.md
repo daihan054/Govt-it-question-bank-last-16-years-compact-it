@@ -564,240 +564,320 @@ explanation: ট্রির লেভেল অর্ডার ট্রাভ�
    b) Firefox
    c) Facebook
    d) Safari
+answer: c
+explanation: ফেসবুক (Facebook) হলো একটি সোশ্যাল মিডিয়া প্ল্যাটফর্ম; ক্রোম, ফায়ারফক্স ও সাফারি হলো ওয়েব ব্রাউজার।
 
 2. **নিচের কোনটি image ফাইলের extension হিসাবে ব্যবহৃত হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 61 (ET: BUET)]*
    a) .docx
    b) .xls
    c) .jpg
    d) উপরের কোনটিই নয়।
+answer: c
+explanation: `.jpg` হলো বহুল ব্যবহৃত ইমেজ বা ছবির ফাইল ফরম্যাটের এক্সটেনশন।
 
 3. **Which of the following file format is not a Video file format?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*
    (ক) AVI
    (খ) MOV
    (গ) MPEG
    (ঘ) JPG
+answer: ঘ
+explanation: JPG হলো স্টিল ইমেজ (ছবির) ফাইল ফরম্যাট; আর AVI, MOV এবং MPEG হলো ভিডিও ফরম্যাট।
 
 4. **Which one of the following is not a web browser?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*
    (ক) Firefox
    (খ) Facebook
    (গ) Chrome
    (ঘ) Safari
+answer: খ
+explanation: ফেসবুক কোনো ওয়েব ব্রাউজার নয়, এটি একটি সামাজিক যোগাযোগ মাধ্যম।
 
 5. **Which language is directly understood by the Computer without translating?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*
    (ক) Machine language
    (খ) Assemble
    (গ) High level language
    (ঘ) None
+answer: ক
+explanation: মেশিন ল্যাঙ্গুয়েজ (Machine language বা বাইনারি কোড) কম্পিউটার কোনো অনুবাদক (translator) ছাড়াই সরাসরি বুঝতে ও সম্পাদন করতে পারে।
 
 6. **A computer program that converts an entire program into machine language is called a/an:** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 58 (ET: N/A)]*
    (ক) Interpreter
    (খ) Converter
    (গ) Simulator
    (ঘ) Compiler
+answer: ঘ
+explanation: কম্পাইলার (Compiler) সম্পূর্ণ সোর্স প্রোগ্রামকে একসাথে পড়ে একযোগে অবজেক্ট বা মেশিন কোডে রূপান্তর করে।
 
 7. **Which of the following pairs of statements are not treated as identical by the compiler?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*
    (ক) int foo(int *i); int foo(int i[])
    (খ) a[i]=5; i[a]=5;
    (গ) char c[10]; char *c;
    (ঘ) void bar (int) ; void bar (int x);
+answer: গ
+explanation: `char c[10];` হলো ১০ বাইটের একটি অ্যারে ডিক্লেয়ারেশন, পক্ষান্তরে `char *c;` হলো একটি পয়েন্টার ভ্যারিয়েবল। মেমরি অ্যালোকোশন ও প্রকৃতির দিক থেকে এ দুটি মোটেও এক নয়।
 
 8. **কোনটি ইমেজ ফাইল এক্সটেনশন নয়?** *[BCIC Assistant Programmer 2022 compact it 61 (ET: BUET)]*
    (ক) Png
    (খ) Jpeg
    (গ) avi
    (ঘ) gif
+answer: গ
+explanation: `.avi` হলো একটি ভিডিও ফাইল ফরম্যাট; অন্যদিকে png, jpeg এবং gif হলো ইমেজ ফাইল ফরম্যাট।
 
 9. **Which one of the following is not a search engine?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 76 (ET: N/A)]*
    a. Windows
    b. Google
    c. Yahoo
    d. Bing
+answer: a
+explanation: উইন্ডোজ (Windows) হলো একটি অপারেটিং সিস্টেম; গুগল, ইয়াহু ও বিং হলো সার্চ ইঞ্জিন।
 
 10. **Which one is the text based web browser?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*
    a) Chrome
    b) Lynx
    c) Safari
    d) Microsoft Edge
+answer: b
+explanation: লিংকস (Lynx) হলো একটি সম্পূর্ণ টেক্সট-ভিত্তিক (text-based) কমান্ড-লাইন ওয়েব ব্রাউজার।
 
 11. **Which of the following language does not need any translation?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*
    A) Machine language
    B) 4GL
    C) 3GL
    D) Assembly language
+answer: A
+explanation: মেশিন ল্যাঙ্গুয়েজের নির্দেশাবলি সিপিইউ সরাসরি বুঝতে পারে, তাই কোনো অনুবাদকের প্রয়োজন হয় না।
 
 12. **A ________ translate file of program source code into machine language.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) Cluster
    B) Datagram
    C) Decoding
    D) Compiler
+answer: D
+explanation: কম্পাইলার (Compiler) হাই-লেভেল সোর্স কোডকে মেশিন ল্যাঙ্গুয়েজে অনুবাদ করে।
 
 13. **All programming languages require users to follow certain rules of ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*
    A) style
    B) syntax
    C) grammar
    D) procedures
+answer: B
+explanation: প্রতিটি প্রোগ্রামিং ভাষার নির্দিষ্ট ব্যাকরণিক নিয়মাবলিকে সিনট্যাক্স (Syntax) বলা হয়, যা কঠোরভাবে অনুসরণ করতে হয়।
 
 14. **Object code is the ________ language file that tells the CPU what to do.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*
    A) programming
    B) binary
    C) machine
    D) natural
+answer: C
+explanation: অবজেক্ট কোড (Object code) হলো মেশিন ভাষার ফাইল যা সরাসরি সিপিইউ বুঝতে পারে।
 
 15. **Which of the following is not standard compiler of C programming language?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*
    a) Microsoft Visual C/C++ Compiler
    b) GNU GCC Compiler
    c) CodeBlocks C Compiler
    d) Borland C Compiler
+answer: c
+explanation: কোডব্লকস (Code::Blocks) কোনো কম্পাইলার নয়, এটি একটি IDE (ইন্টিগ্রেটেড ডেভেলপমেন্ট এনভায়রনমেন্ট) যা সাধারণত GCC কম্পাইলার ব্যবহার করে।
 
 16. **Which is not a programming language below?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
    a. Perl
    b. Cobra
    c. Joule
    d. Tesla
+answer: d
+explanation: পার্ল (Perl), কোবরা (Cobra) এবং জুল (Joule) প্রোগ্রামিং ভাষা হিসেবে পরিচিত, কিন্তু টেসলা (Tesla) কোনো প্রোগ্রামিং ভাষা নয়।
 
 17. **Type of software which is designed for users to customize programs is-** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*
    A) freeware
    B) shareware
    C) macros
    D) none of these
+answer: C
+explanation: ম্যাক্রোস (Macros) হলো এমন স্ক্রিপ্ট বা নির্দেশনার সংকলন যা ব্যবহারকারীকে কোনো অ্যাপ্লিকেশনের কাজ স্বয়ংক্রিয় ও কাস্টমাইজ করতে দেয়।
 
 18. **Language compilers and interpreters does not translate statements correctly when they have____** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*
    A) transcription error
    B) base errors
    C) syntax error
    D) logical error
+answer: C
+explanation: কোডে সিনট্যাক্স এরর (Syntax error) থাকলে কম্পাইলার বা ইন্টারপ্রেটার কোডটি মেশিন ভাষায় অনুবাদ করতে ব্যর্থ হয়।
 
 19. **The only language understood by a digital computer is called ________** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) Assembly Language
    B) High level language
    C) Machine language
    D) None of these
+answer: C
+explanation: ডিজিটাল কম্পিউটার সরাসরি কেবল ০ ও ১-এর মেশিন ল্যাঙ্গুয়েজ (Machine language) বুঝতে পারে।
 
 20. **Consist of Instructions that control the computers ________.** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*
    A. Programs
    B. List
    C. Keyboard
    D. File
+answer: A
+explanation: প্রোগ্রাম (Programs) হলো একগুচ্ছ সুনির্দিষ্ট নির্দেশাবলি যা কম্পিউটারের কার্যাবলি নিয়ন্ত্রণ ও পরিচালনা করে।
 
 21. **Which type of Software can translate scanned text into text that one can edit?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*
    A. OCS
    B. ORC
    C. OCR
    D. ORS
+answer: C
+explanation: OCR (Optical Character Recognition) সফটওয়্যার স্ক্যান করা ছবির টেক্সটকে এডিটেবল ডিজিটাল টেক্সটে রূপান্তর করে।
 
 22. **To remove a program from your computer you can it,** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*
    A. remove
    B. delete
    C. store
    D. uninstall
+answer: D
+explanation: কম্পিউটার থেকে কোনো ইন্সটলকৃত সফটওয়্যার সম্পূর্ণ অপসারণ করার প্রক্রিয়া হলো আনইন্সটল (Uninstall) করা।
 
 23. **সর্বাধিক ব্যবহৃত Operating system কোনটি?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*
    A. Linux
    B. Windows
    C. MAC OS
    D. Unix
+answer: B
+explanation: ব্যক্তিগত কম্পিউটারে (PC) বিশ্বব্যাপী সর্বাধিক ব্যবহৃত অপারেটিং সিস্টেম হলো মাইক্রোসফট উইন্ডোজ (Windows)।
 
 24. **Which one is a Web Browser?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*
    A) Google Chorme
    B) Mozila Firefox
    C) Internet Explorer
    D) All
+answer: D
+explanation: গুগল ক্রোম, মজিলা ফায়ারফক্স এবং ইন্টারনেট এক্সপ্লোরার সবগুলোই ওয়েব ব্রাউজার।
 
 25. **Which one is used to close running document?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*
    A) ctrl+W
    B) ctrl+S
    C) ctrl+A
    D) None
+answer: A
+explanation: চলমান কোনো ডকুমেন্ট বা উইন্ডো বন্ধ করার কীবোর্ড শর্টকাট হলো `Ctrl + W`।
 
 26. **Some program exists for computers use to help it manage it task and devices, which are called-** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*
    (a) Software
    (b) Application software
    (c) System software
    (d) Firmware
+answer: c
+explanation: কম্পিউটারের হার্ডওয়্যার ডিভাইস ও সামগ্রিক কার্যাবলি পরিচালনা ও নিয়ন্ত্রণের সফটওয়্যারকে সিস্টেম সফটওয়্যার (System software / OS) বলে।
 
 27. **Baidu is one kind of -** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*
    (a) Search Engine
    (b) Book store
    (c) Payment
    (d) Operating
+answer: a
+explanation: বাইডু (Baidu) হলো চীনের শীর্ষস্থানীয় এবং বহুল ব্যবহৃত একটি সার্চ ইঞ্জিন (Search Engine)।
 
 28. **The process of laying out a document with text, graphics, headlines and photographs is involved in:** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*
    (a) Deck Top Printing
    (b) Desk Top Printing
    (c) Desk Top Publishing
    (d) Deck Top Publishing
+answer: c
+explanation: টেক্সট, গ্রাফিক্স ও ছবির সমন্বয়ে বই বা প্রকাশনার পেজ লেআউট তৈরির প্রক্রিয়াকে ডেস্কটপ পাবলিশিং বা ডিটিপি (Desktop Publishing / DTP) বলে।
 
 29. **Which one of the following is not required in a game engine?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*
    A) rendering
    B) audio
    C) physics
    D) closure
+answer: D
+explanation: গেম ইঞ্জিনে রেন্ডারিং, অডিও এবং ফিজিক্স ইঞ্জিন অপরিহার্য উপাদান; তবে 'closure' কোনো গেম ইঞ্জিনের উপাদান নয়।
 
 30. **Source code is a(an) ________.** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*
    A) Program
    B) List of commands
    C) Source of variables
    D) Algorithm
+answer: A
+explanation: কোনো প্রোগ্রামিং ভাষায় লিখিত মানুষের পাঠযোগ্য নির্দেশাবলির সংকলন বা প্রোগ্রামকে সোর্স কোড (Source code) বলে।
 
 31. **All of the following are considered gaming engine except-** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*
    A) Hex Editor
    B) Unity
    C) HTML 5
    D) Adobe Flash
+answer: A
+explanation: হেক্স এডিটর (Hex Editor) হলো বাইনারি ফাইল সম্পাদনার টুল; এটি কোনো গেমিং ইঞ্জিন নয়।
 
 32. **Which one of the following is not a type of Web search engine?** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*
    A) Computer-created
    B) Human-organized
    C) Hybrid
    D) Portal
+answer: D
+explanation: সার্চ ইঞ্জিন শ্রেণিবিন্যাসে ক্রলার-ভিত্তিক (Computer-created), ডিরেক্টরি (Human-organized) ও হাইব্রিড ইঞ্জিন অন্তর্ভুক্ত; কিন্তু পোর্টাল (Portal) কোনো সার্চ ইঞ্জিনের ধরন নয়।
 
 33. **The only language understood by a digital computer is called-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*
    A) Assembly language
    B) High level language
    C) Machine language
    D) None of the above
+answer: C
+explanation: ডিজিটাল কম্পিউটার প্রত্যক্ষভাবে কেবল বাইনারি বা মেশিন ল্যাঙ্গুয়েজ বুঝতে পারে।
 
 34. **Which video File format is used for HDTV?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*
    A) AVI
    B) BJMPEGI
    C) MPEG2
    D) MPEG4
+answer: C
+explanation: ডিজিটাল এইচডিটিভি (HDTV) ব্রডকাস্টিংয়ের প্রাথমিক স্ট্যান্ডার্ড ভিডিও কম্প্রেশন ফরম্যাট হিসেবে MPEG-2 ব্যাপকভাবে ব্যবহৃত হয় (আধুনিক ক্ষেত্রে MPEG-4 AVC)।
 
 35. **Which is not Application software?** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)]*
    a. Adobe Illustrator
    b. MS Office
    c. Redhat Linux
    d. Open Office
+answer: c
+explanation: রেডহ্যাট লিনাক্স (Redhat Linux) হলো একটি অপারেটিং সিস্টেম বা সিস্টেম সফটওয়্যার; এটি কোনো অ্যাপ্লিকেশন সফটওয়্যার নয়।
 
 36. **Which is not application software?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*
    A) Bing
    B) Red hat Linux
    C) MS office
    D) Adobe
+answer: B
+explanation: রেড হ্যাট লিনাক্স হলো একটি লিনাক্স-ভিত্তিক অপারেটিং সিস্টেম বা সিস্টেম সফটওয়্যার।
 
 37. **Which one is not operating system software?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*
    A) DOS
    B) LINUX
    C) Windows
    D) Oracle
+answer: D
+explanation: ওরাকল (Oracle) একটি রিলেশনাল ডাটাবেজ ম্যানেজমেন্ট সফটওয়্যার (RDBMS); এটি কোনো অপারেটিং সিস্টেম নয়।
 
 38. **Which language is used to build website?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*
    A) HTML
    B) COBOL
    C) Python
    D) FORTRAN
+answer: A
+explanation: ওয়েবসাইট এবং ওয়েব পেজ তৈরির মৌলিক ভাষা হলো HTML (HyperText Markup Language)।
 
 39. **What are the three main types of computer languages?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
    A) Machine Language, assemble language and high-level language
    B) Structural language, functional language and object-oriented language
    C) Imperative Language, functional language and declarative language
    D) all of this
+answer: A
+explanation: কম্পিউটার ভাষার প্রধান তিনটি স্তর হলো: মেশিন ভাষা, অ্যাসেম্বলি ভাষা এবং হাই-লেভেল ভাষা।
 
 40. **The software used to drive microprocessor based systems is called ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. Assembly language programs
    b. Firmware
    c. BASIC interpreter instructions
    d. Flowchart instructions
+answer: a
+explanation: মাইক্রোপ্রসেসর ভিত্তিক সিস্টেম ও হার্ডওয়্যার সরাসরি ড্রাইভ করার জন্য অ্যাসেম্বলি ল্যাঙ্গুয়েজ প্রোগ্রাম (Assembly language programs) ব্যবহৃত হয়।
 
 ## Computer Fundamentals & Generations (29)
 
