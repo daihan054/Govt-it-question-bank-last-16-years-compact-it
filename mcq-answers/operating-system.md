@@ -650,9 +650,13 @@ explanation: `.INI` (Initialization) এক্সটেনশন বিশিষ
    (b) 10
    (c) 8
    (d) 12
+answer: C
+explanation: কাউন্টিং সেমাফোরের প্রারম্ভিক মান ১০। প্রতিটি wait (P) অপারেশন মান ১ কমায় (১০ - ৬ = ৪) এবং প্রতিটি signal (V) অপারেশন মান ১ বাড়ায় (৪ + ৪ = ৮); অতএব সেমাফোরের চূড়ান্ত মান হবে ৮।
 
 2. **A critical section is a program segment-** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*
    (a) which should run in a certain specified amount of time
    (b) which avoids deadlocks
    (c) where shared resources are accessed
    (d) which must be enclosed by a pair of semaphore (wait and signal) operations
+answer: C
+explanation: ক্রিটিক্যাল সেকশন (Critical section) হলো প্রোগ্রামের এমন একটি সংবেদনশীল অংশ যেখানে একাধিক প্রসেসের মধ্যে শেয়ার্ড মেমোরি বা শেয়ার্ড রিসোর্স অ্যাক্সেস (Where shared resources are accessed) করা হয়।
