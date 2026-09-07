@@ -649,36 +649,50 @@ explanation: বর্গের এক বাহু ৬ ফুট এবং ক�
 
 ## Percentage, Profit & Loss (25)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
+answer: ৮৭,৪১,৮১৬ জন
+explanation: প্রতি হাজারে ৩০ জন জন্ম নেওয়ায় বৃদ্ধির হার ৩%। ৩ বছর পর জনসংখ্যা $= ৮০,০০,০০০ \times (১.০৩)^৩ = ৮৭,৪১,৮১৬$ জন।
 
 2. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) 25,000TK
    (b) 30,000TK
    (c) 35,000TK
    (d) 3,000TK
+answer: B
+explanation: মোট খরচ ৬০%, ফলে অবশিষ্ট ৪০% সমান ১২,০০০ টাকা। মোট বেতন $= (১২০০০ \times ১০০)/৪০ = ৩০,০০০$ টাকা।
 
 3. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ৭৪
    খ. ১১১
    গ. ১৪৮
    ঘ. ২০০
+answer: ঘ
+explanation: $০.৩৭x - ৩৭ = ৩৭ \implies ০.৩৭x = ৭৪ \implies x = ৭৪ / ০.৩৭ = ২০০$।
 
 4. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk.360 interest @6% per annum. What was the amount heborrowed?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*
    (a) Tk. 18,000
    (b) Tk.16,000
    (c) Tk.15,000
    (d) None of these
+answer: A
+explanation: ১২০ দিন $= ১২০/৩৬০ = ১/৩$ বছর। $I = P \times r \times t \implies ৩৬০ = P \times ০.০৬ \times (১/৩) \implies P = ১৮,০০০$ টাকা।
 
 5. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*
    (a) 40
    (b) 100
    (c) 201
    (d) 72
+answer: C
+explanation: অবশিষ্ট থাকে $৯০\% \times ২০\% = ১৮\%$। ১৮% সমান ৩৬টি হলে মোট ডিম $= (৩৬ \times ১০০)/১৮ = ২০০$টি (প্রশ্নে ২০১ মুদ্রিত)।
 
 6. **৪ টাকায় ৫ টি করে কিনে ৫ টাকায় ৪ টি করে বিক্রি করলে শতকরা কত লাভ হবে?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
    **Ans:** ৫৬.২৫%
+answer: ৫৬.২৫%
+explanation: ১টির ক্রয়মূল্য ০.৮ টাকা ও বিক্রয়মূল্য ১.২৫ টাকা। লাভ $= ০.৪৫$ টাকা। শতকরা লাভ $= (০.৪৫ / ০.৮) \times ১০০\% = ৫৬.২৫\%$।
 
 7. **যদি তেলের মূল্য ২৫% বৃদ্ধি পায় তবে তেলের ব্যবহার শতকরা কত কমালে তেল বাবদ খরচ বৃদ্ধি পাবে না?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
    **Ans:** ২০%
+answer: ২০%
+explanation: খরচ অপরিবর্তিত রাখতে ব্যবহার কমাতে হবে $= \frac{২৫}{১০০ + ২৫} \times ১০০\% = ২০\%$।
 
 8. **A tank is 40% full. If 16 liters of water is added to the tank, it becomes 4/5 full. The capacity of the tank is:** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 72 (ET: N/A)]*
    (a) 32 liters
@@ -686,6 +700,8 @@ explanation: বর্গের এক বাহু ৬ ফুট এবং ক�
    (c) 40 liters
    (d) 42 liters
    **Ans: c**
+answer: C
+explanation: ৪/৫ অংশ মানে ৮০%। পার্থক্য $= ৮০\% - ৪০\% = ৪০\%$ যা ১৬ লিটার। মোট ধারণক্ষমতা $= ১৬ / ০.৪০ = ৪০$ লিটার।
 
 9. **In a class of 24 students, one half of the student take higher math & one third take physics and one fourth take both. How many take neither?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 72 (ET: N/A)]*
    (a) 14
@@ -693,103 +709,139 @@ explanation: বর্গের এক বাহু ৬ ফুট এবং ক�
    (c) 10
    (d) 8
    **Ans: c**
+answer: C
+explanation: অন্তত একটি বিষয় নেওয়া শিক্ষার্থী $= ১২ + ৮ - ৬ = ১৪$ জন। কোনোটিই নেয়নি $= ২৪ - ১৪ = ১০$ জন।
 
 10. **কোন আসল ৫ বছরে সরল সুদে বৃদ্ধি পেয়ে ১০,০০০ টাকা এবং ১০ বছরে বৃদ্ধি পেয়ে ১২,০০০ টাকা হবে?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*
-   ক) ৫০০০ টাকা
-   খ) ৬,৫০০ টাকা
-   গ) ৮০০০ টাকা
-   ঘ) ৯,৫০০ টাকা
-   **Ans: গ**
+    ক) ৫০০০ টাকা
+    খ) ৬,৫০০ টাকা
+    গ) ৮০০০ টাকা
+    ঘ) ৯,৫০০ টাকা
+    **Ans: গ**
+answer: গ
+explanation: ৫ বছরের সুদ $= ১২,০০০ - ১০,০০০ = ২,০০০$ টাকা। আসল $= ১০,০০০ - ২,০০০ = ৮,০০০$ টাকা।
 
 11. **একটি পরীক্ষায় ৫২% শিক্ষার্থী বাংলায় এবং ৪২% শিক্ষার্থী ইংরেজীতে অকৃতকার্য হয়। উভয় বিষয়ে অকৃতকার্য শিক্ষার্থী ১৭% হলে উভয় বিষয়ে কৃতকার্য শিক্ষার্থী?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*
-   ক) ২৩%
-   খ) ২৭%
-   গ) ২৮%
-   ঘ) ৩৩%
-   **Ans: ক**
+    ক) ২৩%
+    খ) ২৭%
+    গ) ২৮%
+    ঘ) ৩৩%
+    **Ans: ক**
+answer: ক
+explanation: ফেল করা শিক্ষার্থী $= ৫২\% + ৪২\% - ১৭\% = ৭৭\%$। উভয় বিষয়ে পাস করে $= ১০০\% - ৭৭\% = ২৩\%$।
 
 12. **১০০ টাকায় ১২টি কলা ক্রয় করে, ১২০ টাকায় ১০টি কলা বিক্রয় করলে শতকরা লাভ হবে?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*
-   ক) ২২%
-   খ) ৩০%
-   গ) ৩৩%
-   ঘ) ৪৪%
-   **Ans: ঘ**
+    ক) ২২%
+    খ) ৩০%
+    গ) ৩৩%
+    ঘ) ৪৪%
+    **Ans: ঘ**
+answer: ঘ
+explanation: ক্রয়মূল্য ১০০/১২ টাকা ও বিক্রয়মূল্য ১২ টাকা। শতকরা লাভ $= \frac{১২ - ২৫/৩}{২৫/৩} \times ১০০\% = ৪৪\%$।
 
 13. **Alom sold a radio at the cost of 1950 taka at a loss of 25%. At what cost will he have to sell it to get a profit of 30%?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
-   a) 4000
-   b) 3380
-   c) 3580
-   d) 3400
+    a) 4000
+    b) 3380
+    c) 3580
+    d) 3400
+answer: B
+explanation: ক্রয়মূল্য $= ১৯৫০ / ০.৭৫ = ২৬০০$ টাকা। ৩০% লাভে বিক্রয়মূল্য $= ২৬০০ \times ১.৩০ = ৩৩৮০$ টাকা।
 
 14. **The loss is 30% when 10 lemons are sold per taka. How many lemons are to be sold per taka to make a profit of 40%?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
-   a) 2
-   b) 6
-   c) 5
-   d) 10
+    a) 2
+    b) 6
+    c) 5
+    d) 10
+answer: C
+explanation: ক্রয়মূল্য $= ০.১ / ০.৭০ = ১/৭$ টাকা। ৪০% লাভে বিক্রয়মূল্য $= (১/৭) \times ১.৪০ = ০.২০$ টাকা। ফলে ১ টাকায় বিক্রি করতে হবে $= ১ / ০.২০ = ৫$টি।
 
 15. **A lamp is manufactured to sell for $35.00, which yields a profit of 25% of cost. If the profit is to be reduced to 15% of cost, what will be the new retail price of the lamp?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
-   a) $21.00
-   b) $28.00
-   c) $31.50
-   d) $32.20
+    a) $21.00
+    b) $28.00
+    c) $31.50
+    d) $32.20
+answer: D
+explanation: উৎপাদন খরচ $= ৩৫ / ১.২৫ = ২৮$ ডলার। ১৫% লাভে নতুন মূল্য $= ২৮ \times ১.১৫ = ৩২.২০$ ডলার।
 
 16. **A manufacturer sells three products i.e. A, B and C Product A costs 200 and sells for 250. Product B costs 150 and sells for 180, product C costs 1000 and sells for 110. On which product, he has maximum percentage of profit?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
-   a) B only
-   b) A and B both
-   c) A only
-   d) C only
+    a) B only
+    b) A and B both
+    c) A only
+    d) C only
+answer: C
+explanation: A পণ্যে লাভ $= (৫০/২০০) \times ১০০\% = ২৫\%$ যা B (২০%) ও C অপেক্ষা সর্বোচ্চ।
 
 17. **A wholesaler sells goods to a retailer at a profit of 20%. The retailer sells to the customer, who pays 80% more than the cost of the wholesaler. What is the retailer's profit?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*
-   (a) 40%
-   (b) 50%
-   (c) 60%
-   (d) 70%
+    (a) 40%
+    (b) 50%
+    (c) 60%
+    (d) 70%
+answer: B
+explanation: পাইকারের ক্রয়মূল্য ১০০ হলে খুচরা বিক্রেতার ক্রয়মূল্য ১২০ এবং বিক্রয়মূল্য ১৮০ টাকা। লাভ $= (৬০ / ১২০) \times ১০০\% = ৫০\%$।
 
 18. **Ahmed sold a t-shirt for TK. 810, and gain 8%. How much did he purchase it for?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*
-   a. Tk. 750
-   b. Tk. 875
-   c. Tk. 745
-   d. Tk. 756
+    a. Tk. 750
+    b. Tk. 875
+    c. Tk. 745
+    d. Tk. 756
+answer: A
+explanation: ক্রয়মূল্য $= ৮১০ / ১.০৮ = ৭৫০$ টাকা।
 
 19. **A restaurant makes 20% profit after selling a set menu at a discount of 20%. What is the percentage increase of marked price?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*
-   a. 30%
-   b. 20%
-   c. 40%
-   d. 50%
+    a. 30%
+    b. 20%
+    c. 40%
+    d. 50%
+answer: D
+explanation: ক্রয়মূল্য ১০০ হলে বিক্রয়মূল্য ১২০ টাকা। মার্কড প্রাইসের ৮০% সমান ১২০ টাকা $\implies$ মার্কড প্রাইস ১৫০ টাকা। শতকরা বৃদ্ধি ৫০%।
 
 20. **If a pen is sold at taka 55 it makes a profit of 10%. What is its purchase cost?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*
-   ক. 50
-   খ. 110
-   গ. 45
-   ঘ. 60
+    ক. 50
+    খ. 110
+    গ. 45
+    ঘ. 60
+answer: ক
+explanation: ক্রয়মূল্য $= ৫৫ / ১.১০ = ৫০$ টাকা।
 
 21. **What is 3% of 0.07?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*
-   ক. 21
-   খ. 0.21
-   গ. 0.021
-   ঘ. 0.0021
+    ক. 21
+    খ. 0.21
+    গ. 0.021
+    ঘ. 0.0021
+answer: ঘ
+explanation: $০.০৩ \times ০.০৭ = ০.০০২১$।
 
 **একটি দ্রব্য ১৯২০ টাকায় বিক্রি করে যে শতাংশ লাভ হয়, তা একই দ্রব্য ১২৮০ টাকায় বিক্রি করলে যে শতাংশ ক্ষতি হয়, সেই শতাংশের সমান। তাহলে ২৫% লাভ করতে হলে দ্রব্যটি কত টাকায় বিক্রি করতে হবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. ২০০০ টাকা
    খ. ২২০০ টাকা
    গ. ২৪০০ টাকা
    ঘ. ২৩০০ টাকা
+answer: ক
+explanation: ক্রয়মূল্য $= (১৯২০ + ১২৮০)/২ = ১৬০০$ টাকা। ২৫% লাভে বিক্রয়মূল্য $= ১৬০০ \times ১.২৫ = ২০০০$ টাকা।
 
 22. **কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
    ক. নাপাম
    খ. নিউট্রন
    গ. হাইড্রোজেন
    ঘ. এটম
+answer: খ
+explanation: নিউট্রন বোমা তীব্র তেজস্ক্রিয়তার মাধ্যমে জীবদেহ ধ্বংস করে কিন্তু ঘরবাড়ি ও স্থাপনার ক্ষতি করে না।
 
 23. **১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
    ক) ৪
    খ) ৫
    গ) ৬
    ঘ) ৭
+answer: ক
+explanation: সময় $t = \frac{৯৬}{২০০ \times ০.১২} = \frac{৯৬}{২৪} = ৪$ বছর।
 
 24. **একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+answer: `=IF(A2<1000, A2*1.10, A2)` এবং `<marquee>`
+explanation: এক্সেলে শর্তসাপেক্ষে ১০% যোগ করতে `=IF(A2<1000, A2*1.10, A2)` এবং এইচটিএমএলে টেক্সট স্ক্রলিং করার জন্য `<marquee>` ট্যাগ ব্যবহৃত হয়।
 
 25. **SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+answer: SQL Injection Attack
+explanation: SQL ইনজেকশন হলো এমন একটি সাইবার আক্রমণ যেখানে ইনপুট ফিল্ডের মাধ্যমে ক্ষতিকর SQL কোড প্রবেশ করিয়ে ডেটাবেসের অ্যাক্সেস নেওয়া হয় এবং তথ্যের ক্ষতিসাধন বা চুরি করা হয়।
 
 ## Arithmetic & Number Series (16)
 
