@@ -1437,31 +1437,40 @@ explanation: মোট শিক্ষার্থী সংখ্যা $= 224 
    (b) 90
    (c) 63
    (d) 126
+answer: (c)
+explanation: ৭ জন পুরুষ থেকে ৫ জন এবং ৩ জন মহিলা থেকে ২ জন বাছাইয়ের উপায় $= ^7C_5 \times ^3C_2 = \frac{7 \times 6}{2 \times 1} \times 3 = 21 \times 3 = 63$।
 
 2. **In a class there are 4 boys and 4 girls. Two students are selected at random, what is the probability that both will be girls?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 73 (ET: N/A)]*
    (a) \frac{1}{2}
    (b) \frac{3}{7}
    (c) \frac{3}{4}
    (d) \frac{3}{14}
-   **Ans: d**
+answer: (d)
+explanation: মোট শিক্ষার্থী $= 4 + 4 = 8$ জন। ৮ জন থেকে যেকোনো ২ জনকে বাছাইয়ের উপায় $= ^8C_2 = 28$। ৪ জন ছাত্রী থেকে ২ জন ছাত্রী নির্বাচনের উপায় $= ^4C_2 = 6$। অতএব সম্ভাবনা $= \frac{6}{28} = \frac{3}{14}$।
 
 3. **১০ টি বইয়ের মধ্যে ৪টি বই কত প্রকারে বাছাই করা যায়, যাতে নির্দিষ্ট দুইটি বই সর্বদা বাদ থাকে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 147 (ET: IBA)]*
    A. 210
    B. 70
    C. 45
    D. 360
+answer: B
+explanation: নির্দিষ্ট ২টি বই সর্বদা বাদ দিলে বাকি থাকে $10 - 2 = 8$টি বই। এই ৮টি বই থেকে ৪টি বই বাছাইয়ের উপায় $= ^8C_4 = \frac{8 \times 7 \times 6 \times 5}{4 \times 3 \times 2 \times 1} = 70$ প্রকারে।
 
 4. **DIGITAL শব্দটি বর্ণগুলিকে কত প্রকারে সাজানো যায় যাতে স্বরবর্ণগুলি একত্রে থাকে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
    A. 320
    B. 430
    C. 210
    D. 360
+answer: D
+explanation: DIGITAL শব্দে ৩টি স্বরবর্ণ (I, I, A) এবং ৪টি ব্যঞ্জনবর্ণ (D, G, T, L) আছে। স্বরবর্ণ ৩টিকে একটি একক ধরলে মোট ৫টি উপাদানকে সাজানো যায় $5! = 120$ উপায়ে। আবার স্বরবর্ণ ৩টি (যার মধ্যে ২টি I) নিজেদের মধ্যে সাজানো যায় $\frac{3!}{2!} = 3$ উপায়ে। মোট বিন্যাস সংখ্যা $= 120 \times 3 = 360$।
 
 5. **How many bits string of length 4 bit possible such that they contain 2 ones and 2 zeros?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*
    A) 4
    B) 2
    C) 5
    D) 6
+answer: D
+explanation: ৪টি পজিশনের মধ্যে ২টি '১' (এবং বাকি ২টি '০') বসানোর মোট বিন্যাস সংখ্যা $= \frac{4!}{2! 2!} = ^4C_2 = \frac{4 \times 3}{2} = 6$টি।
 
 ## Trigonometry (4)
 
