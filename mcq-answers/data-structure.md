@@ -22,150 +22,200 @@
    (b) Graph
    (c) Queue
    (d) Linked list
+answer: b
+explanation: Graph এবং Tree হলো নন-লিনিয়ার (Non-linear) ডেটা স্ট্রাকচার, কারণ এদের উপাদানগুলো অনুক্রমিক সরলরেখায় সাজানো থাকে না। Array, Queue এবং Linked list হলো লিনিয়ার।
 
 2. **Which of the data structure is linear type?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*
    a) Tree
    b) Binary Tree
    c) Queue
    d) Graph
+answer: c
+explanation: Queue হলো একটি লিনিয়ার ডেটা স্ট্রাকচার (FIFO)। অন্যদিকে Tree, Binary Tree এবং Graph হলো হায়ারার্কিকাল বা নন-লিনিয়ার ডেটা স্ট্রাকচার।
 
 3. **Array data structure এ কোন ধরনের data রাখা যায়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*
    A) various type data
    B) Only pointer type data
    C) Classes data
    D) Same type many data
+answer: D
+explanation: অ্যারে (Array) হলো একই ডেটা টাইপের (Homogeneous / Same type) একাধিক উপাদানের একটি সুনির্দিষ্ট এবং ধারাবাহিক মেমরি সংগ্রহ।
 
 4. **LIFO data structure কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 194 (ET: N/A)]*
    A) Queue
    B) Stack
    C) File
    D) কোনটি নয়
+answer: B
+explanation: Stack কাজ করে LIFO (Last In First Out) নীতিতে; অর্থাৎ যে উপাদান সবার শেষে যুক্ত (Push) হয়, অপসারণের (Pop) সময় সেটিই সবার আগে বের হয়।
 
 5. **Linked list এ ন্যূনতম দুইটি field থাকে। একটি হচ্ছে data field, তবে অন্যটি কি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*
    A) Pointer to char
    B) Node
    C) Pointer to node
    D) Null
+answer: C
+explanation: একটি লিঙ্কড লিস্টের প্রতিটি নোডে মূলত দুটি ফিল্ড থাকে: ডেটা ধারণের জন্য Data field এবং পরবর্তী নোডের অ্যাড্রেস ধারণের জন্য Pointer to node (বা Next pointer)।
 
 6. **নিচের কোনটি একটি valid postfix expression?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 189 (ET: N/A)]*
    A) a*b(c+d)
    B) abc*+de-+
    C) +ab
    D) a+b-c
+answer: B
+explanation: Postfix (বা Reverse Polish) নোটেশনে অপারেটরসমূহ সংশ্লিষ্ট অপারেন্ডের পরে বসে। `abc*+de-+` একটি নিখুঁত ও বৈধ পোস্টফিক্স এক্সপ্রেশন (ইনফিক্স: a + b*c + d - e)।
 
 7. **Which of the following data structure is non-linear type?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*
    A) Strings
    B) Lists
    C) Stacks
    D) None of these
+answer: D
+explanation: Strings, Lists এবং Stacks—সবগুলোই লিনিয়ার ডেটা স্ট্রাকচার। এদের কোনোটিই নন-লিনিয়ার নয়, তাই সঠিক উত্তর None of these।
 
 8. **The maximum number of binary trees that can be formed with three unlabeled nodes is-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*
    A) 1
    B) 3
    C) 5
    D) 4
+answer: C
+explanation: n সংখ্যক আনলেবেল্ড নোড দ্বারা গঠিত মোট বাইনারি ট্রির সংখ্যা হলো n-তম Catalan number: C_n = (2n)! / ((n+1)! * n!)। n=3 হলে C_3 = 6! / (4! * 3!) = 5।
 
 9. **নিচের কোনটি দিয়ে Graph represent করা যায়?** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*
    A) Queue
    B) Stack
    C) Adjacency list
    D) Pointer
+answer: C
+explanation: গ্রাফ মেমরিতে উপস্থাপনের দুটি প্রমিত কৌশল হলো Adjacency Matrix এবং Adjacency List।
 
 10. **Which one is less costly for insertion at a particular position?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*
-   A) Array
-   B) Queue
-   C) Link List
-   D) Stack
+    A) Array
+    B) Queue
+    C) Link List
+    D) Stack
+answer: C
+explanation: লিঙ্কড লিস্টে কোনো নির্দিষ্ট অবস্থানে নোড ইনসার্ট করতে অন্যান্য উপাদান শিফট করতে হয় না, কেবল পয়েন্টার রি-অ্যাসাইন করলেই চলে (O(1) যদি পজিশন পয়েন্টার জানা থাকে); অন্যদিকে অ্যারেতে O(n) শিফটিং লাগে।
 
 11. **Which data structure required evaluating a postfix expression is?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*
-   A) Queue
-   B) Stack
-   C) Link List
-   D) Array
+    A) Queue
+    B) Stack
+    C) Link List
+    D) Array
+answer: B
+explanation: পোস্টফিক্স এক্সপ্রেশন মূল্যায়নের (Evaluation of Postfix Expression) জন্য স্ট্যাক (Stack) ডেটা স্ট্রাকচার ব্যবহৃত হয়।
 
 12. **Link List can be implemented by using?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*
-   A) Array
-   B) Pointer
-   C) Both A and B
-   D) None of above
+    A) Array
+    B) Pointer
+    C) Both A and B
+    D) None of above
+answer: C
+explanation: লিঙ্কড লিস্ট ডায়নামিক মেমরি পয়েন্টার ব্যবহার করে স্বাভাবিকভাবে বাস্তবায়িত হয়, পাশাপাশি ফিক্সড সাইজ অ্যারে (Array of records / static allocation) ব্যবহার করেও বাস্তবায়ন করা যায়।
 
 13. **Which following data structure is linear type?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*
-   A) Strings
-   B) Lists
-   C) Queue
-   D) All of above
+    A) Strings
+    B) Lists
+    C) Queue
+    D) All of above
+answer: D
+explanation: Strings, Lists এবং Queue—প্রত্যেকটিই লিনিয়ার ডেটা স্ট্রাকচার, কারণ এদের উপাদানগুলো মেমরিতে ক্রমানুসারে একটির পর একটি সাজানো থাকে।
 
 14. **An array contains the following letters, Color = {E, L, E, C, T, I, O, N}. The value of the variable, E=3, Color[E] points to which value?** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*
-   A) E
-   B) C
-   C) T
-   D) 1
+    A) E
+    B) C
+    C) T
+    D) 1
+answer: B
+explanation: 0-ভিত্তিক ইনডেক্সিং অনুসারে: Color[0]='E', Color[1]='L', Color[2]='E', Color[3]='C'। যেহেতু E=3, তাই Color[E] বা Color[3] এর মান হবে 'C'।
 
 15. **The operation of processing each element in the list is known as-----** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
-   A) Sorting
-   B) Merging
-   C) Inserting
-   D) Traversal
+    A) Sorting
+    B) Merging
+    C) Inserting
+    D) Traversal
+answer: D
+explanation: কোনো ডেটা স্ট্রাকচারের প্রতিটি উপাদানকে ঠিক একবার পরিদর্শন বা প্রসেস করার প্রক্রিয়াকে ট্রাভার্সাল (Traversal) বলা হয়।
 
 16. **Which of the following data structure are index structures?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
-   A) linear array
-   B) link list
-   C) both a and b
-   D) none
+    A) linear array
+    B) link list
+    C) both a and b
+    D) none
+answer: A
+explanation: Linear array হলো একটি ইনডেক্সড ডেটা স্ট্রাকচার, যেখানে প্রতিটি উপাদানের একটি নির্দিষ্ট পূর্ণসংখ্যা ইনডেক্স থাকে যার মাধ্যমে O(1) সময়ে সরাসরি অ্যাক্সেস করা যায়।
 
 17. **The term push and pop related to -** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
-   A) Array
-   B) list
-   C) stack
-   D) all of this
+    A) Array
+    B) list
+    C) stack
+    D) all of this
+answer: C
+explanation: Push (নতুন উপাদান যুক্ত করা) এবং Pop (শীর্ষ উপাদান মুছে ফেলা)—এ দুটি অপারেশন স্ট্যাক (Stack) ডেটা স্ট্রাকচারের সাথে সম্পর্কিত।
 
 18. **Which data structure is used for indexing?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
-   A) Binary tree
-   B) B+ tree
-   C) Stack
-   D) Link List
+    A) Binary tree
+    B) B+ tree
+    C) Stack
+    D) Link List
+answer: B
+explanation: ডাটাবেজ ম্যানেজমেন্ট সিস্টেম এবং ফাইল সিস্টেমে দ্রুত রেকর্ড খোঁজার ইনডেক্সিং কাঠামো হিসেবে B+ Tree সর্বাধিক ব্যবহৃত হয়।
 
 19. **The Term push and Pop is related to the** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*
-   A) Array
-   B) Lists
-   C) Stacks
-   D) All of the above
+    A) Array
+    B) Lists
+    C) Stacks
+    D) All of the above
+answer: C
+explanation: Push এবং Pop হলো স্ট্যাকের (Stacks) প্রধান দুটি মৌলিক অপারেশন।
 
 20. **Which of the following data structure is non-linear type?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*
-   A) String
-   B) Lists
-   C) Stacks
-   D) None
+    A) String
+    B) Lists
+    C) Stacks
+    D) None
+answer: D
+explanation: String, Lists এবং Stacks প্রত্যেকেই লিনিয়ার ডেটা স্ট্রাকচার। এদের কোনটিই নন-লিনিয়ার নয়।
 
 21. **The operation of processing each element in the list is known as-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*
-   A) Traversal
-   B) Merging
-   C) Inserting
-   D) Sorting
+    A) Traversal
+    B) Merging
+    C) Inserting
+    D) Sorting
+answer: A
+explanation: ডেটা তালিকার সকল উপাদান ক্রমানুসারে ভিজিট বা প্রসেস করার প্রক্রিয়াকে Traversal বলা হয়।
 
 22. **Which is correct?** *[Bangladesh Bank Assistant Programmer 2016 compact it 243 (ET: N/A)]*
-   A) <body color= 'yello'>
-   B) <body bgcolor= 'yello'>
-   C) <body background> yellow<body>
-   D) <body background= 'yellow'>
+    A) <body color= 'yello'>
+    B) <body bgcolor= 'yello'>
+    C) <body background> yellow<body>
+    D) <body background= 'yellow'>
+answer: B
+explanation: HTML-এ পৃষ্ঠার ব্যাকগ্রাউন্ড রঙ নির্ধারণের সঠিক সিনট্যাক্স হলো `<body bgcolor='yellow'>`।
 
 23. **Which is not linear?** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*
-   A) Linked list
-   B) array
-   C) graph
-   D) None
+    A) Linked list
+    B) array
+    C) graph
+    D) None
+answer: C
+explanation: Graph হলো একটি নন-লিনিয়ার ডেটা স্ট্রাকচার; Linked list এবং Array হলো লিনিয়ার ডেটা স্ট্রাকচার।
 
 24. **When a new data is inserted into a data structure, but there is no available space; this situation is usually called ---** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*
-   A) underflow
-   B) overflow
-   C) houseful
-   D) saturated
+    A) underflow
+    B) overflow
+    C) houseful
+    D) saturated
+answer: B
+explanation: কোনো ডেটা স্ট্রাকচার (যেমন স্ট্যাক বা কিউ) পূর্ণ থাকা অবস্থায় আরও নতুন ডেটা প্রবেশ করানোর চেষ্টাকে Overflow বলা হয় (খালি অবস্থায় ডেটা মোছার চেষ্টাকে Underflow বলে)।
 
 25. **To represent hierarchical relationship between element, which data Structure is suitable?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*
-   A) Desuetude
-   B) Priority
-   C) Tree
-   D) Graph
+    A) Desuetude
+    B) Priority
+    C) Tree
+    D) Graph
+answer: C
+explanation: উপাদানসমূহের মধ্যকার পদানুক্রমিক বা স্তরভিত্তিক সম্পর্ক (Hierarchical relationship) উপস্থাপনের জন্য Tree ডেটা স্ট্রাকচার সবচেয়ে উপযুক্ত।
 
 ## Stack & Queue (23)
 
