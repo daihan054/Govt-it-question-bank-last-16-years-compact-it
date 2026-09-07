@@ -102,30 +102,40 @@ explanation: Excel is Microsoft's dedicated spreadsheet creation and management 
    B. From 8 to Large 72
    C. From 5 to Large 75
    D. From 10 to Large 100
+answer: B
+explanation: On the MS Word formatting toolbar/ribbon, the predefined numbers in the Font Size drop-down list range from minimum 8 pt to maximum 72 pt (though sizes from 1 to 1638 can be typed manually).
 
 2. **By default, Footers are printed on:** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*
    A. First Page
    B. Last Page
    C. All Pages
    D. Even Pages
+answer: C
+explanation: By default, headers and footers applied to a Word document appear uniformly across all pages of the document or section unless specific options like "Different First Page" are toggled.
 
 3. **The feature in MS word automatically connects correct spelling, typing, capitalization on grammar errors ---** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*
    A) Auto fix
    B) Auto spell
    C) Auto mark
    D) Auto correct
+answer: D
+explanation: AutoCorrect in Microsoft Word automatically fixes common typing mistakes, misspelled words, and incorrect capitalization on the fly.
 
 4. **Where can you find the horizontal split bar on MS Word screen?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
    a. On the left of horizontal scroll bar
    b. On the right of horizontal scroll bar
    c. On the top of vertical scroll bar
    d. On the bottom of vertical scroll bar
+answer: C
+explanation: The horizontal split bar (window splitter button) is located at the top of the vertical scroll bar, allowing users to split the document into two independent vertical scrolling panes.
 
 5. **You cannot close MS Word application by ________.** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
    a. Choosing File Menu and then exit Sub Menu
    b. From File Menu choose close Sub Menu
    c. Click X button on title bar
    d. Press Alt+F4
+answer: B
+explanation: Selecting 'Close' from the File menu closes the open document file only, but keeps the Microsoft Word program running. Closing the application requires choosing Exit, Alt+F4, or the window close (X) button.
 
 ## MS Office & Shortcuts (4)
 1. **(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
