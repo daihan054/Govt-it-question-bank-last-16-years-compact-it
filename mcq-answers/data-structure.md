@@ -673,36 +673,48 @@ explanation: মেথডটিতে max-এর প্রারম্ভিক 
    (b) \Theta(n \log n)
    (c) \Theta(n^2)
    (d) \Theta(1)
+answer: c
+explanation: একটি ফাঁকা লিঙ্কড লিস্টে উপাদানসমূহ সর্টেড বা সাজানো অবস্থায় রাখতে প্রতি ধাপে i তম উপাদান ইনসার্ট করতে O(i) তুলনা লাগে। n সংখ্যক উপাদানের ক্ষেত্রে মোট সময় লাগে 1 + 2 + ... + n = \Theta(n^2)।
 
 2. **In the worst case, the number of comparisons needed to search a singly linked list oflength n for a given element is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) \log(2*n)
    (b) \frac{n}{2}
    (c) n
    (d) \log(2*n)-1
+answer: c
+explanation: Singly linked list-এ লিনিয়ার সার্চ করতে হয়। যদি উপাদানটি শেষ নোডে থাকে বা লিস্টে না থাকে, তবে ওর্স্ট কেসে ঠিক n সংখ্যক নোডের সাথেই তুলনা করতে হয়।
 
 3. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node Q from the list?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*
    (A) O(n)
    (B) O(log2 n)
    (C) O(logn)
    (D) O(1)
+answer: D
+explanation: মধ্যবর্তী কোনো নোডের পয়েন্টার Q সরাসরি জানা থাকলে, Q-এর পরবর্তী নোডের ডেটা Q-তে কপি করে এবং পরবর্তী নোডকে মুছে দিয়ে মাত্র O(1) সময়ে ডিলিশন সম্পন্ন করা সম্ভব (`Q->data = Q->next->data; Q->next = Q->next->next;`)।
 
 4. **In a doubly linked list, the number of pointers affected for an insertion operation will be-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*
    (A) 5
    (B) 0
    (C) 1
    (D) None of these
+answer: D
+explanation: Doubly linked list-এর দুটি বিদ্যমান নোডের মাঝে একটি নতুন নোড যুক্ত করতে মোট ৪টি পয়েন্টার পরিবর্তন করতে হয় (newNode->prev, newNode->next, prevNode->next, nextNode->prev)। অপশনে ৪ না থাকায় সঠিক উত্তর None of these।
 
 5. **The time required to search an element in a linked list of length n is-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*
    (A) O (log n)
    (B) O (n)
    (C) O (1)
    (D) O (n^2)
+answer: B
+explanation: লিঙ্কড লিস্টে সরাসরি ইনডেক্সিং বা বাইনারি সার্চ সম্ভব নয়, তাই হেড থেকে অনুক্রমিকভাবে খুঁজতে O(n) সময় প্রয়োজন হয়।
 
 6. **The minimum number of fields with each node of doubly linked list is** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*
    (A) 1
    (B) 2
    (C) 3
    (D) 4
+answer: C
+explanation: একটি Doubly Linked List-এর প্রতিটি নোডে ন্যূনতম ৩টি ফিল্ড থাকে: ডেটা (Data), পূর্ববর্তী নোডের অ্যাড্রেস (Prev pointer) এবং পরবর্তী নোডের অ্যাড্রেস (Next pointer)।
 
 7. **What does following function do for a given Linked List with first node as head?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
    ```c
@@ -717,24 +729,32 @@ explanation: মেথডটিতে max-এর প্রারম্ভিক 
    b. Prints all nodes of linked list in reverse order
    c. Prints alternate nodes of Linked List
    d. Prints alternate nodes in reverse order
+answer: b
+explanation: এই রিকার্সিভ ফাংশনটি প্রথমে `fun1(head->next)` কলের মাধ্যমে তালিকার শেষ প্রান্তে যায় এবং রিকার্শন থেকে ফেরার (Backtracking) সময় ডেটা প্রিন্ট করে; ফলে তালিকার উপাদানসমূহ উল্টো বা বিপরীত ক্রমে (in reverse order) মুদ্রিত হয়।
 
 8. **Suppose you want to insert n elements into an empty linked list while maintaining the sorted order. What is the worst-case time complexity?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
    a. \theta(n)
    b. \theta(n\log n)
    c. \theta(1)
    d. \theta(n^2)
+answer: d
+explanation: প্রতিটি নতুন উপাদানকে সর্টেড পজিশন অনুযায়ী ইনসার্ট করতে লিস্ট ট্রাভার্সাল করতে হয়, যা n সংখ্যক উপাদানের জন্য ওর্স্ট কেসে \theta(n^2) সময় নেয়।
 
 9. **Link list can be implement using?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) Array
    B) Pointers
    C) Both A & B
    D) None of these
+answer: C
+explanation: লিঙ্কড লিস্ট পয়েন্টার (ডায়নামিক মেমরি) দিয়ে স্বাভাবিকভাবে বাস্তবায়িত হয়, পাশাপাশি ফিক্সড অ্যারে ব্যবহার করেও এর নোড ও পয়েন্টার স্ট্রাকচার সিমুলেট করা যায়।
 
 10. **What is the time complexity to count the number of elements in the linked list?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*
-   A) O(1)
-   B) O(n)
-   C) O(\log n)
-   D) O(n \log n)
+    A) O(1)
+    B) O(n)
+    C) O(\log n)
+    D) O(n \log n)
+answer: B
+explanation: লিঙ্কড লিস্টে কতটি নোড রয়েছে তা গণনা করতে প্রথম থেকে শেষ নোড পর্যন্ত সম্পূর্ণ ট্রাভার্স করতে হয়, যার টাইম কমপ্লেক্সিটি O(n)।
 
 ## Priority Queue & Heap (3)
 
