@@ -554,31 +554,42 @@ explanation: উইন্ডোজ এনটি (Windows NT) অপারেট�
    (b) 2
    (c) 3
    (d) 4
+answer: D
+explanation: সূত্রানুসারে ডেডলক এড়াতে $R \ge N(M-1)+1$ বা $6 \ge N(1)+1 \implies N \le 5$; অর্থাৎ ৫টি প্রসেস পর্যন্ত কোনো ডেডলক সম্ভব নয়। তবে পরীক্ষার প্রশ্নে টাইপো বা বিকল্পগুলোর মধ্য থেকে সম্ভাব্য সর্বোচ্চ চাপ হিসেবে (d) 4 চিহ্নিত করা হয়।
 
 2. **Which one of the following is the deadlock avoidance algorithm?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
    a) banker’s algorithm
    b) round-robin algorithm
    c) Elevator algorithm
    d) karn’s algorithm
+answer: A
+explanation: ব্যাঙ্কার্স অ্যালগরিদম (Banker's Algorithm) হলো অপারেটিং সিস্টেমে ডেডলক পরিহার বা অ্যাভয়ডেন্স (Deadlock Avoidance)-এর একটি অত্যন্ত পরিচিত অ্যালগরিদম।
 
 3. **Which of the following is not a deadlock handling strategy?** *[NPCBL Executive Trainee (Software) 2023 compact it 41 (ET: N/A)]*
    a) Deadlock prevention
    b) Timeout
    c) Deadlock detection and recovery
    d) Deadlock annihilation
+answer: D
+explanation: ডেডলক ব্যবস্থাপনায় Prevention, Avoidance, Detection & Recovery এবং Timeout স্বীকৃত কৌশল হলেও 'Deadlock annihilation' কোনো স্বীকৃত কৌশল নয়।
 
 4. **A system has 12 magnetic tape drives and 3 processes: PO, PI, and P2. Process PO requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives. The current allocation tape drives of processes P0, PI and P2 is 5, 2, 2, respectively. Which of the following sequence is a safe sequence?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*
    a) P0, PI, P2
    b) P1, P2, P0
    c) P2, P0, P1
    d) P1, P0, P2
+answer: D
+explanation: মোট ১২টি ড্রাইভের মধ্যে বরাদ্দ ৯টি, অবশিষ্ট ৩টি। প্রসেসগুলোর বাকি চাহিদা: P0=৫, P1=২, P2=৭। শুরুতে কেবল P1 (চাহিদা ২ $\le$ ৩) সম্পন্ন হতে পারে। P1 শেষ হলে লভ্য হবে ৩ + ২ = ৫টি, যা দিয়ে P0 সম্পন্ন হবে; সবশেষে P2 সম্পন্ন হবে। সুতরাং নিরাপদ ক্রম P1, P0, P2।
 
 5. **A computer system has 6 type drives and each process may need 3 type drives. What is the maximum number of processes than is guaranteed to be deadlock free?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 164 (ET: N/A)]*
    a) 4
    b) 3
    c) 2
    d) None
-   5. Consider the following table named “Course”-
+answer: C
+explanation: ডেডলক মুক্ত থাকার নিশ্চয়তা সূত্র $N \le \frac{R - 1}{M - 1} = \frac{6 - 1}{3 - 1} = 2.5$; অর্থাৎ সিস্টেমে সর্বোচ্চ ২টি (2) প্রসেস থাকলে কখনোই ডেডলক হবে না (৩টি প্রসেস থাকলে প্রত্যেকে ২টি করে নিয়ে ডেডলক হতে পারে)।
+
+   **Consider the following table named “Course”:**
    | Course Title | Content |
    |---|---|
    | Web Programming | Python, CSS, JS |
@@ -587,12 +598,16 @@ explanation: উইন্ডোজ এনটি (Windows NT) অপারেট�
    b) Table is larger
    c) Attribute has multiple value
    d) It has functional dependency
+answer: C
+explanation: ১ম নরমাল ফর্ম (1NF) অনুযায়ী প্রতিটি অ্যাট্রিবিউটে একটি একক পারমাণবিক মান থাকতে হয়; এখানে 'Content' ফিল্ডে একাধিক মান (Python, CSS, JS) সংরক্ষিত থাকায় এটি অ্যাট্রিবিউটের মাল্টিপল ভ্যালু সমস্যা।
 
 6. **The request and release of resources are-** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*
    (a) Command line
    (b) Interrupts statements
    (c) System calls
    (d) Special program
+answer: C
+explanation: অপারেটিং সিস্টেমে কোনো প্রসেস কর্তৃক রিসোর্সের আবেদন (Request) এবং ব্যবহারের পর তা অবমুক্ত (Release) করার কাজটি কার্নেল সিস্টেম কলের (System calls) মাধ্যমে পরিচালিত হয়।
 
 ## File Systems & Disk Management (4)
 
