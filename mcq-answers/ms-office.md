@@ -173,18 +173,24 @@ explanation: The correctly spelt word is "aggrandize" (meaning to enhance or inc
    b) .gif
    c) .wav
    d) All of the above
+answer: D
+explanation: PowerPoint supports inserting a wide variety of multimedia files into presentations, including static graphics (.jpg), animated graphics (.gif), and sound clips (.wav).
 
 2. **Which shortcut key on the keyboard can be used to view slide show?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*
    a) F1
    b) F7
    c) F5
    d) F12
+answer: C
+explanation: The F5 function key launches the PowerPoint Slide Show from the beginning (first slide), whereas Shift+F5 begins from the currently active slide.
 
 3. **What is term used when you press and hold the left mouse key and move the mouse round the slide?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
    a. Highlighting
    b. Dragging
    c. Selecting
    d. Moving
+answer: B
+explanation: The physical action of pressing and holding down the left mouse button while traversing the cursor across the screen or slide is referred to as "Dragging".
 
 ## MS Access (1)
 
