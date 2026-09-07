@@ -29,48 +29,64 @@
    (b) SELECT
    (c) FROM
    (d) ORDER BY
+answer: C
+explanation: SQL কুয়েরি প্রসেসিং ক্রমানুসারে সর্বপ্রথম `FROM` ক্লজ কার্যকর হয় (FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY)।
 
 2. **Which of the following is a DML (Data Manipulation Language) command?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*
    (a) CREATE
    (b) DELETE
    (c) DROP
    (d) ALTER
+answer: B
+explanation: `DELETE` হলো একটি DML কমান্ড যা টেবিল থেকে নির্দিষ্ট রেকর্ড মুছতে ব্যবহৃত হয়; অপরপক্ষে CREATE, DROP, ALTER হলো DDL কমান্ড।
 
 3. **Which of the following is a command of Data Definition Language (DDL)?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) SELECT
    (b) INSERT
    (c) UPDATE
    (d) CREATE
+answer: D
+explanation: `CREATE` কমান্ড দিয়ে নতুন ডেটাবেস বা টেবিল কাঠামো তৈরি করা হয়, যা Data Definition Language (DDL)-এর অন্তর্ভুক্ত।
 
 4. **Which statements are used to create the database structure?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    (a) DML
    (b) DDL
    (c) BNF
    (d) None of these
+answer: B
+explanation: ডেটাবেসের টেবিল, স্কিমা এবং অবজেক্টের গঠন বা স্ট্রাকচার তৈরি ও পরিবর্তনের জন্য DDL (Data Definition Language) ব্যবহৃত হয়।
 
 5. **Which of the following is not a DDL statement?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    (a) Create
    (b) Alter
    (c) Drop
    (d) Select
+answer: D
+explanation: `Select` হলো Data Query Language (DQL); Create, Alter এবং Drop হলো DDL স্টেটমেন্ট।
 
 6. **Which clause is required in an SQL query for getting information from a database?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    (a) Update
    (b) Select
    (c) Create
    (d) Isolation
+answer: B
+explanation: ডেটাবেস থেকে তথ্য রিট্রিভ বা প্রদর্শন করার জন্য SQL-এ `SELECT` ক্লজ আবশ্যক।
 
 7. **CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)], [Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*
    a) DML
    b) DDL
    c) View
    d) Integrity constraint
+answer: B
+explanation: `CREATE TABLE` স্টেটমেন্টের মাধ্যমে ডেটাবেসে নতুন টেবিলের স্কিমা সংজ্ঞায়িত করা হয়, তাই এটি একটি DDL স্টেটমেন্ট।
 
 8. **Which one of the followings sorts rows in SQL?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
    a) SORT BY
    b) ALIGN BY
    c) ORDER BY
    d) GROUP BY
+answer: C
+explanation: SQL-এ কুয়েরির ফলাফলকে নির্দিষ্ট কলামের ভিত্তিতে আরোহী (ASC) বা অবরোহী (DESC) ক্রমে সাজাতে `ORDER BY` ক্লজ ব্যবহৃত হয়।
 
 9. **Table employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
    ```sql
@@ -82,18 +98,24 @@
    (b) 9
    (c) 5
    (d) 0
+answer: D
+explanation: `SALARY > ALL(...)` শর্তটি নির্দেশ করে যে স্যালারিকে ওই টেবিলের সর্বোচ্চ স্যালারির চেয়েও বড় হতে হবে, যা অসম্ভব। ফলে কোনো রেকর্ড শর্ত পূরণ করবে না এবং কাউন্ট হবে 0।
 
 10. **Which of the following provides the ability to query information from the database and insert tuples into, delete tuples from, and modify tuples in the database?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*
    (a) DML (Data Manipulation Language)
    (b) DDL (Data Definition Language)
    (c) Query
    (d) Relational Schema
+answer: A
+explanation: ডেটা ম্যানিপুলেশন ল্যাঙ্গুয়েজ (DML) ব্যবহারকারীদের ডেটাবেস থেকে তথ্য কুয়েরি করার পাশাপাশি নতুন ডেটা ইনসার্ট, ডিলিট এবং মডিফাই করার সুবিধা দেয়।
 
 11. **To remove a relational table from SQL database, we use ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*
    (ক) Delete
    (খ) Purge
    (গ) Remove
    (ঘ) Drop
+answer: D
+explanation: ডেটাবেস থেকে একটি টেবিল এবং এর সম্পূর্ণ স্কিমা স্থায়ীভাবে মুছে ফেলার জন্য `DROP` কমান্ড (যেমন: DROP TABLE table_name;) ব্যবহৃত হয়।
 
 12. **Which of the following command is a type of Data Definition language command?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*
    a) Create
@@ -108,18 +130,24 @@
    b) Only II
    c) Both I and II
    d) Neither I nor II
+answer: A
+explanation: ১) `Create` হলো DDL কমান্ড। ২) লক কনসেপ্টে: Shared lock (S) এ কেবল Read করা যায় (Write নয়), তাই Statement I সঠিক; Exclusive lock (X) এ Read ও Write উভয়ই করা যায়, তাই Statement II ভুল। সুতরাং 'Only I' সঠিক।
 
 13. **Which one is the correct SQL statement to find the second highest mark from STUDENT database contains the marks of all students?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
    a) Select MAX(marks) from *STUDENT* WHERE marks NOT IN (select MAX(marks) from *STUDENT*
    b) Select MAX(marks) from *STUDENT* WHERE marks IN (select MAX(marks) from *STUDENT*
    c) select MAX(marks) from *STUDENT*
    d) select MAX(marks) from *STUDENT* WHERE marks NOT IN (select MIN(marks) from *STUDENT*
+answer: A
+explanation: সাবকুয়েরির মাধ্যমে সর্বোচ্চ মার্ককে বাদ দিয়ে (`WHERE marks NOT IN (SELECT MAX(marks)...)`) অবশিষ্টগুলোর মধ্য থেকে `MAX(marks)` নিলে ২য় সর্বোচ্চ মার্ক পাওয়া যায়।
 
 14. **Which of the following is not a DDL command?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    a) Create
    b) Drop
    c) Alter
    d) Update
+answer: D
+explanation: `Update` হলো DML (Data Manipulation Language) কমান্ড; Create, Drop এবং Alter হলো DDL কমান্ড।
 
 15. **The SQL statement** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    ```sql
@@ -129,24 +157,32 @@
    b) prints garbage
    c) prints 045.926
    d) prints 50
+answer: D
+explanation: `ROUND(45.926, -1)` দ্বারা দশমিকের বামে দশকের ঘরে রাউন্ড করা হয়। ৪৫-এর ক্ষেত্রে নিকটতম দশের গুণিতক হলো ৫০।
 
 16. **When three or more AND & OR conditions are combined, it is easier to use the SQL keyword(s):** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*
    a) LIKE only
    b) IN only
    c) NOT IN only
    d) Both IN and NOT IN
+answer: D
+explanation: একাধিক OR শর্ত সহজে প্রকাশ করতে `IN` এবং একাধিক AND NOT শর্ত সহজে প্রকাশ করতে `NOT IN` কীওয়ার্ড ব্যবহৃত হয়।
 
 17. **How to select all data from student table starting the name from letter 'r'?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*
    a) SELECT * FROM student WHERE name LIKE 'r%';
    b) SELECT * FROM student WHERE name LIKE '%r%';
    c) SELECT * FROM student WHERE name LIKE '%r';
    d) SELECT * FROM student WHERE name LIKE '_r%';
+answer: A
+explanation: 'r' দিয়ে শুরু হওয়া নাম খুঁজতে ওয়াইল্ডকার্ড প্যাটার্ন `'r%'` ব্যবহার করতে হয়, যেখানে `%` যেকোনো সংখ্যক পরবর্তী বর্ণকে নির্দেশ করে।
 
 18. **Which of the following are the five built-in functions provided by SQL?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*
    a) COUNT, SUM, AVG, MAX, MIN
    b) SUM, AVG, MIN, MAX, MULT
    c) SUM, AVG, MULT, DIV, MIN
    d) SUM, AVG, MIN, MAX, NAME
+answer: A
+explanation: SQL-এর মৌলিক পাঁচটি বিল্ট-ইন অ্যাগ্রিগেট ফাংশন হলো: COUNT, SUM, AVG, MAX এবং MIN।
 
 19. **What does this query do?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*
    ```sql
@@ -158,12 +194,16 @@
    b) Finds the employee's name and ID of those who gets more than average salaries of all the departments' salaries.
    c) Finds the name and ID of employees who get more than average salaries of his own department.
    d) None
+answer: C
+explanation: এটি একটি কোরিলেটেড সাবকুয়েরি, যা প্রতিটি কর্মচারীর বেতনের সাথে তার নিজ ডিপার্টমেন্টের গড় বেতনের তুলনা করে এবং ডিপার্টমেন্টের গড়ের চেয়ে বেশি বেতনপ্রাপ্তদের তথ্য প্রদর্শন করে।
 
 20. **What will be the output of the following SQL "Select Round (232.420, -2) AS Round Value"?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*
    (a) 240
    (b) 200
    (c) 233
    (d) Syntax error
+answer: B
+explanation: -2 প্যারামিটার শতকের ঘরে রাউন্ড নির্দেশ করে। ২৩২-এর ক্ষেত্রে নিকটতম শতক হলো ২০০।
 
 21. **Consider the following relational data table, Employee. Now, find the output for the following SQL Statement?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*
    ```sql
@@ -173,6 +213,8 @@
    b. 27
    c. 32
    d. 64
+answer: D
+explanation: তিনটি টেবিলের ক্রস জয়েন (Cartesian product)-এ মোট সারির সংখ্যা হয় $N \times N \times N$। প্রদত্ত টেবিলে ৪টি রেকর্ড থাকায় আউটপুট হবে $4^3 = 64$।
 
 22. **Table Employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
    ```sql
@@ -183,6 +225,8 @@
    b. 5
    c. 9
    d. 10
+answer: C
+explanation: `SALARY > ANY(...)` শর্তটি সর্বনিম্ন বেতন ব্যতীত বাকি সকল বেতনের জন্য সত্য। ১০টি ইউনিক রেকর্ডের মধ্যে সর্বনিম্ন ১টি বাদে বাকি ৯টির ক্ষেত্রে শর্ত পূরণ হওয়ায় উত্তর ৯।
 
 23. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 91 (ET: N/A)]*
    | Product ID | Delivery Data | Quantity |
@@ -195,24 +239,32 @@
    b. SELECT COUNT (*) FROM Delivery Record
    c. SELECT SUM (Quantity) FROM Delivery Record WHERE data = '2021-03-16'
    d. SELECT MAX (Quantity) FROM Delivery Record
+answer: B
+explanation: a) AVE = (3+1)/2 = 2; b) COUNT(*) = 4; c) SUM = 1+2 = 3; d) MAX = 3। অতএব `COUNT(*)`-এর মান ৪ যা সর্বোচ্চ।
 
 24. **Which is not the steps of SQL Query processing?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 163 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*
    a) Parsing
    b) Translation
    c) Optimization
    d) None
+answer: D
+explanation: কুয়েরি প্রসেসিংয়ের প্রধান তিনটি ধাপ হলো: Parsing and Translation, Optimization এবং Evaluation। প্রদত্ত সবগুলোই এর ধাপ হওয়ায় সঠিক উত্তর None।
 
 25. **Which one is the Data Control Language (DCL) in SQL?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    a) Insert
    b) Create
    c) Drop
    d) Grant
+answer: D
+explanation: `GRANT` এবং `REVOKE` হলো DCL (Data Control Language) কমান্ড, যা ডেটাবেসের অ্যাক্সেস প্রিভিলেজ নিয়ন্ত্রণে ব্যবহৃত হয়।
 
 26. **We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    a) View is not visible to user
    b) It is not a virtual table
    c) It is not a part of the logical model
    d) View cannot be updated
+answer: C
+explanation: স্ট্যান্ডার্ড ডেটাবেস থিওরি (Silberschatz) অনুযায়ী: ভিউ কোনো ফিজিক্যাল বা লজিক্যাল মডেলের মূল অংশ নয় ("not a part of the logical model"), বরং এটি ব্যবহারকারীর জন্য প্রস্তুতকৃত একটি ভার্চুয়াল রিলেশন।
 
 27. **Consider the following “staff” table** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*
    | staff_name | staff_dep | city |
@@ -224,30 +276,40 @@
    b) select staff_name ‘(‘|| staff_dep ||’)’ FROM staff where city== ‘Dhaka’
    c) select staff_name || ‘(‘|| staff_dep ’)’|| FROM staff where city= ‘Dhaka’
    d) select staff_name || ‘(‘ staff_dep ||’)’ FROM staff where city= ‘Rajshahi’
+answer: A
+explanation: SQL-এ স্ট্রিং কনক্যাটেনেশন করার জন্য `||` অপারেটর ব্যবহৃত হয়। `staff_name || '(' || staff_dep || ')'` দিলে কাঙ্ক্ষিত ফরম্যাট "Riaz(CSE)" পাওয়া যাবে।
 
 28. **What is the maximum length of the “varchar” in the database?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
    a) 35000
    b) 100
    c) 65535
    d) 255
+answer: C
+explanation: আধুনিক RDBMS (যেমন MySQL)-এ VARCHAR ডেটা টাইপের সর্বোচ্চ সাইজ হলো ৬৫,৫৩৫ (65,535) বাইট।
 
 29. **Assume that in a table named “student” the cgpa is calculated using the all course’s gpa. What kind of attribute cgpa is?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*
    a) Multivalued
    b) Derived
    c) Simple
    d) Composite
+answer: B
+explanation: অন্য কোনো অ্যাট্রিবিউট থেকে হিসাব বা ক্যালকুলেশন করে যে অ্যাট্রিবিউটের মান পাওয়া যায়, তাকে ডিরাইভড অ্যাট্রিবিউট (Derived Attribute) বলা হয়।
 
 30. **What is wrong statements for SQL?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*
    a) Non-procedural language
    b) Input can be several tables
    c) Output is always a single table
    d) Output can be multiple table
+answer: D
+explanation: SQL কুয়েরিতে এক বা একাধিক টেবিল ইনপুট হলেও ফলাফল হিসেবে সর্বদা একটি একক টেবিল (Single table) পাওয়া যায়; আউটপুট একাধিক টেবিল হতে পারে না।
 
 31. **The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*
    a) Union
    b) Set-difference
    c) Difference
    d) Intersection
+answer: B
+explanation: রিলেশনাল অ্যালজেব্রায় সেট-ডিফারেন্স (Set-difference, '-') অপারেশন প্রথম রিলেশনের এমন টাপলগুলো নির্বাচন করে যা দ্বিতীয় রিলেশনে নেই।
 
 32. **Consider the following Employee Table and the SQL query given:** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*
    | id | Date | Work_hour |
@@ -264,6 +326,8 @@
    b) 4
    c) 2
    d) 0
+answer: C
+explanation: `WHERE Work_hour > 6` শর্তে id=3 (Work_hour=6) বাদ পড়ে যায়। id=1 এবং id=2 গ্রুপ দুটি অবশিষ্ট থাকে, ফলে কুয়েরিটিতে মোট ২টি সারি (rows) রিটার্ন হবে।
 
 33. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*
    | Product Id | Date | Quantity |
@@ -276,120 +340,160 @@
    b) SELECT COUNT (*) FROM Delivery Record
    c) SELECT SUM (Quantity) FROM Delivery Record WHERE Date = '2020-10-16'
    d) SELECT MAX (Quantity) FROM Delivery Record
+answer: B
+explanation: গণনা অনুসারে: a) AVE = 2, b) COUNT(*) = 4, c) SUM = 3, d) MAX = 3। ফলে `COUNT(*)` সবচেয়ে বড় মান ৪ প্রদান করে।
 
 34. **What is the advantage of using ‘case’ while doing the update operation?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*
    a) No proper sequence is required to maintain.
    b) It is much easier to write code with ‘case’ keyword.
    c) Update with ‘case’ provides significant time improvement.
    d) None of these above.
+answer: A
+explanation: আলাদা আলাদা UPDATE স্টেটমেন্ট চালালে এক্সিকিউশনের সিকোয়েন্স বা ক্রমের ওপর নির্ভুলতা নির্ভর করে; কিন্তু `CASE` ব্যবহার করলে কোনো ক্রম রক্ষা না করেই একক স্টেটমেন্টে নির্ভুলভাবে আপডেট সম্পন্ন হয়।
 
 35. **উল্লেখিত কোনটি Database aggregate এর function?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*
    A) where
    B) sum
    C) select
    D) from
+answer: B
+explanation: `SUM` হলো একটি বহুল ব্যবহৃত অ্যাগ্রিগেট ফাংশন, যা কলামের মানসমূহের সমষ্টি গণনা করে।
 
 36. **নিচের কোনটি Database তুলনা করার কাজে ব্যবহার হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*
    A) BETWEEN
    B) ANY
    C) IN
    D) COMPARE
+answer: A
+explanation: নির্দিষ্ট সীমার মধ্যে কোনো মানের উপস্থিতি তুলনা বা পরীক্ষা করতে SQL-এ `BETWEEN` অপারেটর ব্যবহার করা হয়।
 
 37. **কোনটি দিয়ে Database Table এ uniqueness নিশ্চিত করা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*
    A) Primary Key
    B) Foreign Key
    C) Entity
    D) Relation
+answer: A
+explanation: প্রাইমারি কি (Primary Key) টেবিলের প্রতিটি রেকর্ডকে অনন্যভাবে শনাক্ত করে এবং তথ্যের স্বাতন্ত্র্য (uniqueness) নিশ্চিত করে।
 
 38. **In SQL, the ________ command is used to recompile a view.** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*
    A) COMPILE VIEW
    B) DEFINE VIEW
    C) ALTER VIEW
    D) CREATE VIEW
+answer: C
+explanation: ডেটাবেসে বিদ্যমান ভিউ রি-কম্পাইল করতে `ALTER VIEW <view_name> COMPILE;` সিনট্যাক্স ব্যবহৃত হয়।
 
 39. **Which one is database language?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*
    A) DDL
    B) DML
    C) Both A & B
    D) None
+answer: C
+explanation: DDL (ডেটা ডেফিনিশন ল্যাঙ্গুয়েজ) এবং DML (ডেটা ম্যানিপুলেশন ল্যাঙ্গুয়েজ) উভয়ই ডেটাবেস ভাষার অপরিহার্য অংশ।
 
 40. **The SQL statement that requires or reads data from the table is-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*
    A) Select
    B) Read
    C) Query
    D) None of the above
+answer: A
+explanation: ডেটাবেস টেবিল থেকে ডেটা কুয়েরি বা রিড করার জন্য `SELECT` স্টেটমেন্ট ব্যবহার করা হয়।
 
 41. **Which of the following logical connectives is not included in SQL?** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*
    A) AND
    B) OR
    C) NOR
    D) NOT
+answer: C
+explanation: SQL-এ যৌক্তিক শর্তের জন্য AND, OR এবং NOT অপারেটর রয়েছে; NOR সরাসরি লজিক্যাল অপারেটর হিসেবে অন্তর্ভুক্ত নয়।
 
 42. **The result of a SQL SELECT statement is a ----** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*
    A) Report
    B) form
    C) file
    D) table
+answer: D
+explanation: রিলেশনাল ডেটাবেস মডেলে যেকোনো SELECT স্টেটমেন্টের আউটপুট সর্বদা একটি রিলেশন বা টেবিল (Table)।
 
 43. **To remove the duplicate rows from the result of an SQL Select statement, the---- qualifier specified include.** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
    A) only
    B) distinct
    C) unique
    D) single
+answer: B
+explanation: কুয়েরির ফলাফল থেকে পুনরাবৃত্তিমূলক (duplicate) সারিগুলো বাদ দিয়ে অনন্য সারি পেতে `DISTINCT` কীওয়ার্ড ব্যবহৃত হয়।
 
 44. **The ________ clause is used to list the attributes desired in the result of a query.** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*
    A) Where
    B) Select
    C) From
    D) Distinct
+answer: B
+explanation: কুয়েরির ফলাফলে কোন কোন কলাম বা অ্যাট্রিবিউট প্রদর্শিত হবে, তা `SELECT` ক্লজে নির্দিষ্ট করা হয়।
 
 45. **In SQL, aggregate functions can be used in the select list or the ________ clause of a select statement or subquery. They cannot be used in a ________ clause.** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*
    A) Where, having
    B) Having, where
    C) Group by, Having
    D) Group by, Where
+answer: B
+explanation: অ্যাগ্রিগেট ফাংশন SELECT তালিকা বা `HAVING` ক্লজে ব্যবহার করা যায়, তবে সাধারণ `WHERE` ক্লজে অ্যাগ্রিগেট ফাংশন ব্যবহার করা যায় না।
 
 46. **In SQL, the ________ command is used to recompile a view.** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*
    A) COMPLTE VIEW
    B) DEFINE VIEW
    C) ALTER VIEW
    D) CREATE VIEW
+answer: C
+explanation: ডেটাবেসে কোনো ভিউ রি-কম্পাইল করতে `ALTER VIEW` কমান্ড কার্যকর হয়।
 
 47. **What is a tuple?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. Another name for a table in an RDBMS
    b. A row or record in a database table
    c. An attribute attached to a record
    d. Another name for the key linking different table in a database
+answer: B
+explanation: রিলেশনাল ডেটাবেসে টেবিলের প্রতিটি রেকর্ড বা আনুভূমিক সারিকে টাপল (Tuple) বলা হয়।
 
 48. **The primary key is selected from the ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. Candidate keys
    b. Composite keys
    c. Determinants
    d. Foreign keys
+answer: A
+explanation: টেবিলের অনন্য শনাক্তকারী সম্ভাব্য সকল ক্যান্ডিডেট কি (Candidate Keys)-এর মধ্য থেকেই প্রাইমারি কি নির্বাচিত হয়।
 
 49. **A transaction for which all committed changes are permanent is called ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. Atomic
    b. Consistent
    c. Isolated
    d. Durable
+answer: D
+explanation: ট্রানজ্যাকশন সফলভাবে সম্পন্ন বা কমিট হওয়ার পর সিস্টেম ফেইলিউরের ক্ষেত্রেও পরিবর্তনগুলো স্থায়ী থাকার বৈশিষ্ট্যকে ডিউরেবিলিটি (Durability) বলে।
 
 50. **Which of the following locks the item from access of any type?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. Implicit lock
    b. Explicit lock
    c. Exclusive lock
    d. Shared lock
+answer: C
+explanation: এক্সক্লুসিভ লক (Exclusive Lock বা X-lock) কোনো ডেটা আইটেমের ওপর প্রয়োগ করা হলে অন্য কোনো ট্রানজ্যাকশন সেটিতে রিড বা রাইট কোনো অ্যাক্সেসই করতে পারে না।
 
 51. **You run a SELECT statement and multiple duplicate values are retrieved. What keyword can you use to retrieve only the non-duplicate data?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. DUPLICATE
    b. SEPARATE
    c. DISTINCT
    d. INDEX
+answer: C
+explanation: ডুপ্লিকেট মান বাদ দিয়ে শুধুমাত্র অনন্য মান নির্বাচন করতে `DISTINCT` কীওয়ার্ড ব্যবহৃত হয়।
 
 52. **Microsoft Access is a ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. RDBMS
    b. OODBMS
    c. ORDBMS
    d. All of these
+answer: A
+explanation: মাইক্রোসফট অ্যাক্সেস (MS Access) হলো একটি রিলেশনাল ডেটাবেস ম্যানেজমেন্ট সিস্টেম (RDBMS)।
 
 ## DBMS Concepts & Architecture (34)
 
