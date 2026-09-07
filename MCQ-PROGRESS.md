@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Updated on every subtopic completion.
 
-**Subtopics: 13 / 160 done (8.1%)**  ·  **Questions: 91 / 3039 answered (3.0%)**
+**Subtopics: 14 / 160 done (8.8%)**  ·  **Questions: 101 / 3039 answered (3.3%)**
 
 | File | Subtopics Done | Total Subtopics | Answered | Total Questions | Status |
 |---|---|---|---|---|---|
@@ -22,7 +22,7 @@ Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answe
 | `english.md` | 0 | 5 | 0 | 286 | Pending |
 | `gk.md` | 0 | 6 | 0 | 555 | Pending |
 | `math.md` | 0 | 15 | 0 | 186 | Pending |
-| `mechanical-engineering.md` | 0 | 7 | 0 | 38 | Pending |
+| `mechanical-engineering.md` | 1 | 7 | 10 | 38 | In Progress |
 | `microprocessor-and-computer-architecture.md` | 0 | 5 | 0 | 85 | Pending |
 | `ms-office.md` | 5 | 5 | 23 | 23 | Complete |
 | `oop.md` | 0 | 7 | 0 | 100 | Pending |
@@ -30,4 +30,4 @@ Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answe
 | `programming-languages.md` | 3 | 3 | 24 | 24 | Complete |
 | `software-engineering.md` | 0 | 5 | 0 | 46 | Pending |
 | `web-technology.md` | 0 | 7 | 0 | 49 | Pending |
-| **Total** | **13** | **160** | **91** | **3039** | **In Progress** |
+| **Total** | **14** | **160** | **101** | **3039** | **In Progress** |

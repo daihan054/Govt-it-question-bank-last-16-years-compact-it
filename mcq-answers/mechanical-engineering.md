@@ -22,60 +22,80 @@
    (খ) \text{mm}^3
    (গ) \text{mm}^2
    (ঘ) \text{mm}^5
+answer: A
+explanation: ক্ষেত্রফল বা এরিয়া মোমেন্ট অফ ইনার্শিয়া (Area Moment of Inertia) এর এসআই একক হলো mm⁴ বা m⁴।
 
 2. **শিয়ার পীড়ন ও শিয়ার বিকৃতি এর অনুপাত হলো–** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) পয়সনের অনুপাত
    (খ) বাল্ক মডুলাস
    (গ) মডুলাস অফ রিজিডিটি
    (ঘ) মডুলাস অফ ইলাস্টিসিটি
+answer: C
+explanation: শিয়ার পীড়ন (Shear Stress, τ) এবং শিয়ার বিকৃতি (Shear Strain, γ) এর অনুপাতকে মডুলাস অফ রিজিডিটি (Modulus of Rigidity) বা শিয়ার মডুলাস বলা হয়।
 
 3. **Degree of freedom কতটি?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) ৯টি
    (খ) ১২টি
    (গ) ১১টি
    (ঘ) ১৮টি
+answer: B
+explanation: মেকানিক্যাল স্পেস ট্রাস বা ত্রিমাত্রিক রিজিড বডি সিস্টেমে জয়েন্ট/নোড ডাইনামিক্সে মোট ১২টি ডিগ্রি অফ ফ্রিডম বিবেচনা করা হয়।
 
 4. **Lami's Theorem কি ধরনের বলের ক্ষেত্রে প্রযোজ্য?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) সমতলীয় বল
    (খ) সমবিন্দু বল
    (গ) সমতলীয় সমবিন্দু বল
    (ঘ) লম্বিক বল
+answer: C
+explanation: ল্যামির উপপাদ্য (Lami's Theorem) কেবলমাত্র তিনটি সমতলীয় ও সমবিন্দু বল (Three Coplanar and Concurrent Forces) যখন সাম্যাবস্থায় থাকে তখন প্রযোজ্য।
 
 5. **রেডিয়াস অফ জাইরেশন (k) হলো-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) \sqrt{\frac{A}{I}}
    (খ) \sqrt{\frac{I}{A}}
    (গ) \sqrt{AI}
    (ঘ) \sqrt{\frac{I}{AI}}
+answer: B
+explanation: রেডিয়াস অফ জাইরেশন k = √(I/A), যেখানে I হলো মোমেন্ট অফ ইনার্শিয়া এবং A হলো সেকশনের ক্ষেত্রফল।
 
 6. **D ব্যাস বিশিষ্ট একটি সলিড শ্যাফটের সেকশন মডুলাস হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) \frac{\pi D^3}{64}
    (খ) \frac{\pi D^3}{32}
    (গ) \frac{\pi D^3}{16}
    (ঘ) \frac{\pi D^3}{64}
+answer: B
+explanation: বৃত্তাকার সলিড শ্যাফটের জন্য সেকশন মডুলাস Z = I/y = (πD⁴/64) / (D/2) = πD³/32।
 
 7. **কিসের ভিত্তিতে শ্যাফট ডিজাইন করা হয়?** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) স্ট্রেন্থ
    (খ) রিজিডিটি
    (গ) স্ট্রেন্থ ও রিজিডিটি
    (ঘ) ক, খ, গ এর কোনটি নয়
+answer: C
+explanation: শ্যাফট সাধারণত স্ট্রেন্থ (টর্শনাল ও বেন্ডিং স্ট্রেস সহ্যকরণ) এবং রিজিডিটি (টুইস্ট ও ডিফ্লেকশন সীমাবদ্ধ রাখা) উভয়ের ভিত্তিতে ডিজাইন করা হয়।
 
 8. **প্রধান তলে শিয়ার স্ট্রেস হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) সর্বোচ্চ
    (খ) সর্বনিম্ন
    (গ) সর্বোচ্চ ও সর্বনিম্নএর গড়
    (ঘ) শূন্য
+answer: D
+explanation: প্রধান তল (Principal Plane) এমন একটি তল যার ওপর কোনো শিয়ার স্ট্রেস কাজ করে না, অর্থাৎ শিয়ার স্ট্রেসের মান সর্বদা শূন্য।
 
 9. **একটি বস্তুর দূরত্ব পরিবর্তন হারকে বলা হয়-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) ত্বরণ
    (খ) বেগ
    (গ) মোমেন্টাম
    (ঘ) কোনটি নয়
+answer: B
+explanation: সময়ের সাথে সাথে বস্তুর দূরত্বের পরিবর্তনের হারকে বেগ (Velocity) বলা হয়।
 
 10. **একটি সেকশনের যখন শেয়ার ফোর্স শূন্য তখন বেন্ডিং মোমেন্ট।** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*
    (ক) শূন্য
    (খ) সর্বোচ্চ
    (গ) সর্বনিম্ন
    (ঘ) সর্বনিম্ন অথবা সর্বোচ্চ
+answer: D
+explanation: বীমে dM/dx = V সূত্রানুযায়ী, যেখানে শিয়ার ফোর্স V = 0 হয়, সেখানে বেন্ডিং মোমেন্ট সর্বনিম্ন অথবা সর্বোচ্চ (Maximum or Minimum) হয়।
 
 ## Thermodynamics & Heat Transfer (10)
 1. **একটি হিমায়ন চক্রের হিমায়ক কর্তৃক তাপ শোষিত হয়** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*
