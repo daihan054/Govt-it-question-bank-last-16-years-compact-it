@@ -590,41 +590,54 @@ answer: D
 explanation: ফ্লিপ-ফ্লপ (Flip-flop) হলো মেমরির মৌলিক একক যা ঠিক ১-বিট বাইনারি ডাটা সংরক্ষণ করতে পারে।
 
 ## Digital Logic & Number Systems (6)
+
 1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
    (a) 2AF3
    (b) 6AF3
    (c) AF34
    (d) EAF3
+answer: A
+explanation: $ABCD_{16} = 1010\ 1011\ 1100\ 1101_2$ কে লজিক্যালি ২-বিট ডানে শিফট করলে পাওয়া যায় $0010\ 1010\ 1111\ 0011_2$, যা হেক্সাডেসিমেলে $2AF3_{16}$।
 
 2. **Which of the following is the Octal equivalent of the hexadecimal number 7B5? [ নিচের হেক্সাডেসিমাল সংখ্যা 7B5-এর সমতুল্য অক্টাল সংখ্যা কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
    (a) 735
    (b) 7551
    (c) 3665
    (d) 7561
+answer: C
+explanation: হেক্সাডেসিমেল $7B5_{16}$-কে বাইনারিতে রূপান্তর করলে পাই $0111\ 1011\ 0101_2$; ৩-বিট করে সাজালে $011\ 110\ 110\ 101_2 = (3665)_8$।
 
 3. **Which number system is used internally by a computer? [ কম্পিউটার অভ্যন্তরে কোন সংখ্যা পদ্ধতি ব্যবহার করে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
    (a) Decimal
    (b) Octal
    (c) Binary
    (d) Hexadecimal
+answer: C
+explanation: কম্পিউটার হার্ডওয়্যার অভ্যন্তরীণভাবে সকল ডাটা ও ইন্সট্রাকশন প্রক্রিয়া করার জন্য বাইনারি (Binary: 0 ও 1) সংখ্যা পদ্ধতি ব্যবহার করে।
 
 4. **What is the result of the binary sum?[ নিচের বাইনারি যোগফলের ফলাফল কত? ] 10101 + 1011** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*
    (a) 10000
    (b) 101010
    (c) 100000
    (d) 111100
+answer: C
+explanation: বাইনারি যোগ: $10101_2 (২১) + 1011_2 (১১) = 100000_2 (৩২)$।
 
 5. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree.The binary search tree uses the usual ordering on natural numbers.What is the in-order traversal sequence of the resultant tree?[ যদি ৭, ৫, ১, ৮, ৩, ৬, ০, ৯, ৪, ২ সংখ্যাগুলো এই ক্রম অনুযায়ী একটি খালি বাইনারি সার্চ ট্রিতে (BST) প্রবেশ করানো হয়, তবে ইন-অর্ডার ট্রাভার্সাল (In-order traversal) সিকোয়েন্স কী হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*
    (a) 9 8 6 4 2 3 0 1 5 7
    (b) 0 2 4 3 1 6 5 9 8 7
    (c) 7 5 1 0 3 2 4 6 8 9
    (d) 0 1 2 3 4 5 6 7 8 9
+answer: D
+explanation: যেকোনো বাইনারি সার্চ ট্রির (BST) ইন-অর্ডার ট্রাভার্সাল সর্বদা উপাদানগুলোকে মানের ঊর্ধ্বক্রমানুসারে (Ascending sorted order) সাজায়; ফলে সিকোয়েন্সটি হবে: 0 1 2 3 4 5 6 7 8 9।
 
 6. **A binary search tree is constructed by inserting the numbers: 60, 25, 72, 15, 30, 68, 13, 18 in order. The number of nodes in the left sub tree is [ ৬০, ২৫, ৭২, ১৫, ৩০, ৬৮, ১৩, ১৮ এই সংখ্যাগুলো দিয়ে একটি BST তৈরি করলে বাম সাব-ট্রিতে (Left sub tree) কতটি নোড থাকবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*
    (a) 4
    (b) 5
    (c) 6
    (d) 8
+answer: B
+explanation: ৬০ হলো রুট নোড। ৬০ অপেক্ষা ছোট সকল উপাদান (২৫, ১৫, ৩০, ১৩, ১৮) রুট নোডের বাম সাব-ট্রিতে (Left sub-tree) অবস্থান করবে; সুতরাং বাম সাব-ট্রিতে নোড সংখ্যা হবে ৫টি।
 
 ## Boolean Algebra & Simplification (4)
 
