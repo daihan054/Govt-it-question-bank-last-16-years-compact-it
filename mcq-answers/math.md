@@ -1479,21 +1479,28 @@ explanation: ৪টি পজিশনের মধ্যে ২টি '১' (�
    খ. 1/5
    গ. 2/5
    ঘ. 5/2
+answer: গ
+explanation: আমরা জানি, $\sec^2 A - \tan^2 A = 1 \implies (\sec A + \tan A)(\sec A - \tan A) = 1$। অতএব $\sec A - \tan A = \frac{1}{\sec A + \tan A} = \frac{1}{5/2} = \frac{2}{5}$।
 
 2. **একটি ৪৮ মিটার লম্বা খুঁটি ভেঙ্গে সম্পূর্ণভাবে বিচ্ছিন্ন না হয়ে ভূমির সাথে 30^\circ কোন উৎপন্ন করে। খুঁটিটি কত উচুতে ভেঙ্গে ছিল?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
-   **Ans:** ১৬
+answer: ১৬
+explanation: ধরি মাটি থেকে $h$ উচ্চতায় খুঁটিটি ভেঙেছিল। ফলে ভাঙা অংশের দৈর্ঘ্য $= (48 - h)$ মিটার। সমকোণী ত্রিভুজ থেকে, $\sin 30^\circ = \frac{h}{48 - h} \implies \frac{1}{2} = \frac{h}{48 - h} \implies 2h = 48 - h \implies 3h = 48 \implies h = 16$ মিটার।
 
 3. **\tan A = 5/12 হলে, \sin A এর মান কত?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
    A. \frac{5}{13}
    B. \frac{3}{4}
    C. \frac{5}{17}
    D. \frac{5}{12}
+answer: A
+explanation: $\tan A = \frac{\text{লম্ব}}{\text{ভূমি}} = \frac{5}{12}$। পিথাগোরাসের উপপাদ্য অনুসারে অতিভুজ $= \sqrt{5^2 + 12^2} = 13$। অতএব $\sin A = \frac{\text{লম্ব}}{\text{অতিভুজ}} = \frac{5}{13}$।
 
 4. **\sin A + \cos A = \sin B + \cos B এবং A + B = ?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
    A. \pi
    B. 2\pi
    C. \pi/2
    D. \pi/4
+answer: C
+explanation: $\sin A - \sin B = \cos B - \cos A \implies 2 \cos\frac{A+B}{2}\sin\frac{A-B}{2} = 2 \sin\frac{A+B}{2}\sin\frac{A-B}{2}$। উভয় পাশ থেকে $\sin\frac{A-B}{2}$ বাদ দিলে পাই $\cos\frac{A+B}{2} = \sin\frac{A+B}{2} \implies \tan\frac{A+B}{2} = 1 = \tan\frac{\pi}{4} \implies \frac{A+B}{2} = \frac{\pi}{4} \implies A + B = \frac{\pi}{2}$।
 
 ## Probability & Statistics (4)
 
