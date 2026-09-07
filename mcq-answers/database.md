@@ -900,81 +900,109 @@ explanation: নরমালাইজেশন হলো এমন একটি 
    (b) Consistency
    (c) Isolation
    (d) Durability
+answer: A
+explanation: অ্যাটমিসিটি (Atomicity) বা "All or Nothing" নিয়ম অনুযায়ী লেনদেনের সব অংশ সফল হতে হবে অন্যথায় সম্পূর্ণ লেনদেন বাতিল হতে হবে। এক অ্যাকাউন্ট থেকে টাকা কেটে অন্যের অ্যাকাউন্টে জমা না হলে অ্যাটমিসিটি ভঙ্গ হয়।
 
 2. **Which one of these is not included in acid property of database?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    (a) Atomicity
    (b) Consistency
    (c) Durability
    (d) Display
+answer: D
+explanation: ডেটাবেস ট্রানজ্যাকশনের ACID বৈশিষ্ট্যগুলো হলো: Atomicity, Consistency, Isolation এবং Durability; এখানে 'Display' অন্তর্ভুক্ত নয়।
 
 3. **A transaction completes its execution is said to be-** *[NPCBL Executive Trainee (Software) 2023 compact it 41 (ET: N/A)]*
    a) Committed
    b) Aborted
    c) Rolled back
    d) Successful
+answer: A
+explanation: কোনো ট্রানজ্যাকশনের সমস্ত অপারেশন সফলভাবে সম্পন্ন হওয়ার পর সেই অবস্থাকে কমিটেড (Committed) বলা হয়।
 
 4. **What is the D in ACID property in database?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Durability
+answer: Durability
+explanation: ACID মডেলে D দ্বারা Durability (স্থায়িত্ব) বোঝায়, যা নিশ্চিত করে যে একবার কমিট হওয়া ডেটা সিস্টেম ক্র্যাশ করলেও মুছে যাবে না।
 
 5. **Which one of the following commands is used to restore the database to the last committed state?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
    a) Save point
    b) Rollback
    c) Commit
    d) None of the
+answer: B
+explanation: ট্রানজ্যাকশনের পরিবর্তন বাতিল করে ডেটাবেসকে সর্বশেষ কমিট করা স্থিতিশীল অবস্থায় ফিরিয়ে নিতে `ROLLBACK` কমান্ড ব্যবহৃত হয়।
 
 6. **Which one is not Database Transaction property?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*
    a) Atomicity
    b) Consistency
    c) Durability
    d) Quality
+answer: D
+explanation: ট্রানজ্যাকশনের মূল বৈশিষ্ট্য হলো ACID (Atomicity, Consistency, Isolation, Durability); 'Quality' ট্রানজ্যাকশনের বৈশিষ্ট্য নয়।
 
 7. **Which one of the following is a failure to a system?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    a) Boot crash
    b) Read failure
    c) Transaction failure
    d) All of the mentioned
+answer: D
+explanation: অপারেটিং সিস্টেমের বুট ক্র্যাশ, ডিস্ক রিড ফেইলিউর এবং লজিক্যাল ট্রানজ্যাকশন ফেইলিউর—এগুলোর প্রতিটিই সিস্টেম ফেইলিউরের ধরন।
 
 8. **How can your rollback a committed transaction in any DBMS?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*
    a) Using SQL rollback commands
    b) Restoring the data from backups
    c) Run the transaction again in Reverse order
    d) All of the Above
+answer: C
+explanation: একবার কমিট হয়ে গেলে SQL ROLLBACK কমান্ড আর কাজ করে না; কমিটেড ট্রানজ্যাকশন রিভার্স করতে হলে কম্পেনসেটিং ট্রানজ্যাকশন (Run in Reverse order) চালাতে হয় অথবা ব্যাকআপ থেকে পয়েন্ট-ইন-টাইম রিস্টোর করতে হয়।
 
 9. **The packaged procedure that makes data in form permanent in the Database is-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*
    a) Post
    b) Post form
    c) Commit form
    d) None of the above
+answer: C
+explanation: ওরাকল ফর্মস (Oracle Forms)-এ `COMMIT_FORM` বিল্ট-ইন প্রসিডিউরটি ফর্মের ডেটা ভ্যালিডেট করে ডেটাবেসে স্থায়ীভাবে সংরক্ষণ (Commit) করে।
 
 10. **ROLLBACK command is used to undo the changes made by-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*
    a) DDL commands
    b) TCL commands
    c) DML Commands
    d) Commit command
+answer: C
+explanation: `ROLLBACK` কমান্ড বর্তমান ট্রানজ্যাকশনে চালানো আনকমিটেড DML কমান্ডসমূহের (INSERT, UPDATE, DELETE) পরিবর্তন বাতিল বা আনডু করতে ব্যবহৃত হয়।
 
 11. **Why is set transaction used in an oracle DBMS?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*
    a) For placing a name on a transaction
    b) For committing a transaction
    c) For locking a transaction
    d) To setup transaction user parameters.
+answer: A
+explanation: ওরাকল ডেটাবেসে `SET TRANSACTION` স্টেটমেন্ট ব্যবহার করে কোনো ট্রানজ্যাকশনের নাম নির্ধারণ (`SET TRANSACTION NAME 'tx_name'`) অথবা আইসোলেশন মোড ঠিক করা হয়।
 
 12. **After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is known as-** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*
    a) Atomicity
    b) Consistency
    c) Isolation
    d) Durability
+answer: D
+explanation: কোনো ট্রানজ্যাকশন সফলভাবে শেষ হওয়ার পর সিস্টেম ক্র্যাশ বা পাওয়ার ফেইলিউর হলেও ডেটা অক্ষত ও স্থায়ী থাকার বৈশিষ্ট্যকে ডিউরেবিলিটি (Durability) বলা হয়।
 
 13. **It is a necessary requirement that the transaction is guaranteed to complete or the transaction is never started, so that an inconsistent state would not be visible except during the execution of the transaction. Such a property of transaction is known as-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 154 (ET: DU)]*
    a) Atomicity
    b) Consistency
    c) Isolation
    d) Durability
+answer: A
+explanation: হয় সম্পূর্ণ ট্রানজ্যাকশন সফল হবে নয়তো ডেটাবেস পূর্বের অবস্থায় অপরিবর্তিত থাকবে (All or Nothing)—এই বৈশিষ্ট্যকে অ্যাটমিসিটি (Atomicity) বলে।
 
 14. **Which SQL keyword is used to short the result set?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. ORDER
    b. SORT
    c. ORDER BY
    d. SORT BY
+answer: C
+explanation: কুয়েরির ফলাফলকে ঊর্ধ্বক্রম বা নিম্নক্রমে সাজানোর (Sort করার) জন্য SQL-এ `ORDER BY` ক্লজ ব্যবহৃত হয় (প্রশ্নে 'short' শব্দটি মূলত 'sort'-এর মুদ্রণ প্রমাদ)।
 
 ## Keys in DBMS (11)
 
