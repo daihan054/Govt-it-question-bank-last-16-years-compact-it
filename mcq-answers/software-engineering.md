@@ -186,84 +186,112 @@ explanation: সফটওয়্যার টেস্টিং লাইফ�
    (b) It requires too many resources
    (c) It is inflexible and not suitable for changing requirements
    (d) It lacks proper documentation
+answer: C
+explanation: The strictly linear and sequential structure of the Waterfall model makes it rigid and inflexible; accommodating requirement changes late in the lifecycle is difficult and expensive.
 
 2. **How many steps in waterfall model?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 22 (ET: BIBM)]*
    (a) 5
    (b) 6
    (c) 7
    (d) 8
+answer: B
+explanation: The standard classic Waterfall model comprises 6 sequential phases: 1. Requirements Analysis, 2. System Design, 3. Implementation (Coding), 4. Integration & Testing, 5. Deployment, and 6. Maintenance.
 
 3. **Which of the following is an appropriate category of system maintenance performed for the purpose of modifying the system to cope with changes in the software environment?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*
    a) Preventive maintenance
    b) Corrective maintenance
    c) Adaptive maintenance
    d) Perfective maintenance
+answer: C
+explanation: Adaptive maintenance involves modifying an existing software application to make it compatible with changes in its operational environment (such as an updated OS, new hardware, database upgrade, or regulatory changes).
 
 4. **Programmers being roughly out the logic they will use in the ________ stage of software SDLC.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) Design
    B) Development
    C) Implementation
    D) Testing
+answer: A
+explanation: During the software Design phase, developers and architects plan algorithms, data structures, and the structural logic (flowcharts, pseudocode) before actual coding begins.
 
 5. **The process of making object code form one system work on another type of system is called ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*
    A) Porting
    B) Designing
    C) Developing
    D) Coding
+answer: A
+explanation: Porting is the engineering process of adapting software so that it can run on a different operating system, platform, or hardware architecture from the one it was originally built for.
 
 6. **________ is natural language statements that look like programming code.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*
    A) Source code
    B) Object code
    C) Pseudo code
    D) IPO chart
+answer: C
+explanation: Pseudocode is an informal, human-readable description of an algorithm written in natural language syntax that mimics structured programming code without strict language rules.
 
 7. **A branch office, location or other data processing centers, where a newly developed system is used under normal operating conditions for several months, to test it, is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*
    a) Beta test data
    b) String test data
    c) Alpha test data
    d) System test data
+answer: A
+explanation: Testing conducted at actual operational field locations or branch offices with end users under normal working conditions is known as Beta testing (or operating on beta test sites/data).
 
 8. **Which of the following requires the most time in SDLC?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*
    A) Requirement Analysis
    B) Testing
    C) Deployment
    D) Design
+answer: B
+explanation: Among the core development phases listed, Testing typically consumes the highest amount of time and resources (often 40% to 50% of the project effort) to ensure defects are identified and resolved.
 
 9. **Program background, program functions and computing requirements are part of-** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*
    A) decision box
    B) statement box
    C) operations detail
    D) none of these
+answer: C
+explanation: In formal system documentation, descriptive sections like program background, functional capabilities, and minimum computing/hardware requirements are documented in the Operations Detail (or Operational Specifications).
 
 10. **Waterfall model phase in which system design is prepared and this system design helps is specifying system requirements and define overall system architecture is-** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*
    A) planning
    B) modeling
    C) construction
    D) communication
+answer: B
+explanation: In Pressman's SDLC framework, the Modeling phase encompasses both requirements analysis and architectural/system design to define the overarching system structure.
 
 11. **Which of the following is not a Software Development Life Cycle Phase?** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*
    A) Test Closure
    B) Coding
    C) Testing
    D) None of these
+answer: A
+explanation: Test Closure is the final activity of the Software Testing Life Cycle (STLC), rather than an overarching Software Development Life Cycle (SDLC) phase.
 
 12. **Method used in writing and design of a program is termed as-** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) Bottom-up method
    B) top-down method
    C) split method
    D) None of these
+answer: B
+explanation: Top-down design (stepwise refinement) is the standard structured programming methodology where a complex problem is progressively broken down into manageable sub-components.
 
 13. **Which of the following is a project scheduling method that can be applied to software development?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*
    A) PERT
    B) CPM
    C) Both A & B
    D) CMM
+answer: C
+explanation: Both PERT (Program Evaluation and Review Technique) and CPM (Critical Path Method) are established network-based project management and scheduling techniques used in software project planning.
 
 14. **In which model prototype can be developed?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*
    A) Unified Process
    B) Waterfall Model
    C) Evolutionary-model
    D) All of the above
+answer: C
+explanation: The Evolutionary model (such as the Prototyping model or Spiral model) is built specifically around iteratively creating working prototypes to clarify requirements and adapt to feedback.
 
 ## Software Design & Metrics (8)
 
