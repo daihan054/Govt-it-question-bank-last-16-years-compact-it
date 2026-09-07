@@ -251,36 +251,48 @@ explanation: হার্ডনেস (Hardness / কাঠিন্য) হল�
    (খ) Reaming
    (গ) Boring
    (ঘ) সবকটি
+answer: D
+explanation: ড্রিলিং মেশিনে ড্রিলিং ছাড়াও স্পট ফেসিং (Spot Facing), রিমিং (Reaming), বোরিং (Boring), কাউন্টার-সিঙ্কিং ইত্যাদি অপারেশন সম্পন্ন করা সম্ভব।
 
 2. **টুল ম্যাটেরিয়াল হিসেবে ব্যবহৃত হয়-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) টুল স্টিল
    (খ) কার্বন স্টিল
    (গ) সিরামিক স্টিল
    (ঘ) ডায়মন্ড স্টিল
+answer: A
+explanation: কাটিং টুল নির্মাণে উচ্চ পরিধান ও তাপ প্রতিরোধ ক্ষমতার কারণে টুল স্টিল (Tool Steel / High Speed Steel) ব্যাপকভাবে ব্যবহৃত হয়।
 
 3. **Screw thread Gi Major Dia. I Minor dia. এর পার্থক্য-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) Depth of thread
    (খ) Depth of teeth
    (গ) Pitch
    (ঘ) Whole depth
+answer: A
+explanation: স্ক্রু থ্রেডের মেজর ব্যাস ও মাইনর ব্যাসের দ্বিগুণের সম্পর্কানুযায়ী তাদের পার্থক্য থ্রেডের গভীরতার (Depth of thread) সমানুপাতিক/সম্পর্কিত।
 
 4. **Planer Machine এ কার্যবস্তু-** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*
    (ক) স্থির থাকে
    (খ) চলমান থাকে
    (গ) উভয়ই চলমান থাকে
    (ঘ) Tool চলমান থাকে
+answer: B
+explanation: প্ল্যানার মেশিনে কাটিং টুল স্থির থাকে এবং টেবিলের সাথে আবদ্ধ কার্যবস্তু (Workpiece) রেসিপ্রোকেটিং গতিতে চলমান থাকে (শেপারে কার্যবস্তু স্থির থাকে ও টুল চলে)।
 
 5. **নাট ও বোল্ট কর্তৃক গঠিত জোড়া হলো-** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*
    (ক) টার্নিং জোড়া
    (খ) রোলিং জোড়া
    (গ) স্ক্রু জোড়া
    (ঘ) স্ফেরিক্যাল জোড়া
+answer: C
+explanation: নাট ও বোল্টের মধ্যে হেলিকাল থ্রেডের সংস্পর্শে স্ক্রু জোড়া (Screw Pair / Helical Pair) গঠিত হয়, যেখানে ঘূর্ণন গতির সাথে রৈখিক গতি যুগপৎ ঘটে।
 
 6. **Dead centre কোন মেশিনে থাকে?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*
    (a) Lathe
    (b) Shaper
    (c) Milling
    (d) Drill
+answer: A
+explanation: লেদ মেশিনের (Lathe) টেলস্টকে (Tailstock) দীর্ঘ কার্যবস্তুকে সাপোর্ট দিতে ডেড সেন্টার (Dead Centre) ব্যবহৃত হয়, যা কাজের সাথে ঘোরে না (ঘূর্ণায়মান হেডস্টকে থাকে লাইভ সেন্টার)।
 
 ## Industrial & Production Engineering (3)
 
