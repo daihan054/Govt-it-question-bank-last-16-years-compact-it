@@ -392,3 +392,5 @@ explanation: Factory is a standard object-oriented creational design pattern use
    (b) Traceable
    (c) Verifiable
    (d) Modifiable
+answer: C
+explanation: According to IEEE Std 830, an SRS is verifiable if, and only if, there exists a finite cost-effective process with which a person or machine can verify that the delivered software satisfies each specified requirement.
