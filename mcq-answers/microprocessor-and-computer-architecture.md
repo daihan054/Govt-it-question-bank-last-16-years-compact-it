@@ -302,168 +302,224 @@ explanation: ক্লক স্পিড এক হলে RISC প্রসে�
    (b) Cache RAM>SSD>HDD>Register
    (c) RAM>SSD>Cache>HDD>Register
    (d) Register>Cache>RAM>SSD HDD
+answer: d
+explanation: মেমরি হায়ারার্কি অনুযায়ী অ্যাক্সেস গতির সঠিক অধঃক্রম (সর্বোচ্চ থেকে সর্বনিম্ন) হলো: Register > Cache > RAM > SSD > HDD।
 
 2. **An increase in a computer's RAM leads to a typical improvement in performance because:** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*
    (a) Virtual memory increases
    (b) Fewer segmentation faults occur
    (c) A larger RAM is faster
    (d) Fewer page faults occur
+answer: d
+explanation: RAM বৃদ্ধি পেলে মেমরিতে একসাথে বেশি পেজ রাখা সম্ভব হয়, ফলে পেজ ফল্ট (Page fault) এবং ডিস্কে সোয়াপিংয়ের হার উল্লেখযোগ্যভাবে হ্রাস পায়, যা কম্পিউটারের পারফরম্যান্স বাড়ায়।
 
 3. **Out of all the following, which one isn't a form of memory?** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*
    (a) translation lookaside buffer
    (b) instruction opcode
    (c) instruction register
    (d) instruction cachenss
+answer: b
+explanation: TLB, Instruction Register এবং Instruction Cache সবই মেমরি বা স্টোরেজের বিভিন্ন রূপ। কিন্তু Instruction Opcode হলো কোনো মেমরি নয়, বরং মেমরি নির্দেশিকার অপারেশনের ধরন নির্দেশক কোড।
 
 4. **Which among the following is the fastest memory in a computer that holds information?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*
    (a) Register
    (b) Cache
    (c) Main memory
    (d) RAM
+answer: a
+explanation: কম্পিউটারের মেমরি হায়ারার্কিতে CPU Register হলো সবচেয়ে দ্রুতগতির স্টোরেজ উপাদান, যা সরাসরি প্রসেসর কোরের ভেতর অবস্থিত।
 
 5. **Which mode of memory access is the fastest?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*
    (ক) Reference
    (খ) Pointer
    (গ) Double pointer
    (ঘ) DMA
+answer: ঘ
+explanation: Direct Memory Access (DMA) পদ্ধতিতে CPU-এর ক্রমাগত হস্তক্ষেপ ছাড়াই হার্ডওয়্যার ডিভাইস সরাসরি মেমরি থেকে বা মেমরিতে উচ্চগতিতে ডেটা আদান-প্রদান করতে পারে।
 
 6. **Which of the following causes the average memory access time to increase in a memory system with cache memory?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) Reduction of access time to cache memory
    b) Decrease in hit ratio
    c) Reduction of miss penalty
    d) Decrease in miss ratio
+answer: b
+explanation: Average Memory Access Time (AMAT) = Hit Time + (Miss Rate × Miss Penalty)। Hit ratio হ্রাস পাওয়ার অর্থ Miss ratio বৃদ্ধি পাওয়া, যার ফলে গড় অ্যাক্সেস সময় বৃদ্ধি পায়।
 
 7. **Which of the following is not a nonvolatile storage device?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*
    a) Memory Stick
    b) Hard Disk
    c) Random Access Memory
    d) NVRAM
+answer: c
+explanation: Random Access Memory (RAM) একটি ভোলাটাইল বা ক্ষণস্থায়ী মেমরি; বিদ্যুৎ সরবরাহ বন্ধ হলে এর অভ্যন্তরে সংরক্ষিত তথ্য মুছে যায়।
 
 8. **What is the typical speed of USB version 3.0?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*
    (a) 4.8G bits per second
    (b) 610 Mbps
    (c) 6Gbps
    (d) Both a and b
+answer: d
+explanation: USB 3.0 (SuperSpeed)-এর স্ট্যান্ডার্ড তাত্ত্বিক সিগন্যালিং গতি হলো 5 Gbps বা প্রায় 4.8 Gbps (4.8G bits per second), যা প্রায় 600-610 MB/s (বাইট/সেকেন্ড) ট্রান্সফার রেটের সমতুল্য।
 
 9. **SSDs are more durable than HDDs in extreme and harsh environments because** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*
    (a) They don't have actuator arms
    (b) They use fast electronics Memory
    (c) They do not use 0/1 as data storage unit which is prone to crash
    (d) All of the above statements are true
+answer: a
+explanation: SSD-তে কোনো ঘূর্ণায়মান ডিস্ক বা মুভিং মেকানিক্যাল অ্যাকচুয়েটর আর্ম (actuator arm) থাকে না; তাই ঝাঁকুনি বা কঠিন পরিবেশে হেড ক্র্যাশের কোনো ঝুঁকি থাকে না।
 
 10. **The term LPDDR means-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*
-   (a) Low-Power Discrete Data Rate
-   (b) Low-processing Double Data Rate
-   (c) Low-Programmable Double Data Rate
-   (d) None of the above
+    (a) Low-Power Discrete Data Rate
+    (b) Low-processing Double Data Rate
+    (c) Low-Programmable Double Data Rate
+    (d) None of the above
+answer: d
+explanation: LPDDR-এর পূর্ণরূপ হলো "Low-Power Double Data Rate" (SDRAM), যা মোবাইল ডিভাইস ও ল্যাপটপে কম বিদ্যুৎ খরচে ব্যবহৃত হয়।
 
 11. **How many core/threads does the Intel Core i7-9700K processor have?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*
-   (a) 6/12
-   (b) 4/8
-   (c) 8/8
-   (d) 8/16
+    (a) 6/12
+    (b) 4/8
+    (c) 8/8
+    (d) 8/16
+answer: c
+explanation: Intel Core i7-9700K (9th Gen) প্রসেসরে ৮টি ফিজিক্যাল কোর রয়েছে কিন্তু এতে Hyper-Threading প্রযুক্তি না থাকায় এর থ্রেড সংখ্যাও ৮টি (8 cores / 8 threads)।
 
 12. **Which of the following uses the flip-flop circuit in a memory cell?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*
-   a. DRAM
-   b. EEPROM
-   c. SDRAM
-   d. SRAM
+    a. DRAM
+    b. EEPROM
+    c. SDRAM
+    d. SRAM
+answer: d
+explanation: Static RAM (SRAM)-এর প্রতিটি মেমরি সেল ফ্লিপ-ফ্লপ (ল্যাচ) সার্কিটের সমন্বয়ে গঠিত, তাই এতে ক্যাপাসিটরের মতো পর্যায়ক্রমিক রিফ্রেশিংয়ের প্রয়োজন হয় না।
 
 13. **কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
-   A. Too Slow
-   B. Unreliable
-   C. Volatility
-   D. Too Bulky
+    A. Too Slow
+    B. Unreliable
+    C. Volatility
+    D. Too Bulky
+answer: C
+explanation: RAM একটি উদ্বায়ী (Volatile) মেমরি; বিদ্যুৎ প্রবাহ বন্ধ হওয়ার সাথে সাথে এতে সংরক্ষিত সকল ডেটা মুছে যায়, তাই এটি স্থায়ী স্টোরেজ হিসেবে অনুপযোগী।
 
 14. **Which of the following memory devices is not reprogrammable?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*
-   a) Flash memory
-   b) ROM
-   c) EPROM
-   d) EEPROM
+    a) Flash memory
+    b) ROM
+    c) EPROM
+    d) EEPROM
+answer: b
+explanation: Mask ROM বা সাধারণ ROM কারখানায় তৈরির সময়ই স্থায়ীভাবে ডেটা লেখা হয়, যা পরবর্তীতে কোনোভাবেই পরিবর্তন বা রিপ্রোগ্রাম করা যায় না।
 
 15. **There is a RAM issue on a PC/laptop. Which of the following symptom(s) might be an indication of RAM issue?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*
-   a) PC frequently freezes, reboots
-   b) Wrong BIOS time
-   c) Function keys are not working properly
-   d) All of them
+    a) PC frequently freezes, reboots
+    b) Wrong BIOS time
+    c) Function keys are not working properly
+    d) All of them
+answer: a
+explanation: RAM ত্রুটিপূর্ণ হলে মেমরি করাপশনের কারণে সিস্টেম ঘন ঘন ফ্রিজ (হ্যাং) করে, ব্লু স্ক্রিন অব ডেথ (BSOD) দেয় কিংবা কম্পিউটার হঠাৎ রিবুট নেয়।
 
 16. **A solid-state drive (SSD) is a newer, faster type of device that stores data on instantly-accessible ________.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*
-   a) Ultra Magnetic Chip
-   b) Integrated Circuit
-   c) Random Access Memory
-   d) High Bandwidth memory
+    a) Ultra Magnetic Chip
+    b) Integrated Circuit
+    c) Random Access Memory
+    d) High Bandwidth memory
+answer: b
+explanation: SSD সেমিকন্ডাক্টর ফ্ল্যাশ মেমরিভিত্তিক সমন্বিত বর্তনী বা ইন্টিগ্রেটেড সার্কিট (Integrated Circuit) চিপে স্থায়ীভাবে অতি দ্রুত অ্যাক্সেসযোগ্য ডেটা সংরক্ষণ করে।
 
 17. **Which factor is not affecting the processing speed of a computer system?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*
-   A) Cache memory
-   B) Clock speed
-   C) Monitor
-   D) RAM
+    A) Cache memory
+    B) Clock speed
+    C) Monitor
+    D) RAM
+answer: C
+explanation: মনিটর কেবল একটি ডিসপ্লে আউটপুট ডিভাইস; এটি CPU-র ডেটা প্রক্রিয়াকরণ বা প্রসেসিং স্পিডকে কোনোভাবে প্রভাবিত করে না।
 
 18. **Main Memory কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)]*
-   A) RAM
-   B) ROM
-   C) HDD
-   D) Floppy
+    A) RAM
+    B) ROM
+    C) HDD
+    D) Floppy
+answer: A
+explanation: কম্পিউটারের প্রধান মেমরি বা মেইন মেমরি (Main Memory) বলতে মূলত RAM (Random Access Memory)-কে বোঝানো হয়।
 
 19. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*
-   A) RAM
-   B) Hard disk
-   C) CD ROM
-   D) Cache Memory
+    A) RAM
+    B) Hard disk
+    C) CD ROM
+    D) Cache Memory
+answer: D
+explanation: অপশনগুলোর মধ্যে ক্যাশে মেমরি (Cache Memory) CPU-র সবচেয়ে কাছাকাছি অতি উচ্চগতির SRAM দিয়ে গঠিত হওয়ায় এটি সবচেয়ে দ্রুত ডেটা স্থানান্তর করে।
 
 20. **Arithmetic and Logical operation এর ডাটা কাজের সময় কোথায় রাখা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*
-   A) Arithmetic Register
-   B) Accumulator
-   C) Logical Register
-   D) Controller
+    A) Arithmetic Register
+    B) Accumulator
+    C) Logical Register
+    D) Controller
+answer: B
+explanation: গাণিতিক ও যৌক্তিক অপারেশন সম্পাদনের সময় মধ্যবর্তী ডেটা ও ফলাফল তাৎক্ষণিকভাবে Accumulator রেজিস্টারে জমা রাখা হয়।
 
 21. **Which one can be used for read only?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*
-   A) RAM
-   B) ROM
-   C) Both A & B
-   D) None
+    A) RAM
+    B) ROM
+    C) Both A & B
+    D) None
+answer: B
+explanation: ROM (Read Only Memory)-এ সাধারণ কাজের সময় কোনো নতুন ডেটা রাইট করা যায় না, এটি থেকে কেবলমাত্র ডেটা পড়া (Read-only) সম্ভব।
 
 22. **Which is the faster memory?** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)], [BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*
-   a. RAM
-   b. Secondary memory
-   c. DRAM
-   d. Cache
+    a. RAM
+    b. Secondary memory
+    c. DRAM
+    d. Cache
+answer: d
+explanation: ক্যাশে মেমরি সরাসরি প্রসেসরে অন্তর্ভুক্ত থাকায় এর ল্যাটেন্সি সর্বনিম্ন এবং গতি সাধারণ RAM বা অন্যান্য মেমরির চেয়ে অনেক বেশি।
 
 23. **Which of the following terms is the most closely related to main memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*
-   A) Non-volatile
-   B) Permanent
-   C) Control unit
-   D) Temporary
+    A) Non-volatile
+    B) Permanent
+    C) Control unit
+    D) Temporary
+answer: D
+explanation: প্রধান মেমরি বা RAM একটি ক্ষণস্থায়ী (Temporary / Volatile) স্টোরেজ, কারণ কম্পিউটার বন্ধ করলে এতে সংরক্ষিত ডেটা মুছে যায়।
 
 24. **Which unit holds data permanently?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*
-   A) Input unit
-   B) Secondary storage unit
-   C) Output unit
-   D) Primary Memory unit
+    A) Input unit
+    B) Secondary storage unit
+    C) Output unit
+    D) Primary Memory unit
+answer: B
+explanation: সেকেন্ডারি স্টোরেজ ইউনিট (যেমন HDD, SSD, Magnetic Tape) বিদ্যুৎ সরবরাহ না থাকলেও ডেটা স্থায়ীভাবে (Permanently) ধারণ করে রাখে।
 
 25. **Magnetic tape can serve as—** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*
-   A) Secondary storage media
-   B) Output media
-   C) Input media
-   D) All of them
+    A) Secondary storage media
+    B) Output media
+    C) Input media
+    D) All of them
+answer: D
+explanation: ম্যাগনেটিক টেপ সেকেন্ডারি ব্যাকআপ স্টোরেজ মিডিয়া হিসেবে কাজ করে এবং ডেটা রিড (ইনপুট) ও রাইট (আউটপুট) উভয় কাজেই ব্যবহৃত হতে পারে।
 
 26. **Which of the following is internal memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*
-   A) Disks
-   B) Pen Drives
-   C) RAM
-   D) CDs
+    A) Disks
+    B) Pen Drives
+    C) RAM
+    D) CDs
+answer: C
+explanation: RAM হলো কম্পিউটারের প্রাথমিক বা অভ্যন্তরীণ মেমরি (Internal Memory)। বাকিগুলো বাহ্যিক বা সেকেন্ডারি স্টোরেজ।
 
 27. **Which of the following memories needs refreshing?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*
-   A) SRAM
-   B) DRAM
-   C) ROM
-   D) All of them
+    A) SRAM
+    B) DRAM
+    C) ROM
+    D) All of them
+answer: B
+explanation: DRAM-এর মেমরি সেল ক্যাপাসিটর দিয়ে তৈরি হওয়ায় এর চার্জ দ্রুত লিক হয়ে যায়; ডেটা ধরে রাখতে নিয়মিত বিরতিতে রিফ্রেশ (Periodic Refreshing) করতে হয়।
 
 28. **Which memory is called as primary memory?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*
-   A) Hard Disk
-   B) Pen Drive
-   C) Rom
-   D) RAM
+    A) Hard Disk
+    B) Pen Drive
+    C) Rom
+    D) RAM
+answer: D
+explanation: কম্পিউটার সিস্টেমে সরাসরি প্রসেসর কর্তৃক ব্যবহৃত প্রধান কার্যকরী মেমরি বা প্রাইমারি মেমরি হলো RAM (Random Access Memory)।
 
 ## Secondary Storage (HDD & Disk Organization) (13)
 
