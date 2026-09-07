@@ -587,66 +587,88 @@ explanation: ওভারলোডেড ফাংশন বলতে বোঝ�
    b) Inheritance
    c) Exception
    d) Abstraction
+answer: c
+explanation: অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিংয়ের (OOP) মূল স্তম্ভ চারটি: Encapsulation, Abstraction, Inheritance এবং Polymorphism। Exception হলো ত্রুটি মোকাবিলার একটি প্রক্রিয়া, যা OOP-র মৌলিক বৈশিষ্ট্য নয়।
 
 2. **Which of the following modifiers cannot be applied to a method in C++?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*
    (ক) Protected
    (খ) Private
    (গ) Public
    (ঘ) Abstract
+answer: ঘ
+explanation: C++ প্রোগ্রামিং ভাষায় `abstract` নামে কোনো কিউওয়ার্ড বা মেথড মডিফায়ার নেই (C++ এ অ্যাবস্ট্রাক্ট মেথড তৈরিতে Pure Virtual Function `= 0` ব্যবহৃত হয়)।
 
 3. **Which is not the feature of JAVA OOP?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*
    a) Multiple Inheritance
    b) Multi-level inheritance
    c) Compile time Polymorphism
    d) Runtime Polymorphism
+answer: a
+explanation: ডায়মন্ড সমস্যা ও কোড জটিলতা পরিহার করতে জাভাতে ক্লাসের ক্ষেত্রে সরাসরি মাল্টিপল ইনহেরিটেন্স (Multiple Inheritance) সমর্থন করে না (ইন্টারফেসের মাধ্যমে তা অর্জন করা হয়)।
 
 4. **Object Oriented programming এর বৈশিষ্ট্য কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*
    A) Polymorphism
    B) Friend function
    C) Structure
    D) Loop
+answer: A
+explanation: পলিমরফিজম (Polymorphism) হলো অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিংয়ের প্রধান চারটি মৌলিক বৈশিষ্ট্যের একটি।
 
 5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 189 (ET: N/A)]*
    A) Inheritance
    B) Abstraction
    C) Polymorphism
    D) Overloading
+answer: B
+explanation: এনক্যাপসুলেশন (Encapsulation) অভ্যন্তরীণ ডেটা ও জটিল বাস্তবায়ন পদ্ধতি আড়াল (Data Hiding) করার মাধ্যমে বাইরে প্রয়োজনীয় ইন্টারফেস প্রকাশ করে, যা মূলত Abstraction নিশ্চিত করে।
 
 6. **Which of the following provides a programmer with the facility of using object of a class inside other classes?** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*
    A) Inheritance
    B) Abstraction
    C) Encapsulation
    D) Composition
+answer: D
+explanation: একটি ক্লাসের অবজেক্টকে অন্য কোনো ক্লাসের মেম্বার হিসেবে ধারণ বা ব্যবহার করার ধারণাকে Composition (বা Aggregation / "has-a" relationship) বলা হয়।
 
 7. **Which one is pure object-oriented language?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*
    A) C++
    B) C+
    C) Java
    D) None
+answer: D
+explanation: খাঁটি বা পিওর অবজেক্ট ওরিয়েন্টেড ভাষায় সবকিছুই অবজেক্ট হতে হয়। জাভা ও C++ কোনোটিই পিওর নয় কারণ এগুলোতে প্রিমিটিভ ডেটা টাইপ (int, float ইত্যাদি) রয়েছে যা অবজেক্ট নয়। Smalltalk হলো একটি খাঁটি অবজেক্ট ওরিয়েন্টেড ভাষা।
 
 8. **Which is not feature of object-oriented programming?** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*
    A) inheritance
    B) recursion
    C) encapsulation
    D) abstraction
+answer: B
+explanation: রিকার্শন (Recursion) একটি সাধারণ ফাংশনাল অ্যালগরিদমিক কৌশল; এটি কোনো অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিং প্যারাডাইমের মূল বৈশিষ্ট্য নয়।
 
 9. **Which is not a feature of object-oriented programming?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*
    A) Inheritance
    B) Encapsulation
    C) Recursion
    B) Abstraction
+answer: C
+explanation: রিকার্শন (Recursion) OOP-র বৈশিষ্ট্য নয়।
 
 10. **Which one of the following is the core property of Object-Oriented Programming?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
-   A) Encapsulation, inheritance
-   B) Encapsulation, Object
-   C) polymorphism, overloading
-   D) Encapsulation, polymorphism and inheritance
+    A) Encapsulation, inheritance
+    B) Encapsulation, Object
+    C) polymorphism, overloading
+    D) Encapsulation, polymorphism and inheritance
+    Answer: D
+explanation: অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিংয়ের সবচেয়ে প্রধান ও মৌলিক স্তম্ভগুলো হলো Encapsulation, Polymorphism এবং Inheritance (পাশাপাশি Abstraction)।
 
 11. **In object Oriented Programming, a property can be accessed from ________** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*
-   A) Anywhere the project
-   B) Only from its own class
-   C) Parent class
-   D) Child class
+    A) Anywhere the project
+    B) Only from its own class
+    C) Parent class
+    D) Child class
+answer: B
+explanation: এনক্যাপসুলেশন নীতিতে ক্লাসের ফিল্ড বা প্রোপার্টিগুলো সাধারণত `private` রাখা হয়, যা কেবল সংশ্লিষ্ট ক্লাসের নিজস্ব মেথড দ্বারাই সরাসরি অ্যাক্সেসযোগ্য (Only from its own class)। (পাবলিক হলে যেকোনো স্থান থেকে অ্যাক্সেস করা যায়)।
 
 ## Encapsulation & Access Modifiers (7)
 
