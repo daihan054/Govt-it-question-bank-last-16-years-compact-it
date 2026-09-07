@@ -1175,24 +1175,32 @@ explanation: ডার্ক ডেটা (Dark data) হলো সেই সক
    b) 3
    c) 4
    d) 5
+answer: B
+explanation: দুটি এনটিটি $E_1$ এবং $E_2$-এর জন্য ২টি টেবিল প্রয়োজন। $R_1$ (1:N) রিলেশনশিপটি অতিরিক্ত টেবিল ছাড়াই মেনি সাইডের টেবিলের ফরেন কি হিসেবে যুক্ত করা যায়; কিন্তু $R_2$ (M:N) রিলেশনশিপের জন্য একটি পৃথক টেবিল আবশ্যক। ফলে মোট ন্যূনতম ৩টি টেবিল লাগবে।
 
 2. **Which of the following is an appropriate description of the mapping between the relational model and relational database as its implementations?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*
    a) A domain is mapped to a character type or a character string type.
    b) A relation is mapped to a table
    c) Attributes and columns are ordered from left to right
    d) Neither tuples nor rows have duplicates
+answer: B
+explanation: রিলেশনাল মডেলের তত্ত্বীয় ধারণাকে বাস্তবিক ডেটাবেসে রূপান্তরের ক্ষেত্রে একটি রিলেশন (Relation) সরাসরি একটি টেবিলে (Table) ম্যাপ হয়।
 
 3. **What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraints of both entities?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*
    (a) Min 1 and max 2
    (b) Min 1 and max 3
    (c) Min 2 and max 3
    (d) Min 2 and max 2
+answer: C
+explanation: উভয় এনটিটির আংশিক অংশগ্রহণে (Partial participation): ১:১ বা ১:N সম্পর্কের ক্ষেত্রে ২টি টেবিল (ফরেন কি সহ) এবং M:N সম্পর্কের ক্ষেত্রে ৩টি টেবিল (২টি এনটিটি + ১টি রিলেশনশিপ টেবিল) প্রয়োজন হয়। তাই Min 2 এবং Max 3।
 
 4. **Consider an Entity-relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater that the cardinality of E2. Which of the following is true about R?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)]*
    a. Every entity in E1 is associated with exactly one entity in E2
    b. Some entity in E1 is associated with more than one entity in E2
    c. Every entity in E2 is associated with exactly one entity in E1
    d. Every entity in E2 is associated with at most one entity in E1
+answer: A
+explanation: $E_1$ থেকে $E_2$-তে many-to-one এবং টোটাল পার্টিসিপেশনের ক্ষেত্রে $E_1$-এর প্রতিটি এনটিটি $E_2$-এর ঠিক একটি (exactly one) এনটিটির সাথে সম্পর্কযুক্ত থাকে।
 
 5. **A relationship is given below in an ER diagram How many tables can be created (preferred) from below diagram?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    ```
@@ -1208,6 +1216,8 @@ explanation: ডার্ক ডেটা (Dark data) হলো সেই সক
    b) Two
    c) Three
    d) Two or Three
+answer: D
+explanation: এই সম্পর্কটিকে রিলেশনালে রূপান্তরে student টেবিলে instructor-এর ID ফরেন কি হিসেবে যোগ করে ২টি টেবিল (Two) করা শ্রেয়, অথবা advisor-এর জন্য আলাদা টেবিল রাখলে ৩টি (Three) হতে পারে; তাই 'Two or Three'।
 
 6. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*
    ```
@@ -1223,24 +1233,32 @@ explanation: ডার্ক ডেটা (Dark data) হলো সেই সক
    b) Two
    c) Three
    d) No definite numbers
+answer: B
+explanation: ডায়াগ্রামে তীরচিহ্ন দ্বারা নির্দেশিত মেনি-টু-ওয়ান সম্পর্কে রিলেশনশিপটিকে student টেবিলে অন্তর্ভুক্ত করে মোট ২টি (Two) টেবিল তৈরি করাই সবচেয়ে কার্যকর ও পছন্দনীয় (preferred)।
 
 7. **Consider an Entity-relationship (ER) model where R is defined as a many-to-one relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater than the cardinality of E2, which of the following is true about R?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*
    a) Every entity in E1 is associated with exactly one entity in E2
    b) Some entity in E1 is associated with more than one entity in E2
    c) Every entity in E2 is associated with exactly one entity in E1
    d) Every entity in E2 is associated with at most one entity on E1
+answer: A
+explanation: মেনি-টু-ওয়ান রিলেশনশিপ এবং $E_1$-এর সম্পূর্ণ বা টোটাল পার্টিসিপেশনের কারণে $E_1$-এর প্রতিটি এনটিটি $E_2$-এর কেবল এবং কেবল একটি এনটিটির সাথেই সংযুক্ত হতে পারে।
 
 8. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*
    a) Two
    b) Three
    c) Two or Three
    d) No definite numbers
+answer: C
+explanation: ই-আর ডায়াগ্রামের ডিজাইন প্রয়োজনীয়তা অনুসারে এটি ২ বা ৩ উভয় সংখ্যক টেবিল দিয়ে ডিজাইন করা সম্ভব (Two or Three)।
 
 9. **In an Entity-Relationship diagram many-to-many relationship corresponds to a -- in actual database.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*
    A) Table
    B) field
    C) row
    D) primary key
+answer: A
+explanation: ই-আর ডায়াগ্রামের মেনি-টু-মেনি (Many-to-Many) সম্পর্কটি বাস্তব ডেটাবেসে বাস্তবায়ন করতে একটি পৃথক টেবিল (Junction/Bridge Table) তৈরি করতে হয়।
 
 ## Relational Model & Terminology (8)
 
