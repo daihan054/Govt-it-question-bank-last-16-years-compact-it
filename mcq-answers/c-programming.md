@@ -813,36 +813,48 @@ explanation: ফাংশনে অ্যারে পাস করলে অ্
    b) -2^{31}
    c) -2^{31}-1
    d) -2^{32}
+answer: B
+explanation: ৩২-বিট সাইন্ড ইন্টিজারে (2's complement) মানের সীমা $-2^{31}$ থেকে $2^{31}-1$ পর্যন্ত। ফলে সর্বনিম্ন মান $-2^{31}$।
 
 2. **What is the maximum value that can be stored in a 32-bit signed integer of C language?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*
    a) 10^{32}
    b) 2^{32}
    c) 2^{32}-1
    d) 2^{31}-1
+answer: D
+explanation: ৩২-বিট সাইন্ড ইন্টিজারের ক্ষেত্রে সর্বোচ্চ ধনাত্মক মান হলো $2^{31}-1$ (২,১৪৭,৪৮৩,৬৪৭)।
 
 3. **C programming এ নিচের কোনটি Invalid variable name?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*
    A) Average
    B) No#of-students
    C) Xyz
    D) y23z
+answer: B
+explanation: C ভাষায় ভ্যারিয়েবলের নামে `#` বা `-` (হাইফেন) এর মতো বিশেষ ক্যারেক্টার ব্যবহার করা যায় না। ফলে `No#of-students` একটি অবৈধ (invalid) নাম।
 
 4. **C কী ধরনের programming language?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*
    A) Low level language
    B) Mid-level language
    C) High level language
    D) None of these
+answer: B
+explanation: C ভাষাকে প্রায়ই মিড-লেভেল ল্যাঙ্গুয়েজ (Mid-level language) বলা হয়, কারণ এতে হাই-লেভেল ভাষার বৈশিষ্ট্যের পাশাপাশি মেমরি অ্যাড্রেস সরাসরি নিয়ন্ত্রণ করার মতো লো-লেভেল ক্ষমতাও বিদ্যমান।
 
 5. **নিচের কোনটি C ভাষার Keyword নয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*
    A) struct
    B) int
    C) star
    D) float
+answer: C
+explanation: `struct`, `int`, এবং `float` C ভাষার সংরক্ষিত কীওয়ার্ড (keyword), কিন্তু `star` কোনো কীওয়ার্ড নয়।
 
 6. **C programming language এ নিচের কোনটিকে "if" দিয়ে Replace করা যায়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*
    A) switch
    B) structure
    C) return
    D) for
+answer: A
+explanation: সিলেকশন বা ডিসিশন মেকিং স্টেটমেন্ট `switch`-কে সমতুল্য `if-else` কাঠামো দ্বারা প্রতিস্থাপন (replace) করা যায়।
 
 7. **Suppose a C program has floating constant 1.414, what's the best way to convert it as a float data type?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 203 (ET: AUST)]*
    A) (float)1.414
@@ -858,18 +870,24 @@ explanation: ফাংশনে অ্যারে পাস করলে অ্
    B) Only (i) is valid
    C) Both (i) and (iii) are valid
    D) All of these
+answer: C
+explanation: C ভাষায় ডিফল্টভাবে দশমিক ভগ্নাংশকে `double` ধরা হয়; একে `float` লিটারেল হিসেবে প্রকাশ করার আদর্শ উপায় হলো শেষে `f` বা `F` যুক্ত করা (যেমন: `1.414f`)।
 
 8. **Variable which use same name in whole program and in its all routines thus best classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*
    A) middle variable
    B) default variable
    C) local variable
    D) global variable
+answer: D
+explanation: যে ভ্যারিয়েবল সম্পূর্ণ প্রোগ্রাম এবং এর সকল ফাংশন বা রুটিনে একই নামে কার্যকর থাকে তাকে গ্লোবাল ভ্যারিয়েবল (global variable) বলে।
 
 9. **Which format specifier is used for typing double data?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*
    A) %f
    B) %lf
    C) %d
    D) %s
+answer: B
+explanation: C ভাষায় `double` ডেটা টাইপ পড়ার (ইনপুট নেওয়ার) জন্য ফরম্যাট স্পেসিফায়ার হিসেবে `%lf` (long float) ব্যবহৃত হয়।
 
 10. **Which one of the following is not a valid identifier?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*
    A) _compact
@@ -894,30 +912,40 @@ explanation: ফাংশনে অ্যারে পাস করলে অ্
    B) 2.5
    C) 3
    D) 4
+answer: C
+explanation: ভ্যারিয়েবল বা আইডেন্টিফায়ারে হাইফেন (`-`) ব্যবহার করা যায় না (এটি বিয়োগ অপারেটর হিসেবে গণ্য হয়)। তাই `com-pact` একটি অবৈধ আইডেন্টিফায়ার।
 
 11. **Which of the following correctly shows the hierarchy of algorithm operation in C?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*
    A) /*+-
    B) *-/+
    C) +-/*
    D) /*+-
+answer: B
+explanation: অ্যারিথমেটিক অপারেশনে গুণ (`*`) ও ভাগ (`/`)-এর প্রাধান্য যোগ (`+`) ও বিয়োগ (`-`)-এর চেয়ে বেশি।
 
 12. **The value 9.87 to 10 when use?** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*
    A) floor ()
    B) ceil ()
    C) both A & B
    D) None
+answer: B
+explanation: `ceil()` ফাংশন কোনো ফ্লোটিং সংখ্যার পরবর্তী নিকটতম বৃহত্তর পূর্ণসংখ্যা রিটার্ন করে, ফলে `ceil(9.87)` এর মান হয় 10।
 
 13. **Hungarian notation is used to ________.** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*
    A) Design system manual
    B) Design user manual
    C) Define name of the variable
    D) All
+answer: C
+explanation: হাঙ্গেরিয়ান নোটেশন (Hungarian notation) হলো ভ্যারিয়েবল নামকরণের একটি বিশেষ পদ্ধতি (naming convention), যেখানে ভ্যারিয়েবলের নামের শুরুতে তার ডেটা টাইপ বা উদ্দেশ্য নির্দেশক প্রিফিক্স যুক্ত করা হয় (যেমন: `iCount`, `strName`)।
 
 14. **Which of the following is not derived data type in C?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. Function
    b. Pointer
    c. Enumeration
    d. Array
+answer: C
+explanation: C ভাষায় অ্যারে, পয়েন্টার এবং ফাংশন হলো ড্রাইভড (derived) ডেটা টাইপ; আর `enum` (ইনিউমারেশন), `struct`, `union` হলো ইউজার-ডিফাইন্ড (user-defined) ডেটা টাইপ।
 
 ## Operators & Expressions (11)
 
