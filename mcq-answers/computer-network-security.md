@@ -497,30 +497,40 @@ explanation: সাইবারকন্ড্রিয়া (Cyberchondria) �
    (b) Access control
    (c) Confidentiality
    (d) All of the above
+answer: A
+explanation: তথ্যের প্রাপ্যতানীতি বা 'অ্যাভেইলেবিলিটি' (Availability) অনুযায়ী বৈধ ব্যবহারকারীর প্রয়োজনের সময় সিস্টেম ও ডেটা সর্বদা অ্যাক্সেসযোগ্য থাকতে হবে; সিস্টেম অ্যাক্সেস করা না গেলে Availability নীতি লঙ্ঘিত হয়।
 
 2. **Cyber security Triad means-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*
    a) Confidentiality, Reliability and Availability
    b) Confidentiality, Reliability and Accessibility
    c) Confidentiality, Integrity and Availability
    d) Privacy, Integrity and Approachability
+answer: C
+explanation: সাইবার নিরাপত্তার মূল ভিত্তি বা সিআইএ ট্রায়াড (CIA Triad) বলতে 'Confidentiality, Integrity and Availability' বোঝায়।
 
 3. **ACL (Access Control List) এর দুটি প্রধান ধরন হল?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*
    A) Standard and Extended
    B) Standard and Specialized
    C) Extended and Specialized
    D) Standard and IEEE
+answer: A
+explanation: নেটওয়ার্কিং ও সিকিউরিটিতে অ্যাক্সেস কন্ট্রোল লিস্ট (ACL)-এর প্রধান দুটি রূপ হলো 'Standard ACL' এবং 'Extended ACL'।
 
 4. **Special set of characters that computer associates with specific user identification is classified as ____.** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*
    A) password
    B) identity code
    C) inquiry code
    D) dump code
+answer: A
+explanation: কোনো ব্যবহারকারীর নির্দিষ্ট আইডির (User ID) সাথে প্রমাণীকরণের জন্য সংরক্ষিত গোপন অক্ষরের সমষ্টিকে 'পাসওয়ার্ড' (Password) বলা হয়।
 
 5. **Issuance of cash through terminal outside bank is an example of-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*
    A) terminals
    B) interfaces
    C) hardware devices
    D) telecommunication
+answer: D
+explanation: ব্যাংকের বাইরে স্থাপিত দূরবর্তী এটিএম বা টার্মিনালের মাধ্যমে নগদ অর্থ প্রদান মূলত কেন্দ্রীয় ব্যাংকিং সার্ভারের সাথে সংযুক্ত টেলিকমিউনিকেশন (Telecommunication / EFT Network)-এর একটি বাস্তব প্রয়োগ।
 
 ## Web Security Vulnerabilities (4)
 
