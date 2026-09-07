@@ -673,96 +673,132 @@ explanation: একটি আদর্শ ভোল্টেজ উৎসের 
    (খ) স্টিম টারবাইন
    (গ) কোল টারবাইন
    (ঘ) হাইড্রো টারবাই
+answer: ক
+explanation: কম্বাইন্ড সাইকেল পাওয়ার প্ল্যান্টে মূলত গ্যাস টারবাইন (ব্রেইটন সাইকেল) এবং স্টিম টারবাইন (র‍্যাঙ্কিন সাইকেল) একত্রে ব্যবহার করে উচ্চ কর্মদক্ষতায় বিদ্যুৎ উৎপাদন করা হয়।
 
 2. **নিউক্লিয়ার পাওয়ার প্লান্টের পাওয়ার ট্রান্সমিশনের জন্য সর্বোচ্চ কত ট্রান্সমিশন ভোল্টেজ ব্যবহার করা হবে?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*
    (ক) ১৩৩ কেভি
    (খ) ৩৩ কেভি
    (গ) ২৩০ কেভি
    (ঘ) ৪০০ কেভি
+answer: ঘ
+explanation: রূপপুর পারমাণবিক বিদ্যুৎ কেন্দ্র থেকে জাতীয় গ্রিডে বিদ্যুৎ সঞ্চালনের জন্য ৪০০ কেভি (400 kV) উচ্চ ক্ষমতার সঞ্চালন লাইন ব্যবহার করা হচ্ছে।
 
 3. **নিউক্লিয়ার পাওয়ার প্লান্টের পাওয়ার ইউনিটের আয়ুষ্কাল কত?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*
    (ক) ৪০ বছর
    (খ) ৫০ বছর
    (গ) ৬০ বছর
    (ঘ) ৭০ বছর।
+answer: গ
+explanation: রূপপুর এনপিপিতে ব্যবহৃত আধুনিক ৩+ প্রজন্মের ভিভিইআর-১২০০ (VVER-1200) রিঅ্যাক্টরের নকশাকৃত কর্মকাল বা আয়ুষ্কাল ৬০ বছর।
 
 4. **নিউক্লিয়ার পাওয়ার প্ল্যান্টের পাওয়ার ট্রান্সমিশনের জন্য সর্বোচ্চ ট্রান্সমিশন ভোল্টেজ কত? **Ans: 400KB**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+answer: A
+explanation: নিউক্লিয়ার পাওয়ার প্ল্যান্টের পাওয়ার ট্রান্সমিশনের জন্য সর্বোচ্চ ৪০০ কেভি (400 kV) ভোল্টেজ ব্যবহৃত হয়।
 
 5. **নিউক্লিয়ার পাওয়ার প্ল্যান্টের “পাওয়ার ইউনিট” এর আয়ুষ্কাল কত বছর? **Ans: 50 Year**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+answer: A
+explanation: নিউক্লিয়ার পাওয়ার প্ল্যান্টের পাওয়ার ইউনিটের আয়ুষ্কাল ৫০ থেকে ৬০ বছর (ডিজাইন লাইফ ৬০ বছর)।
 
 6. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোন টারবাইনের প্রয়োজন হয়? **Ans: গ্যাস টারবাইন**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+answer: A
+explanation: কম্বাইন্ড সাইকেল পাওয়ার প্ল্যান্টে গ্যাস টারবাইন ও স্টিম টারবাইনের সমন্বয়ে বিদ্যুৎ তৈরি করা হয়।
 
 7. **N rpm গতিতে ঘূর্ণায়মান, D ব্যাসবিশিষ্ট একটি পুলিতে তার দিয়ে সংযুক্ত বস্তুর প্রতি সেকেন্ডে রৈখিক বেল কত হবে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
    a) IIND/60
    b) IIND/180
    c) 2IIND/60
    d) 2IIND/180
+answer: a
+explanation: পুলির পরিধি $\pi D$ এবং প্রতি সেকেন্ডে ঘূর্ণন সংখ্যা $N/60$, সুতরাং প্রতি সেকেন্ডে রৈখিক বেগ $v = \frac{\pi D N}{60}$।
 
 8. **কোন বস্তুকে টানা বল (tension force) দিয়ে ভাঙ্গা হলে, সেই বস্তুর শূন্য লোড থেকে ব্রেকিং লোড পর্যন্ত স্ট্রেইস, স্ট্রেইন কার্ডের অন্তর্গত এরিয়াকে কী বলা হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
    a) মডুলার অব ইলাস্টিসিটি
    b) মডুলার অব ট্রাফনেস
    c) মডুলার অব রিজিডিটি
    d) উপরের কোনটিই নয়
+answer: b
+explanation: স্ট্রেস-স্ট্রেন ডায়াগ্রামের শূন্য থেকে ফ্র্যাকচার বা ব্রেকিং পয়েন্ট পর্যন্ত বক্ররেখার নিচের মোট ক্ষেত্রফলকে মডুলাস অব টাফনেস (Modulus of Toughness) বলা হয়।
 
 9. **তাপ শক্তিকে যান্ত্রিক শক্তিতে রূপান্তর করা হয় কীভাবে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
    a) অন্তর্দাহ ইঞ্জিনের সাহায্যে
    b) স্টিম টারবাইনের সাহায্যে
    c) গ্যাস টারবাইনের সাহায্যে
    d) উপরের সবগুলোটি।
+answer: d
+explanation: ইন্টারনাল কম্বাশন ইঞ্জিন, স্টিম টারবাইন এবং গ্যাস টারবাইন—তিনটিই তাপ শক্তিকে যান্ত্রিক শক্তিতে রূপান্তরিত করে।
 
 10. **একটি পাতলা বেলনাকার (cylindrical) প্রেসার ভেসেলের লঙ্গিটিউডিনাল স্ট্রেস ও সারকামফারেনশিয়াল স্ট্রেস এর অনুপাত কত হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 61 (ET: BUET)]*
    a) \frac{1}{2}
    b) 1
    c) 2
    d) 3
+answer: a
+explanation: পাতলা সিলিন্ডারে লঙ্গিটিউডিনাল স্ট্রেস $\sigma_L = \frac{Pd}{4t}$ এবং হুপ/সারকামফারেনশিয়াল স্ট্রেস $\sigma_H = \frac{Pd}{2t}$। ফলে এদের অনুপাত $\frac{\sigma_L}{\sigma_H} = \frac{1}{2}$।
 
 11. **For the protection of transformer, harmonic restraint is used to guard against ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*
    (ক) Magnetizing inrush current
    (খ) Unbalanced operation
    (গ) Lightning
    (ঘ) Switching over voltage
+answer: ক
+explanation: ট্রান্সফরমার অন করার সময় সৃষ্ট ম্যাগনেটাইজিং ইনরাশ কারেন্টে প্রচুর দ্বিতীয় হারমোনিক উপস্থিত থাকে। এর কারণে ডিফারেনশিয়াল রিলে যাতে ভুলবশত ট্রিপ না করে, সেজন্য হারমোনিক রেস্ট্রেইন্ট (harmonic restraint) ব্যবহার করা হয়।
 
 12. **A 4-pole 50Hz induction motor running at 1300 rpm. The speed of stator magnetic field with respect to rotor is ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*
    (ক) 1500\text{rpm}
    (খ) 200\text{ rpm}
    (গ) 1300\text{ rpm}
    (ঘ) 300\text{ rpm}
+answer: খ
+explanation: স্ট্যাটরের ঘূর্ণনশীল চৌম্বক ক্ষেত্রের সিনক্রোনাস গতি $N_s = \frac{120 \times 50}{4} = 1500\text{ rpm}$। রোটরের গতি $1300\text{ rpm}$ হলে রোটরের সাপেক্ষে স্ট্যাটর চৌম্বক ক্ষেত্রের আপেক্ষিক গতি $N_s - N_r = 1500 - 1300 = 200\text{ rpm}$।
 
 13. **A nuclear power plant is invariably used as a ______ plant.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*
    (ক) Peak load
    (খ) Base load
    (গ) Standby
    (ঘ) Spinning reserve
+answer: খ
+explanation: উচ্চ প্রাথমিক নির্মাণ ব্যয় ও কম জ্বালানি খরচের কারণে এবং সার্বক্ষণিক স্থিতিশীল আউটপুট দিতে নিউক্লিয়ার পাওয়ার প্ল্যান্ট সবসময় বেস লোড (Base load) প্ল্যান্ট হিসেবে ব্যবহৃত হয়।
 
 14. **In a 3-phase power measurement by two-wattmeters method, both wattmeters have identical reading. The power factor of the load is ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*
    (ক) Unity
    (খ) 0.8 lagging
    (গ) 0.8 leading
    (ঘ) Zero
+answer: ক
+explanation: দুই-ওয়াটমিটার পদ্ধতিতে $W_1 = W_2$ হলে ফেজ কোণ $\phi = 0^\circ$, যার ফলে পাওয়ার ফ্যাক্টর $\cos(0^\circ) = 1$ বা ইউনিটি (Unity) হয়।
 
 15. **The speed of a DC shunt motor is required to be more than full load speed. This is possible by-** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*
    (ক) reducing the field current
    (খ) decreasing the armature current
    (গ) increasing the armature current
    (ঘ) None of the above
+answer: ক
+explanation: ফিল্ড কারেন্ট কমালে ফিল্ড ফ্লাক্স ($\Phi$) হ্রাস পায়। স্পিড সমীকরণ $N \propto \frac{E_b}{\Phi}$ অনুযায়ী ফ্লাক্স কমলে ডিসি মোটরের গতি পূর্ণ লোড গতির চেয়ে বৃদ্ধি পায় (Field weakening control)।
 
 16. **The ordinary efficiency of a given transformer is maximum when-** *[BPSC Assistant Maintenance Engineer 2019 compact it 189 (ET: N/A)]*
    (a) It runs at half-load
    (b) Its nuns at full-load
    (c) Its copper loss is equal to iron loss
    (d) It runs slightly overload
+answer: c
+explanation: ট্রান্সফরমারের কর্মদক্ষতা সর্বোচ্চ হওয়ার অপরিহার্য শর্ত হলো এর তাম্র ক্ষয় (variable copper loss) এবং লৌহ ক্ষয় (constant iron loss) সমান হওয়া।
 
 17. **If two generators are running in parallel and field of one of the generators is weakened too much then it will-** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*
    (a) Take the smaller shunt of the total load
    (b) Run as the motor in the same direction
    (c) Take a large share of the total load
    (d) Run in the opposite direction as motor
+answer: b
+explanation: সমান্তরালে চালিত ডিসি জেনারেটরের ফিল্ড অতিরিক্ত দুর্বল করলে উৎপন্ন ইএমএফ বাসবার ভোল্টেজের নিচে নেমে যায়, ফলে এটি বাসবার থেকে তড়িৎ গ্রহণ করে একই ঘূর্ণন দিকে মোটর হিসেবে চলতে শুরু করে।
 
 18. **The sole purpose of a commutator in a DC generator is to-** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*
    (a) Increase output voltage
    (b) Reduce sparking at brushes
    (c) Provides smoother output
    (d) Convert the induced AC to DC
+answer: d
+explanation: ডিসি জেনারেটরে আর্মেচার কয়েলে উৎপন্ন অল্টারনেটিং কারেন্টকে (AC) একমুখী ডিসি কারেন্টে (DC) রূপান্তর করাই কমিউটেটরের মূল উদ্দেশ্য।
 
 ## Signals & Systems (11)
 
