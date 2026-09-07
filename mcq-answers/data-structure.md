@@ -789,9 +789,13 @@ explanation: সাধারণ কিউ-এর মতো শুধু প্�
    (b) 1.25
    (c) 80
    (d) 8000
+answer: c
+explanation: হ্যাশ টেবিলের লোড ফ্যাক্টর (Load Factor) \alpha = n / m; যেখানে উপাদান সংখ্যা n = 2000 এবং মোট স্লট সংখ্যা m = 25। সুতরাং \alpha = 2000 / 25 = 80।
 
 2. **Which of the following symbol table implementation is best suited if access time is to be minimum?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) Linear list
    (b) Linked list
    (c) Hash table
    (d) Self-organizing list
+answer: c
+explanation: ন্যূনতম অ্যাক্সেস টাইমের জন্য হ্যাশ টেবিল (Hash Table) সেরা পছন্দ, কারণ এটি ধ্রুবক গড় সময়ে অর্থাৎ O(1) কমপ্লেক্সিটিতে যে কোনো উপাদান খোঁজা ও সংরক্ষণ করার সুবিধা দেয়।
