@@ -1105,30 +1105,40 @@ explanation: একই ধরনের বৈশিষ্ট্য (গঠন) �
    b) Float
    c) Character
    d) Double
+answer: A
+explanation: মেমোরি অ্যাড্রেস হলো মূলত ধনাত্মক পূর্ণসংখ্যা (unsigned integer), যা পয়েন্টার ভ্যারিয়েবলে সংরক্ষিত হয়।
 
 2. **Address variable রাখা যায় কোনটিতে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*
    A) Break
    B) Int
    C) Pointer
    D) Float
+answer: C
+explanation: মেমোরি অ্যাড্রেস ধারণ করার জন্য ব্যবহৃত বিশেষ ভ্যারিয়েবলকে পয়েন্টার (Pointer) বলে।
 
 3. **C-programming এ address রাখার জন্য কোনটি সাধারণত ব্যবহৃত হয়?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*
    A) break
    B) pointer
    C) char
    D) float
+answer: B
+explanation: C প্রোগ্রামিংয়ে অন্য কোনো ভ্যারিয়েবলের মেমোরি অ্যাড্রেস সংরক্ষণ করার জন্য পয়েন্টার (pointer) ব্যবহৃত হয়।
 
 4. **What is the following declaration for? int (*a)[10];** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*
    (a) Pointer to an array of 10 integers
    (b) Array of 10 function Pointers returning integer
    (c) A pointer of to function returning an array to 10 integers
    (d) Array of 10 integers pointers
+answer: A
+explanation: বন্ধনী থাকার কারণে `(*a)` নির্দেশ করে `a` হলো একটি পয়েন্টার, যা ১০টি পূর্ণসংখ্যার সমন্বয়ে গঠিত একটি অ্যারেকে পয়েন্ট করে (Pointer to an array of 10 integers)।
 
 5. **Which header file should be included to use functions like malloc() and calloc()?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*
    a. memory.h
    b. stdlib.h
    c. string.h
    d. dos.h
+answer: B
+explanation: C ভাষায় ডাইনামিক মেমোরি অ্যালোকোশন ফাংশন `malloc()`, `calloc()`, `free()` ইত্যাদি `<stdlib.h>` (Standard Library) হেডার ফাইলে সংজ্ঞায়িত থাকে।
 
 ## Recursion (4)
 
