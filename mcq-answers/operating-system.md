@@ -616,24 +616,32 @@ explanation: অপারেটিং সিস্টেমে কোনো প�
    (b) D
    (c) E
    (d) F
+answer: B
+explanation: ডস এবং উইন্ডোজের স্ট্যান্ডার্ড ড্রাইভ লেটার অ্যাসাইনমেন্ট নিয়ম অনুযায়ী, প্রথম ড্রাইভের প্রাইমারি পার্টিশন পায় 'C' এবং দ্বিতীয় ড্রাইভের প্রাইমারি পার্টিশন পায় 'D' (এরপর এক্সটেন্ডেড পার্টিশনের লজিক্যাল ড্রাইভগুলো E, F বরাদ্দ পায়)।
 
 2. **Which of the following is not a true statement?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*
    a) Deleted files can be found in recycle bin
    b) Deleted files in recycle bin can be restored
    c) Disk space can be increased by sending files into recycle bin
    d) There may have multiple recycle bin
+answer: C
+explanation: কোনো ফাইলকে রিসাইকেল বিনে পাঠালে ডিস্কের খালি জায়গা বৃদ্ধি পায় না; রিসাইকেল বিন সম্পূর্ণরূপে খালি (Empty) না করা পর্যন্ত ফাইলগুলো ডিস্কের মেমরি দখল করে রাখে।
 
 3. **Which of the following file name extension suggests that the file is backup of another file?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. TXT
    b. COM
    c. BAS
    d. BAK
+answer: D
+explanation: `.BAK` এক্সটেনশন দ্বারা কোনো সফটওয়্যার বা সিস্টেমের মূল ফাইলের স্বয়ংক্রিয় সংরক্ষিত ব্যাকআপ ফাইল (Backup file) বোঝানো হয়।
 
 4. **"INI" extension refers usually what kind of file?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. Image file
    b. System file
    c. Hypertext file
    d. Image Color Matching Profile file
+answer: B
+explanation: `.INI` (Initialization) এক্সটেনশন বিশিষ্ট ফাইলগুলো মূলত সিস্টেম কনফিগারেশন বা সিস্টেম ফাইল (System file) হিসেবে অপারেটিং সিস্টেম ও সফটওয়্যারের প্যারামিটার ধারণ করে।
 
 ## Process Synchronization (2)
 
