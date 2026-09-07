@@ -229,48 +229,64 @@ explanation: PHP-তে নট-ইকুয়াল বা অসমান শ�
    B) <body>
    C) both A and B
    D) none
+answer: C
+explanation: জাভাস্ক্রিপ্ট কোড HTML ফাইলের `<head>` সেকশন অথবা `<body>` সেকশন (বা উভয় স্থানেই) `<script>` ট্যাগের মাধ্যমে স্থাপন করা যায়।
 
 2. **What is the value of variable x after the following statement is executed in JavaScript var x2= "3" + "4" ?** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*
    A) 34
    B) 7
    C) 0
    D) undefine
+answer: A
+explanation: জাভাস্ক্রিপ্টে দুটি স্ট্রিংয়ের মাঝে `+` অপারেটর ব্যবহার করলে স্ট্রিং কনক্যাটেনেশন (string concatenation) ঘটে, ফলে `"3" + "4"` এর মান হবে `"34"`।
 
 3. **Which is correct to open new window/tab of browser?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) <a href=[http://www.example.com](http://www.example.com) target= "_blank"> new window/tab</a>
    B) <a href=[http://www.example.com](http://www.example.com) target= "blank"> new window/tab</a>
    C) <a href=[http://www.example.com](http://www.example.com) target= "_blank“new window”> new window</a>
    D) None
+answer: A
+explanation: ব্রাউজারের নতুন উইন্ডো বা ট্যাবে হাইপারলিংক খোলার জন্য HTML-এ `target="_blank"` অ্যাট্রিবিউট ব্যবহার করা হয়।
 
 4. **Which is the correct variable declaration in JavaScript?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) var a= {'a', 'b', 'c'};
    B) var a= {'a' 'b' 'c'}
    C) var a= {“a” “b” “c”}
    D) None
+answer: D
+explanation: জাভাস্ক্রিপ্টে অ্যারে ঘোষণার জন্য স্কয়ার ব্র্যাকেট `['a', 'b', 'c']` এবং অবজেক্টের জন্য কী-ভ্যালু পেয়ার `{key: value}` প্রয়োজন; সেকেন্ড ব্র্যাকেটে কমা দিয়ে উপাদানের তালিকা কোনো বৈধ সিনট্যাক্স নয়, তাই সঠিক উত্তর None।
 
 5. **Which one does run on client side?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*
    A) PHP
    B) JavaScript
    C) ASP.NET
    D) None of these
+answer: B
+explanation: জাভাস্ক্রিপ্ট (JavaScript) ক্লায়েন্ট-সাইড প্রযুক্তি হিসেবে সরাসরি ব্যবহারকারীর ওয়েব ব্রাউজারে রান হয় (PHP এবং ASP.NET হলো সার্ভার-সাইড প্রযুক্তি)।
 
 6. **A script is a ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. Program of sequence of instructions that is interpreted or carried out by processes directly
    b. Program or sequence of instructions that is interpreted or carried out by another program
    c. Program or sequence of instructions that is interpreted or carried out by web services only
    d. None of these
+answer: B
+explanation: স্ক্রিপ্ট হলো এমন নির্দেশাবলীর ধারা যা কম্পিউটার প্রসেসর কর্তৃক সরাসরি এক্সিকিউট না হয়ে অন্য কোনো প্রোগ্রাম বা ইন্টারপ্রেটার (যেমন জাভাস্ক্রিপ্ট ইঞ্জিন) দ্বারা মূল্যায়িত ও কার্যকর হয়।
 
 7. **What is the correct JavaScript syntax to view "Hello World"?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. respone.write("Hellow World");
    b. document.write("Hello World")
    c. "Hello World"
    d. echo("Hello World")
+answer: B
+explanation: ওয়েব ডকুমেন্টে কোনো টেক্সট সরাসরি রাইট বা প্রদর্শন করতে ক্লাসিক জাভাস্ক্রিপ্টে `document.write("Hello World")` ব্যবহৃত হয়।
 
 8. **Inside which HTML element do we put the JavaScript?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. <scripting>
    b. <javascript>
    c. <script>
    d. <js>
+answer: C
+explanation: HTML ডকুমেন্টের অভ্যন্তরে জাভাস্ক্রিপ্ট কোড লিখতে `<script>` এলিমেন্ট/ট্যাগ ব্যবহার করা হয়।
 
 ## Web Services & APIs (6)
 
