@@ -20,54 +20,72 @@
    (b) Functionality
    (c) Interface
    (d) Security
+answer: C
+explanation: Integration testing focuses on verifying the communication, data transfer, and interfaces between integrated software modules or units.
 
 2. **Which of the following testing strategy is related to the boundary value analysis?** *[Combined Bank Officer (IT) 04.10.2024 compact it 14 (ET: BIBM)]*
    (a) White-box testing
    (b) Black box testing
    (c) White box and black box testing
    (d) None of these
+answer: B
+explanation: Boundary Value Analysis (BVA) is a classic black-box testing technique that tests input values at the boundaries of equivalence classes (minimum, just above minimum, nominal, just below maximum, and maximum).
 
 3. **Objective of integration testing is to find _____** *[Combined Bank Officer (IT) 04.10.2024 compact it 14 (ET: BIBM)]*
    (a) design error
    (b)-functional error
    (c) interface error
    (d) coding error
+answer: C
+explanation: The main objective of integration testing is to detect interface errors, data format mismatches, and communication flaws between collaborating modules.
 
 4. **______ is a type of software testing where a group of individuals, usually from within the organization, use the software in a simulated or controlled environment to uncover defects.** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*
    (a) Alpha Testing
    (b) User Acceptance Testing
    (c) Beta Testing
    (d) Regression Testing
+answer: A
+explanation: Alpha testing is performed in-house by internal team members in a controlled/simulated lab environment before making the build available to external users.
 
 5. **Which of the following testing techniques includes how well the user will understand and interact with the system?** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*
    (a) Alpha Testing
    (b) User Acceptance Testing
    (c) Beta Testing
    (d) Usability Testing
+answer: D
+explanation: Usability testing evaluates how user-friendly, intuitive, and learnable the software interface is for target end users.
 
 6. **______ testing is a testing technique where the actual data verified in the real environment.** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*
    (a) Regression Testing
    (b) Alpha Testing
    (c) Beta Testing
    (d) None of the above
+answer: C
+explanation: Beta testing is performed by actual users in a real-world live environment using genuine operational data.
 
 7. **Which of the below testing is related to Non-functional testing?** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*
    (a) Unit testing
    (b) Black-box testing
    (c) Performance testing
    (d) None of the above
+answer: C
+explanation: Performance testing evaluates non-functional aspects such as response time, speed, scalability, and resource utilization under workload.
 
 8. **Which of the following testing is also called Acceptance testing?** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*
    (a) Beta testing
    (b) White-box testing
    (c) Grey box testing tab
    (d) Alpha testing
+answer: A
+explanation: Beta testing is often considered the final phase of user acceptance testing (UAT / Field Acceptance Testing), where end users validate acceptance criteria in operational conditions.
 
 9. **Which is the correct definition of BUG?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) A difficult syntax error in a program
    b) A logical error in a program
    c) Documenting programs
    d) All of the above
+answer: B
+explanation: A software bug refers to a logical flaw or defect in code that causes an application to produce unexpected, incorrect, or unintended results.
 
 10. **Which of the following is the appropriate set of test cases, (A, B) when the part of a program shown is tested by decision condition coverage (branch coverage)?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 89 (ET: N/A)]*
    ```c
@@ -78,66 +96,88 @@
    b. {(False, True), (*True, False), (True, True)}
    c. {(False, True), (True, False)}
    d. {(False, False), (True, True)}
+answer: D
+explanation: Branch/decision coverage requires that the complete boolean condition evaluate to True at least once and False at least once. (False, False) makes (A OR B) False (executing the else branch), and (True, True) makes it True (executing the then branch).
 
 11. **________ is the final stage of the testing process conducted before software release. This is referred as:** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 180 (ET: N/A)]*
    a) Alpha testing
    b) Beta testing
    c) Gamma testing
    d) Delta testing
+answer: B
+explanation: Beta testing is the final pre-release testing phase conducted in the user's live operational environment before broad commercial launch.
 
 12. **Software goes through a phase in which errors are verified and studied on simulated user environments. This is referred as-** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*
    a) Alpha testing
    b) Beta testing
    C) Gamma testing
    d) Delta testing
+answer: A
+explanation: Testing performed within a simulated or lab environment at the developer's organization is referred to as Alpha testing.
 
 13. **Modified software goes through a phase where it is tested in the user’s site or live environment. This is referred as-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*
    a) Alpha testing
    b) Beta testing
    c) Gamma testing
    d) Delta testing
+answer: B
+explanation: Testing done at the client/user site in a live operational environment is called Beta testing.
 
 14. **________ is an integration testing that is commonly used when software products are being developed. It is designed as a pacing mechanism for time-critical project, allowing the software team to assess its project on a frequent basis.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*
    a) Unit testing
    b) Function testing
    c) Regression testing
    d) Smoke testing
+answer: D
+explanation: According to Roger Pressman, Smoke testing is an integration testing approach used as a pacing mechanism for time-critical software projects to assess daily/regular build stability.
 
 15. **কোন Testing দিয়ে Input-Output ঠিক আছে কিনা বুঝা যায়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*
    A) Black-box Testing
    B) Integration Testing
    C) White-box testing
    D) Load Testing
+answer: A
+explanation: ব্ল্যাক-বক্স টেস্টিংয়ে (Black-box Testing) অভ্যন্তরীণ কোডের কাঠামো না দেখে শুধুমাত্র প্রদত্ত ইনপুটের বিপরীতে প্রত্যাশিত আউটপুট সঠিকভাবে আসছে কিনা তা যাচাই করা হয়।
 
 16. **Testing of software with actual data and in actual environment is known as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*
    A) Regression testing
    B) Beta testing
    C) Alpha testing
    D) None of these
+answer: B
+explanation: প্রকৃত পরিবেশে বাস্তব ডেটা ও ব্যবহারকারীদের দ্বারা সম্পাদিত টেস্টিং হলো বিটা টেস্টিং (Beta testing)।
 
 17. **A Non-Functional Software testing is done to check if the user interface is easy to use and understand-** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*
    A) Security Testing
    B) Unit testing
    C) Block Box Testing
    D) Usability Testing
+answer: D
+explanation: সফটওয়্যারের ইন্টারফেস ব্যবহারকারীর জন্য কতটা সহজ ও বোধগম্য তা যাচাই করার নন-ফাংশনাল টেস্টিং হলো ইউজেবিলিটি টেস্টিং (Usability Testing)।
 
 18. **The name of the testing which is done to make sure the existing features are not affected by new changes** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*
    A) Recursive testing
    B) Regression testing
    C) Whitebox testing
    D) Unit testing
+answer: B
+explanation: নতুন কোনো কোড সংযোজন বা সংশোধনের কারণে বিদ্যমান কোনো কার্যকারিতা ক্ষতিগ্রস্ত হয়েছে কিনা তা যাচাই করতে রিগ্রেশন টেস্টিং (Regression testing) করা হয়।
 
 19. **Which kind of software testing strategy starts with testing the fundamental components first?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*
    A) Top-down testing
    B) Bottom-up testing
    C) Stress Testing
    D) Back to Back testing
+answer: B
+explanation: বটম-আপ টেস্টিংয়ে (Bottom-up testing) আর্কিটেকচারের সবচেয়ে নিচের স্তরের মৌলিক বা ফান্ডামেন্টাল মডিউলগুলো আগে টেস্ট করে পর্যায়ক্রমে ওপরের মডিউলে যাওয়া হয়।
 
 20. **Test case is written by-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*
    A) Tester
    B) Developer
    C) Test Engineer
    D) Designer
+answer: C
+explanation: সফটওয়্যার টেস্টিং লাইফসাইকেলে ফর্মাল টেস্ট সিনারিও এবং বিশদ টেস্ট কেস রচনার দায়িত্ব থাকে টেস্ট ইঞ্জিনিয়ার (Test Engineer / QA Engineer)-এর ওপর।
 
 ## SDLC Models (14)
 
