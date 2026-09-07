@@ -886,174 +886,232 @@ explanation: মাইক্রোপ্রসেসর ভিত্তিক �
    খ. ১০০
    গ. ১৫০
    ঘ. ২০০
+answer: ক
+explanation: কম্পিউটারের নিজস্ব কোনো বুদ্ধি বা চিন্তাশক্তি নেই, তাই কম্পিউটারের বুদ্ধিমত্তা বা আইকিউ (IQ) হলো শূন্য (০)।
 
 2. **Which one is the first high level programming language?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)], [Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*
    A) C
    B) COBOL
    C) FORTRAN
    D) C++
+answer: C
+explanation: জন বাকাসের নেতৃত্বে ১৯৫৭ সালে আইবিএম কর্তৃক উদ্ভাবিত ফোরট্রান (FORTRAN - Formula Translation) হলো বিশ্বের প্রথম উচ্চস্তরের প্রোগ্রামিং ভাষা।
 
 3. **Which one is the first search engine?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*
    A) Google
    B) Archie
    C) Alta vista
    D) WAIS
+answer: B
+explanation: ১৯৯০ সালে অ্যালান এমটাজ (Alan Emtage) কর্তৃক তৈরি ‘আর্চি’ (Archie) হলো ইন্টারনেটের ইতিহাসের প্রথম সার্চ ইঞ্জিন।
 
 4. **Which of the following is the most commonly used encoding standard of Unicode?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*
    (ক) UTF-6
    (খ) UTF-7
    (গ) UTF-8
    (ঘ) UTF-9
+answer: গ
+explanation: ইউনিকোডের (Unicode) সবচেয়ে জনপ্রিয় ও বিশ্বব্যাপী সর্বাধিক ব্যবহৃত এনকোডিং ফরম্যাট হলো UTF-8।
 
 5. **EDSAC কম্পিউটার এ ডাটা সংরক্ষণের জন্য কি ধরণের মেমরি ব্যবহার হত?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*
    a) RAM
    b) ROM
    c) Mercury Delay
    d) Registers Lines
+answer: c
+explanation: ১৯৪৯ সালে নির্মিত EDSAC কম্পিউটারে ডেটা সংরক্ষণের প্রধান মেমোরি হিসেবে মারকারি ডিলে লাইনস (Mercury Delay Lines) ব্যবহৃত হতো।
 
 6. **In which year were chips used inside the computer for the first time?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*
    (a) 1964
    (b) 1974
    (c) 1975
    (d) 1981
+answer: a
+explanation: ১৯৬৪ সালে আইবিএম সিস্টেম/৩৬০ কম্পিউটারের মাধ্যমে কম্পিউটারে প্রথম সিলিকন চিপ বা আইসি (Integrated Circuit) বাণিজ্যিকভাবে ব্যবহৃত হয়।
 
 7. **Which was the world's first electronic computer?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. ENIAC
    b. EDVAC
    c. UNIVAC
    d. IBM
+answer: a
+explanation: ১৯৪৫ সালে জন মশলি ও জে. প্রেসপার একার্ট কর্তৃক নির্মিত এনিয়াক (ENIAC) হলো বিশ্বের প্রথম পূর্ণাঙ্গ ইলেকট্রনিক ডিজিটাল কম্পিউটার।
 
 8. **WWW (World Wide Web) এর জনক কে?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*
    (ক) বিল গেটস
    (খ) স্টিভ জবস
    (গ) টিম বার্নস লি.
    (ঘ) জেফ বেজোফ
+answer: গ
+explanation: স্যার টিম বার্নার্স-লি (Tim Berners-Lee) ১৯৮৯ সালে সুইজারল্যান্ডের সার্ন (CERN)-এ ওয়ার্ল্ড ওয়াইড ওয়েব (WWW) উদ্ভাবন করেন।
 
 9. **English scientist ________ invented the World Wide Web in 1989.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*
    a) Vint Cerf
    b) Robert Elliot Kahn
    c) Alan Turing
    d) Tim Berners-Lee
+answer: d
+explanation: ব্রিটিশ বিজ্ঞানী টিম বার্নার্স-লি (Tim Berners-Lee) ১৯৮৯ সালে ওয়ার্ল্ড ওয়াইড ওয়েব আবিষ্কার করেন।
 
 10. **Who is known as the first computer programmer?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*
    a) Alan Turing
    b) Ada Lovelace
    c) Charles Babbage
    d) None of the above
+answer: b
+explanation: চার্লস ব্যাবেজের অ্যানালিটিক্যাল ইঞ্জিনের জন্য প্রথম অ্যালগরিদম রচনার কারণে অ্যাডা লাভলেস (Ada Lovelace)-কে ইতিহাসের প্রথম কম্পিউটার প্রোগ্রামার বলা হয়।
 
 11. **________ was a chess-playing computer developed by IBM?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
    a. Bright Red
    b. Deep Blue
    c. Light Green
    d. Dark Pink
+answer: b
+explanation: আইবিএম (IBM) উদ্ভাবিত ‘ডিপ ব্লু’ (Deep Blue) দাবাড়ু সুপারকম্পিউটার ১৯৯৭ সালে বিশ্ব চ্যাম্পিয়ন গ্যারি কাসপারভকে পরাজিত করেছিল।
 
 12. **How many bits are there in Unicode?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
    a. 8
    b. 12
    c. 16
    d. 20
+answer: c
+explanation: মৌলিক ইউনিকোড (Unicode) স্ট্যান্ডার্ড ১৬ বিটের (16 bits) কোড, যার মাধ্যমে ৬৫,৫৩৬টি অনন্য ক্যারেক্টার প্রকাশ করা যায়।
 
 13. **When was first artificial satellite established?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
    a. 1940
    b. 1960
    c. 1950
    d. 1957
+answer: d
+explanation: বিশ্বের প্রথম কৃত্রিম উপগ্রহ ‘স্পুটনিক-১’ ১৯৫৭ সালের ৪ অক্টোবর সোভিয়েত ইউনিয়ন কর্তৃক মহাকাশে উৎক্ষেপিত হয়।
 
 14. **1 Terabyte ________ gigabyte in the decimal system?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
    a. 1000
    b. 720
    c. 1950
    d. 1970
+answer: a
+explanation: দশমিক বা ডেসিমাল পদ্ধতিতে (SI একক) ১ টেরাবাইট ($1\text{ TB}$) = ১০০০ গিগাবাইট ($1000\text{ GB}$)। বাইনারি পদ্ধতিতে এটি ১০২৪ গিগাবাইট।
 
 15. **All decimal values and integers are included in set of** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*
    A) whole numbers
    B) natural numbers
    C) real numbers
    D) integers
+answer: C
+explanation: বাস্তব সংখ্যা (Real numbers)-এর সেটের মধ্যে সকল পূর্ণসংখ্যা এবং দশমিক বা ভগ্নাংশ সংখ্যা অন্তর্ভুক্ত থাকে।
 
 16. **Who invented QWERTY keyboard?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*
    A) Steve jobs
    B) Christopher Latham Sholes
    C) Brain Sams
    D) Anderson Palimar
+answer: B
+explanation: ক্রিস্টোফার ল্যাথাম শোলস (Christopher Latham Sholes) ১৮৬৮ সালে টাইপরাইটারের জন্য QWERTY কীবোর্ড লেআউট আবিষ্কার করেন।
 
 17. **Which of the following is the smallest size in the list?** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*
    A) Zettabyte
    B) Gigabyte
    C) Petabyte
    D) Terabyte
+answer: B
+explanation: প্রদত্ত পরিমাপগুলোর মধ্যে গিগাবাইট (Gigabyte) সবচেয়ে ক্ষুদ্রতম ($1\text{ GB} < 1\text{ TB} < 1\text{ PB} < 1\text{ ZB}$)।
 
 18. **Microprocessor is used first in which generation computers?** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)]*
    a. Second generation
    b. Third generation
    c. Fourth generation
    d. Fifth generation
+answer: c
+explanation: চতুর্থ প্রজন্মের (Fourth generation) কম্পিউটারে প্রথমবারের মতো ভিএলএসআই প্রযুক্তির মাইক্রোপ্রসেসর ব্যবহার শুরু হয়।
 
 19. **On which aspect the analog computers are better than digital?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*
    A) Speed
    B) Accuracy
    C) Reliability
    D) Automatic
+answer: A
+explanation: অ্যানালগ কম্পিউটার অবিচ্ছিন্ন ভৌত সিগন্যাল কোনো ডিজিটাইজেশন বিলম্ব ছাড়াই তাৎক্ষণিকভাবে প্রক্রিয়া করে, ফলে গতি (Speed)-এর দিক থেকে এটি বিশেষ ক্ষেত্রে দ্রুতগতির।
 
 20. **How many numbers could ENIAC store in its internal memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*
    A) 100
    B) 20
    C) 80
    D) 40
+answer: B
+explanation: এনিয়াক (ENIAC) কম্পিউটারে ২০টি অ্যাকুমুলেটর ছিল এবং এর অভ্যন্তরীণ মেমোরিতে ২০টি ১০-ডিজিটের সংখ্যা সংরক্ষণ করা যেত।
 
 21. **Which of the following is a class of computers based on model?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*
    A) Digital Computers
    B) Hybrid Computers
    C) Analog Computers
    D) AT Computers
+answer: D
+explanation: পিসি মডেল বা ডিজাইনের ওপর ভিত্তি করে শ্রেণিবিভাগ হলো AT (Advanced Technology) ও XT কম্পিউটার; অন্যগুলো কাজের ধরনের ওপর ভিত্তি করে।
 
 22. **Which of the following is not true?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*
    A) Transistors are much smaller
    B) Transistors produce low heat
    C) Transistors were less reliable
    D) Transistors were used in radios and other electronic devices
+answer: C
+explanation: ট্রানজিস্টর ভ্যাকুয়াম টিউবের চেয়ে অনেক বেশি টেকসই ও নির্ভরযোগ্য (more reliable) ছিল; সুতরাং "Transistors were less reliable" উক্তিটি সত্য নয়।
 
 23. **Which was the most popular first-generation computer?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*
    A) IBM 1650
    B) IBM 360
    C) IBM 1130
    D) IBM 650
+answer: D
+explanation: প্রথম প্রজন্মের কম্পিউটারগুলোর মধ্যে আইবিএম ৬৫০ (IBM 650) ছিল সর্বাধিক জনপ্রিয় ও বাণিজ্যিক সাফল্য পাওয়া কম্পিউটার।
 
 24. **Which of the following is not a form of data?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*
    A) Numbers and characters
    B) images
    C) sound
    D) None of this
+answer: D
+explanation: সংখ্যা, ক্যারেক্টার, ছবি এবং শব্দ—সবগুলোই ডেটার বৈধ রূপ; তাই সঠিক উত্তর (D) None of this।
 
 25. **Which is equivalent is 1GB?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*
    A) 1e+4B
    B) 1e+6B
    C) 1e+8B
    D) 1e+9B
+answer: D
+explanation: ১ গিগাবাইট (1 GB) হলো $10^9$ বাইট বা সায়েন্টিফিক নোটেশনে `1e+9B`।
 
 26. **CPU, ________ are the basic components of a computer system.** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 261 (ET: N/A)]*
    a. Keyboard and monitor
    b. Main memory and I/O devices
    c. Keyboard and I/O devices
    d. Main memory and monitor
+answer: b
+explanation: ভন নিউম্যান আর্কিটেকচার অনুযায়ী কম্পিউটার সিস্টেমের তিনটি মৌলিক উপাদান হলো: সিপিইউ (CPU), প্রধান মেমোরি (Main memory), এবং আই/ও ডিভাইস (I/O devices)।
 
 27. **Who among the following is associated with the invention of computer?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 269 (ET: N/A)]*
    a. Edison
    b. Babbage
    c. Mac Millen
    d. Rangabhashyam
+answer: b
+explanation: চার্লস ব্যাবেজ (Charles Babbage) ডিফারেন্স ইঞ্জিন ও অ্যানালিটিক্যাল ইঞ্জিন আবিষ্কারের মাধ্যমে আধুনিক কম্পিউটারের ভিত্তি স্থাপন করেন।
 
 28. **What are the four key functions of a computer system?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 269 (ET: N/A)]*
    a. input, processing, output & storage
    b. keyboard, display, memory & disk drive
    c. bits, bytes, words & OSI
    d. word processing, spreadsheets & database
+answer: a
+explanation: কম্পিউটারের মৌলিক ৪টি প্রধান কাজ হলো: ইনপুট গ্রহণ (Input), প্রক্রিয়াকরণ (Processing), ফলাফল প্রদর্শন (Output) এবং তথ্য সংরক্ষণ (Storage)।
 
 29. **This is the smallest unit of data in a computer ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. Bit
    b. Byte
    c. Nibble
    d. Word
+answer: a
+explanation: কম্পিউটারের ডেটা ও মেমোরি পরিমাপের ক্ষুদ্রতম একক হলো বিট বা বাইনারি ডিজিট (Bit: 0 অথবা 1)।
 
 ## ICT & Emerging Technology (16)
 
