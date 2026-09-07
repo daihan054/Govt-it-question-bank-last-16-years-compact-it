@@ -18,6 +18,8 @@
    b) go python
    c) python
    d) run python
+answer: C
+explanation: Entering `python` (or `py` / `python3`) at the command prompt executes the Python binary and starts the interactive REPL interpreter shell.
 
 2. **What is the output of the following code?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*
    ```python
@@ -27,54 +29,72 @@
    (b) 4.0
    (c) 4
    (d) Error
+answer: C
+explanation: In Python, the `//` operator performs floor division, truncating any fractional remainder towards negative infinity. 9 // 2 yields 4.
 
 3. **Which of the following languages causes ‘Indentation Errors’ for not using tabs properly?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 180 (ET: N/A)]*
    a) JavaScript
    b) Python
    c) Java
    d) Ruby
+answer: B
+explanation: Python enforces structured block scoping through leading whitespace (indentation). Mixing tabs and spaces or using improper indentation levels triggers an `IndentationError`.
 
 4. **Which following code syntax shows a valid use of curly braces ‘{}’ in python?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*
    a) A={'one':1, 'two':2}
    b) if(A>5) {print("Hello")}
    c) A= {range(6)}
    d) B={A=5}
+answer: A
+explanation: In Python, curly braces `{}` are strictly reserved for declaring dictionaries (key: value pairs) and sets. Control flow structures like `if` use colons and indentation, not curly braces.
 
 5. **If List= [1,2,3,4,5] and write List[3] = List[1] then what will be List[3]?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*
    a) 1
    b) 3
    c) 2
    d) 4
+answer: C
+explanation: In the 0-indexed list `[1, 2, 3, 4, 5]`, index 1 holds value `2` and index 3 holds value `4`. Assigning `List[3] = List[1]` copies value `2` into `List[3]`.
 
 6. **In programming language DRY principle makes the code.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*
    a) reusable
    b) loop forever
    c) repetitive
    d) complex
+answer: A
+explanation: The DRY (Don't Repeat Yourself) software design principle aims to eliminate code duplication by abstracting repeated logic into reusable functions, classes, and modules.
 
 7. **Which of the following function converts a string into float in Python?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*
    A) int (x [, base])
    B) float(x)
    C) long (x [, base])
    D) str(x)
+answer: B
+explanation: The built-in `float(x)` function converts a numeric string or integer `x` into a floating-point number.
 
 8. **What is the output of following code? print 9//2** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*
    A) 4
    B) 4.0
    C) 4.5
    D) Error
+answer: A
+explanation: Floor division `9 // 2` rounds down to the nearest integer, resulting in integer `4`.
 
 9. **Which of these is not a core data type?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*
    A) Lists
    B) Dictionary
    C) Class
-   D) Tuples+95
+   D) Tuples
+answer: C
+explanation: Lists, Dictionaries, Tuples, Numbers, Strings, and Sets are built-in core data types in Python. A Class is a user-defined type construct.
 
-10. **What are the values of the following expressions? 2** (3**2), (2**3) **2, 2**3**2** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*
+10. **What are the values of the following expressions? 2\*\*(3\*\*2), (2\*\*3)\*\*2, 2\*\*3\*\*2** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*
    A) 64, 512, 64
    B) 64, 64, 64
    C) 512, 512, 512
    D) 512, 64, 512
+answer: D
+explanation: The exponent operator `**` evaluates right-to-left in Python: `2**(3**2)` = `2**9` = 512; `(2**3)**2` = `8**2` = 64; and `2**3**2` = `2**(3**2)` = `2**9` = 512.
 
 ## Mobile & Android Development (7)
 
