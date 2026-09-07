@@ -1331,42 +1331,56 @@ explanation: ডেটাবেসে একটি ফিল্ড (Field) ব�
    b) Drop, Comment
    c) Insert, Update, Delete
    d) Select, Commit
+answer: C
+explanation: ডেটাবেস ট্রিগার স্বয়ংক্রিয়ভাবে সক্রিয় হওয়ার প্রধান DML ইভেন্টগুলো হলো: INSERT, UPDATE এবং DELETE।
 
 2. **How can you generate debugging output from PL/SQL?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*
    a) DBMS_SQL
    b) DBMS_OUTPUT
    c) DBMS_PIPE
    d) DBMS_LOB
+answer: B
+explanation: PL/SQL প্রোগ্রামে ডিবাগ মেসেজ এবং আউটপুট স্ক্রিনে প্রদর্শন করার জন্য `DBMS_OUTPUT` (যেমন: `DBMS_OUTPUT.PUT_LINE`) প্যাকেজ ব্যবহৃত হয়।
 
 3. **What is GET_BLOCK property?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*
    a) Restricted procedure
    b) Unrestricted procedure
    c) Library function
    d) None of the above
+answer: B
+explanation: ওরাকল ফর্মস (Oracle Forms)-এ `GET_BLOCK_PROPERTY` হলো একটি আনরেস্ট্রিক্টেড বিল্ট-ইন (Unrestricted procedure/function), যা কোনো নেভিগেশন পরিবর্তন না করে যেকোনো ট্রিগার থেকে চালানো যায়।
 
 4. **Which is not the UTL_FILE function-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*
    a) FOPEN()
    b) File_Close()
    c) FCOPY
    d) FFLUSH()
+answer: B
+explanation: ওরাকলের `UTL_FILE` প্যাকেজে ফাইল বন্ধ করার সঠিক ফাংশনের নাম `FCLOSE()`; এখানে `File_Close()` নামে কোনো ফাংশন নেই।
 
 5. **Which of the following protocol is an SQL trigger support by oracle?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*
    A) Before
    B) Instead of
    C) After
    D) All of the above
+answer: D
+explanation: ওরাকল ডেটাবেসে BEFORE (ইভেন্টের পূর্বে), AFTER (ইভেন্টের পরে) এবং INSTEAD OF (ভিউয়ের ওপর) সব ধরনের ট্রিগার সাপোর্ট করে।
 
 6. **________ is a statement that is executed automatically by the system.** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
    A) Trigger constraint
    B) Assertion
    C) Durability
    D) Integrity
+answer: A
+explanation: ডেটাবেসে কোনো নির্দিষ্ট ইভেন্ট বা পরিবর্তনের প্রতিক্রিয়া হিসেবে সিস্টেম দ্বারা স্বয়ংক্রিয়ভাবে সম্পাদিত স্টেটমেন্টকে ট্রিগার (Trigger) বলা হয়।
 
 7. **What does a COMMIT statement do to a CURSOR?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
    A) Open the cursor
    B) Fetch the cursor
    C) Close the cursor
    D) None of this
+answer: C
+explanation: ডেটাবেসে ট্রানজ্যাকশন `COMMIT` বা `ROLLBACK` হলে খোলা থাকা কার্সারগুলো (বিশেষ করে `FOR UPDATE` কার্সার) স্বয়ংক্রিয়ভাবে বন্ধ (Close the cursor) হয়ে যায়।
 
 ## Database Fundamentals & SQL (7)
 1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
