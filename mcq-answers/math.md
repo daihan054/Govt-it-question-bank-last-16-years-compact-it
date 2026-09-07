@@ -850,94 +850,124 @@ explanation: SQL ইনজেকশন হলো এমন একটি সা�
    b) ১৫
    c) ১৬
    d) ৩৪
+answer: b
+explanation: $n$ ক্রমের ম্যাজিক বর্গের ম্যাজিক সংখ্যা নির্ণয়ের সূত্র $M = \frac{n(n^2+1)}{2}$। সুতরাং ৩ ক্রমের জন্য $M = \frac{3(3^2+1)}{2} = \frac{3 \times 10}{2} = 15$।
 
 2. **প্রথম n সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
    a) 2n
    b) n^2
    c) n^3
    d) \frac{n^2}{2}
+answer: b
+explanation: প্রথম $n$ সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টির সূত্র হলো $n^2$ (যেমন: $1+3=4=2^2$, $1+3+5=9=3^2$)।
 
 3. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ৩৫৫
    খ. ৪৬৫
    গ. ৫২৫
    ঘ. ৬৭৫
+answer: খ
+explanation: প্রথম $n$ সংখ্যক স্বাভাবিক সংখ্যার যোগফল $S = \frac{n(n+1)}{2}$। এখানে $n=30$, তাই $S = \frac{30 \times 31}{2} = 15 \times 31 = 465$।
 
 4. **1^2 + 2^2 + 3^2 + ................ + 7^2 ধারাটির সমষ্টি কত?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 9 (ET: BIBM)]*
    a) \frac{n(n+1)}{2}
    b) \left\{\frac{n(n+1)}{2}\right\}
    c) \frac{n(n+1)(n+2)}{6}
    d) \frac{n(n+1)(2n+1)}{6}
+answer: d
+explanation: প্রথম $n$ সংখ্যক স্বাভাবিক সংখ্যার বর্গের সমষ্টির সাধারণ সূত্র হলো $\frac{n(n+1)(2n+1)}{6}$।
 
-5. **On a2 km road, a total of 201 trees are planted on the side of the road at equal distances. How many such trees will be planted on a 50 km road such that the distance between two consecutive trees is the same as that of the consecutive trees on the 2 km road?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*
+5. **On a 2 km road, a total of 201 trees are planted on the side of the road at equal distances. How many such trees will be planted on a 50 km road such that the distance between two consecutive trees is the same as that of the consecutive trees on the 2 km road?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*
    (a) 501
    (b) 1000
    (c) 5000
    (d) 5001
+answer: d
+explanation: ২ কিমি বা ২০০০ মিটারে ২০১টি গাছ থাকলে ব্যবধান (interval) সংখ্যা $= 201 - 1 = 200$। দুটি গাছের মধ্যবর্তী দূরত্ব $= \frac{2000}{200} = 10$ মিটার। সুতরাং ৫০ কিমি (৫০,০০০ মিটার) রাস্তায় ব্যবধান $= \frac{50000}{10} = 5000$টি। অতএব মোট গাছ লাগবে $= 5000 + 1 = 5001$টি।
 
 6. **The number 3 divides 'a' with a result of 'b' and a reminder of 2. The number 3 divides 'b' with a result of 2 and 'a' reminder of 1. What is the value of 'a'?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*
    (a) 13
    (b) 17
    (c) 23
    (d) 21
+answer: c
+explanation: প্রশ্নানুসারে $b = 3 \times 2 + 1 = 7$। এরপর $a = 3 \times b + 2 = 3 \times 7 + 2 = 21 + 2 = 23$।
 
 7. **A prime number is a number that is divisible only by itself and 1. Which of the following is not a prime number?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)], [Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    (a) 2
    (b) 7
    (c) 99
    (d) 181
+answer: c
+explanation: ৯৯ সংখ্যাটি ১ এবং ৯৯ ছাড়াও ৩, ৯, ১১ ও ৩৩ দ্বারা নিঃশেষে বিভাজ্য, তাই এটি মৌলিক সংখ্যা নয় (যৌগিক সংখ্যা)।
 
 8. **৬০ থেকে ৮০ এর মধ্যে বৃহত্তর ও ক্ষুদ্রতম মৌলিক সংখ্যার অন্তর কত?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
-   **Ans:** ১৮
+answer: ১৮
+explanation: ৬০ থেকে ৮০ এর মধ্যে ক্ষুদ্রতম মৌলিক সংখ্যা হলো ৬১ এবং বৃহত্তম মৌলিক সংখ্যা হলো ৭৯। এদের অন্তর $= 79 - 61 = 18$।
 
 9. **1\text{ cm}^3 কত \text{m}^3 এর সমান?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
    (ক) 10^{-6}\text{ m}^3
    (খ) 10^{-3}\text{ m}^3
    (গ) 10^{-2}\text{ m}^3
    (ঘ) 0.1\text{ m}^3
-   **উত্তর: ক**
+answer: ক
+explanation: $1\text{ cm} = 10^{-2}\text{ m}$। সুতরাং $1\text{ cm}^3 = (10^{-2}\text{ m})^3 = 10^{-6}\text{ m}^3$।
 
 10. **Of the series 5+8+11+14 ________ which term is 383?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
    a) 122ᵗʰ
    b) 127ᵗʰ
    c) 136ᵗʰ
    d) 144ᵗʰ
+answer: b
+explanation: সমান্তর ধারার প্রথম পদ $a = 5$, সাধারণ অন্তর $d = 8 - 5 = 3$। $n$-তম পদ $T_n = a + (n-1)d \implies 383 = 5 + 3(n-1) \implies 3(n-1) = 378 \implies n-1 = 126 \implies n = 127$।
 
 11. **How many positive integers less than ten thousand are multiples of both eight and eighteen?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. 70
    b. 72
    c. 138
    d. 139
+answer: c
+explanation: ৮ এবং ১৮ এর ল.সা.গু. (LCM) $= \text{LCM}(8, 18) = 72$। ১০,০০০ এর চেয়ে ছোট ৭২ এর গুণিতক সংখ্যা $= \lfloor \frac{9999}{72} \rfloor = 138$টি।
 
 12. **The H.S.F and L.C.M of two number are 12 and 288 respectively. If one of the numbers is 96, find the other.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. 34
    b. 36
    c. 38
    d. 40
+answer: b
+explanation: দুটি সংখ্যার গুণফল $=$ গ.সা.গু. $\times$ ল.সা.গু.। অতএব অপর সংখ্যাটি $= \frac{\text{HCF} \times \text{LCM}}{\text{One number}} = \frac{12 \times 288}{96} = \frac{288}{8} = 36$।
 
 13. **How many prime numbers are there from 1 to 10?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*
    ক. 10
    খ. 5
    গ. 4
    ঘ. 3
+answer: গ
+explanation: ১ থেকে ১০ পর্যন্ত মৌলিক সংখ্যাগুলো হলো: ২, ৩, ৫ এবং ৭; মোট ৪টি।
 
 14. **If each of the six members of a family gives money as per their membership number, then what will be the total amount?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*
    ক. 216
    খ. 125
    গ. 100
    ঘ. 64
+answer: ক
+explanation: পরিবারের ৬ জন সদস্যের প্রত্যেকে সদস্য সংখ্যার বর্গের সমান চাঁদা দিলে মোট টাকা হয় $6 \times 6^2 = 6^3 = 216$ টাকা।
 
 15. **Which one is the smallest?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*
    ক. 0.02
    খ. 1/100
    গ. 10
    ঘ. None
+answer: খ
+explanation: $1/100 = 0.01$। বিকল্পগুলোর মধ্যে $0.01 < 0.02 < 10$, তাই ক্ষুদ্রতম সংখ্যাটি হলো $1/100$।
 
 16. **In the given AP series find the number of items 5,8,11,14,17,20, .......,50** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*
    A) 11
    B) 13
    C) 15
    D) 16
+answer: D
+explanation: সমান্তর ধারার প্রথম পদ $a = 5$, অন্তর $d = 3$, শেষ পদ $L = 50$। পদসংখ্যা $n = \frac{L - a}{d} + 1 = \frac{50 - 5}{3} + 1 = \frac{45}{3} + 1 = 15 + 1 = 16$।
 
 ## Time, Work & Distance (11)
 
