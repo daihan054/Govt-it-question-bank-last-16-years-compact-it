@@ -1264,12 +1264,16 @@ explanation: ই-আর ডায়াগ্রামের মেনি-টু
 
 1. **What is the degree of relation?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.
+answer: Number of attributes / Number of entity types
+explanation: রিলেশনাল মডেলে একটি টেবিল বা রিলেশনের মোট অ্যাট্রিবিউট বা কলাম সংখ্যাকে 'Degree of Relation' বলে; আর একটি রিলেশনশিপে যুক্ত এনটিটি টাইপের সংখ্যাকে 'Degree of Relationship' বলে।
 
 2. **Which one of the following is true for a tuple in a database?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*
    a) A tuple in a database represents a column
    b) A tuple in a database represents database schema.
    c) A tuple in a database represents a Record
    d) A tuple in a database represents a Database topology
+answer: C
+explanation: রিলেশনাল ডেটাবেস মডেলে প্রতিটি টাপল (Tuple) টেবিলের একটি একক ডেটা সারি বা রেকর্ডকে (Record) নির্দেশ করে।
 
 3. **In a table an attribute named interest is defined as follows,** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    When which one is the correct format for the interest columns?
@@ -1277,36 +1281,48 @@ explanation: ই-আর ডায়াগ্রামের মেনি-টু
    b) 7.2
    c) 19.02
    d) 1.03
+answer: D
+explanation: সুদের হার ডেটা টাইপ সাধারণত `NUMERIC(3, 2)` ফরম্যাটে সংজ্ঞায়িত করা হয়, যেখানে মোট ৩টি ডিজিটের মধ্যে দশমিকের পর ২টি ডিজিট থাকে (যেমন: `1.03`)।
 
 4. **Which one is not unary operator in relational algebra?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 157 (ET: N/A)]*
    A) Select
    B) Project
    C) Union
    D) Renames
+answer: C
+explanation: রিলেশনাল অ্যালজেব্রায় সিলেক্ট ($\sigma$), প্রজেক্ট ($\Pi$) এবং রিনেম ($\rho$) হলো ইউনারি অপারেটর (একটি মাত্র টেবিলের ওপর কাজ করে); অপরদিকে ইউনিয়ন ($\cup$) হলো একটি বাইনারি অপারেটর (দুটি টেবিলের ওপর কার্যকর হয়)।
 
 5. **Which one is an entity?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 157 (ET: N/A)]*
    A) Roll No.
    B) Student
    C) Passport No.
    D) Department ID
+answer: B
+explanation: বাস্তব জগতের ব্যক্তি বা বস্তু যাকে স্বতন্ত্রভাবে চিহ্নিত করা যায় তাকে এনটিটি বলে; এখানে 'Student' একটি এনটিটি, আর বাকিগুলো হলো স্টুডেন্টের অ্যাট্রিবিউট।
 
 6. **Which one is TRUE for FIRD?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 158 (ET: N/A)]*
    A) Uses electromagnetic signal
    B) Uses laser beam
    C) Uses optical signal
    D) Uses infrared
+answer: A
+explanation: RFID (Radio Frequency Identification, প্রশ্নে মুদ্রণজনিত কারণে FIRD লিখিত) দূর থেকে রেডিও বা তড়িৎ-চৌম্বকীয় সংকেত (Electromagnetic signal) ব্যবহারের মাধ্যমে ট্যাগ রিড করে।
 
 7. **Flat file database is most useful for ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*
    A) Large scale users
    B) Banking
    C) Small-group situation.
    D) Chain stores
+answer: C
+explanation: ফ্ল্যাট ফাইল ডেটাবেসে কোনো রিলেশন বা জটিল কুয়েরি সুবিধা থাকে না; তাই এটি খুব সীমিত পরিসরে বা ক্ষুদ্র দলের ব্যবহারের জন্য (Small-group situation) উপযুক্ত।
 
 8. **In database, a field is ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*
    A) Label
    B) Category of Information
    C) Group of related records
    D) Table of information
+answer: B
+explanation: ডেটাবেসে একটি ফিল্ড (Field) বা কলাম তথ্যের একটি নির্দিষ্ট শ্রেণি বা বিভাগকে (Category of Information) ধারণ করে।
 
 ## PL/SQL & Triggers (7)
 
