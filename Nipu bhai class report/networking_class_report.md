@@ -1,81 +1,81 @@
 ## Sir ja poraise
 
-1. Networking Fundamentals & Devices:
-   i) Intranet vs. Internet এর মৌলিক ধারণা
-   ii) End-User Devices (PC, Printer, Server, Smartphone)
-   iii) Intermediary Devices (Router, Wireless Router, Cell Tower, Modem, Internet Cloud)
-   iv) Small Network Architecture (Hub vs. Switch: Hub insecure broadcast, Switch secure MAC-based unicast)
-   v) Enterprise Network Architecture (Access switch -> Core switch -> Perimeter router -> Internet)
+1) Networking Fundamentals & Devices:
+   i) Intranet vs. Internet: ইন্ট্রানেট (প্রাইভেট লোকাল নেটওয়ার্ক) এবং ইন্টারনেটের (পাবলিক গ্লোবাল নেটওয়ার্ক) মধ্যকার মৌলিক পার্থক্য ও ব্যবহার।
+   ii) End-User Devices: ইউজার সরাসরি ব্যবহার করে এমন টার্মিনাল ডিভাইস যেমন PC, Printer, Server, Smartphone ইত্যাদি।
+   iii) Intermediary Devices: ডেটা আদান-প্রদানে মধ্যবর্তী সহায়ক ডিভাইস যেমন Router, Wireless Router, Cell Tower, Modem, Internet Cloud।
+   iv) Small Network Architecture (Hub vs. Switch): ছোট অফিসে হাব বনাম সুইচ—হাব হলো ইনসিকিউর/ব্রডকাস্ট ডিভাইস, পক্ষান্তরে সুইচ হলো সিকিউর যা নির্দিষ্ট MAC অ্যাড্রেস দেখে ইউনিটি বা ইউনিকাস্ট ফ্রেম পাঠায়।
+   v) Enterprise Network Architecture: বড় কোম্পানির ক্ষেত্রে একাধিক অ্যাক্সেস সুইচ (যেমন ৪৮-পোর্টের Switch-1, Switch-2) কোর সুইচের সাথে এবং কোর সুইচ পেরিমিটার রাউটার হয়ে ইন্টারনেটে যুক্ত থাকে।
 
-2. Enterprise Security Devices & Architecture:
-   i) 11 Core Devices (PCs, Firewall, Switch, IPS, IDS, Anti-DDoS, WAF, Web Server, Database Server, Storage SAN, SIEM/Monitoring)
-   ii) Zero Trust Architecture ("Never trust, always verify" মডেল)
+2) Enterprise Security Devices & Architecture:
+   i) 11 Core Enterprise Devices: ওয়ার্ল্ড ব্যাংকের মতো বড় সংস্থায় ব্যবহৃত ১১টি প্রধান ডিভাইস (PCs, Firewall, Switch, IPS, IDS, Anti-DDoS, WAF, Web Server, Database Server, Storage SAN, SIEM/Monitoring)।
+   ii) Zero Trust Architecture: আধুনিক সিকিউর নেটওয়ার্ক ডিজাইনের দর্শন যেখানে "কাউকেই ডিফল্টভাবে বিশ্বাস না করে সবসময় যাচাই" (Never trust, always verify) নীতি অনুসরণ করা হয়।
 
-3. Network Architecture Evolution & DMZ:
-   i) Old Flat Network (User + Server + DB একই জোনে থাকার ঝুঁকি)
-   ii) Perimeter Hardware Firewall Placement
-   iii) Modern 3-Tier Architecture (DMZ, User Network, Server Network)
+3) Network Architecture Evolution & DMZ:
+   i) Old Flat Network: পুরনো আর্কিটেকচার যেখানে ফায়ারওয়ালের পেছনে একই নেটওয়ার্কে ইউজার, সার্ভার ও ডেটাবেজ থাকত, যা অত্যন্ত অনিরাপদ ও এক পিসি আক্রান্ত হলেই সব কম্প্রোমাইজড হতো।
+   ii) Perimeter Hardware Firewall: ইউজার সুইচের বাইরে নেটওয়ার্ক পেরিমিটারে ডেডিকেটেড হার্ডওয়্যার ফায়ারওয়াল স্থাপন।
+   iii) Modern 3-Tier Architecture: আধুনিক নেটওয়ার্কে ফায়ারওয়ালের পেছনে ট্রাফিক ৩টি পৃথক জোনে বিভক্ত (DMZ, User Network এবং Apps/DB সমন্বিত Server Network)।
 
-4. Hacker-Resilient Multi-tier DMZ Architecture:
-   i) Demilitarized Zone (DMZ) - Public-facing Web, Email, Mobile servers
-   ii) Internal Firewall Placement & Rule Configuration
-   iii) Database Server Isolation in Secure Zone (No direct internet access)
-   iv) Port-based Access Filtering (Allow only MySQL Port 3306, ALL DENY)
+4) Hacker-Resilient Multi-tier DMZ Architecture:
+   i) Demilitarized Zone (DMZ): ইন্টারনেটমুখী পাবলিক-ফেসিং বাফার জোন যেখানে WAF এবং Web Server (Web, Email, Mobile ট্রাফিকের জন্য) অবস্থান করে।
+   ii) Internal Firewall: DMZ এবং মূল ডেটাবেজ জোনের মাঝে বসানো দ্বিতীয় ফায়ারওয়াল যা ভেতরের সিকিউর নেটওয়ার্ককে আলাদা রাখে।
+   iii) Database Server Isolation: ডেটাবেজকে ইন্টারনেটের সাথে কোনো সরাসরি সংযোগ না রেখে সর্বোচ্চ সুরক্ষিত অভ্যন্তরীণ জোনে রাখা।
+   iv) Port-based Access Filtering: ইন্টারনাল ফায়ারওয়ালে কঠোর রুল সেট করা (শুধুমাত্র অনুমোদিত MySQL Port 3306 অ্যালাউ, বাকি সব রিকোয়েস্ট ALL DENY)।
 
-5. Defense in Depth & Firewall Technologies:
-   i) Defense in Depth (স্তরভিত্তিক নিরাপত্তা কাঠামো)
-   ii) Traditional Packet Filtering Firewall (Header & Footer check)
-   iii) Next-Generation Firewall / NGFW (Deep packet inspection, Payload, SSL Decryption)
-   iv) Web Application Firewall (WAF) Functions (Reverse proxy/Public IP hide, Malicious traffic blocking, Web attack mitigation like SQLi/XSS, Load balancing)
+5) Defense in Depth & Firewall Technologies:
+   i) Defense in Depth: স্তরভিত্তিক নিরাপত্তা নীতি—DMZ-এর ওয়েব সার্ভার হ্যাক হলেও ইন্টারনাল ফায়ারওয়ালের কঠোর পলিসির কারণে আক্রমণকারী যেন ডেটাবেজে পৌঁছাতে না পারে।
+   ii) Traditional Packet Filtering Firewall: পুরনো ফায়ারওয়াল যা শুধু প্যাকেটের হেডার ও ফুটার (IP, Port, Protocol) দেখে ট্রাফিক ফিল্টার করে।
+   iii) Next-Generation Firewall (NGFW): আধুনিক ফায়ারওয়াল যা ডিপ প্যাকেট ইন্সপেকশন (DPI), অ্যাপ্লিকেশন অ্যাওয়ারনেস, সম্পূর্ণ পেলোড (Payload) এবং এনক্রিপশন/ডিক্রিপশন চেক করতে পারে।
+   iv) Web Application Firewall (WAF) Functions: অ্যাপ্লিকেশন লেয়ারের সুরক্ষা—ব্যাকএন্ড পাবলিক আইপি গোপন রাখা (Reverse Proxy), ক্ষতিকর ওয়েব ট্রাফিক ব্লক, ওয়েব স্ক্রিপ্ট অ্যাটাক (SQL Injection, XSS) প্রতিহত করা এবং লোড ব্যালান্সিং।
 
-6. Anti-DDoS Protection & Multi-Layer Filtering:
-   i) DDoS Flood Traffic Characteristics (Software-generated garbage packets)
-   ii) Anti-DDoS Hardware Filtering before firewall
-   iii) Multi-Layer Security Pipeline (Anti-DDoS -> Firewall -> WAF -> Web Server -> Internal Firewall -> Database Server)
+6) Anti-DDoS Protection & Multi-Layer Filtering:
+   i) DDoS Flood Traffic Characteristics: বট বা সফটওয়্যার জেনারেটেড ভুয়া ও অতিরিক্ত রিকোয়েস্টের বন্যা যার কোনো বৈধ হেডার/ফুটার উদ্দেশ্য থাকে না এবং লক্ষ্য থাকে সার্ভার ডাউন করা।
+   ii) Anti-DDoS Hardware Filtering: ট্রাফিক মূল ফায়ারওয়ালে পৌঁছানোর আগেই স্পেশালাইজড অ্যান্টি-ডিডস ডিভাইসের মাধ্যমে গারবেজ ট্রাফিক ছেঁকে ফেলা।
+   iii) Multi-Layer Security Pipeline: বহুস্তরী ফিল্টারিং পাইপলাইন (Filter 1: Anti-DDoS -> Filter 2: Perimeter Firewall -> Filter 3: WAF -> Web Server -> Filter 4: Internal Firewall -> Database Server)।
 
-7. End-to-End Enterprise Flow & Asset Valuation:
-   i) Internet to Database Architecture Flow (Anti-DDoS -> Firewall -> WAF -> Load Balancer -> Web Servers -> App Server -> Internal Firewall -> Database Server)
-   ii) Database Asset Classification (High-Value Asset / Crown Jewel)
+7) End-to-End Enterprise Flow & Asset Valuation:
+   i) Internet to Database Architecture Flow: এন্ড-টু-এন্ড ট্রাফিক প্রবাহ (Internet -> Anti-DDoS -> Firewall -> WAF -> Load Balancer -> Web Servers -> App Server -> Internal Firewall -> Database Server)।
+   ii) Database Asset Classification: ডেটাবেজ কোনো সাধারণ এসেট নয়, এটি প্রতিষ্ঠানের সবচেয়ে মূল্যবান সম্পদ বা "High-Value Asset" (Crown Jewel)।
 
-8. SOC, SIEM & Security Architecture:
-   i) High Availability (HA) Firewall Configuration
-   ii) IDS/IPS Log Analysis Software
-   iii) SIEM (Security Information and Event Management) Log Monitoring
-   iv) SOC (Security Operations Center) Incident Response
-   v) VPN Gateway for Secure Remote Access
+8) SOC, SIEM & Security Architecture:
+   i) High Availability (HA) Firewall: সিঙ্গেল পয়েন্ট অফ ফেইলিউর রোধ করতে পেরিমিটার ফায়ারওয়াল হাই অ্যাভেইলেবিলিটি রিডানড্যান্ট মোডে কনফিগার করা।
+   ii) IDS/IPS Log Analysis: ইন্ট্রুশন ডিটেকশন ও প্রিভেনশন সিস্টেম সফটওয়্যার যা সন্দেহজনক কার্যকলাপ শনাক্তে নেটওয়ার্ক লগ বিশ্লেষণ করে।
+   iii) SIEM Log Monitoring: পুরো নেটওয়ার্কের বিভিন্ন ডিভাইসের ইভেন্ট লগ কেন্দ্রীয়ভাবে সংগ্রহ ও অ্যানালাইসিস করার সিস্টেম (Security Information and Event Management)।
+   iv) SOC Monitoring: সিকিউরিটি অপারেশন সেন্টারে (SOC) অ্যানালিস্টদের দ্বারা রিয়েল-টাইম থ্রেট মনিটরিং ও রেসপন্স।
+   v) VPN Gateway: রিমোট ইউজার ও শাখা অফিসগুলোর জন্য এনক্রিপ্টেড ও সুরক্ষিত ভার্চুয়াল প্রাইভেট নেটওয়ার্ক টানেল নিশ্চিত করা।
 
-9. OSI Application Layer (Layer 7):
-   i) OSI 7 Layers Model Overview (PDNTSPA)
-   ii) Interface with Network Applications (Chrome, Firefox, etc.)
-   iii) Application Layer Protocols (HTTP, HTTPS, FTP, SMTP, POP3, DHCP)
-   iv) Virtual Terminal Protocol (Telnet)
+9) OSI Application Layer (Layer 7):
+   i) OSI 7 Layers Model Overview: ওএসআই রেফারেন্স মডেলের ৭টি স্তরের ক্রম ও সংক্ষেপ রূপ (PDNTSPA: Physical, Data Link, Network, Transport, Session, Presentation, Application)।
+   ii) Interface with Network Applications: বিভিন্ন এন্ড-ইউজার সফটওয়্যার ও ওয়েব ব্রাউজার (Chrome, Firefox) নেটওয়ার্কে কমিউনিকেশন করার জন্য এই লেয়ার ব্যবহার করে।
+   iii) Application Layer Protocols: বিভিন্ন সেবার প্রোটোকল—ওয়েব ব্রাউজিংয়ের জন্য HTTP/HTTPS, ফাইল ট্রান্সফারের জন্য FTP, ইমেইলের জন্য SMTP/POP3 এবং অটো আইপি পাওয়ার জন্য DHCP।
+   iv) Virtual Terminal Protocol: দূরবর্তী সার্ভার বা নেটওয়ার্ক ডিভাইসে রিমোটলি কমান্ড-লাইন অ্যাক্সেসের জন্য Telnet প্রোটোকল।
 
-10. OSI Presentation Layer (Layer 6):
-    i) Character Translation & Binary Encoding (ASCII to EBCDIC)
-    ii) Data Compression Algorithms (Huffman Coding)
-    iii) Encryption & Decryption (SSL - Secure Sockets Layer Protocol)
+10) OSI Presentation Layer (Layer 6):
+    i) Character Translation & Binary Encoding: বিভিন্ন অপারেটিং সিস্টেমের ডেটা ফরম্যাট ও ক্যারেক্টার এনকোডিংকে মেশিনের বোধগম্য বাইনারিতে রূপান্তর (যেমন ASCII থেকে EBCDIC)।
+    ii) Data Compression Algorithms: ব্যান্ডউইথ সাশ্রয়ের জন্য ট্রান্সমিশনের আগে ডেটার সাইজ কমানো (যেমন Huffman Coding অ্যালগরিদম ব্যবহার)।
+    iii) Encryption & Decryption: ট্রানজিটে ডেটার গোপনীয়তা রক্ষায় প্রেজেন্টেশন লেয়ারে SSL (Secure Sockets Layer) প্রোটোকলের মাধ্যমে এনক্রিপশন ও ডিক্রিপশন সম্পাদন।
 
-11. OSI Session Layer (Layer 5):
-    i) Authentication ("Who are you?")
-    ii) Authorization ("Access Permissions: Admin vs Guest")
-    iii) Session Management & State Tracking
-    iv) Browser-managed Upper Layers (Application, Presentation, Session)
+11) OSI Session Layer (Layer 5):
+    i) Authentication: যোগাযোগ শুরুর আগে ব্যবহারকারী আসলেই কে তা নিশ্চিত করা ("Who are you?")।
+    ii) Authorization: ব্যবহারকারী শনাক্ত হওয়ার পর তার সিস্টেমে কী কী সুবিধা পাওয়ার অনুমতি রয়েছে তা নির্ধারণ ("Admin vs. Guest access permissions")।
+    iii) Session Management & State Tracking: একাধিক অ্যাপ্লিকেশন ও ডেটার সেশন স্থাপন, পরিচালনা ও সমাপ্তি ট্র্যাক রাখা।
+    iv) Browser-managed Upper Layers: ওয়েব ব্রাউজার মূলত উপরের ৩টি লেয়ারই (Application, Presentation, Session) সমন্বিতভাবে পরিচালনা করে।
 
-12. OSI Transport Layer (Layer 4):
-    i) Data Segmentation & Port Addressing (IP + Port combination)
-    ii) Flow Control (Rate matching between sender and receiver)
-    iii) Error Control (ARQ - Automatic Repeat reQuest)
-    iv) TCP vs. UDP Protocol Comparison (Reliable/Bank Transaction vs. Fast/Live Streaming)
+12) OSI Transport Layer (Layer 4):
+    i) Data Segmentation & Port Addressing: বড় ডেটাকে ছোট ছোট সেগমেন্টে বিভক্ত করা এবং আইপি ও পোর্ট নম্বরের সমন্বয়ে নির্দিষ্ট অ্যাপ্লিকেশন শনাক্তকরণ (যেমন MySQL এর জন্য localhost:3306)।
+    ii) Flow Control: প্রেরক ও প্রাপক ডিভাইসের গতির বৈষম্য দূর করতে ডেটা প্রেরণের হার নিয়ন্ত্রণ (যেমন সার্ভার 100 Mbps-এ পাঠালেও রিসিভিং ফোন যেন 20 Mbps-এ ড্রপ ছাড়া গ্রহণ করতে পারে)।
+    iii) Error Control: ডেটা লস হলে বা নষ্ট হলে ARQ (Automatic Repeat reQuest) প্রক্রিয়ার মাধ্যমে পুনরায় ডেটা চাওয়ার ব্যবস্থা।
+    iv) TCP vs. UDP Protocol Comparison: টিসিপি হলো কানেকশন-ওরিয়েন্টেড ও নির্ভরযোগ্য যা শতভাগ নির্ভুলতার ক্ষেত্রে প্রয়োজন (যেমন ব্যাংকিং লেনদেন), আর ইউডিপি হলো কানেকশনলেস ও দ্রুতগতির যা সাময়িক প্যাকেট লস হলেও চলে (যেমন লাইভ ক্রিকেট স্ট্রিমিং)।
 
-13. OSI Network Layer (Layer 3):
-    i) Logical Addressing (IPv4, IPv6, Packet Encapsulation)
-    ii) Routing & Path Determination
-    iii) Shortest Path Algorithms (Dijkstra's Algorithm)
+13) OSI Network Layer (Layer 3):
+    i) Logical Addressing: নেটওয়ার্কে হোস্ট শনাক্তকরণে লজিক্যাল আইপি অ্যাড্রেসিং (IPv4 ও IPv6) এবং সেগমেন্টের সাথে সোর্স ও ডেস্টিনেশন আইপি যোগ করে প্যাকেট তৈরি করা।
+    ii) Routing & Path Determination: এক নেটওয়ার্ক থেকে অন্য নেটওয়ার্কে প্যাকেট পৌঁছানোর সর্বোত্তম রুট নির্ধারণ।
+    iii) Shortest Path Routing Algorithm: রাউটিং প্রোটোকলে (যেমন OSPF) সবচেয়ে কম দূরত্বের পথ খুঁজে পেতে Dijkstra's Algorithm ব্যবহার।
 
-14. OSI Data Link Layer (Layer 2) & PDU Hierarchy:
-    i) Physical Addressing (MAC Address & Frame Structure)
-    ii) PDU Hierarchy (Segment -> Packet -> Frame -> Bit)
-    iii) Firewall Inspection Level (Packet vs. Frame)
+14) OSI Data Link Layer (Layer 2) & PDU Hierarchy:
+    i) Physical Addressing: লোকাল নেটওয়ার্কে নোড-টু-নোড ডেলিভারির জন্য হার্ডওয়্যার MAC Address যুক্ত করে প্যাকেটকে ফ্রেমে (Frame) রূপান্তর।
+    ii) PDU Hierarchy: লেয়ারভেদে ডেটার প্রোটোকল ডেটা ইউনিট বা পিডিইউ রূপান্তর ক্রম—Data -> Segment (Transport) -> Packet (Network) -> Frame (Data Link) -> Bit (Physical)।
+    iii) Firewall Inspection Level: ট্র্যাডিশনাল প্যাকেট ফিল্টারিং ফায়ারওয়াল সাধারণত ফ্রেম/প্যাকেট হেডার চেক করে, আর আধুনিক NGFW পুরো পেলোড পর্যন্ত ইনস্পেকশন করে।
 
 ---
 
