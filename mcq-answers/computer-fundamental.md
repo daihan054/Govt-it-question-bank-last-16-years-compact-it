@@ -1244,78 +1244,104 @@ explanation: ভার্চুয়াল রিয়েলিটিতে �
    (খ) Common Path Method a
    (গ) Critical Project Method
    (ঘ) Critical Path Method
+answer: D
+explanation: প্রজেক্ট ম্যানেজমেন্টে CPM বা Critical Path Method একটি বহুল ব্যবহৃত নেটওয়ার্ক বিশ্লেষণ পদ্ধতি। (প্রশ্নে CMP মুদ্রিত থাকলেও সঠিক অভিব্যক্তি Critical Path Method)।
 
 2. **What is the full name of LCD?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*
    A) Light control diode
    B) Light crystal display
    C) Liquid crystal diode
    D) Liquid crystal display
+answer: D
+explanation: LCD এর পূর্ণরূপ হলো Liquid Crystal Display, যা তরল স্ফটিকের আলোক নিয়ন্ত্রণ বৈশিষ্ট্য ব্যবহার করে ছবি প্রদর্শন করে।
 
 3. **MIRC Means-** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*
    (a) Magnetic Ink Character Reader
    (b) Magnetic Ink Code Reader
    (c) Magnetic Ink Case Reader
    (d) None
+answer: A
+explanation: ব্যাংকের চেকে বিশেষ কালিতে মুদ্রিত অক্ষর পড়তে MICR (Magnetic Ink Character Reader/Recognition) ব্যবহৃত হয়।
 
 4. **An acronym for Conference/Committee on Data Systems Languages is?** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)]*
    A) Collute
    B) CCD
    C) CODASYL
    D) DASD
+answer: C
+explanation: CODASYL এর পূর্ণরূপ Conference on Data Systems Languages, যা COBOL সহ আধুনিক ডেটাবেস মডেল প্রণয়নে কাজ করেছিল।
 
 5. **An acronym for Conference/Committee on Data Systems Languages is?** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*
    A) DASD
    B) CCD
    C) CODASYL
    D) None of them
+answer: C
+explanation: Conference on Data Systems Languages-এর সংক্ষিপ্ত রূপ হলো CODASYL।
 
 6. **An acronym for conference of Data systems languages is –** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*
    A) Collate
    B) CODASYL
    C) CCD
    D) DASD
+answer: B
+explanation: CODASYL (Conference on Data Systems Languages)।
 
 7. **The computer code of the interchange of information between terminals is—** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*
    A) ASCII
    B) BCD
    C) EBCDIC
    D) All of them
+answer: A
+explanation: ASCII এর পূর্ণরূপ American Standard Code for Information Interchange; টার্মিনাল ও কম্পিউটারের মধ্যে টেক্সট তথ্য বিনিময়ের স্ট্যান্ডার্ড কোড হিসেবে এটি উদ্ভাবিত হয়।
 
 8. **What is the full meaning of SQL?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*
    A) Search and Query Language
    B) Simulation of Query Language
    C) Standard Query Language
    D) Structured Query Language
+answer: D
+explanation: রিলেশনাল ডেটাবেস ম্যানেজমেন্ট সিস্টেমে ডেটা কুয়েরি ও ব্যবস্থাপনার জন্য বহুল ব্যবহৃত ভাষার নাম Structured Query Language (SQL)।
 
 9. **OCR Stands for ________** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*
    A) Optical CPU recognition
    B) Optical character recognition
    C) Optical character reading
    D) other character reading
+answer: B
+explanation: মুদ্রিত বা হাতে লেখা কাগজের টেক্সটকে স্ক্যান করে ডিজিটাল পাঠযোগ্য টেক্সটে রূপান্তর করার প্রযুক্তির নাম Optical Character Recognition (OCR)।
 
 10. **What is TEST SYNC?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*
    a. A testing tool
    b. A diagnostic tool
    c. A tracking tool
    d. A recovery tool
+answer: A
+explanation: টেস্ট অটোমেশন ও সফটওয়্যার কোয়ালিটি নিয়ন্ত্রণে টেস্ট সিঙ্ক (Test Sync) একটি টেস্টিং টুল (Testing tool) হিসেবে কাজ করে।
 
 11. **What is the full form ICM?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*
    a. Cisco Intelligent Contact Management
    b. Cisco intellectual connection management
    c. Cisco isolated contact management
    d. Cisco recovery management
+answer: A
+explanation: সিসকো নেটওয়ার্কিং প্ল্যাটফর্মে কল সেন্টার ট্রাফিক রাউটিং ও পরিচালনার পূর্ণরূপ Cisco Intelligent Contact Management (ICM)।
 
 12. **Cisco IOS firewall is aware of VRF. What is the full from of VRF?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*
    a. Virtual routing and forwarding
    b. Visual route and forward
    c. Virtual route and field
    d. Visual field
+answer: A
+explanation: VRF এর পূর্ণরূপ Virtual Routing and Forwarding, যা একটি একক ফিজিক্যাল রাউটারে একাধিক ভার্চুয়াল রাউটিং টেবিল ইনস্ট্যান্স চালানোর সুবিধা দেয়।
 
 13. **DIP stands for ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. Developer Induction Printer
    b. Dual Inline Package
    c. Durable Iclonic Plastic
    d. Dual Independent
+answer: B
+explanation: ইন্টিগ্রেটেড সার্কিট (IC) প্যাকেজিং প্রযুক্তিতে DIP এর পূর্ণরূপ Dual In-line Package, যার দুই সমান্তরাল সারিতে পিন থাকে।
 
 ## Keyboard Shortcuts (4)
 
