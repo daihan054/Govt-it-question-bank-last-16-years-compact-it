@@ -1509,24 +1509,32 @@ explanation: $\sin A - \sin B = \cos B - \cos A \implies 2 \cos\frac{A+B}{2}\sin
    (খ) 13/3
    (গ) 23/3
    (ঘ) 33
+answer: (গ)
+explanation: গড়, মধ্যমা ও প্রচুরকের পরীক্ষালব্ধ সম্পর্ক হলো $\text{Mode} = 3\times\text{Median} - 2\times\text{Mean}$। মান বসিয়ে পাই, $7 = 3 \times \text{Median} - 2 \times 8 \implies 3 \times \text{Median} = 7 + 16 = 23 \implies \text{Median} = \frac{23}{3}$।
 
 2. **If P(A) = 0.6, P(B) = 0.4, P(B/A) = 0.2 then find P(A \cup B) = ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*
    (ক) 0.76
    (খ) 0.88
    (গ) 0.56
    (ঘ) 0.69
+answer: (খ)
+explanation: শর্তাধীন সম্ভাবনা $P(B|A) = \frac{P(A \cap B)}{P(A)} \implies P(A \cap B) = 0.2 \times 0.6 = 0.12$। অতএব $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.6 + 0.4 - 0.12 = 0.88$।
 
 3. **What is the probability of getting a sum of six if two dices are thrown at one?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. 5/36
    b. 7/36
    c. 2/26
    d. 1/36
+answer: a
+explanation: দুটি ছক্কা নিক্ষেপে মোট নমুনা বিন্দু $= 6 \times 6 = 36$টি। যোগফল ৬ আসার অনুকূল ফলাফল হলো (১,৫), (২,৪), (৩,৩), (৪,২), (৫,১) অর্থাৎ ৫টি। অতএব সম্ভাবনা $= \frac{5}{36}$।
 
 4. **A fair six-sided die is rolled. Find the probability of getting an odd number or a number less than 4.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. 2/3
    b. 2/4
    c. 5/6
    d. 1/6
+answer: a
+explanation: একটি ছক্কার সম্ভাব্য ফলাফল $\{1, 2, 3, 4, 5, 6\}$ (মোট ৬টি)। বিজোড় সংখ্যা $\{1, 3, 5\}$ অথবা ৪ এর চেয়ে ছোট সংখ্যা $\{1, 2, 3\}$ এর সংযোগ সেট হলো $\{1, 2, 3, 5\}$ (অনুকূল ফলাফল ৪টি)। অতএব সম্ভাবনা $= \frac{4}{6} = \frac{2}{3}$।
 
 ## Speed, Time & Distance (4)
 1. **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*
