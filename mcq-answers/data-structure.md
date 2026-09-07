@@ -224,141 +224,187 @@ explanation: উপাদানসমূহের মধ্যকার পদ�
    (b) The stock span problem
    (c) Arithmetic expression evaluation
    (d) All of the above
+answer: d
+explanation: ফাংশন কল ও রিকার্শন পরিচালনা (Call stack), স্টক স্প্যান প্রবলেম সমাধান এবং ইনফিক্স/পোস্টফিক্স গাণিতিক এক্সপ্রেশন রূপান্তর ও মূল্যায়ন—সবগুলোতেই স্ট্যাক ডেটা স্ট্রাকচার ব্যবহৃত হয়।
 
 2. **The minimum number of stacks needed to implement a queue is** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) 1
    (b) 2
    (c) 3
    (d) 4
+answer: b
+explanation: দুটি স্ট্যাক (একটি ইনসার্ট/ইনপুট ও অন্যটি রিভার্স/আউটপুটের জন্য) ব্যবহার করে সফলভাবে একটি FIFO কিউ বাস্তবায়ন করা যায়।
 
 3. **Which Data structure is needed to convert infix notation to postfix notation?** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*
    a) Branch
    b) Tree
    c) Queue
    d) Stack
+answer: d
+explanation: Shunting-yard অ্যালগরিদমের মাধ্যমে ইনফিক্স এক্সপ্রেশনকে পোস্টফিক্স নোটেশনে রূপান্তর করতে অপারেটরদের অগ্রাধিকার নিয়ন্ত্রণে স্ট্যাক (Stack) ব্যবহৃত হয়।
 
-4. **Find the output of the following prefix expression *+2-2 \text{ } 1/4 \text{ } 2+-531** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
+4. **Find the output of the following prefix expression *+2-2 	ext{ } 1/4 	ext{ } 2+-531** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
    a) 2
    b) 12
    c) 10
    d) 4
+answer: b
+explanation: প্রিফিক্স এক্সপ্রেশন ডান থেকে বামে স্ট্যাকের সাহায্যে মূল্যায়িত হয়। প্রথম উপ-অংশ `+ 2 (- 2 1)` এর মান হয় 3 এবং দ্বিতীয় উপ-অংশটির মান মূল্যায়িত হয়ে 4 আসে। উভয় অংশের গুণফল $3 	imes 4 = 12$।
 
 5. **Which data structure allows insertion and deletion of elements from both ends?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*
    (a) Deque
    (b) Queue
    (c) Stack
    (d) Linked list
+answer: a
+explanation: Deque বা Double-Ended Queue হলো এমন একটি ডেটা স্ট্রাকচার যার উভয় প্রান্ত (Front ও Rear) থেকেই ডেটা ইনসার্ট এবং ডিলিট করা যায়।
 
 6. **In data structure use recursion?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Stack
+answer: Stack
+explanation: প্রোগ্রামিংয়ে রিকার্সিভ ফাংশন কলের স্টেট, রিটার্ন অ্যাড্রেস ও লোকাল ভেরিয়েবল সংরক্ষণ করতে সিস্টেমের অভ্যন্তরীণ Call Stack ব্যবহৃত হয়।
 
-7. **What is the prefix conversion of the expression \text{A}+(\text{B}-\text{C})*\text{D}?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
-   **Ans:** +\text{A}*-\text{BCD}
+7. **What is the prefix conversion of the expression 	ext{A}+(	ext{B}-	ext{C})*	ext{D}?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
+   **Ans:** +	ext{A}*-	ext{BCD}
+answer: +	ext{A}*-	ext{BCD}
+explanation: অগ্রাধিকারের ক্রমানুসারে: প্রথমে বন্ধনীর ভেতরের `(B - C)` $ightarrow$ `-BC`; এরপর গুণ `-BC * D` $ightarrow$ `*-BCD`; সর্বশেষে যোগ `A + (*-BCD)` $ightarrow$ `+A*-BCD`।
 
 8. **An example of a hierarchical data structure is ______** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*
    (ক) Array
    (খ) Link list
    (গ) Tree
    (ঘ) Ring
+answer: গ
+explanation: Tree হলো একটি নন-লিনিয়ার হায়ারার্কিকাল (স্তরভিত্তিক) ডেটা স্ট্রাকচার, যেখানে উপাদানগুলো প্যারেন্ট-চাইল্ড সম্পর্কের ভিত্তিতে বিন্যস্ত থাকে।
 
 9. **Which of the following data structures follows the LIFO principle?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*
    (ক) stack
    (খ) Linked list
    (গ) Queue
    (ঘ) Graph
+answer: ক
+explanation: স্ট্যাক (Stack) হলো LIFO (Last In First Out) ডেটা স্ট্রাকচার, যেখানে সর্বশেষ প্রবেশকৃত উপাদানটি সবার আগে বের হয়।
 
 10. **A stack is also called-** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*
-   (ক) Last in First Out
-   (খ) First in Last Out
-   (গ) Last In Last Out
-   (ঘ) First in Frist Out
+    (ক) Last in First Out
+    (খ) First in Last Out
+    (গ) Last In Last Out
+    (ঘ) First in Frist Out
+answer: ক
+explanation: স্ট্যাককে LIFO (Last In First Out) বা FILO (First In Last Out) তালিকা বলা হয়।
 
 11. **What is postfix expression of the string, a+(b-c)*d?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*
-   a) abc-d*+
-   b) abcd - *+
-   c) ad* bc -
-   d) abc – d+*
+    a) abc-d*+
+    b) abcd - *+
+    c) ad* bc -
+    d) abc – d+*
+answer: a
+explanation: অগ্রাধিকার অনুসারে: `(b-c)` $ightarrow$ `bc-`; গুণের ফলে `bc-d*`; এবং সবশেষে যোগের ফলে `abc-d*+`।
 
 12. **In a shop, customers are provided the service as a first come first serve policy. But some special customers can be served at any time based on their importance. Which data structure most fits this scenario?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*
-   a. Stack
-   b. Queue
-   c. Priority Queue
-   d. Dequeue
+    a. Stack
+    b. Queue
+    c. Priority Queue
+    d. Dequeue
+answer: c
+explanation: আগমন ক্রমের পাশাপাশি উপাদানের অগ্রাধিকার বা গুরুত্বের ভিত্তিতে সেবা প্রদানের জন্য Priority Queue সবচেয়ে উপযুক্ত।
 
 13. **Which of the following data structures can be used both as Stack and Queue?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*
-   a. Vector
-   b. Hash Table
-   c. Deque
-   d. Binary Search Tree
+    a. Vector
+    b. Hash Table
+    c. Deque
+    d. Binary Search Tree
+answer: c
+explanation: Deque (Double Ended Queue)-এর উভয় প্রান্ত দিয়ে ইনসার্ট ও ডিলিট করা যায় বলে এটিকে Stack (LIFO) এবং Queue (FIFO) উভয় হিসেবেই ব্যবহার করা যায়।
 
 14. **Suppose you are implementing a Queue of size N using a non-circular linked list having a front and a rare pointer as shown in the figure. The enqueue operation inserts a new node at the front and the dequeue operation deletes a node from the rare. Which one of the following is the time complexity of the most efficient implementation of the enqueue and dequeue operations, respectively on this data structure?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 175 (ET: N/A)]*
-   ```
-   +---+---+    +---+---+               +---+---+
-   -->|   | --+--->|   | --+----.........->|   | / |
-   +---+---+    +---+---+               +---+---+
-   ^                                    ^
-   |                                    |
-   head                                 tail
-   ```
-   a) \theta(1), \theta(1)
-   b) \theta(1), \theta(n)
-   c) \theta(n), \theta(1)
-   d) \theta(n), \theta(n)
+    ```
+    +---+---+    +---+---+               +---+---+
+    -->|   | --+--->|   | --+----.........->|   | / |
+    +---+---+    +---+---+               +---+---+
+    ^                                    ^
+    |                                    |
+    head                                 tail
+    ```
+    a) \theta(1), \theta(1)
+    b) \theta(1), \theta(n)
+    c) \theta(n), \theta(1)
+    d) \theta(n), \theta(n)
+answer: b
+explanation: Singly linked list-এর শুরুতে (front/head) নতুন নোড যুক্ত করার টাইম কমপ্লেক্সিটি \theta(1)। কিন্তু শেষ প্রান্ত (rear/tail) থেকে ডিলিট করার জন্য tail-এর পূর্ববর্তী নোড খুঁজে পেতে পুরো লিস্ট ট্রাভার্স করতে হয়, তাই এর কমপ্লেক্সিটি \theta(n)।
 
 15. **Which one is the characteristics of Stack ADT?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
-   a) Sequential Index
-   b) Last-In-First Out
-   c) First-In-First Out
-   d) Key indexing
+    a) Sequential Index
+    b) Last-In-First Out
+    c) First-In-First Out
+    d) Key indexing
+answer: b
+explanation: Stack Abstract Data Type (ADT)-এর প্রধান বৈশিষ্ট্য হলো Last-In-First Out (LIFO)।
 
 16. **What will be the state of a queue after executing the following operation?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*
-   push(1), push(2), pop(), push(4), push(5), pop()
-   a) 2, 5
-   b) 2, 4
-   c) 4, 5
-   d) 1, 4
+    push(1), push(2), pop(), push(4), push(5), pop()
+    a) 2, 5
+    b) 2, 4
+    c) 4, 5
+    d) 1, 4
+answer: c
+explanation: FIFO নিয়মে: push(1), push(2) $ightarrow$ [1, 2]; pop() $ightarrow$ 1 বের হয়ে থাকে [2]; push(4), push(5) $ightarrow$ [2, 4, 5]; pop() $ightarrow$ 2 বের হয়ে অবশেষে কিউতে থাকে [4, 5]।
 
 17. **Suppose you want to insert n elements into an empty linked list while maintaining the shorted order. What is the worst-case time complexity?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*
-   a) \theta(n)
-   b) \theta(n \log n)
-   c) \theta(1)
-   d) \theta(n^2)
+    a) \theta(n)
+    b) \theta(n \log n)
+    c) \theta(1)
+    d) \theta(n^2)
+answer: d
+explanation: প্রতিটি উপাদানকে ক্রমানুসারে ইনসার্ট করতে গড়ে ও ওর্স্ট কেসে O(i) ট্রাভার্সাল লাগে। n সংখ্যক উপাদান ইনসার্ট করতে মোট সময় লাগে 1 + 2 + ... + n = O(n^2)।
 
 18. **The term push and pop are related to the-** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*
-   A) array
-   B) stacks
-   C) lists
-   D) All of these
+    A) array
+    B) stacks
+    C) lists
+    D) All of these
+answer: B
+explanation: Push এবং Pop হলো স্ট্যাক (Stacks) ডেটা স্ট্রাকচারের দুটি প্রধান মৌলিক অপারেশন।
 
 19. **The data structure required to check whether an expression contains balanced parenthesis is-** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*
-   A) Stack
-   B) Queue
-   C) Array
-   D) Tree
+    A) Stack
+    B) Queue
+    C) Array
+    D) Tree
+answer: A
+explanation: বন্ধনীসমূহের ব্যালান্স (Balanced Parentheses) যাচাই করার জন্য স্ট্যাক ডেটা স্ট্রাকচার ব্যবহৃত হয়।
 
 20. **Pushing an element into stack already having five elements and stack size of 5 then stack becomes-** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*
-   A) Overflow
-   B) Crash
-   C) Underflow
-   D) User flow
+    A) Overflow
+    B) Crash
+    C) Underflow
+    D) User flow
+answer: A
+explanation: নির্দিষ্ট ধারণক্ষমতা পূর্ণ থাকা অবস্থায় নতুন উপাদান যোগ করতে গেলে স্ট্যাক ওভারফ্লো (Overflow) অবস্থা ঘটে।
 
 21. **Which is correct for stack?** *[Bangladesh Bank Assistant Programmer 2016 compact it 243 (ET: N/A)]*
-   A) FIFO
-   B) LIFO
-   C) Both A, B
-   D) None
+    A) FIFO
+    B) LIFO
+    C) Both A, B
+    D) None
+answer: B
+explanation: স্ট্যাক LIFO (Last In First Out) নীতিতে কাজ করে।
 
 22. **Find the correct arranged data after stack operation push (1), push (2), pop, push (1), push (2), pop, pop, pop, push (2), pop.** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
-   A) 2 2 1 1 2
-   B) 2 2 1 2 1
-   C) 2 2 2 2 1
-   D) 2 2 2 1 2
+    A) 2 2 1 1 2
+    B) 2 2 1 2 1
+    C) 2 2 2 2 1
+    D) 2 2 2 1 2
+answer: A
+explanation: ক্রমানুসারে পপ হওয়া উপাদানগুলো হলো: ১ম পপে 2, ২য় পপে 2, ৩য় পপে 1, ৪র্থ পপে 1 এবং ৫ম পপে 2। সুতরাং ফলাফল: 2 2 1 1 2।
 
 23. **Stack operations are—** *[Bangladesh Bank Assistant Programmer 2016 compact it 245 (ET: N/A)]*
-   A) delete, insertion
-   B) insertion, delete
-   C) push, pop
-   D) pop, push
+    A) delete, insertion
+    B) insertion, delete
+    C) push, pop
+    D) pop, push
+answer: C
+explanation: স্ট্যাকে উপাদান সংযোজন ও বিয়োজনের আনুষ্ঠানিক নাম হলো যথাক্রমে Push এবং Pop।
 
 ## Tree & Binary Search Tree (20)
 
