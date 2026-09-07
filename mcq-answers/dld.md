@@ -399,96 +399,128 @@ explanation: $২ - ৩ = -১$; সাইন-ম্যাগনিটিউড 
    (b) AND
    (c) OR
    (d) NOT
+answer: A
+explanation: NAND এবং NOR গেটকে সার্বজনীন বা ইউনিভার্সাল গেট (Universal logic gate) বলা হয়, কারণ এদের যেকোনো একটি এককভাবে ব্যবহার করে অন্য সকল মৌলিক গেট তৈরি করা সম্ভব।
 
 2. **3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. 0
    খ. 3
    গ. 1
    ঘ. কোনোটিই নয়
+answer: C
+explanation: NAND গেটের আউটপুট $Y = \overline{A \cdot B \cdot C}$; যেকোনো একটি ইনপুট ০ হলে গুণফল ০ হয় এবং তার ইনভার্ট হয়ে আউটপুট সর্বদা ১ হবে।
 
 3. **What is the lowest number of NAND gates required to make in inverter?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) 1
    (b) 2
    (c) 3
    (d) 4
+answer: A
+explanation: একটি NAND গেটের ইনপুট দুটিকে পরস্পরের সাথে যুক্ত (Tie) করে একটি সাধারণ ইনপুট দিলে তা সরাসরি একটি ইনভার্টার বা NOT গেট হিসেবে কাজ করে ($\overline{A \cdot A} = \overline{A}$)।
 
 4. **Universal logic gate is:** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*
    (a) NAND, XOR
    (b) NOR, XOR
    (c) NOR, OR
    (d) NAND, NOR
+answer: D
+explanation: ডিজিটাল ইলেকট্রনিক্সে NAND এবং NOR গেট দুটিকে সার্বজনীন বা ইউনিভার্সাল গেট বলা হয়।
 
 5. **The logic gate that will have a Low output then any one of its inputs is High is ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*
    (ক) NAND gate
    (খ) AND gate
    (গ) NOR gate
    (ঘ) OR gate
+answer: C
+explanation: NOR গেটে যেকোনো একটি ইনপুট High (১) হলেই তার আউটপুট Low (০) হয়ে যায় ($Y = \overline{A + B}$); কেবল সকল ইনপুট Low হলেই আউটপুট High হয়।
 
 6. **What is the name of the following symbol?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*
    a) FET
    b) JFET
    c) Schottky Diode
    d) SCR
+answer: C
+explanation: প্রশ্নপত্রে প্রদর্শিত এস-আকৃতির (S-shaped) ক্যাথোড সংবলিত প্রতীকটি হলো 'শটকি ডায়োড' (Schottky Diode)-এর ইলেকট্রনিক প্রতীক।
 
 7. **In which logic gate output is 1 when all inputs are zero?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*
    ক. AND
    খ. NAND
    গ. OR
    ঘ. NOR
+answer: D
+explanation: NOR গেটের সংজ্ঞানুযায়ী, সকল ইনপুট ০ (Low) হলেই কেবল এর আউটপুট ১ (High) হয়। (উল্লেখ্য, NAND গেটেও ০,০ ইনপুটে আউটপুট ১ হয়)।
 
 8. **A technician testing a logic circuit sees that the output of a particular INVERTER is stuck LOW while its input is pulsing. Which one of the following is the possible reason for this faulty operation?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*
    a) The output of the INVERTER is internally grounded
    b) The output of the INERTER is externally grounded
    c) The input being driven by output of the INVERTER is internally grounded
    d) All of the above
+answer: D
+explanation: ডিজিটাল ট্রাবলশুটিংয়ে কোনো লজিক গেটের আউটপুট স্থায়ীভাবে Low হয়ে থাকার পেছনে ইন্টারনাল বা এক্সটারনাল গ্রাউন্ড শর্ট অথবা চালিত গেটের ইনপুট গ্রাউন্ডে শর্ট থাকা—সবগুলোই সম্ভাব্য কারণ হতে পারে (All of the above)।
 
 9. **\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) Which is the simplified form of this?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*
-   a) \bar{A} + \bar{B} + \bar{C}
-   b) \bar{A}\bar{B}\bar{C}
+   a) ar{A} + ar{B} + ar{C}
+   b) ar{A}ar{B}ar{C}
    c) \overline{ABC}
    d) \overline{A B C}
+answer: B
+explanation: বুলিয়ান সরলীকরণ: $\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) = \overline{A}\overline{B}\overline{C}\overline{A} + \overline{A}\overline{B}\overline{C}\overline{B} + \overline{A}\overline{B}\overline{C}\overline{C} = \overline{A}\overline{B}\overline{C} + \overline{A}\overline{B}\overline{C} + \overline{A}\overline{B}\overline{C} = \overline{A}\overline{B}\overline{C}$।
 
 10. **Write the name of the Gate:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*
-   A) NOR
-   B) OR
-   C) NAND
-   D) None
+    A) NOR
+    B) OR
+    C) NAND
+    D) None
+answer: C
+explanation: পরীক্ষার প্রশ্নপত্রে প্রদত্ত লজিক গেটের চিত্রটি ছিল একটি ন্যান্ড গেট (NAND gate: AND গেটের আউটপুটে ইনভার্টার বাবল সংবলিত চিত্র)।
 
 11. **The OR, XOR & AND functions can be performed by ____ of the computer in a CPU.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*
-   A) ALU
-   B) CU
-   C) Memory
-   D) Register
+    A) ALU
+    B) CU
+    C) Memory
+    D) Register
+answer: A
+explanation: কম্পিউটারের সিপিইউ-তে যেকোনো ধরনের লজিক্যাল অপারেশন (যেমন OR, AND, XOR) সম্পাদন করে অ্যারিথমেটিক অ্যান্ড লজিক ইউনিট (ALU)।
 
 12. **Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
-   A) C=A or B
-   B) C=\bar{A}
-   C) C=\bar{B}
-   D) C=A and B
+    A) C=A or B
+    B) C=ar{A}
+    C) C=ar{B}
+    D) C=A and B
+answer: D
+explanation: $A$ ও $B$-এর বিটওয়াইজ AND করলে: $10110110 \text{ AND } 11100000 = 10100000$, যা $C$-এর সমান; সুতরাং $C = A \text{ and } B$।
 
 13. **When two variables are logically compared, the logic gate that tests the equivalence is–** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*
-   A) XNOR
-   B) XOR
-   C) AND
-   D) NOR
+    A) XNOR
+    B) XOR
+    C) AND
+    D) NOR
+answer: A
+explanation: দুটি ভ্যারিয়েবল পরস্পর সমান (উভয়ই ০ বা উভয়ই ১) কিনা তা যাচাই করার ইকুইভ্যালেন্স গেট হলো XNOR গেট।
 
 14. **Binary circuit elements have** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*
-   A) One stable state
-   B) two stable state
-   C) Three stable state
-   D) None of these
+    A) One stable state
+    B) two stable state
+    C) Three stable state
+    D) None of these
+answer: B
+explanation: বাইনারি বা ডিজিটাল লজিক উপাদানসমূহ দ্বি-স্থিতিশীল (Bistable); অর্থাৎ এদের দুটি সুনির্দিষ্ট স্থায়ী অবস্থা (Two stable states: ০ এবং ১) থাকে।
 
 15. **Which is the universal gate?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*
-   A) NOR
-   B) AND
-   C) NOT
-   D) OR
+    A) NOR
+    B) AND
+    C) NOT
+    D) OR
+answer: A
+explanation: বিকল্পগুলোর মধ্যে NOR গেট একটি সার্বজনীন বা ইউনিভার্সাল গেট (Universal gate)।
 
 16. **NAND gates are preferred over other because these ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*
-   a. Have lower function area
-   b. Can be used to make any gate
-   c. Consume least electronic power
-   d. Provide maximum density in a chip
+    a. Have lower function area
+    b. Can be used to make any gate
+    c. Consume least electronic power
+    d. Provide maximum density in a chip
+answer: B
+explanation: NAND গেট সার্বজনীন হওয়ায় এটি এককভাবে ব্যবহার করে অন্য যেকোনো লজিক গেট বা সার্কিট তৈরি করা সম্ভব (Can be used to make any gate)।
 
 ## Sequential Circuits (Flip-Flops) (6)
 
