@@ -822,33 +822,45 @@ explanation: কনস্ট্রাক্টরের কোনো রিট�
 
 1. **The statements that allows you to define a block of code to be tested for exceptions while it is being executed.** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Try-cache
+answer: try block (try-catch)
+explanation: `try` ব্লকের ভেতরে ঝুঁকিপূর্ণ কোড রাখা হয় যা এক্সিকিউট হওয়ার সময় এক্সেপশন বা ত্রুটির জন্য পর্যবেক্ষণ করা হয় এবং ত্রুটি দেখা দিলে সংশ্লিষ্ট `catch` ব্লক তা গ্রহণ করে।
 
 2. **The ________ block used to execute a given set of the statement whether the exception is thrown or not.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*
    a) try
    b) tryif
    c) finally
    d) thrown
+answer: c
+explanation: `finally` ব্লকের কোড এক্সেপশন ঘটুক বা না ঘটুক—এমনকি মেথড থেকে `return` স্টেটমেন্ট এক্সিকিউট হলেও—সর্বাবস্থায় বাধ্যতামূলকভাবে নির্বাহ হয়।
 
 3. **Java uses a keyword ________ to preface a block of code that is likely to cause an error condition and ‘throw’ an exception.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*
    a) throw
    b) catch
    c) finally
    d) try
+answer: d
+explanation: রানটাইম এরর বা এক্সেপশন ঘটতে পারে এমন কোড ব্লকের শুরুতে জাভাতে `try` কীওয়ার্ড ব্যবহার করা হয় (`try { ... } catch(...) { ... }`)।
 
 4. **Which of the following method(s) not included in InputStream class?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*
    a) available()
    b) reset()
    c) flush()
    d) close()
+answer: c
+explanation: `flush()` মেথডটি বাফার খালি করে ডেটা পাঠানোর জন্য `OutputStream` ও `Writer` ক্লাসের বৈশিষ্ট্য; ইনপুট রিড করার `InputStream` ক্লাসে কোনো `flush()` মেথড নেই।
 
 5. **Which alternative can replace the throw statement in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
    A) for
    B) break
    C) return
    D) exit
+answer: C
+explanation: এক্সেপশন `throw` করার পরিবর্তে প্রচলিত ত্রুটি মোকাবিলার উপায় হিসেবে ফাংশন থেকে কোনো নির্দিষ্ট এরর কোড `return` স্টেটমেন্টের মাধ্যমে ফিরিয়ে দেওয়া যায়।
 
 6. **Why do you need to handle exceptions?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
    A) To prevent abnormal termination of program
    B) To encourage exception prone program
    C) To avoid syntax errors
    D) To save memory
+answer: A
+explanation: এক্সেপশন হ্যান্ডলিংয়ের মূল উদ্দেশ্য হলো রানটাইমে কোনো অপ্রত্যাশিত ত্রুটি ঘটলেও প্রোগ্রাম যাতে হঠাৎ ক্র্যাশ বা অস্বাভাবিকভাবে বন্ধ (Abnormal termination) না হয়ে স্বাভাবিকভাবে নির্বাহ অব্যাহত রাখতে পারে।
