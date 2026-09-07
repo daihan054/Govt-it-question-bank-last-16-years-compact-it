@@ -775,36 +775,48 @@ explanation: C++ এ সাবক্লাস থেকে বেস ক্ল�
    b) Does not consist of any return type
    c) has some return type
    d) None of the above
+answer: b
+explanation: অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিংয়ে কনস্ট্রাক্টরের কোনো রিটার্ন টাইপ থাকে না (এমনকি void-ও নয়)।
 
 2. **A constructor is a special type of-** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*
    (a) Class
    (b) Field
    (c) Method
    (d) Property
+answer: c
+explanation: কনস্ট্রাক্টর হলো একটি বিশেষ ধরণের মেথড (Special Method / Member Function), যার নাম ক্লাসের নামের হুবহু সমান হয় এবং অবজেক্ট তৈরির সময় স্বয়ংক্রিয়ভাবে কল হয়।
 
 3. **Which part of a class is invoked when an object is initialized in java?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*
    A) constructor
    B) fields
    C) methods
    D) class
+answer: A
+explanation: জাভাতে `new` অপারেটর দিয়ে অবজেক্ট তৈরি বা ইনিশিয়ালাইজ করার মুহূর্তে ক্লাসের কনস্ট্রাক্টর (Constructor) ইনভোক বা কল হয়।
 
 4. **Which operator is used to declare the destructor in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
    A) #
    B) ~
    C) @
    D) $
+answer: B
+explanation: C++ এ ডিস্ট্রাক্টর ডিক্লেয়ার করার জন্য ক্লাসের নামের ঠিক পূর্বে টিল্ডা (`~`) অপারেটর ব্যবহৃত হয়।
 
 5. **Object being passed to a copy constructor-** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
    A) Must be passed by reference
    B) Must not be mentioned in parameter list
    C) Must be passed with integer type
    D) Must be passed by value
+answer: A
+explanation: C++ এ কপি কনস্ট্রাক্টরে অবজেক্টকে অবশ্যই রেফারেন্সের মাধ্যমে পাঠাতে হয় (Pass by reference, যেমন: `MyClass(const MyClass &obj)`); অন্যথায় ভ্যালু পাস করতে গেলে আবারও কপি কনস্ট্রাক্টর কল হয়ে ইনফাইনাইট রিকার্শন তৈরি হবে।
 
 6. **Does constructor overloading include different return types for constructors to be overloaded?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
    A) Yes, if return types are different, signature becomes different
    B) Yes, because return types can differentiate two functions
    C) No, return type can't differentiate two functions
    D) No, constructors don't have any return type
+answer: D
+explanation: কনস্ট্রাক্টরের কোনো রিটার্ন টাইপই থাকে না, ফলে কনস্ট্রাক্টর ওভারলোডিং কেবল প্যারামিটারের সংখ্যা ও ডেটা টাইপের পার্থক্যের মাধ্যমে সম্পন্ন হয়।
 
 ## Exception Handling (6)
 
