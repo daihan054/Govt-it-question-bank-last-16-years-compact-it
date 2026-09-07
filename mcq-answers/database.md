@@ -1528,30 +1528,40 @@ explanation: ক্লাস্টারিং ফাইল অর্গান�
    b) The process of making an application capable of generating specific SQL code on the fly
    c) Hard-coded SQL statements in a procedure.
    d) Hard-coded SQL statements in a trigger.
+answer: A
+explanation: কোনো সাধারণ প্রোগ্রামিং ভাষার (যেমন C, C++, Java) সোর্স কোডের ভেতরে সরাসরি অন্তর্ভুক্ত বা হার্ড-কোড করে লিখিত SQL স্টেটমেন্টকে এমবেডেড এসকিউএল (Embedded SQL) বলে।
 
 2. **The Application program interface in a two-tier architecture DBMS is provided by-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*
    a) Close module connectivity
    b) Open module connectivity
    c) Open database connectivity
    d) Close database connectivity
+answer: C
+explanation: টু-টিয়ার আর্কিটেকচারে ক্লায়েন্ট অ্যাপ্লিকেশন এবং ডেটাবেসের সংযোগ ও যোগাযোগের জন্য স্ট্যান্ডার্ড API হিসেবে ওপেন ডেটাবেস কানেক্টিভিটি বা ODBC (Open Database Connectivity) ব্যবহৃত হয়।
 
 3. **A major challenge in mixing SQL with a general-purpose language is mismatching in the** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*
    A) Definition of data
    B) Manipulation of data
    C) Execution of data
    D) Output of data
+answer: A
+explanation: সাধারণ প্রোগ্রামিং ভাষা এবং রিলেশনাল SQL-এর মধ্যে ডেটার কাঠামো ও টাইপগত অমিলকে বলা হয় 'Impedance Mismatch' বা তথ্যের সংজ্ঞাগত অমিল (Mismatch in the definition of data)।
 
 4. **Once connection is set up, program can send SQL commands to database by using** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*
    A) SQLExcelConn
    B) SQLDirect
    C) SQLExcelDirect
    D) SQLConnect
+answer: B
+explanation: ডেটাবেস সংযোগ স্থাপিত হওয়ার পর প্রোগ্রাম থেকে ডেটাবেসে সরাসরি SQL স্টেটমেন্ট পাঠিয়ে কার্যকর করতে `SQLExecDirect` বা `SQLDirect` ফাংশন ব্যবহৃত হয়।
 
 5. **In your program you want to use the JDBC-ODBC bridge drive. What code do you use?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. Class.callName("sun.jdbc.odbc.jdbcOdbcDriver")
    b. Class.forName("sun.jdbc.odbc.jdbcOdbcDriver")
    c. Class.callFunc("JdbcOdbcDriver")
    d. Class.Name.init("sun.jdbc.odbc.JdbcOdbcDriver")
+answer: B
+explanation: জাভা অ্যাপ্লিকেশনে JDBC ড্রাইভার লোড ও রেজিস্টার করার জন্য `Class.forName("sun.jdbc.odbc.JdbcOdbcDriver")` মেথড ব্যবহার করা হয়।
 
 ## Concurrency Control & Locking (5)
 
