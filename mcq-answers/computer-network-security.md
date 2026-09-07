@@ -391,6 +391,8 @@ explanation: HTTPS সংযোগে SSL/TLS এনক্রিপশন ব্
 
 1. **Software downloaded from internet and installed that is malicious is called-** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Malware
+answer: Malware
+explanation: ইন্টারনেটের মাধ্যমে ডাউনলোডকৃত যেকোনো ধরনের ক্ষতিকর সফটওয়্যারকে সাধারণভাবে ম্যালওয়্যার (Malware বা Malicious Software) বলা হয়।
 
 2. **এন্টি ভাইরাস কি?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
    (ক) সফটওয়্যার
@@ -398,36 +400,48 @@ explanation: HTTPS সংযোগে SSL/TLS এনক্রিপশন ব্
    (গ) হার্ডওয়্যার
    (ঘ) সিস্টেম সফটওয়্যার
    **উত্তর: ক**
+answer: A
+explanation: অ্যান্টিভাইরাস হলো একটি অ্যাপ্লিকেশন বা ইউটিলিটি সফটওয়্যার যা কম্পিউটারে ম্যালওয়্যার বা ভাইরাস শনাক্ত, প্রতিরোধ ও নির্মূল করতে ব্যবহৃত হয়।
 
 3. **নিচের কোনটি Antivirus নয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*
    A) Norton
    B) MCAfee
    C) Dr. Solomon toolkit
    D) Security Point
+answer: D
+explanation: Norton, McAfee এবং Dr. Solomon's Antivirus Toolkit হলো সুপরিচিত অ্যান্টিভাইরাস সফটওয়্যার; পক্ষান্তরে 'Security Point' কোনো পরিচিত অ্যান্টিভাইরাস সফটওয়্যার নয়।
 
 4. **Which of the following is not antivirus software?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*
    A) Win-pro
    B) AVG
    C) McAfee
    D) Symantec
+answer: A
+explanation: AVG, McAfee এবং Symantec হলো জনপ্রিয় অ্যান্টিভাইরাস সফটওয়্যার; কিন্তু Win-pro কোনো অ্যান্টিভাইরাস সফটওয়্যার নয়।
 
 5. **Which of the following is not a malware?** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*
    A) Virus
    B) Worm
    C) Bug
    D) Trojan horse
+answer: C
+explanation: ভাইরাস, ওয়ার্ম এবং ট্রোজান হর্স হলো ক্ষতিকারক ম্যালওয়্যার; অপরপক্ষে 'Bug' (বাগ) হলো সফটওয়্যারের সোর্স কোডে অনিচ্ছাকৃত ভুল বা ত্রুটি।
 
 6. **Trojan can be introduced through-** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
    A) Internet browsing
    B) Database accessing
    C) Emails
    D) Troubleshooting
+answer: C
+explanation: ট্রোজান হর্স সাধারণত ব্যবহারকারীকে প্রলুব্ধ করতে ক্ষতিকর অ্যাটাচমেন্ট সংবলিত ইমেইল (Emails / Phishing) কিংবা ছদ্মবেশী ফাইলের মাধ্যমে কম্পিউটারে অনুপ্রবেশ করানো হয়।
 
 7. **Computer virus is a ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. Animal
    b. Hardware
    c. Program
    d. Machine
+answer: C
+explanation: কম্পিউটার ভাইরাস হলো একটি ক্ষতিকর নির্দেশনাবলী বা কম্পিউটার প্রোগ্রাম (Program), যা নিজে থেকে নিজের প্রতিলিপি তৈরি করতে পারে।
 
 ## Cyber Ethics & Cyber Law (6)
 
