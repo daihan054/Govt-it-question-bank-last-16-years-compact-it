@@ -676,6 +676,8 @@ explanation: উক্ত প্রশ্নে প্রদত্ত চিত�
    b) Indirect mode
    c) Immediate mode
    d) Index mode
+answer: d
+explanation: Index addressing mode (বা Based addressing mode)-এ রেজিস্টারের উপাত্তের সাথে একটি নির্দিষ্ট কনস্ট্যান্ট বা ডিসপ্লেসমেন্ট (Displacement) যোগ করে অপারেন্ডের কার্যকরী মেমরি ঠিকানা (Effective Address) নির্ণয় করা হয়।
 
 2. **Consider the following program fragment in assembly language:** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*
    ```assembly
@@ -690,12 +692,17 @@ explanation: উক্ত প্রশ্নে প্রদত্ত চিত�
    (b) ax=FFF6 h and cx=0h
    (c) ax=FFF7 h and cx=A h
    (d) ax=FFF5 h and cx=0A h
+answer: b
+explanation: লুপটি cx = 10 (0Ah) বার চলবে। প্রতি ধাপে `dec ax` (প্রশ্নে `dac ax` টাইপো) দ্বারা ax-এর মান ১ করে কমে। 0h থেকে ১০ বিয়োগ করলে 16-bit 2's complement হিসেবে ax = FFF6h হয়। সম্পূর্ণ লুপ শেষ হলে কাউন্টার রেজিস্টার cx = 0h হয়।
 
 3. **Which is the immediate addressing mode in an 8086 microprocessor?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 164 (ET: N/A)]*
    a) MOV, AX, BX
    b) MOV, AX, [BX]
    c) MOV AX, 1000
    d) MOV Ax, [BX+1000]
+answer: c
+explanation: Immediate addressing mode-এ অপারেন্ড বা ডেটার মান কোনো মেমরি বা রেজিস্টারে খোঁজার পরিবর্তে সরাসরি ইন্সট্রাকশনের ভেতরেই উল্লেখ থাকে (যেমন `MOV AX, 1000`)।
+
    7. Consider the following relation-
    | employee |
    |---|
@@ -713,9 +720,13 @@ explanation: উক্ত প্রশ্নে প্রদত্ত চিত�
    b) birth_date
    c) name, address
    d) name, age
+answer: c
+explanation: Composite attribute হলো এমন বৈশিষ্ট্য যাকে একাধিক অর্থপূর্ণ মৌলিক উপাদানে বিভক্ত করা যায়। এখানে name (first_name, last_name) এবং address (city, zip) হলো composite attributes।
 
 4. **What is the difference between mnemonic codes & machine codes?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. Machine codes are in shorthand English & Mnemonic codes are high level language
    b. Machine codes are in Binary & Mnemonic codes are in shorthand English
    c. Mnemonic codes are in Binary & Machine codes are in shorthand English
    d. There is no difference
+answer: b
+explanation: Machine code হলো সরাসরি বাইনারি কোড (0 এবং 1) যা কম্পিউটার হার্ডওয়্যার সরাসরি বোঝে, আর Mnemonic codes হলো অ্যাসেম্বলি ভাষার সংক্ষিপ্ত ইংরেজি শব্দ (shorthand English, যেমন MOV, ADD, SUB) যা মানুষের বোঝার সুবিধার্থে ব্যবহৃত হয়।
