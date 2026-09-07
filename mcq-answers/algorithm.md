@@ -329,42 +329,56 @@ explanation: সর্টেড লিনিয়ার অ্যারেত�
    (b) n(n+1)/2
    (c) n(n-1)
    (d) n(n+1)
+answer: C
+explanation: একটি $n$ শীর্ষবিশিষ্ট সিম্পল গ্রাফে কোনো সেলফ-লুপ থাকে না (ডায়াগোনাল উপাদানগুলো শূন্য); ফলে অ্যাডজাসেন্সি ম্যাট্রিক্সে অশূন্য বা ১ মানের উপাদানের সর্বোচ্চ সংখ্যা হলো $n^2 - n = n(n-1)$।
 
 2. **What is the number of edges in a complete graph with 5 nodes?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*
    a) 1
    b) 4
    c) 5
    d) 10
+answer: D
+explanation: $n$ শীর্ষের একটি কমপ্লিট গ্রাফে মোট এজের সংখ্যা $\frac{n(n-1)}{2}$; সুতরাং ৫টি নোডের জন্য এজের সংখ্যা $\frac{5 \times 4}{2} = 10$ টি।
 
 3. **In which of the following graphs can we apply topological sort?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*
    (ক) Undirected Cyclic graph
    (খ) Directed Cyclic graph
    (গ) Undirected Acyclic graph
    (ঘ) Directed Acyclic graph
+answer: D
+explanation: টপোলজিক্যাল সর্ট (Topological sort) কেবল এবং কেবলমাত্র ডিরেক্টেড অ্যাসাইক্লিক গ্রাফের (DAG - Directed Acyclic Graph) ওপর কার্যকর করা সম্ভব।
 
 4. **Suppose you have a complete undirected graph with 4 nodes. What is the maximum number of Minimum Spanning Tree (MST) you can form?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*
    a) 4
    b) 8
    c) 16
    d) 1
+answer: C
+explanation: কেলির সূত্র (Cayley's formula) অনুযায়ী $n$ নোডের কমপ্লিট গ্রাফে মোট স্প্যানিং ট্রির সংখ্যা $n^{n-2}$। ফলে ৪টি নোডের গ্রাফে সমান ওজনের ক্ষেত্রে সর্বোচ্চ $4^{4-2} = 4^2 = 16$ টি MST গঠন সম্ভব।
 
 5. **Which of the following data structures is more suitable for graph representation in Floyd Warshall Algorithm?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*
    a. Adjacency Matrix
    b. Adjacency List
    c. Incidence Matrix
    d. Incidence List
+answer: A
+explanation: অল-পেয়ার্স শর্টেস্ট পাথ নির্ণয়ের জন্য ফ্লয়েড-ওয়ার্শাল অ্যালগরিদমে ম্যাট্রিক্সের যেকোনো দুটি শীর্ষের মধ্যবর্তী দূরত্ব $O(1)$ সময়ে রিড/আপডেট করার প্রয়োজন হয়, যার জন্য অ্যাডজাসেন্সি ম্যাট্রিক্স (Adjacency Matrix) সবচেয়ে উপযোগী।
 
 6. **In the following graph, determine the cost of the shortest path between node 1 to node 4.** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)]*
    a. 0
    b. 4
    c. -5
    d. \infty
+answer: C
+explanation: নোড ১ থেকে নোড ৩ হয়ে ৪-এ যাওয়ার পথের মোট ওজন ২ + (-৭) = -৫, যা এই গ্রাফে ১ থেকে ৪-এ পৌঁছানোর সর্বনিম্ন শর্টেস্ট পাথ কস্ট।
 
 7. **To implement Dijkstra's shortest path algorithm on unweighted graphs so that it runs in linear time, the data structure to be used is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 86 (ET: N/A)]*
    a. Queue
    b. Stack
    c. Heap
    d. B-Tree
+answer: A
+explanation: ওজনহীন (Unweighted) গ্রাফে ডিজকস্ট্রা অ্যালগরিদম সাধারণ BFS-এর অনুরূপ আচরণ করে, যেখানে ফিফো কিউ (Queue) ব্যবহার করে $O(V + E)$ রৈখিক সময়ে শর্টেস্ট পাথ গণনা করা যায়।
 
 8. **Which of the following statements is/are TRUE for an undirected graph?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*
    P: Number of odd degree vertices is even
@@ -373,12 +387,16 @@ explanation: সর্টেড লিনিয়ার অ্যারেত�
    b. Q Only
    c. Both P and Q
    d. Neither P nor Q
+answer: C
+explanation: হ্যান্ডশেকিং লেমা অনুযায়ী সমস্ত ডিগ্রির যোগফল সর্বদা $2|E|$ (জোড় সংখ্যা, অর্থাৎ Q সত্য), এবং এই সমীকরণের সরাসরি অনুসিদ্ধান্ত হিসেবে বিজোড় ডিগ্রির শীর্ষের সংখ্যা সর্বদা জোড় হতে বাধ্য (অর্থাৎ P সত্য)।
 
 9. **Which of the following techniques/algorithms cannot be used to detect cycles in an undirected and unweighted graph?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*
    a) Disjoint Set Data Structure
    b) Breadth First Search
    c) Depth First Search
    d) Floyd-Warshall algorithm
+answer: D
+explanation: ডিসজয়েন্ট সেট (Union-Find), BFS এবং DFS—এই তিনটিই সাইকেল শনাক্তকরণে ব্যাপকভাবে ব্যবহৃত হয়; কিন্তু ফ্লয়েড-ওয়ার্শাল একটি অল-পেয়ার্স শর্টেস্ট পাথ অ্যালগরিদম, যা সাইকেল ডিটেকশনে ব্যবহৃত হয় না।
 
 10. **In the following graph, determine the cost of the shortest path between node 1 to node 4** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
    ```
@@ -394,24 +412,32 @@ explanation: সর্টেড লিনিয়ার অ্যারেত�
    b) 4
    c) -5
    d) -\infty
+answer: C
+explanation: পাথ ১ -> ৩ -> ৪ এর মোট কস্ট ২ + (-৭) = -৫, যা পাথ ১ -> ২ -> ৪ (কস্ট ৩ + ১ = ৪) এর চেয়ে কম, সুতরাং শর্টেস্ট পাথ কস্ট হলো -৫।
 
 11. **Which algorithm will be the most efficient to find out the shortest path between two given nodes in an undirected weighted graph?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*
    a) Breadth First Search
    b) Depth First Search
    c) Dijkstra’s algorithm
    d) Floyd-Warshall algorithm
+answer: C
+explanation: অঋণাত্মক ওজনযুক্ত গ্রাফে নির্দিষ্ট দুটি নোডের মধ্যে সর্বনিম্ন দূরত্বের পথ নির্ণয় করতে ডিজকস্ট্রা অ্যালগরিদম (Dijkstra’s algorithm) সবচেয়ে কার্যকর ও দ্রুততম ($O(E + V \log V)$)।
 
 12. **A graph having an edge from each vertex to every other vertex is called:** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*
    A) Tightly connected
    B) Strongly connected
    C) Weakly connected
    D) Loosely connected
+answer: B
+explanation: ডিরেক্টেড গ্রাফে প্রতিটি শীর্ষ থেকে অন্য প্রতিটি শীর্ষের দিকে সরাসরি পাথ বিদ্যমান থাকলে তাকে স্ট্রংলি কানেক্টেড (Strongly connected) গ্রাফ বলা হয়।
 
 13. **The degree of any vertex of a graph is:** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*
    A) Number of Vertices in a Graph
    B) Number of vertices incident with the Vertex
    C) Number of Vertices Adjacent to The Vertex
    D) Number of edges incident to the vertex of the graph
+answer: D
+explanation: গ্রাফের কোনো নির্দিষ্ট শীর্ষের ডিগ্রি হলো সেই শীর্ষের সাথে সংযুক্ত মোট এজের (edges incident to the vertex) সংখ্যা।
 
 ## Algorithm Design Paradigms (9)
 
