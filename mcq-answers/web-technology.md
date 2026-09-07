@@ -146,60 +146,81 @@ explanation: XML ডেটা উপস্থাপন ও পরিবহনে
    b) _age
    c) PersonAge
    d) 1age
+answer: D
+explanation: PHP-তে ভেরিয়েবলের নাম অবশ্যই ডলার চিহ্নের (`$`) পর কোনো বর্ণ (letter) বা আন্ডারস্কোর (`_`) দিয়ে শুরু হতে হয়; কোনো সংখ্যা (digit) দিয়ে শুরু হতে পারে না (`$1age` অবৈধ)।
 
 2. **Which of the followings is a Web Framework built with PHP?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    a) Laravel
    b) Django
    c) MVC
    d) Spring
+answer: A
+explanation: Laravel হলো PHP-তে নির্মিত একটি ওপেন সোর্স ওয়েব অ্যাপ্লিকেশন ফ্রেমওয়ার্ক (Django হলো Python এবং Spring হলো Java ফ্রেমওয়ার্ক)।
 
 3. **What will be the output of the following PHP code? <?php "Hello World" ?>** *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*
    A) Error
    B) Hello World
    C) Nothing
    D) None of this
-   16. What is the output of the code shown?
-   %(qty)d more %(food)s'%{'qty':1,'food':'spam'} *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*
+answer: C
+explanation: কোডটিতে কোনো `echo` বা `print` স্টেটমেন্ট না থাকায় ব্রাউজারে কোনো আউটপুট প্রদর্শিত হবে না (Nothing)।
+
+   **What is the output of the code shown?**
+   `%(qty)d more %(food)s'%{'qty':1,'food':'spam'}` *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*
    A) Error
    B) 1 more spam
    C) No output
    D) 1 more foods
+answer: B
+explanation: পাইথনের স্ট্রিং ইন্টারপোলেশনে ডিকশনারির কী 'qty' এর মান 1 এবং 'food' এর মান 'spam' প্রতিস্থাপিত হয়ে আউটপুট হবে "1 more spam"।
 
 4. **Which is correct for concatenation in PHP?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) $add = Sadd+1
    B) $add = $add +1
    C) $add = $add + Sadd
    D) $add. = +1;
+answer: D
+explanation: PHP-তে স্ট্রিং কনক্যাটেনেশন অ্যাসাইনমেন্ট অপারেটর হিসেবে `.=` ব্যবহৃত হয় (ডট `.` হলো মৌলিক কনক্যাটেনেশন অপারেটর)।
 
 5. **Which is used for adding two or more string in PHP?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) +
    B) *
    C) . (dot)
    D) |
+answer: C
+explanation: PHP-তে একাধিক স্ট্রিং জোড়া লাগানোর জন্য ডট (`.`) অপারেটর ব্যবহার করা হয় (`+` অপারেটর গাণিতিক যোগের জন্য সংরক্ষিত)।
 
 6. **Which of the following function returns the number of characters in a string variable?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. count($variable)
    b. len($variable)
    c. strlen($variable)
    d. strcount($variable)
+answer: C
+explanation: PHP-তে কোনো স্ট্রিং ভেরিয়েবলের মোট ক্যারেক্টার সংখ্যা (দৈর্ঘ্য) জানার জন্য `strlen()` ফাংশন ব্যবহৃত হয়।
 
 7. **PHP is widely used ________ scripting language that is especially suited for web development and can be embedded into html.** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. Open source general purpose
    b. Proprietary general purpose
    c. Open source special purpose
    c. Proprietary special purpose
+answer: A
+explanation: PHP-এর প্রমিত সংজ্ঞা অনুযায়ী এটি একটি বহুল ব্যবহৃত "Open source general purpose" সার্ভার-সাইড স্ক্রিপ্টিং ভাষা যা সহজে HTML-এর সাথে সংযুক্ত করা যায়।
 
 8. **Which of the following is not true?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. PHP can be used develop applications
    b. PHP makes a website dynamic
    c. PHP applications cannot be compiled
    d. PHP cannot be embedded into html
+answer: D
+explanation: PHP সরাসরি HTML ট্যাগের ভেতর `<?php ... ?>` কোড ব্লকের মাধ্যমে এমবেড করা যায়; অতএব "PHP cannot be embedded into html" বক্তব্যটি অসত্য।
 
 9. **How do you write a conditional statement for executing some statements only if "1" is not equal to 5?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. if(1<>5)
    b. if(1!=5)
    c. if(1=!5)
    d. if<>5
+answer: B
+explanation: PHP-তে নট-ইকুয়াল বা অসমান শর্ত যাচাই করার স্ট্যান্ডার্ড সিনট্যাক্স হলো `if (1 != 5)`।
 
 ## Scripting & JavaScript (8)
 
