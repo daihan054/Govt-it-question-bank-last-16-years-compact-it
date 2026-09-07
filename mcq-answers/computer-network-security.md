@@ -323,51 +323,69 @@ explanation: কোনো মূল তথ্য বা বার্তাকে
    (b) SMTP
    (c) SSL
    (d) HTTP
+answer: D
+explanation: HTTP (Hypertext Transfer Protocol) কোনো ধরনের এনক্রিপশন প্রদান করে না এবং ডেটা সম্পূর্ণ প্লেইনটেক্সট আকারে আদান-প্রদান করে, ফলে এটি তালিকায় থাকা অন্য প্রোটোকলগুলোর তুলনায় সবচেয়ে দুর্বল ও নিরাপত্তাহীন।
 
 2. **Which protocol in data encryption of Network level?** *[BREB Assistant Programmer 2023 compact it 31 (ET: N/A)]*
    (a) HTTPs
    (b) DNS
    (c) SMTP
    (d) FTP
+answer: A
+explanation: প্রদত্ত অপশনগুলোর মধ্যে শুধুমাত্র HTTPS প্রোটোকলেই ডেটা এনক্রিপশন (SSL/TLS এর মাধ্যমে) নিশ্চিত করা হয়, যেখানে অন্যগুলো ডিফল্টভাবে প্লেইনটেক্সটে কাজ করে।
 
 3. **In which layer IPsec works?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Network Layer
+answer: Network Layer
+explanation: IPsec (Internet Protocol Security) ওএসআই (OSI) মডেলের ৩য় স্তর অর্থাৎ নেটওয়ার্ক লেয়ারে (Network Layer) আইপি প্যাকেট এনক্রিপশন ও অথেন্টিকেশন প্রদান করে।
 
 4. **What does https mean?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*
    A) Hypertext Transfer Protocol Secure
    B) Hypertext Transfer Protocol System
    C) Hypertext Transfer Protocol Service
    D) Hypertext Transfer Protocol Sense
+answer: A
+explanation: HTTPS এর পূর্ণরূপ হলো 'Hypertext Transfer Protocol Secure'।
 
 5. **Which of the following is a secure way to transfer files from one device to another?** *[Pubali Bank Limited Officer (IT) 2012 compact it 262 (ET: N/A)]*
    a. SFTP
    b. SNMPv3
    c. TFTP
    d. FTP
+answer: A
+explanation: SFTP (SSH File Transfer Protocol) সিকিউর শেল (SSH) এর ওপর ভিত্তি করে এনক্রিপ্ট করা চ্যানেলের মাধ্যমে সুরক্ষিত ফাইল স্থানান্তরের সুবিধা প্রদান করে।
 
 6. **Which of the following standards provides port authentication?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*
    a. 802.1x
    b. 802.11
    c. 802.19
    d. 802.2
+answer: A
+explanation: IEEE 802.1X হলো পোর্ট-ভিত্তিক নেটওয়ার্ক অ্যাক্সেস কন্ট্রোল (PNAC) স্ট্যান্ডার্ড, যা কোনো ডিভাইসের নেটওয়ার্কে যুক্ত হওয়ার জন্য পোর্ট লেভেল অথেন্টিকেশন প্রদান করে।
 
 7. **Which of the following protocols has similar functionality to Telnet but operates more securely than Telnet?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*
    a. TFTP
    b. SSH
    c. SNAT
    d. RSH
+answer: B
+explanation: SSH (Secure Shell) প্রোটোকল টেলনেটের মতো দূরবর্তী টার্মিনাল অ্যাক্সেস প্রদান করে, তবে টেলনেটের মতো প্লেইনটেক্সটের পরিবর্তে সম্পূর্ণ শক্তিশালী এনক্রিপশন ব্যবহার করে যোগাযোগ নিরাপদ রাখে।
 
 8. **Which of the following protocols is the MOST secure for transferring network device configurations?** *[Pubali Bank Limited Officer (IT) 2012 compact it 265 (ET: N/A)]*
    a. TFTP
    b. FTP
    c. SCP
    d. RCP
+answer: C
+explanation: SCP (Secure Copy Protocol) এসএসএইচ (SSH) এনক্রিপশন ব্যবহার করে দূরবর্তী নেটওয়ার্ক ডিভাইসের কনফিগারেশন ফাইল সবচেয়ে নিরাপদে স্থানান্তর করতে ব্যবহৃত হয় (TFTP, FTP ও RCP কোনো এনক্রিপশন প্রদান করে না)।
 
 9. **Which of the following connections methods is considered secure?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*
    a. HTTP
    b. RCP
    c. HTTPS
    d. TELNET
+answer: C
+explanation: HTTPS সংযোগে SSL/TLS এনক্রিপশন ব্যবহার করা হয়, ফলে ট্রাফিক ইন্টারসেপ্ট হলেও তা সুরক্ষিত ও গোপন থাকে; পক্ষান্তরে HTTP, RCP এবং TELNET প্লেইনটেক্সট ব্যবহার করে।
 
 ## Malware & Security Threats (7)
 
