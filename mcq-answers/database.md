@@ -1011,66 +1011,88 @@ explanation: কুয়েরির ফলাফলকে ঊর্ধ্ব�
    (খ) Primary
    (গ) Super
    (ঘ) Foreign
+answer: B
+explanation: সম্ভাব্য ক্যান্ডিডেট কি-গুলোর মধ্য থেকে ডেটাবেস ডিজাইনার টেবিলের প্রধান অনন্য শনাক্তকারী হিসেবে যেটিকে বাছাই করেন তাকে প্রাইমারি কি (Primary key) বলে।
 
 2. **Which of the following types of table constraints prevents the entry of duplicate rows?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 58 (ET: N/A)]*
    (ক) Foreign keys
    (খ) Primary keys
    (গ) Unique keys
    (ঘ) Candidate keys
+answer: B
+explanation: প্রাইমারি কি (Primary key) কনস্ট্রেইন্ট টেবিলে কোনো ডুপ্লিকেট রেকর্ড বা সারি প্রবেশ করতে দেয় না।
 
 3. **Referential integrity in a DBMS is a form of-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    a) Foreign key
    b) Primary key
    c) Assertion
    d) Referential constraint
+answer: D
+explanation: রেফারেন্সিয়াল ইন্টিগ্রিটি হলো একটি রেফারেন্সিয়াল কনস্ট্রেইন্ট (Referential constraint), যা ফরেন কি-এর মাধ্যমে অন্য টেবিলের প্রাইমারি কি-এর সাথে সঙ্গতি নিশ্চিত করে।
 
 4. **Needing to assess the validity of assumed referential integrity constraints on foreign keys is a(n) _________ of normalization.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*
    a) advantage
    b) disadvantage
    c) either an advantage or disadvantage
    d) neither an advantage nor disadvantage
+answer: B
+explanation: নরমালাইজেশনের ফলে টেবিল ভেঙে একাধিক ক্ষুদ্র টেবিলে পরিণত হয়, যার ফলে অতিরিক্ত ফরেন কি রেফারেন্স ও ওভারহেড বাড়ে—যা এর একটি অসুবিধা (disadvantage)।
 
 5. **The maximum number of super keys for the relation schema R (E, F, G, H) with E as the key is-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*
    a) 5
    b) 6
    c) 7
    d) 8
+answer: D
+explanation: $E$ যেহেতু ক্যান্ডিডেট কি, তাই যেকোনো সুপার কি-তে অবশ্যই $E$ থাকতে হবে। বাকি ৩টি অ্যাট্রিবিউট $\{F, G, H\}$ নিয়ে মোট $2^3 = 8$ টি সম্ভাব্য সুপার কি তৈরি করা যায়।
 
 6. **Which of the following is a group of one or more attributes that uniquely identifies a row?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*
    A) Key
    B) Determinant
    C) Tuple
    D) Relation
+answer: A
+explanation: ডেটাবেসে এক বা একাধিক অ্যাট্রিবিউট যা টেবিলের প্রতিটি সারিকে স্বতন্ত্রভাবে বা অনন্যভাবে শনাক্ত করে তাকে কি (Key) বলা হয়।
 
 7. **For every relationship, how many possible sets of minimum cardinalities are there?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*
    A) Two
    B) Three
    C) Four
    D) Six
+answer: C
+explanation: একটি বাইনারি রিলেশনশিপের দুই প্রান্তে সর্বনিম্ন কার্ডিনালিটি ০ (optional) অথবা ১ (mandatory) হতে পারে; ফলে মোট $2 \times 2 = 4$ টি সম্ভাব্য সেট তৈরি হতে পারে।
 
 8. **A primary key must also be-** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*
    A) Foreign key
    B) Unique
    C) Identical
    D) Case sensitive
+answer: B
+explanation: প্রাইমারি কি-এর মূল শর্ত হলো এর মান অবশ্যই অনন্য বা ইউনিক (Unique) হতে হবে এবং নাল (Null) হওয়া যাবে না।
 
 9. **What represents a row in a relational database?** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*
    A) variable
    B) tuple
    C) entity
    D) field
+answer: B
+explanation: রিলেশনাল ডেটাবেসে টেবিলের প্রতিটি আনুভূমিক সারি বা রেকর্ডকে টাপল (Tuple) বলা হয়।
 
 10. **The subset of super key is a candidate key under what condition?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*
    A) No proper subset is a super key
    B) All subsets are super keys
    C) Subset is a super key
    D) Each subset is a super key
+answer: A
+explanation: কোনো সুপার কি-এর এমন কোনো প্রোপার সাবসেট না থাকলে যা নিজে একটি সুপার কি (No proper subset is a super key), তবেই তাকে ক্যান্ডিডেট কি বলা হয়।
 
 11. **With SQL how can you insert "Olsen" as the "LastName" in the "Persons" table?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*
    a. INSERT INTO Persons(LastName) VALUES('Olsen')
    b. INSERT INTO Persons (Olsen) VALUES('LastName')
    c. INSERT INTO Person ('Olsen') INTO LastName
    d. INSERT INTO Persons (LastName= 'Olsen')
+answer: A
+explanation: SQL-এ নির্দিষ্ট কলামে নতুন ভ্যালু ইনসার্ট করার সঠিক সিনট্যাক্স হলো `INSERT INTO Table_Name (Column_Name) VALUES ('Value')`।
 
 ## Data Warehousing & Data Mining (9)
 
