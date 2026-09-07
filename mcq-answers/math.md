@@ -1387,36 +1387,48 @@ explanation: ৫ বছর পূর্বে পিতা ও পুত্র�
    b) 50\frac{5}{2}
    c) 35\frac{2}{3}
    d) 40\frac{5}{3}
+answer: a
+explanation: মিশ্রণে দুধের পরিমাণ $= 64 \times \frac{5}{8} = 40$ লিটার এবং পানির পরিমাণ $= 64 \times \frac{3}{8} = 24$ লিটার। নতুন মিশ্রণে $w$ লিটার পানি মেশালে অনুপাত হবে $\frac{40}{24 + w} = \frac{3}{5} \implies 72 + 3w = 200 \implies 3w = 128 \implies w = \frac{128}{3} = 42\frac{2}{3}$ লিটার।
 
 2. **Three boys have marbles in the ration of 19:5:3. If the boy with the least number has 9 marbles, how many marbles does the boy with the highest number have?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
    a) 23
    b) 37
    c) 45
    d) 57
+answer: d
+explanation: সর্বনিম্ন অনুপাত ৩ এর মান ৯টি মার্বেল ($3x = 9 \implies x = 3$)। সর্বোচ্চ অনুপাত ১৯ এর মান হবে $19 \times 3 = 57$টি মার্বেল।
 
 3. **In distributing milk at a summer camp, it is found that a quart of milk will fill wither 3 large glass tumblers or 5 small glass tumblers. How many small glass tumblers can be filled with one large glass tumbler?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
    a) 11/5
    b) 7/5
    c) 5/3
    d) 7/3
+answer: c
+explanation: প্রশ্নানুসারে ৩টি বড় গ্লাস $=$ ৫টি ছোট গ্লাস। অতএব ১টি বড় গ্লাসের দুধ দিয়ে $\frac{5}{3}$ টি ছোট গ্লাস পূর্ণ করা যাবে।
 
 4. **A jar contains white, red and green marbles in the ratios 2:3:5 Six more green marbles are added to the jars, and then the ratio becomes 2:3:7. How many white marbles are there in the jar?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*
    (a) 2
    (b) 4
    (c) 6
    (d) 8
+answer: (c)
+explanation: অনুপাত $2x : 3x : 5x$। ৬টি সবুজ মার্বেল যোগ করায় সবুজ মার্বেল অনুপাতের ব্যবধান $7 - 5 = 2$ ইউনিট $= 6$ $\implies x = 3$। অতএব সাদা মার্বেল ছিল $2x = 2 \times 3 = 6$টি।
 
 5. **Equal amounts of water were poured into two empty jars of different capacities, which made one jar 1/4 full and the other jar 1/3 full. If the water in the jar with the lesser capacity is then poured into the jar with the greater capacity, what fraction of the larger jar will be filled with water?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*
    (a) 1/3
    (b) 1/4
    (c) 1/5
    (d) 1/2
+answer: (d)
+explanation: ধরি উভয় পাত্রে ঢালা পানির পরিমাণ $W$। বড় পাত্রের ধারণক্ষমতা $C_1 = 4W$ এবং ছোট পাত্রের $C_2 = 3W$। ছোট পাত্রের পানি ($W$) বড় পাত্রে ঢাললে মোট পানি হবে $W + W = 2W$। বড় পাত্রের পূর্ণ হওয়া অংশ $= \frac{2W}{4W} = \frac{1}{2}$।
 
 6. **The ratio of male students to female students in a class is 13 to 19. If there are 224 people in the class, including one teacher, one administrator, and thirty evaluators, how many people in the class are male students?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. 78
    b. 80
    c. 91
    d. 114
+answer: a
+explanation: মোট শিক্ষার্থী সংখ্যা $= 224 - (1 + 1 + 30) = 224 - 32 = 192$ জন। ছাত্র ও ছাত্রীর অনুপাতের সমষ্টি $= 13 + 19 = 32$। ছাত্র সংখ্যা $= 192 \times \frac{13}{32} = 6 \times 13 = 78$ জন।
 
 ## Permutation & Combination (5)
 
