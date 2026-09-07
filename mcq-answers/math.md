@@ -1060,97 +1060,130 @@ answer: c
 explanation: মোট অতিক্রান্ত দূরত্ব $= 220 + 260 = 480$ মিটার। গতিবেগ $= 45 \times \frac{5}{18} = 12.5$ m/s। সময় $= \frac{480}{12.5} = 38.4 \approx 38$ সেকেন্ড।
 
 ## Analytical Reasoning (10)
+
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) 4.24 meters
    (b) 5.24 meters
    (c) 3.24 meters
    (d) 4 meters
+answer: (a)
+explanation: উত্তর-দক্ষিণ বরাবর নিট সরণ $= 5 - 2 = 3$ মিটার (উত্তর দিকে) এবং পূর্ব-পশ্চিম বরাবর নিট সরণ $= 3$ মিটার (পূর্ব দিকে)। প্রারম্ভিক বিন্দু থেকে সরাসরি দূরত্ব $= \sqrt{3^2 + 3^2} = \sqrt{18} = 3\sqrt{2} \approx 4.24$ মিটার।
 
 2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*
    (a) 1
    (b) 2
    (c) 3
    (d) 4
+answer: (b)
+explanation: ৩টি করে বলের দুটি গ্রুপ ওজন পাল্লায় মেপে (৩ বনাম ৩, বাকি ২টি আলাদা রেখে) ১মবারেই ভারী বলের গ্রুপ নির্ধারণ করা যায়। ২য় বার ওজনে ভারী বলটি নিশ্চিতভাবে শনাক্ত করা সম্ভব ($3^2 = 9 \ge 8$)। তাই সর্বোচ্চ ২ বার ওজনেই ভারী বলটি খুঁজে পাওয়া যাবে।
 
 3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+answer: Syllogism
+explanation: এটি একটি যৌক্তিক ন্যায়ানুমান (Syllogism), যেখানে দুটি প্রধান যুক্তিবাক্য (Premises) থেকে একটি সুনির্দিষ্ট যৌক্তিক সিদ্ধান্ত (Deductive conclusion) টানা হয়েছে।
 
 **বিদ্যুৎ আবিষ্কার কততম শিল্প বিপ্লবের সূচনা সম্পর্কিত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 45]]*
    ক. ২য়
    খ. ৩য়
    গ. ৬ষ্ঠ
    ঘ. ৪র্থ
+answer: ক
+explanation: বিদ্যুৎ আবিষ্কার, অ্যাসেম্বলি লাইন ও গণ-উৎপাদনের সূচনা ঘটেছিল ২য় শিল্প বিপ্লবে (Second Industrial Revolution)।
 
 **ম্যারাথন যেমন একটি দৌড়, ঠিক তেমনি শীতঘুমদাতা (hibernation) হলো-** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. শীত
    খ. গ্রীষ্ম
    গ. ঘুম
    ঘ. জেগে থাকা
+answer: গ
+explanation: ম্যারাথন হলো একটি দীর্ঘ দৌড় (run), আর হাইবারনেশন (hibernation) হলো শীতকালের একটি দীর্ঘ সুপ্তাবস্থা বা ঘুম (sleep)।
 
 **রামন বলছে 'অনূজের মা হলো আমার মায়ের একমাত্র মেয়ে' তাহলে রামনের সাথে অনূজের সম্পর্ক কি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক ভাই
    খ ভাগিনা
    গ বাবা
    ঘ কোনটি নয়
+answer: খ
+explanation: রামনের মায়ের একমাত্র মেয়ে হলো রামনের নিজের বোন। আর বোনের ছেলে হলো ভাগিনা। সুতরাং অনূজ হলো রামনের ভাগিনা (Nephew)।
 
 **এই চিত্রটিতে মোট কতটি ত্রিভুজ আছে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. ২০
    খ. ২০ এর অধিক
    গ. ১৬
    ঘ. ১৮
+answer: খ
+explanation: জটিল জ্যামিতিক নকশাটিতে অভ্যন্তরীণ ও সংযুক্ত বড় ত্রিভুজ মিলিয়ে মোট ত্রিভুজের সংখ্যা ২০-এর অধিক।
 
 **নিচের সংখ্যার ধারাটিতে ভুল সংখ্যা খুঁজে বের করুন: ৮,১৩, ২১, ৩২, ৪৭, ৬৩, ৮৩** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. ৪৭
    খ. ৬৩
    গ. ৩২
    ঘ. ৮৩
+answer: ক
+explanation: ধারার পার্থক্যগুলো যথাক্রমে ৫, ৮, ১১, ১৪, ১৭, ২০ (প্রতিবার ৩ করে বৃদ্ধি)। ফলে ৩২ এর পরের পদ হওয়া উচিত $32 + 14 = 46$ এবং $46 + 17 = 63$। অতএব ৪৭ সংখ্যাটি ভুল (সঠিক সংখ্যাটি হবে ৪৬)।
 
 **একটি সারিতে ব্যক্তিদের মধ্যে, সাবিকের অবস্থান বাম দিক থেকে ২৬তম এবং ডান দিক থেকে ৩৫তম। তাহলে সারিতে মোট ছাত্রছাত্রীর সংখ্যা হবে:** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
    ক. ৩২
    খ. ৪৬
    গ. ৬০
    ঘ. ৭২
+answer: গ
+explanation: সারিতে মোট সংখ্যা $= \text{Left} + \text{Right} - 1 = 26 + 35 - 1 = 60$ জন।
 
 4. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
    (a) When a cache hit occurs, the CPU fetches data from ROM.
    (b) When a cache hit occurs, the CPU fetches data from main memory.
    (c) When a cache miss occurs, the CPU fetches data from cache memory.
    (d) When a cache miss occurs, the CPU fetches data from main memory.
+answer: (d)
+explanation: ক্যাশে মিস (Cache Miss) ঘটলে প্রয়োজনীয় ডেটা ক্যাশ মেমরিতে পাওয়া যায় না, ফলে CPU মূল মেমরি (Main Memory/RAM) থেকে ডেটা ফেচ (fetch) করে ক্যাশ ও সিপিইউতে নিয়ে আসে।
 
 5. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*
    (a) DRAM requires more power than SRAM
    (b) SRAM requires fewer transistors per bit than DRAM
    (c) SRAM does not need refreshing while DRAM does
    (d) SRAM stores data in capacitors while DRAM uses flip-flops
+answer: (c)
+explanation: SRAM ফ্লিপ-ফ্লপ দিয়ে তৈরি হওয়ায় এতে পর্যায়ক্রমিক রিফ্রেশিংয়ের প্রয়োজন হয় না, কিন্তু DRAM ক্যাপাসিটরে চার্জ হিসেবে ডেটা ধরে রাখায় ক্রমাগত রিফ্রেশ করতে হয়।
 
 6. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*
    (a) Its content can be erased electrically in blocks
    (b) It requires periodin rewriting of data.
    (c) It can be rewritten at high speed and used as CPU cache
    (d) Its entire content is erased by ultraviolet light
+answer: (a)
+explanation: ফ্ল্যাশ মেমরি হলো একটি নন-ভোলাটাইল স্টোরেজ মেমরি যার ডেটা ব্লক আকারে বৈদ্যুতিকভাবে মোছা (electrically erased in blocks) এবং পুনর্লিখন করা যায়।
 
 7. **বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
    ক. হাইড্রোজেন
    খ. তামা
    গ. কার্বন ডাই-অক্সাইড
    ঘ. নাইট্রোজেন
+answer: খ
+explanation: তামা (Copper) অত্যন্ত উচ্চ পরিবাহিতা এবং তুলনামূলক সহজলভ্যতার কারণে বিদ্যুৎ ও তারের সংযোগে সর্বাধিক ব্যবহৃত ধাতু।
 
 8. **Which of the following resembles OATH: PROMISE? [ নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*
    (a) Contract : Agreement
    (b) Deed : Attorney
    (c) Title : Estate
    (d) Job : Loyalty
+answer: (a)
+explanation: Oath হলো এক ধরনের আনুষ্ঠানিক বা লিখিত Promise। একইভাবে Contract হলো আনুষ্ঠানিক বা আইনগত Agreement।
 
 9. **Which of the following testing strategy is related to the boundary value analysis?[ নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analysis)-এর সাথে সম্পর্কিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*
    (a) White-box testing
    (b) Black box testing
    (c) Unit testing
    (d) None of these
+answer: (b)
+explanation: Boundary Value Analysis (BVA) হলো বহুল ব্যবহৃত একটি ব্ল্যাক বক্স টেস্টিং (Black-box testing) টেকনিক, যা ইনপুট ডোমেইনের সীমানা মানগুলো পরীক্ষা করার জন্য ব্যবহৃত হয়।
 
 10. **Data about data is also called—[ ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*
    (a) Data store
    (b) Data bank
    (c) Meta Data
    (d) Warehouse
+answer: (c)
+explanation: মেটাডাটা (Metadata) হলো ডেটা সম্পর্কে ডেটা বা তথ্যের বর্ণনামূলক তথ্য।
 
 ## Time & Work (9)
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
