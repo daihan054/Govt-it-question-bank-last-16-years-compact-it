@@ -691,90 +691,120 @@ explanation: স্ট্রাকচার্ড প্রোগ্রামি
    b) 2
    c) 0
    d) more than 2
+answer: A
+explanation: C ভাষায় একটি ফাংশন `return` স্টেটমেন্টের মাধ্যমে একবারে কেবল একটিমাত্র (1টি) মান রিটার্ন করতে পারে।
 
 2. **Which of the following correctly accesses the seventh element stored in arr, an array with 100 elements?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
    a) arr[6]
    b) arr[7]
    c) arr{6}
    d) arr{7}
+answer: A
+explanation: C ভাষায় অ্যারে 0-ইনডেক্সড (zero-indexed)। ফলে ৭ম উপাদানটি অ্যাক্সেস করতে `arr[6]` ব্যবহার করতে হয়।
 
 3. **Which of the following do not return any value?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*
    (ক) Constructor function
    (খ) Friend function
    (গ) In line Function
    (ঘ) Member Functions
+answer: A
+explanation: কনস্ট্রাক্টর ফাংশনের কোনো রিটার্ন টাইপ থাকে না (এমনকি `void`-ও নয়) এবং এটি কোনো মান রিটার্ন করে না।
 
 4. **Assuming an int is of 4 bytes, What is the size of “int array[15]”?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*
    (ক) 15
    (খ) 19
    (গ) 11
    (ঘ) 60
+answer: D
+explanation: প্রতিটি `int` 4 বাইট হলে 15টি উপাদানের জন্য মোট সাইজ হবে $15 \times 4 = 60$ বাইট।
 
 5. **In C++, The library function exit() causes an exit from-** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*
    (ক) a block of statements
    (খ) a loop in which it occurs
    (গ) a function in which it occurs
    (ঘ) a program in which it occurs
+answer: D
+explanation: `exit()` স্ট্যান্ডার্ড লাইব্রেরি ফাংশনটি কল করলে সম্পূর্ণ প্রোগ্রামটির এক্সিকিউশন তৎক্ষণাৎ বন্ধ (terminate) হয়ে যায়।
 
 6. **Which of the following is correct to initialize arrays in C?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 83 (ET: N/A)]*
    a. int array = (1, 2, 3, 4, 5)
    b. int array = {1, 2, 3, 4, 5}
    c. int array() = (1, 2, 3, 4, 5)
    d. int array[5] = {1, 2, 3, 4, 5}
+answer: D
+explanation: C ভাষায় অ্যারে ডিক্লেয়ার ও ইনিশিয়ালাইজ করার সঠিক সিনট্যাক্স হলো `int array[5] = {1, 2, 3, 4, 5};`।
 
 7. **What is the access methodology in array?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 83 (ET: N/A)]*
    a. Sequential
    b. Random
    c. Rational
    d. Stochastic
+answer: B
+explanation: অ্যারের যেকোনো উপাদান ইনডেক্সের মাধ্যমে সরাসরি সমসময়ে ($O(1)$) অ্যাক্সেস করা যায়, তাই এটি র‍্যান্ডম অ্যাক্সেস (Random access) পদ্ধতি।
 
 8. **Which of the following is correct?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*
    a. “X extends Y” is correct if and only if X is a class and Y is an interface
    b. “X extends Y” is correct if and only if X is an interface and Y is a class
    c. “X extends Y” is correct if X and Y are either both classes or both interfaces
    d. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces
+answer: C
+explanation: অবজেক্ট-ওরিয়েন্টেড প্রোগ্রামিংয়ে (যেমন জাভায়) `extends` কিওয়ার্ড তখনই সঠিক যখন `X` ও `Y` উভয়ই ক্লাস অথবা উভয়ই ইন্টারফেস।
 
 9. **An n*n array v is defined as follows: v[i, j]=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*
    A) 0
    B) n-1
    C) n^2-3n+2
    D) n^2(n+1)/2
+answer: A
+explanation: যেহেতু $v[i, j] = i - j$ এবং $v[j, i] = j - i = -(i - j)$, তাই প্রতিটি উপাদানের বিপরীত উপাদান ম্যাট্রিক্সে বিদ্যমান ($v[i, i]=0$ সহ)। ফলে সকল উপাদানের যোগফল 0।
 
 10. **When you pass array as an argument to a function, which actually gets passed?** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*
    (a) Base address of the array
    (b) The first element of the array
    (c) Address of the first element of the array
    (d) Address of the last element of the array
+answer: A
+explanation: C ভাষায় ফাংশনে অ্যারে পাস করলে প্রকৃতপক্ষে অ্যারেটির বেস অ্যাড্রেস (Base address) বা প্রথম উপাদানের মেমরি অ্যাড্রেস পাস হয় (pass by pointer/decay)।
 
 11. **int number [] = {10,20,30,40,50}; number[3] =?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*
    A) 10
    B) 20
    C) 30
    D) 40
+answer: D
+explanation: 0-ইনডেক্সিং অনুযায়ী `number[0]=10, number[1]=20, number[2]=30, number[3]=40`। ফলে মান হবে 40।
 
 12. **Two dimensional arrays are also called?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*
    A) table array
    B) matrix array
    C) both A and B
    D) none of the above
+answer: C
+explanation: দ্বিমাত্রিক (2D) অ্যারেকে রো ও কলামের বিন্যাস থাকায় টেবিল অ্যারে বা ম্যাট্রিক্স অ্যারে উভয়ই বলা হয়।
 
 13. **The smallest element of array index is called it-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*
    A) Lower Bound
    B) Upper Bound
    C) Range
    D) Extraction
+answer: A
+explanation: অ্যারের সর্বনিম্ন ইনডেক্সকে লোয়ার বাউন্ড (Lower Bound) এবং সর্বোচ্চ ইনডেক্সকে আপার বাউন্ড (Upper Bound) বলা হয়।
 
 14. **What type of reference should be used in vector arithmetic in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
    A) Dynamic
    B) const
    C) a and b
    D) none of the mentioned
+answer: B
+explanation: C++ এ ভেক্টর বা অবজেক্ট অপারেশনে অপ্রয়োজনীয় অবজেক্ট কপি এড়াতে এবং ডেটা সুরক্ষিত রাখতে `const` রেফারেন্স (`const &`) ব্যবহার করা সর্বোত্তম রীতি।
 
 15. **In C, if you pass an array as an argument to a function, what actually gets passed?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*
    a. Value of elements in array
    b. First element of the array
    c. Base address of the array
    d. Address of the last element of the array
+answer: C
+explanation: ফাংশনে অ্যারে পাস করলে অ্যারের প্রথম উপাদানের মেমোরি অ্যাড্রেস বা বেস অ্যাড্রেস (Base address) পাস হয়।
 
 ## Data Types & Variables (14)
 
