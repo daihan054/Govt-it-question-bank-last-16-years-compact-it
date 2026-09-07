@@ -1383,33 +1383,80 @@ answer: C
 explanation: ডেটাবেসে ট্রানজ্যাকশন `COMMIT` বা `ROLLBACK` হলে খোলা থাকা কার্সারগুলো (বিশেষ করে `FOR UPDATE` কার্সার) স্বয়ংক্রিয়ভাবে বন্ধ (Close the cursor) হয়ে যায়।
 
 ## Database Fundamentals & SQL (7)
+
 1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+answer: 
+```sql
+SELECT c.customerID, c.name, SUM(o.orderAmount) AS total_order_amount
+FROM Customer c
+JOIN Accounts a ON c.customerID = a.customerID
+JOIN Orders o ON a.accountID = o.accountID
+GROUP BY c.customerID, c.name
+HAVING SUM(o.orderAmount) > 5000;
+```
+explanation: তিনটি সম্পর্কিত টেবিল JOIN করে প্রতিটি গ্রাহকের মোট অর্ডার ভ্যালু বের করতে `GROUP BY c.customerID, c.name` এবং ৫০০০-এর বেশি ফিল্টার করতে `HAVING SUM(o.orderAmount) > 5000` ক্লজ ব্যবহার করা হয়েছে।
 
 2. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
    (a) Can have duplicate values
    (b) Can be NULL
    (c) Must be unique
    (d) Can store multiple values
+answer: C
+explanation: প্রাইমারি কি-এর প্রতিটি মান অবশ্যই টেবিলের প্রতিটি সারির জন্য অনন্য বা ইউনিক (Must be unique) হতে হবে এবং এতে কখনো NULL মান থাকতে পারবে না।
 
 3. **See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400-401]]*
    a) Create table name Servers with attributes ID, DaysRunning, OsName, RamCapacity.
    b) Write SQL query to update the server to Unix where the RamCapacity than 16GB.
    c) Write SQL query to select the OSName for which Servers are running more than 365 days.
+answer: 
+a) `CREATE TABLE Servers (ID INT PRIMARY KEY, DaysRunning INT, OsName VARCHAR(50), RamCapacity INT);`
+b) `UPDATE Servers SET OsName = 'Unix' WHERE RamCapacity > 16;`
+c) `SELECT OsName FROM Servers WHERE DaysRunning > 365;`
+explanation: টেবিল তৈরি (CREATE TABLE), নির্দিষ্ট শর্তে ডেটা পরিবর্তন (UPDATE ... SET ... WHERE) এবং ফিল্টারিং (SELECT ... WHERE) করার সঠিক SQL সিনট্যাক্স।
 
 4. **Write the following queries** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
    (a) Write an SQL query to show the top 10 highest marks from the Result table.
    (b) Write an SQL query to show the number of male and female students who passed, individually.
    (c) Write an SQL query to show the absent students in the Result table.
+answer: 
+(a) `SELECT marks FROM Result ORDER BY marks DESC LIMIT 10;`
+(b) `SELECT gender, COUNT(*) AS passed_count FROM Result WHERE status = 'Passed' GROUP BY gender;`
+(c) `SELECT * FROM Result WHERE status = 'Absent';`
+explanation: সর্বোচ্চ ১০টি মান প্রদর্শনে `ORDER BY ... DESC LIMIT 10`, লিঙ্গভিত্তিক পাস শিক্ষার্থীর সংখ্যা গণনায় `GROUP BY gender`, এবং অনুপস্থিতদের জন্য `WHERE status = 'Absent'` শর্ত ব্যবহার করা হয়েছে।
 
 5. **b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+answer: 
+```php
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "my_database";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
+```
+explanation: পিএইচপি-তে অবজেক্ট ওরিয়েন্টেড `mysqli` এক্সটেনশন ব্যবহার করে ডেটাবেস সার্ভারের সাথে সংযোগ তৈরি এবং সংযোগ ত্রুটি যাচাইয়ের আদর্শ কোড।
 
 6. **একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+answer: 
+```sql
+SELECT * FROM Employee WHERE name LIKE 'A%Y';
+```
+explanation: নামের শুরুতে 'A' এবং শেষে 'Y' নিশ্চিত করতে SQL প্যাটার্ন ম্যাচিং অপারেটর `LIKE 'A%Y'` ব্যবহৃত হয়, যেখানে মাঝের `%` চিহ্নটি শূন্য বা ততোধিক যেকোনো বর্ণ নির্দেশ করে।
 
 7. **Which one is in case of normalization—[ নরম্যালাইজেশন (Normalization)-এর ক্ষেত্রে কোনটি সঠিক— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*
    (a) Normalization maximizes duplicates
    (b) Normalization reduces duplicates
    (c) Normalization eliminates duplicates
    (d) Normalization increases duplicates
+answer: B
+explanation: নরম্যালাইজেশনের প্রধান উদ্দেশ্য হলো ডেটাবেসের টেবিল ডিজাইন পুনর্বিন্যাস করে অনাকাঙ্ক্ষিত তথ্যের পুনরাবৃত্তি বা ডুপ্লিকেশন কমিয়ে আনা (reduces duplicates)।
 
 ## Indexing & Query Optimization (6)
 
