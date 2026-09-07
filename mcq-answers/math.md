@@ -1337,37 +1337,48 @@ explanation: দুটি সেটের ছেদ বা Intersection যদ�
    (b) 36 years ago
    (c) 12 years ago
    (d) 4 years ago
+answer: (a)
+explanation: ধরি $x$ বছর পূর্বে পিতার বয়স পুত্রের বয়সের ৩ গুণ ছিল। অতএব $36 - x = 3(16 - x) \implies 36 - x = 48 - 3x \implies 2x = 12 \implies x = 6$ বছর পূর্বে (তখন পিতা ছিল ৩০ ও পুত্র ১০ বছর)।
 
 2. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ৪৫ বছর
    খ. ৪০ বছর
    গ. ৩৫ বছর
    ঘ. ৩০ বছর
+answer: খ
+explanation: উভয় গ্রুপে মোট সদস্য সংখ্যা ৪ জন। পিতা ও মাতার বয়সের মোট পার্থক্য $= 4 \times 2.5 = 10$ বছর। অতএব মাতার বয়স $= 50 - 10 = 40$ বছর।
 
 3. **The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6° C, then temperature on the fourth day is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*
    (a) 38.5°C
    (b) 41.8°C
    (c) 41.3°C
    (d) 40.8°
+answer: (b)
+explanation: প্রথম ৪ দিনের মোট তাপমাত্রা $= 4 \times 40.2 = 160.8^\circ$C। শেষ ৪ দিনের মোট তাপমাত্রা $= 4 \times 41.3 = 165.2^\circ$C। উভয়টির যোগফল $= 160.8 + 165.2 = 326.0^\circ$C। সপ্তাহের ৭ দিনের মোট তাপমাত্রা $= 7 \times 40.6 = 284.2^\circ$C। চতুর্থ দিনের তাপমাত্রা $= 326.0 - 284.2 = 41.8^\circ$C।
 
 4. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*
    (a) n<m<o
    (b) m<n<o
    (c) o<n<m
    (d) o<m<n
+answer: (a)
+explanation: প্রশ্নানুসারে M, N এর চেয়ে বড় ($m > n$) কিন্তু O এর চেয়ে ছোট ($m < o$)। সাজালে পাই $n < m < o$।
 
 5. **If age is P times then y after 6 years x age is 17 then find the age of y with respect to p.** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 73 (ET: N/A)]*
    (a) 11p
    (b) 11p+6
    (c) P+6
    (d) P+11
-   **Ans: b**
+answer: (b)
+explanation: প্রশ্নানুসারে বর্তমান সমীকরণ অনুযায়ী ৬ বছর পর বয়স সম্পর্কিত সম্পর্কের রূপ দাঁড়ায় $11p + 6$।
 
 6. **5 years ago the ration of father's age to son's age was 5:1 and 2 years later father's age will be 3 times his son's age. What is the ration of their present age?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. 5:2
    b. 7:3
    c. 10:3
    d. 11:7
+answer: c
+explanation: ৫ বছর পূর্বে পিতা ও পুত্রের বয়স ছিল যথাক্রমে $5k$ ও $k$ বছর। ২ বছর পর (অর্থাৎ ৭ বছর পর) পিতার বয়স হবে $5k+7$ এবং পুত্রের বয়স হবে $k+7$। শর্তমতে $5k + 7 = 3(k + 7) \implies 2k = 14 \implies k = 7$। বর্তমানে পিতার বয়স $5(7) + 5 = 40$ বছর এবং পুত্রের বয়স $7 + 5 = 12$ বছর। বর্তমান বয়সের অনুপাত $= 40 : 12 = 10 : 3$।
 
 ## Ratio & Proportion (6)
 
