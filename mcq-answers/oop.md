@@ -677,35 +677,49 @@ explanation: এনক্যাপসুলেশন নীতিতে ক্�
    (b) Using classes in object-oriented programming
    (c) Using getter and setter methods
    (d) Using global variables
+answer: d
+explanation: গ্লোবাল ভেরিয়েবল (Global variables) যে কোনো জায়গা থেকে সরাসরি অ্যাক্সেস ও পরিবর্তনযোগ্য হওয়ায় এটি ডেটা হাইডিং ও এনক্যাপসুলেশন লঙ্ঘন করে।
 
 2. **Which variable violates the principle of ecvapsulation?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Gobal variable
+answer: Global variable
+explanation: গ্লোবাল ভেরিয়েবল কোনো নির্দিষ্ট ক্লাসের অভ্যন্তরে আবদ্ধ না থেকে উন্মুক্ত অবস্থায় থাকে, যা এনক্যাপসুলেশন নীতির পরিপন্থী।
 
 3. **Which of the following is a technique for hiding the internal implementation details of an object?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*
    a) Encapsulation
    b) Polymorphism
    c) Inheritance
    d) All of the above
+answer: a
+explanation: অবজেক্টের অভ্যন্তরীণ ডেটা ও বাস্তবায়নের বিবরণ বাইরে থেকে গোপন রাখার (Data Hiding) প্রাথমিক কৌশল হলো এনক্যাপসুলেশন (Encapsulation)।
 
 4. **What is the characteristic of OOP programming that allows binding data and methods to work as a unit?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*
    a. Inheritance
    b. Encapsulation
    c. Polymorphism
    d. Projection
+answer: b
+explanation: ডেটা এবং সেই ডেটা নিয়ন্ত্রণকারী মেথডসমূহকে একক ইউনিটে (Class) আবদ্ধ করার ধারণাকে এনক্যাপসুলেশন (Encapsulation) বলা হয়।
 
 5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
+answer: Data Hiding (ডেটা হাইডিং / নিরাপত্তা)
+explanation: এনক্যাপসুলেশনের মাধ্যমে ক্লাসের ডেটা মেম্বারসমূহ প্রাইভেট রেখে অননুমোদিত সরাসরি পরিবর্তন রোধ করা হয়, যা ডেটা হাইডিং (Data Hiding) নিশ্চিত করে।
 
 6. **In C++, the idea to hiding the details of how something is implemented is known as** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) inheritance
    B) encapsulation
    C) recursion
    D) polymorphism
+answer: B
+explanation: কোনো ফাংশন বা অবজেক্টের অভ্যন্তরীণ জটিল বাস্তবায়ন পদ্ধতি ক্লাসের ভেতরে আড়াল রাখাকে Encapsulation বলা হয়।
 
 7. **In C++, the idea to hiding the details of how something is implemented is known as-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*
    A) inheritance
    B) polymorphism
    C) recursion
    D) encapsulation
+answer: D
+explanation: অবজেক্টের অভ্যন্তরীণ ডেটা ও বাস্তবায়নের বিশদ আড়াল রাখার পদ্ধতি হলো Encapsulation।
 
 ## Inheritance (6)
 
