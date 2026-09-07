@@ -547,57 +547,77 @@ explanation: `const` হিসেবে ঘোষিত ভ্যারিয়
    b) The loop body is guaranteed to execute at least once.
    c) The loop condition must always be false for the loop to execute.
    d) The "do while" loop and "while" loop have identical behavior in all cases.
+answer: B
+explanation: `do...while` একটি exit-controlled loop, যার শর্তটি বডি এক্সিকিউশনের পর যাচাই করা হয়। ফলে শর্ত যাই হোক না কেন, লুপের বডি অন্তত একবার নিশ্চিতভাবে এক্সিকিউট হয়।
 
 2. **Which for loop has range of similar indexes of 'i' used in for (i = 0; i < n; i++)?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    (a) for (i= n; i>0; i--)
    (b) for (i=n-1; i>0; i--)
    (c) for (i = 0; i = 0; i--)
    (d) for (i=n-1; i>-1; i--)
+answer: D
+explanation: `for (i = 0; i < n; i++)` লুপে `i`-এর মান $0$ থেকে $n-1$ পর্যন্ত $n$ টি মানে চলে। বিপরীতক্রমে একই রেঞ্জ ($n-1$ থেকে $0$) পেতে `for (i=n-1; i>-1; i--)` ব্যবহৃত হয়।
 
 3. **Consider int i=0; Then which of the following is not an infinite loop?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
    a) for(;;){}
    b) while ( ){}
    c) while ( ++i<0) { --i;}
    d) do {++i; while(--i<=0);
+answer: C
+explanation: `i=0` হলে `++i < 0` (অর্থাৎ $1 < 0$) শর্তটি প্রথমবারেই মিথ্যা (false) হয়ে যায়। ফলে লুপটি সাথে সাথে বন্ধ হয়ে যায় এবং এটি ইনফিনিট লুপ নয়।
 
 4. **Which keyword is used to skip the rest of a loop and carry on from the top of the loop again?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
    a) Break
    b) resume
    c) continue
    d) skip
+answer: C
+explanation: লুপের বর্তমান ইটারেশনের বাকি অংশ বাদ দিয়ে (skip করে) পরবর্তী ইটারেশনে যাওয়ার জন্য `continue` কিওয়ার্ড ব্যবহৃত হয়।
 
 5. **What can be used to terminate for(;;)?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** break statement
+answer: A
+explanation: `for(;;)` একটি ইনফিনিট লুপ। একে শর্তসাপেক্ষে বন্ধ বা টার্মিনেট করতে লুপের ভেতরে `break` স্টেটমেন্ট (অথবা `return`/`goto`) ব্যবহার করা হয়।
 
 6. **The ________ loop is especially useful when you process a menu selection?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*
    a) while
    b) do-while
    c) for
    d) switch
+answer: B
+explanation: মেনু চালিত প্রোগ্রামে (menu-driven programs) ব্যবহারকারীকে অপশন অন্তত একবার দেখাতে হয় এবং ইনপুট নিয়ে শর্ত পরীক্ষা করতে হয়, তাই `do-while` লুপ বিশেষভাবে উপযোগী।
 
 7. **C programming Language এ কোনো loop থেকে তৎক্ষণাৎ বের করার জন্য উল্লেখিত কোনটি ব্যবহৃত হয়?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*
    A) break
    B) switch
    C) continue
    D) if
+answer: A
+explanation: C ভাষায় চলমান লুপ বা সুইচ ব্লক থেকে সাথে সাথে বের হয়ে আসার জন্য `break` স্টেটমেন্ট ব্যবহৃত হয়।
 
 8. **Which Control statement can be executed at least once?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*
    A) While
    B) For
    C) do-while
    D) None of the above
+answer: C
+explanation: `do-while` লুপের শর্তটি বডি এক্সিকিউশনের পর শেষে চেক করা হয়, তাই এর বডি কমপক্ষে একবার এক্সিকিউট হয়।
 
 9. **Which of the following cannot be checked in a switch-case statement?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*
    A) Character
    B) Integer
    C) Float
    D) None of above
+answer: C
+explanation: C ভাষায় `switch-case`-এ শুধুমাত্র পূর্ণসংখ্যা বা সমতুল্য টাইপ (`int`, `char`, `enum`) ব্যবহার করা যায়; ফ্লোটিং পয়েন্ট টাইপ (`float` বা `double`) ব্যবহার করা যায় না।
 
 10. **Which control statement can be executed at least once?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*
    A) While
    B) for
    C) do-while
    D) All of the above
+answer: C
+explanation: `do-while` লুপে শর্ত যাচাই করার আগেই স্টেটমেন্ট ব্লক একবার রান করে, ফলে এটি অন্তত একবার কার্যকর হয়।
 
 11. **Which of the following correctly shows the hierarchy of algorithm operation in C?** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)]*
    A) /*+-
@@ -621,36 +641,48 @@ explanation: `const` হিসেবে ঘোষিত ভ্যারিয়
    B) 2.5
    C) 3
    D) 4
+answer: B
+explanation: C ভাষায় অ্যারিথমেটিক অপারেটরের অগ্রাধিকার (precedence) ক্রমানুসারে গুণ (`*`) ও ভাগ (`/`) এর অগ্রাধিকার যোগ (`+`) ও বিয়োগ (`-`) এর চেয়ে বেশি।
 
 12. **What is an example of iteration in C?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*
    A) for
    B) while
    C) do-while
    D) all of the above
+answer: D
+explanation: C প্রোগ্রামিংয়ে `for`, `while`, এবং `do-while` তিনটিই ইটারেশন বা লুপ স্টেটমেন্ট।
 
 13. **Which of the following format is a correct format for declaration of function?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*
    A) return-type function-name (argument type);
    B) return-type function-name (argument type) {}
    C) return-type (argument type) function-name;
    D) return-type {} function-name
+answer: A
+explanation: ফাংশন ডিক্লেয়ারেশন বা প্রোটোটাইপের সঠিক সিনট্যাক্স হলো `return-type function-name (argument-types);`।
 
 14. **What are the final values of a and c in the following C statement? (initialize value a=2, c=1) c=c? c=2:a=0;** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*
    A) a=0, c=0
    B) a=2, c=2
    C) a=2, c=2
    D) a=1, c=2
+answer: B
+explanation: যেহেতু শুরুতে `c=1` (true), তাই টার্নারি অপারেটরের প্রথম অংশ `c=2` কার্যকর হয়ে `c`-এর মান 2 হয় এবং `a` এর মান অপরিবর্তিত থেকে 2 থাকে।
 
 15. **Which of the following doesn’t require an ‘&’ for the input in scanf ( ) ?** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*
    A) char name [10];
    B) int name [10];
    C) float name[10];
    D) double name [10];
+answer: A
+explanation: স্ট্রিং বা ক্যারেক্টার অ্যারে (`char name[10]`) এর নাম নিজেই তার প্রথম উপাদানের মেমোরি অ্যাড্রেস (বেস অ্যাড্রেস) নির্দেশ করে, তাই `scanf("%s", name)`-এ `&` চিহ্নের প্রয়োজন হয় না।
 
 16. **Which are the keywords of structured programming?** *[Bangladesh Bank Assistant Programmer 2016 compact it 245 (ET: N/A)]*
    A) Keywords
    B) Constant
    C) volatile
    D) Above all
+answer: D
+explanation: স্ট্রাকচার্ড প্রোগ্রামিং ভাষায় নির্দিষ্ট কীওয়ার্ড, ধ্রুবক (constant) এবং টাইপ কোয়ালিফায়ার (যেমন: volatile) সবগুলোই ভাষার মৌলিক উপাদান।
 
 ## Arrays & Functions (15)
 
