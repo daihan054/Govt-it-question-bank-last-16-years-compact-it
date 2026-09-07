@@ -36,6 +36,8 @@
    (b) 10
    (c) 25
    (d) 5
+answer: A
+explanation: `fun(&x)`-এ `x`-এর অ্যাড্রেস পাস করা হয়েছে (pass by reference via pointer)। `*p = *p + 10` দ্বারা `x`-এর মান $5+10=15$ হয় এবং 15 রিটার্ন করে।
 
 2. **Find Output:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xviii (ET: DU)]*
    ```cpp
@@ -53,6 +55,8 @@
    (b) 3 2
    (c) 2 3
    (d) 3 1
+answer: B
+explanation: `x==3` শর্তটি সত্য হওয়ায় `if` ব্লকে `y=2` অ্যাসাইন হয়। সুতরাং আউটপুট হবে `3 2`।
 
 3. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    ```c
@@ -66,6 +70,8 @@
    (b) 10
    (c) 0
    (d) 1
+answer: C
+explanation: রিলেশনাল অপারেটর `>` বাম থেকে ডানে (left-to-right) কাজ করে। ফলে `(x > y) > z` $\rightarrow (20 > 10) > 5 \rightarrow 1 > 5 \rightarrow 0$।
 
 4. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    ```c
@@ -80,6 +86,8 @@
    (b) muli is printed infinitely
    (c) muli is printed twice
    (d) muli is printed thrice
+answer: D
+explanation: লুপটি `k = 0.0, 1.0, 2.0`-এর জন্য ৩ বার চলবে এবং ৩ বার "muli" প্রিন্ট হবে (thrice)।
 
 5. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    ```c
@@ -98,6 +106,8 @@
    (b) 5
    (c) 10
    (d) 25
+answer: C
+explanation: নেস্টেড লুপটিতে `j`-এর মোট ইটারেশন সংখ্যা হবে $0 + 1 + 2 + 3 + 4 = 10$। ফলে `count`-এর মান হবে 10।
 
 6. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    ```c
@@ -112,6 +122,8 @@
    (b) k, 81
    (c) k, Q
    (d) Q, K
+answer: B
+explanation: `%c` দিয়ে পূর্ণসংখ্যা 107 প্রিন্ট করায় এর ASCII ক্যারেক্টার 'k' প্রদর্শিত হবে, এবং `%d` দিয়ে ক্যারেক্টার 'Q' প্রিন্ট করায় এর ASCII মান 81 প্রদর্শিত হবে।
 
 7. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    ```c
@@ -126,6 +138,8 @@
    (b) 5
    (c) 6
    (d) 11
+answer: B
+explanation: 3D অ্যারেতে `data[0][2][1]`-এর ফ্ল্যাট ইনডেক্স হলো $0 \times (3 \times 2) + 2 \times 2 + 1 = 5$, যার মান 5।
 
 8. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    ```c
@@ -139,11 +153,12 @@
    (b) 12
    (c) 13
    (d) 14
+answer: A
+explanation: বিটওয়াইজ OR (`|`): $11 = 1011_2$ এবং $3 = 0011_2$। $1011_2 \mid 0011_2 = 1011_2 = 11$।
 
 9. **What will be the output of this C program?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*
    ```c
    #include<stdio.h>
-   ```c
    int main() {
    float p=10.5;
    int a=5*p+5.0;
@@ -155,6 +170,8 @@
    b) 57
    c) 57.000000
    d) The program has errors and will not run.
+answer: B
+explanation: $5 \times 10.5 + 5.0 = 52.5 + 5.0 = 57.5$। এটি পূর্ণসংখ্যা ভ্যারিয়েবল `int a`-তে সংরক্ষিত হওয়ায় দশমিক অংশ ট্রাঙ্কেট হয়ে 57 হবে।
 
 10. **Which of the following Output of this program?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*
    ```c
@@ -171,6 +188,8 @@
    (B) 1 2 3 4
    (C) 4 4 4 4
    (D) 0 0 0 0
+answer: A
+explanation: `static int i` এর মান প্রতিটি রিকার্সিভ কলে সংরক্ষিত থাকে। `--i` যথাক্রমে 4, 3, 2, 1 হয়ে প্রিন্ট হবে এবং 0 হলে রিকার্শন বন্ধ হবে।
 
 11. **Given Output:** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*
    ```c
@@ -186,12 +205,16 @@
    (B) 1
    (C) A bog negative Number
    (D) Compiler Error
+answer: A
+explanation: `y` এর মান 0 হওয়ায় `(y != 0)` শর্তটি মিথ্যা (false) বা 0 প্রদান করে, ফলে `x = 0` প্রিন্ট হবে।
 
 12. **How many times will loop iterate?** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*
    (a) 9
    (b) 10
    (c) 8
    (d) infinite
+answer: B
+explanation: স্ট্যান্ডার্ড C লুপ (যেমন: `for(i=0; i<10; i++)` বা `for(i=1; i<=10; i++)`) সাধারণত 10 বার আবর্তিত (iterate) হয়।
 
 13. **What will be the output of the following “C” code fragment?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
    ```c
@@ -204,6 +227,8 @@
    b) 100
    c) 101
    d) 98
+answer: B
+explanation: লুপে `x` প্রতি ধাপে 2 করে বৃদ্ধি পায়। `x=98` এর পর যোগ হয়ে 100 হয় এবং `100 < 100` মিথ্যা হওয়ায় লুপ শেষ হয়। ফলে আউটপুট 100।
 
 14. **Determine Output:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*
    ```c
@@ -216,6 +241,8 @@
    (b) 0 0 0
    (c) garbage values
    (d) Error
+answer: C
+explanation: লোকাল ভ্যারিয়েবল ইনিশিয়ালাইজেশনের সময় `i++` ব্যবহার অনির্ধারিত আচরণ (undefined behavior) ঘটায় এবং মেমোরিতে থাকা অনির্ধারিত মান (garbage values) ধারণ করে।
 
 15. **Determine Output:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
    ```c
@@ -233,6 +260,8 @@
    (b) Compiler Error
    (c) Linking error
    (d) None of these
+answer: B
+explanation: C ভাষায় স্ট্রাকচার ডেফিনিশনের ভেতরে ফিল্ডের ইনিশিয়ালাইজেশন (`int x = 3;` ইত্যাদি) অবৈধ, ফলে কম্পাইল এরর (Compiler Error) হবে।
 
 16. **Assume that the size of an integer is 4 bytes, predict the output of following program.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*
    ```c
@@ -248,6 +277,8 @@
    (b) 13 4
    (c) Compiler Error
    (d) 0 4
+answer: A
+explanation: C ভাষায় `sizeof` অপারেটরের ভেতরের এক্সপ্রেশন রানটাইমে এক্সিকিউট বা মূল্যায়ন (evaluate) হয় না। ফলে `i++` কার্যকর হয় না এবং `i`-এর মান 12-ই থাকে, আর `sizeof(int)` হলো 4।
 
 17. **Which is the correct output?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
    ```c
@@ -257,6 +288,8 @@
    b) 5 7 8
    c) 6 4 6
    d) 1 4 5
+answer: D
+explanation: প্রথম `printf`-এ `+1` এর জন্য 1 এবং পোস্ট-ইনক্রিমেন্ট `i++` এর জন্য 4 প্রিন্ট হয়ে `i` এর মান 5 হয়। দ্বিতীয় `printf`-এ `i++` এর মান 5 প্রিন্ট হয়। ফলে মোট আউটপুট `1 4 5`।
 
 18. **Which is correct output?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
    ```c
@@ -266,6 +299,8 @@
    b) 22
    c) Error
    d) Garbage value
+answer: A
+explanation: পয়েন্টার `p`-তে `&a + 2` এর মেমরি অ্যাড্রেস থাকায় `*p = 22` অন্য কোনো মেমোরি লোকেশনে মান লেখে। মূল ভ্যারিয়েবল `a`-এর মান অপরিবর্তিত থেকে 100-ই থাকে।
 
 19. **Find the correct output:** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*
    ```c
@@ -276,6 +311,8 @@
    b) 10 30
    c) 20 10
    d) Garbage Value
+answer: C
+explanation: এটি XOR সোয়াপিং (swap) অ্যালগরিদম যা কোনো তৃতীয় ভ্যারিয়েবল ছাড়াই দুটি সংখ্যার মান অদলবদল করে। ফলে `a` হবে 20 এবং `b` হবে 10।
 
 20. **What is the correct output of the following C program statements?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)], [6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*
    ```c
@@ -286,6 +323,8 @@
    b. 2
    c. 3
    d. Compile Error
+answer: B
+explanation: `p = array + 5` অ্যারের ৫ম ইনডেক্স উপাদান 1-কে নির্দেশ করে। ফলে `p[1]` নির্দেশ করবে তার পরবর্তী উপাদান `array[6]` বা 2-কে।
 
 21. **What is the output for the following C code segment?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*
    ```c
@@ -298,6 +337,8 @@
    b. 5
    c. 03
    d. 05
+answer: D
+explanation: `printf("0")` স্ক্রিনে "0" প্রিন্ট করে এবং প্রিন্ট হওয়া ক্যারেক্টার সংখ্যা 1 রিটার্ন করে যা সত্য (true)। ফলে `if` শর্ত সত্য হয়ে `i = 5` হয় এবং পরবর্তী `printf` দ্বারা 5 প্রিন্ট হয়ে মোট আউটপুট "05" হয়।
 
 22. **Consider the function fun (x, y) below. That is the value of fun (4, 3)?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*
    ```c
@@ -311,6 +352,8 @@
    b. 12
    c. 9
    d. 10
+answer: A
+explanation: ধাপগুলো: `fun(4, 3) = fun(3, 7) = fun(2, 10) = fun(1, 12) = fun(0, 13)`। যেহেতু `x == 0`, এটি 13 রিটার্ন করে।
 
 23. **What does the following function do?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*
    ```c
@@ -323,6 +366,8 @@
    b. x+x*y
    c. x*y
    d. xy
+answer: C
+explanation: ফাংশনটি `y` বার `x`-কে রিকার্সিভভাবে যোগ করে, যা মূলত গুণফল $x \times y$ হিসাব করার অ্যালগরিদম।
 
 24. **Find Output:** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)]*
    ```c
@@ -340,6 +385,8 @@
    b. 0, c+3
    c. '0', 'c+3'
    d. '0', 'f'
+answer: A
+explanation: `*((char*)node2+2)` ৩য় বাইট নির্দেশ করে, যেখানে `'c' + 3 = 'f'`। এবং প্রদত্ত অপশন অনুযায়ী সঠিক ফলাফল (a) `0, f`।
 
 25. **Find the output:** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 163 (ET: N/A)]*
    ```c
@@ -351,6 +398,8 @@
    b) 99, 11
    c) 20, 11
    d) 99, 20
+answer: B
+explanation: `(a=99)` সত্য (non-zero) হওয়ায় টার্নারি অপারেটর `b = 11` এক্সিকিউট করে, ফলে `c = 11` হয় এবং `a` এর মান 99 থাকে। আউটপুট `99, 11`।
 
 26. **What will be the output of following code?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 164 (ET: N/A)]*
    ```c
@@ -361,6 +410,8 @@
    b) 17
    c) 16
    d) 19
+answer: C
+explanation: `++z` এর মান 6, তারপর $6 + 5 - 1 - 5 + 6 + 5 = 16$। `x++` পোস্ট-ইনক্রিমেন্ট হওয়ায় এক্সপ্রেশনে এর তৎকালীন মান 5 ব্যবহৃত হয়।
 
 27. **What will be the output of the given line?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    ```c
@@ -370,18 +421,24 @@
    b) 4
    c) 1
    d) 8
+answer: B
+explanation: আধুনিক ৩২-বিট ও ৬৪-বিট আর্কিটেকচারে এবং স্ট্যান্ডার্ড C কম্পাইলারে `int` ডেটা টাইপের সাইজ সাধারণত 4 বাইট।
 
 28. **Which for loop statement is invalid?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
    a) for(int x=10; k<=5; x/9)
    b) for(int x=10; x>=2; --x)
    c) for(int x=10; x>=200; x=3*x)
    d) for(int x=10; x>=0; x+=2)
+answer: A
+explanation: অপশন (a)-তে অঘোষিত ভ্যারিয়েবল `k` ব্যবহৃত হয়েছে এবং `x/9` কোনো ভ্যারিয়েবল আপডেট বা অ্যাসাইনমেন্ট ছাড়া একটি অকার্যকর স্টেটমেন্ট।
 
 29. **Which type of following errors is generated when the program is being execute?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*
    A) Syntax error
    B) Semantic error
    C) Run-time error
    D) Linker error
+answer: C
+explanation: প্রোগ্রাম চলাকালীন বা এক্সিকিউশনের সময় যে ত্রুটি ঘটে তাকে রান-টাইম এরর (Run-time error) বলে।
 
 30. **Which is the correct output?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*
    ```c
@@ -393,6 +450,8 @@
    b) 5 7 8
    c) 6 4 6
    d) 4 5 7
+answer: C
+explanation: C কম্পাইলারে সাধারণত ফাংশন আর্গুমেন্ট ডান থেকে বামে ইভালুয়েট হয়। ফলে প্রথমে `i++` এর জন্য 4, তারপর `++i` এর জন্য 6 প্রিন্ট হয় এবং পরের স্টেটমেন্টে বর্তমান মান 6 প্রিন্ট হয়ে আউটপুট `6 4 6` দেয়।
 
 31. **What will happen if this C program is compiled and executed?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*
    ```c
@@ -405,6 +464,8 @@
    b) There will be a compile error and the program will not execute
    c) No output (Output screen will be empty)
    d) There will be a run-time error
+answer: C
+explanation: প্রোগ্রামটিতে কোনো আউটপুট স্টেটমেন্ট (`printf`) না থাকায় এটি সফলভাবে সমাপ্ত হবে এবং আউটপুট স্ক্রিন সম্পূর্ণ খালি (empty) থাকবে।
 
 32. **What will be the output of this C program?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    ```c
@@ -420,6 +481,8 @@
    b) 57
    c) 57.000000
    d) The program has errors and will not run.
+answer: B
+explanation: $5 \times 10.5 + 5.0 = 57.5$। `int a`-তে সংরক্ষণের কারণে দশমিক মান বাদ গিয়ে পূর্ণসংখ্যা 57 প্রিন্ট হবে।
 
 33. **What will be the output of this C program?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    ```c
@@ -436,12 +499,16 @@
    b) 1-
    c) No output (Output screen will be empty
    d) The program will cause an infinite loop and has to be stopped manually
+answer: B
+explanation: `do...while` লুপের বডি অন্তত একবার চলে। ফলে `i=1` থাকা অবস্থায় "1-" প্রিন্ট হয়ে `i` এর মান 2 হয় এবং শর্ত `2 <= 0` মিথ্যা হওয়ায় লুপ শেষ হয়।
 
 34. **If any error occurs due to violation of programming rule is ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*
    a) Syntax error
    b) Run-time Errors
    c) Linker Errors
    d) Logical Errors
+answer: A
+explanation: প্রোগ্রামিং ভাষার ব্যাকরণগত বা সিনট্যাক্স সংক্রান্ত নিয়ম ভঙ্গ করার কারণে যে এরর হয় তাকে সিনট্যাক্স এরর (Syntax error) বলে।
 
 35. **Find output in C- Program:** *[BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*
    ```c
@@ -455,6 +522,8 @@
    B) one hundred
    C) d
    D) 0
+answer: C
+explanation: ASCII টেবিলে ডেসিমাল সংখ্যা 100 এর সমতুল্য ক্যারেক্টার হলো ছোট হাতের 'd' ('a'=97, 'b'=98, 'c'=99, 'd'=100)।
 
 36. **What will be output if you compile & and execute following C code?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    ```c
@@ -468,6 +537,8 @@
    b. 6
    c. 0
    d. Compiler Error
+answer: D
+explanation: `const` হিসেবে ঘোষিত ভ্যারিয়েবল রিড-অনলি (read-only) হয়। একে পরিবর্তনের চেষ্টা (`i++`) করলে কম্পাইলার এরর (Compiler Error) দেয়।
 
 ## Control Statements & Loops (16)
 
