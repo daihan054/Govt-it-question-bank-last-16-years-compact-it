@@ -20,60 +20,80 @@
    (b) = sum(C9:C12)
    (c) sum=(C9:C12)
    (d) sum(C9+C12)
+answer: B
+explanation: In MS Excel, all formulas must begin with an equal sign (=). The correct syntax to sum a contiguous range of cells is `=SUM(C9:C12)`.
 
 2. **In a spreadsheet, ________ can help you make sense of a worksheet contents.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*
    A) value
    B) Labels
    C) formula
    D) macros
+answer: B
+explanation: Labels are text entries that describe the contents of rows, columns, or cells, helping users understand what the numerical data represents.
 
 3. **Multiple calculation can be made in a single formula using.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*
    a) Standard Formula
    b) Array Formula
    c) Complex Formula
    d) Smart Formula
+answer: B
+explanation: An Array Formula allows multiple operations to be executed on an array of values at once, producing either a single aggregated result or multiple array values.
 
 4. **Which area in an excel window allow entering values and formulas?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*
    a) Title bar
    b) Menu bar
    c) Formula bar
    d) Standard tool bar
+answer: C
+explanation: The Formula Bar, located right above the worksheet grid, is the designated input area for typing and editing cell values and formulas.
 
 5. **পরিসংখ্যানের বিভিন্ন পরিমাপ নির্ণয়ের জন্য নিচের কোনটি ব্যবহৃত হয়?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 198 (ET: IBA)]*
    A. MS Word
    B. MS Access
    C. MS Excel
    D. MS Power Point
+answer: C
+explanation: MS Excel-এ পরিসংখ্যান সংক্রান্ত বিভিন্ন ফর্মুলা (যেমন: AVERAGE, MEDIAN, MODE, STDEV) এবং ডেটা অ্যানালাইসিস টুলপ্যাক রয়েছে যা পরিসংখ্যানের বিভিন্ন পরিমাপ দ্রুত হিসাব করতে ব্যবহৃত হয়।
 
 6. **কপি ফরমেট করার শর্টকাট কোনটি?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*
    A. Clt+C
    B. Shift+C
    C. Clt+Shift+C
    D. Alt + Shift +C
+answer: C
+explanation: MS Office-এ ফরম্যাট কপি (Copy Format / Format Painter) করার কিবোর্ড শর্টকাট হলো Ctrl+Shift+C এবং ফরম্যাট পেস্ট করার শর্টকাট হলো Ctrl+Shift+V।
 
 7. **Which of the following is spreadsheet software?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*
    A) Adobe Acrobat
    B) MS Excel
    C) Fax Pro
    D) Power Point
+answer: B
+explanation: Microsoft Excel is an electronic spreadsheet application designed for organizing, analyzing, and calculating tabular data.
 
 8. **What is entered by the function = today()?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
    a. The date value for the day according to system clock
    b. The time value according to system clock
    c. Today's date as text format
    d. All of the above
+answer: A
+explanation: The `=TODAY()` function dynamically retrieves and inputs the current date value based on the computer's system clock.
 
 9. **What happens when you press Ctrl+X after selecting some cells in Excel?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
    a. The cell content of selected cells disappears from cell and stored in clipboard
    b. The cells selected are marked for cutting
    c. The selected cells are deleted and shifted left
    d. The selected cells are deleted and shifted up
+answer: B
+explanation: In Excel, pressing Ctrl+X places a flashing marquee border around the selected cells, marking them to be moved upon the next paste action rather than clearing them immediately.
 
 10. **What program do you use to create a spreadsheet?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
    a. Word
    b. Excel
    c. Access
    d. PowerPoint
+answer: B
+explanation: Excel is Microsoft's dedicated spreadsheet creation and management software.
 
 ## MS Word (5)
 
