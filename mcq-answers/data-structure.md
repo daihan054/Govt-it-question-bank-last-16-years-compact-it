@@ -763,18 +763,24 @@ explanation: লিঙ্কড লিস্টে কতটি নোড রয়
    (b) Graph
    (c) Stack
    (d) Table
+answer: a
+explanation: Priority Queue বাস্তবায়নের জন্য বাইনারি হিপ (Heap Tree) সর্বাধিক পছন্দনীয়, কারণ এটি O(log n) সময়ে ইনসার্ট ও সর্বোচ্চ/সর্বনিম্ন অগ্রাধিকারের উপাদান অপসারণের সুবিধা দেয়।
 
 2. **What is the best way to implement priority queue?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*
    (a) Array
    (b) Linked List
    (c) Heap
    (d) Stack
+answer: c
+explanation: হিপ (Binary Heap) ডেটা স্ট্রাকচার ব্যবহার করাই प्रायোরিটি কিউ বাস্তবায়নের সবচেয়ে কার্যকর ও সর্বোত্তম উপায় (Best way)।
 
 3. **In the priority queue, insertion and deletion take place at –** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*
    a) Front and rear end
    b) Only at the front end
    c) Only at the rear end
    d) Any position
+answer: d
+explanation: সাধারণ কিউ-এর মতো শুধু প্রান্তদ্বয়ে সীমাবদ্ধ না থেকে, প্রাইওরিটি কিউ-তে উপাদানের প্রায়োরিটি বা অগ্রাধিকার মানের ওপর ভিত্তি করে যে কোনো অবস্থানে (Any position) ইনসার্ট বা ডিলিশন সম্পন্ন হতে পারে।
 
 ## Hashing & Hash Tables (2)
 
