@@ -77,6 +77,26 @@
     ii) PDU Hierarchy: লেয়ারভেদে ডেটার প্রোটোকল ডেটা ইউনিট বা পিডিইউ রূপান্তর ক্রম—Data -> Segment (Transport) -> Packet (Network) -> Frame (Data Link) -> Bit (Physical)।<br>
     iii) Firewall Inspection Level: ট্র্যাডিশনাল প্যাকেট ফিল্টারিং ফায়ারওয়াল সাধারণত ফ্রেম/প্যাকেট হেডার চেক করে, আর আধুনিক NGFW পুরো পেলোড পর্যন্ত ইনস্পেকশন করে।<br>
 
+15) End-to-End Packet Traversal (PC to Singapore Server):<br>
+    i) End-to-End Packet Flow: পিসি থেকে সিঙ্গাপুর সার্ভার পর্যন্ত সম্পূর্ণ ট্রাফিক রুট (PC -> Switch -> Firewall -> Internal Router -> BTCL ISP -> International Backbone -> Singapore ISP -> Datacenter Router -> Datacenter Firewall -> Server)।<br>
+    ii) IP vs. MAC Address Behavior in Transmission: ডেটা ট্রান্সমিশনে পুরো জার্নিতে সোর্স ও ডেস্টিনেশন IP অ্যাড্রেস অপরিবর্তিত থাকে, কিন্তু প্রতি হপে (রাউটার/সুইচ পার হওয়ার সময়) MAC অ্যাড্রেস পরিবর্তিত হয়।<br>
+
+16) Network Address Translation (NAT) / Netting:<br>
+    i) NAT & Netting Concept: প্রাইভেট লোকাল আইপি দিয়ে ইন্টারনেট ব্রাউজ করতে রাউটারে পাবলিক আইপিতে রূপান্তর (Netting) এবং রেসপন্স প্যাকেট আসলে মূল অভ্যন্তরীণ প্রাইভেট আইপি শনাক্ত করে পাঠানো।<br>
+    ii) Port Address Translation (PAT): একটি সিঙ্গেল পাবলিক আইপি ব্যবহার করে পোর্টের সাহায্যে একাধিক লোকাল পিসির ট্রাফিক ম্যাপ করা।<br>
+
+17) Domain Name System (DNS) & Query Tools:<br>
+    i) Browser & DNS Interaction: ব্যবহারকারী ব্রাউজারে ডোমেইন নাম লিখলে অ্যাপ্লিকেশন লেয়ারে DNS সার্ভার সেই ডোমেইনের বিপরীতে সংশ্লিষ্ট আইপি অ্যাড্রেস এনে দেয়।<br>
+    ii) DNS Query CLI Commands: ডিএনএস কুয়েরি ও আইপি রিজলভিং চেক করার কমান্ড—উইন্ডোজে `nslookup` এবং লিনাক্সে `dig` (যেমন: `nslookup www.ittefaq.com.bd`, `dig www.ittefaq.com.bd`)।<br>
+
+18) DNS Name Resolution Process (Recursive vs. Iterative):<br>
+    i) Recursive DNS Resolution: ক্লায়েন্ট ব্রাউজার রিকোয়েস্ট পাঠায় Local/ISP DNS-এ -> Root DNS Server (বিশ্বব্যাপী ১৩টি) -> TLD DNS Server (.org/.com) -> Authoritative DNS Server -> আইপি নিয়ে ব্রাউজারে ফেরত আসে।<br>
+    ii) Iterative DNS Resolution: লোকাল রিজলভার নিজেই প্রতিটি স্তরের ডিএনএস সার্ভারকে আলাদা আলাদা কুয়েরি করে রেফারাল অনুযায়ী ধাপে ধাপে আইপি সংগ্রহ করে।<br>
+    iii) DNS Caching Mechanism: প্রথমবার রিকোয়েস্টে সম্পূর্ণ হায়ারার্কি ঘুরে আইপি বের করতে হলেও পরবর্তী রিকোয়েস্টে লোকাল ডিএনএস ক্যাশ (Cache) থেকে সাথে সাথে আইপি সরবরাহ করা হয়।<br>
+
+19) Core Application Layer Protocols Focus:<br>
+    i) Exam Focus Protocols: লিখিত ও এমসিকিউ পরীক্ষার জন্য অ্যাপ্লিকেশন লেয়ারের অতি গুরুত্বপূর্ণ প্রোটোকল—DHCP, DNS, RTP, HTTP, HTTPS।<br>
+
 ---
 
 ## all-questions/Written.md file e ja paoa gese
@@ -88,9 +108,11 @@
    iv) Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (23)<br>
    v) Transport Layer (TCP & UDP) (22)<br>
    vi) Routing Protocols & Route Configuration (19)<br>
-   vii) Flow Control & Data Link Layer (Stop-and-Wait) (12)<br>
-   viii) Email Architecture & Protocols (SMTP, POP3, IMAP) (10)<br>
-   ix) Application Layer & Well-Known Port Numbers (6)<br>
+   vii) Network Address Translation (NAT) (17)<br>
+   viii) Flow Control & Data Link Layer (Stop-and-Wait) (12)<br>
+   ix) Network Services (DHCP, NAT) (11)<br>
+   x) Email Architecture & Protocols (SMTP, POP3, IMAP) (10)<br>
+   xi) Application Layer & Well-Known Port Numbers (6)<br>
 
 2) computer-network-security.md (Computer Network Security):<br>
    i) Social Engineering & Cyber Attacks (32)<br>

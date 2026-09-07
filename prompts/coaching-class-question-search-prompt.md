@@ -11,7 +11,7 @@ then ## ei project er modhdhe ja ja ashchce previous year question theke sir er 
 
 ---
 
-## স্যারের পড়ানো টপিক ও সাবটপিক সারসংক্ষেপ (Lecture Summary: Page 1 - 12)
+## স্যারের পড়ানো টপিক ও সাবটপিক সারসংক্ষেপ (Lecture Summary: Page 1 - 17 / Class 1 - 3)
 1. **Networking Fundamentals & Devices:** Intranet vs Internet, End-user devices (PC, printer, server, smartphone), Intermediary devices (Router, Wireless router, Cell tower, Modem, Internet cloud), Hub (insecure broadcast) vs Switch (secure MAC unicast), Enterprise core switch hierarchy (Access switch $\rightarrow$ Core switch $\rightarrow$ Router $\rightarrow$ Internet).
 2. **Enterprise Security & Zero Trust Architecture:** Zero Trust Architecture ("Never trust, always verify"), 11টি কোর ডিভাইস (Firewall, Switch, IPS, IDS, Anti-DDoS, WAF, Web Server, Database Server, Storage SAN, SIEM / Monitoring).
 3. **Network Architecture Evolution & DMZ:** Old flat network vs Hardware firewall vs Modern 3-tier DMZ architecture (DMZ, User Network, Server Network).
@@ -26,6 +26,11 @@ then ## ei project er modhdhe ja ja ashchce previous year question theke sir er 
 12. **OSI Layer 4 - Transport Layer:** Segmentation (IP + Port, e.g. 3306), Flow control (speed/rate matching), Error control (ARQ - Automatic Repeat reQuest), TCP vs UDP comparison (Reliable bank transactions vs Live video streaming).
 13. **OSI Layer 3 - Network Layer:** Logical addressing (IPv4, IPv6), Routing protocols, Shortest path algorithms (Dijkstra algorithm).
 14. **OSI Layer 2 - Data Link Layer:** Physical addressing (MAC address, Frame structure), PDU relationship (Segment $\rightarrow$ Packet $\rightarrow$ Frame $\rightarrow$ Bit).
+15. **End-to-End Packet Traversal (PC to Singapore Server):** End-to-end packet route (PC $\rightarrow$ Switch $\rightarrow$ Firewall $\rightarrow$ Internal Router $\rightarrow$ ISP $\rightarrow$ Singapore Server), Key networking axiom: IP remains unchanged end-to-end; MAC address changes at every router/switch hop.
+16. **Network Address Translation (NAT) / Netting:** Private to public IP conversion in router, Port Address Translation (PAT) for multiplexing connections.
+17. **Domain Name System (DNS) & Query Tools:** Domain name to IP translation, CLI tools: `nslookup` (Windows) and `dig` (Linux).
+18. **DNS Name Resolution Process (Recursive vs. Iterative):** Recursive query cycle (Browser $\rightarrow$ Local DNS $\rightarrow$ Root DNS $\rightarrow$ TLD DNS $\rightarrow$ Authoritative DNS $\rightarrow$ Local DNS $\rightarrow$ Browser), DNS caching mechanism for instant subsequent responses.
+19. **Core Application Layer Protocols Focus:** High-priority exam protocols: DHCP, DNS, RTP, HTTP, HTTPS.
 
 ---
 
@@ -38,7 +43,9 @@ then ## ei project er modhdhe ja ja ashchce previous year question theke sir er 
 - Subtopic: `Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (23)`
 - Subtopic: `Transport Layer (TCP & UDP) (22)`
 - Subtopic: `Routing Protocols & Route Configuration (19)`
+- Subtopic: `Network Address Translation (NAT) (17)`
 - Subtopic: `Flow Control & Data Link Layer (Stop-and-Wait) (12)`
+- Subtopic: `Network Services (DHCP, NAT) (11)`
 - Subtopic: `Email Architecture & Protocols (SMTP, POP3, IMAP) (10)`
 - Subtopic: `Application Layer & Well-Known Port Numbers (6)`
 
