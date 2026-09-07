@@ -22,42 +22,56 @@
    (b) Running
    (c) Waiting (Blocked)
    (d) Terminated
+answer: C
+explanation: রানিং অবস্থায় থাকা কোনো প্রসেস যখন I/O অপারেশনের প্রয়োজন বোধ করে বা কোনো ইভেন্টের জন্য অপেক্ষা করে, তখন সিপিইউ তাকে 'Waiting' বা 'Blocked' স্টেটে স্থানান্তর করে।
 
 2. **Which of the following scheduling algorithm is non preemptive?** *[NPCBL Executive Trainee (Software) 2023 compact it 37 (ET: N/A)]*
    (a) Shortest Job First
    (b) FCFS
    (c) Rounf Robin
    (d) Priority Scheduling
+answer: B
+explanation: FCFS (First-Come, First-Served) শিডিউলিং অ্যালগরিদমটি শতভাগ নন-প্রিম্পটিভ (Non-preemptive); অর্থাৎ কোনো প্রসেস একবার সিপিইউ বরাদ্দ পেলে তা শেষ না হওয়া পর্যন্ত বা I/O-তে না যাওয়া পর্যন্ত সিপিইউ ছাড়ে না।
 
 3. **Time during which a job is processed by the Computer is:** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*
    (ক) Delay time
    (খ) Real time
    (গ) Execution time
    (ঘ) Process time
+answer: C
+explanation: কম্পিউটার বা সিপিইউ দ্বারা কোনো জব বা প্রোগ্রামের নির্দেশাবলী কার্যকর বা প্রসেস হওয়ার সময়কে 'এক্সেকিউশন টাইম' (Execution time) বলা হয়।
 
 4. **In Unix operating system, which system call is used for creating a new process?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*
    a) Exec()
    b) Create Process ()
    c) Fork ()
    d) None of them
+answer: C
+explanation: ইউনিক্স বা লিনাক্স অপারেটিং সিস্টেমে বিদ্যমান প্রসেসের একটি ক্লোন হিসেবে নতুন চাইল্ড প্রসেস তৈরি করতে `fork()` সিস্টেম কল ব্যবহৃত হয়।
 
 5. **A job which is schedule to run periodically at fixed times or intervals is known as-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 99 (ET: N/A)]*
    (a) Batch Job
    (b) Cron job
    (c) Shell Script
    (d) None of the above
+answer: B
+explanation: নির্দিষ্ট সময়সূচি বা বিরতিতে স্বয়ংক্রিয়ভাবে ব্যাকগ্রাউন্ডে চলার জন্য শিডিউল করা জবকে 'ক্রন জব' (Cron job) বলা হয়।
 
 6. **Which one of the following statements is true with respect to Printer Daemon process?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*
    (a) The printer daemon of Operating System runs in kernel mode.
    (b) Jobs in the printer daemon queue cannot be removed once inserted.
    (c) Printer daemon application runs only when it is printing.
    (d) Printer daemon runs as a service in Operating System
+answer: D
+explanation: ডেমোন (Daemon) হলো অপারেটিং সিস্টেমের ব্যাকগ্রাউন্ডে সার্বক্ষণিক সক্রিয় থাকা সার্ভিস প্রক্রিয়া; সুতরাং প্রিন্টার ডেমোন ওএস-এর একটি ব্যাকগ্রাউন্ড সার্ভিস (Service) হিসেবে কাজ করে।
 
 7. **Which of the following Process scheduling algorithm is highly improbable to be implemented?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*
    (a) FCFS Scheduling
    (b) Priority Scheduling
    (c) Shortest Job First Scheduling
    (d) None of the above
+answer: C
+explanation: Shortest Job First (SJF) অ্যালগরিদম বাস্তবে কার্যকর করা প্রায় অসম্ভব, কারণ পরবর্তী সিপিইউ বার্স্ট টাইম ঠিক কতটুকু হবে তা কোনো প্রসেস চালনার আগে নিশ্চিতভাবে জানা সম্ভব নয়।
 
 8. **A jet Aircraft employs a system for monitoring the rpm, pressure and temperature values of its engines using sensors that operate as follows:** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*
    RPM sensor (R) output = 0 only when \text{speed} < 4800\text{rpm}
@@ -80,102 +94,136 @@
    b) Temperature (T) is > 200^{\circ}\text{F} and speed (R) < 4800\text{ rpm}
    c) Option (a) and (b)
    d) d) None of the above
+answer: C
+explanation: লজিক সার্কিট অনুযায়ী আউটপুট ফাংশন $W = T \cdot P + T \cdot \overline{R}$; অর্থাৎ তাপমাত্রা > ২০০°F এবং চাপ > ২২০ psi হলে, অথবা তাপমাত্রা > ২০০°F এবং গতি < ৪৮০০ rpm হলে ওয়ার্নিং লাইট জ্বলে উঠবে। তাই (a) ও (b) উভয় শর্তেই এটি সত্য।
 
 9. **What is the disadvantage of multithreading?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    a) Share the same address space
    b) Simultaneous access to multiple application
    c) Low cost communication
    d) Difficulty in managing concurrency
+answer: D
+explanation: একই অ্যাড্রেস স্পেস ও রিসোর্স একাধিক থ্রেড দ্বারা যুগপৎ শেয়ার করায় ডেডলক ও রেস কন্ডিশন প্রতিরোধ করে কনকারেন্সি নিয়ন্ত্রণ করা অত্যন্ত কঠিন (Difficulty in managing concurrency)।
 
 10. **The time needs from the process arrival to the completion of that process is called** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    a) Waiting time
    b) Response time
    c) Turnaround time
    d) Throughput
+answer: C
+explanation: একটি প্রসেস সিস্টেমে পৌঁছানোর (Arrival) পর থেকে তা সম্পূর্ণ শেষ (Completion) হওয়া পর্যন্ত অতিবাহিত মোট সময়কে 'টার্নঅ্যারাউন্ড টাইম' (Turnaround time) বলে।
 
 11. **Which is not the state of a process in an Operating System?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*
    a) New
    b) Sleep
    c) Terminated
    d) Ready
+answer: B
+explanation: অপারেটিং সিস্টেমের স্ট্যান্ডার্ড ৫-স্টেট লাইফসাইকেল মডেলে New, Ready, Running, Waiting এবং Terminated বিদ্যমান থাকে; 'Sleep' কোনো মৌলিক স্টেট নয়।
 
 12. **The maximum number of processes that can be in ready state in computer system with n CPU's is—** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*
    A) n
    B) \text{n}^2
    C) 2n
    D) independent of n
+answer: D
+explanation: $n$ সংখ্যক সিপিইউ বিশিষ্ট সিস্টেমে একই সাথে সর্বোচ্চ $n$ টি প্রসেস Running অবস্থায় থাকতে পারে; কিন্তু Ready কিউতে কতগুলো প্রসেস থাকবে তা সিপিইউ সংখ্যার ওপর নির্ভর করে না (Independent of $n$)।
 
 13. **In UNIX, processes that have finished execution but have not yet had their status collected are known as-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*
    A) Sleeping processes
    B) Stopped processes
    C) Zombie processes
    D) Orphan processes
+answer: C
+explanation: ইউনিক্সে যেসব প্রসেস এক্সেকিউশন শেষ করেছে কিন্তু তাদের প্যারেন্ট প্রসেস এখনও তাদের এক্সিট স্ট্যাটাস সংগ্রহ করেনি, সেগুলোকে 'জম্বি প্রসেস' (Zombie processes) বলা হয়।
 
 14. **Which of the following process scheduling algorithm may lead to starvation?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*
    A) FIFO
    B) Round Robin
    C) Shortest Job Next
    D) None of these
+answer: C
+explanation: Shortest Job Next (SJN/SJF) অ্যালগরিদমে অনবরত স্বল্প দৈর্ঘ্যের জব আসতে থাকলে অপেক্ষাকৃত বড় জবগুলো দীর্ঘক্ষণ বা অনির্দিষ্টকাল সিপিইউ না পেয়ে স্টারভেশন (Starvation)-এর শিকার হয়।
 
 15. **A common representation of process scheduling is -** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*
    (a) Static diagram
    (b) Scheduling queues
    (c) Queuing diagram
    (d) Process control block
+answer: C
+explanation: অপারেটিং সিস্টেম তত্ত্বে প্রসেস শিডিউলিংয়ের কিউগুলোর মধ্য দিয়ে প্রসেস সঞ্চালনের প্রবাহকে চিত্রিত করতে সাধারণভাবে 'কিউয়িং ডায়াগ্রাম' (Queuing diagram) ব্যবহৃত হয়।
 
 16. **The scheduling queue is generally stored as-** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*
    (a) A liner array
    (b) A stack
    (c) A linked list
    (d) A tree
+answer: C
+explanation: অপারেটিং সিস্টেমে শিডিউলিং কিউগুলো সাধারণত লিঙ্কড লিস্ট (Linked list) হিসেবে সংরক্ষিত থাকে, যাতে সহজে নতুন প্রসেস যুক্ত ও সম্পন্ন প্রসেস অপসারণ করা যায়।
 
 17. **To execute a program, an OS creates a number of ________, each one for, running a different program.** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*
    (a) Processors
    (b) Threads
    (c) Virtual processors
    (d) Kernel
+answer: C
+explanation: মাল্টিপ্রোগ্রামিং ধারণায় বিভিন্ন প্রোগ্রাম আলাদাভাবে এক্সেকিউট করার জন্য অপারেটিং সিস্টেম ভার্চুয়াল প্রসেসর (Virtual processors) বা লজিক্যাল প্রসেস এক্সিকিউশন স্টেট তৈরি করে।
 
 18. **What is long term scheduling?** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*
    A) It selects which process has to be brought into the ready queue
    B) It selects which process has to be executed next and allocates CPU
    C) It selects which process to remove from memory by swapping
    D) It selects which process needs to be killed next
+answer: A
+explanation: লং-টার্ম শিডিউলার সেকেন্ডারি স্টোরেজ বা জব পুল থেকে প্রসেস নির্বাচন করে মূল মেমোরির রেডি কিউতে (Ready queue) নিয়ে আসে।
 
 19. **Multi-Threaded programs are-** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*
    A) Lesser prone to deadlocks
    B) more prone to deadlocks
    C) not at all prone to deadlock
    D) always results in deadlocks
+answer: B
+explanation: মাল্টি-থ্রেডেড প্রোগ্রামগুলোতে থ্রেডসমূহ একই মেমোরি ও শেয়ার্ড রিসোর্স বিভিন্ন লকিং মেকানিজমের মাধ্যমে অ্যাক্সেস করে, যার ফলে তারা ডেডলক হওয়ার ক্ষেত্রে অধিক ঝুঁকিপূর্ণ (More prone to deadlocks)।
 
 20. **When there is a large logical address space, the best way of paging would be ________.** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*
    A) Not to page
    B) a two-level paging algorithm
    C) not all prone to deadlock
    D) all of the above
+answer: B
+explanation: বৃহৎ লজিক্যাল অ্যাড্রেস স্পেসের ক্ষেত্রে একক পেজ টেবিল মেমোরিতে অতিরিক্ত জায়গা দখল করে, তাই টু-লেভেল পেজিং (Two-level paging) বা হায়ারার্কিক্যাল পেজিং সবচেয়ে কার্যকর সমাধান।
 
 21. **What is the mounting of file system?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*
    A) creating of a file system
    B) deleting a file system
    C) attaching portion of the file system into a directory structure
    D) removing portion of the file system into a directory structure
+answer: C
+explanation: মাউন্টিং (Mounting) হলো কোনো স্টোরেজ ডিভাইসের ফাইল সিস্টেমকে ওএস-এর মূল ডিরেক্টরি কাঠামোর নির্দিষ্ট মাউন্ট পয়েন্টে সংযুক্ত (Attaching) করার প্রক্রিয়া।
 
 22. **The main program in an operating system is called:** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*
    A) kernel
    B) file manager
    C) Directory
    D) NOS
+answer: A
+explanation: অপারেটিং সিস্টেমের কেন্দ্রীয় এবং সবচেয়ে গুরুত্বপূর্ণ কোর প্রোগ্রামটিকে 'কার্নেল' (Kernel) বলা হয়, যা হার্ডওয়্যার রিসোর্স ব্যবস্থাপনা করে।
 
 23. **The interval from the time of submission of a process to the time of completion is termed is ________.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
    A) Waiting time
    B) processing time
    C) turnaround time
    D) throughput
+answer: C
+explanation: কোনো প্রসেস জমা (Submission) দেওয়ার সময় থেকে তার সফল সমাপ্তি (Completion) পর্যন্ত মোট সময়কে 'টার্নঅ্যারাউন্ড টাইম' (Turnaround time) বলা হয়।
 
 24. **Which of the following is not the state of a process in process Control Block (PCB)?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*
    A) Old
    B) New
    C) waiting
    D) Running
+answer: A
+explanation: প্রসেস কন্ট্রোল ব্লকে (PCB) প্রসেসের অবস্থা হিসেবে New, Ready, Running, Waiting, Terminated সংরক্ষিত থাকে; কিন্তু 'Old' নামে কোনো প্রসেস স্টেট নেই।
 
 ## OS Concepts & Multiprogramming (16)
 
