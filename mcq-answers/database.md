@@ -1478,36 +1478,48 @@ explanation: নরম্যালাইজেশনের প্রধান �
    (b) 8.6
    (c) 12
    (d) 9.2
+answer: (a) Indexing ; শিডিউলিং প্রশ্নের উত্তর: (c) 12
+explanation: ১) ডেটাবেসে ইনডেক্সিং (Indexing) তথ্য অনুসন্ধানের গতি নাটকীয়ভাবে বৃদ্ধি করে। ২) প্রায়োরিটি অনুযায়ী এক্সিকিউশন ক্রম: P2 (সমাপ্তি ১) -> P5 (সমাপ্তি ৬) -> P1 (সমাপ্তি ১৬) -> P3 (সমাপ্তি ১৮) -> P4 (সমাপ্তি ১৯)। মোট TAT = ১ + ৬ + ১৬ + ১৮ + ১৯ = ৬০। গড় Turnaround Time = ৬০ / ৫ = ১২।
 
 2. **Related records of the different relations can be stored on the same block using which file organization technique?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
    a) Heap file organization
    b) Sequential file organization
    c) Hashing file organization
    d) Multi-table Clustering file organization
+answer: D
+explanation: মাল্টি-টেবিল ক্লাস্টারিং ফাইল অর্গানাইজেশনে (Multi-table Clustering) সম্পর্কিত বিভিন্ন টেবিলের রেকর্ডগুলোকে একই ডিস্ক ব্লকে একত্রে সংরক্ষণ করা হয়, যা জয়েন কুয়েরির গতি বহুগুণ বাড়িয়ে দেয়।
 
 3. **Which of the following is correct for the Create index command?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*
    a) Insert index index_name on table_name
    b) Insert index index_name on database_name;
    c) Create index index_name on database_name;
    d) Create index index_name on table_name;
+answer: D
+explanation: SQL-এ ইনডেক্স তৈরির সঠিক সিনট্যাক্স হলো `CREATE INDEX index_name ON table_name (column_name);`।
 
 4. **Database index speeds up-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*
    a) Select queries
    b) Where clauses
    c) Update query
    d) Both a and b
+answer: D
+explanation: ইনডেক্স ব্যবহারের ফলে পুরো টেবিল স্ক্যান (Full table scan) না করে দ্রুত কাঙ্ক্ষিত সারি খুঁজে পাওয়া যায়, যা SELECT স্টেটমেন্ট এবং WHERE ক্লজ উভয়েরই গতি বৃদ্ধি করে।
 
 5. **Which of the following index is automatically created by the database server when an object is created?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*
    a) Implicit
    b) Single column
    c) Unique
    d) composite
+answer: C
+explanation: কোনো টেবিলে PRIMARY KEY বা UNIQUE কনস্ট্রেইন্ট ঘোষণা করলে ডেটাবেস সার্ভার স্বয়ংক্রিয়ভাবে সংশ্লিষ্ট কলামে একটি ইউনিক ইনডেক্স (Unique index) তৈরি করে।
 
 6. **Related records of the different relations can be stored on the same block using which file organization technique?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*
    a) Heap file organization
    b) Sequential file organization
    c) Hashing file organization
    d) Clustering file organization
+answer: D
+explanation: ক্লাস্টারিং ফাইল অর্গানাইজেশন (Clustering file organization) একাধিক টেবিলের সম্পর্কিত রেকর্ডসমূহকে ফিজিক্যালি একই ডিস্ক ব্লকে পাশাপাশি সাজিয়ে রাখে।
 
 ## Database Connectivity (JDBC/ODBC) (5)
 
