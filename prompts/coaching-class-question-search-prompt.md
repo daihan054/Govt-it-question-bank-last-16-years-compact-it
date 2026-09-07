@@ -32,26 +32,26 @@ then ## ei project er modhdhe ja ja ashchce previous year question theke sir er 
 ## ১. Written Questions Mapping (`all-questions/written/`)
 
 ### ফাইল ১: `computer-networks.md`
+- Subtopic: `Subnetting & IP Addressing (119)`
 - Subtopic: `OSI & TCP/IP Reference Model (57)`
+- Subtopic: `Networking Fundamentals & Terminology (32)`
 - Subtopic: `Networking Devices (24)`
-- Subtopic: `Transport Layer (TCP & UDP) (22)`
-- Subtopic: `Flow Control & Data Link Layer (Stop-and-Wait) (12)`
-- Subtopic: `Routing Protocols & Route Configuration (19)`
 - Subtopic: `Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (23)`
+- Subtopic: `Transport Layer (TCP & UDP) (22)`
+- Subtopic: `Routing Protocols & Route Configuration (19)`
+- Subtopic: `IPv6 Addressing (13)`
+- Subtopic: `Flow Control & Data Link Layer (Stop-and-Wait) (12)`
 - Subtopic: `Email Architecture & Protocols (SMTP, POP3, IMAP) (10)`
 - Subtopic: `Application Layer & Well-Known Port Numbers (6)`
-- Subtopic: `Networking Fundamentals & Terminology (32)`
-- Subtopic: `Subnetting & IP Addressing (119)`
-- Subtopic: `IPv6 Addressing (13)`
 - Subtopic: `Switching Techniques (Circuit vs Packet Switching) (5)`
 - Subtopic: `High Availability & Redundancy Protocols (VRRP, HSRP) (1)`
 
 ### ফাইল ২: `computer-network-security.md`
-- Subtopic: `Firewalls & Network Defense (20)`
 - Subtopic: `Social Engineering & Cyber Attacks (32)`
-- Subtopic: `Security Protocols (SSL/TLS, HTTPS) (12)`
-- Subtopic: `Authentication & Access Control (16)`
+- Subtopic: `Firewalls & Network Defense (20)`
 - Subtopic: `Web Security Vulnerabilities (19)`
+- Subtopic: `Authentication & Access Control (16)`
+- Subtopic: `Security Protocols (SSL/TLS, HTTPS) (12)`
 - Subtopic: `VPN & Tunneling Protocols (IPsec, SSL VPN) (6)`
 
 ---
@@ -59,18 +59,18 @@ then ## ei project er modhdhe ja ja ashchce previous year question theke sir er 
 ## ২. MCQ Questions Mapping (`all-questions/mcq/`)
 
 ### ফাইল ১: `computer-networks.md`
-- Subtopic: `OSI & TCP-IP Model (16)`
-- Subtopic: `Network Devices & Configuration (38)`
-- Subtopic: `Application Layer Protocols (58)`
-- Subtopic: `Routing Protocols (13)`
 - Subtopic: `Networking Fundamentals & Terminology (75)`
+- Subtopic: `Application Layer Protocols (58)`
+- Subtopic: `Network Devices & Configuration (38)`
 - Subtopic: `Subnetting & IP Addressing (33)`
+- Subtopic: `OSI & TCP-IP Model (16)`
+- Subtopic: `Routing Protocols (13)`
 - Subtopic: `IPv6 Addressing (13)`
 - Subtopic: `Switching Techniques (3)`
 
 ### ফাইল ২: `computer-network-security.md`
 - Subtopic: `Cyber Attacks & Threats (20)`
 - Subtopic: `Security Protocols (9)`
+- Subtopic: `Security Principles (CIA Triad) (5)`
 - Subtopic: `Web Security Vulnerabilities (4)`
 - Subtopic: `Email Security & Spam (2)`
-- Subtopic: `Security Principles (CIA Triad) (5)`
