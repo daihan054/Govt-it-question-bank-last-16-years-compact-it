@@ -446,54 +446,72 @@ explanation: গ্রাফের কোনো নির্দিষ্ট শ�
    (b) Knapsack problem
    (c) Selection problem
    (d) Merge sort
+answer: D
+explanation: মার্জ সর্ট (Merge sort) হলো বহুল পরিচিত 'ডিভাইড অ্যান্ড কনকার' অ্যালগরিদম ডিজাইন প্যারাডাইমের একটি ক্লাসিক অ্যালগরিদম (বাকি অপশনগুলো সমস্যা বা প্রবলেম স্টেটমেন্ট)।
 
 2. **Quick sort algorithm is an example of –** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*
    (ক) Greedy approach
    (খ) Improved binary search
    (গ) Dynamic programming
    (ঘ) Divide and conquer
+answer: D
+explanation: কুইক সর্ট অ্যালগরিদমটি ডিভাইড অ্যান্ড কনকার (Divide and conquer) ডিজাইন কৌশলের ওপর ভিত্তি করে কাজ করে।
 
 3. **Travelling Salesperson Problem is an example of-** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*
    (ক) Polynomial time
    (খ) NP Complete
    (গ) NP
    (ঘ) NP-Hard
+answer: D
+explanation: ট্রাভেলিং সেলসপারসন প্রবলেম (TSP) অপটিমাইজেশন সমস্যাটি একটি সুপরিচিত NP-Hard সমস্যা (এর ডিসিশন সংস্করণটি NP-Complete)।
 
 4. **Which of the following algorithms can not be designed without recursion?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*
    (ক) Fibonacci series
    (খ) Tower of Hanoi
    (গ) None of (ক) and (খ)
    (ঘ) Both (ক) and (খ)
+answer: C
+explanation: তাত্ত্বিক ও ব্যবহারিক উভয় দিক থেকেই যেকোনো রিকার্সিভ অ্যালগরিদমকে সাধারণ লুপ বা এক্সপ্লিসিট স্ট্যাক ব্যবহারের মাধ্যমে নন-রিকার্সিভ (ইটারেটিভ) উপায়ে রূপান্তর করা সম্ভব; ফিবোনাচ্চি ও টাওয়ার অব হ্যানয় উভয়ের জন্যই নন-রিকার্সিভ বাস্তবায়ন বিদ্যমান।
 
 5. **The step-by-step instruction that solve a problem is called:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*
    A) an algorithm
    B) a list
    C) a plan
    D) a sequential structure
+answer: A
+explanation: কোনো সুনির্দিষ্ট সমস্যা সমাধানের জন্য ধাপে ধাপে নির্দেশিত সসীম কার্যপ্রণালীকে অ্যালগরিদম (An algorithm) বলা হয়।
 
 6. **The step by step instruction that solved a problem are called ________.** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*
    A) An algorithm
    B) A list
    C) A plan
    D) None of the above
+answer: A
+explanation: কোনো সমস্যা সমাধানের যৌক্তিক ও সুশৃঙ্খল ধারাবাহিক নির্দেশনাগুচ্ছকে অ্যালগরিদম (An algorithm) বলা হয়।
 
 7. **The step by step instructions that solve a problem are called?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*
    A) An algorithm
    B) A list
    C) A plan
    D) None of them
+answer: A
+explanation: ধাপে ধাপে সুনির্দিষ্ট ফলাফল অর্জনের লক্ষ্যে তৈরি নির্দেশাবলীর ক্রমকে অ্যালগরিদম বলে।
 
 8. **Divide and Conquer method is used in-** *[DESCO Assistant Engineer (CSE) 2016 compact it 256 (ET: N/A)]*
    a. Merge sort
    b. Bubble sort
    c. Quick sort
    d. Both a & c
+answer: D
+explanation: মার্জ সর্ট (Merge sort) এবং কুইক সর্ট (Quick sort) উভয় অ্যালগরিদমে মূল সমস্যাকে ক্ষুদ্রতর অংশে বিভক্ত করে সমাধান করার ডিভাইড অ্যান্ড কনকার কৌশল প্রয়োগ করা হয়।
 
 9. **What is the name given to the sequence of steps which a computer follows?** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*
    a. Instructions
    b. Algorithms
    c. Flowcharts
    d. Debugging
+answer: B
+explanation: কোনো কাজ সম্পাদনে কম্পিউটার যে ধারাবাহিক ও যৌক্তিক পদক্ষেপ অনুসরণ করে তাকে অ্যালগরিদম (Algorithms) বলা হয়।
 
 ## Dynamic Programming & Greedy (6)
 
