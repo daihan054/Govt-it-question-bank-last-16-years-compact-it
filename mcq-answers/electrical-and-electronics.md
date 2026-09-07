@@ -898,21 +898,29 @@ explanation: যে ফিল্টার একটি নির্দিষ্�
    (b) Converts AC to DC
    (c) Stores Electrical Energy
    (d) Increases Voltage
+answer: B
+explanation: রেক্টিফায়ারের (Rectifier) কাজ হলো পরিবর্তী বিদ্যুৎ বা এসি-কে (AC) একমুখী বিদ্যুৎ বা ডিসিতে (DC) রূপান্তর করা।
 
 2. **Zener diode is a _____ conducting device.** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*
    (a) Unidirectional
    (b) Bidirectional
    (c) Multidirectional
    (d) Tri-directional
+answer: B
+explanation: জিনার ডায়োড সাধারণ ডায়োডের মতো ফরওয়ার্ড দিকে কারেন্ট প্রবাহিত করতে পারে এবং ব্রেকডাউন ভোল্টেজে রিভার্স দিকেও কারেন্ট পরিচালনা করতে পারে; তাই এটি একটি দ্বিমুখী বা বাইডিরেকশনাল (Bidirectional) পরিবাহী ডিভাইস।
 
 3. **What should be true for a Zener Diode?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*
    (a) Reverse bias for amplifying
    (b) Operates in forward bias only
    (c) Works in reverse breakdown region
    (d) Used for rectification
+answer: C
+explanation: জিনার ডায়োড মূলত রিভার্স ব্রেকডাউন অঞ্চলে (reverse breakdown region) ভোল্টেজ রেগুলেটর বা রেফারেন্স ভোল্টেজ উপাদান হিসেবে কাজ করার জন্য বিশেষভাবে নকশা করা হয়।
 
 4. **Which device is need to converts AC to DC?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxii (ET: DU)]*
    (a) Transformer
    (b) Rectifier
    (c) Inverter
    (d) Amplifier
+answer: B
+explanation: এসি কারেন্টকে ডিসি কারেন্টে রূপান্তর করার জন্য রেক্টিফায়ার (Rectifier) প্রয়োজন।
