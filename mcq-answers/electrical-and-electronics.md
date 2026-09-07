@@ -807,24 +807,32 @@ explanation: ডিসি জেনারেটরে আর্মেচার �
    (খ) 0.689
    (গ) 1.0
    (ঘ) 1.5
+answer: গ
+explanation: ট্রান্সফার ফাংশন $H(s) = \frac{1}{s+2}$-এর বিপরীত ল্যাপলাস রূপান্তর (inverse Laplace) হলো ইমপালস রেসপন্স $h(t) = e^{-2t}u(t)$। $t=0$ বসালে $h(0) = e^0 = 1.0$।
 
 2. **A loss-less transmission line has L=8.5\text{ nH/m} and C=300\text{ pF/m}. What is the characteristic impedance of the line?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*
    (ক) 50\Omega
    (খ) 5.32\Omega
    (গ) 8.92\Omega
    (ঘ) 4.32\Omega
+answer: খ
+explanation: লসলেস ট্রান্সমিশন লাইনের ক্যারেক্টারিস্টিক ইম্পিডেন্স $Z_0 = \sqrt{\frac{L}{C}} = \sqrt{\frac{8.5 \times 10^{-9}}{300 \times 10^{-12}}} = \sqrt{28.33} \approx 5.32\ \Omega$।
 
 3. **A voltage source supplies a signal of constant amplitude from 0 to 40kHz to a RC filter (low-pass). The load resistor experiences the maximum voltage at ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*
    (ক) 10\text{kHz}
    (খ) 40\text{kHz}
    (গ) 18\text{kHz}
    (ঘ) DC
+answer: ঘ
+explanation: লো-পাস ফিল্টারে সর্বনিম্ন ফ্রিকোয়েন্সিতে অর্থাৎ ডিসিতে ($f = 0\text{ Hz}$) ক্যাপাসিটরের বাধা অসীম ($X_C = \infty$) থাকায় লোডে সর্বোচ্চ ভোল্টেজ পাওয়া যায়।
 
 4. **Which of the following statement holds true for the divergence of electric and magnetic flux densities?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*
    (ক) Both are zero
    (খ) These are zero for static flux densities but non-zero for time-varying flux densities
    (গ) It is zero for electric flux densities
    (ঘ) It is zero for magnetic flux densities.
+answer: ঘ
+explanation: ম্যাক্সওয়েলের দ্বিতীয় সমীকরণ অনুযায়ী চৌম্বক ফ্লাক্স ঘনত্বের ডাইভারজেন্স সর্বদা শূন্য ($\nabla \cdot \mathbf{B} = 0$), কারণ প্রকৃতিতে কোনো বিচ্ছিন্ন একক চৌম্বক মেরুর অস্তিত্ব নেই।
 
 5. **অ্যাম্প্লিচিউড মডুলেশনে কি ঘটে?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*
    (ক) সিগন্যালের অ্যাম্প্লিচিউড পরিবর্তিত হয়
@@ -832,42 +840,56 @@ explanation: ডিসি জেনারেটরে আর্মেচার �
    (গ) ক্যারিয়ার অ্যাম্প্লিচিউড পরিবর্তিত হয়
    (ঘ) ক্যারিয়ার ফ্রিকুয়েন্সি পরিবর্তিত হয়
    **Ans: গ**
+answer: গ
+explanation: অ্যাম্প্লিচিউড মডুলেশনে (AM) মূল মেসেজ সিগন্যালের মানের পরিবর্তনের সাথে সংগতি রেখে উচ্চ কম্পাঙ্কের ক্যারিয়ার তরঙ্গের বিস্তার বা অ্যাম্প্লিচিউড পরিবর্তিত হয়।
 
 6. **ঢাকা বেতার কেন্দ্র মিডিয়াম ওয়েভে 630Hz এ অনুষ্ঠান সম্প্রচার করে। রেডিও তরঙ্গে বেগ 3 \times 10^8\text{ ms}^{-1} হলে তরঙ্গ। দৈর্ঘ্য কত হবে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*
    A. 476190m
    B. 476.19m
    C. 476190cm
    D. 476.19cm
+answer: B
+explanation: তরঙ্গদৈর্ঘ্য $\lambda = \frac{v}{f} = \frac{3 \times 10^8\text{ m/s}}{630 \times 10^3\text{ Hz}} \approx 476.19\text{ m}$।
 
 7. **What is the output power in watts of the following three-stage system?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*
    a) 0.431\text{ Watt}
    b) 0.5\text{ Watt}
    c) 18\text{ Watt}
    d) 0.0631\text{ Watt}
+answer: b
+explanation: প্রদত্ত মাল্টিস্টেজ সিস্টেমের গেইন ও লস সমন্বয় করে হিসাব করলে আউটপুট পাওয়ার পাওয়া যায় 0.5 Watt।
 
 8. **সিগন্যালের পারস্পরিক রূপান্তর করে-** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*
    A) মডেম
    B) হাব
    C) রাউটার
    D) গেটওয়ে
+answer: A
+explanation: মডেম (Modem: Modulator-Demodulator) অ্যানালগ সিগন্যালকে ডিজিটালে এবং ডিজিটাল সিগন্যালকে অ্যানালগ সিগন্যালে পারস্পরিক রূপান্তর করে।
 
 9. **একটি ওয়েভ এক সাইকেল এ যে দূরত্ব অতিক্রম করে তাকে বলে-** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*
    A) Frequency
    B) Cycle
    C) Wave length
    D) None
+answer: C
+explanation: একটি তরঙ্গের একটি পূর্ণ স্পন্দন বা এক সাইকেলে অতিক্রান্ত দূরত্বকে তরঙ্গদৈর্ঘ্য বা ওয়েভলেংথ (Wavelength) বলে।
 
 10. **The unit-impulse response of a system is given by c(t) = 0.5e^{-0.5t}. Its transformer function is-** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*
    (a) 1/(s+2)
    (b) 1/(1+2s)
    (c) 2/(1+2s)
    (d) 2/(s+2)
+answer: b
+explanation: ল্যাপলাস রূপান্তর $C(s) = \mathcal{L}\{0.5e^{-0.5t}\} = \frac{0.5}{s + 0.5} = \frac{1}{2(s + 0.5)} = \frac{1}{2s + 1} = \frac{1}{1 + 2s}$।
 
 11. **A filter having a single continuous transmission band with neither the upper nor the lower cutoff frequencies is zero or infinite is called-** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*
    (a) Band pass filter
    (b) Low pass filter
    (c) High pass filter
    (d) Band stop filter
+answer: a
+explanation: যে ফিল্টার একটি নির্দিষ্ট রেঞ্জের ফ্রিকোয়েন্সি অতিক্রম করতে দেয় যার নিম্ন ও উচ্চ কাট-অফ ফ্রিকোয়েন্সি শূন্য বা অসীম নয়, তাকে ব্যান্ড পাস ফিল্টার (Band pass filter) বলে।
 
 ## Diodes & Rectifiers (4)
 
