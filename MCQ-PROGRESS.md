@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Updated on every subtopic completion.
 
-**Subtopics: 59 / 160 done (36.9%)**  ·  **Questions: 517 / 3039 answered (17.0%)**
+**Subtopics: 60 / 160 done (37.5%)**  ·  **Questions: 552 / 3039 answered (18.2%)**
 
 | File | Subtopics Done | Total Subtopics | Answered | Total Questions | Status |
 |---|---|---|---|---|---|
@@ -23,11 +23,11 @@ Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answe
 | `gk.md` | 0 | 6 | 0 | 555 | Pending |
 | `math.md` | 0 | 15 | 0 | 186 | Pending |
 | `mechanical-engineering.md` | 7 | 7 | 38 | 38 | Complete |
-| `microprocessor-and-computer-architecture.md` | 0 | 5 | 0 | 85 | Pending |
+| `microprocessor-and-computer-architecture.md` | 1 | 5 | 35 | 85 | In Progress |
 | `ms-office.md` | 5 | 5 | 23 | 23 | Complete |
 | `oop.md` | 0 | 7 | 0 | 100 | Pending |
 | `operating-system.md` | 7 | 7 | 74 | 74 | Complete |
 | `programming-languages.md` | 3 | 3 | 24 | 24 | Complete |
 | `software-engineering.md` | 5 | 5 | 46 | 46 | Complete |
 | `web-technology.md` | 7 | 7 | 49 | 49 | Complete |
-| **Total** | **59** | **160** | **517** | **3039** | **In Progress** |
+| **Total** | **60** | **160** | **552** | **3039** | **In Progress** |
