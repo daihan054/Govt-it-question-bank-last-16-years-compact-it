@@ -22,45 +22,61 @@
    b) <head>
    c) <title>
    d) <html>
+answer: D
+explanation: `<html>` হলো যেকোনো HTML ডকুমেন্টের রুট বা শীর্ষস্থানীয় কন্টেইনার ট্যাগ, যার ভেতর `<head>` ও `<body>` সহ অন্যান্য সমস্ত ট্যাগ অন্তর্ভুক্ত থাকে।
 
 2. **How to create an unordered list (a list with the list items in bullets) in HTML?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*
    a) <ul>
    b) <ol>
    c) <li>
    d) <i>
+answer: A
+explanation: HTML-এ বুলেট পয়েন্টযুক্ত আনঅর্ডারড লিস্ট তৈরি করতে `<ul>` (Unordered List) ট্যাগ ব্যবহৃত হয় (এবং প্রতিটি আইটেমের জন্য `<li>` ব্যবহৃত হয়)।
 
 3. **What is the popular way to linking many documents?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** hyperlink
+answer: Hyperlink
+explanation: ওয়েবে একাধিক ডকুমেন্ট বা ওয়েব পেজকে পরস্পরের সাথে সংযুক্ত করার প্রধান এবং সর্বজনীন মাধ্যম হলো হাইপারলিংক (`<a>` ট্যাগ)।
 
 4. **URL stands for–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
    a) Universal Resource Locator
    b) Uniform Resource Locator
    c) Unique Resource Locator
    d) None
+answer: B
+explanation: URL-এর পূর্ণরূপ হলো Uniform Resource Locator, যা ওয়ার্ল্ড ওয়াইড ওয়েবে কোনো সুনির্দিষ্ট রিসোর্সের গ্লোবাল ঠিকানা নির্দেশ করে।
 
 5. **XSLT processors evaluate each statement in the context of the match that has been made. That is, XSLT processors are:** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*
    a) Context oriented
    b) Procedural oriented
    c) Object oriented
    d) Relational oriented
+answer: A
+explanation: XSLT প্রসেসরগুলো কনটেক্সট-ওরিয়েন্টেড (Context oriented), কারণ প্রতিটি টেমপ্লেট রুল XML ট্রি কাঠামোর বর্তমান ম্যাচকৃত নোড বা কনটেক্সট (context node)-এর ওপর ভিত্তি করে মূল্যায়িত হয়।
 
 6. **Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embedded image which also resides at S. Assuming no web caching which of the following is correct when you load the webpage along with the embedded image?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*
    a. C need to send at least 2 HTTP requests to S using two different TCP connection.
    b. C need to send at least 2 HTTP requests to S but a single TCP connection is sufficient.
    c. A single HTTP request is sufficient without using any TCP connection from C to S.
    d. A single HTTP request is sufficient using a single TCP connection from C to S.
+answer: B
+explanation: HTTP/1.1 স্ট্যান্ডার্ডে পারসিস্টেন্ট কানেকশন (Persistent Connection) ব্যবহৃত হওয়ায় একটি একক TCP কানেকশন বজায় রেখেই ক্লায়েন্ট পরপর ২টি আলাদা HTTP GET রিকোয়েস্ট (HTML পেজ ও ছবির জন্য) পাঠাতে পারে।
 
 7. **Which one is the first search engine?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*
    A) Google
    B) Archie
    C) Alta vista
    D) WAIS
+answer: B
+explanation: ১৯৯০ সালে অ্যালান এমটেজ (Alan Emtage) কর্তৃক উদ্ভাবিত 'Archie' হলো ইন্টারনেটের সর্বপ্রথম সার্চ ইঞ্জিন।
 
 8. **The newest version of HTML is:** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) WML
    B) HTML5
    C) XSL
    D) HTML3
+answer: B
+explanation: HTML-এর সর্বাধুনিক ও পঞ্চম সংস্করণ হলো HTML5, যাতে সমৃদ্ধ মাল্টিমিডিয়া, সিম্যান্টিক ট্যাগ এবং আধুনিক ওয়েব এপিআই সমর্থন অন্তর্ভুক্ত রয়েছে।
 
 9. **When a web browser interacts with a web server, the following actions take place?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*
    A1: The web browser requests a webpage using HTTP.
@@ -72,42 +88,56 @@
    b) A1, A2, A3, A4
    c) A4, A1, A2, A3
    d) A2, A4, A1, A3
+answer: A
+explanation: ওয়েব ব্রাউজারের কার্যপ্রণালীর সঠিক ক্রম হলো: ১. DNS রেজোলিউশন (A4) -> ২. সার্ভারের সাথে TCP হ্যান্ডশেক ও সংযোগ (A2) -> ৩. HTTP রিকোয়েস্ট প্রেরণ (A1) -> ৪. সার্ভার থেকে HTTP পেজ রেসপন্স গ্রহণ (A3)।
 
 10. **Which HTML attribute is used to hide characters of an input password?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*
    a) href
    b) type
    c) tyle
    d) src
+answer: B
+explanation: `<input>` ট্যাগে `type="password"` অ্যাট্রিবিউট ব্যবহারের মাধ্যমে ইনপুটকৃত পাসওয়ার্ডের অক্ষরগুলো মাস্ক (ডট বা অ্যাস্টেরিস্ক) করে গোপন রাখা হয়।
 
 11. **Which of the followings is not a built-in HTML tag?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 157 (ET: DU)]*
    a) <script>
    b) <form>
    c) <html>
    d) All of these are valid built-in HTML tags
+answer: D
+explanation: `<script>`, `<form>` এবং `<html>`—এর প্রতিটিই স্ট্যান্ডার্ড ও বিল্ট-ইন HTML ট্যাগ।
 
 12. **Which of the following converts the documents written by HTML?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*
    A. Browser
    B. FTP
    C. HTPP
    D. Web
+answer: A
+explanation: ওয়েব ব্রাউজার (Browser) HTML ডকুমেন্টের ট্যাগ ও কোড অনুবাদ (রেন্ডার) করে মানুষের পাঠযোগ্য ইন্টারফেসে প্রদর্শন করে।
 
 13. **A nonstandard HTML extension that causes scrolling text to appear as pan of a Web page is-** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
    A) DHCP
    B) mask off
    C) Dhrystone
    D) marquee
+answer: D
+explanation: `<marquee>` ট্যাগ ব্যবহারের মাধ্যমে ওয়েব পেজে অনুভূমিক বা উল্লম্বভাবে টেক্সট/ইমেজ স্ক্রোল করানো হয়।
 
 14. **Which of the following tags is used to create a paragraph in HTML?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*
    A) <para>content</para>
    B) <cont>para</cont>
    C) <p> content</p>
    D) <body>content</body>
+answer: C
+explanation: HTML-এ অনুচ্ছেদ বা প্যারাগ্রাফ তৈরি করতে `<p>` ট্যাগ ব্যবহার করা হয়।
 
 15. **One advantage of XML compared to HTML is ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. XML works on more platforms
    b. XML is suited to using webpage as frontend to database
    c. XML was designed for portable phone
    d. XML is simpler to learn than html
+answer: B
+explanation: XML ডেটা উপস্থাপন ও পরিবহনের জন্য ডেটা-সেন্ট্রিক কাঠামোগত ফরম্যাট প্রদান করে, যা ডেটাবেজের ব্যাকএন্ড ও ওয়েব ফ্রন্টএন্ডের মধ্যে ডেটা আদান-প্রদানে চমৎকার সহায়তা করে।
 
 ## PHP & Server-Side (9)
 
