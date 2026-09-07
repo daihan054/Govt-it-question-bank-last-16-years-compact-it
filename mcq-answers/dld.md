@@ -680,9 +680,13 @@ explanation: বুলিয়ান বীজগণিতের অবশো�
    (b) 3
    (c) 4
    (d) 5
+answer: B
+explanation: একটি $2^n$-টু-১ মাল্টিপ্লেক্সারে (MUX) $n$ টি সিলেক্ট লাইন থাকে; ৮টি ইনপুটের জন্য ($8 = 2^3$) সিলেক্ট লাইনের সংখ্যা হবে ৩টি।
 
 2. **A decoder has four input lines. How many output lines will be there?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) 4
    (b) 8
    (c) 16
    (d) 32
+answer: C
+explanation: একটি $n$-টু-$2^n$ ডিকোডারে $n$ টি ইনপুট লাইনের বিপরীতে সর্বোচ্চ $2^n$ টি আউটপুট লাইন থাকে; ৪টি ইনপুটের জন্য আউটপুট লাইনের সংখ্যা হবে $2^4 = 16$।
