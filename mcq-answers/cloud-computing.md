@@ -132,24 +132,32 @@ explanation: Security remains the single most significant threat and barrier in 
    (b) Ownership
    (c) Reliability
    (d) PaaS
-   
+answer: D
+explanation: Platform as a Service (PaaS) is one of the standard core cloud service delivery models defined in the SPI framework (SaaS, PaaS, IaaS).
+
 2. **Service that generally focuses on the hardware following which one of the following services models?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*
    (a) IaaS
    (b) PaaS
    (c) SaaS
    (d) Both A and B
+answer: A
+explanation: Infrastructure as a Service (IaaS) delivers virtualized hardware infrastructure, including virtual servers, raw block/object storage, and networking interfaces.
 
 3. **Which service(s) is/are related with Cloud Computing?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
    A) SaaS
    B) PaaS
    C) IaaS
    D) All of these
+answer: D
+explanation: The SPI classification of cloud computing encompasses Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS).
 
 4. **Which of the following is Cloud Platform by Microsoft?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*
    A) Azure
    B) AWS
    C) cloudera
    D) Openstack
+answer: A
+explanation: Microsoft Azure is the enterprise public cloud computing service created and operated by Microsoft. AWS is from Amazon.
 
 ## Containers & Virtualization (2)
 
