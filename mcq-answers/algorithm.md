@@ -570,21 +570,29 @@ explanation: ডিজকস্ট্রা, ক্রুসকল এবং প
    (b) O (\log n)
    (c) O(n^2)
    (d) O(n)
+answer: D
+explanation: নন-ডিটারমিনিস্টিক (Non-deterministic Polynomial / NP) মডেলে এক ধাপে সম্ভাব্য পারমিউটেশন অনুমান (guess) করে $O(n)$ সময়ে তা ক্রমানুসারে আছে কিনা যাচাই (verify) করা যায়, ফলে NP-ক্লাস সর্টিংয়ের সময় জটিলতা $O(n)$।
 
 2. **The \Theta notation in asymptotic evaluation represents—** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
    a) Best case
    b) Base case
    c) Average case
    d) Worst case
+answer: C
+explanation: অ্যাসিম্পটোটিক নোটেশনে বিগ-ও ($O$) ওয়ার্স্ট-কেস (আপার বাউন্ড), বিগ-ওমেগা ($\Omega$) বেস্ট-কেস (লোয়ার বাউন্ড) এবং থিটা ($\Theta$) টাইট বাউন্ড তথা গড় আচরণ বা এভারেজ কেস (Average case) নির্দেশ করতে ব্যবহৃত হয়।
 
 3. **What is time complexity of Huffman coding?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*
    A) O(n)
    B) O(n log n)
    C) O(n (log n)^2)
    D) O(n^2)
+answer: B
+explanation: $n$ টি অক্ষরের জন্য মিন-হিপ (Min-heap) ব্যবহার করে হাফম্যান ট্রি নির্মাণে প্রতিটি নোড নিষ্কাশন ও সন্নিবেশে $O(\log n)$ সময় লাগে, ফলে সামগ্রিক টাইম কমপ্লেক্সিটি হয় $O(n \log n)$।
 
 4. **Two main measures for the efficiency of an algorithm are?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*
    A) Processor and memory
    B) complexity and capacity
    C) Time and space
    D) Data and space
+answer: C
+explanation: যেকোনো অ্যালগরিদমের দক্ষতা ও কর্মক্ষমতা মূল্যায়নের প্রধান দুটি পরিমাপক হলো টাইম কমপ্লেক্সিটি এবং স্পেস কমপ্লেক্সিটি (Time and space)।
