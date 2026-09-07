@@ -429,3 +429,5 @@ explanation: কুকি (Cookie) ওয়েব সার্ভার দ্�
    b) font-style
    c) font-weight
    d) font-family
+answer: C
+explanation: CSS-এ অক্ষরের পুরুত্ব বা বোল্ডনেস (যেমন normal, bold, bolder, 400, 700 ইত্যাদি) নির্ধারণ করতে `font-weight` প্রোপার্টি ব্যবহার করা হয় (`font-style` ইতালিকের জন্য এবং `font-size` আকারের জন্য ব্যবহৃত হয়)।
