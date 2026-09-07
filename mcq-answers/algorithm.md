@@ -183,108 +183,144 @@ explanation: বাবল সর্টের টাইম কমপ্লেক�
    (b) Less number of comparison
    (c) less time and space complexity
    (d) Linear search can be used irrespective of whether the array is sorted or not
+answer: D
+explanation: লিনিয়ার সার্চ যেকোনো বিন্যস্ত বা অবিন্যস্ত (unsorted) তালিকায় সরাসরি প্রয়োগ করা যায়, যেখানে বাইনারি সার্চের জন্য তালিকাটি পূর্বশর্ত হিসেবে অবশ্যই সর্টেড হতে হয়।
 
 2. **Linear search is also called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*
    a) Random Search
    b) Sequential search
    c) Perfect search
    d) None
+answer: B
+explanation: তালিকার প্রথম উপাদান থেকে শেষ উপাদান পর্যন্ত ক্রমানুসারে একটির পর একটি উপাদান অনুসন্ধান করে বলে লিনিয়ার সার্চকে সিকোয়েনশিয়াল সার্চ (Sequential search)-ও বলা হয়।
 
 3. **Which of the following is not the required condition for a binary search algorithm?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 25 (ET: BIBM)]*
    (a) The list must be sorted
    (b) There should be direct access to the middle element in any sub list
    (c) There must be a mechanism to delete and/or insert elements in the list.
    (d) Number values should only be present
+answer: C
+explanation: বাইনারি সার্চের সাহায্যে উপাদান অনুসন্ধানের জন্য কোনো উপাদান মুছে ফেলা বা সন্নিবেশ করানোর মেকানিজমের প্রয়োজন নেই; আবশ্যক শর্ত হলো ডেটা সর্টেড থাকা এবং মাঝখানের উপাদানে সরাসরি অ্যাক্সেস থাকা।
 
 4. **What is the worst case time complexity of linear search algorithm?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*
    (ক) O(1)
    (খ) O(n)
    (গ) O(\log n)
    (ঘ) O(n^2)
+answer: B
+explanation: লিনিয়ার সার্চে উপাদানটি তালিকার একেবারে শেষে অবস্থান করলে বা অনুপস্থিত থাকলে সমস্ত $n$ টি উপাদান চেক করতে হয়, ফলে ওয়ার্স্ট-কেস টাইম কমপ্লেক্সিটি হয় $O(n)$।
 
 5. **Which of the following search algorithm requires less memory?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 44 (ET: N/A)]*
    (ক) Optimal Search
    (খ) Breadth-First Search
    (গ) Depth First Search
    (ঘ) Linear Search
+answer: C
+explanation: ট্রি বা গ্রাফ অনুসন্ধানে ডেপথ ফার্স্ট সার্চ (DFS) শুধুমাত্র বর্তমান অনুসন্ধানের রুট-টু-লিফ পথের নোডগুলো সংরক্ষণ করে ($O(bm)$ মেমরি), যা ব্রেডথ ফার্স্ট সার্চ (BFS, $O(b^d)$ মেমরি)-এর তুলনায় অনেক কম স্পেস ব্যবহার করে।
 
 6. **Which searching algorithm can take O (1) time to find a data from a list?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) Tree search
    b) Linear Search
    c) Binary Search
    d) Hashing
+answer: D
+explanation: হ্যাশিং (Hashing) পদ্ধতিতে হ্যাশ ফাংশনের মাধ্যমে মেমরি বা বাকেট ইনডেক্স সরাসরি গণনা করে গড়ে $O(1)$ কনস্ট্যান্ট সময়ে ডেটা অনুসন্ধান করা যায়।
 
 7. **In binary search, what is the average number of comparison required for search an element in a list is the element number is–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) 2/n
    b) n
    c) log2n
    d) n - 1
+answer: C
+explanation: প্রতিটি ধাপে অনুসন্ধান পরিসর অর্ধেক হয়ে যাওয়ার কারণে $n$ উপাদানের বাইনারি সার্চে তুলনার গড় সংখ্যা প্রায় $\log_2 n$।
 
 8. **The Average-case Time Complexity of the binary search algorithm is-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*
    (a) O(n/2 logn)
    (b) O(n log n)
    (c) O(log n)
    (d) O(1)
+answer: C
+explanation: বাইনারি সার্চের এভারেজ-কেস এবং ওয়ার্স্ট-কেস উভয় টাইম কমপ্লেক্সিটিই হলো $O(\log n)$।
 
 9. **The binary search algorithm is used to search for a given item when items are sorted. If the number of items is 1 million, which of the following is the closest to the maximum number of comparisons required to find the item.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*
    (a) 15
    (b) 20
    (c) 25
    (d) 30
+answer: B
+explanation: ১ মিলিয়ন বা $10^6$ উপাদানের জন্য বাইনারি সার্চে সর্বোচ্চ তুলনার সংখ্যা হলো $\lceil \log_2(1,000,000) \rceil \approx 20$ (যেহেতু $2^{20} = 1,048,576 > 10^6$)।
 
 10. **Suppose you searching student data using student number as the key. Which of following arrangement of the student data is suited for binary search?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*
    a. Student data are arranged in the positions indicated by the student numbers hash values.
    b. Student data are arranged randomly irrespective of the student numbers.
    c. Student data are arranged in ascending order of student numbers.
    d. Student data are arranged in the order of the cell addresses of the student numbers' locations.
+answer: C
+explanation: বাইনারি সার্চ সফলভাবে প্রয়োগের জন্য উপাদানগুলোকে অবশ্যই সুনির্দিষ্ট অর্ডারে (যেমন রোল/আইডির মানের ঊর্ধ্বক্রমে বা ascending order) সাজানো থাকতে হয়।
 
 11. **Which of the following operations is not O(1) for an array of sorted data. You may assume that array elements are distinct.** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
    a. Find the ith largest element
    b. Delete an element
    c. Find the ith smallest element
    d. All of the above
+answer: B
+explanation: সর্টেড অ্যারেতে ডিরেক্ট ইনডেক্সিংয়ের মাধ্যমে $i$-তম বৃহত্তম বা ক্ষুদ্রতম উপাদান $O(1)$ সময়ে খুঁজে পাওয়া যায়, কিন্তু কোনো উপাদান ডিলিট করার পর পরবর্তী উপাদানগুলোকে বামে শিফট করতে হয় যা $O(n)$ সময় নেয়।
 
 12. **The minimum number of comparisons required to determine if an integer appears more than n/2 times in a sorted array of n integers is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 89 (ET: N/A)]*
    a. \Theta(n)
    b. \Theta(\log n)
    c. \Theta(\log*n)
    d. \Theta(1)
+answer: B
+explanation: সর্টেড অ্যারেতে কোনো উপাদান সংখ্যাগরিষ্ঠ ($> n/2$) হলে তা অবশ্যই মধ্যম উপাদান $A[n/2]$ হিসেবে থাকবে; এরপর বাইনারি সার্চের সাহায্যে উপাদানটির প্রথম ও শেষ উপস্থিতি খুঁজে ফ্রিকোয়েন্সি বের করতে $\Theta(\log n)$ সময় লাগে।
 
 13. **The average number of key comparisons done in a successful sequential search in a list of length n, it is-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*
    A) \log n
    B) (n+1)/2
    C) (n-1)/2
    D) n/2
+answer: B
+explanation: $n$ দৈর্ঘ্যের তালিকায় একটি সফল অনুক্রমিক অনুসন্ধানে (Sequential search) প্রয়োজনীয় তুলনার গড় সংখ্যা হলো $\frac{1 + 2 + \dots + n}{n} = \frac{n+1}{2}$।
 
 14. **The complexity of Binary search algorithm is-** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)], [Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*
    A) O(n)
    B) O(\log n)
    C) O(n^2)
    D) O(n \log n)
+answer: B
+explanation: বাইনারি সার্চের টাইম কমপ্লেক্সিটি হলো $O(\log n)$।
 
 15. **The time complexity of binary search is -----** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*
    A) constant
    B) quadratic
    C) exponent
    D) logarithmic
+answer: D
+explanation: বাইনারি সার্চের টাইম কমপ্লেক্সিটি হলো লগারিদমিক (Logarithmic বা $O(\log n)$)।
 
 16. **When the linear search used?** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*
    A) When the list has only few elements.
    B) When performing a single search in an unordered list
    C) Used all the time
    D) When the list has only a few elements and when performing a single search in an unordered list
+answer: D
+explanation: যখন তালিকায় উপাদানের সংখ্যা খুব কম থাকে অথবা একটি অবিন্যস্ত তালিকায় মাত্র একবারই কোনো উপাদান খোঁজার দরকার পড়ে তখন লিনিয়ার সার্চ সবচেয়ে সহজ ও উপযুক্ত পদ্ধতি।
 
 17. **Binary search worst time complexity is-** *[DESCO Assistant Engineer (CSE) 2016 compact it 256 (ET: N/A)]*
    a. O(n)
    b. O(\log n)
    c. O(1)
    d. O(n^2)
+answer: B
+explanation: বাইনারি সার্চের সবচেয়ে খারাপ ক্ষেত্রে (Worst-case) টাইম কমপ্লেক্সিটি হলো $O(\log n)$।
 
 18. **For s sorted linear array, which is the fastest algorithm to find the location?** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*
    a. Linear search
    b. Binary search
    c. Quick search
    d. Selection search
+answer: B
+explanation: সর্টেড লিনিয়ার অ্যারেতে সবচেয়ে দ্রুত ডেটার অবস্থান বের করার প্রমিত অ্যালগরিদম হলো বাইনারি সার্চ ($O(\log n)$)।
 
 ## Graph Algorithms (13)
 
