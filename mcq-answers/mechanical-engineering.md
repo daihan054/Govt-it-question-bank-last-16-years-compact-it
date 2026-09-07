@@ -193,42 +193,56 @@ explanation: বিখ্যাত উক্তি ও প্রতিজ্ঞ�
    (খ) Steel
    (গ) Copper
    (ঘ) Wrought Iron
+answer: A
+explanation: কাস্ট আয়রনের (Cast Iron) চমৎকার ভাইব্রেশন ড্যাম্পিং ক্ষমতা, উচ্চ কম্প্রেসিভ স্ট্রেন্থ এবং পরিধান প্রতিরোধ ক্ষমতার কারণে মেশিনারি গিয়ার তৈরিতে এটি ব্যাপকভাবে ব্যবহৃত হয়।
 
 2. **ধাতুর যে ধর্মের কারনে পিটিয়ে পাত (sheet) এ পরিণত করা যায় তা হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*
    (ক) Ductility
    (খ) Brittleness
    (গ) Malleability
    (ঘ) Toughness
+answer: C
+explanation: ধাতুকে ভেঙে না ফেলে পিটিয়ে বা চাপ প্রয়োগ করে পাতলা পাতে পরিণত করার যান্ত্রিক ধর্মকে ম্যালিয়েবিলিটি (Malleability / ঘাতসহতা) বলা হয়।
 
 3. **Cast Iron তৈরিতে ব্যবহৃত ফার্নেস হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) Blast furnace
    (খ) Cupola furnace
    (গ) Open hearth furnace
    (ঘ) Bessemer Converter
+answer: B
+explanation: পিগ আয়রন গলিয়ে কাস্ট আয়রন উৎপাদনের জন্য কিউপোলা ফার্নেস (Cupola Furnace) ব্যবহৃত হয় (ব্লাস্ট ফার্নেসে আকরিক থেকে পিগ আয়রন উৎপাদিত হয়)।
 
 4. **Investment casting ব্যবহৃত হয় কোন Pattern?** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) Wax Pattern
    (খ) Wooden Pattern
    (গ) Polystyrene Pattern
    (ঘ) Lead Pattern
+answer: A
+explanation: ইনভেস্টমেন্ট কাস্টিং (বা Lost-Wax Process)-এ মোম (Wax Pattern) দিয়ে প্যাটার্ন তৈরি করা হয়, যা ছাঁচ উত্তপ্ত করলে গলে বের হয়ে নিখুঁত ক্যাভিটি তৈরি করে।
 
 5. **Rubber এর অপর নাম-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) Plastomer
    (খ) Elastomer
    (গ) Resin
    (ঘ) Soft Plastic
+answer: B
+explanation: রাবার হলো পলিমারের ইলাস্টোমার (Elastomer) শ্রেণীর উপাদান, যার উচ্চ স্থিতিস্থাপকতা ও টান সহ্য করার পর পূর্বাবস্থায় ফিরে আসার অসাধারণ ক্ষমতা রয়েছে।
 
 6. **কান ধাতুর Duetility সর্বোচ্চ?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*
    (ক) Mild steel
    (খ) Copper
    (গ) Zinc
    (ঘ) Aluminum
+answer: B
+explanation: প্রদত্ত অপশনগুলোর মধ্যে তামার (Copper) ডাকটিলিটি বা তারে পরিণত করার প্রসারণশীলতা সবচেয়ে বেশি।
 
 7. **কোনটি Mechanical Property?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*
    (ক) Density
    (খ) Thermal conductivity
    (গ) Hardness
    (ঘ) Porosity
+answer: C
+explanation: হার্ডনেস (Hardness / কাঠিন্য) হলো একটি মেকানিক্যাল ধর্ম, যা বাহ্যিক ঘর্ষণ, আঁচড় বা স্থায়ী অনুপ্রবেশ প্রতিরোধ করার ক্ষমতা নির্দেশ করে। ডেনসিটি হলো ভৌত এবং থার্মাল কন্ডাক্টিভিটি হলো তাপীয় ধর্ম।
 
 ## Machining & Workshop Practice (6)
 
