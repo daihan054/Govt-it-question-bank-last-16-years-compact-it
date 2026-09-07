@@ -502,201 +502,269 @@ explanation: মাইক্রোসফট অ্যাক্সেস (MS Acce
    (b) Data bank
    (c) Meta Data
    (d) Warehouse
+answer: C
+explanation: ডেটা সম্পর্কিত ডেটা বা উপাত্তের গঠন ও বৈশিষ্ট্য প্রকাশক তথ্যকে মেটাডেটা (Metadata) বলা হয়।
 
 2. **Which level of abstraction specifies the data and relationships between data?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Conceptual Level (Logical Level)
+answer: Conceptual Level (Logical Level)
+explanation: থ্রি-স্কিমা আর্কিটেকচারে কনসেপচুয়াল বা লজিক্যাল লেভেল সংজ্ঞায়িত করে কোন কোন ডেটা ডেটাবেসে সংরক্ষিত হবে এবং তাদের মধ্যকার আন্তঃসম্পর্ক কী হবে।
 
 3. **Which of the following is not a function of a database administrator?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*
    a) Database the design
    b) Backing up the database
    c) Query processing
    d) User coordination
+answer: C
+explanation: কুয়েরি প্রসেসিং (Query processing) হলো ডেটাবেস ইঞ্জিন সফটওয়্যারের একটি অভ্যন্তরীণ স্বয়ংক্রিয় প্রক্রিয়া, এটি DBA-এর প্রশাসনিক কাজ নয়।
 
 4. **Assume that you want to improve database performance and willing to see the amount of swap space. Which command you can use in LINUX OS environment?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    a) Lsps -a
    b) Swapinfo -m
    c) Swapon -s
    d) Swap -l and Swap -s
+answer: C
+explanation: লিনাক্স (Linux) পরিবেশে সিস্টেমের সোয়াপ মেমোরির পরিমাণ ও ব্যবহারের সংক্ষিপ্ত চিত্র দেখতে `swapon -s` কমান্ড ব্যবহৃত হয়।
 
 5. **In oracle to change the DB_Block_size parameter, you need to-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    a) Re-create the database
    b) Alter the database
    c) Move database to temporary
    d) Update the table types of the database
+answer: A
+explanation: ওরাকলে স্ট্যান্ডার্ড ডেটাবেস ব্লক সাইজ (`DB_BLOCK_SIZE`) ডেটাবেস তৈরির সময় নির্ধারিত হয়; এটি পরিবর্তন করতে হলে ডেটাবেস পুনরায় তৈরি (Re-create) করতে হয়।
 
 6. **Which of the following controls the execution of application program and UI in two tier client/server architecture?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    a) Modulation side
    b) Server side
    c) Host side
    d) None of the above
+answer: D
+explanation: টু-টিয়ার আর্কিটেকচারে ইউজার ইন্টারফেস এবং অ্যাপ্লিকেশন প্রোগ্রাম ক্লায়েন্ট সাইডে (Client side) চলে। অপশনে Client side না থাকায় সঠিক উত্তর None of the above।
 
 7. **LGWR process writes information into-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*
    a) Database files
    b) Control Files
    c) Redo log Files
    d) All of the above
+answer: C
+explanation: ওরাকলে Log Writer (LGWR) প্রসেস মেমোরির রিডো লগ বাফার থেকে রেকর্ডসমূহ রিডো লগ ফাইলে (Redo log files) রাইট করে।
 
 8. **Data integrity problems in a DBMS is caused due to-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*
    a) Missing Data
    b) Data inconsistency
    c) Data Redundancy
    d) Security constraints
+answer: C
+explanation: ডেটাবেসে তথ্যের অনাকাঙ্ক্ষিত পুনরাবৃত্তি বা রিডানড্যান্সি (Data Redundancy)-র কারণে বিভিন্ন টেবিলে তথ্যের গরমিল ও ইন্টিগ্রিটি সমস্যা দেখা দেয়।
 
 9. **A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*
    a) Data organization
    b) Data Binding
    c) Data schemas
    d) Data models
+answer: D
+explanation: ডেটা, ডেটার পারস্পরিক সম্পর্ক, সিম্যানটিক্স এবং ধারাবাহিকতার সীমাবদ্ধতা সংজ্ঞায়িত করার ধারণাগত কাঠামোকে ডেটা মডেল (Data model) বলে।
 
 10. **Which is the oracle component that contains the memory structures and background process?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*
    a) Instance
    b) Server
    c) SGA
    d) Database files
+answer: A
+explanation: ওরাকল ডেটাবেসে শেয়ার্ড মেমোরি স্ট্রাকচার (SGA) এবং ব্যাকগ্রাউন্ড প্রসেসসমূহের যৌথ সমষ্টিকে একটি ওরাকল ইন্সট্যান্স (Oracle Instance) বলা হয়।
 
 11. **The three different application logic components are which of the following?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*
    a) Presentation, Client, and Storage
    b) Presentation, Client, and Processing
    c) Presentation, Processing, and Storage
    d) Presentation, Processing, and Network
+answer: C
+explanation: সফটওয়্যার আর্কিটেকচারের তিনটি মৌলিক লজিক স্তর হলো: প্রেজেন্টেশন স্তর (Presentation), প্রসেসিং/বিজনেস লজিক (Processing), এবং ডেটা স্টোরেজ (Storage)।
 
 12. **Of the functions provided by a DBMS. Which of the following is a means for achieving protection for data confidentiality?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*
    a) Checking referential constraints when the data is updated
    b) Managing a transaction that combines a series of processes as a logical Unit.
    c) Managing the data access rights of users.
    d) Placing an exclusive lock on the data before it is updated
+answer: C
+explanation: তথ্যের গোপনীয়তা (Confidentiality) নিশ্চিত করার প্রধান উপায় হলো ব্যবহারকারীদের ডেটা অ্যাক্সেসের অধিকার বা প্রিভিলেজ নিয়ন্ত্রণ করা (Managing access rights)।
 
 13. **Oracle materialized views or SNAPSHOTS is used-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*
    a) Hiding data from users
    b) Dynamic data replication
    c) Table Space Reduction
    d) Data Abstraction
+answer: B
+explanation: ওরাকলে মেটেরিয়ালাইজড ভিউ বা স্ন্যাপশট মূল ডেটাবেস থেকে দূরবর্তী বা স্থানীয় স্থানে ডেটা কপি ও রেপ্লিকেট (Dynamic data replication) করতে ব্যবহৃত হয়।
 
 14. **A distributed database has which of the following advantages over a centralized database?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*
    a) Software cost
    b) Software complexity
    c) Slow Response
    d) Modular growth
+answer: D
+explanation: ডিস্ট্রিবিউটেড ডেটাবেসের সবচেয়ে বড় সুবিধা হলো মডুলার সম্প্রসারণ (Modular growth); প্রয়োজনমতো নতুন সার্ভার বা সাইট সহজে যুক্ত করা যায়।
 
 15. **In Oracle DBMS, LGWR process is a-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*
    (a) Foreground Process
    (b) Background Process
    (c) High Priority Process
    (d) Batch Process
+answer: B
+explanation: ওরাকল ডেটাবেসে Log Writer (LGWR) একটি অপরিহার্য ব্যাকগ্রাউন্ড প্রসেস (Background Process)।
 
 16. **Which one of the following is a No-SQL Database?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*
    (a) MongoDB
    (b) CasperDB
    (c) ZBase
    (d) All of the above
+answer: D
+explanation: MongoDB (ডকুমেন্ট বেসড), CasperDB এবং ZBase (কি-ভ্যালু স্টোর)—সবগুলোই নো-এসকিউএল (NoSQL) ডেটাবেসের উদাহরণ।
 
 17. **Which one of the following statements is true with respect to a Database Management System?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*
    (a) Super key and candidate keys are similar
    (b) Candidate keys and Unique Keys are similar
    (c) Unique Keys and Primary Keys are similar
    (d) Candidate keys and Primary keys are similar
+answer: D
+explanation: ডেটাবেস তত্ত্বে ক্যান্ডিডেট কি এবং প্রাইমারি কি প্রায় সদৃশ; ক্যান্ডিডেট কি-গুলোর মধ্য থেকেই একটিকে প্রাইমারি কি হিসেবে নির্বাচন করা হয়।
 
 18. **The collection of information stored in the database at a particular moment is called-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    a) Schema
    b) Instance
    c) Relation
    d) Record
+answer: B
+explanation: কোনো নির্দিষ্ট মুহূর্তে ডেটাবেসে বিদ্যমান তথ্যের সামগ্রিক সংগ্রহ বা অবস্থাকে ডেটাবেস ইন্সট্যান্স (Instance বা State) বলা হয়।
 
 19. **Running the given task in less time by increasing the degree of parallelism in DBMS is called ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 174 (ET: N/A)]*
    a) scale up
    b) roll up
    c) speedup
    d) Data Warehouse
+answer: C
+explanation: প্রসেসরের প্যারালেলিজম বৃদ্ধি করে একটি নির্দিষ্ট কাজ কম সময়ে শেষ করার ক্ষমতাকে স্পিডআপ (Speedup) বলা হয়।
 
 20. **In user facilities, copying of all records onto a main store from permanent store is considered as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*
    A) delete file
    B) rename file
    C) save file
    D) load file
+answer: D
+explanation: স্থায়ী স্টোরেজ থেকে রেকর্ডসমূহকে প্রধান মেমোরিতে (RAM) স্থানান্তর করার প্রক্রিয়াকে লোড ফাইল (Load file) বলা হয়।
 
 21. **If master and transaction file have keys in same order, then it takes____** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*
    A) less time
    B) more time
    C) many hours
    D) many days
+answer: A
+explanation: মাস্টার ফাইল ও ট্রানজ্যাকশন ফাইলের রেকর্ডসমূহ একই অর্ডারে সাজানো থাকলে সিকোয়েন্সিয়াল সার্চ ও আপডেটে অনেক কম সময় (less time) লাগে।
 
 22. **File used to update information in computer's master file is classified as** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*
    A) transaction file
    B) direct file
    C) order file
    D) sequence file
+answer: A
+explanation: প্রধান বা মাস্টার ফাইল আপডেট করার জন্য সাম্প্রতিক লেনদেনের তথ্য যে ফাইলে থাকে তাকে ট্রানজ্যাকশন ফাইল (Transaction file) বলে।
 
 23. **Interleaving of records to form one file containing all records is classified as ____.** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*
    A) merging
    B) finding
    C) file learning
    D) searching
+answer: A
+explanation: একাধিক ফাইলের রেকর্ডসমূহকে একটি একক সম্মিলিত ফাইলে রূপান্তর করার প্রক্রিয়াকে মার্জিং (Merging) বলে।
 
 24. **Set of numbers used to check all groups record within limits of data is classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*
    A) variable check
    B) decimal check
    C) type check
    D) range check
+answer: D
+explanation: ডেটা কোনো নির্দিষ্ট নিম্নসীমা ও ঊর্ধ্বসীমার মধ্যে রয়েছে কিনা তা নিশ্চিত করার ভ্যালিডেশনকে রেঞ্জ চেক (Range check) বলা হয়।
 
 25. **Process of converting data or information in the form of which is readily available for processing is called-** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*
    A) encoding
    B) decoding
    C) translating
    D) data organization
+answer: D
+explanation: ডেটাকে সরাসরি প্রসেসিংয়ের জন্য সুনির্দিষ্ট ও কার্যকর কাঠামোয় বিন্যস্ত করার প্রক্রিয়াকে ডেটা অর্গানাইজেশন (Data organization) বলে।
 
 26. **Which of the following term refers to the degree to which data in a database system are accurate and correct?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 217 (ET: AUST)]*
    A) Data integrity
    B) Data security
    C) Data Validity
    D) None of these
+answer: A
+explanation: ডেটাবেসে সংরক্ষিত তথ্যের নির্ভুলতা, ধারাবাহিকতা ও নির্ভরযোগ্যতার মাত্রাকে ডেটা ইন্টিগ্রিটি (Data Integrity) বলা হয়।
 
 27. **Which one is an example of DBMS?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*
    A. MS word
    B. MS Excel
    C. C++
    D. MS Access
+answer: D
+explanation: মাইক্রোসফট অ্যাক্সেস (MS Access) হলো একটি রিলেশনাল ডেটাবেস ম্যানেজমেন্ট সফটওয়্যার (RDBMS)।
 
 28. **In the hypermedia database, information bits are stored in the form of:** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*
    (a) Cubes
    (b) Nodes
    (c) Signals
    (d) Symbols
+answer: B
+explanation: হাইপারমিডিয়া ডেটাবেসে তথ্যের প্রতিটি অংশ বা ইউনিট 'Node' (নোড) আকারে সংরক্ষিত থাকে, যা লিঙ্কের মাধ্যমে সংযুক্ত থাকে।
 
 29. **Data directory contains detail of-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*
    A) Data structure
    B) Data flows
    C) Data store
    D) None
+answer: A
+explanation: ডেটা ডিরেক্টরি বা ডেটা ডিকশনারিতে ডেটাবেসের টেবিল স্কিমা, ফিল্ড ও ডেটা স্ট্রাকচারের (Data structure) বিবরণ থাকে।
 
 30. **Which of the following terms refers to the degree to which data in a database system are accurate and correct?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*
    A) Data integrity
    B) Data security
    C) Data validity
    D) None of the above
+answer: A
+explanation: ডেটার নির্ভুলতা এবং সমগ্র জীবনচক্রে তথ্যের বিশুদ্ধতা অক্ষুণ্ণ থাকাকে ডেটা ইন্টিগ্রিটি (Data Integrity) বলে।
 
 31. **The following are functions of a DBMS except ________** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*
    A) creating and processing forms
    B) creating databases
    C) processing data
    D) administrating databases
+answer: A
+explanation: ইউজার ফর্ম তৈরি ও প্রদর্শন মূলত অ্যাপ্লিকেশন সফটওয়্যারের কাজ, এটি কোর DBMS ইঞ্জিনের মৌলিক কাজ নয়।
 
 32. **The ________ format is usually used to store data.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*
    A) BCD
    B) Decimal
    C) Hexadecimal
    D) Octal
+answer: A
+explanation: বাণিজ্যিক ও আর্থিক কম্পিউটিং ডেটাবেসে নির্ভুলভাবে সংখ্যা প্রদর্শনে BCD (Binary Coded Decimal) ফরম্যাট ব্যবহৃত হয়।
 
 33. **From where the data is captured in the SQL Server Database?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*
    a. Automatic call decider
    b. Automation call distributor
    c. Automatic call distributor
    d. Automatic historical data
+answer: C
+explanation: কল সেন্টার ও সিআরএম ডেটাবেসে কল ট্রাফিকের মূল তথ্য ACD (Automatic Call Distributor) থেকে ক্যাপচার করা হয়।
 
 34. **What is the purpose of data logger?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*
    a. keeps historical data
    b. keeps all the data for delivery purpose
    c. keeps the code for the tracking
    d. keeps automatic call distribution
+answer: A
+explanation: ডেটা লগার (Data Logger) দীর্ঘ সময় ধরে সিস্টেমের তথ্য ও ইভেন্টগুলোর ধারাবাহিক ইতিহাস (historical data) রেকর্ড করে রাখে।
 
 ## Normalization (16)
 
