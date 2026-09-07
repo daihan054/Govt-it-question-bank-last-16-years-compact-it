@@ -300,48 +300,64 @@ explanation: The Evolutionary model (such as the Prototyping model or Spiral mod
    (b) 100
    (c) 10
    (d) 45
+answer: D
+explanation: In a maximally cohesive class, every method interacts with or shares attributes with every other method, forming a complete graph K_n. For n = 10 methods, the total number of connections is C(10, 2) = (10 * 9) / 2 = 45.
 
 2. **Cyclomatic complexity is a software metric used in _____** *[Combined Bank Officer (IT) 04.10.2024 compact it 14 (ET: BIBM)]*
    (a) White box testing
    (b) Black box testing
    (c) Grey box testing
    (d) None of these
+answer: A
+explanation: Cyclomatic complexity (developed by Thomas McCabe) measures the number of linearly independent paths in code and is a fundamental structural metric used in White-box (basis path) testing.
 
 3. **The degree of interaction between two modules is known as-** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*
    a) Cohesion
    b) Strength
    c) Inheritance
    d) Coupling
+answer: D
+explanation: Coupling measures the degree of interdependence and interaction between two separate software modules (while cohesion measures the functional relatedness within a single module).
 
 4. **In software development, value adjustment factors include the following among others:** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*
    (a) the criticality of the performance and reusability of the code
    (b) number of lines of code in the software.
    (c) number of technical manpower and hardware costs
    (d) time period available and the level of user friendliness
+answer: A
+explanation: In Function Point Analysis (FPA), the 14 General System Characteristics (GSCs) used to compute the Value Adjustment Factor (VAF) explicitly include system performance and code reusability.
 
 5. **Assuming the existence of a start and end nodes for a program graph (PG), the total number of Paths is equivalent to _______ set of test data required to test software.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*
    (a) Minimum
    (b) Maximum
    (c) Optimum
    (d) Supreme
+answer: B
+explanation: Covering all possible execution paths from start node to end node in a program graph represents exhaustive path testing, which requires the maximum set of test cases.
 
 6. **________ is qualitative measure that refers to the number of connections between a ‘calling’ and a ‘called’ module and the complexity of these connections.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*
    a) Coupling
    b) Cohesion
    c) Both A and B
    d) None of them
+answer: A
+explanation: Coupling is a qualitative and structural measure of the number of interconnections and complexity of interaction between calling and called modules.
 
 7. **ISO 9126 quality factors consist of –** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*
    a) process-ability, consistency, usefulness, adaptability, rationality and transportability
    b) functionality, reliability, effectiveness, usability, maintainability and portability
    c) functionality, consistency, effectiveness, adaptability, maintainability and transportability
    d) None of them.
+answer: B
+explanation: Under the ISO/IEC 9126 standard, software quality is classified into 6 primary characteristics: Functionality, Reliability, Usability, Efficiency (printed here as effectiveness), Maintainability, and Portability.
 
 8. **DFD stands for-** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*
    A) data file disk
    B) data flow diagram
    C) disk flat database
    D) disk file database
+answer: B
+explanation: DFD-এর পূর্ণরূপ হলো Data Flow Diagram, যা কোনো ইনফরমেশন সিস্টেমের ইনপুট, প্রসেসিং, ডেটা স্টোর এবং আউটপুটের প্রবাহ চিত্রে উপস্থাপন করে।
 
 ## Design Patterns (3)
 
