@@ -161,39 +161,53 @@ explanation: The `.apk` (Android Package Kit) file extension is the native execu
    (b) Development of Micro services and containers
    (c) Development of Cloud Applications
    (d) All of the above statements are true
+answer: D
+explanation: The modern .NET platform is a versatile ecosystem utilized across desktop development (WPF, Windows Forms, MAUI), containerized microservices (ASP.NET Core), and enterprise cloud applications (Azure).
 
 2. **Microsoft .NET is ________** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*
    A) Open Source
    B) Closed Source
    C) Browser
    D) None of these
+answer: A
+explanation: Modern Microsoft .NET (.NET Core, .NET 5/6/7/8+) is fully open-source and cross-platform, governed under the .NET Foundation with an MIT/Apache 2.0 license.
 
 3. **The reference library of Visual Basic books is called ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. MSDN library
    b. Help library
    c. Contents
    d. Topic pane
+answer: A
+explanation: The MSDN (Microsoft Developer Network) Library is the definitive documentation repository and reference collection for Visual Basic and Windows development tools.
 
 4. **A variable declared inside a method is called ________.** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. Static variable
    b. Local variable
    c. Private variable
    d. Serial variable
+answer: B
+explanation: A variable declared within the scope of a function or method body is a local variable, accessible only during the execution of that specific method.
 
 5. **Which of the method is used to display the form as model in VB.NET platform?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. showdialog()
    b. activate()
    c. loaddialog()
    d. show()
+answer: A
+explanation: In VB.NET and C# Windows Forms, the `Form.ShowDialog()` method renders a form modally, blocking interaction with parent windows until closed. In contrast, `Form.Show()` displays a modeless window.
 
 6. **The tool provided with .NET framework register assemblies for use by COM is ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. Regasm
    b. Regsvr32
    c. ILDASM
    d. Regedit
+answer: A
+explanation: RegAsm.exe (Assembly Registration Tool) reads metadata within a managed .NET assembly and adds necessary COM registry entries so unmanaged COM clients can invoke .NET objects.
 
 7. **Find any errors in the following BankAccount constructor in C#.NET public int BankAccount(){ balance=0; }** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    a. Name
    b. Formal parameters
    c. Return type
    d. None
+answer: C
+explanation: In C# and object-oriented programming, a constructor cannot have any return type (not even `void`). Including `int` as the return type in `public int BankAccount()` constitutes a syntax error for a constructor.
