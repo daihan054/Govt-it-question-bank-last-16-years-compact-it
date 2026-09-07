@@ -460,93 +460,125 @@ explanation: `java.lang.Runnable` ইন্টারফেসে `public void ru
    (b) Comparison Operator
    (c) Insertion Operator <<
    (d) Prefix++
+answer: c
+explanation: Stream Insertion (`<<`) এবং Extraction (`>>`) অপারেটরের বাম পাশের অপারেন্ডটি একটি স্ট্রিম অবজেক্ট (যেমন `ostream& cout`), যা ইউজার ক্লাসের অবজেক্ট নয়। তাই একে ক্লাসের মেম্বার মেথড হিসেবে না করে গ্লোবাল বা ফ্রেন্ড ফাংশন হিসেবে ওভারলোড করা হয়।
 
 2. **Which of the following operators cannot be overloaded in C/C++ ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*
    (a) Bitwise right shift assignment
    (b) Address of
    (c) Indirection
    (d) Structure reference
+answer: d
+explanation: C++ এ মেম্বার সিলেকশন বা স্ট্রাকচার রেফারেন্স ডট অপারেটর `.` (dot), পয়েন্টার-টু-মেম্বার `.*`, স্কোপ রেজোলিউশন `::`, টার্নারি `?:` এবং `sizeof` অপারেটরসমূহ ওভারলোড করা যায় না।
 
 3. **A feature of Object oriented programming languages that allows a specific routine to use variables of different types at different times, is called OOP?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Polymorphism
+answer: Polymorphism
+explanation: পলিমরফিজম (বহুরূপিতা) অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিংয়ের এমন একটি বৈশিষ্ট্য যা একই ইন্টারফেস বা মেথড নাম ব্যবহার করে বিভিন্ন ডেটা টাইপ বা ক্লাসের অবজেক্ট পরিচালনা করার সুযোগ দেয়।
 
 4. **A function having more than one distinct meaning is called ______ function** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*
    (ক) Parameter
    (খ) Prototype
    (গ) Overloaded
    (ঘ) Polymorphism
+answer: গ
+explanation: একই নামের একটি ফাংশন যখন প্যারামিটারের তালিকাভেদে ভিন্ন ভিন্ন উদ্দেশ্যে একাধিকবার সংজ্ঞায়িত হয়, তখন তাকে ওভারলোডেড (Overloaded) ফাংশন বলা হয়।
 
 5. **The feature in object-oriented programming that allows the same operation to be carried out differently, depending on the object, is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)]*
    a. Inheritance
    b. Polymorphism
    c. Over functioning
    d. Overriding
+answer: b
+explanation: অবজেক্টের প্রকারভেদে একই অপারেশন ভিন্ন ভিন্ন রূপে কার্যকর হওয়ার সক্ষমতাকে পলিমরফিজম (Polymorphism) বলে।
 
 6. **The most common use of ________ in OOP occurs when a parent class reference is used to refer to a child class object.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 174 (ET: N/A)]*
    a) Polymorphism
    b) Inheritance
    d) Encapsulation
    d) Method overriding
+answer: a
+explanation: প্যারেন্ট ক্লাসের রেফারেন্স দ্বারা চাইল্ড ক্লাসের অবজেক্ট ধারণ করে রানটাইমে গতিশীল মেথড ডেসপ্যাচ নিশ্চিত করাই হলো পলিমরফিজমের (Polymorphism) সবচেয়ে সাধারণ ও কার্যকর ব্যবহার।
 
 7. **Which of the following is the destructor of class Vehicle?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*
    A) *Vehicle()
    B) ~Vehicle ()
    C) ~Vehicle (int value)
    D) *Vehicle (int value)
+answer: B
+explanation: C++ এ ডিস্ট্রাক্টরের নাম ক্লাসের নামের অনুরূপ হয় যার পূর্বে টিল্ডা (`~`) প্রতীক থাকে এবং এর কোনো আর্গুমেন্ট বা রিটার্ন টাইপ থাকে না।
 
 8. **The operator that cannot be overloaded is ________.** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*
    A) ++
    B) ()
    C) ~
    D) ::
+answer: D
+explanation: C++ এ স্কোপ রেজোলিউশন অপারেটর `::` কোনোভাবেই ওভারলোড করা যায় না।
 
 9. **Which functions overloads the ">>" operator?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*
    A) gt()
    B) more()
    C) ge()
    D) None of this
+answer: D
+explanation: C++ এ `>>` অপারেটর ওভারলোড করতে মেথডের নাম হতে হয় `operator>>`; gt(), more() বা ge() নামে কোনো অপারেটর ওভারলোডিং ফাংশন হয় না।
 
 10. **Which of the following operator functions cannot be global i.e. must be a member function?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*
-   A) Conversion operator
-   B) new
-   C) delete
-   D) all of these
+    A) Conversion operator
+    B) new
+    C) delete
+    D) all of these
+answer: A
+explanation: C++ এ টাইপ কনভার্সন অপারেটর (যেমন `operator int()`), অ্যাসাইনমেন্ট অপারেটর `=`, সাবস্ক্রিপ্ট `[]` এবং অ্যারো `->` অপারেটরসমূহকে অবশ্যই ক্লাসের মেম্বার ফাংশন হতে হয়; এগুলো কখনোই গ্লোবাল ফাংশন হতে পারে না।
 
 11. **Which of the following is the destructor for class “vehicle”?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*
-   A) *vehicle()
-   B) *vehicle (int value)
-   C) ~vehicle()
-   D) ~vehicle (int value)
+    A) *vehicle()
+    B) *vehicle (int value)
+    C) ~vehicle()
+    D) ~vehicle (int value)
+answer: C
+explanation: “vehicle” ক্লাসের ডিস্ট্রাক্টরের সিনট্যাক্স হলো `~vehicle()`।
 
 12. **Which operator that can be overloaded is?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*
-   A) ++
-   B) ::
-   C) . (dot)
-   D) 0
+    A) ++
+    B) ::
+    C) . (dot)
+    D) 0
+answer: A
+explanation: অপশনগুলোর মধ্যে ইনক্রিমেন্ট অপারেটর `++` ওভারলোডযোগ্য। অন্যদিকে `::` এবং `.` অপারেটর ওভারলোড করা যায় না।
 
 13. **How many instances of an abstract can be created?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*
-   A) 0
-   B) 1
-   C) 2
-   D) 13
+    A) 0
+    B) 1
+    C) 2
+    D) 13
+answer: A
+explanation: একটি অ্যাবস্ট্রাক্ট ক্লাসের কোনো প্রত্যক্ষ অবজেক্ট বা ইন্সট্যান্স তৈরি করা যায় না; তাই এর ইন্সট্যান্স সংখ্যা শূন্য (0)।
 
 14. **If same message is passed to objects of several different classes and all of those can respond in a different way, what is this feature called?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
-   A) Inheritance
-   B) Overloading
-   C) Polymorphism
-   D) Overriding
+    A) Inheritance
+    B) Overloading
+    C) Polymorphism
+    D) Overriding
+answer: C
+explanation: ভিন্ন ভিন্ন ক্লাসের অবজেক্টে একই মেসেজ পাঠানো হলে তাদের নিজ নিজ ক্লাসের সংজ্ঞানুযায়ী ভিন্নভাবে সাড়া দেওয়াকে পলিমরফিজম (Polymorphism) বলা হয়।
 
 15. **What is the process of defining two or more methods within the same class that have same name but different parameters declaration?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*
-   A) Method overriding
-   B) Method overloading
-   C) Method hiding
-   D) Method duplicating
+    A) Method overriding
+    B) Method overloading
+    C) Method hiding
+    D) Method duplicating
+answer: B
+explanation: একই ক্লাসে একই নামের একাধিক মেথড যদি ভিন্ন ভিন্ন প্যারামিটার তালিকা নিয়ে সংজ্ঞায়িত হয়, তবে সেই প্রক্রিয়াকে Method overloading বলা হয়।
 
 16. **Overloaded functions are ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*
-   a. Very long functions that can hardly run
-   b. One function containing another one or more functions inside it
-   c. Two or more functions with same name but different number of parameter or type
-   d. None of above
+    a. Very long functions that can hardly run
+    b. One function containing another one or more functions inside it
+    c. Two or more functions with same name but different number of parameter or type
+    d. None of above
+answer: c
+explanation: ওভারলোডেড ফাংশন বলতে বোঝায় একই নামের একাধিক ফাংশন যাদের প্যারামিটার সংখ্যা বা ডেটা টাইপের মধ্যে ভিন্নতা রয়েছে।
 
 ## OOP Concepts & Principles (11)
 
