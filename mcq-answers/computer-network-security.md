@@ -450,33 +450,45 @@ explanation: কম্পিউটার ভাইরাস হলো একট�
    (b) Cyber safety
    (c) Cyber ethics
    (d) Cyber security
+answer: C
+explanation: ডিজিটাল মিডিয়া ও সাইবার স্পেসে নৈতিক আচরণ ও মূল্যবোধের অনুশাসন সংক্রান্ত অধ্যয়ন ও চর্চাকে 'সাইবার এথিক্স' (Cyber ethics) বলা হয়।
 
 2. **Which of the following protected by copyright ACT?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 22 (ET: BIBM)]*
    (a) Intellectual property
    (b) Original work of authorship
    (c) Software
    (d) All
+answer: D
+explanation: কপিরাইট আইনের অধীনে মৌলিক সৃজনশীল কর্ম (Original work of authorship), মেধাস্বত্ব (Intellectual property) এবং কম্পিউটার সফটওয়্যার সবই আইনগত সুরক্ষা পায়।
 
 3. **Which year declared Cybersecurity act in Bangladesh?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*
    (a) 2016
    (b) 2018
    (c) 2012
    (d) 2008
+answer: B
+explanation: বাংলাদেশে সাইবার ও ডিজিটাল নিরাপত্তা সংক্রান্ত পূর্ণাঙ্গ আইন 'ডিজিটাল নিরাপত্তা আইন' হিসেবে ২০১৮ সালে প্রণীত হয় (প্রদত্ত অপশনগুলোর মধ্যে ২০১৮ সঠিক)।
 
 4. **What are hackers who find bugs and vulnerabilities called?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** White hat hacker.
+answer: White hat hacker
+explanation: যেসকল নৈতিক বা অনুমোদিত হ্যাকার সিস্টেমের নিরাপত্তা বাড়ানোর জন্য সিস্টেমের বাগ বা নিরাপত্তা দুর্বলতা (vulnerability) শনাক্ত করেন, তাদের হোয়াইট হ্যাট হ্যাকার (White hat hacker) বলা হয়।
 
 5. **A student breaks the door of a professor's office to obtain a copy of the next day's examination. Define the type of security attack in this case.** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*
    a) Snooping
    b) Repudiation
    c) Masquerading
    d) Replaying
+answer: A
+explanation: কোনো অননুমোদিত উপায়ে গোপনীয় তথ্য বা নথি হাতিয়ে নেওয়াকে ক্রিপ্টোগ্রাফি ও নেটওয়ার্ক সিকিউরিটিতে 'স্নুপিং' (Snooping) হিসেবে সংজ্ঞায়িত করা হয়, যা তথ্যের গোপনীয়তা (Confidentiality) নষ্ট করে।
 
 6. **Which one of the following is the reason for “Cyberchondria”?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*
    A) excessive typing
    B) watching for long hour
    C) excessive anxiety due to online search
    D) radiation
+answer: C
+explanation: সাইবারকন্ড্রিয়া (Cyberchondria) হলো ইন্টারনেটে বা অনলাইনে রোগ ও স্বাস্থ্যের লক্ষণ সংক্রান্ত অতিরিক্ত অনুসন্ধানের ফলে সৃষ্ট অমূলক ভয় ও মানসিক উদ্বেগ (Excessive anxiety due to online search)।
 
 ## Security Principles (CIA Triad) (5)
 
