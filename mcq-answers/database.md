@@ -773,93 +773,125 @@ explanation: ডেটা লগার (Data Logger) দীর্ঘ সময�
    b) 5NF
    c) 4NF
    d) 3NF
+answer: D
+explanation: বাস্তব ক্ষেত্রে বেশিরভাগ রিলেশনাল ডেটাবেস ডিজাইনে ৩য় নরমাল ফর্ম বা 3NF-কে পর্যাপ্ত ও মানসম্মত (adequate) হিসেবে বিবেচনা করা হয়।
 
 2. **Which one is correct in case of normalization-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) Normalization maximizes duplicates
    (b) Normalization reduces duplicates
    (c) Normalization eliminates duplicates
    (d) Normalization increases
+answer: B
+explanation: নরমালাইজেশনের মূল উদ্দেশ্য হলো ডেটাবেসের টেবিলগুলোকে সুবিন্যস্ত করে অনাকাঙ্ক্ষিত ডুপ্লিকেট বা পুনরাবৃত্তি কমানো (reduces duplicates)।
 
 3. **If attribute A determines both attributes B and C then, it is also true that—** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*
    (a) A \rightarrow B
    (b) B \rightarrow A
    (c) C \rightarrow A
    (d) (BC) \rightarrow A
+answer: A
+explanation: আর্মস্ট্রং-এর ডিকম্পোজিশন রুল অনুসারে, যদি $A \rightarrow BC$ হয়, তবে পৃথকভাবে $A \rightarrow B$ এবং $A \rightarrow C$ উভয়ই সত্য হবে।
 
 4. **If a table is normalized so that all its determinants are candidate keys then, the tableis in-** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    (a) 1NF
    (b) 2NF
    (c) 3NF
    (d) BCNF
+answer: D
+explanation: কোনো রিলেশনের সকল ফাংশনাল ডিপেন্ডেন্সির ডিটারমিন্যান্ট (বাম পাশ) যদি ক্যান্ডিডেট কি বা সুপার কি হয়, তবে টেবিলটি BCNF (Boyce-Codd Normal Form)-এ থাকে।
 
 5. **Functional dependency use in which normalizations?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Second Normal Form (2NF)
+answer: Second Normal Form (2NF)
+explanation: ফাংশনাল ডিপেন্ডেন্সির ওপর ভিত্তি করে ২য় নরমাল ফর্ম (2NF-এ পার্শিয়াল ডিপেন্ডেন্সি দূরীকরণ) এবং পরবর্তী নরমাল ফর্মগুলো (3NF, BCNF) তৈরি হয়েছে।
 
 6. **"There must not be any partial dependency "Which of the following Normal Forms holds this condition?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 43 (ET: N/A)]*
    (ক) 1NF
    (খ) 2NF
    (গ) 3NF
    (ঘ) BCNF
+answer: B
+explanation: ২য় নরমাল ফর্ম বা 2NF-এর প্রধান শর্ত হলো টেবিলে কোনো আংশিক নির্ভরতা বা পার্শিয়াল ডিপেন্ডেন্সি থাকতে পারবে না।
 
 7. **To remove partial dependency from a database, which technique you will use?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
    a) 1NF
    b) 2NF
    c) 3NF
    d) BCN
+answer: B
+explanation: ডেটাবেস টেবিল থেকে পার্শিয়াল ডিপেন্ডেন্সি দূর করতে ২য় নরমাল ফর্ম (2NF) প্রয়োগ করা হয়।
 
 8. **In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functional dependencies is not implied by the above set?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*
    a) CD=>AC
    b) BD=>CD
    c) BC=>CD
    d) AC=>BC
+answer: B
+explanation: ক্লোজার টেস্ট করলে দেখা যায় $(BD)^+ = \{B, D\}$; যা থেকে $C$ নির্ণয় করা অসম্ভব। ফলে $BD \rightarrow CD$ ফাংশনাল ডিপেন্ডেন্সিটি সত্য নয়।
 
 9. **Third normal form is based on the concept of ______.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*
    a) Normal Dependency
    b) Closure Dependency
    c) Functional Dependency
    d) Transitive Dependency
+answer: D
+explanation: ৩য় নরমাল ফর্ম (3NF) মূলত ট্রানজিটিভ ডিপেন্ডেন্সি (Transitive Dependency বা পরোক্ষ নির্ভরতা) দূর করার ওপর প্রতিষ্ঠিত।
 
 10. **If you are told to remove the inconsistency from the course table which normalization technique you will use-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
    a) 1NF
    b) 2NF
    c) 3NF
    d) BCNF
+answer: C
+explanation: ট্রানজিটিভ ডিপেন্ডেন্সির কারণে ডেটাবেসের টেবিলে যে অ্যানোমালি ও অসঙ্গতি সৃষ্টি হয়, তা দূর করতে 3NF ব্যবহার করা হয়।
 
 11. **If you are assigned to remove partial dependency from a database, which technique you will use?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*
    a) 1NF
    b) 2NF
    c) 3NF
    d) BCNF
+answer: B
+explanation: কম্পোজিট প্রাইমারি কি-এর কোনো অংশের ওপর নন-কি অ্যাট্রিবিউটের নির্ভরশীলতা (পার্শিয়াল ডিপেন্ডেন্সি) দূর করতে 2NF ব্যবহৃত হয়।
 
 12. **The table in below violates the Normal Form(s). Which normal form it violates?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*
    a) All of normal forms listed here
    b) 3NF
    c) 2NF
    d) 1NF
+answer: D
+explanation: কোনো টেবিলে যদি মাল্টিভ্যালুড বা নন-অ্যাটমিক অ্যাট্রিবিউট থাকে, তবে তা সরাসরি ১ম নরমাল ফর্ম (1NF) ভঙ্গ করে; আর 1NF ভঙ্গ হলে স্বাভাবিকভাবেই তা সকল উচ্চতর নরমাল ফর্মও ভঙ্গ করে।
 
 13. **Why do we need to normalize a database?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*
    A) To remove redundancy
    B) To make data meaningful
    C) To make database secure
    D) To make database consistency
+answer: A
+explanation: ডেটাবেসে তথ্যের অনাকাঙ্ক্ষিত পুনরাবৃত্তি (Redundancy) দূর করা এবং অ্যানোমালি প্রতিরোধ করাই নরমালাইজেশনের প্রধান উদ্দেশ্য।
 
 14. **In the ________ normal form, a composite attribute is converted to individual attributes.** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*
    A) First
    B) Second
    C) Third
    D) Fourth
+answer: A
+explanation: ১ম নরমাল ফর্মে (1NF) প্রতিটি কলামের মানকে অবিভাজ্য বা একক (Atomic) মানে রূপান্তর করার জন্য কম্পোজিট অ্যাট্রিবিউটকে পৃথক পৃথক অ্যাট্রিবিউটে ভাগ করা হয়।
 
 15. **Repeated data exist at—** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*
    A) unnormalized
    B) 1NF
    C) 2NF
    D) 3NF
+answer: A
+explanation: কোনো রিলেশন বা টেবিল নরমালাইজ করার পূর্বে আন-নরমালাইজড (Unnormalized) অবস্থায় তথ্যের সবচেয়ে বেশি পুনরাবৃত্তি ও রিডানড্যান্সি বিদ্যমান থাকে।
 
 16. **What is normalization?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*
    A) To Remove Redundancy
    B) To make Database
    C) To make data meaningful
    D) To make database Consistency
+answer: A
+explanation: নরমালাইজেশন হলো এমন একটি বিশ্লেষণমূলক প্রক্রিয়া যার প্রধান লক্ষ্য হলো ডেটাবেসের টেবিল থেকে রিডানড্যান্সি দূর করে ডেটার বিশুদ্ধতা রক্ষা করা।
 
 ## Transaction Management & ACID (14)
 
