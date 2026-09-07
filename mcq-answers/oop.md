@@ -22,30 +22,40 @@
    b) An interface can have concrete methods (methods with a body).
    c) An abstract class cannot have any method implementations.
    d) A class can extend multiple abstract classes.
+answer: a
+explanation: জাভাতে একটি সাধারণ বা অ্যাবস্ট্রাক্ট ক্লাস কমা দিয়ে পৃথক করে একাধিক ইন্টারফেস ইমপ্লিমেন্ট (implement) করতে পারে (যেমন: `abstract class A implements B, C`)।
 
 2. **Which of the following correctly describes the meaning of "Class", "&&", and "&" in Java?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 7 (ET: BIBM)]*
    a) Class is a keyword to define a new class; && is a bitwise AND operator; & is a logical AND operator.
    b) Class is used to create objects; && is a bitwise OR operator; & is a logical OR operator.
    c) Class is used to create objects; && is a logical OR operator; & is a bitwise OR operator.
    d) Class is a keyword to define a new class; && is a logical AND operator; & is a bitwise AND operator.
+answer: d
+explanation: `class` হলো নতুন ক্লাস ডিফাইন করার সংরক্ষিত কীওয়ার্ড; `&&` হলো শর্ট-সার্কিট লজিক্যাল AND অপারেটর; এবং `&` হলো বিটওয়াইজ AND (বা নন-শর্ট-সার্কিট লজিক্যাল) অপারেটর।
 
 3. **What is Java's machine code?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 7 (ET: BIBM)]*
    a) Java source code is directly executed by the CPU.
    b) Java source code is compiled into platform-specific machine code by the Java compiler.
    c) Java source code is compiled into assembly code, which is then executed by the CPU.
    d) Java source code is compiled into bytecode, which is interpreted or compiled to native machine code by the Java Virtual Machine (JVM).
+answer: d
+explanation: জাভা সোর্স কোড javac কম্পাইলার দ্বারা প্ল্যাটফর্ম-নিরপেক্ষ বাইটকোডে (.class) সংকলিত হয়, যা পরবর্তীতে JVM দ্বারা নেটিভ মেশিন কোডে রূপান্তরিত ও চালিত হয়।
 
 4. **What type of variable should be used to store data that is important throughout an object's lifespan?** *[Combined Bank Officer (IT) 04.10.2024 compact it 14 (ET: BIBM)]*
    (a) A reference variable
    (b) A method variable
    (c) An instance variable
    (d) A parameter variable
+answer: c
+explanation: একটি অবজেক্টের সামগ্রিক জীবনকাল জুড়ে তার নিজস্ব স্টেট ও ডেটা সংরক্ষণের জন্য ইন্সট্যান্স ভেরিয়েবল (Instance variable) ব্যবহৃত হয়।
 
 5. **A collection of objects that use common structure and a common behavior is knownas-** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    (a) Object
    (b) Entity
    (c) Instance
    (d) Class
+answer: d
+explanation: অভিন্ন গঠন (অ্যাট্রিবিউট) এবং অভিন্ন আচরণ (মেথড) বিশিষ্ট অবজেক্টসমূহের সমন্বিত সাধারণ নকশাকে Class বলা হয়।
 
 6. **The following method, which is intended to find the maximum element of the parameter array, is incorrect.** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    ```java
@@ -62,6 +72,8 @@
    (b) It fails whenever the array a contains a negative number.
    (c) It fails whenever the array a contains only negative numbers.
    (d) It fails whenever the first element of the array a is the largest.
+answer: c
+explanation: এখানে `max` এর মান 0 দিয়ে শুরু করা হয়েছে। যদি অ্যারেতে কেবল ঋণাত্মক সংখ্যা থাকে (যেমন: [-7, -3, -9]), তবে শর্ত সত্য হবে না এবং মেথডটি ভুলবশত সর্বোচ্চ মান হিসেবে 0 রিটার্ন করবে।
 
 7. **Read the following statement in a Java program that compiles and executes-** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    **submarine.dive (depth); What can you say for sure?**
@@ -69,6 +81,8 @@
    (b) dive must be the name of an instance field
    (c) dive must be a method
    (d) submarine must be the name of a class
+answer: c
+explanation: আর্গুমেন্ট ব্র্যাকেট `(depth)` সহকারে কল করার কারণে `dive` নিশ্চিতভাবেই একটি মেথডের নাম।
 
 8. **What is the output of this Java program?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)], [Combined 4 Bank Assistant Programmer (AP) 2020 compact it 154 (ET: DU)]*
    ```java
@@ -86,276 +100,358 @@
    b) The program will cause an compile error because the object 't' was not initialized
    c) 0
    d) A garbage value
+answer: b
+explanation: মেথডের অভ্যন্তরে ঘোষিত লোকাল ভেরিয়েবল (এখানে `t`) স্বয়ংক্রিয়ভাবে ইনিশিয়ালাইজ হয় না। আন-ইনিশিয়ালাইজড লোকাল রেফারেন্সের ফিল্ড অ্যাক্সেস করায় কম্পাইল-টাইম এরর (The local variable t may not have been initialized) ঘটবে।
 
 9. **Interfaces in Java are meant to be-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)], [Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*
    a) Extended
    b) Implemented
    c) Overridden
    d) Used by creating object
+answer: b
+explanation: জাভাতে ইন্টারফেস মূলত ক্লাস দ্বারা `implements` কীওয়ার্ডের মাধ্যমে তাদের বিমূর্ত মেথডসমূহ বাস্তবায়িত (Implemented) করার জন্য ব্যবহৃত হয়।
 
 10. **What is the result of compiling and running the following code?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
-   ```java
-   public class Test{
-   public static void main(String[] args) {
-   int[] a = new int[0];
-   System.out.print(a.length);
-   }
-   }
-   ```
-   (a) 0
-   (b) Compilation error, arrays cannot be initialized to zero size
-   (c) None of the above
-   (d) Compilation error, it is length () not length
+    ```java
+    public class Test{
+    public static void main(String[] args) {
+    int[] a = new int[0];
+    System.out.print(a.length);
+    }
+    }
+    ```
+    (a) 0
+    (b) Compilation error, arrays cannot be initialized to zero size
+    (c) None of the above
+    (d) Compilation error, it is length () not length
+answer: a
+explanation: জাভাতে 0 দৈর্ঘ্যের অ্যারে তৈরি করা সম্পূর্ণ বৈধ (`new int[0]`) এবং এর `length` প্রোপার্টির আউটপুট হবে 0।
 
 11. **What are the inbuit classes?** *[BCC Assistant Programmer 11.11.2023 compact it 35 (ET: N/A)]*
-   **Ans:** Predefined Method
+    **Ans:** Predefined Method
+answer: Predefined Classes (Built-in Classes)
+explanation: জাভা ল্যাঙ্গুয়েজ এবং স্ট্যান্ডার্ড লাইব্রেরিতে পূর্ব থেকেই তৈরি থাকা ক্লাসসমূহকে (যেমন String, Math, System, Scanner) Built-in বা Inbuilt ক্লাস বলা হয়।
 
 12. **What is syntax for call static method in class?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
-   **Ans:** class name, Method name
+    **Ans:** class name, Method name
+answer: ClassName.methodName()
+explanation: অবজেক্ট তৈরি না করেই সরাসরি ক্লাসের নাম ডট মেথডের নাম দিয়ে স্ট্যাটিক মেথড কল করার সিনট্যাক্স হলো `ClassName.methodName()`।
 
 13. **What does runFinalize() do?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
-   **Ans:** The runFinalization() method is a part of the Runtime class, and its purpose is to trigger the execution of the finalization methods of any objects that are awaiting finalization. Its sentence structure is as follows: public void runFinalization()
+    **Ans:** The runFinalization() method is a part of the Runtime class, and its purpose is to trigger the execution of the finalization methods of any objects that are awaiting finalization. Its sentence structure is as follows: public void runFinalization()
+answer: Triggers execution of pending finalization methods
+explanation: `runFinalization()` মেথডটি গার্বেজ কালেকশনের অপেক্ষায় থাকা সকল অবজেক্টের `finalize()` মেথড অবিলম্বে সম্পন্ন করার জন্য JVM-কে অনুরোধ জানায়।
 
 14. **Find the correct output: System.out.print('D' + 'E'+ 'F');** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
-   a) 137
-   b) DEF
-   c) 207
-   d) DEF
+    a) 137
+    b) DEF
+    c) 207
+    d) DEF
+answer: c
+explanation: ক্যারেক্টার লিটারেলসমূহ যোগ চিহ্নে থাকলে তাদের অ্যাসকি মান যোগ হয়: 'D'(68) + 'E'(69) + 'F'(70) = 207।
 
 15. **Find the output of the following code:** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
-   ```java
-   int a=15, b=15;
-   if((a-100) == (b-a)) System.out.print(b+a) ;
-   else System.out.print(b-a) ;
-   ```
-   a) 100
-   b) 200
-   c) 0
-   d) 3
+    ```java
+    int a=15, b=15;
+    if((a-100) == (b-a)) System.out.print(b+a) ;
+    else System.out.print(b-a) ;
+    ```
+    a) 100
+    b) 200
+    c) 0
+    d) 3
+answer: c
+explanation: (a - 100) = (15 - 100) = -85 এবং (b - a) = (15 - 15) = 0। যেহেতু -85 == 0 মিথ্যা (False), তাই else ব্লকে গিয়ে `b - a` অর্থাৎ 0 প্রিন্ট হবে।
 
 16. **Java Virtual Machine is-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*
-   (a) Acts as a full-fledged hypervisor
-   (b) Converts bytecodes to Operating System dependent code
-   (c) Is known as the Compiler of Java programming language
-   (d) Manages system memory and provides a portable execution environment for Java-bases applications
+    (a) Acts as a full-fledged hypervisor
+    (b) Converts bytecodes to Operating System dependent code
+    (c) Is known as the Compiler of Java programming language
+    (d) Manages system memory and provides a portable execution environment for Java-bases applications
+answer: d
+explanation: JVM হলো এমন একটি ভার্চুয়াল মেশিন যা সিস্টেম মেমরি পরিচালনা করে (গার্বেজ কালেকশন) এবং জাভা অ্যাপ্লিকেশনের জন্য প্ল্যাটফর্ম-নিরপেক্ষ নির্বাহ পরিবেশ প্রদান করে।
 
 17. **Which of the following is not a method of the Thread class?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*
-   a. sleep (long msec)
-   b. stop()
-   c. go()
-   d. yield()
+    a. sleep (long msec)
+    b. stop()
+    c. go()
+    d. yield()
+answer: c
+explanation: `java.lang.Thread` ক্লাসে `sleep()`, `stop()`, `yield()`, `start()`, `run()` মেথড থাকলেও `go()` নামে কোনো মেথড নেই।
 
 18. **Which of the following statements is correct regarding abstract classes?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*
-   a. An abstract class cannot be extended
-   b. A subclass of a non-abstract superclass cannot be abstract
-   c. A subclass can override a concreate method in a superclass to declare it abstract
-   d. An abstract class cannot be used as a data type
+    a. An abstract class cannot be extended
+    b. A subclass of a non-abstract superclass cannot be abstract
+    c. A subclass can override a concreate method in a superclass to declare it abstract
+    d. An abstract class cannot be used as a data type
+answer: c
+explanation: জাভাতে একটি অ্যাবস্ট্রাক্ট সাবক্লাস তার সুপারক্লাসের কংক্রিট মেথডকে ওভাররাইড করে পুনরায় `abstract` হিসেবে ঘোষণা করতে পারে।
 
 19. **What is the output of this Java program?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)]*
-   ```java
-   class Test {
-   int i;
-   }
-   class Main {
-   public static void main(String args[]) {
-   Test t;
-   System.out.println(t.i);
-   }
-   }
-   ```
-   a. 0
-   b. A garbage value
-   c. compiler error
-   d. runtime error
+    ```java
+    class Test {
+    int i;
+    }
+    class Main {
+    public static void main(String args[]) {
+    Test t;
+    System.out.println(t.i);
+    }
+    }
+    ```
+    a. 0
+    b. A garbage value
+    c. compiler error
+    d. runtime error
+answer: c
+explanation: লোকাল রেফারেন্স ভেরিয়েবল `t` ইনিশিয়ালাইজ না করে তার মেম্বার অ্যাক্সেস করায় জাভাতে কম্পাইলার এরর (compile-time error) হবে।
 
 20. **Converting a primitive type data into its corresponding wrapper class object instance is called-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 86 (ET: N/A)]*
-   a. Boxing
-   b. Wrapping
-   c. Instantiation
-   d. Auto boxing
+    a. Boxing
+    b. Wrapping
+    c. Instantiation
+    d. Auto boxing
+answer: a
+explanation: প্রিমিটিভ ডেটা টাইপকে সংশ্লিষ্ট র‍্যাপার ক্লাস অবজেক্টে রূপান্তর করার প্রক্রিয়াকে Boxing বলা হয় (কম্পাইলার স্বয়ংক্রিয়ভাবে করলে তাকে Autoboxing বলে)।
 
 21. **Which information is not correct for any constructor of a java class?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 164 (ET: N/A)]*
-   a) Constructor is not inherited
-   b) Constructor has no return type
-   c) Constructor can be final
-   d) Constructor can be overloaded
+    a) Constructor is not inherited
+    b) Constructor has no return type
+    c) Constructor can be final
+    d) Constructor can be overloaded
+answer: c
+explanation: জাভাতে কনস্ট্রাক্টরের সাথে `final`, `static`, বা `abstract` কিউওয়ার্ড ব্যবহার করা নিষিদ্ধ; তাই Constructor can be final উক্তিটি ভুল।
 
 22. **What is the output of this Java program?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
-   ```java
-   class Test {
-   int i;
-   }
-   public class Main {
-   public static void main(String args[]) {
-   Test t = new Test();
-   System.out.println(t.i);
-   }
-   }
-   ```
-   a) The program will cause an compile error because the object “t” was not initialized
-   b) The program will cause an runtime exception because the variable “i” was not initialized
-   c) A garbage value
-   d) 0
+    ```java
+    class Test {
+    int i;
+    }
+    public class Main {
+    public static void main(String args[]) {
+    Test t = new Test();
+    System.out.println(t.i);
+    }
+    }
+    ```
+    a) The program will cause an compile error because the object “t” was not initialized
+    b) The program will cause an runtime exception because the variable “i” was not initialized
+    c) A garbage value
+    d) 0
+answer: d
+explanation: এখানে `new Test()` দিয়ে অবজেক্ট তৈরি করা হয়েছে। অবজেক্ট তৈরির সময় পূর্ণসংখ্যা ইন্সট্যান্স ভেরিয়েবল `i` স্বয়ংক্রিয়ভাবে ডিফল্ট মান 0 পায়।
 
 23. **Which of the following statements is/are true about Inheritance in Java?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*
-   i) Private methods are final
-   ii) Protected methods are final
-   iii) Private methods cannot be overridden
-   iv) Protected members of a class are accessible by inherited classes of another package
-   a) i, iii and iv
-   b) i and iii only
-   c) ii, iii and iv
-   d) ii and iv only
+    i) Private methods are final
+    ii) Protected methods are final
+    iii) Private methods cannot be overridden
+    iv) Protected members of a class are accessible by inherited classes of another package
+    a) i, iii and iv
+    b) i and iii only
+    c) ii, iii and iv
+    d) ii and iv only
+answer: a
+explanation: প্রাইভেট মেথড সাবক্লাসে দৃশ্যমান না হওয়ায় তা ওভাররাইড করা যায় না (কার্যত final); এবং protected মেম্বার অন্য প্যাকেজের সাবক্লাস থেকে অ্যাক্সেসযোগ্য। সুতরাং i, iii ও iv সত্য।
 
 24. **Which of the followings can be used in a Java Server Page (JSP) page?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*
-   a) HTML
-   b) AJAX
-   c) JSTL
-   d) All of the above
+    a) HTML
+    b) AJAX
+    c) JSTL
+    d) All of the above
+answer: d
+explanation: একটি JSP পেজে সাধারণ HTML কোড, ক্লায়েন্ট-সাইড AJAX রিকোয়েস্ট এবং সার্ভার-সাইড JSTL ট্যাগসমূহ সবগুলোই ব্যবহার করা যায়।
 
 25. **Which of the following statements is not true for Java Language?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*
-   a) The number 1 can be used instead of the keyword ‘true’
-   b) Trying to store a fraction value in an ‘int’ datatype causes compile error
-   c) Static members of a class can be accessed without creating objects of that class
-   d) If not specified otherwise, the initial value of an integer variable is 0
+    a) The number 1 can be used instead of the keyword ‘true’
+    b) Trying to store a fraction value in an ‘int’ datatype causes compile error
+    c) Static members of a class can be accessed without creating objects of that class
+    d) If not specified otherwise, the initial value of an integer variable is 0
+answer: a
+explanation: জাভাতে boolean একটি কঠোর স্বতন্ত্র টাইপ, যেখানে 1 বা 0 ব্যবহার করা যায় না; শুধুমাত্র `true` অথবা `false` ব্যবহার করতে হয়।
 
 26. **Find the output of following Java code line: System.out.println (math.floor (-7.4)** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*
-   A) -7
-   B) -7.4
-   C) -8
-   D) -7.2
+    A) -7
+    B) -7.4
+    C) -8
+    D) -7.2
+answer: C
+explanation: `Math.floor()` মানটির চেয়ে ছোট বা সমান নিকটবর্তী পূর্ণসংখ্যা রিটার্ন করে। -7.4 এর চেয়ে ছোট নিকটবর্তী পূর্ণসংখ্যা হলো -8।
 
 27. **Which of the following is not an operator in Java?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*
-   A) instanceof
-   B) sizeof
-   C) new
-   D) All of this
+    A) instanceof
+    B) sizeof
+    C) new
+    D) All of this
+answer: B
+explanation: C/C++ এ `sizeof` অপারেটর থাকলেও জাভাতে কোনো `sizeof` অপারেটর নেই।
 
 28. **In Java, which operator is used to create an object?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*
-   A) class
-   B) scanf
-   C) print
-   D) None of these
+    A) class
+    B) scanf
+    C) print
+    D) None of these
+answer: D
+explanation: জাভাতে হিপ মেমরিতে অবজেক্ট তৈরি করতে `new` অপারেটর ব্যবহৃত হয়, যা অপশনে না থাকায় সঠিক উত্তর None of these।
 
 29. **Which of the following produce an answer that is closest in value to a double, d, while not being greater than d?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)], [Combined Bank Maintenance Engineer 2018 compact it 229 (ET: N/A)]*
-   A) (int.Math.min(d))
-   B) (int.Math.max(d))
-   C) int.Math.abs(d))
-   D) (int).Math.floor(d))
+    A) (int.Math.min(d))
+    B) (int.Math.max(d))
+    C) int.Math.abs(d))
+    D) (int).Math.floor(d))
+answer: D
+explanation: `Math.floor(d)` মেথড d-এর মানের চেয়ে বড় না হয়ে তার নিকটতম সর্বনিম্ন পূর্ণসংখ্যার মান প্রদান করে।
 
 30. **Which keyword must be used to inherit class in java?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*
-   A) extends
-   B) super
-   C) this
-   D) extend
+    A) extends
+    B) super
+    C) this
+    D) extend
+answer: A
+explanation: জাভাতে একটি ক্লাসকে অন্য ক্লাস দ্বারা ইনহেরিট করতে `extends` কীওয়ার্ড ব্যবহার করা হয়।
 
 31. **A class that is inherited in java is called a ________.** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*
-   A) sub class
-   B) super class
-   C) state class
-   D) implement class
+    A) sub class
+    B) super class
+    C) state class
+    D) implement class
+answer: B
+explanation: যে ক্লাসটিকে ইনহেরিট করা হয় (The class that is inherited) তাকে প্যারেন্ট ক্লাস বা Super class বলা হয়।
 
 32. **Which one of these interfaces is implemented by thread class?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*
-   A) Set
-   B) Connections
-   C) Runnable
-   D) None of above
+    A) Set
+    B) Connections
+    C) Runnable
+    D) None of above
+answer: C
+explanation: জাভার `Thread` ক্লাসটি `Runnable` ইন্টারফেস ইমপ্লিমেন্ট করে থাকে।
 
 33. **In java, which operator is used to create an object?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*
-   A) class
-   B) scanf
-   C) print
-   D) None of above
+    A) class
+    B) scanf
+    C) print
+    D) None of above
+answer: D
+explanation: জাভাতে অবজেক্ট তৈরির জন্য `new` অপারেটর ব্যবহৃত হয়।
 
 34. **In java, which one will be used for comprising whether the two String object str1 and str2 are same?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*
-   A) str1=str2
-   B) str1.equalsIgnoreCase(str2)
-   C) str1==str2
-   D) All of above
+    A) str1=str2
+    B) str1.equalsIgnoreCase(str2)
+    C) str1==str2
+    D) All of above
+answer: B
+explanation: দুটি স্ট্রিং অবজেক্টের কনটেন্ট বা মান একই কিনা তা তুলনা করতে `equals()` বা `equalsIgnoreCase()` মেথড ব্যবহার করতে হয়। (`==` কেবল মেমরি অ্যাড্রেস তুলনা করে)।
 
 35. **Which of these data types is used by operating system to manage the Recursion in Java?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
-   A) Array
-   B) Stack
-   C) Queue
-   D) Tree
+    A) Array
+    B) Stack
+    C) Queue
+    D) Tree
+answer: B
+explanation: রিকার্সিভ ফাংশন কলের এক্সিকিউশন ট্র্যাক করতে অপারেটিং সিস্টেম ও JVM স্ট্যাক (Call Stack) ব্যবহার করে।
 
 36. **Which of the following is an incorrect statement about packages?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
-   A) Package defines a namespace in which classes are stored
-   B) A package can contain other packages within
-   C) A package can be renamed without renaming the directory, in which the classes are stored
-   D) Java uses file system directories to store packages
+    A) Package defines a namespace in which classes are stored
+    B) A package can contain other packages within
+    C) A package can be renamed without renaming the directory, in which the classes are stored
+    D) Java uses file system directories to store packages
+answer: C
+explanation: জাভাতে প্যাকেজের নাম এবং ফাইল ডিরেক্টরির নাম পরস্পর অঙ্গাঙ্গিভাবে জড়িত; ডিরেক্টরির নাম না বদলে প্যাকেজের নাম পরিবর্তন করা সম্ভব নয়।
 
 37. **Multiple inheritances in Java can be implemented using which of the following?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
-   A) Interfaces
-   B) Multithreading
-   C) Protected methods
-   D) Private methods
+    A) Interfaces
+    B) Multithreading
+    C) Protected methods
+    D) Private methods
+answer: A
+explanation: ক্লাসের ক্ষেত্রে মাল্টিপল ইনহেরিটেন্স সমর্থিত না হলেও একাধিক Interface ইমপ্লিমেন্ট করার মাধ্যমে জাভাতে মাল্টিপল ইনহেরিটেন্সের সুবিধা পাওয়া যায়।
 
 38. **Which component is used to compile, debug and execute in Java program?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
-   A) JVM
-   B) JDK
-   C) JIT
-   D) JRE
+    A) JVM
+    B) JDK
+    C) JIT
+    D) JRE
+answer: B
+explanation: Java Development Kit (JDK)-এ কম্পাইলার (javac), এক্সিকিউশন এনভায়রনমেন্ট (JRE/JVM) এবং ডিবাগারসহ প্রোগ্রাম তৈরির সকল উপাদান অন্তর্ভুক্ত থাকে।
 
 39. **int C=10; System.out.println(C--); gives a output of-** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*
-   A) 10
-   B) 11
-   C) 9
-   D) 8
+    A) 10
+    B) 11
+    C) 9
+    D) 8
+answer: A
+explanation: Post-decrement (`C--`) অপারেশনে বর্তমান মান (১০) আগে ব্যবহৃত বা প্রদর্শিত হয়, পরবর্তীতে এর মান ১ কমে ৯ হয়।
 
 40. **In java, which operator is used to create an object?** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*
-   A) class
-   B) scanf
-   C) print
-   D) None
+    A) class
+    B) scanf
+    C) print
+    D) None
+answer: D
+explanation: জাভাতে অবজেক্ট তৈরির অপারেটর হলো `new`।
 
 41. **Which of the keywords can be used in a subclass to call the constructor of superclass?** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*
-   A) Extent
-   B) Extends
-   C) Super
-   D) This
+    A) Extent
+    B) Extends
+    C) Super
+    D) This
+answer: C
+explanation: সাবক্লাসের কনস্ট্রাক্টর থেকে সুপারক্লাসের কনস্ট্রাক্টরকে ইনভোক করতে `super()` কীওয়ার্ড ব্যবহার করা হয়।
 
 42. **Which of the following is a valid declaration of an object of class Box?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*
-   A) Box obj = new Box();
-   B) Box obj = new Box;
-   C) obj = new Box();
-   D) new Box obj;
+    A) Box obj = new Box();
+    B) Box obj = new Box;
+    C) obj = new Box();
+    D) new Box obj;
+answer: A
+explanation: জাভাতে ক্লাস অবজেক্ট ডিক্লেয়ার ও ইনিশিয়ালাইজ করার সঠিক সিনট্যাক্স হলো `Box obj = new Box();`।
 
 43. **In Java, which operator is used to create an object-** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*
-   A) Class
-   B) scanf
-   C) Print
-   D) none of them
+    A) Class
+    B) scanf
+    C) Print
+    D) none of them
+answer: D
+explanation: জাভাতে অবজেক্ট তৈরির জন্য `new` অপারেটর ব্যবহৃত হয়।
 
 44. **A class that is inherited in java is called a ________.** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*
-   A) Subclass
-   B) Super class
-   C) Static class
-   D) Implement class
+    A) Subclass
+    B) Super class
+    C) Static class
+    D) Implement class
+answer: B
+explanation: যে মূল ক্লাসটি থেকে অন্য ক্লাস তৈরি বা ইনহেরিট করা হয়, তাকে Super class বলা হয়।
 
 45. **In Java, which operator is used to create an object?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*
-   A) class
-   B) scanf
-   C) print
-   D) New
+    A) class
+    B) scanf
+    C) print
+    D) New
+answer: D
+explanation: জাভাতে অবজেক্ট ইনস্ট্যানশিয়েট করার মূল অপারেটর হলো `new`।
 
 46. **Java source code is compiled into ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*
-   A) Source Code
-   B) Byte Code
-   C) Object
-   D) .exe
+    A) Source Code
+    B) Byte Code
+    C) Object
+    D) .exe
+answer: B
+explanation: জাভা সোর্স কোড (.java) কম্পাইল হয়ে মধ্যবর্তী প্ল্যাটফর্ম-নিরপেক্ষ বাইটকোডে (.class) পরিণত হয়।
 
 47. **Which one of these lists contains only Java programming language keywords?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
-   a. class, if, void, long, int, continue
-   b. goto, instanceof, native, finally, default, throws
-   c. try, virtual, throw, final, volatile, transient
-   d. strictfp, constant, super, implements, do
+    a. class, if, void, long, int, continue
+    b. goto, instanceof, native, finally, default, throws
+    c. try, virtual, throw, final, volatile, transient
+    d. strictfp, constant, super, implements, do
+answer: a
+explanation: প্রদত্ত তালিকায় `class, if, void, long, int, continue`—প্রতিটি শব্দই জাভা প্রোগ্রামিং ভাষার সক্রিয় ও বৈধ সংরক্ষিত কীওয়ার্ড (Keyword)।
 
 48. **Which method must be defined by a class implementing java.lang.Runnable interface?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
-   a. void run()
-   b. public void run()
-   c. public void start()
-   d. void run(int priority)
+    a. void run()
+    b. public void run()
+    c. public void start()
+    d. void run(int priority)
+answer: b
+explanation: `java.lang.Runnable` ইন্টারফেসে `public void run()` মেথডটি সংজ্ঞায়িত থাকে। ইন্টারফেসের মেথড ডিফল্টভাবে পাবলিক হওয়ায় ইমপ্লিমেন্টকারী ক্লাসে অবশ্যই `public void run()` হিসেবেই সংজ্ঞায়িত করতে হয়।
 
 ## Polymorphism & Overloading (16)
 
