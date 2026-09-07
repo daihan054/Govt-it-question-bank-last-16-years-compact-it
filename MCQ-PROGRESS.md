@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Updated on every subtopic completion.
 
-**Subtopics: 23 / 160 done (14.4%)**  ·  **Questions: 171 / 3039 answered (5.6%)**
+**Subtopics: 24 / 160 done (15.0%)**  ·  **Questions: 174 / 3039 answered (5.7%)**
 
 | File | Subtopics Done | Total Subtopics | Answered | Total Questions | Status |
 |---|---|---|---|---|---|
@@ -28,6 +28,6 @@ Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answe
 | `oop.md` | 0 | 7 | 0 | 100 | Pending |
 | `operating-system.md` | 0 | 7 | 0 | 74 | Pending |
 | `programming-languages.md` | 3 | 3 | 24 | 24 | Complete |
-| `software-engineering.md` | 3 | 5 | 42 | 46 | In Progress |
+| `software-engineering.md` | 4 | 5 | 45 | 46 | In Progress |
 | `web-technology.md` | 0 | 7 | 0 | 49 | Pending |
-| **Total** | **23** | **160** | **171** | **3039** | **In Progress** |
+| **Total** | **24** | **160** | **174** | **3039** | **In Progress** |

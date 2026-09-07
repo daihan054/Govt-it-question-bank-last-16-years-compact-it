@@ -366,18 +366,24 @@ explanation: DFD-এর পূর্ণরূপ হলো Data Flow Diagram, �
    (b) DFD
    (c) ERD
    (d) UML
+answer: A
+explanation: Structure chart is a hierarchical tree-like design tool that partitions a system into black-box modules and displays top-down hierarchical relationships and parameter exchanges.
 
 2. **Which of the following is a design pattern?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) Factory
    B) List
    C) Queue
    D) All of these
+answer: A
+explanation: Factory (Factory Method) is a well-known GoF creational design pattern, whereas List and Queue are linear data structures.
 
 3. **Which of the following is a design pattern?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*
    A) List
    B) Queue
    C) Factory
    D) All of above
+answer: C
+explanation: Factory is a standard object-oriented creational design pattern used to encapsulate object instantiation.
 
 ## Software Requirements Engineering (1)
 
