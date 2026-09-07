@@ -345,30 +345,40 @@ explanation: আধুনিক ওয়েব ডেভেলপমেন্�
    (b) PHP
    (c) Jetty
    (d) Tornado
+answer: B
+explanation: PHP হলো একটি সার্ভার-সাইড প্রোগ্রামিং/স্ক্রিপ্টিং ভাষা, কোনো ওয়েব সার্ভার নয় (Apache Tomcat, Jetty ও Tornado হলো ওয়েব ও অ্যাপ্লিকেশন সার্ভার)।
 
 2. **What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*
    a) A Java application
    b) A Java applet
    c) A Java servlet
    d) None of the above is correct
+answer: C
+explanation: ব্রাউজারের HTTP রিকোয়েস্ট প্রসেস করে ডায়নামিক রেসপন্স তৈরি করতে ওয়েব সার্ভার বা সার্ভলেট কন্টেইনারে জাভা সার্ভলেট (Java servlet) ইনভোক বা কার্যকর হয় (অ্যাপলেট ক্লায়েন্ট ব্রাউজারে চলত)।
 
 3. **Word Press can be called as ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*
    A) Static website
    B) Dynamic website
    C) Content Managed website
    D) E-Commerce website
+answer: C
+explanation: ওয়ার্ডপ্রেস (WordPress) মূলত একটি অত্যন্ত জনপ্রিয় কনটেন্ট ম্যানেজমেন্ট সিস্টেম (CMS), যা দিয়ে পরিচালিত ওয়েবসাইটগুলোকে Content Managed website বলা হয়।
 
 4. **What type of system is Cisco mail platform?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*
    a. Linux
    b. MAC
    c. Windows
    d. Atari
+answer: A
+explanation: সিসকো মেইল প্ল্যাটফর্ম বা সিকিউর ইমেইল গেটওয়ে লিনাক্স/ইউনিক্স কার্নেল-ভিত্তিক বিশেষায়িত প্ল্যাটফর্মের ওপর পরিচালিত হয়।
 
 5. **Where the application server is installed for the web server?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*
    a. Cisco MCS with cisco-based Windows operating system
    b. Cisco MCS with cisco-based Unix operating system
    c. Cisco MCS with cisco-based Linux operating system
    d. Cisco MCS with cisco-based MAC operating system
+answer: C
+explanation: সিসকো মিডিয়া কনভারজেন্স সার্ভারে (Cisco MCS) ওয়েব ও অ্যাপ্লিকেশন পরিষেবাগুলো সিসকো-বেসড লিনাক্স অপারেটিং সিস্টেমের (Cisco-based Linux OS) ওপর ইনস্টল ও কনফিগার করা হয়।
 
 ## HTTP & Status Codes (5)
 
