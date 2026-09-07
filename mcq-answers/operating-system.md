@@ -468,24 +468,32 @@ explanation: কোনো প্রসেস এমন একটি মেমো
    (b) Encrypted using some sort of hashing function
    (c) Encrypted using mono-alphabetic cipher
    (d) Encrypted using homophonic substitution cipher
+answer: B
+explanation: লিনাক্সে পাসওয়ার্ড সরাসরি প্লেইনটেক্সট আকারে রাখা হয় না, বরং ক্রিপ্টোগ্রাফিক সল্টেড হ্যাশিং অ্যালগরিদম (যেমন SHA-512) প্রয়োগ করে হ্যাশ ভ্যালু হিসেবে `/etc/shadow` ফাইলে সংরক্ষণ করা হয়।
 
 2. **Which of the following Linux command has incorrect syntax?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*
    (a) cat sample.txt | grep -v a | sort - r
    (b) chown:group3 File 1
    (c) chmoda+rx viewer.sh
    (d) None of the above
+answer: C
+explanation: `chmoda+rx viewer.sh` কমান্ডটিতে কমান্ড নেম `chmod` এবং পারমিশন আর্গুমেন্ট `a+rx`-এর মাঝে কোনো স্পেস নেই, ফলে শেল এটিকে একটি কমান্ড হিসেবে খুঁজে না পেয়ে ত্রুটি দেখাবে।
 
 3. **What is the maximum size of a file allowed in Linux with the following data Block Size = 4KB, inode data pointer size = 4 byte?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*
    (a) 1 TB
    (b) Less than 4TB
    (c) 2TB+2GB+2MB+64KB
    (d) More than 4 TB
+answer: D
+explanation: ইনোড স্ট্রাকচারে ট্রিপল ইনডাইরেক্ট পয়েন্টারের ধারণক্ষমতা $(4\text{KB}/4\text{B})^3 \times 4\text{KB} = 1024^3 \times 4\text{KB} = 4\text{ TB}$; এর সাথে ডাবল ও সিঙ্গেল ইনডাইরেক্ট ব্লকের মেমোরি যুক্ত করলে মোট সাইজ ৪ টেরাবাইটের কিছুটা বেশি (More than 4 TB) হয়।
 
 4. **Which UNIX/Linux command is used to make all files and sub-directories in the directory "progs" executable by all users?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*
    (a) chmod -R a+x progs
    (b) chmod -R 222 progs
    (c) chmod -X a+x progs
    (d) chmod -X 222 progs
+answer: A
+explanation: `chmod -R a+x progs` কমান্ডে `-R` অপশন দিয়ে রিকার্সিভলি ফোল্ডারের অভ্যন্তরীণ সকল ফাইল ও ডিরেক্টরিতে এবং `a+x` দিয়ে সকল ব্যবহারকারীকে এক্সিকিউট পারমিশন প্রদান করা হয়।
 
 5. **USER150, USER153 can do certain tasks and USER151, USER152 can also do certain tasks as depicted in the picture. For this reason, two ________ have been created.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*
    ```
@@ -504,30 +512,40 @@ explanation: কোনো প্রসেস এমন একটি মেমো
    b) Privileges
    c) Functions
    d) Stord Procedures
+answer: A
+explanation: সিকিউরিটি ও প্রিভিলেজ ব্যবস্থাপনায় নির্দিষ্ট কিছু অধিকারের সমষ্টি তৈরি করে একাধিক ইউজারের উপর সমন্বিতভাবে প্রয়োগ করতে 'রোল' (Roles; যেমন Account MGR ও Inventory MGR) তৈরি করা হয়।
 
 6. **In UNIX, the login prompt can be changed by changing the content of the file-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*
    A) gettydefs
    B) contrab
    C) inittab
    D) init
+answer: A
+explanation: সনাতন ইউনিক্স অপারেটিং সিস্টেমে টার্মিনাল লাইন স্পিড এবং লগইন প্রম্পটের টেক্সট কনফিগার করার জন্য `/etc/gettydefs` ফাইলটির বিষয়বস্তু পরিবর্তন করতে হয়।
 
 7. **Which of the following UNIX commands allows scheduling a program to be executed at specifies time?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*
    A) nice
    B) cron
    C) date and time
    D) schedule
+answer: B
+explanation: ইউনিক্সে নির্দিষ্ট সময়সূচিতে বা নির্ধারিত সময়ে স্বয়ংক্রিয়ভাবে কোনো স্ক্রিপ্ট বা জব চালনার শিডিউলিং সুবিধা দেয় `cron` (বা `crontab`)।
 
 8. **What command is used to remove files UNIX?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*
    A) dm
    B) rm
    C) delete
    D) erase
+answer: B
+explanation: ইউনিক্স এবং লিনাক্সে ফাইল মুছে ফেলতে (Remove) স্ট্যান্ডার্ড কমান্ড হিসেবে `rm` ব্যবহৃত হয়।
 
 9. **You need to determine whether IP information has been assigned to your Windows NT. Which utility should you use?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*
    A) NBTSTAT
    B) NETSTAT
    C) IPCONFIG
    D) WINTPCFG
+answer: C
+explanation: উইন্ডোজ এনটি (Windows NT) অপারেটিং সিস্টেমে নেটওয়ার্ক ইন্টারফেসের আইপি অ্যাড্রেস এবং কনফিগারেশন পরীক্ষা করার মূল কমান্ড-লাইন ইউটিলিটি হলো `ipconfig`।
 
 ## Deadlock (6)
 
