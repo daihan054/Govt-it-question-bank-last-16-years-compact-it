@@ -1350,18 +1350,26 @@ explanation: ইন্টিগ্রেটেড সার্কিট (IC) প
    b) Ctrl + W
    c) Ctrl + N
    d) Ctrl + Q
+answer: B
+explanation: ওয়েব ব্রাউজারে খোলা থাকা বর্তমান ট্যাব বন্ধ করার জন্য সর্বজনীন শর্টকাট হলো Ctrl + W (নতুন ট্যাব খোলার জন্য Ctrl + T)।
 
 2. **Which operation dose F1 key perform for all types of application?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)], [Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*
    A) Windows shut down
    B) File open
    C) Help
    D) Save
+answer: C
+explanation: উইন্ডোজ ও বিভিন্ন অ্যাপ্লিকেশনে সার্বজনীনভাবে হেল্প (Help) বা সহায়তা উইন্ডো খোলার জন্য F1 ফাংশন কী ব্যবহৃত হয়।
 
 3. **কি-বোর্ডের Del বাটন চাপলে কি হয়?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
    **Ans:** কার্সরের পরের শব্দ মুছে যায়।
+answer: কার্সরের পরের অক্ষর মুছে যায়
+explanation: কীবোর্ডের Delete বা Del বাটন কার্সরের ডান পাশের (পরবর্তী) বর্ণ বা অবজেক্ট মুছে ফেলে, যেখানে Backspace বাম পাশের বর্ণ মোছে।
 
 4. **In the keyboard of a computer processing F8 Key for three times selects?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*
    a. A paragraph
    b. A sentence
    c. Entire document
    d. A word
+answer: B
+explanation: মাইক্রোসফট ওয়ার্ডে F8 কী দুইবার চাপলে শব্দ (Word), তিনবার চাপলে বাক্য (Sentence), চারবার চাপলে অনুচ্ছেদ (Paragraph) এবং পাঁচবার চাপলে সম্পূর্ণ ডকুমেন্ট সিলেক্ট হয়।
