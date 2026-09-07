@@ -185,102 +185,136 @@ explanation: ম্যান-ইন-দ্য-মিডল (MITM) আক্র�
    (b) RSA
    (c) SHA
    (d) All of the above
+answer: D
+explanation: ইমেইল নিরাপত্তা প্রোটোকলসমূহে (যেমন PGP ও S/MIME) বার্তা এনক্রিপশনে AES, কি-বিনিময় ও স্বাক্ষরে RSA এবং বার্তার অখণ্ডতা রক্ষায় SHA হ্যাশিং—সবগুলোই সমন্বিতভাবে ব্যবহৃত হয়।
 
 2. **Digital Signature uses which algorithm?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*
    (a) AES
    (b) RSA
    (c) DES
    (d) Diffie-Hellman
+answer: B
+explanation: ডিজিটাল স্বাক্ষর তৈরিতে পাবলিক-কি ক্রিপ্টোগ্রাফি বা অ্যাসিমেট্রিক অ্যালগরিদম হিসেবে RSA বহুলভাবে ব্যবহৃত হয় (AES ও DES হলো সিমেট্রিক সিফার)।
 
 3. **Digital signature uses which algorithm for encryption?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxii (ET: DU)]*
    (a) Symmetric Key Algorithm
    (b) Asymmetric Key Algorithm
    (c) Hashing Algorithm only
    (d) Stream Ciphe
+answer: B
+explanation: ডিজিটাল স্বাক্ষরে প্রেরকের প্রাইভেট কি দিয়ে মেসেজ ডাইজেস্ট এনক্রিপ্ট ও পাবলিক কি দিয়ে ডিক্রিপ্ট/যাচাই করা হয়, যা একটি অ্যাসিমেট্রিক কি অ্যালগরিদম (Asymmetric Key Algorithm)।
 
 4. **In cryptography, RSA is-** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*
    (ক) Symmetric key based
    (খ) Block-chain based
    (গ) Asymmetric key based
    (ঘ) None
+answer: C
+explanation: RSA (Rivest-Shamir-Adleman) হলো দুটি ভিন্ন কি (পাবলিক কি এবং প্রাইভেট কি) বিশিষ্ট একটি মৌলিক অ্যাসিমেট্রিক (Asymmetric key based) অ্যালগরিদম।
 
 5. **Which one is an encryption function?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*
    (ক) c=E(M,K)
    (খ) N=D(e,K)
    (গ) e=E(M)
    (ঘ) None
+answer: A
+explanation: ক্রিপ্টোগ্রাফিতে এনক্রিপশন অপারেশনকে $C = E(M, K)$ দ্বারা প্রকাশ করা হয়, যার অর্থ প্লেইনটেক্সট $M$-কে কি $K$ প্রয়োগের মাধ্যমে সাইফারটেক্সট $C$-তে রূপান্তর করা।
 
 6. **In an asymmetric key encryption process, the key used to encrypt the data is known as a-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*
    a) Private key
    b) Encryption key
    c) Public key
    d) Modulation key
+answer: C
+explanation: অ্যাসিমেট্রিক এনক্রিপশনে তথ্যের গোপনীয়তা নিশ্চিত করতে প্রেরক প্রাপকের উন্মুক্ত পাবলিক কি (Public key) দিয়ে ডেটা এনক্রিপ্ট করেন।
 
 7. **Which of the following statements is false with respect to SSL?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*
    (a) Secure Sockets Layer (SSL) is a security protocol that provides privacy, authentication, and integrity to Internet communications
    (b) SSL evolved into Transport Layer Security (TLS)
    (c) SSL's final version was SSL 4.0
    (d) None of the above statements is false
+answer: C
+explanation: SSL-এর সর্বশেষ আনুষ্ঠানিক সংস্করণ ছিল SSL 3.0 (১৯৯৬), এর পরবর্তী সংস্করণটি TLS 1.0 নামে প্রমিত হয়; অর্থাৎ 'SSL 4.0' নামে কোনো সংস্করণ কখনো ছিল না।
 
 8. **In the ____ protocol, the symmetric key is K= G^{xy} \pmod N, where G and N are public numbers.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*
    (a) Needham-Schroeder
    (b) Otway-Rees
    (c) Diffie-Hellman
    (d) Kerberos
+answer: C
+explanation: ডিফি-হেলম্যান (Diffie-Hellman) কি এক্সচেঞ্জ প্রোটোকলে দুই পক্ষ অসুরক্ষিত যোগাযোগ মাধ্যমে পাবলিক প্যারামিটার $G$ ও $N$ ব্যবহার করে যৌথ গোপন কি $K = G^{xy} \pmod N$ গণনা করে।
 
 9. **Which one of the following is false with respect to cryptography?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*
    (a) A symmetric key system uses only the private key
    (b) An asymmetric key system makes use of the both the public key and the private key
    (c) An Asymmetric key system is used as a Public Key Infrastructure, or PKI for sho
    (d) None of the above statements is false
+answer: D
+explanation: প্রদত্ত সবগুলো বক্তব্যই ক্রিপ্টোগ্রাফিক নীতিমালার সাথে সামঞ্জস্যপূর্ণ; সুতরাং কোনো উক্তিই ভুল নয় (None of the above statements is false)।
 
 10. **Laili digitally signs a message and sends it to Mojnu. Verification of the signature by Mojnu requires-** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*
    a. Laili's public key
    b. Mojnu's public key
    c. Mojnu's private key
    d. Laili's private key
+answer: A
+explanation: ডিজিটাল স্বাক্ষরের মূল নিয়ম অনুযায়ী, লাইলি তার নিজস্ব প্রাইভেট কি দিয়ে স্বাক্ষর তৈরি করেছে, যা মজনু লাইলির পাবলিক কি (Laili's public key) ব্যবহার করে যাচাই করবে।
 
 11. **“Concurrent two-factor identity verification” is a biometric identification system that would requires ________.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*
    a. finger print and national identity
    b. facial identity and finger print
    c. eye sightedness and blood sample
    d. facial identity and facial motion
+answer: D
+explanation: কনকারেন্ট টু-ফ্যাক্টর বায়োমেট্রিক আইডেন্টিফিকেশনে স্থির মুখের ছবির পাশাপাশি লাইভনেস যাচাইয়ের জন্য মুখের নড়াচড়া বা অঙ্গভঙ্গি (Facial identity and facial motion) একই সাথে নিরীক্ষা করা হয়।
 
 12. **Which of the following is the role of Certification Authority (CA) in electronic commerce using public key encryption?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*
    a) To manage a private key shared among the parties to the transaction.
    b) To manage digital signatures of the parties to the transaction
    c) To manage the passwords of the parties to the transaction
    d) To issue a digital certificate for the public key of the parties to the transaction
+answer: D
+explanation: সার্টিফিকেট অথরিটি (CA) ডিজিটাল সনদে আবেদনকারীর পাবলিক কি এবং পরিচয় সংযুক্ত করে ডিজিটাল সার্টিফিকেট প্রদান করে।
 
 13. **What is/are the main operation of SSL/TLS?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 176 (ET: N/A)]*
    a) Encrypt packet in Data Link Layer
    b) Check error in Network Layer
    c) Ensure data security in Transport Layer
    d) All of above
+answer: C
+explanation: SSL/TLS প্রোটোকলের প্রধান কাজ হলো নেটওয়ার্ক ট্রান্সপোর্ট লেয়ারে সুরক্ষিত এনক্রিপশন, প্রমাণীকরণ ও ডেটা সিকিউরিটি প্রদান করা।
 
 14. **In a Vigenere cipher, plaintext is *mypassword* and key is *stream*. What is the cipher text?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*
    a) d q edrdnfgf
    b) e r g e s e o h i h
    c) pm g pkpizoz
    d) f s h f t f p i j i
+answer: B
+explanation: ভিজিনের সিফারে $C_i = (P_i + K_i) \pmod{26}$ সূত্রানুসারে 'mypassword' এর সাথে পুনরাবৃত্ত কি 'streamstre' যোগ করলে সাইফারটেক্সট পাওয়া যায় "e r g e s e o h i h"।
 
 15. **Digital signature is a cryptographic method that ensures-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*
    a) Data confidentiality, integrity, availability
    b) Data integrity, authentication, non-repudiation
    c) Data privacy, integrity, accessibility
    d) Data privacy, integrity, approachability
+answer: B
+explanation: ডিজিটাল স্বাক্ষর তথ্যের অখণ্ডতা (Integrity), প্রেরকের পরিচয় নিশ্চিতকরণ (Authentication) এবং বার্তা প্রেরণের অনস্বীকার্যতা (Non-repudiation) নিশ্চিত করে।
 
 16. **Which of the followings is not a data encryption algorithm?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    a) MD5
    b) SHA1
    c) RSA
    d) AES
+answer: A
+explanation: MD5 (এবং SHA1) হলো ওয়ান-ওয়ে ক্রিপ্টোগ্রাফিক হ্যাশ ফাংশন, যা ডেটার ডাইজেস্ট তৈরি করে; এটি রিভার্সিবল বা ডিক্রিপ্টযোগ্য কোনো ডেটা এনক্রিপশন অ্যালগরিদম নয়।
 
 17. **The transformation of a message into an encoded from is known as ________** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*
    A) Memories
    B) Encoding
    C) Decoding
    D) None of them
+answer: B
+explanation: কোনো মূল তথ্য বা বার্তাকে অন্য কোনো সংকেত বা ফরম্যাটে রূপান্তরিত করার প্রক্রিয়াকে এনকোডিং (Encoding) বলা হয়।
 
 ## Security Protocols (9)
 
