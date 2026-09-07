@@ -21,120 +21,160 @@
    (b) Quick sort
    (c) Heap sort
    (d) Merge sort
+answer: D
+explanation: লিংকড লিস্টে র্যান্ডম অ্যাক্সেস ধীরগতির হওয়ায় এবং মার্জ সর্টে কোনো অতিরিক্ত অ্যারে অ্যালোকেশন ছাড়াই কেবল নোড পয়েন্টার অদলবদল করে $O(n \log n)$ সময়ে সর্ট করা যায় বলে Merge sort সবচেয়ে উপযোগী।
 
 2. **Which of the following sorting algorithms is a divide and conquer algorithm?** *[NPCBL Executive Trainee (Software) 2023 compact it 41 (ET: N/A)]*
    a) merge sort
    b) Bubble sort
    c) Insertion sort
    d) Counting sort
+answer: A
+explanation: মার্জ সর্ট (Merge sort) হলো একটি ক্লাসিক ডিভাইড অ্যান্ড কনকার (Divide and Conquer) অ্যালগরিদম, যা অ্যারেকে সমান দুই ভাগে ভাগ করে আলাদাভাবে সর্ট করে পুনরায় মার্জ করে।
 
 3. **What is the complexity of Merge sort?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 25 (ET: BIBM)]*
    (a) O(n^2 \log n)
    (b) O(n \log n)
    (c) O(n^2)
    (d) O(n)
+answer: B
+explanation: মার্জ সর্টের সেরা, গড় ও সবচেয়ে খারাপ (Best, Average, Worst case)—সব অবস্থাতেই টাইম কমপ্লেক্সিটি সর্বদা $O(n \log n)$।
 
 4. **Which of the following sort algorithms has execution time that is least dependent on initial ordering of the input?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*
    (a) Merge Sort
    (b) Insertion Sort
    (c) Selection Sort
    (d) Quick Sort
+answer: C
+explanation: সিলেকশন সর্ট (Selection Sort)-এ ইনপুট অ্যারে আগে থেকে যেভাবেই সাজানো থাকুক না কেন, এটি সর্বদা ঠিক $\frac{n(n-1)}{2}$ সংখ্যক তুলনা সম্পন্ন করে; অর্থাৎ এর কর্মক্ষমতা ইনপুটের প্রাথমিক বিন্যাসের ওপর সবচেয়ে কম নির্ভরশীল (বা সম্পূর্ণরূপে স্বাধীন)।
 
 5. **If we have a very small amount of additional memory, but a large number of items to sort, which of the following sorting algorithm should we use?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 44 (ET: N/A)]*
    (ক) Merge sort
    (খ) Heap sort
    (গ) Bubble sort
    (ঘ) Bogo sort
+answer: B
+explanation: হিপ সর্ট (Heap sort) একটি ইন-প্লেস অ্যালগরিদম যার অতিরিক্ত মেমরি স্পেস কমপ্লেক্সিটি $O(1)$ এবং ওয়ার্স্ট-কেস টাইম কমপ্লেক্সিটি $O(n \log n)$; ফলে মেমরির সীমাবদ্ধতা থাকলে বিশাল ডেটা সর্ট করার জন্য এটি সর্বোত্তম।
 
 6. **Which is correct characteristic of Selection Sort?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
    a) Time complexity O(n)
    b) Not Comparison-based sorting algorithm
    c) Time complexity O(n²)
    d) It is not in place sort
+answer: C
+explanation: সিলেকশন সর্টের গড় এবং ওয়ার্স্ট কেস টাইম কমপ্লেক্সিটি $O(n^2)$ এবং এটি একটি ইন-প্লেস ও তুলনা-ভিত্তিক অ্যালগরিদম।
 
 7. **Which is correct for Merge sort–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
    a) Time complexity, O(n²)
    b) Time complexity, O (n log n)
    c) Time complexity, O (log n)
    d) Not stable sort
+answer: B
+explanation: মার্জ সর্টের টাইম কমপ্লেক্সিটি $O(n \log n)$ এবং এটি একটি স্টেবল (Stable) অ্যালগরিদম।
 
 8. **Which of the following is not an in-place algorithm?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*
    a. Insertion sort
    b. Selection sort
    c. Merge sort
    d. Heap sort
+answer: C
+explanation: সাধারণ অ্যারে বাস্তবায়নে মার্জ সর্টের উপাদানগুলোকে মার্জ করার জন্য $O(n)$ অতিরিক্ত মেমরির প্রয়োজন হয়, তাই এটি ইন-প্লেস সর্টিং অ্যালগরিদম নয়।
 
 9. **An inversion in a an array A[] is a pair (A[i], A[j] such that A[i]>A[j} and i<j. An array will have maximum number of inversions if it is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*
    a. Sorted in increasing order
    b. Sorted in decreasing order
    c. Sorted in alternate fashion
    d. Both A and B
+answer: B
+explanation: কোনো অ্যারে সম্পূর্ণ বিপরীত বা অধঃক্রমে সাজানো থাকলে (Sorted in decreasing order) তার প্রতিটি জোড়া উপাদানের মধ্যে ইনভার্সন বিদ্যমান থাকে, যা সর্বাধিক $\frac{n(n-1)}{2}$ সংখ্যক ইনভার্সন তৈরি করে।
 
 10. **Given a sequence, S= {1, 2, 3, 8, 15, 10}; which of the following algorithms will be the fasted to sort this sequence in ascending order?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    a) Bubble sort
    b) Merge sort
    c) Quick sort
    d) Heap sort
+answer: A
+explanation: প্রায় সাজানো (Almost sorted) সিকোয়েন্সের ক্ষেত্রে অপটিমাইজড বাবল সর্ট মাত্র একটি পাস বা অদলবদল সম্পন্ন করে $O(n)$ সময়ে দ্রুততম ফলাফল দেয়।
 
 11. **Which of the following techniques is popular for Data Compression?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*
    a) Alpha-Beta pruning
    b) Checksum
    c) Huffman Coding
    d) Red Black Tree
+answer: C
+explanation: হাফম্যান কোডিং (Huffman Coding) হলো একটি বহুল ব্যবহৃত প্রিফিক্স কোড অ্যালগরিদম যা বর্ণমালার ফ্রিকোয়েন্সির ওপর ভিত্তি করে লসলেস ডেটা কম্প্রেশন সম্পন্ন করে।
 
 12. **কোন Algorithm টি দ্রুত sorting করে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*
    A) Bubble sort
    B) Selection sort
    C) Quick sort
    D) Insertion sort
+answer: C
+explanation: কুইক সর্ট (Quick sort) এর উচ্চ ক্যাশ পারফরম্যান্স ও ক্ষুদ্র কনস্ট্যান্ট ফ্যাক্টরের কারণে বাস্তব ক্ষেত্রে অন্যান্য সাধারণ সর্টিং অ্যালগরিদমের চেয়ে অনেক দ্রুত কাজ করে।
 
 13. **Which of the following is not a stable sorting algorithm in its typical implementation?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*
    A) Selection Sort
    B) Quick Sort
    C) Marge sort
    D) Insertion Sort
+answer: B
+explanation: কুইক সর্ট (Quick Sort) এর সাধারণ বাস্তবায়ন স্টেবল নয়, কারণ দূরবর্তী উপাদানগুলোর অদলবদলের সময় একই মানের উপাদানের আপেক্ষিক ক্রম পরিবর্তিত হতে পারে।
 
 14. **You have to sort 1GB of data with only 100MB of available main memory. Which sorting technique will be more appropriate?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*
    A) Heap sort
    B) Insertion sort
    C) Quick sort
    D) Marge sort
+answer: D
+explanation: যখন ডেটার আয়তন প্রধান মেমরির (RAM) ধারণক্ষমতা অতিক্রম করে, তখন এক্সটার্নাল মার্জ সর্ট (External Merge Sort) ব্যবহার করে খণ্ড খণ্ড ব্লক মেমরিতে এনে সর্ট করে পুনরায় মার্জ করা হয়।
 
 15. **Randomized quicksort is an extension of quicksort where the pivot is chosen randomly. What is the worst-case complexity of sorting n numbers using randomized quicksort?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*
    A) \text{O(n)}
    B) \text{O(n}^2)
    C) \text{O (n log n)}
    D) \text{O(n!)}
+answer: B
+explanation: র‍্যান্ডমাইজড কুইক সর্টে পিভট এলোমেলোভাবে বাছাই করা হলেও চরমতম দুর্ভাগ্যজনক ক্ষেত্রে (Worst-case) টাইম কমপ্লেক্সিটি $O(n^2)$-ই থেকে যায় (যদিও এর গড় প্রত্যাশিত সময় $O(n \log n)$)।
 
 16. **The complexity of Bubble short algorithm is-** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)], [Probashi Kallyan Bank Assistant Programmer: 2019 compact it 217 (ET: AUST)]*
    A) O(n)
    B) O(\log n)
    C) O(n^2)
    D) O(n \log n)
+answer: C
+explanation: বাবল সর্টের সাধারণ এবং ওয়ার্স্ট কেস টাইম কমপ্লেক্সিটি হলো $O(n^2)$।
 
 17. **Bubble sort algorithm sorts n data items using?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*
    A) O(n^2) Comparisons
    B) O(n) Comparisons
    C) O(n \log n) Comparisons
    D) O(n) Comparisons
+answer: A
+explanation: $n$ টি উপাদানের জন্য বাবল সর্টে সর্বোচ্চ $\frac{n(n-1)}{2}$ টি তুলনা সম্পন্ন হয়, যা বিগ-ও নোটেশনে $O(n^2)$ Comparisons।
 
 18. **Quicksort can be categorized as:** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*
    A) Brute force technique
    B) Divide and conquer
    C) Greedy algorithm
    D) Dynamic programming
+answer: B
+explanation: কুইক সর্ট হলো ডিভাইড অ্যান্ড কনকার (Divide and Conquer) শ্রেণীর অ্যালগরিদম, যা পিভটের মাধ্যমে মূল সমস্যাকে দুটি উপ-সমস্যায় বিভক্ত করে সমাধান করে।
 
 19. **The complexity of Bubble sort algorithm is-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*
    A) O(n)
    B) O(\text{long } n)
    C) O(n^2)
    D) O(n \log n)
+answer: C
+explanation: বাবল সর্টের গড় ও ওয়ার্স্ট কেস কমপ্লেক্সিটি হলো $O(n^2)$।
 
 20. **Which is the slowest algorithm?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*
    A) Bubble Sort
    B) Quick sort
    C) Heap sort
    D) None
+answer: A
+explanation: বাবল সর্টের টাইম কমপ্লেক্সিটি $O(n^2)$ হওয়ায় এটি কুইক সর্ট বা হিপ সর্টের ($O(n \log n)$) তুলনায় বহুগুণ ধীরগতির।
 
 ## Searching Algorithms (18)
 

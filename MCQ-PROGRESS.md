@@ -2,12 +2,12 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Updated on every subtopic completion.
 
-**Subtopics: 32 / 160 done (20.0%)**  ·  **Questions: 224 / 3039 answered (7.4%)**
+**Subtopics: 33 / 160 done (20.6%)**  ·  **Questions: 244 / 3039 answered (8.0%)**
 
 | File | Subtopics Done | Total Subtopics | Answered | Total Questions | Status |
 |---|---|---|---|---|---|
 | `ai-and-ml.md` | 1 | 1 | 18 | 18 | Complete |
-| `algorithm.md` | 0 | 6 | 0 | 70 | Pending |
+| `algorithm.md` | 1 | 6 | 20 | 70 | In Progress |
 | `bangla.md` | 0 | 9 | 0 | 310 | Pending |
 | `c-programming.md` | 0 | 10 | 0 | 113 | Pending |
 | `cloud-computing.md` | 3 | 3 | 20 | 20 | Complete |
@@ -30,4 +30,4 @@ Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answe
 | `programming-languages.md` | 3 | 3 | 24 | 24 | Complete |
 | `software-engineering.md` | 5 | 5 | 46 | 46 | Complete |
 | `web-technology.md` | 7 | 7 | 49 | 49 | Complete |
-| **Total** | **32** | **160** | **224** | **3039** | **In Progress** |
+| **Total** | **33** | **160** | **244** | **3039** | **In Progress** |
