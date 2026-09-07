@@ -1120,90 +1120,122 @@ explanation: কম্পিউটারের ডেটা ও মেমোর�
    (b) A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks
    (c) A blockchain is a centralized digital ledger consisting of records called blocks
    (d) None of the above
+answer: B
+explanation: ব্লকচেইন হলো একটি বিকেন্দ্রীকৃত (decentralized) এবং ডিস্ট্রিবিউটেড ডিজিটাল লেজার, যেখানে প্রতিটি রেকর্ড ব্লক আকারে এনক্রিপ্ট করে চেইন আকারে সংরক্ষিত থাকে।
 
 2. **What is Smart Bangladesh?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*
    (a) Smart Citizens>Smart Government>Smart Economy>Smart Society
    (b) Smart Citizens>Smart Government>Smart Industry>Smart Society
    (c) Smart Citizens>Smart People>Smart Economy>Smart Society
    (d) Smart Citizens>Smart Government>Smart Economy>Smart Learn
+answer: A
+explanation: স্মার্ট বাংলাদেশের ৪টি মূল ভিত্তি বা পিলার হলো: Smart Citizens, Smart Government, Smart Economy এবং Smart Society।
 
 3. **What is a distributed ledger on a peer-to-peer network called?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Block Chain
+answer: Block Chain
+explanation: পিয়ার-টু-পিয়ার নেটওয়ার্কে তথ্য সংরক্ষণের নিরাপদ ও অপরিবর্তনযোগ্য ডিস্ট্রিবিউটেড লেজার প্রযুক্তিকে ব্লকচেইন (Blockchain) বলা হয়।
 
 4. **In which way blockchain data can be modifued?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Cannot Modify
+answer: Cannot Modify
+explanation: ব্লকচেইনের ডেটা ইমিউটেবল (immutable); অর্থাৎ ক্রিপ্টোগ্রাফিক হ্যাশিং ও কনসেনসাস অ্যালগরিদমের কারণে এটি পরিবর্তন বা মুছে ফেলা যায় না।
 
 5. **Which one of the following process is the main task for the computer in mapping the geographical data?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*
    (ক) Data storage
    (খ) Data visualization
    (গ) Data retrieving and drawing
    (ঘ) Data collection
+answer: B
+explanation: ভৌগোলিক ডেটা ম্যাপিং করার ক্ষেত্রে কম্পিউটারের প্রধান কাজ হলো ডেটাকে ভিজ্যুয়ালাইজ (Data visualization) বা মানচিত্রে দৃশ্যায়ন করা।
 
 6. **Which of the following is not in connection with blockchain technology?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*
    (ক) Peer-to-Peer digital currency
    (খ) Centralized social network
    (গ) Peer-to-Peer social network
    (ঘ) Distributed Ledger management
+answer: B
+explanation: ব্লকচেইন একটি সম্পূর্ণ ডিসেন্ট্রালাইজড প্রযুক্তি। সেন্ট্রালাইজড (কেন্দ্রীভূত) সোশ্যাল নেটওয়ার্ক এর সাথে সম্পর্কিত নয়।
 
 7. **The study of the way people work with tools is called.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) debugging
    B) programming
    C) ergonomics
    D) kinetics
+answer: C
+explanation: কর্মক্ষেত্রে মানুষের শারীরিক সুস্থতা ও কাজের দক্ষতার জন্য যন্ত্রপাতির নকশা ও ব্যবহার সম্পর্কিত বিদ্যাকে আর্গোনোমিক্স (Ergonomics) বলে।
 
 8. **Smallest unit of bit coin is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*
    a) unit coin
    b) satoshis
    c) etherum
    d) litecoin
+answer: B
+explanation: বিটকয়েনের ক্ষুদ্রতম একককে সাতোশি (Satoshi) বলা হয়। ১ বিটকয়েন সমান ১০ কোটি (100,000,000) সাতোশি।
 
 9. **In a block chain, a bundle of transaction is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*
    a) node
    b) block
    c) chain
    d) nonce
+answer: B
+explanation: ব্লকচেইনে একাধিক লেনদেন বা ট্রানজ্যাকশনকে একসাথে একত্রিত করে একটি ব্লক (Block) তৈরি করা হয়।
 
 10. **কোনটি Social media network নয়?** *[BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*
    A) LinkedIn
    B) Google+
    C) Internet Explorer
    D) Twitter
+answer: C
+explanation: Internet Explorer হলো মাইক্রোসফটের একটি ওয়েব ব্রাউজার, সামাজিক যোগাযোগ মাধ্যম নয়।
 
 11. **Information, a combination of graphics, text, sound, video and animation is called-** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*
    (a) Multitask
    (b) Multimedia
    (c) Multiprocessor
    (d) Multiprogramming me
+answer: B
+explanation: টেক্সট, গ্রাফিক্স, অডিও, ভিডিও এবং অ্যানিমেশনের সমন্বিত রূপকে মাল্টিমিডিয়া (Multimedia) বলা হয়।
 
 12. **Which one is not an example of disruptive technology?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*
    A) 3D printing
    B) Internet of things
    C) Robotics
    D) Executive dashboard
+answer: D
+explanation: 3D printing, IoT এবং Robotics বিদ্যমান বাজার ও শিল্পে বৈপ্লবিক পরিবর্তন এনেছে (disruptive technology); অপরদিকে Executive dashboard হলো একটি গতানুগতিক রিপোর্টিং ও ডেটা ডিসপ্লে টুল।
 
 13. **AR refers to which of the following environment—** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*
    A) Artificial Reality
    B) Augmented Report
    C) Artificial Report
    D) Augmented Reality
+answer: D
+explanation: AR এর পূর্ণরূপ Augmented Reality, যা বাস্তব পৃথিবীর দৃশ্যের উপর কম্পিউটার জেনারেটেড ডিজিটাল ছবি বা তথ্য যুক্ত করে দেখায়।
 
 14. **What is pipilika form www.pipilika.com?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*
    A) A Bangla Font
    B) A Bangladeshi graphic Software
    C) A Bangladeshi Browser
    D) A Bangladeshi Game App
+answer: C
+explanation: পিপীলিকা (pipilika.com) ছিল বাংলাদেশের প্রথম বাংলা সার্চ ইঞ্জিন (শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ের তৈরি)। অপশনে সার্চ ইঞ্জিন না থাকায় ব্রাউজার হিসেবে অনেক সময় গণ্য করা হয়।
 
 15. **Which one is government base procurement website in Bangladesh?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*
    A) egp.gov.bd
    B) eprocurement.gov.bd
    C) procurement.gov.bd
    D) eprocure.gov.bd
+answer: D
+explanation: বাংলাদেশ সরকারের ইলেকট্রনিক গভর্নমেন্ট প্রকিউরমেন্ট (e-GP) পোর্টালের অফিশিয়াল ওয়েবসাইট হলো www.eprocure.gov.bd।
 
 16. **What kind of image is created in virtual reality?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*
    A) Three-Dimensional
    B) Two-Dimensional
    C) One Dimensional
    D) Multi-Dimensional
+answer: A
+explanation: ভার্চুয়াল রিয়েলিটিতে কম্পিউটার সিমুলেশনের মাধ্যমে একটি কৃত্রিম ত্রিমাত্রিক (Three-Dimensional বা 3D) জগৎ সৃষ্টি করা হয়।
 
 ## Acronyms & Abbreviations (13)
 
