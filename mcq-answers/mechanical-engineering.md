@@ -301,18 +301,24 @@ explanation: লেদ মেশিনের (Lathe) টেলস্টকে (T
    (খ) ১৭টি
    (গ) ১৮টি
    (ঘ) ১৫টি
+answer: B
+explanation: ফ্র্যাঙ্ক এবং লিলিয়ান গিলব্রেথ (Frank & Lillian Gilbreth) কর্তৃক প্রবর্তিত থার্বলিগস (Therbligs) হলো মোশন বা গতি বিশ্লেষণের ১৭টি মৌলিক একক প্রতীক।
 
 2. **Product life cycle এর পর্যায় কতটি?** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) ৫টি
    (খ) ৪টি
    (গ) ৩টি
    (ঘ) ২টি
+answer: B
+explanation: পণ্য জীবনচক্র (Product Life Cycle / PLC)-এর ৪টি প্রধান পর্যায় রয়েছে: ১. প্রবর্তন (Introduction), ২. প্রবৃদ্ধি (Growth), ৩. পরিপক্কতা (Maturity), এবং ৪. পতন (Decline)।
 
 3. **উৎপাদন এর ক্ষেত্রে কোন নির্দিষ্ট সময়ে Output/Input এর অনুপাতকে বলে-** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*
    (ক) Productivity
    (খ) Efficiency
    (গ) Production rate
    (ঘ) Effectiveness
+answer: A
+explanation: যেকোনো উৎপাদন প্রক্রিয়ায় প্রাপ্ত মোট ফলাফল (Output) এবং ব্যবহৃত সম্পদের (Input) অনুপাতকে প্রোডাক্টিভিটি (Productivity বা উৎপাদনশীলতা) বলা হয়।
 
 ## Engineering Drawing (1)
 
