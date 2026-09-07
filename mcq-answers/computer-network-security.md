@@ -23,120 +23,160 @@
    b. Masquerade attack
    c. Simple attack
    d. Complex attack
+answer: B
+explanation: প্রেরক ও প্রাপকের মধ্যবর্তী ডেটা ক্যাপচার করে পরবর্তীতে পুনরায় প্রেরণ করে অননুমোদিত সুবিধা গ্রহণ করাকে সাধারণত রিপ্লে অ্যাটাক বলা হয়, যা অন্য কারো পরিচয় নকল করার একটি সক্রিয় মাস্কেরেড অ্যাটাক (Masquerade attack)।
 
 2. **Which of the following is an attack that threatens the integrity of information?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 176 (ET: N/A)]*
    a) Falsification of web pages
    b) Illegal copy of data stored in system
    c) DoS attack that creates system overload
    d) Wiretapping of communication contents
+answer: A
+explanation: তথ্যের অবিকৃত ও নির্ভুল অবস্থা বজায় থাকাকে ইন্টিগ্রিটি (Integrity) বলে; ওয়েব পেজের তথ্য ইচ্ছাকৃতভাবে পরিবর্তন বা জালিয়াতি করা (Falsification of web pages) সরাসরি ইন্টিগ্রিটির ওপর আঘাত হানে।
 
 3. **Which of the following is a package of unauthorized programs and tools that has functions to create a back door in a server and hide the trace of entry into the server?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 176 (ET: N/A)]*
    a) RFID
    b) Rootkit
    c) TKIP
    d) web beacon
+answer: B
+explanation: রুটকিট (Rootkit) হলো একগুচ্ছ অননুমোদিত প্রোগ্রাম যা অপারেটিং সিস্টেমের গভীরতম স্তরে অ্যাক্সেস নিয়ে ব্যাকডোর তৈরি করে এবং সিস্টেমে প্রবেশের সমস্ত লগ ও কার্যকলাপ লুকিয়ে রাখে।
 
 4. **Which is not a type of DNS attack?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*
    a) Cache Poisoning Attack
    b) Denial of Service Attack
    c) DNS spoofing
    d) CSRF attack
+answer: D
+explanation: CSRF (Cross-Site Request Forgery) হলো ক্লায়েন্ট ব্রাউজার ও ওয়েব অ্যাপ্লিকেশনের সেশন অপব্যবহারকারী আক্রমণ, এটি কোনো DNS অবকাঠামো ভিত্তিক আক্রমণ নয়।
 
 5. **The Bangladesh Bank robbery, also known as the Bangladesh bank cyber heist, was a theft that took place in February 2016. The governor of the central bank engaged ________ to lead the security incident response, vulnerability assessment and remediation.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*
    a) Fortinet Cyber Security
    b) Zacco Cybersecurity Research Lab
    c) Palo Alto Networks
    d) World Informatix Cyber Security
+answer: D
+explanation: বাংলাদেশ ব্যাংকের ২০১৬ সালের রিজার্ভ চুরির ঘটনার পর ইনসিডেন্ট রেসপন্স, সিস্টেমের নিরাপত্তা দুর্বলতা পর্যালোচনা ও প্রতিকারের নেতৃত্ব দিতে ড. রাকেশ আস্থানার 'World Informatix Cyber Security'-কে দায়িত্ব দেওয়া হয়েছিল।
 
 6. **________ is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*
    a) Cryptography Proper
    b) Steganography
    c) Overt Writing
    d) Coding
+answer: B
+explanation: সাধারণ কোনো কভার মিডিয়া (যেমন ছবি, অডিও বা টেক্সট ফাইল)-এর ভেতরে গোপন বার্তা বা ডেটা লুকিয়ে রাখার কৌশলকে স্টেগানোগ্রাফি (Steganography) বলা হয়।
 
 7. **Which one is the part of software vulnerability?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*
    A) Lack of user knowledge
    B) Hidden bugs
    C) Radiation of Transmission line
    D) Passing internal information by employees
+answer: B
+explanation: সফটওয়্যার কোডের অপ্রকাশিত ত্রুটি বা লুকানো বাগসমূহ (Hidden bugs) সফটওয়্যার ভলনারেবিলিটির প্রধান কারণ, যা আক্রমণকারীদের অননুমোদিত অ্যাক্সেসের সুযোগ দেয়।
 
 8. **In computers, why is Firewall used for?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) Securing the computer
    B) Data Transmission
    C) Authentication
    D) Monitoring
+answer: A
+explanation: ফায়ারওয়াল নেটওয়ার্ক ট্রাফিক ফিল্টার করে ক্ষতিকর বা অননুমোদিত সংযোগ প্রতিহত করার মাধ্যমে কম্পিউটার ও সিস্টেম সুরক্ষিত রাখে (Securing the computer)।
 
 9. **In computer systems, what is ‘Trojan Horse’?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) Virus
    B) Malware
    C) Worm
    D) Spyware
+answer: B
+explanation: ট্রোজান হর্স (Trojan Horse) হলো এক ধরণের ম্যালওয়্যার (Malware), যা আপাতদৃষ্টিতে উপযোগী সফটওয়্যারের ছদ্মবেশে ব্যবহারকারীর অজান্তে সিস্টেমে অনুপ্রবেশ করে ক্ষতিসাধন করে।
 
 10. **Viruses that take up residence in the computer’s memory and making hard to detect is called:** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*
-   A) Cluster Virus
-   B) Self-encrypting Virus
-   C) Stealth Virus
-   D) Macro Virus
+    A) Cluster Virus
+    B) Self-encrypting Virus
+    C) Stealth Virus
+    D) Macro Virus
+answer: C
+explanation: স্টিলথ ভাইরাস (Stealth Virus) মেমরিতে গোপনে অবস্থান নিয়ে অপারেটিং সিস্টেমের ফাংশন ইন্টারসেপ্ট করে অ্যান্টিভাইরাস থেকে নিজের উপস্থিতি সফলভাবে আড়াল করে রাখে।
 
 11. **How can we prevent SQL Injection Attack?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*
-   a) Show the database error to the users
-   b) Do not remove potential malicious code
-   c) Use the user input directly
-   d) Use input validation
+    a) Show the database error to the users
+    b) Do not remove potential malicious code
+    c) Use the user input directly
+    d) Use input validation
+answer: D
+explanation: ইনপুট যাচাইকরণ (Input validation / Sanitization) এবং প্রিপেয়ার্ড স্টেটমেন্ট (Parameterized queries) ব্যবহারের মাধ্যমে এসকিউএল ইনজেকশন সফলভাবে প্রতিরোধ করা যায়।
 
 12. **________ is an assault on a service from a single source that floods it with so many requests that is becomes overwhelmed and is either stopped completely or operates at a significantly reduced rate.** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*
-   a) Denial-of service(DoS) attack
-   b) Spoofing attack
-   c) Cross-site scripting (XSS) attack
-   d) Buffer overflow attack
+    a) Denial-of service(DoS) attack
+    b) Spoofing attack
+    c) Cross-site scripting (XSS) attack
+    d) Buffer overflow attack
+answer: A
+explanation: একক কোনো সিস্টেম বা উৎস থেকে অতিরিক্ত রিকোয়েস্ট পাঠিয়ে কোনো সার্ভারকে ওভারলোড বা অচল করে দেওয়ার প্রক্রিয়াকে ডিনায়েল-অব-সার্ভিস (DoS attack) বলা হয়।
 
 13. **________ a means of regaining access to a compromised system by installing software or configuring existing software to enable remote access under attacker-defined conditions.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*
-   a) Spyware
-   b) Ransomware
-   c) Cross-site scripting
-   d) Backdoor
+    a) Spyware
+    b) Ransomware
+    c) Cross-site scripting
+    d) Backdoor
+answer: D
+explanation: ব্যাকডোর (Backdoor) হলো এমন এক গোপন কৌশল বা সফটওয়্যার যার মাধ্যমে আক্রমণকারী পরবর্তীতে নিরাপত্তা বলয় এড়িয়ে আক্রান্ত সিস্টেমে পুনরায় দূরবর্তী প্রবেশাধিকার লাভ করে।
 
 14. **Which of the following is not a web server attack type?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*
-   a) DOS attack
-   b) Website Defacement using SQLi
-   c) Directory Traversal
-   d) Password guessing
+    a) DOS attack
+    b) Website Defacement using SQLi
+    c) Directory Traversal
+    d) Password guessing
+answer: D
+explanation: পাসওয়ার্ড গেসিং (Password guessing) হলো ক্রেডেনশিয়াল বা অ্যাকাউন্ট ভেরিফিকেশনের ওপর ব্রুট-ফোর্স আক্রমণ; এটি ডিরেক্টরি ট্রাভার্সাল বা DoS-এর মতো সরাসরি ওয়েব সার্ভার সফটওয়্যারের আক্রমণ নয়।
 
 15. **A proxy firewall filters at ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*
-   a) Physical layer
-   b) Data link layer
-   c) Network layer
-   d) Application layer
+    a) Physical layer
+    b) Data link layer
+    c) Network layer
+    d) Application layer
+answer: D
+explanation: প্রক্সি ফায়ারওয়াল (Proxy Firewall বা অ্যাপ্লিকেশন গেটওয়ে) ওএসআই মডেলের অ্যাপ্লিকেশন লেয়ারে (Application layer) ট্রাফিকের পেলোড এবং কনটেন্ট নিরীক্ষা ও ফিল্টার করে।
 
 16. **To prevent we use firewall-** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*
-   (a) Data-driven attack
-   (b) Virus attack
-   (c) Unauthorized attack
-   (d) All
+    (a) Data-driven attack
+    (b) Virus attack
+    (c) Unauthorized attack
+    (d) All
+answer: C
+explanation: ফায়ারওয়াল মূলত বহিরাগত নেটওয়ার্ক থেকে অননুমোদিত অ্যাক্সেস ও আক্রমণ (Unauthorized attack) প্রতিহত করার কাজে ব্যবহৃত হয়।
 
 17. **Which of the following sends data packets over unprotected system?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*
-   A) OSL
-   B) NAT
-   C) TCP
-   D) UDP
+    A) OSL
+    B) NAT
+    C) TCP
+    D) UDP
+answer: D
+explanation: UDP (User Datagram Protocol) একটি কানেকশনলেস ও অনির্ভরযোগ্য প্রোটোকল যা পূর্ব-সংযোগ স্থাপন বা কোনো নিরাপত্তা সুরক্ষা নিশ্চিত না করেই অনিরাপদ নেটওয়ার্কে সরাসরি ডেটাগ্রাম পাঠায়।
 
 18. **Which of the following is the security equipment?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*
-   A) Router
-   B) IPS
-   C) Switch
-   D) Hub
+    A) Router
+    B) IPS
+    C) Switch
+    D) Hub
+answer: B
+explanation: আইপিএস (IPS - Intrusion Prevention System) হলো একটি বিশেষায়িত নেটওয়ার্ক সিকিউরিটি সরঞ্জাম যা সন্দেহজনক ট্রাফিক শনাক্ত করার সাথে সাথে আক্রমণ প্রতিরোধ করে।
 
 19. **Which of the following describes an email that is sent to users with web links that direct them to malicious websites?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*
-   a. Viruses
-   b. Phishing
-   c. Rogue access points
-   d. Man-in-the-middle
+    a. Viruses
+    b. Phishing
+    c. Rogue access points
+    d. Man-in-the-middle
+answer: B
+explanation: ব্যবহারকারীদের প্রলুব্ধ করে ক্ষতিকর ওয়েবসাইটের লিংকে ক্লিক করানোর উদ্দেশ্যে পাঠানো প্রতারণামূলক ইমেইলকে ফিশিং (Phishing) বলা হয়।
 
 20. **Which of the following mitigation techniques is MOST effective against a Man in the middle attack?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*
-   a. Authentication
-   b. Encryption
-   c. Popup blocker
-   d. ACL
+    a. Authentication
+    b. Encryption
+    c. Popup blocker
+    d. ACL
+answer: A
+explanation: ম্যান-ইন-দ্য-মিডল (MITM) আক্রমণ প্রতিরোধে সবচেয়ে কার্যকর প্রতিরোধমূলক কৌশল হলো শক্তিশালী প্রমাণীকরণ (Authentication / Mutual PKI Certificates), যা নিশ্চিত করে যে যোগাযোগকারী দুটি পক্ষই প্রকৃত সত্ত্বা।
 
 ## Cryptography (17)
 
