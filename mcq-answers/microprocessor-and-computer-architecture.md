@@ -634,30 +634,40 @@ explanation: হার্ড ডিস্কের ট্র্যাকসম�
    b) RAID Level 1
    c) RAID Level 2
    d) RAID Level 3
+answer: b
+explanation: RAID 1 ডিস্ক মিররিং (Disk Mirroring) প্রযুক্তি ব্যবহার করে, যেখানে একটি ডিস্কের সকল ডেটা অবিকল অন্য একটি ডিস্কে ব্যাকআপ হিসেবে সংরক্ষিত থাকে।
 
 2. **The fastest read/write time and most efficient data storage of any disk array type is:** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*
    a) RAID-0
    b) RAID-1
    c) RAID-2
    d) RAID-3
+answer: a
+explanation: RAID-0 ডিস্ক স্ট্রাইপিং (Striping) ব্যবহার করে এবং কোনো প্যারিটি বা রিডানড্যান্ট ডেটা সংরক্ষণ করে না। ফলে এটি কোনো ওভারহেড ছাড়াই ১০০% স্টোরেজ দক্ষতা এবং দ্রুততম রিড ও রাইট পারফরম্যান্স প্রদান করে।
 
 3. **How does RAID provide data protection?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*
    a) Using either data mirroring or parity
    b) Using either data mirroring or striping
    c) Using high quality disk drives
    d) Using dedicated data protection hardware
+answer: a
+explanation: RAID প্রযুক্তি মূলত ডিস্ক মিররিং (Mirroring - যেমন RAID 1) অথবা প্যারিটি ক্যালকুলেশনের (Parity - যেমন RAID 5, RAID 6) মাধ্যমে ডিস্ক নষ্ট হয়ে গেলেও ডেটা সুরক্ষা ও ফল্ট টলারেন্স প্রদান করে।
 
 4. **Why RAID is used in database storage?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*
    a) Improve performance
    b) Reduce Cost
    c) Both a & b
    d) None
+answer: a
+explanation: ডাটাবেজ স্টোরেজে একাধিক ডিস্কে একসাথে I/O অপারেশন পরিচালনার মাধ্যমে রিড/রাইট গতি বৃদ্ধি (Performance Improvement) এবং ফল্ট টলারেন্সের জন্য RAID ব্যবহৃত হয়; অতিরিক্ত ডিস্ক ব্যবহারের কারণে এটি খরচ কমায় না বরং বাড়ায়।
 
 5. **What is the name of below RAID?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*
    a) RAID 0+1
    b) RAID 1+0
    c) RAID 01
    d) RAID 10
+answer: a
+explanation: উক্ত প্রশ্নে প্রদত্ত চিত্রে নিচের লেভেলে দুটি করে ডিস্ক স্ট্রাইপ (RAID 0) করে উপরের লেভেলে সেগুলোকে মিরর (RAID 1) করা হয়েছিল, যাকে RAID 0+1 (বা RAID 01 - Stripe of Mirrors) বলা হয়। (বিপরীতভাবে, আগে মিরর করে পরে স্ট্রাইপ করা হলে তাকে RAID 1+0 বা RAID 10 বলা হয়)।
 
 ## Assembly Language & Machine Code (4)
 
