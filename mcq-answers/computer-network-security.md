@@ -539,24 +539,32 @@ explanation: ব্যাংকের বাইরে স্থাপিত দ�
    b) Use input validation
    c) Use the user input directly
    d) Do not remove potential malicious code
+answer: B
+explanation: ইনপুট ভ্যালিডেশন (Input validation), প্যারামিটারাইজড কুয়েরি ও প্রিপ্রিপেয়ার্ড স্টেটমেন্ট ব্যবহারের মাধ্যমে এসকিউএল ইনজেকশন সফলভাবে প্রতিরোধ করা যায়।
 
 2. **A database can be hacked by-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 110 (ET: N/A)]*
    a) Exploiting weak passwords
    b) SQL Injection
    c) Delivering a Trojan
    d) All of the above
+answer: D
+explanation: দুর্বল পাসওয়ার্ডের সুযোগ নিয়ে, এসকিউএল ইনজেকশন চালিয়ে অথবা ট্রোজান হর্স ম্যালওয়্যার অনুপ্রবেশের মাধ্যমে—এই সবগুলো পদ্ধতিতেই ডেটাবেজ হ্যাক বা ক্ষতিগ্রস্ত করা সম্ভব।
 
 3. **Which tool could be used for detecting vulnerability through SQL injection?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*
    A) nmap
    B) metasploit
    C) bit defender
    D) UML
+answer: B
+explanation: মেটাসপ্লয়েট (Metasploit) একটি সুপরিচিত পেনিট্রেশন টেস্টিং ফ্রেমওয়ার্ক, যা এসকিউএল ইনজেকশনসহ বিভিন্ন নিরাপত্তা দুর্বলতা শনাক্ত ও যাচাই করতে ব্যবহৃত হয়।
 
 4. **Which tool could be used for deleting vulnerability through SQL Injection?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*
    A) Nmap
    B) Metasploit
    C) Bitdefender
    D) UML
+answer: B
+explanation: মেটাসপ্লয়েট (Metasploit) ফ্রেমওয়ার্ক ব্যবহার করে সিস্টেমের এসকিউএল ইনজেকশন সম্পর্কিত দুর্বলতা শনাক্ত/পরীক্ষা করা হয় (মূল পরীক্ষার প্রশ্নে 'detecting'-এর মুদ্রণজনিত টাইপো হিসেবে 'deleting' মুদ্রিত হয়েছিল)।
 
 ## Email Security & Spam (2)
 
