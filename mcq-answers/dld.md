@@ -646,24 +646,32 @@ explanation: ৬০ হলো রুট নোড। ৬০ অপেক্ষ�
    b) AB + BC
    c) A+BC
    d) ACB
+answer: C
+explanation: বুলিয়ান উপপাদ্য অনুসারে $(A + B + AB) = A + B(1 + A) = A + B$; এরপর $(A + B)(A + C) = A + AC + AB + BC = A(1 + C + B) + BC = A + BC$।
 
 2. **Which one of the following has the truth value FALSE for the variables A=TRUE and B=TRUE and C=TRUE?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*
-   a. A\bar{B}C + \bar{A}BC
-   b. X = A.\bar{B} + \bar{A}.B
-   c. (AC + \bar{B})(\bar{A} + (B \oplus C))
+   a. Aar{B}C + ar{A}BC
+   b. X = A.ar{B} + ar{A}.B
+   c. (AC + ar{B})(ar{A} + (B \oplus C))
    d. (A + B) \oplus C \oplus (B + C)
+answer: C
+explanation: $A=1, B=1, C=1$ বসালে: (c) $(1\cdot1 + 0)(0 + (1 \oplus 1)) = 1 \cdot 0 = 0$ (FALSE)। উল্লেখ্য (a) ও (b) ও ০ দেয়, পক্ষান্তরে (d) এর মান $1 \oplus 1 \oplus 1 = 1$ (TRUE)।
 
 3. **Which of the logic expressions is equivalent to the digital circuit shown in the figure?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*
    a. X = A.B + \overline{A}.\overline{B}
-   b. X = A.B + \bar{A}.\bar{B}
-   c. X = A.\bar{B} + \bar{A}.B
-   d. X = (\bar{A} + B).(A + \bar{B})
+   b. X = A.B + ar{A}.ar{B}
+   c. X = A.ar{B} + ar{A}.B
+   d. X = (ar{A} + B).(A + ar{B})
+answer: C
+explanation: ডিজিটাল সার্কিটটিতে দুটি AND গেটের মাধ্যমে $A\overline{B}$ ও $\overline{A}B$ তৈরি করে একটি OR গেটে যুক্ত করা হয়েছিল, যা XOR অপারেশন $X = A\overline{B} + \overline{A}B$-এর সমতুল্য।
 
 4. **According to Boolean algebra the value of: (A + AB) \cdot (B + AB) is-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)], [Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)]*
    A) A
    B) B
    C) AB
    D) 1
+answer: C
+explanation: বুলিয়ান বীজগণিতের অবশোষণ নিয়ম অনুসারে $A + AB = A(1 + B) = A$ এবং $B + AB = B(1 + A) = B$; সুতরাং তাদের গুণফল $(A + AB) \cdot (B + AB) = A \cdot B = AB$।
 
 ## Combinational Circuits (MUX, Decoder) (2)
 
