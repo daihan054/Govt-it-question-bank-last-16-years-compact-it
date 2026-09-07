@@ -1193,18 +1193,24 @@ explanation: যে অ্যালগরিদম বা ফাংশন প্
    (C) static
    (D) extern
    (E) volatile
+answer: E
+explanation: C ভাষায় ৪টি স্টোরেজ ক্লাস রয়েছে: `auto`, `register`, `static` এবং `extern`। কিন্তু `volatile` হলো একটি টাইপ কোয়ালিফায়ার (Type qualifier)।
 
 2. **In C, static storage class cannot be used with:** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*
    (A) Global variabl
    (B) Function parameter
    (C) Function name
    (D) Local variable
+answer: B
+explanation: C ভাষায় ফাংশন প্যারামিটারের ক্ষেত্রে `static` স্টোরেজ ক্লাস ব্যবহার করা যায় না (যেমন: `void fun(static int x)` অবৈধ)।
 
 3. **Which of the following storage classes have global visibility in C/C++?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*
    (A) Auto
    (B) Extern
    (C) Static
    (D) Register
+answer: B
+explanation: `extern` স্টোরেজ ক্লাস কোনো ভ্যারিয়েবলকে একাধিক সোর্স ফাইল বা পুরো প্রোগ্রামে গ্লোবাল ভিজিবিলিটি (external linkage) প্রদান করে।
 
 ## Flowcharts & Algorithms (1)
 
