@@ -1043,44 +1043,60 @@ explanation: `&&` এবং `||` হলো লজিক্যাল অপার
    (b) Inheritance
    (c) Abstraction
    (d) Encapsulation
+answer: D
+explanation: এনক্যাপসুলেশন (Encapsulation) অবজেক্টের অভ্যন্তরীণ ডেটা ও মেথডকে একসাথে আবদ্ধ করে এবং অ্যাক্সেস রেস্ট্রিক্ট বা সীমিত করার মাধ্যমে ডেটা হাইডিং নিশ্চিত করে।
 
 2. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
+answer: A
+explanation: ইমেইল ভ্যালিডেশনের জন্য জাভাস্ক্রিপ্ট রেগুলার এক্সপ্রেশন ফাংশন: `function validateEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }`।
 
 3. **In a doubly linked list, the number of pointers affected in insertion operation will be— [ ডাবলি লিঙ্কড লিস্টে ইনসারশন অপারেশনে কতটি পয়েন্টার প্রভাবিত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
    (A) 5
    (B) 0
    (C) 1
    (D) None of these
+answer: D
+explanation: ডাবলি লিঙ্কড লিস্টের মাঝে কোনো নতুন নোড ইনসার্ট করতে সাধারণত ৪টি পয়েন্টার পরিবর্তন করতে হয় (`next` ও `prev` পয়েন্টারসমূহ)। ৪ অপশনে না থাকায় উত্তর (D) None of these।
 
 4. **What is the class and subnet mask if the subnet mask is 255.224.0.0? [ সাবনেট মাস্ক 255.224.0.0 হলে এর ক্লাস এবং মাস্ক বিট কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
    (A) Class A, 8
    (B) Class A, 3
    (C) Class B, 3
    (D) Class B, 32
+answer: B
+explanation: প্রথম অকটেট 255 নির্দেশ করে ক্লাস A নেটওয়ার্ক। দ্বিতীয় অকটেটে 224 ($11100000_2$) থাকায় সাবনেট বিটের সংখ্যা ৩টি। সুতরাং এটি Class A, 3 সাবনেট বিট।
 
 5. **Martin Cooper is known for his invention of— [ Martin Cooper কোন উদ্ভাবনের জন্য পরিচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*
    (a) Digital Camera
    (b) X-ray
    (c) Mobile Phone
    (d) Telephone
+answer: C
+explanation: মার্টিন কুপার (Martin Cooper) ১৯৭৩ সালে মটোরোলা কোম্পানিতে প্রথম হ্যান্ডহেল্ড মোবাইল ফোন (Mobile Phone) আবিষ্কার করেন।
 
 6. **What is the main goal of reinforcement learning?[ রিইনফোর্সমেন্ট লার্নিং (Reinforcement learning) এর প্রধান লক্ষ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*
    (a) To classify data into categories
    (b) To optimize a system for maximum efficiency
    (c) To make predinction based on historical data
    (d) To learn optima actions through trail and error
+answer: D
+explanation: রিইনফোর্সমেন্ট লার্নিং (Reinforcement Learning)-এর মূল লক্ষ্য হলো পরিবেশের সাথে মিথস্ক্রিয়া এবং ট্রায়াল অ্যান্ড এরর (trial and error) ও রিওয়ার্ড-পেনাল্টির মাধ্যমে সর্বোত্তম কর্মপদ্ধতি (optimal actions) শেখা।
 
 7. **Which for loop has range of similar indexes of ‘i’ used in for(i=0; i<n; i++)?[ for(i=0; i<n; i++) লুপের সমান ইনডেক্স রেঞ্জ নিচের কোন লুপটিতে ব্যবহৃত হয়েছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*
    (a) for (i=n; i>0; i--)
    (b) for (i=n-1; i>0; i--)
    (c) for (i=0; i=0; i--)
    (d) for (i=n-1; i>=0; i--)
+answer: D
+explanation: `for(i=0; i<n; i++)` লুপে $0$ থেকে $n-1$ পর্যন্ত ইনডেক্স পাওয়া যায়। একইভাবে বিপরীত দিক থেকে পেতে `for (i=n-1; i>=0; i--)` ব্যবহৃত হয়।
 
 8. **A collection of objects that use common structure and a common behavior is known as—[ একই কাঠামো এবং একই আচরণ ব্যবহার করে এমন অবজেক্টের সংগ্রহকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*
    (a) Object
    (b) Entity
    (c) Instance
    (d) Class
+answer: D
+explanation: একই ধরনের বৈশিষ্ট্য (গঠন) এবং আচরণসম্পন্ন অবজেক্টের ব্লুপ্রিন্ট বা সংগ্রহকে ক্লাস (Class) বলা হয়।
 
 ## Pointers & Memory Allocation (5)
 
