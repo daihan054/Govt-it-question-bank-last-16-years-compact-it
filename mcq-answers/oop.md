@@ -728,33 +728,45 @@ explanation: অবজেক্টের অভ্যন্তরীণ ডে�
    b) hierarchical inheritance
    c) Hybrid inheritance
    d) Multipath inheritance
+answer: b
+explanation: একটি বেস ক্লাস থেকে যখন একাধিক সাবক্লাস ইনহেরিট করে বিস্তার লাভ করে, তখন সেই ইনহেরিটেন্স কাঠামোকে হায়ারার্কিকাল ইনহেরিটেন্স (Hierarchical inheritance) বলা হয়।
 
 2. **Which language is not support OOP four Inheritance feature?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
    (a) Smaltalk
    (b) Java
    (c) C
    (d) C++
+answer: c
+explanation: সি (C) একটি স্ট্রাকচার্ড/প্রসিডিউরাল ভাষা; এতে অবজেক্ট ও ইনহেরিটেন্সের কোনো সুবিধা নেই।
 
 3. **Which type of members can't accessed in derived classes of a base class?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*
    **Ans:** Private members
+answer: Private members
+explanation: বেস ক্লাসের প্রাইভেট মেম্বারসমূহ শুধুমাত্র সেই ক্লাসের অভ্যন্তরে সীমাবদ্ধ থাকে; ডিরাইভড ক্লাস থেকে তাদের সরাসরি অ্যাক্সেস করা যায় না।
 
 4. **What is default level of inheritance has to be specified in C++?** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*
    (a) Public
    (b) Private
    (c) Protected
    (d) Compile time error
+answer: b
+explanation: C++ এ ক্লাসের ইনহেরিটেন্সের ধরন (Access specifier) উল্লেখ না করা থাকলে ডিফল্টভাবে তা `private` ইনহেরিটেন্স হিসেবে গণ্য হয়।
 
 5. **A derived class inherits attributes from a-** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
    A) Super Class
    B) Sub Class
    C) Inner Class
    D) Upper Class
+answer: A
+explanation: একটি সাবক্লাস বা Derived class তার প্যারেন্ট বা Super class থেকে বৈশিষ্ট্য ও মেথড উত্তরাধিকার সূত্রে লাভ করে।
 
 6. **How to access the overridden method of base class from the derived class?** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*
    A) Using arrow operator
    B) Using dot operator
    C) Using scope resolution operator
    D) Can't be accessed once overridden
+answer: C
+explanation: C++ এ সাবক্লাস থেকে বেস ক্লাসের ওভাররিডেন মেথড কল করতে স্কোপ রেজোলিউশন অপারেটর `::` ব্যবহৃত হয় (যেমন: `BaseClass::methodName()`)।
 
 ## Constructors & Destructors (6)
 
