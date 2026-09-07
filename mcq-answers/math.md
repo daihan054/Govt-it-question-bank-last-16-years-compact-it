@@ -1542,26 +1542,36 @@ explanation: একটি ছক্কার সম্ভাব্য ফলা�
    খ. তরলের প্রবাহের আপেক্ষিক গতি
    গ. তরলের প্রবাহে বাধা দেওয়ার ধর্ম
    ঘ. সবকটি
+answer: গ
+explanation: প্রবাহীর (তরল বা গ্যাস) বিভিন্ন স্তরের আপেক্ষিক গতিতে বা প্রবাহে যে অভ্যন্তরীণ ঘর্ষণ বা বাধার সৃষ্টি হয়, তাকে সান্দ্রতা (Viscosity) বলা হয়।
 
 **একজন ব্যক্তি ১০ ঘণ্টায় একটি যাত্রা সম্পন্ন করেন। তিনি যাত্রার প্রথম অর্ধেক ২১ কি.মি./ঘণ্টা গতিতে এবং দ্বিতীয় অর্ধেক ২৪ কিমি./ঘণ্টা গতিতে অতিক্রম করেন। সম্পূর্ণ যাত্রার দৈর্ঘ্য কত কিমি?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*
    ক. ২২০ কি.মি.
    খ. ২২৪ কি.মি.
    গ. ২৩০ কি.মি.
    ঘ. ২৩৪ কি.মি.
+answer: খ
+explanation: ধরি মোট দূরত্ব $2D$ কিমি। শর্তমতে, $\frac{D}{21} + \frac{D}{24} = 10 \implies \frac{8D + 7D}{168} = 10 \implies 15D = 1680 \implies D = 112$ কিমি। অতএব সম্পূর্ণ যাত্রার দৈর্ঘ্য $= 2D = 2 \times 112 = 224$ কিমি।
 
 2. **a) নিম্নোক্ত মেমোরিগুলোকে গতির দ্রুততার ভিত্তিতে ক্রমানুসারে সাজিয়ে লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+answer: Register > Cache Memory > Primary Memory (RAM) > Secondary Storage (SSD/HDD)
+explanation: মেমোরি হায়ারার্কি অনুযায়ী গতির তীব্রতা (দ্রুততম থেকে ধীরতম): রেজিস্টার (Register) > ক্যাশ মেমরি (Cache Memory) > প্রধান মেমরি (RAM) > সেকেন্ডারি স্টোরেজ (SSD > HDD)।
 
 3. **Considering computer memory speed, which one is correct order from highest to lowest?[ কম্পিউটার মেমোরির গতির দিক থেকে (speed) সর্বোচ্চ থেকে সর্বনিম্ন কোন ক্রমটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*
    (a) RAM > Cache > SSD > HDD
    (b) Cache > RAM > SSD > HDD
    (c) RAM > SSD > Cache > HDD
    (d) Cache > RAM > HDD > SSD
+answer: (b)
+explanation: মেমোরির অ্যাক্সেস স্পিড সর্বোচ্চ থেকে সর্বনিম্ন ক্রম হলো: Cache Memory > RAM > SSD > HDD।
 
 4. **In a class definition with 10 methods, to make the class maximally cohesive number of connections required among the methods are—[ ১০টি মেথড বিশিষ্ট একটি ক্লাস সংজ্ঞায়, ক্লাসটিকে সর্বোচ্চ সংগতিপূর্ণ (Maximally Cohesive) করতে মেথডগুলোর মধ্যে কতটি সংযোগ প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*
    (a) 90
    (b) 100
    (c) 10
    (d) 45
+answer: (d)
+explanation: ক্লাসের মেথডগুলোর মধ্যে সর্বোচ্চ কোহেশন (Maximal cohesion) তৈরি করতে প্রতিটি মেথড অন্য প্রতিটি মেথডের সাথে সংযুক্ত হতে হয়, যার সংখ্যা $= \frac{n(n-1)}{2} = \frac{10 \times 9}{2} = 45$টি।
 
 ## Basic Arithmetic (3)
 1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
