@@ -1579,15 +1579,21 @@ explanation: ক্লাসের মেথডগুলোর মধ্যে �
    খ. ৪০ বছর
    গ. ৫০ বছর
    ঘ. কোনটিই নয়
+answer: খ
+explanation: ৩ বছর পূর্বে ৩ জনের মোট বয়স ছিল $3 \times 27 = 81$ বছর; বর্তমানে মোট বয়স $= 81 + (3 \times 3) = 90$ বছর। আবার ৫ বছর পূর্বে স্ত্রী ও সন্তানের মোট বয়স ছিল $2 \times 20 = 40$ বছর; বর্তমানে তাদের মোট বয়স $= 40 + (2 \times 5) = 50$ বছর। অতএব স্বামীর বর্তমান বয়স $= 90 - 50 = 40$ বছর।
 
 2. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*
    ক. প্রোষিতভর্তৃকা
    খ. প্রোষিতা
    গ. প্রবাসিনী
    ঘ. প্রোষিতপত্নীক
+answer: ঘ
+explanation: এক কথায় প্রকাশ: যে নারীর স্বামী বিদেশে থাকে তাকে 'প্রোষিতভর্তৃকা' বলে এবং যে পুরুষের স্ত্রী বিদেশে থাকে তাকে 'প্রোষিতপত্নীক' বলে।
 
 3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? [ M বয়সে N থেকে বড়, O থেকে ছোট। M, N, O-এর বয়স m, n, o। কোনটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*
    (a) m > n > o
    (b) o > m > n
    (c) n > m > o
    (d) o > n > m
+answer: (b)
+explanation: শর্তানুসারে M, N এর চেয়ে বড় ($m > n$) এবং M, O এর চেয়ে ছোট ($o > m$)। একত্র করলে পাওয়া যায় $o > m > n$।
