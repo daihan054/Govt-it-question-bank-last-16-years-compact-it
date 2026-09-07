@@ -529,24 +529,32 @@ explanation: NAND গেট সার্বজনীন হওয়ায় �
    (b) J-K
    (c) D
    (d) T
+answer: C
+explanation: ডি (D বা Data/Delay) ফ্লিপ-ফ্লপে ইনপুটে যা প্রয়োগ করা হয়, ক্লক পালসের পর পরবর্তী আউটপুটে ঠিক তাই পাওয়া যায় ($Q_{next} = D$)।
 
 2. **A basic memory storage element in a digital system is:** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*
    (a) Flip-flop
    (b) Counter
    (c) Multiplexer
    (d) Encoder
+answer: A
+explanation: ডিজিটাল সিস্টেমের মৌলিক ১-বিট মেমোরি স্টোরেজ উপাদান বা মৌলিক সেল হলো ফ্লিপ-ফ্লপ (Flip-flop)।
 
 3. **How much data a flip flop can store?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*
    a) 4-bit data
    b) 1-bit data
    c) 3-bit data
    d) 3-bit data
+answer: B
+explanation: একটি ফ্লিপ-ফ্লপ ডিজিটাল ডেটার মাত্র ১টি বিট (1-bit data: ০ অথবা ১) সংরক্ষণ করতে সক্ষম।
 
 4. **A binary counter is being pulsed by a 256 kHz clock signal. The output frequency from the last flip flop is 2kHz. Which one of the following is the counting range?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 182 (ET: N/A)]*
    a) 0 to 255
    b) 0 to 128
    c) 0 to 127
    d) None of the above
+answer: C
+explanation: কাউন্টারের মডুলাস বা বিভাজন অনুপাত $\text{MOD} = 256\text{ kHz} / 2\text{ kHz} = 128 = 2^7$ (৭টি ফ্লিপ-ফ্লপ)। সুতরাং কাউন্টারটির গণনা সীমা হলো $0$ থেকে $\text{MOD}-1$ অর্থাৎ $0$ থেকে $127$।
 
 5. **Which one is the output of the following digital logic circuit?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 182 (ET: N/A)]*
    ```
@@ -570,12 +578,16 @@ explanation: NAND গেট সার্বজনীন হওয়ায় �
    b) AB+A(B+C) + B(B+C)
    c) AC+A(B+C) + B(B+C)
    d) BC+C(B+C) + B(B+C)
+answer: A
+explanation: লজিক বর্তনী অনুসারে প্রথম AND গেটের আউটপুট $AB$, মধ্যবর্তী OR গেটের আউটপুট $(B+C)$ যা পরবর্তী দুটি AND গেটে যথাক্রমে $A$ ও $C$-এর সাথে যুক্ত হয়ে $A(B+C)$ ও $C(B+C)$ গঠন করে; সবশেষে এই তিনটি টার্মকে মূল OR গেটের মাধ্যমে যুক্ত করলে আউটপুট হয় $AB + A(B+C) + C(B+C)$।
 
 6. **যে বর্তনী ১-বিট ডাটা সংরক্ষণ করতে পারে তা হলো-** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*
    A) রেজিস্টার
    B) এনকোডার
    C) ডিকোডার
    D) ফ্লিপ-ফ্লপ
+answer: D
+explanation: ফ্লিপ-ফ্লপ (Flip-flop) হলো মেমরির মৌলিক একক যা ঠিক ১-বিট বাইনারি ডাটা সংরক্ষণ করতে পারে।
 
 ## Digital Logic & Number Systems (6)
 1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*
