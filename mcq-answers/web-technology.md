@@ -295,36 +295,48 @@ explanation: HTML ডকুমেন্টের অভ্যন্তরে জ
    (b) Load balancing function
    (c) SSL-VPN function
    (d) WAF
+answer: D
+explanation: WAF (Web Application Firewall) হলো একটি বিশেষায়িত সিকিউরিটি মেকানিজম যা ক্লায়েন্ট ও ওয়েব সার্ভারের মধ্যবর্তী অ্যাপ্লিকেশন লেয়ার (Layer 7) ট্রাফিক পর্যবেক্ষণ করে এবং SQL ইনজেকশন, XSS সহ অন্যান্য ক্ষতিকর আক্রমণ প্রতিহত করে।
 
 2. **Which one of the following statements with respect to REST API is false?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*
    (a) A REST API would use a GET request to retrieve a record
    (b) A REST API would use a DELETE request to delete a record
    (c) The operations in a REST API can be called from any HTTP client
    (d) None of the above statements is false
+answer: D
+explanation: RESTful স্থাপত্যে ডেটা পড়তে GET, মুছতে DELETE ব্যবহৃত হয় এবং যেকোনো প্রমিত HTTP ক্লায়েন্ট থেকে কল করা যায়; ফলে প্রদত্ত সবগুলো বক্তব্যই সত্য (অর্থাৎ কোনোটিই মিথ্যা নয়)।
 
 3. **Which is the lightweight message format?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*
    a) XML
    b) JSON
    c) SQL
    d) HTML
+answer: B
+explanation: JSON (JavaScript Object Notation) হলো একটি সুসংগঠিত, টেক্সট-ভিত্তিক এবং লাইটওয়েট (হালকা ও দ্রুত পার্সযোগ্য) ডেটা ইন্টারচেঞ্জ ফরম্যাট।
 
 4. **Which one is modern light weight message exchange format?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*
    A) JSON
    B) XML
    C) MX
    D) HTML
+answer: A
+explanation: আধুনিক ওয়েব সার্ভিস ও মোবাইল অ্যাপ্লিকেশন যোগাযোগে এক্সএমএল-এর তুলনায় কম ওভারহেড ও দ্রুত পার্সিংয়ের কারণে JSON সবচেয়ে জনপ্রিয় লাইটওয়েট ফরম্যাট।
 
 5. **Which one is modern lightweight message exchange format?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*
    A) JSON
    B) MX
    C) HTML
    D) XML
+answer: A
+explanation: আধুনিক ওয়েব প্রযুক্তি ও মাইক্রোসার্ভিসে দ্রুত ও কম ব্যান্ডউইথ খরচে মেসেজ বিনিময়ের প্রমিত ফরম্যাট হলো JSON।
 
 6. **Which one is modern lightweight message exchange format?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*
    A) XM
    B) MX
    C) HTML
    D) JSON (JavaScript Object Notation)
+answer: D
+explanation: আধুনিক ওয়েব ডেভেলপমেন্ট ও API কমিউনিকেশনে JSON (JavaScript Object Notation) হলো সবচেয়ে জনপ্রিয় ও কার্যকর লাইটওয়েট মেসেজ ফরম্যাট।
 
 ## Full Stack & Web Servers (5)
 
