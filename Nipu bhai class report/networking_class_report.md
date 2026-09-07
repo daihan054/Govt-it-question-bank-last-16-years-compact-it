@@ -82,27 +82,21 @@
 ## all-questions/Written.md file e ja paoa gese
 
 1) computer-networks.md (Computer Networks):<br>
-   i) Subnetting & IP Addressing (119)<br>
-   ii) OSI & TCP/IP Reference Model (57)<br>
-   iii) Networking Fundamentals & Terminology (32)<br>
-   iv) Networking Devices (24)<br>
-   v) Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (23)<br>
-   vi) Transport Layer (TCP & UDP) (22)<br>
-   vii) Routing Protocols & Route Configuration (19)<br>
-   viii) IPv6 Addressing (13)<br>
-   ix) Flow Control & Data Link Layer (Stop-and-Wait) (12)<br>
-   x) Email Architecture & Protocols (SMTP, POP3, IMAP) (10)<br>
-   xi) Application Layer & Well-Known Port Numbers (6)<br>
-   xii) Switching Techniques (Circuit vs Packet Switching) (5)<br>
-   xiii) High Availability & Redundancy Protocols (VRRP, HSRP) (1)<br>
+   i) OSI & TCP/IP Reference Model (57)<br>
+   ii) Networking Fundamentals & Terminology (32)<br>
+   iii) Networking Devices (24)<br>
+   iv) Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS) (23)<br>
+   v) Transport Layer (TCP & UDP) (22)<br>
+   vi) Routing Protocols & Route Configuration (19)<br>
+   vii) Flow Control & Data Link Layer (Stop-and-Wait) (12)<br>
+   viii) Email Architecture & Protocols (SMTP, POP3, IMAP) (10)<br>
+   ix) Application Layer & Well-Known Port Numbers (6)<br>
 
 2) computer-network-security.md (Computer Network Security):<br>
    i) Social Engineering & Cyber Attacks (32)<br>
    ii) Firewalls & Network Defense (20)<br>
-   iii) Web Security Vulnerabilities (19)<br>
-   iv) Authentication & Access Control (16)<br>
-   v) Security Protocols (SSL/TLS, HTTPS) (12)<br>
-   vi) VPN & Tunneling Protocols (IPsec, SSL VPN) (6)<br>
+   iii) Authentication & Access Control (16)<br>
+   iv) Security Protocols (SSL/TLS, HTTPS) (12)<br>
 
 ---
 
@@ -112,15 +106,9 @@
    i) Networking Fundamentals & Terminology (75)<br>
    ii) Application Layer Protocols (58)<br>
    iii) Network Devices & Configuration (38)<br>
-   iv) Subnetting & IP Addressing (33)<br>
-   v) OSI & TCP-IP Model (16)<br>
-   vi) Routing Protocols (13)<br>
-   vii) IPv6 Addressing (13)<br>
-   viii) Switching Techniques (3)<br>
+   iv) OSI & TCP-IP Model (16)<br>
+   v) Routing Protocols (13)<br>
 
 2) computer-network-security.md (Computer Network Security):<br>
    i) Cyber Attacks & Threats (20)<br>
    ii) Security Protocols (9)<br>
-   iii) Security Principles (CIA Triad) (5)<br>
-   iv) Web Security Vulnerabilities (4)<br>
-   v) Email Security & Spam (2)<br>
