@@ -1271,48 +1271,64 @@ explanation: ব্লুটুথ (Class 2 ডিভাইস) সাধার�
    (খ) Difference
    (গ) Intersection
    (ঘ) Complement
+answer: (গ)
+explanation: দুটি সেটের মধ্যে কোনো সাধারণ উপাদান না থাকলে অর্থাৎ তাদের ছেদ সেট ফাঁকা সেট ($A \cap B = \emptyset$) হলে তাদেরকে নিচ্ছেদ সেট বা Disjoint set বলা হয়।
 
 2. **Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*
    a) 7
    b) 5
    c) 15
    d) 10
+answer: b
+explanation: অন্তত একটি বিষয়ে পাস করেছে $= 90 + 85 - 80 = 95$ জন। সুতরাং উভয় বিষয়ে ফেল (failed) করেছে $= 100 - 95 = 5$ জন।
 
 3. **In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
    a) 1/5
    b) 4/15
    c) 1/3
    d) 7/15
+answer: a
+explanation: অন্তত একটি ভাষা বলতে পারে $= 15 - 3 = 12$ জন। উভয় ভাষা বলতে পারে $= 7 + 8 - 12 = 3$ জন। অতএব ভগ্নাংশ $= \frac{3}{15} = \frac{1}{5}$।
 
 4. **In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
    a. 48
    b. 20
    c. 12
    d. 28
+answer: c
+explanation: উভয় খেলা খেলে $= n(C) + n(P) - n(C \cup P) = 20 + 28 - 36 = 48 - 36 = 12$ জন।
 
 5. **Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*
    A) 4 is even or -9 is not negative
    B) 4 is odd or -9 is not negative
    C) 4 is even and -9 is negative
    D) 4 is odd and -9 is not negative
+answer: C
+explanation: ডি মরগানের সূত্রানুসারে $\neg (p \lor q) \equiv \neg p \land \neg q$। সুতরাং "4 is odd or -9 is positive" এর নেগেশন হলো "4 is even and -9 is negative" (বা not positive)।
 
 6. **If A= {1,2,3} and B= {1,2,5} then A-B=?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*
    A) {1}
    B) {5}
    C) {3}
    D) {2}
+answer: C
+explanation: সেট অন্তর $A - B$ হলো সে সকল উপাদানের সেট যা $A$-তে আছে কিন্তু $B$-তে নেই। এখানে $\{1, 2, 3\} - \{1, 2, 5\} = \{3\}$।
 
 7. **If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*
    A) 4, 8
    B) 8, 12
    C) 4, 12
    D) 6, 12
+answer: B
+explanation: যদি $A \subseteq B$ হয়, তবে $|A \cup B| = 8$ (সর্বনিম্ন)। আর যদি সেটদ্বয় নিচ্ছেদ ($A \cap B = \emptyset$) হয়, তবে $|A \cup B| = 4 + 8 = 12$ (সর্বোচ্চ)।
 
 8. **Two sets are called disjoint if the ________ is an empty set.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*
    A) intersection
    B) union
    C) difference
    D) complement
+answer: A
+explanation: দুটি সেটের ছেদ বা Intersection যদি ফাঁকা সেট (Empty set) হয়, তবে তাদেরকে নিচ্ছেদ সেট (Disjoint sets) বলা হয়।
 
 ## Average & Age Problems (6)
 
