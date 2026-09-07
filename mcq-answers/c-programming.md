@@ -954,66 +954,88 @@ explanation: C ভাষায় অ্যারে, পয়েন্টার এ�
    B) x=1-x
    C) x=x-1
    D) x=1%x
+answer: B
+explanation: যদি $x = 0$ হয়, তবে $1 - 0 = 1$; আর $x = 1$ হলে $1 - 1 = 0$। ফলে `x = 1 - x` স্টেটমেন্টটি $0$ ও $1$-এর মধ্যে টগল করার জন্য `if-else` এর সমতুল্য।
 
 2. **For a given integer, which of the following operators can be used to set and reset a particular bit respectively?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 203 (ET: AUST)]*
    A) | and &
    B) && and ||
    C) & and |
    D) || and &&
+answer: A
+explanation: কোনো বিটকে সেট (1) করতে বিটওয়াইজ OR (`|`) এবং রিসেট (0) করতে বিটওয়াইজ AND (`&`) অপারেটর ব্যবহৃত হয়।
 
 3. **Which of the declaration is correct?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*
    A) int length;
    B) char int
    C) int long;
    D) float double;
+answer: A
+explanation: `int length;` একটি সঠিক ভ্যারিয়েবল ডিক্লেয়ারেশন। অন্যগুলোতে রিজার্ভড কীওয়ার্ডকে নাম হিসেবে ব্যবহার করা হয়েছে যা অবৈধ।
 
 4. **What is the precedence of arithmetic operators (from highest to lowest)?** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*
    A) %, +, /, *, -
    B) +, -, %, *, /
    C) %, +, -, *, /
    D) %, *, /, +, -
+answer: D
+explanation: অ্যারিথমেটিক অপারেটরের অগ্রাধিকার (precedence) ক্রমানুসারে মডুলাস (`%`), গুণ (`*`), এবং ভাগ (`/`) সবার উপরে থাকে; এরপর যোগ (`+`) এবং বিয়োগ (`-`) কাজ করে।
 
 5. **Which is logical operator?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*
    A) +
    B) >=
    C) AND
    D) <<
+answer: C
+explanation: `AND` (C ভাষায় `&&`) হলো একটি লজিক্যাল অপারেটর (Logical operator)।
 
 6. **Which of the following will not increase the value of variable c by 1?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*
    A) c++
    B) c = c + 1
    C) c + 1 >= c
    D) c += 1
+answer: C
+explanation: `c + 1 >= c` একটি তুলনামূলক বা রিলেশনাল এক্সপ্রেশন যা কোনো অ্যাসাইনমেন্ট করে না। বাকি সবগুলো `c`-এর মান 1 বৃদ্ধি করে।
 
 7. **The escape sequence “\b” in C programming is -----** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*
    A) Backspace
    B) Next Line
    C) Tab
    D) None of these
+answer: A
+explanation: C ভাষায় এস্কেপ সিকোয়েন্স `\b` কার্সারকে এক ঘর পেছনে নেওয়ার জন্য বা ব্যাকস্পেস (Backspace) হিসেবে ব্যবহৃত হয়।
 
 8. **What is not the kind of data type?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*
    A) Logical
    B) Text
    C) Number
    D) Currency
+answer: D
+explanation: সাধারণ প্রোগ্রামিং ভাষা এবং C-তে কারেন্সি (Currency) কোনো স্ট্যান্ডার্ড প্রিমিটিভ ডেটা টাইপ নয়।
 
 9. **Which keyword is used in C language?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*
    A) ing
    B) for
    C) select
    D) href
+answer: B
+explanation: `for` হলো C প্রোগ্রামিং ভাষার ৩২টি সংরক্ষিত কীওয়ার্ডের অন্যতম, যা লুপ চালনার জন্য ব্যবহৃত হয়।
 
 10. **Find out the error in following block of code: if (x=100) cout<<"x is 100";** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*
    a. 100 should be enclosed in quotations
    b. There is no semicolon at the end of first line
    c. Equals to operator mistake
    d. Variable x should not be inside quotation
+answer: C
+explanation: শর্ত পরীক্ষা করার জন্য সমতা বা ইকুয়ালিটি অপারেটর `==` ব্যবহারের জায়গায় অ্যাসাইনমেন্ট অপারেটর `=` ব্যবহার করা হয়েছে, যা লজিক্যাল ভুল (Equals to operator mistake)।
 
 11. **Which of the following is not a logical operator?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*
    a. &
    b. &&
    c. ||
    d. |
+answer: A
+explanation: `&&` এবং `||` হলো লজিক্যাল অপারেটর (logical operators), আর `&` এবং `|` হলো বিটওয়াইজ অপারেটর (bitwise operators)।
 
 ## Programming Concepts (8)
 1. **Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
