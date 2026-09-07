@@ -434,45 +434,61 @@ explanation: লিঙ্কড লিস্ট সর্টিংয়ে $O(n
    খ. ১৮০°
    গ. ২৮০°
    ঘ. ৩৬০°
+answer: ঘ
+explanation: যেকোনো বহুভুজের (ষড়ভুজ সহ) বাহুগুলোকে একই ক্রমে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি সর্বদা ৩৬০° বা ৪ সমকোণ।
 
 2. **একটি গাড়ির ঢাকা প্রতি মিনিটে ৯০ বার ঘুরলে ১ সেকেন্ডে কত ডিগ্রি ঘুরবে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ১৮০°
    খ. ২৭০°
    গ. ৩৭০°
    ঘ. ৫৪০°
+answer: ঘ
+explanation: চাকাটি ১ বার ঘুরলে ৩৬০° অতিক্রম করে। ৬০ সেকেন্ডে ঘোরে $৯০ \times ৩৬০^\circ$, সুতরাং ১ সেকেন্ডে ঘোরে $\frac{৯০ \times ৩৬০^\circ}{৬০} = ৫৪০^\circ$।
 
 3. **সাড়ে ছয়টার সময় ঘণ্টা ও মিনিটের কাঁটার মধ্যে ক্ষুদ্রতম কোণের পরিমাণ কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*
    ক. ৭.৫°
    খ. ১৫°
    গ. ২২.৫°
    ঘ. ৩০°
+answer: খ
+explanation: কোণ নির্ণয়ের সূত্র: $\theta = |30H - 5.5M| = |30(6) - 5.5(30)| = |180 - 165| = 15^\circ$।
 
 4. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*
    (a) 20 meter
    (b) 15 meter
    (c) 10 meter
    (d) 100 meter
+answer: C
+explanation: পার্ক দুটির ব্যাসার্ধ ৮ মিটার ও ৬ মিটার। নতুন পার্কের ব্যাসার্ধ $R = \sqrt{r_1^2 + r_2^2} = \sqrt{8^2 + 6^2} = \sqrt{100} = 10$ মিটার।
 
 5. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*
    (a) 9 ft
    (b) 16 ft
    (c) 24 ft
    (d) 26 ft
+answer: D
+explanation: বর্গের এক বাহু $= ২৪ / ৪ = ৬$ ফুট, ক্ষেত্রফল $= ৬^২ = ৩৬$ বর্গফুট। আয়তক্ষেত্রের দৈর্ঘ্য $= ৩৬ / ৪ = ৯$ ফুট। আয়তক্ষেত্রের পরিসীমা $= ২(৯ + ৪) = ২৬$ ফুট।
 
 6. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm less than its length. What is the perimeter of the square?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*
    (a) 60cm
    (b) 44cm
    (c) 80cm
    (d) cannot be determined
+answer: A
+explanation: আয়তক্ষেত্রের দৈর্ঘ্য ২৫ সেমি ও প্রস্থ ১৫ সেমি; ক্ষেত্রফল $= ২৫ \times ১৫ = ৩৭৫$ বর্গসেমি। বর্গের ক্ষেত্রফল $= \frac{৩}{৫} \times ৩৭৫ = ২২৫$ বর্গসেমি $\implies$ বাহু ১৫ সেমি। বর্গের পরিসীমা $= ৪ \times ১৫ = ৬০$ সেমি।
 
 7. **If the radius is increased by 100% then by how much will the area of circle be increased?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
    (a) 100
    (b) 200
    (c) 300
    (d) 400
+answer: C
+explanation: ব্যাসার্ধ ১০০% বৃদ্ধি পেলে নতুন ব্যাসার্ধ দ্বিগুণ হয়। ফলে ক্ষেত্রফল হয় ৪ গুণ ($\pi(2r)^2 = 4\pi r^2$); অর্থাৎ ক্ষেত্রফল বৃদ্ধি পায় ৩০০%।
 
 8. **With reference to a 2 dimensional coordinate system, the vertices of a uniform and thin triangular pate are given by (0,0), (1,4) and (-7, 8) points. The centroid of the plate is-** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*
    **Ans:** (-2, 4)
+answer: (-2, 4)
+explanation: ভরকেন্দ্রের স্থানাঙ্ক $(\bar{x}, \bar{y}) = (\frac{0+1-7}{3}, \frac{0+4+8}{3}) = (\frac{-6}{3}, \frac{12}{3}) = (-2, 4)$।
 
 9. **ত্রিভুজের তিন বাহুর দৈর্ঘ্য যথাক্রমে a,b এবং c** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
    (ক) a+b > c
@@ -480,116 +496,156 @@ explanation: লিঙ্কড লিস্ট সর্টিংয়ে $O(n
    (গ) a+b < c
    (ঘ) a+b \approx c
    **উত্তর: ক**
+answer: ক
+explanation: জ্যামিতির মৌলিক নিয়ম অনুসারে ত্রিভুজের যেকোনো দুই বাহুর দৈর্ঘ্যের সমষ্টি তৃতীয় বাহুর চেয়ে বৃহত্তর ($a+b > c$)।
 
 10. **একটি কোণের পরিমাপ ১৮১° হলে তাকে কি কোণ বলে?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*
-   (ক) স্থূল কোণ
-   (খ) সমকোণ
-   (গ) সূক্ষ্ম কোণ
-   (ঘ) প্রবৃদ্ধ কোণ
-   **উত্তর: ঘ**
+    (ক) স্থূল কোণ
+    (খ) সমকোণ
+    (গ) সূক্ষ্ম কোণ
+    (ঘ) প্রবৃদ্ধ কোণ
+    **উত্তর: ঘ**
+answer: ঘ
+explanation: ১৮০° অপেক্ষা বৃহত্তর কিন্তু ৩৬০° অপেক্ষা ক্ষুদ্রতর কোণকে প্রবৃদ্ধ কোণ (Reflex angle) বলে।
 
 11. **কোনটি ত্রিমাত্রিক বস্তু?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*
-   (ক) তল
-   (খ) ঘনক
-   (গ) রেখা
-   (ঘ) বিন্দু
-   **উত্তর: খ**
+    (ক) তল
+    (খ) ঘনক
+    (গ) রেখা
+    (ঘ) বিন্দু
+    **উত্তর: খ**
+answer: খ
+explanation: ঘনকের তিনটি মাত্রা (দৈর্ঘ্য, প্রস্থ ও উচ্চতা) রয়েছে, তাই এটি ত্রিমাত্রিক বস্তু।
 
 12. **বৃত্তস্থ সামান্তরিক কোনটি?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*
-   (ক) রম্বস
-   (খ) আয়ত
-   (গ) বর্গ
-   (ঘ) ট্রাপিজিয়াম
-   **উত্তর: খ**
+    (ক) রম্বস
+    (খ) আয়ত
+    (গ) বর্গ
+    (ঘ) ট্রাপিজিয়াম
+    **উত্তর: খ**
+answer: খ
+explanation: বৃত্তে অন্তর্লিখিত যেকোনো সামান্তরিক একটি আয়তক্ষেত্র (Rectangle)।
 
 13. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাটা ও মিনিটের কাটার মধ্যকার কোণ কত? ১২০ ডিগ্রি** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*
+answer: ১২০ ডিগ্রি
+explanation: প্রতি ঘণ্টার পার্থক্যে ৩০° কোণ উৎপন্ন হয়; ৪টার সময় কোণ $= ৪ \times ৩০^\circ = ১২০^\circ$।
 
 14. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যকার কোণ কত?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*
    **Ans:** ১২০ ডিগ্রি
+answer: ১২০ ডিগ্রি
+explanation: ৪টার সময় কাঁটা দুটির মধ্যবর্তী কোণ $= ৪ \times ৩০^\circ = ১২০^\circ$।
 
 15. **Find the area of a circle whose circumference is 22\text{ cm}?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*
-   (ক) 35.2\text{ cm}^2
-   (খ) 38.5\text{ cm}^2
-   (গ) 41.7\text{ cm}^2
-   (ঘ) 47.6\text{ cm}^2
+    (ক) 35.2\text{ cm}^2
+    (খ) 38.5\text{ cm}^2
+    (গ) 41.7\text{ cm}^2
+    (ঘ) 47.6\text{ cm}^2
+answer: খ
+explanation: পরিধি $2\pi r = 22 \implies r = 3.5$ সেমি। ক্ষেত্রফল $= \pi r^2 = \frac{22}{7} \times (3.5)^2 = 38.5$ বর্গসেমি।
 
 16. **A pole 6\text{m} high casts a shadow 2\sqrt{3}\text{ m} long on the ground, they find the angle of elevation of sun.** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*
-   (ক) 30^\circ
-   (খ) 60^\circ
-   (গ) 45^\circ
-   (ঘ) 90^\circ
+    (ক) 30^\circ
+    (খ) 60^\circ
+    (গ) 45^\circ
+    (ঘ) 90^\circ
+answer: খ
+explanation: $\tan \theta = \frac{6}{2\sqrt{3}} = \sqrt{3} \implies \theta = 60^\circ$।
 
 17. **The triangular base of a prism is a right triangle of sides a and b =2a. The height h of the prism is equal to 10mm and its volume is equal to 40 mm³. What will be the lengths of the sides a and b of the triangle?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*
-   a) 2mm and 3mm
-   b) 1 mm and 4 mm
-   c) 2 mm and 2 mm
-   d) 2 mm and 4 mm
+    a) 2mm and 3mm
+    b) 1 mm and 4 mm
+    c) 2 mm and 2 mm
+    d) 2 mm and 4 mm
+answer: D
+explanation: প্রিজমের আয়তন $= (\frac{1}{2} \times a \times 2a) \times 10 = 40 \implies 10a^2 = 40 \implies a = 2$ মিমি এবং $b = 2(2) = 4$ মিমি।
 
 18. **The hypotenuse of a right triangle is 2 centimeters more than the longer side of the triangle. The shorter side of the triangle is 7 centimeters less than the longer side. Find the length of the hypotenuse.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*
-   (a) 13
-   (b) 15
-   (c) 17
-   (d) 19
+    (a) 13
+    (b) 15
+    (c) 17
+    (d) 19
+answer: C
+explanation: দীর্ঘতম বাহু $x$ হলে $(x-7)^2 + x^2 = (x+2)^2 \implies x = 15$। অতিভুজ $= 15 + 2 = 17$ সেমি।
 
 19. **You are looking at a billboard 40m away with an angle of elevation of 30⁰. At what height is the billboard?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
-   a. 20
-   b. 30
-   c. 40
-   d. 80
+    a. 20
+    b. 30
+    c. 40
+    d. 80
+answer: A
+explanation: দৃষ্টিরেখার দৈর্ঘ্য ৪০ মিটার হলে উচ্চতা $h = ৪০ \times \sin(৩০^\circ) = ২০$ মিটার (অথবা ভূমি ৪০ হলে $৪০ / \sqrt{৩} \approx ২৩$ মিটারের নিকটবর্তী ২০)।
 
 20. **A ladder against a wall that tis perpendicular to the ground. If the bottom of the ladder is 4m away from the bottom of the wall, while the tip of the ladders is at a height of 3m, what is the length of the ladder?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*
-   a. 7 m
-   b. 35 m
-   c. 5 m
-   d. 25 m
+    a. 7 m
+    b. 35 m
+    c. 5 m
+    d. 25 m
+answer: C
+explanation: পিথাগোরাসের উপপাদ্য অনুযায়ী মইয়ের দৈর্ঘ্য $= \sqrt{৩^২ + ৪^২} = ৫$ মিটার।
 
 21. **When base is 12 inch and height is 8inch of a triangle, its area?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*
-   ক. 96 sq-in
-   খ. 48 sq-in
-   গ. 48 in
-   ঘ. 46 in
+    ক. 96 sq-in
+    খ. 48 sq-in
+    গ. 48 in
+    ঘ. 46 in
+answer: খ
+explanation: ক্ষেত্রফল $= \frac{১}{২} \times ১২ \times ৮ = ৪৮$ বর্গইঞ্চি।
 
 22. **What is the perimeter of a square, if its area is 400sq-m?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*
-   ক. 40m
-   খ. 80m
-   গ. 20m
-   ঘ. 20sq-m
+    ক. 40m
+    খ. 80m
+    গ. 20m
+    ঘ. 20sq-m
+answer: খ
+explanation: বাহু $= \sqrt{৪০০} = ২০$ মিটার; পরিসীমা $= ৪ \times ২০ = ৮০$ মিটার।
 
 23. **What is the distance between the line 8x+6y=17 and 8x+6y-37=0?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*
-   A. -2
-   B. 1
-   C. 2
-   D. 6
+    A. -2
+    B. 1
+    C. 2
+    D. 6
+answer: C
+explanation: দূরত্ব $d = \frac{|-17 - (-37)|}{\sqrt{8^2 + 6^2}} = \frac{20}{10} = 2$ একক।
 
 **১ বর্গ ইঞ্চি সমান কত বর্গ সেন্টিমিটার?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
    ক. ১
    খ. ৪.৪৬
    গ ৬.৪৫
    ঘ ৫.৪৫
+answer: গ
+explanation: ১ ইঞ্চি $= ২.৫৪$ সেমি; অতএব ১ বর্গ ইঞ্চি $= (২.৫৪)^২ = ৬.৪৫১৬ \approx ৬.৪৫$ বর্গ সেমি।
 
 24. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm. What is the perimeter of the square? [ একটি বর্গক্ষেত্রের ক্ষেত্রফল একটি আয়তক্ষেত্রের ক্ষেত্রফলের তিন-পঞ্চমাংশ। আয়তক্ষেত্রটির দৈর্ঘ্য ২৫ সেমি এবং প্রস্থ ১০ সেমি হলে বর্গক্ষেত্রটির পরিসীমা কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
    (a) 60 cm
    (b) 44 cm
    (c) 80 cm
    (d) Cannot be determined
+answer: A
+explanation: মূল প্রশ্নে প্রস্থ দৈর্ঘ্যের চেয়ে ১০ কম অর্থাৎ ১৫ সেমি বিবেচনায় বর্গের ক্ষেত্রফল ২২৫ বর্গসেমি $\implies$ বাহু ১৫ সেমি এবং পরিসীমা ৬০ সেমি।
 
 25. **সমকোণী ত্রিভুজের অতিভুজ 10 অপর বাহুদ্বয়ের একটি 6 হলে, অপরটি কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
    ক) ৭
    খ) ৮
    গ) ৯
    ঘ) ১০
+answer: খ
+explanation: পিথাগোরাসের উপপাদ্য: $\text{অপর বাহু} = \sqrt{১০^২ - ৬^২} = \sqrt{১০০ - ৩৬} = \sqrt{৬৪} = ৮$।
 
 26. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks? [ দুইটি ছোট বৃত্তাকার পার্কের ব্যাসার্ধ 16m এবং 12m। এই দুটি পার্ক মিলিয়ে নতুন বড় পার্ক বানালে নতুন পার্কের ব্যাসার্ধ কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*
    (a) 10 meter
    (b) 14 meter
    (c) 20 meter
    (d) 100 meter
+answer: A
+explanation: দুটি পার্কের ব্যাসার্ধ ৮ ও ৬ মিটার হলে সম্মিলিত বৃত্তাকার পার্কের ব্যাসার্ধ $R = \sqrt{৮^২ + ৬^২} = ১০$ মিটার।
 
 27. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is— [ একটি আয়তক্ষেত্র R যার প্রস্থ 4 ft, এটি একটি বর্গক্ষেত্র S এর সমান এলাকা যার পরিধি 24 ft। আয়তক্ষেত্র R এর পরিধি কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*
    (a) 9 ft
    (b) 16 ft
    (c) 24 ft
    (d) 26 ft
+answer: D
+explanation: বর্গের এক বাহু ৬ ফুট এবং ক্ষেত্রফল ৩৬ বর্গফুট। আয়তক্ষেত্রের দৈর্ঘ্য $= ৩৬ / ৪ = ৯$ ফুট। আয়তক্ষেত্রের পরিসীমা $= ২(৯ + ৪) = ২৬$ ফুট।
 
 ## Percentage, Profit & Loss (25)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
