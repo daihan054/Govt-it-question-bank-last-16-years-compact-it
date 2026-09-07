@@ -1612,9 +1612,13 @@ explanation: শেয়ার্ড লক (Shared Lock) একাধিক �
    b) Natural join
    c) Outer join
    d) Inner join
+answer: C
+explanation: উভয় টেবিলে মিল না থাকা সারিগুলোকেও (non-matching rows) ফলাফলে অন্তর্ভুক্ত করার জন্য আউটার জয়েন (Outer Join) ব্যবহৃত হয়।
 
 2. **Which type of JOIN operation in SQL command is used to returns that do not have matching values?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*
    a) Natural Join
    b) EQUI Join
    c) Outer Join
    d) All of the above
+answer: C
+explanation: আউটার জয়েন (Outer Join যেমন LEFT, RIGHT বা FULL OUTER JOIN) দুটি টেবিলের সম্পর্কিত শর্ত পূরণ না হলেও অমিল থাকা সারিগুলো নাল (NULL) মান সহ প্রদর্শন করে।
