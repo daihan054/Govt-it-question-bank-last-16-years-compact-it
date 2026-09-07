@@ -139,24 +139,32 @@ explanation: Selecting 'Close' from the File menu closes the open document file 
 
 ## MS Office & Shortcuts (4)
 1. **(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
+answer: N/A
+explanation: Essential Linux/Unix navigation and file management commands include: `ls` (list files), `cd` (change directory), `pwd` (print working directory), `mkdir` (create directory), `rm` (remove file/dir), `cp` (copy), `mv` (move/rename), `grep` (search text pattern), `chmod` (change file permissions), `ps` (view processes), and `kill` (terminate process).
 
 2. **Which of the following is an example of system software? [ নিচের কোনটি সিস্টেম সফটওয়্যারের উদাহরণ? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
    (a) MS Word
    (b) Google Chrome
    (c) Operating System
    (d) Photoshop
+answer: C
+explanation: An Operating System (e.g., Linux, Windows, macOS) is system software that controls and manages computer hardware and system resources, providing a foundation for application software. MS Word, Google Chrome, and Photoshop are application software.
 
 3. **The most famous romantic poet of English literature is-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
    a. John Dryden
    b. Alexander Pope
    c. William Wordsworth
    d. T.S Eliot
+answer: C
+explanation: William Wordsworth is the most celebrated romantic poet of English literature, known for launching the Romantic Age with 'Lyrical Ballads' (1798) alongside Samuel Taylor Coleridge.
 
 4. **Find the correctly spelt word** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
    a) aggrandize
    b) aggrandiize
    c) aggrandice
    d) aggrandise
+answer: A
+explanation: The correctly spelt word is "aggrandize" (meaning to enhance or increase the power, status, or wealth of someone/something).
 
 ## MS PowerPoint (3)
 
