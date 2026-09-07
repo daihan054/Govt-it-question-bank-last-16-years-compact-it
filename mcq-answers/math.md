@@ -1191,56 +1191,78 @@ explanation: মেটাডাটা (Metadata) হলো ডেটা সম�
    খ. ৫ দিন
    গ. ৬ দিন
    ঘ. ৭ দিন
+answer: ক
+explanation: কাজের সমীকরণ: $10(6M + 8B) = 2(26M + 48B) \implies 60M + 80B = 52M + 96B \implies 8M = 16B \implies 1M = 2B$। মোট কাজ $= 10(6 \times 2B + 8B) = 200$ বালক-দিন। ১৫ জন পুরুষ ও ২০ জন ছেলে $= 15(2B) + 20B = 50$ বালক। অতএব প্রয়োজনীয় সময় $= \frac{200}{50} = 4$ দিন।
 
 **পাইপ A একটি ট্যাঙ্ক ২০ মিনিটে ভর্তি করতে পারে, পাইপ B ৩০ মিনিটে ভর্তি করতে পারে এবং পাইপ C সেই ট্যাঙ্কটি ৪০ মিনিটে খালি করতে পারে। যদি এই তিনটি পাইপ একসাথে চালু করা হয়, তাহলে ট্যাঙ্কটি ভর্তি হতে কত সময় লাগবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
    ক. ১৭.১৪ মিনিট
    খ. ২০ মিনিট
    গ. ৮ মিনিট
    ঘ. কোনোটিই নয়
+answer: ক
+explanation: তিনটি পাইপ একসাথে চালু থাকলে ১ মিনিটে পূর্ণ হয় $\frac{1}{20} + \frac{1}{30} - \frac{1}{40} = \frac{6 + 4 - 3}{120} = \frac{7}{120}$ অংশ। সুতরাং সম্পূর্ণ ট্যাঙ্কটি পূর্ণ হতে সময় লাগবে $\frac{120}{7} \approx 17.14$ মিনিট।
 
 2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
    (a) Switch
    (b) Hub
    (c) Router
    (d) Modem
+answer: (a)
+explanation: সুইচ (Switch) ও ব্রিজ (Bridge) OSI মডেলের Layer 2 অর্থাৎ ডেটা লিংক লেয়ারে (Data Link Layer) কাজ করে এবং MAC অ্যাড্রেস ব্যবহার করে ফ্রেম ফরোয়ার্ড করে।
 
 3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*
    (a) 45
    (b) 90
    (c) 63
    (d) 126
+answer: (c)
+explanation: ৭ জন পুরুষ থেকে ৫ জন এবং ৩ জন মহিলা থেকে ২ জন বাছাইয়ের মোট উপায় $= ^7C_5 \times ^3C_2 = \frac{7 \times 6}{2 \times 1} \times 3 = 21 \times 3 = 63$ উপায়ে।
 
 4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
    (A) Print screen
    (B) File open
    (C) Help
    (D) Save
+answer: (C)
+explanation: উইন্ডোজ ও প্রায় সকল সফটওয়্যার অ্যাপ্লিকেশনে F1 ফাংশন কী চাপলে সার্বজনীন হেল্প বা সহায়তা উইন্ডো (Help menu) ওপেন হয়।
 
 5. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*
    ক) ফজলুর রহমান
    খ) ইউসুফ আলী
    গ) তাজউদ্দিন আহমেদ
    ঘ) মনসুর আলী
+answer: ঘ
+explanation: ১৯৭১ সালের ঐতিহাসিক মুজিবনগর সরকারের অর্থ, বাণিজ্য ও শিল্পমন্ত্রী ছিলেন ক্যাপ্টেন এম. মনসুর আলী।
 
 6. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+answer: Dynamic Host Configuration Protocol
+explanation: DHCP হলো একটি নেটওয়ার্ক ম্যানেজমেন্ট প্রটোকল, যার কাজ হলো লোকাল নেটওয়ার্কে যুক্ত ক্লায়েন্ট ডিভাইসগুলোতে স্বয়ংক্রিয় ও গতিশীলভাবে IP অ্যাড্রেস, সাবনেট মাস্ক, ডিফল্ট গেটওয়ে এবং DNS সার্ভারের তথ্য বরাদ্দ (assign) করা।
 
 7. **Math: 15 marks** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*
    i. যদি x^a = y^b = z^c এবং xyz = 1 হয় তবে ab + bc + ca এর মান নির্ণয় করুন।
    ii. একটি বৃত্তের ব্যাসার্ধ ২ সেমি ঐ বৃত্তের অন্তস্থ বর্গের ক্ষেত্রফল কত?
    iii. কোন একটি গ্রামের জনসংখ্যার ৯০% পুরুষ ৫০% যদি ৩০% পুরুষ বিবাহিত তাহলে ঐ গ্রামের মোট জনসংখ্যার কত ভাগ মহিলা অবিবাহিত।
+answer: i. 0; ii. 8 বর্গ সেমি; iii. 20%
+explanation: 
+i. $x^a = y^b = z^c = k \implies xyz = k^{1/a + 1/b + 1/c} = k^0 \implies \frac{bc+ca+ab}{abc} = 0 \implies ab + bc + ca = 0$।
+ii. বৃত্তের ব্যাস = বর্গের কর্ণ $= 2 \times 2 = 4$ সেমি। অন্তস্থ বর্গের ক্ষেত্রফল $= \frac{d^2}{2} = \frac{4^2}{2} = 8$ বর্গ সেমি।
+iii. গ্রামের বিবাহিত পুরুষ সংখ্যা = বিবাহিত মহিলা সংখ্যা। মোট জনসংখ্যার ৫০% পুরুষ ও ৫০% মহিলার মধ্যে ৩০% পুরুষ বিবাহিত হলে ৩০% মহিলাও বিবাহিত; সুতরাং অবিবাহিত মহিলা $= 50\% - 30\% = 20\%$।
 
 8. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed?[ একজন ব্যক্তি ১২০ দিনের জন্য কিছু টাকা ধার নিলেন। ব্যাংক 6% বার্ষিক হারে 360 টাকা সুদ চার্জ করল। তিনি কত টাকা ধার নিয়েছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*
-   (a) Tk.
-   18. 000
+   (a) Tk. 18,000
    (b) Tk. 16,000
    (c) Tk. 15,000
    (d) None of these
+answer: (a)
+explanation: ব্যাংকার্স নিয়মে ৩৬০ দিনে ১ বছর ধরা হলে ১২০ দিন $= \frac{120}{360} = \frac{1}{3}$ বছর। সুদ $I = \frac{P \times r \times t}{100} \implies 360 = \frac{P \times 6 \times (1/3)}{100} = \frac{2P}{100} \implies P = \frac{360 \times 100}{2} = 18,000$ টাকা।
 
 9. **Bluetooth is a type of radio wave information transmission system that is good for about—[ ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত কত দূর পর্যন্ত কাজ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*
    (a) 30 feet
    (b) 30 yards
    (c) 30 miles
    (d) 300 miles
+answer: (a)
+explanation: ব্লুটুথ (Class 2 ডিভাইস) সাধারণত ২.৪ গিগাহার্টজ রেডিও তরঙ্গ ব্যবহার করে স্বল্প দূরত্বে (প্রায় ১০ মিটার বা ৩০-৩৩ ফুট) ডেটা স্থানান্তর করে।
 
 ## Set Theory (8)
 
