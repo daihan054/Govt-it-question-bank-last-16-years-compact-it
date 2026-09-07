@@ -575,72 +575,96 @@ explanation: BST-এর ইন-অর্ডার ট্রাভার্সা
 
 ## Data Structures & Algorithms (12)
 1. **When sorting an array using randomized quicksort (pivot chosen randomly), what are the average-case and worst-case time complexities? [ যখন একটি অ্যারে randomized quicksort ব্যবহার করে sort করা হয় (pivot র‍্যান্ডমভাবে নির্বাচন করা হয়), তখন এর average-case এবং worst-case time complexity কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*
-   (a) O(n \\log n), O(n)
-   (b) O(n \\log n), O(n^2)
-   (c) O(n), O(n \\log n)
+   (a) O(n \log n), O(n)
+   (b) O(n \log n), O(n^2)
+   (c) O(n), O(n \log n)
    (d) O(n^2), O(n^2)
+answer: b
+explanation: Randomized quicksort-এ র্যান্ডম পিভট নির্বাচনের ফলে গড় সময় কমপ্লেক্সিটি হয় O(n log n), তবে চরম দুর্ভাগ্যজনক ক্ষেত্রে (যখন বারবার ক্ষুদ্রতম বা বৃহত্তম উপাদান পিভট হয়) ওর্স্ট-কেস কমপ্লেক্সিটি O(n^2) হতে পারে।
 
 2. **Which of the following is not a linear data structure? [ নিচের কোনটি linear data structure নয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
    (a) Queue
    (b) Stack
    (c) Tree
    (d) Linked List
+answer: c
+explanation: Tree হলো একটি নন-লিনিয়ার (হায়ারার্কিকাল) ডেটা স্ট্রাকচার। Queue, Stack এবং Linked List লিনিয়ার ডেটা স্ট্রাকচার।
 
 3. **Which OS concept allows multiple processes to run simultaneously? [ কোন OS concept একাধিক process একসাথে চলার অনুমতি দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*
    (a) Multithreading
    (b) Multiprocessing
    (c) Multilevel Queue
    (d) Time slicing
+answer: b
+explanation: Multiprocessing সিস্টেমে একাধিক প্রসেসর বা কোর থাকায় একাধিক স্বতন্ত্র প্রসেস প্রকৃতপক্ষে একই সময়ে সমান্তরালভাবে (Simultaneously) চলতে পারে।
 
 4. **Which data structure follows FIFO (First In First Out) principle? [ কোন ডেটা স্ট্রাকচার FIFO (First In First Out) নীতি মেনে চলে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
    (A) Stack
    (B) Queue
    (C) Tree
    (D) Graph
+answer: B
+explanation: Queue ডেটা স্ট্রাকচার FIFO (First In First Out) মূলনীতি অনুযায়ী কাজ করে।
 
 5. **How can you multiply two square 16\*16 matrices on a computer processor that can only handle 8\*8 matrix multiplications? Write an algorithm for this problem?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 380]]*
+answer: Block Matrix Multiplication
+explanation: ১৬×১৬ ম্যাট্রিক্স A ও B-কে চারটি করে ৮×৮ ব্লকে ভাগ করতে হবে: A = [[A11, A12], [A21, A22]] এবং B = [[B11, B12], [B21, B22]]। এরপর C11 = A11*B11 + A12*B21, C12 = A11*B12 + A12*B22, C21 = A21*B11 + A22*B21, C22 = A21*B12 + A22*B22 নিয়মে ৮টি ৮×৮ ম্যাট্রিক্স গুণ ও ৪টি যোগের মাধ্যমে গুণফল নির্ণয় করা যায়।
 
 6. **How can a binary tree be represented using an array, and how are the positions of the left and right children determined based on the index of the parent node?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
+answer: Array Representation of Binary Tree
+explanation: বাইনারি ট্রিকে অ্যারেতে লেভেল-অর্ডার অনুযায়ী রাখা হয়। ১-ভিত্তিক ইনডেক্সিংয়ে i তম প্যারেন্ট নোডের জন্য: বাম চাইল্ড = 2*i এবং ডান চাইল্ড = 2*i + 1। (০-ভিত্তিক ইনডেক্সিংয়ে বাম চাইল্ড = 2*i + 1 এবং ডান চাইল্ড = 2*i + 2)।
 
 7. **a) একটি Stack এ 1, 2, 2, 3, 3, 3 push করা হলো। এরপর পর পর দুইবার pop করা হলো। এর পর আবারো pop করা হলে কোন সংখ্যা বের হবে।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+answer: 3
+explanation: পুশ করার পর স্ট্যাকের উপাদান নিচ থেকে উপরে থাকে: [1, 2, 2, 3, 3, 3]। পরপর দুটি pop-এ শীর্ষের দুটি 3 বের হয়। তৃতীয়বার pop করলেও স্ট্যাকের বর্তমান শীর্ষ উপাদান 3-ই বের হবে।
 
 8. **b) মনে কর একটি Sorted array রয়েছে। সেখান থেকে একটি সংখ্যা খুঁজে বের করতে হবে যা minimum সময় নিবে তখন তুমি কোন সার্চিং Algorithm ব্যবহার করবে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+answer: Binary Search
+explanation: সর্টেড অ্যারে থেকে সর্বনিম্ন সময়ে (মাত্র O(log n) কমপ্লেক্সিটিতে) উপাদান অনুসন্ধানের জন্য Binary Search অ্যালগরিদম ব্যবহার করতে হবে।
 
 9. **BIDS published many Monographs every year. Now write an algorithm to sort them.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 485]]*
+answer: Merge Sort Algorithm
+explanation: মনোগ্রাফের তালিকার জন্য Merge Sort উপযুক্ত: ১. মনোগ্রাফ তালিকাকে দুটি সমান ভাগে বিভক্ত করা হয় (Divide); ২. প্রতিটি অংশকে রিকার্সিভলি সর্ট করা হয়; ৩. পরিশেষে দুটি সাজানো অংশকে তুলনা করে মার্জ (Merge) করা হয়। এর সময় কমপ্লেক্সিটি নিশ্চিতভাবে O(n log n)।
 
 10. **The minimum number of stacks needed to implement a queue is—[ একটি কিউ (Queue) ইমপ্লিমেন্ট করার জন্য সর্বনিম্ন কয়টি স্ট্যাক (Stack) প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*
-   (a) 1
-   (b) 2
-   (c) 3
-   (d) 4
+    (a) 1
+    (b) 2
+    (c) 3
+    (d) 4
+answer: b
+explanation: একটি FIFO কিউ বাস্তবায়ন করতে সর্বনিম্ন ২টি স্ট্যাক প্রয়োজন হয়।
 
 11. **Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be—[ ১১টি নোড বিশিষ্ট একটি বাইনারি ট্রিতে প্রতিটি নোডের হয় ০ অথবা ২টি চাইল্ড আছে। এই ট্রির সর্বোচ্চ উচ্চতা (Height) কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*
-   (a) 2
-   (b) 3
-   (c) 4
-   (d) 5
+    (a) 2
+    (b) 3
+    (c) 4
+    (d) 5
+answer: d
+explanation: প্রতিটি নোডের ০ বা ২টি সন্তান থাকলে তাকে ফুল বাইনারি ট্রি বলে। উচ্চতা h হলে সর্বনিম্ন নোড সংখ্যা N = 2h + 1। ফলে 2h + 1 = 11 => 2h = 10 => h = 5।
 
 12. **The following method, which is intended to find the maximum element of the integer array, is incorrect.[ অ্যারোর সর্বোচ্চ মান খুঁজে বের করার নিচের মেথডটি ভুল কেন? ] public int max(int[]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 511-512]]*
-   a) \{
+    a) {
 
-    int max = 0;
+     int max = 0;
 
-    for(int i = 0; i <
-   a. length; i++) \{
+     for(int i = 0; i <
+    a. length; i++) {
 
-        if(a[i] > max)
+         if(a[i] > max)
 
-            max = a[i];
+             max = a[i];
 
-    \}
+     }
 
-    return max;
+     return max;
 
-\}
-   (a) It fails whenever the array contains a 0
-   (b) It fails whenever the array contains a negative number
-   (c) It fails whenever the array contains only negative numbers
-   (d) It fails whenever the first element of the array is the largest
+ }
+    (a) It fails whenever the array contains a 0
+    (b) It fails whenever the array contains a negative number
+    (c) It fails whenever the array contains only negative numbers
+    (d) It fails whenever the first element of the array is the largest
+answer: c
+explanation: মেথডটিতে max-এর প্রারম্ভিক মান 0 ধরা হয়েছে। যদি অ্যারেতে কেবল ঋণাত্মক সংখ্যা থাকে (যেমন: [-3, -8, -5]), তবে কোনো উপাদানই 0-এর চেয়ে বড় হবে না এবং মেথডটি ভুলবশত 0 রিটার্ন করবে। তাই It fails whenever the array contains only negative numbers।
 
 ## Linked List (10)
 
