@@ -166,9 +166,13 @@ explanation: Microsoft Azure is the enterprise public cloud computing service cr
    (b) Docker is a virtual machine software, and Docker Hub is a database
    (c) Docker is a programming language, and Docker Hub is a code editor
    (d) Docker is a firewall, and Docker Hub is a security tool
+answer: A
+explanation: Docker is an open-source containerization platform used to build and package applications with all dependencies into lightweight containers. Docker Hub is the official public cloud registry service for discovering and sharing Docker container images.
 
 2. **Which software is mostly used for virtualization?** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*
    A) VMware
    B) Oracle DBMS
    C) Windows XP
    D) Linux
+answer: A
+explanation: VMware (e.g., VMware ESXi, Workstation, and vSphere) is the predominant enterprise virtualization suite used for hardware and server virtualization.
