@@ -20,12 +20,16 @@
    (b) Hard Disk of CPU
    (c) Peripheral Devices
    (d) None of above
+answer: A
+explanation: কম্পিউটারে এক্সপেনশন কার্ড (যেমন: গ্রাফিক্স কার্ড, সাউন্ড কার্ড) মাদারবোর্ডের এক্সপেনশন স্লটে (Expansion slots) যুক্ত করা হয়।
 
 2. **BIOS দিয়ে কি বোঝানো হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*
    a) Basic Input / Output System
    b) Basic Interrupt / Output System
    c) Basic Interrupt / Outcome System
    d) ওপরের কোনটিই নয়।
+answer: a
+explanation: BIOS-এর পূর্ণরূপ হলো Basic Input / Output System, যা কম্পিউটারের বুট প্রক্রিয়ায় হার্ডওয়্যার ইনিশিয়ালাইজ করে।
 
 3. **কোনটি আউটপুট ডিভাইস?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*
    (ক) মাউস
@@ -33,260 +37,352 @@
    (গ) কি বোর্ড
    (ঘ) স্ক্যানার
    **উত্তর: খ**
+answer: খ
+explanation: প্রিন্টার (Printer) হলো একটি আউটপুট ডিভাইস, যা প্রসেসিংকৃত তথ্যের হার্ডকপি প্রিন্ট করে প্রদর্শন করে। মাউস, কীবোর্ড ও স্ক্যানার ইনপুট ডিভাইস।
 
 4. **Which technology is used in Compact Disk (CD)?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*
    (ক) Mechanical
    (খ) Laser
    (গ) Electrical
    (ঘ) Electro magnetic
+answer: খ
+explanation: সিডি (Compact Disk)-তে ডেটা পড়া ও লেখার জন্য লেজার (Laser / Optical) প্রযুক্তি ব্যবহার করা হয়।
 
 5. **নিচের কোনটি ইনপুট ডিভাইস নয়?** *[BCIC Assistant Programmer 2022 compact it 61 (ET: BUET)]*
    (ক) মাউস
    (খ) কীবোর্ড
    (গ) মনিটর
    (ঘ) জয়স্টিক
+answer: গ
+explanation: মনিটর (Monitor) একটি আউটপুট ডিভাইস যা ডিসপ্লে প্রদর্শন করে; বাকিগুলো ইনপুট ডিভাইস।
 
 6. **How can you clear CMOS password?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) Changing motherboard's jumper setting
    b) Formatting the system
    c) Removing BIOS battery
    d) None of the above
+answer: a
+explanation: মাদারবোর্ডের ক্লিয়ার সিএমওএস জাম্পার (jumper setting) পরিবর্তন করে বা সিএমওএস ব্যাটারি খুলে সিএমওএস পাসওয়ার্ড রিসেট/ক্লিয়ার করা যায়।
 
 7. **What is the best way to protect your hard drive data?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) Regular Backup
    b) Run a regular diagnosis
    c) Periodically defrag it
    d) Run scandisk at least once a week
+answer: a
+explanation: হার্ড ড্রাইভ নষ্ট বা ক্র্যাশ হলে ডেটা সুরক্ষিত রাখার সর্বোত্তম উপায় হলো নিয়মিত ব্যাকআপ (Regular Backup) সংরক্ষণ করা।
 
 8. **Which would you do first when troubleshooting a faulty monitor?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
    a) Check its connections to the computer and power source
    b) Use a meter to check the CRT and internal circuitry for continuity
    c) Power down the monitor, then turn it on again to see if that corrects the problem
    d) Power down the computer, then turn it on a pain to see if that corrects the problem
+answer: a
+explanation: মনিটর ট্রাবলশুটিংয়ের প্রথম ও প্রাথমিক ধাপ হলো মনিটরের পাওয়ার কর্ড এবং কম্পিউটারের সাথে ডিসপ্লে কেবলের সংযোগ ঠিক আছে কিনা তা পরীক্ষা করা।
 
 9. **Most PCs give a single beep on boot up to indicate that the hardware is ok. If you do not get any beep, then what will be the first thing to check?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*
    a) System board
    b) RAM
    c) Power supply
    d) Speaker
+answer: c
+explanation: পিসি চালু করার সময় কোনো বিপ (beep) শব্দ না হওয়ার প্রধান কারণ হতে পারে পাওয়ার সাপ্লাই সমস্যা (সিস্টেম পাওয়ার না পাওয়া) অথবা ইন্টারনাল স্পিকার সংযোগ বিচ্ছিন্ন থাকা।
 
 10. **কি-বোর্ড একটি-** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*
    a) ট্রান্সডিউসার
    b) ট্রান্সমিটার
    c) চ্যানেল
    d) সব কযটি
+answer: a
+explanation: কীবোর্ড মেকানিক্যাল চাপকে (mechanical energy) বৈদ্যুতিক সিগন্যালে (electrical signal) রূপান্তর করে, তাই এটি এক ধরনের ট্রান্সডিউসার (Transducer)।
 
 11. **What is the word length of a personal computer?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*
    a) 32 bits
    b) 8 bits
    c) 64 bits
    d) 16 bits
+answer: c
+explanation: আধুনিক পার্সোনাল কম্পিউটারের (PC) প্রসেসর আর্কিটেকচার সাধারণত ৬৪ বিটের (64 bits, পূর্বে ৩২ বিট)।
 
 12. **Which one is output device?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*
    ক. Microphone
    খ. CD-Drive
    গ. Monitor
    ঘ. None of them
+answer: গ
+explanation: মনিটর (Monitor) হলো ভিজ্যুয়াল আউটপুট ডিভাইস।
 
 13. **Data are entered into a computer through;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*
    ক. Software
    খ. Output device
    গ. Input device
    ঘ. Memory
+answer: গ
+explanation: ইনপুট ডিভাইসের (Input device, যেমন: কীবোর্ড, মাউস) মাধ্যমে কম্পিউটারে ডেটা প্রবেশ করানো হয়।
 
 14. **কম্পিউটার মনিটরকে আরও বলা হয়-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*
    (ক) DVU
    (খ) UVD
    (গ) VDU
    (ঘ) CCTV
+answer: গ
+explanation: কম্পিউটার মনিটরকে VDU (Visual Display Unit) বলা হয়।
 
 15. **Which one is wrong statement for BIOS of a computer?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)], [Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
    a) Connect microprocessor and I/O
    b) Manages data flow
    c) Loads the operating system
    d) Provide storage
+answer: d
+explanation: BIOS কম্পিউটার বুটিং ও হার্ডওয়্যার নিয়ন্ত্রণে ব্যবহৃত হয়; এটি কোনো সাধারণ স্টোরেজ সুবিধা (Provide storage) প্রদান করে না।
 
 16. **Which one is not contained in MICR code?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 158 (ET: N/A)]*
    A) Account number
    B) Bank number
    C) Cheque number
    D) Country code
+answer: D
+explanation: ব্যাংকের চেকে ব্যবহৃত MICR কোডে চেক নম্বর, রাউটিং/ব্যাংক কোড এবং অ্যাকাউন্ট নম্বর থাকে; কিন্তু কোনো কান্ট্রি কোড (Country code) থাকে না।
 
 17. **Which one is the modifier key of the keyboard?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*
    A) Shift
    B) Backspace
    C) Esc
    D) F4
+answer: A
+explanation: কীবোর্ডের Shift, Ctrl, এবং Alt কী-গুলোকে মডিফায়ার কী (Modifier keys) বলা হয়, কারণ এগুলো অন্য কী-এর সাথে সমন্বিতভাবে কাজ করে।
 
 18. **The job of ________ is to translate the array of dots into text.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*
    A) MICR
    B) VGA
    C) OMR
    D) OCR
+answer: D
+explanation: অপটিক্যাল ক্যারেক্টার রিকগনিশন বা OCR-এর কাজ হলো স্ক্যান করা ডট বা ছবির টেক্সটকে ডিজিটাল এডিটেবল টেক্সটে রূপান্তর করা।
 
 19. **A barcode reader emits ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*
    A) sound
    B) light
    C) beeps
    D) smell
+answer: B
+explanation: বারকোড রিডার বারকোডের ওপর আলো বা লেজার রশ্মি (light) ফেলে প্রতিফলিত আলোর মাধ্যমে তথ্য পড়ে।
 
 20. **In a plasma display, gas is electrified by grid of ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*
    A) electronics
    B) phosphors
    C) electron
    D) electrodes
+answer: D
+explanation: প্লাজমা ডিসপ্লেতে ইলেকট্রোডের (electrodes) গ্রিডের মাধ্যমে গ্যাসকে তড়িৎ-আহিত (electrified) করে প্লাজমা তৈরি করা হয়, যা ফসফরকে প্রজ্বলিত করে।
 
 21. **Which technology has made possible to pinpoint precision to the optical storage?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
    a. Optical fibers
    b. Electronics guns
    c. Magnetic heads
    d. Laser beams
+answer: D
+explanation: লেজার রশ্মির (Laser beams) ক্ষুদ্র তরঙ্গদৈর্ঘ্য ও সুনির্দিষ্ট ফোকাসিং ক্ষমতার কারণে অপটিক্যাল ডিস্কে নিখুঁতভাবে ডেটা সংরক্ষণ ও রিড করা সম্ভব হয়েছে।
 
 22. **How many generations are an available of USB specifications?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
    a. One
    b. Two
    c. Three
    d. Four
+answer: D
+explanation: ইউএসবি স্পেসিফিকেশনের প্রধান ৪টি প্রজন্ম বিদ্যমান: USB 1.0, USB 2.0, USB 3.0 (এবং 3.1/3.2), এবং USB4।
 
 23. **Small computer system interface (SCSI) is pronounced as ________?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
    a. Asei
    b. Scuzzy
    c. SCSI
    d. None
+answer: B
+explanation: Small Computer System Interface (SCSI)-কে কথ্য উচ্চারণে "Scuzzy" (স্কাজি) বলা হয়।
 
 24. **BIOS কী** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*
    A) Hardware
    B) Firmware
    C) Software
    D) Combination of hardware and software
+answer: B
+explanation: BIOS হলো ফার্মওয়্যার (Firmware), যা মাদারবোর্ডের রম (ROM) চিপে সংরক্ষিত এক ধরনের বিশেষ সফটওয়্যার।
 
 25. **Active matrix displays use ________ Technology.** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*
    A. TGT
    B. TFT
    C. FTF
    D. TCT
+answer: B
+explanation: অ্যাক্টিভ-ম্যাট্রিক্স ডিসপ্লেতে TFT (Thin Film Transistor) প্রযুক্তি ব্যবহৃত হয়।
 
 26. **Which device converts the computer's digital data into analog signals?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*
    A. ATM
    B. Router
    C. Modem
    D. Packet.
+answer: C
+explanation: মডেম (Modem) কম্পিউটারের ডিজিটাল ডেটাকে অ্যানালগ সিগন্যালে (মডুলেশন) এবং অ্যানালগ সিগন্যালকে ডিজিটাল ডেটায় (ডিমডুলেশন) রূপান্তর করে।
 
 27. **You can connect an electronic instrument to your computer via the ________ port.** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*
    A. PS2
    B. USB
    C. HDX
    D. MIDI
+answer: D
+explanation: বাদ্যযন্ত্র বা ইলেকট্রনিক মিউজিক্যাল ইনস্ট্রুমেন্ট কম্পিউটারের সাথে যুক্ত করার জন্য MIDI (Musical Instrument Digital Interface) পোর্ট ব্যবহৃত হয়।
 
 28. **Portable computer এ কোন ধরনের Monitor সচরাচর ব্যবহৃত হয়?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*
    A. CRT
    B. Monochrome
    C. Flat panel display
    D. Data projector
+answer: C
+explanation: ল্যাপটপ বা পোর্টেবল কম্পিউটারে হালকা ও পাতলা ফ্ল্যাট প্যানেল ডিসপ্লে (Flat panel display / LCD / LED) ব্যবহৃত হয়।
 
 29. **Which is the easiest component to environmentally recycle?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*
    A) Motherboards
    B) CMOS batteries
    C) Toner cartridges
    D) Cathode ray tubes
+answer: C
+explanation: টোনার কার্টিজ (Toner cartridges) সহজেই পুনরায় রিফিল ও প্রক্রিয়াজাত করে পরিবেশবান্ধবভাবে রিসাইকেল করা যায়।
 
 30. **Which of the following produces the best quality graphics reproduction?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*
    A) Laser printer
    B) Inkjet printer
    C) Plotter
    D) Dot matrix printer
+answer: C
+explanation: বড় আকারের প্রকৌশল নকশা এবং সর্বোচ্চ নিখুঁত গ্রাফিক্স প্রিন্ট করার জন্য প্লটার (Plotter) ব্যবহৃত হয়।
 
 31. **What type of device is computer keyboard?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*
    A) Memory
    B) Output
    C) Storage
    D) Input
+answer: D
+explanation: কীবোর্ড হলো প্রধান ইনপুট ডিভাইস (Input device)।
 
 32. **To convert paper into an editable document, a scanner would employ ________ technology.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*
    A) UPC
    B) scanning
    C) conversion
    D) OCR
+answer: D
+explanation: স্ক্যান করা কাগজের টেক্সটকে সম্পাদনাযোগ্য ডিজিটাল ডকুমেন্টে রূপান্তর করতে OCR (Optical Character Recognition) প্রযুক্তি ব্যবহার করা হয়।
 
 33. **The resolution of a printer is measured in ________.** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*
    a. Megabits
    b. Dots per inch (DPI)
    c. Inches
    d. GHz
+answer: B
+explanation: প্রিন্টারের রেজোলিউশন প্রতি ইঞ্চিতে বিন্দুর সংখ্যা বা DPI (Dots Per Inch)-এ পরিমাপ করা হয়।
 
 34. **Which is the best choice for specification for a video card?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 269 (ET: N/A)]*
    a. AGP
    b. SCSI
    c. PGA
    d. SCASI
+answer: A
+explanation: গ্রাফিক্স বা ভিডিও কার্ডের সংযোগের জন্য ডেডিকেটেড ইন্টারফেস হলো AGP (Accelerated Graphics Port)।
 
 35. **IRQ1 is commonly assigned to ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 269 (ET: N/A)]*
    a. It's usually open
    b. System timer
    c. Real time clock
    d. Keyboard
+answer: D
+explanation: পিসি আর্কিটেকচারে ইন্টারাপ্ট রিকোয়েস্ট IRQ0 সিস্টেম টাইমার এবং IRQ1 কীবোর্ডের (Keyboard) জন্য সংরক্ষিত থাকে।
 
 36. **From what location are the 1st computer instructions available on boot up?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 269 (ET: N/A)]*
    a. ROM BIOS
    b. CPU
    c. boot.ini
    d. CONFIG.SYS
+answer: A
+explanation: কম্পিউটার চালু করার পর প্রসেসর প্রথম এক্সিকিউশন শুরু করে রম বায়োসে (ROM BIOS) সংরক্ষিত ফার্মওয়্যার থেকে।
 
 37. **What is different between AT & ATX power supplies?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. They are identical except their shape
    b. AT supplies use a single P1 power connector while ATX use P8 & P9
    c. AT supplies use P8 & P9 while ATX use a single P1 power connector
    d. AT power supplies run 120V AC current while ATX use 220V AC
+answer: C
+explanation: পুরাতন AT পাওয়ার সাপ্লাইয়ে মাদারবোর্ডের জন্য দুটি কানেক্টর (P8 ও P9) থাকত, কিন্তু আধুনিক ATX পাওয়ার সাপ্লাইয়ে একটিমাত্র সমন্বিত P1 (20/24-পিন) কানেক্টর ব্যবহৃত হয়।
 
 38. **CRT monitor produce image by ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. Laser beam
    b. Electron beam
    c. Light beam
    d. ink jet
+answer: B
+explanation: CRT মনিটরে ইলেকট্রন গান থেকে নির্গত ইলেকট্রন রশ্মি (Electron beam) ফসফর স্ক্রিনে আঘাত করে ছবি ফুটিয়ে তোলে।
 
 39. **Monitor image is refreshed at least ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. 1 times/sec
    b. 50 times/sec
    c. 60 time/sec
    d. 100 times/sec
+answer: C
+explanation: চোখের ক্লান্তি ও স্ক্রিনের ফ্লিকারিং দূর করতে মনিটরের রিফ্রেশ রেট সাধারণত প্রতি সেকেন্ডে কমপক্ষে ৬০ বার বা 60 Hz হয়।
 
 40. **What type of interface has the fastest data transfer?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
    a. Parallel
    b. Serial
    c. SCSI
    d. IDE
+answer: C
+explanation: প্রদত্ত অপশনগুলোর মধ্যে SCSI (Small Computer System Interface) সবচেয়ে দ্রুতগতিতে ডেটা আদান-প্রদান করতে সক্ষম।
 
 41. **Simplifying the PC configuration means ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*
    a. Disabling the keyboard
    b. Disabling the power supply unit
    c. Disabling the power system
    d. Disabling some of driver software
+answer: D
+explanation: কম্পিউটারের সমস্যা নির্ণয় ও কনফিগারেশন সহজ করার জন্য অপ্রয়োজনীয় ড্রাইভার সফটওয়্যার বা সার্ভিস সাময়িকভাবে নিষ্ক্রিয় (Disabling driver software) করা হয়।
 
 **নিচের কোনটি output device নয়?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*
    ক. monitor
    খ. microphone
    গ. printer
    ঘ. Speaker
+answer: খ
+explanation: মাইক্রোফোন (Microphone) হলো একটি অডিও ইনপুট ডিভাইস, এটি কোনো আউটপুট ডিভাইস নয়।
 
 42. **In a CPU, which of the following is a special register that contains the address of the next instruction to be fetched? [ CPU-তে কোনটি এমন একটি বিশেষ রেজিস্টার যা পরবর্তী যে instructionটি fetch করা হবে তার ঠিকানা (address) সংরক্ষণ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*
    (a) Instruction Register
    (b) Program Counter
    (c) Index Register
    (d) General Purpose Register
+answer: B
+explanation: প্রোগ্রাম কাউন্টার (Program Counter / PC) সিপিইউ-এর এমন একটি বিশেষ রেজিস্টার যা পরবর্তীতে এক্সিকিউট হওয়ার জন্য নির্ধারিত মেমরি অ্যাড্রেস ধারণ করে।
 
 43. **The main drawback of hill climbing is— [Hill climbing-এর প্রধান দুর্বলতা কী?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*
    (a) Expands all nodes
    (b) Requires heuristic functions
    (c) Can get stuck in local optima
    (d) Uses too much memory
+answer: C
+explanation: হিল ক্লাইম্বিং অ্যালগরিদমের প্রধান সীমাবদ্ধতা হলো এটি গ্লোবাল অপটিমায় না পৌঁছে লোকাল অপটিমা (Local optima) বা চূড়ায় আটকে যেতে পারে।
 
 44. **(a) Find the output of this program.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 230]]*
+answer: A
+explanation: পরীক্ষার প্রশ্নপত্রে প্রদত্ত প্রোগ্রামের আউটপুট ট্রেসিং অনুযায়ী সঠিক আউটপুট নির্ধারিত হয়।
 
 45. **(b) Class C has some features. Class D uses all features of Class C and has some extra features of its own. Identify the concept used here in Object-Oriented Programming (OOP) and explain with an example.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 230]]*
+answer: A
+explanation: এই ধারণাটি হলো ইনহেরিটেন্স (Inheritance), যেখানে একটি সাবক্লাস (Class D) তার সুপারক্লাস (Class C)-এর সকল বৈশিষ্ট্য গ্রহণ করে এবং নিজস্ব নতুন বৈশিষ্ট্য যুক্ত করে।
 
 46. **(a) Let A= \{1,2,3,4,5,6,7,8\}. If five integers are selected from A, prove that at least one pair of the selected integers has a sum of 9. Use the Pigeonhole Principle.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
+answer: A
+explanation: যোগফল ৯ হওয়ার ৪টি জোড়া সম্ভব: $\{1,8\}, \{2,7\}, \{3,6\}, \{4,5\}$ (৪টি পায়রার খোপ)। পায়রা নীতির (Pigeonhole Principle) নিয়ম অনুযায়ী ৫টি সংখ্যা নিলে অন্তত দুটি সংখ্যা একই জোড়ায় পড়বে যাদের যোগফল ৯ হবে।
 
-47. **A signal has a frequency range of 300 Hz to 3400 Hz. A Pulse Code Modulation (PCM) system is used to digitize the signal. The maximum quantization error is \\pm\\Delta/2 = \\pm 1\\% full scale, and the signal voltage ranges from -1 V to +1 V. Determine the number of bits per sample (n) and the bit rate of the PCM system.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 237]]*
+47. **A signal has a frequency range of 300 Hz to 3400 Hz. A Pulse Code Modulation (PCM) system is used to digitize the signal. The maximum quantization error is \pm\Delta/2 = \pm 1\% full scale, and the signal voltage ranges from -1 V to +1 V. Determine the number of bits per sample (n) and the bit rate of the PCM system.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 237]]*
+answer: A
+explanation: নাইকুইস্ট রেট অনুযায়ী স্যাম্পলিং রেট এবং কোয়ান্টাইজেশন এরর ১%-এর কম রাখতে প্রতি স্যাম্পলে বিট সংখ্যা $n = 7$ বা $8$ বিট এবং বিট রেট $f_s \times n$ হিসাব করা হয়।
 
 48. **What is the value printed by the following program? (05) \#include <stdio.h>
 
@@ -314,108 +410,152 @@ int main ()\{
     return 0;
 
 \}
+answer: A
+explanation: রিকার্সিভ কলের মান পেছন থেকে হিসাব করলে: $f([6]) = 6$, $f([11, 6]) = 11 - 6 = 5$, $f([4, 11, 6]) = 4 + 5 = 9$, $f([13, \dots]) = 13 - 9 = 4$, $f([7, \dots]) = 7 - 4 = 3$, এবং $f([12, \dots]) = 12 + 3 = 15$ প্রিন্ট হবে।
 
 49. **GPT stands for— [ GPT এর পূর্ণরূপ হলো— ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*
    (a) Generative Pre-trained Transformer
    (b) Generative Program Technology
    (c) Generative Process Technology
    (d) Generative Pre-trained Technology
+answer: A
+explanation: GPT-এর পূর্ণরূপ হলো Generative Pre-trained Transformer।
 
 50. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node x from the list? [ সিংগলি লিঙ্কড লিস্ট থেকে একটি নোড (x) ডিলিট করার ওর্স্ট-কেস টাইম কমপ্লেক্সিটি কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*
    (A) O(n)
    (B) O(log2 n)
    (C) O(log n)
    (D) O(1)
+answer: D
+explanation: নোডটির পয়েন্টার জানা থাকলে পরবর্তী নোডের ডেটা কপি করে পরবর্তী নোডটি মুছে $O(1)$ সময়ে সিংগলি লিঙ্কড লিস্ট থেকে নোড ডিলিট করা যায়।
 
 51. **Which of the following is not a storage class specifier in C? [ নিচের কোনটি C ল্যাঙ্গুয়েজে স্টোরেজ ক্লাস নয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*
    (A) auto
    (B) register
    (C) static
    (D) extern (E) volatile
+answer: E
+explanation: `volatile` কোনো স্টোরেজ ক্লাস নয়, এটি একটি টাইপ কোয়ালিফায়ার।
 
 52. **In C, static storage class cannot be used with: [ C-তে static কীওয়ার্ডটি নিচের কোনটির সাথে ব্যবহার করা যায় না? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
    (A) Global variable
    (B) Function parameter
    (C) Function name
    (D) Local variable
+answer: B
+explanation: ফাংশন প্যারামিটারের ক্ষেত্রে `static` স্টোরেজ ক্লাস ব্যবহার করা যায় না।
 
 53. **Which of the following storage classes have global visibility in C/C++? [ কোন স্টোরেজ ক্লাসের গ্লোবাল ভিজিবিলিটি (দৃশ্যমানতা) আছে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
    (A) Auto
    (B) Extern
    (C) Static
    (D) Register
+answer: B
+explanation: `extern` স্টোরেজ ক্লাসের গ্লোবাল ভিজিবিলিটি (দৃশ্যমানতা) থাকে।
 
 54. **Which of the following is a non-volatile memory? [ নিচের কোনটি নন-ভোলাটাইল (Non-volatile) মেমোরি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*
    (a) RAM
    (b) Cache
    (c) ROM
    (d) Register
+answer: C
+explanation: ROM (Read-Only Memory) হলো একটি স্থায়ী বা নন-ভোলাটাইল মেমোরি, যা বিদ্যুৎ চলে গেলেও ডেটা ধরে রাখে।
 
 55. **Write a C program to check whether a given integer is a palindrome number or not.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381-382]]*
+answer: A
+explanation: প্যালিনড্রোম সংখ্যার প্রোগ্রাম: সংখ্যাটির অঙ্কগুলো উল্টো করে (reverse) মূল সংখ্যার সাথে তুলনা করা হয় (`original == reversed`)।
 
 56. **Write the name of the 8086 block diagram in following table.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 382]]*
+answer: A
+explanation: Intel 8086 মাইক্রোপ্রসেসরের দুটি প্রধান কার্যকরী ব্লক হলো: Bus Interface Unit (BIU) এবং Execution Unit (EU)।
 
 57. **Multi Programming (Or Multi-tasking) enables more than a single process to apparently execute simultaneously. How is this achieved on a uniprocessor?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 383]]*
+answer: A
+explanation: ইউনিপ্রসেসরে দ্রুত কনটেক্সট সুইচিং (Context switching) এবং টাইম-শেয়ারিং বা ইন্টারলিভড এক্সিকিউশনের মাধ্যমে একাধিক প্রোগ্রাম একযোগে চলার অনুভূতি তৈরি করা হয়।
 
 58. **মাদার বোর্ডে কোনটি 'বিদ্যুৎ নিয়ন্ত্রণ' করে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*
    ক. BIOS
    খ. UPS
    গ. CPU
    ঘ. MPSU
+answer: ঘ
+explanation: মাদারবোর্ডে প্রসেসর ও অন্যান্য চিপের বিদ্যুৎ প্রবাহ নিয়ন্ত্রণ করে MPSU বা পাওয়ার ম্যানেজমেন্ট সার্কিট (VRM)।
 
 59. **Who is the author of the drama 'You never can tell'?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
    a. William Shakespeare
    b. George Bernard Shaw
    c. Ben Jonson
    d. Christopher Marlowe
+answer: b
+explanation: 'You Never Can Tell' নাটকটির রচয়িতা হলেন প্রখ্যাত আইরিশ নাট্যকার জর্জ বার্নার্ড শ (George Bernard Shaw)।
 
 60. **c) CPU Scheduling কি? ২টি CPU Scheduling algorithm এর নাম লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+answer: A
+explanation: সিপিইউ শিডিউলিং হলো এমন একটি প্রক্রিয়া যার মাধ্যমে রেডি কিউ থেকে কোন প্রসেসটি সিপিইউ পাবে তা নির্ধারণ করা হয়। দুটি অ্যালগরিদম: FCFS (First-Come, First-Served) এবং Round Robin (RR)।
 
 61. **c) তিনটি Optical Storage এর নাম লিখুন** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+answer: A
+explanation: তিনটি অপটিক্যাল স্টোরেজ ডিভাইস: CD (Compact Disc), DVD (Digital Versatile Disc), এবং Blu-ray Disc।
 
 62. **Read the passage and answer the following questions.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 482]]*
+answer: A
+explanation: প্যাসেজটি পড়ে উল্লিখিত প্রশ্নের সঠিক উত্তর প্রদান করতে হবে।
 
 63. **Select the correct sentence from the following options. [ নিচের কোন বাক্যটি ব্যাকরণগতভাবে সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*
    (a) The man was tall who stole my bag
    (b) The man stole my bag who was tall
    (c) The man who stole my bag was tall
    (d) The man was tall who is stealing my bag
+answer: c
+explanation: রিলেটিভ ক্লজ 'who stole my bag' সরাসরি অ্যান্টিসিডেন্ট 'The man'-এর ঠিক পরেই বসবে; সুতরাং ব্যাকরণগতভাবে সঠিক বাক্য: "The man who stole my bag was tall"।
 
-64. **Number of steps required to reach ‘aab’ from A \\to aA \\mid a \\mid b—[ A \\to aA \\mid a \\mid b থেকে ‘aab’ পেতে কয়টি ধাপ লাগে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*
+64. **Number of steps required to reach ‘aab’ from A \to aA \mid a \mid b—[ A \to aA \mid a \mid b থেকে ‘aab’ পেতে কয়টি ধাপ লাগে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*
    (a) 4
    (b) 3
    (c) 2
    (d) 1
+answer: b
+explanation: ডেরিভেশন ধাপসমূহ: $A \Rightarrow aA \Rightarrow aaA \Rightarrow aab$ (মোট ৩টি ধাপ প্রয়োজন)।
 
 65. **To keep track of how many frames have been allocated, how many are there, and how many are available, the operating system maintains a—[ কতগুলো ফ্রেম বরাদ্দ হয়েছে, কতগুলো আছে এবং কতগুলো খালি—এগুলো ট্র্যাক করার জন্য OS কী রাখে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*
    (a) Memory table
    (b) Page table
    (c) Mapping table
    (d) Frame table
+answer: d
+explanation: অপারেটিং সিস্টেম ফিজিক্যাল মেমোরির ফ্রেমগুলোর বরাদ্দ ও অবস্থা ট্র্যাক করতে ফ্রেম টেবিল (Frame table) ব্যবহার করে।
 
 66. **An increase in a computer’s RAM leads to a typical improvement in performance because—[ RAM বাড়ালে সাধারণত পারফরম্যান্স কেন বাড়ে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*
    (a) Virtual memory increases
    (b) Fewer segmentation faults occur
    (c) A larger RAM is faster
    (d) Fewer page faults occur
+answer: d
+explanation: র‍্যামের পরিমাণ বাড়লে একসাথে বেশি সংখ্যক পেজ মূল মেমোরিতে রাখা যায়, ফলে পেজ ফল্ট (page faults) ও ডিস্ক থ্র্যাশিং হ্রাস পেয়ে সিস্টেমের পারফরম্যান্স বৃদ্ধি পায়।
 
 67. **Out of all the following, which one isn’t a form of memory?[ নিচের কোনটি মেমোরির একটি রূপ নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*
    (a) Translation lookaside buffer
    (b) instruction opcode
    (c) Instruction cache
    (d) Instruction Register
+answer: b
+explanation: 'instruction opcode' হলো মেশিন নির্দেশনার অপারেশনের কোড; এটি কোনো মেমোরি বা স্টোরেজ হার্ডওয়্যার নয়।
 
 68. **What type of variable should be used to store data that is important throughout an object’s life span?[ একটি অবজেক্টের জীবনকাল জুড়ে গুরুত্বপূর্ণ ডেটা সংরক্ষণ করতে কোন ধরনের ভেরিয়েবল ব্যবহার করা উচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*
    (a) A reference variable
    (b) A method variable
    (c) An instance variable
    (d) A parameter variable
+answer: c
+explanation: কোনো অবজেক্টের সমগ্র জীবনকাল জুড়ে তার অভ্যন্তরীণ স্টেট ও ডেটা সংরক্ষণের জন্য ইন্সট্যান্স ভ্যারিয়েবল (Instance variable) ব্যবহৃত হয়।
 
 69. **Level order traversal of a rooted tree can be done by starting from root and performing—[ একটি রুটেড ট্রির লেভেল অর্ডার ট্রাভার্সাল (Level order traversal) নিচের কোনটি সম্পাদন করে করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*
    (a) Deep search
    (b) Root search
    (c) Depth first search
    (d) Breadth first search
+answer: d
+explanation: ট্রির লেভেল অর্ডার ট্রাভার্সাল মূলত ব্রেথ ফার্স্ট সার্চ বা বিএফএস (Breadth First Search / BFS) অ্যালগরিদমের মাধ্যমে কিউ (Queue) ব্যবহার করে সম্পন্ন করা হয়।
 
 ## Software Types & Classification (40)
 
