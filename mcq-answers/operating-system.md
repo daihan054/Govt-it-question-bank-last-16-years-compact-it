@@ -232,96 +232,128 @@ explanation: প্রসেস কন্ট্রোল ব্লকে (PCB) �
    (b) loosely coupled and strongly cohesive
    (c) loosely coupled and loosely cohesive
    (d) strongly coupled and strongly cohesive
+answer: D
+explanation: স্ট্রংলি কাপল্ড ও স্ট্রংলি কোহেসিভ সিস্টেমে শেয়ার্ড মেমোরির মাধ্যমে প্রসেসগুলোর মধ্যে দ্রুত যোগাযোগ ও উচ্চ মাত্রার মিথস্ক্রিয়া সম্ভব হয়, যা রিয়েল-টাইম প্রসেসিংয়ের জন্য অত্যন্ত কার্যকর।
 
 2. **Which one is an embedded operating system?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*
    (ক) UNIX
    (খ) MS windows XP
    (গ) Windows CE
    (ঘ) Windows NET
+answer: C
+explanation: Windows CE (Windows Embedded Compact) হলো মাইক্রোসফটের একটি বিশেষায়িত রিয়েল-টাইম এমবেডেড অপারেটিং সিস্টেম যা হ্যান্ডহেল্ড এবং সীমিত মেমরিসম্পন্ন ডিভাইসে ব্যবহৃত হয়।
 
 3. **Which initial program is called at the starting of a computer?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*
    a. Computer Startup Loader
    b. Operating System Details
    c. Bootstrap Loader
    d. Hardware System Details
+answer: C
+explanation: কম্পিউটার চালু করার পর রোমে থাকা বুটস্ট্র্যাপ লোডার (Bootstrap Loader) প্রোগ্রামটি সর্বপ্রথম এক্সিকিউট হয় এবং সেকেন্ডারি স্টোরেজ থেকে ওএস-কে প্রধান মেমোরিতে (RAM) লোড করে।
 
 4. **What is the mean of the Booting in the system?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*
    a. Restarting computer
    b. Install the program
    c. To scan
    d. To turn off
+answer: A
+explanation: অপারেটিং সিস্টেমকে লোড করে কম্পিউটারকে চালু বা পুনরায় চালু (Restarting/starting computer) করার সামগ্রিক প্রক্রিয়াকে বুটিং (Booting) বলে।
 
 5. **What is LINUX?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*
    ক. Operating System
    খ. Application Program
    গ. Antivirus software
    ঘ. Firewall
+answer: A
+explanation: লিনাক্স (Linux) হলো একটি বহুল ব্যবহৃত উন্মুক্ত বা ওপেন-সোর্স অপারেটিং সিস্টেম (Operating System)।
 
 6. **Where is the Boot strapping program stored?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*
    A) ROM
    B) Hard disk
    C) CD
    D) RAM
+answer: A
+explanation: প্রাথমিক বুটস্ট্র্যাপ প্রোগ্রাম বা BIOS ফার্মওয়্যার মাদারবোর্ডের নন-ভোলাটাইল মেমোরি অর্থাৎ রোমে (ROM) সংরক্ষিত থাকে।
 
 7. **Which one of the first 64-bit operating system?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) Windows Vista
    B) Mac
    C) Linux
    D) Windows XP
+answer: C
+explanation: বিকল্পগুলোর মধ্যে লিনাক্স (Linux) সর্বপ্রথম (১৯৯৫ সালে DEC Alpha আর্কিটেকচারে) পূর্ণাঙ্গ ৬৪-বিট সংস্করণ হিসেবে আত্মপ্রকাশ করে।
 
 8. **In a computer, folder opening is denied by which of the following names?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*
    A) con
    B) com
    C) mak
    D) make
+answer: A
+explanation: ডস ও উইন্ডোজ অপারেটিং সিস্টেমে 'con' (কনসোল) হলো একটি সংরক্ষিত ডিভাইস নাম (Reserved device name), যার কারণে 'con' নামে কোনো ফোল্ডার বা ফাইল তৈরি করা যায় না।
 
 9. **Which of the following contains configuration information of a window?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*
    A) .exe
    B) .ini
    C) .dill
    D) .chm
+answer: B
+explanation: উইন্ডোজে বিভিন্ন সফটওয়্যারের প্রাথমিক সেটিংস ও কনফিগারেশন তথ্য সংরক্ষণ করতে `.ini` (Initialization) এক্সটেনশনের ফাইল ব্যবহৃত হয়।
 
 10. **Who preside the interface between a process and the OS?** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*
-   (a) Kernel
-   (b) System calls
-   (c) Command
-   (d) Graphical user
+    (a) Kernel
+    (b) System calls
+    (c) Command
+    (d) Graphical user
+answer: B
+explanation: একটি চলমান প্রোগ্রাম বা প্রসেস এবং অপারেটিং সিস্টেমের কার্নেলের মধ্যে প্রধান যোগাযোগ মাধ্যম বা ইন্টারফেস হিসেবে 'সিস্টেম কল' (System calls) কাজ করে।
 
 11. **Which O/S is recommended for real time system?** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)]*
-   A) Windows
-   B) Unix
-   C) Oracle
-   D) None of this
+    A) Windows
+    B) Unix
+    C) Oracle
+    D) None of this
+answer: D
+explanation: রিয়েল-টাইম সিস্টেমের জন্য বিশেষায়িত RTOS (যেমন VxWorks, QNX) প্রয়োজন; সাধারণ উইন্ডোজ বা সাধারণ ইউনিক্স ওএস রিয়েল-টাইম নিশ্চয়তা দিতে পারে না (সঠিক উত্তর: None of this)।
 
 12. **Which OS is recommended for real time systems?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*
-   A) Windows
-   B) Unix
-   C) Oracle
-   D) None of them
+    A) Windows
+    B) Unix
+    C) Oracle
+    D) None of them
+answer: D
+explanation: সাধারণ বাণিজ্যিক অপারেটিং সিস্টেম (Windows বা সাধারণ Unix) রিয়েল-টাইম প্রসেসিংয়ের কঠোর ডেডলাইন নিশ্চিত করতে পারে না বিধায় কোনোটিই সুপারিশকৃত নয় (সঠিক উত্তর: None of them)।
 
 13. **Which one loads first when you boot up your Computer?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*
-   A) BIOS
-   B) Operating System
-   C) Keyboard driver
-   D) None of them
+    A) BIOS
+    B) Operating System
+    C) Keyboard driver
+    D) None of them
+answer: A
+explanation: কম্পিউটার অন করার পরপরই রোমে থাকা বেসিক ইনপুট/আউটপুট সিস্টেম বা BIOS (Basic Input/Output System) সর্বপ্রথম লোড হয়ে হার্ডওয়্যার চেক করে।
 
 14. **Generally what type of server OS is chosen, where security concern is a great issue?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*
-   A) Windows XP
-   B) Windows Server 2000
-   C) DOS V
-   D) UNIX
+    A) Windows XP
+    B) Windows Server 2000
+    C) DOS V
+    D) UNIX
+answer: D
+explanation: সার্ভারের সর্বোচ্চ নিরাপত্তা, স্থায়িত্ব ও পারমিশন ব্যবস্থাপনার ক্ষেত্রে ঐতিহ্যগতভাবেই ইউনিক্স (UNIX / Linux) অপারেটিং সিস্টেম অগ্রাধিকার পায়।
 
 15. **The command password issued without an argument with change the password of –** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*
-   A) Root user
-   B) Current user
-   C) User with lowest user id
-   D) User with lowest group id
+    A) Root user
+    B) Current user
+    C) User with lowest user id
+    D) User with lowest group id
+answer: B
+explanation: ইউনিক্স ও লিনাক্সে কোনো প্যারামিটার ছাড়া শুধু `passwd` কমান্ড দিলে তা বর্তমান লগইন করা ব্যবহারকারীর (Current user) পাসওয়ার্ড পরিবর্তন করে।
 
 16. **Multiprogramming systems ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*
-   a. Are easier to develop than single programming system
-   b. Execute each job faster
-   c. Execute more jobs in the same time
-   d. Are used only on large mainframe computers.
+    a. Are easier to develop than single programming system
+    b. Execute each job faster
+    c. Execute more jobs in the same time
+    d. Are used only on large mainframe computers.
+answer: C
+explanation: মাল্টিপ্রোগ্রামিং সিস্টেমের মূল উদ্দেশ্য হলো সিপিইউ-কে ব্যস্ত রেখে একই নির্দিষ্ট সময়সীমার মধ্যে তুলনামূলকভাবে অধিক কাজ সম্পন্ন (Execute more jobs in the same time) করা।
 
 ## Virtual Memory & Paging (13)
 
