@@ -327,6 +327,8 @@ explanation: যেকোনো উৎপাদন প্রক্রিয়�
    (খ) Scale
    (গ) Dimension ratio
    (ঘ) Distance fraction
+answer: A
+explanation: ড্রয়িংয়ে প্রদর্শিত কোনো বস্তুর দৈর্ঘ্য এবং বস্তুটির প্রকৃত দৈর্ঘ্যের অনুপাতকে রিপ্রেজেনটেটিভ ফ্র্যাকশন (Representative Fraction বা R.F.) বলা হয়।
 
 ## Fluid Mechanics (1)
 
