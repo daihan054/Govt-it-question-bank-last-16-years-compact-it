@@ -1570,30 +1570,40 @@ explanation: জাভা অ্যাপ্লিকেশনে JDBC ড্র
    b) Transaction isolation level
    c) Cursor concurrency setting
    d) Locking hints
+answer: A
+explanation: এসকিউএল সার্ভারে কনকারেন্সি আচরণ নির্ধারণের প্রধান উপাদান হলো Transaction isolation level, Cursor concurrency এবং Locking hints; 'Lock level' কোনো আনুষ্ঠানিক কনফিগারেশন ফ্যাক্টর নয়।
 
 2. **In a DBMS, when multiple transaction programs update the same database simultaneously, which of the following is a technology that is used to prevent logical contradictions?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*
    a) Exclusive Control
    b) Integrity constraint
    c) Normalization
    d) Reorganization
+answer: A
+explanation: একাধিক ট্রানজ্যাকশন একই সাথে ডেটাবেস আপডেট করলে ডেটার অসঙ্গতি ও সংঘাত দূর করতে এক্সক্লুসিভ কন্ট্রোল বা লকিং মেকানিজম (Exclusive Control) ব্যবহার করা হয়।
 
 3. **Which of the below is responsible for controlling the interaction among simultaneous transaction?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*
    a) Serializable controller
    b) Concurrency Control Manager
    c) Transportation management system
    d) Multiple Access Protocol
+answer: B
+explanation: সমসাময়িক একাধিক ট্রানজ্যাকশনের মধ্যে তথ্যের হস্তক্ষেপ ও সংঘাত নিয়ন্ত্রণের জন্য DBMS-এর কনকারেন্সি কন্ট্রোল ম্যানেজার (Concurrency Control Manager) দায়িত্ব পালন করে।
 
 4. **In strict two phase locking protocol-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*
    a) All exclusive mode locks taken by transaction be held until transaction commit
    b) All exclusive mode locks taken by transaction can be released before transaction commits
    c) All locks can be released before transaction commits
    d) None of these
+answer: A
+explanation: স্ট্রিক্ট টু-ফেজ লকিং (Strict 2PL) প্রোটোকলের মূল শর্ত হলো একটি ট্রানজ্যাকশনের মাধ্যমে গৃহীত সমস্ত এক্সক্লুসিভ লক ট্রানজ্যাকশন কমিট বা রোলব্যাক না হওয়া পর্যন্ত ধরে রাখতে হয়।
 
 5. **A shared lock allows which of the following type of transaction to occur?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*
    A) Delete
    B) Insert
    C) Read
    D) Update
+answer: C
+explanation: শেয়ার্ড লক (Shared Lock) একাধিক ট্রানজ্যাকশনকে একই সাথে কেবল ডেটা পড়ার (Read) অনুমতি দেয়, কোনো পরিবর্তন (Write/Update/Delete) করতে দেয় না।
 
 ## SQL Joins (2)
 
