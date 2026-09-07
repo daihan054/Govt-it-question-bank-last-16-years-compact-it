@@ -520,36 +520,48 @@ explanation: কোনো কাজ সম্পাদনে কম্পিউ�
    b) Tower of Hanoi
    c) Dijkstra Shortest Path
    d) None of the above
+answer: A
+explanation: ফিবোনাচ্চি সিরিজ (Fibonacci Series) নির্ণয় হলো ডায়নামিক প্রোগ্রামিংয়ের সবচেয়ে ক্লাসিক উদাহরণ, যেখানে ওভারল্যাপিং সাব-প্রবলেমের ফলাফল মেমোইজেশন বা ট্যাবুলেশনের মাধ্যমে সংরক্ষণ করে $O(n)$ সময়ে সমাধান করা হয়।
 
 2. **Which one of the following algorithm design techniques is used in finding all pairs of shortest distances in a graph?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*
    (a) Dynamic programming
    (b) Backtracking
    (c) Greedy
    (d) Divide and Conquer
+answer: A
+explanation: গ্রাফে অল-পেয়ার্স শর্টেস্ট পাথ (All pairs of shortest distances) নির্ণয়ের আদর্শ পদ্ধতি হলো ফ্লয়েড-ওয়ার্শাল অ্যালগরিদম, যা ডায়নামিক প্রোগ্রামিং (Dynamic programming) প্যারাডাইম ব্যবহার করে নির্মিত।
 
 3. **Which algorithm used in memorization?** *[BREB Assistant Programmer 2023 compact it 31 (ET: N/A)]*
    (a) Dynamic Programming
    (b) Backtraking
    (c) Static Programming
    (d) Xtreme Programming
+answer: A
+explanation: মেমোইজেশন (Memoization) হলো ডায়নামিক প্রোগ্রামিংয়ের টপ-ডাউন পদ্ধতি, যেখানে সাব-প্রবলেমসমূহের হিসাবকৃত মান ক্যাশ বা মেমরিতে সংরক্ষণ করা হয় যাতে একই হিসাব বারবার করতে না হয়।
 
 4. **Which of the following technique uses memorizations?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*
    a) Greedy algorithms
    b) Dynamic Programming
    c) Divide and Conquer approach
    d) None of them
+answer: B
+explanation: ডায়নামিক প্রোগ্রামিং (Dynamic Programming) কৌশলে ওভারল্যাপিং উপ-সমস্যার সমাধান মেমোইজেশনের মাধ্যমে সংরক্ষণ করে কার্যকর অ্যালগরিদম তৈরি করা হয়।
 
 5. **An algorithm which is use previous step for calculation-** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*
    A) Brute force
    B) divide and conquer
    C) Dynamic programming
    D) All the above
+answer: C
+explanation: ডায়নামিক প্রোগ্রামিংয়ে (Dynamic programming) বর্তমান ধাপের কাম্য সমাধান অর্জনের জন্য পূর্ববর্তী ধাপের সংরক্ষিত হিসাবকৃত মান সরাসরি ব্যবহার করা হয়।
 
 6. **Dynamic programming approach is used to solve-** *[DESCO Assistant Engineer (CSE) 2016 compact it 256 (ET: N/A)]*
    a. Dijkstra Algorithm
    b. Kruskal’s Algorithm
    c. Prim’s Algorithm
    d. None of these
+answer: D
+explanation: ডিজকস্ট্রা, ক্রুসকল এবং প্রিমস—এই তিনটিই মূলত গ্রিডি (Greedy) পদ্ধতির অ্যালগরিদম; ডায়নামিক প্রোগ্রামিং পদ্ধতির উদাহরণ হলো বেলম্যান-ফোর্ড, ফ্লয়েড-ওয়ার্শাল বা 0/1 ন্যাপস্যাক, তাই সঠিক উত্তর None of these।
 
 ## Complexity & Analysis (4)
 
