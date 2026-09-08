@@ -2807,11 +2807,17 @@
    (c) RIP, FTP  
    (d) BGP, SMTP
 
+   answer: b — OSPF, RIP  
+   explanation: Intra-domain (interior gateway) protocols run inside one autonomous system, and both OSPF and RIP do; BGP is inter-domain.
+
 2. **Count-to-infinity problem occurs in ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*  
    (ক) Distance vector routing  
    (খ) Shortest path first  
    (গ) Link state routing  
    (ঘ) Hierarchical routing
+
+   answer: ক — Distance vector routing  
+   explanation: Each router only knows its neighbours' distances, so bad news about a failed link spreads slowly and metrics creep upward towards infinity.
 
 3. **Which of the following pairs is an example of routing protocols?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 44 (ET: N/A)]*  
    (ক) ALOHA, SMTP  
@@ -2819,11 +2825,17 @@
    (গ) OSPF, FTP  
    (ঘ) FTP, SMTP
 
+   answer: খ — BGP, RIP  
+   explanation: BGP and RIP are both routing protocols; SMTP, FTP and ALOHA are not.
+
 4. **Which of the following pairs is an example of intra-domain routing protocols?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*  
    (ক) ALOHA, RIP  
    (খ) OSPF, RIP  
    (গ) RIP, FTP  
    (ঘ) BGP, SMTP
+
+   answer: খ — OSPF, RIP  
+   explanation: OSPF and RIP are interior gateway protocols used within a single autonomous system.
 
 5. **Which of following statements is connected with managed switch?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*  
    (ক) It can configure each port differently and make VLAN  
@@ -2831,11 +2843,17 @@
    (গ) It can ensure transport layer security  
    (ঘ) None of the above
 
+   answer: ক — It can configure each port differently and make VLAN  
+   explanation: A managed switch allows per-port settings, VLANs, trunking and monitoring, which an unmanaged switch cannot do.
+
 6. **In a comparatively small organization if you want data forwarding among departments based on IP address which one of the following will be a better bet for networking?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
    a) Using Layer-3 routers  
    b) Using Layer-3 switches  
    c) Using Unmanaged switches  
    d) Combining a and b
+
+   answer: b — Using Layer-3 switches  
+   explanation: A layer-3 switch routes between VLANs at wire speed in hardware, which is cheaper and faster than a router for traffic inside one building.
 
 7. **Distance vector routing algorithm is a dynamic routing algorithm. The routing tables in distance vector routing algorithm are updated ____.** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 77 (ET: N/A)]*  
    a. automatically  
@@ -2843,11 +2861,17 @@
    c. with back up database  
    d. by exchanging information with neighbor nodes
 
+   answer: d — by exchanging information with neighbor nodes  
+   explanation: Each router periodically sends its whole distance table to its direct neighbours, and they update their own tables from it.
+
 8. **কোন Routing Protocol এ Dijkstra Algorithm ব্যবহার করা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*  
    A) ARP  
    B) OSPF  
    C) RIP  
    D) IGRP
+
+   answer: B — OSPF  
+   explanation: OSPF is a link-state protocol that runs Dijkstra's shortest path first algorithm over the link-state database.
 
 9. **Routing is clearly the major issue for:** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
    (a) Transport layer  
@@ -2855,11 +2879,17 @@
    (c) Data-link layer  
    (d) Physical layer
 
+   answer: b — Network layer  
+   explanation: Choosing the path a packet takes between networks is the defining job of the network layer.
+
 10. **Which of the following is the metric used for OSPF?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*  
    a. Latency  
    b. Cost  
    c. Bandwidth  
    d. Next hop
+
+   answer: b — Cost  
+   explanation: OSPF picks the path with the lowest total cost, which is normally derived from interface bandwidth.
 
 11. **Which of the following describes a routing table that needs to be maintained manually?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*  
    a. Hop count based  
@@ -2867,17 +2897,26 @@
    c. Static  
    d. Dynamic
 
+   answer: c — Static  
+   explanation: Static routes are typed in by the administrator and never change on their own; dynamic protocols update themselves.
+
 12. **How the router makes decisions for SQL server database logs?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. Call router  
    b. Response Router  
    c. Automatic Router  
    d. Static Router
 
+   answer: a — Call router  
+   explanation: In Cisco ICM the Call Router makes the routing decisions and the Logger writes those records into the SQL Server database. <!-- verify -->
+
 13. **Which of the following routing protocols uses As-path as one of the methods to build the routing table?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
    a. OSPF  
    b. ISIS  
    c. BGP  
    d. EIGRP
+
+   answer: c — BGP  
+   explanation: BGP is a path-vector protocol that records the list of autonomous systems (the AS-path) a route has crossed and uses it to choose and to avoid loops.
 
 ## Error Detection & Correction (3)
 
