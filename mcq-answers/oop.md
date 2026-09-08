@@ -811,14 +811,23 @@
    c) Hybrid inheritance  
    d) Multipath inheritance
 
+   answer: b — hierarchical inheritance  
+   explanation: One base class with several classes derived from it is hierarchical inheritance.
+
 2. **Which language is not support OOP four Inheritance feature?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    (a) Smaltalk  
    (b) Java  
    (c) C  
    (d) C++
 
+   answer: c — C  
+   explanation: C is procedural and has no classes, so it supports none of the OOP inheritance features; Smalltalk, Java and C++ all do.
+
 3. **Which type of members can't accessed in derived classes of a base class?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Private members
+
+   answer: Private members  
+   explanation: Private members are visible only inside their own class; protected members are the ones a derived class can reach.
 
 4. **What is default level of inheritance has to be specified in C++?** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
    (a) Public  
@@ -826,17 +835,26 @@
    (c) Protected  
    (d) Compile time error
 
+   answer: b — Private  
+   explanation: If no access specifier is given, C++ inherits privately from a class (structs default to public).
+
 5. **A derived class inherits attributes from a-** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) Super Class  
    B) Sub Class  
    C) Inner Class  
    D) Upper Class
 
+   answer: A — Super Class  
+   explanation: The derived (child) class inherits the members of its base or superclass.
+
 6. **How to access the overridden method of base class from the derived class?** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) Using arrow operator  
    B) Using dot operator  
    C) Using scope resolution operator  
    D) Can't be accessed once overridden
+
+   answer: C — Using scope resolution operator  
+   explanation: Base::method() names the version in the base class explicitly, bypassing the override.
 
 ## Constructors & Destructors (6)
 
