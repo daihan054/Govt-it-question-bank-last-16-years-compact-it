@@ -2054,11 +2054,17 @@
    গ. Breif  
    ঘ. Secret
 
+   answer: খ — Fixed  
+   explanation: "Cut and dried" means already settled and unlikely to change.
+
 2. **'Come to light' means?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. Lighting  
    খ. To shine  
    গ. To flourish  
    ঘ. To publish
+
+   answer: ঘ — To publish  
+   explanation: "Come to light" means to become known or be made public.
 
 3. **The phrase 'Prima facie' means-** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) Primal face  
@@ -2066,11 +2072,17 @@
    (c) Main facilities  
    (d) Primitive man
 
+   answer: b — At first sight  
+   explanation: "Prima facie" is Latin for "on first appearance" — what seems true at first sight.
+
 4. **Select the correct English translation of: The boy takes after his father.** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*  
    a) ছেলেটি তার পিতার দেখাশুনা করে  
    b) ছেলেটি তার পিতার অনুকরণ করে  
    c) ছেলেটি তার পিতার পদাঙ্ক অনুসরণ করে  
    d) ছেলেটি দেখতে তার পিতার মত
+
+   answer: d — ছেলেটি দেখতে তার পিতার মত  
+   explanation: "Take after" means to resemble an older relative in looks or nature.
 
 5. **Prima facie ______ means.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    (a) Primal face  
@@ -2078,11 +2090,20 @@
    (c) Main facilities  
    (d) At first sight
 
+   answer: d — At first sight  
+   explanation: Prima facie means on the face of it, judged from first appearance.
+
 6. **The blow off some steam means ______** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 31 (ET: BUET)]*  
    **Ans:** to make angry or excited
 
+   answer: to release pent-up anger or tension  
+   explanation: "Blow off steam" means to let out strong feelings so they do not build up further.
+
 7. **‘End in smoke’ means-** *[RPGCL Assistant Engineer 2022 compact it 36 (ET: MIST)]*  
    **Ans:** end in nothing
+
+   answer: end in nothing  
+   explanation: "End in smoke" means to come to nothing after all the effort.
 
 8. **What is the meaning of 'to bell the cat'?** *[NPCBL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) Do the difficult  
@@ -2091,8 +2112,14 @@
    (d) Take the initiative  
    **Ans: d**
 
+   answer: d — Take the initiative  
+   explanation: "Bell the cat" means to be the one who takes on a dangerous task for the good of others.
+
 9. **To bring of - অর্থ কি?** *[BTRC Assistant Director (Technical) 2022 compact it 65 (ET: MIST)]*  
    উত্তর: Look after a child until it an adult
+
+   answer: Look after a child until it is an adult  
+   explanation: The idiom is "bring up", meaning to raise and rear a child.
 
 10. **What is the meaning of the phrase ‘sine die’?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) for a certain period  
@@ -2100,11 +2127,17 @@
    (গ) for a short time  
    (ঘ) none
 
+   answer: খ — for an uncertain period  
+   explanation: "Sine die" means adjourned without fixing a day to resume.
+
 11. **'A cook and bull story' means —** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*  
    (ক) An animal story  
    (খ) A comedy  
    (গ) A story about birds  
    (ঘ) A false story
+
+   answer: ঘ — A false story  
+   explanation: A cock and bull story is an absurd, unbelievable tale.
 
 12. **The phrase 'an apple of discord' means ______.** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 50 (ET: N/A)]*  
    (ক) a sour apple  
@@ -2112,11 +2145,17 @@
    (গ) an unexpected gift  
    (ঘ) an object of quarrel
 
+   answer: ঘ — an object of quarrel  
+   explanation: The phrase comes from the golden apple of Greek myth that set off a dispute among goddesses.
+
 13. **The visit his mother off and on. Here "off and on" means?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) Regularly  
    (খ) Hourly  
    (গ) Occasionally  
    (ঘ) Consistently
+
+   answer: গ — Occasionally  
+   explanation: "Off and on" means now and then, not regularly.
 
 14. **Leaders should not only make speeches they should also be prepared to bell the cat.** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) To take lead in danger  
@@ -2124,11 +2163,17 @@
    (গ) To be alert of the enemy  
    (ঘ) to make noise
 
+   answer: ক — To take lead in danger  
+   explanation: To bell the cat is to take the risky lead that others avoid.
+
 15. **Which Idiom means 'try every possible course of action in order to achieve something'?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) Leave no stone unturned  
    (খ) Take one to task  
    (গ) Ride the high horse  
    (ঘ) Give a wide berth
+
+   answer: ক — Leave no stone unturned  
+   explanation: The idiom means to try every possible means to achieve something.
 
 16. **What is the meaning of “White Elephant”?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) An elephant of white color  
@@ -2136,11 +2181,17 @@
    c) A black Marketer.  
    d) A very costly or troublesome possession
 
+   answer: d — A very costly or troublesome possession  
+   explanation: A white elephant is something expensive to keep but of little use.
+
 17. **Choose the appropriate meaning of the idiom ‘swan song’** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) First Work  
    b) Last Work  
    c) Middle Work  
    d) Early Work
+
+   answer: b — Last Work  
+   explanation: A swan song is an artist's final performance or work before retirement or death.
 
 18. **I am feeling under the water. What does the underlined phrase mean?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. Felling very cold  
@@ -2148,11 +2199,17 @@
    c. Showing sign of torture  
    d. Feeling slightly ill
 
+   answer: d — Feeling slightly ill  
+   explanation: The idiom is "under the weather", meaning slightly unwell.
+
 19. **'Enough is enough' is used to mean;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. Continue  
    খ. Stop  
    গ. Continue until it is enough  
    ঘ. None
+
+   answer: খ — Stop  
+   explanation: "Enough is enough" is said to declare that a situation must not continue.
 
 20. **"Once in a blue moon" means:** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. Always  
@@ -2160,11 +2217,17 @@
    গ. Very rarely  
    ঘ. Hourly
 
+   answer: গ — Very rarely  
+   explanation: A blue moon is a rare event, so the idiom means hardly ever.
+
 21. **The phrase ‘Baker’s dozen’ means ________** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (a) 13  
    (b) 12  
    (c) 11  
    (d) 24
+
+   answer: a — 13  
+   explanation: A baker's dozen is thirteen — bakers once added an extra loaf to avoid penalties for short weight.
 
 22. **What is the meaning of the phrase, 'of late'?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (a) long ago  
@@ -2172,11 +2235,17 @@
    (c) long since  
    (d) recently
 
+   answer: d — recently  
+   explanation: "Of late" means in the recent past.
+
 23. **'Every now and then' means-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 91 (ET: N/A)]*  
    (a) Rarely  
    (b) Occasionally  
    (c) Frequently  
    (d) Regularly
+
+   answer: b — Occasionally  
+   explanation: "Every now and then" means from time to time, not constantly.
 
 24. **His evidence bears out, the evidence of the first witness. Here bears out means** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    (a) confirms  
@@ -2184,16 +2253,25 @@
    (c) attacks  
    (d) none
 
+   answer: a — confirms  
+   explanation: "Bear out" means to support or confirm a statement.
+
 25. **Phrase and idioms:** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*  
    a) Black Ship  
    b) Ins and Outs  
    c) Fresh Blood
+
+   answer: a) Black sheep — a disgrace to the family; b) Ins and outs — all the details; c) Fresh blood — new members bringing new energy  
+   explanation: A black sheep stands out from the flock as the odd, disreputable one; "ins and outs" covers every twist of a matter; and fresh blood is used of newcomers who revive an organisation.
 
 26. **The phrase ‘Prima facie’ means— [ ‘Prima facie’ বাক্যাংশটির অর্থ কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*  
    (a) Primal face  
    (b) At first sight  
    (c) Main facilities  
    (d) Primitive man
+
+   answer: b — At first sight  
+   explanation: "Prima facie" is Latin for "at first appearance" — what seems to be true before closer examination.
 
 ## English Literature (17)
 
