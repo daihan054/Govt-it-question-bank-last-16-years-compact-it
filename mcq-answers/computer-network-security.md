@@ -642,8 +642,14 @@
    (c) TLS (Transport Layer Security)  
    (d) Hashing
 
+   answer: c — TLS (Transport Layer Security)  
+   explanation: Mail servers use STARTTLS to negotiate a TLS channel, so the message is encrypted while it travels between servers.
+
 2. **An unsolicited e-mail message sent to many recipients at once is a-** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*  
    (a) worm  
    (b) virus  
    (c) threat  
    (d) spamug
+
+   answer: d — spamug  
+   explanation: The garbled option stands for spam — unsolicited bulk email sent to many recipients at once.
