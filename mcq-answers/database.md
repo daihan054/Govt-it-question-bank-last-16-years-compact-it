@@ -555,8 +555,14 @@
    (c) Meta Data  
    (d) Warehouse
 
+   answer: c — Meta Data  
+   explanation: Metadata describes other data — column names, types, sizes and constraints — rather than the values themselves.
+
 2. **Which level of abstraction specifies the data and relationships between data?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Conceptual Level (Logical Level)
+
+   answer: Conceptual Level (Logical Level)  
+   explanation: The conceptual level describes what data is stored and how the items relate, hiding the physical storage details from the user.
 
 3. **Which of the following is not a function of a database administrator?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*  
    a) Database the design  
@@ -564,11 +570,17 @@
    c) Query processing  
    d) User coordination
 
+   answer: c — Query processing  
+   explanation: Query processing is done automatically by the DBMS engine; the DBA designs the schema, takes backups and manages users.
+
 4. **Assume that you want to improve database performance and willing to see the amount of swap space. Which command you can use in LINUX OS environment?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
    a) Lsps -a  
    b) Swapinfo -m  
    c) Swapon -s  
    d) Swap -l and Swap -s
+
+   answer: c — Swapon -s  
+   explanation: swapon -s lists each swap area with its size and usage on Linux.
 
 5. **In oracle to change the DB_Block_size parameter, you need to-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
    a) Re-create the database  
@@ -576,11 +588,17 @@
    c) Move database to temporary  
    d) Update the table types of the database
 
+   answer: a — Re-create the database  
+   explanation: DB_BLOCK_SIZE is fixed when the database is created and cannot be altered afterwards, so the database must be rebuilt.
+
 6. **Which of the following controls the execution of application program and UI in two tier client/server architecture?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
    a) Modulation side  
    b) Server side  
    c) Host side  
    d) None of the above
+
+   answer: c — Host side  
+   explanation: In a two-tier design the client host runs the user interface and application logic while the server only manages the data. <!-- verify -->
 
 7. **LGWR process writes information into-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
    a) Database files  
@@ -588,11 +606,17 @@
    c) Redo log Files  
    d) All of the above
 
+   answer: c — Redo log Files  
+   explanation: The Log Writer flushes the redo log buffer to the online redo log files so committed changes can be recovered.
+
 8. **Data integrity problems in a DBMS is caused due to-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
    a) Missing Data  
    b) Data inconsistency  
    c) Data Redundancy  
    d) Security constraints
+
+   answer: c — Data Redundancy  
+   explanation: When the same fact is stored in several places, updating one copy and not the others leaves the database inconsistent.
 
 9. **A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
    a) Data organization  
@@ -600,11 +624,17 @@
    c) Data schemas  
    d) Data models
 
+   answer: d — Data models  
+   explanation: A data model is the set of concepts used to describe data, relationships, semantics and constraints.
+
 10. **Which is the oracle component that contains the memory structures and background process?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
    a) Instance  
    b) Server  
    c) SGA  
    d) Database files
+
+   answer: a — Instance  
+   explanation: An Oracle instance is the SGA memory structures plus the background processes; the database is the files on disk.
 
 11. **The three different application logic components are which of the following?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
    a) Presentation, Client, and Storage  
@@ -612,11 +642,17 @@
    c) Presentation, Processing, and Storage  
    d) Presentation, Processing, and Network
 
+   answer: c — Presentation, Processing, and Storage  
+   explanation: Application logic splits into the presentation layer, the processing (business logic) layer and the data storage layer.
+
 12. **Of the functions provided by a DBMS. Which of the following is a means for achieving protection for data confidentiality?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
    a) Checking referential constraints when the data is updated  
    b) Managing a transaction that combines a series of processes as a logical Unit.  
    c) Managing the data access rights of users.  
    d) Placing an exclusive lock on the data before it is updated
+
+   answer: c — Managing the data access rights of users  
+   explanation: Confidentiality is protected by granting each user only the privileges they need; the other options address integrity or concurrency.
 
 13. **Oracle materialized views or SNAPSHOTS is used-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) Hiding data from users  
@@ -624,11 +660,17 @@
    c) Table Space Reduction  
    d) Data Abstraction
 
+   answer: b — Dynamic data replication  
+   explanation: A materialized view stores a physical copy of a query result and refreshes it, which is how snapshots replicate data between sites.
+
 14. **A distributed database has which of the following advantages over a centralized database?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) Software cost  
    b) Software complexity  
    c) Slow Response  
    d) Modular growth
+
+   answer: d — Modular growth  
+   explanation: A distributed database lets new sites and servers be added incrementally without redesigning the whole system.
 
 15. **In Oracle DBMS, LGWR process is a-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*  
    (a) Foreground Process  
@@ -636,11 +678,17 @@
    (c) High Priority Process  
    (d) Batch Process
 
+   answer: b — Background Process  
+   explanation: LGWR is one of Oracle's mandatory background processes, started with the instance.
+
 16. **Which one of the following is a No-SQL Database?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
    (a) MongoDB  
    (b) CasperDB  
    (c) ZBase  
    (d) All of the above
+
+   answer: a — MongoDB  
+   explanation: MongoDB is a document-oriented NoSQL database; CasperDB and ZBase are not standard products.
 
 17. **Which one of the following statements is true with respect to a Database Management System?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*  
    (a) Super key and candidate keys are similar  
@@ -648,11 +696,17 @@
    (c) Unique Keys and Primary Keys are similar  
    (d) Candidate keys and Primary keys are similar
 
+   answer: b — Candidate keys and Unique Keys are similar  
+   explanation: Every candidate key uniquely identifies a row and is enforced by a UNIQUE constraint; a super key need not be minimal and a primary key is just the one candidate key chosen. <!-- verify -->
+
 18. **The collection of information stored in the database at a particular moment is called-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
    a) Schema  
    b) Instance  
    c) Relation  
    d) Record
+
+   answer: b — Instance  
+   explanation: A schema is the design, while the instance is the actual data held at a given moment.
 
 19. **Running the given task in less time by increasing the degree of parallelism in DBMS is called ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 174 (ET: N/A)]*  
    a) scale up  
@@ -660,11 +714,17 @@
    c) speedup  
    d) Data Warehouse
 
+   answer: c — speedup  
+   explanation: Speedup means finishing the same task faster by adding parallel resources; scale-up means handling a larger task in the same time.
+
 20. **In user facilities, copying of all records onto a main store from permanent store is considered as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
    A) delete file  
    B) rename file  
    C) save file  
    D) load file
+
+   answer: D — load file  
+   explanation: Loading copies the records from permanent storage into main memory ready for processing.
 
 21. **If master and transaction file have keys in same order, then it takes____** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
    A) less time  
@@ -672,11 +732,17 @@
    C) many hours  
    D) many days
 
+   answer: A — less time  
+   explanation: When both files are sorted on the same key they can be merged in a single pass, with no searching or re-sorting.
+
 22. **File used to update information in computer's master file is classified as** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
    A) transaction file  
    B) direct file  
    C) order file  
    D) sequence file
+
+   answer: A — transaction file  
+   explanation: A transaction file holds the day's changes that are applied to the master file during the update run.
 
 23. **Interleaving of records to form one file containing all records is classified as ____.** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*  
    A) merging  
@@ -684,11 +750,17 @@
    C) file learning  
    D) searching
 
+   answer: A — merging  
+   explanation: Merging interleaves records from two or more sorted files into one file that keeps the ordering.
+
 24. **Set of numbers used to check all groups record within limits of data is classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
    A) variable check  
    B) decimal check  
    C) type check  
    D) range check
+
+   answer: D — range check  
+   explanation: A range check verifies that each value falls between a defined lower and upper limit.
 
 25. **Process of converting data or information in the form of which is readily available for processing is called-** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*  
    A) encoding  
@@ -696,11 +768,17 @@
    C) translating  
    D) data organization
 
+   answer: A — encoding  
+   explanation: Encoding converts data into the form the system can process.
+
 26. **Which of the following term refers to the degree to which data in a database system are accurate and correct?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 217 (ET: AUST)]*  
    A) Data integrity  
    B) Data security  
    C) Data Validity  
    D) None of these
+
+   answer: A — Data integrity  
+   explanation: Data integrity means the stored data is accurate, consistent and valid throughout its life.
 
 27. **Which one is an example of DBMS?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. MS word  
@@ -708,11 +786,17 @@
    C. C++  
    D. MS Access
 
+   answer: D — MS Access  
+   explanation: MS Access is a relational database management system; Word and Excel are office applications and C++ is a language.
+
 28. **In the hypermedia database, information bits are stored in the form of:** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
    (a) Cubes  
    (b) Nodes  
    (c) Signals  
    (d) Symbols
+
+   answer: b — Nodes  
+   explanation: Hypermedia stores information in nodes that are joined by links the user can follow.
 
 29. **Data directory contains detail of-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
    A) Data structure  
@@ -720,11 +804,17 @@
    C) Data store  
    D) None
 
+   answer: A — Data structure  
+   explanation: The data dictionary or directory records the definitions of the data — names, types, lengths and structure.
+
 30. **Which of the following terms refers to the degree to which data in a database system are accurate and correct?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
    A) Data integrity  
    B) Data security  
    C) Data validity  
    D) None of the above
+
+   answer: A — Data integrity  
+   explanation: Integrity is the measure of how accurate and correct the data in the database is.
 
 31. **The following are functions of a DBMS except ________** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
    A) creating and processing forms  
@@ -732,11 +822,17 @@
    C) processing data  
    D) administrating databases
 
+   answer: A — creating and processing forms  
+   explanation: Forms belong to the application front end; the DBMS creates databases, processes data and supports administration.
+
 32. **The ________ format is usually used to store data.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) BCD  
    B) Decimal  
    C) Hexadecimal  
    D) Octal
+
+   answer: A — BCD  
+   explanation: Binary Coded Decimal stores each decimal digit in its own four-bit group, which suits business and financial data.
 
 33. **From where the data is captured in the SQL Server Database?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
    a. Automatic call decider  
@@ -744,11 +840,17 @@
    c. Automatic call distributor  
    d. Automatic historical data
 
+   answer: c — Automatic call distributor  
+   explanation: The ACD records each call's routing and handling events, and those records are captured into the SQL Server database.
+
 34. **What is the purpose of data logger?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
    a. keeps historical data  
    b. keeps all the data for delivery purpose  
    c. keeps the code for the tracking  
    d. keeps automatic call distribution
+
+   answer: a — keeps historical data  
+   explanation: The Logger writes call and configuration records to the database so historical reports can be produced.
 
 ## Normalization (16)
 
