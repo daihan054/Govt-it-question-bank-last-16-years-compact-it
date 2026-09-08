@@ -257,11 +257,17 @@
    (c) loosely coupled and loosely cohesive  
    (d) strongly coupled and strongly cohesive
 
+   answer: d — strongly coupled and strongly cohesive  
+   explanation: Tightly coupled processors share memory and a clock, so they exchange data quickly, which suits high-speed and real-time work.
+
 2. **Which one is an embedded operating system?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*  
    (ক) UNIX  
    (খ) MS windows XP  
    (গ) Windows CE  
    (ঘ) Windows NET
+
+   answer: গ — Windows CE  
+   explanation: Windows CE is Microsoft's compact OS built for embedded and handheld devices.
 
 3. **Which initial program is called at the starting of a computer?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*  
    a. Computer Startup Loader  
@@ -269,11 +275,17 @@
    c. Bootstrap Loader  
    d. Hardware System Details
 
+   answer: c — Bootstrap Loader  
+   explanation: At power-on the bootstrap loader in ROM runs first, tests the hardware and loads the operating system into memory.
+
 4. **What is the mean of the Booting in the system?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*  
    a. Restarting computer  
    b. Install the program  
    c. To scan  
    d. To turn off
+
+   answer: a — Restarting computer  
+   explanation: Booting is the start-up process that loads the operating system, and rebooting restarts it.
 
 5. **What is LINUX?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. Operating System  
@@ -281,11 +293,17 @@
    গ. Antivirus software  
    ঘ. Firewall
 
+   answer: ক — Operating System  
+   explanation: Linux is an open-source operating system kernel and the systems built around it.
+
 6. **Where is the Boot strapping program stored?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*  
    A) ROM  
    B) Hard disk  
    C) CD  
    D) RAM
+
+   answer: A — ROM  
+   explanation: The bootstrap program must be available the instant power comes on, so it lives in non-volatile ROM/firmware.
 
 7. **Which one of the first 64-bit operating system?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) Windows Vista  
@@ -293,11 +311,17 @@
    C) Linux  
    D) Windows XP
 
+   answer: C — Linux  
+   explanation: Linux ran on 64-bit DEC Alpha hardware in 1995, years before the 64-bit versions of Windows and Mac OS.
+
 8. **In a computer, folder opening is denied by which of the following names?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) con  
    B) com  
    C) mak  
    D) make
+
+   answer: A — con  
+   explanation: CON is a reserved MS-DOS device name (console), so Windows will not allow a file or folder to be called that.
 
 9. **Which of the following contains configuration information of a window?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*  
    A) .exe  
@@ -305,11 +329,17 @@
    C) .dill  
    D) .chm
 
+   answer: B — .ini  
+   explanation: An .ini file is a plain-text initialisation file holding configuration settings.
+
 10. **Who preside the interface between a process and the OS?** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
    (a) Kernel  
    (b) System calls  
    (c) Command  
    (d) Graphical user
+
+   answer: b — System calls  
+   explanation: System calls are the controlled entry points a process uses to request services from the kernel.
 
 11. **Which O/S is recommended for real time system?** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)]*  
    A) Windows  
@@ -317,11 +347,17 @@
    C) Oracle  
    D) None of this
 
+   answer: B — Unix  
+   explanation: UNIX gives fine control over scheduling and priorities, so real-time variants of it are used for time-critical systems.
+
 12. **Which OS is recommended for real time systems?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) Windows  
    B) Unix  
    C) Oracle  
    D) None of them
+
+   answer: B — Unix  
+   explanation: UNIX and its real-time derivatives provide the deterministic scheduling a real-time system needs.
 
 13. **Which one loads first when you boot up your Computer?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) BIOS  
@@ -329,11 +365,17 @@
    C) Keyboard driver  
    D) None of them
 
+   answer: A — BIOS  
+   explanation: The BIOS firmware runs first, performs POST and then loads the operating system.
+
 14. **Generally what type of server OS is chosen, where security concern is a great issue?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) Windows XP  
    B) Windows Server 2000  
    C) DOS V  
    D) UNIX
+
+   answer: D — UNIX  
+   explanation: UNIX has a mature permission model, strong user separation and a long security track record for servers.
 
 15. **The command password issued without an argument with change the password of –** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) Root user  
@@ -341,11 +383,17 @@
    C) User with lowest user id  
    D) User with lowest group id
 
+   answer: B — Current user  
+   explanation: passwd with no argument changes the password of the user who runs it; only root can name another user.
+
 16. **Multiprogramming systems ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Are easier to develop than single programming system  
    b. Execute each job faster  
    c. Execute more jobs in the same time  
    d. Are used only on large mainframe computers.
+
+   answer: c — Execute more jobs in the same time  
+   explanation: While one job waits for I/O the CPU switches to another, so overall throughput rises even though no single job runs faster.
 
 ## Virtual Memory & Paging (13)
 
