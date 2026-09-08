@@ -617,11 +617,17 @@
    (c) 3  
    (d) 4
 
+   answer: N = 6 — none of the printed options  
+   explanation: Deadlock is impossible while R ≥ N(max-1)+1, so 6 ≥ N+1 means N up to 5 is always safe; only 6 processes each holding one resource and needing one more can deadlock. <!-- verify -->
+
 2. **Which one of the following is the deadlock avoidance algorithm?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) banker’s algorithm  
    b) round-robin algorithm  
    c) Elevator algorithm  
    d) karn’s algorithm
+
+   answer: a — banker's algorithm  
+   explanation: The banker's algorithm grants a request only if the resulting state is still safe, which avoids deadlock rather than merely detecting it.
 
 3. **Which of the following is not a deadlock handling strategy?** *[NPCBL Executive Trainee (Software) 2023 compact it 41 (ET: N/A)]*  
    a) Deadlock prevention  
@@ -629,11 +635,17 @@
    c) Deadlock detection and recovery  
    d) Deadlock annihilation
 
+   answer: d — Deadlock annihilation  
+   explanation: The real strategies are prevention, avoidance, detection and recovery, and ignoring the problem; "annihilation" is not one of them.
+
 4. **A system has 12 magnetic tape drives and 3 processes: PO, PI, and P2. Process PO requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives. The current allocation tape drives of processes P0, PI and P2 is 5, 2, 2, respectively. Which of the following sequence is a safe sequence?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*  
    a) P0, PI, P2  
    b) P1, P2, P0  
    c) P2, P0, P1  
    d) P1, P0, P2
+
+   answer: d — P1, P0, P2  
+   explanation: 3 drives are free; P1 needs 2 and finishes releasing 4 (7 free... 5 available), then P0 needs 5 and finishes releasing 10, leaving enough for P2's 7.
 
 5. **A computer system has 6 type drives and each process may need 3 type drives. What is the maximum number of processes than is guaranteed to be deadlock free?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 164 (ET: N/A)]*  
    a) 4  
@@ -650,11 +662,17 @@
    c) Attribute has multiple value  
    d) It has functional dependency
 
+   answer: c — 2  
+   explanation: Deadlock is impossible while 6 ≥ N(3-1)+1, so 2N ≤ 5 and N can be at most 2. The stray item pasted here answers (c) — the Content attribute holds multiple values, breaking 1NF.
+
 6. **The request and release of resources are-** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*  
    (a) Command line  
    (b) Interrupts statements  
    (c) System calls  
    (d) Special program
+
+   answer: c — System calls  
+   explanation: A process asks the kernel for a resource and gives it back through system calls, the controlled interface into the OS.
 
 ## File Systems & Disk Management (4)
 
