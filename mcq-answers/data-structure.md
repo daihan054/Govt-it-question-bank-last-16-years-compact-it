@@ -746,11 +746,17 @@
    (c) \Theta(n^2)  
    (d) \Theta(1)
 
+   answer: c — Θ(n²)  
+   explanation: Each of the n insertions may have to walk past every element already stored, giving 1+2+...+n comparisons.
+
 2. **In the worst case, the number of comparisons needed to search a singly linked list oflength n for a given element is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) \log(2*n)  
    (b) \frac{n}{2}  
    (c) n  
    (d) \log(2*n)-1
+
+   answer: c — n  
+   explanation: A linked list can only be searched sequentially, so in the worst case all n nodes are compared.
 
 3. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node Q from the list?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*  
    (A) O(n)  
@@ -758,11 +764,17 @@
    (C) O(logn)  
    (D) O(1)
 
+   answer: D — O(1)  
+   explanation: Copy the next node's data into x and unlink that next node, which takes constant time (this trick fails only for the last node).
+
 4. **In a doubly linked list, the number of pointers affected for an insertion operation will be-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*  
    (A) 5  
    (B) 0  
    (C) 1  
    (D) None of these
+
+   answer: D — None of these  
+   explanation: Inserting in the middle of a doubly linked list changes 4 pointers — the new node's prev and next, plus one link in each neighbour — and 4 is not offered.
 
 5. **The time required to search an element in a linked list of length n is-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*  
    (A) O (log n)  
@@ -770,11 +782,17 @@
    (C) O (1)  
    (D) O (n^2)
 
+   answer: B — O (n)  
+   explanation: There is no random access in a linked list, so searching means traversing up to n nodes.
+
 6. **The minimum number of fields with each node of doubly linked list is** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*  
    (A) 1  
    (B) 2  
    (C) 3  
    (D) 4
+
+   answer: C — 3  
+   explanation: A doubly linked node holds the data, a pointer to the previous node and a pointer to the next node.
 
 7. **What does following function do for a given Linked List with first node as head?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
    ```c
@@ -790,11 +808,17 @@
    c. Prints alternate nodes of Linked List  
    d. Prints alternate nodes in reverse order
 
+   answer: b — Prints all nodes of linked list in reverse order  
+   explanation: The function recurses to the end of the list first and prints on the way back, so the last node is printed first.
+
 8. **Suppose you want to insert n elements into an empty linked list while maintaining the sorted order. What is the worst-case time complexity?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*  
    a. \theta(n)  
    b. \theta(n\log n)  
    c. \theta(1)  
    d. \theta(n^2)
+
+   answer: d — θ(n²)  
+   explanation: Keeping the list sorted means each insertion may scan the whole list built so far, which sums to O(n²).
 
 9. **Link list can be implement using?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) Array  
@@ -802,11 +826,17 @@
    C) Both A & B  
    D) None of these
 
+   answer: C — Both A & B  
+   explanation: A linked list is normally built from pointers and dynamic nodes, but it can also be simulated in an array using indices as links.
+
 10. **What is the time complexity to count the number of elements in the linked list?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) O(1)  
    B) O(n)  
    C) O(\log n)  
    D) O(n \log n)
+
+   answer: B — O(n)  
+   explanation: There is no stored size, so counting requires walking every node once.
 
 ## Priority Queue & Heap (3)
 
