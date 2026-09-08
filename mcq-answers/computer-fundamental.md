@@ -626,11 +626,17 @@ int main ()\{
    c) Facebook  
    d) Safari
 
+   answer: c — Facebook  
+   explanation: Facebook is a social networking site; Chrome, Firefox and Safari are web browsers.
+
 2. **নিচের কোনটি image ফাইলের extension হিসাবে ব্যবহৃত হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 61 (ET: BUET)]*  
    a) .docx  
    b) .xls  
    c) .jpg  
    d) উপরের কোনটিই নয়।
+
+   answer: c — .jpg  
+   explanation: .jpg is a compressed image format, while .docx is a Word document and .xls a spreadsheet.
 
 3. **Which of the following file format is not a Video file format?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*  
    (ক) AVI  
@@ -638,11 +644,17 @@ int main ()\{
    (গ) MPEG  
    (ঘ) JPG
 
+   answer: ঘ — JPG  
+   explanation: JPG is a still image format; AVI, MOV and MPEG are video container formats.
+
 4. **Which one of the following is not a web browser?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) Firefox  
    (খ) Facebook  
    (গ) Chrome  
    (ঘ) Safari
+
+   answer: খ — Facebook  
+   explanation: Facebook is a website accessed through a browser, not a browser itself.
 
 5. **Which language is directly understood by the Computer without translating?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) Machine language  
@@ -650,11 +662,17 @@ int main ()\{
    (গ) High level language  
    (ঘ) None
 
+   answer: ক — Machine language  
+   explanation: Machine language is pure binary, so the CPU executes it directly with no compiler or interpreter.
+
 6. **A computer program that converts an entire program into machine language is called a/an:** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 58 (ET: N/A)]*  
    (ক) Interpreter  
    (খ) Converter  
    (গ) Simulator  
    (ঘ) Compiler
+
+   answer: ঘ — Compiler  
+   explanation: A compiler translates the whole source program into machine code in one pass; an interpreter converts and runs it line by line.
 
 7. **Which of the following pairs of statements are not treated as identical by the compiler?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*  
    (ক) int foo(int *i); int foo(int i[])  
@@ -662,11 +680,17 @@ int main ()\{
    (গ) char c[10]; char *c;  
    (ঘ) void bar (int) ; void bar (int x);
 
+   answer: গ — char c[10]; char *c;  
+   explanation: An array declaration reserves 10 bytes while a pointer holds an address, so the two are different; in the other pairs the forms are equivalent to the compiler.
+
 8. **কোনটি ইমেজ ফাইল এক্সটেনশন নয়?** *[BCIC Assistant Programmer 2022 compact it 61 (ET: BUET)]*  
    (ক) Png  
    (খ) Jpeg  
    (গ) avi  
    (ঘ) gif
+
+   answer: গ — avi  
+   explanation: AVI is a video format; PNG, JPEG and GIF are image formats.
 
 9. **Which one of the following is not a search engine?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 76 (ET: N/A)]*  
    a. Windows  
@@ -674,11 +698,17 @@ int main ()\{
    c. Yahoo  
    d. Bing
 
+   answer: a — Windows  
+   explanation: Windows is an operating system; Google, Yahoo and Bing are search engines.
+
 10. **Which one is the text based web browser?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
    a) Chrome  
    b) Lynx  
    c) Safari  
    d) Microsoft Edge
+
+   answer: b — Lynx  
+   explanation: Lynx is the classic text-only browser used in a terminal, with no images or scripting.
 
 11. **Which of the following language does not need any translation?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*  
    A) Machine language  
@@ -686,11 +716,17 @@ int main ()\{
    C) 3GL  
    D) Assembly language
 
+   answer: A — Machine language  
+   explanation: Machine language is already in the binary form the CPU executes, so it needs no translator.
+
 12. **A ________ translate file of program source code into machine language.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) Cluster  
    B) Datagram  
    C) Decoding  
    D) Compiler
+
+   answer: D — Compiler  
+   explanation: A compiler reads the whole source file and produces the equivalent machine-language object file.
 
 13. **All programming languages require users to follow certain rules of ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*  
    A) style  
@@ -698,11 +734,17 @@ int main ()\{
    C) grammar  
    D) procedures
 
+   answer: B — syntax  
+   explanation: Syntax is the set of grammar rules that decide whether the compiler accepts a statement.
+
 14. **Object code is the ________ language file that tells the CPU what to do.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*  
    A) programming  
    B) binary  
    C) machine  
    D) natural
+
+   answer: C — machine  
+   explanation: Object code is machine-language output produced from source code, which the CPU can execute.
 
 15. **Which of the following is not standard compiler of C programming language?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*  
    a) Microsoft Visual C/C++ Compiler  
@@ -710,11 +752,17 @@ int main ()\{
    c) CodeBlocks C Compiler  
    d) Borland C Compiler
 
+   answer: c — CodeBlocks C Compiler  
+   explanation: Code::Blocks is an IDE that uses another compiler such as GCC or MinGW; it is not a compiler itself.
+
 16. **Which is not a programming language below?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*  
    a. Perl  
    b. Cobra  
    c. Joule  
    d. Tesla
+
+   answer: d — Tesla  
+   explanation: Perl, Cobra and Joule are programming languages; Tesla is a car maker and a unit of magnetic flux density.
 
 17. **Type of software which is designed for users to customize programs is-** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
    A) freeware  
@@ -722,11 +770,17 @@ int main ()\{
    C) macros  
    D) none of these
 
+   answer: C — macros  
+   explanation: A macro records a sequence of commands the user can replay, which lets people customise a program without programming it.
+
 18. **Language compilers and interpreters does not translate statements correctly when they have____** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*  
    A) transcription error  
    B) base errors  
    C) syntax error  
    D) logical error
+
+   answer: C — syntax error  
+   explanation: A translator can only convert statements that follow the language grammar, so a syntax error stops translation.
 
 19. **The only language understood by a digital computer is called ________** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) Assembly Language  
@@ -734,11 +788,17 @@ int main ()\{
    C) Machine language  
    D) None of these
 
+   answer: C — Machine language  
+   explanation: Digital computers execute only binary machine instructions; everything else must first be translated.
+
 20. **Consist of Instructions that control the computers ________.** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*  
    A. Programs  
    B. List  
    C. Keyboard  
    D. File
+
+   answer: A — Programs  
+   explanation: A program is the set of instructions that directs what the computer does.
 
 21. **Which type of Software can translate scanned text into text that one can edit?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*  
    A. OCS  
@@ -746,11 +806,17 @@ int main ()\{
    C. OCR  
    D. ORS
 
+   answer: C — OCR  
+   explanation: Optical Character Recognition turns the characters in a scanned image into editable text.
+
 22. **To remove a program from your computer you can it,** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*  
    A. remove  
    B. delete  
    C. store  
    D. uninstall
+
+   answer: D — uninstall  
+   explanation: Uninstalling removes the program files, shortcuts and registry entries properly; simply deleting leaves parts behind.
 
 23. **সর্বাধিক ব্যবহৃত Operating system কোনটি?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*  
    A. Linux  
@@ -758,11 +824,17 @@ int main ()\{
    C. MAC OS  
    D. Unix
 
+   answer: B — Windows  
+   explanation: Microsoft Windows has the largest share of desktop operating systems worldwide.
+
 24. **Which one is a Web Browser?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
    A) Google Chorme  
    B) Mozila Firefox  
    C) Internet Explorer  
    D) All
+
+   answer: D — All  
+   explanation: Chrome, Firefox and Internet Explorer are all web browsers.
 
 25. **Which one is used to close running document?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
    A) ctrl+W  
@@ -770,11 +842,17 @@ int main ()\{
    C) ctrl+A  
    D) None
 
+   answer: A — ctrl+W  
+   explanation: Ctrl+W closes the current document or tab; Ctrl+S saves and Ctrl+A selects all.
+
 26. **Some program exists for computers use to help it manage it task and devices, which are called-** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
    (a) Software  
    (b) Application software  
    (c) System software  
    (d) Firmware
+
+   answer: c — System software  
+   explanation: System software such as the OS, drivers and utilities manages the hardware and the computer's own tasks.
 
 27. **Baidu is one kind of -** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
    (a) Search Engine  
@@ -782,11 +860,17 @@ int main ()\{
    (c) Payment  
    (d) Operating
 
+   answer: a — Search Engine  
+   explanation: Baidu is the leading search engine in China.
+
 28. **The process of laying out a document with text, graphics, headlines and photographs is involved in:** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*  
    (a) Deck Top Printing  
    (b) Desk Top Printing  
    (c) Desk Top Publishing  
    (d) Deck Top Publishing
+
+   answer: c — Desk Top Publishing  
+   explanation: Desktop Publishing (DTP) software lays out text, headlines, graphics and photographs into a finished page.
 
 29. **Which one of the following is not required in a game engine?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*  
    A) rendering  
@@ -794,11 +878,17 @@ int main ()\{
    C) physics  
    D) closure
 
+   answer: D — closure  
+   explanation: A game engine provides rendering, audio and physics subsystems; closure is a programming-language concept, not an engine component.
+
 30. **Source code is a(an) ________.** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) Program  
    B) List of commands  
    C) Source of variables  
    D) Algorithm
+
+   answer: B — List of commands  
+   explanation: Source code is the human-readable list of instructions a programmer writes, which a translator then converts to machine code.
 
 31. **All of the following are considered gaming engine except-** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
    A) Hex Editor  
@@ -806,11 +896,17 @@ int main ()\{
    C) HTML 5  
    D) Adobe Flash
 
+   answer: A — Hex Editor  
+   explanation: A hex editor edits raw bytes in a file; Unity, HTML5 and Adobe Flash can all be used to build and run games.
+
 32. **Which one of the following is not a type of Web search engine?** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*  
    A) Computer-created  
    B) Human-organized  
    C) Hybrid  
    D) Portal
+
+   answer: D — Portal  
+   explanation: Search engines are classed as computer-created (crawler-based), human-organized directories and hybrids; a portal is a website, not a search engine type.
 
 33. **The only language understood by a digital computer is called-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*  
    A) Assembly language  
@@ -818,11 +914,17 @@ int main ()\{
    C) Machine language  
    D) None of the above
 
+   answer: C — Machine language  
+   explanation: Only binary machine instructions are understood directly by the hardware.
+
 34. **Which video File format is used for HDTV?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
    A) AVI  
    B) BJMPEGI  
    C) MPEG2  
    D) MPEG4
+
+   answer: C — MPEG2  
+   explanation: MPEG-2 is the compression standard adopted for digital television and HDTV broadcasting and for DVD video.
 
 35. **Which is not Application software?** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)]*  
    a. Adobe Illustrator  
@@ -830,11 +932,17 @@ int main ()\{
    c. Redhat Linux  
    d. Open Office
 
+   answer: c — Redhat Linux  
+   explanation: Red Hat Linux is an operating system, which is system software; the other three are application programs.
+
 36. **Which is not application software?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
    A) Bing  
    B) Red hat Linux  
    C) MS office  
    D) Adobe
+
+   answer: B — Red hat Linux  
+   explanation: Red Hat Linux is an operating system, not application software.
 
 37. **Which one is not operating system software?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) DOS  
@@ -842,11 +950,17 @@ int main ()\{
    C) Windows  
    D) Oracle
 
+   answer: D — Oracle  
+   explanation: Oracle is a database management system; DOS, Linux and Windows are operating systems.
+
 38. **Which language is used to build website?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) HTML  
    B) COBOL  
    C) Python  
    D) FORTRAN
+
+   answer: A — HTML  
+   explanation: HTML is the markup language that defines the structure and content of web pages.
 
 39. **What are the three main types of computer languages?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
    A) Machine Language, assemble language and high-level language  
@@ -854,11 +968,17 @@ int main ()\{
    C) Imperative Language, functional language and declarative language  
    D) all of this
 
+   answer: A — Machine Language, assemble language and high-level language  
+   explanation: Computer languages are grouped by how close they are to the hardware: machine, assembly and high-level.
+
 40. **The software used to drive microprocessor based systems is called ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Assembly language programs  
    b. Firmware  
    c. BASIC interpreter instructions  
    d. Flowchart instructions
+
+   answer: b — Firmware  
+   explanation: Firmware is software stored permanently in ROM or flash inside a microprocessor-based device to drive its hardware.
 
 ## Computer Fundamentals & Generations (29)
 
