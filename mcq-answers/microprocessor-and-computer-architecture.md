@@ -338,11 +338,17 @@
    (c) RAM>SSD>Cache>HDD>Register  
    (d) Register>Cache>RAM>SSD HDD
 
+   answer: d — Register>Cache>RAM>SSD HDD  
+   explanation: Speed falls as you move down the hierarchy — registers are fastest, then cache, main memory, SSD and finally the mechanical hard disk.
+
 2. **An increase in a computer's RAM leads to a typical improvement in performance because:** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*  
    (a) Virtual memory increases  
    (b) Fewer segmentation faults occur  
    (c) A larger RAM is faster  
    (d) Fewer page faults occur
+
+   answer: d — Fewer page faults occur  
+   explanation: More RAM keeps more pages resident, so the system goes to disk less often and the costly page-fault handling drops.
 
 3. **Out of all the following, which one isn't a form of memory?** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*  
    (a) translation lookaside buffer  
@@ -350,11 +356,17 @@
    (c) instruction register  
    (d) instruction cachenss
 
+   answer: b — instruction opcode  
+   explanation: The opcode is a field inside an instruction naming the operation; the TLB, instruction register and instruction cache are all storage.
+
 4. **Which among the following is the fastest memory in a computer that holds information?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*  
    (a) Register  
    (b) Cache  
    (c) Main memory  
    (d) RAM
+
+   answer: a — Register  
+   explanation: Registers sit inside the CPU itself and are accessed in a single clock cycle, faster than any cache or memory.
 
 5. **Which mode of memory access is the fastest?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*  
    (ক) Reference  
@@ -362,11 +374,17 @@
    (গ) Double pointer  
    (ঘ) DMA
 
+   answer: ঘ — DMA  
+   explanation: Direct Memory Access lets a device move a block straight to or from memory without the CPU handling each word. <!-- verify -->
+
 6. **Which of the following causes the average memory access time to increase in a memory system with cache memory?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*  
    a) Reduction of access time to cache memory  
    b) Decrease in hit ratio  
    c) Reduction of miss penalty  
    d) Decrease in miss ratio
+
+   answer: b — Decrease in hit ratio  
+   explanation: A lower hit ratio means more references miss the cache and must go to slow main memory, raising the average access time.
 
 7. **Which of the following is not a nonvolatile storage device?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
    a) Memory Stick  
@@ -374,11 +392,17 @@
    c) Random Access Memory  
    d) NVRAM
 
+   answer: c — Random Access Memory  
+   explanation: RAM loses its contents when power is removed, so it is volatile; memory sticks, hard disks and NVRAM all retain data.
+
 8. **What is the typical speed of USB version 3.0?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
    (a) 4.8G bits per second  
    (b) 610 Mbps  
    (c) 6Gbps  
    (d) Both a and b
+
+   answer: a — 4.8G bits per second  
+   explanation: USB 3.0 (SuperSpeed) runs at 5 Gbps raw, which is about 4.8 Gbps of usable data rate.
 
 9. **SSDs are more durable than HDDs in extreme and harsh environments because** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
    (a) They don't have actuator arms  
@@ -386,11 +410,17 @@
    (c) They do not use 0/1 as data storage unit which is prone to crash  
    (d) All of the above statements are true
 
+   answer: a — They don't have actuator arms  
+   explanation: An SSD has no moving heads or spinning platters, so shock and vibration cannot damage it the way they damage a hard disk.
+
 10. **The term LPDDR means-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) Low-Power Discrete Data Rate  
    (b) Low-processing Double Data Rate  
    (c) Low-Programmable Double Data Rate  
    (d) None of the above
+
+   answer: d — None of the above  
+   explanation: LPDDR stands for Low-Power Double Data Rate, and none of the three offered expansions matches that.
 
 11. **How many core/threads does the Intel Core i7-9700K processor have?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*  
    (a) 6/12  
@@ -398,11 +428,17 @@
    (c) 8/8  
    (d) 8/16
 
+   answer: c — 8/8  
+   explanation: The i7-9700K has 8 cores but no hyper-threading, so it runs 8 threads.
+
 12. **Which of the following uses the flip-flop circuit in a memory cell?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*  
    a. DRAM  
    b. EEPROM  
    c. SDRAM  
    d. SRAM
+
+   answer: d — SRAM  
+   explanation: Each SRAM cell is a latch built from cross-coupled transistors, so it holds its value without refreshing.
 
 13. **কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. Too Slow  
@@ -410,11 +446,17 @@
    C. Volatility  
    D. Too Bulky
 
+   answer: C — Volatility  
+   explanation: RAM loses everything when power is cut, which is why it cannot serve as permanent storage.
+
 14. **Which of the following memory devices is not reprogrammable?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
    a) Flash memory  
    b) ROM  
    c) EPROM  
    d) EEPROM
+
+   answer: b — ROM  
+   explanation: Mask ROM is written once during manufacture and can never be reprogrammed; EPROM, EEPROM and flash can all be erased and rewritten.
 
 15. **There is a RAM issue on a PC/laptop. Which of the following symptom(s) might be an indication of RAM issue?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) PC frequently freezes, reboots  
@@ -422,11 +464,17 @@
    c) Function keys are not working properly  
    d) All of them
 
+   answer: a — PC frequently freezes, reboots  
+   explanation: Faulty RAM corrupts data in memory, producing random freezes, reboots and blue screens; a wrong BIOS clock points to the CMOS battery instead.
+
 16. **A solid-state drive (SSD) is a newer, faster type of device that stores data on instantly-accessible ________.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) Ultra Magnetic Chip  
    b) Integrated Circuit  
    c) Random Access Memory  
    d) High Bandwidth memory
+
+   answer: b — Integrated Circuit  
+   explanation: An SSD stores data in NAND flash integrated circuits, so there is nothing mechanical to wait for.
 
 17. **Which factor is not affecting the processing speed of a computer system?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*  
    A) Cache memory  
@@ -434,11 +482,17 @@
    C) Monitor  
    D) RAM
 
+   answer: C — Monitor  
+   explanation: The monitor only displays output; processing speed depends on clock rate, cache and the amount of RAM.
+
 18. **Main Memory কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)]*  
    A) RAM  
    B) ROM  
    C) HDD  
    D) Floppy
+
+   answer: A — RAM  
+   explanation: RAM is the main memory the CPU reads and writes directly while programs run.
 
 19. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) RAM  
@@ -446,11 +500,17 @@
    C) CD ROM  
    D) Cache Memory
 
+   answer: D — Cache Memory  
+   explanation: Cache is the fastest of the four, sitting closest to the CPU and built from SRAM.
+
 20. **Arithmetic and Logical operation এর ডাটা কাজের সময় কোথায় রাখা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) Arithmetic Register  
    B) Accumulator  
    C) Logical Register  
    D) Controller
+
+   answer: B — Accumulator  
+   explanation: The accumulator holds the operand and receives the result of each arithmetic or logic operation.
 
 21. **Which one can be used for read only?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
    A) RAM  
@@ -458,11 +518,17 @@
    C) Both A & B  
    D) None
 
+   answer: B — ROM  
+   explanation: Read Only Memory is written once and afterwards can only be read.
+
 22. **Which is the faster memory?** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)], [BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
    a. RAM  
    b. Secondary memory  
    c. DRAM  
    d. Cache
+
+   answer: d — Cache  
+   explanation: Cache is built from fast SRAM and sits next to the CPU, so it is faster than RAM, DRAM or any secondary memory.
 
 23. **Which of the following terms is the most closely related to main memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*  
    A) Non-volatile  
@@ -470,11 +536,17 @@
    C) Control unit  
    D) Temporary
 
+   answer: D — Temporary  
+   explanation: Main memory is volatile working storage that holds data only while the program runs and the power is on.
+
 24. **Which unit holds data permanently?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Input unit  
    B) Secondary storage unit  
    C) Output unit  
    D) Primary Memory unit
+
+   answer: B — Secondary storage unit  
+   explanation: Secondary storage such as a hard disk or SSD is non-volatile, so it keeps data after the power is switched off.
 
 25. **Magnetic tape can serve as—** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Secondary storage media  
@@ -482,11 +554,17 @@
    C) Input media  
    D) All of them
 
+   answer: D — All of them  
+   explanation: Magnetic tape stores data offline as secondary storage and can also be used to feed data in or write results out.
+
 26. **Which of the following is internal memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
    A) Disks  
    B) Pen Drives  
    C) RAM  
    D) CDs
+
+   answer: C — RAM  
+   explanation: RAM is internal (primary) memory on the motherboard; disks, pen drives and CDs are external secondary storage.
 
 27. **Which of the following memories needs refreshing?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
    A) SRAM  
@@ -494,11 +572,17 @@
    C) ROM  
    D) All of them
 
+   answer: B — DRAM  
+   explanation: A DRAM cell stores its bit as charge on a tiny capacitor that leaks away, so it must be refreshed thousands of times a second.
+
 28. **Which memory is called as primary memory?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) Hard Disk  
    B) Pen Drive  
    C) Rom  
    D) RAM
+
+   answer: D — RAM  
+   explanation: RAM is the primary memory the processor works from directly.
 
 ## Secondary Storage (HDD & Disk Organization) (13)
 
