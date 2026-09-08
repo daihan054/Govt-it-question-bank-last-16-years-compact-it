@@ -988,11 +988,17 @@ int main ()\{
    গ. ১৫০  
    ঘ. ২০০
 
+   answer: ক — ০  
+   explanation: A computer has no intelligence of its own; it only follows the instructions given to it, so its IQ is taken as zero.
+
 2. **Which one is the first high level programming language?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)], [Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*  
    A) C  
    B) COBOL  
    C) FORTRAN  
    D) C++
+
+   answer: C — FORTRAN  
+   explanation: FORTRAN, released by IBM in 1957, was the first widely used high-level programming language.
 
 3. **Which one is the first search engine?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*  
    A) Google  
@@ -1000,11 +1006,17 @@ int main ()\{
    C) Alta vista  
    D) WAIS
 
+   answer: B — Archie  
+   explanation: Archie, created in 1990, indexed FTP file listings and is regarded as the first internet search engine.
+
 4. **Which of the following is the most commonly used encoding standard of Unicode?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*  
    (ক) UTF-6  
    (খ) UTF-7  
    (গ) UTF-8  
    (ঘ) UTF-9
+
+   answer: গ — UTF-8  
+   explanation: UTF-8 is variable length, backward compatible with ASCII and is the dominant encoding on the web.
 
 5. **EDSAC কম্পিউটার এ ডাটা সংরক্ষণের জন্য কি ধরণের মেমরি ব্যবহার হত?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) RAM  
@@ -1012,11 +1024,17 @@ int main ()\{
    c) Mercury Delay  
    d) Registers Lines
 
+   answer: c — Mercury Delay  
+   explanation: EDSAC stored data in mercury delay line memory, where pulses circulated as acoustic waves through tubes of mercury.
+
 6. **In which year were chips used inside the computer for the first time?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*  
    (a) 1964  
    (b) 1974  
    (c) 1975  
    (d) 1981
+
+   answer: a — 1964  
+   explanation: Integrated circuits first appeared inside computers with the third generation, marked by the IBM System/360 in 1964.
 
 7. **Which was the world's first electronic computer?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. ENIAC  
@@ -1024,11 +1042,17 @@ int main ()\{
    c. UNIVAC  
    d. IBM
 
+   answer: a — ENIAC  
+   explanation: ENIAC (1945) was the first general-purpose electronic digital computer.
+
 8. **WWW (World Wide Web) এর জনক কে?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) বিল গেটস  
    (খ) স্টিভ জবস  
    (গ) টিম বার্নস লি.  
    (ঘ) জেফ বেজোফ
+
+   answer: গ — টিম বার্নস লি.  
+   explanation: Tim Berners-Lee invented the World Wide Web at CERN in 1989.
 
 9. **English scientist ________ invented the World Wide Web in 1989.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*  
    a) Vint Cerf  
@@ -1036,11 +1060,17 @@ int main ()\{
    c) Alan Turing  
    d) Tim Berners-Lee
 
+   answer: d — Tim Berners-Lee  
+   explanation: The British scientist Tim Berners-Lee proposed the Web in 1989 and wrote the first browser and server.
+
 10. **Who is known as the first computer programmer?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*  
    a) Alan Turing  
    b) Ada Lovelace  
    c) Charles Babbage  
    d) None of the above
+
+   answer: b — Ada Lovelace  
+   explanation: Ada Lovelace wrote an algorithm for Babbage's Analytical Engine in the 1840s, making her the first programmer.
 
 11. **________ was a chess-playing computer developed by IBM?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*  
    a. Bright Red  
@@ -1048,11 +1078,17 @@ int main ()\{
    c. Light Green  
    d. Dark Pink
 
+   answer: b — Deep Blue  
+   explanation: IBM's Deep Blue beat world champion Garry Kasparov in 1997.
+
 12. **How many bits are there in Unicode?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*  
    a. 8  
    b. 12  
    c. 16  
    d. 20
+
+   answer: c — 16  
+   explanation: The original Unicode design used 16 bits per character, giving 65,536 code points.
 
 13. **When was first artificial satellite established?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*  
    a. 1940  
@@ -1060,11 +1096,17 @@ int main ()\{
    c. 1950  
    d. 1957
 
+   answer: d — 1957  
+   explanation: The Soviet Union launched Sputnik 1, the first artificial satellite, on 4 October 1957.
+
 14. **1 Terabyte ________ gigabyte in the decimal system?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*  
    a. 1000  
    b. 720  
    c. 1950  
    d. 1970
+
+   answer: a — 1000  
+   explanation: In the decimal (SI) system 1 TB = 1000 GB, since each step multiplies by 1000.
 
 15. **All decimal values and integers are included in set of** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*  
    A) whole numbers  
@@ -1072,11 +1114,17 @@ int main ()\{
    C) real numbers  
    D) integers
 
+   answer: C — real numbers  
+   explanation: The real numbers include every integer as well as every decimal and fractional value.
+
 16. **Who invented QWERTY keyboard?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) Steve jobs  
    B) Christopher Latham Sholes  
    C) Brain Sams  
    D) Anderson Palimar
+
+   answer: B — Christopher Latham Sholes  
+   explanation: Sholes designed the QWERTY layout in the 1870s for the early typewriter.
 
 17. **Which of the following is the smallest size in the list?** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*  
    A) Zettabyte  
@@ -1084,11 +1132,17 @@ int main ()\{
    C) Petabyte  
    D) Terabyte
 
+   answer: B — Gigabyte  
+   explanation: The order is gigabyte < terabyte < petabyte < zettabyte, so gigabyte is smallest.
+
 18. **Microprocessor is used first in which generation computers?** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)]*  
    a. Second generation  
    b. Third generation  
    c. Fourth generation  
    d. Fifth generation
+
+   answer: c — Fourth generation  
+   explanation: The fourth generation began in the 1970s when the whole CPU was placed on a single microprocessor chip.
 
 19. **On which aspect the analog computers are better than digital?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*  
    A) Speed  
@@ -1096,11 +1150,17 @@ int main ()\{
    C) Reliability  
    D) Automatic
 
+   answer: A — Speed  
+   explanation: An analog computer responds continuously and instantly to changing input, so it is faster, though less accurate than a digital machine.
+
 20. **How many numbers could ENIAC store in its internal memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*  
    A) 100  
    B) 20  
    C) 80  
    D) 40
+
+   answer: B — 20  
+   explanation: ENIAC's internal memory held twenty 10-digit decimal numbers in its accumulators.
 
 21. **Which of the following is a class of computers based on model?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Digital Computers  
@@ -1108,11 +1168,17 @@ int main ()\{
    C) Analog Computers  
    D) AT Computers
 
+   answer: D — AT Computers  
+   explanation: Digital, analog and hybrid classify computers by how they work; AT is a model name.
+
 22. **Which of the following is not true?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
    A) Transistors are much smaller  
    B) Transistors produce low heat  
    C) Transistors were less reliable  
    D) Transistors were used in radios and other electronic devices
+
+   answer: C — Transistors were less reliable  
+   explanation: Transistors were far more reliable than vacuum tubes, as well as smaller and cooler, so this statement is false.
 
 23. **Which was the most popular first-generation computer?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
    A) IBM 1650  
@@ -1120,11 +1186,17 @@ int main ()\{
    C) IBM 1130  
    D) IBM 650
 
+   answer: D — IBM 650  
+   explanation: The IBM 650 was the best selling first-generation vacuum tube computer.
+
 24. **Which of the following is not a form of data?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
    A) Numbers and characters  
    B) images  
    C) sound  
    D) None of this
+
+   answer: D — None of this  
+   explanation: Numbers, characters, images and sound are all forms of data, so none of the listed options is excluded.
 
 25. **Which is equivalent is 1GB?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*  
    A) 1e+4B  
@@ -1132,11 +1204,17 @@ int main ()\{
    C) 1e+8B  
    D) 1e+9B
 
+   answer: D — 1e+9B  
+   explanation: In decimal notation 1 GB is 1,000,000,000 bytes, which is 1×10⁹ B.
+
 26. **CPU, ________ are the basic components of a computer system.** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 261 (ET: N/A)]*  
    a. Keyboard and monitor  
    b. Main memory and I/O devices  
    c. Keyboard and I/O devices  
    d. Main memory and monitor
+
+   answer: b — Main memory and I/O devices  
+   explanation: A computer system is built from the CPU, main memory and input/output devices; a keyboard and monitor are just examples of I/O.
 
 27. **Who among the following is associated with the invention of computer?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 269 (ET: N/A)]*  
    a. Edison  
@@ -1144,17 +1222,26 @@ int main ()\{
    c. Mac Millen  
    d. Rangabhashyam
 
+   answer: b — Babbage  
+   explanation: Charles Babbage designed the Difference and Analytical Engines and is called the father of the computer.
+
 28. **What are the four key functions of a computer system?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 269 (ET: N/A)]*  
    a. input, processing, output & storage  
    b. keyboard, display, memory & disk drive  
    c. bits, bytes, words & OSI  
    d. word processing, spreadsheets & database
 
+   answer: a — input, processing, output & storage  
+   explanation: Every computer takes input, processes it, produces output and stores data.
+
 29. **This is the smallest unit of data in a computer ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Bit  
    b. Byte  
    c. Nibble  
    d. Word
+
+   answer: a — Bit  
+   explanation: A bit holds a single 0 or 1 and is the smallest unit of data; 4 bits make a nibble and 8 make a byte.
 
 ## ICT & Emerging Technology (16)
 
