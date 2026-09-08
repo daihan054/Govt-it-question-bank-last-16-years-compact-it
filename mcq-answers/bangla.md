@@ -2637,11 +2637,17 @@
    গ. দুস্তর  
    ঘ. দুর্লভ
 
+   answer: গ — দুস্তর  
+   explanation: যা সহজে পার হওয়া বা উত্তীর্ণ হওয়া যায় না তাকে 'দুস্তর' বলে।
+
 2. **যে নারীর স্বামী বিদেশে থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*  
    ক. বিদেশী  
    খ. প্রবাসী  
    গ. প্রোষিতভর্তৃকা  
    ঘ. প্রষিতভর্তৃকা
+
+   answer: গ — প্রোষিতভর্তৃকা  
+   explanation: যে নারীর স্বামী বিদেশে থাকে তাকে 'প্রোষিতভর্তৃকা' বলে।
 
 3. **সাদাতে হলুদ বর্ণকে কী বলা হয়?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 18 (ET: BIBM)]*  
    (a) হলদেটে  
@@ -2649,14 +2655,23 @@
    (c) পান্ডুর  
    (d) বাসন্তি
 
+   answer: c — পান্ডুর  
+   explanation: সাদায় হলুদ মেশানো ফ্যাকাশে বর্ণকে 'পাণ্ডুর' বলে।
+
 4. **এককথায় প্রকাশ করুন: যে ভবিষ্যৎ না ভেবে কাজ করে:** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** অবিমৃষ্যকারী
+
+   answer: অবিমৃষ্যকারী  
+   explanation: যে ভবিষ্যৎ না ভেবে হঠাৎ কাজ করে ফেলে তাকে 'অবিমৃষ্যকারী' বলে।
 
 5. **এক কথায় প্রকাশ করুন: অক্ষির অভিমুখে—** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 121 (ET: N/A)]*  
    a. প্রত্যক্ষ  
    b. পরোক্ষ  
    c. সমক্ষ  
    d. চাক্ষুস
+
+   answer: c — সমক্ষ  
+   explanation: অক্ষির অভিমুখে অর্থাৎ চোখের সামনে হলে তাকে 'সমক্ষ' বলে।
 
 ## কারক ও বিভক্তি (4)
 1. **'ঘোড়া গাড়ি টানে।' কোন কারক?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*  
