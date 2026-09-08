@@ -359,6 +359,9 @@
    (গ) Dimension ratio  
    (ঘ) Distance fraction
 
+   answer: ক — Representative fraction  
+   explanation: The representative fraction is the ratio of a length on the drawing to the corresponding real length of the object.
+
 ## Fluid Mechanics (1)
 
 1. **স্থির তরলের ক্ষেত্রে শেয়ার পীড়ন হল:** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
