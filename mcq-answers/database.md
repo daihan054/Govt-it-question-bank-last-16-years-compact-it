@@ -1663,11 +1663,17 @@
    c) Hard-coded SQL statements in a procedure.  
    d) Hard-coded SQL statements in a trigger.
 
+   answer: a — Hard-coded SQL statements in a program language such as Java  
+   explanation: Embedded SQL puts fixed SQL text directly inside host-language source, which a precompiler then translates.
+
 2. **The Application program interface in a two-tier architecture DBMS is provided by-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
    a) Close module connectivity  
    b) Open module connectivity  
    c) Open database connectivity  
    d) Close database connectivity
+
+   answer: c — Open database connectivity  
+   explanation: ODBC is the standard API that lets an application talk to any database through the matching driver.
 
 3. **A major challenge in mixing SQL with a general-purpose language is mismatching in the** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
    A) Definition of data  
@@ -1675,17 +1681,26 @@
    C) Execution of data  
    D) Output of data
 
+   answer: A — Definition of data  
+   explanation: SQL works on sets of rows while a host language works on single variables and objects, and their type systems differ — the classic impedance mismatch.
+
 4. **Once connection is set up, program can send SQL commands to database by using** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
    A) SQLExcelConn  
    B) SQLDirect  
    C) SQLExcelDirect  
    D) SQLConnect
 
+   answer: D — SQLConnect  
+   explanation: SQLConnect establishes the session with the data source, after which SQL statements can be sent.
+
 5. **In your program you want to use the JDBC-ODBC bridge drive. What code do you use?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Class.callName("sun.jdbc.odbc.jdbcOdbcDriver")  
    b. Class.forName("sun.jdbc.odbc.jdbcOdbcDriver")  
    c. Class.callFunc("JdbcOdbcDriver")  
    d. Class.Name.init("sun.jdbc.odbc.JdbcOdbcDriver")
+
+   answer: b — Class.forName("sun.jdbc.odbc.jdbcOdbcDriver")  
+   explanation: Class.forName loads and registers the JDBC driver class at runtime before DriverManager.getConnection is called.
 
 ## Concurrency Control & Locking (5)
 
