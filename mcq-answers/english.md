@@ -2434,11 +2434,17 @@
    c) ridiculus  
    d) ridiculas
 
+   answer: a — ridiculous  
+   explanation: The word comes from "ridicule" and keeps the i, ending in -ous.
+
 2. **Which one is correct?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. Messile  
    খ. Misile  
    গ. Missile  
    ঘ. Messilee
+
+   answer: গ — Missile  
+   explanation: The correct spelling has double s and ends in -ile.
 
 3. **Identify the word with correct spelling from the following options.** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) Counterfet  
@@ -2446,11 +2452,17 @@
    (c) Counterfiet  
    (d) Counterfeit
 
+   answer: d — Counterfeit  
+   explanation: The spelling is counter + feit, with e before i in this word.
+
 4. **Choose the correct spelling** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) Query  
    b) Quelry  
    c) Qeiry  
    d) Queery
+
+   answer: a — Query  
+   explanation: Query is spelt q-u-e-r-y.
 
 5. **Which is the correct spelling?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    (a) Extraterrestrial  
@@ -2458,11 +2470,17 @@
    (c) Extraterastrial  
    (d) extratarrestrial
 
+   answer: a — Extraterrestrial  
+   explanation: The word is extra + terrestrial, with double r in the middle.
+
 6. **Find out the correct spelling.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) adolescence  
    (খ) adolessence  
    (গ) addoleseence  
    (ঘ) adolescence
+
+   answer: ক — adolescence  
+   explanation: The correct spelling is a-d-o-l-e-s-c-e-n-c-e (option ঘ prints the same word).
 
 7. **Select correct spelling?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 73 (ET: N/A)]*  
    (a) Psychology  
@@ -2471,6 +2489,9 @@
    (d) shychology  
    **Ans: a**
 
+   answer: a — Psychology  
+   explanation: The word begins with the silent p in "psycho-".
+
 8. **Which one is correct?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 73 (ET: N/A)]*  
    (a) Tit for tat  
    (b) Tect for tat  
@@ -2478,11 +2499,17 @@
    (d) Tit for teet  
    **Ans: a**
 
+   answer: a — Tit for tat  
+   explanation: The idiom is spelt "tit for tat", meaning a blow returned for a blow.
+
 9. **Which spell is correct word (s)?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) Encyclopedia Britannica  
    (খ) Encyclopedia Britannica  
    (গ) Enciclopadia Britannica  
    (ঘ) Enciclopedia Britannica
+
+   answer: ক — Encyclopedia Britannica  
+   explanation: The spelling is encyclopedia (or encyclopaedia) with a c, not an s (option খ prints the same).
 
 10. **Which word is spelt correctly?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 132 (ET: N/A)]*  
    a) concensus  
@@ -2490,11 +2517,17 @@
    c) madieval  
    d) posession
 
+   answer: b — hierarchy  
+   explanation: Hierarchy is correct; the others should be consensus, medieval and possession.
+
 11. **Choose the correct spelling-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) Ascertain  
    b) Ascertain  
    c) Ascertain  
    d) Asartain
+
+   answer: a — Ascertain  
+   explanation: Ascertain is spelt a-s-c-e-r-t-a-i-n (options b and c print the same word).
 
 12. **Which of the following has the similar sound of the word “won”?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 122 (ET: N/A)]*  
    a. own  
@@ -2502,11 +2535,17 @@
    c. on  
    d. un
 
+   answer: b — one  
+   explanation: "Won" and "one" are homophones, both pronounced /wʌn/.
+
 13. **Choose the correct spelling.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. Onomatopeia  
    b. Onamatopoeia  
    c. Onamotopoeia  
    d. Anomatopoeia
+
+   answer: a — Onomatopeia  
+   explanation: The true spelling is "onomatopoeia"; option (a) is the closest of the printed choices.
 
 14. **Find the correctly spelt word.** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 147 (ET: IBA)]*  
    A. Abeyence  
@@ -2514,11 +2553,17 @@
    C. Abeyence  
    D. Abeyance
 
+   answer: D — Abeyance  
+   explanation: Abeyance, meaning temporary suspension, is spelt a-b-e-y-a-n-c-e.
+
 15. **Which of the following is correct spelt?** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
    (a) Maintenance  
    (b) maintainence  
    (c) maintinance  
    (d) maintaince
+
+   answer: a — Maintenance  
+   explanation: The noun of "maintain" drops the i and is spelt maintenance.
 
 16. **Which one is the correct spelling?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (a) desiase  
@@ -2526,8 +2571,14 @@
    (c) desease  
    (d) disese
 
+   answer: b — disease  
+   explanation: Disease is dis + ease.
+
 17. **The correct spelling is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 91 (ET: N/A)]*  
    (a) Innagurate  
    (b) Inaugurate  
    (c) Inagorate  
    (d) Inagurate
+
+   answer: b — Inaugurate  
+   explanation: The word is spelt i-n-a-u-g-u-r-a-t-e, with "au" after the single n.
