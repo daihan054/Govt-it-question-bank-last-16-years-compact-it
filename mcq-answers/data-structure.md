@@ -462,11 +462,17 @@
    (c) 7 5 1 0 3 2 4 6 8 9  
    (d) 0 1 2 3 4 5 6 7 8 9
 
+   answer: d — 0 1 2 3 4 5 6 7 8 9  
+   explanation: In-order traversal of any binary search tree always produces the keys in ascending order, whatever the insertion sequence.
+
 2. **A binary search tree is constructed by inserting the numbers, 60 25 72 15 30 68 13 18 in order. The number of nodes in the left sub tree is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 4  
    (b) 5  
    (c) 6  
    (d) 8
+
+   answer: b — 5  
+   explanation: With 60 as root the values smaller than it are 25, 15, 30, 13 and 18 — five nodes in the left subtree.
 
 3. **Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 2  
@@ -474,11 +480,17 @@
    (c) 4  
    (d) 5
 
+   answer: d — 5  
+   explanation: A full binary tree with 11 nodes has 5 internal nodes; chaining them one per level makes the tree as tall as possible, giving height 5.
+
 4. **Level order traversal of a rooted tree can be done by starting from root and performing-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) Deep search  
    (b) Root search  
    (c) Depth first search  
    (d) Breadth first search
+
+   answer: d — Breadth first search  
+   explanation: Level order visits every node of one depth before moving deeper, which is BFS using a queue.
 
 5. **Which data structure is suitable to represent hierarchical relationship between elements?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*  
    a) Stack  
@@ -486,11 +498,17 @@
    c) List  
    d) Tree
 
+   answer: d — Tree  
+   explanation: A tree's parent-child links directly represent a hierarchy.
+
 6. **How many children does a binary tree have?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*  
    a) 2  
    b) 0  
    c) 0 or 1 or 2  
    d) Any number of children
+
+   answer: c — 0 or 1 or 2  
+   explanation: In a binary tree each node may have no child, one child or at most two children.
 
 7. **A B* tree can contain a maximum of 7 pointers in a node. What is the minimum number keys in leaves?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*  
    a) 6  
@@ -498,11 +516,17 @@
    c) 4  
    d) 7
 
+   answer: b — 3  
+   explanation: With a maximum of 7 pointers the order is 7, so each node holds at most 6 keys and at least ceil(7/2)-1 = 3.
+
 8. **In a completer k-array, every internal node has exactly k children. The number of leaves in such a tree with n internal nodes is-** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*  
    (a) (n-1)k+1  
    (b) nk  
    (c) n(k-1)  
    (d) n(k-1)+1
+
+   answer: d — n(k-1)+1  
+   explanation: The n internal nodes have nk children in total, and n of those are themselves internal, so the leaves number nk - n + 1 = n(k-1)+1.
 
 9. **Access time of the symbolic table will be logarithmic if it is implemented by-** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*  
    (a) Linear list  
@@ -510,8 +534,14 @@
    (c) Hash table  
    (d) Self organization list
 
+   answer: b — Search tree  
+   explanation: A balanced search tree halves the search space at each level, giving O(log n) access; a linear list is O(n) and a hash table is O(1).
+
 10. **What is the minimum node for binary tree?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** For a binary tree, max node = [2^{\text{h}} + 1] and min node = [2\text{h} + 1].
+
+   answer: For height h, maximum nodes = 2^(h+1) - 1 and minimum nodes = h + 1  
+   explanation: A perfect tree fills every level, while the minimum case is a single chain with one node per level.
 
 11. **The Post-order traversal of a binary tree is 8, 9, 6, 7, 4, 5, 2, 3, 1, The In-order traversal of the same tree is 8, 6, 9, 4, 7, 2, 5, 1, 3. What is the height of the above binary tree?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 89 (ET: N/A)]*  
    a. 2  
@@ -519,11 +549,17 @@
    c. 4  
    d. 1
 
+   answer: c — 4  
+   explanation: Rebuilding from the traversals gives the chain 1 → 2 → 4 → 6 → 8, so the deepest node sits at level 4.
+
 12. **The pre order traversal of binary tree is 40, 20, 10, 30, 60, 50, 70. Which one of the is the post-order traversal of the tree?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
    a) 10,20,30,40,50,60,70  
    b) 10,30,20,50,70,60,40  
    c) 40,20,60,10,30,50,70  
    d) 70,50,60,30,10,20,40
+
+   answer: b — 10,30,20,50,70,60,40  
+   explanation: The preorder shows 40 as root with {20,10,30} on the left and {60,50,70} on the right; post-order visits left, right, then root.
 
 13. **Suppose we have a Binary Search Tree where each node has an integer value. Which of the following tree traversal techniques can give us a sorted list (in ascending order) of those integers?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 180 (ET: N/A)]*  
    a) Pre-order traversal  
@@ -531,11 +567,17 @@
    c) Post-order traversal  
    d) BFS traversal
 
+   answer: b — In-order traversal  
+   explanation: In-order on a BST visits left subtree, node, right subtree, which yields the keys in ascending order.
+
 14. **If we represent a binary tree using array, what will be the children of node “n”-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
    a) 2n & 2n+1  
    b) 2n & 2-n  
    c) (n+1)2  
    d) 2n & 2n-1
+
+   answer: a — 2n & 2n+1  
+   explanation: With 1-based array indexing the children of node n sit at 2n and 2n+1, and the parent at n/2.
 
 15. **In which tree structure left to right subtree height differs not more than 1?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    a) Binary tree  
@@ -543,11 +585,17 @@
    c) AVL tree  
    d) Binary Heap
 
+   answer: c — AVL tree  
+   explanation: An AVL tree keeps the balance factor of every node within -1 to +1 and rotates whenever an insertion or deletion breaks that.
+
 16. **Maximum how many nodes can be placed in a binary Tree of N levels?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*  
    a) 2^N  
    b) 2^N - 1  
    c) 2^{N-1} - 1  
    d) N^2
+
+   answer: b — 2^N - 1  
+   explanation: Level i holds at most 2^(i-1) nodes, and summing over N levels gives 2^N - 1.
 
 17. **Max-Heap data structure এর সবচেয়ে বড় নম্বরটি কোথায় থাকে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) Leaf  
@@ -555,11 +603,17 @@
    C) Root  
    D) Outside
 
+   answer: C — Root  
+   explanation: In a max-heap every parent is at least as large as its children, so the largest value ends up at the root.
+
 18. **Complete Binary tree যার height n, তার মধ্যে node কতটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
    A) n  
    B) 2^n  
    C) 2^{n-1}  
    D) 2^{n+1}-1
+
+   answer: D — 2^{n+1}-1  
+   explanation: A tree of height n has n+1 levels, and a full tree holds 1+2+4+...+2ⁿ = 2^(n+1) - 1 nodes.
 
 19. **Binary Search Tree-এর Time complexity কত?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*  
    A) O(n)  
@@ -567,11 +621,17 @@
    C) O(\log n)  
    D) O(n^2)
 
+   answer: C — O(log n)  
+   explanation: Search, insert and delete each follow one root-to-leaf path, which is O(log n) in a balanced BST.
+
 20. **Which of the following is false about a binary search tree?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) The left child is always lesser than its parent  
    B) The right child is always greater than its parent  
    C) The left and right subtrees should also be binary search trees  
    D) In order sequence gives decreasing order of elements
+
+   answer: D — In order sequence gives decreasing order of elements  
+   explanation: In-order traversal of a BST gives increasing order, not decreasing, so this statement is false.
 
 ## Data Structures & Algorithms (12)
 1. **When sorting an array using randomized quicksort (pivot chosen randomly), what are the average-case and worst-case time complexities? [ যখন একটি অ্যারে randomized quicksort ব্যবহার করে sort করা হয় (pivot র‍্যান্ডমভাবে নির্বাচন করা হয়), তখন এর average-case এবং worst-case time complexity কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*  
