@@ -1407,11 +1407,17 @@
 1. **What is the degree of relation?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.
 
+   answer: The degree of a relationship is the number of entity types taking part in it  
+   explanation: A unary relationship involves one entity type, binary two and ternary three; for a relation (table) the degree instead means its number of attributes.
+
 2. **Which one of the following is true for a tuple in a database?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
    a) A tuple in a database represents a column  
    b) A tuple in a database represents database schema.  
    c) A tuple in a database represents a Record  
    d) A tuple in a database represents a Database topology
+
+   answer: c — A tuple in a database represents a Record  
+   explanation: A tuple is one row of a table, which holds all the field values of a single record.
 
 3. **In a table an attribute named interest is defined as follows,** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
    When which one is the correct format for the interest columns?  
@@ -1426,11 +1432,17 @@
    C) Union  
    D) Renames
 
+   answer: C — Union  
+   explanation: Union combines two relations, so it is a binary operator; select, project and rename each work on a single relation.
+
 5. **Which one is an entity?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 157 (ET: N/A)]*  
    A) Roll No.  
    B) Student  
    C) Passport No.  
    D) Department ID
+
+   answer: B — Student  
+   explanation: Student is a real-world object with its own attributes, while roll no, passport no and department ID are attributes of an entity.
 
 6. **Which one is TRUE for FIRD?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 158 (ET: N/A)]*  
    A) Uses electromagnetic signal  
@@ -1438,17 +1450,26 @@
    C) Uses optical signal  
    D) Uses infrared
 
+   answer: A — Uses electromagnetic signal  
+   explanation: RFID tags and readers communicate over radio frequency electromagnetic waves, not light.
+
 7. **Flat file database is most useful for ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*  
    A) Large scale users  
    B) Banking  
    C) Small-group situation.  
    D) Chain stores
 
+   answer: C — Small-group situation  
+   explanation: A flat file stores everything in one table with no relationships, which suits a small, simple dataset but not large multi-user systems.
+
 8. **In database, a field is ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*  
    A) Label  
    B) Category of Information  
    C) Group of related records  
    D) Table of information
+
+   answer: B — Category of Information  
+   explanation: A field is a single column holding one category of data, such as name or date of birth, for every record.
 
 ## PL/SQL & Triggers (7)
 
