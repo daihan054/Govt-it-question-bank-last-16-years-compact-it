@@ -209,11 +209,17 @@
    (গ) Copper  
    (ঘ) Wrought Iron
 
+   answer: খ — Steel  
+   explanation: Gears carry high contact and bending stress, so steel is used for its strength, toughness and ability to be surface hardened.
+
 2. **ধাতুর যে ধর্মের কারনে পিটিয়ে পাত (sheet) এ পরিণত করা যায় তা হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) Ductility  
    (খ) Brittleness  
    (গ) Malleability  
    (ঘ) Toughness
+
+   answer: গ — Malleability  
+   explanation: Malleability is the ability to be hammered or rolled into thin sheets; ductility is being drawn into wire.
 
 3. **Cast Iron তৈরিতে ব্যবহৃত ফার্নেস হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) Blast furnace  
@@ -221,11 +227,17 @@
    (গ) Open hearth furnace  
    (ঘ) Bessemer Converter
 
+   answer: খ — Cupola furnace  
+   explanation: The cupola melts pig iron and scrap with coke to produce cast iron in a foundry.
+
 4. **Investment casting ব্যবহৃত হয় কোন Pattern?** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) Wax Pattern  
    (খ) Wooden Pattern  
    (গ) Polystyrene Pattern  
    (ঘ) Lead Pattern
+
+   answer: ক — Wax Pattern  
+   explanation: Investment (lost-wax) casting builds a ceramic shell around a wax pattern, then melts the wax out before pouring metal.
 
 5. **Rubber এর অপর নাম-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) Plastomer  
@@ -233,17 +245,26 @@
    (গ) Resin  
    (ঘ) Soft Plastic
 
+   answer: খ — Elastomer  
+   explanation: Rubber is an elastomer — a polymer that stretches greatly and returns to its original shape.
+
 6. **কান ধাতুর Duetility সর্বোচ্চ?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (ক) Mild steel  
    (খ) Copper  
    (গ) Zinc  
    (ঘ) Aluminum
 
+   answer: খ — Copper  
+   explanation: Copper's face-centred cubic structure lets it deform a great deal before fracture, making it the most ductile of the four.
+
 7. **কোনটি Mechanical Property?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (ক) Density  
    (খ) Thermal conductivity  
    (গ) Hardness  
    (ঘ) Porosity
+
+   answer: গ — Hardness  
+   explanation: Hardness measures resistance to indentation and wear, which is a mechanical property; density, thermal conductivity and porosity are physical properties.
 
 ## Machining & Workshop Practice (6)
 
