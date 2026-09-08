@@ -711,11 +711,17 @@
    c) RAID Level 2  
    d) RAID Level 3
 
+   answer: b — RAID Level 1  
+   explanation: RAID 1 writes the same data to two drives, so one is an exact mirror of the other.
+
 2. **The fastest read/write time and most efficient data storage of any disk array type is:** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
    a) RAID-0  
    b) RAID-1  
    c) RAID-2  
    d) RAID-3
+
+   answer: a — RAID-0  
+   explanation: RAID 0 stripes data across all drives with no parity or mirroring, giving the fastest access and 100% capacity use — but no redundancy.
 
 3. **How does RAID provide data protection?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
    a) Using either data mirroring or parity  
@@ -723,11 +729,17 @@
    c) Using high quality disk drives  
    d) Using dedicated data protection hardware
 
+   answer: a — Using either data mirroring or parity  
+   explanation: Redundancy comes either from keeping a duplicate copy (mirroring) or from parity blocks that let a lost drive be rebuilt.
+
 4. **Why RAID is used in database storage?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    a) Improve performance  
    b) Reduce Cost  
    c) Both a & b  
    d) None
+
+   answer: c — Both a & b  
+   explanation: Striping spreads I/O across several spindles for speed, and the array is built from many inexpensive disks rather than one costly high-end drive.
 
 5. **What is the name of below RAID?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*  
    a) RAID 0+1  
