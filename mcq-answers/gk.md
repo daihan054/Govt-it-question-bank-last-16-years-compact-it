@@ -4799,11 +4799,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ৯৫০ মে: ও:  
    (ঘ) ১০০০০ মে: ও:
 
+   answer: গ — ৯৫০ মে: ও:  
+   explanation: ইলেকট্রিসিটি জেনারেশন কোম্পানি অব বাংলাদেশের মোট উৎপাদন ক্ষমতা প্রায় ৯৫০ মেগাওয়াট।
+
 2. **সর্বশেষ কোন বিদ্যুৎ বিতরণ প্রতিষ্ঠানের আত্মপ্রকাশ ঘটে?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*  
    (ক) NESCO  
    (খ) WZPGCL  
    (গ) DESCO  
    (ঘ) BREB
+
+   answer: ক — NESCO  
+   explanation: নর্দান ইলেকট্রিসিটি সাপ্লাই কোম্পানি (NESCO) ২০১৬ সালে গঠিত, বিতরণ কোম্পানিগুলোর মধ্যে সর্বশেষ।
 
 3. **দেশে সর্বশেষ বিদ্যুৎ বিপর্যয় ঘটে কোন অঞ্চলে?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*  
    (ক) পূর্বাঞ্চল  
@@ -4811,11 +4817,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) পশ্চিমাঞ্চল  
    (ঘ) পূর্বাঞ্চল
 
+   answer: ক — পূর্বাঞ্চল  
+   explanation: সর্বশেষ বড় গ্রিড বিপর্যয়টি দেশের পূর্বাঞ্চলে ঘটেছিল।
+
 4. **ইজিসিবি'র পাওয়ার প্লান্ট কোথায় আছে?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*  
    (ক) হরিপুর  
    (খ) মাতারবাড়ি  
    (গ) মহেশখালি  
    (ঘ) পায়রা
+
+   answer: ক — হরিপুর  
+   explanation: ইজিসিবির প্রধান বিদ্যুৎকেন্দ্র নারায়ণগঞ্জের হরিপুরে অবস্থিত, সিদ্ধিরগঞ্জেও কেন্দ্র রয়েছে।
 
 5. **ইজিসিবি'র কোন ধরণের কোম্পানী?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*  
    (ক) সরকারী  
@@ -4823,11 +4835,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) স্বায়ত্তশাসিত  
    (ঘ) গ্রুপ
 
+   answer: খ — পাবলিক  
+   explanation: ইজিসিবি কোম্পানি আইনে নিবন্ধিত একটি পাবলিক লিমিটেড কোম্পানি।
+
 6. **বাংলাদেশে সর্বোচ্চ বিদ্যুৎ পিক আওয়ার কোন সময়কে ধরা হয়?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*  
    (ক) সন্ধ্যা ৭ টায়  
    (খ) রাহ ৯ টায়  
    (গ) দুপুর ১২ টায়  
    (ঘ) বিকাল ৫ টায়
+
+   answer: ঘ — বিকাল ৫ টায়  
+   explanation: সন্ধ্যার দিকে আলো ও গৃহস্থালি ব্যবহার একসঙ্গে বাড়ায় বিকেল থেকে সন্ধ্যার সময়টিকে পিক আওয়ার ধরা হয়।
 
 7. **একটি পল্লি বিদ্যুৎ সমিতির অফিস প্রধানের পদবী কী?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*  
    (ক) জেনারেল ম্যানেজার  
@@ -4835,15 +4853,33 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) সিস্টেম ইঞ্জিনিয়ার  
    (ঘ) চীপ ইঞ্জিনিয়ার
 
+   answer: ক — জেনারেল ম্যানেজার  
+   explanation: প্রতিটি পল্লী বিদ্যুৎ সমিতির প্রধান নির্বাহী কর্মকর্তার পদবি জেনারেল ম্যানেজার।
+
 8. **পিজিসিবি এর ক্ষমতা কত? **Ans: 950MW**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: ৯৫০ মেগাওয়াট  
+   explanation: এটি সংশ্লিষ্ট কোম্পানির মোট স্থাপিত উৎপাদন ক্ষমতা।
 
 9. **ইজিসিবি কোন ধরনের কোম্পানী? **Ans: পাবলিক**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: পাবলিক লিমিটেড কোম্পানি  
+   explanation: ইজিসিবি সরকারি মালিকানাধীন হলেও কোম্পানি আইনে নিবন্ধিত পাবলিক লিমিটেড কোম্পানি।
+
 10. **নিচের কোনটি সর্বশেষ প্রতিষ্ঠিত হয়েছে? **Ans: NESCO (2016)**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: NESCO (২০১৬)  
+   explanation: NESCO রাজশাহী ও রংপুর বিভাগে বিদ্যুৎ বিতরণের জন্য ২০১৬ সালে গঠিত হয়।
 
 11. **সর্বশেষ কোথায় গ্রীড বিপর্যয় হয়? **Ans: Eastern**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: পূর্বাঞ্চল (Eastern grid)  
+   explanation: সর্বশেষ জাতীয় গ্রিড বিপর্যয় দেশের পূর্বাঞ্চলীয় গ্রিডে ঘটে।
+
 12. **পিক আওয়ার কখন ঘটে? **Ans: 5pm**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: বিকেল ৫টা  
+   explanation: সন্ধ্যার আগে-পরে বাসাবাড়ি ও বাণিজ্যিক চাহিদা একসঙ্গে বাড়ে, তাই তখনই সর্বোচ্চ লোড হয়।
 
 13. **What will be the generation capacity target by 2041 in Bangladesh?** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)], [BCPCL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) 40,000 MW  
@@ -4852,11 +4888,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) 45,000 MW  
    **Ans: b**
 
+   answer: b — 60,000 MW  
+   explanation: Bangladesh's Power System Master Plan targets 60,000 MW of generation capacity by 2041.
+
 14. **বাংলাদেশের কত শতাংশ এলাকা বিদ্যুতায়িত হয়েছে?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 134 (ET: N/A)]*  
    a) ৯৯.৫  
    b) ৯৯  
    c) ৯৮  
    d) ১০০
+
+   answer: a — ৯৯.৫  
+   explanation: শতভাগ বিদ্যুতায়নের লক্ষ্য প্রায় পূর্ণ হয়ে দেশের প্রায় ৯৯.৫ শতাংশ এলাকা বিদ্যুতের আওতায় এসেছে।
 
 15. **পল্লীবিদ্যুৎ এর গ্রাহক সংখ্যা কত?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) প্রায় ৩.১৩ কোটি  
@@ -4864,11 +4906,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) প্রায় ৩.১০ কোটি  
    d) প্রায় ৩ কোটি
 
+   answer: a — প্রায় ৩.১৩ কোটি  
+   explanation: পল্লী বিদ্যুতায়ন বোর্ডের গ্রাহকসংখ্যা তিন কোটির বেশি, দেশের সবচেয়ে বড় বিতরণ নেটওয়ার্ক।
+
 16. **বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড কত পার্সেন্ট বিদ্যুৎ শেয়ার করে?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) 00%  
    b) 10%  
    c) 90%  
    d) 50%
+
+   answer: d — 50%  
+   explanation: বিআরইবি দেশের মোট বিদ্যুতের প্রায় অর্ধেক বিতরণ করে, যা বিতরণ সংস্থাগুলোর মধ্যে সর্বোচ্চ। <!-- verify -->
 
 17. **How Many Number of 33/11KV Sub-station?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*  
    a. 1136 Nos  
@@ -4876,11 +4924,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c. 1166 Nos  
    d. 1200 Nos
 
+   answer: a — 1136 Nos  
+   explanation: This was the number of 33/11 kV substations under BREB at the time of the exam. <!-- verify -->
+
 18. **What is the peak demand of BREB?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*  
    a. 7000 MW  
    b. 7100 MW  
    c. 7500 MW  
    d. 8000 MW
+
+   answer: b — 7100 MW  
+   explanation: BREB's peak demand had reached about 7,100 MW at the time of the exam. <!-- verify -->
 
 19. **Sources its produce electricity in Bangladesh;** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. Mineral oil  
@@ -4888,11 +4942,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. Hilly River  
    ঘ. All of them
 
+   answer: ঘ — All of them  
+   explanation: Bangladesh generates electricity mainly from natural gas, with furnace oil and diesel plants and the Kaptai hydro station adding to the mix.
+
 20. **SDG-30 এর কত নম্বর Goal এ বিদ্যুতের বর্ণনা রয়েছে?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. ৭  
    খ. ৮  
    গ. ৫  
    ঘ. ৬
+
+   answer: ক — ৭  
+   explanation: SDG 7 হলো "সবার জন্য সাশ্রয়ী, নির্ভরযোগ্য, টেকসই ও আধুনিক জ্বালানি নিশ্চিত করা"।
 
 21. **The urgency of rural electrification is described in which article of constitution?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. 8  
@@ -4900,11 +4960,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. 15  
    ঘ. 16
 
+   answer: ঘ — 16  
+   explanation: Article 16 of the constitution directs the state to bring about a radical transformation of rural life, including rural electrification.
+
 22. **What is the maximum operating transmission voltage (KV) in Bangladesh?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. 33  
    খ. 132  
    গ. 230  
    ঘ. 400
+
+   answer: ঘ — 400  
+   explanation: Bangladesh's highest operating transmission voltage is 400 kV.
 
 23. **The nature of electricity being produced using sun rays is;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. AC  
@@ -4912,11 +4978,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. Both AC and DC  
    ঘ. None
 
+   answer: খ — DC  
+   explanation: A solar photovoltaic cell produces direct current, which an inverter converts to AC for the grid.
+
 24. **Function of distribution sub-station is to;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. step down voltage  
    খ. step up voltage  
    গ. increase power  
    ঘ. increase energy
+
+   answer: ক — step down voltage  
+   explanation: A distribution substation lowers the transmission voltage to the level used by consumers.
 
 25. **BREB has about ________ consumers of the country in its load.** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. 70%  
@@ -4935,6 +5007,9 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    খ. পেট্রোবাংলা
    গ. বিইআরসি
    ঘ. বিপিএমআই
+
+   answer: খ — 80%  
+   explanation: BREB serves the bulk of the country's electricity consumers through its rural cooperative network. <!-- verify -->
 
 ## Sports (20)
 
