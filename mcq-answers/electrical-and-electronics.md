@@ -904,11 +904,17 @@
    (গ) 1.0  
    (ঘ) 1.5
 
+   answer: গ — 1.0  
+   explanation: The inverse Laplace transform of 1/(s+2) is e^(-2t), and at t = 0 that equals 1.
+
 2. **A loss-less transmission line has L=8.5\text{ nH/m} and C=300\text{ pF/m}. What is the characteristic impedance of the line?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*  
    (ক) 50\Omega  
    (খ) 5.32\Omega  
    (গ) 8.92\Omega  
    (ঘ) 4.32\Omega
+
+   answer: খ — 5.32Ω  
+   explanation: Z₀ = √(L/C) = √(8.5×10⁻⁹ / 300×10⁻¹²) = √28.33 ≈ 5.32 Ω.
 
 3. **A voltage source supplies a signal of constant amplitude from 0 to 40kHz to a RC filter (low-pass). The load resistor experiences the maximum voltage at ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) 10\text{kHz}  
@@ -916,11 +922,17 @@
    (গ) 18\text{kHz}  
    (ঘ) DC
 
+   answer: ঘ — DC  
+   explanation: A low-pass filter passes the lowest frequencies with least attenuation, so the load voltage is greatest at DC.
+
 4. **Which of the following statement holds true for the divergence of electric and magnetic flux densities?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*  
    (ক) Both are zero  
    (খ) These are zero for static flux densities but non-zero for time-varying flux densities  
    (গ) It is zero for electric flux densities  
    (ঘ) It is zero for magnetic flux densities.
+
+   answer: ঘ — It is zero for magnetic flux densities  
+   explanation: Gauss's law for magnetism gives ∇·B = 0 since magnetic monopoles do not exist, while ∇·D = ρ is non-zero wherever charge exists.
 
 5. **অ্যাম্প্লিচিউড মডুলেশনে কি ঘটে?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*  
    (ক) সিগন্যালের অ্যাম্প্লিচিউড পরিবর্তিত হয়  
@@ -929,11 +941,17 @@
    (ঘ) ক্যারিয়ার ফ্রিকুয়েন্সি পরিবর্তিত হয়  
    **Ans: গ**
 
+   answer: গ — ক্যারিয়ার অ্যাম্প্লিচিউড পরিবর্তিত হয়  
+   explanation: In amplitude modulation the message signal varies the amplitude of the carrier while the carrier frequency stays fixed.
+
 6. **ঢাকা বেতার কেন্দ্র মিডিয়াম ওয়েভে 630Hz এ অনুষ্ঠান সম্প্রচার করে। রেডিও তরঙ্গে বেগ 3 \times 10^8\text{ ms}^{-1} হলে তরঙ্গ। দৈর্ঘ্য কত হবে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. 476190m  
    B. 476.19m  
    C. 476190cm  
    D. 476.19cm
+
+   answer: A — 476190m  
+   explanation: λ = c/f = 3×10⁸ ÷ 630 = 476,190 metres.
 
 7. **What is the output power in watts of the following three-stage system?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*  
    a) 0.431\text{ Watt}  
@@ -947,11 +965,17 @@
    C) রাউটার  
    D) গেটওয়ে
 
+   answer: A — মডেম  
+   explanation: A modem converts digital signals to analog for the line and back again at the far end.
+
 9. **একটি ওয়েভ এক সাইকেল এ যে দূরত্ব অতিক্রম করে তাকে বলে-** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
    A) Frequency  
    B) Cycle  
    C) Wave length  
    D) None
+
+   answer: C — Wave length  
+   explanation: Wavelength is the distance a wave travels in one complete cycle.
 
 10. **The unit-impulse response of a system is given by c(t) = 0.5e^{-0.5t}. Its transformer function is-** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
    (a) 1/(s+2)  
@@ -959,11 +983,17 @@
    (c) 2/(1+2s)  
    (d) 2/(s+2)
 
+   answer: b — 1/(1+2s)  
+   explanation: The Laplace transform of 0.5e^(-0.5t) is 0.5/(s+0.5); multiplying top and bottom by 2 gives 1/(2s+1).
+
 11. **A filter having a single continuous transmission band with neither the upper nor the lower cutoff frequencies is zero or infinite is called-** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
    (a) Band pass filter  
    (b) Low pass filter  
    (c) High pass filter  
    (d) Band stop filter
+
+   answer: a — Band pass filter  
+   explanation: A band pass filter has one continuous pass band with finite, non-zero lower and upper cutoff frequencies.
 
 ## Diodes & Rectifiers (4)
 
