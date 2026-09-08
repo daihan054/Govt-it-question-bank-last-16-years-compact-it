@@ -1465,11 +1465,17 @@
    (c) 12 years ago  
    (d) 4 years ago
 
+   answer: a — 6 years ago  
+   explanation: 36 - x = 3(16 - x) gives 2x = 12, so x = 6 years ago.
+
 2. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৪৫ বছর  
    খ. ৪০ বছর  
    গ. ৩৫ বছর  
    ঘ. ৩০ বছর
+
+   answer: খ — ৪০ বছর  
+   explanation: দুই গড়ের পার্থক্য ২.৫ মানে (পিতা - মাতা)/৪ = ২.৫, তাই পার্থক্য ১০ বছর এবং মাতার বয়স ৫০ - ১০ = ৪০।
 
 3. **The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6° C, then temperature on the fourth day is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 38.5°C  
@@ -1477,11 +1483,17 @@
    (c) 41.3°C  
    (d) 40.8°
 
+   answer: b — 41.8°C  
+   explanation: The first four sum to 160.8 and the last four to 165.2 (total 326.0) while the week totals 7 × 40.6 = 284.2; the fourth day is counted twice, so it is 41.8°C.
+
 4. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) n<m<o  
    (b) m<n<o  
    (c) o<n<m  
    (d) o<m<n
+
+   answer: a — n<m<o  
+   explanation: M is older than N and younger than O, so N is youngest and O oldest.
 
 5. **If age is P times then y after 6 years x age is 17 then find the age of y with respect to p.** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 73 (ET: N/A)]*  
    (a) 11p  
@@ -1490,11 +1502,17 @@
    (d) P+11  
    **Ans: b**
 
+   answer: b — 11p+6  
+   explanation: Working back from x's age of 17 after six years and the given multiple gives y's age as 11p + 6.
+
 6. **5 years ago the ration of father's age to son's age was 5:1 and 2 years later father's age will be 3 times his son's age. What is the ration of their present age?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 5:2  
    b. 7:3  
    c. 10:3  
    d. 11:7
+
+   answer: c — 10:3  
+   explanation: Five years ago the ages were 5x and x; two years from now 5x+7 = 3(x+7) gives x = 7, so the present ages are 40 and 12, a ratio of 10:3.
 
 ## Ratio & Proportion (6)
 
