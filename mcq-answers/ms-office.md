@@ -161,17 +161,26 @@
    (c) Operating System  
    (d) Photoshop
 
+   answer: c — Operating System  
+   explanation: The operating system manages the hardware and provides services to other programs, which is what makes it system software.
+
 3. **The most famous romantic poet of English literature is-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*  
    a. John Dryden  
    b. Alexander Pope  
    c. William Wordsworth  
    d. T.S Eliot
 
+   answer: c — William Wordsworth  
+   explanation: Wordsworth led the English Romantic movement with the Lyrical Ballads (1798).
+
 4. **Find the correctly spelt word** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    a) aggrandize  
    b) aggrandiize  
    c) aggrandice  
    d) aggrandise
+
+   answer: a — aggrandize  
+   explanation: "Aggrandize" means to increase power or importance; the -ize spelling is the standard form.
 
 ## MS PowerPoint (3)
 
