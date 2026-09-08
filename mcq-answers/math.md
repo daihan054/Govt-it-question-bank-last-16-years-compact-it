@@ -1083,11 +1083,17 @@
    (c) 2.4 hours  
    (d) 5 hours
 
+   answer: c — 2.4 hours  
+   explanation: Together they fill 1/4 + 1/6 = 5/12 of the tank per hour, so the whole tank takes 12/5 = 2.4 hours.
+
 2. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ১৫ মিনিট  
    খ. ১১ মিনিট  
    গ. ১৩ মিনিট  
    ঘ. ১৪ মিনিট
+
+   answer: গ — ১৩ মিনিট  
+   explanation: প্রতি ২ মিনিটে নিট ৩ ফুট ওঠে, তাই ১২ মিনিটে ১৮ ফুট; ১৩তম মিনিটে ৪ ফুট উঠেই ২২ ফুট শীর্ষে পৌঁছে যায়।
 
 3. **If a man rows at 5km/hr in still water and 3.5 km/hr against the current, find his rate along the current.** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 4 .25 km  
@@ -1095,11 +1101,17 @@
    c) 6 km  
    d) 6.5km
 
+   answer: d — 6.5km  
+   explanation: Still water 5 and upstream 3.5 make the current 1.5 km/h, so downstream speed is 5 + 1.5 = 6.5 km/h.
+
 4. **A floor with dimension of 20 feet to 35 feet is needed to be tiled. Two workers can tile that floor in 2 hours and 30 minutes. If they are joined by three other workers of similar ability. How many hours will it take to tile the floor?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) 1 hr  
    b) 1.25 hr  
    c) 1.5 hr  
    d) 1.75 hr
+
+   answer: a — 1 hr  
+   explanation: Two workers taking 2.5 hours means 5 worker-hours of work, so five workers finish it in 1 hour.
 
 5. **A train went 300 km from city X to city Y at an average speed of 100 km/h. At what speed did it travel on the way back if its average speed for the whole trip was 120 km/h.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 120 km/h  
@@ -1107,11 +1119,17 @@
    c) 130 km/h  
    d) 150 km/h
 
+   answer: d — 150 km/h  
+   explanation: The outward leg takes 3 hours and the whole 600 km at 120 km/h takes 5 hours, so the return 300 km takes 2 hours — 150 km/h.
+
 6. **A boat sailing against a stream of river takes 6 hours to travel 24 kms, while sailing with the stream it takes 4 hours to travel the same distance. What is the speed of the stream?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 2.5 km/hr  
    b) 1.5 km/hr  
    c) 1 km/hr  
    d) 0.5 km / hr
+
+   answer: c — 1 km/hr  
+   explanation: Upstream speed is 24/6 = 4 and downstream 24/4 = 6, so the stream is (6-4)/2 = 1 km/h.
 
 7. **Length of a train is 170 meters and speed of train is 63 km/hour. This train can pass a bridge in 30 seconds, then find the length of the bridge.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) 355 m  
@@ -1119,11 +1137,17 @@
    (c) 365 m  
    (d) 312 m
 
+   answer: a — 355 m  
+   explanation: 63 km/h is 17.5 m/s, so in 30 s the train covers 525 m; subtracting its own 170 m leaves a 355 m bridge.
+
 8. **It takes 5 hours to fill a container using machine A. The same container can be filled suing Machin B in 10 hours. When the container is full, Machine C can fully empty the container in 20 containers how long will it take for the container to be completely filled?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 1/4 hours  
    b. 4 hours  
    c. 2 hours  
    d. 15 hours
+
+   answer: b — 4 hours  
+   explanation: Net filling rate = 1/5 + 1/10 - 1/20 = 5/20 = 1/4 of the container per hour, so it takes 4 hours.
 
 9. **Two trucks 300 km away are travelling towards each other with a constant speed. Truck A is moving at a constant speed of 50 km/h. How long does it take for them to meet?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 5 hours  
@@ -1131,17 +1155,26 @@
    c. 2.5 hours  
    d. 6 hours
 
+   answer: b — 3 hours  
+   explanation: With both trucks at 50 km/h they close the 300 km gap at 100 km/h, meeting in 3 hours.
+
 10. **If 12 men work on a particular task. it takes them 24 days to complete it. On the other hand, 12 women can complete the same task in 12 days. How many days it takes if the 12 men and 12 women cooperated with each other to finish to finish the same task?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 5 days  
    b. 6 days  
    c. 8 days  
    d. 16 days
 
+   answer: c — 8 days  
+   explanation: Men do 1/24 and women 1/12 of the work per day, together 1/8, so the task takes 8 days.
+
 11. **A train 220 m long is moving at 45km/h. The time taken by the train to cross a tunnel 260m long. Is** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 25 sec  
    b. 35 sec  
    c. 38 sec  
    d. 40 sec
+
+   answer: c — 38 sec  
+   explanation: The train must cover 220 + 260 = 480 m at 45 km/h (12.5 m/s), which takes 480/12.5 = 38.4 seconds.
 
 ## Analytical Reasoning (10)
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
