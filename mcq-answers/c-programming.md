@@ -1133,7 +1133,13 @@
    (c) Abstraction  
    (d) Encapsulation
 
+   answer: d — Encapsulation  
+   explanation: Encapsulation bundles data with its methods and hides internal fields behind private access, so outside code cannot reach those details directly.
+
 2. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
+
+   answer: Use a regular expression test inside a function, e.g. function validateEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e); }  
+   explanation: The pattern requires a non-empty local part, one @, a domain, and a dot followed by a top-level domain of at least two characters; it returns true or false.
 
 3. **In a doubly linked list, the number of pointers affected in insertion operation will be— [ ডাবলি লিঙ্কড লিস্টে ইনসারশন অপারেশনে কতটি পয়েন্টার প্রভাবিত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (A) 5  
@@ -1141,11 +1147,17 @@
    (C) 1  
    (D) None of these
 
+   answer: D — None of these  
+   explanation: Inserting a node in the middle of a doubly linked list changes 4 pointers (the new node's prev and next, plus the neighbours' links), and 4 is not offered.
+
 4. **What is the class and subnet mask if the subnet mask is 255.224.0.0? [ সাবনেট মাস্ক 255.224.0.0 হলে এর ক্লাস এবং মাস্ক বিট কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
    (A) Class A, 8  
    (B) Class A, 3  
    (C) Class B, 3  
    (D) Class B, 32
+
+   answer: B — Class A, 3  
+   explanation: The first octet 255 makes it Class A whose default mask is /8, and 224 = 11100000 adds 3 subnet bits, giving 255.224.0.0 = /11.
 
 5. **Martin Cooper is known for his invention of— [ Martin Cooper কোন উদ্ভাবনের জন্য পরিচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
    (a) Digital Camera  
@@ -1153,11 +1165,17 @@
    (c) Mobile Phone  
    (d) Telephone
 
+   answer: c — Mobile Phone  
+   explanation: Martin Cooper of Motorola made the first handheld mobile phone call in 1973.
+
 6. **What is the main goal of reinforcement learning?[ রিইনফোর্সমেন্ট লার্নিং (Reinforcement learning) এর প্রধান লক্ষ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
    (a) To classify data into categories  
    (b) To optimize a system for maximum efficiency  
    (c) To make predinction based on historical data  
    (d) To learn optima actions through trail and error
+
+   answer: d — To learn optima actions through trail and error  
+   explanation: A reinforcement learning agent explores an environment and uses reward and penalty signals to discover the actions that maximise long-term reward.
 
 7. **Which for loop has range of similar indexes of ‘i’ used in for(i=0; i<n; i++)?[ for(i=0; i<n; i++) লুপের সমান ইনডেক্স রেঞ্জ নিচের কোন লুপটিতে ব্যবহৃত হয়েছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) for (i=n; i>0; i--)  
@@ -1165,11 +1183,17 @@
    (c) for (i=0; i=0; i--)  
    (d) for (i=n-1; i>=0; i--)
 
+   answer: d — for (i=n-1; i>=0; i--)  
+   explanation: The original loop covers indexes 0 to n-1; this one counts down from n-1 to 0, so it visits the same set of values.
+
 8. **A collection of objects that use common structure and a common behavior is known as—[ একই কাঠামো এবং একই আচরণ ব্যবহার করে এমন অবজেক্টের সংগ্রহকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Object  
    (b) Entity  
    (c) Instance  
    (d) Class
+
+   answer: d — Class  
+   explanation: A class is the blueprint that defines the common attributes and behaviour shared by all its objects.
 
 ## Pointers & Memory Allocation (5)
 
