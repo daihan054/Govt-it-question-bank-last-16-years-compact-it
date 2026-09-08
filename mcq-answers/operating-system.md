@@ -403,11 +403,17 @@
    c) Optimal Page Replacement  
    d) Both LRU and FIFO
 
+   answer: a — FIFO  
+   explanation: Belady's anomaly is when more frames cause more page faults, and FIFO suffers from it; LRU and Optimal are stack algorithms and do not.
+
 2. **To keep track of how many frames have been allocated, how many are there, and how many are available, operating system maintain a—** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*  
    (a) Memory table  
    (b) Page table  
    (c) mapping table  
    (d) frame table
+
+   answer: d — frame table  
+   explanation: The frame table has one entry per physical frame, showing whether it is free and which page occupies it.
 
 3. **Logical Memory is broken into blocks of the same size called-** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*  
    a) Frames  
@@ -415,11 +421,17 @@
    c) raids  
    d) Blocks
 
+   answer: b — Pages  
+   explanation: Logical (virtual) memory is divided into pages, and physical memory into equal-sized frames.
+
 4. **A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*  
    (a) 11 bits  
    (b) 13 bits  
    (c) 15 bits  
    (d) 20 bits
+
+   answer: c — 15 bits  
+   explanation: A 4 KB page needs 12 offset bits, leaving a 20-bit page number; 128 entries 4-way gives 32 sets = 5 index bits, so the tag is 20 - 5 = 15 bits.
 
 5. **What is the relationship between Paging and Virtual memory?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*  
    (ক) Virtual memory came before Paging  
@@ -427,11 +439,17 @@
    (গ) Virtual memory can never be implemented without paging  
    (ঘ) Both have the same concepts
 
+   answer: গ — Virtual memory can never be implemented without paging  
+   explanation: The exam key treats paging as the mechanism virtual memory depends on; strictly, segmentation is another way to implement it. <!-- verify -->
+
 6. **Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*  
    a) Always decrease the number of page faults  
    b) Always increase the number of page faults  
    c) Sometimes increase the number of page faults  
    d) Never affect the number of page faults
+
+   answer: c — Sometimes increase the number of page faults  
+   explanation: FIFO exhibits Belady's anomaly, so for some reference strings adding frames actually raises the fault count.
 
 7. **Applying the LRU page replacement to the reference string 1 2 4 5 2 1 2 4. The main memory can accommodate pages and it already has pages and 2. Pape I came in before page 2 How many page faults will court?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
    a) 3  
@@ -439,11 +457,17 @@
    c) 5  
    d) 6
 
+   answer: b — 4  
+   explanation: With 3 frames already holding 1 and 2, the string faults on 4, 5, 1 and 4 under LRU — four faults in all.
+
 8. **Consider a virtual memory system where three pages are allocated for real memory. If the page replacement algorithm used is FIFO, how many page replacements take place for the access sequence: 1, 3, 2, 1, 4, 5, 2, 3, 4, 5?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)]*  
    a. 2  
    b. 3  
    c. 4  
    d. 6
+
+   answer: b — 3  
+   explanation: The first three references fill the empty frames without replacing anything; after that only 4, 5 and 3 evict a page, so three replacements occur.
 
 9. **Virtual memory located on:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
    a) RAM  
@@ -451,11 +475,17 @@
    c) Flash drive  
    d) Hard drive
 
+   answer: d — Hard drive  
+   explanation: Virtual memory extends RAM using a swap file or partition on the disk.
+
 10. **Virtually memory হিসেবে RAM এর পাশাপাশি কোনটি ব্যবহার হয়?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*  
    A) Cache  
    B) CPU Register  
    C) CD-ROM  
    D) Hard disk
+
+   answer: D — Hard disk  
+   explanation: Pages that do not fit in RAM are kept in the swap area on the hard disk.
 
 11. **Memory management scheme by which a computer stores and retrieves data from secondary storage for use in main memory is-** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*  
    A) Paging  
@@ -463,17 +493,26 @@
    C) Batch processing  
    D) Virtual storage
 
+   answer: D — Virtual storage  
+   explanation: Virtual memory swaps pages between disk and main memory so a program can be larger than physical RAM.
+
 12. **Swap space exists in ---** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) CPU  
    B) random memory  
    C) primary memory  
    D) secondary memory
 
+   answer: D — secondary memory  
+   explanation: Swap space is a file or partition on the disk, which is secondary storage.
+
 13. **A page fault occurs ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. When the page is not in the memory  
    b. When the page is in the memory  
    c. When the process inters into the blocked state  
    d. When the process is in the ready state
+
+   answer: a — When the page is not in the memory  
+   explanation: A page fault is the trap raised when the referenced page is not resident, so the OS must fetch it from disk.
 
 ## Linux Commands & Administration (9)
 
