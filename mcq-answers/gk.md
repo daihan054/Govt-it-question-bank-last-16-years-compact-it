@@ -1926,11 +1926,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) 495  
    d) 498
 
+   answer: c — 495  
+   explanation: বাংলাদেশে বর্তমানে ৪৯৫টি উপজেলা রয়েছে।
+
 2. **বাংলাদেশের সবচেয়ে বড় জেলা কোনটি (আয়তনের দিক থেকে)?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*  
    a) চট্টগ্রাম  
    b) কক্সবাজার  
    c) খুলনা  
    d) রাঙ্গামাটি
+
+   answer: d — রাঙ্গামাটি  
+   explanation: আয়তনে রাঙামাটি বাংলাদেশের বৃহত্তম জেলা (প্রায় ৬,১১৬ বর্গকিমি)।
 
 3. **বাংলাদেশের মোট সাক্ষরতার হার (শিক্ষিতের হার) কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*  
    a) ৬০%  
@@ -1938,11 +1944,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) ৭৫%  
    d) ৮০%
 
+   answer: c — ৭৫%  
+   explanation: ২০২২ সালের আদমশুমারি অনুযায়ী সাক্ষরতার হার প্রায় ৭৪.৭%, অর্থাৎ প্রায় ৭৫%।
+
 4. **বীরশ্রেষ্ঠ মতিউর রহমান কোথায় জন্মগ্রহণ করেন?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*  
    a) ঢাকা  
    b) গাজীপুরে  
    c) ব্রাহ্মণবাড়িয়া  
    d) কিশোরগঞ্জ
+
+   answer: a — ঢাকা  
+   explanation: বীরশ্রেষ্ঠ মতিউর রহমান ১৯৪১ সালে ঢাকায় জন্মগ্রহণ করেন; তাঁর পৈতৃক নিবাস নরসিংদী।
 
 5. **The highest peak in Bangladesh is-** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) Saka Haphong  
@@ -1950,11 +1962,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Dumlong  
    (d) Keokradong
 
+   answer: a — Saka Haphong  
+   explanation: Saka Haphong in Bandarban, at about 1,064 m, is the highest measured peak in Bangladesh.
+
 6. **বাংলাদেশের ২৯তম গ্যাসক্ষেত্র কোথায় অবস্থিত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. ভোলা, সদর  
    খ. ছাতক, সুনামগঞ্জ  
    গ. রশীদপুর, হবিগঞ্জ  
    ঘ. জকিগঞ্জ, সিলেট
+
+   answer: ঘ — জকিগঞ্জ, সিলেট  
+   explanation: ২০২১ সালে সিলেটের জকিগঞ্জে বাংলাদেশের ২৯তম গ্যাসক্ষেত্র আবিষ্কৃত হয়।
 
 7. **বীরশ্রেষ্ঠ হামিদুর রহমানের পদবী কি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. ল্যান্স নায়েক  
@@ -1962,11 +1980,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. ক্যাপ্টেন  
    ঘ. হাবিলদার
 
+   answer: খ — সিপাহী  
+   explanation: বীরশ্রেষ্ঠ মোহাম্মদ হামিদুর রহমান ছিলেন সিপাহী পদমর্যাদার সৈনিক।
+
 8. **বাংলাদেশের জিডিপিতে কোন খাতের অবদান সবচেয়ে বেশি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. কৃষি  
    খ. শিল্প  
    গ. বাণিজ্য  
    ঘ. সেবা
+
+   answer: ঘ — সেবা  
+   explanation: বাংলাদেশের জিডিপিতে সেবা খাতের অবদান সবচেয়ে বেশি, প্রায় ৫১ শতাংশ।
 
 9. **বাংলাদেশে বিশেষ ক্ষমতা আইন কত সালে প্রণীত হয়েছিল?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. ১৯৭৯  
@@ -1974,11 +1998,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. ১৯৭৫  
    ঘ. ১৯৭৭
 
+   answer: খ — ১৯৭৪  
+   explanation: বিশেষ ক্ষমতা আইন ১৯৭৪ সালে প্রণীত হয়।
+
 10. **বাংলাদেশের জাতীয় প্রতীকে কয়টি তারকা আছে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. ২ টি  
    খ. ৩ টি  
    গ. ৪ টি  
    ঘ. ৫ টি
+
+   answer: গ — ৪ টি  
+   explanation: জাতীয় প্রতীকে শাপলার দুই পাশে ধানের শীষ এবং উপরে পাটপাতার সঙ্গে চারটি তারকা রয়েছে।
 
 11. **ইক্ষু গবেষণা ইনস্টিটিউট কোথায় অবস্থিত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. ঈশ্বরদী  
@@ -1986,11 +2016,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. পাকশী  
    ঘ. গোপালগঞ্জ
 
+   answer: ক — ঈশ্বরদী  
+   explanation: বাংলাদেশ ইক্ষু গবেষণা ইনস্টিটিউট পাবনার ঈশ্বরদীতে অবস্থিত।
+
 12. **বাংলাদেশের বৃহত্তম গ্রাম কোন জেলায় অবস্থিত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. নোয়াখালী  
    খ. কুষ্টিয়া  
    গ. চাঁদপুর  
    ঘ. হবিগঞ্জ
+
+   answer: ঘ — হবিগঞ্জ  
+   explanation: হবিগঞ্জের বানিয়াচং বাংলাদেশের তথা এশিয়ার অন্যতম বৃহত্তম গ্রাম।
 
 13. **শহীদ আসাদ দিবস কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. ১৯ জানুয়ারি  
@@ -1998,11 +2034,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. ২৫ জানুয়ারি  
    ঘ. ৩০ জানুয়ারি
 
+   answer: খ — ২০ জানুয়ারি  
+   explanation: ১৯৬৯ সালের ২০ জানুয়ারি ছাত্রনেতা আসাদুজ্জামান শহীদ হন, দিনটি শহীদ আসাদ দিবস।
+
 14. **বাংলাদেশে কোন ধরনের জ্বালানি থেকে বেশি বিদ্যুৎ উৎপাদিত হয়?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. কয়লা  
    খ. গ্যাস  
    গ. তেল  
    ঘ. হাইড্রো
+
+   answer: খ — গ্যাস  
+   explanation: বাংলাদেশের বিদ্যুতের সবচেয়ে বড় অংশ প্রাকৃতিক গ্যাসভিত্তিক কেন্দ্র থেকে আসে।
 
 15. **ওআইসি'র কততম শীর্ষ সম্মেলনে বঙ্গবন্ধু শেখ মুজিবুর রহমান অংশগ্রহণ করেন?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. ২য়  
@@ -2010,11 +2052,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. ৪র্থ  
    ঘ. ৫ম
 
+   answer: ক — ২য়  
+   explanation: বঙ্গবন্ধু ১৯৭৪ সালে লাহোরে অনুষ্ঠিত ওআইসির ২য় শীর্ষ সম্মেলনে যোগ দেন।
+
 16. **বঙ্গভঙ্গের কারণে সৃষ্ট প্রদেশ কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. পূর্ববঙ্গ ও বিহার  
    খ. পূর্ববঙ্গ ও আসাম  
    গ. পূর্ববঙ্গ ও উড়িষ্যা  
    ঘ. পূর্ববঙ্গ ও পশ্চিমবঙ্গ
+
+   answer: খ — পূর্ববঙ্গ ও আসাম  
+   explanation: ১৯০৫ সালের বঙ্গভঙ্গে ঢাকা রাজধানী করে 'পূর্ববঙ্গ ও আসাম' নামের নতুন প্রদেশ গঠিত হয়।
 
 17. **Which one of the following is not a part of the local government in Bangladesh?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) Union Parishad  
@@ -2022,11 +2070,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Zila Parishad  
    d) National Parliament
 
+   answer: d — National Parliament  
+   explanation: Union, Upazila and Zila Parishads are tiers of local government; the National Parliament is the central legislature.
+
 18. **What is the highest temperature ever recorded in Bangladesh?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) 42.3°C  
    b) 43.2°C  
    c) 44.5°C  
    d) 45.1°C
+
+   answer: d — 45.1°C  
+   explanation: The highest temperature on record in Bangladesh, 45.1°C, was measured at Rajshahi in May 1972.
 
 19. **Who received the Ekushey Padak 2024 in Social Service in Bangladesh?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) Md Ziaul Haque and Rafique Ahmed  
@@ -2034,11 +2088,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Muhammad Samad and Lutfor Rahman Riton  
    d) Shibli Mohammad and Dolly Johur
 
+   answer: a — Md Ziaul Haque and Rafique Ahmed  
+   explanation: They received the Ekushey Padak 2024 in the social service category.
+
 20. **What is Bangladesh's ranking as a remittance recipient globally?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) 5^{th}  
    b) 7^{th}  
    c) 8^{th}  
    d) 10^{th}
+
+   answer: b — 7th  
+   explanation: World Bank figures place Bangladesh seventh among the world's largest remittance-receiving countries.
 
 21. **When will Bangladesh exit from the LDC category?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 2024  
@@ -2046,11 +2106,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 2026  
    (d) 2027
 
+   answer: c — 2026  
+   explanation: The UN General Assembly set November 2026 as Bangladesh's graduation date from the LDC category.
+
 22. **The documentary film, based on the liberation war, 'Rupali Shoikot' was directed by** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) Alamgir Kabir  
    (b) Tanvir Mokammel  
    (c) Tanvir Kabir  
    (d) Tarek Masood
+
+   answer: a — Alamgir Kabir  
+   explanation: "Rupali Shoikote" is a liberation-war film directed by Alamgir Kabir.
 
 23. **In 1997, UNESCO declared the 'Sundarbans' as the-** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 798th World Heritage Site  
@@ -2058,11 +2124,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 879th World Heritage Site  
    (d) 789th World Heritage Site
 
+   answer: a — 798th World Heritage Site  
+   explanation: UNESCO inscribed the Sundarbans as the 798th World Heritage Site in 1997.
+
 24. **Which one of the following is true?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 18 (ET: BIBM)]*  
    (a) Bangladesh is a lower middle-income country.  
    (b) Bangladesh is an upper middle-income country.  
    (c) Bangladesh is a low-income country.  
    (d) Bangladesh is a high-income country.
+
+   answer: a — Bangladesh is a lower middle-income country  
+   explanation: The World Bank has classified Bangladesh as a lower-middle-income economy since 2015.
 
 25. **কুতুবদিয়া বাতিঘর নির্মাণ করা হয় কত সালে?** *[NPCBL Executive Trainee (Software) 2023 compact it 37 (ET: N/A)]*  
    (a) ১৮৫৫ সালে  
@@ -2070,11 +2142,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) ১৮৪৬ সালে  
    (d) ১৮৪৮ সালে
 
+   answer: c — ১৮৪৬ সালে  
+   explanation: কুতুবদিয়া বাতিঘর ১৮৪৬ সালে নির্মিত হয়।
+
 26. **বাংলাদেশের একমাত্র পাহাড়ী দ্বীপ কোনটি?** *[NPCBL Executive Trainee (Software) 2023 compact it 37 (ET: N/A)]*  
    (a) সেন্ট মার্টিন  
    (b) মহেশখালি  
    (c) ছেড়াদ্বীপ  
    (d) নিঝুম দ্বীপ
+
+   answer: b — মহেশখালি  
+   explanation: মহেশখালী বাংলাদেশের একমাত্র পাহাড়ি দ্বীপ, যেখানে আদিনাথ পাহাড় রয়েছে।
 
 27. **তামাবিল সীমান্তের সাথে ভারতের কোন শহরটি অবস্থিত?** *[NPCBL Executive Trainee (Software) 2023 compact it 37 (ET: N/A)]*  
    (a) করিমগঞ্জ  
@@ -2082,11 +2160,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) পেট্রাপোল  
    (d) ডাউকি
 
+   answer: d — ডাউকি  
+   explanation: সিলেটের তামাবিল স্থলবন্দরের ওপারে ভারতের মেঘালয় রাজ্যের ডাউকি অবস্থিত।
+
 28. **দক্ষিণ তালপট্টি কোন নদীর মোহনায় অবস্থিত?** *[NPCBL Executive Trainee (Software) 2023 compact it 37 (ET: N/A)]*  
    (a) নাফ  
    (b) তেতুলিয়া  
    (c) আড়িয়াল খাঁ  
    (d) হাঁড়িয়াভাঙ্গা
+
+   answer: d — হাঁড়িয়াভাঙ্গা  
+   explanation: দক্ষিণ তালপট্টি দ্বীপ হাড়িয়াভাঙ্গা নদীর মোহনায় জেগে উঠেছিল।
 
 29. **When was International Mother Language Day Declaration by UNESCO?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*  
    (a) November, 1999  
@@ -2094,14 +2178,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) February, 1999  
    (d) November, 2000
 
+   answer: a — November, 1999  
+   explanation: UNESCO adopted the resolution in November 1999, and 21 February was first observed as International Mother Language Day in 2000.
+
 30. **বাংলা একাডেমি প্রতিষ্ঠা হয় কবে?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ১৯৫৫
+
+   answer: ১৯৫৫  
+   explanation: বাংলা একাডেমি ১৯৫৫ সালের ৩ ডিসেম্বর প্রতিষ্ঠিত হয়।
 
 31. **স্বাধীন বাংলাদেশের পতাকা প্রথম উত্তোলিত হয়েছিল ১৯৭১ সালের-** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ২ মার্চ
 
+   answer: ২ মার্চ  
+   explanation: ১৯৭১ সালের ২ মার্চ ঢাকা বিশ্ববিদ্যালয়ের বটতলায় প্রথম স্বাধীন বাংলার পতাকা উত্তোলিত হয়।
+
 32. **চন্দ্রদ্বীপ অঞ্চলের পূর্বনাম কি?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** বরিশাল
+
+   answer: বরিশাল  
+   explanation: প্রাচীনকালে বরিশাল অঞ্চল চন্দ্রদ্বীপ নামে পরিচিত ছিল।
 
 33. **Biggest district in Bangladesh ______.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*  
    (a) Dhaka  
@@ -2109,11 +2205,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Rangamati  
    (d) Mymensingh
 
+   answer: c — Rangamati  
+   explanation: Rangamati is the largest district of Bangladesh by area.
+
 34. **Which located in largest Coal Mine of Bangladesh?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*  
    (a) Barapukuria in the Dinajpur  
    (b) Sylhet  
    (c) Gazipur  
    (d) Rajshai
+
+   answer: a — Barapukuria in the Dinajpur  
+   explanation: Barapukuria in Dinajpur is the country's largest and only operating coal mine.
 
 35. **Name of the first Prime Minister of Bangladesh ______.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*  
    (a) Sheikh Mujibur Rahman  
@@ -2121,11 +2223,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Tajuddin Ahmad  
    (d) Humayun Rashid Choudhury
 
+   answer: c — Tajuddin Ahmad  
+   explanation: Tajuddin Ahmad was the first Prime Minister, heading the Mujibnagar government in 1971.
+
 36. **Who is the famous artist in Bangladesh?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    (a) Zainul Abedin  
    (b) Kamrul  
    (c) Shabuddin  
    (d) Monirul Islam
+
+   answer: a — Zainul Abedin  
+   explanation: Zainul Abedin, famous for his 1943 famine sketches, is called the founding artist (Shilpacharya) of Bangladesh.
 
 37. **ECNEC under which ministry?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    (a) Ministry of Education  
@@ -2133,14 +2241,23 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Planning  
    (d) Foreign
 
+   answer: c — Planning  
+   explanation: ECNEC, the Executive Committee of the National Economic Council, works under the Ministry of Planning.
+
 38. **Full meaning of GDP ______** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    (a) Gross Domestic Product  
    (b) Gross Development Product  
    (c) Goal Domestic Product  
    (d) Great Domestic Product
 
+   answer: a — Gross Domestic Product  
+   explanation: GDP is the total market value of all goods and services produced within a country in a year.
+
 39. **Three connecting point name of padma bridge of Bangladesh.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    Louhajang Upazila of Munshiganj and Zazira Upazila of Shariatpur and a small part of Shibchar Upazila of Madaripur
+
+   answer: Louhajang (Munshiganj), Zajira (Shariatpur) and part of Shibchar (Madaripur)  
+   explanation: The Padma Bridge links Louhajang on the north bank with Zajira and Shibchar on the south bank.
 
 40. **How many sector liberation war in Bangladesh?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    (a) 10  
@@ -2148,14 +2265,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 7  
    (d) 9
 
+   answer: b — 11  
+   explanation: The 1971 Liberation War was fought under eleven sectors, each with its own commander.
+
 41. **তিন বিঘা করিডোর কোথায় অবস্থিত?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 31 (ET: BUET)]*  
    **Ans:** লালমনিরহাট
+
+   answer: লালমনিরহাট  
+   explanation: তিন বিঘা করিডোর লালমনিরহাট জেলার পাটগ্রাম উপজেলায় অবস্থিত।
 
 42. **When established Bangladesh Rapid Action Battalion (RAB)?** *[RPGCL Assistant Engineer 2022 compact it 36 (ET: MIST)]*  
    **Ans:** 2004
 
+   answer: 2004  
+   explanation: The Rapid Action Battalion was formed in 2004 as an elite force of the Bangladesh Police.
+
 43. **যুক্তরাষ্ট্রের নিউইয়র্কে কনসার্ট ফর বাংলাদেশ কে এরেঞ্জ করেন?** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** পন্ডিত রবি শংকর
+
+   answer: পন্ডিত রবি শংকর  
+   explanation: পণ্ডিত রবিশঙ্করের উদ্যোগে ও জর্জ হ্যারিসনের আয়োজনে ১৯৭১ সালের ১ আগস্ট নিউইয়র্কে কনসার্ট ফর বাংলাদেশ অনুষ্ঠিত হয়।
 
 44. **Who was the commander in chief of the mukti bahini?** *[NPCBL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) M.A. Rab  
@@ -2164,12 +2293,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) A.K Khander  
    **Ans: b**
 
+   answer: b — M.A.G Osmani  
+   explanation: General M. A. G. Osmani was the Commander-in-Chief of the Mukti Bahini in 1971.
+
 45. **Total amount of budget of Bangladesh for FY 2022-2023 was-** *[NPCBL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) 6,78,064 Cr, TK  
    (b) 5,23,190 Cr, TK  
    (c) 6,80,473 Cr, TK  
    (d) 7,80,064 Cr, TK  
    **Ans: a**
+
+   answer: a — 6,78,064 Cr, TK  
+   explanation: The national budget for FY 2022-23 was set at Tk 6,78,064 crore.
 
 46. **What is the current rank of Bangladesh of SDG?** *[NPCBL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) 109  
@@ -2178,12 +2313,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) 129  
    **Ans: b**
 
+   answer: b — 104  
+   explanation: Bangladesh ranked 104th in the SDG Index in that year's report.
+
 47. **The span of the Padma bridge are-** *[NPCBL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) 40  
    (b) 41  
    (c) 42  
    (d) 43  
    **Ans: b**
+
+   answer: b — 41  
+   explanation: The Padma Bridge has 41 spans resting on 42 pillars, giving its 6.15 km length.
 
 48. **Install capacity of payra-** *[NPCBL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) 1320 MW  
@@ -2192,38 +2333,80 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) 2400 MW  
    **Ans: a**
 
+   answer: a — 1320 MW  
+   explanation: The Payra thermal power plant has two 660 MW units, a total installed capacity of 1320 MW.
+
 49. **একুশে ফেব্রুয়ারিকে কখন আন্তর্জাতিক মাতৃভাষা দিবস হিসেবে ঘোষণা করা হয়? **Ans: ১৯৯৯ সারে**** *[EGCB Assistant Engineer (ICT) 2022 compact it 71 (ET: BUET)]*
+
+   answer: ১৯৯৯ সালে  
+   explanation: ইউনেস্কো ১৯৯৯ সালের ১৭ নভেম্বর ২১ ফেব্রুয়ারিকে আন্তর্জাতিক মাতৃভাষা দিবস ঘোষণা করে, পালন শুরু হয় ২০০০ সাল থেকে।
 
 50. **বাংলাদেশের ও মায়ানমার পৃথককারী নদী কোনটি? **Ans: নাফ**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: নাফ নদী  
+   explanation: নাফ নদী টেকনাফের পাশ দিয়ে বয়ে গিয়ে বাংলাদেশ ও মিয়ানমারের সীমানা নির্ধারণ করেছে।
+
 51. **বীরশ্রেষ্ঠ মতিউর রহমানের দেহাবশেষ কখন পাকিস্তান থেকে বাংলাদেশ ফিরিয়ে আনা হয়? **Ans: ২০০৬ সালে**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: ২০০৬ সালে  
+   explanation: ২০০৬ সালের ২৪ জুন বীরশ্রেষ্ঠ মতিউর রহমানের দেহাবশেষ পাকিস্তান থেকে এনে জুরাইন কবরস্থানে সমাহিত করা হয়।
 
 52. **বাংলাদেশকে কোন আরব দেশ প্রথম স্বীকৃতি দেয়? **Ans: ইরাক**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: ইরাক  
+   explanation: ১৯৭২ সালের ৮ জুলাই ইরাক প্রথম আরব দেশ হিসেবে বাংলাদেশকে স্বীকৃতি দেয়।
+
 53. **২০২১ সালে GDP প্রবৃদ্ধির হার কত? **Ans: ৬.৯৪%**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: ৬.৯৪%  
+   explanation: ২০২১ অর্থবছরে বাংলাদেশের জিডিপি প্রবৃদ্ধি ছিল ৬.৯৪ শতাংশ।
+
 54. **বাংলাদেশের সর্বোচ্চ বেসামরিক পুরস্কার কোনটি? **Ans: স্বাধীনতা পুরস্কার**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: স্বাধীনতা পুরস্কার  
+   explanation: স্বাধীনতা পুরস্কার বাংলাদেশের সর্বোচ্চ রাষ্ট্রীয় বেসামরিক সম্মাননা; একুশে পদক এর পরের স্থানে।
 
 55. **বাংলাদেশের প্রথম ন্যানো স্যাটেলাইটের নাম কি?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ব্র্যাক অন্বেষা
 
+   answer: ব্র্যাক অন্বেষা  
+   explanation: ২০১৭ সালে উৎক্ষেপিত 'ব্র্যাক অন্বেষা' বাংলাদেশের প্রথম ন্যানো স্যাটেলাইট।
+
 56. **তারামন বিবি কোন সেক্টরে যুদ্ধ করেছে?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ১১ নং সেক্টর
+
+   answer: ১১ নং সেক্টর  
+   explanation: বীর প্রতীক তারামন বিবি ১১ নম্বর সেক্টরে মুক্তিযুদ্ধে অংশ নেন।
 
 57. **পাকিস্তান কবে শেখ মুজিবুর রহমানকে কারাগার থেকে মুক্তি দেয়?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ৮জানুয়ারি, ১৯৭২
 
+   answer: ৮ জানুয়ারি, ১৯৭২  
+   explanation: ৮ জানুয়ারি ১৯৭২ পাকিস্তান বঙ্গবন্ধুকে মুক্তি দেয় এবং তিনি লন্ডন হয়ে ১০ জানুয়ারি দেশে ফেরেন।
+
 58. **বঙ্গবন্ধু স্যাটেলাইট-১ কত তারিখে উৎক্ষেপন করা হয়?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ১২ই মে, ২০১৮
+
+   answer: ১২ মে, ২০১৮  
+   explanation: যুক্তরাষ্ট্রের কেপ ক্যানাভেরাল থেকে স্পেসএক্সের ফ্যালকন-৯ রকেটে বঙ্গবন্ধু স্যাটেলাইট-১ উৎক্ষেপণ করা হয়।
 
 59. **বঙ্গবন্ধু স্যাটেলাইট এর ট্রান্সপন্ডার সংখ্যা কতটি?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ৪০ টি
 
+   answer: ৪০টি  
+   explanation: বঙ্গবন্ধু-১ স্যাটেলাইটে ২৬টি কেইউ-ব্যান্ড ও ১৪টি সি-ব্যান্ড, মোট ৪০টি ট্রান্সপন্ডার আছে।
+
 60. **MNP সার্ভিস BTRC কবে প্রণয়ন করে?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ২০১৭
 
+   answer: ২০১৭  
+   explanation: বিটিআরসি ২০১৭ সালে মোবাইল নম্বর পোর্টেবিলিটি (MNP) সেবার নীতিমালা প্রণয়ন করে।
+
 61. **বাংলাদেশ কবে SAE-ME-WE এর সদস্য হয়?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ২১ মে, ২০০৬
+
+   answer: ২১ মে, ২০০৬  
+   explanation: এদিন বাংলাদেশ SEA-ME-WE-4 সাবমেরিন কেবলের সঙ্গে যুক্ত হয়।
 
 62. **বাংলাদেশে প্রধান নির্বাচন কমিশনার নিয়োগ দেন কে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) প্রধানমন্ত্রী  
@@ -2231,11 +2414,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) রাষ্ট্রপতি  
    d) প্রধান বিচারপতি
 
+   answer: c — রাষ্ট্রপতি  
+   explanation: সার্চ কমিটির সুপারিশের ভিত্তিতে রাষ্ট্রপতি প্রধান নির্বাচন কমিশনার নিয়োগ দেন।
+
 63. **বঙ্গবন্ধু শেখ মুজিবুর রহমানকে কবে জাতির জনক ঘোষণা করা হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) ০৩ ই জানুয়ারি ১৯৭২  
    b) ১৬ই ডিসেম্বর ১৯৭১  
    c) ২৬ শে মার্চ ১৯৭২  
    d) ০৩ই মার্চ ১৯৭১
+
+   answer: d — ০৩ই মার্চ ১৯৭১  
+   explanation: ১৯৭১ সালের ৩ মার্চ পল্টন ময়দানে স্বাধীন বাংলা ছাত্রসংগ্রাম পরিষদ বঙ্গবন্ধুকে জাতির জনক ঘোষণা করে।
 
 64. **কোনটি মায়ানমার-বাংলাদেশের অভিন্ন নদী নয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) সাঙ্গু  
@@ -2243,11 +2432,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) নাফ  
    d) কর্ণফুলী
 
+   answer: d — কর্ণফুলী  
+   explanation: নাফ, সাঙ্গু ও মাতামুহুরী মিয়ানমার-বাংলাদেশ সংশ্লিষ্ট নদী; কর্ণফুলীর উৎস ভারতের মিজোরামে।
+
 65. **কত তারিখে বাংলাদেশের সংবিধান কার্যকর হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) ১৬ ডিসেম্বর ১৯৭১  
    b) ১৬ ডিসেম্বর ১৯৭২  
    c) ২৬ মার্চ ১৯৭২  
    d) ২৬ মার্চ ১৯৭৩
+
+   answer: b — ১৬ ডিসেম্বর ১৯৭২  
+   explanation: ৪ নভেম্বর ১৯৭২ সংবিধান গৃহীত হয় এবং ১৬ ডিসেম্বর ১৯৭২ থেকে তা কার্যকর হয়।
 
 66. **সর্ব কনিষ্ঠ খেতাবপ্রাপ্ত মুক্তিযোদ্ধা হলেন–** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) শহীদুল ইসলাম লালু  
@@ -2256,12 +2451,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) মোস্তফা কামাল  
    **উত্তর: গ**
 
+   answer: ক — শহীদুল ইসলাম লালু  
+   explanation: মাত্র ১৩ বছর বয়সে বীর প্রতীক খেতাব পাওয়া শহীদুল ইসলাম লালুই সর্বকনিষ্ঠ খেতাবপ্রাপ্ত মুক্তিযোদ্ধা (ছাপা উত্তরে গ দেওয়া আছে)। <!-- verify -->
+
 67. **পার্বত্য চট্টগ্রাম শান্তি চুক্তি কবে সম্পাদিত হয়?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) ১২ নভেম্বর ১৯৯৭  
    (খ) ২ ডিসেম্বর ১৯৯৭  
    (গ) ১৬ ডিসেম্বর ১৯৯৮  
    (ঘ) ২৫ ডিসেম্বর ১৯৯৭  
    **উত্তর: খ**
+
+   answer: খ — ২ ডিসেম্বর ১৯৯৭  
+   explanation: ১৯৯৭ সালের ২ ডিসেম্বর সরকার ও পার্বত্য চট্টগ্রাম জনসংহতি সমিতির মধ্যে শান্তিচুক্তি স্বাক্ষরিত হয়।
 
 68. **কোন আরব দেশ বাংলাদেশকে প্রথম স্বীকৃতি দেয়?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) সেনেগাল  
@@ -2270,12 +2471,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) মিসর  
    **উত্তর: গ**
 
+   answer: গ — ইরাক  
+   explanation: ইরাক ১৯৭২ সালে প্রথম আরব রাষ্ট্র হিসেবে বাংলাদেশকে স্বীকৃতি দেয়।
+
 69. **বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ আছে?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) ১৫০  
    (খ) ১৪০  
    (গ) ১৫৩  
    (ঘ) ১৫১  
    **উত্তর: গ**
+
+   answer: গ — ১৫৩  
+   explanation: বাংলাদেশের সংবিধানে ১১টি ভাগ, ১৫৩টি অনুচ্ছেদ ও ৭টি তফসিল রয়েছে।
 
 70. **মুক্তিযুদ্ধা তারামন বিবি যুদ্ধ করেছেন কোন সেক্টরে?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) ৯ নং  
@@ -2284,12 +2491,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) ১১ নং  
    **উত্তর: ঘ**
 
+   answer: ঘ — ১১ নং  
+   explanation: তারামন বিবি ১১ নম্বর সেক্টরে যুদ্ধ করে বীর প্রতীক খেতাব পান।
+
 71. **বাংলাদেশের জাতীয় সংসদের অধিবেশন কে আহ্বান করেন?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) স্পীকার  
    (খ) প্রধানমন্ত্রী  
    (গ) রাষ্ট্রপতি  
    (ঘ) প্রধান বিচারপতি  
    **উত্তর: গ**
+
+   answer: গ — রাষ্ট্রপতি  
+   explanation: সংবিধান অনুযায়ী রাষ্ট্রপতি সংসদের অধিবেশন আহ্বান, স্থগিত ও ভেঙে দেওয়ার ক্ষমতা রাখেন।
 
 72. **দহগ্রাম ছিটমহল কোন জেলায় অবস্থিত?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) নীলফামারী  
@@ -2298,11 +2511,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) দিনাজপুর  
    **উত্তর: গ**
 
+   answer: গ — লালমনিরহাট  
+   explanation: দহগ্রাম-আঙ্গরপোতা ছিটমহল লালমনিরহাটের পাটগ্রাম উপজেলায় অবস্থিত।
+
 73. **বাংলাদেশের প্রথম জাতীয় সংসদ নির্বাচন হয় কোন তারিখে?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) ৭ মার্চ ১৯৭৩  
    (খ) ৮ মার্চ ১৯৭৩  
    (গ) ৬ এপ্রিল ১৯৭৩  
    (ঘ) ১১ এপ্রিল ১৯৭৩
+
+   answer: ক — ৭ মার্চ ১৯৭৩  
+   explanation: স্বাধীন বাংলাদেশের প্রথম জাতীয় সংসদ নির্বাচন ১৯৭৩ সালের ৭ মার্চ অনুষ্ঠিত হয়।
 
 74. **খাদ্য নিরাপত্তার ক্ষেত্রে যে সকল বিষয় বিবেচনা করতে হয়-** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) খাদ্যের মূল্য  
@@ -2310,11 +2529,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) খাদ্যের সহজলভ্যতা  
    (ঘ) উপরের তিনটি বিষয়
 
+   answer: ঘ — উপরের তিনটি বিষয়  
+   explanation: খাদ্য নিরাপত্তা মানে পর্যাপ্ত খাদ্যের প্রাপ্যতা, তা কেনার সামর্থ্য এবং সহজলভ্যতা — তিনটিই একসঙ্গে দরকার।
+
 75. **ভারতের সাথে বাংলাদেশের সীমানা কত কিলোমিটার?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) ৩৭১৫ কি.মি  
    (খ) ২০১৫ কি.মি  
    (গ) ৪৫০০ কি.মি  
    (ঘ) ৪১০০ কি.মি
+
+   answer: ক — ৩৭১৫ কি.মি  
+   explanation: প্রচলিত পাঠ্যবইয়ে ভারত-বাংলাদেশ সীমান্তের দৈর্ঘ্য ৩,৭১৫ কিমি বলা হয়; সাম্প্রতিক হিসাবে তা প্রায় ৪,১৫৬ কিমি। <!-- verify -->
 
 76. **প্রতিদিন বাংলাদেশে গড়ে কি পরিমাণ খাদ্যশস্য Consume হয়?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) ২ লক্ষ টন  
@@ -2322,11 +2547,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ১ লক্ষ টন  
    (ঘ) ৩ লক্ষ টন
 
+   answer: গ — ১ লক্ষ টন  
+   explanation: বছরে প্রায় সাড়ে তিন কোটি টন খাদ্যশস্য ব্যবহৃত হয়, যা দৈনিক প্রায় এক লক্ষ টন। <!-- verify -->
+
 77. **কম্পট্রোলার এন্ড অডিটর জেনারেল পদটি-** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) একটি সরকারি পদ  
    (খ) স্বায়ত্তশাসিত পদ  
    (গ) সাংবিধানিক পদ  
    (ঘ) আধাসরকারি পদ
+
+   answer: গ — সাংবিধানিক পদ  
+   explanation: সংবিধানের ১২৭ অনুচ্ছেদে মহা হিসাব-নিরীক্ষক ও নিয়ন্ত্রকের পদটি সৃষ্টি করা হয়েছে।
 
 78. **বঙ্গবন্ধুর ঐতিহাসিক ৭ই মার্চ ভাষণে অ্যাসেম্বলিতে বসার জন্য তৎকালীন সরকারকে কয়টি শর্ত দিয়েছিলেন?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) ৬টি  
@@ -2334,11 +2565,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ৩টি  
    (ঘ) ৮টি
 
+   answer: খ — ৪টি  
+   explanation: ৭ মার্চের ভাষণে বঙ্গবন্ধু সামরিক আইন প্রত্যাহার, সেনাবাহিনীকে ব্যারাকে ফেরত, হত্যার তদন্ত ও নির্বাচিত প্রতিনিধিদের হাতে ক্ষমতা হস্তান্তর — এই চার শর্ত দেন।
+
 79. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান এ যাবৎ কতটি সংশোধনী হয়েছে?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*  
    (ক) ১৪টি  
    (খ) ১৩টি  
    (গ) ১৬টি  
    (ঘ) ১৭টি
+
+   answer: ঘ — ১৭টি  
+   explanation: বাংলাদেশের সংবিধানে এ পর্যন্ত ১৭টি সংশোধনী আনা হয়েছে।
 
 80. **বঙ্গবন্ধু কোথায় ঐতিহাসিক ছয় দফা পেশ করেন?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) ঢাকা  
@@ -2346,11 +2583,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) চট্টগ্রাম  
    (ঘ) রাজশাহী
 
+   answer: খ — লাহোর  
+   explanation: ১৯৬৬ সালের ফেব্রুয়ারিতে লাহোরে বিরোধী দলের সম্মেলনে বঙ্গবন্ধু ছয় দফা পেশ করেন।
+
 81. **বীরশ্রেষ্ঠ ক্যাপ্টেন মহিউদ্দিন জাহাঙ্গীর এর কবর কোন জেলায়?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*  
    (ক) নওগাঁ  
    (খ) নাটোর  
    (গ) জয়পুরহাট  
    (ঘ) চাঁপাইনবাবগঞ্জ
+
+   answer: ঘ — চাঁপাইনবাবগঞ্জ  
+   explanation: বীরশ্রেষ্ঠ ক্যাপ্টেন মহিউদ্দিন জাহাঙ্গীরের কবর চাঁপাইনবাবগঞ্জের সোনামসজিদ প্রাঙ্গণে।
 
 82. **স্বাধীনতার সুবর্ণজয়ন্তীর লোগোর নকশা করেন কে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) রামেন্দু মজুমদার  
@@ -2358,11 +2601,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) সব্যসাচী হাজরা  
    (ঘ) ক এবং খ উভয়টি
 
+   answer: গ — সব্যসাচী হাজরা  
+   explanation: স্বাধীনতার সুবর্ণজয়ন্তীর লোগোটির নকশা করেন শিল্পী সব্যসাচী হাজরা।
+
 83. **বাংলাদেশের সর্বাধিক বৈদেশিক মুদ্রা অর্জনকারী শিল্প কোনটি?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) তৈরী পোশাক  
    (খ) পাট  
    (গ) মাছ  
    (ঘ) চা
+
+   answer: ক — তৈরী পোশাক  
+   explanation: তৈরি পোশাক খাত বাংলাদেশের মোট রপ্তানি আয়ের প্রায় ৮৪ শতাংশ জোগায়।
 
 84. **২০২০-২০২১ অর্থবছরে বাংলাদেশের মাথাপিছু আয় মার্কিন ডলারে কত?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) ২১২৭  
@@ -2370,11 +2619,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ২২২৭  
    (ঘ) ২০২৭
 
+   answer: ক — ২১২৭  
+   explanation: ২০২০-২১ অর্থবছরে বাংলাদেশের মাথাপিছু আয় দাঁড়ায় ২,১২৭ মার্কিন ডলার।
+
 85. **কাপাসিয়া মডেল কী?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) শিশু শ্রম নিরসন মডেল  
    (খ) বাল্য বিবাহ রোধ মডেল  
    (গ) মাতৃত্বমৃত্যু কমানোর সফল মডেল  
    (ঘ) গৃহকর্মী সুরক্ষা মডেল
+
+   answer: গ — মাতৃত্বমৃত্যু কমানোর সফল মডেল  
+   explanation: গাজীপুরের কাপাসিয়ায় প্রসূতি সেবা জোরদার করে মাতৃমৃত্যু কমানোর সাফল্যকে 'কাপাসিয়া মডেল' বলা হয়।
 
 86. **বাংলাদেশে বর্তমানে বিদ্যুৎ উৎপাদন ক্ষমতা কত?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 50 (ET: N/A)]*  
    (ক) ৩০ হাজার মেগাওয়াট  
@@ -2382,17 +2637,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ১০ হাজার মেগাওয়াট  
    (ঘ) ৮ হাজার মেগাওয়াট
 
+   answer: খ — ২২ হাজার মেগাওয়াট  
+   explanation: প্রশ্নের সময়কালে দেশের মোট বিদ্যুৎ উৎপাদন ক্ষমতা ছিল প্রায় ২২ হাজার মেগাওয়াট।
+
 87. **বেসরকারি বিল কাকে বলে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*  
    (ক) সংসদ সদস্যদের উত্থাপিত বিল  
    (খ) রাষ্ট্রপতি কর্তৃক ঘোষিত কোন বিল  
    (গ) বিরোধী দলের সদস্যদের উত্থাপিত বিল  
    (ঘ) স্পীকার যে বিলকে বেসরকারি বিল বলে ঘোষণা দেন
 
+   answer: ক — সংসদ সদস্যদের উত্থাপিত বিল  
+   explanation: মন্ত্রী ছাড়া অন্য কোনো সংসদ সদস্য যে বিল উত্থাপন করেন তাকেই বেসরকারি বিল বলে।
+
 88. **২০২১ সাল থেকে বাংলাদেশ সরকার নতুন কোন পদক প্রদান করে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*  
    (ক) বঙ্গবন্ধু আন্তর্জাতিক কৃষি পুরস্কার  
    (খ) বঙ্গমাতা বেগম ফজিলাতুন্নেছা মুজিব পুরস্কার  
    (গ) শেখ হাসিনা আন্তর্জাতিক শান্তি পুরস্কার  
    (ঘ) শেখ রাসেল আইসিটি পুরস্কার
+
+   answer: খ — বঙ্গমাতা বেগম ফজিলাতুন্নেছা মুজিব পুরস্কার  
+   explanation: ২০২১ সাল থেকে নারীর ক্ষমতায়নে অবদানের জন্য এই পদক দেওয়া শুরু হয়।
 
 89. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান দিবস কত তারিখ?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*  
    (ক) ৪ নভেম্বর  
@@ -2401,12 +2665,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) ৪ জানুয়ারী  
    **Ans: ক**
 
+   answer: ক — ৪ নভেম্বর  
+   explanation: ১৯৭২ সালের ৪ নভেম্বর গণপরিষদে সংবিধান গৃহীত হয়, তাই দিনটি সংবিধান দিবস।
+
 90. **বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট কোথায় অবস্থিত?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*  
    (ক) গাজীপুর  
    (খ) পাবনা  
    (গ) ময়মনসিংহ  
    (ঘ) রাজশাহী  
    **Ans: খ**
+
+   answer: খ — পাবনা  
+   explanation: বাংলাদেশ সুগারক্রপ গবেষণা ইনস্টিটিউট পাবনার ঈশ্বরদীতে অবস্থিত।
 
 91. **স্বাধীন বাংলাদেশের জাতীয় সংসদের প্রথম স্পিকার কে ছিলেন?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*  
    (ক) আব্দুল খালেক উকিল  
@@ -2415,6 +2685,9 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) মোহাম্মদ উল্লাহ  
    **Ans: ঘ**
 
+   answer: ঘ — মোহাম্মদ উল্লাহ  
+   explanation: ১৯৭৩ সালে গঠিত প্রথম জাতীয় সংসদের স্পিকার ছিলেন মোহাম্মদ উল্লাহ।
+
 92. **তেভাগা আন্দোলনের নেত্রী?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*  
    (ক) ইলা মিত্র  
    (খ) তারামন বিবি  
@@ -2422,11 +2695,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) জাহানারা  
    **Ans: ক**
 
+   answer: ক — ইলা মিত্র  
+   explanation: নাচোলের তেভাগা আন্দোলনে কৃষকদের নেতৃত্ব দেন ইলা মিত্র।
+
 93. **স্বাধীন বাংলাদেশের জাতীয় সংসদের প্রথম স্পিকার কে ছিলেন?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*  
    (ক) আবদুল খালেক উকিল  
    (খ) আবদুল হাকিম  
    (গ) সাহাবুদ্দিন আহমদ  
    (ঘ) মোহাম্মদ উল্লাহ
+
+   answer: ঘ — মোহাম্মদ উল্লাহ  
+   explanation: স্বাধীন বাংলাদেশের প্রথম জাতীয় সংসদের স্পিকার মোহাম্মদ উল্লাহ।
 
 94. **When china did recognized Bangladesh?** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)]*  
    (a) 1974  
@@ -2435,12 +2714,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) 1975  
    **Ans: d**
 
+   answer: d — 1975  
+   explanation: China recognised Bangladesh in 1975, after the change of government that August.
+
 95. **What is the length and width of the National Flag of Bangladesh?** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)]*  
    (a) 5:3  
    (b) 5:2  
    (c) 6:3  
    (d) 10:3  
    **Ans: a**
+
+   answer: a — 5:3  
+   explanation: The national flag's length-to-width ratio is 10:6, that is 5:3, with the red disc slightly left of centre.
 
 96. **The cabinet of Mujibnagar Government was sworn in-** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)], [BCPCL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) Meherpur  
@@ -2449,12 +2734,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) Kolkata  
    **Ans: a**
 
+   answer: a — Meherpur  
+   explanation: The Mujibnagar government took oath on 17 April 1971 at Baidyanathtala in Meherpur.
+
 97. **During the liberation war of Bangladesh, Dhaka was under which sector?** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)]*  
    (a) 2  
    (b) 4  
    (c) 5  
    (d) 7  
    **Ans: a**
+
+   answer: a — 2  
+   explanation: Dhaka city fell under Sector 2 during the Liberation War, commanded by Major Khaled Mosharraf.
 
 98. **The first gas field of Bangladesh was discovered in-** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)]*  
    (a) 1956  
@@ -2463,12 +2754,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) 1955  
    **Ans: d**
 
+   answer: d — 1955  
+   explanation: Bangladesh's first gas field, at Haripur in Sylhet, was discovered in 1955.
+
 99. **The only foreigner to be awarded the title “Bir Protic” is-** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)]*  
    (a) W.A.S Ouderland  
    (b) Simon Dring  
    (c) Sam manekshaw  
    (d) Mark Tully  
    **Ans: a**
+
+   answer: a — W.A.S Ouderland  
+   explanation: Dutch-Australian W. A. S. Ouderland is the only foreigner awarded the Bir Protik for his role in the Liberation War.
 
 100. **What is the length and width of the National Flag of Bangladesh?** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)]*  
    (a) 5:3  
@@ -2478,11 +2775,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    **Ans:**  
    **(a) 5:3**
 
+   answer: a — 5:3  
+   explanation: The flag's length-to-width ratio is 10:6, that is 5:3.
+
 101. **রাতারগুল কোন ধরণের বন?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) ম্যানগ্রোভ  
    (খ) জলাবন  
    (গ) হাওর  
    (ঘ) হ্রদ
+
+   answer: খ — জলাবন  
+   explanation: সিলেটের রাতারগুল বাংলাদেশের একমাত্র মিঠাপানির জলাবন (freshwater swamp forest)।
 
 102. **ছয়দফা কতসালে প্রস্তাব করা হয়?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) ১৯৬৯  
@@ -2490,11 +2793,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ১৯৫৪  
    (ঘ) ১৯৬৬
 
+   answer: ঘ — ১৯৬৬  
+   explanation: বঙ্গবন্ধু ১৯৬৬ সালের ফেব্রুয়ারিতে লাহোরে ছয় দফা দাবি পেশ করেন।
+
 103. **বাংলাদেশের দীর্ঘতম নদী কোনটি?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) যমুনা  
    (খ) ব্রহ্মপুত্র  
    (গ) মেঘনা  
    (ঘ) পদ্মা
+
+   answer: গ — মেঘনা  
+   explanation: প্রচলিত পাঠ্যবই অনুযায়ী মেঘনা বাংলাদেশের দীর্ঘতম ও প্রশস্ততম নদী। <!-- verify -->
 
 104. **Who is the Chairman of BCIC?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) Shah Md. Imdadul Haque  
@@ -2502,11 +2811,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) Kazi Mohammad Saiful Islam  
    (ঘ) Mr. Mohammada Shaheen Kamal
 
+   answer: ক — Shah Md. Imdadul Haque  
+   explanation: BCIC's chairmanship changes with government postings, so this reflects the holder at the time of the exam. <!-- verify -->
+
 105. **Bangladesh Chemical Industries Corporation (BCIC), fully owned by the Gob, was established in ______ ?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) 1st January, 1973  
    (খ) 1st January, 1976  
    (গ) 1st july, 1976  
    (ঘ) 1st July, 1973
+
+   answer: ঘ — 1st July, 1973  
+   explanation: BCIC was created by presidential order shortly after independence to run the state-owned chemical and fertiliser industries. <!-- verify -->
 
 106. **How many enterprise under BCIC?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) 11  
@@ -2514,11 +2829,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) 23  
    (ঘ) none of a, b and c
 
+   answer: ঘ — none of a, b and c  
+   explanation: BCIC currently runs about 13 enterprises, which is none of the three printed figures. <!-- verify -->
+
 107. **How much number of enterprise of BCIC at founded period?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) 100  
    ((খ) 92  
    (গ) 88  
    (ঘ) 8
+
+   answer: খ — 92  
+   explanation: At its founding BCIC took over a very large number of nationalised units, later consolidated into a handful of enterprises. <!-- verify -->
 
 108. **Number of fertilize enterprise of BCIC is ______ ?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) 3  
@@ -2526,11 +2847,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) 5  
    (ঘ) 10
 
+   answer: গ — 5  
+   explanation: BCIC's core business is urea, run through its cluster of fertiliser factories. <!-- verify -->
+
 109. **The number of board of director of BCIC is ______ ?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) 5  
    (খ) 6  
    (গ) 8  
    (ঘ) 7
+
+   answer: ঘ — 7  
+   explanation: The corporation is governed by a board of directors headed by the chairman. <!-- verify -->
 
 110. **The Most Loss making enterprise of BCIC in 2020–2021 is ______ ?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) Shahjalal Fertilizer Project  
@@ -2538,11 +2865,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) Karnophuli Paper Mills Ltd.  
    (ঘ) Chittagong Urea Fertilizer Project
 
+   answer: গ — Karnophuli Paper Mills Ltd.  
+   explanation: Karnaphuli Paper Mills has been BCIC's biggest loss-making unit for years because of ageing plant and raw-material shortage. <!-- verify -->
+
 111. **When did Bangabandhu declared historic six point programme?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) February 4, 1966  
    b) February 5, 1966  
    c) February 6, 1966  
    d) February 7, 1966
+
+   answer: b — February 5, 1966  
+   explanation: Bangabandhu placed the six-point demand before the opposition conference at Lahore on 5 February 1966.
 
 112. **The length of Dhaka Metro Rail will be–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) 19.10 km  
@@ -2550,11 +2883,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) 21.10 km  
    d) 20.50 km
 
+   answer: b — 20.10 km  
+   explanation: Dhaka Metro Rail Line-6, from Uttara to Motijheel, runs 20.10 km.
+
 113. **As per the latest changes in Bengali Calendar, leap year is calculated in which month?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) Boishakh  
    b) Bhadro  
    c) Ashwin  
    d) Falgun
+
+   answer: d — Falgun  
+   explanation: Under the revised Bangla calendar the leap day is added to Falgun, which then has 30 days instead of 29.
 
 114. **Who is the builder of the 'Sat Gumbad' (Seven-domed) mosque?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) Shaesta Khan  
@@ -2562,11 +2901,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Isha Khan  
    d) Islam Khan
 
+   answer: a — Shaesta Khan  
+   explanation: The Sat Gumbad Mosque in Mohammadpur, Dhaka was built during Shaista Khan's governorship in the seventeenth century.
+
 115. **Free Market Economy started in Bangladesh in–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) 1989  
    b) 1990  
    c) 1991  
    d) 1992
+
+   answer: c — 1991  
+   explanation: Bangladesh moved decisively to a liberalised, market-based economy with the reform programme of the early 1990s. <!-- verify -->
 
 116. **বাংলাদেশে প্রথম জাতীয় সংসদের নির্বাচন কখন হয়?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) ৭ ফেব্রুয়ারী ১৯৭৩  
@@ -2574,16 +2919,25 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) ৭ মার্চ ১৯৭৩  
    d) ৭ এপ্রিল ১৯৭৩
 
+   answer: c — ৭ মার্চ ১৯৭৩  
+   explanation: স্বাধীন বাংলাদেশের প্রথম জাতীয় সংসদ নির্বাচন ১৯৭৩ সালের ৭ মার্চ হয়।
+
 117. **কত সালে আওয়ামী লীগের ৬দফা পেশ করা হয়েছিল?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) ১৯৬৬ সালে  
    b) ১৯৬৭ সালে  
    c) ১৯৬৮ সালে  
    d) ১৯৬৯ সালে
 
+   answer: a — ১৯৬৬ সালে  
+   explanation: ১৯৬৬ সালের ফেব্রুয়ারিতে লাহোরে ছয় দফা পেশ করা হয়।
+
 118. **নির্বাহী বিভাগ থেকে বিচার বিভাগ পৃথক করার বিষয়টি সংবিধানের কোন অনুচ্ছেদে উল্লেখ রয়েছে?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) অনুচ্ছেদ ২৩b) অনুচ্ছেদ ২৪  
    c) অনুচ্ছেদ ২১  
    d) অনুচ্ছেদ ২২
+
+   answer: d — অনুচ্ছেদ ২২  
+   explanation: সংবিধানের ২২ অনুচ্ছেদে নির্বাহী বিভাগ থেকে বিচার বিভাগ পৃথকীকরণের কথা বলা হয়েছে।
 
 119. **১৯৫৪ সালে পূর্ব পাকিস্তান প্রাদেশিক পরিষদ নির্বাচনে যুক্তফ্রন্টের কি প্রতীক ছিল?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) ধানের শীষ  
@@ -2591,11 +2945,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) লাঙ্গল  
    d) বাইসাইকেল
 
+   answer: b — নৌকা  
+   explanation: ১৯৫৪ সালের নির্বাচনে যুক্তফ্রন্টের নির্বাচনী প্রতীক ছিল নৌকা।
+
 120. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান প্রবর্তিত হয়-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) ১৭ এপ্রিল ১৯৭১  
    (b) ১৬ ডিসেম্বর ১৯৭২  
    (c) ৭ মার্চ ১৯৭২  
    (d) ২৬ মার্চ ১৯৭৩
+
+   answer: b — ১৬ ডিসেম্বর ১৯৭২  
+   explanation: ৪ নভেম্বর ১৯৭২ সংবিধান গৃহীত হয় এবং ১৬ ডিসেম্বর ১৯৭২ থেকে কার্যকর হয়।
 
 121. **বঙ্গবন্ধু আগরতলা ষড়যন্ত্র মামলায় মোট আসামি সংখ্যা ছিল কতজন?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) ৩৪ জন  
@@ -2603,11 +2963,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) ৩৬ জন  
    (d) ৩২ জন
 
+   answer: b — ৩৫ জন  
+   explanation: আগরতলা ষড়যন্ত্র মামলায় বঙ্গবন্ধুসহ মোট ৩৫ জনকে আসামি করা হয়েছিল।
+
 122. **আইন প্রণয়নের ক্ষমতা-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) আইন মন্ত্রণালয়ের  
    (b) রাষ্ট্রপতির  
    (c) স্পিকারের  
    (d) জাতীয় সংসদের
+
+   answer: d — জাতীয় সংসদের  
+   explanation: সংবিধান অনুযায়ী আইন প্রণয়নের ক্ষমতা জাতীয় সংসদের উপর ন্যস্ত।
 
 123. **পার্বত্য চট্টগ্রাম শান্তিচুক্তি কত সালে স্বাক্ষরিত হয়?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) ১৯৯৬  
@@ -2615,11 +2981,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) ১৯৯৯  
    (d) ২০০১
 
+   answer: b — ১৯৯৭  
+   explanation: ১৯৯৭ সালের ২ ডিসেম্বর পার্বত্য চট্টগ্রাম শান্তিচুক্তি স্বাক্ষরিত হয়।
+
 124. **বাংলাদেশের প্রথম স্বাধীন নবাব কে?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) নবাব সিরাজউদ্দৌলা  
    (b) মুর্শিদ কুলী খান  
    (c) ইলিয়াস শাহ  
    (d) আলাউদ্দিন হোসেন শাহ
+
+   answer: b — মুর্শিদ কুলী খান  
+   explanation: মুর্শিদকুলী খান কার্যত মুঘল কেন্দ্র থেকে স্বাধীনভাবে বাংলা শাসন শুরু করেন, তাই তাঁকে প্রথম স্বাধীন নবাব ধরা হয়।
 
 125. **Which sector has the largest contribution in GDP of Bangladesh** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 137 (ET: BUET)]*  
    a) Garments  
@@ -2627,11 +2999,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Agriculture  
    d) industry
 
+   answer: d — industry  
+   explanation: Of the options given, industry contributes the most to GDP (about 35%); the service sector, not listed here, is the largest overall. <!-- verify -->
+
 126. **Dhaka was the under the sector in liberation war.** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 137 (ET: BUET)]*  
    a) 2  
    b) 4  
    c) 11  
    d) 8
+
+   answer: a — 2  
+   explanation: Dhaka city fell under Sector 2 in the 1971 Liberation War.
 
 127. **Who was the first English translator of Bangladesh national anthem?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. Syed Ahsan Kabir  
@@ -2639,11 +3017,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c. Syed Ali Ahsan  
    d. Rabindranath Tagore
 
+   answer: c — Syed Ali Ahsan  
+   explanation: Syed Ali Ahsan made the first English translation of "Amar Sonar Bangla".
+
 128. **Which one was the Naval Sector in the liberation war of Bangladesh?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. 8  
    b. 9  
    c. 10  
    d. 11
+
+   answer: c — 10  
+   explanation: Sector 10 was the naval sector, made up of the naval commandos who operated along the coast and rivers.
 
 129. **Which project of Bangladesh is related to the concept of “One city Two Towns”?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Padma Bridge  
@@ -2651,17 +3035,32 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c. Kuril Flyover  
    d. Karnaphuli River tunnel
 
+   answer: d — Karnaphuli River tunnel  
+   explanation: The Bangabandhu Tunnel links the two banks of the Karnaphuli, turning Chattogram into "one city, two towns" on the Shanghai model.
+
 130. **Recently HPM record award at UN for ________.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. SDG  
    b. Climate Change  
    c. MDG  
    d. Women Empowerment
 
+   answer: a — SDG  
+   explanation: The Prime Minister received the UN's SDG Progress Award for Bangladesh's performance on the Sustainable Development Goals.
+
 131. **In which district the ‘Tin Bigha Corridor’ is located?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*
+
+   answer: Lalmonirhat  
+   explanation: The Tin Bigha Corridor lies in Patgram upazila of Lalmonirhat district and gives access to the Dahagram-Angarpota enclave.
 
 132. **Which Bangladeshi has been awarded the ‘Padma Bhushan 2020’ by the government of India?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*
 
+   answer: Syed Muazzem Ali  
+   explanation: Bangladesh's former High Commissioner to India, Syed Muazzem Ali, received the Padma Bhushan 2020 posthumously.
+
 133. **According to WEF’s (World Economic forum) Global Gender Gap Report. what is the ranking of Bangladesh in South Asia?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*
+
+   answer: First (1st) in South Asia  
+   explanation: Bangladesh has topped the South Asian countries in the World Economic Forum's Global Gender Gap Index for several consecutive years.
 
 134. **বাংলাদেশে কোন তারিখ হতে আনুষ্ঠানিকভাবে কোভিড-১৯ এর টিকাদার কর্মসূচী চালু হয়?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. জানুয়ারী ৭, ২০২১  
@@ -2669,11 +3068,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    C. জানুয়ারী ২৭, ২০২১  
    D. জানুয়ারী ২৯, ২০২১
 
+   answer: C — জানুয়ারী ২৭, ২০২১  
+   explanation: ২০২১ সালের ২৭ জানুয়ারি কুর্মিটোলা জেনারেল হাসপাতালে আনুষ্ঠানিকভাবে কোভিড-১৯ টিকাদান শুরু হয়।
+
 135. **ডিজিটাল বাংলাদেশ দিবস কবে?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 134 (ET: N/A)]*  
    a) ১২ নভেম্বর  
    b) ১২ ডিসেম্বর  
    c) ৬ ডিসেম্বর  
    d) ৬ জুলাই
+
+   answer: b — ১২ ডিসেম্বর  
+   explanation: ২০০৮ সালের ১২ ডিসেম্বর ডিজিটাল বাংলাদেশের রূপকল্প ঘোষণা করা হয়, তাই দিনটি ডিজিটাল বাংলাদেশ দিবস।
 
 136. **বঙ্গবন্ধু উপাধি পান কত সালে?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 134 (ET: N/A)]*  
    a) ১৯৭১  
@@ -2681,11 +3086,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) ১৯৭২  
    d) ১৯৬৯
 
+   answer: d — ১৯৬৯  
+   explanation: ১৯৬৯ সালের ২৩ ফেব্রুয়ারি রেসকোর্স ময়দানে ছাত্রসংগ্রাম পরিষদ শেখ মুজিবুর রহমানকে 'বঙ্গবন্ধু' উপাধি দেয়।
+
 137. **How many accused were in ‘Agartala Conspiracy Case’ including Bangabandhu?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. 36  
    খ. 35  
    গ. 34  
    ঘ. 32
+
+   answer: খ — 35  
+   explanation: The Agartala Conspiracy Case named 35 accused in all, with Bangabandhu as accused number one.
 
 138. **Under which sector Dhaka was during our Liberation War in 1971?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. 3  
@@ -2693,11 +3104,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. 4  
    ঘ. 1
 
+   answer: খ — 2  
+   explanation: Dhaka was placed in Sector 2 during the 1971 war.
+
 139. **Who appoints the Chief Justice in Bangladesh?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. Prime Minister  
    খ. Parliament  
    গ. President  
    ঘ. None
+
+   answer: গ — President  
+   explanation: Under the constitution the President appoints the Chief Justice of Bangladesh.
 
 140. **Who was F.R Khan?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. Cancer Specialist  
@@ -2705,11 +3122,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. Computer Engineer  
    ঘ. Architect
 
+   answer: ঘ — Architect  
+   explanation: Fazlur Rahman Khan was the Bangladeshi-American structural engineer and architect behind the Sears Tower and John Hancock Center.
+
 141. **Architect of national monument of Bangladesh is;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. Hamidur Rahman  
    খ. Quamrul Hassan  
    গ. Sayed Mainul Hossian  
    ঘ. F.R Khan
+
+   answer: গ — Sayed Mainul Hossian  
+   explanation: Syed Mainul Hossain designed the National Martyrs' Memorial (Jatiya Smriti Soudho) at Savar.
 
 142. **What is the per capita income ($US) of Bangladesh in 2021?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. 2254  
@@ -2717,11 +3140,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. 2554  
    ঘ. 3054
 
+   answer: গ — 2554  
+   explanation: বিবিএসের সংশোধিত হিসাবে ২০২১ সালে বাংলাদেশের মাথাপিছু আয় দাঁড়ায় ২,৫৫৪ মার্কিন ডলার। <!-- verify -->
+
 143. **How may freedom fighters have received gallantry awards for contributions in our Liberation War-1971?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. 712  
    খ. 512  
    গ. 175  
    ঘ. 676
+
+   answer: ঘ — 676  
+   explanation: ৭ জন বীরশ্রেষ্ঠ, ৬৮ জন বীর উত্তম, ১৭৫ জন বীর বিক্রম ও ৪২৬ জন বীর প্রতীক — মোট ৬৭৬ জন খেতাব পান।
 
 144. **Who is the Head of the State of Bangladesh?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. President  
@@ -2729,11 +3158,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. Speaker  
    ঘ. None
 
+   answer: ক — President  
+   explanation: Bangladesh has a parliamentary system in which the President is Head of State and the Prime Minister is Head of Government.
+
 145. **Which one is not correct?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. A+0=A  
    খ. A.1=A  
    গ. A+A'=1  
    ঘ. A.A'=1
+
+   answer: ঘ — A.A'=1  
+   explanation: A variable ANDed with its complement is always 0, not 1; the correct identity is A·A' = 0.
 
 146. **বাংলাদেশ কোন সালে আনুষ্ঠানিকভাবে উন্নয়নশীল দেশ হিসাবে স্বীকৃতি লাভ করবে?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) ২০২৪  
@@ -2741,11 +3176,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ২০২৬  
    (ঘ) ২০৩০
 
+   answer: গ — ২০২৬  
+   explanation: জাতিসংঘের সিদ্ধান্ত অনুযায়ী ২০২৬ সালের নভেম্বরে বাংলাদেশ আনুষ্ঠানিকভাবে উন্নয়নশীল দেশে উত্তীর্ণ হবে।
+
 147. **রাতারগুল কোন জেলায় অবস্থিত?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) রাঙ্গামাটি  
    (খ) সাতক্ষীরা  
    (গ) সিলেট  
    (ঘ) কক্সবাজার
+
+   answer: গ — সিলেট  
+   explanation: রাতারগুল জলাবন সিলেটের গোয়াইনঘাট উপজেলায় অবস্থিত।
 
 148. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ আছে?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) ১৩৩টি  
@@ -2753,11 +3194,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ১৫৩টি  
    (ঘ) ১৭৩টি
 
+   answer: গ — ১৫৩টি  
+   explanation: বাংলাদেশের সংবিধানে ১৫৩টি অনুচ্ছেদ, ১১টি ভাগ ও ৭টি তফসিল রয়েছে।
+
 149. **নির্মাণাধীন পদ্মা সেতুর স্প্যান সংখ্যা কতটি?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) ৩৯ টি  
    (খ) ৪০টি  
    (গ) ৪১টি  
    (ঘ) ৪২টি
+
+   answer: গ — ৪১টি  
+   explanation: পদ্মা সেতুতে ৪২টি পিলারের উপর ৪১টি স্প্যান বসানো হয়েছে।
 
 150. **দুই টাকার নোটে কার স্বাক্ষর থাকে?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) অর্থ সচিব  
@@ -2765,11 +3212,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) অর্থমন্ত্রী  
    (ঘ) প্রধানমন্ত্রী
 
+   answer: ক — অর্থ সচিব  
+   explanation: ১, ২ ও ৫ টাকার নোট সরকারি মুদ্রা, তাই এতে অর্থ সচিবের স্বাক্ষর থাকে; বাকিগুলোতে গভর্নরের।
+
 151. **বাংলাদেশে কোভিড ১৯ এর ভ্যাকসিন প্রথম ব্যবহৃত হয়েছে–** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) অক্সফোর্ড অ্যাস্ট্রাজেনেকা-কোভিশিল্ড  
    (খ) সিনোভ্যাক্স এর করোনাভ্যাক  
    (গ) ফাইজারের বায়োএনটেক  
    (ঘ) জনসন এন্ড জনসন-জনসেন
+
+   answer: ক — অক্সফোর্ড অ্যাস্ট্রাজেনেকা-কোভিশিল্ড  
+   explanation: ভারতের সেরাম ইনস্টিটিউটে তৈরি কোভিশিল্ড দিয়েই বাংলাদেশে টিকাদান শুরু হয়।
 
 152. **নাচোল বিদ্রোহের নেত্রির নাম কি?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) প্রীতিলতা  
@@ -2777,11 +3230,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) কাদম্বিনী  
    (ঘ) ইলা মিত্র
 
+   answer: ঘ — ইলা মিত্র  
+   explanation: চাঁপাইনবাবগঞ্জের নাচোলে সাঁওতাল কৃষকদের তেভাগা আন্দোলনে নেতৃত্ব দেন ইলা মিত্র।
+
 153. **বাংলাদেশের মহান মুক্তিযুদ্ধে বীর প্রতীক খেতাব প্রাপ্ত একমাত্র বিদেশি উইলিয়াম এ এস ওডারল্যান্ড কোন দেশের নাগরিক?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) ভারত  
    (খ) যুক্তরাজ্য  
    (গ) অস্ট্রেলিয়া  
    (ঘ) জাপান
+
+   answer: গ — অস্ট্রেলিয়া  
+   explanation: ডাচ বংশোদ্ভূত ডব্লিউ এ এস ওডারল্যান্ড অস্ট্রেলিয়ার নাগরিক ছিলেন।
 
 154. **বাংলাদেশের সর্বপ্রথম জাদুঘর কোথায় প্রতিষ্ঠিত হয়?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) ঢাকা  
@@ -2789,11 +3248,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) সিলেট  
    (ঘ) চট্টগ্রাম
 
+   answer: খ — বরেন্দ্র  
+   explanation: রাজশাহীর বরেন্দ্র গবেষণা জাদুঘর ১৯১০ সালে প্রতিষ্ঠিত, এটিই দেশের প্রথম জাদুঘর।
+
 155. **ভাসানচর কোন জেলায় অবস্থিত?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) চট্টগ্রাম  
    (খ) ভোলা  
    (গ) নোয়াখালী  
    (ঘ) কক্সবাজার
+
+   answer: গ — নোয়াখালী  
+   explanation: ভাসানচর নোয়াখালীর হাতিয়া উপজেলার অন্তর্গত একটি চর।
 
 156. **Exclusive Economic Zone (EEZ)- এর দৈর্ঘ্য কত?** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
    (ক) ১০০ নটিকেল মাইল  
@@ -2801,11 +3266,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ৪০০ নটিকেল মাইল  
    (ঘ) ৩০০ নটিকেল মাইল
 
+   answer: খ — ২০০ নটিকেল মাইল  
+   explanation: আন্তর্জাতিক সমুদ্র আইন অনুযায়ী উপকূল থেকে ২০০ নটিক্যাল মাইল পর্যন্ত একচেটিয়া অর্থনৈতিক অঞ্চল।
+
 157. **বঙ্গবন্ধু ঐতিহাসিক ছয়দফা কর্মসূচি কোথায় ঘোষণা করেছিলেন?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (ক) ইসলামাবাদ  
    (খ) ঢাকা  
    (গ) লাহোর  
    (ঘ) করাচী
+
+   answer: গ — লাহোর  
+   explanation: ১৯৬৬ সালের ফেব্রুয়ারিতে লাহোরের বিরোধী দলীয় সম্মেলনে ছয় দফা ঘোষণা করা হয়।
 
 158. **হালদা নদী কিসের জন্য বিখ্যাত?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (ক) মাত্র মৎস্য ভান্ডার  
@@ -2813,11 +3284,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) রামসা সাইট  
    (ঘ) নদী বন্দর
 
+   answer: ক — মাত্র মৎস্য ভান্ডার  
+   explanation: হালদা দক্ষিণ এশিয়ার একমাত্র প্রাকৃতিক মিঠাপানির কার্প মাছের প্রজননক্ষেত্র।
+
 159. **মুক্তিযুদ্ধে “ক্র্যাক প্লাটুন” কোন শহরে সক্রিয় ছিল?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
    (ক) চট্টগ্রাম  
    (খ) খুলনা  
    (গ) ঢাকা  
    (ঘ) বরিশাল
+
+   answer: গ — ঢাকা  
+   explanation: ক্র্যাক প্লাটুন ছিল ২ নম্বর সেক্টরের গেরিলা দল, যারা ঢাকা শহরে অপারেশন চালাত।
 
 160. **কোভিড ১৯ ভাইরাস বাংলাদেশে প্রথম কবে সনাক্ত হয়?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
    (ক) ২০ ডিসেম্বর, ২০১৯  
@@ -2825,11 +3302,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ৮ মার্চ, ২০২০  
    (ঘ) ০১ এপ্রিল, ২০২০
 
+   answer: গ — ৮ মার্চ, ২০২০  
+   explanation: ২০২০ সালের ৮ মার্চ আইইডিসিআর বাংলাদেশে প্রথম তিনজন কোভিড-১৯ রোগী শনাক্তের কথা জানায়।
+
 161. **Which article of the constitution of Bangladesh establishes the fundamental right of education for all?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) 13  
    (b) 17  
    (c) 21  
    (d) 27
+
+   answer: b — 17  
+   explanation: Article 17 of the constitution directs the state to provide free and compulsory education for all children.
 
 162. **The total border district of Bangladesh is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 29  
@@ -2837,11 +3320,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 45  
    (d) 53
 
+   answer: b — 32  
+   explanation: Thirty-two districts of Bangladesh touch an international border.
+
 163. **Who has designed the logo of Mujib Year?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) Qamrul Hasan  
    (b) Hashem Khan  
    (c) Sabyasachi Hazra  
    (d) Nithun Kundu
+
+   answer: c — Sabyasachi Hazra  
+   explanation: Artist Sabyasachi Hazra designed the official Mujib Borsho logo.
 
 164. **Name of the bank established under Bangladesh Police Welfare Trust-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) Mitual Trust Bank  
@@ -2849,11 +3338,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) IFIC Bank  
    (d) Trust Bank Bangladesh Limited
 
+   answer: b — Community Bangladesh Bank Limited  
+   explanation: Community Bank Bangladesh Limited was set up under the Bangladesh Police Welfare Trust and began operating in 2019.
+
 165. **What is the position of Bangladesh in the financial Privacy Index 2020?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 29^{\text{th}}  
    (b) 37^{\text{th}}  
    (c) 43^{\text{th}}  
    (d) 54^{\text{th}}
+
+   answer: b — 37th  
+   explanation: This was Bangladesh's placement in that year's Financial Privacy Index. <!-- verify -->
 
 166. **The river Padma enters into Bangladesh through-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) Sylhet  
@@ -2861,11 +3356,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Mymensingh  
    (d) Pabna
 
+   answer: b — Rajshahi  
+   explanation: The Ganges enters Bangladesh as the Padma at Chapainawabganj in Rajshahi division.
+
 167. **The Constitution Drafting Committee of Bangladesh formed in 1972 had-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 21 members  
    (b) 24 members  
    (c) 31 members  
    (d) 34 members
+
+   answer: d — 34 members  
+   explanation: The Constitution Drafting Committee formed in 1972 under Dr. Kamal Hossain had 34 members.
 
 168. **Which bank was the first to Introduce dual-currency debit card system in Bangladesh?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) Mutual Trust Bank  
@@ -2873,11 +3374,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Dutch Bangla Bank  
    (d) AB Bank
 
+   answer: b — City Bank  
+   explanation: City Bank was the first in Bangladesh to offer a dual-currency card usable in both taka and foreign currency. <!-- verify -->
+
 169. **The number of tribes lives in the Chattogram Hill Tracts is-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 7  
    (b) 9  
    (c) 11  
    (d) 15
+
+   answer: c — 11  
+   explanation: Eleven ethnic groups, including the Chakma, Marma and Tripura, live in the Chattogram Hill Tracts.
 
 170. **কোন সালে Bangladesh এ স্বয়ংক্রিয় Digital IT-Ex service শুরু করে?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*  
    A. 1972  
@@ -2885,11 +3392,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    C. 1981  
    D. 1983
 
+   answer: D — 1983  
+   explanation: বাংলাদেশে স্বয়ংক্রিয় ডিজিটাল টেলেক্স সেবা ১৯৮৩ সালে চালু হয়। <!-- verify -->
+
 171. **DNA ম্যাপিং করার জন্য কোন প্রযুক্তি ব্যবহার করা হয়?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*  
    A. বায়োমেট্রি  
    B. বায়োইনফরমেটিক্স  
    C. রোবটি  
    D. জেনেটিক্স
+
+   answer: B — বায়োইনফরমেটিক্স  
+   explanation: বায়োইনফরমেটিক্স কম্পিউটার ও পরিসংখ্যান ব্যবহার করে DNA সিকোয়েন্স বিশ্লেষণ ও ম্যাপিং করে।
 
 ## International Affairs (119)
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
