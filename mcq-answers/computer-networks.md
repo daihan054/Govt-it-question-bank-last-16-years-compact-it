@@ -2955,14 +2955,23 @@
    (c) Virtual  
    (d) Packet
 
+   answer: b — Time-division  
+   explanation: A time-division switch writes incoming samples into RAM and reads them out in a different order, and that store-and-read step adds delay.
+
 2. **The ________ was the first wide-area packet-switching network with distributed control and one of the first networks to implement the TCP/IP protocol suite.** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
    a) INTRANET  
    b) UCLA  
    c) CREN  
    d) ARPANET
 
+   answer: d — ARPANET  
+   explanation: ARPANET was the first wide-area packet-switched network with distributed control and the first to adopt TCP/IP.
+
 3. **The direct connection is made between sender & Receiver so data can be transmitted ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*  
    a. Packet switching  
    b. Circuit switching  
    c. Message switching  
    d. Data switching
+
+   answer: b — Circuit switching  
+   explanation: Circuit switching sets up a dedicated end-to-end path that stays reserved for the whole conversation.
