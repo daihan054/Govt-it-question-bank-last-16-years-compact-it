@@ -878,11 +878,17 @@
    c) -2^{31}-1  
    d) -2^{32}
 
+   answer: b — -2^31  
+   explanation: A 32-bit signed int in two's complement spans -2³¹ to 2³¹-1, so the minimum is -2147483648.
+
 2. **What is the maximum value that can be stored in a 32-bit signed integer of C language?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*  
    a) 10^{32}  
    b) 2^{32}  
    c) 2^{32}-1  
    d) 2^{31}-1
+
+   answer: d — 2^31-1  
+   explanation: One bit holds the sign, leaving 31 value bits, so the largest value is 2³¹-1 = 2147483647.
 
 3. **C programming এ নিচের কোনটি Invalid variable name?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) Average  
@@ -890,11 +896,17 @@
    C) Xyz  
    D) y23z
 
+   answer: B — No#of-students  
+   explanation: Identifiers may use only letters, digits and underscore and cannot start with a digit; # and - are not allowed.
+
 4. **C কী ধরনের programming language?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
    A) Low level language  
    B) Mid-level language  
    C) High level language  
    D) None of these
+
+   answer: B — Mid-level language  
+   explanation: C is conventionally classed as a middle-level language because it has high-level structure yet also allows low-level work with pointers and bit operations.
 
 5. **নিচের কোনটি C ভাষার Keyword নয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) struct  
@@ -902,11 +914,17 @@
    C) star  
    D) float
 
+   answer: C — star  
+   explanation: struct, int and float are reserved C keywords; star is not, so it can be used as an identifier.
+
 6. **C programming language এ নিচের কোনটিকে "if" দিয়ে Replace করা যায়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*  
    A) switch  
    B) structure  
    C) return  
    D) for
+
+   answer: A — switch  
+   explanation: Any switch can be rewritten as a chain of if-else statements testing the same expression against each case value.
 
 7. **Suppose a C program has floating constant 1.414, what's the best way to convert it as a float data type?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 203 (ET: AUST)]*  
    A) (float)1.414  
@@ -923,17 +941,26 @@
    C) Both (i) and (iii) are valid  
    D) All of these
 
+   answer: C — 1.414f or 1.414F  
+   explanation: An unsuffixed floating constant is a double; the f or F suffix makes it a float without a cast. For the stray item pasted here: C — both (i) and (iii) are valid, since an identifier cannot begin with a digit but _ alone is legal.
+
 8. **Variable which use same name in whole program and in its all routines thus best classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
    A) middle variable  
    B) default variable  
    C) local variable  
    D) global variable
 
+   answer: D — global variable  
+   explanation: A global variable is declared outside every function, so the same name is visible to the whole program and all its routines.
+
 9. **Which format specifier is used for typing double data?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
    A) %f  
    B) %lf  
    C) %d  
    D) %s
+
+   answer: B — %lf  
+   explanation: scanf needs %lf for a double; %f reads a float.
 
 10. **Which one of the following is not a valid identifier?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) _compact  
@@ -959,11 +986,17 @@
    C) 3  
    D) 4
 
+   answer: C — com-pact  
+   explanation: A hyphen is not allowed in an identifier — only letters, digits and underscore, and it may not start with a digit. The two stray items pasted here answer as: argv length — C (Undefined), and Math.round(2.5+Math.random()) — C (3).
+
 11. **Which of the following correctly shows the hierarchy of algorithm operation in C?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*  
    A) /*+-  
    B) *-/+  
    C) +-/*  
    D) /*+-
+
+   answer: A — /*+-  
+   explanation: / and * bind tightest and share a level, then + and -, so the order is / * + - (option D repeats the same text).
 
 12. **The value 9.87 to 10 when use?** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*  
    A) floor ()  
@@ -971,17 +1004,26 @@
    C) both A & B  
    D) None
 
+   answer: B — ceil ()  
+   explanation: ceil() rounds up to the next whole number, turning 9.87 into 10; floor() would give 9.
+
 13. **Hungarian notation is used to ________.** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) Design system manual  
    B) Design user manual  
    C) Define name of the variable  
    D) All
 
+   answer: C — Define name of the variable  
+   explanation: Hungarian notation prefixes a variable's name with a short tag for its type or purpose, such as iCount or szName.
+
 14. **Which of the following is not derived data type in C?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. Function  
    b. Pointer  
    c. Enumeration  
    d. Array
+
+   answer: c — Enumeration  
+   explanation: Arrays, pointers and functions are derived types built from basic types, while enum is a user-defined type.
 
 ## Operators & Expressions (11)
 
