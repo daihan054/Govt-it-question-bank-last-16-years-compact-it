@@ -21,11 +21,17 @@
    (c) sum=(C9:C12)  
    (d) sum(C9+C12)
 
+   answer: b — = sum(C9:C12)  
+   explanation: Every Excel formula must begin with =, and SUM(range) adds the cells in that range.
+
 2. **In a spreadsheet, ________ can help you make sense of a worksheet contents.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*  
    A) value  
    B) Labels  
    C) formula  
    D) macros
+
+   answer: B — Labels  
+   explanation: Labels are the text headings that name rows and columns, so the numbers below them make sense.
 
 3. **Multiple calculation can be made in a single formula using.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
    a) Standard Formula  
@@ -33,11 +39,17 @@
    c) Complex Formula  
    d) Smart Formula
 
+   answer: b — Array Formula  
+   explanation: An array formula works on a whole range at once and returns one or many results from a single entry.
+
 4. **Which area in an excel window allow entering values and formulas?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
    a) Title bar  
    b) Menu bar  
    c) Formula bar  
    d) Standard tool bar
+
+   answer: c — Formula bar  
+   explanation: The formula bar sits above the grid and is where the contents of the active cell are typed and edited.
 
 5. **পরিসংখ্যানের বিভিন্ন পরিমাপ নির্ণয়ের জন্য নিচের কোনটি ব্যবহৃত হয়?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 198 (ET: IBA)]*  
    A. MS Word  
@@ -45,11 +57,17 @@
    C. MS Excel  
    D. MS Power Point
 
+   answer: C — MS Excel  
+   explanation: Excel has built-in statistical functions such as AVERAGE, MEDIAN, STDEV and VAR.
+
 6. **কপি ফরমেট করার শর্টকাট কোনটি?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*  
    A. Clt+C  
    B. Shift+C  
    C. Clt+Shift+C  
    D. Alt + Shift +C
+
+   answer: C — Clt+Shift+C  
+   explanation: Ctrl+Shift+C copies formatting only, and Ctrl+Shift+V pastes it onto the target.
 
 7. **Which of the following is spreadsheet software?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*  
    A) Adobe Acrobat  
@@ -57,11 +75,17 @@
    C) Fax Pro  
    D) Power Point
 
+   answer: B — MS Excel  
+   explanation: Excel is the spreadsheet program of the Microsoft Office suite.
+
 8. **What is entered by the function = today()?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
    a. The date value for the day according to system clock  
    b. The time value according to system clock  
    c. Today's date as text format  
    d. All of the above
+
+   answer: a — The date value for the day according to system clock  
+   explanation: TODAY() returns the current date as a serial date value taken from the system clock, and it updates itself.
 
 9. **What happens when you press Ctrl+X after selecting some cells in Excel?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
    a. The cell content of selected cells disappears from cell and stored in clipboard  
@@ -69,11 +93,17 @@
    c. The selected cells are deleted and shifted left  
    d. The selected cells are deleted and shifted up
 
+   answer: b — The cells selected are marked for cutting  
+   explanation: Ctrl+X puts a marching-ants border round the range and marks it for moving; the contents only disappear once you paste.
+
 10. **What program do you use to create a spreadsheet?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
    a. Word  
    b. Excel  
    c. Access  
    d. PowerPoint
+
+   answer: b — Excel  
+   explanation: Microsoft Excel is the spreadsheet application.
 
 ## MS Word (5)
 
