@@ -2744,11 +2744,17 @@
    গ. কর্মধারয়  
    ঘ. দ্বিগু
 
+   answer: ঘ — দ্বিগু  
+   explanation: সপ্তাহ = সপ্ত অহের সমাহার; সংখ্যাবাচক পূর্বপদে সমাহার বোঝালে দ্বিগু সমাস হয়।
+
 2. **তৎপুরুষ সমাসের উদাহরণ কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
    (a) বি-ভাত  
    (b) গমনাগমন  
    (c) তেমাথা  
    (d) জীবনানন্দ
+
+   answer: d — জীবনানন্দ  
+   explanation: জীবনানন্দ = জীবনের আনন্দ; পূর্বপদের বিভক্তি লোপ পেয়ে পরপদের অর্থ প্রধান হয়েছে।
 
 ## বানান ও শুদ্ধিকরণ (2)
 1. **নিচের কোন বানানটি শুদ্ধ?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*  
