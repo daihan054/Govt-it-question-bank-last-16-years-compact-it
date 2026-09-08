@@ -707,11 +707,17 @@
    c) A+BC  
    d) ACB
 
+   answer: c — A+BC  
+   explanation: A + B + AB absorbs to A + B, and (A+B)(A+C) distributes to A + BC.
+
 2. **Which one of the following has the truth value FALSE for the variables A=TRUE and B=TRUE and C=TRUE?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*  
    a. A\bar{B}C + \bar{A}BC  
    b. X = A.\bar{B} + \bar{A}.B  
    c. (AC + \bar{B})(\bar{A} + (B \oplus C))  
    d. (A + B) \oplus C \oplus (B + C)
+
+   answer: a — AB̄C + ĀBC  
+   explanation: With A=B=C=1 both product terms contain a complemented variable, so each is 0 and the sum is 0; note options (b) and (c) also evaluate to 0, so the option set is loose.
 
 3. **Which of the logic expressions is equivalent to the digital circuit shown in the figure?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*  
    a. X = A.B + \overline{A}.\overline{B}  
@@ -724,6 +730,9 @@
    B) B  
    C) AB  
    D) 1
+
+   answer: C — AB  
+   explanation: A + AB absorbs to A and B + AB absorbs to B, so the product is A·B.
 
 ## Combinational Circuits (MUX, Decoder) (2)
 
