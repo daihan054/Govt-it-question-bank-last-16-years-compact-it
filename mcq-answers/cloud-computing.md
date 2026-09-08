@@ -185,8 +185,14 @@
    (c) Docker is a programming language, and Docker Hub is a code editor  
    (d) Docker is a firewall, and Docker Hub is a security tool
 
+   answer: a — Docker is a container platform, and Docker Hub is a cloud repository for Docker images  
+   explanation: Docker packages an application with its dependencies into a container, and Docker Hub is the public registry where those images are pushed and pulled.
+
 2. **Which software is mostly used for virtualization?** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) VMware  
    B) Oracle DBMS  
    C) Windows XP  
    D) Linux
+
+   answer: A — VMware  
+   explanation: VMware is the best known virtualization software, letting one physical host run several virtual machines.
