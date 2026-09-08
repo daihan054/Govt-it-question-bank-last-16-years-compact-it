@@ -1757,8 +1757,14 @@
    c) Outer join  
    d) Inner join
 
+   answer: c — Outer join  
+   explanation: An outer join keeps unmatched rows from one or both tables and fills the missing side with NULLs; an inner join drops them.
+
 2. **Which type of JOIN operation in SQL command is used to returns that do not have matching values?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*  
    a) Natural Join  
    b) EQUI Join  
    c) Outer Join  
    d) All of the above
+
+   answer: c — Outer Join  
+   explanation: LEFT, RIGHT and FULL OUTER JOIN all return rows that have no match on the other side, padded with NULLs.
