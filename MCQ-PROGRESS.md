@@ -2,9 +2,9 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 158 / 160 done**  ·  **Questions: 3012 answered, 20 skipped, 3039 total**
+**Subtopics: 159 / 160 done**  ·  **Questions: 3016 answered, 20 skipped, 3039 total**
 
-Next up: `math.md` — Speed, Time & Distance (4)
+Next up: `math.md` — Basic Arithmetic (3)
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -23,7 +23,7 @@ Next up: `math.md` — Speed, Time & Distance (4)
 | `electrical-and-electronics.md` | IT | 4 / 4 | 114 | 2 | 116 |
 | `english.md` | General | 5 / 5 | 285 | 1 | 286 |
 | `gk.md` | General | 6 / 6 | 552 | 3 | 555 |
-| `math.md` | General | 13 / 15 | 179 | 0 | 186 |
+| `math.md` | General | 14 / 15 | 183 | 0 | 186 |
 | `mechanical-engineering.md` | IT | 7 / 7 | 37 | 1 | 38 |
 | `microprocessor-and-computer-architecture.md` | IT | 5 / 5 | 84 | 1 | 85 |
 | `ms-office.md` | IT | 5 / 5 | 22 | 1 | 23 |

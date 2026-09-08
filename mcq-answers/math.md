@@ -1704,7 +1704,13 @@
    গ. ২৩০ কি.মি.
    ঘ. ২৩৪ কি.মি.
 
+   answer: গ — তরলের প্রবাহে বাধা দেওয়ার ধর্ম  
+   explanation: সান্দ্রতা হলো তরলের স্তরগুলোর পারস্পরিক আপেক্ষিক গতিতে বাধা দেওয়ার ধর্ম — যত বেশি সান্দ্রতা, তরল তত ঘন ও ধীরে বয়।
+
 2. **a) নিম্নোক্ত মেমোরিগুলোকে গতির দ্রুততার ভিত্তিতে ক্রমানুসারে সাজিয়ে লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+
+   answer: Register > Cache > RAM > SSD > HDD > Magnetic tape  
+   explanation: প্রসেসরের যত কাছে, মেমোরি তত দ্রুত কিন্তু ব্যয়বহুল ও ছোট; দূরে গেলে ধীর কিন্তু সস্তা ও বড় হয়।
 
 3. **Considering computer memory speed, which one is correct order from highest to lowest?[ কম্পিউটার মেমোরির গতির দিক থেকে (speed) সর্বোচ্চ থেকে সর্বনিম্ন কোন ক্রমটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
    (a) RAM > Cache > SSD > HDD  
@@ -1712,11 +1718,17 @@
    (c) RAM > SSD > Cache > HDD  
    (d) Cache > RAM > HDD > SSD
 
+   answer: b — Cache > RAM > SSD > HDD  
+   explanation: Cache is fast SRAM next to the CPU, RAM is slower DRAM, the SSD has no moving parts, and the mechanical hard disk is slowest.
+
 4. **In a class definition with 10 methods, to make the class maximally cohesive number of connections required among the methods are—[ ১০টি মেথড বিশিষ্ট একটি ক্লাস সংজ্ঞায়, ক্লাসটিকে সর্বোচ্চ সংগতিপূর্ণ (Maximally Cohesive) করতে মেথডগুলোর মধ্যে কতটি সংযোগ প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) 90  
    (b) 100  
    (c) 10  
    (d) 45
+
+   answer: d — 45  
+   explanation: Maximum cohesion means every method connects to every other, giving n(n-1)/2 = 10 × 9 / 2 = 45 connections.
 
 ## Basic Arithmetic (3)
 1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*  
