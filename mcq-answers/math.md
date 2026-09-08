@@ -1312,11 +1312,17 @@
    গ. ৮ মিনিট
    ঘ. কোনোটিই নয়
 
+   answer: ক — ৪ দিন  
+   explanation: সমীকরণ দুটি মিলিয়ে পাওয়া যায় ১ জন পুরুষ = ২ জন ছেলের সমান কাজ; তখন পুরুষের হার ১/১০০ ও ছেলের ১/২০০, তাই ১৫ পুরুষ + ২০ ছেলে = ০.২৫ অর্থাৎ ৪ দিন।
+
 2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
    (a) Switch  
    (b) Hub  
    (c) Router  
    (d) Modem
+
+   answer: a — Switch  
+   explanation: A switch forwards frames using MAC addresses, which is the data link layer (layer 2).
 
 3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 45  
@@ -1324,11 +1330,17 @@
    (c) 63  
    (d) 126
 
+   answer: c — 63  
+   explanation: C(7,5) × C(3,2) = 21 × 3 = 63 ways.
+
 4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
    (A) Print screen  
    (B) File open  
    (C) Help  
    (D) Save
+
+   answer: C — Help  
+   explanation: F1 is the standard Help key across Windows applications.
 
 5. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ফজলুর রহমান  
@@ -1336,12 +1348,21 @@
    গ) তাজউদ্দিন আহমেদ  
    ঘ) মনসুর আলী
 
+   answer: ঘ — মনসুর আলী  
+   explanation: মুজিবনগর সরকারের অর্থ, বাণিজ্য ও শিল্পমন্ত্রী ছিলেন ক্যাপ্টেন এম মনসুর আলী।
+
 6. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+   answer: DHCP হলো Dynamic Host Configuration Protocol, যা নেটওয়ার্কে যুক্ত হওয়া ডিভাইসকে স্বয়ংক্রিয়ভাবে আইপি ঠিকানা দেয়  
+   explanation: ক্লায়েন্ট DISCOVER ব্রডকাস্ট করলে সার্ভার OFFER পাঠায়, ক্লায়েন্ট REQUEST করে এবং সার্ভার ACK দিয়ে নির্দিষ্ট সময়ের জন্য আইপি, সাবনেট মাস্ক, গেটওয়ে ও DNS ঠিকানা লিজ দেয় — ফলে হাতে কনফিগার করার ঝামেলা ও ঠিকানা সংঘর্ষ দুই-ই এড়ানো যায়।
 
 7. **Math: 15 marks** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
    i. যদি x^a = y^b = z^c এবং xyz = 1 হয় তবে ab + bc + ca এর মান নির্ণয় করুন।  
    ii. একটি বৃত্তের ব্যাসার্ধ ২ সেমি ঐ বৃত্তের অন্তস্থ বর্গের ক্ষেত্রফল কত?  
    iii. কোন একটি গ্রামের জনসংখ্যার ৯০% পুরুষ ৫০% যদি ৩০% পুরুষ বিবাহিত তাহলে ঐ গ্রামের মোট জনসংখ্যার কত ভাগ মহিলা অবিবাহিত।
+
+   answer: i. ab + bc + ca = 0  ii. ৮ বর্গ সেন্টিমিটার  iii. প্রশ্নটি ছাপায় অসম্পূর্ণ  
+   explanation: x^a = y^b = z^c = k ধরলে xyz = k^(1/a+1/b+1/c) = 1 দেয় 1/a+1/b+1/c = 0, অর্থাৎ ab+bc+ca = 0; আর ২ সেমি ব্যাসার্ধের বৃত্তে অন্তর্লিখিত বর্গের কর্ণ ৪ সেমি, তাই বাহু 2√2 ও ক্ষেত্রফল ৮ বর্গ সেমি। <!-- verify -->
 
 8. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed?[ একজন ব্যক্তি ১২০ দিনের জন্য কিছু টাকা ধার নিলেন। ব্যাংক 6% বার্ষিক হারে 360 টাকা সুদ চার্জ করল। তিনি কত টাকা ধার নিয়েছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
    (a) Tk.  
@@ -1350,11 +1371,17 @@
    (c) Tk. 15,000  
    (d) None of these
 
+   answer: a — Tk. 18,000  
+   explanation: Interest = P × 6% × 120/360 = 0.02P, so 0.02P = 360 and P = 18,000 taka.
+
 9. **Bluetooth is a type of radio wave information transmission system that is good for about—[ ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত কত দূর পর্যন্ত কাজ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
    (a) 30 feet  
    (b) 30 yards  
    (c) 30 miles  
    (d) 300 miles
+
+   answer: a — 30 feet  
+   explanation: Class 2 Bluetooth, used in phones and headsets, reaches about 10 metres — roughly 30 feet.
 
 ## Set Theory (8)
 
