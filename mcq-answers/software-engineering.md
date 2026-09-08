@@ -335,11 +335,17 @@
    (c) 10  
    (d) 45
 
+   answer: d — 45  
+   explanation: Maximum cohesion means every method is connected to every other, giving n(n-1)/2 = 10×9/2 = 45 connections.
+
 2. **Cyclomatic complexity is a software metric used in _____** *[Combined Bank Officer (IT) 04.10.2024 compact it 14 (ET: BIBM)]*  
    (a) White box testing  
    (b) Black box testing  
    (c) Grey box testing  
    (d) None of these
+
+   answer: a — White box testing  
+   explanation: Cyclomatic complexity counts the independent paths through the code, so it needs the internal structure — white box.
 
 3. **The degree of interaction between two modules is known as-** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) Cohesion  
@@ -347,11 +353,17 @@
    c) Inheritance  
    d) Coupling
 
+   answer: d — Coupling  
+   explanation: Coupling measures how much two modules depend on each other; cohesion measures how focused one module is internally.
+
 4. **In software development, value adjustment factors include the following among others:** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*  
    (a) the criticality of the performance and reusability of the code  
    (b) number of lines of code in the software.  
    (c) number of technical manpower and hardware costs  
    (d) time period available and the level of user friendliness
+
+   answer: a — the criticality of the performance and reusability of the code  
+   explanation: Function point analysis adjusts the raw count using 14 general system characteristics such as performance, reusability and complexity.
 
 5. **Assuming the existence of a start and end nodes for a program graph (PG), the total number of Paths is equivalent to _______ set of test data required to test software.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*  
    (a) Minimum  
@@ -359,11 +371,17 @@
    (c) Optimum  
    (d) Supreme
 
+   answer: b — Maximum  
+   explanation: Testing every path through the program graph is the most exhaustive possible test set, so it gives the maximum number of test cases.
+
 6. **________ is qualitative measure that refers to the number of connections between a ‘calling’ and a ‘called’ module and the complexity of these connections.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*  
    a) Coupling  
    b) Cohesion  
    c) Both A and B  
    d) None of them
+
+   answer: a — Coupling  
+   explanation: Coupling describes how many connections exist between a calling and a called module and how complex those connections are.
 
 7. **ISO 9126 quality factors consist of –** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*  
    a) process-ability, consistency, usefulness, adaptability, rationality and transportability  
@@ -371,11 +389,17 @@
    c) functionality, consistency, effectiveness, adaptability, maintainability and transportability  
    d) None of them.
 
+   answer: b — functionality, reliability, effectiveness, usability, maintainability and portability  
+   explanation: ISO 9126 lists six characteristics: functionality, reliability, usability, efficiency (effectiveness), maintainability and portability.
+
 8. **DFD stands for-** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
    A) data file disk  
    B) data flow diagram  
    C) disk flat database  
    D) disk file database
+
+   answer: B — data flow diagram  
+   explanation: A DFD shows how data moves between processes, stores and external entities.
 
 ## Design Patterns (3)
 
