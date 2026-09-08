@@ -2564,8 +2564,14 @@
    গ. অপবর্তন  
    ঘ. অভ্যন্তরীণ প্রতিসরণ
 
+   answer: ঘ — অভ্যন্তরীণ প্রতিসরণ (পূর্ণ অভ্যন্তরীণ প্রতিফলন)  
+   explanation: Light stays inside the fibre core because it strikes the cladding beyond the critical angle and is totally internally reflected.
+
 2. **An optical fiber has a signal solid dielectric cylinder knowns as the core which is surrounded by a solid dielectric ______ is called?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** cladding
+
+   answer: cladding  
+   explanation: The cladding is the lower-refractive-index layer around the core that keeps the light trapped inside by total internal reflection.
 
 3. **অপটিক্যাল ফাইবার আলোর কোন নীতিতে কাজ করে?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) প্রতিফলন  
@@ -2574,11 +2580,17 @@
    (ঘ) পূর্ণ অভ্যন্তরীণ প্রতিফলন  
    **উত্তর: ঘ**
 
+   answer: ঘ — পূর্ণ অভ্যন্তরীণ প্রতিফলন  
+   explanation: Optical fibre works on total internal reflection at the core-cladding boundary.
+
 4. **Which of the following communication medium requires ‘line-of-sight’?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) Micro wate  
    (খ) Fiber optic cable  
    (গ) Twisted-pair cable  
    (ঘ) Co-axial cable
+
+   answer: ক — Micro wave  
+   explanation: Terrestrial microwave travels in a straight beam, so the transmitting and receiving antennas must see each other.
 
 5. **Submarine ক্যাবল কয়টি?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 73 (ET: N/A)]*  
    ক) ২  
@@ -2587,11 +2599,17 @@
    ঘ) ৬  
    **Ans: ক**
 
+   answer: ক — ২  
+   explanation: At the time of the exam Bangladesh was connected by two submarine cables, SEA-ME-WE 4 and SEA-ME-WE 5.
+
 6. **Which is the disadvantage of Optical Fiber?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)], [Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
    a) Resistance to corrosive materials  
    b) Greater immunity to tapping  
    c) Unidirectional light propagation  
    d) None of these
+
+   answer: c — Unidirectional light propagation  
+   explanation: Light travels one way in a fibre, so two-way communication needs two fibres or two wavelengths — that is a drawback, while corrosion resistance and tap immunity are advantages.
 
 7. **Which one of the following have higher bandwidth?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
    a) Shielded Twisted Pair  
@@ -2599,11 +2617,17 @@
    c) Coaxial Cables  
    d) Fiber Optic Cables
 
+   answer: d — Fiber Optic Cables  
+   explanation: Optical fibre carries light and offers far more bandwidth than any copper medium.
+
 8. **Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) Crossover  
    B) Straight through  
    C) Rolled  
    D) Shield twisted pair
+
+   answer: C — Rolled  
+   explanation: A rollover (console) cable connects a PC's COM/serial port to the console port of a router or switch.
 
 9. **Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) Crossover  
@@ -2611,11 +2635,17 @@
    C) Rolled  
    D) Shielded twisted pair
 
+   answer: C — Rolled  
+   explanation: The rollover cable reverses all the pins and is the standard console cable for router and switch management.
+
 10. **Fiber optical cable is used for-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
    A) LAN in an office  
    B) telephone lines  
    C) data connectivity among the branches of offices  
    D) None of the above
+
+   answer: C — data connectivity among the branches of offices  
+   explanation: Fibre's high bandwidth and long reach without repeaters make it the choice for linking sites over distance.
 
 11. **Which of the following wiring standards would most likely be used to connect a single network node to a switch?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
    a. Loopback  
@@ -2623,11 +2653,17 @@
    c. Rollover  
    d. Crossover
 
+   answer: b — Straight  
+   explanation: Connecting unlike devices — a PC to a switch — uses a straight-through cable; crossover is for like devices.
+
 12. **Which of the following WAN technologies requires fiber optics?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
    a. POTS  
    b. SONET  
    c. ADSL  
    d. PSTN
+
+   answer: b — SONET  
+   explanation: SONET is an optical carrier standard and runs only over fibre; POTS, ADSL and PSTN use copper.
 
 13. **Which of the following WAN technology types does not use an Ethernet cable as a medium for communication and is used for long distances?** *[Pubali Bank Limited Officer (IT) 2012 compact it 265 (ET: N/A)]*  
    a. DSL  
@@ -2635,11 +2671,17 @@
    c. E3/T3  
    d. ATM
 
+   answer: b — WiMAX  
+   explanation: WiMAX is a wireless broadband technology for long distances, so it uses radio rather than any cable.
+
 14. **Which of the following is strictly used to convert analog to digital signals?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. NIC  
    b. Modem  
    c. Repeater  
    d. Hub
+
+   answer: b — Modem  
+   explanation: A modem is the only listed device that converts between analog and digital signals; NIC, repeater and hub do not.
 
 ## IPv6 Addressing (13)
 
