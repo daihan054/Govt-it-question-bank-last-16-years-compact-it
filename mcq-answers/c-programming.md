@@ -1203,11 +1203,17 @@
    c) Character  
    d) Double
 
+   answer: a — Integer  
+   explanation: A memory address is a whole number, so whatever the pointer points to, the address it stores is an unsigned integer value.
+
 2. **Address variable রাখা যায় কোনটিতে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) Break  
    B) Int  
    C) Pointer  
    D) Float
+
+   answer: C — Pointer  
+   explanation: A pointer is the variable type designed to hold the memory address of another variable.
 
 3. **C-programming এ address রাখার জন্য কোনটি সাধারণত ব্যবহৃত হয়?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*  
    A) break  
@@ -1215,17 +1221,26 @@
    C) char  
    D) float
 
+   answer: B — pointer  
+   explanation: In C an address is stored in a pointer variable, declared with * such as int *p.
+
 4. **What is the following declaration for? int (*a)[10];** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
    (a) Pointer to an array of 10 integers  
    (b) Array of 10 function Pointers returning integer  
    (c) A pointer of to function returning an array to 10 integers  
    (d) Array of 10 integers pointers
 
+   answer: a — Pointer to an array of 10 integers  
+   explanation: The parentheses bind * to a first, so a is a pointer, and it points to an array of 10 ints; without them int *a[10] would be an array of 10 pointers.
+
 5. **Which header file should be included to use functions like malloc() and calloc()?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
    a. memory.h  
    b. stdlib.h  
    c. string.h  
    d. dos.h
+
+   answer: b — stdlib.h  
+   explanation: malloc, calloc, realloc and free are all declared in stdlib.h.
 
 ## Recursion (4)
 
