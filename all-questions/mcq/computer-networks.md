@@ -1549,6 +1549,8 @@
 
 ## OSI & TCP-IP Model (16)
 
+> **Best Tutorial:** [GeeksforGeeks - Open Systems Interconnection Model (OSI)](https://www.geeksforgeeks.org/computer-networks/open-systems-interconnection-model-osi/)
+
 1. **Which of the following pairs is an example of transport layer protocols of the OSI model?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 43 (ET: N/A)]*
    (ক) IP, ICMP
    (খ) ARP, IP

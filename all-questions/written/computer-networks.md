@@ -330,6 +330,9 @@ ii) 211.10.15.4
 a) What will be the subnet mask and how many hosts belongs to every subnet. b) What is the first and last address of first and last subnet address?
 
 ## OSI & TCP/IP Reference Model (57)
+
+> **Best Tutorial:** [GeeksforGeeks - Open Systems Interconnection Model (OSI)](https://www.geeksforgeeks.org/computer-networks/open-systems-interconnection-model-osi/)
+
 1. Mention the layers of the OSI Model and the function of each layer. *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
 2. **OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*

@@ -2419,6 +2419,8 @@ Answer:
 
 ## OSI & TCP/IP Reference Model (57)
 
+> **Best Tutorial:** [GeeksforGeeks - Open Systems Interconnection Model (OSI)](https://www.geeksforgeeks.org/computer-networks/open-systems-interconnection-model-osi/)
+
 1. **Mention the layers of the OSI Model and the function of each layer.** *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
 Answer: The OSI (Open Systems Interconnection) model, made by ISO in 1984, splits network communication into 7 layers. Each layer does one job and serves the layer above it.
