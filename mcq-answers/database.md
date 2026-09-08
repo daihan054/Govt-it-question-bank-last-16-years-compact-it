@@ -30,11 +30,17 @@
    (c) FROM  
    (d) ORDER BY
 
+   answer: c — FROM  
+   explanation: Logical processing starts with FROM to build the source rows, then WHERE, GROUP BY, HAVING, SELECT and finally ORDER BY.
+
 2. **Which of the following is a DML (Data Manipulation Language) command?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*  
    (a) CREATE  
    (b) DELETE  
    (c) DROP  
    (d) ALTER
+
+   answer: b — DELETE  
+   explanation: DELETE changes the rows inside a table, so it is DML; CREATE, DROP and ALTER change the structure and are DDL.
 
 3. **Which of the following is a command of Data Definition Language (DDL)?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) SELECT  
@@ -42,11 +48,17 @@
    (c) UPDATE  
    (d) CREATE
 
+   answer: d — CREATE  
+   explanation: CREATE defines a new database object, which is data definition; SELECT, INSERT and UPDATE work on the data itself.
+
 4. **Which statements are used to create the database structure?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
    (a) DML  
    (b) DDL  
    (c) BNF  
    (d) None of these
+
+   answer: b — DDL  
+   explanation: Data Definition Language statements such as CREATE and ALTER build and change the structure of the database.
 
 5. **Which of the following is not a DDL statement?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
    (a) Create  
@@ -54,11 +66,17 @@
    (c) Drop  
    (d) Select
 
+   answer: d — Select  
+   explanation: SELECT reads data and belongs to DML/DQL; CREATE, ALTER and DROP are DDL.
+
 6. **Which clause is required in an SQL query for getting information from a database?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
    (a) Update  
    (b) Select  
    (c) Create  
    (d) Isolation
+
+   answer: b — Select  
+   explanation: Every query that retrieves data must have a SELECT clause naming the columns wanted.
 
 7. **CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)], [Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    a) DML  
@@ -66,11 +84,17 @@
    c) View  
    d) Integrity constraint
 
+   answer: b — DDL  
+   explanation: CREATE TABLE defines a new structure, which makes it a Data Definition Language statement.
+
 8. **Which one of the followings sorts rows in SQL?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) SORT BY  
    b) ALIGN BY  
    c) ORDER BY  
    d) GROUP BY
+
+   answer: c — ORDER BY  
+   explanation: ORDER BY sorts the result rows; GROUP BY aggregates them instead.
 
 9. **Table employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
    ```sql
@@ -83,17 +107,26 @@
    (c) 5  
    (d) 0
 
+   answer: d — 0  
+   explanation: The subquery returns every salary including the row's own, and no value can be greater than itself, so no row qualifies.
+
 10. **Which of the following provides the ability to query information from the database and insert tuples into, delete tuples from, and modify tuples in the database?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*  
    (a) DML (Data Manipulation Language)  
    (b) DDL (Data Definition Language)  
    (c) Query  
    (d) Relational Schema
 
+   answer: a — DML (Data Manipulation Language)  
+   explanation: DML covers SELECT, INSERT, DELETE and UPDATE — all the operations on the rows themselves.
+
 11. **To remove a relational table from SQL database, we use ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) Delete  
    (খ) Purge  
    (গ) Remove  
    (ঘ) Drop
+
+   answer: ঘ — Drop  
+   explanation: DROP TABLE removes the whole table and its structure; DELETE only removes rows.
 
 12. **Which of the following command is a type of Data Definition language command?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
    a) Create  
@@ -109,17 +142,26 @@
    c) Both I and II  
    d) Neither I nor II
 
+   answer: a — Create  
+   explanation: CREATE defines a new object, which is DDL. The stray item pasted here answers (a) Only I: a shared lock allows reading but not writing, while an exclusive lock allows both reading and writing.
+
 13. **Which one is the correct SQL statement to find the second highest mark from STUDENT database contains the marks of all students?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
    a) Select MAX(marks) from *STUDENT* WHERE marks NOT IN (select MAX(marks) from *STUDENT*  
    b) Select MAX(marks) from *STUDENT* WHERE marks IN (select MAX(marks) from *STUDENT*  
    c) select MAX(marks) from *STUDENT*  
    d) select MAX(marks) from *STUDENT* WHERE marks NOT IN (select MIN(marks) from *STUDENT*
 
+   answer: a — Select MAX(marks) from STUDENT WHERE marks NOT IN (select MAX(marks) from STUDENT)  
+   explanation: Excluding the highest mark and then taking the maximum of what is left gives the second highest.
+
 14. **Which of the following is not a DDL command?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
    a) Create  
    b) Drop  
    c) Alter  
    d) Update
+
+   answer: d — Update  
+   explanation: UPDATE modifies row data, so it is DML; CREATE, DROP and ALTER are DDL.
 
 15. **The SQL statement** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    ```sql
@@ -130,11 +172,17 @@
    c) prints 045.926  
    d) prints 50
 
+   answer: d — prints 50  
+   explanation: A negative second argument rounds to the left of the decimal point, so -1 rounds 45.926 to the nearest ten, giving 50.
+
 16. **When three or more AND & OR conditions are combined, it is easier to use the SQL keyword(s):** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
    a) LIKE only  
    b) IN only  
    c) NOT IN only  
    d) Both IN and NOT IN
+
+   answer: d — Both IN and NOT IN  
+   explanation: IN and NOT IN collapse a long chain of OR or AND comparisons into one readable list.
 
 17. **How to select all data from student table starting the name from letter 'r'?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
    a) SELECT * FROM student WHERE name LIKE 'r%';  
@@ -142,11 +190,17 @@
    c) SELECT * FROM student WHERE name LIKE '%r';  
    d) SELECT * FROM student WHERE name LIKE '_r%';
 
+   answer: a — SELECT * FROM student WHERE name LIKE 'r%';  
+   explanation: The % wildcard after r matches any characters following it, so the pattern finds names starting with r.
+
 18. **Which of the following are the five built-in functions provided by SQL?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
    a) COUNT, SUM, AVG, MAX, MIN  
    b) SUM, AVG, MIN, MAX, MULT  
    c) SUM, AVG, MULT, DIV, MIN  
    d) SUM, AVG, MIN, MAX, NAME
+
+   answer: a — COUNT, SUM, AVG, MAX, MIN  
+   explanation: These five are SQL's standard aggregate functions.
 
 19. **What does this query do?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*
    ```sql
@@ -159,11 +213,17 @@
    c) Finds the name and ID of employees who get more than average salaries of his own department.  
    d) None
 
+   answer: c — Finds the name and ID of employees who get more than average salaries of his own department  
+   explanation: The correlated subquery re-computes the average for each row's own department, so the comparison is department by department.
+
 20. **What will be the output of the following SQL "Select Round (232.420, -2) AS Round Value"?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
    (a) 240  
    (b) 200  
    (c) 233  
    (d) Syntax error
+
+   answer: b — 200  
+   explanation: -2 rounds to the nearest hundred, and 232.420 is closer to 200 than to 300.
 
 21. **Consider the following relational data table, Employee. Now, find the output for the following SQL Statement?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*
    ```sql
@@ -174,6 +234,9 @@
    c. 32  
    d. 64
 
+   answer: d — 64  
+   explanation: Listing the table three times makes a Cartesian product, so the count is n³; with 4 rows in Employee that is 64. <!-- verify -->
+
 22. **Table Employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
    ```sql
    SELECT COUNT(*) FROM Employee WHERE SALARY > ANY (SELECT SALARY FROM EMPLOYEE);
@@ -183,6 +246,9 @@
    b. 5  
    c. 9  
    d. 10
+
+   answer: c — 9  
+   explanation: "> ANY" means greater than at least one salary, which every row satisfies except the smallest, leaving 9 of the 10.
 
 23. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 91 (ET: N/A)]*  
    | Product ID | Delivery Data | Quantity |  
@@ -196,11 +262,17 @@
    c. SELECT SUM (Quantity) FROM Delivery Record WHERE data = '2021-03-16'  
    d. SELECT MAX (Quantity) FROM Delivery Record
 
+   answer: b — SELECT COUNT (*) FROM Delivery Record  
+   explanation: COUNT(*) gives 4, while AVG for F101 is 2, SUM for 2021-03-16 is 3 and MAX quantity is 3.
+
 24. **Which is not the steps of SQL Query processing?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 163 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    a) Parsing  
    b) Translation  
    c) Optimization  
    d) None
+
+   answer: d — None  
+   explanation: Parsing, translation and optimization are all genuine stages of query processing, followed by evaluation.
 
 25. **Which one is the Data Control Language (DCL) in SQL?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
    a) Insert  
@@ -208,11 +280,17 @@
    c) Drop  
    d) Grant
 
+   answer: d — Grant  
+   explanation: GRANT and REVOKE control privileges, which is what Data Control Language means.
+
 26. **We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
    a) View is not visible to user  
    b) It is not a virtual table  
    c) It is not a part of the logical model  
    d) View cannot be updated
+
+   answer: c — It is not a part of the logical model  
+   explanation: A view is a virtual table defined on top of the logical schema; it is visible to users and many views are updatable.
 
 27. **Consider the following “staff” table** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
    | staff_name | staff_dep | city |  
@@ -225,11 +303,17 @@
    c) select staff_name || ‘(‘|| staff_dep ’)’|| FROM staff where city= ‘Dhaka’  
    d) select staff_name || ‘(‘ staff_dep ||’)’ FROM staff where city= ‘Rajshahi’
 
+   answer: a — select staff_name || '(' || staff_dep ||')' FROM staff where city= 'Dhaka'  
+   explanation: || concatenates strings in SQL, and each literal needs its own || on both sides, with a single = for comparison.
+
 28. **What is the maximum length of the “varchar” in the database?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
    a) 35000  
    b) 100  
    c) 65535  
    d) 255
+
+   answer: c — 65535  
+   explanation: A MySQL row is limited to 65,535 bytes, which caps the length of a VARCHAR column.
 
 29. **Assume that in a table named “student” the cgpa is calculated using the all course’s gpa. What kind of attribute cgpa is?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    a) Multivalued  
@@ -237,17 +321,26 @@
    c) Simple  
    d) Composite
 
+   answer: b — Derived  
+   explanation: CGPA is computed from the individual course GPAs rather than stored independently, so it is a derived attribute.
+
 30. **What is wrong statements for SQL?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    a) Non-procedural language  
    b) Input can be several tables  
    c) Output is always a single table  
    d) Output can be multiple table
 
+   answer: d — Output can be multiple table  
+   explanation: A SQL query may read many tables but always returns exactly one result table, so this statement is wrong.
+
 31. **The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    a) Union  
    b) Set-difference  
    c) Difference  
    d) Intersection
+
+   answer: b — Set-difference  
+   explanation: The set-difference operator (-) returns the tuples present in the first relation and absent from the second.
 
 32. **Consider the following Employee Table and the SQL query given:** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
    | id | Date | Work_hour |  
@@ -265,6 +358,9 @@
    c) 2  
    d) 0
 
+   answer: c — 2  
+   explanation: Only the rows with work_hour above 6 survive the WHERE, leaving ids 1 and 2 (id 3 has exactly 6), so grouping gives 2 rows.
+
 33. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
    | Product Id | Date | Quantity |  
    |---|---|---|  
@@ -277,11 +373,17 @@
    c) SELECT SUM (Quantity) FROM Delivery Record WHERE Date = '2020-10-16'  
    d) SELECT MAX (Quantity) FROM Delivery Record
 
+   answer: b — SELECT COUNT (*) FROM Delivery Record  
+   explanation: COUNT(*) returns 4, beating AVG for F101 (2), SUM on 2020-10-16 (3) and MAX quantity (3).
+
 34. **What is the advantage of using ‘case’ while doing the update operation?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*  
    a) No proper sequence is required to maintain.  
    b) It is much easier to write code with ‘case’ keyword.  
    c) Update with ‘case’ provides significant time improvement.  
    d) None of these above.
+
+   answer: c — Update with 'case' provides significant time improvement  
+   explanation: One UPDATE with a CASE expression replaces several separate UPDATE statements, so the table is scanned once instead of many times.
 
 35. **উল্লেখিত কোনটি Database aggregate এর function?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) where  
@@ -289,11 +391,17 @@
    C) select  
    D) from
 
+   answer: B — sum  
+   explanation: SUM aggregates many rows into one value; WHERE, SELECT and FROM are clauses, not functions.
+
 36. **নিচের কোনটি Database তুলনা করার কাজে ব্যবহার হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) BETWEEN  
    B) ANY  
    C) IN  
    D) COMPARE
+
+   answer: B — ANY  
+   explanation: ANY compares a value against every value a subquery returns and is true if the comparison holds for at least one of them. <!-- verify -->
 
 37. **কোনটি দিয়ে Database Table এ uniqueness নিশ্চিত করা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
    A) Primary Key  
@@ -301,11 +409,17 @@
    C) Entity  
    D) Relation
 
+   answer: A — Primary Key  
+   explanation: A primary key must be unique and not null, so it identifies each row exactly once.
+
 38. **In SQL, the ________ command is used to recompile a view.** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*  
    A) COMPILE VIEW  
    B) DEFINE VIEW  
    C) ALTER VIEW  
    D) CREATE VIEW
+
+   answer: C — ALTER VIEW  
+   explanation: ALTER VIEW ... COMPILE recompiles an invalidated view definition.
 
 39. **Which one is database language?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
    A) DDL  
@@ -313,11 +427,17 @@
    C) Both A & B  
    D) None
 
+   answer: C — Both A & B  
+   explanation: DDL defines the structure and DML manipulates the data — both are parts of the database language.
+
 40. **The SQL statement that requires or reads data from the table is-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) Select  
    B) Read  
    C) Query  
    D) None of the above
+
+   answer: A — Select  
+   explanation: SELECT is the statement that reads rows out of a table.
 
 41. **Which of the following logical connectives is not included in SQL?** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
    A) AND  
@@ -325,11 +445,17 @@
    C) NOR  
    D) NOT
 
+   answer: C — NOR  
+   explanation: SQL provides AND, OR and NOT; there is no NOR connective.
+
 42. **The result of a SQL SELECT statement is a ----** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*  
    A) Report  
    B) form  
    C) file  
    D) table
+
+   answer: D — table  
+   explanation: A SELECT returns a result set arranged in rows and columns, which is itself a table.
 
 43. **To remove the duplicate rows from the result of an SQL Select statement, the---- qualifier specified include.** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) only  
@@ -337,11 +463,17 @@
    C) unique  
    D) single
 
+   answer: B — distinct  
+   explanation: SELECT DISTINCT removes repeated rows from the result.
+
 44. **The ________ clause is used to list the attributes desired in the result of a query.** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
    A) Where  
    B) Select  
    C) From  
    D) Distinct
+
+   answer: B — Select  
+   explanation: The SELECT clause lists the columns or expressions that appear in the result.
 
 45. **In SQL, aggregate functions can be used in the select list or the ________ clause of a select statement or subquery. They cannot be used in a ________ clause.** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) Where, having  
@@ -349,11 +481,17 @@
    C) Group by, Having  
    D) Group by, Where
 
+   answer: B — Having, where  
+   explanation: Aggregates are computed after grouping, so they can appear in SELECT and HAVING but not in WHERE, which filters rows before grouping.
+
 46. **In SQL, the ________ command is used to recompile a view.** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
    A) COMPLTE VIEW  
    B) DEFINE VIEW  
    C) ALTER VIEW  
    D) CREATE VIEW
+
+   answer: C — ALTER VIEW  
+   explanation: ALTER VIEW is the command that recompiles an existing view.
 
 47. **What is a tuple?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Another name for a table in an RDBMS  
@@ -361,11 +499,17 @@
    c. An attribute attached to a record  
    d. Another name for the key linking different table in a database
 
+   answer: b — A row or record in a database table  
+   explanation: In relational terms a tuple is one row of a relation.
+
 48. **The primary key is selected from the ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Candidate keys  
    b. Composite keys  
    c. Determinants  
    d. Foreign keys
+
+   answer: a — Candidate keys  
+   explanation: All the attributes that could uniquely identify a row are candidate keys, and the designer picks one of them as the primary key.
 
 49. **A transaction for which all committed changes are permanent is called ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Atomic  
@@ -373,11 +517,17 @@
    c. Isolated  
    d. Durable
 
+   answer: d — Durable  
+   explanation: Durability guarantees committed changes survive crashes and power loss.
+
 50. **Which of the following locks the item from access of any type?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Implicit lock  
    b. Explicit lock  
    c. Exclusive lock  
    d. Shared lock
+
+   answer: c — Exclusive lock  
+   explanation: An exclusive (write) lock blocks every other transaction from reading or writing the item.
 
 51. **You run a SELECT statement and multiple duplicate values are retrieved. What keyword can you use to retrieve only the non-duplicate data?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. DUPLICATE  
@@ -385,11 +535,17 @@
    c. DISTINCT  
    d. INDEX
 
+   answer: c — DISTINCT  
+   explanation: DISTINCT keeps only one copy of each repeated row in the result.
+
 52. **Microsoft Access is a ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. RDBMS  
    b. OODBMS  
    c. ORDBMS  
    d. All of these
+
+   answer: a — RDBMS  
+   explanation: Microsoft Access stores data in related tables with keys, which makes it a relational database management system.
 
 ## DBMS Concepts & Architecture (34)
 
