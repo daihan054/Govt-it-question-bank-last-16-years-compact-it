@@ -204,11 +204,17 @@
    (c) less time and space complexity  
    (d) Linear search can be used irrespective of whether the array is sorted or not
 
+   answer: d — Linear search can be used irrespective of whether the array is sorted or not  
+   explanation: Binary search needs a sorted list, while linear search works on any order; that flexibility is its main advantage despite being slower.
+
 2. **Linear search is also called _____** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) Random Search  
    b) Sequential search  
    c) Perfect search  
    d) None
+
+   answer: b — Sequential search  
+   explanation: Linear search checks elements one after another from the start, so it is also called sequential search.
 
 3. **Which of the following is not the required condition for a binary search algorithm?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 25 (ET: BIBM)]*  
    (a) The list must be sorted  
@@ -216,11 +222,17 @@
    (c) There must be a mechanism to delete and/or insert elements in the list.  
    (d) Number values should only be present
 
+   answer: c — There must be a mechanism to delete and/or insert elements in the list  
+   explanation: Binary search only reads the list; it needs sorted data and direct access to the middle element, but never insertion or deletion.
+
 4. **What is the worst case time complexity of linear search algorithm?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) O(1)  
    (খ) O(n)  
    (গ) O(\log n)  
    (ঘ) O(n^2)
+
+   answer: খ — O(n)  
+   explanation: In the worst case the key is last or absent, so all n elements must be compared.
 
 5. **Which of the following search algorithm requires less memory?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 44 (ET: N/A)]*  
    (ক) Optimal Search  
@@ -228,11 +240,17 @@
    (গ) Depth First Search  
    (ঘ) Linear Search
 
+   answer: গ — Depth First Search  
+   explanation: DFS stores only the current path, needing O(d) memory, while BFS must hold an entire level of the frontier in the queue.
+
 6. **Which searching algorithm can take O (1) time to find a data from a list?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*  
    a) Tree search  
    b) Linear Search  
    c) Binary Search  
    d) Hashing
+
+   answer: d — Hashing  
+   explanation: A hash function computes the slot address directly, so a lookup takes O(1) on average with no comparisons of other elements.
 
 7. **In binary search, what is the average number of comparison required for search an element in a list is the element number is–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*  
    a) 2/n  
@@ -240,11 +258,17 @@
    c) log2n  
    d) n - 1
 
+   answer: c — log2n  
+   explanation: Each comparison halves the search space, so about log₂n comparisons are needed on average and in the worst case.
+
 8. **The Average-case Time Complexity of the binary search algorithm is-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*  
    (a) O(n/2 logn)  
    (b) O(n log n)  
    (c) O(log n)  
    (d) O(1)
+
+   answer: c — O(log n)  
+   explanation: Binary search halves the remaining list on every step, giving O(log n) in both average and worst case.
 
 9. **The binary search algorithm is used to search for a given item when items are sorted. If the number of items is 1 million, which of the following is the closest to the maximum number of comparisons required to find the item.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) 15  
@@ -252,11 +276,17 @@
    (c) 25  
    (d) 30
 
+   answer: b — 20  
+   explanation: The maximum is ceil(log₂1,000,000) which is about 19.93, so 20 comparisons.
+
 10. **Suppose you searching student data using student number as the key. Which of following arrangement of the student data is suited for binary search?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*  
    a. Student data are arranged in the positions indicated by the student numbers hash values.  
    b. Student data are arranged randomly irrespective of the student numbers.  
    c. Student data are arranged in ascending order of student numbers.  
    d. Student data are arranged in the order of the cell addresses of the student numbers' locations.
+
+   answer: c — Student data are arranged in ascending order of student numbers  
+   explanation: Binary search requires the data sorted on the search key, so the records must be in ascending order of student number.
 
 11. **Which of the following operations is not O(1) for an array of sorted data. You may assume that array elements are distinct.** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*  
    a. Find the ith largest element  
@@ -264,11 +294,17 @@
    c. Find the ith smallest element  
    d. All of the above
 
+   answer: b — Delete an element  
+   explanation: In a sorted array the ith smallest or largest is found by index in O(1), but deleting an element forces the remaining items to shift, which is O(n).
+
 12. **The minimum number of comparisons required to determine if an integer appears more than n/2 times in a sorted array of n integers is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 89 (ET: N/A)]*  
    a. \Theta(n)  
    b. \Theta(\log n)  
    c. \Theta(\log*n)  
    d. \Theta(1)
+
+   answer: b — Θ(log n)  
+   explanation: In a sorted array a majority element must occupy position n/2, so check that value and binary search for its first and last occurrence in Θ(log n).
 
 13. **The average number of key comparisons done in a successful sequential search in a list of length n, it is-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
    A) \log n  
@@ -276,11 +312,17 @@
    C) (n-1)/2  
    D) n/2
 
+   answer: B — (n+1)/2  
+   explanation: A successful search is equally likely to end at any of the n positions, so the average number of comparisons is (1+2+...+n)/n = (n+1)/2.
+
 14. **The complexity of Binary search algorithm is-** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)], [Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) O(n)  
    B) O(\log n)  
    C) O(n^2)  
    D) O(n \log n)
+
+   answer: B — O(log n)  
+   explanation: Binary search discards half the remaining elements after each comparison.
 
 15. **The time complexity of binary search is -----** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) constant  
@@ -288,11 +330,17 @@
    C) exponent  
    D) logarithmic
 
+   answer: D — logarithmic  
+   explanation: Its running time is O(log n), which is logarithmic growth.
+
 16. **When the linear search used?** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*  
    A) When the list has only few elements.  
    B) When performing a single search in an unordered list  
    C) Used all the time  
    D) When the list has only a few elements and when performing a single search in an unordered list
+
+   answer: D — When the list has only a few elements and when performing a single search in an unordered list  
+   explanation: Sorting first only pays off for repeated searches, so for a short list or a one-off search on unsorted data linear search is the sensible choice.
 
 17. **Binary search worst time complexity is-** *[DESCO Assistant Engineer (CSE) 2016 compact it 256 (ET: N/A)]*  
    a. O(n)  
@@ -300,11 +348,17 @@
    c. O(1)  
    d. O(n^2)
 
+   answer: b — O(log n)  
+   explanation: Even in the worst case the list is halved each step, so at most about log₂n comparisons are made.
+
 18. **For s sorted linear array, which is the fastest algorithm to find the location?** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*  
    a. Linear search  
    b. Binary search  
    c. Quick search  
    d. Selection search
+
+   answer: b — Binary search  
+   explanation: On a sorted array binary search finds the position in O(log n), far faster than linear search's O(n).
 
 ## Graph Algorithms (13)
 
