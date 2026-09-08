@@ -939,11 +939,17 @@
    c) ১৬  
    d) ৩৪
 
+   answer: b — ১৫  
+   explanation: ৩×৩ ম্যাজিক বর্গে ১ থেকে ৯ পর্যন্ত সংখ্যার যোগফল ৪৫, আর তিন সারিতে ভাগ করলে প্রতি সারির যোগফল ১৫।
+
 2. **প্রথম n সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*  
    a) 2n  
    b) n^2  
    c) n^3  
    d) \frac{n^2}{2}
+
+   answer: b — n²  
+   explanation: প্রথম n সংখ্যক বিজোড় সংখ্যার সমষ্টি 1+3+5+... = n²।
 
 3. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৩৫৫  
@@ -951,11 +957,17 @@
    গ. ৫২৫  
    ঘ. ৬৭৫
 
+   answer: খ — ৪৬৫  
+   explanation: n(n+1)/2 সূত্রে ৩০ × ৩১ ÷ ২ = ৪৬৫।
+
 4. **1^2 + 2^2 + 3^2 + ................ + 7^2 ধারাটির সমষ্টি কত?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 9 (ET: BIBM)]*  
    a) \frac{n(n+1)}{2}  
    b) \left\{\frac{n(n+1)}{2}\right\}  
    c) \frac{n(n+1)(n+2)}{6}  
    d) \frac{n(n+1)(2n+1)}{6}
+
+   answer: d — n(n+1)(2n+1)/6  
+   explanation: বর্গের সমষ্টির সূত্র এটি; n = 7 বসালে 7×8×15/6 = 140 পাওয়া যায়।
 
 5. **On a2 km road, a total of 201 trees are planted on the side of the road at equal distances. How many such trees will be planted on a 50 km road such that the distance between two consecutive trees is the same as that of the consecutive trees on the 2 km road?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) 501  
@@ -963,11 +975,17 @@
    (c) 5000  
    (d) 5001
 
+   answer: d — 5001  
+   explanation: ২০১টি গাছে ২০০টি ফাঁক, তাই দূরত্ব ১০ মিটার; ৫০,০০০ মিটারে ৫০০০ ফাঁক মানে ৫০০১টি গাছ।
+
 6. **The number 3 divides 'a' with a result of 'b' and a reminder of 2. The number 3 divides 'b' with a result of 2 and 'a' reminder of 1. What is the value of 'a'?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*  
    (a) 13  
    (b) 17  
    (c) 23  
    (d) 21
+
+   answer: c — 23  
+   explanation: b = 3×2 + 1 = 7, তাই a = 3×7 + 2 = 23।
 
 7. **A prime number is a number that is divisible only by itself and 1. Which of the following is not a prime number?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)], [Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*  
    (a) 2  
@@ -975,8 +993,14 @@
    (c) 99  
    (d) 181
 
+   answer: c — 99  
+   explanation: 99 = 9 × 11, তাই এটি মৌলিক নয়; ২, ৭ ও ১৮১ মৌলিক।
+
 8. **৬০ থেকে ৮০ এর মধ্যে বৃহত্তর ও ক্ষুদ্রতম মৌলিক সংখ্যার অন্তর কত?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ১৮
+
+   answer: ১৮  
+   explanation: ৬০-৮০ এর মধ্যে ক্ষুদ্রতম মৌলিক ৬১ ও বৃহত্তম ৭৯, পার্থক্য ১৮।
 
 9. **1\text{ cm}^3 কত \text{m}^3 এর সমান?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) 10^{-6}\text{ m}^3  
@@ -985,11 +1009,17 @@
    (ঘ) 0.1\text{ m}^3  
    **উত্তর: ক**
 
+   answer: ক — 10⁻⁶ m³  
+   explanation: ১ মিটার = ১০০ সেমি, তাই ১ ঘনমিটার = ১০⁶ ঘনসেন্টিমিটার এবং ১ cm³ = ১০⁻⁶ m³।
+
 10. **Of the series 5+8+11+14 ________ which term is 383?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 122ᵗʰ  
    b) 127ᵗʰ  
    c) 136ᵗʰ  
    d) 144ᵗʰ
+
+   answer: b — 127th  
+   explanation: a = 5, d = 3 হলে 383 = 5 + (n-1)3, তাই n - 1 = 126 এবং n = 127।
 
 11. **How many positive integers less than ten thousand are multiples of both eight and eighteen?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 70  
@@ -997,11 +1027,17 @@
    c. 138  
    d. 139
 
+   answer: c — 138  
+   explanation: LCM(8, 18) = 72, আর ১০০০০-এর নিচে ৭২-এর গুণিতক ⌊9999/72⌋ = 138টি।
+
 12. **The H.S.F and L.C.M of two number are 12 and 288 respectively. If one of the numbers is 96, find the other.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 34  
    b. 36  
    c. 38  
    d. 40
+
+   answer: b — 36  
+   explanation: গ.সা.গু × ল.সা.গু = দুই সংখ্যার গুণফল, তাই 12 × 288 = 96 × x এবং x = 36।
 
 13. **How many prime numbers are there from 1 to 10?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 10  
@@ -1009,11 +1045,17 @@
    গ. 4  
    ঘ. 3
 
+   answer: গ — 4  
+   explanation: ১ থেকে ১০-এর মৌলিক সংখ্যা ২, ৩, ৫ ও ৭ — মোট চারটি।
+
 14. **If each of the six members of a family gives money as per their membership number, then what will be the total amount?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 216  
    খ. 125  
    গ. 100  
    ঘ. 64
+
+   answer: ক — 216  
+   explanation: প্রশ্নটি ছাপায় অসম্পূর্ণ; ছাপা বিকল্পগুলোর মধ্যে ৬³ = ২১৬-ই উদ্দিষ্ট। <!-- verify -->
 
 15. **Which one is the smallest?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 0.02  
@@ -1021,11 +1063,17 @@
    গ. 10  
    ঘ. None
 
+   answer: খ — 1/100  
+   explanation: 1/100 = 0.01, যা 0.02 ও 10-এর চেয়ে ছোট।
+
 16. **In the given AP series find the number of items 5,8,11,14,17,20, .......,50** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) 11  
    B) 13  
    C) 15  
    D) 16
+
+   answer: D — 16  
+   explanation: a = 5, d = 3, শেষ পদ 50 হলে n = (50-5)/3 + 1 = 16।
 
 ## Time, Work & Distance (11)
 
