@@ -2281,11 +2281,17 @@
    (গ) TCP, IP  
    (ঘ) UDP, TCP
 
+   answer: ঘ — UDP, TCP  
+   explanation: TCP and UDP are the transport layer protocols; IP, ICMP and ARP work at the network layer and below.
+
 2. **TCP দিয়ে কোনটি বোঝানো হয়?** *[BCIC Assistant Programmer 2022 compact it 61 (ET: BUET)]*  
    (ক) প্রোগ্রাম  
    (খ) প্রোটোকল  
    (গ) প্রোগ্রামিং  
    (ঘ) ফ্লোচার্ট
+
+   answer: খ — প্রোটোকল  
+   explanation: TCP (Transmission Control Protocol) is a communication protocol, not a program or a language.
 
 3. **Major function of a transport layer in the OSI model is to perform** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) Peer to peer message encryption  
@@ -2293,11 +2299,17 @@
    (c) Transparent transfer of data between end users  
    (d) None of the above
 
+   answer: c — Transparent transfer of data between end users  
+   explanation: The transport layer gives end-to-end delivery between processes, hiding segmentation, error recovery and flow control from the application.
+
 4. **In the diagram shown below. L1 is an Ethernet LAN and L2 is a Token-Ring LAN. An IP packet originates from sender S and traverses to R, as shown. The link within each ISP, and across two ISPs, are all point to point optical links. The initial value of TTL is 32. The maximum possible value of TTL field when R receives the datagram is-** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 76 (ET: N/A)]*  
    a. 25  
    b. 24  
    c. 26  
    d. 28
+
+   answer: c — 26  
+   explanation: TTL drops by one at each router on the path; with the maximum possible routing the datagram passes 6 routers, leaving 32 - 6 = 26.
 
 5. **Assume that Source S and Destination D are connected through an intermediate router R. How many times a packet has to visit the network layer and data link layer during a transmission from S to D?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 79 (ET: N/A)]*  
    a. Network layer -4 times, Data link layer -4 times  
@@ -2305,11 +2317,17 @@
    c. Network layer -2 times, Data link layer -4 times  
    d. Network layer -3 times, Data link layer -4 times
 
+   answer: d — Network layer -3 times, Data link layer -4 times  
+   explanation: The packet reaches the network layer at S, R and D (3), but crosses a data link on each of the two hops, so the data link layer is used twice per hop at the ends and once each way at R — 4 in total.
+
 6. **Open System Interconnection (OSI) model has ________ layer.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*  
    A) 6  
    B) 5  
    C) 9  
    D) 7
+
+   answer: D — 7  
+   explanation: OSI has seven layers: physical, data link, network, transport, session, presentation and application.
 
 7. **________ Provides a connection oriented reliable service for sending message.** *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*  
    A) TCP  
@@ -2317,11 +2335,17 @@
    C) UDP  
    D) None of these
 
+   answer: A — TCP  
+   explanation: TCP sets up a connection with a handshake and guarantees ordered, error-checked delivery; UDP does neither.
+
 8. **Which layer of OSI determines the interface of the system with the user?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
    A) Network  
    B) Application  
    C) Data-link  
    D) Session
+
+   answer: B — Application  
+   explanation: The application layer is the topmost layer and is where user programs interact with the network.
 
 9. **Congestion Control কোন layer-এ করা হয়?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*  
    A) Physical  
@@ -2329,11 +2353,17 @@
    C) Network  
    D) Transport
 
+   answer: C — Network  
+   explanation: Congestion control belongs to the network layer, which decides how much traffic the subnet can carry (TCP adds its own control at transport).
+
 10. **Which is not work of Data link layer?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) Error control  
    B) Adding MAC address  
    C) Cabling  
    D) None
+
+   answer: C — Cabling  
+   explanation: Cabling is physical layer work; the data link layer does framing, MAC addressing and error control.
 
 11. **In TCP/IP model, which one is not a valid layer?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
    A) Application Layer  
@@ -2341,11 +2371,17 @@
    C) Transport Layer  
    D) Protocol Layer
 
+   answer: D — Protocol Layer  
+   explanation: TCP/IP has Application, Transport, Internet and Network Access layers — there is no "Protocol Layer".
+
 12. **The end-to-end delivery of the entire message is the responsibility of the ________ layer.** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*  
    a. Network  
    b. Transport  
    c. Session  
    d. Presentation
+
+   answer: b — Transport  
+   explanation: The transport layer takes responsibility for delivering the complete message from the source process to the destination process.
 
 13. **Which of the following BEST explains the functions of OSI layer 4?** *[Pubali Bank Limited Officer (IT) 2012 compact it 265 (ET: N/A)]*  
    a. Connecting hosts on the same segment  
@@ -2353,11 +2389,17 @@
    c. Reliable delivery of packets  
    d. Routing packets across segments
 
+   answer: c — Reliable delivery of packets  
+   explanation: Layer 4 is transport, which handles segmentation, flow control, error recovery and reliable end-to-end delivery.
+
 14. **Which of the following transport protocols should be used to avoid retransmitting lost packets?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*  
    a. UDP  
    b. TCP  
    c. ARP  
    d. IGMP
+
+   answer: a — UDP  
+   explanation: UDP does not acknowledge or retransmit, so lost packets are simply dropped — which suits voice and video.
 
 15. **In Which layer basic packet filtering firewall works of OSI model?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. Layer 1  
@@ -2365,11 +2407,17 @@
    c. Layer 7  
    d. Layer 4
 
+   answer: b — Layer 3  
+   explanation: A basic packet filter inspects the IP header — source and destination addresses — which is the network layer.
+
 16. **Which of the following OSI layers handles the routing of data across segments?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. Network  
    b. Transport  
    c. Session  
    d. Data Link
+
+   answer: a — Network  
+   explanation: The network layer chooses paths and forwards packets between different network segments.
 
 ## Multiplexing & Data Rate (15)
 
