@@ -1931,14 +1931,23 @@
    (c) 30 miles  
    (d) 300 miles
 
+   answer: a — 30 feet  
+   explanation: Class 2 Bluetooth, used in phones and headsets, reaches about 10 metres, roughly 30 feet.
+
 2. **LTE এর পূর্ণ নাম কি?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: Long Term Evolution
+
+   answer: Long Term Evolution  
+   explanation: LTE is the 4G mobile broadband standard that followed 3G/UMTS.
 
 3. **নিচের networking technology গুলোর মধ্যে কোনটি সাধারণত সবচেয়ে কম দূরত্বে (বা সবচেয়ে কাছাকাছি) তথ্য প্রেরণের জন্য ব্যবহৃত হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 61 (ET: BUET)]*  
    a) Wimax  
    b) GSM  
    c) WiFi  
    d) Bluetooth
+
+   answer: d — Bluetooth  
+   explanation: Bluetooth is a personal area network technology covering about 10 metres, far less than Wi-Fi, GSM or WiMAX.
 
 4. **VSAT বলতে বুঝায়?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*  
    (ক) Virtual Small Aperture Satellite  
@@ -1947,11 +1956,17 @@
    (ঘ) Vertical Satellite  
    **Ans: খ**
 
+   answer: খ — Very Small Aperture Terminal  
+   explanation: A VSAT is a small dish earth station used for two-way satellite data links.
+
 5. **Which one of the following is false with respect to 4G and 5G cellular network?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*  
    (a) 5G supports faster bandwidth compared to 4G.  
    (b) Latency in 4G networks is much higher than 5G network.  
    (c) 4G uses a narrow slice of the available spectrum from 600 MHz to 2.5 GHz  
    (d) There will be data session handoff feature in 5G network which is not available in 4G network
+
+   answer: d — There will be data session handoff feature in 5G network which is not available in 4G network  
+   explanation: Handoff between cells already exists in 4G, so claiming it is new in 5G is false; the other three statements are correct.
 
 6. **What is the maximum data rate in IEEE 802.11n?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) 300 Mbps  
@@ -1959,11 +1974,17 @@
    (c) 1 Gbps  
    (d) 832 Mbps
 
+   answer: b — 600 Mbps  
+   explanation: 802.11n reaches 600 Mbps using four MIMO streams on 40 MHz channels.
+
 7. **An Access point operates in which layer of OSI model?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*  
    (a) Data link Layer  
    (b) Presentation layer  
    (c) Physical layer  
    (d) Transport layer
+
+   answer: a — Data link Layer  
+   explanation: An access point bridges wireless and wired frames using MAC addresses, so it works at layer 2 (with a layer 1 radio).
 
 8. **বিশ্ব টেলিকমিউনিকেশন দিবস কবে পালিত হয়?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. 7 May  
@@ -1971,11 +1992,17 @@
    C. 17 May  
    D. 21 May
 
+   answer: C — 17 May  
+   explanation: World Telecommunication and Information Society Day is observed on 17 May, marking the founding of the ITU in 1865.
+
 9. **GPRS এর পূর্ণরূপ কি?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) General Packet Ratio Server  
    b) General Purpose Reduction Service  
    c) General Packet Radio Service  
    d) General Purpose Radio Server
+
+   answer: c — General Packet Radio Service  
+   explanation: GPRS added packet-switched data to GSM networks, often called 2.5G.
 
 10. **কোনটা ওয়্যারলেস নেটওয়ার্ক হটস্পট?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) Wi-Fi Hotspot  
@@ -1983,11 +2010,17 @@
    c) Fiber Hotspot  
    d) None
 
+   answer: a — Wi-Fi Hotspot  
+   explanation: A hotspot is a public place where a Wi-Fi access point gives wireless internet.
+
 11. **Bluetooth কোন ধরনের device?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) WAN  
    b) PAN  
    c) LAN  
    d) MAN
+
+   answer: b — PAN  
+   explanation: Bluetooth covers only a few metres around a person, which is a Personal Area Network.
 
 12. **Wi-fi কোন ধরনের নেটওয়ার্ক?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) Wifi LAN  
@@ -1995,11 +2028,17 @@
    c) Wifi MAN  
    d) Wifi WAN
 
+   answer: a — Wifi LAN  
+   explanation: Wi-Fi covers a home, office or campus, so it forms a wireless LAN.
+
 13. **Wi-Fi for?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
    a) Wireless MAN  
    b) Wireless PAN  
    c) Wireless LAN  
    d) all of these
+
+   answer: c — Wireless LAN  
+   explanation: Wi-Fi is the IEEE 802.11 wireless local area network technology.
 
 14. **Group sms is ________** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
    a) Unicast  
@@ -2007,11 +2046,17 @@
    c) Telecast  
    d) Broadcast
 
+   answer: b — Multicast  
+   explanation: A group SMS goes to one defined group of recipients, not to everyone, which is multicast.
+
 15. **Which of the following modulation is used in data communication?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
    a) Pulse Modulation  
    b) Amplitude Modulation  
    c) Phase Modulation  
    d) Frequency Modulation
+
+   answer: c — Phase Modulation  
+   explanation: Modems carry digital data mainly with phase shift keying and QAM; amplitude and frequency shift keying are also used, so the option set is loose. <!-- verify -->
 
 16. **What is the current popular technology for Maintaining smooth Wi-Fi performance and throughput for gaming, video streaming, and smart home devices?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) Wi-Fi Star Network Systems  
@@ -2019,11 +2064,17 @@
    c) Wi-Fi Mesh Network Systems  
    d) Wi-Fi Ring Network Systems
 
+   answer: c — Wi-Fi Mesh Network Systems  
+   explanation: Mesh systems use several nodes that cooperate to cover the whole home evenly, keeping throughput steady as devices move.
+
 17. **When an ongoing call or data session can communicate with two base stations at the same time, the phenomenon is known as-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*  
    a) Soft Roaming  
    b) Hard Roaming  
    c) Soft Handoff  
    d) Hard Handoff
+
+   answer: c — Soft Handoff  
+   explanation: In a soft handoff the phone keeps links to both the old and new base station during the switch, so the call is never dropped.
 
 18. **LTE means -** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
    (a) Long Term Evaluation  
@@ -2031,11 +2082,17 @@
    (c) Long Term Evolution  
    (d) Long Terminal Evolution
 
+   answer: c — Long Term Evolution  
+   explanation: LTE is the 4G standard developed by 3GPP.
+
 19. **What is hotpot?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) Special Security System  
    B) Cable connected internet system  
    C) Wireless internet system  
    D) A program
+
+   answer: C — Wireless internet system  
+   explanation: A hotspot is a location offering internet access over a Wi-Fi access point.
 
 20. **A frequency range 1\text{ GHz to }30\text{ GHz} is referred to as ________.** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*  
    a. Medium wave  
@@ -2043,11 +2100,17 @@
    c. Long wave  
    d. None
 
+   answer: b — Micro wave  
+   explanation: The microwave band runs roughly from 1 GHz to 30 GHz (and beyond to 300 GHz).
+
 21. **Which of the following wireless networks is configured without an access point?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. Ad-hoc  
    b. Multiport repeating  
    c. Local  
    d. Extended
+
+   answer: a — Ad-hoc  
+   explanation: In ad-hoc mode the wireless clients talk to each other directly, with no access point in the middle.
 
 22. **A small office home office (SOHO) wireless user reports their new laptop is 802.11h and 802.11g capable but with not wirelessly connect faster than 11mbps. Which of the following is the cause of the problem?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
    a. The laptop wireless card is running on a different frequency  
@@ -2055,11 +2118,17 @@
    c. The wireless router is 802.11b only  
    d. The Wireless router is defective
 
+   answer: c — The wireless router is 802.11b only  
+   explanation: 11 Mbps is the maximum of 802.11b, so the router is the bottleneck even though the laptop supports faster standards.
+
 23. **What medium is used to communicate by mobile phones?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*  
    a. Optical device  
    b. Laser device  
    c. LED source  
    d. Radio waves
+
+   answer: d — Radio waves  
+   explanation: Mobile phones exchange data with the base station over radio frequency electromagnetic waves.
 
 ## Data Transmission & Modes (16)
 
