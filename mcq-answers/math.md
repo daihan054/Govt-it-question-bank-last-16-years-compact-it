@@ -1578,6 +1578,9 @@
    (c) 63  
    (d) 126
 
+   answer: c — 63  
+   explanation: C(7,5) × C(3,2) = 21 × 3 = 63 ways.
+
 2. **In a class there are 4 boys and 4 girls. Two students are selected at random, what is the probability that both will be girls?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 73 (ET: N/A)]*  
    (a) \frac{1}{2}  
    (b) \frac{3}{7}  
@@ -1585,11 +1588,17 @@
    (d) \frac{3}{14}  
    **Ans: d**
 
+   answer: d — 3/14  
+   explanation: C(4,2)/C(8,2) = 6/28 = 3/14.
+
 3. **১০ টি বইয়ের মধ্যে ৪টি বই কত প্রকারে বাছাই করা যায়, যাতে নির্দিষ্ট দুইটি বই সর্বদা বাদ থাকে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 147 (ET: IBA)]*  
    A. 210  
    B. 70  
    C. 45  
    D. 360
+
+   answer: B — 70  
+   explanation: নির্দিষ্ট দুটি বই বাদ দিলে বাকি ৮টি থেকে ৪টি বাছাই — C(8,4) = 70 প্রকারে।
 
 4. **DIGITAL শব্দটি বর্ণগুলিকে কত প্রকারে সাজানো যায় যাতে স্বরবর্ণগুলি একত্রে থাকে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. 320  
@@ -1597,11 +1606,17 @@
    C. 210  
    D. 360
 
+   answer: D — 360  
+   explanation: স্বরবর্ণ I, I, A একত্রে রাখলে ৫টি একক সাজে ৫! = ১২০ ভাবে, আর ব্লকের ভেতরে ৩!/২! = ৩ ভাবে, তাই মোট ১২০ × ৩ = ৩৬০।
+
 5. **How many bits string of length 4 bit possible such that they contain 2 ones and 2 zeros?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) 4  
    B) 2  
    C) 5  
    D) 6
+
+   answer: D — 6  
+   explanation: Choosing which 2 of the 4 positions hold the ones gives C(4,2) = 6 strings.
 
 ## Trigonometry (4)
 
