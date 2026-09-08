@@ -147,11 +147,17 @@
    (c) Reliability  
    (d) PaaS
 
+   answer: d — PaaS  
+   explanation: PaaS is one of the three cloud service models; sourcing, ownership and reliability are business attributes, not cloud services.
+
 2. **Service that generally focuses on the hardware following which one of the following services models?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*  
    (a) IaaS  
    (b) PaaS  
    (c) SaaS  
    (d) Both A and B
+
+   answer: a — IaaS  
+   explanation: IaaS rents the hardware layer — virtual machines, storage and networking — while PaaS and SaaS sit above it.
 
 3. **Which service(s) is/are related with Cloud Computing?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
    A) SaaS  
@@ -159,11 +165,17 @@
    C) IaaS  
    D) All of these
 
+   answer: D — All of these  
+   explanation: SaaS, PaaS and IaaS are the three standard cloud service models.
+
 4. **Which of the following is Cloud Platform by Microsoft?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*  
    A) Azure  
    B) AWS  
    C) cloudera  
    D) Openstack
+
+   answer: A — Azure  
+   explanation: Microsoft Azure is Microsoft's cloud platform; AWS is Amazon's, Cloudera is a Hadoop vendor and OpenStack is open-source cloud software.
 
 ## Containers & Virtualization (2)
 
