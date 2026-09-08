@@ -8,3 +8,4 @@ dld.md :: Logic Gates & Universal Gates (16) :: q10 — the gate symbol is missi
 dld.md :: Logic Gates & Universal Gates (16) :: q6 — the symbol referred to is missing from the source, so the device cannot be identified
 dld.md :: Sequential Circuits (Flip-Flops) (6) :: q5 — the logic circuit diagram is garbled in the source, so the output expression cannot be derived
 dld.md :: Boolean Algebra & Simplification (4) :: q3 — the circuit figure is missing from the source, and options (a) and (b) are identical, so the expression cannot be chosen
+electrical-and-electronics.md :: Circuits & Components (83) :: q59 — the question text is garbled in the source and cannot be reconstructed
