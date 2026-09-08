@@ -437,3 +437,6 @@
    (b) Traceable  
    (c) Verifiable  
    (d) Modifiable
+
+   answer: c — Verifiable  
+   explanation: An SRS is verifiable when every requirement can be checked by a finite, cost-effective process such as a test or an inspection.
