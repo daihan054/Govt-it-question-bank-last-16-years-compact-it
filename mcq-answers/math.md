@@ -1737,14 +1737,23 @@
    গ. ৫০ বছর  
    ঘ. কোনটিই নয়
 
+   answer: খ — ৪০ বছর  
+   explanation: তিন বছর আগে তিনজনের বয়সের যোগফল ৮১, এখন ৮১ + ৯ = ৯০; পাঁচ বছর আগে স্ত্রী ও সন্তানের যোগফল ৪০, এখন ৫০ — তাই স্বামীর বয়স ৯০ - ৫০ = ৪০ বছর।
+
 2. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
    ক. প্রোষিতভর্তৃকা  
    খ. প্রোষিতা  
    গ. প্রবাসিনী  
    ঘ. প্রোষিতপত্নীক
 
+   answer: ঘ — প্রোষিতপত্নীক  
+   explanation: যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে প্রোষিতপত্নীক বলে; উল্টোটি (যে স্ত্রীর স্বামী প্রবাসে) হলো প্রোষিতভর্তৃকা।
+
 3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? [ M বয়সে N থেকে বড়, O থেকে ছোট। M, N, O-এর বয়স m, n, o। কোনটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a) m > n > o  
    (b) o > m > n  
    (c) n > m > o  
    (d) o > n > m
+
+   answer: b — o > m > n  
+   explanation: M is older than N and younger than O, so O is oldest and N youngest.
