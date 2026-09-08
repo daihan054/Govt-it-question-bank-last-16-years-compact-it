@@ -207,11 +207,17 @@
    (c) It is inflexible and not suitable for changing requirements  
    (d) It lacks proper documentation
 
+   answer: c — It is inflexible and not suitable for changing requirements  
+   explanation: Waterfall freezes each phase before the next begins, so a late requirement change means going back through everything.
+
 2. **How many steps in waterfall model?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 22 (ET: BIBM)]*  
    (a) 5  
    (b) 6  
    (c) 7  
    (d) 8
+
+   answer: b — 6  
+   explanation: The usual phases are requirement analysis, system design, implementation, integration and testing, deployment and maintenance.
 
 3. **Which of the following is an appropriate category of system maintenance performed for the purpose of modifying the system to cope with changes in the software environment?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
    a) Preventive maintenance  
@@ -219,11 +225,17 @@
    c) Adaptive maintenance  
    d) Perfective maintenance
 
+   answer: c — Adaptive maintenance  
+   explanation: Adaptive maintenance changes the software so it keeps working when the operating system, hardware or environment changes.
+
 4. **Programmers being roughly out the logic they will use in the ________ stage of software SDLC.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) Design  
    B) Development  
    C) Implementation  
    D) Testing
+
+   answer: A — Design  
+   explanation: The logic and structure of the program are worked out in the design phase, before any code is written.
 
 5. **The process of making object code form one system work on another type of system is called ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*  
    A) Porting  
@@ -231,11 +243,17 @@
    C) Developing  
    D) Coding
 
+   answer: A — Porting  
+   explanation: Porting adapts software so it runs on a different platform or architecture.
+
 6. **________ is natural language statements that look like programming code.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*  
    A) Source code  
    B) Object code  
    C) Pseudo code  
    D) IPO chart
+
+   answer: C — Pseudo code  
+   explanation: Pseudocode expresses the algorithm in plain language shaped like code, without any particular language's syntax.
 
 7. **A branch office, location or other data processing centers, where a newly developed system is used under normal operating conditions for several months, to test it, is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
    a) Beta test data  
@@ -243,11 +261,17 @@
    c) Alpha test data  
    d) System test data
 
+   answer: a — Beta test data  
+   explanation: Running the new system at a real branch under normal conditions for months is beta testing with live data.
+
 8. **Which of the following requires the most time in SDLC?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*  
    A) Requirement Analysis  
    B) Testing  
    C) Deployment  
    D) Design
+
+   answer: B — Testing  
+   explanation: Testing runs across unit, integration, system and acceptance levels with repeated defect fixing, so it consumes the largest share of effort.
 
 9. **Program background, program functions and computing requirements are part of-** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*  
    A) decision box  
@@ -255,11 +279,17 @@
    C) operations detail  
    D) none of these
 
+   answer: C — operations detail  
+   explanation: Background, functions and computing requirements together describe how the program operates.
+
 10. **Waterfall model phase in which system design is prepared and this system design helps is specifying system requirements and define overall system architecture is-** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*  
    A) planning  
    B) modeling  
    C) construction  
    D) communication
+
+   answer: B — modeling  
+   explanation: The modeling phase produces the system design and architecture from the gathered requirements.
 
 11. **Which of the following is not a Software Development Life Cycle Phase?** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*  
    A) Test Closure  
@@ -267,11 +297,17 @@
    C) Testing  
    D) None of these
 
+   answer: A — Test Closure  
+   explanation: Test closure belongs to the testing life cycle (STLC), not to the SDLC phases of requirements, design, coding, testing and maintenance.
+
 12. **Method used in writing and design of a program is termed as-** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) Bottom-up method  
    B) top-down method  
    C) split method  
    D) None of these
+
+   answer: B — top-down method  
+   explanation: Top-down design starts from the overall problem and refines it stepwise into smaller modules.
 
 13. **Which of the following is a project scheduling method that can be applied to software development?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*  
    A) PERT  
@@ -279,11 +315,17 @@
    C) Both A & B  
    D) CMM
 
+   answer: C — Both A & B  
+   explanation: PERT and CPM are both network scheduling techniques used to plan and track software projects.
+
 14. **In which model prototype can be developed?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) Unified Process  
    B) Waterfall Model  
    C) Evolutionary-model  
    D) All of the above
+
+   answer: C — Evolutionary-model  
+   explanation: The evolutionary (prototyping) model builds a working prototype early and refines it with user feedback; waterfall has no prototype stage.
 
 ## Software Design & Metrics (8)
 
