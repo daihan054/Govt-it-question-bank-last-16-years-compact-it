@@ -1125,11 +1125,17 @@
    (গ) Super  
    (ঘ) Foreign
 
+   answer: খ — Primary  
+   explanation: The designer picks one candidate key to identify rows, and that chosen key becomes the primary key.
+
 2. **Which of the following types of table constraints prevents the entry of duplicate rows?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 58 (ET: N/A)]*  
    (ক) Foreign keys  
    (খ) Primary keys  
    (গ) Unique keys  
    (ঘ) Candidate keys
+
+   answer: গ — Unique keys  
+   explanation: A UNIQUE constraint rejects any row whose value repeats one already stored, which is what stops duplicates.
 
 3. **Referential integrity in a DBMS is a form of-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
    a) Foreign key  
@@ -1137,11 +1143,17 @@
    c) Assertion  
    d) Referential constraint
 
+   answer: d — Referential constraint  
+   explanation: Referential integrity is the constraint that a foreign key value must match an existing primary key value or be null, and it is enforced through foreign keys. <!-- verify -->
+
 4. **Needing to assess the validity of assumed referential integrity constraints on foreign keys is a(n) _________ of normalization.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
    a) advantage  
    b) disadvantage  
    c) either an advantage or disadvantage  
    d) neither an advantage nor disadvantage
+
+   answer: b — disadvantage  
+   explanation: Splitting tables creates more foreign keys, and every one of them has to be checked on each insert, update and delete, which costs work.
 
 5. **The maximum number of super keys for the relation schema R (E, F, G, H) with E as the key is-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) 5  
@@ -1149,11 +1161,17 @@
    c) 7  
    d) 8
 
+   answer: d — 8  
+   explanation: Any attribute set containing E is a super key, and the other three attributes give 2³ = 8 possible combinations.
+
 6. **Which of the following is a group of one or more attributes that uniquely identifies a row?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) Key  
    B) Determinant  
    C) Tuple  
    D) Relation
+
+   answer: A — Key  
+   explanation: A key is one or more attributes whose values uniquely identify a row.
 
 7. **For every relationship, how many possible sets of minimum cardinalities are there?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) Two  
@@ -1161,11 +1179,17 @@
    C) Four  
    D) Six
 
+   answer: C — Four  
+   explanation: Each side's minimum cardinality is either 0 or 1, so the two sides give 2 × 2 = 4 combinations.
+
 8. **A primary key must also be-** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*  
    A) Foreign key  
    B) Unique  
    C) Identical  
    D) Case sensitive
+
+   answer: B — Unique  
+   explanation: A primary key must uniquely identify each row and cannot be null.
 
 9. **What represents a row in a relational database?** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
    A) variable  
@@ -1173,17 +1197,26 @@
    C) entity  
    D) field
 
+   answer: B — tuple  
+   explanation: In relational terminology a row is a tuple and a column is an attribute.
+
 10. **The subset of super key is a candidate key under what condition?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) No proper subset is a super key  
    B) All subsets are super keys  
    C) Subset is a super key  
    D) Each subset is a super key
 
+   answer: A — No proper subset is a super key  
+   explanation: A candidate key is a minimal super key — remove any attribute and it stops identifying rows uniquely.
+
 11. **With SQL how can you insert "Olsen" as the "LastName" in the "Persons" table?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. INSERT INTO Persons(LastName) VALUES('Olsen')  
    b. INSERT INTO Persons (Olsen) VALUES('LastName')  
    c. INSERT INTO Person ('Olsen') INTO LastName  
    d. INSERT INTO Persons (LastName= 'Olsen')
+
+   answer: a — INSERT INTO Persons(LastName) VALUES('Olsen')  
+   explanation: INSERT names the columns in parentheses and supplies the matching values after VALUES.
 
 ## Data Warehousing & Data Mining (9)
 
