@@ -1710,11 +1710,17 @@
    c) Cursor concurrency setting  
    d) Locking hints
 
+   answer: a — Lock level  
+   explanation: SQL Server decides concurrency from the transaction isolation level, the cursor concurrency setting and any locking hints; "lock level" is not one of those settings.
+
 2. **In a DBMS, when multiple transaction programs update the same database simultaneously, which of the following is a technology that is used to prevent logical contradictions?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
    a) Exclusive Control  
    b) Integrity constraint  
    c) Normalization  
    d) Reorganization
+
+   answer: a — Exclusive Control  
+   explanation: An exclusive lock stops any other transaction touching the item while it is being updated, so the two updates cannot contradict each other.
 
 3. **Which of the below is responsible for controlling the interaction among simultaneous transaction?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
    a) Serializable controller  
@@ -1722,17 +1728,26 @@
    c) Transportation management system  
    d) Multiple Access Protocol
 
+   answer: b — Concurrency Control Manager  
+   explanation: The concurrency control manager grants and releases locks and enforces a serializable schedule among running transactions.
+
 4. **In strict two phase locking protocol-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) All exclusive mode locks taken by transaction be held until transaction commit  
    b) All exclusive mode locks taken by transaction can be released before transaction commits  
    c) All locks can be released before transaction commits  
    d) None of these
 
+   answer: a — All exclusive mode locks taken by transaction be held until transaction commit  
+   explanation: Holding write locks to the end prevents other transactions reading uncommitted data, so cascading rollbacks cannot happen.
+
 5. **A shared lock allows which of the following type of transaction to occur?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*  
    A) Delete  
    B) Insert  
    C) Read  
    D) Update
+
+   answer: C — Read  
+   explanation: A shared lock lets many transactions read the item at once but blocks any write.
 
 ## SQL Joins (2)
 
