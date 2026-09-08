@@ -368,11 +368,17 @@
    (c) n(n-1)  
    (d) n(n+1)
 
+   answer: c — n(n-1)  
+   explanation: A simple graph has no self loops, so the n diagonal cells stay zero and the remaining n² - n = n(n-1) cells can all be nonzero.
+
 2. **What is the number of edges in a complete graph with 5 nodes?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*  
    a) 1  
    b) 4  
    c) 5  
    d) 10
+
+   answer: d — 10  
+   explanation: A complete graph on n nodes has n(n-1)/2 edges, so 5×4/2 = 10.
 
 3. **In which of the following graphs can we apply topological sort?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*  
    (ক) Undirected Cyclic graph  
@@ -380,11 +386,17 @@
    (গ) Undirected Acyclic graph  
    (ঘ) Directed Acyclic graph
 
+   answer: ঘ — Directed Acyclic graph  
+   explanation: Topological sort needs a direction to order vertices and no cycle to break the ordering, so it applies only to a DAG.
+
 4. **Suppose you have a complete undirected graph with 4 nodes. What is the maximum number of Minimum Spanning Tree (MST) you can form?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*  
    a) 4  
    b) 8  
    c) 16  
    d) 1
+
+   answer: c — 16  
+   explanation: By Cayley's formula K_n has n^(n-2) spanning trees, so K4 has 4² = 16; if every edge has the same weight all 16 are minimum.
 
 5. **Which of the following data structures is more suitable for graph representation in Floyd Warshall Algorithm?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
    a. Adjacency Matrix  
@@ -392,17 +404,26 @@
    c. Incidence Matrix  
    d. Incidence List
 
+   answer: a — Adjacency Matrix  
+   explanation: Floyd-Warshall repeatedly reads and updates dist[i][j] for every pair, which an adjacency matrix gives in O(1).
+
 6. **In the following graph, determine the cost of the shortest path between node 1 to node 4.** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)]*  
    a. 0  
    b. 4  
    c. -5  
    d. \infty
 
+   answer: c — -5  
+   explanation: Same graph as question 10 (the figure is missing here): 1→3→4 costs 2 + (-7) = -5, which beats 1→2→4 costing 3 + 1 = 4.
+
 7. **To implement Dijkstra's shortest path algorithm on unweighted graphs so that it runs in linear time, the data structure to be used is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 86 (ET: N/A)]*  
    a. Queue  
    b. Stack  
    c. Heap  
    d. B-Tree
+
+   answer: a — Queue  
+   explanation: With all edge weights equal, Dijkstra degenerates to BFS, and a simple FIFO queue replaces the priority queue to give O(V+E) time.
 
 8. **Which of the following statements is/are TRUE for an undirected graph?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*  
    P: Number of odd degree vertices is even  
@@ -412,11 +433,17 @@
    c. Both P and Q  
    d. Neither P nor Q
 
+   answer: c — Both P and Q  
+   explanation: The handshaking lemma says the sum of degrees equals 2×edges, so it is even, and that in turn forces the number of odd-degree vertices to be even.
+
 9. **Which of the following techniques/algorithms cannot be used to detect cycles in an undirected and unweighted graph?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*  
    a) Disjoint Set Data Structure  
    b) Breadth First Search  
    c) Depth First Search  
    d) Floyd-Warshall algorithm
+
+   answer: d — Floyd-Warshall algorithm  
+   explanation: Floyd-Warshall computes all-pairs shortest paths on weighted graphs; DFS, BFS and the disjoint-set (union-find) method are the standard cycle detectors here.
 
 10. **In the following graph, determine the cost of the shortest path between node 1 to node 4** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
    ```
@@ -433,11 +460,17 @@
    c) -5  
    d) -\infty
 
+   answer: c — -5  
+   explanation: Path 1→3→4 costs 2 + (-7) = -5, while 1→2→4 costs 3 + 1 = 4, so the cheapest path is -5.
+
 11. **Which algorithm will be the most efficient to find out the shortest path between two given nodes in an undirected weighted graph?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*  
    a) Breadth First Search  
    b) Depth First Search  
    c) Dijkstra’s algorithm  
    d) Floyd-Warshall algorithm
+
+   answer: c — Dijkstra's algorithm  
+   explanation: Dijkstra gives the single-source shortest path on non-negative weighted graphs in O(E log V); BFS ignores weights and Floyd-Warshall wastes O(V³) on all pairs.
 
 12. **A graph having an edge from each vertex to every other vertex is called:** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*  
    A) Tightly connected  
@@ -445,11 +478,17 @@
    C) Weakly connected  
    D) Loosely connected
 
+   answer: B — Strongly connected  
+   explanation: When every vertex has an edge to every other vertex, each node is reachable from every other, which is described as strongly connected (a complete graph).
+
 13. **The degree of any vertex of a graph is:** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*  
    A) Number of Vertices in a Graph  
    B) Number of vertices incident with the Vertex  
    C) Number of Vertices Adjacent to The Vertex  
    D) Number of edges incident to the vertex of the graph
+
+   answer: D — Number of edges incident to the vertex of the graph  
+   explanation: Degree counts the edges touching a vertex, with a self loop counted twice.
 
 ## Algorithm Design Paradigms (9)
 

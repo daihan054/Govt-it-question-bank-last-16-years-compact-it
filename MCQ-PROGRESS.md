@@ -2,14 +2,14 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 3 / 160 done**  ·  **Questions: 56 answered, 0 skipped, 3039 total**
+**Subtopics: 4 / 160 done**  ·  **Questions: 69 answered, 0 skipped, 3039 total**
 
-Next up: `algorithm.md` — Graph Algorithms (13)
+Next up: `algorithm.md` — Algorithm Design Paradigms (9)
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
 | `ai-and-ml.md` | IT | 1 / 1 | 18 | 0 | 18 |
-| `algorithm.md` | IT | 2 / 6 | 38 | 0 | 70 |
+| `algorithm.md` | IT | 3 / 6 | 51 | 0 | 70 |
 | `bangla.md` | General | 0 / 9 | 0 | 0 | 310 |
 | `c-programming.md` | IT | 0 / 10 | 0 | 0 | 113 |
 | `cloud-computing.md` | IT | 0 / 3 | 0 | 0 | 20 |
