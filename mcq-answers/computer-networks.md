@@ -1252,13 +1252,22 @@
    c) copy flash tftp  
    d) copy tftp flash
 
+   answer: d — copy tftp flash  
+   explanation: The syntax is copy <source> <destination>, so a new IOS image is pulled from the TFTP server into the router's flash.
+
 2. **Which device converts digital to analog signal?** *[BREB Assistant Programmer 2023 compact it 31 (ET: N/A)]*  
    (a) Router  
    (b) Switch  
    (c) Modem  
    (d) Hub
 
+   answer: c — Modem  
+   explanation: A modem modulates digital data onto an analog carrier and demodulates it back at the far end.
+
 3. **নিচের কোনটি নেটওয়ার্ক ডিভাইস নয়? **Ans: Wi-Fi**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: Wi-Fi  
+   explanation: Wi-Fi is a wireless networking technology or standard, not a physical network device like a router, switch or hub.
 
 4. **NIC Stands for–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*  
    a) Network Interface Card  
@@ -1266,11 +1275,17 @@
    c) Network Internal Card  
    d) Network Input Card
 
+   answer: a — Network Interface Card  
+   explanation: The NIC is the adapter that connects a computer to the network and holds its MAC address.
+
 5. **Which of the following is a device that is used to connect a number of LANs?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*  
    a) Bridge  
    b) Switch  
    c) Router  
    d) Repeater
+
+   answer: c — Router  
+   explanation: A router joins separate networks and forwards packets between them using IP addresses.
 
 6. **A proxy server is used as the computer–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
    a) With external access  
@@ -1278,11 +1293,17 @@
    c) Performing file handling  
    d) Accessing user permissions
 
+   answer: a — With external access  
+   explanation: A proxy sits between the internal network and the internet, making outside requests on behalf of internal clients and caching the replies.
+
 7. **An Ethernet LAN using the OSPF protocol with five attached routers can be called a _______ network.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) Point-to-point  
    (b) Stub  
    (c) Transient  
    (d) Virtual
+
+   answer: c — Transient  
+   explanation: In OSPF a network with several routers attached is a transient link, since traffic can pass through it; a stub has only one router.
 
 8. **A single switch port is considered as-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*  
    (a) A separate unicast domain  
@@ -1290,11 +1311,17 @@
    (c) A separate multicast domain  
    (d) A separate collision domain
 
+   answer: d — A separate collision domain  
+   explanation: Each switch port is its own collision domain, but all ports in a VLAN still share one broadcast domain.
+
 9. **Which of the following statements is FALSE regarding a bridge?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 77 (ET: N/A)]*  
    a. Bridge is a layer 3 device  
    b. Bridge reduces collision domain  
    c. Bridge is used to connect two or more LAN segments  
    d. Bridge reduces broadcast domain
+
+   answer: a — Bridge is a layer 3 device  
+   explanation: A bridge works at layer 2 using MAC addresses; it also does not reduce the broadcast domain, so statement (d) is wrong as well.
 
 10. **Which of the following devices takes data sent from one network device and forward it to the destination node based on MAC address?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 77 (ET: N/A)]*  
    a. Hub  
@@ -1302,11 +1329,17 @@
    c. Switch  
    d. Gateway
 
+   answer: c — Switch  
+   explanation: A switch reads the destination MAC address and forwards the frame only to the port where that device sits.
+
 11. **Which layer 1 devices can be used to enlarge the area covered by a single LAN segment?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*  
    a. Switch only  
    b. RF45 connector only  
    c. Switch and Hub  
    d. Hub and Repeater
+
+   answer: d — Hub and Repeater  
+   explanation: Hubs and repeaters work at layer 1, regenerating the signal to extend the reach of one LAN segment.
 
 12. **Using Loopbacks (plug) which task can be done from the given list?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 176 (ET: N/A)]*  
    a) measuring voltage  
@@ -1331,11 +1364,17 @@
    c) ‘0’, ‘c+6’  
    d) ‘0’, ‘f’
 
+   answer: b — Test serial and parallel port  
+   explanation: A loopback plug feeds a port's output back to its own input to check that the port sends and receives correctly. The embedded C program answers (a) 0, f, since 'c'+3 = 102 which %c prints as f.
+
 13. **The BNC connector is a miniature quick connect/disconnect connector that is used for ________ cable.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) Ribbon Electric  
    b) Shielded/Twisted Pair  
    c) Coaxial  
    d) Fibre Optics
+
+   answer: c — Coaxial  
+   explanation: BNC is the bayonet twist-lock connector used on thin coaxial Ethernet and video cable.
 
 14. **Which information is wrong for Switch?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
    a) Stores MAC address table  
@@ -1343,11 +1382,17 @@
    c) Forward the packet to intendent computer  
    d) Has no memory
 
+   answer: d — Has no memory  
+   explanation: A switch does have memory — it stores the MAC address table and buffers frames — so this statement is wrong.
+
 15. **Which of the following statements about connecting device between LANs is accurate?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
    a) Gateway converts the protocols of the first to third layers of the OSI basic reference model  
    b) Bridge relays frames based on IP address  
    c) Repeater extends transmission distance by amplifying the signal between segments of the same type  
    d) Router relays frames based on MAC address
+
+   answer: c — Repeater extends transmission distance by amplifying the signal between segments of the same type  
+   explanation: A repeater is a layer-1 amplifier; bridges relay on MAC not IP, routers relay on IP not MAC, and a gateway converts all layers.
 
 16. **A system connects a server, two clients and a printer via LAN as shown in the figure below. This system provides access to the data stored in the server from the printer based on the commands issued by a client. If the availability of the server, each of the client and the printer is a, b and c, respectively, what is the availability of the system?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
    entire system? Note that only one of the two clients need to be in operation and the availability of the LAN is 1.
@@ -1367,11 +1412,17 @@
    c) a(1-b)^2c  
    d) a(1-(1-b)^2)c
 
+   answer: d — a(1-(1-b)^2)c  
+   explanation: The server and printer must both work (a × c) and at least one of the two clients must work, whose probability is 1-(1-b)².
+
 17. **How many pairs of stations can simultaneously communicate on Ethernet LAN?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
    A) 1  
    B) 2  
    C) 3  
    D) Multiple
+
+   answer: A — 1  
+   explanation: Classic Ethernet is a shared medium with CSMA/CD, so only one pair may transmit at a time; two at once is a collision.
 
 18. **Device which converts digital signals into sound and sound from telephone handset into digital signals is classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*  
    A) digital coupler  
@@ -1379,11 +1430,17 @@
    C) acoustic coupler  
    D) terminal coupler
 
+   answer: C — acoustic coupler  
+   explanation: An acoustic coupler turns digital signals into sound for a telephone handset and converts the returning sound back to digital.
+
 19. **A device that allows one of several analog or digital input signals which are to be selected and transmits input that is selected into a single medium is called-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
    A) signal changer  
    B) multiplexer  
    C) de-multiplexer  
    D) digital transmitter
+
+   answer: B — multiplexer  
+   explanation: A multiplexer selects one of several inputs and passes it onto a single shared output line.
 
 20. **Any hardware or software which is used to connect two devices by enabling them to communicate is classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
    A) analogue modem  
@@ -1391,11 +1448,17 @@
    C) analogue interface  
    D) interface
 
+   answer: D — interface  
+   explanation: An interface is the hardware or software boundary that lets two devices exchange information.
+
 21. **What device separates a single network into two segments but lets the two segments appear as one to higher protocols?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
    A) Switch  
    B) Bridge  
    C) Gateway  
    D) Router
+
+   answer: B — Bridge  
+   explanation: A bridge splits a LAN into two collision domains but keeps it as one logical network to the layers above.
 
 22. **কোন device টি Broadcast traffic আটকাতে পারে?** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
    A) Hub  
@@ -1403,11 +1466,17 @@
    C) Switch  
    D) RJ45
 
+   answer: B — Router  
+   explanation: Routers do not forward broadcasts, so each router interface bounds a broadcast domain.
+
 23. **সাধারণত Star topology LAN এর central controller কে কি বলা হয়?** *[BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*  
    A) Node  
    B) Hub  
    C) Router  
    D) Modem
+
+   answer: B — Hub  
+   explanation: In a star topology every node connects to a central hub (or switch) that relays the traffic.
 
 24. **Bridge is a ________ device.** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
    (a) Layer-2  
@@ -1415,11 +1484,17 @@
    (c) Layer-1  
    (d) Layer-2 and Layer-3
 
+   answer: a — Layer-2  
+   explanation: A bridge forwards frames using MAC addresses, which is the data link layer.
+
 25. **Server machine is connected to—** *[Bangladesh Bank Assistant Programmer 2016 compact it 245 (ET: N/A)]*  
    A) Network  
    B) Client  
    C) supercomputer  
    D) Host
+
+   answer: B — Client  
+   explanation: In the client-server model the server exists to answer requests from its clients over the network. <!-- verify -->
 
 26. **Which of the following devices can be used to break-up a broadcast domain?** *[Pubali Bank Limited Officer (IT) 2012 compact it 262 (ET: N/A)]*  
    a. Unmanaged switch  
@@ -1427,11 +1502,17 @@
    c. DHCP Server  
    d. Bridge
 
+   answer: b — Router  
+   explanation: A router does not pass broadcasts, so it separates one broadcast domain from another.
+
 27. **A media converter is also known as a-** *[Pubali Bank Limited Officer (IT) 2012 compact it 262 (ET: N/A)]*  
    a. transceiver  
    b. hub  
    c. modem  
    d. repeater
+
+   answer: a — transceiver  
+   explanation: A media converter transmits and receives on both media types (for example copper to fibre), which makes it a transceiver.
 
 28. **Which of the following commands can be used to find the MAC address of a connecting router?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
    a. arp  
@@ -1439,11 +1520,17 @@
    c. ping  
    d. ping sweep
 
+   answer: a — arp  
+   explanation: arp -a lists the IP-to-MAC mappings the host has learned, including the router's.
+
 29. **An administrator is troubleshooting network connectivity and would like to view the path that packets are taking from workstation A to server: 1. Which of the following command line tools is MOST appropriate to use?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
    a. nslookup  
    b. route  
    c. traceroute  
    d. ping
+
+   answer: c — traceroute  
+   explanation: traceroute sends packets with increasing TTL so each router along the path reports itself.
 
 30. **Which of the following commands would MOST likely be used to list the status of all established TCP connections on port 80?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*  
    a. netstat-p tcp  
@@ -1451,11 +1538,17 @@
    c. netstat-1  
    d. netstat-p top
 
+   answer: a — netstat-p tcp  
+   explanation: netstat -p tcp restricts the output to TCP connections, which can then be filtered for port 80.
+
 31. **A new LAN switch is installed with on fiber ports. Which of the following would a technician need on the new switch to allow compatibility to the existing fiber network?** *[Pubali Bank Limited Officer (IT) 2012 compact it 265 (ET: N/A)]*  
    a. Router  
    b. Repeater  
    c. Media converter  
    d. Hub
+
+   answer: c — Media converter  
+   explanation: A media converter bridges the new switch's port type to the existing fibre, letting the two connect.
 
 32. **The task of replacing hubs with switches reduces retransmissions by increasing which of the following?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*  
    a. Frequency domains  
@@ -1463,11 +1556,17 @@
    c. Domain kiting  
    d. Collision domains
 
+   answer: d — Collision domains  
+   explanation: Every switch port is its own collision domain, so more domains means fewer collisions and fewer retransmissions.
+
 33. **Which of the following network components would be used to create VLANs?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. Routers  
    b. Gateways  
    c. Switches  
    d. Bridges
+
+   answer: c — Switches  
+   explanation: VLANs are created on managed switches, which tag ports into separate logical broadcast domains.
 
 34. **Which of the following cables is used to connect multiple layer 2 switches?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. Loopback  
@@ -1475,11 +1574,17 @@
    c. Serial  
    d. Rollover
 
+   answer: b — Crossover  
+   explanation: Connecting two like devices such as two switches needs a crossover cable, unless the ports support auto-MDIX.
+
 35. **Which of the following devices will segment a network and help cut down on network congestion?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
    a. Switch  
    b. Repeater  
    c. Gateway  
    d. Hub
+
+   answer: a — Switch  
+   explanation: A switch gives each port its own collision domain and sends frames only where they are needed, cutting congestion.
 
 36. **Which of the following devices uses the IEEE 1394 standard?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
    a. FireWire  
@@ -1487,17 +1592,26 @@
    c. ISCSI  
    d. Parallel
 
+   answer: a — FireWire  
+   explanation: IEEE 1394 is the standard known commercially as FireWire.
+
 37. **Which of the following devices is used to extend the signal strength on network segment?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
    a. Repeater  
    b. NIC  
    c. Transceiver  
    d. Modem
 
+   answer: a — Repeater  
+   explanation: A repeater regenerates a weakened signal so the segment can run further.
+
 38. **Which of the following will list the destination MAC addresses?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
    a. arp  
    b. ping  
    c. dig  
    d. nbtstat
+
+   answer: a — arp  
+   explanation: The ARP cache lists the destination MAC addresses learned for the IP addresses the host has contacted.
 
 ## Subnetting & IP Addressing (33)
 
