@@ -753,8 +753,14 @@
    (c) Using getter and setter methods  
    (d) Using global variables
 
+   answer: d — Using global variables  
+   explanation: A global variable is reachable from anywhere, which is the opposite of keeping data private inside its class.
+
 2. **Which variable violates the principle of ecvapsulation?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Gobal variable
+
+   answer: Global variable  
+   explanation: A global variable exposes data to the whole program, breaking the data hiding that encapsulation is meant to provide.
 
 3. **Which of the following is a technique for hiding the internal implementation details of an object?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
    a) Encapsulation  
@@ -762,13 +768,22 @@
    c) Inheritance  
    d) All of the above
 
+   answer: a — Encapsulation  
+   explanation: Encapsulation wraps data and methods together and exposes only a controlled interface, hiding the implementation.
+
 4. **What is the characteristic of OOP programming that allows binding data and methods to work as a unit?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*  
    a. Inheritance  
    b. Encapsulation  
    c. Polymorphism  
    d. Projection
 
+   answer: b — Encapsulation  
+   explanation: Encapsulation binds an object's data and the methods that operate on it into a single unit.
+
 5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** *[Bangladesh Bank Data Entry Operator (IT) 2020 compact it 189 (ET: N/A)]*
+
+   answer: Abstraction (data hiding)  
+   explanation: By keeping fields private and exposing only methods, encapsulation lets the user work with what the object does without knowing how it does it.
 
 6. **In C++, the idea to hiding the details of how something is implemented is known as** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) inheritance  
@@ -776,11 +791,17 @@
    C) recursion  
    D) polymorphism
 
+   answer: B — encapsulation  
+   explanation: Encapsulation hides implementation details behind a public interface.
+
 7. **In C++, the idea to hiding the details of how something is implemented is known as-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
    A) inheritance  
    B) polymorphism  
    C) recursion  
    D) encapsulation
+
+   answer: D — encapsulation  
+   explanation: Wrapping data and its methods together and hiding the internals is encapsulation.
 
 ## Inheritance (6)
 
