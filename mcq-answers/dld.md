@@ -742,8 +742,14 @@
    (c) 4  
    (d) 5
 
+   answer: b — 3  
+   explanation: n select lines choose among 2ⁿ inputs, and 2³ = 8.
+
 2. **A decoder has four input lines. How many output lines will be there?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 4  
    (b) 8  
    (c) 16  
    (d) 32
+
+   answer: c — 16  
+   explanation: A decoder activates one output for each input combination, so 4 inputs give 2⁴ = 16 outputs.
