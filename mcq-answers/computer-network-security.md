@@ -361,14 +361,23 @@
    (c) SSL  
    (d) HTTP
 
+   answer: d — HTTP  
+   explanation: HTTP sends everything in clear text with no encryption or authentication at all; SFTP and SSL are secure, and SMTP though also plaintext is a mail transfer protocol.
+
 2. **Which protocol in data encryption of Network level?** *[BREB Assistant Programmer 2023 compact it 31 (ET: N/A)]*  
    (a) HTTPs  
    (b) DNS  
    (c) SMTP  
    (d) FTP
 
+   answer: a — HTTPs  
+   explanation: HTTPS wraps HTTP inside TLS so the data is encrypted in transit; DNS, SMTP and FTP send data in the clear.
+
 3. **In which layer IPsec works?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Network Layer
+
+   answer: Network Layer  
+   explanation: IPsec protects IP packets themselves, so it operates at layer 3 and secures every protocol running above it.
 
 4. **What does https mean?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
    A) Hypertext Transfer Protocol Secure  
@@ -376,11 +385,17 @@
    C) Hypertext Transfer Protocol Service  
    D) Hypertext Transfer Protocol Sense
 
+   answer: A — Hypertext Transfer Protocol Secure  
+   explanation: HTTPS is HTTP carried over an encrypted TLS connection.
+
 5. **Which of the following is a secure way to transfer files from one device to another?** *[Pubali Bank Limited Officer (IT) 2012 compact it 262 (ET: N/A)]*  
    a. SFTP  
    b. SNMPv3  
    c. TFTP  
    d. FTP
+
+   answer: a — SFTP  
+   explanation: SFTP runs file transfer inside an SSH session, so credentials and data are encrypted; FTP and TFTP send everything in clear text.
 
 6. **Which of the following standards provides port authentication?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*  
    a. 802.1x  
@@ -388,11 +403,17 @@
    c. 802.19  
    d. 802.2
 
+   answer: a — 802.1x  
+   explanation: IEEE 802.1X provides port-based network access control, forcing authentication before a switch port passes traffic.
+
 7. **Which of the following protocols has similar functionality to Telnet but operates more securely than Telnet?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*  
    a. TFTP  
    b. SSH  
    c. SNAT  
    d. RSH
+
+   answer: b — SSH  
+   explanation: SSH gives the same remote shell as Telnet but encrypts the whole session, including the login.
 
 8. **Which of the following protocols is the MOST secure for transferring network device configurations?** *[Pubali Bank Limited Officer (IT) 2012 compact it 265 (ET: N/A)]*  
    a. TFTP  
@@ -400,11 +421,17 @@
    c. SCP  
    d. RCP
 
+   answer: c — SCP  
+   explanation: SCP copies files over an encrypted SSH channel; TFTP, FTP and RCP all transfer in clear text.
+
 9. **Which of the following connections methods is considered secure?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*  
    a. HTTP  
    b. RCP  
    c. HTTPS  
    d. TELNET
+
+   answer: c — HTTPS  
+   explanation: HTTPS encrypts the session with TLS, while HTTP, RCP and Telnet send data and passwords in plain text.
 
 ## Malware & Security Threats (7)
 
