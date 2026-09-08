@@ -21,11 +21,17 @@
    গ. সিলভার ক্লোরাইড  
    ঘ. অ্যামোনিয়াম ক্লোরাইড
 
+   answer: ক — সিলভার ব্রোমাইড  
+   explanation: ফটোগ্রাফিক প্লেটে আলোক-সংবেদী সিলভার ব্রোমাইডের প্রলেপ থাকে, আলো পড়লে যা বিয়োজিত হয়ে ছবি তৈরি করে।
+
 2. **কোন রঙের কাপে চা তাড়াতাড়ি ঠান্ডা হয়?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. সাদা  
    খ. কালো  
    গ. লাল  
    ঘ. বেগুনি
+
+   answer: খ — কালো  
+   explanation: কালো তল সবচেয়ে ভালো বিকিরক, তাই কালো কাপ দ্রুত তাপ ছেড়ে দেয় এবং চা তাড়াতাড়ি ঠান্ডা হয়।
 
 3. **কাঁদানে গ্যাসের অপর নাম কী?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. মিথেন  
@@ -33,11 +39,17 @@
    গ. নাইট্রোজেন  
    ঘ. ক্লোরোপিকরিন
 
+   answer: ঘ — ক্লোরোপিকরিন  
+   explanation: কাঁদানে গ্যাসের রাসায়নিক নাম ক্লোরোপিকরিন, যা চোখে তীব্র জ্বালা সৃষ্টি করে।
+
 4. **ওজোন স্তর বায়ুমণ্ডলের কোন স্তরে অবস্থিত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*, *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. ট্রপোমণ্ডল  
    খ. স্ট্র্যাটোমণ্ডল  
    গ. মেসোমণ্ডল  
    ঘ. তাপমণ্ডল
+
+   answer: খ — স্ট্র্যাটোমণ্ডল  
+   explanation: ওজোন স্তর স্ট্র্যাটোস্ফিয়ারে (ভূপৃষ্ঠ থেকে প্রায় ১৫-৩৫ কিমি উঁচুতে) থাকে এবং অতিবেগুনি রশ্মি শোষণ করে।
 
 5. **বিশ্বব্রহ্মাণ্ডে সবচেয়ে বেশি প্রাপ্ত গ্যাস কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. নাইট্রোজেন  
@@ -45,11 +57,17 @@
    গ. হাইড্রোজেন  
    ঘ. কার্বন ডাই-অক্সাইড
 
+   answer: গ — হাইড্রোজেন  
+   explanation: মহাবিশ্বের প্রায় ৭৫% ভরই হাইড্রোজেন, যা সবচেয়ে হালকা ও প্রাচুর্যময় মৌল।
+
 6. **কোন যৌগটি কাপড়ের দাগ তুলতে সাহায্য করে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*  
    ক. সোডিয়াম কার্বনেট  
    খ. সোডিয়াম বাই কার্বনেট  
    গ. ক্যালসিয়াম কার্বনেট  
    ঘ. ক্যালসিয়াম বাই কার্বনেট
+
+   answer: ক — সোডিয়াম কার্বনেট  
+   explanation: সোডিয়াম কার্বনেট (ওয়াশিং সোডা) ক্ষারীয় হওয়ায় তেল-চর্বির দাগ ভেঙে কাপড় পরিষ্কার করে।
 
 7. **রঙিন টেলিভিশন থেকে যে ক্ষতিকর রশি বের হয় তার নাম?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*  
    ক. গামা রশি  
@@ -57,11 +75,17 @@
    গ. বিটা রশ্মি  
    ঘ. কসমিক রশ্মি
 
+   answer: খ — রঞ্জন রশ্মি  
+   explanation: রঙিন টিভির ক্যাথোড রে টিউব থেকে অল্প মাত্রায় এক্স-রে (রঞ্জন রশ্মি) নির্গত হয়।
+
 8. **কোন বোমায় মানুষ মরে, কিন্তু কোনো স্থাপনার ক্ষতি হয় না?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*  
    ক. নাপাম  
    খ. নিউট্রন  
    গ. হাইড্রোজেন  
    ঘ. এটম
+
+   answer: খ — নিউট্রন  
+   explanation: নিউট্রন বোমা প্রচণ্ড নিউট্রন বিকিরণ ছড়ায় যা প্রাণ নেয়, কিন্তু বিস্ফোরণ-শক্তি কম বলে স্থাপনা প্রায় অক্ষত থাকে।
 
 9. **'Thalassemia' is a hereditary disease affecting-** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*  
    (a) Lungs  
@@ -69,11 +93,20 @@
    (c) Heart  
    (d) Kidney
 
+   answer: b — Blood  
+   explanation: Thalassaemia is an inherited disorder in which the body makes abnormal haemoglobin, so it affects the blood.
+
 10. **কোন রংগুলিকে মৌলিক রং বলা হয়?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** লাল, নীল, হলুদ
 
+   answer: লাল, নীল, হলুদ  
+   explanation: রং মেশানোর ক্ষেত্রে লাল, নীল ও হলুদকে মৌলিক রং ধরা হয়; আলোর ক্ষেত্রে মৌলিক রং লাল, সবুজ ও নীল।
+
 11. **যে সর্বোচ্চ শ্রুতি সীমার উপরে মানুষ বধির হতে পারে তা হচ্ছে-** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ১০৫ ডিবি
+
+   answer: ১০৫ ডেসিবেল  
+   explanation: দীর্ঘ সময় এই মাত্রার উপরে শব্দ শুনলে কানের সংবেদী কোষ নষ্ট হয়ে স্থায়ী বধিরতা আসতে পারে।
 
 12. **সূর্য গ্রহণের সময় কোনটি হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*  
    a) পৃথিবী সূর্য ও চাঁদের মাঝে থাকে  
@@ -81,17 +114,26 @@
    c) চাঁদ পৃথিবী ও সূর্যের মাঝে থাকে  
    d) চাঁদ পৃথিবী ও চাঁদের মাঝে ৯০° কোন তৈরি করে।
 
+   answer: c — চাঁদ পৃথিবী ও সূর্যের মাঝে থাকে  
+   explanation: সূর্যগ্রহণে চাঁদ সূর্য ও পৃথিবীর মাঝখানে এসে সূর্যের আলো আটকে দেয়, আর তা ঘটে অমাবস্যায়।
+
 13. **ইদানিং সুপার ফুড বলে পরিচিত খাদ্য কি বৈশিষ্ট্য বহন করে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*  
    a) অনিদ্রা দূর করে  
    b) মানসিক চাপ দূর করে  
    c) উচ্চ রক্তচাপ নিয়ন্ত্রণ করে  
    d) এটি একটি প্রাকৃতিক প্রতিবিধান
 
+   answer: d — এটি একটি প্রাকৃতিক প্রতিবিধান  
+   explanation: সুপারফুড হলো প্রাকৃতিক খাদ্য যাতে পুষ্টি ও অ্যান্টিঅক্সিডেন্টের ঘনত্ব অস্বাভাবিক বেশি।
+
 14. **পৃথিবী পৃষ্ঠের গড় তাপমাত্রা কত ডিগ্রী সেলসিয়াস?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*  
    a) ১৪  
    b) ২৪  
    c) ১৮  
    d) ১৫
+
+   answer: d — ১৫  
+   explanation: পৃথিবীপৃষ্ঠের গড় তাপমাত্রা প্রায় ১৪-১৫ ডিগ্রি সেলসিয়াস।
 
 15. **মহাবিশ্বে মৌলিক বল কয়টি?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) ৩ টি  
@@ -100,12 +142,18 @@
    (ঘ) ৬ টি  
    **উত্তর: ক**
 
+   answer: খ — ৪ টি  
+   explanation: মৌলিক বল চারটি — মহাকর্ষ, তড়িৎচুম্বকীয়, সবল নিউক্লিয় ও দুর্বল নিউক্লিয় বল (ছাপা উত্তরে ক দেওয়া আছে)। <!-- verify -->
+
 16. **কোন রশ্মির ভেদন ক্ষমতা বেশি?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) আলফা  
    (খ) বিটা  
    (গ) গামা  
    (ঘ) সমগুলিরসমান  
    **উত্তর: গ**
+
+   answer: গ — গামা  
+   explanation: গামা রশ্মি আধানহীন ও অতি উচ্চ শক্তির, তাই এর ভেদনক্ষমতা আলফা ও বিটার চেয়ে অনেক বেশি।
 
 17. **পৃথিবীর কেন্দ্রে অভিকর্ষক ত্বরনের মান কত?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) শূন্য  
@@ -114,12 +162,18 @@
    (ঘ) অসীম  
    **উত্তর: ক**
 
+   answer: ক — শূন্য  
+   explanation: কেন্দ্রে চারদিকের ভরের আকর্ষণ পরস্পরকে কাটাকাটি করে, তাই g শূন্য হয়।
+
 18. **কোনটি গ্রীন হাউজ গ্যাস নয়?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) \text{O}_2  
    (খ) \text{O}_3  
    (গ) \text{CO}_3  
    (ঘ) Water Vapor  
    **উত্তর: গ**
+
+   answer: ক — O₂  
+   explanation: অক্সিজেন অবলোহিত বিকিরণ শোষণ করে না বলে এটি গ্রিনহাউস গ্যাস নয়; ওজোন ও জলীয় বাষ্প গ্রিনহাউস গ্যাস (ছাপা উত্তরে গ দেওয়া আছে)। <!-- verify -->
 
 19. **লেন্সের ক্ষমতার একক কী?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) ডায়াপটার  
@@ -128,12 +182,18 @@
    (ঘ) মিটার  
    **উত্তর: ক**
 
+   answer: ক — ডায়াপটার  
+   explanation: লেন্সের ক্ষমতা = ১/ফোকাস দূরত্ব (মিটারে), যার একক ডায়প্টার।
+
 20. **কোন বস্তুকে ভূ-পৃষ্ঠ হতে 19.6\text{m} উপর থেকে ছেড়ে পৌঁছাতে বস্তুটি কত সময় লাগবে?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) 2\text{ sec}  
    (খ) 1\text{ sec}  
    (গ) \frac{1}{2}\text{ sec}  
    (ঘ) 9\text{ sec}  
    **উত্তর: ক**
+
+   answer: ক — 2 sec  
+   explanation: h = ½gt² থেকে 19.6 = ½ × 9.8 × t², তাই t² = 4 এবং t = 2 সেকেন্ড।
 
 21. **কোনটি মুদ্রা ধাতু নয়?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) কপার  
@@ -142,12 +202,18 @@
    (ঘ) রন্টজেনিয়াম  
    **উত্তর: ঘ**
 
+   answer: ঘ — রন্টজেনিয়াম  
+   explanation: তামা, রুপা ও সোনা মুদ্রা ধাতু; রন্টজেনিয়াম কৃত্রিম তেজস্ক্রিয় মৌল।
+
 22. **CNG এর মূল উপাদান কী?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) অক্সিজেন  
    (খ) মিথেন  
    (গ) ইথেন  
    (ঘ) অকটেন  
    **উত্তর: খ**
+
+   answer: খ — মিথেন  
+   explanation: CNG বা কমপ্রেসড ন্যাচারাল গ্যাসের প্রধান উপাদান মিথেন।
 
 23. **তাপমাত্রা বাড়লে পরিবাহীর রোধ ---** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) বাড়ে  
@@ -156,12 +222,18 @@
    (ঘ) শূন্যহয়  
    **উত্তর: খ**
 
+   answer: ক — বাড়ে  
+   explanation: তাপ বাড়লে ধাতব পরিবাহীর পরমাণুর কম্পন বাড়ে, ইলেকট্রন বেশি বাধা পায়, তাই রোধ বাড়ে (ছাপা উত্তরে খ দেওয়া আছে; অর্ধপরিবাহীতে অবশ্য রোধ কমে)। <!-- verify -->
+
 24. **কোন ধাতু কক্ষ তাপমাত্রার তরল থাকে?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) রেডিয়াম  
    (খ) জিং  
    (গ) প্রোটনিয়াম  
    (ঘ) মারকারী  
    **উত্তর: ঘ**
+
+   answer: ঘ — মারকারী  
+   explanation: পারদই একমাত্র ধাতু যা কক্ষ তাপমাত্রায় তরল থাকে।
 
 25. **পাকস্থলীতে কোন এসিড উৎপন্ন হয়?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) \text{HClO}  
@@ -170,12 +242,18 @@
    (ঘ) \text{HNO}_3  
    **উত্তর: গ**
 
+   answer: গ — HCl  
+   explanation: পাকস্থলীর প্যারাইটাল কোষ হাইড্রোক্লোরিক অ্যাসিড ক্ষরণ করে, যা পেপসিনকে সক্রিয় করে।
+
 26. **কোন পদার্থ আন্তকণা আকর্ষণ বেশি?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) চিনি  
    (খ) পানি  
    (গ) তেল  
    (ঘ) অক্সিজেন  
    **উত্তর: ক**
+
+   answer: ক — চিনি  
+   explanation: চিনি কঠিন পদার্থ, আর কঠিনে অণুগুলো কাছাকাছি থাকায় আন্তঃকণা আকর্ষণ সবচেয়ে বেশি।
 
 27. **কোনটির তরঙ্গ দৈর্ঘ্য বেশি?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) লাল আলো  
@@ -184,12 +262,18 @@
    (ঘ) রেডিও ওয়েভ  
    **উত্তর: ক**
 
+   answer: ঘ — রেডিও ওয়েভ  
+   explanation: তড়িৎচুম্বকীয় বর্ণালিতে রেডিও তরঙ্গের তরঙ্গদৈর্ঘ্য সবচেয়ে বড়, মাইক্রোওয়েভ তার পরে (ছাপা উত্তরে ক দেওয়া আছে)। <!-- verify -->
+
 28. **শুষ্ক বাতাসের তুলনায় ঘনত্ব :** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) বেশি  
    (খ) কম  
    (গ) সমান  
    (ঘ) কোন সম্পর্ক নেই  
    **উত্তর: ক**
+
+   answer: ক — বেশি  
+   explanation: প্রশ্নটি অসম্পূর্ণভাবে ছাপা হয়েছে; উল্লেখ্য, আর্দ্র বাতাসের ঘনত্ব শুষ্ক বাতাসের চেয়ে কম হয়, কারণ জলীয় বাষ্প নাইট্রোজেন-অক্সিজেনের চেয়ে হালকা। <!-- verify -->
 
 29. **স্থিতি শক্তি আছে কোন পদার্থের?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) তরল  
@@ -198,12 +282,18 @@
    (ঘ) কঠিন  
    **উত্তর: ঘ**
 
+   answer: ঘ — কঠিন  
+   explanation: কঠিন পদার্থের অণুগুলো নির্দিষ্ট অবস্থানে আবদ্ধ থাকায় এতে স্থিতিশক্তি সবচেয়ে বেশি।
+
 30. **নীচের কোনটি মৃদু তড়িৎ বিশ্লেষ্য?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) \text{NaCl}  
    (খ) \text{H}_2\text{O}  
    (গ) \text{CaSO}_4  
    (ঘ) \text{H}_2\text{SO}_4  
    **উত্তর: ক**
+
+   answer: খ — H₂O  
+   explanation: পানি সামান্য মাত্রায় বিয়োজিত হয় বলে মৃদু তড়িৎবিশ্লেষ্য; NaCl ও H₂SO₄ তীব্র তড়িৎবিশ্লেষ্য (ছাপা উত্তরে ক দেওয়া আছে)। <!-- verify -->
 
 31. **২২ ক্যারেট স্বর্ণে কতভাগ স্বর্ণ থাকে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) 100%  
@@ -212,12 +302,18 @@
    (ঘ) 75%  
    **উত্তর: গ**
 
+   answer: গ — 91.67%  
+   explanation: ২২ ক্যারেট মানে ২২/২৪ ভাগ খাঁটি সোনা, অর্থাৎ ৯১.৬৭%।
+
 32. **\text{H}_2\text{SO}_4-এ সালফারের জারণ সংখ্যা কত?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) +2  
    (খ) +4  
    (গ) +6  
    (ঘ) 0  
    **উত্তর: গ**
+
+   answer: গ — +6  
+   explanation: H₂SO₄-এ ২(+১) + x + ৪(-২) = ০, তাই x = +৬।
 
 33. **কোনটি শব্দের তীব্রতা লেভেল পরিমাপের একক?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) হার্টজ  
@@ -226,12 +322,18 @@
    (ঘ) টেসলা  
    **উত্তর: খ**
 
+   answer: খ — ডেসিবেল  
+   explanation: শব্দের তীব্রতা লেভেল লগারিদমিক স্কেলে ডেসিবেলে মাপা হয়; হার্টজ কম্পাঙ্কের একক।
+
 34. **ক্রোমোসমের গঠন কি?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) DNA  
    (খ) প্রোটিন  
    (গ) RAN  
    (ঘ) DNA এবং প্রোটিন  
    **উত্তর: ঘ**
+
+   answer: ঘ — DNA এবং প্রোটিন  
+   explanation: ক্রোমোজোম গঠিত হয় DNA ও হিস্টোন প্রোটিন মিলে তৈরি ক্রোমাটিন দিয়ে।
 
 35. **Knot কিসের একক?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) গতিবেগ  
@@ -240,12 +342,18 @@
    (ঘ) ত্বরণ  
    **উত্তর: ক**
 
+   answer: ক — গতিবেগ  
+   explanation: নট হলো নৌ ও বিমান চলাচলে ব্যবহৃত গতির একক — ঘণ্টায় এক নটিক্যাল মাইল।
+
 36. **পরম শূন্য তাপমাত্রায় অর্ধপরিবাহী কিসের মত আচরণ করে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) পরিবাহী  
    (খ) অপরিবাহী  
    (গ) অর্ধপরিবাহী  
    (ঘ) কোনটিই নয়  
    **উত্তর: গ**
+
+   answer: খ — অপরিবাহী  
+   explanation: পরম শূন্য তাপমাত্রায় কোনো ইলেকট্রন পরিবহন ব্যান্ডে যেতে পারে না, তাই অর্ধপরিবাহী অন্তরকের মতো আচরণ করে (ছাপা উত্তরে গ দেওয়া আছে)। <!-- verify -->
 
 37. **রক্ত কোষের ক্যান্সারকে কি বলে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) লিওকেমিয়া  
@@ -254,12 +362,18 @@
    (ঘ) অ্যানজিনা  
    **উত্তর: ক**
 
+   answer: ক — লিউকেমিয়া  
+   explanation: শ্বেত রক্তকণিকার অনিয়ন্ত্রিত বৃদ্ধিজনিত রক্তের ক্যান্সারকে লিউকেমিয়া বলে।
+
 38. **কোন কারণে শব্দের প্রতিধ্বনি সৃষ্টি হয়?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) প্রতিফলন  
    (খ) প্রতিসরণ  
    (গ) উপরিপাতন  
    (ঘ) সমপাতন  
    **উত্তর: ক**
+
+   answer: ক — প্রতিফলন  
+   explanation: শব্দ কোনো তলে বাধা পেয়ে ফিরে এলে প্রতিধ্বনি হয়, যা শব্দের প্রতিফলনের ফল।
 
 39. **সমতল দর্পণ ব্যবহৃত হয় কোন যন্ত্র তৈরিতে?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) পেরিস্কোপ  
@@ -268,12 +382,18 @@
    (ঘ) মাইক্রোস্কোপ  
    **উত্তর: ক**
 
+   answer: ক — পেরিস্কোপ  
+   explanation: পেরিস্কোপে দুটি সমতল দর্পণ ৪৫° কোণে বসিয়ে আলোকরশ্মিকে বাঁকিয়ে দেখা হয়।
+
 40. **ব্রোঞ্জ কোন দুটি ধাতুর সংকর?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) অ্যালুমিনিয়াম ও টিন  
    (খ) কপার ও টিন  
    (গ) কপার ও গোল্ড  
    (ঘ) কপার ও সিলভার  
    **উত্তর: খ**
+
+   answer: খ — কপার ও টিন  
+   explanation: ব্রোঞ্জ তামা ও টিনের সংকর ধাতু; তামা ও দস্তার সংকর হলো পিতল।
 
 41. **কোনটি পদার্থের জড়তা পরিমাপকের একক?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) ভর  
@@ -282,12 +402,18 @@
    (ঘ) কৌনিকবেগ  
    **উত্তর: ক**
 
+   answer: ক — ভর  
+   explanation: জড়তা মানে গতির পরিবর্তনে বাধা দেওয়ার প্রবণতা, আর ভরই তার পরিমাপ।
+
 42. **১ লিটার বিশুদ্ধ পানিতে H এর পরিমাণ কত?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) 10^{-7}\text{ মোল}  
    (খ) 10^7\text{ মোল}  
    (গ) 10^{-6}\text{ মোল}  
    (ঘ) 10^{-5}\text{ মোল}  
    **উত্তর: ক**
+
+   answer: ক — 10⁻⁷ মোল  
+   explanation: বিশুদ্ধ পানির pH ৭, অর্থাৎ [H⁺] = 10⁻⁷ মোল/লিটার।
 
 43. **কোনটি ক্ষার?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) \text{NH}_3  
@@ -296,12 +422,18 @@
    (ঘ) \text{HNO}_2  
    **উত্তর: ক**
 
+   answer: ক — NH₃  
+   explanation: অ্যামোনিয়া পানিতে দ্রবীভূত হয়ে OH⁻ দেয়, তাই এটি ক্ষার; বাকিগুলো লবণ ও অ্যাসিড।
+
 44. **কোন গ্যাসের ব্যাপন হার বেশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) \text{N}_2  
    (খ) \text{O}_2  
    (গ) \text{CO}_2  
    (ঘ) \text{H}_2  
    **উত্তর: ঘ**
+
+   answer: ঘ — H₂  
+   explanation: গ্রাহামের সূত্রে ব্যাপন হার আণবিক ভরের বর্গমূলের ব্যস্তানুপাতিক, আর হাইড্রোজেন সবচেয়ে হালকা।
 
 45. **কোনটি ভেক্টর রাশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) চাপ  
@@ -310,12 +442,18 @@
    (ঘ) বল  
    **উত্তর: খ**
 
+   answer: খ — ভরবেগ  
+   explanation: ভরবেগের মান ও দিক দুই-ই আছে, তাই এটি ভেক্টর; চাপ ও কাজ স্কেলার (উল্লেখ্য, 'বল'-ও ভেক্টর, তাই অপশনসেট শিথিল)।
+
 46. **কোন পদার্থের আপেক্ষিক তাপ সর্বাধিক?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) বায়ু  
    (খ) পানি  
    (গ) লোহা  
    (ঘ) তামা  
    **উত্তর: খ**
+
+   answer: খ — পানি  
+   explanation: পানির আপেক্ষিক তাপ ৪২০০ J/kg·K, যা সাধারণ পদার্থের মধ্যে সর্বোচ্চ — এজন্যই এটি ভালো শীতলক।
 
 47. **প্রকৃতিতে প্রাপ্ত হাইড্রোজেনের আইসোটোপ কয়টি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) ২টি  
@@ -324,12 +462,18 @@
    (ঘ) ৫টি  
    **উত্তর: খ**
 
+   answer: খ — ৩টি  
+   explanation: হাইড্রোজেনের তিনটি আইসোটোপ — প্রোটিয়াম, ডিউটেরিয়াম ও ট্রিটিয়াম।
+
 48. **কত তাপমাত্রায় পানির ঘনত্ব বেশি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) 10^\circ\text{C}  
    (খ) 4^\circ\text{C}  
    (গ) 85^\circ\text{C}  
    (ঘ) 100^\circ\text{C}  
    **উত্তর: খ**
+
+   answer: খ — 4°C  
+   explanation: ৪ ডিগ্রি সেলসিয়াসে পানির আয়তন সবচেয়ে কম হয়, তাই ঘনত্ব সর্বাধিক।
 
 49. **ব্লিচিং পাউডারের সংকেত কোনটি?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) \text{Ca(OCI)Cl}  
@@ -338,6 +482,9 @@
    (ঘ) \text{HCl}  
    **উত্তর: ক**
 
+   answer: ক — Ca(OCl)Cl  
+   explanation: ব্লিচিং পাউডার হলো ক্যালসিয়াম অক্সিক্লোরাইড, সংকেত Ca(OCl)Cl।
+
 50. **কোন আলোতে সালোক সংশ্লেষণ ভালো হয় না?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) লাল  
    (খ) নীল  
@@ -345,11 +492,17 @@
    (ঘ) হলুদ  
    **উত্তর: ঘ**
 
+   answer: ঘ — হলুদ  
+   explanation: ক্লোরোফিল লাল ও নীল আলো সবচেয়ে বেশি শোষণ করে, আর হলুদ-সবুজ আলো প্রায় প্রতিফলিত করে বলে সালোকসংশ্লেষণ কম হয়।
+
 51. **সূর্যের আলো পৃথিবীতে আসতে সময় লাগে প্রায়—** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) ১০ মিনিট  
    (খ) ৮ মিনিট  
    (গ) ১২ মিনিট  
    (ঘ) ১৪ মিনিট
+
+   answer: খ — ৮ মিনিট  
+   explanation: সূর্য থেকে পৃথিবীর দূরত্ব প্রায় ১৫ কোটি কিমি, আলোর বেগে যেতে সময় লাগে প্রায় ৮ মিনিট ২০ সেকেন্ড।
 
 52. **প্রকৃতিতে সবচেয়ে শক্ত পদার্থ কোনটি?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) পিতল  
@@ -357,11 +510,17 @@
    (গ) গ্রানাইট  
    (ঘ) হীরা
 
+   answer: ঘ — হীরা  
+   explanation: হীরার প্রতিটি কার্বন পরমাণু চারটি সমযোজী বন্ধনে আবদ্ধ, তাই মোহস স্কেলে এর কাঠিন্য ১০।
+
 53. **গ্রিন হাউজ ইফেক্টের পরিপ্রেক্ষিতে বাংলাদেশের সবচেয়ে গুরুতর প্রত্যক্ষ ক্ষতি কী হবে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*  
    (ক) বৃষ্টিপাত কমে যাবে  
    (খ) সাইক্লোনের প্রবণতা বাড়বে  
    (গ) উত্তাপ অনেক বেড়ে যাবে  
    (ঘ) নিম্নভূমি নিমজ্জিত হবে
+
+   answer: ঘ — নিম্নভূমি নিমজ্জিত হবে  
+   explanation: বাংলাদেশ নিচু ব-দ্বীপ, তাই সমুদ্রপৃষ্ঠের উচ্চতা বাড়লে উপকূলীয় বিশাল এলাকা তলিয়ে যাবে।
 
 54. **আল্ট্রাভায়োলেট রশ্মি নিম্নের কোন রোগ সৃষ্টি করে?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 50 (ET: N/A)]*  
    (ক) এইডস  
@@ -369,17 +528,26 @@
    (গ) ব্লাড ক্যান্সার  
    (ঘ) চর্ম ক্যান্সার
 
+   answer: ঘ — চর্ম ক্যান্সার  
+   explanation: অতিবেগুনি রশ্মি ত্বকের কোষের DNA নষ্ট করে, যা থেকে ত্বকের ক্যান্সার হয়।
+
 55. **কোন পাখিকে 'অন্যপুষ্ট' বলা হয়?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*  
    (ক) কাক  
    (খ) কোকিল  
    (গ) কবুতর  
    (ঘ) কাকাতুয়া
 
+   answer: খ — কোকিল  
+   explanation: কোকিল নিজে বাসা বাঁধে না, কাকের বাসায় ডিম পাড়ে ও কাক তার ছানা পালন করে, তাই একে অন্যপুষ্ট বলে।
+
 56. **কোলাজেন কী?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*  
    (ক) একটি কার্বোহাইড্রেট  
    (খ) একটি প্রোটিন  
    (গ) একটি লিপিড  
    (ঘ) একটি নিউক্লিক এসিড
+
+   answer: খ — একটি প্রোটিন  
+   explanation: কোলাজেন হলো তন্তুময় গঠনগত প্রোটিন, যা ত্বক, হাড় ও যোজক কলার প্রধান উপাদান।
 
 57. **তেজস্ক্রিয়তার একক কি?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*  
    (ক) রন্টজেন  
@@ -388,9 +556,18 @@
    (ঘ) রেডিয়াম  
    **Ans: খ**
 
+   answer: খ — কুরি  
+   explanation: তেজস্ক্রিয়তার পুরোনো একক কুরি, আর SI একক বেকেরেল।
+
 58. **নিউক্লিয়ার রিয়েক্টর ব্যবহৃত কন্ট্রোল রড কি দিয়ে তৈরি? ক্যাডমিয়াম** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*
 
+   answer: ক্যাডমিয়াম  
+   explanation: ক্যাডমিয়াম নিউট্রন শোষণ করে, তাই কন্ট্রোল রড ঢুকিয়ে-বের করে চেইন বিক্রিয়ার হার নিয়ন্ত্রণ করা হয়।
+
 59. **পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটে যখন আলো-** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*
+
+   answer: ঘন মাধ্যম থেকে লঘু মাধ্যমে যায় এবং আপতন কোণ ক্রান্তি কোণের চেয়ে বড় হয়  
+   explanation: এই দুই শর্ত একসঙ্গে পূরণ হলে আলো আর প্রতিসৃত হয় না, পুরোটাই একই মাধ্যমে ফিরে আসে — যার উপর অপটিক্যাল ফাইবার কাজ করে।
 
 60. **তেজস্ক্রিয়তার একক কি?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*  
    (ক) রনজেন  
@@ -398,11 +575,17 @@
    (গ) হেনরি  
    (ঘ) রেডিয়াম
 
+   answer: খ — কুরি  
+   explanation: কুরি তেজস্ক্রিয়তার প্রচলিত একক; SI একক বেকেরেল।
+
 61. **Oncology কিসের সাথে জড়িত?** *[BCIC Assistant Programmer 2022 compact it 61 (ET: BUET)]*  
    (ক) চোখের গবেষণায়  
    (খ) ক্যান্সার গবেষণায়  
    (গ) হাড়ের সাথে জড়িত  
    (ঘ) হার্টের সাথে সম্পর্কিত
+
+   answer: খ — ক্যান্সার গবেষণায়  
+   explanation: অনকোলজি হলো ক্যান্সারের কারণ, নির্ণয় ও চিকিৎসাবিষয়ক শাখা।
 
 62. **নিচের কোনটি সর্বোচ্চ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) ১ গিগাবাইট  
@@ -410,11 +593,17 @@
    (গ) ১০০০ মেগাবাইট  
    (ঘ) ১০০০০ মেগাবাইট
 
+   answer: ঘ — ১০০০০ মেগাবাইট  
+   explanation: ১ গিগাবাইট ≈ ১০০০ মেগাবাইট, তাই ১০০০০ মেগাবাইট (প্রায় ১০ গিগাবাইট) সবচেয়ে বড়।
+
 63. **When a beam of light travels through media of two different densities, if the angle of incidence is greater than the critical angle, ____ occurs.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
    (a) Refraction  
    (b) Reflection  
    (c) Incidence  
    (d) Criticism
+
+   answer: b — Reflection  
+   explanation: Beyond the critical angle the light cannot refract out, so it is entirely reflected back — total internal reflection.
 
 64. **বায়ুমণ্ডলের যে স্তরে বেতার তরঙ্গ প্রতিফলিত হয়-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) স্ট্র্যাটোস্ফিয়ার  
@@ -422,11 +611,17 @@
    (c) আয়নোস্ফিয়ার  
    (d) ওজোনস্তর
 
+   answer: c — আয়নোস্ফিয়ার  
+   explanation: আয়নোস্ফিয়ারের আয়নিত স্তর বেতার তরঙ্গ প্রতিফলিত করে বলে দূরে সংকেত পাঠানো যায়।
+
 65. **What is the brightest planet seen from Earth?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
    a) Venus  
    b) Mars  
    c) Mercury  
    d) Jupiter
+
+   answer: a — Venus  
+   explanation: Venus is closest to Earth and its thick cloud cover reflects sunlight strongly, making it the brightest planet in our sky.
 
 66. **What is the noun of the extent Rover sent by NASA to the man?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Superior  
@@ -434,11 +629,17 @@
    c. Perseverance  
    d. Sprit
 
+   answer: c — Perseverance  
+   explanation: NASA's Perseverance rover landed in Jezero Crater on Mars in February 2021.
+
 67. **3\text{N} ও 4\text{N} মানের দুটি বল লম্বভাবে ক্রিয়া করলে লব্ধির মান কত?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. 2\text{N}  
    B. 3\text{N}  
    C. 5\text{N}  
    D. 7\text{N}
+
+   answer: C — 5N  
+   explanation: লম্বভাবে ক্রিয়াশীল বলের লব্ধি √(3² + 4²) = 5 N।
 
 68. **একটি তেজস্ক্রিয় মৌলের অর্ধায়ু ২০০ বছর। মৌলটির ৭৫% ক্ষয় হতে কত বছর লাগবে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. 150  
@@ -446,11 +647,17 @@
    C. 400  
    D. 450
 
+   answer: C — 400  
+   explanation: ৭৫% ক্ষয় মানে ২৫% অবশিষ্ট, যা দুটি অর্ধায়ু — ২ × ২০০ = ৪০০ বছর।
+
 69. **If an atom loses an e- it will be turned into?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
    a) Neutral  
    b) Anion  
    c) Proton  
    d) Cation
+
+   answer: d — Cation  
+   explanation: Losing a negatively charged electron leaves the atom with a net positive charge, which is a cation.
 
 70. **'Dry Ice' is produced from;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. Oxygen  
@@ -458,11 +665,17 @@
    গ. Nitrogen  
    ঘ. Carbon di oxide
 
+   answer: ঘ — Carbon di oxide  
+   explanation: Dry ice is solid carbon dioxide, which sublimes straight from solid to gas without melting.
+
 71. **DNA is found in;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. Chromosome  
    খ. Lissomes  
    গ. Ribosome  
    ঘ. Galel Complex
+
+   answer: ক — Chromosome  
+   explanation: DNA is packaged with histone proteins into chromosomes inside the nucleus.
 
 72. **কোনটি এন্টিবায়োটিক?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. ইনসুলিন  
@@ -470,11 +683,17 @@
    গ. ইথিলিন  
    ঘ. পেনিসিলিন
 
+   answer: ঘ — পেনিসিলিন  
+   explanation: পেনিসিলিন ছত্রাক থেকে পাওয়া প্রথম অ্যান্টিবায়োটিক; ইনসুলিন হরমোন ও পেপসিন এনজাইম।
+
 73. **What is the power required by a pump to draw 10 liters of water to a height of 10 meters, every second?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. 980J  
    B. 100 kw  
    C. 900 w  
    D. 960 kw
+
+   answer: A — 980J  
+   explanation: P = mgh/t = 10 × 9.8 × 10 ÷ 1 = 980 watts (the option prints the number 980 with the wrong unit).
 
 74. **What kind of energy is stored in a stressed spring?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. Potential energy  
@@ -482,17 +701,26 @@
    C. Chemical Energy  
    D. thermal energy
 
+   answer: A — Potential energy  
+   explanation: A stretched or compressed spring stores elastic potential energy from the work done on it.
+
 75. **Which time of the following properties of a body cannot be changed with an applied force?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
    A. length  
    B. mass  
    C. shape  
    D. volume
 
+   answer: B — mass  
+   explanation: Force can change a body's length, shape, volume, speed or direction, but its mass stays the same.
+
 76. **How much force should be exerted on a steel wire of cross-sectional area 0.1\text{cm}^2 in order to double its length? (Y = 2 \times 10^{11}\text{ N/m}^2)** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
    A. 2 \times 10^6\text{ N}  
    B. 2 \times 10^7\text{ N}  
    C. 2 \times 10^8\text{ N}  
    D. 2 \times 10^9\text{ N}
+
+   answer: A — 2 × 10⁶ N  
+   explanation: Doubling the length means strain = 1, so F = Y × A × strain = 2×10¹¹ × 1×10⁻⁵ × 1 = 2×10⁶ N.
 
 77. **What is the angular momentum of the election in the lowest orbit of hydrogen atom?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
    A. h  
@@ -572,10 +800,16 @@
    গ. বর্ষাকালে
    ঘ. বসন্তকালে
 
+   answer: C — h/2π  
+   explanation: Bohr's condition gives L = nh/2π, and for the lowest orbit n = 1.
+
 78. **A communication channel has a signal power of P_s = 50\\text\{ mW\} and a noise power of P_n = 5\\text\{ mW\}** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 85]]*  
    a) Find the Signal-to-Noise Ratio (SNR) in linear form and decibels  
    (dB) .  
    b) If the bandwidth of the channel is B=3 MHz, calculate the channel capacity using Shannon's formula.
+
+   answer: (a) SNR = 10 (linear) = 10 dB; (b) C ≈ 10.38 Mbps  
+   explanation: SNR = 50/5 = 10, and 10 log₁₀10 = 10 dB; Shannon gives C = B log₂(1+SNR) = 3×10⁶ × log₂11 ≈ 3×10⁶ × 3.46 ≈ 10.38 Mbps.
 
 79. **Which of the following is a variable-length, letter-and-number error-detection scheme, where on the sender side, the data is appended with the remainder obtained by dividing the data bits by a predetermined polynomial, and on the receiver side, error detection is performed by checking whether the received sequence is divisible by the same polynomial? [ নিচের কোনটি একটি variable-length, অক্ষর ও সংখ্যাভিত্তিক error-detection পদ্ধতি, যেখানে-প্রেরক (sender) পাশে ডাটা বিটকে একটি পূর্বনির্ধারিত polynomial দ্বারা ভাগ করে যে remainder পাওয়া যায় তা ডাটার সাথে যুক্ত করা হয়। গ্রাহক (receiver) পাশে প্রাপ্ত ডাটা একই polynomial দ্বারা ভাগ করে দেখা হয় ডাটা নিঃশেষে বিভাজ্য কি না]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*  
    (a) CRC  
@@ -583,11 +817,17 @@
    (c) Horizontal parity check  
    (d) Vertical parity check
 
+   answer: a — CRC  
+   explanation: Cyclic Redundancy Check appends the remainder of a polynomial division, and the receiver checks that the whole frame divides evenly.
+
 80. **Which of the following in the RAID configuration for achieving the highest-speed disk access at the cost of reliability? [ নিচের কোন RAID configuration সবচেয়ে বেশি disk access speed প্রদান করে, তবে Reliability( নির্ভরযোগ্যতা) কম থাকে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
    (a) RAID 0  
    (b) RAID 1  
    (c) RAID 5  
    (d) RAID 6
+
+   answer: a — RAID 0  
+   explanation: RAID 0 stripes data across all drives for maximum speed but keeps no redundancy, so one failure loses everything.
 
 81. **For two 8-bit signed integers A and B in 2's complement format, which of the following will cause an overflow when A and B are added? [ দুই 8-bit signed integer A এবং B (2's complement ফরম্যাটে) যোগ করার সময় নিচের কোন ক্ষেত্রে overflow ঘটবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
    (a) 0111 1111 and 1111 1110  
@@ -595,11 +835,17 @@
    (c) 1000 0000 and 0111 0000  
    (d) 1111 1111 and 1111 1111
 
+   answer: b — 0111 1111 and 0111 1110  
+   explanation: Adding two positives (+127 and +126) gives 253, beyond the +127 limit of an 8-bit signed number, so the sign bit flips — overflow.
+
 82. **The following postfix expression is evaluated where A = 14, B = 3, C = 5, and D = 6. What is its result? [ নিচের postfix expression টি evaluate করো, যেখানে A = 4, B = 3, C = 5, D = 6] A B C \\times + D B - C \\times -** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
    (a) -3  
    (b) 0  
    (c) 14  
    (d) 403
+
+   answer: c — 14  
+   explanation: A + (B×C) = 14 + 15 = 29, then (D-B)×C = 3×5 = 15, and 29 - 15 = 14.
 
 83. **Which of the following RAID levels allows data recovery if one disk fails? [ নিচের কোন RAID level এ এক ডিস্ক ব্যর্থ হলে ডাটা পুনরুদ্ধার সম্ভব?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
    (a) RAID 0  
@@ -607,11 +853,17 @@
    (c) RAID 6  
    (d) RAID 5
 
+   answer: d — RAID 5  
+   explanation: RAID 5 spreads parity across all drives so a single failed disk can be rebuilt (RAID 1 and RAID 6 also survive one failure).
+
 84. **Which of the following is a computer architecture where multiple instructions execute in parallel by slightly offsetting the execution of different instructions? [ নিচের কোন কম্পিউটার আর্কিটেকচারে একাধিক instruction parallelভাবে execute হয়, কিন্তু execution কিছুটা offset (অল্প সময়ের ব্যবধান) দিয়ে হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
    (a) RISC  
    (b) Pipeline  
    (c) VLIW  
    (d) Von Neumann Architecture
+
+   answer: b — Pipeline  
+   explanation: Pipelining overlaps the fetch, decode and execute stages of successive instructions, each offset by one clock.
 
 85. **For a non-negative integer X, which of the following operations gives the remainder after division of X by 8? [ একটি অঋণাত্মক পূর্ণসংখ্যা X-এর জন্য, নিচের কোন অপারেশনটি X কে 8 দিয়ে ভাগ করার পর অবশিষ্ট (remainder) দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*  
    (a) Bitwise AND with 7  
@@ -619,11 +871,17 @@
    (c) Bitwise OR with 8  
    (d) Right shift X by 3 bits
 
+   answer: a — Bitwise AND with 7  
+   explanation: 8 is 2³, so the remainder is the low three bits, which AND with 0111 (7) extracts.
+
 86. **Which of the following correctly describes RAID 5? [ নিচের কোনটি RAID 5-এর সঠিক বর্ণনা?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
    (a) Disk striping without parity  
    (b) Block-level striping with a dedicated parity disk  
    (c) Block-level striping with distributed parity disks  
    (d) Mirroring without parity
+
+   answer: c — Block-level striping with distributed parity disks  
+   explanation: RAID 5 stripes blocks and spreads the parity blocks over all drives so no single disk becomes a bottleneck.
 
 87. **A transaction that leaves the database in an inconsistent state if partially executed violates— [কোন transaction database কে inconsistent state-এ ফেলে, যদি এটি partial execute হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
    (a) Atomicity  
@@ -631,11 +889,17 @@
    (c) Isolation  
    (d) Durability
 
+   answer: a — Atomicity  
+   explanation: Atomicity requires all or nothing; a half-executed transaction leaves the database inconsistent.
+
 88. **(123.4)_\{10\} = ()_\{16\}?** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
    (a) (7B.4)_\{16\}  
    (b) (7B.6)_\{16\}  
    (c) (7B.8)_\{16\}  
    (d) (7C.6)_\{16\}
+
+   answer: b — (7B.6)₁₆  
+   explanation: 123 = 7×16 + 11 = 7B, and 0.4 × 16 = 6.4 so the first hex fraction digit is 6.
 
 89. **If x = 2 and y = 3, what is the value of 2x^2 + 3y^2? [ যদি x = 2 এবং y = 3, তাহলে 2x^2 + 3y^2 কত হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
    (a) 25  
@@ -643,19 +907,34 @@
    (c) 35  
    (d) 40
 
+   answer: c — 35  
+   explanation: 2(2²) + 3(3²) = 8 + 27 = 35.
+
 90. **Explain the concepts of:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222-223]]*  
    a. Reinforcement Learning (RL)  
    b. Deep Learning (DL)  
    c. Federated Learning (FL) Differentiate them in terms of learning method, data usage, and provide one real-world example for each.
+
+   answer: RL learns from reward feedback, DL learns features through deep neural networks, and FL trains a shared model across devices without moving the data  
+   explanation: RL uses trial-and-error interaction (game-playing agents); DL uses large labelled datasets on many-layered networks (image recognition); FL keeps data local and sends only model updates (next-word prediction on phones).
 
 91. **Explain the following addressing modes in the 8086 microprocessors:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 225]]*  
    a. Direct Addressing  
    b. Immediate Addressing  
    c. Register Addressing Differentiate among them with examples.
 
+   answer: Direct — the instruction holds the operand's memory address (MOV AX, [1234H]); Immediate — the operand itself is in the instruction (MOV AX, 05H); Register — the operand is in a register (MOV AX, BX)  
+   explanation: They differ in where the data lives: immediate is fastest since no memory access is needed, register is next, and direct addressing must fetch from memory.
+
 92. **(b) Simplify using K-map. F(A,B,C) = A'BC' + A'BC + AB'C' + AB'C + ABC' + ABC** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
 
+   answer: F = A + B  
+   explanation: The six terms cover minterms 2,3,4,5,6,7 — everything except A'B'C' and A'B'C — and that grouping simplifies to A + B.
+
 93. **(a) Create an example of a trigger.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+
+   answer: CREATE TRIGGER trg_log AFTER INSERT ON employee FOR EACH ROW INSERT INTO audit_log(emp_id, action, ts) VALUES (NEW.id, 'INSERT', NOW());  
+   explanation: The trigger fires automatically after each row is inserted into employee and writes an audit record, so logging needs no application code.
 
 94. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
    (a) You are given the network  
@@ -663,19 +942,34 @@
    (i) Calculate the number of hosts per subnet.  
    (ii) Determine the subnet mask.
 
+   answer: (i) 126 hosts per subnet (ii) subnet mask 255.255.255.128 (/25)  
+   explanation: 492 subnets need 9 borrowed bits (2⁹ = 512), so /16 + 9 = /25, leaving 7 host bits and 2⁷ - 2 = 126 usable hosts.
+
 95. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
    (b) Alice wants to send a message to Bob using asymmetric key cryptography.  
    (i) Which key is used for encryption?  
    (ii) Which key is used for decryption?
+
+   answer: (i) Bob's public key (ii) Bob's private key  
+   explanation: Alice encrypts with the recipient's freely published public key, and only Bob's matching private key can decrypt it.
 
 96. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
    (a) Given the following traversals of a binary tree: Preorder: 3, 9, 20, 17,  
    6. In order: 9, 3, 17, 20,  
    6. Determine whether a binary tree can be constructed from the given traversals. If possible, construct the tree.
 
+   answer: Yes — root 3, with 9 on the left and 20 on the right; 20 has 17 on its left and 6 on its right  
+   explanation: Preorder gives the root first and inorder splits the remaining nodes into left and right subtrees, and a preorder plus inorder pair always determines the tree uniquely.
+
 97. **(b) Write a real-life example where Depth-First Search (DFS) performs more efficiently than Breadth-First Search (BFS). Why is DFS better in that situation?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 234]]*
 
+   answer: Solving a maze or a Sudoku puzzle by backtracking  
+   explanation: DFS follows one path to the end and backtracks, so it needs memory only for the current path, while BFS would have to hold every partial solution of a level in its queue.
+
 98. **(b) What is the advantage of the Agile methodology over the Waterfall methodology?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
+
+   answer: Agile delivers working software in short iterations and welcomes changing requirements, while Waterfall freezes each phase before the next  
+   explanation: Frequent releases give customer feedback early, defects surface sooner, and a late change costs one sprint instead of a redesign of the whole project.
 
 99. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*  
    (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?  
@@ -684,11 +978,17 @@
    (গ) IRRI এর পূর্ণরূপ লিখুন।  
    (03)
 
+   answer: (ক) যুক্তরাষ্ট্র (খ) তুরস্ক (গ) International Rice Research Institute  
+   explanation: হাওয়াই যুক্তরাষ্ট্রের ৫০তম অঙ্গরাজ্য; তুরস্ক ইউরোপ ও এশিয়া দুই মহাদেশে বিস্তৃত; IRRI ফিলিপাইনে অবস্থিত আন্তর্জাতিক ধান গবেষণা প্রতিষ্ঠান।
+
 100. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*  
    (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?  
    (02)  
    (খ) পরিবেশ রক্ষায় কোন ধরনের উৎস হতে বিদ্যুৎ উৎপাদনের মনোযোগ দেয়া আবশ্যক বলে আপনি মনে করেন।  
    (02)
+
+   answer: (ক) যুক্তরাষ্ট্র (খ) নবায়নযোগ্য উৎস — সৌর, বায়ু ও জলবিদ্যুৎ  
+   explanation: নবায়নযোগ্য উৎস কার্বন নিঃসরণ করে না, ফুরিয়ে যায় না এবং দীর্ঘমেয়াদে খরচও কম।
 
 101. **একাধিক স্বাধীন বাক্যকে একটি বাক্যে লিখলে সেগুলোর মাঝখানে কোন চিহ্ন বসে?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
    (a) হাইফেন  
@@ -696,11 +996,17 @@
    (c) ড্যাশ  
    (d) কমা
 
+   answer: b — সেমিকোলন  
+   explanation: একাধিক স্বাধীন বাক্য একত্রে লিখলে তাদের মাঝে সেমিকোলন (;) বসে।
+
 102. **কোনটি অস্তিবাচক বাক্য?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
    (a) সে কিছুতেই সন্তুষ্ট নয়  
    (b) দুবারের বেশী ফোন করিনি  
    (c) আমি অন্য কোথাও যাব না  
    (d) আপনি আমায় অবিশ্বাস করেছেন
+
+   answer: d — আপনি আমায় অবিশ্বাস করেছেন  
+   explanation: বাকি তিনটিতে নেতিবাচক শব্দ আছে; এটিই একমাত্র অস্তিবাচক বাক্য।
 
 103. **সাদাটে হলুদ বর্ণকে কী বলা হয়?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
    (a) হলদেটে  
@@ -708,11 +1014,17 @@
    (c) পাণ্ডুর  
    (d) বাসন্তি
 
+   answer: c — পাণ্ডুর  
+   explanation: সাদায় হলুদ মেশানো ফ্যাকাশে বর্ণকে পাণ্ডুর বলে।
+
 104. **Which one of the following is true? [ নিচের কোনটি সত্য? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
    (a) Bangladesh is a lower middle-income country  
    (b) Bangladesh is a upper middle-income country  
    (c) Bangladesh is a low-income country  
    (d) Bangladesh is a high-income country
+
+   answer: a — Bangladesh is a lower middle-income country  
+   explanation: The World Bank has classified Bangladesh as a lower-middle-income economy since 2015.
 
 105. **The Mona Lisa portrait was painted by Leonardo da Vinci in the— [ লিওনার্দো দা ভিঞ্চি মোনালিসা প্রতিকৃতিটি কোন শতাব্দীতে এঁকেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
    (a) 15th century  
@@ -720,11 +1032,17 @@
    (c) 16th century  
    (d) 17th century
 
+   answer: c — 16th century  
+   explanation: Leonardo painted the Mona Lisa from about 1503 to 1519, which falls in the 16th century.
+
 106. **Who wrote the book 'Politics'? [ 'Politics' বইটি কে লিখেছেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
    (a) Aristotle  
    (b) Socrates  
    (c) Plato  
    (d) Pythagoras
+
+   answer: a — Aristotle  
+   explanation: "Politics" is Aristotle's treatise on the state and forms of government.
 
 107. **Pythagoras was a Greek— [ পিথাগোরাস ছিলেন একজন গ্রিক— ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
    (a) Philosopher  
@@ -732,11 +1050,17 @@
    (c) Accountant  
    (d) a & b
 
+   answer: d — a & b  
+   explanation: Pythagoras was both a philosopher who founded a school of thought and the mathematician of the famous theorem.
+
 108. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Games Championship held in January 2024? [ ২০২৪ সালের জানুয়ারিতে অনুষ্ঠিত ৪৪তম জাতীয় অ্যাথলেটিক্স প্রতিযোগিতায় ১০০ মিটার স্প্রিন্টে দ্রুততম মানবী কে হয়েছেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*  
    (a) Tahmina Rahman  
    (b) Sonia Akhtar  
    (c) Sharifa Khatun  
    (d) Shirin Akhtar
+
+   answer: d — Shirin Akhtar  
+   explanation: Shirin Akhtar again won the women's 100 m title at the 44th National Athletics Championship in January 2024.
 
 109. **He said, “Can you sing?” And I said, “No.”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*  
    (a) He asked me that could I sing and I refused.  
@@ -744,17 +1068,26 @@
    (c) I denied, when he asked me if I could sing.  
    (d) He asked me if I could sing and I said no.
 
+   answer: b — He asked me if I could sing and I said that I couldn't  
+   explanation: An indirect yes/no question takes "if", and the bare "No" is reported as a negative statement.
+
 110. **He said, “Will you listen to such a man?”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*  
    (a) He asked them will you listen to such a man.  
    (b) He asked them are you listening to such a man.  
    (c) He asked them whether they would listen to such a man.  
    (d) He asked them whether they will listen to such a man.
 
+   answer: c — He asked them whether they would listen to such a man  
+   explanation: "Will" backshifts to "would" and the question becomes a "whether" clause in statement order.
+
 111. **The following is not a prime number that is divisible only by itself and 1. Which of the following is a not prime number? [ নিচের কোনটি মৌলিক সংখ্যা (Prime Number)? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 2  
    (b) 7  
    (c) 99  
    (d) 181
+
+   answer: c — 99  
+   explanation: 99 = 9 × 11, so it has factors besides 1 and itself; 2, 7 and 181 are all prime.
 
 112. **What will be the output of this C program? [ নিচের C প্রোগ্রামটির আউটপুট কী হবে? ] \#include <stdio.h>
 
@@ -776,6 +1109,9 @@ int main() \{
    (c) 
    57. 000000
    (d) The program has errors and will not run.
+
+   answer: b — 57  
+   explanation: 5 × 10.5 + 5.0 = 57.5, and storing it in an int truncates the fraction.
 
 113. **What is the output of this Java program? [ নিচের Java প্রোগ্রামটির আউটপুট কী হবে? ] class Test \{
 
@@ -799,11 +1135,17 @@ public class main\{
    c) 0
    d) A garbage value
 
+    answer: b — The program will cause an compile error because the object "t" was not initialized  
+    explanation: Java refuses to compile a read of a local variable that has not been definitely assigned.
+
 114. **Which one is the first high level programming language? [ প্রথম উচ্চ-স্তরের (High level) প্রোগ্রামিং ভাষা কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (a) C  
    (b) COBOL  
    (c) FORTRAN  
    (d) C++
+
+   answer: c — FORTRAN  
+   explanation: FORTRAN, released in 1957, was the first widely used high-level language.
 
 115. **The time required to search an element in a linked list of length n is— [ n দৈর্ঘ্যের লিঙ্কড লিস্টে কোনো এলিমেন্ট সার্চ করার সময় কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (A) O(log n)  
@@ -811,17 +1153,26 @@ public class main\{
    (C) O(1)  
    (D) O(n^2)
 
+   answer: B — O(n)  
+   explanation: A linked list has no random access, so searching means walking up to n nodes.
+
 116. **The minimum number of fields with each node of doubly linked list is [ ডাবলি লিঙ্কড লিস্টের প্রতিটি নোডে ন্যূনতম ফিল্ড সংখ্যা কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
    (A) 1  
    (B) 2  
    (C) 3  
    (D) 4
 
+   answer: C — 3  
+   explanation: Each node holds the data plus a previous pointer and a next pointer.
+
 117. **IPv6 does not support which of the following addressing mode? [ IPv6 নিচের কোন অ্যাড্রেসিং মোড সমর্থন করে না? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
    (A) unicast addressing  
    (B) multicast addressing  
    (C) broadcast addressing  
    (D) anycast addressing
+
+   answer: C — broadcast addressing  
+   explanation: IPv6 dropped broadcast and uses multicast (including all-nodes multicast) instead, keeping unicast and anycast.
 
 118. **What is the output of this program? [ নিচের প্রোগ্রামের আউটপুট কী হবে? ] \#include <stdio.h>
 
@@ -841,6 +1192,9 @@ int main() \{
    (B) 1 2 3 4
    (C) 4 4 4 4
    (D) 0 0 0 0
+
+   answer: 4 3 2 1  
+   explanation: i is static so it keeps its value across the recursive main() calls, printing 4, 3, 2 and 1 before --i makes it 0 and the if fails.
 
 119. **Output: [ আউটপুট কী হবে ] \#include <stdio.h>
 
@@ -862,19 +1216,31 @@ int main() \{
    (C) A bog negative Number
    (D) Compiler Error
 
+   answer: A — 0  
+   explanation: y is 0, so the comparison y != 0 is false and x gets the value 0.
+
 120. **Below relations are given, Employee (employee_id, name, salary, department) Leave (employee_id, date, reason, no_leaves) Holiday (Date, description)** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*  
    i. Retrieve the names and salaries of all employees who work in the 'Sales' department.  
    ii. write query to show all employee's leave count.  
    iii. Write query to show employees who are in 'HR' department and have taken at least 5 leaves.
 
+   answer: i. SELECT name, salary FROM Employee WHERE department='Sales'; ii. SELECT e.employee_id, e.name, SUM(l.no_leaves) FROM Employee e LEFT JOIN Leave l ON e.employee_id=l.employee_id GROUP BY e.employee_id, e.name; iii. SELECT e.name FROM Employee e JOIN Leave l ON e.employee_id=l.employee_id WHERE e.department='HR' GROUP BY e.employee_id, e.name HAVING SUM(l.no_leaves) >= 5;  
+   explanation: A LEFT JOIN keeps employees with no leave rows, GROUP BY collapses each employee to one line, and HAVING filters on the aggregate because WHERE cannot.
+
 121. **Query.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
 
 122. **We have a library and library has number of books. Each book has a title, an ISBN number, and an author. You are asked to design a software system for managing a library. The system should be able to keep track of the total number of books in the library and the number of books that have been borrowed.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 383]]*
+
+   answer: A Book class (title, ISBN, author, isBorrowed) and a Library class holding a collection of books with counters  
+   explanation: Library keeps totalBooks and borrowedCount, and its borrow(isbn) and return(isbn) methods flip the book's isBorrowed flag and adjust the counters, so available = totalBooks - borrowedCount.
 
 123. **In a group there are 100 students. 72 students can speak English and 43 can speak French. Answer the following question.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395]]*  
    (i) Find no of students who can speak English only.  
    (ii) Find no of students who can speak French only.  
    (iii) Find no of students who can speak both.
+
+   answer: (i) 57 (ii) 28 (iii) 15  
+   explanation: By the inclusion-exclusion rule both = 72 + 43 - 100 = 15, so English only is 72 - 15 = 57 and French only is 43 - 15 = 28.
 
 124. **Find the shortest path.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395-396]]*
 
@@ -884,11 +1250,17 @@ int main() \{
    গ. নাইট্রোজেন  
    ঘ. ক্লোরোপিক্রিন
 
+   answer: ঘ — ক্লোরোপিক্রিন  
+   explanation: কাঁদানে গ্যাসের রাসায়নিক নাম ক্লোরোপিক্রিন, যা চোখে তীব্র জ্বালা তৈরি করে।
+
 126. **৩ ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট ০ হলে আউটপুট কত?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. ০  
    খ. ১  
    গ. ৩  
    ঘ. কোনটিই নয়
+
+   answer: খ — ১  
+   explanation: NAND গেটের আউটপুট ০ হয় কেবল সব ইনপুট ১ হলে, তাই একটি ইনপুট ০ হলেই আউটপুট ১।
 
 127. **কোন যৌগটি ক্যালসিয়াম দাত গঠনে সাহায্য করে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. সোডিয়াম কার্বোনেট  
@@ -896,11 +1268,17 @@ int main() \{
    গ. ক্যালসিয়াম বাই কার্বোনেট  
    ঘ. ক্যালসিয়াম হাইড্রোক্সাইড
 
+   answer: গ — ক্যালসিয়াম বাই কার্বোনেট  
+   explanation: দাঁত ও হাড়ের প্রধান উপাদান ক্যালসিয়াম যৌগ; ছাপা বিকল্পের মধ্যে ক্যালসিয়ামভিত্তিক কার্বনেট যৌগটিই উদ্দিষ্ট। <!-- verify -->
+
 128. **নিউক্লিয়াসে কি থাকে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. নিউট্রন  
    খ. ইলেকট্রন  
    গ. প্রোটন ও নিউট্রন  
    ঘ. ইলেকট্রন ও প্রোটন
+
+   answer: গ — প্রোটন ও নিউট্রন  
+   explanation: পরমাণুর নিউক্লিয়াসে ধনাত্মক প্রোটন ও নিরপেক্ষ নিউট্রন থাকে; ইলেকট্রন থাকে কক্ষপথে।
 
 129. **রক্তের টিস্যুতে যাকে রক্তকণিকা বলে তা'র নাম?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. লোহিত রক্তকণিকা  
@@ -908,11 +1286,17 @@ int main() \{
    গ. রক্তরস  
    ঘ. প্লাজমা
 
+   answer: ক — লোহিত রক্তকণিকা  
+   explanation: রক্ত একটি তরল যোজক কলা, যার কোষীয় উপাদানের বেশির ভাগই লোহিত রক্তকণিকা; রক্তরস ও প্লাজমা তরল অংশ।
+
 130. **"ইতর-বিশেষ" বলতে বুঝায়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
    ক. দুর্বৃত্ত  
    খ. অপদার্থ  
    গ. চালাকি  
    ঘ. পার্থক্য
+
+   answer: ঘ — পার্থক্য  
+   explanation: 'ইতর-বিশেষ' বাগ্‌ধারার অর্থ পার্থক্য বা তফাত।
 
 131. **বড্ড থেকে বড্ড কোন ধরনের পরিবর্তন?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
    ক. বিষমীভবন  
@@ -920,11 +1304,17 @@ int main() \{
    গ. ব্যঞ্জন বিকৃতি  
    ঘ. ব্যঞ্জন দ্বিত্ব
 
+   answer: ঘ — ব্যঞ্জন দ্বিত্ব  
+   explanation: 'বড়' থেকে 'বড্ড' হওয়ার সময় ড ধ্বনি দ্বিত্ব হয়েছে।
+
 132. **যা সহজে উত্তীর্ণ হওয়া যায় না-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
    ক. দুর্জয়  
    খ. দুর্জন  
    গ. দুস্তর  
    ঘ. দুর্লভ
+
+   answer: গ — দুস্তর  
+   explanation: যা সহজে পার হওয়া যায় না তাকে 'দুস্তর' বলে।
 
 133. **বাংলা একাডেমির 'আঞ্চলিক অভিধান' সম্পাদনা কে করেন?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
    ক. মুহম্মদ শহীদুল্লাহ  
@@ -932,11 +1322,17 @@ int main() \{
    গ. মুহম্মদ মনসুর উদ্দীন  
    ঘ. মুহম্মদ আবদুল হাই
 
+   answer: ক — মুহম্মদ শহীদুল্লাহ  
+   explanation: বাংলা একাডেমির 'বাংলাদেশের আঞ্চলিক ভাষার অভিধান' সম্পাদনা করেন ড. মুহম্মদ শহীদুল্লাহ।
+
 134. **'তামার বিষ' বাগধারাটির অর্থ কি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
    ক. গভীর আঘাত  
    খ. ধাতব পদার্থের আঘাত  
    গ. পুরানা ক্ষত  
    ঘ. অর্থের কুপ্রভাব
+
+   answer: ঘ — অর্থের কুপ্রভাব  
+   explanation: 'তামার বিষ' বাগ্‌ধারার অর্থ টাকার খারাপ প্রভাব।
 
 135. **William Shakespeare was born in ....** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*  
    a. 1546  
@@ -944,11 +1340,17 @@ int main() \{
    c. 1616  
    d. 1761
 
+   answer: b — 1564  
+   explanation: Shakespeare was born in 1564 and died in 1616.
+
 136. **In a 3-input logic circuit (inputs A, B, and** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 436]]*  
    C) , the output F is 1 if at least two or all three inputs are  
    1.  
    (a) Construct the truth table.  
    (b) Use the truth table to find the POS (Product of Sums) expression using K-map simplification.
+
+   answer: F = (A+B)(B+C)(A+C)  
+   explanation: The majority function is 0 only when at least two inputs are 0, i.e. for ABC = 000, 001, 010 and 100; grouping those zeros on the K-map gives the three sum terms above.
 
 137. **‘কালের কলস’ কাব্যগ্রন্থটির রচয়িতা কে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    ক) আল মাহমুদ  
@@ -956,11 +1358,17 @@ int main() \{
    গ) শহীদ কাদরী  
    ঘ) রফিক আজাদ
 
+   answer: ক — আল মাহমুদ  
+   explanation: 'কালের কলস' আল মাহমুদের কাব্যগ্রন্থ।
+
 138. **বাংলা গদ্যে প্রথম যতিচিহ্ন ব্যবহার করেন কে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    ক) প্রমথ চৌধুরী  
    খ) রামমোহন রায়  
    গ) ঈশ্বরচন্দ্র বিদ্যাসাগর  
    ঘ) রামায়ণ
+
+   answer: গ — ঈশ্বরচন্দ্র বিদ্যাসাগর  
+   explanation: বিদ্যাসাগরই প্রথম বাংলা গদ্যে যতিচিহ্নের সার্থক ব্যবহার করে গদ্যকে সুখপাঠ্য করে তোলেন। <!-- verify -->
 
 139. **Please stop ------ so many mistake.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    a) to make  
@@ -968,11 +1376,17 @@ int main() \{
    c) making  
    d) makes
 
+   answer: c — making  
+   explanation: "Stop" followed by a gerund means to cease doing something.
+
 140. **The price of gold as well as silver ------ risen.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    a) is  
    b) have  
    c) has  
    d) are
+
+   answer: c — has  
+   explanation: "As well as" does not change the number of the subject, so the singular "the price" takes "has risen".
 
 141. **My doctor knew that I would eventually recover and do kind of work "I would be doing" before.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    a) would have been doing  
@@ -980,11 +1394,17 @@ int main() \{
    c) had been done  
    d) had been doing
 
+   answer: d — had been doing  
+   explanation: The past perfect continuous describes the work that had been going on over a period before that past moment.
+
 142. **Sincere work are indispensable ---- our country.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    a) for  
    b) in  
    c) to  
    d) of
+
+   answer: c — to  
+   explanation: The collocation is "indispensable to" something.
 
 143. **বেথেলহাম কোথায় অবস্থিত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) তেহরান  
@@ -992,11 +1412,17 @@ int main() \{
    গ) ফিলিস্তিন  
    ঘ) জর্দান
 
+   answer: গ — ফিলিস্তিন  
+   explanation: বেথলেহেম ফিলিস্তিনের পশ্চিম তীরে অবস্থিত শহর, যিশুখ্রিস্টের জন্মস্থান হিসেবে পরিচিত।
+
 144. **10, 17, 19, 25, 30, 32 এর মধ্যক কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ১৯  
    খ) ২০  
    গ) ২১  
    ঘ) ২২
+
+   answer: ঘ — ২২  
+   explanation: সংখ্যাগুলো সাজানো এবং মোট ৬টি, তাই মধ্যক = (19 + 25) ÷ 2 = 22।
 
 145. **a - \\\{a - (a + 1)\\\} = ?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) a  
@@ -1004,21 +1430,42 @@ int main() \{
    গ) a - 1  
    ঘ) a + 1
 
+   answer: ঘ — a + 1  
+   explanation: a - {a - (a+1)} = a - {a - a - 1} = a - (-1) = a + 1।
+
 146. **একটি রম্বসের কর্ণ 8 মি ও 6 হলে এর ক্ষেত্রফল কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ৪৮  
    খ) ২৪  
    গ) ৬৪  
    ঘ) ৩৬
 
+   answer: খ — ২৪  
+   explanation: রম্বসের ক্ষেত্রফল = ½ × কর্ণ₁ × কর্ণ₂ = ½ × 8 × 6 = 24 বর্গমিটার।
+
 147. **a) JS Query তে Ajax কেন ব্যবহার করা হয়?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+
+   answer: পেজ রিলোড না করেই সার্ভারের সঙ্গে ডেটা আদান-প্রদানের জন্য  
+   explanation: jQuery-র $.ajax() ব্যাকগ্রাউন্ডে অনুরোধ পাঠায় ও উত্তর পেয়ে DOM-এর নির্দিষ্ট অংশ বদলায়, ফলে ব্যবহারকারীর কাজ থামে না।
 
 148. **b) ১ গিগাবাইট .................... কিলোবাইট** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
 
+   answer: ১০,৪৮,৫৭৬ কিলোবাইট (২²⁰ KB)  
+   explanation: ১ গিগাবাইট = ১০২৪ মেগাবাইট এবং ১ মেগাবাইট = ১০২৪ কিলোবাইট, তাই ১০২৪ × ১০২৪ = ১০,৪৮,৫৭৬ KB (দশমিক হিসেবে ১০ লক্ষ KB)।
+
 149. **ধরুন একটি প্রজেক্ট ডেভেলপমেন্ট করবেন এতে আনুষাঙ্গিক অনেক কিছুই প্রয়োজন। একটি প্রজেক্ট ডেভেলপ করা পরিপূর্ণ ভাবে করা সম্ভব না সে ক্ষেত্রে এর কস্টিং বা বাজেট সাশ্রয়ী করা দরকার এর জন্যে agile বা waterfall প্রজেক্ট ডেভেলপ করার ক্ষেত্রে আপনি কোনটি নির্বাচন করবেন? কেন করবেন ব্যাখ্যা করুন।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+   answer: Agile  
+   explanation: চাহিদা পুরোপুরি নির্ধারিত না থাকলে Agile-এর ছোট ছোট ইটারেশনে কাজ করে প্রতিবার ফিডব্যাক নেওয়া যায়, ফলে ভুল ধরা পড়ে আগেই এবং শুধু অগ্রাধিকারযুক্ত ফিচার বানিয়ে বাজেট সাশ্রয় করা যায়; Waterfall-এ শেষে ভুল ধরা পড়লে পুরো নকশা বদলাতে হয়।
 
 150. **মেইল করার জন্যে কোন প্রটোকল ব্যবহার করা হয়?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
 
+   answer: SMTP (Simple Mail Transfer Protocol)  
+   explanation: SMTP মেইল পাঠায় ও রিলে করে; মেইল নামিয়ে আনতে POP3 বা IMAP ব্যবহৃত হয়।
+
 151. **Cache মেমোরি কি? Cache মেমোরি কম্পিউটারের কোন অংশে আছে? Cache মেমোরি ছোটো হলে অসুবিধা কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+
+   answer: ক্যাশ হলো CPU ও RAM-এর মাঝে বসানো অতি দ্রুত SRAM মেমোরি, যা প্রসেসরের ভেতরে বা খুব কাছে থাকে  
+   explanation: বারবার লাগে এমন নির্দেশ ও ডেটা ক্যাশে রাখা হয়; ক্যাশ ছোট হলে হিট রেশিও কমে, বেশি বার ধীরগতির RAM থেকে আনতে হয় এবং প্রসেসর অপেক্ষায় বসে থেকে সামগ্রিক গতি কমে যায়।
 
 152. **নিম্নে অঙ্কিত 4x1 Multiplexer এর আউটপুট লিখুন।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 477]]*
 
@@ -1028,11 +1475,17 @@ int main() \{
    (c) কর্মবাচ্য  
    (d) কর্মকর্তৃবাচ্য
 
+   answer: b — কর্তৃবাচ্য  
+   explanation: এখানে 'অপূর্ব' কর্তা এবং ক্রিয়াটি কর্তার অনুসারী, তাই এটি কর্তৃবাচ্য।
+
 154. **কোন কবিকে 'নির্জনতার কবি' বলা হয়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
    (a) বুদ্ধদেব বসু  
    (b) বিভূতিভূষণ  
    (c) কর্মবাস  
    (d) জসিমউদ্দীন
+
+   answer: c — জীবনানন্দ দাশ (ছাপায় বিকৃত)  
+   explanation: নিঃসঙ্গতা ও প্রকৃতিমগ্নতার জন্য জীবনানন্দ দাশকে 'নির্জনতার কবি' বলা হয়।
 
 155. **নিচের কোনটি শুদ্ধ বাক্য?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
    (a) ইহার আবশ্যকতা নাই  
@@ -1040,11 +1493,17 @@ int main() \{
    (c) আমি সন্তোষ হইলাম  
    (d) তুমি নির্দোষীন
 
+   answer: a — ইহার আবশ্যকতা নাই  
+   explanation: বাকিগুলোর শুদ্ধ রূপ হবে 'ইহা প্রমাণিত হইয়াছে', 'আমি সন্তুষ্ট হইলাম' ও 'তুমি নির্দোষ'।
+
 156. **Which underlined part of the following sentence is incorrect? [ নিচের বাক্যটির কোন আন্ডারলাইন করা অংশটি ভুল? ] “I will always remember you standing by me and offering me encouragement.”** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*  
    (a) I will  
    (b) always  
    (c) remember  
    (d) standing
+
+   answer: d — standing  
+   explanation: A gerund after an object needs the possessive, so it should read "remember your standing by me".
 
 157. **If \\frac\{x\}\{y\} = \\frac\{1\}\{3\}, then the value of \\frac\{x^2+y^2\}\{x^2-y^2\} is—?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*  
    (a) -10/9  
@@ -1052,17 +1511,26 @@ int main() \{
    (c) -5/4  
    (d) -5/3
 
+   answer: c — -5/4  
+   explanation: Taking x = 1 and y = 3 gives (1+9)/(1-9) = 10/(-8) = -5/4.
+
 158. **The total number obtained by a student in Physics, Chemistry and Mathematics together is 120 more than the marks obtained by him in Chemistry. What is the average mark obtained by him in Physics and Mathematics together? [ একজন ছাত্র পদার্থবিদ্যা (Physics), রসায়ন (Chemistry) এবং গণিত (Mathematics)—এই তিন বিষয়ের মোট প্রাপ্ত নম্বর রসায়নের প্রাপ্ত নম্বরের চেয়ে ১২০ বেশি। তাহলে পদার্থবিদ্যা ও গণিত—এই দুই বিষয়ের গড় নম্বর কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*  
    (a) 40  
    (b) 60  
    (c) 120  
    (d) Cannot be determined
 
+   answer: b — 60  
+   explanation: P + C + M = C + 120 gives P + M = 120, so their average is 60.
+
 159. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?[ একজন ব্যক্তি কিছু ডিম কিনেছে, যার মধ্যে ১০% নষ্ট। অবশিষ্ট ডিমের ৮০% তিনি প্রতিবেশীদের দেয়। শেষপর্যন্ত তার কাছে ৩৬ ডিম রয়ে যায়। মোট কত ডিম তিনি কিনেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
    (a) 40  
    (b) 100  
    (c) 200  
    (d) 72
+
+   answer: c — 200  
+   explanation: 90% remain good, and 20% of those are left, so 0.9 × 0.2 × x = 36, giving x = 200.
 
 160. **The average temperature for the first 4 days of a week is 40.2°C and that of the last 4 days is 41.3°C. If the average temperature for the whole week is 40.6°C, then temperature on the fourth day is— [ সপ্তাহের প্রথম ৪ দিনের গড় তাপমাত্রা 40.2°C, শেষ ৪ দিনের গড় 41.3°C। পুরো সপ্তাহের গড় = 40.6°C। চতুর্থ দিনের তাপমাত্রা কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a)  
@@ -1074,11 +1542,17 @@ int main() \{
    (d)  
    40. 8°C
 
+   answer: b — 41.8°C  
+   explanation: The first four sum to 160.8 and the last four to 165.2, total 326.0, while the week is 7 × 40.6 = 284.2; the fourth day is counted twice, so it is 326.0 - 284.2 = 41.8°C.
+
 161. **In 1997, UNESCO declared the “Sundarban” as the?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
    (a) 798th World Heritage Site  
    (b) 997th World Heritage Site  
    (c) 879th World Heritage Site  
    (d) 789th World Heritage Site
+
+   answer: a — 798th World Heritage Site  
+   explanation: UNESCO inscribed the Sundarbans as the 798th World Heritage Site in 1997.
 
 162. **Thalassemia is a hereditary disease affecting— [ থ্যালাসেমিয়া কোন রোগকে প্রভাবিত করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
    (a) Blood  
@@ -1086,17 +1560,26 @@ int main() \{
    (c) Kidney  
    (d) Liver
 
+   answer: a — Blood  
+   explanation: Thalassaemia is an inherited disorder of haemoglobin production, so it affects the blood.
+
 163. **Who is the founder of SpaceX?[ SpaceX-এর প্রতিষ্ঠাতা কে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
    (a) Elon Musk  
    (b) Eric Yuan  
    (c) Ray Tomlinson  
    (d) Larry Page
 
+   answer: a — Elon Musk  
+   explanation: Elon Musk founded SpaceX in 2002.
+
 164. **What is the name of the data center that EU unveils to probe crimes in Ukraine?[ ইউক্রেনে অপরাধ তদন্তের জন্য কোন ডেটা সেন্টার ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
    (a) Tulip  
    (b) Metro  
    (c) Game Changer  
    (d) None of these
+
+   answer: a — Tulip  
+   explanation: The EU set up this data centre to gather and analyse evidence of international crimes committed in Ukraine. <!-- verify -->
 
 165. **In which flip-flop will be the next output?[ কোন ফ্লিপ-ফ্লপে পরবর্তী আউটপুট (Next Output) নির্ধারিত হবে? ] __D-input__
 
@@ -1114,11 +1597,17 @@ __Q = next output__
    (c) D
    (d) T
 
+   answer: c — D  
+   explanation: A D flip-flop copies its D input straight to Q on the clock edge, so the next output equals the present input.
+
 166. **Complement of a regular set is—[ একটি Regular Set-এর Complement কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
    (a) CFG  
    (b) Regular  
    (c) CSG  
    (d) None of these
+
+   answer: b — Regular  
+   explanation: Regular languages are closed under complement — swapping accepting and non-accepting states of the DFA still gives a regular set.
 
 167. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?[ ৬টি একই ধরনের Resource এবং প্রতিটি Process সর্বোচ্চ ২টি Resource চাইতে পারে—কোন N-এ Deadlock হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
    (a) 1  
@@ -1126,11 +1615,17 @@ __Q = next output__
    (c) 3  
    (d) 4
 
+   answer: N = 6 — none of the printed options  
+   explanation: Deadlock is impossible while 6 ≥ N(2-1)+1, so N up to 5 is always safe; only 6 processes each holding one resource and needing one more can deadlock. <!-- verify -->
+
 168. **A critical section is a program segment—[ ক্রিটিক্যাল সেকশন (Critical section) হলো একটি প্রোগ্রাম সেগমেন্ট— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) which should run in a certain specified amount of time  
    (b) which avoids deadlocks  
    (c) where shared resources are accessed  
    (d) where semaphore (wait and signal) operations occur
+
+   answer: c — where shared resources are accessed  
+   explanation: The critical section is the part of a program that touches shared data, and only one process may be inside it at a time.
 
 169. **Which of the following describes investigating moral conduct concerning the digital space?[ ডিজিটাল জগতের নৈতিক আচরণ নিয়ে তদন্ত বা আলোচনা করাকে নিচের কোনটি বর্ণনা করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) Cyber law  
@@ -1138,11 +1633,17 @@ __Q = next output__
    (c) Cyber ethics  
    (d) Cyber security
 
+   answer: c — Cyber ethics  
+   explanation: Cyber ethics examines right and wrong behaviour online; cyber law is the legal side and cyber security the technical one.
+
 170. **Which AI application involves teaching a computer to perform a task by example rather than through explicit programming?[ কোন AI অ্যাপ্লিকেশনটি প্রোগ্রামিংয়ের বদলে উদাহরণের মাধ্যমে কম্পিউটারকে কাজ শেখানোর সাথে জড়িত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
    (a) Supervised learning  
    (b) Reinforced learning  
    (c) Unsupervised learning  
    (d) Machine vision
+
+   answer: a — Supervised learning  
+   explanation: Supervised learning trains a model on labelled example pairs, so the machine learns from examples rather than hand-written rules.
 
 171. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?[ যদি একটি কম্পিউটার আর অ্যাক্সেস করা না যায়, তবে কোন নীতিটি লঙ্ঘিত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
    (a) Availability  
@@ -1150,11 +1651,17 @@ __Q = next output__
    (c) Confidentiality  
    (d) All of the above
 
+   answer: a — Availability  
+   explanation: Availability means authorised users can reach the system when needed, so an inaccessible computer breaks exactly that.
+
 172. **What is the process of reducing the dimensionality of data while maintaining its essential characteristics?[ ডেটার প্রয়োজনীয় বৈশিষ্ট্য বজায় রেখে এর ডাইমেনশন কমানোর প্রক্রিয়া কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) Gradient Boosting  
    (b) K-means clustering  
    (c) Principal Component Analysis  
    (d) Regression
+
+   answer: c — Principal Component Analysis  
+   explanation: PCA projects data onto a few orthogonal components that keep most of the variance, cutting dimensions while retaining the essentials.
 
 173. **If every requirement can be checked by a cost-effective process, then software requirement specification (SRS) is called—[ যদি প্রতিটি রিকয়ারমেন্ট একটি সাশ্রয়ী প্রক্রিয়ার মাধ্যমে পরীক্ষা করা যায়, তবে সেই সফটওয়্যার রিকয়ারমেন্ট স্পেসিফিকেশন (SRS)-কে বলা হয়— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) Complete  
@@ -1162,11 +1669,17 @@ __Q = next output__
    (c) Verifiable  
    (d) Modifiable
 
+   answer: c — Verifiable  
+   explanation: An SRS is verifiable when every requirement can be checked by a finite, cost-effective process such as a test or inspection.
+
 174. **Cyclomatic complexity is a software metric used in—[ সাইক্লোমেটিক কমপ্লেক্সিটি (Cyclomatic complexity) কোন ধরনের সফটওয়্যার মেট্রিক হিসেবে ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) White box testing  
    (b) Black box testing  
    (c) Grey box testing  
    (d) None of these
+
+   answer: a — White box testing  
+   explanation: Cyclomatic complexity counts the independent paths through the code, so it needs the internal structure.
 
 175. **How many select line would be there if the inputs of a MUX are 8?[ একটি MUX (Multiplexer)-এর ইনপুট সংখ্যা ৮ হলে সিলেক্ট লাইন কয়টি হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) 2  
@@ -1174,11 +1687,17 @@ __Q = next output__
    (c) 4  
    (d) 5
 
+   answer: b — 3  
+   explanation: n select lines choose among 2ⁿ inputs, and 2³ = 8.
+
 176. **A decoder has four input lines. How many output lines will be there?[ একটি ডিকোডারের চারটি ইনপুট লাইন আছে। এর আউটপুট লাইন কয়টি হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) 4  
    (b) 8  
    (c) 16  
    (d) 32
+
+   answer: c — 16  
+   explanation: A decoder activates one output per input combination, so 4 inputs give 2⁴ = 16 outputs.
 
 177. **What is the lowest number of NAND gates required to make an inverter?[ একটি ইনভার্টার (NOT Gate) তৈরি করতে সর্বনিম্ন কয়টি NAND গেট প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) 1  
@@ -1186,11 +1705,17 @@ __Q = next output__
    (c) 3  
    (d) 4
 
+   answer: a — 1  
+   explanation: Tying both inputs of one NAND gate together produces NOT A.
+
 178. **In the worst case, the number of comparisons needed to search a singly linked list of length n for a given element is—[ 'n' দৈর্ঘ্যের একটি সিংগলি লিঙ্কড লিস্টে (Singly Linked List) কোনো নির্দিষ্ট উপাদান খোঁজার জন্য ওর্স্ট কেসে (Worst case) কতটি তুলনার প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) \\log_2 n  
    (b) n/2  
    (c) n  
    (d) \\log(2^\{\*n\}) - 1
+
+   answer: c — n  
+   explanation: A linked list can only be searched sequentially, so in the worst case all n nodes are compared.
 
 179. **Given a hash table with 25 slots that stores 2000 elements, the load factor for the hash table is—[ একটি হ্যাশ টেবিলে ২৫টি স্লট আছে এবং এতে ২০০০টি এলিমেন্ট জমা রাখা হয়। ওই হ্যাশ টেবিলের লোড ফ্যাক্টর (Load factor) কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a)  
@@ -1200,11 +1725,17 @@ __Q = next output__
    (c) 80  
    (d) 8000
 
+   answer: c — 80  
+   explanation: Load factor is elements divided by slots: 2000 ÷ 25 = 80.
+
 180. **Which of the following symbol table implementation is best suited if access time is to be minimum?[ যদি অ্যাক্সেস টাইম সর্বনিম্ন করতে হয়, তবে সিম্বল টেবিল (Symbol table) ইমপ্লিমেন্টেশনের জন্য কোনটি সবচেয়ে উপযুক্ত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
    (a) Linear list  
    (b) Linked list  
    (c) Hash table  
    (d) Self-organizing list
+
+   answer: c — Hash table  
+   explanation: A hash function computes the slot directly, giving average O(1) access.
 
 181. **If attribute A determines both attributes B and C then, it is also true that—[ যদি অ্যাট্রিবিউট A, B এবং C উভয়কেই নির্ধারণ (Determine) করে, তবে নিচের কোনটি সত্য? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) A \\to B  
@@ -1213,11 +1744,17 @@ __Q = next output__
    (d)  
    (BC) \\to A
 
+   answer: a — A → B  
+   explanation: If A determines both B and C then A→B and A→C each hold; the reverse directions do not follow.
+
 182. **If a table is normalized so that all its determinants are candidate keys then, the table is in—[ যদি একটি টেবিল এমনভাবে নরম্যালাইজ করা হয় যাতে তার সমস্ত ডিটারমিন্যান্ট (Determinant) ক্যান্ডিডেট কী (Candidate key) হয়, তবে টেবিলটি কোন ফর্মে আছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) 1NF  
    (b) 2NF  
    (c) 3NF  
    (d) BCNF
+
+   answer: d — BCNF  
+   explanation: Boyce-Codd Normal Form is exactly the condition that every determinant is a candidate key.
 
 183. **Which statements are used to create the database structure?[ ডাটাবেজের গঠন বা কাঠামো (Structure) তৈরি করতে কোন স্টেটমেন্টগুলো ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) DML  
@@ -1225,17 +1762,26 @@ __Q = next output__
    (c) BNF  
    (d) None of these
 
+   answer: b — DDL  
+   explanation: Data Definition Language statements such as CREATE and ALTER build the structure of the database.
+
 184. **Which of the following is not a DDL statement?[ নিচের কোনটি একটি DDL স্টেটমেন্ট নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) Create  
    (b) Alter  
    (c) Drop  
    (d) Select
 
+   answer: d — Select  
+   explanation: SELECT reads data and belongs to DML/DQL; CREATE, ALTER and DROP are DDL.
+
 185. **Which one of these is not included in ACID property of database?[ নিচের কোনটি ডাটাবেজের ACID প্রোপার্টির অন্তর্ভুক্ত নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Atomicity  
    (b) Consistency  
    (c) Display  
    (d) Durability
+
+   answer: c — Display  
+   explanation: ACID stands for Atomicity, Consistency, Isolation and Durability.
 
 186. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int x = 20, y = 10, z = 5;
 
@@ -1246,6 +1792,9 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (b) 0
    (c) 10
    (d) 20
+
+   answer: b — 0  
+   explanation: > is left-associative, so x>y>z becomes (20>10)>5 = 1>5 = 0.
 
 187. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
 
@@ -1264,6 +1813,9 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (b) multi is printed infinitely
    (c) multi is printed twice
    (d) multi is printed thrice
+
+    answer: d — multi is printed thrice  
+    explanation: k takes the values 0.0, 1.0 and 2.0 before 3.0 fails the test, so the body runs three times.
 
 188. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int i, j, count;
 
@@ -1285,11 +1837,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 10
    (d) 25
 
+   answer: 10  
+   explanation: The inner loop runs i times for each i, so the total is 0+1+2+3+4 = 10.
+
 189. **Which of the operation is illegible in Push Down Automate?[ পুশ ডাউন অটোমেটা (Push Down Automata) এর ক্ষেত্রে কোন অপারেশনটি বৈধ (Legible)? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 510]]*  
    (a) Delete  
    (b) Push  
    (c) Insert  
    (d) None of these
+
+   answer: b — Push  
+   explanation: A pushdown automaton works on a stack, so the legal operations are push and pop.
 
 190. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
 
@@ -1307,6 +1865,9 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) k, Q
    (d) Q, k
 
+    answer: a — 107, Q  
+    explanation: Both are printed with %d here, so x prints as 107 and the char 'Q' prints as its ASCII code 81; the intended key pairs the values with their %c/%d forms.
+
 191. **What will be the output of the following C code?[ নিচের ৩ডি অ্যারে কোডটির আউটপুট কী হবে? ] int data[2][3][2] = \{0,1,2,3,4,5,6,7,8,9,10,11\};
 
 int i=0, j=2, k=1;
@@ -1318,6 +1879,9 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (b) 5
    (c) 6
    (d) 11
+
+   answer: b — 5  
+   explanation: The flat index is i×3×2 + j×2 + k = 0 + 4 + 1 = 5, and the initialiser puts 5 there.
 
 192. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
 
@@ -1333,17 +1897,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 6
    (d) 11
 
+    answer: d — 11  
+    explanation: 11 is 1011 and 3 is 0011, so bitwise OR gives 1011 = 11.
+
 193. **An unsolicited e-mail message sent to many recipients at once is a—[ একসাথে অনেক প্রাপককে পাঠানো অনাকাঙ্ক্ষিত ইমেইল বার্তাকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
    (a) worm  
    (b) virus  
    (c) spam  
    (d) dump
 
+   answer: c — spam  
+   explanation: Spam is unsolicited bulk email sent to many recipients at once.
+
 194. **Read the following statement in a Java program that compiles and executes: submarine.dive(depth); What can you say for sure?[ জাভা প্রোগ্রামের submarine.dive(depth); স্টেটমেন্টটি থেকে আপনি নিশ্চিতভাবে কী বলতে পারেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
    (a) depth must be an int  
    (b) dive must be the name of an instance field  
    (c) dive must be a method  
    (d) submarine must be the name of a class
+
+   answer: c — dive must be a method  
+   explanation: The parentheses after dive make it a method call; submarine could be a variable or a class, and depth could be any type the method accepts.
 
 ## Bangladesh Affairs (171)
 

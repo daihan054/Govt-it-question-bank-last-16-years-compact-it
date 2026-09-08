@@ -15,3 +15,6 @@ microprocessor-and-computer-architecture.md :: RAID & Storage Architecture (5) :
 ms-office.md :: MS Office & Shortcuts (4) :: q1 — the source does not say which Linux/Unix commands are being asked for, so the question is incomplete
 bangla.md :: বাংলা ব্যাকরণ (167) :: q39 — প্রশ্নের সঙ্গে কোনো অপশন সূত্রে নেই, তাই উত্তর নির্ধারণ করা যাচ্ছে না
 english.md :: English Grammar (168) :: q11 — the underlined parts are missing from the source, so the incorrect one cannot be identified
+gk.md :: Everyday Science (194) :: q152 — the 4x1 multiplexer diagram is missing from the source, so its output cannot be written
+gk.md :: Everyday Science (194) :: q124 — the graph for the shortest path problem is missing from the source
+gk.md :: Everyday Science (194) :: q121 — the question is printed as the single word "Query" with no table or requirement, so nothing can be answered

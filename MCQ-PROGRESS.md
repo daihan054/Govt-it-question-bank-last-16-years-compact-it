@@ -2,9 +2,9 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 139 / 160 done**  ·  **Questions: 2281 answered, 17 skipped, 3039 total**
+**Subtopics: 140 / 160 done**  ·  **Questions: 2472 answered, 20 skipped, 3039 total**
 
-Next up: `gk.md` — Everyday Science (194)
+Next up: `gk.md` — Bangladesh Affairs (171)
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -22,7 +22,7 @@ Next up: `gk.md` — Everyday Science (194)
 | `dld.md` | IT | 6 / 6 | 75 | 4 | 79 |
 | `electrical-and-electronics.md` | IT | 4 / 4 | 114 | 2 | 116 |
 | `english.md` | General | 5 / 5 | 285 | 1 | 286 |
-| `gk.md` | General | 0 / 6 | 0 | 0 | 555 |
+| `gk.md` | General | 1 / 6 | 191 | 3 | 555 |
 | `math.md` | General | 0 / 15 | 0 | 0 | 186 |
 | `mechanical-engineering.md` | IT | 7 / 7 | 37 | 1 | 38 |
 | `microprocessor-and-computer-architecture.md` | IT | 5 / 5 | 84 | 1 | 85 |
@@ -35,4 +35,4 @@ Next up: `gk.md` — Everyday Science (194)
 
 ## Skipped questions
 
-17 incomplete questions skipped.
+20 incomplete questions skipped.
