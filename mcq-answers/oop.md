@@ -917,11 +917,17 @@
 1. **The statements that allows you to define a block of code to be tested for exceptions while it is being executed.** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Try-cache
 
+   answer: try-catch  
+   explanation: The try block holds the code being watched and the catch block receives any exception it throws.
+
 2. **The ________ block used to execute a given set of the statement whether the exception is thrown or not.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
    a) try  
    b) tryif  
    c) finally  
    d) thrown
+
+   answer: c — finally  
+   explanation: The finally block always runs, whether or not an exception occurred, so it is used for cleanup such as closing files.
 
 3. **Java uses a keyword ________ to preface a block of code that is likely to cause an error condition and ‘throw’ an exception.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
    a) throw  
@@ -929,11 +935,17 @@
    c) finally  
    d) try
 
+   answer: d — try  
+   explanation: Code that might fail is wrapped in try, and the matching catch handles the exception thrown from it.
+
 4. **Which of the following method(s) not included in InputStream class?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
    a) available()  
    b) reset()  
    c) flush()  
    d) close()
+
+   answer: c — flush()  
+   explanation: flush() belongs to OutputStream since it pushes buffered data out; available(), reset() and close() are InputStream methods.
 
 5. **Which alternative can replace the throw statement in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) for  
@@ -941,8 +953,14 @@
    C) return  
    D) exit
 
+   answer: C — return  
+   explanation: Instead of throwing, a function can return an error status to the caller and let it decide what to do.
+
 6. **Why do you need to handle exceptions?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) To prevent abnormal termination of program  
    B) To encourage exception prone program  
    C) To avoid syntax errors  
    D) To save memory
+
+   answer: A — To prevent abnormal termination of program  
+   explanation: Catching an exception lets the program recover or fail gracefully rather than crashing.
