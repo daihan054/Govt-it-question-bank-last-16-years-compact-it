@@ -190,17 +190,26 @@
    c) .wav  
    d) All of the above
 
+   answer: d — All of the above  
+   explanation: A slide can hold JPEG and GIF images as well as WAV sound files.
+
 2. **Which shortcut key on the keyboard can be used to view slide show?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
    a) F1  
    b) F7  
    c) F5  
    d) F12
 
+   answer: c — F5  
+   explanation: F5 starts the slide show from the first slide; Shift+F5 starts from the current one.
+
 3. **What is term used when you press and hold the left mouse key and move the mouse round the slide?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
    a. Highlighting  
    b. Dragging  
    c. Selecting  
    d. Moving
+
+   answer: b — Dragging  
+   explanation: Holding the left mouse button while moving the pointer is called dragging.
 
 ## MS Access (1)
 
