@@ -19,6 +19,9 @@
    c) python  
    d) run python
 
+   answer: c — python  
+   explanation: Typing python (or python3) at the shell prompt starts the interactive interpreter.
+
 2. **What is the output of the following code?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*
    ```python
    print 9//2
@@ -28,11 +31,17 @@
    (c) 4  
    (d) Error
 
+   answer: c — 4  
+   explanation: // is floor division, so 9//2 gives the integer 4 (the print without parentheses is Python 2 syntax).
+
 3. **Which of the following languages causes ‘Indentation Errors’ for not using tabs properly?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 180 (ET: N/A)]*  
    a) JavaScript  
    b) Python  
    c) Java  
    d) Ruby
+
+   answer: b — Python  
+   explanation: Python uses indentation to delimit blocks, so mixing tabs and spaces raises an IndentationError.
 
 4. **Which following code syntax shows a valid use of curly braces ‘{}’ in python?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*  
    a) A={'one':1, 'two':2}  
@@ -40,11 +49,17 @@
    c) A= {range(6)}  
    d) B={A=5}
 
+   answer: a — A={'one':1, 'two':2}  
+   explanation: Braces build a dict of key:value pairs (or a set); Python uses indentation, not braces, for blocks.
+
 5. **If List= [1,2,3,4,5] and write List[3] = List[1] then what will be List[3]?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
    a) 1  
    b) 3  
    c) 2  
    d) 4
+
+   answer: c — 2  
+   explanation: List[1] is 2, so assigning it to List[3] makes that element 2.
 
 6. **In programming language DRY principle makes the code.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
    a) reusable  
@@ -52,11 +67,17 @@
    c) repetitive  
    d) complex
 
+   answer: a — reusable  
+   explanation: Don't Repeat Yourself means each piece of knowledge lives in one place, so code is factored into reusable pieces.
+
 7. **Which of the following function converts a string into float in Python?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) int (x [, base])  
    B) float(x)  
    C) long (x [, base])  
    D) str(x)
+
+   answer: B — float(x)  
+   explanation: float("3.14") converts the string to the floating-point number 3.14.
 
 8. **What is the output of following code? print 9//2** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) 4  
@@ -64,17 +85,26 @@
    C) 4.5  
    D) Error
 
+   answer: A — 4  
+   explanation: Floor division of two integers gives an integer, so 9//2 is 4.
+
 9. **Which of these is not a core data type?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) Lists  
    B) Dictionary  
    C) Class  
    D) Tuples+95
 
+   answer: C — Class  
+   explanation: Lists, dictionaries and tuples are built-in core data types; a class is a user-defined construct.
+
 10. **What are the values of the following expressions? 2** (3**2), (2**3) **2, 2**3**2** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
    A) 64, 512, 64  
    B) 64, 64, 64  
    C) 512, 512, 512  
    D) 512, 64, 512
+
+   answer: D — 512, 64, 512  
+   explanation: ** is right-associative, so 2**(3**2) and 2**3**2 both give 2⁹ = 512, while (2**3)**2 is 8² = 64.
 
 ## Mobile & Android Development (7)
 
