@@ -206,11 +206,17 @@
    (c) SHA  
    (d) All of the above
 
+   answer: d — All of the above  
+   explanation: Secure email (PGP and S/MIME) uses AES for the message body, RSA for the key exchange and signature, and SHA to hash the content.
+
 2. **Digital Signature uses which algorithm?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*  
    (a) AES  
    (b) RSA  
    (c) DES  
    (d) Diffie-Hellman
+
+   answer: b — RSA  
+   explanation: The sender signs the message hash with the RSA private key and the receiver verifies it with the matching public key.
 
 3. **Digital signature uses which algorithm for encryption?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxii (ET: DU)]*  
    (a) Symmetric Key Algorithm  
@@ -218,11 +224,17 @@
    (c) Hashing Algorithm only  
    (d) Stream Ciphe
 
+   answer: b — Asymmetric Key Algorithm  
+   explanation: Signing uses a key pair — the private key creates the signature and the public key verifies it — which is asymmetric cryptography.
+
 4. **In cryptography, RSA is-** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*  
    (ক) Symmetric key based  
    (খ) Block-chain based  
    (গ) Asymmetric key based  
    (ঘ) None
+
+   answer: গ — Asymmetric key based  
+   explanation: RSA uses a public key to encrypt and a different private key to decrypt, so it is a public-key (asymmetric) algorithm.
 
 5. **Which one is an encryption function?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) c=E(M,K)  
@@ -230,11 +242,17 @@
    (গ) e=E(M)  
    (ঘ) None
 
+   answer: ক — c=E(M,K)  
+   explanation: Encryption takes the plaintext M and key K and produces the ciphertext c, which is exactly c = E(M,K).
+
 6. **In an asymmetric key encryption process, the key used to encrypt the data is known as a-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
    a) Private key  
    b) Encryption key  
    c) Public key  
    d) Modulation key
+
+   answer: c — Public key  
+   explanation: In public-key cryptography the sender encrypts with the receiver's freely published public key, and only the matching private key can decrypt.
 
 7. **Which of the following statements is false with respect to SSL?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*  
    (a) Secure Sockets Layer (SSL) is a security protocol that provides privacy, authentication, and integrity to Internet communications  
@@ -242,11 +260,17 @@
    (c) SSL's final version was SSL 4.0  
    (d) None of the above statements is false
 
+   answer: c — SSL's final version was SSL 4.0  
+   explanation: SSL stopped at version 3.0 and was then replaced by TLS; there was never an SSL 4.0.
+
 8. **In the ____ protocol, the symmetric key is K= G^{xy} \pmod N, where G and N are public numbers.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
    (a) Needham-Schroeder  
    (b) Otway-Rees  
    (c) Diffie-Hellman  
    (d) Kerberos
+
+   answer: c — Diffie-Hellman  
+   explanation: Diffie-Hellman key exchange lets both sides compute the shared secret G^xy mod N from public values G and N without ever sending it.
 
 9. **Which one of the following is false with respect to cryptography?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) A symmetric key system uses only the private key  
@@ -254,11 +278,17 @@
    (c) An Asymmetric key system is used as a Public Key Infrastructure, or PKI for sho  
    (d) None of the above statements is false
 
+   answer: d — None of the above statements is false  
+   explanation: A symmetric system works from one shared secret key, an asymmetric system uses a public and a private key, and PKI is built on asymmetric keys — all three statements hold.
+
 10. **Laili digitally signs a message and sends it to Mojnu. Verification of the signature by Mojnu requires-** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*  
    a. Laili's public key  
    b. Mojnu's public key  
    c. Mojnu's private key  
    d. Laili's private key
+
+   answer: a — Laili's public key  
+   explanation: The signature was made with Laili's private key, so only her public key can verify it, which also proves it came from her.
 
 11. **“Concurrent two-factor identity verification” is a biometric identification system that would requires ________.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. finger print and national identity  
@@ -266,11 +296,17 @@
    c. eye sightedness and blood sample  
    d. facial identity and facial motion
 
+   answer: d — facial identity and facial motion  
+   explanation: Concurrent two-factor identity verification captures who the face belongs to and how it moves at the same moment, so a photograph cannot fool it.
+
 12. **Which of the following is the role of Certification Authority (CA) in electronic commerce using public key encryption?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
    a) To manage a private key shared among the parties to the transaction.  
    b) To manage digital signatures of the parties to the transaction  
    c) To manage the passwords of the parties to the transaction  
    d) To issue a digital certificate for the public key of the parties to the transaction
+
+   answer: d — To issue a digital certificate for the public key of the parties to the transaction  
+   explanation: A CA vouches for the binding between an identity and its public key by signing a digital certificate.
 
 13. **What is/are the main operation of SSL/TLS?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 176 (ET: N/A)]*  
    a) Encrypt packet in Data Link Layer  
@@ -278,11 +314,17 @@
    c) Ensure data security in Transport Layer  
    d) All of above
 
+   answer: c — Ensure data security in Transport Layer  
+   explanation: SSL/TLS sits above TCP and gives encryption, authentication and integrity to the data carried over that connection.
+
 14. **In a Vigenere cipher, plaintext is *mypassword* and key is *stream*. What is the cipher text?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*  
    a) d q edrdnfgf  
    b) e r g e s e o h i h  
    c) pm g pkpizoz  
    d) f s h f t f p i j i
+
+   answer: b — e r g e s e o h i h  
+   explanation: Adding the repeated key stream(s,t,r,e,a,m,s,t,r,e) to mypassword letter by letter modulo 26 gives e-r-g-e-s-e-o-h-i-h.
 
 15. **Digital signature is a cryptographic method that ensures-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*  
    a) Data confidentiality, integrity, availability  
@@ -290,17 +332,26 @@
    c) Data privacy, integrity, accessibility  
    d) Data privacy, integrity, approachability
 
+   answer: b — Data integrity, authentication, non-repudiation  
+   explanation: A signature shows the message was not altered, proves who sent it, and stops the sender denying it later; it does not hide the content.
+
 16. **Which of the followings is not a data encryption algorithm?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*  
    a) MD5  
    b) SHA1  
    c) RSA  
    d) AES
 
+   answer: a — MD5  
+   explanation: MD5 is a one-way hash function producing a fixed digest, not encryption, since it cannot be reversed; SHA1 is also a hash, so the option set is loose.
+
 17. **The transformation of a message into an encoded from is known as ________** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) Memories  
    B) Encoding  
    C) Decoding  
    D) None of them
+
+   answer: B — Encoding  
+   explanation: Encoding converts a message into a coded form using a defined scheme.
 
 ## Security Protocols (9)
 
