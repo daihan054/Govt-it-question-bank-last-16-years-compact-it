@@ -4563,11 +4563,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Persian Gulf and Black Sea  
    (d) Black Sea and Arabian Sea
 
+   answer: b — Mediterranean Sea and Red Sea  
+   explanation: The Suez Canal in Egypt links the Mediterranean with the Red Sea, cutting out the voyage round Africa.
+
 2. **দুই নদীর মধ্যবর্তী ভূমিকে কি বলে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. মোহনা  
    খ. দ্বীপ  
    গ. ক্বীপ  
    ঘ. দোয়াব
+
+   answer: ঘ — দোয়াব  
+   explanation: দুই নদীর মধ্যবর্তী ভূমিকে দোয়াব বলে (ফারসি 'দো' = দুই, 'আব' = পানি)।
 
 3. **বিশ্বের উচ্চতম জলপ্রপাত কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. নায়াগ্রা  
@@ -4575,11 +4581,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. টুভেলু  
    ঘ. অ্যাঙ্গেল
 
+   answer: ঘ — অ্যাঙ্গেল  
+   explanation: ভেনেজুয়েলার অ্যাঞ্জেল জলপ্রপাত প্রায় ৯৭৯ মিটার উঁচু, যা বিশ্বের সর্বোচ্চ।
+
 4. **এশিয়া মহাদেশের সবচেয়ে ছোট দেশ কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 6 (ET: BUET)]*  
    ক. মালদ্বীপ  
    খ. কুয়েত  
    গ. ভুটান  
    ঘ. ব্রুনাই
+
+   answer: ক — মালদ্বীপ  
+   explanation: আয়তনে মাত্র ৩০০ বর্গকিমির মালদ্বীপ এশিয়ার ক্ষুদ্রতম দেশ।
 
 5. **শীতল মরুভূমি কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 6 (ET: BUET)]*  
    ক. সাহারা  
@@ -4587,11 +4599,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. লাব আলখালি  
    ঘ. লাদাখ
 
+   answer: ঘ — লাদাখ  
+   explanation: লাদাখ উচ্চ উচ্চতার শীতল মরুভূমি, যেখানে বৃষ্টিপাত খুব কম কিন্তু তাপমাত্রাও কম।
+
 6. **পৃথিবীর সর্বাধিক দ্বীপপুঞ্জের দেশ কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 6 (ET: BUET)]*  
    ক. ইন্দোনেশিয়া  
    খ. মালদ্বীপ  
    গ. ফিলিপাইন  
    ঘ. জাপান
+
+   answer: ক — ইন্দোনেশিয়া  
+   explanation: ইন্দোনেশিয়ায় ১৭ হাজারের বেশি দ্বীপ রয়েছে, যা বিশ্বের সর্বাধিক।
 
 7. **The highest densely populated country of the world is –** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) Bangladesh  
@@ -4599,11 +4617,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Monaco  
    (d) Indonesia
 
+   answer: c — Monaco  
+   explanation: Monaco packs over 19,000 people into each square kilometre, the highest density of any country.
+
 8. **Which of the following ecosystem covers the largest area of the earth's surface?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) Desert Ecosystem  
    (b) Grassland Ecosystem  
    (c) Mountain Ecosystem  
    (d) Marine Ecosystem
+
+   answer: d — Marine Ecosystem  
+   explanation: Oceans cover about 71% of the earth's surface, far more than any land ecosystem.
 
 9. **পেনাং কোন দেশের সমুদ্রবন্দর?** *[NPCBL Executive Trainee (Software) 2023 compact it 37 (ET: N/A)]*  
    (a) ইন্দোনেশিয়া  
@@ -4611,7 +4635,13 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) তাইওয়ান  
    (d) ফিলিপাইন
 
+   answer: b — মালয়েশিয়া  
+   explanation: পেনাং মালয়েশিয়ার একটি দ্বীপ ও গুরুত্বপূর্ণ সমুদ্রবন্দর।
+
 10. **সমুদ্র স্রোত সৃষ্টির প্রধান কারণ কি?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*
+
+   answer: নিয়ত বায়ুপ্রবাহ  
+   explanation: বায়ু সমুদ্রপৃষ্ঠে ঘর্ষণ সৃষ্টি করে পানিকে টেনে নেয়; সঙ্গে তাপমাত্রা-লবণাক্ততার তারতম্য ও পৃথিবীর আবর্তন স্রোতের দিক নির্ধারণে সাহায্য করে।
 
 11. **সুয়েজ খাল কোন কোন মহাদেশকে বিভক্ত করেছে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) এশিয়া ও অস্ট্রেলিয়া  
@@ -4619,11 +4649,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) ইউরোপ ও আমেরিকা  
    d) এশিয়া ও আফ্রিকা
 
+   answer: d — এশিয়া ও আফ্রিকা  
+   explanation: সুয়েজ খাল সিনাই উপদ্বীপের পাশ দিয়ে এশিয়া ও আফ্রিকাকে পৃথক করেছে।
+
 12. **পৃথিবীর সর্ববৃহৎ প্রবাল প্রাচীর কোনটি?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) গ্রেট ব্যারিয়ার রিফ  
    b) আমাজান রিফ  
    c) আমেরিকান রিফ  
    d) মেক্সিকো রিফ
+
+   answer: a — গ্রেট ব্যারিয়ার রিফ  
+   explanation: অস্ট্রেলিয়ার উপকূলে অবস্থিত গ্রেট ব্যারিয়ার রিফ বিশ্বের বৃহত্তম প্রবাল প্রাচীর।
 
 13. **আমাজন বনের মোট আয়তনের ৬০% কোন দেশে অবস্থিত?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) আর্জেন্টিনা  
@@ -4631,11 +4667,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) পেরু  
    d) ব্রাজিল
 
+   answer: d — ব্রাজিল  
+   explanation: আমাজন বনের প্রায় ৬০ শতাংশই ব্রাজিলের ভূখণ্ডে।
+
 14. **পৃথিবীর বর্তমান জনসংখ্যা কত?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) প্রায় ৭০০ কোটি  
    b) প্রায় ৬০০ কোটি  
    c) প্রায় ৯০০ কোটি  
    d) প্রায় ৮০০ কোটি
+
+   answer: d — প্রায় ৮০০ কোটি  
+   explanation: ২০২২ সালের নভেম্বরে বিশ্বের জনসংখ্যা ৮০০ কোটি ছাড়িয়ে যায়।
 
 15. **এশিয়ার দীর্ঘতম নদী কোনটি?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) হোয়াংহো  
@@ -4644,12 +4686,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) সিন্ধু  
    **উত্তর: খ**
 
+   answer: খ — ইয়াংসিকিয়াং  
+   explanation: চীনের ইয়াংসি নদী প্রায় ৬,৩০০ কিমি দীর্ঘ, এশিয়ার দীর্ঘতম।
+
 16. **কোন রেখার উপর সূর্য সারা বছর লম্বভাবে কিরণ দেয়?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) মেরু রেখা  
    (খ) নিরক্ষ রেখা  
    (গ) অক্ষ রেখা  
    (ঘ) দ্রাঘিমা রেখা  
    **উত্তর: খ**
+
+   answer: খ — নিরক্ষ রেখা  
+   explanation: নিরক্ষরেখা অঞ্চলে সূর্যরশ্মি বছরজুড়ে প্রায় লম্বভাবে পড়ে, তাই সেখানে তাপ সবচেয়ে বেশি।
 
 17. **Green House কথাটি প্রথম ব্যবহৃত হয় কোন সালে?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) ১৯৬৬  
@@ -4658,11 +4706,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) ১৯৫০  
    **উত্তর: খ**
 
+   answer: খ — ১৮৯৬  
+   explanation: ১৮৯৬ সালে সোয়ান্তে আরহেনিয়াস প্রথম গ্রিনহাউস প্রভাবের ধারণা ব্যাখ্যা করেন।
+
 18. **পৃথিবীর ক্ষুদ্রতম মহাদেশ কোনটি?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) ওশেনিয়া  
    (খ) আফ্রিকা  
    (গ) উত্তর আমেরিকা  
    (ঘ) ইউরোপ
+
+   answer: ক — ওশেনিয়া  
+   explanation: আয়তনে ওশেনিয়া পৃথিবীর ক্ষুদ্রতম মহাদেশ।
 
 19. **গ্রিনিচমান সময়ের সঙ্গে বাংলাদেশের সময়ের পার্থক্য কত ঘণ্টা?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*  
    (ক) ৪ ঘণ্টা  
@@ -4671,6 +4725,9 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) ৫ ঘণ্টা  
    **Ans: খ**
 
+   answer: খ — ৬ ঘণ্টা  
+   explanation: বাংলাদেশ মান সময় গ্রিনিচ মান সময়ের চেয়ে ৬ ঘণ্টা এগিয়ে (GMT+6)।
+
 20. **Which of the following countries is the largest emitter of \text{CO}_2?** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)]*  
    (a) France  
    (b) USA  
@@ -4678,11 +4735,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) China  
    **Ans: d**
 
+   answer: d — China  
+   explanation: China emits more carbon dioxide than any other country, largely from coal-fired power.
+
 21. **সলোমন দ্বীপপুঞ্জ কোন মহাসাগরে অবস্থিত?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) ভারত মহাসাগর  
    b) প্রশান্ত মহাসাগর  
    c) অ্যাটলান্টিক মহাসাগর  
    d) আকটিক মহাসাগর
+
+   answer: b — প্রশান্ত মহাসাগর  
+   explanation: সলোমন দ্বীপপুঞ্জ দক্ষিণ-পশ্চিম প্রশান্ত মহাসাগরে অবস্থিত।
 
 22. **Niagara Falls is located in** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 137 (ET: BUET)]*  
    a) South America  
@@ -4690,11 +4753,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Australia  
    d) North America
 
+   answer: d — North America  
+   explanation: Niagara Falls lies on the border between the United States and Canada.
+
 23. **The biggest desert of the world is** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
    a) Great Victoria Desert  
    b) Sahara Desert  
    c) Kalahari Desert  
    d) Tabernas Desert
+
+   answer: b — Sahara Desert  
+   explanation: The Sahara is the world's largest hot desert, covering about 9.2 million square kilometres of North Africa.
 
 24. **The city which is known as the city of Culture is** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
    a) Rome  
@@ -4702,17 +4771,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Athens  
    d) London
 
+   answer: b — Paris  
+   explanation: Paris, with its museums, art and architecture, is widely called the city of culture (and of light). <!-- verify -->
+
 25. **Dead sea is a ________** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Sea  
    b. River  
    c. Lake  
    d. Canal
 
+   answer: c — Lake  
+   explanation: The Dead Sea is a landlocked salt lake between Israel and Jordan, not a sea.
+
 26. **In the which sea would you find the Great Barrier Reef?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) Coral Sea  
    (b) Black Sea  
    (c) Aral Sea  
    (d) Dead Sea
+
+   answer: a — Coral Sea  
+   explanation: The Great Barrier Reef lies in the Coral Sea off the coast of Queensland, Australia.
 
 ## Power Sector & Energy (Bangladesh) (25)
 1. **ইজিসিবি'র মোট বিদ্যুৎ ক্ষমতা প্রায় কত মেগাওয়াট (প্রায়)?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 63 (ET: BUET)]*  

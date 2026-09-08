@@ -2,9 +2,9 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 142 / 160 done**  ·  **Questions: 2762 answered, 20 skipped, 3039 total**
+**Subtopics: 143 / 160 done**  ·  **Questions: 2788 answered, 20 skipped, 3039 total**
 
-Next up: `gk.md` — Geography & Environment (26)
+Next up: `gk.md` — Power Sector & Energy (Bangladesh) (25)
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -22,7 +22,7 @@ Next up: `gk.md` — Geography & Environment (26)
 | `dld.md` | IT | 6 / 6 | 75 | 4 | 79 |
 | `electrical-and-electronics.md` | IT | 4 / 4 | 114 | 2 | 116 |
 | `english.md` | General | 5 / 5 | 285 | 1 | 286 |
-| `gk.md` | General | 3 / 6 | 481 | 3 | 555 |
+| `gk.md` | General | 4 / 6 | 507 | 3 | 555 |
 | `math.md` | General | 0 / 15 | 0 | 0 | 186 |
 | `mechanical-engineering.md` | IT | 7 / 7 | 37 | 1 | 38 |
 | `microprocessor-and-computer-architecture.md` | IT | 5 / 5 | 84 | 1 | 85 |
