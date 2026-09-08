@@ -428,11 +428,17 @@
    (c) Internal Server Error  
    (d) Not Found
 
+   answer: c — Internal Server Error  
+   explanation: 5xx codes mean the server failed; 500 is the generic internal server error, while 400 is Bad Request, 401 Unauthorized and 404 Not Found.
+
 2. **When we browse internet, browser store some data in the computer. We are talking about-** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)]*  
    a. Session  
    b. File  
    c. Memory  
    d. Cookie
+
+   answer: d — Cookie  
+   explanation: A cookie is a small text file the site stores on the client so it can recognise the user on later visits.
 
 3. **While browsing, internet browser stores some data in the computer. Which is called by?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) Session  
@@ -440,17 +446,26 @@
    C) Memory  
    D) Cookie
 
+   answer: D — Cookie  
+   explanation: Cookies hold session and preference data on the visitor's own machine.
+
 4. **Programs that is automatically loaded and operates as a part of browser ----** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*  
    A) Plug in  
    B) Add ones  
    C) Widgets  
    D) Utilities
 
+   answer: A — Plug in  
+   explanation: A plug-in loads with the browser and extends it to handle content the browser cannot render on its own.
+
 5. **Which of the following statements is true regarding Cookies?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
    A) It is stored in web-client  
    B) It is stored in server  
    C) Each browsing time cookies become reset  
    D) It is client-side program
+
+   answer: A — It is stored in web-client  
+   explanation: Cookies are saved on the user's own machine by the browser and sent back to the server with each request; they are data, not programs.
 
 ## CSS & Styling (1)
 
