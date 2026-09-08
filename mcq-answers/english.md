@@ -1536,11 +1536,17 @@
    গ. Obscure  
    ঘ. Immature
 
+   answer: গ — Obscure  
+   explanation: "Obscure" means little known, the opposite of famous.
+
 2. **What is the synonym of 'bona fide'?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. Cheat  
    খ. Authentic  
    গ. Contaminate  
    ঘ. Adulterate
+
+   answer: খ — Authentic  
+   explanation: "Bona fide" is Latin for "in good faith", meaning genuine or authentic.
 
 3. **The word 'precedence' means.** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. example  
@@ -1548,11 +1554,17 @@
    গ. importance  
    ঘ. none
 
+   answer: খ — priority  
+   explanation: Precedence means the right to come before others in order or importance.
+
 4. **What does "Epistemology" mean?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 9 (ET: BIBM)]*  
    a) Epistemology is the branch of philosophy concerned with knowledge  
    b) The study of the nature and scope of knowledge.  
    c) The study of human behavior and cognition.  
    d) The study of moral principles and values.
+
+   answer: a — Epistemology is the branch of philosophy concerned with knowledge  
+   explanation: Epistemology asks what knowledge is, how it is acquired and how far it extends (option b states the same idea).
 
 5. **What is the antonym of 'transparent'?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 9 (ET: BIBM)]*  
    a) Transform  
@@ -1560,11 +1572,17 @@
    c) Pure  
    d) Hazy
 
+   answer: d — Hazy  
+   explanation: Transparent means clear enough to see through, so "hazy" is its opposite.
+
 6. **Which of the following resembles OATH: PROMISE?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) Contract: Agreement  
    (b) Deed: Attorney  
    (c) Title: Estate  
    (d) Job: Loyalty
+
+   answer: a — Contract: Agreement  
+   explanation: An oath is a formal kind of promise, just as a contract is a formal kind of agreement.
 
 7. **Which of the following is the opposite of the word INGENIOUS?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) Crafty  
@@ -1572,11 +1590,17 @@
    (c) Incompetent  
    (d) Skillful
 
+   answer: c — Incompetent  
+   explanation: Ingenious means clever and inventive, so incompetent is its opposite.
+
 8. **The synonym of ENIGMA is** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) Obstruction  
    (b) Nonsense  
    (c) Flaw  
    (d) Puzzle
+
+   answer: d — Puzzle  
+   explanation: An enigma is something mysterious and hard to understand — a puzzle.
 
 9. **Antonym of word ‘Stiff’** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*  
    (a) rigid  
@@ -1584,18 +1608,36 @@
    (c) flexible  
    (d) inflexible
 
+   answer: c — flexible  
+   explanation: Stiff means rigid and unbending, so flexible is the opposite.
+
 10. **Write is related to reader in the same way as producer is related to ______** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** Consumer
+
+   answer: Consumer  
+   explanation: A writer produces for a reader just as a producer produces for a consumer.
 
 11. **Nearest meaning of ‘AUGUST’** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** Dignified
 
+   answer: Dignified  
+   explanation: As an adjective, "august" means majestic, imposing and worthy of respect.
+
 12. **Synonym of ‘EXTRANEOUS’** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** Irrelevant
 
+   answer: Irrelevant  
+   explanation: Extraneous means coming from outside and not belonging to the matter in hand.
+
 13. **Plagiarism means- **Ans: Theft of Idea**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: Theft of ideas  
+   explanation: Plagiarism is presenting someone else's work or ideas as one's own without acknowledgement.
+
 14. **Could: Rain :: Vapour : **Ans: Moistrue**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: Moisture  
+   explanation: A cloud brings rain just as vapour brings moisture.
 
 15. **Select the pair which has the same relationship. ORTHOPEDIC: BONE** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 58 (ET: BUET)]*  
    a) Psychiatry: Mind  
@@ -1603,11 +1645,17 @@
    c) Antibiotics: Fever  
    d) Fracture: Plaster
 
+   answer: a — Psychiatry: Mind  
+   explanation: An orthopaedic specialist treats bones as a psychiatrist treats the mind — speciality to its subject.
+
 16. **Choose the word which is most opposite in meaning to the word EMBRACE** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 58 (ET: BUET)]*  
    a) Disobey  
    b) Contradict  
    c) Reject  
    d) Obscure
+
+   answer: c — Reject  
+   explanation: To embrace an idea is to accept it warmly, so its opposite is to reject.
 
 17. **The suitable synonym of the word honest is.** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) kind  
@@ -1615,11 +1663,17 @@
    c) Magnificent  
    d) candid
 
+   answer: d — candid  
+   explanation: Candid means frank and truthful, which is closest to honest.
+
 18. **The suitable antonym of the word feasible is.** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) weak  
    b) bad  
    c) Small  
    d) unattainable
+
+   answer: d — unattainable  
+   explanation: Feasible means possible to do, so unattainable is its opposite.
 
 19. **The abbreviation of a.m is –** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) Anno meridiem  
@@ -1628,12 +1682,18 @@
    (ঘ) Anti-meriden  
    **উত্তর: গ**
 
+   answer: গ — Ante meridiem  
+   explanation: a.m. is Latin for "ante meridiem", before midday.
+
 20. **I could not read the words because they were too blurry. Here ‘blurry’ means :** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) small  
    (খ) unclear  
    (গ) unknown  
    (ঘ) difficult  
    **উত্তর: খ**
+
+   answer: খ — unclear  
+   explanation: Blurry means indistinct or out of focus, therefore unclear.
 
 21. **What is the meaning of the word "lately"?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) in the past  
@@ -1642,12 +1702,18 @@
    (ঘ) one more time  
    **উত্তর: গ**
 
+   answer: গ — in the recent time  
+   explanation: "Lately" means recently, in the period just past.
+
 22. **Which is the correct synonym of the word INDISPENSABLE?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) Trivial  
    (খ) Essential  
    (গ) Negligible  
    (ঘ) Worthy  
    **উত্তর: খ**
+
+   answer: খ — Essential  
+   explanation: Indispensable means absolutely necessary, so essential is its synonym.
 
 23. **What is the opposite word of facilitate?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) encourage  
@@ -1656,6 +1722,9 @@
    (ঘ) promote  
    **উত্তর: খ**
 
+   answer: খ — impede  
+   explanation: Facilitate means to make easier; impede means to obstruct.
+
 24. **IELTS stands for-** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) International English Language Teaching System  
    (খ) International English Language Testing Skill  
@@ -1663,11 +1732,17 @@
    (ঘ) International English Language Teaching Skill  
    **উত্তর: গ**
 
+   answer: গ — International English Language Testing System  
+   explanation: IELTS is the International English Language Testing System.
+
 25. **The antonym of the word copious’ is ______** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*  
    (ক) plenty  
    (খ) abundant  
    (গ) brave  
    (ঘ) scanty
+
+   answer: ঘ — scanty  
+   explanation: Copious means abundant, so its opposite is scanty or meagre.
 
 26. **The Synonym of the word 'docile' is-** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) obedient  
@@ -1675,11 +1750,17 @@
    (গ) hostile  
    (ঘ) friendly
 
+   answer: ক — obedient  
+   explanation: Docile means easy to manage and willing to obey.
+
 27. **A large building in which aircraft are kept is called –** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) terminal  
    (খ) harbour  
    (গ) hanger  
    (ঘ) hangar
+
+   answer: ঘ — hangar  
+   explanation: A hangar is the large shed where aircraft are housed; a "hanger" holds clothes.
 
 28. **A doctor who treats kidney patients is known as a/an ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) oncologist  
@@ -1687,11 +1768,17 @@
    (গ) urologist  
    (ঘ) gynecologist
 
+   answer: গ — urologist  
+   explanation: A urologist treats the kidneys and urinary tract; an oncologist treats cancer.
+
 29. **'Quarterly' শব্দের অর্থ কী?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*  
    (ক) সাপ্তাহিক  
    (খ) পাক্ষিক  
    (গ) মাসিক  
    (ঘ) ত্রৈমাসিক
+
+   answer: ঘ — ত্রৈমাসিক  
+   explanation: Quarterly means occurring once every three months.
 
 30. **What is the correct antonym of 'Panic'?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 50 (ET: N/A)]*  
    (ক) laugh  
@@ -1699,11 +1786,17 @@
    (গ) sit  
    (ঘ) meditate
 
+   answer: খ — relaxed  
+   explanation: Panic is sudden uncontrollable fear, so being relaxed and calm is the opposite.
+
 31. **A song expressing grief is called ______** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*  
    (ক) Balled  
    (খ) Elegy  
    (গ) Hymn  
    (ঘ) Dirge
+
+   answer: ঘ — Dirge  
+   explanation: A dirge is a mournful song sung at a funeral; an elegy is the poem form of a lament.
 
 32. **The word ‘Imbibe’ means-** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*  
    (a) to learn  
@@ -1712,11 +1805,17 @@
    (d) to acquire  
    **Ans: c**
 
+   answer: c — to drink  
+   explanation: Imbibe means to drink, and figuratively to absorb ideas.
+
 33. **Synonym of "Reverently" is ______ ?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) Adversely  
    (খ) Negatively  
    (গ) Disapprovingly  
    (ঘ) Respectfully
+
+   answer: ঘ — Respectfully  
+   explanation: Reverently means with deep respect.
 
 34. **"Proportion" means ______ ?** *[BCIC Assistant Programmer 2022 compact it 63 (ET: BUET)]*  
    (ক) Aggregate  
@@ -1724,11 +1823,17 @@
    (গ) bulk  
    (ঘ) ratio
 
+   answer: ঘ — ratio  
+   explanation: Proportion is the comparative relation or ratio between parts.
+
 35. **Which one word is closest in meaning to 'Franchise'?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 132 (ET: N/A)]*  
    a) privilege  
    b) superficial  
    c) frankness  
    d) openness
+
+   answer: a — privilege  
+   explanation: A franchise is a special right or privilege granted to someone.
 
 36. **The people who carry a coffin at a funeral are called ________** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 132 (ET: N/A)]*  
    a) undertakers  
@@ -1736,11 +1841,17 @@
    c) pallbearers  
    d) mourners
 
+   answer: c — pallbearers  
+   explanation: Pallbearers carry the coffin; mourners simply attend and undertakers arrange the funeral.
+
 37. **Which phrase contains words opposed to each other in meaning?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) heat and dust  
    b) reproduction and death  
    c) hopes and aspirations  
    d) emerged and advanced
+
+   answer: b — reproduction and death  
+   explanation: Reproduction brings life into being while death ends it, so the two are opposed.
 
 38. **The ________ of the forest will result in the ________ of many animal species.** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) destruction / disappear  
@@ -1748,11 +1859,17 @@
    c) destructing / disappear  
    d) destruct/disappearance
 
+   answer: b — destruction / disappearance  
+   explanation: Both blanks follow determiners and prepositions, so both need noun forms.
+
 39. **Love for the whole world is called ______ .** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) Philanthropy  
    b) Misogyny  
    c) Benevolence  
    d) Misanthropy
+
+   answer: a — Philanthropy  
+   explanation: Philanthropy is love of humankind expressed through generosity; misanthropy is its opposite.
 
 40. **Misanthropist means-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) One who flirts with ladies  
@@ -1760,11 +1877,17 @@
    c) A hater of mankind  
    d) One who believe that God is in everything
 
+   answer: c — A hater of mankind  
+   explanation: A misanthropist dislikes and distrusts humanity in general.
+
 41. **Choose the pair of words that expresses a relationship similar to that of “Harm:Damage”=** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) Sweet:Sour  
    (b) Injure:Incapacitate  
    (c) Stout:Weak  
    (d) Hook:Crook
+
+   answer: b — Injure:Incapacitate  
+   explanation: Harm and damage are near-synonyms describing hurt, just as injure and incapacitate are.
 
 42. **Give the antonym of the word 'transitory'.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) temporary  
@@ -1772,11 +1895,17 @@
    (c) transparent  
    (d) short-lived
 
+   answer: b — permanent  
+   explanation: Transitory means lasting only a short time, so permanent is its opposite.
+
 43. **What is the antonym of “Segregate”?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 122 (ET: N/A)]*  
    a. isolate  
    b. combine  
    c. divide  
    d. severs
+
+   answer: b — combine  
+   explanation: Segregate means to separate or set apart, so combining is the opposite.
 
 44. **What is the synonym of the word “Erudite”?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. knowledgeable  
@@ -1784,11 +1913,17 @@
    c. illiterate  
    d. smart
 
+   answer: a — knowledgeable  
+   explanation: Erudite means having or showing great learning.
+
 45. **Our Fates Seemed Intertwined. Which one is similar to the underlined word?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 147 (ET: IBA)]*  
    A. Complicated  
    B. Destined  
    C. Linked  
    D. Complex
+
+   answer: C — Linked  
+   explanation: Intertwined means twisted together, so the fates were closely linked.
 
 46. **Find the synonym of the word Morose.** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 147 (ET: IBA)]*  
    A. Annoyed  
@@ -1796,11 +1931,17 @@
    C. Moody  
    D. Displeased
 
+   answer: B — Gloomy  
+   explanation: Morose means sullen and ill-tempered in a gloomy way.
+
 47. **The antonym of the word Terrible is:** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 147 (ET: IBA)]*  
    A. Soothing  
    B. Frightening  
    C. Scaring  
    D. Horrible
+
+   answer: A — Soothing  
+   explanation: Terrible means frightening or dreadful, so soothing is its opposite.
 
 48. **A legal authorization of debtors to postpone payment is known as:** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 147 (ET: IBA)]*  
    A. Moratorium  
@@ -1808,11 +1949,17 @@
    C. Preemption  
    D. Bed debt
 
+   answer: A — Moratorium  
+   explanation: A moratorium is a legally authorised delay in paying a debt.
+
 49. **Initiative এর বিপরীত শব্দ কোনটি?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) Non Initiative  
    b) Iminitiative  
    c) Uninitiative  
    d) None of these.
+
+   answer: d — None of these  
+   explanation: None of the printed forms is a real English word; the actual opposite of initiative is inaction or passivity.
 
 50. **Obligate এর adjective form কোনটি?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) Obligatory  
@@ -1820,11 +1967,17 @@
    c) Obligator  
    d) Obligate
 
+   answer: a — Obligatory  
+   explanation: The adjective of the verb "obligate" is "obligatory", meaning compulsory.
+
 51. **To do away with meaning.** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) To get rid of something or stop using something  
    b) To do pass away  
    c) To remove it completely or put an end to it  
    d) all of these
+
+   answer: d — all of these  
+   explanation: "Do away with" means to get rid of, to stop using, or to abolish something completely.
 
 52. **Spring এর past form.** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
    a) Sprang  
@@ -1832,11 +1985,17 @@
    c) Spring  
    d) All of these
 
+   answer: a — Sprang  
+   explanation: Spring is an irregular verb: spring — sprang — sprung.
+
 53. **Brochure means;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. Opening  
    খ. Bureau  
    গ. Consor  
    ঘ. Pamphlet
+
+   answer: ঘ — Pamphlet  
+   explanation: A brochure is a small booklet or pamphlet containing information or advertising.
 
 54. **What is the synonym of 'Incite'?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. Urge  
@@ -1844,17 +2003,26 @@
    গ. Instigate  
    ঘ. Deceive
 
+   answer: গ — Instigate  
+   explanation: Incite means to stir someone up to act, which is exactly to instigate.
+
 55. **What is the antonym of 'noble'?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (a) Grand  
    (b) dignified  
    (c) elevated  
    (d) mean
 
+   answer: d — mean  
+   explanation: Noble means high-minded and generous, so "mean" (petty and ungenerous) is the opposite.
+
 56. **What is the synonym of 'pardon'?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
    (a) Condemne  
    (b) accuse  
    (c) forgive  
    (d) convict
+
+   answer: c — forgive  
+   explanation: To pardon is to forgive an offence.
 
 57. **Synonym of "Bargain" is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 91 (ET: N/A)]*  
    (a) Dissent  
@@ -1868,10 +2036,16 @@
    গ. Moron
    ঘ. Deep
 
+   answer: c — Stipulation  
+   explanation: A bargain is an agreement with agreed terms, and a stipulation is such an agreed condition.
+
 58. **Make sentences with meaning: (03)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*  
    (a) Look up from  
    (b) In the face of  
    (c) Barking on
+
+   answer: (a) He did not look up from his book when I entered. (b) In the face of strong opposition, she stood firm. (c) They are embarking on a new project next month.  
+   explanation: "Look up from" means to raise one's eyes from something, "in the face of" means despite or when confronted with, and "embark on" means to begin an undertaking.
 
 ## Idioms & Phrases (26)
 1. **'Cut and dry' means:** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
