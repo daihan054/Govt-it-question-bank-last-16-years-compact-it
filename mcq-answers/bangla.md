@@ -2716,17 +2716,26 @@
    গ. মাথা+অয়া  
    ঘ মাথা+এ
 
+   answer: ঘ — মাথা+এ  
+   explanation: প্রশ্নে উদ্দিষ্ট শব্দটি 'মাথায়', যেখানে মাথা + এ যুক্ত হয়ে মাঝে য়-শ্রুতি এসেছে। <!-- verify -->
+
 2. **'আবির্ভাব' শব্দটি গঠিত হয়েছে-** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
    (a) প্রত্যয় দ্বারা  
    (b) উপসর্গ দ্বারা  
    (c) সন্ধি দ্বারা  
    (d) বিভক্তি দ্বারা
 
+   answer: c — সন্ধি দ্বারা  
+   explanation: আবিঃ + ভাব = আবির্ভাব; বিসর্গ সন্ধির নিয়মে বিসর্গ 'র্' হয়েছে।
+
 3. **'গীতাঞ্জলি' কোন সন্ধির উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
    (a) সংস্কৃত স্বরসন্ধি  
    (b) সংস্কৃত ব্যঞ্জনসন্ধি  
    (c) সংস্কৃত বিসর্গ সন্ধি  
    (d) কোনটিই নয়
+
+   answer: a — সংস্কৃত স্বরসন্ধি  
+   explanation: গীত + অঞ্জলি = গীতাঞ্জলি; অ + অ মিলে আ হয়েছে, তাই স্বরসন্ধি।
 
 ## সমাস (2)
 1. **'সপ্তাহ' কোন সমাস?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
