@@ -652,11 +652,17 @@
    c) Exception  
    d) Abstraction
 
+   answer: c — Exception  
+   explanation: The four OOP pillars are encapsulation, inheritance, polymorphism and abstraction; exception handling is a separate language feature.
+
 2. **Which of the following modifiers cannot be applied to a method in C++?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) Protected  
    (খ) Private  
    (গ) Public  
    (ঘ) Abstract
+
+   answer: ঘ — Abstract  
+   explanation: C++ has no abstract keyword — a class is made abstract by declaring a pure virtual function (= 0).
 
 3. **Which is not the feature of JAVA OOP?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*  
    a) Multiple Inheritance  
@@ -664,11 +670,17 @@
    c) Compile time Polymorphism  
    d) Runtime Polymorphism
 
+   answer: a — Multiple Inheritance  
+   explanation: Java does not allow a class to extend more than one class; the same effect is obtained by implementing several interfaces.
+
 4. **Object Oriented programming এর বৈশিষ্ট্য কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*  
    A) Polymorphism  
    B) Friend function  
    C) Structure  
    D) Loop
+
+   answer: A — Polymorphism  
+   explanation: Polymorphism is one of the four OOP pillars; friend functions, structures and loops are not OOP-defining features.
 
 5. **Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 189 (ET: N/A)]*  
    A) Inheritance  
@@ -676,11 +688,17 @@
    C) Polymorphism  
    D) Overloading
 
+   answer: B — Abstraction  
+   explanation: Encapsulation hides the internal data behind methods, so the user sees only what the object does, not how — which is abstraction.
+
 6. **Which of the following provides a programmer with the facility of using object of a class inside other classes?** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
    A) Inheritance  
    B) Abstraction  
    C) Encapsulation  
    D) Composition
+
+   answer: D — Composition  
+   explanation: Composition means one class holds objects of another class as its members, a "has-a" relationship.
 
 7. **Which one is pure object-oriented language?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
    A) C++  
@@ -688,11 +706,17 @@
    C) Java  
    D) None
 
+   answer: C — Java  
+   explanation: The exam key treats Java as pure object oriented because all code lives inside classes; strictly it is not, since it still has primitive types.
+
 8. **Which is not feature of object-oriented programming?** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*  
    A) inheritance  
    B) recursion  
    C) encapsulation  
    D) abstraction
+
+   answer: B — recursion  
+   explanation: Recursion is a general programming technique, not an OOP principle.
 
 9. **Which is not a feature of object-oriented programming?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
    A) Inheritance  
@@ -700,17 +724,26 @@
    C) Recursion  
    B) Abstraction
 
+   answer: C — Recursion  
+   explanation: Inheritance, encapsulation and abstraction are OOP features; recursion is not.
+
 10. **Which one of the following is the core property of Object-Oriented Programming?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
    A) Encapsulation, inheritance  
    B) Encapsulation, Object  
    C) polymorphism, overloading  
    D) Encapsulation, polymorphism and inheritance
 
+   answer: D — Encapsulation, polymorphism and inheritance  
+   explanation: These, together with abstraction, are the core properties of object-oriented programming.
+
 11. **In object Oriented Programming, a property can be accessed from ________** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) Anywhere the project  
    B) Only from its own class  
    C) Parent class  
    D) Child class
+
+   answer: B — Only from its own class  
+   explanation: Properties are normally declared private, so only the class's own methods can reach them directly; getters and setters expose them safely. <!-- verify -->
 
 ## Encapsulation & Access Modifiers (7)
 
