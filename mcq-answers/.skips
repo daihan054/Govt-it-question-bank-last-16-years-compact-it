@@ -6,3 +6,4 @@ database.md :: Normalization (16) :: q12 — the table referred to is missing fr
 database.md :: Relational Model & Terminology (8) :: q3 — the column definition for the "interest" attribute is missing from the source, so the valid format cannot be decided
 dld.md :: Logic Gates & Universal Gates (16) :: q10 — the gate symbol is missing from the source, so the gate cannot be named
 dld.md :: Logic Gates & Universal Gates (16) :: q6 — the symbol referred to is missing from the source, so the device cannot be identified
+dld.md :: Sequential Circuits (Flip-Flops) (6) :: q5 — the logic circuit diagram is garbled in the source, so the output expression cannot be derived

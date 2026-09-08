@@ -582,11 +582,17 @@
    (c) D  
    (d) T
 
+   answer: c — D  
+   explanation: A D flip-flop copies its D input to Q on the active clock edge, so the present input becomes the next output.
+
 2. **A basic memory storage element in a digital system is:** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
    (a) Flip-flop  
    (b) Counter  
    (c) Multiplexer  
    (d) Encoder
+
+   answer: a — Flip-flop  
+   explanation: A flip-flop is bistable and holds one bit, which makes it the basic storage element of registers and memory.
 
 3. **How much data a flip flop can store?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
    a) 4-bit data  
@@ -594,11 +600,17 @@
    c) 3-bit data  
    d) 3-bit data
 
+   answer: b — 1-bit data  
+   explanation: A flip-flop has two stable states, so it stores exactly one bit.
+
 4. **A binary counter is being pulsed by a 256 kHz clock signal. The output frequency from the last flip flop is 2kHz. Which one of the following is the counting range?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 182 (ET: N/A)]*  
    a) 0 to 255  
    b) 0 to 128  
    c) 0 to 127  
    d) None of the above
+
+   answer: c — 0 to 127  
+   explanation: 256 kHz ÷ 2 kHz = 128 = 2⁷, so the counter has 7 stages and counts 0 through 127.
 
 5. **Which one is the output of the following digital logic circuit?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 182 (ET: N/A)]*
    ```
@@ -628,6 +640,9 @@
    B) এনকোডার  
    C) ডিকোডার  
    D) ফ্লিপ-ফ্লপ
+
+   answer: D — ফ্লিপ-ফ্লপ  
+   explanation: A flip-flop is the bistable circuit that stores one bit; a register is built from several of them.
 
 ## Digital Logic & Number Systems (6)
 1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*  
