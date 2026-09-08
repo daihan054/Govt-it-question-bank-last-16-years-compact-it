@@ -330,17 +330,26 @@
    (গ) ১৮টি  
    (ঘ) ১৫টি
 
+   answer: খ — ১৭টি  
+   explanation: Frank and Lillian Gilbreth defined 17 therbligs, the elementary hand motions used in motion study.
+
 2. **Product life cycle এর পর্যায় কতটি?** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) ৫টি  
    (খ) ৪টি  
    (গ) ৩টি  
    (ঘ) ২টি
 
+   answer: খ — ৪টি  
+   explanation: The product life cycle has four stages: introduction, growth, maturity and decline.
+
 3. **উৎপাদন এর ক্ষেত্রে কোন নির্দিষ্ট সময়ে Output/Input এর অনুপাতকে বলে-** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
    (ক) Productivity  
    (খ) Efficiency  
    (গ) Production rate  
    (ঘ) Effectiveness
+
+   answer: ক — Productivity  
+   explanation: Productivity is the ratio of output produced to input consumed over a given period.
 
 ## Engineering Drawing (1)
 
