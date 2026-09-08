@@ -2,15 +2,15 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 125 / 160 done**  ·  **Questions: 1687 answered, 15 skipped, 3039 total**
+**Subtopics: 126 / 160 done**  ·  **Questions: 1853 answered, 16 skipped, 3039 total**
 
-Next up: `bangla.md` — বাংলা ব্যাকরণ (167)
+Next up: `bangla.md` — বাংলা সাহিত্য (113)
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
 | `ai-and-ml.md` | IT | 1 / 1 | 18 | 0 | 18 |
 | `algorithm.md` | IT | 6 / 6 | 70 | 0 | 70 |
-| `bangla.md` | General | 0 / 9 | 0 | 0 | 310 |
+| `bangla.md` | General | 1 / 9 | 166 | 1 | 310 |
 | `c-programming.md` | IT | 10 / 10 | 112 | 1 | 113 |
 | `cloud-computing.md` | IT | 3 / 3 | 20 | 0 | 20 |
 | `compiler-and-toc.md` | IT | 1 / 1 | 6 | 0 | 6 |
@@ -35,4 +35,4 @@ Next up: `bangla.md` — বাংলা ব্যাকরণ (167)
 
 ## Skipped questions
 
-15 incomplete questions skipped.
+16 incomplete questions skipped.
