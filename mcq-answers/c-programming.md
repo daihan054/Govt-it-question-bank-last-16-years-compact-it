@@ -1033,11 +1033,17 @@
    C) x=x-1  
    D) x=1%x
 
+   answer: B — x=1-x  
+   explanation: With x limited to 0 or 1, 1-x flips 0 to 1 and 1 to 0, exactly what the if-else does.
+
 2. **For a given integer, which of the following operators can be used to set and reset a particular bit respectively?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 203 (ET: AUST)]*  
    A) | and &  
    B) && and ||  
    C) & and |  
    D) || and &&
+
+   answer: A — | and &  
+   explanation: OR with a mask (x | 1<<n) turns a bit on, and AND with the inverted mask (x & ~(1<<n)) turns it off.
 
 3. **Which of the declaration is correct?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) int length;  
@@ -1045,11 +1051,17 @@
    C) int long;  
    D) float double;
 
+   answer: A — int length;  
+   explanation: A declaration needs a type followed by an identifier; char int, int long; and float double; are not valid declarations.
+
 4. **What is the precedence of arithmetic operators (from highest to lowest)?** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
    A) %, +, /, *, -  
    B) +, -, %, *, /  
    C) %, +, -, *, /  
    D) %, *, /, +, -
+
+   answer: D — %, *, /, +, -  
+   explanation: %, * and / share the highest precedence level, and + and - come below them.
 
 5. **Which is logical operator?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
    A) +  
@@ -1057,11 +1069,17 @@
    C) AND  
    D) <<
 
+   answer: C — AND  
+   explanation: AND is a logical operator; + is arithmetic, >= is relational and << is a bitwise shift.
+
 6. **Which of the following will not increase the value of variable c by 1?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
    A) c++  
    B) c = c + 1  
    C) c + 1 >= c  
    D) c += 1
+
+   answer: C — c + 1 >= c  
+   explanation: That line only evaluates a comparison and throws the result away — c is never assigned, so its value does not change.
 
 7. **The escape sequence “\b” in C programming is -----** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) Backspace  
@@ -1069,11 +1087,17 @@
    C) Tab  
    D) None of these
 
+   answer: A — Backspace  
+   explanation: \b moves the cursor one position back; \n is newline and \t is tab.
+
 8. **What is not the kind of data type?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) Logical  
    B) Text  
    C) Number  
    D) Currency
+
+   answer: D — Currency  
+   explanation: Logical, text and number are the basic categories of data, while currency is a formatted number rather than a distinct kind of data type. <!-- verify -->
 
 9. **Which keyword is used in C language?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) ing  
@@ -1081,17 +1105,26 @@
    C) select  
    D) href
 
+   answer: B — for  
+   explanation: for is a C keyword; ing, select and href are not part of the C language.
+
 10. **Find out the error in following block of code: if (x=100) cout<<"x is 100";** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
    a. 100 should be enclosed in quotations  
    b. There is no semicolon at the end of first line  
    c. Equals to operator mistake  
    d. Variable x should not be inside quotation
 
+   answer: c — Equals to operator mistake  
+   explanation: x=100 is an assignment that is always true; comparison needs the == operator.
+
 11. **Which of the following is not a logical operator?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
    a. &  
    b. &&  
    c. ||  
    d. |
+
+   answer: a — &  
+   explanation: & is bitwise AND, not a logical operator — the logical ones are && and ||. Note | is also bitwise, so the option set is loose.
 
 ## Programming Concepts (8)
 1. **Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
