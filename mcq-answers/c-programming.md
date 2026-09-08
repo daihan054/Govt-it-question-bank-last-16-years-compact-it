@@ -1335,3 +1335,6 @@
    b. Database  
    c. Terminal  
    d. Process
+
+   answer: c — Terminal  
+   explanation: The parentheses mark rounded left and right ends on a flat-topped box, which is the stadium shape used for the Terminal (start/stop) symbol; a process is a plain rectangle and a database is a cylinder. <!-- verify -->
