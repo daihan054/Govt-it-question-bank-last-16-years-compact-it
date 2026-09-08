@@ -498,11 +498,17 @@
    (c) Selection problem  
    (d) Merge sort
 
+   answer: d — Merge sort  
+   explanation: Merge sort is the only option that is an algorithm built on a design paradigm (divide and conquer); the other three are problems, not paradigms.
+
 2. **Quick sort algorithm is an example of –** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) Greedy approach  
    (খ) Improved binary search  
    (গ) Dynamic programming  
    (ঘ) Divide and conquer
+
+   answer: ঘ — Divide and conquer  
+   explanation: Quick sort partitions the array around a pivot and recursively sorts each part, then combines them trivially.
 
 3. **Travelling Salesperson Problem is an example of-** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*  
    (ক) Polynomial time  
@@ -510,11 +516,17 @@
    (গ) NP  
    (ঘ) NP-Hard
 
+   answer: ঘ — NP-Hard  
+   explanation: The optimisation form of TSP is NP-Hard because it is at least as hard as every NP problem; its decision version ("is there a tour of cost ≤ k?") is NP-Complete.
+
 4. **Which of the following algorithms can not be designed without recursion?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*  
    (ক) Fibonacci series  
    (খ) Tower of Hanoi  
    (গ) None of (ক) and (খ)  
    (ঘ) Both (ক) and (খ)
+
+   answer: গ — None of (ক) and (খ)  
+   explanation: Both can be written iteratively — Fibonacci with a simple loop, and Tower of Hanoi with an explicit stack — so neither needs recursion.
 
 5. **The step-by-step instruction that solve a problem is called:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
    A) an algorithm  
@@ -522,11 +534,17 @@
    C) a plan  
    D) a sequential structure
 
+   answer: A — an algorithm  
+   explanation: An algorithm is a finite, ordered set of steps that solves a problem.
+
 6. **The step by step instruction that solved a problem are called ________.** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*  
    A) An algorithm  
    B) A list  
    C) A plan  
    D) None of the above
+
+   answer: A — An algorithm  
+   explanation: A step-by-step procedure that produces the solution to a problem is by definition an algorithm.
 
 7. **The step by step instructions that solve a problem are called?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) An algorithm  
@@ -534,17 +552,26 @@
    C) A plan  
    D) None of them
 
+   answer: A — An algorithm  
+   explanation: An algorithm is a finite sequence of well-defined steps that solves a given problem.
+
 8. **Divide and Conquer method is used in-** *[DESCO Assistant Engineer (CSE) 2016 compact it 256 (ET: N/A)]*  
    a. Merge sort  
    b. Bubble sort  
    c. Quick sort  
    d. Both a & c
 
+   answer: d — Both a & c  
+   explanation: Merge sort splits the array and merges sorted halves, and quick sort partitions and recurses; both follow divide and conquer, while bubble sort does not.
+
 9. **What is the name given to the sequence of steps which a computer follows?** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*  
    a. Instructions  
    b. Algorithms  
    c. Flowcharts  
    d. Debugging
+
+   answer: b — Algorithms  
+   explanation: An ordered sequence of steps a computer follows to solve a problem is called an algorithm.
 
 ## Dynamic Programming & Greedy (6)
 
