@@ -2691,11 +2691,17 @@
    c) 64 bits  
    d) 132 bits
 
+   answer: b — 128 bits  
+   explanation: IPv6 uses 128-bit addresses, written as eight groups of four hex digits.
+
 2. **IPv6 does not support which of the following addressing modes?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*  
    (A) unicast addressing  
    (B) multicast addressing  
    (C) broadcast addressing  
    (D) anycast addressing
+
+   answer: C — broadcast addressing  
+   explanation: IPv6 dropped broadcast entirely and uses multicast (including all-nodes multicast) in its place, along with unicast and anycast.
 
 3. **The IPv4 is encapsulated to IPv6 which is known as ______.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*  
    (a) Tunneling  
@@ -2703,14 +2709,23 @@
    (c) NAT  
    (d) Trasversing
 
+   answer: a — Tunneling  
+   explanation: Tunnelling wraps one protocol's packet inside another so it can cross a network that does not speak it natively.
+
 4. **How many bits of IPv6 address?** *[BREB Assistant Programmer 2023 compact it 31 (ET: N/A)]*  
    (a) 128  
    (b) 32  
    (c) 12  
    (d) 48
 
+   answer: a — 128  
+   explanation: An IPv6 address is 128 bits long.
+
 5. **IPv6 is how many bits?** *[BCC Assistant Programmer 11.11.2023 compact it 35 (ET: N/A)]*  
    **Ans:** 128 bit
+
+   answer: 128 bit  
+   explanation: IPv6 expanded the address from IPv4's 32 bits to 128 bits, giving about 3.4×10³⁸ addresses.
 
 6. **How long is an IPv6 address?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 43 (ET: N/A)]*  
    (ক) 32 bits  
@@ -2718,11 +2733,17 @@
    (গ) 64 bits  
    (ঘ) 132 bis
 
+   answer: খ — 128 bits  
+   explanation: IPv6 addresses are 128 bits.
+
 7. **How many bits in IPv6?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) 32  
    b) 64  
    c)128  
    d) 156
+
+   answer: c — 128  
+   explanation: IPv6 uses 128-bit addressing.
 
 8. **An IPv6 basic header is fixed as-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) 32 bytes long  
@@ -2730,11 +2751,17 @@
    (c) 64 bits long  
    (d) 128-bit long
 
+   answer: b — 40 bytes long  
+   explanation: The IPv6 base header is a fixed 40 bytes; anything extra goes into optional extension headers.
+
 9. **How many bit addresses of IPv6 version?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*  
    A) 24  
    B) 32  
    C) 64  
    D) 128
+
+   answer: D — 128  
+   explanation: IPv6 addresses are 128 bits wide.
 
 10. **একটি IPv6 address এর দৈর্ঘ্য কত?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
    A) 32 bits  
@@ -2742,11 +2769,17 @@
    C) 64 bits  
    D) 256 bits
 
+   answer: B — 128 bits  
+   explanation: An IPv6 address is 128 bits long.
+
 11. **What is not the advantage of IPv6 over IPv4?** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
    A) longer address  
    B) Classification of traffic  
    C) More real IP addresses  
    D) Jumbo Payload
+
+   answer: B — Classification of traffic  
+   explanation: IPv4 already classifies traffic through its Type of Service field, so this is not something new IPv6 brings; longer addresses, more real IPs and jumbo payloads are.
 
 12. **How long is an IPv6 address?** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
    (a) 32-bits  
@@ -2754,11 +2787,17 @@
    (c) 64-bits  
    (d) 128-bits
 
+   answer: d — 128-bits  
+   explanation: IPv6 addresses are 128 bits.
+
 13. **Which of the following is the number of bits used for IPv6?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. 128  
    b. 32  
    c. 64  
    d. 256
+
+   answer: a — 128  
+   explanation: IPv6 uses 128 bits per address.
 
 ## Routing Protocols (13)
 
