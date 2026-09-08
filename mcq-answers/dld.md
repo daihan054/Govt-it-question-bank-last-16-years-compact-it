@@ -442,11 +442,17 @@
    (c) OR  
    (d) NOT
 
+   answer: a — NAND  
+   explanation: NAND is universal because AND, OR and NOT can all be built from NAND gates alone.
+
 2. **3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. 0  
    খ. 3  
    গ. 1  
    ঘ. কোনোটিই নয়
+
+   answer: গ — 1  
+   explanation: A NAND outputs 0 only when every input is 1, so a single 0 input forces the output to 1.
 
 3. **What is the lowest number of NAND gates required to make in inverter?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 1  
@@ -454,17 +460,26 @@
    (c) 3  
    (d) 4
 
+   answer: a — 1  
+   explanation: Tying both inputs of one NAND gate together gives NOT A, so a single gate makes an inverter.
+
 4. **Universal logic gate is:** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
    (a) NAND, XOR  
    (b) NOR, XOR  
    (c) NOR, OR  
    (d) NAND, NOR
 
+   answer: d — NAND, NOR  
+   explanation: Only NAND and NOR are universal — every other gate can be constructed from either one.
+
 5. **The logic gate that will have a Low output then any one of its inputs is High is ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) NAND gate  
    (খ) AND gate  
    (গ) NOR gate  
    (ঘ) OR gate
+
+   answer: গ — NOR gate  
+   explanation: A NOR output is high only when all inputs are low, so any high input pulls the output low.
 
 6. **What is the name of the following symbol?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
    a) FET  
@@ -478,17 +493,26 @@
    গ. OR  
    ঘ. NOR
 
+   answer: ঘ — NOR  
+   explanation: NOR gives 1 only when every input is 0, and 0 for any other combination.
+
 8. **A technician testing a logic circuit sees that the output of a particular INVERTER is stuck LOW while its input is pulsing. Which one of the following is the possible reason for this faulty operation?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
    a) The output of the INVERTER is internally grounded  
    b) The output of the INERTER is externally grounded  
    c) The input being driven by output of the INVERTER is internally grounded  
    d) All of the above
 
+   answer: d — All of the above  
+   explanation: A short to ground anywhere on that node — inside the inverter, outside it, or in the load it drives — holds the output low regardless of the input.
+
 9. **\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) Which is the simplified form of this?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
    a) \bar{A} + \bar{B} + \bar{C}  
    b) \bar{A}\bar{B}\bar{C}  
    c) \overline{ABC}  
    d) \overline{A B C}
+
+   answer: b — ĀB̄C̄  
+   explanation: ĀB̄C̄ already contains all three complemented terms, so ANDing it with (Ā+B̄+C̄) absorbs back to ĀB̄C̄.
 
 10. **Write the name of the Gate:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
    A) NOR  
@@ -502,11 +526,17 @@
    C) Memory  
    D) Register
 
+   answer: A — ALU  
+   explanation: The Arithmetic Logic Unit performs both the arithmetic and the logic operations such as AND, OR and XOR.
+
 12. **Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) C=A or B  
    B) C=\bar{A}  
    C) C=\bar{B}  
    D) C=A and B
+
+   answer: D — C=A and B  
+   explanation: Bitwise AND of 10110110 and 11100000 gives 10100000, which is C.
 
 13. **When two variables are logically compared, the logic gate that tests the equivalence is–** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) XNOR  
@@ -514,11 +544,17 @@
    C) AND  
    D) NOR
 
+   answer: A — XNOR  
+   explanation: XNOR outputs 1 only when its two inputs are equal, so it is the equivalence gate.
+
 14. **Binary circuit elements have** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*  
    A) One stable state  
    B) two stable state  
    C) Three stable state  
    D) None of these
+
+   answer: B — two stable state  
+   explanation: Binary circuits are bistable — they rest in either the 0 or the 1 state.
 
 15. **Which is the universal gate?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) NOR  
@@ -526,11 +562,17 @@
    C) NOT  
    D) OR
 
+   answer: A — NOR  
+   explanation: NOR is universal; AND, OR and NOT can each be built from NOR gates alone.
+
 16. **NAND gates are preferred over other because these ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*  
    a. Have lower function area  
    b. Can be used to make any gate  
    c. Consume least electronic power  
    d. Provide maximum density in a chip
+
+   answer: b — Can be used to make any gate  
+   explanation: NAND is functionally complete, so a whole circuit can be fabricated from one repeated gate type, which simplifies manufacture.
 
 ## Sequential Circuits (Flip-Flops) (6)
 
