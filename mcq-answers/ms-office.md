@@ -113,11 +113,17 @@
    C. From 5 to Large 75  
    D. From 10 to Large 100
 
+   answer: B — From 8 to Large 72  
+   explanation: The Font Size drop-down lists sizes from 8 up to 72 points, though any value can be typed in.
+
 2. **By default, Footers are printed on:** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*  
    A. First Page  
    B. Last Page  
    C. All Pages  
    D. Even Pages
+
+   answer: C — All Pages  
+   explanation: A footer is a section-level element, so by default it repeats on every page.
 
 3. **The feature in MS word automatically connects correct spelling, typing, capitalization on grammar errors ---** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*  
    A) Auto fix  
@@ -125,17 +131,26 @@
    C) Auto mark  
    D) Auto correct
 
+   answer: D — Auto correct  
+   explanation: AutoCorrect fixes common typing, spelling and capitalisation mistakes as you type.
+
 4. **Where can you find the horizontal split bar on MS Word screen?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
    a. On the left of horizontal scroll bar  
    b. On the right of horizontal scroll bar  
    c. On the top of vertical scroll bar  
    d. On the bottom of vertical scroll bar
 
+   answer: c — On the top of vertical scroll bar  
+   explanation: The split bar is the small handle above the vertical scroll bar; dragging it splits the document into two panes.
+
 5. **You cannot close MS Word application by ________.** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
    a. Choosing File Menu and then exit Sub Menu  
    b. From File Menu choose close Sub Menu  
    c. Click X button on title bar  
    d. Press Alt+F4
+
+   answer: b — From File Menu choose close Sub Menu  
+   explanation: File > Close only closes the current document and leaves Word running; Exit, the X button and Alt+F4 all close the application.
 
 ## MS Office & Shortcuts (4)
 1. **(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
