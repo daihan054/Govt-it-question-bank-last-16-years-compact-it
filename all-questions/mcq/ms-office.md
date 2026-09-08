@@ -15,143 +15,143 @@
 
 ## MS Excel (10)
 
-1. **Which is the correct Addition formula in MS Excel?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*
-   (a) sum(C9:C12)
-   (b) = sum(C9:C12)
-   (c) sum=(C9:C12)
+1. **Which is the correct Addition formula in MS Excel?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
+   (a) sum(C9:C12)  
+   (b) = sum(C9:C12)  
+   (c) sum=(C9:C12)  
    (d) sum(C9+C12)
 
-2. **In a spreadsheet, ________ can help you make sense of a worksheet contents.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*
-   A) value
-   B) Labels
-   C) formula
+2. **In a spreadsheet, ________ can help you make sense of a worksheet contents.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*  
+   A) value  
+   B) Labels  
+   C) formula  
    D) macros
 
-3. **Multiple calculation can be made in a single formula using.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*
-   a) Standard Formula
-   b) Array Formula
-   c) Complex Formula
+3. **Multiple calculation can be made in a single formula using.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
+   a) Standard Formula  
+   b) Array Formula  
+   c) Complex Formula  
    d) Smart Formula
 
-4. **Which area in an excel window allow entering values and formulas?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*
-   a) Title bar
-   b) Menu bar
-   c) Formula bar
+4. **Which area in an excel window allow entering values and formulas?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
+   a) Title bar  
+   b) Menu bar  
+   c) Formula bar  
    d) Standard tool bar
 
-5. **পরিসংখ্যানের বিভিন্ন পরিমাপ নির্ণয়ের জন্য নিচের কোনটি ব্যবহৃত হয়?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 198 (ET: IBA)]*
-   A. MS Word
-   B. MS Access
-   C. MS Excel
+5. **পরিসংখ্যানের বিভিন্ন পরিমাপ নির্ণয়ের জন্য নিচের কোনটি ব্যবহৃত হয়?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 198 (ET: IBA)]*  
+   A. MS Word  
+   B. MS Access  
+   C. MS Excel  
    D. MS Power Point
 
-6. **কপি ফরমেট করার শর্টকাট কোনটি?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*
-   A. Clt+C
-   B. Shift+C
-   C. Clt+Shift+C
+6. **কপি ফরমেট করার শর্টকাট কোনটি?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*  
+   A. Clt+C  
+   B. Shift+C  
+   C. Clt+Shift+C  
    D. Alt + Shift +C
 
-7. **Which of the following is spreadsheet software?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*
-   A) Adobe Acrobat
-   B) MS Excel
-   C) Fax Pro
+7. **Which of the following is spreadsheet software?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*  
+   A) Adobe Acrobat  
+   B) MS Excel  
+   C) Fax Pro  
    D) Power Point
 
-8. **What is entered by the function = today()?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
-   a. The date value for the day according to system clock
-   b. The time value according to system clock
-   c. Today's date as text format
+8. **What is entered by the function = today()?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
+   a. The date value for the day according to system clock  
+   b. The time value according to system clock  
+   c. Today's date as text format  
    d. All of the above
 
-9. **What happens when you press Ctrl+X after selecting some cells in Excel?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
-   a. The cell content of selected cells disappears from cell and stored in clipboard
-   b. The cells selected are marked for cutting
-   c. The selected cells are deleted and shifted left
+9. **What happens when you press Ctrl+X after selecting some cells in Excel?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
+   a. The cell content of selected cells disappears from cell and stored in clipboard  
+   b. The cells selected are marked for cutting  
+   c. The selected cells are deleted and shifted left  
    d. The selected cells are deleted and shifted up
 
-10. **What program do you use to create a spreadsheet?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
-   a. Word
-   b. Excel
-   c. Access
+10. **What program do you use to create a spreadsheet?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
+   a. Word  
+   b. Excel  
+   c. Access  
    d. PowerPoint
 
 ## MS Word (5)
 
-1. **What is the range of Font Size available in Font Size drop down toolbar?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*
-   A. From 10 to Large 70
-   B. From 8 to Large 72
-   C. From 5 to Large 75
+1. **What is the range of Font Size available in Font Size drop down toolbar?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
+   A. From 10 to Large 70  
+   B. From 8 to Large 72  
+   C. From 5 to Large 75  
    D. From 10 to Large 100
 
-2. **By default, Footers are printed on:** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*
-   A. First Page
-   B. Last Page
-   C. All Pages
+2. **By default, Footers are printed on:** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*  
+   A. First Page  
+   B. Last Page  
+   C. All Pages  
    D. Even Pages
 
-3. **The feature in MS word automatically connects correct spelling, typing, capitalization on grammar errors ---** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*
-   A) Auto fix
-   B) Auto spell
-   C) Auto mark
+3. **The feature in MS word automatically connects correct spelling, typing, capitalization on grammar errors ---** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*  
+   A) Auto fix  
+   B) Auto spell  
+   C) Auto mark  
    D) Auto correct
 
-4. **Where can you find the horizontal split bar on MS Word screen?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
-   a. On the left of horizontal scroll bar
-   b. On the right of horizontal scroll bar
-   c. On the top of vertical scroll bar
+4. **Where can you find the horizontal split bar on MS Word screen?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
+   a. On the left of horizontal scroll bar  
+   b. On the right of horizontal scroll bar  
+   c. On the top of vertical scroll bar  
    d. On the bottom of vertical scroll bar
 
-5. **You cannot close MS Word application by ________.** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
-   a. Choosing File Menu and then exit Sub Menu
-   b. From File Menu choose close Sub Menu
-   c. Click X button on title bar
+5. **You cannot close MS Word application by ________.** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
+   a. Choosing File Menu and then exit Sub Menu  
+   b. From File Menu choose close Sub Menu  
+   c. Click X button on title bar  
    d. Press Alt+F4
 
 ## MS Office & Shortcuts (4)
 1. **(a) Write the Linux/Unix commands.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
 
-2. **Which of the following is an example of system software? [ নিচের কোনটি সিস্টেম সফটওয়্যারের উদাহরণ? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*
-   (a) MS Word
-   (b) Google Chrome
-   (c) Operating System
+2. **Which of the following is an example of system software? [ নিচের কোনটি সিস্টেম সফটওয়্যারের উদাহরণ? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
+   (a) MS Word  
+   (b) Google Chrome  
+   (c) Operating System  
    (d) Photoshop
 
-3. **The most famous romantic poet of English literature is-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*
-   a. John Dryden
-   b. Alexander Pope
-   c. William Wordsworth
+3. **The most famous romantic poet of English literature is-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*  
+   a. John Dryden  
+   b. Alexander Pope  
+   c. William Wordsworth  
    d. T.S Eliot
 
-4. **Find the correctly spelt word** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*
-   a) aggrandize
-   b) aggrandiize
-   c) aggrandice
+4. **Find the correctly spelt word** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
+   a) aggrandize  
+   b) aggrandiize  
+   c) aggrandice  
    d) aggrandise
 
 ## MS PowerPoint (3)
 
-1. **Which file format can be added to a PowerPoint show?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*
-   a) .jpg
-   b) .gif
-   c) .wav
+1. **Which file format can be added to a PowerPoint show?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
+   a) .jpg  
+   b) .gif  
+   c) .wav  
    d) All of the above
 
-2. **Which shortcut key on the keyboard can be used to view slide show?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*
-   a) F1
-   b) F7
-   c) F5
+2. **Which shortcut key on the keyboard can be used to view slide show?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
+   a) F1  
+   b) F7  
+   c) F5  
    d) F12
 
-3. **What is term used when you press and hold the left mouse key and move the mouse round the slide?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
-   a. Highlighting
-   b. Dragging
-   c. Selecting
+3. **What is term used when you press and hold the left mouse key and move the mouse round the slide?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
+   a. Highlighting  
+   b. Dragging  
+   c. Selecting  
    d. Moving
 
 ## MS Access (1)
 
-1. **Which of the following is not a type of Microsoft Access Database object?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*
-   a. Table
-   b. Form
-   c. Worksheets
+1. **Which of the following is not a type of Microsoft Access Database object?** *[Bangladesh Bank Assistant Programmer 2011 compact it 274 (ET: N/A)]*  
+   a. Table  
+   b. Form  
+   c. Worksheets  
    d. Modules
