@@ -1247,6 +1247,9 @@
 1. **When a function is called more than one time that is called?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** This is known as function reusability or recursion or Idempotence
 
+   answer: Recursion — a function that calls itself repeatedly (the source also notes function reusability)  
+   explanation: When a function invokes itself directly or indirectly the technique is called recursion, and each call needs a base case to stop it.
+
 2. **How many function calls will be performed to execute the following recursive function?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*
    ```c
    void function(int N) {
@@ -1259,6 +1262,9 @@
    b) 2*N  
    c) Infinite  
    d) The answer can vary depending on the initial value of N
+
+   answer: d — The answer can vary depending on the initial value of N  
+   explanation: N=0 makes exactly one call, a negative N counts up to 0 and stops, but any positive N grows forever and overflows the stack.
 
 3. **Consider the following recursive function fun (x,y) . What is the value of fun (4,3) ?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*
    ```c
@@ -1273,11 +1279,17 @@
    C) 12  
    D) 13
 
+   answer: D — 13  
+   explanation: The chain is fun(4,3) → fun(3,7) → fun(2,10) → fun(1,12) → fun(0,13), and the base case returns y = 13.
+
 4. **An algorithm that calls itself directly or indirectly is known as?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)], [Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) Sub Algorithm  
    B) Recursion  
    C) Polish Notation  
    D) Traversal algorithm
+
+   answer: B — Recursion  
+   explanation: Recursion is an algorithm calling itself, directly or through another function, on a smaller version of the problem.
 
 ## Storage Classes & Scope (3)
 
