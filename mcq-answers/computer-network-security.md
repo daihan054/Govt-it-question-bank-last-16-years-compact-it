@@ -24,11 +24,17 @@
    c. Simple attack  
    d. Complex attack
 
+   answer: b — Masquerade attack  
+   explanation: Capturing a message and re-sending it later unchanged is a replay attack, which exam keys group under masquerade because the attacker passes himself off as the original sender.
+
 2. **Which of the following is an attack that threatens the integrity of information?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 176 (ET: N/A)]*  
    a) Falsification of web pages  
    b) Illegal copy of data stored in system  
    c) DoS attack that creates system overload  
    d) Wiretapping of communication contents
+
+   answer: a — Falsification of web pages  
+   explanation: Integrity means data must not be altered; changing web page content breaks it, while copying, wiretapping and DoS attack confidentiality or availability.
 
 3. **Which of the following is a package of unauthorized programs and tools that has functions to create a back door in a server and hide the trace of entry into the server?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 176 (ET: N/A)]*  
    a) RFID  
@@ -36,11 +42,17 @@
    c) TKIP  
    d) web beacon
 
+   answer: b — Rootkit  
+   explanation: A rootkit installs a hidden back door and patches system tools so the intruder's presence and files stay invisible.
+
 4. **Which is not a type of DNS attack?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
    a) Cache Poisoning Attack  
    b) Denial of Service Attack  
    c) DNS spoofing  
    d) CSRF attack
+
+   answer: d — CSRF attack  
+   explanation: Cross-Site Request Forgery tricks a logged-in user's browser into sending an unwanted request; it has nothing to do with DNS.
 
 5. **The Bangladesh Bank robbery, also known as the Bangladesh bank cyber heist, was a theft that took place in February 2016. The governor of the central bank engaged ________ to lead the security incident response, vulnerability assessment and remediation.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) Fortinet Cyber Security  
@@ -48,11 +60,17 @@
    c) Palo Alto Networks  
    d) World Informatix Cyber Security
 
+   answer: d — World Informatix Cyber Security  
+   explanation: Bangladesh Bank brought in World Informatix Cyber Security, led by Rakesh Asthana, to handle the 2016 SWIFT heist response.
+
 6. **________ is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) Cryptography Proper  
    b) Steganography  
    c) Overt Writing  
    d) Coding
+
+   answer: b — Steganography  
+   explanation: Steganography hides the very existence of a message inside an ordinary file such as an image, unlike cryptography which hides only its meaning.
 
 7. **Which one is the part of software vulnerability?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*  
    A) Lack of user knowledge  
@@ -60,11 +78,17 @@
    C) Radiation of Transmission line  
    D) Passing internal information by employees
 
+   answer: B — Hidden bugs  
+   explanation: A software vulnerability is a defect in the code itself; the other options are human or physical weaknesses.
+
 8. **In computers, why is Firewall used for?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) Securing the computer  
    B) Data Transmission  
    C) Authentication  
    D) Monitoring
+
+   answer: A — Securing the computer  
+   explanation: A firewall inspects traffic against a rule set and blocks unauthorised connections in and out of the machine.
 
 9. **In computer systems, what is ‘Trojan Horse’?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) Virus  
@@ -72,11 +96,17 @@
    C) Worm  
    D) Spyware
 
+   answer: B — Malware  
+   explanation: A Trojan horse is malicious software disguised as something useful; unlike a virus or worm it does not replicate itself.
+
 10. **Viruses that take up residence in the computer’s memory and making hard to detect is called:** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*  
    A) Cluster Virus  
    B) Self-encrypting Virus  
    C) Stealth Virus  
    D) Macro Virus
+
+   answer: C — Stealth Virus  
+   explanation: A stealth virus stays resident in memory and intercepts system calls so scanners are shown the clean, original data.
 
 11. **How can we prevent SQL Injection Attack?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) Show the database error to the users  
@@ -84,11 +114,17 @@
    c) Use the user input directly  
    d) Use input validation
 
+   answer: d — Use input validation  
+   explanation: Validating and parameterising every input stops user text from being treated as SQL; showing errors or trusting raw input makes the flaw worse.
+
 12. **________ is an assault on a service from a single source that floods it with so many requests that is becomes overwhelmed and is either stopped completely or operates at a significantly reduced rate.** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*  
    a) Denial-of service(DoS) attack  
    b) Spoofing attack  
    c) Cross-site scripting (XSS) attack  
    d) Buffer overflow attack
+
+   answer: a — Denial-of service(DoS) attack  
+   explanation: A DoS flood comes from one source and exhausts the target's resources so the service slows down or stops.
 
 13. **________ a means of regaining access to a compromised system by installing software or configuring existing software to enable remote access under attacker-defined conditions.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*  
    a) Spyware  
@@ -96,11 +132,17 @@
    c) Cross-site scripting  
    d) Backdoor
 
+   answer: d — Backdoor  
+   explanation: A backdoor is software or a configuration left behind so the attacker can re-enter the system whenever he chooses, bypassing normal authentication.
+
 14. **Which of the following is not a web server attack type?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
    a) DOS attack  
    b) Website Defacement using SQLi  
    c) Directory Traversal  
    d) Password guessing
+
+   answer: d — Password guessing  
+   explanation: DoS, SQLi defacement and directory traversal exploit the web server itself, while password guessing targets user credentials.
 
 15. **A proxy firewall filters at ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
    a) Physical layer  
@@ -108,11 +150,17 @@
    c) Network layer  
    d) Application layer
 
+   answer: d — Application layer  
+   explanation: A proxy firewall terminates the connection and inspects the actual application data (HTTP, FTP), so it filters at layer 7.
+
 16. **To prevent we use firewall-** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
    (a) Data-driven attack  
    (b) Virus attack  
    (c) Unauthorized attack  
    (d) All
+
+   answer: d — All  
+   explanation: A firewall filters traffic by rule, which blocks unauthorised access, data-driven exploits and malware coming over the network.
 
 17. **Which of the following sends data packets over unprotected system?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) OSL  
@@ -120,11 +168,17 @@
    C) TCP  
    D) UDP
 
+   answer: D — UDP  
+   explanation: UDP is connectionless with no handshake, acknowledgement or retransmission, so packets go out with no protection or delivery guarantee.
+
 18. **Which of the following is the security equipment?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) Router  
    B) IPS  
    C) Switch  
    D) Hub
+
+   answer: B — IPS  
+   explanation: An Intrusion Prevention System inspects traffic and blocks attacks; routers, switches and hubs are connectivity devices.
 
 19. **Which of the following describes an email that is sent to users with web links that direct them to malicious websites?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
    a. Viruses  
@@ -132,11 +186,17 @@
    c. Rogue access points  
    d. Man-in-the-middle
 
+   answer: b — Phishing  
+   explanation: Phishing emails impersonate a trusted sender and carry links to fake sites that harvest credentials.
+
 20. **Which of the following mitigation techniques is MOST effective against a Man in the middle attack?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*  
    a. Authentication  
    b. Encryption  
    c. Popup blocker  
    d. ACL
+
+   answer: b — Encryption  
+   explanation: Strong end-to-end encryption makes intercepted traffic unreadable and unmodifiable, so the interceptor gains nothing; certificate-based authentication should back it up.
 
 ## Cryptography (17)
 
