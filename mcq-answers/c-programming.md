@@ -581,11 +581,17 @@
    c) The loop condition must always be false for the loop to execute.  
    d) The "do while" loop and "while" loop have identical behavior in all cases.
 
+   answer: b — The loop body is guaranteed to execute at least once  
+   explanation: A do-while tests its condition after the body, so the body always runs once even if the condition is false.
+
 2. **Which for loop has range of similar indexes of 'i' used in for (i = 0; i < n; i++)?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
    (a) for (i= n; i>0; i--)  
    (b) for (i=n-1; i>0; i--)  
    (c) for (i = 0; i = 0; i--)  
    (d) for (i=n-1; i>-1; i--)
+
+   answer: d — for (i=n-1; i>-1; i--)  
+   explanation: The original loop covers i = 0 to n-1; this one runs i from n-1 down to 0, so it touches exactly the same index values.
 
 3. **Consider int i=0; Then which of the following is not an infinite loop?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) for(;;){}  
@@ -593,14 +599,23 @@
    c) while ( ++i<0) { --i;}  
    d) do {++i; while(--i<=0);
 
+   answer: c — while ( ++i<0) { --i;}  
+   explanation: With i starting at 0, ++i makes it 1 and 1<0 is false, so the loop body never runs at all.
+
 4. **Which keyword is used to skip the rest of a loop and carry on from the top of the loop again?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) Break  
    b) resume  
    c) continue  
    d) skip
 
+   answer: c — continue  
+   explanation: continue abandons the rest of the current iteration and jumps to the next one; break leaves the loop entirely.
+
 5. **What can be used to terminate for(;;)?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** break statement
+
+   answer: break statement  
+   explanation: for(;;) has no exit condition, so a break inside the body (or a return/goto) is what ends it.
 
 6. **The ________ loop is especially useful when you process a menu selection?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
    a) while  
@@ -608,11 +623,17 @@
    c) for  
    d) switch
 
+   answer: b — do-while  
+   explanation: A menu must be displayed once before the user can choose, and do-while runs the body before testing, so it fits naturally.
+
 7. **C programming Language এ কোনো loop থেকে তৎক্ষণাৎ বের করার জন্য উল্লেখিত কোনটি ব্যবহৃত হয়?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*  
    A) break  
    B) switch  
    C) continue  
    D) if
+
+   answer: A — break  
+   explanation: break immediately exits the innermost loop or switch and continues after it.
 
 8. **Which Control statement can be executed at least once?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) While  
@@ -620,17 +641,26 @@
    C) do-while  
    D) None of the above
 
+   answer: C — do-while  
+   explanation: Only do-while checks its condition after the body, so it always executes at least one time.
+
 9. **Which of the following cannot be checked in a switch-case statement?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) Character  
    B) Integer  
    C) Float  
    D) None of above
 
+   answer: C — Float  
+   explanation: switch needs an integral or enum expression; float and double are not allowed as case selectors.
+
 10. **Which control statement can be executed at least once?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) While  
    B) for  
    C) do-while  
    D) All of the above
+
+   answer: C — do-while  
+   explanation: The do-while body runs before the condition is tested, guaranteeing one execution.
 
 11. **Which of the following correctly shows the hierarchy of algorithm operation in C?** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)]*  
    A) /*+-  
@@ -655,11 +685,17 @@
    C) 3  
    D) 4
 
+   answer: A — /*+-  
+   explanation: In C, * and / share the highest precedence here, then + and -, so the order is / * + - (option D is the same text). The two stray items pasted into this entry answer as: argv length — C (Undefined), and Math.round(2.5+Math.random()) — C (3).
+
 12. **What is an example of iteration in C?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) for  
    B) while  
    C) do-while  
    D) all of the above
+
+   answer: D — all of the above  
+   explanation: for, while and do-while are all iteration (looping) constructs in C.
 
 13. **Which of the following format is a correct format for declaration of function?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) return-type function-name (argument type);  
@@ -667,11 +703,17 @@
    C) return-type (argument type) function-name;  
    D) return-type {} function-name
 
+   answer: A — return-type function-name (argument type);  
+   explanation: A function declaration (prototype) states the return type, name and parameter types and ends with a semicolon; the version with {} is a definition.
+
 14. **What are the final values of a and c in the following C statement? (initialize value a=2, c=1) c=c? c=2:a=0;** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*  
    A) a=0, c=0  
    B) a=2, c=2  
    C) a=2, c=2  
    D) a=1, c=2
+
+   answer: B — a=2, c=2  
+   explanation: c is 1, which is true, so the conditional takes the first branch and sets c = 2; a is never touched and stays 2.
 
 15. **Which of the following doesn’t require an ‘&’ for the input in scanf ( ) ?** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*  
    A) char name [10];  
@@ -679,11 +721,17 @@
    C) float name[10];  
    D) double name [10];
 
+   answer: A — char name [10];  
+   explanation: For %s the array name already decays to the address of its first element, so scanf("%s", name) needs no &.
+
 16. **Which are the keywords of structured programming?** *[Bangladesh Bank Assistant Programmer 2016 compact it 245 (ET: N/A)]*  
    A) Keywords  
    B) Constant  
    C) volatile  
    D) Above all
+
+   answer: D — Above all  
+   explanation: The exam key treats keywords, constants and storage qualifiers such as volatile as all belonging to structured C programming.
 
 ## Arrays & Functions (15)
 
