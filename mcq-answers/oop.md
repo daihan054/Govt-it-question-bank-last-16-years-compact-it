@@ -23,11 +23,17 @@
    c) An abstract class cannot have any method implementations.  
    d) A class can extend multiple abstract classes.
 
+   answer: a — An abstract class can implement multiple interfaces  
+   explanation: Java allows only single class inheritance, but a class — abstract or not — may implement any number of interfaces; interfaces can also hold default methods.
+
 2. **Which of the following correctly describes the meaning of "Class", "&&", and "&" in Java?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 7 (ET: BIBM)]*  
    a) Class is a keyword to define a new class; && is a bitwise AND operator; & is a logical AND operator.  
    b) Class is used to create objects; && is a bitwise OR operator; & is a logical OR operator.  
    c) Class is used to create objects; && is a logical OR operator; & is a bitwise OR operator.  
    d) Class is a keyword to define a new class; && is a logical AND operator; & is a bitwise AND operator.
+
+   answer: d — Class is a keyword to define a new class; && is a logical AND operator; & is a bitwise AND operator  
+   explanation: && works on booleans and short-circuits, while & works bit by bit on integers (and as a non-short-circuit boolean AND).
 
 3. **What is Java's machine code?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 7 (ET: BIBM)]*  
    a) Java source code is directly executed by the CPU.  
@@ -35,17 +41,26 @@
    c) Java source code is compiled into assembly code, which is then executed by the CPU.  
    d) Java source code is compiled into bytecode, which is interpreted or compiled to native machine code by the Java Virtual Machine (JVM).
 
+   answer: d — Java source code is compiled into bytecode, which is interpreted or compiled to native machine code by the Java Virtual Machine (JVM)  
+   explanation: javac produces platform-independent .class bytecode, and the JVM runs it, JIT-compiling hot paths to native code.
+
 4. **What type of variable should be used to store data that is important throughout an object's lifespan?** *[Combined Bank Officer (IT) 04.10.2024 compact it 14 (ET: BIBM)]*  
    (a) A reference variable  
    (b) A method variable  
    (c) An instance variable  
    (d) A parameter variable
 
+   answer: c — An instance variable  
+   explanation: An instance variable is created with the object and lives as long as the object does.
+
 5. **A collection of objects that use common structure and a common behavior is knownas-** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
    (a) Object  
    (b) Entity  
    (c) Instance  
    (d) Class
+
+   answer: d — Class  
+   explanation: A class is the blueprint defining the attributes and behaviour shared by all its objects.
 
 6. **The following method, which is intended to find the maximum element of the parameter array, is incorrect.** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    ```java
@@ -63,12 +78,18 @@
    (c) It fails whenever the array a contains only negative numbers.  
    (d) It fails whenever the first element of the array a is the largest.
 
+   answer: c — It fails whenever the array a contains only negative numbers  
+   explanation: max starts at 0, so if every element is below zero none beats it and the method wrongly returns 0.
+
 7. **Read the following statement in a Java program that compiles and executes-** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*  
    **submarine.dive (depth); What can you say for sure?**  
    (a) depth must be an int  
    (b) dive must be the name of an instance field  
    (c) dive must be a method  
    (d) submarine must be the name of a class
+
+   answer: c — dive must be a method  
+   explanation: The parentheses after dive make it a method call; submarine could be a variable or a class, and depth could be any type the method accepts.
 
 8. **What is the output of this Java program?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)], [Combined 4 Bank Assistant Programmer (AP) 2020 compact it 154 (ET: DU)]*
    ```java
@@ -87,11 +108,17 @@
    c) 0  
    d) A garbage value
 
+   answer: b — The program will cause an compile error because the object 't' was not initialized  
+   explanation: Java refuses to compile a read of a local variable that has not been definitely assigned.
+
 9. **Interfaces in Java are meant to be-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)], [Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*  
    a) Extended  
    b) Implemented  
    c) Overridden  
    d) Used by creating object
+
+   answer: b — Implemented  
+   explanation: A class implements an interface and supplies bodies for its abstract methods; interfaces extend other interfaces.
 
 10. **What is the result of compiling and running the following code?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
    ```java
@@ -107,20 +134,35 @@
    (c) None of the above  
    (d) Compilation error, it is length () not length
 
+   answer: a — 0  
+   explanation: A zero-length array is legal in Java, and length is a field, so it prints 0.
+
 11. **What are the inbuit classes?** *[BCC Assistant Programmer 11.11.2023 compact it 35 (ET: N/A)]*  
    **Ans:** Predefined Method
+
+   answer: Predefined (built-in) classes  
+   explanation: Java ships with library classes such as String, Math, Scanner and ArrayList that can be used without writing them.
 
 12. **What is syntax for call static method in class?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** class name, Method name
 
+   answer: ClassName.methodName()  
+   explanation: A static method belongs to the class, so it is called through the class name without creating an object.
+
 13. **What does runFinalize() do?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** The runFinalization() method is a part of the Runtime class, and its purpose is to trigger the execution of the finalization methods of any objects that are awaiting finalization. Its sentence structure is as follows: public void runFinalization()
+
+   answer: runFinalization() requests that the JVM run the pending finalize() methods of objects awaiting finalization  
+   explanation: It is a method of the Runtime class (public void runFinalization()); finalization is deprecated in modern Java in favour of try-with-resources and Cleaner.
 
 14. **Find the correct output: System.out.print('D' + 'E'+ 'F');** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
    a) 137  
    b) DEF  
    c) 207  
    d) DEF
+
+   answer: c — 207  
+   explanation: The chars promote to int, so 'D'+'E'+'F' = 68+69+70 = 207 and print shows the number.
 
 15. **Find the output of the following code:** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
    ```java
@@ -133,11 +175,17 @@
    c) 0  
    d) 3
 
+   answer: c — 0  
+   explanation: a-100 is -85 and b-a is 0, so the condition is false and the else branch prints b-a = 0.
+
 16. **Java Virtual Machine is-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
    (a) Acts as a full-fledged hypervisor  
    (b) Converts bytecodes to Operating System dependent code  
    (c) Is known as the Compiler of Java programming language  
    (d) Manages system memory and provides a portable execution environment for Java-bases applications
+
+   answer: d — Manages system memory and provides a portable execution environment for Java-bases applications  
+   explanation: The JVM loads and verifies bytecode, manages the heap and garbage collection, and gives the same runtime on every platform.
 
 17. **Which of the following is not a method of the Thread class?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
    a. sleep (long msec)  
@@ -145,11 +193,17 @@
    c. go()  
    d. yield()
 
+   answer: c — go()  
+   explanation: Thread provides sleep(), stop(), yield(), start(), run() and join() — there is no go().
+
 18. **Which of the following statements is correct regarding abstract classes?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
    a. An abstract class cannot be extended  
    b. A subclass of a non-abstract superclass cannot be abstract  
    c. A subclass can override a concreate method in a superclass to declare it abstract  
    d. An abstract class cannot be used as a data type
+
+   answer: c — A subclass can override a concreate method in a superclass to declare it abstract  
+   explanation: A subclass may redeclare an inherited concrete method as abstract, which then forces its own subclasses to implement it.
 
 19. **What is the output of this Java program?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)]*
    ```java
@@ -168,17 +222,26 @@
    c. compiler error  
    d. runtime error
 
+   answer: c — compiler error  
+   explanation: The local variable t is never assigned, and Java will not compile a use of an unassigned local variable.
+
 20. **Converting a primitive type data into its corresponding wrapper class object instance is called-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 86 (ET: N/A)]*  
    a. Boxing  
    b. Wrapping  
    c. Instantiation  
    d. Auto boxing
 
+   answer: a — Boxing  
+   explanation: Boxing wraps a primitive in its wrapper object; when the compiler inserts it for you it is called autoboxing.
+
 21. **Which information is not correct for any constructor of a java class?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 164 (ET: N/A)]*  
    a) Constructor is not inherited  
    b) Constructor has no return type  
    c) Constructor can be final  
    d) Constructor can be overloaded
+
+   answer: c — Constructor can be final  
+   explanation: A constructor is never inherited, so final is meaningless and not allowed on it; constructors do have no return type and can be overloaded.
 
 22. **What is the output of this Java program?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*
    ```java
@@ -197,6 +260,9 @@
    c) A garbage value  
    d) 0
 
+   answer: d — 0  
+   explanation: The object is created, and instance fields get default values, so the int i is 0.
+
 23. **Which of the following statements is/are true about Inheritance in Java?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*  
    i) Private methods are final  
    ii) Protected methods are final  
@@ -207,11 +273,17 @@
    c) ii, iii and iv  
    d) ii and iv only
 
+   answer: a — i, iii and iv  
+   explanation: Private methods are implicitly final and invisible to subclasses so cannot be overridden, and protected members are reachable from a subclass even in another package; protected methods are not final.
+
 24. **Which of the followings can be used in a Java Server Page (JSP) page?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*  
    a) HTML  
    b) AJAX  
    c) JSTL  
    d) All of the above
+
+   answer: d — All of the above  
+   explanation: A JSP page mixes HTML markup with JSTL tags, and the delivered page can carry AJAX scripts.
 
 25. **Which of the following statements is not true for Java Language?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*  
    a) The number 1 can be used instead of the keyword ‘true’  
@@ -219,11 +291,17 @@
    c) Static members of a class can be accessed without creating objects of that class  
    d) If not specified otherwise, the initial value of an integer variable is 0
 
+   answer: a — The number 1 can be used instead of the keyword 'true'  
+   explanation: Java has a strict boolean type, so an int cannot stand in for true as it can in C.
+
 26. **Find the output of following Java code line: System.out.println (math.floor (-7.4)** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) -7  
    B) -7.4  
    C) -8  
    D) -7.2
+
+   answer: C — -8  
+   explanation: Math.floor rounds down towards negative infinity, so -7.4 becomes -8.0.
 
 27. **Which of the following is not an operator in Java?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) instanceof  
@@ -231,11 +309,17 @@
    C) new  
    D) All of this
 
+   answer: B — sizeof  
+   explanation: Java has no sizeof operator; instanceof and new are both genuine Java operators.
+
 28. **In Java, which operator is used to create an object?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*  
    A) class  
    B) scanf  
    C) print  
    D) None of these
+
+   answer: D — None of these  
+   explanation: Objects are created with the new operator, which is not among the listed options.
 
 29. **Which of the following produce an answer that is closest in value to a double, d, while not being greater than d?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)], [Combined Bank Maintenance Engineer 2018 compact it 229 (ET: N/A)]*  
    A) (int.Math.min(d))  
@@ -243,11 +327,17 @@
    C) int.Math.abs(d))  
    D) (int).Math.floor(d))
 
+   answer: D — (int).Math.floor(d))  
+   explanation: Math.floor gives the largest whole value not greater than d, and casting to int keeps it as an integer.
+
 30. **Which keyword must be used to inherit class in java?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*  
    A) extends  
    B) super  
    C) this  
    D) extend
+
+   answer: A — extends  
+   explanation: A class inherits from another with extends; implements is used for interfaces.
 
 31. **A class that is inherited in java is called a ________.** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*  
    A) sub class  
@@ -255,11 +345,17 @@
    C) state class  
    D) implement class
 
+   answer: B — super class  
+   explanation: The class being inherited from is the superclass (parent); the one inheriting is the subclass.
+
 32. **Which one of these interfaces is implemented by thread class?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) Set  
    B) Connections  
    C) Runnable  
    D) None of above
+
+   answer: C — Runnable  
+   explanation: Thread implements Runnable, which declares the single run() method.
 
 33. **In java, which operator is used to create an object?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) class  
@@ -267,11 +363,17 @@
    C) print  
    D) None of above
 
+   answer: D — None of above  
+   explanation: The new operator creates objects, and it is not listed.
+
 34. **In java, which one will be used for comprising whether the two String object str1 and str2 are same?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) str1=str2  
    B) str1.equalsIgnoreCase(str2)  
    C) str1==str2  
    D) All of above
+
+   answer: B — str1.equalsIgnoreCase(str2)  
+   explanation: Content must be compared with a method, not ==, which only tests whether both refer to the same object; equals() is the case-sensitive form.
 
 35. **Which of these data types is used by operating system to manage the Recursion in Java?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) Array  
@@ -279,11 +381,17 @@
    C) Queue  
    D) Tree
 
+   answer: B — Stack  
+   explanation: Each recursive call pushes an activation record with its parameters and return address onto the call stack.
+
 36. **Which of the following is an incorrect statement about packages?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) Package defines a namespace in which classes are stored  
    B) A package can contain other packages within  
    C) A package can be renamed without renaming the directory, in which the classes are stored  
    D) Java uses file system directories to store packages
+
+   answer: C — A package can be renamed without renaming the directory, in which the classes are stored  
+   explanation: Java maps package names onto directory names, so renaming the package means renaming the folder too.
 
 37. **Multiple inheritances in Java can be implemented using which of the following?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) Interfaces  
@@ -291,11 +399,17 @@
    C) Protected methods  
    D) Private methods
 
+   answer: A — Interfaces  
+   explanation: A class can implement several interfaces, which gives the effect of multiple inheritance without the diamond problem.
+
 38. **Which component is used to compile, debug and execute in Java program?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) JVM  
    B) JDK  
    C) JIT  
    D) JRE
+
+   answer: B — JDK  
+   explanation: The JDK contains the compiler, debugger and other tools plus the JRE needed to run the program.
 
 39. **int C=10; System.out.println(C--); gives a output of-** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
    A) 10  
@@ -303,11 +417,17 @@
    C) 9  
    D) 8
 
+   answer: A — 10  
+   explanation: C-- is post-decrement, so the current value 10 is printed and C only then becomes 9.
+
 40. **In java, which operator is used to create an object?** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*  
    A) class  
    B) scanf  
    C) print  
    D) None
+
+   answer: D — None  
+   explanation: Objects are created with new, which is not among the options.
 
 41. **Which of the keywords can be used in a subclass to call the constructor of superclass?** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
    A) Extent  
@@ -315,11 +435,17 @@
    C) Super  
    D) This
 
+   answer: C — Super  
+   explanation: super(...) as the first statement of a constructor invokes the superclass constructor.
+
 42. **Which of the following is a valid declaration of an object of class Box?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) Box obj = new Box();  
    B) Box obj = new Box;  
    C) obj = new Box();  
    D) new Box obj;
+
+   answer: A — Box obj = new Box();  
+   explanation: Declaring a reference and calling the constructor with new and parentheses is the correct form.
 
 43. **In Java, which operator is used to create an object-** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) Class  
@@ -327,11 +453,17 @@
    C) Print  
    D) none of them
 
+   answer: D — none of them  
+   explanation: The new operator creates objects in Java, and it is not listed.
+
 44. **A class that is inherited in java is called a ________.** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) Subclass  
    B) Super class  
    C) Static class  
    D) Implement class
+
+   answer: B — Super class  
+   explanation: The inherited (parent) class is called the superclass.
 
 45. **In Java, which operator is used to create an object?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
    A) class  
@@ -339,11 +471,17 @@
    C) print  
    D) New
 
+   answer: D — New  
+   explanation: The new operator allocates the object and calls its constructor.
+
 46. **Java source code is compiled into ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*  
    A) Source Code  
    B) Byte Code  
    C) Object  
    D) .exe
+
+   answer: B — Byte Code  
+   explanation: javac produces platform-independent bytecode that the JVM executes.
 
 47. **Which one of these lists contains only Java programming language keywords?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. class, if, void, long, int, continue  
@@ -351,11 +489,17 @@
    c. try, virtual, throw, final, volatile, transient  
    d. strictfp, constant, super, implements, do
 
+   answer: a — class, if, void, long, int, continue  
+   explanation: All six are Java keywords; option (c) has "virtual" and (d) has "constant", neither of which exists in Java.
+
 48. **Which method must be defined by a class implementing java.lang.Runnable interface?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. void run()  
    b. public void run()  
    c. public void start()  
    d. void run(int priority)
+
+   answer: b — public void run()  
+   explanation: Runnable declares run() as public, and an implementing class may not reduce that visibility.
 
 ## Polymorphism & Overloading (16)
 
