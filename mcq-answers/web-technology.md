@@ -325,11 +325,17 @@
    (c) SSL-VPN function  
    (d) WAF
 
+   answer: d — WAF  
+   explanation: A Web Application Firewall inspects HTTP traffic at the application layer and blocks SQL injection, XSS and similar attacks.
+
 2. **Which one of the following statements with respect to REST API is false?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
    (a) A REST API would use a GET request to retrieve a record  
    (b) A REST API would use a DELETE request to delete a record  
    (c) The operations in a REST API can be called from any HTTP client  
    (d) None of the above statements is false
+
+   answer: d — None of the above statements is false  
+   explanation: REST uses GET to read, DELETE to remove, and works over plain HTTP so any HTTP client can call it — all three statements are true.
 
 3. **Which is the lightweight message format?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    a) XML  
@@ -337,11 +343,17 @@
    c) SQL  
    d) HTML
 
+   answer: b — JSON  
+   explanation: JSON carries data as simple key-value text with far less markup overhead than XML.
+
 4. **Which one is modern light weight message exchange format?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) JSON  
    B) XML  
    C) MX  
    D) HTML
+
+   answer: A — JSON  
+   explanation: JSON is the compact, human-readable format used for modern data exchange.
 
 5. **Which one is modern lightweight message exchange format?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*  
    A) JSON  
@@ -349,11 +361,17 @@
    C) HTML  
    D) XML
 
+   answer: A — JSON  
+   explanation: JavaScript Object Notation is lightweight, easy to parse and widely used by web APIs.
+
 6. **Which one is modern lightweight message exchange format?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*  
    A) XM  
    B) MX  
    C) HTML  
    D) JSON (JavaScript Object Notation)
+
+   answer: D — JSON (JavaScript Object Notation)  
+   explanation: JSON is the modern lightweight data interchange format.
 
 ## Full Stack & Web Servers (5)
 
