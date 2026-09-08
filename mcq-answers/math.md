@@ -26,11 +26,17 @@
 ## Algebra (48)
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
+   answer: ২০ মিটার  
+   explanation: খরচ ক্ষেত্রফলের সমানুপাতিক, তাই 7500/6000 = w/(w-4); এতে 5(w-4) = 4w, অর্থাৎ w = 20 মিটার।
+
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৬  
    খ. ১২  
    গ. ১৮  
    ঘ. ২৪
+
+   answer: গ — ১৮  
+   explanation: (a-b)(a+b) = a²-b² থেকে 6 × (a+b) = 108, তাই যোগফল 18।
 
 3. **If \frac{x}{y} = \frac{1}{3}, then the value of (x^2 + y^2)/(x^2 - y^2) is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) \frac{-10}{9}  
@@ -38,11 +44,17 @@
    (c) -\frac{5}{4}  
    (d) -\frac{5}{3}
 
+   answer: c — -5/4  
+   explanation: x = 1, y = 3 ধরলে (1+9)/(1-9) = 10/(-8) = -5/4।
+
 4. **The total number obtained by a student in Physics, Chemistry and Mathematics together is 120 more than the marks obtained by him in Chemistry. What is the average mark obtained by him in Physics and Mathematics together?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 40  
    (b) 60  
    (c) 120  
    (d) Cannot be determined
+
+   answer: b — 60  
+   explanation: P + C + M = C + 120 থেকে P + M = 120, তাই গড় 60।
 
 5. **In a T-20 cricket match, the number of boundaries scored was twice the number of over boundaries by a team. The team took 22 single runs, no two or three runs and could not score from 38 deliveries. How many runs did the team score?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*, *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
    (a) 124  
@@ -50,17 +62,29 @@
    (c) 150  
    (d) 302
 
+   answer: d — 302  
+   explanation: ছক্কা s হলে চার 2s; বল হিসাব 3s + 22 + 38 = 120 দেয় s = 20, আর রান = 4(40) + 6(20) + 22 = 302।
+
 6. **3^{20}+3^{20}+3^{20}=?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
    (a) 3^{20}  
    (b) 9^{20}  
    (c) 9^{60}  
    (d) 3^{60}
 
+   answer: 3²¹ — ছাপা কোনো অপশনেই এটি নেই  
+   explanation: 3²⁰ + 3²⁰ + 3²⁰ = 3 × 3²⁰ = 3²¹; বিকল্পগুলো ভিন্ন কোনো প্রশ্নের। <!-- verify -->
+
 7. **x+y = 7, xy = 10, (x-y)^2 এর মান কত?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** 9
 
+   answer: 9  
+   explanation: (x-y)² = (x+y)² - 4xy = 49 - 40 = 9।
+
 8. **Given, x is a real number. What is the minimim value of x^2-4x+5?** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** 1
+
+   answer: 1  
+   explanation: x²-4x+5 = (x-2)² + 1, আর (x-2)² সর্বনিম্ন 0, তাই সর্বনিম্ন মান 1।
 
 9. **32^{x+y} = 16^{x+y}, what is the value x?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 73 (ET: N/A)]*  
    (a) Y  
@@ -69,8 +93,14 @@
    (d) \text{X}(2y+2)  
    **Ans: b**
 
+   answer: b — -y  
+   explanation: 2^{5(x+y)} = 2^{4(x+y)} থেকে 5(x+y) = 4(x+y), তাই x+y = 0 অর্থাৎ x = -y।
+
 10. **\sqrt{-4} \times \sqrt{-4} = কত?** *[BTRC Assistant Director (Technical) 2022 compact it 65 (ET: MIST)]*  
    উত্তর: -4
+
+   answer: -4  
+   explanation: √(-4) = 2i, তাই 2i × 2i = 4i² = -4।
 
 11. **If \log_4(x)=12 then find \log_2(4/x)** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 73 (ET: N/A)]*  
    (a) 22  
@@ -79,6 +109,9 @@
    (d) 12  
    **Ans: a**
 
+   answer: a — 22  
+   explanation: log₄x = 12 মানে x = 2²⁴; log₂(x/4) = 24 - 2 = 22 (ছাপা রাশিতে 4/x থাকলে মান হতো -22)।
+
 12. **2^{30}+2^{30}+2^{30}+2^{30}= কত?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*  
    ক) 2^{120}  
    খ) 8^{30}  
@@ -86,11 +119,17 @@
    ঘ) 8^{120}  
    **Ans: গ**
 
+   answer: গ — 2³²  
+   explanation: চারবার 2³⁰ যোগ করা মানে 4 × 2³⁰ = 2² × 2³⁰ = 2³²।
+
 13. **The function f(x)=x+\cos x is ______ ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) Always increasing  
    (খ) always decreasing  
    (গ) Increasing for a certain range of x  
    (ঘ) none of these
+
+   answer: ক — Always increasing  
+   explanation: f'(x) = 1 - sin x, আর sin x কখনো 1-এর বেশি নয়, তাই ডেরিভেটিভ কখনো ঋণাত্মক হয় না।
 
 14. **If 6\sin^{-1}(x^2-6x+8.5) = \pi, then the value of x is ______ ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 1  
@@ -98,11 +137,17 @@
    (গ) 3  
    (ঘ) 5
 
+   answer: খ — 2  
+   explanation: sin⁻¹(...) = π/6 মানে x²-6x+8.5 = 0.5, অর্থাৎ x²-6x+8 = 0, তাই x = 2 বা 4।
+
 15. **If \log_4 x = 12, then \log_2 \frac{x}{4} = ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 11  
    (খ) 22  
    (গ) 44  
    (ঘ) 2
+
+   answer: খ — 22  
+   explanation: log₄x = 12 থেকে x = 2²⁴, তাই log₂(x/4) = 24 - 2 = 22।
 
 16. **Value for k, for which A = \begin{bmatrix} k & 8 \\ 4 & 2k \end{bmatrix} is a singular matrix is---?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) -4  
@@ -110,11 +155,17 @@
    (গ) +4  
    (ঘ) 0
 
+   answer: গ — +4  
+   explanation: সিঙ্গুলার হতে হলে নির্ণায়ক শূন্য, অর্থাৎ 2k² - 32 = 0, তাই k = ±4।
+
 17. **A fraction becomes 1/3 when 1 is subtracted from the numerator and it becomes 1/4 when 8 is added to its denominator. Find the fraction.** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 5/12  
    (খ) 3/32  
    (গ) 12/5  
    (ঘ) 8
+
+   answer: ক — 5/12  
+   explanation: (n-1)/d = 1/3 ও n/(d+8) = 1/4 সমাধান করলে n = 5 এবং d = 12।
 
 18. **The scalar product of 5\hat{i}+\hat{j}-3\hat{k} and 3\hat{i}-4\hat{j}+7\hat{k} is ______ ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 10  
@@ -122,11 +173,17 @@
    (গ) 15  
    (ঘ) -15
 
+   answer: খ — -10  
+   explanation: স্কেলার গুণফল = 5(3) + 1(-4) + (-3)(7) = 15 - 4 - 21 = -10।
+
 19. **If 5x+4y=22, 3x+3y-21, what is the value of x and y?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) x=2, y=3  
    b) x=2, y=-4  
    c) x=3, y=7  
    d) x=2, y=-3
+
+   answer: a — x=2, y=3  
+   explanation: 5(2) + 4(3) = 22 মিলে যায়, তাই এই জোড়াটিই সমাধান।
 
 20. **If 3x+5y =14 and x-y = 6 then what is the average of x and y?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 1  
@@ -134,15 +191,24 @@
    c) 2  
    d) 2.5
 
+   answer: d — 2.5  
+   explanation: x - y = 6 বসিয়ে 3(y+6) + 5y = 14 দেয় y = -0.5 ও x = 5.5, তাই গড় (5.5 - 0.5)/2 = 2.5।
+
 21. **If a = \sqrt{3} + \sqrt{2} then value of a^3 + \frac{1}{a^3} = ?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 10\sqrt{3}  
    b) 12\sqrt{3}  
    c) 12\sqrt{3}  
    d) 18\sqrt{3}
 
+   answer: d — 18√3  
+   explanation: 1/a = √3-√2 হওয়ায় a + 1/a = 2√3, আর a³ + 1/a³ = (2√3)³ - 3(2√3) = 24√3 - 6√3 = 18√3।
+
 22. **Factorize a^3 - 70a - 6** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) (a + 1) (a - 2) (a - 3)  
    b) (a - 1) (-2) (a - 3)
+
+   answer: a³ - 7a - 6 = (a+1)(a+2)(a-3)  
+   explanation: a = -1 বসালে রাশিটি শূন্য হয়, তাই (a+1) একটি উৎপাদক; ভাগ করে বাকিটা a²-a-6 = (a+2)(a-3) পাওয়া যায় (ছাপা রাশি ও বিকল্প দুটোই বিকৃত)। <!-- verify -->
 
 23. **A leading library charges c cents for the first week that a book is loaned and f cents for each day over one week. What is the cost for taking out a book for days, where d is greater than 7?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) C+f(d-7)  
@@ -150,11 +216,17 @@
    c) cd  
    d) Cd+f
 
+   answer: a — C+f(d-7)  
+   explanation: প্রথম সপ্তাহের জন্য c, আর সাত দিনের পরের প্রতিটি দিনের জন্য f, অর্থাৎ (d-7) দিনের জন্য f(d-7)।
+
 24. **At any iteration of simplex method, if \Delta_j\ (Z_j - C_j) corresponding to any non-basic variable X_j is obtained as zero, the solution under the test is-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*  
    (a) Degenerate solution  
    (b) Unbounded solution  
    (c) Alternative solution  
    (d) Optimal solution
+
+   answer: c — Alternative solution  
+   explanation: A non-basic variable with Zj - Cj = 0 means another vertex gives the same objective value, so multiple optimal solutions exist.
 
 25. **The product of two positive numbers is p. If each of the numbers is increased by 2, the new product is how much greater than twice the sum of the two original numbers?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) p times  
@@ -162,11 +234,17 @@
    (c) (p+4) times  
    (d) (2p+3) times
 
+   answer: c — (p+4) times  
+   explanation: (x+2)(y+2) = xy + 2(x+y) + 4, so subtracting twice the sum leaves p + 4.
+
 26. **If a, b and c are 3 consecutive integers and a>b>c, which of the following has the maximum value?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) c + \frac{b}{a}  
    (b) a + \frac{b}{c}  
    (c) b + \frac{c}{a}  
    (d) c + \frac{a}{b}
+
+   answer: b — a + b/c  
+   explanation: With c smallest and positive, b/c is the largest fraction and a is the largest integer, so their sum is greatest — for 1, 2, 3 it gives 3 + 2 = 5.
 
 27. **One dozen eggs and ten pounds of apples are currently of the same price. If the price of a dozen eggs rises by 10% and that of apples rises by 2% how much more will it cost to buy a dozen of eggs and ten pounds of apples?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) 2%  
@@ -174,11 +252,17 @@
    (c) 6%  
    (d) 12%
 
+   answer: c — 6%  
+   explanation: Equal prices x each rise to 1.1x and 1.02x, giving 2.12x against 2x — an increase of 0.12x, which is 6%.
+
 28. **There are n students in a school. If r % among the students are 12 years or younger, which of the following expressions represents the number of students who are older than 12?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) n(1-r)  
    (b) 100(1-r)  
    (c) n(1-r)/100  
    (d) n(100-r)/100
+
+   answer: d — n(100-r)/100  
+   explanation: If r% are 12 or younger, (100-r)% are older, and that percentage of n is n(100-r)/100.
 
 29. **If x^3 < x^2 < x then the value of x could be** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) 0  
@@ -186,11 +270,17 @@
    (c) 1/3  
    (d) \sqrt{3}
 
+   answer: c — 1/3  
+   explanation: For a proper fraction between 0 and 1, each higher power is smaller, so x³ < x² < x.
+
 30. **x+y=535, x+4y=4, what is the value of 4x² + 20xy + 16y²?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 60  
    b. 40  
    c. 20  
    d. 80
+
+   answer: d — 80  
+   explanation: 4x² + 20xy + 16y² = 4(x+y)(x+4y), and with x+y = 5 and x+4y = 4 this gives 4 × 5 × 4 = 80.
 
 31. **If a² - b² = 20, a+b= 5, What is the value of a-b?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 3  
@@ -198,11 +288,17 @@
    c. 5  
    d. 4
 
+   answer: d — 4  
+   explanation: a² - b² = (a+b)(a-b), so 20 = 5(a-b) and a-b = 4.
+
 32. **What is the value of a, if 3x² + ax + a + 3 is divisible by x+2?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 12  
    b. 13  
    c. 14  
    d. 15
+
+   answer: d — 15  
+   explanation: Divisibility by x+2 means f(-2) = 0, so 12 - 2a + a + 3 = 0 and a = 15.
 
 33. **A vegetable cart sells a potato for $0.24 and a tomato for $0.76. Fred bought 12 vegetables in total. He only bought potatoes and tomatoes. If Fred paid $ 6.52 total, how many potatoes did he buy?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 2  
@@ -210,11 +306,17 @@
    c. 5  
    d. 8
 
+   answer: c — 5  
+   explanation: With p potatoes, 0.24p + 0.76(12-p) = 6.52 gives 0.52p = 2.6, so p = 5.
+
 34. **The factors of 4x⁴ + 1 is-** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. (2x² + 2x + 1) (2x² + 3x - 1)  
    b. (2x² + 3x + 1)(2x² + 3x - 1)  
    c. (2x² + 3x + 1) (2x² - 3x + 1)  
    d. (2x² + 3x + 1) (2x² - 2x + 1)
+
+   answer: 4x⁴ + 1 = (2x² + 2x + 1)(2x² - 2x + 1)  
+   explanation: Writing it as (2x²+1)² - (2x)² and using the difference of squares gives these two factors; none of the printed options states this correctly. <!-- verify -->
 
 35. **If \log 2 = a and \log 5 = b, then \log 50 =?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) a + b  
@@ -222,11 +324,17 @@
    c) ab^2  
    d) a + 2b
 
+   answer: d — a + 2b  
+   explanation: log 10 = a + b = 1, so log 50 = log 5 + log 10 = b + (a+b) = a + 2b.
+
 36. **If, xy = 5, xy = 6, then x+y=?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 7  
    খ. \pm 7  
    গ. 1  
    ঘ. None
+
+   answer: খ — ±7  
+   explanation: x - y = 5 ও xy = 6 হলে (x+y)² = (x-y)² + 4xy = 25 + 24 = 49, তাই x+y = ±7।
 
 37. **The solution of equations x-y=2 and x+y=4;** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 3 and 1  
@@ -234,11 +342,17 @@
    গ. 5 and 1  
    ঘ. -1 and -3
 
+   answer: ক — 3 and 1  
+   explanation: দুই সমীকরণ যোগ করলে 2x = 6, তাই x = 3 ও y = 1।
+
 38. **0.1 \times 0.01 + 1 = ?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 1.01  
    খ. 1.001  
    গ. 2.01  
    ঘ. 0.001
+
+   answer: খ — 1.001  
+   explanation: 0.1 × 0.01 = 0.001, তার সঙ্গে 1 যোগ করলে 1.001।
 
 39. **K iteration by Newton-Raphson of a following square root of a number increases accuracy in number of digits?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) k  
@@ -246,11 +360,17 @@
    C) 3k  
    D) 4k
 
+   answer: B — 2k  
+   explanation: Newton-Raphson converges quadratically, roughly doubling the number of correct digits at every iteration.
+
 40. **If for a square matrix A, A^2 = A then such a matrix known as-** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) Idempotent matrix  
    B) Orthogonal Matrix  
    C) Null Matrix  
    D) Identity matrix
+
+   answer: A — Idempotent matrix  
+   explanation: A matrix satisfying A² = A is called idempotent.
 
 41. **Domain of a function is-** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
    A) the maximal set of numbers for which function is defined  
@@ -282,11 +402,17 @@
    গ. ১৭
    ঘ. ২০
 
+   answer: A — the maximal set of numbers for which function is defined  
+   explanation: The domain is the set of all inputs for which the function gives a defined value; the outputs form the range.
+
 42. **Which search algorithm expands nodes level by level before moving deeper? [ কোন সার্চ অ্যালগরিদমটি নোডগুলোকে স্তর (level) অনুযায়ী প্রসারিত করে তারপর গভীরে যায়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
    (a) DFS  
    (b) BFS  
    (c) Hill climbing  
    (d) A\*
+
+   answer: b — BFS  
+   explanation: Breadth First Search uses a queue to visit every node at one depth before going deeper.
 
 43. **The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’? [ ৩ দিয়ে ‘a’-কে ভাগ করলে ভাগফল হয় ‘b’ এবং ভাগশেষ ২। ৩ দিয়ে ‘b’-কে ভাগ করলে ভাগফল ২ এবং ভাগশেষ ১। ‘a’ এর মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 13  
@@ -294,11 +420,17 @@
    (c) 23  
    (d) 21
 
+   answer: c — 23  
+   explanation: b = 3×2 + 1 = 7, so a = 3×7 + 2 = 23.
+
 44. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity? [ র‍্যান্ডম লিঙ্কড লিস্ট সর্ট করার জন্য সবচেয়ে কম টাইম কমপ্লেক্সিটির অ্যালগরিদম কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (a) Bubble Sort  
    (b) Quick Sort  
    (c) Heap Sort  
    (d) Merge Sort
+
+   answer: d — Merge Sort  
+   explanation: Merge sort needs only pointer changes and no random access, so it sorts a linked list in O(n log n).
 
 45. **Which scheduling algorithm may cause starvation? [ কোন শিডিউলিং অ্যালগরিদমে স্টারভেশন (Starvation) হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
    (a) FCFS  
@@ -306,11 +438,17 @@
    (c) Priority Scheduling  
    (d) FIFO
 
+   answer: c — Priority Scheduling  
+   explanation: A steady stream of higher-priority processes can keep a low-priority one waiting forever; ageing is used to prevent it.
+
 46. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on the semaphore. The resulting value of the semaphore is—[ Semaphore শুরুতে ১০ ছিল। ৬টি wait এবং ৪টি signal অপারেশন হলে শেষ মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) 0  
    (b) 10  
    (c) 8  
    (d) 12
+
+   answer: c — 8  
+   explanation: Each wait decrements and each signal increments, so 10 - 6 + 4 = 8.
 
 47. **Which of the items listed below is the least strong security protocol?[ নিচের তালিকায় থাকা সিকিউরিটি প্রোটোকলগুলোর মধ্যে কোনটি সবচেয়ে দুর্বল? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) SFTP  
@@ -318,11 +456,17 @@
    (c) SSL  
    (d) HTTP
 
+   answer: d — HTTP  
+   explanation: HTTP sends everything in clear text with no encryption or authentication at all.
+
 48. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?[ একটি র‍্যান্ডম লিঙ্কড লিস্টকে সর্বনিম্ন টাইম কমপ্লেক্সিটিতে সর্ট (Sort) করার জন্য নিচের কোন অ্যালগরিদমটি ব্যবহার করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) Insertion sort  
    (b) Quick sort  
    (c) Heap sort  
    (d) Merge sort
+
+   answer: d — Merge sort  
+   explanation: Merge sort works well on linked lists because it needs only sequential access and relinking of nodes.
 
 ## Geometry (27)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
