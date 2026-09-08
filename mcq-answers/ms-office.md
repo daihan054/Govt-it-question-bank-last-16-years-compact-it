@@ -218,3 +218,6 @@
    b. Form  
    c. Worksheets  
    d. Modules
+
+   answer: c — Worksheets  
+   explanation: Access objects are tables, queries, forms, reports, macros and modules; a worksheet belongs to Excel.
