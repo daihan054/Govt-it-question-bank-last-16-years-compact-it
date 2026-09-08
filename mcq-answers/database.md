@@ -1226,11 +1226,17 @@
    (c) Decision support system  
    (d) None
 
+   answer: c — Decision support system  
+   explanation: A data warehouse holds cleaned historical data for analysis and reporting that supports management decisions, not day-to-day transactions.
+
 2. **What is the use of data cleaning?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
    (a) To remove the noisy data  
    (b) Transformations to correct the wrong data  
    (c) Correct the inconsistencies in data  
    (d) All of the above
+
+   answer: d — All of the above  
+   explanation: Data cleaning removes noise, corrects wrong values and resolves inconsistencies before the data enters the warehouse.
 
 3. **Small logical units where data warehouse hold large amounts of data is known as ______.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
    (a) Access layers  
@@ -1238,11 +1244,17 @@
    (c) Data storage  
    (d) Data miners
 
+   answer: b — Data marts  
+   explanation: A data mart is a subject-specific subset of the warehouse serving one department such as sales or finance.
+
 4. **Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
    (a) Warehousing  
    (b) Data Mining  
    (c) Text Mining  
    (d) Data Selection
+
+   answer: b — Data Mining  
+   explanation: Data mining applies statistical and machine learning methods to discover patterns hidden in large data sets.
 
 5. **Hadoop written in which language?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
    (a) Java  
@@ -1250,11 +1262,17 @@
    (c) Pascal  
    (d) Kotlin
 
+   answer: a — Java  
+   explanation: Apache Hadoop is written in Java.
+
 6. **Business Intelligence (BI) reporting analyses can be performed using** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
    a) standard SQL only  
    b) extensions to SQL only  
    c) OLAP only  
    d) Both standard SQL and extensions to SQL
+
+   answer: d — Both standard SQL and extensions to SQL  
+   explanation: BI reports use ordinary SQL plus OLAP extensions such as CUBE, ROLLUP and window functions.
 
 7. **A star schema has what type of relationship between a dimension and fact table?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
    a) Many-to-many  
@@ -1262,17 +1280,26 @@
    c) One-to-many  
    d) All of the above
 
+   answer: c — One-to-many  
+   explanation: In a star schema each dimension row relates to many fact rows, with the fact table holding the foreign keys.
+
 8. **Finding useful pattern from the data in a database is known as-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*  
    (a) Data Visualization  
    (b) Data Mining  
    (c) Data Analytics  
    (d) All of the above
 
+   answer: b — Data Mining  
+   explanation: Data mining is the discovery of useful, previously unknown patterns in stored data.
+
 9. **Dark data represents ________.** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) Unused data  
    B) Harmful data  
    C) Highlighted data  
    D) Important data
+
+   answer: A — Unused data  
+   explanation: Dark data is information an organisation collects and stores but never analyses or uses.
 
 ## ER Diagram & Data Modeling (9)
 
