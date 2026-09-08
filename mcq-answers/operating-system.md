@@ -720,8 +720,14 @@
    (c) 8  
    (d) 12
 
+   answer: c — 8  
+   explanation: Each wait decrements and each signal increments, so 10 - 6 + 4 = 8.
+
 2. **A critical section is a program segment-** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*  
    (a) which should run in a certain specified amount of time  
    (b) which avoids deadlocks  
    (c) where shared resources are accessed  
    (d) which must be enclosed by a pair of semaphore (wait and signal) operations
+
+   answer: c — where shared resources are accessed  
+   explanation: The critical section is the part of a program that touches shared data, and only one process may be inside it at a time.
