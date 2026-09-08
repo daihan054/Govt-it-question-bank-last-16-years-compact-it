@@ -162,11 +162,17 @@
    c) PersonAge  
    d) 1age
 
+   answer: d — 1age  
+   explanation: A PHP variable name must start with a letter or underscore after the $, never with a digit.
+
 2. **Which of the followings is a Web Framework built with PHP?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*  
    a) Laravel  
    b) Django  
    c) MVC  
    d) Spring
+
+   answer: a — Laravel  
+   explanation: Laravel is a PHP MVC framework; Django is Python and Spring is Java.
 
 3. **What will be the output of the following PHP code? <?php "Hello World" ?>** *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*  
    A) Error  
@@ -180,11 +186,17 @@
    C) No output  
    D) 1 more foods
 
+   answer: C — Nothing  
+   explanation: The string is just an expression that is never echoed or printed, so the page stays blank. The stray Python item pasted here answers (B) 1 more spam, since the dictionary fills the named format fields.
+
 4. **Which is correct for concatenation in PHP?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) $add = Sadd+1  
    B) $add = $add +1  
    C) $add = $add + Sadd  
    D) $add. = +1;
+
+   answer: D — $add. = +1;  
+   explanation: PHP joins strings with the dot, and the concatenating assignment is written .= — the option is the garbled form of $add .= 1. <!-- verify -->
 
 5. **Which is used for adding two or more string in PHP?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) +  
@@ -192,11 +204,17 @@
    C) . (dot)  
    D) |
 
+   answer: C — . (dot)  
+   explanation: PHP concatenates strings with the . operator; + is arithmetic addition.
+
 6. **Which of the following function returns the number of characters in a string variable?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. count($variable)  
    b. len($variable)  
    c. strlen($variable)  
    d. strcount($variable)
+
+   answer: c — strlen($variable)  
+   explanation: strlen() returns the number of bytes (characters) in a string.
 
 7. **PHP is widely used ________ scripting language that is especially suited for web development and can be embedded into html.** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Open source general purpose  
@@ -204,17 +222,26 @@
    c. Open source special purpose  
    c. Proprietary special purpose
 
+   answer: a — Open source general purpose  
+   explanation: PHP is free and open source, is general purpose, and its code can be written directly inside HTML.
+
 8. **Which of the following is not true?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. PHP can be used develop applications  
    b. PHP makes a website dynamic  
    c. PHP applications cannot be compiled  
    d. PHP cannot be embedded into html
 
+   answer: d — PHP cannot be embedded into html  
+   explanation: PHP is designed to be embedded in HTML using <?php ... ?>, so this statement is false.
+
 9. **How do you write a conditional statement for executing some statements only if "1" is not equal to 5?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. if(1<>5)  
    b. if(1!=5)  
    c. if(1=!5)  
    d. if<>5
+
+   answer: b — if(1!=5)  
+   explanation: PHP uses != for "not equal"; <> also works but != is the standard form, and =! is not an operator.
 
 ## Scripting & JavaScript (8)
 
