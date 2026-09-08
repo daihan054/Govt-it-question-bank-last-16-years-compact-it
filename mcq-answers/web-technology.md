@@ -251,11 +251,17 @@
    C) both A and B  
    D) none
 
+   answer: C — both A and B  
+   explanation: A <script> block is valid in the head or the body, and can also be loaded from an external file.
+
 2. **What is the value of variable x after the following statement is executed in JavaScript var x2= "3" + "4" ?** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*  
    A) 34  
    B) 7  
    C) 0  
    D) undefine
+
+   answer: A — 34  
+   explanation: The + operator on two strings concatenates them, giving the string "34" rather than the number 7.
 
 3. **Which is correct to open new window/tab of browser?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) <a href=[http://www.example.com](http://www.example.com) target= "_blank"> new window/tab</a>  
@@ -263,11 +269,17 @@
    C) <a href=[http://www.example.com](http://www.example.com) target= "_blank“new window”> new window</a>  
    D) None
 
+   answer: A — <a href=http://www.example.com target= "_blank"> new window/tab</a>  
+   explanation: target="_blank" tells the browser to open the link in a new tab or window; the underscore is required.
+
 4. **Which is the correct variable declaration in JavaScript?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) var a= {'a', 'b', 'c'};  
    B) var a= {'a' 'b' 'c'}  
    C) var a= {“a” “b” “c”}  
    D) None
+
+   answer: D — None  
+   explanation: Braces build an object of key:value pairs, so a list of bare values is invalid — an array needs square brackets, as in var a = ['a','b','c'].
 
 5. **Which one does run on client side?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
    A) PHP  
@@ -275,11 +287,17 @@
    C) ASP.NET  
    D) None of these
 
+   answer: B — JavaScript  
+   explanation: JavaScript runs inside the browser; PHP and ASP.NET execute on the server.
+
 6. **A script is a ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. Program of sequence of instructions that is interpreted or carried out by processes directly  
    b. Program or sequence of instructions that is interpreted or carried out by another program  
    c. Program or sequence of instructions that is interpreted or carried out by web services only  
    d. None of these
+
+   answer: b — Program or sequence of instructions that is interpreted or carried out by another program  
+   explanation: A script is not compiled to machine code — an interpreter or host program reads and executes it.
 
 7. **What is the correct JavaScript syntax to view "Hello World"?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. respone.write("Hellow World");  
@@ -287,11 +305,17 @@
    c. "Hello World"  
    d. echo("Hello World")
 
+   answer: b — document.write("Hello World")  
+   explanation: document.write outputs text into the page; echo is PHP and response.write is ASP.
+
 8. **Inside which HTML element do we put the JavaScript?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. <scripting>  
    b. <javascript>  
    c. <script>  
    d. <js>
+
+   answer: c — <script>  
+   explanation: JavaScript is placed inside a <script> element.
 
 ## Web Services & APIs (6)
 
