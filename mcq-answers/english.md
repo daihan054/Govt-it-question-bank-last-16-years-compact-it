@@ -2281,11 +2281,17 @@
    গ. Ben Jonson  
    ঘ. Christopher Marlowe
 
+   answer: খ — George Bernard Shaw  
+   explanation: "You Never Can Tell" is an 1897 comedy by George Bernard Shaw.
+
 2. **Shakespeare was born in the year-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. 1616  
    খ. 1664  
    গ. 1493  
    ঘ. 1564
+
+   answer: ঘ — 1564  
+   explanation: William Shakespeare was born in Stratford-upon-Avon in 1564 and died in 1616.
 
 3. **Romantic period of English literature-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. 1660-1798  
@@ -2293,11 +2299,17 @@
    গ. 1832-1901  
    ঘ. 1649-1660
 
+   answer: খ — 1798-1832  
+   explanation: The Romantic Age runs from the Lyrical Ballads (1798) to the Reform Bill and Scott's death (1832).
+
 4. **'The Sun Also Rises' is written by-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. Charles Dickens  
    খ. Hermanne Melvile  
    গ. Earnest Hemingway  
    ঘ. Thomas Hardy
+
+   answer: গ — Earnest Hemingway  
+   explanation: "The Sun Also Rises" (1926) is Ernest Hemingway's novel of the Lost Generation.
 
 5. **What is an Epic?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. A romance  
@@ -2305,11 +2317,17 @@
    গ. A long poem  
    ঘ. A long prose
 
+   answer: গ — A long poem  
+   explanation: An epic is a long narrative poem about heroic deeds, such as Paradise Lost.
+
 6. **Who is 'Poet of Nature'?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. John Milton  
    খ. John Keats  
    গ. S.T. Coleridge  
    ঘ. William Wordsworth
+
+   answer: ঘ — William Wordsworth  
+   explanation: Wordsworth's poetry centres on nature and its moral influence, so he is called the Poet of Nature.
 
 7. **Who was both a poet & painter?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. John Keats  
@@ -2317,14 +2335,23 @@
    গ. William Blake  
    ঘ. Mark Spenser
 
+   answer: গ — William Blake  
+   explanation: William Blake was both a poet and an engraver-painter who illustrated his own works.
+
 8. **The very first English Dictionary was complied by-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 4 (ET: BUET)]*  
    ক. Izaak Walton  
    খ. Samuel Johnson  
    গ. Samuel Butler  
    ঘ. S. T. Coleridge
 
+   answer: খ — Samuel Johnson  
+   explanation: Samuel Johnson's Dictionary of the English Language (1755) was the first authoritative English dictionary.
+
 9. **Poet of Nature এর লেখক কে?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: William Wordsworth
+
+   answer: William Wordsworth  
+   explanation: Wordsworth is known as the Poet of Nature for his deep treatment of the natural world.
 
 10. **The author of the story "The Luncheon" is -** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) William Shakespeare  
@@ -2333,11 +2360,17 @@
    (ঘ) T. S. Eliot  
    **উত্তর: গ**
 
+   answer: গ — W. S. Maugham  
+   explanation: "The Luncheon" is a humorous short story by W. Somerset Maugham.
+
 11. **Who wrote 'arms and the Man'?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*  
    (ক) Ben Johnson  
    (খ) T.S. Eliot  
    (গ) G.B. Shaw  
    (ঘ) Joseph Conrad
+
+   answer: গ — G.B. Shaw  
+   explanation: "Arms and the Man" (1894) is George Bernard Shaw's anti-romantic comedy about war.
 
 12. **Who wrote "The Solitary Reaper"?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) P.B. Shelley  
@@ -2345,11 +2378,17 @@
    (গ) Alfred Tennyson  
    (ঘ) Mathew Arnold
 
+   answer: খ — William Wordsworth  
+   explanation: "The Solitary Reaper" is Wordsworth's poem about a Highland girl singing as she works.
+
 13. **Who did write first English dictionary?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) Boswell  
    b) Ben Jonson  
    c) Samuel Johnson  
    d) Milton
+
+   answer: c — Samuel Johnson  
+   explanation: Samuel Johnson compiled the first comprehensive English dictionary in 1755.
 
 14. **"Glimpes of world history " was written by** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 137 (ET: BUET)]*  
    a) leo Tolstoy  
@@ -2357,11 +2396,17 @@
    c) A.P.J abdul kalam  
    d) Rabindranath Tagore
 
+   answer: b — Jawaharlal Nehru  
+   explanation: Nehru wrote "Glimpses of World History" as letters to his daughter from prison.
+
 15. **The famous quote "It matters not what someone is born but what they grow to be" was written in novel by the author-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 91 (ET: N/A)]*  
    (a) J.K Rowling  
    (b) J.R.R Tolkein  
    (c) Dr. Seus  
    (d) W. B. Yeats
+
+   answer: a — J.K Rowling  
+   explanation: The line is Dumbledore's in J. K. Rowling's Harry Potter and the Chamber of Secrets.
 
 16. **'Playing It My Way' is written by-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) Sohaib Akhter  
@@ -2369,11 +2414,17 @@
    (c) Sir Don Bradman  
    (d) Tiger Woods
 
+   answer: b — Sachin Tendulkar  
+   explanation: "Playing It My Way" is Sachin Tendulkar's autobiography.
+
 17. **The quote “All the glitters is not gold” is from which play of Shakespeare?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) The Merchant of Venice  
    (b) Othello  
    (c) Romeo and Juliet  
    (d) None
+
+   answer: a — The Merchant of Venice  
+   explanation: "All that glisters is not gold" appears on the golden casket in The Merchant of Venice.
 
 ## Spelling (17)
 
