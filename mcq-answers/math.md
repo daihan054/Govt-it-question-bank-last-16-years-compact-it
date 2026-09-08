@@ -475,11 +475,17 @@
    গ. ২৮০°  
    ঘ. ৩৬০°
 
+   answer: ঘ — ৩৬০°  
+   explanation: যেকোনো উত্তল বহুভুজের বহিঃস্থ কোণের সমষ্টি সর্বদা ৩৬০ ডিগ্রি, বাহুসংখ্যা যাই হোক।
+
 2. **একটি গাড়ির ঢাকা প্রতি মিনিটে ৯০ বার ঘুরলে ১ সেকেন্ডে কত ডিগ্রি ঘুরবে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ১৮০°  
    খ. ২৭০°  
    গ. ৩৭০°  
    ঘ. ৫৪০°
+
+   answer: ঘ — ৫৪০°  
+   explanation: মিনিটে ৯০ ঘূর্ণন মানে সেকেন্ডে ১.৫ ঘূর্ণন, আর ১.৫ × ৩৬০ = ৫৪০ ডিগ্রি।
 
 3. **সাড়ে ছয়টার সময় ঘণ্টা ও মিনিটের কাঁটার মধ্যে ক্ষুদ্রতম কোণের পরিমাণ কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৭.৫°  
@@ -487,11 +493,17 @@
    গ. ২২.৫°  
    ঘ. ৩০°
 
+   answer: খ — ১৫°  
+   explanation: ৬টা ৩০ মিনিটে ঘণ্টার কাঁটা ১৯৫° এবং মিনিটের কাঁটা ১৮০°-এ থাকে, পার্থক্য ১৫°।
+
 4. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 20 meter  
    (b) 15 meter  
    (c) 10 meter  
    (d) 100 meter
+
+   answer: c — 10 meter  
+   explanation: Areas add: π8² + π6² = 100π, so the new radius satisfies r² = 100 and r = 10 m.
 
 5. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 9 ft  
@@ -499,11 +511,17 @@
    (c) 24 ft  
    (d) 26 ft
 
+   answer: d — 26 ft  
+   explanation: The square's side is 24/4 = 6, so its area is 36; the rectangle is 36/4 = 9 long, giving a perimeter of 2(9+4) = 26 ft.
+
 6. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm less than its length. What is the perimeter of the square?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*  
    (a) 60cm  
    (b) 44cm  
    (c) 80cm  
    (d) cannot be determined
+
+   answer: a — 60cm  
+   explanation: The rectangle is 25 by 15, area 375; three-fifths of that is 225, so the square's side is 15 and its perimeter 60 cm.
 
 7. **If the radius is increased by 100% then by how much will the area of circle be increased?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*  
    (a) 100  
@@ -511,8 +529,14 @@
    (c) 300  
    (d) 400
 
+   answer: c — 300  
+   explanation: Doubling the radius multiplies the area by four, which is a 300% increase.
+
 8. **With reference to a 2 dimensional coordinate system, the vertices of a uniform and thin triangular pate are given by (0,0), (1,4) and (-7, 8) points. The centroid of the plate is-** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** (-2, 4)
+
+   answer: (-2, 4)  
+   explanation: The centroid is the average of the vertices: ((0+1-7)/3, (0+4+8)/3) = (-2, 4).
 
 9. **ত্রিভুজের তিন বাহুর দৈর্ঘ্য যথাক্রমে a,b এবং c** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) a+b > c  
@@ -521,12 +545,18 @@
    (ঘ) a+b \approx c  
    **উত্তর: ক**
 
+   answer: ক — a+b > c  
+   explanation: ত্রিভুজ অসমতা অনুযায়ী যেকোনো দুই বাহুর সমষ্টি তৃতীয় বাহুর চেয়ে বড় হতে হয়।
+
 10. **একটি কোণের পরিমাপ ১৮১° হলে তাকে কি কোণ বলে?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) স্থূল কোণ  
    (খ) সমকোণ  
    (গ) সূক্ষ্ম কোণ  
    (ঘ) প্রবৃদ্ধ কোণ  
    **উত্তর: ঘ**
+
+   answer: ঘ — প্রবৃদ্ধ কোণ  
+   explanation: ১৮০° থেকে ৩৬০°-এর মধ্যবর্তী কোণকে প্রবৃদ্ধ কোণ বলে।
 
 11. **কোনটি ত্রিমাত্রিক বস্তু?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) তল  
@@ -535,6 +565,9 @@
    (ঘ) বিন্দু  
    **উত্তর: খ**
 
+   answer: খ — ঘনক  
+   explanation: ঘনকের দৈর্ঘ্য, প্রস্থ ও উচ্চতা তিনটিই আছে, তাই এটি ত্রিমাত্রিক।
+
 12. **বৃত্তস্থ সামান্তরিক কোনটি?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) রম্বস  
    (খ) আয়ত  
@@ -542,10 +575,19 @@
    (ঘ) ট্রাপিজিয়াম  
    **উত্তর: খ**
 
+   answer: খ — আয়ত  
+   explanation: বৃত্তে অন্তর্লিখিত সামান্তরিকের কর্ণ দুটি ব্যাস হতে হয়, যা কেবল আয়তক্ষেত্রেই সম্ভব।
+
 13. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাটা ও মিনিটের কাটার মধ্যকার কোণ কত? ১২০ ডিগ্রি** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*
+
+   answer: ১২০ ডিগ্রি  
+   explanation: ৪টায় ঘণ্টার কাঁটা ১২০° এবং মিনিটের কাঁটা ০°-এ থাকে, তাই কোণ ১২০°।
 
 14. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যকার কোণ কত?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*  
    **Ans:** ১২০ ডিগ্রি
+
+   answer: ১২০ ডিগ্রি  
+   explanation: প্রতি ঘণ্টা ৩০° করে, তাই ৪টায় দুই কাঁটার মধ্যে ৪ × ৩০ = ১২০ ডিগ্রি।
 
 15. **Find the area of a circle whose circumference is 22\text{ cm}?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 35.2\text{ cm}^2  
@@ -553,11 +595,17 @@
    (গ) 41.7\text{ cm}^2  
    (ঘ) 47.6\text{ cm}^2
 
+   answer: খ — 38.5 cm²  
+   explanation: 2πr = 22 gives r = 3.5, so area = (22/7) × 3.5² = 38.5 cm².
+
 16. **A pole 6\text{m} high casts a shadow 2\sqrt{3}\text{ m} long on the ground, they find the angle of elevation of sun.** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 30^\circ  
    (খ) 60^\circ  
    (গ) 45^\circ  
    (ঘ) 90^\circ
+
+   answer: খ — 60°  
+   explanation: tan θ = 6 / 2√3 = √3, so θ = 60°.
 
 17. **The triangular base of a prism is a right triangle of sides a and b =2a. The height h of the prism is equal to 10mm and its volume is equal to 40 mm³. What will be the lengths of the sides a and b of the triangle?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 2mm and 3mm  
@@ -565,11 +613,17 @@
    c) 2 mm and 2 mm  
    d) 2 mm and 4 mm
 
+   answer: d — 2 mm and 4 mm  
+   explanation: Volume = ½ × a × 2a × 10 = 10a² = 40, so a = 2 mm and b = 2a = 4 mm.
+
 18. **The hypotenuse of a right triangle is 2 centimeters more than the longer side of the triangle. The shorter side of the triangle is 7 centimeters less than the longer side. Find the length of the hypotenuse.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) 13  
    (b) 15  
    (c) 17  
    (d) 19
+
+   answer: c — 17  
+   explanation: With the longer side x, (x-7)² + x² = (x+2)² gives x² - 18x + 45 = 0 and x = 15, so the hypotenuse is 17.
 
 19. **You are looking at a billboard 40m away with an angle of elevation of 30⁰. At what height is the billboard?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 20  
@@ -577,11 +631,17 @@
    c. 40  
    d. 80
 
+   answer: a — 20  
+   explanation: Taking 40 m as the line of sight, the height is 40 sin30° = 20 m.
+
 20. **A ladder against a wall that tis perpendicular to the ground. If the bottom of the ladder is 4m away from the bottom of the wall, while the tip of the ladders is at a height of 3m, what is the length of the ladder?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 7 m  
    b. 35 m  
    c. 5 m  
    d. 25 m
+
+   answer: c — 5 m  
+   explanation: The ladder is the hypotenuse: √(4² + 3²) = 5 m.
 
 21. **When base is 12 inch and height is 8inch of a triangle, its area?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 96 sq-in  
@@ -589,11 +649,17 @@
    গ. 48 in  
    ঘ. 46 in
 
+   answer: খ — 48 sq-in  
+   explanation: Area of a triangle = ½ × base × height = ½ × 12 × 8 = 48 square inches.
+
 22. **What is the perimeter of a square, if its area is 400sq-m?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 40m  
    খ. 80m  
    গ. 20m  
    ঘ. 20sq-m
+
+   answer: খ — 80m  
+   explanation: Area 400 gives a side of 20 m, so the perimeter is 4 × 20 = 80 m.
 
 23. **What is the distance between the line 8x+6y=17 and 8x+6y-37=0?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. -2  
@@ -607,11 +673,17 @@
    গ ৬.৪৫
    ঘ ৫.৪৫
 
+   answer: C — 2  
+   explanation: For parallel lines the distance is |c₁ - c₂| / √(a²+b²) = |−17 + 37| / √(64+36) = 20/10 = 2.
+
 24. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm. What is the perimeter of the square? [ একটি বর্গক্ষেত্রের ক্ষেত্রফল একটি আয়তক্ষেত্রের ক্ষেত্রফলের তিন-পঞ্চমাংশ। আয়তক্ষেত্রটির দৈর্ঘ্য ২৫ সেমি এবং প্রস্থ ১০ সেমি হলে বর্গক্ষেত্রটির পরিসীমা কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 60 cm  
    (b) 44 cm  
    (c) 80 cm  
    (d) Cannot be determined
+
+   answer: d — Cannot be determined  
+   explanation: The rectangle's area is 250 and three-fifths of it is 150, so the square's side is √150 ≈ 12.25 cm and the perimeter ≈ 49 cm — none of the clean options.
 
 25. **সমকোণী ত্রিভুজের অতিভুজ 10 অপর বাহুদ্বয়ের একটি 6 হলে, অপরটি কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ৭  
@@ -619,17 +691,26 @@
    গ) ৯  
    ঘ) ১০
 
+   answer: খ — ৮  
+   explanation: পিথাগোরাসের উপপাদ্য অনুযায়ী অপর বাহু = √(10² - 6²) = √64 = 8।
+
 26. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks? [ দুইটি ছোট বৃত্তাকার পার্কের ব্যাসার্ধ 16m এবং 12m। এই দুটি পার্ক মিলিয়ে নতুন বড় পার্ক বানালে নতুন পার্কের ব্যাসার্ধ কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a) 10 meter  
    (b) 14 meter  
    (c) 20 meter  
    (d) 100 meter
 
+   answer: a — 10 meter  
+   explanation: The two radii are 8 m and 6 m, so the combined area is 100π and the new radius is 10 m.
+
 27. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is— [ একটি আয়তক্ষেত্র R যার প্রস্থ 4 ft, এটি একটি বর্গক্ষেত্র S এর সমান এলাকা যার পরিধি 24 ft। আয়তক্ষেত্র R এর পরিধি কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a) 9 ft  
    (b) 16 ft  
    (c) 24 ft  
    (d) 26 ft
+
+   answer: d — 26 ft  
+   explanation: The square's side is 6 and its area 36, so the rectangle is 9 by 4 and its perimeter 26 ft.
 
 ## Percentage, Profit & Loss (25)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
