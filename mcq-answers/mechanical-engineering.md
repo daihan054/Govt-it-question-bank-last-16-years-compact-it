@@ -369,3 +369,6 @@
    (খ) শূন্য  
    (গ) অপ্রত্যাশিত  
    (ঘ) কোনটি নয়।
+
+   answer: খ — শূন্য  
+   explanation: Shear stress needs a velocity gradient, and a fluid at rest has none, so the shear stress is zero and only pressure acts.
