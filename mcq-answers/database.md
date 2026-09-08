@@ -1479,11 +1479,17 @@
    c) Insert, Update, Delete  
    d) Select, Commit
 
+   answer: c — Insert, Update, Delete  
+   explanation: A DML trigger fires on INSERT, UPDATE or DELETE, either before or after the statement or row.
+
 2. **How can you generate debugging output from PL/SQL?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
    a) DBMS_SQL  
    b) DBMS_OUTPUT  
    c) DBMS_PIPE  
    d) DBMS_LOB
+
+   answer: b — DBMS_OUTPUT  
+   explanation: DBMS_OUTPUT.PUT_LINE writes text to the output buffer, which the client displays for debugging.
 
 3. **What is GET_BLOCK property?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
    a) Restricted procedure  
@@ -1491,11 +1497,17 @@
    c) Library function  
    d) None of the above
 
+   answer: b — Unrestricted procedure  
+   explanation: GET_BLOCK_PROPERTY only reads a property value, so it can be called from any trigger, including navigation triggers.
+
 4. **Which is not the UTL_FILE function-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) FOPEN()  
    b) File_Close()  
    c) FCOPY  
    d) FFLUSH()
+
+   answer: b — File_Close()  
+   explanation: The package's procedures are FOPEN, FCLOSE, FCOPY and FFLUSH — there is no File_Close().
 
 5. **Which of the following protocol is an SQL trigger support by oracle?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) Before  
@@ -1503,17 +1515,26 @@
    C) After  
    D) All of the above
 
+   answer: D — All of the above  
+   explanation: Oracle supports BEFORE and AFTER triggers on tables and INSTEAD OF triggers on views.
+
 6. **________ is a statement that is executed automatically by the system.** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Trigger constraint  
    B) Assertion  
    C) Durability  
    D) Integrity
 
+   answer: A — Trigger constraint  
+   explanation: A trigger is a statement the database executes automatically when a specified event occurs on a table.
+
 7. **What does a COMMIT statement do to a CURSOR?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Open the cursor  
    B) Fetch the cursor  
    C) Close the cursor  
    D) None of this
+
+   answer: C — Close the cursor  
+   explanation: COMMIT releases the locks and closes any open cursor that was not declared WITH HOLD.
 
 ## Database Fundamentals & SQL (7)
 1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
