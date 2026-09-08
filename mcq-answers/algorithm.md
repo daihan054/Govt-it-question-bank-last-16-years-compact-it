@@ -22,11 +22,17 @@
    (c) Heap sort  
    (d) Merge sort
 
+   answer: d — Merge sort  
+   explanation: Merge sort needs only pointer changes and no random access, so it sorts a linked list in O(n log n) with O(1) extra space; quick sort and heap sort need random access and degrade on lists.
+
 2. **Which of the following sorting algorithms is a divide and conquer algorithm?** *[NPCBL Executive Trainee (Software) 2023 compact it 41 (ET: N/A)]*  
    a) merge sort  
    b) Bubble sort  
    c) Insertion sort  
    d) Counting sort
+
+   answer: a — merge sort  
+   explanation: Merge sort divides the array in half, sorts each half recursively and merges the two sorted halves, which is the classic divide and conquer pattern.
 
 3. **What is the complexity of Merge sort?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 25 (ET: BIBM)]*  
    (a) O(n^2 \log n)  
@@ -34,11 +40,17 @@
    (c) O(n^2)  
    (d) O(n)
 
+   answer: b — O(n log n)  
+   explanation: Merge sort always splits into log n levels and does O(n) merging work per level, in best, average and worst case alike.
+
 4. **Which of the following sort algorithms has execution time that is least dependent on initial ordering of the input?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
    (a) Merge Sort  
    (b) Insertion Sort  
    (c) Selection Sort  
    (d) Quick Sort
+
+   answer: c — Selection Sort  
+   explanation: Selection sort always makes exactly n(n-1)/2 comparisons and n-1 swaps whatever the input order, so its running time is the least sensitive to initial ordering.
 
 5. **If we have a very small amount of additional memory, but a large number of items to sort, which of the following sorting algorithm should we use?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 44 (ET: N/A)]*  
    (ক) Merge sort  
@@ -46,11 +58,17 @@
    (গ) Bubble sort  
    (ঘ) Bogo sort
 
+   answer: খ — Heap sort  
+   explanation: Heap sort is in-place and runs in O(n log n), so it handles many items with almost no extra memory; merge sort would need O(n) extra space.
+
 6. **Which is correct characteristic of Selection Sort?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
    a) Time complexity O(n)  
    b) Not Comparison-based sorting algorithm  
    c) Time complexity O(n²)  
    d) It is not in place sort
+
+   answer: c — Time complexity O(n²)  
+   explanation: Selection sort scans the unsorted part for the minimum on every pass, giving O(n²) comparisons; it is comparison-based and in-place.
 
 7. **Which is correct for Merge sort–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*  
    a) Time complexity, O(n²)  
@@ -58,11 +76,17 @@
    c) Time complexity, O (log n)  
    d) Not stable sort
 
+   answer: b — Time complexity, O (n log n)  
+   explanation: Merge sort is O(n log n) in all cases and is a stable sort.
+
 8. **Which of the following is not an in-place algorithm?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*  
    a. Insertion sort  
    b. Selection sort  
    c. Merge sort  
    d. Heap sort
+
+   answer: c — Merge sort  
+   explanation: Merge sort needs an O(n) auxiliary array to merge, so it is not in-place; insertion, selection and heap sort all sort within the original array.
 
 9. **An inversion in a an array A[] is a pair (A[i], A[j] such that A[i]>A[j} and i<j. An array will have maximum number of inversions if it is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*  
    a. Sorted in increasing order  
@@ -70,11 +94,17 @@
    c. Sorted in alternate fashion  
    d. Both A and B
 
+   answer: b — Sorted in decreasing order  
+   explanation: If every earlier element is greater than every later one, all n(n-1)/2 pairs are inversions, which is the maximum possible.
+
 10. **Given a sequence, S= {1, 2, 3, 8, 15, 10}; which of the following algorithms will be the fasted to sort this sequence in ascending order?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*  
    a) Bubble sort  
    b) Merge sort  
    c) Quick sort  
    d) Heap sort
+
+   answer: a — Bubble sort  
+   explanation: The sequence is tiny and almost sorted, and bubble sort with an early-exit flag finishes such input in about O(n) passes with no recursion overhead.
 
 11. **Which of the following techniques is popular for Data Compression?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*  
    a) Alpha-Beta pruning  
@@ -82,11 +112,17 @@
    c) Huffman Coding  
    d) Red Black Tree
 
+   answer: c — Huffman Coding  
+   explanation: Huffman coding builds a variable-length prefix code that gives short codes to frequent symbols, which is a standard lossless compression technique.
+
 12. **কোন Algorithm টি দ্রুত sorting করে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) Bubble sort  
    B) Selection sort  
    C) Quick sort  
    D) Insertion sort
+
+   answer: C — Quick sort  
+   explanation: Quick sort averages O(n log n) with small constants and good cache behaviour, so in practice it is faster than the O(n²) bubble, selection and insertion sorts.
 
 13. **Which of the following is not a stable sorting algorithm in its typical implementation?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
    A) Selection Sort  
@@ -94,11 +130,17 @@
    C) Marge sort  
    D) Insertion Sort
 
+   answer: B — Quick Sort  
+   explanation: Typical in-place quick sort swaps far-apart elements, so equal keys can change relative order; note selection sort is also unstable, so the option set is loose.
+
 14. **You have to sort 1GB of data with only 100MB of available main memory. Which sorting technique will be more appropriate?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
    A) Heap sort  
    B) Insertion sort  
    C) Quick sort  
    D) Marge sort
+
+   answer: D — Marge sort  
+   explanation: Data far larger than memory is handled by external merge sort, which sorts memory-sized chunks, writes them to disk and merges the runs sequentially.
 
 15. **Randomized quicksort is an extension of quicksort where the pivot is chosen randomly. What is the worst-case complexity of sorting n numbers using randomized quicksort?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
    A) \text{O(n)}  
@@ -106,11 +148,17 @@
    C) \text{O (n log n)}  
    D) \text{O(n!)}
 
+   answer: B — O(n²)  
+   explanation: Random pivots only improve the expected time to O(n log n); the worst case is still O(n²) when every pivot splits off one element.
+
 16. **The complexity of Bubble short algorithm is-** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)], [Probashi Kallyan Bank Assistant Programmer: 2019 compact it 217 (ET: AUST)]*  
    A) O(n)  
    B) O(\log n)  
    C) O(n^2)  
    D) O(n \log n)
+
+   answer: C — O(n²)  
+   explanation: Bubble sort compares adjacent pairs over n passes of up to n comparisons each, giving O(n²) in average and worst case.
 
 17. **Bubble sort algorithm sorts n data items using?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) O(n^2) Comparisons  
@@ -118,11 +166,17 @@
    C) O(n \log n) Comparisons  
    D) O(n) Comparisons
 
+   answer: A — O(n²) Comparisons  
+   explanation: Bubble sort makes about n(n-1)/2 comparisons, which is O(n²).
+
 18. **Quicksort can be categorized as:** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) Brute force technique  
    B) Divide and conquer  
    C) Greedy algorithm  
    D) Dynamic programming
+
+   answer: B — Divide and conquer  
+   explanation: Quicksort partitions the array around a pivot and recursively sorts the two parts, so it follows the divide and conquer paradigm.
 
 19. **The complexity of Bubble sort algorithm is-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) O(n)  
@@ -130,11 +184,17 @@
    C) O(n^2)  
    D) O(n \log n)
 
+   answer: C — O(n²)  
+   explanation: Bubble sort's average and worst case running time is O(n²).
+
 20. **Which is the slowest algorithm?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) Bubble Sort  
    B) Quick sort  
    C) Heap sort  
    D) None
+
+   answer: A — Bubble Sort  
+   explanation: Bubble sort is O(n²) with heavy adjacent swapping, while quick sort and heap sort run in O(n log n).
 
 ## Searching Algorithms (18)
 
