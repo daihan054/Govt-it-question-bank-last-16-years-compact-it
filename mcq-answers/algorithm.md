@@ -581,11 +581,17 @@
    c) Dijkstra Shortest Path  
    d) None of the above
 
+   answer: a — Fibonacci Series  
+   explanation: Fibonacci has overlapping subproblems, so storing F(n-1) and F(n-2) and reusing them is the classic dynamic programming example.
+
 2. **Which one of the following algorithm design techniques is used in finding all pairs of shortest distances in a graph?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*  
    (a) Dynamic programming  
    (b) Backtracking  
    (c) Greedy  
    (d) Divide and Conquer
+
+   answer: a — Dynamic programming  
+   explanation: The all-pairs shortest path is solved by Floyd-Warshall, which builds dist[i][j] from smaller subproblems using intermediate vertices.
 
 3. **Which algorithm used in memorization?** *[BREB Assistant Programmer 2023 compact it 31 (ET: N/A)]*  
    (a) Dynamic Programming  
@@ -593,11 +599,17 @@
    (c) Static Programming  
    (d) Xtreme Programming
 
+   answer: a — Dynamic Programming  
+   explanation: Memoization caches the result of each subproblem so it is computed once, which is the top-down form of dynamic programming.
+
 4. **Which of the following technique uses memorizations?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*  
    a) Greedy algorithms  
    b) Dynamic Programming  
    c) Divide and Conquer approach  
    d) None of them
+
+   answer: b — Dynamic Programming  
+   explanation: Dynamic programming stores subproblem results in a table or cache and reuses them instead of recomputing.
 
 5. **An algorithm which is use previous step for calculation-** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
    A) Brute force  
@@ -605,11 +617,17 @@
    C) Dynamic programming  
    D) All the above
 
+   answer: C — Dynamic programming  
+   explanation: Dynamic programming builds each answer from results already computed in earlier steps, using optimal substructure and overlapping subproblems.
+
 6. **Dynamic programming approach is used to solve-** *[DESCO Assistant Engineer (CSE) 2016 compact it 256 (ET: N/A)]*  
    a. Dijkstra Algorithm  
    b. Kruskal’s Algorithm  
    c. Prim’s Algorithm  
    d. None of these
+
+   answer: d — None of these  
+   explanation: Dijkstra, Kruskal and Prim are all greedy algorithms; the dynamic programming shortest-path algorithms are Floyd-Warshall and Bellman-Ford.
 
 ## Complexity & Analysis (4)
 

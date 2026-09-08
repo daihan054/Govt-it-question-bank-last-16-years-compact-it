@@ -2,14 +2,14 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 5 / 160 done**  ·  **Questions: 78 answered, 0 skipped, 3039 total**
+**Subtopics: 6 / 160 done**  ·  **Questions: 84 answered, 0 skipped, 3039 total**
 
-Next up: `algorithm.md` — Dynamic Programming & Greedy (6)
+Next up: `algorithm.md` — Complexity & Analysis (4)
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
 | `ai-and-ml.md` | IT | 1 / 1 | 18 | 0 | 18 |
-| `algorithm.md` | IT | 4 / 6 | 60 | 0 | 70 |
+| `algorithm.md` | IT | 5 / 6 | 66 | 0 | 70 |
 | `bangla.md` | General | 0 / 9 | 0 | 0 | 310 |
 | `c-programming.md` | IT | 0 / 10 | 0 | 0 | 113 |
 | `cloud-computing.md` | IT | 0 / 3 | 0 | 0 | 20 |
