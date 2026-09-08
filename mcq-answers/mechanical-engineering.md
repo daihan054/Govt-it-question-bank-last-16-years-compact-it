@@ -23,11 +23,17 @@
    (গ) \text{mm}^2  
    (ঘ) \text{mm}^5
 
+   answer: ক — mm⁴  
+   explanation: Area moment of inertia is length to the fourth power, so it is measured in mm⁴.
+
 2. **শিয়ার পীড়ন ও শিয়ার বিকৃতি এর অনুপাত হলো–** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) পয়সনের অনুপাত  
    (খ) বাল্ক মডুলাস  
    (গ) মডুলাস অফ রিজিডিটি  
    (ঘ) মডুলাস অফ ইলাস্টিসিটি
+
+   answer: গ — মডুলাস অফ রিজিডিটি  
+   explanation: Shear stress divided by shear strain is the modulus of rigidity (shear modulus, G).
 
 3. **Degree of freedom কতটি?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) ৯টি  
@@ -41,11 +47,17 @@
    (গ) সমতলীয় সমবিন্দু বল  
    (ঘ) লম্বিক বল
 
+   answer: গ — সমতলীয় সমবিন্দু বল  
+   explanation: Lami's theorem applies to three coplanar concurrent forces in equilibrium, relating each force to the sine of the angle between the other two.
+
 5. **রেডিয়াস অফ জাইরেশন (k) হলো-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) \sqrt{\frac{A}{I}}  
    (খ) \sqrt{\frac{I}{A}}  
    (গ) \sqrt{AI}  
    (ঘ) \sqrt{\frac{I}{AI}}
+
+   answer: খ — √(I/A)  
+   explanation: Radius of gyration k is defined by I = Ak², so k = √(I/A).
 
 6. **D ব্যাস বিশিষ্ট একটি সলিড শ্যাফটের সেকশন মডুলাস হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) \frac{\pi D^3}{64}  
@@ -53,11 +65,17 @@
    (গ) \frac{\pi D^3}{16}  
    (ঘ) \frac{\pi D^3}{64}
 
+   answer: খ — πD³/32  
+   explanation: For a solid circular shaft Z = I/y = (πD⁴/64) ÷ (D/2) = πD³/32.
+
 7. **কিসের ভিত্তিতে শ্যাফট ডিজাইন করা হয়?** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) স্ট্রেন্থ  
    (খ) রিজিডিটি  
    (গ) স্ট্রেন্থ ও রিজিডিটি  
    (ঘ) ক, খ, গ এর কোনটি নয়
+
+   answer: গ — স্ট্রেন্থ ও রিজিডিটি  
+   explanation: A shaft must carry the torque without failing (strength) and without twisting excessively (rigidity), so both criteria are checked.
 
 8. **প্রধান তলে শিয়ার স্ট্রেস হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) সর্বোচ্চ  
@@ -65,17 +83,26 @@
    (গ) সর্বোচ্চ ও সর্বনিম্নএর গড়  
    (ঘ) শূন্য
 
+   answer: ঘ — শূন্য  
+   explanation: Principal planes are by definition the planes on which shear stress is zero and only normal stress acts.
+
 9. **একটি বস্তুর দূরত্ব পরিবর্তন হারকে বলা হয়-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) ত্বরণ  
    (খ) বেগ  
    (গ) মোমেন্টাম  
    (ঘ) কোনটি নয়
 
+   answer: খ — বেগ  
+   explanation: The rate of change of displacement with time is velocity; the rate of change of velocity is acceleration.
+
 10. **একটি সেকশনের যখন শেয়ার ফোর্স শূন্য তখন বেন্ডিং মোমেন্ট।** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
    (ক) শূন্য  
    (খ) সর্বোচ্চ  
    (গ) সর্বনিম্ন  
    (ঘ) সর্বনিম্ন অথবা সর্বোচ্চ
+
+   answer: ঘ — সর্বনিম্ন অথবা সর্বোচ্চ  
+   explanation: Bending moment is the integral of shear force, so where shear force crosses zero the bending moment reaches a maximum or a minimum.
 
 ## Thermodynamics & Heat Transfer (10)
 1. **একটি হিমায়ন চক্রের হিমায়ক কর্তৃক তাপ শোষিত হয়** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  

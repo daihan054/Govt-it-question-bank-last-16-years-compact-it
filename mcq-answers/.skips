@@ -10,3 +10,4 @@ dld.md :: Sequential Circuits (Flip-Flops) (6) :: q5 — the logic circuit diagr
 dld.md :: Boolean Algebra & Simplification (4) :: q3 — the circuit figure is missing from the source, and options (a) and (b) are identical, so the expression cannot be chosen
 electrical-and-electronics.md :: Circuits & Components (83) :: q59 — the question text is garbled in the source and cannot be reconstructed
 electrical-and-electronics.md :: Signals & Systems (11) :: q7 — the three-stage system diagram with its gains is missing from the source, so the output power cannot be computed
+mechanical-engineering.md :: Engineering Mechanics & Strength of Materials (10) :: q3 — the question is incomplete in the source — it does not say which body or mechanism the degrees of freedom belong to
