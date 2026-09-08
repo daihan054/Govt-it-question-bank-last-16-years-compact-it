@@ -509,14 +509,23 @@
    (c) Insertion Operator <<  
    (d) Prefix++
 
+   answer: c — Insertion Operator <<  
+   explanation: For cout << obj the left operand is the stream, not your class, so << must be a global (usually friend) function.
+
 2. **Which of the following operators cannot be overloaded in C/C++ ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*  
    (a) Bitwise right shift assignment  
    (b) Address of  
    (c) Indirection  
    (d) Structure reference
 
+   answer: d — Structure reference  
+   explanation: The dot member-access operator cannot be overloaded in C++; >>=, & and * all can.
+
 3. **A feature of Object oriented programming languages that allows a specific routine to use variables of different types at different times, is called OOP?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Polymorphism
+
+   answer: Polymorphism  
+   explanation: Polymorphism lets the same operation behave differently depending on the type of object it acts on.
 
 4. **A function having more than one distinct meaning is called ______ function** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) Parameter  
@@ -524,11 +533,17 @@
    (গ) Overloaded  
    (ঘ) Polymorphism
 
+   answer: গ — Overloaded  
+   explanation: Function overloading gives one name several versions distinguished by their parameter lists.
+
 5. **The feature in object-oriented programming that allows the same operation to be carried out differently, depending on the object, is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)]*  
    a. Inheritance  
    b. Polymorphism  
    c. Over functioning  
    d. Overriding
+
+   answer: b — Polymorphism  
+   explanation: The same call resolves to a different implementation depending on the actual object type.
 
 6. **The most common use of ________ in OOP occurs when a parent class reference is used to refer to a child class object.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 174 (ET: N/A)]*  
    a) Polymorphism  
@@ -536,11 +551,17 @@
    d) Encapsulation  
    d) Method overriding
 
+   answer: a — Polymorphism  
+   explanation: Holding a child object in a parent-type reference and having the overridden method run is runtime polymorphism.
+
 7. **Which of the following is the destructor of class Vehicle?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
    A) *Vehicle()  
    B) ~Vehicle ()  
    C) ~Vehicle (int value)  
    D) *Vehicle (int value)
+
+   answer: B — ~Vehicle ()  
+   explanation: A destructor has the class name preceded by ~, takes no parameters and returns nothing.
 
 8. **The operator that cannot be overloaded is ________.** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
    A) ++  
@@ -548,11 +569,17 @@
    C) ~  
    D) ::
 
+   answer: D — ::  
+   explanation: The scope resolution operator ::, along with ., .* and ?:, cannot be overloaded.
+
 9. **Which functions overloads the ">>" operator?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) gt()  
    B) more()  
    C) ge()  
    D) None of this
+
+   answer: D — None of this  
+   explanation: The extraction operator is overloaded by defining operator>>, not by any function called gt, more or ge.
 
 10. **Which of the following operator functions cannot be global i.e. must be a member function?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) Conversion operator  
@@ -560,11 +587,17 @@
    C) delete  
    D) all of these
 
+   answer: A — Conversion operator  
+   explanation: A conversion operator converts the object it belongs to, so it must be a member; new and delete may be defined globally.
+
 11. **Which of the following is the destructor for class “vehicle”?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*  
    A) *vehicle()  
    B) *vehicle (int value)  
    C) ~vehicle()  
    D) ~vehicle (int value)
+
+   answer: C — ~vehicle()  
+   explanation: The destructor is named ~ClassName, takes no arguments and cannot be overloaded.
 
 12. **Which operator that can be overloaded is?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) ++  
@@ -572,11 +605,17 @@
    C) . (dot)  
    D) 0
 
+   answer: A — ++  
+   explanation: The increment operator can be overloaded; ::, . and .* cannot.
+
 13. **How many instances of an abstract can be created?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) 0  
    B) 1  
    C) 2  
    D) 13
+
+   answer: A — 0  
+   explanation: An abstract class has at least one method with no implementation, so it can never be instantiated directly.
 
 14. **If same message is passed to objects of several different classes and all of those can respond in a different way, what is this feature called?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) Inheritance  
@@ -584,17 +623,26 @@
    C) Polymorphism  
    D) Overriding
 
+   answer: C — Polymorphism  
+   explanation: One message producing different behaviour in different classes is exactly polymorphism.
+
 15. **What is the process of defining two or more methods within the same class that have same name but different parameters declaration?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) Method overriding  
    B) Method overloading  
    C) Method hiding  
    D) Method duplicating
 
+   answer: B — Method overloading  
+   explanation: Same name with different parameter lists inside one class is overloading, resolved at compile time.
+
 16. **Overloaded functions are ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
    a. Very long functions that can hardly run  
    b. One function containing another one or more functions inside it  
    c. Two or more functions with same name but different number of parameter or type  
    d. None of above
+
+   answer: c — Two or more functions with same name but different number of parameter or type  
+   explanation: The compiler picks the right version by matching the argument list.
 
 ## OOP Concepts & Principles (11)
 
