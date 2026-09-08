@@ -1661,11 +1661,17 @@
    (গ) 23/3  
    (ঘ) 33
 
+   answer: গ — 23/3  
+   explanation: Using the empirical relation Mode = 3 × Median - 2 × Mean, 7 = 3M - 16 gives M = 23/3.
+
 2. **If P(A) = 0.6, P(B) = 0.4, P(B/A) = 0.2 then find P(A \cup B) = ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 0.76  
    (খ) 0.88  
    (গ) 0.56  
    (ঘ) 0.69
+
+   answer: খ — 0.88  
+   explanation: P(A∩B) = P(B|A)·P(A) = 0.2 × 0.6 = 0.12, so P(A∪B) = 0.6 + 0.4 - 0.12 = 0.88.
 
 3. **What is the probability of getting a sum of six if two dices are thrown at one?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 5/36  
@@ -1673,11 +1679,17 @@
    c. 2/26  
    d. 1/36
 
+   answer: a — 5/36  
+   explanation: Five of the 36 outcomes sum to six — (1,5), (2,4), (3,3), (4,2) and (5,1).
+
 4. **A fair six-sided die is rolled. Find the probability of getting an odd number or a number less than 4.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 2/3  
    b. 2/4  
    c. 5/6  
    d. 1/6
+
+   answer: a — 2/3  
+   explanation: Odd numbers are {1,3,5} and numbers below 4 are {1,2,3}; their union {1,2,3,5} has 4 of the 6 faces, so 4/6 = 2/3.
 
 ## Speed, Time & Distance (4)
 1. **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*  
