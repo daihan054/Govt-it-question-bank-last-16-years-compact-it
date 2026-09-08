@@ -755,6 +755,9 @@
    c) Immediate mode  
    d) Index mode
 
+   answer: d — Index mode  
+   explanation: Index (displacement) addressing adds a constant offset to a register's contents to form the effective address.
+
 2. **Consider the following program fragment in assembly language:** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*
    ```assembly
    mov ax, 0h
@@ -768,6 +771,9 @@
    (b) ax=FFF6 h and cx=0h  
    (c) ax=FFF7 h and cx=A h  
    (d) ax=FFF5 h and cx=0A h
+
+   answer: b — ax=FFF6 h and cx=0h  
+   explanation: CX starts at 10, so the loop decrements AX ten times from 0 to -10, which is FFF6h in 16-bit two's complement, and LOOP leaves CX at 0.
 
 3. **Which is the immediate addressing mode in an 8086 microprocessor?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 164 (ET: N/A)]*  
    a) MOV, AX, BX  
@@ -792,8 +798,14 @@
    c) name, address  
    d) name, age
 
+   answer: c — MOV AX, 1000  
+   explanation: The operand 1000 is a constant supplied in the instruction itself, which is immediate addressing. The stray item pasted here answers (c) name, address — both are composite attributes made of sub-parts.
+
 4. **What is the difference between mnemonic codes & machine codes?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Machine codes are in shorthand English & Mnemonic codes are high level language  
    b. Machine codes are in Binary & Mnemonic codes are in shorthand English  
    c. Mnemonic codes are in Binary & Machine codes are in shorthand English  
    d. There is no difference
+
+   answer: b — Machine codes are in Binary & Mnemonic codes are in shorthand English  
+   explanation: The CPU executes binary machine code, and assembly mnemonics such as MOV and ADD are the readable shorthand an assembler translates into it.
