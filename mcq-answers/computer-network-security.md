@@ -504,11 +504,17 @@
    (c) Cyber ethics  
    (d) Cyber security
 
+   answer: c — Cyber ethics  
+   explanation: Cyber ethics studies right and wrong behaviour online — privacy, plagiarism, sharing and conduct — while cyber law is the legal side and cyber security the technical one.
+
 2. **Which of the following protected by copyright ACT?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 22 (ET: BIBM)]*  
    (a) Intellectual property  
    (b) Original work of authorship  
    (c) Software  
    (d) All
+
+   answer: d — All  
+   explanation: Copyright covers original works of authorship, and software and other intellectual property fall under that protection.
 
 3. **Which year declared Cybersecurity act in Bangladesh?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*  
    (a) 2016  
@@ -516,8 +522,14 @@
    (c) 2012  
    (d) 2008
 
+   answer: b — 2018  
+   explanation: Bangladesh enacted the Digital Security Act in 2018, which was later replaced by the Cyber Security Act 2023.
+
 4. **What are hackers who find bugs and vulnerabilities called?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** White hat hacker.
+
+   answer: White hat hacker  
+   explanation: White hat (ethical) hackers test systems with permission and report the bugs and vulnerabilities they find so they can be fixed.
 
 5. **A student breaks the door of a professor's office to obtain a copy of the next day's examination. Define the type of security attack in this case.** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
    a) Snooping  
@@ -525,11 +537,17 @@
    c) Masquerading  
    d) Replaying
 
+   answer: a — Snooping  
+   explanation: The student gains unauthorised access to data he is not allowed to see, which attacks confidentiality — that is snooping.
+
 6. **Which one of the following is the reason for “Cyberchondria”?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) excessive typing  
    B) watching for long hour  
    C) excessive anxiety due to online search  
    D) radiation
+
+   answer: C — excessive anxiety due to online search  
+   explanation: Cyberchondria is the health anxiety people develop after repeatedly searching symptoms online and reading the worst possible diagnoses.
 
 ## Security Principles (CIA Triad) (5)
 
