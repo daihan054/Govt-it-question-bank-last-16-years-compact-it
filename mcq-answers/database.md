@@ -860,11 +860,17 @@
    c) 4NF  
    d) 3NF
 
+   answer: d — 3NF  
+   explanation: 3NF removes partial and transitive dependencies and is normally enough for practical designs; higher forms are rarely needed.
+
 2. **Which one is correct in case of normalization-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) Normalization maximizes duplicates  
    (b) Normalization reduces duplicates  
    (c) Normalization eliminates duplicates  
    (d) Normalization increases
+
+   answer: b — Normalization reduces duplicates  
+   explanation: Splitting data into related tables removes repeated storage of the same fact, cutting redundancy and update anomalies.
 
 3. **If attribute A determines both attributes B and C then, it is also true that—** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) A \rightarrow B  
@@ -872,14 +878,23 @@
    (c) C \rightarrow A  
    (d) (BC) \rightarrow A
 
+   answer: a — A → B  
+   explanation: Saying A determines B and C means both A→B and A→C hold; the reverse directions do not follow.
+
 4. **If a table is normalized so that all its determinants are candidate keys then, the tableis in-** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
    (a) 1NF  
    (b) 2NF  
    (c) 3NF  
    (d) BCNF
 
+   answer: d — BCNF  
+   explanation: Boyce-Codd Normal Form is exactly the condition that every determinant is a candidate key.
+
 5. **Functional dependency use in which normalizations?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Second Normal Form (2NF)
+
+   answer: Second Normal Form (2NF)  
+   explanation: 2NF removes partial functional dependency, where a non-key attribute depends on only part of a composite primary key.
 
 6. **"There must not be any partial dependency "Which of the following Normal Forms holds this condition?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 43 (ET: N/A)]*  
    (ক) 1NF  
@@ -887,11 +902,17 @@
    (গ) 3NF  
    (ঘ) BCNF
 
+   answer: খ — 2NF  
+   explanation: A relation is in 2NF when it is in 1NF and no non-key attribute depends on part of a composite key.
+
 7. **To remove partial dependency from a database, which technique you will use?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
    a) 1NF  
    b) 2NF  
    c) 3NF  
    d) BCN
+
+   answer: b — 2NF  
+   explanation: Partial dependency is exactly what the second normal form eliminates.
 
 8. **In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functional dependencies is not implied by the above set?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
    a) CD=>AC  
@@ -899,11 +920,17 @@
    c) BC=>CD  
    d) AC=>BC
 
+   answer: b — BD=>CD  
+   explanation: The closure of BD is only {B, D} since B→D adds nothing new and nothing gives C, so BD cannot determine C.
+
 9. **Third normal form is based on the concept of ______.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
    a) Normal Dependency  
    b) Closure Dependency  
    c) Functional Dependency  
    d) Transitive Dependency
+
+   answer: d — Transitive Dependency  
+   explanation: 3NF requires that no non-key attribute depends on another non-key attribute, which removes transitive dependency.
 
 10. **If you are told to remove the inconsistency from the course table which normalization technique you will use-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
    a) 1NF  
@@ -911,11 +938,17 @@
    c) 3NF  
    d) BCNF
 
+   answer: c — 3NF  
+   explanation: Update inconsistency comes from transitive dependency among non-key attributes, which 3NF removes.
+
 11. **If you are assigned to remove partial dependency from a database, which technique you will use?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*  
    a) 1NF  
    b) 2NF  
    c) 3NF  
    d) BCNF
+
+   answer: b — 2NF  
+   explanation: Second normal form is defined by the absence of partial dependency on a composite key.
 
 12. **The table in below violates the Normal Form(s). Which normal form it violates?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*  
    a) All of normal forms listed here  
@@ -929,11 +962,17 @@
    C) To make database secure  
    D) To make database consistency
 
+   answer: A — To remove redundancy  
+   explanation: Normalization splits data so each fact is stored once, which removes redundancy and the insert, update and delete anomalies it causes.
+
 14. **In the ________ normal form, a composite attribute is converted to individual attributes.** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) First  
    B) Second  
    C) Third  
    D) Fourth
+
+   answer: A — First  
+   explanation: 1NF requires atomic values, so a composite attribute such as "address" is broken into street, city and postcode.
 
 15. **Repeated data exist at—** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*  
    A) unnormalized  
@@ -941,11 +980,17 @@
    C) 2NF  
    D) 3NF
 
+   answer: A — unnormalized  
+   explanation: An unnormalized relation still holds repeating groups and duplicated data; normalization progressively removes them.
+
 16. **What is normalization?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
    A) To Remove Redundancy  
    B) To make Database  
    C) To make data meaningful  
    D) To make database Consistency
+
+   answer: A — To Remove Redundancy  
+   explanation: Normalization organises tables so each piece of data is stored in exactly one place.
 
 ## Transaction Management & ACID (14)
 
