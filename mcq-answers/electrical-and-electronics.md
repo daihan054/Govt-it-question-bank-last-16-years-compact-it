@@ -1003,11 +1003,17 @@
    (c) Stores Electrical Energy  
    (d) Increases Voltage
 
+   answer: b — Converts AC to DC  
+   explanation: A rectifier uses diodes to allow current in one direction only, turning alternating current into direct current.
+
 2. **Zener diode is a _____ conducting device.** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*  
    (a) Unidirectional  
    (b) Bidirectional  
    (c) Multidirectional  
    (d) Tri-directional
+
+   answer: b — Bidirectional  
+   explanation: A Zener conducts forward like an ordinary diode and also conducts in reverse once the breakdown voltage is reached.
 
 3. **What should be true for a Zener Diode?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*  
    (a) Reverse bias for amplifying  
@@ -1015,8 +1021,14 @@
    (c) Works in reverse breakdown region  
    (d) Used for rectification
 
+   answer: c — Works in reverse breakdown region  
+   explanation: In reverse breakdown the Zener holds a nearly constant voltage across a wide current range, which is what makes it a voltage regulator.
+
 4. **Which device is need to converts AC to DC?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxii (ET: DU)]*  
    (a) Transformer  
    (b) Rectifier  
    (c) Inverter  
    (d) Amplifier
+
+   answer: b — Rectifier  
+   explanation: A rectifier converts AC into DC; a transformer only changes voltage level and an inverter does the opposite conversion.
