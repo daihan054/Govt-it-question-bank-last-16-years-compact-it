@@ -2,7 +2,7 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 111 / 160 done**  ·  **Questions: 1578 answered, 15 skipped, 3039 total**
+**Subtopics: 112 / 160 done**  ·  **Questions: 1585 answered, 15 skipped, 3039 total**
 
 Next up: `bangla.md` — বাংলা ব্যাকরণ (167)
 
@@ -29,7 +29,7 @@ Next up: `bangla.md` — বাংলা ব্যাকরণ (167)
 | `ms-office.md` | IT | 5 / 5 | 22 | 1 | 23 |
 | `oop.md` | IT | 7 / 7 | 100 | 0 | 100 |
 | `operating-system.md` | IT | 7 / 7 | 74 | 0 | 74 |
-| `programming-languages.md` | IT | 1 / 3 | 10 | 0 | 24 |
+| `programming-languages.md` | IT | 2 / 3 | 17 | 0 | 24 |
 | `software-engineering.md` | IT | 0 / 5 | 0 | 0 | 46 |
 | `web-technology.md` | IT | 0 / 7 | 0 | 0 | 49 |
 

@@ -114,11 +114,17 @@
    (c) 31  
    (d) None of the above
 
+   answer: d — None of the above  
+   explanation: Android 11 is API level 30; 24 and 25 are Nougat and 31 is Android 12.
+
 2. **What is the Internal Codename of Android version 8.0?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*  
    (a) Red Velvet Cake  
    (b) Oatmeal Cookie  
    (c) Snow Cone  
    (d) Jelly Bean
+
+   answer: b — Oatmeal Cookie  
+   explanation: Android 8.0 shipped publicly as Oreo, and its internal dessert codename was Oatmeal Cookie.
 
 3. **আইওএস (IOS) মোবাইল অপারেটিং সিস্টেমটি কোন প্রতিষ্ঠান বাজারজাত করে?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) অ্যাপেল  
@@ -126,11 +132,17 @@
    (c) মাইক্রোসফট  
    (d) আইবিএম
 
+   answer: a — অ্যাপেল  
+   explanation: iOS is developed and sold by Apple for the iPhone and iPad.
+
 4. **Which language was used to build Android Operating System?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
    a) Java  
    b) Python  
    c) Kotlin  
    d) Android is not an operating system
+
+   answer: a — Java  
+   explanation: The Android application framework and most of its system services are written in Java, on top of a Linux kernel written in C.
 
 5. **Which of the following programming language helps you to learn Android programming?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*  
    A) C  
@@ -138,17 +150,26 @@
    C) Java  
    D) Python
 
+   answer: C — Java  
+   explanation: Android apps were traditionally written in Java, with Kotlin now the preferred alternative.
+
 6. **Which of the following program helps you to learn Android programming?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) C  
    B) SQL  
    C) Java  
    D) HTML
 
+   answer: C — Java  
+   explanation: Java is the classic language of Android app development.
+
 7. **What smart phones are compatible of .apk file?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) Microsoft  
    B) IOS  
    C) Symbian  
    D) Android
+
+   answer: D — Android  
+   explanation: An .apk is an Android Package, the installer format for Android apps.
 
 ## Visual Basic & .NET (7)
 
