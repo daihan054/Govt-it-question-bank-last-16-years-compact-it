@@ -22,11 +22,17 @@
    (c) 00011011  
    (d) 10011100
 
+   answer: a — 10011011  
+   explanation: 65h is 01100101; inverting gives 10011010 and adding 1 gives 10011011.
+
 2. **What is the result of the binary sum 10101+1011?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 10000  
    (b) 101010  
    (c) 100000  
    (d) 111100
+
+   answer: c — 100000  
+   explanation: 10101 is 21 and 1011 is 11, and 21 + 11 = 32, which is 100000 in binary.
 
 3. **A computer system needs to store 100 different symbols. In this case, how many bits of data is required for each symbol?** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*  
    a) 4  
@@ -34,11 +40,17 @@
    c) 6  
    d) 7
 
+   answer: d — 7  
+   explanation: 6 bits give only 64 combinations, so 7 bits are needed to cover 100 distinct symbols (128 patterns).
+
 4. **The greatest negative number which can be stored in computer that has 8-bits work length and use 2's complement arithmetic is ______.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
    (a) -256  
    (b) -127  
    (c) -255  
    (d) -128
+
+   answer: d — -128  
+   explanation: An 8-bit two's complement register spans -128 to +127, so the most negative value is -128.
 
 5. **(1111111101)_2 = (?)_{10}** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
    (a) 1511  
@@ -46,11 +58,17 @@
    (c) 1500  
    (d) 1537
 
+   answer: 1021 — none of the printed options matches  
+   explanation: 1111111101₂ = 512+256+128+64+32+16+8+4+1 = 1021; the four choices (1511, 1510, 1500, 1537) belong to a different number. <!-- verify -->
+
 6. **Find out 2's complement value of 11100101.** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
    (a) 00011011  
    (b) 00011111  
    (c) 0011001  
    (d) 00011010
+
+   answer: a — 00011011  
+   explanation: Inverting 11100101 gives 00011010, and adding 1 gives 00011011.
 
 7. **(2023)_{10} = (?)_{16}** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    (a) 7E0  
@@ -58,11 +76,17 @@
    (c) 8E0  
    (d) 7E7
 
+   answer: d — 7E7  
+   explanation: 2023 = 7×256 + 14×16 + 7, so the hex digits are 7, E and 7.
+
 8. **A computer has main memory of 960 Kb. What is the exact number of bytes contained in this memory?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*  
    (ক) 960x8  
    (খ) 960x1000  
    (গ) 960x1024  
    (ঘ) 960x1024x1024
+
+   answer: গ — 960x1024  
+   explanation: One kilobyte of memory is 1024 bytes, so 960 KB is 960 × 1024 bytes.
 
 9. **Which of the following numbers is the next sequence number of 77_8 in Octal number system?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 44 (ET: N/A)]*  
    (ক) 88  
@@ -70,11 +94,17 @@
    (গ) 100  
    (ঘ) 99
 
+   answer: গ — 100  
+   explanation: Octal has digits 0 to 7, so after 77 the count rolls over to 100.
+
 10. **If a processor has 8-bit register, what is the value of (11111111)_2 represented in 2's complement form-** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*  
    (ক) 255  
    (খ) -1  
    (গ) 256  
    (ঘ) 0
+
+   answer: খ — -1  
+   explanation: All ones in two's complement is -1, since adding 1 wraps the register to zero.
 
 11. **নিম্নের কোন লজিক অপারেশনটি সঠিক?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*  
    (ক) A+A = 1  
@@ -83,12 +113,18 @@
    (ঘ) A+1 = 0  
    **Ans: গ**
 
+   answer: গ — A+1 = 1  
+   explanation: In Boolean algebra ORing anything with 1 always gives 1.
+
 12. **বিসিডি কোডে বিট সংখ্যা কত?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*  
    (ক) 1  
    (খ) 2  
    (গ) 8  
    (ঘ) 4  
    **Ans: ঘ**
+
+   answer: ঘ — 4  
+   explanation: BCD encodes each decimal digit 0-9 in four bits.
 
 13. **বাইনারি পদ্ধতির যোগে 1+1+1 = কত?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*  
    (ক) 10  
@@ -97,12 +133,18 @@
    (ঘ) 111  
    **Ans: খ**
 
+   answer: খ — 11  
+   explanation: 1+1+1 = 3 in decimal, which is 11 in binary.
+
 14. **bit এর সংখ্যার বিচারে নিচের কোন ক্রমটি সঠিক?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)], [BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*  
    (ক) \text{byte} > \text{GB} > \text{KB} > \text{TB}  
    (খ) \text{byte} > \text{KB} > \text{GB} > \text{TB}  
    (গ) \text{byte} > \text{KB} > \text{TB} > \text{GB}  
    (ঘ) \text{byte} > \text{TB} > \text{GB} > \text{KB}  
    **Ans: খ**
+
+   answer: খ — byte, KB, GB, TB  
+   explanation: In increasing size the order is byte, kilobyte, gigabyte, terabyte.
 
 15. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*  
    a) An exclusive logical sum of N with 0Fh  
@@ -119,11 +161,17 @@
    c) Many to Many  
    d) Many to One
 
+   answer: c — A logical product of N with 0Fh  
+   explanation: ANDing with 0Fh keeps every lower bit as it was and clears only the upper four. The stray item pasted here answers (c) Many to Many, since Orderline is the junction table between Order and Product.
+
 16. **Which of the following values is the correct value of this hexadecimal code 1F.01B?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 137 (ET: N/A)]*  
    a. 35.0065918  
    b. 32.0065918  
    c. 31.0065918  
    d. 30.0065918
+
+   answer: c — 31.0065918  
+   explanation: 1F is 31, and .01B is 1/256 + 11/4096 = 0.0065918.
 
 17. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 89 (ET: N/A)]*  
    a. An exclusive logical sum of N with 0Fh  
@@ -131,11 +179,17 @@
    c. A negative logical product of N with 0Fn  
    d. A logical sum of N with 0Fh
 
+   answer: b — A logical product of N with 0Fn  
+   explanation: The AND operation with 0Fh leaves the low nibble untouched while zeroing the high nibble.
+
 18. **Suppose, Y is an integer variable whose value is either 0 or 1. Which of the following is the equivalent of the statement. if(Y==0) Y=1; else Y=0;?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
    a. Y = 1+Y  
    b. Y = 1-Y  
    c. Y = Y-1  
    d. Y = 1%Y
+
+   answer: b — Y = 1-Y  
+   explanation: With Y limited to 0 or 1, 1-Y flips 0 to 1 and 1 to 0, exactly as the if-else does.
 
 19. **Among the following which is not a divisor of - (1001011011110000000)_2?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
    a) (2)_{10}  
@@ -143,11 +197,17 @@
    c) (128)_{10}  
    d) (256)_{10}
 
+   answer: d — (256)_10  
+   explanation: The number ends in seven zeros, so it divides by 2⁷ = 128 but not by 2⁸ = 256.
+
 20. **Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*  
    a) An exclusive logical sum of N with 0Fh  
    b) A logical sum of N with 0Fh  
    c) A negative logical product of N with 0Fh  
    d) A logical product of N with 0Fh
+
+   answer: d — A logical product of N with 0Fh  
+   explanation: ANDing with 0Fh preserves the lower four bits and clears the upper four.
 
 21. **Which one is the binary representation of (1234567)_{10}?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*  
    a) 100101101011010000000  
@@ -155,11 +215,17 @@
    c) 1001011010110100000111  
    d) 111111111011010000110
 
+   answer: a — 100101101011010000000  
+   explanation: 1234567 is exactly 100101101011010000111; option (a) is the same string with the final 111 dropped, so it is the intended choice. <!-- verify -->
+
 22. **Convert the binary number (1011010)_2 into hexadecimal?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
    a) 5B  
    b) 5F  
    c) 5A  
    d) 5C
+
+   answer: c — 5A  
+   explanation: Grouping 1011010 into nibbles gives 0101 1010, which is 5 and A.
 
 23. **‘b’ এর ASCII value কত?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)]*  
    A) 66  
@@ -167,11 +233,17 @@
    C) 3000  
    D) 1
 
+   answer: B — 98  
+   explanation: Lowercase letters start at 97 for 'a', so 'b' is 98.
+
 24. **10000000 এর বাইনারী নম্বরটির 2's complement ফরম্যাটের মান কত (৮ বিট)?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) 0  
    B) 128  
    C) -128  
    D) 256
+
+   answer: C — -128  
+   explanation: In 8-bit two's complement the leading 1 with all zeros is the most negative value, -128.
 
 25. **Number of bits in 'BCD' code used in computing are-** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
    A) seven bits  
@@ -179,11 +251,17 @@
    C) eighteen bits  
    D) six bits
 
+   answer: D — six bits  
+   explanation: The BCD character code used in early computing was 6 bits wide, giving 64 characters (the 4-bit form encodes only a single digit).
+
 26. **Number systems used in the computer is known as:** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 199 (ET: IBA)]*  
    A. Octal System  
    B. Decimal System  
    C. Binary System  
    D. Real System
+
+   answer: C — Binary System  
+   explanation: Digital circuits have two stable states, so computers work internally in binary.
 
 27. **________ are the two symbols present in the binary number system.** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*  
    A. 1 and 2  
@@ -191,11 +269,17 @@
    C. 8 and 9  
    D. 5 and 6
 
+   answer: B — 0 and 1  
+   explanation: Binary is base 2, so its only digits are 0 and 1.
+
 28. **How many unique signs could be specified by using ASCII-8?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. 128  
    B. 256  
    C. 512  
    D. 65536
+
+   answer: B — 256  
+   explanation: 8 bits give 2⁸ = 256 different codes.
 
 29. **Which one of the following is equivalent hexadecimal number of (734)_8?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
    A. C1D  
@@ -203,11 +287,17 @@
    C. 1CD  
    D. 1DC
 
+   answer: D — 1DC  
+   explanation: 734₈ = 7×64 + 3×8 + 4 = 476, and 476 = 1×256 + 13×16 + 12 = 1DC₁₆.
+
 30. **A nibble is equal to:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
    A) 4-bits  
    B) 6-bits  
    C) 8-bits  
    D) 16-bits
+
+   answer: A — 4-bits  
+   explanation: A nibble is half a byte, so four bits.
 
 31. **দশমিক পদ্ধতির সংখ্যা 300_{(10)} কে Hexadecimal এ রূপান্তর করলে কত হবে?** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
    A) \text{C}3_{(16)}  
@@ -215,11 +305,17 @@
    C) \text{C}2_{(16)}  
    D) \text{A}2\text{C}_{(16)}
 
+   answer: B — 12C_(16)  
+   explanation: 300 = 1×256 + 2×16 + 12, so the hex digits are 1, 2 and C.
+
 32. **10101111 ও 00110011 এর Bitwise OR এর ফলাফল কত?** *[BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) 10111111  
    B) 00100011  
    C) 01010101  
    D) 11111111
+
+   answer: A — 10111111  
+   explanation: ORing bit by bit, 10101111 and 00110011 give 10111111.
 
 33. **(\text{B12})_{16} + (\text{5CA})_{16} = ?** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
    (a) (10\text{DC})_{16}  
@@ -227,11 +323,17 @@
    (c) (1\text{FDC})_{16}  
    (d) (\text{E1DC})_{16}
 
+   answer: a — (10DC)_16  
+   explanation: 2+A = C, 1+C = D, and B+5 = 10h which writes 0 and carries 1, giving 10DC.
+
 34. **What is the largest decimal value that can be represented by 12 bits?** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*  
    (a) 1024  
    (b) 2048  
    (c) 2095  
    (d) 4095
+
+   answer: d — 4095  
+   explanation: 12 bits hold 2¹² = 4096 values, so the largest unsigned value is 4095.
 
 35. **What is the binary of (68)_{10}?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*  
    A) 01000100  
@@ -239,11 +341,17 @@
    C) 00100100  
    D) 00010100
 
+   answer: A — 01000100  
+   explanation: 68 = 64 + 4, which sets bit 6 and bit 2 to give 01000100.
+
 36. **1(one) nibble equal to—** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
    A) 1 but  
    B) 2-bit  
    C) 4-bit  
    D) 8-bit
+
+   answer: C — 4-bit  
+   explanation: A nibble is four bits, half a byte.
 
 37. **(2019)_{10} in Binary is ________.** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) 0000011111100010  
@@ -251,11 +359,17 @@
    C) 0000001111110010  
    D) 0000011111100011
 
+   answer: D — 0000011111100011  
+   explanation: 2019 = 1024+512+256+128+64+32+2+1 = 11111100011, padded to 16 bits.
+
 38. **(11100010)_2 has a decimal value of ________.** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) 252  
    B) 225  
    C) 226  
    D) 220
+
+   answer: C — 226  
+   explanation: 128+64+32+2 = 226.
 
 39. **For some base r, the digits which are allowed in its representation are?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) Digit from 1 to r  
@@ -263,11 +377,17 @@
    C) Digit from 1 to r-1  
    D) Digit form 0 to r
 
+   answer: B — Digit from 0 to r-1  
+   explanation: A base-r system uses r symbols, counting from 0 up to r-1.
+
 40. **The Ex-OR of this string 01010101 with 11111111 is ________.** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
    A) 10101010  
    B) 00110100  
    C) 01010101  
    D) 10101001
+
+   answer: A — 10101010  
+   explanation: XOR with all ones inverts every bit, turning 01010101 into 10101010.
 
 41. **How many numerical bits of ASCII -8 codes?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) 2  
@@ -275,11 +395,17 @@
    C) 8  
    D) 16
 
+   answer: C — 8  
+   explanation: ASCII-8 (extended ASCII) uses 8 bits per character.
+
 42. **How many bits in Unicode?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) 4  
    B) 8  
    C) 16  
    D) 32
+
+   answer: C — 16  
+   explanation: The original Unicode used 16 bits per character.
 
 43. **On which number system computer does not work?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
    A) Binary  
@@ -287,17 +413,26 @@
    C) Octal  
    D) Hexadecimal
 
+   answer: B — Decimal  
+   explanation: Computers work in binary internally; octal and hexadecimal are just compact ways of writing binary, while decimal is only for human input and output.
+
 44. **What is the Hexadecimal form of (2016)_{10}?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) 5A0  
    B) 7A0  
    C) 5E0  
    D) 7E0
 
+   answer: D — 7E0  
+   explanation: 2016 = 7×256 + 14×16 + 0, so the hex digits are 7, E and 0.
+
 45. **When we subtract 3 from 2, the answer is-** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*  
    A) 0001  
    B) 1101  
    C) 0101  
    D) 1001
+
+   answer: D — 1001  
+   explanation: 2 - 3 = -1, which in 4-bit sign-magnitude form is a sign bit of 1 followed by the magnitude 001.
 
 ## Logic Gates & Universal Gates (16)
 
