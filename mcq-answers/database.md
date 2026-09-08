@@ -1607,11 +1607,17 @@
    (c) 12  
    (d) 9.2
 
+   answer: a — Indexing  
+   explanation: An index gives a direct path to matching rows instead of scanning the table. The stray scheduling item pasted here answers (c) 12: running P2, P5, P1, P3, P4 by priority gives completion times 1, 6, 16, 18, 19 and an average TAT of 60/5 = 12.
+
 2. **Related records of the different relations can be stored on the same block using which file organization technique?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*  
    a) Heap file organization  
    b) Sequential file organization  
    c) Hashing file organization  
    d) Multi-table Clustering file organization
+
+   answer: d — Multi-table Clustering file organization  
+   explanation: Multi-table clustering stores related rows of different relations in the same block so a join reads far fewer blocks.
 
 3. **Which of the following is correct for the Create index command?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
    a) Insert index index_name on table_name  
@@ -1619,11 +1625,17 @@
    c) Create index index_name on database_name;  
    d) Create index index_name on table_name;
 
+   answer: d — Create index index_name on table_name;  
+   explanation: An index is built on a table, and the syntax is CREATE INDEX name ON table(column).
+
 4. **Database index speeds up-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) Select queries  
    b) Where clauses  
    c) Update query  
    d) Both a and b
+
+   answer: d — Both a and b  
+   explanation: An index speeds up retrieval, so it helps SELECT statements and the WHERE conditions that filter them; it actually slows down inserts and updates.
 
 5. **Which of the following index is automatically created by the database server when an object is created?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) Implicit  
@@ -1631,11 +1643,17 @@
    c) Unique  
    d) composite
 
+   answer: a — Implicit  
+   explanation: The server creates an implicit index automatically to enforce a primary key or unique constraint.
+
 6. **Related records of the different relations can be stored on the same block using which file organization technique?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
    a) Heap file organization  
    b) Sequential file organization  
    c) Hashing file organization  
    d) Clustering file organization
+
+   answer: d — Clustering file organization  
+   explanation: Clustering places related records from different relations in the same block, cutting the disk reads a join needs.
 
 ## Database Connectivity (JDBC/ODBC) (5)
 
