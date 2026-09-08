@@ -592,11 +592,17 @@
    (c) Sectors  
    (d) None of the above
 
+   answer: c — Sectors  
+   explanation: Each concentric track is divided into sectors, which are the smallest addressable blocks on the disk.
+
 2. **Consider a magnetic disk packed with 32 surfaces. Each surface is divided into 128 tracks while 256 sectors per track. If the size of a sector is 1024 bytes, then what is the total capacity of the disk?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*  
    a) 2³⁰ bytes  
    b) 2³³ bytes  
    c) 2²⁷ bytes  
    d) 2²⁰ bytes
+
+   answer: a — 2³⁰ bytes  
+   explanation: 32 × 128 × 256 × 1024 = 2⁵ × 2⁷ × 2⁸ × 2¹⁰ = 2³⁰ bytes.
 
 3. **DVD এর চেয়ে বেশী Data store করা যায় কোনটিতে?** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
    (a) CD Rom  
@@ -604,11 +610,17 @@
    (c) Blue Ray disk  
    (d) Red Ray disk
 
+   answer: c — Blue Ray disk  
+   explanation: Blu-ray uses a shorter-wavelength blue laser, so it packs 25 GB per layer against a DVD's 4.7 GB.
+
 4. **Which of the following is major part of time taken when accessing data on the disk?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
    A) Settle time  
    B) Rotational delay  
    C) Waiting time  
    D) Seek time
+
+   answer: D — Seek time  
+   explanation: Moving the head arm to the right track is mechanical and slow, so seek time dominates disk access.
 
 5. **Place where large amount of data is stored outside central processing unit is called** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) Peripherals  
@@ -616,11 +628,17 @@
    C) AI unit  
    D) Backing store
 
+   answer: D — Backing store  
+   explanation: Backing store is the secondary storage outside the CPU that holds large volumes of data.
+
 6. **Which are not performance characteristics of hard disk?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*  
    A) data transfer time  
    B) response time  
    C) power consumption  
    D) shelf life
+
+   answer: D — shelf life  
+   explanation: Data transfer rate, response time and power consumption are measured performance characteristics; shelf life is about longevity in storage.
 
 7. **Which of the following is used for manufacturing chips?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Control bus  
@@ -628,11 +646,17 @@
    C) Parity unit  
    D) Semiconductor
 
+   answer: D — Semiconductor  
+   explanation: Chips are fabricated on silicon wafers, a semiconductor material.
+
 8. **Before a disk can be used to store data, it must be-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Formatted  
    B) Reformatted  
    C) Addressed  
    D) None
+
+   answer: A — Formatted  
+   explanation: Formatting lays down tracks, sectors and the file system structures the OS needs before any data can be written.
 
 9. **Which technology is used in Compact disks?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Mechanical  
@@ -640,11 +664,17 @@
    C) Electromagnetic  
    D) Laser
 
+   answer: D — Laser  
+   explanation: A CD is read by a laser that detects pits and lands on the reflective layer.
+
 10. **Which of the following is a storage device?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Tape  
    B) Hard Disk  
    C) Floppy Disk  
    D) All of them
+
+   answer: D — All of them  
+   explanation: Magnetic tape, hard disks and floppy disks all store data, so all three are storage devices.
 
 11. **What does the disk drive of computer do?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
    A) Rotate the Disk  
@@ -652,17 +682,26 @@
    C) Load a program form the disk into the memory  
    D) Both B and C
 
+   answer: D — Both B and C  
+   explanation: The drive reads the data from the disk and loads programs from it into main memory; rotation is just a means to that end.
+
 12. **Which of the items below are considered removable storage media?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
    A) Removable hard disk cartridges  
    B) (Magneto-optical) disk  
    C) Flexible disks cartridges  
    D) All of them
 
+   answer: D — All of them  
+   explanation: Removable hard disk cartridges, magneto-optical disks and flexible disk cartridges can all be taken out and carried away.
+
 13. **A hard disk is divided into tracks which are further subdivided into ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Clusters  
    b. Sectors  
    c. Vectors  
    d. Heads
+
+   answer: b — Sectors  
+   explanation: Tracks are divided into sectors, the smallest unit the disk can read or write.
 
 ## RAID & Storage Architecture (5)
 
