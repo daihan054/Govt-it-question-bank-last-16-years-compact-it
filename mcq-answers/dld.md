@@ -651,11 +651,17 @@
    (c) AF34  
    (d) EAF3
 
+   answer: a — 2AF3  
+   explanation: ABCD is 1010101111001101; shifting right two places gives 0010101011110011, which is 2AF3.
+
 2. **Which of the following is the Octal equivalent of the hexadecimal number 7B5? [ নিচের হেক্সাডেসিমাল সংখ্যা 7B5-এর সমতুল্য অক্টাল সংখ্যা কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*  
    (a) 735  
    (b) 7551  
    (c) 3665  
    (d) 7561
+
+   answer: c — 3665  
+   explanation: 7B5 hex is 011110110101 in binary, and regrouping into three-bit fields from the right gives 011 110 110 101 = 3665 octal.
 
 3. **Which number system is used internally by a computer? [ কম্পিউটার অভ্যন্তরে কোন সংখ্যা পদ্ধতি ব্যবহার করে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
    (a) Decimal  
@@ -663,11 +669,17 @@
    (c) Binary  
    (d) Hexadecimal
 
+   answer: c — Binary  
+   explanation: Digital circuits have two states, so the machine works internally in binary.
+
 4. **What is the result of the binary sum?[ নিচের বাইনারি যোগফলের ফলাফল কত? ] 10101 + 1011** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) 10000  
    (b) 101010  
    (c) 100000  
    (d) 111100
+
+   answer: c — 100000  
+   explanation: 10101 is 21 and 1011 is 11; their sum 32 is 100000 in binary.
 
 5. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree.The binary search tree uses the usual ordering on natural numbers.What is the in-order traversal sequence of the resultant tree?[ যদি ৭, ৫, ১, ৮, ৩, ৬, ০, ৯, ৪, ২ সংখ্যাগুলো এই ক্রম অনুযায়ী একটি খালি বাইনারি সার্চ ট্রিতে (BST) প্রবেশ করানো হয়, তবে ইন-অর্ডার ট্রাভার্সাল (In-order traversal) সিকোয়েন্স কী হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) 9 8 6 4 2 3 0 1 5 7  
@@ -675,11 +687,17 @@
    (c) 7 5 1 0 3 2 4 6 8 9  
    (d) 0 1 2 3 4 5 6 7 8 9
 
+   answer: d — 0 1 2 3 4 5 6 7 8 9  
+   explanation: In-order traversal of a binary search tree always returns the keys in ascending order.
+
 6. **A binary search tree is constructed by inserting the numbers: 60, 25, 72, 15, 30, 68, 13, 18 in order. The number of nodes in the left sub tree is [ ৬০, ২৫, ৭২, ১৫, ৩০, ৬৮, ১৩, ১৮ এই সংখ্যাগুলো দিয়ে একটি BST তৈরি করলে বাম সাব-ট্রিতে (Left sub tree) কতটি নোড থাকবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
    (a) 4  
    (b) 5  
    (c) 6  
    (d) 8
+
+   answer: b — 5  
+   explanation: With 60 as root, the smaller values 25, 15, 30, 13 and 18 all fall in the left subtree.
 
 ## Boolean Algebra & Simplification (4)
 
