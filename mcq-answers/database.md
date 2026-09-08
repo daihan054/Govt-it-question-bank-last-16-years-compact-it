@@ -1309,11 +1309,17 @@
    c) 4  
    d) 5
 
+   answer: b — 3  
+   explanation: E1 and E2 each need a table, the one-to-many R1 folds into the "many" side as a foreign key, but the many-to-many R2 needs its own table.
+
 2. **Which of the following is an appropriate description of the mapping between the relational model and relational database as its implementations?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
    a) A domain is mapped to a character type or a character string type.  
    b) A relation is mapped to a table  
    c) Attributes and columns are ordered from left to right  
    d) Neither tuples nor rows have duplicates
+
+   answer: b — A relation is mapped to a table  
+   explanation: In the relational model a relation becomes a table, a tuple becomes a row and an attribute becomes a column.
 
 3. **What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraints of both entities?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) Min 1 and max 2  
@@ -1321,11 +1327,17 @@
    (c) Min 2 and max 3  
    (d) Min 2 and max 2
 
+   answer: c — Min 2 and max 3  
+   explanation: The two entities always need their own tables, and with partial participation on both sides the relationship needs a third table, though it can sometimes be merged.
+
 4. **Consider an Entity-relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater that the cardinality of E2. Which of the following is true about R?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)]*  
    a. Every entity in E1 is associated with exactly one entity in E2  
    b. Some entity in E1 is associated with more than one entity in E2  
    c. Every entity in E2 is associated with exactly one entity in E1  
    d. Every entity in E2 is associated with at most one entity in E1
+
+   answer: a — Every entity in E1 is associated with exactly one entity in E2  
+   explanation: R is many-to-one from E1 to E2 and E1 participates totally, so each E1 entity maps to exactly one E2 entity.
 
 5. **A relationship is given below in an ER diagram How many tables can be created (preferred) from below diagram?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    ```
@@ -1342,6 +1354,9 @@
    c) Three  
    d) Two or Three
 
+   answer: b — Two  
+   explanation: For a many-to-one advisor relationship the link folds into the student table as a foreign key, so only instructor and student tables are needed.
+
 6. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*
    ```
    +------------+               +------------+
@@ -1357,11 +1372,17 @@
    c) Three  
    d) No definite numbers
 
+   answer: b — Two  
+   explanation: The arrow marks a many-to-one relationship, which is stored as a foreign key in the student table rather than a separate table.
+
 7. **Consider an Entity-relationship (ER) model where R is defined as a many-to-one relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater than the cardinality of E2, which of the following is true about R?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
    a) Every entity in E1 is associated with exactly one entity in E2  
    b) Some entity in E1 is associated with more than one entity in E2  
    c) Every entity in E2 is associated with exactly one entity in E1  
    d) Every entity in E2 is associated with at most one entity on E1
+
+   answer: a — Every entity in E1 is associated with exactly one entity in E2  
+   explanation: Many-to-one from E1 to E2 with total participation means every E1 entity maps to exactly one E2 entity.
 
 8. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*  
    a) Two  
@@ -1369,11 +1390,17 @@
    c) Two or Three  
    d) No definite numbers
 
+   answer: a — Two  
+   explanation: A many-to-one relationship is represented by adding a foreign key to the "many" side, so two tables suffice.
+
 9. **In an Entity-Relationship diagram many-to-many relationship corresponds to a -- in actual database.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
    A) Table  
    B) field  
    C) row  
    D) primary key
+
+   answer: A — Table  
+   explanation: A many-to-many relationship cannot be held by a foreign key, so it becomes its own junction table holding both keys.
 
 ## Relational Model & Terminology (8)
 
