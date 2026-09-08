@@ -640,11 +640,17 @@
    (c) O(n), O(n \\log n)  
    (d) O(n^2), O(n^2)
 
+   answer: b — O(n log n), O(n²)  
+   explanation: A random pivot makes balanced splits likely, giving O(n log n) on average, but an unlucky run of extreme pivots still degrades to O(n²).
+
 2. **Which of the following is not a linear data structure? [ নিচের কোনটি linear data structure নয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
    (a) Queue  
    (b) Stack  
    (c) Tree  
    (d) Linked List
+
+   answer: c — Tree  
+   explanation: A tree branches into children rather than following one sequence, so it is non-linear.
 
 3. **Which OS concept allows multiple processes to run simultaneously? [ কোন OS concept একাধিক process একসাথে চলার অনুমতি দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
    (a) Multithreading  
@@ -652,21 +658,42 @@
    (c) Multilevel Queue  
    (d) Time slicing
 
+   answer: b — Multiprocessing  
+   explanation: Multiprocessing uses more than one CPU or core so processes genuinely run at the same instant, rather than merely interleaving.
+
 4. **Which data structure follows FIFO (First In First Out) principle? [ কোন ডেটা স্ট্রাকচার FIFO (First In First Out) নীতি মেনে চলে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
    (A) Stack  
    (B) Queue  
    (C) Tree  
    (D) Graph
 
+   answer: B — Queue  
+   explanation: A queue removes from the front in the same order items were added at the rear.
+
 5. **How can you multiply two square 16\*16 matrices on a computer processor that can only handle 8\*8 matrix multiplications? Write an algorithm for this problem?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 380]]*
+
+   answer: Split each 16×16 matrix into four 8×8 blocks and use block multiplication  
+   explanation: With A = [[A11,A12],[A21,A22]] and B likewise, C11 = A11B11 + A12B21, C12 = A11B12 + A12B22, C21 = A21B11 + A22B21, C22 = A21B12 + A22B22 — eight 8×8 multiplications and four 8×8 additions.
 
 6. **How can a binary tree be represented using an array, and how are the positions of the left and right children determined based on the index of the parent node?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
 
+   answer: Store the tree level by level in the array; for a parent at index i (1-based), left child = 2i, right child = 2i+1 and parent = i/2  
+   explanation: With 0-based indexing the formulas become 2i+1 and 2i+2, and the parent is (i-1)/2; the scheme suits complete trees such as heaps because no space is wasted.
+
 7. **a) একটি Stack এ 1, 2, 2, 3, 3, 3 push করা হলো। এরপর পর পর দুইবার pop করা হলো। এর পর আবারো pop করা হলে কোন সংখ্যা বের হবে।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+
+   answer: 3  
+   explanation: The stack holds 1,2,2,3,3,3 with the last 3 on top; two pops remove two 3s and the third pop returns the remaining 3.
 
 8. **b) মনে কর একটি Sorted array রয়েছে। সেখান থেকে একটি সংখ্যা খুঁজে বের করতে হবে যা minimum সময় নিবে তখন তুমি কোন সার্চিং Algorithm ব্যবহার করবে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
 
+   answer: Binary search  
+   explanation: On sorted data binary search halves the range at every step, finding the value in O(log n) instead of the O(n) of a linear scan.
+
 9. **BIDS published many Monographs every year. Now write an algorithm to sort them.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 485]]*
+
+   answer: Use merge sort on the monograph records, keyed on the chosen field (title, author or year)  
+   explanation: Read the records into an array, split recursively until single elements remain, then merge sorted halves back together — guaranteed O(n log n) and stable, so equal keys keep their original order.
 
 10. **The minimum number of stacks needed to implement a queue is—[ একটি কিউ (Queue) ইমপ্লিমেন্ট করার জন্য সর্বনিম্ন কয়টি স্ট্যাক (Stack) প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) 1  
@@ -674,11 +701,17 @@
    (c) 3  
    (d) 4
 
+   answer: b — 2  
+   explanation: Two stacks are enough: push onto the first, and when removing, pour it into the second so the order reverses into FIFO.
+
 11. **Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be—[ ১১টি নোড বিশিষ্ট একটি বাইনারি ট্রিতে প্রতিটি নোডের হয় ০ অথবা ২টি চাইল্ড আছে। এই ট্রির সর্বোচ্চ উচ্চতা (Height) কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
    (a) 2  
    (b) 3  
    (c) 4  
    (d) 5
+
+   answer: d — 5  
+   explanation: 11 nodes in a full binary tree means 5 internal nodes, and putting one internal node per level stretches the height to 5.
 
 12. **The following method, which is intended to find the maximum element of the integer array, is incorrect.[ অ্যারোর সর্বোচ্চ মান খুঁজে বের করার নিচের মেথডটি ভুল কেন? ] public int max(int[]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 511-512]]*  
    a) \{
@@ -701,6 +734,9 @@
    (b) It fails whenever the array contains a negative number
    (c) It fails whenever the array contains only negative numbers
    (d) It fails whenever the first element of the array is the largest
+
+   answer: c — It fails whenever the array contains only negative numbers  
+   explanation: max starts at 0, so if every element is below 0 no element ever beats it and the method wrongly returns 0; it should start from a[0].
 
 ## Linked List (10)
 
