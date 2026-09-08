@@ -1510,17 +1510,29 @@ int main ()\{
    c) Ctrl + N  
    d) Ctrl + Q
 
+   answer: b — Ctrl + W  
+   explanation: Ctrl+W closes the current tab; Ctrl+T opens a new one and Ctrl+N opens a new window.
+
 2. **Which operation dose F1 key perform for all types of application?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)], [Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*  
    A) Windows shut down  
    B) File open  
    C) Help  
    D) Save
 
+   answer: C — Help  
+   explanation: F1 is the standard Help key across Windows applications.
+
 3. **কি-বোর্ডের Del বাটন চাপলে কি হয়?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** কার্সরের পরের শব্দ মুছে যায়।
+
+   answer: কার্সরের ডান পাশের অক্ষরটি মুছে যায়  
+   explanation: Del removes the character to the right of the cursor, while Backspace removes the one to the left.
 
 4. **In the keyboard of a computer processing F8 Key for three times selects?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. A paragraph  
    b. A sentence  
    c. Entire document  
    d. A word
+
+   answer: b — A sentence  
+   explanation: In MS Word repeated F8 extends the selection: once turns on extend mode, twice selects a word, three times a sentence, four times a paragraph and five times the document.
