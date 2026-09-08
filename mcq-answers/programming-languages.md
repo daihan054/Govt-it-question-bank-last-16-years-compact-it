@@ -179,11 +179,17 @@
    (c) Development of Cloud Applications  
    (d) All of the above statements are true
 
+   answer: d — All of the above statements are true  
+   explanation: .NET is a general-purpose platform used for desktop apps, web and cloud services, and containerised microservices.
+
 2. **Microsoft .NET is ________** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) Open Source  
    B) Closed Source  
    C) Browser  
    D) None of these
+
+   answer: A — Open Source  
+   explanation: Microsoft released .NET Core under the MIT licence in 2014, and modern .NET is developed openly on GitHub.
 
 3. **The reference library of Visual Basic books is called ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. MSDN library  
@@ -191,11 +197,17 @@
    c. Contents  
    d. Topic pane
 
+   answer: a — MSDN library  
+   explanation: MSDN (Microsoft Developer Network) is the reference documentation set shipped with Visual Studio.
+
 4. **A variable declared inside a method is called ________.** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. Static variable  
    b. Local variable  
    c. Private variable  
    d. Serial variable
+
+   answer: b — Local variable  
+   explanation: A variable declared inside a method exists only while that method runs and is visible only within it.
 
 5. **Which of the method is used to display the form as model in VB.NET platform?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. showdialog()  
@@ -203,14 +215,23 @@
    c. loaddialog()  
    d. show()
 
+   answer: a — showdialog()  
+   explanation: ShowDialog() opens the form modally, blocking the rest of the application until it is closed; Show() opens it modelessly.
+
 6. **The tool provided with .NET framework register assemblies for use by COM is ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. Regasm  
    b. Regsvr32  
    c. ILDASM  
    d. Regedit
 
+   answer: a — Regasm  
+   explanation: The Assembly Registration Tool (regasm.exe) writes the metadata of a .NET assembly into the registry so COM clients can use it.
+
 7. **Find any errors in the following BankAccount constructor in C#.NET public int BankAccount(){ balance=0; }** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. Name  
    b. Formal parameters  
    c. Return type  
    d. None
+
+   answer: c — Return type  
+   explanation: A constructor must have no return type, so "public int BankAccount()" is invalid — the int makes it an ordinary method.
