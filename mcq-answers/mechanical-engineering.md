@@ -274,11 +274,17 @@
    (গ) Boring  
    (ঘ) সবকটি
 
+   answer: ঘ — সবকটি  
+   explanation: A drilling machine can also perform spot facing, reaming, boring, counterboring and tapping with the right tool.
+
 2. **টুল ম্যাটেরিয়াল হিসেবে ব্যবহৃত হয়-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) টুল স্টিল  
    (খ) কার্বন স্টিল  
    (গ) সিরামিক স্টিল  
    (ঘ) ডায়মন্ড স্টিল
+
+   answer: ক — টুল স্টিল  
+   explanation: Tool steel is hardened high-carbon alloy steel that keeps a cutting edge under heat and pressure.
 
 3. **Screw thread Gi Major Dia. I Minor dia. এর পার্থক্য-** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) Depth of thread  
@@ -286,11 +292,17 @@
    (গ) Pitch  
    (ঘ) Whole depth
 
+   answer: ক — Depth of thread  
+   explanation: The major and minor diameters differ by twice the thread depth, so the depth of thread is what separates them radially. <!-- verify -->
+
 4. **Planer Machine এ কার্যবস্তু-** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
    (ক) স্থির থাকে  
    (খ) চলমান থাকে  
    (গ) উভয়ই চলমান থাকে  
    (ঘ) Tool চলমান থাকে
+
+   answer: খ — চলমান থাকে  
+   explanation: On a planer the table carrying the workpiece reciprocates while the tool stays fixed and feeds sideways; a shaper is the opposite.
 
 5. **নাট ও বোল্ট কর্তৃক গঠিত জোড়া হলো-** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
    (ক) টার্নিং জোড়া  
@@ -298,11 +310,17 @@
    (গ) স্ক্রু জোড়া  
    (ঘ) স্ফেরিক্যাল জোড়া
 
+   answer: গ — স্ক্রু জোড়া  
+   explanation: A nut on a bolt turns and advances along the axis at the same time, which is a screw pair.
+
 6. **Dead centre কোন মেশিনে থাকে?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
    (a) Lathe  
    (b) Shaper  
    (c) Milling  
    (d) Drill
+
+   answer: a — Lathe  
+   explanation: The dead centre sits in the tailstock of a lathe and supports the free end of the workpiece without rotating.
 
 ## Industrial & Production Engineering (3)
 
