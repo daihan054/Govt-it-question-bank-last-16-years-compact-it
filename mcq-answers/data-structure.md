@@ -23,11 +23,17 @@
    (c) Queue  
    (d) Linked list
 
+   answer: b — Graph  
+   explanation: A graph connects each node to many others with no single sequence, so it is non-linear; arrays, queues and linked lists are linear.
+
 2. **Which of the data structure is linear type?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
    a) Tree  
    b) Binary Tree  
    c) Queue  
    d) Graph
+
+   answer: c — Queue  
+   explanation: A queue stores elements one after another in a single sequence, which makes it linear; trees and graphs are non-linear.
 
 3. **Array data structure এ কোন ধরনের data রাখা যায়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*  
    A) various type data  
@@ -35,11 +41,17 @@
    C) Classes data  
    D) Same type many data
 
+   answer: D — Same type many data  
+   explanation: An array is a fixed collection of elements that must all be of the same data type, stored in contiguous memory.
+
 4. **LIFO data structure কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 194 (ET: N/A)]*  
    A) Queue  
    B) Stack  
    C) File  
    D) কোনটি নয়
+
+   answer: B — Stack  
+   explanation: A stack is Last In First Out — the item pushed most recently is the first one popped.
 
 5. **Linked list এ ন্যূনতম দুইটি field থাকে। একটি হচ্ছে data field, তবে অন্যটি কি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) Pointer to char  
@@ -47,11 +59,17 @@
    C) Pointer to node  
    D) Null
 
+   answer: C — Pointer to node  
+   explanation: Each node stores its data plus a pointer holding the address of the next node.
+
 6. **নিচের কোনটি একটি valid postfix expression?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 189 (ET: N/A)]*  
    A) a*b(c+d)  
    B) abc*+de-+  
    C) +ab  
    D) a+b-c
+
+   answer: B — abc*+de-+  
+   explanation: Scanning it on a stack works out cleanly: b*c, then a+(b*c), then d-e, and finally the two are added — every operator finds its two operands.
 
 7. **Which of the following data structure is non-linear type?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*  
    A) Strings  
@@ -59,11 +77,17 @@
    C) Stacks  
    D) None of these
 
+   answer: D — None of these  
+   explanation: Strings, lists and stacks are all linear structures; the non-linear ones are trees and graphs.
+
 8. **The maximum number of binary trees that can be formed with three unlabeled nodes is-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) 1  
    B) 3  
    C) 5  
    D) 4
+
+   answer: C — 5  
+   explanation: The number of distinct binary trees on n unlabelled nodes is the Catalan number, and for n = 3 that is 5.
 
 9. **নিচের কোনটি দিয়ে Graph represent করা যায়?** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
    A) Queue  
@@ -71,11 +95,17 @@
    C) Adjacency list  
    D) Pointer
 
+   answer: C — Adjacency list  
+   explanation: A graph is stored either as an adjacency matrix or, more compactly for sparse graphs, as an adjacency list.
+
 10. **Which one is less costly for insertion at a particular position?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) Array  
    B) Queue  
    C) Link List  
    D) Stack
+
+   answer: C — Link List  
+   explanation: Inserting into a linked list only rewires two pointers, while an array must shift every following element.
 
 11. **Which data structure required evaluating a postfix expression is?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) Queue  
@@ -83,11 +113,17 @@
    C) Link List  
    D) Array
 
+   answer: B — Stack  
+   explanation: Operands are pushed and each operator pops the top two values, so postfix evaluation needs a stack.
+
 12. **Link List can be implemented by using?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) Array  
    B) Pointer  
    C) Both A and B  
    D) None of above
+
+   answer: C — Both A and B  
+   explanation: A linked list is normally built with pointers and dynamic nodes, but it can also be simulated in an array using index values as links.
 
 13. **Which following data structure is linear type?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) Strings  
@@ -95,11 +131,17 @@
    C) Queue  
    D) All of above
 
+   answer: D — All of above  
+   explanation: Strings, lists and queues all store elements in one sequence, so all three are linear.
+
 14. **An array contains the following letters, Color = {E, L, E, C, T, I, O, N}. The value of the variable, E=3, Color[E] points to which value?** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) E  
    B) C  
    C) T  
    D) 1
+
+   answer: B — C  
+   explanation: Indexing starts at 0, so Color[3] is the fourth letter of {E, L, E, C, T, I, O, N}, which is C.
 
 15. **The operation of processing each element in the list is known as-----** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Sorting  
@@ -107,11 +149,17 @@
    C) Inserting  
    D) Traversal
 
+   answer: D — Traversal  
+   explanation: Visiting and processing every element of a structure exactly once is called traversal.
+
 16. **Which of the following data structure are index structures?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) linear array  
    B) link list  
    C) both a and b  
    D) none
+
+   answer: C — both a and b  
+   explanation: A linear array is indexed by position and a linked list can be used to build index structures, so both qualify.
 
 17. **The term push and pop related to -** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Array  
@@ -119,11 +167,17 @@
    C) stack  
    D) all of this
 
+   answer: C — stack  
+   explanation: Push adds an item to the top of a stack and pop removes it.
+
 18. **Which data structure is used for indexing?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Binary tree  
    B) B+ tree  
    C) Stack  
    D) Link List
+
+   answer: B — B+ tree  
+   explanation: A B+ tree keeps all the keys in sorted leaf nodes linked together, which suits both range scans and single lookups, so databases use it for indexes.
 
 19. **The Term push and Pop is related to the** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) Array  
@@ -131,11 +185,17 @@
    C) Stacks  
    D) All of the above
 
+   answer: C — Stacks  
+   explanation: Push and pop are the two basic stack operations.
+
 20. **Which of the following data structure is non-linear type?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) String  
    B) Lists  
    C) Stacks  
    D) None
+
+   answer: D — None  
+   explanation: Strings, lists and stacks are linear structures, so none of them is non-linear.
 
 21. **The operation of processing each element in the list is known as-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) Traversal  
@@ -143,11 +203,17 @@
    C) Inserting  
    D) Sorting
 
+   answer: A — Traversal  
+   explanation: Traversal means visiting every element of the list once to process it.
+
 22. **Which is correct?** *[Bangladesh Bank Assistant Programmer 2016 compact it 243 (ET: N/A)]*  
    A) <body color= 'yello'>  
    B) <body bgcolor= 'yello'>  
    C) <body background> yellow<body>  
    D) <body background= 'yellow'>
+
+   answer: B — <body bgcolor= 'yello'>  
+   explanation: The background colour of a page is set with the bgcolor attribute of the body tag.
 
 23. **Which is not linear?** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*  
    A) Linked list  
@@ -155,17 +221,26 @@
    C) graph  
    D) None
 
+   answer: C — graph  
+   explanation: A graph has no single sequence of elements, so it is non-linear; arrays and linked lists are linear.
+
 24. **When a new data is inserted into a data structure, but there is no available space; this situation is usually called ---** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) underflow  
    B) overflow  
    C) houseful  
    D) saturated
 
+   answer: B — overflow  
+   explanation: Trying to insert into a full structure with no free space is called overflow; removing from an empty one is underflow.
+
 25. **To represent hierarchical relationship between element, which data Structure is suitable?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) Desuetude  
    B) Priority  
    C) Tree  
    D) Graph
+
+   answer: C — Tree  
+   explanation: A tree naturally models parent-child relationships, which is exactly a hierarchy.
 
 ## Stack & Queue (23)
 
