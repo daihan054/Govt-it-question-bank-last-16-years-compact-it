@@ -21,11 +21,17 @@
    (c) Interface  
    (d) Security
 
+   answer: c — Interface  
+   explanation: Integration testing checks that modules exchange data correctly across their interfaces once combined.
+
 2. **Which of the following testing strategy is related to the boundary value analysis?** *[Combined Bank Officer (IT) 04.10.2024 compact it 14 (ET: BIBM)]*  
    (a) White-box testing  
    (b) Black box testing  
    (c) White box and black box testing  
    (d) None of these
+
+   answer: b — Black box testing  
+   explanation: Boundary value analysis picks inputs at the edges of valid ranges using only the specification, without looking at the code.
 
 3. **Objective of integration testing is to find _____** *[Combined Bank Officer (IT) 04.10.2024 compact it 14 (ET: BIBM)]*  
    (a) design error  
@@ -33,11 +39,17 @@
    (c) interface error  
    (d) coding error
 
+   answer: c — interface error  
+   explanation: Faults in the way modules pass data or call each other show up when the units are combined.
+
 4. **______ is a type of software testing where a group of individuals, usually from within the organization, use the software in a simulated or controlled environment to uncover defects.** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*  
    (a) Alpha Testing  
    (b) User Acceptance Testing  
    (c) Beta Testing  
    (d) Regression Testing
+
+   answer: a — Alpha Testing  
+   explanation: Alpha testing is done in-house by the organisation's own people in a controlled environment before release to customers.
 
 5. **Which of the following testing techniques includes how well the user will understand and interact with the system?** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*  
    (a) Alpha Testing  
@@ -45,11 +57,17 @@
    (c) Beta Testing  
    (d) Usability Testing
 
+   answer: d — Usability Testing  
+   explanation: Usability testing measures how easily real users understand, learn and operate the interface.
+
 6. **______ testing is a testing technique where the actual data verified in the real environment.** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*  
    (a) Regression Testing  
    (b) Alpha Testing  
    (c) Beta Testing  
    (d) None of the above
+
+   answer: c — Beta Testing  
+   explanation: Beta testing puts the software in the hands of real users with real data in their own environment.
 
 7. **Which of the below testing is related to Non-functional testing?** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*  
    (a) Unit testing  
@@ -57,17 +75,26 @@
    (c) Performance testing  
    (d) None of the above
 
+   answer: c — Performance testing  
+   explanation: Performance testing measures speed, stability and resource use — qualities of how the system works, not what it does.
+
 8. **Which of the following testing is also called Acceptance testing?** *[Pubali Bank Limited Software Quality Assurance 18.03.2023 compact it 42 (ET: N/A)]*  
    (a) Beta testing  
    (b) White-box testing  
    (c) Grey box testing tab  
    (d) Alpha testing
 
+   answer: a — Beta testing  
+   explanation: Beta testing is carried out by actual users in their own environment to decide whether the product is acceptable.
+
 9. **Which is the correct definition of BUG?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 127 (ET: N/A)]*  
    a) A difficult syntax error in a program  
    b) A logical error in a program  
    c) Documenting programs  
    d) All of the above
+
+   answer: b — A logical error in a program  
+   explanation: A bug is a defect that makes the program behave incorrectly; a syntax error is caught by the compiler instead.
 
 10. **Which of the following is the appropriate set of test cases, (A, B) when the part of a program shown is tested by decision condition coverage (branch coverage)?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 89 (ET: N/A)]*
    ```c
@@ -79,11 +106,17 @@
    c. {(False, True), (True, False)}  
    d. {(False, False), (True, True)}
 
+   answer: d — {(False, False), (True, True)}  
+   explanation: Branch coverage needs the condition to evaluate both ways: (F,F) makes A OR B false and (T,T) makes it true.
+
 11. **________ is the final stage of the testing process conducted before software release. This is referred as:** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 180 (ET: N/A)]*  
    a) Alpha testing  
    b) Beta testing  
    c) Gamma testing  
    d) Delta testing
+
+   answer: b — Beta testing  
+   explanation: Beta is the last stage before release, run by real users outside the development organisation.
 
 12. **Software goes through a phase in which errors are verified and studied on simulated user environments. This is referred as-** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*  
    a) Alpha testing  
@@ -91,11 +124,17 @@
    C) Gamma testing  
    d) Delta testing
 
+   answer: a — Alpha testing  
+   explanation: Alpha testing takes place in a simulated environment at the developer's site before the software reaches real users.
+
 13. **Modified software goes through a phase where it is tested in the user’s site or live environment. This is referred as-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*  
    a) Alpha testing  
    b) Beta testing  
    c) Gamma testing  
    d) Delta testing
+
+   answer: b — Beta testing  
+   explanation: Beta testing runs at the customer's site in the live environment.
 
 14. **________ is an integration testing that is commonly used when software products are being developed. It is designed as a pacing mechanism for time-critical project, allowing the software team to assess its project on a frequent basis.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*  
    a) Unit testing  
@@ -103,11 +142,17 @@
    c) Regression testing  
    d) Smoke testing
 
+   answer: d — Smoke testing  
+   explanation: Smoke testing integrates and exercises the build frequently to confirm the core functions still work, acting as a project pacing mechanism.
+
 15. **কোন Testing দিয়ে Input-Output ঠিক আছে কিনা বুঝা যায়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*  
    A) Black-box Testing  
    B) Integration Testing  
    C) White-box testing  
    D) Load Testing
+
+   answer: A — Black-box Testing  
+   explanation: Black-box testing feeds inputs and checks outputs against the specification without looking inside the code.
 
 16. **Testing of software with actual data and in actual environment is known as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
    A) Regression testing  
@@ -115,11 +160,17 @@
    C) Alpha testing  
    D) None of these
 
+   answer: B — Beta testing  
+   explanation: Beta testing uses real data in the real operating environment at the user's site.
+
 17. **A Non-Functional Software testing is done to check if the user interface is easy to use and understand-** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*  
    A) Security Testing  
    B) Unit testing  
    C) Block Box Testing  
    D) Usability Testing
+
+   answer: D — Usability Testing  
+   explanation: Usability testing evaluates how easy the interface is to learn and use.
 
 18. **The name of the testing which is done to make sure the existing features are not affected by new changes** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
    A) Recursive testing  
@@ -127,17 +178,26 @@
    C) Whitebox testing  
    D) Unit testing
 
+   answer: B — Regression testing  
+   explanation: Regression testing re-runs existing tests after a change to confirm nothing that used to work has broken.
+
 19. **Which kind of software testing strategy starts with testing the fundamental components first?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*  
    A) Top-down testing  
    B) Bottom-up testing  
    C) Stress Testing  
    D) Back to Back testing
 
+   answer: B — Bottom-up testing  
+   explanation: Bottom-up starts with the lowest-level modules and works upward, using drivers to call them.
+
 20. **Test case is written by-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*  
    A) Tester  
    B) Developer  
    C) Test Engineer  
    D) Designer
+
+   answer: A — Tester  
+   explanation: The tester (test engineer) designs and writes the test cases from the requirements; option C names the same role.
 
 ## SDLC Models (14)
 
