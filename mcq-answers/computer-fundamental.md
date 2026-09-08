@@ -1251,17 +1251,29 @@ int main ()\{
    (c) A blockchain is a centralized digital ledger consisting of records called blocks  
    (d) None of the above
 
+   answer: b — A blockchain is a decentralized, distributed, digital ledger consisting of records called blocks  
+   explanation: Every node keeps a copy of the chain and each block is linked to the previous one by its hash, so there is no central authority.
+
 2. **What is Smart Bangladesh?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*  
    (a) Smart Citizens>Smart Government>Smart Economy>Smart Society  
    (b) Smart Citizens>Smart Government>Smart Industry>Smart Society  
    (c) Smart Citizens>Smart People>Smart Economy>Smart Society  
    (d) Smart Citizens>Smart Government>Smart Economy>Smart Learn
 
+   answer: a — Smart Citizens>Smart Government>Smart Economy>Smart Society  
+   explanation: Smart Bangladesh 2041 rests on four pillars: Smart Citizen, Smart Government, Smart Economy and Smart Society.
+
 3. **What is a distributed ledger on a peer-to-peer network called?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Block Chain
 
+   answer: Blockchain  
+   explanation: A blockchain is a distributed ledger replicated across a peer-to-peer network, where every node holds and verifies the same chain of blocks.
+
 4. **In which way blockchain data can be modifued?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Cannot Modify
+
+   answer: It cannot be modified  
+   explanation: Each block stores the hash of the previous block, so altering any record changes every later hash and the network rejects the tampered chain.
 
 5. **Which one of the following process is the main task for the computer in mapping the geographical data?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*  
    (ক) Data storage  
@@ -1269,11 +1281,17 @@ int main ()\{
    (গ) Data retrieving and drawing  
    (ঘ) Data collection
 
+   answer: গ — Data retrieving and drawing  
+   explanation: In a GIS the computer's main mapping job is to fetch the stored spatial data and draw it as map layers on screen.
+
 6. **Which of the following is not in connection with blockchain technology?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*  
    (ক) Peer-to-Peer digital currency  
    (খ) Centralized social network  
    (গ) Peer-to-Peer social network  
    (ঘ) Distributed Ledger management
+
+   answer: খ — Centralized social network  
+   explanation: Blockchain is built on decentralisation, so a centralized social network is the opposite of what the technology provides.
 
 7. **The study of the way people work with tools is called.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) debugging  
@@ -1281,11 +1299,17 @@ int main ()\{
    C) ergonomics  
    D) kinetics
 
+   answer: C — ergonomics  
+   explanation: Ergonomics studies how people interact with tools and workspaces so the design fits the human body and reduces strain.
+
 8. **Smallest unit of bit coin is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
    a) unit coin  
    b) satoshis  
    c) etherum  
    d) litecoin
+
+   answer: b — satoshis  
+   explanation: One bitcoin divides into 100,000,000 satoshis, named after Satoshi Nakamoto.
 
 9. **In a block chain, a bundle of transaction is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
    a) node  
@@ -1293,11 +1317,17 @@ int main ()\{
    c) chain  
    d) nonce
 
+   answer: b — block  
+   explanation: Transactions are grouped into a block, which is then hashed and appended to the chain.
+
 10. **কোনটি Social media network নয়?** *[BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) LinkedIn  
    B) Google+  
    C) Internet Explorer  
    D) Twitter
+
+   answer: C — Internet Explorer  
+   explanation: Internet Explorer is a web browser; LinkedIn, Google+ and Twitter are social networks.
 
 11. **Information, a combination of graphics, text, sound, video and animation is called-** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*  
    (a) Multitask  
@@ -1305,11 +1335,17 @@ int main ()\{
    (c) Multiprocessor  
    (d) Multiprogramming me
 
+   answer: b — Multimedia  
+   explanation: Multimedia means content that combines text, graphics, sound, video and animation.
+
 12. **Which one is not an example of disruptive technology?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) 3D printing  
    B) Internet of things  
    C) Robotics  
    D) Executive dashboard
+
+   answer: D — Executive dashboard  
+   explanation: A dashboard just displays existing business data, while 3D printing, IoT and robotics change how whole industries work.
 
 13. **AR refers to which of the following environment—** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*  
    A) Artificial Reality  
@@ -1317,11 +1353,17 @@ int main ()\{
    C) Artificial Report  
    D) Augmented Reality
 
+   answer: D — Augmented Reality  
+   explanation: AR overlays computer-generated images on the live view of the real world.
+
 14. **What is pipilika form www.pipilika.com?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
    A) A Bangla Font  
    B) A Bangladeshi graphic Software  
    C) A Bangladeshi Browser  
    D) A Bangladeshi Game App
+
+   answer: C — A Bangladeshi Browser  
+   explanation: Pipilika was actually Bangladesh's own Bangla search engine, built at SUST; none of the four options names it correctly, and the key treats it as the Bangladeshi web product. <!-- verify -->
 
 15. **Which one is government base procurement website in Bangladesh?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) egp.gov.bd  
@@ -1329,11 +1371,17 @@ int main ()\{
    C) procurement.gov.bd  
    D) eprocure.gov.bd
 
+   answer: D — eprocure.gov.bd  
+   explanation: Bangladesh's national e-Government Procurement (e-GP) portal, run by CPTU, is hosted at www.eprocure.gov.bd.
+
 16. **What kind of image is created in virtual reality?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) Three-Dimensional  
    B) Two-Dimensional  
    C) One Dimensional  
    D) Multi-Dimensional
+
+   answer: A — Three-Dimensional  
+   explanation: Virtual reality builds an immersive 3-D environment the user can look around and move through.
 
 ## Acronyms & Abbreviations (13)
 
