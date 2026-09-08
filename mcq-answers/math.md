@@ -1391,11 +1391,17 @@
    (গ) Intersection  
    (ঘ) Complement
 
+   answer: গ — Intersection  
+   explanation: Disjoint sets share no element, so their intersection is empty.
+
 2. **Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 7  
    b) 5  
    c) 15  
    d) 10
+
+   answer: b — 5  
+   explanation: At least one subject = 90 + 85 - 80 = 95, so 100 - 95 = 5 failed both.
 
 3. **In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 1/5  
@@ -1403,11 +1409,17 @@
    c) 1/3  
    d) 7/15
 
+   answer: a — 1/5  
+   explanation: 15 - 3 = 12 speak at least one, so both = 7 + 8 - 12 = 3, and 3/15 = 1/5.
+
 4. **In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 48  
    b. 20  
    c. 12  
    d. 28
+
+   answer: c — 12  
+   explanation: By inclusion-exclusion both = 20 + 28 - 36 = 12.
 
 5. **Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) 4 is even or -9 is not negative  
@@ -1415,11 +1427,17 @@
    C) 4 is even and -9 is negative  
    D) 4 is odd and -9 is not negative
 
+   answer: C — 4 is even and -9 is negative  
+   explanation: Negating "p or q" gives "not p and not q": 4 is not odd (even) and -9 is not positive (negative).
+
 6. **If A= {1,2,3} and B= {1,2,5} then A-B=?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) {1}  
    B) {5}  
    C) {3}  
    D) {2}
+
+   answer: C — {3}  
+   explanation: A - B keeps the elements of A that are not in B, which is just 3.
 
 7. **If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) 4, 8  
@@ -1427,11 +1445,17 @@
    C) 4, 12  
    D) 6, 12
 
+   answer: B — 8, 12  
+   explanation: If A is contained in B the union has 8 elements; if they are disjoint it has 4 + 8 = 12.
+
 8. **Two sets are called disjoint if the ________ is an empty set.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
    A) intersection  
    B) union  
    C) difference  
    D) complement
+
+   answer: A — intersection  
+   explanation: Two sets are disjoint exactly when their intersection is the empty set.
 
 ## Average & Age Problems (6)
 
