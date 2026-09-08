@@ -864,11 +864,17 @@
    c) has some return type  
    d) None of the above
 
+   answer: b — Does not consist of any return type  
+   explanation: A constructor has no return type at all, not even void, because its job is to initialise the object.
+
 2. **A constructor is a special type of-** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
    (a) Class  
    (b) Field  
    (c) Method  
    (d) Property
+
+   answer: c — Method  
+   explanation: A constructor is a special method that shares the class name and runs automatically when an object is created.
 
 3. **Which part of a class is invoked when an object is initialized in java?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 239 (ET: N/A)]*  
    A) constructor  
@@ -876,11 +882,17 @@
    C) methods  
    D) class
 
+   answer: A — constructor  
+   explanation: new allocates the object and then calls the constructor to initialise its fields.
+
 4. **Which operator is used to declare the destructor in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) #  
    B) ~  
    C) @  
    D) $
+
+   answer: B — ~  
+   explanation: A destructor is written as ~ClassName().
 
 5. **Object being passed to a copy constructor-** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) Must be passed by reference  
@@ -888,11 +900,17 @@
    C) Must be passed with integer type  
    D) Must be passed by value
 
+   answer: A — Must be passed by reference  
+   explanation: Passing by value would itself call the copy constructor, causing infinite recursion, so the parameter must be a (const) reference.
+
 6. **Does constructor overloading include different return types for constructors to be overloaded?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) Yes, if return types are different, signature becomes different  
    B) Yes, because return types can differentiate two functions  
    C) No, return type can't differentiate two functions  
    D) No, constructors don't have any return type
+
+   answer: D — No, constructors don't have any return type  
+   explanation: Constructors are overloaded by differing parameter lists only, since they have no return type to differ in.
 
 ## Exception Handling (6)
 
