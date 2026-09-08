@@ -474,3 +474,6 @@
    b) font-style  
    c) font-weight  
    d) font-family
+
+   answer: c — font-weight  
+   explanation: font-weight sets how bold the text is, taking values such as normal, bold or 100 to 900.
