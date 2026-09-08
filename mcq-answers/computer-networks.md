@@ -724,11 +724,17 @@
    c) First Transfer Protocol  
    d) Fast Transfer Protocol
 
+   answer: b — File Transfer Protocol  
+   explanation: FTP moves files between a client and a server, using port 21 for control and port 20 for data.
+
 2. **What does stands for HTTPs?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*  
    a) Hyper Text Transfer Protocol Secure  
    b) Hyper Text Transfer Protocol System  
    c) Hyper Text Transfer Packet System  
    d) Hyper Text Transport Protocol Secure
+
+   answer: a — Hyper Text Transfer Protocol Secure  
+   explanation: HTTPS is HTTP carried inside an encrypted TLS connection.
 
 3. **Which of the following is commonly used to remotely access a computer system?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 7 (ET: BIBM)]*  
    a HTTP  
@@ -736,11 +742,17 @@
    c) SSH  
    d) SMTP
 
+   answer: c — SSH  
+   explanation: SSH gives an encrypted remote login and command shell on another machine.
+
 4. **Which of the following protocols is used for receiving e-mails?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 7 (ET: BIBM)], [Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    a) SMTP  
    b) POP3  
    c) HTTP  
    d) FTP
+
+   answer: b — POP3  
+   explanation: POP3 downloads mail from the server to the client; SMTP is for sending.
 
 5. **Which of these is the default port number for many web servers when suing HTTPS?** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*  
    (a) 443  
@@ -748,11 +760,17 @@
    (c) 20  
    (d) 40
 
+   answer: a — 443  
+   explanation: HTTPS listens on TCP port 443 by default.
+
 6. **What is the port address of Oracle Database?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
    (a) 1520  
    (b) 1521  
    (c) 1522  
    (d) 1523
+
+   answer: b — 1521  
+   explanation: The Oracle TNS listener uses TCP port 1521 by default.
 
 7. **What is the port address of FTP protocol?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    (a) 21  
@@ -760,11 +778,17 @@
    (c) 80  
    (d) 25
 
+   answer: a — 21  
+   explanation: FTP uses port 21 for the control connection and port 20 for data transfer.
+
 8. **DNS port number is:** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) 63  
    (খ) 21  
    (গ) 53  
    (ঘ) 24
+
+   answer: গ — 53  
+   explanation: DNS queries use port 53, over UDP normally and TCP for large replies or zone transfers.
 
 9. **Who is controlling "Domain" in the world?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*  
    (ক) CCNA  
@@ -772,11 +796,17 @@
    (গ) ICANN  
    (ঘ) ISDN
 
+   answer: গ — ICANN  
+   explanation: ICANN coordinates the global domain name system and IP address allocation.
+
 10. **In an email address "abc@xxx.bd", the portion 'xxx' indicate** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 43 (ET: N/A)]*  
    (ক) Domain name  
    (খ) TCPAP layer name  
    (গ) Domain type  
    (ঘ) Protocol name
+
+   answer: ক — Domain name  
+   explanation: In user@domain, everything after the @ names the mail domain, and .bd is the country top-level domain.
 
 11. **Which protocol assigns IP address to the client connected in the internet?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*  
    (ক) DHCP  
@@ -784,11 +814,17 @@
    (গ) RFC  
    (ঘ) WWW
 
+   answer: ক — DHCP  
+   explanation: DHCP leases an IP address, subnet mask, gateway and DNS server to a client automatically.
+
 12. **DHCP is–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*  
    a) Dynamic Host Control Protocol  
    b) Distributed Host Configuration Protocol  
    c) Dynamic Host Configuration Protocol  
    d) Domain Host Configuration Protocol
+
+   answer: c — Dynamic Host Configuration Protocol  
+   explanation: DHCP hands out IP configuration to hosts automatically as they join the network.
 
 13. **A DNS client is called a ____________** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
    a) DNS updater  
@@ -796,11 +832,17 @@
    c) DNS handler  
    d) DNS host
 
+   answer: b — DNS resolver  
+   explanation: The resolver is the client-side code that sends queries to DNS servers and returns the answer to the application.
+
 14. **A DNS response is classified as ____ if the information comes from a cache memory.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*  
    (a) Authoritative  
    (b) Recursive  
    (c) Unauthoritative  
    (d) Iterative
+
+   answer: c — Unauthoritative  
+   explanation: An answer served from cache rather than by the zone's own name server is marked non-authoritative.
 
 15. **An email contains a textual birthday greeting, a picture of a cake, and a song. The order is not important. What is the Content-type?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*  
    (a) Multipart/digest  
@@ -808,11 +850,17 @@
    (c) Multipart/mixed  
    (d) Multipart/parallel
 
+   answer: d — Multipart/parallel  
+   explanation: multipart/parallel is used when the parts should be presented together and their order does not matter; multipart/mixed keeps them in sequence.
+
 16. **_______ is a client-server program that provides and IP address, subnet mask, IP address of a router, and IP address of a name server to a computer.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*  
    (a) NAT  
    (b) DHCP  
    (c) CIDR  
    (d) ISP
+
+   answer: b — DHCP  
+   explanation: A DHCP server supplies the IP address, subnet mask, default gateway and DNS server to a client.
 
 17. **Which of the following services uses both TCP and UDP ports?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*  
    (a) DNS  
@@ -820,11 +868,17 @@
    (c) SSH  
    (d) TELNET
 
+   answer: a — DNS  
+   explanation: DNS uses UDP port 53 for ordinary queries and TCP port 53 for zone transfers and oversized responses.
+
 18. **Which protocol is used to send a destination network unknown message back to the originating host?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 76 (ET: N/A)]*  
    a. TCP  
    b. ARP  
    c. ICMP  
    d. BootP
+
+   answer: c — ICMP  
+   explanation: A router reports "destination network unreachable" back to the source with an ICMP error message.
 
 19. **A receiving host has failed to receive all of the segments that is should acknowledge what can the host do the improve the reliability of this communication session?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 79 (ET: N/A)]*  
    a. Send a different source port number  
@@ -832,11 +886,17 @@
    c. Decrease the sequence number  
    d. Decrease the window size
 
+   answer: d — Decrease the window size  
+   explanation: A smaller TCP window means fewer unacknowledged segments in flight, so the receiver is less likely to be overrun.
+
 20. **Which symbol must remain in e-mail address?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. $  
    খ. N  
    গ. @  
    ঘ. &
+
+   answer: গ — @  
+   explanation: The @ sign separates the user name from the domain in every email address.
 
 21. **What is the full form of SMTP?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*  
    a. Single Mail Text Protocol  
@@ -844,11 +904,17 @@
    c. Simple Mail Transfer Protocol  
    d. Simple Mail Textual Protocol
 
+   answer: c — Simple Mail Transfer Protocol  
+   explanation: SMTP is the standard protocol for sending and relaying email between servers.
+
 22. **Which protocol dynamically assigns IP addresses in a TCP/IP network?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)], [Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 175 (ET: N/A)]*  
    a. ARP  
    b. RIP  
    c. SMTP  
    d. DHCP
+
+   answer: d — DHCP  
+   explanation: DHCP dynamically leases IP addresses to hosts on a TCP/IP network.
 
 23. **Consider the activities A1, A2 and A3 related to email:** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
    A1: Send an email from a mail client to a mail server  
@@ -860,11 +926,17 @@
    c) A1: SMTP A2: POP A3: HTTP  
    d) A1: POP A2: SMTP A3: IMAP
 
+   answer: c — A1: SMTP A2: POP A3: HTTP  
+   explanation: The client pushes mail out with SMTP, pulls it down with POP3, and webmail is read in a browser over HTTP.
+
 24. **URL stands for-** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 176 (ET: N/A)]*  
    a) Universal Resource Locator  
    b) Uniform Resource Locator  
    c) Unique Resource Locator  
    d) None
+
+   answer: b — Uniform Resource Locator  
+   explanation: A URL is the uniform way of writing the address of a resource on the web.
 
 25. **Which one of the following is the default port of HTTP?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) 23  
@@ -872,11 +944,17 @@
    c) 80  
    d) 45
 
+   answer: c — 80  
+   explanation: HTTP uses TCP port 80 by default.
+
 26. **DHCP means?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) Dynamic Host Control Protocol  
    b) Domain Host Configuration Protocol  
    c) Distributed Host Configuration Protocol  
    d) Dynamic Host Configuration Protocol
+
+   answer: d — Dynamic Host Configuration Protocol  
+   explanation: DHCP automatically configures hosts with IP address, mask, gateway and DNS.
 
 27. **Which of the followings is the Protocol Data Unit (PDU) for the application layer in the Internet stack?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*  
    a) Segment  
@@ -884,11 +962,17 @@
    c) Message  
    d) Frame
 
+   answer: c — Message  
+   explanation: The application layer PDU is a message; transport uses segments, network datagrams and data link frames.
+
 28. **নিচের কোনটি E-mail protocol?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) SMTP  
    B) USB  
    C) IOT  
    D) OTB
+
+   answer: A — SMTP  
+   explanation: SMTP is the mail transfer protocol; USB, IoT and OTB are not email protocols.
 
 29. **FTP protocol নিচের কোনটি ব্যবহার করে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*  
    A) IP  
@@ -896,11 +980,17 @@
    C) UDP  
    D) SMTP
 
+   answer: B — TCP  
+   explanation: FTP needs reliable, ordered delivery for files, so it runs over TCP.
+
 30. **E-mail service এর সাথে সম্পর্কযুক্ত কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
    A) Telnet  
    B) SSH  
    C) DHCP  
    D) SMTP
+
+   answer: D — SMTP  
+   explanation: SMTP is the protocol used to send email.
 
 31. **POP3 is a protocol for-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*  
    A) Email Sending  
@@ -908,11 +998,17 @@
    C) Email Receiving  
    D) Email Storing
 
+   answer: C — Email Receiving  
+   explanation: POP3 retrieves messages from the mail server to the client.
+
 32. **Which server can you use to dynamically assign IP addresses to the PCs in a LAN?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
    A) DHCP Server  
    B) Web Server  
    C) DNS Server  
    D) FTP Server
+
+   answer: A — DHCP Server  
+   explanation: A DHCP server leases IP addresses to LAN clients automatically.
 
 33. **To cheek to see of the Web server you are trying to reach is available or is down, which command line utility should you use?** *[Probashi Kallyan Bank Programmer: 2019 compact it 211 (ET: AUST)]*  
    A) PING  
@@ -920,11 +1016,17 @@
    C) Telnet  
    D) None of these
 
+   answer: A — PING  
+   explanation: ping sends ICMP echo requests, and a reply shows the host is reachable and responding.
+
 34. **What can greatly reduce TCP/IP configuration problem?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
    A) WINS Server  
    B) WINS Power  
    C) DHCP Server  
    D) PDC
+
+   answer: C — DHCP Server  
+   explanation: Central automatic configuration removes the typing mistakes and duplicate addresses that come with manual setup.
 
 35. **Domain Name থেকে IP-mapping করতে কোনটি কাজ করে?** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
    A) HTTP  
@@ -932,11 +1034,17 @@
    C) DNS  
    D) Telnet
 
+   answer: C — DNS  
+   explanation: DNS translates human-readable domain names into IP addresses.
+
 36. **DHCP discover message টি কোন ধরনের?** *[BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) Unicast  
    B) Multicast  
    C) Broadcast  
    D) Anycast
+
+   answer: C — Broadcast  
+   explanation: The client has no address yet and does not know the server, so DHCPDISCOVER goes to 255.255.255.255 as a broadcast.
 
 37. **Email service এর সাথে কোনটি সম্পৃক্ত?** *[BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*  
    A) Telnet  
@@ -944,11 +1052,17 @@
    C) SSH  
    D) DHCP
 
+   answer: B — SMTP  
+   explanation: SMTP is the email sending protocol.
+
 38. **কোনটি UDP protocol use করে?** *[BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*  
    A) SMTP  
    B) HTTP  
    C) DNS  
    D) FTP
+
+   answer: C — DNS  
+   explanation: DNS uses UDP for normal queries because a single small request and reply does not need a connection.
 
 39. **Which protocol can cause overload on a CPU of a managed device?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 233 (ET: N/A)], [Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) Net flow  
@@ -956,11 +1070,17 @@
    C) IP SLA  
    D) SNMP
 
+   answer: D — SNMP  
+   explanation: Frequent SNMP polling makes the managed device build many responses, which can load its CPU heavily.
+
 40. **Which of the following protocol used TCP and UDP ports?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) FTP  
    B) SMTP  
    C) Telnet  
    D) DNS
+
+   answer: D — DNS  
+   explanation: DNS runs on both UDP 53 for queries and TCP 53 for zone transfers and large answers.
 
 41. **Which of the following TCP/IP address constitute the loopback address?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*  
    A) 1.1.1.1  
@@ -968,11 +1088,17 @@
    C) 127.0.0.0  
    D) 127.0.0.1
 
+   answer: D — 127.0.0.1  
+   explanation: 127.0.0.1 is the standard loopback address that a host uses to reach itself.
+
 42. **A host machine is unable to communicate with google server. Which command is the most appropriate to run at host machine to determine which intermediary device is responsible for this failure?** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*  
    A) telnet 192.168.1.1  
    B) ping 192.168.1.1  
    C) tracert 192.168.1.1  
    D) ftp 192.168.1.1
+
+   answer: C — tracert 192.168.1.1  
+   explanation: tracert lists each hop along the path, so the last hop that answers shows where the failure begins.
 
 43. **Which of the following protocols uses both TCP and UDP ports?** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)], [Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) SMTP  
@@ -980,11 +1106,17 @@
    C) FTP  
    D) DNS
 
+   answer: D — DNS  
+   explanation: DNS is the classic service that listens on both TCP and UDP port 53.
+
 44. **Email is a protocol of following layer-** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*  
    A) Physical layer  
    B) Data Link Layer  
    C) Application layer  
    D) TCP layer
+
+   answer: C — Application layer  
+   explanation: Email protocols such as SMTP, POP3 and IMAP are application layer protocols.
 
 45. **Which protocol is used for secure web browsing?** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*  
    A) WWW  
@@ -992,11 +1124,17 @@
    C) ftp  
    D) https
 
+   answer: D — https  
+   explanation: HTTPS encrypts web traffic with TLS, protecting it from eavesdropping and tampering.
+
 46. **How many layer internet protocol suites?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) 7  
    B) 5  
    C) 3  
    D) 4
+
+   answer: D — 4  
+   explanation: The TCP/IP suite has four layers: Application, Transport, Internet and Network Access.
 
 47. **Domain name to IP address mapping is done by-** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*  
    A) Web server  
@@ -1004,11 +1142,17 @@
    C) DNS server  
    D) Proxy Server
 
+   answer: C — DNS server  
+   explanation: A DNS server resolves domain names to IP addresses.
+
 48. **Which of the following TCP/IP address constitute the loopback address?** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) 1.1.1.1  
    B) 255.255.255.0  
    C) 127.0.0.0  
    D) 127.0.0.1
+
+   answer: D — 127.0.0.1  
+   explanation: 127.0.0.1 is the loopback address pointing back at the local host.
 
 49. **Email is a protocol of the following layer?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*  
    A) Physical Layer  
@@ -1016,11 +1160,17 @@
    C) Application Layer  
    D) TCP layer
 
+   answer: C — Application Layer  
+   explanation: Email works through application layer protocols like SMTP and POP3.
+
 50. **Which protocol is used for secured web browsing?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) WWW  
    B) RSA  
    C) https  
    D) ftp
+
+   answer: C — https  
+   explanation: HTTPS secures browsing by running HTTP over TLS.
 
 51. **How many layers Internet protocol suite?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) 7  
@@ -1028,11 +1178,17 @@
    C) 3  
    D) 4
 
+   answer: D — 4  
+   explanation: The internet protocol suite is a four-layer model: Application, Transport, Internet, Network Access.
+
 52. **POP3(Post Office Protocol V3) is a protocol for-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) Email Sending  
    B) Email Receiving  
    C) Email Composing  
    D) Email Storing
+
+   answer: B — Email Receiving  
+   explanation: POP3 downloads incoming mail from the server to the user's client.
 
 53. **What does DNS database contain?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
    A) Name server Records  
@@ -1040,11 +1196,17 @@
    C) Hostname Aliases  
    D) All of these
 
+   answer: D — All of these  
+   explanation: A DNS zone holds NS records, A records mapping hostnames to addresses, and CNAME alias records.
+
 54. **Which of the following ports would be commonly used for FTP traffic?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
    a. 23  
    b. 22  
    c. 21  
    d. 25
+
+   answer: c — 21  
+   explanation: FTP's control connection uses TCP port 21.
 
 55. **Which of the following is a commonly used protocol for VoIP network communication?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*  
    a. SNMP  
@@ -1052,11 +1214,17 @@
    c. DNS  
    d. RTP
 
+   answer: d — RTP  
+   explanation: RTP carries the actual voice and video stream in VoIP, usually over UDP with SIP handling call setup.
+
 56. **A reserved set of IP addresses in a DHCP scope is commonly assigned to which of the following network devices?** *[Pubali Bank Limited Officer (IT) 2012 compact it 265 (ET: N/A)]*  
    a. Server  
    b. Workstation  
    c. Hub  
    d. Laptop
+
+   answer: a — Server  
+   explanation: Servers, printers and other fixed infrastructure get reserved DHCP addresses so their IP never changes.
 
 57. **What is SMTP?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*  
    a. Simple Mail Transport protocol  
@@ -1064,11 +1232,17 @@
    c. Single Mail Transfer Protocol  
    d. None of These
 
+   answer: a — Simple Mail Transport protocol  
+   explanation: SMTP is properly "Simple Mail Transfer Protocol"; option (a) is the intended choice despite writing "Transport".
+
 58. **VOID stands for ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*  
    a. Voice Over Internet Protocol  
    b. Voice Over Instant Protocol  
    c. Variable Optical Internet Protocol  
    d. None of these
+
+   answer: a — Voice Over Internet Protocol  
+   explanation: VoIP carries voice calls as digital packets across an IP network instead of the traditional phone circuit.
 
 ## Network Devices & Configuration (38)
 
