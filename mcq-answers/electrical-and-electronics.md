@@ -752,11 +752,17 @@
    (গ) কোল টারবাইন  
    (ঘ) হাইড্রো টারবাই
 
+   answer: ক — গ্যাস টারবাইন  
+   explanation: A combined cycle pairs a gas turbine with a steam turbine that runs on the gas turbine's exhaust heat, so the gas turbine is the added stage.
+
 2. **নিউক্লিয়ার পাওয়ার প্লান্টের পাওয়ার ট্রান্সমিশনের জন্য সর্বোচ্চ কত ট্রান্সমিশন ভোল্টেজ ব্যবহার করা হবে?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*  
    (ক) ১৩৩ কেভি  
    (খ) ৩৩ কেভি  
    (গ) ২৩০ কেভি  
    (ঘ) ৪০০ কেভি
+
+   answer: ঘ — ৪০০ কেভি  
+   explanation: Bangladesh's Rooppur nuclear plant evacuates its power on the 400 kV transmission network, the highest level in the grid.
 
 3. **নিউক্লিয়ার পাওয়ার প্লান্টের পাওয়ার ইউনিটের আয়ুষ্কাল কত?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 64 (ET: BUET)]*  
    (ক) ৪০ বছর  
@@ -764,11 +770,23 @@
    (গ) ৬০ বছর  
    (ঘ) ৭০ বছর।
 
+   answer: খ — ৫০ বছর  
+   explanation: A nuclear power unit is designed for about a 50-year service life, extendable with refurbishment.
+
 4. **নিউক্লিয়ার পাওয়ার প্ল্যান্টের পাওয়ার ট্রান্সমিশনের জন্য সর্বোচ্চ ট্রান্সমিশন ভোল্টেজ কত? **Ans: 400KB**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: 400 kV  
+   explanation: The 400 kV network is the highest transmission voltage used to carry nuclear plant output in Bangladesh.
 
 5. **নিউক্লিয়ার পাওয়ার প্ল্যান্টের “পাওয়ার ইউনিট” এর আয়ুষ্কাল কত বছর? **Ans: 50 Year**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: 50 years  
+   explanation: The design life of a nuclear power unit is around 50 years.
+
 6. **কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোন টারবাইনের প্রয়োজন হয়? **Ans: গ্যাস টারবাইন**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: গ্যাস টারবাইন  
+   explanation: Adding a gas turbine whose hot exhaust drives a heat recovery steam generator turns a simple cycle into a combined cycle.
 
 7. **N rpm গতিতে ঘূর্ণায়মান, D ব্যাসবিশিষ্ট একটি পুলিতে তার দিয়ে সংযুক্ত বস্তুর প্রতি সেকেন্ডে রৈখিক বেল কত হবে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*  
    a) IIND/60  
@@ -776,11 +794,17 @@
    c) 2IIND/60  
    d) 2IIND/180
 
+   answer: a — πDN/60  
+   explanation: One revolution moves the belt πD, and N rpm is N/60 revolutions per second, so the linear speed is πDN/60.
+
 8. **কোন বস্তুকে টানা বল (tension force) দিয়ে ভাঙ্গা হলে, সেই বস্তুর শূন্য লোড থেকে ব্রেকিং লোড পর্যন্ত স্ট্রেইস, স্ট্রেইন কার্ডের অন্তর্গত এরিয়াকে কী বলা হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*  
    a) মডুলার অব ইলাস্টিসিটি  
    b) মডুলার অব ট্রাফনেস  
    c) মডুলার অব রিজিডিটি  
    d) উপরের কোনটিই নয়
+
+   answer: b — মডুলার অব ট্রাফনেস  
+   explanation: The total area under the stress-strain curve up to fracture is the energy absorbed per unit volume, called the modulus of toughness.
 
 9. **তাপ শক্তিকে যান্ত্রিক শক্তিতে রূপান্তর করা হয় কীভাবে?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 60 (ET: BUET)]*  
    a) অন্তর্দাহ ইঞ্জিনের সাহায্যে  
@@ -788,11 +812,17 @@
    c) গ্যাস টারবাইনের সাহায্যে  
    d) উপরের সবগুলোটি।
 
+   answer: d — উপরের সবগুলোটি  
+   explanation: Internal combustion engines, steam turbines and gas turbines all turn heat energy into mechanical work.
+
 10. **একটি পাতলা বেলনাকার (cylindrical) প্রেসার ভেসেলের লঙ্গিটিউডিনাল স্ট্রেস ও সারকামফারেনশিয়াল স্ট্রেস এর অনুপাত কত হয়?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 61 (ET: BUET)]*  
    a) \frac{1}{2}  
    b) 1  
    c) 2  
    d) 3
+
+   answer: a — 1/2  
+   explanation: In a thin cylinder the hoop stress is pd/2t and the longitudinal stress is pd/4t, so their ratio is 1:2.
 
 11. **For the protection of transformer, harmonic restraint is used to guard against ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) Magnetizing inrush current  
@@ -800,11 +830,17 @@
    (গ) Lightning  
    (ঘ) Switching over voltage
 
+   answer: ক — Magnetizing inrush current  
+   explanation: Inrush current is rich in second harmonic, so harmonic restraint blocks the differential relay and stops a false trip at energisation.
+
 12. **A 4-pole 50Hz induction motor running at 1300 rpm. The speed of stator magnetic field with respect to rotor is ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) 1500\text{rpm}  
    (খ) 200\text{ rpm}  
    (গ) 1300\text{ rpm}  
    (ঘ) 300\text{ rpm}
+
+   answer: খ — 200 rpm  
+   explanation: Synchronous speed is 120×50/4 = 1500 rpm, so relative to a rotor turning at 1300 rpm the field moves 1500 - 1300 = 200 rpm.
 
 13. **A nuclear power plant is invariably used as a ______ plant.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) Peak load  
@@ -812,11 +848,17 @@
    (গ) Standby  
    (ঘ) Spinning reserve
 
+   answer: খ — Base load  
+   explanation: Nuclear plants have high capital cost and low fuel cost and cannot change output quickly, so they run continuously as base load.
+
 14. **In a 3-phase power measurement by two-wattmeters method, both wattmeters have identical reading. The power factor of the load is ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*  
    (ক) Unity  
    (খ) 0.8 lagging  
    (গ) 0.8 leading  
    (ঘ) Zero
+
+   answer: ক — Unity  
+   explanation: Equal readings on both wattmeters means the phase angle is zero, so the power factor is unity.
 
 15. **The speed of a DC shunt motor is required to be more than full load speed. This is possible by-** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*  
    (ক) reducing the field current  
@@ -824,11 +866,17 @@
    (গ) increasing the armature current  
    (ঘ) None of the above
 
+   answer: ক — reducing the field current  
+   explanation: Speed is inversely proportional to flux, so weakening the shunt field raises the motor above its full-load speed.
+
 16. **The ordinary efficiency of a given transformer is maximum when-** *[BPSC Assistant Maintenance Engineer 2019 compact it 189 (ET: N/A)]*  
    (a) It runs at half-load  
    (b) Its nuns at full-load  
    (c) Its copper loss is equal to iron loss  
    (d) It runs slightly overload
+
+   answer: c — Its copper loss is equal to iron loss  
+   explanation: Iron loss is fixed while copper loss varies with the square of load, and efficiency peaks where the two are equal.
 
 17. **If two generators are running in parallel and field of one of the generators is weakened too much then it will-** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
    (a) Take the smaller shunt of the total load  
@@ -836,11 +884,17 @@
    (c) Take a large share of the total load  
    (d) Run in the opposite direction as motor
 
+   answer: b — Run as the motor in the same direction  
+   explanation: Losing its field drops that machine's emf below the busbar voltage, so current reverses into it and it motors in the same direction.
+
 18. **The sole purpose of a commutator in a DC generator is to-** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
    (a) Increase output voltage  
    (b) Reduce sparking at brushes  
    (c) Provides smoother output  
    (d) Convert the induced AC to DC
+
+   answer: d — Convert the induced AC to DC  
+   explanation: The armature always generates AC; the commutator reverses the connection every half turn to rectify it mechanically into DC.
 
 ## Signals & Systems (11)
 
