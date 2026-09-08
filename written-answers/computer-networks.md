@@ -285,15 +285,15 @@ Answer: Given 10.10.0.0/16, eight equal subnets required.
 
 Answer:
 
-    Subnet mask
-    - A 32-bit number that separates the network portion from the host portion of an IP address. Network bits are 1, host bits are 0.
-    - Example: /26 = 255.255.255.192 = 11111111.11111111.11111111.11000000.
+   Subnet mask
+   - A 32-bit number that separates the network portion from the host portion of an IP address. Network bits are 1, host bits are 0.
+   - Example: /26 = 255.255.255.192 = 11111111.11111111.11111111.11000000.
 
-    Total host calculation
-    - Total addresses = 2^h, where h = 32 − prefix length
-    - Usable hosts = 2^h − 2 (one address is the network ID, one is the broadcast address)
-    - Number of subnets created = 2^n, where n = number of borrowed bits
-    - Block size = 256 − (value of the interesting octet in the mask)
+   Total host calculation
+   - Total addresses = 2^h, where h = 32 − prefix length
+   - Usable hosts = 2^h − 2 (one address is the network ID, one is the broadcast address)
+   - Number of subnets created = 2^n, where n = number of borrowed bits
+   - Block size = 256 − (value of the interesting octet in the mask)
 
 Quick reference table
 
@@ -307,7 +307,7 @@ Quick reference table
 | /29 | 255.255.255.248 | 8 | 8 | 6 |
 | /30 | 255.255.255.252 | 4 | 4 | 2 |
 
-    - Exception: /31 links (RFC 3021) use both addresses, and /32 is a single host route.
+   - Exception: /31 links (RFC 3021) use both addresses, and /32 is a single host route.
 
 11. **Given the network 245.248.128.0/20, divide the address space among three departments as follows:**
    **(a) Manager: half of the address space.**
@@ -328,12 +328,12 @@ Quick reference table
    **(ii) The IP address valid range.**
    **(iii) The number of valid hosts.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
 
-    Answer: Given 245.248.128.0/20 = 4096 addresses, range 245.248.128.0 – 245.248.143.255.
+   Answer: Given 245.248.128.0/20 = 4096 addresses, range 245.248.128.0 – 245.248.143.255.
 
-    Step 1 – size each share
-    - Manager = half of 4096 = 2048 -> host bits 11 -> prefix /21
-    - HR = one quarter = 1024 -> host bits 10 -> prefix /22
-    - Admin = remaining quarter = 1024 -> prefix /22
+   Step 1 – size each share
+   - Manager = half of 4096 = 2048 -> host bits 11 -> prefix /21
+   - HR = one quarter = 1024 -> host bits 10 -> prefix /22
+   - Admin = remaining quarter = 1024 -> prefix /22
 
 Step 2 – allocate sequentially
 
@@ -343,24 +343,24 @@ Step 2 – allocate sequentially
 | HR | 245.248.136.0/22 | 245.248.136.1 – 245.248.139.254 | 1022 |
 | Admin | 245.248.140.0/22 | 245.248.140.1 – 245.248.143.254 | 1022 |
 
-    Broadcast addresses
-    - Manager: 245.248.135.255, HR: 245.248.139.255, Admin: 245.248.143.255
-    - Masks: /21 = 255.255.248.0, /22 = 255.255.252.0
-    - Check: 2048 + 1024 + 1024 = 4096, so the whole block is used with nothing left over.
+   Broadcast addresses
+   - Manager: 245.248.135.255, HR: 245.248.139.255, Admin: 245.248.143.255
+   - Masks: /21 = 255.255.248.0, /22 = 255.255.252.0
+   - Check: 2048 + 1024 + 1024 = 4096, so the whole block is used with nothing left over.
 
 12. **Find out the network address and Broadcast address of the address: 192.168.0.0/28** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1360 (ET: BUET)]*
 
 Answer: /28 means host bits = 32 − 28 = 4, block size = 2^4 = 16, mask = 255.255.255.240.
 
-    - Network address: `192.168.0.0`
-    - Broadcast address: `192.168.0.15` (all 4 host bits set to 1)
-    - Usable range: 192.168.0.1 – 192.168.0.14
-    - Usable hosts: 16 − 2 = 14
+   - Network address: `192.168.0.0`
+   - Broadcast address: `192.168.0.15` (all 4 host bits set to 1)
+   - Usable range: 192.168.0.1 – 192.168.0.14
+   - Usable hosts: 16 − 2 = 14
 
-    ```
-    192.168.0.0000 0000  -> network   192.168.0.0
-    192.168.0.0000 1111  -> broadcast 192.168.0.15
-    ```
+   ```
+   192.168.0.0000 0000  -> network   192.168.0.0
+   192.168.0.0000 1111  -> broadcast 192.168.0.15
+   ```
 
 13. **(a) An organization wants to divide its LAN IP address 192.168.0.0/24 into 4 subnets according to buildings. The buildings IP address creiteria are given below.**
 
@@ -382,9 +382,9 @@ Answer: /28 means host bits = 32 − 28 = 4, block size = 2^4 = 16, mask = 255.2
 
 **Calculate the network and broadcast address of this network for each building block.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1443 (ET: N/A)]*
 
-    Answer: This is VLSM. Sort the requirements largest first, then allocate sequentially.
+   Answer: This is VLSM. Sort the requirements largest first, then allocate sequentially.
 
-    Given 192.168.0.0/24 = 256 addresses.
+   Given 192.168.0.0/24 = 256 addresses.
 
 Step 1 – block size for each building
 
@@ -404,27 +404,27 @@ Step 2 – allocate in order, largest first
 | C | 192.168.0.192/27 | 192.168.0.223 | .193 – .222 | 30 |
 | D | 192.168.0.224/28 | 192.168.0.239 | .225 – .238 | 14 |
 
-    - Total used = 128 + 64 + 32 + 16 = 240 addresses.
-    - Left free: 192.168.0.240/28 (16 addresses) for future expansion.
-    - Note: always add 2 to the host requirement before rounding up, because the network and broadcast addresses cannot be given to a host.
+   - Total used = 128 + 64 + 32 + 16 = 240 addresses.
+   - Left free: 192.168.0.240/28 (16 addresses) for future expansion.
+   - Note: always add 2 to the host requirement before rounding up, because the network and broadcast addresses cannot be given to a host.
 
 14. **Check the valid IP address from the following table.** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1335 (ET: N/A)]*
 
 Answer: The table was not printed with the question, so the rules for checking validity are given.
 
-    An IPv4 address is valid when
-    - It has exactly four octets separated by dots.
-    - Every octet is a decimal number from 0 to 255. Anything above 255 is invalid.
-    - No octet is left blank and there are no letters.
+   An IPv4 address is valid when
+   - It has exactly four octets separated by dots.
+   - Every octet is a decimal number from 0 to 255. Anything above 255 is invalid.
+   - No octet is left blank and there are no letters.
 
-    Addresses that are numerically valid but cannot be assigned to a host
-    - Network address – all host bits 0 (e.g. 192.168.1.0/24)
-    - Broadcast address – all host bits 1 (e.g. 192.168.1.255/24)
-    - 127.0.0.0/8 – loopback
-    - 0.0.0.0 – "this network" / default route
-    - 169.254.0.0/16 – APIPA, self-assigned when DHCP fails
-    - 224.0.0.0 – 239.255.255.255 – Class D multicast
-    - 240.0.0.0 – 255.255.255.255 – Class E, reserved
+   Addresses that are numerically valid but cannot be assigned to a host
+   - Network address – all host bits 0 (e.g. 192.168.1.0/24)
+   - Broadcast address – all host bits 1 (e.g. 192.168.1.255/24)
+   - 127.0.0.0/8 – loopback
+   - 0.0.0.0 – "this network" / default route
+   - 169.254.0.0/16 – APIPA, self-assigned when DHCP fails
+   - 224.0.0.0 – 239.255.255.255 – Class D multicast
+   - 240.0.0.0 – 255.255.255.255 – Class E, reserved
 
 Examples
 
@@ -450,11 +450,11 @@ Examples
  * **(iv) Direct broadcast address**
  * **(v) Limited broadcast address.**
 
-    Answer: Given 200.1.2.0/24 (Class C), 3 subnets required.
+   Answer: Given 200.1.2.0/24 (Class C), 3 subnets required.
 
-    Step 1 – bits to borrow
-    - 2^n >= 3 -> 2^2 = 4, so borrow 2 bits (4 subnets are created, 3 are used)
-    - New prefix = /26, mask 255.255.255.192, block size 64
+   Step 1 – bits to borrow
+   - 2^n >= 3 -> 2^2 = 4, so borrow 2 bits (4 subnets are created, 3 are used)
+   - New prefix = /26, mask 255.255.255.192, block size 64
 
 Step 2 – details for each subnet
 
@@ -464,9 +464,9 @@ Step 2 – details for each subnet
 | 2 | 200.1.2.64/26 | 200.1.2.65 – 200.1.2.126 | 200.1.2.127 | 64 |
 | 3 | 200.1.2.128/26 | 200.1.2.129 – 200.1.2.190 | 200.1.2.191 | 64 |
 
-    - (i) Total IP addresses per subnet = 2^6 = 64; usable = 62.
-    - (v) Limited broadcast address = `255.255.255.255` for every subnet. It is the same for all networks, it is never routed, and it reaches only the local segment.
-    - Difference to remember: a directed broadcast (200.1.2.63) targets one specific subnet and can in principle be routed; a limited broadcast (255.255.255.255) never leaves the local link.
+   - (i) Total IP addresses per subnet = 2^6 = 64; usable = 62.
+   - (v) Limited broadcast address = `255.255.255.255` for every subnet. It is the same for all networks, it is never routed, and it reaches only the local segment.
+   - Difference to remember: a directed broadcast (200.1.2.63) targets one specific subnet and can in principle be routed; a limited broadcast (255.255.255.255) never leaves the local link.
 
 16. **The IP address of a device in a network is 172.16.128.123/22. Answer the following questions:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
    * **i) What is the network address?**
@@ -481,9 +481,9 @@ Step 2 – details for each subnet
    * **iv) What is the maximum number of devices this network can connect?**
    * **v) What is the IP address of the first host device in the network?**
 
-    Answer: Given 172.16.128.123/22, host bits = 10, block size in the third octet = 256 − 252 = 4.
+   Answer: Given 172.16.128.123/22, host bits = 10, block size in the third octet = 256 − 252 = 4.
 
-    - Third octet 128 is a multiple of 4, so the block begins at 172.16.128.0.
+   - Third octet 128 is a multiple of 4, so the block begins at 172.16.128.0.
 
 | # | Item | Value |
 |---|---|---|
@@ -493,14 +493,14 @@ Step 2 – details for each subnet
 | iv | Maximum devices | 2^10 − 2 = `1022` |
 | v | First host address | `172.16.128.1` |
 
-    - Address range covered: 172.16.128.0 – 172.16.131.255, last usable host 172.16.131.254.
+   - Address range covered: 172.16.128.0 – 172.16.131.255, last usable host 172.16.131.254.
 
 17. **Find the network address, subnet mask, broadcast address, and usable host IP range for the following IP address: 192.9.205.31/16.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
 
 Answer: Given 192.9.205.31/16. The prefix /16 is applied as written, ignoring the Class C default.
 
-    - Mask: /16 = `255.255.0.0`
-    - AND operation: 192.9.205.31 AND 255.255.0.0 -> `192.9.0.0`
+   - Mask: /16 = `255.255.0.0`
+   - AND operation: 192.9.205.31 AND 255.255.0.0 -> `192.9.0.0`
 
 | Item | Value |
 |---|---|
@@ -510,39 +510,39 @@ Answer: Given 192.9.205.31/16. The prefix /16 is applied as written, ignoring th
 | Usable host range | 192.9.0.1 – 192.9.255.254 |
 | Usable hosts | 2^16 − 2 = 65,534 |
 
-    - Note: 192.9.205.31 is by class a Class C address whose default mask is /24. Using /16 here is supernetting — combining 256 Class C networks into one larger block, which classless (CIDR) addressing permits.
+   - Note: 192.9.205.31 is by class a Class C address whose default mask is /24. Using /16 here is supernetting — combining 256 Class C networks into one larger block, which classless (CIDR) addressing permits.
 
 18. **What is the CIDR Prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
 Answer: The range 10.12.2.0 – 10.12.3.255 must be expressed as a single CIDR block.
 
-    Step 1 – count the addresses
-    - From 10.12.2.0 to 10.12.3.255 = 2 full /24 blocks = 2 × 256 = 512 addresses
+   Step 1 – count the addresses
+   - From 10.12.2.0 to 10.12.3.255 = 2 full /24 blocks = 2 × 256 = 512 addresses
 
-    Step 2 – find the prefix
-    - 512 = 2^9, so host bits = 9
-    - Prefix = 32 − 9 = `/23`
+   Step 2 – find the prefix
+   - 512 = 2^9, so host bits = 9
+   - Prefix = 32 − 9 = `/23`
 
-    Step 3 – verify the boundary
-    ```
-    10.12.2.0 -> 00001010.00001100.00000010.00000000
-    10.12.3.255-> 00001010.00001100.00000011.11111111
-                                     ^^^^^^^ first 23 bits identical
-    ```
-    - Third octet 2 is even, so it is a valid /23 boundary.
+   Step 3 – verify the boundary
+   ```
+   10.12.2.0 -> 00001010.00001100.00000010.00000000
+   10.12.3.255-> 00001010.00001100.00000011.11111111
+                                    ^^^^^^^ first 23 bits identical
+   ```
+   - Third octet 2 is even, so it is a valid /23 boundary.
 
-    Answer: `10.12.2.0/23`, mask 255.255.254.0, broadcast 10.12.3.255, 510 usable hosts.
+   Answer: `10.12.2.0/23`, mask 255.255.254.0, broadcast 10.12.3.255, 510 usable hosts.
 
 19. **Write down the private IP address rang for class B?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
 Answer: The Class B private range is `172.16.0.0 – 172.31.255.255`.
 
-    - CIDR notation: `172.16.0.0/12`
-    - Mask: 255.240.0.0
-    - Total addresses: 1,048,576 (16 consecutive Class B networks, 172.16 through 172.31)
-    - Defined by RFC 1918, used for medium-sized organisations.
+   - CIDR notation: `172.16.0.0/12`
+   - Mask: 255.240.0.0
+   - Total addresses: 1,048,576 (16 consecutive Class B networks, 172.16 through 172.31)
+   - Defined by RFC 1918, used for medium-sized organisations.
 
-    - Common mistake: 172.32.x.x and 172.15.x.x are public, not private. Only the second octet 16–31 is private.
+   - Common mistake: 172.32.x.x and 172.15.x.x are public, not private. Only the second octet 16–31 is private.
 
 20. **Given IP address 192.168.0.0/28, determine Network address, Broadcast address, First usable IP, Last usable IP.** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
 
@@ -555,7 +555,7 @@ Answer: /28 -> host bits = 4, block size = 16, mask = 255.255.255.240.
 | First usable IP | 192.168.0.1 |
 | Last usable IP | 192.168.0.14 |
 
-    - Usable hosts = 2^4 − 2 = 14.
+   - Usable hosts = 2^4 − 2 = 14.
 
 21. **Write range of private IP address Class A, B and C.** *[BCC Assistant Network Engineer 18.10.2025 compact it 1441 (ET: BCC)]*
 
@@ -567,15 +567,15 @@ Answer: The private ranges are defined by RFC 1918. They are not routed on the p
 | B | 172.16.0.0 – 172.31.255.255 | 172.16.0.0/12 | 255.240.0.0 | 1,048,576 |
 | C | 192.168.0.0 – 192.168.255.255 | 192.168.0.0/16 | 255.255.0.0 | 65,536 |
 
-    - Class A is used by large enterprises and cloud networks, Class B by medium organisations, Class C by home and small office routers.
+   - Class A is used by large enterprises and cloud networks, Class B by medium organisations, Class C by home and small office routers.
 
 22. **Given an IP address 192.168.111.169/28. Then Determine the (i) Network address (ii) Broadcast address (iii) First usable Host (iv) Last usable Host.** *[BBA Assistant Maintenance Engineer 12.07.2025 compact it 1431 (ET: BUET)]*
 
 Answer: /28 -> host bits 4, block size 16, mask 255.255.255.240.
 
-    Step – find the block that contains .169
-    - Blocks in the last octet: 0, 16, 32 … 144, 160, 176 …
-    - 169 falls between 160 and 175, so the block starts at 160.
+   Step – find the block that contains .169
+   - Blocks in the last octet: 0, 16, 32 … 144, 160, 176 …
+   - 169 falls between 160 and 175, so the block starts at 160.
 
 | # | Item | Value |
 |---|---|---|
@@ -584,8 +584,8 @@ Answer: /28 -> host bits 4, block size 16, mask 255.255.255.240.
 | iii | First usable host | `192.168.111.161` |
 | iv | Last usable host | `192.168.111.174` |
 
-    - Usable hosts = 14.
-    - Shortcut: network address = floor(169 ÷ 16) × 16 = 10 × 16 = 160.
+   - Usable hosts = 14.
+   - Shortcut: network address = floor(169 ÷ 16) × 16 = 10 × 16 = 160.
 
 23. **What are the private IP Ranges for the following IP classes? Class A, Class B and Class C** *[BBA Assistant Maintenance Engineer 12.07.2025 compact it 1431 (ET: BUET)]*
 
@@ -597,15 +597,15 @@ Answer: RFC 1918 private ranges.
 | Class B | 172.16.0.0 – 172.31.255.255 | 172.16.0.0/12 |
 | Class C | 192.168.0.0 – 192.168.255.255 | 192.168.0.0/16 |
 
-    - These addresses can be reused freely inside any organisation because routers on the internet drop them. A NAT device converts them to a public address for outside communication.
+   - These addresses can be reused freely inside any organisation because routers on the internet drop them. A NAT device converts them to a public address for outside communication.
 
 24. **Which is Class C Default Subnet Mask?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
 Answer: The Class C default subnet mask is `255.255.255.0`, that is `/24`.
 
-    - Class C uses the first three octets for the network ID and the last octet for the host ID.
-    - Binary: 11111111.11111111.11111111.00000000
-    - Hosts per Class C network = 2^8 − 2 = 254.
+   - Class C uses the first three octets for the network ID and the last octet for the host ID.
+   - Binary: 11111111.11111111.11111111.00000000
+   - Hosts per Class C network = 2^8 − 2 = 254.
 
 Default masks of all three usable classes
 
@@ -619,95 +619,95 @@ Default masks of all three usable classes
 
 Answer: The maximum number of valid (usable) hosts in a network is
 
-    ```
-    Usable hosts = 2^h − 2
-    ```
-    where h = number of host bits = 32 − prefix length.
+   ```
+   Usable hosts = 2^h − 2
+   ```
+   where h = number of host bits = 32 − prefix length.
 
-    - Two addresses are subtracted: the all-zeros address is the network ID, and the all-ones address is the broadcast address. Neither can be assigned to a device.
+   - Two addresses are subtracted: the all-zeros address is the network ID, and the all-ones address is the broadcast address. Neither can be assigned to a device.
 
-    Examples
-    - /24 -> 2^8 − 2 = 254
-    - /26 -> 2^6 − 2 = 62
-    - /30 -> 2^2 − 2 = 2
-    - Class A (/8) -> 2^24 − 2 = 16,777,214, which is the largest possible in classful IPv4.
+   Examples
+   - /24 -> 2^8 − 2 = 254
+   - /26 -> 2^6 − 2 = 62
+   - /30 -> 2^2 − 2 = 2
+   - Class A (/8) -> 2^24 − 2 = 16,777,214, which is the largest possible in classful IPv4.
 
-    - Exception: RFC 3021 allows a /31 to use both addresses on a point-to-point link, giving 2 hosts.
+   - Exception: RFC 3021 allows a /31 to use both addresses on a point-to-point link, giving 2 hosts.
 
 26. **Given IP address 10.2.3.20/22 find the Total valid Host address in this IP?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
 Answer: Given 10.2.3.20/22.
 
-    Step 1 – host bits
-    - h = 32 − 22 = 10
+   Step 1 – host bits
+   - h = 32 − 22 = 10
 
-    Step 2 – total and valid hosts
-    - Total addresses = 2^10 = 1024
-    - Valid (usable) hosts = 1024 − 2 = `1022`
+   Step 2 – total and valid hosts
+   - Total addresses = 2^10 = 1024
+   - Valid (usable) hosts = 1024 − 2 = `1022`
 
-    Supporting details
-    - Mask = 255.255.252.0, block size in the third octet = 256 − 252 = 4
-    - Third octet 3 falls in the block starting at 0, so the network is 10.2.0.0/22
-    - Range 10.2.0.0 – 10.2.3.255, usable 10.2.0.1 – 10.2.3.254, broadcast 10.2.3.255
+   Supporting details
+   - Mask = 255.255.252.0, block size in the third octet = 256 − 252 = 4
+   - Third octet 3 falls in the block starting at 0, so the network is 10.2.0.0/22
+   - Range 10.2.0.0 – 10.2.3.255, usable 10.2.0.1 – 10.2.3.254, broadcast 10.2.3.255
 
 27. **Mapping between MAC to IP address?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
 Answer: Mapping an IP address to a MAC address is done by `ARP` (Address Resolution Protocol); mapping a MAC address to an IP address is done by `RARP` (Reverse ARP), now replaced in practice by BOOTP and DHCP.
 
-    How ARP works
-    - The sender needs the MAC address for a known IP on its own LAN.
-    - It broadcasts an ARP Request: "Who has 192.168.1.10? Tell 192.168.1.5."
-    - Only the owner replies with an ARP Reply (unicast) carrying its MAC address.
-    - The pair is stored in the ARP cache for a few minutes, so the broadcast is not repeated for every packet.
-    - Command to view the table: `arp -a`.
+   How ARP works
+   - The sender needs the MAC address for a known IP on its own LAN.
+   - It broadcasts an ARP Request: "Who has 192.168.1.10? Tell 192.168.1.5."
+   - Only the owner replies with an ARP Reply (unicast) carrying its MAC address.
+   - The pair is stored in the ARP cache for a few minutes, so the broadcast is not repeated for every packet.
+   - Command to view the table: `arp -a`.
 
-    ```
-    PC-A                                    PC-B
-     |-- ARP Request (broadcast FF:FF:FF:FF:FF:FF) -->|
-     |     "Who has 192.168.1.10?"                    |
-     |<-- ARP Reply (unicast) ------------------------|
-     |     "192.168.1.10 is at 00:1A:2B:3C:4D:5E"     |
-    ```
+   ```
+   PC-A                                    PC-B
+    |-- ARP Request (broadcast FF:FF:FF:FF:FF:FF) -->|
+    |     "Who has 192.168.1.10?"                    |
+    |<-- ARP Reply (unicast) ------------------------|
+    |     "192.168.1.10 is at 00:1A:2B:3C:4D:5E"     |
+   ```
 
-    - Related protocols: Proxy ARP (a router answers on behalf of another host), Gratuitous ARP (announces its own mapping), and NDP, which replaces ARP in IPv6.
+   - Related protocols: Proxy ARP (a router answers on behalf of another host), Gratuitous ARP (announces its own mapping), and NDP, which replaces ARP in IPv6.
 
 28. **How many bits are in a MAC address?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
 Answer: A MAC address is `48 bits` long, that is 6 bytes.
 
-    - It is written as 12 hexadecimal digits, for example `00:1A:2B:3C:4D:5E`.
-    - The first 24 bits are the OUI (Organizationally Unique Identifier), which identifies the manufacturer.
-    - The last 24 bits are the serial number assigned by that manufacturer to the individual card.
-    - It is also called the physical address, hardware address or burned-in address (BIA).
-    - The broadcast MAC address is FF:FF:FF:FF:FF:FF.
-    - The newer EUI-64 format used in IPv6 is 64 bits.
+   - It is written as 12 hexadecimal digits, for example `00:1A:2B:3C:4D:5E`.
+   - The first 24 bits are the OUI (Organizationally Unique Identifier), which identifies the manufacturer.
+   - The last 24 bits are the serial number assigned by that manufacturer to the individual card.
+   - It is also called the physical address, hardware address or burned-in address (BIA).
+   - The broadcast MAC address is FF:FF:FF:FF:FF:FF.
+   - The newer EUI-64 format used in IPv6 is 64 bits.
 
 29. **What is the primary motivation for classful IP address to classless IP addressing?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 316 (ET: N/A)]*
 
 Answer: The primary motivation was the rapid `exhaustion of IPv4 address space caused by the wastage built into classful addressing`.
 
-    The problem with classful addressing
-    - Only three block sizes existed: /8 (16.7 million hosts), /16 (65,534) and /24 (254).
-    - An organisation needing 500 hosts could not use a Class C, so it received a full Class B and wasted more than 64,000 addresses.
-    - An organisation needing 300 hosts had the same problem.
-    - Millions of addresses were allocated but never used.
+   The problem with classful addressing
+   - Only three block sizes existed: /8 (16.7 million hosts), /16 (65,534) and /24 (254).
+   - An organisation needing 500 hosts could not use a Class C, so it received a full Class B and wasted more than 64,000 addresses.
+   - An organisation needing 300 hosts had the same problem.
+   - Millions of addresses were allocated but never used.
 
-    Secondary motivation – routing table explosion
-    - Every allocated network needed its own routing table entry. Backbone routers were running out of memory and lookup time.
+   Secondary motivation – routing table explosion
+   - Every allocated network needed its own routing table entry. Backbone routers were running out of memory and lookup time.
 
-    How classless (CIDR) addressing solved it
-    - Any prefix length from /0 to /32 is allowed, so a block can be sized to actual need — 500 hosts get a /23 (510 hosts) instead of a /16.
-    - VLSM lets different subnets of the same network use different mask lengths.
-    - Route aggregation (supernetting) merges many small blocks into one advertisement, shrinking global routing tables.
-    - Standardised in RFC 1519 (1993), together with NAT and later IPv6 as the long-term fix.
+   How classless (CIDR) addressing solved it
+   - Any prefix length from /0 to /32 is allowed, so a block can be sized to actual need — 500 hosts get a /23 (510 hosts) instead of a /16.
+   - VLSM lets different subnets of the same network use different mask lengths.
+   - Route aggregation (supernetting) merges many small blocks into one advertisement, shrinking global routing tables.
+   - Standardised in RFC 1519 (1993), together with NAT and later IPv6 as the long-term fix.
 
 30. **Given IP address 192.168.1.50, Subnet Mask: 255.255.255.240. Find the valid IP range. Also find Network address and Broadcast address.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 292 (ET: BUET)], [BTCL Assistant Manager (Technical) 2023 compact it 594 (ET: BUET)], [BPDB Assistant Engineer (CSE) 10.05.2024 compact it 389 (ET: BUET)], [BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 456 (ET: BUET)]*
 
 Answer: Mask 255.255.255.240 = /28, host bits 4, block size = 256 − 240 = 16.
 
-    Step 1 – find the block containing .50
-    - Blocks in the last octet: 0, 16, 32, 48, 64 …
-    - 50 falls between 48 and 63, so the block starts at 48.
+   Step 1 – find the block containing .50
+   - Blocks in the last octet: 0, 16, 32, 48, 64 …
+   - 50 falls between 48 and 63, so the block starts at 48.
 
 | Item | Value |
 |---|---|
@@ -716,18 +716,18 @@ Answer: Mask 255.255.255.240 = /28, host bits 4, block size = 256 − 240 = 16.
 | Broadcast address | `192.168.1.63` |
 | Usable hosts | 14 |
 
-    ```
-    Network   192.168.1.0011 0000 = 192.168.1.48
-    Broadcast 192.168.1.0011 1111 = 192.168.1.63
-    ```
+   ```
+   Network   192.168.1.0011 0000 = 192.168.1.48
+   Broadcast 192.168.1.0011 1111 = 192.168.1.63
+   ```
 
 31. **Given IP Address: 192.168.5.154/27, Calculate a) Network Address b) First valid host c) Last valid host d) Broadcast address e) Subnet mask** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 383 (ET: N/A)]*
 
 Answer: /27 -> host bits 5, block size = 32, mask = 255.255.255.224.
 
-    Find the block containing .154
-    - Blocks: 0, 32, 64, 96, 128, 160 …
-    - 154 falls between 128 and 159, so the block starts at 128.
+   Find the block containing .154
+   - Blocks: 0, 32, 64, 96, 128, 160 …
+   - 154 falls between 128 and 159, so the block starts at 128.
 
 | # | Item | Value |
 |---|---|---|
@@ -737,7 +737,7 @@ Answer: /27 -> host bits 5, block size = 32, mask = 255.255.255.224.
 | d | Broadcast address | `192.168.5.159` |
 | e | Subnet mask | `255.255.255.224` |
 
-    - Usable hosts = 2^5 − 2 = 30.
+   - Usable hosts = 2^5 − 2 = 30.
 
 32. **Write down the Public and Private IPv4 address for Class A, Class B and Class C.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
@@ -749,42 +749,42 @@ Answer:
 | B | 128.0.0.0 – 191.255.255.255 (excluding 172.16–172.31) | 172.16.0.0 – 172.31.255.255 | 255.255.0.0 |
 | C | 192.0.0.0 – 223.255.255.255 (excluding 192.168.x) | 192.168.0.0 – 192.168.255.255 | 255.255.255.0 |
 
-    Key points
-    - Public addresses are globally unique, allocated by IANA through the regional registries, and routable on the internet.
-    - Private addresses are free to reuse, are dropped by internet routers, and need NAT to reach the outside.
-    - 127.0.0.0/8 is reserved for loopback and is not part of the usable Class A range.
-    - 169.254.0.0/16 (APIPA) is link-local, assigned automatically when a DHCP server cannot be reached.
+   Key points
+   - Public addresses are globally unique, allocated by IANA through the regional registries, and routable on the internet.
+   - Private addresses are free to reuse, are dropped by internet routers, and need NAT to reach the outside.
+   - 127.0.0.0/8 is reserved for loopback and is not part of the usable Class A range.
+   - 169.254.0.0/16 (APIPA) is link-local, assigned automatically when a DHCP server cannot be reached.
 
 33. **(b) What is a subnet? What benefits will you get using subnets for this office?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 324 (ET: BIBM)]*
 
 Answer:
 
-    What is a subnet
-    - A subnet is a smaller logical network created by dividing a larger IP network. Bits are borrowed from the host portion and added to the network portion, so one address block serves several separate segments.
-    - Example: 192.168.1.0/24 split into four /26 subnets, one per department.
+   What is a subnet
+   - A subnet is a smaller logical network created by dividing a larger IP network. Bits are borrowed from the host portion and added to the network portion, so one address block serves several separate segments.
+   - Example: 192.168.1.0/24 split into four /26 subnets, one per department.
 
-    Benefits for an office network
-    - Smaller broadcast domains – ARP and other broadcasts stay inside one department instead of flooding every PC, which reduces congestion.
-    - Better performance – less unnecessary traffic on each segment.
-    - Security and isolation – Accounts can be separated from Sales, and an ACL on the router controls what passes between them. A problem in one subnet does not spread.
-    - Easier troubleshooting – an IP address immediately tells you which department and floor a machine belongs to.
-    - Efficient address use – VLSM gives each department only as many addresses as it needs.
-    - Simpler policy and management – QoS, firewall rules and DHCP scopes can be applied per subnet.
-    - Scalability – a new department is added as a new subnet without renumbering the whole office.
+   Benefits for an office network
+   - Smaller broadcast domains – ARP and other broadcasts stay inside one department instead of flooding every PC, which reduces congestion.
+   - Better performance – less unnecessary traffic on each segment.
+   - Security and isolation – Accounts can be separated from Sales, and an ACL on the router controls what passes between them. A problem in one subnet does not spread.
+   - Easier troubleshooting – an IP address immediately tells you which department and floor a machine belongs to.
+   - Efficient address use – VLSM gives each department only as many addresses as it needs.
+   - Simpler policy and management – QoS, firewall rules and DHCP scopes can be applied per subnet.
+   - Scalability – a new department is added as a new subnet without renumbering the whole office.
 
 34. **Local loopback address কি? কোন কমান্ড ব্যবহার করে কানেক্টিভিটি টেস্ট করা হয়?** *[BTCL - JAM ( Technical) 05.04.2024 compact it 383 (ET: BUET)]*
 
 Answer:
 
-    Local loopback address
-    - The loopback address is `127.0.0.1` (the whole block 127.0.0.0/8 is reserved). Its hostname is `localhost`.
-    - Packets sent to it never leave the machine — they are looped back inside the TCP/IP stack by the software.
-    - Uses: testing whether the TCP/IP stack and NIC driver are working, testing a locally running server (for example `http://127.0.0.1:8080`), and development work before deployment.
-    - In IPv6 the loopback address is `::1`.
+   Local loopback address
+   - The loopback address is `127.0.0.1` (the whole block 127.0.0.0/8 is reserved). Its hostname is `localhost`.
+   - Packets sent to it never leave the machine — they are looped back inside the TCP/IP stack by the software.
+   - Uses: testing whether the TCP/IP stack and NIC driver are working, testing a locally running server (for example `http://127.0.0.1:8080`), and development work before deployment.
+   - In IPv6 the loopback address is `::1`.
 
-    Connectivity test command
-    - `ping` is the command used, for example `ping 127.0.0.1` or `ping 8.8.8.8`.
-    - ping uses ICMP Echo Request and Echo Reply messages, and reports round-trip time and packet loss.
+   Connectivity test command
+   - `ping` is the command used, for example `ping 127.0.0.1` or `ping 8.8.8.8`.
+   - ping uses ICMP Echo Request and Echo Reply messages, and reports round-trip time and packet loss.
 
 Other useful commands
 
@@ -800,15 +800,15 @@ Other useful commands
 
 Answer: /24 -> host bits 8, mask 255.255.255.0.
 
-    - Network address: `192.168.2.0`
-    - Broadcast address: `192.168.2.255`
-    - Usable host range: 192.168.2.1 – 192.168.2.254
-    - Usable hosts: 254
+   - Network address: `192.168.2.0`
+   - Broadcast address: `192.168.2.255`
+   - Usable host range: 192.168.2.1 – 192.168.2.254
+   - Usable hosts: 254
 
-    ```
-    Network   192.168.2.00000000 = 192.168.2.0
-    Broadcast 192.168.2.11111111 = 192.168.2.255
-    ```
+   ```
+   Network   192.168.2.00000000 = 192.168.2.0
+   Broadcast 192.168.2.11111111 = 192.168.2.255
+   ```
 
 36. **Given a (slash) /26 based network address. Find Subnet mask, broadcast address, number of host, Number of valid host and number of subnet.** *[BKSP Assistant Programmer 13.07.2024 compact it 1459 (ET: N/A)]*
 
@@ -832,30 +832,30 @@ The four subnets of 192.168.1.0/24
 | 3 | 192.168.1.128 | 192.168.1.191 | .129 – .190 |
 | 4 | 192.168.1.192 | 192.168.1.255 | .193 – .254 |
 
-    - Note: the number of subnets depends on the parent block. From a /16 parent, a /26 would give 2^10 = 1024 subnets.
+   - Note: the number of subnets depends on the parent block. From a /16 parent, a /26 would give 2^10 = 1024 subnets.
 
 37. **Write Class A private IP range.** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
 Answer: The Class A private range is `10.0.0.0 – 10.255.255.255`.
 
-    - CIDR: `10.0.0.0/8`, mask 255.0.0.0
-    - Total addresses: 2^24 = 16,777,216 (16,777,214 usable)
-    - It is a single large block, defined by RFC 1918.
-    - Because it is so large, it is the range used by big enterprises, data centres, cloud VPCs and mobile carriers.
+   - CIDR: `10.0.0.0/8`, mask 255.0.0.0
+   - Total addresses: 2^24 = 16,777,216 (16,777,214 usable)
+   - It is a single large block, defined by RFC 1918.
+   - Because it is so large, it is the range used by big enterprises, data centres, cloud VPCs and mobile carriers.
 
 38. **Write Command for check LAN connecte?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
 Answer: The command normally used to check LAN connectivity is `ping`.
 
-    - `ping <IP address>` — for example `ping 192.168.1.1` to test the gateway.
-    - It sends ICMP Echo Requests and waits for Echo Replies, showing reply time and packet loss.
+   - `ping <IP address>` — for example `ping 192.168.1.1` to test the gateway.
+   - It sends ICMP Echo Requests and waits for Echo Replies, showing reply time and packet loss.
 
-    Standard troubleshooting order
-    - `ping 127.0.0.1` — is the TCP/IP stack working?
-    - `ping <own IP>` — is the NIC configured?
-    - `ping <gateway>` — is the LAN path working?
-    - `ping 8.8.8.8` — is the internet reachable?
-    - `ping google.com` — is DNS working?
+   Standard troubleshooting order
+   - `ping 127.0.0.1` — is the TCP/IP stack working?
+   - `ping <own IP>` — is the NIC configured?
+   - `ping <gateway>` — is the LAN path working?
+   - `ping 8.8.8.8` — is the internet reachable?
+   - `ping google.com` — is DNS working?
 
 Other commands
 
@@ -871,22 +871,22 @@ Other commands
 
 Answer: The interface table was not printed with the question, so the method for deciding which interface belongs to which network is given.
 
-    Method – AND the IP address with its subnet mask
-    - The result of the bitwise AND is the network address of that interface.
-    - Two interfaces are on the same network only when their network addresses AND their masks are both identical.
+   Method – AND the IP address with its subnet mask
+   - The result of the bitwise AND is the network address of that interface.
+   - Two interfaces are on the same network only when their network addresses AND their masks are both identical.
 
-    Worked example
-    ```
-    Interface 1 : 192.168.1.10 /26   -> block size 64, 10 lies in 0–63  -> network 192.168.1.0/26
-    Interface 2 : 192.168.1.70 /26   -> 70 lies in 64–127               -> network 192.168.1.64/26
-    Interface 3 : 192.168.1.100/26   -> 100 lies in 64–127              -> network 192.168.1.64/26
-    Interface 4 : 192.168.2.10 /26   -> different third octet           -> network 192.168.2.0/26
-    ```
-    - Result: interfaces 2 and 3 are on the same network and can talk directly. Interfaces 1 and 4 each sit on their own network and need a router.
+   Worked example
+   ```
+   Interface 1 : 192.168.1.10 /26   -> block size 64, 10 lies in 0–63  -> network 192.168.1.0/26
+   Interface 2 : 192.168.1.70 /26   -> 70 lies in 64–127               -> network 192.168.1.64/26
+   Interface 3 : 192.168.1.100/26   -> 100 lies in 64–127              -> network 192.168.1.64/26
+   Interface 4 : 192.168.2.10 /26   -> different third octet           -> network 192.168.2.0/26
+   ```
+   - Result: interfaces 2 and 3 are on the same network and can talk directly. Interfaces 1 and 4 each sit on their own network and need a router.
 
-    Quick shortcut without binary
-    - Block size = 256 − (mask value of the interesting octet).
-    - Network address = the largest multiple of the block size that is not greater than the octet value.
+   Quick shortcut without binary
+   - Block size = 256 − (mask value of the interesting octet).
+   - Network address = the largest multiple of the block size that is not greater than the octet value.
 
 40. **(খ) Classful এবং Classless IP address এর পার্থক্য কী? নিচের IP গুলোর Class নির্ণয় করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 i) 00000001 00001011 00001011 11101111
@@ -895,7 +895,7 @@ ii) 211.10.15.4
 i) 00000001 00001011 00001011 11101111
 ii) 211.10.15.4
 
-    Answer:
+   Answer:
 
 (a) Classful vs Classless IP addressing
 
@@ -909,80 +909,80 @@ ii) 211.10.15.4
 | Routing protocol | RIPv1, IGRP (mask not carried) | RIPv2, OSPF, EIGRP, BGP (mask carried) |
 | Standard | RFC 791 (1981) | RFC 1519 (1993) |
 
-    (b) Class of the given addresses
+   (b) Class of the given addresses
 
-    (i) 00000001 00001011 00001011 11101111
-    - Decimal: 00000001 = 1, 00001011 = 11, 00001011 = 11, 11101111 = 239
-    - Address = `1.11.11.239`
-    - First octet 1 lies in 1–126, leading bit is `0`
-    - Class: `Class A`, default mask 255.0.0.0
+   (i) 00000001 00001011 00001011 11101111
+   - Decimal: 00000001 = 1, 00001011 = 11, 00001011 = 11, 11101111 = 239
+   - Address = `1.11.11.239`
+   - First octet 1 lies in 1–126, leading bit is `0`
+   - Class: `Class A`, default mask 255.0.0.0
 
-    (ii) 211.10.15.4
-    - First octet 211 lies in 192–223, leading bits `110`
-    - Class: `Class C`, default mask 255.255.255.0
+   (ii) 211.10.15.4
+   - First octet 211 lies in 192–223, leading bits `110`
+   - Class: `Class C`, default mask 255.255.255.0
 
-    Rule of thumb for the first octet
-    ```
-    0xxxxxxx  1 – 126    Class A
-    10xxxxxx  128 – 191  Class B
-    110xxxxx  192 – 223  Class C
-    1110xxxx  224 – 239  Class D (multicast)
-    1111xxxx  240 – 255  Class E (reserved)
-    ```
+   Rule of thumb for the first octet
+   ```
+   0xxxxxxx  1 – 126    Class A
+   10xxxxxx  128 – 191  Class B
+   110xxxxx  192 – 223  Class C
+   1110xxxx  224 – 239  Class D (multicast)
+   1111xxxx  240 – 255  Class E (reserved)
+   ```
 
 41. **6.10 An organization is granted the IPv4 network block 14.24.74.0/24 and needs to segment it into two subnets: Subnet A (requires 120 addresses) and Subnet B (requires 60 addresses). Allocating sequentially from the requirement first to maximize remaining address space, state only the Network Address (with its CIDR mask) and the Broadcast Address for both subnets.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
 Answer: Same VLSM problem — largest subnet first.
 
-    Given 14.24.74.0/24 = 256 addresses.
+   Given 14.24.74.0/24 = 256 addresses.
 
-    Step 1 – Subnet A (120 addresses)
-    - 2^7 = 128 >= 120, so 7 host bits -> `/25`, block size 128
-    - Network `14.24.74.0/25`, broadcast `14.24.74.127`
-    - Usable range 14.24.74.1 – 14.24.74.126 (126 hosts)
+   Step 1 – Subnet A (120 addresses)
+   - 2^7 = 128 >= 120, so 7 host bits -> `/25`, block size 128
+   - Network `14.24.74.0/25`, broadcast `14.24.74.127`
+   - Usable range 14.24.74.1 – 14.24.74.126 (126 hosts)
 
-    Step 2 – Subnet B (60 addresses)
-    - 2^6 = 64 >= 60, so 6 host bits -> `/26`, block size 64
-    - Begins at the next free address, 14.24.74.128
-    - Network `14.24.74.128/26`, broadcast `14.24.74.191`
-    - Usable range 14.24.74.129 – 14.24.74.190 (62 hosts)
+   Step 2 – Subnet B (60 addresses)
+   - 2^6 = 64 >= 60, so 6 host bits -> `/26`, block size 64
+   - Begins at the next free address, 14.24.74.128
+   - Network `14.24.74.128/26`, broadcast `14.24.74.191`
+   - Usable range 14.24.74.129 – 14.24.74.190 (62 hosts)
 
 | Subnet | Requirement | Network address | Broadcast address |
 |---|---|---|---|
 | A | 120 | 14.24.74.0/25 | 14.24.74.127 |
 | B | 60 | 14.24.74.128/26 | 14.24.74.191 |
 
-    - Remaining free space: 14.24.74.192/26 (64 addresses).
+   - Remaining free space: 14.24.74.192/26 (64 addresses).
 
 42. **An IP address subnet mask is 255.255.255.224 which is the subnet address in this block?** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
 Answer: Mask 255.255.255.224 = /27.
 
-    Step 1 – block size
-    - 256 − 224 = 32, so subnet addresses step by 32 in the last octet.
+   Step 1 – block size
+   - 256 − 224 = 32, so subnet addresses step by 32 in the last octet.
 
-    Step 2 – the subnet (block) addresses are the multiples of 32
-    ```
-    x.x.x.0    broadcast .31
-    x.x.x.32   broadcast .63
-    x.x.x.64   broadcast .95
-    x.x.x.96   broadcast .127
-    x.x.x.128  broadcast .159
-    x.x.x.160  broadcast .191
-    x.x.x.192  broadcast .223
-    x.x.x.224  broadcast .255
-    ```
+   Step 2 – the subnet (block) addresses are the multiples of 32
+   ```
+   x.x.x.0    broadcast .31
+   x.x.x.32   broadcast .63
+   x.x.x.64   broadcast .95
+   x.x.x.96   broadcast .127
+   x.x.x.128  broadcast .159
+   x.x.x.160  broadcast .191
+   x.x.x.192  broadcast .223
+   x.x.x.224  broadcast .255
+   ```
 
-    - So a given host address belongs to the block whose start is the largest multiple of 32 not greater than its last octet.
-    - Rule: network address = floor(last octet ÷ 32) × 32. For 192.168.1.100, floor(100 ÷ 32) = 3, so the subnet address is 192.168.1.96/27.
-    - Each /27 gives 32 addresses, 30 usable, and 8 subnets fit in one /24.
+   - So a given host address belongs to the block whose start is the largest multiple of 32 not greater than its last octet.
+   - Rule: network address = floor(last octet ÷ 32) × 32. For 192.168.1.100, floor(100 ÷ 32) = 3, so the subnet address is 192.168.1.96/27.
+   - Each /27 gives 32 addresses, 30 usable, and 8 subnets fit in one /24.
 
 43. **Write down the basic differences of the following:**
    **(i) Public vs Private IP address** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 534 (ET: MIST)]*
 
 **(i) Public vs Private IP address** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 534 (ET: MIST)]*
 
-    Answer: Public vs Private IP address
+   Answer: Public vs Private IP address
 
 | Point | Public IP | Private IP |
 |---|---|---|
@@ -995,30 +995,30 @@ Answer: Mask 255.255.255.224 = /27.
 | Security | Directly reachable, so more exposed | Hidden behind NAT, less exposed |
 | Example | 8.8.8.8, 103.108.140.5 | 192.168.1.1, 10.0.0.5 |
 
-    - How they work together: a home router holds one public IP on its WAN side and hands out private IPs on the LAN side. NAT translates between them, which is a major reason IPv4 has lasted so long.
+   - How they work together: a home router holds one public IP on its WAN side and hands out private IPs on the LAN side. NAT translates between them, which is a major reason IPv4 has lasted so long.
 
 44. **What do you mean by Subnet and Subnet Mask? The network address of 172.16.0.0/19 provides how many subnets and hosts? What is the function of OSPF?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 536 (ET: MIST)]*
 
 Answer:
 
-    Subnet and subnet mask
-    - A subnet is a smaller network created by dividing a larger IP block, by borrowing bits from the host portion.
-    - A subnet mask is the 32-bit number that shows which bits are network and which are host: network bits are 1, host bits are 0. Example: /26 = 255.255.255.192.
+   Subnet and subnet mask
+   - A subnet is a smaller network created by dividing a larger IP block, by borrowing bits from the host portion.
+   - A subnet mask is the 32-bit number that shows which bits are network and which are host: network bits are 1, host bits are 0. Example: /26 = 255.255.255.192.
 
-    Subnets and hosts in 172.16.0.0/19
-    - 172.16.0.0 is a Class B address, so the default prefix is /16.
-    - Borrowed bits = 19 − 16 = 3
-    - Number of subnets = 2^3 = `8`
-    - Host bits = 32 − 19 = 13
-    - Hosts per subnet = 2^13 − 2 = `8190`
-    - Mask = 255.255.224.0, block size in the third octet = 32
-    - The eight subnets are 172.16.0.0, 172.16.32.0, 172.16.64.0, 172.16.96.0, 172.16.128.0, 172.16.160.0, 172.16.192.0, 172.16.224.0.
+   Subnets and hosts in 172.16.0.0/19
+   - 172.16.0.0 is a Class B address, so the default prefix is /16.
+   - Borrowed bits = 19 − 16 = 3
+   - Number of subnets = 2^3 = `8`
+   - Host bits = 32 − 19 = 13
+   - Hosts per subnet = 2^13 − 2 = `8190`
+   - Mask = 255.255.224.0, block size in the third octet = 32
+   - The eight subnets are 172.16.0.0, 172.16.32.0, 172.16.64.0, 172.16.96.0, 172.16.128.0, 172.16.160.0, 172.16.192.0, 172.16.224.0.
 
-    Function of OSPF
-    - OSPF (Open Shortest Path First) is a link-state, classless interior gateway protocol that finds the best path inside one autonomous system.
-    - Each router builds a complete map of the area (the link-state database) and runs Dijkstra's shortest path first algorithm on it.
-    - Metric is cost, based on bandwidth. It supports VLSM and CIDR, converges quickly, and sends only incremental updates rather than the whole table.
-    - It uses areas (with Area 0 as the backbone) to keep large networks scalable, and authentication to secure routing updates.
+   Function of OSPF
+   - OSPF (Open Shortest Path First) is a link-state, classless interior gateway protocol that finds the best path inside one autonomous system.
+   - Each router builds a complete map of the area (the link-state database) and runs Dijkstra's shortest path first algorithm on it.
+   - Metric is cost, based on bandwidth. It supports VLSM and CIDR, converges quickly, and sends only incremental updates rather than the whole table.
+   - It uses areas (with Area 0 as the backbone) to keep large networks scalable, and authentication to secure routing updates.
 
 45. **Convert the decimal IP address 192.168.101.5 into binary IP address. Fill-up the following in tabular form:** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 539 (ET: MIST)]*
 
@@ -1034,17 +1034,17 @@ Answer:
 | Class B |  |  |  |  |
 | Class C |  |  |  |  |
 
-    Answer:
+   Answer:
 
-    Binary form of 192.168.101.5
-    ```
-    192 -> 11000000
-    168 -> 10101000
-    101 -> 01100101
-      5 -> 00000101
-    ```
-    - Answer: `11000000.10101000.01100101.00000101`
-    - Method: divide each octet by 2 repeatedly, or subtract place values 128, 64, 32, 16, 8, 4, 2, 1.
+   Binary form of 192.168.101.5
+   ```
+   192 -> 11000000
+   168 -> 10101000
+   101 -> 01100101
+     5 -> 00000101
+   ```
+   - Answer: `11000000.10101000.01100101.00000101`
+   - Method: divide each octet by 2 repeatedly, or subtract place values 128, 64, 32, 16, 8, 4, 2, 1.
 
 Completed table
 
@@ -1054,63 +1054,63 @@ Completed table
 | Class B | 128 – 191 | 172.16.50.60 | 172.16.0.0 | 0.0.50.60 |
 | Class C | 192 – 223 | 192.168.101.5 | 192.168.101.0 | 0.0.0.5 |
 
-    - Class A uses 1 octet for the network and 3 for hosts, Class B uses 2 and 2, Class C uses 3 and 1.
-    - 127 is skipped because 127.0.0.0/8 is reserved for loopback.
+   - Class A uses 1 octet for the network and 3 for hosts, Class B uses 2 and 2, Class C uses 3 and 1.
+   - 127 is skipped because 127.0.0.0/8 is reserved for loopback.
 
 46. **What is IP address? Explain the necessity of IP address in network?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 564 (ET: N/A)]*
 
 Answer:
 
-    What is an IP address
-    - An IP address is a unique logical address given to every device on a TCP/IP network, used to identify the device and to find its location in the network.
-    - IPv4 is 32 bits, written as four decimal octets (192.168.1.10). IPv6 is 128 bits, written in hexadecimal.
-    - It has two parts: the network ID, which says which network the device is on, and the host ID, which says which device it is inside that network. The subnet mask decides where the split falls.
-    - It can be static (fixed manually) or dynamic (assigned by DHCP).
+   What is an IP address
+   - An IP address is a unique logical address given to every device on a TCP/IP network, used to identify the device and to find its location in the network.
+   - IPv4 is 32 bits, written as four decimal octets (192.168.1.10). IPv6 is 128 bits, written in hexadecimal.
+   - It has two parts: the network ID, which says which network the device is on, and the host ID, which says which device it is inside that network. The subnet mask decides where the split falls.
+   - It can be static (fixed manually) or dynamic (assigned by DHCP).
 
-    Why an IP address is necessary
-    - Identification – it names the device, in the same way a postal address names a house.
-    - Routing – routers read the network portion to decide where to forward a packet. Without it there is no way to reach a device outside the LAN.
-    - End-to-end delivery – MAC addresses only work inside one LAN segment; the IP address carries the packet across many networks.
-    - Hierarchy and scalability – the network/host split lets routers keep summarised routes instead of an entry per device.
-    - Access control – firewalls and ACLs permit or block traffic based on IP addresses.
-    - Services – DNS maps a name to an IP, NAT translates private to public, and QoS policies are applied per address.
+   Why an IP address is necessary
+   - Identification – it names the device, in the same way a postal address names a house.
+   - Routing – routers read the network portion to decide where to forward a packet. Without it there is no way to reach a device outside the LAN.
+   - End-to-end delivery – MAC addresses only work inside one LAN segment; the IP address carries the packet across many networks.
+   - Hierarchy and scalability – the network/host split lets routers keep summarised routes instead of an entry per device.
+   - Access control – firewalls and ACLs permit or block traffic based on IP addresses.
+   - Services – DNS maps a name to an IP, NAT translates private to public, and QoS policies are applied per address.
 
 47. **What is subnet mask? Why it is used?** *[Mongla Port Authority Assistant Programmer 2023 compact it 573 (ET: N/A)]*
 
 Answer:
 
-    What is a subnet mask
-    - A 32-bit number used together with an IP address to separate the network portion from the host portion.
-    - Continuous 1s mark the network bits, continuous 0s mark the host bits. Example: 255.255.255.0 = /24 = 11111111.11111111.11111111.00000000.
-    - The device performs a bitwise AND of the IP address and the mask to get the network address.
+   What is a subnet mask
+   - A 32-bit number used together with an IP address to separate the network portion from the host portion.
+   - Continuous 1s mark the network bits, continuous 0s mark the host bits. Example: 255.255.255.0 = /24 = 11111111.11111111.11111111.00000000.
+   - The device performs a bitwise AND of the IP address and the mask to get the network address.
 
-    Why it is used
-    - To find the network address – AND the IP with the mask. This is how a host knows which network it belongs to.
-    - To decide local or remote delivery – the sender ANDs both its own IP and the destination IP with the mask. If the results match, it sends the frame directly; if not, it sends the packet to the default gateway.
-    - To enable subnetting – borrowing host bits into the mask splits one network into many, cutting broadcast traffic and improving security.
-    - To calculate capacity – the mask fixes the number of usable hosts, 2^h − 2.
-    - To support VLSM and CIDR – different masks on different segments avoid address wastage.
-    - To let routers work – routing table lookups use the longest matching prefix, which is a mask comparison.
+   Why it is used
+   - To find the network address – AND the IP with the mask. This is how a host knows which network it belongs to.
+   - To decide local or remote delivery – the sender ANDs both its own IP and the destination IP with the mask. If the results match, it sends the frame directly; if not, it sends the packet to the default gateway.
+   - To enable subnetting – borrowing host bits into the mask splits one network into many, cutting broadcast traffic and improving security.
+   - To calculate capacity – the mask fixes the number of usable hosts, 2^h − 2.
+   - To support VLSM and CIDR – different masks on different segments avoid address wastage.
+   - To let routers work – routing table lookups use the longest matching prefix, which is a mask comparison.
 
-    Example
-    ```
-    IP      192.168.1.10   -> 11000000.10101000.00000001.00001010
-    Mask    255.255.255.0  -> 11111111.11111111.11111111.00000000
-    AND     192.168.1.0    -> the network address
-    ```
+   Example
+   ```
+   IP      192.168.1.10   -> 11000000.10101000.00000001.00001010
+   Mask    255.255.255.0  -> 11111111.11111111.11111111.00000000
+   AND     192.168.1.0    -> the network address
+   ```
 
 48. **In HR department have 12 IP enable devices are available in our office and have a big IP block 172.16.5.0/24. To consider your HR department find a suitable IP block than also answer the following question.**
    **i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 596 (ET: N/A)]*
 
 **i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 596 (ET: N/A)]*
 
-    Answer: Given the block 172.16.5.0/24 and a requirement of 12 IP-enabled devices in HR.
+   Answer: Given the block 172.16.5.0/24 and a requirement of 12 IP-enabled devices in HR.
 
-    Step 1 – choose the right block size
-    - Needed = 12 hosts + 2 (network and broadcast) = 14 addresses
-    - Next power of 2: 2^4 = 16, so host bits = 4
-    - Prefix = 32 − 4 = `/28`
-    - Suitable block: `172.16.5.0/28`
+   Step 1 – choose the right block size
+   - Needed = 12 hosts + 2 (network and broadcast) = 14 addresses
+   - Next power of 2: 2^4 = 16, so host bits = 4
+   - Prefix = 32 − 4 = `/28`
+   - Suitable block: `172.16.5.0/28`
 
 Step 2 – the answers
 
@@ -1121,9 +1121,9 @@ Step 2 – the answers
 | iii | First and last usable IP | `172.16.5.1` and `172.16.5.14` |
 | iv | Broadcast IP address | `172.16.5.15` |
 
-    - 14 usable addresses cover the 12 devices with 2 spare for growth.
-    - A /29 would give only 6 usable addresses, which is too few — that is why /28 is the smallest workable choice.
-    - The rest of the /24 (172.16.5.16 onwards) stays free for the other departments.
+   - 14 usable addresses cover the 12 devices with 2 spare for growth.
+   - A /29 would give only 6 usable addresses, which is too few — that is why /28 is the smallest workable choice.
+   - The rest of the /24 (172.16.5.16 onwards) stays free for the other departments.
 
 49. **What is private IP range class A, B and C with maximum host of each class?** *[BREB Assistant Programmer 18.02.2023 compact it 470 (ET: N/A)]*
 
@@ -1135,29 +1135,29 @@ Answer:
 | B | 172.16.0.0 – 172.31.255.255 | 172.16.0.0/12 | 255.255.0.0 | 2^16 − 2 = 65,534 per /16 |
 | C | 192.168.0.0 – 192.168.255.255 | 192.168.0.0/16 | 255.255.255.0 | 2^8 − 2 = 254 per /24 |
 
-    - The Class B private space is 16 consecutive /16 networks (172.16 to 172.31), and the Class C private space is 256 consecutive /24 networks (192.168.0 to 192.168.255).
-    - Defined in RFC 1918; these addresses are never routed on the internet and require NAT.
+   - The Class B private space is 16 consecutive /16 networks (172.16 to 172.31), and the Class C private space is 256 consecutive /24 networks (192.168.0 to 192.168.255).
+   - Defined in RFC 1918; these addresses are never routed on the internet and require NAT.
 
 50. **(b) Find out the default mask, network address and broadcast address of the classful IPv4 address: 172.16.99.45** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 480 (ET: N/A)]*
 
 Answer: The address 172.16.99.45 must be read in the classful way.
 
-    Step 1 – identify the class
-    - First octet 172 lies in 128–191, so it is `Class B`.
+   Step 1 – identify the class
+   - First octet 172 lies in 128–191, so it is `Class B`.
 
-    Step 2 – default mask
-    - Class B default mask = `255.255.0.0` (/16)
+   Step 2 – default mask
+   - Class B default mask = `255.255.0.0` (/16)
 
-    Step 3 – network address
-    ```
-    IP    172.16.99.45   -> 10101100.00010000.01100011.00101101
-    Mask  255.255.0.0    -> 11111111.11111111.00000000.00000000
-    AND   172.16.0.0
-    ```
-    - Network address: `172.16.0.0`
+   Step 3 – network address
+   ```
+   IP    172.16.99.45   -> 10101100.00010000.01100011.00101101
+   Mask  255.255.0.0    -> 11111111.11111111.00000000.00000000
+   AND   172.16.0.0
+   ```
+   - Network address: `172.16.0.0`
 
-    Step 4 – broadcast address
-    - Set all 16 host bits to 1: `172.16.255.255`
+   Step 4 – broadcast address
+   - Set all 16 host bits to 1: `172.16.255.255`
 
 | Item | Value |
 |---|---|
@@ -1179,26 +1179,26 @@ Answer: Each address is read with its classful default mask.
 | (iii) 220.15.1.10 | C (192–223) | 220.15.1.0 | 220.15.1.255 | 255.255.255.255 |
 | (iv) 200.1.10.100 | C (192–223) | 200.1.10.0 | 200.1.10.255 | 255.255.255.255 |
 
-    Method
-    - Class from the first octet; default masks /8, /16, /24 for A, B, C.
-    - Network address – set all host bits to 0.
-    - Directed broadcast – set all host bits to 1. It targets one named network and can in principle be routed to it (most routers block it today, because it was used in Smurf attacks).
-    - Limited broadcast – always 255.255.255.255, the same for every network, and never forwarded by a router. It reaches only the local segment, and is what DHCP Discover uses.
+   Method
+   - Class from the first octet; default masks /8, /16, /24 for A, B, C.
+   - Network address – set all host bits to 0.
+   - Directed broadcast – set all host bits to 1. It targets one named network and can in principle be routed to it (most routers block it today, because it was used in Smurf attacks).
+   - Limited broadcast – always 255.255.255.255, the same for every network, and never forwarded by a router. It reaches only the local segment, and is what DHCP Discover uses.
 
 52. **What is the subnet mask in 10.2.1.3/22 network?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 637 (ET: N/A)]*
 
 Answer: /22 means the first 22 bits are network bits.
 
-    ```
-    /22 -> 11111111.11111111.11111100.00000000
-    ```
-    - Third octet 11111100 = 128 + 64 + 32 + 16 + 8 + 4 = 252
-    - Subnet mask: `255.255.252.0`
+   ```
+   /22 -> 11111111.11111111.11111100.00000000
+   ```
+   - Third octet 11111100 = 128 + 64 + 32 + 16 + 8 + 4 = 252
+   - Subnet mask: `255.255.252.0`
 
-    Supporting details
-    - Host bits = 32 − 22 = 10, so 1024 addresses and 1022 usable hosts.
-    - Block size in the third octet = 256 − 252 = 4.
-    - Third octet of the IP is 1, which falls in the block starting at 0, so the network is 10.2.0.0/22 and the broadcast is 10.2.3.255.
+   Supporting details
+   - Host bits = 32 − 22 = 10, so 1024 addresses and 1022 usable hosts.
+   - Block size in the third octet = 256 − 252 = 4.
+   - Third octet of the IP is 1, which falls in the block starting at 0, so the network is 10.2.0.0/22 and the broadcast is 10.2.3.255.
 
 53. **In IPv4 show the network address and host address range of class A, B and C.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 656 (ET: N/A)]*
 
@@ -1210,19 +1210,19 @@ Answer:
 | B | 128 – 191 | 128.0.0.0 – 191.255.0.0 | 255.255.0.0 (/16) | x.y.0.1 – x.y.255.254 | 2^14 = 16,384 | 2^16 − 2 = 65,534 |
 | C | 192 – 223 | 192.0.0.0 – 223.255.255.0 | 255.255.255.0 (/24) | x.y.z.1 – x.y.z.254 | 2^21 = 2,097,152 | 2^8 − 2 = 254 |
 
-    Notes
-    - 127.0.0.0/8 is missing from Class A because it is reserved for loopback.
-    - Class A network count is 2^7 − 2 because network 0 and network 127 are not usable.
-    - Class D (224–239) is multicast and Class E (240–255) is reserved, so neither has a host range.
-    - In every class the all-zeros host part is the network address and the all-ones host part is the broadcast address, which is why 2 is subtracted.
+   Notes
+   - 127.0.0.0/8 is missing from Class A because it is reserved for loopback.
+   - Class A network count is 2^7 − 2 because network 0 and network 127 are not usable.
+   - Class D (224–239) is multicast and Class E (240–255) is reserved, so neither has a host range.
+   - In every class the all-zeros host part is the network address and the all-ones host part is the broadcast address, which is why 2 is subtracted.
 
 54. **Given IP Address: 192.168.5.154/26, Calculate network address and subnet mask.** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 657 (ET: N/A)]*
 
 Answer: /26 -> host bits 6, block size = 64, mask = 255.255.255.192.
 
-    Step – find the block containing .154
-    - Blocks in the last octet: 0, 64, 128, 192
-    - 154 falls between 128 and 191, so the block starts at 128.
+   Step – find the block containing .154
+   - Blocks in the last octet: 0, 64, 128, 192
+   - 154 falls between 128 and 191, so the block starts at 128.
 
 | Item | Value |
 |---|---|
@@ -1232,11 +1232,11 @@ Answer: /26 -> host bits 6, block size = 64, mask = 255.255.255.192.
 | Usable range | 192.168.5.129 – 192.168.5.190 |
 | Usable hosts | 62 |
 
-    ```
-    Mask /26  : 11111111.11111111.11111111.11000000 = 255.255.255.192
-    IP  .154  : 10011010
-    AND       : 10000000 = 128
-    ```
+   ```
+   Mask /26  : 11111111.11111111.11111111.11000000 = 255.255.255.192
+   IP  .154  : 10011010
+   AND       : 10000000 = 128
+   ```
 
 55. **Mention the maximum number of networks and hosts used in Class A, B and C networks.** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
@@ -1248,31 +1248,31 @@ Answer:
 | B | 16 (14 usable) | 2^14 = `16,384` | 16 | 2^16 − 2 = `65,534` |
 | C | 24 (21 usable) | 2^21 = `2,097,152` | 8 | 2^8 − 2 = `254` |
 
-    Why the bits differ from the class size
-    - Class A fixes the leading bit as 0, so only 7 of the 8 network bits vary; networks 0 and 127 are excluded, hence −2.
-    - Class B fixes the leading bits as 10, leaving 14 variable bits.
-    - Class C fixes the leading bits as 110, leaving 21 variable bits.
-    - In every class, 2 host addresses are lost to the network address and the broadcast address.
+   Why the bits differ from the class size
+   - Class A fixes the leading bit as 0, so only 7 of the 8 network bits vary; networks 0 and 127 are excluded, hence −2.
+   - Class B fixes the leading bits as 10, leaving 14 variable bits.
+   - Class C fixes the leading bits as 110, leaving 21 variable bits.
+   - In every class, 2 host addresses are lost to the network address and the broadcast address.
 
 56. **Which subnet mask would be appropriate for address range to submit for up to LANs, with each LAN contains 5 to 26 hosts?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
 Answer: Each LAN must hold up to 26 hosts.
 
-    Step 1 – addresses required
-    - 26 hosts + 2 (network and broadcast) = 28 addresses
+   Step 1 – addresses required
+   - 26 hosts + 2 (network and broadcast) = 28 addresses
 
-    Step 2 – round up to a power of 2
-    - 2^4 = 16, too small
-    - 2^5 = 32 >= 28, so host bits = 5
+   Step 2 – round up to a power of 2
+   - 2^4 = 16, too small
+   - 2^5 = 32 >= 28, so host bits = 5
 
-    Step 3 – prefix and mask
-    - Prefix = 32 − 5 = `/27`
-    - Mask = 11111111.11111111.11111111.11100000 = `255.255.255.224`
+   Step 3 – prefix and mask
+   - Prefix = 32 − 5 = `/27`
+   - Mask = 11111111.11111111.11111111.11100000 = `255.255.255.224`
 
-    Check
-    - Usable hosts = 2^5 − 2 = 30, which covers the 5-to-26 range with 4 spare.
-    - Block size = 32, so eight such LANs fit in one /24, for example 192.168.1.0/27, .32/27, .64/27 … .224/27.
-    - A /28 would give only 14 usable hosts, which is not enough for 26.
+   Check
+   - Usable hosts = 2^5 − 2 = 30, which covers the 5-to-26 range with 4 spare.
+   - Block size = 32, so eight such LANs fit in one /24, for example 192.168.1.0/27, .32/27, .64/27 … .224/27.
+   - A /28 would give only 14 usable hosts, which is not enough for 26.
 
 57. **Given IP Address: 192.168.19.24/29, find out the following IP Class & type, Number of Host, Network address, Broadcast address, Wildcard, and Subnet mask.** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
 
@@ -1287,14 +1287,14 @@ Answer: Given 192.168.19.24/29.
 | Wildcard mask | `0.0.0.7` | 255.255.255.255 − 255.255.255.248 |
 | Subnet mask | `255.255.255.248` | /29 = 11111111.11111111.11111111.11111000 |
 
-    - Usable range: 192.168.19.25 – 192.168.19.30.
-    - The wildcard mask is the inverse of the subnet mask and is what Cisco ACLs and OSPF network statements use; a 0 bit means "must match", a 1 bit means "ignore".
+   - Usable range: 192.168.19.25 – 192.168.19.30.
+   - The wildcard mask is the inverse of the subnet mask and is what Cisco ACLs and OSPF network statements use; a 0 bit means "must match", a 1 bit means "ignore".
 
 58. **Find network address, subnet mask, broadcast address and IP host range of 192.168.100.128/26** *[GTCL Assistant Engineer (CSE) 2022 compact it 685 (ET: BUET)]*
 
 Answer: /26 -> host bits 6, block size 64, mask 255.255.255.192.
 
-    - The last octet 128 is a multiple of 64, so it is itself a valid network address.
+   - The last octet 128 is a multiple of 64, so it is itself a valid network address.
 
 | Item | Value |
 |---|---|
@@ -1304,7 +1304,7 @@ Answer: /26 -> host bits 6, block size 64, mask 255.255.255.192.
 | IP host range | `192.168.100.129 – 192.168.100.190` |
 | Usable hosts | 62 |
 
-    - This is the third of the four /26 subnets of 192.168.100.0/24 (.0, .64, .128, .192).
+   - This is the third of the four /26 subnets of 192.168.100.0/24 (.0, .64, .128, .192).
 
 59. **What is the range of IPv4 address class A, B and C?** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 
@@ -1316,55 +1316,55 @@ Answer:
 | B | 128 – 191 | 128.0.0.0 – 191.255.255.255 | 255.255.0.0 (/16) |
 | C | 192 – 223 | 192.0.0.0 – 223.255.255.255 | 255.255.255.0 (/24) |
 
-    Also defined
-    - Class D: 224 – 239, used for multicast, no default mask.
-    - Class E: 240 – 255, reserved for research and experiments.
-    - 127.0.0.0 – 127.255.255.255 is excluded from Class A and reserved for loopback.
-    - 0.0.0.0 means "this network" or the default route and is not assignable.
+   Also defined
+   - Class D: 224 – 239, used for multicast, no default mask.
+   - Class E: 240 – 255, reserved for research and experiments.
+   - 127.0.0.0 – 127.255.255.255 is excluded from Class A and reserved for loopback.
+   - 0.0.0.0 means "this network" or the default route and is not assignable.
 
 60. **What is subnet mask? Given IP address 192.168.0.0/29 find 10^{\text{th}} and 22^{\text{th}} subnet first host address and last host address.** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 701 (ET: BUET)]*
 
 Answer:
 
-    What is a subnet mask
-    - A 32-bit value that marks which bits of an IP address are the network part (1s) and which are the host part (0s). Combined with the IP address by a bitwise AND, it yields the network address, and it tells a host whether a destination is local or must go through the gateway.
+   What is a subnet mask
+   - A 32-bit value that marks which bits of an IP address are the network part (1s) and which are the host part (0s). Combined with the IP address by a bitwise AND, it yields the network address, and it tells a host whether a destination is local or must go through the gateway.
 
-    Given 192.168.0.0/29
-    - Host bits = 3, block size = 2^3 = `8`, mask = `255.255.255.248`
-    - Usable hosts per subnet = 8 − 2 = 6
-    - Subnets step through the last octet in 8s: 0, 8, 16, 24 …
+   Given 192.168.0.0/29
+   - Host bits = 3, block size = 2^3 = `8`, mask = `255.255.255.248`
+   - Usable hosts per subnet = 8 − 2 = 6
+   - Subnets step through the last octet in 8s: 0, 8, 16, 24 …
 
-    Finding the nth subnet
-    - Network address of subnet n = (n − 1) × 8
+   Finding the nth subnet
+   - Network address of subnet n = (n − 1) × 8
 
-    10th subnet
-    - (10 − 1) × 8 = 72 -> network `192.168.0.72/29`
-    - First host: `192.168.0.73`
-    - Last host: `192.168.0.78`
-    - Broadcast: 192.168.0.79
+   10th subnet
+   - (10 − 1) × 8 = 72 -> network `192.168.0.72/29`
+   - First host: `192.168.0.73`
+   - Last host: `192.168.0.78`
+   - Broadcast: 192.168.0.79
 
-    22nd subnet
-    - (22 − 1) × 8 = 168 -> network `192.168.0.168/29`
-    - First host: `192.168.0.169`
-    - Last host: `192.168.0.174`
-    - Broadcast: 192.168.0.175
+   22nd subnet
+   - (22 − 1) × 8 = 168 -> network `192.168.0.168/29`
+   - First host: `192.168.0.169`
+   - Last host: `192.168.0.174`
+   - Broadcast: 192.168.0.175
 
 | Subnet | Network | First host | Last host | Broadcast |
 |---|---|---|---|---|
 | 10th | 192.168.0.72 | 192.168.0.73 | 192.168.0.78 | 192.168.0.79 |
 | 22nd | 192.168.0.168 | 192.168.0.169 | 192.168.0.174 | 192.168.0.175 |
 
-    - A /24 divided into /29 gives 32 subnets, so both the 10th and the 22nd exist.
+   - A /24 divided into /29 gives 32 subnets, so both the 10th and the 22nd exist.
 
 61. **How many bits need to identify an IP address in IPv4?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
 
 Answer: An IPv4 address needs `32 bits` (4 bytes).
 
-    - It is written in dotted-decimal form as four octets of 8 bits each, for example 192.168.1.1.
-    - Each octet holds a value from 0 to 255.
-    - Total address space = 2^32 = 4,294,967,296 addresses, which is why IPv4 ran out.
-    - IPv6 uses 128 bits, giving 2^128 addresses.
-    - A MAC address, by contrast, is 48 bits.
+   - It is written in dotted-decimal form as four octets of 8 bits each, for example 192.168.1.1.
+   - Each octet holds a value from 0 to 255.
+   - Total address space = 2^32 = 4,294,967,296 addresses, which is why IPv4 ran out.
+   - IPv6 uses 128 bits, giving 2^128 addresses.
+   - A MAC address, by contrast, is 48 bits.
 
 62. **What is default subnet mask?** *[BARC Data Entry Officer 10.09.2022 compact it 702 (ET: N/A)]*
 
@@ -1376,19 +1376,19 @@ Answer: A default subnet mask is the standard mask that belongs to an IP address
 | B | 255.255.0.0 | /16 | 11111111.11111111.00000000.00000000 |
 | C | 255.255.255.0 | /24 | 11111111.11111111.11111111.00000000 |
 
-    - Class A uses 1 octet for the network, Class B uses 2, Class C uses 3.
-    - Classes D and E have no default mask, because they are not divided into network and host parts.
-    - A custom (subnetted) mask is always longer than the default, since subnetting borrows host bits — for example a Class C subnetted to /26 uses 255.255.255.192.
+   - Class A uses 1 octet for the network, Class B uses 2, Class C uses 3.
+   - Classes D and E have no default mask, because they are not divided into network and host parts.
+   - A custom (subnetted) mask is always longer than the default, since subnetting borrows host bits — for example a Class C subnetted to /26 uses 255.255.255.192.
 
 63. **Given IP: 168.20.96.63, Subnet mask: 255.255.192.0 Find network address, broadcast address and number of host.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 712 (ET: BUET)]*
 
 Answer: Mask 255.255.192.0 = /18 (11111111.11111111.11000000.00000000).
 
-    Step 1 – block size
-    - Third octet: 256 − 192 = 64, so networks step 168.20.0.0, 168.20.64.0, 168.20.128.0, 168.20.192.0
+   Step 1 – block size
+   - Third octet: 256 − 192 = 64, so networks step 168.20.0.0, 168.20.64.0, 168.20.128.0, 168.20.192.0
 
-    Step 2 – find the block containing 168.20.96.63
-    - Third octet 96 lies between 64 and 127, so the block starts at 64.
+   Step 2 – find the block containing 168.20.96.63
+   - Third octet 96 lies between 64 and 127, so the block starts at 64.
 
 | Item | Value |
 |---|---|
@@ -1397,15 +1397,15 @@ Answer: Mask 255.255.192.0 = /18 (11111111.11111111.11000000.00000000).
 | Usable range | 168.20.64.1 – 168.20.127.254 |
 | Number of hosts | 2^14 = 16,384 total, `16,382` usable |
 
-    - Host bits = 32 − 18 = 14.
-    - Note that 168.20.96.63 is an ordinary host address here, not a broadcast address — the .63 only looks like one because of the /24 habit.
+   - Host bits = 32 − 18 = 14.
+   - Note that 168.20.96.63 is an ordinary host address here, not a broadcast address — the .63 only looks like one because of the /24 habit.
 
 64. **An IP address is: 172.162.100.25/27, Find out the following: (a) Network Address (b) IP class (c) Subnet mask (d) Broadcast address (e) Hosts per subnet** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
 
 Answer: Given 172.162.100.25/27 -> host bits 5, block size 32, mask 255.255.255.224.
 
-    - Blocks in the last octet: 0, 32, 64, 96, 128 …
-    - 25 lies between 0 and 31, so the block starts at 0.
+   - Blocks in the last octet: 0, 32, 64, 96, 128 …
+   - 25 lies between 0 and 31, so the block starts at 0.
 
 | # | Item | Value |
 |---|---|---|
@@ -1415,41 +1415,41 @@ Answer: Given 172.162.100.25/27 -> host bits 5, block size 32, mask 255.255.255.
 | d | Broadcast address | `172.162.100.31` |
 | e | Hosts per subnet | 2^5 − 2 = `30` |
 
-    - Usable range: 172.162.100.1 – 172.162.100.30.
-    - Note: 172.162.x.x is a public Class B address. The private Class B block is only 172.16 – 172.31.
+   - Usable range: 172.162.100.1 – 172.162.100.30.
+   - Note: 172.162.x.x is a public Class B address. The private Class B block is only 172.16 – 172.31.
 
 65. **What is Public and Private IP?** *[IDRA Assistant Network Administrator 2022 compact it 728 (ET: N/A)]*
 
 Answer:
 
-    Public IP
-    - A globally unique address allocated by IANA through the regional registries and handed to a customer by an ISP.
-    - It is routable on the internet, so any device holding one can be reached directly from outside.
-    - Limited in supply and normally paid for. Examples: 8.8.8.8 (Google DNS), 1.1.1.1 (Cloudflare).
-    - Used by web servers, mail servers and the WAN side of a router.
+   Public IP
+   - A globally unique address allocated by IANA through the regional registries and handed to a customer by an ISP.
+   - It is routable on the internet, so any device holding one can be reached directly from outside.
+   - Limited in supply and normally paid for. Examples: 8.8.8.8 (Google DNS), 1.1.1.1 (Cloudflare).
+   - Used by web servers, mail servers and the WAN side of a router.
 
-    Private IP
-    - An address from a reserved range, unique only inside one organisation, defined by RFC 1918.
-    - Internet routers drop these addresses, so a private host cannot be reached directly from outside.
-    - Free, unlimited and reusable by every organisation.
-    - Ranges: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.
-    - Used by PCs, printers, IP cameras and phones inside a LAN.
+   Private IP
+   - An address from a reserved range, unique only inside one organisation, defined by RFC 1918.
+   - Internet routers drop these addresses, so a private host cannot be reached directly from outside.
+   - Free, unlimited and reusable by every organisation.
+   - Ranges: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.
+   - Used by PCs, printers, IP cameras and phones inside a LAN.
 
-    How they work together
-    ```
-      LAN (private)                Router / NAT              Internet (public)
-    192.168.1.10  ----------->  103.108.140.5  ----------->  8.8.8.8
-    192.168.1.11  ----------->  (single public IP)
-    ```
-    - NAT rewrites the private source address to the router's public address on the way out, and reverses it on the way back. This lets hundreds of private hosts share one public address, which slowed IPv4 exhaustion, and it also hides internal hosts, giving a basic layer of security.
+   How they work together
+   ```
+     LAN (private)                Router / NAT              Internet (public)
+   192.168.1.10  ----------->  103.108.140.5  ----------->  8.8.8.8
+   192.168.1.11  ----------->  (single public IP)
+   ```
+   - NAT rewrites the private source address to the router's public address on the way out, and reverses it on the way back. This lets hundreds of private hosts share one public address, which slowed IPv4 exhaustion, and it also hides internal hosts, giving a basic layer of security.
 
 66. **A network IP address is 172.16.236.92/27. Find out the: (a) Subnet mask (b) Network Address (c) Broadcast Address** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 731 (ET: N/A)]*
 
 Answer: /27 -> host bits 5, block size = 32, mask = 255.255.255.224.
 
-    Find the block containing .92
-    - Blocks: 0, 32, 64, 96, 128 …
-    - 92 lies between 64 and 95, so the block starts at 64.
+   Find the block containing .92
+   - Blocks: 0, 32, 64, 96, 128 …
+   - 92 lies between 64 and 95, so the block starts at 64.
 
 | # | Item | Value |
 |---|---|---|
@@ -1457,15 +1457,15 @@ Answer: /27 -> host bits 5, block size = 32, mask = 255.255.255.224.
 | b | Network address | `172.16.236.64` |
 | c | Broadcast address | `172.16.236.95` |
 
-    - Usable range: 172.16.236.65 – 172.16.236.94 (30 hosts).
-    - Shortcut: floor(92 ÷ 32) = 2, and 2 × 32 = 64.
+   - Usable range: 172.16.236.65 – 172.16.236.94 (30 hosts).
+   - Shortcut: floor(92 ÷ 32) = 2, and 2 × 32 = 64.
 
 67. **Given IP address 172.3.16.156/23 and find out the following answer: (i) Network address (ii) Subnet mask (iii) Number of host** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)]*
 
 Answer: /23 -> host bits 9, mask 255.255.254.0, block size in the third octet = 256 − 254 = 2.
 
-    Find the block containing 172.3.16.156
-    - Third octet 16 is even, so it is itself the start of a /23 block covering third octets 16 and 17.
+   Find the block containing 172.3.16.156
+   - Third octet 16 is even, so it is itself the start of a /23 block covering third octets 16 and 17.
 
 | # | Item | Value |
 |---|---|---|
@@ -1473,8 +1473,8 @@ Answer: /23 -> host bits 9, mask 255.255.254.0, block size in the third octet = 
 | ii | Subnet mask | `255.255.254.0` |
 | iii | Number of hosts | 2^9 = 512 total, `510` usable |
 
-    - Address range 172.3.16.0 – 172.3.17.255, usable 172.3.16.1 – 172.3.17.254, broadcast 172.3.17.255.
-    - Rule for /23: the block always starts on an even third octet.
+   - Address range 172.3.16.0 – 172.3.17.255, usable 172.3.16.1 – 172.3.17.254, broadcast 172.3.17.255.
+   - Rule for /23: the block always starts on an even third octet.
 
 68. **Answer the following: (i) 192.168.10.0/23, How many usable address? (ii) 192.168.10.0/23, Find subnet mask. (iii) 192.168.10.0/23, Find Broadcast Address. (iv) 192.168.10.0/23, What is last usable host?** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
 
@@ -1487,21 +1487,21 @@ Answer: For 192.168.10.0/23 — host bits = 9, block size in the third octet = 2
 | iii | Broadcast address | `192.168.11.255` |
 | iv | Last usable host | `192.168.11.254` |
 
-    - Full range: 192.168.10.0 – 192.168.11.255, usable 192.168.10.1 – 192.168.11.254.
-    - A /23 is simply two /24 blocks merged, which is why the range spans both 192.168.10.x and 192.168.11.x.
+   - Full range: 192.168.10.0 – 192.168.11.255, usable 192.168.10.1 – 192.168.11.254.
+   - A /23 is simply two /24 blocks merged, which is why the range spans both 192.168.10.x and 192.168.11.x.
 
 69. **(ii) CIDR কী? 192.168.100.9/26 IP address থেকে (a) Total subnets (b) Block size (c) Valid Hosts (d) Total hosts বের করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 788 (ET: N/A)]*
 
 Answer:
 
-    What is CIDR
-    - CIDR (Classless Inter-Domain Routing) removes the fixed A/B/C classes and lets any prefix length from /0 to /32 be used, written as address/prefix (192.168.100.9/26).
-    - It was introduced in RFC 1519 (1993) to stop the address wastage of classful addressing and to shrink routing tables through route aggregation (supernetting).
-    - It also makes VLSM possible, so different subnets of one network can have different sizes.
+   What is CIDR
+   - CIDR (Classless Inter-Domain Routing) removes the fixed A/B/C classes and lets any prefix length from /0 to /32 be used, written as address/prefix (192.168.100.9/26).
+   - It was introduced in RFC 1519 (1993) to stop the address wastage of classful addressing and to shrink routing tables through route aggregation (supernetting).
+   - It also makes VLSM possible, so different subnets of one network can have different sizes.
 
-    Calculations for 192.168.100.9/26
-    - Class C address, default prefix /24, so borrowed bits = 26 − 24 = 2
-    - Host bits = 32 − 26 = 6
+   Calculations for 192.168.100.9/26
+   - Class C address, default prefix /24, so borrowed bits = 26 − 24 = 2
+   - Host bits = 32 − 26 = 6
 
 | # | Item | Value | Working |
 |---|---|---|---|
@@ -1510,19 +1510,19 @@ Answer:
 | c | Valid hosts | `62` | 2^6 − 2 |
 | d | Total hosts | `64` | 2^6 |
 
-    - Mask = 255.255.255.192. The address .9 falls in the first block, so the network is 192.168.100.0/26, broadcast 192.168.100.63, usable 192.168.100.1 – 192.168.100.62.
+   - Mask = 255.255.255.192. The address .9 falls in the first block, so the network is 192.168.100.0/26, broadcast 192.168.100.63, usable 192.168.100.1 – 192.168.100.62.
 
 70. **(a) What is the usable number of host IP addresses available on a network that has a /26 mask? Write down the subset mask of this network. Write down the first and the last IP address that can be assigned to host PCs if the network address is 192.168.30.128/26. What address should be used for broadcast purpose in this Network?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 801-802 (ET: N/A)]*
 
 Answer: For a /26 mask — host bits = 32 − 26 = 6.
 
-    Usable hosts and mask
-    - Total addresses = 2^6 = 64
-    - Usable hosts = 64 − 2 = `62`
-    - Subnet mask = `255.255.255.192` (11111111.11111111.11111111.11000000)
+   Usable hosts and mask
+   - Total addresses = 2^6 = 64
+   - Usable hosts = 64 − 2 = `62`
+   - Subnet mask = `255.255.255.192` (11111111.11111111.11111111.11000000)
 
-    For the network 192.168.30.128/26
-    - Block size = 64, and 128 is a multiple of 64, so this is a valid network address covering .128 – .191.
+   For the network 192.168.30.128/26
+   - Block size = 64, and 128 is a multiple of 64, so this is a valid network address covering .128 – .191.
 
 | Item | Value |
 |---|---|
@@ -1531,13 +1531,13 @@ Answer: For a /26 mask — host bits = 32 − 26 = 6.
 | Last host IP | `192.168.30.190` |
 | Broadcast address | `192.168.30.191` |
 
-    - The address used for broadcast in this network is `192.168.30.191` (all 6 host bits set to 1).
+   - The address used for broadcast in this network is `192.168.30.191` (all 6 host bits set to 1).
 
 71. **Answer the following: (i) 192.168.10.2/28, Find subnet mask. (ii) 192.168.10.2/28, Find Network Address. (iii) 192.168.10.2/28, Find IP Address of the first host? (iv) 192.168.10.2/28, Find IP Address of the last host? (v) 192.168.10.2/28, Find Broadcast Address.** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
 Answer: /28 -> host bits 4, block size 16, mask 255.255.255.240.
 
-    - .2 lies between 0 and 15, so the block starts at 0.
+   - .2 lies between 0 and 15, so the block starts at 0.
 
 | # | Item | Value |
 |---|---|---|
@@ -1547,42 +1547,42 @@ Answer: /28 -> host bits 4, block size 16, mask 255.255.255.240.
 | iv | Last host | `192.168.10.14` |
 | v | Broadcast address | `192.168.10.15` |
 
-    - Usable hosts = 14.
+   - Usable hosts = 14.
 
 72. **Select the correct answer: (i) Which cannot IP address 172.16.28.0/16- (a) .0 (b) .1 (c) .255 (d) All (ii) Which at the follow Dynamically Assign Protocol? (a) DHCP (b) ARP (c) ICMP (d) TCP (iii) Which one is Private IP address? (a) 10.10.10.10 (b) 172.172.172.172 (c) 192.192.192.192 (d) All (iv) SSH Protocol port number is _____. (v) Which is the name of Symmetric key encryption algorithm? (a) AES (b) 3DES (c) Re4 (d) None** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
 
 Answer:
 
-    (i) Which cannot be an IP address in 172.16.28.0/16 — answer `(d) All`
-    - With a /16 mask the network is 172.16.0.0 and the broadcast is 172.16.255.255. Inside that range, 172.16.28.0, 172.16.28.1 and 172.16.28.255 are all ordinary host addresses, so none of them is barred.
-    - Note: many exam keys mark (a) .0 here, on the assumption of a /24 mask. With the /16 stated in the question, all three are usable.
+   (i) Which cannot be an IP address in 172.16.28.0/16 — answer `(d) All`
+   - With a /16 mask the network is 172.16.0.0 and the broadcast is 172.16.255.255. Inside that range, 172.16.28.0, 172.16.28.1 and 172.16.28.255 are all ordinary host addresses, so none of them is barred.
+   - Note: many exam keys mark (a) .0 here, on the assumption of a /24 mask. With the /16 stated in the question, all three are usable.
 
-    (ii) Dynamic assignment protocol — answer `(a) DHCP`
-    - DHCP (Dynamic Host Configuration Protocol) leases an IP address, mask, gateway and DNS server to a client automatically. It uses UDP ports 67 (server) and 68 (client), and the DORA exchange: Discover, Offer, Request, Acknowledge.
-    - ARP maps IP to MAC, ICMP carries error and ping messages, TCP is a transport protocol — none of them assigns addresses.
+   (ii) Dynamic assignment protocol — answer `(a) DHCP`
+   - DHCP (Dynamic Host Configuration Protocol) leases an IP address, mask, gateway and DNS server to a client automatically. It uses UDP ports 67 (server) and 68 (client), and the DORA exchange: Discover, Offer, Request, Acknowledge.
+   - ARP maps IP to MAC, ICMP carries error and ping messages, TCP is a transport protocol — none of them assigns addresses.
 
-    (iii) Private IP address — answer `(a) 10.10.10.10`
-    - 10.0.0.0/8 is the RFC 1918 Class A private block.
-    - 172.172.172.172 is public, because only 172.16 – 172.31 is private.
-    - 192.192.192.192 is public, because only 192.168.x.x is private.
+   (iii) Private IP address — answer `(a) 10.10.10.10`
+   - 10.0.0.0/8 is the RFC 1918 Class A private block.
+   - 172.172.172.172 is public, because only 172.16 – 172.31 is private.
+   - 192.192.192.192 is public, because only 192.168.x.x is private.
 
-    (iv) SSH port number — `22` (TCP)
-    - Other common ports: FTP 20/21, Telnet 23, SMTP 25, DNS 53, HTTP 80, HTTPS 443.
+   (iv) SSH port number — `22` (TCP)
+   - Other common ports: FTP 20/21, Telnet 23, SMTP 25, DNS 53, HTTP 80, HTTPS 443.
 
-    (v) Symmetric key algorithm — answer `(a) AES` and `(b) 3DES`
-    - AES, 3DES, DES, Blowfish and RC4 are all symmetric. The option written as "Re4" is RC4, which is also symmetric but is now deprecated as insecure.
-    - Asymmetric algorithms are RSA, ECC, Diffie-Hellman and DSA.
+   (v) Symmetric key algorithm — answer `(a) AES` and `(b) 3DES`
+   - AES, 3DES, DES, Blowfish and RC4 are all symmetric. The option written as "Re4" is RC4, which is also symmetric but is now deprecated as insecure.
+   - Asymmetric algorithms are RSA, ECC, Diffie-Hellman and DSA.
 
 73. **A network address is given 172.18.10.0/23, divide this network address into 4 subnets and find every subnet address, start address, subnet mask, broadcast address etc.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843-844 (ET: N/A)]*
 
 Answer: Given 172.18.10.0/23, four equal subnets.
 
-    Step 1 – bits to borrow
-    - 2^n >= 4 -> n = 2 bits
-    - New prefix = 23 + 2 = `/25`, mask `255.255.255.128`, block size 128
+   Step 1 – bits to borrow
+   - 2^n >= 4 -> n = 2 bits
+   - New prefix = 23 + 2 = `/25`, mask `255.255.255.128`, block size 128
 
-    Step 2 – the four subnets
-    - The /23 covers 172.18.10.0 – 172.18.11.255, so the 128-address blocks are:
+   Step 2 – the four subnets
+   - The /23 covers 172.18.10.0 – 172.18.11.255, so the 128-address blocks are:
 
 | Subnet | Network (subnet address) | Start (first usable) | Last usable | Broadcast | Mask |
 |---|---|---|---|---|---|
@@ -1591,16 +1591,16 @@ Answer: Given 172.18.10.0/23, four equal subnets.
 | 3 | 172.18.11.0/25 | 172.18.11.1 | 172.18.11.126 | 172.18.11.127 | 255.255.255.128 |
 | 4 | 172.18.11.128/25 | 172.18.11.129 | 172.18.11.254 | 172.18.11.255 | 255.255.255.128 |
 
-    - Usable hosts per subnet = 2^7 − 2 = 126.
-    - Check: 4 × 128 = 512 = the full size of a /23.
+   - Usable hosts per subnet = 2^7 − 2 = 126.
+   - Check: 4 × 128 = 512 = the full size of a /23.
 
 74. **A network address is given 172.168.0.0/28, divide this network address into 4 subnets and find every subnet address, start address, subnet mask, broadcast address etc.** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 856 (ET: N/A)]*
 
 Answer: Given 172.168.0.0/28 = 16 addresses only, four equal subnets.
 
-    Step 1 – bits to borrow
-    - 2^n >= 4 -> n = 2
-    - New prefix = 28 + 2 = `/30`, mask `255.255.255.252`, block size 4
+   Step 1 – bits to borrow
+   - 2^n >= 4 -> n = 2
+   - New prefix = 28 + 2 = `/30`, mask `255.255.255.252`, block size 4
 
 Step 2 – the four subnets
 
@@ -1611,37 +1611,37 @@ Step 2 – the four subnets
 | 3 | 172.168.0.8/30 | 172.168.0.9 | 172.168.0.10 | 172.168.0.11 | 255.255.255.252 |
 | 4 | 172.168.0.12/30 | 172.168.0.13 | 172.168.0.14 | 172.168.0.15 | 255.255.255.252 |
 
-    - Usable hosts per subnet = 2^2 − 2 = 2, which is exactly right for a router-to-router WAN link but useless for a LAN.
-    - Check: 4 × 4 = 16 = the full size of a /28.
+   - Usable hosts per subnet = 2^2 − 2 = 2, which is exactly right for a router-to-router WAN link but useless for a LAN.
+   - Check: 4 × 4 = 16 = the full size of a /28.
 
 75. **In a “Class A” network total 20 subnets are needed with maximum 260 hosts per subnets. Can 255.255.255.0 subnet mask be used in this?** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 
 Answer: No — `255.255.255.0 cannot be used`.
 
-    Step 1 – what the proposed mask gives
-    - 255.255.255.0 = /24, host bits = 8
-    - Usable hosts per subnet = 2^8 − 2 = `254`
-    - Requirement is 260 hosts per subnet, and 254 < 260, so it fails.
+   Step 1 – what the proposed mask gives
+   - 255.255.255.0 = /24, host bits = 8
+   - Usable hosts per subnet = 2^8 − 2 = `254`
+   - Requirement is 260 hosts per subnet, and 254 < 260, so it fails.
 
-    Step 2 – the mask that does work
-    - Hosts needed = 260 + 2 = 262
-    - 2^8 = 256, too small; 2^9 = 512 >= 262, so host bits = 9
-    - Prefix = 32 − 9 = `/23`, mask = `255.255.254.0`, giving 510 usable hosts
+   Step 2 – the mask that does work
+   - Hosts needed = 260 + 2 = 262
+   - 2^8 = 256, too small; 2^9 = 512 >= 262, so host bits = 9
+   - Prefix = 32 − 9 = `/23`, mask = `255.255.254.0`, giving 510 usable hosts
 
-    Step 3 – check the subnet requirement
-    - Class A default is /8, so borrowed bits = 23 − 8 = 15
-    - Subnets available = 2^15 = 32,768, far more than the 20 required
+   Step 3 – check the subnet requirement
+   - Class A default is /8, so borrowed bits = 23 − 8 = 15
+   - Subnets available = 2^15 = 32,768, far more than the 20 required
 
-    Answer
-    - 255.255.255.0 is rejected because it supports only 254 hosts.
-    - Use `255.255.254.0` (/23): 510 usable hosts per subnet and 32,768 subnets, satisfying both conditions.
-    - Rule to remember: always size the mask by the host requirement first, then verify that the subnet count is still enough.
+   Answer
+   - 255.255.255.0 is rejected because it supports only 254 hosts.
+   - Use `255.255.254.0` (/23): 510 usable hosts per subnet and 32,768 subnets, satisfying both conditions.
+   - Rule to remember: always size the mask by the host requirement first, then verify that the subnet count is still enough.
 
 76. **Find Network address, Valid Host, Subnet mask and Broadcast address from 172.16.128.120/25.** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
 
 Answer: /25 -> host bits 7, block size = 128, mask = 255.255.255.128.
 
-    - Blocks in the last octet: 0 and 128. The value 120 lies in 0–127, so the block starts at 0.
+   - Blocks in the last octet: 0 and 128. The value 120 lies in 0–127, so the block starts at 0.
 
 | Item | Value |
 |---|---|
@@ -1651,21 +1651,21 @@ Answer: /25 -> host bits 7, block size = 128, mask = 255.255.255.128.
 | Broadcast address | `172.16.128.127` |
 | Valid hosts | 2^7 − 2 = 126 |
 
-    - Careful: the third octet 128 is part of the address, not the subnet boundary. Only the last octet is split by a /25.
+   - Careful: the third octet 128 is part of the address, not the subnet boundary. Only the last octet is split by a /25.
 
 77. **What is the range of class C IPv4 address? Suppose, Class C network has four subnets. How many usable PC needed each subnet?** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875-876 (ET: BUET)]*
 
 Answer:
 
-    Range of Class C IPv4 addresses
-    - First octet 192 – 223, so the full range is `192.0.0.0 – 223.255.255.255`.
-    - Default mask 255.255.255.0 (/24); leading bits 110.
-    - Each Class C network has 2^8 − 2 = 254 usable hosts.
+   Range of Class C IPv4 addresses
+   - First octet 192 – 223, so the full range is `192.0.0.0 – 223.255.255.255`.
+   - Default mask 255.255.255.0 (/24); leading bits 110.
+   - Each Class C network has 2^8 − 2 = 254 usable hosts.
 
-    Class C network divided into four subnets
-    - Bits to borrow: 2^n >= 4 -> n = 2
-    - New prefix = 24 + 2 = /26, mask 255.255.255.192, block size 64
-    - Usable PCs per subnet = 2^6 − 2 = `62`
+   Class C network divided into four subnets
+   - Bits to borrow: 2^n >= 4 -> n = 2
+   - New prefix = 24 + 2 = /26, mask 255.255.255.192, block size 64
+   - Usable PCs per subnet = 2^6 − 2 = `62`
 
 | Subnet | Network | Broadcast | Usable range | Usable PCs |
 |---|---|---|---|---|
@@ -1674,53 +1674,53 @@ Answer:
 | 3 | 192.168.1.128/26 | 192.168.1.191 | .129 – .190 | 62 |
 | 4 | 192.168.1.192/26 | 192.168.1.255 | .193 – .254 | 62 |
 
-    - Total usable = 4 × 62 = 248, against 254 in the unsubnetted /24. The 6 lost addresses are the extra network and broadcast addresses that subnetting creates.
+   - Total usable = 4 × 62 = 248, against 254 in the unsubnetted /24. The 6 lost addresses are the extra network and broadcast addresses that subnetting creates.
 
 78. **(a) What is the subnet mask of 10.2.1.3/26 and What is the usable number of IP address on network that has a 26 mask?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 886 (ET: N/A)]*
 
 Answer: Given 10.2.1.3/26.
 
-    Subnet mask
-    - /26 = 11111111.11111111.11111111.11000000
-    - Last octet = 128 + 64 = 192
-    - Mask: `255.255.255.192`
+   Subnet mask
+   - /26 = 11111111.11111111.11111111.11000000
+   - Last octet = 128 + 64 = 192
+   - Mask: `255.255.255.192`
 
-    Usable IP addresses on a /26 network
-    - Host bits = 32 − 26 = 6
-    - Total addresses = 2^6 = 64
-    - Usable = 64 − 2 = `62`
+   Usable IP addresses on a /26 network
+   - Host bits = 32 − 26 = 6
+   - Total addresses = 2^6 = 64
+   - Usable = 64 − 2 = `62`
 
-    Supporting detail
-    - Block size = 64, and .3 lies in 0–63, so the network is 10.2.1.0/26, broadcast 10.2.1.63, usable range 10.2.1.1 – 10.2.1.62.
+   Supporting detail
+   - Block size = 64, and .3 lies in 0–63, so the network is 10.2.1.0/26, broadcast 10.2.1.63, usable range 10.2.1.1 – 10.2.1.62.
 
 79. **172.168.128.0/20 এর Broadcast Address বের কর এবং কতগুলো Computer (Host) Connect করা যাবে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
 
 Answer: Given 172.168.128.0/20.
 
-    Step 1 – mask and block size
-    - /20 -> 11111111.11111111.11110000.00000000 = 255.255.240.0
-    - Block size in the third octet = 256 − 240 = 16
-    - 128 is a multiple of 16, so the block runs from third octet 128 to 143.
+   Step 1 – mask and block size
+   - /20 -> 11111111.11111111.11110000.00000000 = 255.255.240.0
+   - Block size in the third octet = 256 − 240 = 16
+   - 128 is a multiple of 16, so the block runs from third octet 128 to 143.
 
-    Step 2 – broadcast address
-    - Set all 12 host bits to 1
-    - Broadcast address: `172.168.143.255`
-    - Full range: 172.168.128.0 – 172.168.143.255
+   Step 2 – broadcast address
+   - Set all 12 host bits to 1
+   - Broadcast address: `172.168.143.255`
+   - Full range: 172.168.128.0 – 172.168.143.255
 
-    Step 3 – number of hosts
-    - Host bits = 32 − 20 = 12
-    - Total = 2^12 = 4096
-    - Connectable computers = 4096 − 2 = `4094`
-    - Usable range: 172.168.128.1 – 172.168.143.254
+   Step 3 – number of hosts
+   - Host bits = 32 − 20 = 12
+   - Total = 2^12 = 4096
+   - Connectable computers = 4096 − 2 = `4094`
+   - Usable range: 172.168.128.1 – 172.168.143.254
 
 80. **Suppose a network with IP address 192.16.0.0 is divided into 2 subnets, find number of hosts per subnet. Also for the first subnet, find- (i) First Subnet address (ii) First host address (iii) Last host address (iv) Broadcast address** *[BAUST Assistant Programmer 2021 compact it 919 (ET: N/A)]*
 
 Answer: 192.16.0.0 has first octet 192, so it is a Class C address with default mask /24 (256 addresses).
 
-    Step 1 – divide into 2 subnets
-    - 2^n >= 2 -> n = 1 bit borrowed
-    - New prefix = 24 + 1 = /25, mask 255.255.255.128, block size 128
-    - Hosts per subnet = 2^7 − 2 = `126`
+   Step 1 – divide into 2 subnets
+   - 2^n >= 2 -> n = 1 bit borrowed
+   - New prefix = 24 + 1 = /25, mask 255.255.255.128, block size 128
+   - Hosts per subnet = 2^7 − 2 = `126`
 
 Step 2 – the first subnet
 
@@ -1731,22 +1731,22 @@ Step 2 – the first subnet
 | iii | Last host address | `192.16.0.126` |
 | iv | Broadcast address | `192.16.0.127` |
 
-    - The second subnet is 192.16.0.128/25, hosts 192.16.0.129 – 192.16.0.254, broadcast 192.16.0.255.
+   - The second subnet is 192.16.0.128/25, hosts 192.16.0.129 – 192.16.0.254, broadcast 192.16.0.255.
 
 81. **Find the Subnet mask from the following IP: 192.168.3.0/22** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
 Answer: /22 means 22 network bits.
 
-    ```
-    /22 -> 11111111.11111111.11111100.00000000
-    ```
-    - Third octet 11111100 = 252
-    - Subnet mask: `255.255.252.0`
+   ```
+   /22 -> 11111111.11111111.11111100.00000000
+   ```
+   - Third octet 11111100 = 252
+   - Subnet mask: `255.255.252.0`
 
-    Supporting details
-    - Host bits = 10, total addresses 1024, usable hosts 1022.
-    - Block size in the third octet = 256 − 252 = 4, so blocks begin at third octet 0, 4, 8, 12 …
-    - The given third octet 3 falls in the block starting at 0, so the actual network is 192.168.0.0/22, covering 192.168.0.0 – 192.168.3.255 with broadcast 192.168.3.255.
+   Supporting details
+   - Host bits = 10, total addresses 1024, usable hosts 1022.
+   - Block size in the third octet = 256 − 252 = 4, so blocks begin at third octet 0, 4, 8, 12 …
+   - The given third octet 3 falls in the block starting at 0, so the actual network is 192.168.0.0/22, covering 192.168.0.0 – 192.168.3.255 with broadcast 192.168.3.255.
 
 82. **VLSM Subnetting. Given an IP address, 192.168.0.0/20 For creating 4 subnets department of A, B, C, D with 2000, 1000, 6000 and 8000 hosts, find out every department first and last IP address. Also write the subnet mask of q.x.y.z/notation.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927 (ET: CTI)]*
 
@@ -1761,9 +1761,9 @@ Step 1 – size each department (hosts + 2, rounded up to a power of 2)
 | A | 2000 | 2002 | 2048 | /21 |
 | B | 1000 | 1002 | 1024 | /22 |
 
-    - Total required = 8192 + 8192 + 2048 + 1024 = 19,456 addresses.
-    - A /20 holds only 2^12 = 4096 addresses, so `192.168.0.0/20 is too small`. The smallest block that fits is a /17 (32,768 addresses).
-    - The allocation below therefore uses `192.168.0.0/17`. The method is identical; only the parent prefix changes.
+   - Total required = 8192 + 8192 + 2048 + 1024 = 19,456 addresses.
+   - A /20 holds only 2^12 = 4096 addresses, so `192.168.0.0/20 is too small`. The smallest block that fits is a /17 (32,768 addresses).
+   - The allocation below therefore uses `192.168.0.0/17`. The method is identical; only the parent prefix changes.
 
 Step 2 – VLSM allocation, largest first
 
@@ -1774,16 +1774,16 @@ Step 2 – VLSM allocation, largest first
 | A | 2000 | 192.168.64.0/21 | 255.255.248.0 | 192.168.64.1 | 192.168.71.254 | 192.168.71.255 | 2046 |
 | B | 1000 | 192.168.72.0/22 | 255.255.252.0 | 192.168.72.1 | 192.168.75.254 | 192.168.75.255 | 1022 |
 
-    - Free space left: 192.168.76.0 onwards, inside the /17.
-    - The two rules of VLSM used here: always allocate the biggest requirement first, and always start each new block on a boundary that is a multiple of its own size. <!-- verify -->
+   - Free space left: 192.168.76.0 onwards, inside the /17.
+   - The two rules of VLSM used here: always allocate the biggest requirement first, and always start each new block on a boundary that is a multiple of its own size. <!-- verify -->
 
 83. **You are given a IP address 172.16.20.0/25 have four subnets. For each department find the following information. (CSE, EEE, IPE, PME)** *[NRCC Assistant Programmer 2021 compact it 931 (ET: N/A)]*
 
 Answer: Given 172.16.20.0/25 = 128 addresses, four subnets for CSE, EEE, IPE and PME.
 
-    Step 1 – bits to borrow
-    - 2^n >= 4 -> n = 2
-    - New prefix = 25 + 2 = `/27`, mask `255.255.255.224`, block size 32
+   Step 1 – bits to borrow
+   - 2^n >= 4 -> n = 2
+   - New prefix = 25 + 2 = `/27`, mask `255.255.255.224`, block size 32
 
 Step 2 – allocation
 
@@ -1794,42 +1794,42 @@ Step 2 – allocation
 | IPE | 172.16.20.64/27 | 172.16.20.65 | 172.16.20.94 | 172.16.20.95 | 255.255.255.224 | 30 |
 | PME | 172.16.20.96/27 | 172.16.20.97 | 172.16.20.126 | 172.16.20.127 | 255.255.255.224 | 30 |
 
-    - Check: 4 × 32 = 128, which exactly fills the /25.
+   - Check: 4 × 32 = 128, which exactly fills the /25.
 
 84. **Define IP 127.0.0.1, what is localhost?** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
 Answer:
 
-    IP 127.0.0.1
-    - It is the loopback address, part of the reserved block 127.0.0.0/8.
-    - A packet sent to it is turned back inside the machine's own TCP/IP stack and never reaches the network card or the cable.
-    - It is used to test whether TCP/IP is installed and working, and to reach a server running on the same machine, for example `http://127.0.0.1:3000`.
-    - In IPv6 the loopback address is `::1`.
-    - The whole 127.x.x.x range is reserved — that is 16.7 million addresses lost from Class A for this one purpose.
+   IP 127.0.0.1
+   - It is the loopback address, part of the reserved block 127.0.0.0/8.
+   - A packet sent to it is turned back inside the machine's own TCP/IP stack and never reaches the network card or the cable.
+   - It is used to test whether TCP/IP is installed and working, and to reach a server running on the same machine, for example `http://127.0.0.1:3000`.
+   - In IPv6 the loopback address is `::1`.
+   - The whole 127.x.x.x range is reserved — that is 16.7 million addresses lost from Class A for this one purpose.
 
-    localhost
-    - `localhost` is the hostname that maps to the loopback address. The mapping lives in the hosts file (`/etc/hosts` on Linux, `C:\Windows\System32\drivers\etc\hosts` on Windows) as:
-    ```
-    127.0.0.1   localhost
-    ::1         localhost
-    ```
-    - Developers use it constantly: a web server, database or API running locally is reached as localhost, so the application can be tested before it is deployed.
-    - Because loopback traffic never leaves the machine, a service bound only to 127.0.0.1 cannot be reached from outside, which is also a useful security property.
+   localhost
+   - `localhost` is the hostname that maps to the loopback address. The mapping lives in the hosts file (`/etc/hosts` on Linux, `C:\Windows\System32\drivers\etc\hosts` on Windows) as:
+   ```
+   127.0.0.1   localhost
+   ::1         localhost
+   ```
+   - Developers use it constantly: a web server, database or API running locally is reached as localhost, so the application can be tested before it is deployed.
+   - Because loopback traffic never leaves the machine, a service bound only to 127.0.0.1 cannot be reached from outside, which is also a useful security property.
 
 85. **What is static IP Address and dynamic IP Address?** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
 
 Answer:
 
-    Static IP address
-    - An address configured manually on the device and fixed until someone changes it.
-    - Advantages: always the same, so DNS records, port forwarding and firewall rules stay valid; needed by servers, printers, routers, CCTV cameras and remote-access hosts.
-    - Disadvantages: manual work, risk of duplicate addresses, and difficult to manage in a large network.
+   Static IP address
+   - An address configured manually on the device and fixed until someone changes it.
+   - Advantages: always the same, so DNS records, port forwarding and firewall rules stay valid; needed by servers, printers, routers, CCTV cameras and remote-access hosts.
+   - Disadvantages: manual work, risk of duplicate addresses, and difficult to manage in a large network.
 
-    Dynamic IP address
-    - An address leased automatically by a DHCP server for a limited time. When the lease expires the client renews it or receives a different address.
-    - Advantages: no manual configuration, no address conflicts, efficient reuse of a limited pool, easy for laptops and phones that move between networks.
-    - Disadvantages: the address can change, so it is unsuitable for a server; the network depends on the DHCP server being available.
-    - It is assigned through the DORA exchange: Discover, Offer, Request, Acknowledge.
+   Dynamic IP address
+   - An address leased automatically by a DHCP server for a limited time. When the lease expires the client renews it or receives a different address.
+   - Advantages: no manual configuration, no address conflicts, efficient reuse of a limited pool, easy for laptops and phones that move between networks.
+   - Disadvantages: the address can change, so it is unsuitable for a server; the network depends on the DHCP server being available.
+   - It is assigned through the DORA exchange: Discover, Offer, Request, Acknowledge.
 
 Comparison
 
@@ -1842,7 +1842,7 @@ Comparison
 | Typical use | Servers, routers, printers | PCs, laptops, phones |
 | Cost | Usually chargeable from an ISP | Included by default |
 
-    - A common middle option is a DHCP reservation, which ties one MAC address to one fixed IP, giving the stability of static with the central management of DHCP.
+   - A common middle option is a DHCP reservation, which ties one MAC address to one fixed IP, giving the stability of static with the central management of DHCP.
 
 86. **Using the IP address 192.168.10.0/23 find out- (i) Subnet/First address (ii) Last Address (iii) Subnet mask** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
 
@@ -1854,8 +1854,8 @@ Answer: /23 -> host bits 9, mask 255.255.254.0, block size in the third octet = 
 | ii | Last address | `192.168.11.255` (last usable host 192.168.11.254) |
 | iii | Subnet mask | `255.255.254.0` |
 
-    - Total addresses = 2^9 = 512, usable hosts = 510.
-    - The block spans two /24 ranges, 192.168.10.x and 192.168.11.x, with the broadcast at 192.168.11.255.
+   - Total addresses = 2^9 = 512, usable hosts = 510.
+   - The block spans two /24 ranges, 192.168.10.x and 192.168.11.x, with the broadcast at 192.168.11.255.
 
 87. **Consider the IP address 10.20.30.0/25 now answer the below question: (i) What is the subnet mask of the above IP address? (ii) How many host per subnet have? (iii) What is the Broadcast address of this 10.20.30.0/3 IP address?** *[Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
 
@@ -1867,45 +1867,45 @@ Answer: Given 10.20.30.0/25 -> host bits 7, block size 128, mask 255.255.255.128
 | ii | Hosts per subnet | 2^7 − 2 = `126` |
 | iii | Broadcast address | `10.20.30.127` |
 
-    - Network address 10.20.30.0, usable range 10.20.30.1 – 10.20.30.126.
-    - The second /25 of the same /24 would be 10.20.30.128, with broadcast 10.20.30.255.
+   - Network address 10.20.30.0, usable range 10.20.30.1 – 10.20.30.126.
+   - The second /25 of the same /24 would be 10.20.30.128, with broadcast 10.20.30.255.
 
 88. **২. 192.168.10.0/28 এর জন্য সাবনেট মাস্ক হবে কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
 Answer: The subnet mask for /28 is `255.255.255.240`.
 
-    ```
-    /28 -> 11111111.11111111.11111111.11110000
-    Last octet: 128 + 64 + 32 + 16 = 240
-    ```
-    - Host bits = 32 − 28 = 4, so 16 addresses per block and 14 usable hosts.
-    - Block size = 256 − 240 = 16, so 192.168.10.0/28 covers 192.168.10.0 – 192.168.10.15, with broadcast 192.168.10.15.
-    - Sixteen /28 subnets fit inside one /24.
+   ```
+   /28 -> 11111111.11111111.11111111.11110000
+   Last octet: 128 + 64 + 32 + 16 = 240
+   ```
+   - Host bits = 32 − 28 = 4, so 16 addresses per block and 14 usable hosts.
+   - Block size = 256 − 240 = 16, so 192.168.10.0/28 covers 192.168.10.0 – 192.168.10.15, with broadcast 192.168.10.15.
+   - Sixteen /28 subnets fit inside one /24.
 
 89. **৯. ক্লাস C এর ডিফল্ট সাবনেট মাস্ক কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
 Answer: The Class C default subnet mask is `255.255.255.0`, that is `/24`.
 
-    - Binary: 11111111.11111111.11111111.00000000
-    - The first three octets are the network ID, the last octet is the host ID.
-    - Usable hosts per Class C network = 2^8 − 2 = 254.
-    - For comparison: Class A default 255.0.0.0 (/8), Class B default 255.255.0.0 (/16).
+   - Binary: 11111111.11111111.11111111.00000000
+   - The first three octets are the network ID, the last octet is the host ID.
+   - Usable hosts per Class C network = 2^8 − 2 = 254.
+   - For comparison: Class A default 255.0.0.0 (/8), Class B default 255.255.0.0 (/16).
 
 90. **১১. নিচের কোনটি লুপ ব্যাক আইপি এড্রেস?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
 Answer: The loopback IP address is `127.0.0.1`.
 
-    - The entire block 127.0.0.0 – 127.255.255.255 (127.0.0.0/8) is reserved for loopback.
-    - A packet addressed here is returned by the machine's own TCP/IP stack and never reaches the network card.
-    - Its hostname is `localhost`; the IPv6 loopback address is `::1`.
-    - It is used to test the TCP/IP stack (`ping 127.0.0.1`) and to reach services running on the same machine.
-    - It is not 0.0.0.0 (default route), not 169.254.x.x (APIPA link-local), and not 255.255.255.255 (limited broadcast).
+   - The entire block 127.0.0.0 – 127.255.255.255 (127.0.0.0/8) is reserved for loopback.
+   - A packet addressed here is returned by the machine's own TCP/IP stack and never reaches the network card.
+   - Its hostname is `localhost`; the IPv6 loopback address is `::1`.
+   - It is used to test the TCP/IP stack (`ping 127.0.0.1`) and to reach services running on the same machine.
+   - It is not 0.0.0.0 (default route), not 169.254.x.x (APIPA link-local), and not 255.255.255.255 (limited broadcast).
 
 91. **A IP Address is: 172.16.128.120/25 now answers the following questions: (i) What is the network address of this IP? (ii) What is the subnet mask? (iii) What is the broadcast address? (iv) How many connection is possible in this network?** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975 (ET: BUET)]*
 
 Answer: Given 172.16.128.120/25 -> host bits 7, block size 128, mask 255.255.255.128.
 
-    - In the last octet the blocks are 0 and 128. The value 120 lies in 0–127, so the block starts at 0.
+   - In the last octet the blocks are 0 and 128. The value 120 lies in 0–127, so the block starts at 0.
 
 | # | Item | Value |
 |---|---|---|
@@ -1914,25 +1914,25 @@ Answer: Given 172.16.128.120/25 -> host bits 7, block size 128, mask 255.255.255
 | iii | Broadcast address | `172.16.128.127` |
 | iv | Possible connections | 2^7 − 2 = `126` |
 
-    - Usable range: 172.16.128.1 – 172.16.128.126.
-    - Watch out: the third octet 128 is not the subnet boundary here — a /25 only splits the last octet.
+   - Usable range: 172.16.128.1 – 172.16.128.126.
+   - Watch out: the third octet 128 is not the subnet boundary here — a /25 only splits the last octet.
 
 92. **(a) A IP address is 172.20.0.0/27. How many subnets and hosts per subnet?** *[National University Assistant Programmer 2020 compact it 977 (ET: DU)]*
 
 Answer: Given 172.20.0.0/27. First octet 172 means this is a Class B address, so the default prefix is /16.
 
-    Step 1 – borrowed bits
-    - Borrowed = 27 − 16 = 11
-    - Number of subnets = 2^11 = `2048`
+   Step 1 – borrowed bits
+   - Borrowed = 27 − 16 = 11
+   - Number of subnets = 2^11 = `2048`
 
-    Step 2 – hosts per subnet
-    - Host bits = 32 − 27 = 5
-    - Total addresses = 2^5 = 32
-    - Usable hosts = 32 − 2 = `30`
+   Step 2 – hosts per subnet
+   - Host bits = 32 − 27 = 5
+   - Total addresses = 2^5 = 32
+   - Usable hosts = 32 − 2 = `30`
 
-    Check
-    - 2048 × 32 = 65,536, which is exactly the size of a Class B network.
-    - Mask = 255.255.255.224, block size 32, so subnets run 172.20.0.0, 172.20.0.32, 172.20.0.64 … 172.20.255.224.
+   Check
+   - 2048 × 32 = 65,536, which is exactly the size of a Class B network.
+   - Mask = 255.255.255.224, block size 32, so subnets run 172.20.0.0, 172.20.0.32, 172.20.0.64 … 172.20.255.224.
 
 93. **Given IP address 172.16.128.120/25 what is the subnet mask, network address, broadcast address and total usable host in this network?** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
 
@@ -1945,22 +1945,22 @@ Answer: /25 -> host bits 7, block size 128, mask 255.255.255.128. The value 120 
 | Broadcast address | `172.16.128.127` |
 | Total usable hosts | 2^7 − 2 = `126` |
 
-    - Usable range: 172.16.128.1 – 172.16.128.126.
+   - Usable range: 172.16.128.1 – 172.16.128.126.
 
 94. **Given IP address is 172.168.10.0/24, administrator wants to create 32 subnets, then find out sub netmask, number of address of each subnet, first and last address of subnet 1, first and last address of subnet 32.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1012 (ET: DU)]*
 
 Answer: Given 172.168.10.0/24, 32 subnets required.
 
-    Step 1 – bits to borrow
-    - 2^n >= 32 -> 2^5 = 32, so n = 5 bits
-    - New prefix = 24 + 5 = `/29`
+   Step 1 – bits to borrow
+   - 2^n >= 32 -> 2^5 = 32, so n = 5 bits
+   - New prefix = 24 + 5 = `/29`
 
-    Step 2 – subnet mask
-    - /29 = 11111111.11111111.11111111.11111000 = `255.255.255.248`
+   Step 2 – subnet mask
+   - /29 = 11111111.11111111.11111111.11111000 = `255.255.255.248`
 
-    Step 3 – addresses per subnet
-    - Host bits = 3, so `8` addresses per subnet (6 usable)
-    - Block size = 256 − 248 = 8, so subnets step by 8
+   Step 3 – addresses per subnet
+   - Host bits = 3, so `8` addresses per subnet (6 usable)
+   - Block size = 256 − 248 = 8, so subnets step by 8
 
 Step 4 – first and last subnets
 
@@ -1969,8 +1969,8 @@ Step 4 – first and last subnets
 | 1 | 172.168.10.0/29 | `172.168.10.0` | `172.168.10.7` | .1 – .6 |
 | 32 | 172.168.10.248/29 | `172.168.10.248` | `172.168.10.255` | .249 – .254 |
 
-    - Formula: network address of subnet n = (n − 1) × 8. For n = 32, (32 − 1) × 8 = 248.
-    - Check: 32 × 8 = 256, exactly one /24.
+   - Formula: network address of subnet n = (n − 1) × 8. For n = 32, (32 − 1) × 8 = 248.
+   - Check: 32 × 8 = 256, exactly one /24.
 
 95. **Given IP Address 180.79.35.5/24, Find the (i) Network address (ii) Broadcast address (iii) Subnet mask (iv) Total valid host (v) IP address class** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1043 (ET: BUET)]*
 
@@ -1984,41 +1984,41 @@ Answer: Given 180.79.35.5/24.
 | iv | Total valid hosts | 2^8 − 2 = `254` |
 | v | IP address class | `Class B` (first octet 180 is in 128–191) |
 
-    - Usable range: 180.79.35.1 – 180.79.35.254.
-    - Note: although the address is Class B by its first octet, the /24 prefix here is a subnetted mask — 8 bits have been borrowed from the Class B default of /16, creating 256 subnets of 254 hosts each.
+   - Usable range: 180.79.35.1 – 180.79.35.254.
+   - Note: although the address is Class B by its first octet, the /24 prefix here is a subnetted mask — 8 bits have been borrowed from the Class B default of /16, creating 256 subnets of 254 hosts each.
 
 96. **What is private IP? List the class B private IP.** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*
 
 Answer:
 
-    What is a private IP
-    - A private IP address comes from a range reserved by RFC 1918 for use inside an organisation. It is unique only within that network, is never routed on the public internet, and needs NAT to reach the outside.
-    - It exists because IPv4 addresses are scarce: hundreds of internal hosts can share one public address.
-    - The three blocks are 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16.
+   What is a private IP
+   - A private IP address comes from a range reserved by RFC 1918 for use inside an organisation. It is unique only within that network, is never routed on the public internet, and needs NAT to reach the outside.
+   - It exists because IPv4 addresses are scarce: hundreds of internal hosts can share one public address.
+   - The three blocks are 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16.
 
-    Class B private IP range
-    - `172.16.0.0 – 172.31.255.255`
-    - CIDR: 172.16.0.0/12, mask 255.240.0.0
-    - This is 16 consecutive Class B networks: 172.16.x.x, 172.17.x.x, … up to 172.31.x.x
-    - Total addresses: 1,048,576
-    - Each individual /16 inside it holds 65,534 usable hosts.
-    - Common mistake: 172.15.x.x and 172.32.x.x are public. Only second octets 16 through 31 are private.
+   Class B private IP range
+   - `172.16.0.0 – 172.31.255.255`
+   - CIDR: 172.16.0.0/12, mask 255.240.0.0
+   - This is 16 consecutive Class B networks: 172.16.x.x, 172.17.x.x, … up to 172.31.x.x
+   - Total addresses: 1,048,576
+   - Each individual /16 inside it holds 65,534 usable hosts.
+   - Common mistake: 172.15.x.x and 172.32.x.x are public. Only second octets 16 through 31 are private.
 
 97. **Identify the IP address: (i) 192.168.1.1 (ii) 1.1.191.168** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
 Answer:
 
-    (i) 192.168.1.1
-    - First octet 192 lies in 192–223, so it is `Class C`.
-    - It falls in 192.168.0.0/16, so it is a `private` address (RFC 1918).
-    - It is not routable on the internet and is the address most commonly used as a home router's default gateway.
-    - Default mask 255.255.255.0.
+   (i) 192.168.1.1
+   - First octet 192 lies in 192–223, so it is `Class C`.
+   - It falls in 192.168.0.0/16, so it is a `private` address (RFC 1918).
+   - It is not routable on the internet and is the address most commonly used as a home router's default gateway.
+   - Default mask 255.255.255.0.
 
-    (ii) 1.1.191.168
-    - First octet 1 lies in 1–126, so it is `Class A`.
-    - It is outside 10.0.0.0/8, so it is a `public` address, routable on the internet.
-    - Default mask 255.0.0.0, network 1.0.0.0.
-    - The digits are the same as in (i) but reversed; the class and type are decided only by the first octet, so the two addresses are completely different in nature.
+   (ii) 1.1.191.168
+   - First octet 1 lies in 1–126, so it is `Class A`.
+   - It is outside 10.0.0.0/8, so it is a `public` address, routable on the internet.
+   - Default mask 255.0.0.0, network 1.0.0.0.
+   - The digits are the same as in (i) but reversed; the class and type are decided only by the first octet, so the two addresses are completely different in nature.
 
 98. **(b) Find subnet of 172.16.2.1/22 which will be applicable for your office room having 50 and 23 PCs. Also find the first and last usable ip addresses along with board cast address.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1141 (ET: N/A)]*
 
@@ -2038,18 +2038,18 @@ Step 2 – allocate largest first (VLSM)
 | 50 PCs | `172.16.0.0/26` | `172.16.0.1` | `172.16.0.62` | `172.16.0.63` | 62 |
 | 23 PCs | `172.16.0.64/27` | `172.16.0.65` | `172.16.0.94` | `172.16.0.95` | 30 |
 
-    - Free space left: 172.16.0.96 onwards, plenty for future rooms.
-    - Reason for the sizes: a /27 gives only 30 usable hosts, too few for 50; a /28 gives 14, too few for 23.
+   - Free space left: 172.16.0.96 onwards, plenty for future rooms.
+   - Reason for the sizes: a /27 gives only 30 usable hosts, too few for 50; a /28 gives 14, too few for 23.
 
 99. **(c) What is loopback address of a computer?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
 
 Answer: The loopback address of a computer is `127.0.0.1`.
 
-    - The whole range 127.0.0.0/8 (127.0.0.0 – 127.255.255.255) is reserved for this purpose.
-    - A packet sent to it is looped back inside the machine's own TCP/IP stack, so it never reaches the network card or the cable.
-    - Its hostname is `localhost`; the IPv6 equivalent is `::1`.
-    - Uses: `ping 127.0.0.1` tests whether the TCP/IP stack is installed and working, and a locally running server is reached as http://127.0.0.1:port during development.
-    - If a ping to 127.0.0.1 fails, the fault is in the TCP/IP software of that machine, not in the network.
+   - The whole range 127.0.0.0/8 (127.0.0.0 – 127.255.255.255) is reserved for this purpose.
+   - A packet sent to it is looped back inside the machine's own TCP/IP stack, so it never reaches the network card or the cable.
+   - Its hostname is `localhost`; the IPv6 equivalent is `::1`.
+   - Uses: `ping 127.0.0.1` tests whether the TCP/IP stack is installed and working, and a locally running server is reached as http://127.0.0.1:port during development.
+   - If a ping to 127.0.0.1 fails, the fault is in the TCP/IP software of that machine, not in the network.
 
 100. **Write 3 private IP address range.** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160 (ET: BUET)]*
 
@@ -2061,50 +2061,50 @@ Answer: The three private ranges defined by RFC 1918 are:
 | 2 | 172.16.0.0 – 172.31.255.255 | 172.16.0.0/12 | 255.240.0.0 | B |
 | 3 | 192.168.0.0 – 192.168.255.255 | 192.168.0.0/16 | 255.255.0.0 | C |
 
-    - These addresses are dropped by internet routers, so they are reachable only inside an organisation and require NAT for outside access.
-    - 169.254.0.0/16 (APIPA) is also non-routable but is link-local, not an RFC 1918 private range.
+   - These addresses are dropped by internet routers, so they are reachable only inside an organisation and require NAT for outside access.
+   - 169.254.0.0/16 (APIPA) is also non-routable but is link-local, not an RFC 1918 private range.
 
 101. **Find the subnet and host number of 255.255.240.0** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160 (ET: BUET)]*
 
 Answer: Mask 255.255.240.0 = /20, since 240 = 11110000.
 
-    ```
-    255.255.240.0 -> 11111111.11111111.11110000.00000000
-                                        ^^^^ 4 borrowed bits
-    ```
+   ```
+   255.255.240.0 -> 11111111.11111111.11110000.00000000
+                                       ^^^^ 4 borrowed bits
+   ```
 
-    Assuming a Class B network (default /16)
-    - Subnet bits borrowed = 20 − 16 = 4
-    - Number of subnets = 2^4 = `16`
-    - Host bits = 32 − 20 = 12
-    - Hosts per subnet = 2^12 − 2 = `4094`
+   Assuming a Class B network (default /16)
+   - Subnet bits borrowed = 20 − 16 = 4
+   - Number of subnets = 2^4 = `16`
+   - Host bits = 32 − 20 = 12
+   - Hosts per subnet = 2^12 − 2 = `4094`
 
-    Check
-    - 16 × 4096 = 65,536, exactly the size of a Class B network.
-    - Block size in the third octet = 256 − 240 = 16, so subnets run x.y.0.0, x.y.16.0, x.y.32.0 … x.y.240.0.
-    - If the parent were a Class A /8 instead, the same mask would give 2^12 = 4096 subnets of 4094 hosts each — the host count never changes, only the subnet count depends on the parent.
+   Check
+   - 16 × 4096 = 65,536, exactly the size of a Class B network.
+   - Block size in the third octet = 256 − 240 = 16, so subnets run x.y.0.0, x.y.16.0, x.y.32.0 … x.y.240.0.
+   - If the parent were a Class A /8 instead, the same mask would give 2^12 = 4096 subnets of 4094 hosts each — the host count never changes, only the subnet count depends on the parent.
 
 102. **Find subnet mask and number of host on each subnet mask at a class B IP address is 172.16.2.1/23.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1168 (ET: N/A)]*
 
 Answer: Given 172.16.2.1/23, a Class B address (default /16).
 
-    Subnet mask
-    - /23 = 11111111.11111111.11111110.00000000
-    - Third octet 11111110 = 254
-    - Mask: `255.255.254.0`
+   Subnet mask
+   - /23 = 11111111.11111111.11111110.00000000
+   - Third octet 11111110 = 254
+   - Mask: `255.255.254.0`
 
-    Hosts per subnet
-    - Host bits = 32 − 23 = 9
-    - Total addresses = 2^9 = 512
-    - Usable hosts = 512 − 2 = `510`
+   Hosts per subnet
+   - Host bits = 32 − 23 = 9
+   - Total addresses = 2^9 = 512
+   - Usable hosts = 512 − 2 = `510`
 
-    Number of subnets
-    - Borrowed bits = 23 − 16 = 7
-    - Subnets = 2^7 = 128
+   Number of subnets
+   - Borrowed bits = 23 − 16 = 7
+   - Subnets = 2^7 = 128
 
-    Supporting detail
-    - Block size in the third octet = 256 − 254 = 2, and 2 is even, so the network is 172.16.2.0/23.
-    - Range 172.16.2.0 – 172.16.3.255, usable 172.16.2.1 – 172.16.3.254, broadcast 172.16.3.255.
+   Supporting detail
+   - Block size in the third octet = 256 − 254 = 2, and 2 is even, so the network is 172.16.2.0/23.
+   - Range 172.16.2.0 – 172.16.3.255, usable 172.16.2.1 – 172.16.3.254, broadcast 172.16.3.255.
 
 103. **Find Network Address, Broadcast Address, Net mask, valid host of the IP address is: 192.16.13.0/30** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1176-1177 (ET: N/A)]*
 
@@ -2117,28 +2117,28 @@ Answer: /30 -> host bits 2, block size 4, mask 255.255.255.252.
 | Net mask | `255.255.255.252` |
 | Valid hosts | `192.16.13.1` and `192.16.13.2` (2 hosts) |
 
-    ```
-    Network   192.16.13.000000 00 = 192.16.13.0
-    Host 1                        = 192.16.13.1
-    Host 2                        = 192.16.13.2
-    Broadcast 192.16.13.000000 11 = 192.16.13.3
-    ```
-    - A /30 wastes 50 percent of its addresses, but it is still the standard choice for a router-to-router serial link, where exactly two addresses are needed. RFC 3021 /31 links avoid even that waste.
+   ```
+   Network   192.16.13.000000 00 = 192.16.13.0
+   Host 1                        = 192.16.13.1
+   Host 2                        = 192.16.13.2
+   Broadcast 192.16.13.000000 11 = 192.16.13.3
+   ```
+   - A /30 wastes 50 percent of its addresses, but it is still the standard choice for a router-to-router serial link, where exactly two addresses are needed. RFC 3021 /31 links avoid even that waste.
 
 104. **Given an IP address is 240.133.10.20/8 Find out network address, number of host and subnet mask.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1192 (ET: N/A)]*
 
 Answer: Given 240.133.10.20/8.
 
-    Step 1 – identify the class
-    - First octet 240 lies in 240–255, so this is a `Class E` address, reserved for research and experimental use. It cannot be assigned to a normal host on the internet.
+   Step 1 – identify the class
+   - First octet 240 lies in 240–255, so this is a `Class E` address, reserved for research and experimental use. It cannot be assigned to a normal host on the internet.
 
-    Step 2 – apply the /8 mask as given
-    - Mask: `255.0.0.0`
-    - Network address: 240.133.10.20 AND 255.0.0.0 = `240.0.0.0`
-    - Host bits = 32 − 8 = 24
-    - Total addresses = 2^24 = 16,777,216
-    - Number of hosts (usable) = 2^24 − 2 = `16,777,214`
-    - Broadcast address: 240.255.255.255
+   Step 2 – apply the /8 mask as given
+   - Mask: `255.0.0.0`
+   - Network address: 240.133.10.20 AND 255.0.0.0 = `240.0.0.0`
+   - Host bits = 32 − 8 = 24
+   - Total addresses = 2^24 = 16,777,216
+   - Number of hosts (usable) = 2^24 − 2 = `16,777,214`
+   - Broadcast address: 240.255.255.255
 
 | Item | Value |
 |---|---|
@@ -2147,13 +2147,13 @@ Answer: Given 240.133.10.20/8.
 | Subnet mask | 255.0.0.0 |
 | Number of hosts | 16,777,214 |
 
-    - The arithmetic is the same as for a Class A /8; only the reserved status of the address block differs.
+   - The arithmetic is the same as for a Class A /8; only the reserved status of the address block differs.
 
 105. **Calculate subnet mask and network address from the given IP address 192.168.5.44/26.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1212 (ET: N/A)]*
 
 Answer: /26 -> host bits 6, block size = 64, mask = 255.255.255.192.
 
-    - Blocks in the last octet: 0, 64, 128, 192. The value 44 lies in 0–63, so the block starts at 0.
+   - Blocks in the last octet: 0, 64, 128, 192. The value 44 lies in 0–63, so the block starts at 0.
 
 | Item | Value |
 |---|---|
@@ -2163,37 +2163,37 @@ Answer: /26 -> host bits 6, block size = 64, mask = 255.255.255.192.
 | Usable range | 192.168.5.1 – 192.168.5.62 |
 | Usable hosts | 62 |
 
-    ```
-    IP   192.168.5.44  -> last octet 00101100
-    Mask /26           -> last octet 11000000
-    AND                -> last octet 00000000 = 0
-    ```
+   ```
+   IP   192.168.5.44  -> last octet 00101100
+   Mask /26           -> last octet 11000000
+   AND                -> last octet 00000000 = 0
+   ```
 
 106. **How many subnets and hosts per subnet can you get from the network 172.20.0.0/27?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
 
 Answer: Given 172.20.0.0/27, a Class B address whose default prefix is /16.
 
-    Number of subnets
-    - Borrowed bits = 27 − 16 = 11
-    - Subnets = 2^11 = `2048`
+   Number of subnets
+   - Borrowed bits = 27 − 16 = 11
+   - Subnets = 2^11 = `2048`
 
-    Hosts per subnet
-    - Host bits = 32 − 27 = 5
-    - Total addresses = 2^5 = 32
-    - Usable hosts = 32 − 2 = `30`
+   Hosts per subnet
+   - Host bits = 32 − 27 = 5
+   - Total addresses = 2^5 = 32
+   - Usable hosts = 32 − 2 = `30`
 
-    Check
-    - 2048 × 32 = 65,536 = the full size of a Class B network.
-    - Mask = 255.255.255.224, block size 32: 172.20.0.0, 172.20.0.32, 172.20.0.64 … through 172.20.255.224.
+   Check
+   - 2048 × 32 = 65,536 = the full size of a Class B network.
+   - Mask = 255.255.255.224, block size 32: 172.20.0.0, 172.20.0.32, 172.20.0.64 … through 172.20.255.224.
 
 107. **A block address is granted to a small organization. If one of the addresses is 205.16.37.39/28, what is the first and last address of the block?** *[Multiple Ministry Assistant Programmer 2017 compact it 1230 (ET: N/A)]*
 
 Answer: /28 -> host bits 4, block size = 16, mask = 255.255.255.240.
 
-    Step – find the block containing .39
-    - Blocks in the last octet: 0, 16, 32, 48 …
-    - 39 lies between 32 and 47, so the block starts at 32.
-    - Shortcut: floor(39 ÷ 16) = 2, and 2 × 16 = 32.
+   Step – find the block containing .39
+   - Blocks in the last octet: 0, 16, 32, 48 …
+   - 39 lies between 32 and 47, so the block starts at 32.
+   - Shortcut: floor(39 ÷ 16) = 2, and 2 × 16 = 32.
 
 | Item | Value |
 |---|---|
@@ -2202,30 +2202,30 @@ Answer: /28 -> host bits 4, block size = 16, mask = 255.255.255.240.
 | Usable range | 205.16.37.33 – 205.16.37.46 |
 | Usable hosts | 14 |
 
-    - So the organisation's block is 205.16.37.32/28, containing 16 addresses.
+   - So the organisation's block is 205.16.37.32/28, containing 16 addresses.
 
 108. **Explain why subnet mask is used?** *[Multiple Ministry Assistant Programmer 2017 compact it 1232-1233 (ET: N/A)]*
 
 Answer: A subnet mask is used because an IP address alone does not say where the network part ends and the host part begins. The mask supplies that split, and everything below depends on it.
 
-    Reasons
+   Reasons
 
-    - To identify the network address. The device ANDs the IP address with the mask; the result is the network the host belongs to.
-    ```
-    IP    192.168.1.10  -> 11000000.10101000.00000001.00001010
-    Mask  255.255.255.0 -> 11111111.11111111.11111111.00000000
-    AND   192.168.1.0   -> network address
-    ```
+   - To identify the network address. The device ANDs the IP address with the mask; the result is the network the host belongs to.
+   ```
+   IP    192.168.1.10  -> 11000000.10101000.00000001.00001010
+   Mask  255.255.255.0 -> 11111111.11111111.11111111.00000000
+   AND   192.168.1.0   -> network address
+   ```
 
-    - To decide local versus remote delivery. The sender masks both its own address and the destination address. If the two network addresses match, the frame is sent directly on the LAN; if not, it is handed to the default gateway. Without a mask a host could not make this decision at all.
+   - To decide local versus remote delivery. The sender masks both its own address and the destination address. If the two network addresses match, the frame is sent directly on the LAN; if not, it is handed to the default gateway. Without a mask a host could not make this decision at all.
 
-    - To make subnetting possible. Borrowing host bits into the mask splits one large network into several smaller ones, which shrinks broadcast domains, improves performance and separates departments for security.
+   - To make subnetting possible. Borrowing host bits into the mask splits one large network into several smaller ones, which shrinks broadcast domains, improves performance and separates departments for security.
 
-    - To calculate capacity. The mask fixes the number of addresses in the block, 2^h, and the number of usable hosts, 2^h − 2.
+   - To calculate capacity. The mask fixes the number of addresses in the block, 2^h, and the number of usable hosts, 2^h − 2.
 
-    - To support VLSM and CIDR. Different masks on different segments let each subnet be sized to its actual need instead of wasting thousands of addresses.
+   - To support VLSM and CIDR. Different masks on different segments let each subnet be sized to its actual need instead of wasting thousands of addresses.
 
-    - To let routers forward correctly. A routing table stores network/mask pairs, and forwarding uses the longest prefix match, which is entirely a mask operation.
+   - To let routers forward correctly. A routing table stores network/mask pairs, and forwarding uses the longest prefix match, which is entirely a mask operation.
 
 109. **Given an IP address 10.2.3.20/22, Find out the number of host and subnet mask.** *[BTCL Assistant Manager (Technical) 2017 compact it 1254 (ET: N/A)]*
 
@@ -2235,98 +2235,98 @@ Answer: A subnet mask is used because an IP address alone does not say where the
 
 Answer: Given 10.2.3.20/22.
 
-    Subnet mask
-    - /22 = 11111111.11111111.11111100.00000000
-    - Third octet = 252
-    - Mask: `255.255.252.0`
+   Subnet mask
+   - /22 = 11111111.11111111.11111100.00000000
+   - Third octet = 252
+   - Mask: `255.255.252.0`
 
-    Number of hosts
-    - Host bits = 32 − 22 = 10
-    - Total addresses = 2^10 = 1024
-    - Usable hosts = 1024 − 2 = `1022`
+   Number of hosts
+   - Host bits = 32 − 22 = 10
+   - Total addresses = 2^10 = 1024
+   - Usable hosts = 1024 − 2 = `1022`
 
-    Supporting detail
-    - Block size in the third octet = 256 − 252 = 4, so blocks start at third octet 0, 4, 8, 12 …
-    - The given third octet 3 falls in the block starting at 0, so the network is 10.2.0.0/22, covering 10.2.0.0 – 10.2.3.255 with broadcast 10.2.3.255 and usable range 10.2.0.1 – 10.2.3.254.
+   Supporting detail
+   - Block size in the third octet = 256 − 252 = 4, so blocks start at third octet 0, 4, 8, 12 …
+   - The given third octet 3 falls in the block starting at 0, so the network is 10.2.0.0/22, covering 10.2.0.0 – 10.2.3.255 with broadcast 10.2.3.255 and usable range 10.2.0.1 – 10.2.3.254.
 
 110. **(a) A network has been assigned to the IP address 200.1.2.0/24 It has 3 subnets. Determine the following for each subnet:** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 71]]*
 (i) Total number of IP addresses (ii) Range of usable IP addresses (iii) Network address (iv) Direct broadcast address (v) Limited broadcast address.
 
 Answer:
-    To create at least 3 subnets from a `/24` network, we borrow $k = 2$ bits ($2^2 = 4 \ge 3$ subnets).
-    - New Subnet Mask: `/26` (`255.255.255.192`).
-    - Block size per subnet = $2^{(32-26)} = 2^6 = 64$ addresses.
+   To create at least 3 subnets from a `/24` network, we borrow $k = 2$ bits ($2^2 = 4 \ge 3$ subnets).
+   - New Subnet Mask: `/26` (`255.255.255.192`).
+   - Block size per subnet = $2^{(32-26)} = 2^6 = 64$ addresses.
 
-    Subnet 1:
-    - (i) Total IP addresses: 64
-    - (ii) Usable IP range: 200.1.2.1 to 200.1.2.62
-    - (iii) Network address: 200.1.2.0
-    - (iv) Direct broadcast address: 200.1.2.63
-    - (v) Limited broadcast address: 255.255.255.255
+   Subnet 1:
+   - (i) Total IP addresses: 64
+   - (ii) Usable IP range: 200.1.2.1 to 200.1.2.62
+   - (iii) Network address: 200.1.2.0
+   - (iv) Direct broadcast address: 200.1.2.63
+   - (v) Limited broadcast address: 255.255.255.255
 
-    Subnet 2:
-    - (i) Total IP addresses: 64
-    - (ii) Usable IP range: 200.1.2.65 to 200.1.2.126
-    - (iii) Network address: 200.1.2.64
-    - (iv) Direct broadcast address: 200.1.2.127
-    - (v) Limited broadcast address: 255.255.255.255
+   Subnet 2:
+   - (i) Total IP addresses: 64
+   - (ii) Usable IP range: 200.1.2.65 to 200.1.2.126
+   - (iii) Network address: 200.1.2.64
+   - (iv) Direct broadcast address: 200.1.2.127
+   - (v) Limited broadcast address: 255.255.255.255
 
-    Subnet 3:
-    - (i) Total IP addresses: 64
-    - (ii) Usable IP range: 200.1.2.129 to 200.1.2.190
-    - (iii) Network address: 200.1.2.128
-    - (iv) Direct broadcast address: 200.1.2.191
-    - (v) Limited broadcast address: 255.255.255.255
+   Subnet 3:
+   - (i) Total IP addresses: 64
+   - (ii) Usable IP range: 200.1.2.129 to 200.1.2.190
+   - (iii) Network address: 200.1.2.128
+   - (iv) Direct broadcast address: 200.1.2.191
+   - (v) Limited broadcast address: 255.255.255.255
 
 111. **Given IP address 10.10.0.0/16, you have divided the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the first and last usable IP address of the third subnet.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 83]]*
 
 Answer:
-    - Number of subnets required = $8 = 2^3 \implies$ Borrow 3 bits from the host portion.
-    - New Prefix Length = $16 + 3 = 19$.
-    - CIDR Notation: **/19**
-    - Subnet Mask in Dotted Decimal: **255.255.224.0** (since $11100000_2 = 224$).
-    - Block size in 3rd octet = $256 - 224 = 32$.
+   - Number of subnets required = $8 = 2^3 \implies$ Borrow 3 bits from the host portion.
+   - New Prefix Length = $16 + 3 = 19$.
+   - CIDR Notation: **/19**
+   - Subnet Mask in Dotted Decimal: **255.255.224.0** (since $11100000_2 = 224$).
+   - Block size in 3rd octet = $256 - 224 = 32$.
 
-    Subnet Boundaries:
-    - 1st Subnet: 10.10.0.0/19 (Range: 10.10.0.1 - 10.10.31.254, Broadcast: 10.10.31.255)
-    - 2nd Subnet: 10.10.32.0/19 (Range: 10.10.32.1 - 10.10.63.254, Broadcast: 10.10.63.255)
-    - 3rd Subnet: 10.10.64.0/19 (Range: 10.10.64.1 - 10.10.95.254, Broadcast: 10.10.95.255)
+   Subnet Boundaries:
+   - 1st Subnet: 10.10.0.0/19 (Range: 10.10.0.1 - 10.10.31.254, Broadcast: 10.10.31.255)
+   - 2nd Subnet: 10.10.32.0/19 (Range: 10.10.32.1 - 10.10.63.254, Broadcast: 10.10.63.255)
+   - 3rd Subnet: 10.10.64.0/19 (Range: 10.10.64.1 - 10.10.95.254, Broadcast: 10.10.95.255)
 
-    Results for the 3rd Subnet:
-    - First Usable IP Address: **10.10.64.1**
-    - Last Usable IP Address: **10.10.95.254**
+   Results for the 3rd Subnet:
+   - First Usable IP Address: **10.10.64.1**
+   - Last Usable IP Address: **10.10.95.254**
 
 112. **Define the states of the DNS (Domain Name System). How does DNS resolve a domain name into an IP address?** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 224-225]]*
 
 Answer: The Domain Name System (DNS) is a hierarchical, decentralized naming system that resolves human-readable domain names (e.g., `www.example.com`) into machine-routable IP addresses.
 
-    Key DNS Components & Servers:
-    - DNS Resolver (Recursive Server): Operated by ISPs or public providers (e.g., 8.8.8.8); acts on behalf of the client to query other DNS servers.
-    - Root Name Server: Directs requests to Top-Level Domain (TLD) servers based on the domain extension (.com, .org, .bd).
-    - TLD Name Server: Maintains directory information for all domains sharing a common extension.
-    - Authoritative Name Server: Holds the actual DNS records (A, AAAA, CNAME, MX) for the target domain.
+   Key DNS Components & Servers:
+   - DNS Resolver (Recursive Server): Operated by ISPs or public providers (e.g., 8.8.8.8); acts on behalf of the client to query other DNS servers.
+   - Root Name Server: Directs requests to Top-Level Domain (TLD) servers based on the domain extension (.com, .org, .bd).
+   - TLD Name Server: Maintains directory information for all domains sharing a common extension.
+   - Authoritative Name Server: Holds the actual DNS records (A, AAAA, CNAME, MX) for the target domain.
 
-    Step-by-Step DNS Resolution Workflow:
-    - Step 1: User types `www.example.com` in a browser. The local OS checks its DNS cache.
-    - Step 2: If uncached, the query is forwarded to the Recursive DNS Resolver.
-    - Step 3: The resolver queries a Root Name Server, which responds with the TLD server address for `.com`.
-    - Step 4: The resolver queries the `.com` TLD server, which returns the Authoritative Name Server IP for `example.com`.
-    - Step 5: The resolver queries the Authoritative Name Server, which returns the A-record (IP address).
-    - Step 6: The recursive resolver caches the result and returns the IP address to the browser, enabling HTTP connection establishment.
+   Step-by-Step DNS Resolution Workflow:
+   - Step 1: User types `www.example.com` in a browser. The local OS checks its DNS cache.
+   - Step 2: If uncached, the query is forwarded to the Recursive DNS Resolver.
+   - Step 3: The resolver queries a Root Name Server, which responds with the TLD server address for `.com`.
+   - Step 4: The resolver queries the `.com` TLD server, which returns the Authoritative Name Server IP for `example.com`.
+   - Step 5: The resolver queries the Authoritative Name Server, which returns the A-record (IP address).
+   - Step 6: The recursive resolver caches the result and returns the IP address to the browser, enabling HTTP connection establishment.
 
 113. **Calculate the Network address, Broadcast address, Minimum host address, and Maximum host address of the following IP: 192.168.111.165/28** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
 Answer:
-    Given: IP = `192.168.111.165/28`
-    - Subnet Mask = `/28` = `255.255.255.240`
-    - Block size in 4th octet = $256 - 240 = 16$
-    - Since $160 \le 165 \le 175$ ($10 	imes 16 = 160$):
+   Given: IP = `192.168.111.165/28`
+   - Subnet Mask = `/28` = `255.255.255.240`
+   - Block size in 4th octet = $256 - 240 = 16$
+   - Since $160 \le 165 \le 175$ ($10 	imes 16 = 160$):
 
-    Calculations:
-    - Network Address: **192.168.111.160**
-    - Minimum Host Address: **192.168.111.161**
-    - Maximum Host Address: **192.168.111.174**
-    - Broadcast Address: **192.168.111.175**
+   Calculations:
+   - Network Address: **192.168.111.160**
+   - Minimum Host Address: **192.168.111.161**
+   - Maximum Host Address: **192.168.111.174**
+   - Broadcast Address: **192.168.111.175**
 
 114. **Write down the Private IP address ranges of Class A, Class B, and Class C.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 240]]*
 
@@ -2342,27 +2342,27 @@ Answer: Defined under RFC 1918, private IPv4 address ranges are reserved for int
 (i) What is the network address for this network? (ii) What is the maximum number of devices can be connected with this network?
 
 Answer:
-    Given: IP = `172.16.128.120/25`
-    - Subnet Mask = `/25` = `255.255.255.128`
-    - Block size in 4th octet = $256 - 128 = 128$
-    - The 4th octet value $120$ falls in the range $0$ to $127$.
+   Given: IP = `172.16.128.120/25`
+   - Subnet Mask = `/25` = `255.255.255.128`
+   - Block size in 4th octet = $256 - 128 = 128$
+   - The 4th octet value $120$ falls in the range $0$ to $127$.
 
-    Answers:
-    - (i) Network Address: **172.16.128.0**
-    - (ii) Maximum number of usable host devices = $2^{(32 - 25)} - 2 = 2^7 - 2 = 128 - 2 =$ **126 devices**.
+   Answers:
+   - (i) Network Address: **172.16.128.0**
+   - (ii) Maximum number of usable host devices = $2^{(32 - 25)} - 2 = 2^7 - 2 = 128 - 2 =$ **126 devices**.
 
 116. **Given a Sub net mask 255.255.255.240 and IP address 192.168.1.50. Then find the network address, usable host range and broadcast address.** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
 Answer:
-    Given: IP = `192.168.1.50`, Subnet Mask = `255.255.255.240` (/28)
-    - Block size in 4th octet = $256 - 240 = 16$
-    - Subnet intervals: 0, 16, 32, 48, 64...
-    - The value 50 falls in the subnet starting at 48 ($3 	imes 16 = 48$).
+   Given: IP = `192.168.1.50`, Subnet Mask = `255.255.255.240` (/28)
+   - Block size in 4th octet = $256 - 240 = 16$
+   - Subnet intervals: 0, 16, 32, 48, 64...
+   - The value 50 falls in the subnet starting at 48 ($3 	imes 16 = 48$).
 
-    Calculations:
-    - Network Address: **192.168.1.48**
-    - Usable Host Range: **192.168.1.49 to 192.168.1.62**
-    - Broadcast Address: **192.168.1.63**
+   Calculations:
+   - Network Address: **192.168.1.48**
+   - Usable Host Range: **192.168.1.49 to 192.168.1.62**
+   - Broadcast Address: **192.168.1.63**
 
 117. **Mention the public and private address ranges of IPv4 for class A, class B and class C.** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378]]*
 
@@ -2378,9 +2378,9 @@ Answer:
 (i) Design subnets for each of the 5 floors in a building. Determine the IP address and IP address range for each subnet. Provide a brief explanation for your subnetting choices. (ii) What is the usable host of the IP address 20.20.20.20/20?
 
 Answer:
-    (i) Subnet Design for 5 Floors:
-    - To create 5 subnets, borrow $k = 3$ bits ($2^3 = 8 \ge 5$).
-    - New Subnet Mask: `/27` (`255.255.255.224`). Block size per subnet = 32 addresses (30 usable hosts per floor).
+   (i) Subnet Design for 5 Floors:
+   - To create 5 subnets, borrow $k = 3$ bits ($2^3 = 8 \ge 5$).
+   - New Subnet Mask: `/27` (`255.255.255.224`). Block size per subnet = 32 addresses (30 usable hosts per floor).
 
 | Floor | Subnet Network ID | Usable Host IP Range | Broadcast IP |
 |---|---|---|---|
@@ -2390,32 +2390,32 @@ Answer:
 | Floor 4 | 192.2.1.96/27 | 192.2.1.97 – 192.2.1.126 | 192.2.1.127 |
 | Floor 5 | 192.2.1.128/27 | 192.2.1.129 – 192.2.1.158 | 192.2.1.159 |
 
-    - Explanation: Borrowing 3 bits yields 8 equal subnets of 30 usable hosts each, fulfilling the 5-floor requirement with 3 spare subnets for future expansion.
+   - Explanation: Borrowing 3 bits yields 8 equal subnets of 30 usable hosts each, fulfilling the 5-floor requirement with 3 spare subnets for future expansion.
 
-    (ii) Usable host capacity for `20.20.20.20/20`:
-    - Number of host bits = $32 - 20 = 12	ext{ bits}$.
-    - Total Usable Hosts = $2^{12} - 2 = 4096 - 2 =$ **4,094 usable hosts**.
+   (ii) Usable host capacity for `20.20.20.20/20`:
+   - Number of host bits = $32 - 20 = 12	ext{ bits}$.
+   - Total Usable Hosts = $2^{12} - 2 = 4096 - 2 =$ **4,094 usable hosts**.
 
 119. **Given an IP address: 212.15.180.0/24 and wants to divide into 16 subnet.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 401]]*
 a) What will be the subnet mask and how many hosts belongs to every subnet. b) What is the first and last address of first and last subnet address?
 
 Answer:
-    a) Subnet Mask & Hosts Calculation:
-    - Number of subnets = $16 = 2^4 \implies$ Borrow 4 bits.
-    - New Prefix Length = $24 + 4 = 28$.
-    - Subnet Mask = **255.255.255.240** (CIDR: **/28**).
-    - Total IP addresses per subnet = $2^{(32-28)} = 16$.
-    - Usable hosts per subnet = $16 - 2 =$ **14 usable hosts**.
+   a) Subnet Mask & Hosts Calculation:
+   - Number of subnets = $16 = 2^4 \implies$ Borrow 4 bits.
+   - New Prefix Length = $24 + 4 = 28$.
+   - Subnet Mask = **255.255.255.240** (CIDR: **/28**).
+   - Total IP addresses per subnet = $2^{(32-28)} = 16$.
+   - Usable hosts per subnet = $16 - 2 =$ **14 usable hosts**.
 
-    b) First and Last Subnet Addresses:
-    - First Subnet (Subnet 0):
-      - Network Address (First address): **212.15.180.0**
-      - Broadcast Address (Last address): **212.15.180.15**
-      - (Usable Host Range: 212.15.180.1 – 212.15.180.14)
-    - Last Subnet (Subnet 15):
-      - Network Address (First address): **212.15.180.240**
-      - Broadcast Address (Last address): **212.15.180.255**
-      - (Usable Host Range: 212.15.180.241 – 212.15.180.254)
+   b) First and Last Subnet Addresses:
+   - First Subnet (Subnet 0):
+     - Network Address (First address): **212.15.180.0**
+     - Broadcast Address (Last address): **212.15.180.15**
+     - (Usable Host Range: 212.15.180.1 – 212.15.180.14)
+   - Last Subnet (Subnet 15):
+     - Network Address (First address): **212.15.180.240**
+     - Broadcast Address (Last address): **212.15.180.255**
+     - (Usable Host Range: 212.15.180.241 – 212.15.180.254)
 
 ## OSI & TCP/IP Reference Model (57)
 
@@ -2664,19 +2664,19 @@ Devices by layer:
 
 Answer: The seven layers of the OSI model are:
 
-    ```
-    Layer 7 - Application
-    Layer 6 - Presentation
-    Layer 5 - Session
-    Layer 4 - Transport
-    Layer 3 - Network
-    Layer 2 - Data Link
-    Layer 1 - Physical
-    ```
+   ```
+   Layer 7 - Application
+   Layer 6 - Presentation
+   Layer 5 - Session
+   Layer 4 - Transport
+   Layer 3 - Network
+   Layer 2 - Data Link
+   Layer 1 - Physical
+   ```
 
-    - Top to bottom memory aid: All People Seem To Need Data Processing.
-    - Bottom to top memory aid: Please Do Not Throw Sausage Pizza Away.
-    - Layers 1–3 are called the network support layers, layers 5–7 the user support layers, and layer 4 links the two groups.
+   - Top to bottom memory aid: All People Seem To Need Data Processing.
+   - Bottom to top memory aid: Please Do Not Throw Sausage Pizza Away.
+   - Layers 1–3 are called the network support layers, layers 5–7 the user support layers, and layer 4 links the two groups.
 
 12. **Write the name of OSI layers protocol for every layers.** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
@@ -2692,7 +2692,7 @@ Answer: Protocols used at each OSI layer.
 | 2 | Data Link | Ethernet (802.3), Wi-Fi (802.11), PPP, HDLC, Frame Relay, ATM, STP, VLAN (802.1Q) |
 | 1 | Physical | RS-232, DSL, ISDN, USB, Bluetooth physical, cable and fibre standards |
 
-    - Note: ARP is often placed at Layer 2, since it deals with MAC addresses, and sometimes at Layer 3, since it is triggered by IP. Both placements appear in textbooks.
+   - Note: ARP is often placed at Layer 2, since it deals with MAC addresses, and sometimes at Layer 3, since it is triggered by IP. Both placements appear in textbooks.
 
 13. **Tabular representation of TCP/IP layer, functions of each layer, Associate protocols, device, and software in each layer. Different types of network firewalls. Explain NGFW compared to traditional firewall.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 301 (ET: BIBM)]*
 
@@ -2731,14 +2731,14 @@ Answer:
 | Intelligence | Static rules | Live threat-intelligence feeds and reputation lists |
 | Cost and load | Cheap, fast | Expensive, needs more CPU |
 
-    - In short: a traditional firewall asks "which port?", an NGFW asks "which application, which user, and is the content malicious?"
+   - In short: a traditional firewall asks "which port?", an NGFW asks "which application, which user, and is the content malicious?"
 
 14. **Explain TCP/IP model and its protocol and device.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
 Answer:
 
-    The TCP/IP model
-    - A 4-layer practical model developed by the US DoD and used by the internet. Each layer has real, implemented protocols, unlike the theoretical OSI model.
+   The TCP/IP model
+   - A 4-layer practical model developed by the US DoD and used by the internet. Each layer has real, implemented protocols, unlike the theoretical OSI model.
 
 | Layer | Function | Protocols | Devices |
 |---|---|---|---|
@@ -2747,13 +2747,13 @@ Answer:
 | Internet | IP addressing, routing, fragmentation | IP, ICMP, ARP, IGMP, OSPF, RIP, BGP | Router, Layer 3 switch |
 | Network Access | Framing, MAC addressing, media access, bit transmission | Ethernet, Wi-Fi, PPP, Frame Relay | Switch, bridge, hub, NIC, modem, cable |
 
-    Short explanation of each layer
-    - Application – what the user sees: the browser, the mail client, name lookup through DNS.
-    - Transport – TCP for reliable, ordered delivery with the three-way handshake and acknowledgements; UDP for speed with no guarantee. Port numbers identify the process.
-    - Internet – IP gives every host a logical address; routers forward packets hop by hop using the longest prefix match. Best-effort and connectionless.
-    - Network Access – merges the OSI Data Link and Physical layers; builds frames, adds MAC addresses and a CRC, and puts the signal on the wire.
+   Short explanation of each layer
+   - Application – what the user sees: the browser, the mail client, name lookup through DNS.
+   - Transport – TCP for reliable, ordered delivery with the three-way handshake and acknowledgements; UDP for speed with no guarantee. Port numbers identify the process.
+   - Internet – IP gives every host a logical address; routers forward packets hop by hop using the longest prefix match. Best-effort and connectionless.
+   - Network Access – merges the OSI Data Link and Physical layers; builds frames, adds MAC addresses and a CRC, and puts the signal on the wire.
 
-    - Data unit names: Data -> Segment -> Packet -> Frame -> Bits.
+   - Data unit names: Data -> Segment -> Packet -> Frame -> Bits.
 
 15. **Write down the OSI model.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
@@ -2769,19 +2769,19 @@ Answer: The OSI model, published by ISO in 1984, has 7 layers.
 | 2 | Data Link | Framing, MAC addressing, error detection | Frame |
 | 1 | Physical | Raw bit transmission over the medium | Bit |
 
-    - Purpose: to standardise communication so equipment from different vendors can interoperate, to break a complex problem into manageable parts, and to give engineers a common vocabulary for design and troubleshooting.
-    - The lower three layers handle network support; the upper three handle user support; Transport joins the two halves.
+   - Purpose: to standardise communication so equipment from different vendors can interoperate, to break a complex problem into manageable parts, and to give engineers a common vocabulary for design and troubleshooting.
+   - The lower three layers handle network support; the upper three handle user support; Transport joins the two halves.
 
 16. **How many TCP/IP layer? Write its Layer name?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
 Answer: The TCP/IP model has `4 layers`.
 
-    ```
-    4. Application Layer      (OSI 7 + 6 + 5)
-    3. Transport Layer        (OSI 4)
-    2. Internet Layer         (OSI 3)
-    1. Network Access Layer   (OSI 2 + 1)
-    ```
+   ```
+   4. Application Layer      (OSI 7 + 6 + 5)
+   3. Transport Layer        (OSI 4)
+   2. Internet Layer         (OSI 3)
+   1. Network Access Layer   (OSI 2 + 1)
+   ```
 
 | Layer | Also called | Protocols |
 |---|---|---|
@@ -2790,8 +2790,8 @@ Answer: The TCP/IP model has `4 layers`.
 | Internet | Network layer | IP, ICMP, ARP, IGMP |
 | Network Access | Link / Network Interface | Ethernet, Wi-Fi, PPP |
 
-    - Some textbooks show a 5-layer version by splitting Network Access into separate Data Link and Physical layers.
-    - It is also called the DoD model, since it came from the US Department of Defense.
+   - Some textbooks show a 5-layer version by splitting Network Access into separate Data Link and Physical layers.
+   - It is also called the DoD model, since it came from the US Department of Defense.
 
 17. **Differentiate between OSI Model and TCP/IP Model. Draw the diagram of 4 Layers of TCP/IP Model including the main function of each layer and related protocols. List some basic functions performed at MAC layer.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
@@ -2812,37 +2812,37 @@ Answer:
 | Usage | Teaching, design, troubleshooting | The actual internet |
 | Reliability | Layer dependent | Handled mainly at the Transport layer |
 
-    (b) Four-layer TCP/IP diagram with functions and protocols
-    ```
-    +--------------------------------------------------------------+
-    | APPLICATION  - user services, formatting, session control     |
-    |   HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, SSH    |
-    +--------------------------------------------------------------+
-    | TRANSPORT    - segmentation, ports, reliability, flow control |
-    |   TCP (reliable)            UDP (fast, connectionless)        |
-    +--------------------------------------------------------------+
-    | INTERNET     - logical IP addressing, routing, fragmentation  |
-    |   IPv4, IPv6, ICMP, IGMP, ARP, OSPF, RIP, BGP                 |
-    +--------------------------------------------------------------+
-    | NETWORK ACCESS - framing, MAC addressing, bit transmission    |
-    |   Ethernet 802.3, Wi-Fi 802.11, PPP, Frame Relay              |
-    +--------------------------------------------------------------+
-    ```
+   (b) Four-layer TCP/IP diagram with functions and protocols
+   ```
+   +--------------------------------------------------------------+
+   | APPLICATION  - user services, formatting, session control     |
+   |   HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, SSH    |
+   +--------------------------------------------------------------+
+   | TRANSPORT    - segmentation, ports, reliability, flow control |
+   |   TCP (reliable)            UDP (fast, connectionless)        |
+   +--------------------------------------------------------------+
+   | INTERNET     - logical IP addressing, routing, fragmentation  |
+   |   IPv4, IPv6, ICMP, IGMP, ARP, OSPF, RIP, BGP                 |
+   +--------------------------------------------------------------+
+   | NETWORK ACCESS - framing, MAC addressing, bit transmission    |
+   |   Ethernet 802.3, Wi-Fi 802.11, PPP, Frame Relay              |
+   +--------------------------------------------------------------+
+   ```
 
-    (c) Basic functions of the MAC sub-layer
-    - Physical addressing – adds the 48-bit source and destination MAC addresses to each frame.
-    - Framing – marks where a frame starts and ends, and adds the FCS field.
-    - Media access control – decides who may transmit, using CSMA/CD on classic Ethernet and CSMA/CA on Wi-Fi, so collisions are avoided or handled.
-    - Error detection – computes and checks the CRC in the FCS; a corrupted frame is discarded.
-    - Frame filtering and forwarding – a switch reads the destination MAC and sends the frame only out of the correct port.
-    - Collision handling – on shared media, detects a collision, sends a jam signal and applies binary exponential backoff.
+   (c) Basic functions of the MAC sub-layer
+   - Physical addressing – adds the 48-bit source and destination MAC addresses to each frame.
+   - Framing – marks where a frame starts and ends, and adds the FCS field.
+   - Media access control – decides who may transmit, using CSMA/CD on classic Ethernet and CSMA/CA on Wi-Fi, so collisions are avoided or handled.
+   - Error detection – computes and checks the CRC in the FCS; a corrupted frame is discarded.
+   - Frame filtering and forwarding – a switch reads the destination MAC and sends the frame only out of the correct port.
+   - Collision handling – on shared media, detects a collision, sends a jam signal and applies binary exponential backoff.
 
 18. **What is OSI Model? Write all layer name sequence should be top to bottom or bottom to top.** *[DESCO Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
 
 Answer:
 
-    What is the OSI model
-    - The Open Systems Interconnection model is a 7-layer reference framework published by ISO in 1984. It describes how data travels from an application on one machine to an application on another, and it lets equipment from different vendors interoperate.
+   What is the OSI model
+   - The Open Systems Interconnection model is a 7-layer reference framework published by ISO in 1984. It describes how data travels from an application on one machine to an application on another, and it lets equipment from different vendors interoperate.
 
 Layer names, both directions
 
@@ -2856,11 +2856,11 @@ Layer names, both directions
 | 2 Data Link | 6 Presentation |
 | 1 Physical | 7 Application |
 
-    Which direction is correct
-    - Both are correct; the direction depends on what you are describing.
-    - Data being sent travels top to bottom (encapsulation, at the sender).
-    - Data being received travels bottom to top (decapsulation, at the receiver).
-    - Memory aids: "All People Seem To Need Data Processing" (top down) and "Please Do Not Throw Sausage Pizza Away" (bottom up).
+   Which direction is correct
+   - Both are correct; the direction depends on what you are describing.
+   - Data being sent travels top to bottom (encapsulation, at the sender).
+   - Data being received travels bottom to top (decapsulation, at the receiver).
+   - Memory aids: "All People Seem To Need Data Processing" (top down) and "Please Do Not Throw Sausage Pizza Away" (bottom up).
 
 19. **Difference between OSI model and TCP/IP model. Relation between Data, Segment, Packet and Bit in OSI model.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 510 (ET: MIST)]*
 
@@ -2880,8 +2880,8 @@ Answer:
 | Transport service | Connection-oriented only | TCP and UDP both |
 | Use | Teaching and troubleshooting | The real internet |
 
-    (b) Relation between Data, Segment, Packet and Frame/Bit
-    - These are the PDU (Protocol Data Unit) names — the same information called by a different name at each layer as headers are added.
+   (b) Relation between Data, Segment, Packet and Frame/Bit
+   - These are the PDU (Protocol Data Unit) names — the same information called by a different name at each layer as headers are added.
 
 | OSI layer | PDU name | Header added |
 |---|---|---|
@@ -2891,31 +2891,31 @@ Answer:
 | 2 Data Link | `Frame` | Source and destination MAC + FCS |
 | 1 Physical | `Bit` | None, raw signal |
 
-    ```
-    Data                                  (Application)
-    [TCP hdr | Data]                      = Segment
-    [IP hdr | TCP hdr | Data]             = Packet
-    [MAC | IP hdr | TCP hdr | Data | FCS] = Frame
-    1010110100101101 ...                  = Bits
-    ```
-    - Adding headers on the way down is encapsulation; removing them on the way up is decapsulation. The user's data is unchanged throughout — only the wrapping differs.
+   ```
+   Data                                  (Application)
+   [TCP hdr | Data]                      = Segment
+   [IP hdr | TCP hdr | Data]             = Packet
+   [MAC | IP hdr | TCP hdr | Data | FCS] = Frame
+   1010110100101101 ...                  = Bits
+   ```
+   - Adding headers on the way down is encapsulation; removing them on the way up is decapsulation. The user's data is unchanged throughout — only the wrapping differs.
 
 20. **(a) List down the layers of OSI model in top-down manner.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 480 (ET: N/A)]*
 
 Answer: The OSI layers in top-down order:
 
-    ```
-    7. Application   - services for the user's program (HTTP, FTP, SMTP)
-    6. Presentation  - translation, encryption, compression (TLS, JPEG)
-    5. Session       - establishes, manages and ends sessions (NetBIOS, RPC)
-    4. Transport     - end-to-end delivery, ports, flow control (TCP, UDP)
-    3. Network       - logical addressing and routing (IP, ICMP, OSPF)
-    2. Data Link     - framing, MAC addressing, error detection (Ethernet, PPP)
-    1. Physical      - raw bits on the medium (cables, hubs, connectors)
-    ```
+   ```
+   7. Application   - services for the user's program (HTTP, FTP, SMTP)
+   6. Presentation  - translation, encryption, compression (TLS, JPEG)
+   5. Session       - establishes, manages and ends sessions (NetBIOS, RPC)
+   4. Transport     - end-to-end delivery, ports, flow control (TCP, UDP)
+   3. Network       - logical addressing and routing (IP, ICMP, OSPF)
+   2. Data Link     - framing, MAC addressing, error detection (Ethernet, PPP)
+   1. Physical      - raw bits on the medium (cables, hubs, connectors)
+   ```
 
-    - Memory aid: All People Seem To Need Data Processing.
-    - This is the direction data takes at the sender, where each layer adds its own header (encapsulation).
+   - Memory aid: All People Seem To Need Data Processing.
+   - This is the direction data takes at the sender, where each layer adds its own header (encapsulation).
 
 21. **Fill up the following protocol table by work at which layer?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 452 (ET: BUET)]*
 
@@ -2935,7 +2935,7 @@ Answer: The OSI layers in top-down order:
 | Routing Information Protocol (RIP) |  |
 | User datagram protocol (UDP) |  |
 
-    Answer: Completed protocol table.
+   Answer: Completed protocol table.
 
 | Protocol Name | Layer |
 |---|---|
@@ -2945,42 +2945,42 @@ Answer: The OSI layers in top-down order:
 | Routing Information Protocol (RIP) | Network layer (Layer 3) |
 | User Datagram Protocol (UDP) | Transport layer (Layer 4) |
 
-    Reasons
-    - CSMA is a media-access method — it decides who may transmit on a shared medium — so it belongs to the MAC sub-layer of the Data Link layer. Variants: CSMA/CD on wired Ethernet, CSMA/CA on Wi-Fi.
-    - OSPF is a link-state routing protocol that builds the IP routing table, so it is a Network layer function. It runs directly over IP as protocol number 89.
-    - TCP provides end-to-end reliable delivery with ports, sequence numbers and acknowledgements — Transport layer.
-    - RIP is a distance-vector routing protocol, also a Network layer function. Note that RIP messages are carried inside UDP port 520, but the job it performs is routing.
-    - UDP provides connectionless transport with ports and a checksum — Transport layer.
+   Reasons
+   - CSMA is a media-access method — it decides who may transmit on a shared medium — so it belongs to the MAC sub-layer of the Data Link layer. Variants: CSMA/CD on wired Ethernet, CSMA/CA on Wi-Fi.
+   - OSPF is a link-state routing protocol that builds the IP routing table, so it is a Network layer function. It runs directly over IP as protocol number 89.
+   - TCP provides end-to-end reliable delivery with ports, sequence numbers and acknowledgements — Transport layer.
+   - RIP is a distance-vector routing protocol, also a Network layer function. Note that RIP messages are carried inside UDP port 520, but the job it performs is routing.
+   - UDP provides connectionless transport with ports and a checksum — Transport layer.
 
 22. **Which layer is used to link the network support layers and user support layers?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
 Answer: The `Transport layer (Layer 4)` links the network support layers and the user support layers.
 
-    - Network support layers: Physical (1), Data Link (2) and Network (3). They deal with the physical movement of data — electrical signals, MAC addresses and routing.
-    - User support layers: Session (5), Presentation (6) and Application (7). They deal with interoperability between software processes.
-    - The Transport layer sits between the two groups and makes sure that whatever the lower layers deliver is in a form the upper layers can use: it reassembles segments in the right order, recovers lost data, and hands a clean, complete stream upward.
+   - Network support layers: Physical (1), Data Link (2) and Network (3). They deal with the physical movement of data — electrical signals, MAC addresses and routing.
+   - User support layers: Session (5), Presentation (6) and Application (7). They deal with interoperability between software processes.
+   - The Transport layer sits between the two groups and makes sure that whatever the lower layers deliver is in a form the upper layers can use: it reassembles segments in the right order, recovers lost data, and hands a clean, complete stream upward.
 
-    ```
-    7 Application  |
-    6 Presentation |  User support layers
-    5 Session      |
-    --------------------------------
-    4 Transport    <- the link between the two groups
-    --------------------------------
-    3 Network      |
-    2 Data Link    |  Network support layers
-    1 Physical     |
-    ```
+   ```
+   7 Application  |
+   6 Presentation |  User support layers
+   5 Session      |
+   --------------------------------
+   4 Transport    <- the link between the two groups
+   --------------------------------
+   3 Network      |
+   2 Data Link    |  Network support layers
+   1 Physical     |
+   ```
 
 23. **What is the number for the Network layer and the support layer?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
 Answer:
 
-    - The `Network layer is Layer 3` of the OSI model. Its job is logical (IP) addressing and routing packets from source to destination across different networks. Devices: router and Layer 3 switch. PDU: packet.
-    - The support layers are of two kinds:
-      - Network support layers – `Layers 1, 2 and 3` (Physical, Data Link, Network). They handle the physical movement of bits, frames and packets.
-      - User support layers – `Layers 5, 6 and 7` (Session, Presentation, Application). They let software processes interoperate.
-    - Layer 4, Transport, is neither; it is the link between the two groups.
+   - The `Network layer is Layer 3` of the OSI model. Its job is logical (IP) addressing and routing packets from source to destination across different networks. Devices: router and Layer 3 switch. PDU: packet.
+   - The support layers are of two kinds:
+     - Network support layers – `Layers 1, 2 and 3` (Physical, Data Link, Network). They handle the physical movement of bits, frames and packets.
+     - User support layers – `Layers 5, 6 and 7` (Session, Presentation, Application). They let software processes interoperate.
+   - Layer 4, Transport, is neither; it is the link between the two groups.
 
 24. **(c) Write the all layers of OSI model.** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
 
@@ -2996,15 +2996,15 @@ Answer: The seven layers of the OSI model.
 | 2 | Data Link | Framing, MAC addressing, error detection | Frame | Switch, bridge |
 | 1 | Physical | Raw bit transmission | Bit | Hub, cable, repeater |
 
-    - Memory aid: All People Seem To Need Data Processing.
+   - Memory aid: All People Seem To Need Data Processing.
 
 25. **In order to prevent that the company decided to add end to end encryption techniques which layer of the OSI model is suitable to work in considering parameters like development time, software maintainability and development cost, Give reasons for your concepts.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 438 (ET: BIBM)]*
 
 Answer: For end-to-end encryption, the `Presentation layer (Layer 6)` is the classically correct answer, and in practice the work is done at the `Application layer (Layer 7)` using TLS.
 
-    Why the upper layers are the right choice
-    - End-to-end means the data must stay encrypted from the sender's application all the way to the receiver's application, passing through routers and switches untouched. Only an upper layer can do that; encryption placed lower down is decrypted at every hop.
-    - The Presentation layer's defined job is exactly this — translation, compression and encryption of the data.
+   Why the upper layers are the right choice
+   - End-to-end means the data must stay encrypted from the sender's application all the way to the receiver's application, passing through routers and switches untouched. Only an upper layer can do that; encryption placed lower down is decrypted at every hop.
+   - The Presentation layer's defined job is exactly this — translation, compression and encryption of the data.
 
 Judged against the three parameters asked for
 
@@ -3024,16 +3024,16 @@ Comparison of the alternatives
 | 4 Transport | TLS | Process to process | The practical, cheap and widely used choice |
 | 6/7 Presentation / Application | TLS, PGP, S/MIME | Application to application | True end-to-end, lowest cost and effort |
 
-    Conclusion
-    - Implement encryption at the Presentation/Application layer using TLS (or PGP for mail). It gives true end-to-end protection, reuses proven libraries, keeps maintenance in one place, and needs no new hardware — the best result on all three parameters.
+   Conclusion
+   - Implement encryption at the Presentation/Application layer using TLS (or PGP for mail). It gives true end-to-end protection, reuses proven libraries, keeps maintenance in one place, and needs no new hardware — the best result on all three parameters.
 
 26. **What is TCP/IP model? Briefly explain TCP/IP model.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 837 (ET: N/A)], [EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
 Answer:
 
-    What is the TCP/IP model
-    - TCP/IP (Transmission Control Protocol / Internet Protocol) is the 4-layer protocol suite that the internet actually runs on. It was developed by DARPA for the US Department of Defense in the 1970s and became the standard in 1983.
-    - Unlike OSI, it was built protocol-first: the protocols existed and the model was written to describe them. That is why it is called a practical model.
+   What is the TCP/IP model
+   - TCP/IP (Transmission Control Protocol / Internet Protocol) is the 4-layer protocol suite that the internet actually runs on. It was developed by DARPA for the US Department of Defense in the 1970s and became the standard in 1983.
+   - Unlike OSI, it was built protocol-first: the protocols existed and the model was written to describe them. That is why it is called a practical model.
 
 The four layers
 
@@ -3044,44 +3044,44 @@ The four layers
 | Internet | Logical addressing, routing, fragmentation | IP, ICMP, ARP, IGMP |
 | Network Access | Framing, MAC addressing, physical signalling | Ethernet, Wi-Fi, PPP, Frame Relay |
 
-    Brief explanation
-    - Application – combines OSI layers 5, 6 and 7. It is what the user's software talks to.
-    - Transport – TCP sets up a connection with a three-way handshake (SYN, SYN-ACK, ACK), numbers every byte, acknowledges what arrives and retransmits what is lost. UDP simply sends, with no handshake, which suits DNS, DHCP, VoIP and video.
-    - Internet – IP is connectionless and best-effort. Every packet carries a source and destination IP address, and each router forwards it independently using the longest prefix match.
-    - Network Access – combines OSI layers 1 and 2. It builds frames, adds MAC addresses and a CRC, and transmits the signal.
+   Brief explanation
+   - Application – combines OSI layers 5, 6 and 7. It is what the user's software talks to.
+   - Transport – TCP sets up a connection with a three-way handshake (SYN, SYN-ACK, ACK), numbers every byte, acknowledges what arrives and retransmits what is lost. UDP simply sends, with no handshake, which suits DNS, DHCP, VoIP and video.
+   - Internet – IP is connectionless and best-effort. Every packet carries a source and destination IP address, and each router forwards it independently using the longest prefix match.
+   - Network Access – combines OSI layers 1 and 2. It builds frames, adds MAC addresses and a CRC, and transmits the signal.
 
-    Data unit names: Data -> Segment -> Packet -> Frame -> Bits.
+   Data unit names: Data -> Segment -> Packet -> Frame -> Bits.
 
 27. **(a) What is OSI model? Explain how two computers can exchange information using the OSI model.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
 
 Answer:
 
-    What is the OSI model
-    - A 7-layer reference model published by ISO in 1984 that describes how two computers exchange information. Each layer performs a defined function and offers a service to the layer above it.
+   What is the OSI model
+   - A 7-layer reference model published by ISO in 1984 that describes how two computers exchange information. Each layer performs a defined function and offers a service to the layer above it.
 
-    How two computers exchange information
-    - Communication is logical between peer layers, but physical only at Layer 1. Data goes down the stack at the sender and up the stack at the receiver.
+   How two computers exchange information
+   - Communication is logical between peer layers, but physical only at Layer 1. Data goes down the stack at the sender and up the stack at the receiver.
 
-    ```
-       COMPUTER A (sender)                      COMPUTER B (receiver)
-    7  Application    <--- logical peer link --->  Application
-    6  Presentation   <--- logical peer link --->  Presentation
-    5  Session        <--- logical peer link --->  Session
-    4  Transport      <--- logical peer link --->  Transport
-    3  Network        <--- logical peer link --->  Network
-    2  Data Link      <--- logical peer link --->  Data Link
-    1  Physical  ======= actual cable / radio ===  Physical
-    ```
+   ```
+      COMPUTER A (sender)                      COMPUTER B (receiver)
+   7  Application    <--- logical peer link --->  Application
+   6  Presentation   <--- logical peer link --->  Presentation
+   5  Session        <--- logical peer link --->  Session
+   4  Transport      <--- logical peer link --->  Transport
+   3  Network        <--- logical peer link --->  Network
+   2  Data Link      <--- logical peer link --->  Data Link
+   1  Physical  ======= actual cable / radio ===  Physical
+   ```
 
-    Step by step
-    - At the sender, the Application layer produces the data (for example an HTTP GET).
-    - Presentation encrypts and compresses it; Session marks the start of the dialogue.
-    - Transport splits it into segments, numbers them and adds port numbers.
-    - Network adds the source and destination IP addresses, making a packet.
-    - Data Link wraps the packet in a frame with MAC addresses and a CRC.
-    - Physical converts the frame into bits and puts them on the medium. This whole process is `encapsulation`.
-    - At the receiver the reverse happens — `decapsulation`. Physical rebuilds the bits, Data Link checks the CRC and strips the MAC header, Network checks the IP address and strips the IP header, Transport reorders the segments and acknowledges them, and the upper layers decrypt and present the data to the application.
-    - Each layer only reads the header its peer layer wrote, which is why the layers stay independent of each other.
+   Step by step
+   - At the sender, the Application layer produces the data (for example an HTTP GET).
+   - Presentation encrypts and compresses it; Session marks the start of the dialogue.
+   - Transport splits it into segments, numbers them and adds port numbers.
+   - Network adds the source and destination IP addresses, making a packet.
+   - Data Link wraps the packet in a frame with MAC addresses and a CRC.
+   - Physical converts the frame into bits and puts them on the medium. This whole process is `encapsulation`.
+   - At the receiver the reverse happens — `decapsulation`. Physical rebuilds the bits, Data Link checks the CRC and strips the MAC header, Network checks the IP address and strips the IP header, Transport reorders the segments and acknowledges them, and the upper layers decrypt and present the data to the application.
+   - Each layer only reads the header its peer layer wrote, which is why the layers stay independent of each other.
 
 28. **TCP/IP model এর Layer গুলোর কাজ লিখুন।** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
@@ -3094,15 +3094,15 @@ Answer: (Answered in English, as required for IT topics.) The TCP/IP model has 4
 | Internet | Adds the source and destination IP addresses, chooses the path, and forwards the packet router by router. Also handles fragmentation and TTL. Protocols: IP, ICMP, ARP, IGMP, and the routing protocols OSPF, RIP, BGP |
 | Network Access | Puts the packet into a frame with MAC addresses and a CRC, controls access to the medium, and converts the frame into electrical, optical or radio signals. Protocols: Ethernet, Wi-Fi, PPP |
 
-    - Data unit at each layer: Data -> Segment -> Packet -> Frame -> Bits.
-    - Adding a header at each layer going down is encapsulation; removing it going up is decapsulation.
+   - Data unit at each layer: Data -> Segment -> Packet -> Frame -> Bits.
+   - Adding a header at each layer going down is encapsulation; removing it going up is decapsulation.
 
 29. **What is OSI model? Write different layers of OSI model.** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 699 (ET: BUET)]*
 
 Answer:
 
-    What is the OSI model
-    - The Open Systems Interconnection model is a 7-layer reference model created by ISO in 1984. It divides the job of network communication into seven independent layers so that products from different vendors can work together, and so that a fault can be isolated to one layer.
+   What is the OSI model
+   - The Open Systems Interconnection model is a 7-layer reference model created by ISO in 1984. It divides the job of network communication into seven independent layers so that products from different vendors can work together, and so that a fault can be isolated to one layer.
 
 The seven layers
 
@@ -3116,7 +3116,7 @@ The seven layers
 | 2 | Data Link | Framing, MAC addressing, error detection | Frame | Ethernet, PPP |
 | 1 | Physical | Raw bit transmission | Bit | Cables, hubs |
 
-    - Layers 1–3 are the network support layers, 5–7 the user support layers, and 4 joins them.
+   - Layers 1–3 are the network support layers, 5–7 the user support layers, and 4 joins them.
 
 30. **What is the difference between DOD and OSI model?** *[DESCO Assistant Engineer (CSE) 10.09.2022 compact it 700 (ET: BUET)]*
 
@@ -3135,23 +3135,23 @@ Answer: The DOD model is another name for the TCP/IP model, since it was created
 | Flexibility | Strict layer boundaries | Layers are less rigidly separated |
 | Usage today | Teaching, design, troubleshooting | Runs the actual internet |
 
-    Layer mapping
-    ```
-    OSI                      DOD / TCP-IP
-    7 Application    |
-    6 Presentation   |-----> Application
-    5 Session        |
-    4 Transport      ------> Transport (Host-to-Host)
-    3 Network        ------> Internet
-    2 Data Link      |-----> Network Access
-    1 Physical       |
-    ```
+   Layer mapping
+   ```
+   OSI                      DOD / TCP-IP
+   7 Application    |
+   6 Presentation   |-----> Application
+   5 Session        |
+   4 Transport      ------> Transport (Host-to-Host)
+   3 Network        ------> Internet
+   2 Data Link      |-----> Network Access
+   1 Physical       |
+   ```
 
 31. **What is PDU?** *[BARC Data Entry Officer 10.09.2022 compact it 702 (ET: N/A)]*
 
 Answer: PDU stands for `Protocol Data Unit` — the name given to a unit of data at a particular layer of the network model.
 
-    - At each layer the data carries a different header, so it is given a different name.
+   - At each layer the data carries a different header, so it is given a different name.
 
 | OSI layer | PDU name | What is added |
 |---|---|---|
@@ -3161,9 +3161,9 @@ Answer: PDU stands for `Protocol Data Unit` — the name given to a unit of data
 | 2 Data Link | Frame | Source and destination MAC addresses + FCS |
 | 1 Physical | Bit | Nothing — raw electrical, optical or radio signal |
 
-    Structure of a PDU
-    - A PDU generally has three parts: the header (control information written by that layer), the payload (the PDU handed down from the layer above, called the SDU or Service Data Unit), and sometimes a trailer, such as the Ethernet FCS.
-    - Memory aid: Data, Segment, Packet, Frame, Bits.
+   Structure of a PDU
+   - A PDU generally has three parts: the header (control information written by that layer), the payload (the PDU handed down from the layer above, called the SDU or Service Data Unit), and sometimes a trailer, such as the Ethernet FCS.
+   - Memory aid: Data, Segment, Packet, Frame, Bits.
 
 32. **(খ) Computer network এর OSI 7-Layer গুলো উদাহরণসহ লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 767 (ET: N/A)]*
 
@@ -3179,36 +3179,36 @@ Answer: (Answered in English, as required for IT topics.) The 7 layers of the OS
 | 2 | Data Link | Framing, MAC delivery on one hop | The Ethernet frame from your PC's NIC to the router's MAC address |
 | 1 | Physical | Raw bits on the medium | Voltage on the UTP cable, light pulses in fibre, Wi-Fi radio waves |
 
-    - Devices: hub at Layer 1, switch at Layer 2, router at Layer 3, firewall at Layer 4, proxy at Layer 7.
-    - Memory aid: All People Seem To Need Data Processing.
+   - Devices: hub at Layer 1, switch at Layer 2, router at Layer 3, firewall at Layer 4, proxy at Layer 7.
+   - Memory aid: All People Seem To Need Data Processing.
 
 33. **Computer Network এ OSI Model এর Layer কয়টি?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
 Answer: The OSI model has `7 layers`.
 
-    ```
-    7. Application
-    6. Presentation
-    5. Session
-    4. Transport
-    3. Network
-    2. Data Link
-    1. Physical
-    ```
-    - Defined by ISO in 1984.
-    - The TCP/IP model, used in practice, has 4 layers.
-    - Layers 1–3 are network support layers, 5–7 are user support layers, and layer 4 (Transport) links the two.
+   ```
+   7. Application
+   6. Presentation
+   5. Session
+   4. Transport
+   3. Network
+   2. Data Link
+   1. Physical
+   ```
+   - Defined by ISO in 1984.
+   - The TCP/IP model, used in practice, has 4 layers.
+   - Layers 1–3 are network support layers, 5–7 are user support layers, and layer 4 (Transport) links the two.
 
 34. **OSI Model এর কাজ কী? এর লেয়ারসমূহ কী কী?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 811 (ET: IBA)]*
 
 Answer: (Answered in English, as required for IT topics.)
 
-    Work of the OSI model
-    - It is a reference framework that standardises how network communication happens, so equipment and software from different vendors can interoperate.
-    - It divides one very complex problem into seven smaller ones, each with a clear job and a clear interface to its neighbours.
-    - It allows any layer to be changed or upgraded without disturbing the others — Wi-Fi replaced cable at Layers 1 and 2 without touching IP or HTTP.
-    - It makes troubleshooting systematic: no link light is Layer 1, wrong IP is Layer 3, DNS failure is Layer 7.
-    - It provides the common vocabulary engineers use to describe networks.
+   Work of the OSI model
+   - It is a reference framework that standardises how network communication happens, so equipment and software from different vendors can interoperate.
+   - It divides one very complex problem into seven smaller ones, each with a clear job and a clear interface to its neighbours.
+   - It allows any layer to be changed or upgraded without disturbing the others — Wi-Fi replaced cable at Layers 1 and 2 without touching IP or HTTP.
+   - It makes troubleshooting systematic: no link light is Layer 1, wrong IP is Layer 3, DNS failure is Layer 7.
+   - It provides the common vocabulary engineers use to describe networks.
 
 Its layers
 
@@ -3226,8 +3226,8 @@ Its layers
 
 Answer: The correct option is `(c) Transport layer`.
 
-    - Port numbers live in the TCP and UDP headers, which are added at the Transport layer. A port identifies which application process on the destination host should receive the data — HTTP 80, HTTPS 443, SSH 22, DNS 53.
-    - Without a port, the receiving machine would know which host the data is for (from the IP address) but not which program.
+   - Port numbers live in the TCP and UDP headers, which are added at the Transport layer. A port identifies which application process on the destination host should receive the data — HTTP 80, HTTPS 443, SSH 22, DNS 53.
+   - Without a port, the receiving machine would know which host the data is for (from the IP address) but not which program.
 
 Why the others are wrong
 
@@ -3237,51 +3237,51 @@ Why the others are wrong
 | Network layer | IP (logical) address — no ports |
 | Transport layer | `Port number` — correct |
 
-    - Complete addressing chain: MAC address finds the machine on the local link, IP address finds the host across networks, port number finds the process inside that host, and the combination of IP and port is called a socket.
+   - Complete addressing chain: MAC address finds the machine on the local link, IP address finds the host across networks, port number finds the process inside that host, and the combination of IP and port is called a socket.
 
 36. **What is OSI model? Write down the name of OSI model layer.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 837 (ET: N/A)]*
 
 Answer:
 
-    What is the OSI model
-    - The Open Systems Interconnection model is a 7-layer reference model created by ISO in 1984 that describes how data travels from an application on one computer to an application on another. It standardises communication so that different vendors' products interoperate, and it makes fault isolation systematic.
+   What is the OSI model
+   - The Open Systems Interconnection model is a 7-layer reference model created by ISO in 1984 that describes how data travels from an application on one computer to an application on another. It standardises communication so that different vendors' products interoperate, and it makes fault isolation systematic.
 
-    Names of the layers
+   Names of the layers
 
-    ```
-    7. Application   - user services (HTTP, FTP, SMTP)
-    6. Presentation  - translation, encryption, compression
-    5. Session       - session setup, control, teardown
-    4. Transport     - segmentation, ports, reliability (TCP, UDP)
-    3. Network       - logical addressing and routing (IP)
-    2. Data Link     - framing, MAC addressing, error detection
-    1. Physical      - raw bits on the medium
-    ```
-    - Memory aid: All People Seem To Need Data Processing.
+   ```
+   7. Application   - user services (HTTP, FTP, SMTP)
+   6. Presentation  - translation, encryption, compression
+   5. Session       - session setup, control, teardown
+   4. Transport     - segmentation, ports, reliability (TCP, UDP)
+   3. Network       - logical addressing and routing (IP)
+   2. Data Link     - framing, MAC addressing, error detection
+   1. Physical      - raw bits on the medium
+   ```
+   - Memory aid: All People Seem To Need Data Processing.
 
 37. **What is OSI and TCP/IP model and briefly explain?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 870-872 (ET: N/A)]*
 
 Answer:
 
-    OSI model
-    - A 7-layer theoretical reference model published by ISO in 1984: Application, Presentation, Session, Transport, Network, Data Link, Physical.
-    - It defines what each layer must do, but not the protocols that do it. Its value is as a common language for design, teaching and troubleshooting.
+   OSI model
+   - A 7-layer theoretical reference model published by ISO in 1984: Application, Presentation, Session, Transport, Network, Data Link, Physical.
+   - It defines what each layer must do, but not the protocols that do it. Its value is as a common language for design, teaching and troubleshooting.
 
-    TCP/IP model
-    - A 4-layer practical model built by the US DoD in the 1970s and running the internet today: Application, Transport, Internet, Network Access.
-    - It was built around real protocols — TCP, UDP, IP — which existed before the model was written down.
+   TCP/IP model
+   - A 4-layer practical model built by the US DoD in the 1970s and running the internet today: Application, Transport, Internet, Network Access.
+   - It was built around real protocols — TCP, UDP, IP — which existed before the model was written down.
 
-    Layer mapping
-    ```
-    OSI                       TCP/IP
-    7 Application    |
-    6 Presentation   |------>  Application
-    5 Session        |
-    4 Transport      ------->  Transport
-    3 Network        ------->  Internet
-    2 Data Link      |------>  Network Access
-    1 Physical       |
-    ```
+   Layer mapping
+   ```
+   OSI                       TCP/IP
+   7 Application    |
+   6 Presentation   |------>  Application
+   5 Session        |
+   4 Transport      ------->  Transport
+   3 Network        ------->  Internet
+   2 Data Link      |------>  Network Access
+   1 Physical       |
+   ```
 
 Brief comparison
 
@@ -3294,7 +3294,7 @@ Brief comparison
 | Transport service | Connection-oriented only | TCP and UDP |
 | Use today | Reference and teaching | The actual internet |
 
-    - Both use encapsulation: Data -> Segment -> Packet -> Frame -> Bits.
+   - Both use encapsulation: Data -> Segment -> Packet -> Frame -> Bits.
 
 38. **TCP/IP protocol suite -এর বিভিন্ন স্তরের নাম লিখুন? HTTPs কী? এর ব্যবহারের প্রয়োজনীয়তা সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 882 (ET: N/A)]*
 
@@ -3309,16 +3309,16 @@ Layers of the TCP/IP protocol suite
 | Internet | IP addressing, routing | IP, ICMP, ARP, IGMP |
 | Network Access | Framing, MAC addressing, transmission | Ethernet, Wi-Fi, PPP |
 
-    What is HTTPS
-    - HTTPS (HyperText Transfer Protocol Secure) is HTTP running inside a TLS-encrypted channel. It uses TCP port 443, while plain HTTP uses port 80.
-    - The browser and server first complete a TLS handshake: the server presents a certificate signed by a trusted CA, the two sides agree a symmetric session key, and all HTTP messages after that are encrypted with it.
+   What is HTTPS
+   - HTTPS (HyperText Transfer Protocol Secure) is HTTP running inside a TLS-encrypted channel. It uses TCP port 443, while plain HTTP uses port 80.
+   - The browser and server first complete a TLS handshake: the server presents a certificate signed by a trusted CA, the two sides agree a symmetric session key, and all HTTP messages after that are encrypted with it.
 
-    Why HTTPS is necessary
-    - Confidentiality – passwords, card numbers and personal data cannot be read by anyone tapping the line. With plain HTTP everything travels in clear text.
-    - Integrity – the TLS message authentication code detects any alteration, so an attacker cannot silently modify a page or inject content.
-    - Authentication – the certificate proves the site really is the bank it claims to be, defeating fake sites and man-in-the-middle attacks.
-    - Trust and compliance – browsers mark plain HTTP as "Not secure", and standards such as PCI-DSS require encryption for payment data.
-    - SEO and modern features – search engines rank HTTPS sites higher, and features like HTTP/2 and service workers require it.
+   Why HTTPS is necessary
+   - Confidentiality – passwords, card numbers and personal data cannot be read by anyone tapping the line. With plain HTTP everything travels in clear text.
+   - Integrity – the TLS message authentication code detects any alteration, so an attacker cannot silently modify a page or inject content.
+   - Authentication – the certificate proves the site really is the bank it claims to be, defeating fake sites and man-in-the-middle attacks.
+   - Trust and compliance – browsers mark plain HTTP as "Not secure", and standards such as PCI-DSS require encryption for payment data.
+   - SEO and modern features – search engines rank HTTPS sites higher, and features like HTTP/2 and service workers require it.
 
 39. **বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে বামপাশের কলামে, ডানপাশের কলামে কাজ অনুসারে Layer গুলোর নাম লিখুন।** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 975-976 (ET: BUET)]*
 
@@ -3332,15 +3332,15 @@ Answer: (Answered in English, as required for IT topics.) The five layers of the
 | Splits the message into segments, adds port numbers, provides end-to-end reliability, flow control and error recovery | `Transport` |
 | Provides services to the user's program — web, email, file transfer, name resolution; also formatting and session control | `Application` |
 
-    The hybrid (five-layer) model
-    ```
-    5. Application   (OSI 7 + 6 + 5)   HTTP, FTP, SMTP, DNS
-    4. Transport     (OSI 4)           TCP, UDP
-    3. Network       (OSI 3)           IP, ICMP, ARP
-    2. Data Link     (OSI 2)           Ethernet, Wi-Fi, PPP
-    1. Physical      (OSI 1)           cable, fibre, radio
-    ```
-    - It is popular because it keeps the practical protocol stack of TCP/IP but separates Physical from Data Link, which matches how real equipment is built — a hub at Layer 1, a switch at Layer 2.
+   The hybrid (five-layer) model
+   ```
+   5. Application   (OSI 7 + 6 + 5)   HTTP, FTP, SMTP, DNS
+   4. Transport     (OSI 4)           TCP, UDP
+   3. Network       (OSI 3)           IP, ICMP, ARP
+   2. Data Link     (OSI 2)           Ethernet, Wi-Fi, PPP
+   1. Physical      (OSI 1)           cable, fibre, radio
+   ```
+   - It is popular because it keeps the practical protocol stack of TCP/IP but separates Physical from Data Link, which matches how real equipment is built — a hub at Layer 1, a switch at Layer 2.
 
 40. **Write down the functionality of OSI model.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1007-1008 (ET: DU)]*
 
@@ -3356,36 +3356,36 @@ Answer: Functionality of the OSI model, layer by layer.
 | 2 | Data Link | Framing, physical (MAC) addressing, error detection with CRC, flow control on the link, media access control |
 | 1 | Physical | Bit transmission, definition of voltage, data rate, cable and connector type, transmission mode and physical topology |
 
-    Overall functionality of the model
-    - Standardisation so multi-vendor equipment interoperates.
-    - Modularity — one layer can change without affecting the rest.
-    - Encapsulation and decapsulation as data moves down and up the stack.
-    - Systematic troubleshooting, layer by layer.
-    - A common vocabulary for network design and teaching.
+   Overall functionality of the model
+   - Standardisation so multi-vendor equipment interoperates.
+   - Modularity — one layer can change without affecting the rest.
+   - Encapsulation and decapsulation as data moves down and up the stack.
+   - Systematic troubleshooting, layer by layer.
+   - A common vocabulary for network design and teaching.
 
 41. **OSI Model এর Layer গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) Description of the OSI layers.
 
-    - Layer 1 – Physical. Moves raw bits across the medium. It defines voltage levels, bit timing, data rate, cable and connector type, transmission mode (simplex, half duplex, full duplex) and physical topology. Devices: hub, repeater, cable, modem.
-    - Layer 2 – Data Link. Delivers frames from one node to the next node on the same link. It performs framing, adds 48-bit MAC addresses, detects errors with a CRC in the FCS field, and controls access to a shared medium. It has two sub-layers, LLC and MAC. Devices: switch, bridge, NIC.
-    - Layer 3 – Network. Moves packets from the source network to the destination network. It provides logical (IP) addressing, chooses the best path using a routing table, fragments packets that are too large, and decrements the TTL. Protocols: IP, ICMP, ARP, OSPF, BGP. Device: router.
-    - Layer 4 – Transport. Provides end-to-end delivery between processes. It splits data into segments, numbers them, adds port numbers, reassembles them in order, and provides flow control and error recovery. TCP is reliable and connection-oriented; UDP is fast and connectionless.
-    - Layer 5 – Session. Establishes, manages and terminates the dialogue between two applications. It controls whether the exchange is half or full duplex and inserts synchronisation checkpoints so a long transfer can restart from the last checkpoint instead of the beginning.
-    - Layer 6 – Presentation. The translator of the network: converts character sets and data formats, compresses data to save bandwidth, and encrypts and decrypts for security. Examples: TLS, JPEG, MPEG, ASCII.
-    - Layer 7 – Application. The layer the user actually touches, through a browser, mail client or file transfer program. Protocols: HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH.
+   - Layer 1 – Physical. Moves raw bits across the medium. It defines voltage levels, bit timing, data rate, cable and connector type, transmission mode (simplex, half duplex, full duplex) and physical topology. Devices: hub, repeater, cable, modem.
+   - Layer 2 – Data Link. Delivers frames from one node to the next node on the same link. It performs framing, adds 48-bit MAC addresses, detects errors with a CRC in the FCS field, and controls access to a shared medium. It has two sub-layers, LLC and MAC. Devices: switch, bridge, NIC.
+   - Layer 3 – Network. Moves packets from the source network to the destination network. It provides logical (IP) addressing, chooses the best path using a routing table, fragments packets that are too large, and decrements the TTL. Protocols: IP, ICMP, ARP, OSPF, BGP. Device: router.
+   - Layer 4 – Transport. Provides end-to-end delivery between processes. It splits data into segments, numbers them, adds port numbers, reassembles them in order, and provides flow control and error recovery. TCP is reliable and connection-oriented; UDP is fast and connectionless.
+   - Layer 5 – Session. Establishes, manages and terminates the dialogue between two applications. It controls whether the exchange is half or full duplex and inserts synchronisation checkpoints so a long transfer can restart from the last checkpoint instead of the beginning.
+   - Layer 6 – Presentation. The translator of the network: converts character sets and data formats, compresses data to save bandwidth, and encrypts and decrypts for security. Examples: TLS, JPEG, MPEG, ASCII.
+   - Layer 7 – Application. The layer the user actually touches, through a browser, mail client or file transfer program. Protocols: HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH.
 
-    - Data flows down the stack at the sender (encapsulation) and up the stack at the receiver (decapsulation): Data -> Segment -> Packet -> Frame -> Bits.
+   - Data flows down the stack at the sender (encapsulation) and up the stack at the receiver (decapsulation): Data -> Segment -> Packet -> Frame -> Bits.
 
 42. **(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1028 (ET: N/A)]*
 
 Answer:
 
-    What is a network protocol
-    - A protocol is an agreed set of rules that governs how two devices exchange data. Both sides must follow the same rules or communication fails.
-    - Three key elements: syntax (the format and order of the fields), semantics (what each field means and what action to take) and timing (when to send and how fast).
-    - Examples: HTTP for web pages, TCP for reliable transport, IP for addressing and routing, SMTP for mail, DNS for name resolution.
-    - Protocols are stacked: each layer's protocol adds its own header and uses the service of the layer below.
+   What is a network protocol
+   - A protocol is an agreed set of rules that governs how two devices exchange data. Both sides must follow the same rules or communication fails.
+   - Three key elements: syntax (the format and order of the fields), semantics (what each field means and what action to take) and timing (when to send and how fast).
+   - Examples: HTTP for web pages, TCP for reliable transport, IP for addressing and routing, SMTP for mail, DNS for name resolution.
+   - Protocols are stacked: each layer's protocol adds its own header and uses the service of the layer below.
 
 Comparison of the TCP/IP suite and the OSI reference model
 
@@ -3402,7 +3402,7 @@ Comparison of the TCP/IP suite and the OSI reference model
 | Layer independence | Strict, well-defined boundaries | Boundaries less rigid |
 | Adoption | Never fully implemented | Runs the whole internet |
 
-    - Common ground: both are layered, both use encapsulation, and both provide end-to-end communication. The OSI model is used to explain, the TCP/IP suite to build.
+   - Common ground: both are layered, both use encapsulation, and both provide end-to-end communication. The OSI model is used to explain, the TCP/IP suite to build.
 
 43. **TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1042-1043 (ET: DPI)]*
 
@@ -3415,64 +3415,64 @@ Answer: (Answered in English, as required for IT topics.) Work of the TCP/IP mod
 | Internet | Adds the source and destination IP addresses, selects the route, forwards the packet router by router, handles fragmentation and TTL. Protocols: IP, ICMP, ARP, IGMP, plus routing protocols OSPF, RIP, BGP |
 | Network Access | Builds the frame with MAC addresses and a CRC, controls access to the medium, and converts the frame into electrical, optical or radio signals. Protocols: Ethernet, Wi-Fi, PPP |
 
-    - Data unit at each stage: Data -> Segment -> Packet -> Frame -> Bits.
+   - Data unit at each stage: Data -> Segment -> Packet -> Frame -> Bits.
 
 44. **(ক) OSI Model (Layer) এর সাতটি Layer কী কী? প্রথম দুটি সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1097-1098 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.)
 
-    The seven layers of the OSI model
-    ```
-    7. Application
-    6. Presentation
-    5. Session
-    4. Transport
-    3. Network
-    2. Data Link
-    1. Physical
-    ```
+   The seven layers of the OSI model
+   ```
+   7. Application
+   6. Presentation
+   5. Session
+   4. Transport
+   3. Network
+   2. Data Link
+   1. Physical
+   ```
 
-    The first two layers described
+   The first two layers described
 
-    Layer 1 – Physical layer
-    - Transmits raw bits (0s and 1s) over the physical medium as electrical voltage, light pulses or radio waves.
-    - It defines the mechanical and electrical characteristics: cable and connector type, pin assignment, voltage levels, bit duration and data rate.
-    - It defines the transmission mode — simplex, half duplex or full duplex — and the physical topology, such as bus, star or ring.
-    - It performs no error checking at all; it simply moves bits.
-    - PDU: bit. Devices: hub, repeater, cable, connector, modem.
+   Layer 1 – Physical layer
+   - Transmits raw bits (0s and 1s) over the physical medium as electrical voltage, light pulses or radio waves.
+   - It defines the mechanical and electrical characteristics: cable and connector type, pin assignment, voltage levels, bit duration and data rate.
+   - It defines the transmission mode — simplex, half duplex or full duplex — and the physical topology, such as bus, star or ring.
+   - It performs no error checking at all; it simply moves bits.
+   - PDU: bit. Devices: hub, repeater, cable, connector, modem.
 
-    Layer 2 – Data Link layer
-    - Delivers a frame from one node to the next node on the same physical link (hop-to-hop delivery).
-    - Framing – groups bits into frames with a clear start and end.
-    - Physical addressing – adds the 48-bit source and destination MAC addresses.
-    - Error detection – appends a CRC in the FCS field; a corrupted frame is discarded.
-    - Flow control – stops a fast sender from swamping a slow receiver on the link.
-    - Media access control – decides who may transmit, using CSMA/CD on Ethernet or CSMA/CA on Wi-Fi.
-    - Sub-layers: LLC (interface to Layer 3) and MAC (addressing and media access).
-    - PDU: frame. Devices: switch, bridge, NIC. Protocols: Ethernet, PPP, HDLC.
+   Layer 2 – Data Link layer
+   - Delivers a frame from one node to the next node on the same physical link (hop-to-hop delivery).
+   - Framing – groups bits into frames with a clear start and end.
+   - Physical addressing – adds the 48-bit source and destination MAC addresses.
+   - Error detection – appends a CRC in the FCS field; a corrupted frame is discarded.
+   - Flow control – stops a fast sender from swamping a slow receiver on the link.
+   - Media access control – decides who may transmit, using CSMA/CD on Ethernet or CSMA/CA on Wi-Fi.
+   - Sub-layers: LLC (interface to Layer 3) and MAC (addressing and media access).
+   - PDU: frame. Devices: switch, bridge, NIC. Protocols: Ethernet, PPP, HDLC.
 
 45. **(খ) TCP/IP প্রোটোকল কী কাজ করে তা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) The TCP/IP protocol suite is what makes internet communication possible. Its work, layer by layer.
 
-    What TCP does
-    - Establishes a connection with the three-way handshake (SYN, SYN-ACK, ACK) before any data moves.
-    - Numbers every byte with a sequence number, so the receiver can reassemble the data in the right order.
-    - Acknowledges what arrives and retransmits anything that is lost or corrupted, which makes delivery reliable.
-    - Provides flow control through the sliding window, so a fast sender cannot swamp a slow receiver.
-    - Provides congestion control (slow start, congestion avoidance) so the network is not overloaded.
-    - Uses port numbers to deliver data to the correct application process.
+   What TCP does
+   - Establishes a connection with the three-way handshake (SYN, SYN-ACK, ACK) before any data moves.
+   - Numbers every byte with a sequence number, so the receiver can reassemble the data in the right order.
+   - Acknowledges what arrives and retransmits anything that is lost or corrupted, which makes delivery reliable.
+   - Provides flow control through the sliding window, so a fast sender cannot swamp a slow receiver.
+   - Provides congestion control (slow start, congestion avoidance) so the network is not overloaded.
+   - Uses port numbers to deliver data to the correct application process.
 
-    What IP does
-    - Gives every host a unique logical address and puts a source and destination address on every packet.
-    - Routes the packet hop by hop; each router makes an independent forwarding decision using the longest prefix match.
-    - Fragments a packet that is larger than the link MTU and reassembles it at the destination.
-    - It is connectionless and best-effort — it does not guarantee delivery, order or freedom from duplication. That is exactly why TCP exists on top of it.
+   What IP does
+   - Gives every host a unique logical address and puts a source and destination address on every packet.
+   - Routes the packet hop by hop; each router makes an independent forwarding decision using the longest prefix match.
+   - Fragments a packet that is larger than the link MTU and reassembles it at the destination.
+   - It is connectionless and best-effort — it does not guarantee delivery, order or freedom from duplication. That is exactly why TCP exists on top of it.
 
-    Supporting protocols
-    - ICMP reports errors and carries ping and traceroute; ARP maps an IP address to a MAC address; DNS turns a name into an IP address; DHCP hands out addresses automatically; UDP offers fast, connectionless transport for DNS, VoIP and streaming.
+   Supporting protocols
+   - ICMP reports errors and carries ping and traceroute; ARP maps an IP address to a MAC address; DNS turns a name into an IP address; DHCP hands out addresses automatically; UDP offers fast, connectionless transport for DNS, VoIP and streaming.
 
-    - Together: the application hands data to TCP, TCP makes it reliable and adds ports, IP adds addresses and finds the path, and the link layer physically moves it. The result is that any two hosts on earth can exchange data.
+   - Together: the application hands data to TCP, TCP makes it reliable and adds ports, IP adds addresses and finds the path, and the link layer physically moves it. The result is that any two hosts on earth can exchange data.
 
 46. **Describe the OSI layers. Draw a diagram to show the hierarchy when the data is transmitted or received.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1114 (ET: DU)]*
 
@@ -3490,77 +3490,77 @@ The OSI layers
 | 2 | Data Link | Framing, MAC addressing, CRC, media access (Ethernet) | Frame |
 | 1 | Physical | Raw bits as voltage, light or radio | Bit |
 
-    Hierarchy diagram — transmission and reception
-    ```
-       SENDER                                          RECEIVER
-    7  Application     Data                    Data          Application  7
-          |  add AH                             ^  strip AH      |
-    6  Presentation   [PH | Data]              [PH | Data]   Presentation 6
-          |  add PH                             ^  strip PH      |
-    5  Session        [SH | Data]              [SH | Data]     Session    5
-          |  add SH                             ^  strip SH      |
-    4  Transport      [TCP | Data]  = SEGMENT   ^              Transport  4
-          |  add TCP header                     ^  reorder + ACK
-    3  Network        [IP | TCP | Data] = PACKET^                Network  3
-          |  add IP header                      ^  check IP
-    2  Data Link      [MAC | IP | TCP | Data | FCS] = FRAME    Data Link  2
-          |  add MAC header + FCS               ^  check CRC
-    1  Physical       1011010010110101 = BITS  --> BITS         Physical  1
-                            |                        ^
-                            +====== medium ==========+
-    ```
-    - Downward at the sender is `encapsulation`: every layer adds its own header.
-    - Upward at the receiver is `decapsulation`: every layer removes only its own header and passes the rest up.
-    - Each layer communicates logically with its peer layer on the other machine, but the only physical transfer happens at Layer 1.
+   Hierarchy diagram — transmission and reception
+   ```
+      SENDER                                          RECEIVER
+   7  Application     Data                    Data          Application  7
+         |  add AH                             ^  strip AH      |
+   6  Presentation   [PH | Data]              [PH | Data]   Presentation 6
+         |  add PH                             ^  strip PH      |
+   5  Session        [SH | Data]              [SH | Data]     Session    5
+         |  add SH                             ^  strip SH      |
+   4  Transport      [TCP | Data]  = SEGMENT   ^              Transport  4
+         |  add TCP header                     ^  reorder + ACK
+   3  Network        [IP | TCP | Data] = PACKET^                Network  3
+         |  add IP header                      ^  check IP
+   2  Data Link      [MAC | IP | TCP | Data | FCS] = FRAME    Data Link  2
+         |  add MAC header + FCS               ^  check CRC
+   1  Physical       1011010010110101 = BITS  --> BITS         Physical  1
+                           |                        ^
+                           +====== medium ==========+
+   ```
+   - Downward at the sender is `encapsulation`: every layer adds its own header.
+   - Upward at the receiver is `decapsulation`: every layer removes only its own header and passes the rest up.
+   - Each layer communicates logically with its peer layer on the other machine, but the only physical transfer happens at Layer 1.
 
 47. **OSI model এর layer গুলোর নাম লিখ।** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
 
 Answer: (Answered in English, as required for IT topics.) The names of the OSI model layers:
 
-    ```
-    7. Application
-    6. Presentation
-    5. Session
-    4. Transport
-    3. Network
-    2. Data Link
-    1. Physical
-    ```
+   ```
+   7. Application
+   6. Presentation
+   5. Session
+   4. Transport
+   3. Network
+   2. Data Link
+   1. Physical
+   ```
 
-    - Memory aid, top to bottom: All People Seem To Need Data Processing.
-    - Memory aid, bottom to top: Please Do Not Throw Sausage Pizza Away.
+   - Memory aid, top to bottom: All People Seem To Need Data Processing.
+   - Memory aid, bottom to top: Please Do Not Throw Sausage Pizza Away.
 
 48. **How many layers are used in OSI and TCP/IP model? Draw the layer.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
 
 Answer: The OSI model has `7 layers` and the TCP/IP model has `4 layers`.
 
-    Diagram with the mapping between them
-    ```
-    +-------------------+           +-------------------------+
-    |  OSI MODEL (7)    |           |  TCP/IP MODEL (4)       |
-    +-------------------+           +-------------------------+
-    | 7  Application    |  \        |                         |
-    +-------------------+   \       |                         |
-    | 6  Presentation   |    +----->|  4  Application         |
-    +-------------------+   /       |     HTTP, FTP, SMTP,    |
-    | 5  Session        |  /        |     DNS, DHCP, SSH      |
-    +-------------------+           +-------------------------+
-    | 4  Transport      | -------->  |  3  Transport           |
-    |                   |           |     TCP, UDP            |
-    +-------------------+           +-------------------------+
-    | 3  Network        | -------->  |  2  Internet            |
-    |                   |           |     IP, ICMP, ARP       |
-    +-------------------+           +-------------------------+
-    | 2  Data Link      |  \        |  1  Network Access      |
-    +-------------------+   +-----> |     Ethernet, Wi-Fi,    |
-    | 1  Physical       |  /        |     PPP, cables         |
-    +-------------------+           +-------------------------+
-    ```
+   Diagram with the mapping between them
+   ```
+   +-------------------+           +-------------------------+
+   |  OSI MODEL (7)    |           |  TCP/IP MODEL (4)       |
+   +-------------------+           +-------------------------+
+   | 7  Application    |  \        |                         |
+   +-------------------+   \       |                         |
+   | 6  Presentation   |    +----->|  4  Application         |
+   +-------------------+   /       |     HTTP, FTP, SMTP,    |
+   | 5  Session        |  /        |     DNS, DHCP, SSH      |
+   +-------------------+           +-------------------------+
+   | 4  Transport      | -------->  |  3  Transport           |
+   |                   |           |     TCP, UDP            |
+   +-------------------+           +-------------------------+
+   | 3  Network        | -------->  |  2  Internet            |
+   |                   |           |     IP, ICMP, ARP       |
+   +-------------------+           +-------------------------+
+   | 2  Data Link      |  \        |  1  Network Access      |
+   +-------------------+   +-----> |     Ethernet, Wi-Fi,    |
+   | 1  Physical       |  /        |     PPP, cables         |
+   +-------------------+           +-------------------------+
+   ```
 
-    - OSI layers 7, 6 and 5 become one Application layer in TCP/IP.
-    - OSI layers 2 and 1 become one Network Access layer.
-    - OSI Transport and Network map one-to-one onto TCP/IP Transport and Internet.
-    - Some books show a 5-layer TCP/IP model by keeping Physical and Data Link separate.
+   - OSI layers 7, 6 and 5 become one Application layer in TCP/IP.
+   - OSI layers 2 and 1 become one Network Access layer.
+   - OSI Transport and Network map one-to-one onto TCP/IP Transport and Internet.
+   - Some books show a 5-layer TCP/IP model by keeping Physical and Data Link separate.
 
 49. **Give answer of the following question:** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1161 (ET: BUET)]*
    a) IP address converted into physical address \_\_\_\_\_\_\_\_?
@@ -3575,7 +3575,7 @@ a) IP address converted into physical address \_\_\_\_\_\_\_\_?
    d) Data link layer responsible for convert IP address into \_\_\_\_\_\_\_\_?
    e) HTTP service provides using which protocol \_\_\_\_\_\_\_\_?
 
-    Answer:
+   Answer:
 
 | # | Blank | Answer |
 |---|---|---|
@@ -3585,50 +3585,50 @@ a) IP address converted into physical address \_\_\_\_\_\_\_\_?
 | d | Data link layer converts IP address into | `MAC address` (physical address), through ARP |
 | e | HTTP service is provided using which protocol | `TCP` (port 80; HTTPS uses TCP port 443) |
 
-    Short notes
-    - ARP broadcasts "who has this IP?" on the LAN and caches the MAC address that replies. RARP does the reverse and is now replaced by DHCP.
-    - DNS resolves a hostname such as www.google.com into an IP address, using UDP port 53 for queries and TCP port 53 for zone transfers.
-    - SMTP (port 25, or 587 with TLS) pushes mail from client to server and between servers. POP3 (110) and IMAP (143) are used to retrieve mail.
-    - The Data Link layer works with MAC addresses only; ARP supplies the mapping so the frame can be addressed.
-    - HTTP is an application-layer protocol that runs over TCP, because a web page must arrive complete and in order.
+   Short notes
+   - ARP broadcasts "who has this IP?" on the LAN and caches the MAC address that replies. RARP does the reverse and is now replaced by DHCP.
+   - DNS resolves a hostname such as www.google.com into an IP address, using UDP port 53 for queries and TCP port 53 for zone transfers.
+   - SMTP (port 25, or 587 with TLS) pushes mail from client to server and between servers. POP3 (110) and IMAP (143) are used to retrieve mail.
+   - The Data Link layer works with MAC addresses only; ARP supplies the mapping so the frame can be addressed.
+   - HTTP is an application-layer protocol that runs over TCP, because a web page must arrive complete and in order.
 
 50. **What is OSI model? Which layers are important for data transfer and user interaction?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
 Answer:
 
-    What is the OSI model
-    - A 7-layer reference model published by ISO in 1984 that describes how data moves from an application on one machine to an application on another, and lets multi-vendor equipment interoperate.
+   What is the OSI model
+   - A 7-layer reference model published by ISO in 1984 that describes how data moves from an application on one machine to an application on another, and lets multi-vendor equipment interoperate.
 
-    Layers important for data transfer
-    - `Physical (1)` – actually moves the bits over cable, fibre or radio. Without it nothing travels.
-    - `Data Link (2)` – frames the data and delivers it hop by hop using MAC addresses, with CRC error detection.
-    - `Network (3)` – gives logical IP addresses and routes the packet across networks. This is what makes end-to-end transfer between distant networks possible.
-    - `Transport (4)` – the key layer for reliable transfer: segmentation, sequencing, acknowledgement, retransmission and flow control.
+   Layers important for data transfer
+   - `Physical (1)` – actually moves the bits over cable, fibre or radio. Without it nothing travels.
+   - `Data Link (2)` – frames the data and delivers it hop by hop using MAC addresses, with CRC error detection.
+   - `Network (3)` – gives logical IP addresses and routes the packet across networks. This is what makes end-to-end transfer between distant networks possible.
+   - `Transport (4)` – the key layer for reliable transfer: segmentation, sequencing, acknowledgement, retransmission and flow control.
 
-    Layers important for user interaction
-    - `Session (5)` – opens, maintains and closes the user's dialogue, and adds checkpoints so a long transfer can resume.
-    - `Presentation (6)` – makes data readable to the user: character-set translation, decompression and decryption.
-    - `Application (7)` – the layer the user actually touches, through a browser, mail client or file transfer program.
+   Layers important for user interaction
+   - `Session (5)` – opens, maintains and closes the user's dialogue, and adds checkpoints so a long transfer can resume.
+   - `Presentation (6)` – makes data readable to the user: character-set translation, decompression and decryption.
+   - `Application (7)` – the layer the user actually touches, through a browser, mail client or file transfer program.
 
-    - In short: layers 1–4 are the network support (data transfer) layers, and layers 5–7 are the user support (interaction) layers, with Transport acting as the bridge between the two groups.
+   - In short: layers 1–4 are the network support (data transfer) layers, and layers 5–7 are the user support (interaction) layers, with Transport acting as the bridge between the two groups.
 
 51. **Name OSI layer that transmitted bit stream to frames.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213-1214 (ET: N/A)]*
 
 Answer: The `Data Link layer (Layer 2)` converts a bit stream into frames.
 
-    - The Physical layer delivers an unstructured stream of bits. The Data Link layer performs `framing`: it groups those bits into meaningful units with a defined beginning and end, so the receiver knows where one frame stops and the next starts.
-    - Each frame carries a header with the source and destination MAC addresses, and a trailer with the FCS (CRC) for error detection.
+   - The Physical layer delivers an unstructured stream of bits. The Data Link layer performs `framing`: it groups those bits into meaningful units with a defined beginning and end, so the receiver knows where one frame stops and the next starts.
+   - Each frame carries a header with the source and destination MAC addresses, and a trailer with the FCS (CRC) for error detection.
 
-    ```
-    Physical layer  : 1010110100101101110010101101 ...  (raw bits)
-                                |
-                         framing (Layer 2)
-                                v
-    Data Link layer : | Preamble | Dest MAC | Src MAC | Type | Data | FCS |
-    ```
+   ```
+   Physical layer  : 1010110100101101110010101101 ...  (raw bits)
+                               |
+                        framing (Layer 2)
+                               v
+   Data Link layer : | Preamble | Dest MAC | Src MAC | Type | Data | FCS |
+   ```
 
-    - Framing methods include character count, byte stuffing with flag bytes, and bit stuffing (inserting a 0 after five consecutive 1s, as HDLC does).
-    - Other Data Link functions: physical addressing, error detection, flow control and media access control.
+   - Framing methods include character count, byte stuffing with flag bytes, and bit stuffing (inserting a 0 after five consecutive 1s, as HDLC does).
+   - Other Data Link functions: physical addressing, error detection, flow control and media access control.
 
 52. **Explain: ISO, OSI and TCP/IP model with figure.** *[ICT Ministry Assistant Programmer 2017 compact it 1241-1242 (ET: N/A)]*
 
@@ -3636,43 +3636,43 @@ Answer: The `Data Link layer (Layer 2)` converts a bit stream into frames.
 
 Answer:
 
-    ISO
-    - ISO (International Organization for Standardization) is the worldwide standards body founded in 1947 and based in Geneva. It publishes standards across every industry.
-    - In networking, ISO is the organisation that created the OSI model in 1984. A common exam point: ISO is the body, OSI is the model — they are not the same thing.
+   ISO
+   - ISO (International Organization for Standardization) is the worldwide standards body founded in 1947 and based in Geneva. It publishes standards across every industry.
+   - In networking, ISO is the organisation that created the OSI model in 1984. A common exam point: ISO is the body, OSI is the model — they are not the same thing.
 
-    OSI model — 7 layers
-    ```
-    +---------------------------------------------------+
-    | 7  Application   - HTTP, FTP, SMTP, DNS   | Data   |
-    +---------------------------------------------------+
-    | 6  Presentation  - TLS, JPEG, ASCII       | Data   |
-    +---------------------------------------------------+
-    | 5  Session       - NetBIOS, RPC           | Data   |
-    +---------------------------------------------------+
-    | 4  Transport     - TCP, UDP               | Segment|
-    +---------------------------------------------------+
-    | 3  Network       - IP, ICMP, OSPF         | Packet |
-    +---------------------------------------------------+
-    | 2  Data Link     - Ethernet, PPP, ARP     | Frame  |
-    +---------------------------------------------------+
-    | 1  Physical      - cable, fibre, radio    | Bits   |
-    +---------------------------------------------------+
-    ```
-    - It is a theoretical reference model: it says what each layer must do, not which protocol does it.
+   OSI model — 7 layers
+   ```
+   +---------------------------------------------------+
+   | 7  Application   - HTTP, FTP, SMTP, DNS   | Data   |
+   +---------------------------------------------------+
+   | 6  Presentation  - TLS, JPEG, ASCII       | Data   |
+   +---------------------------------------------------+
+   | 5  Session       - NetBIOS, RPC           | Data   |
+   +---------------------------------------------------+
+   | 4  Transport     - TCP, UDP               | Segment|
+   +---------------------------------------------------+
+   | 3  Network       - IP, ICMP, OSPF         | Packet |
+   +---------------------------------------------------+
+   | 2  Data Link     - Ethernet, PPP, ARP     | Frame  |
+   +---------------------------------------------------+
+   | 1  Physical      - cable, fibre, radio    | Bits   |
+   +---------------------------------------------------+
+   ```
+   - It is a theoretical reference model: it says what each layer must do, not which protocol does it.
 
-    TCP/IP model — 4 layers
-    ```
-    +---------------------------------------------------+
-    |  Application    HTTP HTTPS FTP SMTP DNS DHCP SSH  |
-    +---------------------------------------------------+
-    |  Transport      TCP        |        UDP           |
-    +---------------------------------------------------+
-    |  Internet       IP  ICMP  ARP  IGMP  OSPF  BGP    |
-    +---------------------------------------------------+
-    |  Network Access Ethernet  Wi-Fi  PPP  Frame Relay |
-    +---------------------------------------------------+
-    ```
-    - It is the practical model the internet runs on, built by the US DoD.
+   TCP/IP model — 4 layers
+   ```
+   +---------------------------------------------------+
+   |  Application    HTTP HTTPS FTP SMTP DNS DHCP SSH  |
+   +---------------------------------------------------+
+   |  Transport      TCP        |        UDP           |
+   +---------------------------------------------------+
+   |  Internet       IP  ICMP  ARP  IGMP  OSPF  BGP    |
+   +---------------------------------------------------+
+   |  Network Access Ethernet  Wi-Fi  PPP  Frame Relay |
+   +---------------------------------------------------+
+   ```
+   - It is the practical model the internet runs on, built by the US DoD.
 
 Mapping and comparison
 
@@ -3696,114 +3696,114 @@ Mapping and comparison
 True Positive (TP) = 560 True Negative (TN) = 330 False Positive (FP) = 60 False Negative (FN) = 50 Calculate the following: (i) Accuracy (ii) Precision (iii) Recall (iv) F1 Score
 
 Answer:
-    Given:
-    - $\text{TP} = 560$
-    - $\text{TN} = 330$
-    - $\text{FP} = 60$
-    - $\text{FN} = 50$
-    - $\text{Total} = \text{TP} + \text{TN} + \text{FP} + \text{FN} = 560 + 330 + 60 + 50 = 1000$
+   Given:
+   - $\text{TP} = 560$
+   - $\text{TN} = 330$
+   - $\text{FP} = 60$
+   - $\text{FN} = 50$
+   - $\text{Total} = \text{TP} + \text{TN} + \text{FP} + \text{FN} = 560 + 330 + 60 + 50 = 1000$
 
-    (i) Accuracy:
-    $$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{Total}} = \frac{560 + 330}{1000} = \frac{890}{1000} = 0.89 \text{ (or } 89\%\text{)}$$
+   (i) Accuracy:
+   $$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{Total}} = \frac{560 + 330}{1000} = \frac{890}{1000} = 0.89 \text{ (or } 89\%\text{)}$$
 
-    (ii) Precision:
-    $$\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{560}{560 + 60} = \frac{560}{620} \approx 0.9032 \text{ (or } 90.32\%\text{)}$$
+   (ii) Precision:
+   $$\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{560}{560 + 60} = \frac{560}{620} \approx 0.9032 \text{ (or } 90.32\%\text{)}$$
 
-    (iii) Recall (Sensitivity):
-    $$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{560}{560 + 50} = \frac{560}{610} \approx 0.9180 \text{ (or } 91.80\%\text{)}$$
+   (iii) Recall (Sensitivity):
+   $$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{560}{560 + 50} = \frac{560}{610} \approx 0.9180 \text{ (or } 91.80\%\text{)}$$
 
-    (iv) F1 Score:
-    $$\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = \frac{2 \times \text{TP}}{2\text{TP} + \text{FP} + \text{FN}} = \frac{2 \times 560}{1120 + 60 + 50} = \frac{1120}{1230} \approx 0.9106 \text{ (or } 91.06\%\text{)}$$
+   (iv) F1 Score:
+   $$\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = \frac{2 \times \text{TP}}{2\text{TP} + \text{FP} + \text{FN}} = \frac{2 \times 560}{1120 + 60 + 50} = \frac{1120}{1230} \approx 0.9106 \text{ (or } 91.06\%\text{)}$$
 
 54. **Write a Java class named BankAccount having the following: Private fields: account_name, account_number, balance (encapsulation), Methods: deposit(), withdraw(), display(). Show code with access control and method implementation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 226-228]]*
 
 Answer:
 
-    ```java
-    public class BankAccount {
-        // Private fields demonstrating encapsulation
-        private String account_name;
-        private String account_number;
-        private double balance;
+   ```java
+   public class BankAccount {
+       // Private fields demonstrating encapsulation
+       private String account_name;
+       private String account_number;
+       private double balance;
 
-        // Parameterized Constructor
-        public BankAccount(String account_name, String account_number, double initial_balance) {
-            this.account_name = account_name;
-            this.account_number = account_number;
-            if (initial_balance >= 0) {
-                this.balance = initial_balance;
-            } else {
-                this.balance = 0.0;
-            }
-        }
+       // Parameterized Constructor
+       public BankAccount(String account_name, String account_number, double initial_balance) {
+           this.account_name = account_name;
+           this.account_number = account_number;
+           if (initial_balance >= 0) {
+               this.balance = initial_balance;
+           } else {
+               this.balance = 0.0;
+           }
+       }
 
-        // Method to deposit money
-        public void deposit(double amount) {
-            if (amount > 0) {
-                this.balance += amount;
-                System.out.println("Successfully deposited: BDT " + amount);
-            } else {
-                System.out.println("Invalid deposit amount.");
-            }
-        }
+       // Method to deposit money
+       public void deposit(double amount) {
+           if (amount > 0) {
+               this.balance += amount;
+               System.out.println("Successfully deposited: BDT " + amount);
+           } else {
+               System.out.println("Invalid deposit amount.");
+           }
+       }
 
-        // Method to withdraw money
-        public void withdraw(double amount) {
-            if (amount > 0 && amount <= this.balance) {
-                this.balance -= amount;
-                System.out.println("Successfully withdrawn: BDT " + amount);
-            } else {
-                System.out.println("Insufficient funds or invalid withdrawal amount.");
-            }
-        }
+       // Method to withdraw money
+       public void withdraw(double amount) {
+           if (amount > 0 && amount <= this.balance) {
+               this.balance -= amount;
+               System.out.println("Successfully withdrawn: BDT " + amount);
+           } else {
+               System.out.println("Insufficient funds or invalid withdrawal amount.");
+           }
+       }
 
-        // Method to display account details
-        public void display() {
-            System.out.println("Account Name   : " + this.account_name);
-            System.out.println("Account Number : " + this.account_number);
-            System.out.println("Current Balance: BDT " + this.balance);
-        }
-    }
-    ```
+       // Method to display account details
+       public void display() {
+           System.out.println("Account Name   : " + this.account_name);
+           System.out.println("Account Number : " + this.account_number);
+           System.out.println("Current Balance: BDT " + this.balance);
+       }
+   }
+   ```
 
 55. **Add suitable prepositions (২টি বাক্য দেওয়া হয়).** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
 Answer:
-    - 1. He is proficient **in** computer programming.
-    - 2. She has been suffering **from** fever since Monday.
-    - (Additional standard exam forms: He died **of** malaria; He is senior **to** me).
+   - 1. He is proficient **in** computer programming.
+   - 2. She has been suffering **from** fever since Monday.
+   - (Additional standard exam forms: He died **of** malaria; He is senior **to** me).
 
 56. **Given a positive integer N, return the \text{N}^\text{th} row of Pascal's triangle. (Pascal's triangle is a triangular array of the binomial coefficients formed by summing up the elements or previous row.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 324]]*
 
 Answer:
-    Each element $C(N, k)$ in the $N$-th row (0-indexed) can be calculated iteratively in $O(N)$ time using the relation:
-    $$C(N, k) = C(N, k-1) \times \frac{N - k + 1}{k}$$
+   Each element $C(N, k)$ in the $N$-th row (0-indexed) can be calculated iteratively in $O(N)$ time using the relation:
+   $$C(N, k) = C(N, k-1) \times \frac{N - k + 1}{k}$$
 
-    ```python
-    def get_pascal_row(n):
-        # n is 1-indexed row number
-        row = [1]
-        for k in range(1, n):
-            val = row[-1] * (n - k) // k
-            row.append(val)
-        return row
+   ```python
+   def get_pascal_row(n):
+       # n is 1-indexed row number
+       row = [1]
+       for k in range(1, n):
+           val = row[-1] * (n - k) // k
+           row.append(val)
+       return row
 
-    # Example for N = 5: returns [1, 4, 6, 4, 1]
-    ```
+   # Example for N = 5: returns [1, 4, 6, 4, 1]
+   ```
 
 57. **Preposition:** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
 
 Answer:
-    A preposition is a word placed before a noun or pronoun to indicate relation, direction, time, place, or location. Common exam rules and correct prepositions:
-    - 1. Appropriate Prepositions:
-      - Abide **by** (rules)
-      - Agree **with** (a person) / Agree **to** (a proposal)
-      - Congratulate **on** (success)
-      - Prevent **from** (doing something)
-    - 2. Time & Place:
-      - In (months/years/large cities): in 2024, in Dhaka
-      - On (days/dates): on Sunday, on 26th March
-      - At (specific clock time/small location): at 10:00 AM, at Dhanmondi
+   A preposition is a word placed before a noun or pronoun to indicate relation, direction, time, place, or location. Common exam rules and correct prepositions:
+   - 1. Appropriate Prepositions:
+     - Abide **by** (rules)
+     - Agree **with** (a person) / Agree **to** (a proposal)
+     - Congratulate **on** (success)
+     - Prevent **from** (doing something)
+   - 2. Time & Place:
+     - In (months/years/large cities): in 2024, in Dhaka
+     - On (days/dates): on Sunday, on 26th March
+     - At (specific clock time/small location): at 10:00 AM, at Dhanmondi
 
 ## Networking Fundamentals & Terminology (32)
 
@@ -5335,27 +5335,27 @@ Answer:
 
 Answer: (Answered in English, as required for IT topics.)
 
-    Functions of a router
-    - Forwards packets between different networks using the destination IP address.
-    - Maintains a routing table, learned statically or through RIP, OSPF, EIGRP or BGP, and selects the best path by longest prefix match.
-    - Determines the path — choosing the best of several possible routes by metric.
-    - Blocks broadcasts, so each interface is a separate broadcast domain.
-    - Performs NAT, translating private addresses to a public one.
-    - Acts as a DHCP server, handing out addresses on the LAN.
-    - Filters traffic with access control lists, and often includes firewall functions.
-    - Fragments packets that exceed the next link's MTU, and decrements the TTL to kill looping packets.
-    - Rewrites the Layer 2 header at every hop while leaving the IP header addresses unchanged.
+   Functions of a router
+   - Forwards packets between different networks using the destination IP address.
+   - Maintains a routing table, learned statically or through RIP, OSPF, EIGRP or BGP, and selects the best path by longest prefix match.
+   - Determines the path — choosing the best of several possible routes by metric.
+   - Blocks broadcasts, so each interface is a separate broadcast domain.
+   - Performs NAT, translating private addresses to a public one.
+   - Acts as a DHCP server, handing out addresses on the LAN.
+   - Filters traffic with access control lists, and often includes firewall functions.
+   - Fragments packets that exceed the next link's MTU, and decrements the TTL to kill looping packets.
+   - Rewrites the Layer 2 header at every hop while leaving the IP header addresses unchanged.
 
-    Functions of a gateway
-    - Connects two networks that use different protocols or architectures, and translates between them.
-    - Converts data formats, character sets and message structures where required.
-    - Can operate at every layer up to Layer 7, since full conversion may require rewriting the payload.
-    - Acts as the entry and exit point for a network — the `default gateway` is the router a host uses for anything outside its own subnet.
-    - Often adds security functions: filtering, authentication and logging at the network boundary.
-    - Examples: VoIP gateway (IP to PSTN), email gateway, IoT gateway, API gateway, payment gateway.
+   Functions of a gateway
+   - Connects two networks that use different protocols or architectures, and translates between them.
+   - Converts data formats, character sets and message structures where required.
+   - Can operate at every layer up to Layer 7, since full conversion may require rewriting the payload.
+   - Acts as the entry and exit point for a network — the `default gateway` is the router a host uses for anything outside its own subnet.
+   - Often adds security functions: filtering, authentication and logging at the network boundary.
+   - Examples: VoIP gateway (IP to PSTN), email gateway, IoT gateway, API gateway, payment gateway.
 
-    Relationship
-    - Every router is a gateway, but a gateway may do far more than route: it may translate protocols entirely. On an all-IP network the two words are used for the same device.
+   Relationship
+   - Every router is a gateway, but a gateway may do far more than route: it may translate protocols entirely. On an all-IP network the two words are used for the same device.
 
 11. **Write down the difference between Hub and Switch.** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
 
@@ -5375,21 +5375,21 @@ Answer:
 | Cost | Cheaper | Slightly more expensive |
 | Status | Obsolete | Standard in every network today |
 
-    Example
-    - On a 100 Mbps hub with 10 active users, all 10 share one 100 Mbps collision domain, so each gets roughly 10 Mbps and collisions are constant.
-    - On a 100 Mbps switch, each of the 10 users has a private 100 Mbps full-duplex link and there are no collisions at all.
+   Example
+   - On a 100 Mbps hub with 10 active users, all 10 share one 100 Mbps collision domain, so each gets roughly 10 Mbps and collisions are constant.
+   - On a 100 Mbps switch, each of the 10 users has a private 100 Mbps full-duplex link and there are no collisions at all.
 
 12. **Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.)
 
-    What is a Wi-Fi access point
-    - An access point (AP) is a device that creates a wireless LAN and lets Wi-Fi clients join a wired network. It is the bridge between the radio side (802.11) and the cable side (Ethernet).
-    - It broadcasts an SSID, authenticates clients with WPA2 or WPA3, and converts wireless frames into Ethernet frames and back.
-    - It works at Layer 2 and is effectively a wireless switch port; it does not route.
-    - Types: standalone (configured individually), controller-based (managed centrally in an enterprise), and mesh (APs relay for each other). Most are powered over Ethernet (PoE).
-    - Multiple APs on different channels give roaming coverage across a building, and clients hand over between them.
-    - A home "Wi-Fi router" is really three devices in one box: a router, a switch and an access point.
+   What is a Wi-Fi access point
+   - An access point (AP) is a device that creates a wireless LAN and lets Wi-Fi clients join a wired network. It is the bridge between the radio side (802.11) and the cable side (Ethernet).
+   - It broadcasts an SSID, authenticates clients with WPA2 or WPA3, and converts wireless frames into Ethernet frames and back.
+   - It works at Layer 2 and is effectively a wireless switch port; it does not route.
+   - Types: standalone (configured individually), controller-based (managed centrally in an enterprise), and mesh (APs relay for each other). Most are powered over Ethernet (PoE).
+   - Multiple APs on different channels give roaming coverage across a building, and clients hand over between them.
+   - A home "Wi-Fi router" is really three devices in one box: a router, a switch and an access point.
 
 Router vs Switch
 
@@ -5424,36 +5424,36 @@ Answer: (Answered in English, as required for IT topics.)
 | Cost | Lowest | Moderate | Highest |
 | Use | Obsolete | Building a LAN | Joining LAN to internet, or LAN to LAN |
 
-    Simple summary
-    - Hub — repeats everything to everyone, wasting bandwidth.
-    - Switch — learns which device is on which port and delivers precisely.
-    - Router — connects entire networks and chooses the best path between them.
+   Simple summary
+   - Hub — repeats everything to everyone, wasting bandwidth.
+   - Switch — learns which device is on which port and delivers precisely.
+   - Router — connects entire networks and chooses the best path between them.
 
 14. **(c) Briefly describe three devices using which different LANs can be connected.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1030 (ET: N/A)]*
 
 Answer: Three devices used to connect different LANs together.
 
-    1. Bridge (Layer 2)
-    - Connects two LAN segments that use the same protocol, and forwards frames between them based on MAC addresses.
-    - It learns which addresses are on each side and filters local traffic, so only frames destined for the other side cross.
-    - Effect: splits the collision domain in two but keeps a single broadcast domain.
-    - Suitable when two segments of the same network need to be joined and local traffic kept local.
+   1. Bridge (Layer 2)
+   - Connects two LAN segments that use the same protocol, and forwards frames between them based on MAC addresses.
+   - It learns which addresses are on each side and filters local traffic, so only frames destined for the other side cross.
+   - Effect: splits the collision domain in two but keeps a single broadcast domain.
+   - Suitable when two segments of the same network need to be joined and local traffic kept local.
 
-    2. Switch (Layer 2)
-    - A multi-port bridge implemented in hardware. It connects many devices and many segments, forwarding each frame only to the correct port using its MAC address table.
-    - Every port is its own collision domain, and full duplex removes collisions entirely.
-    - With VLANs it can also create several logical LANs on one physical switch, which are then joined by a router.
-    - Suitable for connecting LAN segments within one building at high speed.
+   2. Switch (Layer 2)
+   - A multi-port bridge implemented in hardware. It connects many devices and many segments, forwarding each frame only to the correct port using its MAC address table.
+   - Every port is its own collision domain, and full duplex removes collisions entirely.
+   - With VLANs it can also create several logical LANs on one physical switch, which are then joined by a router.
+   - Suitable for connecting LAN segments within one building at high speed.
 
-    3. Router (Layer 3)
-    - Connects LANs that are on different IP networks, forwarding packets by IP address using a routing table.
-    - It blocks broadcasts, so each connected LAN keeps its own broadcast domain — this is what stops a broadcast storm in one LAN from affecting the others.
-    - It can also join networks over a WAN link, and it adds NAT, DHCP and ACL filtering.
-    - Suitable for connecting LANs in different buildings, cities, or with different addressing.
+   3. Router (Layer 3)
+   - Connects LANs that are on different IP networks, forwarding packets by IP address using a routing table.
+   - It blocks broadcasts, so each connected LAN keeps its own broadcast domain — this is what stops a broadcast storm in one LAN from affecting the others.
+   - It can also join networks over a WAN link, and it adds NAT, DHCP and ACL filtering.
+   - Suitable for connecting LANs in different buildings, cities, or with different addressing.
 
-    Also worth mentioning
-    - Gateway — needed when the two LANs use different protocol suites, since it translates between them.
-    - Repeater or hub (Layer 1) — extends a segment but does not really "connect LANs"; it merely enlarges one.
+   Also worth mentioning
+   - Gateway — needed when the two LANs use different protocol suites, since it translates between them.
+   - Repeater or hub (Layer 1) — extends a segment but does not really "connect LANs"; it merely enlarges one.
 
 | Device | Layer | Joins | Separates broadcasts |
 |---|---|---|---|
@@ -5465,27 +5465,27 @@ Answer: Three devices used to connect different LANs together.
 
 Answer: (Answered in English, as required for IT topics.)
 
-    What is a hub
-    - A Layer 1 device — a multi-port repeater. A frame arriving on one port is regenerated and sent out of every other port.
-    - It has no intelligence, keeps no address table, and cannot tell one device from another.
-    - All ports share one collision domain and one broadcast domain, so it must run half duplex with CSMA/CD.
+   What is a hub
+   - A Layer 1 device — a multi-port repeater. A frame arriving on one port is regenerated and sent out of every other port.
+   - It has no intelligence, keeps no address table, and cannot tell one device from another.
+   - All ports share one collision domain and one broadcast domain, so it must run half duplex with CSMA/CD.
 
-    What is a switch
-    - A Layer 2 device — a multi-port bridge implemented in hardware. It learns the MAC address behind each port and forwards a frame only to the port where its destination lives.
-    - Every port is a separate collision domain, so full-duplex operation is possible and collisions disappear.
-    - Managed switches add VLANs, STP, port security and QoS.
+   What is a switch
+   - A Layer 2 device — a multi-port bridge implemented in hardware. It learns the MAC address behind each port and forwards a frame only to the port where its destination lives.
+   - Every port is a separate collision domain, so full-duplex operation is possible and collisions disappear.
+   - Managed switches add VLANs, STP, port security and QoS.
 
-    Which is preferable, and why — the `switch`, decisively
+   Which is preferable, and why — the `switch`, decisively
 
-    - Bandwidth. A 100 Mbps hub with 10 users shares one 100 Mbps pipe, so each user gets roughly 10 Mbps. On a switch each user has a private 100 Mbps full-duplex link.
-    - Collisions. A hub's single collision domain means constant collisions and retransmissions as users increase; a switch has none.
-    - Security. On a hub every device receives every frame, so any machine can sniff passwords. A switch sends frames only where they belong.
-    - Scalability. Hub performance collapses beyond a handful of active users; a switch stays fast.
-    - Features. VLANs, QoS, link aggregation and port security exist only on switches.
-    - Cost. Switches are now so cheap that hubs have no price advantage at all, and hubs are effectively no longer manufactured.
+   - Bandwidth. A 100 Mbps hub with 10 users shares one 100 Mbps pipe, so each user gets roughly 10 Mbps. On a switch each user has a private 100 Mbps full-duplex link.
+   - Collisions. A hub's single collision domain means constant collisions and retransmissions as users increase; a switch has none.
+   - Security. On a hub every device receives every frame, so any machine can sniff passwords. A switch sends frames only where they belong.
+   - Scalability. Hub performance collapses beyond a handful of active users; a switch stays fast.
+   - Features. VLANs, QoS, link aggregation and port security exist only on switches.
+   - Cost. Switches are now so cheap that hubs have no price advantage at all, and hubs are effectively no longer manufactured.
 
-    - The only argument ever made for a hub is that it repeats all traffic to all ports, which is occasionally convenient for packet capture — and even that is now done with a switch's port-mirroring (SPAN) feature.
-    - Conclusion: use a switch in every practical situation.
+   - The only argument ever made for a hub is that it repeats all traffic to all ports, which is occasionally convenient for packet capture — and even that is now done with a switch's port-mirroring (SPAN) feature.
+   - Conclusion: use a switch in every practical situation.
 
 16. **Difference among HUB, Switch and Router.** *[DESCO Assistant Engineer (CSE) 2019 compact it 1119 (ET: BUET)]*
 
@@ -5524,17 +5524,17 @@ Answer:
 | Typical use | Obsolete | Building the LAN | Connecting LAN to internet or LAN to LAN |
 | Cost | Lowest | Moderate | Highest |
 
-    Practical illustration
-    ```
-    Internet
-       |
-    [ROUTER]        <- joins the LAN to the internet, blocks broadcasts, does NAT
-       |
-    [SWITCH]        <- connects all internal devices, one collision domain per port
-     / | \
-    PC PC PC
-    ```
-    - A hub would sit where the switch is, but would share bandwidth and let every PC see every frame — which is why it is no longer used.
+   Practical illustration
+   ```
+   Internet
+      |
+   [ROUTER]        <- joins the LAN to the internet, blocks broadcasts, does NAT
+      |
+   [SWITCH]        <- connects all internal devices, one collision domain per port
+    / | \
+   PC PC PC
+   ```
+   - A hub would sit where the switch is, but would share bandwidth and let every PC see every frame — which is why it is no longer used.
 
 18. **Difference between Router and Switch.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
@@ -5556,9 +5556,9 @@ Answer:
 | Cost | Lower | Higher |
 | WAN support | No | Yes |
 
-    Key point
-    - A switch works `inside` a network; a router works `between` networks. That single distinction explains almost every other difference in the table — the addresses used, the tables kept, the handling of broadcasts and the placement in the topology.
-    - A Layer 3 switch blurs the line: it does hardware routing between VLANs, combining switch speed with basic router function, but it still lacks WAN interfaces and the full feature set of a router.
+   Key point
+   - A switch works `inside` a network; a router works `between` networks. That single distinction explains almost every other difference in the table — the addresses used, the tables kept, the handling of broadcasts and the placement in the topology.
+   - A Layer 3 switch blurs the line: it does hardware routing between VLANs, combining switch speed with basic router function, but it still lacks WAN interfaces and the full feature set of a router.
 
 19. **Describe about Hub, Switch and Router.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1214 (ET: N/A)]*
 
@@ -5566,62 +5566,62 @@ Answer:
 
 Answer:
 
-    Hub — Layer 1
-    - A multi-port repeater. Any frame received on one port is regenerated and sent out of every other port, with no examination of addresses.
-    - All ports share one collision domain and one broadcast domain, so it must work in half duplex using CSMA/CD, and bandwidth is shared among all users.
-    - No intelligence, no filtering, no security — every device sees every frame.
-    - Types were passive, active and intelligent. It is obsolete today, completely replaced by switches.
+   Hub — Layer 1
+   - A multi-port repeater. Any frame received on one port is regenerated and sent out of every other port, with no examination of addresses.
+   - All ports share one collision domain and one broadcast domain, so it must work in half duplex using CSMA/CD, and bandwidth is shared among all users.
+   - No intelligence, no filtering, no security — every device sees every frame.
+   - Types were passive, active and intelligent. It is obsolete today, completely replaced by switches.
 
-    Switch — Layer 2
-    - A multi-port bridge built in hardware. It reads the source MAC address of every incoming frame and records which port it came from, building a MAC address table.
-    - A frame is then forwarded only out of the port where its destination lives. Unknown, broadcast and multicast frames are flooded.
-    - Each port is its own collision domain with dedicated bandwidth, and full duplex means no collisions at all.
-    - Forwarding methods: store-and-forward (checks the CRC first, safest), cut-through (fastest) and fragment-free.
-    - Managed switches add VLANs to split broadcast domains, Spanning Tree Protocol to prevent loops, port security, QoS and link aggregation.
+   Switch — Layer 2
+   - A multi-port bridge built in hardware. It reads the source MAC address of every incoming frame and records which port it came from, building a MAC address table.
+   - A frame is then forwarded only out of the port where its destination lives. Unknown, broadcast and multicast frames are flooded.
+   - Each port is its own collision domain with dedicated bandwidth, and full duplex means no collisions at all.
+   - Forwarding methods: store-and-forward (checks the CRC first, safest), cut-through (fastest) and fragment-free.
+   - Managed switches add VLANs to split broadcast domains, Spanning Tree Protocol to prevent loops, port security, QoS and link aggregation.
 
-    Router — Layer 3
-    - Connects different networks and forwards packets between them using the destination IP address and a routing table, choosing the best path by longest prefix match.
-    - Routes are learned statically or dynamically through RIP, OSPF, EIGRP or BGP.
-    - It does not forward broadcasts, so every interface bounds a separate broadcast domain — this is what stops a broadcast storm spreading.
-    - Additional functions: NAT, DHCP server, ACL filtering, VPN termination, fragmentation and TTL decrement.
-    - It rewrites the Layer 2 frame at each hop while leaving the IP addresses untouched, which is why the IP header identifies the endpoints and the MAC header identifies only the current hop.
+   Router — Layer 3
+   - Connects different networks and forwards packets between them using the destination IP address and a routing table, choosing the best path by longest prefix match.
+   - Routes are learned statically or dynamically through RIP, OSPF, EIGRP or BGP.
+   - It does not forward broadcasts, so every interface bounds a separate broadcast domain — this is what stops a broadcast storm spreading.
+   - Additional functions: NAT, DHCP server, ACL filtering, VPN termination, fragmentation and TTL decrement.
+   - It rewrites the Layer 2 frame at each hop while leaving the IP addresses untouched, which is why the IP header identifies the endpoints and the MAC header identifies only the current hop.
 
-    ```
-    Internet --- [ROUTER] --- [SWITCH] --- PC, PC, PC, Printer
-                 Layer 3       Layer 2
-                 IP, NAT       MAC, VLAN
-    ```
+   ```
+   Internet --- [ROUTER] --- [SWITCH] --- PC, PC, PC, Printer
+                Layer 3       Layer 2
+                IP, NAT       MAC, VLAN
+   ```
 
 20. **(c) Define context switch with proper example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 73]]*
 
 Answer:
-    A Context Switch is the administrative procedure in an Operating System where the state (context) of currently executing process $P_1$ is saved into its Process Control Block (PCB), and the previously saved state of another process $P_2$ is loaded into CPU registers so that execution can seamlessly resume.
+   A Context Switch is the administrative procedure in an Operating System where the state (context) of currently executing process $P_1$ is saved into its Process Control Block (PCB), and the previously saved state of another process $P_2$ is loaded into CPU registers so that execution can seamlessly resume.
 
-    Key Points:
-    - Context switch is pure computational overhead as no useful user work is performed during the switch.
-    - Context includes Program Counter (PC), CPU registers, memory management information, and process status flags.
+   Key Points:
+   - Context switch is pure computational overhead as no useful user work is performed during the switch.
+   - Context includes Program Counter (PC), CPU registers, memory management information, and process status flags.
 
-    Example:
-    In a Round Robin CPU scheduling system with a 10 ms time quantum:
-    - Process $P_1$ runs for 10 ms until the timer interrupt fires.
-    - The OS kernel saves $P_1$'s register values and execution pointer into $PCB_1$.
-    - The CPU scheduler selects process $P_2$ from the ready queue, loads register states from $PCB_2$, and jumps to $P_2$'s Program Counter.
+   Example:
+   In a Round Robin CPU scheduling system with a 10 ms time quantum:
+   - Process $P_1$ runs for 10 ms until the timer interrupt fires.
+   - The OS kernel saves $P_1$'s register values and execution pointer into $PCB_1$.
+   - The CPU scheduler selects process $P_2$ from the ready queue, loads register states from $PCB_2$, and jumps to $P_2$'s Program Counter.
 
 21. **(ক) একটি বিদ্যালয়ে প্রত্যেকে ১০পয়সা করে চাঁদা দিলে ৯০ টাকা হয়।কতজন শিক্ষার্থী ছিলো?** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 (খ) a+b=7, ab=10 হলে (1/a^2 + 1/b^2) এর মান কত? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
 Answer:
-    (ক)
-    - মোট চাঁদার পরিমাণ = ৯০ টাকা = $90 	imes 100 = 9000$ পয়সা।
-    - প্রত্যেকের চাঁদা = ১০ পয়সা।
-    - অতএব, মোট শিক্ষার্থীর সংখ্যা = $rac{9000}{10} =$ **৯০০ জন**।
+   (ক)
+   - মোট চাঁদার পরিমাণ = ৯০ টাকা = $90 	imes 100 = 9000$ পয়সা।
+   - প্রত্যেকের চাঁদা = ১০ পয়সা।
+   - অতএব, মোট শিক্ষার্থীর সংখ্যা = $rac{9000}{10} =$ **৯০০ জন**।
 
-    (খ)
-    - দেওয়া আছে: $a + b = 7$ এবং $ab = 10$
-    $$\frac{1}{a^2} + \frac{1}{b^2} = \frac{a^2 + b^2}{a^2 b^2} = \frac{(a + b)^2 - 2ab}{(ab)^2}$$
-    - মান বসিয়ে:
-    $$= \frac{7^2 - 2(10)}{10^2} = \frac{49 - 20}{100} = \frac{29}{100} = 0.29$$
-    - নির্ণেয় মান: **$\frac{29}{100}$** (বা **০.২৯**)।
+   (খ)
+   - দেওয়া আছে: $a + b = 7$ এবং $ab = 10$
+   $$\frac{1}{a^2} + \frac{1}{b^2} = \frac{a^2 + b^2}{a^2 b^2} = \frac{(a + b)^2 - 2ab}{(ab)^2}$$
+   - মান বসিয়ে:
+   $$= \frac{7^2 - 2(10)}{10^2} = \frac{49 - 20}{100} = \frac{29}{100} = 0.29$$
+   - নির্ণেয় মান: **$\frac{29}{100}$** (বা **০.২৯**)।
 
 22. **(ক) চীন, যুক্তরাষ্ট্র, জাপান ও কানাডা এদের মধ্যে কে G-7 এর সদস্য নয়।** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 (খ) chat gpt এর প্রতিষ্ঠাতা কে? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
@@ -5641,32 +5641,32 @@ Answer:
 (ঝ) বাংলাদেশ মহিলা ফুটবল দল আন্তর্জাতিক কোন টুর্নামেন্ট এর জন্য নির্বাচিত হয়েছেন? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
 Answer:
-    - (ক) **চীন** G-7 এর সদস্য নয় (G-7 সদস্য: যুক্তরাষ্ট্র, কানাডা, জাপান, যুক্তরাজ্য, ফ্রান্স, জার্মানি, ইতালি)।
-    - (খ) ChatGPT তৈরি করেছে কৃত্রিম বুদ্ধিমত্তা গবেষণা প্রতিষ্ঠান **OpenAI** (প্রতিষ্ঠাতাদের মধ্যে স্যাম অল্টম্যান, গ্রেগ ব্রকম্যান, ইলন মাস্ক প্রমুখ উল্লেখযোগ্য)।
-    - (গ) বাংলাদেশ **ASEAN (আসিয়ান)**-এর সদস্য নয় (বাংলাদেশ NAM ও OIC-এর সদস্য)।
-    - (ঘ) বিমসটেক (BIMSTEC)-এর সদস্য রাষ্ট্র **৭টি** (বাংলাদেশ, ভুটান, ভারত, মায়ানমার, নেপাল, শ্রীলঙ্কা ও থাইল্যান্ড)।
-    - (ঙ) নির্বাচন ব্যবস্থা সংস্কার কমিশনের প্রধান: **ড. বদিউল আলম মজুমদার**; সংবিধান সংস্কার কমিশনের প্রধান: **অধ্যাপক আলী রীয়াজ**।
-    - (চ) ২০২৫ সালের একুশে পদক ও জাতীয় স্বীকৃতিতে বৈষম্যবিরোধী ছাত্র আন্দোলনের তরুণ ও শহীদদের আত্মত্যাগ বিশেষভাবে সম্মানিত হয়েছে।
-    - (ছ) উইঘুর (Uighur) চীনের জিনজিয়াং প্রদেশের প্রধান মুসলিম সংখ্যালঘু সম্প্রদায়।
-    - (জ) বাংলাদেশ সংবিধানের **১১৮ নং অনুচ্ছেদ** অনুযায়ী প্রধান নির্বাচন কমিশনার ও অন্যান্য নির্বাচন কমিশনারদের **রাষ্ট্রপতি** নিয়োগ প্রদান করেন।
-    - (ঝ) বাংলাদেশ জাতীয় নারী ফুটবল দল **সাফ নারী চ্যাম্পিয়নশিপ (SAFF Women's Championship)** এবং এএফসি উইমেন্স এশিয়ান কাপ বাছাইপর্বের জন্য নির্বাচিত হয়েছে।
+   - (ক) **চীন** G-7 এর সদস্য নয় (G-7 সদস্য: যুক্তরাষ্ট্র, কানাডা, জাপান, যুক্তরাজ্য, ফ্রান্স, জার্মানি, ইতালি)।
+   - (খ) ChatGPT তৈরি করেছে কৃত্রিম বুদ্ধিমত্তা গবেষণা প্রতিষ্ঠান **OpenAI** (প্রতিষ্ঠাতাদের মধ্যে স্যাম অল্টম্যান, গ্রেগ ব্রকম্যান, ইলন মাস্ক প্রমুখ উল্লেখযোগ্য)।
+   - (গ) বাংলাদেশ **ASEAN (আসিয়ান)**-এর সদস্য নয় (বাংলাদেশ NAM ও OIC-এর সদস্য)।
+   - (ঘ) বিমসটেক (BIMSTEC)-এর সদস্য রাষ্ট্র **৭টি** (বাংলাদেশ, ভুটান, ভারত, মায়ানমার, নেপাল, শ্রীলঙ্কা ও থাইল্যান্ড)।
+   - (ঙ) নির্বাচন ব্যবস্থা সংস্কার কমিশনের প্রধান: **ড. বদিউল আলম মজুমদার**; সংবিধান সংস্কার কমিশনের প্রধান: **অধ্যাপক আলী রীয়াজ**।
+   - (চ) ২০২৫ সালের একুশে পদক ও জাতীয় স্বীকৃতিতে বৈষম্যবিরোধী ছাত্র আন্দোলনের তরুণ ও শহীদদের আত্মত্যাগ বিশেষভাবে সম্মানিত হয়েছে।
+   - (ছ) উইঘুর (Uighur) চীনের জিনজিয়াং প্রদেশের প্রধান মুসলিম সংখ্যালঘু সম্প্রদায়।
+   - (জ) বাংলাদেশ সংবিধানের **১১৮ নং অনুচ্ছেদ** অনুযায়ী প্রধান নির্বাচন কমিশনার ও অন্যান্য নির্বাচন কমিশনারদের **রাষ্ট্রপতি** নিয়োগ প্রদান করেন।
+   - (ঝ) বাংলাদেশ জাতীয় নারী ফুটবল দল **সাফ নারী চ্যাম্পিয়নশিপ (SAFF Women's Championship)** এবং এএফসি উইমেন্স এশিয়ান কাপ বাছাইপর্বের জন্য নির্বাচিত হয়েছে।
 
 23. **(ক) থ্রি জিরো তত্ত্বের উদ্ভাবক কে? সংক্ষেপে লিখ।** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 (খ) STP কত সালে প্রনয়ন করা হয়? এর সাথে মেট্রোরেলের সম্পর্ক কি? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
 Answer:
-    - (ক) থ্রি জিরো তত্ত্বের (3 Zero Theory) প্রবক্তা শান্তিতে নোবেলজয়ী অর্থনীতিবিদ **অধ্যাপক ড. মুহাম্মদ ইউনূস**।
-      তত্ত্বটির মূল ৩টি লক্ষ্য হলো:
-      1. Zero Poverty (শূন্য দারিদ্র্য)
-      2. Zero Unemployment (শূন্য বেকারত্ব - যুবসমাজকে চাকরিপ্রার্থীর বদলে উদ্যোক্তা হিসেবে গড়ে তোলা)
-      3. Zero Net Carbon Emission (শূন্য কার্বন নিঃসরণ - পরিবেশবান্ধব টেকসই পৃথিবী গঠন)।
-    - (খ) স্ট্র্যাটেজিক ট্রান্সপোর্ট প্ল্যান (STP) **২০০৫ সালে** ২০ বছর মেয়াদে প্রণয়ন করা হয় (পরবর্তীতে ২০১৫ সালে RSTP সংশোধিত হয়)।
-      সম্পর্ক: ঢাকা মহানগরীর তীব্র যানজট নিরসনে STP-এর সুপারিশের ভিত্তিতেই কৌশলগত গণপরিবহন ব্যবস্থা হিসেবে ম্যাস র‍্যাপিড ট্রানজিট (MRT বা মেট্রোরেল নেটওয়ার্কের ৫টি রুট) নির্মাণের মহাপরিকল্পনা গৃহীত ও বাস্তবায়ন করা হয়।
+   - (ক) থ্রি জিরো তত্ত্বের (3 Zero Theory) প্রবক্তা শান্তিতে নোবেলজয়ী অর্থনীতিবিদ **অধ্যাপক ড. মুহাম্মদ ইউনূস**।
+     তত্ত্বটির মূল ৩টি লক্ষ্য হলো:
+     1. Zero Poverty (শূন্য দারিদ্র্য)
+     2. Zero Unemployment (শূন্য বেকারত্ব - যুবসমাজকে চাকরিপ্রার্থীর বদলে উদ্যোক্তা হিসেবে গড়ে তোলা)
+     3. Zero Net Carbon Emission (শূন্য কার্বন নিঃসরণ - পরিবেশবান্ধব টেকসই পৃথিবী গঠন)।
+   - (খ) স্ট্র্যাটেজিক ট্রান্সপোর্ট প্ল্যান (STP) **২০০৫ সালে** ২০ বছর মেয়াদে প্রণয়ন করা হয় (পরবর্তীতে ২০১৫ সালে RSTP সংশোধিত হয়)।
+     সম্পর্ক: ঢাকা মহানগরীর তীব্র যানজট নিরসনে STP-এর সুপারিশের ভিত্তিতেই কৌশলগত গণপরিবহন ব্যবস্থা হিসেবে ম্যাস র‍্যাপিড ট্রানজিট (MRT বা মেট্রোরেল নেটওয়ার্কের ৫টি রুট) নির্মাণের মহাপরিকল্পনা গৃহীত ও বাস্তবায়ন করা হয়।
 
 24. **What is the topology in data communication? What are the differences between Bus, Ring, Tree & star topology?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 515]]*
 
 Answer:
-    Network Topology refers to the schematic layout and geometric arrangement of connected nodes (computers, printers) and communication links in a data communication network.
+   Network Topology refers to the schematic layout and geometric arrangement of connected nodes (computers, printers) and communication links in a data communication network.
 
 Comparison of Network Topologies:
 
@@ -5967,61 +5967,61 @@ Answer:
 
 Answer:
 
-    ICMP (Internet Control Message Protocol)
-    - A Network layer protocol carried inside IP (protocol number 1) that reports errors and carries diagnostic messages. It uses no port numbers.
-    - Messages: Echo Request/Reply (ping), Destination Unreachable, Time Exceeded (used by traceroute), Redirect, Source Quench.
-    - It does not carry user data; it exists so that hosts and routers can report problems.
+   ICMP (Internet Control Message Protocol)
+   - A Network layer protocol carried inside IP (protocol number 1) that reports errors and carries diagnostic messages. It uses no port numbers.
+   - Messages: Echo Request/Reply (ping), Destination Unreachable, Time Exceeded (used by traceroute), Redirect, Source Quench.
+   - It does not carry user data; it exists so that hosts and routers can report problems.
 
-    SMTP (Simple Mail Transfer Protocol)
-    - The application-layer protocol that sends and relays email, from client to server and between servers. Ports 25 (relay), 587 (submission with TLS) and 465 (implicit TLS).
-    - It is a push protocol; retrieval is handled by POP3 or IMAP. Related standards SPF, DKIM and DMARC verify the sender.
+   SMTP (Simple Mail Transfer Protocol)
+   - The application-layer protocol that sends and relays email, from client to server and between servers. Ports 25 (relay), 587 (submission with TLS) and 465 (implicit TLS).
+   - It is a push protocol; retrieval is handled by POP3 or IMAP. Related standards SPF, DKIM and DMARC verify the sender.
 
-    POP server (Post Office Protocol)
-    - A mail server that lets a client download messages from the mailbox, on port 110 (995 with SSL).
-    - POP3 normally downloads and then deletes the message from the server, so mail lives on one device and offline access is easy.
-    - IMAP (port 143, or 993 with SSL) is the alternative: it keeps mail on the server and synchronises folders and read status across many devices, which suits modern multi-device use.
+   POP server (Post Office Protocol)
+   - A mail server that lets a client download messages from the mailbox, on port 110 (995 with SSL).
+   - POP3 normally downloads and then deletes the message from the server, so mail lives on one device and offline access is easy.
+   - IMAP (port 143, or 993 with SSL) is the alternative: it keeps mail on the server and synchronises folders and read status across many devices, which suits modern multi-device use.
 
-    Boot loader
-    - A small program that runs when a computer is switched on and loads the operating system kernel into memory.
-    - Sequence: BIOS or UEFI performs POST, reads the MBR or the EFI system partition, and hands control to the boot loader, which then loads the kernel.
-    - Examples: GRUB and LILO on Linux, Windows Boot Manager (bootmgr) on Windows, U-Boot on embedded systems. A multi-boot loader shows a menu of installed operating systems.
+   Boot loader
+   - A small program that runs when a computer is switched on and loads the operating system kernel into memory.
+   - Sequence: BIOS or UEFI performs POST, reads the MBR or the EFI system partition, and hands control to the boot loader, which then loads the kernel.
+   - Examples: GRUB and LILO on Linux, Windows Boot Manager (bootmgr) on Windows, U-Boot on embedded systems. A multi-boot loader shows a menu of installed operating systems.
 
-    Clustering
-    - Joining several computers so they behave as one system, for higher availability and performance.
-    - Types: high-availability clusters (a standby takes over if the active node fails), load-balancing clusters (work is shared among nodes), and high-performance computing clusters (many nodes compute in parallel).
-    - Benefits: no single point of failure, scalability by adding nodes, and maintenance without downtime. Components include a heartbeat link, shared storage and a virtual IP that follows the active node.
+   Clustering
+   - Joining several computers so they behave as one system, for higher availability and performance.
+   - Types: high-availability clusters (a standby takes over if the active node fails), load-balancing clusters (work is shared among nodes), and high-performance computing clusters (many nodes compute in parallel).
+   - Benefits: no single point of failure, scalability by adding nodes, and maintenance without downtime. Components include a heartbeat link, shared storage and a virtual IP that follows the active node.
 
 11. **Write a command how to find DNS www.egcb.gov.bd and which protocol uses?** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
 
 Answer:
 
-    Commands to find the DNS record
-    ```
-    nslookup www.egcb.gov.bd
-    dig www.egcb.gov.bd
-    dig www.egcb.gov.bd A +short
-    host www.egcb.gov.bd
-    ```
-    - `nslookup` works on both Windows and Linux. `dig` and `host` are the standard Linux tools and give more detail.
-    - To query a specific server: `nslookup www.egcb.gov.bd 8.8.8.8`
-    - To follow the full delegation chain from the root: `dig www.egcb.gov.bd +trace`
-    - For the reverse direction: `nslookup <IP>` or `dig -x <IP>`
+   Commands to find the DNS record
+   ```
+   nslookup www.egcb.gov.bd
+   dig www.egcb.gov.bd
+   dig www.egcb.gov.bd A +short
+   host www.egcb.gov.bd
+   ```
+   - `nslookup` works on both Windows and Linux. `dig` and `host` are the standard Linux tools and give more detail.
+   - To query a specific server: `nslookup www.egcb.gov.bd 8.8.8.8`
+   - To follow the full delegation chain from the root: `dig www.egcb.gov.bd +trace`
+   - For the reverse direction: `nslookup <IP>` or `dig -x <IP>`
 
-    Protocol used
-    - The query itself uses `DNS`, which runs on `UDP port 53`.
-    - TCP port 53 is used instead when the response is larger than 512 bytes (the server sets the TC flag and the resolver retries over TCP) and for zone transfers between name servers.
-    - Encrypted variants: DNS over TLS on port 853 and DNS over HTTPS on port 443.
+   Protocol used
+   - The query itself uses `DNS`, which runs on `UDP port 53`.
+   - TCP port 53 is used instead when the response is larger than 512 bytes (the server sets the TC flag and the resolver retries over TCP) and for zone transfers between name servers.
+   - Encrypted variants: DNS over TLS on port 853 and DNS over HTTPS on port 443.
 
-    Sample output shape
-    ```
-    Server:   8.8.8.8
-    Address:  8.8.8.8#53
+   Sample output shape
+   ```
+   Server:   8.8.8.8
+   Address:  8.8.8.8#53
 
-    Non-authoritative answer:
-    Name:     www.egcb.gov.bd
-    Address:  103.x.x.x
-    ```
-    - "Non-authoritative" means the answer came from a resolver's cache rather than from the domain's own authoritative server.
+   Non-authoritative answer:
+   Name:     www.egcb.gov.bd
+   Address:  103.x.x.x
+   ```
+   - "Non-authoritative" means the answer came from a resolver's cache rather than from the domain's own authoritative server.
 
 12. **For the following description of various IP networking protocols write down the protocol name and its full form in the following table:** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
 
@@ -6055,168 +6055,168 @@ Answer: The description table was not printed with the question, so the standard
 
 Answer: The browser turns a URL into an IP address through DNS resolution, checking a series of caches first and only then querying the DNS hierarchy.
 
-    Step by step
-    - Step 1 — the browser parses the URL and extracts the hostname. From `https://www.example.com/page.html` the hostname is www.example.com.
-    - Step 2 — it checks its own DNS cache. Chrome keeps one; `chrome://net-internals/#dns` shows it.
-    - Step 3 — it asks the operating system, which checks the OS resolver cache (`ipconfig /displaydns` on Windows).
-    - Step 4 — the OS checks the hosts file, which overrides DNS entirely.
-    - Step 5 — if still unresolved, the OS sends a recursive query to the configured DNS resolver on UDP port 53.
-    - Step 6 — the resolver checks its own cache. If the record is present and within its TTL, it answers immediately.
-    - Step 7 — otherwise the resolver walks the hierarchy iteratively: a root server refers it to the `.com` TLD servers, the TLD servers refer it to the authoritative servers for example.com, and the authoritative server returns the A record.
-    - Step 8 — the resolver caches the answer for the TTL and returns it. The OS and the browser cache it too.
-    - Step 9 — the browser opens a TCP connection to that IP on port 443, completes the TLS handshake, sends the HTTP request and renders the response.
+   Step by step
+   - Step 1 — the browser parses the URL and extracts the hostname. From `https://www.example.com/page.html` the hostname is www.example.com.
+   - Step 2 — it checks its own DNS cache. Chrome keeps one; `chrome://net-internals/#dns` shows it.
+   - Step 3 — it asks the operating system, which checks the OS resolver cache (`ipconfig /displaydns` on Windows).
+   - Step 4 — the OS checks the hosts file, which overrides DNS entirely.
+   - Step 5 — if still unresolved, the OS sends a recursive query to the configured DNS resolver on UDP port 53.
+   - Step 6 — the resolver checks its own cache. If the record is present and within its TTL, it answers immediately.
+   - Step 7 — otherwise the resolver walks the hierarchy iteratively: a root server refers it to the `.com` TLD servers, the TLD servers refer it to the authoritative servers for example.com, and the authoritative server returns the A record.
+   - Step 8 — the resolver caches the answer for the TTL and returns it. The OS and the browser cache it too.
+   - Step 9 — the browser opens a TCP connection to that IP on port 443, completes the TLS handshake, sends the HTTP request and renders the response.
 
-    ```
-    Browser cache -> OS cache -> hosts file -> Resolver cache
-            -> Root (.) -> .com TLD -> Authoritative -> IP address
-    ```
-    - Caching at every level is what keeps this fast: most lookups never leave the machine, and few ever reach a root server.
+   ```
+   Browser cache -> OS cache -> hosts file -> Resolver cache
+           -> Root (.) -> .com TLD -> Authoritative -> IP address
+   ```
+   - Caching at every level is what keeps this fast: most lookups never leave the machine, and few ever reach a root server.
 
 14. **(d) What is DNS? “TCP/IP is used in DNS”- justify the statement.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
 
 Answer:
 
-    What is DNS
-    - The Domain Name System is the internet's distributed, hierarchical naming service. It translates domain names into IP addresses and back, using port 53.
-    - Structure: root servers, TLD servers (.com, .org, .bd), and authoritative servers for each domain, with resolvers doing the lookup work on behalf of clients and caching the results for the TTL.
-    - Records include A, AAAA, CNAME, MX, NS, PTR, SOA and TXT.
+   What is DNS
+   - The Domain Name System is the internet's distributed, hierarchical naming service. It translates domain names into IP addresses and back, using port 53.
+   - Structure: root servers, TLD servers (.com, .org, .bd), and authoritative servers for each domain, with resolvers doing the lookup work on behalf of clients and caching the results for the TTL.
+   - Records include A, AAAA, CNAME, MX, NS, PTR, SOA and TXT.
 
-    Justification — "TCP/IP is used in DNS"
-    - DNS is an application-layer protocol of the TCP/IP suite. It cannot work on its own; it relies on the lower layers of TCP/IP for every message it sends. Concretely:
+   Justification — "TCP/IP is used in DNS"
+   - DNS is an application-layer protocol of the TCP/IP suite. It cannot work on its own; it relies on the lower layers of TCP/IP for every message it sends. Concretely:
 
-    - It uses `UDP` (a TCP/IP transport protocol) on port 53 for ordinary queries and responses. UDP is chosen for speed, because a query is a single small exchange and a handshake would be wasteful.
-    - It uses `TCP` on port 53 when a response exceeds 512 bytes (the server sets the TC flag and the resolver retries over TCP) and for zone transfers between primary and secondary servers, which must be reliable and are large.
-    - It uses `IP` for addressing and routing: every DNS query is carried inside an IP packet from the resolver to the name server, and it is IP addresses that DNS ultimately returns.
-    - It is defined as part of the TCP/IP application layer in RFC 1034 and RFC 1035, alongside HTTP, SMTP and FTP.
-    - The dependency is mutual in practice: DNS needs TCP/IP to carry its messages, and TCP/IP applications need DNS to turn names into the addresses they must connect to.
+   - It uses `UDP` (a TCP/IP transport protocol) on port 53 for ordinary queries and responses. UDP is chosen for speed, because a query is a single small exchange and a handshake would be wasteful.
+   - It uses `TCP` on port 53 when a response exceeds 512 bytes (the server sets the TC flag and the resolver retries over TCP) and for zone transfers between primary and secondary servers, which must be reliable and are large.
+   - It uses `IP` for addressing and routing: every DNS query is carried inside an IP packet from the resolver to the name server, and it is IP addresses that DNS ultimately returns.
+   - It is defined as part of the TCP/IP application layer in RFC 1034 and RFC 1035, alongside HTTP, SMTP and FTP.
+   - The dependency is mutual in practice: DNS needs TCP/IP to carry its messages, and TCP/IP applications need DNS to turn names into the addresses they must connect to.
 
-    - Conclusion: the statement is correct. DNS is a TCP/IP application-layer service that uses both UDP and TCP over IP, which is exactly why it is described as "using TCP/IP".
+   - Conclusion: the statement is correct. DNS is a TCP/IP application-layer service that uses both UDP and TCP over IP, which is exactly why it is described as "using TCP/IP".
 
 15. **(b) How is Hierarchical DNS resolution done in Domain Naming System? Give an example resolution for xyz.uv.gov.bd domain name.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
 
 Answer:
 
-    Hierarchical DNS resolution
-    - The DNS namespace is a tree. No single server holds everything; each level knows only its children and delegates the rest.
-    ```
-                        . (root)
-                        |
-          +-------+-----+-----+-------+
-         com     org    net    bd    edu        <- top-level domains
-                                |
-                              gov.bd            <- second level
-                                |
-                              uv.gov.bd         <- sub-domain
-                                |
-                            xyz.uv.gov.bd       <- host
-    ```
-    - The client sends one recursive query to its resolver; the resolver then performs iterative queries down the tree.
+   Hierarchical DNS resolution
+   - The DNS namespace is a tree. No single server holds everything; each level knows only its children and delegates the rest.
+   ```
+                       . (root)
+                       |
+         +-------+-----+-----+-------+
+        com     org    net    bd    edu        <- top-level domains
+                               |
+                             gov.bd            <- second level
+                               |
+                             uv.gov.bd         <- sub-domain
+                               |
+                           xyz.uv.gov.bd       <- host
+   ```
+   - The client sends one recursive query to its resolver; the resolver then performs iterative queries down the tree.
 
-    Example — resolving xyz.uv.gov.bd
+   Example — resolving xyz.uv.gov.bd
 
-    - Step 1 — the client asks its local resolver for xyz.uv.gov.bd (recursive query).
-    - Step 2 — the resolver checks its cache. If the answer is there and still within its TTL, it stops here.
-    - Step 3 — otherwise it queries a `root server`. The root does not know the address, but it returns the name servers for `.bd`.
-    - Step 4 — it queries the `.bd` TLD server, which returns the name servers for `gov.bd`.
-    - Step 5 — it queries the `gov.bd` server, which returns the name servers for `uv.gov.bd`.
-    - Step 6 — it queries the `uv.gov.bd` authoritative server, which finally returns the A record for `xyz.uv.gov.bd`, say 203.112.x.x.
-    - Step 7 — the resolver caches every referral and the final answer for their TTLs, then returns the address to the client.
+   - Step 1 — the client asks its local resolver for xyz.uv.gov.bd (recursive query).
+   - Step 2 — the resolver checks its cache. If the answer is there and still within its TTL, it stops here.
+   - Step 3 — otherwise it queries a `root server`. The root does not know the address, but it returns the name servers for `.bd`.
+   - Step 4 — it queries the `.bd` TLD server, which returns the name servers for `gov.bd`.
+   - Step 5 — it queries the `gov.bd` server, which returns the name servers for `uv.gov.bd`.
+   - Step 6 — it queries the `uv.gov.bd` authoritative server, which finally returns the A record for `xyz.uv.gov.bd`, say 203.112.x.x.
+   - Step 7 — the resolver caches every referral and the final answer for their TTLs, then returns the address to the client.
 
-    ```
-    Client --recursive--> Resolver
-                            |--iterative--> Root        -> "ask .bd servers"
-                            |--iterative--> .bd         -> "ask gov.bd servers"
-                            |--iterative--> gov.bd      -> "ask uv.gov.bd servers"
-                            |--iterative--> uv.gov.bd   -> "203.112.x.x"
-    Client <--answer-------- Resolver
-    ```
-    - Why the hierarchy matters: it distributes both the data and the load, allows each organisation to manage its own zone, and makes the system scale to billions of names. Caching means a root server is rarely troubled — most queries are answered from a cache long before that.
+   ```
+   Client --recursive--> Resolver
+                           |--iterative--> Root        -> "ask .bd servers"
+                           |--iterative--> .bd         -> "ask gov.bd servers"
+                           |--iterative--> gov.bd      -> "ask uv.gov.bd servers"
+                           |--iterative--> uv.gov.bd   -> "203.112.x.x"
+   Client <--answer-------- Resolver
+   ```
+   - Why the hierarchy matters: it distributes both the data and the load, allows each organisation to manage its own zone, and makes the system scale to billions of names. Caching means a root server is rarely troubled — most queries are answered from a cache long before that.
 
 16. **What is Web cashing? Why we use web cashing?** *[Sonali Bank Ltd. Officer IT 2021 compact it 908 (ET: N/A)]*
 
 Answer:
 
-    What is web caching
-    - Web caching is storing a copy of a web resource — an HTML page, image, script or video segment — closer to the user, so that later requests are served from the copy instead of fetching it again from the origin server.
-    - A proxy server that does this is called a web cache or proxy cache.
+   What is web caching
+   - Web caching is storing a copy of a web resource — an HTML page, image, script or video segment — closer to the user, so that later requests are served from the copy instead of fetching it again from the origin server.
+   - A proxy server that does this is called a web cache or proxy cache.
 
-    Where caches exist
-    - Browser cache — on the user's own disk, private to that user.
-    - Proxy or organisational cache — one cache serving a whole office or campus.
-    - ISP cache — serving all of a provider's customers.
-    - CDN edge server — a distributed cache placed near users worldwide; this is the dominant form today.
-    - Reverse proxy — sitting in front of the origin server to protect it.
+   Where caches exist
+   - Browser cache — on the user's own disk, private to that user.
+   - Proxy or organisational cache — one cache serving a whole office or campus.
+   - ISP cache — serving all of a provider's customers.
+   - CDN edge server — a distributed cache placed near users worldwide; this is the dominant form today.
+   - Reverse proxy — sitting in front of the origin server to protect it.
 
-    How it works
-    - The client requests a resource. If the cache holds a fresh copy (its expiry has not passed), it returns it immediately — a cache hit.
-    - If not, it forwards the request to the origin, stores the response and returns it — a cache miss.
-    - Freshness is controlled by HTTP headers: `Cache-Control: max-age`, `Expires`, `ETag` and `Last-Modified`. A conditional request (`If-None-Match`) lets the server reply `304 Not Modified` with no body, which is very cheap.
+   How it works
+   - The client requests a resource. If the cache holds a fresh copy (its expiry has not passed), it returns it immediately — a cache hit.
+   - If not, it forwards the request to the origin, stores the response and returns it — a cache miss.
+   - Freshness is controlled by HTTP headers: `Cache-Control: max-age`, `Expires`, `ETag` and `Last-Modified`. A conditional request (`If-None-Match`) lets the server reply `304 Not Modified` with no body, which is very cheap.
 
-    Why we use it
-    - Faster response — the content comes from nearby, so latency drops sharply. This is the single biggest reason.
-    - Less bandwidth used on the expensive upstream link, which matters greatly for an ISP or a campus.
-    - Reduced load on the origin server, so it can serve more users with the same hardware.
-    - Better availability — cached content may still be served when the origin is briefly unreachable.
-    - Lower cost, since bandwidth and server capacity are the two main expenses of a busy site.
-    - Better user experience and, indirectly, better search ranking.
+   Why we use it
+   - Faster response — the content comes from nearby, so latency drops sharply. This is the single biggest reason.
+   - Less bandwidth used on the expensive upstream link, which matters greatly for an ISP or a campus.
+   - Reduced load on the origin server, so it can serve more users with the same hardware.
+   - Better availability — cached content may still be served when the origin is briefly unreachable.
+   - Lower cost, since bandwidth and server capacity are the two main expenses of a busy site.
+   - Better user experience and, indirectly, better search ranking.
 
-    Limitations
-    - Stale content if TTLs are set too long; personalised or private pages must not be cached (`Cache-Control: private, no-store`).
-    - Cache invalidation is genuinely hard — the usual solution is versioned file names such as `style.v3.css`.
+   Limitations
+   - Stale content if TTLs are set too long; personalised or private pages must not be cached (`Cache-Control: private, no-store`).
+   - Cache invalidation is genuinely hard — the usual solution is versioned file names such as `style.v3.css`.
 
 17. **What is DNS Resolver?** *[Sonali Bank Ltd. Officer IT 2021 compact it 908-909 (ET: N/A)]*
 
 Answer: A DNS resolver (also called a recursive resolver or recursive name server) is the DNS server that does the actual work of looking up a name on behalf of a client.
 
-    What it does
-    - Receives a recursive query from the client — "give me the IP address for www.example.com".
-    - Checks its own cache first. If a valid record is present, it answers straight away.
-    - If not, it performs iterative queries down the hierarchy: root server -> TLD server -> authoritative server.
-    - Caches the answer for its TTL, so later clients are served instantly.
-    - Returns the final answer to the client, marked "non-authoritative" if it came from cache.
+   What it does
+   - Receives a recursive query from the client — "give me the IP address for www.example.com".
+   - Checks its own cache first. If a valid record is present, it answers straight away.
+   - If not, it performs iterative queries down the hierarchy: root server -> TLD server -> authoritative server.
+   - Caches the answer for its TTL, so later clients are served instantly.
+   - Returns the final answer to the client, marked "non-authoritative" if it came from cache.
 
-    Types of resolver
-    - Stub resolver — the small piece of code inside the operating system or browser. It cannot walk the hierarchy; it just forwards the query to a recursive resolver.
-    - Recursive resolver — the full resolver, run by an ISP or a public service, that does the hierarchy walk.
-    - Forwarding resolver — passes queries to another resolver rather than resolving them itself, common on office routers.
+   Types of resolver
+   - Stub resolver — the small piece of code inside the operating system or browser. It cannot walk the hierarchy; it just forwards the query to a recursive resolver.
+   - Recursive resolver — the full resolver, run by an ISP or a public service, that does the hierarchy walk.
+   - Forwarding resolver — passes queries to another resolver rather than resolving them itself, common on office routers.
 
-    Common public resolvers
-    - Google 8.8.8.8 and 8.8.4.4, Cloudflare 1.1.1.1, Quad9 9.9.9.9, OpenDNS 208.67.222.222.
+   Common public resolvers
+   - Google 8.8.8.8 and 8.8.4.4, Cloudflare 1.1.1.1, Quad9 9.9.9.9, OpenDNS 208.67.222.222.
 
-    Why it matters
-    - It is the component that makes caching effective, so most lookups never reach a root or TLD server.
-    - Its choice affects speed, privacy and filtering — some resolvers block malicious domains, and DoH/DoT encrypt the query so it cannot be read or altered in transit.
-    - A misconfigured or poisoned resolver is a serious security problem, since it can silently send users to attacker-controlled addresses. DNSSEC validation at the resolver is the defence.
+   Why it matters
+   - It is the component that makes caching effective, so most lookups never reach a root or TLD server.
+   - Its choice affects speed, privacy and filtering — some resolvers block malicious domains, and DoH/DoT encrypt the query so it cannot be read or altered in transit.
+   - A misconfigured or poisoned resolver is a serious security problem, since it can silently send users to attacker-controlled addresses. DNSSEC validation at the resolver is the defence.
 
 18. **DNS server এবং DHCP server এর কাজ কী?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 911 (ET: BUET)]*
 
 Answer: (Answered in English, as required for IT topics.)
 
-    DNS server
-    - Translates domain names into IP addresses (forward lookup, A and AAAA records) and IP addresses back into names (reverse lookup, PTR records).
-    - Directs email using MX records, and supports aliases (CNAME), name servers (NS) and verification data (TXT, for SPF and DKIM).
-    - Works hierarchically — root, TLD, authoritative — and caches answers for the TTL period, which is what makes the whole system fast.
-    - Port 53: UDP for queries, TCP for zone transfers and large responses.
-    - Without DNS, users would have to type IP addresses for every site.
+   DNS server
+   - Translates domain names into IP addresses (forward lookup, A and AAAA records) and IP addresses back into names (reverse lookup, PTR records).
+   - Directs email using MX records, and supports aliases (CNAME), name servers (NS) and verification data (TXT, for SPF and DKIM).
+   - Works hierarchically — root, TLD, authoritative — and caches answers for the TTL period, which is what makes the whole system fast.
+   - Port 53: UDP for queries, TCP for zone transfers and large responses.
+   - Without DNS, users would have to type IP addresses for every site.
 
-    DHCP server
-    - Automatically assigns an IP address, subnet mask, default gateway and DNS server addresses to every device that joins the network.
-    - Uses the DORA exchange — Discover, Offer, Request, Acknowledge — over UDP ports 67 and 68.
-    - Addresses are leased for a limited time and returned to the pool when they expire, so a limited pool serves many devices.
-    - Reservations tie a specific MAC address to a fixed IP for printers and servers.
-    - Without DHCP, every device would need manual configuration, which is slow and causes duplicate-address errors.
+   DHCP server
+   - Automatically assigns an IP address, subnet mask, default gateway and DNS server addresses to every device that joins the network.
+   - Uses the DORA exchange — Discover, Offer, Request, Acknowledge — over UDP ports 67 and 68.
+   - Addresses are leased for a limited time and returned to the pool when they expire, so a limited pool serves many devices.
+   - Reservations tie a specific MAC address to a fixed IP for printers and servers.
+   - Without DHCP, every device would need manual configuration, which is slow and causes duplicate-address errors.
 
-    How they work together
-    - DHCP tells a new client which DNS server to use. So DHCP configures the client, and DNS then lets that client find other hosts by name. A failure in DHCP stops a client getting on the network at all; a failure in DNS leaves it connected but unable to resolve names.
+   How they work together
+   - DHCP tells a new client which DNS server to use. So DHCP configures the client, and DNS then lets that client find other hosts by name. A failure in DHCP stops a client getting on the network at all; a failure in DNS leaves it connected but unable to resolve names.
 
 19. **দূরবর্তী কম্পিউটার সংযোগ এর জন্য কোন প্রোটোকল ব্যবহার করা হয়?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) For connecting to a remote computer, the protocols used are:
 
-    - `SSH (Secure Shell)` — TCP port 22. The standard today. It provides an encrypted command-line session, plus secure file transfer through SCP and SFTP and port forwarding. It authenticates with a password or, better, a key pair.
-    - `Telnet` — TCP port 23. The older protocol for the same purpose, but everything including the password travels in plain text, so it must not be used over an untrusted network. SSH replaced it.
-    - `RDP (Remote Desktop Protocol)` — TCP port 3389. Microsoft's protocol for a full graphical Windows desktop, with encryption.
-    - `VNC (Virtual Network Computing)` — port 5900. A cross-platform graphical remote desktop; it should be tunnelled through SSH or a VPN, since it is weakly encrypted on its own.
+   - `SSH (Secure Shell)` — TCP port 22. The standard today. It provides an encrypted command-line session, plus secure file transfer through SCP and SFTP and port forwarding. It authenticates with a password or, better, a key pair.
+   - `Telnet` — TCP port 23. The older protocol for the same purpose, but everything including the password travels in plain text, so it must not be used over an untrusted network. SSH replaced it.
+   - `RDP (Remote Desktop Protocol)` — TCP port 3389. Microsoft's protocol for a full graphical Windows desktop, with encryption.
+   - `VNC (Virtual Network Computing)` — port 5900. A cross-platform graphical remote desktop; it should be tunnelled through SSH or a VPN, since it is weakly encrypted on its own.
 
 | Protocol | Port | Interface | Encrypted |
 |---|---|---|---|
@@ -6225,7 +6225,7 @@ Answer: (Answered in English, as required for IT topics.) For connecting to a re
 | RDP | 3389 | Graphical (Windows) | Yes |
 | VNC | 5900 | Graphical (cross-platform) | Weak, tunnel it |
 
-    - Best practice for remote access: use SSH with key-based authentication, disable password login and root login, change the default port, and place the whole thing behind a VPN.
+   - Best practice for remote access: use SSH with key-based authentication, disable password login and root login, change the default port, and place the whole thing behind a VPN.
 
 20. **(a) Differentiate between DNS server and caches.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1142 (ET: N/A)]*
 
@@ -6241,10 +6241,10 @@ Answer: A DNS server is the machine that answers name queries; a DNS cache is th
 | Purpose | To provide resolution for the namespace it serves | To make repeated lookups fast and reduce query traffic |
 | Failure effect | Names cannot be resolved at all | Lookups become slower, and stale entries can point to a dead address |
 
-    How they work together
-    - A resolver is a DNS server that keeps a cache. On each query it looks in the cache first; only on a miss does it walk the hierarchy from root to TLD to authoritative server, and it then caches what it learns.
-    - Caching exists at several levels — browser, operating system, router, ISP resolver — so most queries never leave the user's own machine.
-    - Cache problems are flushed with `ipconfig /flushdns` on Windows or `systemd-resolve --flush-caches` on Linux; this is the standard fix after a site's IP address has changed.
+   How they work together
+   - A resolver is a DNS server that keeps a cache. On each query it looks in the cache first; only on a miss does it walk the hierarchy from root to TLD to authoritative server, and it then caches what it learns.
+   - Caching exists at several levels — browser, operating system, router, ISP resolver — so most queries never leave the user's own machine.
+   - Cache problems are flushed with `ipconfig /flushdns` on Windows or `systemd-resolve --flush-caches` on Linux; this is the standard fix after a site's IP address has changed.
 
 21. **What is the difference between DNS server and caches? What is the importance of DNS cache in World Wide Web?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
@@ -6261,17 +6261,17 @@ Difference between a DNS server and a cache
 | Authority | Authoritative for the zones it owns | Always non-authoritative |
 | Purpose | To answer queries for the namespace | To answer repeat queries instantly |
 
-    Importance of the DNS cache to the World Wide Web
-    - Speed — a cached lookup takes microseconds; a full walk from root to TLD to authoritative server can take hundreds of milliseconds. Since a single modern web page may reference dozens of hostnames, caching removes a large part of page-load time.
-    - Scale — there are billions of DNS queries per second worldwide. Without caching, the 13 root server clusters and the TLD servers would be overwhelmed instantly. Caching is what makes the hierarchy survivable.
-    - Reduced bandwidth and cost, especially on expensive international links.
-    - Resilience — if an authoritative server briefly fails, cached records keep the site reachable until they expire.
-    - Better user experience, and indirectly better search ranking, because page load time is a ranking factor.
+   Importance of the DNS cache to the World Wide Web
+   - Speed — a cached lookup takes microseconds; a full walk from root to TLD to authoritative server can take hundreds of milliseconds. Since a single modern web page may reference dozens of hostnames, caching removes a large part of page-load time.
+   - Scale — there are billions of DNS queries per second worldwide. Without caching, the 13 root server clusters and the TLD servers would be overwhelmed instantly. Caching is what makes the hierarchy survivable.
+   - Reduced bandwidth and cost, especially on expensive international links.
+   - Resilience — if an authoritative server briefly fails, cached records keep the site reachable until they expire.
+   - Better user experience, and indirectly better search ranking, because page load time is a ranking factor.
 
-    The trade-off
-    - Stale data. When a site changes its IP address, cached entries still point to the old one until the TTL expires. Administrators therefore lower the TTL before a planned migration.
-    - Cache poisoning — an attacker injects a false record so users are silently sent to a malicious server. DNSSEC, source-port randomisation and query ID randomisation are the defences.
-    - Fix for a client: `ipconfig /flushdns` on Windows, `systemd-resolve --flush-caches` on Linux.
+   The trade-off
+   - Stale data. When a site changes its IP address, cached entries still point to the old one until the TTL expires. Administrators therefore lower the TTL before a planned migration.
+   - Cache poisoning — an attacker injects a false record so users are silently sent to a malicious server. DNSSEC, source-port randomisation and query ID randomisation are the defences.
+   - Fix for a client: `ipconfig /flushdns` on Windows, `systemd-resolve --flush-caches` on Linux.
 
 22. **Write short notes on DHCP and SMTP.** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227 (ET: N/A)]*
 
@@ -6279,34 +6279,34 @@ Difference between a DNS server and a cache
 
 Answer:
 
-    DHCP (Dynamic Host Configuration Protocol)
-    - An application-layer protocol that automatically gives a device joining a network its IP address, subnet mask, default gateway, DNS servers and lease time.
-    - Ports: UDP 67 (server) and UDP 68 (client).
-    - Works through the `DORA` exchange:
-      - Discover — the client broadcasts, looking for a server.
-      - Offer — servers reply with an available address and settings.
-      - Request — the client broadcasts its acceptance of one offer.
-      - Acknowledge — the chosen server confirms and records the binding.
-    - Addresses are leased, renewed at T1 (50 percent) and T2 (87.5 percent) of the lease, and returned to the pool when they expire.
-    - A relay agent (`ip helper-address`) forwards the broadcast across a router so one server can serve many subnets.
-    - Benefits: no manual configuration, no duplicate addresses, central management, efficient reuse of a limited pool.
-    - Risks: no authentication, so rogue servers and starvation attacks are possible. DHCP snooping and port security are the defences. If no server answers, a Windows client falls back to an APIPA address in 169.254.0.0/16.
+   DHCP (Dynamic Host Configuration Protocol)
+   - An application-layer protocol that automatically gives a device joining a network its IP address, subnet mask, default gateway, DNS servers and lease time.
+   - Ports: UDP 67 (server) and UDP 68 (client).
+   - Works through the `DORA` exchange:
+     - Discover — the client broadcasts, looking for a server.
+     - Offer — servers reply with an available address and settings.
+     - Request — the client broadcasts its acceptance of one offer.
+     - Acknowledge — the chosen server confirms and records the binding.
+   - Addresses are leased, renewed at T1 (50 percent) and T2 (87.5 percent) of the lease, and returned to the pool when they expire.
+   - A relay agent (`ip helper-address`) forwards the broadcast across a router so one server can serve many subnets.
+   - Benefits: no manual configuration, no duplicate addresses, central management, efficient reuse of a limited pool.
+   - Risks: no authentication, so rogue servers and starvation attacks are possible. DHCP snooping and port security are the defences. If no server answers, a Windows client falls back to an APIPA address in 169.254.0.0/16.
 
-    SMTP (Simple Mail Transfer Protocol)
-    - The application-layer protocol used to send and relay email — from the client to its mail server, and from one mail server to the next.
-    - Ports: 25 for server-to-server relay, 587 for client submission with STARTTLS, 465 for implicit TLS.
-    - It is a push protocol and handles sending only; retrieval uses POP3 (110) or IMAP (143).
-    - A session is a simple text dialogue: HELO/EHLO, MAIL FROM, RCPT TO, DATA, then the message ending with a single dot, then QUIT. The server replies with codes such as 250 OK and 550 Rejected.
-    - Components: the Mail User Agent (the client program), the Mail Transfer Agent (Postfix, Sendmail, Exchange) and the Mail Delivery Agent that puts the message in the mailbox.
-    - Weakness: SMTP by itself does not verify the sender, which is why spam and spoofing are possible. SPF, DKIM and DMARC were added to authenticate the sending domain.
+   SMTP (Simple Mail Transfer Protocol)
+   - The application-layer protocol used to send and relay email — from the client to its mail server, and from one mail server to the next.
+   - Ports: 25 for server-to-server relay, 587 for client submission with STARTTLS, 465 for implicit TLS.
+   - It is a push protocol and handles sending only; retrieval uses POP3 (110) or IMAP (143).
+   - A session is a simple text dialogue: HELO/EHLO, MAIL FROM, RCPT TO, DATA, then the message ending with a single dot, then QUIT. The server replies with codes such as 250 OK and 550 Rejected.
+   - Components: the Mail User Agent (the client program), the Mail Transfer Agent (Postfix, Sendmail, Exchange) and the Mail Delivery Agent that puts the message in the mailbox.
+   - Weakness: SMTP by itself does not verify the sender, which is why spam and spoofing are possible. SPF, DKIM and DMARC were added to authenticate the sending domain.
 
 23. **a. What is SQL, b. What is API c. What is recursion d. DNS port number?** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91-92]]*
 
 Answer:
-    - a. SQL (Structured Query Language): A domain-specific standard programming language designed for managing, querying, defining, and manipulating data held in Relational Database Management Systems (RDBMS). Includes DDL (CREATE, ALTER), DML (SELECT, INSERT, UPDATE, DELETE), and DCL (GRANT, REVOKE).
-    - b. API (Application Programming Interface): A formalized set of definitions, rules, and communication protocols that enables disparate software systems to interact, exchange data, and leverage each other's functionalities (e.g., RESTful APIs, SOAP, GraphQL).
-    - c. Recursion: A computational method where a function solves a problem by calling itself repeatedly on smaller sub-problems until it reaches a terminating base case (e.g., factorial computation, DFS graph traversal).
-    - d. DNS Port Number: **Port 53**. Standard name resolution queries use **UDP port 53** for low-latency lookups; zone transfers and responses exceeding 512 bytes use **TCP port 53**.
+   - a. SQL (Structured Query Language): A domain-specific standard programming language designed for managing, querying, defining, and manipulating data held in Relational Database Management Systems (RDBMS). Includes DDL (CREATE, ALTER), DML (SELECT, INSERT, UPDATE, DELETE), and DCL (GRANT, REVOKE).
+   - b. API (Application Programming Interface): A formalized set of definitions, rules, and communication protocols that enables disparate software systems to interact, exchange data, and leverage each other's functionalities (e.g., RESTful APIs, SOAP, GraphQL).
+   - c. Recursion: A computational method where a function solves a problem by calling itself repeatedly on smaller sub-problems until it reaches a terminating base case (e.g., factorial computation, DFS graph traversal).
+   - d. DNS Port Number: **Port 53**. Standard name resolution queries use **UDP port 53** for low-latency lookups; zone transfers and responses exceeding 512 bytes use **TCP port 53**.
 
 ## Transport Layer (TCP & UDP) (22)
 
@@ -6654,250 +6654,250 @@ Answer:
 
 Answer:
 
-    What is UDP
-    - UDP (User Datagram Protocol) is a connectionless transport-layer protocol defined in RFC 768. It simply wraps the application's data in an 8-byte header and hands it to IP.
-    - Header fields: source port, destination port, length and checksum — nothing else.
-    - No handshake, no acknowledgements, no sequence numbers, no retransmission, no flow control, no congestion control.
-    - Data unit: datagram. It supports broadcast and multicast, which TCP does not.
+   What is UDP
+   - UDP (User Datagram Protocol) is a connectionless transport-layer protocol defined in RFC 768. It simply wraps the application's data in an 8-byte header and hands it to IP.
+   - Header fields: source port, destination port, length and checksum — nothing else.
+   - No handshake, no acknowledgements, no sequence numbers, no retransmission, no flow control, no congestion control.
+   - Data unit: datagram. It supports broadcast and multicast, which TCP does not.
 
-    Is UDP reliable? — `No, UDP is not reliable.`
+   Is UDP reliable? — `No, UDP is not reliable.`
 
-    Why it is unreliable
-    - No acknowledgement — the sender never learns whether the datagram arrived. It sends and forgets.
-    - No retransmission — a datagram lost to congestion, a full buffer or a bit error is simply gone.
-    - No sequencing — datagrams may take different paths and arrive out of order, and UDP will not reorder them.
-    - No duplicate detection — the same datagram may be delivered twice with no complaint.
-    - No flow control — a fast sender can overwhelm a slow receiver, and the excess is dropped.
-    - No congestion control — UDP keeps sending at the same rate even when the network is saturated, which can make congestion worse.
-    - Its only error check is the checksum, and a datagram that fails it is silently discarded rather than repaired.
+   Why it is unreliable
+   - No acknowledgement — the sender never learns whether the datagram arrived. It sends and forgets.
+   - No retransmission — a datagram lost to congestion, a full buffer or a bit error is simply gone.
+   - No sequencing — datagrams may take different paths and arrive out of order, and UDP will not reorder them.
+   - No duplicate detection — the same datagram may be delivered twice with no complaint.
+   - No flow control — a fast sender can overwhelm a slow receiver, and the excess is dropped.
+   - No congestion control — UDP keeps sending at the same rate even when the network is saturated, which can make congestion worse.
+   - Its only error check is the checksum, and a datagram that fails it is silently discarded rather than repaired.
 
-    Why UDP is still used, and used heavily
-    - Speed — no handshake means no setup delay, so a DNS query and its reply take one round trip instead of four.
-    - Low overhead — 8 header bytes against TCP's 20, which matters greatly for small messages.
-    - No head-of-line blocking — in live audio or video, waiting for a lost packet ruins the stream. Dropping it and moving on is the correct behaviour.
-    - Broadcast and multicast are possible, which is why DHCP and IPTV need UDP.
-    - Statelessness lets a server handle far more clients, since there is no per-connection state to keep.
-    - Applications that need reliability can add it themselves at the application layer, tuned to their own needs — this is exactly what QUIC (and therefore HTTP/3) does on top of UDP.
+   Why UDP is still used, and used heavily
+   - Speed — no handshake means no setup delay, so a DNS query and its reply take one round trip instead of four.
+   - Low overhead — 8 header bytes against TCP's 20, which matters greatly for small messages.
+   - No head-of-line blocking — in live audio or video, waiting for a lost packet ruins the stream. Dropping it and moving on is the correct behaviour.
+   - Broadcast and multicast are possible, which is why DHCP and IPTV need UDP.
+   - Statelessness lets a server handle far more clients, since there is no per-connection state to keep.
+   - Applications that need reliability can add it themselves at the application layer, tuned to their own needs — this is exactly what QUIC (and therefore HTTP/3) does on top of UDP.
 
-    - Uses: DNS, DHCP, TFTP, SNMP, NTP, RTP for voice and video, online games, and QUIC.
+   - Uses: DNS, DHCP, TFTP, SNMP, NTP, RTP for voice and video, online games, and QUIC.
 
 11. **The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?** *[BTRC Assistant Director (Technical) 2021 compact it 807-808 (ET: IBA)]*
 
 Answer: The primary function of TCP is to provide reliable, ordered, error-checked delivery of a byte stream between two applications, turning the unreliable, best-effort service of IP into something an application can depend on.
 
-    The six basic functions
+   The six basic functions
 
-    1. Connection establishment and termination
-    - Sets up a connection with the three-way handshake (SYN, SYN-ACK, ACK) before any data flows, and closes it with a four-way exchange (FIN, ACK, FIN, ACK). Both sides agree on initial sequence numbers and options such as MSS and window scaling.
+   1. Connection establishment and termination
+   - Sets up a connection with the three-way handshake (SYN, SYN-ACK, ACK) before any data flows, and closes it with a four-way exchange (FIN, ACK, FIN, ACK). Both sides agree on initial sequence numbers and options such as MSS and window scaling.
 
-    2. Segmentation and reassembly
-    - Breaks the application's byte stream into segments no larger than the MSS, numbers every byte, and reassembles them in the correct order at the receiver, regardless of the order in which they arrived.
+   2. Segmentation and reassembly
+   - Breaks the application's byte stream into segments no larger than the MSS, numbers every byte, and reassembles them in the correct order at the receiver, regardless of the order in which they arrived.
 
-    3. Reliable delivery — acknowledgement and retransmission
-    - Every segment is acknowledged. If an ACK does not arrive before the retransmission timer expires, or three duplicate ACKs are seen, the segment is retransmitted. This is what makes an unreliable network reliable.
+   3. Reliable delivery — acknowledgement and retransmission
+   - Every segment is acknowledged. If an ACK does not arrive before the retransmission timer expires, or three duplicate ACKs are seen, the segment is retransmitted. This is what makes an unreliable network reliable.
 
-    4. Error control
-    - A 16-bit checksum covers the header, the data and a pseudo-header containing the IP addresses. A corrupted segment is discarded and, because it is never acknowledged, it is retransmitted. Duplicates are detected and dropped using sequence numbers.
+   4. Error control
+   - A 16-bit checksum covers the header, the data and a pseudo-header containing the IP addresses. A corrupted segment is discarded and, because it is never acknowledged, it is retransmitted. Duplicates are detected and dropped using sequence numbers.
 
-    5. Flow control
-    - The receiver advertises a window size in every ACK, stating how many more bytes it can accept. The sender never has more than that amount unacknowledged, so a fast sender cannot overwhelm a slow receiver. This is the sliding window mechanism.
+   5. Flow control
+   - The receiver advertises a window size in every ACK, stating how many more bytes it can accept. The sender never has more than that amount unacknowledged, so a fast sender cannot overwhelm a slow receiver. This is the sliding window mechanism.
 
-    6. Congestion control
-    - TCP infers network congestion from packet loss and adjusts its sending rate: slow start, congestion avoidance, fast retransmit and fast recovery. This protects the network itself, not just the receiver.
+   6. Congestion control
+   - TCP infers network congestion from packet loss and adjusts its sending rate: slow start, congestion avoidance, fast retransmit and fast recovery. This protects the network itself, not just the receiver.
 
-    Also commonly listed
-    - Multiplexing with port numbers, so many applications share one IP address; and full-duplex operation, with independent data flow and sequence numbering in each direction.
+   Also commonly listed
+   - Multiplexing with port numbers, so many applications share one IP address; and full-duplex operation, with independent data flow and sequence numbering in each direction.
 
 12. **(c) What is purpose of routers? How congestion control works in the TCP?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 886-887 (ET: N/A)]*
 
 Answer:
 
-    (a) Purpose of routers
-    - To connect different networks and forward packets between them, using the destination IP address and a routing table with longest prefix match.
-    - To determine the best path among several possible routes, using static entries or dynamic protocols such as RIP, OSPF, EIGRP and BGP.
-    - To separate broadcast domains — a router does not forward broadcasts, which stops a broadcast storm in one LAN affecting others.
-    - To perform NAT, translating private addresses to a public one so many hosts share one public IP.
-    - To act as the default gateway for hosts, and to provide DHCP service.
-    - To filter traffic with access control lists, and often to provide firewall and VPN functions.
-    - To fragment packets that exceed the next link's MTU and to decrement the TTL, which kills looping packets.
-    - To interconnect different media and technologies — Ethernet on one side, a serial or fibre WAN link on the other.
+   (a) Purpose of routers
+   - To connect different networks and forward packets between them, using the destination IP address and a routing table with longest prefix match.
+   - To determine the best path among several possible routes, using static entries or dynamic protocols such as RIP, OSPF, EIGRP and BGP.
+   - To separate broadcast domains — a router does not forward broadcasts, which stops a broadcast storm in one LAN affecting others.
+   - To perform NAT, translating private addresses to a public one so many hosts share one public IP.
+   - To act as the default gateway for hosts, and to provide DHCP service.
+   - To filter traffic with access control lists, and often to provide firewall and VPN functions.
+   - To fragment packets that exceed the next link's MTU and to decrement the TTL, which kills looping packets.
+   - To interconnect different media and technologies — Ethernet on one side, a serial or fibre WAN link on the other.
 
-    (b) How congestion control works in TCP
-    - TCP has no direct signal from the network, so it infers congestion from `packet loss` and adjusts its sending rate. It keeps a congestion window (cwnd) alongside the receiver's advertised window, and sends the minimum of the two.
+   (b) How congestion control works in TCP
+   - TCP has no direct signal from the network, so it infers congestion from `packet loss` and adjusts its sending rate. It keeps a congestion window (cwnd) alongside the receiver's advertised window, and sends the minimum of the two.
 
-    The four phases
+   The four phases
 
-    - 1. Slow start
-      - cwnd begins at 1 MSS and doubles every round-trip time (it increases by 1 MSS for every ACK received), so growth is exponential.
-      - It continues until cwnd reaches the slow-start threshold (ssthresh) or a loss occurs.
-      - Despite the name, this is the fastest-growing phase; it is "slow" only because it starts from 1.
+   - 1. Slow start
+     - cwnd begins at 1 MSS and doubles every round-trip time (it increases by 1 MSS for every ACK received), so growth is exponential.
+     - It continues until cwnd reaches the slow-start threshold (ssthresh) or a loss occurs.
+     - Despite the name, this is the fastest-growing phase; it is "slow" only because it starts from 1.
 
-    - 2. Congestion avoidance
-      - Once cwnd exceeds ssthresh, growth becomes linear: cwnd increases by about 1 MSS per round-trip time.
-      - This probes carefully for extra capacity instead of doubling into congestion.
+   - 2. Congestion avoidance
+     - Once cwnd exceeds ssthresh, growth becomes linear: cwnd increases by about 1 MSS per round-trip time.
+     - This probes carefully for extra capacity instead of doubling into congestion.
 
-    - 3. Fast retransmit
-      - Three duplicate ACKs indicate one segment was lost while later segments arrived. TCP retransmits it immediately, without waiting for the timeout.
+   - 3. Fast retransmit
+     - Three duplicate ACKs indicate one segment was lost while later segments arrived. TCP retransmits it immediately, without waiting for the timeout.
 
-    - 4. Fast recovery
-      - After a fast retransmit, ssthresh is halved and cwnd is set to the new ssthresh, so sending continues at a reduced rate rather than collapsing to 1 MSS.
-      - A full timeout is treated as much more serious: ssthresh is halved, cwnd drops to 1 MSS, and slow start begins again.
+   - 4. Fast recovery
+     - After a fast retransmit, ssthresh is halved and cwnd is set to the new ssthresh, so sending continues at a reduced rate rather than collapsing to 1 MSS.
+     - A full timeout is treated as much more serious: ssthresh is halved, cwnd drops to 1 MSS, and slow start begins again.
 
-    ```
-    cwnd
-      |            /\        /\
-      |           /  \      /  \        <- fast recovery: halve and continue
-      |          /    \    /
-      |         /      \  /
-      |    ____/        \/
-      |   /   linear growth (congestion avoidance)
-      |  / exponential (slow start)
-      +---------------------------------> time
-            ^ ssthresh      ^ loss detected
-    ```
+   ```
+   cwnd
+     |            /\        /\
+     |           /  \      /  \        <- fast recovery: halve and continue
+     |          /    \    /
+     |         /      \  /
+     |    ____/        \/
+     |   /   linear growth (congestion avoidance)
+     |  / exponential (slow start)
+     +---------------------------------> time
+           ^ ssthresh      ^ loss detected
+   ```
 
-    - The overall behaviour is called AIMD — Additive Increase, Multiplicative Decrease — and it is what keeps the internet from congestion collapse while sharing capacity roughly fairly between flows.
-    - Modern variants: Reno, NewReno, CUBIC (the Linux default, which grows by a cubic function of time) and BBR (which models bandwidth and RTT instead of relying on loss).
+   - The overall behaviour is called AIMD — Additive Increase, Multiplicative Decrease — and it is what keeps the internet from congestion collapse while sharing capacity roughly fairly between flows.
+   - Modern variants: Reno, NewReno, CUBIC (the Linux default, which grows by a cubic function of time) and BBR (which models bandwidth and RTT instead of relying on loss).
 
 13. **What is a TCP Three-way handshaking step?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
 Answer: The TCP three-way handshake has three steps and is used to open a connection before any data is transferred.
 
-    Step 1 — SYN
-    - The client sends a segment with the SYN flag set and a randomly chosen initial sequence number, seq = x.
-    - It also advertises its receive window size and its MSS.
-    - Client state: CLOSED -> SYN-SENT.
+   Step 1 — SYN
+   - The client sends a segment with the SYN flag set and a randomly chosen initial sequence number, seq = x.
+   - It also advertises its receive window size and its MSS.
+   - Client state: CLOSED -> SYN-SENT.
 
-    Step 2 — SYN + ACK
-    - The server replies with a single segment carrying both flags: SYN = 1 with its own random ISN, seq = y, and ACK = 1 with ack = x + 1.
-    - The ack value x + 1 tells the client "I received your SYN, and I now expect byte x + 1".
-    - Server state: LISTEN -> SYN-RECEIVED.
+   Step 2 — SYN + ACK
+   - The server replies with a single segment carrying both flags: SYN = 1 with its own random ISN, seq = y, and ACK = 1 with ack = x + 1.
+   - The ack value x + 1 tells the client "I received your SYN, and I now expect byte x + 1".
+   - Server state: LISTEN -> SYN-RECEIVED.
 
-    Step 3 — ACK
-    - The client acknowledges the server's SYN with seq = x + 1 and ack = y + 1.
-    - Both sides move to ESTABLISHED and data transfer begins. This third segment may already carry data.
+   Step 3 — ACK
+   - The client acknowledges the server's SYN with seq = x + 1 and ack = y + 1.
+   - Both sides move to ESTABLISHED and data transfer begins. This third segment may already carry data.
 
-    ```
-    CLIENT                                     SERVER
-       |--- SYN, seq=x ------------------------->|
-       |<-- SYN+ACK, seq=y, ack=x+1 -------------|
-       |--- ACK, seq=x+1, ack=y+1 -------------->|
-       |============ ESTABLISHED ===============|
-    ```
+   ```
+   CLIENT                                     SERVER
+      |--- SYN, seq=x ------------------------->|
+      |<-- SYN+ACK, seq=y, ack=x+1 -------------|
+      |--- ACK, seq=x+1, ack=y+1 -------------->|
+      |============ ESTABLISHED ===============|
+   ```
 
-    Why it takes exactly three steps
-    - Both directions must be synchronised, which needs four logical events: client SYN, server ACK, server SYN, client ACK. The server combines its ACK and its SYN into one segment, reducing four to three.
+   Why it takes exactly three steps
+   - Both directions must be synchronised, which needs four logical events: client SYN, server ACK, server SYN, client ACK. The server combines its ACK and its SYN into one segment, reducing four to three.
 
-    - Note: a connection is closed with four steps (FIN, ACK, FIN, ACK), because each direction of the full-duplex connection is closed independently.
+   - Note: a connection is closed with four steps (FIN, ACK, FIN, ACK), because each direction of the full-duplex connection is closed independently.
 
 14. **The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate packets. What are the functions performed by TCP to make a network more reliable?** *[Sonali & Janata Bank Officer (IT) 2020 compact it 990 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
 Answer: TCP makes an unreliable IP network reliable through the following mechanisms.
 
-    1. Sequence numbers
-    - Every byte in the stream is numbered. The receiver can therefore place segments in the correct order no matter what order they arrive in, and can detect a gap immediately.
+   1. Sequence numbers
+   - Every byte in the stream is numbered. The receiver can therefore place segments in the correct order no matter what order they arrive in, and can detect a gap immediately.
 
-    2. Acknowledgements
-    - The receiver returns an ACK carrying the number of the next byte it expects. ACKs are cumulative, so one ACK confirms everything up to that point. Delayed and duplicate ACKs give the sender extra information about what is missing.
+   2. Acknowledgements
+   - The receiver returns an ACK carrying the number of the next byte it expects. ACKs are cumulative, so one ACK confirms everything up to that point. Delayed and duplicate ACKs give the sender extra information about what is missing.
 
-    3. Retransmission
-    - If an ACK does not arrive before the retransmission timer expires, the segment is sent again. The timer is derived from a smoothed estimate of the round-trip time, so it adapts to network conditions.
-    - `Fast retransmit`: three duplicate ACKs are taken as evidence of a single lost segment, and it is resent at once without waiting for the timer.
+   3. Retransmission
+   - If an ACK does not arrive before the retransmission timer expires, the segment is sent again. The timer is derived from a smoothed estimate of the round-trip time, so it adapts to network conditions.
+   - `Fast retransmit`: three duplicate ACKs are taken as evidence of a single lost segment, and it is resent at once without waiting for the timer.
 
-    4. Checksum
-    - A 16-bit checksum covers the header, the data and a pseudo-header containing the IP addresses. A corrupted segment is discarded and, being unacknowledged, is retransmitted. This also detects misdelivered segments.
+   4. Checksum
+   - A 16-bit checksum covers the header, the data and a pseudo-header containing the IP addresses. A corrupted segment is discarded and, being unacknowledged, is retransmitted. This also detects misdelivered segments.
 
-    5. Duplicate detection
-    - Sequence numbers let the receiver recognise and discard a segment it has already accepted, so a spurious retransmission causes no harm.
+   5. Duplicate detection
+   - Sequence numbers let the receiver recognise and discard a segment it has already accepted, so a spurious retransmission causes no harm.
 
-    6. Flow control — the sliding window
-    - The receiver advertises how many bytes of free buffer it has. The sender keeps no more than that amount unacknowledged, so a fast sender never overruns a slow receiver and causes avoidable loss.
+   6. Flow control — the sliding window
+   - The receiver advertises how many bytes of free buffer it has. The sender keeps no more than that amount unacknowledged, so a fast sender never overruns a slow receiver and causes avoidable loss.
 
-    7. Congestion control
-    - Slow start, congestion avoidance, fast retransmit and fast recovery adjust the sending rate to the capacity of the network, which prevents the router-buffer overflow that would otherwise cause most losses in the first place.
+   7. Congestion control
+   - Slow start, congestion avoidance, fast retransmit and fast recovery adjust the sending rate to the capacity of the network, which prevents the router-buffer overflow that would otherwise cause most losses in the first place.
 
-    8. Connection management
-    - The three-way handshake synchronises sequence numbers and confirms both ends are ready; the four-way close ensures no data is lost at teardown; and the TIME-WAIT state ensures old duplicates from a closed connection cannot contaminate a new one.
+   8. Connection management
+   - The three-way handshake synchronises sequence numbers and confirms both ends are ready; the four-way close ensures no data is lost at teardown; and the TIME-WAIT state ensures old duplicates from a closed connection cannot contaminate a new one.
 
-    9. Ordered delivery to the application
-    - Out-of-order segments are buffered rather than delivered, so the application always sees the exact byte stream that was sent, in the right order and with nothing missing.
+   9. Ordered delivery to the application
+   - Out-of-order segments are buffered rather than delivered, so the application always sees the exact byte stream that was sent, in the right order and with nothing missing.
 
-    - The combined result: the application sees a reliable, ordered, full-duplex byte stream, even though IP underneath offers no guarantee at all.
+   - The combined result: the application sees a reliable, ordered, full-duplex byte stream, even though IP underneath offers no guarantee at all.
 
 15. **a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
 
 Answer: For a live video stream, use `UDP` (in practice RTP running over UDP).
 
-    Reasons
+   Reasons
 
-    - Latency matters more than perfection. In a live stream, a frame that arrives late is useless — the moment it belongs to has already passed. TCP would stop and wait for a retransmission, delaying everything behind it.
-    - No head-of-line blocking. TCP delivers bytes strictly in order, so one lost segment stalls the entire stream until it is recovered. UDP delivers what arrives, and the decoder simply conceals the gap.
-    - Loss is tolerable. Video codecs handle a lost packet gracefully: a brief artefact or a repeated block, which the viewer barely notices. A frozen picture for two seconds is far worse.
-    - No connection setup. UDP has no handshake, so a viewer joins the stream instantly.
-    - Multicast is possible. One server can send a single stream to thousands of viewers using IP multicast, which TCP cannot do at all. For a live broadcast this is decisive.
-    - Lower overhead. An 8-byte header instead of 20, and no ACK traffic flowing back, which matters when serving many viewers.
-    - Constant rate. TCP's congestion control would repeatedly halve the sending rate, causing visible quality swings; UDP lets the application control its own rate and adapt the bitrate deliberately.
+   - Latency matters more than perfection. In a live stream, a frame that arrives late is useless — the moment it belongs to has already passed. TCP would stop and wait for a retransmission, delaying everything behind it.
+   - No head-of-line blocking. TCP delivers bytes strictly in order, so one lost segment stalls the entire stream until it is recovered. UDP delivers what arrives, and the decoder simply conceals the gap.
+   - Loss is tolerable. Video codecs handle a lost packet gracefully: a brief artefact or a repeated block, which the viewer barely notices. A frozen picture for two seconds is far worse.
+   - No connection setup. UDP has no handshake, so a viewer joins the stream instantly.
+   - Multicast is possible. One server can send a single stream to thousands of viewers using IP multicast, which TCP cannot do at all. For a live broadcast this is decisive.
+   - Lower overhead. An 8-byte header instead of 20, and no ACK traffic flowing back, which matters when serving many viewers.
+   - Constant rate. TCP's congestion control would repeatedly halve the sending rate, causing visible quality swings; UDP lets the application control its own rate and adapt the bitrate deliberately.
 
-    What is used with it
-    - `RTP` over UDP carries the media, adding sequence numbers and timestamps so the receiver can detect loss, reorder and synchronise audio with video.
-    - `RTCP` reports quality statistics back so the sender can adapt.
-    - WebRTC, used for video calls, is built on this stack.
+   What is used with it
+   - `RTP` over UDP carries the media, adding sequence numbers and timestamps so the receiver can detect loss, reorder and synchronise audio with video.
+   - `RTCP` reports quality statistics back so the sender can adapt.
+   - WebRTC, used for video calls, is built on this stack.
 
-    When TCP is used instead
-    - Video on demand (YouTube, Netflix) uses HTTP over TCP with adaptive bitrate streaming (HLS, DASH), because it is not truly live: a buffer of several seconds hides the retransmissions, and TCP passes through firewalls easily.
-    - Some live streaming also uses TCP-based protocols (RTMP, or HLS with low-latency extensions) for exactly that firewall-traversal reason, accepting the extra latency.
-    - The rule: `interactive and live` -> UDP/RTP; `buffered playback` -> TCP/HTTP.
+   When TCP is used instead
+   - Video on demand (YouTube, Netflix) uses HTTP over TCP with adaptive bitrate streaming (HLS, DASH), because it is not truly live: a buffer of several seconds hides the retransmissions, and TCP passes through firewalls easily.
+   - Some live streaming also uses TCP-based protocols (RTMP, or HLS with low-latency extensions) for exactly that firewall-traversal reason, accepting the extra latency.
+   - The rule: `interactive and live` -> UDP/RTP; `buffered playback` -> TCP/HTTP.
 
 16. **(c) What is TCP protocol? How does it work?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1125-1127 (ET: N/A)]*
 
 Answer:
 
-    What is TCP
-    - TCP (Transmission Control Protocol) is the connection-oriented transport-layer protocol of the TCP/IP suite, defined in RFC 793. It provides a reliable, ordered, error-checked, full-duplex byte stream between two application processes.
-    - It turns the unreliable, best-effort service of IP into something an application can rely on.
-    - Header: 20 bytes minimum, containing source and destination ports, sequence number, acknowledgement number, flags (SYN, ACK, FIN, RST, PSH, URG), window size, checksum and urgent pointer.
+   What is TCP
+   - TCP (Transmission Control Protocol) is the connection-oriented transport-layer protocol of the TCP/IP suite, defined in RFC 793. It provides a reliable, ordered, error-checked, full-duplex byte stream between two application processes.
+   - It turns the unreliable, best-effort service of IP into something an application can rely on.
+   - Header: 20 bytes minimum, containing source and destination ports, sequence number, acknowledgement number, flags (SYN, ACK, FIN, RST, PSH, URG), window size, checksum and urgent pointer.
 
-    How it works
+   How it works
 
-    - 1. Connection establishment — the three-way handshake
-    ```
-    CLIENT                                  SERVER
-       |--- SYN, seq=x -------------------->|
-       |<-- SYN+ACK, seq=y, ack=x+1 --------|
-       |--- ACK, seq=x+1, ack=y+1 --------->|
-       |=========== ESTABLISHED ============|
-    ```
-    Both sides agree on initial sequence numbers, window sizes and the MSS.
+   - 1. Connection establishment — the three-way handshake
+   ```
+   CLIENT                                  SERVER
+      |--- SYN, seq=x -------------------->|
+      |<-- SYN+ACK, seq=y, ack=x+1 --------|
+      |--- ACK, seq=x+1, ack=y+1 --------->|
+      |=========== ESTABLISHED ============|
+   ```
+   Both sides agree on initial sequence numbers, window sizes and the MSS.
 
-    - 2. Data transfer
-      - The byte stream is divided into segments no larger than the MSS, and every byte is numbered.
-      - The receiver acknowledges cumulatively, sending the number of the next byte it expects.
-      - Segments arriving out of order are buffered and reordered; duplicates are discarded.
+   - 2. Data transfer
+     - The byte stream is divided into segments no larger than the MSS, and every byte is numbered.
+     - The receiver acknowledges cumulatively, sending the number of the next byte it expects.
+     - Segments arriving out of order are buffered and reordered; duplicates are discarded.
 
-    - 3. Reliability
-      - An unacknowledged segment is retransmitted when the adaptive retransmission timer expires.
-      - Three duplicate ACKs trigger fast retransmit, without waiting for the timer.
-      - A checksum over the header, data and pseudo-header detects corruption.
+   - 3. Reliability
+     - An unacknowledged segment is retransmitted when the adaptive retransmission timer expires.
+     - Three duplicate ACKs trigger fast retransmit, without waiting for the timer.
+     - A checksum over the header, data and pseudo-header detects corruption.
 
-    - 4. Flow control
-      - The receiver advertises a window size in every ACK. The sender keeps no more than that many bytes unacknowledged, so it cannot overwhelm a slow receiver. This is the sliding window.
+   - 4. Flow control
+     - The receiver advertises a window size in every ACK. The sender keeps no more than that many bytes unacknowledged, so it cannot overwhelm a slow receiver. This is the sliding window.
 
-    - 5. Congestion control
-      - Slow start grows the congestion window exponentially, congestion avoidance then grows it linearly, and a loss halves it. The overall behaviour is AIMD, which shares network capacity fairly and prevents congestion collapse.
+   - 5. Congestion control
+     - Slow start grows the congestion window exponentially, congestion avoidance then grows it linearly, and a loss halves it. The overall behaviour is AIMD, which shares network capacity fairly and prevents congestion collapse.
 
-    - 6. Connection termination — four-way
-    ```
-       Client --- FIN ---> Server
-       Client <-- ACK ---- Server
-       Client <-- FIN ---- Server
-       Client --- ACK ---> Server   (then TIME-WAIT)
-    ```
-    Each direction is closed independently, since the connection is full duplex.
+   - 6. Connection termination — four-way
+   ```
+      Client --- FIN ---> Server
+      Client <-- ACK ---- Server
+      Client <-- FIN ---- Server
+      Client --- ACK ---> Server   (then TIME-WAIT)
+   ```
+   Each direction is closed independently, since the connection is full duplex.
 
-    - 7. Multiplexing
-      - Port numbers let many applications share one IP address. The four-tuple (source IP, source port, destination IP, destination port) uniquely identifies a connection.
+   - 7. Multiplexing
+     - Port numbers let many applications share one IP address. The four-tuple (source IP, source port, destination IP, destination port) uniquely identifies a connection.
 
-    - Applications that use TCP: HTTP, HTTPS, FTP, SMTP, POP3, IMAP, SSH, Telnet and BGP — everything where losing a byte is unacceptable.
+   - Applications that use TCP: HTTP, HTTPS, FTP, SMTP, POP3, IMAP, SSH, Telnet and BGP — everything where losing a byte is unacceptable.
 
 17. **Write down difference between TCP and UDP with write down some TCP and UDP protocols.** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160 (ET: BUET)]*
 
@@ -7008,51 +7008,51 @@ Answer:
 20. **a) Explain Three-Way Handshaking in TCP Protocol.** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 379]]*
 
 Answer:
-    The TCP Three-Way Handshake is the connection establishment mechanism used by TCP to synchronize sequence numbers and establish a reliable, full-duplex communication channel between client and server before data transmission begins.
+   The TCP Three-Way Handshake is the connection establishment mechanism used by TCP to synchronize sequence numbers and establish a reliable, full-duplex communication channel between client and server before data transmission begins.
 
-    ```mermaid
-    sequenceDiagram
-        autonumber
-        Client->>Server: SYN (seq = x)
-        Server->>Client: SYN-ACK (seq = y, ack = x + 1)
-        Client->>Server: ACK (seq = x + 1, ack = y + 1)
-    ```
+   ```mermaid
+   sequenceDiagram
+       autonumber
+       Client->>Server: SYN (seq = x)
+       Server->>Client: SYN-ACK (seq = y, ack = x + 1)
+       Client->>Server: ACK (seq = x + 1, ack = y + 1)
+   ```
 
-    Three Steps:
-    - Step 1 (SYN): The client sends a TCP segment with the SYN (Synchronize) flag set to 1 and an initial sequence number `seq = x` to initiate connection.
-    - Step 2 (SYN-ACK): The server receives the SYN, allocates buffer resources, and replies with SYN = 1 and ACK (Acknowledgment) = 1, setting its own sequence number `seq = y` and acknowledgment number `ack = x + 1`.
-    - Step 3 (ACK): The client confirms receipt by sending an ACK segment with `ack = y + 1` and `seq = x + 1`. The connection enters the ESTABLISHED state on both sides, allowing application data to flow.
+   Three Steps:
+   - Step 1 (SYN): The client sends a TCP segment with the SYN (Synchronize) flag set to 1 and an initial sequence number `seq = x` to initiate connection.
+   - Step 2 (SYN-ACK): The server receives the SYN, allocates buffer resources, and replies with SYN = 1 and ACK (Acknowledgment) = 1, setting its own sequence number `seq = y` and acknowledgment number `ack = x + 1`.
+   - Step 3 (ACK): The client confirms receipt by sending an ACK segment with `ack = y + 1` and `seq = x + 1`. The connection enters the ESTABLISHED state on both sides, allowing application data to flow.
 
 21. **b) Draw the TCP/IP and OSI reference Model diagram.** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 379]]*
 
 Answer:
 
-    ```
-    +---------------------------+       +---------------------------+
-    |      OSI 7-Layer Model    |       |     TCP/IP 4-Layer Model  |
-    +---------------------------+       +---------------------------+
-    | 7. Application Layer      | ----    | 6. Presentation Layer     | ----->| 4. Application Layer      |
-    | 5. Session Layer          | ----/ |    (HTTP, DNS, SSH, FTP)  |
-    +---------------------------+       +---------------------------+
-    | 4. Transport Layer        | ----> | 3. Transport Layer        |
-    |    (TCP, UDP)             |       |    (TCP, UDP)             |
-    +---------------------------+       +---------------------------+
-    | 3. Network Layer          | ----> | 2. Internet Layer         |
-    |    (IP, ICMP, ARP)        |       |    (IP, ICMP, IGMP)       |
-    +---------------------------+       +---------------------------+
-    | 2. Data Link Layer        | ----\ | 1. Network Access Layer   |
-    | 1. Physical Layer         | ----->|    (Ethernet, Wi-Fi, MAC) |
-    +---------------------------+       +---------------------------+
-    ```
+   ```
+   +---------------------------+       +---------------------------+
+   |      OSI 7-Layer Model    |       |     TCP/IP 4-Layer Model  |
+   +---------------------------+       +---------------------------+
+   | 7. Application Layer      | ----    | 6. Presentation Layer     | ----->| 4. Application Layer      |
+   | 5. Session Layer          | ----/ |    (HTTP, DNS, SSH, FTP)  |
+   +---------------------------+       +---------------------------+
+   | 4. Transport Layer        | ----> | 3. Transport Layer        |
+   |    (TCP, UDP)             |       |    (TCP, UDP)             |
+   +---------------------------+       +---------------------------+
+   | 3. Network Layer          | ----> | 2. Internet Layer         |
+   |    (IP, ICMP, ARP)        |       |    (IP, ICMP, IGMP)       |
+   +---------------------------+       +---------------------------+
+   | 2. Data Link Layer        | ----\ | 1. Network Access Layer   |
+   | 1. Physical Layer         | ----->|    (Ethernet, Wi-Fi, MAC) |
+   +---------------------------+       +---------------------------+
+   ```
 
 22. **Write the full form of the protocols: NAT, DHCP, MAC, TCP-IP, HTTPS** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 379]]*
 
 Answer:
-    - **NAT** — Network Address Translation
-    - **DHCP** — Dynamic Host Configuration Protocol
-    - **MAC** — Media Access Control
-    - **TCP/IP** — Transmission Control Protocol / Internet Protocol
-    - **HTTPS** — HyperText Transfer Protocol Secure
+   - **NAT** — Network Address Translation
+   - **DHCP** — Dynamic Host Configuration Protocol
+   - **MAC** — Media Access Control
+   - **TCP/IP** — Transmission Control Protocol / Internet Protocol
+   - **HTTPS** — HyperText Transfer Protocol Secure
 
 ## Physical Layer & Transmission Media (Cables & Wiring) (21)
 
@@ -7386,26 +7386,26 @@ Answer: (Answered in English, as required for IT topics.)
 
 Answer: Exceeding the specified cable length causes the signal to degrade beyond what the receiver can correctly interpret. Several distinct problems appear.
 
-    1. Attenuation
-    - The signal loses strength with distance. Past the limit it becomes too weak for the receiver to distinguish 1 from 0, so bits are misread.
+   1. Attenuation
+   - The signal loses strength with distance. Past the limit it becomes too weak for the receiver to distinguish 1 from 0, so bits are misread.
 
-    2. Increased errors and retransmissions
-    - Frames fail their CRC and are discarded. TCP retransmits them, so throughput falls sharply even though the link appears to be up.
+   2. Increased errors and retransmissions
+   - Frames fail their CRC and are discarded. TCP retransmits them, so throughput falls sharply even though the link appears to be up.
 
-    3. Intermittent or no connectivity
-    - The link may fail to come up at all, or come up and drop repeatedly — the hardest kind of fault to diagnose, because it works sometimes.
+   3. Intermittent or no connectivity
+   - The link may fail to come up at all, or come up and drop repeatedly — the hardest kind of fault to diagnose, because it works sometimes.
 
-    4. Timing and collision-detection failure (on shared Ethernet)
-    - Classic Ethernet requires that a station still be transmitting when a collision reaches it. Excess length increases propagation delay, so collisions are detected too late — `late collisions` — and the frame is lost without retransmission by the MAC layer.
+   4. Timing and collision-detection failure (on shared Ethernet)
+   - Classic Ethernet requires that a station still be transmitting when a collision reaches it. Excess length increases propagation delay, so collisions are detected too late — `late collisions` — and the frame is lost without retransmission by the MAC layer.
 
-    5. Distortion and jitter
-    - Different frequency components attenuate differently and arrive at slightly different times, spreading pulses into one another (intersymbol interference) and making the receiver's clock recovery unreliable.
+   5. Distortion and jitter
+   - Different frequency components attenuate differently and arrive at slightly different times, spreading pulses into one another (intersymbol interference) and making the receiver's clock recovery unreliable.
 
-    6. Speed negotiation dropping
-    - A gigabit link may negotiate down to 100 Mbps, or a 10 Gbps link to 1 Gbps, because the higher speed cannot be sustained over the distance.
+   6. Speed negotiation dropping
+   - A gigabit link may negotiate down to 100 Mbps, or a 10 Gbps link to 1 Gbps, because the higher speed cannot be sustained over the distance.
 
-    7. More noise pickup
-    - A longer run acts as a longer antenna, collecting more EMI and crosstalk.
+   7. More noise pickup
+   - A longer run acts as a longer antenna, collecting more EMI and crosstalk.
 
 Standard limits
 
@@ -7417,33 +7417,33 @@ Standard limits
 | Multimode fibre | 550 m at 1 Gbps, 300 m at 10 Gbps |
 | Single-mode fibre | 10 km, more with specialised optics |
 
-    Solutions
-    - Insert a `repeater` or, better, a `switch` at the midpoint to regenerate the signal.
-    - Use `optical fibre` for the long run and a media converter at each end.
-    - Redesign the cabling so that each horizontal run stays within 100 m by placing an intermediate distribution frame.
-    - For a link that must be long and cheap, consider a wireless bridge instead.
+   Solutions
+   - Insert a `repeater` or, better, a `switch` at the midpoint to regenerate the signal.
+   - Use `optical fibre` for the long run and a media converter at each end.
+   - Redesign the cabling so that each horizontal run stays within 100 m by placing an intermediate distribution frame.
+   - For a link that must be long and cheap, consider a wireless bridge instead.
 
 11. **(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 789 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) The naming convention reads as `<speed> BASE <medium or segment length>`.
 
-    (a) 10BASE5 — "Thick Ethernet" or Thicknet
-    - `10` = 10 Mbps data rate.
-    - `BASE` = baseband signalling, meaning the digital signal occupies the whole medium with no modulation.
-    - `5` = maximum segment length of 500 metres.
-    - Medium: thick coaxial cable, about 10 mm diameter, rigid and yellow, hence the nickname "frozen yellow garden hose".
-    - Topology: bus. Stations attach with a `vampire tap` that pierces the jacket to reach the core, connected through an AUI cable to a transceiver.
-    - Rules: maximum 100 stations per segment, taps at least 2.5 m apart, both ends terminated with 50-ohm terminators, and the 5-4-3 rule (up to 5 segments, 4 repeaters, 3 populated).
-    - It was the original Ethernet (IEEE 802.3, 1983), and it is completely obsolete: expensive, hard to install, and a single break brought down the entire segment.
+   (a) 10BASE5 — "Thick Ethernet" or Thicknet
+   - `10` = 10 Mbps data rate.
+   - `BASE` = baseband signalling, meaning the digital signal occupies the whole medium with no modulation.
+   - `5` = maximum segment length of 500 metres.
+   - Medium: thick coaxial cable, about 10 mm diameter, rigid and yellow, hence the nickname "frozen yellow garden hose".
+   - Topology: bus. Stations attach with a `vampire tap` that pierces the jacket to reach the core, connected through an AUI cable to a transceiver.
+   - Rules: maximum 100 stations per segment, taps at least 2.5 m apart, both ends terminated with 50-ohm terminators, and the 5-4-3 rule (up to 5 segments, 4 repeaters, 3 populated).
+   - It was the original Ethernet (IEEE 802.3, 1983), and it is completely obsolete: expensive, hard to install, and a single break brought down the entire segment.
 
-    (b) 10BASE-F — Fibre Ethernet
-    - `10` = 10 Mbps.
-    - `BASE` = baseband.
-    - `F` = optical fibre as the medium.
-    - Uses two multimode fibres, one for transmit and one for receive, so it is naturally full duplex capable.
-    - Segment length up to 2000 m, far beyond copper, because fibre attenuation is very low.
-    - Complete immunity to EMI, so it suits runs between buildings, through industrial areas, or anywhere lightning or ground-potential differences make copper dangerous.
-    - Variants: 10BASE-FL (link, 2 km, the common one), 10BASE-FB (backbone, for repeater interconnection) and 10BASE-FP (passive star).
+   (b) 10BASE-F — Fibre Ethernet
+   - `10` = 10 Mbps.
+   - `BASE` = baseband.
+   - `F` = optical fibre as the medium.
+   - Uses two multimode fibres, one for transmit and one for receive, so it is naturally full duplex capable.
+   - Segment length up to 2000 m, far beyond copper, because fibre attenuation is very low.
+   - Complete immunity to EMI, so it suits runs between buildings, through industrial areas, or anywhere lightning or ground-potential differences make copper dangerous.
+   - Variants: 10BASE-FL (link, 2 km, the common one), 10BASE-FB (backbone, for repeater interconnection) and 10BASE-FP (passive star).
 
 Comparison
 
@@ -7460,119 +7460,119 @@ Comparison
 
 Answer: 10BASE-T is the IEEE 802.3i Ethernet standard that runs at 10 Mbps over twisted-pair cable. It is the version that made Ethernet universal.
 
-    Reading the name
-    - `10` = 10 Mbps data rate.
-    - `BASE` = baseband signalling; the digital signal uses the entire medium with no carrier modulation.
-    - `T` = twisted pair as the medium.
+   Reading the name
+   - `10` = 10 Mbps data rate.
+   - `BASE` = baseband signalling; the digital signal uses the entire medium with no carrier modulation.
+   - `T` = twisted pair as the medium.
 
-    Specifications
-    - Medium: Category 3 or better UTP, using two of the four pairs — one for transmit (pins 1 and 2) and one for receive (pins 3 and 6).
-    - Connector: RJ45.
-    - Maximum segment length: `100 m` from the station to the hub or switch.
-    - Topology: physical `star` — every station has its own cable to a central hub or switch. Logically it behaved as a bus when hubs were used.
-    - Encoding: Manchester, which is self-clocking, so no separate clock line is needed. This costs bandwidth: 10 Mbps of data needs 20 Mbaud of signalling.
-    - Access method: CSMA/CD on a hub; not needed on a full-duplex switched link.
-    - Rules: the 5-4-3 rule for repeaters, and a minimum frame size of 64 bytes so that collisions are always detected in time.
+   Specifications
+   - Medium: Category 3 or better UTP, using two of the four pairs — one for transmit (pins 1 and 2) and one for receive (pins 3 and 6).
+   - Connector: RJ45.
+   - Maximum segment length: `100 m` from the station to the hub or switch.
+   - Topology: physical `star` — every station has its own cable to a central hub or switch. Logically it behaved as a bus when hubs were used.
+   - Encoding: Manchester, which is self-clocking, so no separate clock line is needed. This costs bandwidth: 10 Mbps of data needs 20 Mbaud of signalling.
+   - Access method: CSMA/CD on a hub; not needed on a full-duplex switched link.
+   - Rules: the 5-4-3 rule for repeaters, and a minimum frame size of 64 bytes so that collisions are always detected in time.
 
-    Why it replaced coaxial Ethernet
-    - Star topology means one broken cable affects only one station, whereas a break in a 10BASE2 or 10BASE5 bus killed the whole segment.
-    - Cheap, thin, flexible cable that is easy to install and terminate.
-    - Easy to add or move a station — just patch a new port.
-    - Central management and easy fault isolation; a link light shows immediately whether a station is connected.
-    - It made structured cabling possible, which is why every modern building is wired this way.
+   Why it replaced coaxial Ethernet
+   - Star topology means one broken cable affects only one station, whereas a break in a 10BASE2 or 10BASE5 bus killed the whole segment.
+   - Cheap, thin, flexible cable that is easy to install and terminate.
+   - Easy to add or move a station — just patch a new port.
+   - Central management and easy fault isolation; a link light shows immediately whether a station is connected.
+   - It made structured cabling possible, which is why every modern building is wired this way.
 
-    The family that followed
-    - 100BASE-TX (Fast Ethernet, Cat5, 100 Mbps), 1000BASE-T (Gigabit, Cat5e, uses all four pairs), 10GBASE-T (Cat6a). All keep the 100 m limit and the RJ45 connector.
+   The family that followed
+   - 100BASE-TX (Fast Ethernet, Cat5, 100 Mbps), 1000BASE-T (Gigabit, Cat5e, uses all four pairs), 10GBASE-T (Cat6a). All keep the 100 m limit and the RJ45 connector.
 
 13. **Which media transfer data with higher bandwidth? Advantages of this media.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843 (ET: N/A)]*
 
 Answer: `Optical fibre` transfers data with the highest bandwidth of any transmission medium.
 
-    Capacity
-    - A single fibre carries terabits per second when wavelength division multiplexing is used: DWDM puts 40 to 160 separate wavelengths on one strand, each carrying 100 Gbps or more.
-    - Individual links: 10, 40, 100 and 400 Gbps Ethernet are all standard, and submarine cables carry hundreds of terabits per fibre pair.
-    - Copper, by comparison, tops out at about 10–40 Gbps over 30–100 m.
+   Capacity
+   - A single fibre carries terabits per second when wavelength division multiplexing is used: DWDM puts 40 to 160 separate wavelengths on one strand, each carrying 100 Gbps or more.
+   - Individual links: 10, 40, 100 and 400 Gbps Ethernet are all standard, and submarine cables carry hundreds of terabits per fibre pair.
+   - Copper, by comparison, tops out at about 10–40 Gbps over 30–100 m.
 
-    Advantages of optical fibre
+   Advantages of optical fibre
 
-    - Enormous bandwidth — the usable optical spectrum is vastly wider than anything copper can support, and WDM multiplies it further.
-    - Very low attenuation, about 0.2 dB per kilometre at 1550 nm, so signals travel 80 km or more without regeneration. Copper needs a repeater every 100 m.
-    - Complete immunity to electromagnetic and radio interference, because it carries light rather than current. It can be run beside power cables, motors and radio transmitters with no effect.
-    - No crosstalk between fibres in the same cable.
-    - High security: tapping a fibre requires physically bending or breaking it, which is detectable, so eavesdropping is very difficult.
-    - Light and thin — a fibre cable of the same capacity weighs a fraction of copper, so ducts hold far more capacity.
-    - No electrical hazard: no sparks, no short circuits, no ground loops and no lightning-induced surges. It is safe in explosive atmospheres and between buildings at different ground potentials.
-    - Not corroded by moisture the way copper conductors are.
-    - Long service life and excellent future-proofing — the same installed fibre supports higher speeds simply by changing the transceivers at each end.
+   - Enormous bandwidth — the usable optical spectrum is vastly wider than anything copper can support, and WDM multiplies it further.
+   - Very low attenuation, about 0.2 dB per kilometre at 1550 nm, so signals travel 80 km or more without regeneration. Copper needs a repeater every 100 m.
+   - Complete immunity to electromagnetic and radio interference, because it carries light rather than current. It can be run beside power cables, motors and radio transmitters with no effect.
+   - No crosstalk between fibres in the same cable.
+   - High security: tapping a fibre requires physically bending or breaking it, which is detectable, so eavesdropping is very difficult.
+   - Light and thin — a fibre cable of the same capacity weighs a fraction of copper, so ducts hold far more capacity.
+   - No electrical hazard: no sparks, no short circuits, no ground loops and no lightning-induced surges. It is safe in explosive atmospheres and between buildings at different ground potentials.
+   - Not corroded by moisture the way copper conductors are.
+   - Long service life and excellent future-proofing — the same installed fibre supports higher speeds simply by changing the transceivers at each end.
 
-    Disadvantages, for balance
-    - Higher cost of cable, transceivers and test equipment; fragile with a minimum bend radius; splicing and termination need trained technicians and a fusion splicer; and it cannot deliver power the way PoE does over copper.
+   Disadvantages, for balance
+   - Higher cost of cable, transceivers and test equipment; fragile with a minimum bend radius; splicing and termination need trained technicians and a fusion splicer; and it cannot deliver power the way PoE does over copper.
 
-    - Uses: internet backbones, submarine cables, metro and campus backbones, data centre interconnects, FTTH broadband, and CCTV or industrial links in electrically noisy places.
+   - Uses: internet backbones, submarine cables, metro and campus backbones, data centre interconnects, FTTH broadband, and CCTV or industrial links in electrically noisy places.
 
 14. **(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026-1027 (ET: N/A)]*
 
 Answer: Transmission lines suffer from three principal problems — `attenuation`, `distortion` and `noise`. Any of these can corrupt the signal enough to cause bit errors.
 
-    The problems in brief
-    - Attenuation — the signal weakens with distance as energy is absorbed by the medium.
-    - Distortion — the signal changes shape, because different frequency components travel at different speeds and are attenuated by different amounts.
-    - Noise — unwanted energy added to the signal: thermal, intermodulation, crosstalk and impulse noise.
-    - Related effects: jitter (timing variation), echo (reflections from impedance mismatches), fading (varying strength on radio links) and limited bandwidth.
+   The problems in brief
+   - Attenuation — the signal weakens with distance as energy is absorbed by the medium.
+   - Distortion — the signal changes shape, because different frequency components travel at different speeds and are attenuated by different amounts.
+   - Noise — unwanted energy added to the signal: thermal, intermodulation, crosstalk and impulse noise.
+   - Related effects: jitter (timing variation), echo (reflections from impedance mismatches), fading (varying strength on radio links) and limited bandwidth.
 
-    Described in detail — Attenuation
+   Described in detail — Attenuation
 
-    - Definition: attenuation is the loss of signal strength as the signal propagates. Electrical energy is converted to heat by the resistance of the conductor, and optical energy is absorbed and scattered in the fibre.
+   - Definition: attenuation is the loss of signal strength as the signal propagates. Electrical energy is converted to heat by the resistance of the conductor, and optical energy is absorbed and scattered in the fibre.
 
-    - Measurement, in decibels:
-    ```
-    Attenuation (dB) = 10 × log10 (P2 / P1)
-    ```
-    where P1 is the transmitted power and P2 the received power. A negative result indicates loss; −3 dB means half the power has been lost.
+   - Measurement, in decibels:
+   ```
+   Attenuation (dB) = 10 × log10 (P2 / P1)
+   ```
+   where P1 is the transmitted power and P2 the received power. A negative result indicates loss; −3 dB means half the power has been lost.
 
-    - Two properties that matter in practice
-      - It grows with `distance`. Every metre of cable removes some energy, which is exactly why maximum cable lengths are specified: 100 m for UTP, 185 m for thin coaxial.
-      - It grows with `frequency`. High-frequency components fade faster than low-frequency ones, so a square pulse arrives rounded and spread. This is why higher data rates are limited to shorter distances — Cat6 supports 10 Gbps at 55 m but only 1 Gbps at 100 m.
+   - Two properties that matter in practice
+     - It grows with `distance`. Every metre of cable removes some energy, which is exactly why maximum cable lengths are specified: 100 m for UTP, 185 m for thin coaxial.
+     - It grows with `frequency`. High-frequency components fade faster than low-frequency ones, so a square pulse arrives rounded and spread. This is why higher data rates are limited to shorter distances — Cat6 supports 10 Gbps at 55 m but only 1 Gbps at 100 m.
 
-    - Consequence: once the received power falls near the noise level, the receiver can no longer decide reliably between 0 and 1. Errors rise, CRC checks fail, frames are retransmitted, and throughput collapses even though the link still appears connected.
+   - Consequence: once the received power falls near the noise level, the receiver can no longer decide reliably between 0 and 1. Errors rise, CRC checks fail, frames are retransmitted, and throughput collapses even though the link still appears connected.
 
-    - Remedies
-      - `Amplifier` for analogue signals — but it amplifies the accumulated noise as well, so noise builds up over every span.
-      - `Repeater` for digital signals — it decides each bit and generates a completely clean new signal, discarding the noise entirely. This is the decisive advantage of digital transmission.
-      - `Equaliser`, to boost high frequencies more than low ones and flatten the response.
-      - Choosing a lower-loss medium: optical fibre loses only about 0.2 dB per kilometre, against tens of dB per hundred metres for copper.
-      - Keeping runs within the specified length, and using thicker conductors where practical.
+   - Remedies
+     - `Amplifier` for analogue signals — but it amplifies the accumulated noise as well, so noise builds up over every span.
+     - `Repeater` for digital signals — it decides each bit and generates a completely clean new signal, discarding the noise entirely. This is the decisive advantage of digital transmission.
+     - `Equaliser`, to boost high frequencies more than low ones and flatten the response.
+     - Choosing a lower-loss medium: optical fibre loses only about 0.2 dB per kilometre, against tens of dB per hundred metres for copper.
+     - Keeping runs within the specified length, and using thicker conductors where practical.
 
 15. **Explain 10Base2, 10Base5, 10BaseT and Ethernet.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276-1277 (ET: N/A)]*
 
 Answer: The naming convention is `<speed> BASE <medium or maximum segment length>`, where BASE means baseband signalling.
 
-    Ethernet
-    - The dominant LAN technology, standardised as `IEEE 802.3`. It defines the frame format, 48-bit MAC addressing and, on shared media, the CSMA/CD access method.
-    - Frame: preamble, destination MAC, source MAC, type/length, data (46–1500 bytes) and FCS. Minimum frame 64 bytes, maximum 1518 bytes.
-    - Invented by Robert Metcalfe at Xerox PARC in 1973 and standardised in 1983.
-    - It has scaled from 10 Mbps to 400 Gbps while keeping the same frame format, which is the main reason it displaced every competing LAN technology.
+   Ethernet
+   - The dominant LAN technology, standardised as `IEEE 802.3`. It defines the frame format, 48-bit MAC addressing and, on shared media, the CSMA/CD access method.
+   - Frame: preamble, destination MAC, source MAC, type/length, data (46–1500 bytes) and FCS. Minimum frame 64 bytes, maximum 1518 bytes.
+   - Invented by Robert Metcalfe at Xerox PARC in 1973 and standardised in 1983.
+   - It has scaled from 10 Mbps to 400 Gbps while keeping the same frame format, which is the main reason it displaced every competing LAN technology.
 
-    10BASE2 — Thin Ethernet, "Cheapernet"
-    - 10 Mbps, baseband, `185 m` maximum segment (the 2 stands for approximately 200 m).
-    - Medium: thin RG-58 coaxial cable, about 5 mm, flexible.
-    - Connector: BNC, with T-connectors at each station and 50-ohm terminators at both ends.
-    - Topology: bus. Maximum 30 stations per segment, minimum 0.5 m between taps.
-    - Cheaper and easier than 10BASE5, but a single break or a missing terminator brought down the whole segment.
+   10BASE2 — Thin Ethernet, "Cheapernet"
+   - 10 Mbps, baseband, `185 m` maximum segment (the 2 stands for approximately 200 m).
+   - Medium: thin RG-58 coaxial cable, about 5 mm, flexible.
+   - Connector: BNC, with T-connectors at each station and 50-ohm terminators at both ends.
+   - Topology: bus. Maximum 30 stations per segment, minimum 0.5 m between taps.
+   - Cheaper and easier than 10BASE5, but a single break or a missing terminator brought down the whole segment.
 
-    10BASE5 — Thick Ethernet, "Thicknet"
-    - 10 Mbps, baseband, `500 m` maximum segment.
-    - Medium: thick, rigid yellow coaxial cable about 10 mm in diameter.
-    - Stations attach with a `vampire tap` piercing the jacket, linked by an AUI drop cable to a transceiver.
-    - Topology: bus. Maximum 100 stations per segment, taps at least 2.5 m apart, terminators at both ends.
-    - The original Ethernet. Expensive and very hard to install, and equally vulnerable to a single cable break.
+   10BASE5 — Thick Ethernet, "Thicknet"
+   - 10 Mbps, baseband, `500 m` maximum segment.
+   - Medium: thick, rigid yellow coaxial cable about 10 mm in diameter.
+   - Stations attach with a `vampire tap` piercing the jacket, linked by an AUI drop cable to a transceiver.
+   - Topology: bus. Maximum 100 stations per segment, taps at least 2.5 m apart, terminators at both ends.
+   - The original Ethernet. Expensive and very hard to install, and equally vulnerable to a single cable break.
 
-    10BASE-T — Twisted Pair Ethernet
-    - 10 Mbps, baseband, twisted-pair medium, `100 m` maximum from station to hub or switch.
-    - Medium: Cat3 or better UTP with RJ45 connectors, using two of the four pairs.
-    - Topology: physical `star` around a hub or switch.
-    - Encoding: Manchester, which is self-clocking.
-    - This is the version that made Ethernet universal, because a broken cable affects only one station, cabling is cheap and flexible, moves and additions are trivial, and faults are easy to isolate.
+   10BASE-T — Twisted Pair Ethernet
+   - 10 Mbps, baseband, twisted-pair medium, `100 m` maximum from station to hub or switch.
+   - Medium: Cat3 or better UTP with RJ45 connectors, using two of the four pairs.
+   - Topology: physical `star` around a hub or switch.
+   - Encoding: Manchester, which is self-clocking.
+   - This is the version that made Ethernet universal, because a broken cable affects only one station, cabling is cheap and flexible, moves and additions are trivial, and faults are easy to isolate.
 
 Comparison
 
@@ -7590,15 +7590,15 @@ Comparison
 16. **(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading the operating system.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 66]]*
 
 Answer:
-    The BIOS (Basic Input/Output System) is firmware stored in non-volatile ROM/Flash memory on the motherboard that initializes, tests system hardware, and loads the operating system bootloader during computer startup.
+   The BIOS (Basic Input/Output System) is firmware stored in non-volatile ROM/Flash memory on the motherboard that initializes, tests system hardware, and loads the operating system bootloader during computer startup.
 
-    Booting Steps (Cold Boot Process):
-    - 1. Power Supply & CPU Reset: Power-on sends electricity to the motherboard. The Power Supply Unit (PSU) asserts the `Power Good` signal, and the CPU initializes its registers and executes the reset vector pointing to the BIOS entry point.
-    - 2. POST (Power-On Self-Test): BIOS executes POST to test core hardware components including CPU registers, RAM integrity, DMA controllers, system timers, display adapters, and keyboard. Beep codes signal any hardware errors.
-    - 3. Hardware Initialization: Initializes chipset configurations, system buses, and Plug-and-Play (PnP) expansion cards.
-    - 4. Boot Device Selection: BIOS consults CMOS/NVRAM configuration settings to determine the boot device order (e.g., NVMe SSD, SATA HDD, USB drive).
-    - 5. Loading the Bootloader: BIOS reads the first sector (Master Boot Record - MBR / sector 0) of the selected boot drive into RAM at memory address `0x7C00` and executes it.
-    - 6. OS Kernel Initialization: The bootloader (e.g., GRUB or Windows Boot Manager) loads the OS kernel and essential device drivers into RAM, transferring execution control to the Operating System.
+   Booting Steps (Cold Boot Process):
+   - 1. Power Supply & CPU Reset: Power-on sends electricity to the motherboard. The Power Supply Unit (PSU) asserts the `Power Good` signal, and the CPU initializes its registers and executes the reset vector pointing to the BIOS entry point.
+   - 2. POST (Power-On Self-Test): BIOS executes POST to test core hardware components including CPU registers, RAM integrity, DMA controllers, system timers, display adapters, and keyboard. Beep codes signal any hardware errors.
+   - 3. Hardware Initialization: Initializes chipset configurations, system buses, and Plug-and-Play (PnP) expansion cards.
+   - 4. Boot Device Selection: BIOS consults CMOS/NVRAM configuration settings to determine the boot device order (e.g., NVMe SSD, SATA HDD, USB drive).
+   - 5. Loading the Bootloader: BIOS reads the first sector (Master Boot Record - MBR / sector 0) of the selected boot drive into RAM at memory address `0x7C00` and executes it.
+   - 6. OS Kernel Initialization: The bootloader (e.g., GRUB or Windows Boot Manager) loads the OS kernel and essential device drivers into RAM, transferring execution control to the Operating System.
 
 17. **Consider the following C Program. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 310]]*
 ```c
@@ -7619,31 +7619,31 @@ int main () {
 The output of the program is ________.?
 
 Answer:
-    Step-by-step Trace:
-    - Initially: `m = 10`
-    - `n = ++m;` -> Pre-increment: `m` becomes 11, then `n` is assigned 11 (`m = 11`, `n = 11`).
-    - `n1 = m++;` -> Post-increment: `n1` is assigned 11, then `m` becomes 12 (`m = 12`, `n1 = 11`).
-    - `n--;` -> Post-decrement: `n` decreases from 11 to 10 (`n = 10`).
-    - `--n1;` -> Pre-decrement: `n1` decreases from 11 to 10 (`n1 = 10`).
-    - `n -= n1;` -> `n = n - n1 = 10 - 10 = 0` (`n = 0`).
-    - `printf("%d", n);` prints `0`.
+   Step-by-step Trace:
+   - Initially: `m = 10`
+   - `n = ++m;` -> Pre-increment: `m` becomes 11, then `n` is assigned 11 (`m = 11`, `n = 11`).
+   - `n1 = m++;` -> Post-increment: `n1` is assigned 11, then `m` becomes 12 (`m = 12`, `n1 = 11`).
+   - `n--;` -> Post-decrement: `n` decreases from 11 to 10 (`n = 10`).
+   - `--n1;` -> Pre-decrement: `n1` decreases from 11 to 10 (`n1 = 10`).
+   - `n -= n1;` -> `n = n - n1 = 10 - 10 = 0` (`n = 0`).
+   - `printf("%d", n);` prints `0`.
 
-    Output: **0**
+   Output: **0**
 
 18. **b) After compiling and executing the following code what will be the output?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 340]]*
 Output: The recursive function is: F(n) = F(n-1)+F(n-2); with F(0)=0, F(1)=1
 
 Answer:
-    The given recurrence relation defines the standard Fibonacci Sequence:
-    $$F(0) = 0$$
-    $$F(1) = 1$$
-    $$F(2) = F(1) + F(0) = 1 + 0 = 1$$
-    $$F(3) = F(2) + F(1) = 1 + 1 = 2$$
-    $$F(4) = F(3) + F(2) = 2 + 1 = 3$$
-    $$F(5) = F(4) + F(3) = 3 + 2 = 5$$
-    $$F(6) = F(5) + F(4) = 5 + 3 = 8$$
+   The given recurrence relation defines the standard Fibonacci Sequence:
+   $$F(0) = 0$$
+   $$F(1) = 1$$
+   $$F(2) = F(1) + F(0) = 1 + 0 = 1$$
+   $$F(3) = F(2) + F(1) = 1 + 1 = 2$$
+   $$F(4) = F(3) + F(2) = 2 + 1 = 3$$
+   $$F(5) = F(4) + F(3) = 3 + 2 = 5$$
+   $$F(6) = F(5) + F(4) = 5 + 3 = 8$$
 
-    Output Sequence: **0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...**
+   Output Sequence: **0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...**
 
 19. **What is the output of the following program? Also explain the output.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 352-353]]*
 ```cpp
@@ -7666,53 +7666,53 @@ int main() {
 ```
 
 Answer:
-    Output:
-    ```
-    5 4 3 2 1 1 2 3 4 5 
-    ```
+   Output:
+   ```
+   5 4 3 2 1 1 2 3 4 5 
+   ```
 
-    Explanation:
-    - Phase 1 (Forward Recursion / Call phase): The function prints `n` before making the recursive call `counter(n - 1)`. For $n = 5, 4, 3, 2, 1$, it prints `5 4 3 2 1 `.
-    - Base Case: At $n = 0$, condition $(n > 0)$ is false, so recursion halts.
-    - Phase 2 (Unwinding / Return phase): As the call stack unwinds in Last-In-First-Out (LIFO) order, the second print statement `cout << n << " ";` executes for $n = 1, 2, 3, 4, 5$, printing `1 2 3 4 5 `.
-    - Combined complete output is `5 4 3 2 1 1 2 3 4 5 `.
+   Explanation:
+   - Phase 1 (Forward Recursion / Call phase): The function prints `n` before making the recursive call `counter(n - 1)`. For $n = 5, 4, 3, 2, 1$, it prints `5 4 3 2 1 `.
+   - Base Case: At $n = 0$, condition $(n > 0)$ is false, so recursion halts.
+   - Phase 2 (Unwinding / Return phase): As the call stack unwinds in Last-In-First-Out (LIFO) order, the second print statement `cout << n << " ";` executes for $n = 1, 2, 3, 4, 5$, printing `1 2 3 4 5 `.
+   - Combined complete output is `5 4 3 2 1 1 2 3 4 5 `.
 
 20. **Solve the following problem:** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 387]]*
 What is the output of V_o, and I_D
 
 Answer:
-    For a standard forward-biased silicon diode circuit with source voltage $V_{in}$ and series resistor $R$:
-    - Silicon diode forward voltage drop: $V_D = 0.7	ext{ V}$ (Germanium: $V_D = 0.3	ext{ V}$).
-    - Output Voltage across diode / load:
-      $$V_o = V_{in} - I_D R = V_D = 0.7	ext{ V}$$ (or across resistor $V_o = V_{in} - 0.7	ext{ V}$)
-    - Diode Current ($I_D$):
-      $$I_D = \frac{V_{in} - V_D}{R}$$
+   For a standard forward-biased silicon diode circuit with source voltage $V_{in}$ and series resistor $R$:
+   - Silicon diode forward voltage drop: $V_D = 0.7	ext{ V}$ (Germanium: $V_D = 0.3	ext{ V}$).
+   - Output Voltage across diode / load:
+     $$V_o = V_{in} - I_D R = V_D = 0.7	ext{ V}$$ (or across resistor $V_o = V_{in} - 0.7	ext{ V}$)
+   - Diode Current ($I_D$):
+     $$I_D = \frac{V_{in} - V_D}{R}$$
 
 21. **Write a program for sum of digits of a number. Without using library function other than basic input output.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 402]]*
 
 Answer:
 
-    ```c
-    #include <stdio.h>
+   ```c
+   #include <stdio.h>
 
-    int main(void) {
-        long long num, temp;
-        long long sum = 0;
+   int main(void) {
+       long long num, temp;
+       long long sum = 0;
 
-        printf("Enter an integer: ");
-        scanf("%lld", &num);
+       printf("Enter an integer: ");
+       scanf("%lld", &num);
 
-        temp = (num < 0) ? -num : num; // Handle negative integers
+       temp = (num < 0) ? -num : num; // Handle negative integers
 
-        while (temp > 0) {
-            sum += (temp % 10); // Extract last digit and add to sum
-            temp /= 10;         // Remove last digit
-        }
+       while (temp > 0) {
+           sum += (temp % 10); // Extract last digit and add to sum
+           temp /= 10;         // Remove last digit
+       }
 
-        printf("Sum of digits = %lld\n", sum);
-        return 0;
-    }
-    ```
+       printf("Sum of digits = %lld\n", sum);
+       return 0;
+   }
+   ```
 
 ## Multiplexing & Bandwidth (19)
 
@@ -8009,80 +8009,80 @@ Answer:
 | Purpose | Combine several streams onto one link | Let many independent users share one channel |
 | Example | 24 voice channels on a T-1 | 8 GSM calls on one 200 kHz carrier |
 
-    Key insight
-    - TDM is a `multiplexing` technique: the inputs are already together in one box, so the multiplexer just interleaves them.
-    - TDMA is a `multiple-access` technique: the users are physically separate and must be told when to transmit, which is why it needs signalling, power control and timing advance.
-    - In GSM, both appear together: TDMA divides each 200 kHz carrier into 8 time slots, and FDMA divides the band into carriers.
+   Key insight
+   - TDM is a `multiplexing` technique: the inputs are already together in one box, so the multiplexer just interleaves them.
+   - TDMA is a `multiple-access` technique: the users are physically separate and must be told when to transmit, which is why it needs signalling, power control and timing advance.
+   - In GSM, both appear together: TDMA divides each 200 kHz carrier into 8 time slots, and FDMA divides the band into carriers.
 
 11. **Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchronization bits are added to each frame calculate the data rate of TDMA line.** *[BDCCL Assistant Engineer (Network) 2022 compact it 742 (ET: N/A)], [Water Supply and Sewerage Authority (WASA); Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)], [BTCL Assistant Manager (Technical) 2021 compact it 765 (ET: BUET)]*
 
 Answer:
 
-    Given
-    - Number of transmitter–receiver pairs (sources) = 8
-    - Sampling rate of each source = 8 kHz = 8000 samples per second
-    - Bits per sample = 16
-    - Synchronisation bits per frame = 2
+   Given
+   - Number of transmitter–receiver pairs (sources) = 8
+   - Sampling rate of each source = 8 kHz = 8000 samples per second
+   - Bits per sample = 16
+   - Synchronisation bits per frame = 2
 
-    Step 1 — bits contributed by the sources in one frame
-    - Each source puts one sample (16 bits) into each frame.
-    ```
-    8 × 16 = 128 bits
-    ```
+   Step 1 — bits contributed by the sources in one frame
+   - Each source puts one sample (16 bits) into each frame.
+   ```
+   8 × 16 = 128 bits
+   ```
 
-    Step 2 — total frame size
-    ```
-    Frame = 128 + 2 sync bits = 130 bits
-    ```
+   Step 2 — total frame size
+   ```
+   Frame = 128 + 2 sync bits = 130 bits
+   ```
 
-    Step 3 — frame rate
-    - Every source must be sampled 8000 times per second, and each frame carries one sample from each source.
-    ```
-    Frame rate = 8000 frames per second
-    ```
+   Step 3 — frame rate
+   - Every source must be sampled 8000 times per second, and each frame carries one sample from each source.
+   ```
+   Frame rate = 8000 frames per second
+   ```
 
-    Step 4 — data rate of the TDMA line
-    ```
-    Data rate = frame size × frame rate
-              = 130 × 8000
-              = 1,040,000 bps
-              = 1.04 Mbps
-    ```
+   Step 4 — data rate of the TDMA line
+   ```
+   Data rate = frame size × frame rate
+             = 130 × 8000
+             = 1,040,000 bps
+             = 1.04 Mbps
+   ```
 
-    - Answer: `1.04 Mbps`.
-    - Check: each source alone runs at 16 × 8000 = 128 kbps; eight sources give 1.024 Mbps, and the 2 sync bits add 16 kbps, totalling 1.04 Mbps.
+   - Answer: `1.04 Mbps`.
+   - Check: each source alone runs at 16 × 8000 = 128 kbps; eight sources give 1.024 Mbps, and the 2 sync bits add 16 kbps, totalling 1.04 Mbps.
 
 12. **Two channels, one with a bit rate of 190kbps and another with a bit rate 180 kbps are to be multiplexed using pulse stuffing TDM with no synchronization bits. Answer the following questions: (a) What is the size of a frame in bits? (b) What is the frame rate? (c) What is the duration of a frame? (d) What is the date rate?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
 Answer: In pulse-stuffing TDM, extra dummy bits are added to the slower channel so that both channels run at the same rate as the fastest one.
 
-    Given
-    - Channel 1 = 190 kbps, Channel 2 = 180 kbps, no synchronisation bits, interleaved unit = 1 bit
+   Given
+   - Channel 1 = 190 kbps, Channel 2 = 180 kbps, no synchronisation bits, interleaved unit = 1 bit
 
-    Step 0 — pulse stuffing
-    - Channel 2 is stuffed from 180 kbps up to `190 kbps`, so both inputs are now equal.
+   Step 0 — pulse stuffing
+   - Channel 2 is stuffed from 180 kbps up to `190 kbps`, so both inputs are now equal.
 
-    (a) Size of a frame
-    - One frame carries one bit from each of the 2 channels.
-    ```
-    Frame size = 2 bits
-    ```
+   (a) Size of a frame
+   - One frame carries one bit from each of the 2 channels.
+   ```
+   Frame size = 2 bits
+   ```
 
-    (b) Frame rate
-    - Each channel supplies 190,000 bits per second, and each frame takes one bit from each.
-    ```
-    Frame rate = 190,000 frames per second
-    ```
+   (b) Frame rate
+   - Each channel supplies 190,000 bits per second, and each frame takes one bit from each.
+   ```
+   Frame rate = 190,000 frames per second
+   ```
 
-    (c) Duration of a frame
-    ```
-    Duration = 1 / 190,000 = 5.26 × 10^-6 s = 5.26 microseconds
-    ```
+   (c) Duration of a frame
+   ```
+   Duration = 1 / 190,000 = 5.26 × 10^-6 s = 5.26 microseconds
+   ```
 
-    (d) Data rate of the link
-    ```
-    Data rate = frame size × frame rate = 2 × 190,000 = 380,000 bps = 380 kbps
-    ```
+   (d) Data rate of the link
+   ```
+   Data rate = frame size × frame rate = 2 × 190,000 = 380,000 bps = 380 kbps
+   ```
 
 | Item | Value |
 |---|---|
@@ -8091,38 +8091,38 @@ Answer: In pulse-stuffing TDM, extra dummy bits are added to the slower channel 
 | Frame duration | 5.26 µs |
 | Link data rate | 380 kbps |
 
-    - Of the 380 kbps, 10 kbps is stuffing overhead (the difference between 190 and 180 kbps on channel 2), which is the cost of making the rates match.
+   - Of the 380 kbps, 10 kbps is stuffing overhead (the difference between 190 and 180 kbps on channel 2), which is the cost of making the rates match.
 
 13. **What is Multiplexing? Write about Time division Multiplexing.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 870 (ET: N/A)]*
 
 Answer:
 
-    What is multiplexing
-    - Multiplexing is sending several independent signals over a single shared communication link, so that an expensive medium is used efficiently.
-    - The device that combines the signals is the multiplexer (MUX); the one that separates them at the far end is the demultiplexer (DEMUX).
-    - Main types: FDM (by frequency), TDM (by time), WDM (by wavelength on fibre), CDM (by code) and OFDM (orthogonal subcarriers).
-    - Purpose: one costly link — a fibre, a leased line, a radio channel — serves many users, which cuts cost per user dramatically.
+   What is multiplexing
+   - Multiplexing is sending several independent signals over a single shared communication link, so that an expensive medium is used efficiently.
+   - The device that combines the signals is the multiplexer (MUX); the one that separates them at the far end is the demultiplexer (DEMUX).
+   - Main types: FDM (by frequency), TDM (by time), WDM (by wavelength on fibre), CDM (by code) and OFDM (orthogonal subcarriers).
+   - Purpose: one costly link — a fibre, a leased line, a radio channel — serves many users, which cuts cost per user dramatically.
 
-    Time Division Multiplexing
-    - The link's time is divided into small slots. Each source is given a slot in a repeating cycle, and during its slot it has the entire bandwidth of the link.
-    - One complete cycle through all the sources is a `frame`. A framing bit is added so the receiver can find the slot boundaries and stay synchronised.
-    - The output rate equals the sum of all the input rates, plus overhead.
+   Time Division Multiplexing
+   - The link's time is divided into small slots. Each source is given a slot in a repeating cycle, and during its slot it has the entire bandwidth of the link.
+   - One complete cycle through all the sources is a `frame`. A framing bit is added so the receiver can find the slot boundaries and stay synchronised.
+   - The output rate equals the sum of all the input rates, plus overhead.
 
-    ```
-    Input A: a1 a2 a3
-    Input B: b1 b2 b3   ---> | a1 b1 c1 | a2 b2 c2 | a3 b3 c3 |
-    Input C: c1 c2 c3          frame 1     frame 2     frame 3
-    ```
+   ```
+   Input A: a1 a2 a3
+   Input B: b1 b2 b3   ---> | a1 b1 c1 | a2 b2 c2 | a3 b3 c3 |
+   Input C: c1 c2 c3          frame 1     frame 2     frame 3
+   ```
 
-    Two forms
-    - Synchronous TDM — every source has a reserved slot in every frame, whether or not it has data. Simple and predictable, but empty slots waste bandwidth.
-    - Statistical (asynchronous) TDM — slots are given only to sources with data ready, so each slot must carry an address. Much more efficient with bursty traffic, at the cost of extra overhead and variable delay.
+   Two forms
+   - Synchronous TDM — every source has a reserved slot in every frame, whether or not it has data. Simple and predictable, but empty slots waste bandwidth.
+   - Statistical (asynchronous) TDM — slots are given only to sources with data ready, so each slot must carry an address. Much more efficient with bursty traffic, at the cost of extra overhead and variable delay.
 
-    Related concepts
-    - Bit interleaving takes one bit per source per frame; character (byte) interleaving takes one byte.
-    - Pulse stuffing equalises sources of slightly different rates by adding dummy bits.
+   Related concepts
+   - Bit interleaving takes one bit per source per frame; character (byte) interleaving takes one byte.
+   - Pulse stuffing equalises sources of slightly different rates by adding dummy bits.
 
-    - Example: a T-1 line carries 24 voice channels of 64 kbps each. Frame = 24 × 8 + 1 = 193 bits, sent 8000 times a second, giving 1.544 Mbps.
+   - Example: a T-1 line carries 24 voice channels of 64 kbps each. Frame = 24 × 8 + 1 = 193 bits, sent 8000 times a second, giving 1.544 Mbps.
 
 14. **(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 888 (ET: N/A)]*
 
@@ -8142,43 +8142,43 @@ Answer:
 | Interference | Crosstalk between adjacent bands | Slot overlap if timing drifts |
 | Example | Radio, TV, cable TV, ADSL | T1/E1, SONET, GSM, ISDN |
 
-    ```
-    FDM                              TDM
-    f ^                              f ^
-    f3| CCCCCCCCCCCCCC                 | A B C A B C A B C
-    f2| BBBBBBBBBBBBBB                 |
-    f1| AAAAAAAAAAAAAA                 |
-      +--------------> t               +----------------> t
-    each user owns a frequency      each user owns a time slot
-    ```
-    - One-line summary: FDM shares the spectrum permanently, TDM shares the clock in turns. WDM is FDM applied to light, and OFDM is FDM with orthogonal subcarriers that need no guard band.
+   ```
+   FDM                              TDM
+   f ^                              f ^
+   f3| CCCCCCCCCCCCCC                 | A B C A B C A B C
+   f2| BBBBBBBBBBBBBB                 |
+   f1| AAAAAAAAAAAAAA                 |
+     +--------------> t               +----------------> t
+   each user owns a frequency      each user owns a time slot
+   ```
+   - One-line summary: FDM shares the spectrum permanently, TDM shares the clock in turns. WDM is FDM applied to light, and OFDM is FDM with orthogonal subcarriers that need no guard band.
 
 15. **TDM math: rate= 1.536 Mbps, message size= 960000, Slot=32, end to end circuit Switch time=800ms, calculate transfer time.** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
 
 Answer: This is a circuit-switched TDM path. The message travels in one dedicated slot, so first find that slot's rate.
 
-    Given
-    - Total link rate = 1.536 Mbps
-    - Number of slots per frame = 32
-    - Message size = 960,000 bits
-    - End-to-end circuit setup time = 800 ms = 0.8 s
+   Given
+   - Total link rate = 1.536 Mbps
+   - Number of slots per frame = 32
+   - Message size = 960,000 bits
+   - End-to-end circuit setup time = 800 ms = 0.8 s
 
-    Step 1 — data rate of one slot
-    ```
-    Slot rate = 1,536,000 / 32 = 48,000 bps = 48 kbps
-    ```
+   Step 1 — data rate of one slot
+   ```
+   Slot rate = 1,536,000 / 32 = 48,000 bps = 48 kbps
+   ```
 
-    Step 2 — time to transmit the message
-    ```
-    Transmission time = 960,000 / 48,000 = 20 seconds
-    ```
+   Step 2 — time to transmit the message
+   ```
+   Transmission time = 960,000 / 48,000 = 20 seconds
+   ```
 
-    Step 3 — total transfer time
-    ```
-    Total = setup time + transmission time
-          = 0.8 + 20
-          = 20.8 seconds
-    ```
+   Step 3 — total transfer time
+   ```
+   Total = setup time + transmission time
+         = 0.8 + 20
+         = 20.8 seconds
+   ```
 
 | Item | Value |
 |---|---|
@@ -8187,32 +8187,32 @@ Answer: This is a circuit-switched TDM path. The message travels in one dedicate
 | Setup time | 0.8 s |
 | Total transfer time | `20.8 s` |
 
-    - Note the characteristic of circuit switching: the full path is reserved before any data flows, so the setup delay is paid once, and after that the rate is guaranteed for the whole transfer.
+   - Note the characteristic of circuit switching: the full path is reserved before any data flows, so the setup delay is paid once, and after that the rate is guaranteed for the whole transfer.
 
 16. **A want to send 2 files the size of each file is 500000 bit's data to B through TDM channel which has slot 16 channel bit rate 1.5 Mbps and 30 millisecond delay time, if no propagation delay; find out time to send the data.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925 (ET: CTI)]*
 
 Answer:
 
-    Given
-    - 2 files, each 500,000 bits -> total 1,000,000 bits
-    - TDM channel with 16 slots, total channel bit rate = 1.5 Mbps
-    - Delay (setup) time = 30 ms = 0.03 s, no propagation delay
+   Given
+   - 2 files, each 500,000 bits -> total 1,000,000 bits
+   - TDM channel with 16 slots, total channel bit rate = 1.5 Mbps
+   - Delay (setup) time = 30 ms = 0.03 s, no propagation delay
 
-    Step 1 — data rate available in one slot
-    ```
-    Slot rate = 1,500,000 / 16 = 93,750 bps
-    ```
+   Step 1 — data rate available in one slot
+   ```
+   Slot rate = 1,500,000 / 16 = 93,750 bps
+   ```
 
-    Step 2 — transmission time for the data
-    ```
-    Total bits = 2 × 500,000 = 1,000,000 bits
-    Time = 1,000,000 / 93,750 = 10.67 seconds
-    ```
+   Step 2 — transmission time for the data
+   ```
+   Total bits = 2 × 500,000 = 1,000,000 bits
+   Time = 1,000,000 / 93,750 = 10.67 seconds
+   ```
 
-    Step 3 — total time
-    ```
-    Total = 10.67 + 0.03 = 10.70 seconds
-    ```
+   Step 3 — total time
+   ```
+   Total = 10.67 + 0.03 = 10.70 seconds
+   ```
 
 | Item | Value |
 |---|---|
@@ -8221,33 +8221,33 @@ Answer:
 | Delay | 0.03 s |
 | Total time | `10.70 s` |
 
-    - Alternative reading: if the two files are sent in parallel over two separate slots, each file takes 500,000 ÷ 93,750 = 5.33 s, so the total is 5.33 + 0.03 = `5.36 s`. The single-slot answer above is the standard interpretation, since a circuit is normally allocated one slot.
+   - Alternative reading: if the two files are sent in parallel over two separate slots, each file takes 500,000 ÷ 93,750 = 5.33 s, so the total is 5.33 + 0.03 = `5.36 s`. The single-slot answer above is the standard interpretation, since a circuit is normally allocated one slot.
 
 17. **We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find- (a) the data rate of each source. (b) the duration of each character in each source.** *[BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)]*
 
 Answer:
 
-    Given
-    - 4 sources, each producing 250 characters per second
-    - Interleaved unit = 1 character = 8 bits
-    - 1 synchronising bit added to each frame
+   Given
+   - 4 sources, each producing 250 characters per second
+   - Interleaved unit = 1 character = 8 bits
+   - 1 synchronising bit added to each frame
 
-    (a) Data rate of each source
-    ```
-    250 characters/s × 8 bits/character = 2000 bps = 2 kbps
-    ```
+   (a) Data rate of each source
+   ```
+   250 characters/s × 8 bits/character = 2000 bps = 2 kbps
+   ```
 
-    (b) Duration of each character in each source
-    ```
-    1 / 250 = 0.004 s = 4 milliseconds
-    ```
+   (b) Duration of each character in each source
+   ```
+   1 / 250 = 0.004 s = 4 milliseconds
+   ```
 
-    Supporting values often asked with this question
-    - Frame rate = 250 frames per second (each frame carries one character from each source).
-    - Frame size = (4 × 8) + 1 = 33 bits.
-    - Output (link) data rate = 33 × 250 = 8250 bps.
-    - Duration of a frame = 1 / 250 = 4 ms, the same as one input character, because one frame is produced per character period.
-    - Output bit duration = 4 ms ÷ 33 = 121.2 µs.
+   Supporting values often asked with this question
+   - Frame rate = 250 frames per second (each frame carries one character from each source).
+   - Frame size = (4 × 8) + 1 = 33 bits.
+   - Output (link) data rate = 33 × 250 = 8250 bps.
+   - Duration of a frame = 1 / 250 = 4 ms, the same as one input character, because one frame is produced per character period.
+   - Output bit duration = 4 ms ÷ 33 = 121.2 µs.
 
 | Item | Value |
 |---|---|
@@ -8257,7 +8257,7 @@ Answer:
 | Frame size | 33 bits |
 | Link rate | 8250 bps |
 
-    - Note that 4 × 2000 = 8000 bps of payload plus 250 bps of framing overhead gives the 8250 bps link rate.
+   - Note that 4 × 2000 = 8000 bps of payload plus 250 bps of framing overhead gives the 8250 bps link rate.
 
 18. **Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b) the output bit duration (c) the output bit rate and (d) the output frame rate.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1009 (ET: N/A)]*
 
@@ -8265,38 +8265,38 @@ Answer:
 
 Answer: The figure was not printed with the question. The standard version of this problem uses three input sources of 1 kbps each with a 1-bit interleaving unit, and the general formulas are given so any figure can be solved.
 
-    General formulas — synchronous TDM with n inputs, each at rate R bps, unit = 1 bit
-    ```
-    (a) Input bit duration   = 1 / R
-    (b) Output bit duration  = (1 / R) / n  = input bit duration ÷ n
-    (c) Output bit rate      = n × R
-    (d) Output frame rate    = R          (one frame per input bit period)
-    ```
+   General formulas — synchronous TDM with n inputs, each at rate R bps, unit = 1 bit
+   ```
+   (a) Input bit duration   = 1 / R
+   (b) Output bit duration  = (1 / R) / n  = input bit duration ÷ n
+   (c) Output bit rate      = n × R
+   (d) Output frame rate    = R          (one frame per input bit period)
+   ```
 
-    Worked with the standard values: 3 inputs, each 1 kbps
+   Worked with the standard values: 3 inputs, each 1 kbps
 
-    (a) Input bit duration
-    ```
-    1 / 1000 = 0.001 s = 1 ms
-    ```
+   (a) Input bit duration
+   ```
+   1 / 1000 = 0.001 s = 1 ms
+   ```
 
-    (b) Output bit duration
-    - Three input bits must be squeezed into the time of one input bit.
-    ```
-    1 ms / 3 = 0.333 ms = 333.33 microseconds
-    ```
+   (b) Output bit duration
+   - Three input bits must be squeezed into the time of one input bit.
+   ```
+   1 ms / 3 = 0.333 ms = 333.33 microseconds
+   ```
 
-    (c) Output bit rate
-    ```
-    3 × 1000 = 3000 bps = 3 kbps
-    ```
-    - Check: 1 / 333.33 µs = 3000 bps, which agrees.
+   (c) Output bit rate
+   ```
+   3 × 1000 = 3000 bps = 3 kbps
+   ```
+   - Check: 1 / 333.33 µs = 3000 bps, which agrees.
 
-    (d) Output frame rate
-    - One frame carries one bit from each of the three inputs, and each input produces 1000 bits per second.
-    ```
-    Frame rate = 1000 frames per second
-    ```
+   (d) Output frame rate
+   - One frame carries one bit from each of the three inputs, and each input produces 1000 bits per second.
+   ```
+   Frame rate = 1000 frames per second
+   ```
 
 | Item | Value |
 |---|---|
@@ -8305,28 +8305,28 @@ Answer: The figure was not printed with the question. The standard version of th
 | Output bit rate | 3 kbps |
 | Output frame rate | 1000 fps |
 
-    - The pattern to remember: the frame rate always equals the input bit rate, and the output bit rate is always n times one input rate. <!-- verify -->
+   - The pattern to remember: the frame rate always equals the input bit rate, and the output bit rate is always n times one input rate. <!-- verify -->
 
 19. **What are the propagation time and the transmission time for a 2.5-Kbyte message and if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 12,000 km and that light travels at 2.4*10^8 m/s.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 317]]*
 
 Answer:
 
-    Given Data:
-    - Message Size ($L$) = $2.5\text{ KB} = 2.5 \times 1024 \times 8 = 20,480\text{ bits}$ (or $2.5 \times 1000 \times 8 = 20,000\text{ bits}$)
-    - Bandwidth ($B$) = $1\text{ Gbps} = 10^9\text{ bps}$
-    - Distance ($d$) = $12,000\text{ km} = 12,000 \times 10^3\text{ m} = 1.2 \times 10^7\text{ m}$
-    - Propagation Speed ($v$) = $2.4 \times 10^8\text{ m/s}$
+   Given Data:
+   - Message Size ($L$) = $2.5\text{ KB} = 2.5 \times 1024 \times 8 = 20,480\text{ bits}$ (or $2.5 \times 1000 \times 8 = 20,000\text{ bits}$)
+   - Bandwidth ($B$) = $1\text{ Gbps} = 10^9\text{ bps}$
+   - Distance ($d$) = $12,000\text{ km} = 12,000 \times 10^3\text{ m} = 1.2 \times 10^7\text{ m}$
+   - Propagation Speed ($v$) = $2.4 \times 10^8\text{ m/s}$
 
-    1. Propagation Time ($T_{prop}$):
-    $$T_{prop} = \frac{\text{Distance } (d)}{\text{Propagation Speed } (v)} = \frac{1.2 \times 10^7\text{ m}}{2.4 \times 10^8\text{ m/s}} = 0.05\text{ seconds} = 50\text{ ms}$$
+   1. Propagation Time ($T_{prop}$):
+   $$T_{prop} = \frac{\text{Distance } (d)}{\text{Propagation Speed } (v)} = \frac{1.2 \times 10^7\text{ m}}{2.4 \times 10^8\text{ m/s}} = 0.05\text{ seconds} = 50\text{ ms}$$
 
-    2. Transmission Time ($T_{trans}$):
-    $$T_{trans} = \frac{\text{Message Size } (L)}{\text{Bandwidth } (B)} = \frac{20,480\text{ bits}}{10^9\text{ bps}} = 2.048 \times 10^{-5}\text{ seconds} = 0.02048\text{ ms} = 20.48\text{ }\mu\text{s}$$
-    *(Note: Using decimal $2.5 \times 1000 \times 8 = 20,000\text{ bits}$, $T_{trans} = 20\text{ }\mu\text{s}$ or $0.02\text{ ms}$)*
+   2. Transmission Time ($T_{trans}$):
+   $$T_{trans} = \frac{\text{Message Size } (L)}{\text{Bandwidth } (B)} = \frac{20,480\text{ bits}}{10^9\text{ bps}} = 2.048 \times 10^{-5}\text{ seconds} = 0.02048\text{ ms} = 20.48\text{ }\mu\text{s}$$
+   *(Note: Using decimal $2.5 \times 1000 \times 8 = 20,000\text{ bits}$, $T_{trans} = 20\text{ }\mu\text{s}$ or $0.02\text{ ms}$)*
 
-    Summary:
-    - Propagation Time = **50 ms** (or $0.05\text{ s}$)
-    - Transmission Time = **0.02048 ms** (or $20.48\text{ }\mu\text{s}$)
+   Summary:
+   - Propagation Time = **50 ms** (or $0.05\text{ s}$)
+   - Transmission Time = **0.02048 ms** (or $20.48\text{ }\mu\text{s}$)
 
 ## Routing Protocols & Route Configuration (19)
 
@@ -8708,7 +8708,7 @@ Answer:
 
 *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 462 (ET: BUET)]*
 
-    Answer: The router uses `longest prefix match`. Each mask is 255.255.254.0 (/23), so each entry covers 2 consecutive values in the third octet.
+   Answer: The router uses `longest prefix match`. Each mask is 255.255.254.0 (/23), so each entry covers 2 consecutive values in the third octet.
 
 Step 1 — work out the range of each entry
 
@@ -8730,35 +8730,35 @@ Step 2 — match each address
 | 172.168.171.92 | 170.0 – 171.255 | `Interface 3` |
 | 0.0.0.0 | Matches only the default route | `Interface 4` |
 
-    Working shown for the tricky ones
-    - 172.168.163.151 — the third octet 163 is below the lowest configured network, 164. No specific entry covers it, so the default route is used.
-    - 172.168.171.92 — 171 is the odd half of the 170/171 pair, so it belongs to 172.168.170.0/23.
-    - Note that Interface 2 (172.168.168.0/23, covering third octets 168 and 169) is not used by any address in this list.
+   Working shown for the tricky ones
+   - 172.168.163.151 — the third octet 163 is below the lowest configured network, 164. No specific entry covers it, so the default route is used.
+   - 172.168.171.92 — 171 is the odd half of the 170/171 pair, so it belongs to 172.168.170.0/23.
+   - Note that Interface 2 (172.168.168.0/23, covering third octets 168 and 169) is not used by any address in this list.
 
-    - Rule to remember for a /23: the block always starts on an even third octet and covers that octet and the next one.
+   - Rule to remember for a /23: the block always starts on an even third octet and covers that octet and the next one.
 
 11. **Define distance Vector and Link state routing protocols.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
 
 Answer:
 
-    Distance vector routing
-    - Each router knows only the distance (metric) and direction (next hop) to every destination — hence "distance vector".
-    - It periodically sends its `entire routing table` to its `directly connected neighbours` only.
-    - On receiving a neighbour's table it applies the Bellman-Ford equation: cost to X through neighbour N = cost to N + N's cost to X, keeping the minimum.
-    - It has no map of the network; it trusts what neighbours say. This is "routing by rumour".
-    - Convergence is slow, and the count-to-infinity problem can occur; it is limited by split horizon, route poisoning, poison reverse and hold-down timers.
-    - Metric: usually hop count. RIP allows at most 15 hops, so 16 means unreachable.
-    - Examples: RIP, RIPv2, IGRP. EIGRP is an advanced form using the DUAL algorithm.
-    - Low CPU and memory use, easy to configure — suited to small networks.
+   Distance vector routing
+   - Each router knows only the distance (metric) and direction (next hop) to every destination — hence "distance vector".
+   - It periodically sends its `entire routing table` to its `directly connected neighbours` only.
+   - On receiving a neighbour's table it applies the Bellman-Ford equation: cost to X through neighbour N = cost to N + N's cost to X, keeping the minimum.
+   - It has no map of the network; it trusts what neighbours say. This is "routing by rumour".
+   - Convergence is slow, and the count-to-infinity problem can occur; it is limited by split horizon, route poisoning, poison reverse and hold-down timers.
+   - Metric: usually hop count. RIP allows at most 15 hops, so 16 means unreachable.
+   - Examples: RIP, RIPv2, IGRP. EIGRP is an advanced form using the DUAL algorithm.
+   - Low CPU and memory use, easy to configure — suited to small networks.
 
-    Link state routing
-    - Each router discovers its own directly connected links and their costs, and floods this information as an LSA to `every router in the area`, not just to neighbours.
-    - Every router therefore builds an identical link-state database — a complete map of the topology.
-    - Each router independently runs `Dijkstra's SPF algorithm` on that map to compute the shortest path to every destination.
-    - Updates are sent only when something changes (plus a periodic refresh), and they are flooded immediately, so convergence is fast.
-    - Metric: cost, normally derived from bandwidth.
-    - Examples: OSPF, IS-IS.
-    - Needs more CPU and memory, and careful hierarchical design with areas — suited to large networks.
+   Link state routing
+   - Each router discovers its own directly connected links and their costs, and floods this information as an LSA to `every router in the area`, not just to neighbours.
+   - Every router therefore builds an identical link-state database — a complete map of the topology.
+   - Each router independently runs `Dijkstra's SPF algorithm` on that map to compute the shortest path to every destination.
+   - Updates are sent only when something changes (plus a periodic refresh), and they are flooded immediately, so convergence is fast.
+   - Metric: cost, normally derived from bandwidth.
+   - Examples: OSPF, IS-IS.
+   - Needs more CPU and memory, and careful hierarchical design with areas — suited to large networks.
 
 | Point | Distance vector | Link state |
 |---|---|---|
@@ -8775,48 +8775,48 @@ Answer:
 
 Answer:
 
-    Static routing
-    - Routes are entered manually by the administrator with a command such as `ip route 192.168.2.0 255.255.255.0 10.0.0.2`.
-    - The router never changes them by itself; if the path fails, traffic simply stops until someone edits the configuration.
-    - Administrative distance is 1, so a static route beats every dynamic protocol.
+   Static routing
+   - Routes are entered manually by the administrator with a command such as `ip route 192.168.2.0 255.255.255.0 10.0.0.2`.
+   - The router never changes them by itself; if the path fails, traffic simply stops until someone edits the configuration.
+   - Administrative distance is 1, so a static route beats every dynamic protocol.
 
-    Dynamic routing
-    - Routers exchange information automatically using a routing protocol — RIP, OSPF, EIGRP, IS-IS or BGP — and build their tables themselves.
-    - When a link fails, the protocol detects it and recomputes an alternative path without human intervention.
+   Dynamic routing
+   - Routers exchange information automatically using a routing protocol — RIP, OSPF, EIGRP, IS-IS or BGP — and build their tables themselves.
+   - When a link fails, the protocol detects it and recomputes an alternative path without human intervention.
 
-    Relative advantages
+   Relative advantages
 
-    Advantages of static routing
-    - No CPU, memory or bandwidth overhead — nothing is exchanged between routers.
-    - Complete administrative control over exactly which path is used.
-    - More secure: no routing updates to intercept, spoof or poison.
-    - Predictable and easy to troubleshoot; the path never changes unexpectedly.
-    - Ideal for a small network, a stub site with one exit, or a backup route with a higher administrative distance (a floating static route).
+   Advantages of static routing
+   - No CPU, memory or bandwidth overhead — nothing is exchanged between routers.
+   - Complete administrative control over exactly which path is used.
+   - More secure: no routing updates to intercept, spoof or poison.
+   - Predictable and easy to troubleshoot; the path never changes unexpectedly.
+   - Ideal for a small network, a stub site with one exit, or a backup route with a higher administrative distance (a floating static route).
 
-    Advantages of dynamic routing
-    - Automatic adaptation — a failed link is routed around within seconds, with no human action.
-    - Scalable — a network of hundreds of routers is impossible to maintain by hand.
-    - Less administrative work; adding a new network is advertised automatically.
-    - Load balancing across equal-cost (and in EIGRP, unequal-cost) paths.
-    - Chooses the best path by a real metric, and keeps choosing it as conditions change.
-    - Fewer human errors than manual entry.
+   Advantages of dynamic routing
+   - Automatic adaptation — a failed link is routed around within seconds, with no human action.
+   - Scalable — a network of hundreds of routers is impossible to maintain by hand.
+   - Less administrative work; adding a new network is advertised automatically.
+   - Load balancing across equal-cost (and in EIGRP, unequal-cost) paths.
+   - Chooses the best path by a real metric, and keeps choosing it as conditions change.
+   - Fewer human errors than manual entry.
 
-    Disadvantages of each
-    - Static: no fault tolerance, unmanageable at scale, and every change is a manual change.
-    - Dynamic: consumes CPU, memory and bandwidth; more complex to design and troubleshoot; and routing updates are a security surface, which is why authentication is used.
+   Disadvantages of each
+   - Static: no fault tolerance, unmanageable at scale, and every change is a manual change.
+   - Dynamic: consumes CPU, memory and bandwidth; more complex to design and troubleshoot; and routing updates are a security surface, which is why authentication is used.
 
-    When to use which
-    - Static — small networks, stub sites, default routes to an ISP, backup routes, and specific policy exceptions.
-    - Dynamic — medium and large networks, any network with redundant paths, and anywhere fast automatic recovery is needed.
-    - Most real networks use both: dynamic routing internally, and a static default route pointing at the ISP.
+   When to use which
+   - Static — small networks, stub sites, default routes to an ISP, backup routes, and specific policy exceptions.
+   - Dynamic — medium and large networks, any network with redundant paths, and anywhere fast automatic recovery is needed.
+   - Most real networks use both: dynamic routing internally, and a static default route pointing at the ISP.
 
 13. **What is Routing? Write down the difference between static routing and dynamic routing.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 837-838 (ET: N/A)]*
 
 Answer:
 
-    What is routing
-    - Routing is the process of choosing a path for traffic from a source network to a destination network, and forwarding packets along it. A router looks at the destination IP address of each packet and consults its routing table, selecting the entry with the longest matching prefix.
-    - The routing table can be filled in three ways: directly connected networks, static routes and dynamic routing protocols.
+   What is routing
+   - Routing is the process of choosing a path for traffic from a source network to a destination network, and forwarding packets along it. A router looks at the destination IP address of each packet and consults its routing table, selecting the entry with the longest matching prefix.
+   - The routing table can be filled in three ways: directly connected networks, static routes and dynamic routing protocols.
 
 Static routing vs dynamic routing
 
@@ -8834,8 +8834,8 @@ Static routing vs dynamic routing
 | Predictability | Completely predictable | Path may change with conditions |
 | Best suited to | Small or stub networks, default routes, backup routes | Medium and large networks with redundant paths |
 
-    - Most production networks combine the two: a dynamic protocol inside the organisation, and a static default route towards the ISP.
-    - A floating static route (a static route with a deliberately high administrative distance) is a common way to provide a backup path that only activates when the dynamic route disappears.
+   - Most production networks combine the two: a dynamic protocol inside the organisation, and a static default route towards the ISP.
+   - A floating static route (a static route with a deliberately high administrative distance) is a common way to provide a backup path that only activates when the dynamic route disappears.
 
 14. **Name of the Algorithm RIP, OSPF and EIGRP routing protocol.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 838 (ET: N/A)]*
 
@@ -8847,23 +8847,23 @@ Answer: The algorithm used by each protocol.
 | OSPF | Open Shortest Path First | Link state | `Dijkstra (Shortest Path First)` | Cost = reference bandwidth ÷ interface bandwidth |
 | EIGRP | Enhanced Interior Gateway Routing Protocol | Advanced distance vector (hybrid) | `DUAL — Diffusing Update Algorithm` | Composite: bandwidth and delay by default |
 
-    Brief notes
-    - RIP / Bellman-Ford — each router adds one hop to what its neighbours report and keeps the minimum. Simple, but slow to converge and vulnerable to count-to-infinity, which is why split horizon and hold-down timers are needed. Updates every 30 seconds. Administrative distance 120.
-    - OSPF / Dijkstra — every router floods LSAs, builds an identical map of the area, and computes the shortest-path tree with itself at the root. Fast convergence, no hop limit, scales with areas. Runs on IP protocol 89. Administrative distance 110.
-    - EIGRP / DUAL — keeps a topology table with a successor (best route) and a feasible successor (a pre-verified loop-free backup). If the successor fails, the feasible successor is installed immediately with no recomputation, which gives near-instant convergence. Administrative distance 90 (internal). It is Cisco-originated but was published as RFC 7868.
+   Brief notes
+   - RIP / Bellman-Ford — each router adds one hop to what its neighbours report and keeps the minimum. Simple, but slow to converge and vulnerable to count-to-infinity, which is why split horizon and hold-down timers are needed. Updates every 30 seconds. Administrative distance 120.
+   - OSPF / Dijkstra — every router floods LSAs, builds an identical map of the area, and computes the shortest-path tree with itself at the root. Fast convergence, no hop limit, scales with areas. Runs on IP protocol 89. Administrative distance 110.
+   - EIGRP / DUAL — keeps a topology table with a successor (best route) and a feasible successor (a pre-verified loop-free backup). If the successor fails, the feasible successor is installed immediately with no recomputation, which gives near-instant convergence. Administrative distance 90 (internal). It is Cisco-originated but was published as RFC 7868.
 
-    - Also worth knowing: IS-IS uses Dijkstra like OSPF, and BGP uses no shortest-path algorithm at all — it selects by policy attributes.
+   - Also worth knowing: IS-IS uses Dijkstra like OSPF, and BGP uses no shortest-path algorithm at all — it selects by policy attributes.
 
 15. **What is Autonomous system? What is the difference between Link state routing protocol and Distance vector routing protocol?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 838-839 (ET: N/A)]*
 
 Answer:
 
-    What is an autonomous system
-    - An Autonomous System (AS) is a collection of IP networks and routers under a single administrative authority that presents a common, clearly defined routing policy to the internet.
-    - Each AS is identified by a globally unique Autonomous System Number (ASN), assigned by IANA through the regional registries. ASNs were originally 16 bits (1–65535) and are now 32 bits; 64512–65534 is reserved for private use.
-    - Examples: an ISP, a large university, a bank with its own internet presence, or a content provider such as Google (AS15169).
-    - Routing inside an AS uses an Interior Gateway Protocol (RIP, OSPF, EIGRP, IS-IS); routing between autonomous systems uses the Exterior Gateway Protocol BGP.
-    - The purpose of the concept is scalability: the internet is not treated as millions of individual routers but as tens of thousands of autonomous systems, each of which internally does what it likes.
+   What is an autonomous system
+   - An Autonomous System (AS) is a collection of IP networks and routers under a single administrative authority that presents a common, clearly defined routing policy to the internet.
+   - Each AS is identified by a globally unique Autonomous System Number (ASN), assigned by IANA through the regional registries. ASNs were originally 16 bits (1–65535) and are now 32 bits; 64512–65534 is reserved for private use.
+   - Examples: an ISP, a large university, a bank with its own internet presence, or a content provider such as Google (AS15169).
+   - Routing inside an AS uses an Interior Gateway Protocol (RIP, OSPF, EIGRP, IS-IS); routing between autonomous systems uses the Exterior Gateway Protocol BGP.
+   - The purpose of the concept is scalability: the internet is not treated as millions of individual routers but as tens of thousands of autonomous systems, each of which internally does what it likes.
 
 Link state vs distance vector
 
@@ -8883,72 +8883,72 @@ Link state vs distance vector
 | Scale | Small networks | Large networks |
 | Examples | RIP, RIPv2, IGRP | OSPF, IS-IS |
 
-    - EIGRP sits between the two: it is a distance-vector protocol at heart, but its DUAL algorithm and topology table give it link-state-like convergence speed.
+   - EIGRP sits between the two: it is a distance-vector protocol at heart, but its DUAL algorithm and topology table give it link-state-like convergence speed.
 
 16. **Cost calculation of EIGRP formula.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839 (ET: N/A)]*
 
 Answer: EIGRP uses a composite metric built from up to five components, weighted by the K values.
 
-    Full formula
-    ```
-    Metric = 256 × [ (K1 × Bandwidth) + (K2 × Bandwidth) / (256 − Load) + (K3 × Delay) ]
-                  × [ K5 / (Reliability + K4) ]
-    ```
-    - The last bracket is applied only when K5 is not zero.
+   Full formula
+   ```
+   Metric = 256 × [ (K1 × Bandwidth) + (K2 × Bandwidth) / (256 − Load) + (K3 × Delay) ]
+                 × [ K5 / (Reliability + K4) ]
+   ```
+   - The last bracket is applied only when K5 is not zero.
 
-    Default K values
-    ```
-    K1 = 1, K2 = 0, K3 = 1, K4 = 0, K5 = 0
-    ```
+   Default K values
+   ```
+   K1 = 1, K2 = 0, K3 = 1, K4 = 0, K5 = 0
+   ```
 
-    Simplified default formula
-    - With the defaults, the load, reliability and MTU terms drop out entirely:
-    ```
-    Metric = 256 × (Bandwidth + Delay)
-    ```
-    where
-    ```
-    Bandwidth = 10,000,000 / (minimum bandwidth in kbps along the path)
-    Delay     = (sum of all interface delays in microseconds) / 10
-    ```
+   Simplified default formula
+   - With the defaults, the load, reliability and MTU terms drop out entirely:
+   ```
+   Metric = 256 × (Bandwidth + Delay)
+   ```
+   where
+   ```
+   Bandwidth = 10,000,000 / (minimum bandwidth in kbps along the path)
+   Delay     = (sum of all interface delays in microseconds) / 10
+   ```
 
-    Worked example
-    - Path: FastEthernet (100,000 kbps, delay 100 µs) then Serial (1544 kbps, delay 20,000 µs).
-    - Minimum bandwidth along the path = 1544 kbps
-    ```
-    Bandwidth term = 10,000,000 / 1544        = 6476  (integer division)
-    Delay term     = (100 + 20,000) / 10      = 2010
-    Metric         = 256 × (6476 + 2010)      = 256 × 8486 = 2,172,416
-    ```
+   Worked example
+   - Path: FastEthernet (100,000 kbps, delay 100 µs) then Serial (1544 kbps, delay 20,000 µs).
+   - Minimum bandwidth along the path = 1544 kbps
+   ```
+   Bandwidth term = 10,000,000 / 1544        = 6476  (integer division)
+   Delay term     = (100 + 20,000) / 10      = 2010
+   Metric         = 256 × (6476 + 2010)      = 256 × 8486 = 2,172,416
+   ```
 
-    Points to remember
-    - Only the `minimum` bandwidth on the whole path is used, but the `sum` of all delays.
-    - Bandwidth is expressed in kbps and delay in tens of microseconds; both use integer arithmetic, so remainders are discarded.
-    - Load and reliability are excluded by default because they change constantly, and a metric that keeps changing causes route flapping.
-    - The K values must match on both routers or the neighbour adjacency will not form.
-    - Administrative distance: 90 for internal EIGRP, 170 for external.
+   Points to remember
+   - Only the `minimum` bandwidth on the whole path is used, but the `sum` of all delays.
+   - Bandwidth is expressed in kbps and delay in tens of microseconds; both use integer arithmetic, so remainders are discarded.
+   - Load and reliability are excluded by default because they change constantly, and a metric that keeps changing causes route flapping.
+   - The K values must match on both routers or the neighbour adjacency will not form.
+   - Administrative distance: 90 for internal EIGRP, 170 for external.
 
 17. **Given a totology of distance vector routing. Find the table of each node for the 1^{\text{st}} route.** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 859-860 (ET: N/A)]*
 
 Answer: The topology figure was not printed with the question, so the distance-vector procedure is given with a worked example that can be adapted to any topology.
 
-    The algorithm (Bellman-Ford, as used by RIP)
-    - Step 1 — Initialisation. Each node's table contains 0 to itself, the link cost to each direct neighbour, and infinity to every other node.
-    - Step 2 — Exchange. Each node sends its whole distance vector to its direct neighbours only.
-    - Step 3 — Update. On receiving neighbour N's vector, node X computes for every destination D:
-    ```
-    cost(X, D) = min over all neighbours N of [ cost(X, N) + cost(N, D) ]
-    ```
-    and records N as the next hop for the minimum.
-    - Step 4 — Repeat until no table changes. That state is convergence.
+   The algorithm (Bellman-Ford, as used by RIP)
+   - Step 1 — Initialisation. Each node's table contains 0 to itself, the link cost to each direct neighbour, and infinity to every other node.
+   - Step 2 — Exchange. Each node sends its whole distance vector to its direct neighbours only.
+   - Step 3 — Update. On receiving neighbour N's vector, node X computes for every destination D:
+   ```
+   cost(X, D) = min over all neighbours N of [ cost(X, N) + cost(N, D) ]
+   ```
+   and records N as the next hop for the minimum.
+   - Step 4 — Repeat until no table changes. That state is convergence.
 
-    Worked example
-    ```
-            2          3
-       A -------- B -------- C
-        \                   /
-         \_______ 7 _______/
-    ```
+   Worked example
+   ```
+           2          3
+      A -------- B -------- C
+       \                   /
+        \_______ 7 _______/
+   ```
 
 Initial tables (round 0 — direct links only)
 
@@ -8970,10 +8970,10 @@ Initial tables (round 0 — direct links only)
 | B | 3 | B |
 | C | 0 | — |
 
-    After the first exchange (round 1)
-    - A learns from B that B reaches C at cost 3. A's cost to C via B = 2 + 3 = `5`, which is better than the direct 7. A updates.
-    - C learns from B that B reaches A at cost 2. C's cost to A via B = 3 + 2 = `5`, better than the direct 7. C updates.
-    - B already has the best routes to both neighbours, so B does not change.
+   After the first exchange (round 1)
+   - A learns from B that B reaches C at cost 3. A's cost to C via B = 2 + 3 = `5`, which is better than the direct 7. A updates.
+   - C learns from B that B reaches A at cost 2. C's cost to A via B = 3 + 2 = `5`, better than the direct 7. C updates.
+   - B already has the best routes to both neighbours, so B does not change.
 
 | From A | Cost | Next hop |
 |---|---|---|
@@ -8987,12 +8987,12 @@ Initial tables (round 0 — direct links only)
 | B | 3 | B |
 | C | 0 | — |
 
-    - Round 2 produces no further change, so the network has converged.
+   - Round 2 produces no further change, so the network has converged.
 
-    Key points for the exam
-    - Each node knows only distances and next hops, never the full topology — "routing by rumour".
-    - Convergence is slow, and the count-to-infinity problem can arise when a link fails; split horizon, route poisoning, poison reverse and hold-down timers are the standard countermeasures.
-    - RIP uses hop count with a maximum of 15, so 16 means unreachable. <!-- verify -->
+   Key points for the exam
+   - Each node knows only distances and next hops, never the full topology — "routing by rumour".
+   - Convergence is slow, and the count-to-infinity problem can arise when a link fails; split horizon, route poisoning, poison reverse and hold-down timers are the standard countermeasures.
+   - RIP uses hop count with a maximum of 15, so 16 means unreachable. <!-- verify -->
 
 18. **What is difference between link state routing and distance vector routing?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
@@ -9016,27 +9016,27 @@ Answer:
 | Configuration | Simple | Complex, needs area design |
 | Examples | RIP, RIPv2, IGRP | OSPF, IS-IS |
 
-    Core distinction
-    - Distance vector: "tell your neighbours everything you know."
-    - Link state: "tell everyone what you know about yourself."
-    - That single difference explains the rest of the table — the algorithm each can use, the convergence speed, the loop behaviour and the resource cost.
-    - EIGRP is a hybrid: distance vector in principle, but its DUAL algorithm and pre-computed feasible successors give it link-state-like convergence.
+   Core distinction
+   - Distance vector: "tell your neighbours everything you know."
+   - Link state: "tell everyone what you know about yourself."
+   - That single difference explains the rest of the table — the algorithm each can use, the convergence speed, the loop behaviour and the resource cost.
+   - EIGRP is a hybrid: distance vector in principle, but its DUAL algorithm and pre-computed feasible successors give it link-state-like convergence.
 
 19. **The trip from Dhata to Rajshahi takes 4\frac{1}{2} hours when travelling at a constant speed of 70 miles per hour. How long, in hours, does the trip take when travelling at a constant speed of 60 miles per hour.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
 
 Answer:
 
-    Step 1: Calculate total distance ($d$):
-    - Given Speed ($v_1$) = $70\text{ mph}$
-    - Time ($t_1$) = $4\frac{1}{2}\text{ hours} = 4.5\text{ hours} = \frac{9}{2}\text{ hours}$
-    $$\text{Distance } (d) = v_1 \times t_1 = 70 \times 4.5 = 315\text{ miles}$$
+   Step 1: Calculate total distance ($d$):
+   - Given Speed ($v_1$) = $70\text{ mph}$
+   - Time ($t_1$) = $4\frac{1}{2}\text{ hours} = 4.5\text{ hours} = \frac{9}{2}\text{ hours}$
+   $$\text{Distance } (d) = v_1 \times t_1 = 70 \times 4.5 = 315\text{ miles}$$
 
-    Step 2: Calculate time at new speed ($v_2 = 60\text{ mph}$):
-    $$\text{New Time } (t_2) = \frac{\text{Distance } (d)}{v_2} = \frac{315}{60} = \frac{21}{4} = 5.25\text{ hours}$$
+   Step 2: Calculate time at new speed ($v_2 = 60\text{ mph}$):
+   $$\text{New Time } (t_2) = \frac{\text{Distance } (d)}{v_2} = \frac{315}{60} = \frac{21}{4} = 5.25\text{ hours}$$
 
-    - $5.25\text{ hours} = 5\frac{1}{4}\text{ hours} = 5\text{ hours and } 15\text{ minutes}$.
+   - $5.25\text{ hours} = 5\frac{1}{4}\text{ hours} = 5\text{ hours and } 15\text{ minutes}$.
 
-    Final Answer: **5.25 hours** (or **$5\frac{1}{4}$ hours**).
+   Final Answer: **5.25 hours** (or **$5\frac{1}{4}$ hours**).
 
 ## Network Address Translation (NAT) (17)
 
@@ -9418,43 +9418,43 @@ Translation table
 
 Answer:
 
-    Why we need NAT
-    - `IPv4 addresses ran out.` The 32-bit space gives about 4.3 billion addresses, and classful allocation wasted most of them. IANA exhausted its pool in February 2011, while the number of connected devices kept multiplying.
-    - `Private addresses cannot be routed on the internet.` RFC 1918 ranges are reusable by everyone precisely because internet routers discard them, so they must be translated before leaving the organisation.
-    - `Cost.` Public addresses are leased from an ISP; NAT lets one address serve hundreds of hosts.
-    - `Security and privacy.` The internal addressing and topology are hidden, and unsolicited inbound packets have no translation entry, so they are dropped.
-    - `Administrative flexibility.` Internal renumbering, changing ISP, or merging two networks using the same private range are all handled without touching internal hosts.
+   Why we need NAT
+   - `IPv4 addresses ran out.` The 32-bit space gives about 4.3 billion addresses, and classful allocation wasted most of them. IANA exhausted its pool in February 2011, while the number of connected devices kept multiplying.
+   - `Private addresses cannot be routed on the internet.` RFC 1918 ranges are reusable by everyone precisely because internet routers discard them, so they must be translated before leaving the organisation.
+   - `Cost.` Public addresses are leased from an ISP; NAT lets one address serve hundreds of hosts.
+   - `Security and privacy.` The internal addressing and topology are hidden, and unsolicited inbound packets have no translation entry, so they are dropped.
+   - `Administrative flexibility.` Internal renumbering, changing ISP, or merging two networks using the same private range are all handled without touching internal hosts.
 
-    Topology diagram
-    ```
-       INSIDE (private)                                OUTSIDE (public)
+   Topology diagram
+   ```
+      INSIDE (private)                                OUTSIDE (public)
 
-      +---------------+
-      | PC1           |
-      | 192.168.1.10  |\
-      +---------------+ \
-                         \   +------------------------------+
-      +---------------+    \  |        NAT ROUTER            |
-      | PC2           |-----+-| inside  192.168.1.1 (e0)     |
-      | 192.168.1.11  |    /  | outside 203.0.113.5 (s0)     |======> INTERNET
-      +---------------+   /   |                              |
-                         /    |  translation table maps      |
-      +---------------+  /    |  private:port <-> public:port |
-      | PC3           | /     +------------------------------+
-      | 192.168.1.12  |/
-      +---------------+
-    ```
+     +---------------+
+     | PC1           |
+     | 192.168.1.10  |\
+     +---------------+ \
+                        \   +------------------------------+
+     +---------------+    \  |        NAT ROUTER            |
+     | PC2           |-----+-| inside  192.168.1.1 (e0)     |
+     | 192.168.1.11  |    /  | outside 203.0.113.5 (s0)     |======> INTERNET
+     +---------------+   /   |                              |
+                        /    |  translation table maps      |
+     +---------------+  /    |  private:port <-> public:port |
+     | PC3           | /     +------------------------------+
+     | 192.168.1.12  |/
+     +---------------+
+   ```
 
-    Packet flow
-    ```
-    Outbound
-      PC1 sends   : src 192.168.1.10:51000  dst 93.184.216.34:80
-      Router sends: src 203.0.113.5:62001   dst 93.184.216.34:80
+   Packet flow
+   ```
+   Outbound
+     PC1 sends   : src 192.168.1.10:51000  dst 93.184.216.34:80
+     Router sends: src 203.0.113.5:62001   dst 93.184.216.34:80
 
-    Inbound
-      Server sends: src 93.184.216.34:80    dst 203.0.113.5:62001
-      Router sends: src 93.184.216.34:80    dst 192.168.1.10:51000
-    ```
+   Inbound
+     Server sends: src 93.184.216.34:80    dst 203.0.113.5:62001
+     Router sends: src 93.184.216.34:80    dst 192.168.1.10:51000
+   ```
 
 Translation table
 
@@ -9464,31 +9464,31 @@ Translation table
 | 192.168.1.11:49500 | 203.0.113.5:62002 | 142.250.190.78:443 |
 | 192.168.1.12:52310 | 203.0.113.5:62003 | 8.8.8.8:53 |
 
-    - The unique source port is what makes many-to-one sharing possible; the router uses it to identify which internal host a reply belongs to.
+   - The unique source port is what makes many-to-one sharing possible; the router uses it to identify which internal host a reply belongs to.
 
 11. **What is PAT? How does a network PAT work?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
 
 Answer:
 
-    What is PAT
-    - PAT (Port Address Translation), also called `NAT overload`, is the form of NAT in which `many private IP addresses share a single public IP address`, distinguished by using a different source port number for each conversation.
-    - It is the variant used by virtually every home and small office router, and it is the reason one public address from an ISP can serve an entire building.
+   What is PAT
+   - PAT (Port Address Translation), also called `NAT overload`, is the form of NAT in which `many private IP addresses share a single public IP address`, distinguished by using a different source port number for each conversation.
+   - It is the variant used by virtually every home and small office router, and it is the reason one public address from an ISP can serve an entire building.
 
-    How PAT works, step by step
+   How PAT works, step by step
 
-    - Step 1 — an internal host sends a packet:
-    ```
-    src 192.168.1.10 : 51000    dst 93.184.216.34 : 80
-    ```
-    - Step 2 — the router receives it on the inside interface and sees a private source address.
-    - Step 3 — it replaces the source address with its own public address and allocates a `unique source port` from its pool (typically 1024–65535):
-    ```
-    src 203.0.113.5 : 62001     dst 93.184.216.34 : 80
-    ```
-    - Step 4 — it records the mapping in the translation table, keyed by that unique port.
-    - Step 5 — it recalculates the IP header checksum and the TCP/UDP checksum, then forwards the packet.
-    - Step 6 — the reply arrives addressed to 203.0.113.5:62001. The router looks up port 62001, finds the entry, and rewrites the destination back to 192.168.1.10:51000.
-    - Step 7 — the entry is removed when the connection closes or after an idle timeout.
+   - Step 1 — an internal host sends a packet:
+   ```
+   src 192.168.1.10 : 51000    dst 93.184.216.34 : 80
+   ```
+   - Step 2 — the router receives it on the inside interface and sees a private source address.
+   - Step 3 — it replaces the source address with its own public address and allocates a `unique source port` from its pool (typically 1024–65535):
+   ```
+   src 203.0.113.5 : 62001     dst 93.184.216.34 : 80
+   ```
+   - Step 4 — it records the mapping in the translation table, keyed by that unique port.
+   - Step 5 — it recalculates the IP header checksum and the TCP/UDP checksum, then forwards the packet.
+   - Step 6 — the reply arrives addressed to 203.0.113.5:62001. The router looks up port 62001, finds the entry, and rewrites the destination back to 192.168.1.10:51000.
+   - Step 7 — the entry is removed when the connection closes or after an idle timeout.
 
 Translation table
 
@@ -9498,7 +9498,7 @@ Translation table
 | 192.168.1.11:51000 | 203.0.113.5:`62002` | 93.184.216.34:80 |
 | 192.168.1.12:44120 | 203.0.113.5:`62003` | 142.250.190.78:443 |
 
-    - Note rows 1 and 2: both hosts happened to choose the same source port 51000, but the router allocated different global ports, so the replies are never confused. This port allocation is the whole trick.
+   - Note rows 1 and 2: both hosts happened to choose the same source port 51000, but the router allocated different global ports, so the replies are never confused. This port allocation is the whole trick.
 
 NAT vs PAT
 
@@ -9511,19 +9511,19 @@ NAT vs PAT
 | Cost | Higher | Lowest |
 | Typical use | Servers, address pools | Home and office internet access |
 
-    - Capacity: roughly 64,000 ports are available, so in theory one public address supports tens of thousands of simultaneous connections; in practice a few thousand hosts share one address comfortably.
-    - Limitation: an internal host cannot be reached from outside unless a `port forwarding` rule (static PAT) is configured, which is why hosting a server behind PAT requires explicit setup.
+   - Capacity: roughly 64,000 ports are available, so in theory one public address supports tens of thousands of simultaneous connections; in practice a few thousand hosts share one address comfortably.
+   - Limitation: an internal host cannot be reached from outside unless a `port forwarding` rule (static PAT) is configured, which is why hosting a server behind PAT requires explicit setup.
 
 12. **What is NAT?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
 Answer: NAT (Network Address Translation) is the process by which a router rewrites the IP addresses in a packet's header as it passes between a private network and the public internet.
 
-    Purpose
-    - IPv4 has only about 4.3 billion addresses, and they were exhausted. RFC 1918 defines private ranges — 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16 — that every organisation may reuse, but internet routers drop them. NAT translates them into a public address so private hosts can still reach the outside.
+   Purpose
+   - IPv4 has only about 4.3 billion addresses, and they were exhausted. RFC 1918 defines private ranges — 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16 — that every organisation may reuse, but internet routers drop them. NAT translates them into a public address so private hosts can still reach the outside.
 
-    How it works
-    - Outbound: the private source address, and with PAT the source port, is replaced by the router's public address and a unique port. The mapping is recorded in the translation table and the checksums are recalculated.
-    - Inbound: the router matches the returning packet against the table and restores the original private address and port.
+   How it works
+   - Outbound: the private source address, and with PAT the source port, is replaced by the router's public address and a unique port. The mapping is recorded in the translation table and the checksums are recalculated.
+   - Inbound: the router matches the returning packet against the table and restores the original private address and port.
 
 Types
 
@@ -9533,48 +9533,48 @@ Types
 | Dynamic NAT | Many to a pool, as available | Sharing a block of public addresses |
 | PAT / overload | Many to one, by port | Home and office routers |
 
-    Advantages
-    - Conserves public addresses, reduces cost, hides internal topology, drops unsolicited inbound traffic by default, and allows internal renumbering or a change of ISP with no internal disruption.
+   Advantages
+   - Conserves public addresses, reduces cost, hides internal topology, drops unsolicited inbound traffic by default, and allows internal renumbering or a change of ISP with no internal disruption.
 
-    Disadvantages
-    - Breaks end-to-end connectivity, complicates VoIP, peer-to-peer and online gaming, interferes with IPsec, requires application-layer gateways for FTP and SIP, adds CPU load and state to the router, and makes external logs point at a shared address rather than a specific host.
+   Disadvantages
+   - Breaks end-to-end connectivity, complicates VoIP, peer-to-peer and online gaming, interferes with IPsec, requires application-layer gateways for FTP and SIP, adds CPU load and state to the router, and makes external logs point at a shared address rather than a specific host.
 
-    - IPv6, with 3.4 × 10^38 addresses, removes the need for NAT altogether.
+   - IPv6, with 3.4 × 10^38 addresses, removes the need for NAT altogether.
 
 13. **Show the translation process of a NAT Box.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
 Answer: The NAT box (router) sits between the private network and the internet and rewrites addresses in both directions, using a translation table to keep track.
 
-    The translation process
-    ```
-       INSIDE                    NAT BOX                       OUTSIDE
-      192.168.1.10           203.0.113.5                  93.184.216.34
-           |                       |                             |
-      (1)  |--- src 192.168.1.10:51000 ------->|                 |
-           |    dst 93.184.216.34:80           |                 |
-           |                       |                             |
-      (2)  |            [creates table entry]                    |
-           |                       |                             |
-      (3)  |                       |--- src 203.0.113.5:62001 -->|
-           |                       |    dst 93.184.216.34:80     |
-           |                       |                             |
-      (4)  |                       |<-- src 93.184.216.34:80 ----|
-           |                       |    dst 203.0.113.5:62001    |
-           |                       |                             |
-      (5)  |            [looks up port 62001 in the table]       |
-           |                       |                             |
-      (6)  |<-- src 93.184.216.34:80 ----------|                 |
-           |    dst 192.168.1.10:51000         |                 |
-    ```
+   The translation process
+   ```
+      INSIDE                    NAT BOX                       OUTSIDE
+     192.168.1.10           203.0.113.5                  93.184.216.34
+          |                       |                             |
+     (1)  |--- src 192.168.1.10:51000 ------->|                 |
+          |    dst 93.184.216.34:80           |                 |
+          |                       |                             |
+     (2)  |            [creates table entry]                    |
+          |                       |                             |
+     (3)  |                       |--- src 203.0.113.5:62001 -->|
+          |                       |    dst 93.184.216.34:80     |
+          |                       |                             |
+     (4)  |                       |<-- src 93.184.216.34:80 ----|
+          |                       |    dst 203.0.113.5:62001    |
+          |                       |                             |
+     (5)  |            [looks up port 62001 in the table]       |
+          |                       |                             |
+     (6)  |<-- src 93.184.216.34:80 ----------|                 |
+          |    dst 192.168.1.10:51000         |                 |
+   ```
 
-    Step by step
-    - (1) The internal host sends a packet with its private source address and an ephemeral source port.
-    - (2) The NAT box sees a private source address on the inside interface, allocates a free port on its public address, and creates an entry in the translation table.
-    - (3) It rewrites the source to `public address : allocated port`, recalculates the IP header checksum and the TCP/UDP checksum (which covers the addresses through the pseudo-header), and forwards the packet.
-    - (4) The external server replies to the public address and port, since that is all it ever saw.
-    - (5) The NAT box matches the destination port against the table and finds the corresponding internal host.
-    - (6) It rewrites the destination back to the original private address and port, recalculates the checksums again, and delivers the packet inside.
-    - The entry is deleted when the TCP connection closes, or after an idle timeout — commonly 24 hours for TCP and about 5 minutes for UDP.
+   Step by step
+   - (1) The internal host sends a packet with its private source address and an ephemeral source port.
+   - (2) The NAT box sees a private source address on the inside interface, allocates a free port on its public address, and creates an entry in the translation table.
+   - (3) It rewrites the source to `public address : allocated port`, recalculates the IP header checksum and the TCP/UDP checksum (which covers the addresses through the pseudo-header), and forwards the packet.
+   - (4) The external server replies to the public address and port, since that is all it ever saw.
+   - (5) The NAT box matches the destination port against the table and finds the corresponding internal host.
+   - (6) It rewrites the destination back to the original private address and port, recalculates the checksums again, and delivers the packet inside.
+   - The entry is deleted when the TCP connection closes, or after an idle timeout — commonly 24 hours for TCP and about 5 minutes for UDP.
 
 Translation table structure
 
@@ -9584,72 +9584,72 @@ Translation table structure
 | 192.168.1.11:51000 | 203.0.113.5:62002 | 93.184.216.34:80 | TCP |
 | 192.168.1.12:44120 | 203.0.113.5:62003 | 8.8.8.8:53 | UDP |
 
-    Terminology
-    - `Inside local` — the private address as seen inside.
-    - `Inside global` — the public address the outside world sees for that host.
-    - `Outside global` — the real public address of the destination.
-    - `Outside local` — how the destination appears from inside; usually identical to outside global.
+   Terminology
+   - `Inside local` — the private address as seen inside.
+   - `Inside global` — the public address the outside world sees for that host.
+   - `Outside global` — the real public address of the destination.
+   - `Outside local` — how the destination appears from inside; usually identical to outside global.
 
-    - Key point: the unique `source port` is what allows many internal hosts to share a single public address. Rows 1 and 2 above show two hosts that chose the same internal port, yet the router keeps them separate by allocating different global ports.
+   - Key point: the unique `source port` is what allows many internal hosts to share a single public address. Rows 1 and 2 above show two hosts that chose the same internal port, yet the router keeps them separate by allocating different global ports.
 
 14. **Read the following passage and answer the questions that follow:** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329-330]]*
 “The acquisition of knowledge is one of the most essential things of life. Man is not only a being, he is a being with mind, conscience and intelligence. These faculties of his mind can be made to grow and develop only with patience and knowledge. Where the universe is concerned, knowledge means knowing man, nature and the universe and their relationship. Man is born ignorant of the knowledge of the world. But he can attain it through learning and education. If man is capable of it in the future, he must attain the truth from man himself. Will he use his power cleverly? Philosophy should make it known that the truth can be revealed only when the tyranny of prejudice and blind traditions is broken away. And if philosophy can help us feel the value of true things, then it can bring light into a world of darkness.” Questions: (2 \times 5 = 10) (a) Why is the acquisition of knowledge essential? (b) How can knowledge grow? (c) Who is the being with mind, conscience and intelligence? (d) Where does the future danger to man come from? (e) How can philosophy bring light into a world of darkness?
 
 Answer:
-    - (a) The acquisition of knowledge is essential because it develops and enriches the human mind, conscience, and intelligence, enabling man to understand nature, the universe, and fundamental human relationships.
-    - (b) Knowledge grows and develops through patient learning, education, and continuous inquiry.
-    - (c) Man (the human being) is the unique being endowed with mind, conscience, and intelligence.
-    - (d) The future danger comes from whether man will use his acquired power and knowledge cleverly or fall victim to blind traditions and misuse of power.
-    - (e) Philosophy brings light into a world of darkness by breaking away the tyranny of prejudices and blind traditions, revealing truth, and illuminating the value of true things.
+   - (a) The acquisition of knowledge is essential because it develops and enriches the human mind, conscience, and intelligence, enabling man to understand nature, the universe, and fundamental human relationships.
+   - (b) Knowledge grows and develops through patient learning, education, and continuous inquiry.
+   - (c) Man (the human being) is the unique being endowed with mind, conscience, and intelligence.
+   - (d) The future danger comes from whether man will use his acquired power and knowledge cleverly or fall victim to blind traditions and misuse of power.
+   - (e) Philosophy brings light into a world of darkness by breaking away the tyranny of prejudices and blind traditions, revealing truth, and illuminating the value of true things.
 
 15. **জাতীয় ক্রীড়া পরিষদ (National Sports Council) কী? এর দায়িত্ব কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
 
 Answer:
-    জাতীয় ক্রীড়া পরিষদ (National Sports Council - NSC):
-    - জাতীয় ক্রীড়া পরিষদ হলো যুব ও ক্রীড়া মন্ত্রণালয়ের অধীনস্থ বাংলাদেশের ক্রীড়া ক্ষেত্রের সর্বোচ্চ নিয়ন্ত্রণকারী, সমন্বয়কারী ও নির্বাহী সংবিধিবদ্ধ সরকারি সংস্থা (১৯৭৪ সালে প্রতিষ্ঠিত)।
+   জাতীয় ক্রীড়া পরিষদ (National Sports Council - NSC):
+   - জাতীয় ক্রীড়া পরিষদ হলো যুব ও ক্রীড়া মন্ত্রণালয়ের অধীনস্থ বাংলাদেশের ক্রীড়া ক্ষেত্রের সর্বোচ্চ নিয়ন্ত্রণকারী, সমন্বয়কারী ও নির্বাহী সংবিধিবদ্ধ সরকারি সংস্থা (১৯৭৪ সালে প্রতিষ্ঠিত)।
 
-    প্রধান দায়িত্ব ও কার্যাবলি:
-    - ১. দেশে ক্রীড়া ফেডারেশন, অ্যাসোসিয়েশন ও ক্রীড়া সংস্থাগুলোর কার্যক্রম নিয়ন্ত্রণ ও বার্ষিক বাজেট বরাদ্দ প্রদান।
-    - ২. দেশের সকল বিভাগ ও জেলা পর্যায়ের স্টেডিয়াম, জিমনেশিয়াম, সুইমিংপুল ও ক্রীড়া কমপ্লেক্স নির্মাণ, সংস্কার ও রক্ষণাবেক্ষণ।
-    - ৩. তৃণমূল পর্যায় থেকে জাতীয় স্তরের দক্ষ খেলোয়াড় বাছাই ও নিয়মিত প্রশিক্ষণ কার্যক্রম পরিচালনা।
-    - ৪. আন্তর্জাতিক ক্রীড়া প্রতিযোগিতায় অংশগ্রহণকারী জাতীয় দলসমূহের লজিস্টিক ও আর্থিক সহযোগিতা নিশ্চিতকরণ।
+   প্রধান দায়িত্ব ও কার্যাবলি:
+   - ১. দেশে ক্রীড়া ফেডারেশন, অ্যাসোসিয়েশন ও ক্রীড়া সংস্থাগুলোর কার্যক্রম নিয়ন্ত্রণ ও বার্ষিক বাজেট বরাদ্দ প্রদান।
+   - ২. দেশের সকল বিভাগ ও জেলা পর্যায়ের স্টেডিয়াম, জিমনেশিয়াম, সুইমিংপুল ও ক্রীড়া কমপ্লেক্স নির্মাণ, সংস্কার ও রক্ষণাবেক্ষণ।
+   - ৩. তৃণমূল পর্যায় থেকে জাতীয় স্তরের দক্ষ খেলোয়াড় বাছাই ও নিয়মিত প্রশিক্ষণ কার্যক্রম পরিচালনা।
+   - ৪. আন্তর্জাতিক ক্রীড়া প্রতিযোগিতায় অংশগ্রহণকারী জাতীয় দলসমূহের লজিস্টিক ও আর্থিক সহযোগিতা নিশ্চিতকরণ।
 
 16. **NATO কী? এর সদস্য রাষ্ট্রসমূহের মধ্যে বর্তমান বিশ্ব প্রেক্ষাপটে কী ধরনের বিভক্তি লক্ষ্য করা যায়?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
 
 Answer:
-    ন্যাটো (NATO - North Atlantic Treaty Organization):
-    - ১৯৪৯ সালের ৪ এপ্রিল ওয়াশিংটন চুক্তির মাধ্যমে প্রতিষ্ঠিত উত্তর আমেরিকা ও ইউরোপের দেশগুলোর একটি যৌথ রাজনৈতিক ও সামরিক প্রতিরক্ষা জোট (বর্তমান সদস্য সংখ্যা ৩২টি রাষ্ট্র)।
+   ন্যাটো (NATO - North Atlantic Treaty Organization):
+   - ১৯৪৯ সালের ৪ এপ্রিল ওয়াশিংটন চুক্তির মাধ্যমে প্রতিষ্ঠিত উত্তর আমেরিকা ও ইউরোপের দেশগুলোর একটি যৌথ রাজনৈতিক ও সামরিক প্রতিরক্ষা জোট (বর্তমান সদস্য সংখ্যা ৩২টি রাষ্ট্র)।
 
-    বর্তমান প্রেক্ষাপটে সদস্য রাষ্ট্রসমূহের মধ্যকার বিভক্তি:
-    - ১. প্রতিরক্ষা ব্যয় বরাদ্দ (Defense Spending): জিডিপির ন্যূনতম ২% প্রতিরক্ষা খাতে ব্যয় করার লক্ষ্যমাত্রা পূরণে যুক্তরাষ্ট্র এবং কিছু ইউরোপীয় মিত্রের মধ্যে দীর্ঘদিনের মতবিরোধ।
-    - ২. ইউক্রেন যুদ্ধ কৌশল: ইউক্রেনকে দূরপাল্লার ভারী অস্ত্র সরবরাহ ও সরাসরি সামরিক সম্পৃক্ততার মাত্রা নিয়ে পূর্ব ইউরোপীয় রাষ্ট্রগুলোর কঠোর অবস্থান বনাম পশ্চিম ইউরোপীয় কিছু দেশের সতর্ক অবস্থান।
-    - ৩. রাশিয়ার সাথে জ্বালানি ও দ্বিপাক্ষিক সম্পর্ক: তুরস্ক ও হাঙ্গেরির স্বাধীন কৌশলগত অবস্থান এবং ন্যাটোর সম্প্রসারণে সময়ক্ষেপণ জোটের অভ্যন্তরে সমন্বয়হীনতা প্রকাশ করে।
+   বর্তমান প্রেক্ষাপটে সদস্য রাষ্ট্রসমূহের মধ্যকার বিভক্তি:
+   - ১. প্রতিরক্ষা ব্যয় বরাদ্দ (Defense Spending): জিডিপির ন্যূনতম ২% প্রতিরক্ষা খাতে ব্যয় করার লক্ষ্যমাত্রা পূরণে যুক্তরাষ্ট্র এবং কিছু ইউরোপীয় মিত্রের মধ্যে দীর্ঘদিনের মতবিরোধ।
+   - ২. ইউক্রেন যুদ্ধ কৌশল: ইউক্রেনকে দূরপাল্লার ভারী অস্ত্র সরবরাহ ও সরাসরি সামরিক সম্পৃক্ততার মাত্রা নিয়ে পূর্ব ইউরোপীয় রাষ্ট্রগুলোর কঠোর অবস্থান বনাম পশ্চিম ইউরোপীয় কিছু দেশের সতর্ক অবস্থান।
+   - ৩. রাশিয়ার সাথে জ্বালানি ও দ্বিপাক্ষিক সম্পর্ক: তুরস্ক ও হাঙ্গেরির স্বাধীন কৌশলগত অবস্থান এবং ন্যাটোর সম্প্রসারণে সময়ক্ষেপণ জোটের অভ্যন্তরে সমন্বয়হীনতা প্রকাশ করে।
 
 17. **Prove that n^2 < 2^n, for all natural number n \ge 5.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398]]*
 
 Answer:
-    We prove the inequality $n^2 < 2^n$ for all natural numbers $n \ge 5$ by Mathematical Induction.
+   We prove the inequality $n^2 < 2^n$ for all natural numbers $n \ge 5$ by Mathematical Induction.
 
-    1. Base Case ($n = 5$):
-    - Left Hand Side (LHS) = $5^2 = 25$
-    - Right Hand Side (RHS) = $2^5 = 32$
-    - Since $25 < 32$, the statement holds true for $n = 5$.
+   1. Base Case ($n = 5$):
+   - Left Hand Side (LHS) = $5^2 = 25$
+   - Right Hand Side (RHS) = $2^5 = 32$
+   - Since $25 < 32$, the statement holds true for $n = 5$.
 
-    2. Inductive Hypothesis:
-    - Assume the statement holds true for $n = k$ where $k \ge 5$:
-      $$k^2 < 2^k$$
+   2. Inductive Hypothesis:
+   - Assume the statement holds true for $n = k$ where $k \ge 5$:
+     $$k^2 < 2^k$$
 
-    3. Inductive Step (Prove for $n = k + 1$):
-    - We must show that $(k + 1)^2 < 2^{k+1}$.
-    $$(k + 1)^2 = k^2 + 2k + 1$$
-    - For all $k \ge 5$, we know that $2k + 1 < k^2$ (since $k^2 - 2k - 1 > 0$ for $k \ge 5$).
-    - Therefore:
-      $$(k + 1)^2 = k^2 + 2k + 1 < k^2 + k^2 = 2k^2$$
-    - Applying the inductive hypothesis ($k^2 < 2^k$):
-      $$2k^2 < 2 \times 2^k = 2^{k+1}$$
-    - Hence:
-      $$(k + 1)^2 < 2^{k+1}$$
+   3. Inductive Step (Prove for $n = k + 1$):
+   - We must show that $(k + 1)^2 < 2^{k+1}$.
+   $$(k + 1)^2 = k^2 + 2k + 1$$
+   - For all $k \ge 5$, we know that $2k + 1 < k^2$ (since $k^2 - 2k - 1 > 0$ for $k \ge 5$).
+   - Therefore:
+     $$(k + 1)^2 = k^2 + 2k + 1 < k^2 + k^2 = 2k^2$$
+   - Applying the inductive hypothesis ($k^2 < 2^k$):
+     $$2k^2 < 2 \times 2^k = 2^{k+1}$$
+   - Hence:
+     $$(k + 1)^2 < 2^{k+1}$$
 
-    Conclusion:
-    - By the Principle of Mathematical Induction, $n^2 < 2^n$ is true for all natural numbers $n \ge 5$.
+   Conclusion:
+   - By the Principle of Mathematical Induction, $n^2 < 2^n$ is true for all natural numbers $n \ge 5$.
 
