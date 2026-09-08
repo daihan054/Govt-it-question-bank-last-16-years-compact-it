@@ -250,11 +250,17 @@
    (c) Arithmetic expression evaluation  
    (d) All of the above
 
+   answer: d — All of the above  
+   explanation: A stack drives the function call stack, the stock span problem and postfix expression evaluation, so all three are stack applications.
+
 2. **The minimum number of stacks needed to implement a queue is** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 1  
    (b) 2  
    (c) 3  
    (d) 4
+
+   answer: b — 2  
+   explanation: One stack holds incoming items and the second reverses them for removal, which turns LIFO behaviour into FIFO.
 
 3. **Which Data structure is needed to convert infix notation to postfix notation?** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*  
    a) Branch  
@@ -262,11 +268,17 @@
    c) Queue  
    d) Stack
 
+   answer: d — Stack  
+   explanation: The shunting-yard algorithm holds operators on a stack and pops them according to precedence while producing postfix output.
+
 4. **Find the output of the following prefix expression *+2-2 \text{ } 1/4 \text{ } 2+-531** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) 2  
    b) 12  
    c) 10  
    d) 4
+
+   answer: d — 4  
+   explanation: Evaluating the prefix expression gives *( +(2, -(2,1)), /(4, +(-(5,3),1)) ) = 3 × (4/3) = 4; the printed string carries a stray extra operand from OCR. <!-- verify -->
 
 5. **Which data structure allows insertion and deletion of elements from both ends?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*  
    (a) Deque  
@@ -274,11 +286,20 @@
    (c) Stack  
    (d) Linked list
 
+   answer: a — Deque  
+   explanation: A double-ended queue supports insertion and deletion at both the front and the rear.
+
 6. **In data structure use recursion?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Stack
 
+   answer: Stack  
+   explanation: Every recursive call pushes a new activation record with its parameters and return address onto the call stack.
+
 7. **What is the prefix conversion of the expression \text{A}+(\text{B}-\text{C})*\text{D}?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** +\text{A}*-\text{BCD}
+
+   answer: +A*-BCD  
+   explanation: A+(B-C)*D becomes +(A, *( -(B,C), D)), which written in prefix is +A*-BCD.
 
 8. **An example of a hierarchical data structure is ______** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*  
    (ক) Array  
@@ -286,11 +307,17 @@
    (গ) Tree  
    (ঘ) Ring
 
+   answer: গ — Tree  
+   explanation: A tree stores parent-child links, which is exactly a hierarchical relationship.
+
 9. **Which of the following data structures follows the LIFO principle?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*  
    (ক) stack  
    (খ) Linked list  
    (গ) Queue  
    (ঘ) Graph
+
+   answer: ক — stack  
+   explanation: A stack removes the most recently added element first, which is Last In First Out.
 
 10. **A stack is also called-** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*  
    (ক) Last in First Out  
@@ -298,11 +325,17 @@
    (গ) Last In Last Out  
    (ঘ) First in Frist Out
 
+   answer: ক — Last in First Out  
+   explanation: The last item pushed onto a stack is the first one popped off.
+
 11. **What is postfix expression of the string, a+(b-c)*d?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
    a) abc-d*+  
    b) abcd - *+  
    c) ad* bc -  
    d) abc – d+*
+
+   answer: a — abc-d*+  
+   explanation: (b-c) becomes bc-, multiplying by d gives bc-d*, and adding a in front gives abc-d*+.
 
 12. **In a shop, customers are provided the service as a first come first serve policy. But some special customers can be served at any time based on their importance. Which data structure most fits this scenario?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
    a. Stack  
@@ -310,11 +343,17 @@
    c. Priority Queue  
    d. Dequeue
 
+   answer: c — Priority Queue  
+   explanation: A priority queue serves in arrival order by default but lets higher-priority items jump ahead.
+
 13. **Which of the following data structures can be used both as Stack and Queue?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*  
    a. Vector  
    b. Hash Table  
    c. Deque  
    d. Binary Search Tree
+
+   answer: c — Deque  
+   explanation: A deque allows insert and delete at both ends, so restricting it to one end gives a stack and to opposite ends gives a queue.
 
 14. **Suppose you are implementing a Queue of size N using a non-circular linked list having a front and a rare pointer as shown in the figure. The enqueue operation inserts a new node at the front and the dequeue operation deletes a node from the rare. Which one of the following is the time complexity of the most efficient implementation of the enqueue and dequeue operations, respectively on this data structure?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 175 (ET: N/A)]*
    ```
@@ -330,11 +369,17 @@
    c) \theta(n), \theta(1)  
    d) \theta(n), \theta(n)
 
+   answer: b — θ(1), θ(n)  
+   explanation: Inserting at the head is constant time, but deleting the tail of a singly linked list needs a walk to the previous node, which is θ(n).
+
 15. **Which one is the characteristics of Stack ADT?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
    a) Sequential Index  
    b) Last-In-First Out  
    c) First-In-First Out  
    d) Key indexing
+
+   answer: b — Last-In-First Out  
+   explanation: A stack's defining property is that the most recently pushed element is removed first.
 
 16. **What will be the state of a queue after executing the following operation?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    push(1), push(2), pop(), push(4), push(5), pop()  
@@ -343,11 +388,17 @@
    c) 4, 5  
    d) 1, 4
 
+   answer: c — 4, 5  
+   explanation: A queue removes from the front: the first pop takes 1 and the second takes 2, leaving 4 and 5.
+
 17. **Suppose you want to insert n elements into an empty linked list while maintaining the shorted order. What is the worst-case time complexity?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
    a) \theta(n)  
    b) \theta(n \log n)  
    c) \theta(1)  
    d) \theta(n^2)
+
+   answer: d — θ(n²)  
+   explanation: Each new element may have to be compared past every element already in the list, giving 1+2+...+n comparisons.
 
 18. **The term push and pop are related to the-** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*  
    A) array  
@@ -355,11 +406,17 @@
    C) lists  
    D) All of these
 
+   answer: B — stacks  
+   explanation: Push and pop are the insert and delete operations of a stack.
+
 19. **The data structure required to check whether an expression contains balanced parenthesis is-** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) Stack  
    B) Queue  
    C) Array  
    D) Tree
+
+   answer: A — Stack  
+   explanation: Opening brackets are pushed and each closing bracket must match the one popped, so a stack checks balance.
 
 20. **Pushing an element into stack already having five elements and stack size of 5 then stack becomes-** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*  
    A) Overflow  
@@ -367,11 +424,17 @@
    C) Underflow  
    D) User flow
 
+   answer: A — Overflow  
+   explanation: Pushing onto a stack that is already at its maximum size causes stack overflow.
+
 21. **Which is correct for stack?** *[Bangladesh Bank Assistant Programmer 2016 compact it 243 (ET: N/A)]*  
    A) FIFO  
    B) LIFO  
    C) Both A, B  
    D) None
+
+   answer: B — LIFO  
+   explanation: A stack removes elements in the reverse order they were added.
 
 22. **Find the correct arranged data after stack operation push (1), push (2), pop, push (1), push (2), pop, pop, pop, push (2), pop.** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) 2 2 1 1 2  
@@ -379,11 +442,17 @@
    C) 2 2 2 2 1  
    D) 2 2 2 1 2
 
+   answer: A — 2 2 1 1 2  
+   explanation: Each pop returns the current top: 2, then 2, then 1, then 1, and finally 2.
+
 23. **Stack operations are—** *[Bangladesh Bank Assistant Programmer 2016 compact it 245 (ET: N/A)]*  
    A) delete, insertion  
    B) insertion, delete  
    C) push, pop  
    D) pop, push
+
+   answer: C — push, pop  
+   explanation: Push inserts on the top of the stack and pop removes from the top.
 
 ## Tree & Binary Search Tree (20)
 
