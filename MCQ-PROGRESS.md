@@ -2,13 +2,13 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 0 / 160 done**  ·  **Questions: 0 answered, 0 skipped, 3039 total**
+**Subtopics: 1 / 160 done**  ·  **Questions: 18 answered, 0 skipped, 3039 total**
 
-Next up: `ai-and-ml.md` — Machine Learning & AI Concepts (18)
+Next up: `algorithm.md` — Sorting Algorithms (20)
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
-| `ai-and-ml.md` | IT | 0 / 1 | 0 | 0 | 18 |
+| `ai-and-ml.md` | IT | 1 / 1 | 18 | 0 | 18 |
 | `algorithm.md` | IT | 0 / 6 | 0 | 0 | 70 |
 | `bangla.md` | General | 0 / 9 | 0 | 0 | 310 |
 | `c-programming.md` | IT | 0 / 10 | 0 | 0 | 113 |
