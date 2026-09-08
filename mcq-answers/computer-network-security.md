@@ -604,11 +604,17 @@
    c) Use the user input directly  
    d) Do not remove potential malicious code
 
+   answer: b — Use input validation  
+   explanation: Validating input and using parameterised queries keeps user text as data instead of executable SQL.
+
 2. **A database can be hacked by-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 110 (ET: N/A)]*  
    a) Exploiting weak passwords  
    b) SQL Injection  
    c) Delivering a Trojan  
    d) All of the above
+
+   answer: d — All of the above  
+   explanation: Weak passwords, SQL injection and a Trojan on the server are all routes an attacker uses to reach a database.
 
 3. **Which tool could be used for detecting vulnerability through SQL injection?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*  
    A) nmap  
@@ -616,11 +622,17 @@
    C) bit defender  
    D) UML
 
+   answer: B — metasploit  
+   explanation: Metasploit carries SQL injection modules for probing and exploiting database flaws; nmap only scans ports and Bitdefender is antivirus.
+
 4. **Which tool could be used for deleting vulnerability through SQL Injection?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) Nmap  
    B) Metasploit  
    C) Bitdefender  
    D) UML
+
+   answer: B — Metasploit  
+   explanation: Metasploit is the penetration-testing framework used to find and exploit SQL injection vulnerabilities.
 
 ## Email Security & Spam (2)
 
