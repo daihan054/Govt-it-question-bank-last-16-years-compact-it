@@ -1183,11 +1183,17 @@
    (c) 3.24 meters  
    (d) 4 meters
 
+   answer: a — 4.24 meters  
+   explanation: 5 m north minus 2 m south leaves 3 m north plus 3 m east, so the straight distance is √(3²+3²) = √18 ≈ 4.24 m.
+
 2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) 1  
    (b) 2  
    (c) 3  
    (d) 4
+
+   answer: b — 2  
+   explanation: Weigh 3 against 3; whichever side is heavier (or the remaining 2 if they balance) leaves at most 3 balls, and a second weighing of 1 against 1 finds the heavy one.
 
 3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
@@ -1227,11 +1233,17 @@
    গ. ৬০
    ঘ. ৭২
 
+   answer: Syllogism  
+   explanation: Two premises leading to a necessary conclusion about the subject is the classic form of a syllogism.
+
 4. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
    (a) When a cache hit occurs, the CPU fetches data from ROM.  
    (b) When a cache hit occurs, the CPU fetches data from main memory.  
    (c) When a cache miss occurs, the CPU fetches data from cache memory.  
    (d) When a cache miss occurs, the CPU fetches data from main memory.
+
+   answer: d — When a cache miss occurs, the CPU fetches data from main memory  
+   explanation: On a hit the data comes from cache; only on a miss does the CPU go out to the slower main memory.
 
 5. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
    (a) DRAM requires more power than SRAM  
@@ -1239,11 +1251,17 @@
    (c) SRAM does not need refreshing while DRAM does  
    (d) SRAM stores data in capacitors while DRAM uses flip-flops
 
+   answer: c — SRAM does not need refreshing while DRAM does  
+   explanation: An SRAM cell is a latch that holds its value, while a DRAM cell stores charge on a capacitor that leaks and must be refreshed.
+
 6. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
    (a) Its content can be erased electrically in blocks  
    (b) It requires periodin rewriting of data.  
    (c) It can be rewritten at high speed and used as CPU cache  
    (d) Its entire content is erased by ultraviolet light
+
+   answer: a — Its content can be erased electrically in blocks  
+   explanation: Flash is electrically erasable a block at a time, which is what separates it from EPROM (erased by ultraviolet light).
 
 7. **বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. হাইড্রোজেন  
@@ -1251,11 +1269,17 @@
    গ. কার্বন ডাই-অক্সাইড  
    ঘ. নাইট্রোজেন
 
+   answer: খ — তামা  
+   explanation: তামার পরিবাহিতা খুব বেশি ও দাম তুলনামূলক কম, তাই বিদ্যুৎ পরিবহনে এটিই সবচেয়ে বেশি ব্যবহৃত ধাতু।
+
 8. **Which of the following resembles OATH: PROMISE? [ নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
    (a) Contract : Agreement  
    (b) Deed : Attorney  
    (c) Title : Estate  
    (d) Job : Loyalty
+
+   answer: a — Contract : Agreement  
+   explanation: An oath is a formal kind of promise, just as a contract is a formal kind of agreement.
 
 9. **Which of the following testing strategy is related to the boundary value analysis?[ নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analysis)-এর সাথে সম্পর্কিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) White-box testing  
@@ -1263,11 +1287,17 @@
    (c) Unit testing  
    (d) None of these
 
+   answer: b — Black box testing  
+   explanation: Boundary value analysis picks inputs at the edges of valid ranges using only the specification, without seeing the code.
+
 10. **Data about data is also called—[ ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Data store  
    (b) Data bank  
    (c) Meta Data  
    (d) Warehouse
+
+   answer: c — Meta Data  
+   explanation: Metadata describes other data — its names, types, sizes and constraints.
 
 ## Time & Work (9)
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*  
