@@ -1626,8 +1626,14 @@
    গ. 2/5  
    ঘ. 5/2
 
+   answer: গ — 2/5  
+   explanation: (secA + tanA)(secA - tanA) = sec²A - tan²A = 1, তাই secA - tanA = 1 ÷ (5/2) = 2/5।
+
 2. **একটি ৪৮ মিটার লম্বা খুঁটি ভেঙ্গে সম্পূর্ণভাবে বিচ্ছিন্ন না হয়ে ভূমির সাথে 30^\circ কোন উৎপন্ন করে। খুঁটিটি কত উচুতে ভেঙ্গে ছিল?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ১৬
+
+   answer: ১৬ মিটার  
+   explanation: ভাঙা অংশ ভূমির সঙ্গে ৩০° কোণ করলে ভাঙার উচ্চতা h এবং হেলানো অংশ 48-h; sin30° = h/(48-h) = 1/2 দেয় h = 16 মিটার।
 
 3. **\tan A = 5/12 হলে, \sin A এর মান কত?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. \frac{5}{13}  
@@ -1635,11 +1641,17 @@
    C. \frac{5}{17}  
    D. \frac{5}{12}
 
+   answer: A — 5/13  
+   explanation: tan A = 5/12 মানে লম্ব ৫, ভূমি ১২, তাই অতিভুজ √(25+144) = 13 এবং sin A = 5/13।
+
 4. **\sin A + \cos A = \sin B + \cos B এবং A + B = ?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. \pi  
    B. 2\pi  
    C. \pi/2  
    D. \pi/4
+
+   answer: C — π/2  
+   explanation: sinA + cosA = sinB + cosB সমীকরণটি A ≠ B হলে A + B = π/2 হলেই সিদ্ধ হয়, কারণ তখন sinB = cosA ও cosB = sinA।
 
 ## Probability & Statistics (4)
 
