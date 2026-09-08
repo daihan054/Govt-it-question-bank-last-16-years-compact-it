@@ -23,14 +23,23 @@
    c) <title>  
    d) <html>
 
+   answer: d — <html>  
+   explanation: Everything in the document sits inside the <html> element, which is the root of the tree.
+
 2. **How to create an unordered list (a list with the list items in bullets) in HTML?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 6 (ET: BIBM)]*  
    a) <ul>  
    b) <ol>  
    c) <li>  
    d) <i>
 
+   answer: a — <ul>  
+   explanation: <ul> creates an unordered (bulleted) list, with each item in an <li>.
+
 3. **What is the popular way to linking many documents?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** hyperlink
+
+   answer: Hyperlink  
+   explanation: A hyperlink, written with the anchor tag <a href="...">, connects one document to another so users can jump between them.
 
 4. **URL stands for–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*  
    a) Universal Resource Locator  
@@ -38,11 +47,17 @@
    c) Unique Resource Locator  
    d) None
 
+   answer: b — Uniform Resource Locator  
+   explanation: A URL gives the uniform address of a resource — its scheme, host and path.
+
 5. **XSLT processors evaluate each statement in the context of the match that has been made. That is, XSLT processors are:** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
    a) Context oriented  
    b) Procedural oriented  
    c) Object oriented  
    d) Relational oriented
+
+   answer: a — Context oriented  
+   explanation: XSLT evaluates each instruction relative to the current node it has matched, so the context node determines the result.
 
 6. **Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embedded image which also resides at S. Assuming no web caching which of the following is correct when you load the webpage along with the embedded image?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 85 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*  
    a. C need to send at least 2 HTTP requests to S using two different TCP connection.  
@@ -50,17 +65,26 @@
    c. A single HTTP request is sufficient without using any TCP connection from C to S.  
    d. A single HTTP request is sufficient using a single TCP connection from C to S.
 
+   answer: b — C need to send at least 2 HTTP requests to S but a single TCP connection is sufficient  
+   explanation: The page and the image are separate resources needing separate GETs, but HTTP/1.1 keeps the connection alive so one TCP connection carries both.
+
 7. **Which one is the first search engine?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 160 (ET: N/A)]*  
    A) Google  
    B) Archie  
    C) Alta vista  
    D) WAIS
 
+   answer: B — Archie  
+   explanation: Archie, built in 1990, indexed FTP file listings and is regarded as the first internet search engine.
+
 8. **The newest version of HTML is:** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) WML  
    B) HTML5  
    C) XSL  
    D) HTML3
+
+   answer: B — HTML5  
+   explanation: HTML5 is the current standard, adding native audio, video, canvas and semantic elements.
 
 9. **When a web browser interacts with a web server, the following actions take place?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 183 (ET: N/A)]*  
    A1: The web browser requests a webpage using HTTP.  
@@ -73,11 +97,17 @@
    c) A4, A1, A2, A3  
    d) A2, A4, A1, A3
 
+   answer: a — A4, A2, A1, A3  
+   explanation: The browser first resolves the name through DNS, then opens a TCP connection, sends the HTTP request and finally receives the response.
+
 10. **Which HTML attribute is used to hide characters of an input password?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*  
    a) href  
    b) type  
    c) tyle  
    d) src
+
+   answer: b — type  
+   explanation: Setting type="password" on an input makes the browser mask the characters as they are typed.
 
 11. **Which of the followings is not a built-in HTML tag?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 157 (ET: DU)]*  
    a) <script>  
@@ -85,11 +115,17 @@
    c) <html>  
    d) All of these are valid built-in HTML tags
 
+   answer: d — All of these are valid built-in HTML tags  
+   explanation: <script>, <form> and <html> are all standard HTML elements.
+
 12. **Which of the following converts the documents written by HTML?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. Browser  
    B. FTP  
    C. HTPP  
    D. Web
+
+   answer: A. Browser  
+   explanation: The browser parses the HTML and renders it as the formatted page the user sees.
 
 13. **A nonstandard HTML extension that causes scrolling text to appear as pan of a Web page is-** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) DHCP  
@@ -97,17 +133,26 @@
    C) Dhrystone  
    D) marquee
 
+   answer: D — marquee  
+   explanation: <marquee> was a non-standard tag that scrolled text across the page; it is deprecated and CSS animation replaces it.
+
 14. **Which of the following tags is used to create a paragraph in HTML?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
    A) <para>content</para>  
    B) <cont>para</cont>  
    C) <p> content</p>  
    D) <body>content</body>
 
+   answer: C — <p> content</p>  
+   explanation: The <p> element marks a paragraph of text.
+
 15. **One advantage of XML compared to HTML is ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*  
    a. XML works on more platforms  
    b. XML is suited to using webpage as frontend to database  
    c. XML was designed for portable phone  
    d. XML is simpler to learn than html
+
+   answer: b — XML is suited to using webpage as frontend to database  
+   explanation: XML separates data from presentation and carries self-describing structured content, which makes it good for exchanging database records.
 
 ## PHP & Server-Side (9)
 
