@@ -37,6 +37,9 @@
    (c) 25  
    (d) 5
 
+   answer: a — 15  
+   explanation: fun receives the address of x, so *p = *p + 10 changes x to 15 and returns 15.
+
 2. **Find Output:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xviii (ET: DU)]*
    ```cpp
    int main() {
@@ -54,6 +57,9 @@
    (c) 2 3  
    (d) 3 1
 
+   answer: b — 3 2  
+   explanation: x is 3 so the if branch runs and keeps y = 2; the program prints "3 2".
+
 3. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    ```c
    int main() {
@@ -66,6 +72,9 @@
    (b) 10  
    (c) 0  
    (d) 1
+
+   answer: c — 0  
+   explanation: > is left-associative, so x>y>z becomes (20>10)>5 = 1>5 = 0.
 
 4. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    ```c
@@ -80,6 +89,9 @@
    (b) muli is printed infinitely  
    (c) muli is printed twice  
    (d) muli is printed thrice
+
+   answer: d — muli is printed thrice  
+   explanation: k takes the values 0.0, 1.0 and 2.0 before 3.0 fails the test, so the loop body runs three times.
 
 5. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*
    ```c
@@ -99,6 +111,9 @@
    (c) 10  
    (d) 25
 
+   answer: c — 10  
+   explanation: The inner loop runs i times for each i, giving 0+1+2+3+4 = 10.
+
 6. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    ```c
    int main() {
@@ -112,6 +127,9 @@
    (b) k, 81  
    (c) k, Q  
    (d) Q, K
+
+   answer: b — k, 81  
+   explanation: %c prints int 107 as the character 'k', and %d prints char 'Q' as its ASCII code 81.
 
 7. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    ```c
@@ -127,6 +145,9 @@
    (c) 6  
    (d) 11
 
+   answer: b — 5  
+   explanation: The flat index is i*3*2 + j*2 + k = 0 + 4 + 1 = 5, and the initialiser puts 5 at that position.
+
 8. **What will be the output of the following C code?** *[Combined Bank Officer (IT) 04.10.2024 compact it 17 (ET: BIBM)]*
    ```c
    int main() {
@@ -139,6 +160,9 @@
    (b) 12  
    (c) 13  
    (d) 14
+
+   answer: a — 11  
+   explanation: 11 is 1011 and 3 is 0011, so bitwise OR gives 1011 = 11.
 
 9. **What will be the output of this C program?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*
    ```c
@@ -154,6 +178,9 @@
    b) 57  
    c) 57.000000  
    d) The program has errors and will not run.
+
+   answer: b — 57  
+   explanation: 5*10.5 + 5.0 = 57.5, and assigning to int truncates the fraction to 57.
 
 10. **Which of the following Output of this program?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*
    ```c
@@ -171,6 +198,9 @@
    (C) 4 4 4 4  
    (D) 0 0 0 0
 
+   answer: A — 4 3 2 1  
+   explanation: i is static so it keeps its value across the recursive main() calls, printing 4, 3, 2, 1 before --i makes it 0 and the if fails.
+
 11. **Given Output:** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*
    ```c
    #include <stdio.h>
@@ -185,6 +215,9 @@
    (B) 1  
    (C) A bog negative Number  
    (D) Compiler Error
+
+   answer: A — 0  
+   explanation: y is 0, so the comparison y != 0 is false and x gets the value 0.
 
 12. **How many times will loop iterate?** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*  
    (a) 9  
@@ -204,6 +237,9 @@
    c) 101  
    d) 98
 
+   answer: b — 100  
+   explanation: x increases by 2 from 0 and the loop stops as soon as x reaches 100, which fails x<100.
+
 14. **Determine Output:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*
    ```c
    void main() {
@@ -215,6 +251,9 @@
    (b) 0 0 0  
    (c) garbage values  
    (d) Error
+
+   answer: c — garbage values  
+   explanation: i, j and k are used in their own initialisers before they hold any value, so the variables are uninitialised and print garbage.
 
 15. **Determine Output:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
    ```c
@@ -233,6 +272,9 @@
    (c) Linking error  
    (d) None of these
 
+   answer: b — Compiler Error  
+   explanation: C does not allow a member to be initialised inside a struct declaration, so int x=3 and char name[]="hello" are rejected.
+
 16. **Assume that the size of an integer is 4 bytes, predict the output of following program.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*
    ```c
    #include <stdio.h>
@@ -248,6 +290,9 @@
    (c) Compiler Error  
    (d) 0 4
 
+   answer: a — 12 4  
+   explanation: sizeof is a compile-time operator and does not evaluate its operand, so i++ never runs; i stays 12 and j is 4.
+
 17. **Which is the correct output?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*
    ```c
    int i = 4; printf("%d %d", +1,i++); printf("%d", i++);
@@ -257,6 +302,9 @@
    c) 6 4 6  
    d) 1 4 5
 
+   answer: d — 1 4 5  
+   explanation: +1 is unary plus giving 1, and i++ yields 4 while making i 5; the second printf then yields 5.
+
 18. **Which is correct output?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*
    ```c
    int a = 100; int *p = &a +2; *p = 22; printf("%d", a);
@@ -265,6 +313,9 @@
    b) 22  
    c) Error  
    d) Garbage value
+
+   answer: a — 100  
+   explanation: &a + 2 points past the variable, so writing 22 there does not touch a, which still prints 100 (this is undefined behaviour).
 
 19. **Find the correct output:** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*
    ```c
@@ -276,6 +327,9 @@
    c) 20 10  
    d) Garbage Value
 
+   answer: c — 20 10  
+   explanation: The three XOR steps are the classic swap without a temporary, so a becomes 20 and b becomes 10.
+
 20. **What is the correct output of the following C program statements?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)], [6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*
    ```c
    int array[]={6, 7, 8, 9, 0, 1, 2, 4, 5, 6}, *p=array+5;
@@ -285,6 +339,9 @@
    b. 2  
    c. 3  
    d. Compile Error
+
+   answer: b — 2  
+   explanation: p points at array[5], so p[1] is array[6], which is 2.
 
 21. **What is the output for the following C code segment?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*
    ```c
@@ -297,6 +354,9 @@
    b. 5  
    c. 03  
    d. 05
+
+   answer: d — 05  
+   explanation: printf("0") prints 0 and returns 1 (characters written), which is true, so i becomes 5 and is printed after the 0.
 
 22. **Consider the function fun (x, y) below. That is the value of fun (4, 3)?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*
    ```c
@@ -311,6 +371,9 @@
    c. 9  
    d. 10
 
+   answer: a — 13  
+   explanation: The calls run fun(4,3) → fun(3,7) → fun(2,10) → fun(1,12) → fun(0,13), and the last one returns y = 13.
+
 23. **What does the following function do?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*
    ```c
    int fun(int x, int y) {
@@ -322,6 +385,9 @@
    b. x+x*y  
    c. x*y  
    d. xy
+
+   answer: c — x*y  
+   explanation: The function adds x to itself y times before hitting the base case, which is repeated addition, i.e. x*y.
 
 24. **Find Output:** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)]*
    ```c
@@ -340,6 +406,9 @@
    c. '0', 'c+3'  
    d. '0', 'f'
 
+   answer: a — 0, f  
+   explanation: The bytes are read through a char pointer, and the third member 'c'+3 is 99+3 = 102, which %c prints as f without quotes.
+
 25. **Find the output:** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 163 (ET: N/A)]*
    ```c
    int a= 10, c, b;
@@ -351,6 +420,9 @@
    c) 20, 11  
    d) 99, 20
 
+   answer: b — 99, 11  
+   explanation: (a=99) is an assignment whose value 99 is non-zero, so the true branch runs and c gets b = 11, while a is now 99.
+
 26. **What will be the output of following code?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 164 (ET: N/A)]*
    ```c
    int x=5, y=5, z=5;
@@ -361,6 +433,9 @@
    c) 16  
    d) 19
 
+   answer: c — 16  
+   explanation: ++z makes z 6, then 6+5-1-5+6 = 11, and x++ adds its old value 5, giving 16.
+
 27. **What will be the output of the given line?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
    ```c
    printf("%d",sizeof(int));
@@ -370,17 +445,26 @@
    c) 1  
    d) 8
 
+   answer: b — 4  
+   explanation: On a normal 32-bit or 64-bit compiler an int is 4 bytes.
+
 28. **Which for loop statement is invalid?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
    a) for(int x=10; k<=5; x/9)  
    b) for(int x=10; x>=2; --x)  
    c) for(int x=10; x>=200; x=3*x)  
    d) for(int x=10; x>=0; x+=2)
 
+   answer: a — for(int x=10; k<=5; x/9)  
+   explanation: k is never declared, so the condition does not compile; the other three are syntactically valid even though (d) loops forever.
+
 29. **Which type of following errors is generated when the program is being execute?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*  
    A) Syntax error  
    B) Semantic error  
    C) Run-time error  
    D) Linker error
+
+   answer: C — Run-time error  
+   explanation: Run-time errors, such as divide by zero or an invalid memory access, appear only while the program is executing.
 
 30. **Which is the correct output?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*
    ```c
@@ -393,6 +477,9 @@
    c) 6 4 6  
    d) 4 5 7
 
+   answer: c — 6 4 6  
+   explanation: GCC evaluates printf arguments right to left, so i++ gives 4 (i becomes 5) and ++i then gives 6; the next printf yields 6.
+
 31. **What will happen if this C program is compiled and executed?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 152 (ET: DU)]*
    ```c
    #include<stdio.h>
@@ -404,6 +491,9 @@
    b) There will be a compile error and the program will not execute  
    c) No output (Output screen will be empty)  
    d) There will be a run-time error
+
+   answer: c — No output (Output screen will be empty)  
+   explanation: main only returns 0 — there is no printf — so the program compiles, runs and prints nothing.
 
 32. **What will be the output of this C program?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    ```c
@@ -419,6 +509,9 @@
    b) 57  
    c) 57.000000  
    d) The program has errors and will not run.
+
+   answer: b — 57  
+   explanation: 5*10.5 + 5.0 = 57.5, and storing it in an int drops the fractional part.
 
 33. **What will be the output of this C program?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*
    ```c
@@ -436,11 +529,17 @@
    c) No output (Output screen will be empty  
    d) The program will cause an infinite loop and has to be stopped manually
 
+   answer: b — 1-  
+   explanation: A do-while always runs the body once, printing "1-" and making i 2; the test i<=0 then fails immediately.
+
 34. **If any error occurs due to violation of programming rule is ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
    a) Syntax error  
    b) Run-time Errors  
    c) Linker Errors  
    d) Logical Errors
+
+   answer: a — Syntax error  
+   explanation: Breaking the grammar rules of the language, such as a missing semicolon, is a syntax error caught by the compiler.
 
 35. **Find output in C- Program:** *[BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*
    ```c
@@ -455,6 +554,9 @@
    C) d  
    D) 0
 
+   answer: C — d  
+   explanation: %c prints the character whose ASCII code is 100, which is 'd'.
+
 36. **What will be output if you compile & and execute following C code?** *[Bangladesh Bank Assistant Programmer 2011 compact it 272 (ET: N/A)]*
    ```c
    void main() {
@@ -467,6 +569,9 @@
    b. 6  
    c. 0  
    d. Compiler Error
+
+   answer: d — Compiler Error  
+   explanation: i is declared const, so the assignment in i++ is rejected at compile time.
 
 ## Control Statements & Loops (16)
 
