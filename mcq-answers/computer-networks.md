@@ -2926,17 +2926,26 @@
    (c) Cyclic Redundancy Cycle  
    (d) Cyclic Redundancy Club
 
+   answer: a — Cyclic Redundancy Check  
+   explanation: CRC divides the data by a generator polynomial and sends the remainder, which the receiver uses to detect errors.
+
 2. **Which error detection method involves the use of parity bits?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*  
    (a) Simple parity check  
    (b) Two-dimensional parity check  
    (c) CRC  
    (d) a and b
 
+   answer: d — a and b  
+   explanation: Both the simple parity check and the two-dimensional parity check add parity bits; CRC uses polynomial division instead.
+
 3. **Type of error which occurs when data is transferred from one device to another is classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*  
    A) transmission error  
    B) interval error  
    C) software error  
    D) discontinued error
+
+   answer: A — transmission error  
+   explanation: Errors introduced while data travels between devices — from noise, attenuation or interference — are transmission errors.
 
 ## Switching Techniques (3)
 
