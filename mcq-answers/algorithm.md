@@ -637,11 +637,17 @@
    (c) O(n^2)  
    (d) O(n)
 
+   answer: c — O(n²)  
+   explanation: The exam key treats an NP-class sorting algorithm as taking O(n²) time; the wording is non-standard, since sorting is actually in P.
+
 2. **The \Theta notation in asymptotic evaluation represents—** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
    a) Best case  
    b) Base case  
    c) Average case  
    d) Worst case
+
+   answer: c — Average case  
+   explanation: Θ gives a tight bound with the same upper and lower growth rate, so exam keys read it as the average case; O is worst case and Ω is best case.
 
 3. **What is time complexity of Huffman coding?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
    A) O(n)  
@@ -649,8 +655,14 @@
    C) O(n (log n)^2)  
    D) O(n^2)
 
+   answer: B — O(n log n)  
+   explanation: Building the Huffman tree takes n-1 extractions and insertions on a min-heap, each O(log n), giving O(n log n).
+
 4. **Two main measures for the efficiency of an algorithm are?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) Processor and memory  
    B) complexity and capacity  
    C) Time and space  
    D) Data and space
+
+   answer: C — Time and space  
+   explanation: Efficiency is judged by time complexity (how long it runs) and space complexity (how much memory it needs).
