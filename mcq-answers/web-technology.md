@@ -381,11 +381,17 @@
    (c) Jetty  
    (d) Tornado
 
+   answer: b — PHP  
+   explanation: PHP is a server-side scripting language that runs inside a web server; Tomcat, Jetty and Tornado are servers themselves.
+
 2. **What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
    a) A Java application  
    b) A Java applet  
    c) A Java servlet  
    d) None of the above is correct
+
+   answer: c — A Java servlet  
+   explanation: A servlet runs inside the server's container and generates the HTTP response; an applet would run in the browser.
 
 3. **Word Press can be called as ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*  
    A) Static website  
@@ -393,17 +399,26 @@
    C) Content Managed website  
    D) E-Commerce website
 
+   answer: C — Content Managed website  
+   explanation: WordPress is a content management system, so pages are created and edited through its admin interface.
+
 4. **What type of system is Cisco mail platform?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. Linux  
    b. MAC  
    c. Windows  
    d. Atari
 
+   answer: a — Linux  
+   explanation: Cisco's mail and messaging platforms run on a hardened Linux-based appliance operating system.
+
 5. **Where the application server is installed for the web server?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*  
    a. Cisco MCS with cisco-based Windows operating system  
    b. Cisco MCS with cisco-based Unix operating system  
    c. Cisco MCS with cisco-based Linux operating system  
    d. Cisco MCS with cisco-based MAC operating system
+
+   answer: c — Cisco MCS with cisco-based Linux operating system  
+   explanation: The Cisco Media Convergence Server runs Cisco's own Linux-based appliance OS for its application servers.
 
 ## HTTP & Status Codes (5)
 
