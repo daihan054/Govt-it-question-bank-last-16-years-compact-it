@@ -846,17 +846,26 @@
    (c) Stack  
    (d) Table
 
+   answer: a — Heap Tree  
+   explanation: A binary heap keeps the highest-priority element at the root and supports insert and extract in O(log n).
+
 2. **What is the best way to implement priority queue?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*  
    (a) Array  
    (b) Linked List  
    (c) Heap  
    (d) Stack
 
+   answer: c — Heap  
+   explanation: A heap gives O(log n) insertion and O(log n) removal of the top element, beating the O(n) of an array or list.
+
 3. **In the priority queue, insertion and deletion take place at –** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*  
    a) Front and rear end  
    b) Only at the front end  
    c) Only at the rear end  
    d) Any position
+
+   answer: a — Front and rear end  
+   explanation: New elements enter at the rear and are positioned by priority, while removal always takes the highest-priority element from the front.
 
 ## Hashing & Hash Tables (2)
 
