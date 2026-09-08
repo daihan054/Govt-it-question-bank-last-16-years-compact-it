@@ -522,11 +522,17 @@
    (c) Encrypted using mono-alphabetic cipher  
    (d) Encrypted using homophonic substitution cipher
 
+   answer: b — Encrypted using some sort of hashing function  
+   explanation: Linux stores a salted one-way hash in /etc/shadow, so the original password cannot be recovered from it.
+
 2. **Which of the following Linux command has incorrect syntax?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*  
    (a) cat sample.txt | grep -v a | sort - r  
    (b) chown:group3 File 1  
    (c) chmoda+rx viewer.sh  
    (d) None of the above
+
+   answer: c — chmoda+rx viewer.sh  
+   explanation: The command name and its mode argument must be separated, so it should read chmod a+rx viewer.sh. <!-- verify -->
 
 3. **What is the maximum size of a file allowed in Linux with the following data Block Size = 4KB, inode data pointer size = 4 byte?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*  
    (a) 1 TB  
@@ -534,11 +540,17 @@
    (c) 2TB+2GB+2MB+64KB  
    (d) More than 4 TB
 
+   answer: d — More than 4 TB  
+   explanation: 4 KB blocks with 4-byte pointers give 1024 pointers per block, so 12 direct + single + double + triple indirect reaches about 4 TB plus 4 GB, 4 MB and 48 KB.
+
 4. **Which UNIX/Linux command is used to make all files and sub-directories in the directory "progs" executable by all users?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*  
    (a) chmod -R a+x progs  
    (b) chmod -R 222 progs  
    (c) chmod -X a+x progs  
    (d) chmod -X 222 progs
+
+   answer: a — chmod -R a+x progs  
+   explanation: -R applies the change recursively through the directory, and a+x adds execute permission for all users.
 
 5. **USER150, USER153 can do certain tasks and USER151, USER152 can also do certain tasks as depicted in the picture. For this reason, two ________ have been created.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*
    ```
@@ -558,11 +570,17 @@
    c) Functions  
    d) Stord Procedures
 
+   answer: a — Roles  
+   explanation: A role bundles a set of privileges and is granted to several users at once, which is exactly the grouping shown.
+
 6. **In UNIX, the login prompt can be changed by changing the content of the file-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
    A) gettydefs  
    B) contrab  
    C) inittab  
    D) init
+
+   answer: A — gettydefs  
+   explanation: /etc/gettydefs holds the terminal line settings and the login prompt string that getty displays.
 
 7. **Which of the following UNIX commands allows scheduling a program to be executed at specifies time?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
    A) nice  
@@ -570,17 +588,26 @@
    C) date and time  
    D) schedule
 
+   answer: B — cron  
+   explanation: The cron daemon runs jobs at the times listed in crontab.
+
 8. **What command is used to remove files UNIX?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
    A) dm  
    B) rm  
    C) delete  
    D) erase
 
+   answer: B — rm  
+   explanation: rm removes files, and rm -r removes directories with their contents.
+
 9. **You need to determine whether IP information has been assigned to your Windows NT. Which utility should you use?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
    A) NBTSTAT  
    B) NETSTAT  
    C) IPCONFIG  
    D) WINTPCFG
+
+   answer: C — IPCONFIG  
+   explanation: ipconfig displays the IP address, subnet mask and default gateway assigned to each interface.
 
 ## Deadlock (6)
 
