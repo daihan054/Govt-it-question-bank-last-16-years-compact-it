@@ -3411,11 +3411,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Nihon Hidankyo  
    (d) Gary Ruvkun
 
+   answer: c — Nihon Hidankyo  
+   explanation: The 2024 Nobel Peace Prize went to Nihon Hidankyo, the Japanese atomic-bomb survivors' organisation.
+
 2. **Strasbourg belongs to which country?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) France  
    (b) Germany  
    (c) Canada  
    (d) Russia
+
+   answer: a — France  
+   explanation: Strasbourg is in eastern France and hosts the European Parliament.
 
 3. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 3 (ET: BUET)]*  
    ক. লাইবেরিয়া  
@@ -3423,11 +3429,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. ভূটান  
    ঘ. সিয়েরা লিওন
 
+   answer: ঘ — সিয়েরা লিওন  
+   explanation: ২০০২ সালে সিয়েরা লিওন বাংলাদেশি শান্তিরক্ষীদের অবদানের স্বীকৃতিতে বাংলাকে অন্যতম দাপ্তরিক ভাষা ঘোষণা করে।
+
 4. **ভূমধ্যসাগরকে লোহিত সাগরের সাথে যুক্ত করেছে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. পানামা খাল  
    খ. সুয়েজ খাল  
    গ. বেরিং প্রণালি  
    ঘ. পক প্রণালি
+
+   answer: খ — সুয়েজ খাল  
+   explanation: মিসরের সুয়েজ খাল ভূমধ্যসাগর ও লোহিত সাগরকে যুক্ত করেছে।
 
 5. **জাতিসংঘের দাপ্তরিক ভাষা নয় কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. রুশ  
@@ -3435,11 +3447,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. পর্তুগিজ  
    ঘ. আরবি
 
+   answer: গ — পর্তুগিজ  
+   explanation: জাতিসংঘের ছয়টি দাপ্তরিক ভাষা — ইংরেজি, ফরাসি, রুশ, চীনা, স্প্যানিশ ও আরবি; পর্তুগিজ এর মধ্যে নেই।
+
 6. **সর্বশেষ বিশ্বশান্তি সূচকে শীর্ষ দেশ কোনটি?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 5 (ET: BUET)]*  
    ক. ডেনমার্ক  
    খ. ফিনল্যান্ড  
    গ. নরওয়ে  
    ঘ. আইসল্যান্ড
+
+   answer: ঘ — আইসল্যান্ড  
+   explanation: গ্লোবাল পিস ইনডেক্সে আইসল্যান্ড টানা বহু বছর ধরে বিশ্বের সবচেয়ে শান্তিপূর্ণ দেশ।
 
 7. **মার্কিন যুক্তরাষ্ট্রের কোন প্রেসিডেন্ট ১২ বছর ক্ষমতায় ছিলেন?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 6 (ET: BUET)]*  
    ক. ফ্রাঙ্কলিন ডি রুজভেল্ট  
@@ -3447,11 +3465,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. উড্রো উইলসন  
    ঘ. জন এফ কেনেডি
 
+   answer: ক — ফ্রাঙ্কলিন ডি রুজভেল্ট  
+   explanation: রুজভেল্ট ১৯৩৩ থেকে ১৯৪৫ সাল পর্যন্ত চারবার নির্বাচিত হয়ে প্রায় ১২ বছর প্রেসিডেন্ট ছিলেন।
+
 8. **Who are the Permanent members of the United Nations Security Council?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) China, Germany, Russia, United Kingdom, and United States  
    b) China, France, Japan, United Kingdom, and United States  
    c) China, France, Russia, United Kingdom, and United States  
    d) China, France, Russia, Germany, and United States
+
+   answer: c — China, France, Russia, United Kingdom, and United States  
+   explanation: These five victorious powers of World War II hold permanent seats with veto power on the Security Council.
 
 9. **Who is the writer of "On Liberty"?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) Thomas Hobbes  
@@ -3459,11 +3483,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Jean-Jacques Rousseau  
    d) John Locke
 
+   answer: b — John Stuart Mill  
+   explanation: "On Liberty" (1859) is John Stuart Mill's essay on individual freedom against state and social control.
+
 10. **How many members of NATO?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) 40  
    b) 32  
    c) 30  
    d) 35
+
+   answer: b — 32  
+   explanation: NATO grew to 32 members when Sweden joined in March 2024.
 
 11. **Who is the founder of 'SpaceX'?** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*  
    (a) Elon Musk  
@@ -3471,11 +3501,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Ray Tomlinson  
    (d) Larry Page
 
+   answer: a — Elon Musk  
+   explanation: Elon Musk founded SpaceX in 2002.
+
 12. **Martin Cooper is known for his invention of—** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*  
    (a) Digital Camera  
    (b) X-ray  
    (c) Solar Energy  
    (d) Mobile Phone
+
+   answer: d — Mobile Phone  
+   explanation: Martin Cooper of Motorola made the first handheld mobile phone call in 1973.
 
 13. **What is the name of the data center that EU unveils to probe crimes in Ukraine?** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*  
    (a) Tulip  
@@ -3483,11 +3519,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Game Changer  
    (d) None of these
 
+   answer: a — Tulip  
+   explanation: The EU set up this data centre to collect and analyse evidence of crimes committed in Ukraine. <!-- verify -->
+
 14. **The Mona Lisa portrait was painted by Leonardo da Vinci in the-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 18 (ET: BIBM)]*  
    (a) 15th century  
    (b) 14th century  
    (c) 16th century  
    (d) 17th century
+
+   answer: c — 16th century  
+   explanation: Leonardo painted the Mona Lisa between about 1503 and 1519.
 
 15. **Who wrote the book 'Politics'?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 18 (ET: BIBM)]*  
    a) Aristotle  
@@ -3495,11 +3537,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Plato  
    (d) Pythagoras
 
+   answer: a — Aristotle  
+   explanation: "Politics" is Aristotle's treatise on the state and its forms of government.
+
 16. **Pythagoras was a Greek-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 18 (ET: BIBM)]*  
    (a) Philosopher  
    (b) Mathematician  
    (c) Accountant  
    (d) a & b
+
+   answer: d — a & b  
+   explanation: Pythagoras was both a philosopher who founded a school and the mathematician of the famous theorem.
 
 17. **What is the name of American built spacecraft landed in the lunar's southern polar region of February 22, 2024?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 18 (ET: BIBM)]*  
    (a) Apollo-17  
@@ -3507,11 +3555,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Chandrayaan-3  
    (d) Luna-25
 
+   answer: b — Odysseus  
+   explanation: Intuitive Machines' Odysseus (IM-1) landed near the Moon's south pole on 22 February 2024.
+
 18. **OPEC থেকে কোন দেশ নিজেকে প্রত্যাহার করে নেয়?** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*  
    a) নাইজেরিয়া  
    b) লিবিয়া  
    c) ভেনিজুয়েলা  
    d) কাতার
+
+   answer: d — কাতার  
+   explanation: কাতার ২০১৯ সালের ১ জানুয়ারি ওপেক থেকে বেরিয়ে যায় এবং এলএনজি উৎপাদনে মনোযোগ দেয়।
 
 19. **World environment day is celebrated on ______ of every year.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*  
    (a) 5^{\text{th}} June  
@@ -3519,11 +3573,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 2^{\text{nd}} June  
    (d) 1^{\text{st}} June
 
+   answer: a — 5th June  
+   explanation: World Environment Day is observed on 5 June every year.
+
 20. **Which country is known as the 'Rainbow nation'?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 22 (ET: BIBM)]*  
    (a) Chaina  
    (b) South Korea  
    (c) Japan  
    (d) South Africa
+
+   answer: d — South Africa  
+   explanation: Archbishop Desmond Tutu called post-apartheid South Africa the "Rainbow Nation" for its many communities.
 
 21. **Which is the third largest economic country?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 22 (ET: BIBM)]*  
    (a) United States  
@@ -3531,20 +3591,35 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Chaina  
    (d) Kolkata
 
+   answer: b — Japan  
+   explanation: At the time of the exam Japan was the world's third largest economy by nominal GDP, after the United States and China.
+
 22. **The lead character in the film 'The Bandit Queen' has been played by –** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*  
    (a) Rupa Ganguly  
    (b) Seema Biswas  
    (c) Pratiba Sinha  
    (d) Shabana Azmi
 
+   answer: b — Seema Biswas  
+   explanation: Seema Biswas played Phoolan Devi in Shekhar Kapur's "Bandit Queen".
+
 23. **ইসলামি সংস্থা ওআইসি এর সদর দপ্তর কোথায়?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** জেদ্দায়
+
+   answer: জেদ্দা, সৌদি আরব  
+   explanation: ওআইসির সদর দপ্তর সৌদি আরবের জেদ্দায় অবস্থিত।
 
 24. **পারস্য উপসাগরের আঞ্চলিক জোটের নাম কি?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** জিসিসি
 
+   answer: জিসিসি (Gulf Cooperation Council)  
+   explanation: উপসাগরীয় সহযোগিতা পরিষদের সদস্য ছয়টি আরব দেশ — সৌদি আরব, সংযুক্ত আরব আমিরাত, কুয়েত, কাতার, বাহরাইন ও ওমান।
+
 25. **ট্রাফালগার স্কয়ার কোথায় অবস্থিত?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** লন্ডন
+
+   answer: লন্ডন  
+   explanation: ট্রাফালগার স্কয়ার লন্ডনের কেন্দ্রস্থলে, নেলসনের বিজয়ের স্মরণে নির্মিত।
 
 26. **Who is the name current China President?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 28 (ET: BUET)]*  
    (a) Xi Jinping  
@@ -3552,11 +3627,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Yoshihide Suga  
    (d) Jiang Zemin
 
+   answer: a — Xi Jinping  
+   explanation: Xi Jinping has been President of the People's Republic of China since 2013.
+
 27. **What is the name of capital city of Ukraine?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 28 (ET: BUET)]*  
    (a) Kyiv  
    (b) Moscow  
    (c) Paris  
    (d) Helsinki
+
+   answer: a — Kyiv  
+   explanation: Kyiv is the capital of Ukraine.
 
 28. **Which is the name of Sri Lanka currency?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 28 (ET: BUET)]*  
    (a) Rufiyaa  
@@ -3564,11 +3645,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Rupee  
    (d) Dollar
 
+   answer: b — Sri Lankan rupee  
+   explanation: Sri Lanka's currency is the Sri Lankan rupee; the Maldives uses the rufiyaa.
+
 29. **Who is the CEO of Tesla company?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 29 (ET: BUET)]*  
    (a) Tim Cook  
    (b) Elon Musk  
    (c) Sundar Pichai  
    (d) Mark Zuckerberg
+
+   answer: b — Elon Musk  
+   explanation: Elon Musk is the CEO of Tesla.
 
 30. **Who is not space Agency?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    (a) JAXA  
@@ -3576,11 +3663,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) CSA  
    (d) Roscosmos
 
+   answer: b — SPACE  
+   explanation: JAXA is Japan's, CSA is Canada's and Roscosmos is Russia's space agency; "SPACE" is not one.
+
 31. **The Summer Olympic 2024 held on ______** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 30 (ET: BUET)]*  
    (a) Paris  
    (b) Los Angeles  
    (c) Rio de Janeiro  
    (d) Brisbane
+
+   answer: a — Paris  
+   explanation: Paris hosted the Summer Olympic Games in 2024.
 
 32. **What's was the central place of recent Egyptian Protest?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 31 (ET: BUET)]*  
    (a) Azadi Square  
@@ -3588,14 +3681,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Taqdeer Square  
    (d) Central square
 
+   answer: b — Tahrir Square  
+   explanation: Tahrir Square in Cairo was the focal point of the Egyptian protests.
+
 33. **তুরস্ক ও সিরিয়ায় ভূমিকম্পের মাত্রা কত?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 31 (ET: BUET)]*  
    **Ans:** ৭.৮
+
+   answer: ৭.৮ মাত্রা  
+   explanation: ২০২৩ সালের ৬ ফেব্রুয়ারি তুরস্ক ও সিরিয়ায় ৭.৮ মাত্রার ভূমিকম্প আঘাত হানে।
 
 34. **ন্যাশনাল কংগ্রেস কত সালে গঠিত হয়?** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** ১৮৮৫ সালে
 
+   answer: ১৮৮৫ সালে  
+   explanation: ভারতীয় জাতীয় কংগ্রেস ১৮৮৫ সালে বোম্বেতে প্রতিষ্ঠিত হয়।
+
 35. **World Trade Organization (WTO)- এর সদর দপ্তর কোথায় অবস্থিত?** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** জেনেভা
+
+   answer: জেনেভা, সুইজারল্যান্ড  
+   explanation: বিশ্ব বাণিজ্য সংস্থার সদর দপ্তর জেনেভায়।
 
 36. **What is the name of Russian foreign minister?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 73 (ET: N/A)]*  
    (a) Sergey Lavrov  
@@ -3604,19 +3709,40 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) Dmytro Khuleba  
    **Ans: a**
 
+   answer: a — Sergey Lavrov  
+   explanation: Sergey Lavrov has served as Russia's Foreign Minister since 2004.
+
 37. **দক্ষিণ এশিয়ার দীর্ঘতম টাওয়ার কোথায় অবস্থিত? **Ans: কলম্বো**** *[EGCB Assistant Engineer (ICT) 2022 compact it 71 (ET: BUET)]*
+
+   answer: কলম্বো  
+   explanation: শ্রীলঙ্কার কলম্বোর লোটাস টাওয়ার দক্ষিণ এশিয়ার সবচেয়ে উঁচু টাওয়ার।
 
 38. **International Day for Total Elimination of Nuclear Weapons 2022? **Ans: ২৬ সেপ্টেম্বর**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: ২৬ সেপ্টেম্বর  
+   explanation: পারমাণবিক অস্ত্র সম্পূর্ণ বিলোপের আন্তর্জাতিক দিবস প্রতিবছর ২৬ সেপ্টেম্বর পালিত হয়।
+
 39. **আন্তর্জাতিক ট্রান্সলেশন দিবসের থিম কি? **Ans: A world without Barriers**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: A World Without Barriers  
+   explanation: ২০২২ সালের আন্তর্জাতিক অনুবাদ দিবসের প্রতিপাদ্য ছিল এটি।
+
 40. **নোবেল পুরস্কার ২০২২, সাহিত্যে নোবেল কে পেয়েছেন **Ans: এনি আরনেল**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: আনি এরনো (Annie Ernaux)  
+   explanation: ফরাসি লেখিকা আনি এরনো ২০২২ সালে সাহিত্যে নোবেল পুরস্কার পান।
 
 41. **MoTiV কোন দেশের প্রতিষ্ঠান?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: উগান্ডা
 
+   answer: উগান্ডা  
+   explanation: MoTiV উগান্ডাভিত্তিক একটি উদ্ভাবন ও উদ্যোক্তা কেন্দ্র।
+
 42. **SDG এর Goal কয়টি?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ১৭ টি
+
+   answer: ১৭টি  
+   explanation: টেকসই উন্নয়ন অভীষ্টে ১৭টি গোল ও ১৬৯টি টার্গেট রয়েছে।
 
 43. **NATO কোন বছর প্রতিষ্ঠিত হয়?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) ১৯৪৯  
@@ -3625,12 +3751,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) ১৯৫৬  
    **উত্তর: ক**
 
+   answer: ক — ১৯৪৯  
+   explanation: ন্যাটো ১৯৪৯ সালের ৪ এপ্রিল ওয়াশিংটন চুক্তির মাধ্যমে প্রতিষ্ঠিত হয়।
+
 44. **কোন দেশটির ভেটো ক্ষমতা নেই?** *[BPSC Instructor 31.10.2022 compact it 68 (ET: N/A)]*  
    (ক) যুক্তরাষ্ট্র  
    (খ) যুক্তরাজ্য  
    (গ) রাশিয়া  
    (ঘ) জার্মানি  
    **উত্তর: ঘ**
+
+   answer: ঘ — জার্মানি  
+   explanation: ভেটো ক্ষমতা কেবল নিরাপত্তা পরিষদের পাঁচ স্থায়ী সদস্যের — যুক্তরাষ্ট্র, যুক্তরাজ্য, রাশিয়া, ফ্রান্স ও চীন।
 
 45. **কোন দেশটি Group of Seven (G-7) এর সদস্য নয়?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) কানাডা  
@@ -3639,12 +3771,18 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) জাপান  
    **উত্তর: গ**
 
+   answer: গ — সুইডেন  
+   explanation: জি-৭ এর সদস্য যুক্তরাষ্ট্র, যুক্তরাজ্য, ফ্রান্স, জার্মানি, ইতালি, কানাডা ও জাপান।
+
 46. **এশীয় উন্নয়ন ব্যাংক এর সদর দপ্তর কোথায়?** *[BPSC Instructor 31.10.2022 compact it 69 (ET: N/A)]*  
    (ক) হংকং  
    (খ) সিঙ্গাপুর  
    (গ) ম্যানিলা  
    (ঘ) ব্যাংকক  
    **উত্তর: গ**
+
+   answer: গ — ম্যানিলা  
+   explanation: এশীয় উন্নয়ন ব্যাংকের সদর দপ্তর ফিলিপাইনের ম্যানিলায়।
 
 47. **জনসংখ্যার ভিত্তিতে সবচেয়ে বড় মুসলিম দেশ কোনটি?** *[BPSC Instructor 31.10.2022 compact it 70 (ET: N/A)]*  
    (ক) বাংলাদেশ  
@@ -3653,11 +3791,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) সৌদি আরব  
    **উত্তর: খ**
 
+   answer: খ — ইন্দোনেশিয়া  
+   explanation: প্রায় ২৪ কোটি মুসলিম নিয়ে ইন্দোনেশিয়া বিশ্বের সবচেয়ে বেশি মুসলিম-অধ্যুষিত দেশ।
+
 48. **ভারতের কোন রাজ্য Seven Sisters এর অন্তর্ভুক্ত নয়?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) হিমাচল  
    (খ) অরুণাচল  
    (গ) নাগাল্যান্ড  
    (ঘ) সিকিম
+
+   answer: ক — হিমাচল  
+   explanation: সেভেন সিস্টার্স হলো অরুণাচল, আসাম, মণিপুর, মেঘালয়, মিজোরাম, নাগাল্যান্ড ও ত্রিপুরা; হিমাচল উত্তর ভারতের রাজ্য (সিকিমও এর অন্তর্ভুক্ত নয়)।
 
 49. **CIRDAP এর সদর দপ্তর কোথায় অবস্থিত?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 54 (ET: N/A)]*  
    (ক) ব্যাংকক  
@@ -3665,11 +3809,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ঢাকা  
    (ঘ) নয়াদিল্লী
 
+   answer: গ — ঢাকা  
+   explanation: CIRDAP-এর সদর দপ্তর ঢাকার চামেলীবাগে অবস্থিত।
+
 50. **মানব উন্নয়ন সূচক (HDI) কোন সংস্থা প্রকাশ করে?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*  
    (ক) UNDP  
    (খ) ILO  
    (গ) UNEPA  
    (ঘ) ICJ
+
+   answer: ক — UNDP  
+   explanation: জাতিসংঘ উন্নয়ন কর্মসূচি (UNDP) প্রতিবছর মানব উন্নয়ন প্রতিবেদনে HDI প্রকাশ করে।
 
 51. **পৃথিবীর সর্বাপেক্ষা জ্বালানি তেল উৎপাদনকারী দেশ কোনটি?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 56 (ET: N/A)]*  
    (ক) সৌদি আরব  
@@ -3677,11 +3827,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) সংযুক্ত আরব আমিরাত  
    (ঘ) ইরান
 
+   answer: খ — যুক্তরাষ্ট্র  
+   explanation: শেল তেল উত্তোলনের কারণে ২০১৮ সাল থেকে যুক্তরাষ্ট্রই বিশ্বের বৃহত্তম অপরিশোধিত তেল উৎপাদক।
+
 52. **জাতিসংঘের কোন অঙ্গ সংস্থা কোনো দেশের LDC থেকে Developing Country এবং Developing Country থেকে Developed Country এর বিষয়টি নির্ধারণ করে?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) সাধারণ পরিষদ  
    (খ) নিরাপত্তা পরিষদ  
    (গ) জাতিসংঘ  
    (ঘ) অর্থনৈতিক ও সামাজিক পরিষদ
+
+   answer: ঘ — অর্থনৈতিক ও সামাজিক পরিষদ  
+   explanation: ইকোসকের অধীন Committee for Development Policy এলডিসি তালিকা পর্যালোচনা ও উত্তরণের সুপারিশ করে।
 
 53. **ফ্রান্সের সম্রাট নেপোলিয়ান মারা যান কোথায়?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) ওয়াটার লু-তে  
@@ -3689,11 +3845,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) সেন্ট হেলেনা দ্বীপে  
    (ঘ) দ্বীপ এলবাইতে
 
+   answer: গ — সেন্ট হেলেনা দ্বীপে  
+   explanation: ওয়াটারলুতে পরাজয়ের পর নেপোলিয়নকে দক্ষিণ আটলান্টিকের সেন্ট হেলেনা দ্বীপে নির্বাসিত করা হয়, সেখানেই ১৮২১ সালে তিনি মারা যান।
+
 54. **গুড ফ্রাইডে চুক্তি কোন দেশের শান্তির জন্য হয়েছিল?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 58 (ET: N/A)]*  
    (ক) ডেনমার্ক  
    (খ) নরওয়ে  
    (গ) আয়ারল্যান্ড  
    (ঘ) উত্তর কোরিয়া
+
+   answer: গ — আয়ারল্যান্ড  
+   explanation: ১৯৯৮ সালের গুড ফ্রাইডে চুক্তি উত্তর আয়ারল্যান্ডের দীর্ঘ সংঘাতের অবসান ঘটায়।
 
 55. **গ্রীনল্যান্ড কোন দেশ দ্বারা শাসিত অথবা নিয়ন্ত্রিত?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 58 (ET: N/A)]*  
    (ক) যুক্তরাষ্ট্র  
@@ -3701,11 +3863,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ডেনমার্ক  
    (ঘ) ফিনল্যান্ড
 
+   answer: গ — ডেনমার্ক  
+   explanation: গ্রিনল্যান্ড ডেনমার্ক রাজ্যের অধীন একটি স্বায়ত্তশাসিত অঞ্চল।
+
 56. **প্লেগ মহামারী/ব্ল্যাক ডেথ শুরু হয় কোথায়?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 48 (ET: N/A)]*  
    (ক) স্পেন  
    (খ) ফ্রান্স  
    (গ) ইতালী  
    (ঘ) রাশিয়া
+
+   answer: গ — ইতালী  
+   explanation: ১৩৪৭ সালে জেনোয়ার জাহাজে করে প্লেগ সিসিলির মেসিনায় পৌঁছে ইউরোপে ছড়িয়ে পড়ে।
 
 57. **বর্তমান বিশ্বের কোন দেশটির সংবিধানকে "শান্তি সংবিধান" বলা হয়?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) সুইজারল্যান্ড  
@@ -3713,11 +3881,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) জার্মান  
    (ঘ) জাপান
 
+   answer: ঘ — জাপান  
+   explanation: জাপানের সংবিধানের ৯ অনুচ্ছেদে যুদ্ধ পরিত্যাগের ঘোষণা থাকায় একে 'শান্তি সংবিধান' বলা হয়।
+
 58. **বিশ্বে প্রথম দেশ হিসেবে করোনা গণটিকা প্রদান কার্যক্রম শুরু করে কোন দেশ?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) যুক্তরাজ্য  
    (খ) যুক্তরাষ্ট্র  
    (গ) জার্মানী  
    (ঘ) ইতালী
+
+   answer: ক — যুক্তরাজ্য  
+   explanation: ২০২০ সালের ৮ ডিসেম্বর যুক্তরাজ্যই প্রথম দেশ হিসেবে গণহারে কোভিড-১৯ টিকা দেওয়া শুরু করে।
 
 59. **জনসংখ্যা বৃদ্ধির হার সর্বনিম্ন কোন দেশ?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) বুলগেরিয়া  
@@ -3725,11 +3899,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) লাটভিয়া  
    (ঘ) লিথুনিয়া
 
+   answer: ক — বুলগেরিয়া  
+   explanation: নিম্ন জন্মহার ও ব্যাপক অভিবাসনের কারণে বুলগেরিয়ার জনসংখ্যা সবচেয়ে দ্রুত কমছে। <!-- verify -->
+
 60. **এলিসি প্রাসাদ কোন দেশের প্রেসিডেন্টের বাসভবন?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 49 (ET: N/A)]*  
    (ক) রাশিয়া  
    (খ) ফ্রান্স  
    (গ) বলিভিয়া  
    (ঘ) ব্রাজিল
+
+   answer: খ — ফ্রান্স  
+   explanation: প্যারিসের এলিসি প্রাসাদ ফরাসি প্রেসিডেন্টের সরকারি বাসভবন।
 
 61. **ওয়াটার লু কোথায় অবস্থিত?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 50 (ET: N/A)]*  
    (ক) বেলজিয়াম  
@@ -3737,17 +3917,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) ইতালী  
    (ঘ) রাশিয়া
 
+   answer: ক — বেলজিয়াম  
+   explanation: ১৮১৫ সালের ওয়াটারলুর যুদ্ধক্ষেত্র বর্তমান বেলজিয়ামে অবস্থিত।
+
 62. **জাপান ও রাশিয়ার মধ্যকার বিরোধপূর্ণ দ্বীপটির নাম কী?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*  
    (ক) কুরিল দ্বীপপুঞ্জ  
    (খ) গ্রেট বেরিয়ার দ্বীপ  
    (গ) মার্শাল দ্বীপ  
    (ঘ) দিয়াগো গর্সিয়া দ্বীপ
 
+   answer: ক — কুরিল দ্বীপপুঞ্জ  
+   explanation: দ্বিতীয় বিশ্বযুদ্ধের পর থেকে কুরিল দ্বীপপুঞ্জ নিয়ে জাপান ও রাশিয়ার বিরোধ চলছে।
+
 63. **"Impossible is a word to be found in a fools dictionary" উক্তিটি কার?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 51 (ET: N/A)]*  
    (ক) Plato  
    (খ) Nepoleon  
    (গ) Che Guevara  
    (ঘ) Einstein
+
+   answer: খ — Nepoleon  
+   explanation: উক্তিটি নেপোলিয়ন বোনাপার্টের।
 
 64. **মহেঞ্জোদারো কোন সভ্যতার অন্তর্ভুক্ত?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 70 (ET: N/A)]*  
    (ক) রোমান  
@@ -3756,11 +3945,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (ঘ) আফগানিস্তান  
    **Ans: খ**
 
+   answer: খ — সিন্ধু  
+   explanation: মহেঞ্জোদারো সিন্ধু সভ্যতার অন্যতম প্রধান নগরকেন্দ্র।
+
 65. **হরপ্পা মহেনজোদারো কোন সভ্যতার অন্তর্ভুক্ত?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 34 (ET: BUET)]*  
    (ক) রোমান  
    (খ) সিন্ধু  
    (গ) গ্রিক  
    (ঘ) আফগানিস্তান
+
+   answer: খ — সিন্ধু  
+   explanation: হরপ্পা ও মহেঞ্জোদারো — দুটিই সিন্ধু সভ্যতার নগর।
 
 66. **Which country has Bengali as official language in Africa?** *[BCPCL Assistant Engineer 07/01/2022 compact it 74 (ET: N/A)], [BCPCL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) South Africa  
@@ -3769,11 +3964,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) Somalia  
    **Ans: b**
 
+   answer: b — Sierra leone  
+   explanation: Sierra Leone declared Bangla an honorary official language in 2002 in recognition of Bangladeshi peacekeepers.
+
 67. **ISO কিসের সাথে সম্পর্কিত?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) অ্যাপল  
    (খ) এনড্রয়েড  
    (গ) নোকিয়া  
    (ঘ) গুগল
+
+   answer: ক — অ্যাপল  
+   explanation: প্রশ্নে উদ্দিষ্ট iOS হলো অ্যাপলের মোবাইল অপারেটিং সিস্টেম।
 
 68. **জাতিসংঘের কোন সংস্থাটি রিফিউজি নিয়ে কাজ করে?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) WHO  
@@ -3781,11 +3982,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) UNHCR  
    (ঘ) UNFCC
 
+   answer: গ — UNHCR  
+   explanation: জাতিসংঘ শরণার্থী বিষয়ক হাইকমিশনার (UNHCR) শরণার্থীদের সুরক্ষা ও সহায়তা দেয়।
+
 69. **Nassau is the capital city of–** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) The Bahamas  
    b) The Nicobar Islands  
    c) Madagascar  
    d) The Cubies
+
+   answer: a — The Bahamas  
+   explanation: Nassau, on New Providence Island, is the capital of the Bahamas.
 
 70. **Which country gave the 'Statue of Liberty to the United States of America as a gift?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) France  
@@ -3793,11 +4000,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Germany  
    d) Russia
 
+   answer: a — France  
+   explanation: France gave the Statue of Liberty to the United States in 1886 to mark a century of independence.
+
 71. **When is the ‘International Day of the Victims of Enforced Disappearances’ observed?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) August 15  
    b) August 30  
    c) September 15  
    d) September 30
+
+   answer: b — August 30  
+   explanation: The International Day of the Victims of Enforced Disappearances is observed on 30 August.
 
 72. **Which countries are jointly called the 'Golden Crescent'?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) Afghanistan, Iran and Pakistan  
@@ -3805,11 +4018,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Iraq, Lebanon and Syria  
    d) Thailand, Laos and Myanmar
 
+   answer: a — Afghanistan, Iran and Pakistan  
+   explanation: The Golden Crescent is the opium-producing region where these three countries meet; the Golden Triangle is Thailand, Laos and Myanmar.
+
 73. **স্টিফেন হকিং একজন-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) দার্শনিক  
    b) পদার্থবিদ  
    c) কবি  
    d) রসায়নবিদ
+
+   answer: b — পদার্থবিদ  
+   explanation: স্টিফেন হকিং ছিলেন তাত্ত্বিক পদার্থবিদ ও মহাবিশ্বতত্ত্ববিদ, ব্ল্যাকহোল গবেষণার জন্য বিখ্যাত।
 
 74. **চীনের জিনজিয়াং প্রদেশে বসবাসকারী প্রধান মুসলিম সম্প্রদায়ের নাম কি?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) তুর্কমেন  
@@ -3817,11 +4036,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) কাজখ  
    d) তাজিক
 
+   answer: b — উইঘুর  
+   explanation: চীনের জিনজিয়াং প্রদেশের প্রধান মুসলিম জনগোষ্ঠী তুর্কিভাষী উইঘুর সম্প্রদায়।
+
 75. **বিশ্বব্যাংক সংশ্লিষ্ট কোন সংস্থাটি স্বল্প আয়ের উন্নয়নশীল দেশে বেসরকারি খাতে আর্থিক সহায়তা ও উপদেশ দিয়ে থাকে?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) IBRD  
    b) MIGA  
    c) IFC  
    d) ICSID
+
+   answer: c — IFC  
+   explanation: আন্তর্জাতিক অর্থ কর্পোরেশন (IFC) বিশ্বব্যাংক গোষ্ঠীর সেই সংস্থা যা উন্নয়নশীল দেশে বেসরকারি খাতে বিনিয়োগ ও পরামর্শ দেয়।
 
 76. **সামন্তবাদ কোন ইউরোপীয় দেশে প্রথম সূত্রপাত হয়?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) ইতালি  
@@ -3829,11 +4054,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) ফ্রান্স  
    (d) রাশিয়া
 
+   answer: c — ফ্রান্স  
+   explanation: নবম শতকে ফ্রান্সেই প্রথম সামন্ততান্ত্রিক ভূমি ও আনুগত্যভিত্তিক ব্যবস্থা গড়ে ওঠে।
+
 77. **ধরিত্রী সম্মেলন কোথায় অনুষ্ঠিত হয়?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) আফ্রিকার জোহানেসবার্গ  
    (b) ব্রাজিলের রিওডিজেনিরোতে  
    (c) ইতালির রোমে  
    (d) যুক্তরাষ্ট্রের ওয়াশিংটন ডিসিতে
+
+   answer: b — ব্রাজিলের রিওডিজেনিরোতে  
+   explanation: ১৯৯২ সালে রিও ডি জেনিরোতে প্রথম ধরিত্রী সম্মেলন (Earth Summit) অনুষ্ঠিত হয়।
 
 78. **'কালাপানি' কোন দুই রাষ্ট্রের মধ্যে অমীমাংসিত ভূখণ্ড?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) ভারত ও নেপাল  
@@ -3841,11 +4072,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) ভূটান ও ভারত  
    (d) বাংলাদেশ ও ভারত
 
+   answer: a — ভারত ও নেপাল  
+   explanation: কালাপানি অঞ্চলটি নিয়ে ভারত ও নেপালের মধ্যে সীমান্ত বিরোধ চলছে।
+
 79. **The name of the parliament of USA is?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
    a) Congress  
    b) House of Commons  
    c) White House  
    d) Capital
+
+   answer: a — Congress  
+   explanation: The US legislature is the Congress, made up of the Senate and the House of Representatives.
 
 80. **Which of the following organization is concerned for the climate change?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
    a) OIC  
@@ -3853,11 +4090,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) IPCC  
    d) WMO
 
+   answer: c — IPCC  
+   explanation: The Intergovernmental Panel on Climate Change assesses the science of climate change for policymakers.
+
 81. **The owner of the Greenland is?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
    a) Denmark  
    b) Netherlands  
    c) Japan  
    d) Russia
+
+   answer: a — Denmark  
+   explanation: Greenland is an autonomous territory within the Kingdom of Denmark.
 
 82. **Theme of AIDS day of 2021 is?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
    a) "End Inequalities, End AIDS"  
@@ -3865,11 +4108,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) Communities Make the Difference  
    d) My health, My Right
 
+   answer: a — "End Inequalities, End AIDS"  
+   explanation: This was the UNAIDS theme for World AIDS Day 2021.
+
 83. **Who is the new secretary General of BIMSTEC?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Saroj Chavanaviraj (Thailand)  
    b. Summit Nakandala (Sri Lanka)  
    c. M. Shohidul Islam (Bangladesh)  
    d. Tenzin Lekphel (Bhutan)
+
+   answer: d — Tenzin Lekphel (Bhutan)  
+   explanation: Tenzin Lekphell of Bhutan took over as BIMSTEC Secretary General in 2020.
 
 84. **Who is the writer of the book named A Promise Land?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Joe Biden  
@@ -3877,11 +4126,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c. Bill Clinton  
    d. Barack Obama
 
+   answer: d — Barack Obama  
+   explanation: "A Promised Land" (2020) is the first volume of Barack Obama's presidential memoirs.
+
 85. **According to the ‘Sustainable Development goals (SFG) Index 2020’ Bangladesh has been ranked ________** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. 153th  
    b. 109th  
    c. 104th  
    d. 123th
+
+   answer: c — 104th  
+   explanation: Bangladesh ranked 104th in the SDG Index 2020.
 
 86. **Which word is named as “Word of the year 2020” in Cambridge Dictionary?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Lockdown  
@@ -3889,11 +4144,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c. Pandemic  
    d. Sanitizer
 
+   answer: a — Lockdown  
+   explanation: Cambridge Dictionary chose "lockdown" as its Word of the Year 2020.
+
 87. **Which of the following is the Scandinavian Country?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Norway  
    b. Sweden  
    c. Netherland  
    d. Denmark
+
+   answer: a — Norway  
+   explanation: Scandinavia comprises Norway, Sweden and Denmark; the Netherlands is not part of it, so options (b) and (d) are equally valid.
 
 88. **Where did Leandso dis Vind draw his farmers from “The Last Supper”?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Rome  
@@ -3901,13 +4162,22 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c. Venice  
    d. Florence
 
+   answer: b — Milan  
+   explanation: Leonardo painted The Last Supper on the refectory wall of Santa Maria delle Grazie in Milan.
+
 89. **Which of the SDG google speaks about women empowerment?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. SDG 5  
    b. SDG 3  
    c. SDG 9  
    d. SDG 8
 
+   answer: a — SDG 5  
+   explanation: Goal 5 is "Achieve gender equality and empower all women and girls".
+
 90. **What was the theme for the 6th BRICS-Youth summit 2020?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*
+
+   answer: BRICS partnership for global stability, shared security and innovative growth  
+   explanation: The 6th BRICS Youth Summit was held under Russia's 2020 chairmanship, which used this overall theme for the BRICS year. <!-- verify -->
 
 91. **Who was the director of the film “Let there be Light”?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. Zahir Raihan  
@@ -3915,11 +4185,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. Khan Ataur Rohman  
    ঘ. Humayan Ahmed
 
+   answer: ক — Zahir Raihan  
+   explanation: 'Let There Be Light' ছিল জহির রায়হানের অসমাপ্ত চলচ্চিত্র; ১৯৭১ সালে নিখোঁজ হওয়ায় কাজটি শেষ হয়নি।
+
 92. **Which country first gave recognition to Bangladesh?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. India  
    খ. Russia  
    গ. Bhutan  
    ঘ. Nepal
+
+   answer: গ — Bhutan  
+   explanation: Bhutan was the first country to recognise Bangladesh, on 6 December 1971, hours before India did the same day.
 
 93. **Omicron, the new variant of COVID-19 is originated from;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. China  
@@ -3927,11 +4203,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. America  
    ঘ. South Africa
 
+   answer: ঘ — South Africa  
+   explanation: The Omicron variant was first identified and reported by scientists in South Africa in November 2021.
+
 94. **Country participated as "Observer"in "Victory Day Parade 2021";** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. USA  
    খ. Russia  
    গ. India  
    ঘ. Bhutan
+
+   answer: গ — India  
+   explanation: India took part as the invited guest country at the Victory Day Parade marking the golden jubilee of independence. <!-- verify -->
 
 95. **The Nobel Laureate Adbulrazak Gurnah is from;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. Turkey  
@@ -3939,11 +4221,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. Indonesia  
    ঘ. Tanzania
 
+   answer: ঘ — Tanzania  
+   explanation: Abdulrazak Gurnah, the 2021 Nobel laureate in Literature, was born in Zanzibar, Tanzania.
+
 96. **২০২০ সালে শান্তিতে নোবেল পুরস্কার লাভ করে?** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) ইউনেস্কো  
    (খ) বিশ্ব খাদ্য কর্মসূচি  
    (গ) ইউনিসেফ  
    (ঘ) নিরাপত্তা পরিষদ
+
+   answer: খ — বিশ্ব খাদ্য কর্মসূচি  
+   explanation: ২০২০ সালে ক্ষুধা মোকাবিলায় অবদানের জন্য জাতিসংঘের World Food Programme শান্তিতে নোবেল পায়।
 
 97. **বিশ্বস্বাস্থ্য সংস্থার (WHO) সদর দপ্তর কোথায়?** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
    (ক) রোম  
@@ -3951,11 +4239,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (গ) হেগ  
    (ঘ) জেনেভা
 
+   answer: ঘ — জেনেভা  
+   explanation: বিশ্ব স্বাস্থ্য সংস্থার সদর দপ্তর সুইজারল্যান্ডের জেনেভায়।
+
 98. **রাখাইনের পূর্ব নাম কী?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (ক) রেঙ্গুন  
    (খ) আরাকান  
    (গ) কাচিন  
    (ঘ) শান
+
+   answer: খ — আরাকান  
+   explanation: মিয়ানমারের রাখাইন রাজ্যের পূর্ব নাম আরাকান।
 
 99. **Which country is called "Thunderbolt of Asia"?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) Nepal  
@@ -3963,11 +4257,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Bhutan  
    (d) Maldives
 
+   answer: c — Bhutan  
+   explanation: Bhutan is called the Land of the Thunder Dragon, or "Thunderbolt of Asia", from its Dzongkha name Druk Yul.
+
 100. **How many countries are members of Commonwealth?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 47  
    (b) 51  
    (c) 54  
    (d) 61
+
+   answer: c — 54  
+   explanation: The Commonwealth of Nations has 54 member countries.
 
 101. **The headquarter of World Economic Forum is situated in-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) Cologny  
@@ -3975,11 +4275,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Davos  
    (d) San Francisco
 
+   answer: a — Cologny  
+   explanation: The World Economic Forum is headquartered at Cologny, a suburb of Geneva; Davos only hosts the annual meeting.
+
 102. **The term of a non-permanent member of the UN security council is-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 2 years  
    (b) 3 years  
    (c) 5 years  
    (d) 7 years
+
+   answer: a — 2 years  
+   explanation: The ten non-permanent members of the Security Council are elected for two-year terms.
 
 103. **Which one of the following is not an official language of United Nations?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) Arabic  
@@ -4059,6 +4365,9 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. ২৩০ কেভি
    ঘ. ১৩২ কেভি
 
+   answer: c — Portuguese  
+   explanation: The six official UN languages are Arabic, Chinese, English, French, Russian and Spanish.
+
 104. **গ) কোনো বিক্রেতাকে ৩.২৫ টাকা, ৪.৭৫ টাকা এবং ১১.৫০ টাকা একই ধরনের মুদ্রা দ্বারা পরিশোধ করতে গেলে সবচেয়ে বড় কত পয়সার মুদ্রার প্রয়োজন?** *[BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40 [bitbox it book 162]]*  
    ঘ) নদী ও স্রোতের ম্যাথ। __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:  
    40) [bitbox it book 162]__  
@@ -4107,11 +4416,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
 ১০। War & Peace কার লেখা? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
    40) [bitbox it book 163]__
 
+   answer: ২৫ পয়সা  
+   explanation: ৩২৫, ৪৭৫ ও ১১৫০ পয়সার গ.সা.গু. ২৫, তাই সবচেয়ে বড় মুদ্রা ২৫ পয়সার। সংযুক্ত ছোট প্রশ্নগুলোর উত্তর: OSI স্তর ৭টি; C প্রোগ্রাম মেশিন কোডে রূপান্তর করে কম্পাইলার; জাভায় নতুন অবজেক্ট তৈরি হয় new অপারেটরে; একই মেথডের একাধিক রূপকে বলে পলিমরফিজম; IPv6 ১২৮ বিট; সবচেয়ে কম প্রাধান্য কমা অপারেটরের; বাইনারিতে 1+1+1 = 11; এনক্রিপশন/ডিক্রিপশন হয় প্রেজেন্টেশন লেয়ারে; অ্যারে র‍্যান্ডম অ্যাক্সেস; War and Peace লিখেছেন লিও টলস্টয়।
+
 105. **কোনটি বাংলা একাডেমি থেকে প্রকাশিত মাসিক পত্রিকা?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
    (a) ধান শালিকের দেশ  
    (b) লাঙল  
    (c) বার্তা  
    (d) উত্তরাধিকার
+
+   answer: d — উত্তরাধিকার  
+   explanation: 'উত্তরাধিকার' বাংলা একাডেমি থেকে প্রকাশিত মাসিক সাহিত্য পত্রিকা।
 
 106. **Interfaces in Java are meant to be— [ জাভাতে ইন্টারফেস (Interfaces) ব্যবহারের উদ্দেশ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 346]]*  
    (a) Extended  
@@ -4119,11 +4434,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Overridden  
    (d) Used by creating object
 
+   answer: b — Implemented  
+   explanation: A class implements an interface and supplies bodies for its abstract methods.
+
 107. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছেন -** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
    ক. লাইবেরিয়া  
    খ. নামিবিয়া  
    গ. ভুটান  
    ঘ. সিয়েরা লিওন
+
+   answer: ঘ — সিয়েরা লিওন  
+   explanation: ২০০২ সালে সিয়েরা লিওন বাংলাকে অন্যতম দাপ্তরিক ভাষার মর্যাদা দেয়।
 
 108. **জাতিসংঘ এর নিরাপত্তা পরিষদের স্থায়ী সদস্য কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ৫  
@@ -4131,17 +4452,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ) ৯  
    ঘ) ৬
 
+   answer: ক — ৫  
+   explanation: নিরাপত্তা পরিষদের স্থায়ী সদস্য পাঁচটি — যুক্তরাষ্ট্র, যুক্তরাজ্য, রাশিয়া, ফ্রান্স ও চীন।
+
 109. **উপমহাদেশের কোন বাঙালি প্রথম অস্কার লাভ করে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) সত্যজিত রায়  
    খ) জহির রায়হান  
    গ) সুকুমার সেন  
    ঘ) রবীন্দ্রনাথ
 
+   answer: ক — সত্যজিত রায়  
+   explanation: সত্যজিৎ রায় ১৯৯২ সালে আজীবন সম্মাননায় অস্কার পান, উপমহাদেশের প্রথম বাঙালি হিসেবে।
+
 110. **মুক্তিযুদ্ধ কত জন নারী মুক্তিযোদ্ধা বীর প্রতীক খেতাব পায়?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ১  
    খ) ২  
    গ) ৩  
    ঘ) ৫
+
+   answer: খ — ২  
+   explanation: তারামন বিবি ও ডা. সিতারা বেগম — এই দুই নারী মুক্তিযোদ্ধা বীর প্রতীক খেতাব পান।
 
 111. **সাধারণ জ্ঞানঃ** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
    i. ওজোন দিবস কত তারিখ?  
@@ -4150,11 +4480,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    iv. বাংলাদেশকে স্বীকৃতিদানকারী প্রথম আফ্রিকান দেশ কোনটি?  
    v. সর্বশেষ জনশুমারী অনুযায়ী বাংলাদেশের সাক্ষরতার হার কত?
 
+   answer: i. ১৬ সেপ্টেম্বর ii. ৮ সেপ্টেম্বর iii. ওলাফ শলৎস iv. সেনেগাল v. প্রায় ৭৪.৭%  
+   explanation: ১৯৮৭ সালের মন্ট্রিল প্রোটোকল স্মরণে ১৬ সেপ্টেম্বর ওজোন দিবস; ইউনেস্কো ৮ সেপ্টেম্বর সাক্ষরতা দিবস পালন করে; সেনেগাল প্রথম আফ্রিকান দেশ হিসেবে বাংলাদেশকে স্বীকৃতি দেয়।
+
 112. **'আবাদ' শব্দটি কোন ধরনের শব্দ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
    (a) দেশী  
    (b) বিদেশী  
    (c) তৎসম  
    (d) তদ্ভব
+
+   answer: b — বিদেশী  
+   explanation: 'আবাদ' ফারসি শব্দ, তাই এটি বিদেশি শব্দ।
 
 113. **"বিবাহ করিতে আসিয়াছি বিবাহ করিয়া যাইব" কোন বাক্যের উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
    (a) যৌগিক  
@@ -4162,11 +4498,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) জটিল  
    (d) নির্দেশক
 
+   answer: a — যৌগিক  
+   explanation: দুটি স্বাধীন বাক্য পাশাপাশি বসে একটি বাক্য গঠন করেছে, তাই এটি যৌগিক বাক্য।
+
 114. **When will Bangladesh exit from the LDC category?[ বাংলাদেশ কখন LDC ক্যাটাগরি থেকে বের হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
    (a) 2024  
    (b) 2025  
    (c) 2026  
    (d) 2027
+
+   answer: c — 2026  
+   explanation: The UN set November 2026 as Bangladesh's graduation date from the least developed country category.
 
 115. **The documentary film based on the liberation war, ‘Rupali Shoikot’ was directed by— [ মুক্তিযুদ্ধভিত্তিক ডকুমেন্টারি ‘রুপালি সৈকত’ পরিচালনা করেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
    (a) Alamgir Kabir  
@@ -4174,11 +4516,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Zahir Raihan  
    (d) Tareq Masood
 
+   answer: a — Alamgir Kabir  
+   explanation: "Rupali Shoikote" was directed by Alamgir Kabir.
+
 116. **The highest densely populated country of the world is— [ বিশ্বের সবচেয়ে ঘনবসতি দেশ কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
    (a) Bangladesh  
    (b) China  
    (c) Monaco  
    (d) Indonesia
+
+   answer: c — Monaco  
+   explanation: Monaco has by far the highest population density of any country, over 19,000 people per square kilometre.
 
 117. **In 2024 Summer Olympics will be hosted in— [ 2024 সালের গ্রীষ্মকালীন অলিম্পিক কোথায় অনুষ্ঠিত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
    (a) Japan  
@@ -4186,17 +4534,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) United Kingdom  
    (d) United States
 
+   answer: Paris  
+   explanation: The 2024 Summer Olympics were held in Paris, a century after the city last hosted the Games.
+
 118. **What does the term ‘hyperparameter’ refer in AI?[ AI-তে ‘hyperparameter’ শব্দটি কী নির্দেশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) Parameter learned by the model during training  
    (b) Parameter that defines the structure of the model  
    (c) Parameter related to the loss function  
    (d) Parameter related to make prediction
 
+   answer: Parameter that defines the structure of the model  
+   explanation: Hyperparameters such as learning rate, number of layers or k in k-NN are set before training; weights learned during training are ordinary parameters.
+
 119. **Objective of integration testing is to find—[ ইন্টিগ্রেশন টেস্টিং (Integration testing)-এর উদ্দেশ্য কী খুঁজে বের করা? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) design error  
    (b) functional error  
    (c) interface error  
    (d) coding error
+
+   answer: interface error  
+   explanation: Integration testing combines modules to check that they pass data and call each other correctly across their interfaces.
 
 ## Geography & Environment (26)
 
