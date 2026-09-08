@@ -1391,11 +1391,17 @@ int main ()\{
    (গ) Critical Project Method  
    (ঘ) Critical Path Method
 
+   answer: ঘ — Critical Path Method  
+   explanation: CPM is the project scheduling technique that finds the longest chain of dependent tasks, which sets the shortest possible project duration.
+
 2. **What is the full name of LCD?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
    A) Light control diode  
    B) Light crystal display  
    C) Liquid crystal diode  
    D) Liquid crystal display
+
+   answer: D — Liquid crystal display  
+   explanation: LCD panels use a liquid crystal layer that twists to block or pass backlight.
 
 3. **MIRC Means-** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
    (a) Magnetic Ink Character Reader  
@@ -1403,11 +1409,17 @@ int main ()\{
    (c) Magnetic Ink Case Reader  
    (d) None
 
+   answer: a — Magnetic Ink Character Reader  
+   explanation: MICR reads the characters printed in magnetic ink along the bottom of a cheque.
+
 4. **An acronym for Conference/Committee on Data Systems Languages is?** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)]*  
    A) Collute  
    B) CCD  
    C) CODASYL  
    D) DASD
+
+   answer: C — CODASYL  
+   explanation: CODASYL is the Conference on Data Systems Languages, the group that defined COBOL and the network database model.
 
 5. **An acronym for Conference/Committee on Data Systems Languages is?** *[Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    A) DASD  
@@ -1415,11 +1427,17 @@ int main ()\{
    C) CODASYL  
    D) None of them
 
+   answer: C — CODASYL  
+   explanation: CODASYL stands for Conference on Data Systems Languages.
+
 6. **An acronym for conference of Data systems languages is –** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*  
    A) Collate  
    B) CODASYL  
    C) CCD  
    D) DASD
+
+   answer: B — CODASYL  
+   explanation: CODASYL is the acronym for the Conference on Data Systems Languages.
 
 7. **The computer code of the interchange of information between terminals is—** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
    A) ASCII  
@@ -1427,11 +1445,17 @@ int main ()\{
    C) EBCDIC  
    D) All of them
 
+   answer: A — ASCII  
+   explanation: ASCII is the American Standard Code for Information Interchange, the code used to exchange text between terminals.
+
 8. **What is the full meaning of SQL?** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
    A) Search and Query Language  
    B) Simulation of Query Language  
    C) Standard Query Language  
    D) Structured Query Language
+
+   answer: D — Structured Query Language  
+   explanation: SQL is the standard language for defining and querying relational databases.
 
 9. **OCR Stands for ________** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) Optical CPU recognition  
@@ -1439,11 +1463,17 @@ int main ()\{
    C) Optical character reading  
    D) other character reading
 
+   answer: B — Optical character recognition  
+   explanation: OCR converts printed or scanned characters into machine-readable text.
+
 10. **What is TEST SYNC?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*  
    a. A testing tool  
    b. A diagnostic tool  
    c. A tracking tool  
    d. A recovery tool
+
+   answer: b — A diagnostic tool  
+   explanation: TEST SYNC is used to check and diagnose synchronisation on a line rather than to track or recover data. <!-- verify -->
 
 11. **What is the full form ICM?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*  
    a. Cisco Intelligent Contact Management  
@@ -1451,17 +1481,26 @@ int main ()\{
    c. Cisco isolated contact management  
    d. Cisco recovery management
 
+   answer: a — Cisco Intelligent Contact Management  
+   explanation: Cisco ICM routes contacts across call centres and channels from a single control point.
+
 12. **Cisco IOS firewall is aware of VRF. What is the full from of VRF?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*  
    a. Virtual routing and forwarding  
    b. Visual route and forward  
    c. Virtual route and field  
    d. Visual field
 
+   answer: a — Virtual routing and forwarding  
+   explanation: VRF lets one router hold several independent routing tables so overlapping address spaces stay separated.
+
 13. **DIP stands for ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Developer Induction Printer  
    b. Dual Inline Package  
    c. Durable Iclonic Plastic  
    d. Dual Independent
+
+   answer: b — Dual Inline Package  
+   explanation: A DIP chip has two parallel rows of pins that fit into a socket or through-holes on a board.
 
 ## Keyboard Shortcuts (4)
 
