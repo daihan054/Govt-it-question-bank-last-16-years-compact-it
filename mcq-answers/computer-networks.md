@@ -1621,11 +1621,17 @@
    c) 255.255.255.192  
    d) 255.255.254.0
 
+   answer: a — 255.255.255.0  
+   explanation: 254 usable hosts needs 8 host bits (2⁸-2 = 254), which is /24, or 255.255.255.0.
+
 2. **What is IP class and number of sub-networks if the subnet mask is 255.224.0.0?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*  
    (A) Class A, 3  
    (B) Class A, 8  
    (C) Class B, 3  
    (D) Class B, 32
+
+   answer: A — Class A, 3  
+   explanation: The first octet 255 means a Class A default mask of /8, and 224 = 11100000 borrows 3 more bits for subnetting.
 
 3. **What is the maximum number of IP addresses that can be assigned to be the host on a local subnet that uses the 255.255.255.224 subnet mask?** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*  
    a) 16  
@@ -1633,11 +1639,17 @@
    b) 31  
    d) 30
 
+   answer: d — 30  
+   explanation: /27 leaves 5 host bits, giving 32 addresses, minus the network and broadcast addresses = 30 usable.
+
 4. **How many address is there 200.10.10.10/20** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 25 (ET: BIBM)]*  
    (a) 4096  
    (b) 1024  
    (c) 2048  
    (d) 1022
+
+   answer: a — 4096  
+   explanation: /20 leaves 12 host bits, so the block holds 2¹² = 4096 addresses (4094 of them usable).
 
 5. **Which is suitable subnet mask for 200 host?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*  
    (a) 255.255.0.200  
@@ -1645,11 +1657,17 @@
    (c) 255.0.0.0  
    (d) 255.255.200.0
 
+   answer: b — 255.255.255.0  
+   explanation: 200 hosts need at least 8 host bits, which /24 provides with 254 usable addresses.
+
 6. **Which of the following cannot be used as a public IP address?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)], [Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 76 (ET: N/A)]*  
    a. 17.0.0.1  
    b. 168.172.19.34  
    c. 172.15.29.63  
    d. 192.168.13.18
+
+   answer: d — 192.168.13.18  
+   explanation: 192.168.0.0–192.168.255.255 is reserved for private use, so it is never routed on the public internet.
 
 7. **Which one is Private IP address?** *[BREB Assistant Programmer 2023 compact it 31 (ET: N/A)]*  
    (a) 192.168.10.10  
@@ -1657,11 +1675,17 @@
    (c) 1.1.1.1  
    (d) 172.16.5.3
 
+   answer: a — 192.168.10.10  
+   explanation: 192.168.0.0/16 is a reserved private range; note 172.16.5.3 in option (d) is private too, so the option set is loose.
+
 8. **An organization is granted a block; one address is 2.2.2.64/20. The organization needs 10 subnets. What is the subnet prefix length?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*  
    (ক) /20  
    (খ) /24  
    (গ) /23  
    (ঘ) /21
+
+   answer: খ — /24  
+   explanation: Ten subnets need 4 borrowed bits (2⁴ = 16 ≥ 10), so /20 + 4 = /24.
 
 9. **Which of the following is a private IP address?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 45 (ET: N/A)]*  
    (ক) 12.0.0.1  
@@ -1669,11 +1693,17 @@
    (গ) 172.15.14.36  
    (ঘ) 192.168.24.43
 
+   answer: ঘ — 192.168.24.43  
+   explanation: Only 192.168.x.x falls in a private range here — 172.15.x.x is outside the 172.16–172.31 private block.
+
 10. **What is the network address for the IP address 178.112.13.10/8?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*  
    a) 178.0.0.0  
    b) 178.112.0.0  
    c) 255.0.0.0  
    d) 255.255.0.0
+
+   answer: a — 178.0.0.0  
+   explanation: /8 keeps only the first octet as network, so the rest is zeroed to give 178.0.0.0.
 
 11. **Which one is the loopback address?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) 255.255.255.0  
@@ -1681,11 +1711,17 @@
    c) 255.0.0.0  
    d) 127.127.127.0
 
+   answer: b — 127.0.0.1  
+   explanation: 127.0.0.1 is the loopback address a host uses to reach its own TCP/IP stack.
+
 12. **On a class B network, how many hosts are available at each site with subnet mask of 248?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*  
    (a) 16,382  
    (b) 8,190  
    (c) 4,094  
    (d) 2,046
+
+   answer: d — 2,046  
+   explanation: A mask ending in 248 makes it /21, leaving 11 host bits, so 2¹¹ - 2 = 2046 hosts per subnet.
 
 13. **Which of the following is not a valid IP address?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 77 (ET: N/A)]*  
    a. 3FFE::1:200:F8FF:FE75:50DF  
@@ -1693,11 +1729,17 @@
    c. ABCD::100::F8FF:FE75:50DF  
    d. 13.15.17.19
 
+   answer: c — ABCD::100::F8FF:FE75:50DF  
+   explanation: The :: shorthand for a run of zeros may appear only once in an IPv6 address; this one uses it twice.
+
 14. **Suppose you need to assign IPv4 address to two computers of your company so that the both computers belong to the subnet. 255.255.255.240. Which of the following is a valid assignment?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
    a. 172.16.5.14 and 172.16.5.17  
    b. 172.16.5.17 and 172.16.5.29  
    c. 172.16.5.29 and 172.16.5.33  
    d. 172.16.5.33 and 172.16.5.4
+
+   answer: b — 172.16.5.17 and 172.16.5.29  
+   explanation: /28 gives a block size of 16, so 16–31 is one subnet and both .17 and .29 fall inside it.
 
 15. **Network 10.20.30.0 was assigned to the ITGod company to connect its ISP. The administrator of ITGod would like to configure one router with commands to access the internet. Which commands could be configured on the Gateway Router to allow internet access to the center network?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*  
    A. Gateway(config)# ip route 0.0.0.0 0.0.0.0 10.20.30.2  
@@ -1708,6 +1750,9 @@
    b. C only  
    c. A, B and D  
    d. A and D
+
+   answer: d — A and D  
+   explanation: A static default route (ip route 0.0.0.0 0.0.0.0) and ip default-network both give the router a path of last resort to the ISP.
 
 16. **Classless Inter Domain Routing (CIDR) receives a packet with address 131.23.151.76. The routers routing table has the following entries** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*  
    | Prefix | Output Interface |  
@@ -1722,11 +1767,17 @@
    c. 3  
    d. 5
 
+   answer: a — 1  
+   explanation: CIDR uses the longest matching prefix: 131.23.151.76 matches both /12 and 131.22.0.0/15, and the /15 is longer, so interface 1.
+
 17. **How many IP addresses can be assigned using IPv4 techniques?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
    a) 2^{32}  
    b) 2^{64}  
    c) 4^{32}  
    d) 4^{64}
+
+   answer: a — 2^32  
+   explanation: IPv4 addresses are 32 bits, giving about 4.3 billion possible addresses.
 
 18. **Class C IP address is for ________ bit network.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*  
    A) 24  
@@ -1734,11 +1785,17 @@
    C) 64  
    D) 128
 
+   answer: A — 24  
+   explanation: Class C uses the first three octets — 24 bits — for the network and the last 8 for hosts.
+
 19. **Suppose, a Class C network address is 192.168.10.0 and subnet mask is 255.255.255.192. How many valid hosts per subnet can be obtainable?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*  
    a) 62  
    b) 30  
    c) 14  
    d) 6
+
+   answer: a — 62  
+   explanation: 255.255.255.192 is /26, leaving 6 host bits, so 2⁶ - 2 = 62 usable hosts.
 
 20. **উল্লেখিত কোনটি Private IP address?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) 192.169.10.10  
@@ -1746,11 +1803,17 @@
    C) 1.1.1.1  
    D) 172.16.5.3
 
+   answer: D — 172.16.5.3  
+   explanation: 172.16.0.0–172.31.255.255 is private; note 192.169.10.10 is public because the private block is 192.168, not 192.169.
+
 21. **Which of the following TCP/IP addresses constitute the loopback address?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) 1.1.1.1  
    B) 255.255.255.255  
    C) 127.0.0.0  
    D) 127.0.0.1
+
+   answer: D — 127.0.0.1  
+   explanation: 127.0.0.1 is the loopback address used to test the local TCP/IP stack.
 
 22. **To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask used should be:** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
    A) 255.255.255.0  
@@ -1758,11 +1821,17 @@
    C) 255.255.255.240  
    D) 255.255.255.78
 
+   answer: C — 255.255.255.240  
+   explanation: 4 borrowed bits give 16 subnets and the remaining 4 host bits give 14 usable hosts each, which matches the requirement.
+
 23. **192.168.1.100 এই IP address টি কোন class এর অন্তর্ভুক্ত?** *[BPSC Assistant Network Engineer 2019 compact it 194 (ET: N/A)]*  
    A) Class A  
    B) Class B  
    C) Class C  
    D) Class D
+
+   answer: C — Class C  
+   explanation: A first octet from 192 to 223 is Class C, and 192 falls in that range.
 
 24. **Which class of IP address provides a maximum of only 254 host address per network ID?** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
    (a) Class A  
@@ -1770,11 +1839,17 @@
    (c) Class C  
    (d) Class D
 
+   answer: c — Class C  
+   explanation: Class C leaves 8 host bits, so 2⁸ - 2 = 254 hosts per network.
+
 25. **To divide a class C network into a maximum of 14 subnets- each capable of having up to 14 hosts. The subnet mask used should be ____** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*  
    A) 255.255.255.240  
    B) 255.255.255.192  
    C) 255.255.255.78  
    D) 255.255.255.0
+
+   answer: A — 255.255.255.240  
+   explanation: /28 gives 16 subnets and 14 usable hosts in each, satisfying both limits.
 
 26. **To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask use should be-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*  
    A) 255.255.255.0  
@@ -1782,11 +1857,17 @@
    C) 255.255.255.78  
    D) 255.255.255.240
 
+   answer: D — 255.255.255.240  
+   explanation: Four subnet bits and four host bits produce 16 subnets of 14 hosts each.
+
 27. **What is the maximum number of IP addresses that can be assigned to hosts on a local subnet that uses the 255.255.255.224 subnet mask?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
    a. 14  
    b. 15  
    c. 16  
    d. 30
+
+   answer: d — 30  
+   explanation: The /27 mask leaves 5 host bits, so 32 addresses of which 30 can be assigned to hosts.
 
 28. **You need to subnet a network that has 5 subnets, each with at least 16 hosts. Which classful subnet mask you use?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*  
    a. 255.255.255.192  
@@ -1794,11 +1875,17 @@
    c. 255.255.255.224  
    d. 255.255.255.240
 
+   answer: c — 255.255.255.224  
+   explanation: /27 gives 8 subnets (≥5) and 30 usable hosts each (≥16), so it meets both requirements.
+
 29. **The network address of 172.16.0.0/19 provides how many subnets and hosts?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*  
    a. 7 subnets, 30 hosts each  
    b. 8 subnets, 8190 hosts each  
    c. 8 subnets, 2046 hosts each  
    d. 7 subnets, 2046 hosts each
+
+   answer: b — 8 subnets, 8190 hosts each  
+   explanation: /19 borrows 3 bits from the Class B /16 giving 8 subnets, and the 13 remaining host bits give 2¹³ - 2 = 8190 hosts.
 
 30. **What is the subnetwork number of a host with an IP address of 172.16.66.0/21?** *[Pubali Bank Limited Officer (IT) 2012 compact it 264 (ET: N/A)]*  
    a. 172.16.36.0  
@@ -1806,11 +1893,17 @@
    c. 172.16.64.0  
    d. 172.16.0.0
 
+   answer: c — 172.16.64.0  
+   explanation: /21 makes the third-octet block size 8, and 66 falls in the block starting at 64.
+
 31. **Which of the following classes is the address 208.177.23.1?** *[Pubali Bank Limited Officer (IT) 2012 compact it 265 (ET: N/A)]*  
    a. Class A  
    b. Class B  
    c. Class C  
    d. Class D
+
+   answer: c — Class C  
+   explanation: A first octet between 192 and 223 is Class C, and 208 is in that range.
 
 32. **Two networks in different offices have been using DHCP set up for 192.168.00/24. After consolidating the offices networks, they have run out of IP Addresses. Which of the following is the MOST cost effect solution?** *[Pubali Bank Limited Officer (IT) 2012 compact it 265 (ET: N/A)]*  
    a. Request another class C IP scope from the ISP  
@@ -1818,11 +1911,17 @@
    c. Change the subnet mask to 255.255.254.0  
    d. Add a router to connect both networks
 
+   answer: c — Change the subnet mask to 255.255.254.0  
+   explanation: Widening the mask to /23 doubles the address pool to 510 usable hosts without buying anything or adding hardware.
+
 33. **Which of the following subnet masks identifies 192.168.7.1 and 192.168.8.1 as being on the same subnet?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*  
    a. 255.255.240.0  
    b. 255.255.255.128  
    c. 255.255.255.0  
    d. 255.255.255.240
+
+   answer: a — 255.255.240.0  
+   explanation: /20 makes the third-octet block size 16, so both 192.168.7.1 and 192.168.8.1 sit in the 192.168.0.0 block.
 
 ## Wireless & Mobile Communication (23)
 
