@@ -2,9 +2,9 @@
 
 Answers for [`all-questions/mcq/`](all-questions/mcq/), written into [`mcq-answers/`](mcq-answers/). Regenerated on every commit.
 
-**Subtopics: 144 / 160 done**  ·  **Questions: 2813 answered, 20 skipped, 3039 total**
+**Subtopics: 145 / 160 done**  ·  **Questions: 2833 answered, 20 skipped, 3039 total**
 
-Next up: `gk.md` — Sports (20)
+Next up: `math.md` — Algebra (48)
 
 | File | Type | Subtopics done | Answered | Skipped | Questions |
 |---|---|---|---|---|---|
@@ -22,7 +22,7 @@ Next up: `gk.md` — Sports (20)
 | `dld.md` | IT | 6 / 6 | 75 | 4 | 79 |
 | `electrical-and-electronics.md` | IT | 4 / 4 | 114 | 2 | 116 |
 | `english.md` | General | 5 / 5 | 285 | 1 | 286 |
-| `gk.md` | General | 5 / 6 | 532 | 3 | 555 |
+| `gk.md` | General | 6 / 6 | 552 | 3 | 555 |
 | `math.md` | General | 0 / 15 | 0 | 0 | 186 |
 | `mechanical-engineering.md` | IT | 7 / 7 | 37 | 1 | 38 |
 | `microprocessor-and-computer-architecture.md` | IT | 5 / 5 | 84 | 1 | 85 |

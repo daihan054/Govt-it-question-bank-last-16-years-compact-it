@@ -5019,11 +5019,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) Alan Border  
    (d) Steve Waugh
 
+   answer: a — Clive Lloyd  
+   explanation: Clive Lloyd captained the West Indies to victory in the first Cricket World Cup in 1975.
+
 2. **Who has won the most gold medals at a single Olympics-** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
    a) Michael Phelps  
    b) Usain Bolt  
    c) Simone Biles  
    d) Larisa Latynina
+
+   answer: a — Michael Phelps  
+   explanation: Michael Phelps won eight gold medals at the 2008 Beijing Olympics, the most at a single Games.
 
 3. **The 2024 Summer Olympics will be hosted in –** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) China  
@@ -5031,17 +5037,26 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) United Kingdom  
    (d) United States
 
+   answer: b — France  
+   explanation: Paris hosted the 2024 Summer Olympics.
+
 4. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Athletics Championship held in January, 2024?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*  
    (a) Tahmina Rahman  
    (b) Sonia Akhtar  
    (c) Sharifa Khatun  
    (d) Shirin Akhtar
 
+   answer: d — Shirin Akhtar  
+   explanation: Shirin Akhtar again won the women's 100 m sprint at the 44th National Athletics Championship in 2024.
+
 5. **Who get Balon d'Or cup 2022?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
    (a) Lionell Messi  
    (b) Kylian Mbappe  
    (c) Karim Benzema  
    (d) Ronaldo
+
+   answer: c — Karim Benzema  
+   explanation: Karim Benzema won the 2022 Ballon d'Or after his season with Real Madrid.
 
 6. **Who is the most wicket taker in T20?** *[NPCBL Assistant Engineer 07/01/2022 compact it 75 (ET: N/A)]*  
    (a) Rashid khan  
@@ -5050,15 +5065,30 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) SL Malinga  
    **Ans: c**
 
+   answer: c — Shakib al hasan  
+   explanation: Shakib Al Hasan is the leading wicket-taker in men's T20 internationals.
+
 7. **রজার ফেদেরার মোট কয়টি উইম্বলডন জয়লাভ করেন? **Ans: ৮টি**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
+   answer: ৮টি  
+   explanation: রজার ফেদেরার রেকর্ড ৮ বার উইম্বলডন একক শিরোপা জেতেন।
+
 8. **টি-২০ বিশ্বকাপ ২০২২ কোথায় অনুষ্ঠিত হয়েছে? **Ans: অস্ট্রেলিয়া**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
+
+   answer: অস্ট্রেলিয়া  
+   explanation: ২০২২ সালের টি-টোয়েন্টি বিশ্বকাপ অস্ট্রেলিয়ায় অনুষ্ঠিত হয় এবং ইংল্যান্ড চ্যাম্পিয়ন হয়।
 
 9. **T-20 বিশ্বকাপ ২০২১ এ ম্যান অব দ্যা সিরিজ হন কে?** *[BTRC Assistant Director (Technical) 2022 compact it 64 (ET: MIST)]*  
    উত্তর: ডেভিড ওয়ার্নার
 
+   answer: ডেভিড ওয়ার্নার  
+   explanation: ২০২১ টি-টোয়েন্টি বিশ্বকাপে অস্ট্রেলিয়ার ডেভিড ওয়ার্নার প্লেয়ার অব দ্য টুর্নামেন্ট হন।
+
 10. **বাংলাদেশ কবে টেস্ট ক্রিকেটের মর্যাদা লাভ করে?** *[BTRC Assistant Director (Technical) 2022 compact it 65 (ET: MIST)]*  
    উত্তর: ২৬ জুন, ২০০০
+
+   answer: ২৬ জুন, ২০০০  
+   explanation: এদিন আইসিসি বাংলাদেশকে দশম টেস্ট খেলুড়ে দেশের মর্যাদা দেয়।
 
 11. **কিংবদন্তি মোহাম্মদ আলি কিসের জন্য বিখ্যাত?** *[BTCL Junior Assistant Manager (JAM) 2022 compact it 59 (ET: BUET)]*  
    a) অভিনয়  
@@ -5066,11 +5096,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) মার্শাল আর্টস  
    d) সঙ্গীত
 
+   answer: b — বক্সিং  
+   explanation: মোহাম্মদ আলী তিনবারের বিশ্ব হেভিওয়েট বক্সিং চ্যাম্পিয়ন ছিলেন।
+
 12. **What are the small indentations on a golf ball called?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 134 (ET: N/A)]*  
    a) Birdie  
    b) Albatross  
    c) Mulligan  
    d) Dimples
+
+   answer: d — Dimples  
+   explanation: The small hollows on a golf ball are called dimples; they reduce drag and let the ball fly further.
 
 13. **টেস্ট ক্রিকেটে বাংলাদেশের পক্ষে কে প্রথম ডাবল সেঞ্চুরি করেন?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 120 (ET: N/A)]*  
    a) মুশফিক  
@@ -5078,11 +5114,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) সাব্বির  
    d) লিটন দাস
 
+   answer: a — মুশফিক  
+   explanation: মুশফিকুর রহিম ২০১৩ সালে শ্রীলঙ্কার বিপক্ষে ২০০ রান করে বাংলাদেশের প্রথম টেস্ট ডাবল সেঞ্চুরিয়ান হন।
+
 14. **টেস্ট ক্রিকেট বাংলাদেশের দ্রুততম উইকেটের সেঞ্চুরিয়ান বোলার কে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. সাকিব আল হাসান  
    B. মোস্তাফিজুর রহমান  
    C. মেহেদি হাসান মিরাজ  
    D. তাইজুল ইসলাম
+
+   answer: A — সাকিব আল হাসান  
+   explanation: সাকিব আল হাসান সবচেয়ে কম টেস্ট খেলে ১০০ উইকেটের মাইলফলকে পৌঁছান।
 
 15. **২০২২ ফুটবল বিশ্বকাপ কোথায় হবে?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 134 (ET: N/A)]*  
    a) কাতার  
@@ -5090,11 +5132,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) মেক্সিকো  
    d) ইংল্যান্ড
 
+   answer: a — কাতার  
+   explanation: ২০২২ ফিফা বিশ্বকাপ কাতারে অনুষ্ঠিত হয় এবং আর্জেন্টিনা চ্যাম্পিয়ন হয়।
+
 16. **বাংলাদেশ অস্ট্রেলিয়া সিরিজের ফলাফল কি?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 134 (ET: N/A)]*  
    a) ৩-২  
    b) ৪-১  
    c) ১-৪  
    d) ২-৩
+
+   answer: b — ৪-১  
+   explanation: ২০২১ সালের ঘরের মাঠের টি-টোয়েন্টি সিরিজে বাংলাদেশ অস্ট্রেলিয়াকে ৪-১ ব্যবধানে হারায়।
 
 17. **অলিম্পিক ২০২০ এ সবচেয়ে বেশি পদকপ্রাপ্ত দেশ কোনটি?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 134 (ET: N/A)]*  
    a) চীন  
@@ -5102,11 +5150,17 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    c) যুক্তরাষ্ট্র  
    d) জার্মানী
 
+   answer: c — যুক্তরাষ্ট্র  
+   explanation: টোকিও ২০২০ অলিম্পিকে যুক্তরাষ্ট্র সবচেয়ে বেশি মোট পদক ও সোনা জেতে।
+
 18. **Who scored the only goal in the final match of 2021 SAFF U-19 Women's Championship?** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. Shaheda Akter Ripa  
    খ. Anai Mogini  
    গ. Maria Mauda  
    ঘ. Anishka
+
+   answer: ক — Shaheda Akter Ripa  
+   explanation: Shaheda Akter Ripa scored the lone goal in the 2021 SAFF U-19 Women's Championship final.
 
 19. **Ping Pong means;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. Volleyball  
@@ -5114,8 +5168,14 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. Basketball  
    ঘ. Lane Tennis
 
+   answer: খ — Table Tennis  
+   explanation: "Ping pong" is the popular name for table tennis, from the sound of the ball on the bat.
+
 20. **বঙ্গবন্ধু টি-২০ কাপ ২০২০ মোট কয়টি দল অংশ নিয়েছিল?** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) ৬টি  
    (খ) ৭টি  
    (গ) ৪টি  
    (ঘ) ৫টি
+
+   answer: ঘ — ৫টি  
+   explanation: বঙ্গবন্ধু টি-২০ কাপ ২০২০-এ পাঁচটি দল অংশ নেয়।
