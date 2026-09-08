@@ -875,8 +875,14 @@
    (c) 80  
    (d) 8000
 
+   answer: c — 80  
+   explanation: Load factor is elements divided by slots, so 2000 ÷ 25 = 80.
+
 2. **Which of the following symbol table implementation is best suited if access time is to be minimum?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) Linear list  
    (b) Linked list  
    (c) Hash table  
    (d) Self-organizing list
+
+   answer: c — Hash table  
+   explanation: A hash function computes the slot directly, giving average O(1) access, far faster than scanning a list.
