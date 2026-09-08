@@ -1000,11 +1000,17 @@
    (c) Isolation  
    (d) Durability
 
+   answer: a — Atomicity  
+   explanation: The transfer must happen completely or not at all; money leaving A without reaching B means the transaction was not atomic.
+
 2. **Which one of these is not included in acid property of database?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
    (a) Atomicity  
    (b) Consistency  
    (c) Durability  
    (d) Display
+
+   answer: d — Display  
+   explanation: ACID stands for Atomicity, Consistency, Isolation and Durability — display is not one of them.
 
 3. **A transaction completes its execution is said to be-** *[NPCBL Executive Trainee (Software) 2023 compact it 41 (ET: N/A)]*  
    a) Committed  
@@ -1012,8 +1018,14 @@
    c) Rolled back  
    d) Successful
 
+   answer: a — Committed  
+   explanation: A transaction that finishes all its operations successfully enters the committed state and its changes become permanent.
+
 4. **What is the D in ACID property in database?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Durability
+
+   answer: Durability  
+   explanation: Durability guarantees that once a transaction commits, its changes survive crashes and power loss.
 
 5. **Which one of the following commands is used to restore the database to the last committed state?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
    a) Save point  
@@ -1021,11 +1033,17 @@
    c) Commit  
    d) None of the
 
+   answer: b — Rollback  
+   explanation: ROLLBACK undoes everything done since the last COMMIT, returning the database to that committed state.
+
 6. **Which one is not Database Transaction property?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) Atomicity  
    b) Consistency  
    c) Durability  
    d) Quality
+
+   answer: d — Quality  
+   explanation: The transaction properties are Atomicity, Consistency, Isolation and Durability; quality is not among them.
 
 7. **Which one of the following is a failure to a system?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
    a) Boot crash  
@@ -1033,11 +1051,17 @@
    c) Transaction failure  
    d) All of the mentioned
 
+   answer: d — All of the mentioned  
+   explanation: A boot crash, a read failure and a transaction failure are all system failures the recovery manager must handle.
+
 8. **How can your rollback a committed transaction in any DBMS?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
    a) Using SQL rollback commands  
    b) Restoring the data from backups  
    c) Run the transaction again in Reverse order  
    d) All of the Above
+
+   answer: b — Restoring the data from backups  
+   explanation: A commit is final and cannot be rolled back, so the only way back is to restore from a backup and replay the logs.
 
 9. **The packaged procedure that makes data in form permanent in the Database is-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
    a) Post  
@@ -1045,11 +1069,17 @@
    c) Commit form  
    d) None of the above
 
+   answer: c — Commit form  
+   explanation: COMMIT_FORM writes the changes held in the form's buffer permanently into the database.
+
 10. **ROLLBACK command is used to undo the changes made by-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
    a) DDL commands  
    b) TCL commands  
    c) DML Commands  
    d) Commit command
+
+   answer: c — DML Commands  
+   explanation: ROLLBACK undoes uncommitted INSERT, UPDATE and DELETE work; DDL statements auto-commit and cannot be rolled back.
 
 11. **Why is set transaction used in an oracle DBMS?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
    a) For placing a name on a transaction  
@@ -1057,11 +1087,17 @@
    c) For locking a transaction  
    d) To setup transaction user parameters.
 
+   answer: d — To setup transaction user parameters  
+   explanation: SET TRANSACTION configures the transaction before it begins — its isolation level, read-only or read-write mode and rollback segment.
+
 12. **After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is known as-** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
    a) Atomicity  
    b) Consistency  
    c) Isolation  
    d) Durability
+
+   answer: d — Durability  
+   explanation: Durability is the guarantee that committed changes survive any later system failure.
 
 13. **It is a necessary requirement that the transaction is guaranteed to complete or the transaction is never started, so that an inconsistent state would not be visible except during the execution of the transaction. Such a property of transaction is known as-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 154 (ET: DU)]*  
    a) Atomicity  
@@ -1069,11 +1105,17 @@
    c) Isolation  
    d) Durability
 
+   answer: a — Atomicity  
+   explanation: Atomicity makes a transaction all-or-nothing, so no partial, inconsistent state is ever left behind.
+
 14. **Which SQL keyword is used to short the result set?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. ORDER  
    b. SORT  
    c. ORDER BY  
    d. SORT BY
+
+   answer: c — ORDER BY  
+   explanation: ORDER BY sorts the rows of the result set, ascending by default.
 
 ## Keys in DBMS (11)
 
