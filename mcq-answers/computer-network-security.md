@@ -438,6 +438,9 @@
 1. **Software downloaded from internet and installed that is malicious is called-** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Malware
 
+   answer: Malware  
+   explanation: Malware is any software written to damage a system or steal data, and it often arrives disguised as a normal download.
+
 2. **এন্টি ভাইরাস কি?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) সফটওয়্যার  
    (খ) ম্যালওয়্যার  
@@ -445,11 +448,17 @@
    (ঘ) সিস্টেম সফটওয়্যার  
    **উত্তর: ক**
 
+   answer: ক — সফটওয়্যার  
+   explanation: Antivirus is a utility program that scans for and removes malicious code, so it is software.
+
 3. **নিচের কোনটি Antivirus নয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
    A) Norton  
    B) MCAfee  
    C) Dr. Solomon toolkit  
    D) Security Point
+
+   answer: D — Security Point  
+   explanation: Norton, McAfee and Dr. Solomon's Toolkit are real antivirus products; Security Point is not.
 
 4. **Which of the following is not antivirus software?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
    A) Win-pro  
@@ -457,11 +466,17 @@
    C) McAfee  
    D) Symantec
 
+   answer: A — Win-pro  
+   explanation: AVG, McAfee and Symantec are antivirus vendors; Win-pro is not an antivirus product.
+
 5. **Which of the following is not a malware?** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) Virus  
    B) Worm  
    C) Bug  
    D) Trojan horse
+
+   answer: C — Bug  
+   explanation: A bug is an accidental programming defect, while viruses, worms and Trojans are deliberately written malicious software.
 
 6. **Trojan can be introduced through-** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Internet browsing  
@@ -469,11 +484,17 @@
    C) Emails  
    D) Troubleshooting
 
+   answer: C — Emails  
+   explanation: Trojans commonly arrive as an email attachment or link that looks harmless and installs the payload when opened.
+
 7. **Computer virus is a ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Animal  
    b. Hardware  
    c. Program  
    d. Machine
+
+   answer: c — Program  
+   explanation: A computer virus is a program that attaches itself to other files and copies itself when they run.
 
 ## Cyber Ethics & Cyber Law (6)
 
