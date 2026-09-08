@@ -1522,11 +1522,17 @@
    c) 35\frac{2}{3}  
    d) 40\frac{5}{3}
 
+   answer: a — 42⅔  
+   explanation: The mixture holds 40 L milk and 24 L water; for 3:5 we need 40/(24+w) = 3/5, giving w = 128/3 = 42⅔ litres.
+
 2. **Three boys have marbles in the ration of 19:5:3. If the boy with the least number has 9 marbles, how many marbles does the boy with the highest number have?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 23  
    b) 37  
    c) 45  
    d) 57
+
+   answer: d — 57  
+   explanation: The smallest share of 3 parts equals 9 marbles, so one part is 3 and the largest share is 19 × 3 = 57.
 
 3. **In distributing milk at a summer camp, it is found that a quart of milk will fill wither 3 large glass tumblers or 5 small glass tumblers. How many small glass tumblers can be filled with one large glass tumbler?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 11/5  
@@ -1534,11 +1540,17 @@
    c) 5/3  
    d) 7/3
 
+   answer: c — 5/3  
+   explanation: A quart fills 3 large or 5 small, so one large tumbler equals 5/3 small ones.
+
 4. **A jar contains white, red and green marbles in the ratios 2:3:5 Six more green marbles are added to the jars, and then the ratio becomes 2:3:7. How many white marbles are there in the jar?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) 2  
    (b) 4  
    (c) 6  
    (d) 8
+
+   answer: c — 6  
+   explanation: With shares 2x, 3x, 5x, adding 6 green gives 2x/(5x+6) = 2/7, so x = 3 and the white marbles number 2x = 6.
 
 5. **Equal amounts of water were poured into two empty jars of different capacities, which made one jar 1/4 full and the other jar 1/3 full. If the water in the jar with the lesser capacity is then poured into the jar with the greater capacity, what fraction of the larger jar will be filled with water?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) 1/3  
@@ -1546,11 +1558,17 @@
    (c) 1/5  
    (d) 1/2
 
+   answer: d — 1/2  
+   explanation: Equal volume V fills 1/4 of one jar (capacity 4V) and 1/3 of the other (capacity 3V); pouring the smaller jar's V into the 4V jar makes 2V, which is half of it.
+
 6. **The ratio of male students to female students in a class is 13 to 19. If there are 224 people in the class, including one teacher, one administrator, and thirty evaluators, how many people in the class are male students?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 78  
    b. 80  
    c. 91  
    d. 114
+
+   answer: a — 78  
+   explanation: Removing the teacher, administrator and 30 evaluators leaves 192 students, and 13/32 of 192 is 78 male students.
 
 ## Permutation & Combination (5)
 
