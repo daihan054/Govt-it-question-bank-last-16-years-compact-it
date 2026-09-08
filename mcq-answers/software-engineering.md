@@ -409,17 +409,26 @@
    (c) ERD  
    (d) UML
 
+   answer: a — Structure chart  
+   explanation: A structure chart shows the program broken into modules arranged as a hierarchy of callers and called modules.
+
 2. **Which of the following is a design pattern?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) Factory  
    B) List  
    C) Queue  
    D) All of these
 
+   answer: A — Factory  
+   explanation: Factory is a creational design pattern; list and queue are data structures, not patterns.
+
 3. **Which of the following is a design pattern?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) List  
    B) Queue  
    C) Factory  
    D) All of above
+
+   answer: C — Factory  
+   explanation: The Factory pattern creates objects without naming the exact class, which is a design pattern rather than a data structure.
 
 ## Software Requirements Engineering (1)
 
