@@ -741,11 +741,17 @@
    c) 0  
    d) more than 2
 
+   answer: a — 1  
+   explanation: A C function returns a single value; multiple results need pointers, a struct or global variables.
+
 2. **Which of the following correctly accesses the seventh element stored in arr, an array with 100 elements?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*  
    a) arr[6]  
    b) arr[7]  
    c) arr{6}  
    d) arr{7}
+
+   answer: a — arr[6]  
+   explanation: Array indexing starts at 0, so the seventh element sits at index 6; braces are not valid subscript syntax.
 
 3. **Which of the following do not return any value?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 53 (ET: N/A)]*  
    (ক) Constructor function  
@@ -753,11 +759,17 @@
    (গ) In line Function  
    (ঘ) Member Functions
 
+   answer: ক — Constructor function  
+   explanation: A constructor has no return type at all — not even void — because its job is to initialise the object.
+
 4. **Assuming an int is of 4 bytes, What is the size of “int array[15]”?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) 15  
    (খ) 19  
    (গ) 11  
    (ঘ) 60
+
+   answer: ঘ — 60  
+   explanation: 15 elements × 4 bytes each = 60 bytes.
 
 5. **In C++, The library function exit() causes an exit from-** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 57 (ET: N/A)]*  
    (ক) a block of statements  
@@ -765,11 +777,17 @@
    (গ) a function in which it occurs  
    (ঘ) a program in which it occurs
 
+   answer: ঘ — a program in which it occurs  
+   explanation: exit() terminates the whole program immediately and returns the status code to the operating system.
+
 6. **Which of the following is correct to initialize arrays in C?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 83 (ET: N/A)]*  
    a. int array = (1, 2, 3, 4, 5)  
    b. int array = {1, 2, 3, 4, 5}  
    c. int array() = (1, 2, 3, 4, 5)  
    d. int array[5] = {1, 2, 3, 4, 5}
+
+   answer: d — int array[5] = {1, 2, 3, 4, 5}  
+   explanation: An array needs square brackets for its size and braces for the initialiser list; parentheses are not valid.
 
 7. **What is the access methodology in array?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 83 (ET: N/A)]*  
    a. Sequential  
@@ -777,11 +795,17 @@
    c. Rational  
    d. Stochastic
 
+   answer: b — Random  
+   explanation: Element i is reached by computing base + i×size, so any element takes the same constant time — random access.
+
 8. **Which of the following is correct?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
    a. “X extends Y” is correct if and only if X is a class and Y is an interface  
    b. “X extends Y” is correct if and only if X is an interface and Y is a class  
    c. “X extends Y” is correct if X and Y are either both classes or both interfaces  
    d. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces
+
+   answer: c — "X extends Y" is correct if X and Y are either both classes or both interfaces  
+   explanation: A class extends a class and an interface extends an interface; a class uses implements, not extends, for an interface.
 
 9. **An n*n array v is defined as follows: v[i, j]=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
    A) 0  
@@ -789,11 +813,17 @@
    C) n^2-3n+2  
    D) n^2(n+1)/2
 
+   answer: A — 0  
+   explanation: The terms pair up as (i-j) and (j-i), which cancel, and the diagonal terms are 0, so the whole sum is 0.
+
 10. **When you pass array as an argument to a function, which actually gets passed?** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
    (a) Base address of the array  
    (b) The first element of the array  
    (c) Address of the first element of the array  
    (d) Address of the last element of the array
+
+   answer: a — Base address of the array  
+   explanation: An array name decays to a pointer to its first element, so only that address is passed, not a copy of the data (option c says the same thing).
 
 11. **int number [] = {10,20,30,40,50}; number[3] =?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
    A) 10  
@@ -801,11 +831,17 @@
    C) 30  
    D) 40
 
+   answer: D — 40  
+   explanation: Indexing is zero-based, so number[3] is the fourth element, 40.
+
 12. **Two dimensional arrays are also called?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) table array  
    B) matrix array  
    C) both A and B  
    D) none of the above
+
+   answer: C — both A and B  
+   explanation: A 2-D array is arranged in rows and columns, so it is called both a table array and a matrix array.
 
 13. **The smallest element of array index is called it-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) Lower Bound  
@@ -813,17 +849,26 @@
    C) Range  
    D) Extraction
 
+   answer: A — Lower Bound  
+   explanation: The smallest valid index is the lower bound and the largest is the upper bound.
+
 14. **What type of reference should be used in vector arithmetic in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) Dynamic  
    B) const  
    C) a and b  
    D) none of the mentioned
 
+   answer: B — const  
+   explanation: Vector arithmetic passes operands by const reference, which avoids copying large objects while guaranteeing they are not modified.
+
 15. **In C, if you pass an array as an argument to a function, what actually gets passed?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
    a. Value of elements in array  
    b. First element of the array  
    c. Base address of the array  
    d. Address of the last element of the array
+
+   answer: c — Base address of the array  
+   explanation: The array name decays to a pointer to element 0, so the function receives that base address and works on the original array.
 
 ## Data Types & Variables (14)
 
