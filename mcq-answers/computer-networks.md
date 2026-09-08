@@ -2138,11 +2138,17 @@
    c) Full-duplex  
    d) Simplex
 
+   answer: d — Simplex  
+   explanation: A keyboard only sends to the computer and never receives from it, so the data flows in one direction.
+
 2. **The _______ is an HFC network device installed inside the distribution hub that receives data from the internet and passes them to the combiner.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*  
    (a) CM  
    (b) CMTS  
    (c) DOCSIS  
    (d) MCNS
+
+   answer: b — CMTS  
+   explanation: The Cable Modem Termination System sits in the distribution hub, takes data from the internet and hands it to the combiner for downstream transmission.
 
 3. **If the end office receives two bursts of analog signals with frequencies of 697 and 1477 Hz, then the number ____ has been punched.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
    (a) 1  
@@ -2150,11 +2156,17 @@
    (c) 3  
    (d) 4
 
+   answer: c — 3  
+   explanation: In DTMF the 697 Hz row crossed with the 1477 Hz column is the key "3".
+
 4. **_______ is a standard to allow telephones on the public telephone network to talk to computers connected to the Internet.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) SIP  
    (b) H.323  
    (c) IEEE 802.3  
    (d) V.90bis
+
+   answer: b — H.323  
+   explanation: H.323 is the ITU standard that lets telephones on the PSTN carry voice calls with computers on an IP network.
 
 5. **A sine wave is offset \frac{1}{6} cycle with respect to time 0. What is its phase in degrees and radians?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) 60^{\circ} and 1.046\text{ rad}  
@@ -2162,17 +2174,26 @@
    c) 90^{\circ} and 2.046\text{ rad}  
    d) 360^{\circ} and 6.2832\text{ rad}
 
+   answer: a — 60° and 1.046 rad  
+   explanation: One sixth of a full cycle is 360/6 = 60°, and 60 × π/180 ≈ 1.046 radians.
+
 6. **Which one is the bandwidth for a signal transmitting at 12 Mbps for QPSK (d=0)?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) 2MHz  
    b) 4MHz  
    c) 6 MHz  
    d) None of the above
 
+   answer: c — 6 MHz  
+   explanation: QPSK carries 2 bits per symbol, so 12 Mbps is 6 Mbaud, and with d = 0 the bandwidth equals the baud rate, 6 MHz.
+
 7. **Which one is not the purpose of modulation in a communication system?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 182 (ET: N/A)]*  
    a) To reduce antennas size  
    b) To saves energy to transmit information  
    c) To transmit signals from various sources  
    d) To make the system simpler and cost effective
+
+   answer: d — To make the system simpler and cost effective  
+   explanation: Modulation shrinks antennas, saves transmit energy and allows many sources to share a medium, but it makes the system more complex, not simpler.
 
 8. **A line coding scheme of digital to digital conversion in given below. What is the name of this line coding technique?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*  
    a) NRZ  
@@ -2186,11 +2207,17 @@
    C) Demand Priority  
    D) Polling
 
+   answer: A — CSMA/CD  
+   explanation: Wired Ethernet uses Carrier Sense Multiple Access with Collision Detection: listen first, transmit, and back off if a collision is heard.
+
 10. **Five components that make up a data communications system are message, sender, receiver, medium and-** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*  
    A) Code  
    B) Connecting device  
    C) Protocol  
    D) All of these
+
+   answer: C — Protocol  
+   explanation: The five components are message, sender, receiver, transmission medium and protocol.
 
 11. **The technique that is used to digitize analog signal by a codec is called-** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
    (a) PCM  
@@ -2198,11 +2225,17 @@
    (c) CDMA  
    (d) NRZ
 
+   answer: a — PCM  
+   explanation: Pulse Code Modulation samples the analog signal, quantises each sample and encodes it in binary.
+
 12. **Which one of the following is the source of data communication?** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
    (a) Modem  
    (b) Cable  
    (c) Router  
    (d) Computer
+
+   answer: d — Computer  
+   explanation: The source is the device that creates the data to be sent; modems, cables and routers only carry it.
 
 13. **If the frequency spectrum of a signal has a bandwidth of 500Hz with the highest frequency is 600Hz. What should be the sampling rate according to the Nyquist theorem?** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
    (a) 200 samples/S  
@@ -2210,11 +2243,17 @@
    (c) 1000 samples/S  
    (d) 1200 samples/S
 
+   answer: d — 1200 samples/S  
+   explanation: Nyquist requires sampling at twice the highest frequency, so 2 × 600 = 1200 samples per second.
+
 14. **The action of decoding a modulated signal is known as -** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*  
    A) Simulation  
    B) Emulation  
    C) Binary  
    D) None of the above
+
+   answer: D — None of the above  
+   explanation: Recovering the original information from a modulated carrier is called demodulation, which is not among the choices.
 
 15. **Which of the following is a digital modulation technique?** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*  
    a. DM  
@@ -2222,11 +2261,17 @@
    c. PSK  
    d. All
 
+   answer: c — PSK  
+   explanation: Phase Shift Keying varies the carrier phase to carry digital bits; DM and PCM are techniques for digitising an analog signal, not modulation of a carrier.
+
 16. **A The three major components of a communication system are ________.** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*  
    a. Source, data rate and response time  
    b. Source, Link and receiver  
    c. Transmitter, link and receiver  
    d. Source, link and detector
+
+   answer: c — Transmitter, link and receiver  
+   explanation: Every communication system needs something to send, a medium to carry the signal, and something to receive.
 
 ## OSI & TCP-IP Model (16)
 
