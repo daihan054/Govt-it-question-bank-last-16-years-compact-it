@@ -111,11 +111,17 @@
    (গ) কম্প্রেসরে  
    (ঘ) থ্রোটল ভালবে
 
+   answer: খ — ইভাপোরেটরে  
+   explanation: The refrigerant absorbs heat from the cold space as it evaporates in the evaporator coil; it rejects that heat in the condenser.
+
 2. **এক বায়ুমন্ডলীয় চাপ সমান-** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) ১৪.৭ কেজি/সে.মি  
    (খ) ১ কেজি/মি.  
    (গ) ১.০৩৩ কেজি/সে.মি  
    (ঘ) ১.০৩৩ কেজি/মি
+
+   answer: গ — ১.০৩৩ কেজি/সে.মি  
+   explanation: One standard atmosphere is 1.033 kgf/cm², equal to 14.7 psi or 101.325 kPa.
 
 3. **IC ইঞ্জিনের জ্বালানী দহন ঘটে-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) সিলিন্ডারের বাইরে  
@@ -123,11 +129,17 @@
    (গ) কোথাও দহন ঘটে না  
    (ঘ) উপরের কোনটি নয়।
 
+   answer: খ — সিলিন্ডারের অভ্যন্তরে  
+   explanation: In an internal combustion engine the fuel burns inside the cylinder and the expanding gases push the piston directly.
+
 4. **যে কোন মুহূর্তে বয়লারের পানির সঠিক লেভেল জানা যায় যে যন্ত্রের সাহায্যে সেটি হল-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) ওয়াটার লেভেল ইন্ডিকেটর  
    (খ) ফিড চেক ভালব  
    (গ) ব্লো অফ-কক  
    (ঘ) স্টপ ভালব
+
+   answer: ক — ওয়াটার লেভেল ইন্ডিকেটর  
+   explanation: The water level indicator (gauge glass) shows the boiler water level at any moment, which is a mandatory safety fitting.
 
 5. **ডোমেস্টিক রেফ্রিজারেটরের কো-এফিসিয়েন্ট অফ পারফরমেন্স (COP) হলো-** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) ১.০ এর সমান  
@@ -135,17 +147,26 @@
    (গ) ১.০ এর বেশি  
    (ঘ) ক, খ, গ এর যে কোন মান
 
+   answer: গ — ১.০ এর বেশি  
+   explanation: A domestic refrigerator moves more heat than the work it consumes, so its COP is typically 2 to 4.
+
 6. **কোনটি নন-পজিটিভ ডিসপ্লেসমেন্ট কম্প্রেসর** *[BPSC Senior Instructor (MEW) 2021 compact it 144 (ET: N/A)]*  
    (ক) রেসিপ্রোকেটিং কম্প্রেসর  
    (খ) সেন্ট্রিফিউগাল কম্প্রেসর  
    (গ) এক্সিয়াল কম্প্রেসর  
    (ঘ) খ ও গ উভয়টি সঠিক
 
+   answer: ঘ — খ ও গ উভয়টি সঠিক  
+   explanation: Centrifugal and axial compressors raise pressure dynamically with rotating blades, so both are non-positive-displacement machines.
+
 7. **থার্মোডাইনামিক্স এর প্রথম সূত্রটি কোন সমীকরণ দ্বারা প্রকাশ করা হয়।** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (ক) W = JH  
    (খ) H = JW  
    (গ) W = J + H  
    (ঘ) H = J + W
+
+   answer: ক — W = JH  
+   explanation: The first law in this form states that work and heat are equivalent, with J the mechanical equivalent of heat.
 
 8. **একটি গ্যাসের রুদ্ধতাপীয় প্রসারণ কোন সূত্র দ্বারা প্রকাশ করা হয়-** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
    (a) \text{PV} = \text{constant}  
@@ -159,17 +180,26 @@
    গ. \\text\{J/Kg-K\}
    ঘ. উপরের সবগুলি
 
+   answer: b — PV^γ = constant  
+   explanation: In an adiabatic process no heat is exchanged, and the pressure-volume relation follows PV^γ = constant with γ = Cp/Cv.
+
 9. **Which one is the first search engine? [ বিশ্বের প্রথম সার্চ ইঞ্জিন কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (a) Google  
    (b) Archie  
    (c) Alta vista  
    (d) WAIS
 
+   answer: b — Archie  
+   explanation: Archie, created in 1990, indexed FTP file listings and is regarded as the first internet search engine.
+
 10. **'একুশ মানে মাথা নত না করা' এই প্রতিজ্ঞা কে করেছেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    ক) আবুল ফজল  
    খ) শেখর আহমদ  
    গ) অর্থ অপুর্বর  
    ঘ) সিরাজুল ইসলাম চৌধুরী
+
+   answer: ক — আবুল ফজল  
+   explanation: Abul Fazal wrote the line "একুশ মানে মাথা নত না করা" about the spirit of the Language Movement.
 
 ## Engineering Materials & Manufacturing (7)
 
