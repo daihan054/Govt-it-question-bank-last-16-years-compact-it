@@ -3805,6 +3805,1290 @@ Answer:
       - On (days/dates): on Sunday, on 26th March
       - At (specific clock time/small location): at 10:00 AM, at Dhanmondi
 
+## Networking Fundamentals & Terminology (32)
+
+1. **Define Computer Network. Describe different types of Computer Networks.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
+
+Answer:
+
+   Definition of a computer network
+   - A computer network is a collection of two or more computing devices connected together by a transmission medium so that they can exchange data and share resources.
+   - The connected devices are called `nodes` or `hosts`. The connection between two nodes is called a `link`. Every node needs a NIC and an address, and both sides must follow the same `protocol`.
+   - So a network needs four things: at least two nodes, a transmission medium (cable or wireless), a set of protocols, and an addressing scheme.
+
+   Why we build networks
+   - Resource sharing — one printer, one scanner, one database or one internet line serves many users.
+   - Communication — email, chat, voice and video calls, file transfer.
+   - Reliability — if one path or one server fails, another can take over.
+   - Cost saving — cheap client machines using one powerful server instead of many stand-alone machines.
+   - Central management — one place to apply backups, updates, user accounts and security policy.
+
+   Three criteria used to judge a network
+   - Performance — throughput and delay (transit time and response time).
+   - Reliability — how often it fails and how quickly it recovers.
+   - Security — protection of data from unauthorised access and from viruses.
+
+   Types of computer network by geographical area
+
+| Type | Full form | Area covered | Typical speed | Owned by | Example |
+|---|---|---|---|---|---|
+| PAN | Personal Area Network | 1–10 metres, around one person | A few Kbps to a few Mbps | The individual | Mobile phone with Bluetooth earbuds, smart watch, mobile hotspot |
+| LAN | Local Area Network | One room, floor or building, up to about 1–2 km | 100 Mbps to 10 Gbps | The organisation itself | Office, school or bank branch Ethernet / Wi-Fi network |
+| CAN | Campus Area Network | Several nearby buildings, 1–5 km | 1–10 Gbps | The institution | A university campus joining many building LANs |
+| MAN | Metropolitan Area Network | One city or large town, about 5–50 km | 10 Mbps to several Gbps | Usually an ISP or a telecom operator | Cable TV network, a city-wide fibre ring, branches of a bank inside Dhaka |
+| WAN | Wide Area Network | A country, a continent or the whole world, above 50 km | 1.5 Mbps to 100 Gbps and more | Links are leased from carriers | The Internet, a bank's nationwide branch network |
+
+   Other important types
+   - `WLAN` (Wireless LAN) — a LAN built on radio waves using the IEEE 802.11 (Wi-Fi) standard and an access point, instead of cables.
+   - `SAN` (Storage Area Network) — a high-speed dedicated network that connects servers to storage arrays and makes remote disks look local.
+   - `VPN` (Virtual Private Network) — a private, encrypted tunnel carried over the public internet, so a remote branch or a home user feels like they are inside the office LAN.
+   - `Internet` — the global public network of networks. `Intranet` — a private network for one organisation only. `Extranet` — an intranet that also lets selected outsiders such as suppliers and clients enter.
+   - `GAN` (Global Area Network) — an unbounded collection of networks, usually satellite and undersea cable based, that covers the whole planet.
+
+   Types by the relationship between the nodes
+   - Peer-to-peer — every machine is equal, and each one can be both client and server. Cheap and simple, but hard to secure and manage. Suited to fewer than about ten machines.
+   - Client–server — dedicated servers hold the data and services; clients request them. Central security, central backup, easy to scale, but the server is a costly single point of failure.
+
+   Types by transmission technology
+   - Broadcast networks — one shared channel; every machine hears every message and keeps only the ones addressed to it. Example: classic Ethernet on a hub, Wi-Fi.
+   - Point-to-point networks — many separate links between individual pairs of machines; packets may take different routes and need routing. Example: a WAN built from leased lines.
+
+2. **(ক) IP address এবং MAC Address- এর মাঝে তুলনা করুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+Answer: (Answered in English, as required for IT topics.) Comparison of IP address and MAC address.
+
+| Point | MAC Address | IP Address |
+|---|---|---|
+| Full form | Media Access Control address | Internet Protocol address |
+| Also called | Physical address, hardware address, burned-in address | Logical address |
+| OSI layer | Layer 2, Data Link | Layer 3, Network |
+| Size | 48 bits (6 bytes); 64 bits in EUI-64 | 32 bits in IPv4, 128 bits in IPv6 |
+| Written as | 6 groups of 2 hex digits — `4C:23:10:4A:1A:2A` | Dotted decimal — `192.168.10.5`; IPv6 in hex groups |
+| Given by | The NIC manufacturer, at the factory | The network administrator, DHCP, or the ISP |
+| Scope | Works only inside one local network (one broadcast domain) | Works globally, across the whole internet |
+| Changes? | Normally fixed for the life of the card | Changes whenever the device joins a different network |
+| Structure | First 3 bytes = OUI (vendor), last 3 bytes = serial number | Network portion + host portion, split by the subnet mask |
+| Classes | No classes | IPv4 has classes A, B, C, D, E |
+| Delivery it performs | Hop-to-hop delivery — from this node to the next node | End-to-end delivery — from the original source to the final destination |
+| Found using | `ARP` (IP → MAC) | `RARP` / `DHCP` (MAC → IP) |
+| Device that uses it to forward | Switch and bridge | Router |
+| Changed at each hop? | Yes — rewritten by every router | No — stays the same the whole way |
+| Command to view | `ipconfig /all` on Windows, `ifconfig` or `ip link` on Linux | `ipconfig` on Windows, `ip addr` on Linux |
+
+   How the two work together
+   - Suppose `192.168.1.10` wants to send data to `8.8.8.8`. The IP header carries source `192.168.1.10` and destination `8.8.8.8`, and those two never change.
+   - But the frame must first reach the default gateway, so ARP is used to learn the gateway's MAC, and the frame carries source = my MAC, destination = gateway MAC.
+   - At every router the IP addresses stay the same while the MAC addresses are replaced with those of the next hop. This is why the IP address is called the end-to-end address and the MAC address the hop-to-hop address.
+
+3. **(ক) সংজ্ঞা লিখুন: (i) Propagation delay, (ii) Transmission delay.** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+Answer: (Answered in English, as required for IT topics.)
+
+   (i) Propagation delay
+   - Propagation delay is the time a single bit takes to travel through the medium from the sender to the receiver, once it has entered the medium.
+   - It is measured from the instant the first bit leaves the sender until that same bit arrives at the receiver.
+
+   $$T_p = \frac{\text{Distance }(d)}{\text{Propagation speed }(s)}$$
+
+   - It depends only on the `distance` and on the `medium`. Signal speed is about 3 × 10⁸ m/s in vacuum, roughly 2 × 10⁸ m/s in copper and optical fibre.
+   - It does not depend on the packet size or on the bandwidth of the link.
+
+   (ii) Transmission delay
+   - Transmission delay is the time the sender needs to push all the bits of a packet onto the link — from the first bit to the last bit leaving the NIC.
+
+   $$T_t = \frac{\text{Packet length }(L)}{\text{Bandwidth }(B)}$$
+
+   - It depends only on the `packet size` and the `bandwidth` of the link. It does not depend on distance at all.
+
+   Worked example
+   - A 1000-byte packet is sent over a 100 km fibre link of 10 Mbps bandwidth, with signal speed 2 × 10⁸ m/s.
+   - Transmission delay = (1000 × 8) / (10 × 10⁶) = 8000 / 10⁷ = 0.8 ms
+   - Propagation delay = (100 × 10³) / (2 × 10⁸) = 0.5 ms
+   - Total one-way delay ≈ 1.3 ms, ignoring queueing and processing.
+
+   Quick comparison
+
+| Point | Transmission delay | Propagation delay |
+|---|---|---|
+| Meaning | Time to put all bits on the wire | Time for a bit to travel to the far end |
+| Formula | `L / B` | `d / s` |
+| Depends on | Packet size, bandwidth | Distance, medium |
+| Does not depend on | Distance | Packet size, bandwidth |
+| Reduced by | Increasing bandwidth or reducing packet size | Shortening the path or using a faster medium |
+
+   - The other two delays that complete the picture are `queueing delay` (waiting in a router's buffer) and `processing delay` (time the router spends examining the header). Total delay = T_t + T_p + T_q + T_proc.
+
+4. **Write short note: Network, Protocol, link, gateway, Node.** *[BREB Assistant Programmer 18.02.2023 compact it 470 (ET: N/A)]*
+
+Answer:
+
+   Network
+   - A network is two or more devices joined by a transmission medium so that they can exchange data and share resources such as files, printers and an internet connection.
+   - It is described by its size (PAN, LAN, MAN, WAN), its topology (bus, star, ring, mesh) and the protocols it runs.
+
+   Protocol
+   - A protocol is the agreed set of rules that governs how two devices communicate. If the two sides do not use the same protocol, communication fails.
+   - It has three elements: `syntax` — the format and order of the fields; `semantics` — what each field means and what action to take; `timing` — when to send and at what rate.
+   - Examples: HTTP for web pages, TCP for reliable transport, IP for addressing and routing, SMTP for mail, ARP for address resolution.
+
+   Link
+   - A link is the physical or logical path that directly connects two adjacent nodes and carries the signal between them.
+   - It may be guided (twisted pair, coaxial, optical fibre) or unguided (radio, microwave, infrared, satellite).
+   - A link can be point-to-point, where the whole capacity belongs to two devices, or multipoint, where several devices share the same medium.
+
+   Gateway
+   - A gateway is a node that joins two networks that use `different` protocols or architectures, and it translates between them. Because it may have to rewrite the message all the way up to the application layer, it can work at any of the seven OSI layers.
+   - Every host also has a `default gateway` — the router address it sends traffic to whenever the destination is outside its own subnet.
+   - Examples: an email gateway between SMTP and a proprietary mail system, a VoIP gateway between an IP network and the analogue telephone network, an IPv4-to-IPv6 gateway.
+
+   Node
+   - A node is any device on a network that has a network address and can send, receive or forward data.
+   - End nodes (also called hosts) are computers, phones, printers and servers. Intermediate nodes are hubs, switches, routers and gateways.
+   - In a bus topology every node hangs off the shared backbone; in a star topology every node connects to the central switch.
+
+5. **(b) Define following terms: (i) Bandwidth (ii) Latency (iii) MAC Address (iv) IP address** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 491 (ET: N/A)]*
+
+Answer:
+
+   (i) Bandwidth
+   - Bandwidth is the maximum amount of data a link can carry per unit time — that is, the capacity of the channel.
+   - In digital networking it is measured in bits per second: bps, Kbps, Mbps, Gbps. In analogue and signal terms it is the width of the frequency range the channel passes, measured in hertz — for example a voice channel of 300–3400 Hz has a bandwidth of 3100 Hz.
+   - Bandwidth is the theoretical ceiling. The data actually delivered is called `throughput`, and it is always lower because of overhead, collisions, congestion and errors. Bandwidth is the width of the pipe; throughput is the water that really flows.
+
+   (ii) Latency
+   - Latency, or delay, is the time a message takes to travel completely from the source to the destination.
+   - Latency = propagation delay + transmission delay + queueing delay + processing delay.
+   - Round-trip time (RTT) is the delay in both directions, and it is what `ping` reports. Typical values: about 1 ms inside a LAN, 20–50 ms to a nearby country, 250–600 ms over a geostationary satellite link.
+   - The variation in latency from packet to packet is called `jitter`, and it is what damages voice and video quality.
+
+   (iii) MAC address
+   - A MAC (Media Access Control) address is the 48-bit physical address burned into a network interface card by its manufacturer, and it uniquely identifies that card on a local network.
+   - It is written as six pairs of hex digits, for example `00:1A:2B:3C:4D:5E`. The first three bytes are the OUI, which identifies the vendor; the last three bytes are the card's serial number.
+   - It is used at the Data Link layer, and switches forward frames using it. It is a flat address with no hierarchy, so it cannot be routed across the internet.
+
+   (iv) IP address
+   - An IP address is the logical address given to every interface on a TCP/IP network so that it can be identified and reached from anywhere in the internet.
+   - IPv4 is 32 bits, written as four decimal octets, `192.168.1.1`. IPv6 is 128 bits, written as eight hex groups, `2001:0db8::1`.
+   - It is divided into a network portion and a host portion by the subnet mask, which is what makes routing possible: routers only need to know how to reach networks, not individual hosts.
+   - It works at the Network layer, and it can be assigned statically by the administrator or dynamically by DHCP.
+
+6. **Define networking and Internetworking. What are the different types of network? Explain in details.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 672 (ET: N/A)]*
+
+Answer:
+
+   Networking
+   - Networking is the practice of connecting computing devices together — with cables, radio links, switches and protocols — so that they can exchange data and share resources.
+   - It covers the design, the physical build, the addressing scheme, the configuration and the day-to-day management of a single network.
+
+   Internetworking
+   - Internetworking is the joining of two or more `separate` networks, which may use different technologies, into one larger network that behaves as a single system. The word is `inter` + `networking`, meaning "between networks".
+   - It is done by intermediate devices — mainly `routers`, and `gateways` when the protocols differ — and it needs a common network-layer protocol. In practice that protocol is IP, which is exactly why the internet works across Ethernet, Wi-Fi, fibre and mobile links alike.
+   - The largest example of internetworking is the `Internet` itself, which is millions of independent networks glued together by IP and BGP.
+
+   Three kinds of internetwork
+   - `Internet` — public and global; anyone can join and reach anyone.
+   - `Intranet` — private and internal to one organisation, built with the same TCP/IP and HTTP technology but hidden behind a firewall, with a limited set of authorised users.
+   - `Extranet` — an intranet that is deliberately extended to selected outsiders such as suppliers, dealers and clients, usually over a VPN and on a contractual basis. It sits between the intranet and the internet.
+
+   Types of network, in detail
+
+   Personal Area Network (PAN)
+   - Covers 1–10 metres around one person and links that person's own devices.
+   - Built on Bluetooth, NFC, infrared, ZigBee or USB. A mobile hotspot is a wireless PAN.
+   - Very cheap and needs no administration, but very short range and low speed.
+
+   Local Area Network (LAN)
+   - Covers one room, one floor, one building or a small campus, up to about 1–2 km, and is owned entirely by the organisation using it.
+   - Runs Ethernet over UTP or fibre, or Wi-Fi, at 100 Mbps to 10 Gbps. Uses switches, and a private address block such as `192.168.0.0/16`.
+   - Very high speed, very low delay and very low error rate, because the whole medium belongs to one owner. This is the network type used in an office, a school lab or a bank branch.
+
+   Campus Area Network (CAN)
+   - Joins several building LANs that stand close together, over 1–5 km, usually with fibre backbone links.
+   - Owned by the institution, so no leased lines are needed. Example: a university connecting its faculty buildings, halls and library.
+
+   Metropolitan Area Network (MAN)
+   - Covers a city or a large town, roughly 5–50 km, and joins many LANs inside that city.
+   - Built on fibre rings, Metro Ethernet, microwave links or cable TV plant, at tens of Mbps to several Gbps. Usually owned or operated by an ISP or a telecom company, and the customer rents capacity.
+   - Example: all Dhaka branches of one bank joined together, or a city-wide cable internet network.
+
+   Wide Area Network (WAN)
+   - Covers a country, a continent or the whole world — anything above about 50 km.
+   - Built from leased lines, MPLS circuits, fibre backbones, satellite links and VPN tunnels, and the links are bought from carriers, so recurring cost is high.
+   - Speeds range from a few Mbps to hundreds of Gbps, with higher delay and higher error rate than a LAN, and routers everywhere. The Internet is the biggest WAN.
+
+   Special-purpose networks
+   - `WLAN` — a LAN using IEEE 802.11 radio and access points instead of cable.
+   - `SAN` — a dedicated high-speed network between servers and disk arrays, using Fibre Channel or iSCSI.
+   - `VPN` — an encrypted tunnel across the public internet that makes a remote site behave like part of the private LAN.
+   - `EPN` (Enterprise Private Network) — links all the offices of one company using its own or leased infrastructure.
+
+7. **Write short note: (i) web server (ii) ISP (iii) Router (iv) Search Engine** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 680 (ET: N/A)]*
+
+Answer:
+
+   (i) Web server
+   - A web server is the software, and the machine running it, that stores website files and delivers them to browsers over HTTP or HTTPS.
+   - It listens on TCP port `80` for HTTP and `443` for HTTPS, waits for a request such as `GET /index.html`, finds the file, and returns it with a status code — 200 OK, 404 Not Found, 500 Internal Server Error.
+   - Static content is returned straight from disk. Dynamic content is produced by passing the request to PHP, Node.js, Java or Python, which usually query a database first.
+   - It also handles virtual hosting (many sites on one IP), TLS certificates, logging, caching, compression and access control. Popular examples: Apache HTTP Server, Nginx, Microsoft IIS, LiteSpeed.
+
+   (ii) ISP — Internet Service Provider
+   - An ISP is the company that sells you a connection to the internet, along with an IP address, DNS service and a route to the rest of the world.
+   - It gives the `last mile` link — fibre (FTTH), DSL over telephone lines, cable, mobile broadband or a leased line — and it owns or rents the backbone links that carry your traffic onward.
+   - ISPs form a hierarchy: `Tier 1` providers own global backbones and peer with each other for free; `Tier 2` providers buy transit from Tier 1 and serve regions; `Tier 3` providers are local retail ISPs that sell to homes and offices.
+   - They may also sell hosting, email, static IPs, VoIP and IPTV. In Bangladesh they are licensed by the BTRC, and much of the local traffic is exchanged at an IXP such as BDIX.
+
+   (iii) Router
+   - A router is a Layer 3 device that connects `different` networks and forwards packets between them based on the destination IP address.
+   - It keeps a `routing table`, filled statically by the administrator or dynamically by RIP, OSPF, EIGRP or BGP, and chooses the outgoing interface by the longest prefix match. It also decrements TTL, fragments oversized packets, and rewrites the Layer 2 header at every hop.
+   - It does not forward broadcasts, so every interface of a router bounds its own broadcast domain.
+   - A home router normally bundles several functions in one box: router, switch, Wi-Fi access point, DHCP server, NAT and firewall.
+
+   (iv) Search engine
+   - A search engine is a web service that indexes pages from across the internet and returns a ranked list of the pages that match a user's query.
+   - It works in three stages: `crawling`, where bots follow links and download pages; `indexing`, where the words on each page are stored in an inverted index; and `ranking`, where an algorithm scores the matching pages using relevance, link popularity (as in PageRank), freshness, location and site quality.
+   - The result page shows titles, URLs and snippets, and modern engines add direct answers, maps, images and paid advertisements.
+   - Examples: Google, Bing, Yahoo, DuckDuckGo, Baidu, Yandex. Note the difference from a web `directory`, which is compiled by hand, and from a `portal`, which is a gateway site offering many services.
+
+8. **What is Interface protocol?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
+
+Answer: An interface protocol is the set of rules and formats agreed at an `interface` — the boundary between two layers, two systems or two devices — that specifies exactly how they exchange data across that boundary.
+
+   The two boundaries in a layered network
+   - `Protocol` (also called the peer interface) — the rules between the `same` layer on two different machines. Layer 3 on host A talks to layer 3 on host B; that horizontal agreement is the protocol.
+   - `Interface` (also called the service interface) — the rules between `adjacent` layers on the `same` machine. Layer 4 hands a segment down to layer 3 through this vertical boundary, and layer 3 does not care how layer 4 produced it.
+   - An interface protocol therefore defines the primitives, the parameters and the data format used at that vertical boundary — and this is why one layer can be replaced without disturbing the others.
+
+   What an interface protocol specifies
+   - The data format and the order of the fields being handed over.
+   - The set of operations, or service primitives, that one side may request — for example `CONNECT`, `SEND`, `RECEIVE`, `DISCONNECT` in the classic OSI service model.
+   - Who initiates, how errors are reported back, and how flow is controlled at the boundary.
+
+   Practical examples
+   - The `socket` API is the interface protocol between an application and the transport layer: `socket()`, `bind()`, `listen()`, `connect()`, `send()`, `recv()`.
+   - `NDIS` and `ODI` are interface protocols between an operating system's protocol stack and a NIC driver.
+   - `OpenFlow` is the interface protocol between an SDN controller and a switch's forwarding hardware.
+   - In wider computing use, the term is also used for hardware boundaries such as USB, SATA, PCIe, RS-232, HDMI and I²C, where the same idea applies — an agreed rule set at a connection point.
+
+   Key point for the exam
+   - A protocol is `between machines` at the same layer; an interface is `between layers` inside one machine. An interface protocol is the formal specification of the second one.
+
+9. **(ক) সংজ্ঞা লিখুন: WWW, URL, HTTP, IP Address, Router.** *[Software Assistant Programmer 13.10.2022 compact it 708 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+
+   WWW — World Wide Web
+   - The WWW is the worldwide collection of linked documents and resources that are stored on web servers and read with a browser. It was invented by Tim Berners-Lee at CERN in 1989–1990.
+   - It stands on three inventions: `HTML` to write the pages, `URL` to address them, and `HTTP` to transfer them.
+   - It is a `service` that runs on top of the internet — it is not the internet itself. The internet is the hardware and the protocols; the WWW is only one of the applications using it, alongside email, FTP and DNS.
+
+   URL — Uniform Resource Locator
+   - A URL is the complete address of a resource on the web: it says which protocol to use, which host to ask, and which file to fetch.
+   - Its parts, taking `https://www.example.com:443/docs/index.html?id=5#top`
+     - `https` — the scheme or protocol
+     - `www.example.com` — the host or domain name
+     - `443` — the port, optional because each scheme has a default
+     - `/docs/index.html` — the path to the resource on that server
+     - `?id=5` — the query string, passing parameters
+     - `#top` — the fragment, a location inside the page
+   - A URL is one kind of `URI`. A `URN` names a resource without saying where it is; a URL both names it and locates it.
+
+   HTTP — HyperText Transfer Protocol
+   - HTTP is the application-layer protocol used to transfer web pages and other resources between a browser and a web server. It runs over TCP on port `80`; the encrypted version, HTTPS, uses TLS on port `443`.
+   - It is a `request–response` and `stateless` protocol: the client sends a request line, headers and an optional body, the server replies with a status line, headers and the body. The server keeps no memory of the previous request, so cookies and sessions are used to carry state.
+   - Common methods: `GET` to fetch, `POST` to submit, `PUT` to replace, `DELETE` to remove, `HEAD` for headers only.
+   - Status code families: 1xx informational, 2xx success (200 OK), 3xx redirection (301, 304), 4xx client error (400, 401, 403, 404), 5xx server error (500, 502, 503).
+
+   IP address
+   - An IP address is the logical, network-layer address that identifies an interface on a TCP/IP network so that packets can be routed to it from anywhere.
+   - IPv4 is 32 bits in dotted decimal, `202.4.96.10`; IPv6 is 128 bits in hex groups, `2001:db8::1`.
+   - The subnet mask splits it into a network part and a host part. It may be public (routable on the internet) or private (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`), and static or DHCP-assigned.
+
+   Router
+   - A router is a Layer 3 device that connects different networks and forwards each packet towards its destination using the destination IP address and a routing table.
+   - It selects the best path by longest prefix match, decrements the TTL, blocks broadcasts and so separates broadcast domains, and can additionally perform NAT, DHCP, ACL filtering and firewalling.
+   - Routing tables are built statically, or dynamically by RIP, OSPF, EIGRP (interior) and BGP (exterior).
+
+10. **What is computer network?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
+
+Answer: A computer network is a group of two or more computing devices connected by a transmission medium and following a common set of protocols, so that they can exchange data and share resources.
+
+   Points to note
+   - The devices are called nodes or hosts; each one needs a NIC and a unique address; the connection between two of them is a link.
+   - What is shared: files and databases, printers and scanners, application software, storage, and the internet connection.
+   - What is needed to build one: at least two nodes, a medium (UTP, coaxial, fibre, or radio), connecting devices (switch, router, access point), an addressing scheme (IP and MAC), and protocols (TCP/IP).
+   - Main benefits: resource sharing, fast communication, reliability through alternate paths, lower cost, and central administration and backup.
+   - Classified by size as PAN, LAN, CAN, MAN and WAN; by relationship as peer-to-peer or client–server; by topology as bus, star, ring, mesh, tree or hybrid.
+   - Judged on three criteria: performance, reliability and security.
+
+11. **What is SDN?** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
+
+Answer: SDN — Software Defined Networking — is a network architecture in which the `control plane` is taken out of the individual switches and routers and moved into a central software `controller`, leaving the devices to do nothing but forward packets.
+
+   The idea in one line
+   - In a traditional network every device has its own brain, so it decides its own routes and must be configured one by one over the CLI. In SDN there is one brain for the whole network, and it programs all the devices.
+
+   The two planes
+   - `Control plane` — decides `how` traffic should flow: builds routing and forwarding decisions, applies policy. In SDN this lives in the controller.
+   - `Data plane` — actually `moves` the packets, according to the flow rules the controller installed. This stays in the switch hardware.
+
+   Three-layer architecture
+
+```
+   +---------------------------------------------+
+   |  Application Layer                          |
+   |  routing, load balancing, firewall, QoS apps|
+   +---------------------------------------------+
+                 |  Northbound API (REST)
+   +---------------------------------------------+
+   |  Control Layer                              |
+   |  SDN Controller — the "brain"               |
+   |  (OpenDaylight, ONOS, Ryu, Floodlight)      |
+   +---------------------------------------------+
+                 |  Southbound API (OpenFlow)
+   +---------------------------------------------+
+   |  Infrastructure Layer (Data Plane)          |
+   |  dumb switches / routers with flow tables   |
+   +---------------------------------------------+
+```
+
+   - `Application layer` — the network programs that express what the operator wants: routing policy, load balancing, security rules, monitoring.
+   - `Control layer` — the SDN controller. It keeps a global view of the whole topology and converts the applications' high-level policy into concrete forwarding rules.
+   - `Infrastructure layer` — the physical or virtual switches, which just match packets against flow-table entries and act.
+   - `Northbound API` — between applications and controller, usually REST.
+   - `Southbound API` — between controller and switches. `OpenFlow` is the standard one, which is what makes the switches vendor-neutral.
+
+   Advantages
+   - Central control and a single global view of the network, so monitoring and policy enforcement become simple.
+   - Programmable and automated — a change is a script, not a login to fifty devices.
+   - Cheaper hardware, because plain commodity switches are enough once the intelligence is in software.
+   - Fast, dynamic re-routing around congestion and failures; easy network virtualisation and multi-tenancy; no vendor lock-in.
+
+   Disadvantages
+   - The controller is a single point of failure and a prime security target, so it must be replicated and hardened.
+   - It can become a performance bottleneck in a very large network.
+   - Migrating a running traditional network to SDN is complex, and mixed environments are hard to manage.
+
+   SDN vs traditional networking
+
+| Point | Traditional network | SDN |
+|---|---|---|
+| Control and data plane | Combined inside every device | Separated; control is central |
+| Intelligence | Distributed across all devices | Centralised in the controller |
+| Configuration | Device-by-device, over the CLI | Programmatic, through APIs |
+| Hardware | Proprietary, vendor-specific | Commodity, vendor-neutral |
+| Change speed | Slow and manual | Fast and automated |
+| Global view | None — each device sees only neighbours | The controller sees everything |
+
+12. **How to works networks?** *[IDRA Assistant Network Administrator 2022 compact it 727 (ET: N/A)]*
+
+Answer: A network works by breaking data into `packets`, addressing each packet, and letting switches and routers carry those packets hop by hop to the destination, where they are reassembled — all of it governed by a layered protocol stack.
+
+   Step 1 — the data is broken into packets
+   - Large data is not sent as one block. The transport layer cuts it into small segments, and each one is numbered.
+   - This is called `packet switching`. Because each packet is independent, many conversations can share the same link, and packets can take different routes and be reassembled at the far end.
+
+   Step 2 — headers are added, layer by layer (encapsulation)
+   - Application layer produces the data — for example an HTTP request.
+   - Transport layer adds the TCP or UDP header with the source and destination `port numbers`, so the right program receives it. Now it is a `segment`.
+   - Network layer adds the IP header with the source and destination `IP addresses`. Now it is a `packet`.
+   - Data link layer adds the frame header with the source and destination `MAC addresses`, plus a CRC for error detection. Now it is a `frame`.
+   - Physical layer turns the frame into electrical pulses, light or radio waves and puts it on the medium.
+
+   Step 3 — the name is resolved and the addresses are found
+   - If the user typed a name, `DNS` is asked first and returns the IP address.
+   - `ARP` then finds the MAC address of the next hop — the destination itself if it is on the same subnet, otherwise the default gateway.
+
+   Step 4 — the packet is forwarded across the network
+   - A `switch` reads the destination MAC and sends the frame out of exactly the port where that MAC lives.
+   - If the destination is on another network, the frame goes to the `router`. The router reads the destination IP, looks it up in its routing table, picks the best next hop, decrements the TTL, builds a fresh Layer 2 frame for that hop, and forwards it.
+   - This repeats router by router. The IP addresses never change; the MAC addresses are rewritten at every hop.
+
+   Step 5 — the receiver reverses everything (decapsulation)
+   - The frame's CRC is checked and the frame header removed; the IP header is removed; the TCP header is removed and the port number delivers the data to the correct application.
+   - TCP puts the segments back in order using the sequence numbers, acknowledges what arrived, and asks for retransmission of anything lost.
+
+   The whole path, in short
+
+```
+   Sender app -> segment -> packet -> frame -> bits
+        |                                       |
+        |            switch -> router -> router |
+        v                                       v
+   Receiver app <- segment <- packet <- frame <- bits
+```
+
+   - The rules that make each step possible are the protocols, and they are arranged in layers — the OSI model of 7 layers, or the TCP/IP model of 4. Each layer uses only the service of the layer below it, which is why Ethernet, Wi-Fi, fibre and mobile links can all carry the same IP packet.
+
+13. **(খ) Address গুলির সংক্ষিপ্ত বর্ণনা দিন। (i) Port Number (ii) IP অ্যাড্রেস (iii) MAC অ্যাড্রেস।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 775 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+
+   (i) Port number
+   - A port number is a 16-bit number, from `0 to 65535`, used at the Transport layer to identify the particular `process or application` inside a host. The IP address finds the machine; the port number finds the program on that machine.
+   - Three ranges defined by IANA
+     - `0–1023` — well-known ports, reserved for standard services: FTP 20/21, SSH 22, Telnet 23, SMTP 25, DNS 53, DHCP 67/68, HTTP 80, POP3 110, IMAP 143, HTTPS 443.
+     - `1024–49151` — registered ports, requested by software vendors: MySQL 3306, RDP 3389, PostgreSQL 5432.
+     - `49152–65535` — dynamic or ephemeral ports, picked automatically by a client for the duration of one connection.
+   - An IP address plus a port number is called a `socket`, for example `192.168.1.5:443`. A TCP connection is uniquely identified by four values: source IP, source port, destination IP, destination port.
+
+   (ii) IP address
+   - The logical, Network-layer address of an interface, used to route packets across networks. IPv4 is 32 bits written as four decimal octets; IPv6 is 128 bits written as eight hex groups.
+   - The `subnet mask` splits it into a network part and a host part, which is what makes hierarchical routing possible.
+   - Public addresses are globally unique and routable; private addresses (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) are reused inside organisations and translated by NAT.
+   - Assigned by the administrator (static) or by DHCP (dynamic), and it changes whenever the device moves to a different network. It gives `end-to-end` delivery.
+
+   (iii) MAC address
+   - The 48-bit physical address burned into the NIC by the manufacturer, used at the Data Link layer inside one local network.
+   - Written as six hex pairs, `00:1A:2B:3C:4D:5E`. First 3 bytes = OUI identifying the vendor; last 3 bytes = the card's own serial number.
+   - It is flat, with no network/host split, so it cannot be routed. Switches forward frames by it, and it gives `hop-to-hop` delivery.
+   - `FF:FF:FF:FF:FF:FF` is the broadcast MAC. ARP is used to discover a MAC address from a known IP address.
+
+   Summary of the three
+
+| Address | Size | Layer | Identifies | Scope |
+|---|---|---|---|---|
+| MAC address | 48 bits | 2 — Data Link | The network card | One local network |
+| IP address | 32 / 128 bits | 3 — Network | The host or interface | The whole internet |
+| Port number | 16 bits | 4 — Transport | The process on the host | Inside one host |
+
+14. **(i) নিচের MAC Address গুলো কোন ধরনের বের করুন। (a) 4C:23:10:4A:1A:2A (b) 45:24:56:2B:24:12 (c) FF:FF:FF:FF:FF:FF** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 788 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) The type of an Ethernet MAC address is decided by the two lowest bits of the `first octet`.
+
+   The rule
+   - Bit 0, the least significant bit of the first byte, is the `I/G bit` (Individual / Group).
+     - `0` → individual address → `unicast`
+     - `1` → group address → `multicast` (or broadcast, if every bit is 1)
+   - Bit 1, the next bit, is the `U/L bit` (Universal / Local).
+     - `0` → universally administered — assigned by the manufacturer, globally unique
+     - `1` → locally administered — set by the administrator or software
+
+   (a) `4C:23:10:4A:1A:2A`
+   - First octet `4C` = `0100 1100` in binary.
+   - I/G bit (last bit) = `0` → individual → `Unicast address`
+   - U/L bit (second-last bit) = `0` → `universally administered`, so it is a real vendor-burned address
+   - Answer: a globally unique `unicast` MAC address of a single NIC.
+
+   (b) `45:24:56:2B:24:12`
+   - First octet `45` = `0100 0101` in binary.
+   - I/G bit (last bit) = `1` → group → `Multicast address`
+   - U/L bit (second-last bit) = `0` → universally administered
+   - Answer: a `multicast` MAC address — the frame is meant for a group of interested receivers, not for one card.
+
+   (c) `FF:FF:FF:FF:FF:FF`
+   - Every one of the 48 bits is `1`, so the first octet `FF` = `1111 1111`, and the I/G bit is `1`.
+   - Answer: the `Broadcast address`. A frame sent to it is delivered to `every` device in the local broadcast domain. ARP requests and DHCP Discover messages use it.
+
+   Result table
+
+| MAC address | First octet in binary | I/G bit | Type |
+|---|---|---|---|
+| `4C:23:10:4A:1A:2A` | 0100 1100 | 0 | Unicast (universally administered) |
+| `45:24:56:2B:24:12` | 0100 0101 | 1 | Multicast |
+| `FF:FF:FF:FF:FF:FF` | 1111 1111 | all bits 1 | Broadcast |
+
+   - Useful extra fact: IPv4 multicast MACs always begin with `01:00:5E`, and IPv6 multicast MACs with `33:33`.
+
+15. **If you have a company of two branch in the same city and they are connected. Which connection is used between then? (a) LAN (b) MAN (c) WAN (d) NONE** *[BCC Assistant Programmer 12.02.2021 compact it 811 (ET: BUET)]*
+
+Answer: `(b) MAN` — Metropolitan Area Network.
+
+   Why MAN is the answer
+   - A MAN is defined as a network that spans a city or a large town, roughly 5–50 km, and joins together several LANs that lie inside that city. Two branches of one company in the `same city` is exactly that case.
+   - Each branch has its own LAN internally. The link `between` the two branch LANs, running across the city, is the MAN.
+   - It is normally built on a fibre ring, Metro Ethernet or a microwave link, and the capacity is usually rented from an ISP or telecom operator.
+
+   Why the other options are wrong
+   - `(a) LAN` — a LAN is limited to one building or a small campus, about 1–2 km. It cannot cross a city.
+   - `(c) WAN` — a WAN is used when the distance is above about 50 km, that is between cities, countries or continents. Here both branches are in the same city, so a WAN is more than what is needed.
+   - `(d) NONE` — wrong, because MAN fits exactly.
+
+   Quick rule for the exam
+
+| Distance between the sites | Network type |
+|---|---|
+| Same room or same building | LAN |
+| Nearby buildings of one campus | CAN |
+| Different places inside one city | `MAN` |
+| Different cities or countries | WAN |
+
+16. **Short Question: a) What are the protocol for connectionless and connection oriented? b) Why UTP cable are twisted? c) What are the main requirement of optical fiber splicing? d) Why use subnet mask? e) What the major difference between multicast and broadcast?** *[BPDB Assistant Engineer (CSE) 2021 compact it 816 (ET: BUET)]*
+
+Answer:
+
+   (a) Protocols for connectionless and connection-oriented service
+   - `Connection-oriented` — a connection is set up first, data flows over it, then it is released. Delivery is ordered, acknowledged and reliable.
+     - `TCP` — the main example, using the three-way handshake (SYN, SYN-ACK, ACK).
+     - Others: SCTP, ATM, Frame Relay, X.25, MPLS label-switched paths, PPP.
+   - `Connectionless` — each packet, called a datagram, is sent independently with the full destination address, and no connection is set up. Fast, low overhead, no delivery guarantee.
+     - `UDP` — the main example.
+     - Others: IP itself, ICMP, ARP, IGMP, IPX, and the applications built on UDP — DNS queries, DHCP, TFTP, SNMP, RIP, VoIP and video streaming.
+
+| Point | Connection-oriented (TCP) | Connectionless (UDP) |
+|---|---|---|
+| Connection setup | Yes, three-way handshake | No |
+| Reliability | Guaranteed, with ACKs and retransmission | Not guaranteed |
+| Order | Preserved by sequence numbers | May arrive out of order |
+| Header size | 20 bytes | 8 bytes |
+| Speed | Slower | Faster |
+| Used by | HTTP, FTP, SMTP, SSH, Telnet | DNS, DHCP, TFTP, VoIP, video streaming, online games |
+
+   (b) Why UTP cable pairs are twisted
+   - To cancel `electromagnetic interference` from outside. Because the two wires are twisted around each other, external noise induces almost the same voltage on both wires — a common-mode signal — and the receiver, which reads only the `difference` between the two wires, subtracts it away.
+   - To cancel `crosstalk` between neighbouring pairs. The magnetic field a current creates in one half-twist is reversed in the next, so the fields cancel over the length of the cable, both radiating out and picking up.
+   - The pairs in a cable are given `different twist rates` — a different number of twists per inch — so that adjacent pairs never stay in the same relative position and cannot couple consistently.
+   - More twists per unit length means better noise rejection and support for a higher frequency: Cat 5e allows 100 MHz, Cat 6 250 MHz, Cat 6a 500 MHz. This is also why untwisting more than 13 mm at a connector fails a certification test.
+
+   (c) Main requirements of optical fibre splicing
+   - `Clean, correctly stripped ends` — the coating and buffer removed, and the bare glass wiped with lint-free tissue and isopropyl alcohol. A single speck of dust burns into the joint and adds loss.
+   - `A good cleave` — a flat end face, perpendicular to the fibre axis, made with a precision cleaver. The angle should be within about 0.5°, and there must be no chips, hackle or lips.
+   - `Precise core alignment` — the two cores must be collinear within a fraction of a degree and laterally aligned within a small fraction of the core diameter. Modern splicers align the cores automatically under a camera.
+   - `Matched fibres` — the same type, core diameter, mode field diameter and refractive index profile. Never splice single-mode to multi-mode.
+   - `Correct fusion parameters` — the right arc current and arc duration for the fibre type, with clean electrodes, and compensation for altitude and humidity.
+   - `Protection and testing` — a heat-shrink sleeve over the joint, correct strain relief in the splice tray, and verification with an OTDR or a light source and power meter. A good fusion splice loses less than about `0.1 dB`; a mechanical splice typically loses 0.2–0.5 dB.
+   - Two methods: `fusion splicing`, where the ends are welded with an electric arc — permanent, lowest loss, lowest reflection; and `mechanical splicing`, where the ends are held together in an alignment fixture with index-matching gel — quick, no power needed, but higher loss.
+
+   (d) Why a subnet mask is used
+   - To separate the `network portion` from the `host portion` of an IP address. The address alone does not say where that split falls; the mask does.
+   - To let a host decide whether a destination is `local or remote`. The host ANDs its own address with the mask and ANDs the destination with the mask; if the two results match, it delivers directly by ARP, otherwise it sends the packet to the default gateway.
+   - To `create subnets` — dividing one large network into several smaller ones for different departments, floors or branches.
+   - To `shrink the broadcast domain`, which cuts broadcast traffic and improves performance.
+   - To `save addresses` — with VLSM a mask can be sized to each subnet's real need, instead of wasting a full class.
+   - To improve `security and management`, since traffic between subnets must pass a router where ACLs can be applied.
+   - Example: with `192.168.10.0/26` the mask `255.255.255.192` gives 4 subnets of 62 usable hosts each, instead of one flat network of 254.
+
+   (e) Major difference between multicast and broadcast
+
+| Point | Broadcast | Multicast |
+|---|---|---|
+| Sent to | `Every` device in the network segment | Only the devices that `joined` the group |
+| Mapping | One-to-all | One-to-many |
+| Choice for the receiver | None — it must receive and process it | It must subscribe to the group |
+| Layer 3 address | `255.255.255.255`, or the subnet broadcast such as `192.168.1.255` | Class D range `224.0.0.0 – 239.255.255.255` |
+| Layer 2 address | `FF:FF:FF:FF:FF:FF` | Begins with `01:00:5E` for IPv4 |
+| Membership protocol | None needed | `IGMP` for IPv4, MLD for IPv6 |
+| Crosses a router? | No — routers block broadcasts | Yes, with multicast routing such as PIM |
+| Bandwidth use | Wasteful, because uninterested hosts also get the traffic | Efficient, because only one copy travels each link |
+| IPv6 support | Removed entirely | Kept and extended |
+| Typical use | ARP request, DHCP Discover, NetBIOS name lookup | IPTV, live video streaming, stock tickers, OSPF and RIPv2 updates |
+
+   - In one line: `broadcast` disturbs everybody, `multicast` reaches only those who asked.
+
+17. **Name of the Following figure:** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
+   Broadcast
+   Unicast
+   Multicast
+
+Answer: The three figures show the three basic transmission modes of a network — `Unicast`, `Broadcast` and `Multicast`. Each is named by how many receivers a single sender reaches.
+
+   1. Unicast — one-to-one
+
+```
+        Sender                  Receivers
+                                  ( A )
+          [S] ------------------> ( B )   <- only B gets it
+                                  ( C )
+                                  ( D )
+```
+
+   - One sender, exactly one receiver. The frame carries the destination's own MAC address and the packet carries its own IP address.
+   - The switch forwards it out of only that one port, so no other device is disturbed.
+   - It is the mode used by almost all normal traffic: web browsing, email, file download, SSH.
+   - Simple to manage and easy to acknowledge, but the server must send a separate copy to every client, so it does not scale for live video.
+
+   2. Broadcast — one-to-all
+
+```
+        Sender                  Receivers
+                            ,---> ( A )   <- gets it
+          [S] --------------+---> ( B )   <- gets it
+                            +---> ( C )   <- gets it
+                            `---> ( D )   <- gets it
+```
+
+   - One sender, and `every` device in the same network segment receives the frame, whether it wants it or not.
+   - Layer 2 address `FF:FF:FF:FF:FF:FF`; Layer 3 address `255.255.255.255` (limited) or the subnet broadcast such as `192.168.1.255` (directed).
+   - Routers do not forward broadcasts, so a broadcast stops at the edge of its broadcast domain.
+   - Used by ARP requests, DHCP Discover and NetBIOS name lookups. Too much of it causes a `broadcast storm`. IPv6 has removed broadcast completely and uses multicast instead.
+
+   3. Multicast — one-to-many
+
+```
+        Sender                  Receivers
+                            ,---> ( A )   <- joined the group
+          [S] --------------+     ( B )   <- did not join, gets nothing
+                            `---> ( C )   <- joined the group
+                                  ( D )   <- did not join, gets nothing
+```
+
+   - One sender and a `selected group` of receivers. A host must first join the group; only members receive the traffic.
+   - Layer 3 address is a Class D address, `224.0.0.0 – 239.255.255.255`; the matching Layer 2 address begins with `01:00:5E`.
+   - Group membership is managed by `IGMP` in IPv4 and MLD in IPv6, and multicast routing protocols such as PIM carry it between networks.
+   - Only one copy of the stream travels down each link, so it is the efficient choice for IPTV, live streaming and stock tickers. OSPF and RIPv2 also use multicast for their updates.
+
+   Summary
+
+| Mode | Mapping | Who receives | IPv4 address | MAC address |
+|---|---|---|---|---|
+| Unicast | One-to-one | Exactly one host | Any normal host address | The receiver's own MAC |
+| Broadcast | One-to-all | Every host in the segment | `255.255.255.255` or subnet broadcast | `FF:FF:FF:FF:FF:FF` |
+| Multicast | One-to-many | Only the group members | `224.0.0.0 – 239.255.255.255` | `01:00:5E:xx:xx:xx` |
+
+   - A fourth mode, `anycast`, also exists: the same address is given to many servers, and the packet goes to whichever one is nearest. It is used by root DNS servers and CDNs.
+
+18. **(i) Computer network কী? বিভিন্ন প্রকার Computer network সম্পর্কে আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 955-956 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+
+   What a computer network is
+   - A computer network is a set of two or more computing devices joined by a transmission medium and running a common set of protocols, so that they can exchange data and share resources.
+   - The devices are `nodes`, the connection between two of them is a `link`, and every node needs a NIC and an address.
+   - It exists to give resource sharing, fast communication, reliability, lower cost and central management, and it is judged on performance, reliability and security.
+
+   Different types of computer network
+
+   By geographical size
+
+| Type | Area | Speed | Medium used | Example |
+|---|---|---|---|---|
+| PAN | 1–10 m | Kbps to a few Mbps | Bluetooth, NFC, infrared, USB | Phone with earbuds, mobile hotspot |
+| LAN | Up to 1–2 km, one building | 100 Mbps – 10 Gbps | UTP, fibre, Wi-Fi | Office or lab network |
+| CAN | 1–5 km, nearby buildings | 1–10 Gbps | Fibre backbone | University campus |
+| MAN | 5–50 km, one city | 10 Mbps – several Gbps | Fibre ring, microwave, cable | City-wide ISP, bank branches in one city |
+| WAN | Above 50 km, country or world | 1.5 Mbps – 100 Gbps+ | Leased line, MPLS, satellite | The Internet, nationwide branch network |
+
+   By the relationship between nodes
+   - `Peer-to-peer` — every machine is both client and server, and all are equal. Cheap, needs no dedicated server, but security and backup are scattered. Practical only up to about ten machines.
+   - `Client–server` — dedicated servers hold the data and services, clients request them. Central security, central backup, easy to grow, but expensive and the server is a single point of failure.
+
+   By transmission technology
+   - `Broadcast` network — one shared channel, and every machine hears every transmission and keeps what is addressed to it. Example: Wi-Fi, classic Ethernet on a hub.
+   - `Point-to-point` network — separate links between individual pairs, so packets need routing and may take different paths. Example: a WAN of leased lines.
+
+   By ownership and access
+   - `Internet` — global, public, open to all.
+   - `Intranet` — private to one organisation, behind a firewall, for staff only.
+   - `Extranet` — an intranet extended to chosen outsiders such as suppliers and clients.
+   - `VPN` — an encrypted tunnel over the public internet that makes a remote site behave like part of the private network.
+
+   Special-purpose types
+   - `WLAN` — a wireless LAN on IEEE 802.11 with access points.
+   - `SAN` — a dedicated high-speed network between servers and storage arrays, over Fibre Channel or iSCSI.
+   - `EPN` — an enterprise private network linking all offices of one company.
+   - `HAN` — a home area network joining the computers and smart devices of one household.
+
+19. **What is difference between MAC Address and IP Address?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1018-1019 (ET: N/A)]*
+
+Answer:
+
+| Point | MAC Address | IP Address |
+|---|---|---|
+| Full form | Media Access Control address | Internet Protocol address |
+| Nature | Physical / hardware address | Logical / software address |
+| OSI layer | Layer 2 — Data Link | Layer 3 — Network |
+| Size | 48 bits (6 bytes) | 32 bits (IPv4), 128 bits (IPv6) |
+| Notation | Hexadecimal, `00:1A:2B:3C:4D:5E` | Dotted decimal, `192.168.1.1` |
+| Assigned by | The NIC manufacturer, at the factory | The administrator, DHCP or the ISP |
+| Permanence | Permanent, burned into the card | Temporary, changes with the network |
+| Scope | Local network only | Global, across the internet |
+| Structure | Flat — OUI + serial number, no hierarchy | Hierarchical — network part + host part |
+| Delivery | Hop-to-hop, node to next node | End-to-end, source to final destination |
+| Changed at each hop | Yes | No |
+| Resolution protocol | `ARP` finds MAC from IP | `RARP` / `DHCP` finds IP from MAC |
+| Used for forwarding by | Switch, bridge | Router |
+| Can be shared | No — must be unique on the segment | Yes — one public IP can serve many hosts through NAT |
+| Classes | None | IPv4 has classes A, B, C, D, E |
+| Spoofing | Possible but only affects the local segment | Possible and affects end-to-end routing |
+| Command to view | `ipconfig /all`, `ifconfig`, `ip link` | `ipconfig`, `ip addr` |
+
+   Why both are needed
+   - IP alone is not enough, because the actual delivery on a wire or over the air happens between two adjacent interfaces, and that step needs a physical address.
+   - MAC alone is not enough, because MAC addresses are flat and unstructured. A router would need an entry for every card in the world. IP's network/host split lets a router keep one entry for a whole network.
+   - So the two work together: the IP header carries the final destination and never changes, while the frame header carries only the next hop and is rewritten at every router. `ARP` is the bridge between the two.
+
+20. **(b) List the factors that affect the performance of a network.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1027 (ET: N/A)]*
+
+Answer: Network performance is measured mainly by `bandwidth`, `throughput`, `latency` (delay), `jitter` and `packet loss`. The factors that affect these are listed below.
+
+   1. Bandwidth of the links
+   - The capacity of the slowest link on the path sets the ceiling for the whole path — that link is the bottleneck. Upgrading anything else does not help until the bottleneck is fixed.
+
+   2. Latency and its four components
+   - `Propagation delay` — distance ÷ signal speed. Long-haul and satellite paths add unavoidable delay.
+   - `Transmission delay` — packet size ÷ bandwidth.
+   - `Queueing delay` — time spent waiting in router and switch buffers; it rises sharply as the link approaches full load.
+   - `Processing delay` — time a device spends examining headers, doing NAT, encryption or deep inspection.
+
+   3. Traffic load and congestion
+   - When the offered traffic approaches link capacity, queues build, delay rises, buffers overflow and packets are dropped. TCP then retransmits, which adds still more traffic — this is congestion collapse.
+
+   4. Number of active users and devices
+   - Every extra user takes a share of the same capacity, so per-user throughput falls. On a shared or half-duplex medium, more devices also mean more collisions.
+
+   5. Transmission medium
+   - Fibre gives the highest bandwidth and the lowest error rate; UTP is limited to 100 m; wireless suffers from interference, obstacles, distance from the access point and shared airtime.
+
+   6. Network hardware and its capacity
+   - Router and switch CPU, memory, buffer size and backplane throughput; NIC speed; whether forwarding is done in hardware (ASIC) or in software. Old hubs and half-duplex links cripple performance.
+
+   7. Network design and topology
+   - Too many hops, poor routing, no redundancy, a single flat and oversized broadcast domain, badly placed servers, and loops that keep the Spanning Tree Protocol busy.
+
+   8. Errors, noise and packet loss
+   - Electromagnetic interference, crosstalk, bad connectors, damaged cable and attenuation all corrupt frames. Every corrupted frame is discarded and must be retransmitted.
+
+   9. Protocols and their overhead
+   - Header size, window size, TCP slow start, chatty application protocols, and small packets that carry more header than data. A poor MTU choice causes fragmentation.
+
+   10. Broadcast and multicast traffic
+   - A large broadcast domain floods every host, wasting bandwidth and CPU. A broadcast storm can stop the whole segment.
+
+   11. Server and application behaviour
+   - A slow server, an unindexed database query or a badly written application can look like a network problem while the network is idle.
+
+   12. Security devices and encryption
+   - Firewalls, IPS, VPN tunnels and TLS all add processing delay and shrink the effective payload. Attacks such as DoS and ARP flooding directly destroy performance.
+
+   13. Configuration and management
+   - Duplex or speed mismatch, wrong MTU, missing QoS policy, no traffic shaping, DNS problems, and unpatched firmware.
+
+   14. Environment and physical conditions
+   - Heat, power fluctuation, cable length beyond the standard limit, poor termination, and physical damage to the medium.
+
+   In short
+
+| Metric | What it means | Hurt mainly by |
+|---|---|---|
+| Bandwidth | Capacity of the link | The bottleneck link, medium type |
+| Throughput | Data actually delivered | Congestion, errors, overhead, collisions |
+| Latency | Total one-way delay | Distance, queueing, processing, hop count |
+| Jitter | Variation in latency | Congestion, route changes, weak hardware |
+| Packet loss | Packets that never arrive | Full buffers, noise, faulty cable |
+
+21. **(a) Write a brief history of the internet. How to access to the internet?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1028-1029 (ET: N/A)]*
+
+Answer:
+
+   (a) Brief history of the internet
+
+| Year | Event |
+|---|---|
+| 1957 | The USSR launches Sputnik; the USA responds by creating `ARPA` inside the Department of Defense |
+| 1961–64 | Leonard Kleinrock publishes the theory of `packet switching`; Paul Baran proposes a distributed network able to survive an attack |
+| 1969 | `ARPANET` goes live with four nodes — UCLA, Stanford Research Institute, UC Santa Barbara and the University of Utah. The first message sent was "LO", from an attempt to type LOGIN |
+| 1971 | Ray Tomlinson writes the first `email` program and chooses the `@` sign |
+| 1973–74 | Vinton Cerf and Robert Kahn design `TCP/IP` and publish "A Protocol for Packet Network Intercommunication". The word `internet` appears |
+| 1976 | Ethernet is developed by Robert Metcalfe at Xerox PARC |
+| 1983 | On 1 January ARPANET switches completely to TCP/IP — usually taken as the `birthday of the internet`. `DNS` is introduced the same year, replacing a single hosts file |
+| 1986 | `NSFNET` is built as a national backbone and opens the network to universities generally |
+| 1989–90 | `Tim Berners-Lee` at CERN invents the `World Wide Web`, creating HTML, HTTP, URLs, the first browser and the first web server |
+| 1991 | The WWW is released to the public; the first website goes online |
+| 1993 | The `Mosaic` graphical browser appears and use of the web explodes |
+| 1995 | The internet is fully commercialised as NSFNET is retired; Amazon, eBay, JavaScript and Internet Explorer arrive |
+| 1998 | `Google` is founded; `IPv6` is standardised as RFC 2460 |
+| 2000s | Broadband replaces dial-up; Wi-Fi spreads; Facebook (2004), YouTube (2005) and Twitter (2006) begin the social-media era |
+| 2007 onward | The smartphone makes mobile internet the majority; 3G, then 4G LTE, then 5G |
+| 2011 | IANA exhausts the free pool of IPv4 addresses, pushing IPv6 adoption |
+| Today | Cloud computing, IoT, video streaming and AI services dominate traffic; billions of devices are connected |
+
+   Bangladesh context
+   - Bangladesh got its first email connectivity in 1993 and a full IP connection in `1996`.
+   - The first submarine cable, `SEA-ME-WE 4`, landed at Cox's Bazar in 2006, followed by SEA-ME-WE 5 in 2017.
+
+   (b) How to access the internet
+   - You need four things: a `device` (computer, phone, router), a `NIC or modem`, a subscription with an `ISP`, and the `TCP/IP` protocol stack with an IP address, subnet mask, default gateway and DNS server — usually supplied automatically by DHCP.
+
+   Ways of connecting
+
+| Method | Technology | Typical speed | Notes |
+|---|---|---|---|
+| Dial-up | Modem over the telephone line, PSTN | Up to 56 Kbps | Obsolete; the phone line is occupied while online |
+| DSL / ADSL | Digital Subscriber Line over the phone pair, to a DSLAM | Up to about 24 Mbps down, 2.5 Mbps up | Internet and phone can be used at the same time |
+| Cable | HFC — Hybrid Fibre Coaxial, over the cable TV plant | 100–1000 Mbps | Bandwidth is shared with the neighbourhood |
+| Fibre / FTTH | Optical fibre directly to the building | 100 Mbps – 10 Gbps | Fastest and most future-proof; highest installation cost |
+| Leased line | A dedicated symmetric circuit from the ISP | 2 Mbps – 10 Gbps | Guaranteed bandwidth and SLA; used by offices and banks |
+| Wi-Fi | IEEE 802.11 to a local access point that has its own uplink | 50 Mbps – several Gbps | Only the last few metres are wireless |
+| Mobile broadband | 3G, 4G LTE, 5G through a nearby base station | 2 Mbps – 1 Gbps+ | Fully mobile; data caps are common |
+| WiMAX / fixed wireless | IEEE 802.16 or point-to-point radio | 10–100 Mbps | Useful where cable cannot be laid |
+| Satellite | VSAT to a geostationary satellite, or a LEO constellation | 10–200 Mbps | Reaches remote areas; GEO adds 500–600 ms of delay |
+| PLC | Power line communication over the electric mains | 10–200 Mbps | Mostly used inside a building |
+
+   Steps to get online in practice
+   - Choose an ISP and a package suited to the number of users.
+   - Get the physical line installed and terminated on an ONU, modem or media converter.
+   - Connect a router, which receives the WAN address from the ISP and runs NAT, DHCP and Wi-Fi for the inside network.
+   - Devices obtain an IP address, subnet mask, gateway and DNS by DHCP, and then reach the internet.
+   - Verify with `ipconfig`, `ping 8.8.8.8` for connectivity and `nslookup` for name resolution.
+
+22. **(b) Define computer network. Sate some merits and demerits of a computer network.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1029 (ET: N/A)]*
+
+Answer:
+
+   Definition
+   - A computer network is a collection of two or more computing devices connected by a transmission medium and following a common set of protocols, so that they can exchange data and share resources.
+
+   Merits of a computer network
+   - `Resource sharing` — one printer, scanner, storage array or internet line serves many users, instead of buying one per machine.
+   - `Data sharing and central storage` — files sit on a server, so everyone works on the same current copy and there is no version confusion.
+   - `Fast and cheap communication` — email, chat, VoIP and video conferencing replace paper and travel.
+   - `Cost reduction` — site licences for software are cheaper than individual copies, and low-cost clients can use one powerful server.
+   - `Central administration` — user accounts, permissions, antivirus, patches and policies are applied from one console.
+   - `Central backup` — data on the server is backed up on a schedule, which is far more reliable than each user backing up their own machine.
+   - `Reliability and redundancy` — alternate paths and mirrored servers keep the service running when one component fails.
+   - `Scalability` — a new user or a new branch is added without rebuilding what exists.
+   - `Remote access` — staff can reach office resources from home or from another city through a VPN.
+   - `Better utilisation of computing power` — idle capacity can be pooled, as in clusters, grids and cloud computing.
+
+   Demerits of a computer network
+   - `Security risk` — once machines are connected, one weak point exposes everything to hacking, sniffing, spoofing and data theft.
+   - `Virus and malware spread` — an infection on one machine can travel to the whole network within minutes.
+   - `High setup cost` — cabling, switches, routers, servers, UPS and licences all cost money before any benefit appears.
+   - `Skilled staff needed` — a network administrator must be employed, and salaries and training are a recurring cost.
+   - `Dependence on the server and the links` — if the file server, the switch or the internet link fails, work stops for everybody. This is the single-point-of-failure problem.
+   - `Maintenance burden` — constant monitoring, patching, log review and hardware replacement.
+   - `Performance degradation` — as users grow, congestion, collisions and broadcast traffic slow everyone down.
+   - `Loss of privacy` — administrators can read files, monitor traffic and log activity.
+   - `Distraction and misuse` — social media, streaming and non-work browsing consume both bandwidth and working hours.
+   - `Illegal copying` — shared files are easy to copy without authorisation, so licence and copyright violation becomes easier.
+
+   Conclusion
+   - The advantages heavily outweigh the disadvantages, which is why no modern office runs stand-alone machines. Most of the disadvantages are manageable with firewalls, antivirus, access control, redundant hardware, regular backups and a written security policy.
+
+23. **b) Two IP address map to same Ethernet address. Will both of them receive packets?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+
+Answer: `Yes` — both will receive the packets, because delivery on the Ethernet segment is decided by the MAC address alone, and the MAC address is the same for both.
+
+   Why this works
+   - Ethernet is the Data Link layer and it knows nothing about IP. A NIC accepts a frame if the destination MAC matches its own address, the broadcast address, or a multicast group it has joined. The IP address inside the payload plays no part in that decision.
+   - So a frame addressed to that one MAC is accepted by that one interface, whichever of the two IP addresses is written in the IP header.
+   - Once the frame is accepted, the IP layer of the host inspects the destination IP. If both addresses are configured on that interface, the host accepts both packets and passes each to the right socket. That is exactly what a `secondary` or `alias` IP address is.
+
+   The mapping is one-way, and that is the key point
+   - `Many IP addresses → one MAC address` is perfectly legal. A single NIC may hold several IP addresses.
+   - `One IP address → many MAC addresses` is a problem — that is a duplicate IP, and it causes ARP flapping and unpredictable delivery.
+   - The ARP cache is therefore keyed on the IP address, and several entries may point to the same MAC address without conflict.
+
+   Where this happens legitimately
+   - `Secondary / alias addressing` — one server holds several IPs on one NIC so it can host several websites with separate certificates, or take over a failed server's address.
+   - `IPv6` — a normal interface always has several addresses at once: a link-local address, a global address and possibly a privacy address, all on the same MAC.
+   - `Router sub-interfaces` — one physical port carrying several VLANs shares the same MAC across all sub-interfaces, each with its own IP.
+   - `Proxy ARP` — a router answers ARP requests for many remote IP addresses with its own MAC, so many IPs appear in the ARP table against one MAC.
+   - `Virtual IPs in HSRP, VRRP and load balancers` — a real address and a shared virtual address coexist on the same interface.
+
+   The abnormal case, for contrast
+   - If the two IP addresses belong to `two different hosts` and one of them has spoofed the other's MAC, then both hosts receive every frame sent to that MAC. Each host's IP layer discards the packets that are not addressed to it, but the traffic is visible to both. This is how `ARP spoofing` and man-in-the-middle attacks work, and it is detected by a duplicate-MAC alarm on the switch or by dynamic ARP inspection.
+
+   Short answer for the exam
+   - Yes. Ethernet delivers by MAC, so both packets reach the interface. If both IP addresses are configured on that one interface it accepts both and processes them normally; if the shared MAC is the result of spoofing, both machines see the frames but each keeps only its own.
+
+24. **Write short note: Node, Backbone, Router and Gateway.** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1049 (ET: BUET)]*
+
+Answer:
+
+   Node
+   - A node is any device attached to a network that has a network address and can send, receive or forward data.
+   - `End nodes`, also called hosts, are the sources and destinations of traffic: computers, phones, servers, printers, IP cameras, IoT sensors.
+   - `Intermediate nodes` only move traffic along: hubs, repeaters, bridges, switches, routers and gateways.
+   - Every node needs a NIC and an address. In a bus topology all nodes hang off the shared backbone; in a star topology every node has its own link to the central switch. The number of nodes is what decides the topology cost — a full mesh of `n` nodes needs `n(n−1)/2` links.
+
+   Backbone
+   - A backbone is the high-capacity central part of a network that carries the aggregated traffic of all the smaller networks attached to it. Everything else hangs off it.
+   - It is built with the fastest available technology, because all traffic converges on it: 10/40/100 Gbps fibre in a campus, and terabit undersea and terrestrial fibre in the `internet backbone`, where Tier 1 providers exchange traffic using BGP.
+   - Types: a `collapsed backbone`, where all building switches home into one central core switch; a `distributed backbone`, a hierarchy of connected core switches; and a `parallel backbone`, with duplicate links for redundancy.
+   - In bus topology the single shared cable itself is called the backbone, and a break in it brings down the whole segment. Because so much depends on it, a backbone is always designed with redundancy.
+
+   Router
+   - A router is a Layer 3 device that connects `different` networks and forwards packets between them using the destination IP address.
+   - It maintains a routing table — static entries, or dynamic ones learned by RIP, OSPF, EIGRP or BGP — and picks the outgoing interface by longest prefix match. It decrements the TTL, fragments oversized packets, and rebuilds the Layer 2 frame for each hop.
+   - It does not forward broadcasts, so each of its interfaces bounds a separate broadcast domain. It also commonly provides NAT, DHCP, ACL filtering and firewalling.
+   - Types: interior and exterior, core and edge, wired and wireless. A home broadband router combines router, switch, access point, DHCP server, NAT and firewall in one box.
+
+   Gateway
+   - A gateway is the node that joins two networks using `different` protocols or architectures, and translates between them so that they can interoperate.
+   - Because the translation may go all the way up the stack, a gateway can operate at any of the seven OSI layers — this is why it is sometimes called a protocol converter. It is the most complex of all the connecting devices, and therefore the slowest.
+   - Every host also has a `default gateway`: the router address it uses for any destination outside its own subnet.
+   - Examples: an email gateway between SMTP and a proprietary mail system, a VoIP gateway between an IP network and the analogue PSTN, an IPv4-to-IPv6 gateway, an API gateway, and a payment gateway.
+
+   Router vs gateway, in one line
+   - A router joins networks that speak the `same` protocol (IP to IP) and works at Layer 3 only. A gateway joins networks that speak `different` protocols and can work at any layer. Every gateway does routing, but not every router is a gateway.
+
+25. **(খ) Public and Private Network-এর মধ্যে পার্থক্য লিখুন? IP address কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+
+   Difference between a public network and a private network
+
+| Point | Public network | Private network |
+|---|---|---|
+| Who can join | Anyone — it is open to the general public | Only authorised members of the organisation |
+| Ownership | Owned by an ISP, a telecom operator or the public at large | Owned and controlled by one organisation or one household |
+| Address type | Uses `public` IP addresses, globally unique and routable | Uses `private` IP addresses from RFC 1918, reused everywhere |
+| Reachable from the internet | Yes, directly | No, not directly — it must pass through NAT |
+| Security | Low by default; the traffic is exposed, so encryption is essential | Higher; protected by a firewall, authentication and access control |
+| Cost | Cheap or free to the user | Higher — the organisation pays for its own equipment and staff |
+| Speed and reliability | Shared and unpredictable, depends on the load | Dedicated, predictable, tunable with QoS |
+| Administration | By the service provider | By the organisation's own network administrator |
+| NAT needed | No | Yes, to reach the internet |
+| Examples | The Internet, airport and café Wi-Fi, a mobile data network | An office LAN, a home Wi-Fi network, a bank's intranet, a VPN |
+
+   Private IP address ranges defined by RFC 1918
+
+| Class | Range | Prefix | Number of addresses |
+|---|---|---|---|
+| A | 10.0.0.0 – 10.255.255.255 | `10.0.0.0/8` | 16,777,216 |
+| B | 172.16.0.0 – 172.31.255.255 | `172.16.0.0/12` | 1,048,576 |
+| C | 192.168.0.0 – 192.168.255.255 | `192.168.0.0/16` | 65,536 |
+
+   - Internet routers deliberately drop packets carrying these addresses, which is why a private host must have its address translated by `NAT` on the router before it can reach the internet. Two extra special ranges are `127.0.0.0/8` for loopback and `169.254.0.0/16` for APIPA link-local addresses.
+
+   What an IP address is
+   - An IP address is the logical, Network-layer address given to every interface on a TCP/IP network so that it can be identified and packets can be routed to it.
+   - `IPv4` is 32 bits, written as four decimal octets separated by dots, each 0–255 — for example `192.168.1.10`. Total space is 2³² ≈ 4.3 billion addresses.
+   - `IPv6` is 128 bits, written as eight groups of four hex digits — for example `2001:0db8:85a3::8a2e:0370:7334`. Total space is 2¹²⁸, which is effectively unlimited.
+   - It has `two parts`, separated by the subnet mask: the `network ID`, which every host on that network shares, and the `host ID`, which is unique to the device. `192.168.1.10/24` means the first 24 bits are the network and the last 8 bits are the host.
+   - IPv4 classes: A (1–126), B (128–191), C (192–223), D (224–239, multicast), E (240–255, experimental). Classful addressing has been replaced by CIDR and VLSM.
+   - It may be `static`, set by hand, or `dynamic`, leased by DHCP; and `public` or `private` as described above.
+   - Its job is `end-to-end` delivery — unlike the MAC address, it does not change from hop to hop.
+
+26. **What is MAC address?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
+
+Answer: A MAC (Media Access Control) address is a `48-bit` physical address permanently burned into a network interface card by its manufacturer, which uniquely identifies that card inside a local network. It is also called the physical address, hardware address or burned-in address (BIA).
+
+   Format
+   - Written as 6 groups of 2 hexadecimal digits, separated by colons or hyphens: `00:1A:2B:3C:4D:5E` or `00-1A-2B-3C-4D-5E`. Cisco writes it in three groups of four: `001a.2b3c.4d5e`.
+   - 48 bits = 6 bytes = 12 hex digits, giving 2⁴⁸ ≈ 281 trillion possible addresses.
+
+   Structure — two halves of 24 bits each
+
+```
+   |<------ 24 bits ------>|<------ 24 bits ------>|
+   +-----------------------+-----------------------+
+   |   OUI  (vendor code)  |  NIC specific number  |
+   +-----------------------+-----------------------+
+     00 : 1A : 2B              3C : 4D : 5E
+```
+
+   - `OUI` — Organizationally Unique Identifier, the first 3 bytes, assigned to the manufacturer by the IEEE. Examples: `00:1A:2B` and `00:50:56` for VMware, `FC:FB:FB` for Cisco.
+   - The last 3 bytes are the serial number the vendor gives to that individual card, so the whole 48 bits is globally unique.
+
+   Two special bits in the first octet
+   - `I/G bit` — the least significant bit. `0` = individual, so unicast; `1` = group, so multicast or broadcast.
+   - `U/L bit` — the next bit. `0` = universally administered by the vendor; `1` = locally administered by software or the administrator.
+
+   Types of MAC address
+   - `Unicast` — I/G bit is 0; the frame is for exactly one card.
+   - `Multicast` — I/G bit is 1; the frame is for a group. IPv4 multicast MACs start with `01:00:5E`, IPv6 with `33:33`.
+   - `Broadcast` — `FF:FF:FF:FF:FF:FF`; the frame goes to every device in the segment. ARP requests and DHCP Discover use it.
+
+   Characteristics and uses
+   - It works at `Layer 2` (Data Link) of the OSI model, and switches and bridges forward frames using it, learning it into a MAC address table.
+   - It gives `hop-to-hop` delivery — it identifies only the next node on the same link, and it is rewritten at every router.
+   - It is a `flat` address with no network/host structure, so it cannot be routed across the internet.
+   - `ARP` is used to discover a MAC address when only the IP address is known.
+   - Although it is burned in, it can be changed in software — `MAC spoofing` — which is used both for legitimate cloning and for bypassing MAC filtering.
+   - It is also used for MAC filtering on Wi-Fi, port security on a switch, and DHCP address reservation.
+   - View it with `ipconfig /all` on Windows, or `ifconfig` / `ip link show` on Linux.
+
+27. **(a) To setup a network among the computers of your office which type of network and network features will you prefer? Justify your choice?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1140-1141 (ET: N/A)]*
+
+Answer: For an office I would build a `switched Ethernet LAN` in a `star (or extended-star) topology`, running the `client–server` model on `TCP/IP`, with Wi-Fi added for mobile devices.
+
+   The choices, and why
+
+   1. Network type — `LAN`
+   - The whole office lies inside one building, well within the 1–2 km limit of a LAN. A MAN or WAN would be paying for distance we do not need.
+   - It gives the highest speed, the lowest delay and the lowest error rate, and the organisation owns it completely, so there is no recurring line rental and no dependence on an operator for internal traffic.
+
+   2. Topology — `star`, extended to a `tree` if there are several floors
+   - Every computer gets its own cable to a central switch, so one faulty cable or one faulty PC affects only itself. In a bus or ring topology one break stops everybody.
+   - Adding or removing a machine needs nothing but a patch cable; fault-finding is easy because each link is independent.
+   - For several floors, an access switch per floor uplinks by fibre to a core switch — the extended star, or a collapsed backbone.
+
+   3. Architecture — `client–server`
+   - Central file, database, print, DNS/DHCP and domain controller services mean one authoritative copy of the data, central user accounts and permissions, and one scheduled backup instead of fifty unmanaged ones.
+   - Peer-to-peer would be cheaper but only works below about ten machines, and it makes security and backup unmanageable.
+
+   4. Medium — `Cat 6 UTP` to the desk, `fibre` between floors, `Wi-Fi` for mobiles
+   - Cat 6 gives Gigabit to every desk at low cost, up to the 100 m limit.
+   - Fibre for the vertical backbone gives high capacity and complete immunity to electrical noise over the longer riser run.
+   - Wi-Fi (802.11ac/ax) for laptops, phones and visitors, kept on a separate guest SSID and VLAN.
+
+   5. Protocol — `TCP/IP` with `Ethernet` (IEEE 802.3)
+   - It is the universal standard, so every operating system and device works with it, and internet access needs it anyway.
+
+   6. Addressing — a `private` block with `DHCP`, subnetted by department
+   - For example `192.168.10.0/24` for accounts, `192.168.20.0/24` for HR, `192.168.30.0/24` for IT. DHCP for user machines; static addresses reserved for servers, printers and network devices.
+   - This limits broadcast traffic, makes troubleshooting easier, and lets ACLs control which department can reach what.
+
+   Network features I would insist on
+
+| Feature | Why it is needed |
+|---|---|
+| Managed switches with `VLANs` | Separate departments logically without extra cabling; contain broadcasts; isolate guest traffic |
+| `Structured cabling` with patch panels | Neat, labelled, testable and easy to change later |
+| `Firewall` at the internet edge, with NAT | Blocks unsolicited inbound traffic and hides internal addresses |
+| `DHCP` and `DNS` servers | Automatic, error-free addressing and internal name resolution |
+| `Active Directory` or LDAP | One login per user, group-based permissions, password policy |
+| `Redundancy` — dual uplinks with STP, dual power, dual ISP | No single failure stops the office |
+| `UPS` and generator backup | Protects switches, servers and data from power loss |
+| `Backup` — scheduled, with an off-site or cloud copy | The only real protection against ransomware and hardware failure |
+| `Antivirus / endpoint protection`, centrally managed | Stops malware spreading machine to machine |
+| `QoS` | Keeps VoIP and video conferencing usable when the link is busy |
+| `Monitoring and logging` — SNMP, syslog, NMS | Faults are seen before users complain; logs support audit |
+| `Wi-Fi` with WPA3, separate guest SSID | Mobility without exposing the internal LAN |
+| `VPN` for remote access | Staff reach office resources securely from outside |
+| `Server room` with access control and cooling | Physical security is part of network security |
+| `Documentation` — IP plan, cable map, configuration backups | Makes the network maintainable by the next administrator |
+
+   Justification in short
+   - The office is one physical site with shared data and shared devices, so a LAN gives the required speed at the lowest cost. A star topology gives fault isolation and easy expansion. The client–server model gives central control of data, users and backup — which is what an office actually needs for accountability and audit. VLANs, a firewall, redundancy and backups turn it from a working network into a dependable one.
+
+28. **(b) Suppose, your office needs to setup a network which can uses for internet purpose only? What will be your steps to setup that network in terms of:** *[BPSC Assistant Programmer (ICT) 2019 compact it 1144 (ET: N/A)]*
+
+Answer: If the network is required for `internet access only` — no internal file server, no internal application — the design becomes much simpler. The steps below cover requirement, hardware, addressing, configuration, security and testing.
+
+   Step 1 — Requirement analysis
+   - Count the users and the devices, wired and wireless, and allow for growth.
+   - Estimate the bandwidth: roughly 2–5 Mbps per user for ordinary browsing and mail, more if video conferencing or cloud applications are used. For 30 users, a 50–100 Mbps line is reasonable.
+   - Decide the coverage — how many rooms and floors — and the budget.
+
+   Step 2 — Choose the internet connection and the ISP
+   - Prefer `fibre (FTTH)` or a `leased line` for a symmetric, reliable connection with an SLA; broadband is acceptable for a small office.
+   - Take a `second link from a different ISP` if the office cannot afford downtime, and configure failover.
+   - Ask the ISP for the WAN details: whether it is DHCP, PPPoE or a static IP, and the gateway and DNS addresses.
+
+   Step 3 — Select the hardware
+   - `Router` with a firewall, NAT and DHCP at the edge — this is the single essential device.
+   - `Switch`, managed, with enough ports and Gigabit uplinks, PoE if the access points will be powered over Ethernet.
+   - `Wireless access points`, placed for even coverage, one per 15–25 users.
+   - `ONU / modem / media converter` as the ISP requires; `UPS` for the router, switch and APs; a small `rack` or wall cabinet.
+   - `Cat 6 UTP` cable, patch panel, keystones, patch cords and labels.
+
+   Step 4 — Physical installation and cabling
+   - Run Cat 6 from the rack to each desk, keeping every run under 100 m, away from power cables to avoid interference.
+   - Terminate on a patch panel, label both ends, and test every link with a cable tester or certifier.
+   - Mount the access points on the ceiling, centrally in each area, and set non-overlapping channels (1, 6, 11 on 2.4 GHz).
+
+   Step 5 — IP addressing plan
+   - Use a `private` block and let `NAT` translate it: for example `192.168.1.0/24`, giving 254 usable addresses.
+   - Reserve a static range for infrastructure — router `192.168.1.1`, switch `192.168.1.2`, access points `192.168.1.3–10`, printers `192.168.1.11–20`.
+   - Give the user pool to `DHCP` — `192.168.1.100–200` — with a suitable lease time.
+   - Set the DNS servers, either the ISP's or a public resolver such as `8.8.8.8` and `1.1.1.1`.
+   - Since the network is internet-only, one flat subnet is enough; use VLANs only to separate `staff` from `guest` traffic.
+
+   Step 6 — Device configuration
+   - On the router: configure the WAN interface as the ISP specifies, enable NAT/PAT so all inside hosts share the public address, enable the DHCP server, set the DNS forwarders, and change the default admin password.
+   - On the switch: set a management IP, create the staff and guest VLANs, and disable unused ports.
+   - On the access points: set the SSIDs, enable `WPA3` (or WPA2-AES), put the guest SSID on the guest VLAN with client isolation, and hide or rate-limit it as policy requires.
+
+   Step 7 — Security
+   - Firewall rules: deny all unsolicited inbound traffic, permit outbound HTTP, HTTPS, DNS, SMTP/IMAP and whatever else is genuinely needed.
+   - Content filtering to block malware and non-work sites; antivirus on every endpoint.
+   - Strong admin passwords, no default credentials, remote management disabled from the WAN side, firmware kept updated.
+   - Guest Wi-Fi isolated from the staff network so a visitor's laptop can never see an office machine.
+   - Keep logs, and set bandwidth limits per user or per application so one download does not starve the office.
+
+   Step 8 — Testing and verification
+   - `ipconfig` / `ip addr` to confirm the DHCP lease, mask, gateway and DNS.
+   - `ping 192.168.1.1` for the gateway, `ping 8.8.8.8` for internet reachability, `nslookup google.com` for name resolution, `tracert` to check the path.
+   - Run a speed test at several points and confirm Wi-Fi coverage in every room.
+   - Test the failover by unplugging the primary ISP link.
+
+   Step 9 — Documentation and handover
+   - Record the IP plan, the cable map with port numbers, all device configurations and passwords (in a password manager), the ISP contract and support numbers.
+   - Take configuration backups, and write a short user guide and an acceptable-use policy.
+
+   Step 10 — Monitoring and maintenance
+   - Monitor link status and bandwidth with SNMP or a simple NMS; review logs; apply firmware updates; re-test cabling when faults appear; review capacity as the user count grows.
+
+   Note on what is `not` needed here
+   - Because the requirement is internet-only, there is no need for a domain controller, a file server, internal DNS zones, or department-wise subnetting. If those requirements appear later, the same LAN can be extended — which is why a managed switch and a VLAN-capable router are still worth buying now.
+
+29. **What is an access network? Briefly describe the available access network.** *[BTRC Assistant Director (Technical) 2019 compact it 1147 (ET: N/A)]*
+
+Answer: An access network is the part of a network that physically connects the end user's premises to the edge of the service provider's network. It is the `first mile` seen from the user and the `last mile` seen from the ISP, and it sits between the customer's equipment and the provider's core.
+
+   Where it fits
+
+```
+   [ User's device ] -- Access network -- [ ISP edge ] -- Core / backbone -- [ Internet ]
+      home, office        the "last mile"     router        high-capacity fibre
+```
+
+   - Three parts make up any provider network: the `access network` reaches the customer, the `distribution / aggregation network` collects many customers, and the `core (backbone) network` carries the aggregated traffic long distance.
+   - The access network is usually the slowest and the most expensive part per user, because it must be built out to every individual building. That is why it decides the speed the customer actually experiences.
+
+   Available access networks
+
+   1. DSL — Digital Subscriber Line
+   - Uses the existing copper telephone pair. A DSL modem at the home talks to a `DSLAM` at the telephone exchange.
+   - Voice and data are carried in different frequency bands, so the phone and the internet can be used at the same time.
+   - ADSL gives up to about 24 Mbps downstream and 2.5 Mbps upstream; the rate falls as the distance from the exchange grows. Variants: ADSL, ADSL2+, SDSL (symmetric), VDSL (very high speed, shorter reach).
+
+   2. Cable — HFC, Hybrid Fibre Coaxial
+   - Uses the cable television plant: fibre from the head end to a neighbourhood node, then coaxial cable to the homes.
+   - Speeds of 100 Mbps to 1 Gbps with DOCSIS 3.0/3.1, but the coaxial segment is `shared` among the neighbourhood, so speed drops in the evening peak.
+
+   3. FTTx — Fibre to the Home / Building / Curb
+   - Optical fibre from the central office to the customer, terminated on an `ONU/ONT`. Usually built as a `PON` (GPON or XGS-PON), where one fibre from the OLT is split passively to 32 or 64 homes.
+   - The fastest and most future-proof option — 100 Mbps to 10 Gbps, symmetric, immune to electrical noise, very low error rate. High initial cost but low ongoing cost. This is the mainstream broadband technology in Bangladesh today.
+
+   4. Ethernet / leased line
+   - A dedicated Ethernet or Metro-Ethernet circuit from the ISP straight into the office, at 10 Mbps to 10 Gbps, symmetric, with a guaranteed SLA.
+   - Costly, so it is used by offices, banks, campuses and data centres rather than homes.
+
+   5. Wireless LAN — Wi-Fi
+   - IEEE 802.11 radio covering the last few metres from an access point that itself has a wired uplink. It is an access technology `inside` the premises, not a way of reaching the ISP.
+
+   6. Cellular — 3G, 4G LTE, 5G
+   - The device connects by radio to a nearby base station of the mobile operator.
+   - Fully mobile and needs no cabling, which makes it the fastest way to cover a large population. 4G gives tens of Mbps, 5G hundreds of Mbps to over 1 Gbps. Data caps and shared cell capacity are the limitations.
+
+   7. Fixed wireless — WiMAX and point-to-point radio
+   - IEEE 802.16 or licensed/unlicensed microwave links from a tower to an antenna on the customer's roof, at 10–100 Mbps.
+   - Useful where laying cable is impossible or uneconomic; needs line of sight and is affected by rain fade.
+
+   8. Satellite
+   - `GEO` VSAT gives coverage anywhere, including ships and remote hills, but adds 500–600 ms round-trip delay. `LEO` constellations reduce that to 20–50 ms with 50–200 Mbps.
+   - The only option for genuinely remote areas; expensive and weather-sensitive.
+
+   9. Dial-up
+   - A modem at up to 56 Kbps over the voice telephone circuit, occupying the line while online. Historically important, now obsolete.
+
+   10. Power line communication (PLC) / BPL
+   - Data carried over the electric mains wiring, at 10–200 Mbps. Mostly used to extend a network inside a building rather than as a provider access technology.
+
+   Comparison
+
+| Access network | Medium | Typical speed | Shared or dedicated | Main limitation |
+|---|---|---|---|---|
+| Dial-up | Telephone copper | Up to 56 Kbps | Dedicated | Obsolete; blocks the phone line |
+| DSL | Telephone copper | Up to 24 Mbps down | Dedicated pair | Speed falls with distance |
+| Cable (HFC) | Fibre + coaxial | 100 Mbps – 1 Gbps | Shared per neighbourhood | Congestion at peak hours |
+| FTTH (PON) | Optical fibre | 100 Mbps – 10 Gbps | Shared split, but very high capacity | High installation cost |
+| Leased line | Fibre or copper | 2 Mbps – 10 Gbps | Dedicated | Most expensive |
+| Cellular 4G/5G | Radio | 10 Mbps – 1 Gbps+ | Shared per cell | Data caps, coverage, capacity |
+| Fixed wireless | Microwave radio | 10–100 Mbps | Point-to-point | Needs line of sight; rain fade |
+| Satellite | Radio via satellite | 10–200 Mbps | Shared per beam | High delay (GEO), high cost |
+
+30. **Explain the terms Domains, Bandwidth, Broadcast and Multicast.** *[Multiple Ministry Assistant Programmer 2017 compact it 1232 (ET: N/A)]*
+
+Answer:
+
+   Domains
+   - The word has two distinct meanings in networking, and both are asked in exams.
+
+   (i) Domain name — in DNS
+   - A domain is a name that identifies an administrative area of the internet's naming hierarchy, and it stands in place of an IP address so that people can use words instead of numbers.
+   - The hierarchy is read from right to left: `root` → `TLD` → `second-level domain` → `subdomain`.
+     - In `www.example.com.bd`, `bd` is the country-code TLD, `com` is the second level, `example` is the registered domain and `www` is the host or subdomain.
+   - TLD types: generic (`.com`, `.org`, `.net`, `.edu`, `.gov`) and country code (`.bd`, `.in`, `.uk`). DNS resolves a domain name to an IP address on port 53.
+   - A `Windows domain` is a related but different idea: a group of computers under one Active Directory database with central user accounts and policy, managed by a domain controller.
+
+   (ii) Collision domain and broadcast domain — in LAN design
+   - A `collision domain` is the set of devices whose transmissions can collide with each other, because they share the medium. A hub keeps all its ports in one collision domain; a switch gives each port its own.
+   - A `broadcast domain` is the set of devices that will receive a broadcast sent by any one of them. A switch keeps all ports in one broadcast domain; only a router, or a VLAN on a switch, splits it.
+
+| Device | Collision domains | Broadcast domains |
+|---|---|---|
+| Hub, 8 ports | 1 | 1 |
+| Switch, 8 ports | 8 | 1 |
+| Switch, 8 ports with 3 VLANs | 8 | 3 |
+| Router, 4 interfaces | 4 | 4 |
+
+   Bandwidth
+   - Bandwidth is the maximum data-carrying capacity of a link per unit of time.
+   - In digital terms it is measured in bits per second — bps, Kbps, Mbps, Gbps. In analogue and signal terms it is the width of the frequency band the channel passes, measured in hertz; a voice channel of 300–3400 Hz has a bandwidth of 3100 Hz.
+   - Bandwidth is only the theoretical ceiling. `Throughput` — what is actually delivered — is always lower because of protocol overhead, collisions, congestion and retransmissions. Bandwidth is the width of the pipe; throughput is the water that really flows.
+   - The maximum data rate a channel can support is bounded by Nyquist for a noiseless channel and by Shannon for a noisy one.
+   - `Bandwidth-delay product` = bandwidth × round-trip time, and it tells you how much data can be in flight on the link at one time.
+
+   Broadcast
+   - Broadcast is `one-to-all` transmission: one sender, and every device in the network segment receives the message whether it wants it or not.
+   - Layer 2 address `FF:FF:FF:FF:FF:FF`; Layer 3 addresses `255.255.255.255` (limited broadcast, never forwarded) and the subnet broadcast such as `192.168.1.255` (directed broadcast).
+   - A switch floods a broadcast out of every port; a `router blocks it`, so it stops at the edge of the broadcast domain.
+   - Used by `ARP` requests, `DHCP` Discover and NetBIOS name lookups. It is simple but wasteful, and excessive broadcast causes a `broadcast storm` that can bring down a segment. IPv6 has removed broadcast altogether and uses multicast in its place.
+
+   Multicast
+   - Multicast is `one-to-many` transmission: one sender and a `selected group` of receivers. Only hosts that have joined the group receive the traffic.
+   - Layer 3 addresses are the Class D range `224.0.0.0 – 239.255.255.255`; the corresponding MAC addresses begin with `01:00:5E` for IPv4 and `33:33` for IPv6.
+   - Membership is managed by `IGMP` in IPv4 and MLD in IPv6, and multicast routing protocols such as `PIM` carry it between networks. A switch running IGMP snooping sends the stream only to the ports with members.
+   - Only one copy of the stream travels on each link no matter how many receivers there are, which makes it far more efficient than sending a separate unicast to each one. Used by IPTV, live video streaming, stock tickers, video conferencing, and by OSPF and RIPv2 for routing updates.
+
+   The four transmission modes together
+
+| Mode | Mapping | Receivers |
+|---|---|---|
+| Unicast | One-to-one | Exactly one host |
+| Broadcast | One-to-all | Every host in the segment |
+| Multicast | One-to-many | Only the group members |
+| Anycast | One-to-nearest | Whichever of several identical servers is closest |
+
+31. **Differentiate between Intranet and Extranet.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
+
+Answer: Both are private networks built with internet technology — TCP/IP, HTTP and web browsers — behind a firewall. The difference is `who is allowed in`.
+
+| Point | Intranet | Extranet |
+|---|---|---|
+| Meaning | A private network used `inside` one organisation for internal communication and resource sharing | A controlled extension of an intranet that also lets `selected outsiders` in |
+| Prefix meaning | `intra` = within | `extra` = outside, beyond |
+| Users | Employees and internal staff only | Employees `plus` authorised suppliers, dealers, partners and clients |
+| Scope | One organisation | Two or more organisations, or an organisation and its external stakeholders |
+| Access from outside | Normally not allowed; access is from within the office network or through a VPN | Allowed, but only to the specific resources the contract permits |
+| Managed on | The organisation's own policy | A `contractual` basis agreed between the parties |
+| Content | Everything internal — HR policies, payroll, notices, internal directories, internal applications | Only the shared subset — order status, price lists, inventory, project documents, shared support tickets |
+| Security requirement | High; a firewall and internal authentication are enough | Higher; needs a firewall, a DMZ, VPN tunnels, strong authentication and per-partner authorisation |
+| Cost | Lower — one network, one policy | Higher — extra security, extra bandwidth, and agreement management |
+| Risk | Limited, because the boundary is closed | Greater, because an external party has been let inside the boundary |
+| Bandwidth need | Internal only | Larger, because outside traffic is also carried |
+| Example | A bank's internal notice board, leave application system and staff directory | A bank giving its vendors access to a procurement portal; a manufacturer letting dealers check stock and place orders |
+
+   Where they sit relative to the internet
+   - `Internet` — public, global, anyone may join.
+   - `Intranet` — private, one organisation, staff only.
+   - `Extranet` — private, but deliberately opened to named outsiders. It lies between the intranet and the internet.
+
+   Key point for the exam
+   - Every extranet is an extension of an intranet, but not every intranet has an extranet. If the network serves only your own employees it is an intranet; the moment an outside organisation is given controlled access to part of it, that part becomes an extranet.
+
+32. **a) Briefly discuss what a computer network means.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
+
+Answer: A computer network means an interconnected collection of two or more autonomous computing devices, joined by a transmission medium and following a common set of protocols, so that they can exchange data and share resources.
+
+   The words in the definition matter
+   - `Autonomous` — each device works on its own; none is a master that controls the others. That is what separates a network from a multiprocessor system.
+   - `Interconnected` — there is a physical or wireless path between them, guided (UTP, coaxial, fibre) or unguided (radio, microwave, satellite).
+   - `Common protocols` — both sides follow the same rules of format, meaning and timing. Without shared protocols, connected machines still cannot communicate.
+
+   The five components of any network
+   - `Sender` and `receiver` — the devices that produce and consume the message.
+   - `Message` — the data itself: text, numbers, image, audio, video.
+   - `Medium` — the path the signal travels along.
+   - `Protocol` — the rules that govern the exchange.
+
+   What it makes possible
+   - Sharing hardware — printers, scanners, storage, the internet line.
+   - Sharing data and software — a single current copy of a file or database, and site-licensed applications.
+   - Communication — email, chat, VoIP, video conferencing.
+   - Reliability and central control — alternate paths, mirrored servers, one place for backup, accounts and security policy.
+   - Cost savings — many users served by one set of expensive resources.
+
+   How it is described and classified
+   - By `size`: PAN, LAN, CAN, MAN, WAN.
+   - By `topology`: bus, star, ring, mesh, tree, hybrid.
+   - By `architecture`: peer-to-peer or client–server.
+   - By `transmission technology`: broadcast or point-to-point.
+   - By `access`: internet (public), intranet (private), extranet (private, extended to partners).
+
+   How its quality is judged
+   - `Performance` — throughput and delay.
+   - `Reliability` — how often it fails and how fast it recovers.
+   - `Security` — protection of data from unauthorised access and from malware.
+
+   In one sentence
+   - A computer network is what turns a room full of separate computers into one cooperating system that shares data, shares devices and lets its users communicate.
+
 ## Networking Devices (24)
 
 1. **Describe the functions of a Switch and a Router and explain two key differences between these networking devices.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
