@@ -2763,11 +2763,17 @@
    গ. মুমূর্ষু  
    ঘ মুমুষর্
 
+   answer: গ — মুমূর্ষু  
+   explanation: শুদ্ধ বানান 'মুমূর্ষু' — মাঝে দীর্ঘ ঊ-কার এবং শেষে হ্রস্ব উ-কার।
+
 2. **Identify the word with correct spelling from the following options. [ নিচের কোন শব্দটির বানান সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*  
    (a) Counterfiet  
    (b) Counterfiet  
    (c) Counterfite  
    (d) Counterfeit
+
+   answer: d — Counterfeit  
+   explanation: শুদ্ধ বানান counterfeit; এখানে e-এর পরে i বসে ("ei" ক্রমে)।
 
 ## বাংলা ভাষা বিষয়ক তথ্য (1)
 
