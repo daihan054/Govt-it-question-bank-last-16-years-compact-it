@@ -1539,31 +1539,52 @@
 ## Database Fundamentals & SQL (7)
 1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
 
+   answer: SELECT c.customerID, c.name, SUM(o.orderAmount) AS total FROM Customer c JOIN Accounts a ON c.customerID = a.customerID JOIN Orders o ON a.accountID = o.accountID GROUP BY c.customerID, c.name HAVING SUM(o.orderAmount) > 5000;  
+   explanation: The two joins link a customer to their accounts and those accounts to their orders, GROUP BY collapses each customer to one row, and HAVING filters on the aggregate because WHERE cannot.
+
 2. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
    (a) Can have duplicate values  
    (b) Can be NULL  
    (c) Must be unique  
    (d) Can store multiple values
 
+   answer: c — Must be unique  
+   explanation: A primary key uniquely identifies each row, so it can never repeat and can never be NULL.
+
 3. **See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400-401]]*  
    a) Create table name Servers with attributes ID, DaysRunning, OsName, RamCapacity.  
    b) Write SQL query to update the server to Unix where the RamCapacity than 16GB.  
    c) Write SQL query to select the OSName for which Servers are running more than 365 days.
+
+   answer: a) CREATE TABLE Servers (ID INT PRIMARY KEY, DaysRunning INT, OsName VARCHAR(50), RamCapacity INT); b) UPDATE Servers SET OsName = 'Unix' WHERE RamCapacity > 16; c) SELECT OsName FROM Servers WHERE DaysRunning > 365;  
+   explanation: CREATE defines the structure, UPDATE ... WHERE changes only the matching rows, and SELECT ... WHERE returns the OS names of long-running servers.
 
 4. **Write the following queries** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*  
    (a) Write an SQL query to show the top 10 highest marks from the Result table.  
    (b) Write an SQL query to show the number of male and female students who passed, individually.  
    (c) Write an SQL query to show the absent students in the Result table.
 
+   answer: (a) SELECT * FROM Result ORDER BY marks DESC LIMIT 10; (b) SELECT gender, COUNT(*) FROM Result WHERE status='Pass' GROUP BY gender; (c) SELECT * FROM Result WHERE status='Absent';  
+   explanation: ORDER BY ... DESC with LIMIT takes the top rows, GROUP BY gender counts each group separately, and a simple WHERE filter lists the absentees.
+
 5. **b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
 
+   answer: $conn = new mysqli("localhost", "user", "password", "dbname"); if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }  
+   explanation: The mysqli object opens the connection and connect_error reports failure; PDO is the alternative — new PDO("mysql:host=localhost;dbname=db", $user, $pass).
+
 6. **একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+
+   answer: SELECT * FROM Employee WHERE name LIKE 'A%Y';  
+   explanation: The pattern anchors A at the start, allows any characters in between with %, and requires Y at the end.
 
 7. **Which one is in case of normalization—[ নরম্যালাইজেশন (Normalization)-এর ক্ষেত্রে কোনটি সঠিক— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) Normalization maximizes duplicates  
    (b) Normalization reduces duplicates  
    (c) Normalization eliminates duplicates  
    (d) Normalization increases duplicates
+
+   answer: b — Normalization reduces duplicates  
+   explanation: Splitting data into related tables stores each fact once, cutting redundancy and the anomalies it causes.
 
 ## Indexing & Query Optimization (6)
 
