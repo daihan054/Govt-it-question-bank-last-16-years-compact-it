@@ -1300,17 +1300,26 @@
    (D) extern  
    (E) volatile
 
+   answer: E — volatile  
+   explanation: The storage classes are auto, register, static and extern; volatile is a type qualifier that tells the compiler the value may change unexpectedly.
+
 2. **In C, static storage class cannot be used with:** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*  
    (A) Global variabl  
    (B) Function parameter  
    (C) Function name  
    (D) Local variable
 
+   answer: B — Function parameter  
+   explanation: A parameter's lifetime is tied to the call, so it may only be auto or register; static is allowed on globals, locals and function names.
+
 3. **Which of the following storage classes have global visibility in C/C++?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*  
    (A) Auto  
    (B) Extern  
    (C) Static  
    (D) Register
+
+   answer: B — Extern  
+   explanation: extern declares a name defined in another file, giving it external linkage and program-wide visibility; static restricts a global to its own file.
 
 ## Flowcharts & Algorithms (1)
 
