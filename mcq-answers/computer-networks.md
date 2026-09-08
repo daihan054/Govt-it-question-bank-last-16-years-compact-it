@@ -2427,11 +2427,17 @@
    c) 32 Kbps  
    d) 64 MbpS
 
+   answer: c — 32 Kbps  
+   explanation: 4000 frames per second × 8 bits per slot = 32,000 bps = 32 Kbps.
+
 2. **Assume we need to download text documents at the rate of 100 pages per second. A page is an average of 24 lines with 80 characters in each line and one character requires 8 bits. What is the required bit rate of the channel?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*  
    a) 25600 bps  
    b) 25800 bps  
    c) 4000 bps  
    d) 10000 bps
+
+   answer: 1.536 Mbps — none of the four options matches  
+   explanation: 100 pages × 24 lines × 80 characters × 8 bits = 1,536,000 bps; the printed options (25600, 25800, 4000, 10000 bps) belong to a different question. <!-- verify -->
 
 3. **What is the propagation time for a 2.5-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 12,000 km and that light travels at 2.4 \times 10^8\text{ m/s}.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*  
    (a) 50ms  
@@ -2439,11 +2445,17 @@
    (c) 100ms  
    (d) 0.040ms
 
+   answer: a — 50ms  
+   explanation: Propagation time is distance ÷ speed = 12,000,000 m ÷ 2.4×10⁸ m/s = 0.05 s = 50 ms; the bandwidth does not affect it.
+
 4. **What is the maximum data rate of a channel with a bandwidth of 200 KHz if we use four levels of digital signaling?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
    (a) 400 Kbps  
    (b) 800 Kbps  
    (c) 1000 Kbps  
    (d) 1200 Kbps
+
+   answer: b — 800 Kbps  
+   explanation: Nyquist gives C = 2 × B × log₂L = 2 × 200,000 × log₂4 = 2 × 200,000 × 2 = 800 kbps.
 
 5. **Suppose we want to download text documents at the rate of 100 pages per second. Assume that a page consists of an average of 24 lines with 80 characters in each line. What is the required bit rate of the channel?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 77 (ET: N/A)]*  
    a. 182 kbps  
@@ -2451,11 +2463,17 @@
    c. 1.248 Mbps  
    d. 1.536 Mbps
 
+   answer: d — 1.536 Mbps  
+   explanation: 100 × 24 × 80 × 8 = 1,536,000 bits per second.
+
 6. **Consider a 50 Mbps satellite channel with a 500 milliseconds round top propagation delay. If the sender wants to transmit 1000 bit frames, how much time will it take for the receiver to receive the frame?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 79 (ET: N/A)]*  
    a. 250 milliseconds  
    b. 20 milliseconds  
    c. 520 milliseconds  
    d. 270 milliseconds
+
+   answer: a — 250 milliseconds  
+   explanation: One-way propagation is half the 500 ms round trip = 250 ms, and sending 1000 bits at 50 Mbps takes only 0.02 ms, so the total is about 250 ms.
 
 7. **A complex bandpass signal has a bandwidth of 300kHz. What is the minimum sampling rate for this signal?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) 600,000 samples per second  
@@ -2463,11 +2481,17 @@
    c) 600kHz  
    d) None of the above
 
+   answer: a — 600,000 samples per second  
+   explanation: Nyquist requires twice the bandwidth, so 2 × 300 kHz = 600,000 samples per second.
+
 8. **The human voice normally contains frequencies from 0 to 4000Hz. If bits per sample?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) 8000 samples/second  
    b) 8000kbps  
    c) 64kbps  
    d) 64 samples/second
+
+   answer: c — 64kbps  
+   explanation: Voice up to 4000 Hz is sampled 8000 times per second and each sample is coded in 8 bits, giving 8000 × 8 = 64 kbps.
 
 9. **Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 5 kHz between the channels to prevent interference?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 182 (ET: N/A)]*  
    a) 500 kHz  
@@ -2475,11 +2499,17 @@
    c) 540 kHz  
    d) 525 kHz
 
+   answer: b — 520 kHz  
+   explanation: Five 100 kHz channels need 500 kHz, plus four 5 kHz guard bands between them = 500 + 20 = 520 kHz.
+
 10. **Assume we need to download text documents at the rate of 100 pages per sec. Each page contains an average of 24 lines with 80 characters in each line. If we assume that one character requires 8 bit, what is the required bit rate of the channel?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 182 (ET: N/A)]*  
    a) 1.92 Mbps  
    b) 1.636Mbps  
    c) 1.82 Mbps  
    d) 1.56Mbps
+
+   answer: d — 1.56Mbps  
+   explanation: 100 × 24 × 80 × 8 = 1,536,000 bps = 1.536 Mbps, which the option prints rounded as 1.56 Mbps.
 
 11. **Consider an extremely noisy channel in which the value of the signal-to-noise ratio is almost zero. For this channel, is the bandwidth is B then what is the channel capacity?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 182 (ET: N/A)]*  
    a) 0.137B  
@@ -2487,11 +2517,17 @@
    c) 0.137  
    d) Infinity
 
+   answer: b — 0  
+   explanation: Shannon gives C = B log₂(1 + SNR); with SNR ≈ 0 this is B log₂1 = 0, so no data can get through.
+
 12. **A number of signal can be carried simultaneously if each signal is modulated that a different carried frequency called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
    a) TDM  
    b) FDM  
    c) Frequency modulation  
    d) Pulse modulation
+
+   answer: b — FDM  
+   explanation: Frequency Division Multiplexing gives each signal its own carrier frequency so they share the link at the same time.
 
 13. **Which multiplexing technique transmits digital signals?** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
    (a) WDM  
@@ -2499,17 +2535,26 @@
    (c) TDM  
    (d) All of the above
 
+   answer: c — TDM  
+   explanation: Time Division Multiplexing interleaves digital bit streams in separate time slots on one link.
+
 14. **The bandwidth of a channel is 1MHz. The SNR for this channel is 63. What is the bit rate?** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
    (a) 4 Mbps  
    (b) 6 Mbps  
    (c) 8 Mbps  
    (d) 10 Mbps
 
+   answer: b — 6 Mbps  
+   explanation: Shannon gives C = B log₂(1+SNR) = 1,000,000 × log₂64 = 1,000,000 × 6 = 6 Mbps.
+
 15. **Maximum speed of voice band is ---** *[BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
    A) 6900 bps  
    B) 6900 kbps  
    C) 9600 bps  
    D) 9600 kbps
+
+   answer: C — 9600 bps  
+   explanation: A standard analog voice-band telephone channel supports up to about 9600 bps with conventional modulation.
 
 ## Physical Layer & Transmission Media (14)
 
