@@ -557,11 +557,17 @@
    (c) Confidentiality  
    (d) All of the above
 
+   answer: a — Availability  
+   explanation: Availability means authorised users can reach the system when needed, so an inaccessible computer breaks exactly that principle.
+
 2. **Cyber security Triad means-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*  
    a) Confidentiality, Reliability and Availability  
    b) Confidentiality, Reliability and Accessibility  
    c) Confidentiality, Integrity and Availability  
    d) Privacy, Integrity and Approachability
+
+   answer: c — Confidentiality, Integrity and Availability  
+   explanation: The CIA triad is the core security model: keep data secret, keep it unaltered, and keep it reachable.
 
 3. **ACL (Access Control List) এর দুটি প্রধান ধরন হল?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
    A) Standard and Extended  
@@ -569,17 +575,26 @@
    C) Extended and Specialized  
    D) Standard and IEEE
 
+   answer: A — Standard and Extended  
+   explanation: A standard ACL filters only on the source address, while an extended ACL can also match destination, protocol and port.
+
 4. **Special set of characters that computer associates with specific user identification is classified as ____.** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
    A) password  
    B) identity code  
    C) inquiry code  
    D) dump code
 
+   answer: A — password  
+   explanation: A password is the secret string a system links to a particular user ID to authenticate that user.
+
 5. **Issuance of cash through terminal outside bank is an example of-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
    A) terminals  
    B) interfaces  
    C) hardware devices  
    D) telecommunication
+
+   answer: A — terminals  
+   explanation: An ATM is a remote terminal that connects to the bank's system to dispense cash away from the branch.
 
 ## Web Security Vulnerabilities (4)
 
