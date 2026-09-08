@@ -682,11 +682,17 @@
    (c) E  
    (d) F
 
+   answer: b — D  
+   explanation: DOS-style lettering gives every primary partition a letter first, so the first drive's primary is C and the second drive's primary is D; the extended partitions follow as E and F.
+
 2. **Which of the following is not a true statement?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*  
    a) Deleted files can be found in recycle bin  
    b) Deleted files in recycle bin can be restored  
    c) Disk space can be increased by sending files into recycle bin  
    d) There may have multiple recycle bin
+
+   answer: c — Disk space can be increased by sending files into recycle bin  
+   explanation: The Recycle Bin only moves files; the space is freed when the bin is emptied.
 
 3. **Which of the following file name extension suggests that the file is backup of another file?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. TXT  
@@ -694,11 +700,17 @@
    c. BAS  
    d. BAK
 
+   answer: d — BAK  
+   explanation: A .BAK file is the saved backup copy of another file.
+
 4. **"INI" extension refers usually what kind of file?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Image file  
    b. System file  
    c. Hypertext file  
    d. Image Color Matching Profile file
+
+   answer: b — System file  
+   explanation: .INI files hold initialisation and configuration settings for Windows and its applications.
 
 ## Process Synchronization (2)
 
