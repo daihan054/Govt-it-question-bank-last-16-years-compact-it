@@ -715,11 +715,17 @@
 ## Percentage, Profit & Loss (25)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
+   answer: প্রায় ৮৭,৪১,৮১৬ জন  
+   explanation: প্রতি হাজারে ৩০ জন মানে বার্ষিক বৃদ্ধি ৩%, তাই ৩ বছর পর জনসংখ্যা = ৮০,০০,০০০ × (১.০৩)³ ≈ ৮৭.৪২ লক্ষ।
+
 2. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) 25,000TK  
    (b) 30,000TK  
    (c) 35,000TK  
    (d) 3,000TK
+
+   answer: b — 30,000TK  
+   explanation: 30 + 20 + 10 = 60% spent, so the remaining 40% is 12,000, giving a salary of 30,000 taka.
 
 3. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৭৪  
@@ -727,11 +733,17 @@
    গ. ১৪৮  
    ঘ. ২০০
 
+   answer: ঘ — ২০০  
+   explanation: 0.37x - 37 = 37 থেকে 0.37x = 74, তাই x = 200।
+
 4. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk.360 interest @6% per annum. What was the amount heborrowed?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) Tk. 18,000  
    (b) Tk.16,000  
    (c) Tk.15,000  
    (d) None of these
+
+   answer: a — Tk. 18,000  
+   explanation: Interest = P × 6% × 120/360 = 0.02P, so 0.02P = 360 and P = 18,000 taka.
 
 5. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 40  
@@ -739,11 +751,20 @@
    (c) 201  
    (d) 72
 
+   answer: c — 201  
+   explanation: 90% remain good and 20% of those are left, so 0.9 × 0.2 × x = 36 gives x = 200, printed as 201.
+
 6. **৪ টাকায় ৫ টি করে কিনে ৫ টাকায় ৪ টি করে বিক্রি করলে শতকরা কত লাভ হবে?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ৫৬.২৫%
 
+   answer: ৫৬.২৫%  
+   explanation: ১টির ক্রয়মূল্য ৪/৫ = ০.৮ টাকা, বিক্রয়মূল্য ৫/৪ = ১.২৫ টাকা; লাভ ০.৪৫ টাকা, যা ০.৮-এর ৫৬.২৫%।
+
 7. **যদি তেলের মূল্য ২৫% বৃদ্ধি পায় তবে তেলের ব্যবহার শতকরা কত কমালে তেল বাবদ খরচ বৃদ্ধি পাবে না?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ২০%
+
+   answer: ২০%  
+   explanation: দাম ১.২৫ গুণ হলে খরচ অপরিবর্তিত রাখতে ব্যবহার ১/১.২৫ = ০.৮ গুণ করতে হয়, অর্থাৎ ২০% কমাতে হবে।
 
 8. **A tank is 40% full. If 16 liters of water is added to the tank, it becomes 4/5 full. The capacity of the tank is:** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 72 (ET: N/A)]*  
    (a) 32 liters  
@@ -752,12 +773,18 @@
    (d) 42 liters  
    **Ans: c**
 
+   answer: c — 40 liters  
+   explanation: The 16 litres raise it from 40% to 80%, so 16 litres is 40% of the tank and the capacity is 40 litres.
+
 9. **In a class of 24 students, one half of the student take higher math & one third take physics and one fourth take both. How many take neither?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 72 (ET: N/A)]*  
    (a) 14  
    (b) 15  
    (c) 10  
    (d) 8  
    **Ans: c**
+
+   answer: c — 10  
+   explanation: 12 take maths and 8 physics with 6 in both, so 12 + 8 - 6 = 14 take at least one and 24 - 14 = 10 take neither.
 
 10. **কোন আসল ৫ বছরে সরল সুদে বৃদ্ধি পেয়ে ১০,০০০ টাকা এবং ১০ বছরে বৃদ্ধি পেয়ে ১২,০০০ টাকা হবে?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*  
    ক) ৫০০০ টাকা  
@@ -766,12 +793,18 @@
    ঘ) ৯,৫০০ টাকা  
    **Ans: গ**
 
+   answer: গ — ৮০০০ টাকা  
+   explanation: ৫ বছরে সুদ বেড়েছে ২,০০০ টাকা, তাই ৫ বছরের সুদও ২,০০০; আসল = ১০,০০০ - ২,০০০ = ৮,০০০ টাকা।
+
 11. **একটি পরীক্ষায় ৫২% শিক্ষার্থী বাংলায় এবং ৪২% শিক্ষার্থী ইংরেজীতে অকৃতকার্য হয়। উভয় বিষয়ে অকৃতকার্য শিক্ষার্থী ১৭% হলে উভয় বিষয়ে কৃতকার্য শিক্ষার্থী?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*  
    ক) ২৩%  
    খ) ২৭%  
    গ) ২৮%  
    ঘ) ৩৩%  
    **Ans: ক**
+
+   answer: ক — ২৩%  
+   explanation: অন্তত এক বিষয়ে ফেল = ৫২ + ৪২ - ১৭ = ৭৭%, তাই উভয় বিষয়ে পাস ১০০ - ৭৭ = ২৩%।
 
 12. **১০০ টাকায় ১২টি কলা ক্রয় করে, ১২০ টাকায় ১০টি কলা বিক্রয় করলে শতকরা লাভ হবে?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*  
    ক) ২২%  
@@ -780,11 +813,17 @@
    ঘ) ৪৪%  
    **Ans: ঘ**
 
+   answer: ঘ — ৪৪%  
+   explanation: একটি কলার ক্রয়মূল্য ১০০/১২ ও বিক্রয়মূল্য ১২০/১০ = ১২, তাই লাভ (১২ - ৮.৩৩)/৮.৩৩ ≈ ৪৪%।
+
 13. **Alom sold a radio at the cost of 1950 taka at a loss of 25%. At what cost will he have to sell it to get a profit of 30%?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 4000  
    b) 3380  
    c) 3580  
    d) 3400
+
+   answer: b — 3380  
+   explanation: A 25% loss means the cost was 1950/0.75 = 2600, so a 30% profit needs 2600 × 1.3 = 3380 taka.
 
 14. **The loss is 30% when 10 lemons are sold per taka. How many lemons are to be sold per taka to make a profit of 40%?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 2  
@@ -792,11 +831,17 @@
    c) 5  
    d) 10
 
+   answer: c — 5  
+   explanation: Ten lemons for a taka at a 30% loss means their cost is 1/0.7 taka; a 40% profit needs 1.4/0.7 = 2 taka for ten, i.e. five per taka.
+
 15. **A lamp is manufactured to sell for $35.00, which yields a profit of 25% of cost. If the profit is to be reduced to 15% of cost, what will be the new retail price of the lamp?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) $21.00  
    b) $28.00  
    c) $31.50  
    d) $32.20
+
+   answer: d — $32.20  
+   explanation: 35 = 1.25 × cost gives a cost of 28, and a 15% profit makes the price 28 × 1.15 = 32.20.
 
 16. **A manufacturer sells three products i.e. A, B and C Product A costs 200 and sells for 250. Product B costs 150 and sells for 180, product C costs 1000 and sells for 110. On which product, he has maximum percentage of profit?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) B only  
@@ -804,11 +849,17 @@
    c) A only  
    d) C only
 
+   answer: c — A only  
+   explanation: A gives 50/200 = 25%, B gives 30/150 = 20%, and C actually makes a loss, so A has the highest margin.
+
 17. **A wholesaler sells goods to a retailer at a profit of 20%. The retailer sells to the customer, who pays 80% more than the cost of the wholesaler. What is the retailer's profit?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) 40%  
    (b) 50%  
    (c) 60%  
    (d) 70%
+
+   answer: b — 50%  
+   explanation: Taking the wholesaler's cost as 100, he sells at 120 and the customer pays 180, so the retailer gains 60 on 120 — 50%.
 
 18. **Ahmed sold a t-shirt for TK. 810, and gain 8%. How much did he purchase it for?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. Tk. 750  
@@ -816,17 +867,26 @@
    c. Tk. 745  
    d. Tk. 756
 
+   answer: a — Tk. 750  
+   explanation: 810 ÷ 1.08 = 750 taka.
+
 19. **A restaurant makes 20% profit after selling a set menu at a discount of 20%. What is the percentage increase of marked price?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 30%  
    b. 20%  
    c. 40%  
    d. 50%
 
+   answer: d — 50%  
+   explanation: Selling at 20% off still yields 20% profit, so 0.8M = 1.2C and M = 1.5C — the marked price is 50% above cost.
+
 20. **If a pen is sold at taka 55 it makes a profit of 10%. What is its purchase cost?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 50  
    খ. 110  
    গ. 45  
    ঘ. 60
+
+   answer: ক — 50  
+   explanation: 55 ÷ 1.10 = 50 taka.
 
 21. **What is 3% of 0.07?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 21  
@@ -840,11 +900,17 @@
    গ. ২৪০০ টাকা
    ঘ. ২৩০০ টাকা
 
+   answer: ঘ — 0.0021  
+   explanation: 3% of 0.07 = 0.03 × 0.07 = 0.0021.
+
 22. **কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. নাপাম  
    খ. নিউট্রন  
    গ. হাইড্রোজেন  
    ঘ. এটম
+
+   answer: খ — নিউট্রন  
+   explanation: নিউট্রন বোমা প্রচণ্ড বিকিরণ ছড়িয়ে প্রাণ নেয়, কিন্তু বিস্ফোরণ-শক্তি কম বলে ভবন প্রায় অক্ষত থাকে।
 
 23. **১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ৪  
@@ -852,9 +918,18 @@
    গ) ৬  
    ঘ) ৭
 
+   answer: ক — ৪  
+   explanation: সরল সুদে ৯৬ = ২০০ × ০.১২ × সময়, তাই সময় = ৪ বছর।
+
 24. **একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
 
+   answer: এক্সেল: =IF(A2<1000, A2*1.10, A2); HTML স্ক্রলিং টেক্সট: <marquee> ট্যাগ  
+   explanation: IF শর্তটি বেতন ১০০০ টাকার কম কি না দেখে, কম হলে ১০% কমিশন যোগ করে (১.১০ গুণ), নইলে অপরিবর্তিত রাখে; <marquee> ট্যাগ লেখা চলমান করে, যদিও এটি এখন অবচিত এবং CSS animation দিয়েই করা হয়।
+
 25. **SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+
+   answer: SQL ইনজেকশন হলো ইনপুট ফিল্ডে দূষিত SQL কোড ঢুকিয়ে কুয়েরির অর্থ বদলে দেওয়া  
+   explanation: ব্যবহারকারীর ইনপুট সরাসরি কুয়েরিতে জোড়া লাগানো হলে ' OR '1'='1 জাতীয় ইনপুট শর্তকে সবসময় সত্য বানিয়ে দেয়, ফলে লগইন বাইপাস, গোপন তথ্য চুরি বা টেবিল মুছে ফেলা সম্ভব হয়; প্রতিকার হলো প্যারামিটারাইজড কুয়েরি ও ইনপুট ভ্যালিডেশন।
 
 ## Arithmetic & Number Series (16)
 
