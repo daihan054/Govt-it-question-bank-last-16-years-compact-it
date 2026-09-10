@@ -23,11 +23,17 @@
    (c) Queue  
    (d) Linked list
 
+   answer: b — Graph  
+   explanation: A graph connects each node to many others with no single sequence, so it is non-linear; arrays, queues and linked lists are linear.
+
 2. **Which of the data structure is linear type?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
    a) Tree  
    b) Binary Tree  
    c) Queue  
    d) Graph
+
+   answer: c — Queue  
+   explanation: A queue stores elements one after another in a single sequence, which makes it linear; trees and graphs are non-linear.
 
 3. **Array data structure এ কোন ধরনের data রাখা যায়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 198 (ET: N/A)]*  
    A) various type data  
@@ -35,11 +41,17 @@
    C) Classes data  
    D) Same type many data
 
+   answer: D — Same type many data  
+   explanation: An array is a fixed collection of elements that must all be of the same data type, stored in contiguous memory.
+
 4. **LIFO data structure কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 194 (ET: N/A)]*  
    A) Queue  
    B) Stack  
    C) File  
    D) কোনটি নয়
+
+   answer: B — Stack  
+   explanation: A stack is Last In First Out — the item pushed most recently is the first one popped.
 
 5. **Linked list এ ন্যূনতম দুইটি field থাকে। একটি হচ্ছে data field, তবে অন্যটি কি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) Pointer to char  
@@ -47,11 +59,17 @@
    C) Pointer to node  
    D) Null
 
+   answer: C — Pointer to node  
+   explanation: Each node stores its data plus a pointer holding the address of the next node.
+
 6. **নিচের কোনটি একটি valid postfix expression?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 189 (ET: N/A)]*  
    A) a*b(c+d)  
    B) abc*+de-+  
    C) +ab  
    D) a+b-c
+
+   answer: B — abc*+de-+  
+   explanation: Scanning it on a stack works out cleanly: b*c, then a+(b*c), then d-e, and finally the two are added — every operator finds its two operands.
 
 7. **Which of the following data structure is non-linear type?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*  
    A) Strings  
@@ -59,11 +77,17 @@
    C) Stacks  
    D) None of these
 
+   answer: D — None of these  
+   explanation: Strings, lists and stacks are all linear structures; the non-linear ones are trees and graphs.
+
 8. **The maximum number of binary trees that can be formed with three unlabeled nodes is-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) 1  
    B) 3  
    C) 5  
    D) 4
+
+   answer: C — 5  
+   explanation: The number of distinct binary trees on n unlabelled nodes is the Catalan number, and for n = 3 that is 5.
 
 9. **নিচের কোনটি দিয়ে Graph represent করা যায়?** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
    A) Queue  
@@ -71,11 +95,17 @@
    C) Adjacency list  
    D) Pointer
 
+   answer: C — Adjacency list  
+   explanation: A graph is stored either as an adjacency matrix or, more compactly for sparse graphs, as an adjacency list.
+
 10. **Which one is less costly for insertion at a particular position?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) Array  
    B) Queue  
    C) Link List  
    D) Stack
+
+   answer: C — Link List  
+   explanation: Inserting into a linked list only rewires two pointers, while an array must shift every following element.
 
 11. **Which data structure required evaluating a postfix expression is?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) Queue  
@@ -83,11 +113,17 @@
    C) Link List  
    D) Array
 
+   answer: B — Stack  
+   explanation: Operands are pushed and each operator pops the top two values, so postfix evaluation needs a stack.
+
 12. **Link List can be implemented by using?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) Array  
    B) Pointer  
    C) Both A and B  
    D) None of above
+
+   answer: C — Both A and B  
+   explanation: A linked list is normally built with pointers and dynamic nodes, but it can also be simulated in an array using index values as links.
 
 13. **Which following data structure is linear type?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) Strings  
@@ -95,11 +131,17 @@
    C) Queue  
    D) All of above
 
+   answer: D — All of above  
+   explanation: Strings, lists and queues all store elements in one sequence, so all three are linear.
+
 14. **An array contains the following letters, Color = {E, L, E, C, T, I, O, N}. The value of the variable, E=3, Color[E] points to which value?** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) E  
    B) C  
    C) T  
    D) 1
+
+   answer: B — C  
+   explanation: Indexing starts at 0, so Color[3] is the fourth letter of {E, L, E, C, T, I, O, N}, which is C.
 
 15. **The operation of processing each element in the list is known as-----** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Sorting  
@@ -107,11 +149,17 @@
    C) Inserting  
    D) Traversal
 
+   answer: D — Traversal  
+   explanation: Visiting and processing every element of a structure exactly once is called traversal.
+
 16. **Which of the following data structure are index structures?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) linear array  
    B) link list  
    C) both a and b  
    D) none
+
+   answer: C — both a and b  
+   explanation: A linear array is indexed by position and a linked list can be used to build index structures, so both qualify.
 
 17. **The term push and pop related to -** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Array  
@@ -119,11 +167,17 @@
    C) stack  
    D) all of this
 
+   answer: C — stack  
+   explanation: Push adds an item to the top of a stack and pop removes it.
+
 18. **Which data structure is used for indexing?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
    A) Binary tree  
    B) B+ tree  
    C) Stack  
    D) Link List
+
+   answer: B — B+ tree  
+   explanation: A B+ tree keeps all the keys in sorted leaf nodes linked together, which suits both range scans and single lookups, so databases use it for indexes.
 
 19. **The Term push and Pop is related to the** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
    A) Array  
@@ -131,11 +185,17 @@
    C) Stacks  
    D) All of the above
 
+   answer: C — Stacks  
+   explanation: Push and pop are the two basic stack operations.
+
 20. **Which of the following data structure is non-linear type?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) String  
    B) Lists  
    C) Stacks  
    D) None
+
+   answer: D — None  
+   explanation: Strings, lists and stacks are linear structures, so none of them is non-linear.
 
 21. **The operation of processing each element in the list is known as-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) Traversal  
@@ -143,11 +203,17 @@
    C) Inserting  
    D) Sorting
 
+   answer: A — Traversal  
+   explanation: Traversal means visiting every element of the list once to process it.
+
 22. **Which is correct?** *[Bangladesh Bank Assistant Programmer 2016 compact it 243 (ET: N/A)]*  
    A) <body color= 'yello'>  
    B) <body bgcolor= 'yello'>  
    C) <body background> yellow<body>  
    D) <body background= 'yellow'>
+
+   answer: B — <body bgcolor= 'yello'>  
+   explanation: The background colour of a page is set with the bgcolor attribute of the body tag.
 
 23. **Which is not linear?** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*  
    A) Linked list  
@@ -155,17 +221,26 @@
    C) graph  
    D) None
 
+   answer: C — graph  
+   explanation: A graph has no single sequence of elements, so it is non-linear; arrays and linked lists are linear.
+
 24. **When a new data is inserted into a data structure, but there is no available space; this situation is usually called ---** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) underflow  
    B) overflow  
    C) houseful  
    D) saturated
 
+   answer: B — overflow  
+   explanation: Trying to insert into a full structure with no free space is called overflow; removing from an empty one is underflow.
+
 25. **To represent hierarchical relationship between element, which data Structure is suitable?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) Desuetude  
    B) Priority  
    C) Tree  
    D) Graph
+
+   answer: C — Tree  
+   explanation: A tree naturally models parent-child relationships, which is exactly a hierarchy.
 
 ## Stack & Queue (23)
 
@@ -175,11 +250,17 @@
    (c) Arithmetic expression evaluation  
    (d) All of the above
 
+   answer: d — All of the above  
+   explanation: A stack drives the function call stack, the stock span problem and postfix expression evaluation, so all three are stack applications.
+
 2. **The minimum number of stacks needed to implement a queue is** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 1  
    (b) 2  
    (c) 3  
    (d) 4
+
+   answer: b — 2  
+   explanation: One stack holds incoming items and the second reverses them for removal, which turns LIFO behaviour into FIFO.
 
 3. **Which Data structure is needed to convert infix notation to postfix notation?** *[NPCBL Executive Trainee (Software) 2023 compact it 38 (ET: N/A)]*  
    a) Branch  
@@ -187,11 +268,17 @@
    c) Queue  
    d) Stack
 
+   answer: d — Stack  
+   explanation: The shunting-yard algorithm holds operators on a stack and pops them according to precedence while producing postfix output.
+
 4. **Find the output of the following prefix expression *+2-2 \text{ } 1/4 \text{ } 2+-531** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) 2  
    b) 12  
    c) 10  
    d) 4
+
+   answer: d — 4  
+   explanation: Evaluating the prefix expression gives *( +(2, -(2,1)), /(4, +(-(5,3),1)) ) = 3 × (4/3) = 4; the printed string carries a stray extra operand from OCR. <!-- verify -->
 
 5. **Which data structure allows insertion and deletion of elements from both ends?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*  
    (a) Deque  
@@ -199,11 +286,20 @@
    (c) Stack  
    (d) Linked list
 
+   answer: a — Deque  
+   explanation: A double-ended queue supports insertion and deletion at both the front and the rear.
+
 6. **In data structure use recursion?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** Stack
 
+   answer: Stack  
+   explanation: Every recursive call pushes a new activation record with its parameters and return address onto the call stack.
+
 7. **What is the prefix conversion of the expression \text{A}+(\text{B}-\text{C})*\text{D}?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** +\text{A}*-\text{BCD}
+
+   answer: +A*-BCD  
+   explanation: A+(B-C)*D becomes +(A, *( -(B,C), D)), which written in prefix is +A*-BCD.
 
 8. **An example of a hierarchical data structure is ______** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*  
    (ক) Array  
@@ -211,11 +307,17 @@
    (গ) Tree  
    (ঘ) Ring
 
+   answer: গ — Tree  
+   explanation: A tree stores parent-child links, which is exactly a hierarchical relationship.
+
 9. **Which of the following data structures follows the LIFO principle?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 46 (ET: N/A)]*  
    (ক) stack  
    (খ) Linked list  
    (গ) Queue  
    (ঘ) Graph
+
+   answer: ক — stack  
+   explanation: A stack removes the most recently added element first, which is Last In First Out.
 
 10. **A stack is also called-** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 47 (ET: N/A)]*  
    (ক) Last in First Out  
@@ -223,11 +325,17 @@
    (গ) Last In Last Out  
    (ঘ) First in Frist Out
 
+   answer: ক — Last in First Out  
+   explanation: The last item pushed onto a stack is the first one popped off.
+
 11. **What is postfix expression of the string, a+(b-c)*d?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
    a) abc-d*+  
    b) abcd - *+  
    c) ad* bc -  
    d) abc – d+*
+
+   answer: a — abc-d*+  
+   explanation: (b-c) becomes bc-, multiplying by d gives bc-d*, and adding a in front gives abc-d*+.
 
 12. **In a shop, customers are provided the service as a first come first serve policy. But some special customers can be served at any time based on their importance. Which data structure most fits this scenario?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
    a. Stack  
@@ -235,11 +343,17 @@
    c. Priority Queue  
    d. Dequeue
 
+   answer: c — Priority Queue  
+   explanation: A priority queue serves in arrival order by default but lets higher-priority items jump ahead.
+
 13. **Which of the following data structures can be used both as Stack and Queue?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 87 (ET: N/A)]*  
    a. Vector  
    b. Hash Table  
    c. Deque  
    d. Binary Search Tree
+
+   answer: c — Deque  
+   explanation: A deque allows insert and delete at both ends, so restricting it to one end gives a stack and to opposite ends gives a queue.
 
 14. **Suppose you are implementing a Queue of size N using a non-circular linked list having a front and a rare pointer as shown in the figure. The enqueue operation inserts a new node at the front and the dequeue operation deletes a node from the rare. Which one of the following is the time complexity of the most efficient implementation of the enqueue and dequeue operations, respectively on this data structure?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 175 (ET: N/A)]*
    ```
@@ -255,11 +369,17 @@
    c) \theta(n), \theta(1)  
    d) \theta(n), \theta(n)
 
+   answer: b — θ(1), θ(n)  
+   explanation: Inserting at the head is constant time, but deleting the tail of a singly linked list needs a walk to the previous node, which is θ(n).
+
 15. **Which one is the characteristics of Stack ADT?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
    a) Sequential Index  
    b) Last-In-First Out  
    c) First-In-First Out  
    d) Key indexing
+
+   answer: b — Last-In-First Out  
+   explanation: A stack's defining property is that the most recently pushed element is removed first.
 
 16. **What will be the state of a queue after executing the following operation?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    push(1), push(2), pop(), push(4), push(5), pop()  
@@ -268,11 +388,17 @@
    c) 4, 5  
    d) 1, 4
 
+   answer: c — 4, 5  
+   explanation: A queue removes from the front: the first pop takes 1 and the second takes 2, leaving 4 and 5.
+
 17. **Suppose you want to insert n elements into an empty linked list while maintaining the shorted order. What is the worst-case time complexity?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
    a) \theta(n)  
    b) \theta(n \log n)  
    c) \theta(1)  
    d) \theta(n^2)
+
+   answer: d — θ(n²)  
+   explanation: Each new element may have to be compared past every element already in the list, giving 1+2+...+n comparisons.
 
 18. **The term push and pop are related to the-** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*  
    A) array  
@@ -280,11 +406,17 @@
    C) lists  
    D) All of these
 
+   answer: B — stacks  
+   explanation: Push and pop are the insert and delete operations of a stack.
+
 19. **The data structure required to check whether an expression contains balanced parenthesis is-** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) Stack  
    B) Queue  
    C) Array  
    D) Tree
+
+   answer: A — Stack  
+   explanation: Opening brackets are pushed and each closing bracket must match the one popped, so a stack checks balance.
 
 20. **Pushing an element into stack already having five elements and stack size of 5 then stack becomes-** *[Combined 3 Bank Assistant Programmer 2018 compact it 233 (ET: N/A)]*  
    A) Overflow  
@@ -292,11 +424,17 @@
    C) Underflow  
    D) User flow
 
+   answer: A — Overflow  
+   explanation: Pushing onto a stack that is already at its maximum size causes stack overflow.
+
 21. **Which is correct for stack?** *[Bangladesh Bank Assistant Programmer 2016 compact it 243 (ET: N/A)]*  
    A) FIFO  
    B) LIFO  
    C) Both A, B  
    D) None
+
+   answer: B — LIFO  
+   explanation: A stack removes elements in the reverse order they were added.
 
 22. **Find the correct arranged data after stack operation push (1), push (2), pop, push (1), push (2), pop, pop, pop, push (2), pop.** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) 2 2 1 1 2  
@@ -304,11 +442,17 @@
    C) 2 2 2 2 1  
    D) 2 2 2 1 2
 
+   answer: A — 2 2 1 1 2  
+   explanation: Each pop returns the current top: 2, then 2, then 1, then 1, and finally 2.
+
 23. **Stack operations are—** *[Bangladesh Bank Assistant Programmer 2016 compact it 245 (ET: N/A)]*  
    A) delete, insertion  
    B) insertion, delete  
    C) push, pop  
    D) pop, push
+
+   answer: C — push, pop  
+   explanation: Push inserts on the top of the stack and pop removes from the top.
 
 ## Tree & Binary Search Tree (20)
 
@@ -318,11 +462,17 @@
    (c) 7 5 1 0 3 2 4 6 8 9  
    (d) 0 1 2 3 4 5 6 7 8 9
 
+   answer: d — 0 1 2 3 4 5 6 7 8 9  
+   explanation: In-order traversal of any binary search tree always produces the keys in ascending order, whatever the insertion sequence.
+
 2. **A binary search tree is constructed by inserting the numbers, 60 25 72 15 30 68 13 18 in order. The number of nodes in the left sub tree is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 4  
    (b) 5  
    (c) 6  
    (d) 8
+
+   answer: b — 5  
+   explanation: With 60 as root the values smaller than it are 25, 15, 30, 13 and 18 — five nodes in the left subtree.
 
 3. **Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) 2  
@@ -330,11 +480,17 @@
    (c) 4  
    (d) 5
 
+   answer: d — 5  
+   explanation: A full binary tree with 11 nodes has 5 internal nodes; chaining them one per level makes the tree as tall as possible, giving height 5.
+
 4. **Level order traversal of a rooted tree can be done by starting from root and performing-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) Deep search  
    (b) Root search  
    (c) Depth first search  
    (d) Breadth first search
+
+   answer: d — Breadth first search  
+   explanation: Level order visits every node of one depth before moving deeper, which is BFS using a queue.
 
 5. **Which data structure is suitable to represent hierarchical relationship between elements?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*  
    a) Stack  
@@ -342,11 +498,17 @@
    c) List  
    d) Tree
 
+   answer: d — Tree  
+   explanation: A tree's parent-child links directly represent a hierarchy.
+
 6. **How many children does a binary tree have?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*  
    a) 2  
    b) 0  
    c) 0 or 1 or 2  
    d) Any number of children
+
+   answer: c — 0 or 1 or 2  
+   explanation: In a binary tree each node may have no child, one child or at most two children.
 
 7. **A B* tree can contain a maximum of 7 pointers in a node. What is the minimum number keys in leaves?** *[NPCBL Executive Trainee (Software) 2023 compact it 39 (ET: N/A)]*  
    a) 6  
@@ -354,11 +516,17 @@
    c) 4  
    d) 7
 
+   answer: b — 3  
+   explanation: With a maximum of 7 pointers the order is 7, so each node holds at most 6 keys and at least ceil(7/2)-1 = 3.
+
 8. **In a completer k-array, every internal node has exactly k children. The number of leaves in such a tree with n internal nodes is-** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*  
    (a) (n-1)k+1  
    (b) nk  
    (c) n(k-1)  
    (d) n(k-1)+1
+
+   answer: d — n(k-1)+1  
+   explanation: The n internal nodes have nk children in total, and n of those are themselves internal, so the leaves number nk - n + 1 = n(k-1)+1.
 
 9. **Access time of the symbolic table will be logarithmic if it is implemented by-** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 28 (ET: BIBM)]*  
    (a) Linear list  
@@ -366,8 +534,14 @@
    (c) Hash table  
    (d) Self organization list
 
+   answer: b — Search tree  
+   explanation: A balanced search tree halves the search space at each level, giving O(log n) access; a linear list is O(n) and a hash table is O(1).
+
 10. **What is the minimum node for binary tree?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** For a binary tree, max node = [2^{\text{h}} + 1] and min node = [2\text{h} + 1].
+
+   answer: For height h, maximum nodes = 2^(h+1) - 1 and minimum nodes = h + 1  
+   explanation: A perfect tree fills every level, while the minimum case is a single chain with one node per level.
 
 11. **The Post-order traversal of a binary tree is 8, 9, 6, 7, 4, 5, 2, 3, 1, The In-order traversal of the same tree is 8, 6, 9, 4, 7, 2, 5, 1, 3. What is the height of the above binary tree?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 89 (ET: N/A)]*  
    a. 2  
@@ -375,11 +549,17 @@
    c. 4  
    d. 1
 
+   answer: c — 4  
+   explanation: Rebuilding from the traversals gives the chain 1 → 2 → 4 → 6 → 8, so the deepest node sits at level 4.
+
 12. **The pre order traversal of binary tree is 40, 20, 10, 30, 60, 50, 70. Which one of the is the post-order traversal of the tree?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
    a) 10,20,30,40,50,60,70  
    b) 10,30,20,50,70,60,40  
    c) 40,20,60,10,30,50,70  
    d) 70,50,60,30,10,20,40
+
+   answer: b — 10,30,20,50,70,60,40  
+   explanation: The preorder shows 40 as root with {20,10,30} on the left and {60,50,70} on the right; post-order visits left, right, then root.
 
 13. **Suppose we have a Binary Search Tree where each node has an integer value. Which of the following tree traversal techniques can give us a sorted list (in ascending order) of those integers?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 180 (ET: N/A)]*  
    a) Pre-order traversal  
@@ -387,11 +567,17 @@
    c) Post-order traversal  
    d) BFS traversal
 
+   answer: b — In-order traversal  
+   explanation: In-order on a BST visits left subtree, node, right subtree, which yields the keys in ascending order.
+
 14. **If we represent a binary tree using array, what will be the children of node “n”-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
    a) 2n & 2n+1  
    b) 2n & 2-n  
    c) (n+1)2  
    d) 2n & 2n-1
+
+   answer: a — 2n & 2n+1  
+   explanation: With 1-based array indexing the children of node n sit at 2n and 2n+1, and the parent at n/2.
 
 15. **In which tree structure left to right subtree height differs not more than 1?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
    a) Binary tree  
@@ -399,11 +585,17 @@
    c) AVL tree  
    d) Binary Heap
 
+   answer: c — AVL tree  
+   explanation: An AVL tree keeps the balance factor of every node within -1 to +1 and rotates whenever an insertion or deletion breaks that.
+
 16. **Maximum how many nodes can be placed in a binary Tree of N levels?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 155 (ET: DU)]*  
    a) 2^N  
    b) 2^N - 1  
    c) 2^{N-1} - 1  
    d) N^2
+
+   answer: b — 2^N - 1  
+   explanation: Level i holds at most 2^(i-1) nodes, and summing over N levels gives 2^N - 1.
 
 17. **Max-Heap data structure এর সবচেয়ে বড় নম্বরটি কোথায় থাকে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) Leaf  
@@ -411,11 +603,17 @@
    C) Root  
    D) Outside
 
+   answer: C — Root  
+   explanation: In a max-heap every parent is at least as large as its children, so the largest value ends up at the root.
+
 18. **Complete Binary tree যার height n, তার মধ্যে node কতটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
    A) n  
    B) 2^n  
    C) 2^{n-1}  
    D) 2^{n+1}-1
+
+   answer: D — 2^{n+1}-1  
+   explanation: A tree of height n has n+1 levels, and a full tree holds 1+2+4+...+2ⁿ = 2^(n+1) - 1 nodes.
 
 19. **Binary Search Tree-এর Time complexity কত?** *[BPSC Assistant Network Engineer 2019 compact it 196 (ET: N/A)]*  
    A) O(n)  
@@ -423,11 +621,17 @@
    C) O(\log n)  
    D) O(n^2)
 
+   answer: C — O(log n)  
+   explanation: Search, insert and delete each follow one root-to-leaf path, which is O(log n) in a balanced BST.
+
 20. **Which of the following is false about a binary search tree?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) The left child is always lesser than its parent  
    B) The right child is always greater than its parent  
    C) The left and right subtrees should also be binary search trees  
    D) In order sequence gives decreasing order of elements
+
+   answer: D — In order sequence gives decreasing order of elements  
+   explanation: In-order traversal of a BST gives increasing order, not decreasing, so this statement is false.
 
 ## Data Structures & Algorithms (12)
 1. **When sorting an array using randomized quicksort (pivot chosen randomly), what are the average-case and worst-case time complexities? [ যখন একটি অ্যারে randomized quicksort ব্যবহার করে sort করা হয় (pivot র‍্যান্ডমভাবে নির্বাচন করা হয়), তখন এর average-case এবং worst-case time complexity কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*  
@@ -436,11 +640,17 @@
    (c) O(n), O(n \\log n)  
    (d) O(n^2), O(n^2)
 
+   answer: b — O(n log n), O(n²)  
+   explanation: A random pivot makes balanced splits likely, giving O(n log n) on average, but an unlucky run of extreme pivots still degrades to O(n²).
+
 2. **Which of the following is not a linear data structure? [ নিচের কোনটি linear data structure নয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
    (a) Queue  
    (b) Stack  
    (c) Tree  
    (d) Linked List
+
+   answer: c — Tree  
+   explanation: A tree branches into children rather than following one sequence, so it is non-linear.
 
 3. **Which OS concept allows multiple processes to run simultaneously? [ কোন OS concept একাধিক process একসাথে চলার অনুমতি দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
    (a) Multithreading  
@@ -448,21 +658,42 @@
    (c) Multilevel Queue  
    (d) Time slicing
 
+   answer: b — Multiprocessing  
+   explanation: Multiprocessing uses more than one CPU or core so processes genuinely run at the same instant, rather than merely interleaving.
+
 4. **Which data structure follows FIFO (First In First Out) principle? [ কোন ডেটা স্ট্রাকচার FIFO (First In First Out) নীতি মেনে চলে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
    (A) Stack  
    (B) Queue  
    (C) Tree  
    (D) Graph
 
+   answer: B — Queue  
+   explanation: A queue removes from the front in the same order items were added at the rear.
+
 5. **How can you multiply two square 16\*16 matrices on a computer processor that can only handle 8\*8 matrix multiplications? Write an algorithm for this problem?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 380]]*
+
+   answer: Split each 16×16 matrix into four 8×8 blocks and use block multiplication  
+   explanation: With A = [[A11,A12],[A21,A22]] and B likewise, C11 = A11B11 + A12B21, C12 = A11B12 + A12B22, C21 = A21B11 + A22B21, C22 = A21B12 + A22B22 — eight 8×8 multiplications and four 8×8 additions.
 
 6. **How can a binary tree be represented using an array, and how are the positions of the left and right children determined based on the index of the parent node?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
 
+   answer: Store the tree level by level in the array; for a parent at index i (1-based), left child = 2i, right child = 2i+1 and parent = i/2  
+   explanation: With 0-based indexing the formulas become 2i+1 and 2i+2, and the parent is (i-1)/2; the scheme suits complete trees such as heaps because no space is wasted.
+
 7. **a) একটি Stack এ 1, 2, 2, 3, 3, 3 push করা হলো। এরপর পর পর দুইবার pop করা হলো। এর পর আবারো pop করা হলে কোন সংখ্যা বের হবে।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+
+   answer: 3  
+   explanation: The stack holds 1,2,2,3,3,3 with the last 3 on top; two pops remove two 3s and the third pop returns the remaining 3.
 
 8. **b) মনে কর একটি Sorted array রয়েছে। সেখান থেকে একটি সংখ্যা খুঁজে বের করতে হবে যা minimum সময় নিবে তখন তুমি কোন সার্চিং Algorithm ব্যবহার করবে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
 
+   answer: Binary search  
+   explanation: On sorted data binary search halves the range at every step, finding the value in O(log n) instead of the O(n) of a linear scan.
+
 9. **BIDS published many Monographs every year. Now write an algorithm to sort them.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 485]]*
+
+   answer: Use merge sort on the monograph records, keyed on the chosen field (title, author or year)  
+   explanation: Read the records into an array, split recursively until single elements remain, then merge sorted halves back together — guaranteed O(n log n) and stable, so equal keys keep their original order.
 
 10. **The minimum number of stacks needed to implement a queue is—[ একটি কিউ (Queue) ইমপ্লিমেন্ট করার জন্য সর্বনিম্ন কয়টি স্ট্যাক (Stack) প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) 1  
@@ -470,11 +701,17 @@
    (c) 3  
    (d) 4
 
+   answer: b — 2  
+   explanation: Two stacks are enough: push onto the first, and when removing, pour it into the second so the order reverses into FIFO.
+
 11. **Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be—[ ১১টি নোড বিশিষ্ট একটি বাইনারি ট্রিতে প্রতিটি নোডের হয় ০ অথবা ২টি চাইল্ড আছে। এই ট্রির সর্বোচ্চ উচ্চতা (Height) কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
    (a) 2  
    (b) 3  
    (c) 4  
    (d) 5
+
+   answer: d — 5  
+   explanation: 11 nodes in a full binary tree means 5 internal nodes, and putting one internal node per level stretches the height to 5.
 
 12. **The following method, which is intended to find the maximum element of the integer array, is incorrect.[ অ্যারোর সর্বোচ্চ মান খুঁজে বের করার নিচের মেথডটি ভুল কেন? ] public int max(int[]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 511-512]]*  
    a) \{
@@ -498,6 +735,9 @@
    (c) It fails whenever the array contains only negative numbers
    (d) It fails whenever the first element of the array is the largest
 
+   answer: c — It fails whenever the array contains only negative numbers  
+   explanation: max starts at 0, so if every element is below 0 no element ever beats it and the method wrongly returns 0; it should start from a[0].
+
 ## Linked List (10)
 
 1. **What is the worst case time complexity of inserting n elements into an empty linked list, if the linked list needs to be maintained in sorted order?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*  
@@ -506,11 +746,17 @@
    (c) \Theta(n^2)  
    (d) \Theta(1)
 
+   answer: c — Θ(n²)  
+   explanation: Each of the n insertions may have to walk past every element already stored, giving 1+2+...+n comparisons.
+
 2. **In the worst case, the number of comparisons needed to search a singly linked list oflength n for a given element is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) \log(2*n)  
    (b) \frac{n}{2}  
    (c) n  
    (d) \log(2*n)-1
+
+   answer: c — n  
+   explanation: A linked list can only be searched sequentially, so in the worst case all n nodes are compared.
 
 3. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node Q from the list?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*  
    (A) O(n)  
@@ -518,11 +764,17 @@
    (C) O(logn)  
    (D) O(1)
 
+   answer: D — O(1)  
+   explanation: Copy the next node's data into x and unlink that next node, which takes constant time (this trick fails only for the last node).
+
 4. **In a doubly linked list, the number of pointers affected for an insertion operation will be-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*  
    (A) 5  
    (B) 0  
    (C) 1  
    (D) None of these
+
+   answer: D — None of these  
+   explanation: Inserting in the middle of a doubly linked list changes 4 pointers — the new node's prev and next, plus one link in each neighbour — and 4 is not offered.
 
 5. **The time required to search an element in a linked list of length n is-** *[Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*  
    (A) O (log n)  
@@ -530,11 +782,17 @@
    (C) O (1)  
    (D) O (n^2)
 
+   answer: B — O (n)  
+   explanation: There is no random access in a linked list, so searching means traversing up to n nodes.
+
 6. **The minimum number of fields with each node of doubly linked list is** *[Combined Bank Assistant Programmer 09.02.2024 compact it 21 (ET: BIBM)]*  
    (A) 1  
    (B) 2  
    (C) 3  
    (D) 4
+
+   answer: C — 3  
+   explanation: A doubly linked node holds the data, a pointer to the previous node and a pointer to the next node.
 
 7. **What does following function do for a given Linked List with first node as head?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
    ```c
@@ -550,11 +808,17 @@
    c. Prints alternate nodes of Linked List  
    d. Prints alternate nodes in reverse order
 
+   answer: b — Prints all nodes of linked list in reverse order  
+   explanation: The function recurses to the end of the list first and prints on the way back, so the last node is printed first.
+
 8. **Suppose you want to insert n elements into an empty linked list while maintaining the sorted order. What is the worst-case time complexity?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*  
    a. \theta(n)  
    b. \theta(n\log n)  
    c. \theta(1)  
    d. \theta(n^2)
+
+   answer: d — θ(n²)  
+   explanation: Keeping the list sorted means each insertion may scan the whole list built so far, which sums to O(n²).
 
 9. **Link list can be implement using?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
    A) Array  
@@ -562,11 +826,17 @@
    C) Both A & B  
    D) None of these
 
+   answer: C — Both A & B  
+   explanation: A linked list is normally built from pointers and dynamic nodes, but it can also be simulated in an array using indices as links.
+
 10. **What is the time complexity to count the number of elements in the linked list?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) O(1)  
    B) O(n)  
    C) O(\log n)  
    D) O(n \log n)
+
+   answer: B — O(n)  
+   explanation: There is no stored size, so counting requires walking every node once.
 
 ## Priority Queue & Heap (3)
 
@@ -576,17 +846,26 @@
    (c) Stack  
    (d) Table
 
+   answer: a — Heap Tree  
+   explanation: A binary heap keeps the highest-priority element at the root and supports insert and extract in O(log n).
+
 2. **What is the best way to implement priority queue?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*  
    (a) Array  
    (b) Linked List  
    (c) Heap  
    (d) Stack
 
+   answer: c — Heap  
+   explanation: A heap gives O(log n) insertion and O(log n) removal of the top element, beating the O(n) of an array or list.
+
 3. **In the priority queue, insertion and deletion take place at –** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*  
    a) Front and rear end  
    b) Only at the front end  
    c) Only at the rear end  
    d) Any position
+
+   answer: a — Front and rear end  
+   explanation: New elements enter at the rear and are positioned by priority, while removal always takes the highest-priority element from the front.
 
 ## Hashing & Hash Tables (2)
 
@@ -596,8 +875,14 @@
    (c) 80  
    (d) 8000
 
+   answer: c — 80  
+   explanation: Load factor is elements divided by slots, so 2000 ÷ 25 = 80.
+
 2. **Which of the following symbol table implementation is best suited if access time is to be minimum?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
    (a) Linear list  
    (b) Linked list  
    (c) Hash table  
    (d) Self-organizing list
+
+   answer: c — Hash table  
+   explanation: A hash function computes the slot directly, giving average O(1) access, far faster than scanning a list.

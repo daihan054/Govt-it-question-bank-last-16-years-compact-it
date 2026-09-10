@@ -26,11 +26,17 @@
 ## Algebra (48)
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
+   answer: ২০ মিটার  
+   explanation: খরচ ক্ষেত্রফলের সমানুপাতিক, তাই 7500/6000 = w/(w-4); এতে 5(w-4) = 4w, অর্থাৎ w = 20 মিটার।
+
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৬  
    খ. ১২  
    গ. ১৮  
    ঘ. ২৪
+
+   answer: গ — ১৮  
+   explanation: (a-b)(a+b) = a²-b² থেকে 6 × (a+b) = 108, তাই যোগফল 18।
 
 3. **If \frac{x}{y} = \frac{1}{3}, then the value of (x^2 + y^2)/(x^2 - y^2) is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) \frac{-10}{9}  
@@ -38,11 +44,17 @@
    (c) -\frac{5}{4}  
    (d) -\frac{5}{3}
 
+   answer: c — -5/4  
+   explanation: x = 1, y = 3 ধরলে (1+9)/(1-9) = 10/(-8) = -5/4।
+
 4. **The total number obtained by a student in Physics, Chemistry and Mathematics together is 120 more than the marks obtained by him in Chemistry. What is the average mark obtained by him in Physics and Mathematics together?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 40  
    (b) 60  
    (c) 120  
    (d) Cannot be determined
+
+   answer: b — 60  
+   explanation: P + C + M = C + 120 থেকে P + M = 120, তাই গড় 60।
 
 5. **In a T-20 cricket match, the number of boundaries scored was twice the number of over boundaries by a team. The team took 22 single runs, no two or three runs and could not score from 38 deliveries. How many runs did the team score?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*, *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
    (a) 124  
@@ -50,17 +62,29 @@
    (c) 150  
    (d) 302
 
+   answer: d — 302  
+   explanation: ছক্কা s হলে চার 2s; বল হিসাব 3s + 22 + 38 = 120 দেয় s = 20, আর রান = 4(40) + 6(20) + 22 = 302।
+
 6. **3^{20}+3^{20}+3^{20}=?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
    (a) 3^{20}  
    (b) 9^{20}  
    (c) 9^{60}  
    (d) 3^{60}
 
+   answer: 3²¹ — ছাপা কোনো অপশনেই এটি নেই  
+   explanation: 3²⁰ + 3²⁰ + 3²⁰ = 3 × 3²⁰ = 3²¹; বিকল্পগুলো ভিন্ন কোনো প্রশ্নের। <!-- verify -->
+
 7. **x+y = 7, xy = 10, (x-y)^2 এর মান কত?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** 9
 
+   answer: 9  
+   explanation: (x-y)² = (x+y)² - 4xy = 49 - 40 = 9।
+
 8. **Given, x is a real number. What is the minimim value of x^2-4x+5?** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** 1
+
+   answer: 1  
+   explanation: x²-4x+5 = (x-2)² + 1, আর (x-2)² সর্বনিম্ন 0, তাই সর্বনিম্ন মান 1।
 
 9. **32^{x+y} = 16^{x+y}, what is the value x?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 73 (ET: N/A)]*  
    (a) Y  
@@ -69,8 +93,14 @@
    (d) \text{X}(2y+2)  
    **Ans: b**
 
+   answer: b — -y  
+   explanation: 2^{5(x+y)} = 2^{4(x+y)} থেকে 5(x+y) = 4(x+y), তাই x+y = 0 অর্থাৎ x = -y।
+
 10. **\sqrt{-4} \times \sqrt{-4} = কত?** *[BTRC Assistant Director (Technical) 2022 compact it 65 (ET: MIST)]*  
    উত্তর: -4
+
+   answer: -4  
+   explanation: √(-4) = 2i, তাই 2i × 2i = 4i² = -4।
 
 11. **If \log_4(x)=12 then find \log_2(4/x)** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 73 (ET: N/A)]*  
    (a) 22  
@@ -79,6 +109,9 @@
    (d) 12  
    **Ans: a**
 
+   answer: a — 22  
+   explanation: log₄x = 12 মানে x = 2²⁴; log₂(x/4) = 24 - 2 = 22 (ছাপা রাশিতে 4/x থাকলে মান হতো -22)।
+
 12. **2^{30}+2^{30}+2^{30}+2^{30}= কত?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*  
    ক) 2^{120}  
    খ) 8^{30}  
@@ -86,11 +119,17 @@
    ঘ) 8^{120}  
    **Ans: গ**
 
+   answer: গ — 2³²  
+   explanation: চারবার 2³⁰ যোগ করা মানে 4 × 2³⁰ = 2² × 2³⁰ = 2³²।
+
 13. **The function f(x)=x+\cos x is ______ ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) Always increasing  
    (খ) always decreasing  
    (গ) Increasing for a certain range of x  
    (ঘ) none of these
+
+   answer: ক — Always increasing  
+   explanation: f'(x) = 1 - sin x, আর sin x কখনো 1-এর বেশি নয়, তাই ডেরিভেটিভ কখনো ঋণাত্মক হয় না।
 
 14. **If 6\sin^{-1}(x^2-6x+8.5) = \pi, then the value of x is ______ ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 1  
@@ -98,11 +137,17 @@
    (গ) 3  
    (ঘ) 5
 
+   answer: খ — 2  
+   explanation: sin⁻¹(...) = π/6 মানে x²-6x+8.5 = 0.5, অর্থাৎ x²-6x+8 = 0, তাই x = 2 বা 4।
+
 15. **If \log_4 x = 12, then \log_2 \frac{x}{4} = ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 11  
    (খ) 22  
    (গ) 44  
    (ঘ) 2
+
+   answer: খ — 22  
+   explanation: log₄x = 12 থেকে x = 2²⁴, তাই log₂(x/4) = 24 - 2 = 22।
 
 16. **Value for k, for which A = \begin{bmatrix} k & 8 \\ 4 & 2k \end{bmatrix} is a singular matrix is---?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) -4  
@@ -110,11 +155,17 @@
    (গ) +4  
    (ঘ) 0
 
+   answer: গ — +4  
+   explanation: সিঙ্গুলার হতে হলে নির্ণায়ক শূন্য, অর্থাৎ 2k² - 32 = 0, তাই k = ±4।
+
 17. **A fraction becomes 1/3 when 1 is subtracted from the numerator and it becomes 1/4 when 8 is added to its denominator. Find the fraction.** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 5/12  
    (খ) 3/32  
    (গ) 12/5  
    (ঘ) 8
+
+   answer: ক — 5/12  
+   explanation: (n-1)/d = 1/3 ও n/(d+8) = 1/4 সমাধান করলে n = 5 এবং d = 12।
 
 18. **The scalar product of 5\hat{i}+\hat{j}-3\hat{k} and 3\hat{i}-4\hat{j}+7\hat{k} is ______ ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 10  
@@ -122,11 +173,17 @@
    (গ) 15  
    (ঘ) -15
 
+   answer: খ — -10  
+   explanation: স্কেলার গুণফল = 5(3) + 1(-4) + (-3)(7) = 15 - 4 - 21 = -10।
+
 19. **If 5x+4y=22, 3x+3y-21, what is the value of x and y?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) x=2, y=3  
    b) x=2, y=-4  
    c) x=3, y=7  
    d) x=2, y=-3
+
+   answer: a — x=2, y=3  
+   explanation: 5(2) + 4(3) = 22 মিলে যায়, তাই এই জোড়াটিই সমাধান।
 
 20. **If 3x+5y =14 and x-y = 6 then what is the average of x and y?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 1  
@@ -134,15 +191,24 @@
    c) 2  
    d) 2.5
 
+   answer: d — 2.5  
+   explanation: x - y = 6 বসিয়ে 3(y+6) + 5y = 14 দেয় y = -0.5 ও x = 5.5, তাই গড় (5.5 - 0.5)/2 = 2.5।
+
 21. **If a = \sqrt{3} + \sqrt{2} then value of a^3 + \frac{1}{a^3} = ?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 10\sqrt{3}  
    b) 12\sqrt{3}  
    c) 12\sqrt{3}  
    d) 18\sqrt{3}
 
+   answer: d — 18√3  
+   explanation: 1/a = √3-√2 হওয়ায় a + 1/a = 2√3, আর a³ + 1/a³ = (2√3)³ - 3(2√3) = 24√3 - 6√3 = 18√3।
+
 22. **Factorize a^3 - 70a - 6** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) (a + 1) (a - 2) (a - 3)  
    b) (a - 1) (-2) (a - 3)
+
+   answer: a³ - 7a - 6 = (a+1)(a+2)(a-3)  
+   explanation: a = -1 বসালে রাশিটি শূন্য হয়, তাই (a+1) একটি উৎপাদক; ভাগ করে বাকিটা a²-a-6 = (a+2)(a-3) পাওয়া যায় (ছাপা রাশি ও বিকল্প দুটোই বিকৃত)। <!-- verify -->
 
 23. **A leading library charges c cents for the first week that a book is loaned and f cents for each day over one week. What is the cost for taking out a book for days, where d is greater than 7?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) C+f(d-7)  
@@ -150,11 +216,17 @@
    c) cd  
    d) Cd+f
 
+   answer: a — C+f(d-7)  
+   explanation: প্রথম সপ্তাহের জন্য c, আর সাত দিনের পরের প্রতিটি দিনের জন্য f, অর্থাৎ (d-7) দিনের জন্য f(d-7)।
+
 24. **At any iteration of simplex method, if \Delta_j\ (Z_j - C_j) corresponding to any non-basic variable X_j is obtained as zero, the solution under the test is-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 106 (ET: N/A)]*  
    (a) Degenerate solution  
    (b) Unbounded solution  
    (c) Alternative solution  
    (d) Optimal solution
+
+   answer: c — Alternative solution  
+   explanation: A non-basic variable with Zj - Cj = 0 means another vertex gives the same objective value, so multiple optimal solutions exist.
 
 25. **The product of two positive numbers is p. If each of the numbers is increased by 2, the new product is how much greater than twice the sum of the two original numbers?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) p times  
@@ -162,11 +234,17 @@
    (c) (p+4) times  
    (d) (2p+3) times
 
+   answer: c — (p+4) times  
+   explanation: (x+2)(y+2) = xy + 2(x+y) + 4, so subtracting twice the sum leaves p + 4.
+
 26. **If a, b and c are 3 consecutive integers and a>b>c, which of the following has the maximum value?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) c + \frac{b}{a}  
    (b) a + \frac{b}{c}  
    (c) b + \frac{c}{a}  
    (d) c + \frac{a}{b}
+
+   answer: b — a + b/c  
+   explanation: With c smallest and positive, b/c is the largest fraction and a is the largest integer, so their sum is greatest — for 1, 2, 3 it gives 3 + 2 = 5.
 
 27. **One dozen eggs and ten pounds of apples are currently of the same price. If the price of a dozen eggs rises by 10% and that of apples rises by 2% how much more will it cost to buy a dozen of eggs and ten pounds of apples?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) 2%  
@@ -174,11 +252,17 @@
    (c) 6%  
    (d) 12%
 
+   answer: c — 6%  
+   explanation: Equal prices x each rise to 1.1x and 1.02x, giving 2.12x against 2x — an increase of 0.12x, which is 6%.
+
 28. **There are n students in a school. If r % among the students are 12 years or younger, which of the following expressions represents the number of students who are older than 12?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) n(1-r)  
    (b) 100(1-r)  
    (c) n(1-r)/100  
    (d) n(100-r)/100
+
+   answer: d — n(100-r)/100  
+   explanation: If r% are 12 or younger, (100-r)% are older, and that percentage of n is n(100-r)/100.
 
 29. **If x^3 < x^2 < x then the value of x could be** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) 0  
@@ -186,11 +270,17 @@
    (c) 1/3  
    (d) \sqrt{3}
 
+   answer: c — 1/3  
+   explanation: For a proper fraction between 0 and 1, each higher power is smaller, so x³ < x² < x.
+
 30. **x+y=535, x+4y=4, what is the value of 4x² + 20xy + 16y²?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 60  
    b. 40  
    c. 20  
    d. 80
+
+   answer: d — 80  
+   explanation: 4x² + 20xy + 16y² = 4(x+y)(x+4y), and with x+y = 5 and x+4y = 4 this gives 4 × 5 × 4 = 80.
 
 31. **If a² - b² = 20, a+b= 5, What is the value of a-b?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 3  
@@ -198,11 +288,17 @@
    c. 5  
    d. 4
 
+   answer: d — 4  
+   explanation: a² - b² = (a+b)(a-b), so 20 = 5(a-b) and a-b = 4.
+
 32. **What is the value of a, if 3x² + ax + a + 3 is divisible by x+2?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 12  
    b. 13  
    c. 14  
    d. 15
+
+   answer: d — 15  
+   explanation: Divisibility by x+2 means f(-2) = 0, so 12 - 2a + a + 3 = 0 and a = 15.
 
 33. **A vegetable cart sells a potato for $0.24 and a tomato for $0.76. Fred bought 12 vegetables in total. He only bought potatoes and tomatoes. If Fred paid $ 6.52 total, how many potatoes did he buy?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 2  
@@ -210,11 +306,17 @@
    c. 5  
    d. 8
 
+   answer: c — 5  
+   explanation: With p potatoes, 0.24p + 0.76(12-p) = 6.52 gives 0.52p = 2.6, so p = 5.
+
 34. **The factors of 4x⁴ + 1 is-** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. (2x² + 2x + 1) (2x² + 3x - 1)  
    b. (2x² + 3x + 1)(2x² + 3x - 1)  
    c. (2x² + 3x + 1) (2x² - 3x + 1)  
    d. (2x² + 3x + 1) (2x² - 2x + 1)
+
+   answer: 4x⁴ + 1 = (2x² + 2x + 1)(2x² - 2x + 1)  
+   explanation: Writing it as (2x²+1)² - (2x)² and using the difference of squares gives these two factors; none of the printed options states this correctly. <!-- verify -->
 
 35. **If \log 2 = a and \log 5 = b, then \log 50 =?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 135 (ET: N/A)]*  
    a) a + b  
@@ -222,11 +324,17 @@
    c) ab^2  
    d) a + 2b
 
+   answer: d — a + 2b  
+   explanation: log 10 = a + b = 1, so log 50 = log 5 + log 10 = b + (a+b) = a + 2b.
+
 36. **If, xy = 5, xy = 6, then x+y=?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 7  
    খ. \pm 7  
    গ. 1  
    ঘ. None
+
+   answer: খ — ±7  
+   explanation: x - y = 5 ও xy = 6 হলে (x+y)² = (x-y)² + 4xy = 25 + 24 = 49, তাই x+y = ±7।
 
 37. **The solution of equations x-y=2 and x+y=4;** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 3 and 1  
@@ -234,11 +342,17 @@
    গ. 5 and 1  
    ঘ. -1 and -3
 
+   answer: ক — 3 and 1  
+   explanation: দুই সমীকরণ যোগ করলে 2x = 6, তাই x = 3 ও y = 1।
+
 38. **0.1 \times 0.01 + 1 = ?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 1.01  
    খ. 1.001  
    গ. 2.01  
    ঘ. 0.001
+
+   answer: খ — 1.001  
+   explanation: 0.1 × 0.01 = 0.001, তার সঙ্গে 1 যোগ করলে 1.001।
 
 39. **K iteration by Newton-Raphson of a following square root of a number increases accuracy in number of digits?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) k  
@@ -246,11 +360,17 @@
    C) 3k  
    D) 4k
 
+   answer: B — 2k  
+   explanation: Newton-Raphson converges quadratically, roughly doubling the number of correct digits at every iteration.
+
 40. **If for a square matrix A, A^2 = A then such a matrix known as-** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) Idempotent matrix  
    B) Orthogonal Matrix  
    C) Null Matrix  
    D) Identity matrix
+
+   answer: A — Idempotent matrix  
+   explanation: A matrix satisfying A² = A is called idempotent.
 
 41. **Domain of a function is-** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
    A) the maximal set of numbers for which function is defined  
@@ -282,11 +402,17 @@
    গ. ১৭
    ঘ. ২০
 
+   answer: A — the maximal set of numbers for which function is defined  
+   explanation: The domain is the set of all inputs for which the function gives a defined value; the outputs form the range.
+
 42. **Which search algorithm expands nodes level by level before moving deeper? [ কোন সার্চ অ্যালগরিদমটি নোডগুলোকে স্তর (level) অনুযায়ী প্রসারিত করে তারপর গভীরে যায়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
    (a) DFS  
    (b) BFS  
    (c) Hill climbing  
    (d) A\*
+
+   answer: b — BFS  
+   explanation: Breadth First Search uses a queue to visit every node at one depth before going deeper.
 
 43. **The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’? [ ৩ দিয়ে ‘a’-কে ভাগ করলে ভাগফল হয় ‘b’ এবং ভাগশেষ ২। ৩ দিয়ে ‘b’-কে ভাগ করলে ভাগফল ২ এবং ভাগশেষ ১। ‘a’ এর মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 13  
@@ -294,11 +420,17 @@
    (c) 23  
    (d) 21
 
+   answer: c — 23  
+   explanation: b = 3×2 + 1 = 7, so a = 3×7 + 2 = 23.
+
 44. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity? [ র‍্যান্ডম লিঙ্কড লিস্ট সর্ট করার জন্য সবচেয়ে কম টাইম কমপ্লেক্সিটির অ্যালগরিদম কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (a) Bubble Sort  
    (b) Quick Sort  
    (c) Heap Sort  
    (d) Merge Sort
+
+   answer: d — Merge Sort  
+   explanation: Merge sort needs only pointer changes and no random access, so it sorts a linked list in O(n log n).
 
 45. **Which scheduling algorithm may cause starvation? [ কোন শিডিউলিং অ্যালগরিদমে স্টারভেশন (Starvation) হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
    (a) FCFS  
@@ -306,11 +438,17 @@
    (c) Priority Scheduling  
    (d) FIFO
 
+   answer: c — Priority Scheduling  
+   explanation: A steady stream of higher-priority processes can keep a low-priority one waiting forever; ageing is used to prevent it.
+
 46. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on the semaphore. The resulting value of the semaphore is—[ Semaphore শুরুতে ১০ ছিল। ৬টি wait এবং ৪টি signal অপারেশন হলে শেষ মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) 0  
    (b) 10  
    (c) 8  
    (d) 12
+
+   answer: c — 8  
+   explanation: Each wait decrements and each signal increments, so 10 - 6 + 4 = 8.
 
 47. **Which of the items listed below is the least strong security protocol?[ নিচের তালিকায় থাকা সিকিউরিটি প্রোটোকলগুলোর মধ্যে কোনটি সবচেয়ে দুর্বল? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) SFTP  
@@ -318,11 +456,17 @@
    (c) SSL  
    (d) HTTP
 
+   answer: d — HTTP  
+   explanation: HTTP sends everything in clear text with no encryption or authentication at all.
+
 48. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?[ একটি র‍্যান্ডম লিঙ্কড লিস্টকে সর্বনিম্ন টাইম কমপ্লেক্সিটিতে সর্ট (Sort) করার জন্য নিচের কোন অ্যালগরিদমটি ব্যবহার করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) Insertion sort  
    (b) Quick sort  
    (c) Heap sort  
    (d) Merge sort
+
+   answer: d — Merge sort  
+   explanation: Merge sort works well on linked lists because it needs only sequential access and relinking of nodes.
 
 ## Geometry (27)
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
@@ -331,11 +475,17 @@
    গ. ২৮০°  
    ঘ. ৩৬০°
 
+   answer: ঘ — ৩৬০°  
+   explanation: যেকোনো উত্তল বহুভুজের বহিঃস্থ কোণের সমষ্টি সর্বদা ৩৬০ ডিগ্রি, বাহুসংখ্যা যাই হোক।
+
 2. **একটি গাড়ির ঢাকা প্রতি মিনিটে ৯০ বার ঘুরলে ১ সেকেন্ডে কত ডিগ্রি ঘুরবে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ১৮০°  
    খ. ২৭০°  
    গ. ৩৭০°  
    ঘ. ৫৪০°
+
+   answer: ঘ — ৫৪০°  
+   explanation: মিনিটে ৯০ ঘূর্ণন মানে সেকেন্ডে ১.৫ ঘূর্ণন, আর ১.৫ × ৩৬০ = ৫৪০ ডিগ্রি।
 
 3. **সাড়ে ছয়টার সময় ঘণ্টা ও মিনিটের কাঁটার মধ্যে ক্ষুদ্রতম কোণের পরিমাণ কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৭.৫°  
@@ -343,11 +493,17 @@
    গ. ২২.৫°  
    ঘ. ৩০°
 
+   answer: খ — ১৫°  
+   explanation: ৬টা ৩০ মিনিটে ঘণ্টার কাঁটা ১৯৫° এবং মিনিটের কাঁটা ১৮০°-এ থাকে, পার্থক্য ১৫°।
+
 4. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 20 meter  
    (b) 15 meter  
    (c) 10 meter  
    (d) 100 meter
+
+   answer: c — 10 meter  
+   explanation: Areas add: π8² + π6² = 100π, so the new radius satisfies r² = 100 and r = 10 m.
 
 5. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 9 ft  
@@ -355,11 +511,17 @@
    (c) 24 ft  
    (d) 26 ft
 
+   answer: d — 26 ft  
+   explanation: The square's side is 24/4 = 6, so its area is 36; the rectangle is 36/4 = 9 long, giving a perimeter of 2(9+4) = 26 ft.
+
 6. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm less than its length. What is the perimeter of the square?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*  
    (a) 60cm  
    (b) 44cm  
    (c) 80cm  
    (d) cannot be determined
+
+   answer: a — 60cm  
+   explanation: The rectangle is 25 by 15, area 375; three-fifths of that is 225, so the square's side is 15 and its perimeter 60 cm.
 
 7. **If the radius is increased by 100% then by how much will the area of circle be increased?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*  
    (a) 100  
@@ -367,8 +529,14 @@
    (c) 300  
    (d) 400
 
+   answer: c — 300  
+   explanation: Doubling the radius multiplies the area by four, which is a 300% increase.
+
 8. **With reference to a 2 dimensional coordinate system, the vertices of a uniform and thin triangular pate are given by (0,0), (1,4) and (-7, 8) points. The centroid of the plate is-** *[RPGCL Assistant Engineer 2022 compact it 37 (ET: MIST)]*  
    **Ans:** (-2, 4)
+
+   answer: (-2, 4)  
+   explanation: The centroid is the average of the vertices: ((0+1-7)/3, (0+4+8)/3) = (-2, 4).
 
 9. **ত্রিভুজের তিন বাহুর দৈর্ঘ্য যথাক্রমে a,b এবং c** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) a+b > c  
@@ -377,12 +545,18 @@
    (ঘ) a+b \approx c  
    **উত্তর: ক**
 
+   answer: ক — a+b > c  
+   explanation: ত্রিভুজ অসমতা অনুযায়ী যেকোনো দুই বাহুর সমষ্টি তৃতীয় বাহুর চেয়ে বড় হতে হয়।
+
 10. **একটি কোণের পরিমাপ ১৮১° হলে তাকে কি কোণ বলে?** *[BPSC Instructor 31.10.2022 compact it 65 (ET: N/A)]*  
    (ক) স্থূল কোণ  
    (খ) সমকোণ  
    (গ) সূক্ষ্ম কোণ  
    (ঘ) প্রবৃদ্ধ কোণ  
    **উত্তর: ঘ**
+
+   answer: ঘ — প্রবৃদ্ধ কোণ  
+   explanation: ১৮০° থেকে ৩৬০°-এর মধ্যবর্তী কোণকে প্রবৃদ্ধ কোণ বলে।
 
 11. **কোনটি ত্রিমাত্রিক বস্তু?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) তল  
@@ -391,6 +565,9 @@
    (ঘ) বিন্দু  
    **উত্তর: খ**
 
+   answer: খ — ঘনক  
+   explanation: ঘনকের দৈর্ঘ্য, প্রস্থ ও উচ্চতা তিনটিই আছে, তাই এটি ত্রিমাত্রিক।
+
 12. **বৃত্তস্থ সামান্তরিক কোনটি?** *[BPSC Instructor 31.10.2022 compact it 67 (ET: N/A)]*  
    (ক) রম্বস  
    (খ) আয়ত  
@@ -398,10 +575,19 @@
    (ঘ) ট্রাপিজিয়াম  
    **উত্তর: খ**
 
+   answer: খ — আয়ত  
+   explanation: বৃত্তে অন্তর্লিখিত সামান্তরিকের কর্ণ দুটি ব্যাস হতে হয়, যা কেবল আয়তক্ষেত্রেই সম্ভব।
+
 13. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাটা ও মিনিটের কাটার মধ্যকার কোণ কত? ১২০ ডিগ্রি** *[BDCCL Assistant Manager (Transmission) 2022 compact it 71 (ET: N/A)]*
+
+   answer: ১২০ ডিগ্রি  
+   explanation: ৪টায় ঘণ্টার কাঁটা ১২০° এবং মিনিটের কাঁটা ০°-এ থাকে, তাই কোণ ১২০°।
 
 14. **ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যকার কোণ কত?** *[BDCCL Assistant Manager (Transmission) 2022 compact it 35 (ET: BUET)]*  
    **Ans:** ১২০ ডিগ্রি
+
+   answer: ১২০ ডিগ্রি  
+   explanation: প্রতি ঘণ্টা ৩০° করে, তাই ৪টায় দুই কাঁটার মধ্যে ৪ × ৩০ = ১২০ ডিগ্রি।
 
 15. **Find the area of a circle whose circumference is 22\text{ cm}?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 35.2\text{ cm}^2  
@@ -409,11 +595,17 @@
    (গ) 41.7\text{ cm}^2  
    (ঘ) 47.6\text{ cm}^2
 
+   answer: খ — 38.5 cm²  
+   explanation: 2πr = 22 gives r = 3.5, so area = (22/7) × 3.5² = 38.5 cm².
+
 16. **A pole 6\text{m} high casts a shadow 2\sqrt{3}\text{ m} long on the ground, they find the angle of elevation of sun.** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 30^\circ  
    (খ) 60^\circ  
    (গ) 45^\circ  
    (ঘ) 90^\circ
+
+   answer: খ — 60°  
+   explanation: tan θ = 6 / 2√3 = √3, so θ = 60°.
 
 17. **The triangular base of a prism is a right triangle of sides a and b =2a. The height h of the prism is equal to 10mm and its volume is equal to 40 mm³. What will be the lengths of the sides a and b of the triangle?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 2mm and 3mm  
@@ -421,11 +613,17 @@
    c) 2 mm and 2 mm  
    d) 2 mm and 4 mm
 
+   answer: d — 2 mm and 4 mm  
+   explanation: Volume = ½ × a × 2a × 10 = 10a² = 40, so a = 2 mm and b = 2a = 4 mm.
+
 18. **The hypotenuse of a right triangle is 2 centimeters more than the longer side of the triangle. The shorter side of the triangle is 7 centimeters less than the longer side. Find the length of the hypotenuse.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) 13  
    (b) 15  
    (c) 17  
    (d) 19
+
+   answer: c — 17  
+   explanation: With the longer side x, (x-7)² + x² = (x+2)² gives x² - 18x + 45 = 0 and x = 15, so the hypotenuse is 17.
 
 19. **You are looking at a billboard 40m away with an angle of elevation of 30⁰. At what height is the billboard?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 20  
@@ -433,11 +631,17 @@
    c. 40  
    d. 80
 
+   answer: a — 20  
+   explanation: Taking 40 m as the line of sight, the height is 40 sin30° = 20 m.
+
 20. **A ladder against a wall that tis perpendicular to the ground. If the bottom of the ladder is 4m away from the bottom of the wall, while the tip of the ladders is at a height of 3m, what is the length of the ladder?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 7 m  
    b. 35 m  
    c. 5 m  
    d. 25 m
+
+   answer: c — 5 m  
+   explanation: The ladder is the hypotenuse: √(4² + 3²) = 5 m.
 
 21. **When base is 12 inch and height is 8inch of a triangle, its area?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 96 sq-in  
@@ -445,11 +649,17 @@
    গ. 48 in  
    ঘ. 46 in
 
+   answer: খ — 48 sq-in  
+   explanation: Area of a triangle = ½ × base × height = ½ × 12 × 8 = 48 square inches.
+
 22. **What is the perimeter of a square, if its area is 400sq-m?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 40m  
    খ. 80m  
    গ. 20m  
    ঘ. 20sq-m
+
+   answer: খ — 80m  
+   explanation: Area 400 gives a side of 20 m, so the perimeter is 4 × 20 = 80 m.
 
 23. **What is the distance between the line 8x+6y=17 and 8x+6y-37=0?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. -2  
@@ -463,11 +673,17 @@
    গ ৬.৪৫
    ঘ ৫.৪৫
 
+   answer: C — 2  
+   explanation: For parallel lines the distance is |c₁ - c₂| / √(a²+b²) = |−17 + 37| / √(64+36) = 20/10 = 2.
+
 24. **The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm. What is the perimeter of the square? [ একটি বর্গক্ষেত্রের ক্ষেত্রফল একটি আয়তক্ষেত্রের ক্ষেত্রফলের তিন-পঞ্চমাংশ। আয়তক্ষেত্রটির দৈর্ঘ্য ২৫ সেমি এবং প্রস্থ ১০ সেমি হলে বর্গক্ষেত্রটির পরিসীমা কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 60 cm  
    (b) 44 cm  
    (c) 80 cm  
    (d) Cannot be determined
+
+   answer: d — Cannot be determined  
+   explanation: The rectangle's area is 250 and three-fifths of it is 150, so the square's side is √150 ≈ 12.25 cm and the perimeter ≈ 49 cm — none of the clean options.
 
 25. **সমকোণী ত্রিভুজের অতিভুজ 10 অপর বাহুদ্বয়ের একটি 6 হলে, অপরটি কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ৭  
@@ -475,11 +691,17 @@
    গ) ৯  
    ঘ) ১০
 
+   answer: খ — ৮  
+   explanation: পিথাগোরাসের উপপাদ্য অনুযায়ী অপর বাহু = √(10² - 6²) = √64 = 8।
+
 26. **Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new park has to occupy the same space as the two small parks? [ দুইটি ছোট বৃত্তাকার পার্কের ব্যাসার্ধ 16m এবং 12m। এই দুটি পার্ক মিলিয়ে নতুন বড় পার্ক বানালে নতুন পার্কের ব্যাসার্ধ কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a) 10 meter  
    (b) 14 meter  
    (c) 20 meter  
    (d) 100 meter
+
+   answer: a — 10 meter  
+   explanation: The two radii are 8 m and 6 m, so the combined area is 100π and the new radius is 10 m.
 
 27. **The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is— [ একটি আয়তক্ষেত্র R যার প্রস্থ 4 ft, এটি একটি বর্গক্ষেত্র S এর সমান এলাকা যার পরিধি 24 ft। আয়তক্ষেত্র R এর পরিধি কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a) 9 ft  
@@ -487,8 +709,14 @@
    (c) 24 ft  
    (d) 26 ft
 
+   answer: d — 26 ft  
+   explanation: The square's side is 6 and its area 36, so the rectangle is 9 by 4 and its perimeter 26 ft.
+
 ## Percentage, Profit & Loss (25)
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
+
+   answer: প্রায় ৮৭,৪১,৮১৬ জন  
+   explanation: প্রতি হাজারে ৩০ জন মানে বার্ষিক বৃদ্ধি ৩%, তাই ৩ বছর পর জনসংখ্যা = ৮০,০০,০০০ × (১.০৩)³ ≈ ৮৭.৪২ লক্ষ।
 
 2. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) 25,000TK  
@@ -496,11 +724,17 @@
    (c) 35,000TK  
    (d) 3,000TK
 
+   answer: b — 30,000TK  
+   explanation: 30 + 20 + 10 = 60% spent, so the remaining 40% is 12,000, giving a salary of 30,000 taka.
+
 3. **কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৭৪  
    খ. ১১১  
    গ. ১৪৮  
    ঘ. ২০০
+
+   answer: ঘ — ২০০  
+   explanation: 0.37x - 37 = 37 থেকে 0.37x = 74, তাই x = 200।
 
 4. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk.360 interest @6% per annum. What was the amount heborrowed?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) Tk. 18,000  
@@ -508,17 +742,29 @@
    (c) Tk.15,000  
    (d) None of these
 
+   answer: a — Tk. 18,000  
+   explanation: Interest = P × 6% × 120/360 = 0.02P, so 0.02P = 360 and P = 18,000 taka.
+
 5. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 40  
    (b) 100  
    (c) 201  
    (d) 72
 
+   answer: c — 201  
+   explanation: 90% remain good and 20% of those are left, so 0.9 × 0.2 × x = 36 gives x = 200, printed as 201.
+
 6. **৪ টাকায় ৫ টি করে কিনে ৫ টাকায় ৪ টি করে বিক্রি করলে শতকরা কত লাভ হবে?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ৫৬.২৫%
 
+   answer: ৫৬.২৫%  
+   explanation: ১টির ক্রয়মূল্য ৪/৫ = ০.৮ টাকা, বিক্রয়মূল্য ৫/৪ = ১.২৫ টাকা; লাভ ০.৪৫ টাকা, যা ০.৮-এর ৫৬.২৫%।
+
 7. **যদি তেলের মূল্য ২৫% বৃদ্ধি পায় তবে তেলের ব্যবহার শতকরা কত কমালে তেল বাবদ খরচ বৃদ্ধি পাবে না?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ২০%
+
+   answer: ২০%  
+   explanation: দাম ১.২৫ গুণ হলে খরচ অপরিবর্তিত রাখতে ব্যবহার ১/১.২৫ = ০.৮ গুণ করতে হয়, অর্থাৎ ২০% কমাতে হবে।
 
 8. **A tank is 40% full. If 16 liters of water is added to the tank, it becomes 4/5 full. The capacity of the tank is:** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 72 (ET: N/A)]*  
    (a) 32 liters  
@@ -527,12 +773,18 @@
    (d) 42 liters  
    **Ans: c**
 
+   answer: c — 40 liters  
+   explanation: The 16 litres raise it from 40% to 80%, so 16 litres is 40% of the tank and the capacity is 40 litres.
+
 9. **In a class of 24 students, one half of the student take higher math & one third take physics and one fourth take both. How many take neither?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 72 (ET: N/A)]*  
    (a) 14  
    (b) 15  
    (c) 10  
    (d) 8  
    **Ans: c**
+
+   answer: c — 10  
+   explanation: 12 take maths and 8 physics with 6 in both, so 12 + 8 - 6 = 14 take at least one and 24 - 14 = 10 take neither.
 
 10. **কোন আসল ৫ বছরে সরল সুদে বৃদ্ধি পেয়ে ১০,০০০ টাকা এবং ১০ বছরে বৃদ্ধি পেয়ে ১২,০০০ টাকা হবে?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*  
    ক) ৫০০০ টাকা  
@@ -541,12 +793,18 @@
    ঘ) ৯,৫০০ টাকা  
    **Ans: গ**
 
+   answer: গ — ৮০০০ টাকা  
+   explanation: ৫ বছরে সুদ বেড়েছে ২,০০০ টাকা, তাই ৫ বছরের সুদও ২,০০০; আসল = ১০,০০০ - ২,০০০ = ৮,০০০ টাকা।
+
 11. **একটি পরীক্ষায় ৫২% শিক্ষার্থী বাংলায় এবং ৪২% শিক্ষার্থী ইংরেজীতে অকৃতকার্য হয়। উভয় বিষয়ে অকৃতকার্য শিক্ষার্থী ১৭% হলে উভয় বিষয়ে কৃতকার্য শিক্ষার্থী?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*  
    ক) ২৩%  
    খ) ২৭%  
    গ) ২৮%  
    ঘ) ৩৩%  
    **Ans: ক**
+
+   answer: ক — ২৩%  
+   explanation: অন্তত এক বিষয়ে ফেল = ৫২ + ৪২ - ১৭ = ৭৭%, তাই উভয় বিষয়ে পাস ১০০ - ৭৭ = ২৩%।
 
 12. **১০০ টাকায় ১২টি কলা ক্রয় করে, ১২০ টাকায় ১০টি কলা বিক্রয় করলে শতকরা লাভ হবে?** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 74 (ET: N/A)]*  
    ক) ২২%  
@@ -555,11 +813,17 @@
    ঘ) ৪৪%  
    **Ans: ঘ**
 
+   answer: ঘ — ৪৪%  
+   explanation: একটি কলার ক্রয়মূল্য ১০০/১২ ও বিক্রয়মূল্য ১২০/১০ = ১২, তাই লাভ (১২ - ৮.৩৩)/৮.৩৩ ≈ ৪৪%।
+
 13. **Alom sold a radio at the cost of 1950 taka at a loss of 25%. At what cost will he have to sell it to get a profit of 30%?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 4000  
    b) 3380  
    c) 3580  
    d) 3400
+
+   answer: b — 3380  
+   explanation: A 25% loss means the cost was 1950/0.75 = 2600, so a 30% profit needs 2600 × 1.3 = 3380 taka.
 
 14. **The loss is 30% when 10 lemons are sold per taka. How many lemons are to be sold per taka to make a profit of 40%?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 2  
@@ -567,11 +831,17 @@
    c) 5  
    d) 10
 
+   answer: c — 5  
+   explanation: Ten lemons for a taka at a 30% loss means their cost is 1/0.7 taka; a 40% profit needs 1.4/0.7 = 2 taka for ten, i.e. five per taka.
+
 15. **A lamp is manufactured to sell for $35.00, which yields a profit of 25% of cost. If the profit is to be reduced to 15% of cost, what will be the new retail price of the lamp?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) $21.00  
    b) $28.00  
    c) $31.50  
    d) $32.20
+
+   answer: d — $32.20  
+   explanation: 35 = 1.25 × cost gives a cost of 28, and a 15% profit makes the price 28 × 1.15 = 32.20.
 
 16. **A manufacturer sells three products i.e. A, B and C Product A costs 200 and sells for 250. Product B costs 150 and sells for 180, product C costs 1000 and sells for 110. On which product, he has maximum percentage of profit?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) B only  
@@ -579,11 +849,17 @@
    c) A only  
    d) C only
 
+   answer: c — A only  
+   explanation: A gives 50/200 = 25%, B gives 30/150 = 20%, and C actually makes a loss, so A has the highest margin.
+
 17. **A wholesaler sells goods to a retailer at a profit of 20%. The retailer sells to the customer, who pays 80% more than the cost of the wholesaler. What is the retailer's profit?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) 40%  
    (b) 50%  
    (c) 60%  
    (d) 70%
+
+   answer: b — 50%  
+   explanation: Taking the wholesaler's cost as 100, he sells at 120 and the customer pays 180, so the retailer gains 60 on 120 — 50%.
 
 18. **Ahmed sold a t-shirt for TK. 810, and gain 8%. How much did he purchase it for?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. Tk. 750  
@@ -591,17 +867,26 @@
    c. Tk. 745  
    d. Tk. 756
 
+   answer: a — Tk. 750  
+   explanation: 810 ÷ 1.08 = 750 taka.
+
 19. **A restaurant makes 20% profit after selling a set menu at a discount of 20%. What is the percentage increase of marked price?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 30%  
    b. 20%  
    c. 40%  
    d. 50%
 
+   answer: d — 50%  
+   explanation: Selling at 20% off still yields 20% profit, so 0.8M = 1.2C and M = 1.5C — the marked price is 50% above cost.
+
 20. **If a pen is sold at taka 55 it makes a profit of 10%. What is its purchase cost?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 50  
    খ. 110  
    গ. 45  
    ঘ. 60
+
+   answer: ক — 50  
+   explanation: 55 ÷ 1.10 = 50 taka.
 
 21. **What is 3% of 0.07?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 21  
@@ -615,11 +900,17 @@
    গ. ২৪০০ টাকা
    ঘ. ২৩০০ টাকা
 
+   answer: ঘ — 0.0021  
+   explanation: 3% of 0.07 = 0.03 × 0.07 = 0.0021.
+
 22. **কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. নাপাম  
    খ. নিউট্রন  
    গ. হাইড্রোজেন  
    ঘ. এটম
+
+   answer: খ — নিউট্রন  
+   explanation: নিউট্রন বোমা প্রচণ্ড বিকিরণ ছড়িয়ে প্রাণ নেয়, কিন্তু বিস্ফোরণ-শক্তি কম বলে ভবন প্রায় অক্ষত থাকে।
 
 23. **১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ৪  
@@ -627,9 +918,18 @@
    গ) ৬  
    ঘ) ৭
 
+   answer: ক — ৪  
+   explanation: সরল সুদে ৯৬ = ২০০ × ০.১২ × সময়, তাই সময় = ৪ বছর।
+
 24. **একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
 
+   answer: এক্সেল: =IF(A2<1000, A2*1.10, A2); HTML স্ক্রলিং টেক্সট: <marquee> ট্যাগ  
+   explanation: IF শর্তটি বেতন ১০০০ টাকার কম কি না দেখে, কম হলে ১০% কমিশন যোগ করে (১.১০ গুণ), নইলে অপরিবর্তিত রাখে; <marquee> ট্যাগ লেখা চলমান করে, যদিও এটি এখন অবচিত এবং CSS animation দিয়েই করা হয়।
+
 25. **SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+
+   answer: SQL ইনজেকশন হলো ইনপুট ফিল্ডে দূষিত SQL কোড ঢুকিয়ে কুয়েরির অর্থ বদলে দেওয়া  
+   explanation: ব্যবহারকারীর ইনপুট সরাসরি কুয়েরিতে জোড়া লাগানো হলে ' OR '1'='1 জাতীয় ইনপুট শর্তকে সবসময় সত্য বানিয়ে দেয়, ফলে লগইন বাইপাস, গোপন তথ্য চুরি বা টেবিল মুছে ফেলা সম্ভব হয়; প্রতিকার হলো প্যারামিটারাইজড কুয়েরি ও ইনপুট ভ্যালিডেশন।
 
 ## Arithmetic & Number Series (16)
 
@@ -639,11 +939,17 @@
    c) ১৬  
    d) ৩৪
 
+   answer: b — ১৫  
+   explanation: ৩×৩ ম্যাজিক বর্গে ১ থেকে ৯ পর্যন্ত সংখ্যার যোগফল ৪৫, আর তিন সারিতে ভাগ করলে প্রতি সারির যোগফল ১৫।
+
 2. **প্রথম n সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*  
    a) 2n  
    b) n^2  
    c) n^3  
    d) \frac{n^2}{2}
+
+   answer: b — n²  
+   explanation: প্রথম n সংখ্যক বিজোড় সংখ্যার সমষ্টি 1+3+5+... = n²।
 
 3. **১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৩৫৫  
@@ -651,11 +957,17 @@
    গ. ৫২৫  
    ঘ. ৬৭৫
 
+   answer: খ — ৪৬৫  
+   explanation: n(n+1)/2 সূত্রে ৩০ × ৩১ ÷ ২ = ৪৬৫।
+
 4. **1^2 + 2^2 + 3^2 + ................ + 7^2 ধারাটির সমষ্টি কত?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 9 (ET: BIBM)]*  
    a) \frac{n(n+1)}{2}  
    b) \left\{\frac{n(n+1)}{2}\right\}  
    c) \frac{n(n+1)(n+2)}{6}  
    d) \frac{n(n+1)(2n+1)}{6}
+
+   answer: d — n(n+1)(2n+1)/6  
+   explanation: বর্গের সমষ্টির সূত্র এটি; n = 7 বসালে 7×8×15/6 = 140 পাওয়া যায়।
 
 5. **On a2 km road, a total of 201 trees are planted on the side of the road at equal distances. How many such trees will be planted on a 50 km road such that the distance between two consecutive trees is the same as that of the consecutive trees on the 2 km road?** *[Combined Bank Officer (IT) 04.10.2024 compact it 10 (ET: BIBM)]*  
    (a) 501  
@@ -663,11 +975,17 @@
    (c) 5000  
    (d) 5001
 
+   answer: d — 5001  
+   explanation: ২০১টি গাছে ২০০টি ফাঁক, তাই দূরত্ব ১০ মিটার; ৫০,০০০ মিটারে ৫০০০ ফাঁক মানে ৫০০১টি গাছ।
+
 6. **The number 3 divides 'a' with a result of 'b' and a reminder of 2. The number 3 divides 'b' with a result of 2 and 'a' reminder of 1. What is the value of 'a'?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)]*  
    (a) 13  
    (b) 17  
    (c) 23  
    (d) 21
+
+   answer: c — 23  
+   explanation: b = 3×2 + 1 = 7, তাই a = 3×7 + 2 = 23।
 
 7. **A prime number is a number that is divisible only by itself and 1. Which of the following is not a prime number?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 19 (ET: BIBM)], [Combined 4 Bank Assistant Programmer (AP) 2020 compact it 153 (ET: DU)]*  
    (a) 2  
@@ -675,8 +993,14 @@
    (c) 99  
    (d) 181
 
+   answer: c — 99  
+   explanation: 99 = 9 × 11, তাই এটি মৌলিক নয়; ২, ৭ ও ১৮১ মৌলিক।
+
 8. **৬০ থেকে ৮০ এর মধ্যে বৃহত্তর ও ক্ষুদ্রতম মৌলিক সংখ্যার অন্তর কত?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ১৮
+
+   answer: ১৮  
+   explanation: ৬০-৮০ এর মধ্যে ক্ষুদ্রতম মৌলিক ৬১ ও বৃহত্তম ৭৯, পার্থক্য ১৮।
 
 9. **1\text{ cm}^3 কত \text{m}^3 এর সমান?** *[BPSC Instructor 31.10.2022 compact it 66 (ET: N/A)]*  
    (ক) 10^{-6}\text{ m}^3  
@@ -685,11 +1009,17 @@
    (ঘ) 0.1\text{ m}^3  
    **উত্তর: ক**
 
+   answer: ক — 10⁻⁶ m³  
+   explanation: ১ মিটার = ১০০ সেমি, তাই ১ ঘনমিটার = ১০⁶ ঘনসেন্টিমিটার এবং ১ cm³ = ১০⁻⁶ m³।
+
 10. **Of the series 5+8+11+14 ________ which term is 383?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 122ᵗʰ  
    b) 127ᵗʰ  
    c) 136ᵗʰ  
    d) 144ᵗʰ
+
+   answer: b — 127th  
+   explanation: a = 5, d = 3 হলে 383 = 5 + (n-1)3, তাই n - 1 = 126 এবং n = 127।
 
 11. **How many positive integers less than ten thousand are multiples of both eight and eighteen?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 70  
@@ -697,11 +1027,17 @@
    c. 138  
    d. 139
 
+   answer: c — 138  
+   explanation: LCM(8, 18) = 72, আর ১০০০০-এর নিচে ৭২-এর গুণিতক ⌊9999/72⌋ = 138টি।
+
 12. **The H.S.F and L.C.M of two number are 12 and 288 respectively. If one of the numbers is 96, find the other.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 34  
    b. 36  
    c. 38  
    d. 40
+
+   answer: b — 36  
+   explanation: গ.সা.গু × ল.সা.গু = দুই সংখ্যার গুণফল, তাই 12 × 288 = 96 × x এবং x = 36।
 
 13. **How many prime numbers are there from 1 to 10?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 10  
@@ -709,11 +1045,17 @@
    গ. 4  
    ঘ. 3
 
+   answer: গ — 4  
+   explanation: ১ থেকে ১০-এর মৌলিক সংখ্যা ২, ৩, ৫ ও ৭ — মোট চারটি।
+
 14. **If each of the six members of a family gives money as per their membership number, then what will be the total amount?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 216  
    খ. 125  
    গ. 100  
    ঘ. 64
+
+   answer: ক — 216  
+   explanation: প্রশ্নটি ছাপায় অসম্পূর্ণ; ছাপা বিকল্পগুলোর মধ্যে ৬³ = ২১৬-ই উদ্দিষ্ট। <!-- verify -->
 
 15. **Which one is the smallest?** *[BREB Assistant Enforcement Coordinator 2021 compact it 139 (ET: N/A)]*  
    ক. 0.02  
@@ -721,11 +1063,17 @@
    গ. 10  
    ঘ. None
 
+   answer: খ — 1/100  
+   explanation: 1/100 = 0.01, যা 0.02 ও 10-এর চেয়ে ছোট।
+
 16. **In the given AP series find the number of items 5,8,11,14,17,20, .......,50** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) 11  
    B) 13  
    C) 15  
    D) 16
+
+   answer: D — 16  
+   explanation: a = 5, d = 3, শেষ পদ 50 হলে n = (50-5)/3 + 1 = 16।
 
 ## Time, Work & Distance (11)
 
@@ -735,11 +1083,17 @@
    (c) 2.4 hours  
    (d) 5 hours
 
+   answer: c — 2.4 hours  
+   explanation: Together they fill 1/4 + 1/6 = 5/12 of the tank per hour, so the whole tank takes 12/5 = 2.4 hours.
+
 2. **একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ১৫ মিনিট  
    খ. ১১ মিনিট  
    গ. ১৩ মিনিট  
    ঘ. ১৪ মিনিট
+
+   answer: গ — ১৩ মিনিট  
+   explanation: প্রতি ২ মিনিটে নিট ৩ ফুট ওঠে, তাই ১২ মিনিটে ১৮ ফুট; ১৩তম মিনিটে ৪ ফুট উঠেই ২২ ফুট শীর্ষে পৌঁছে যায়।
 
 3. **If a man rows at 5km/hr in still water and 3.5 km/hr against the current, find his rate along the current.** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 4 .25 km  
@@ -747,11 +1101,17 @@
    c) 6 km  
    d) 6.5km
 
+   answer: d — 6.5km  
+   explanation: Still water 5 and upstream 3.5 make the current 1.5 km/h, so downstream speed is 5 + 1.5 = 6.5 km/h.
+
 4. **A floor with dimension of 20 feet to 35 feet is needed to be tiled. Two workers can tile that floor in 2 hours and 30 minutes. If they are joined by three other workers of similar ability. How many hours will it take to tile the floor?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
    a) 1 hr  
    b) 1.25 hr  
    c) 1.5 hr  
    d) 1.75 hr
+
+   answer: a — 1 hr  
+   explanation: Two workers taking 2.5 hours means 5 worker-hours of work, so five workers finish it in 1 hour.
 
 5. **A train went 300 km from city X to city Y at an average speed of 100 km/h. At what speed did it travel on the way back if its average speed for the whole trip was 120 km/h.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 120 km/h  
@@ -759,11 +1119,17 @@
    c) 130 km/h  
    d) 150 km/h
 
+   answer: d — 150 km/h  
+   explanation: The outward leg takes 3 hours and the whole 600 km at 120 km/h takes 5 hours, so the return 300 km takes 2 hours — 150 km/h.
+
 6. **A boat sailing against a stream of river takes 6 hours to travel 24 kms, while sailing with the stream it takes 4 hours to travel the same distance. What is the speed of the stream?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 2.5 km/hr  
    b) 1.5 km/hr  
    c) 1 km/hr  
    d) 0.5 km / hr
+
+   answer: c — 1 km/hr  
+   explanation: Upstream speed is 24/6 = 4 and downstream 24/4 = 6, so the stream is (6-4)/2 = 1 km/h.
 
 7. **Length of a train is 170 meters and speed of train is 63 km/hour. This train can pass a bridge in 30 seconds, then find the length of the bridge.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 109 (ET: N/A)]*  
    (a) 355 m  
@@ -771,11 +1137,17 @@
    (c) 365 m  
    (d) 312 m
 
+   answer: a — 355 m  
+   explanation: 63 km/h is 17.5 m/s, so in 30 s the train covers 525 m; subtracting its own 170 m leaves a 355 m bridge.
+
 8. **It takes 5 hours to fill a container using machine A. The same container can be filled suing Machin B in 10 hours. When the container is full, Machine C can fully empty the container in 20 containers how long will it take for the container to be completely filled?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 1/4 hours  
    b. 4 hours  
    c. 2 hours  
    d. 15 hours
+
+   answer: b — 4 hours  
+   explanation: Net filling rate = 1/5 + 1/10 - 1/20 = 5/20 = 1/4 of the container per hour, so it takes 4 hours.
 
 9. **Two trucks 300 km away are travelling towards each other with a constant speed. Truck A is moving at a constant speed of 50 km/h. How long does it take for them to meet?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 5 hours  
@@ -783,17 +1155,26 @@
    c. 2.5 hours  
    d. 6 hours
 
+   answer: b — 3 hours  
+   explanation: With both trucks at 50 km/h they close the 300 km gap at 100 km/h, meeting in 3 hours.
+
 10. **If 12 men work on a particular task. it takes them 24 days to complete it. On the other hand, 12 women can complete the same task in 12 days. How many days it takes if the 12 men and 12 women cooperated with each other to finish to finish the same task?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 123 (ET: N/A)]*  
    a. 5 days  
    b. 6 days  
    c. 8 days  
    d. 16 days
 
+   answer: c — 8 days  
+   explanation: Men do 1/24 and women 1/12 of the work per day, together 1/8, so the task takes 8 days.
+
 11. **A train 220 m long is moving at 45km/h. The time taken by the train to cross a tunnel 260m long. Is** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 25 sec  
    b. 35 sec  
    c. 38 sec  
    d. 40 sec
+
+   answer: c — 38 sec  
+   explanation: The train must cover 220 + 260 = 480 m at 45 km/h (12.5 m/s), which takes 480/12.5 = 38.4 seconds.
 
 ## Analytical Reasoning (10)
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
@@ -802,11 +1183,17 @@
    (c) 3.24 meters  
    (d) 4 meters
 
+   answer: a — 4.24 meters  
+   explanation: 5 m north minus 2 m south leaves 3 m north plus 3 m east, so the straight distance is √(3²+3²) = √18 ≈ 4.24 m.
+
 2. **There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ball?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) 1  
    (b) 2  
    (c) 3  
    (d) 4
+
+   answer: b — 2  
+   explanation: Weigh 3 against 3; whichever side is heavier (or the remaining 2 if they balance) leaves at most 3 balls, and a second weighing of 1 against 1 finds the heavy one.
 
 3. **All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. **Ans: Syllogism**** *[EGCB Assistant Engineer (ICT) 2022 compact it 72 (ET: BUET)]*
 
@@ -846,11 +1233,17 @@
    গ. ৬০
    ঘ. ৭২
 
+   answer: Syllogism  
+   explanation: Two premises leading to a necessary conclusion about the subject is the classic form of a syllogism.
+
 4. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
    (a) When a cache hit occurs, the CPU fetches data from ROM.  
    (b) When a cache hit occurs, the CPU fetches data from main memory.  
    (c) When a cache miss occurs, the CPU fetches data from cache memory.  
    (d) When a cache miss occurs, the CPU fetches data from main memory.
+
+   answer: d — When a cache miss occurs, the CPU fetches data from main memory  
+   explanation: On a hit the data comes from cache; only on a miss does the CPU go out to the slower main memory.
 
 5. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
    (a) DRAM requires more power than SRAM  
@@ -858,11 +1251,17 @@
    (c) SRAM does not need refreshing while DRAM does  
    (d) SRAM stores data in capacitors while DRAM uses flip-flops
 
+   answer: c — SRAM does not need refreshing while DRAM does  
+   explanation: An SRAM cell is a latch that holds its value, while a DRAM cell stores charge on a capacitor that leaks and must be refreshed.
+
 6. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
    (a) Its content can be erased electrically in blocks  
    (b) It requires periodin rewriting of data.  
    (c) It can be rewritten at high speed and used as CPU cache  
    (d) Its entire content is erased by ultraviolet light
+
+   answer: a — Its content can be erased electrically in blocks  
+   explanation: Flash is electrically erasable a block at a time, which is what separates it from EPROM (erased by ultraviolet light).
 
 7. **বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. হাইড্রোজেন  
@@ -870,11 +1269,17 @@
    গ. কার্বন ডাই-অক্সাইড  
    ঘ. নাইট্রোজেন
 
+   answer: খ — তামা  
+   explanation: তামার পরিবাহিতা খুব বেশি ও দাম তুলনামূলক কম, তাই বিদ্যুৎ পরিবহনে এটিই সবচেয়ে বেশি ব্যবহৃত ধাতু।
+
 8. **Which of the following resembles OATH: PROMISE? [ নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
    (a) Contract : Agreement  
    (b) Deed : Attorney  
    (c) Title : Estate  
    (d) Job : Loyalty
+
+   answer: a — Contract : Agreement  
+   explanation: An oath is a formal kind of promise, just as a contract is a formal kind of agreement.
 
 9. **Which of the following testing strategy is related to the boundary value analysis?[ নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analysis)-এর সাথে সম্পর্কিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) White-box testing  
@@ -882,11 +1287,17 @@
    (c) Unit testing  
    (d) None of these
 
+   answer: b — Black box testing  
+   explanation: Boundary value analysis picks inputs at the edges of valid ranges using only the specification, without seeing the code.
+
 10. **Data about data is also called—[ ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Data store  
    (b) Data bank  
    (c) Meta Data  
    (d) Warehouse
+
+   answer: c — Meta Data  
+   explanation: Metadata describes other data — its names, types, sizes and constraints.
 
 ## Time & Work (9)
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*  
@@ -901,11 +1312,17 @@
    গ. ৮ মিনিট
    ঘ. কোনোটিই নয়
 
+   answer: ক — ৪ দিন  
+   explanation: সমীকরণ দুটি মিলিয়ে পাওয়া যায় ১ জন পুরুষ = ২ জন ছেলের সমান কাজ; তখন পুরুষের হার ১/১০০ ও ছেলের ১/২০০, তাই ১৫ পুরুষ + ২০ ছেলে = ০.২৫ অর্থাৎ ৪ দিন।
+
 2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
    (a) Switch  
    (b) Hub  
    (c) Router  
    (d) Modem
+
+   answer: a — Switch  
+   explanation: A switch forwards frames using MAC addresses, which is the data link layer (layer 2).
 
 3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 45  
@@ -913,11 +1330,17 @@
    (c) 63  
    (d) 126
 
+   answer: c — 63  
+   explanation: C(7,5) × C(3,2) = 21 × 3 = 63 ways.
+
 4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
    (A) Print screen  
    (B) File open  
    (C) Help  
    (D) Save
+
+   answer: C — Help  
+   explanation: F1 is the standard Help key across Windows applications.
 
 5. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ফজলুর রহমান  
@@ -925,12 +1348,21 @@
    গ) তাজউদ্দিন আহমেদ  
    ঘ) মনসুর আলী
 
+   answer: ঘ — মনসুর আলী  
+   explanation: মুজিবনগর সরকারের অর্থ, বাণিজ্য ও শিল্পমন্ত্রী ছিলেন ক্যাপ্টেন এম মনসুর আলী।
+
 6. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+   answer: DHCP হলো Dynamic Host Configuration Protocol, যা নেটওয়ার্কে যুক্ত হওয়া ডিভাইসকে স্বয়ংক্রিয়ভাবে আইপি ঠিকানা দেয়  
+   explanation: ক্লায়েন্ট DISCOVER ব্রডকাস্ট করলে সার্ভার OFFER পাঠায়, ক্লায়েন্ট REQUEST করে এবং সার্ভার ACK দিয়ে নির্দিষ্ট সময়ের জন্য আইপি, সাবনেট মাস্ক, গেটওয়ে ও DNS ঠিকানা লিজ দেয় — ফলে হাতে কনফিগার করার ঝামেলা ও ঠিকানা সংঘর্ষ দুই-ই এড়ানো যায়।
 
 7. **Math: 15 marks** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
    i. যদি x^a = y^b = z^c এবং xyz = 1 হয় তবে ab + bc + ca এর মান নির্ণয় করুন।  
    ii. একটি বৃত্তের ব্যাসার্ধ ২ সেমি ঐ বৃত্তের অন্তস্থ বর্গের ক্ষেত্রফল কত?  
    iii. কোন একটি গ্রামের জনসংখ্যার ৯০% পুরুষ ৫০% যদি ৩০% পুরুষ বিবাহিত তাহলে ঐ গ্রামের মোট জনসংখ্যার কত ভাগ মহিলা অবিবাহিত।
+
+   answer: i. ab + bc + ca = 0  ii. ৮ বর্গ সেন্টিমিটার  iii. প্রশ্নটি ছাপায় অসম্পূর্ণ  
+   explanation: x^a = y^b = z^c = k ধরলে xyz = k^(1/a+1/b+1/c) = 1 দেয় 1/a+1/b+1/c = 0, অর্থাৎ ab+bc+ca = 0; আর ২ সেমি ব্যাসার্ধের বৃত্তে অন্তর্লিখিত বর্গের কর্ণ ৪ সেমি, তাই বাহু 2√2 ও ক্ষেত্রফল ৮ বর্গ সেমি। <!-- verify -->
 
 8. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed?[ একজন ব্যক্তি ১২০ দিনের জন্য কিছু টাকা ধার নিলেন। ব্যাংক 6% বার্ষিক হারে 360 টাকা সুদ চার্জ করল। তিনি কত টাকা ধার নিয়েছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
    (a) Tk.  
@@ -939,11 +1371,17 @@
    (c) Tk. 15,000  
    (d) None of these
 
+   answer: a — Tk. 18,000  
+   explanation: Interest = P × 6% × 120/360 = 0.02P, so 0.02P = 360 and P = 18,000 taka.
+
 9. **Bluetooth is a type of radio wave information transmission system that is good for about—[ ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত কত দূর পর্যন্ত কাজ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
    (a) 30 feet  
    (b) 30 yards  
    (c) 30 miles  
    (d) 300 miles
+
+   answer: a — 30 feet  
+   explanation: Class 2 Bluetooth, used in phones and headsets, reaches about 10 metres — roughly 30 feet.
 
 ## Set Theory (8)
 
@@ -953,11 +1391,17 @@
    (গ) Intersection  
    (ঘ) Complement
 
+   answer: গ — Intersection  
+   explanation: Disjoint sets share no element, so their intersection is empty.
+
 2. **Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 133 (ET: N/A)]*  
    a) 7  
    b) 5  
    c) 15  
    d) 10
+
+   answer: b — 5  
+   explanation: At least one subject = 90 + 85 - 80 = 95, so 100 - 95 = 5 failed both.
 
 3. **In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 1/5  
@@ -965,11 +1409,17 @@
    c) 1/3  
    d) 7/15
 
+   answer: a — 1/5  
+   explanation: 15 - 3 = 12 speak at least one, so both = 7 + 8 - 12 = 3, and 3/15 = 1/5.
+
 4. **In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 48  
    b. 20  
    c. 12  
    d. 28
+
+   answer: c — 12  
+   explanation: By inclusion-exclusion both = 20 + 28 - 36 = 12.
 
 5. **Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) 4 is even or -9 is not negative  
@@ -977,11 +1427,17 @@
    C) 4 is even and -9 is negative  
    D) 4 is odd and -9 is not negative
 
+   answer: C — 4 is even and -9 is negative  
+   explanation: Negating "p or q" gives "not p and not q": 4 is not odd (even) and -9 is not positive (negative).
+
 6. **If A= {1,2,3} and B= {1,2,5} then A-B=?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) {1}  
    B) {5}  
    C) {3}  
    D) {2}
+
+   answer: C — {3}  
+   explanation: A - B keeps the elements of A that are not in B, which is just 3.
 
 7. **If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) 4, 8  
@@ -989,11 +1445,17 @@
    C) 4, 12  
    D) 6, 12
 
+   answer: B — 8, 12  
+   explanation: If A is contained in B the union has 8 elements; if they are disjoint it has 4 + 8 = 12.
+
 8. **Two sets are called disjoint if the ________ is an empty set.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
    A) intersection  
    B) union  
    C) difference  
    D) complement
+
+   answer: A — intersection  
+   explanation: Two sets are disjoint exactly when their intersection is the empty set.
 
 ## Average & Age Problems (6)
 
@@ -1003,11 +1465,17 @@
    (c) 12 years ago  
    (d) 4 years ago
 
+   answer: a — 6 years ago  
+   explanation: 36 - x = 3(16 - x) gives 2x = 12, so x = 6 years ago.
+
 2. **মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ৪৫ বছর  
    খ. ৪০ বছর  
    গ. ৩৫ বছর  
    ঘ. ৩০ বছর
+
+   answer: খ — ৪০ বছর  
+   explanation: দুই গড়ের পার্থক্য ২.৫ মানে (পিতা - মাতা)/৪ = ২.৫, তাই পার্থক্য ১০ বছর এবং মাতার বয়স ৫০ - ১০ = ৪০।
 
 3. **The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6° C, then temperature on the fourth day is-** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) 38.5°C  
@@ -1015,11 +1483,17 @@
    (c) 41.3°C  
    (d) 40.8°
 
+   answer: b — 41.8°C  
+   explanation: The first four sum to 160.8 and the last four to 165.2 (total 326.0) while the week totals 7 × 40.6 = 284.2; the fourth day is counted twice, so it is 41.8°C.
+
 4. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?** *[Combined Bank Officer (IT) 04.10.2024 compact it 11 (ET: BIBM)]*  
    (a) n<m<o  
    (b) m<n<o  
    (c) o<n<m  
    (d) o<m<n
+
+   answer: a — n<m<o  
+   explanation: M is older than N and younger than O, so N is youngest and O oldest.
 
 5. **If age is P times then y after 6 years x age is 17 then find the age of y with respect to p.** *[BDCCL; Assistant Manager (Cloud) 14/10/2022 compact it 73 (ET: N/A)]*  
    (a) 11p  
@@ -1028,11 +1502,17 @@
    (d) P+11  
    **Ans: b**
 
+   answer: b — 11p+6  
+   explanation: Working back from x's age of 17 after six years and the given multiple gives y's age as 11p + 6.
+
 6. **5 years ago the ration of father's age to son's age was 5:1 and 2 years later father's age will be 3 times his son's age. What is the ration of their present age?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 5:2  
    b. 7:3  
    c. 10:3  
    d. 11:7
+
+   answer: c — 10:3  
+   explanation: Five years ago the ages were 5x and x; two years from now 5x+7 = 3(x+7) gives x = 7, so the present ages are 40 and 12, a ratio of 10:3.
 
 ## Ratio & Proportion (6)
 
@@ -1042,11 +1522,17 @@
    c) 35\frac{2}{3}  
    d) 40\frac{5}{3}
 
+   answer: a — 42⅔  
+   explanation: The mixture holds 40 L milk and 24 L water; for 3:5 we need 40/(24+w) = 3/5, giving w = 128/3 = 42⅔ litres.
+
 2. **Three boys have marbles in the ration of 19:5:3. If the boy with the least number has 9 marbles, how many marbles does the boy with the highest number have?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 23  
    b) 37  
    c) 45  
    d) 57
+
+   answer: d — 57  
+   explanation: The smallest share of 3 parts equals 9 marbles, so one part is 3 and the largest share is 19 × 3 = 57.
 
 3. **In distributing milk at a summer camp, it is found that a quart of milk will fill wither 3 large glass tumblers or 5 small glass tumblers. How many small glass tumblers can be filled with one large glass tumbler?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 119 (ET: N/A)]*  
    a) 11/5  
@@ -1054,11 +1540,17 @@
    c) 5/3  
    d) 7/3
 
+   answer: c — 5/3  
+   explanation: A quart fills 3 large or 5 small, so one large tumbler equals 5/3 small ones.
+
 4. **A jar contains white, red and green marbles in the ratios 2:3:5 Six more green marbles are added to the jars, and then the ratio becomes 2:3:7. How many white marbles are there in the jar?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 108 (ET: N/A)]*  
    (a) 2  
    (b) 4  
    (c) 6  
    (d) 8
+
+   answer: c — 6  
+   explanation: With shares 2x, 3x, 5x, adding 6 green gives 2x/(5x+6) = 2/7, so x = 3 and the white marbles number 2x = 6.
 
 5. **Equal amounts of water were poured into two empty jars of different capacities, which made one jar 1/4 full and the other jar 1/3 full. If the water in the jar with the lesser capacity is then poured into the jar with the greater capacity, what fraction of the larger jar will be filled with water?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) 1/3  
@@ -1066,11 +1558,17 @@
    (c) 1/5  
    (d) 1/2
 
+   answer: d — 1/2  
+   explanation: Equal volume V fills 1/4 of one jar (capacity 4V) and 1/3 of the other (capacity 3V); pouring the smaller jar's V into the 4V jar makes 2V, which is half of it.
+
 6. **The ratio of male students to female students in a class is 13 to 19. If there are 224 people in the class, including one teacher, one administrator, and thirty evaluators, how many people in the class are male students?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 78  
    b. 80  
    c. 91  
    d. 114
+
+   answer: a — 78  
+   explanation: Removing the teacher, administrator and 30 evaluators leaves 192 students, and 13/32 of 192 is 78 male students.
 
 ## Permutation & Combination (5)
 
@@ -1080,6 +1578,9 @@
    (c) 63  
    (d) 126
 
+   answer: c — 63  
+   explanation: C(7,5) × C(3,2) = 21 × 3 = 63 ways.
+
 2. **In a class there are 4 boys and 4 girls. Two students are selected at random, what is the probability that both will be girls?** *[Petrobangla; Assistant Engineer 16/12/2022 compact it 73 (ET: N/A)]*  
    (a) \frac{1}{2}  
    (b) \frac{3}{7}  
@@ -1087,11 +1588,17 @@
    (d) \frac{3}{14}  
    **Ans: d**
 
+   answer: d — 3/14  
+   explanation: C(4,2)/C(8,2) = 6/28 = 3/14.
+
 3. **১০ টি বইয়ের মধ্যে ৪টি বই কত প্রকারে বাছাই করা যায়, যাতে নির্দিষ্ট দুইটি বই সর্বদা বাদ থাকে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 147 (ET: IBA)]*  
    A. 210  
    B. 70  
    C. 45  
    D. 360
+
+   answer: B — 70  
+   explanation: নির্দিষ্ট দুটি বই বাদ দিলে বাকি ৮টি থেকে ৪টি বাছাই — C(8,4) = 70 প্রকারে।
 
 4. **DIGITAL শব্দটি বর্ণগুলিকে কত প্রকারে সাজানো যায় যাতে স্বরবর্ণগুলি একত্রে থাকে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. 320  
@@ -1099,11 +1606,17 @@
    C. 210  
    D. 360
 
+   answer: D — 360  
+   explanation: স্বরবর্ণ I, I, A একত্রে রাখলে ৫টি একক সাজে ৫! = ১২০ ভাবে, আর ব্লকের ভেতরে ৩!/২! = ৩ ভাবে, তাই মোট ১২০ × ৩ = ৩৬০।
+
 5. **How many bits string of length 4 bit possible such that they contain 2 ones and 2 zeros?** *[Combined 3 Bank Assistant Programmer 2018 compact it 229 (ET: N/A)]*  
    A) 4  
    B) 2  
    C) 5  
    D) 6
+
+   answer: D — 6  
+   explanation: Choosing which 2 of the 4 positions hold the ones gives C(4,2) = 6 strings.
 
 ## Trigonometry (4)
 
@@ -1113,8 +1626,14 @@
    গ. 2/5  
    ঘ. 5/2
 
+   answer: গ — 2/5  
+   explanation: (secA + tanA)(secA - tanA) = sec²A - tan²A = 1, তাই secA - tanA = 1 ÷ (5/2) = 2/5।
+
 2. **একটি ৪৮ মিটার লম্বা খুঁটি ভেঙ্গে সম্পূর্ণভাবে বিচ্ছিন্ন না হয়ে ভূমির সাথে 30^\circ কোন উৎপন্ন করে। খুঁটিটি কত উচুতে ভেঙ্গে ছিল?** *[BREB Assistant Programmer 2023 compact it 33 (ET: N/A)]*  
    **Ans:** ১৬
+
+   answer: ১৬ মিটার  
+   explanation: ভাঙা অংশ ভূমির সঙ্গে ৩০° কোণ করলে ভাঙার উচ্চতা h এবং হেলানো অংশ 48-h; sin30° = h/(48-h) = 1/2 দেয় h = 16 মিটার।
 
 3. **\tan A = 5/12 হলে, \sin A এর মান কত?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. \frac{5}{13}  
@@ -1122,11 +1641,17 @@
    C. \frac{5}{17}  
    D. \frac{5}{12}
 
+   answer: A — 5/13  
+   explanation: tan A = 5/12 মানে লম্ব ৫, ভূমি ১২, তাই অতিভুজ √(25+144) = 13 এবং sin A = 5/13।
+
 4. **\sin A + \cos A = \sin B + \cos B এবং A + B = ?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. \pi  
    B. 2\pi  
    C. \pi/2  
    D. \pi/4
+
+   answer: C — π/2  
+   explanation: sinA + cosA = sinB + cosB সমীকরণটি A ≠ B হলে A + B = π/2 হলেই সিদ্ধ হয়, কারণ তখন sinB = cosA ও cosB = sinA।
 
 ## Probability & Statistics (4)
 
@@ -1136,11 +1661,17 @@
    (গ) 23/3  
    (ঘ) 33
 
+   answer: গ — 23/3  
+   explanation: Using the empirical relation Mode = 3 × Median - 2 × Mean, 7 = 3M - 16 gives M = 23/3.
+
 2. **If P(A) = 0.6, P(B) = 0.4, P(B/A) = 0.2 then find P(A \cup B) = ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
    (ক) 0.76  
    (খ) 0.88  
    (গ) 0.56  
    (ঘ) 0.69
+
+   answer: খ — 0.88  
+   explanation: P(A∩B) = P(B|A)·P(A) = 0.2 × 0.6 = 0.12, so P(A∪B) = 0.6 + 0.4 - 0.12 = 0.88.
 
 3. **What is the probability of getting a sum of six if two dices are thrown at one?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 5/36  
@@ -1148,11 +1679,17 @@
    c. 2/26  
    d. 1/36
 
+   answer: a — 5/36  
+   explanation: Five of the 36 outcomes sum to six — (1,5), (2,4), (3,3), (4,2) and (5,1).
+
 4. **A fair six-sided die is rolled. Find the probability of getting an odd number or a number less than 4.** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 124 (ET: N/A)]*  
    a. 2/3  
    b. 2/4  
    c. 5/6  
    d. 1/6
+
+   answer: a — 2/3  
+   explanation: Odd numbers are {1,3,5} and numbers below 4 are {1,2,3}; their union {1,2,3,5} has 4 of the 6 faces, so 4/6 = 2/3.
 
 ## Speed, Time & Distance (4)
 1. **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*  
@@ -1167,7 +1704,13 @@
    গ. ২৩০ কি.মি.
    ঘ. ২৩৪ কি.মি.
 
+   answer: গ — তরলের প্রবাহে বাধা দেওয়ার ধর্ম  
+   explanation: সান্দ্রতা হলো তরলের স্তরগুলোর পারস্পরিক আপেক্ষিক গতিতে বাধা দেওয়ার ধর্ম — যত বেশি সান্দ্রতা, তরল তত ঘন ও ধীরে বয়।
+
 2. **a) নিম্নোক্ত মেমোরিগুলোকে গতির দ্রুততার ভিত্তিতে ক্রমানুসারে সাজিয়ে লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+
+   answer: Register > Cache > RAM > SSD > HDD > Magnetic tape  
+   explanation: প্রসেসরের যত কাছে, মেমোরি তত দ্রুত কিন্তু ব্যয়বহুল ও ছোট; দূরে গেলে ধীর কিন্তু সস্তা ও বড় হয়।
 
 3. **Considering computer memory speed, which one is correct order from highest to lowest?[ কম্পিউটার মেমোরির গতির দিক থেকে (speed) সর্বোচ্চ থেকে সর্বনিম্ন কোন ক্রমটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
    (a) RAM > Cache > SSD > HDD  
@@ -1175,11 +1718,17 @@
    (c) RAM > SSD > Cache > HDD  
    (d) Cache > RAM > HDD > SSD
 
+   answer: b — Cache > RAM > SSD > HDD  
+   explanation: Cache is fast SRAM next to the CPU, RAM is slower DRAM, the SSD has no moving parts, and the mechanical hard disk is slowest.
+
 4. **In a class definition with 10 methods, to make the class maximally cohesive number of connections required among the methods are—[ ১০টি মেথড বিশিষ্ট একটি ক্লাস সংজ্ঞায়, ক্লাসটিকে সর্বোচ্চ সংগতিপূর্ণ (Maximally Cohesive) করতে মেথডগুলোর মধ্যে কতটি সংযোগ প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) 90  
    (b) 100  
    (c) 10  
    (d) 45
+
+   answer: d — 45  
+   explanation: Maximum cohesion means every method connects to every other, giving n(n-1)/2 = 10 × 9 / 2 = 45 connections.
 
 ## Basic Arithmetic (3)
 1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*  
@@ -1188,14 +1737,23 @@
    গ. ৫০ বছর  
    ঘ. কোনটিই নয়
 
+   answer: খ — ৪০ বছর  
+   explanation: তিন বছর আগে তিনজনের বয়সের যোগফল ৮১, এখন ৮১ + ৯ = ৯০; পাঁচ বছর আগে স্ত্রী ও সন্তানের যোগফল ৪০, এখন ৫০ — তাই স্বামীর বয়স ৯০ - ৫০ = ৪০ বছর।
+
 2. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
    ক. প্রোষিতভর্তৃকা  
    খ. প্রোষিতা  
    গ. প্রবাসিনী  
    ঘ. প্রোষিতপত্নীক
 
+   answer: ঘ — প্রোষিতপত্নীক  
+   explanation: যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে প্রোষিতপত্নীক বলে; উল্টোটি (যে স্ত্রীর স্বামী প্রবাসে) হলো প্রোষিতভর্তৃকা।
+
 3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? [ M বয়সে N থেকে বড়, O থেকে ছোট। M, N, O-এর বয়স m, n, o। কোনটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a) m > n > o  
    (b) o > m > n  
    (c) n > m > o  
    (d) o > n > m
+
+   answer: b — o > m > n  
+   explanation: M is older than N and younger than O, so O is oldest and N youngest.
