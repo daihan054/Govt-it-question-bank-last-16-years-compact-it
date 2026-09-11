@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 4 subtopics · 29 theories
+**Table of Contents** — 5 subtopics · 35 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -37,6 +37,14 @@
    - [Supervised vs Unsupervised vs Reinforcement Learning](#supervised-vs-unsupervised-vs-reinforcement-learning)
    - [Semi-Supervised and Self-Supervised Learning](#semi-supervised-and-self-supervised-learning)
    - [Data Mining — Definition, KDD Process and Techniques](#data-mining--definition-kdd-process-and-techniques)
+
+5. **[Model Evaluation & Datasets](#model-evaluation--datasets)**
+   - [Training Set, Validation Set and Test Set](#training-set-validation-set-and-test-set)
+   - [Cross-Validation (K-Fold)](#cross-validation-k-fold)
+   - [Confusion Matrix and Classification Metrics](#confusion-matrix-and-classification-metrics)
+   - [Loss Functions and the Objective Function](#loss-functions-and-the-objective-function)
+   - [How to Validate and Check the Reliability of a Machine Learning Model](#how-to-validate-and-check-the-reliability-of-a-machine-learning-model)
+   - [Overfitting, Underfitting and the Bias-Variance Trade-off](#overfitting-underfitting-and-the-bias-variance-trade-off)
 
 <!-- TOC END -->
 
@@ -1617,3 +1625,361 @@ Exams sometimes say *"explain supervised and unsupervised classification with su
 **Previous Year Question List from this Topic:**
 
 - [a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.](../written-answers/ai-and-ml.md?plain=1#L771)
+
+## Model Evaluation & Datasets
+
+### Training Set, Validation Set and Test Set
+
+Before training, the dataset is **split into three parts**. Each part has a very different job, and mixing them up is the most common beginner mistake.
+
+```mermaid
+flowchart LR
+    D[(Full Dataset<br/>100%)] --> TR["Training Set<br/>~60-70%"]
+    D --> VA["Validation Set<br/>~15-20%"]
+    D --> TE["Test Set<br/>~15-20%"]
+    TR --> M[Model learns the weights here]
+    VA --> T[Model is tuned & compared here]
+    TE --> F[Final unbiased score - used ONCE]
+```
+
+| Set | Model **sees** the data? | Model **learns** from it? | Used for | How often used |
+|---|---|---|---|---|
+| **Training set** | Yes | **Yes** — weights are updated | Fitting the model | Every epoch |
+| **Validation set** | Yes | **No** — but it *influences* decisions | Tuning hyper-parameters, choosing between models, early stopping | Many times during development |
+| **Test set** | **No** (kept locked away) | No | The final, honest estimate of real-world performance | **Only once, at the very end** |
+
+#### The role of the Validation set (a directly asked question)
+
+The validation set is the **"practice exam"** between the textbook (training set) and the real exam (test set). Its roles are:
+
+1. **Hyper-parameter tuning** — choosing the learning rate, tree depth, number of hidden layers, value of K in KNN, etc. You try a value, check validation accuracy, and keep the best one.
+2. **Model selection** — comparing Decision Tree vs Random Forest vs SVM and picking the winner *without touching the test set*.
+3. **Detecting overfitting early** — if training accuracy keeps rising while validation accuracy starts falling, the model has begun to memorise. That crossing point is where you stop.
+4. **Early stopping** — stop training at the epoch where validation loss is lowest.
+5. **Keeping the test set honest** — because tuning decisions are made on the validation set, the test set stays truly *unseen* and gives an unbiased final number.
+
+```mermaid
+flowchart LR
+    A["Epochs →"] --> B["Training loss keeps falling ↓"]
+    A --> C["Validation loss falls, then starts rising ↑"]
+    C --> D["The turning point = best model<br/>(stop here — after this it is overfitting)"]
+```
+
+#### Validation set vs Test set — the difference
+
+| Point | **Validation Set** | **Test Set** |
+|---|---|---|
+| Purpose | **Tune and choose** the model | **Judge** the final model |
+| Used | Repeatedly, during development | **Once**, after everything is fixed |
+| Affects the model? | **Yes, indirectly** — you change settings based on it | **No** — nothing is changed after seeing it |
+| Result it gives | A *biased* (slightly optimistic) estimate | An *unbiased* estimate of real-world performance |
+| Simple analogy | Model test / practice exam | Final board exam |
+| Can it be reused? | Yes | No — once you tune on it, it becomes a validation set |
+
+> **Why can't we just use the test set for tuning?** Because every time you look at the test score and change something, you leak a little information about the test set into the model. After 50 such rounds the test score is no longer an honest prediction of how the model will behave on genuinely new data — this is called **information leakage** or *overfitting on the test set*.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
+- [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
+- [Write down the difference between test set and validation set.](../written-answers/ai-and-ml.md?plain=1#L958)
+
+
+---
+
+### Cross-Validation (K-Fold)
+
+A single train/validation split has a problem: **which 20 % you happened to pick changes the result**. If you are unlucky, the validation set may be unusually easy or unusually hard.
+
+**Cross-validation** fixes this by rotating the validation part through the whole dataset and averaging the scores.
+
+#### K-Fold Cross-Validation
+
+```mermaid
+flowchart TD
+    D["Dataset split into K = 5 equal folds"] --> R1["Round 1: test on F1, train on F2 F3 F4 F5"]
+    D --> R2["Round 2: test on F2, train on F1 F3 F4 F5"]
+    D --> R3["Round 3: test on F3, train on F1 F2 F4 F5"]
+    D --> R4["Round 4: test on F4, train on F1 F2 F3 F5"]
+    D --> R5["Round 5: test on F5, train on F1 F2 F3 F4"]
+    R1 --> A["Final score = average of the 5 scores"]
+    R2 --> A
+    R3 --> A
+    R4 --> A
+    R5 --> A
+```
+
+**Steps**
+1. Shuffle the data and split it into **K** equal folds (K = 5 or 10 is standard).
+2. Repeat K times: use **one fold as validation** and the **other K−1 folds for training**.
+3. Take the **average** of the K scores — this is the cross-validation score. The **standard deviation** tells you how stable the model is.
+
+**Variants**
+
+| Variant | Idea | When to use |
+|---|---|---|
+| **Stratified K-Fold** | Each fold keeps the same class ratio as the full data | **Imbalanced** data (e.g. only 2 % fraud) |
+| **Leave-One-Out (LOOCV)** | K = N; each single row is a fold | Very **small** datasets (expensive) |
+| **Time-Series split** | Always train on the past, test on the future | Time-ordered data — never shuffle it |
+| **Repeated K-Fold** | Run K-fold several times with different shuffles | When you need a very stable estimate |
+
+**Advantages** — uses every row for both training and validation; gives a more reliable estimate; reduces the effect of a lucky/unlucky split.
+**Disadvantage** — K times more computation.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
+- [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
+
+
+---
+
+### Confusion Matrix and Classification Metrics
+
+A **Confusion Matrix** is a table that compares the model's **predicted** labels against the **actual** labels. It is the starting point for almost every classification metric.
+
+#### The 2 × 2 confusion matrix (binary classification)
+
+|  | **Predicted: Positive** | **Predicted: Negative** |
+|---|---|---|
+| **Actual: Positive** | **TP** (True Positive) ✅ | **FN** (False Negative) ❌ *Type II error* |
+| **Actual: Negative** | **FP** (False Positive) ❌ *Type I error* | **TN** (True Negative) ✅ |
+
+**How to read the names:** the **second word** says what the model *predicted*; the **first word** says whether it was *right*.
+- **True Positive** — model said "yes", and it really was yes.
+- **False Positive** — model said "yes", but it was actually no. *(False alarm.)*
+- **False Negative** — model said "no", but it was actually yes. *(A miss.)*
+- **True Negative** — model said "no", and it really was no.
+
+*Disease-test analogy:* FP = a healthy person told they are sick (unnecessary worry). FN = a sick person told they are healthy (**dangerous**).
+
+#### The four core formulas
+
+| Metric | Formula | What it answers |
+|---|---|---|
+| **Accuracy** | (TP + TN) / (TP + TN + FP + FN) | Out of everything, how much did we get right? |
+| **Precision** (Positive Predictive Value) | TP / (TP + FP) | Of everything we *called* positive, how much really was? |
+| **Recall** (Sensitivity, True Positive Rate) | TP / (TP + FN) | Of all the *actual* positives, how many did we catch? |
+| **F1-Score** | 2 × (Precision × Recall) / (Precision + Recall) | The **harmonic mean** — one balanced number |
+
+Two more that appear in questions:
+- **Specificity (True Negative Rate)** = TN / (TN + FP)
+- **Error Rate** = 1 − Accuracy = (FP + FN) / Total
+
+#### Worked example (the exact BPSC numbers)
+
+Given **TP = 560, TN = 330, FP = 60, FN = 50**. Total = 560 + 330 + 60 + 50 = **1000**.
+
+| Metric | Working | Result |
+|---|---|---|
+| **Accuracy** | (560 + 330) / 1000 = 890 / 1000 | **0.89 = 89 %** |
+| **Precision** | 560 / (560 + 60) = 560 / 620 | **0.9032 ≈ 90.32 %** |
+| **Recall** | 560 / (560 + 50) = 560 / 610 | **0.9180 ≈ 91.80 %** |
+| **F1-Score** | 2 × (0.9032 × 0.9180) / (0.9032 + 0.9180) = 2 × 0.8291 / 1.8212 | **0.9105 ≈ 91.05 %** |
+
+*(Tip: F1 can also be computed directly as **2TP / (2TP + FP + FN)** = 1120 / (1120 + 60 + 50) = 1120 / 1230 = **0.9105** — a much faster route in the exam hall.)*
+
+#### Why accuracy alone can lie — the imbalanced data trap
+
+Suppose out of 10,000 transactions only **100 are fraud**. A lazy model that predicts *"never fraud"* gets **99 % accuracy** — and catches **zero** frauds. Its recall is 0.
+
+**Rule:** on imbalanced data, report **Precision, Recall and F1**, not accuracy.
+
+#### Precision vs Recall — which one matters more?
+
+| Situation | Optimise | Why |
+|---|---|---|
+| **Spam filter** | **Precision** | A false positive throws an important mail into the spam folder |
+| **Cancer / disease screening** | **Recall** | Missing a real patient (FN) is far worse than an extra test |
+| **Fraud detection** | **Recall** (with acceptable precision) | Missing a fraud costs money; a false alarm only costs a phone call |
+| **Search results / recommendations** | **Precision** | Users only look at the top few results |
+
+There is always a **trade-off**: lowering the decision threshold raises recall and lowers precision, and vice versa. **F1-score** is used when you need a single balanced number.
+
+#### ROC curve and AUC
+
+- The **ROC curve** plots **True Positive Rate (Recall)** on the y-axis against **False Positive Rate (FP / (FP + TN))** on the x-axis, for every possible threshold.
+- **AUC (Area Under the Curve)** summarises it in one number: **1.0 = perfect**, **0.5 = random guessing**.
+- AUC answers: *"if I pick one random positive and one random negative, what is the chance the model scores the positive higher?"*
+
+#### Regression metrics (for completeness)
+
+| Metric | Formula | Note |
+|---|---|---|
+| **MAE** | (1/n) Σ \|y − ŷ\| | Easy to interpret, same unit as y |
+| **MSE** | (1/n) Σ (y − ŷ)² | Punishes big errors more |
+| **RMSE** | √MSE | Same unit as y, most reported |
+| **R² (coefficient of determination)** | 1 − SS_res/SS_tot | 1 = perfect, 0 = no better than the mean |
+
+**Previous Year Question List from this Topic:**
+
+- [(b) Given following values:](../written-answers/ai-and-ml.md?plain=1#L860)
+- [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
+
+
+---
+
+### Loss Functions and the Objective Function
+
+Every machine learning model is really an **optimisation problem**: *find the parameters that make the error as small as possible*.
+
+| Term | Meaning |
+|---|---|
+| **Loss function** | The error on **one single** training example |
+| **Cost function** | The **average** loss over the whole training set |
+| **Objective function** | What we actually minimise = Cost + (optional) **regularisation** term |
+
+> **Objective = minimise  J(w) = Cost(w) + λ · Regularisation(w)**
+
+#### Deriving the objective for a binary classification problem
+
+*(The standard exam answer when given features f₁, f₂, f₃.)*
+
+**Step 1 — the model (Logistic Regression).** Take a weighted sum of the features:
+
+> **z = w₁f₁ + w₂f₂ + w₃f₃ + b**
+
+**Step 2 — squash it into a probability** with the **sigmoid** function:
+
+> **ŷ = σ(z) = 1 / (1 + e⁻ᶻ)**, which always lies between 0 and 1.
+
+Predict class 1 if ŷ ≥ 0.5, otherwise class 0.
+
+**Step 3 — the loss function: Binary Cross-Entropy (Log Loss).** For one example with true label y ∈ {0, 1}:
+
+> **L(y, ŷ) = − [ y·log(ŷ) + (1 − y)·log(1 − ŷ) ]**
+
+*Why this works:*
+- If the true label **y = 1**, the formula reduces to **−log(ŷ)**. Predicting ŷ = 0.99 gives a tiny loss; predicting ŷ = 0.01 gives a huge loss.
+- If the true label **y = 0**, it reduces to **−log(1 − ŷ)** — the mirror image.
+
+**Step 4 — the cost function** over all *n* training examples:
+
+> **J(w, b) = −(1/n) Σᵢ [ yᵢ·log(ŷᵢ) + (1 − yᵢ)·log(1 − ŷᵢ) ]**
+
+**Step 5 — the objective:** minimise J(w, b) with respect to w₁, w₂, w₃, b using **Gradient Descent**:
+
+> **wⱼ := wⱼ − η · ∂J/∂wⱼ**
+
+**Step 6 — add regularisation** to prevent overfitting:
+
+> **J_total = J(w, b) + λ · Σ wⱼ²**  (L2 / Ridge) or **+ λ · Σ |wⱼ|** (L1 / Lasso)
+
+> **Why not use Mean Squared Error for classification?** With a sigmoid output, MSE creates a **non-convex** cost surface full of local minima, and its gradients vanish when the prediction is very wrong. Cross-entropy is **convex** for logistic regression and gives strong gradients exactly when the model is badly wrong — so it trains much faster.
+
+#### Common loss functions to remember
+
+| Task | Loss function | Formula (idea) |
+|---|---|---|
+| Regression | **Mean Squared Error (MSE)** | (1/n) Σ (y − ŷ)² |
+| Regression (robust to outliers) | **MAE / Huber loss** | (1/n) Σ \|y − ŷ\| |
+| **Binary** classification | **Binary Cross-Entropy** | −[y log ŷ + (1−y) log(1−ŷ)] |
+| **Multi-class** classification | **Categorical Cross-Entropy** | −Σ yᵢ log ŷᵢ |
+| SVM | **Hinge loss** | max(0, 1 − y·ŷ) |
+
+**Previous Year Question List from this Topic:**
+
+- [You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss functi…](../written-answers/ai-and-ml.md?plain=1#L924)
+
+
+---
+
+### How to Validate and Check the Reliability of a Machine Learning Model
+
+A complete answer to *"how can we validate and check the reliability of an ML model?"* should walk through these steps.
+
+```mermaid
+flowchart TD
+    A[1. Split the data properly<br/>train / validation / test] --> B[2. Cross-validation<br/>K-fold, stratified]
+    B --> C[3. Choose the right metric<br/>for the problem]
+    C --> D[4. Check the learning curve<br/>overfit or underfit?]
+    D --> E[5. Test on truly unseen data<br/>hold-out test set]
+    E --> F[6. Check robustness & fairness<br/>noise, subgroups, drift]
+    F --> G[7. Monitor after deployment]
+```
+
+**1. Correct data splitting.** Never evaluate on data the model trained on. Split *before* any preprocessing so that scaling statistics do not leak from test to train.
+
+**2. Cross-validation.** Use **K-fold** (K = 5 or 10), **stratified** if classes are imbalanced, **time-series split** if the data is ordered in time. A large gap between fold scores means the model is unstable.
+
+**3. Pick metrics that match the business problem.** Accuracy for balanced data; Precision/Recall/F1/AUC for imbalanced data; RMSE/R² for regression. For a bank, also translate the metric into money (cost of a missed fraud vs cost of a false alarm).
+
+**4. Look at the learning curves** (training vs validation error):
+
+| Pattern | Diagnosis | Fix |
+|---|---|---|
+| High training error **and** high validation error | **Underfitting** (high bias) | More complex model, better features, train longer |
+| Low training error but **high** validation error | **Overfitting** (high variance) | More data, regularisation, dropout, simpler model, early stopping |
+| Both low and close together | **Good fit** | Ship it |
+
+**5. Evaluate on a held-out test set exactly once**, and ideally on a **fresh out-of-time sample** (e.g. train on 2020–2023 data, test on 2024 data).
+
+**6. Check robustness and fairness.**
+- Add small noise to inputs and see if the prediction flips.
+- Report the metric **separately for each subgroup** (gender, district, age band) to detect bias.
+- Run a **sanity/baseline comparison** — does the model beat a simple rule or the majority class?
+- Use **XAI tools (SHAP, LIME)** to verify the model is using sensible features, not a leak.
+
+**7. Monitor in production.** Watch for **data drift** and **concept drift**: real-world data changes, so accuracy quietly decays. Set alerts on the input distribution and the live metric, and retrain on a schedule.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
+- [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
+- [Write down the difference between test set and validation set.](../written-answers/ai-and-ml.md?plain=1#L958)
+
+
+---
+
+### Overfitting, Underfitting and the Bias-Variance Trade-off
+
+*(Answers the question: "what happens when a machine is very highly trained, or only slightly trained?")*
+
+| | **Underfitting** | **Good Fit** | **Overfitting** |
+|---|---|---|---|
+| **Cause** | Model too simple / trained too little | Right complexity | Model too complex / trained too long / too little data |
+| **Training accuracy** | **Low** | High | **Very high (≈100 %)** |
+| **Test accuracy** | **Low** | High | **Low** |
+| **Error type** | High **bias** | Balanced | High **variance** |
+| **Behaviour** | Cannot even learn the training data | Learns the true pattern | **Memorises** the data, including the noise |
+| **Student analogy** | Did not study enough | Understood the concepts | Memorised the guidebook word-for-word and fails when the question is twisted |
+
+```mermaid
+flowchart LR
+    A["Model complexity →"] --> B["Underfitting zone<br/>train error high<br/>test error high"]
+    B --> C["Sweet spot<br/>train error low<br/>test error lowest"]
+    C --> D["Overfitting zone<br/>train error ≈ 0<br/>test error rising"]
+```
+
+#### The Bias-Variance Trade-off
+
+> **Total Error = Bias² + Variance + Irreducible Error**
+
+- **Bias** — error from wrong assumptions; the model is too simple to capture the pattern. *(Underfitting.)*
+- **Variance** — error from being too sensitive to the particular training data. *(Overfitting.)*
+- Reducing one usually increases the other; the goal is the **minimum total error**.
+
+#### How to fix Overfitting
+
+1. **Get more training data** (the best fix).
+2. **Regularisation** — L1 (Lasso) or L2 (Ridge) penalties on large weights.
+3. **Dropout** in neural networks (randomly switch off neurons during training).
+4. **Early stopping** at the lowest validation loss.
+5. **Simplify the model** — fewer layers, shallower tree, pruning.
+6. **Data augmentation** — rotate/flip images to create more variety.
+7. **Cross-validation** and **ensembling** (bagging / Random Forest).
+8. **Feature selection** — remove noisy or irrelevant features.
+
+#### How to fix Underfitting
+
+1. Use a **more complex model** (more layers, deeper tree, polynomial features).
+2. **Train longer** / more epochs.
+3. **Better feature engineering** — add informative features.
+4. **Reduce regularisation** strength.
+5. **Remove excessive noise** from the data.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
+- [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
+- [In machine learning. What will happen, when a machine is highly trained up a slight trained up?](../written-answers/ai-and-ml.md?plain=1#L1243)
