@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 47 theories
+**Table of Contents** — 10 subtopics · 50 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -65,6 +65,11 @@
 9. **[Searching & Graph Algorithms](#searching--graph-algorithms)**
    - [Prime Numbers — Checking and Generating](#prime-numbers--checking-and-generating)
    - [Binary Search Tree — Construction, Traversal and Search](#binary-search-tree--construction-traversal-and-search)
+
+10. **[Dynamic Programming](#dynamic-programming)**
+   - [Fibonacci Numbers with Dynamic Programming](#fibonacci-numbers-with-dynamic-programming)
+   - [Maximum Subarray Problem — Kadane's Algorithm](#maximum-subarray-problem--kadanes-algorithm)
+   - [DP on a Line — Repeater / Station Placement with a Minimum Gap](#dp-on-a-line--repeater--station-placement-with-a-minimum-gap)
 
 <!-- TOC END -->
 
@@ -3840,11 +3845,9 @@ flowchart TD
     B --> D((5))
     B --> E((19))
     D --> F((2))
-    D -.-> DX[" "]
     E --> G((12))
     E --> H((23))
     G --> I((10))
-    style DX fill:none,stroke:none
 ```
 
 #### The three traversals
@@ -3893,3 +3896,319 @@ Search(root, key):
 **Previous Year Question List from this Topic:**
 
 - [Construct a Binary Search tree using the following set of data: 45, 9, 5, 19, 23, 19, 46, 2, 12, 10.](../written-answers/algorithm.md?plain=1#L3510)
+
+## Dynamic Programming
+
+### Fibonacci Numbers with Dynamic Programming
+
+The **Fibonacci sequence** is defined as:
+
+> **F(0) = 0, F(1) = 1, and F(n) = F(n−1) + F(n−2) for n ≥ 2**
+
+giving 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, …
+
+It is the standard teaching example of DP because the naive recursion is catastrophically slow and the DP fix is obvious.
+
+#### Why the naive recursion is O(2ⁿ)
+
+```mermaid
+flowchart TD
+    A["F(5)"] --> B["F(4)"]
+    A --> C["F(3) ← repeat"]
+    B --> D["F(3) ← repeat"]
+    B --> E["F(2) ← repeat"]
+    D --> F["F(2) ← repeat"]
+    D --> G["F(1)"]
+    E --> H["F(1)"]
+    E --> I["F(0)"]
+    C --> J["F(2) ← repeat"]
+    C --> K["F(1)"]
+```
+
+Computing F(5) calls F(3) **twice** and F(2) **three times**. The recursion tree roughly doubles at each level, so the running time is about **O(1.618ⁿ) ≈ O(2ⁿ)**. Computing F(50) this way takes **billions** of calls.
+
+#### The DP algorithm (tabulation / bottom-up)
+
+```
+FibonacciDP(n):
+    if n <= 1:
+        return n
+
+    create an array dp[0..n]
+    dp[0] = 0
+    dp[1] = 1
+
+    for i = 2 to n:
+        dp[i] = dp[i-1] + dp[i-2]        // reuse the two stored results
+
+    return dp[n]
+```
+
+#### Worked trace for n = 8
+
+| i | dp[i−2] | dp[i−1] | **dp[i]** |
+|---|---|---|---|
+| 0 | — | — | **0** |
+| 1 | — | — | **1** |
+| 2 | 0 | 1 | **1** |
+| 3 | 1 | 1 | **2** |
+| 4 | 1 | 2 | **3** |
+| 5 | 2 | 3 | **5** |
+| 6 | 3 | 5 | **8** |
+| 7 | 5 | 8 | **13** |
+| 8 | 8 | 13 | **21** |
+
+> **F(8) = 21** ✅
+
+#### C implementation
+
+```c
+#include <stdio.h>
+
+long long fibDP(int n) {
+    if (n <= 1) return n;
+    long long dp[n + 1];
+    dp[0] = 0;
+    dp[1] = 1;
+    for (int i = 2; i <= n; i++)
+        dp[i] = dp[i - 1] + dp[i - 2];
+    return dp[n];
+}
+
+/* space-optimised: O(1) memory */
+long long fibOpt(int n) {
+    if (n <= 1) return n;
+    long long a = 0, b = 1, c;
+    for (int i = 2; i <= n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    return b;
+}
+```
+
+#### Complexity analysis
+
+*(The exam usually asks for the complexity of the algorithm right after asking for the algorithm.)*
+
+**Time complexity: O(n)**
+- The `for` loop runs from `i = 2` to `n`, i.e. **n − 1 iterations**.
+- Each iteration does **one addition and one assignment — O(1)**.
+- Total = (n − 1) × O(1) = **O(n)**, linear.
+
+**Space complexity: O(n)**
+- The `dp[]` array holds **n + 1** values → **O(n)**.
+- **This can be reduced to O(1)**, because each step only needs the **previous two** values — that is the `fibOpt` version above.
+
+| Version | Time | Space | F(50) feasible? |
+|---|---|---|---|
+| Naive recursion | **O(2ⁿ)** | O(n) stack | ❌ takes minutes/hours |
+| **Memoization** (top-down) | **O(n)** | O(n) table + O(n) stack | ✅ instant |
+| **Tabulation** (bottom-up) | **O(n)** | O(n) | ✅ instant |
+| **Space-optimised** | **O(n)** | **O(1)** | ✅ instant |
+| Matrix exponentiation | **O(log n)** | O(1) | ✅ works for huge n |
+
+**Previous Year Question List from this Topic:**
+
+- [What is Dynamic programming? Explain with example.](../written-answers/algorithm.md?plain=1#L3586)
+- [Write down the Algorithm for determining Fibonacci number through dynamic programming.](../written-answers/algorithm.md?plain=1#L3647)
+- [What will be the time and space complexity of the above algorithm?](../written-answers/algorithm.md?plain=1#L3688)
+
+
+---
+
+### Maximum Subarray Problem — Kadane's Algorithm
+
+**The problem.** Given a one-dimensional array of numbers (which may include negatives), find the **contiguous subarray with the largest sum**.
+
+*Example:* `A = [−2, −3, 4, −1, −2, 1, 5, −3]` — what is the maximum contiguous sum?
+
+#### The three approaches
+
+| Approach | Idea | Time |
+|---|---|---|
+| **Brute force** | Try every (start, end) pair and sum each | **O(n³)** (or O(n²) with a running sum) |
+| **Divide and conquer** | Best is in the left half, the right half, or crosses the middle | **O(n log n)** |
+| **Kadane's algorithm (DP)** | One pass, keeping a running best | **O(n)** ✅ |
+
+#### Kadane's algorithm — the DP insight
+
+> At each position, ask one question: **"is it better to extend the previous subarray, or to start fresh from here?"**
+>
+> `current_max = max( A[i], current_max + A[i] )`
+>
+> If the running sum so far is **negative**, it can only hurt — so throw it away and start again at A[i].
+
+```
+KadaneMaxSubarray(A, n):
+    max_so_far  = A[0]         // the best sum found anywhere
+    current_max = A[0]         // the best sum ENDING at the current index
+
+    for i = 1 to n-1:
+        current_max = max( A[i], current_max + A[i] )
+        max_so_far  = max( max_so_far, current_max )
+
+    return max_so_far
+```
+
+#### Worked trace on `A = [−2, −3, 4, −1, −2, 1, 5, −3]`
+
+| i | A[i] | current_max + A[i] | **current_max = max(A[i], prev+A[i])** | **max_so_far** |
+|---|---|---|---|---|
+| 0 | −2 | — | **−2** | **−2** |
+| 1 | −3 | −2 + (−3) = −5 | max(−3, −5) = **−3** | max(−2, −3) = **−2** |
+| 2 | **4** | −3 + 4 = 1 | max(4, 1) = **4** ← restart here | max(−2, 4) = **4** |
+| 3 | −1 | 4 + (−1) = 3 | max(−1, 3) = **3** | max(4, 3) = **4** |
+| 4 | −2 | 3 + (−2) = 1 | max(−2, 1) = **1** | max(4, 1) = **4** |
+| 5 | 1 | 1 + 1 = 2 | max(1, 2) = **2** | max(4, 2) = **4** |
+| 6 | **5** | 2 + 5 = 7 | max(5, 7) = **7** | max(4, 7) = **7** ✅ |
+| 7 | −3 | 7 + (−3) = 4 | max(−3, 4) = **4** | max(7, 4) = **7** |
+
+> ### ✅ **Maximum subarray sum = 7**, achieved by the subarray **[4, −1, −2, 1, 5]** (indices 2 to 6).
+
+#### Tracking the actual subarray (not just the sum)
+
+```
+KadaneWithIndices(A, n):
+    max_so_far = A[0];  current_max = A[0]
+    start = 0;  end = 0;  temp_start = 0
+
+    for i = 1 to n-1:
+        if A[i] > current_max + A[i]:
+            current_max = A[i]
+            temp_start  = i               // a new subarray begins here
+        else:
+            current_max = current_max + A[i]
+
+        if current_max > max_so_far:
+            max_so_far = current_max
+            start = temp_start
+            end   = i
+    return (max_so_far, start, end)
+```
+
+#### C implementation
+
+```c
+#include <stdio.h>
+
+int kadane(int a[], int n) {
+    int max_so_far = a[0], current_max = a[0];
+    for (int i = 1; i < n; i++) {
+        current_max = (a[i] > current_max + a[i]) ? a[i] : current_max + a[i];
+        if (current_max > max_so_far) max_so_far = current_max;
+    }
+    return max_so_far;
+}
+```
+
+#### Complexity and edge cases
+
+| | |
+|---|---|
+| **Time** | **O(n)** — a single pass |
+| **Space** | **O(1)** — two variables |
+
+**Edge cases to mention:**
+- **All numbers negative** (`[-5, -2, -8]`) → the answer is the **largest single element (−2)**, not 0. Initialising `max_so_far = 0` instead of `A[0]` is the classic bug.
+- **Empty array** → undefined; handle it separately.
+- **All positive** → the answer is the sum of the whole array.
+
+**Real applications:** maximum profit period in stock data, best continuous time window in sensor readings, brightest continuous region in image processing, best-performing continuous segment in analytics.
+
+**Previous Year Question List from this Topic:**
+
+- [The maximum subarray is the task of finding a contiguous subarray with the largest sum within a given one dimentional array of numbers. Suppose the array is: A:…](../written-answers/algorithm.md?plain=1#L3614)
+
+
+---
+
+### DP on a Line — Repeater / Station Placement with a Minimum Gap
+
+**The problem.** A communication link runs from **Cox's Bazar to Kuakata** through stations **M₁, M₂, …, Mₙ**. Each station may hold **at most one repeater**, and the distance between consecutive stations is **Pᵢ > 0**. For reliable communication, any two chosen repeaters must be **at least K kilometres apart**. **Maximise the number of repeaters installed.**
+
+This is the general "**maximum selections subject to a minimum gap**" pattern, which appears in many disguises (placing cell towers, scheduling with cooling periods, spacing out warehouses).
+
+#### Step 1 — convert gaps into absolute positions
+
+The input gives *gaps*, but the constraint is about *distance between any two chosen stations*, so first build absolute positions:
+
+```
+pos[1] = 0
+pos[i] = pos[i-1] + P[i-1]      for i = 2 to n
+```
+
+Now the condition is simply: stations **i** and **j** are compatible if **pos[i] − pos[j] ≥ K**.
+
+#### Step 2 — define the DP state
+
+> **dp[i] = the maximum number of repeaters that can be installed among stations 1 … i, given that a repeater IS placed at station i.**
+
+Forcing a repeater at station *i* is what makes the state well defined — it lets the recurrence check the distance constraint.
+
+#### Step 3 — the recurrence
+
+> **dp[i] = 1 + max{ dp[j] : j < i and pos[i] − pos[j] ≥ K }**
+> If no such **j** exists, **dp[i] = 1** (station *i* would be the first repeater).
+> **Base case: dp[1] = 1.**
+
+#### Step 4 — the answer
+
+> **Answer = max( dp[i] ) for i = 1 … n**
+
+#### Pseudo-code — O(n²) version
+
+```
+MaxRepeaters(P[], n, K):
+    // build positions
+    pos[1] = 0
+    for i = 2 to n:
+        pos[i] = pos[i-1] + P[i-1]
+
+    // DP
+    for i = 1 to n:
+        dp[i] = 1
+        for j = 1 to i-1:
+            if pos[i] - pos[j] >= K and dp[j] + 1 > dp[i]:
+                dp[i] = dp[j] + 1
+
+    return max(dp[1..n])
+```
+
+**Time: O(n²). Space: O(n).**
+
+#### Worked example
+
+Stations M₁ … M₅ with gaps **P = [3, 2, 4, 1]** and **K = 5**.
+
+**Positions:** pos = [0, 3, 5, 9, 10]
+
+| i | pos[i] | Valid j (pos[i] − pos[j] ≥ 5) | dp[j] values | **dp[i]** |
+|---|---|---|---|---|
+| 1 | 0 | none | — | **1** |
+| 2 | 3 | none (3 − 0 = 3 < 5) | — | **1** |
+| 3 | 5 | j = 1 (5 − 0 = 5 ✅) | dp[1] = 1 | 1 + 1 = **2** |
+| 4 | 9 | j = 1 (9), j = 2 (6) | dp[1] = 1, dp[2] = 1 | 1 + 1 = **2** |
+| 5 | 10 | j = 1 (10), j = 2 (7), j = 3 (5 ✅) | dp[1]=1, dp[2]=1, **dp[3]=2** | 2 + 1 = **3** |
+
+> **Answer = max(1, 1, 2, 2, 3) = 3 repeaters**, placed at **M₁ (0 km), M₃ (5 km) and M₅ (10 km)** — each pair is at least 5 km apart. ✅
+
+#### An O(n log n) speed-up
+
+Because the positions are **sorted** (they increase along the line), the set of valid `j` for station `i` is always a **prefix** `1 … t` where `t` is the largest index with `pos[t] ≤ pos[i] − K`.
+1. Find **t** by **binary search** — O(log n).
+2. Keep a **prefix-maximum array** `best[i] = max(dp[1..i])` so the maximum over the prefix is available in **O(1)**.
+
+Then `dp[i] = 1 + best[t]`, giving **O(n log n)** overall.
+
+#### The greedy alternative
+
+For *this particular* problem, a greedy also works and is even simpler: **scan from left to right and place a repeater whenever the distance from the last placed repeater is ≥ K.** This is optimal by an exchange argument (placing a repeater as early as possible never reduces the count of the rest). Time **O(n)**.
+
+**Use DP when:** the stations also have **values/weights** (maximise *total benefit*, not *count*), or the constraint is more complex — because then greedy's exchange argument breaks down and only DP is guaranteed correct.
+
+**Previous Year Question List from this Topic:**
+
+- [A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one rep…](../written-answers/algorithm.md?plain=1#L3540)
+- [What will be the time and space complexity of the above algorithm?](../written-answers/algorithm.md?plain=1#L3688)
