@@ -1485,10 +1485,15 @@ Dijkstra's greedy step assumes that **once a vertex is finalised, its distance c
 ```mermaid
 flowchart LR
     A((A)) -->|"1"| B((B))
-    A -->|"4"| C((C))
-    B -->|"-5"| C
+    A -->|"2"| C((C))
+    C -->|"-2"| B
 ```
-Dijkstra finalises **C = 4** immediately (it is the smallest available after A → B = 1... actually B = 1 is smaller, but the greedy order still finalises C at 4 before exploring B's negative edge in the general case). The true answer is **A → B → C = 1 + (−5) = −4**. Dijkstra reports 4. **Use Bellman-Ford when negative edges exist.**
+
+**Trace:** from A, Dijkstra sets `B = 1` and `C = 2`. It then extracts the smallest, **B = 1**, and **finalises** it. Only later does it extract C (= 2) and discover the edge C → B of weight −2, which would give `B = 2 + (−2) = 0`.
+
+But B is already finalised, so Dijkstra never updates it and **reports B = 1**, while the true shortest distance is **A → C → B = 2 − 2 = 0**.
+
+**Conclusion: use Bellman-Ford whenever negative edges are possible.**
 
 **Previous Year Question List from this Topic:**
 
