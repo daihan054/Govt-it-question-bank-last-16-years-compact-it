@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 2 subtopics · 7 theories
+**Table of Contents** — 3 subtopics · 10 theories
 
 1. **[Cloud Service Models](#cloud-service-models)**
    - [Cloud Computing — Definition, Characteristics and Deployment Models](#cloud-computing--definition-characteristics-and-deployment-models)
@@ -11,6 +11,11 @@
    - [Virtual Machines and Hypervisors](#virtual-machines-and-hypervisors)
    - [Containers and Docker](#containers-and-docker)
    - [VM vs Container — Comparison and When to Use Which](#vm-vs-container--comparison-and-when-to-use-which)
+
+3. **[Cloud Storage & Fundamentals](#cloud-storage--fundamentals)**
+   - [Cloud Storage vs Traditional Storage](#cloud-storage-vs-traditional-storage)
+   - [Types of Cloud Storage](#types-of-cloud-storage)
+   - [Cloud Databases (DBaaS)](#cloud-databases-dbaas)
 
 <!-- TOC END -->
 
@@ -689,3 +694,167 @@ This is exactly how real clouds are built: **VMs provide the hard tenant boundar
 - [VM vs Container in Submarine Cable Network: (BSCCPL AME 21-08-2026 (BUET)) A national submarine cable landing station provides international connectivity to sev…](../written-answers/cloud-computing.md?plain=1#L323)
 - [What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?](../written-answers/cloud-computing.md?plain=1#L454)
 - [High-Availability Design: (BSCCPL AME 21-08-2026 (BUET)) A submarine cable operator wants to ensure that a DNS service remains available even if one physical se…](../written-answers/cloud-computing.md?plain=1#L983)
+
+## Cloud Storage & Fundamentals
+
+### Cloud Storage vs Traditional Storage
+
+**Cloud storage** is a service model in which data is **stored on remote servers managed by a provider** and accessed over the internet, while **traditional (on-premises / local) storage** keeps data on **physical devices you own** — hard disks, servers, NAS boxes, tape.
+
+```mermaid
+flowchart LR
+    subgraph TRAD["Traditional Storage"]
+        U1["User"] --> L1["Local PC / Server<br/>HDD, SSD, NAS, SAN"]
+        L1 --> B1["Manual backup to tape / external disk"]
+    end
+    subgraph CLOUD["Cloud Storage"]
+        U2["User"] -->|Internet| P["Provider's data centres"]
+        P --> D1["Copy in Region 1"]
+        P --> D2["Copy in Region 2"]
+        P --> D3["Copy in Region 3"]
+    end
+```
+
+#### The comparison
+
+| Point | **Traditional / On-Premises Storage** | **Cloud Storage** |
+|---|---|---|
+| **Location** | On your own premises | In the **provider's data centres** |
+| **Ownership** | **You own** the hardware | The **provider** owns it; you rent capacity |
+| **Access** | Usually **only on the local network** | From **anywhere with internet** |
+| **Upfront cost (CAPEX)** | **High** — buy disks, servers, racks | **None** |
+| **Ongoing cost (OPEX)** | Power, cooling, space, staff | **Monthly subscription / pay-per-GB** |
+| **Scalability** | **Limited** — buy and install more hardware (weeks) | **Virtually unlimited**, expand in seconds |
+| **Maintenance** | **Your** responsibility — repairs, upgrades, patches | **Provider's** responsibility |
+| **Backup / disaster recovery** | Manual, and you must build it | **Built in** — automatic replication across regions |
+| **Reliability** | A disk failure can mean data loss | **Very high** — data replicated 3+ times (e.g. 99.999999999 % durability) |
+| **Speed** | **Faster** — LAN speed, no internet hop | Depends on **internet bandwidth and latency** |
+| **Security control** | **Full physical control** | Shared responsibility; you trust the provider |
+| **Internet dependency** | **None** — works offline | **Total** — no internet, no data |
+| **Compliance / data sovereignty** | Easy — data never leaves the building | May be an issue if data crosses borders |
+| **Collaboration** | Difficult | **Easy** — share a link, work simultaneously |
+| **Examples** | Internal file server, NAS, SAN, external HDD, tape | **Google Drive, Dropbox, Amazon S3, Azure Blob, OneDrive** |
+
+#### When to choose which
+
+| Situation | Choice |
+|---|---|
+| Highly sensitive data with strict legal residency rules | **Traditional / private storage** |
+| Very large, constantly accessed datasets with predictable size | Traditional (cheaper at steady scale) |
+| Unpredictable or rapidly growing data | **Cloud** |
+| Distributed or remote teams | **Cloud** |
+| Backup and disaster recovery | **Cloud** (or hybrid) |
+| Poor or unreliable internet connectivity | **Traditional** |
+| Startup with no capital budget | **Cloud** |
+| **Most real organisations** | **Hybrid** — hot/sensitive data on-premises, backups and archives in the cloud |
+
+**Previous Year Question List from this Topic:**
+
+- [What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage.](../written-answers/cloud-computing.md?plain=1#L545)
+
+
+---
+
+### Types of Cloud Storage
+
+| Type | How data is organised | Access method | Best for | Examples |
+|---|---|---|---|---|
+| **Object storage** | Flat pool of **objects**, each with data + metadata + a unique ID | **HTTP REST API** | Photos, videos, backups, logs, static websites, data lakes | **Amazon S3**, Azure Blob, Google Cloud Storage |
+| **Block storage** | Raw **blocks**, like a virtual hard disk attached to a VM | Mounted as a **disk volume** | **Databases**, operating systems, transactional workloads needing low latency | **Amazon EBS**, Azure Disk, Google Persistent Disk |
+| **File storage** | A traditional **hierarchy of folders and files** | **NFS / SMB** network share | Shared drives, content management, legacy applications | Amazon EFS, Azure Files, NAS |
+
+#### Storage tiers — controlling cost
+
+Cloud providers price storage by **how often you read it**:
+
+| Tier | Access frequency | Cost per GB | Retrieval | Use |
+|---|---|---|---|---|
+| **Hot / Standard** | Frequent | Highest | Instant | Active application data |
+| **Cool / Infrequent access** | Monthly | Lower | Instant, with a retrieval fee | Backups, older logs |
+| **Archive / Glacier** | Rarely (yearly) | **Lowest** | **Minutes to hours** | Long-term legal/compliance archives |
+
+**Lifecycle policies** move data down the tiers automatically (e.g. "after 90 days move to Cool, after 1 year move to Archive") — one of the most effective cloud cost-saving techniques.
+
+#### Key cloud-storage concepts
+
+| Concept | Meaning |
+|---|---|
+| **Durability** | The probability data is **not lost** — S3 advertises **99.999999999 % ("11 nines")**, achieved by keeping 3+ copies across separate facilities |
+| **Availability** | The percentage of time the data is **reachable** — typically 99.9 %–99.99 % |
+| **Replication** | Copies kept in different **availability zones** or **regions** |
+| **Versioning** | Every overwrite keeps the old version — protects against accidental deletion and ransomware |
+| **Encryption** | **At rest** (on disk) and **in transit** (TLS) |
+| **Egress cost** | Uploading is usually free; **downloading is charged** — a frequent hidden cost |
+| **CDN** | A content delivery network caches objects near users for speed |
+
+**Previous Year Question List from this Topic:**
+
+- [What is cloud computing? Why is it used? State the difference between cloud storage and traditional storage.](../written-answers/cloud-computing.md?plain=1#L545)
+- [Describe the cloud base database briefly.](../written-answers/cloud-computing.md?plain=1#L665)
+
+
+---
+
+### Cloud Databases (DBaaS)
+
+A **cloud database** is a database that **runs on cloud infrastructure and is accessed as a service**, with the provider handling installation, patching, backup, replication and scaling.
+
+This is often called **DBaaS — Database as a Service**, and it is a form of **PaaS**.
+
+#### Two ways to run a database in the cloud
+
+| Approach | Description | You manage | Example |
+|---|---|---|---|
+| **Self-managed on a VM** | Install MySQL/PostgreSQL yourself on an IaaS virtual machine | OS, DB software, patches, backups, replication, tuning | MySQL on an AWS EC2 instance |
+| **Managed / DBaaS** ✅ | The provider runs the database engine for you | Only your **schema, queries and data** | **Amazon RDS, Azure SQL Database, Google Cloud SQL** |
+
+#### Types of cloud database
+
+| Type | Model | Examples |
+|---|---|---|
+| **Relational (SQL)** | Tables, rows, ACID transactions | Amazon **RDS** (MySQL, PostgreSQL, Oracle, SQL Server), **Aurora**, Azure SQL Database, Google Cloud SQL |
+| **NoSQL — Document** | JSON-like documents | **MongoDB Atlas**, Amazon DocumentDB, Azure Cosmos DB |
+| **NoSQL — Key-Value** | Simple key → value pairs, very fast | **Amazon DynamoDB**, Redis, Azure Table Storage |
+| **NoSQL — Column-family** | Wide columns, huge write volume | **Apache Cassandra**, Google Bigtable, HBase |
+| **NoSQL — Graph** | Nodes and relationships | **Amazon Neptune**, Neo4j Aura |
+| **Data warehouse** | Analytical, columnar, huge scans | **Amazon Redshift**, **Google BigQuery**, Snowflake |
+| **In-memory cache** | Sub-millisecond reads | **Amazon ElastiCache** (Redis / Memcached) |
+
+#### Advantages of a cloud database
+
+1. **No installation or hardware** — provisioned in minutes.
+2. **Automatic backups** and **point-in-time recovery**.
+3. **Automatic patching** of the database engine and OS.
+4. **High availability** — automatic failover to a standby replica in another zone.
+5. **Easy scaling** — resize the instance, or add **read replicas** for read-heavy traffic.
+6. **Pay for what you use**; some options scale to zero.
+7. **Built-in monitoring**, slow-query logs and performance insights.
+8. **Global reach** — put replicas near the users.
+9. **Security features** included — encryption at rest and in transit, IAM access control, network isolation, audit logging.
+
+#### Disadvantages and concerns
+
+1. **Less control** — you cannot always tune the OS, install arbitrary extensions, or choose the exact engine build.
+2. **Vendor lock-in**, especially with proprietary engines (Aurora, DynamoDB, BigQuery).
+3. **Network latency** if the application is not in the same region.
+4. **Cost can grow** quickly with storage, IOPS, backups and cross-region traffic.
+5. **Data sovereignty and compliance** — regulators may require the data to stay in-country.
+6. **Noisy-neighbour effects** on shared tiers.
+7. **Limited root/superuser access** for deep troubleshooting.
+
+#### Choosing a cloud database
+
+```mermaid
+flowchart TD
+    A{Is the data structured<br/>with relationships<br/>and transactions?} -->|Yes| B["Relational — RDS / Aurora / Azure SQL"]
+    A -->|No| C{What is the access pattern?}
+    C -->|"Flexible documents"| D["Document — MongoDB Atlas / Cosmos DB"]
+    C -->|"Simple key lookups, huge scale"| E["Key-Value — DynamoDB / Redis"]
+    C -->|"Massive writes, time-series"| F["Column-family — Cassandra / Bigtable"]
+    C -->|"Relationships & networks"| G["Graph — Neptune / Neo4j"]
+    C -->|"Analytics over billions of rows"| H["Warehouse — Redshift / BigQuery / Snowflake"]
+```
+
+**Previous Year Question List from this Topic:**
+
+- [Describe the cloud base database briefly.](../written-answers/cloud-computing.md?plain=1#L665)
