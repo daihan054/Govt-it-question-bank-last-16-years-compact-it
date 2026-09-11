@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 28 theories
+**Table of Contents** — 15 subtopics · 32 theories
 
 1. **[Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks)**
    - [Social Engineering — Techniques and Prevention](#social-engineering--techniques-and-prevention)
@@ -52,6 +52,16 @@
 
 12. **[Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios)**
    - [Designing a Secure Transmission Protocol](#designing-a-secure-transmission-protocol)
+
+13. **[Cryptography & Network Security](#cryptography--network-security)**
+   - [Banking Security — Key Measures in a Modern Bank](#banking-security--key-measures-in-a-modern-bank)
+   - [Firewall Types — WPA vs a Network Firewall](#firewall-types--wpa-vs-a-network-firewall)
+
+14. **[Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing)**
+   - [Email Security — Spam, Phishing and Protection](#email-security--spam-phishing-and-protection)
+
+15. **[Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities)**
+   - [Buffer Overflow Attack](#buffer-overflow-attack)
 
 <!-- TOC END -->
 
@@ -3281,3 +3291,346 @@ For each message:
 - [Imagine yu should design a secure transmission protocol for sending data from one node to another node. You should divide the message in the multiple packets an…](../written-answers/computer-network-security.md?plain=1#L5631)
 - [As a programmer when you release a software What security should you check before release your software.](../written-answers/computer-network-security.md?plain=1#L4292)
 - [Your bank wants to secure an e-banking online system and wants to configure a web server in your data center. What kind of tools and technology do you use for t…](../written-answers/computer-network-security.md?plain=1#L3283)
+
+## Cryptography & Network Security
+
+### Banking Security — Key Measures in a Modern Bank
+
+*(A recurring Focus-Writing and long-answer topic: "Banking Security", "Technology and the Banking Sector of Bangladesh".)*
+
+Banks are the **most attacked organisations in the world**, because — as the bank robber Willie Sutton is said to have replied when asked why he robbed banks — *"that's where the money is."* A modern bank's security is built in **layers**, covering people, process and technology.
+
+#### The threat landscape for a bank
+
+| Threat | Description |
+|---|---|
+| **Phishing and social engineering** targeting customers and staff | The commonest entry point |
+| **Banking trojans and malware** (Zeus, Emotet) | Steal credentials from the customer's own device |
+| **Ransomware** | Can halt the entire bank |
+| **ATM attacks** | **Skimming**, cash-out/jackpotting, card trapping |
+| **SWIFT / payment-system fraud** | The **Bangladesh Bank heist of February 2016**, in which attackers used fraudulent SWIFT instructions to steal **US$81 million** |
+| **Insider fraud** | Staff misusing legitimate access |
+| **DDoS** | Often a smokescreen for a simultaneous fraud |
+| **Card fraud** | Cloning, CNP (card-not-present) fraud, BIN attacks |
+| **MFS fraud** | bKash/Nagad OTP scams, agent fraud, SIM swap |
+| **Web and mobile app vulnerabilities** | SQL injection, insecure APIs |
+| **Third-party / supply-chain compromise** | Through a vendor's access |
+
+#### The key security measures
+
+**1. Customer authentication**
+- **Multi-factor authentication** on internet and mobile banking — password + **OTP**, or biometric.
+- **Transaction PIN or a second OTP** for fund transfers and beneficiary addition.
+- **Device binding** and **risk-based/adaptive authentication** (a new device or a new country triggers extra checks).
+- **e-KYC with NID verification** and liveness detection at onboarding.
+- Automatic **SMS/email alert on every transaction** — the customer is the fastest fraud detector.
+
+**2. Encryption and data protection**
+- **TLS 1.2/1.3** on every channel; **certificate pinning** in the mobile app.
+- **End-to-end encryption of PIN blocks**; PINs are handled only inside **HSMs** and are never stored.
+- **Encryption at rest** for the database (TDE) and backups.
+- **Tokenisation** of card numbers so the real PAN is never stored in the application.
+- **PCI-DSS compliance** for all cardholder data.
+
+**3. Network and infrastructure security**
+- **Segmentation** — core banking, card systems, ATM network, SWIFT and the corporate LAN are **separate zones**; SWIFT in particular must be an isolated, tightly controlled environment.
+- **NGFW, IPS, WAF, anti-DDoS**, and a **DMZ** for all public-facing services.
+- **Hardened, patched servers**; secure configuration baselines.
+- **Redundancy and a DR site** with tested failover.
+
+**4. Fraud detection and monitoring**
+- **Real-time transaction monitoring** with rules and **machine-learning anomaly detection** — unusual amount, location, time, velocity or beneficiary.
+- **AML/CFT screening** against sanction lists and suspicious-pattern rules.
+- **24×7 SOC** with a **SIEM** correlating logs from every system.
+- **Card velocity checks** and geo-blocking.
+
+**5. Access control and insider-risk management**
+- **Least privilege** and **role-based access**; annual access reviews.
+- **Maker-checker (dual control)** on every financial entry — the person who creates a transaction can never be the one who approves it.
+- **Privileged Access Management** with session recording for administrators.
+- **Mandatory leave and job rotation** in sensitive roles.
+- **Complete, immutable audit trails**.
+
+**6. Physical and ATM security**
+- CCTV, access control and alarms at branches, ATMs and the data centre.
+- **Anti-skimming devices**, PIN shields, and tamper alarms on ATMs.
+- **Hardened ATM operating systems**, application whitelisting, and full-disk encryption.
+
+**7. Application security**
+- **Secure SDLC** — threat modelling, secure coding standards, **SAST/DAST**, dependency scanning.
+- **Penetration testing** of internet and mobile banking before every major release.
+- **Secure API gateway** for open banking and partner integration.
+
+**8. People and governance**
+- **Continuous staff training** and simulated phishing.
+- **Customer awareness campaigns** — "the bank will never ask for your OTP".
+- A **CISO** and an independent information-security function.
+- **Incident response and business continuity plans**, rehearsed.
+- **Vendor risk management** and contractual security obligations.
+- Compliance with the **Bangladesh Bank ICT Security Guideline**, ISO 27001 and PCI-DSS, with regular **internal and external audit**.
+
+> **The lesson of the 2016 Bangladesh Bank heist**, worth citing in any such answer: the attackers succeeded not through one exotic exploit but through an accumulation of basic failures — a **flat network with the SWIFT terminal insufficiently isolated**, **weak monitoring** that let malware sit undetected for weeks, and **printer manipulation** that suppressed the confirmation messages that would have revealed the theft. **Security failures are almost always failures of fundamentals and of process — not of cryptography.**
+
+**Previous Year Question List from this Topic:**
+
+- [Focus Witting: Banking Security (English) (Discuss the key security measures used in modern banking applications to protect customer data and prevent fraud.)](../written-answers/computer-network-security.md?plain=1#L4207)
+- [Role of computer on education system in Bangladesh.](../written-answers/computer-network-security.md?plain=1#L4278)
+- [English: “50 years of bangladesh achievement and progress”](../written-answers/computer-network-security.md?plain=1#L4288)
+- [“Smart Bangladesh” সংক্ষেপে আলোচনা করুন।](../written-answers/computer-network-security.md?plain=1#L4304)
+- [Focus Writing in English “Technology and Banking Sector of Bangladesh”](../written-answers/computer-network-security.md?plain=1#L4325)
+- [Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps w…](../written-answers/computer-network-security.md?plain=1#L250)
+
+
+### Firewall Types — WPA vs a Network Firewall
+
+> *"Write the difference between a WPA firewall and a network firewall."*
+
+The question mixes two different things, and the correct answer begins by **clarifying that WPA is not a firewall at all**.
+
+| Point | **WPA / WPA2 / WPA3** | **Network Firewall** |
+|---|---|---|
+| **What it actually is** | A **Wi-Fi ENCRYPTION and ACCESS-CONTROL protocol** — *Wi-Fi Protected Access*. **It is not a firewall** | A **traffic-filtering security device or software** |
+| **Purpose** | **Encrypt the wireless link** and authenticate devices joining the Wi-Fi network | **Filter traffic** entering or leaving a network based on rules |
+| **Layer** | **Data Link (Layer 2)** — the wireless link itself | **Network/Transport (3–4)**, or up to **Layer 7** for an NGFW |
+| **Scope** | **Only the wireless segment**, between the device and the access point | **The whole network boundary**, wired and wireless |
+| **Protects against** | Wireless eavesdropping, unauthorised devices joining the Wi-Fi, evil-twin attacks (WPA3) | Unauthorised access, port scanning, malicious traffic, data exfiltration |
+| **Once traffic is past it** | WPA's protection **ENDS at the access point** — beyond that the traffic is unencrypted on the wired LAN | The firewall inspects the traffic wherever it is placed |
+| **Encryption** | ✅ **Yes — that is its main job** (AES-CCMP in WPA2, SAE + GCMP in WPA3) | ❌ Not normally (a VPN gateway does that) |
+| **Versions / types** | WEP (broken) → WPA (TKIP) → **WPA2 (AES)** → **WPA3 (current)** | Packet filter, stateful, proxy, **NGFW**, WAF |
+| **Analogy** | A **sealed, locked tunnel** from your laptop to the Wi-Fi router | The **security checkpoint** at the building entrance |
+
+> **The key point: they are complementary, not alternatives.** WPA3 stops an outsider sitting in the car park from reading your Wi-Fi traffic or joining the network. It does **nothing** to stop an attacker on the Internet from scanning your servers, or a compromised internal laptop from exfiltrating data — that is the firewall's job. A secure wireless network needs **WPA3 encryption, a firewall between the wireless VLAN and the internal network, and 802.1X authentication**.
+
+**Securing a wireless network — the complete answer:**
+1. Use **WPA3** (or **WPA2-AES** at minimum); **never WEP or WPA-TKIP**.
+2. For an organisation, use **WPA2/3-Enterprise with 802.1X and RADIUS**, so each user authenticates individually rather than sharing one pre-shared key.
+3. A **long, random passphrase** if PSK must be used, changed when staff leave.
+4. **Change default** router/AP administrator credentials; keep firmware **patched**.
+5. **Disable WPS** — it is brute-forceable.
+6. **Segment** the wireless network onto its own **VLAN**, behind a firewall, with a separate **guest network** isolated from internal resources.
+7. **Disable SSID broadcast obscurity as a security measure** — it is not one; rely on encryption instead.
+8. Enable **MAC filtering** as a minor extra hurdle (easily spoofed — not a real control).
+9. Reduce **transmit power** so the signal does not spill outside the building.
+10. **Monitor for rogue access points and evil twins** with a wireless IDS.
+11. Require a **VPN** for access to sensitive internal systems over Wi-Fi.
+
+**Previous Year Question List from this Topic:**
+
+- [Write the difference between WPA firewall and Network Firewall.](../written-answers/computer-network-security.md?plain=1#L4313)
+- [Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps w…](../written-answers/computer-network-security.md?plain=1#L250)
+
+
+---
+
+## Email & Messaging Security (Spam, Phishing)
+
+### Email Security — Spam, Phishing and Protection
+
+#### What is email?
+
+**Email (electronic mail)** is a method of exchanging **digital messages between people over a computer network**. It is the **oldest and still the most widely used** Internet application — and, precisely because it is universal and trusted, it is the **number one delivery channel for cyber attacks**.
+
+**The protocols involved:**
+
+| Protocol | Port | Function |
+|---|---|---|
+| **SMTP** — Simple Mail Transfer Protocol | 25 / **587** (submission) / 465 (SMTPS) | **SENDING** mail |
+| **POP3** — Post Office Protocol v3 | 110 / **995** (secure) | **DOWNLOADING** mail — traditionally deletes it from the server |
+| **IMAP** — Internet Message Access Protocol | 143 / **993** (secure) | **ACCESSING** mail, kept synchronised **on the server** across devices |
+| **MIME** | — | **Multipurpose Internet Mail Extensions** — allows attachments, images and non-ASCII text in email |
+
+#### Spam
+
+> **Spam is UNSOLICITED BULK EMAIL** — unwanted messages sent indiscriminately to large numbers of recipients, usually for advertising, fraud or malware distribution. It is also called **junk mail**.
+>
+> *(The direct answer to "unsolicited email is called ___" is **SPAM**.)*
+
+**Why spam is a security problem, not just a nuisance:** it consumes **bandwidth, storage and staff time**; it is the **primary vehicle for phishing, malware and ransomware**; it can constitute a **denial of service** by flooding a mailbox; and it trains users to click without thinking.
+
+#### Email-borne threats
+
+| Threat | Description |
+|---|---|
+| **Spam** | Unsolicited bulk mail |
+| **Phishing / Spear phishing / Whaling** | Fraudulent messages harvesting credentials |
+| **Malware attachments** | `.exe`, `.zip`, macro-enabled `.docm`/`.xlsm` files carrying ransomware or trojans |
+| **Malicious links** | Leading to exploit kits or credential-harvesting pages |
+| **Email spoofing** | Forging the `From:` address so the mail appears to come from the CEO or the bank |
+| **Business Email Compromise (BEC)** | Impersonating an executive or supplier to redirect a payment — **the highest-value email fraud by far** |
+| **Email bombing** | Flooding an address to cause a DoS or to bury a genuine alert |
+| **Eavesdropping** | Plain SMTP is unencrypted; mail can be read in transit |
+| **Account takeover** | Through a weak or reused password |
+
+> **"If you download the email, what attack will you face?"** — downloading and opening an attachment or an embedded image from an untrusted email exposes you to a **malware / ransomware infection** (from the attachment), a **phishing** attack (from the links), and **tracking pixels** that confirm your address is live and actively read — which leads to more targeted attacks.
+
+#### Protecting against unwanted and dangerous email
+
+**Technical controls (for the organisation)**
+1. **A secure email gateway** with **anti-spam and anti-malware** filtering and reputation checking.
+2. **SPF (Sender Policy Framework)** — publishes in DNS which servers are authorised to send mail for your domain.
+3. **DKIM (DomainKeys Identified Mail)** — **digitally signs** outgoing mail so the recipient can verify it was not altered and really came from your domain.
+4. **DMARC** — ties SPF and DKIM together, tells receivers what to do with failures (reject/quarantine), and provides **reporting**. Together these three **stop attackers spoofing your domain** — the single most effective anti-phishing measure an organisation can deploy.
+5. **Attachment sandboxing** — detonate attachments in an isolated environment before delivery.
+6. **URL rewriting and time-of-click protection** — check links at the moment the user clicks, not just at delivery.
+7. **Block dangerous attachment types** (`.exe`, `.scr`, `.js`, `.vbs`) and **disable Office macros** by policy.
+8. **Encrypt mail in transit (TLS)** and, for sensitive content, **end-to-end with S/MIME or PGP**.
+9. **Visual banners on external email** — a simple, remarkably effective warning.
+10. **MFA on all mailboxes**, and alerts on mailbox rule changes (attackers create forwarding rules).
+11. **DLP** to stop sensitive data leaving by email.
+
+**User practices**
+12. **Never open unexpected attachments**, even from a known sender — their account may be compromised.
+13. **Hover over links** to see the real destination before clicking.
+14. **Verify payment-change requests by phone**, on a known number — this alone defeats most BEC fraud.
+15. **Do not reply to spam or click "unsubscribe"** in a clearly fraudulent message — it confirms your address is live.
+16. **Never publish your address publicly** in plain form; use a **secondary address** for sign-ups.
+17. Use the **"Report Spam / Report Phishing"** button, which also improves the filter.
+18. **Use a strong unique password + MFA** on the mail account.
+19. **Be sceptical of urgency** — every phishing email creates artificial time pressure.
+20. **Keep the mail client and OS patched.**
+
+#### POP3 vs IMAP
+
+| Point | **POP3** | **IMAP** |
+|---|---|---|
+| **Mail stored on** | **The local device** (downloaded and usually deleted from the server) | **The server** — the client shows a synchronised view |
+| **Multiple devices** | ❌ Poor — mail downloaded to the PC is not on the phone | ✅ **Excellent** — perfectly synchronised everywhere |
+| **Server storage used** | Minimal | High |
+| **Works offline** | ✅ Fully | Partly (with local caching) |
+| **Folder synchronisation** | ❌ No | ✅ Yes |
+| **Port** | 110 / **995 (SSL)** | 143 / **993 (SSL)** |
+| **Best for** | A single device, limited server quota | **Modern multi-device use — the default today** |
+
+**Previous Year Question List from this Topic:**
+
+- [Unsoliciated email is called?](../written-answers/computer-network-security.md?plain=1#L5693)
+- [If you downloaded the email, you will be able to face the problem. Which attack do you face?](../written-answers/computer-network-security.md?plain=1#L5715)
+- [e) What is email? What precautions can be taken to prevent unnecessary and unwanted e-mails?](../written-answers/computer-network-security.md?plain=1#L5742)
+
+
+---
+
+## Buffer Overflow & Software Vulnerabilities
+
+### Buffer Overflow Attack
+
+A **buffer overflow** occurs when a program **writes more data into a buffer (a fixed-size block of memory) than the buffer can hold**, so the excess data **overflows into adjacent memory locations**, corrupting or overwriting whatever was there.
+
+> **The root cause:** languages such as **C and C++ perform NO automatic bounds checking**. If you declare `char buffer[10]` and write 50 bytes into it, the language happily writes all 50 — the extra 40 simply land in whatever memory follows.
+
+#### The stack layout — why this is dangerous
+
+```mermaid
+flowchart TD
+    subgraph STACK["Stack frame of a function (grows downward)"]
+        A["Local buffer<br/>char buffer[10]"]
+        B["Other local variables"]
+        C["Saved frame pointer (EBP)"]
+        D["🎯 RETURN ADDRESS<br/>— where to jump when the function ends"]
+        E["Function arguments"]
+    end
+    A -->|"overflow writes<br/>DOWNWARD past the buffer"| B
+    B --> C
+    C --> D
+```
+
+When a function is called, the CPU pushes the **return address** onto the stack so it knows where to resume afterwards. A local buffer sits **below** that return address. **If the attacker writes past the end of the buffer, they eventually overwrite the RETURN ADDRESS** — and can point it wherever they like.
+
+#### A worked example
+
+**The vulnerable code:**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+void vulnerable(char *input) {
+    char buffer[10];              /* only 10 bytes reserved */
+    strcpy(buffer, input);        /* ❌ strcpy does NO length check */
+    printf("You entered: %s\n", buffer);
+}
+
+int main(int argc, char *argv[]) {
+    vulnerable(argv[1]);
+    return 0;
+}
+```
+
+**Normal input:**
+```
+$ ./prog "Hello"
+You entered: Hello                     ← 5 bytes into a 10-byte buffer. Fine.
+```
+
+**Overflow input:**
+```
+$ ./prog "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+Segmentation fault (core dumped)       ← the return address has been
+                                          overwritten with 0x41414141 ('AAAA'),
+                                          and the CPU jumped to an invalid address
+```
+
+**The memory picture:**
+
+| Address (conceptual) | Before | After a 36-byte input |
+|---|---|---|
+| `buffer[0..9]` | `Hello\0` + unused | `AAAAAAAAAA` |
+| Other locals | valid data | `AAAAAAAA` **← corrupted** |
+| Saved EBP | valid pointer | `AAAA` **← corrupted** |
+| **Return address** | `0x08048456` (back to `main`) | **`0x41414141`** ← **the attacker controls where the CPU jumps** |
+
+#### From a crash to code execution
+
+A crash is merely a **denial of service**. A real attack goes further:
+
+1. The attacker constructs a payload: **[NOP sled][shellcode][padding][a return address pointing back into the NOP sled]**.
+2. The overflow places the **shellcode** (machine code that, for example, opens a shell) into the buffer.
+3. The overwritten **return address** points back into the buffer.
+4. When the function returns, the CPU **jumps into the attacker's shellcode and executes it** — with the privileges of the running program.
+5. If the program runs as **root/Administrator**, the attacker now has **full control of the machine**.
+
+#### Types of buffer overflow
+
+| Type | Location | Note |
+|---|---|---|
+| **Stack overflow** | The call stack | The classic; overwrites the return address |
+| **Heap overflow** | Dynamically allocated memory | Overwrites heap metadata or function pointers |
+| **Integer overflow → buffer overflow** | An arithmetic wrap-around produces a tiny allocation size | A common root cause |
+| **Format string** | `printf(userInput)` instead of `printf("%s", userInput)` | Allows arbitrary memory read and write |
+| **Off-by-one** | Writing one byte past the end | Enough to corrupt the saved frame pointer |
+
+#### Historic impact
+
+**The Morris Worm (1988)** — the first internet worm — spread using a buffer overflow in the `fingerd` daemon. **Code Red**, **SQL Slammer**, **Blaster** and the **EternalBlue/WannaCry** chain all exploited memory-corruption flaws. Buffer overflows dominated the vulnerability landscape for two decades and remain a leading cause of critical CVEs in C/C++ software today.
+
+#### Prevention — the complete answer
+
+**At the code level**
+1. **Use safe library functions** — `strncpy`, `snprintf`, `strncat`, `fgets` — **never** `strcpy`, `sprintf`, `strcat`, `gets`. **`gets()` has been removed from the C standard** because it cannot be used safely.
+2. **Always validate and bound-check input length** before copying.
+3. Use the **buffer size**, never a hard-coded number: `strncpy(buf, src, sizeof(buf) - 1); buf[sizeof(buf)-1] = '\0';`
+4. Prefer **safer data types** — C++ `std::string` and `std::vector` manage their own memory.
+5. Use a **memory-safe language** where possible — **Java, C#, Python, Go, Rust**. Rust in particular gives C-level performance with compile-time memory safety, which is why it is being adopted for new system software.
+
+**At the compiler level**
+6. **Stack canaries (`-fstack-protector`)** — a random value is placed just before the return address and checked before returning; if it has changed, the program aborts.
+7. **FORTIFY_SOURCE** — the compiler replaces unsafe calls with length-checked versions where the size is known.
+8. Compile with **`-Wall -Wextra -Werror`** and fix every warning.
+
+**At the operating-system level**
+9. **ASLR (Address Space Layout Randomisation)** — randomises memory addresses on every run, so the attacker cannot predict where to jump.
+10. **DEP / NX bit (Data Execution Prevention)** — marks the stack and heap as **non-executable**, so injected shellcode cannot run.
+11. **Control Flow Integrity (CFI)** and shadow stacks in modern compilers and CPUs.
+
+**At the process level**
+12. **Static analysis (SAST)** and **fuzzing** — fuzzing in particular is extremely effective at finding overflows.
+13. **Dynamic analysis** with **AddressSanitizer** and **Valgrind** during testing.
+14. **Code review** of all memory-handling code.
+15. **Run services with least privilege**, so a successful exploit gains little.
+16. **Patch promptly** — most real-world exploitation targets known, already-patched flaws.
+
+> **The defence-in-depth point worth making:** no single mitigation is sufficient. Stack canaries, ASLR and DEP each raise the difficulty substantially, and together they make exploitation very hard — but attackers respond with techniques such as **Return-Oriented Programming (ROP)**, which reuses existing executable code instead of injecting new code. **The only complete fix is to write memory-safe code in the first place.**
+
+**Previous Year Question List from this Topic:**
+
+- [Explain buffer overflow attack with an example.](../written-answers/computer-network-security.md?plain=1#L5776)
