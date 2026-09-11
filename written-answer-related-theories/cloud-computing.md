@@ -1,10 +1,16 @@
 <!-- TOC START -->
-**Table of Contents** — 1 subtopics · 3 theories
+**Table of Contents** — 2 subtopics · 7 theories
 
 1. **[Cloud Service Models](#cloud-service-models)**
    - [Cloud Computing — Definition, Characteristics and Deployment Models](#cloud-computing--definition-characteristics-and-deployment-models)
    - [IaaS, PaaS and SaaS — The Three Service Models](#iaas-paas-and-saas--the-three-service-models)
    - [Multi-Tenancy in the Cloud](#multi-tenancy-in-the-cloud)
+
+2. **[Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container)**
+   - [Virtualization — Concept, Types and Benefits](#virtualization--concept-types-and-benefits)
+   - [Virtual Machines and Hypervisors](#virtual-machines-and-hypervisors)
+   - [Containers and Docker](#containers-and-docker)
+   - [VM vs Container — Comparison and When to Use Which](#vm-vs-container--comparison-and-when-to-use-which)
 
 <!-- TOC END -->
 
@@ -330,3 +336,356 @@ For a platform where **many vendors** each run their own shop:
 
 - [What is SaaS and multi-tenant architecture? How are they related? What are the advantages and disadvantages of multi-tenancy? For a multi-vendor e-commerce appl…](../written-answers/cloud-computing.md?plain=1#L61)
 - [What do you mean by multi-tenancy in the cloud? Why is it beneficial for cloud service providers?](../written-answers/cloud-computing.md?plain=1#L179)
+
+## Virtualization & Containers (VM vs Container)
+
+### Virtualization — Concept, Types and Benefits
+
+**Virtualization** is the technology that creates a **virtual (software-based) version** of a physical resource — a server, an operating system, storage, or a network — so that **one physical machine can behave like several independent machines**.
+
+It is the **foundation technology of cloud computing**: without virtualization there would be no cloud.
+
+```mermaid
+flowchart TD
+    subgraph BEFORE["Before virtualization — 1 server, 1 application"]
+        A1["App A"] --> O1["OS"] --> H1["Physical Server 1<br/>(10 % utilised)"]
+        A2["App B"] --> O2["OS"] --> H2["Physical Server 2<br/>(15 % utilised)"]
+        A3["App C"] --> O3["OS"] --> H3["Physical Server 3<br/>(8 % utilised)"]
+    end
+    subgraph AFTER["After virtualization — 1 server, many VMs"]
+        V1["App A + Guest OS"] --> HY
+        V2["App B + Guest OS"] --> HY
+        V3["App C + Guest OS"] --> HY
+        HY["Hypervisor"] --> PH["ONE Physical Server<br/>(75 % utilised)"]
+    end
+```
+
+#### How it helps a physical server
+
+Before virtualization, most servers ran a **single application** and sat at **5–15 % utilisation** — enormous waste of hardware, rack space, power and cooling. Virtualization lets **one physical server host 10–30 virtual machines**, pushing utilisation to 60–80 %. This is called **server consolidation** and it is the main reason virtualization exists.
+
+#### Types of virtualization
+
+| Type | What is virtualised | Example |
+|---|---|---|
+| **Server virtualization** | One physical server → many virtual servers | VMware ESXi, Hyper-V |
+| **Desktop virtualization (VDI)** | Desktops run centrally, users connect remotely | Citrix, VMware Horizon |
+| **Storage virtualization** | Many physical disks appear as one pool | SAN, RAID, software-defined storage |
+| **Network virtualization** | Virtual switches, routers and networks | VLAN, VXLAN, SDN, NFV |
+| **Application virtualization** | An app runs without being installed on the OS | Microsoft App-V, Citrix XenApp |
+| **OS-level virtualization** | Isolated user spaces on one kernel | **Docker containers**, LXC |
+| **Data virtualization** | Many data sources appear as one | Data federation layers |
+
+#### Server virtualization explained with an example
+
+> **Example:** a bank has three separate physical servers — one for the web server, one for the mail server, one for a test system. Each costs money to buy, power, cool and maintain, and each sits mostly idle.
+>
+> With **server virtualization**, the bank buys **one powerful server** with 32 cores and 128 GB RAM, installs a **hypervisor (VMware ESXi)** on it, and creates **three virtual machines** — VM1 running Linux for the web server, VM2 running Windows Server for mail, VM3 running a test copy. Each VM believes it owns a complete computer, and they are fully isolated from one another. If the test VM crashes, the web server is unaffected. The bank has cut three machines to one, saving roughly two-thirds of its hardware and power cost.
+
+#### Benefits of virtualization
+
+1. **Server consolidation** — fewer physical machines, far higher utilisation.
+2. **Cost reduction** — less hardware, less rack space, less electricity and cooling.
+3. **Isolation** — one VM crashing or being compromised does not affect the others.
+4. **Rapid provisioning** — a new server in minutes from a template, instead of weeks.
+5. **Snapshots and rollback** — capture a VM's exact state and restore it instantly.
+6. **Easy backup and disaster recovery** — a VM is just a set of files that can be copied.
+7. **Live migration** — move a running VM to another host with no downtime (vMotion).
+8. **Hardware independence** — a VM can run on any compatible host.
+9. **Run multiple operating systems** on one machine (Linux and Windows together).
+10. **Ideal for testing and development** — safe sandboxes that can be thrown away.
+11. **High availability** — automatic restart of a VM on another host if one fails.
+12. **Green IT** — less hardware means a smaller carbon footprint.
+
+#### Top virtualization platforms
+
+| # | Platform | Vendor | Type |
+|---|---|---|---|
+| 1 | **VMware vSphere / ESXi** | VMware (Broadcom) | Type 1 — enterprise standard |
+| 2 | **Microsoft Hyper-V** | Microsoft | Type 1 |
+| 3 | **KVM** (Kernel-based Virtual Machine) | Open source / Linux | Type 1 |
+| 4 | **Citrix XenServer / Xen** | Citrix | Type 1 |
+| 5 | **Oracle VirtualBox** | Oracle | Type 2 — free, desktop |
+| 6 | **VMware Workstation / Fusion** | VMware | Type 2 — desktop |
+| 7 | **Proxmox VE** | Proxmox | Type 1, open source |
+
+**Previous Year Question List from this Topic:**
+
+- [What is Virtualization? Write down the benefits of Virtualization. Write down the top 5 virtual platform software.](../written-answers/cloud-computing.md?plain=1#L360)
+- [What is Server Virtualization? Explain with example of its.](../written-answers/cloud-computing.md?plain=1#L381)
+- [How virtualization help physical server.](../written-answers/cloud-computing.md?plain=1#L405)
+- [A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ G…](../written-answers/cloud-computing.md?plain=1#L944)
+
+
+---
+
+### Virtual Machines and Hypervisors
+
+#### What is a Virtual Machine?
+
+A **Virtual Machine (VM)** is a **software emulation of a complete physical computer**. It has its own **virtual CPU, RAM, disk, and network card**, and runs its **own full guest operating system**, completely isolated from the host and from other VMs.
+
+#### Architecture diagram
+
+```mermaid
+flowchart TD
+    subgraph VM1["Virtual Machine 1"]
+        A1["Application A"]
+        B1["Binaries / Libraries"]
+        C1["GUEST OS (Linux)"]
+    end
+    subgraph VM2["Virtual Machine 2"]
+        A2["Application B"]
+        B2["Binaries / Libraries"]
+        C2["GUEST OS (Windows)"]
+    end
+    subgraph VM3["Virtual Machine 3"]
+        A3["Application C"]
+        B3["Binaries / Libraries"]
+        C3["GUEST OS (Linux)"]
+    end
+    VM1 --> HYP["HYPERVISOR<br/>(Virtual Machine Monitor)"]
+    VM2 --> HYP
+    VM3 --> HYP
+    HYP --> HW["PHYSICAL HARDWARE<br/>CPU · RAM · Disk · Network"]
+```
+
+#### How a VM works
+
+1. The **hypervisor** sits between the hardware and the virtual machines.
+2. It **partitions the physical resources** — CPU cores, RAM, disk, network bandwidth — and allocates a slice to each VM.
+3. Each VM sees its slice as a **complete, private computer** and boots its own guest OS on it.
+4. When a guest OS issues a **privileged instruction** (I/O, memory management), the hypervisor **intercepts and translates** it into a safe operation on the real hardware.
+5. The hypervisor **schedules** the VMs onto the physical CPUs, much as an OS schedules processes.
+6. Each VM is stored on disk as a set of files (a **virtual disk image** plus a configuration file), which is what makes snapshots, cloning and migration so easy.
+
+#### Benefits of a VM
+
+- **Strong isolation** — a separate kernel per VM, so a compromise or crash stays contained.
+- **Run any OS** — Windows on Linux hardware, or the reverse.
+- **Full hardware-level security boundary.**
+- **Snapshot, clone and roll back** instantly.
+- **Live migration** between hosts with no downtime.
+- **Legacy support** — old applications keep running on old OS versions.
+
+#### Type 1 vs Type 2 Hypervisors
+
+A **hypervisor** (also called a **Virtual Machine Monitor, VMM**) is the software layer that creates and runs virtual machines.
+
+```mermaid
+flowchart TD
+    subgraph T1["TYPE 1 — Bare Metal"]
+        G1["Guest OS 1"] --> HV1["Hypervisor"]
+        G2["Guest OS 2"] --> HV1
+        HV1 --> HW1["Physical Hardware"]
+    end
+    subgraph T2["TYPE 2 — Hosted"]
+        G3["Guest OS 1"] --> HV2["Hypervisor (an application)"]
+        G4["Guest OS 2"] --> HV2
+        HV2 --> HOST["HOST Operating System"]
+        HOST --> HW2["Physical Hardware"]
+    end
+```
+
+**Type 1 — Bare-metal hypervisor**
+Installed **directly on the physical hardware**, with **no host operating system underneath**. The hypervisor *is* the operating system of the machine.
+
+**Type 2 — Hosted hypervisor**
+Installed **as an ordinary application on top of an existing operating system** (Windows, macOS, Linux). It requests resources from the host OS, which then talks to the hardware.
+
+| Point | **Type 1 (Bare Metal / Native)** | **Type 2 (Hosted)** |
+|---|---|---|
+| **Runs on** | **Directly on the hardware** | **On top of a host OS** |
+| **Host OS needed?** | ❌ No | ✅ Yes |
+| **Performance** | **Higher** — direct hardware access, no extra layer | **Lower** — an extra OS layer adds overhead |
+| **Security** | **Higher** — a much smaller attack surface | Lower — inherits every vulnerability of the host OS |
+| **Stability** | Higher | If the host OS crashes, **all VMs die** |
+| **Installation** | Complex — needs dedicated hardware | **Very easy** — install like any application |
+| **Cost** | Usually licensed, expensive | Often **free** |
+| **Resource overhead** | Minimal | Significant |
+| **Used in** | **Data centres, enterprise servers, cloud providers** | **Desktops, laptops, learning, testing** |
+| **Examples** | **VMware ESXi, Microsoft Hyper-V, Citrix XenServer, KVM, Proxmox** | **Oracle VirtualBox, VMware Workstation/Fusion, Parallels Desktop, QEMU** |
+
+> ### "What is a Type 2 hypervisor?"
+> A **Type 2 (hosted) hypervisor** is virtualization software that runs **as an application on top of a conventional host operating system**, rather than directly on the hardware. It obtains CPU, memory and I/O from the host OS and uses them to create virtual machines, each with its own guest OS. Because every instruction passes through the extra host-OS layer, it is **slower and less secure than a Type 1 hypervisor**, but it is **very easy to install and usually free** — which makes it the right choice for **personal computers, learning, development and testing**. Examples: **Oracle VirtualBox, VMware Workstation, Parallels Desktop**.
+
+**Previous Year Question List from this Topic:**
+
+- [Define a virtual machine with a neat diagram, explain the working of VM. What are the benefits of a VM?](../written-answers/cloud-computing.md?plain=1#L420)
+- [What is type 2 hypervisors in virtual machine?](../written-answers/cloud-computing.md?plain=1#L477)
+- [Explain Type 1 and Type 2 hypervisors in virtual machine operating system with figure.](../written-answers/cloud-computing.md?plain=1#L502)
+- [How virtualization help physical server.](../written-answers/cloud-computing.md?plain=1#L405)
+
+
+---
+
+### Containers and Docker
+
+#### What is a container?
+
+A **container** is a **lightweight, standalone, executable package** that bundles an application together with **everything it needs to run** — code, runtime, system libraries, and settings — but **shares the host operating system's kernel** instead of carrying its own.
+
+> **The shipping-container analogy:** before standard shipping containers, every cargo needed custom handling at every port. The standard container made cargo **portable** — any crane, any ship, any truck. Software containers do the same for applications: build once, run **anywhere** — laptop, test server, cloud — with identical behaviour.
+
+#### What is Docker?
+
+**Docker** is the most popular **containerization platform**. It provides the tools to **build, ship and run** containers.
+
+| Docker term | Meaning |
+|---|---|
+| **Dockerfile** | A text recipe describing how to build the image |
+| **Image** | A read-only template — the "class" |
+| **Container** | A running instance of an image — the "object" |
+| **Docker Engine** | The daemon that builds and runs containers |
+| **Docker Hub / Registry** | The online store of ready-made images |
+| **Docker Compose** | Defines and runs multi-container applications |
+| **Kubernetes (K8s)** | Orchestrates thousands of containers across many machines |
+
+**A minimal Dockerfile:**
+
+```dockerfile
+FROM node:18-alpine          # base image with the runtime
+WORKDIR /app
+COPY package*.json ./
+RUN npm install              # install dependencies INSIDE the image
+COPY . .
+EXPOSE 3000
+CMD ["node", "server.js"]    # what runs when the container starts
+```
+
+#### Container architecture
+
+```mermaid
+flowchart TD
+    subgraph C1["Container 1"]
+        AP1["App A"]
+        L1["Binaries / Libraries"]
+    end
+    subgraph C2["Container 2"]
+        AP2["App B"]
+        L2["Binaries / Libraries"]
+    end
+    subgraph C3["Container 3"]
+        AP3["App C"]
+        L3["Binaries / Libraries"]
+    end
+    C1 --> DE["CONTAINER ENGINE (Docker)"]
+    C2 --> DE
+    C3 --> DE
+    DE --> OS["HOST Operating System — ONE shared kernel"]
+    OS --> HW["Physical Hardware"]
+```
+
+**The crucial difference from a VM:** there is **no guest OS per container**. All containers **share the host kernel**, which is why a container is measured in **megabytes** and starts in **milliseconds**, while a VM is measured in **gigabytes** and takes **minutes**.
+
+#### Solving the "it works on my machine" problem
+
+> **Scenario:** an application running on a **Windows Server** is moved to a **Linux server**. What problems occur, and can Docker solve them?
+
+**Problems that occur when moving Windows → Linux:**
+
+| Problem | Detail |
+|---|---|
+| **Different OS APIs** | Windows system calls, the Registry and COM/.NET Framework services simply do not exist on Linux |
+| **File path differences** | `C:\folder\file.txt` (backslash, drive letters) vs `/home/user/file.txt` |
+| **Case sensitivity** | Windows treats `File.txt` and `file.txt` as the same; **Linux does not** |
+| **Line endings** | Windows uses CRLF, Linux uses LF — breaks scripts and config files |
+| **Missing dependencies** | The exact runtime, library and patch versions differ or are absent |
+| **Different binaries** | A Windows `.exe`/`.dll` cannot execute on Linux |
+| **Environment and permissions** | Different environment variables, user/group model, and file permissions |
+| **Service management** | Windows Services vs Linux systemd |
+
+**Can Docker solve it?**
+
+> **Partly — and this nuance is what the examiner is testing.**
+>
+> **✅ What Docker DOES solve:** Docker packages the application **together with all its libraries, dependencies, configuration and runtime** into one image. That image behaves **identically on every machine that can run the container**, which eliminates the *"it works on my machine"* class of problems — missing dependencies, wrong library versions, different configuration, environment drift. Moving between two **Linux servers**, or from a developer's laptop to a production cluster, becomes trivial.
+>
+> **❌ What Docker does NOT solve:** containers **share the host kernel**, so **a Windows container cannot run on a Linux host and vice versa**. If the application genuinely depends on **Windows-specific APIs** (.NET Framework, the Registry, COM, Win32 calls), containerising it will not make it run on a Linux kernel.
+>
+> **The practical solutions:**
+> 1. **If the application is cross-platform** (Java, Node.js, Python, Go, **.NET Core/.NET 5+**) → **containerise it with Docker** using a Linux base image. Problem solved cleanly.
+> 2. **If it depends on the classic .NET Framework or Win32** → either **port it to .NET Core**, or run a **Windows container on a Windows host**, or use a **Virtual Machine** running Windows on the Linux hardware (a VM *does* carry its own OS, so it can bridge the gap where a container cannot).
+
+**Previous Year Question List from this Topic:**
+
+- [What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?](../written-answers/cloud-computing.md?plain=1#L454)
+- [VM vs Container in Submarine Cable Network: (BSCCPL AME 21-08-2026 (BUET)) A national submarine cable landing station provides international connectivity to sev…](../written-answers/cloud-computing.md?plain=1#L323)
+
+
+---
+
+### VM vs Container — Comparison and When to Use Which
+
+```mermaid
+flowchart LR
+    subgraph VMS["Virtual Machines"]
+        VA["App A"] --- VGA["Guest OS<br/>~ GBs"]
+        VB["App B"] --- VGB["Guest OS<br/>~ GBs"]
+        VGA --- VH["Hypervisor"]
+        VGB --- VH
+        VH --- VHW["Hardware"]
+    end
+    subgraph CNT["Containers"]
+        CA["App A<br/>+ libs"] --- CE["Container Engine"]
+        CB["App B<br/>+ libs"] --- CE
+        CE --- CO["ONE shared Host OS kernel"]
+        CO --- CHW["Hardware"]
+    end
+```
+
+| Point | **Virtual Machine** | **Container** |
+|---|---|---|
+| **Operating system** | Each VM runs a **full guest OS** | **Shares the host OS kernel** — no guest OS |
+| **Size** | **GBs** (typically 1–20 GB) | **MBs** (typically 10–500 MB) |
+| **Boot / start time** | **Minutes** | **Milliseconds to seconds** |
+| **Isolation** | **Strong** — hardware-level, separate kernels | **Weaker** — process-level, shared kernel |
+| **Security boundary** | **Stronger** | Weaker — a kernel exploit can escape the container |
+| **Performance overhead** | Higher (5–15 %) | **Near-native** |
+| **Density per host** | **Tens** of VMs | **Hundreds to thousands** of containers |
+| **Managed by** | **Hypervisor** (ESXi, Hyper-V, KVM) | **Container engine** (Docker, containerd, Podman) |
+| **Can run a different OS?** | ✅ **Yes** — Windows VM on Linux host | ❌ **No** — must match the host kernel |
+| **Portability** | Portable but heavy | **Extremely portable and light** |
+| **Resource usage** | High (RAM and disk per OS) | **Low** |
+| **Best for** | Legacy apps, different OSes, strict isolation, multi-tenant untrusted workloads | **Microservices, CI/CD, cloud-native apps, rapid scaling** |
+| **Orchestration** | vCenter, OpenStack | **Kubernetes**, Docker Swarm |
+| **Examples** | VMware, Hyper-V, KVM, VirtualBox | **Docker**, Podman, LXC, containerd |
+
+#### Choosing between them — a worked scenario
+
+> **Scenario:** a **national submarine cable landing station** provides international connectivity to several organisations and must host multiple workloads on shared infrastructure. Should it use VMs or containers?
+
+**Use VIRTUAL MACHINES when:**
+- Workloads belong to **different organisations that do not trust one another** — the hardware-level isolation of a separate kernel is essential for **multi-tenant security and regulatory compliance**.
+- Different **operating systems** are required (a legacy Windows NMS alongside Linux tools).
+- **Legacy or vendor-appliance software** is supplied only as a VM image.
+- Strict **audit and compliance** rules demand provable separation.
+
+**Use CONTAINERS when:**
+- The workloads are **microservices** owned by the **same** organisation.
+- You need **fast scaling** to absorb traffic spikes (containers start in milliseconds).
+- You are running a **CI/CD pipeline** with frequent deployments.
+- **Resource efficiency and density** matter — many services on the same hardware.
+- The team practises **DevOps** and wants identical dev/test/production environments.
+
+**The realistic answer — use both, in layers:**
+
+```mermaid
+flowchart TD
+    HW["Physical servers at the landing station"] --> HYP["Type 1 Hypervisor (ESXi / KVM)"]
+    HYP --> VMA["VM for Organisation A<br/>(hard security boundary)"]
+    HYP --> VMB["VM for Organisation B"]
+    HYP --> VMC["VM for internal operations"]
+    VMA --> KA["Kubernetes / Docker inside the VM"]
+    KA --> CA1["Container: API"]
+    KA --> CA2["Container: Monitoring"]
+    KA --> CA3["Container: Logging"]
+```
+
+This is exactly how real clouds are built: **VMs provide the hard tenant boundary, and containers provide fast, dense, efficient deployment inside each tenant's boundary.**
+
+**Previous Year Question List from this Topic:**
+
+- [VM vs Container in Submarine Cable Network: (BSCCPL AME 21-08-2026 (BUET)) A national submarine cable landing station provides international connectivity to sev…](../written-answers/cloud-computing.md?plain=1#L323)
+- [What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?](../written-answers/cloud-computing.md?plain=1#L454)
+- [High-Availability Design: (BSCCPL AME 21-08-2026 (BUET)) A submarine cable operator wants to ensure that a DNS service remains available even if one physical se…](../written-answers/cloud-computing.md?plain=1#L983)
