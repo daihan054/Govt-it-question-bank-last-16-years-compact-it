@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 1 subtopics · 9 theories
+**Table of Contents** — 2 subtopics · 17 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -11,6 +11,16 @@
    - [The Machine Learning Workflow (End-to-End Pipeline)](#the-machine-learning-workflow-end-to-end-pipeline)
    - [Applications of AI — in Daily Life and in the Banking Sector](#applications-of-ai--in-daily-life-and-in-the-banking-sector)
    - [AI Ethics, Bias and Responsible AI](#ai-ethics-bias-and-responsible-ai)
+
+2. **[Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems)**
+   - [Intelligent Agents in AI](#intelligent-agents-in-ai)
+   - [PEAS Framework (Performance, Environment, Actuators, Sensors)](#peas-framework-performance-environment-actuators-sensors)
+   - [Types of Intelligent Agents](#types-of-intelligent-agents)
+   - [Properties of Task Environments](#properties-of-task-environments)
+   - [Knowledge and Knowledge Representation in AI](#knowledge-and-knowledge-representation-in-ai)
+   - [Expert Systems — Architecture and Working](#expert-systems--architecture-and-working)
+   - [Forward Chaining vs Backward Chaining](#forward-chaining-vs-backward-chaining)
+   - [Measuring Intelligence — and Common True/False Traps](#measuring-intelligence--and-common-truefalse-traps)
 
 <!-- TOC END -->
 
@@ -477,3 +487,324 @@ flowchart TD
 - Give 3–4 benefits (speed, accuracy, 24/7 service, cost saving).
 - Give 3–4 risks (bias, privacy, job loss, deepfakes).
 - End with the balance: *"AI should assist human judgement, not replace human responsibility."*
+
+## Artificial Intelligence & Expert Systems
+
+### Intelligent Agents in AI
+
+Modern AI textbooks (Russell & Norvig) describe **every** AI system as an **agent**.
+
+> An **agent** is anything that can **perceive** its environment through **sensors** and **act** upon that environment through **actuators**.
+
+An **intelligent agent** is an agent that chooses its actions so as to achieve the **best expected outcome** (it is *rational*).
+
+```mermaid
+flowchart LR
+    subgraph AG[Agent]
+        S[Sensors] --> F["Agent Function<br/>(what to do next?)"]
+        F --> A[Actuators]
+    end
+    E[Environment] -- Percepts --> S
+    A -- Actions --> E
+    E2[Environment]
+    A --> E2
+    style AG fill:#eef,stroke:#333
+```
+
+| Term | Meaning |
+|---|---|
+| **Percept** | One input the agent receives at a moment |
+| **Percept sequence** | The complete history of everything the agent has perceived so far |
+| **Agent function** | The mapping: percept sequence → action |
+| **Agent program** | The actual code that implements the agent function |
+| **Rational agent** | For every percept sequence, it picks the action expected to **maximise its performance measure** |
+
+**Examples of agent = sensors + actuators**
+
+| Agent | Sensors | Actuators |
+|---|---|---|
+| Human | Eyes, ears, skin, nose | Hands, legs, mouth |
+| Robot | Camera, infrared, LIDAR | Motors, wheels, robotic arm |
+| Software agent (e.g. spam filter) | Keystrokes, file contents, network packets | Screen display, writing files, sending packets |
+
+**Key point:** a rational agent is *not* an omniscient agent. It does the best it can with the information available — it is not expected to know the future.
+
+---
+
+### PEAS Framework (Performance, Environment, Actuators, Sensors)
+
+Before designing any intelligent agent you must **specify the task**. The standard way is **PEAS**.
+
+| Letter | Stands for | Question it answers |
+|---|---|---|
+| **P** | **Performance measure** | How do we score success? |
+| **E** | **Environment** | Where does the agent work? |
+| **A** | **Actuators** | What can it *do*? |
+| **S** | **Sensors** | What can it *see/feel*? |
+
+#### PEAS for an Automated Taxi Driver
+
+| Component | Description |
+|---|---|
+| **Performance measure** | Safe journey, no accidents, obeys traffic law, fast trip time, low fuel cost, passenger comfort, maximum profit |
+| **Environment** | Roads, highways, other vehicles, pedestrians, traffic signals, road signs, weather, passengers |
+| **Actuators** | Steering wheel, accelerator, brake, gear, indicator, horn, display/voice output to passenger |
+| **Sensors** | Cameras, LIDAR, RADAR, GPS, speedometer, odometer, engine sensors, accelerometer, microphone/keyboard for passenger input |
+
+#### PEAS for an Automatic Clinical / Medical Test System
+
+| Component | Description |
+|---|---|
+| **Performance measure** | Correct diagnosis, high accuracy (few false positives/negatives), patient safety, low test cost, fast report, minimum unnecessary tests |
+| **Environment** | Patient, hospital or diagnostic lab, doctors and technicians, patient medical history database, laboratory equipment |
+| **Actuators** | Display of the diagnosis/report, printing the test result, recommending further tests, alerts to doctor, entry into the hospital record system |
+| **Sensors** | Keyboard entry of symptoms, blood/urine analyser readings, ECG and blood-pressure sensors, X-ray/CT/MRI images, patient history database |
+
+#### Two more PEAS examples worth memorising
+
+| Agent | P | E | A | S |
+|---|---|---|---|---|
+| **Vacuum cleaner robot** | Cleanliness, battery used, time taken | Room, carpet, furniture, dust | Wheels, brushes, vacuum motor | Dirt sensor, bump sensor, camera |
+| **Part-picking robot** | Percentage of parts in the correct bin | Conveyor belt with parts, bins | Jointed arm, gripper | Camera, joint-angle sensors |
+
+---
+
+### Types of Intelligent Agents
+
+Agents are classified by **how much thinking** they do — from the simplest to the most capable.
+
+```mermaid
+flowchart TD
+    A[1. Simple Reflex Agent] --> B[2. Model-Based Reflex Agent]
+    B --> C[3. Goal-Based Agent]
+    C --> D[4. Utility-Based Agent]
+    D --> E[5. Learning Agent]
+```
+
+**1. Simple Reflex Agent**
+- Acts **only on the current percept**, using `condition → action` rules.
+- No memory of the past.
+- Works only in a **fully observable** environment.
+- *Example:* a thermostat — `if temperature > 25 then switch on AC`.
+
+**2. Model-Based Reflex Agent**
+- Keeps an **internal model** (memory) of how the world works, so it can handle a **partially observable** environment.
+- *Example:* a robot vacuum that remembers which rooms it has already cleaned.
+
+**3. Goal-Based Agent**
+- Also knows **what it is trying to achieve**. It searches and plans a sequence of actions to reach the goal.
+- *Example:* Google Maps planning a route to a destination.
+
+**4. Utility-Based Agent**
+- Not all goals are equally good — it uses a **utility function** to pick the *best* among several ways of reaching the goal.
+- *Example:* choosing the route that is safest and cheapest, not just shortest.
+
+**5. Learning Agent**
+- **Improves with experience.** It has four parts:
+
+| Part | Job |
+|---|---|
+| **Learning element** | Makes improvements |
+| **Performance element** | Selects the external action |
+| **Critic** | Gives feedback on how well the agent is doing |
+| **Problem generator** | Suggests exploratory actions to discover something new |
+
+- *Example:* a recommendation system that gets better as you watch more videos.
+
+---
+
+### Properties of Task Environments
+
+The type of environment decides how hard the agent's job is. Exams ask this as *"classify the environment of a self-driving car"*.
+
+| # | Property pair | Meaning | Example |
+|---|---|---|---|
+| 1 | **Fully vs Partially Observable** | Can the agent see the complete state at any time? | Chess = fully; driving a car = partially |
+| 2 | **Deterministic vs Stochastic** | Does the same action always give the same result? | Chess = deterministic; driving = stochastic |
+| 3 | **Episodic vs Sequential** | Does the current action affect future ones? | Quality-check of a part = episodic; chess = sequential |
+| 4 | **Static vs Dynamic** | Does the world change while the agent is thinking? | Crossword = static; driving = dynamic |
+| 5 | **Discrete vs Continuous** | Is the number of states/actions countable? | Chess = discrete; driving = continuous |
+| 6 | **Single-agent vs Multi-agent** | Is anyone else acting in the same environment? | Crossword = single; chess/driving = multi |
+| 7 | **Known vs Unknown** | Does the agent know the rules of the environment? | Known = rules given; Unknown = must be learned |
+
+**The hardest environment** is one that is *partially observable, stochastic, sequential, dynamic, continuous and multi-agent* — which is exactly **driving a car in real traffic**.
+
+---
+
+### Knowledge and Knowledge Representation in AI
+
+**Knowledge** is *processed, organised information that can be used to take decisions*. A program becomes intelligent only when it **stores** knowledge and can **reason** with it.
+
+#### The Data → Information → Knowledge → Wisdom (DIKW) ladder
+
+```mermaid
+flowchart LR
+    D["Data<br/>raw facts<br/>e.g. 38.5"] --> I["Information<br/>data with meaning<br/>e.g. body temp = 38.5°C"]
+    I --> K["Knowledge<br/>usable rule<br/>IF temp > 38 THEN fever"]
+    K --> W["Wisdom<br/>best judgement<br/>fever + cough → test for flu"]
+```
+
+#### How human knowledge is put into a computer
+
+This is the standard **flow diagram** asked in exams (*"Human Knowledge কে Computer এ প্রকাশ করার flow diagram দেখান"*):
+
+```mermaid
+flowchart TD
+    A[Human Expert / Books / Documents<br/>Human Knowledge] --> B[Knowledge Acquisition<br/>interviews, observation, text mining]
+    B --> C[Knowledge Engineer<br/>organises & structures it]
+    C --> D["Knowledge Representation<br/>rules, frames, semantic net, logic, ontology"]
+    D --> E[Knowledge Base<br/>stored inside the computer]
+    E --> F[Inference Engine<br/>reasoning on the knowledge]
+    F --> G[Conclusion / Advice to the User]
+    G -.->|feedback & refinement| B
+```
+
+#### Types of knowledge in AI
+
+| Type | Meaning | Example |
+|---|---|---|
+| **Declarative** | Knowing *that* (facts) | "Dhaka is the capital of Bangladesh" |
+| **Procedural** | Knowing *how* (steps) | How to ride a bicycle |
+| **Meta-knowledge** | Knowledge about knowledge | Knowing which rule to apply first |
+| **Heuristic** | Rules of thumb from experience | "If the engine is silent, check the battery first" |
+| **Structural** | How concepts relate to each other | "A car *is-a* vehicle" |
+
+#### Main knowledge representation techniques
+
+| Technique | Idea | Example |
+|---|---|---|
+| **Logical representation** | Propositional / Predicate (First-Order) Logic | `∀x Human(x) → Mortal(x)` |
+| **Production rules** | `IF condition THEN action` | `IF fever AND cough THEN suspect flu` |
+| **Semantic network** | A graph of concepts (nodes) and relations (edges) | *Bird* —is-a→ *Animal*; *Bird* —has→ *Wings* |
+| **Frames** | A record with slots and values, like an object | `Car { colour: red, wheels: 4 }` |
+| **Ontology** | A formal shared vocabulary of a domain | Medical ontology SNOMED |
+| **Scripts** | A standard sequence of events | The "restaurant script": enter → order → eat → pay |
+
+**Properties a good representation must have:** *representational adequacy, inferential adequacy, inferential efficiency,* and *acquisitional efficiency*.
+
+---
+
+### Expert Systems — Architecture and Working
+
+An **Expert System (ES)** is a computer program that copies the **decision-making ability of a human expert** in one narrow field, using a store of knowledge and a reasoning engine.
+
+It is a classic example of **AI that is *not* Machine Learning** — the knowledge is put in by humans as rules, not learned from data.
+
+#### Architecture
+
+```mermaid
+flowchart TD
+    U[User] <--> UI[User Interface]
+    UI <--> IE[Inference Engine<br/>applies rules to facts]
+    IE <--> KB[(Knowledge Base<br/>facts + IF-THEN rules)]
+    IE <--> WM[(Working Memory<br/>facts about the current case)]
+    IE --> EX[Explanation Facility<br/>'why did you say that?']
+    EX --> UI
+    KE[Knowledge Engineer] --> KAM[Knowledge Acquisition Module]
+    HE[Human Expert] --> KE
+    KAM --> KB
+```
+
+| Component | Function |
+|---|---|
+| **Knowledge Base** | Stores domain facts and `IF–THEN` rules collected from human experts |
+| **Inference Engine** | The "brain" — matches rules against facts and derives new conclusions |
+| **Working Memory** | Holds the facts of the case being solved right now |
+| **User Interface** | Lets a non-expert ask questions in simple language |
+| **Explanation Facility** | Explains *why* a question was asked and *how* a conclusion was reached |
+| **Knowledge Acquisition Module** | Lets the knowledge engineer add or update knowledge |
+
+#### Famous expert systems
+
+| System | Field |
+|---|---|
+| **MYCIN** | Diagnosing blood infections and suggesting antibiotics (Stanford, 1970s) |
+| **DENDRAL** | Identifying chemical molecular structures — the *first* expert system |
+| **XCON / R1** | Configuring DEC computer orders |
+| **PROSPECTOR** | Mineral and ore exploration |
+| **CaDet** | Early cancer detection |
+
+#### Advantages and Limitations
+
+**Advantages**
+- Available **24×7**, never gets tired or emotional.
+- **Consistent** answers every time.
+- **Preserves expertise** even after the expert retires.
+- **Cheaper** than hiring many experts; useful in remote areas.
+- Can **explain** its reasoning, unlike a deep neural network.
+
+**Limitations**
+- Works only in a **very narrow domain**; no common sense.
+- **Cannot learn by itself** — knowledge must be updated by hand.
+- **Knowledge acquisition bottleneck**: extracting rules from an expert is slow and costly.
+- Fails badly on cases outside its rules ("brittleness").
+
+#### Expert System vs Machine Learning
+
+| Point | Expert System | Machine Learning |
+|---|---|---|
+| Source of knowledge | Human experts write rules | Learned from data |
+| Learning | No self-learning | Improves with data |
+| Explainability | High — rules are readable | Often a black box |
+| Data needed | Very little | Large amount |
+| Handles new/unseen cases | Poorly | Reasonably well |
+
+---
+
+### Forward Chaining vs Backward Chaining
+
+These are the two **reasoning strategies** used by an inference engine.
+
+**Forward Chaining (Data-Driven)** — start from the **known facts**, keep firing the rules whose conditions match, and see **what conclusion you reach**.
+
+```mermaid
+flowchart LR
+    F[Known Facts] --> R[Apply matching rules] --> N[New facts added] --> R
+    N --> G[Goal reached?]
+```
+
+**Backward Chaining (Goal-Driven)** — start from a **possible goal/hypothesis**, and work backwards asking *"what facts would I need to prove this?"*
+
+```mermaid
+flowchart RL
+    G[Goal / Hypothesis] --> S[Which rule concludes this goal?]
+    S --> C[Are that rule's conditions true?]
+    C --> Q[Ask the user / check facts / prove as a sub-goal]
+```
+
+**Worked example.** Rules:
+- R1: `IF has_fever AND has_cough THEN has_flu`
+- R2: `IF has_flu THEN needs_rest`
+
+*Forward chaining:* We are told the patient has fever and cough → R1 fires → `has_flu` → R2 fires → `needs_rest`. **Conclusion found from facts.**
+
+*Backward chaining:* We ask "does the patient need rest?" → R2 says we must prove `has_flu` → R1 says we must prove `has_fever` and `has_cough` → ask the user those two questions. **Facts found from the goal.**
+
+| Point | Forward Chaining | Backward Chaining |
+|---|---|---|
+| Direction | Facts → Conclusion | Goal → Facts |
+| Also called | Data-driven, bottom-up | Goal-driven, top-down |
+| Starting point | All available facts | A hypothesis to test |
+| Best when | Many facts, few possible conclusions | Few goals, many possible facts |
+| Typical use | Monitoring, alarms, planning, real-time control | Diagnosis, troubleshooting, MYCIN, Prolog |
+| Efficiency | Can derive many irrelevant facts | Focused, asks only needed questions |
+
+---
+
+### Measuring Intelligence — and Common True/False Traps
+
+A few small conceptual questions are repeated across exams. Keep these straight.
+
+**1. "Intelligence cannot be measured only by an intelligence test, because it is related to other subjects." → TRUE.**
+An IQ test mostly checks logical and mathematical reasoning. Real intelligence also includes **emotional intelligence, creativity, social skill, language ability, memory and practical problem solving** — Howard Gardner's *Theory of Multiple Intelligences* lists linguistic, logical-mathematical, spatial, musical, bodily-kinesthetic, interpersonal, intrapersonal and naturalistic intelligence. So a single test score cannot capture it.
+
+**2. "Machine Learning is a subset of Cloud Computing that can build AI." → FALSE.**
+Machine Learning is a subset of **Artificial Intelligence**. Cloud Computing is an unrelated field — it only supplies the *infrastructure* (storage, GPUs, hosting) where ML models are often trained and deployed.
+
+**3. "Who is the father of AI?" → John McCarthy** (coined the term in 1956, created LISP).
+Do not confuse with **Alan Turing** (Enigma code-breaking, Turing Test) — he laid the *foundation*, but McCarthy is called the father of AI.
+
+**4. "What is Deep Blue?" → IBM's chess-playing computer** that defeated world champion **Garry Kasparov in 1997**. It is a **Reactive Machine** type of AI: no memory of past games, it simply evaluated millions of board positions per second using brute-force search plus chess heuristics.
+
+**5. "An AI agent is an entity that continuously perceives its environment..." → the full sentence is:**
+> An intelligent agent is an entity that **perceives its environment through sensors** and **acts upon that environment through actuators**, choosing actions that maximise its performance measure.
