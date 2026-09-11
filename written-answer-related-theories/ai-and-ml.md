@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 43 theories
+**Table of Contents** — 8 subtopics · 47 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -57,6 +57,12 @@
    - [Generative AI in Government Citizen Services](#generative-ai-in-government-citizen-services)
    - [ChatGPT — What it is, and its Pros and Cons](#chatgpt--what-it-is-and-its-pros-and-cons)
    - [Explainable AI (XAI)](#explainable-ai-xai)
+
+8. **[Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning)**
+   - [Reinforcement Learning — Components and Working](#reinforcement-learning--components-and-working)
+   - [Federated Learning](#federated-learning)
+   - [Reinforcement Learning vs Deep Learning vs Federated Learning](#reinforcement-learning-vs-deep-learning-vs-federated-learning)
+   - [Ensemble Learning — Bagging, Boosting and Stacking](#ensemble-learning--bagging-boosting-and-stacking)
 
 <!-- TOC END -->
 
@@ -2575,3 +2581,285 @@ The bank can now (a) give the customer a lawful, specific reason, (b) tell them 
 **Previous Year Question List from this Topic:**
 
 - [b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".](../written-answers/ai-and-ml.md?plain=1#L1077)
+
+## Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)
+
+### Reinforcement Learning — Components and Working
+
+**Reinforcement Learning (RL)** is the machine learning paradigm where an **agent** learns to take decisions by **acting inside an environment** and receiving **rewards** or **penalties**, with the goal of maximising the **total reward over the long run**.
+
+There is no dataset of correct answers. The agent **generates its own experience** by trying things — exactly the way a child learns to ride a bicycle.
+
+#### The RL loop
+
+```mermaid
+flowchart LR
+    A[Agent] -->|Action aₜ| E[Environment]
+    E -->|"State sₜ₊₁"| A
+    E -->|"Reward rₜ₊₁"| A
+```
+
+At every time step **t**: the agent observes state **sₜ**, chooses action **aₜ**, the environment returns a new state **sₜ₊₁** and a reward **rₜ₊₁**, and the agent updates its strategy.
+
+#### The six components
+
+| Component | Meaning | Example (self-driving car) |
+|---|---|---|
+| **Agent** | The learner / decision maker | The driving software |
+| **Environment** | Everything the agent interacts with | Roads, traffic, pedestrians |
+| **State (s)** | The current situation | Speed, position, distance to the car ahead |
+| **Action (a)** | A move the agent can make | Accelerate, brake, turn left |
+| **Reward (r)** | Numeric feedback after an action | +10 for reaching the destination, −100 for a collision |
+| **Policy (π)** | The agent's **strategy**: a mapping state → action. *This is what is being learned* | "If the car ahead is within 5 m, brake" |
+
+Two more terms that always appear:
+- **Value function V(s)** — the **expected total future reward** starting from state s. It answers *"how good is it to be here?"*
+- **Q-function Q(s, a)** — the expected total future reward from taking action *a* in state *s*. It answers *"how good is this move from here?"*
+- **Discount factor γ (gamma)** — between 0 and 1; decides how much future rewards matter compared with immediate ones. γ near 0 = greedy/short-sighted, γ near 1 = far-sighted.
+
+**The objective:** find the policy π\* that maximises the expected **cumulative discounted reward**:
+
+> **G = r₁ + γr₂ + γ²r₃ + γ³r₄ + …**
+
+#### Positive vs negative reinforcement
+
+| Type | Meaning | Example |
+|---|---|---|
+| **Positive reinforcement** | **Add** something good after a desired action, so it is repeated | +10 points for reaching the goal |
+| **Negative reinforcement** | **Remove** something unpleasant when the right action is taken | Stop the penalty siren once the car returns to its lane |
+
+*(A **penalty/punishment** is different: a negative reward that discourages an action.)*
+
+#### Exploration vs Exploitation — the central dilemma
+
+- **Exploitation** = use what you already know works (go to your usual restaurant).
+- **Exploration** = try something new to discover a better option (try a new restaurant).
+
+Too much exploitation and the agent gets stuck with a mediocre strategy; too much exploration and it never settles. The standard solution is the **ε-greedy policy**: with probability ε choose a random action (explore), otherwise choose the best known action (exploit) — and slowly reduce ε as learning progresses.
+
+#### Q-Learning — the classic RL algorithm
+
+Q-Learning stores a table of **Q(s, a)** values and updates it with the **Bellman equation**:
+
+> **Q(s, a) ← Q(s, a) + α [ r + γ · max_a' Q(s', a') − Q(s, a) ]**
+
+where **α** = learning rate, **γ** = discount factor, **r** = reward received, **s'** = the new state.
+
+In words: *nudge the current estimate towards (the reward you just got) plus (the best you can expect from where you landed).*
+
+| Algorithm | Type | Note |
+|---|---|---|
+| **Q-Learning** | Off-policy, value-based | Learns the optimal policy while exploring |
+| **SARSA** | On-policy, value-based | Learns the value of the policy it is actually following |
+| **DQN** (Deep Q-Network) | Value-based + Deep Learning | Replaces the Q-table with a neural network — this is how Atari games were solved |
+| **Policy Gradient / REINFORCE** | Policy-based | Learns the policy directly; good for continuous actions |
+| **Actor-Critic, PPO** | Hybrid | The modern standard; used for robotics and for RLHF in LLMs |
+
+#### Applications of Reinforcement Learning
+
+- **Game playing:** AlphaGo, AlphaZero, chess, Atari, Dota 2.
+- **Robotics:** learning to walk, grasp objects, assemble parts.
+- **Self-driving cars:** lane keeping, overtaking decisions.
+- **Recommendation systems:** what to show next to maximise long-term engagement.
+- **Finance:** portfolio management, algorithmic trading, dynamic pricing.
+- **Operations:** traffic-signal control, data-centre cooling (Google cut cooling energy ~40 % with RL), inventory management.
+- **LLM alignment:** RLHF — the reward model is trained on human preferences.
+
+**Challenges:** needs a very large number of trials; defining a good reward function is hard (a badly designed reward is "gamed" by the agent); learning is unstable; and trial-and-error is unsafe in the real world, so training usually happens in **simulation** first.
+
+**Previous Year Question List from this Topic:**
+
+- [Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how ea…](../written-answers/ai-and-ml.md?plain=1#L1127)
+- [Explain reinforcement learning in the field of Machine Learning?](../written-answers/ai-and-ml.md?plain=1#L1153)
+- [(a) Describe the following terms:](../written-answers/ai-and-ml.md?plain=1#L739)
+- [Briefly explain supervised learning, unsupervised learning & reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L792)
+- [What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L1013)
+
+
+---
+
+### Federated Learning
+
+**Federated Learning (FL)** is a machine learning technique where a model is trained across **many decentralised devices or organisations** that hold their **own local data**, **without ever moving that data to a central server**.
+
+> The slogan: **"Bring the model to the data, not the data to the model."**
+
+#### How it works — one federated round
+
+```mermaid
+flowchart TD
+    S["Central Server<br/>Global Model (version n)"] -->|1 . send the model| D1[Device / Bank 1]
+    S -->|1 . send the model| D2[Device / Bank 2]
+    S -->|1 . send the model| D3[Device / Bank 3]
+    D1 -->|2 . train on LOCAL data| U1[Model update - weights only]
+    D2 -->|2 . train on LOCAL data| U2[Model update]
+    D3 -->|2 . train on LOCAL data| U3[Model update]
+    U1 -->|3 . send updates only| AGG[4 . Secure Aggregation<br/>average the updates - FedAvg]
+    U2 --> AGG
+    U3 --> AGG
+    AGG -->|5 . improved global model n+1| S
+```
+
+**The five steps**
+1. The central server sends the **current global model** to the participating clients.
+2. Each client **trains the model on its own local data** — the raw data never leaves the device.
+3. Each client sends back **only the model updates** (weight changes / gradients), not any data.
+4. The server **aggregates** all the updates, typically by weighted averaging (the **FedAvg** algorithm).
+5. The improved global model is sent out again, and the cycle repeats for many rounds.
+
+#### Types of Federated Learning
+
+| Type | When to use |
+|---|---|
+| **Horizontal FL** | Clients have the **same features** but **different users** (two banks with the same fields, different customers) |
+| **Vertical FL** | Clients have the **same users** but **different features** (a bank and a telecom company sharing the same customers) |
+| **Federated Transfer Learning** | Little overlap in either users or features |
+
+Also classified by scale:
+- **Cross-device FL** — millions of phones, unreliable, small data each (Google Keyboard).
+- **Cross-silo FL** — a few large organisations, reliable, big data each (hospitals, banks).
+
+#### Advantages
+
+1. **Privacy by design** — raw data never leaves the device or the hospital.
+2. **Regulatory compliance** — satisfies GDPR and data-localisation laws that forbid moving data across borders.
+3. **Lower bandwidth and storage cost** — model weights are far smaller than the datasets.
+4. **Access to data that could never be pooled** — competing banks or hospitals can jointly build a model without sharing customers.
+5. **Personalisation** — the model learns from real on-device behaviour.
+6. **Lower breach risk** — there is no giant central honeypot of sensitive data.
+
+#### Challenges
+
+| Challenge | Explanation |
+|---|---|
+| **Non-IID data** | Each client's data is different and unrepresentative, which makes the averaged model converge slowly or badly |
+| **Communication overhead** | Many rounds × many clients = a lot of network traffic |
+| **System heterogeneity** | Devices differ in speed, battery and connectivity; stragglers slow everyone down |
+| **Security** | A malicious client can poison the model; updates can sometimes leak information, so **secure aggregation** and **differential privacy** are added |
+| **Harder debugging** | You cannot inspect the data that produced a bad model |
+| **Fairness** | Clients with more data dominate the global model |
+
+#### Real applications
+
+- **Google Gboard** — next-word prediction learned from typing without uploading what you typed.
+- **Apple** — Siri and QuickType personalisation.
+- **Healthcare** — hospitals jointly training a tumour-detection model without sharing patient records.
+- **Banking** — several banks building a shared fraud-detection model without exchanging customer transactions.
+- **IoT / smart cities** — training on sensor data at the edge.
+
+**Previous Year Question List from this Topic:**
+
+- [Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how ea…](../written-answers/ai-and-ml.md?plain=1#L1127)
+
+
+---
+
+### Reinforcement Learning vs Deep Learning vs Federated Learning
+
+These three are often confused because they are compared in one question, but they answer **completely different questions**:
+
+- **Deep Learning** = *what kind of model* (architecture).
+- **Reinforcement Learning** = *how the model learns* (learning paradigm).
+- **Federated Learning** = *where the training happens* (training setup).
+
+They are **not mutually exclusive** — you can have Federated Deep Reinforcement Learning.
+
+| Point | **Reinforcement Learning (RL)** | **Deep Learning (DL)** | **Federated Learning (FL)** |
+|---|---|---|---|
+| **What it is** | A learning **paradigm** | A model **architecture** (deep neural networks) | A **distributed training approach** |
+| **Learning mechanism** | **Trial and error** with rewards and penalties | **Backpropagation + gradient descent** on labelled data | Local training on each client, then **averaging the updates** on a server |
+| **Data usage** | No fixed dataset — the agent generates its own experience by interacting | A large **centralised** labelled dataset | Data stays **decentralised**; only model weights move |
+| **Feedback signal** | Delayed, scalar **reward** | Immediate, exact **error** against the true label | Same as the base algorithm; the difference is *where* it is computed |
+| **Where data lives** | In a simulator / the environment | One central server or data centre | On devices, hospitals, banks — never moved |
+| **Main goal** | Maximise long-term cumulative reward | Minimise prediction error | Train a good model **while preserving privacy** |
+| **Key challenge** | Reward design, sample efficiency, safety | Needs huge data and GPUs; black box | Non-IID data, communication cost, client reliability |
+| **Typical use** | Game playing, robotics, control, dynamic pricing | Image recognition, NLP, speech | Mobile keyboards, healthcare, cross-bank fraud models |
+| **Example** | AlphaGo | ResNet, ChatGPT | Google Gboard |
+
+**Previous Year Question List from this Topic:**
+
+- [Explain the concepts of Reinforcement Learning (RL), Deep Learning (DL), and Federated Learning (FL) in the context of Machine Learning. Briefly describe how ea…](../written-answers/ai-and-ml.md?plain=1#L1127)
+- [Explain reinforcement learning in the field of Machine Learning?](../written-answers/ai-and-ml.md?plain=1#L1153)
+
+
+---
+
+### Ensemble Learning — Bagging, Boosting and Stacking
+
+**Ensemble Learning** means **combining several models** so that the group performs better than any single member. The principle is the "wisdom of the crowd": individual models make different mistakes, and when you combine them the mistakes tend to cancel out while the correct signal adds up.
+
+```mermaid
+flowchart TD
+    D[(Training Data)] --> M1[Model 1]
+    D --> M2[Model 2]
+    D --> M3[Model 3]
+    D --> MN[Model n]
+    M1 --> C{"Combine<br/>vote / average / meta-model"}
+    M2 --> C
+    M3 --> C
+    MN --> C
+    C --> P[Final Prediction<br/>stronger than any single model]
+```
+
+#### Weak learner vs Strong learner
+
+| Term | Definition | Example |
+|---|---|---|
+| **Weak learner** | A model that is only **slightly better than random guessing** (just above 50 % accuracy on a balanced binary problem). It has **high bias** but low variance | A **decision stump** — a tree with a single split |
+| **Strong learner** | A model that achieves **high accuracy**, well correlated with the true labels | A tuned Random Forest or a deep network |
+
+> **The core theorem of ensemble learning (Schapire, 1990):** if you can build a weak learner that is even slightly better than chance, you can **combine many of them into a strong learner**. This result is what gave birth to **Boosting**.
+
+#### The three ensemble methods
+
+**1. Bagging (Bootstrap Aggregating)**
+- Train many models **in parallel**, each on a different **bootstrap sample** (random rows drawn *with replacement*).
+- Combine by **majority vote** (classification) or **average** (regression).
+- Main effect: **reduces variance** → fixes overfitting.
+- Example: **Random Forest**.
+
+**2. Boosting**
+- Train models **one after another**. Each new model focuses on the examples the previous ones got **wrong** (by increasing their weight).
+- Combine by a **weighted vote**, where more accurate models get more say.
+- Main effect: **reduces bias** → turns weak learners into a strong one.
+- Examples: **AdaBoost, Gradient Boosting, XGBoost, LightGBM, CatBoost**.
+
+**3. Stacking (Stacked Generalisation)**
+- Train **several different types** of model (e.g. SVM + Random Forest + Neural Network).
+- A **meta-model** is then trained on their predictions to learn the best way to combine them.
+- Main effect: exploits the complementary strengths of different algorithms.
+
+```mermaid
+flowchart LR
+    subgraph BAG["Bagging — parallel"]
+        A1[Sample 1] --> B1[Model 1]
+        A2[Sample 2] --> B2[Model 2]
+        A3[Sample 3] --> B3[Model 3]
+        B1 --> V1[Vote / Average]
+        B2 --> V1
+        B3 --> V1
+    end
+    subgraph BOOST["Boosting — sequential"]
+        C1[Model 1] -->|"pass on the errors"| C2[Model 2]
+        C2 -->|"pass on the errors"| C3[Model 3]
+        C3 --> V2[Weighted Vote]
+    end
+```
+
+| Point | **Bagging** | **Boosting** | **Stacking** |
+|---|---|---|---|
+| Training order | Parallel, independent | Sequential, dependent | Parallel base models + a meta-model |
+| Base learners | Usually the **same** type | Usually the **same** type (weak) | Usually **different** types |
+| Data for each model | Bootstrap sample | Full data with **re-weighted** examples | Full data |
+| Combination rule | Simple vote / average | **Weighted** vote | A **learned** meta-model |
+| Reduces mainly | **Variance** (overfitting) | **Bias** (underfitting) | Both |
+| Overfitting risk | Low | **Higher** — sensitive to noise and outliers | Medium |
+| Speed | Fast, parallelisable | Slower (sequential) | Slowest |
+| Examples | Random Forest | AdaBoost, XGBoost, LightGBM | Blended competition models |
+
+**Advantages of ensembles:** higher accuracy, better generalisation, more stable and robust predictions.
+**Disadvantages:** much harder to interpret, slower to train and to serve, and more memory — which is exactly why **XAI techniques such as SHAP** are needed on top of them.
+
+**Previous Year Question List from this Topic:**
+
+- [Weak and strong learner ensemble learning in Machine learning.](../written-answers/ai-and-ml.md?plain=1#L1179)
