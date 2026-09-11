@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 3 subtopics · 22 theories
+**Table of Contents** — 4 subtopics · 26 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -28,6 +28,12 @@
    - [Minimum Spanning Tree (MST) — Concept](#minimum-spanning-tree-mst--concept)
    - [Kruskal's Algorithm](#kruskals-algorithm)
    - [Prim's Algorithm and Kruskal vs Prim](#prims-algorithm-and-kruskal-vs-prim)
+
+4. **[Searching Algorithms](#searching-algorithms)**
+   - [Linear Search (Sequential Search)](#linear-search-sequential-search)
+   - [Binary Search](#binary-search)
+   - [Linear Search vs Binary Search](#linear-search-vs-binary-search)
+   - [Finding the Second Highest Element in an Array](#finding-the-second-highest-element-in-an-array)
 
 <!-- TOC END -->
 
@@ -1805,3 +1811,363 @@ Prim(graph, start):
 - [Find the minimum spanning tree:](../written-answers/algorithm.md?plain=1#L1611)
 - [Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using…](../written-answers/algorithm.md?plain=1#L1746)
 - [S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Ca…](../written-answers/algorithm.md?plain=1#L1833)
+
+## Searching Algorithms
+
+### Linear Search (Sequential Search)
+
+**Linear Search** checks the elements of a list **one by one from the beginning** until it finds the target or reaches the end.
+
+It is the only search that works on **unsorted** data.
+
+#### Algorithm
+
+```
+LinearSearch(A, n, key):
+    for i = 0 to n-1:
+        if A[i] == key:
+            return i                 // found — return the index
+    return -1                        // not found
+```
+
+#### C implementation
+
+```c
+int linearSearch(int a[], int n, int key) {
+    for (int i = 0; i < n; i++)
+        if (a[i] == key)
+            return i;      /* found at index i */
+    return -1;             /* not found */
+}
+```
+
+#### Worked example — search 19 in `[45, 12, 19, 7, 63]`
+
+| i | A[i] | A[i] == 19? |
+|---|---|---|
+| 0 | 45 | No |
+| 1 | 12 | No |
+| 2 | **19** | **Yes → return 2** |
+
+#### Complexity
+
+| Case | Situation | Comparisons | Time |
+|---|---|---|---|
+| **Best** | The key is the **first** element | 1 | **O(1)** |
+| **Average** | The key is somewhere in the middle | ≈ (n+1)/2 | **O(n)** |
+| **Worst** | The key is the **last** element, or **absent** | **n** | **O(n)** |
+
+**Space: O(1).**
+
+#### Advantages
+
+1. **Very simple** to write and understand.
+2. Works on **unsorted** data — no preprocessing needed.
+3. Works on any data structure that can be traversed, including **linked lists** (no random access needed).
+4. Good for **small datasets** — no sorting overhead.
+5. Best case is **O(1)** if the element is near the front.
+6. Finds **all occurrences** easily.
+
+#### Disadvantages
+
+1. **Very slow for large data** — O(n).
+2. Inefficient compared with binary search on sorted data.
+3. Performance degrades badly as n grows (1 million elements → up to 1 million comparisons).
+4. Does not exploit any ordering that may already exist.
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।](../written-answers/algorithm.md?plain=1#L2002)
+- [(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।](../written-answers/algorithm.md?plain=1#L2063)
+- [(ক) Liner search কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন।](../written-answers/algorithm.md?plain=1#L2173)
+
+
+---
+
+### Binary Search
+
+**Binary Search** finds a key in a **sorted** array by repeatedly **halving the search space**: compare the key with the **middle** element and discard the half that cannot contain it.
+
+> **Pre-condition: the array MUST be sorted.** This is the single most important point — binary search on an unsorted array gives wrong answers.
+
+```mermaid
+flowchart TD
+    A["Search space: the whole array"] --> B{"key vs A[mid]"}
+    B -->|"key == A[mid]"| C["✅ Found — return mid"]
+    B -->|"key < A[mid]"| D["Discard the RIGHT half<br/>high = mid - 1"]
+    B -->|"key > A[mid]"| E["Discard the LEFT half<br/>low = mid + 1"]
+    D --> B
+    E --> B
+    B -->|"low > high"| F["❌ Not found — return -1"]
+```
+
+#### Iterative algorithm
+
+```
+BinarySearch(A, n, key):
+    low  = 0
+    high = n - 1
+    while low <= high:
+        mid = low + (high - low) / 2        // avoids integer overflow
+        if A[mid] == key:   return mid
+        else if A[mid] < key: low  = mid + 1     // search the right half
+        else:                 high = mid - 1     // search the left half
+    return -1
+```
+
+#### Recursive pseudo-code
+
+*(For the exact exam wording `binarySearch(array, target, low, high)`.)*
+
+```
+binarySearch(array, target, low, high):
+    // BASE CASE: the search space is empty
+    if low > high:
+        return -1
+
+    mid = low + (high - low) / 2
+
+    if array[mid] == target:
+        return mid                                          // found
+    else if target < array[mid]:
+        return binarySearch(array, target, low, mid - 1)     // search the LEFT half
+    else:
+        return binarySearch(array, target, mid + 1, high)    // search the RIGHT half
+```
+
+The first call is `binarySearch(array, target, 0, n - 1)`.
+
+#### C / C++ program
+
+```c
+#include <stdio.h>
+
+/* iterative version */
+int binarySearch(int a[], int n, int key) {
+    int low = 0, high = n - 1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (a[mid] == key)      return mid;
+        else if (a[mid] < key)  low  = mid + 1;
+        else                    high = mid - 1;
+    }
+    return -1;
+}
+
+/* recursive version */
+int binarySearchRec(int a[], int key, int low, int high) {
+    if (low > high) return -1;
+    int mid = low + (high - low) / 2;
+    if (a[mid] == key)     return mid;
+    if (key < a[mid])      return binarySearchRec(a, key, low, mid - 1);
+    else                   return binarySearchRec(a, key, mid + 1, high);
+}
+
+int main(void) {
+    int a[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};   /* MUST be sorted */
+    int n = sizeof(a) / sizeof(a[0]);
+    int key = 23;
+    int pos = binarySearch(a, n, key);
+    if (pos != -1) printf("%d found at index %d\n", key, pos);
+    else           printf("%d not found\n", key);
+    return 0;
+}
+```
+
+#### Worked example — find 23 in `[2, 5, 8, 12, 16, 23, 38, 56, 72, 91]`
+
+| Step | low | high | mid | A[mid] | Compare with 23 | Action |
+|---|---|---|---|---|---|---|
+| 1 | 0 | 9 | 4 | **16** | 23 > 16 | Discard the left half → `low = 5` |
+| 2 | 5 | 9 | 7 | **56** | 23 < 56 | Discard the right half → `high = 6` |
+| 3 | 5 | 6 | 5 | **23** | **Equal** | ✅ **Found at index 5** |
+
+Only **3 comparisons** for 10 elements. A linear search would have needed 6.
+
+#### Complexity
+
+| Case | Situation | Time |
+|---|---|---|
+| **Best** | The key is exactly at the first `mid` | **O(1)** |
+| **Average** | — | **O(log n)** |
+| **Worst** | The key is absent, or found at the last step | **O(log₂ n)** |
+
+**Space:** **O(1)** for the iterative version; **O(log n)** for the recursive version (the call stack).
+
+#### Recurrence relation of binary search
+
+At each step, binary search does a **constant amount of work** (one comparison to find the midpoint) and then solves **one sub-problem of half the size**:
+
+> **T(n) = T(n/2) + O(1)**, with **T(1) = O(1)**
+
+**Solving by substitution:**
+
+```
+T(n) = T(n/2)   + c
+     = T(n/4)   + c + c        = T(n/2²) + 2c
+     = T(n/8)   + 3c           = T(n/2³) + 3c
+     …
+     = T(n/2ᵏ)  + k·c
+```
+
+The recursion stops when the sub-problem size is 1, i.e. `n/2ᵏ = 1` → `n = 2ᵏ` → **k = log₂ n**. Substituting:
+
+> **T(n) = T(1) + c·log₂ n = O(log n)** ✅
+
+*(By the **Master Theorem**: a = 1, b = 2, f(n) = O(1). n^(log_b a) = n^0 = 1 = f(n) → **Case 2** → T(n) = Θ(log n).)*
+
+**Why it is so fast:** each comparison throws away **half** the remaining data. For **1 million** elements it takes at most **log₂(1,000,000) ≈ 20** comparisons; for **1 billion**, only about **30**.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the Pseudo Code for recursive binary search algorithm. Use the following function definition: binarySearch(array, target, low, high).](../written-answers/algorithm.md?plain=1#L1891)
+- [What is the complexity of Binary algorithm?](../written-answers/algorithm.md?plain=1#L1915)
+- [Explain Algorithm of Binary search.](../written-answers/algorithm.md?plain=1#L1946)
+- [Binary search using recursive function.](../written-answers/algorithm.md?plain=1#L1974)
+- [Write a C/C++ program for binary search.](../written-answers/algorithm.md?plain=1#L2019)
+- [(a) Write a program in C/C++/Java to perform binary search on a list of integer members.](../written-answers/algorithm.md?plain=1#L2089)
+- [যে কোন একটা array নাও, সেই array থেকে একটি সংখ্যার binary search করার step গুলো লিখ এবং এর time complexity কত হবে তা বের কর।](../written-answers/algorithm.md?plain=1#L2130)
+- [(খ) Binary Search কিভাবে করা হয়? উদাহরণসহ দেখান।](../written-answers/algorithm.md?plain=1#L2148)
+- [You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return…](../written-answers/algorithm.md?plain=1#L3390)
+- [Recurrence equation of binary search and solve it.](../written-answers/algorithm.md?plain=1#L2503)
+
+
+---
+
+### Linear Search vs Binary Search
+
+| Point | **Linear Search** | **Binary Search** |
+|---|---|---|
+| **Data must be sorted?** | ❌ **No** | ✅ **Yes — mandatory** |
+| **Approach** | Check every element sequentially | Divide and conquer — halve the range |
+| **Best case** | **O(1)** (first element) | **O(1)** (middle element) |
+| **Average case** | **O(n)** | **O(log n)** |
+| **Worst case** | **O(n)** | **O(log n)** |
+| **Space** | O(1) | O(1) iterative, O(log n) recursive |
+| **Comparisons for n = 1,000,000** | up to **1,000,000** | at most **20** |
+| **Data structure** | Array, **linked list**, file — anything traversable | **Array only** (needs random access / O(1) indexing) |
+| **Implementation** | Very simple | Slightly more complex (off-by-one errors are common) |
+| **Insertion cost** | Cheap — just append | Expensive — the order must be maintained |
+| **Best used when** | Small or **unsorted** data; a linked list; only one search is needed | **Large sorted** data; many repeated searches |
+
+#### The classic scenario question
+
+> *"An array contains **one million sorted integers**. Which searching algorithm would you choose to find a given element? Justify your answer."*
+
+**Answer: Binary Search.**
+
+**Justification:**
+1. The array is **already sorted**, which is binary search's only precondition — so there is no sorting cost to pay.
+2. Binary search runs in **O(log₂ n)**. For n = 1,000,000 that is **log₂(10⁶) ≈ 20 comparisons** in the worst case.
+3. Linear search would run in **O(n)** — up to **1,000,000 comparisons**, roughly **50,000 times slower**.
+4. It needs **O(1)** extra space (iterative version).
+5. An array gives **O(1) random access**, which is exactly what binary search requires to jump to the midpoint.
+
+**Points worth adding for a fuller answer:**
+- If the data were **unsorted**, you would use linear search for a *single* lookup — sorting first (O(n log n)) is only worth it if you will search many times.
+- If searches are extremely frequent and memory allows, a **hash table** gives **O(1)** average lookup — but it loses the ordering, so range queries ("all values between 100 and 200") become impossible, whereas binary search handles them naturally.
+- **Interpolation search** can reach O(log log n) if the values are **uniformly distributed**.
+
+**Previous Year Question List from this Topic:**
+
+- [An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer. (SO IT 25-07-2026)](../written-answers/algorithm.md?plain=1#L1877)
+- [6.14 An array contains one million sorted integers. Which searching algorithm would you choose to find a given element? Justify your answer.](../written-answers/algorithm.md?plain=1#L1925)
+- [(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।](../written-answers/algorithm.md?plain=1#L2002)
+- [(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।](../written-answers/algorithm.md?plain=1#L2063)
+- [(ক) Liner search কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন।](../written-answers/algorithm.md?plain=1#L2173)
+
+
+---
+
+### Finding the Second Highest Element in an Array
+
+*(A repeated question, usually paired with "What is an algorithm?".)*
+
+#### The naive approach (and why it is wasteful)
+
+Sort the array and take `A[n-2]`. Correct, but **O(n log n)** — far more work than necessary.
+
+#### The optimal approach — a single pass, O(n)
+
+Keep **two variables**: the largest seen so far and the second largest seen so far.
+
+```
+SecondHighest(A, n):
+    if n < 2:
+        return "Array must have at least 2 elements"
+
+    first  = -INFINITY          // the largest
+    second = -INFINITY          // the second largest
+
+    for i = 0 to n-1:
+        if A[i] > first:
+            second = first      // the old maximum is pushed down
+            first  = A[i]
+        else if A[i] > second and A[i] != first:
+            second = A[i]
+
+    if second == -INFINITY:
+        return "No second highest element (all values are equal)"
+    return second
+```
+
+#### Worked trace on `[12, 35, 1, 10, 34, 1]`
+
+| i | A[i] | Condition | first | second |
+|---|---|---|---|---|
+| — | — | initial | −∞ | −∞ |
+| 0 | 12 | 12 > −∞ → shift | **12** | −∞ |
+| 1 | 35 | 35 > 12 → shift | **35** | **12** |
+| 2 | 1 | 1 < 12 → nothing | 35 | 12 |
+| 3 | 10 | 1 < 10 < 35, and 10 > ... no, 10 < 12 → nothing | 35 | 12 |
+| 4 | 34 | 34 < 35 but 34 > 12 → update second | 35 | **34** |
+| 5 | 1 | nothing | 35 | 34 |
+
+**Answer: second highest = 34.** ✅
+
+#### C implementation
+
+```c
+#include <stdio.h>
+#include <limits.h>
+
+int secondHighest(int a[], int n) {
+    if (n < 2) return INT_MIN;
+    int first = INT_MIN, second = INT_MIN;
+    for (int i = 0; i < n; i++) {
+        if (a[i] > first) {
+            second = first;
+            first  = a[i];
+        } else if (a[i] > second && a[i] != first) {
+            second = a[i];
+        }
+    }
+    return second;
+}
+```
+
+#### Complexity and edge cases
+
+| | |
+|---|---|
+| **Time** | **O(n)** — one pass |
+| **Space** | **O(1)** |
+| Comparisons | at most 2n (can be reduced to n + ⌈log₂ n⌉ − 2 with a tournament method) |
+
+**Edge cases to mention in the exam:**
+- Array with fewer than 2 elements → no answer exists.
+- **All elements equal** (`[5,5,5]`) → there is no *distinct* second highest; state your assumption.
+- **Duplicates of the maximum** (`[10, 10, 7]`) → the `a[i] != first` check makes the answer 7 (the distinct second highest). If duplicates should count, remove that check and the answer becomes 10.
+- Negative numbers → initialise with `INT_MIN`, never with 0.
+
+#### Generalising to the K-th largest element
+
+| Method | Time |
+|---|---|
+| Sort and index | O(n log n) |
+| **Min-heap of size K** | **O(n log K)** |
+| **Quickselect** (partition-based) | **O(n)** average, O(n²) worst |
+
+**Previous Year Question List from this Topic:**
+
+- [What is algorithm? Write down the algorithm to find out the second highest element in an n-element array.](../written-answers/algorithm.md?plain=1#L2193)
