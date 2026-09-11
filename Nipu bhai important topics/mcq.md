@@ -9,3 +9,6 @@
 |  | Routing Protocols (13) |
 | computer-network-security.md | Cyber Attacks & Threats (20) |
 |  | Security Protocols (9) |
+| web-technology.md | HTML, XML & Web Fundamentals (15) |
+|  | HTTP & Status Codes (5) |
+|  | Full Stack & Web Servers (5) |

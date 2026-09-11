@@ -17,3 +17,5 @@
 |  | Firewalls & Network Defense (20) |
 |  | Authentication & Access Control (16) |
 |  | Security Protocols (SSL/TLS, HTTPS) (12) |
+| web-technology.md | HTML & Web Fundamentals (32) |
+|  | HTTP Protocol (10) |
