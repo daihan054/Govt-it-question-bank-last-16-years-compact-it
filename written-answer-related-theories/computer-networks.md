@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 1 subtopics · 5 theories
+**Table of Contents** — 2 subtopics · 9 theories
 
 1. **[Subnetting & IP Addressing](#subnetting--ip-addressing)**
    - [IPv4 Addressing — Structure and Classes](#ipv4-addressing--structure-and-classes)
@@ -7,6 +7,12 @@
    - [Subnetting — Concept and Method](#subnetting--concept-and-method)
    - [VLSM — Variable Length Subnet Masking](#vlsm--variable-length-subnet-masking)
    - [CIDR, Supernetting and IP Address Planning](#cidr-supernetting-and-ip-address-planning)
+
+2. **[OSI & TCP/IP Reference Model](#osi--tcpip-reference-model)**
+   - [The OSI Reference Model — The Seven Layers](#the-osi-reference-model--the-seven-layers)
+   - [The TCP/IP Model](#the-tcpip-model)
+   - [OSI vs TCP/IP — Comparison](#osi-vs-tcpip--comparison)
+   - [Layer-by-Layer Protocol and Device Reference](#layer-by-layer-protocol-and-device-reference)
 
 <!-- TOC END -->
 
@@ -533,3 +539,383 @@ IPv4's 4.3 billion addresses were exhausted at the regional registries between 2
 - [(খ) Classful এবং Classless IP address এর পার্থক্য কী? নিচের IP গুলোর Class নির্ণয় করুন।](../written-answers/computer-networks.md?plain=1#L891)
 - [Write down the basic differences of the following:](../written-answers/computer-networks.md?plain=1#L980)
 - [(ii) CIDR কী? 192.168.100.9/26 IP address থেকে (a) Total subnets (b) Block size (c) Valid Hosts (d) Total hosts বের করুন।](../written-answers/computer-networks.md?plain=1#L1493)
+
+## OSI & TCP/IP Reference Model
+
+### The OSI Reference Model — The Seven Layers
+
+#### What is the OSI model?
+
+The **OSI (Open Systems Interconnection) model** is a **conceptual reference framework**, published by the **ISO (International Organization for Standardization) in 1984**, that describes how data travels from an application on one computer, across a network, to an application on another computer — divided into **SEVEN independent layers**, each with a defined function.
+
+> **It is a MODEL, not a protocol.** No real network runs "the OSI stack" — the Internet runs TCP/IP. The OSI model's value is as a **universal vocabulary and teaching framework**: when an engineer says *"that is a Layer 2 problem"*, everyone knows exactly what is meant.
+
+#### Why a layered model?
+
+1. **Divide and conquer** — a huge problem is broken into seven manageable pieces.
+2. **Interoperability** — vendors can build equipment that works together.
+3. **Modularity** — one layer can be changed (copper to fibre, IPv4 to IPv6) **without redesigning the others**.
+4. **Standardisation** of interfaces between layers.
+5. **Easier troubleshooting** — faults can be isolated to a layer.
+6. **Easier learning and teaching**.
+
+#### The seven layers
+
+```mermaid
+flowchart TD
+    L7["7 . APPLICATION Layer<br/>User interface & network services · Data"]
+    L6["6 . PRESENTATION Layer<br/>Translation, encryption, compression · Data"]
+    L5["5 . SESSION Layer<br/>Establish, manage and end sessions · Data"]
+    L4["4 . TRANSPORT Layer<br/>End-to-end delivery, reliability · SEGMENT"]
+    L3["3 . NETWORK Layer<br/>Logical addressing & routing · PACKET"]
+    L2["2 . DATA LINK Layer<br/>Physical addressing, error detection · FRAME"]
+    L1["1 . PHYSICAL Layer<br/>Bits on the medium · BIT"]
+    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
+    L1 --> M[("Physical medium — cable, fibre, radio")]
+```
+
+> **The mnemonic (top to bottom, 7 → 1):**
+> **A**ll **P**eople **S**eem **T**o **N**eed **D**ata **P**rocessing
+> *(Application, Presentation, Session, Transport, Network, Data Link, Physical)*
+>
+> **Bottom to top (1 → 7):**
+> **P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way
+> *(Physical, Data Link, Network, Transport, Session, Presentation, Application)*
+
+#### Layer-by-layer functions
+
+| # | Layer | Main functions | PDU | Devices | Protocols |
+|---|---|---|---|---|---|
+| **7** | **Application** | Provides **network services directly to the user's application**: file transfer, email, web browsing, remote login, directory services | **Data** | Gateway, firewall (L7), host | **HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, Telnet, SSH, SNMP** |
+| **6** | **Presentation** | **Translation** (ASCII ↔ EBCDIC, character encoding), **ENCRYPTION/decryption**, **COMPRESSION/decompression**, data formatting. Called the **"Translator"** or **"Syntax layer"** | **Data** | Gateway | **SSL/TLS, JPEG, MPEG, GIF, ASCII, MIME, XDR** |
+| **5** | **Session** | **Establishes, manages, synchronises and terminates SESSIONS** between applications; **dialog control** (simplex/half/full duplex); **synchronisation checkpoints** for recovery | **Data** | Gateway | **NetBIOS, RPC, PPTP, SQL sessions, NFS, SIP** |
+| **4** | **Transport** | **END-TO-END delivery** between processes; **segmentation and reassembly**; **PORT addressing** (service-point addressing); **connection control**; **flow control**; **error control**; **reliability and retransmission** | **SEGMENT** (TCP) / **Datagram** (UDP) | Gateway, L4 load balancer, firewall | **TCP, UDP, SCTP** |
+| **3** | **Network** | **LOGICAL ADDRESSING (IP)**; **ROUTING** — choosing the best path across multiple networks; **fragmentation** and reassembly; congestion control; internetworking | **PACKET** (Datagram) | **ROUTER**, Layer-3 switch | **IP (IPv4/IPv6), ICMP, IGMP, ARP, RARP, OSPF, RIP, BGP, IPsec** |
+| **2** | **Data Link** | **PHYSICAL ADDRESSING (MAC)**; **FRAMING** — packaging bits into frames; **error DETECTION** (CRC); **flow control**; **media access control** (who may transmit) | **FRAME** | **SWITCH**, **BRIDGE**, NIC | **Ethernet (802.3), Wi-Fi (802.11), PPP, HDLC, Frame Relay, ATM, ARP** |
+| **1** | **Physical** | Transmission of **raw BITS** over the medium; defines **voltages, cables, connectors, pins, data rate, topology and transmission mode**; **bit synchronisation** | **BIT** | **HUB**, **REPEATER**, cables, connectors, modem | RS-232, RJ45, Ethernet physical specs, DSL, USB, Bluetooth physical |
+
+#### The Data Link layer's two sub-layers
+
+| Sub-layer | Function |
+|---|---|
+| **LLC — Logical Link Control** (upper) | Flow control, error control, and multiplexing network-layer protocols |
+| **MAC — Media Access Control** (lower) | **Physical addressing** and deciding **who may transmit** (CSMA/CD, CSMA/CA) |
+
+#### The Protocol Data Unit (PDU)
+
+> **A PDU (Protocol Data Unit) is the unit of data exchanged at a particular layer of the model, consisting of that layer's control information (header) plus the data passed down from the layer above.**
+
+| Layer | **PDU name** |
+|---|---|
+| Application, Presentation, Session (5–7) | **Data** (or Message) |
+| **Transport (4)** | **Segment** (TCP) / **Datagram** (UDP) |
+| **Network (3)** | **Packet** |
+| **Data Link (2)** | **Frame** |
+| **Physical (1)** | **Bit** |
+
+> **The relationship between Data, Segment, Packet, Frame and Bit** is simply **encapsulation at successive layers** — each layer wraps the unit from above in its own header.
+
+#### Encapsulation and de-encapsulation
+
+```mermaid
+flowchart TD
+    subgraph SEND["SENDER — encapsulation (top to bottom)"]
+        A7["Application: DATA"] --> A6["Presentation: encrypt / compress"]
+        A6 --> A5["Session: session info"]
+        A5 --> A4["Transport: + TCP header (ports, seq) → SEGMENT"]
+        A4 --> A3["Network: + IP header (source/dest IP) → PACKET"]
+        A3 --> A2["Data Link: + MAC header + trailer (CRC) → FRAME"]
+        A2 --> A1["Physical: → BITS on the wire"]
+    end
+    A1 -->|"transmission medium"| B1
+    subgraph RECV["RECEIVER — de-encapsulation (bottom to top)"]
+        B1["Physical: bits"] --> B2["Data Link: check CRC, strip MAC header → PACKET"]
+        B2 --> B3["Network: check IP, strip IP header → SEGMENT"]
+        B3 --> B4["Transport: reassemble, strip TCP header → DATA"]
+        B4 --> B5["Session → Presentation: decrypt / decompress"]
+        B5 --> B7["Application: DATA delivered to the user"]
+    end
+```
+
+> **How two computers exchange information using the OSI model:** the sender's data travels **DOWN** through all seven layers, each adding its own header (**encapsulation**); it crosses the physical medium as bits; and at the receiver it travels **UP** through the seven layers, each removing and acting on its own header (**de-encapsulation**), until the original data is handed to the application. **Each layer communicates logically with its peer layer** on the other machine — the sender's Transport layer "talks to" the receiver's Transport layer — even though the actual data physically passes through every layer below.
+
+#### Quick answers to the repeated short questions
+
+| Question | Answer |
+|---|---|
+| **How many layers in OSI?** | **7** |
+| **Which layer does a ROUTER operate at?** | **Layer 3 — Network** |
+| **Which layer does a SWITCH operate at?** | **Layer 2 — Data Link** (a Layer-3 switch also does routing) |
+| **Which layer does a HUB/REPEATER operate at?** | **Layer 1 — Physical** |
+| **Which layer converts a bit stream into frames?** | **Layer 2 — Data Link** |
+| **Which layer handles port numbers / end-to-end delivery?** | **Layer 4 — Transport** |
+| **Which layer links the "network support layers" (1–3) and the "user support layers" (5–7)?** | **Layer 4 — the TRANSPORT layer** |
+| **Which layer is responsible for ENCRYPTION?** | **Layer 6 — Presentation** *(end-to-end encryption like TLS is usually placed at the Presentation/Session boundary; application-level encryption is Layer 7)* |
+| **Which layer does routing?** | **Layer 3 — Network** |
+| **Network layer number** | **3** |
+| **Which layer does IP work at?** | **3** · TCP/UDP at **4** · HTTP at **7** · Ethernet at **2** |
+
+#### Cyber threats mapped to OSI layers
+
+| Layer | Example threat |
+|---|---|
+| **7 Application** | **SQL injection, XSS, HTTP flood, phishing, malware** |
+| **6 Presentation** | SSL stripping, malformed certificate attacks, Heartbleed |
+| **5 Session** | **Session hijacking**, session fixation |
+| **4 Transport** | **SYN flood**, port scanning, UDP flood |
+| **3 Network** | **IP spoofing, ICMP/Ping flood, Smurf attack, route poisoning** |
+| **2 Data Link** | **ARP spoofing, MAC flooding, VLAN hopping, DHCP starvation** |
+| **1 Physical** | **Cable tapping/wiretapping**, physical damage, jamming, theft of equipment |
+
+**Previous Year Question List from this Topic:**
+
+- [Mention the layers of the OSI Model and the function of each layer.](../written-answers/computer-networks.md?plain=1#L2424)
+- [OSI মডেলের ৭টি স্তরের কাজ কি? এই সমগ্র স্তরগুলোর ভূমিকা কি?](../written-answers/computer-networks.md?plain=1#L2449)
+- [What is the OSI model? Explain the functions of each layer with examples.](../written-answers/computer-networks.md?plain=1#L2473)
+- [(b) Name the OSI layers and give one example of a cyber threat at any tree of those layers.](../written-answers/computer-networks.md?plain=1#L2506)
+- [Write bottom to top OSI reference Model.](../written-answers/computer-networks.md?plain=1#L2530)
+- [How many Layers of OSI?](../written-answers/computer-networks.md?plain=1#L2630)
+- [রাউটার OSI এর কোন লেয়ারে থাকে?](../written-answers/computer-networks.md?plain=1#L2647)
+- [Write the name of OSI layers.](../written-answers/computer-networks.md?plain=1#L2665)
+- [Write the name of OSI layers protocol for every layers.](../written-answers/computer-networks.md?plain=1#L2683)
+- [Write down the OSI model.](../written-answers/computer-networks.md?plain=1#L2760)
+- [What is OSI Model? Write all layer name sequence should be top to bottom or bottom to top.](../written-answers/computer-networks.md?plain=1#L2842)
+- [(a) List down the layers of OSI model in top-down manner.](../written-answers/computer-networks.md?plain=1#L2905)
+- [Which layer is used to link the network support layers and user support layers?](../written-answers/computer-networks.md?plain=1#L2957)
+- [What is the number for the Network layer and the support layer?](../written-answers/computer-networks.md?plain=1#L2977)
+- [(c) Write the all layers of OSI model.](../written-answers/computer-networks.md?plain=1#L2987)
+- [In order to prevent that the company decided to add end to end encryption techniques which layer of the OSI model is suitable to work in considering parameters…](../written-answers/computer-networks.md?plain=1#L3003)
+- [(a) What is OSI model? Explain how two computers can exchange information using the OSI model.](../written-answers/computer-networks.md?plain=1#L3057)
+- [What is OSI model? Write different layers of OSI model.](../written-answers/computer-networks.md?plain=1#L3102)
+- [What is PDU?](../written-answers/computer-networks.md?plain=1#L3152)
+- [(খ) Computer network এর OSI 7-Layer গুলো উদাহরণসহ লিখুন।](../written-answers/computer-networks.md?plain=1#L3170)
+- [Computer Network এ OSI Model এর Layer কয়টি?](../written-answers/computer-networks.md?plain=1#L3187)
+- [OSI Model এর কাজ কী? এর লেয়ারসমূহ কী কী?](../written-answers/computer-networks.md?plain=1#L3204)
+- [Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None](../written-answers/computer-networks.md?plain=1#L3227)
+- [What is OSI model? Write down the name of OSI model layer.](../written-answers/computer-networks.md?plain=1#L3244)
+- [Write down the functionality of OSI model.](../written-answers/computer-networks.md?plain=1#L3347)
+- [OSI Model এর Layer গুলো বর্ণনা করুন।](../written-answers/computer-networks.md?plain=1#L3368)
+- [(ক) OSI Model (Layer) এর সাতটি Layer কী কী? প্রথম দুটি সংক্ষেপে বর্ণনা করুন।](../written-answers/computer-networks.md?plain=1#L3422)
+- [Describe the OSI layers. Draw a diagram to show the hierarchy when the data is transmitted or received.](../written-answers/computer-networks.md?plain=1#L3479)
+- [OSI model এর layer গুলোর নাম লিখ।](../written-answers/computer-networks.md?plain=1#L3518)
+- [How many layers are used in OSI and TCP/IP model? Draw the layer.](../written-answers/computer-networks.md?plain=1#L3535)
+- [What is OSI model? Which layers are important for data transfer and user interaction?](../written-answers/computer-networks.md?plain=1#L3597)
+- [Name OSI layer that transmitted bit stream to frames.](../written-answers/computer-networks.md?plain=1#L3617)
+- [Explain: ISO, OSI and TCP/IP model with figure.](../written-answers/computer-networks.md?plain=1#L3635)
+
+
+---
+
+### The TCP/IP Model
+
+#### What is the TCP/IP model?
+
+The **TCP/IP model** (also called the **DoD model**, because it was developed by the US **Department of Defense** through ARPANET in the 1970s) is the **practical, working model on which the Internet is actually built**. It has **FOUR layers**.
+
+```mermaid
+flowchart TD
+    T4["4 . APPLICATION Layer<br/>= OSI layers 7 + 6 + 5<br/>HTTP, HTTPS, FTP, SMTP, DNS, DHCP, SSH, SNMP, Telnet"]
+    T3["3 . TRANSPORT Layer<br/>= OSI layer 4<br/>TCP, UDP"]
+    T2["2 . INTERNET Layer<br/>= OSI layer 3<br/>IP, ICMP, IGMP, ARP, RARP"]
+    T1["1 . NETWORK ACCESS Layer<br/>(Link / Network Interface)<br/>= OSI layers 2 + 1<br/>Ethernet, Wi-Fi, PPP, ARP, drivers, hardware"]
+    T4 --> T3 --> T2 --> T1
+```
+
+#### The four layers in detail
+
+| # | Layer | Function | PDU | Protocols | Devices |
+|---|---|---|---|---|---|
+| **4** | **Application** | Provides all **user-level services**, plus data formatting, encryption and session management (it absorbs OSI layers 5, 6 and 7) | **Data / Message** | **HTTP, HTTPS, FTP, TFTP, SMTP, POP3, IMAP, DNS, DHCP, Telnet, SSH, SNMP, NTP** | Host, application gateway |
+| **3** | **Transport** | **End-to-end (process-to-process) delivery**, segmentation, **port addressing**, reliability, flow and error control | **Segment / Datagram** | **TCP** (reliable, connection-oriented), **UDP** (fast, connectionless) | Firewall, L4 load balancer |
+| **2** | **Internet** | **Logical addressing (IP)** and **ROUTING** of packets across interconnected networks; fragmentation | **Packet / Datagram** | **IP (IPv4/IPv6), ICMP, IGMP, ARP, RARP**, and the routing protocols **OSPF, RIP, BGP** | **ROUTER**, L3 switch |
+| **1** | **Network Access** (Link) | How data is physically placed on and taken off the medium; **framing, MAC addressing, error detection**, and all electrical/optical signalling | **Frame → Bits** | **Ethernet (802.3), Wi-Fi (802.11), PPP, HDLC, Frame Relay, ATM**, device drivers | **Switch, bridge, hub, NIC, cable** |
+
+#### How data is known at each TCP/IP layer
+
+| Layer | Data is called |
+|---|---|
+| Application | **Data / Message / Stream** |
+| Transport | **Segment** (TCP) or **Datagram** (UDP) |
+| Internet | **Packet / Datagram** |
+| Network Access | **Frame** → on the wire, **Bits** |
+
+#### The protocol suite diagram
+
+```mermaid
+flowchart TD
+    subgraph APP["APPLICATION Layer"]
+        A1["HTTP / HTTPS"]
+        A2["FTP / TFTP"]
+        A3["SMTP / POP3 / IMAP"]
+        A4["DNS"]
+        A5["DHCP"]
+        A6["SSH / Telnet"]
+        A7["SNMP / NTP"]
+    end
+    subgraph TRA["TRANSPORT Layer"]
+        T1a["TCP — reliable, connection-oriented"]
+        T2a["UDP — fast, connectionless"]
+    end
+    subgraph INT["INTERNET Layer"]
+        I1["IP (IPv4 / IPv6)"]
+        I2["ICMP"]
+        I3["IGMP"]
+        I4["ARP / RARP"]
+        I5["Routing: RIP, OSPF, BGP"]
+    end
+    subgraph NET["NETWORK ACCESS Layer"]
+        N1["Ethernet 802.3"]
+        N2["Wi-Fi 802.11"]
+        N3["PPP · HDLC · Frame Relay · ATM"]
+    end
+    APP --> TRA --> INT --> NET
+```
+
+#### Which transport protocol each application uses
+
+| Uses **TCP** (reliability needed) | Uses **UDP** (speed needed) | Uses **both** |
+|---|---|---|
+| HTTP/HTTPS, FTP, SMTP, POP3, IMAP, SSH, Telnet | **DHCP, TFTP, SNMP, NTP, RIP**, VoIP, video streaming, online gaming | **DNS** (UDP for queries, TCP for zone transfers and large responses) |
+
+**Previous Year Question List from this Topic:**
+
+- [In the TCP/IP model, how is data known in the different layers?](../written-answers/computer-networks.md?plain=1#L2551)
+- [(b) Explain the TCP/IP protocol switch layers.](../written-answers/computer-networks.md?plain=1#L2574)
+- [(b) Draw the diagram of TCP/IP protocol suite and mention the name of protocols used in different layers of TCP/IP.](../written-answers/computer-networks.md?plain=1#L2593)
+- [Tabular representation of TCP/IP layer, functions of each layer, Associate protocols, device, and software in each layer. Different types of network firewalls.…](../written-answers/computer-networks.md?plain=1#L2699)
+- [Explain TCP/IP model and its protocol and device.](../written-answers/computer-networks.md?plain=1#L2738)
+- [How many TCP/IP layer? Write its Layer name?](../written-answers/computer-networks.md?plain=1#L2777)
+- [What is TCP/IP model? Briefly explain TCP/IP model.](../written-answers/computer-networks.md?plain=1#L3032)
+- [TCP/IP model এর Layer গুলোর কাজ লিখুন।](../written-answers/computer-networks.md?plain=1#L3088)
+- [What is OSI and TCP/IP model and briefly explain?](../written-answers/computer-networks.md?plain=1#L3264)
+- [TCP/IP protocol suite -এর বিভিন্ন স্তরের নাম লিখুন? HTTPs কী? এর ব্যবহারের প্রয়োজনীয়তা সংক্ষেপে বর্ণনা করুন?](../written-answers/computer-networks.md?plain=1#L3301)
+- [TCP/IP মডেলের Layers সমূহের কাজ সংক্ষেপে লিখুন।](../written-answers/computer-networks.md?plain=1#L3409)
+- [(খ) TCP/IP প্রোটোকল কী কাজ করে তা বর্ণনা করুন।](../written-answers/computer-networks.md?plain=1#L3456)
+- [How many layers are used in OSI and TCP/IP model? Draw the layer.](../written-answers/computer-networks.md?plain=1#L3535)
+- [Give answer of the following question:](../written-answers/computer-networks.md?plain=1#L3567)
+
+
+---
+
+### OSI vs TCP/IP — Comparison
+
+```mermaid
+flowchart LR
+    subgraph OSI["OSI MODEL — 7 layers"]
+        O7["7 Application"]
+        O6["6 Presentation"]
+        O5["5 Session"]
+        O4["4 Transport"]
+        O3["3 Network"]
+        O2["2 Data Link"]
+        O1["1 Physical"]
+    end
+    subgraph TCP["TCP/IP MODEL — 4 layers"]
+        T4b["4 Application"]
+        T3b["3 Transport"]
+        T2b["2 Internet"]
+        T1b["1 Network Access"]
+    end
+    O7 -.-> T4b
+    O6 -.-> T4b
+    O5 -.-> T4b
+    O4 -.-> T3b
+    O3 -.-> T2b
+    O2 -.-> T1b
+    O1 -.-> T1b
+```
+
+| Point | **OSI Model** | **TCP/IP Model** |
+|---|---|---|
+| **Number of layers** | **7** | **4** (some texts say 5, splitting the link layer) |
+| **Developed by** | **ISO** (International Organization for Standardization), **1984** | **US Department of Defense / ARPANET**, **1970s** |
+| **Also known as** | ISO-OSI reference model | **DoD model**, Internet model |
+| **Nature** | **Theoretical / reference model** — "what should happen" | **Practical / implementation model** — "what actually happens" |
+| **Developed** | The **model FIRST**, then protocols | The **protocols FIRST**, then the model described them |
+| **Approach** | **Vertical** — strict layer independence | **Horizontal** — more integrated |
+| **Presentation & Session layers** | **Separate layers (6 and 5)** | **Merged into the Application layer** |
+| **Physical & Data Link** | **Separate layers (1 and 2)** | **Merged into the Network Access layer** |
+| **Transport layer** | **Connection-oriented only** | **Both connection-oriented (TCP) and connectionless (UDP)** |
+| **Network layer** | Both connection-oriented and connectionless | **Connectionless only (IP)** |
+| **Protocol dependence** | **Protocol independent** — a generic standard | **Protocol dependent** — built around TCP and IP |
+| **Usage today** | **Teaching, troubleshooting and terminology** | **Actually running the Internet** |
+| **Reliability** | Guaranteed by the model's design | Left to the Transport layer (TCP) |
+| **Replacement of a protocol** | Easy — layers are independent | Harder — protocols are interdependent |
+
+> **Why did OSI "lose"?** TCP/IP was **already working, free and implemented** in BSD Unix by the time the OSI protocol suite was finalised. OSI was more elegant but slower, more complex and arrived too late. **The result is that the industry uses the OSI MODEL for vocabulary and the TCP/IP PROTOCOLS for actual networking** — which is why both are taught together.
+
+#### The hybrid (5-layer) model
+
+Because the OSI model is too detailed for practice and the TCP/IP model too coarse for teaching, most modern textbooks use a **5-layer hybrid model**:
+
+| Layer | Name | Equivalent |
+|---|---|---|
+| **5** | **Application** | OSI 5 + 6 + 7 |
+| **4** | **Transport** | OSI 4 |
+| **3** | **Network** | OSI 3 |
+| **2** | **Data Link** | OSI 2 |
+| **1** | **Physical** | OSI 1 |
+
+> This is popular because it keeps the **useful, practically distinct** Physical and Data Link separation of OSI, while merging the three upper layers that in reality are never implemented separately. It is the model used in Kurose & Ross and most current courses.
+
+#### What is a network protocol?
+
+> A **network protocol** is a **set of agreed rules, formats and procedures that govern how data is transmitted, received and interpreted between devices on a network.**
+
+It defines three things: **Syntax** (the format and structure of the message), **Semantics** (the meaning of each field and what action to take), and **Timing** (when and how fast to send).
+
+**Without protocols, communication is impossible** — exactly as two people who do not share a language cannot converse, however loudly they speak.
+
+**Previous Year Question List from this Topic:**
+
+- [Differentiate between OSI Model and TCP/IP Model. Draw the diagram of 4 Layers of TCP/IP Model including the main function of each layer and related protocols.…](../written-answers/computer-networks.md?plain=1#L2798)
+- [Difference between OSI model and TCP/IP model. Relation between Data, Segment, Packet and Bit in OSI model.](../written-answers/computer-networks.md?plain=1#L2867)
+- [What is the difference between DOD and OSI model?](../written-answers/computer-networks.md?plain=1#L3123)
+- [What is OSI and TCP/IP model and briefly explain?](../written-answers/computer-networks.md?plain=1#L3264)
+- [বর্তমানে Hybrid network model জনপ্রিয় একটি মডেল। এই মডেলের পাঁচটি Layer হচ্ছে, Application, Transport, Physical, Data link and Network Layer। এদের কাজ দেওয়া আছে…](../written-answers/computer-networks.md?plain=1#L3325)
+- [(d) What do you mean by network protocol? Compare TCP/IP protocol suite and OSI reference model.](../written-answers/computer-networks.md?plain=1#L3382)
+- [How many layers are used in OSI and TCP/IP model? Draw the layer.](../written-answers/computer-networks.md?plain=1#L3535)
+- [Explain: ISO, OSI and TCP/IP model with figure.](../written-answers/computer-networks.md?plain=1#L3635)
+
+
+---
+
+### Layer-by-Layer Protocol and Device Reference
+
+This single table answers the many "which protocol/device works at which layer" questions.
+
+| OSI Layer | TCP/IP Layer | **Protocols** | **Devices** | **PDU** | Address used |
+|---|---|---|---|---|---|
+| **7 Application** | Application | HTTP, HTTPS, FTP, TFTP, SMTP, POP3, IMAP, DNS, DHCP, Telnet, SSH, SNMP, NTP, NFS | Application gateway, proxy, L7 firewall/WAF | Data | — |
+| **6 Presentation** | Application | SSL/TLS, JPEG, PNG, GIF, MPEG, MIDI, ASCII, EBCDIC, MIME | Gateway | Data | — |
+| **5 Session** | Application | NetBIOS, RPC, PPTP, SIP, SQL session, SAP | Gateway | Data | — |
+| **4 Transport** | Transport | **TCP, UDP**, SCTP | Firewall, L4 load balancer | **Segment** | **Port number** |
+| **3 Network** | Internet | **IP, ICMP, IGMP, ARP, RARP, IPsec**, OSPF, RIP, BGP, EIGRP | **Router**, L3 switch, multilayer firewall | **Packet** | **IP address** |
+| **2 Data Link** | Network Access | **Ethernet (802.3), Wi-Fi (802.11)**, PPP, HDLC, Frame Relay, ATM, STP, VLAN (802.1Q) | **Switch, Bridge, NIC**, Wireless AP | **Frame** | **MAC address** |
+| **1 Physical** | Network Access | RS-232, RJ45, V.35, DSL, ISDN, SONET, Bluetooth PHY, USB | **Hub, Repeater, Cable, Connector, Modem, Transceiver** | **Bit** | — |
+
+#### A trace of one web request through the layers
+
+> *What happens when you type `www.bank.com.bd` and press Enter:*
+
+| Step | Layer | What happens |
+|---|---|---|
+| 1 | **7 Application** | The browser forms an **HTTP GET** request. First it needs the IP, so a **DNS** query is issued |
+| 2 | **6 Presentation** | **TLS encrypts** the request (for HTTPS) and handles character encoding |
+| 3 | **5 Session** | A session is established and maintained for the exchange |
+| 4 | **4 Transport** | **TCP** breaks the data into **segments**, adds source port (e.g. 51234) and destination port (**443**), sequence numbers and a checksum; performs the **three-way handshake** |
+| 5 | **3 Network** | **IP** adds the **source and destination IP addresses** → **packet**; the routing table selects the next hop |
+| 6 | **2 Data Link** | **Ethernet** adds the **source and destination MAC addresses** (the destination MAC being the **default gateway's**, found by **ARP**) and a CRC trailer → **frame** |
+| 7 | **1 Physical** | The frame becomes **electrical, optical or radio signals — bits** — on the medium |
+| 8 | — | Each **router** along the way strips the frame, reads the **IP header**, decides the next hop, and builds a **new frame** with new MAC addresses. **The IP addresses never change; the MAC addresses change at every hop** |
+| 9 | **1 → 7 at the server** | The process reverses: bits → frame → packet → segment → data → the web server application |
+
+**Previous Year Question List from this Topic:**
+
+- [Write the name of OSI layers protocol for every layers.](../written-answers/computer-networks.md?plain=1#L2683)
+- [Tabular representation of TCP/IP layer, functions of each layer, Associate protocols, device, and software in each layer. Different types of network firewalls.…](../written-answers/computer-networks.md?plain=1#L2699)
+- [Explain TCP/IP model and its protocol and device.](../written-answers/computer-networks.md?plain=1#L2738)
+- [Fill up the following protocol table by work at which layer?](../written-answers/computer-networks.md?plain=1#L2922)
+- [What is PDU?](../written-answers/computer-networks.md?plain=1#L3152)
+- [Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None](../written-answers/computer-networks.md?plain=1#L3227)
+- [Name OSI layer that transmitted bit stream to frames.](../written-answers/computer-networks.md?plain=1#L3617)
