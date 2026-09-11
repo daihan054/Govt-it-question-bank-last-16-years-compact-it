@@ -1,10 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 19 theories
+**Table of Contents** — 9 subtopics · 21 theories
 
 1. **[Cloud Service Models](#cloud-service-models)**
    - [Cloud Computing — Definition, Characteristics and Deployment Models](#cloud-computing--definition-characteristics-and-deployment-models)
    - [IaaS, PaaS and SaaS — The Three Service Models](#iaas-paas-and-saas--the-three-service-models)
    - [Multi-Tenancy in the Cloud](#multi-tenancy-in-the-cloud)
+   - [Cloud Computing Architecture — Front-End, Back-End, SOA and EDA](#cloud-computing-architecture--front-end-back-end-soa-and-eda)
 
 2. **[Virtualization & Containers (VM vs Container)](#virtualization--containers-vm-vs-container)**
    - [Virtualization — Concept, Types and Benefits](#virtualization--concept-types-and-benefits)
@@ -16,6 +17,7 @@
    - [Cloud Storage vs Traditional Storage](#cloud-storage-vs-traditional-storage)
    - [Types of Cloud Storage](#types-of-cloud-storage)
    - [Cloud Databases (DBaaS)](#cloud-databases-dbaas)
+   - [Data Centre Colocation and Disaster Recovery](#data-centre-colocation-and-disaster-recovery)
 
 4. **[Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing)**
    - [Centralized vs Distributed Computing](#centralized-vs-distributed-computing)
@@ -125,6 +127,14 @@
 - [Explain cloud computing and evaluate its advantages and disadvantages.](../written-answers/cloud-computing.md?plain=1#L595)
 - [(খ) Cloud computing কী? উহার বৈশিষ্ট্য ও সুবিধা বর্ণনা করুন ।](../written-answers/cloud-computing.md?plain=1#L619)
 - [What is Cloud Computing? Write its adventages and Disadventages?](../written-answers/cloud-computing.md?plain=1#L641)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What type of computing technology refers to services and applications that typically run on a distributed network through virtualized resources?](../mcq-answers/cloud-computing.md?plain=1#L16)
+- [Which of the following will not be treated as a cloud service?](../mcq-answers/cloud-computing.md?plain=1#L43)
+- [কোনটি Cloud Computing এর সাথে সম্পৃক্ত নয়?](../mcq-answers/cloud-computing.md?plain=1#L88)
+- [Cloud computing is ________ option for small firms.](../mcq-answers/cloud-computing.md?plain=1#L115)
+
 
 
 ---
@@ -282,6 +292,17 @@ flowchart TD
 - [(c) What are the three types of services provided by the cloud?](../written-answers/cloud-computing.md?plain=1#L245)
 - [What is cloud computing? Mention five advantages threat of cloud computing. Describe IaaS, PaaS and SaaS.](../written-answers/cloud-computing.md?plain=1#L294)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is not a layer of cloud computing?](../mcq-answers/cloud-computing.md?plain=1#L52)
+- [Which of the following type is not supported for mobile application viewing for Google docs?](../mcq-answers/cloud-computing.md?plain=1#L70)
+- [Which of the following web service can be controlled by iAWSManager cloud app from an iPhone?](../mcq-answers/cloud-computing.md?plain=1#L79)
+- [Which one of the following is related to the services provided by cloud?](../mcq-answers/cloud-computing.md?plain=1#L144)
+- [Service that generally focuses on the hardware following which one of the following services models?](../mcq-answers/cloud-computing.md?plain=1#L153)
+- [Which service(s) is/are related with Cloud Computing?](../mcq-answers/cloud-computing.md?plain=1#L162)
+- [Which of the following is Cloud Platform by Microsoft?](../mcq-answers/cloud-computing.md?plain=1#L171)
+
+
 
 ---
 
@@ -363,6 +384,99 @@ For a platform where **many vendors** each run their own shop:
 - [What is SaaS and multi-tenant architecture? How are they related? What are the advantages and disadvantages of multi-tenancy? For a multi-vendor e-commerce appl…](../written-answers/cloud-computing.md?plain=1#L61)
 - [What do you mean by multi-tenancy in the cloud? Why is it beneficial for cloud service providers?](../written-answers/cloud-computing.md?plain=1#L179)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which one of the following cloud concepts is related to sharing and pooling the resources?](../mcq-answers/cloud-computing.md?plain=1#L34)
+- [Which of the following cloud concept is related to pooling and sharing of resources?](../mcq-answers/cloud-computing.md?plain=1#L106)
+
+
+---
+
+### Cloud Computing Architecture — Front-End, Back-End, SOA and EDA
+
+> **CLOUD COMPUTING ARCHITECTURE is the way the components of a cloud system are ORGANISED and CONNECTED** — what the user touches, what runs in the provider's data centre, and the network that joins them.
+
+#### The two halves of every cloud system
+
+```mermaid
+flowchart LR
+    subgraph F["FRONT END — the CLIENT side"]
+        A["The user's device —<br/>browser, mobile app,<br/>thin client, API client"]
+    end
+    subgraph N["NETWORK"]
+        B["The INTERNET<br/>(or a leased line / VPN)"]
+    end
+    subgraph K["BACK END — the PROVIDER side"]
+        C["Servers · Storage ·<br/>Virtual machines · Databases ·<br/>MANAGEMENT software ·<br/>SECURITY · Deployment model"]
+    end
+    F --> N --> K
+```
+
+| Half | What it contains | Owned by |
+|---|---|---|
+| ⭐ **FRONT END** | The **client device and the interface** — a web browser, a mobile app, a thin client, or an API-consuming program | **The user** |
+| ⭐ **BACK END** | The **actual cloud** — servers, storage, virtual machines, databases, the **hypervisor**, the **management/middleware layer**, security and the deployment model | **The provider** |
+| **Network** | The **Internet** (or a dedicated link) carrying requests and responses between them | Both |
+
+> **The management layer (middleware) is what makes it a cloud rather than a rented server**: it handles **resource allocation, scheduling, load balancing, monitoring, metering and billing** automatically, with no human operator in the loop.
+
+#### The two architectural styles cloud computing combines
+
+> ### **Cloud architecture is a combination of SERVICE-ORIENTED ARCHITECTURE (SOA) and EVENT-DRIVEN ARCHITECTURE (EDA).**
+
+| | ⭐ **SOA — Service-Oriented Architecture** | ⭐ **EDA — Event-Driven Architecture** |
+|---|---|---|
+| **Core idea** | The system is built from **independent, REUSABLE SERVICES**, each exposing a well-defined interface | Components **REACT TO EVENTS** — a state change is published, and whoever cares responds |
+| **Interaction style** | ⭐ **REQUEST–RESPONSE** — a caller asks, a service answers | ⭐ **PUBLISH–SUBSCRIBE** — a producer emits, subscribers consume |
+| **Coupling** | Loose | ⭐ **Even looser — the producer does not know who is listening** |
+| **Timing** | Usually **synchronous** — the caller waits | ⭐ **ASYNCHRONOUS** — nobody waits |
+| **Gives the cloud** | **Modularity and reuse** — services can be independently developed, versioned and scaled | **Responsiveness and elasticity** — the system reacts to load and to state changes automatically |
+| **Example in a cloud** | A payment service, an authentication service, a storage service, each callable over an API | A file uploaded to S3 **emits an event** that triggers a Lambda function; a CPU-usage event triggers **auto-scaling** |
+
+> ### **Why BOTH are needed — the answer to give.** **SOA alone** gives you reusable, independently deployable services, but every interaction is a blocking request, so the system does not adapt on its own. **EDA alone** gives you reactive, asynchronous behaviour but no clean service boundaries. **Together they produce the defining cloud property: services that can be composed like building blocks AND that scale and respond on their own when something happens** — which is exactly what "elastic, on-demand computing" means in practice.
+
+#### Cloud services are STATELESS
+
+> ### **A STATELESS system keeps NO MEMORY of previous requests on the server. EACH REQUEST CARRIES EVERYTHING NEEDED TO PROCESS IT**, so any server instance can handle any request, and the interaction is **unidirectional** — the client asks, the server answers and forgets.
+
+| Point | ⭐ **STATELESS** | **STATEFUL** |
+|---|---|---|
+| **Server remembers past requests?** | ❌ **No** | ✅ Yes — it holds a session |
+| **Where the state lives** | **In the request itself** (a token, a cookie, parameters), or in an **external store** — Redis, a database | **In the server's memory** |
+| **Can any server handle the request?** | ✅ **YES** | ❌ No — the client must return to **the same server** (sticky sessions) |
+| **Horizontal scaling** | ✅ **Easy — just add instances** | ⚠️ **Hard** |
+| **Failure of one server** | ✅ Another instance takes over transparently | ⚠️ **The session is lost** |
+| **Load balancing** | ✅ Trivial — any instance will do | Requires session affinity |
+| **Examples** | ⭐ **HTTP, REST APIs, DNS, most cloud services** | FTP, Telnet, a traditional application server session, a database connection |
+
+> ### **Why the cloud insists on statelessness:** elasticity means instances are **created and destroyed constantly**. If a server held the only copy of a user's session, **terminating that instance would destroy the user's work**, and a load balancer could not freely distribute traffic. **Statelessness is therefore the precondition for auto-scaling, load balancing and fault tolerance** — it is what allows the cloud to treat servers as **disposable cattle rather than irreplaceable pets**. Where state genuinely must persist, it is pushed **out of the server** into a shared cache or database.
+
+#### The layers of a cloud, bottom to top
+
+```
+   ┌───────────────────────────────────────────┐
+   │  SaaS  — the finished APPLICATION         │  ← the user just uses it
+   ├───────────────────────────────────────────┤
+   │  PaaS  — runtime, middleware, tools       │  ← the developer deploys code
+   ├───────────────────────────────────────────┤
+   │  IaaS  — VMs, storage, network            │  ← the admin builds the system
+   ├───────────────────────────────────────────┤
+   │  Virtualization layer — the HYPERVISOR    │
+   ├───────────────────────────────────────────┤
+   │  Physical hardware — servers, disks, LAN  │
+   └───────────────────────────────────────────┘
+```
+
+> ⚠️ **The three standard service layers are IaaS, PaaS and SaaS only.** Terms such as **"CaaS — Computing as a Service"** are **not** part of the standard model, and an MCQ asking *"which is NOT a layer of cloud computing?"* is usually testing exactly that. *(**FaaS/Serverless**, **DBaaS**, **STaaS** and **XaaS** are genuine industry terms, but they are **specialisations sitting within PaaS/IaaS**, not additional core layers.)*
+
+**Previous Year MCQ List from this Topic:**
+
+- [Cloud Computing architecture is a combination of ______.](../mcq-answers/cloud-computing.md?plain=1#L25)
+- [Which one is not a layer of cloud computing?](../mcq-answers/cloud-computing.md?plain=1#L52)
+- [Cloud computing is a ________ system and it is necessarily unidirectional in nature.](../mcq-answers/cloud-computing.md?plain=1#L97)
+
+
+
 ## Virtualization & Containers (VM vs Container)
 
 ### Virtualization — Concept, Types and Benefits
@@ -441,6 +555,13 @@ Before virtualization, most servers ran a **single application** and sat at **5�
 - [What is Server Virtualization? Explain with example of its.](../written-answers/cloud-computing.md?plain=1#L381)
 - [How virtualization help physical server.](../written-answers/cloud-computing.md?plain=1#L405)
 - [A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ G…](../written-answers/cloud-computing.md?plain=1#L944)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one of the following cloud concepts is related to sharing and pooling the resources?](../mcq-answers/cloud-computing.md?plain=1#L34)
+- [Which of the following cloud concept is related to pooling and sharing of resources?](../mcq-answers/cloud-computing.md?plain=1#L106)
+- [Which software is mostly used for virtualization?](../mcq-answers/cloud-computing.md?plain=1#L191)
+
 
 
 ---
@@ -542,6 +663,11 @@ Installed **as an ordinary application on top of an existing operating system** 
 - [Explain Type 1 and Type 2 hypervisors in virtual machine operating system with figure.](../written-answers/cloud-computing.md?plain=1#L502)
 - [How virtualization help physical server.](../written-answers/cloud-computing.md?plain=1#L405)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which software is mostly used for virtualization?](../mcq-answers/cloud-computing.md?plain=1#L191)
+
+
 
 ---
 
@@ -637,6 +763,11 @@ flowchart TD
 
 - [What is docker? An application running on windows server shifted in linux server. What problem will occur? Can Docker solve it?](../written-answers/cloud-computing.md?plain=1#L454)
 - [VM vs Container in Submarine Cable Network: (BSCCPL AME 21-08-2026 (BUET)) A national submarine cable landing station provides international connectivity to sev…](../written-answers/cloud-computing.md?plain=1#L323)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is Docker Hub and Docker?](../mcq-answers/cloud-computing.md?plain=1#L182)
+
 
 
 ---
@@ -879,6 +1010,107 @@ flowchart TD
 **Previous Year Question List from this Topic:**
 
 - [Describe the cloud base database briefly.](../written-answers/cloud-computing.md?plain=1#L665)
+
+---
+
+### Data Centre Colocation and Disaster Recovery
+
+> ### **COLOCATION ("colo") is renting SPACE, POWER, COOLING and NETWORK CONNECTIVITY in someone else's data centre, while YOU STILL OWN AND CONTROL THE SERVERS you put there.**
+>
+> It sits **between** building your own data centre and moving entirely to the cloud.
+
+#### The three ways to house IT infrastructure
+
+```mermaid
+flowchart LR
+    A["① OWN DATA CENTRE<br/>you own the building,<br/>power, cooling AND servers<br/>➜ maximum control,<br/>maximum cost"] --> B["② COLOCATION<br/>they own the facility,<br/>YOU own the servers<br/>➜ control of hardware,<br/>none of the building cost"]
+    B --> C["③ CLOUD<br/>they own everything;<br/>you rent capacity<br/>➜ minimum control,<br/>maximum elasticity"]
+```
+
+| Point | **Own data centre** | ⭐ **COLOCATION** | **Cloud** |
+|---|---|---|---|
+| **Who owns the building, power and cooling** | **You** | ⭐ **The provider** | The provider |
+| **Who owns the SERVERS** | You | ⭐ **YOU** | The provider |
+| **Capital cost** | ⚠️ **Very high** | **Medium** — servers only | ✅ **None** |
+| **Control of hardware** | ✅ **Full** | ✅ **Full** | ❌ None |
+| **Time to deploy** | Years | **Weeks** | ✅ **Minutes** |
+| **Elasticity** | ❌ None | ❌ Limited | ✅ **Unlimited** |
+| **Best for** | Very large, highly regulated organisations | **Firms with existing hardware, compliance needs, or predictable load** | Variable, growing or new workloads |
+
+#### Why organisations choose COLOCATION for disaster recovery
+
+> A frequently examined question. The reasons are all about **getting data-centre quality without building one**:
+
+| # | Reason | Explanation |
+|---|---|---|
+| **1** | ⭐ **Much LOWER COST than building a second data centre** | A DR site sits idle most of the time; paying for racks in someone else's facility is far cheaper than constructing and staffing a building for an emergency that may never come |
+| **2** | ⭐ **GEOGRAPHIC SEPARATION** | A DR site must be **far enough away not to be hit by the same flood, fire, cyclone or grid failure**. Colocation providers already have facilities in other cities and regions |
+| **3** | ⭐ **Professional PHYSICAL SECURITY** | 24×7 guards, biometric access, mantraps, CCTV and visitor logging — expensive to replicate in-house |
+| **4** | ⭐ **Carrier-neutral CONNECTIVITY** | Multiple independent ISPs in one building give **redundant network paths** and better peering than a single office link |
+| **5** | **Redundant POWER and COOLING** | N+1 or 2N UPS, generators with fuel contracts, and precision cooling, already built and tested |
+| **6** | **Tier-certified reliability** | A **Tier III or Tier IV** facility offers uptime guarantees an office server room cannot |
+| **7** | **Speed of deployment** | Racks are available immediately; no construction, no permits |
+| **8** | **Predictable operating cost** | A monthly fee instead of unpredictable capital and maintenance spending |
+| **9** | **Compliance support** | The facility itself is often already **ISO 27001 / SOC 2 / PCI-DSS** audited |
+| **10** | **No need for 24×7 facility staff** | Provider "remote hands" perform physical tasks |
+
+> ⚠️ **The classic MCQ trap: "FULL CONTROL OF HARDWARE" is NOT a reason to choose colocation over building your own data centre.** You retain hardware control in **both** options — so it cannot be a *differentiator*. It is in fact the reason some organisations **build their own**. The genuine colocation advantages are **cost, location, physical security, connectivity and speed.**
+
+#### Disaster recovery — the concepts and the metrics
+
+> **DISASTER RECOVERY (DR) is the set of policies, tools and procedures for RESTORING IT systems and data after a disruptive event** — fire, flood, earthquake, power failure, hardware failure, cyber-attack or human error. It is the technical component of the wider **Business Continuity Plan (BCP)**.
+
+> ### **The two metrics that define every DR plan:**
+>
+> | Metric | Full form | Question it answers |
+> |---|---|---|
+> | ⭐ **RTO** | **Recovery Time Objective** | ⭐ **"HOW LONG can we be DOWN?"** — the maximum tolerable time to restore service |
+> | ⭐ **RPO** | **Recovery Point Objective** | ⭐ **"HOW MUCH DATA can we afford to LOSE?"** — the maximum tolerable age of the last good backup |
+
+```
+   ← ── RPO ── →  │  ← ───── RTO ───── →
+   last good      DISASTER              service
+   backup         strikes               restored
+
+   RPO looks BACKWARD from the disaster  → governs BACKUP FREQUENCY
+   RTO looks FORWARD  from the disaster  → governs RECOVERY CAPABILITY
+```
+
+**Worked illustration:** a core banking system with **RPO = 0 and RTO = 15 minutes** requires **synchronous replication** to a hot site — no transaction may ever be lost. A departmental file server with **RPO = 24 hours and RTO = 3 days** needs only a nightly backup restored to spare hardware. **The cost of a DR solution rises steeply as RTO and RPO approach zero**, which is why they are set per system from a **Business Impact Analysis**, not uniformly.
+
+#### The types of DR site
+
+| Site type | What is ready | Recovery time | Cost |
+|---|---|---|---|
+| ⭐ **HOT site** | **A fully equipped, running duplicate with live data replication** | ⭐ **Minutes** | ⚠️ **Highest** |
+| **WARM site** | Hardware and network in place; data restored from recent backups | **Hours to a day** | Medium |
+| ⭐ **COLD site** | **Only space, power and cooling** — equipment must be brought in and configured | ⚠️ **Days to weeks** | ✅ **Lowest** |
+| **Cloud DR (DRaaS)** | Replication into a cloud region, spun up on demand | Minutes to hours | ✅ **Low — you pay for the standby, not a building** |
+| **Mirrored / active-active** | Two live sites both serving traffic | ✅ **Near zero** | Highest |
+
+#### Building a disaster recovery plan
+
+```mermaid
+flowchart LR
+    A["① RISK ASSESSMENT<br/>what can go wrong?"] --> B["② BUSINESS IMPACT<br/>ANALYSIS — what does<br/>each outage cost?"]
+    B --> C["③ Set RTO and RPO<br/>per system"]
+    C --> D["④ Choose the STRATEGY<br/>backup · colocation ·<br/>hot site · cloud DR"]
+    D --> E["⑤ DOCUMENT the plan —<br/>roles, contacts, runbooks"]
+    E --> F["⑥ TEST IT REGULARLY<br/>— at least annually"]
+    F -->|"findings"| A
+```
+
+> ### **The single most important rule: AN UNTESTED DR PLAN IS NOT A PLAN.** Organisations routinely discover during a real disaster that the backups were never restorable, the documentation was out of date, the standby licences had expired, or nobody knew the escalation contacts. **A DR plan must be exercised — ideally with a full failover test — at least once a year, and after every major change.**
+>
+> ⚠️ **And note the distinction from RAID and replication: those protect against HARDWARE failure. DR protects against the LOSS OF A WHOLE SITE, and backup protects against DELETION, CORRUPTION AND RANSOMWARE — which replication would faithfully copy to the DR site within seconds.** A complete strategy needs all three, plus **immutable, off-line (air-gapped) backup copies**.
+>
+> **The 3-2-1 backup rule worth quoting: keep 3 copies of the data, on 2 different media, with 1 copy off-site.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of these is not a common reason businesses choose to go with a data center colocation service for disaster recovery instead of building a new data center?](../mcq-answers/cloud-computing.md?plain=1#L61)
+
+
 
 ## Cluster, Grid & Distributed Computing
 
@@ -1272,6 +1504,11 @@ flowchart TD
 - [What is the need of edge server?](../written-answers/cloud-computing.md?plain=1#L897)
 - [(গ) Edge Computing এর ধারণা সংক্ষেপে উপস্থাপন করুন।](../written-answers/cloud-computing.md?plain=1#L918)
 
+**Previous Year MCQ List from this Topic:**
+
+- [কোনটি Cloud Computing এর সাথে সম্পৃক্ত নয়?](../mcq-answers/cloud-computing.md?plain=1#L88)
+
+
 
 ---
 
@@ -1511,3 +1748,8 @@ flowchart LR
 **Previous Year Question List from this Topic:**
 
 - [How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?](../written-answers/cloud-computing.md?plain=1#L1021)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The main thread of cloud-based provisioning is-?](../mcq-answers/cloud-computing.md?plain=1#L124)
+- [The main threat of cloud-based provisioning is—](../mcq-answers/cloud-computing.md?plain=1#L133)
