@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 1 subtopics · 6 theories
+**Table of Contents** — 2 subtopics · 11 theories
 
 1. **[Basic Programs & Control Statements](#basic-programs--control-statements)**
    - [C Program Structure and the Compilation Process](#c-program-structure-and-the-compilation-process)
@@ -8,6 +8,13 @@
    - [Arrays in C — 1-D, 2-D and Common Operations](#arrays-in-c--1-d-2-d-and-common-operations)
    - [Standard Number Programs](#standard-number-programs)
    - [Series and Pattern Printing Programs](#series-and-pattern-printing-programs)
+
+2. **[Output Tracing & Control Flow](#output-tracing--control-flow)**
+   - [How to Trace C Program Output — A Step-by-Step Method](#how-to-trace-c-program-output--a-step-by-step-method)
+   - [Operator Precedence, Associativity and Order of Evaluation](#operator-precedence-associativity-and-order-of-evaluation)
+   - [Increment and Decrement Operators — i++ vs ++i](#increment-and-decrement-operators--i-vs-i)
+   - [Integer Arithmetic Traps — Division, Overflow and Type Promotion](#integer-arithmetic-traps--division-overflow-and-type-promotion)
+   - [Common Output-Tracing Traps in C](#common-output-tracing-traps-in-c)
 
 <!-- TOC END -->
 
@@ -918,3 +925,551 @@ for (i = 0; i < n; i++) {
 - [Write a program in C++ to calculate the sum of the series: $1+(1+2)+(1+2+3)+\dots\dots+(1+2+\dots\dots+n)$.](../written-answers/c-programming.md?plain=1#L3627)
 - [(a) Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then…](../written-answers/c-programming.md?plain=1#L3832)
 - [Write a code to print the following pattern. You can use C/Java as programming language.](../written-answers/c-programming.md?plain=1#L4022)
+
+## Output Tracing & Control Flow
+
+### How to Trace C Program Output — A Step-by-Step Method
+
+Output-tracing ("find the output") questions carry a large share of marks and are pure **mechanical discipline**. Guessing fails; a systematic trace almost never does.
+
+#### The method
+
+```mermaid
+flowchart TD
+    A["1 . Read the whole program once<br/>note every variable and its type"] --> B["2 . Draw a VARIABLE TABLE<br/>one column per variable"]
+    B --> C["3 . Execute one line at a time<br/>never skip ahead"]
+    C --> D["4 . After every statement, UPDATE<br/>the table with the new values"]
+    D --> E["5 . For loops, trace each iteration<br/>as a separate row"]
+    E --> F["6 . Write down output the moment<br/>a printf executes"]
+    F --> G["7 . Check the exit condition carefully<br/>&lt; vs &lt;=, i++ vs ++i"]
+    G --> H["8 . State the final output exactly,<br/>including spaces and newlines"]
+```
+
+#### The variable-table technique
+
+```c
+#include <stdio.h>
+int main() {
+    int i, sum = 0;
+    for (i = 1; i <= 5; i++) {
+        if (i % 2 == 0) continue;
+        sum += i;
+        printf("%d ", sum);
+    }
+    printf("\nFinal = %d", sum);
+    return 0;
+}
+```
+
+| Iteration | i | i ≤ 5? | i % 2 == 0? | sum | Output so far |
+|---|---|---|---|---|---|
+| 1 | 1 | ✅ | No | 0 + 1 = **1** | `1 ` |
+| 2 | 2 | ✅ | **Yes → continue** | 1 | `1 ` |
+| 3 | 3 | ✅ | No | 1 + 3 = **4** | `1 4 ` |
+| 4 | 4 | ✅ | **Yes → continue** | 4 | `1 4 ` |
+| 5 | 5 | ✅ | No | 4 + 5 = **9** | `1 4 9 ` |
+| 6 | 6 | ❌ **exit** | — | 9 | — |
+
+> **Output:**
+> ```
+> 1 4 9
+> Final = 9
+> ```
+
+#### Checklist of things to watch
+
+| # | Watch for | Why it catches people |
+|---|---|---|
+| 1 | `<` vs `<=` in the loop condition | One extra or one missing iteration |
+| 2 | `i++` vs `++i` **inside an expression** | Different value is used |
+| 3 | `=` vs `==` | `if (a = 5)` **assigns** and is always true |
+| 4 | Missing `break` in a `switch` | Fall-through prints extra cases |
+| 5 | **Integer division** `5/2` | Gives **2**, not 2.5 |
+| 6 | Format specifier mismatch (`%d` with a float) | Garbage output |
+| 7 | Array index out of bounds | Undefined behaviour |
+| 8 | Uninitialised variables | Garbage values |
+| 9 | `static` local variables | They **keep their value** between calls |
+| 10 | Pre/post increment in `printf` arguments | Evaluation order is unspecified |
+| 11 | Character arithmetic (`'A' + 1` = 66 = `'B'`) | Depends on `%c` vs `%d` |
+| 12 | Pointer vs value | `*p` vs `p` |
+| 13 | Dangling `else` binding | Binds to the **nearest** unmatched `if` |
+| 14 | Semicolon after `if` or `for` | `for(i=0;i<5;i++);` has an **empty body** |
+
+**Previous Year Question List from this Topic:**
+
+- [C output problem.](../written-answers/c-programming.md?plain=1#L4219)
+- [What will be the output of following program?](../written-answers/c-programming.md?plain=1#L4311)
+- [(b) Find out the output of this program.](../written-answers/c-programming.md?plain=1#L4353)
+- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L4391)
+- [Output problem:](../written-answers/c-programming.md?plain=1#L4432)
+- [Output problem:](../written-answers/c-programming.md?plain=1#L4471)
+- [Explain following program while part in step for the input 1221 and 3456 and also write the output of the program. (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয় নি!!)](../written-answers/c-programming.md?plain=1#L4512)
+- [In the below C code. Write the Output on below table based on code and left side. And also explain the line 7-11 in below code.](../written-answers/c-programming.md?plain=1#L4682)
+- [C programming output problem.](../written-answers/c-programming.md?plain=1#L4746)
+- [What is the output of code snippet?](../written-answers/c-programming.md?plain=1#L4839)
+- [নিচের পাইথন program এর Output বের কর:](../written-answers/c-programming.md?plain=1#L4943)
+- [Output Tracing:](../written-answers/c-programming.md?plain=1#L4983)
+- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L5036)
+- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L5069)
+- [What will be the output of the program?](../written-answers/c-programming.md?plain=1#L5101)
+- [What is the output of the following code?](../written-answers/c-programming.md?plain=1#L5137)
+- [Output programs:](../written-answers/c-programming.md?plain=1#L5169)
+- [Write down the output from following statement:](../written-answers/c-programming.md?plain=1#L5212)
+- [Find the Output of following C Program:](../written-answers/c-programming.md?plain=1#L5318)
+- [Write Output from below code:](../written-answers/c-programming.md?plain=1#L5367)
+- [Fill in the gape and find output of the following program:](../written-answers/c-programming.md?plain=1#L5438)
+- [Output of the following program:](../written-answers/c-programming.md?plain=1#L5525)
+- [Find the output of following program:](../written-answers/c-programming.md?plain=1#L5586)
+- [Output of the following program:](../written-answers/c-programming.md?plain=1#L5643)
+- [Find Output:](../written-answers/c-programming.md?plain=1#L5713)
+- [Find the output of the following program. You must show each staps.](../written-answers/c-programming.md?plain=1#L5758)
+- [Find out the output of the following program.](../written-answers/c-programming.md?plain=1#L5812)
+- [After compilation and execution, what will be output in the following code:](../written-answers/c-programming.md?plain=1#L5861)
+- [Write down the output of following program:](../written-answers/c-programming.md?plain=1#L5965)
+- [Find the Output:](../written-answers/c-programming.md?plain=1#L6232)
+- [What is the output of following code?](../written-answers/c-programming.md?plain=1#L6378)
+- [Find the output of a program:](../written-answers/c-programming.md?plain=1#L6419)
+- [Find the output of the code:](../written-answers/c-programming.md?plain=1#L6470)
+- [What is the output of the following program?](../written-answers/c-programming.md?plain=1#L6514)
+- [Find the output of the following code:](../written-answers/c-programming.md?plain=1#L6551)
+- [Find the output of the following code:](../written-answers/c-programming.md?plain=1#L6584)
+- [What is the output of following program?](../written-answers/c-programming.md?plain=1#L6619)
+- [Find the output of following program.](../written-answers/c-programming.md?plain=1#L6742)
+
+
+---
+
+### Operator Precedence, Associativity and Order of Evaluation
+
+#### Precedence table (highest to lowest)
+
+| Precedence | Operators | Associativity |
+|---|---|---|
+| 1 | `()` `[]` `->` `.` `++` `--` (postfix) | **Left to right** |
+| 2 | `++` `--` (prefix) `+` `-` (unary) `!` `~` `*` (deref) `&` `sizeof` `(type)` | **Right to left** |
+| 3 | `*` `/` `%` | Left to right |
+| 4 | `+` `-` | Left to right |
+| 5 | `<<` `>>` | Left to right |
+| 6 | `<` `<=` `>` `>=` | Left to right |
+| 7 | `==` `!=` | Left to right |
+| 8 | `&` (bitwise AND) | Left to right |
+| 9 | `^` (bitwise XOR) | Left to right |
+| 10 | `\|` (bitwise OR) | Left to right |
+| 11 | `&&` | Left to right |
+| 12 | `\|\|` | Left to right |
+| 13 | `?:` (ternary) | **Right to left** |
+| 14 | `=` `+=` `-=` `*=` `/=` `%=` … | **Right to left** |
+| 15 | `,` (comma) | Left to right |
+
+**Memory aid for the arithmetic core:** **PUMA** — **P**arentheses, **U**nary, **M**ultiplicative (`* / %`), **A**dditive (`+ -`).
+
+#### Worked evaluations
+
+```c
+int x = 10 + 20 * 3;          /* * before + →  10 + 60  = 70 */
+int y = (10 + 20) * 3;        /* parentheses first →  30 * 3 = 90 */
+int z = 100 / 10 * 2;         /* LEFT to right → (100/10)*2 = 20, NOT 100/20 */
+int w = 2 + 3 % 2;            /* % before + →  2 + 1 = 3 */
+int v = 10 > 5 && 3 < 1;      /* (10>5)=1, (3<1)=0 → 1 && 0 = 0 */
+int u = a = b = c = 5;        /* = is RIGHT to left → c=5, then b=5, then a=5 */
+```
+
+#### Precedence vs Associativity vs Order of Evaluation
+
+These three are different, and the difference is exactly what tricky questions exploit.
+
+| Term | Meaning |
+|---|---|
+| **Precedence** | Which operator **binds tighter** — decides *grouping* |
+| **Associativity** | For operators of the **same** precedence, group **left-to-right or right-to-left** |
+| **Order of evaluation** | The order in which the **operands** are actually computed — **largely UNSPECIFIED in C** |
+
+> **The critical point:** precedence tells you *how the expression is parsed*, **not** the order in which the sub-expressions are evaluated.
+>
+> In `f() + g() * h()`, precedence says the result is `f() + (g() * h())` — but C does **not** guarantee whether `f`, `g` or `h` runs first. Any code that depends on that order is **undefined behaviour** and may print different answers on different compilers.
+
+**Classic undefined expressions — never write these, and in an exam say "undefined behaviour":**
+
+```c
+i = i++ + ++i;          /* UNDEFINED — i modified twice without a sequence point */
+printf("%d %d", i++, i++);   /* UNDEFINED — argument evaluation order is unspecified */
+a[i] = i++;             /* UNDEFINED */
+```
+
+#### Short-circuit evaluation — a guaranteed order
+
+`&&` and `||` **are** guaranteed to evaluate left to right, and to **stop as soon as the result is known**:
+
+```c
+if (a != 0 && b / a > 2)      /* if a==0, b/a is NEVER evaluated → no crash */
+if (ptr != NULL && ptr->x)    /* the standard null-check idiom */
+
+int i = 0;
+if (0 && i++) ;               /* i++ NEVER runs → i stays 0  */
+if (1 || i++) ;               /* i++ NEVER runs → i stays 0  */
+```
+
+| Operator | Stops when the left side is | Right side evaluated? |
+|---|---|---|
+| `&&` | **false (0)** | ❌ No |
+| `\|\|` | **true (non-zero)** | ❌ No |
+
+**Previous Year Question List from this Topic:**
+
+- [What is the output of code snippet?](../written-answers/c-programming.md?plain=1#L4839)
+- [What is the output of the following code?](../written-answers/c-programming.md?plain=1#L5137)
+- [Output of the following program:](../written-answers/c-programming.md?plain=1#L5525)
+- [Which of the following is the correct order of evaluation?](../written-answers/c-programming.md?plain=1#L9490)
+
+
+---
+
+### Increment and Decrement Operators — i++ vs ++i
+
+| Form | Name | Behaviour |
+|---|---|---|
+| **`++i`** | **Pre-increment** | **Increment FIRST, then use** the new value |
+| **`i++`** | **Post-increment** | **Use the old value FIRST, then increment** |
+
+> **Memory hook:** read it left to right. In `++i` the `++` comes **first**, so incrementing happens first. In `i++` the `i` comes first, so the **old value** is used first.
+
+#### Worked examples
+
+```c
+int i = 5, j;
+
+j = ++i;      /* i becomes 6, then j = 6   →  i = 6, j = 6 */
+```
+```c
+int i = 5, j;
+
+j = i++;      /* j = 5 (old value), then i becomes 6  →  i = 6, j = 5 */
+```
+
+| Statement | Starting i | Final i | Value assigned to j |
+|---|---|---|---|
+| `j = ++i;` | 5 | **6** | **6** |
+| `j = i++;` | 5 | **6** | **5** |
+| `j = --i;` | 5 | **4** | **4** |
+| `j = i--;` | 5 | **4** | **5** |
+
+**More traces:**
+
+```c
+int a = 10;
+printf("%d", a++);     /* prints 10, a becomes 11 */
+printf("%d", a);       /* prints 11              */
+
+int b = 10;
+printf("%d", ++b);     /* b becomes 11, prints 11 */
+
+int x = 5;
+int y = x++ + ++x;     /* AVOID — undefined behaviour in C */
+
+int m = 3;
+int n = m++ * 2;       /* n = 3 * 2 = 6, then m = 4 */
+
+int p = 3;
+int q = ++p * 2;       /* p = 4 first, then q = 4 * 2 = 8 */
+```
+
+#### When there is no difference
+
+**As a standalone statement, `i++;` and `++i;` are identical** — the value is discarded, only the side effect matters. So in a `for` loop header:
+
+```c
+for (i = 0; i < n; i++)     /* identical in behaviour to ... */
+for (i = 0; i < n; ++i)     /* ... this */
+```
+
+*(For built-in types they also compile to identical code. For C++ **iterators and objects**, `++i` is marginally more efficient because `i++` must construct and return a copy of the old value.)*
+
+#### The difference matters only when the value is USED
+
+```c
+int arr[5] = {10, 20, 30, 40, 50};
+int i = 2;
+printf("%d", arr[i++]);      /* prints arr[2] = 30, then i = 3 */
+
+i = 2;
+printf("%d", arr[++i]);      /* i = 3 first, prints arr[3] = 40 */
+```
+
+**Previous Year Question List from this Topic:**
+
+- [(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L8994)
+- [Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Contro…](../written-answers/c-programming.md?plain=1#L9260)
+- [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9416)
+
+
+---
+
+### Integer Arithmetic Traps — Division, Overflow and Type Promotion
+
+#### Integer division truncates
+
+```c
+int a = 5, b = 2;
+printf("%d", a / b);            /* 2  — NOT 2.5; the fraction is DISCARDED */
+printf("%f", a / b);            /* still integer division first → garbage with %f */
+printf("%f", (float)a / b);     /* 2.500000 — cast promotes BOTH operands */
+printf("%f", 5.0 / 2);          /* 2.500000 — one float operand is enough */
+
+printf("%d", 7 / 2);            /*  3 */
+printf("%d", -7 / 2);           /* -3 (C99 truncates TOWARDS ZERO) */
+printf("%d", 7 % 2);            /*  1 */
+printf("%d", -7 % 2);           /* -1 (the sign follows the DIVIDEND) */
+```
+
+> **The rule:** if **both** operands are integers, C performs **integer division** and throws away the remainder. To get a real quotient, **at least one operand must be floating point** — use a cast or write `2.0`.
+>
+> **The `%` operator works only on integers** — `5.5 % 2` is a compile error; use `fmod()` from `math.h`.
+
+#### Data type ranges and overflow
+
+| Type | Typical size | Range |
+|---|---|---|
+| `char` | 1 byte | −128 to 127 |
+| `unsigned char` | 1 byte | 0 to 255 |
+| `short` | 2 bytes | **−32,768 to 32,767** |
+| `unsigned short` | 2 bytes | 0 to 65,535 |
+| `int` | **4 bytes** (modern) | **−2,147,483,648 to 2,147,483,647** |
+| `unsigned int` | 4 bytes | 0 to 4,294,967,295 |
+| `long long` | 8 bytes | ±9.22 × 10¹⁸ |
+| `float` | 4 bytes | ±3.4 × 10³⁸, **~6–7 significant digits** |
+| `double` | 8 bytes | ±1.7 × 10³⁰⁸, **~15–16 significant digits** |
+
+> ### "Can I store 32,678 in an `int`?"
+> ### ✅ **Yes — easily.**
+>
+> A modern `int` is **4 bytes** and holds roughly **−2.1 billion to +2.1 billion**, so 32,678 is nowhere near the limit.
+>
+> **The trap the question is testing:** 32,678 is just above **32,767**, which is the maximum of a **2-byte `short int`** (and of `int` on very old 16-bit compilers such as Turbo C). So:
+>
+> | Type | Can it hold 32,678? |
+> |---|---|
+> | `short int` (2 bytes, max 32,767) | ❌ **No** — it **overflows** and wraps around to a negative value (−32,858) |
+> | `unsigned short` (max 65,535) | ✅ Yes |
+> | `int` on a 16-bit compiler (2 bytes) | ❌ No |
+> | **`int` on a modern 32/64-bit compiler (4 bytes)** | ✅ **Yes** |
+> | `long`, `long long`, `float`, `double` | ✅ Yes |
+>
+> **Always answer with the reasoning, not just yes/no:** *"Yes, because `int` is 4 bytes on a modern compiler and its range is ±2.1 billion. But on a 16-bit compiler where `int` is 2 bytes, 32,678 exceeds the maximum of 32,767 and would overflow to a negative number."*
+
+**Overflow demonstration:**
+
+```c
+short s = 32767;
+s = s + 1;
+printf("%d", s);         /* -32768 — it WRAPS AROUND, no error is reported */
+```
+
+#### Implicit type conversion (promotion)
+
+In a mixed expression, C promotes the "smaller" type to the "larger" one:
+
+> **char / short → int → unsigned int → long → unsigned long → long long → float → double → long double**
+
+```c
+int i = 10;
+float f = 3.5;
+printf("%f", i + f);       /* i promoted to 10.0 → 13.500000 */
+
+char c = 'A';
+printf("%d", c);           /* 65 — the ASCII value */
+printf("%c", c + 1);       /* 'B' — char arithmetic is int arithmetic */
+printf("%d", 'a' - 'A');   /* 32 — the fixed gap between cases */
+
+double d = 5 / 2;          /* WRONG: 5/2 is computed as INT first → 2, then 2.0 */
+double e = 5.0 / 2;        /* RIGHT: 2.5 */
+```
+
+#### Floating-point comparison
+
+```c
+float a = 0.1 + 0.2;
+if (a == 0.3) printf("Equal");      /* may print NOTHING — 0.1 has no exact
+                                       binary representation */
+if (fabs(a - 0.3) < 1e-6) printf("Equal");   /* ✅ the CORRECT way */
+```
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?](../written-answers/c-programming.md?plain=1#L8974)
+- [Write some default data type in C.](../written-answers/c-programming.md?plain=1#L9217)
+- [Using examples explain data types used in C language.](../written-answers/c-programming.md?plain=1#L9558)
+
+
+---
+
+### Common Output-Tracing Traps in C
+
+#### 1. Scope and shadowing
+
+```c
+int x = 10;                     /* global */
+int main() {
+    int x = 20;                 /* local SHADOWS the global */
+    { int x = 30; printf("%d ", x); }   /* 30 — innermost block wins */
+    printf("%d ", x);           /* 20 — the local */
+    return 0;
+}
+/* Output: 30 20 */
+```
+
+#### 2. `static` local variables
+
+```c
+void counter() {
+    static int c = 0;           /* initialised ONCE, survives between calls */
+    int d = 0;                  /* recreated on EVERY call */
+    c++;  d++;
+    printf("c=%d d=%d\n", c, d);
+}
+int main() { counter(); counter(); counter(); }
+/* Output:
+   c=1 d=1
+   c=2 d=1
+   c=3 d=1     ← d always 1, c keeps growing */
+```
+
+#### 3. Arrays decay to pointers inside functions
+
+```c
+void f(int a[]) {
+    printf("%zu\n", sizeof(a));      /* 8 — the size of a POINTER, not the array! */
+}
+int main() {
+    int a[10];
+    printf("%zu\n", sizeof(a));      /* 40 — 10 ints × 4 bytes */
+    f(a);
+}
+```
+
+#### 4. Missing `break` — switch fall-through
+
+```c
+int x = 2;
+switch (x) {
+    case 1: printf("One ");
+    case 2: printf("Two ");     /* ← starts here */
+    case 3: printf("Three ");   /* falls through */
+    default: printf("Default");
+}
+/* Output: Two Three Default   — NOT just "Two" */
+```
+
+#### 5. The semicolon-after-loop bug
+
+```c
+for (i = 0; i < 5; i++);        /* ← this semicolon is the ENTIRE loop body */
+    printf("%d ", i);           /* runs ONCE, after the loop → prints 5 */
+/* Output: 5    (not 0 1 2 3 4) */
+```
+
+#### 6. `=` instead of `==`
+
+```c
+int a = 0;
+if (a = 5) printf("True");      /* ASSIGNS 5 to a; 5 is non-zero → TRUE */
+/* Output: True     — and a is now 5 */
+```
+
+#### 7. Character and ASCII arithmetic
+
+```c
+char c = 'A';
+printf("%c %d\n", c, c);            /* A 65 */
+printf("%c\n", c + 32);             /* a  — lowercase is +32 */
+printf("%d\n", '5' - '0');          /* 5  — the standard char→digit trick */
+printf("%c\n", 'z' - 'a' + 'A');    /* Z  — case conversion by offset */
+```
+
+**Key ASCII values:** `'0'` = **48** · `'A'` = **65** · `'a'` = **97** · space = 32 · `'\0'` = 0.
+
+#### 8. Pointer traps
+
+```c
+int a = 10, b = 20;
+int *p = &a;
+printf("%d\n", *p);       /* 10 — the VALUE at the address */
+p = &b;
+printf("%d\n", *p);       /* 20 */
+(*p)++;                   /* b becomes 21  */
+printf("%d\n", b);        /* 21 */
+
+int arr[3] = {1, 2, 3};
+int *q = arr;
+printf("%d\n", *(q + 2)); /* 3 — pointer arithmetic scales by sizeof(int) */
+printf("%d\n", *q++);     /* prints 1, THEN advances q */
+```
+
+#### 9. Global vs local variables
+
+```c
+int g = 100;                    /* GLOBAL: file scope, static lifetime, auto-init to 0 */
+void f() {
+    int l;                      /* LOCAL: block scope, automatic lifetime,
+                                   UNINITIALISED — contains garbage */
+    printf("%d %d", g, l);
+}
+```
+
+| Point | **Local variable** | **Global variable** |
+|---|---|---|
+| **Declared** | Inside a function or block | Outside all functions |
+| **Scope** | Only within that block | The whole program (file) |
+| **Lifetime** | Created on entry, destroyed on exit | Exists for the entire program run |
+| **Default value** | **Garbage** (undefined) | **Zero** |
+| **Stored in** | **Stack** | **Data segment** |
+| **Accessed by** | Only its own function | **Any** function |
+| **Name conflicts** | The local **shadows** the global | — |
+| **Risk** | Safe, isolated | Any function can change it — hard to debug |
+| **Best practice** | **Prefer locals** | Use sparingly, for genuine shared constants |
+
+#### 10. `sizeof` — an operator, not a function
+
+```c
+char c = 'A';
+printf("%zu\n", sizeof c + 1);      /* (sizeof c) + 1 = 1 + 1 = 2 */
+printf("%zu\n", sizeof(c + 1));     /* sizeof(int) = 4 — c is PROMOTED to int */
+```
+
+> ### "What is the difference between `sizeof c + 1` and `sizeof(c + 1)`?"
+>
+> | Expression | How it parses | Result |
+> |---|---|---|
+> | **`sizeof c + 1`** | `sizeof` binds tighter than `+`, so it is **`(sizeof c) + 1`** = size of a char (1) plus 1 | **2** |
+> | **`sizeof(c + 1)`** | The parentheses make `c + 1` the operand. In the expression `c + 1`, the char `c` undergoes **integer promotion**, so the type is **`int`** | **4** (on a typical system) |
+>
+> **The two lessons:** (1) `sizeof` is a **unary operator** with very high precedence, so without parentheses it grabs only the immediately following operand; (2) any `char` or `short` in an arithmetic expression is **promoted to `int`**, which changes the size of the result.
+>
+> *(Also note: `sizeof` is evaluated at **compile time** and its operand is **not executed** — `sizeof(i++)` does **not** increment i.)*
+
+#### 11. NULL vs void — a frequently confused pair
+
+| Point | **NULL** | **void** |
+|---|---|---|
+| **What it is** | A **macro constant** (`#define NULL ((void*)0)`) representing a **pointer that points to nothing** | A **data type keyword** meaning "**no type / no value**" |
+| **Category** | A **value** | A **type** |
+| **Defined in** | `<stddef.h>`, `<stdio.h>` | A C keyword — built into the language |
+| **Used for** | Initialising and testing pointers: `int *p = NULL; if (p != NULL) …` | 1. A function returning nothing: `void f()`<br>2. A function taking no parameters: `int f(void)`<br>3. A **generic pointer**: `void *p` |
+| **Can it be dereferenced?** | ❌ Dereferencing NULL → **segmentation fault** | `void*` must be **cast** to a concrete type before dereferencing |
+| **Size** | The size of a pointer (8 bytes on 64-bit) | `sizeof(void)` is **illegal** in standard C |
+| **Example** | `if (malloc(n) == NULL) { /* allocation failed */ }` | `void *memcpy(void *dest, const void *src, size_t n);` |
+
+> **In one line:** **`void` is a *type* that means "nothing"; `NULL` is a *value* that means "this pointer points at nothing".** They are related only in that `void *` is the generic pointer type that `NULL` is usually defined in terms of.
+
+*(Do not confuse either with **`'\0'`**, the null **character** that terminates a C string, whose value is the integer 0 but whose type is `char`.)*
+
+**Previous Year Question List from this Topic:**
+
+- [Write the function for which the output is 1 for that input.](../written-answers/c-programming.md?plain=1#L4602)
+- [(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।](../written-answers/c-programming.md?plain=1#L5259)
+- [Find out program output of f(\text{arr}, 2), f(\text{arr}, 3), f(\text{arr}, 5), f(\text{arr}, 8). \text{arr}() = (0, 1, 1, 0, 1, 1, 0, 1)](../written-answers/c-programming.md?plain=1#L5491)
+- [What will be the output in C and java code? (i) C program:](../written-answers/c-programming.md?plain=1#L6085)
+- [a) Using Pseudocode give an example of run time error.](../written-answers/c-programming.md?plain=1#L6187)
+- [Find the error of given code](../written-answers/c-programming.md?plain=1#L6337)
+- [(b) What is the difference between sizeof c+1 and sizeof (c+1)?](../written-answers/c-programming.md?plain=1#L8859)
+- [What is the difference between Null and Void?](../written-answers/c-programming.md?plain=1#L8880)
+- [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L8939)
