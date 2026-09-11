@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 4 subtopics · 9 theories
+**Table of Contents** — 7 subtopics · 17 theories
 
 1. **[SQL Queries](#sql-queries)**
    - [SQL — Fundamentals and Sub-languages](#sql--fundamentals-and-sub-languages)
@@ -17,6 +17,20 @@
 
 4. **[Keys, Constraints & Database Objects](#keys-constraints--database-objects)**
    - [Database Objects and Integrity Constraints](#database-objects-and-integrity-constraints)
+
+5. **[DBMS Concepts & Architecture](#dbms-concepts--architecture)**
+   - [DBMS Architecture — Three-Level Schema, Data Abstraction and Data Independence](#dbms-architecture--three-level-schema-data-abstraction-and-data-independence)
+   - [Metadata, the Data Dictionary and the Role of the DBA](#metadata-the-data-dictionary-and-the-role-of-the-dba)
+   - [Database System Architectures — Client-Server, Distributed and NoSQL](#database-system-architectures--client-server-distributed-and-nosql)
+
+6. **[Data Warehousing & Data Mining](#data-warehousing--data-mining)**
+   - [Data Warehousing, Data Marts and the Star Schema](#data-warehousing-data-marts-and-the-star-schema)
+   - [OLTP vs OLAP, Data Mining and Business Intelligence](#oltp-vs-olap-data-mining-and-business-intelligence)
+
+7. **[Indexing, Connectivity & Programmatic SQL](#indexing-connectivity--programmatic-sql)**
+   - [Index Types and File Organization](#index-types-and-file-organization)
+   - [Database Connectivity — JDBC, ODBC and Embedded SQL](#database-connectivity--jdbc-odbc-and-embedded-sql)
+   - [Cursors, Views and Relational Algebra Operators](#cursors-views-and-relational-algebra-operators)
 
 <!-- TOC END -->
 
@@ -156,6 +170,37 @@ LIMIT    n;                              -- 7. restrict the count
 - [(c) In a SQL query, while performing string matching when do we use operator and when we use LIKE operator? Give examples.](../written-answers/database.md?plain=1#L3790)
 - [What will be the output after running all the following queries?](../written-answers/database.md?plain=1#L3931)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which clause is executed first in an SQL query?](../mcq-answers/database.md?plain=1#L27)
+- [Which of the following is a DML (Data Manipulation Language) command?](../mcq-answers/database.md?plain=1#L36)
+- [Which of the following is a command of Data Definition Language (DDL)?](../mcq-answers/database.md?plain=1#L45)
+- [Which statements are used to create the database structure?](../mcq-answers/database.md?plain=1#L54)
+- [Which of the following is not a DDL statement?](../mcq-answers/database.md?plain=1#L63)
+- [Which clause is required in an SQL query for getting information from a database?](../mcq-answers/database.md?plain=1#L72)
+- [CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?](../mcq-answers/database.md?plain=1#L81)
+- [Which one of the followings sorts rows in SQL?](../mcq-answers/database.md?plain=1#L90)
+- [Which of the following provides the ability to query information from the database and insert tuples into, delete tuples from, and modify tuples in the database…](../mcq-answers/database.md?plain=1#L113)
+- [To remove a relational table from SQL database, we use ______.](../mcq-answers/database.md?plain=1#L122)
+- [Which of the following command is a type of Data Definition language command?](../mcq-answers/database.md?plain=1#L131)
+- [Which of the following is not a DDL command?](../mcq-answers/database.md?plain=1#L157)
+- [Which of the following are the five built-in functions provided by SQL?](../mcq-answers/database.md?plain=1#L196)
+- [Which is not the steps of SQL Query processing?](../mcq-answers/database.md?plain=1#L268)
+- [Which one is the Data Control Language (DCL) in SQL?](../mcq-answers/database.md?plain=1#L277)
+- [What is wrong statements for SQL?](../mcq-answers/database.md?plain=1#L327)
+- [উল্লেখিত কোনটি Database aggregate এর function?](../mcq-answers/database.md?plain=1#L388)
+- [নিচের কোনটি Database তুলনা করার কাজে ব্যবহার হয়?](../mcq-answers/database.md?plain=1#L397)
+- [Which one is database language?](../mcq-answers/database.md?plain=1#L424)
+- [The SQL statement that requires or reads data from the table is-](../mcq-answers/database.md?plain=1#L433)
+- [Which of the following logical connectives is not included in SQL?](../mcq-answers/database.md?plain=1#L442)
+- [The result of a SQL SELECT statement is a ----](../mcq-answers/database.md?plain=1#L451)
+- [To remove the duplicate rows from the result of an SQL Select statement, the---- qualifier specified include.](../mcq-answers/database.md?plain=1#L460)
+- [The ________ clause is used to list the attributes desired in the result of a query.](../mcq-answers/database.md?plain=1#L469)
+- [In SQL, aggregate functions can be used in the select list or the ________ clause of a select statement or subquery. They cannot be used in a ________ clause.](../mcq-answers/database.md?plain=1#L478)
+- [You run a SELECT statement and multiple duplicate values are retrieved. What keyword can you use to retrieve only the non-duplicate data?](../mcq-answers/database.md?plain=1#L532)
+- [Which SQL keyword is used to short the result set?](../mcq-answers/database.md?plain=1#L1111)
+
+
 
 ---
 
@@ -268,6 +313,17 @@ WHERE  DeptID IN (SELECT DeptID FROM Department WHERE Location = 'Dhaka');
 - [Suppose that we have a relational database with the following table. Underlined one represent primary key](../written-answers/database.md?plain=1#L2926)
 - [There are two tables like Employees (Employee_ID, First_name, Last_name, Email, Phone_number, Hire_date, Job_Id) and Departments (Department_Id, Department_name…](../written-answers/database.md?plain=1#L3344)
 - [Consider the Electrical Powr company database which has the following tables: Powerplant(Powerplant_ID, location, type, capacity.unit_price) Customer(Customer_I…](../written-answers/database.md?plain=1#L3855)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is the correct SQL statement to find the second highest mark from STUDENT database contains the marks of all students?](../mcq-answers/database.md?plain=1#L148)
+- [What does this query do?](../mcq-answers/database.md?plain=1#L205)
+- [Table Employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement](../mcq-answers/database.md?plain=1#L240)
+- [Consider the following Employee Table and the SQL query given:](../mcq-answers/database.md?plain=1#L345)
+- [What type of join in needed when you wish to include rows that do not have matching values?](../mcq-answers/database.md?plain=1#L1754)
+- [Which type of JOIN operation in SQL command is used to returns that do not have matching values?](../mcq-answers/database.md?plain=1#L1763)
+- [(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to…](../mcq-answers/database.md?plain=1#L1540)
+
 
 
 ---
@@ -467,6 +523,23 @@ SELECT DISTINCT dept, salary FROM Employee;       -- distinct PAIRS, not distinc
 - [Write a SQL query to find same salary but job not same?](../written-answers/database.md?plain=1#L3660)
 - [This returns the names of the staff where timestampdiff is greater than 25 so it returns total 3 rows.](../written-answers/database.md?plain=1#L3725)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Table employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement:](../mcq-answers/database.md?plain=1#L99)
+- [The SQL statement](../mcq-answers/database.md?plain=1#L166)
+- [How to select all data from student table starting the name from letter 'r'?](../mcq-answers/database.md?plain=1#L187)
+- [What will be the output of the following SQL "Select Round (232.420, -2) AS Round Value"?](../mcq-answers/database.md?plain=1#L219)
+- [Consider the following relational data table, Employee. Now, find the output for the following SQL Statement?](../mcq-answers/database.md?plain=1#L228)
+- [Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?](../mcq-answers/database.md?plain=1#L253)
+- [Consider the following “staff” table](../mcq-answers/database.md?plain=1#L295)
+- [Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?](../mcq-answers/database.md?plain=1#L364)
+- [What is the advantage of using ‘case’ while doing the update operation?](../mcq-answers/database.md?plain=1#L379)
+- [See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);](../mcq-answers/database.md?plain=1#L1554)
+- [Write the following queries](../mcq-answers/database.md?plain=1#L1562)
+- [একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?](../mcq-answers/database.md?plain=1#L1575)
+- [With SQL how can you insert "Olsen" as the "LastName" in the "Persons" table?](../mcq-answers/database.md?plain=1#L1212)
+
+
 
 ---
 
@@ -584,6 +657,27 @@ CREATE TABLE Enrollment (
 - [(i) DBMS কী? একটি Database কে normalize করার পদ্ধতিগুলো বর্ণনা করুন।](../written-answers/database.md?plain=1#L8320)
 - [What is normalization? Explain composite key with example.](../written-answers/database.md?plain=1#L8417)
 - [(d) What are the purpose of Primary Key and Foreign Key in context with ‘Relational Database’? Write in short with examples. (5 marks)](../written-answers/database.md?plain=1#L9535)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the maximum length of the “varchar” in the database?](../mcq-answers/database.md?plain=1#L309)
+- [Assume that in a table named “student” the cgpa is calculated using the all course’s gpa. What kind of attribute cgpa is?](../mcq-answers/database.md?plain=1#L318)
+- [The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.](../mcq-answers/database.md?plain=1#L336)
+- [What is a tuple?](../mcq-answers/database.md?plain=1#L496)
+- [Microsoft Access is a ________](../mcq-answers/database.md?plain=1#L541)
+- [A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-](../mcq-answers/database.md?plain=1#L621)
+- [Which one of the following is a No-SQL Database?](../mcq-answers/database.md?plain=1#L684)
+- [Which one of the following statements is true with respect to a Database Management System?](../mcq-answers/database.md?plain=1#L693)
+- [Which of the following term refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L774)
+- [Which one is an example of DBMS?](../mcq-answers/database.md?plain=1#L783)
+- [Which of the following terms refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L810)
+- [What is the degree of relation?](../mcq-answers/database.md?plain=1#L1407)
+- [Which one of the following is true for a tuple in a database?](../mcq-answers/database.md?plain=1#L1413)
+- [In a table an attribute named interest is defined as follows,](../mcq-answers/database.md?plain=1#L1422)
+- [Which one is an entity?](../mcq-answers/database.md?plain=1#L1438)
+- [Flat file database is most useful for ________.](../mcq-answers/database.md?plain=1#L1456)
+- [In database, a field is ________](../mcq-answers/database.md?plain=1#L1465)
+
 
 
 ---
@@ -874,6 +968,27 @@ Now the department's location is stored **exactly once**, and all four anomalies
 - [What do you mean by Database properties using Normalization?](../written-answers/database.md?plain=1#L8586)
 - [(c) Why normalization is required in Database? Write shortly about 3NF.](../written-answers/database.md?plain=1#L8699)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which normal form is considered adequate for normal relational database design?](../mcq-answers/database.md?plain=1#L857)
+- [Which one is correct in case of normalization-](../mcq-answers/database.md?plain=1#L866)
+- [If attribute A determines both attributes B and C then, it is also true that—](../mcq-answers/database.md?plain=1#L875)
+- [If a table is normalized so that all its determinants are candidate keys then, the tableis in-](../mcq-answers/database.md?plain=1#L884)
+- [Functional dependency use in which normalizations?](../mcq-answers/database.md?plain=1#L893)
+- ["There must not be any partial dependency "Which of the following Normal Forms holds this condition?](../mcq-answers/database.md?plain=1#L899)
+- [To remove partial dependency from a database, which technique you will use?](../mcq-answers/database.md?plain=1#L908)
+- [In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functio…](../mcq-answers/database.md?plain=1#L917)
+- [Third normal form is based on the concept of ______.](../mcq-answers/database.md?plain=1#L926)
+- [If you are told to remove the inconsistency from the course table which normalization technique you will use-](../mcq-answers/database.md?plain=1#L935)
+- [If you are assigned to remove partial dependency from a database, which technique you will use?](../mcq-answers/database.md?plain=1#L944)
+- [The table in below violates the Normal Form(s). Which normal form it violates?](../mcq-answers/database.md?plain=1#L953)
+- [Why do we need to normalize a database?](../mcq-answers/database.md?plain=1#L959)
+- [In the ________ normal form, a composite attribute is converted to individual attributes.](../mcq-answers/database.md?plain=1#L968)
+- [Repeated data exist at—](../mcq-answers/database.md?plain=1#L977)
+- [What is normalization?](../mcq-answers/database.md?plain=1#L986)
+- [Which one is in case of normalization—( নরম্যালাইজেশন (Normalization)-এর ক্ষেত্রে কোনটি সঠিক— )](../mcq-answers/database.md?plain=1#L1580)
+
+
 
 ---
 
@@ -999,6 +1114,19 @@ flowchart LR
 - [What is Normalize a database? Used containers if needed, draw an ER Diagram. *](../written-answers/database.md?plain=1#L7447)
 - [(a) Draw an E-R diagram of a Library Management System. Where](../written-answers/database.md?plain=1#L8648)
 - [What is Logical design database is called?](../written-answers/database.md?plain=1#L7296)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many…](../mcq-answers/database.md?plain=1#L1306)
+- [Which of the following is an appropriate description of the mapping between the relational model and relational database as its implementations?](../mcq-answers/database.md?plain=1#L1315)
+- [What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraint…](../mcq-answers/database.md?plain=1#L1324)
+- [Consider an Entity-relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater that the cardinality…](../mcq-answers/database.md?plain=1#L1333)
+- [A relationship is given below in an ER diagram How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1342)
+- [A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1360)
+- [Consider an Entity-relationship (ER) model where R is defined as a many-to-one relationship from entity set E1 to entity set E2. If E1 and E2 participate totall…](../mcq-answers/database.md?plain=1#L1378)
+- [A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1387)
+- [In an Entity-Relationship diagram many-to-many relationship corresponds to a -- in actual database.](../mcq-answers/database.md?plain=1#L1396)
+
 
 
 ---
@@ -1161,6 +1289,24 @@ The formal ideal is **serialisability**: the result of running transactions conc
 - [Describe the ACID properties of database.](../written-answers/database.md?plain=1#L9468)
 - [Explain ACID properties in the context of database transactions.](../written-answers/database.md?plain=1#L9512)
 
+**Previous Year MCQ List from this Topic:**
+
+- [A transaction for which all committed changes are permanent is called ________](../mcq-answers/database.md?plain=1#L514)
+- [A to B transfer balance but not sent to B? Which property in ACID is responsible?](../mcq-answers/database.md?plain=1#L997)
+- [Which one of these is not included in acid property of database?](../mcq-answers/database.md?plain=1#L1006)
+- [A transaction completes its execution is said to be-](../mcq-answers/database.md?plain=1#L1015)
+- [What is the D in ACID property in database?](../mcq-answers/database.md?plain=1#L1024)
+- [Which one of the following commands is used to restore the database to the last committed state?](../mcq-answers/database.md?plain=1#L1030)
+- [Which one is not Database Transaction property?](../mcq-answers/database.md?plain=1#L1039)
+- [Which one of the following is a failure to a system?](../mcq-answers/database.md?plain=1#L1048)
+- [How can your rollback a committed transaction in any DBMS?](../mcq-answers/database.md?plain=1#L1057)
+- [The packaged procedure that makes data in form permanent in the Database is-](../mcq-answers/database.md?plain=1#L1066)
+- [ROLLBACK command is used to undo the changes made by-](../mcq-answers/database.md?plain=1#L1075)
+- [Why is set transaction used in an oracle DBMS?](../mcq-answers/database.md?plain=1#L1084)
+- [After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is…](../mcq-answers/database.md?plain=1#L1093)
+- [It is a necessary requirement that the transaction is guaranteed to complete or the transaction is never started, so that an inconsistent state would not be vis…](../mcq-answers/database.md?plain=1#L1102)
+
+
 
 ---
 
@@ -1258,6 +1404,18 @@ END;
 - [Describe the ACID properties in a database. When does a deadlock occur and how do you prevent it, in a database?](../written-answers/database.md?plain=1#L9413)
 - [A transaction consists of a sequence of query and/or update statements. SQL statement must be required to end the transaction. List the SQL statements, required…](../written-answers/database.md?plain=1#L9294)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following locks the item from access of any type?](../mcq-answers/database.md?plain=1#L523)
+- [Which of the following is not a factor in determining the concurrency control behavior of SQL Server?](../mcq-answers/database.md?plain=1#L1707)
+- [In a DBMS, when multiple transaction programs update the same database simultaneously, which of the following is a technology that is used to prevent logical co…](../mcq-answers/database.md?plain=1#L1716)
+- [Which of the below is responsible for controlling the interaction among simultaneous transaction?](../mcq-answers/database.md?plain=1#L1725)
+- [In strict two phase locking protocol-](../mcq-answers/database.md?plain=1#L1734)
+- [A shared lock allows which of the following type of transaction to occur?](../mcq-answers/database.md?plain=1#L1743)
+- [Which of the following protocol is an SQL trigger support by oracle?](../mcq-answers/database.md?plain=1#L1512)
+- [________ is a statement that is executed automatically by the system.](../mcq-answers/database.md?plain=1#L1521)
+
+
 
 ---
 
@@ -1312,3 +1470,643 @@ CREATE INDEX idx_emp_dept_salary ON Employee(DeptID, Salary);   -- composite
 **Previous Year Question List from this Topic:**
 
 - [(d) What are the purpose of Primary Key and Foreign Key in context with ‘Relational Database’? Write in short with examples. (5 marks)](../written-answers/database.md?plain=1#L9535)
+
+**Previous Year MCQ List from this Topic:**
+
+- [We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-](../mcq-answers/database.md?plain=1#L286)
+- [কোনটি দিয়ে Database Table এ uniqueness নিশ্চিত করা হয়?](../mcq-answers/database.md?plain=1#L406)
+- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L415)
+- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L487)
+- [The primary key is selected from the ________](../mcq-answers/database.md?plain=1#L505)
+- [The key selected from the sets of candidate keys by database design is called ______ key:](../mcq-answers/database.md?plain=1#L1122)
+- [Which of the following types of table constraints prevents the entry of duplicate rows?](../mcq-answers/database.md?plain=1#L1131)
+- [Referential integrity in a DBMS is a form of-](../mcq-answers/database.md?plain=1#L1140)
+- [Needing to assess the validity of assumed referential integrity constraints on foreign keys is a(n) _________ of normalization.](../mcq-answers/database.md?plain=1#L1149)
+- [The maximum number of super keys for the relation schema R (E, F, G, H) with E as the key is-](../mcq-answers/database.md?plain=1#L1158)
+- [Which of the following is a group of one or more attributes that uniquely identifies a row?](../mcq-answers/database.md?plain=1#L1167)
+- [For every relationship, how many possible sets of minimum cardinalities are there?](../mcq-answers/database.md?plain=1#L1176)
+- [A primary key must also be-](../mcq-answers/database.md?plain=1#L1185)
+- [What represents a row in a relational database?](../mcq-answers/database.md?plain=1#L1194)
+- [The subset of super key is a candidate key under what condition?](../mcq-answers/database.md?plain=1#L1203)
+- [Which of the following is a primary key property in DBMS? ( DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? )](../mcq-answers/database.md?plain=1#L1545)
+- [What are the different events in Triggers?](../mcq-answers/database.md?plain=1#L1476)
+
+
+---
+
+## DBMS Concepts & Architecture
+
+### DBMS Architecture — Three-Level Schema, Data Abstraction and Data Independence
+
+> A **DBMS hides the messy physical reality of stored data behind LAYERS OF ABSTRACTION**, so that each kind of user sees only what they need. The standard model is the **ANSI/SPARC THREE-LEVEL ARCHITECTURE**.
+
+```mermaid
+flowchart TD
+    U1["End user A"] --> E1["EXTERNAL view 1"]
+    U2["End user B"] --> E2["EXTERNAL view 2"]
+    U3["End user C"] --> E3["EXTERNAL view 3"]
+    E1 --> C["CONCEPTUAL (LOGICAL) LEVEL<br/>the WHOLE database:<br/>entities, attributes, RELATIONSHIPS,<br/>constraints — WHAT data is stored"]
+    E2 --> C
+    E3 --> C
+    C --> I["INTERNAL (PHYSICAL) LEVEL<br/>HOW the data is stored:<br/>files, blocks, indexes, compression"]
+    I --> D["Physical disk"]
+```
+
+| Level | Also called | Describes | Who uses it |
+|---|---|---|---|
+| ⭐ **EXTERNAL** | **View level** | **What a PARTICULAR user or application sees** — a subset of the database, often through a **VIEW**. Many external schemas exist | **End users, application programs** |
+| ⭐ **CONCEPTUAL** | ⭐ **LOGICAL level** | ⭐ **The DATA and the RELATIONSHIPS between data, plus constraints — for the WHOLE database.** Exactly **ONE** conceptual schema exists | **DBA, database designers** |
+| ⭐ **INTERNAL** | **Physical level** | **HOW the data is physically stored** — file organisation, records, blocks, indexes, compression, placement on disk | **The DBMS itself, storage engineers** |
+
+> ### **"Which level of abstraction specifies the DATA and the RELATIONSHIPS between data?"**
+> ### ✅ **The CONCEPTUAL (LOGICAL) level.** *(The external level shows only a user's slice; the internal level describes storage, not relationships.)*
+
+#### Data Independence — the reason the three levels exist
+
+> ### **DATA INDEPENDENCE is the ability to CHANGE the schema at one level WITHOUT having to change the schema at the level above it.**
+
+| Type | Definition | Example | Achievability |
+|---|---|---|---|
+| ⭐ **PHYSICAL data independence** | **Change the INTERNAL (physical) schema without changing the CONCEPTUAL schema** | Adding an index, moving the database to a new disk, changing the file organisation or compression — **no application needs modification** | ✅ **Easier — achieved by virtually all modern DBMSs** |
+| ⭐ **LOGICAL data independence** | **Change the CONCEPTUAL schema without changing the EXTERNAL schemas / applications** | Adding a new column or a new table, splitting a table — **existing views and programs keep working** | ⚠️ **HARDER**, because applications depend directly on the logical structure |
+
+> **Why this matters commercially:** without physical data independence, **every performance tuning change would require rewriting every application**. The three-level architecture is what makes a database maintainable over decades.
+
+#### Schema vs Instance — a frequently confused pair
+
+| | ⭐ **SCHEMA** | ⭐ **INSTANCE** |
+|---|---|---|
+| **What it is** | The **DESIGN / STRUCTURE** of the database — the definition of tables, columns, types and constraints | ⭐ **The COLLECTION OF DATA STORED IN THE DATABASE AT A PARTICULAR MOMENT** |
+| **Changes** | **Rarely** — only when the design changes | **Constantly** — with every insert, update and delete |
+| **Analogy** | The **declaration** of a variable / a class definition | The **value** of the variable at a moment / an object |
+
+> ### **"The collection of information stored in the database at a particular moment is called…"** → ### ✅ **an INSTANCE** (also called the database state).
+>
+> ⚠️ **Note the clash of terminology in Oracle:** in **Oracle DBMS specifically**, an **"INSTANCE"** means something different — ### **the MEMORY STRUCTURES (the SGA) plus the BACKGROUND PROCESSES** that operate on the database files. *If the question mentions Oracle, use the Oracle meaning; otherwise use the general one.*
+
+#### Data models
+
+> A **DATA MODEL is a collection of conceptual tools for describing DATA, DATA RELATIONSHIPS, DATA SEMANTICS and CONSISTENCY CONSTRAINTS.**
+
+| Model | Structure | Note |
+|---|---|---|
+| **Hierarchical** | A **tree** — parent/child | IBM IMS; one parent only |
+| **Network** | A **graph** — records linked by sets | CODASYL; more flexible than hierarchical |
+| ⭐ **RELATIONAL** | ⭐ **TABLES (relations) of rows and columns** | ⭐ **The dominant model** — Oracle, MySQL, SQL Server, PostgreSQL |
+| **Entity-Relationship (ER)** | Entities, attributes and relationships | A **design** model, converted into relational tables |
+| **Object-oriented / Object-relational** | Objects with methods | |
+| **NoSQL — document, key-value, column-family, graph** | Flexible / schema-less | MongoDB, Redis, Cassandra, Neo4j |
+
+#### Data redundancy and data integrity
+
+| Term | Meaning |
+|---|---|
+| ⭐ **Data REDUNDANCY** | **The same data stored in more than one place.** It wastes space and — far worse — causes **INCONSISTENCY** when one copy is updated and another is not |
+| ⭐ **Data INTEGRITY** | ⭐ **The degree to which the data in a database is ACCURATE, CONSISTENT, COMPLETE and RELIABLE**, throughout its lifetime |
+| **Data INCONSISTENCY** | The state where two copies of the same fact disagree |
+
+> ### **"Data integrity problems in a DBMS are caused by…"** → ### ✅ **DATA REDUNDANCY.** Redundancy is the *cause*; inconsistency is the *symptom*; **NORMALIZATION is the cure**, and **integrity constraints (primary key, foreign key, CHECK, NOT NULL) plus ACID transactions** are what preserve integrity thereafter.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which level of abstraction specifies the data and relationships between data?](../mcq-answers/database.md?plain=1#L561)
+- [Data integrity problems in a DBMS is caused due to-](../mcq-answers/database.md?plain=1#L612)
+- [A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-](../mcq-answers/database.md?plain=1#L621)
+- [The collection of information stored in the database at a particular moment is called-](../mcq-answers/database.md?plain=1#L702)
+- [Which of the following term refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L774)
+- [Which of the following terms refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L810)
+- [The ________ format is usually used to store data.](../mcq-answers/database.md?plain=1#L828)
+
+
+---
+
+### Metadata, the Data Dictionary and the Role of the DBA
+
+#### Metadata
+
+> ### **METADATA is "DATA ABOUT DATA"** — it describes the **structure, meaning, origin and constraints** of the actual data, rather than being the data itself.
+
+| The data | The metadata about it |
+|---|---|
+| `Rahim`, `28`, `55000` | The column is named **Name**, of type **VARCHAR(50)**, **NOT NULL**; the table is **Employee**; it was created on 3 May 2024; it has 12,400 rows; there is an index on **DeptID** |
+
+**Examples of metadata:** table and column names, data types and lengths, constraints and keys, indexes, views, stored procedures, user accounts and privileges, storage locations, row counts and statistics, timestamps of creation and modification.
+
+#### The Data Dictionary (system catalogue)
+
+> ### **The DATA DICTIONARY is the DBMS's own repository of METADATA — a set of SYSTEM TABLES in which the DBMS stores the DEFINITION AND STRUCTURE of everything in the database.**
+
+| It contains | Examples |
+|---|---|
+| ⭐ **Data structure definitions** | Tables, columns, data types, sizes |
+| **Constraints and keys** | Primary, foreign, unique, check |
+| **Indexes and views** | |
+| **Users and privileges** | Who may do what |
+| **Storage information** | Files, tablespaces |
+| **Statistics** | Row counts, value distributions — used by the **query optimiser** |
+
+> **Two important properties:** the data dictionary is **maintained automatically by the DBMS** (a `CREATE TABLE` updates it instantly), and it is **queryable like any other table** — `SELECT * FROM information_schema.columns` in MySQL/PostgreSQL, or the `USER_TABLES` / `ALL_TAB_COLUMNS` views in Oracle. **An "active" data dictionary is one the DBMS consults during query processing; a "passive" one is merely documentation.**
+
+#### The Database Administrator (DBA)
+
+| ⭐ **Functions that ARE the DBA's job** | ⭐ **NOT the DBA's job** |
+|---|---|
+| **Schema definition and modification** | ⚠️ **QUERY PROCESSING** — this is performed **by the DBMS's own query processor/optimiser**, not by a person |
+| **Granting and revoking ACCESS RIGHTS** (authorisation) — the chief means of achieving **protection/security** | ⚠️ **Creating and processing FORMS** — that is application development |
+| **Backup and recovery planning** | Writing business applications |
+| **Performance monitoring and TUNING** (indexes, storage) | |
+| **Storage structure and access-method definition** | |
+| **Integrity-constraint specification** | |
+| **Capacity planning, user management, auditing** | |
+
+> ### **"Which of the following is NOT a function of a database administrator?"** → ### ✅ **QUERY PROCESSING** — the DBMS does that automatically.
+> ### **"Which DBMS function is a means of achieving PROTECTION?"** → ### ✅ **MANAGING THE DATA ACCESS RIGHTS OF USERS** (authorisation and privileges).
+
+#### The functions of a DBMS
+
+**Data definition · data storage and retrieval · data manipulation · transaction management (ACID) · concurrency control · backup and recovery · security and authorisation · data integrity enforcement · data dictionary management · multi-user access · query optimisation.**
+⚠️ **Not** a DBMS function: creating application forms and reports (that is the application layer's job).
+
+**Previous Year MCQ List from this Topic:**
+
+- [Data about data is called-](../mcq-answers/database.md?plain=1#L552)
+- [Which of the following is not a function of a database administrator?](../mcq-answers/database.md?plain=1#L567)
+- [Of the functions provided by a DBMS. Which of the following is a means for achieving protection for data confidentiality?](../mcq-answers/database.md?plain=1#L648)
+- [In user facilities, copying of all records onto a main store from permanent store is considered as-](../mcq-answers/database.md?plain=1#L720)
+- [If master and transaction file have keys in same order, then it takes____](../mcq-answers/database.md?plain=1#L729)
+- [File used to update information in computer's master file is classified as](../mcq-answers/database.md?plain=1#L738)
+- [Interleaving of records to form one file containing all records is classified as ____.](../mcq-answers/database.md?plain=1#L747)
+- [Set of numbers used to check all groups record within limits of data is classified as-](../mcq-answers/database.md?plain=1#L756)
+- [Process of converting data or information in the form of which is readily available for processing is called-](../mcq-answers/database.md?plain=1#L765)
+- [Data directory contains detail of-](../mcq-answers/database.md?plain=1#L801)
+- [The following are functions of a DBMS except ________](../mcq-answers/database.md?plain=1#L819)
+- [What is the purpose of data logger?](../mcq-answers/database.md?plain=1#L846)
+
+
+---
+
+### Database System Architectures — Client-Server, Distributed and NoSQL
+
+#### Tiered architectures
+
+```mermaid
+flowchart LR
+    subgraph T2["TWO-TIER"]
+        A["CLIENT<br/>presentation +<br/>APPLICATION LOGIC<br/>(the 'fat client')"] <-->|"SQL over ODBC/JDBC"| B["DATABASE SERVER"]
+    end
+    subgraph T3["THREE-TIER"]
+        C["CLIENT<br/>presentation only<br/>(thin client / browser)"] <--> D["APPLICATION SERVER<br/>business logic"] <--> E["DATABASE SERVER"]
+    end
+```
+
+| Point | **Two-tier** | **Three-tier** |
+|---|---|---|
+| **Tiers** | Client + database server | Client + application server + database server |
+| ⭐ **Where the application logic runs** | ⭐ **On the CLIENT side (the host/client)** | **On the middle APPLICATION SERVER** |
+| **Client type** | "Fat" client | ⭐ **"Thin" client** |
+| ⭐ **API used to reach the database** | ⭐ **ODBC / JDBC** | The app server handles it |
+| **Scalability** | ⚠️ Poor — each client holds a DB connection | ✅ **Good** — connection pooling at the middle tier |
+| **Security** | Weaker — clients connect directly to the DB | ✅ **Stronger** — the database is never exposed to clients |
+| **Maintenance** | Must redeploy to every client | ✅ Update the middle tier only |
+| **Suited to** | Small LAN applications | ⭐ **Web and enterprise applications** |
+
+> ### **The three application-logic components are: PRESENTATION, PROCESSING and STORAGE.** Which tier each lands in is exactly what distinguishes two-tier from three-tier architecture.
+
+#### Distributed databases
+
+> A **DISTRIBUTED DATABASE stores data across MULTIPLE PHYSICAL SITES** (possibly in different cities), while presenting itself to users as a **single logical database**.
+
+| ⭐ **Advantages over a centralized database** | **Disadvantages** |
+|---|---|
+| ⭐ **MODULAR GROWTH** — capacity is added by adding a site, with no disruption | **Complexity** of design and management |
+| **Improved RELIABILITY and AVAILABILITY** — one site failing does not stop the system | **Costlier** software and communication |
+| **Local autonomy** — each site controls its own data | ⚠️ **Harder to maintain integrity and consistency** across sites |
+| **Better performance for local queries** — data sits near its users | **Distributed transactions and deadlock** are difficult (two-phase commit) |
+| **Reflects organisational structure** (branches, regions) | **Security** surface is larger |
+
+**Key techniques:** **FRAGMENTATION** (splitting a table horizontally by rows or vertically by columns across sites) · **REPLICATION** (keeping copies at several sites for availability and read speed) · **two-phase commit (2PC)** for atomic distributed transactions.
+
+> **Oracle MATERIALIZED VIEWS (snapshots)** are used for ⭐ **DYNAMIC DATA REPLICATION** — a materialised view physically **stores** the result of a query (unlike an ordinary view, which is recomputed each time) and is refreshed periodically, which is how a remote site keeps a local copy of central data.
+
+#### SQL vs NoSQL
+
+| Point | **SQL (Relational)** | ⭐ **NoSQL** |
+|---|---|---|
+| **Data model** | **Tables** with a fixed schema | **Flexible / schema-less** — documents, key-value, column-family, graph |
+| **Schema** | **Rigid, defined in advance** | ✅ **Dynamic** |
+| **Scaling** | Mainly **VERTICAL** (a bigger server) | ⭐ **HORIZONTAL** (more commodity servers) |
+| **Consistency model** | ⭐ **ACID** | ⭐ Often **BASE** — Basically Available, Soft state, Eventually consistent |
+| **Query language** | **SQL** | Varies by product |
+| **Joins** | ✅ Strong | Limited or absent |
+| **Best for** | **Transactions, banking, structured data with relationships** | **Big data, real-time web, rapidly changing or unstructured data** |
+| **Examples** | Oracle, MySQL, PostgreSQL, SQL Server, **MS Access** | ⭐ **MongoDB** (document), Redis (key-value), Cassandra (column), Neo4j (graph) |
+
+> ### **"Which is a NoSQL database?"** → ### ✅ **MongoDB.** ### **"Which is an example of a DBMS/RDBMS?"** → ### ✅ **MS Access** (a relational DBMS), along with Oracle, MySQL and SQL Server.
+
+#### Two Oracle internals that recur in MCQs
+
+| Term | Meaning |
+|---|---|
+| ⭐ **Oracle INSTANCE** | ⭐ **The MEMORY STRUCTURES (SGA) + the BACKGROUND PROCESSES.** The *database* is the set of files on disk; the *instance* is what runs in memory to access them |
+| ⭐ **LGWR (Log Writer)** | ⭐ **A BACKGROUND PROCESS that writes the redo entries from the log buffer to the REDO LOG FILES on disk** — this is what makes committed transactions **durable** |
+| **DBWR** | Database Writer — writes modified data blocks from the buffer cache to the data files |
+| **DB_BLOCK_SIZE** | The database block size — ⚠️ **it cannot be altered on an existing database; the database must be RE-CREATED** |
+| **Speedup vs Scaleup** | ⭐ **SPEEDUP** = running the **same task in less time** by increasing parallelism; **SCALEUP** = handling a **larger task in the same time** with proportionally more resources |
+
+**Previous Year MCQ List from this Topic:**
+
+- [Assume that you want to improve database performance and willing to see the amount of swap space. Which command you can use in LINUX OS environment?](../mcq-answers/database.md?plain=1#L576)
+- [In oracle to change the DB_Block_size parameter, you need to-](../mcq-answers/database.md?plain=1#L585)
+- [Which of the following controls the execution of application program and UI in two tier client/server architecture?](../mcq-answers/database.md?plain=1#L594)
+- [LGWR process writes information into-](../mcq-answers/database.md?plain=1#L603)
+- [Which is the oracle component that contains the memory structures and background process?](../mcq-answers/database.md?plain=1#L630)
+- [The three different application logic components are which of the following?](../mcq-answers/database.md?plain=1#L639)
+- [Oracle materialized views or SNAPSHOTS is used-](../mcq-answers/database.md?plain=1#L657)
+- [A distributed database has which of the following advantages over a centralized database?](../mcq-answers/database.md?plain=1#L666)
+- [In Oracle DBMS, LGWR process is a-](../mcq-answers/database.md?plain=1#L675)
+- [Which one of the following is a No-SQL Database?](../mcq-answers/database.md?plain=1#L684)
+- [Running the given task in less time by increasing the degree of parallelism in DBMS is called ________.](../mcq-answers/database.md?plain=1#L711)
+- [Which one is an example of DBMS?](../mcq-answers/database.md?plain=1#L783)
+- [In the hypermedia database, information bits are stored in the form of:](../mcq-answers/database.md?plain=1#L792)
+- [From where the data is captured in the SQL Server Database?](../mcq-answers/database.md?plain=1#L837)
+- [The Application program interface in a two-tier architecture DBMS is provided by-](../mcq-answers/database.md?plain=1#L1669)
+
+
+---
+
+## Data Warehousing & Data Mining
+
+### Data Warehousing, Data Marts and the Star Schema
+
+> ### **A DATA WAREHOUSE is a LARGE, CENTRALISED repository of INTEGRATED, HISTORICAL data drawn from many source systems, organised for ANALYSIS AND DECISION-MAKING rather than for day-to-day transactions.**
+
+> **Bill Inmon's classic definition — worth quoting:** a data warehouse is a **SUBJECT-ORIENTED, INTEGRATED, TIME-VARIANT and NON-VOLATILE** collection of data in support of management's decision-making process.
+
+| Characteristic | Meaning |
+|---|---|
+| ⭐ **Subject-oriented** | Organised around **business subjects** (sales, customer, product), not around applications |
+| ⭐ **Integrated** | Data from many sources is **cleaned and made consistent** — one date format, one customer ID scheme |
+| ⭐ **Time-variant** | Holds **HISTORY** — years of snapshots, so trends can be analysed |
+| ⭐ **Non-volatile** | **Loaded and read, but not updated or deleted** by users — it is a stable record |
+
+> ### **"Where is data warehousing used?"** → ### ✅ **In a DECISION SUPPORT SYSTEM (DSS)** — and more broadly in business intelligence, reporting and analytics.
+
+#### The ETL pipeline
+
+```mermaid
+flowchart LR
+    A["SOURCE SYSTEMS<br/>OLTP databases · flat files ·<br/>ERP · external feeds"] --> B["① EXTRACT"]
+    B --> C["② TRANSFORM<br/>CLEAN · deduplicate ·<br/>standardise · integrate ·<br/>aggregate"]
+    C --> D["③ LOAD"]
+    D --> E["DATA WAREHOUSE"]
+    E --> F["DATA MARTS<br/>(departmental subsets)"]
+    E --> G["OLAP / BI tools ·<br/>reports · dashboards ·<br/>DATA MINING"]
+    F --> G
+```
+
+> ### **DATA CLEANING (data cleansing)** removes or corrects **errors, duplicates, inconsistencies, missing values and outliers** before loading. Its purpose is **all of these at once** — the MCQ answer to *"what is the use of data cleaning?"* is normally ⭐ **"All of the above"**, because it improves accuracy, consistency and completeness together. **Rubbish loaded into a warehouse produces rubbish analysis, so cleaning is the most labour-intensive stage of ETL.**
+
+#### Data Warehouse vs Data Mart
+
+| Point | **DATA WAREHOUSE** | ⭐ **DATA MART** |
+|---|---|---|
+| **Scope** | **The WHOLE enterprise** | ⭐ **ONE department or subject area** (sales, finance, HR) |
+| **Size** | Very large — TB to PB | ⭐ **Small — "a small LOGICAL UNIT" of the warehouse** |
+| **Users** | The whole organisation | One business unit |
+| **Build time and cost** | Long, expensive | Fast, cheap |
+| **Data sources** | Many | Few |
+
+> ### **"Small logical units where a data warehouse holds large amounts of data are known as…"** → ### ✅ **DATA MARTS.**
+>
+> *(**Dependent** data marts are extracted from the central warehouse; **independent** ones are built directly from sources. A **DATA LAKE**, by contrast, stores **raw, unprocessed** data of any type — schema-on-read — while a warehouse stores **cleaned, structured** data — schema-on-write.)*
+
+#### Dimensional modelling — the Star Schema
+
+> ### **A STAR SCHEMA has ONE central FACT TABLE surrounded by several DIMENSION TABLES**, each joined directly to the fact table — the diagram looks like a star.
+
+```mermaid
+flowchart TD
+    D1["DIM_DATE<br/>date_key · day · month ·<br/>quarter · year"] --> F
+    D2["DIM_PRODUCT<br/>product_key · name ·<br/>category · brand"] --> F
+    F["⭐ FACT_SALES<br/>date_key · product_key ·<br/>customer_key · store_key<br/>— — — — —<br/>quantity · amount · discount<br/>(the MEASURES)"]
+    D3["DIM_CUSTOMER<br/>customer_key · name ·<br/>city · segment"] --> F
+    D4["DIM_STORE<br/>store_key · branch ·<br/>district · region"] --> F
+```
+
+| | ⭐ **FACT table** | ⭐ **DIMENSION table** |
+|---|---|---|
+| **Contains** | **MEASURES (numeric facts)** — quantity, amount, profit — plus **foreign keys** to the dimensions | **Descriptive ATTRIBUTES** — the who, what, where, when |
+| **Size** | ⚠️ **Very large** (millions to billions of rows) | Small (hundreds to thousands) |
+| **Grows** | Constantly | Slowly |
+| **Normalised?** | Usually | ⭐ **Deliberately DE-NORMALISED** in a star schema |
+
+> ### **"A star schema has what type of relationship between a DIMENSION and a FACT table?"**
+> ### ✅ **ONE-TO-MANY** — **one row in a dimension relates to MANY rows in the fact table.** *(One product appears in thousands of sales; one date covers thousands of transactions.)* Viewed from the fact table it is **many-to-one**.
+
+| Schema | Dimensions are | Joins | Redundancy | Query speed |
+|---|---|---|---|---|
+| ⭐ **STAR** | **DE-normalised** (flat) | ✅ **Fewer** | Higher | ✅ **Faster** |
+| **SNOWFLAKE** | **NORMALISED** into sub-dimensions | More | Lower | Slower |
+| **Galaxy / Fact constellation** | Shared dimensions across **several fact tables** | Complex | — | — |
+
+> **Why the star schema deliberately breaks normalization:** a warehouse is **read-mostly**, so the update anomalies that normalization prevents barely arise, while **each avoided join saves enormous time on a billion-row fact table.** This is the clearest legitimate example of **denormalization for performance**.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Where is data warehousing used?](../mcq-answers/database.md?plain=1#L1223)
+- [What is the use of data cleaning?](../mcq-answers/database.md?plain=1#L1232)
+- [Small logical units where data warehouse hold large amounts of data is known as ______.](../mcq-answers/database.md?plain=1#L1241)
+- [A star schema has what type of relationship between a dimension and fact table?](../mcq-answers/database.md?plain=1#L1277)
+
+
+---
+
+### OLTP vs OLAP, Data Mining and Business Intelligence
+
+#### OLTP vs OLAP — the central comparison
+
+| Point | ⭐ **OLTP — Online Transaction Processing** | ⭐ **OLAP — Online Analytical Processing** |
+|---|---|---|
+| **Purpose** | **Running the business** — day-to-day operations | ⭐ **ANALYSING the business** — decision support |
+| **Typical operation** | **INSERT, UPDATE, DELETE** of single rows | ⭐ **Complex SELECT over millions of rows**, with aggregation |
+| **Data** | **Current**, detailed | ⭐ **HISTORICAL**, summarised and aggregated |
+| **Design** | ⭐ **NORMALISED (3NF)** — avoids anomalies | ⭐ **DE-NORMALISED (star/snowflake)** — avoids joins |
+| **Users** | Clerks, customers, front-line staff — **many** | Analysts, managers, executives — **few** |
+| **Query volume** | Very high, very short | Lower, very long-running |
+| **Response time** | **Milliseconds** | Seconds to minutes |
+| **Database size** | GB | **TB – PB** |
+| **Backup** | Critical — the operational record | Can be reloaded from sources |
+| **Example** | An ATM withdrawal; placing an order | *"Compare quarterly sales by region for the last five years"* |
+
+**OLAP operations to be able to name:** ⭐ **ROLL-UP** (aggregate up a hierarchy — day → month → year) · ⭐ **DRILL-DOWN** (the reverse — go to finer detail) · ⭐ **SLICE** (fix one dimension) · ⭐ **DICE** (fix several dimensions, producing a sub-cube) · **PIVOT (rotate)** — reorient the cube.
+**OLAP types:** **ROLAP** (relational storage), **MOLAP** (a multidimensional cube), **HOLAP** (hybrid).
+
+#### Data Mining
+
+> ### **DATA MINING is the process of DISCOVERING PREVIOUSLY UNKNOWN, USEFUL PATTERNS, CORRELATIONS AND KNOWLEDGE from large volumes of data by APPLYING INTELLIGENT METHODS.**
+>
+> It is the **analysis step of the wider KDD (Knowledge Discovery in Databases)** process.
+
+> ### **"Finding useful patterns from the data in a database is known as…"** → ### ✅ **DATA MINING.**
+> ### **"The essential process in which INTELLIGENT METHODS are applied to extract data patterns"** → ### ✅ **DATA MINING.**
+
+| Technique | What it finds | Example |
+|---|---|---|
+| ⭐ **Classification** | Assigns records to **known categories** | Will this loan default? (supervised) |
+| ⭐ **Clustering** | Groups similar records with **no predefined labels** | Customer segmentation (unsupervised) |
+| ⭐ **Association rule mining** | **Items that occur together** | ⭐ **Market basket analysis** — "bread → butter" |
+| **Regression** | Predicts a **numeric value** | Forecast next month's sales |
+| **Anomaly / outlier detection** | Records that do not fit the pattern | ⭐ **Credit-card FRAUD detection** |
+| **Sequential pattern mining** | Ordered sequences over time | Web click paths |
+
+> ### **The distinction that is often muddled: OLAP tells you WHAT HAPPENED (you ask the question and it aggregates the answer); DATA MINING tells you WHAT YOU DIDN'T KNOW TO ASK (the algorithm discovers the pattern itself).**
+
+#### Business Intelligence and Big Data
+
+| Term | Meaning |
+|---|---|
+| ⭐ **Business Intelligence (BI)** | The **technologies and practices for collecting, integrating, analysing and PRESENTING business information** to support decisions — warehousing + OLAP + reporting + dashboards + mining. ⭐ **BI reporting analyses can be performed using BOTH standard SQL AND extensions to SQL** (OLAP functions, `CUBE`, `ROLLUP`, window functions) |
+| ⭐ **DARK DATA** | ⭐ **Data an organisation COLLECTS AND STORES but NEVER USES** — log files, old emails, unanalysed survey responses, CCTV footage. It consumes storage and carries **security and compliance risk** while delivering no value |
+| **Big Data — the 5 Vs** | **Volume · Velocity · Variety · Veracity · Value** |
+| ⭐ **HADOOP** | An **open-source framework for distributed storage (HDFS) and processing (MapReduce) of very large datasets across clusters of commodity hardware.** ⭐ **Written in JAVA** |
+| **Spark** | A faster, in-memory successor to MapReduce |
+| **Data logger** | A device or program that ⭐ **records (keeps) HISTORICAL DATA** automatically over time — sensor readings, system events |
+
+> **The whole pipeline in one line:** **OLTP systems create the data → ETL cleans and loads it into a DATA WAREHOUSE → OLAP and BI tools report on it → DATA MINING discovers patterns in it → the business makes better decisions.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?](../mcq-answers/database.md?plain=1#L1250)
+- [Hadoop written in which language?](../mcq-answers/database.md?plain=1#L1259)
+- [Business Intelligence (BI) reporting analyses can be performed using](../mcq-answers/database.md?plain=1#L1268)
+- [Finding useful pattern from the data in a database is known as-](../mcq-answers/database.md?plain=1#L1286)
+- [Dark data represents ________.](../mcq-answers/database.md?plain=1#L1295)
+
+
+---
+
+## Indexing, Connectivity & Programmatic SQL
+
+### Index Types and File Organization
+
+> *(The basics of what an index is, what it speeds up and what it costs are covered in **[Database Objects and Integrity Constraints](#database-objects-and-integrity-constraints)**. This theory covers the TYPES of index and the underlying file organisation, which is what MCQs on this subtopic actually test.)*
+
+> ### **"Which one makes data access from a database FASTER?"** → ### ✅ **INDEXING.**
+
+#### The classification of indexes
+
+| Classification | Type | Description |
+|---|---|---|
+| **By how it is created** | ⭐ **IMPLICIT** | ⭐ **Created AUTOMATICALLY by the database server when an object is created** — a `PRIMARY KEY` or `UNIQUE` constraint silently creates its index |
+| | ⭐ **EXPLICIT** | Created **deliberately by the user** with `CREATE INDEX` |
+| **By physical ordering** | ⭐ **CLUSTERED** | ⭐ **The table's ROWS THEMSELVES are physically stored in the index order.** Therefore **only ONE per table**. Extremely fast for range scans |
+| | ⭐ **NON-CLUSTERED (secondary)** | A **separate structure holding sorted keys + POINTERS** to the rows. **Many per table** |
+| **By density** | **DENSE** | An index entry for **every** search-key value |
+| | **SPARSE** | An entry for only **some** values (one per block) — smaller, but needs a sequential scan within the block |
+| **By structure** | ⭐ **B+ TREE** | ⭐ **The default for almost every RDBMS** — balanced, high fan-out, excellent for both equality and **RANGE** queries |
+| | **HASH** | O(1) for **equality only**; useless for ranges or sorting |
+| | **BITMAP** | Bit vectors per value — ideal for **low-cardinality** columns in a warehouse |
+| **By columns** | **Single-column / Composite (multi-column)** | A composite index helps when the query filters on a **leading prefix** of its columns |
+| | **Unique / Non-unique** | |
+
+**Creating an index — the syntax:**
+```sql
+CREATE INDEX index_name ON table_name;                  -- the general form
+CREATE INDEX idx_emp_dept  ON Employee(DeptID);
+CREATE UNIQUE INDEX idx_emp_email ON Employee(Email);
+DROP INDEX idx_emp_dept;
+```
+
+> ### **A database index speeds up BOTH searching (`WHERE`) AND sorting/ordering (`ORDER BY`, `GROUP BY`, joins)** — which is why the MCQ answer to *"database index speeds up…"* is usually ⭐ **"both of the above"**. What it **slows down** is **`INSERT`, `UPDATE` and `DELETE`**, because every index must be maintained too.
+
+#### File organization
+
+> **FILE ORGANIZATION is how records are physically arranged in the blocks of a file on disk.** It determines what the DBMS must do to find a row.
+
+| Organisation | How records are stored | Good for | Poor for |
+|---|---|---|---|
+| **Heap (unordered)** | Appended wherever there is space | ✅ **Fast insertion** | ⚠️ Search requires a **full scan** |
+| **Sequential (ordered)** | Sorted by a key field | ✅ Range queries, ordered reads | Insertion (must maintain order) |
+| **Hash** | Block chosen by a **hash of the key** | ✅ **Equality lookup — O(1)** | ⚠️ **Range queries — useless** |
+| **B+ tree (indexed sequential / ISAM)** | Records reached through a balanced tree index | ✅ **Both equality and range** | Slight update overhead |
+| ⭐ **CLUSTERED / MULTI-TABLE CLUSTERING** | ⭐ **RELATED RECORDS OF DIFFERENT RELATIONS are stored TOGETHER IN THE SAME BLOCK** | ⭐ **Joins between those tables — the join rows are already on the same disk block, so one read serves both** | Queries against a single table alone; more complex maintenance |
+
+> ### **"Related records of DIFFERENT RELATIONS can be stored on the SAME BLOCK using which file organization?"**
+> ### ✅ **MULTI-TABLE CLUSTERING file organization** (also simply called **clustering file organization**).
+>
+> **The idea:** if `Department` and `Employee` are almost always queried together, storing each department's row **physically adjacent to its employees' rows** means a join needs **one disk read instead of two**. The trade-off is that scanning `Employee` **alone** becomes slower, because its rows are now scattered among the department rows.
+
+#### Query processing and optimization
+
+```mermaid
+flowchart LR
+    A["SQL query"] --> B["① PARSING and<br/>TRANSLATION<br/>— syntax check, convert to<br/>relational algebra"]
+    B --> C["② OPTIMIZATION<br/>— the optimiser generates<br/>alternative execution plans<br/>and costs them using the<br/>data-dictionary STATISTICS"]
+    C --> D["③ EVALUATION /<br/>EXECUTION<br/>— the chosen plan runs"]
+    D --> E["Result"]
+```
+
+> ### **The three steps of SQL query processing are PARSING & TRANSLATION → OPTIMIZATION → EVALUATION.** *(An MCQ asking "which is NOT a step of SQL query processing?" is testing exactly this list.)*
+
+**What the optimiser decides:** which **index** (if any) to use · the **join order** · the **join algorithm** (nested loop, hash join, merge join) · whether to scan or seek · whether to sort or use an existing order. It chooses using the **statistics** (row counts, value distributions) kept in the **data dictionary** — which is why **stale statistics produce bad plans**, and why `ANALYZE`/`UPDATE STATISTICS` matters.
+
+**Practical query-tuning rules:** index the columns in `WHERE` and `JOIN` · avoid `SELECT *` · avoid functions on an indexed column in `WHERE` (`WHERE YEAR(dt)=2024` cannot use an index on `dt`) · remember that **`LIKE 'abc%'` can use an index but `LIKE '%abc'` cannot** · prefer `EXISTS` to `IN` for large subqueries · filter early, join late.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which is not the steps of SQL Query processing?](../mcq-answers/database.md?plain=1#L268)
+- [Which one make data access from a database faster?](../mcq-answers/database.md?plain=1#L1591)
+- [Related records of the different relations can be stored on the same block using which file organization technique?](../mcq-answers/database.md?plain=1#L1613)
+- [Which of the following is correct for the Create index command?](../mcq-answers/database.md?plain=1#L1622)
+- [Database index speeds up-](../mcq-answers/database.md?plain=1#L1631)
+- [Which of the following index is automatically created by the database server when an object is created?](../mcq-answers/database.md?plain=1#L1640)
+- [Related records of the different relations can be stored on the same block using which file organization technique?](../mcq-answers/database.md?plain=1#L1649)
+
+
+---
+
+### Database Connectivity — JDBC, ODBC and Embedded SQL
+
+> An application written in Java, C# or PHP must somehow send SQL to a database engine. **Connectivity APIs are the standard bridge**, and they exist so that the application does not have to be rewritten for each database product.
+
+| API | Full form | For |
+|---|---|---|
+| ⭐ **ODBC** | ⭐ **Open DataBase Connectivity** | ⭐ **A LANGUAGE- and DBMS-INDEPENDENT standard API** (Microsoft, C-based) — the classic API used by an application to reach a database in a **two-tier architecture** |
+| ⭐ **JDBC** | **Java DataBase Connectivity** | The **Java** equivalent |
+| **ADO.NET** | ActiveX Data Objects | The .NET equivalent |
+| **OLE DB** | Object Linking and Embedding, Database | A Microsoft COM-based successor to ODBC |
+
+> ### **"The Application Program Interface in a TWO-TIER architecture DBMS is provided by…"** → ### ✅ **ODBC — Open Database Connectivity.**
+
+```mermaid
+flowchart LR
+    A["APPLICATION<br/>(Java / C / PHP)"] --> B["JDBC / ODBC API<br/>— a STANDARD set of calls"]
+    B --> C["DRIVER for the<br/>specific DBMS"]
+    C --> D["DATABASE SERVER<br/>Oracle · MySQL · SQL Server"]
+```
+
+**The standard connection sequence:** **load the driver → open a CONNECTION (server, user, password, database) → create a STATEMENT → execute the SQL and get a RESULT SET → process the rows → CLOSE the result set, statement and connection.**
+
+```java
+// JDBC — the classic JDBC-ODBC bridge driver (legacy, removed in Java 8+)
+Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+Connection con = DriverManager.getConnection("jdbc:odbc:mydsn", "user", "pass");
+Statement  st  = con.createStatement();
+ResultSet  rs  = st.executeQuery("SELECT name FROM Employee");
+while (rs.next()) System.out.println(rs.getString("name"));
+rs.close(); st.close(); con.close();
+```
+
+> ⚠️ **Note for modern work: the JDBC-ODBC bridge (`sun.jdbc.odbc.JdbcOdbcDriver`) was REMOVED in Java 8.** Real applications now use a **native JDBC driver** (`com.mysql.cj.jdbc.Driver`, `oracle.jdbc.OracleDriver`). The bridge still appears in exam papers, so know the string — but know that it is obsolete.
+
+#### Embedded SQL and the impedance mismatch
+
+> ### **EMBEDDED SQL means SQL statements HARD-CODED INSIDE a general-purpose programming language** such as C or Java, which a **precompiler** converts into ordinary function calls before the normal compiler runs.
+
+| | **Embedded SQL** | **Dynamic SQL (via JDBC/ODBC)** |
+|---|---|---|
+| **When the SQL is fixed** | **At COMPILE time** | **At RUN time** — built as a string |
+| **Checked by** | A **precompiler** | Only at execution |
+| **Performance** | Slightly better (pre-parsed) | Slightly worse |
+| **Flexibility** | ⚠️ Low | ✅ **High** |
+
+> ### ⭐ **THE IMPEDANCE MISMATCH — the "major challenge in mixing SQL with a general-purpose language".**
+>
+> **The problem:** SQL is **SET-oriented and declarative** — a query returns a **whole set of rows at once**, and its type system (relations, `NULL`, `VARCHAR`, `NUMBER`) does not correspond to the host language's. A language such as C or Java is **RECORD-at-a-time and procedural**, with its own types, objects and no native notion of a relation or of SQL `NULL`.
+>
+> **The consequences:** the two **DEFINITIONS OF DATA do not line up**, so every value must be converted; a set result must be consumed **one row at a time** (which is exactly what a **CURSOR** exists to do); and `NULL` has no clean equivalent in most host languages, requiring **indicator variables**.
+>
+> **How it is handled:** **cursors** to iterate a result set row by row · **host variables and indicator variables** for value and NULL transfer · and, in modern practice, ⭐ **ORM frameworks (Hibernate, Entity Framework, Django ORM)** that map tables to objects automatically.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Embedded SQL is which of the following?](../mcq-answers/database.md?plain=1#L1660)
+- [The Application program interface in a two-tier architecture DBMS is provided by-](../mcq-answers/database.md?plain=1#L1669)
+- [A major challenge in mixing SQL with a general-purpose language is mismatching in the](../mcq-answers/database.md?plain=1#L1678)
+- [Once connection is set up, program can send SQL commands to database by using](../mcq-answers/database.md?plain=1#L1687)
+- [In your program you want to use the JDBC-ODBC bridge drive. What code do you use?](../mcq-answers/database.md?plain=1#L1696)
+- [b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।](../mcq-answers/database.md?plain=1#L1570)
+
+
+---
+
+### Cursors, Views and Relational Algebra Operators
+
+#### Cursors
+
+> ### **A CURSOR is a database object that lets a program RETRIEVE AND PROCESS THE ROWS OF A RESULT SET ONE AT A TIME**, rather than all at once — it is the standard answer to the impedance mismatch.
+
+| Type | Description |
+|---|---|
+| **IMPLICIT cursor** | Created **automatically** by the DBMS for every single-row `SELECT INTO`, `INSERT`, `UPDATE`, `DELETE` |
+| **EXPLICIT cursor** | **Declared by the programmer** to process a multi-row query |
+
+**The four operations, in order:** ⭐ **DECLARE → OPEN → FETCH (repeatedly) → CLOSE.**
+
+```sql
+DECLARE
+   CURSOR emp_cur IS SELECT name, salary FROM Employee WHERE DeptID = 10;
+   v_name  Employee.name%TYPE;
+   v_sal   Employee.salary%TYPE;
+BEGIN
+   OPEN emp_cur;
+   LOOP
+      FETCH emp_cur INTO v_name, v_sal;
+      EXIT WHEN emp_cur%NOTFOUND;
+      DBMS_OUTPUT.PUT_LINE(v_name || ' earns ' || v_sal);
+   END LOOP;
+   CLOSE emp_cur;
+END;
+```
+
+> ⚠️ **What a COMMIT does to a cursor:** in Oracle, issuing a **`COMMIT` releases the locks and CLOSES the cursor** (unless it was declared `WITH HOLD`). ### **So the answer to "what does a COMMIT statement do to a CURSOR?" is ✅ it CLOSES the cursor** — which is why you must not commit inside a fetch loop without re-opening.
+
+**Useful PL/SQL facts that accompany this:** ⭐ **`DBMS_OUTPUT`** is the package used to **generate debugging output** from PL/SQL (`DBMS_OUTPUT.PUT_LINE`); **`UTL_FILE`** is the package for **file I/O** (its functions include `FOPEN`, `GET_LINE`, `PUT_LINE`, `FCLOSE` — note that it is **`FCLOSE`**, not `File_Close`).
+
+#### Views
+
+> ### **A VIEW is a VIRTUAL TABLE derived from the result of a stored query. It stores NO DATA of its own** — it is recomputed each time it is used.
+
+| Point | Detail |
+|---|---|
+| **Created with** | `CREATE VIEW view_name AS SELECT …` |
+| ⭐ **Recompiled with** | ⭐ **`ALTER VIEW`** |
+| **Dropped with** | `DROP VIEW` |
+| **Belongs to which level** | ⭐ **The EXTERNAL (view) level — it is NOT part of the logical/conceptual model**, which is exactly what an MCQ on this tests |
+| **Why used** | **Security** (expose only some columns/rows) · **simplification** of complex joins · **logical data independence** · consistent reusable business logic |
+| **Updatable?** | Only a **simple** view (single table, no aggregates, no `DISTINCT`, no `GROUP BY`) |
+| ⭐ **vs MATERIALIZED VIEW** | ⭐ **A materialized view PHYSICALLY STORES the result** and is refreshed periodically — used for **performance and for data REPLICATION**; an ordinary view stores nothing |
+
+#### Relational algebra operators
+
+> **Relational algebra is the formal, procedural language underlying SQL.** The optimiser converts every SQL query into a relational-algebra expression.
+
+| Operator | Symbol | Arity | Meaning |
+|---|---|---|---|
+| ⭐ **SELECT** | **σ** (sigma) | ⭐ **UNARY** | Chooses **ROWS** matching a condition (SQL `WHERE`) |
+| ⭐ **PROJECT** | **π** (pi) | ⭐ **UNARY** | Chooses **COLUMNS** (SQL `SELECT` list); removes duplicates |
+| ⭐ **RENAME** | **ρ** (rho) | ⭐ **UNARY** | Renames a relation or attribute |
+| ⭐ **UNION** | **∪** | ⭐ **BINARY** | All tuples in either relation |
+| ⭐ **SET DIFFERENCE** | ⭐ **−** | **BINARY** | ⭐ **Tuples that are in ONE relation but NOT in the other** |
+| **INTERSECTION** | **∩** | BINARY | Tuples in both |
+| **CARTESIAN PRODUCT** | **×** | BINARY | Every combination of rows |
+| **JOIN** | **⋈** | BINARY | Product followed by a selection |
+| **DIVISION** | **÷** | BINARY | "For all" queries |
+
+> ### **"Which one is NOT a unary operator in relational algebra?"** → ### ✅ **UNION** — it is **binary**, requiring two relations. *(The unary operators are **SELECT σ, PROJECT π and RENAME ρ**.)*
+>
+> ### **"The operation denoted by − that finds tuples in one relation but not in another"** → ### ✅ **SET DIFFERENCE.**
+>
+> ⚠️ **UNION, INTERSECTION and SET DIFFERENCE require the two relations to be UNION-COMPATIBLE** — the same number of attributes, with corresponding attributes drawn from the same domains.
+
+**Previous Year MCQ List from this Topic:**
+
+- [We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-](../mcq-answers/database.md?plain=1#L286)
+- [The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.](../mcq-answers/database.md?plain=1#L336)
+- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L415)
+- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L487)
+- [Which one is not unary operator in relational algebra?](../mcq-answers/database.md?plain=1#L1429)
+- [How can you generate debugging output from PL/SQL?](../mcq-answers/database.md?plain=1#L1485)
+- [What is GET_BLOCK property?](../mcq-answers/database.md?plain=1#L1494)
+- [Which is not the UTL_FILE function-](../mcq-answers/database.md?plain=1#L1503)
+- [What does a COMMIT statement do to a CURSOR?](../mcq-answers/database.md?plain=1#L1530)
