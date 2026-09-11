@@ -977,6 +977,11 @@ A **linker** is a system program that **combines one or more object files and th
 
 **Example:** `gcc main.o math.o -o program -lm` — the linker combines the two object files and the maths library into `program`.
 
+**Previous Year Question List from this Topic:**
+
+- [(b) What are the tasks of linker and loader? Describe briefly using examples.](../written-answers/compiler-and-toc.md?plain=1#L862)
+
+
 ### The Loader
 
 A **loader** is the part of the **operating system** that **brings an executable file from disk into main memory and prepares it for execution**.
@@ -1032,6 +1037,11 @@ int add(int a, int b) { return a + b; }
 | 3 | **Loader** | When you type `./program`, the OS loader allocates memory, copies the code and data into RAM, loads `libc.so`, sets the stack pointer and program counter, and **jumps to `main`** |
 
 > **If `math.c` were forgotten at step 2**, the linker would fail with **`undefined reference to 'add'`** — the classic **linker error**, which is neither a compile-time error (the syntax was fine) nor a run-time error (the program never got built).
+
+**Previous Year Question List from this Topic:**
+
+- [(b) What are the tasks of linker and loader? Describe briefly using examples.](../written-answers/compiler-and-toc.md?plain=1#L862)
+
 
 ## Compiler Design & Theory of Computation
 
