@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 11 theories
+**Table of Contents** — 7 subtopics · 12 theories
 
 1. **[HTML & Web Fundamentals](#html--web-fundamentals)**
    - [HTML — Structure, Elements and Tags](#html--structure-elements-and-tags)
@@ -14,6 +14,7 @@
 
 4. **[HTTP Protocol](#http-protocol)**
    - [HTTP — Methods, Status Codes and State](#http--methods-status-codes-and-state)
+   - [HTTP Versions — 1.0, 1.1, 2 and 3](#http-versions--10-11-2-and-3)
 
 5. **[Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest)**
    - [APIs, SOAP and REST](#apis-soap-and-rest)
@@ -1377,6 +1378,188 @@ Browser → Server:   Cookie: sessionId=abc123        ← sent with EVERY reques
 - [While browsing, internet browser stores some data in the computer. Which is called by?](../mcq-answers/web-technology.md?plain=1#L443)
 - [Which of the following statements is true regarding Cookies?](../mcq-answers/web-technology.md?plain=1#L461)
 
+
+
+---
+
+### HTTP Versions — 1.0, 1.1, 2 and 3
+
+#### Why there are versions at all
+
+**HTTP's methods and status codes have barely changed since 1996. Every version since has been about ONE problem: LATENCY.**
+
+A modern web page is not one file — it is a **base HTML file plus dozens of referenced objects** (images, CSS, JS, fonts), each with its own URL. The question every HTTP version tries to answer is: *how do you fetch 50 objects over a network with a 100 ms round trip without the page taking 5 seconds to load?*
+
+> **RTT (Round-Trip Time)** — the time for a small packet to travel from client to server **and back**. This is the unit every HTTP performance discussion is measured in. It is dominated by physical distance and cannot be optimised away — only the **number of round trips** can be reduced.
+
+---
+
+#### HTTP/1.0 — non-persistent connections
+
+> **Non-persistent HTTP: at most ONE object per TCP connection.** Fetch object → connection closes → open a brand-new TCP connection for the next object.
+
+The sequence for a single object:
+
+```
+1. Client opens TCP connection to server (port 80)   ──┐
+2. Server accepts                                      ├─ 1 RTT
+3. Client sends HTTP request                         ──┤
+4. Server sends response                               ├─ 1 RTT + transmission
+5. Server CLOSES the TCP connection
+```
+
+**The formula that gets asked:**
+
+> **Non-persistent HTTP response time (per object) = 2 × RTT + file transmission time**
+> - **1 RTT** to establish the TCP connection (the handshake)
+> - **1 RTT** for the HTTP request to go out and the first bytes of the response to come back
+> - plus the time to actually push the file's bytes onto the link
+
+**Worked example.** A page with 1 HTML file + 10 JPEG images, RTT = 100 ms:
+
+| | Connections | Round trips | Time (ignoring transmission) |
+|---|---|---|---|
+| Non-persistent | **11** | 11 × 2 = **22 RTT** | 22 × 100 ms = **2.2 seconds** |
+
+**Why this is bad:**
+- **2 RTTs per object** — the TCP handshake is paid over and over for the same server
+- **OS overhead for every TCP connection** (socket buffers, kernel state)
+- Browsers were forced to work around it by **opening many parallel TCP connections**, which is wasteful and aggressive toward the network
+
+---
+
+#### HTTP/1.1 — persistent connections and pipelining
+
+> **Persistent HTTP (also called "keep-alive"): the server leaves the TCP connection OPEN after sending a response.** All subsequent requests between the same client and that same server travel over the already-open connection.
+
+Two wins:
+
+1. **The TCP handshake is paid once, not per object.** The 1 RTT setup cost disappears for objects 2…n.
+2. **Pipelining** — the client sends the next request **as soon as it encounters a referenced object**, without waiting for the previous response. So all the requests can go out back-to-back.
+
+> Result: **as little as ONE RTT for all the referenced objects**, instead of 2 RTT each — which roughly **cuts response time in half** (and much more than half for pages with many objects).
+
+The same example, RTT = 100 ms:
+
+| | Connections | Round trips | Time |
+|---|---|---|---|
+| Non-persistent (1.0) | 11 | 22 RTT | 2.2 s |
+| **Persistent + pipelining (1.1)** | **1** | **~2 RTT** | **~0.2 s** |
+
+**But HTTP/1.1 introduced a new problem — HOL blocking.**
+
+> **Head-of-Line (HOL) blocking:** HTTP/1.1 requires the server to respond **in order** — **FCFS (First-Come-First-Served)**. If the client pipelines requests for one huge object and three small ones, and the huge one was requested first, **the three small objects must wait behind it**, even though they are ready and tiny.
+
+```
+HTTP/1.1  — client requests O1 (large video), then O2, O3, O4 (small)
+
+server sends:  [========== O1 (large) ==========][O2][O3][O4]
+                                                  ↑
+                        O2, O3, O4 sat idle this whole time
+```
+
+A second, related problem: **loss recovery stalls everything.** Because all objects share one TCP connection, a single lost TCP segment forces a retransmission, and **TCP's in-order delivery holds back every object behind it**.
+
+This is exactly why browsers **still** opened multiple parallel TCP connections under HTTP/1.1 — to get around HOL blocking.
+
+---
+
+#### HTTP/2 — framing, priority and server push
+
+> **HTTP/2 [RFC 7540, 2015].** Key goal: **decreased delay in multi-object HTTP requests.** It gives the **server increased flexibility in the order it sends objects**.
+
+**What did NOT change** (worth saying explicitly in an exam answer):
+
+> **Methods, status codes and most header fields are UNCHANGED from HTTP/1.1.** HTTP/2 is not a new protocol semantically — `GET`, `POST`, `200 OK`, `404` all mean exactly the same thing. Only the **wire format and scheduling** changed.
+
+**What changed:**
+
+| Feature | What it does |
+|---|---|
+| **Binary framing** | Objects are **divided into frames**; frames from different objects are **interleaved** on the wire |
+| **Client-specified priority** | Transmission order is based on **priority the client declares** — **not necessarily FCFS** |
+| **Server push** | Server can **send unrequested objects** to the client (e.g. push the CSS it knows the HTML will need) |
+| **Single TCP connection** | One connection per origin replaces the browser's parallel-connection hack |
+| **Header compression (HPACK)** | Repetitive headers sent once, then referenced — meaningful when every request repeats the same cookies and user-agent |
+
+**How framing kills HOL blocking:**
+
+```
+HTTP/2 — same request order (O1 large, then O2, O3, O4 small)
+         objects split into frames and interleaved
+
+server sends:  [O1][O2][O3][O4][O1][O1][O1][O1][O1]...
+                    ↑   ↑   ↑
+        O2, O3, O4 delivered QUICKLY; O1 only slightly delayed
+```
+
+> **The trade-off to state:** with FCFS in HTTP/1.1, small objects wait for the large one. With HTTP/2 framing, **the small objects arrive quickly and the large object finishes only slightly later** — a far better outcome for how a page actually renders.
+
+**The limitation HTTP/2 could NOT fix:**
+
+> Because HTTP/2 still runs over **a single TCP connection**, **recovery from packet loss still stalls ALL object transmissions.** HTTP/2 removed HOL blocking at the *application* layer, but **TCP-level HOL blocking remains** — TCP will not deliver byte *n+1* to the application until byte *n* arrives, no matter which object it belongs to.
+
+Also: **no security over a vanilla TCP connection** — encryption was not built in.
+
+---
+
+#### HTTP/3 — QUIC over UDP
+
+> **HTTP/3 abandons TCP and runs over UDP**, using a transport protocol called **QUIC**.
+
+That sounds alarming — UDP is unreliable. The resolution:
+
+> **QUIC re-implements reliability, but PER OBJECT (per stream) instead of per connection.** It adds **per-object error control and congestion control**, plus **more pipelining**, on top of UDP.
+
+| Problem in HTTP/2 | How HTTP/3 solves it |
+|---|---|
+| TCP-level HOL blocking — one lost segment stalls every object | Each object is an **independent stream**; a loss in one stream **does not block the others** |
+| No security by default | **Security is built in** — TLS 1.3 is mandatory, and the handshake is merged into the transport handshake |
+| Connection setup costs multiple RTTs (TCP + TLS separately) | QUIC combines them — often **1 RTT, or 0 RTT** on a resumed connection |
+
+**Port:** HTTP/3 uses **UDP port 443** (the same number as HTTPS, but UDP rather than TCP).
+
+---
+
+#### The comparison table
+
+**This is the answer to "difference between HTTP 1.1, 2 and 3".**
+
+| | **HTTP/1.0** | **HTTP/1.1** | **HTTP/2** | **HTTP/3** |
+|---|---|---|---|---|
+| **Year** | 1996 | 1997 | 2015 (RFC 7540) | 2022 (RFC 9114) |
+| **Transport** | TCP | TCP | TCP | **UDP (QUIC)** |
+| **Connection** | **Non-persistent** — 1 object per connection | **Persistent** (keep-alive) | Single connection, multiplexed | Single QUIC connection, independent streams |
+| **Format** | Text (ASCII) | Text (ASCII) | **Binary frames** | Binary frames |
+| **Objects at a time** | One | Pipelined but answered **in order (FCFS)** | **Interleaved frames**, any order | Interleaved, independent streams |
+| **App-layer HOL blocking** | N/A (one at a time) | **Yes — the main flaw** | **Solved** (framing) | Solved |
+| **Transport-layer HOL blocking** | Yes | Yes | **Still yes** (single TCP) | **Solved** (per-stream) |
+| **Priority** | None | None (FCFS) | **Client-specified** | Client-specified |
+| **Server push** | No | No | **Yes** | Yes (deprecated in practice) |
+| **Header compression** | No | No | **Yes (HPACK)** | Yes (QPACK) |
+| **Encryption** | Optional | Optional | Optional (in practice always TLS) | **Mandatory (TLS 1.3)** |
+| **Methods / status codes** | — | — | **Unchanged from 1.1** | **Unchanged from 1.1** |
+
+---
+
+#### Exam-focused summary
+
+> **If you only remember one line per version:**
+> - **HTTP/1.0** — a new TCP connection for every single object. **2 RTT per object.**
+> - **HTTP/1.1** — **keep the connection open** and pipeline requests, but the server must answer **in order**, so **HOL blocking**.
+> - **HTTP/2** — **split objects into frames and interleave them** over one connection, with client priority and server push. Fixes application-layer HOL, but **TCP loss still stalls everything**.
+> - **HTTP/3** — move to **UDP/QUIC** with **per-object reliability**, so one lost packet no longer blocks other objects, and **security is built in**.
+
+**The one-sentence thread through all four:** *each version reduces the number of round trips and removes one more source of blocking — first the repeated handshake, then in-order responses, then TCP's in-order delivery.*
+
+**A caution about this topic**
+
+> No previous-year question in this bank asks about HTTP/2 or HTTP/3 — every HTTP question so far is about **HTTP vs HTTPS, port numbers, full forms, status codes, GET vs POST, and cookies**. This is a **new-pattern topic**: HTTP/2 dates from 2015 and HTTP/3 from 2022, and syllabi have only recently caught up. Prepare it from theory, and expect it as a **difference/comparison question** if it appears at all.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embedded image which also resides at S. Assuming no web c…](../mcq-answers/web-technology.md?plain=1#L62)
+- [When a web browser interacts with a web server, the following actions take place?](../mcq-answers/web-technology.md?plain=1#L89)
 
 
 ---
