@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 2 subtopics · 9 theories
+**Table of Contents** — 4 subtopics · 13 theories
 
 1. **[Subnetting & IP Addressing](#subnetting--ip-addressing)**
    - [IPv4 Addressing — Structure and Classes](#ipv4-addressing--structure-and-classes)
@@ -13,6 +13,14 @@
    - [The TCP/IP Model](#the-tcpip-model)
    - [OSI vs TCP/IP — Comparison](#osi-vs-tcpip--comparison)
    - [Layer-by-Layer Protocol and Device Reference](#layer-by-layer-protocol-and-device-reference)
+
+3. **[Networking Fundamentals & Terminology](#networking-fundamentals--terminology)**
+   - [Computer Network — Definition, Types and Benefits](#computer-network--definition-types-and-benefits)
+   - [Core Networking Terminology](#core-networking-terminology)
+
+4. **[Networking Devices](#networking-devices)**
+   - [Hub, Switch, Router, Bridge, Repeater and Gateway](#hub-switch-router-bridge-repeater-and-gateway)
+   - [Collision Domains and Broadcast Domains](#collision-domains-and-broadcast-domains)
 
 <!-- TOC END -->
 
@@ -919,3 +927,592 @@ This single table answers the many "which protocol/device works at which layer" 
 - [What is PDU?](../written-answers/computer-networks.md?plain=1#L3152)
 - [Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None](../written-answers/computer-networks.md?plain=1#L3227)
 - [Name OSI layer that transmitted bit stream to frames.](../written-answers/computer-networks.md?plain=1#L3617)
+
+## Networking Fundamentals & Terminology
+
+### Computer Network — Definition, Types and Benefits
+
+#### What is a computer network?
+
+A **computer network** is a **collection of two or more computing devices connected together by a communication medium, so that they can EXCHANGE DATA and SHARE RESOURCES.**
+
+**The three things every network needs:** **nodes** (the devices), a **transmission medium** (cable, fibre, radio), and **protocols** (the agreed rules of communication).
+
+#### How a network works — the simple version
+
+```mermaid
+flowchart LR
+    A["Sender application<br/>creates data"] --> B["Data is broken into PACKETS<br/>and given addresses"]
+    B --> C["Packets travel through switches<br/>and routers, each choosing<br/>the next hop"]
+    C --> D["Packets arrive — possibly out of<br/>order and by different routes"]
+    D --> E["They are REASSEMBLED in order<br/>and any lost ones are re-requested"]
+    E --> F["The receiving application<br/>gets the original data"]
+```
+
+#### Types of network by geographical area
+
+| Type | Full form | Coverage | Speed | Ownership | Example |
+|---|---|---|---|---|---|
+| **PAN** | Personal Area Network | **~10 metres** | Low | Individual | **Bluetooth**, a phone tethering a laptop, a smartwatch |
+| **LAN** | **Local Area Network** | **A room, building or campus (up to ~1 km)** | **Very high (100 Mbps – 10 Gbps)** | **Private** | An office, a school computer lab, a home Wi-Fi |
+| **CAN** | Campus Area Network | Several buildings on one campus (1–5 km) | High | Private | A university network |
+| **MAN** | **Metropolitan Area Network** | **A city (5 – 50 km)** | High | Private or public | A city's cable TV network, a bank's branches across Dhaka |
+| **WAN** | **Wide Area Network** | **A country or the world** | Lower per link, higher latency | Usually **leased from a carrier** | **The Internet**, a bank's national branch network |
+| **SAN** | Storage Area Network | A data centre | Very high | Private | A block-storage network |
+| **VPN** | Virtual Private Network | Logical, over any distance | Depends on the link | Logical | Secure remote access |
+| **WLAN** | Wireless LAN | Same as LAN, wireless | High | Private | **Wi-Fi** |
+
+> **The classic scenario question:** *"A company has two branches **in the same city** which are connected — what type of network is this?"* → **A MAN (Metropolitan Area Network)**, because the connection spans a city. *(If the two branches were in different cities or countries, it would be a **WAN**; within a single building it would be a **LAN**.)*
+
+#### Types of network by architecture
+
+| Type | Description | Advantages | Disadvantages |
+|---|---|---|---|
+| **Client-Server** | Dedicated **servers** provide services to **client** machines | **Centralised control**, security, backup and administration; scalable | Expensive; the server is a **single point of failure** |
+| **Peer-to-Peer (P2P)** | Every computer is **both client and server**; no central authority | **Cheap**, simple, no dedicated server needed, resilient | **Poor security and backup**, hard to manage beyond ~10 machines |
+
+#### Advantages of a computer network
+
+1. **Resource sharing** — printers, scanners, storage and internet connections.
+2. **Data sharing and centralised data** — one authoritative copy.
+3. **Communication** — email, chat, video conferencing, VoIP.
+4. **Cost saving** — one printer for 50 users instead of 50 printers.
+5. **Centralised administration, backup and software updates**.
+6. **Reliability** — files are replicated; if one machine fails, work continues elsewhere.
+7. **Scalability** — new users and devices are easily added.
+8. **Remote access** and support.
+9. **Collaboration** on shared documents and applications.
+10. **Improved storage efficiency**.
+
+#### Disadvantages
+
+1. **Security risk** — one entry point can expose everything; malware spreads rapidly.
+2. **Cost of setup** — cabling, switches, routers, servers.
+3. **Requires skilled administrators**.
+4. **Single point of failure** — if the server or the main link fails, everyone stops.
+5. **Maintenance and continuous management**.
+6. **Virus/worm propagation** across the whole network.
+7. **Loss of independence** — users depend on the network's availability.
+8. **Privacy concerns** — activity can be monitored.
+
+#### Networking vs Internetworking
+
+| Point | **Networking** | **Internetworking** |
+|---|---|---|
+| **Meaning** | Connecting devices **within ONE network** | Connecting **MULTIPLE separate networks** together |
+| **Devices used** | Hub, switch, NIC, cable | **ROUTER, gateway** |
+| **Addressing** | **MAC addresses** suffice | **IP addresses** are essential |
+| **Scope** | A single LAN | A network of networks — **the Internet is the largest example** |
+| **Layer** | Mainly Layer 2 | **Layer 3** |
+
+#### Internet, Intranet and Extranet
+
+| Point | **Internet** | **Intranet** | **Extranet** |
+|---|---|---|---|
+| **Definition** | The **global public network** of networks | A **PRIVATE network inside ONE organisation**, using Internet technology | An intranet **extended to selected outsiders** |
+| **Users** | **Everyone** worldwide | **Employees only** | Employees **+ suppliers, partners, selected customers** |
+| **Access** | Open, public | Restricted — login required, usually only from inside | Restricted — login + **VPN**, from outside too |
+| **Security** | Least | **Most** | Medium |
+| **Content** | Public information | Internal policies, HR portal, payroll, internal directory | Shared project data, supplier portals, partner ordering systems |
+| **Number of users** | Billions | Limited to the organisation | Limited to the organisation + approved partners |
+| **Managed by** | No single authority | The **organisation's IT department** | The organisation, with partner agreements |
+| **Example** | google.com | A bank's internal HR and circular portal | A bank's portal for its insurance partner; a supplier ordering system |
+
+#### Public vs Private network
+
+| Point | **Public network** | **Private network** |
+|---|---|---|
+| **Access** | Open to **anyone** | Restricted to **authorised users** |
+| **IP addresses** | **Public, globally routable** | **Private (RFC 1918)** — 10.x, 172.16–31.x, 192.168.x |
+| **Security** | Low — must assume it is hostile | High — controlled |
+| **Ownership** | ISPs and carriers | The organisation |
+| **Cost** | Cheap/free to use | Expensive to build |
+| **Example** | The Internet, café and airport Wi-Fi | A company LAN, a home network, a bank's WAN |
+
+#### A brief history of the Internet
+
+| Year | Event |
+|---|---|
+| **1969** | **ARPANET** — the first packet-switched network, linking four US universities |
+| 1971 | **Email** invented by Ray Tomlinson |
+| 1973 | **Ethernet** invented by Robert Metcalfe |
+| 1974 | **TCP/IP** designed by **Vinton Cerf and Robert Kahn** |
+| **1983** | **1 January — ARPANET switches to TCP/IP.** This is the conventional **birthday of the Internet** |
+| 1984 | **DNS** introduced |
+| **1989–91** | **Tim Berners-Lee** invents the **World Wide Web** at CERN; the first website goes live in 1991 |
+| 1993 | **Mosaic**, the first popular graphical browser |
+| 1998 | Google founded |
+| **1996** | **Internet reaches Bangladesh** via VSAT |
+| **2006** | Bangladesh connects to the **SEA-ME-WE-4 submarine cable** |
+| 2017 | **SEA-ME-WE-5**; 2024 onward, SEA-ME-WE-6 |
+
+**How to access the Internet:** through an **ISP**, using **broadband (fibre/FTTH, DSL, cable)**, **mobile data (3G/4G/5G)**, **Wi-Fi**, **WiMAX**, **leased line**, **VSAT/satellite** (including Starlink), or **dial-up** (obsolete).
+
+**Previous Year Question List from this Topic:**
+
+- [Define Computer Network. Describe different types of Computer Networks.](../written-answers/computer-networks.md?plain=1#L3812)
+- [Define networking and Internetworking. What are the different types of network? Explain in details.](../written-answers/computer-networks.md?plain=1#L3891)
+- [What is computer network?](../written-answers/computer-networks.md?plain=1#L3939)
+- [How to works networks?](../written-answers/computer-networks.md?plain=1#L3966)
+- [If you have a company of two branch in the same city and they are connected. Which connection is used between then? (a) LAN (b) MAN (c) WAN (d) NONE](../written-answers/computer-networks.md?plain=1#L4011)
+- [(i) Computer network কী? বিভিন্ন প্রকার Computer network সম্পর্কে আলোচনা করুন।](../written-answers/computer-networks.md?plain=1#L4084)
+- [(a) Write a brief history of the internet. How to access to the internet?](../written-answers/computer-networks.md?plain=1#L4145)
+- [(b) Define computer network. Sate some merits and demerits of a computer network.](../written-answers/computer-networks.md?plain=1#L4187)
+- [(খ) Public and Private Network-এর মধ্যে পার্থক্য লিখুন? IP address কী?](../written-answers/computer-networks.md?plain=1#L4232)
+- [What is an access network? Briefly describe the available access network.](../written-answers/computer-networks.md?plain=1#L4303)
+- [Differentiate between Intranet and Extranet.](../written-answers/computer-networks.md?plain=1#L4354)
+- [a) Briefly discuss what a computer network means.](../written-answers/computer-networks.md?plain=1#L4373)
+
+
+---
+
+### Core Networking Terminology
+
+#### Basic terms
+
+| Term | Definition |
+|---|---|
+| **Node** | **Any device connected to a network** that can send, receive or forward data — a computer, printer, router, switch, phone or server. Every device on a network is a node |
+| **Host** | A node that **runs applications** and is an **end point** of communication (a PC or server) — every host is a node, but not every node (a switch) is a host |
+| **Link** | The **physical or logical connection** between two nodes — a cable, a fibre strand, or a radio channel |
+| **Protocol** | The **set of rules** governing communication — syntax, semantics and timing |
+| **Backbone** | The **high-capacity central part of a network** that carries aggregated traffic between major segments. It is the "main road" that all the side streets feed into. Usually built from fibre and the fastest available links |
+| **Topology** | The **arrangement** of nodes and links — bus, star, ring, mesh, tree, hybrid |
+| **Bandwidth** | The **maximum data-carrying CAPACITY** of a link, in **bits per second (bps, Mbps, Gbps)** — "the width of the pipe" |
+| **Throughput** | The **ACTUAL data rate achieved** in practice, always **less than the bandwidth** because of overhead, congestion and errors |
+| **Latency / Delay** | The **time taken** for data to travel from source to destination, in **milliseconds** |
+| **Jitter** | The **variation** in latency between successive packets — critical for voice and video |
+| **Packet** | A formatted unit of data carried by the network |
+| **Gateway** | A device that **connects two networks using DIFFERENT protocols**, translating between them |
+| **Domain** | A named administrative grouping — either a **DNS domain** (`bank.com.bd`) or a **Windows domain** (a security boundary managed by Active Directory) |
+| **Broadcast** | Sending a message to **ALL devices** on a network segment — **one to all** |
+| **Multicast** | Sending to a **SPECIFIC GROUP** of interested devices — **one to many** |
+| **Unicast** | Sending to **one specific device** — **one to one** |
+| **Anycast** | Sending to the **nearest** of several devices sharing one address |
+
+```mermaid
+flowchart LR
+    subgraph U["UNICAST — one to one"]
+        US["Sender"] --> UR1["Receiver"]
+    end
+    subgraph B["BROADCAST — one to ALL"]
+        BS["Sender"] --> BR1["A"]
+        BS --> BR2["B"]
+        BS --> BR3["C"]
+        BS --> BR4["D"]
+    end
+    subgraph M["MULTICAST — one to a GROUP"]
+        MS["Sender"] --> MR1["A ✅ in group"]
+        MS --> MR2["C ✅ in group"]
+        MR3["B ❌ not in group"]
+        MR4["D ❌ not in group"]
+    end
+```
+
+#### Delays in a network
+
+> **Total delay = Transmission delay + Propagation delay + Queuing delay + Processing delay**
+
+| Delay | Definition | Formula | Depends on |
+|---|---|---|---|
+| **Transmission delay** | The time to **PUSH ALL THE BITS of a packet onto the link** | **= Packet size (bits) ÷ Bandwidth (bps)** | **Packet size and link bandwidth** — NOT distance |
+| **Propagation delay** | The time for **ONE BIT to TRAVEL** from sender to receiver across the medium | **= Distance ÷ Propagation speed** (≈ 2 × 10⁸ m/s in copper/fibre) | **DISTANCE and the medium** — NOT bandwidth or packet size |
+| **Queuing delay** | Time spent **waiting in a router's buffer** | Variable | **Congestion** |
+| **Processing delay** | Time for a router to examine the header and decide the route | Usually microseconds | Router speed |
+
+> **The crucial distinction to state in the exam:**
+> **Transmission delay depends on the SIZE of the packet and the SPEED of the link, but NOT on distance.**
+> **Propagation delay depends on the DISTANCE and the medium, but NOT on the packet size or the bandwidth.**
+>
+> **Worked example:** sending a **1,000-byte** packet over a **1 Mbps** link across **200 km**:
+> - Transmission delay = (1000 × 8 bits) ÷ (1 × 10⁶ bps) = 8000/10⁶ = **8 ms**
+> - Propagation delay = 200,000 m ÷ (2 × 10⁸ m/s) = **1 ms**
+> - Total ≈ **9 ms** (ignoring queuing and processing)
+
+#### Factors affecting network performance
+
+| Factor | Effect |
+|---|---|
+| **Bandwidth** | The ceiling on how much data can flow |
+| **Latency** | Delay; critical for interactive applications |
+| **Number of users / traffic load** | **Congestion** — the single biggest practical factor |
+| **Transmission medium** | Fibre ≫ UTP ≫ wireless in speed and reliability |
+| **Network devices** | A cheap hub or an overloaded router becomes the bottleneck |
+| **Topology and design** | Poor design creates unnecessary hops and bottlenecks |
+| **Protocol overhead** | Headers, acknowledgements and retransmissions consume capacity |
+| **Errors and packet loss** | Cause retransmission, which multiplies the load |
+| **Distance** | Increases propagation delay and attenuation |
+| **Interference and noise** | Especially on wireless — walls, microwaves, other networks |
+| **Server/host performance** | CPU, RAM and disk of the endpoints |
+| **Security processing** | Encryption, firewall inspection and deep packet inspection add latency |
+| **Collisions** (on shared media) | Wasted bandwidth; solved by switching |
+| **Broadcast traffic** | Consumes bandwidth on every host; solved by VLANs/subnetting |
+| **QoS configuration** | Determines which traffic gets priority |
+
+#### Address types — a summary
+
+| Address | Layer | Length | Identifies | Assigned by |
+|---|---|---|---|---|
+| **Physical / MAC address** | 2 | **48 bits** | **The network interface card** | Manufacturer |
+| **Logical / IP address** | 3 | **32 bits** (IPv4) | **The host on a network** | Administrator or DHCP |
+| **Port number** | 4 | **16 bits (0–65535)** | **The specific APPLICATION/process** on the host | The application / OS |
+| **Specific / Application address** | 7 | Variable | The user or resource — an **email address, URL** | The service |
+
+> **The four together answer four questions:** the MAC says *which machine on this wire*; the IP says *which machine on the Internet*; the port says *which program on that machine*; the URL or email address says *which resource or person*.
+
+#### Connection-oriented vs connectionless
+
+| Point | **Connection-oriented** | **Connectionless** |
+|---|---|---|
+| **Connection setup** | ✅ Required first (**handshake**) | ❌ None — just send |
+| **Reliability** | ✅ Guaranteed — acknowledgements and retransmission | ❌ Best-effort |
+| **Ordering** | ✅ Preserved | ❌ May arrive out of order |
+| **Speed** | Slower | **Faster** |
+| **Overhead** | High | **Low** |
+| **Protocol** | **TCP** | **UDP, IP** |
+| **Analogy** | A **telephone call** | A **postcard** |
+
+#### Other terms
+
+| Term | Definition |
+|---|---|
+| **Web server** | A computer and software (**Apache, Nginx, IIS**) that **stores web pages and delivers them over HTTP/HTTPS** in response to browser requests |
+| **ISP** | **Internet Service Provider** — an organisation that **provides Internet access** and related services to customers (in Bangladesh: Grameenphone, Link3, Amber IT, BTCL) |
+| **Search engine** | A system (**Google, Bing, DuckDuckGo**) that **crawls, indexes and ranks web pages** so users can find information by keyword |
+| **WWW** | **World Wide Web** — the system of interlinked **hypertext documents** accessed over the Internet. The Web is an **application that runs ON the Internet**; the Internet is the underlying network |
+| **URL** | **Uniform Resource Locator** — the complete address of a web resource: `https://www.bank.com.bd:443/account/login?id=5` = **protocol** + **domain** + **port** + **path** + **query** |
+| **Interface protocol** | The set of rules governing communication **across the boundary between two layers or two systems** — how one layer requests service from the layer below, or how two different networks exchange data |
+| **Access network** | The part of the network that **connects the end user to the ISP's core network** — the "last mile". Types: **DSL/ADSL** over telephone lines, **cable (HFC)**, **fibre (FTTH/GPON)**, **Ethernet LAN**, **wireless (Wi-Fi, WiMAX)**, **mobile (3G/4G/5G)**, **satellite/VSAT**, and **leased line** |
+| **SDN** | **Software-Defined Networking** — an architecture that **SEPARATES the network's CONTROL PLANE from its DATA PLANE**, centralising all routing and policy decisions in a programmable **SDN controller**, while the switches become simple forwarding devices. Benefits: **central programmable control**, rapid reconfiguration, vendor independence, automation and better utilisation. Protocol: **OpenFlow** |
+
+#### Designing a small office network
+
+> *"To set up a network among the computers of your office, which type of network and which features would you prefer? Justify."*
+
+**Recommended: a wired + wireless LAN in a star topology with a client-server architecture.**
+
+| Decision | Choice | Justification |
+|---|---|---|
+| **Network type** | **LAN** | All computers are in one building |
+| **Topology** | **STAR** (all devices to a central switch) | Easy to install and extend; **one cable failure affects only one machine**; simple to troubleshoot; the industry standard |
+| **Architecture** | **Client-Server** (for >10 users) | Centralised **security, backup, user accounts and file storage** |
+| **Medium** | **Cat6 UTP** for desktops, **Wi-Fi 6** for laptops and phones, **fibre** for any backbone run | Cat6 gives gigabit speed cheaply; fibre for distance |
+| **Devices** | **Managed switch** (with VLAN support), **router/firewall**, **wireless access points**, **UPS** | Managed switches allow VLANs and monitoring |
+| **Addressing** | **Private IPs via DHCP**, with **static IPs for servers and printers** | Automatic, conflict-free, easy to manage |
+| **Segmentation** | **VLANs** per department + a separate **guest Wi-Fi VLAN** | Contains broadcast traffic and isolates guests |
+| **Security** | **Firewall, WPA3, antivirus, strong passwords, backups** | Essential minimum |
+| **Redundancy** | **UPS**, a spare switch, and daily backups | Business continuity |
+
+> *"If the office needs a network for INTERNET USE ONLY, what steps?"*
+> 1. Choose an **ISP** and a suitable **bandwidth plan** (estimate ~1–2 Mbps per concurrent user).
+> 2. Get the ISP to terminate the connection on a **router/modem**.
+> 3. Connect the router to a **switch**, and the switch to the computers with **Cat6 cable**; add **Wi-Fi access points** for mobile devices.
+> 4. Configure the router: **WAN settings from the ISP**, **NAT**, **DHCP** to hand out private addresses, and **DNS**.
+> 5. Secure it: change the **default router password**, enable **WPA3** on Wi-Fi, enable the **firewall**, and create a **separate guest network**.
+> 6. Test connectivity from each device (`ping`, browse), and set up **bandwidth monitoring**.
+> 7. Add a **UPS** so the router and switch survive power cuts.
+
+#### Useful troubleshooting commands
+
+| Command | Purpose |
+|---|---|
+| **`ping <host>`** | **Check basic connectivity** and measure round-trip time — the first test of any problem |
+| **`ping 127.0.0.1`** | Test the **local TCP/IP stack** (the loopback) — if this fails, the problem is the machine itself |
+| **`ipconfig`** (Windows) / **`ifconfig`** or **`ip addr`** (Linux) | Show **IP address, subnet mask and gateway** of each interface |
+| `ipconfig /all` | Full detail including **MAC address and DNS servers** |
+| `ipconfig /release` and `/renew` | Release and request a new DHCP lease |
+| `ipconfig /flushdns` | Clear the **DNS cache** |
+| **`tracert`** (Windows) / **`traceroute`** (Linux) | **Show every router hop** along the path and where the delay or failure occurs |
+| **`nslookup`** / **`dig`** | **Test DNS resolution** |
+| **`netstat -an`** | Show **active connections and listening ports** |
+| **`arp -a`** | Show the **ARP cache** (IP-to-MAC mappings) |
+| `route print` / `ip route` | Show the **routing table** |
+| `telnet <host> <port>` / `nc -zv` | Test whether a **specific port** is open |
+| `getmac` / `ip link` | Show the **MAC address** |
+
+> **"Which command checks whether the LAN is connected?"** → **`ping`** the default gateway (e.g. `ping 192.168.1.1`). A reply confirms Layer 1–3 connectivity to the gateway. Combine with **`ipconfig`/`ifconfig`** to confirm an IP address has been obtained — if the address starts with **169.254.x.x (APIPA)**, the machine has **failed to reach the DHCP server**, which itself points to a cable, switch or DHCP problem.
+
+**Previous Year Question List from this Topic:**
+
+- [(ক) IP address এবং MAC Address- এর মাঝে তুলনা করুন।](../written-answers/computer-networks.md?plain=1#L3834)
+- [(ক) সংজ্ঞা লিখুন: (i) Propagation delay, (ii) Transmission delay.](../written-answers/computer-networks.md?plain=1#L3854)
+- [Write short note: Network, Protocol, link, gateway, Node.](../written-answers/computer-networks.md?plain=1#L3872)
+- [(b) Define following terms: (i) Bandwidth (ii) Latency (iii) MAC Address (iv) IP address](../written-answers/computer-networks.md?plain=1#L3882)
+- [Write short note: (i) web server (ii) ISP (iii) Router (iv) Search Engine](../written-answers/computer-networks.md?plain=1#L3911)
+- [What is Interface protocol?](../written-answers/computer-networks.md?plain=1#L3920)
+- [(ক) সংজ্ঞা লিখুন: WWW, URL, HTTP, IP Address, Router.](../written-answers/computer-networks.md?plain=1#L3929)
+- [What is SDN?](../written-answers/computer-networks.md?plain=1#L3949)
+- [(খ) Address গুলির সংক্ষিপ্ত বর্ণনা দিন। (i) Port Number (ii) IP অ্যাড্রেস (iii) MAC অ্যাড্রেস।](../written-answers/computer-networks.md?plain=1#L3982)
+- [(i) নিচের MAC Address গুলো কোন ধরনের বের করুন। (a) 4C:23:10:4A:1A:2A (b) 45:24:56:2B:24:12 (c) FF:FF:FF:FF:FF:FF](../written-answers/computer-networks.md?plain=1#L3996)
+- [Short Question: a) What are the protocol for connectionless and connection oriented? b) Why UTP cable are twisted? c) What are the main requirement of optical f…](../written-answers/computer-networks.md?plain=1#L4019)
+- [Name of the Following figure:](../written-answers/computer-networks.md?plain=1#L4060)
+- [What is difference between MAC Address and IP Address?](../written-answers/computer-networks.md?plain=1#L4102)
+- [(b) List the factors that affect the performance of a network.](../written-answers/computer-networks.md?plain=1#L4126)
+- [b) Two IP address map to same Ethernet address. Will both of them receive packets?](../written-answers/computer-networks.md?plain=1#L4212)
+- [Write short note: Node, Backbone, Router and Gateway.](../written-answers/computer-networks.md?plain=1#L4222)
+- [What is MAC address?](../written-answers/computer-networks.md?plain=1#L4257)
+- [(a) To setup a network among the computers of your office which type of network and network features will you prefer? Justify your choice?](../written-answers/computer-networks.md?plain=1#L4269)
+- [(b) Suppose, your office needs to setup a network which can uses for internet purpose only? What will be your steps to setup that network in terms of:](../written-answers/computer-networks.md?plain=1#L4288)
+- [Explain the terms Domains, Bandwidth, Broadcast and Multicast.](../written-answers/computer-networks.md?plain=1#L4326)
+
+
+---
+
+## Networking Devices
+
+### Hub, Switch, Router, Bridge, Repeater and Gateway
+
+#### The six devices at a glance
+
+| Device | **OSI Layer** | Forwards based on | Ports | Collision domains | Broadcast domains |
+|---|---|---|---|---|---|
+| **Repeater** | **1 Physical** | Nothing — it **regenerates the signal** | 2 | **1** (shared) | 1 |
+| **Hub** | **1 Physical** | Nothing — **broadcasts to all ports** | Many | **1** (ALL ports share one) | 1 |
+| **Bridge** | **2 Data Link** | **MAC address** | 2–4 | **One per port** | 1 |
+| **Switch** | **2 Data Link** | **MAC address** | Many (8–48+) | **One per PORT** | **1** (or one per **VLAN**) |
+| **Router** | **3 Network** | **IP address** | Few | One per port | **One per PORT** |
+| **Gateway** | **All layers (up to 7)** | **Protocol translation** | Varies | — | — |
+
+#### 1. Repeater
+
+A **repeater** is a **two-port Layer 1 device that receives a weakened (attenuated) signal, REGENERATES and amplifies it, and retransmits it** — extending the maximum distance a signal can travel.
+
+It has **no intelligence at all**: it does not read addresses, does not filter, and simply reproduces everything including noise and collisions.
+
+#### 2. Hub
+
+A **hub** is a **multi-port repeater**. When a frame arrives on one port, the hub **broadcasts it out of EVERY other port**, regardless of the destination.
+
+**Consequences:** all ports share **ONE collision domain**, so only one device may transmit at a time (**half duplex**); **collisions are frequent** and worsen rapidly as devices are added; and because every frame reaches every port, **anyone can sniff all traffic**. **Hubs are obsolete** and have been entirely replaced by switches.
+
+#### 3. Bridge
+
+A **bridge** is a **Layer 2 device that connects two LAN segments and filters traffic between them using MAC addresses**. It learns which MAC addresses are on each side and **only forwards a frame across if the destination is on the other segment**.
+
+It **divides collision domains** (one per port) but **not broadcast domains**. A **switch is essentially a multi-port bridge implemented in hardware**, which is why bridges are rarely seen today.
+
+#### 4. Switch
+
+A **switch** is a **multi-port Layer 2 device that forwards frames INTELLIGENTLY, sending each frame only to the specific port where the destination MAC address lives.**
+
+**How it works:**
+1. **Learning** — it reads the **source MAC** of every incoming frame and records it against the port in its **MAC address table (CAM table)**.
+2. **Forwarding** — for a known destination MAC, it sends the frame **only out of that one port** (unicast).
+3. **Flooding** — for an **unknown** destination, or for a **broadcast/multicast**, it sends the frame out of all ports except the one it arrived on.
+4. **Filtering** — if the source and destination are on the same port, it discards the frame.
+5. **Aging** — entries are removed after a timeout.
+
+**Key properties:** **each port is its own collision domain** → **no collisions**, **full duplex**, and **full bandwidth per port** (a 24-port gigabit switch gives each device its own gigabit, not a shared one). It also provides **security** — a device sees only its own traffic — and supports **VLANs**, which split the single broadcast domain into several.
+
+**Types:** **unmanaged** (plug and play), **managed** (VLANs, QoS, monitoring, SNMP), **Layer 3 switch** (a switch that also routes between VLANs at wire speed), and **PoE switch** (supplies power over the data cable to phones, cameras and access points).
+
+#### 5. Router
+
+A **router** is a **Layer 3 device that connects DIFFERENT networks and forwards packets between them, choosing the best path using IP addresses and a routing table.**
+
+**Functions:**
+1. **Path determination** — consult the routing table and choose the best next hop.
+2. **Packet forwarding** between different networks.
+3. **Logical (IP) addressing** — it is the boundary between IP networks.
+4. **BLOCKS BROADCASTS** — this is its most important characteristic: a router **does not forward broadcasts**, so it **separates broadcast domains**.
+5. **NAT** — translates private addresses to public.
+6. **DHCP server** and **DNS forwarder** (in small routers).
+7. **Firewall / ACL filtering**.
+8. **Connecting LAN to WAN / the Internet**.
+9. **Protocol conversion** between different Layer 2 technologies (Ethernet ↔ PPP).
+
+#### 6. Gateway
+
+A **gateway** is a device (or software) that **connects two networks that use DIFFERENT protocols or architectures, and TRANSLATES between them.** It can operate at **any layer, up to and including Layer 7**, and is the most "intelligent" of these devices.
+
+**Examples:** an **email gateway** converting between SMTP and a proprietary mail system; a **VoIP gateway** connecting an IP network to the traditional telephone network (PSTN); an **IoT gateway** converting Zigbee/LoRa to TCP/IP; a **payment gateway**; and the **default gateway** — the router your host sends all non-local traffic to.
+
+#### The two most-asked comparisons
+
+**Switch vs Router**
+
+| Point | **Switch** | **Router** |
+|---|---|---|
+| **OSI Layer** | **2 — Data Link** (L3 switches also do Layer 3) | **3 — Network** |
+| **Forwards using** | **MAC address** | **IP address** |
+| **Table used** | **MAC address / CAM table** | **Routing table** |
+| **Connects** | Devices **WITHIN one network (LAN)** | **DIFFERENT networks** — LAN to LAN, LAN to WAN |
+| **Broadcast domain** | **ONE** for the whole switch (unless VLANs are used) | **One per interface — it BLOCKS broadcasts** |
+| **Collision domain** | **One per port** | One per port |
+| **Port count** | **Many** (24, 48) | **Few** (2–8) |
+| **Speed** | **Faster** — hardware ASIC switching | Slower — more processing per packet |
+| **Assigns IP addresses / NAT** | ❌ No | ✅ **Yes** |
+| **Can connect to the Internet** | ❌ No | ✅ **Yes** |
+| **Primary purpose** | **Efficient delivery inside a LAN** | **Path selection between networks** |
+| **Price** | Cheaper per port | More expensive |
+
+> **The two key differences to state:** (1) a switch forwards on **MAC addresses within a single network**, while a router forwards on **IP addresses between different networks**; and (2) a switch **passes broadcasts** (it is one broadcast domain), while a router **stops broadcasts** (each interface is a separate broadcast domain).
+
+**Hub vs Switch vs Router**
+
+| Point | **Hub** | **Switch** | **Router** |
+|---|---|---|---|
+| **Layer** | **1 Physical** | **2 Data Link** | **3 Network** |
+| **Intelligence** | **None** | Medium — learns MACs | **Highest** — routing decisions |
+| **Forwarding** | **Broadcasts to ALL ports** | **Only to the correct port** | Best path to another network |
+| **Address used** | None | **MAC** | **IP** |
+| **Collision domains** | **1 (shared)** | **One per port** | One per port |
+| **Broadcast domains** | 1 | 1 (or one per VLAN) | **One per port** |
+| **Duplex** | **Half** | **Full** | Full |
+| **Bandwidth** | **Shared** among all ports | **Dedicated** per port | Per port |
+| **Security** | ❌ Everyone sees everything | ✅ Isolated traffic | ✅ ACLs and firewall |
+| **Cost** | Cheapest | Moderate | Most expensive |
+| **Status** | **Obsolete** | **Standard in every LAN** | Essential for internet access |
+
+> ### "Hub or Switch — which is better, and why?"
+> ### ✅ **The SWITCH, without qualification.**
+> 1. **No collisions** — each port is its own collision domain, so devices transmit simultaneously in **full duplex**.
+> 2. **Full dedicated bandwidth per port** instead of sharing one channel.
+> 3. **Security** — a device receives only the frames addressed to it; on a hub anyone can sniff everything.
+> 4. **Scales** — adding devices to a hub degrades performance sharply; a switch does not.
+> 5. **Features** — VLANs, QoS, port security, monitoring, PoE.
+>
+> A hub's only advantage was price, and switches are now so cheap that **hubs are no longer manufactured**.
+
+**Router vs Gateway**
+
+| Point | **Router** | **Gateway** |
+|---|---|---|
+| **Function** | **Routes packets** between networks **using the SAME protocol** | **Translates between networks using DIFFERENT protocols** |
+| **Layer** | **3** | **Any, up to 7** |
+| **Protocol conversion** | ❌ No (or minimal) | ✅ **Yes — its defining function** |
+| **Complexity** | Moderate | **Highest** |
+| **Speed** | Faster | Slower (translation costs time) |
+| **Example** | Connecting two IP networks | **VoIP gateway** (IP ↔ PSTN), **email gateway**, IoT gateway |
+| **Relationship** | **Every router is a kind of gateway, but not every gateway is a router.** In everyday usage a home "router" acts as the **default gateway** for the LAN | |
+
+> **Is there a difference?** **Yes, in principle** — a router forwards between networks speaking the same language, while a gateway **translates between different languages**. **In everyday practice the terms overlap**, because the device that routes your traffic to the Internet is also called your "default gateway". The precise answer is: *routing is about **path selection**; gateway functionality is about **protocol translation**.*
+
+**Gateway vs Firewall**
+
+| Point | **Gateway** | **Firewall** |
+|---|---|---|
+| **Purpose** | **Connect and translate** between networks | **Filter and control** traffic for security |
+| **Primary concern** | **Connectivity** | **Security** |
+| **Action** | Converts protocols and forwards | **Permits or DENIES** based on rules |
+| **Layer** | Any | 3–4 (or up to 7 for an NGFW) |
+| **Blocks traffic?** | Not by design | ✅ **Yes — that is its job** |
+| **Analogy** | A **translator at the border** | The **immigration officer** deciding who may pass |
+
+> They are **complementary**, and modern devices combine them: a single appliance may act as the **default gateway, the NAT router and the firewall** all at once.
+
+**Previous Year Question List from this Topic:**
+
+- [Describe the functions of a Switch and a Router and explain two key differences between these networking devices.](../written-answers/computer-networks.md?plain=1#L4386)
+- [Briefly describe the following network devices: Repeater, Hub, Bridge, Switch and Router.](../written-answers/computer-networks.md?plain=1#L4413)
+- [Difference among Switch, Bridge and Router.](../written-answers/computer-networks.md?plain=1#L4472)
+- [Write down the difference between gateway and firewall.](../written-answers/computer-networks.md?plain=1#L4530)
+- [What is gateway? Is router and gateway have any difference?](../written-answers/computer-networks.md?plain=1#L4549)
+- [অথবা, (ক) ডেটা ট্রান্সমিশনে Router ও Gateway এর মধ্যে কোনটি অধিকতর সুবিধাজনক-মতামত ব্যক্ত করুন।](../written-answers/computer-networks.md?plain=1#L4574)
+- [Write the Difference among Network Switch, Hub and Router.](../written-answers/computer-networks.md?plain=1#L4602)
+- [(iii) Router and Gateway এর ফাংশন লিখুন।](../written-answers/computer-networks.md?plain=1#L4626)
+- [Write down the difference between Hub and Switch.](../written-answers/computer-networks.md?plain=1#L4652)
+- [Wi-Fi access point বলতে কী বুঝানো হয়? Router and Switch -এর মধ্যে পার্থক্য লিখুন।](../written-answers/computer-networks.md?plain=1#L4674)
+- [হাব, সুইচ ও রাউটার এর মধ্যে পার্থক্য লিখ।](../written-answers/computer-networks.md?plain=1#L4701)
+- [(c) Briefly describe three devices using which different LANs can be connected.](../written-answers/computer-networks.md?plain=1#L4724)
+- [(ক) Hub এবং Switch কী? কোনটির ব্যবহার সুবিধাজনক সপক্ষে যুক্তি দিন।](../written-answers/computer-networks.md?plain=1#L4756)
+- [Difference among HUB, Switch and Router.](../written-answers/computer-networks.md?plain=1#L4782)
+- [(a) What are the difference among Hub, Switch and Routers?](../written-answers/computer-networks.md?plain=1#L4802)
+- [Difference between Router and Switch.](../written-answers/computer-networks.md?plain=1#L4831)
+- [Describe about Hub, Switch and Router.](../written-answers/computer-networks.md?plain=1#L4855)
+
+
+---
+
+### Collision Domains and Broadcast Domains
+
+#### The definitions
+
+| Term | Definition |
+|---|---|
+| **Collision domain** | A network segment in which **data packets can COLLIDE with one another** — i.e. where devices **share the same transmission medium** and only one may transmit at a time |
+| **Broadcast domain** | A network segment in which a **BROADCAST frame sent by any device reaches EVERY other device** |
+
+#### How each device affects them
+
+```mermaid
+flowchart TD
+    subgraph HUB["HUB — 1 collision domain, 1 broadcast domain"]
+        H["Hub"] --- H1["PC1"]
+        H --- H2["PC2"]
+        H --- H3["PC3"]
+        H --- H4["PC4"]
+    end
+    subgraph SW["SWITCH — 4 collision domains, 1 broadcast domain"]
+        S["Switch"] --- S1["PC1"]
+        S --- S2["PC2"]
+        S --- S3["PC3"]
+        S --- S4["PC4"]
+    end
+    subgraph RT["ROUTER — each interface is its own broadcast domain"]
+        R["Router"] --- N1["Network A"]
+        R --- N2["Network B"]
+    end
+```
+
+| Device | Collision domains created | Broadcast domains created |
+|---|---|---|
+| **Hub / Repeater** | **1** (all ports share it) | **1** |
+| **Bridge / Switch** | **ONE PER PORT** | **1** (or one per VLAN) |
+| **Router** | One per port | **ONE PER PORT** |
+
+> ### "How many collision domains are created when you segment a network with a 12-port switch?"
+> ### ✅ **12 collision domains — one per port.**
+>
+> **The reason:** a switch **microsegments** the network. Each port is a separate segment with its own dedicated bandwidth, and because each connection is **full duplex**, collisions cannot occur at all.
+>
+> **And how many broadcast domains?** ✅ **ONE** — a switch forwards broadcasts out of every port, so the whole switch is a single broadcast domain (unless **VLANs** are configured, in which case there is **one broadcast domain per VLAN**).
+
+#### Collision domain vs Broadcast domain
+
+| Point | **Collision Domain** | **Broadcast Domain** |
+|---|---|---|
+| **OSI layer** | **1 — Physical** | **2 — Data Link** |
+| **Problem it describes** | Two devices transmitting **at the same time** on shared media | A broadcast frame flooding every device |
+| **Created/divided by** | **Switch and Router** (each port = one domain) | **ROUTER** (each port = one domain), or a **VLAN** |
+| **NOT divided by** | Hub, repeater | **Hub, repeater, SWITCH** |
+| **Relevant to** | CSMA/CD, half-duplex Ethernet | ARP requests, DHCP discovery, broadcast storms |
+| **Modern relevance** | **Almost eliminated** by full-duplex switching | **Still very relevant** — the reason we use VLANs and subnets |
+| **Larger domain means** | More collisions, lower throughput | More broadcast traffic, lower performance and weaker security |
+
+**Why it matters:** a large broadcast domain wastes bandwidth on every host (each must process every broadcast) and enables **broadcast storms**, **ARP spoofing** and easier reconnaissance. The cure is **subnetting and VLANs** — which is exactly why network design revolves around keeping broadcast domains small.
+
+#### Wi-Fi access point
+
+A **Wireless Access Point (WAP/AP)** is a **Layer 2 device that allows wireless devices to connect to a wired network**, acting as a **bridge between the Wi-Fi (802.11) medium and the Ethernet (802.3) LAN**.
+
+**Functions:** transmits and receives the radio signal · **bridges** wireless frames to the wired network · handles **association and authentication** (WPA2/WPA3) · encrypts the wireless link · broadcasts the **SSID** · manages multiple clients on a shared channel with **CSMA/CA**.
+
+| Point | **Access Point** | **Router** |
+|---|---|---|
+| **Layer** | 2 | 3 |
+| **Provides Wi-Fi** | ✅ Yes — its only job | Only if it has a built-in AP |
+| **Assigns IP addresses (DHCP)** | ❌ No | ✅ Yes |
+| **Performs NAT / connects to the Internet** | ❌ No | ✅ Yes |
+| **Creates a new network** | ❌ No — it extends the existing one | ✅ Yes |
+| **Typical use** | **Extending Wi-Fi coverage** in an office, controlled by a central controller | The single device at the edge of a home network |
+
+*(A **home "Wi-Fi router"** is really **three devices in one box**: a router, a switch and a wireless access point — which is why the terms are so often confused.)*
+
+#### Three devices used to connect different LANs
+
+> *"Briefly describe three devices using which different LANs can be connected."*
+
+| Device | How it connects LANs | Layer |
+|---|---|---|
+| **Bridge** | Connects **two LAN segments using the same protocol**, filtering by **MAC address** so only cross-segment traffic passes. Divides collision domains | **2** |
+| **Switch** | A **multi-port bridge**; connects many segments, forwards by MAC, and with **VLANs** can logically separate them | **2** |
+| **Router** | Connects **LANs that are DIFFERENT IP networks**, forwarding by **IP address** and choosing the best path. **Blocks broadcasts**, so each LAN stays its own broadcast domain. **The standard answer** | **3** |
+| **Gateway** | Connects LANs running **entirely different protocols or architectures**, by **translating** between them | Up to **7** |
+
+*(A **repeater/hub** can also physically extend a LAN, but it does not truly "connect different LANs" — it merely extends one.)*
+
+**Previous Year Question List from this Topic:**
+
+- [How many collision domians are created when you segment a network with a 12-port switch?](../written-answers/computer-networks.md?plain=1#L4451)
+- [Differentiate between Collision Domain and Broadcast Domain in computer network. What is the function of DNS and DHCP?](../written-answers/computer-networks.md?plain=1#L4495)
