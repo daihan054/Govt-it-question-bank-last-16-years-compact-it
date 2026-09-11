@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 24 theories
+**Table of Contents** — 11 subtopics · 27 theories
 
 1. **[Microprocessor Architecture & Functions](#microprocessor-architecture--functions)**
    - [The Microprocessor — Definition and Functions](#the-microprocessor--definition-and-functions)
@@ -11,6 +11,7 @@
    - [CPU vs GPU](#cpu-vs-gpu)
    - [DMA — Direct Memory Access](#dma--direct-memory-access)
    - [Peripheral Interfacing — 8255 and SPI](#peripheral-interfacing--8255-and-spi)
+   - [I/O Interfacing — Memory-Mapped vs Isolated I/O](#io-interfacing--memory-mapped-vs-isolated-io)
 
 2. **[Memory Hierarchy & Storage](#memory-hierarchy--storage)**
    - [The Memory Hierarchy](#the-memory-hierarchy)
@@ -33,12 +34,14 @@
 7. **[Assembly Language & Addressing Modes](#assembly-language--addressing-modes)**
    - [Addressing Modes of the 8086](#addressing-modes-of-the-8086)
    - [8086 Instructions and Assembly Language Rules](#8086-instructions-and-assembly-language-rules)
+   - [Machine Code, Mnemonics and the Assembler](#machine-code-mnemonics-and-the-assembler)
 
 8. **[CPU Performance & Instruction Cycle](#cpu-performance--instruction-cycle)**
    - [CPU Performance and Clock Cycles](#cpu-performance-and-clock-cycles)
 
 9. **[Multi-Core & Multi-Threading](#multi-core--multi-threading)**
    - [Multi-Core Processors and Hyper-Threading](#multi-core-processors-and-hyper-threading)
+   - [Intel Processor Families, Generations and Model Naming](#intel-processor-families-generations-and-model-naming)
 
 10. **[RISC vs CISC Architecture](#risc-vs-cisc-architecture)**
    - [RISC vs CISC](#risc-vs-cisc)
@@ -94,6 +97,16 @@ Before 1971, a computer's processor filled a cabinet and cost as much as a house
 - [What is Microprocessor?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L781)
 - [Microprocessor কি? এর আবিষ্কারে তথ্য ও যোগাযোগ প্রযুক্তিতে কি ধরনের অগ্রগতি সাধিত হয়েছে ব্যাখ্যা করুন।](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1040)
 - [What is Microprocessor? Explain basic component of Microprocessor.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1136)
+
+**Previous Year MCQ List from this Topic:**
+
+- [A hardware device that is capable of executing a sequence of instructions is known as:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L189)
+- [The processor reads an instruction from memory is called:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L135)
+- [Microprocessor এর কোন অংশে ALU থাকে?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L171)
+- [নিচের কোন Operation টি CPU তে দ্রুত কাজ করে?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L180)
+- [Compared to CISC and RISC, processors (at the same clock) are -----](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L261)
+- [At the same clock speed compared to CISC, RISC processor works ________.](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L324)
+
 
 
 ---
@@ -232,6 +245,21 @@ sequenceDiagram
 - [a) Describe the central processing parts of a computer with a diagram.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1980)
 - [(ক) Memory address register and Memory buffer register কী? Primary memory and Secondary memory-এর মধ্যে পার্থক্য লিখুন।](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L3289)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L18)
+- [______ are used to quickly accept, store and transfer data and instructions that are being used immediately by the CPU.](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L27)
+- [Which of the following registers is loaded with the contents of the memory location pointed by the PC?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L45)
+- [Sequence Control Register আর কি নামে পরিচিত?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L153)
+- [Microprocessor এর কোন অংশে ALU থাকে?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L171)
+- [CPU fetches the instruction from memory according to value of-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L270)
+- [ALU stores the computed result immediately in](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L279)
+- [Central Processing Unit is combination of-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L297)
+- [The control unit of a microprocessor-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L306)
+- [Register circuit is not use in-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L234)
+- [Arithmetic and Logical operation এর ডাটা কাজের সময় কোথায় রাখা হয়?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L506)
+
+
 
 ---
 
@@ -280,6 +308,11 @@ sequenceDiagram
 - [১২. 8086 মাইক্রোপ্রসেসর এর Flag Register কত বিটের?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1405)
 - [In an arithmetic operation the result has even number of 1s and for another operation the result is zero. Now write the the present status of the flag register.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1718)
 - [What are the difference between 8086 and 8088 microprocessors? Mention the flags of 8086 micriprocessor.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L2070)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is not the flag of the 8086 Microprocessor?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L63)
+
 
 
 ---
@@ -352,6 +385,17 @@ flowchart TD
 - [(খ) Typical মাইক্রোকম্পিউটারে কী কী বাস থাকে। একটি মাইক্রোপ্রসেসর এর সাথে RAM, ROM এবং I/O এর কানেকশন বাস এর মাধ্যমে দেখাও।](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L891)
 - [(ক) System bus কী? বিভিন্ন প্রকার System bus সম্পর্কে সচিত্র আলোচনা করুন।](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1630)
 - [Write down the necessary components of a USB bus with block diagram.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1890)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The address bus flow in——](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L54)
+- [Communication path between a computer microprocessor and main memory is called:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L99)
+- [Physical connection between Microprocessor Memory and other parts is called-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L225)
+- [A single communication system that transfers and connects the data between major components inside a computer is-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L243)
+- [USB stands for-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L252)
+- [Which bus used to connect the monitor to the CPU?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L315)
+- [Intel 8086 microprocessor এর বহিঃস্থ Address bus এর width কত bit হয়?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L162)
+
 
 
 ---
@@ -524,6 +568,14 @@ Each segment is **64 KB** (2¹⁶ offsets), and the total address space is **1 M
 - [১২. 8086 মাইক্রোপ্রসেসর এর Flag Register কত বিটের?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1405)
 - [What are the difference between 8086 and 8088 microprocessors? Mention the flags of 8086 micriprocessor.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L2070)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is not the flag of the 8086 Microprocessor?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L63)
+- [Intel 8086 microprocessor এর বহিঃস্থ Address bus এর width কত bit হয়?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L162)
+- [What is the Address bit for an 8-bit Microprocessor?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L198)
+- [Intel 8086 মাইক্রোপ্রসেসর কত বিট রেজিস্টার থাকে?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L207)
+
+
 
 ---
 
@@ -628,6 +680,11 @@ flowchart TD
 
 - [(b) What is DMA? Why it is used for high-speed I/O devices?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1489)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which mode of memory access is the fastest?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L371)
+
+
 
 ---
 
@@ -727,6 +784,79 @@ flowchart LR
 - [Explain the necessary steps to communicate through a programmable peripheral interfacing device (8255 Microprocessor).](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L571)
 - [Write down the necessary components of a USB bus with block diagram.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L1890)
 - [What is SPI (Serial Peripheral Interface)? What are the advantages over parallel interface?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L2123)
+
+**Previous Year MCQ List from this Topic:**
+
+- [USB stands for-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L252)
+- [What is the typical speed of USB version 3.0?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L398)
+
+
+---
+
+### I/O Interfacing — Memory-Mapped vs Isolated I/O
+
+> A processor must reach its peripherals somehow. There are **exactly two schemes** for giving device registers an address, and the choice determines which instructions the programmer uses.
+
+```mermaid
+flowchart TD
+    subgraph MM["① MEMORY-MAPPED I/O"]
+        A["ONE combined address space<br/>─────────────────<br/>0000 – EFFF  →  MEMORY<br/>F000 – FFFF  →  I/O DEVICE registers<br/><br/>⭐ devices look like memory locations"]
+    end
+    subgraph IO["② ISOLATED (PORT-MAPPED) I/O"]
+        B["TWO SEPARATE address spaces<br/>─────────────────<br/>MEMORY space : 0000 – FFFF<br/>I/O space    : 00 – FF<br/><br/>⭐ selected by the IO/M̅ control line"]
+    end
+```
+
+#### The comparison
+
+| Point | ⭐ **MEMORY-MAPPED I/O** | ⭐ **ISOLATED (PORT-MAPPED) I/O** |
+|---|---|---|
+| **Address space** | ⭐ **ONE shared space — device registers occupy MEMORY addresses** | ⭐ **TWO separate spaces — memory and I/O are distinct** |
+| ⭐ **Instructions used** | ⭐ **THE SAME ORDINARY MEMORY INSTRUCTIONS** — `MOV`, `LDA`, `STA`, `ADD`. **NO new instructions are required** | ⭐ **SPECIAL instructions — `IN` and `OUT`** |
+| ⭐ **Are `IN` / `OUT` present?** | ❌ **NO — they do not exist / are not used** | ✅ **YES — they are essential** |
+| **Control signals** | Only `RD̅` / `WR̅` (memory read/write) | Needs **`IO/M̅`** to say which space |
+| **Usable memory** | ⚠️ **REDUCED** — every address given to a device is one fewer for RAM | ✅ **Full memory space available** |
+| **Instruction set size** | ✅ Smaller — fewer instructions to implement | Larger |
+| **Addressing modes for I/O** | ✅ **ALL memory addressing modes work on devices** | Limited — usually direct/indirect only |
+| **Decoding hardware** | More address lines must be decoded | Simpler (fewer I/O addresses) |
+| **Used by** | ⭐ **Motorola 68000, ARM, MIPS, RISC-V — most modern architectures** | ⭐ **Intel x86 (8085, 8086 and successors)** |
+
+> ### **"Which feature is NOT applicable to memory-mapped I/O?"** → ### ✅ **"New instructions are required to access the device registers."**
+>
+> **That is precisely the point of memory-mapped I/O — NO new instructions are needed.** A device register is read with the same `MOV` you would use for a RAM location; that is the scheme's defining advantage.
+
+> ### **"In a memory-mapped I/O system, which one is NOT present?"** → ### ✅ **`IN`** (and `OUT`).
+>
+> **Because the device lives in the memory space, the dedicated I/O instructions become unnecessary and are not used.** *(On an x86 they still exist in the instruction set, but a memory-mapped device is never accessed with them.)*
+
+#### Why modern architectures prefer memory-mapped I/O
+
+1. **A simpler, smaller instruction set** — no separate I/O instruction family to design, decode and verify.
+2. ⭐ **The full power of the addressing modes** applies to devices — you can index into a device's register block, use pointers, and write device drivers in **ordinary C** (`*(volatile uint32_t*)0x4000A000 = 1;`) with no assembly.
+3. **Address space is no longer scarce** — a 32- or 64-bit processor has far more addresses than it needs, so the old objection has evaporated.
+4. **Uniformity** — DMA, caches and the MMU all work on addresses, so devices integrate naturally.
+
+> ⚠️ **The one hazard of memory-mapped I/O: CACHING.** A device register may change by itself, and a write to it must actually reach the device. If the CPU cached it, the program would read a stale value. **Memory-mapped device regions must therefore be marked NON-CACHEABLE, and the variables declared `volatile`** so the compiler does not optimise the accesses away.
+
+#### The three ways a processor transfers I/O data
+
+| Method | How the transfer happens | CPU involvement |
+|---|---|---|
+| ⭐ **Programmed I/O (polling)** | The CPU **repeatedly checks** the device's status flag and moves each byte itself | ⚠️ **100 % — the CPU is fully occupied and mostly waiting** |
+| ⭐ **Interrupt-driven I/O** | The device **raises an INTERRUPT** when ready; the CPU services it and returns | **Moderate** — the CPU works on other things between interrupts |
+| ⭐ **DMA — Direct Memory Access** | ⭐ **A DMA controller moves the data DIRECTLY between the device and memory**, bypassing the CPU entirely | ✅ **Minimal — set up the transfer, then one interrupt at the end** |
+
+> ### **"Which mode of memory access is the FASTEST?"** → ### ✅ **DMA.**
+>
+> **Why: DMA removes the CPU from the data path altogether.** In programmed I/O every byte passes through a CPU register (two instructions per byte); with DMA the controller moves a whole block at **bus speed** while the processor executes other programs. For a modern SSD delivering gigabytes per second, **no CPU-mediated loop could keep up** — DMA is not an optimisation but a necessity. *(See the dedicated DMA theory for the handshake sequence.)*
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which feature is not applicable for memory mapped I/O?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L36)
+- [In a memory-mapped I/O system, which one is not present?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L72)
+- [Which mode of memory access is the fastest?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L371)
+
+
 
 
 ---
@@ -832,6 +962,25 @@ flowchart TD
 - [What is access time and transfer time?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L3228)
 - [Write the Memory faster access time memory in top and lowest access time memory is below from the following memory: (Cache Memory, Register Memory, Main Memory,…](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L3389)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Considering computer memory speed, which one is correct order from highest to lowest?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L335)
+- [Out of all the following, which one isn't a form of memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L353)
+- [Which among the following is the fastest memory in a computer that holds information?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L362)
+- [Which of the following is not a nonvolatile storage device?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L389)
+- [Which of the following memory devices is not reprogrammable?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L452)
+- [Main Memory কোনটি?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L488)
+- [নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L497)
+- [Which one can be used for read only?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L515)
+- [Which is the faster memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L524)
+- [Which of the following terms is the most closely related to main memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L533)
+- [Which unit holds data permanently?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L542)
+- [Magnetic tape can serve as—](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L551)
+- [Which of the following is internal memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L560)
+- [Which memory is called as primary memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L578)
+- [কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L443)
+
+
 
 ---
 
@@ -897,6 +1046,16 @@ flowchart TD
 - [(a) Write the difference between: (i) RAM and ROM (ii) Open source software and Proproetary software.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L3011)
 - [(ক) Memory address register and Memory buffer register কী? Primary memory and Secondary memory-এর মধ্যে পার্থক্য লিখুন।](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L3289)
 - [Difference between ROM and RAM.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L3440)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following memory devices is not reprogrammable?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L452)
+- [Main Memory কোনটি?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L488)
+- [Which one can be used for read only?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L515)
+- [Which of the following is internal memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L560)
+- [Which memory is called as primary memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L578)
+- [কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L443)
+
 
 
 ---
@@ -983,6 +1142,13 @@ Number of addressable locations = 2³² = 4,294,967,296 bytes
 - [How Maximum size of memory (RAM) is needed that can be addressed by 32-bit system.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L3174)
 - [(b) Difference between SRAM and DRAM.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L3354)
 - [Difference between 32 bit Microprocessor and 64 bit Microprocessor with example. What is the meaning of 2.40GHz Microprocessor? Differentiate among Core Intel i…](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L455)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following uses the flip-flop circuit in a memory cell?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L434)
+- [Which of the following memories needs refreshing?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L569)
+- [The term LPDDR means-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L416)
+
 
 
 ---
@@ -1168,6 +1334,15 @@ RAID 1 raw capacity needed = 2 × 1 TB = 2 TB
 - [Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L4188)
 - [What is RAID level? Write down of RAID level 0, level 1 and level 5?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L4256)
 - [Describe RAID level.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L4326)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which RAID level creates a mirror of all disks for storing data?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L708)
+- [The fastest read/write time and most efficient data storage of any disk array type is:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L717)
+- [How does RAID provide data protection?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L726)
+- [Why RAID is used in database storage?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L735)
+- [What is the name of below RAID?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L744)
+
 
 
 ---
@@ -1406,6 +1581,14 @@ AMAT  = h × 5 + (1 − h) × 50 = 10
 - [Explain how cache memory is used to increase the processing speed of computer.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L5191)
 - [(d) What is cache memory? Explain the concepts of cache memory.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L2186)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Microprocessor reference that are available in the cache are called ________:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L144)
+- [Which of the following causes the average memory access time to increase in a memory system with cache memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L380)
+- [নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L497)
+- [Which is the faster memory?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L524)
+
+
 
 ---
 
@@ -1610,6 +1793,25 @@ flowchart LR
 - [Consider a disk pack with the following specifications- 16 surfaces, 128 tracks per surface, 256 sectors per track and 512 bytes per sector. Answer the followin…](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L5752)
 - [(i) Optical disk কীভাবে data Read/Write করে বর্ণনা করুন।](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L5846)
 
+**Previous Year MCQ List from this Topic:**
+
+- [SSDs are more durable than HDDs in extreme and harsh environments because](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L407)
+- [A solid-state drive (SSD) is a newer, faster type of device that stores data on instantly-accessible ________.](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L470)
+- [A hard disk is divided into tracks which are further subdivided into ______](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L589)
+- [Consider a magnetic disk packed with 32 surfaces. Each surface is divided into 128 tracks while 256 sectors per track. If the size of a sector is 1024 bytes, th…](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L598)
+- [DVD এর চেয়ে বেশী Data store করা যায় কোনটিতে?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L607)
+- [Which of the following is major part of time taken when accessing data on the disk?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L616)
+- [Place where large amount of data is stored outside central processing unit is called](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L625)
+- [Which are not performance characteristics of hard disk?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L634)
+- [Which of the following is used for manufacturing chips?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L643)
+- [Before a disk can be used to store data, it must be-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L652)
+- [Which technology is used in Compact disks?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L661)
+- [Which of the following is a storage device?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L670)
+- [What does the disk drive of computer do?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L679)
+- [Which of the items below are considered removable storage media?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L688)
+- [A hard disk is divided into tracks which are further subdivided into ________](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L697)
+
+
 
 ---
 
@@ -1761,6 +1963,12 @@ Machine-code layout:
 - [What is pipelining? What is opcode and operand in machine code? Explain snooping cache.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L6586)
 - [Write down four common rules of Assembly language. Write different type of hazard.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L7063)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which is not pipeline hazard?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L126)
+- [The processor reads an instruction from memory is called:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L135)
+
+
 
 ---
 
@@ -1900,6 +2108,12 @@ sequenceDiagram
 - [Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L6980)
 - [Describe addressing mode of 8086 microprocessors.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L7164)
 
+**Previous Year MCQ List from this Topic:**
+
+- [In which addressing mode, the effective address of the operand is generated by adding a constant value to the contents of the register?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L752)
+- [Which is the immediate addressing mode in an 8086 microprocessor?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L778)
+
+
 
 ---
 
@@ -1951,6 +2165,114 @@ sequenceDiagram
 - [Assembly Language Instructions এর ক্ষেত্রে নিম্মোক্ত Instructions গুলোর কাজ লিখুন। ADC, XCHG, POP ও JNZ.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L6980)
 - [Write down four common rules of Assembly language. Write different type of hazard.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L7063)
 - [Explain the instructions LDS, PUSHF, TEST and CLD.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L7276)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Consider the following program fragment in assembly language:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L761)
+- [Which is the immediate addressing mode in an 8086 microprocessor?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L778)
+- [What is the difference between mnemonic codes & machine codes?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L804)
+- [START:MOV AX, BX একটি assembly language instruction এখানে MOV হলো-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L216)
+
+
+---
+
+### Machine Code, Mnemonics and the Assembler
+
+#### The three levels of program representation
+
+```mermaid
+flowchart LR
+    A["HIGH-LEVEL LANGUAGE<br/>c = a + b;<br/>— human-readable, portable"] -->|"COMPILER"| B["ASSEMBLY LANGUAGE<br/>MOV AX, a<br/>ADD AX, b<br/>— MNEMONICS, machine-specific"]
+    B -->|"⭐ ASSEMBLER"| C["MACHINE CODE<br/>10001011 00000110 …<br/>— pure BINARY, executed directly"]
+    C --> D["The CPU"]
+```
+
+| Level | Form | Readable by | Translated by |
+|---|---|---|---|
+| **High-level** | `c = a + b;` | ✅ Humans | **Compiler** or interpreter |
+| ⭐ **Assembly** | ⭐ **`MOV AX, BX` — MNEMONICS in shorthand English** | ✅ Humans (with effort) | ⭐ **ASSEMBLER** |
+| ⭐ **Machine code** | ⭐ **`10001011 11000011` — pure BINARY** | ❌ Only the CPU | — (executed directly) |
+
+> ### **"What is the difference between mnemonic codes and machine codes?"**
+> ### ✅ **MACHINE CODES are in BINARY; MNEMONIC CODES are in SHORTHAND ENGLISH.**
+>
+> **A mnemonic is a short, memorable word standing for one machine operation** — `MOV` (move), `ADD`, `SUB`, `JMP` (jump), `CMP` (compare), `INC` (increment). They exist purely for human benefit: `MOV AX, BX` is vastly easier to write and debug than `10001011 11000011`, yet corresponds to it **one-for-one**.
+
+| | **Assembler** | **Compiler** | **Interpreter** |
+|---|---|---|---|
+| **Translates** | ⭐ **Assembly → machine code** | High-level → machine code | High-level, **line by line at run time** |
+| **Mapping** | ⭐ **ONE-to-ONE** — each mnemonic becomes one instruction | **ONE-to-MANY** — one statement becomes many instructions | One-to-many |
+| **Output** | Object code | Object/executable code | No separate file |
+
+#### The anatomy of an assembly instruction
+
+```
+        START:   MOV     AX,     BX          ; copy BX into AX
+        ─────    ───     ──      ──          ─────────────────
+        LABEL   ⭐OPCODE  OPERAND OPERAND      COMMENT
+                (mnemonic)  (dest)  (source)
+```
+
+| Field | Purpose |
+|---|---|
+| **Label** | An optional name for the address of this instruction — a branch target (`START:`) |
+| ⭐ **OPCODE (mnemonic)** | ⭐ **SPECIFIES THE OPERATION to be performed** — `MOV`, `ADD`, `JMP` |
+| **Operand(s)** | The **data or its location** — registers, memory addresses, immediate constants |
+| **Comment** | After `;`, ignored by the assembler |
+
+> ### **"`START: MOV AX, BX` — here MOV is ______"** → ### ✅ **the OPCODE.**
+>
+> *(`START` is the **label**; `AX` is the **destination operand**; `BX` is the **source operand**. Note the universal convention: **destination first, source second**.)*
+
+#### Why assembly language is still used
+
+| ✅ **Advantages** | ⚠️ **Disadvantages** |
+|---|---|
+| ⭐ **Direct control of hardware, registers and memory** | ⭐ **MACHINE-DEPENDENT — not portable at all** |
+| **Fastest and smallest possible code** when hand-optimised | **Very slow to write; error-prone** |
+| **Access to instructions a compiler will not generate** | **Hard to read, debug and maintain** |
+| Essential for **boot loaders, device drivers, interrupt handlers, embedded firmware** | Requires detailed knowledge of the specific CPU |
+| Used in **reverse engineering, malware analysis and exploit development** | No type checking or memory safety |
+
+> **Where it genuinely remains necessary today:** the **first instructions after reset** (before any C runtime exists), **interrupt vectors and context switching**, **cryptographic routines** needing constant-time execution, **SIMD-optimised inner loops** (though intrinsics usually suffice), and **reading disassembly when debugging**.
+
+#### Assembler directives vs instructions
+
+> ⚠️ **A DIRECTIVE (pseudo-instruction) tells the ASSEMBLER what to do; it generates NO machine code of its own.**
+
+| Directive | Purpose |
+|---|---|
+| `ORG 2000H` | Set the **assembly address** |
+| `DB / DW / DD` | **Define byte / word / doubleword** data |
+| `EQU` | Define a **symbolic constant** |
+| `SEGMENT / ENDS` | Mark a segment |
+| `ASSUME` | Tell the assembler which segment register addresses which segment |
+| `END` | **End of the source file** |
+
+**Compare:** `MOV AX, 5` is an **instruction** — it becomes bytes the CPU executes. `COUNT EQU 5` is a **directive** — it merely tells the assembler to substitute 5 for `COUNT`, and produces nothing.
+
+#### Two-pass assembly
+
+> **An assembler normally makes TWO PASSES over the source**, because of the **forward-reference problem**: an instruction may jump to a label defined *later* in the file.
+
+```
+   PASS 1 : scan the whole source, build the SYMBOL TABLE
+            — record the address of every label
+            — do not generate code yet
+
+   PASS 2 : scan again and GENERATE the machine code,
+            now able to resolve every label from the symbol table
+```
+
+> **That is precisely why a two-pass design is needed: in pass 1 the assembler cannot know the address of a label it has not yet reached, so it defers code generation until every symbol is known.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [Consider the following program fragment in assembly language:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L761)
+- [What is the difference between mnemonic codes & machine codes?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L804)
+- [START:MOV AX, BX একটি assembly language instruction এখানে MOV হলো-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L216)
+
+
 
 
 ---
@@ -2070,6 +2392,15 @@ So **A takes 0.625 ns per instruction**. Computer B is faster if, and only if, i
 - [Write down factor of microprocessor speed?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L7780)
 - [Discuss the factors that affect the Speed of a CPU.](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L403)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Suppose, the operating clock frequency of a typical CPU is 700 MHz and the number of clocks required for execution of three different instruction types are 4, 8…](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L90)
+- [The word length of a computer is measured in-](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L288)
+- [An increase in a computer's RAM leads to a typical improvement in performance because:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L344)
+- [There is a RAM issue on a PC/laptop. Which of the following symptom(s) might be an indication of RAM issue?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L461)
+- [Which factor is not affecting the processing speed of a computer system?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L479)
+
+
 
 ---
 
@@ -2172,6 +2503,129 @@ flowchart TD
 - [Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 t…](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L8000)
 - [১৩. Core i7 জেনারেশন এর প্রসেসর এর উদাহরণ লিখ?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L8056)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is the 7$^{th}$ Generation intel processor?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L81)
+- [Ice Lake CPU is intel’s code name for the processor of:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L108)
+- [In core i7-8650U processor, here U means:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L117)
+- [How many core/threads does the Intel Core i7-9700K processor have?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L425)
+
+
+---
+
+### Intel Processor Families, Generations and Model Naming
+
+> Examination questions about "which generation is this processor?" are answered entirely from **Intel's model-numbering convention** — once you can read the number, you never need to memorise individual chips.
+
+#### ⭐ How to read an Intel Core model number
+
+```
+        Intel  Core  i7 - 8650 U
+                     ▲    ▲▲▲▲ ▲
+                     │    │    └──── ⭐ SUFFIX — the power/purpose class
+                     │    └───────── SKU digits (higher = better within the tier)
+                     │  ⭐ FIRST digit(s) after the dash = the GENERATION
+                     └────────────── the TIER (i3 / i5 / i7 / i9)
+
+   i7-8650U   →  8th generation
+   i5-7200U   →  ⭐ 7th generation
+   i9-13900K  →  13th generation   (two digits once the generation reached 10)
+```
+
+> ### **"Which is a 7th-generation Intel processor?"** → ### ✅ **Intel Core i5-7200U** — the leading **7** after the dash gives the generation.
+> ### **"In the Core i7-8650U, what does U mean?"** → ### ✅ **ULTRA-LOW POWER.**
+
+#### The suffixes
+
+| Suffix | Meaning | Typical use |
+|---|---|---|
+| ⭐ **U** | ⭐ **Ultra-low power** (15 W) | **Thin laptops, ultrabooks** — long battery life |
+| **Y** | Extremely low power (5 W) | Fanless tablets |
+| **H / HQ / HK** | High performance for mobile | Gaming and workstation laptops |
+| **K** | ⭐ **Unlocked multiplier — OVERCLOCKABLE** | Enthusiast desktops |
+| **T** | Power-optimised desktop | Small-form-factor PCs |
+| **F** | **No integrated graphics** — a discrete GPU is required | Budget gaming builds |
+| **X / XE** | Extreme edition | High-end desktop |
+| *(no suffix)* | Standard desktop | Ordinary PCs |
+
+#### Intel generations and their code names
+
+| Generation | Code name | Approx. year |
+|---|---|---|
+| 2nd | Sandy Bridge | 2011 |
+| 3rd | Ivy Bridge | 2012 |
+| 4th | Haswell | 2013 |
+| 5th | Broadwell | 2014 |
+| 6th | Skylake | 2015 |
+| ⭐ **7th** | **Kaby Lake** | 2016 |
+| 8th / 9th | Coffee Lake | 2017–18 |
+| ⭐ **10th** | ⭐ **ICE LAKE** (and Comet Lake) | 2019 |
+| 11th | Tiger Lake / Rocket Lake | 2020 |
+| 12th | Alder Lake | 2021 |
+| 13th / 14th | Raptor Lake | 2022–23 |
+| Core Ultra | Meteor Lake / Lunar Lake | 2023– |
+
+> ### **"Ice Lake is Intel's code name for the processor of which generation?"** → ### ✅ **10th GENERATION.**
+>
+> ⚠️ **From the 12th generation Intel changed the branding to "Core i5/i7" without the "i" in some lines, and introduced Core Ultra** — but the **generation-from-the-model-number rule still holds** for everything the exams ask about.
+
+#### Cores and threads
+
+> **CORES are physical processing units; THREADS are logical ones.** With **Hyper-Threading** each core presents **two** logical threads; without it, the counts are equal.
+
+| Processor | Cores / Threads | Hyper-Threading? |
+|---|---|---|
+| ⭐ **Core i7-9700K** | ⭐ **8 / 8** | ⚠️ **NO** — Intel removed HT from the 9700K |
+| Core i7-8700K | 6 / 12 | ✅ Yes |
+| Core i9-9900K | 8 / 16 | ✅ Yes |
+| Core i5-7200U | 2 / 4 | ✅ Yes |
+
+> ### **"How many cores/threads does the Intel Core i7-9700K have?"** → ### ✅ **8 CORES / 8 THREADS.**
+>
+> ⚠️ **This is a deliberate trap:** an i7 is *expected* to have Hyper-Threading, so the intuitive answer is 8/16. **The 9th-generation i7-9700K is the well-known exception** — Intel disabled HT on it to differentiate the i9-9900K.
+
+#### Comparing the tiers — and the caution that matters
+
+| Series | Position | Typical cores |
+|---|---|---|
+| **Core i3** | Entry level | 2–4 |
+| **Core i5** | Mainstream | 4–14 |
+| **Core i7** | High performance | 6–20 |
+| **Core i9** | Enthusiast / workstation | 8–24 |
+
+> ⚠️ **"A higher number always means a more powerful processor" is TRUE ONLY WITHIN THE SAME GENERATION.** A **13th-generation i5 comfortably beats a 6th-generation i7**, because seven years of architectural improvement, extra cores and a smaller process outweigh the tier difference. ⭐ **Read the GENERATION first, the tier second.**
+
+#### RISC vs CISC at the same clock
+
+> ### **"At the same clock speed, compared to CISC, a RISC processor works ______"** → ### ✅ **FASTER.**
+>
+> **Why: a RISC instruction is designed to complete in ONE clock cycle** (CPI ≈ 1), whereas a CISC instruction may take **several** cycles of microcode. With fixed-length instructions and a load/store architecture, RISC also **pipelines far more efficiently**, so more instructions finish per unit time.
+>
+> ⚠️ **The necessary qualification: RISC needs MORE instructions to do the same job**, so "faster per instruction" does not automatically mean "faster program". The honest statement is that **RISC achieves a lower CPI and a higher clock, at the cost of a larger instruction count** — and modern x86 chips get the best of both by **decoding CISC instructions into RISC-like micro-operations internally.**
+
+#### Buses that connect the display
+
+| Bus | Era | Use |
+|---|---|---|
+| ISA | 1980s | Legacy expansion |
+| ⭐ **PCI** | 1990s | ⭐ **General expansion cards including GRAPHICS — the bus connecting the monitor's adapter to the CPU** |
+| **AGP** | Late 1990s | A dedicated **graphics-only** port, faster than PCI |
+| ⭐ **PCI Express (PCIe)** | 2004– | ⭐ **The modern standard** — serial, point-to-point; graphics cards use **PCIe x16** |
+
+> ### **"Which bus is used to connect the monitor to the CPU?"** → ### ✅ **The PCI BUS** (in modern machines, **PCI Express**) — the graphics adapter sits on it, and the monitor attaches to that adapter via HDMI, DisplayPort or VGA.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is the 7$^{th}$ Generation intel processor?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L81)
+- [Ice Lake CPU is intel’s code name for the processor of:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L108)
+- [In core i7-8650U processor, here U means:](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L117)
+- [Compared to CISC and RISC, processors (at the same clock) are -----](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L261)
+- [Which bus used to connect the monitor to the CPU?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L315)
+- [At the same clock speed compared to CISC, RISC processor works ________.](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L324)
+- [How many core/threads does the Intel Core i7-9700K processor have?](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L425)
+
+
+
 
 ---
 
@@ -2257,6 +2711,12 @@ flowchart LR
 - [(ক) CISC and RISC processor বলতে কি বোঝেন?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L8213)
 - [What is CISC and RISC?](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L8267)
 - [(c) Fill in the gaps RISC or CISC:](../written-answers/microprocessor-and-computer-architecture.md?plain=1#L6116)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Compared to CISC and RISC, processors (at the same clock) are -----](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L261)
+- [At the same clock speed compared to CISC, RISC processor works ________.](../mcq-answers/microprocessor-and-computer-architecture.md?plain=1#L324)
+
 
 
 ---
