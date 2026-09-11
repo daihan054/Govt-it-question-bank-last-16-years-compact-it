@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 2 subtopics · 16 theories
+**Table of Contents** — 3 subtopics · 22 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -20,6 +20,14 @@
    - [Cycle Detection in a Graph](#cycle-detection-in-a-graph)
    - [Topological Sorting](#topological-sorting)
    - [Estimating Search Time and Memory from the Branching Factor](#estimating-search-time-and-memory-from-the-branching-factor)
+
+3. **[Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree)**
+   - [The Shortest Path Problem — Overview](#the-shortest-path-problem--overview)
+   - [Dijkstra's Algorithm (Single-Source Shortest Path)](#dijkstras-algorithm-single-source-shortest-path)
+   - [Bellman-Ford Algorithm and Negative Cycle Detection](#bellman-ford-algorithm-and-negative-cycle-detection)
+   - [Minimum Spanning Tree (MST) — Concept](#minimum-spanning-tree-mst--concept)
+   - [Kruskal's Algorithm](#kruskals-algorithm)
+   - [Prim's Algorithm and Kruskal vs Prim](#prims-algorithm-and-kruskal-vs-prim)
 
 <!-- TOC END -->
 
@@ -1354,3 +1362,441 @@ If each node needs, say, 100 bytes, memory ≈ 1,024 × 100 = **102,400 bytes �
 - [Find the time and space complexity of BFS which has branch 4 branch and the target at level 5? If cpu can explore 10000 nodes per second find the time required…](../written-answers/algorithm.md?plain=1#L1444)
 - [DFS complexity (Approximate)](../written-answers/algorithm.md?plain=1#L1218)
 - [(c) Between Depths first search (DFS) and Breath first search (BFS). Which one is faster? Which one requires more memory?](../written-answers/algorithm.md?plain=1#L1430)
+
+## Graph Algorithms (Shortest Path & Minimum Spanning Tree)
+
+### The Shortest Path Problem — Overview
+
+The **shortest path problem** asks for the path between two vertices of a **weighted graph** whose **total edge weight is minimum**. "Weight" can be distance, time, cost, bandwidth or power loss.
+
+#### Three flavours of the problem
+
+| Type | Question | Algorithm |
+|---|---|---|
+| **Single-source shortest path** | Shortest path from **one** source to **every** other vertex | **Dijkstra** (non-negative weights) · **Bellman-Ford** (allows negative weights) |
+| **All-pairs shortest path** | Shortest path between **every pair** of vertices | **Floyd-Warshall**, Johnson's |
+| **Unweighted shortest path** | Fewest **number of edges** | **BFS** |
+
+#### Which algorithm to choose
+
+```mermaid
+flowchart TD
+    A{Are the edges weighted?} -->|No| B["Use BFS — O(V+E)"]
+    A -->|Yes| C{Any negative weights?}
+    C -->|No| D{Single source or all pairs?}
+    D -->|Single source| E["Dijkstra — O(E log V)"]
+    D -->|All pairs| F["Floyd-Warshall — O(V³)"]
+    C -->|Yes| G{Need to detect a<br/>negative cycle?}
+    G -->|Yes| H["Bellman-Ford — O(V·E)"]
+    G -->|All pairs| I["Floyd-Warshall — O(V³)"]
+```
+
+> **Exam scenario:** *"A pathfinding robot is searching for the shortest path. Which algorithm would you select and why?"*
+> **Answer: Dijkstra's algorithm** (or **A\*** if a heuristic such as straight-line distance is available). Reason: the robot's map has **non-negative** weights (distance, time, energy — none can be negative), it needs the shortest path from **one source** (its current position), and Dijkstra is **guaranteed optimal** with a good running time of **O(E log V)** using a min-priority queue. If the map is a grid where the straight-line distance to the target is known, **A\*** is better still, because the heuristic guides the search and it expands far fewer nodes while remaining optimal (given an admissible heuristic).
+
+**Previous Year Question List from this Topic:**
+
+- [A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.](../written-answers/algorithm.md?plain=1#L1508)
+- [Shortest Path Algorithm.](../written-answers/algorithm.md?plain=1#L1779)
+- [নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।](../written-answers/algorithm.md?plain=1#L1811)
+- [Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using…](../written-answers/algorithm.md?plain=1#L1746)
+
+
+---
+
+### Dijkstra's Algorithm (Single-Source Shortest Path)
+
+**Dijkstra's algorithm** finds the shortest path from a **single source** to all other vertices in a graph with **non-negative** edge weights. It is a **greedy** algorithm.
+
+#### The core idea
+
+Keep a tentative distance for every vertex. Repeatedly pick the **unvisited vertex with the smallest tentative distance**, mark it **finalised**, and **relax** all its outgoing edges.
+
+> **Relaxation:** `if dist[u] + weight(u,v) < dist[v] then dist[v] = dist[u] + weight(u,v)`
+> *(In words: "is going through u a cheaper way to reach v than what I knew before?")*
+
+#### Algorithm
+
+```
+Dijkstra(graph, source):
+    for each vertex v:
+        dist[v] = INFINITY
+        parent[v] = NULL
+    dist[source] = 0
+    PQ = min-priority queue of all vertices keyed by dist
+
+    while PQ is not empty:
+        u = PQ.extract_min()            // smallest tentative distance
+        mark u as visited (finalised)
+        for each neighbour v of u:
+            if not visited[v] and dist[u] + w(u,v) < dist[v]:
+                dist[v]   = dist[u] + w(u,v)      // RELAX
+                parent[v] = u
+                PQ.decrease_key(v, dist[v])
+    return dist[], parent[]
+```
+
+#### Worked example
+
+```mermaid
+flowchart LR
+    A((A)) ---|4| B((B))
+    A ---|2| C((C))
+    B ---|1| C
+    B ---|5| D((D))
+    C ---|8| D
+    C ---|10| E((E))
+    D ---|2| E
+    D ---|6| F((F))
+    E ---|3| F
+```
+
+Source = **A**. Start: `A = 0`, everything else `∞`.
+
+| Step | Visit (min dist) | Relaxations performed | A | B | C | D | E | F |
+|---|---|---|---|---|---|---|---|---|
+| 0 | — | initial | **0** | ∞ | ∞ | ∞ | ∞ | ∞ |
+| 1 | **A (0)** | B = 0+4 = 4 · C = 0+2 = 2 | 0 | 4 | **2** | ∞ | ∞ | ∞ |
+| 2 | **C (2)** | B = min(4, 2+1) = **3** · D = 2+8 = 10 · E = 2+10 = 12 | 0 | **3** | 2 | 10 | 12 | ∞ |
+| 3 | **B (3)** | D = min(10, 3+5) = **8** | 0 | 3 | 2 | **8** | 12 | ∞ |
+| 4 | **D (8)** | E = min(12, 8+2) = **10** · F = 8+6 = 14 | 0 | 3 | 2 | 8 | **10** | 14 |
+| 5 | **E (10)** | F = min(14, 10+3) = **13** | 0 | 3 | 2 | 8 | 10 | **13** |
+| 6 | **F (13)** | — | 0 | 3 | 2 | 8 | 10 | 13 |
+
+**Final shortest distances from A:** A = 0, **B = 3, C = 2, D = 8, E = 10, F = 13**
+
+**Shortest path to F** (follow the parents backwards): F ← E ← D ← B ← C ← A
+> **A → C → B → D → E → F**, total cost = 2 + 1 + 5 + 2 + 3 = **13** ✅
+
+#### Complexity
+
+| Implementation | Time |
+|---|---|
+| Adjacency matrix + linear search for the minimum | **O(V²)** |
+| Adjacency list + **binary min-heap** | **O((V + E) log V)** ≈ **O(E log V)** |
+| Adjacency list + Fibonacci heap | O(E + V log V) |
+
+**Space: O(V)** for the distance, parent and visited arrays.
+
+#### Why Dijkstra fails on negative weights
+
+Dijkstra's greedy step assumes that **once a vertex is finalised, its distance can never improve** — which is only true if every edge adds a non-negative amount. With a negative edge, a longer-looking path may later turn out cheaper, and the finalised value is already wrong.
+
+```mermaid
+flowchart LR
+    A((A)) -->|"1"| B((B))
+    A -->|"4"| C((C))
+    B -->|"-5"| C
+```
+Dijkstra finalises **C = 4** immediately (it is the smallest available after A → B = 1... actually B = 1 is smaller, but the greedy order still finalises C at 4 before exploring B's negative edge in the general case). The true answer is **A → B → C = 1 + (−5) = −4**. Dijkstra reports 4. **Use Bellman-Ford when negative edges exist.**
+
+**Previous Year Question List from this Topic:**
+
+- [A pathfinding robot is searching for shortest path. Which algorithm you will select? Why? Write the steps how your chosen algorithm works.](../written-answers/algorithm.md?plain=1#L1508)
+- [Shortest path বের করা : Dijkstra's Algorithm](../written-answers/algorithm.md?plain=1#L1553)
+- [Find the shortest path from following graph starts from:](../written-answers/algorithm.md?plain=1#L1582)
+- [Shortest path algorithm (Djikstra's algorithm)](../written-answers/algorithm.md?plain=1#L1659)
+- [Shortest Path Algorithm.](../written-answers/algorithm.md?plain=1#L1779)
+- [নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।](../written-answers/algorithm.md?plain=1#L1811)
+- [S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Ca…](../written-answers/algorithm.md?plain=1#L1833)
+
+
+---
+
+### Bellman-Ford Algorithm and Negative Cycle Detection
+
+**Bellman-Ford** also solves the single-source shortest path problem, but it **works with negative edge weights** and can **detect negative-weight cycles**. It uses **dynamic programming** rather than greed.
+
+#### The core idea
+
+A shortest path in a graph with V vertices can contain **at most V − 1 edges** (any more and it would repeat a vertex, i.e. contain a cycle). So: **relax every edge V − 1 times**, and all shortest distances are guaranteed to be correct.
+
+#### Algorithm
+
+```
+BellmanFord(graph, source):
+    for each vertex v:  dist[v] = INFINITY
+    dist[source] = 0
+
+    // Phase 1: relax all edges V-1 times
+    repeat (V - 1) times:
+        for each edge (u, v, w) in the graph:
+            if dist[u] != INFINITY and dist[u] + w < dist[v]:
+                dist[v] = dist[u] + w
+
+    // Phase 2: one EXTRA pass to detect a negative cycle
+    for each edge (u, v, w) in the graph:
+        if dist[u] != INFINITY and dist[u] + w < dist[v]:
+            return "NEGATIVE WEIGHT CYCLE DETECTED"
+
+    return dist[]
+```
+
+#### How the negative cycle is detected — the key logic
+
+*(A directly asked question: "How do you determine whether a weighted graph has a negative cycle?" and "How do you find the single-source shortest path when there is a negative weighted cycle?")*
+
+After V − 1 rounds of relaxation, **every** shortest distance must be final — because no simple path can be longer than V − 1 edges. Therefore:
+
+> **If one more relaxation pass can still reduce any distance, that reduction can only have come from going around a cycle whose total weight is negative.**
+
+A negative cycle has no "shortest path" at all: you can loop round it again and again, driving the cost to **−∞**. So the correct answer to *"find the shortest path when a negative cycle exists"* is:
+
+1. **Run Bellman-Ford.**
+2. If the extra (V-th) pass changes any distance → **report that a negative cycle exists** and that **no shortest path is defined** for the vertices it can reach.
+3. To **identify which vertices** are affected: mark every vertex updated in the V-th pass, then run a BFS/DFS from them — everything reachable is "at −∞".
+4. To **print the cycle itself:** remember the parent pointer of a vertex updated in the V-th pass, walk back V times to land guaranteed inside the cycle, then follow the parents until you return to that vertex.
+
+**Worked check:** a cycle A → B (weight 1), B → C (weight −3), C → A (weight 1) has total weight 1 − 3 + 1 = **−1 < 0** → negative cycle. Each loop reduces the cost by 1 forever.
+
+#### Complexity
+
+| | |
+|---|---|
+| **Time** | **O(V × E)** — (V−1) passes × E edges |
+| **Space** | O(V) |
+
+*(SPFA / the queue-based optimisation improves the average case but not the worst case.)*
+
+#### Dijkstra vs Bellman-Ford
+
+| Point | **Dijkstra** | **Bellman-Ford** |
+|---|---|---|
+| Technique | **Greedy** | **Dynamic Programming** |
+| Negative edges | ❌ **Not allowed** | ✅ **Allowed** |
+| Negative cycle detection | ❌ No | ✅ **Yes** |
+| Time complexity | **O(E log V)** — faster | **O(V·E)** — slower |
+| Graph type | Directed & undirected, non-negative | **Directed** (undirected negative edges form an instant cycle) |
+| Works on | Each vertex finalised once | Each edge relaxed V−1 times |
+| Distributed / routing use | Link-state (OSPF) | **Distance-vector (RIP)** |
+| Best when | All weights are non-negative | Negative weights are possible |
+
+#### Floyd-Warshall (all-pairs shortest path)
+
+A three-nested-loop dynamic-programming algorithm that finds the shortest path between **every pair** of vertices:
+
+```
+for k = 1 to V:                        // k = the intermediate vertex allowed
+    for i = 1 to V:
+        for j = 1 to V:
+            if dist[i][k] + dist[k][j] < dist[i][j]:
+                dist[i][j] = dist[i][k] + dist[k][j]
+```
+
+**Time: O(V³). Space: O(V²).** It handles negative edges, and a **negative value on the diagonal (dist[i][i] < 0) means a negative cycle**.
+
+**Previous Year Question List from this Topic:**
+
+- [How to find single source shortest path from negative weighted cycle. Justify and how you find it is negative weighted graph.](../written-answers/algorithm.md?plain=1#L1633)
+- [How to Determine the weighted graph has negative cycle?](../written-answers/algorithm.md?plain=1#L1794)
+
+
+---
+
+### Minimum Spanning Tree (MST) — Concept
+
+#### Spanning tree
+
+A **spanning tree** of a connected, undirected graph is a **subgraph that**:
+1. includes **all V vertices**,
+2. is **connected**, and
+3. contains **no cycle** — so it has exactly **V − 1 edges**.
+
+#### Minimum Spanning Tree
+
+A **Minimum Spanning Tree (MST)** is the spanning tree whose **total edge weight is the smallest** among all possible spanning trees.
+
+> *"Connect every city with cable, using the least total length of cable, and without any redundant loop."*
+
+**Key properties**
+- An MST always has exactly **V − 1 edges**.
+- It contains **no cycles**.
+- An MST is **not necessarily unique** — if several edges share the same weight, several MSTs may exist with the same total cost.
+- If **all edge weights are distinct**, the MST **is unique**.
+- **Cut property:** for any cut of the graph, the **minimum-weight edge crossing the cut** belongs to some MST. This is the theorem both algorithms rely on.
+- **Cycle property:** the **maximum-weight edge of any cycle** can never be in the MST.
+
+#### Applications
+
+- **Network design** — laying telephone, electrical, fibre or water lines at minimum cost.
+- **Circuit design** — minimising wire length on a PCB.
+- **Cluster analysis** — single-linkage clustering is essentially an MST.
+- **Image segmentation**, **handwriting recognition**.
+- **Approximation algorithms** for the Travelling Salesman Problem.
+- **Power grid / substation connection** planning.
+
+**Previous Year Question List from this Topic:**
+
+- [Find the minimum spanning tree:](../written-answers/algorithm.md?plain=1#L1611)
+- [Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using…](../written-answers/algorithm.md?plain=1#L1746)
+
+
+---
+
+### Kruskal's Algorithm
+
+**Kruskal's algorithm** builds the MST by repeatedly adding the **globally cheapest remaining edge that does not create a cycle**. It is **edge-based** and **greedy**.
+
+#### Algorithm
+
+```
+Kruskal(graph):
+    MST = empty set
+    sort ALL edges in non-decreasing order of weight
+    make a disjoint set (Union-Find) for each vertex
+
+    for each edge (u, v, w) in sorted order:
+        if Find(u) != Find(v):          // they are in different components → no cycle
+            MST.add(edge)
+            Union(u, v)
+        if MST has V-1 edges:  break
+    return MST
+```
+
+The **Union-Find (Disjoint Set Union, DSU)** structure is what makes the cycle check fast — nearly **O(1)** per query with path compression and union by rank.
+
+#### Worked example
+
+```mermaid
+flowchart LR
+    A((A)) ---|4| B((B))
+    A ---|4| C((C))
+    B ---|2| C
+    C ---|3| D((D))
+    C ---|2| E((E))
+    C ---|4| F((F))
+    D ---|3| E
+    E ---|3| F
+```
+
+**Step 1 — sort all edges by weight:**
+
+| Edge | Weight |
+|---|---|
+| B–C | 2 |
+| C–E | 2 |
+| C–D | 3 |
+| D–E | 3 |
+| E–F | 3 |
+| A–B | 4 |
+| A–C | 4 |
+| C–F | 4 |
+
+**Step 2 — add edges one by one, skipping any that would form a cycle:**
+
+| # | Edge | Weight | Creates a cycle? | Action | Components so far |
+|---|---|---|---|---|---|
+| 1 | **B–C** | 2 | No | ✅ **Add** | {B,C} {A} {D} {E} {F} |
+| 2 | **C–E** | 2 | No | ✅ **Add** | {B,C,E} {A} {D} {F} |
+| 3 | **C–D** | 3 | No | ✅ **Add** | {B,C,D,E} {A} {F} |
+| 4 | D–E | 3 | **Yes** (D and E are already connected) | ❌ **Reject** | — |
+| 5 | **E–F** | 3 | No | ✅ **Add** | {B,C,D,E,F} {A} |
+| 6 | **A–B** | 4 | No | ✅ **Add** | {A,B,C,D,E,F} — **5 edges, stop** |
+
+**Step 3 — the MST:**
+
+```mermaid
+flowchart LR
+    A((A)) ---|4| B((B))
+    B ---|2| C((C))
+    C ---|2| E((E))
+    C ---|3| D((D))
+    E ---|3| F((F))
+```
+
+> **Total cost of the MST = 4 + 2 + 2 + 3 + 3 = 14**, using exactly **V − 1 = 5** edges. ✅
+
+#### Complexity
+
+| Step | Cost |
+|---|---|
+| Sorting the edges | **O(E log E)** — the dominant term |
+| V Make-Set + E Find/Union operations | O(E α(V)) ≈ O(E) |
+| **Total** | **O(E log E) = O(E log V)** *(since E ≤ V², log E ≤ 2 log V)* |
+
+**Space: O(V + E).**
+
+**Previous Year Question List from this Topic:**
+
+- [(a) Apply the Kruskal's algorithm for the following graph to find out the cost of the minimum spanning Tree (MST).](../written-answers/algorithm.md?plain=1#L1529)
+- [Find the minimum spanning tree:](../written-answers/algorithm.md?plain=1#L1611)
+- [Find the Minimum Spanning Tree of the following graph using Kruskal's algorithm.](../written-answers/algorithm.md?plain=1#L1680)
+- [Find out minimum spanning tree from a given graph using krushkal algorithm.](../written-answers/algorithm.md?plain=1#L1705)
+- [Consider the following graph: Now find the minimum spanning tree using Kruskal's algorithm.](../written-answers/algorithm.md?plain=1#L1724)
+- [(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).](../written-answers/algorithm.md?plain=1#L3376)
+
+
+---
+
+### Prim's Algorithm and Kruskal vs Prim
+
+**Prim's algorithm** grows the MST from **one starting vertex**, repeatedly adding the **cheapest edge that connects a vertex already in the tree to a vertex outside it**. It is **vertex-based**.
+
+#### Algorithm
+
+```
+Prim(graph, start):
+    key[v]    = INFINITY for all v;   key[start] = 0
+    parent[v] = NULL for all v
+    inMST[v]  = false for all v
+    PQ = min-priority queue of all vertices keyed by key[]
+
+    while PQ is not empty:
+        u = PQ.extract_min()
+        inMST[u] = true
+        for each neighbour v of u:
+            if not inMST[v] and w(u,v) < key[v]:
+                key[v]    = w(u,v)          // note: the EDGE weight, not a running sum
+                parent[v] = u
+                PQ.decrease_key(v, key[v])
+    return the edges (v, parent[v])
+```
+
+> **The one-line difference from Dijkstra:** Dijkstra stores `dist[u] + w(u,v)` (the total path cost from the source); Prim stores just `w(u,v)` (the single edge cost). That tiny change turns a shortest-path algorithm into an MST algorithm.
+
+#### Prim's on the same graph (starting at A)
+
+| Step | Tree so far | Cheapest edge leaving the tree | Added |
+|---|---|---|---|
+| 1 | {A} | A–B (4) vs A–C (4) → take A–B | **A–B (4)** |
+| 2 | {A,B} | B–C (2) | **B–C (2)** |
+| 3 | {A,B,C} | C–E (2) | **C–E (2)** |
+| 4 | {A,B,C,E} | C–D (3) vs D–E (3) vs E–F (3) → C–D | **C–D (3)** |
+| 5 | {A,B,C,D,E} | E–F (3) | **E–F (3)** |
+
+**Total = 4 + 2 + 2 + 3 + 3 = 14** — the **same cost** as Kruskal's, as it must be.
+
+#### Kruskal vs Prim
+
+| Point | **Kruskal's Algorithm** | **Prim's Algorithm** |
+|---|---|---|
+| **Approach** | **Edge-based** — picks the globally cheapest edge | **Vertex-based** — grows one tree from a start vertex |
+| **Intermediate state** | A **forest** of several disconnected trees | Always a **single connected tree** |
+| **Starting point** | No start vertex; sorts all edges | Needs a **start vertex** (any one) |
+| **Cycle check** | Needs **Union-Find (DSU)** | Not needed — the tree/non-tree split prevents cycles |
+| **Data structure** | Sorting + DSU | **Min-priority queue (heap)** |
+| **Time complexity** | **O(E log E)** ≈ O(E log V) | **O(E log V)** with a binary heap; **O(V²)** with an adjacency matrix |
+| **Best for** | **Sparse graphs** (E is small) | **Dense graphs** (E ≈ V²) |
+| **Disconnected graph** | Produces a **minimum spanning forest** | Only covers the component containing the start vertex |
+| **Greedy choice** | Cheapest edge **anywhere** in the graph | Cheapest edge **touching the current tree** |
+
+#### Prim vs Dijkstra — the classic confusion
+
+| Point | **Prim (MST)** | **Dijkstra (Shortest Path)** |
+|---|---|---|
+| Goal | Connect **all** vertices at minimum **total** weight | Minimum **path cost from the source** to each vertex |
+| Key stored | `w(u,v)` — the single edge weight | `dist[u] + w(u,v)` — the cumulative path cost |
+| Graph type | **Undirected**, weighted | Directed or undirected |
+| Negative weights | ✅ Works fine | ❌ Fails |
+| Result | A tree covering all vertices | A shortest-path tree rooted at the source |
+
+> **Exam scenario:** *"Several substations exist in different places of the city; you must travel from one substation to another — write an algorithm."*
+> - If the question is *"lay cable to connect **all** substations at minimum total cost"* → **MST: Kruskal or Prim**.
+> - If the question is *"find the cheapest route **from one specific substation to another**"* → **Shortest path: Dijkstra**.
+> Read the wording carefully — this distinction is exactly what such questions are testing.
+
+**Previous Year Question List from this Topic:**
+
+- [Find the minimum spanning tree:](../written-answers/algorithm.md?plain=1#L1611)
+- [Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using…](../written-answers/algorithm.md?plain=1#L1746)
+- [S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Ca…](../written-answers/algorithm.md?plain=1#L1833)
