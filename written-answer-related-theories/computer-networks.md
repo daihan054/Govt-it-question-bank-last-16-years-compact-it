@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 4 subtopics · 13 theories
+**Table of Contents** — 10 subtopics · 24 theories
 
 1. **[Subnetting & IP Addressing](#subnetting--ip-addressing)**
    - [IPv4 Addressing — Structure and Classes](#ipv4-addressing--structure-and-classes)
@@ -21,6 +21,29 @@
 4. **[Networking Devices](#networking-devices)**
    - [Hub, Switch, Router, Bridge, Repeater and Gateway](#hub-switch-router-bridge-repeater-and-gateway)
    - [Collision Domains and Broadcast Domains](#collision-domains-and-broadcast-domains)
+
+5. **[Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https)**
+   - [DNS — Domain Name System](#dns--domain-name-system)
+   - [DHCP — Dynamic Host Configuration Protocol](#dhcp--dynamic-host-configuration-protocol)
+   - [Other Application Layer Protocols and Troubleshooting](#other-application-layer-protocols-and-troubleshooting)
+
+6. **[Transport Layer (TCP & UDP)](#transport-layer-tcp--udp)**
+   - [TCP — Transmission Control Protocol](#tcp--transmission-control-protocol)
+   - [UDP — User Datagram Protocol](#udp--user-datagram-protocol)
+
+7. **[Physical Layer & Transmission Media (Cables & Wiring)](#physical-layer--transmission-media-cables--wiring)**
+   - [Transmission Media — Guided and Unguided](#transmission-media--guided-and-unguided)
+
+8. **[Multiplexing & Bandwidth](#multiplexing--bandwidth)**
+   - [Multiplexing — Concept and Types](#multiplexing--concept-and-types)
+   - [Bandwidth, Data Rate and Multiplexing Calculations](#bandwidth-data-rate-and-multiplexing-calculations)
+
+9. **[Routing Protocols & Route Configuration](#routing-protocols--route-configuration)**
+   - [Routing — Concepts, Static and Dynamic](#routing--concepts-static-and-dynamic)
+   - [Routing Protocols — Distance Vector, Link State and BGP](#routing-protocols--distance-vector-link-state-and-bgp)
+
+10. **[Network Address Translation (NAT)](#network-address-translation-nat)**
+   - [NAT and PAT](#nat-and-pat)
 
 <!-- TOC END -->
 
@@ -1516,3 +1539,1432 @@ A **Wireless Access Point (WAP/AP)** is a **Layer 2 device that allows wireless 
 
 - [How many collision domians are created when you segment a network with a 12-port switch?](../written-answers/computer-networks.md?plain=1#L4451)
 - [Differentiate between Collision Domain and Broadcast Domain in computer network. What is the function of DNS and DHCP?](../written-answers/computer-networks.md?plain=1#L4495)
+
+## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
+
+### DNS — Domain Name System
+
+#### What is DNS?
+
+The **Domain Name System (DNS)** is the **distributed, hierarchical naming system of the Internet that translates human-readable DOMAIN NAMES into machine-usable IP ADDRESSES** (and back).
+
+> **DNS is often called "the phone book of the Internet"** — people remember `www.bank.com.bd`; computers need `203.112.18.25`. DNS is the directory that converts one into the other.
+
+#### Functions of DNS
+
+1. **Name resolution** — domain name → IP address (**forward lookup**).
+2. **Reverse resolution** — IP address → domain name (**reverse lookup**).
+3. **Mail routing** — **MX records** tell senders which server handles a domain's email.
+4. **Load distribution** — returning several IPs for one name, or the nearest server (GeoDNS).
+5. **Service discovery** — SRV records locate services.
+6. **Aliasing** — CNAME records point one name at another.
+7. **Domain authentication** — **SPF, DKIM and DMARC** records are stored in DNS.
+
+#### The DNS hierarchy
+
+```mermaid
+flowchart TD
+    R["ROOT ( . )<br/>13 logical root server clusters worldwide"] --> T1["TLD: .com"]
+    R --> T2["TLD: .org"]
+    R --> T3["ccTLD: .bd"]
+    T3 --> S1["Second level: .com.bd"]
+    T3 --> S2["Second level: .gov.bd"]
+    S1 --> D1["bank.com.bd<br/>(authoritative name server)"]
+    D1 --> H1["www.bank.com.bd"]
+    D1 --> H2["mail.bank.com.bd"]
+```
+
+**Reading a fully-qualified domain name** — `www.bank.com.bd.` is read **RIGHT to LEFT**: `.` (root) → `.bd` (country-code TLD) → `.com.bd` (second level) → `bank` (the domain) → `www` (the host).
+
+#### The four types of DNS server
+
+| Server | Role |
+|---|---|
+| **DNS Resolver** (recursive resolver) | The server your computer asks. It does **all the work on your behalf** — querying the root, TLD and authoritative servers in turn — and returns the final answer. Usually run by your **ISP**, or a public one (**8.8.8.8** Google, **1.1.1.1** Cloudflare) |
+| **Root name server** | Knows only **which server handles each TLD**. There are **13 logical root servers** (letters A–M), implemented as hundreds of physical servers via anycast |
+| **TLD name server** | Knows which **authoritative server** holds each domain under its TLD (`.com`, `.bd`) |
+| **Authoritative name server** | Holds the **actual DNS records** for a domain — the final, definitive answer |
+
+#### How DNS resolution works — the full trace
+
+> *Resolving `www.bank.com.bd`:*
+
+```mermaid
+sequenceDiagram
+    participant B as Browser
+    participant C as Local cache / OS
+    participant R as Recursive Resolver (ISP)
+    participant RT as Root server
+    participant T as .bd TLD server
+    participant A as Authoritative server for bank.com.bd
+    B->>C: 1 . Check the browser and OS cache
+    Note over C: If found → return immediately (no network query)
+    C->>R: 2 . Query www.bank.com.bd
+    Note over R: Check the resolver's own cache first
+    R->>RT: 3 . "Who handles .bd?"
+    RT->>R: 4 . "Ask the .bd TLD server at x.x.x.x"
+    R->>T: 5 . "Who is authoritative for bank.com.bd?"
+    T->>R: 6 . "Ask ns1.bank.com.bd at y.y.y.y"
+    R->>A: 7 . "What is the A record for www.bank.com.bd?"
+    A->>R: 8 . "203.112.18.25" (with a TTL)
+    R->>C: 9 . Return the answer AND CACHE it for the TTL
+    C->>B: 10 . 203.112.18.25
+    Note over B: The browser now opens a TCP connection to that IP
+```
+
+#### Recursive vs Iterative query
+
+| Point | **Recursive query** | **Iterative query** |
+|---|---|---|
+| **Who does the work** | The **resolver does everything** and returns the final answer | The **client must follow each referral itself** |
+| **Response** | The final IP address, or an error | A **referral** — "ask this other server" |
+| **Used between** | **Client → Resolver** | **Resolver → Root/TLD/Authoritative** |
+| **Load** | Heavy on the resolver | Light on each server |
+
+#### Forward vs Reverse DNS lookup
+
+| Point | **Forward lookup** | **Reverse lookup** |
+|---|---|---|
+| **Direction** | **Domain name → IP address** | **IP address → domain name** |
+| **Record type** | **A** (IPv4) / **AAAA** (IPv6) | **PTR** (pointer) |
+| **Zone** | The normal domain zone | The special **`in-addr.arpa`** zone (IPv6: `ip6.arpa`) |
+| **Example** | `www.bank.com.bd` → `203.112.18.25` | `203.112.18.25` → `25.18.112.203.in-addr.arpa` → `www.bank.com.bd` |
+| **Used for** | **Every normal browsing and connection** | **Anti-spam verification of mail servers**, logging, troubleshooting, security investigation |
+
+> **Why reverse DNS matters:** mail servers routinely **reject email from a sending IP that has no matching PTR record**, because legitimate mail servers always have one and spam sources usually do not. It is one of the cheapest anti-spam checks available.
+
+#### Common DNS record types
+
+| Record | Purpose |
+|---|---|
+| **A** | Maps a name to an **IPv4** address |
+| **AAAA** | Maps a name to an **IPv6** address |
+| **CNAME** | An **alias** pointing one name to another name |
+| **MX** | The **mail server** for the domain, with a priority |
+| **NS** | The **authoritative name servers** for the zone |
+| **PTR** | **Reverse** mapping — IP to name |
+| **SOA** | **Start of Authority** — the zone's master record (serial, refresh, TTL) |
+| **TXT** | Free text — used for **SPF, DKIM, DMARC** and domain-ownership verification |
+| **SRV** | Locates a **service** (host and port) |
+| **CAA** | Specifies which **CAs** may issue certificates for the domain |
+
+#### DNS caching — server vs cache
+
+| Point | **DNS Server (authoritative)** | **DNS Cache** |
+|---|---|---|
+| **What it holds** | The **original, authoritative records** for its zone | A **temporary COPY** of answers recently looked up |
+| **Source of truth** | ✅ **Yes** | ❌ No — it is a copy that may become stale |
+| **Location** | The domain owner's / ISP's server | The **browser, the OS, the router and the resolver** |
+| **Lifetime** | Permanent until changed by the administrator | Limited by the record's **TTL (Time To Live)** |
+| **Answers from** | Its own zone file | Memory |
+| **Purpose** | To **define** the mapping | To **speed up** repeated lookups |
+
+**The importance of DNS caching to the World Wide Web:**
+1. **Speed** — a cached answer takes **microseconds** instead of the 20–200 ms of a full recursive lookup. Every web page triggers dozens of DNS lookups.
+2. **Massively reduced load** on the root and TLD servers — without caching they would receive **billions of extra queries per second** and the Internet would not function.
+3. **Bandwidth saving** across the whole network.
+4. **Resilience** — cached entries keep working briefly even if an authoritative server goes down.
+5. **Lower cost** for ISPs and users.
+
+**The trade-off:** a change takes up to the **TTL** to reach everyone (which is why administrators **lower the TTL before a planned migration**), and caches can be **poisoned** — the attack described in the security chapter.
+
+#### Why DNS uses UDP
+
+> ### "Why does DNS primarily use UDP instead of TCP?"
+>
+> **DNS uses UDP on port 53 for ordinary queries, because:**
+>
+> 1. **Speed — the decisive reason.** A DNS query and its answer are **one small packet each**. Using TCP would require a **three-way handshake (3 extra packets) before any data, and a four-way teardown afterwards** — turning a 1-round-trip operation into 4 or more. Since **every** web page load begins with DNS, that overhead would be added to every user action on the Internet.
+> 2. **Small message size.** A query and response traditionally fit within **512 bytes**, a single UDP datagram — there is nothing to segment or reorder, so TCP's machinery is pure waste.
+> 3. **Statelessness and scalability.** A UDP server keeps **no connection state**, so a single root or TLD server can handle **enormously more queries** with the same hardware. TCP connections consume memory per client.
+> 4. **Retransmission is cheap and simple.** If a UDP response is lost, the resolver simply **asks again** — or asks a different server. There is no need for TCP's sequence numbers and acknowledgements.
+> 5. **Lower resource consumption** on both ends.
+>
+> **When DNS DOES use TCP (port 53):**
+> - **Zone transfers (AXFR/IXFR)** between primary and secondary servers — these are large and must be reliable.
+> - **Responses larger than 512 bytes** — the server sets the **TC (truncated) flag** and the resolver **retries over TCP**. This is now common with **DNSSEC** signatures and large record sets.
+> - **DNS over TLS (DoT, port 853)** and **DNS over HTTPS (DoH, port 443)** — the modern encrypted forms, which are TCP-based.
+>
+> **So the statement "TCP/IP is used in DNS" is also correct** — DNS runs over the TCP/IP protocol suite, and uses **both** transport protocols: **UDP for speed on normal queries, TCP for reliability on large transfers.**
+
+#### How a browser retrieves the IP address from a URL
+
+1. The user enters `https://www.bank.com.bd/login`.
+2. The browser **parses the URL** into protocol (`https`), host (`www.bank.com.bd`), port (443 implied) and path (`/login`).
+3. It checks its **own DNS cache**, then the **OS cache**, then the **hosts file**.
+4. If not found, it asks the configured **recursive resolver**.
+5. The resolver performs the **root → TLD → authoritative** sequence (or answers from its cache).
+6. The **A/AAAA record** is returned and cached at every level according to the **TTL**.
+7. The browser opens a **TCP connection** to that IP on **port 443** and performs the **TLS handshake**.
+8. It sends the **HTTP GET /login** request and renders the response.
+
+#### Web caching
+
+**Web caching** stores **copies of web content closer to the user**, so that repeated requests are served without going back to the origin server.
+
+| Type | Where |
+|---|---|
+| **Browser cache** | On the user's own device |
+| **Proxy cache** | On an organisation's or ISP's proxy server |
+| **CDN cache** | On edge servers distributed worldwide (Cloudflare, Akamai) |
+| **Reverse proxy cache** | In front of the origin server (Nginx, Varnish) |
+
+**Why we use web caching:** **much faster page loads** (content is served from nearby) · **reduced bandwidth cost** for both the ISP and the website · **reduced load on the origin server**, so it can serve more users with less hardware · **better availability** — cached content survives a brief origin outage · and **lower latency** for geographically distant users. The trade-offs are **staleness** (managed with `Cache-Control`, `ETag` and expiry headers) and the fact that **personalised or dynamic content cannot be cached** the same way.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the DNS function.](../written-answers/computer-networks.md?plain=1#L5054)
+- [Why does the Domain Name System (DNS) primarily use UDP as its transport layer protocol instead of TCP? Describe the sequence of events that take place during t…](../written-answers/computer-networks.md?plain=1#L5083)
+- [SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?](../written-answers/computer-networks.md?plain=1#L5208)
+- [What is DNS? What is forward and reverse lookup DNS?](../written-answers/computer-networks.md?plain=1#L5232)
+- [Write a command how to find DNS www.egcb.gov.bd and which protocol uses?](../written-answers/computer-networks.md?plain=1#L5286)
+- [(a) How does a browser retrieve IP address from URL?](../written-answers/computer-networks.md?plain=1#L5346)
+- [(d) What is DNS? “TCP/IP is used in DNS”- justify the statement.](../written-answers/computer-networks.md?plain=1#L5367)
+- [(b) How is Hierarchical DNS resolution done in Domain Naming System? Give an example resolution for xyz.uv.gov.bd domain name.](../written-answers/computer-networks.md?plain=1#L5387)
+- [What is Web cashing? Why we use web cashing?](../written-answers/computer-networks.md?plain=1#L5427)
+- [What is DNS Resolver?](../written-answers/computer-networks.md?plain=1#L5459)
+- [DNS server এবং DHCP server এর কাজ কী?](../written-answers/computer-networks.md?plain=1#L5483)
+- [(a) Differentiate between DNS server and caches.](../written-answers/computer-networks.md?plain=1#L5522)
+- [What is the difference between DNS server and caches? What is the importance of DNS cache in World Wide Web?](../written-answers/computer-networks.md?plain=1#L5541)
+- [a. What is SQL, b. What is API c. What is recursion d. DNS port number?](../written-answers/computer-networks.md?plain=1#L5595)
+
+
+---
+
+### DHCP — Dynamic Host Configuration Protocol
+
+#### What is DHCP?
+
+**DHCP (Dynamic Host Configuration Protocol)** is an application-layer protocol that **automatically assigns IP addresses and other network configuration parameters to devices when they join a network**, removing the need for manual configuration.
+
+**What DHCP provides to a client:** the **IP address**, the **subnet mask**, the **default gateway**, the **DNS server addresses**, the **lease duration**, and optionally the domain name, NTP server, WINS server and TFTP/boot server.
+
+> **The answer to "which server dynamically assigns IP addresses to PCs on a LAN?" is the DHCP SERVER.**
+
+#### How DHCP works — the DORA process
+
+```mermaid
+sequenceDiagram
+    participant C as Client (new device, no IP)
+    participant S as DHCP Server
+    C->>S: 1 . DHCP DISCOVER<br/>BROADCAST (255.255.255.255) — "Is there a DHCP server?"
+    S->>C: 2 . DHCP OFFER<br/>"I offer 192.168.1.50, mask /24, gateway .1, DNS .1, lease 24h"
+    C->>S: 3 . DHCP REQUEST<br/>BROADCAST — "I accept the offer from THIS server"<br/>(broadcast so other servers know to withdraw their offers)
+    S->>C: 4 . DHCP ACK<br/>"Confirmed — the address is yours for the lease period"
+    Note over C: The client configures its interface and may send<br/>a gratuitous ARP to check for conflicts
+```
+
+> **Remember the four steps as DORA: Discover → Offer → Request → Acknowledge.**
+>
+> **Why are steps 1 and 3 broadcasts?** Because the client **has no IP address yet** and does not know the server's address, so it must shout to the whole segment. **UDP port 67** is the server, **port 68** the client.
+
+#### Lease renewal
+
+The client attempts to renew at **50 % of the lease (T1)** by unicasting a REQUEST to its server; if that fails, it tries again at **87.5 % (T2)** by broadcasting to any server; if the lease expires entirely, it must start DORA again.
+
+#### DHCP across subnets — the relay agent
+
+Because DHCP DISCOVER is a **broadcast**, and **routers do not forward broadcasts**, a DHCP server on another subnet would never hear it. The solution is a **DHCP Relay Agent** (the Cisco `ip helper-address` command) configured on the router, which **converts the broadcast into a unicast** aimed at the real DHCP server, and relays the reply back.
+
+#### Advantages and disadvantages
+
+**Advantages:** **no manual configuration** — a network of 500 devices configures itself · **no IP conflicts** — the server tracks every allocation · **efficient reuse** of addresses through leases · **centralised management** — change the DNS server once and every client picks it up · **mobility** — a laptop gets a valid address on any network it joins · **fewer errors** than manual typing.
+
+**Disadvantages:** the DHCP server is a **single point of failure** (mitigated by redundant servers) · **security risks** — **rogue DHCP servers** and **DHCP starvation** attacks (mitigated by **DHCP snooping**) · addresses **change over time**, so servers and printers need **reservations or static addresses** · and the broadcast traffic it generates.
+
+> **APIPA:** if a Windows client finds **no DHCP server**, it self-assigns an address from **169.254.0.0/16**. Seeing a 169.254.x.x address is therefore a **definite diagnostic sign that DHCP has failed** — check the cable, the switch port, and the DHCP server.
+
+#### Static vs Dynamic IP addressing
+
+| Point | **Static IP** | **Dynamic IP (DHCP)** |
+|---|---|---|
+| **Assigned by** | **Manually**, by an administrator | **Automatically**, by a DHCP server |
+| **Changes** | **Never** (until changed by hand) | **Changes** at each lease renewal or reconnection |
+| **Configuration effort** | **High** — every device by hand | **None** |
+| **Risk of conflict** | **High** — human error | **Very low** |
+| **Cost** | Public static IPs cost more from an ISP | Included |
+| **Suitable for** | **Servers, routers, printers, CCTV, VoIP phones** — anything that must be found at a known address | **Workstations, laptops, phones, guests** |
+| **Remote access / hosting** | ✅ **Essential** — you cannot host a service on an address that changes | ❌ Difficult (needs dynamic DNS) |
+| **Security** | Easier to apply IP-based rules; but also easier to target | Address changes offer slight obscurity |
+
+**Previous Year Question List from this Topic:**
+
+- [What is DHCP?](../written-answers/computer-networks.md?plain=1#L5118)
+- [Which server can be used to dinamically assign IP address to the PCs is a LAN?](../written-answers/computer-networks.md?plain=1#L5164)
+- [Explain how do DHCP work?](../written-answers/computer-networks.md?plain=1#L5175)
+- [SMTP, DNS, DHCP, NAT এর কাজ কি লিখ?](../written-answers/computer-networks.md?plain=1#L5208)
+- [DNS server এবং DHCP server এর কাজ কী?](../written-answers/computer-networks.md?plain=1#L5483)
+- [Write short notes on DHCP and SMTP.](../written-answers/computer-networks.md?plain=1#L5568)
+- [What is static IP Address and dynamic IP Address?](../written-answers/computer-networks.md?plain=1#L1819)
+
+
+---
+
+### Other Application Layer Protocols and Troubleshooting
+
+#### The main application-layer protocols
+
+| Protocol | Port | Transport | Purpose |
+|---|---|---|---|
+| **HTTP** | **80** | TCP | Web page transfer |
+| **HTTPS** | **443** | TCP | Encrypted web transfer (HTTP over TLS) |
+| **FTP** | **20 (data), 21 (control)** | TCP | File transfer |
+| **TFTP** | 69 | **UDP** | Trivial file transfer (router configs, PXE boot) |
+| **SSH** | **22** | TCP | **Secure remote login** and secure file transfer |
+| **Telnet** | **23** | TCP | Remote login — **UNENCRYPTED, obsolete** |
+| **SMTP** | **25** (587 submission) | TCP | **Sending** email |
+| **POP3** | **110** (995 secure) | TCP | **Downloading** email |
+| **IMAP** | **143** (993 secure) | TCP | **Accessing** email on the server |
+| **DNS** | **53** | **UDP** (TCP for large/zone transfer) | Name resolution |
+| **DHCP** | **67 (server), 68 (client)** | **UDP** | Automatic IP configuration |
+| **SNMP** | **161 / 162 (trap)** | UDP | Network device management |
+| **NTP** | 123 | UDP | Time synchronisation |
+| **LDAP** | 389 (636 secure) | TCP | Directory access |
+| **RDP** | 3389 | TCP | Windows remote desktop |
+
+> **"Which protocol is used for connecting to a remote computer?"** → **SSH (port 22)** for secure command-line access on Linux/Unix; **RDP (port 3389)** for a Windows graphical desktop; **Telnet (23)** historically, but it is **insecure and must not be used**. **VNC** is another graphical option.
+
+#### ICMP
+
+**ICMP (Internet Control Message Protocol)** is a **Network-layer (Layer 3)** protocol used for **error reporting and network diagnostics** — not for carrying user data.
+
+**Message types:** Echo Request / Echo Reply (**used by `ping`**), Destination Unreachable, Time Exceeded (**used by `traceroute`**), Source Quench, Redirect.
+
+> ### "Which protocol does the `ping` tool use?"
+> ### ✅ **ICMP** — specifically **ICMP Echo Request (Type 8)** and **ICMP Echo Reply (Type 0)**.
+>
+> `ping` sends an Echo Request to the target and measures the time until the Echo Reply returns, reporting **reachability, round-trip time and packet loss**. Note that ICMP has **no port numbers**, because it is a Layer 3 protocol that sits directly on IP — this is why "which port does ping use?" is a trick question: **none**.
+
+**`traceroute`/`tracert`** works by sending packets with **deliberately small TTL values** (1, 2, 3 …). Each router that decrements the TTL to zero returns an **ICMP Time Exceeded** message, revealing its identity — so the tool maps the entire path hop by hop.
+
+#### A worked troubleshooting scenario
+
+> *A government portal connected to multiple international ISPs is slow or unreachable for some users.*
+
+**Diagnose in layers, from the bottom up:**
+
+| Step | Check | Command / tool |
+|---|---|---|
+| 1 | **Is the host itself up?** | `ping 127.0.0.1`, check interface status |
+| 2 | **Is the local network reachable?** | `ping <default gateway>` |
+| 3 | **Is DNS resolving correctly and consistently?** | `nslookup portal.gov.bd`, compare answers from several resolvers; check TTL and propagation |
+| 4 | **Where does the path break or slow down?** | `tracert` / `mtr` **from several different networks** — this is what reveals an ISP-specific problem |
+| 5 | **Is one ISP path bad?** | Compare traceroutes via each upstream; check **BGP** advertisements and route preference |
+| 6 | **Is the server overloaded?** | CPU, memory, connection count, web server logs |
+| 7 | **Is it a firewall/ACL issue?** | Test the specific port with `telnet host 443`, review firewall logs |
+| 8 | **Is it a certificate or TLS problem?** | Check expiry, chain completeness and supported TLS versions |
+| 9 | **Is it a DDoS?** | Traffic volume and pattern analysis |
+| 10 | **Fix and verify** | Correct DNS records/TTL, adjust BGP routing, add a CDN, scale the server, and re-test from multiple vantage points |
+
+**Previous Year Question List from this Topic:**
+
+- [(http://BSCPL.bd.gov)(http://BSCPL.bd.gov) is connected to multiple international ISPs, and users can successfully access other websites, but they are unable to…](../written-answers/computer-networks.md?plain=1#L4975)
+- [Which protocol is used by the ping tools?](../written-answers/computer-networks.md?plain=1#L5144)
+- [What is ICMP, SMTP, POP server, Boot loader and Clustering?](../written-answers/computer-networks.md?plain=1#L5258)
+- [For the following description of various IP networking protocols write down the protocol name and its full form in the following table:](../written-answers/computer-networks.md?plain=1#L5318)
+- [দূরবর্তী কম্পিউটার সংযোগ এর জন্য কোন প্রোটোকল ব্যবহার করা হয়?](../written-answers/computer-networks.md?plain=1#L5504)
+- [Write short notes on DHCP and SMTP.](../written-answers/computer-networks.md?plain=1#L5568)
+- [a. What is SQL, b. What is API c. What is recursion d. DNS port number?](../written-answers/computer-networks.md?plain=1#L5595)
+
+
+---
+
+## Transport Layer (TCP & UDP)
+
+### TCP — Transmission Control Protocol
+
+**TCP** is a **connection-oriented, reliable, byte-stream transport protocol** that turns the unreliable, best-effort IP network into a **dependable end-to-end channel**.
+
+> The heart of TCP is its purpose: **"to turn an unreliable network into a reliable one."** IP may lose, duplicate, delay or reorder packets; TCP detects and repairs all of that.
+
+#### The six basic functions of TCP
+
+| # | Function | How TCP does it |
+|---|---|---|
+| 1 | **Connection establishment and termination** | **Three-way handshake** to open; four-way handshake to close |
+| 2 | **Segmentation and reassembly** | Breaks the byte stream into **segments** sized to the MSS, and reassembles them **in order** at the receiver using sequence numbers |
+| 3 | **Reliable delivery** | **Acknowledgements (ACK)**, **retransmission timers**, and retransmission of anything unacknowledged |
+| 4 | **In-order delivery** | **Sequence numbers** let the receiver reorder segments that arrived out of order |
+| 5 | **Flow control** | The **sliding window** — the receiver advertises how much buffer space it has, so a fast sender cannot overwhelm a slow receiver |
+| 6 | **Error control / congestion control** | **Checksums** detect corruption; **slow start, congestion avoidance, fast retransmit and fast recovery** prevent the sender from overwhelming the *network* |
+
+*(Also: **multiplexing** via port numbers, and **full-duplex** operation.)*
+
+#### The TCP three-way handshake
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    Note over C: State: CLOSED → SYN-SENT
+    C->>S: 1 . SYN  (seq = x)<br/>"I want to connect; my sequence number starts at x"
+    Note over S: State: LISTEN → SYN-RECEIVED
+    S->>C: 2 . SYN + ACK  (seq = y, ack = x+1)<br/>"Agreed. My sequence starts at y, and I acknowledge your x"
+    Note over C: State: ESTABLISHED
+    C->>S: 3 . ACK  (ack = y+1)<br/>"I acknowledge your y. Connection open."
+    Note over S: State: ESTABLISHED
+    Note over C,S: 🔗 Data transfer can now begin — full duplex
+```
+
+**Why THREE steps and not two?** Because the connection is **full duplex**, so **both directions must be synchronised**. Step 1 tells the server the client's starting sequence number; step 2 acknowledges it *and* announces the server's own; step 3 acknowledges the server's. Two steps would leave the server's sequence number unconfirmed, and would also make the protocol vulnerable to old duplicate connection requests.
+
+#### Connection termination — the four-way handshake
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: 1 . FIN — "I have finished sending"
+    S->>C: 2 . ACK — "Acknowledged"
+    Note over S: The server may still send remaining data (half-close)
+    S->>C: 3 . FIN — "I have also finished"
+    C->>S: 4 . ACK — "Acknowledged"
+    Note over C: TIME-WAIT state (2 × MSL) then CLOSED
+```
+
+**Why four and not three?** Because each direction is closed **independently** — one side may still have data to send after the other has finished.
+
+#### The TCP header — the fields that matter
+
+| Field | Size | Purpose |
+|---|---|---|
+| **Source port / Destination port** | 16 bits each | Identify the sending and receiving **applications** |
+| **Sequence number** | 32 bits | Position of the first byte of this segment in the stream |
+| **Acknowledgement number** | 32 bits | The next byte the receiver expects |
+| **Header length** | 4 bits | Where the data begins |
+| **Flags** | 9 bits | **URG, ACK, PSH, RST, SYN, FIN** |
+| **Window size** | 16 bits | **Flow control** — receiver's available buffer |
+| **Checksum** | 16 bits | **Error detection** over header and data |
+| **Urgent pointer, Options** | | MSS negotiation, window scaling, SACK, timestamps |
+
+#### Congestion control in TCP
+
+**Congestion** occurs when more traffic enters the network than it can carry, filling router queues and causing loss. TCP treats **packet loss as the signal of congestion** and reacts by **slowing down**.
+
+```mermaid
+flowchart LR
+    A["SLOW START<br/>cwnd starts at 1 MSS and<br/>DOUBLES every RTT (exponential)"] --> B["CONGESTION AVOIDANCE<br/>above the threshold, cwnd grows by<br/>only 1 MSS per RTT (linear)"]
+    B --> C{"Loss detected"}
+    C -->|"3 duplicate ACKs<br/>(mild)"| D["FAST RETRANSMIT +<br/>FAST RECOVERY<br/>halve cwnd, continue"]
+    C -->|"Timeout<br/>(severe)"| E["Set cwnd back to 1<br/>and restart SLOW START"]
+    D --> B
+    E --> A
+```
+
+| Mechanism | What it does |
+|---|---|
+| **Slow start** | Begin cautiously with a small **congestion window (cwnd)** and **double it each RTT** until the threshold is reached |
+| **Congestion avoidance** | Beyond the threshold, increase **linearly** — "additive increase" |
+| **Fast retransmit** | On receiving **3 duplicate ACKs**, retransmit the missing segment **immediately**, without waiting for the timeout |
+| **Fast recovery** | Halve cwnd rather than collapsing to 1 — "multiplicative decrease" |
+| **AIMD** | The overall behaviour: **Additive Increase, Multiplicative Decrease** — the principle that makes TCP fair and stable |
+
+**Flow control vs Congestion control** — a distinction worth stating:
+
+| | **Flow control** | **Congestion control** |
+|---|---|---|
+| **Protects** | **The RECEIVER** from being overwhelmed | **The NETWORK** from being overwhelmed |
+| **Controlled by** | The **receiver**, via the advertised **window size** | The **sender**, via the **congestion window** |
+| **Mechanism** | Sliding window | Slow start, AIMD |
+
+The actual sending rate is **min(receiver window, congestion window)**.
+
+**Previous Year Question List from this Topic:**
+
+- [A client needs to send 4000\text{ bytes} of data to a database server. The client divides the data into packets of 500\text{ bytes} each. The sequence number of…](../written-answers/computer-networks.md?plain=1#L5605)
+- [Show the pictorial representation of TCP 3-way handshaking protocol for establishing a connection between a server and a client.](../written-answers/computer-networks.md?plain=1#L5699)
+- [3-way handshake protocol for TCP connection using diagram.](../written-answers/computer-networks.md?plain=1#L5762)
+- [Show a 3-way handshake protocol in TCP connection established using a diagram.](../written-answers/computer-networks.md?plain=1#L5882)
+- [The primary function of the Transmission Control Protocol (TCP). TCP performs six basic functions. What are the basic function performing by TCP?](../written-answers/computer-networks.md?plain=1#L5976)
+- [(c) What is purpose of routers? How congestion control works in the TCP?](../written-answers/computer-networks.md?plain=1#L6003)
+- [What is a TCP Three-way handshaking step?](../written-answers/computer-networks.md?plain=1#L6054)
+- [The primary function of the Transmission Control Protocol (TCP) is to turn an unreliable network into a reliable network that is free from lost and duplicate pa…](../written-answers/computer-networks.md?plain=1#L6085)
+- [(c) What is TCP protocol? How does it work?](../written-answers/computer-networks.md?plain=1#L6143)
+- [a) Explain Three-Way Handshaking in TCP Protocol.](../written-answers/computer-networks.md?plain=1#L6300)
+
+
+---
+
+### UDP — User Datagram Protocol
+
+**UDP** is a **connectionless, unreliable, lightweight** transport protocol. It adds only the bare minimum to IP: **port numbers, a length field and a checksum**.
+
+#### What UDP does and does not do
+
+| UDP **does** | UDP does **NOT** |
+|---|---|
+| Multiplex by **port number** | Establish a connection |
+| Provide an optional **checksum** | Acknowledge or retransmit |
+| Deliver **fast, with minimal overhead** | Guarantee delivery, order or duplicate protection |
+| Support **broadcast and multicast** | Perform flow or congestion control |
+
+> ### "Is UDP reliable? Explain why or why not."
+> ### ❌ **No — UDP is explicitly UNRELIABLE**, and this is a deliberate design choice, not a defect.
+>
+> **Why it is unreliable:**
+> 1. **No connection is established** — the sender simply transmits, with no assurance that anyone is listening.
+> 2. **No acknowledgements** — the sender never learns whether the datagram arrived.
+> 3. **No retransmission** — a lost datagram is simply lost.
+> 4. **No sequence numbers** — datagrams may arrive **out of order**, and the receiver cannot reorder them.
+> 5. **No duplicate detection.**
+> 6. **No flow or congestion control** — UDP will happily flood a slow receiver or a congested network.
+>
+> **Why that is sometimes the RIGHT choice:**
+> - **Speed and low latency** — no handshake (saving a full round trip), no waiting for acknowledgements, and only an **8-byte header** instead of TCP's 20+.
+> - For **real-time media**, a **late packet is worse than a lost one**. In a voice call, retransmitting a lost 20-millisecond audio fragment is pointless — by the time it arrives the conversation has moved on, and the retransmission would only add jitter. Dropping it causes an imperceptible glitch; waiting for it causes an audible stall.
+> - For **short request-response exchanges (DNS)**, the application can simply retry — cheaper than a handshake.
+> - It supports **broadcast and multicast**, which TCP cannot.
+> - **Applications can add exactly the reliability they need** on top — which is what **QUIC/HTTP3** does, building reliability over UDP while avoiding TCP's head-of-line blocking.
+
+#### TCP vs UDP — the key comparison
+
+| Point | **TCP** | **UDP** |
+|---|---|---|
+| **Full form** | Transmission Control Protocol | User Datagram Protocol |
+| **Connection** | **Connection-oriented** — handshake first | **Connectionless** — just send |
+| **Reliability** | ✅ **Reliable** — guaranteed delivery | ❌ **Unreliable** — best effort |
+| **Acknowledgement** | ✅ Yes | ❌ No |
+| **Retransmission** | ✅ Yes | ❌ No |
+| **Ordering** | ✅ **Guaranteed in order** | ❌ No ordering |
+| **Error checking** | Checksum **+ recovery** | Checksum **only — no recovery** |
+| **Flow control** | ✅ Sliding window | ❌ None |
+| **Congestion control** | ✅ Yes | ❌ None |
+| **Speed** | **Slower** | **FASTER** |
+| **Header size** | **20–60 bytes** | **8 bytes** |
+| **Overhead** | High | **Very low** |
+| **Data unit** | **Segment** | **Datagram** |
+| **Broadcast/Multicast** | ❌ Not supported | ✅ **Supported** |
+| **Stream type** | **Byte stream** | **Message/datagram** oriented |
+| **Used when** | **Accuracy matters more than speed** | **Speed matters more than accuracy** |
+| **Applications** | **HTTP/HTTPS, FTP, SMTP, POP3, IMAP, SSH, Telnet**, file transfer, email, web | **DNS, DHCP, TFTP, SNMP, NTP, RIP**, **VoIP, video streaming, online gaming, IPTV** |
+| **Analogy** | A **registered letter with delivery confirmation** | A **postcard** |
+
+> ### "A live video stream will be transmitted — which transport protocol, and why?"
+> ### ✅ **UDP.**
+>
+> **Justification:**
+> 1. **Latency is the dominant requirement.** Live video must arrive continuously and immediately; TCP's handshake, acknowledgements and retransmission timers introduce **delay and jitter** that are far more damaging than a lost frame.
+> 2. **A retransmitted frame is useless.** By the time TCP recovers a lost video frame, the stream has already moved past that moment — displaying it would be wrong, and waiting for it **freezes the picture**. A dropped frame causes only a momentary, often unnoticeable, artefact.
+> 3. **TCP's head-of-line blocking is fatal for streaming** — one lost segment stalls *everything* behind it, producing the familiar "buffering" freeze.
+> 4. **Congestion control would repeatedly halve the rate**, causing visible quality collapse, whereas a streaming application can degrade smoothly by switching to a lower bitrate.
+> 5. **Multicast support** — one stream can be delivered efficiently to thousands of viewers, which TCP cannot do.
+> 6. **Modern practice:** real-time protocols such as **RTP/RTCP, WebRTC, SRT and QUIC** all run **over UDP**, adding their own lightweight sequencing, timing and selective error correction — reliability tailored to media rather than TCP's one-size-fits-all.
+>
+> *(The nuance worth adding: **on-demand** video such as YouTube or Netflix uses **TCP/HTTP adaptive streaming (DASH/HLS)**, because a few seconds of buffering is acceptable there and perfect quality is preferred. The answer "UDP" applies specifically to **live, real-time, low-latency** streaming and to interactive audio/video.)*
+
+#### A worked segmentation problem
+
+> **A client sends 4,000 bytes of data. It is divided into segments with a payload of 1,000 bytes each, and the first byte is numbered 10,001. Give the sequence number of each segment.**
+
+TCP numbers **bytes**, not segments. The sequence number of a segment is the number of its **first byte**.
+
+| Segment | Bytes carried | **Sequence number** |
+|---|---|---|
+| 1 | 10,001 – 11,000 | **10,001** |
+| 2 | 11,001 – 12,000 | **11,001** |
+| 3 | 12,001 – 13,000 | **12,001** |
+| 4 | 13,001 – 14,000 | **13,001** |
+
+The receiver acknowledges with **ack = 14,001**, meaning *"I have received everything up to byte 14,000; send me 14,001 next."*
+
+**Previous Year Question List from this Topic:**
+
+- [(b) Distinguish between TCP and UDP protocols.](../written-answers/computer-networks.md?plain=1#L5672)
+- [What is the deference between TCP and UDP?](../written-answers/computer-networks.md?plain=1#L5741)
+- [Write a TCP/UDP used service name?](../written-answers/computer-networks.md?plain=1#L5802)
+- [Difference between TCP and UDP. Distinguish between Cat5 and Cat6. Difference among exFAT, FAT32 and NTFS.](../written-answers/computer-networks.md?plain=1#L5837)
+- [Differecne between TCP and UDP.](../written-answers/computer-networks.md?plain=1#L5920)
+- [What is UDP protocol? UDP is reliable or not? Explain why or why not?](../written-answers/computer-networks.md?plain=1#L5945)
+- [a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?](../written-answers/computer-networks.md?plain=1#L6119)
+- [Write down difference between TCP and UDP with write down some TCP and UDP protocols.](../written-answers/computer-networks.md?plain=1#L6194)
+- [Write the difference between TCP and UDP.](../written-answers/computer-networks.md?plain=1#L6286)
+
+
+---
+
+## Physical Layer & Transmission Media (Cables & Wiring)
+
+### Transmission Media — Guided and Unguided
+
+**Transmission media** is the **physical path along which data travels** from sender to receiver. It is the concern of the **Physical layer (Layer 1)**.
+
+```mermaid
+flowchart TD
+    T["TRANSMISSION MEDIA"]
+    T --> G["GUIDED (Wired / Bounded)<br/>the signal is confined to a physical path"]
+    T --> U["UNGUIDED (Wireless / Unbounded)<br/>the signal travels through free space"]
+    G --> G1["Twisted Pair — UTP / STP"]
+    G --> G2["Coaxial Cable"]
+    G --> G3["Fibre Optic Cable"]
+    U --> U1["Radio waves"]
+    U --> U2["Microwave — terrestrial & satellite"]
+    U --> U3["Infrared"]
+```
+
+#### Guided vs Unguided media
+
+| Point | **Guided (Wired)** | **Unguided (Wireless)** |
+|---|---|---|
+| **Path** | A **physical conductor** confines the signal | **Free space** — air, vacuum |
+| **Direction** | **Point to point**, along the cable | **Broadcast** in all directions (or beamed) |
+| **Speed / Bandwidth** | **Higher** | Lower |
+| **Security** | **More secure** — physical access is needed to tap | **Less secure** — anyone in range can receive |
+| **Interference** | Less (except UTP) | **High** — weather, obstacles, other devices |
+| **Installation** | Difficult and costly — cables must be laid | **Easy** — no cabling |
+| **Mobility** | ❌ None | ✅ **Full mobility** |
+| **Cost** | Higher initial (cabling) | Lower initial, higher equipment cost |
+| **Distance** | Limited by attenuation, but extendable with repeaters | Limited by power and line of sight |
+| **Examples** | Twisted pair, coaxial, **fibre optic** | **Wi-Fi, Bluetooth, microwave, satellite, infrared** |
+
+#### 1. Twisted pair cable
+
+Two insulated copper wires **twisted together**. The twisting is the whole point.
+
+> **Why are UTP cables twisted?**
+> 1. **To cancel electromagnetic interference (EMI).** Noise from outside affects both wires in a pair almost equally; because the wires carry **equal and opposite signals** and swap positions with every twist, the induced noise **cancels out** at the receiver (this is **differential signalling**).
+> 2. **To reduce crosstalk** between adjacent pairs in the same cable — each pair uses a **different twist rate**, so they do not couple into one another.
+> 3. Tighter twisting = **less noise = higher supported frequency = higher data rate**, which is exactly why Cat6 is twisted more tightly than Cat5e.
+
+| Type | Description | Cost | Use |
+|---|---|---|---|
+| **UTP** — Unshielded Twisted Pair | No metallic shield | **Cheapest** | **The standard for LANs** |
+| **STP** — Shielded Twisted Pair | Metallic foil/braid shield around the pairs | More expensive | Industrial areas, near heavy machinery |
+
+| Point | **UTP** | **STP** |
+|---|---|---|
+| **Shielding** | ❌ None | ✅ **Foil or braided shield** |
+| **EMI/noise resistance** | Lower | **Higher** |
+| **Cost** | **Cheaper** | More expensive |
+| **Installation** | **Easy** — thin, flexible | Harder — thick, stiff, and the **shield must be properly grounded** |
+| **Crosstalk** | Higher | Lower |
+| **Grounding needed** | ❌ No | ✅ **Yes — an improperly grounded shield makes things worse** |
+| **Use** | **Offices, homes — the vast majority of LANs** | Factories, hospitals, near power cables |
+
+> **The benefits of UTP that make it dominant:** it is **cheap**, **thin and flexible** (easy to pull through conduits and to terminate), needs **no grounding**, uses the universal **RJ45** connector, is supported by every device, and modern categories deliver **1–10 Gbps** — more than enough for almost every desktop.
+
+#### UTP categories
+
+| Category | Max speed | Bandwidth | Max length | Use |
+|---|---|---|---|---|
+| Cat3 | 10 Mbps | 16 MHz | 100 m | Telephone (obsolete) |
+| Cat5 | 100 Mbps | 100 MHz | 100 m | Obsolete |
+| **Cat5e** | **1 Gbps** | 100 MHz | **100 m** | Still very common |
+| **Cat6** | **1 Gbps (10 Gbps up to 55 m)** | **250 MHz** | **100 m** | **Current standard** |
+| **Cat6a** | **10 Gbps** | **500 MHz** | **100 m** | Data centres, modern offices |
+| Cat7 | 10 Gbps | 600 MHz | 100 m | Shielded, specialised |
+| Cat8 | 25–40 Gbps | 2000 MHz | **30 m** | Data-centre top-of-rack |
+
+| Point | **Cat5e** | **Cat6** |
+|---|---|---|
+| Bandwidth | 100 MHz | **250 MHz** |
+| Speed | 1 Gbps at 100 m | 1 Gbps at 100 m; **10 Gbps up to 55 m** |
+| Twisting | Looser | **Tighter** |
+| Internal separator (spline) | ❌ No | ✅ **Yes** — separates the pairs, reducing crosstalk |
+| Crosstalk | Higher | **Lower** |
+| Cost | Cheaper | ~20–30 % more |
+
+> **The connector for copper LAN cable is the RJ45** (8P8C). *(Telephone uses **RJ11**; fibre uses **SC, LC, ST or MTRJ**; coaxial uses **BNC** or **F-type**.)*
+
+#### 2. Coaxial cable
+
+A **central copper conductor**, surrounded by insulation, a **braided metallic shield**, and an outer jacket. The shield gives it **much better noise immunity than UTP** and allows longer runs.
+
+**Uses:** cable television, older Ethernet (10Base2/10Base5), CCTV, antenna feeds.
+**Types:** **RG-6** (TV, broadband), **RG-58** (thin Ethernet), **RG-59** (CCTV), **RG-8** (thick Ethernet).
+
+#### 3. Fibre optic cable
+
+Transmits data as **pulses of LIGHT** through a **glass or plastic core**, using **total internal reflection** at the boundary between the core and the lower-refractive-index **cladding**.
+
+```mermaid
+flowchart LR
+    A["Light source<br/>LED or LASER"] --> B["CORE (glass)<br/>light bounces by<br/>TOTAL INTERNAL REFLECTION"]
+    B --> C["CLADDING<br/>lower refractive index"]
+    C --> D["Buffer coating + Jacket"]
+    B --> E["Photodetector<br/>converts light back to electricity"]
+```
+
+| Type | Core diameter | Light source | Distance | Bandwidth | Cost |
+|---|---|---|---|---|---|
+| **Single-mode (SMF)** | **8–10 µm** — one light path | **LASER** | **Up to 100+ km** | **Highest** | Higher |
+| **Multi-mode (MMF)** | **50–62.5 µm** — many light paths | **LED** | **Up to ~2 km** | High | Lower |
+
+**Advantages of fibre optic — the reason it dominates backbones:**
+1. **Enormous bandwidth** — terabits per second; by far the **highest of any medium**.
+2. **Very long distance** without repeaters (tens to hundreds of km).
+3. **Complete immunity to EMI and RFI** — it carries light, not electricity, so power lines, motors and lightning do not affect it.
+4. **Extremely secure** — it is very difficult to tap without detection, and it emits no signal to intercept.
+5. **Very low attenuation** — about **0.2–0.35 dB/km** versus copper's several dB per 100 m.
+6. **Lightweight and thin** — far more capacity in the same duct space.
+7. **No crosstalk**, no electrical grounding problems, and **no fire/spark risk** — safe in explosive environments.
+
+**Disadvantages:** **higher cost** of cable, connectors and equipment · **fragile** — glass breaks if bent too sharply · **splicing and termination require specialised skill and equipment** (fusion splicer, OTDR) · **unidirectional** (two fibres needed for duplex) · and it cannot carry electrical power.
+
+#### The comparison table
+
+| Point | **Twisted Pair (UTP)** | **Coaxial** | **Fibre Optic** |
+|---|---|---|---|
+| **Carries** | Electrical signals | Electrical signals | **Light** |
+| **Bandwidth** | Up to 10 Gbps | ~1 Gbps | **Terabits/s — highest** |
+| **Max distance** | **100 m** | ~500 m | **2 km (MMF) – 100+ km (SMF)** |
+| **EMI immunity** | **Poor** | Good | **Perfect** |
+| **Security** | Low — easily tapped | Medium | **Very high** |
+| **Attenuation** | High | Medium | **Very low** |
+| **Cost** | **Lowest** | Medium | **Highest** |
+| **Installation** | **Easiest** | Moderate | **Requires skill** |
+| **Connector** | **RJ45** | BNC / F-type | SC, LC, ST |
+| **Used for** | **Desktop LAN connections** | Cable TV, CCTV | **Backbones, submarine cables, FTTH, data centres** |
+
+#### Ethernet standards — reading the notation
+
+The notation **`10Base5`** means: **`<speed in Mbps>` `Base` (baseband) `<segment length in hundreds of metres, or the medium letter>`**
+
+| Standard | Speed | Medium | Max segment | Topology | Notes |
+|---|---|---|---|---|---|
+| **10Base5** | 10 Mbps | **Thick coaxial** ("Thicknet") | **500 m** | Bus | The original Ethernet; uses vampire-tap transceivers |
+| **10Base2** | 10 Mbps | **Thin coaxial** ("Thinnet", RG-58) | **185 m** (rounded to 200) | Bus | BNC T-connectors; cheaper and easier than 10Base5 |
+| **10BaseT** | 10 Mbps | **Twisted pair (UTP)** | **100 m** | **Star** (via a hub/switch) | **T = Twisted pair.** The standard that made structured cabling universal |
+| **10BaseF** | 10 Mbps | **Fibre optic** | **2 km** | Star | **F = Fibre**; used for building-to-building links |
+| **100BaseTX** | 100 Mbps | UTP Cat5 | 100 m | Star | "Fast Ethernet" |
+| **1000BaseT** | 1 Gbps | UTP Cat5e/6 | 100 m | Star | "Gigabit Ethernet" — uses all 4 pairs |
+| **10GBaseT** | 10 Gbps | Cat6a/7 | 100 m | Star | |
+
+> **The IEEE standard for Ethernet LAN is IEEE 802.3.** *(Related: **802.11** = Wi-Fi, **802.15** = Bluetooth/PAN, **802.16** = WiMAX, **802.1Q** = VLAN tagging, **802.1X** = port authentication.)*
+
+#### Straight-through vs Crossover cable
+
+Both are RJ45 UTP cables; the difference is **how the 8 wires are ordered at each end**.
+
+| Point | **Straight-through cable** | **Crossover cable** |
+|---|---|---|
+| **Wiring** | **Same standard at both ends** — T568B to T568B (or A to A) | **Different at each end** — **T568A at one end, T568B at the other** |
+| **Which pins swap** | None | **Transmit and receive are crossed** (1↔3, 2↔6) |
+| **Connects** | **UNLIKE (different) devices** | **LIKE (similar) devices** |
+| **Examples** | **PC ↔ Switch** · PC ↔ Hub · **Router ↔ Switch** · Switch ↔ Modem | **PC ↔ PC** · **Switch ↔ Switch** · **Router ↔ Router** · Hub ↔ Hub · **PC ↔ Router** |
+
+> **The rule to remember:** **UNLIKE devices → STRAIGHT-through. LIKE devices → CROSSOVER.**
+>
+> **Why:** a PC transmits on pins 1–2 and receives on 3–6; a switch does the **opposite** by design. Connecting a PC to a switch therefore needs **no** crossing — the switch has already done it internally. But connecting **two PCs** means both transmit on 1–2 and both listen on 3–6, so nothing is heard — the cable must **cross the pairs** to connect one side's transmit to the other side's receive.
+>
+> **A modern caveat worth adding:** since about 2005 almost all equipment supports **Auto-MDI/MDI-X**, which **automatically detects and corrects** the wiring internally. In practice a straight-through cable now works everywhere — but **the theory is still examined**, and crossover cables are still needed for older equipment and for some console/direct links.
+
+**The T568B wiring order (the common standard):** White-Orange, Orange, White-Green, **Blue**, White-Blue, **Green**, White-Brown, Brown.
+**T568A** swaps the orange and green pairs.
+
+#### Transmission line problems
+
+| Problem | Description | Cause | Remedy |
+|---|---|---|---|
+| **Attenuation** | The **signal WEAKENS** as it travels, losing power with distance. Measured in **decibels (dB)** | Resistance of the medium, absorption, scattering | **Amplifiers** (analog) or **repeaters** (digital); shorter runs; better medium (fibre) |
+| **Distortion** | The signal **changes SHAPE** because different frequency components travel at different speeds | The medium's frequency-dependent propagation | Equalisers; limit the bandwidth |
+| **Noise** | **Unwanted signals** are added | **Thermal** (random electron motion), **induced** (motors, lights), **crosstalk** (adjacent wires), **impulse** (lightning, switching spikes) | **Shielding, twisting, grounding, fibre**, error-correcting codes |
+| **Crosstalk** | Signal from one wire **couples into** another | Electromagnetic coupling between adjacent pairs | Twisting at different rates, shielding, a spline (Cat6) |
+| **Delay distortion / Dispersion** | Pulses **spread out** and overlap | Different propagation velocities | Lower data rate, shorter distance, single-mode fibre |
+| **Echo / Reflection** | Part of the signal **bounces back** | **Impedance mismatch**, unterminated cable | Proper termination and impedance matching |
+
+> **Attenuation explained further:** it is the **loss of signal strength over distance**, expressed as **dB = 10 log₁₀(P₂/P₁)**. A **negative dB means loss**; a positive value means gain. Attenuation increases with **distance** and with **frequency** (higher frequencies attenuate faster — which is precisely why cable length limits exist). In fibre it is remarkably low (0.2 dB/km), which is why fibre can span oceans while copper cannot span a football field at gigabit speed.
+
+> ### "What happens if you use a cable longer than the prescribed length?"
+> The **100-metre limit for UTP** (90 m of solid horizontal cable plus 10 m of patch leads) is not arbitrary — exceeding it causes:
+> 1. **Excessive attenuation** — the signal arrives too weak for the receiver to interpret reliably.
+> 2. **Increased bit errors** and CRC failures, causing **retransmissions** that slash effective throughput.
+> 3. **Intermittent, hard-to-diagnose faults** — the link may work at 100 Mbps but fail at 1 Gbps, or work in cool weather and fail in hot.
+> 4. **Collision-detection failure** on legacy half-duplex Ethernet — CSMA/CD relies on a signal reaching the far end and back **within the time to transmit the minimum frame**; beyond the limit, **late collisions** occur and go undetected, silently corrupting data.
+> 5. **Complete link failure** — often the device simply reports "no link".
+>
+> **The correct solutions:** insert a **switch or repeater** at the midpoint · use **fibre** for the long run · or use a **media converter**. **Never** simply join two cables to exceed the limit.
+
+#### Baseband vs Broadband
+
+| Point | **Baseband** | **Broadband** |
+|---|---|---|
+| **Signal** | **Digital** | **Analog** (carrying digital data by modulation) |
+| **Channels on the medium** | **ONE** — the entire bandwidth is used by a single signal | **MANY** — the bandwidth is divided by **FDM** into multiple channels |
+| **Direction** | **Bidirectional** | **Unidirectional** per channel (separate channels for each direction) |
+| **Encoding** | Line coding (Manchester, NRZ) | **Modulation** onto a carrier |
+| **Distance** | Shorter | **Longer** |
+| **Cost** | **Cheaper** | More expensive |
+| **Example** | **Ethernet LAN (10BaseT)** | **Cable TV, DSL, cable internet** |
+
+> **The main benefit of broadband over baseband:** it can carry **multiple simultaneous signals (voice, video and data) on ONE cable** by using **frequency division multiplexing**, and it transmits over **much greater distances**. This is why a single coaxial cable into a house can deliver dozens of TV channels and an internet connection at the same time.
+
+**Previous Year Question List from this Topic:**
+
+- [Straight through connection vs Crossover connection.](../written-answers/computer-networks.md?plain=1#L6351)
+- [Which transmission medium is used in LAN? Write their maximum length and capacity (bps).](../written-answers/computer-networks.md?plain=1#L6387)
+- [IEEE __________ Standard used Ethernet LAN?](../written-answers/computer-networks.md?plain=1#L6411)
+- [What is the connector name copper cable in LAN?](../written-answers/computer-networks.md?plain=1#L6436)
+- [What are the different types of transmission media used for data communication? Explain their advantages and disadvantages.](../written-answers/computer-networks.md?plain=1#L6459)
+- [Difference between Guided and Unguided media. Difference between STP and UTP. Why using benefit UTP instead of STP?](../written-answers/computer-networks.md?plain=1#L6513)
+- [What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair,…](../written-answers/computer-networks.md?plain=1#L6556)
+- [Why we used straight-through and cross cable with example?](../written-answers/computer-networks.md?plain=1#L6601)
+- [(খ) Fiber optic cable, Twisted pair cable এবং Co-axial cable এর সুবিধাগুলো বর্ণনা করুন।](../written-answers/computer-networks.md?plain=1#L6645)
+- [What happens when you use cables longer than the prescribed length in a network?](../written-answers/computer-networks.md?plain=1#L6677)
+- [(ii) ব্যাখ্যা করুন: (a) 10Base5 (b) 10BaseF](../written-answers/computer-networks.md?plain=1#L6718)
+- [Explain 10baseT.](../written-answers/computer-networks.md?plain=1#L6751)
+- [Which media transfer data with higher bandwidth? Advantages of this media.](../written-answers/computer-networks.md?plain=1#L6779)
+- [(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.](../written-answers/computer-networks.md?plain=1#L6805)
+- [Explain 10Base2, 10Base5, 10BaseT and Ethernet.](../written-answers/computer-networks.md?plain=1#L6838)
+
+
+---
+
+## Multiplexing & Bandwidth
+
+### Multiplexing — Concept and Types
+
+**Multiplexing** is the technique of **combining MULTIPLE signals into ONE signal for transmission over a SINGLE shared link**, and separating them again at the far end (**demultiplexing**).
+
+> **The purpose:** a transmission link is expensive. If a single fibre can carry 10 Gbps and one telephone call needs 64 kbps, using the whole fibre for one call would be absurd. Multiplexing **maximises utilisation of the link** and **minimises cost**.
+>
+> **The answer to "what technique allows simultaneous transmission of multiple signals across a single data link?" is MULTIPLEXING.**
+
+```mermaid
+flowchart LR
+    S1["Source 1"] --> M["MULTIPLEXER<br/>(MUX)"]
+    S2["Source 2"] --> M
+    S3["Source 3"] --> M
+    S4["Source 4"] --> M
+    M -->|"ONE shared high-capacity link"| D["DEMULTIPLEXER<br/>(DEMUX)"]
+    D --> R1["Destination 1"]
+    D --> R2["Destination 2"]
+    D --> R3["Destination 3"]
+    D --> R4["Destination 4"]
+```
+
+#### The types of multiplexing
+
+```mermaid
+flowchart TD
+    MX["MULTIPLEXING"]
+    MX --> A["FDM — Frequency Division<br/>ANALOG · divides FREQUENCY"]
+    MX --> B["TDM — Time Division<br/>DIGITAL · divides TIME"]
+    MX --> C["WDM — Wavelength Division<br/>OPTICAL · divides WAVELENGTH"]
+    MX --> D["CDM / CDMA — Code Division<br/>divides by unique CODES"]
+    B --> B1["Synchronous TDM<br/>fixed slots"]
+    B --> B2["Asynchronous / Statistical TDM<br/>slots on demand"]
+```
+
+#### 1. FDM — Frequency Division Multiplexing
+
+The **available bandwidth is divided into several FREQUENCY BANDS**, and each signal is modulated onto its own **carrier frequency**. All signals travel **simultaneously and continuously**, separated in frequency.
+
+**Guard bands** — unused frequency gaps — are placed between channels to prevent overlap and interference.
+
+**Used for:** **radio and TV broadcasting**, cable television, the traditional analog telephone system, and **ADSL** (which splits the phone line into voice, upstream and downstream bands).
+
+#### 2. TDM — Time Division Multiplexing
+
+The **link's time is divided into SLOTS**, and each source is given the **entire bandwidth for a brief slot in rotation**. The signals are separated in **time**, not frequency.
+
+```mermaid
+flowchart LR
+    A["Time →"] --> B["Slot A1"] --> C["Slot B1"] --> D["Slot C1"] --> E["Slot D1"] --> F["Slot A2"] --> G["Slot B2"] --> H["…"]
+```
+
+**How synchronous TDM works:**
+1. Each input is given a **fixed, pre-allocated time slot** in every **frame**.
+2. The multiplexer **rotates through the inputs in order**, taking one unit (a bit, byte or character) from each.
+3. The slots are **reserved whether or not the source has data** — an idle source's slot is **transmitted empty**.
+4. The demultiplexer, **synchronised by framing bits**, knows which slot belongs to which output.
+
+**Synchronous vs Statistical (Asynchronous) TDM**
+
+| Point | **Synchronous TDM** | **Statistical / Asynchronous TDM** |
+|---|---|---|
+| **Slot allocation** | **Fixed and pre-assigned** | **On demand**, only to sources that have data |
+| **Empty slots** | ✅ **Yes — wasted if a source is idle** | ❌ **None — no waste** |
+| **Addressing** | Not needed — position identifies the source | **Required** — each slot carries an address |
+| **Efficiency** | **Lower** | **Much higher** |
+| **Complexity** | Simple | More complex |
+| **Used in** | **T1/E1 carriers, SONET/SDH** | Packet networks, ATM, modern data links |
+
+#### 3. WDM — Wavelength Division Multiplexing
+
+**FDM applied to light on an optical fibre.** Multiple signals are carried on **different wavelengths (colours) of laser light** through the **same fibre**, combined by a **prism/grating** at the sender and separated at the receiver.
+
+| Type | Channels | Spacing |
+|---|---|---|
+| **CWDM** — Coarse WDM | ~8–18 | Wide (20 nm) — cheaper |
+| **DWDM** — Dense WDM | **80–160+** | Very narrow (0.8 nm) — used on long-haul and submarine cables |
+
+A single fibre with DWDM can carry **many terabits per second** — which is how submarine cables serve entire countries.
+
+#### The comparison — FDM vs TDM vs WDM
+
+| Point | **FDM** | **TDM** | **WDM** |
+|---|---|---|---|
+| **Divides** | **Frequency** | **Time** | **Wavelength (light)** |
+| **Signal type** | **Analog** | **Digital** | **Optical** |
+| **Medium** | Copper, air (radio) | Copper, fibre, wireless | **Fibre optic ONLY** |
+| **Transmission** | All channels **simultaneous and continuous** | Each channel in **turn**, in its own slot | All wavelengths simultaneous |
+| **Each channel gets** | **Part of the bandwidth, all of the time** | **All of the bandwidth, part of the time** | Its own wavelength, all the time |
+| **Guard mechanism** | **Guard bands** (frequency gaps) | **Guard bits/time** and framing | Wavelength spacing |
+| **Bandwidth needed** | Sum of channels + guard bands | Sum of channel rates + framing overhead | Sum of channels |
+| **Synchronisation** | Not critical | **Critical** | Not critical |
+| **Efficiency** | Lower (guard bands waste spectrum) | **Higher** | **Highest capacity** |
+| **Example** | **Radio, TV, cable TV, ADSL** | **T1/E1, SONET, GSM, ISDN** | **DWDM backbones, submarine cables** |
+
+#### TDM vs TDMA
+
+| Point | **TDM** (Time Division Multiplexing) | **TDMA** (Time Division Multiple Access) |
+|---|---|---|
+| **What it is** | A **multiplexing technique** — combining signals onto one link | A **channel-access method** — sharing a medium among many users |
+| **Applies to** | A **wired point-to-point link** | A **shared wireless medium** |
+| **Sources** | Located at **one place** (the multiplexer) | **Geographically distributed** users/stations |
+| **Synchronisation** | By the multiplexer's clock | Requires **network-wide timing and guard times** to handle different propagation delays |
+| **Used in** | T1/E1, SONET, PDH | **GSM (2G)**, satellite access, DECT |
+
+**Previous Year Question List from this Topic:**
+
+- [Differentiate among TDM, FDM and WDM. How does working process in TDM?](../written-answers/computer-networks.md?plain=1#L7086)
+- [Describe the different types of Multiplexing.](../written-answers/computer-networks.md?plain=1#L7123)
+- [What technique allows simultaneous transmission of multiple signals across a single data link?](../written-answers/computer-networks.md?plain=1#L7165)
+- [(খ) FDM এবং TDM এর পার্থক্য লিখুন।](../written-answers/computer-networks.md?plain=1#L7180)
+- [Compare between TDM and TDMA techniques.](../written-answers/computer-networks.md?plain=1#L7287)
+- [What is Multiplexing? Write about Time division Multiplexing.](../written-answers/computer-networks.md?plain=1#L7388)
+- [(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).](../written-answers/computer-networks.md?plain=1#L7419)
+- [Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b)…](../written-answers/computer-networks.md?plain=1#L7554)
+
+
+---
+
+### Bandwidth, Data Rate and Multiplexing Calculations
+
+#### Bandwidth
+
+**Bandwidth** has two related meanings:
+- **In analog/signal terms:** the **range of frequencies** a channel can carry, measured in **hertz (Hz)** — e.g. a voice channel is 4 kHz wide.
+- **In digital/networking terms:** the **maximum data-carrying capacity** of a link, measured in **bits per second (bps)**.
+
+| Term | Meaning |
+|---|---|
+| **Bandwidth** | The **theoretical maximum** capacity of the link |
+| **Throughput** | The **actual** rate achieved, always lower |
+| **Goodput** | The rate of **useful application data**, excluding all headers and retransmissions |
+
+#### Worked problem 1 — FDM minimum bandwidth
+
+> **Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channels to prevent interference?**
+
+**Reasoning:** in FDM, the total bandwidth is the **sum of all the channel bandwidths plus all the guard bands**. With **n = 5** channels placed side by side, the number of **gaps between** them is **n − 1 = 4**.
+
+| Component | Calculation | Value |
+|---|---|---|
+| Channel bandwidth | 5 × 100 kHz | **500 kHz** |
+| Guard bands | **(5 − 1)** × 10 kHz = 4 × 10 | **40 kHz** |
+| **Minimum link bandwidth** | 500 + 40 | ### **540 kHz** |
+
+```mermaid
+flowchart LR
+    A["CH1<br/>100 kHz"] --- G1["guard<br/>10"] --- B["CH2<br/>100 kHz"] --- G2["guard<br/>10"] --- C["CH3<br/>100 kHz"] --- G3["guard<br/>10"] --- D["CH4<br/>100 kHz"] --- G4["guard<br/>10"] --- E["CH5<br/>100 kHz"]
+```
+
+> **The trap:** using 5 guard bands instead of 4. Guard bands sit **between** channels, so there is always **one fewer** than the number of channels.
+
+#### Worked problem 2 — the T-1 carrier data rate
+
+> **Show that the data rate of a T-1 carrier is 1.544 Mbps.**
+
+The T-1 carrier uses **synchronous TDM** to combine **24 voice channels**:
+
+| Step | Working |
+|---|---|
+| 1. Each voice channel is sampled at | **8,000 samples per second** (the Nyquist rate for a 4 kHz voice channel: 2 × 4000) |
+| 2. Each sample is encoded as | **8 bits** (PCM) |
+| 3. So one voice channel = | 8,000 × 8 = **64,000 bps = 64 kbps** |
+| 4. 24 channels are multiplexed, so each **frame** contains | 24 × 8 = **192 bits** |
+| 5. Plus **1 framing bit** per frame for synchronisation | 192 + 1 = **193 bits per frame** |
+| 6. Frames are sent at the sampling rate | **8,000 frames per second** |
+| 7. **Total data rate** | 193 × 8,000 = **1,544,000 bps** |
+
+> ### ✅ **T-1 data rate = 1,544,000 bps = 1.544 Mbps** ∎
+>
+> *(The European equivalent, **E-1**, multiplexes **32** slots — 30 voice + 2 for signalling and framing — giving 32 × 8 × 8000 = **2.048 Mbps**.)*
+
+#### Worked problem 3 — multiplexing channels of different rates
+
+> **Two channels, one with a bit rate of 190 kbps and another with 180 kbps, are to be multiplexed using pulse stuffing TDM with no privileged channels. What is the frame rate and the output data rate?**
+
+With **pulse stuffing**, the slower channel is padded with dummy bits up to the rate of the **fastest** channel, so that all channels can use **identical slots**.
+
+| Step | Working |
+|---|---|
+| 1. The highest input rate | **190 kbps** |
+| 2. Pad the 180 kbps channel up to | **190 kbps** (10 kbps of stuffing) |
+| 3. If each slot carries **1 bit**, the frame rate = the padded channel rate | **190,000 frames/second** |
+| 4. Each frame carries 2 slots (one per channel) | 2 bits per frame |
+| 5. **Output data rate** | 190,000 × 2 = **380,000 bps = 380 kbps** |
+
+#### Worked problem 4 — character-interleaved TDM
+
+> **Four sources each create 250 characters per second. If the interleaved unit is a character and 1 synchronising bit is added to each frame, find (a) the data rate of each source, (b) the duration of each character in each source, (c) the frame rate, (d) the duration of each frame, (e) the number of bits in each frame, and (f) the data rate of the link.**
+
+Assume **1 character = 8 bits**.
+
+| Part | Working | Answer |
+|---|---|---|
+| **(a) Data rate of each source** | 250 chars/s × 8 bits | **2,000 bps = 2 kbps** |
+| **(b) Duration of each character** | 1 ÷ 250 | **4 ms** |
+| **(c) Frame rate** | Each frame carries **one character from each source**, so the frame rate equals the character rate | **250 frames/second** |
+| **(d) Duration of each frame** | 1 ÷ 250 | **4 ms** (the same as the character duration) |
+| **(e) Bits per frame** | 4 sources × 8 bits + **1 sync bit** | **33 bits** |
+| **(f) Link data rate** | 33 bits × 250 frames/s | **8,250 bps = 8.25 kbps** |
+
+*(Sanity check: 4 × 2,000 = 8,000 bps of payload plus 250 sync bits = 8,250 bps ✅)*
+
+#### Worked problem 5 — propagation and transmission time
+
+> **What are the propagation time and the transmission time for a 2.5-kilobyte message if the bandwidth of the network is 1 Gbps, the distance between sender and receiver is 12,000 km, and light travels at 2.4 × 10⁸ m/s?**
+
+| Quantity | Formula | Working | Answer |
+|---|---|---|---|
+| **Propagation time** | Distance ÷ Propagation speed | 12,000,000 m ÷ (2.4 × 10⁸ m/s) | **0.05 s = 50 ms** |
+| **Transmission time** | Message size ÷ Bandwidth | (2,500 × 8 bits) ÷ (10⁹ bps) = 20,000 ÷ 10⁹ | **0.00002 s = 20 µs** |
+
+> **The instructive point:** the propagation time (**50 ms**) is **2,500 times larger** than the transmission time (**0.02 ms**). Over long distances, **the delay is dominated by the speed of light, not by the bandwidth**. Buying a faster link would reduce the 20 µs but leave the 50 ms untouched — which is why a satellite link feels slow no matter how much bandwidth it has, and why CDNs place content physically closer to users.
+
+#### Worked problem 6 — TDMA channel calculation
+
+> **A TDMA system has 8 transmitter-receiver pairs. Each source is sampled at 8 kHz with 8-bit encoding. Find the required channel rate.**
+
+| Step | Working |
+|---|---|
+| Bit rate per source | 8,000 samples/s × 8 bits = **64 kbps** |
+| 8 sources multiplexed | 8 × 64 kbps = **512 kbps** |
+| Plus framing/guard overhead | Typically a few % more |
+| **Required channel rate** | **≥ 512 kbps** |
+
+#### Estimating telephone-line capacity
+
+> A scenario question: *"You are an Assistant Engineer; a given number of telephone lines must be carried…"*
+
+The method is always the same:
+1. **One analog voice channel = 4 kHz** of bandwidth, or **64 kbps** digitally (8 kHz sampling × 8 bits).
+2. **Total required capacity** = number of lines × 64 kbps.
+3. **Add framing/overhead** (a T1 adds 1 bit per 193, about 0.5 %).
+4. **Choose the carrier**: **T1 = 24 channels (1.544 Mbps)**, **E1 = 30 voice channels (2.048 Mbps)**, **T3 = 672 channels (44.736 Mbps)**.
+5. **Number of carriers needed** = ⌈total channels ÷ channels per carrier⌉.
+
+*Example:* 100 telephone lines → 100 × 64 kbps = **6.4 Mbps** → with **E1** (30 channels each), ⌈100 ÷ 30⌉ = **4 E1 links** (120 channels, with room to grow).
+
+**Previous Year Question List from this Topic:**
+
+- [Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 1…](../written-answers/computer-networks.md?plain=1#L7011)
+- [ব্যান্ডউইথ (Bandwidth) বলতে কী বুঝায়?](../written-answers/computer-networks.md?plain=1#L7041)
+- [6.9 Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band…](../written-answers/computer-networks.md?plain=1#L7059)
+- [Show that the data rate of T-1 carrier is 1.544 Mbps.](../written-answers/computer-networks.md?plain=1#L7208)
+- [Suppose you are appointed as an Assistant Engineer in a Government organization. The number of telephone connections required for the organization is 1000. The…](../written-answers/computer-networks.md?plain=1#L7241)
+- [Assume a TDMA based communication system having 8 transmission receiver pairs. Each source is sampled at 8KHz. That generates 16bits per sample if two synchroni…](../written-answers/computer-networks.md?plain=1#L7309)
+- [Two channels, one with a bit rate of 190kbps and another with a bit rate 180 kbps are to be multiplexed using pulse stuffing TDM with no synchronization bits. A…](../written-answers/computer-networks.md?plain=1#L7347)
+- [TDM math: rate= 1.536 Mbps, message size= 960000, Slot=32, end to end circuit Switch time=800ms, calculate transfer time.](../written-answers/computer-networks.md?plain=1#L7448)
+- [A want to send 2 files the size of each file is 500000 bit's data to B through TDM channel which has slot 16 channel bit rate 1.5 Mbps and 30 millisecond delay…](../written-answers/computer-networks.md?plain=1#L7484)
+- [We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find-…](../written-answers/computer-networks.md?plain=1#L7518)
+- [What are the propagation time and the transmission time for a 2.5-Kbyte message and if the bandwidth of the network is 1Gbps? Assume that the distance between t…](../written-answers/computer-networks.md?plain=1#L7602)
+
+
+---
+
+## Routing Protocols & Route Configuration
+
+### Routing — Concepts, Static and Dynamic
+
+#### What is routing?
+
+**Routing** is the process of **selecting the best path for data packets to travel from a source network to a destination network across an internetwork**, and is performed by **routers at Layer 3** using **IP addresses** and a **routing table**.
+
+#### Routing vs Forwarding
+
+| Point | **Routing** | **Forwarding** |
+|---|---|---|
+| **What it is** | **Deciding WHICH PATH** packets should take — building the routing table | **Moving a packet** from the input interface to the correct output interface |
+| **Timescale** | **Control plane** — happens over seconds to minutes, in the background | **Data plane** — happens **per packet, in nanoseconds** |
+| **Frequency** | Occasionally, when the topology changes | **For every single packet** |
+| **Complexity** | Complex — runs routing algorithms | Simple — a table lookup |
+| **Implemented in** | **Software** (the router's CPU) | **Hardware** (ASIC/TCAM) for speed |
+| **Analogy** | **Drawing the map** | **Driving the car along the chosen road** |
+
+#### The routing table
+
+Each entry contains: the **destination network and mask**, the **next-hop address**, the **outgoing interface**, and a **metric/cost**.
+
+**How a router chooses among matching entries:**
+1. **Longest prefix match** — the most specific route wins. A packet for `192.168.1.50` matching both `192.168.0.0/16` and `192.168.1.0/24` takes the **/24**.
+2. If prefixes are equal, the route with the **lowest administrative distance** (most trustworthy source) wins.
+3. If those are equal, the **lowest metric** wins.
+4. If all are equal, traffic is **load-balanced** across the equal paths.
+5. If nothing matches, the **default route (0.0.0.0/0)** is used; if there is none, the packet is **dropped** and an ICMP "destination unreachable" is returned.
+
+> **Net-specific routing** (storing one entry per **network**) is preferred over **host-specific routing** (one entry per host) because it keeps the routing table **dramatically smaller** — one entry can represent 65,000 hosts — which means **less memory, faster lookups, and far less update traffic**. Host-specific routes are used only as deliberate exceptions.
+
+#### Types of routing
+
+| Type | Description |
+|---|---|
+| **Static routing** | Routes **manually configured** by the administrator |
+| **Default routing** | A single route (`0.0.0.0/0`) for "everything else" — used on stub networks |
+| **Dynamic routing** | Routers **automatically learn and share** routes using a routing protocol |
+
+#### Static vs Dynamic routing
+
+| Point | **Static routing** | **Dynamic routing** |
+|---|---|---|
+| **Configured by** | **Manually**, by the administrator | **Automatically**, by a routing protocol |
+| **Adapts to topology change / link failure** | ❌ **No** — an administrator must intervene | ✅ **Yes — automatically reroutes** |
+| **CPU and memory usage** | **Very low** | Higher — algorithms and tables |
+| **Bandwidth usage** | **None** — no routing updates are sent | Consumes bandwidth for periodic updates |
+| **Security** | **More secure** — nothing is advertised, nothing can be injected | Less secure — routes can be **spoofed or poisoned** unless authenticated |
+| **Scalability** | ❌ **Poor** — unmanageable beyond a handful of routers | ✅ **Excellent** |
+| **Administrative distance** | **1** (most trusted) | RIP 120, OSPF 110, EIGRP 90, BGP 20/200 |
+| **Setup complexity** | Simple for a small network; enormous for a large one | Complex to design, simple to grow |
+| **Predictability** | **Completely predictable** | Paths may change |
+| **Best for** | **Small, stable networks**; stub sites; a single default route to the ISP; security-sensitive links | **Medium and large networks** with redundant paths |
+
+#### Static route configuration
+
+**Cisco IOS:**
+```
+Router(config)# ip route <destination-network> <subnet-mask> <next-hop-IP | exit-interface>
+
+! Example — R0 must reach the 192.168.2.0/24 network where PC1 lives,
+! via the neighbouring router at 10.0.0.2
+Router(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
+
+! A default route — send everything unknown to the ISP
+Router(config)# ip route 0.0.0.0 0.0.0.0 203.0.113.1
+
+! Verify
+Router# show ip route
+Router# ping 192.168.2.10
+```
+
+**The full configuration sequence to reach a remote PC:**
+
+```
+! 1. Configure the interfaces
+Router(config)# interface gigabitEthernet 0/0
+Router(config-if)# ip address 192.168.1.1 255.255.255.0
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+Router(config)# interface serial 0/0/0
+Router(config-if)# ip address 10.0.0.1 255.255.255.252
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+! 2. Add the static route to the remote network
+Router(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
+
+! 3. On each PC: set the IP, mask and DEFAULT GATEWAY
+!    (the most commonly forgotten step — without a gateway the PC
+!     cannot leave its own subnet)
+```
+
+*(The equivalent on Linux: `ip route add 192.168.2.0/24 via 10.0.0.2` · on Huawei: `ip route-static 192.168.2.0 24 10.0.0.2` · on Juniper: `set routing-options static route 192.168.2.0/24 next-hop 10.0.0.2`.)*
+
+#### Autonomous System, IGP and EGP
+
+> An **Autonomous System (AS)** is a **collection of networks and routers under a SINGLE administrative authority, presenting a common routing policy to the outside world.** Each is identified by a globally unique **AS Number (ASN)**. An ISP, a large bank or a university typically has its own AS.
+
+```mermaid
+flowchart LR
+    subgraph AS1["Autonomous System 1 — ISP A"]
+        R1["Router"] --- R2["Router"] --- R3["Border Router"]
+        N1["IGP: OSPF / RIP / EIGRP runs INSIDE"]
+    end
+    subgraph AS2["Autonomous System 2 — ISP B"]
+        R4["Border Router"] --- R5["Router"] --- R6["Router"]
+        N2["IGP runs INSIDE"]
+    end
+    R3 <-->|"EGP: BGP runs BETWEEN"| R4
+```
+
+| Category | Meaning | Protocols |
+|---|---|---|
+| **IGP — Interior Gateway Protocol** | Routes **WITHIN** one autonomous system | **RIP, OSPF, EIGRP, IS-IS** |
+| **EGP — Exterior Gateway Protocol** | Routes **BETWEEN** autonomous systems | **BGP** — the protocol that holds the Internet together |
+
+**Previous Year Question List from this Topic:**
+
+- [Static route Configuration: Configure R0 to reach PC1 you can assume any Vendor, Cisco, Huawei, juniper](../written-answers/computer-networks.md?plain=1#L7712)
+- [What is Routing? Explain different types of Routing? Why using benefit of an Adhoce routing? Which routing algorithm is used in shortest path algorithm?](../written-answers/computer-networks.md?plain=1#L7894)
+- [(b) Distinguish between routing and forwarding. What are the advantages of net specific routing over host specific routing?](../written-answers/computer-networks.md?plain=1#L7929)
+- [Consider the following routing table at an IP router:](../written-answers/computer-networks.md?plain=1#L7961)
+- [What are static and dynamic routing? Given their relative advantages.](../written-answers/computer-networks.md?plain=1#L8066)
+- [What is Routing? Write down the difference between static routing and dynamic routing.](../written-answers/computer-networks.md?plain=1#L8105)
+
+
+---
+
+### Routing Protocols — Distance Vector, Link State and BGP
+
+#### Distance Vector routing
+
+Each router maintains a **vector (table) of distances** to every known destination and **periodically sends its ENTIRE routing table to its DIRECT NEIGHBOURS only**. Routers learn about the wider network **second-hand, through their neighbours** — "routing by rumour".
+
+**Algorithm: Bellman-Ford.**
+
+**Problems:** **slow convergence**, and the **count-to-infinity problem**, in which two routers keep incrementing a metric for a failed route. Mitigations: **split horizon** (do not advertise a route back out of the interface it was learned on), **route poisoning** (advertise the dead route with an infinite metric), **poison reverse**, and **hold-down timers**.
+
+#### Link State routing
+
+Every router builds a **complete map of the entire network topology**. Each router **floods information about its OWN directly connected links (an LSA) to EVERY router in the area**, so all routers independently build an identical **Link State Database**, and each then runs **Dijkstra's Shortest Path First algorithm** on that map to compute its own shortest-path tree.
+
+#### Distance Vector vs Link State — the key comparison
+
+| Point | **Distance Vector** | **Link State** |
+|---|---|---|
+| **Algorithm** | **Bellman-Ford** | **Dijkstra's SPF** |
+| **What each router knows** | Only **distance and direction** to each destination — no map | A **COMPLETE MAP** of the network topology |
+| **What is shared** | The **entire routing table** | Only information about its **own directly connected links (LSAs)** |
+| **Shared with** | **Direct neighbours only** | **ALL routers** in the area (flooded) |
+| **Update frequency** | **Periodic** (RIP: every 30 s), whether or not anything changed | **Only when a change occurs** (triggered) |
+| **Convergence speed** | **SLOW** | **FAST** |
+| **Count-to-infinity problem** | ✅ **Yes** | ❌ **No** |
+| **CPU and memory** | **Low** | **High** — must store the whole topology and run SPF |
+| **Bandwidth used** | Higher over time (full tables, periodically) | Lower steady-state (small, event-driven updates) |
+| **Scalability** | **Poor** (RIP: max 15 hops) | **Excellent** — supports hierarchical **areas** |
+| **Loop-free** | Prone to loops; needs split horizon etc. | **Inherently loop-free** |
+| **Configuration** | **Simple** | Complex |
+| **Metric** | **Hop count** (RIP) | **Cost** based on bandwidth (OSPF) |
+| **Protocols** | **RIP, IGRP**, (EIGRP is a hybrid) | **OSPF, IS-IS** |
+| **Analogy** | Asking people at each junction "which way to Sylhet, and how far?" | **Having the whole road map** and computing the route yourself |
+
+#### The main routing protocols
+
+| Protocol | Type | Algorithm | Metric | Admin distance | Scope |
+|---|---|---|---|---|---|
+| **RIP** (v1/v2) | **Distance Vector** | **Bellman-Ford** | **Hop count** (max **15**; 16 = unreachable) | 120 | Small IGP |
+| **IGRP** | Distance Vector | Bellman-Ford | Composite | 100 | Cisco, obsolete |
+| **EIGRP** | **Hybrid / Advanced Distance Vector** | **DUAL** (Diffusing Update Algorithm) | **Composite: bandwidth + delay** (+ load, reliability, MTU) | **90** | Cisco IGP |
+| **OSPF** | **Link State** | **DIJKSTRA (SPF)** | **Cost = 10⁸ ÷ bandwidth (bps)** | **110** | The standard open IGP |
+| **IS-IS** | Link State | Dijkstra | Cost | 115 | Large ISP IGP |
+| **BGP** | **Path Vector** | Best-path selection by policy | **AS-PATH length** + many attributes | **20 (eBGP) / 200 (iBGP)** | **EGP — between ASes** |
+
+> **"Which routing protocol uses Dijkstra's algorithm?" → OSPF** (and IS-IS).
+> **"Name the algorithm for RIP, OSPF and EIGRP" → RIP: Bellman-Ford · OSPF: Dijkstra (SPF) · EIGRP: DUAL.**
+> **A pair of routing protocols → e.g. "RIP and OSPF", or "OSPF and BGP".**
+
+#### OSPF — Open Shortest Path First
+
+**OSPF** is an **open-standard, link-state Interior Gateway Protocol** that uses **Dijkstra's SPF algorithm** to compute the shortest path to every destination, based on a **cost derived from interface bandwidth**.
+
+**Key features:**
+1. **Fast convergence** — changes trigger an immediate update, not a 30-second wait.
+2. **Hierarchical design using AREAS**, with **Area 0 as the mandatory backbone** — this keeps the link-state database and SPF computation manageable in very large networks.
+3. **Classless** — supports **VLSM and CIDR**.
+4. **Loop-free by design.**
+5. **No hop-count limit** (unlike RIP's 15).
+6. **Cost metric based on bandwidth** — `cost = 10⁸ / bandwidth in bps`, so a 100 Mbps link has cost 1 and a 10 Mbps link cost 10. It therefore **prefers fast links**, whereas RIP would blindly prefer a slow 1-hop path over a fast 2-hop one.
+7. **Authentication** of routing updates (plain or MD5).
+8. **Equal-cost multipath** load balancing.
+9. Uses **multicast** (224.0.0.5 / 224.0.0.6) rather than broadcast for updates.
+
+**The OSPF process:** routers discover neighbours with **Hello packets** → form **adjacencies** → exchange **LSAs** to build an identical **Link State Database** → each runs **Dijkstra** to build its own **shortest-path tree** → routes are installed in the routing table.
+
+#### BGP — Border Gateway Protocol
+
+> **BGP stands for BORDER GATEWAY PROTOCOL.** It is the **Exterior Gateway Protocol (EGP)** — more precisely a **PATH VECTOR** protocol — that exchanges routing information **between autonomous systems**, and it is the protocol that **makes the global Internet work**. The current version is **BGP-4**, and it runs over **TCP port 179**.
+
+**Why BGP is different:** internal protocols choose the **technically shortest** path. BGP chooses the path that best matches **business POLICY** — which ISP the operator has a commercial agreement with, which transit is cheapest, which peering is preferred. Route selection is therefore driven by **attributes**, not simply by distance.
+
+**BGP best-path selection — the order of attributes:**
+
+| Order | Attribute | Rule |
+|---|---|---|
+| 1 | **Weight** (Cisco-specific, local to the router) | **Highest** wins |
+| 2 | **LOCAL_PREF** (local preference, within the AS) | **Highest** wins |
+| 3 | **Locally originated** routes | Prefer routes this router originated |
+| 4 | **AS_PATH length** | **SHORTEST** AS path wins — the closest thing BGP has to a distance metric |
+| 5 | **ORIGIN** type | IGP < EGP < Incomplete |
+| 6 | **MED** (Multi-Exit Discriminator) | **LOWEST** wins |
+| 7 | **eBGP over iBGP** | Prefer externally learned |
+| 8 | **Lowest IGP metric** to the next hop | |
+| 9 | **Oldest route** / lowest router ID | Tie-breakers for stability |
+
+> **Worked scenario:** *"A BGP router receives multiple routes to the same destination from different neighbouring autonomous systems. How does it choose?"*
+> It applies the list above **in order**, stopping at the first attribute that differs. In practice, an operator's own **LOCAL_PREF** settings (step 2) usually decide the outcome for **outbound** traffic — this is how a network expresses "prefer my cheap transit provider" — and if those are equal, the **shortest AS_PATH** (step 4) decides. **AS_PATH also prevents loops**: a router **rejects any route whose AS_PATH already contains its own AS number**.
+
+**BGP's weaknesses:** it is built on **trust**, so **BGP hijacking** (announcing someone else's prefixes) has repeatedly disrupted large parts of the Internet; convergence is slow; and configuration errors have global consequences. **RPKI and route filtering** are the current defences.
+
+#### Ad-hoc routing
+
+An **ad-hoc network** is a **decentralised wireless network with no fixed infrastructure**, in which **every node also acts as a router**, forwarding traffic for others (a **MANET — Mobile Ad-hoc NETwork**).
+
+**Benefits:** **no infrastructure needed**, so it can be deployed **instantly anywhere** · **self-configuring and self-healing** · **robust** — there is no single point of failure · **low cost** · ideal for **disaster relief, military operations, rural connectivity, vehicle networks and sensor networks** — exactly the situations where the fixed infrastructure is absent or destroyed.
+
+**Protocols:** **AODV** and **DSR** (reactive/on-demand), **OLSR** and **DSDV** (proactive/table-driven), and **ZRP** (hybrid).
+**Challenges:** constantly changing topology, limited battery and bandwidth, routing overhead, and weak security.
+
+**Previous Year Question List from this Topic:**
+
+- [A BGP router receives multiple routes to the same destination network from different neighboring autonomous systems. The available routes are given in the follo…](../written-answers/computer-networks.md?plain=1#L7625)
+- [What is OSPF? Briefly Explain.](../written-answers/computer-networks.md?plain=1#L7777)
+- [Which of the following is a pair of routing protocol?](../written-answers/computer-networks.md?plain=1#L7808)
+- [BGP is __________ protocol.](../written-answers/computer-networks.md?plain=1#L7837)
+- [BGP stands for __________?](../written-answers/computer-networks.md?plain=1#L7858)
+- [Which routing protocol use Dijkstra Algorithm?](../written-answers/computer-networks.md?plain=1#L7871)
+- [What is Routing? Explain different types of Routing? Why using benefit of an Adhoce routing? Which routing algorithm is used in shortest path algorithm?](../written-answers/computer-networks.md?plain=1#L7894)
+- [Define distance Vector and Link state routing protocols.](../written-answers/computer-networks.md?plain=1#L8032)
+- [Name of the Algorithm RIP, OSPF and EIGRP routing protocol.](../written-answers/computer-networks.md?plain=1#L8132)
+- [What is Autonomous system? What is the difference between Link state routing protocol and Distance vector routing protocol?](../written-answers/computer-networks.md?plain=1#L8149)
+- [Cost calculation of EIGRP formula.](../written-answers/computer-networks.md?plain=1#L8180)
+- [Given a totology of distance vector routing. Find the table of each node for the 1^{\text{st}} route.](../written-answers/computer-networks.md?plain=1#L8223)
+- [What is difference between link state routing and distance vector routing?](../written-answers/computer-networks.md?plain=1#L8289)
+
+
+---
+
+## Network Address Translation (NAT)
+
+### NAT and PAT
+
+#### What is NAT?
+
+**Network Address Translation (NAT)** is the process, performed by a **router or firewall**, of **modifying the IP address information in packet headers as they pass through**, so that **multiple devices on a private network can share one or a few PUBLIC IP addresses** to reach the Internet.
+
+> **The connection between a public IP and a private IP is called NAT — Network Address Translation.**
+
+#### Why NAT is needed
+
+1. **IPv4 address exhaustion — the primary reason.** There are only 4.3 billion IPv4 addresses for far more devices. NAT lets an entire organisation of 5,000 devices use **one** public address.
+2. **Cost saving** — public IP addresses are scarce and expensive to lease.
+3. **Security** — internal addresses are **hidden from the Internet**; an outsider cannot directly address an internal host, so NAT acts as a basic one-way firewall.
+4. **Flexibility** — the internal addressing scheme can be changed, or an ISP changed, without renumbering every internal device.
+5. **Merging networks** — two organisations using the same private range can be joined.
+
+#### The topology
+
+```mermaid
+flowchart LR
+    subgraph PRIV["PRIVATE NETWORK — non-routable addresses"]
+        A["PC1<br/>192.168.1.10"]
+        B["PC2<br/>192.168.1.11"]
+        C["PC3<br/>192.168.1.12"]
+    end
+    A --> N
+    B --> N
+    C --> N
+    N["NAT ROUTER<br/>Inside: 192.168.1.1<br/>Outside: 203.0.113.5<br/>─────────────<br/>maintains the NAT TRANSLATION TABLE"]
+    N -->|"all traffic appears to come<br/>from 203.0.113.5"| I["🌐 INTERNET"]
+    I --> S["Web server<br/>sees only 203.0.113.5 —<br/>it has NO idea the private<br/>network exists"]
+```
+
+#### How NAT works — the translation process
+
+**Outbound (private → public):**
+1. PC1 (192.168.1.10) sends a packet to a web server, using source port 5000.
+2. The packet reaches the NAT router.
+3. The router **replaces the source IP** `192.168.1.10` with its own public address `203.0.113.5`, and (for PAT) **replaces the source port** with a unique one, say 40001.
+4. It **records the mapping in the NAT translation table**.
+5. The packet goes out; the server sees only `203.0.113.5:40001`.
+
+**Inbound (public → private):**
+6. The server replies to `203.0.113.5:40001`.
+7. The router **looks up the translation table**, finds that 40001 belongs to `192.168.1.10:5000`.
+8. It **rewrites the destination** back to `192.168.1.10:5000` and forwards it inside.
+
+**The NAT translation table:**
+
+| Inside local (private) | Inside global (public) | Outside global (destination) |
+|---|---|---|
+| 192.168.1.10:5000 | **203.0.113.5:40001** | 142.250.196.4:443 |
+| 192.168.1.11:5001 | **203.0.113.5:40002** | 104.16.85.20:443 |
+| 192.168.1.12:5002 | **203.0.113.5:40003** | 142.250.196.4:443 |
+
+> **The port number is the key.** Even though all three PCs share one public IP, the router distinguishes their return traffic by the **unique port number** it assigned. This is why **one public IP can serve tens of thousands of simultaneous connections** — there are 65,535 ports available.
+
+#### The four NAT address terms
+
+| Term | Meaning |
+|---|---|
+| **Inside local** | The **private** address of an internal host, as seen inside |
+| **Inside global** | The **public** address representing that host to the outside |
+| **Outside global** | The **public** address of the external host |
+| **Outside local** | How the external host appears to the inside network |
+
+#### Types of NAT
+
+| Type | Mapping | Description |
+|---|---|---|
+| **Static NAT** | **One private ↔ one public**, permanently | Used to make an **internal server reachable from the Internet** |
+| **Dynamic NAT** | Private → any free address from a **pool** | First come, first served; fails when the pool is exhausted |
+| **PAT / NAT Overload** ⭐ | **MANY private → ONE public**, distinguished by **PORT NUMBER** | **The type used in virtually every home and office router** |
+
+#### What is PAT?
+
+**PAT (Port Address Translation)**, also called **NAT Overload** or **NAPT**, is the form of NAT in which **many private addresses share a SINGLE public address, and are distinguished by assigning each connection a UNIQUE SOURCE PORT NUMBER.**
+
+**How PAT works:** exactly as described in the table above — the router rewrites **both the IP address and the source port**, and uses the port as the key for demultiplexing the return traffic. Because there are **65,535 ports**, a single public IP can in principle support **tens of thousands of concurrent sessions**.
+
+| Point | **NAT (static/dynamic)** | **PAT (NAT Overload)** |
+|---|---|---|
+| **Mapping** | One-to-one | **Many-to-one** |
+| **Public IPs needed** | One per concurrent internal host | **ONE for all of them** |
+| **Uses port numbers** | ❌ No | ✅ **Yes — this is the key mechanism** |
+| **Also called** | — | **NAT Overload, NAPT, IP masquerading** |
+| **Cost** | Higher | **Lowest** |
+| **Used in** | Making servers reachable (static NAT) | **Every home router, office, mobile network** |
+
+#### Advantages of NAT
+
+1. **Conserves public IPv4 addresses** — the single most important benefit.
+2. **Cost saving** — one public IP instead of hundreds.
+3. **Security through obscurity** — internal topology and addresses are hidden; **unsolicited inbound connections are blocked by default**, because the router has no translation entry for them.
+4. **Flexibility in internal addressing** — renumber internally without touching the outside.
+5. **Easy ISP change** — only the router's public address changes.
+6. **Allows overlapping private networks** to be merged.
+7. **Basic access control** — nothing comes in unless something inside started the conversation.
+
+#### Disadvantages of NAT
+
+1. **Breaks end-to-end connectivity** — the founding principle of the Internet. A host behind NAT cannot be directly addressed.
+2. **Problems with peer-to-peer applications, VoIP, online gaming and video conferencing** — both parties are behind NAT, so neither can initiate. Requires workarounds: **STUN, TURN, ICE, UPnP, port forwarding**.
+3. **Router processing overhead and latency** — every packet header must be rewritten and the table consulted.
+4. **The NAT device is a single point of failure** and a bottleneck.
+5. **Complicates protocols that embed IP addresses in the payload** (FTP active mode, SIP, IPsec AH) — requiring **Application Layer Gateways (ALGs)**.
+6. **Breaks IPsec AH** entirely, because AH authenticates the IP header that NAT modifies (**NAT-Traversal** is the workaround).
+7. **Complicates logging, auditing and law enforcement** — hundreds of users appear as one IP address.
+8. **Not a real firewall**, though it is often mistaken for one — it must be combined with a stateful firewall.
+9. **Makes end-to-end troubleshooting harder.**
+
+> **The long-term answer is IPv6**, whose 3.4 × 10³⁸ addresses remove the need for NAT entirely and restore true end-to-end addressing.
+
+#### IPv4 vs IPv6
+
+| Point | **IPv4** | **IPv6** |
+|---|---|---|
+| **Address length** | **32 bits** | **128 bits** |
+| **Total addresses** | **4.3 × 10⁹** (4.3 billion) | **3.4 × 10³⁸** (340 undecillion) |
+| **Notation** | **Dotted decimal** — `192.168.1.1` | **Hexadecimal, colon-separated** — `2001:0db8:85a3::8a2e:0370:7334` |
+| **Header size** | Variable, 20–60 bytes, **13 fields** | **Fixed 40 bytes, 8 fields — simpler and faster to process** |
+| **Checksum in header** | ✅ Yes | ❌ **Removed** (left to Layer 2 and 4) — speeds up routers |
+| **Fragmentation** | Performed by **routers and the sender** | **Only by the SENDER** — routers never fragment |
+| **Configuration** | Manual or **DHCP** | **SLAAC — Stateless Address Autoconfiguration**, or DHCPv6 |
+| **Broadcast** | ✅ Yes | ❌ **None** — replaced by **multicast and anycast** |
+| **Security (IPsec)** | **Optional** | **Built in** (mandatory to implement) |
+| **NAT** | **Essential** | **Not needed** — every device can have a public address |
+| **QoS** | Type of Service field | **Flow Label** field — better QoS support |
+| **Address resolution** | **ARP** | **NDP (Neighbour Discovery Protocol)** with ICMPv6 |
+| **Mobility** | Poor | Better (Mobile IPv6) |
+| **Adoption** | Universal but exhausted | Growing steadily (~45 % of Google traffic) |
+
+**IPv6 shorthand rules:** leading zeros in a group may be dropped (`0db8` → `db8`), and **one** run of consecutive all-zero groups may be replaced by **`::`** (only once per address). So `2001:0db8:0000:0000:0000:0000:0000:0001` becomes **`2001:db8::1`**.
+
+**Transition mechanisms:** **Dual stack** (run both simultaneously — the recommended approach), **Tunnelling** (6to4, Teredo — carry IPv6 inside IPv4), and **Translation** (NAT64/DNS64).
+
+**Previous Year Question List from this Topic:**
+
+- [Network Address Translation (NAT) maps internal networks to the public internet.](../written-answers/computer-networks.md?plain=1#L8335)
+- [Connection between Public IP to Private IP is called __________.](../written-answers/computer-networks.md?plain=1#L8409)
+- [What is NAT? Explain with topological diagram.](../written-answers/computer-networks.md?plain=1#L8427)
+- [Explain NAT? Differenc between IPv4 and IPv6.](../written-answers/computer-networks.md?plain=1#L8481)
+- [What is NAT? Write down the list of private IP address.](../written-answers/computer-networks.md?plain=1#L8523)
+- [Briefly explain Network Address Translation (NAT).](../written-answers/computer-networks.md?plain=1#L8545)
+- [(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।](../written-answers/computer-networks.md?plain=1#L8581)
+- [(b) What is NAT? Mention its advantages.](../written-answers/computer-networks.md?plain=1#L8636)
+- [(a) Why do we need NAT? What are its advantages? Draw a topology diagram to explain NAT.](../written-answers/computer-networks.md?plain=1#L8661)
+- [Why do we need NAT? Draw a topology diagram to explain NAT.](../written-answers/computer-networks.md?plain=1#L8709)
+- [What is PAT? How does a network PAT work?](../written-answers/computer-networks.md?plain=1#L8761)
+- [What is NAT?](../written-answers/computer-networks.md?plain=1#L8809)
+- [Show the translation process of a NAT Box.](../written-answers/computer-networks.md?plain=1#L8836)
