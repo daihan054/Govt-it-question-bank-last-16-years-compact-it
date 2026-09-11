@@ -831,6 +831,12 @@ flowchart TD
 
 **Uses:** **chokes and filters** (blocking AC while passing DC) · **transformers** (two coupled inductors) · **tuned LC circuits** for radio · **energy storage in switch-mode power supplies** · **relays, solenoids and motors** · **EMI suppression**.
 
+**Previous Year Question List from this Topic:**
+
+- [What is Diode and Inductor?](../written-answers/electrical-and-electronics.md?plain=1#L1628)
+- [How does LED differ from Laser Diod? What are the function of Diode?](../written-answers/electrical-and-electronics.md?plain=1#L1683)
+
+
 ---
 
 ## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)
