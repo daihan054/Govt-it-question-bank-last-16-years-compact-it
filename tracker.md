@@ -72,9 +72,19 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 
 ---
 
-## ▶ RESUME HERE
+## ✅ TASK COMPLETE — all 24 MCQ files processed
 
-**Next file: `— ALL FILES DONE`.**
+**Final verification (run after the last commit):**
+
+```
+FILES 25 | SUBTOPICS 214 | THEORIES 542
+written-answers links: 2,970  |  mcq-answers links: 3,040  |  TOTAL 6,010
+bad anchors: 0 | bad line targets: 0 | theories with NO question block: 0
+```
+
+*(25 theory files = the 24 `mcq-answers` subjects plus `image-processing.md`, which has a
+`written-answers` counterpart but no MCQ one. `mechanical-engineering.md` was created from
+scratch during this pass — it has no `written-answers` counterpart.)*
 
 The per-file loop:
 
