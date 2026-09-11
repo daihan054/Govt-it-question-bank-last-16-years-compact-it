@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 4 subtopics · 26 theories
+**Table of Contents** — 5 subtopics · 31 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -34,6 +34,13 @@
    - [Binary Search](#binary-search)
    - [Linear Search vs Binary Search](#linear-search-vs-binary-search)
    - [Finding the Second Highest Element in an Array](#finding-the-second-highest-element-in-an-array)
+
+5. **[Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity)**
+   - [What is an Algorithm? Characteristics and Representation](#what-is-an-algorithm-characteristics-and-representation)
+   - [Time Complexity, Space Complexity and Complexity Classes](#time-complexity-space-complexity-and-complexity-classes)
+   - [Asymptotic Notations — Big O, Big Omega and Big Theta](#asymptotic-notations--big-o-big-omega-and-big-theta)
+   - [How to Find the Complexity of a Piece of Code](#how-to-find-the-complexity-of-a-piece-of-code)
+   - [Recurrence Relations and How to Solve Them](#recurrence-relations-and-how-to-solve-them)
 
 <!-- TOC END -->
 
@@ -2118,10 +2125,10 @@ SecondHighest(A, n):
 | — | — | initial | −∞ | −∞ |
 | 0 | 12 | 12 > −∞ → shift | **12** | −∞ |
 | 1 | 35 | 35 > 12 → shift | **35** | **12** |
-| 2 | 1 | 1 < 12 → nothing | 35 | 12 |
-| 3 | 10 | 1 < 10 < 35, and 10 > ... no, 10 < 12 → nothing | 35 | 12 |
+| 2 | 1 | 1 < 35 and 1 < 12 → no change | 35 | 12 |
+| 3 | 10 | 10 < 35 (first) and 10 < 12 (second) → no change | 35 | 12 |
 | 4 | 34 | 34 < 35 but 34 > 12 → update second | 35 | **34** |
-| 5 | 1 | nothing | 35 | 34 |
+| 5 | 1 | 1 < 35 and 1 < 34 → no change | 35 | 34 |
 
 **Answer: second highest = 34.** ✅
 
@@ -2171,3 +2178,389 @@ int secondHighest(int a[], int n) {
 **Previous Year Question List from this Topic:**
 
 - [What is algorithm? Write down the algorithm to find out the second highest element in an n-element array.](../written-answers/algorithm.md?plain=1#L2193)
+
+## Algorithm Analysis & Asymptotic Complexity
+
+### What is an Algorithm? Characteristics and Representation
+
+An **algorithm** is a **finite, well-defined, step-by-step procedure** for solving a problem or performing a computation. It takes some **input**, performs a sequence of unambiguous operations, and produces the required **output** in a finite amount of time.
+
+> A recipe is an algorithm: a fixed list of ingredients (input), numbered steps (instructions), and a finished dish (output).
+
+#### The five essential characteristics (Donald Knuth)
+
+| # | Characteristic | Meaning |
+|---|---|---|
+| 1 | **Input** | Zero or more quantities are supplied from outside |
+| 2 | **Output** | At least **one** quantity is produced |
+| 3 | **Definiteness** | Every step must be **clear and unambiguous** — no "stir for a while" |
+| 4 | **Finiteness** | It must **terminate** after a finite number of steps |
+| 5 | **Effectiveness** | Every operation must be **basic enough** to be carried out exactly, in principle by a person with pencil and paper |
+
+Two more properties usually added: **correctness** (it produces the right answer for every valid input) and **generality** (it works on a whole class of inputs, not just one).
+
+#### How algorithms are represented
+
+| Form | Description |
+|---|---|
+| **Natural language** | Plain English/Bangla steps — easy to read, but can be ambiguous |
+| **Pseudocode** | Structured English with programming-like control flow — the standard in exams |
+| **Flowchart** | A diagram using standard symbols |
+| **Programming language** | The actual implementation |
+
+> **Note:** "There are no well-defined standards for writing algorithms" — this is true. Pseudocode is a convention, not a formal language, which is exactly why the **five characteristics above** matter: they are the real requirements, not the notation.
+
+#### What affects an algorithm's efficiency
+
+1. **The algorithm's design** itself (the dominant factor — O(n log n) will always beat O(n²) for large n).
+2. **Input size (n)** and the **nature** of the input (sorted, reverse sorted, random).
+3. **The data structures** chosen (array vs linked list vs hash table).
+4. Hardware — CPU speed, cache, memory. *(This changes the constant factor, not the growth rate.)*
+5. The compiler and programming language.
+
+**Asymptotic analysis deliberately ignores factors 4 and 5** so that algorithms can be compared on their own merits, independently of the machine.
+
+**Previous Year Question List from this Topic:**
+
+- [There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also de…](../written-answers/algorithm.md?plain=1#L2659)
+- [What is algorithm? Write down the algorithm to find out the second highest element in an n-element array.](../written-answers/algorithm.md?plain=1#L2193)
+
+
+---
+
+### Time Complexity, Space Complexity and Complexity Classes
+
+#### What "complexity of an algorithm" means
+
+> The **complexity** of an algorithm is a measure of the **resources it consumes as a function of the input size n**.
+
+There are two kinds:
+
+| Type | Measures | Question it answers |
+|---|---|---|
+| **Time complexity** | Number of **basic operations** executed | How **long** does it take as n grows? |
+| **Space complexity** | Amount of **memory** used | How much **memory** does it need as n grows? |
+
+**We count operations, not seconds** — because seconds depend on the machine, whereas the operation count depends only on the algorithm.
+
+> **Space complexity = Input space + Auxiliary space.**
+> **Auxiliary space** is the *extra* memory the algorithm needs beyond storing the input, and is usually what is meant when people compare algorithms. Merge sort has O(n) auxiliary space; quicksort has O(log n).
+
+#### Categories of complexity — the three cases
+
+| Case | Notation | Meaning |
+|---|---|---|
+| **Best case** | **Ω (Big Omega)** | The **minimum** time — the most favourable input |
+| **Average case** | **Θ (Big Theta)** | The **expected** time over all inputs |
+| **Worst case** | **O (Big O)** | The **maximum** time — the least favourable input |
+
+> **Which one matters most? The worst case.** It gives a **guarantee** — the algorithm will *never* be slower than this. For real-time and safety-critical systems, only the worst case is meaningful.
+
+*(Note the common confusion: Ω, Θ and O are **mathematical bounds**, and any of them can be applied to any case. Loosely, exams use "Big O for worst case, Big Omega for best case, Big Theta for average" — which is the convention shown above.)*
+
+#### The common complexity classes, best to worst
+
+| Complexity | Name | n = 10 | n = 1,000 | Example |
+|---|---|---|---|---|
+| **O(1)** | Constant | 1 | 1 | Array index access, hash table lookup, push/pop on a stack |
+| **O(log n)** | Logarithmic | ≈ 3 | ≈ 10 | **Binary search**, balanced BST operations, heap insert |
+| **O(n)** | Linear | 10 | 1,000 | **Linear search**, one pass over an array, finding the maximum |
+| **O(n log n)** | Linearithmic | ≈ 33 | ≈ 10,000 | **Merge sort, Heap sort, Quick sort (average)** |
+| **O(n²)** | Quadratic | 100 | 1,000,000 | **Bubble/Selection/Insertion sort**, nested loops |
+| **O(n³)** | Cubic | 1,000 | 10⁹ | Naive matrix multiplication, **Floyd-Warshall** |
+| **O(2ⁿ)** | Exponential | 1,024 | astronomical | Naive recursive Fibonacci, subset generation, TSP brute force |
+| **O(n!)** | Factorial | 3,628,800 | — | Travelling Salesman by permutation |
+
+```mermaid
+flowchart LR
+    A["O(1)"] --> B["O(log n)"] --> C["O(n)"] --> D["O(n log n)"] --> E["O(n²)"] --> F["O(n³)"] --> G["O(2ⁿ)"] --> H["O(n!)"]
+```
+
+Algorithms up to **O(n log n)** are considered efficient; **O(n²)** is acceptable only for small n; **O(2ⁿ)** and **O(n!)** are practical only for very small inputs.
+
+**Previous Year Question List from this Topic:**
+
+- [What is complexity of Algorithm? Categorize complexity of Algorihm.](../written-answers/algorithm.md?plain=1#L2266)
+- [(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।](../written-answers/algorithm.md?plain=1#L2292)
+- [Including Time and Space complexity....](../written-answers/algorithm.md?plain=1#L2304)
+- [What is complexity? Find the Complexity from code and explain.](../written-answers/algorithm.md?plain=1#L2402)
+- [(খ) অ্যালগরিদমের complexity বলতে কী বোঝায়? কয়েকটি Sorting algorithm এর complexity উল্লেখ করুন।](../written-answers/algorithm.md?plain=1#L2460)
+- [Data structure: Complexity O(N^2). (Full question collect সম্ভব হয় নি)](../written-answers/algorithm.md?plain=1#L2531)
+- [There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also de…](../written-answers/algorithm.md?plain=1#L2659)
+- [(a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য](../written-answers/algorithm.md?plain=1#L28)
+
+
+---
+
+### Asymptotic Notations — Big O, Big Omega and Big Theta
+
+**Asymptotic notation** describes how an algorithm's running time **grows as n becomes very large**, ignoring constant factors and lower-order terms.
+
+#### Big O — the Upper Bound
+
+> **f(n) = O(g(n))** if there exist positive constants **c** and **n₀** such that
+> **0 ≤ f(n) ≤ c · g(n)** for all **n ≥ n₀**.
+
+**Meaning:** the algorithm will take **at most** this long — a **worst-case guarantee** ("no worse than").
+
+*Example:* if f(n) = 3n² + 5n + 100, then f(n) = **O(n²)**, because for c = 4 and n₀ = 11, `3n² + 5n + 100 ≤ 4n²`.
+
+#### Big Omega (Ω) — the Lower Bound
+
+> **f(n) = Ω(g(n))** if there exist positive constants **c** and **n₀** such that
+> **0 ≤ c · g(n) ≤ f(n)** for all **n ≥ n₀**.
+
+**Meaning:** the algorithm will take **at least** this long — a **best-case guarantee** ("no better than").
+
+*Example:* 3n² + 5n + 100 = **Ω(n²)**, and also Ω(n) and Ω(1) (any weaker lower bound is still valid).
+
+#### Big Theta (Θ) — the Tight Bound
+
+> **f(n) = Θ(g(n))** if **f(n) = O(g(n))** *and* **f(n) = Ω(g(n))** — i.e. there are constants c₁, c₂, n₀ with
+> **c₁·g(n) ≤ f(n) ≤ c₂·g(n)** for all n ≥ n₀.
+
+**Meaning:** the growth rate is **exactly** this — an **average/tight** description.
+
+```mermaid
+flowchart TD
+    A["f(n) = 3n² + 5n + 100"] --> B["O(n²) — Upper bound<br/>'grows no faster than n²'"]
+    A --> C["Ω(n²) — Lower bound<br/>'grows no slower than n²'"]
+    A --> D["Θ(n²) — Tight bound<br/>'grows exactly like n²'"]
+```
+
+#### Big O vs Big Omega — the exam answer
+
+| Point | **Big O (O)** | **Big Omega (Ω)** |
+|---|---|---|
+| Bound type | **Upper** bound | **Lower** bound |
+| Describes | The **maximum** growth rate | The **minimum** growth rate |
+| Guarantee | "It will take **at most** this long" | "It will take **at least** this long" |
+| Usually used for | **Worst case** | **Best case** |
+| Formal condition | f(n) ≤ c·g(n) for n ≥ n₀ | f(n) ≥ c·g(n) for n ≥ n₀ |
+| Which is more useful? | **Big O** — a worst-case guarantee is what engineers need | Ω is mainly used to prove that a problem *cannot* be solved faster (e.g. comparison sorting is Ω(n log n)) |
+| Example for linear search | O(n) | Ω(1) |
+
+*(Two more exist: **little-o (o)** = a strictly loose upper bound, and **little-omega (ω)** = a strictly loose lower bound.)*
+
+#### The rules for simplifying
+
+1. **Drop the constants:** O(3n) → **O(n)**; O(n/2) → O(n).
+2. **Keep only the fastest-growing term:** O(n² + n + 100) → **O(n²)**.
+3. **Nested loops multiply:** a loop of n inside a loop of m → **O(n·m)**.
+4. **Sequential blocks add**, then rule 2 applies: O(n) followed by O(n²) → **O(n²)**.
+5. **Different inputs use different variables:** two separate loops over arrays of size n and m → **O(n + m)**, not O(n).
+
+**Previous Year Question List from this Topic:**
+
+- [What is Big O and Big Omega?](../written-answers/algorithm.md?plain=1#L2443)
+- [(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।](../written-answers/algorithm.md?plain=1#L2292)
+- [What is complexity of Algorithm? Categorize complexity of Algorihm.](../written-answers/algorithm.md?plain=1#L2266)
+
+
+---
+
+### How to Find the Complexity of a Piece of Code
+
+This is a practical skill that appears in many exams. Work through the code counting how many times each statement runs.
+
+#### Rule 1 — A simple statement is O(1)
+
+```c
+int x = 5;          /* O(1) */
+x = a + b * c;      /* O(1) */
+if (a > b) ...      /* O(1) — the condition itself */
+```
+
+#### Rule 2 — A single loop is O(n)
+
+```c
+for (i = 0; i < n; i++)
+    sum += a[i];          /* runs n times  →  O(n) */
+```
+
+#### Rule 3 — Nested loops multiply
+
+```c
+for (i = 0; i < N; i++)          /* outer: N times          */
+    for (j = 0; j < M; j++)      /* inner: M times for each */
+        printf("%d", i * j);     /* total: N × M            */
+```
+
+> **Time complexity = O(N × M).** If both are of size n, it becomes **O(n²)**.
+> **Space complexity = O(1)** — only the loop counters `i` and `j` are stored; no data structure grows with the input.
+
+#### Rule 4 — Sequential loops add
+
+```c
+for (i = 0; i < n; i++)  ...     /* O(n)  */
+for (j = 0; j < n; j++)          /* O(n²) */
+    for (k = 0; k < n; k++) ...
+```
+Total = O(n) + O(n²) = **O(n²)** (keep the dominant term).
+
+#### Rule 5 — Dividing or multiplying the counter gives O(log n)
+
+```c
+for (i = 1; i < n; i = i * 2)    /* i = 1, 2, 4, 8, 16 …  */
+    printf("%d", i);
+```
+The loop runs until 2ᵏ ≥ n, so k = log₂ n → **O(log n)**.
+*(Similarly `for (i = n; i > 0; i = i / 2)` is O(log n).)*
+
+> **Answer to "write an algorithm whose complexity is O(log n)":** **binary search**, or the loop above that doubles/halves the counter each time, or traversing a balanced binary search tree from root to leaf.
+
+#### Rule 6 — A dependent inner loop
+
+```c
+for (i = 0; i < n; i++)
+    for (j = 0; j < i; j++)      /* runs 0, 1, 2, … n-1 times */
+        ...
+```
+Total iterations = 0 + 1 + 2 + … + (n−1) = **n(n−1)/2** → **O(n²)**.
+
+#### Rule 7 — A loop inside a logarithmic loop
+
+```c
+for (i = 1; i < n; i = i * 2)     /* log n times */
+    for (j = 0; j < n; j++)       /* n times     */
+        ...
+```
+→ **O(n log n)**.
+
+#### Space complexity examples
+
+| Code | Auxiliary space |
+|---|---|
+| A few scalar variables | **O(1)** |
+| `int b[n];` — a new array of size n | **O(n)** |
+| A 2-D matrix `int m[n][n];` | **O(n²)** |
+| Recursion of depth n (each frame O(1)) | **O(n)** stack |
+| Recursion of depth log n | **O(log n)** stack |
+
+#### Complexity of the important algorithms — a revision table
+
+| Algorithm | **Best** | **Average** | **Worst** | Space |
+|---|---|---|---|---|
+| **Linear search** | Ω(1) | Θ(n) | **O(n)** | O(1) |
+| **Binary search** | Ω(1) | Θ(log n) | **O(log n)** | O(1) / O(log n) rec. |
+| **Bubble sort** | Ω(n) | Θ(n²) | **O(n²)** | O(1) |
+| **Selection sort** | Ω(n²) | Θ(n²) | **O(n²)** | O(1) |
+| **Insertion sort** | Ω(n) | Θ(n²) | **O(n²)** | O(1) |
+| **Merge sort** | Ω(n log n) | Θ(n log n) | **O(n log n)** | O(n) |
+| **Quick sort** | Ω(n log n) | Θ(n log n) | **O(n²)** | O(log n) |
+| **Heap sort** | Ω(n log n) | Θ(n log n) | **O(n log n)** | O(1) |
+| **BFS / DFS** | — | — | **O(V + E)** | O(V) |
+| **Dijkstra** | — | — | **O(E log V)** | O(V) |
+| **Bellman-Ford** | — | — | **O(V·E)** | O(V) |
+| **Floyd-Warshall** | — | — | **O(V³)** | O(V²) |
+| **Kruskal / Prim** | — | — | **O(E log V)** | O(V+E) |
+
+> **"Find the best and worst case complexity of Binary Search, Quick Sort and Depth First Search":**
+> - **Binary Search** — Best **O(1)** (key at the first mid), Worst **O(log n)**.
+> - **Quick Sort** — Best **O(n log n)** (balanced partitions), Worst **O(n²)** (pivot always smallest/largest, e.g. sorted input with the first element as pivot).
+> - **DFS** — Best and Worst both **O(V + E)** with an adjacency list (every vertex and edge is examined once), or O(V²) with an adjacency matrix.
+
+**Previous Year Question List from this Topic:**
+
+- [Analyze the time and space complexity of the following code:](../written-answers/algorithm.md?plain=1#L2238)
+- [What is complexity? Find the Complexity from code and explain.](../written-answers/algorithm.md?plain=1#L2402)
+- [Find out Best case, Worst case complexity of Binary search, Quick sort, Depth First Search.](../written-answers/algorithm.md?plain=1#L2481)
+- [Write an algorithm which complexity is O(logn).](../written-answers/algorithm.md?plain=1#L2684)
+- [Find time and space complexity like below pseudo code.](../written-answers/algorithm.md?plain=1#L2717)
+- [Analyze the following C function and determine its Big O Time Complexity and Space Complexity. Explain your reasoning.](../written-answers/algorithm.md?plain=1#L937)
+
+
+---
+
+### Recurrence Relations and How to Solve Them
+
+A **recurrence relation** expresses the running time of a **recursive** algorithm in terms of the running time on smaller inputs. Solving it gives the closed-form complexity.
+
+#### The three standard methods
+
+| Method | How it works |
+|---|---|
+| **Substitution / Iteration** | Expand the recurrence repeatedly until a pattern appears, then find the closed form |
+| **Recursion tree** | Draw the tree of recursive calls, sum the work at each level, multiply by the number of levels |
+| **Master Theorem** | A direct formula for recurrences of the form T(n) = a·T(n/b) + f(n) |
+
+#### The Master Theorem
+
+For **T(n) = a·T(n/b) + f(n)**, where a ≥ 1, b > 1:
+
+Compare **f(n)** with **n^(log_b a)**:
+
+| Case | Condition | Result |
+|---|---|---|
+| **1** | f(n) grows **slower** than n^(log_b a) | **T(n) = Θ(n^(log_b a))** |
+| **2** | f(n) grows **at the same rate** as n^(log_b a) | **T(n) = Θ(n^(log_b a) · log n)** |
+| **3** | f(n) grows **faster** (with the regularity condition) | **T(n) = Θ(f(n))** |
+
+**Applying it to the classic algorithms:**
+
+| Algorithm | Recurrence | a, b, f(n) | n^(log_b a) | Case | Result |
+|---|---|---|---|---|---|
+| **Binary search** | T(n) = T(n/2) + O(1) | 1, 2, 1 | n⁰ = 1 | 2 | **Θ(log n)** |
+| **Merge sort** | T(n) = 2T(n/2) + n | 2, 2, n | n¹ = n | 2 | **Θ(n log n)** |
+| **Quick sort (best)** | T(n) = 2T(n/2) + n | 2, 2, n | n | 2 | **Θ(n log n)** |
+| **Quick sort (worst)** | T(n) = T(n−1) + n | *(not of the Master form)* | — | — | **Θ(n²)** |
+| **Naive matrix mult.** | T(n) = 8T(n/2) + n² | 8, 2, n² | n³ | 1 | **Θ(n³)** |
+| **Strassen's** | T(n) = 7T(n/2) + n² | 7, 2, n² | n^2.807 | 1 | **Θ(n^2.807)** |
+| **Binary tree traversal** | T(n) = 2T(n/2) + O(1) | 2, 2, 1 | n | 1 | **Θ(n)** |
+
+#### Worked example — solve T(n) = 3T(n−1) + 2, with T(1) = 1
+
+This is a **linear recurrence with a constant coefficient**, not of the Master-Theorem divide-and-conquer form, so use **substitution**.
+
+**Step 1 — expand:**
+
+```
+T(n) = 3T(n-1) + 2
+     = 3[3T(n-2) + 2] + 2          = 3²T(n-2) + 3·2 + 2
+     = 3²[3T(n-3) + 2] + 3·2 + 2   = 3³T(n-3) + 3²·2 + 3·2 + 2
+     …
+     = 3ᵏ·T(n-k) + 2(3^(k-1) + 3^(k-2) + … + 3 + 1)
+```
+
+**Step 2 — stop at the base case.** Set `n − k = 1` → **k = n − 1**:
+
+```
+T(n) = 3^(n-1)·T(1) + 2·(3^(n-2) + 3^(n-3) + … + 3 + 1)
+```
+
+**Step 3 — sum the geometric series.** The bracket is a geometric series with ratio 3 and (n−1) terms:
+
+> 3^(n-2) + … + 3 + 1 = (3^(n-1) − 1) / (3 − 1) = **(3^(n-1) − 1)/2**
+
+**Step 4 — substitute T(1) = 1:**
+
+```
+T(n) = 3^(n-1) · 1 + 2 · (3^(n-1) - 1)/2
+     = 3^(n-1) + 3^(n-1) - 1
+     = 2·3^(n-1) - 1
+```
+
+> ### ✅ **T(n) = 2·3^(n−1) − 1**, so **T(n) = Θ(3ⁿ)** — exponential.
+
+**Verification:**
+- T(1) = 2·3⁰ − 1 = 2 − 1 = **1** ✅ (matches the base case)
+- T(2) = 3·T(1) + 2 = 3 + 2 = **5**; formula: 2·3¹ − 1 = 6 − 1 = **5** ✅
+- T(3) = 3·5 + 2 = **17**; formula: 2·3² − 1 = 18 − 1 = **17** ✅
+
+#### Other common recurrences to memorise
+
+| Recurrence | Solution | Where it comes from |
+|---|---|---|
+| T(n) = T(n/2) + O(1) | **Θ(log n)** | Binary search |
+| T(n) = T(n−1) + O(1) | **Θ(n)** | Linear recursion, factorial |
+| T(n) = T(n−1) + O(n) | **Θ(n²)** | Quick sort worst case, selection sort |
+| T(n) = 2T(n/2) + O(n) | **Θ(n log n)** | Merge sort |
+| T(n) = 2T(n/2) + O(1) | **Θ(n)** | Tree traversal |
+| T(n) = 2T(n−1) + O(1) | **Θ(2ⁿ)** | Tower of Hanoi |
+| T(n) = T(n−1) + T(n−2) | **Θ(φⁿ) ≈ Θ(1.618ⁿ)** | Naive recursive Fibonacci |
+
+**Previous Year Question List from this Topic:**
+
+- [Recurrence equation of binary search and solve it.](../written-answers/algorithm.md?plain=1#L2503)
+- [Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.](../written-answers/algorithm.md?plain=1#L2626)
+- [(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?](../written-answers/algorithm.md?plain=1#L335)
