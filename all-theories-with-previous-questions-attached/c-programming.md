@@ -147,9 +147,9 @@ printf("Sum = %d\n", a + b);
 
 **Previous Year Question List from this Topic:**
 
-- [(i) Formatted Input/Output Statement কাকে বলে? Key-Board থেকে কিভাবে input নেয়া যায়? %d এর অর্থ কী?](../written-answers/c-programming.md?plain=1#L2740)
-- [Answer the following Questions](../written-answers/c-programming.md?plain=1#L4051)
-- [Answer the following question:](../written-answers/c-programming.md?plain=1#L9736)
+- [(i) Formatted Input/Output Statement কাকে বলে? Key-Board থেকে কিভাবে input নেয়া যায়? %d এর অর্থ কী?](../written-answers/c-programming.md?plain=1#L2763)
+- [Answer the following Questions](../written-answers/c-programming.md?plain=1#L4074)
+- [Answer the following question:](../written-answers/c-programming.md?plain=1#L9759)
 
 
 ---
@@ -257,22 +257,22 @@ switch (ch) {
 - [Write a C program to check the number in EVEN or ODD.](../written-answers/c-programming.md?plain=1#L23)
 - [Write a C/Java program to determine if a given year is a leap year nor not.](../written-answers/c-programming.md?plain=1#L46)
 - [Salary Range and Tax Calculation are given:](../written-answers/c-programming.md?plain=1#L369)
-- [Write a C/C++ program for check out a leap year program.](../written-answers/c-programming.md?plain=1#L1113)
-- [Determine even or odd numbers.](../written-answers/c-programming.md?plain=1#L1865)
-- [Write a program to find this is Leap year or not, using function.](../written-answers/c-programming.md?plain=1#L2124)
-- [(b) Write a program in C/C++/Java to identify the largest number of given 3 numbers.](../written-answers/c-programming.md?plain=1#L2326)
-- [(b) Write down a program in C language that will find the maximum of four integer gives as inputs.](../written-answers/c-programming.md?plain=1#L2351)
-- [Write the code for second highest maximum from given three number in c/c++.](../written-answers/c-programming.md?plain=1#L2632)
-- [Write a simple output C program to check odd-even number.](../written-answers/c-programming.md?plain=1#L2664)
-- [(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।](../written-answers/c-programming.md?plain=1#L2770)
-- [An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as to…](../written-answers/c-programming.md?plain=1#L2810)
-- [Write a code in C/C++ that will output the 2nd largest number. (If N>=1)](../written-answers/c-programming.md?plain=1#L2929)
-- [(খ) $ax^2+bx+c=0$ সমীকরণটির x চলকের মান নির্ণয়ের জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে একটি কোড লিখুন।](../written-answers/c-programming.md?plain=1#L3123)
-- [Write a program to calculate GPA, Avg and total marks.](../written-answers/c-programming.md?plain=1#L3318)
-- [Write a program in any language to find out maximum among three numbers.](../written-answers/c-programming.md?plain=1#L3792)
-- [নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')](../written-answers/c-programming.md?plain=1#L9702)
-- [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9808)
-- [(c) Is it possible to convert all if-else code into switch code block? Give an example.](../written-answers/c-programming.md?plain=1#L9908)
+- [Write a C/C++ program for check out a leap year program.](../written-answers/c-programming.md?plain=1#L1136)
+- [Determine even or odd numbers.](../written-answers/c-programming.md?plain=1#L1888)
+- [Write a program to find this is Leap year or not, using function.](../written-answers/c-programming.md?plain=1#L2147)
+- [(b) Write a program in C/C++/Java to identify the largest number of given 3 numbers.](../written-answers/c-programming.md?plain=1#L2349)
+- [(b) Write down a program in C language that will find the maximum of four integer gives as inputs.](../written-answers/c-programming.md?plain=1#L2374)
+- [Write the code for second highest maximum from given three number in c/c++.](../written-answers/c-programming.md?plain=1#L2655)
+- [Write a simple output C program to check odd-even number.](../written-answers/c-programming.md?plain=1#L2687)
+- [(ii) if......else statement এর format লিখ। 1+3+5+7+\dots+n সিরিজটির যোগফল নির্ণয়ের জন্য C-language এ একটি প্রোগ্রাম লিখ।](../written-answers/c-programming.md?plain=1#L2793)
+- [An employee’s total weekly pay is calculated by multiplying the hourly wage and number of regular hours plus any overtime pays which in turn is calculated as to…](../written-answers/c-programming.md?plain=1#L2833)
+- [Write a code in C/C++ that will output the 2nd largest number. (If N>=1)](../written-answers/c-programming.md?plain=1#L2952)
+- [(খ) $ax^2+bx+c=0$ সমীকরণটির x চলকের মান নির্ণয়ের জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে একটি কোড লিখুন।](../written-answers/c-programming.md?plain=1#L3146)
+- [Write a program to calculate GPA, Avg and total marks.](../written-answers/c-programming.md?plain=1#L3341)
+- [Write a program in any language to find out maximum among three numbers.](../written-answers/c-programming.md?plain=1#L3815)
+- [নিচের if-else কে switch case এ পরিনত করুন। if(ch== 'A':: ch== 'E' :: ch== 'I' :: ch == 'O':: ch== 'U')](../written-answers/c-programming.md?plain=1#L9725)
+- [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9831)
+- [(c) Is it possible to convert all if-else code into switch code block? Give an example.](../written-answers/c-programming.md?plain=1#L9931)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -419,14 +419,14 @@ for (i = 1; i <= 10; i++) {
 **Previous Year Question List from this Topic:**
 
 - [(a) Difference between a while loop and do-while loop.](../written-answers/c-programming.md?plain=1#L98)
-- [Print the following matrix using for loop.](../written-answers/c-programming.md?plain=1#L1894)
-- [What is the equivalant code of the following statement in while loop format?](../written-answers/c-programming.md?plain=1#L3162)
-- [When the statement numbered 4,5,6,7 are replaced by](../written-answers/c-programming.md?plain=1#L3938)
-- [What can be used to terminate for(;;)?](../written-answers/c-programming.md?plain=1#L9289)
-- [Write the syntax of while and do while loop.](../written-answers/c-programming.md?plain=1#L9504)
-- [Explain in details the different forms of looping statement in C language.](../written-answers/c-programming.md?plain=1#L9988)
-- [Three types of control statements and their graphical presentation using flowchart or flow graph.](../written-answers/c-programming.md?plain=1#L10402)
-- [(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L10433)
+- [Print the following matrix using for loop.](../written-answers/c-programming.md?plain=1#L1917)
+- [What is the equivalant code of the following statement in while loop format?](../written-answers/c-programming.md?plain=1#L3185)
+- [When the statement numbered 4,5,6,7 are replaced by](../written-answers/c-programming.md?plain=1#L3961)
+- [What can be used to terminate for(;;)?](../written-answers/c-programming.md?plain=1#L9312)
+- [Write the syntax of while and do while loop.](../written-answers/c-programming.md?plain=1#L9527)
+- [Explain in details the different forms of looping statement in C language.](../written-answers/c-programming.md?plain=1#L10011)
+- [Three types of control statements and their graphical presentation using flowchart or flow graph.](../written-answers/c-programming.md?plain=1#L10425)
+- [(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L10456)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -597,41 +597,41 @@ if (q != r) {
 - [Write a C program that accepts 10 elements in an array and finds the maximum elements from the array.](../written-answers/c-programming.md?plain=1#L220)
 - [Write a function to find minimum number from an array, return minimum value as argument.](../written-answers/c-programming.md?plain=1#L247)
 - [Write a program in any language to find the sum of rows and columns of a m \times n matrix, where m and n is taken input from the user. Give the output in the f…](../written-answers/c-programming.md?plain=1#L463)
-- [Write a function which receives an array of integers as parameter and print the numbers divisible by 3 in the array.](../written-answers/c-programming.md?plain=1#L658)
-- [Write a program in any language that takes two matrices A and B as inputs ensure your code handles matrices of different dimensions—](../written-answers/c-programming.md?plain=1#L1368)
-- [Write a function to find the smallest element from an array.](../written-answers/c-programming.md?plain=1#L1437)
-- [Suppose you have an array. The array contains elements from 0 to 10. This array also contains 0. To replace these 0s, write a program in C/C++ language.](../written-answers/c-programming.md?plain=1#L1463)
-- [Write a function int equilibrium (int() arr, int n); that given a sequence arr() of size n, returns an equilibrium index (if any) or -1 if no equilibrium indexe…](../written-answers/c-programming.md?plain=1#L1496)
-- [Write a C Program to delete duplicate element from array.](../written-answers/c-programming.md?plain=1#L1620)
-- [(খ) এমন একটি C program লিখুন যা একটি array তৈরি করে কতগুলো ডেটা রাখবে, তারপর ফলাফল হিসেবে ডেটাগুলোকে বিপরীত দিক থেকে print করবে।](../written-answers/c-programming.md?plain=1#L1695)
-- [Find the most significant number in an array of N elements.](../written-answers/c-programming.md?plain=1#L1838)
-- [ইউজার হতে 10 টি integer data input করে যে data গুলো 5 দ্বারা বিভাজ্য তাদের গড় মান নির্ণয় এর একটি program লিখুন।](../written-answers/c-programming.md?plain=1#L1940)
-- [Write a function in C/C++ that return kth largest number of an array. The function has three parameters array_name, size, k.](../written-answers/c-programming.md?plain=1#L1974)
-- [Write a C program using array, here N is the number of total students. Take the input and find the average marks. Find out the students who got the above marks…](../written-answers/c-programming.md?plain=1#L2155)
-- [Consider int num(20)(4) holds the marks of four class test(CT) of a class of 20 students. Write a program to find out the sum of best three CT marks for each st…](../written-answers/c-programming.md?plain=1#L2231)
-- [(খ) তোমার ক্লাসের ছাত্রদের তালিকা Sort করার জন্য একটি C Program লিখ।](../written-answers/c-programming.md?plain=1#L2288)
-- [We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All v…](../written-answers/c-programming.md?plain=1#L2377)
-- [(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the…](../written-answers/c-programming.md?plain=1#L2478)
-- [(b) Write down a program to find sum of diagonal elements of a two dimensional matrix.](../written-answers/c-programming.md?plain=1#L2512)
-- [X is an integer stream of N numbers. You have to select 2 data P and Q such that A <= (P+Q) <= B. Write an algorithm / pseudo code/ C program how many ways you…](../written-answers/c-programming.md?plain=1#L2872)
-- [(ক) একটি Array তে পাঁচটি সংখ্যা Input হিসেবে নিয়ে তাদের গড় বের করার জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে কোড লিখুন।](../written-answers/c-programming.md?plain=1#L3094)
-- [Write a c program to find max price from 20 items.](../written-answers/c-programming.md?plain=1#L3287)
-- [Write a program of find max from 20 item price. (Using any language)](../written-answers/c-programming.md?plain=1#L3393)
-- [Suppose an array is {4,5,6,7}. Write a C program that will output like {4,5}, {4,6}, {4,7}, {5,6}, {5,7}, {6,7}.](../written-answers/c-programming.md?plain=1#L3530)
-- [Write a program using any programming language that reads five numbers from keyboard and display the smaller, larger and average of those numbers.](../written-answers/c-programming.md?plain=1#L3562)
-- [Write a program to find out the minimum number from a series.](../written-answers/c-programming.md?plain=1#L3661)
-- [Write a C program to acending (A-Z) using selection sort.](../written-answers/c-programming.md?plain=1#L3722)
-- [Write a C program to get max element of an array.](../written-answers/c-programming.md?plain=1#L3870)
-- [Write a program/code to find the largest number in an array of 10 elements.](../written-answers/c-programming.md?plain=1#L3914)
-- [Write a program that read n number string and print these strings in ascending order.](../written-answers/c-programming.md?plain=1#L3975)
-- [Write a C program that performs this matrices problem. Calculate and display the sum of the elements on the main diagonal and the sum of the elements on the ant…](../written-answers/c-programming.md?plain=1#L4173)
-- [What will occur when an array is declared without size?](../written-answers/c-programming.md?plain=1#L9306)
-- [Write a program to print the common element between two arrays and the total number of elements found.](../written-answers/c-programming.md?plain=1#L4217)
-- [Array - Reverse the whole array.](../written-answers/c-programming.md?plain=1#L4398)
-- [Array - Frequency count of elements.](../written-answers/c-programming.md?plain=1#L4435)
-- [Matrix - Sum of two matrices.](../written-answers/c-programming.md?plain=1#L4480)
-- [Matrix - Find the transpose.](../written-answers/c-programming.md?plain=1#L4522)
-- [Matrix - Check identity matrix.](../written-answers/c-programming.md?plain=1#L4567)
+- [Write a function which receives an array of integers as parameter and print the numbers divisible by 3 in the array.](../written-answers/c-programming.md?plain=1#L681)
+- [Write a program in any language that takes two matrices A and B as inputs ensure your code handles matrices of different dimensions—](../written-answers/c-programming.md?plain=1#L1391)
+- [Write a function to find the smallest element from an array.](../written-answers/c-programming.md?plain=1#L1460)
+- [Suppose you have an array. The array contains elements from 0 to 10. This array also contains 0. To replace these 0s, write a program in C/C++ language.](../written-answers/c-programming.md?plain=1#L1486)
+- [Write a function int equilibrium (int() arr, int n); that given a sequence arr() of size n, returns an equilibrium index (if any) or -1 if no equilibrium indexe…](../written-answers/c-programming.md?plain=1#L1519)
+- [Write a C Program to delete duplicate element from array.](../written-answers/c-programming.md?plain=1#L1643)
+- [(খ) এমন একটি C program লিখুন যা একটি array তৈরি করে কতগুলো ডেটা রাখবে, তারপর ফলাফল হিসেবে ডেটাগুলোকে বিপরীত দিক থেকে print করবে।](../written-answers/c-programming.md?plain=1#L1718)
+- [Find the most significant number in an array of N elements.](../written-answers/c-programming.md?plain=1#L1861)
+- [ইউজার হতে 10 টি integer data input করে যে data গুলো 5 দ্বারা বিভাজ্য তাদের গড় মান নির্ণয় এর একটি program লিখুন।](../written-answers/c-programming.md?plain=1#L1963)
+- [Write a function in C/C++ that return kth largest number of an array. The function has three parameters array_name, size, k.](../written-answers/c-programming.md?plain=1#L1997)
+- [Write a C program using array, here N is the number of total students. Take the input and find the average marks. Find out the students who got the above marks…](../written-answers/c-programming.md?plain=1#L2178)
+- [Consider int num(20)(4) holds the marks of four class test(CT) of a class of 20 students. Write a program to find out the sum of best three CT marks for each st…](../written-answers/c-programming.md?plain=1#L2254)
+- [(খ) তোমার ক্লাসের ছাত্রদের তালিকা Sort করার জন্য একটি C Program লিখ।](../written-answers/c-programming.md?plain=1#L2311)
+- [We are given an array of integers and a range, we need to find whether the subarray which falls in this range has values in the form of a mountain or not. All v…](../written-answers/c-programming.md?plain=1#L2400)
+- [(a) Write down a function in C Programming language, that will take an n\times n matrix as parameter and the dimension n as another parameter, then compute the…](../written-answers/c-programming.md?plain=1#L2501)
+- [(b) Write down a program to find sum of diagonal elements of a two dimensional matrix.](../written-answers/c-programming.md?plain=1#L2535)
+- [X is an integer stream of N numbers. You have to select 2 data P and Q such that A <= (P+Q) <= B. Write an algorithm / pseudo code/ C program how many ways you…](../written-answers/c-programming.md?plain=1#L2895)
+- [(ক) একটি Array তে পাঁচটি সংখ্যা Input হিসেবে নিয়ে তাদের গড় বের করার জন্য C প্রোগ্রামিং ল্যাঙ্গুয়েজে কোড লিখুন।](../written-answers/c-programming.md?plain=1#L3117)
+- [Write a c program to find max price from 20 items.](../written-answers/c-programming.md?plain=1#L3310)
+- [Write a program of find max from 20 item price. (Using any language)](../written-answers/c-programming.md?plain=1#L3416)
+- [Suppose an array is {4,5,6,7}. Write a C program that will output like {4,5}, {4,6}, {4,7}, {5,6}, {5,7}, {6,7}.](../written-answers/c-programming.md?plain=1#L3553)
+- [Write a program using any programming language that reads five numbers from keyboard and display the smaller, larger and average of those numbers.](../written-answers/c-programming.md?plain=1#L3585)
+- [Write a program to find out the minimum number from a series.](../written-answers/c-programming.md?plain=1#L3684)
+- [Write a C program to acending (A-Z) using selection sort.](../written-answers/c-programming.md?plain=1#L3745)
+- [Write a C program to get max element of an array.](../written-answers/c-programming.md?plain=1#L3893)
+- [Write a program/code to find the largest number in an array of 10 elements.](../written-answers/c-programming.md?plain=1#L3937)
+- [Write a program that read n number string and print these strings in ascending order.](../written-answers/c-programming.md?plain=1#L3998)
+- [Write a C program that performs this matrices problem. Calculate and display the sum of the elements on the main diagonal and the sum of the elements on the ant…](../written-answers/c-programming.md?plain=1#L4196)
+- [What will occur when an array is declared without size?](../written-answers/c-programming.md?plain=1#L9329)
+- [Write a program to print the common element between two arrays and the total number of elements found.](../written-answers/c-programming.md?plain=1#L4240)
+- [Array - Reverse the whole array.](../written-answers/c-programming.md?plain=1#L4421)
+- [Array - Frequency count of elements.](../written-answers/c-programming.md?plain=1#L4458)
+- [Matrix - Sum of two matrices.](../written-answers/c-programming.md?plain=1#L4503)
+- [Matrix - Find the transpose.](../written-answers/c-programming.md?plain=1#L4545)
+- [Matrix - Check identity matrix.](../written-answers/c-programming.md?plain=1#L4590)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -813,42 +813,42 @@ else                                        tax = 100000*0.05 + 300000*0.10
 - [Write a C/Java program to determine if a given year is a leap year nor not.](../written-answers/c-programming.md?plain=1#L46)
 - [Write a C/Java program to check Armstrong number or not.](../written-answers/c-programming.md?plain=1#L276)
 - [Write a C program find prime number 1 to n.](../written-answers/c-programming.md?plain=1#L433)
-- [Write a program in any language to find the prime numbers between 1.......n, where n is taken as user input.](../written-answers/c-programming.md?plain=1#L506)
-- [Write a Program Prime number print from 1 to n.](../written-answers/c-programming.md?plain=1#L552)
-- [Write a C program: ax^2+bx+c=0](../written-answers/c-programming.md?plain=1#L689)
-- [Write a program that take a number as input and output should be sum of digits of that number using python/C also draw its flow chart.](../written-answers/c-programming.md?plain=1#L729)
-- [(খ) একটি ধনাত্মক পূর্ণ সংখ্যার Factorial নির্ণয়ের C program লিখুন।](../written-answers/c-programming.md?plain=1#L906)
-- [Write a program swap two numbers without using 3rd variable.](../written-answers/c-programming.md?plain=1#L936)
-- [Write a C/C++ program to count the prime number up to N.](../written-answers/c-programming.md?plain=1#L1085)
-- [Write a program find prime number between 1 to 100?](../written-answers/c-programming.md?plain=1#L1265)
-- [Write a C code that show factorial of a number.](../written-answers/c-programming.md?plain=1#L1589)
-- [Given two integers A and B as input write a program to compute the least common multiple of A and B.](../written-answers/c-programming.md?plain=1#L1659)
-- [(খ) প্রথম দশটি Fibonacci number প্রদর্শনের জন্য একটি C program লিখুন।](../written-answers/c-programming.md?plain=1#L1724)
-- [C program to find sum of odd numbers from 1 to n.](../written-answers/c-programming.md?plain=1#L1785)
-- [Determine whwther a given number is prime or not?](../written-answers/c-programming.md?plain=1#L1810)
-- [Write a C/C++ program to find out the prime from 1 to N.](../written-answers/c-programming.md?plain=1#L2006)
-- [Write a C/C++ program to find the reverse number of a number.](../written-answers/c-programming.md?plain=1#L2034)
-- [Write a C/C++ program to find the HCF.](../written-answers/c-programming.md?plain=1#L2062)
-- [Write a C/C++ program to find the sum of digits.](../written-answers/c-programming.md?plain=1#L2096)
-- [Write down a function int reverse (int n) that takes a positive integer as input parameter and returns the reverse of the given integer. For example, if input i…](../written-answers/c-programming.md?plain=1#L2197)
-- [Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6](../written-answers/c-programming.md?plain=1#L2408)
-- [Write a C program to compute the perimeter and area of a circle with a given radius.](../written-answers/c-programming.md?plain=1#L2571)
-- [A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।](../written-answers/c-programming.md?plain=1#L2597)
-- [Write a C program for prime numbers between 1 to N.](../written-answers/c-programming.md?plain=1#L2688)
-- [0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।](../written-answers/c-programming.md?plain=1#L2968)
-- [A prim number is a number that is evenly divided by only 1 and itself. Write a program to your favorite language to print the first 100 prime numbers.](../written-answers/c-programming.md?plain=1#L3028)
-- [Write a program to find the GCD using C/C++.](../written-answers/c-programming.md?plain=1#L3258)
-- [Write a program of find Prime number in 1 to 100 number. (Using any language)](../written-answers/c-programming.md?plain=1#L3362)
-- [Write a c program to verify a perfect number. Perfect number is a positive integer which is equal to the sum of its proper positive divisors.](../written-answers/c-programming.md?plain=1#L3468)
-- [Write a program check a number is prime or not prime.](../written-answers/c-programming.md?plain=1#L3501)
-- [Write a program to read the coordinates of the end points of a line and to find its length.](../written-answers/c-programming.md?plain=1#L3598)
-- [Write a C program to reverse an integer number.](../written-answers/c-programming.md?plain=1#L3692)
-- [Write a structured program to display Fibonacci series up to 100 Numbers.](../written-answers/c-programming.md?plain=1#L3759)
-- [Write a program (in C or any language) to find the sum of even numbers from 1 to n.](../written-answers/c-programming.md?plain=1#L3893)
-- [(b) What are the rules for calculating the n-th Fibonacci number, and what is the recurrence relation that defines this sequence?](../written-answers/c-programming.md?plain=1#L4013)
-- [Write a program that takes two inputs, n and k, where n>k. The program should prompt the user to enter n numbers of data and then return the k^\text{th} smalles…](../written-answers/c-programming.md?plain=1#L4075)
-- [Write a program that takes a single alphanumeric string as input. The string may contain both letters (a-z, A-Z) and digits (0-9). Your task is to calculate and…](../written-answers/c-programming.md?plain=1#L4147)
-- [Find the number of occurrences of a digit in a number.](../written-answers/c-programming.md?plain=1#L4327)
+- [Write a program in any language to find the prime numbers between 1.......n, where n is taken as user input.](../written-answers/c-programming.md?plain=1#L529)
+- [Write a Program Prime number print from 1 to n.](../written-answers/c-programming.md?plain=1#L575)
+- [Write a C program: ax^2+bx+c=0](../written-answers/c-programming.md?plain=1#L712)
+- [Write a program that take a number as input and output should be sum of digits of that number using python/C also draw its flow chart.](../written-answers/c-programming.md?plain=1#L752)
+- [(খ) একটি ধনাত্মক পূর্ণ সংখ্যার Factorial নির্ণয়ের C program লিখুন।](../written-answers/c-programming.md?plain=1#L929)
+- [Write a program swap two numbers without using 3rd variable.](../written-answers/c-programming.md?plain=1#L959)
+- [Write a C/C++ program to count the prime number up to N.](../written-answers/c-programming.md?plain=1#L1108)
+- [Write a program find prime number between 1 to 100?](../written-answers/c-programming.md?plain=1#L1288)
+- [Write a C code that show factorial of a number.](../written-answers/c-programming.md?plain=1#L1612)
+- [Given two integers A and B as input write a program to compute the least common multiple of A and B.](../written-answers/c-programming.md?plain=1#L1682)
+- [(খ) প্রথম দশটি Fibonacci number প্রদর্শনের জন্য একটি C program লিখুন।](../written-answers/c-programming.md?plain=1#L1747)
+- [C program to find sum of odd numbers from 1 to n.](../written-answers/c-programming.md?plain=1#L1808)
+- [Determine whwther a given number is prime or not?](../written-answers/c-programming.md?plain=1#L1833)
+- [Write a C/C++ program to find out the prime from 1 to N.](../written-answers/c-programming.md?plain=1#L2029)
+- [Write a C/C++ program to find the reverse number of a number.](../written-answers/c-programming.md?plain=1#L2057)
+- [Write a C/C++ program to find the HCF.](../written-answers/c-programming.md?plain=1#L2085)
+- [Write a C/C++ program to find the sum of digits.](../written-answers/c-programming.md?plain=1#L2119)
+- [Write down a function int reverse (int n) that takes a positive integer as input parameter and returns the reverse of the given integer. For example, if input i…](../written-answers/c-programming.md?plain=1#L2220)
+- [Write a programme in C/C++/Java what finds sum of digits of a number until sum becomes single digit, simple input/output is: Input: 12345 Output: 6](../written-answers/c-programming.md?plain=1#L2431)
+- [Write a C program to compute the perimeter and area of a circle with a given radius.](../written-answers/c-programming.md?plain=1#L2594)
+- [A হলো মিটার নং, B হলো ব্যবহৃত ইউনিট। 300 ইউনিটের বেশী তাদের মিটার নং এবং ইউনিটের যোগফল বের কর।](../written-answers/c-programming.md?plain=1#L2620)
+- [Write a C program for prime numbers between 1 to N.](../written-answers/c-programming.md?plain=1#L2711)
+- [0 থেকে n সংখ্যক পর্যন্ত Fibonacci Series লেখার জন্য প্রোগ্রাম লিখুন।](../written-answers/c-programming.md?plain=1#L2991)
+- [A prim number is a number that is evenly divided by only 1 and itself. Write a program to your favorite language to print the first 100 prime numbers.](../written-answers/c-programming.md?plain=1#L3051)
+- [Write a program to find the GCD using C/C++.](../written-answers/c-programming.md?plain=1#L3281)
+- [Write a program of find Prime number in 1 to 100 number. (Using any language)](../written-answers/c-programming.md?plain=1#L3385)
+- [Write a c program to verify a perfect number. Perfect number is a positive integer which is equal to the sum of its proper positive divisors.](../written-answers/c-programming.md?plain=1#L3491)
+- [Write a program check a number is prime or not prime.](../written-answers/c-programming.md?plain=1#L3524)
+- [Write a program to read the coordinates of the end points of a line and to find its length.](../written-answers/c-programming.md?plain=1#L3621)
+- [Write a C program to reverse an integer number.](../written-answers/c-programming.md?plain=1#L3715)
+- [Write a structured program to display Fibonacci series up to 100 Numbers.](../written-answers/c-programming.md?plain=1#L3782)
+- [Write a program (in C or any language) to find the sum of even numbers from 1 to n.](../written-answers/c-programming.md?plain=1#L3916)
+- [(b) What are the rules for calculating the n-th Fibonacci number, and what is the recurrence relation that defines this sequence?](../written-answers/c-programming.md?plain=1#L4036)
+- [Write a program that takes two inputs, n and k, where n>k. The program should prompt the user to enter n numbers of data and then return the k^\text{th} smalles…](../written-answers/c-programming.md?plain=1#L4098)
+- [Write a program that takes a single alphanumeric string as input. The string may contain both letters (a-z, A-Z) and digits (0-9). Your task is to calculate and…](../written-answers/c-programming.md?plain=1#L4170)
+- [Find the number of occurrences of a digit in a number.](../written-answers/c-programming.md?plain=1#L4350)
 
 
 ---
@@ -995,27 +995,27 @@ for (i = 0; i < n; i++) {
 - [Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then the…](../written-answers/c-programming.md?plain=1#L118)
 - [Write a program from the following series: $e^x = 1 + \frac{x}{1} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots$](../written-answers/c-programming.md?plain=1#L310)
 - [Write a C program to find sum of: $X - \frac{X^3}{3!} + \frac{X^5}{5!} - \frac{X^7}{7!} \dots N$](../written-answers/c-programming.md?plain=1#L338)
-- [Write a Program Floyds triangle n=5](../written-answers/c-programming.md?plain=1#L581)
-- [Write a C Program Find sum of the series: 1+2+4+7+11+..........+N](../written-answers/c-programming.md?plain=1#L629)
-- [Write a program for following sequence and analyze complexity of the program](../written-answers/c-programming.md?plain=1#L1055)
-- [Write a C program to print the following pattern:](../written-answers/c-programming.md?plain=1#L1545)
-- [Write a C program: x - \frac{x^3}{3} + \frac{x^5}{5} - \dots](../written-answers/c-programming.md?plain=1#L1755)
-- [(ক) নিচের সিরিজ টি ক্যালকুলেটর এবং প্রিন্ট করার জন্য একটি C Program লিখুন। 1 + 2 + 3 + \dots + 100](../written-answers/c-programming.md?plain=1#L2263)
-- [Pattern this print using C++ program-](../written-answers/c-programming.md?plain=1#L2440)
-- [(i) Write a C/C++ program up to series n: \frac{1}{2\times 3} + \frac{2}{3\times 4} + \frac{3}{4\times 5} \dots\dots\dots\dots\dots](../written-answers/c-programming.md?plain=1#L2545)
-- [Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2](../written-answers/c-programming.md?plain=1#L2716)
-- [Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).](../written-answers/c-programming.md?plain=1#L2844)
-- [Write a program in C to find the sum of following series: $1^2+2^2+3^2+\dots\dots\dots\dots+n^2$](../written-answers/c-programming.md?plain=1#L3000)
-- [(গ) Array processor কী? $1+\frac{1}{2}+\frac{1}{3}+\dots\dots\dots\dots+\frac{1}{N}$ ধারাটির যোগফল নির্ণয়ের জন্য C ভাষায় একটি প্রোগ্রাম লিখুন।](../written-answers/c-programming.md?plain=1#L3062)
-- [(a) Write a Java/C program to find the sum of the following series? $\frac{1}{1!} + \frac{2}{2!} + \frac{3}{3!} + \dots\dots\dots\dots + \frac{N}{N!}$](../written-answers/c-programming.md?plain=1#L3195)
-- [একটি ৯ ধার বিশিষ্ট বহুভুজের প্রতিটির ধার সমান। উক্ত বহুভুজের অভ্যন্তরীণ কোন ডিগ্রিতে প্রকাশের C Program লিখুন।](../written-answers/c-programming.md?plain=1#L3224)
-- [Write program for following pattern:](../written-answers/c-programming.md?plain=1#L3421)
-- [Write a program in C++ to calculate the sum of the series: $1+(1+2)+(1+2+3)+\dots\dots+(1+2+\dots\dots+n)$.](../written-answers/c-programming.md?plain=1#L3628)
-- [(a) Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then…](../written-answers/c-programming.md?plain=1#L3833)
-- [Write a code to print the following pattern. You can use C/Java as programming language.](../written-answers/c-programming.md?plain=1#L4023)
-- [Find the sum of the series: $1 + \frac{1}{2} + \frac{1}{3} + \dots\dots\dots\dots + \frac{1}{n}$](../written-answers/c-programming.md?plain=1#L4271)
-- [Find the sum of the series: $1^2 - 2^2 + 3^2 - 4^2 + 5^2 - \dots\dots\dots\dots \pm n^2$](../written-answers/c-programming.md?plain=1#L4297)
-- [Evaluate the series: $1\times3 + 2\times5 + 3\times7 + \dots\dots\dots\dots + n\times(2n+1)$](../written-answers/c-programming.md?plain=1#L4371)
+- [Write a Program Floyds triangle n=5](../written-answers/c-programming.md?plain=1#L604)
+- [Write a C Program Find sum of the series: 1+2+4+7+11+..........+N](../written-answers/c-programming.md?plain=1#L652)
+- [Write a program for following sequence and analyze complexity of the program](../written-answers/c-programming.md?plain=1#L1078)
+- [Write a C program to print the following pattern:](../written-answers/c-programming.md?plain=1#L1568)
+- [Write a C program: x - \frac{x^3}{3} + \frac{x^5}{5} - \dots](../written-answers/c-programming.md?plain=1#L1778)
+- [(ক) নিচের সিরিজ টি ক্যালকুলেটর এবং প্রিন্ট করার জন্য একটি C Program লিখুন। 1 + 2 + 3 + \dots + 100](../written-answers/c-programming.md?plain=1#L2286)
+- [Pattern this print using C++ program-](../written-answers/c-programming.md?plain=1#L2463)
+- [(i) Write a C/C++ program up to series n: \frac{1}{2\times 3} + \frac{2}{3\times 4} + \frac{3}{4\times 5} \dots\dots\dots\dots\dots](../written-answers/c-programming.md?plain=1#L2568)
+- [Write a program for the following series: 1^2+2^2+3^2+4^2+\dots\dots\dots\dots+N^2](../written-answers/c-programming.md?plain=1#L2739)
+- [Write a C program: 1+2^n+3^n+4^n+\dots\dots\dots\dots+n^n (where n>0).](../written-answers/c-programming.md?plain=1#L2867)
+- [Write a program in C to find the sum of following series: $1^2+2^2+3^2+\dots\dots\dots\dots+n^2$](../written-answers/c-programming.md?plain=1#L3023)
+- [(গ) Array processor কী? $1+\frac{1}{2}+\frac{1}{3}+\dots\dots\dots\dots+\frac{1}{N}$ ধারাটির যোগফল নির্ণয়ের জন্য C ভাষায় একটি প্রোগ্রাম লিখুন।](../written-answers/c-programming.md?plain=1#L3085)
+- [(a) Write a Java/C program to find the sum of the following series? $\frac{1}{1!} + \frac{2}{2!} + \frac{3}{3!} + \dots\dots\dots\dots + \frac{N}{N!}$](../written-answers/c-programming.md?plain=1#L3218)
+- [একটি ৯ ধার বিশিষ্ট বহুভুজের প্রতিটির ধার সমান। উক্ত বহুভুজের অভ্যন্তরীণ কোন ডিগ্রিতে প্রকাশের C Program লিখুন।](../written-answers/c-programming.md?plain=1#L3247)
+- [Write program for following pattern:](../written-answers/c-programming.md?plain=1#L3444)
+- [Write a program in C++ to calculate the sum of the series: $1+(1+2)+(1+2+3)+\dots\dots+(1+2+\dots\dots+n)$.](../written-answers/c-programming.md?plain=1#L3651)
+- [(a) Write down a program is any high level language to read an integer and display a pattern like below. For example, if the given integer number is 1234, then…](../written-answers/c-programming.md?plain=1#L3856)
+- [Write a code to print the following pattern. You can use C/Java as programming language.](../written-answers/c-programming.md?plain=1#L4046)
+- [Find the sum of the series: $1 + \frac{1}{2} + \frac{1}{3} + \dots\dots\dots\dots + \frac{1}{n}$](../written-answers/c-programming.md?plain=1#L4294)
+- [Find the sum of the series: $1^2 - 2^2 + 3^2 - 4^2 + 5^2 - \dots\dots\dots\dots \pm n^2$](../written-answers/c-programming.md?plain=1#L4320)
+- [Evaluate the series: $1\times3 + 2\times5 + 3\times7 + \dots\dots\dots\dots + n\times(2n+1)$](../written-answers/c-programming.md?plain=1#L4394)
 
 ## Output Tracing & Control Flow
 
@@ -1088,44 +1088,44 @@ int main() {
 
 **Previous Year Question List from this Topic:**
 
-- [C output problem.](../written-answers/c-programming.md?plain=1#L4611)
-- [What will be the output of following program?](../written-answers/c-programming.md?plain=1#L4703)
-- [(b) Find out the output of this program.](../written-answers/c-programming.md?plain=1#L4745)
-- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L4783)
-- [Output problem:](../written-answers/c-programming.md?plain=1#L4824)
-- [Output problem:](../written-answers/c-programming.md?plain=1#L4863)
-- [Explain following program while part in step for the input 1221 and 3456 and also write the output of the program. (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয় নি!!)](../written-answers/c-programming.md?plain=1#L4904)
-- [In the below C code. Write the Output on below table based on code and left side. And also explain the line 7-11 in below code.](../written-answers/c-programming.md?plain=1#L5074)
-- [C programming output problem.](../written-answers/c-programming.md?plain=1#L5138)
-- [What is the output of code snippet?](../written-answers/c-programming.md?plain=1#L5231)
-- [নিচের পাইথন program এর Output বের কর:](../written-answers/c-programming.md?plain=1#L5335)
-- [Output Tracing:](../written-answers/c-programming.md?plain=1#L5375)
-- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L5428)
-- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L5461)
-- [What will be the output of the program?](../written-answers/c-programming.md?plain=1#L5493)
-- [What is the output of the following code?](../written-answers/c-programming.md?plain=1#L5529)
-- [Output programs:](../written-answers/c-programming.md?plain=1#L5561)
-- [Write down the output from following statement:](../written-answers/c-programming.md?plain=1#L5604)
-- [Find the Output of following C Program:](../written-answers/c-programming.md?plain=1#L5710)
-- [Write Output from below code:](../written-answers/c-programming.md?plain=1#L5759)
-- [Fill in the gape and find output of the following program:](../written-answers/c-programming.md?plain=1#L5830)
-- [Output of the following program:](../written-answers/c-programming.md?plain=1#L5917)
-- [Find the output of following program:](../written-answers/c-programming.md?plain=1#L5978)
-- [Output of the following program:](../written-answers/c-programming.md?plain=1#L6035)
-- [Find Output:](../written-answers/c-programming.md?plain=1#L6105)
-- [Find the output of the following program. You must show each staps.](../written-answers/c-programming.md?plain=1#L6150)
-- [Find out the output of the following program.](../written-answers/c-programming.md?plain=1#L6204)
-- [After compilation and execution, what will be output in the following code:](../written-answers/c-programming.md?plain=1#L6253)
-- [Write down the output of following program:](../written-answers/c-programming.md?plain=1#L6357)
-- [Find the Output:](../written-answers/c-programming.md?plain=1#L6624)
-- [What is the output of following code?](../written-answers/c-programming.md?plain=1#L6770)
-- [Find the output of a program:](../written-answers/c-programming.md?plain=1#L6811)
-- [Find the output of the code:](../written-answers/c-programming.md?plain=1#L6862)
-- [What is the output of the following program?](../written-answers/c-programming.md?plain=1#L6906)
-- [Find the output of the following code:](../written-answers/c-programming.md?plain=1#L6943)
-- [Find the output of the following code:](../written-answers/c-programming.md?plain=1#L6976)
-- [What is the output of following program?](../written-answers/c-programming.md?plain=1#L7011)
-- [Find the output of following program.](../written-answers/c-programming.md?plain=1#L7134)
+- [C output problem.](../written-answers/c-programming.md?plain=1#L4634)
+- [What will be the output of following program?](../written-answers/c-programming.md?plain=1#L4726)
+- [(b) Find out the output of this program.](../written-answers/c-programming.md?plain=1#L4768)
+- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L4806)
+- [Output problem:](../written-answers/c-programming.md?plain=1#L4847)
+- [Output problem:](../written-answers/c-programming.md?plain=1#L4886)
+- [Explain following program while part in step for the input 1221 and 3456 and also write the output of the program. (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয় নি!!)](../written-answers/c-programming.md?plain=1#L4927)
+- [In the below C code. Write the Output on below table based on code and left side. And also explain the line 7-11 in below code.](../written-answers/c-programming.md?plain=1#L5097)
+- [C programming output problem.](../written-answers/c-programming.md?plain=1#L5161)
+- [What is the output of code snippet?](../written-answers/c-programming.md?plain=1#L5254)
+- [নিচের পাইথন program এর Output বের কর:](../written-answers/c-programming.md?plain=1#L5358)
+- [Output Tracing:](../written-answers/c-programming.md?plain=1#L5398)
+- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L5451)
+- [Find the output of the following program:](../written-answers/c-programming.md?plain=1#L5484)
+- [What will be the output of the program?](../written-answers/c-programming.md?plain=1#L5516)
+- [What is the output of the following code?](../written-answers/c-programming.md?plain=1#L5552)
+- [Output programs:](../written-answers/c-programming.md?plain=1#L5584)
+- [Write down the output from following statement:](../written-answers/c-programming.md?plain=1#L5627)
+- [Find the Output of following C Program:](../written-answers/c-programming.md?plain=1#L5733)
+- [Write Output from below code:](../written-answers/c-programming.md?plain=1#L5782)
+- [Fill in the gape and find output of the following program:](../written-answers/c-programming.md?plain=1#L5853)
+- [Output of the following program:](../written-answers/c-programming.md?plain=1#L5940)
+- [Find the output of following program:](../written-answers/c-programming.md?plain=1#L6001)
+- [Output of the following program:](../written-answers/c-programming.md?plain=1#L6058)
+- [Find Output:](../written-answers/c-programming.md?plain=1#L6128)
+- [Find the output of the following program. You must show each staps.](../written-answers/c-programming.md?plain=1#L6173)
+- [Find out the output of the following program.](../written-answers/c-programming.md?plain=1#L6227)
+- [After compilation and execution, what will be output in the following code:](../written-answers/c-programming.md?plain=1#L6276)
+- [Write down the output of following program:](../written-answers/c-programming.md?plain=1#L6380)
+- [Find the Output:](../written-answers/c-programming.md?plain=1#L6647)
+- [What is the output of following code?](../written-answers/c-programming.md?plain=1#L6793)
+- [Find the output of a program:](../written-answers/c-programming.md?plain=1#L6834)
+- [Find the output of the code:](../written-answers/c-programming.md?plain=1#L6885)
+- [What is the output of the following program?](../written-answers/c-programming.md?plain=1#L6929)
+- [Find the output of the following code:](../written-answers/c-programming.md?plain=1#L6966)
+- [Find the output of the following code:](../written-answers/c-programming.md?plain=1#L6999)
+- [What is the output of following program?](../written-answers/c-programming.md?plain=1#L7034)
+- [Find the output of following program.](../written-answers/c-programming.md?plain=1#L7157)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -1228,10 +1228,10 @@ if (1 || i++) ;               /* i++ NEVER runs → i stays 0  */
 
 **Previous Year Question List from this Topic:**
 
-- [What is the output of code snippet?](../written-answers/c-programming.md?plain=1#L5231)
-- [What is the output of the following code?](../written-answers/c-programming.md?plain=1#L5529)
-- [Output of the following program:](../written-answers/c-programming.md?plain=1#L5917)
-- [Which of the following is the correct order of evaluation?](../written-answers/c-programming.md?plain=1#L9882)
+- [What is the output of code snippet?](../written-answers/c-programming.md?plain=1#L5254)
+- [What is the output of the following code?](../written-answers/c-programming.md?plain=1#L5552)
+- [Output of the following program:](../written-answers/c-programming.md?plain=1#L5940)
+- [Which of the following is the correct order of evaluation?](../written-answers/c-programming.md?plain=1#L9905)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -1321,9 +1321,9 @@ printf("%d", arr[++i]);      /* i = 3 first, prints arr[3] = 40 */
 
 **Previous Year Question List from this Topic:**
 
-- [(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L9386)
-- [Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Contro…](../written-answers/c-programming.md?plain=1#L9652)
-- [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9808)
+- [(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L9409)
+- [Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Contro…](../written-answers/c-programming.md?plain=1#L9675)
+- [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9831)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -1428,9 +1428,9 @@ if (fabs(a - 0.3) < 1e-6) printf("Equal");   /* ✅ the CORRECT way */
 
 **Previous Year Question List from this Topic:**
 
-- [(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?](../written-answers/c-programming.md?plain=1#L9366)
-- [Write some default data type in C.](../written-answers/c-programming.md?plain=1#L9609)
-- [Using examples explain data types used in C language.](../written-answers/c-programming.md?plain=1#L9950)
+- [(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?](../written-answers/c-programming.md?plain=1#L9389)
+- [Write some default data type in C.](../written-answers/c-programming.md?plain=1#L9632)
+- [Using examples explain data types used in C language.](../written-answers/c-programming.md?plain=1#L9973)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -1606,15 +1606,15 @@ printf("%zu\n", sizeof(c + 1));     /* sizeof(int) = 4 — c is PROMOTED to int 
 
 **Previous Year Question List from this Topic:**
 
-- [Write the function for which the output is 1 for that input.](../written-answers/c-programming.md?plain=1#L4994)
-- [(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।](../written-answers/c-programming.md?plain=1#L5651)
-- [Find out program output of f(\text{arr}, 2), f(\text{arr}, 3), f(\text{arr}, 5), f(\text{arr}, 8). \text{arr}() = (0, 1, 1, 0, 1, 1, 0, 1)](../written-answers/c-programming.md?plain=1#L5883)
-- [What will be the output in C and java code? (i) C program:](../written-answers/c-programming.md?plain=1#L6477)
-- [a) Using Pseudocode give an example of run time error.](../written-answers/c-programming.md?plain=1#L6579)
-- [Find the error of given code](../written-answers/c-programming.md?plain=1#L6729)
-- [(b) What is the difference between sizeof c+1 and sizeof (c+1)?](../written-answers/c-programming.md?plain=1#L9251)
-- [What is the difference between Null and Void?](../written-answers/c-programming.md?plain=1#L9272)
-- [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L9331)
+- [Write the function for which the output is 1 for that input.](../written-answers/c-programming.md?plain=1#L5017)
+- [(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।](../written-answers/c-programming.md?plain=1#L5674)
+- [Find out program output of f(\text{arr}, 2), f(\text{arr}, 3), f(\text{arr}, 5), f(\text{arr}, 8). \text{arr}() = (0, 1, 1, 0, 1, 1, 0, 1)](../written-answers/c-programming.md?plain=1#L5906)
+- [What will be the output in C and java code? (i) C program:](../written-answers/c-programming.md?plain=1#L6500)
+- [a) Using Pseudocode give an example of run time error.](../written-answers/c-programming.md?plain=1#L6602)
+- [Find the error of given code](../written-answers/c-programming.md?plain=1#L6752)
+- [(b) What is the difference between sizeof c+1 and sizeof (c+1)?](../written-answers/c-programming.md?plain=1#L9274)
+- [What is the difference between Null and Void?](../written-answers/c-programming.md?plain=1#L9295)
+- [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L9354)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -1714,10 +1714,10 @@ return_type  function_name ( parameter_list )
 
 **Previous Year Question List from this Topic:**
 
-- [What is function?](../written-answers/c-programming.md?plain=1#L8081)
-- [When a function is called more than one time that is called?](../written-answers/c-programming.md?plain=1#L8235)
-- [(e) Write about the syntax of function.](../written-answers/c-programming.md?plain=1#L8243)
-- [(ক) C প্রোগ্রামিং ল্যাঙ্গুয়েজে user defined function এবং library function এর পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L8280)
+- [What is function?](../written-answers/c-programming.md?plain=1#L8104)
+- [When a function is called more than one time that is called?](../written-answers/c-programming.md?plain=1#L8258)
+- [(e) Write about the syntax of function.](../written-answers/c-programming.md?plain=1#L8266)
+- [(ক) C প্রোগ্রামিং ল্যাঙ্গুয়েজে user defined function এবং library function এর পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L8303)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -1841,12 +1841,12 @@ void minMax(int a[], int n, int *min, int *max) {
 
 **Previous Year Question List from this Topic:**
 
-- [(a) Mention two basic differences between ‘Call by Value’ and ‘Call by Reference’. Write a simple program in C to swap two integer values using ‘Call by value’.](../written-answers/c-programming.md?plain=1#L8169)
-- [(ক) Call by Value এবং Call by Reference এর মধ্যে পার্থক্য কী?](../written-answers/c-programming.md?plain=1#L8297)
-- [(ঘ) উদাহরণসহ Parameter Passing ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L8324)
-- [What are the differences between call by value and call by Reference?](../written-answers/c-programming.md?plain=1#L8451)
-- [Distinguish between Call by value and Call by referee in C/C++.](../written-answers/c-programming.md?plain=1#L8469)
-- [Difference between call by value and call by reference with example.](../written-answers/c-programming.md?plain=1#L9069)
+- [(a) Mention two basic differences between ‘Call by Value’ and ‘Call by Reference’. Write a simple program in C to swap two integer values using ‘Call by value’.](../written-answers/c-programming.md?plain=1#L8192)
+- [(ক) Call by Value এবং Call by Reference এর মধ্যে পার্থক্য কী?](../written-answers/c-programming.md?plain=1#L8320)
+- [(ঘ) উদাহরণসহ Parameter Passing ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L8347)
+- [What are the differences between call by value and call by Reference?](../written-answers/c-programming.md?plain=1#L8474)
+- [Distinguish between Call by value and Call by referee in C/C++.](../written-answers/c-programming.md?plain=1#L8492)
+- [Difference between call by value and call by reference with example.](../written-answers/c-programming.md?plain=1#L9092)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -1954,16 +1954,16 @@ flowchart TD
 
 **Previous Year Question List from this Topic:**
 
-- [What is recursion?](../written-answers/c-programming.md?plain=1#L7890)
-- [Write recursive way below this program:](../written-answers/c-programming.md?plain=1#L7916)
-- [Output find out from recursion:](../written-answers/c-programming.md?plain=1#L7968)
-- [Find the output of following program:](../written-answers/c-programming.md?plain=1#L8024)
-- [(খ) উদাহরণসহ recursion ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L8374)
-- [(খ) Recursion কি? Recursion পদ্ধতিতে একটি Integer সংখ্যার Factorial নির্ণয়ের জন্য C-Language এ একটি Program লিখুন।](../written-answers/c-programming.md?plain=1#L8650)
-- [(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।](../written-answers/c-programming.md?plain=1#L8916)
-- [Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algori…](../written-answers/c-programming.md?plain=1#L8950)
-- [What is recursive function? Give an example of recursive function.](../written-answers/c-programming.md?plain=1#L9031)
-- [Write the performance of a non-recursive function which is written in recursive way.](../written-answers/c-programming.md?plain=1#L9147)
+- [What is recursion?](../written-answers/c-programming.md?plain=1#L7913)
+- [Write recursive way below this program:](../written-answers/c-programming.md?plain=1#L7939)
+- [Output find out from recursion:](../written-answers/c-programming.md?plain=1#L7991)
+- [Find the output of following program:](../written-answers/c-programming.md?plain=1#L8047)
+- [(খ) উদাহরণসহ recursion ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L8397)
+- [(খ) Recursion কি? Recursion পদ্ধতিতে একটি Integer সংখ্যার Factorial নির্ণয়ের জন্য C-Language এ একটি Program লিখুন।](../written-answers/c-programming.md?plain=1#L8673)
+- [(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।](../written-answers/c-programming.md?plain=1#L8939)
+- [Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algori…](../written-answers/c-programming.md?plain=1#L8973)
+- [What is recursive function? Give an example of recursive function.](../written-answers/c-programming.md?plain=1#L9054)
+- [Write the performance of a non-recursive function which is written in recursive way.](../written-answers/c-programming.md?plain=1#L9170)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -2169,24 +2169,24 @@ int rowSum(int a[][100], int row, int col) {
 
 **Previous Year Question List from this Topic:**
 
-- [Write a C program to find the sum of digits of an integer number using "recursion".](../written-answers/c-programming.md?plain=1#L7857)
-- [Write a C/C++ program to calculte factorial of N using recursive function.](../written-answers/c-programming.md?plain=1#L8108)
-- [Write the recursive function of the below problem and find the recurrence relation of the function. F(n) = 1+2+3+..........+(n-1)+n](../written-answers/c-programming.md?plain=1#L8138)
-- [(b) Write a program in C using recursion to find the factorial of an integer.](../written-answers/c-programming.md?plain=1#L8209)
-- [(ক) Tower of Hanoi সমস্যাটি সমাধানের জন্যে একটি recursive অ্যালগরিদম লিখুন।](../written-answers/c-programming.md?plain=1#L8408)
-- [Write a recursive algorithm to find the factorial of a positive integer from 1 to N.](../written-answers/c-programming.md?plain=1#L8504)
-- [What do you mean by recursion? Calculate factorial function using recursion with C programming code.](../written-answers/c-programming.md?plain=1#L8541)
-- [Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.](../written-answers/c-programming.md?plain=1#L8571)
-- [(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.](../written-answers/c-programming.md?plain=1#L8607)
-- [Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the fo…](../written-answers/c-programming.md?plain=1#L8681)
-- [(b) Write down a pseudocode/program to generate all possible permutation for a given word.](../written-answers/c-programming.md?plain=1#L8744)
-- [Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?](../written-answers/c-programming.md?plain=1#L8801)
-- [Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.](../written-answers/c-programming.md?plain=1#L8824)
-- [১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।](../written-answers/c-programming.md?plain=1#L8882)
-- [(a) Write down a function to compute the sum of the row an $n \times m$ matrix of integer.](../written-answers/c-programming.md?plain=1#L8986)
-- [Write Algorithm of Fibonacci series.](../written-answers/c-programming.md?plain=1#L9115)
-- [Write a program in C with recursive function to compute the value $X^n$ where n is a positive integer and x has real value.](../written-answers/c-programming.md?plain=1#L9173)
-- [a) Using recursion, develop a computer program to find the n-th Fibonacci number using this rule. (5 marks)](../written-answers/c-programming.md?plain=1#L9218)
+- [Write a C program to find the sum of digits of an integer number using "recursion".](../written-answers/c-programming.md?plain=1#L7880)
+- [Write a C/C++ program to calculte factorial of N using recursive function.](../written-answers/c-programming.md?plain=1#L8131)
+- [Write the recursive function of the below problem and find the recurrence relation of the function. F(n) = 1+2+3+..........+(n-1)+n](../written-answers/c-programming.md?plain=1#L8161)
+- [(b) Write a program in C using recursion to find the factorial of an integer.](../written-answers/c-programming.md?plain=1#L8232)
+- [(ক) Tower of Hanoi সমস্যাটি সমাধানের জন্যে একটি recursive অ্যালগরিদম লিখুন।](../written-answers/c-programming.md?plain=1#L8431)
+- [Write a recursive algorithm to find the factorial of a positive integer from 1 to N.](../written-answers/c-programming.md?plain=1#L8527)
+- [What do you mean by recursion? Calculate factorial function using recursion with C programming code.](../written-answers/c-programming.md?plain=1#L8564)
+- [Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.](../written-answers/c-programming.md?plain=1#L8594)
+- [(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.](../written-answers/c-programming.md?plain=1#L8630)
+- [Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the fo…](../written-answers/c-programming.md?plain=1#L8704)
+- [(b) Write down a pseudocode/program to generate all possible permutation for a given word.](../written-answers/c-programming.md?plain=1#L8767)
+- [Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?](../written-answers/c-programming.md?plain=1#L8824)
+- [Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.](../written-answers/c-programming.md?plain=1#L8847)
+- [১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।](../written-answers/c-programming.md?plain=1#L8905)
+- [(a) Write down a function to compute the sum of the row an $n \times m$ matrix of integer.](../written-answers/c-programming.md?plain=1#L9009)
+- [Write Algorithm of Fibonacci series.](../written-answers/c-programming.md?plain=1#L9138)
+- [Write a program in C with recursive function to compute the value $X^n$ where n is a positive integer and x has real value.](../written-answers/c-programming.md?plain=1#L9196)
+- [a) Using recursion, develop a computer program to find the n-th Fibonacci number using this rule. (5 marks)](../written-answers/c-programming.md?plain=1#L9241)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -2286,10 +2286,10 @@ int n = (int)3.99;            /* 3 — truncates, does NOT round */
 
 **Previous Year Question List from this Topic:**
 
-- [(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?](../written-answers/c-programming.md?plain=1#L9366)
-- [Write some default data type in C.](../written-answers/c-programming.md?plain=1#L9609)
-- [Using examples explain data types used in C language.](../written-answers/c-programming.md?plain=1#L9950)
-- [(ক) C ভাষায় ব্যবহৃত বিভিন্ন ধরনের Data Type বর্ণনা করুন।](../written-answers/c-programming.md?plain=1#L878)
+- [(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?](../written-answers/c-programming.md?plain=1#L9389)
+- [Write some default data type in C.](../written-answers/c-programming.md?plain=1#L9632)
+- [Using examples explain data types used in C language.](../written-answers/c-programming.md?plain=1#L9973)
+- [(ক) C ভাষায় ব্যবহৃত বিভিন্ন ধরনের Data Type বর্ণনা করুন।](../written-answers/c-programming.md?plain=1#L901)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -2362,10 +2362,10 @@ int w = a & b == 3;             /* == binds TIGHTER than & →  a & (b==3) = 5 &
 
 **Previous Year Question List from this Topic:**
 
-- [(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L9386)
-- [Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Contro…](../written-answers/c-programming.md?plain=1#L9652)
-- [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9808)
-- [Which of the following is the correct order of evaluation?](../written-answers/c-programming.md?plain=1#L9882)
+- [(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L9409)
+- [Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Contro…](../written-answers/c-programming.md?plain=1#L9675)
+- [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9831)
+- [Which of the following is the correct order of evaluation?](../written-answers/c-programming.md?plain=1#L9905)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -2442,7 +2442,7 @@ static void helper() { }
 
 **Previous Year Question List from this Topic:**
 
-- [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L9331)
+- [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L9354)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -2547,13 +2547,13 @@ printf("%d\n", d.i);      /* garbage — i was destroyed by writing f */
 
 **Previous Year Question List from this Topic:**
 
-- [What will occur when an array is declared without size?](../written-answers/c-programming.md?plain=1#L9306)
-- [What is the main difference between structure and array in C programming? Explain with examples.](../written-answers/c-programming.md?plain=1#L9419)
-- [Difference between array and structure data type.](../written-answers/c-programming.md?plain=1#L9454)
-- [What is nested structure in C programming? Explain with example.](../written-answers/c-programming.md?plain=1#L9536)
-- [(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L9579)
-- [Write the difference between Structure and Array.](../written-answers/c-programming.md?plain=1#L9629)
-- [(খ) C প্রোগ্রামিং ল্যাঙ্গুয়েজে Structure ও Union এর মধ্যে পার্থক্য কী? উদাহরণসহ লিখুন।](../written-answers/c-programming.md?plain=1#L9846)
+- [What will occur when an array is declared without size?](../written-answers/c-programming.md?plain=1#L9329)
+- [What is the main difference between structure and array in C programming? Explain with examples.](../written-answers/c-programming.md?plain=1#L9442)
+- [Difference between array and structure data type.](../written-answers/c-programming.md?plain=1#L9477)
+- [What is nested structure in C programming? Explain with example.](../written-answers/c-programming.md?plain=1#L9559)
+- [(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L9602)
+- [Write the difference between Structure and Array.](../written-answers/c-programming.md?plain=1#L9652)
+- [(খ) C প্রোগ্রামিং ল্যাঙ্গুয়েজে Structure ও Union এর মধ্যে পার্থক্য কী? উদাহরণসহ লিখুন।](../written-answers/c-programming.md?plain=1#L9869)
 
 
 ---
@@ -2653,11 +2653,11 @@ The code compiles but the **linker cannot resolve a reference**.
 
 **Previous Year Question List from this Topic:**
 
-- [Write down the types of errors which can occur the execution of a program.](../written-answers/c-programming.md?plain=1#L9472)
-- [Coding এর সময় সংঘটিত ভুলসমূহ উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L9770)
-- [(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।](../written-answers/c-programming.md?plain=1#L5651)
-- [a) Using Pseudocode give an example of run time error.](../written-answers/c-programming.md?plain=1#L6579)
-- [Find the error of given code](../written-answers/c-programming.md?plain=1#L6729)
+- [Write down the types of errors which can occur the execution of a program.](../written-answers/c-programming.md?plain=1#L9495)
+- [Coding এর সময় সংঘটিত ভুলসমূহ উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L9793)
+- [(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।](../written-answers/c-programming.md?plain=1#L5674)
+- [a) Using Pseudocode give an example of run time error.](../written-answers/c-programming.md?plain=1#L6602)
+- [Find the error of given code](../written-answers/c-programming.md?plain=1#L6752)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -2988,10 +2988,10 @@ flowchart TD
 
 **Previous Year Question List from this Topic:**
 
-- [Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.](../written-answers/c-programming.md?plain=1#L10168)
-- [Write an Algorithm to check a number is Prime or not Prime.](../written-answers/c-programming.md?plain=1#L10233)
-- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L10386)
-- [Answer the following Questions](../written-answers/c-programming.md?plain=1#L4051)
+- [Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.](../written-answers/c-programming.md?plain=1#L10191)
+- [Write an Algorithm to check a number is Prime or not Prime.](../written-answers/c-programming.md?plain=1#L10256)
+- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L10409)
+- [Answer the following Questions](../written-answers/c-programming.md?plain=1#L4074)
 
 
 ---
@@ -3061,9 +3061,9 @@ flowchart TD
 
 **Previous Year Question List from this Topic:**
 
-- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L10386)
-- [Three types of control statements and their graphical presentation using flowchart or flow graph.](../written-answers/c-programming.md?plain=1#L10402)
-- [(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L10433)
+- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L10409)
+- [Three types of control statements and their graphical presentation using flowchart or flow graph.](../written-answers/c-programming.md?plain=1#L10425)
+- [(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L10456)
 
 
 ---
@@ -3290,17 +3290,17 @@ flowchart TD
 
 **Previous Year Question List from this Topic:**
 
-- [Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the datab…](../written-answers/c-programming.md?plain=1#L10049)
-- [Draw a Flow chart for print odd number for 1 to N.](../written-answers/c-programming.md?plain=1#L10081)
-- [১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।](../written-answers/c-programming.md?plain=1#L10104)
-- [দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।](../written-answers/c-programming.md?plain=1#L10130)
-- [Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.](../written-answers/c-programming.md?plain=1#L10168)
-- [Write Algorithm and flowchart for printing 1+3+5+ \dots + N.](../written-answers/c-programming.md?plain=1#L10200)
-- [Write an Algorithm to check a number is Prime or not Prime.](../written-answers/c-programming.md?plain=1#L10233)
-- [Write down the algorithm and draw the flowchart of Quadratic equation.](../written-answers/c-programming.md?plain=1#L10278)
-- [Draw a flowchart and write algorithm for finding Factorial value of an integer number.](../written-answers/c-programming.md?plain=1#L10321)
-- [Draw a flowchart of the following series: 1+3+5+7+\dots+N](../written-answers/c-programming.md?plain=1#L10359)
-- [Draw flowchart to input five positive numbers and sort them is ascending order.](../written-answers/c-programming.md?plain=1#L10562)
+- [Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the datab…](../written-answers/c-programming.md?plain=1#L10072)
+- [Draw a Flow chart for print odd number for 1 to N.](../written-answers/c-programming.md?plain=1#L10104)
+- [১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।](../written-answers/c-programming.md?plain=1#L10127)
+- [দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।](../written-answers/c-programming.md?plain=1#L10153)
+- [Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.](../written-answers/c-programming.md?plain=1#L10191)
+- [Write Algorithm and flowchart for printing 1+3+5+ \dots + N.](../written-answers/c-programming.md?plain=1#L10223)
+- [Write an Algorithm to check a number is Prime or not Prime.](../written-answers/c-programming.md?plain=1#L10256)
+- [Write down the algorithm and draw the flowchart of Quadratic equation.](../written-answers/c-programming.md?plain=1#L10301)
+- [Draw a flowchart and write algorithm for finding Factorial value of an integer number.](../written-answers/c-programming.md?plain=1#L10344)
+- [Draw a flowchart of the following series: 1+3+5+7+\dots+N](../written-answers/c-programming.md?plain=1#L10382)
+- [Draw flowchart to input five positive numbers and sort them is ascending order.](../written-answers/c-programming.md?plain=1#L10585)
 
 
 ---
@@ -3379,9 +3379,9 @@ END
 
 **Previous Year Question List from this Topic:**
 
-- [Write a pesudcode that takes in one positive number only and returns the factor for that number.](../written-answers/c-programming.md?plain=1#L10468)
-- [Write down the psudo-code that accepts i, n is integer and value as input, store all n integers in an array, called pairs and return all pairs where the summati…](../written-answers/c-programming.md?plain=1#L10507)
-- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L10386)
+- [Write a pesudcode that takes in one positive number only and returns the factor for that number.](../written-answers/c-programming.md?plain=1#L10491)
+- [Write down the psudo-code that accepts i, n is integer and value as input, store all n integers in an array, called pairs and return all pairs where the summati…](../written-answers/c-programming.md?plain=1#L10530)
+- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L10409)
 
 
 ---
@@ -3456,8 +3456,8 @@ gets(name);                      /* ❌ NEVER USE — removed from the C standar
 
 **Previous Year Question List from this Topic:**
 
-- [What is the purpose of '\0' character in C?](../written-answers/c-programming.md?plain=1#L10867)
-- [(c) Write down a program to find length of a string without using any library function.](../written-answers/c-programming.md?plain=1#L10890)
+- [What is the purpose of '\0' character in C?](../written-answers/c-programming.md?plain=1#L10890)
+- [(c) Write down a program to find length of a string without using any library function.](../written-answers/c-programming.md?plain=1#L10913)
 
 
 ---
@@ -3635,18 +3635,18 @@ int isSubstring(char s[], char sub[]) {
 
 **Previous Year Question List from this Topic:**
 
-- [Write a C or Java program to convert string to integer without using any built-in function.](../written-answers/c-programming.md?plain=1#L10594)
-- [Write a C program to check whether a string is a Palindrome.](../written-answers/c-programming.md?plain=1#L10631)
-- [Write a C program upper case to lower case conversion.](../written-answers/c-programming.md?plain=1#L10666)
-- [String reverse program but without without using the library function.](../written-answers/c-programming.md?plain=1#L10694)
-- [Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from…](../written-answers/c-programming.md?plain=1#L10726)
-- [Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter](../written-answers/c-programming.md?plain=1#L10832)
-- [(c) Write down a program to find length of a string without using any library function.](../written-answers/c-programming.md?plain=1#L10890)
-- [Write a program to read a character “lower case ” and convert it into upper case.](../written-answers/c-programming.md?plain=1#L10917)
-- [(b) Write down a C function to sort a list of strings in alphabetic order.](../written-answers/c-programming.md?plain=1#L10988)
-- [(a) Write an algorithm to find Palindrome number.](../written-answers/c-programming.md?plain=1#L11034)
-- [Check string str2 is superscript of string str1.](../written-answers/c-programming.md?plain=1#L11074)
-- [String - Find frequency of each character.](../written-answers/c-programming.md?plain=1#L11128)
+- [Write a C or Java program to convert string to integer without using any built-in function.](../written-answers/c-programming.md?plain=1#L10617)
+- [Write a C program to check whether a string is a Palindrome.](../written-answers/c-programming.md?plain=1#L10654)
+- [Write a C program upper case to lower case conversion.](../written-answers/c-programming.md?plain=1#L10689)
+- [String reverse program but without without using the library function.](../written-answers/c-programming.md?plain=1#L10717)
+- [Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from…](../written-answers/c-programming.md?plain=1#L10749)
+- [Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter](../written-answers/c-programming.md?plain=1#L10855)
+- [(c) Write down a program to find length of a string without using any library function.](../written-answers/c-programming.md?plain=1#L10913)
+- [Write a program to read a character “lower case ” and convert it into upper case.](../written-answers/c-programming.md?plain=1#L10940)
+- [(b) Write down a C function to sort a list of strings in alphabetic order.](../written-answers/c-programming.md?plain=1#L11011)
+- [(a) Write an algorithm to find Palindrome number.](../written-answers/c-programming.md?plain=1#L11057)
+- [Check string str2 is superscript of string str1.](../written-answers/c-programming.md?plain=1#L11097)
+- [String - Find frequency of each character.](../written-answers/c-programming.md?plain=1#L11151)
 
 
 ---
@@ -3753,8 +3753,8 @@ char classOf(char ip[]) {
 
 **Previous Year Question List from this Topic:**
 
-- [Write a program IPv4 IP validation from given IP with valid and not valid.](../written-answers/c-programming.md?plain=1#L10776)
-- [Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.](../written-answers/c-programming.md?plain=1#L10945)
+- [Write a program IPv4 IP validation from given IP with valid and not valid.](../written-answers/c-programming.md?plain=1#L10799)
+- [Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.](../written-answers/c-programming.md?plain=1#L10968)
 
 
 ---
@@ -3840,11 +3840,11 @@ for (int i = 1; i <= n; i++) { sum2 += a; next = a + b; a = b; b = next; }  /* O
 
 **Previous Year Question List from this Topic:**
 
-- [Sum of Cubes — find the sum of the series $1^3 + 2^3 + 3^3 + \dots\dots\dots\dots + n^3$ using its closed-form formula.](../written-answers/c-programming.md?plain=1#L11179)
-- [Geometric Progression (GP) — find the sum of a geometric series using its closed-form formula.](../written-answers/c-programming.md?plain=1#L11212)
-- [Arithmetic Progression (AP) — find the sum of an arithmetic series using its closed-form formula.](../written-answers/c-programming.md?plain=1#L11250)
-- [Factorial Sum — find the sum of the series $1! + 2! + 3! + \dots\dots\dots\dots + n!$](../written-answers/c-programming.md?plain=1#L11286)
-- [Fibonacci Series Sum — find the sum of the first n terms of the Fibonacci series.](../written-answers/c-programming.md?plain=1#L11315)
+- [Sum of Cubes — find the sum of the series $1^3 + 2^3 + 3^3 + \dots\dots\dots\dots + n^3$ using its closed-form formula.](../written-answers/c-programming.md?plain=1#L11202)
+- [Geometric Progression (GP) — find the sum of a geometric series using its closed-form formula.](../written-answers/c-programming.md?plain=1#L11235)
+- [Arithmetic Progression (AP) — find the sum of an arithmetic series using its closed-form formula.](../written-answers/c-programming.md?plain=1#L11273)
+- [Factorial Sum — find the sum of the series $1! + 2! + 3! + \dots\dots\dots\dots + n!$](../written-answers/c-programming.md?plain=1#L11309)
+- [Fibonacci Series Sum — find the sum of the first n terms of the Fibonacci series.](../written-answers/c-programming.md?plain=1#L11338)
 
 
 ---
@@ -3989,10 +3989,10 @@ int main(void) {
 
 **Previous Year Question List from this Topic:**
 
-- [Name Top C 5 File Management Function Name.](../written-answers/c-programming.md?plain=1#L11349)
-- [Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.](../written-answers/c-programming.md?plain=1#L11374)
-- [You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account…](../written-answers/c-programming.md?plain=1#L11407)
-- [Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?](../written-answers/c-programming.md?plain=1#L11470)
+- [Name Top C 5 File Management Function Name.](../written-answers/c-programming.md?plain=1#L11372)
+- [Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.](../written-answers/c-programming.md?plain=1#L11397)
+- [You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account…](../written-answers/c-programming.md?plain=1#L11430)
+- [Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?](../written-answers/c-programming.md?plain=1#L11493)
 
 
 ---
@@ -4090,8 +4090,8 @@ arr[i]   ==   *(arr + i)   ==   *(i + arr)   ==   i[arr]
 
 **Previous Year Question List from this Topic:**
 
-- [অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।](../written-answers/c-programming.md?plain=1#L11528)
-- [(a) What is the difference between array and pointer?](../written-answers/c-programming.md?plain=1#L11633)
+- [অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।](../written-answers/c-programming.md?plain=1#L11551)
+- [(a) What is the difference between array and pointer?](../written-answers/c-programming.md?plain=1#L11656)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -4196,8 +4196,8 @@ int *r = malloc(1000000000000);
 
 **Previous Year Question List from this Topic:**
 
-- [(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L11551)
-- [Describe Dynamic memory allocation in programming in C?](../written-answers/c-programming.md?plain=1#L11582)
+- [(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L11574)
+- [Describe Dynamic memory allocation in programming in C?](../written-answers/c-programming.md?plain=1#L11605)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -4240,8 +4240,8 @@ p++;             /* ✅ legal — p now points to a[1] */
 
 **Previous Year Question List from this Topic:**
 
-- [(a) What is the difference between array and pointer?](../written-answers/c-programming.md?plain=1#L11633)
-- [অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।](../written-answers/c-programming.md?plain=1#L11528)
+- [(a) What is the difference between array and pointer?](../written-answers/c-programming.md?plain=1#L11656)
+- [অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।](../written-answers/c-programming.md?plain=1#L11551)
 
 **Previous Year MCQ List from this Topic:**
 
@@ -4460,7 +4460,7 @@ int main(int argc, char *argv[]) {
 
 **Previous Year Question List from this Topic:**
 
-- [Write a C program that takes inputs integer values from command line interface and print the summation of the integers.](../written-answers/c-programming.md?plain=1#L11664)
+- [Write a C program that takes inputs integer values from command line interface and print the summation of the integers.](../written-answers/c-programming.md?plain=1#L11687)
 
 ---
 

@@ -462,11 +462,17 @@ Answer:
 
 15. **Write a program in any language to find the sum of rows and columns of a m \times n matrix, where m and n is taken input from the user. Give the output in the following format:**
    **Sample Input matrix:**
+```
+1 3 4 2
+2 4 5 3
+3 2 2 1
+```
    **Sample Output:**
-   *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 331 (ET: BIBM)]*
-
-**Sample Input matrix:**
-   **Sample Output:**
+```
+1 3 4 2 10
+2 4 5 3 14
+3 2 2 1 8
+```
    *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 331 (ET: BIBM)]*
 
    Answer:
@@ -475,7 +481,7 @@ Answer:
    #include <stdio.h>
 
    int main(void) {
-       int a[20][20], m, n, i, j, rowSum, colSum;
+       int a[20][20], m, n, i, j, rowSum, colSum, grand = 0;
 
        printf("Enter m and n: ");
        scanf("%d %d", &m, &n);
@@ -485,22 +491,39 @@ Answer:
            for (j = 0; j < n; j++)
                scanf("%d", &a[i][j]);
 
-       for (i = 0; i < m; i++) {              // sum of each row
+       /* print each row, then its row sum at the end of the same line */
+       for (i = 0; i < m; i++) {
            rowSum = 0;
-           for (j = 0; j < n; j++) rowSum += a[i][j];
-           printf("Sum of row %d = %d\n", i + 1, rowSum);
+           for (j = 0; j < n; j++) {
+               printf("%d ", a[i][j]);
+               rowSum += a[i][j];
+           }
+           printf("%d\n", rowSum);           // row total in the last column
+           grand += rowSum;
        }
 
-       for (j = 0; j < n; j++) {              // sum of each column
+       /* extra bottom line: the sum of every column */
+       for (j = 0; j < n; j++) {
            colSum = 0;
            for (i = 0; i < m; i++) colSum += a[i][j];
-           printf("Sum of column %d = %d\n", j + 1, colSum);
+           printf("%d ", colSum);
        }
+       printf("%d\n", grand);                // grand total
        return 0;
    }
    ```
 
-   - For the row sum the row index stays fixed while the column index moves; for the column sum the roles are swapped.
+   Output for the sample matrix
+   ```
+   1 3 4 2 10
+   2 4 5 3 14
+   3 2 2 1 8
+   6 9 11 6 32
+   ```
+
+   - The **format is the whole question here**. Printing `Sum of row 1 = 10` on separate lines loses marks — the row total must be appended as an extra column on the same line as the row itself.
+   - Row sum: the row index `i` stays fixed while `j` moves across. Column sum: the roles are swapped — `j` is fixed and `i` moves down.
+   - The last line holds the column totals. Its final value (32) is the **grand total**, and it works out the same whether you add the row sums (10+14+8) or the column sums (6+9+11+6) — a quick way to check your answer.
    - Time complexity `O(m × n)`, space `O(m × n)` for the matrix.
 
 16. **Write a program in any language to find the prime numbers between 1.......n, where n is taken as user input.**

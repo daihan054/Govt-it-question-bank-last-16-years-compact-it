@@ -65,7 +65,17 @@
 
 15. **Write a program in any language to find the sum of rows and columns of a m \times n matrix, where m and n is taken input from the user. Give the output in the following format:**
    **Sample Input matrix:**
+```
+1 3 4 2
+2 4 5 3
+3 2 2 1
+```
    **Sample Output:**
+```
+1 3 4 2 10
+2 4 5 3 14
+3 2 2 1 8
+```
    *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 331 (ET: BIBM)]*
 
 16. **Write a program in any language to find the prime numbers between 1.......n, where n is taken as user input.**
