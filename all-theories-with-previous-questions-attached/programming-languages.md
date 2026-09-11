@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 2 subtopics · 4 theories
+**Table of Contents** — 4 subtopics · 7 theories
 
 1. **[Core Programming Languages](#core-programming-languages)**
    - [Programming Languages — Classification and Concepts](#programming-languages--classification-and-concepts)
@@ -8,6 +8,13 @@
 2. **[Visual Basic & .NET](#visual-basic--net)**
    - [The .NET Framework and the CLR](#the-net-framework-and-the-clr)
    - [Garbage Collection in .NET](#garbage-collection-in-net)
+   - [VB.NET and C# — Language Essentials and Tooling](#vbnet-and-c--language-essentials-and-tooling)
+
+3. **[Python](#python)**
+   - [Python — Syntax, Data Types and Operators](#python--syntax-data-types-and-operators)
+
+4. **[Mobile & Android Development](#mobile--android-development)**
+   - [Android and Mobile Application Development](#android-and-mobile-application-development)
 
 <!-- TOC END -->
 
@@ -92,6 +99,15 @@ flowchart TD
 **Previous Year Question List from this Topic:**
 
 - [Write a C/JAVA program to determine if a given year is a leap year or not.](../written-answers/programming-languages.md?plain=1#L15)
+
+**Previous Year MCQ List from this Topic:**
+
+- [To start Python from the command prompt, use the command _____](../mcq-answers/programming-languages.md?plain=1#L16)
+- [Which of the following languages causes ‘Indentation Errors’ for not using tabs properly?](../mcq-answers/programming-languages.md?plain=1#L37)
+- [In programming language DRY principle makes the code.](../mcq-answers/programming-languages.md?plain=1#L64)
+- [Which language was used to build Android Operating System?](../mcq-answers/programming-languages.md?plain=1#L138)
+- [Which of the following programming language helps you to learn Android programming?](../mcq-answers/programming-languages.md?plain=1#L147)
+
 
 
 ---
@@ -294,6 +310,12 @@ flowchart TD
 - [Write down the component of .NET Framework.](../written-answers/programming-languages.md?plain=1#L361)
 - [What is .NET framework? Write the main components of .NET framework?](../written-answers/programming-languages.md?plain=1#L507)
 
+**Previous Year MCQ List from this Topic:**
+
+- [.NET can be used in the following-](../mcq-answers/programming-languages.md?plain=1#L176)
+- [Microsoft .NET is ________](../mcq-answers/programming-languages.md?plain=1#L185)
+
+
 
 ---
 
@@ -380,3 +402,320 @@ using (SqlConnection conn = new SqlConnection(connectionString))
 **Previous Year Question List from this Topic:**
 
 - [What is garbage collection? Write down the difference between garbage collection in .NET 4 and earlier version of .NET](../written-answers/programming-languages.md?plain=1#L427)
+
+---
+
+### VB.NET and C# — Language Essentials and Tooling
+
+> *(The .NET Framework, the CLR and garbage collection are covered in the two theories above. This theory covers the LANGUAGE-level and TOOLING points the MCQ bank tests.)*
+
+#### What .NET can be used for
+
+> ### **"`.NET` can be used in the following —"** → ### ✅ **ALL OF THE ABOVE.** .NET is a general platform supporting **desktop applications (Windows Forms, WPF), web applications and services (ASP.NET, Web API), mobile apps (MAUI/Xamarin), cloud services, console utilities, games (Unity) and machine learning (ML.NET)**.
+
+> ### **"Microsoft .NET is ______"** → ### ✅ **OPEN SOURCE.**
+> ⚠️ **With a necessary qualification:** the **original .NET FRAMEWORK (1.0–4.8) was PROPRIETARY and Windows-only**. Since **.NET Core (2016)** and the unified **.NET 5+**, the platform is ⭐ **fully OPEN SOURCE (MIT licence) under the .NET Foundation, and cross-platform**. Modern .NET is open source; the legacy Framework is not — **say which you mean.**
+
+#### Variable scope
+
+| Scope | Declared | Lifetime | Visible to |
+|---|---|---|---|
+| ⭐ **LOCAL variable** | ⭐ **INSIDE a METHOD (or block)** | While the method executes | **Only that method** |
+| **Instance (member) variable / field** | Inside the class, outside any method | As long as the object lives | All methods of the object |
+| **Static (shared) variable** | With `static` / `Shared` | The life of the program | The whole class |
+| **Parameter** | In the method signature | During the call | That method |
+
+> ### **"A variable declared inside a method is called ______"** → ### ✅ **A LOCAL VARIABLE.**
+>
+> **Two consequences worth stating:** a local variable is **destroyed when the method returns**, and in C# it **must be definitely assigned before use** — the compiler rejects reading an unassigned local, which is a deliberate safety feature.
+
+#### ⭐ Constructors — the C# rule that is always tested
+
+> ### **A CONSTRUCTOR must have the SAME NAME AS THE CLASS and must have NO RETURN TYPE — not even `void`.**
+
+```csharp
+class BankAccount {
+    private int balance;
+
+    public int BankAccount() {        // ❌ ERROR — has a RETURN TYPE (int)
+        balance = 0;
+    }
+
+    public BankAccount() {            // ✅ CORRECT — no return type at all
+        balance = 0;
+    }
+}
+```
+
+> ### **"Find any errors in this BankAccount constructor: `public int BankAccount() { balance = 0; }`"** → ### ✅ **THE RETURN TYPE.** Writing `int` in front turns it into an **ordinary method that happens to share the class's name** — so the class silently loses its constructor, and the compiler reports that the "method must return a value". **Remove the return type.**
+
+**The constructor rules to memorise:** same name as the class · **no return type** · called **automatically** on object creation · can be **overloaded** · may be `public`, `private` (for singletons) or `protected` · a **default parameterless constructor is supplied only if you declare NO constructor at all** · C# uses `: base()`/`: this()` chaining, VB.NET uses `MyBase.New()`.
+
+#### VB.NET forms — modal vs modeless
+
+| Method | Behaviour |
+|---|---|
+| ⭐ **`ShowDialog()`** | ⭐ **Displays the form as MODAL** — the user **cannot interact with any other form** in the application until this one is closed. It **blocks** the calling code and **returns a `DialogResult`** |
+| **`Show()`** | Displays the form as **MODELESS** — other forms remain usable, and the call returns immediately |
+
+```vb
+' VB.NET — modal
+Dim f As New LoginForm()
+If f.ShowDialog() = DialogResult.OK Then
+    ' the code here waits until the dialog is closed
+End If
+```
+
+> ### **"Which method displays the form as MODAL in VB.NET?"** → ### ✅ **`ShowDialog()`.**
+>
+> **Use modal for anything that must be answered before continuing** — a login box, a confirmation, a settings dialog. **Use modeless for tool windows** the user should be able to leave open.
+
+#### .NET tooling worth naming
+
+| Tool | Purpose |
+|---|---|
+| ⭐ **`Regasm.exe`** | ⭐ **Registers .NET ASSEMBLIES for use by COM** — it writes the assembly's classes into the Windows registry so that legacy COM clients (VB6, classic ASP, Office VBA) can create them |
+| **`Regsvr32.exe`** | The opposite direction — registers a **native COM DLL** (not .NET) |
+| **`Tlbimp.exe` / `Tlbexp.exe`** | Import a COM type library into .NET / export .NET to a type library |
+| **`ildasm` / `ILSpy`** | Disassemble IL — inspect a compiled assembly |
+| **`gacutil.exe`** | Install an assembly into the **Global Assembly Cache** |
+| **`csc` / `vbc`** | The C# and VB.NET command-line compilers |
+| **NuGet** | The package manager |
+| ⭐ **MSDN Library** | ⭐ **The REFERENCE LIBRARY of Microsoft/Visual Basic documentation** — Microsoft Developer Network. *(Now superseded by **Microsoft Learn / docs.microsoft.com**, but "MSDN library" remains the expected exam answer.)* |
+
+#### VB.NET vs C# — the practical comparison
+
+| Point | **VB.NET** | **C#** |
+|---|---|---|
+| **Syntax style** | Verbose, English-like (`If … Then … End If`) | **C-family, braces and semicolons** |
+| **Case sensitivity** | ❌ **Case-INsensitive** | ✅ **Case-SENSITIVE** |
+| **Statement terminator** | End of line | **`;`** |
+| **Comments** | `'` or `REM` | `//` and `/* */` |
+| **Compiles to** | ⭐ **The SAME MSIL** — the two are fully interoperable | The same MSIL |
+| **Popularity today** | Declining; in maintenance mode | ⭐ **The dominant .NET language** |
+
+> ### **The point that matters: because BOTH compile to the SAME intermediate language and run on the SAME CLR, a class written in VB.NET can be inherited and used by C# code without any wrapper.** That language interoperability is the whole purpose of the Common Type System and the Common Language Specification.
+
+**Previous Year MCQ List from this Topic:**
+
+- [.NET can be used in the following-](../mcq-answers/programming-languages.md?plain=1#L176)
+- [Microsoft .NET is ________](../mcq-answers/programming-languages.md?plain=1#L185)
+- [The reference library of Visual Basic books is called ________](../mcq-answers/programming-languages.md?plain=1#L194)
+- [A variable declared inside a method is called ________.](../mcq-answers/programming-languages.md?plain=1#L203)
+- [Which of the method is used to display the form as model in VB.NET platform?](../mcq-answers/programming-languages.md?plain=1#L212)
+- [The tool provided with .NET framework register assemblies for use by COM is ________](../mcq-answers/programming-languages.md?plain=1#L221)
+- [Find any errors in the following BankAccount constructor in C#.NET public int BankAccount(){ balance=0; }](../mcq-answers/programming-languages.md?plain=1#L230)
+
+
+
+---
+
+## Python
+
+### Python — Syntax, Data Types and Operators
+
+> **PYTHON is a high-level, INTERPRETED, dynamically-typed, general-purpose language** created by **Guido van Rossum (1991)**. It is today the dominant language for **data science, machine learning, scripting, automation and web back-ends**, chiefly because of its readability and its enormous library ecosystem.
+
+#### Running Python
+
+| Command | Effect |
+|---|---|
+| ⭐ **`python`** (or `python3`) | ⭐ **Starts the Python INTERPRETER from the command prompt** — the interactive shell, showing the `>>>` prompt |
+| `python script.py` | Runs a script file |
+| `python -c "print(1+1)"` | Runs a one-line command |
+| `exit()` or Ctrl+D | Leaves the interpreter |
+
+#### ⭐ Indentation — Python's defining peculiarity
+
+> ### **Python uses INDENTATION — not braces — to define BLOCKS.** A block is everything indented to the same level under a `:` line. **Inconsistent indentation raises an `IndentationError`.**
+
+```python
+if x > 0:
+    print("positive")        # this line is INSIDE the if — 4 spaces
+    print("still inside")
+print("always runs")         # OUTSIDE the if — back to column 0
+```
+
+> ### **"Which language causes INDENTATION ERRORS for not using tabs properly?"** → ### ✅ **PYTHON.**
+>
+> ⚠️ **Never mix tabs and spaces** in one file — they look identical on screen but are different characters, and Python will reject the file. **PEP 8, the official style guide, mandates 4 SPACES per indentation level.** In C, C++, Java and C# indentation is purely cosmetic; **in Python it is syntax.**
+
+#### The core data types
+
+| Category | Types | Mutable? | Literal |
+|---|---|---|---|
+| **Numeric** | `int`, `float`, `complex` | No | `42`, `3.14`, `2+3j` |
+| **Text** | `str` | No | `"hello"` |
+| **Boolean** | `bool` | No | `True`, `False` |
+| ⭐ **Sequence** | ⭐ **`list`** | ✅ **Yes** | ⭐ **`[1, 2, 3]`** — square brackets |
+| | **`tuple`** | ❌ No | **`(1, 2, 3)`** — parentheses |
+| | `range` | No | `range(5)` |
+| ⭐ **Mapping** | ⭐ **`dict`** | ✅ Yes | ⭐ **`{'one': 1, 'two': 2}`** — braces, **key : value** pairs |
+| ⭐ **Set** | **`set`** | ✅ Yes | **`{1, 2, 3}`** — braces, **no colons** |
+| | `frozenset` | No | |
+| **Binary** | `bytes`, `bytearray` | | |
+| **None** | `NoneType` | | `None` |
+
+> ### **"Which of these is NOT a core data type?"** → ### ✅ **CLASS.** A **class is a user-defined TYPE CONSTRUCT**, not one of Python's built-in core data types. *(The core types are int, float, complex, str, bool, list, tuple, range, dict, set, frozenset, bytes and NoneType.)*
+
+> ### **The curly-brace question: `{}` in Python means a DICTIONARY or a SET — never a code block.**
+> ```python
+> A = {'one': 1, 'two': 2}      ✅ a DICTIONARY — keys with colons
+> B = {1, 2, 3}                 ✅ a SET — no colons
+> C = {}                        ⚠️ an EMPTY DICTIONARY, not an empty set
+> D = set()                     ✅ the way to make an empty SET
+> ```
+
+#### Type conversion functions
+
+| Function | Converts to | Example |
+|---|---|---|
+| ⭐ **`float(x)`** | ⭐ **A FLOAT — this is the function that converts a STRING to a float** | `float("3.14")` → `3.14` |
+| **`int(x)`** | Integer | `int("42")` → `42`; `int(3.9)` → `3` (truncates) |
+| **`str(x)`** | String | `str(42)` → `"42"` |
+| **`bool(x)`** | Boolean | `bool(0)` → `False` |
+| **`list(x)` / `tuple(x)` / `set(x)`** | The collection type | `list("abc")` → `['a','b','c']` |
+
+#### ⭐ Operators — and the two that catch everybody
+
+| Operator | Meaning | Example |
+|---|---|---|
+| `+ - * /` | Add, subtract, multiply, **true divide** | `9 / 2` → **`4.5`** (always a float) |
+| ⭐ **`//`** | ⭐ **FLOOR DIVISION — divides and DISCARDS the fractional part** | ⭐ **`9 // 2`** → **`4`** · `-9 // 2` → `-5` (floors **downward**) |
+| **`%`** | Modulus (remainder) | `9 % 2` → `1` |
+| ⭐ **`**`** | ⭐ **EXPONENTIATION** | `2 ** 3` → `8` |
+| `== != < > <= >=` | Comparison | |
+| `and or not` | Logical | |
+| `in`, `not in` | Membership | `'a' in 'abc'` → `True` |
+| `is`, `is not` | Identity (same object) | |
+
+> ### **Worked example — `print(9 // 2)`** → ### ✅ **`4`**, because `//` is **floor division**. *(Note that `9 / 2` would give `4.5`, and in Python 2 `9 / 2` gave `4` — which is why the `//` operator was introduced, to make the intent explicit.)*
+
+> ### ⭐ **Worked example — the exponent associativity trap**
+> ```python
+>    2 ** (3 ** 2)  =  2 ** 9   =  512
+>    (2 ** 3) ** 2  =  8  ** 2   =   64
+>    2 ** 3 ** 2    =  ?
+> ```
+> ### ✅ **`2 ** 3 ** 2` = 512**, because ⭐ **`**` is RIGHT-ASSOCIATIVE** — it groups as `2 ** (3 ** 2)`, not `(2 ** 3) ** 2`. **So the three expressions evaluate to 512, 64 and 512.**
+>
+> **`**` is the ONLY common Python operator that associates right-to-left**; every arithmetic operator you are used to (`+ - * /`) associates left-to-right. That single fact is the whole question.
+
+#### Lists — indexing and assignment
+
+```python
+List = [1, 2, 3, 4, 5]
+#       0  1  2  3  4      ← indices are ZERO-BASED
+#      -5 -4 -3 -2 -1      ← negative indices count from the END
+
+List[3] = List[1]          # copy the VALUE at index 1 into index 3
+print(List)                # [1, 2, 3, 2, 5]
+print(List[3])             # 2
+```
+> ### **"If `List = [1,2,3,4,5]` and you write `List[3] = List[1]`, what is `List[3]`?"** → ### ✅ **2.**
+>
+> **The two things being tested: indexing is ZERO-BASED (so `List[1]` is the SECOND element, 2), and lists are MUTABLE (so the assignment succeeds).** The same assignment on a **tuple** would raise `TypeError: 'tuple' object does not support item assignment`.
+
+**Slicing:** `List[1:4]` → `[2,3,4]` (start inclusive, stop exclusive) · `List[:3]` → first three · `List[-2:]` → last two · `List[::-1]` → the list reversed.
+
+#### The DRY principle
+
+> ### **DRY = "DON'T REPEAT YOURSELF"** — every piece of knowledge or logic should have **a single, unambiguous representation** in the system.
+
+> ### **"The DRY principle makes the code ______"** → ### ✅ **REUSABLE** (and thereby shorter, more maintainable and less error-prone).
+
+**Why it matters:** if the same logic is copied into five places, a bug must be fixed **five times** — and it will be fixed in four. Extracting it into **one function, class or module** means it is written once, tested once and corrected once. *(The opposite is disparaged as **WET** — "Write Everything Twice".)*
+
+**Related principles worth naming:** **KISS** (Keep It Simple, Stupid) · **YAGNI** (You Aren't Gonna Need It) · **SOLID** (the five object-oriented design principles) · **Separation of Concerns**.
+
+**Previous Year MCQ List from this Topic:**
+
+- [To start Python from the command prompt, use the command _____](../mcq-answers/programming-languages.md?plain=1#L16)
+- [What is the output of the following code?](../mcq-answers/programming-languages.md?plain=1#L25)
+- [Which of the following languages causes ‘Indentation Errors’ for not using tabs properly?](../mcq-answers/programming-languages.md?plain=1#L37)
+- [Which following code syntax shows a valid use of curly braces ‘{}’ in python?](../mcq-answers/programming-languages.md?plain=1#L46)
+- [If List= (1,2,3,4,5) and write List(3) = List(1) then what will be List(3)?](../mcq-answers/programming-languages.md?plain=1#L55)
+- [In programming language DRY principle makes the code.](../mcq-answers/programming-languages.md?plain=1#L64)
+- [Which of the following function converts a string into float in Python?](../mcq-answers/programming-languages.md?plain=1#L73)
+- [What is the output of following code? print 9//2](../mcq-answers/programming-languages.md?plain=1#L82)
+- [Which of these is not a core data type?](../mcq-answers/programming-languages.md?plain=1#L91)
+- [What are the values of the following expressions? 2 (32), (23) 2, 232](../mcq-answers/programming-languages.md?plain=1#L100)
+
+
+---
+
+## Mobile & Android Development
+
+### Android and Mobile Application Development
+
+#### The two dominant mobile platforms
+
+| | ⭐ **ANDROID** | ⭐ **iOS** |
+|---|---|---|
+| **Developed by** | ⭐ **GOOGLE** (originally Android Inc., acquired 2005) | ⭐ **APPLE (অ্যাপেল)** |
+| **Based on** | The **LINUX kernel** | Darwin / Unix |
+| **Source model** | **Open source (AOSP)** | Proprietary |
+| **Runs on** | Many manufacturers — Samsung, Xiaomi, Oppo, Walton | **Apple devices only** — iPhone, iPad |
+| ⭐ **App package format** | ⭐ **`.APK`** (Android Package Kit); `.aab` for Play Store | **`.IPA`** |
+| **App store** | Google Play Store | Apple App Store |
+| ⭐ **Primary languages** | ⭐ **JAVA** and **Kotlin** (official since 2017) | **Swift** and Objective-C |
+| **IDE** | **Android Studio** | **Xcode** |
+| **Market share** | ~70 % worldwide | ~28 % |
+
+> ### **"আইওএস (iOS) মোবাইল অপারেটিং সিস্টেম কোন কোম্পানির?"** → ### ✅ **অ্যাপেল (Apple).**
+> ### **"Which smartphones are compatible with `.apk` files?"** → ### ✅ **ANDROID.**
+> ### **"Which language was used to build Android / helps you learn Android programming?"** → ### ✅ **JAVA.** *(Precisely: the **Android OS itself** is built from **C and C++** for the kernel and native libraries, with the **framework layer in Java**; **applications** are written in **Java or Kotlin**. For exam purposes the expected answer is **Java**.)*
+
+#### Android versions, codenames and API levels
+
+> Android releases carry a **version number**, a **dessert codename** (officially dropped after Android 9, though retained internally) and an ⭐ **API LEVEL** — the integer developers actually target.
+
+| Version | Codename | ⭐ **API level** |
+|---|---|---|
+| 4.4 | KitKat | 19 |
+| 5.0 – 5.1 | Lollipop | 21 – 22 |
+| 6.0 | Marshmallow | 23 |
+| 7.0 – 7.1 | Nougat | 24 – 25 |
+| ⭐ **8.0 – 8.1** | ⭐ **OREO** — internal codename ⭐ **"Oatmeal Cookie"** | 26 – 27 |
+| 9 | Pie | 28 |
+| 10 | Q (Quince Tart) | 29 |
+| ⭐ **11** | R (Red Velvet Cake) | ⭐ **30** |
+| 12 | S (Snow Cone) | 31 – 32 |
+| 13 | Tiramisu | 33 |
+| 14 | Upside Down Cake | 34 |
+| 15 | Vanilla Ice Cream | 35 |
+
+> ⚠️ **Note on two MCQs in this bank:** *"What is the API level of Android 11?"* is answered **"None of the above"** — ### **the correct API level is 30**, so the printed options must have omitted it. And *"the internal codename of Android 8.0"* is ⭐ **"Oatmeal Cookie"** — Google kept internal dessert codenames even after the public ones were dropped.
+
+#### The components of an Android application
+
+| Component | Purpose |
+|---|---|
+| ⭐ **Activity** | **One screen** with a user interface |
+| ⭐ **Service** | Work that runs **in the background** with no UI |
+| **Broadcast Receiver** | Responds to **system-wide events** (battery low, boot completed) |
+| **Content Provider** | Shares data **between applications** |
+| ⭐ **Intent** | The **message object** used to start an activity or service, or to pass data between components |
+| ⭐ **AndroidManifest.xml** | Declares the app's **components, permissions and minimum API level** |
+| **Layout (XML)** | Defines the UI declaratively |
+| **Gradle** | The build system |
+
+#### Native vs Hybrid vs Cross-platform
+
+| | **Native** | **Cross-platform** | **Hybrid / Web app** |
+|---|---|---|---|
+| **Built with** | Java/Kotlin (Android), Swift (iOS) | **Flutter (Dart), React Native (JS)** | HTML/CSS/JS in a WebView (Cordova, Ionic) |
+| **Performance** | ✅ **Best** | Very good | Weakest |
+| **Code reuse across platforms** | ❌ None | ✅ **High** | ✅ Highest |
+| **Access to device features** | ✅ Full | Good (via plugins) | Limited |
+| **Best for** | Performance-critical, platform-specific apps | Most business apps | Simple content apps |
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the API level of Android version 11?](../mcq-answers/programming-languages.md?plain=1#L111)
+- [What is the Internal Codename of Android version 8.0?](../mcq-answers/programming-languages.md?plain=1#L120)
+- [আইওএস (IOS) মোবাইল অপারেটিং সিস্টেমটি কোন প্রতিষ্ঠান বাজারজাত করে?](../mcq-answers/programming-languages.md?plain=1#L129)
+- [Which language was used to build Android Operating System?](../mcq-answers/programming-languages.md?plain=1#L138)
+- [Which of the following programming language helps you to learn Android programming?](../mcq-answers/programming-languages.md?plain=1#L147)
+- [Which of the following program helps you to learn Android programming?](../mcq-answers/programming-languages.md?plain=1#L156)
+- [What smart phones are compatible of .apk file?](../mcq-answers/programming-languages.md?plain=1#L165)

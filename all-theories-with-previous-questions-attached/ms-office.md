@@ -1,8 +1,14 @@
 <!-- TOC START -->
-**Table of Contents** — 1 subtopics · 1 theories
+**Table of Contents** — 2 subtopics · 5 theories
 
 1. **[MS Excel](#ms-excel)**
    - [MS Excel — Formulas, Functions and Worked Examples](#ms-excel--formulas-functions-and-worked-examples)
+   - [MS Excel — Interface, Shortcuts and Everyday Operations](#ms-excel--interface-shortcuts-and-everyday-operations)
+
+2. **[MS Word, PowerPoint & Access](#ms-word-powerpoint--access)**
+   - [MS Word — Features, Formatting and Shortcuts](#ms-word--features-formatting-and-shortcuts)
+   - [MS PowerPoint — Slides, Media and Presentation Shortcuts](#ms-powerpoint--slides-media-and-presentation-shortcuts)
+   - [MS Access — Database Objects and Relational Basics](#ms-access--database-objects-and-relational-basics)
 
 <!-- TOC END -->
 
@@ -130,3 +136,284 @@
 **Previous Year Question List from this Topic:**
 
 - [In an excel sheet cell A1, A2, A3, A4 contains the value of power generation by four plants. Write a function in A5 to show the average of best three power plan…](../written-answers/ms-office.md?plain=1#L14)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which is the correct Addition formula in MS Excel?](../mcq-answers/ms-office.md?plain=1#L18)
+- [Multiple calculation can be made in a single formula using.](../mcq-answers/ms-office.md?plain=1#L36)
+- [পরিসংখ্যানের বিভিন্ন পরিমাপ নির্ণয়ের জন্য নিচের কোনটি ব্যবহৃত হয়?](../mcq-answers/ms-office.md?plain=1#L54)
+- [What is entered by the function = today()?](../mcq-answers/ms-office.md?plain=1#L81)
+
+
+---
+
+### MS Excel — Interface, Shortcuts and Everyday Operations
+
+> *(Formulas and functions are covered in **[MS Excel — Formulas, Functions and Worked Examples](#ms-excel--formulas-functions-and-worked-examples)**. This theory covers the interface, the terminology and the operations that MCQs test.)*
+
+#### What Excel is, and what it is for
+
+> ### **MS EXCEL is SPREADSHEET SOFTWARE** — an application that organises data in a **grid of rows and columns** and performs **calculation, analysis, charting and statistical work** on it.
+
+> ### **"Which is spreadsheet software?" / "What program do you use to create a spreadsheet?"** → ### ✅ **MS EXCEL.**
+> ### **"পরিসংখ্যানের বিভিন্ন পরিমাপ নির্ণয়ের সফটওয়্যার"** → ### ✅ **MS EXCEL** — it computes mean, median, mode, standard deviation, correlation and regression directly (`AVERAGE`, `MEDIAN`, `MODE`, `STDEV`, `CORREL`, `LINEST`), which is why it is the standard tool for basic statistics.
+
+*(Other spreadsheet programs: **LibreOffice Calc, Google Sheets, Apple Numbers, Lotus 1-2-3**.)*
+
+#### The parts of the Excel window
+
+| Element | What it is |
+|---|---|
+| ⭐ **FORMULA BAR** | ⭐ **The area that ALLOWS ENTERING VALUES AND FORMULAS**, and displays the true content of the active cell — which may differ from what is displayed (a formula shows its result in the cell but its text in the formula bar) |
+| **Name box** | Shows the **address of the active cell** (e.g. `B7`); can be typed into to jump to a cell or named range |
+| **Cell** | The intersection of a row and a column — the basic unit |
+| **Active cell** | The currently selected cell, outlined in bold |
+| **Row / Column headings** | Numbers **1, 2, 3 …** down the side; letters **A, B, … XFD** across the top |
+| **Worksheet tabs** | Move between sheets in the workbook |
+| **Ribbon** | The tabbed command bar (Home, Insert, Formulas, Data …) |
+| **Status bar** | Shows quick Sum, Average and Count of the selection |
+
+#### The three kinds of cell content
+
+| Type | Description | Example |
+|---|---|---|
+| ⭐ **LABEL (text)** | ⭐ **Descriptive TEXT that HELPS YOU MAKE SENSE OF A WORKSHEET'S CONTENTS** — column headings, row titles. **Left-aligned by default** and **not used in calculations** | `Employee Name`, `January` |
+| **Value (constant)** | A number, date or time. **Right-aligned by default** | `5000`, `11/09/2026` |
+| **Formula** | Begins with **`=`** and produces a calculated result | `=SUM(C9:C12)` |
+
+> ### **"In a spreadsheet, ______ can help you make sense of a worksheet's contents."** → ### ✅ **LABELS.**
+>
+> **The quick diagnostic:** if an entry is **left-aligned** it was read as **text**; if **right-aligned**, as a **number or date**. A number that appears left-aligned has been stored as text and **will not calculate** — one of the commonest real spreadsheet faults.
+
+#### Writing a formula correctly
+
+```excel
+=SUM(C9:C12)        ✅ correct — begins with =, function name, range in brackets
+ SUM(C9:C12)        ❌ no leading = — Excel stores it as TEXT
+=C9+C10+C11+C12     ✅ correct but long; SUM is preferred
+=SUM(C9-C12)        ❌ this SUBTRACTS; the range operator is the COLON (:)
+```
+> ### **"Which is the correct ADDITION formula in MS Excel?"** → ### ✅ **`=SUM(C9:C12)`** — note the leading **`=`** and the **colon** denoting a range.
+
+#### Array formulas
+
+> ### **An ARRAY FORMULA performs MULTIPLE CALCULATIONS IN A SINGLE FORMULA**, operating on whole ranges at once rather than one pair of cells at a time.
+
+```excel
+=SUM(A1:A10 * B1:B10)      entered with Ctrl + Shift + Enter in older Excel
+                            (in Excel 365 it spills automatically)
+=SUMPRODUCT(A1:A10, B1:B10)  the classic non-array equivalent
+```
+> ### **"Multiple calculations can be made in a single formula using…"** → ### ✅ **an ARRAY FORMULA.** In legacy Excel it is confirmed with ⭐ **Ctrl + Shift + Enter** (hence "CSE formulas") and appears wrapped in `{ }` — braces you must **never type yourself**.
+
+#### Date and time functions
+
+| Function | Returns |
+|---|---|
+| ⭐ **`=TODAY()`** | ⭐ **The DATE VALUE FOR THE DAY, TAKEN FROM THE SYSTEM CLOCK** — date only, no time |
+| **`=NOW()`** | The current **date AND time** |
+| **`=DAY() / =MONTH() / =YEAR()`** | Extract a component |
+| **`=DATEDIF(start, end, "y")`** | Difference between dates |
+
+> **Both `TODAY()` and `NOW()` are VOLATILE** — they recalculate whenever the sheet recalculates, so the value **changes by itself**. To stamp a date permanently, type it, or press **Ctrl + ;**.
+
+#### Essential keyboard shortcuts
+
+| Shortcut | Action |
+|---|---|
+| **Ctrl + C** | Copy |
+| ⭐ **Ctrl + X** | ⭐ **CUT — the selected cells are MARKED for cutting** (shown with a moving dashed border). ⚠️ **Nothing is removed until you PASTE**; pressing Esc cancels it |
+| **Ctrl + V** | Paste |
+| ⭐ **Ctrl + Shift + C** | ⭐ **COPY FORMATTING** *(the Format Painter equivalent; Ctrl+Shift+V pastes the formatting)* |
+| **Ctrl + Z / Ctrl + Y** | Undo / Redo |
+| **Ctrl + ;** | Insert today's date as a **fixed** value |
+| **Ctrl + Shift + ;** | Insert the current time |
+| **F2** | Edit the active cell |
+| **F4** | Toggle absolute/relative referencing (`A1` → `$A$1`) while editing |
+| **Alt + =** | AutoSum |
+| **Ctrl + Home / Ctrl + End** | Go to A1 / to the last used cell |
+| **Ctrl + Arrow** | Jump to the edge of the data region |
+| **Ctrl + Page Up / Down** | Previous / next worksheet |
+| **Ctrl + S / Ctrl + P** | Save / Print |
+
+> ⚠️ **A caution on "cut" in Excel:** unlike in Word, **Ctrl + X in Excel does not immediately remove the cells.** It only **marks them**, and the move happens on paste. If you press Esc or do anything else first, **nothing moves at all** — which is exactly what the MCQ *"what happens when you press Ctrl+X after selecting some cells?"* is testing.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which is the correct Addition formula in MS Excel?](../mcq-answers/ms-office.md?plain=1#L18)
+- [In a spreadsheet, ________ can help you make sense of a worksheet contents.](../mcq-answers/ms-office.md?plain=1#L27)
+- [Multiple calculation can be made in a single formula using.](../mcq-answers/ms-office.md?plain=1#L36)
+- [Which area in an excel window allow entering values and formulas?](../mcq-answers/ms-office.md?plain=1#L45)
+- [পরিসংখ্যানের বিভিন্ন পরিমাপ নির্ণয়ের জন্য নিচের কোনটি ব্যবহৃত হয়?](../mcq-answers/ms-office.md?plain=1#L54)
+- [কপি ফরমেট করার শর্টকাট কোনটি?](../mcq-answers/ms-office.md?plain=1#L63)
+- [Which of the following is spreadsheet software?](../mcq-answers/ms-office.md?plain=1#L72)
+- [What is entered by the function = today()?](../mcq-answers/ms-office.md?plain=1#L81)
+- [What happens when you press Ctrl+X after selecting some cells in Excel?](../mcq-answers/ms-office.md?plain=1#L90)
+- [What program do you use to create a spreadsheet?](../mcq-answers/ms-office.md?plain=1#L99)
+
+
+---
+
+## MS Word, PowerPoint & Access
+
+### MS Word — Features, Formatting and Shortcuts
+
+> **MS WORD is WORD PROCESSING software** — an application for creating, editing, formatting and printing **text documents**.
+
+#### Formatting essentials
+
+| Feature | Detail |
+|---|---|
+| ⭐ **Font size range in the toolbar drop-down** | ⭐ **From 8 to 72 points** *(you may TYPE any size from **1 to 1638** into the box — the drop-down simply LISTS 8 to 72)* |
+| **Default font** | Calibri 11 pt in modern versions (Times New Roman 12 pt in older ones) |
+| **Alignment** | Left, Centre, Right, **Justify** |
+| **Line spacing** | Single, 1.5, Double, Exactly |
+| **Styles** | Named sets of formatting (Heading 1, Normal) — the correct way to format a long document |
+
+#### Headers, footers and page layout
+
+> **A HEADER appears at the TOP of the page and a FOOTER at the BOTTOM**, and both are typed **once** but repeat automatically.
+
+> ### **"By default, FOOTERS are printed on…"** → ### ✅ **ALL PAGES.**
+>
+> *(This can be changed with **"Different First Page"** — used to suppress the footer on a title page — or **"Different Odd & Even Pages"** for book-style layout. But the **default is every page**.)*
+
+**Typical footer content:** page number, date, file name, author, confidentiality notice.
+
+#### AutoCorrect and proofing
+
+> ### **AUTOCORRECT is the feature that AUTOMATICALLY CORRECTS SPELLING, TYPING AND CAPITALISATION ERRORS as you type.**
+
+| Feature | What it does |
+|---|---|
+| ⭐ **AutoCorrect** | ⭐ **Automatically FIXES common misspellings, typing slips and capitalisation** the moment you finish the word — `teh` → `the`, `adn` → `and`, capitalising the first letter of a sentence, fixing TWo INitial CApitals |
+| **AutoComplete** | Suggests the rest of a word or date |
+| **AutoFormat** | Applies formatting automatically — turns `1.` into a numbered list, converts quotes to smart quotes |
+| **AutoText / Quick Parts** | Inserts stored blocks of text |
+| **Spelling & Grammar check** | **Flags** errors with wavy underlines (red = spelling, blue/green = grammar) — but does **not** change them automatically |
+
+> ⚠️ **Note the distinction the MCQ is testing: AUTOCORRECT changes the text FOR you; the SPELL CHECKER only MARKS it and waits for you to decide.**
+
+#### The Word screen and splitting
+
+> ### **The HORIZONTAL SPLIT BAR is found ON TOP OF THE VERTICAL SCROLL BAR** — a small bar at the very top right of the document area. **Dragging it downward splits the window into TWO PANES**, letting you view two parts of the same long document at once (View → Split does the same thing).
+
+#### Closing Word — the MCQ trap
+
+| ✅ **These DO close the Word APPLICATION** | ❌ **This does NOT** |
+|---|---|
+| **Alt + F4** | ⚠️ **File → Close** — this closes the **DOCUMENT** but leaves the **Word application running** |
+| Clicking the **✕** on the title bar | |
+| **File → Exit** | |
+
+> ### **"You cannot close the MS Word APPLICATION by…"** → ### ✅ **choosing CLOSE from the File menu** — because that closes only the current document, not the program.
+
+#### Essential Word shortcuts
+
+| Shortcut | Action | | Shortcut | Action |
+|---|---|---|---|---|
+| **Ctrl + N / O / S / P** | New / Open / Save / Print | | **Ctrl + B / I / U** | Bold / Italic / Underline |
+| **Ctrl + C / X / V** | Copy / Cut / Paste | | **Ctrl + L / E / R / J** | Align left / centre / right / justify |
+| **Ctrl + Z / Y** | Undo / Redo | | **Ctrl + F / H** | Find / Replace |
+| **Ctrl + A** | Select all | | **Ctrl + Enter** | Insert a **page break** |
+| **F7** | Spelling & grammar check | | **Shift + F3** | Change case |
+| **Ctrl + Home / End** | Start / end of document | | **Alt + F4** | Close the application |
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the range of Font Size available in Font Size drop down toolbar?](../mcq-answers/ms-office.md?plain=1#L110)
+- [By default, Footers are printed on:](../mcq-answers/ms-office.md?plain=1#L119)
+- [The feature in MS word automatically connects correct spelling, typing, capitalization on grammar errors ---](../mcq-answers/ms-office.md?plain=1#L128)
+- [Where can you find the horizontal split bar on MS Word screen?](../mcq-answers/ms-office.md?plain=1#L137)
+- [You cannot close MS Word application by ________.](../mcq-answers/ms-office.md?plain=1#L146)
+- [(a) Write the Linux/Unix commands.](../mcq-answers/ms-office.md?plain=1#L156)
+
+
+---
+
+### MS PowerPoint — Slides, Media and Presentation Shortcuts
+
+> **MS POWERPOINT is PRESENTATION software** — it creates a sequence of **SLIDES** combining text, images, charts, audio, video and animation.
+
+#### File formats a PowerPoint show can contain
+
+> ### **"Which file format can be ADDED to a PowerPoint show?"** → ### ✅ **ALL OF THE ABOVE** — PowerPoint accepts a very wide range of content:
+
+| Category | Formats |
+|---|---|
+| **Images** | **JPG, PNG, GIF, BMP, TIFF, SVG, WMF** |
+| **Audio** | **MP3, WAV, WMA, M4A, MIDI** |
+| **Video** | **MP4, AVI, WMV, MOV, MPG** |
+| **Documents / objects** | Excel worksheets and charts, Word text, PDF (as an object), OLE objects |
+| **Other** | Hyperlinks, SmartArt, tables, equations, screen recordings |
+
+#### PowerPoint shortcuts and views
+
+| Shortcut | Action |
+|---|---|
+| ⭐ **F5** | ⭐ **Start the SLIDE SHOW from the BEGINNING** |
+| **Shift + F5** | Start the slide show **from the CURRENT slide** |
+| **Esc** | End the slide show |
+| **Ctrl + M** | New slide |
+| **B / W** (during a show) | Blank the screen to **B**lack / **W**hite |
+| **N / Space / →** | Next slide · **P / Backspace / ←** Previous slide |
+| **Ctrl + P** | Turn the pointer into a pen during the show |
+
+**The views:** **Normal** (editing) · **Slide Sorter** (reorder slides) · **Notes Page** · **Reading View** · **Slide Show** (full screen) · **Slide Master** (change the design of every slide at once).
+
+#### Mouse terminology — worth knowing precisely
+
+| Term | Meaning |
+|---|---|
+| ⭐ **DRAGGING** | ⭐ **PRESSING AND HOLDING the left mouse button WHILE MOVING the mouse** — used to move an object or select a region |
+| **Drag and drop** | Dragging, then **releasing** the button at the destination |
+| **Clicking** | A single press and release |
+| **Double-clicking** | Two rapid clicks — opens or selects a word |
+| **Right-clicking** | Opens the context menu |
+| **Scrolling** | Moving the view with the wheel |
+| **Pointing / hovering** | Resting the pointer over an item without clicking |
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which file format can be added to a PowerPoint show?](../mcq-answers/ms-office.md?plain=1#L187)
+- [Which shortcut key on the keyboard can be used to view slide show?](../mcq-answers/ms-office.md?plain=1#L196)
+- [What is term used when you press and hold the left mouse key and move the mouse round the slide?](../mcq-answers/ms-office.md?plain=1#L205)
+
+
+---
+
+### MS Access — Database Objects and Relational Basics
+
+> **MS ACCESS is a RELATIONAL DATABASE MANAGEMENT SYSTEM (RDBMS)** included with Microsoft Office. It stores data in **tables** and provides a graphical environment for querying and building small database applications.
+
+#### ⭐ The Access database OBJECTS
+
+| Object | Purpose |
+|---|---|
+| ⭐ **TABLE** | ⭐ **Stores the actual DATA** in rows (records) and columns (fields). The foundation of everything else |
+| ⭐ **QUERY** | **Retrieves, filters, sorts, calculates and updates** data — the equivalent of SQL `SELECT`, `UPDATE`, `DELETE` |
+| ⭐ **FORM** | A **user interface for entering and viewing** records one at a time |
+| ⭐ **REPORT** | **Formatted output for PRINTING** — grouped, summarised, paginated |
+| ⭐ **MACRO** | Automates a sequence of actions without programming |
+| ⭐ **MODULE** | **VBA (Visual Basic for Applications) code** for advanced logic |
+
+> ### **"Which of the following is NOT a type of Microsoft Access database object?"** → ### ✅ **WORKSHEETS.**
+>
+> **A WORKSHEET is an MS EXCEL object, not an Access one.** The six Access objects are **Tables, Queries, Forms, Reports, Macros and Modules** — learn that list and this whole family of questions is answered.
+
+#### Access vs Excel — when to use which
+
+| | **MS Access** | **MS Excel** |
+|---|---|---|
+| **Type** | ⭐ **RDBMS — a database** | ⭐ **Spreadsheet** |
+| **Data model** | **Related tables** with keys | A **flat grid** |
+| **Best for** | **Many records, relationships, multi-user data entry, reports** | **Calculation, analysis, charting, ad-hoc modelling** |
+| **Enforces** | Data types, **relationships and referential integrity** | Little — anything can go in any cell |
+| **Typical size** | Up to **2 GB** per file | ~1,048,576 rows per sheet |
+| **Query language** | **SQL** (through the query designer) | Formulas and PivotTables |
+
+> **The practical rule: if the same value is being typed into many rows, or the data has relationships (customers → orders → items), it belongs in ACCESS (or a real database). If it is a one-off calculation or analysis, it belongs in EXCEL.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is not a type of Microsoft Access Database object?](../mcq-answers/ms-office.md?plain=1#L216)
