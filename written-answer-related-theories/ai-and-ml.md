@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 53 theories
+**Table of Contents** — 10 subtopics · 57 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -71,6 +71,12 @@
    - [Informed vs Uninformed Search — Comparison](#informed-vs-uninformed-search--comparison)
    - [Adversarial Search — Minimax Algorithm](#adversarial-search--minimax-algorithm)
    - [Alpha-Beta Pruning](#alpha-beta-pruning)
+
+10. **[Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization)**
+   - [Generalization — the Real Goal of Machine Learning](#generalization--the-real-goal-of-machine-learning)
+   - [Overfitting — Causes, Signs and Cures](#overfitting--causes-signs-and-cures)
+   - [Underfitting — Causes and Cures](#underfitting--causes-and-cures)
+   - [Regularization Techniques](#regularization-techniques)
 
 <!-- TOC END -->
 
@@ -3107,3 +3113,198 @@ flowchart TD
 **Previous Year Question List from this Topic:**
 
 - [How $\alpha$-$\beta$ pruning is better than minimax search in game planning?](../written-answers/ai-and-ml.md?plain=1#L1222)
+
+## Overfitting, Underfitting & Model Generalization
+
+### Generalization — the Real Goal of Machine Learning
+
+**Generalization** is a model's ability to perform well on **new, unseen data** — not on the data it was trained on.
+
+This is the whole point of machine learning. A model that scores 100 % on the training set and 55 % on new customers is **useless** to a bank. The number that matters is always the one on data the model has never seen.
+
+```mermaid
+flowchart LR
+    A[Training data<br/>the model studies this] --> B[Model]
+    B --> C{Does it perform well on<br/>NEW unseen data?}
+    C -->|Yes| D["✅ Good generalization"]
+    C -->|No, but training score is high| E["❌ Overfitting — it memorised"]
+    C -->|No, and training score is also low| F["❌ Underfitting — it never learned"]
+```
+
+#### Generalization gap
+
+> **Generalization gap = Training accuracy − Test accuracy**
+
+| Gap | Meaning |
+|---|---|
+| Small gap, both scores high | **Good fit** — ship it |
+| **Large** gap (train ≫ test) | **Overfitting** |
+| Small gap, both scores **low** | **Underfitting** |
+
+#### The student analogy (worth writing in the exam)
+
+| Student | Machine learning term |
+|---|---|
+| Memorised every question and answer of last year's paper word-for-word, then failed when the questions were twisted | **Overfitting** |
+| Barely opened the book, so failed both the practice test and the real exam | **Underfitting** |
+| Understood the *concepts*, so could answer any variation of the question | **Good generalization** |
+
+> **Direct exam answer** — *"In machine learning, what happens when a machine is very highly trained, or only slightly trained?"*
+>
+> - **Very highly trained (trained too long / model too complex) → Overfitting.** The model memorises the training data **including its noise and random errors**. Training accuracy becomes almost 100 %, but accuracy on new data **falls sharply**. It has high **variance**.
+> - **Only slightly trained (trained too little / model too simple) → Underfitting.** The model has not learned even the basic pattern. **Both** training and test accuracy are low. It has high **bias**.
+> - The correct point is in between — stop where **validation error is lowest**.
+
+**Previous Year Question List from this Topic:**
+
+- [In machine learning. What will happen, when a machine is highly trained up a slight trained up?](../written-answers/ai-and-ml.md?plain=1#L1243)
+- [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
+- [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
+
+
+---
+
+### Overfitting — Causes, Signs and Cures
+
+**Overfitting** happens when a model learns the training data **too well**, capturing not only the true underlying pattern but also the **random noise** that happens to be in that particular sample.
+
+```mermaid
+flowchart LR
+    A["Underfitting<br/>a straight line through<br/>curved data"] --> B["Good fit<br/>a smooth curve that follows<br/>the trend"] --> C["Overfitting<br/>a wild wiggly line passing<br/>through every single point"]
+```
+
+#### Causes
+
+1. **Model too complex** for the amount of data — too many layers, too deep a tree, too many parameters.
+2. **Too little training data.**
+3. **Training for too many epochs.**
+4. **Too many features**, especially irrelevant or duplicate ones (the *curse of dimensionality*).
+5. **Noisy data** — errors and outliers that the model faithfully memorises.
+6. **Data leakage** — a feature that secretly contains the answer.
+7. **No regularisation.**
+
+#### Signs
+
+- Training accuracy ≫ validation accuracy (e.g. 99 % vs 68 %).
+- Validation loss **starts rising** while training loss keeps falling.
+- Performance drops sharply when the model meets real production data.
+- Wildly different results when the model is retrained on a slightly different sample.
+
+#### Cures
+
+| Cure | How it helps |
+|---|---|
+| **More training data** | The single most effective fix — noise averages out |
+| **Data augmentation** | Artificially create more variety (rotate/flip/crop images, paraphrase text) |
+| **Regularisation (L1 / L2)** | Penalises large weights so the model stays simple |
+| **Dropout** | Randomly switches off neurons during training (neural networks) |
+| **Early stopping** | Stop at the epoch with the lowest validation loss |
+| **Simplify the model** | Fewer layers/neurons, shallower tree, fewer features |
+| **Pruning** | Cut back an over-grown decision tree |
+| **Cross-validation** | Detects overfitting before deployment |
+| **Ensembling (bagging)** | Averaging many models cancels individual over-fits |
+| **Feature selection** | Remove irrelevant and highly correlated features |
+| **Batch normalisation** | Stabilises and slightly regularises deep networks |
+
+**Previous Year Question List from this Topic:**
+
+- [In machine learning. What will happen, when a machine is highly trained up a slight trained up?](../written-answers/ai-and-ml.md?plain=1#L1243)
+- [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
+
+
+---
+
+### Underfitting — Causes and Cures
+
+**Underfitting** happens when a model is **too simple** to capture the pattern in the data. It performs badly on the training data *and* on new data.
+
+#### Causes
+
+1. **Model too simple** — e.g. fitting a straight line to clearly curved data.
+2. **Too few features**, or features that carry no information.
+3. **Trained for too few epochs** / stopped too early.
+4. **Regularisation too strong** — the penalty has crushed all the weights.
+5. **Over-aggressive pruning** or too shallow a tree.
+6. **Poor data quality** — so noisy that no pattern is visible.
+7. **Learning rate too high**, so the optimiser never settles.
+
+#### Signs
+
+- Training accuracy itself is **low**.
+- Training and validation errors are both high and **close together**.
+- The model's predictions are nearly constant, or follow only the broadest trend.
+
+#### Cures
+
+| Cure | How it helps |
+|---|---|
+| **Use a more complex model** | More layers/neurons, deeper tree, non-linear model instead of linear |
+| **Add or engineer better features** | Polynomial terms, interaction terms, domain features |
+| **Train longer** | More epochs / iterations |
+| **Reduce regularisation** | Lower λ, lower dropout rate |
+| **Reduce noise** in the data | Clean, deduplicate, fix labels |
+| **Tune the learning rate** | Too high a rate prevents convergence |
+| **Boosting** | Sequentially combines weak learners to reduce bias |
+
+**Previous Year Question List from this Topic:**
+
+- [In machine learning. What will happen, when a machine is highly trained up a slight trained up?](../written-answers/ai-and-ml.md?plain=1#L1243)
+
+
+---
+
+### Regularization Techniques
+
+**Regularization** means adding a **penalty for complexity** to the cost function, so the optimiser prefers a **simpler model** — the main weapon against overfitting.
+
+> **J_total = Original Cost + λ × Penalty(weights)**
+
+**λ (lambda)** controls the strength: λ = 0 means no regularisation (risk of overfitting), a very large λ crushes the weights to zero (underfitting).
+
+#### L1 vs L2 regularization
+
+| Point | **L1 — Lasso** | **L2 — Ridge** |
+|---|---|---|
+| Penalty term | λ Σ **\|wⱼ\|** | λ Σ **wⱼ²** |
+| Effect on weights | Drives some weights **exactly to 0** | Shrinks all weights **towards** 0, never exactly 0 |
+| Side benefit | **Automatic feature selection** | Handles correlated features well |
+| Best when | Many features, you suspect most are useless | All features matter a little |
+| Produces | A **sparse** model | A **small-weight** model |
+
+*(**Elastic Net** combines both penalties.)*
+
+#### Dropout (for neural networks)
+
+During each training step, randomly **switch off** a fraction of neurons (typically 20–50 %).
+
+```mermaid
+flowchart LR
+    subgraph WITHOUT["Without dropout"]
+        A1((n1)) --- A2((n2)) --- A3((n3)) --- A4((n4))
+    end
+    subgraph WITH["With dropout — this step"]
+        B1((n1)) --- B2(("n2 ✗ off")) --- B3((n3)) --- B4(("n4 ✗ off"))
+    end
+```
+
+**Why it works:** no single neuron can be relied upon, so the network cannot build fragile co-adapted paths. It is effectively training a huge ensemble of thinned networks and averaging them. Dropout is used **only during training**, never at prediction time.
+
+#### Early stopping
+
+Track the validation loss every epoch and **stop training at its minimum**, keeping the weights from that epoch. Simple, free, and extremely effective.
+
+#### Other regularisers
+
+| Technique | Idea |
+|---|---|
+| **Data augmentation** | More effective variety in the data itself |
+| **Batch normalisation** | Normalises layer inputs; adds a mild regularising noise |
+| **Weight decay** | The optimiser-level implementation of L2 |
+| **Max-norm constraint** | Caps the size of each weight vector |
+| **Label smoothing** | Stops the model from becoming over-confident |
+| **Noise injection** | Add small random noise to inputs or weights during training |
+
+**Previous Year Question List from this Topic:**
+
+- [In machine learning. What will happen, when a machine is highly trained up a slight trained up?](../written-answers/ai-and-ml.md?plain=1#L1243)
+- [You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss functi…](../written-answers/ai-and-ml.md?plain=1#L924)
