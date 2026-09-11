@@ -38,7 +38,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 
 ---
 
-## Progress — 13 of 24 files done
+## Progress — 14 of 24 files done
 
 | # | File | Status | New theories | Note |
 |---|---|---|---|---|
@@ -62,7 +62,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 | 18 | dld.md | ⬜ pending | | 79 MCQs, 6 subtopics |
 | 19 | electrical-and-electronics.md | ⬜ pending | | 116 MCQs, 4 subtopics |
 | 20 | microprocessor-and-computer-architecture.md | ⬜ pending | | 85 MCQs, 5 subtopics |
-| 21 | oop.md | ⬜ pending | | 100 MCQs, 7 subtopics |
+| 21 | oop.md | ✅ done | 2 | Java operators/wrappers/strings, multithreading |
 | 22 | math.md | ⬜ pending | | 186 MCQs, 15 subtopics |
 | 23 | english.md | ⬜ pending | | 286 MCQs, 5 subtopics |
 | 24 | bangla.md | ⬜ pending | | 310 MCQs, 9 subtopics |
@@ -74,7 +74,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 
 ## ▶ RESUME HERE
 
-**Next file: `oop.md`.**
+**Next file: `dld.md`.**
 
 The per-file loop:
 
