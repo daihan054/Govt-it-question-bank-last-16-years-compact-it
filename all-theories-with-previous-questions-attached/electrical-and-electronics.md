@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 15 theories
+**Table of Contents** — 10 subtopics · 20 theories
 
 1. **[Electrical Circuits & Protection Devices](#electrical-circuits--protection-devices)**
    - [Basic Electrical Quantities, Ohm's Law and Circuit Analysis](#basic-electrical-quantities-ohms-law-and-circuit-analysis)
@@ -15,12 +15,14 @@
 3. **[Semiconductor Devices & Diodes](#semiconductor-devices--diodes)**
    - [Semiconductors and the PN Junction Diode](#semiconductors-and-the-pn-junction-diode)
    - [Special Diodes — LED, Laser Diode, Zener — and the Inductor](#special-diodes--led-laser-diode-zener--and-the-inductor)
+   - [Semiconductor Physics, Special Devices and Component Facts](#semiconductor-physics-special-devices-and-component-facts)
 
 4. **[Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)](#digital-to-analog--analog-to-digital-converters-dacadc)**
    - [Digital-to-Analogue and Analogue-to-Digital Converters](#digital-to-analogue-and-analogue-to-digital-converters)
 
 5. **[AC Circuits & Power Analysis](#ac-circuits--power-analysis)**
    - [AC Circuit Analysis — RLC, Impedance and Power Factor](#ac-circuit-analysis--rlc-impedance-and-power-factor)
+   - [Signals, Filters, Modulation and Transmission Lines](#signals-filters-modulation-and-transmission-lines)
 
 6. **[Operational Amplifiers (Op-Amp)](#operational-amplifiers-op-amp)**
    - [The Operational Amplifier](#the-operational-amplifier)
@@ -33,6 +35,11 @@
 
 9. **[Electrical Machines (Motors & Alternators)](#electrical-machines-motors--alternators)**
    - [Alternators and Induction Motors](#alternators-and-induction-motors)
+   - [Transformers — Construction, Losses and Efficiency](#transformers--construction-losses-and-efficiency)
+   - [DC Machines, Synchronous Motors and Machine Speed Control](#dc-machines-synchronous-motors-and-machine-speed-control)
+
+10. **[Power Systems & Generation](#power-systems--generation)**
+   - [Power Plants, Generation and Transmission](#power-plants-generation-and-transmission)
 
 <!-- TOC END -->
 
@@ -173,6 +180,25 @@ flowchart LR
 - [EEE related 3 math question.](../written-answers/electrical-and-electronics.md?plain=1#L706)
 - [নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।](../written-answers/electrical-and-electronics.md?plain=1#L812)
 
+**Previous Year MCQ List from this Topic:**
+
+- [In the given circuit, resistors of 10$\Omega$, 20$\Omega$, and 30$\Omega$ are connected in parallel, and a voltage source of 60V is applied across them. What is…](../mcq-answers/electrical-and-electronics.md?plain=1#L25)
+- [Two resistors R1 and R2 are connected in parallel with R1 < R2. Choose all correct answers below. The total resistance of the combination below is: ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L34)
+- [একটি ঘরে ব্যবহৃত বৈদ্যুতিক যন্ত্রপাতি কিভাবে লাগানো থাকে?](../mcq-answers/electrical-and-electronics.md?plain=1#L52)
+- [A certain amount of water is boiled by inserting a current carrying resistor in water. The heat energy required to boil the water is 99kJ. The current taken by…](../mcq-answers/electrical-and-electronics.md?plain=1#L106)
+- [Bulbs in street lighting are connected in ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L124)
+- [কোন পরিবাহীর তারের ব্যাস দ্বিগুণ এবং দৈর্ঘ্য চারগুণ করা হলে উহার রোধ কত হবে?](../mcq-answers/electrical-and-electronics.md?plain=1#L232)
+- [A circuit has two different voltage sources that are connected in a series-opposing form. If the sources are rated at 6V and 9V, what is the total source voltag…](../mcq-answers/electrical-and-electronics.md?plain=1#L429)
+- [একটি বাল্বে 60W-220V লেখা থাকলে তার রোধ কত ওহম?](../mcq-answers/electrical-and-electronics.md?plain=1#L447)
+- [33 (ohm) resistor সার্কিটে 2amp তড়িৎপ্রবাহ চালিত হলে রেজিস্টারের ভোল্টেজ কত?](../mcq-answers/electrical-and-electronics.md?plain=1#L456)
+- [বর্তনীতে তড়িৎ প্রবাহে সৃষ্টি করে কোনটি?](../mcq-answers/electrical-and-electronics.md?plain=1#L465)
+- [১০০ ওয়াটের একটি বৈদ্যুতিক বাতি প্রতিদিন ৭ ঘণ্টা জ্বললে ২০২০ সালের ফেব্রুয়ারী মাসে কত তড়িৎ শক্তি খরচ হবে?](../mcq-answers/electrical-and-electronics.md?plain=1#L474)
+- [১০০ ওয়াট ও ২০০ ভোল্ট বিশিষ্ট একটি বাতির রোধ কত?](../mcq-answers/electrical-and-electronics.md?plain=1#L615)
+- [A wire resistance is 12 ohms. If it is divided into two parts and the parts are then connected in a parallel combination what will be resistance?](../mcq-answers/electrical-and-electronics.md?plain=1#L642)
+- [The total charge entering a terminal is given by q=5t\sin 4\mu t\text{ mC}. What is the current at t=0.5\text{ S}?](../mcq-answers/electrical-and-electronics.md?plain=1#L88)
+- [The ordinary efficiency of a given transformer is maximum when-](../mcq-answers/electrical-and-electronics.md?plain=1#L872)
+
+
 
 ---
 
@@ -235,6 +261,13 @@ flowchart LR
 - [Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why?](../written-answers/electrical-and-electronics.md?plain=1#L22)
 - [Write down the function of Relay, Fuse and Circuit Breaker.](../written-answers/electrical-and-electronics.md?plain=1#L436)
 - [BREB power transmission interrupt related.](../written-answers/electrical-and-electronics.md?plain=1#L604)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The rating of fuse is expressed as ______](../mcq-answers/electrical-and-electronics.md?plain=1#L97)
+- [The use of a high speed circuit breaker-](../mcq-answers/electrical-and-electronics.md?plain=1#L133)
+- [_______ helps prevent power surges.](../mcq-answers/electrical-and-electronics.md?plain=1#L420)
+
 
 
 ---
@@ -314,6 +347,14 @@ flowchart LR
 - [What is the name of AC current to DC current?](../written-answers/electrical-and-electronics.md?plain=1#L178)
 - [How to AC converted into DC?](../written-answers/electrical-and-electronics.md?plain=1#L228)
 
+**Previous Year MCQ List from this Topic:**
+
+- [ফুল-ওয়েভ রেক্টিফায়ারের কর্মদক্ষতা কত?](../mcq-answers/electrical-and-electronics.md?plain=1#L332)
+- [নিচের কোন ইলেকট্রনিক্স যন্ত্র AC থেকে DC তৈরি করতে পারে?](../mcq-answers/electrical-and-electronics.md?plain=1#L483)
+- [What is the Work of a Rectifier?](../mcq-answers/electrical-and-electronics.md?plain=1#L1000)
+- [Which device is need to converts AC to DC?](../mcq-answers/electrical-and-electronics.md?plain=1#L1027)
+
+
 
 ---
 
@@ -383,6 +424,17 @@ flowchart LR
 
 - [Audio Frequency ও Radio Frequency এর মধ্যেকার পার্থক্য লিখুন। ১০ ওহমের ১০টি ট্রানজিস্টর কোন সিরিজে সংযুক্ত হলে তাতে রেজিস্ট্যান্স কত হবে?](../written-answers/electrical-and-electronics.md?plain=1#L384)
 - [What is the difference between battery and capacitor?](../written-answers/electrical-and-electronics.md?plain=1#L922)
+
+**Previous Year MCQ List from this Topic:**
+
+- [১ পিকো ফ্যারাডে = কত ফ্যারাডে?](../mcq-answers/electrical-and-electronics.md?plain=1#L262)
+- [নিচের কোন সেলটি শুষ্ক কিন্তু পুনরায় চার্জযোগ্য?](../mcq-answers/electrical-and-electronics.md?plain=1#L302)
+- [দুইটি সমান্তরাল পরিবাহী কে কোন অপরিবাহী দ্বারা পৃথক করা হলে তাকে কি বলে?](../mcq-answers/electrical-and-electronics.md?plain=1#L352)
+- [নিচের কোন সেলটি শুষ্ক কিন্তু পুনরায় চার্জযোগ্য?](../mcq-answers/electrical-and-electronics.md?plain=1#L366)
+- [What does inductance depend on?](../mcq-answers/electrical-and-electronics.md?plain=1#L16)
+- [ইন্ডাক্টরের ইন্ডাক্টেন্স নিম্নের কোনটির উপর নির্ভর করেনা?](../mcq-answers/electrical-and-electronics.md?plain=1#L292)
+- [ইন্ডাক্টরের ইন্ডাক্টেন্স নিম্নের কোনটির উপর নির্ভর করে না?](../mcq-answers/electrical-and-electronics.md?plain=1#L357)
+
 
 
 ---
@@ -474,6 +526,15 @@ Step 2 — rearrange and substitute:
 - [Collector current (Ic) is related to base current (Ib) by _____](../written-answers/electrical-and-electronics.md?plain=1#L1098)
 - [ইমিটার কারেন্টের মান 1 Amp, কালেক্টর কারেন্ট 0.95 A হলে বেইস (Base) কারেন্টের মান কত? একটি চিত্র দেওয়া ছিল!!](../written-answers/electrical-and-electronics.md?plain=1#L1430)
 
+**Previous Year MCQ List from this Topic:**
+
+- [বাইপোলার জংশন ট্রানজিস্টরের-](../mcq-answers/electrical-and-electronics.md?plain=1#L375)
+- [n-p-n ট্রানজিস্টরে 'P' অংশটি কী?](../mcq-answers/electrical-and-electronics.md?plain=1#L492)
+- [In common base circuit of a transistor, current amplification factor is 0.95. Calculate the emitter current if base current is 0.2mA.](../mcq-answers/electrical-and-electronics.md?plain=1#L660)
+- [Which configuration of Bipolar Junction Transistor is known as voltage follower?](../mcq-answers/electrical-and-electronics.md?plain=1#L115)
+- [The common collector amplifier is also known as ________.](../mcq-answers/electrical-and-electronics.md?plain=1#L723)
+
+
 
 ---
 
@@ -559,6 +620,17 @@ flowchart LR
 - [In an NPN transistor, the current flows from _____](../written-answers/electrical-and-electronics.md?plain=1#L1024)
 - [Which BJT configuration gives maximum voltage gain?](../written-answers/electrical-and-electronics.md?plain=1#L1057)
 - [Describe cut off, saturation and active region of operation of a transistor with diagram. Explain the working principal of ab n-channel JFET with various values…](../written-answers/electrical-and-electronics.md?plain=1#L1225)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which configuration of Bipolar Junction Transistor is known as voltage follower?](../mcq-answers/electrical-and-electronics.md?plain=1#L115)
+- [Generally, the gain of a transistor amplifier falls at high frequency due to the](../mcq-answers/electrical-and-electronics.md?plain=1#L178)
+- [ইমিটার ফলোয়ার ব্যবহারের প্রধান উদ্দেশ্য কি?-](../mcq-answers/electrical-and-electronics.md?plain=1#L408)
+- [ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াসিং করা না হলে-](../mcq-answers/electrical-and-electronics.md?plain=1#L414)
+- [Active region এ BJT এর base-emitter and base collector কোন bias এ থাকে?](../mcq-answers/electrical-and-electronics.md?plain=1#L543)
+- [The common collector amplifier is also known as ________.](../mcq-answers/electrical-and-electronics.md?plain=1#L723)
+- [Negative feedback in an amplifier ________.](../mcq-answers/electrical-and-electronics.md?plain=1#L732)
+
 
 
 ---
@@ -652,6 +724,13 @@ I_D = μ_n C_ox (W/L) [ (V_GS − V_t)·V_DS − V_DS² / 2 ]
 
 - [N-Channel MOS operating in the linear region. Calculate the current passing through the channel of the transistor. Given: \mu_n C_{ox} (W/L) = 1.3\text{ mA/V}^2…](../written-answers/electrical-and-electronics.md?plain=1#L1146)
 - [(a) Draw and explain the operation of NMOS transistor.](../written-answers/electrical-and-electronics.md?plain=1#L1337)
+
+**Previous Year MCQ List from this Topic:**
+
+- [জাংশন ফিল্ড ইফেক্ট ট্রানজিস্টর- কারেন্ট নিয়ন্ত্রিত](../mcq-answers/electrical-and-electronics.md?plain=1#L347)
+- [জংশন ফিল্ড ইফেক্ট ট্রানজিস্টর-](../mcq-answers/electrical-and-electronics.md?plain=1#L402)
+- [For an n-channel enhancement type MOSFET, if the source is connected at a higher potential than that of the bulk (i.e. V_{SB} > 0), the threshold voltage V_T of…](../mcq-answers/electrical-and-electronics.md?plain=1#L552)
+
 
 
 ---
@@ -757,6 +836,18 @@ flowchart TD
 - [Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.](../written-answers/electrical-and-electronics.md?plain=1#L1563)
 - [What is Diode and Inductor?](../written-answers/electrical-and-electronics.md?plain=1#L1628)
 
+**Previous Year MCQ List from this Topic:**
+
+- [একটি ডায়োডের সাংকেতিক চিত্রে দেখানো তীর চিহ্নটি কী নির্দেশ করে?](../mcq-answers/electrical-and-electronics.md?plain=1#L70)
+- [একটি ডায়োডে ডিপলেশন লেয়ার কখন তৈরি হয়?](../mcq-answers/electrical-and-electronics.md?plain=1#L312)
+- [নিচের কোন ইলেকট্রনিক্স যন্ত্র AC থেকে DC তৈরি করতে পারে?](../mcq-answers/electrical-and-electronics.md?plain=1#L483)
+- [Which type of capacitance form in forward bias.](../mcq-answers/electrical-and-electronics.md?plain=1#L588)
+- [When there is no forbidden region between the conductance band and valence band, the substance is called.](../mcq-answers/electrical-and-electronics.md?plain=1#L651)
+- [At absolute zero temperature, a semiconductor behaves as a/an-](../mcq-answers/electrical-and-electronics.md?plain=1#L678)
+- [What is the Work of a Rectifier?](../mcq-answers/electrical-and-electronics.md?plain=1#L1000)
+- [Which device is need to converts AC to DC?](../mcq-answers/electrical-and-electronics.md?plain=1#L1027)
+
+
 
 ---
 
@@ -835,6 +926,163 @@ flowchart TD
 
 - [What is Diode and Inductor?](../written-answers/electrical-and-electronics.md?plain=1#L1628)
 - [How does LED differ from Laser Diod? What are the function of Diode?](../written-answers/electrical-and-electronics.md?plain=1#L1683)
+
+**Previous Year MCQ List from this Topic:**
+
+- [ব্রেকডাউন ঘটলে জিনার ডায়োডের ক্ষেত্রে কোনটি প্রায় অপরিবর্তিত থাকে?](../mcq-answers/electrical-and-electronics.md?plain=1#L322)
+- [Zener diode is a _____ conducting device.](../mcq-answers/electrical-and-electronics.md?plain=1#L1009)
+- [What should be true for a Zener Diode?](../mcq-answers/electrical-and-electronics.md?plain=1#L1018)
+- [নিম্নের কোনটি চার লেয়ার বিশিষ্ট ডিভাইস?](../mcq-answers/electrical-and-electronics.md?plain=1#L396)
+
+
+---
+
+### Semiconductor Physics, Special Devices and Component Facts
+
+#### ⭐ Energy bands — what makes a conductor, an insulator or a semiconductor
+
+```
+    Energy
+      ↑     ┌────────────┐      ┌────────────┐      ┌────────────┐
+            │ CONDUCTION │      │ CONDUCTION │      │ CONDUCTION │
+            │    BAND    │      │    BAND    │      │    BAND    │
+            ├────────────┤      └────────────┘      └────────────┘
+            │  OVERLAP / │          ↕ small             ↕ LARGE
+            │  NO GAP    │      forbidden gap        forbidden gap
+            ├────────────┤       (≈1.1 eV Si)         (> 5 eV)
+            │  VALENCE   │      ┌────────────┐      ┌────────────┐
+            │    BAND    │      │  VALENCE   │      │  VALENCE   │
+            └────────────┘      └────────────┘      └────────────┘
+             ⭐ CONDUCTOR         SEMICONDUCTOR         INSULATOR
+```
+
+| Material | Forbidden energy gap | Conductivity |
+|---|---|---|
+| ⭐ **CONDUCTOR** | ⭐ **NONE — the bands OVERLAP** | Very high; electrons are free at any temperature |
+| **SEMICONDUCTOR** | **Small** — Si 1.1 eV, Ge 0.7 eV | Intermediate, and **strongly temperature-dependent** |
+| **INSULATOR** | **Large** — > 5 eV (diamond 6 eV) | Negligible |
+
+> ### **"When there is NO forbidden region between the conduction band and the valence band, the substance is a…"** → ### ✅ **CONDUCTOR.**
+>
+> ### **"At ABSOLUTE ZERO temperature, a semiconductor behaves as a/an…"** → ### ✅ **INSULATOR.**
+>
+> ⭐ **Why: at 0 K there is no thermal energy at all**, so **no electron can be excited across the forbidden gap** into the conduction band. The valence band is completely full and the conduction band completely empty — which is precisely the definition of an insulator. **As temperature rises, electrons gain enough energy to jump the gap, and conductivity INCREASES** — the opposite of a metal, whose resistance rises with temperature. This gives semiconductors a ⭐ **NEGATIVE temperature coefficient of resistance**.
+
+#### ⭐ Doping — creating p-type and n-type
+
+| Dopant valency | Group | Adds | Result | Examples |
+|---|---|---|---|---|
+| ⭐ **PENTAVALENT (5 electrons)** | V | A **spare ELECTRON** | ⭐ **N-TYPE** — majority carriers are **electrons** | **Phosphorus, Arsenic, Antimony** |
+| ⭐ **TRIVALENT (3 electrons)** | III | A **HOLE** (missing electron) | ⭐ **P-TYPE** — majority carriers are **holes** | ⭐ **BORON**, Gallium, Indium, Aluminium |
+
+> ### **"সিলিকনের সাথে কোন পদার্থ যোগ করলে p-type অর্ধপরিবাহী পাওয়া যায়?"** → ### ✅ **বোরন (BORON).**
+>
+> **Silicon has 4 valence electrons.** Adding **boron (3 electrons)** leaves one covalent bond short — a **HOLE**, which behaves as a mobile positive charge. Adding **phosphorus (5 electrons)** leaves one electron spare and free to move. **Doping levels are tiny — about 1 atom in 10⁶ — yet they change conductivity by a factor of millions.**
+
+#### The special diodes and devices
+
+| Device | Layers / structure | Key property |
+|---|---|---|
+| ⭐ **ZENER diode** | PN, **heavily doped** | ⭐ **Designed to operate SAFELY in the REVERSE BREAKDOWN REGION, where the VOLTAGE ACROSS IT STAYS CONSTANT** regardless of current. ⭐ **It is a BIDIRECTIONAL conducting device** — forward like an ordinary diode, and reverse above V_z |
+| ⭐ **SCR — Silicon Controlled Rectifier** | ⭐ **FOUR LAYERS (P-N-P-N), three terminals** — anode, cathode, **GATE** | A controlled switch: a small gate pulse **latches it ON**, and it stays on until the current falls below the holding value. Used in power control, dimmers, motor drives |
+| **DIAC / TRIAC** | 4-layer / 5-layer | Bidirectional AC switching |
+| ⭐ **JFET — Junction Field Effect Transistor** | 3 terminals: Gate, Source, Drain | ⭐ **VOLTAGE-CONTROLLED** (the gate draws essentially no current), **unipolar**, high input impedance |
+| **LED / Photodiode / Varactor** | PN | Emits light / detects light / voltage-variable capacitance |
+
+> ### **"জিনার ডায়োডের ব্রেকডাউন ঘটলে কোনটি ধ্রুব থাকে?"** → ### ✅ **VOLTAGE (ভোল্টেজ).**
+> ### **"What should be true for a Zener diode?"** → ### ✅ **IT WORKS IN THE REVERSE BREAKDOWN REGION.**
+> ### **"Zener diode is a ______ conducting device"** → ### ✅ **BIDIRECTIONAL.**
+> ### **"নিম্নের কোনটি চার লেয়ার বিশিষ্ট ডিভাইস?"** → ### ✅ **SCR (Silicon Controlled Rectifier).**
+> ### **"জংশন ফিল্ড ইফেক্ট ট্রানজিস্টর কী নিয়ন্ত্রিত?"** → ### ✅ **VOLTAGE CONTROLLED (ভোল্টেজ নিয়ন্ত্রিত).**
+
+#### The depletion layer and junction capacitances
+
+> ### **"একটি ডায়োডে ডিপ্লেশন লেয়ার কখন তৈরি হয়?"** → ### ✅ **AT THE TIME THE DIODE IS MANUFACTURED (ডায়োড তৈরির সময়)** — the depletion region forms **spontaneously the moment the p and n regions are joined**, by diffusion and recombination, long before any external voltage is applied. Bias merely **widens or narrows** it.
+
+| Capacitance | Appears under | Cause |
+|---|---|---|
+| ⭐ **DIFFUSION (storage) capacitance** | ⭐ **FORWARD bias** | ⭐ **Minority carriers injected across the junction and STORED there** — dominant, and large |
+| **Transition (junction/depletion) capacitance** | **REVERSE bias** | The depletion layer acts as a **dielectric between two conducting regions** — the basis of the **varactor** |
+
+> ### **"Which type of capacitance forms in FORWARD bias?"** → ### ✅ **DIFFUSION CAPACITANCE.**
+>
+> **Why it matters: diffusion capacitance is what LIMITS a diode's SWITCHING SPEED.** The stored charge must be removed before the diode can turn off — the **reverse recovery time** — which is why **Schottky diodes (no minority-carrier storage) are used for high-speed switching.**
+
+#### Transistor structure and biasing
+
+| Point | Answer |
+|---|---|
+| ⭐ **In an n-p-n transistor, the 'P' region is** | ⭐ **THE BASE (ভিত্তি)** — very thin and lightly doped |
+| ⭐ **Which layer is physically largest?** | ⭐ **THE COLLECTOR** — it must dissipate the most heat |
+| ⭐ **Biasing in the ACTIVE region** | ⭐ **Base-Emitter FORWARD biased, Base-Collector REVERSE biased** |
+| **Cut-off** | Both junctions reverse biased |
+| **Saturation** | Both junctions forward biased |
+
+> ### **"Active region এ BJT এর base-emitter and base-collector কোন bias এ থাকে?"** → ### ✅ **FORWARD – REVERSE.**
+> ### **"ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াস না করলে কী হয়?"** → ### ✅ **THE OUTPUT SIGNAL MAY BE DISTORTED** — an improperly biased amplifier drifts out of the active region and **clips** the waveform.
+
+**Worked example — common base current**
+> *In a common-base circuit the current amplification factor α = 0.95. If the emitter current is …, find the collector current.*
+```
+        α = I_C / I_E        ⇒   I_C = α × I_E
+
+   For I_E = 4.21 mA :  I_C = 0.95 × 4.21 ≈ 4 mA
+   And                 I_B = I_E − I_C  (Kirchhoff)
+   Also                β = α/(1−α) = 0.95/0.05 = 19
+```
+> ### ✅ **I_C ≈ 4 mA.** *(Always check with **I_E = I_C + I_B**.)*
+
+#### Other component facts
+
+| Item | Fact |
+|---|---|
+| ⭐ **Ni-Cd cell** | ⭐ **A DRY cell that IS RECHARGEABLE (নিকেল-ক্যাডমিয়াম)** — unlike the ordinary dry (Leclanché) cell, which is primary and non-rechargeable |
+| ⭐ **PIEZOELECTRIC effect** | ⭐ **Produced by APPLYING MECHANICAL PRESSURE TO A CRYSTAL** (quartz, Rochelle salt), which generates a voltage — and conversely an applied voltage deforms the crystal. Used in **crystal oscillators, microphones, gas-lighter sparkers, ultrasonic transducers and pressure sensors** |
+| ⭐ **Two parallel conductors separated by a dielectric** | ⭐ **Form a CAPACITOR (ক্যাপাসিটর)** |
+| ⭐ **Insulator material** | ⭐ **PORCELAIN (পোরসেলিন)** — along with glass, mica, rubber, PVC and ceramic |
+| ⭐ **1 picofarad** | ⭐ **10⁻¹² farad** |
+| ⭐ **Emitter follower (common collector)** | ⭐ **Its main use is HIGH CURRENT GAIN** (and impedance matching); voltage gain ≈ 1, which is why it is also called the **VOLTAGE FOLLOWER** |
+| ⭐ **Negative feedback in an amplifier** | ⭐ **REDUCES THE GAIN** — but in exchange gives **greater stability, wider bandwidth, lower distortion and lower noise**, which is why it is used deliberately |
+| ⭐ **Transistor gain falls at high frequency** | ⭐ Because of the **INTERNAL CAPACITANCE of the device** (junction capacitances shunt the signal to ground) |
+| ⭐ **Integrated Circuit (IC)** | Formed by combining **transistors with diodes and resistors on one chip** |
+| ⭐ **Surge suppressor** | ⭐ **Helps PREVENT POWER SURGES** from reaching equipment |
+| ⭐ **Full-wave rectifier efficiency** | ⭐ **81.2 %** *(half-wave: 40.6 %)* |
+
+**Previous Year MCQ List from this Topic:**
+
+- [একটি ডায়োডের সাংকেতিক চিত্রে দেখানো তীর চিহ্নটি কী নির্দেশ করে?](../mcq-answers/electrical-and-electronics.md?plain=1#L70)
+- [Which configuration of Bipolar Junction Transistor is known as voltage follower?](../mcq-answers/electrical-and-electronics.md?plain=1#L115)
+- [পাইজোইলেক্ট্রিক ইফেক্টও কারণ কি?](../mcq-answers/electrical-and-electronics.md?plain=1#L272)
+- [নিচের কোন সেলটি শুষ্ক কিন্তু পুনরায় চার্জযোগ্য?](../mcq-answers/electrical-and-electronics.md?plain=1#L302)
+- [একটি ডায়োডে ডিপলেশন লেয়ার কখন তৈরি হয়?](../mcq-answers/electrical-and-electronics.md?plain=1#L312)
+- [ব্রেকডাউন ঘটলে জিনার ডায়োডের ক্ষেত্রে কোনটি প্রায় অপরিবর্তিত থাকে?](../mcq-answers/electrical-and-electronics.md?plain=1#L322)
+- [জাংশন ফিল্ড ইফেক্ট ট্রানজিস্টর- কারেন্ট নিয়ন্ত্রিত](../mcq-answers/electrical-and-electronics.md?plain=1#L347)
+- [দুইটি সমান্তরাল পরিবাহী কে কোন অপরিবাহী দ্বারা পৃথক করা হলে তাকে কি বলে?](../mcq-answers/electrical-and-electronics.md?plain=1#L352)
+- [নিচের কোন সেলটি শুষ্ক কিন্তু পুনরায় চার্জযোগ্য?](../mcq-answers/electrical-and-electronics.md?plain=1#L366)
+- [বাইপোলার জংশন ট্রানজিস্টরের-](../mcq-answers/electrical-and-electronics.md?plain=1#L375)
+- [নিম্নের কোনটি চার লেয়ার বিশিষ্ট ডিভাইস?](../mcq-answers/electrical-and-electronics.md?plain=1#L396)
+- [জংশন ফিল্ড ইফেক্ট ট্রানজিস্টর-](../mcq-answers/electrical-and-electronics.md?plain=1#L402)
+- [ইমিটার ফলোয়ার ব্যবহারের প্রধান উদ্দেশ্য কি?-](../mcq-answers/electrical-and-electronics.md?plain=1#L408)
+- [ট্রানজিস্টরের সার্কিট সঠিকভাবে বায়াসিং করা না হলে-](../mcq-answers/electrical-and-electronics.md?plain=1#L414)
+- [n-p-n ট্রানজিস্টরে 'P' অংশটি কী?](../mcq-answers/electrical-and-electronics.md?plain=1#L492)
+- [ট্রানজিস্টরের সাথে ডায়াড বা রেজিস্টর এবং ক্যাপাসিটর দিয়ে তৈরি পূর্ণাঙ্গ সার্কিটকে কী বলে?](../mcq-answers/electrical-and-electronics.md?plain=1#L501)
+- [সিলিকনের সাথে কোন পদার্থ যোগ করলে তা p-টাইপে পরিণত হয়?](../mcq-answers/electrical-and-electronics.md?plain=1#L510)
+- [কোন ধরনের ম্যাটেরিয়ালের Permeability স্পেস এর তুলনায় কম?](../mcq-answers/electrical-and-electronics.md?plain=1#L534)
+- [Active region এ BJT এর base-emitter and base collector কোন bias এ থাকে?](../mcq-answers/electrical-and-electronics.md?plain=1#L543)
+- [For an n-channel enhancement type MOSFET, if the source is connected at a higher potential than that of the bulk (i.e. V_{SB} > 0), the threshold voltage V_T of…](../mcq-answers/electrical-and-electronics.md?plain=1#L552)
+- [Which type of capacitance form in forward bias.](../mcq-answers/electrical-and-electronics.md?plain=1#L588)
+- [When there is no forbidden region between the conductance band and valence band, the substance is called.](../mcq-answers/electrical-and-electronics.md?plain=1#L651)
+- [In common base circuit of a transistor, current amplification factor is 0.95. Calculate the emitter current if base current is 0.2mA.](../mcq-answers/electrical-and-electronics.md?plain=1#L660)
+- [At absolute zero temperature, a semiconductor behaves as a/an-](../mcq-answers/electrical-and-electronics.md?plain=1#L678)
+- [The common collector amplifier is also known as ________.](../mcq-answers/electrical-and-electronics.md?plain=1#L723)
+- [Negative feedback in an amplifier ________.](../mcq-answers/electrical-and-electronics.md?plain=1#L732)
+- [Generally, the gain of a transistor amplifier falls at high frequency due to the](../mcq-answers/electrical-and-electronics.md?plain=1#L178)
+- [ফুল-ওয়েভ রেক্টিফায়ারের কর্মদক্ষতা কত?](../mcq-answers/electrical-and-electronics.md?plain=1#L332)
+- [_______ helps prevent power surges.](../mcq-answers/electrical-and-electronics.md?plain=1#L420)
+- [Zener diode is a _____ conducting device.](../mcq-answers/electrical-and-electronics.md?plain=1#L1009)
+- [What should be true for a Zener Diode?](../mcq-answers/electrical-and-electronics.md?plain=1#L1018)
+
+
 
 
 ---
@@ -978,6 +1226,11 @@ Step 2 — the resolution (step size):
 - [An 8 bit (Analog to Digital Converter) = 2.56v. Let the minimum analog voltage = 0v. Calculate binary data output if analog input=1.7](../written-answers/electrical-and-electronics.md?plain=1#L1789)
 - [Draw an ADC converter circuit which convert an analog signal to digital signal.](../written-answers/electrical-and-electronics.md?plain=1#L1866)
 - [(ক) A/D Converter দ্বারা কিভাবে একটি Analog signal Digital signal এ রূপান্তরিত করা হয়। ডায়াগ্রাম সহ লিখুন।](../written-answers/electrical-and-electronics.md?plain=1#L1965)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following amplifier is used in a digital to analog coverter circuit?](../mcq-answers/electrical-and-electronics.md?plain=1#L205)
+
 
 
 ---
@@ -1127,6 +1380,190 @@ flowchart TD
 - [A two-element series circuit has an average power of 940\text{W} and a power factor of 0.707 (leading). Determine the circuit elements if the applied voltage is…](../written-answers/electrical-and-electronics.md?plain=1#L2046)
 - [RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?](../written-answers/electrical-and-electronics.md?plain=1#L2133)
 
+**Previous Year MCQ List from this Topic:**
+
+- [পাওয়ার ফ্যাক্টর কি?](../mcq-answers/electrical-and-electronics.md?plain=1#L61)
+- [একটি সূষম সাইন তরঙ্গের পিক-টু-পিক ভোল্টেজ ২০ ভোল্ট হলে-](../mcq-answers/electrical-and-electronics.md?plain=1#L242)
+- [একটি তরঙ্গের পিরিয়ড ১০ মিলি সেকেন্ড হলে এটির ফ্রিকুয়েন্সি কত?](../mcq-answers/electrical-and-electronics.md?plain=1#L282)
+- [A power system is providing 200\text{ V ac at }25\text{ A}. The phase angle between current and voltage is 25^\circ. What is the power consumed by the system?](../mcq-answers/electrical-and-electronics.md?plain=1#L714)
+- [The affected parameter by shunt capacitance are ______](../mcq-answers/electrical-and-electronics.md?plain=1#L214)
+- [Impedance and capacitance of a transmission line depend upon-](../mcq-answers/electrical-and-electronics.md?plain=1#L187)
+
+
+---
+
+### Signals, Filters, Modulation and Transmission Lines
+
+#### Waves — the basic relationships
+
+```
+        v = f · λ                 wave speed = frequency × wavelength
+        f = 1 / T                 frequency = 1 / period
+        c = 3 × 10⁸ m/s           speed of an electromagnetic wave in free space
+```
+
+> ### **"একটি ওয়েভ এক সাইকেলে যে দূরত্ব অতিক্রম করে তাকে কী বলে?"** → ### ✅ **WAVELENGTH (তরঙ্গদৈর্ঘ্য).**
+>
+> ### **Worked: "A wave has a period of 10 milliseconds. What is its frequency?"**
+> ```
+>      f = 1/T = 1 / 0.010 s = 100 Hz
+> ```
+> ### ✅ **100 Hz.**
+
+**Worked example — wavelength of a medium-wave broadcast**
+> *Dhaka Betar transmits on medium wave at 630 kHz. What is the wavelength?*
+```
+        λ = c / f
+          = (3 × 10⁸ m/s) / (630 × 10³ Hz)
+          = 3 × 10⁸ / 6.3 × 10⁵
+          = 476.19 metres
+```
+> ### ✅ **λ ≈ 476.19 METRES.**
+>
+> ⚠️ **Note on the printed key: some answer sheets give "476190 m", which is wrong by a factor of 1000** — that figure would be the answer in **millimetres**, or would correspond to a frequency of 630 Hz rather than 630 kHz. **The correct wavelength is about 476 m**, which is why medium-wave aerials are hundreds of metres long. *(Sanity check: the MW band 530–1600 kHz corresponds to roughly 190–570 m — the very reason it was historically called the "medium wave" band.)*
+
+#### RMS, peak and peak-to-peak
+
+```
+        V_peak = V_pp / 2
+        V_rms  = V_peak / √2 = 0.707 × V_peak = V_pp / (2√2)
+```
+> ### **Worked: "A pure sine wave has a peak-to-peak value of 40 V. Its RMS value is…"**
+> ```
+>      V_rms = 40 / (2 × 1.414) = 40 / 2.828 = 14.14 V
+> ```
+> ### ✅ **14.14 V.**
+>
+> **Why RMS matters: it is the DC value that would produce the SAME HEATING EFFECT.** All meter readings and equipment ratings are RMS — "230 V mains" means 230 V RMS, with a **peak of 325 V**.
+
+#### Filters
+
+> **A FILTER passes some frequencies and attenuates others.** The **cut-off frequency** is where the output falls to **0.707 (−3 dB)** of its maximum.
+
+| Filter | Passes | Simple RC form |
+|---|---|---|
+| ⭐ **LOW-PASS** | **Low frequencies; blocks high** | Output taken **across the CAPACITOR** |
+| **HIGH-PASS** | High frequencies; blocks low | Output across the **resistor** |
+| ⭐ **BAND-PASS** | ⭐ **A SINGLE CONTINUOUS BAND, with NEITHER the upper NOR the lower cut-off at zero or infinity** | Series LC / cascaded LP + HP |
+| **Band-stop (notch)** | Everything **except** one band | Parallel LC |
+| **All-pass** | All frequencies; changes only phase | |
+
+> ### **"A filter having a single continuous transmission band with neither the upper nor the lower cut-off frequency being zero or infinite is a…"** → ### ✅ **BAND-PASS FILTER.**
+>
+> **Read the definition literally: a LOW-pass filter's lower cut-off IS zero (it passes DC); a HIGH-pass filter's upper cut-off IS infinity. Only a BAND-pass filter has BOTH cut-offs at finite, non-zero frequencies.**
+>
+> ### **A signal of constant amplitude from 0 to 40 kHz applied to an RC LOW-PASS filter** produces an output in which the **low-frequency components (including ⭐ DC) pass essentially unattenuated** while the higher components are progressively reduced — so the surviving output is dominated by **DC**.
+
+#### Modulation
+
+> ### **MODULATION impresses a low-frequency INFORMATION signal onto a high-frequency CARRIER**, because the information signal itself cannot be radiated efficiently.
+
+| Type | What varies with the message |
+|---|---|
+| ⭐ **AM — Amplitude Modulation** | ⭐ **The CARRIER'S AMPLITUDE varies; its frequency stays constant** |
+| **FM — Frequency Modulation** | The carrier's **frequency** varies; amplitude constant — hence **immune to amplitude noise** |
+| **PM — Phase Modulation** | The carrier's phase |
+| **PCM / PAM / PWM** | Digital and pulse forms |
+
+> ### **"অ্যাম্প্লিচিউড মডুলেশনে কী ঘটে?"** → ### ✅ **THE CARRIER'S AMPLITUDE CHANGES (ক্যারিয়ার অ্যাম্প্লিচিউড পরিবর্তিত হয়).**
+>
+> ### **"সিগন্যালের পারস্পরিক রূপান্তর করে কোন যন্ত্র?"** → ### ✅ **MODEM** — MOdulator + DEModulator, converting **digital ↔ analogue**.
+
+#### Transmission lines
+
+```
+        Characteristic impedance of a LOSSLESS line:     Z₀ = √(L / C)
+```
+**Worked example**
+> *A lossless transmission line has L = 8.5 nH/m and C = 300 pF/m. Find Z₀.*
+```
+        Z₀ = √(8.5 × 10⁻⁹ / 300 × 10⁻¹²)
+           = √(28.33)
+           = 5.32 Ω
+```
+> ### ✅ **Z₀ = 5.32 Ω.**
+>
+> **Note what Z₀ is NOT: it is not a resistance that dissipates power.** It is the ratio V/I of a wave travelling along the line, determined **purely by the line's geometry and dielectric** — independent of length. ⭐ **A line terminated in its own Z₀ produces NO REFLECTION**, which is why 50 Ω and 75 Ω cables must be matched.
+
+> ### **"The impedance and capacitance of a transmission line depend upon…"** → ### ✅ **THE PHYSICAL CONFIGURATION OF THE CONDUCTORS IN SPACE** — their diameter, spacing, arrangement and the surrounding dielectric.
+
+#### ⭐ Skin effect
+
+> ### **SKIN EFFECT is the tendency of AN ALTERNATING CURRENT TO FLOW MAINLY NEAR THE SURFACE OF A CONDUCTOR rather than through its core.**
+
+> ### **"The fact that a conductor carries more current on the surface than in the core is known as…"** → ### ✅ **SKIN EFFECT.**
+
+| Property | Detail |
+|---|---|
+| **Cause** | The changing flux inside the conductor induces **eddy currents that oppose the current in the centre** and reinforce it at the surface |
+| **Increases with** | ⭐ **Higher FREQUENCY**, larger conductor diameter, higher permeability and conductivity |
+| **At DC** | ⭐ **No skin effect at all** — the current density is uniform |
+| **Effect** | The **effective cross-section falls, so the AC resistance RISES** above the DC resistance |
+| **Countermeasures** | ⭐ **ACSR and hollow/stranded conductors**, **bundled conductors** in transmission lines, **Litz wire** at radio frequencies, silver plating of waveguides |
+
+> **This is why high-voltage transmission lines use stranded ACSR with a steel core** — the steel provides strength while the aluminium strands on the outside carry the current, and the centre would contribute little in any case.
+
+#### Signals and systems — the transfer function
+
+> **The TRANSFER FUNCTION H(s) is the Laplace transform of the OUTPUT divided by that of the INPUT**, with zero initial conditions. It characterises a linear time-invariant (LTI) system completely.
+
+**Worked example**
+> *The unit-impulse response of a system is c(t) = 0.5 e^(−0.5t). Find its transfer function.*
+```
+   ⭐ The transfer function IS the Laplace transform of the IMPULSE response.
+
+        L{ K·e^(−at) } = K / (s + a)
+
+        K = 0.5,  a = 0.5
+
+        H(s) = 0.5 / (s + 0.5)
+
+   Multiplying numerator and denominator by 2:
+
+        H(s) = 1 / (2s + 1)
+```
+> ### ✅ **H(s) = 1 / (1 + 2s).**
+
+| Common Laplace pair | Transform |
+|---|---|
+| δ(t) | 1 |
+| u(t) (unit step) | 1/s |
+| e^(−at) | 1/(s+a) |
+| t | 1/s² |
+| sin ωt | ω/(s²+ω²) |
+
+> **Two useful theorems:** the **Final Value Theorem** — `lim_{t→∞} f(t) = lim_{s→0} s·F(s)`; and the **Initial Value Theorem** — `f(0) = lim_{s→∞} s·F(s)`. For a system `H(s) = 1/(s+2)` driven by a unit step, the steady-state output is `lim_{s→0} s · (1/s) · 1/(s+2) = 1/2`.
+
+#### Maxwell's divergence equations
+
+> ### **"Which statement holds true for the divergence of electric and magnetic flux densities?"** → ### ✅ **IT IS ZERO FOR MAGNETIC FLUX DENSITIES.**
+>
+> ```
+>      ∇ · D = ρ        electric flux diverges from CHARGE — charges exist in isolation
+>      ⭐ ∇ · B = 0       ⭐ magnetic flux has ZERO divergence
+> ```
+> ⭐ **The physical meaning: MAGNETIC MONOPOLES DO NOT EXIST.** Magnetic field lines always form **closed loops** — every north pole has a south pole, and cutting a magnet in half produces two complete magnets. Electric field lines, by contrast, **begin and end on charges**, which do exist singly.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Impedance and capacitance of a transmission line depend upon-](../mcq-answers/electrical-and-electronics.md?plain=1#L187)
+- [The affected parameter by shunt capacitance are ______](../mcq-answers/electrical-and-electronics.md?plain=1#L214)
+- [একটি সূষম সাইন তরঙ্গের পিক-টু-পিক ভোল্টেজ ২০ ভোল্ট হলে-](../mcq-answers/electrical-and-electronics.md?plain=1#L242)
+- [একটি তরঙ্গের পিরিয়ড ১০ মিলি সেকেন্ড হলে এটির ফ্রিকুয়েন্সি কত?](../mcq-answers/electrical-and-electronics.md?plain=1#L282)
+- [The fact that the conductor carries more current on the surface of core is known as-](../mcq-answers/electrical-and-electronics.md?plain=1#L687)
+- [The transfer function of an LTI system is given as \frac{1}{s+2}. What is the value of its impulse response at t=0?](../mcq-answers/electrical-and-electronics.md?plain=1#L901)
+- [A loss-less transmission line has L=8.5\text{ nH/m} and C=300\text{ pF/m}. What is the characteristic impedance of the line?](../mcq-answers/electrical-and-electronics.md?plain=1#L910)
+- [A voltage source supplies a signal of constant amplitude from 0 to 40kHz to a RC filter (low-pass). The load resistor experiences the maximum voltage at ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L919)
+- [Which of the following statement holds true for the divergence of electric and magnetic flux densities?](../mcq-answers/electrical-and-electronics.md?plain=1#L928)
+- [অ্যাম্প্লিচিউড মডুলেশনে কি ঘটে?](../mcq-answers/electrical-and-electronics.md?plain=1#L937)
+- [ঢাকা বেতার কেন্দ্র মিডিয়াম ওয়েভে 630Hz এ অনুষ্ঠান সম্প্রচার করে। রেডিও তরঙ্গে বেগ 3 \times 10^8\text{ ms}^{-1} হলে তরঙ্গ। দৈর্ঘ্য কত হবে?](../mcq-answers/electrical-and-electronics.md?plain=1#L947)
+- [সিগন্যালের পারস্পরিক রূপান্তর করে-](../mcq-answers/electrical-and-electronics.md?plain=1#L962)
+- [একটি ওয়েভ এক সাইকেল এ যে দূরত্ব অতিক্রম করে তাকে বলে-](../mcq-answers/electrical-and-electronics.md?plain=1#L971)
+- [The unit-impulse response of a system is given by c(t) = 0.5e^{-0.5t}. Its transformer function is-](../mcq-answers/electrical-and-electronics.md?plain=1#L980)
+- [A filter having a single continuous transmission band with neither the upper nor the lower cutoff frequencies is zero or infinite is called-](../mcq-answers/electrical-and-electronics.md?plain=1#L989)
+
+
+
 
 ---
 
@@ -1225,6 +1662,15 @@ Step 4 — For a CASCADE of stages, MULTIPLY the individual gains:
 
 - [Assuming Ideal Op Amps, Find The Voltage Gain V_o/V_i of the following circuit.](../written-answers/electrical-and-electronics.md?plain=1#L2202)
 - [একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?](../written-answers/electrical-and-electronics.md?plain=1#L2334)
+
+**Previous Year MCQ List from this Topic:**
+
+- [When a step signal input is applying to an-amp integrator, the output will be-](../mcq-answers/electrical-and-electronics.md?plain=1#L169)
+- [Which of the following amplifier is used in a digital to analog coverter circuit?](../mcq-answers/electrical-and-electronics.md?plain=1#L205)
+- [নন-ইনভারটিং অপারেশনাল অ্যাম্প্লিফায়ারের ইনপুট রেজিস্টেন্স ১০ কিলো ওহম এবং ফিডব্যাক রেজিস্টেন্স ২০ কিলো ওহম হলে ক্লোজড-লুপ গেইন কত?](../mcq-answers/electrical-and-electronics.md?plain=1#L252)
+- [Op-amp এর ক্ষেত্রে কোনটি সত্য?](../mcq-answers/electrical-and-electronics.md?plain=1#L570)
+- [With zero volts on both inputs, what is the ideal output of an Operational Amplifier?](../mcq-answers/electrical-and-electronics.md?plain=1#L624)
+
 
 
 ---
@@ -1514,6 +1960,12 @@ Step 5 — Reconnect the 2 Ω load:
 - [Find the Value of I_{ab} using Norton's Theorem.](../written-answers/electrical-and-electronics.md?plain=1#L2704)
 - [Find the Norton equivalent circuit for a DC power supply that has a 30 V terminal voltage when delivering 400mA and a 28V terminal voltage. When delivering 600m…](../written-answers/electrical-and-electronics.md?plain=1#L68)
 
+**Previous Year MCQ List from this Topic:**
+
+- [The concept of which Superposition theorem is based on-](../mcq-answers/electrical-and-electronics.md?plain=1#L669)
+- [A load is connected to a network. At the terminal to which the load is connected, R_{\text{th}}=10 and V_{\text{th}}=40\text{V}. The maximum possible power supp…](../mcq-answers/electrical-and-electronics.md?plain=1#L696)
+
+
 
 ---
 
@@ -1607,3 +2059,328 @@ flowchart LR
 **Previous Year Question List from this Topic:**
 
 - [A 3phase 12 pole alternator running at 500 rpm supplying power to an 8 pole induction motor. If ship is 3% what is the full load speed of the motor?](../written-answers/electrical-and-electronics.md?plain=1#L2824)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Efficiency এবং power factor বাড়ালে induction motor Gi speed কি হবে?](../mcq-answers/electrical-and-electronics.md?plain=1#L561)
+- [What will be speed if pole no is increased in alternator?](../mcq-answers/electrical-and-electronics.md?plain=1#L606)
+- [A 4-pole 50Hz induction motor running at 1300 rpm. The speed of stator magnetic field with respect to rotor is ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L836)
+- [Which device converts mechanical energy into electrical energy?](../mcq-answers/electrical-and-electronics.md?plain=1#L633)
+
+
+---
+
+### Transformers — Construction, Losses and Efficiency
+
+> A **TRANSFORMER transfers electrical energy between two circuits by MUTUAL INDUCTION**, changing the **voltage and current** while leaving the **power (and the frequency) essentially unchanged**. It works **only on AC**, because it needs a *changing* magnetic flux.
+
+> ### **"A transformer transforms ______"** → ### ✅ **VOLTAGE AND CURRENT** — *(and NOT frequency, and NOT power).*
+
+#### The turns relationship
+
+```
+        V_s / V_p  =  N_s / N_p  =  I_p / I_s          (ideal transformer)
+
+        STEP-UP   : N_s > N_p  →  voltage UP,   current DOWN
+        STEP-DOWN : N_s < N_p  →  voltage DOWN, current UP
+```
+
+> ### **"ট্রান্সফরমারের কোন উইন্ডিং এ বেশি টার্ন থাকে?"** → ### ✅ **SECONDARY WINDING (সেকেন্ডারি)** — in a **step-up** transformer, which is the assumed case.
+>
+> ### **Worked: "In a STEP-DOWN transformer, the load current changes by 15 A. The change in primary current is…"** → ### ✅ **LESS THAN 15 A.**
+> **The reasoning:** in a step-down transformer the **secondary current is LARGER than the primary** (`I_p / I_s = N_s / N_p < 1`). So a change of 15 A on the secondary side is reflected to the primary **scaled DOWN by the turns ratio** — it must be **less than 15 A**.
+
+#### ⭐ Transformer losses
+
+| Loss | Where | Cause | Depends on | Reduced by |
+|---|---|---|---|---|
+| ⭐ **COPPER loss (I²R)** | The **windings** | Resistance of the copper | ⭐ **The LOAD current — it VARIES with load** | Thicker conductors, better winding design |
+| ⭐ **IRON (core) loss** | The **core** | — | ⭐ **CONSTANT — independent of load** | — |
+| → **Hysteresis loss** | Core | Repeated re-magnetisation of the core | B^1.6 · f | ⭐ **Silicon steel / CRGO** with a narrow hysteresis loop |
+| → ⭐ **EDDY CURRENT loss** | Core | ⭐ **Circulating currents INDUCED IN THE CORE ITSELF** by the changing flux | B² · f² · t² | ⭐ **LAMINATING the core** — building it from thin, varnish-insulated sheets instead of a solid block |
+| **Stray / dielectric loss** | Tank, insulation | Leakage flux | Small | Design |
+
+> ### **"নিম্নের কোনটি কমানোর জন্য ট্রান্সফরমারের কোর ল্যামিনেটেড করা হয়?"** → ### ✅ **EDDY CURRENT LOSS (এডি কারেন্ট লস).**
+>
+> ⭐ **Why lamination works:** the changing flux induces a voltage in the core just as it does in the windings. In a **solid** core, large currents circulate in wide loops and dissipate heat. **Laminating breaks the core into thin sheets, each insulated from the next, so the eddy-current loops are forced to be small and their resistance high** — and since the loss depends on the **SQUARE of the lamination thickness (t²)**, halving the thickness cuts the loss to a **quarter**.
+
+#### ⭐ Maximum efficiency condition
+
+> ### **A transformer's efficiency is MAXIMUM when its COPPER LOSS EQUALS its IRON LOSS.**
+>
+> ### **Copper loss (variable) = Iron loss (constant)**
+
+```
+   Efficiency  η = Output / (Output + Copper loss + Iron loss)
+
+   Iron loss  P_i  is CONSTANT
+   Copper loss P_c varies as (load)²
+
+   Differentiating η with respect to load and setting dη/dx = 0
+   gives exactly:   P_c = P_i
+
+   ⇒ Load at maximum efficiency  =  Full load × √(Iron loss / Full-load copper loss)
+```
+
+> **The practical consequence:** a distribution transformer runs lightly loaded for much of the day, so it is **deliberately designed with low iron loss** so that its maximum-efficiency point falls near its **average** load, not its full load. A power transformer, always near full load, is designed differently.
+
+#### Voltage, frequency and flux
+
+```
+        E = 4.44 · f · N · B_max · A            (the EMF equation)
+
+   ⇒ B_max ∝ V / f        — the flux density depends on the VOLTS-PER-HERTZ ratio
+```
+
+> **If the applied voltage is increased while the frequency is held constant, the FLUX DENSITY rises in proportion.** Because **hysteresis loss ∝ B^1.6** and **eddy-current loss ∝ B²**, the **core losses rise sharply** — and beyond a point the core **SATURATES**, drawing a large magnetising current. **This is why a transformer must never be run appreciably above its rated V/f ratio**, and why a 50 Hz transformer overheats if fed 60 Hz-rated voltage at 50 Hz.
+
+#### Protection and parallel operation
+
+| Topic | Point |
+|---|---|
+| ⭐ **Magnetising INRUSH current** | When a transformer is first energised, the core may saturate momentarily and draw a **current many times full load**, rich in **2nd harmonic**. ⭐ **HARMONIC RESTRAINT in the differential relay guards against this** — it blocks tripping when the 2nd-harmonic content shows the surge is inrush, not a fault |
+| ⭐ **Parallel operation — the essential condition** | ⭐ **The POLARITIES must be correctly connected** (same phase relationship). Getting this wrong produces a **dead short between the two secondaries**. Other conditions: same voltage ratio, same percentage impedance, same phase sequence and vector group |
+| **Buchholz relay** | Detects gas from internal arcing in oil-filled transformers |
+| **Tap changer** | Adjusts the turns ratio to regulate output voltage |
+
+#### Magnetic materials
+
+| Class | Relative permeability μᵣ | Behaviour |
+|---|---|---|
+| ⭐ **DIAMAGNETIC** | ⭐ **Slightly LESS than 1 — the LOWEST** | Weakly **repelled** by a magnetic field (copper, silver, gold, bismuth, water) |
+| **Paramagnetic** | Slightly greater than 1 | Weakly attracted (aluminium, platinum) |
+| **Ferromagnetic** | **Very large (hundreds to thousands)** | Strongly attracted; used for **cores** (iron, nickel, cobalt, silicon steel) |
+
+> ### **"কোন ধরনের ম্যাটেরিয়ালের Permeability সবচেয়ে কম?"** → ### ✅ **DIAMAGNETIC.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [In a step down transformer, there is a change of 15A in the load current. This results in changing of supply current of -](../mcq-answers/electrical-and-electronics.md?plain=1#L151)
+- [For successful operation of two single phase transformers connected in parallel, the most essential condition is that them](../mcq-answers/electrical-and-electronics.md?plain=1#L196)
+- [The applied voltage of a certain transformer is increased by 50%, while the frequency is reduced by 50%. The Maximum core flux density will.](../mcq-answers/electrical-and-electronics.md?plain=1#L223)
+- [ট্রান্সফরমারের কোন উইন্ডিং এ বেশি প্যাঁচ থাকে? সেকন্ডারি উইন্ডিং](../mcq-answers/electrical-and-electronics.md?plain=1#L342)
+- [ট্রান্সফরমারের কোন উইন্ডিং এ বেশি প্যাঁচ থাকে?](../mcq-answers/electrical-and-electronics.md?plain=1#L384)
+- [নিম্নের কোনটি কমানোর জন্য ট্রান্সফরমারের কোর লেমিনেটিং করা হয়?](../mcq-answers/electrical-and-electronics.md?plain=1#L390)
+- [A transformer transforms ________.](../mcq-answers/electrical-and-electronics.md?plain=1#L705)
+- [কোন ধরনের ম্যাটেরিয়ালের Permeability স্পেস এর তুলনায় কম?](../mcq-answers/electrical-and-electronics.md?plain=1#L534)
+- [For the protection of transformer, harmonic restraint is used to guard against ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L827)
+- [The ordinary efficiency of a given transformer is maximum when-](../mcq-answers/electrical-and-electronics.md?plain=1#L872)
+
+
+---
+
+### DC Machines, Synchronous Motors and Machine Speed Control
+
+#### The DC generator and the commutator
+
+> **A GENERATOR converts MECHANICAL energy into ELECTRICAL energy** (Faraday's law); a **MOTOR does the reverse**.
+
+> ### **"Which device converts mechanical energy into electrical energy?"** → ### ✅ **GENERATOR.**
+
+```
+        E = (P · φ · Z · N) / (60 · A)          the DC generator EMF equation
+
+           P = number of poles      φ = flux per pole
+           Z = total conductors     N = speed in rpm
+           A = parallel paths
+```
+
+> ### **"The EMF generated in a DC generator is directly proportional to…"** → ### ✅ **ALL OF THEM** — the **flux per pole (φ), the speed (N) and the number of conductors (Z)**, as the equation shows.
+
+> ### ⭐ **"The SOLE purpose of a COMMUTATOR in a DC generator is to…"** → ### ✅ **CONVERT THE INDUCED AC INTO DC.**
+>
+> ⭐ **The key insight: the EMF induced in the armature of ANY rotating machine is ALWAYS ALTERNATING** — a conductor moving through a magnetic field reverses its direction of cutting flux every half revolution. **A DC generator is therefore an AC generator plus a mechanical rectifier**, and that rectifier is the **COMMUTATOR** — a split ring whose segments reverse the connection to the external circuit at exactly the moment the induced EMF reverses, so the output stays unidirectional.
+>
+> *(In a **DC MOTOR** the commutator does the mirror job: it reverses the armature current each half turn so the torque keeps acting in one direction.)*
+
+| Part | Function |
+|---|---|
+| **Yoke** | Mechanical frame and magnetic return path |
+| **Field winding / poles** | Produces the main magnetic flux |
+| **Armature** | The rotating winding in which EMF is induced |
+| ⭐ **Commutator** | ⭐ **Rectifies AC to DC (generator) / reverses current (motor)** |
+| **Brushes** | Carry current between the commutator and the external circuit |
+
+#### DC motor speed control
+
+```
+        N ∝ (V − I_a R_a) / φ            the fundamental DC motor speed relation
+```
+
+| Method | What is varied | Speed range |
+|---|---|---|
+| ⭐ **FIELD CONTROL (flux control)** | ⭐ **REDUCE the FIELD CURRENT → reduce the flux φ** | ⭐ **ABOVE base speed** |
+| **Armature voltage control** | Reduce V applied to the armature | **Below** base speed |
+| **Armature resistance control** | Insert resistance in series | Below base speed; wasteful |
+
+> ### **"The speed of a DC shunt motor is required to be MORE THAN full-load speed. This is possible by…"** → ### ✅ **REDUCING THE FIELD CURRENT.**
+>
+> **Because N ∝ 1/φ**, weakening the field **raises** the speed. ⚠️ **This is also why a DC shunt motor must NEVER lose its field while running** — if φ → 0, the speed theoretically → ∞ and the machine destroys itself. Field-failure protection is mandatory.
+
+#### Synchronous motors and excitation
+
+> **A SYNCHRONOUS motor runs at exactly the synchronous speed N_s = 120f/P, regardless of load** — and its **power factor can be CONTROLLED by its DC field excitation.**
+
+| Excitation | Power factor drawn | Behaves like |
+|---|---|---|
+| ⭐ **UNDER-excited** | ⭐ **LAGGING** | An inductive load |
+| **Normal excitation** | **Unity** | Resistive |
+| ⭐ **OVER-excited** | ⭐ **LEADING** | A capacitor — this is the **SYNCHRONOUS CONDENSER**, used to correct a plant's power factor |
+
+> ### **"A synchronous motor runs at what type of power factor at UNDER-excitation?"** → ### ✅ **LAGGING.**
+>
+> ⭐ **The V-curve** plots armature current against field current: it dips to a minimum at unity power factor, rising on both sides — **under-excitation to the left (lagging), over-excitation to the right (leading)**. This unique ability to supply **leading** reactive power is the synchronous motor's great industrial advantage.
+
+#### Alternators — speed and poles
+
+```
+        f = (P × N) / 120      ⟺      N = (120 × f) / P
+```
+
+> ### **"What happens to the speed if the number of poles is INCREASED in an alternator?"** → ### ✅ **IT DECREASES.**
+>
+> **Because N = 120f/P, speed is INVERSELY proportional to the pole count** for a fixed frequency. This is why a **slow-turning hydro turbine** drives an alternator with **many poles** (e.g. 40 poles at 150 rpm for 50 Hz), while a **fast steam turbine** uses only **2 poles at 3000 rpm**.
+
+#### Induction motors — slip and the rotating field
+
+**Worked example**
+> *A 4-pole, 50 Hz induction motor runs at 1300 rpm. What is the speed of the stator magnetic field WITH RESPECT TO THE ROTOR?*
+```
+   Synchronous speed  N_s = 120f/P = (120 × 50)/4 = 1500 rpm
+   Rotor speed        N   = 1300 rpm
+
+   Speed of the stator field RELATIVE TO THE ROTOR
+        = N_s − N = 1500 − 1300 = 200 rpm           ⭐ this is the SLIP SPEED
+```
+> ### ✅ **200 rpm.**
+>
+> **Note the three different "speeds" the question can ask for, and read carefully:**
+> | Asked for | Answer |
+> |---|---|
+> | Stator field speed **with respect to the STATOR (i.e. in space)** | **1500 rpm** (synchronous) |
+> | ⭐ **Stator field speed with respect to the ROTOR** | ⭐ **200 rpm** (the slip speed) |
+> | Rotor speed | 1300 rpm |
+> | Slip | s = 200/1500 = **13.3 %** |
+
+> ⭐ **A further consequence worth stating: the ROTOR field also rotates at 200 rpm relative to the rotor — so BOTH fields are stationary relative to EACH OTHER at 1500 rpm in space.** That is precisely why a steady torque is produced; if the two fields moved relative to one another, the torque would alternate and average to zero.
+
+#### Generators in parallel
+
+> ### **"If two generators run in parallel and the field of one is weakened, that machine will…"** → ### ✅ **RUN AS A MOTOR IN THE SAME DIRECTION.**
+>
+> **The mechanism:** weakening the field reduces that machine's generated EMF below the busbar voltage. Current then **flows INTO it** from the bus instead of out of it, and a machine absorbing electrical power and producing torque **is a motor**. Because the direction of rotation is fixed by the busbar's rotating field, it continues **in the same direction** — this is called **motoring** or **reverse power**, and **reverse-power relays** exist to trip a set that begins to do it.
+
+#### Three-phase power measurement
+
+> ### **In the TWO-WATTMETER method, if BOTH wattmeters read IDENTICALLY, the power factor is ⭐ UNITY.**
+> ```
+>      tan φ = √3 (W₁ − W₂) / (W₁ + W₂)
+>
+>      W₁ = W₂  ⇒  W₁ − W₂ = 0  ⇒  tan φ = 0  ⇒  φ = 0  ⇒  cos φ = 1
+> ```
+> **Other readings worth recognising:** one wattmeter reads **zero** ⇒ pf = 0.5; one reads **negative** ⇒ pf < 0.5.
+
+**Previous Year MCQ List from this Topic:**
+
+- [The emf generated in a DC generator is directly proportional to-](../mcq-answers/electrical-and-electronics.md?plain=1#L160)
+- [Synchronous motor run in What type of power factor at under excitation](../mcq-answers/electrical-and-electronics.md?plain=1#L597)
+- [What will be speed if pole no is increased in alternator?](../mcq-answers/electrical-and-electronics.md?plain=1#L606)
+- [Which device converts mechanical energy into electrical energy?](../mcq-answers/electrical-and-electronics.md?plain=1#L633)
+- [A 4-pole 50Hz induction motor running at 1300 rpm. The speed of stator magnetic field with respect to rotor is ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L836)
+- [In a 3-phase power measurement by two-wattmeters method, both wattmeters have identical reading. The power factor of the load is ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L854)
+- [The speed of a DC shunt motor is required to be more than full load speed. This is possible by-](../mcq-answers/electrical-and-electronics.md?plain=1#L863)
+- [If two generators are running in parallel and field of one of the generators is weakened too much then it will-](../mcq-answers/electrical-and-electronics.md?plain=1#L881)
+- [The sole purpose of a commutator in a DC generator is to-](../mcq-answers/electrical-and-electronics.md?plain=1#L890)
+
+
+---
+
+## Power Systems & Generation
+
+### Power Plants, Generation and Transmission
+
+#### Types of power plant
+
+| Plant | Prime mover | Characteristics |
+|---|---|---|
+| **Thermal (coal / gas / oil)** | Steam or gas turbine | Bulk generation; high emissions |
+| ⭐ **COMBINED CYCLE** | ⭐ **A GAS TURBINE plus a steam turbine** | ⭐ **A cycle is called "COMBINED CYCLE" because the GAS TURBINE's hot exhaust is used to raise steam for a second, steam cycle** — pushing efficiency from ~35 % to **55–60 %** |
+| ⭐ **NUCLEAR** | Steam turbine driven by fission heat | ⭐ **Very high capital cost, very low fuel cost → invariably operated as a BASE-LOAD plant**; typical **design life ~50 years**; switchyard voltage typically **400 kV** |
+| **Hydro** | Water turbine | Fast-starting; ideal for **peak load**; no fuel cost |
+| **Solar / Wind** | — | Renewable but **intermittent** |
+| **Diesel / Gas engine** | Reciprocating engine | Small, quick-start, standby and peaking |
+
+> ### **"কোনো সাইকেলকে কম্বাইন্ড সাইকেল বলা হয় কোনটির জন্য?"** → ### ✅ **গ্যাস টারবাইন (GAS TURBINE).**
+> ### **"A nuclear power plant is invariably used as a ______ plant"** → ### ✅ **BASE LOAD.**
+> ### **"নিউক্লিয়ার পাওয়ার প্লান্টের সুইচইয়ার্ড ভোল্টেজ"** → ### ✅ **৪০০ কেভি (400 kV).**
+> ### **"নিউক্লিয়ার পাওয়ার প্লান্টের আয়ুষ্কাল"** → ### ✅ **৫০ বছর (50 years).**
+
+#### ⭐ Base load vs Peak load
+
+| | ⭐ **BASE-LOAD plant** | ⭐ **PEAK-LOAD plant** |
+|---|---|---|
+| **Runs** | **Continuously, at near-constant output, 24/7** | **Only during periods of peak demand** |
+| **Capital cost** | **High** | Low |
+| **Running (fuel) cost** | ⭐ **LOW** | ⭐ **HIGH** |
+| **Start-up time** | ⚠️ **Slow — hours to days** | ✅ **Fast — minutes** |
+| **Examples** | ⭐ **NUCLEAR, large coal, run-of-river hydro** | **Gas turbines, diesel sets, reservoir hydro, pumped storage** |
+
+> ⭐ **The economic logic: a plant with a huge capital cost and a tiny fuel cost must run as many hours as possible to spread that capital over the maximum number of units — so it takes the BASE load.** A plant that is cheap to build but expensive to run is best left idle until demand peaks. **Nuclear cannot easily throttle in any case**, which reinforces its base-load role.
+
+#### Why transmission is at high voltage
+
+> ### **"Condition of electricity transmission is…"** → ### ✅ **HIGH-VOLTAGE TRANSMISSION.**
+
+```
+        Line loss  P_loss = I² R
+
+        For a fixed power P = V × I,  raising V lowers I proportionally,
+        and the loss falls with the SQUARE of the current:
+
+             V × 10   ⇒   I ÷ 10   ⇒   P_loss ÷ 100
+```
+> ⭐ **That quadratic saving is the entire reason the grid exists at 132 kV, 230 kV and 400 kV** — and the reason **transformers, which work only on AC, settled the AC-vs-DC "War of the Currents"** in favour of AC. *(The MCQ "DC current invented by ______" is answered **EDISON**, who championed DC; **Tesla and Westinghouse** championed AC and won.)*
+
+**Other transmission facts:**
+
+| Topic | Point |
+|---|---|
+| ⭐ **Shunt capacitance** | ⭐ **Affects the REACTIVE POWER** of a line — a long lightly loaded line generates reactive power (the **Ferranti effect**, where the receiving-end voltage rises above the sending end) |
+| ⭐ **High-speed circuit breaker** | ⭐ **IMPROVES SYSTEM STABILITY** — clearing a fault quickly keeps generators in synchronism, because the machines have less time to accelerate apart |
+| ⭐ **Fuse rating** | ⭐ **Expressed in AMPERES** |
+| **Household appliances** | ⭐ **Connected in PARALLEL (সমান্তরাল সংযোগে)** — so each gets the full supply voltage and one failing does not switch off the rest |
+| ⭐ **Street lighting** | ⭐ **Connected in PARALLEL** for the same reason |
+| **Y-Y connection neutral** | The neutral keeps the **phase voltages balanced** and provides a return path for unbalanced current |
+
+#### Mechanical relationships that accompany generation
+
+| Quantity | Formula |
+|---|---|
+| ⭐ **Surface speed of a rotating body** (diameter D, speed N rpm) | ### ⭐ **v = πDN / 60** m/s |
+| **Thin cylindrical pressure vessel** | ⭐ **Longitudinal stress = ½ × circumferential (hoop) stress** — so the ratio is **1/2**, which is why such vessels split **along their length** |
+| **Modulus of toughness** | The energy absorbed per unit volume up to fracture under tension |
+| **Heat → mechanical energy** | Achieved by steam engines, steam turbines, gas turbines and IC engines — **all of them** |
+
+> **The πDN/60 derivation:** in one revolution a point on the rim travels the **circumference πD**; at **N revolutions per minute** that is **πDN metres per minute**, and dividing by 60 gives **metres per second**. This single formula links **turbine rotational speed to blade tip speed**, and appears throughout machine design.
+
+**Previous Year MCQ List from this Topic:**
+
+- [DC current invented by ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L43)
+- [একটি ঘরে ব্যবহৃত বৈদ্যুতিক যন্ত্রপাতি কিভাবে লাগানো থাকে?](../mcq-answers/electrical-and-electronics.md?plain=1#L52)
+- [The rating of fuse is expressed as ______](../mcq-answers/electrical-and-electronics.md?plain=1#L97)
+- [Bulbs in street lighting are connected in ______.](../mcq-answers/electrical-and-electronics.md?plain=1#L124)
+- [The use of a high speed circuit breaker-](../mcq-answers/electrical-and-electronics.md?plain=1#L133)
+- [Condition of electricity transmission is-](../mcq-answers/electrical-and-electronics.md?plain=1#L142)
+- [_______ helps prevent power surges.](../mcq-answers/electrical-and-electronics.md?plain=1#L420)
+- [Y-Y Connection এ neutral করা হয় কেন?](../mcq-answers/electrical-and-electronics.md?plain=1#L525)
+- [কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোনটির প্রয়োজন হয়?](../mcq-answers/electrical-and-electronics.md?plain=1#L749)
+- [নিউক্লিয়ার পাওয়ার প্লান্টের পাওয়ার ট্রান্সমিশনের জন্য সর্বোচ্চ কত ট্রান্সমিশন ভোল্টেজ ব্যবহার করা হবে?](../mcq-answers/electrical-and-electronics.md?plain=1#L758)
+- [নিউক্লিয়ার পাওয়ার প্লান্টের পাওয়ার ইউনিটের আয়ুষ্কাল কত?](../mcq-answers/electrical-and-electronics.md?plain=1#L767)
+- [নিউক্লিয়ার পাওয়ার প্ল্যান্টের পাওয়ার ট্রান্সমিশনের জন্য সর্বোচ্চ ট্রান্সমিশন ভোল্টেজ কত? Ans: 400KB](../mcq-answers/electrical-and-electronics.md?plain=1#L776)
+- [নিউক্লিয়ার পাওয়ার প্ল্যান্টের “পাওয়ার ইউনিট” এর আয়ুষ্কাল কত বছর? Ans: 50 Year](../mcq-answers/electrical-and-electronics.md?plain=1#L781)
+- [কোনো সাইকেলকে কম্বাইন্ড সাইকেলে রূপান্তর করতে নিচের কোন টারবাইনের প্রয়োজন হয়? Ans: গ্যাস টারবাইন](../mcq-answers/electrical-and-electronics.md?plain=1#L786)
+- [N rpm গতিতে ঘূর্ণায়মান, D ব্যাসবিশিষ্ট একটি পুলিতে তার দিয়ে সংযুক্ত বস্তুর প্রতি সেকেন্ডে রৈখিক বেল কত হবে?](../mcq-answers/electrical-and-electronics.md?plain=1#L791)
+- [কোন বস্তুকে টানা বল (tension force) দিয়ে ভাঙ্গা হলে, সেই বস্তুর শূন্য লোড থেকে ব্রেকিং লোড পর্যন্ত স্ট্রেইস, স্ট্রেইন কার্ডের অন্তর্গত এরিয়াকে কী বলা হয়?](../mcq-answers/electrical-and-electronics.md?plain=1#L800)
+- [তাপ শক্তিকে যান্ত্রিক শক্তিতে রূপান্তর করা হয় কীভাবে?](../mcq-answers/electrical-and-electronics.md?plain=1#L809)
+- [একটি পাতলা বেলনাকার (cylindrical) প্রেসার ভেসেলের লঙ্গিটিউডিনাল স্ট্রেস ও সারকামফারেনশিয়াল স্ট্রেস এর অনুপাত কত হয়?](../mcq-answers/electrical-and-electronics.md?plain=1#L818)
+- [A nuclear power plant is invariably used as a ______ plant.](../mcq-answers/electrical-and-electronics.md?plain=1#L845)
