@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 59 theories
+**Table of Contents** — 15 subtopics · 62 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -85,6 +85,13 @@
 13. **[Heap & Priority Queue](#heap--priority-queue)**
    - [Binary Heap — Structure and Operations](#binary-heap--structure-and-operations)
    - [Priority Queue — Concept and Applications](#priority-queue--concept-and-applications)
+
+14. **[Huffman Coding & Data Compression](#huffman-coding--data-compression)**
+   - [Huffman Coding — Algorithm and Worked Example](#huffman-coding--algorithm-and-worked-example)
+
+15. **[NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction)**
+   - [P, NP, NP-Complete and NP-Hard](#p-np-np-complete-and-np-hard)
+   - [Polynomial-Time Reduction — "A reduces to B"](#polynomial-time-reduction--a-reduces-to-b)
 
 <!-- TOC END -->
 
@@ -4904,3 +4911,294 @@ A **priority queue** is an abstract data type where each element has a **priorit
 **Previous Year Question List from this Topic:**
 
 - [Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.](../written-answers/algorithm.md?plain=1#L3980)
+
+## Huffman Coding & Data Compression
+
+### Huffman Coding — Algorithm and Worked Example
+
+**Huffman coding** is a **lossless data compression** technique that assigns **variable-length binary codes** to characters, giving **shorter codes to more frequent characters** and longer codes to rare ones.
+
+It is a **greedy algorithm**, invented by **David Huffman in 1952**, and it produces the **optimal prefix code** for a given set of frequencies.
+
+#### Why it works — fixed vs variable length
+
+In plain ASCII every character takes **8 bits**, whether it appears once or a thousand times. Huffman coding removes that waste: if 'E' appears 40 % of the time it might get a 2-bit code, while a rare 'Z' gets 9 bits. The **weighted average** drops sharply.
+
+#### The prefix property
+
+> **No code is a prefix of any other code.**
+
+This is essential: it makes the encoded bit stream **uniquely decodable without any separator**. Since every character sits at a **leaf** of the Huffman tree, no character's path can be the beginning of another's — the property comes for free.
+
+#### The algorithm
+
+```
+HuffmanCoding(characters, frequencies):
+    1. Create a leaf node for each character and
+       insert all nodes into a MIN-PRIORITY QUEUE keyed by frequency.
+
+    2. While the queue has more than one node:
+         a. Extract the TWO nodes with the SMALLEST frequencies — call them L and R.
+         b. Create a new internal node whose frequency = freq(L) + freq(R),
+            with L as its left child and R as its right child.
+         c. Insert the new node back into the queue.
+
+    3. The single remaining node is the ROOT of the Huffman tree.
+
+    4. Assign codes by walking the tree:
+         going LEFT  appends '0'
+         going RIGHT appends '1'
+       The code of each character is the path from the root to its leaf.
+```
+
+**Time complexity: O(n log n)** — n extract-min and insert operations on a heap.
+
+#### Worked example — the word "CONNECTION"
+
+**Step 1 — count the frequency of each character.**
+
+`C O N N E C T I O N` — 10 characters in total.
+
+| Character | Frequency |
+|---|---|
+| **N** | 3 |
+| **C** | 2 |
+| **O** | 2 |
+| **E** | 1 |
+| **T** | 1 |
+| **I** | 1 |
+| **Total** | **10** |
+
+**Step 2 — build the tree by repeatedly merging the two smallest.**
+
+| Merge | Nodes combined | New node | Queue after the merge |
+|---|---|---|---|
+| 1 | **E(1) + T(1)** | **ET(2)** | I(1), C(2), O(2), ET(2), N(3) |
+| 2 | **I(1) + C(2)** | **IC(3)** | O(2), ET(2), N(3), IC(3) |
+| 3 | **O(2) + ET(2)** | **OET(4)** | N(3), IC(3), OET(4) |
+| 4 | **N(3) + IC(3)** | **NIC(6)** | OET(4), NIC(6) |
+| 5 | **OET(4) + NIC(6)** | **ROOT(10)** | ROOT(10) |
+
+**Step 3 — the Huffman tree.**
+
+```mermaid
+flowchart TD
+    R["ROOT (10)"] -->|0| A["OET (4)"]
+    R -->|1| B["NIC (6)"]
+    A -->|0| C["O (2)"]
+    A -->|1| D["ET (2)"]
+    D -->|0| E["E (1)"]
+    D -->|1| F["T (1)"]
+    B -->|0| G["N (3)"]
+    B -->|1| H["IC (3)"]
+    H -->|0| I["I (1)"]
+    H -->|1| J["C (2)"]
+```
+
+**Step 4 — read the codes off the tree (left = 0, right = 1).**
+
+| Character | Frequency | **Huffman code** | Code length | Bits used (freq × length) |
+|---|---|---|---|---|
+| **O** | 2 | **00** | 2 | 4 |
+| **E** | 1 | **010** | 3 | 3 |
+| **T** | 1 | **011** | 3 | 3 |
+| **N** | 3 | **10** | 2 | 6 |
+| **I** | 1 | **110** | 3 | 3 |
+| **C** | 2 | **111** | 3 | 6 |
+| | **10** | | | **25 bits** |
+
+**Verify the prefix property:** the codes are 00, 010, 011, 10, 110, 111 — no code is the beginning of another. ✅
+
+**Step 5 — encode the word.**
+
+`C O N N E C T I O N`
+= `111` `00` `10` `10` `010` `111` `011` `110` `00` `10`
+= **`111001010010111011110 0010`** → **25 bits total**
+
+#### Compression achieved
+
+| Encoding | Bits per character | Total bits for "CONNECTION" |
+|---|---|---|
+| **8-bit ASCII** | 8 | 10 × 8 = **80 bits** |
+| **Fixed-length** (6 distinct symbols → 3 bits each) | 3 | 10 × 3 = **30 bits** |
+| **Huffman** | 2.5 (average) | **25 bits** ✅ |
+
+> **Saving vs fixed-length 3-bit code:** (30 − 25) / 30 = **16.67 %**
+> **Saving vs 8-bit ASCII:** (80 − 25) / 80 = **68.75 %**
+> **Average code length** = 25 bits ÷ 10 characters = **2.5 bits per character**
+
+*(Note: the frequency table must also be stored or transmitted with the compressed data so the receiver can rebuild the tree — for short messages this overhead can exceed the saving.)*
+
+#### Decoding
+
+Start at the root and read the bit stream one bit at a time: **0 → go left, 1 → go right**. When you land on a **leaf**, output that character and **jump back to the root**.
+
+*Decoding `11100…`:* 1 → NIC, 1 → IC, 1 → **C** (leaf, output C, restart); 0 → OET, 0 → **O** (leaf, output O) … ✅
+
+#### Properties, advantages and limitations
+
+**Properties**
+- The tree is a **full binary tree**: every internal node has exactly **two** children.
+- For n distinct characters, the tree has **n leaves** and **n − 1 internal nodes**.
+- The **most frequent** character always gets one of the **shortest** codes.
+- Huffman coding is **optimal among prefix codes** for a known symbol distribution.
+- The tree is **not unique** — ties can be broken differently, giving different codes but the **same total bit count**.
+
+**Advantages:** **lossless** (perfect reconstruction); optimal prefix code; simple and fast; used inside **JPEG, MP3, PNG (DEFLATE), ZIP/GZIP**.
+
+**Limitations:** needs **two passes** (count, then encode) unless adaptive Huffman is used; the **frequency table must be transmitted**; performs poorly when all frequencies are nearly equal; **Arithmetic coding** achieves slightly better compression by not being limited to whole-bit code lengths.
+
+#### Lossless vs Lossy compression
+
+| Point | **Lossless** | **Lossy** |
+|---|---|---|
+| Data recovery | **100 % exact** | Approximate — some data is permanently discarded |
+| Compression ratio | Lower (2:1 – 4:1) | Much higher (10:1 – 100:1) |
+| Used for | Text, program code, databases, medical images | Photos, audio, video |
+| Techniques | **Huffman**, LZW, LZ77, RLE, Arithmetic coding | JPEG, MP3, MPEG, AAC |
+| Reversible? | ✅ Yes | ❌ No |
+
+**Previous Year Question List from this Topic:**
+
+- [Huffman encoding draw huffman tree. Given word “CONNECTION”.](../written-answers/algorithm.md?plain=1#L4017)
+
+
+---
+
+## NP-Completeness & Complexity Reduction
+
+### P, NP, NP-Complete and NP-Hard
+
+Complexity classes group problems by **how hard they are to solve**, measured in terms of the time needed as a function of input size.
+
+#### The classes
+
+| Class | Definition | Plain meaning |
+|---|---|---|
+| **P** (Polynomial time) | Problems **solvable** by a deterministic algorithm in polynomial time — O(nᵏ) | **Easy** — we can actually solve these |
+| **NP** (Nondeterministic Polynomial) | Problems whose **solution can be VERIFIED** in polynomial time | **Easy to check**, maybe hard to find |
+| **NP-Complete** | Problems that are **in NP** *and* **NP-hard** — the **hardest problems in NP** | If you solve one efficiently, you solve **all** of NP efficiently |
+| **NP-Hard** | Problems **at least as hard as** every problem in NP. **They need not be in NP** (they may not even be decision problems) | **Hardest** — may not even be verifiable quickly |
+
+```mermaid
+flowchart TD
+    subgraph ASSUME["Assuming P ≠ NP (the standard belief)"]
+        NPH["NP-Hard<br/>(Halting problem, TSP optimisation)"]
+        NPC["NP-Complete<br/>SAT, 3-SAT, Clique, Vertex Cover,<br/>Hamiltonian Cycle, 0/1 Knapsack,<br/>Subset Sum, Graph Colouring"]
+        NP["NP<br/>(verifiable in polynomial time)"]
+        P["P<br/>Sorting, Searching, MST,<br/>Shortest path, Matrix multiplication"]
+        NPH --- NPC
+        NPC --- NP
+        NP --- P
+    end
+```
+
+**Relationships:** **P ⊆ NP**. Every NP-complete problem is in both NP and NP-hard. The intersection of NP and NP-hard *is* NP-complete.
+
+#### Examples
+
+| Class | Examples |
+|---|---|
+| **P** | Sorting, binary search, BFS/DFS, Dijkstra, Kruskal/Prim MST, matrix multiplication, primality testing (AKS), linear programming |
+| **NP** | Everything in P, plus SAT, Clique, Hamiltonian cycle, Subset sum, Graph isomorphism |
+| **NP-Complete** | **SAT** (the first, by Cook-Levin 1971), 3-SAT, **Clique**, **Vertex Cover**, **Hamiltonian Cycle**, **Travelling Salesman (decision version)**, **0/1 Knapsack**, **Subset Sum**, **Graph Colouring**, Bin Packing |
+| **NP-Hard** | TSP **optimisation** version, the **Halting Problem** (not even in NP — it is undecidable), Chess on an n × n board |
+
+#### The P vs NP question
+
+> **Is P = NP?** — i.e. if a solution can be **checked** quickly, can it also be **found** quickly?
+
+This is the most famous open problem in computer science, one of the **Clay Millennium Prize Problems** (US $1 million). **Almost everyone believes P ≠ NP**, but nobody has proved it. If P = NP were proved, modern cryptography (which relies on factoring being hard) would collapse.
+
+**The intuition:** verifying a completed Sudoku grid takes seconds; solving a hard one takes far longer. NP is "easy to check"; P is "easy to solve".
+
+**Previous Year Question List from this Topic:**
+
+- [A reduces to B Polynomial time. Which is better and why?](../written-answers/algorithm.md?plain=1#L4078)
+
+
+---
+
+### Polynomial-Time Reduction — "A reduces to B"
+
+A **reduction** transforms one problem into another so that solving the second also solves the first.
+
+> **A ≤ₚ B** ("A reduces to B in polynomial time") means: there is a **polynomial-time algorithm** that converts any instance of problem **A** into an instance of problem **B**, such that the answer to the B-instance gives the answer to the A-instance.
+
+```mermaid
+flowchart LR
+    A["Instance of problem A"] -->|"polynomial-time<br/>transformation f"| B["Instance of problem B"]
+    B --> S["Algorithm for B"]
+    S --> R["Answer"]
+    R -->|"same answer"| AA["Answer for A"]
+```
+
+#### What the direction means — the key exam point
+
+> **A ≤ₚ B means "B is AT LEAST AS HARD AS A."**
+>
+> The arrow points **towards the harder problem**. A is *no harder than* B.
+
+**The two consequences (learn both):**
+
+| If we know … | Then we conclude … |
+|---|---|
+| **A ≤ₚ B** and **B is easy** (in P) | **A is also easy** (in P) — solve A by converting it to B |
+| **A ≤ₚ B** and **A is hard** (NP-complete) | **B is also hard** (NP-hard) — because B could solve A |
+
+#### "A reduces to B in polynomial time — which is better, and why?"
+
+> **Answer: B is the "better" (more powerful / more general) problem, and A is the "better" (easier / more tractable) one to actually face.**
+>
+> Precisely:
+> - **B is at least as hard as A.** Having an algorithm for B automatically gives you an algorithm for A, at the cost of only a polynomial-time conversion. So **B is the more powerful problem** — it can solve A as a by-product.
+> - **A is no harder than B.** If you are given a choice of which problem to be stuck with, **A is better**, because A can never be harder than B (it could be strictly easier).
+>
+> **Which is preferable depends on what you want:**
+> - **To SOLVE something:** having a fast algorithm for **B** is better — it hands you A for free.
+> - **To face a problem:** being given **A** is better — it is the easier of the two.
+> - **To PROVE hardness:** you reduce a known hard problem *into* your new problem (known-hard ≤ₚ new), which proves the new one is hard too.
+
+#### Why reductions matter
+
+1. **Proving NP-completeness.** To show a new problem X is NP-complete you must:
+   - (a) show **X ∈ NP** (a solution can be verified in polynomial time), and
+   - (b) show **Y ≤ₚ X** for some **known** NP-complete Y.
+   This is exactly how the whole NP-complete family was built up from **SAT** (Cook-Levin theorem, 1971), which Karp then extended to **21 problems** in 1972.
+
+2. **Reusing algorithms.** Many practical problems are reduced to **SAT**, **Integer Linear Programming** or **max-flow**, and then solved with a highly optimised off-the-shelf solver.
+
+3. **Classifying difficulty** without solving anything.
+
+#### Classic reduction chain
+
+```mermaid
+flowchart LR
+    SAT["SAT<br/>(Cook-Levin: the first NP-complete problem)"] --> TSAT["3-SAT"]
+    TSAT --> CL["Clique"]
+    CL --> VC["Vertex Cover"]
+    VC --> HC["Hamiltonian Cycle"]
+    HC --> TSP["Travelling Salesman"]
+    TSAT --> SS["Subset Sum"]
+    SS --> KS["0/1 Knapsack"]
+    TSAT --> GC["Graph Colouring"]
+```
+
+**Properties of ≤ₚ:** it is **transitive** — if A ≤ₚ B and B ≤ₚ C, then **A ≤ₚ C**. This is what lets the chain above grow indefinitely from a single root.
+
+#### What to do when a problem is NP-complete
+
+Since no polynomial algorithm is known (and probably none exists), practitioners use:
+
+| Strategy | Idea |
+|---|---|
+| **Approximation algorithms** | Accept a provably near-optimal answer (e.g. a 2-approximation for Vertex Cover) |
+| **Heuristics / metaheuristics** | Greedy, genetic algorithms, simulated annealing — good answers, no guarantee |
+| **Exponential but practical** | Branch and bound, dynamic programming (e.g. 0/1 Knapsack in O(n·W)) |
+| **Restrict the input** | Many NP-hard graph problems are easy on **trees** or **planar** graphs |
+| **Parameterised algorithms** | Fast when a key parameter k is small — O(f(k) · nᶜ) |
+| **Use a solver** | Reduce to SAT / ILP and run a modern industrial solver |
+
+**Previous Year Question List from this Topic:**
+
+- [A reduces to B Polynomial time. Which is better and why?](../written-answers/algorithm.md?plain=1#L4078)
