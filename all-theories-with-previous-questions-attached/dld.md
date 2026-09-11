@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 16 theories
+**Table of Contents** — 10 subtopics · 18 theories
 
 1. **[Logic Gates & Universal Gates](#logic-gates--universal-gates)**
    - [Logic Gates — The Basic Building Blocks](#logic-gates--the-basic-building-blocks)
@@ -8,6 +8,8 @@
 2. **[Number Systems & Base Conversions](#number-systems--base-conversions)**
    - [Number Systems and Codes](#number-systems-and-codes)
    - [Signed Numbers and 2's Complement](#signed-numbers-and-2s-complement)
+   - [Bitwise Operations, Masking and Shifts](#bitwise-operations-masking-and-shifts)
+   - [Character Encoding and Data Units — ASCII, Unicode, BCD and Storage Sizes](#character-encoding-and-data-units--ascii-unicode-bcd-and-storage-sizes)
 
 3. **[Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem)**
    - [Boolean Algebra — Laws and Simplification](#boolean-algebra--laws-and-simplification)
@@ -175,6 +177,19 @@ Both columns match in every row, so the identities hold. ∎
 - [Describe the seven basic logic gates and show their truth table.](../written-answers/dld.md?plain=1#L1887)
 - [Why binary logic is used for digital system?](../written-answers/dld.md?plain=1#L1973)
 - [(a) Consider the following logic circuit.](../written-answers/dld.md?plain=1#L2079)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The logic gate that will have a Low output then any one of its inputs is High is ______.](../mcq-answers/dld.md?plain=1#L475)
+- [What is the name of the following symbol?](../mcq-answers/dld.md?plain=1#L484)
+- [In which logic gate output is 1 when all inputs are zero?](../mcq-answers/dld.md?plain=1#L490)
+- [A technician testing a logic circuit sees that the output of a particular INVERTER is stuck LOW while its input is pulsing. Which one of the following is the po…](../mcq-answers/dld.md?plain=1#L499)
+- [Write the name of the Gate:](../mcq-answers/dld.md?plain=1#L517)
+- [The OR, XOR & AND functions can be performed by ____ of the computer in a CPU.](../mcq-answers/dld.md?plain=1#L523)
+- [When two variables are logically compared, the logic gate that tests the equivalence is–](../mcq-answers/dld.md?plain=1#L541)
+- [Binary circuit elements have](../mcq-answers/dld.md?plain=1#L550)
+- [Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?](../mcq-answers/dld.md?plain=1#L532)
+
 
 
 ---
@@ -346,6 +361,16 @@ Factoring: **`F = C(A + B)`**
 - [How will realize a AND gate and OR gate using CMOS NAND and NOR gate?](../written-answers/dld.md?plain=1#L1684)
 - [(খ) Universal Gate কাকে বলে? Universal Gate-এর সার্বজনীনতা প্রমাণ করুন।](../written-answers/dld.md?plain=1#L1749)
 - [What do you understand by universality of logic gate? Prove universality of NOR logic gate.](../written-answers/dld.md?plain=1#L2012)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is a Universal logic gate?](../mcq-answers/dld.md?plain=1#L439)
+- [3 ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট 0 হলে আউটপুট কত?](../mcq-answers/dld.md?plain=1#L448)
+- [What is the lowest number of NAND gates required to make in inverter?](../mcq-answers/dld.md?plain=1#L457)
+- [Universal logic gate is:](../mcq-answers/dld.md?plain=1#L466)
+- [Which is the universal gate?](../mcq-answers/dld.md?plain=1#L559)
+- [NAND gates are preferred over other because these ________](../mcq-answers/dld.md?plain=1#L568)
+
 
 
 ---
@@ -651,6 +676,29 @@ Checking each group: `1001` = 9 ✅ (not > 9) and `0011` = 3 ✅ — **no correc
 - [a) Describe the binary and hexadecimal numbering methods with numerical examples.](../written-answers/dld.md?plain=1#L3318)
 - [b) Why does the computer require number conversion?](../written-answers/dld.md?plain=1#L3377)
 
+**Previous Year MCQ List from this Topic:**
+
+- [(1111111101)_2 = (?)_{10}](../mcq-answers/dld.md?plain=1#L55)
+- [(2023)_{10} = (?)_{16}](../mcq-answers/dld.md?plain=1#L73)
+- [Which of the following numbers is the next sequence number of 77_8 in Octal number system?](../mcq-answers/dld.md?plain=1#L91)
+- [Which of the following values is the correct value of this hexadecimal code 1F.01B?](../mcq-answers/dld.md?plain=1#L167)
+- [Which one is the binary representation of (1234567)_{10}?](../mcq-answers/dld.md?plain=1#L212)
+- [Convert the binary number (1011010)_2 into hexadecimal?](../mcq-answers/dld.md?plain=1#L221)
+- [Number systems used in the computer is known as:](../mcq-answers/dld.md?plain=1#L257)
+- [________ are the two symbols present in the binary number system.](../mcq-answers/dld.md?plain=1#L266)
+- [Which one of the following is equivalent hexadecimal number of (734)_8?](../mcq-answers/dld.md?plain=1#L284)
+- [দশমিক পদ্ধতির সংখ্যা 300_{(10)} কে Hexadecimal এ রূপান্তর করলে কত হবে?](../mcq-answers/dld.md?plain=1#L302)
+- [(\text{B12})_{16} + (\text{5CA})_{16} = ?](../mcq-answers/dld.md?plain=1#L320)
+- [What is the binary of (68)_{10}?](../mcq-answers/dld.md?plain=1#L338)
+- [(2019)_{10} in Binary is ________.](../mcq-answers/dld.md?plain=1#L356)
+- [(11100010)_2 has a decimal value of ________.](../mcq-answers/dld.md?plain=1#L365)
+- [For some base r, the digits which are allowed in its representation are?](../mcq-answers/dld.md?plain=1#L374)
+- [On which number system computer does not work?](../mcq-answers/dld.md?plain=1#L410)
+- [What is the Hexadecimal form of (2016)_{10}?](../mcq-answers/dld.md?plain=1#L419)
+- [Which of the following is the Octal equivalent of the hexadecimal number 7B5? ( নিচের হেক্সাডেসিমাল সংখ্যা 7B5-এর সমতুল্য অক্টাল সংখ্যা কী হবে?)](../mcq-answers/dld.md?plain=1#L657)
+- [Which number system is used internally by a computer? ( কম্পিউটার অভ্যন্তরে কোন সংখ্যা পদ্ধতি ব্যবহার করে? )](../mcq-answers/dld.md?plain=1#L666)
+
+
 
 ---
 
@@ -783,6 +831,300 @@ int bitsToChange(int a, int b) {
 - [How many bits have to change to convert int A to int B. Sample A=31 and B=14.](../written-answers/dld.md?plain=1#L9137)
 - [(b) Represent - 25 in 8 bit binary using 2's complement.](../written-answers/dld.md?plain=1#L9197)
 - [X = 00110, Y = 11100 are represented in 5-bit signed 2's complement system. Then their sum X + Y in 6-bit signed 2's complemented representation is? (05)](../written-answers/dld.md?plain=1#L9257)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the 2's complement of (65)_{16} number?](../mcq-answers/dld.md?plain=1#L19)
+- [The greatest negative number which can be stored in computer that has 8-bits work length and use 2's complement arithmetic is ______.](../mcq-answers/dld.md?plain=1#L46)
+- [Find out 2's complement value of 11100101.](../mcq-answers/dld.md?plain=1#L64)
+- [If a processor has 8-bit register, what is the value of (11111111)_2 represented in 2's complement form-](../mcq-answers/dld.md?plain=1#L100)
+- [10000000 এর বাইনারী নম্বরটির 2's complement ফরম্যাটের মান কত (৮ বিট)?](../mcq-answers/dld.md?plain=1#L239)
+- [What is the largest decimal value that can be represented by 12 bits?](../mcq-answers/dld.md?plain=1#L329)
+- [When we subtract 3 from 2, the answer is-](../mcq-answers/dld.md?plain=1#L428)
+
+
+---
+
+### Bitwise Operations, Masking and Shifts
+
+> **BITWISE operations act on the INDIVIDUAL BITS of a value**, unlike arithmetic operations which treat it as a whole number. They are the basis of flags, masks, permissions, compression, cryptography and hardware control.
+
+#### The bitwise operators
+
+| Operator | Name | Rule | Effect on a bit |
+|---|---|---|---|
+| **`&`** | ⭐ **AND** (logical product) | 1 only if **BOTH** are 1 | ⭐ **CLEARS bits** (with a 0 in the mask); **keeps** them (with a 1) |
+| **`\|`** | ⭐ **OR** (logical sum) | 1 if **EITHER** is 1 | ⭐ **SETS bits** (with a 1 in the mask) |
+| **`^`** | ⭐ **XOR** (exclusive logical sum) | 1 if they **DIFFER** | ⭐ **TOGGLES/FLIPS bits** (with a 1 in the mask) |
+| **`~`** | **NOT** (complement) | Inverts every bit | 1's complement |
+| **`<<`** | Left shift | | **Multiplies by 2ⁿ** |
+| **`>>`** | Right shift | | **Divides by 2ⁿ** |
+
+```
+        A = 1 0 1 0 1 1 1 1
+        B = 0 0 1 1 0 0 1 1
+            ─────────────────
+   A & B  = 0 0 1 0 0 0 1 1      AND — 1 only where BOTH are 1
+   A | B  = 1 0 1 1 1 1 1 1      OR  — 1 where EITHER is 1
+   A ^ B  = 1 0 0 1 1 1 0 0      XOR — 1 only where they DIFFER
+     ~A   = 0 1 0 1 0 0 0 0      NOT — every bit inverted
+```
+
+> ### **Worked: `10101111 OR 00110011`** → align the columns and take 1 wherever either has a 1:
+> ### ✅ **10111111**
+>
+> ### **Worked: `01010101 XOR 11111111`** → XOR with all-ones **inverts every bit**:
+> ### ✅ **10101010**
+>
+> ⭐ **XOR with 11111111 is exactly the 1's complement** — that is the shortcut worth remembering.
+
+#### ⭐ Masking — the most examined use
+
+> ### **A MASK is a constant chosen so that AND/OR/XOR affects only the bits you want.**
+
+| Goal | Operation | Why |
+|---|---|---|
+| ⭐ **KEEP (preserve) selected bits, clear the rest** | ⭐ **AND with a mask having 1s where you want to keep** | 1 AND x = x (keeps), 0 AND x = 0 (clears) |
+| ⭐ **SET selected bits to 1** | ⭐ **OR with a mask having 1s there** | 1 OR x = 1 (sets), 0 OR x = x (leaves) |
+| ⭐ **TOGGLE selected bits** | ⭐ **XOR with a mask having 1s there** | 1 XOR x = ~x (flips), 0 XOR x = x (leaves) |
+| **TEST whether a bit is set** | `if (N & (1 << k))` | Non-zero ⇒ bit k is 1 |
+| **Leave N completely unchanged** | `N & FFh`, `N \| 00h`, `N ^ 00h` | The identity masks |
+
+**Worked example — the classic MCQ**
+> *For an 8-bit number N, which operation does NOT change its LOWER 4 BITS?*
+```
+   0Fh = 0000 1111     ← 1s in the LOW nibble, 0s in the HIGH nibble
+
+   N        = a b c d  w x y z        (abcd = high nibble, wxyz = low nibble)
+   0Fh      = 0 0 0 0  1 1 1 1
+   N & 0Fh  = 0 0 0 0  w x y z        ⭐ the LOW four bits SURVIVE UNCHANGED;
+                                          only the HIGH four are cleared
+```
+> ### ✅ **A LOGICAL PRODUCT (AND) OF N WITH 0Fh** — it preserves the lower four bits exactly.
+>
+> **Why the other options fail:** **OR with 0Fh** forces all four low bits to **1**; **XOR with 0Fh** **inverts** all four; a "negative logical product" (NAND) also alters them. ⭐ **The rule to carry away: ANDing with a mask KEEPS the bits under the 1s and CLEARS the bits under the 0s.**
+
+**Practical uses of masking:** extracting a nibble, byte or colour channel from a packed value · **subnet masks in networking** (`IP & mask` gives the network address) · **file permissions** (`chmod` bits) · flag registers · setting and clearing hardware control bits.
+
+#### Shift operations
+
+```
+   N = 1010 1111                     (0xAF = 175)
+
+   N << 1  = 0101 1110   (0x5E)      ⭐ shift LEFT  by 1 → MULTIPLY by 2 (bits fall off the top)
+   N >> 1  = 0101 0111   (0x57)      ⭐ shift RIGHT by 1 → DIVIDE   by 2 (integer division)
+   N >> 2  = 0010 1011               divide by 4
+```
+
+| Shift | Meaning |
+|---|---|
+| ⭐ **Left shift `<< n`** | ⭐ **Multiply by 2ⁿ** — zeros enter from the right |
+| ⭐ **Logical right shift `>>> n`** | ⭐ **Divide by 2ⁿ — ZEROS enter from the left** (unsigned) |
+| **Arithmetic right shift `>> n`** | Divide by 2ⁿ, but the **SIGN BIT is replicated**, so negative numbers stay negative |
+| **Rotate** | Bits that fall off one end re-enter at the other |
+
+**Worked example — logical right shift of a hex value**
+> *The hexadecimal value ABCD is held in a 32-bit register and is LOGICALLY SHIFTED RIGHT by two bits. What is the result?*
+```
+   Step 1 — write it in binary (32-bit, so the top 16 bits are zero):
+        0x0000ABCD = 0000 0000 0000 0000  1010 1011 1100 1101
+
+   Step 2 — shift right 2, bringing in ZEROS from the left:
+                     0000 0000 0000 0000  0010 1010 1111 0011
+
+   Step 3 — regroup in fours and convert back to hex:
+                     0010 1010 1111 0011  =  2   A   F   3
+```
+> ### ✅ **2AF3**
+>
+> **The arithmetic check:** 0xABCD = 43,981; 43,981 ÷ 4 = 10,995 (integer); 10,995 = **0x2AF3** ✓ — **shifting right by 2 is dividing by 4**, which is a fast way to verify the answer.
+
+#### Two bit-trick identities worth recognising
+
+```
+   ① Toggling a 0/1 variable WITHOUT a branch:
+         if (Y == 0) Y = 1; else Y = 0;      ⟺   ⭐ Y = 1 - Y      (also Y ^= 1)
+
+   ② Testing divisibility by a power of two:
+         a number is divisible by 2ᵏ  ⟺  its LAST k BITS ARE ALL ZERO
+```
+
+**Worked example — the divisor question**
+> *Which is NOT a divisor of `(1001011011110000000)₂`?*
+```
+   Count the TRAILING ZEROS:  …1111 0000000  →  ⭐ SEVEN trailing zeros
+
+   ⇒ the number is divisible by 2⁷ = 128, and by every smaller power of two
+     (2, 4, 8, 16, 32, 64, 128)
+
+   ⇒ it is NOT divisible by 2⁸ = 256, because that would need EIGHT trailing zeros
+```
+> ### ✅ **(256)₁₀ is NOT a divisor.**
+>
+> **The general rule: a binary number with exactly k trailing zeros is divisible by 2ᵏ but NOT by 2ᵏ⁺¹.** No conversion to decimal is needed — just count the zeros.
+
+#### Where these operations happen in hardware
+
+> ### **"The OR, XOR and AND functions are performed by the ______ of the CPU."** → ### ✅ **The ALU (Arithmetic Logic Unit)** — specifically its **logic section**. *(See also **Bitwise operations** in the ALU discussion under computer architecture.)*
+>
+> ### **"Binary circuit elements have ______"** → ### ✅ **TWO STABLE STATES** — which is precisely why digital systems are binary: a circuit that is reliably either **fully on or fully off** is far more noise-immune than one that must hold ten distinguishable voltage levels.
+
+**Previous Year MCQ List from this Topic:**
+
+- [নিম্নের কোন লজিক অপারেশনটি সঠিক?](../mcq-answers/dld.md?plain=1#L109)
+- [Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?](../mcq-answers/dld.md?plain=1#L149)
+- [Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?](../mcq-answers/dld.md?plain=1#L176)
+- [Suppose, Y is an integer variable whose value is either 0 or 1. Which of the following is the equivalent of the statement. if(Y==0) Y=1; else Y=0;?](../mcq-answers/dld.md?plain=1#L185)
+- [Among the following which is not a divisor of - (1001011011110000000)_2?](../mcq-answers/dld.md?plain=1#L194)
+- [Suppose you have an 8-bit binary number N. Which of the following operations does not change its lower 4 bits?](../mcq-answers/dld.md?plain=1#L203)
+- [10101111 ও 00110011 এর Bitwise OR এর ফলাফল কত?](../mcq-answers/dld.md?plain=1#L311)
+- [The Ex-OR of this string 01010101 with 11111111 is ________.](../mcq-answers/dld.md?plain=1#L383)
+- [When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? ( একট…](../mcq-answers/dld.md?plain=1#L648)
+- [The OR, XOR & AND functions can be performed by ____ of the computer in a CPU.](../mcq-answers/dld.md?plain=1#L523)
+- [Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?](../mcq-answers/dld.md?plain=1#L532)
+- [Binary circuit elements have](../mcq-answers/dld.md?plain=1#L550)
+
+
+---
+
+### Character Encoding and Data Units — ASCII, Unicode, BCD and Storage Sizes
+
+#### The units of digital data
+
+| Unit | Size | Note |
+|---|---|---|
+| **Bit** | 1 binary digit — **0 or 1** | The smallest unit |
+| ⭐ **NIBBLE** | ⭐ **4 BITS** | **Exactly one HEXADECIMAL digit** — which is why hex is so convenient |
+| ⭐ **BYTE** | ⭐ **8 BITS** | The standard addressable unit; holds one ASCII character |
+| **Word** | 16 / 32 / 64 bits | Machine-dependent — the processor's natural size |
+| **KB (kilobyte)** | **1024 bytes = 2¹⁰** | |
+| **MB** | 1024 KB = 2²⁰ bytes | |
+| **GB** | 1024 MB = 2³⁰ bytes | |
+| **TB** | 1024 GB = 2⁴⁰ bytes | |
+| **PB → EB → ZB → YB** | ×1024 each | |
+
+> ### **"A nibble is equal to…"** → ### ✅ **4 BITS.**
+> ### **"Order by number of bits"** → ### ✅ **byte < KB < GB < TB.**
+>
+> **Worked: "A computer has 960 KB of main memory — the exact number of bytes?"** → ### ✅ **960 × 1024 = 983,040 bytes.** ⚠️ **Not 960 × 1000** — in memory terms the prefix K means **2¹⁰ = 1024**. *(Strictly, the IEC names for the binary units are **KiB, MiB, GiB**; disk manufacturers use decimal 1000, which is why a "1 TB" drive shows as about 931 GiB.)*
+
+#### ⭐ How many bits are needed for N symbols?
+
+> ### **n bits can represent 2ⁿ distinct patterns.** To represent **N different symbols** you need:
+> ### **n = ⌈ log₂ N ⌉**  — the smallest n with **2ⁿ ≥ N**
+
+**Worked example**
+> *A computer system needs to store 100 different symbols. How many bits are required?*
+```
+   2⁶ = 64   → not enough (64 < 100)
+   2⁷ = 128  → ✅ enough (128 ≥ 100)
+
+   n = ⌈log₂ 100⌉ = ⌈6.64⌉ = 7
+```
+> ### ✅ **7 bits.**
+>
+> **The method: keep doubling until you pass N, and count the doublings.** The same formula answers "how many bits for 26 letters?" (5), "for 1000 items?" (10), and "how many address lines for 1 MB?" (20).
+
+| Related standard result | Value |
+|---|---|
+| **Largest unsigned value in n bits** | ⭐ **2ⁿ − 1** |
+| **12 bits** | 2¹² − 1 = ⭐ **4095** |
+| **Signed range in n bits (2's complement)** | **−2ⁿ⁻¹ to 2ⁿ⁻¹ − 1** |
+| **8-bit signed range** | ⭐ **−128 to +127** — so the **greatest NEGATIVE number is −128** |
+| **8-bit `11111111` in 2's complement** | ⭐ **−1** |
+| **8-bit `10000000` in 2's complement** | ⭐ **−128** (the most negative value) |
+| **Digits allowed in base r** | ⭐ **0 to r − 1** |
+
+#### ⭐ Character encoding standards
+
+| Code | Bits | Characters | Notes |
+|---|---|---|---|
+| ⭐ **ASCII (standard)** | ⭐ **7 bits** | **128** | American Standard Code for Information Interchange; the original |
+| ⭐ **ASCII-8 / Extended ASCII** | ⭐ **8 bits** | ⭐ **256** | Adds 128 more symbols (accents, box drawing) |
+| **EBCDIC** | 8 bits | 256 | IBM mainframe code — **not compatible with ASCII** |
+| ⭐ **UNICODE** | ⭐ **16 bits** *(as usually examined)* | **65,536 in the BMP** | ⭐ **Designed to represent EVERY writing system in the world — including বাংলা** |
+| **UTF-8** | **1–4 bytes, variable** | All of Unicode | **ASCII-compatible**; the dominant encoding of the web |
+| **UTF-16 / UTF-32** | 2 or 4 bytes | All of Unicode | |
+
+> ### **"How many unique signs can be specified using ASCII-8?"** → ### ✅ **256** (= 2⁸).
+> ### **"How many bits in ASCII-8?"** → ### ✅ **8.**
+> ### **"How many bits in Unicode?"** → ### ✅ **16.**
+>
+> ⚠️ **A precise footnote worth knowing:** Unicode **began** as a 16-bit scheme, and **16 is the expected exam answer**. Modern Unicode actually defines **code points up to U+10FFFF — about 21 bits** — with UTF-8 and UTF-16 encoding them in a variable number of bytes. **Answer 16, and add the qualification if the question asks for explanation.**
+
+#### ASCII values worth memorising
+
+| Character(s) | Decimal |
+|---|---|
+| `'0'` – `'9'` | **48 – 57** |
+| ⭐ `'A'` – `'Z'` | ⭐ **65 – 90** |
+| ⭐ `'a'` – `'z'` | ⭐ **97 – 122** |
+| **`'b'`** | ⭐ **98** (= 97 + 1) |
+| Space | 32 |
+| `\0` (null) | 0 |
+| Enter / LF | 13 / 10 |
+
+> ### **"'b' এর ASCII value কত?"** → ### ✅ **98.**
+>
+> ⭐ **The single fact that generates all of them: `'A' = 65` and `'a' = 97`, a difference of exactly 32 (= 2⁵).** So case conversion is just **flipping bit 5**: `'a' − 32 = 'A'`, and `ch ^ 32` toggles the case of any letter. *(This also gives `'D'=68, 'E'=69, 'F'=70`, which is why `'D'+'E'+'F'` evaluates to 207.)*
+
+#### ⭐ BCD — Binary Coded Decimal
+
+> ### **BCD encodes EACH DECIMAL DIGIT SEPARATELY in its own group of 4 BITS**, instead of converting the whole number to binary.
+
+```
+   Decimal 59 in BCD :      5        9
+                        0101     1001        →  0101 1001   (8 bits for 2 digits)
+
+   Decimal 59 in pure binary :  111011       →  only 6 bits
+
+   ⚠️ BCD is LESS COMPACT — the patterns 1010 to 1111 (10–15) are WASTED,
+      so about 17 % of the coding space is unused.
+```
+
+| Point | Detail |
+|---|---|
+| ⭐ **Bits per decimal digit** | ⭐ **4** (the "8421" code) |
+| **Valid patterns** | 0000–1001 only; **1010–1111 are invalid** |
+| **Advantage** | ⭐ **Trivial conversion to and from decimal display**, and **no rounding error** in decimal fractions |
+| **Disadvantage** | **Wastes space** and needs more complex arithmetic circuitry |
+| **Used in** | ⭐ **Calculators, digital clocks, instrument displays, FINANCIAL systems** (where decimal exactness matters) |
+
+> ### ⚠️ **The 4-bit vs 6-bit BCD conflict — both appear in this question bank, and both are right in context:**
+> | Question | Answer | Which BCD |
+> |---|---|---|
+> | **"বিসিডি কোডে বিট সংখ্যা কত?"** | ### ✅ **4** | ⭐ **Standard BCD (8421)** — encoding **one DECIMAL DIGIT** |
+> | **"Number of bits in 'BCD' code used in computing"** | ### ✅ **6** | ⭐ **BCD CHARACTER CODE** — the early IBM 6-bit code giving **64 characters** (letters, digits and symbols), the predecessor of EBCDIC |
+>
+> **Read the question carefully: if it says "BCD code" for a NUMBER/DIGIT, the answer is 4; if it says "BCD code used in computing" as a CHARACTER SET, the answer is 6.**
+
+**Related codes:** **Excess-3** (BCD + 3, self-complementing) · ⭐ **GRAY CODE** (only **ONE bit changes** between consecutive values — used in rotary encoders and K-maps to avoid transition errors) · **2421, 5211** weighted codes · **parity codes** for error detection.
+
+#### Why computers use binary
+
+> ### **"Which number system is used INTERNALLY by a computer?"** → ### ✅ **BINARY.**
+> ### **"On which number system does a computer NOT work?"** → ### ✅ **DECIMAL.**
+>
+> **The reason is physical, not mathematical:** an electronic switch reliably has **two stable states** — on/off, high/low voltage, charged/uncharged, magnetised north/south. Distinguishing **two** levels is **robust against noise, temperature drift and component ageing**; distinguishing ten would require precise voltage thresholds and would fail constantly. **Binary is chosen because it is the most RELIABLE, not the most compact.**
+>
+> ⭐ **Why HEXADECIMAL and OCTAL exist alongside it:** they are **shorthand for binary** — one hex digit is exactly **4 bits (a nibble)** and one octal digit exactly **3 bits**, so conversion is pure grouping with no arithmetic. `1011010₂` → group in fours from the right → `0101 1010` → **5A₁₆**. That is why memory addresses, colour codes and machine code are always written in hex.
+
+**Previous Year MCQ List from this Topic:**
+
+- [A computer system needs to store 100 different symbols. In this case, how many bits of data is required for each symbol?](../mcq-answers/dld.md?plain=1#L37)
+- [A computer has main memory of 960 Kb. What is the exact number of bytes contained in this memory?](../mcq-answers/dld.md?plain=1#L82)
+- [বিসিডি কোডে বিট সংখ্যা কত?](../mcq-answers/dld.md?plain=1#L119)
+- [bit এর সংখ্যার বিচারে নিচের কোন ক্রমটি সঠিক?](../mcq-answers/dld.md?plain=1#L139)
+- [‘b’ এর ASCII value কত?](../mcq-answers/dld.md?plain=1#L230)
+- [Number of bits in 'BCD' code used in computing are-](../mcq-answers/dld.md?plain=1#L248)
+- [How many unique signs could be specified by using ASCII-8?](../mcq-answers/dld.md?plain=1#L275)
+- [A nibble is equal to:](../mcq-answers/dld.md?plain=1#L293)
+- [1(one) nibble equal to—](../mcq-answers/dld.md?plain=1#L347)
+- [How many numerical bits of ASCII -8 codes?](../mcq-answers/dld.md?plain=1#L392)
+- [How many bits in Unicode?](../mcq-answers/dld.md?plain=1#L401)
+
+
+
 
 
 ---
@@ -972,6 +1314,15 @@ By the complement law, **X + X̄ = 1** with X = A·B:
 - [Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$](../written-answers/dld.md?plain=1#L7547)
 - [Construct a truth table for the following function: $(r \lor (q \land \neg p)) \land \neg(r \land (q \land \neg p))$ is the same as $r \oplus (q \land \neg p)$…](../written-answers/dld.md?plain=1#L7613)
 - [Trouth table construction for $f(A,B,C,D) = (A+B) \oplus (CD)$](../written-answers/dld.md?plain=1#L7667)
+
+**Previous Year MCQ List from this Topic:**
+
+- [\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) Which is the simplified form of this?](../mcq-answers/dld.md?plain=1#L508)
+- [The simplified form of the Boolean expression (A+B+AB) (A+C) is–](../mcq-answers/dld.md?plain=1#L704)
+- [Which one of the following has the truth value FALSE for the variables A=TRUE and B=TRUE and C=TRUE?](../mcq-answers/dld.md?plain=1#L713)
+- [Which of the logic expressions is equivalent to the digital circuit shown in the figure?](../mcq-answers/dld.md?plain=1#L722)
+- [According to Boolean algebra the value of: (A + AB) \cdot (B + AB) is-](../mcq-answers/dld.md?plain=1#L728)
+
 
 
 ---
@@ -1608,6 +1959,12 @@ From the same table, the output is **Y1 = AB + BC + AC** — the **majority func
 - [For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Lin…](../written-answers/dld.md?plain=1#L6162)
 - [4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।](../written-answers/dld.md?plain=1#L6238)
 
+**Previous Year MCQ List from this Topic:**
+
+- [How many select line would be there if the inputs of a MUX are 8?](../mcq-answers/dld.md?plain=1#L739)
+- [A decoder has four input lines. How many output lines will be there?](../mcq-answers/dld.md?plain=1#L748)
+
+
 
 ---
 
@@ -1717,6 +2074,15 @@ flowchart LR
 - [Difference between Register and Latch.](../written-answers/dld.md?plain=1#L8423)
 - [What is the difference between flip-flop and latch with figure?](../written-answers/dld.md?plain=1#L8555)
 - [What is the difference between latch and flip-flop?](../written-answers/dld.md?plain=1#L8619)
+
+**Previous Year MCQ List from this Topic:**
+
+- [In which flip flop the present input will be the next output?](../mcq-answers/dld.md?plain=1#L579)
+- [A basic memory storage element in a digital system is:](../mcq-answers/dld.md?plain=1#L588)
+- [How much data a flip flop can store?](../mcq-answers/dld.md?plain=1#L597)
+- [Which one is the output of the following digital logic circuit?](../mcq-answers/dld.md?plain=1#L615)
+- [যে বর্তনী ১-বিট ডাটা সংরক্ষণ করতে পারে তা হলো-](../mcq-answers/dld.md?plain=1#L638)
+
 
 
 ---
@@ -1880,6 +2246,11 @@ flowchart LR
 - [Ripple counter কী? একটি তিন বিটের Asynchronous up ripple counter এর গঠন লিখুন।](../written-answers/dld.md?plain=1#L8287)
 - [(c) Draw the circuit diagram of a mod-10 asynchronous ripple up counter and explain its operation.](../written-answers/dld.md?plain=1#L8346)
 - [What is synchronous? Why sequential circuit use synchronization.](../written-answers/dld.md?plain=1#L8522)
+
+**Previous Year MCQ List from this Topic:**
+
+- [A binary counter is being pulsed by a 256 kHz clock signal. The output frequency from the last flip flop is 2kHz. Which one of the following is the counting ran…](../mcq-answers/dld.md?plain=1#L606)
+
 
 
 ---
@@ -2183,6 +2554,15 @@ flowchart TD
 - [BCD Addition: 00010011 + 00100110](../written-answers/dld.md?plain=1#L9069)
 - [How many bits have to change to convert int A to int B. Sample A=31 and B=14.](../written-answers/dld.md?plain=1#L9137)
 
+**Previous Year MCQ List from this Topic:**
+
+- [What is the result of the binary sum 10101+1011?](../mcq-answers/dld.md?plain=1#L28)
+- [বাইনারি পদ্ধতির যোগে 1+1+1 = কত?](../mcq-answers/dld.md?plain=1#L129)
+- [When we subtract 3 from 2, the answer is-](../mcq-answers/dld.md?plain=1#L428)
+- [What is the result of the binary sum?( নিচের বাইনারি যোগফলের ফলাফল কত? ) 10101 + 1011](../mcq-answers/dld.md?plain=1#L675)
+- [(\text{B12})_{16} + (\text{5CA})_{16} = ?](../mcq-answers/dld.md?plain=1#L320)
+
+
 
 ---
 
@@ -2277,3 +2657,12 @@ flowchart LR
 - [(b) Represent - 25 in 8 bit binary using 2's complement.](../written-answers/dld.md?plain=1#L9197)
 - [X = 00110, Y = 11100 are represented in 5-bit signed 2's complement system. Then their sum X + Y in 6-bit signed 2's complemented representation is? (05)](../written-answers/dld.md?plain=1#L9257)
 - [Convert the following octal number into decimal and hexadecimal: (651.124)_8.](../written-answers/dld.md?plain=1#L9275)
+
+**Previous Year MCQ List from this Topic:**
+
+- [(2023)_{10} = (?)_{16}](../mcq-answers/dld.md?plain=1#L73)
+- [Convert the binary number (1011010)_2 into hexadecimal?](../mcq-answers/dld.md?plain=1#L221)
+- [Which one of the following is equivalent hexadecimal number of (734)_8?](../mcq-answers/dld.md?plain=1#L284)
+- [দশমিক পদ্ধতির সংখ্যা 300_{(10)} কে Hexadecimal এ রূপান্তর করলে কত হবে?](../mcq-answers/dld.md?plain=1#L302)
+- [What is the Hexadecimal form of (2016)_{10}?](../mcq-answers/dld.md?plain=1#L419)
+- [Which of the following is the Octal equivalent of the hexadecimal number 7B5? ( নিচের হেক্সাডেসিমাল সংখ্যা 7B5-এর সমতুল্য অক্টাল সংখ্যা কী হবে?)](../mcq-answers/dld.md?plain=1#L657)
