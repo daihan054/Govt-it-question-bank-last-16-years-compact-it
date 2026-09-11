@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 2 subtopics · 17 theories
+**Table of Contents** — 3 subtopics · 24 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -21,6 +21,15 @@
    - [Expert Systems — Architecture and Working](#expert-systems--architecture-and-working)
    - [Forward Chaining vs Backward Chaining](#forward-chaining-vs-backward-chaining)
    - [Measuring Intelligence — and Common True/False Traps](#measuring-intelligence--and-common-truefalse-traps)
+
+3. **[Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn)**
+   - [Biological Neuron vs Artificial Neuron](#biological-neuron-vs-artificial-neuron)
+   - [Artificial Neural Network (ANN) — Structure and Working](#artificial-neural-network-ann--structure-and-working)
+   - [Activation Functions in Neural Networks](#activation-functions-in-neural-networks)
+   - [What is Deep Learning?](#what-is-deep-learning)
+   - [Deep Learning vs Traditional Machine Learning](#deep-learning-vs-traditional-machine-learning)
+   - [Convolutional Neural Network (CNN)](#convolutional-neural-network-cnn)
+   - [Recurrent Neural Network (RNN) and LSTM](#recurrent-neural-network-rnn-and-lstm)
 
 <!-- TOC END -->
 
@@ -808,3 +817,392 @@ Do not confuse with **Alan Turing** (Enigma code-breaking, Turing Test) — he l
 
 **5. "An AI agent is an entity that continuously perceives its environment..." → the full sentence is:**
 > An intelligent agent is an entity that **perceives its environment through sensors** and **acts upon that environment through actuators**, choosing actions that maximise its performance measure.
+
+## Deep Learning & Neural Networks (ANN, CNN, RNN)
+
+### Biological Neuron vs Artificial Neuron
+
+A neural network is a **rough copy of the human brain**. The brain has about **86 billion** nerve cells called **neurons**; an Artificial Neural Network copies their basic idea in mathematics.
+
+#### The biological neuron
+
+```mermaid
+flowchart LR
+    D1[Dendrites<br/>receive signals] --> S[Cell Body / Soma<br/>sums the signals]
+    D2[Dendrites] --> S
+    S --> A[Axon<br/>carries the output signal away]
+    A --> T[Axon Terminals]
+    T --> SY((Synapse<br/>connection strength))
+    SY --> N[Next Neuron's Dendrite]
+```
+
+| Part | Job |
+|---|---|
+| **Dendrites** | Branch-like arms that **receive** signals from other neurons — the *inputs* |
+| **Soma (cell body)** | **Adds up** all incoming signals and decides whether to fire |
+| **Axon** | A long fibre that **carries the output signal away** from the cell body to other neurons |
+| **Axon terminals** | The end branches of the axon that pass the signal on |
+| **Synapse** | The junction between two neurons; its **strength** decides how much signal passes — this is what "learning" changes |
+
+> **Frequently asked:** *"What does the axon of a neural network do?"*
+> **Answer:** The axon **transmits/carries the output signal of the neuron away from the cell body** towards other neurons. In an Artificial Neural Network, the axon corresponds to the **output of the neuron**, and the synapse corresponds to the **weight** on the connection.
+
+#### Mapping biology to mathematics
+
+| Biological neuron | Artificial neuron |
+|---|---|
+| Dendrite | **Input** (x₁, x₂, … xₙ) |
+| Synapse | **Weight** (w₁, w₂, … wₙ) |
+| Cell body / Soma | **Summation function** Σ(wᵢxᵢ) + b |
+| Firing threshold | **Activation function** |
+| Axon | **Output** (y) |
+
+---
+
+### Artificial Neural Network (ANN) — Structure and Working
+
+An **Artificial Neural Network (ANN)** is a computing model made of many simple processing units called **neurons (nodes)**, arranged in **layers** and joined by **weighted connections**. It learns by adjusting those weights until its output matches the desired output.
+
+#### Structure of a single artificial neuron
+
+```mermaid
+flowchart LR
+    X1((x1)) -->|w1| S
+    X2((x2)) -->|w2| S
+    X3((x3)) -->|w3| S
+    B((bias b)) --> S
+    S["Σ  net = w1x1 + w2x2 + w3x3 + b"] --> F["Activation function f(net)"]
+    F --> Y((Output y))
+```
+
+The maths in one line:
+
+> **y = f( Σ (wᵢ · xᵢ) + b )**
+
+where `xᵢ` = inputs, `wᵢ` = weights, `b` = bias, `f` = activation function.
+
+#### The three kinds of layer
+
+```mermaid
+flowchart LR
+    subgraph IN[Input Layer]
+        I1((x1))
+        I2((x2))
+        I3((x3))
+    end
+    subgraph HID[Hidden Layer]
+        H1((h1))
+        H2((h2))
+        H3((h3))
+        H4((h4))
+    end
+    subgraph OUT[Output Layer]
+        O1((y1))
+        O2((y2))
+    end
+    I1 --> H1
+    I1 --> H2
+    I1 --> H3
+    I1 --> H4
+    I2 --> H1
+    I2 --> H2
+    I2 --> H3
+    I2 --> H4
+    I3 --> H1
+    I3 --> H2
+    I3 --> H3
+    I3 --> H4
+    H1 --> O1
+    H1 --> O2
+    H2 --> O1
+    H2 --> O2
+    H3 --> O1
+    H3 --> O2
+    H4 --> O1
+    H4 --> O2
+```
+
+| Layer | Job |
+|---|---|
+| **Input layer** | Takes the raw features. **No computation happens here** — it only passes values in. Number of nodes = number of features. |
+| **Hidden layer(s)** | The real "thinking" layers. Each node computes a weighted sum plus bias and applies an activation function. They learn increasingly abstract features. A network may have 1 hidden layer (shallow) or 100+ (deep). |
+| **Output layer** | Produces the final answer. 1 node for regression or binary classification; *n* nodes with Softmax for *n*-class classification. |
+
+#### What are weights and bias?
+
+- **Weight (w)** = the **importance** of an input. A large positive weight means "this input pushes the neuron to fire"; a negative weight pushes against it. **Weights are what the network learns.**
+- **Bias (b)** = a constant added to the sum. It lets the neuron **shift** its activation threshold, so the neuron can fire even when all inputs are zero. Without bias, every decision boundary would be forced through the origin.
+
+#### Single-layer ANN (the Perceptron)
+
+*"Draw the single layer of an ANN"* — this is the answer:
+
+```mermaid
+flowchart LR
+    X0((x0 = 1)) -->|w0 = bias| N
+    X1((x1)) -->|w1| N
+    X2((x2)) -->|w2| N
+    X3((x3)) -->|w3| N
+    N["Σ then step/activation function"] --> Y((Output y))
+```
+
+A **single-layer perceptron** has only an input layer and an output layer — **no hidden layer**. It can only separate data that is **linearly separable**, so it can learn AND and OR but famously **cannot learn XOR**. Adding a hidden layer (making a **Multi-Layer Perceptron, MLP**) solves XOR.
+
+#### How an ANN learns — the training loop
+
+```mermaid
+flowchart LR
+    A[1. Initialise weights randomly] --> B[2. Forward Propagation<br/>compute the output]
+    B --> C[3. Compute Loss<br/>predicted vs actual]
+    C --> D[4. Backpropagation<br/>find each weight's share of the error]
+    D --> E[5. Gradient Descent<br/>update the weights]
+    E -->|repeat for many epochs| B
+```
+
+1. **Forward propagation** — input flows left to right through the layers and produces a prediction.
+2. **Loss function** — measures how wrong the prediction is (MSE for regression, Cross-Entropy for classification).
+3. **Backpropagation** — using the chain rule of calculus, the error is pushed backwards to find *how much each weight contributed* to the error (the gradient).
+4. **Gradient descent** — every weight is nudged in the direction that reduces the error:
+   **w_new = w_old − η × ∂Loss/∂w**, where **η (eta)** is the **learning rate**.
+5. One full pass over the training data = one **epoch**; training runs for many epochs.
+
+#### Types of neural network worth naming
+
+| Type | Used for |
+|---|---|
+| **Feedforward NN / MLP** | General tabular prediction |
+| **CNN** (Convolutional) | Images and video |
+| **RNN / LSTM / GRU** | Sequences — text, speech, time series |
+| **Autoencoder** | Compression, denoising, anomaly detection |
+| **GAN** (Generative Adversarial Network) | Generating new images |
+| **Transformer** | Modern NLP — BERT, GPT, ChatGPT |
+
+---
+
+### Activation Functions in Neural Networks
+
+An **activation function** is the mathematical function applied to a neuron's weighted sum. It decides **whether and how strongly the neuron fires**, and it converts the sum into the neuron's output.
+
+#### Why is an activation function needed? (the "usability")
+
+This is the key exam point:
+
+> Without an activation function, every layer would only compute a **weighted sum**, which is a *linear* operation. Stacking many linear layers still gives just one linear function — so a 100-layer network would be no more powerful than a single layer. The activation function introduces **non-linearity**, which is what lets the network learn **complex, curved patterns** such as images, speech and language.
+
+Other uses:
+1. **Bounds the output** to a useful range (e.g. 0–1 for a probability).
+2. **Decides firing** — mimics the biological "fire / don't fire" threshold.
+3. **Makes backpropagation possible** — it must be *differentiable* so gradients can flow.
+4. **Softmax in the output layer** turns raw scores into class probabilities.
+
+#### The important activation functions
+
+| Function | Formula | Output range | Where used | Problem |
+|---|---|---|---|---|
+| **Step (Threshold)** | 1 if x ≥ 0, else 0 | {0, 1} | Original perceptron | Not differentiable — cannot train with backprop |
+| **Linear** | f(x) = x | −∞ to +∞ | Output layer of regression | No non-linearity |
+| **Sigmoid (Logistic)** | 1 / (1 + e⁻ˣ) | 0 to 1 | Output layer of **binary classification** (gives a probability) | **Vanishing gradient**; output not zero-centred; slow |
+| **Tanh** | (eˣ − e⁻ˣ)/(eˣ + e⁻ˣ) | −1 to 1 | Hidden layers of older/RNN networks | Zero-centred (better than sigmoid) but still vanishing gradient |
+| **ReLU** | max(0, x) | 0 to ∞ | **Default choice for hidden layers** | **Dying ReLU** — neurons with negative input output 0 forever |
+| **Leaky ReLU** | x if x>0, else αx (α ≈ 0.01) | −∞ to ∞ | Hidden layers, fixes dying ReLU | α must be chosen |
+| **Softmax** | eˣⁱ / Σ eˣʲ | 0 to 1, sums to 1 | **Output layer of multi-class classification** | Output layer only |
+
+#### Shapes of the curves
+
+```mermaid
+flowchart LR
+    A["Sigmoid<br/>S-shaped curve<br/>squashes into 0 … 1"]
+    B["Tanh<br/>S-shaped curve<br/>squashes into −1 … 1"]
+    C["ReLU<br/>flat 0 for x<0,<br/>straight line for x>0"]
+    D["Leaky ReLU<br/>small slope for x<0,<br/>straight line for x>0"]
+```
+
+#### The Vanishing Gradient Problem (why ReLU won)
+
+The derivative of sigmoid is at most **0.25**. In backpropagation these derivatives get **multiplied layer after layer**: 0.25 × 0.25 × 0.25 … After 10 layers the gradient is around 0.25¹⁰ ≈ 0.00000095 — practically **zero**. The early layers then stop learning. This is the **vanishing gradient problem**.
+
+**ReLU** fixes it because its derivative is exactly **1** for every positive input, so gradients pass through unchanged no matter how deep the network is. That single fact is what made very deep networks trainable.
+
+**Rule of thumb for choosing**
+
+| Situation | Use |
+|---|---|
+| Hidden layers | **ReLU** (or Leaky ReLU / GELU) |
+| Binary classification output | **Sigmoid** |
+| Multi-class classification output | **Softmax** |
+| Regression output | **Linear** (no activation) |
+
+---
+
+### What is Deep Learning?
+
+**Deep Learning (DL)** is the part of Machine Learning that uses **Artificial Neural Networks with many hidden layers** ("deep" = many layers) to learn directly from raw data.
+
+The special power of Deep Learning is **automatic feature extraction**: you do not tell it what to look for — it discovers the useful features by itself.
+
+```mermaid
+flowchart LR
+    A[Raw image pixels] --> B[Layer 1<br/>learns edges]
+    B --> C[Layer 2<br/>learns corners & textures]
+    C --> D[Layer 3<br/>learns eyes, nose, ears]
+    D --> E[Layer 4<br/>learns whole faces]
+    E --> F[Output: 'this is Rahim']
+```
+
+**Why did Deep Learning explode after 2012?** Three things came together:
+1. **Big Data** — the internet produced huge labelled datasets (ImageNet).
+2. **GPU computing** — graphics cards made matrix maths hundreds of times faster.
+3. **Better algorithms** — ReLU, dropout, batch normalisation, Adam optimiser.
+
+**Applications of Deep Learning**
+
+| Area | Application |
+|---|---|
+| Computer Vision | Face recognition, medical imaging, self-driving cars, OCR |
+| NLP | Machine translation, chatbots, ChatGPT, sentiment analysis |
+| Speech | Voice assistants, speech-to-text, text-to-speech |
+| Healthcare | Cancer detection, drug discovery |
+| Finance | Fraud detection, algorithmic trading |
+| Generative | DALL·E, Midjourney, deepfakes, AI music |
+
+**Limitations of Deep Learning**
+- Needs **huge labelled datasets** and **expensive GPUs**.
+- **Black box** — very hard to explain a decision (a serious problem for banking and medicine).
+- Long training time; high electricity cost.
+- Can **overfit** easily on small data.
+
+---
+
+### Deep Learning vs Traditional Machine Learning
+
+This exact comparison is asked again and again — memorise the table.
+
+```mermaid
+flowchart TD
+    subgraph ML["Traditional Machine Learning"]
+        A1[Raw Data] --> A2["Manual Feature Extraction<br/>(human engineer decides)"]
+        A2 --> A3[ML Algorithm<br/>SVM / Decision Tree]
+        A3 --> A4[Output]
+    end
+    subgraph DL["Deep Learning"]
+        B1[Raw Data] --> B2["Deep Neural Network<br/>feature extraction + classification together"]
+        B2 --> B4[Output]
+    end
+```
+
+| Point | Traditional Machine Learning | Deep Learning |
+|---|---|---|
+| **Feature extraction** | **Manual** — a human decides which features matter | **Automatic** — the network learns features itself |
+| **Data requirement** | Works well with **small to medium** data (thousands of rows) | Needs **very large** data (lakhs to millions) |
+| **Hardware** | Ordinary **CPU** is enough | Needs **GPU / TPU** |
+| **Training time** | Seconds to hours | Hours to weeks |
+| **Execution (prediction) time** | Usually fast | Can be slower, but fast on GPU |
+| **Interpretability** | **High** — you can read a decision tree | **Low** — a black box |
+| **Performance on small data** | Better | Poor (overfits) |
+| **Performance on huge data** | Plateaus — stops improving | Keeps improving |
+| **Problem solving style** | Problem is broken into parts and solved step by step | Solved **end-to-end** in one model |
+| **Typical algorithms** | Linear Regression, Logistic Regression, Decision Tree, SVM, KNN, Random Forest | CNN, RNN, LSTM, GAN, Transformer |
+| **Best for** | Tabular / structured data (bank records) | Unstructured data (images, audio, text) |
+
+**One-line answer:** *Deep Learning is Machine Learning that uses deep neural networks to learn the features automatically, while traditional Machine Learning depends on features hand-picked by humans.*
+
+---
+
+### Convolutional Neural Network (CNN)
+
+A **CNN** is the neural network designed for **image and video data**. Instead of connecting every pixel to every neuron (which would need millions of weights), it slides small **filters (kernels)** over the image to detect local patterns.
+
+#### CNN architecture
+
+```mermaid
+flowchart LR
+    I[Input Image<br/>e.g. 32x32x3] --> C1[Convolution Layer<br/>+ ReLU]
+    C1 --> P1[Pooling Layer<br/>Max Pooling]
+    P1 --> C2[Convolution Layer<br/>+ ReLU]
+    C2 --> P2[Pooling Layer]
+    P2 --> FL[Flatten]
+    FL --> FC[Fully Connected Layer]
+    FC --> O[Output Layer<br/>Softmax]
+```
+
+| Layer | What it does |
+|---|---|
+| **Convolution layer** | Slides a small filter over the image and produces a **feature map** highlighting edges, corners, textures |
+| **ReLU** | Adds non-linearity, turns negative values to 0 |
+| **Pooling (subsampling)** | Shrinks the feature map (e.g. **Max Pooling** keeps the largest value in each 2×2 block) — reduces computation and gives small shift-invariance |
+| **Flatten** | Converts the 2-D feature maps into a 1-D vector |
+| **Fully Connected (Dense)** | Does the final classification using all the extracted features |
+| **Softmax output** | Gives the probability of each class |
+
+**Why CNN beats a plain ANN on images**
+1. **Parameter sharing** — the same filter is used across the whole image, so far fewer weights.
+2. **Local connectivity** — a pixel is most related to its neighbours.
+3. **Translation invariance** — a cat is recognised whether it is on the left or the right of the photo.
+
+**Famous CNNs:** LeNet-5, AlexNet (2012), VGG-16, GoogLeNet/Inception, ResNet.
+
+---
+
+### Recurrent Neural Network (RNN) and LSTM
+
+#### RNN
+
+A **Recurrent Neural Network** is built for **sequential data** — text, speech, time series — where **order matters**. Its special feature is a **loop**: the output of a step is fed back as input to the next step, giving the network a **memory** of what came before.
+
+```mermaid
+flowchart LR
+    X1[x1<br/>'I'] --> H1((h1))
+    H1 --> X2G[ ]
+    X2[x2<br/>'love'] --> H2((h2))
+    H1 -->|hidden state| H2
+    X3[x3<br/>'Bangla'] --> H3((h3))
+    H2 -->|hidden state| H3
+    H3 --> Y[Prediction:<br/>next word]
+    style X2G fill:none,stroke:none
+```
+
+**Problem with plain RNN:** over a long sequence the repeated multiplication of gradients makes them **vanish** (or explode). So an RNN forgets information from far back — it cannot connect *"I grew up in **Bangladesh** … I speak fluent **Bangla**"* if the two words are 50 words apart. This is the **long-term dependency problem**.
+
+#### LSTM — Long Short-Term Memory
+
+**LSTM** is an improved RNN that solves the long-term dependency problem by adding a **cell state** (a "conveyor belt" of memory running through time) controlled by **gates**.
+
+```mermaid
+flowchart LR
+    CP["Cell state C(t-1)"] --> FG["× Forget Gate<br/>what to throw away"]
+    FG --> ADD["+ Input Gate<br/>what new info to store"]
+    ADD --> CN["Cell state C(t)"]
+    CN --> OG["Output Gate<br/>what to output now"]
+    OG --> HT["Hidden state h(t)"]
+    XT["Input x(t)"] --> FG
+    XT --> ADD
+    XT --> OG
+    HP["h(t-1)"] --> FG
+    HP --> ADD
+    HP --> OG
+```
+
+**The three gates of LSTM** *(a directly asked question — "Write LSTM gate names")*:
+
+| # | Gate | Activation | What it decides |
+|---|---|---|---|
+| 1 | **Forget Gate** | Sigmoid | **What to remove** from the cell state. Output 0 = forget completely, 1 = keep fully |
+| 2 | **Input Gate** (a.k.a. Update Gate) | Sigmoid + Tanh | **What new information to add** to the cell state |
+| 3 | **Output Gate** | Sigmoid + Tanh | **What part of the cell state to output** as the hidden state h(t) |
+
+*(The **cell state** itself is sometimes counted as a fourth component, and the tanh layer that creates the candidate values is called the **candidate/cell gate** — so some books say "4 gates". If asked for names, write **Forget, Input and Output gate**.)*
+
+#### GRU — Gated Recurrent Unit
+
+A simpler, faster variant with only **two gates**: the **Reset Gate** and the **Update Gate**. It merges the cell state and hidden state, so it has fewer parameters and trains faster, with performance close to LSTM.
+
+| Point | RNN | LSTM | GRU |
+|---|---|---|---|
+| Gates | None | 3 (Forget, Input, Output) | 2 (Reset, Update) |
+| Long-term memory | Poor | Excellent | Good |
+| Parameters / speed | Fewest / fastest | Most / slowest | Middle |
+| Use | Short sequences | Long text, speech, time series | When speed matters |
+
+**Applications of RNN/LSTM:** machine translation, speech recognition, handwriting recognition, stock-price and load forecasting, text generation, sentiment analysis.
+
+*(Note: since 2018, **Transformers** — which use an **attention mechanism** instead of recurrence and can be trained in parallel — have replaced LSTM in most NLP tasks, including GPT and BERT.)*
