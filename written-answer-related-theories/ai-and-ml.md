@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 60 theories
+**Table of Contents** — 12 subtopics · 64 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -82,6 +82,12 @@
    - [Association Rule Mining — Support, Confidence and Lift](#association-rule-mining--support-confidence-and-lift)
    - [The Apriori Algorithm](#the-apriori-algorithm)
    - [Market Basket Analysis — Steps and Business Use](#market-basket-analysis--steps-and-business-use)
+
+12. **[Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical)**
+   - [Clustering — Concept, Types and Distance Measures](#clustering--concept-types-and-distance-measures)
+   - [K-Means Clustering](#k-means-clustering)
+   - [Hierarchical Clustering and the Dendrogram](#hierarchical-clustering-and-the-dendrogram)
+   - [DBSCAN and Choosing the Right Clustering Algorithm](#dbscan-and-choosing-the-right-clustering-algorithm)
 
 <!-- TOC END -->
 
@@ -3522,3 +3528,286 @@ flowchart LR
 **Previous Year Question List from this Topic:**
 
 - [Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.](../written-answers/ai-and-ml.md?plain=1#L1268)
+
+## Clustering & Unsupervised Learning (K-Means, Hierarchical)
+
+### Clustering — Concept, Types and Distance Measures
+
+**Clustering** is an **unsupervised** learning technique that divides a dataset into **groups (clusters)** such that:
+- objects **inside** the same cluster are as **similar** as possible, and
+- objects in **different** clusters are as **different** as possible.
+
+Nobody tells the algorithm what the groups are — it finds them from the data itself.
+
+```mermaid
+flowchart LR
+    A[(Unlabelled data points)] --> B[Clustering algorithm]
+    B --> C[Cluster 1]
+    B --> D[Cluster 2]
+    B --> E[Cluster 3]
+```
+
+#### Types of clustering
+
+| Type | Idea | Algorithms |
+|---|---|---|
+| **Partitional** | Divide the data into **K non-overlapping** groups in one go | **K-Means**, K-Medoids, K-Modes |
+| **Hierarchical** | Build a **tree** of nested clusters | Agglomerative, Divisive |
+| **Density-based** | A cluster is a **dense region** separated by sparse regions | **DBSCAN**, OPTICS |
+| **Distribution-based** | Assume the data comes from a mixture of probability distributions | Gaussian Mixture Model (GMM) |
+| **Grid-based** | Divide the space into a grid of cells | STING, CLIQUE |
+
+Also: **hard clustering** (each point belongs to exactly one cluster) vs **soft/fuzzy clustering** (each point has a degree of membership in several clusters, e.g. Fuzzy C-Means).
+
+#### Distance (similarity) measures
+
+Clustering needs a way to say "how far apart are these two points?"
+
+| Measure | Formula | Use |
+|---|---|---|
+| **Euclidean distance** | √Σ(xᵢ − yᵢ)² | The default — straight-line distance |
+| **Manhattan (city block)** | Σ\|xᵢ − yᵢ\| | Grid-like data, robust to outliers |
+| **Minkowski** | (Σ\|xᵢ − yᵢ\|ᵖ)^(1/p) | General form (p = 2 → Euclidean, p = 1 → Manhattan) |
+| **Cosine similarity** | (A·B) / (\|A\|\|B\|) | Text documents, high-dimensional sparse data |
+| **Hamming distance** | Number of differing positions | Binary / categorical data |
+| **Jaccard** | \|A ∩ B\| / \|A ∪ B\| | Sets, market baskets |
+
+> **Important:** always **scale/normalise the features first**. If income is in lakhs and age in years, income will completely dominate the distance.
+
+#### Applications of clustering
+
+- **Customer segmentation** in banking and retail.
+- **Document / news article grouping** by topic.
+- **Image segmentation** and colour compression.
+- **Anomaly detection** — points that fall in no cluster.
+- **Market research** and recommendation systems.
+- **Bioinformatics** — grouping genes with similar expression.
+
+**Previous Year Question List from this Topic:**
+
+- [Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-lin…](../written-answers/ai-and-ml.md?plain=1#L1296)
+- [a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.](../written-answers/ai-and-ml.md?plain=1#L771)
+- [(b) What is the difference between supervised and unsupervised learning? Explain with examples.](../written-answers/ai-and-ml.md?plain=1#L808)
+
+
+---
+
+### K-Means Clustering
+
+**K-Means** is the most widely used clustering algorithm. It partitions the data into a **pre-chosen number K** of clusters, each represented by its **centroid** (the mean of its points).
+
+#### The algorithm
+
+```mermaid
+flowchart TD
+    A[1 . Choose K - the number of clusters] --> B[2 . Randomly initialise K centroids]
+    B --> C[3 . ASSIGN: attach each point to<br/>its nearest centroid]
+    C --> D[4 . UPDATE: move each centroid to<br/>the mean of its assigned points]
+    D --> E{Did any point<br/>change cluster?}
+    E -->|Yes| C
+    E -->|No — converged| F[5 . Final clusters]
+```
+
+**In words:**
+1. Pick **K**.
+2. Place **K centroids** at random (or with **K-Means++** for a smarter start).
+3. **Assignment step** — assign every point to the nearest centroid (usually by Euclidean distance).
+4. **Update step** — recompute each centroid as the mean of the points assigned to it.
+5. Repeat 3–4 until the assignments stop changing (convergence).
+
+**What it minimises** — the **Within-Cluster Sum of Squares (WCSS)**, also called *inertia*:
+
+> **WCSS = Σ_clusters Σ_points ‖x − μₖ‖²**
+
+#### Choosing K — the Elbow Method
+
+Run K-Means for K = 1, 2, 3 … and plot WCSS against K. WCSS always falls as K rises, but at some point the improvement becomes small — the **"elbow"** of the curve. That K is the answer.
+
+```mermaid
+flowchart LR
+    A["K = 1<br/>WCSS very high"] --> B["K = 2<br/>big drop"] --> C["K = 3 ← ELBOW<br/>drop flattens here"] --> D["K = 4, 5, 6<br/>small drops only"]
+```
+
+The **Silhouette Score** (from −1 to +1; higher is better) is the other standard way to choose K and to judge cluster quality.
+
+#### Advantages and disadvantages
+
+**Advantages:** simple, fast, scales to large datasets (**O(n·K·i·d)**), easy to interpret, guaranteed to converge.
+
+**Disadvantages:**
+- **K must be chosen in advance.**
+- **Sensitive to the initial centroids** — different runs can give different answers (fixed by K-Means++ / multiple restarts).
+- **Sensitive to outliers**, because the mean is pulled by extreme values.
+- Assumes clusters are **spherical and of similar size**; fails on elongated or ring-shaped clusters.
+- Works poorly on **categorical** data (use K-Modes instead).
+
+#### K-Means vs K-Medoids
+
+| Point | K-Means | K-Medoids (PAM) |
+|---|---|---|
+| Cluster centre | The **mean** (may be an imaginary point) | An **actual data point** (the medoid) |
+| Outlier sensitivity | High | **Low** — more robust |
+| Speed | Faster | Slower |
+
+**Previous Year Question List from this Topic:**
+
+- [Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-lin…](../written-answers/ai-and-ml.md?plain=1#L1296)
+
+
+---
+
+### Hierarchical Clustering and the Dendrogram
+
+**Hierarchical clustering** builds a **tree (hierarchy)** of clusters instead of a flat partition — and it does **not** need K to be chosen in advance.
+
+#### Two directions
+
+| Type | Direction | How it works |
+|---|---|---|
+| **Agglomerative** (AGNES) — **bottom-up**, the common one | Start with **every point as its own cluster**, then repeatedly **merge the two closest clusters** until one cluster remains | |
+| **Divisive** (DIANA) — **top-down** | Start with **one cluster containing everything**, then repeatedly **split** it | |
+
+#### The agglomerative algorithm
+
+```mermaid
+flowchart TD
+    A[1 . Treat each of the n points as its own cluster] --> B[2 . Compute the distance matrix between all clusters]
+    B --> C[3 . Find the TWO CLOSEST clusters]
+    C --> D[4 . MERGE them into one cluster]
+    D --> E[5 . Update the distance matrix using the linkage rule]
+    E --> F{Only one<br/>cluster left?}
+    F -->|No| C
+    F -->|Yes| G[6 . Draw the dendrogram; cut it at the<br/>height that gives the clusters you want]
+```
+
+#### Linkage methods — how the distance between two *clusters* is measured
+
+| Linkage | Rule | Effect |
+|---|---|---|
+| **Single linkage** (nearest neighbour) | **Minimum** distance between any two points, one from each cluster | Can find long, chain-like clusters; suffers from the **chaining effect**; sensitive to noise |
+| **Complete linkage** (farthest neighbour) | **Maximum** distance between any two points | Produces compact, roughly equal-sized clusters |
+| **Average linkage** | **Average** of all pairwise distances | A compromise between the two above |
+| **Centroid linkage** | Distance between the two cluster **centroids** | Can produce inversions in the dendrogram |
+| **Ward's method** | Merge the pair that causes the **smallest increase in total within-cluster variance** | Usually the best general-purpose choice |
+
+#### The dendrogram
+
+A **dendrogram** is the tree diagram of the merges. The **height** of each horizontal joint = the distance at which those two clusters merged. **Cutting** the dendrogram with a horizontal line at any height gives you that many clusters — this is how K is chosen *after* the fact.
+
+#### Worked example — single-linkage on five points
+
+**Points:** P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), P5 (0.80, 0.46)
+
+**Step 1 — compute the Euclidean distance matrix.** For example
+d(P1, P2) = √((0.85 − 0.07)² + (0.14 − 0.83)²) = √(0.78² + 0.69²) = √(0.6084 + 0.4761) = √1.0845 = **1.0414**
+
+|  | **P1** | **P2** | **P3** | **P4** | **P5** |
+|---|---|---|---|---|---|
+| **P1** | 0 | 1.0414 | 0.5930 | 0.4610 | 0.8184 |
+| **P2** | 1.0414 | 0 | 0.7737 | 0.6161 | **0.3239** |
+| **P3** | 0.5930 | 0.7737 | 0 | **0.3023** | 0.4522 |
+| **P4** | 0.4610 | 0.6161 | **0.3023** | 0 | 0.3585 |
+| **P5** | 0.8184 | **0.3239** | 0.4522 | 0.3585 | 0 |
+
+**Step 2 — find the smallest distance in the whole matrix.**
+The minimum is **0.3023**, between **P3 and P4**.
+
+> ### ✅ Answer: the first two points to be grouped are **P3 (0.66, 0.89) and P4 (0.49, 0.64)**, merging at a distance of **0.3023**.
+
+**Step 3 — continuing (for the complete dendrogram).** Under **single linkage**, the distance from the new cluster {P3, P4} to any other point is the **minimum** of the two original distances:
+
+| To | min( d to P3 , d to P4 ) | Result |
+|---|---|---|
+| P1 | min(0.5930, 0.4610) | 0.4610 |
+| P2 | min(0.7737, 0.6161) | 0.6161 |
+| P5 | min(0.4522, 0.3585) | 0.3585 |
+
+The next smallest distance overall is **0.3239 → merge {P2, P5}**.
+Then d({P2,P5}, {P3,P4}) = min(0.6161, 0.3585) = **0.3585 → merge into {P2, P3, P4, P5}**.
+Finally d(P1, {P2,P3,P4,P5}) = min(0.4610, 0.8184) = **0.4610 → everything merges**.
+
+**The dendrogram:**
+
+```mermaid
+flowchart TD
+    ALL["All 5 points — merged at 0.4610"] --> P1["P1"]
+    ALL --> G3["{P2,P3,P4,P5} — merged at 0.3585"]
+    G3 --> G1["{P3,P4} — merged at 0.3023"]
+    G3 --> G2["{P2,P5} — merged at 0.3239"]
+    G1 --> P3["P3"]
+    G1 --> P4["P4"]
+    G2 --> P2["P2"]
+    G2 --> P5["P5"]
+```
+
+Cutting this dendrogram just below 0.4610 gives **2 clusters: {P1}** and **{P2, P3, P4, P5}**.
+
+#### K-Means vs Hierarchical clustering
+
+| Point | **K-Means** | **Hierarchical** |
+|---|---|---|
+| Need to choose K first? | **Yes** | **No** — decide afterwards by cutting the dendrogram |
+| Output | A flat partition | A **tree** (dendrogram) showing all levels |
+| Time complexity | **O(n)** per iteration — fast | **O(n³)** (or O(n² log n)) — slow |
+| Suitable dataset size | **Large** | Small to medium |
+| Reproducibility | Varies with random initialisation | **Deterministic** — same result every run |
+| Can a merge be undone? | Points can move between clusters | **No** — a merge is permanent (greedy) |
+| Handles outliers | Poorly | Single linkage poorly; Ward better |
+| Cluster shape | Spherical only | More flexible |
+
+**Previous Year Question List from this Topic:**
+
+- [Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-lin…](../written-answers/ai-and-ml.md?plain=1#L1296)
+
+
+---
+
+### DBSCAN and Choosing the Right Clustering Algorithm
+
+**DBSCAN (Density-Based Spatial Clustering of Applications with Noise)** groups points that are **densely packed together** and marks isolated points as **noise**.
+
+#### Its two parameters
+
+| Parameter | Meaning |
+|---|---|
+| **ε (eps)** | The radius of the neighbourhood around a point |
+| **MinPts** | The minimum number of points required inside that radius to call it dense |
+
+#### The three kinds of point
+
+| Point type | Definition |
+|---|---|
+| **Core point** | Has at least **MinPts** points within distance ε |
+| **Border point** | Has fewer than MinPts neighbours, but lies **within ε of a core point** |
+| **Noise / Outlier** | Neither core nor border — belongs to no cluster |
+
+```mermaid
+flowchart LR
+    A["Core point<br/>dense neighbourhood"] --- B["Border point<br/>on the edge of a cluster"]
+    C["Noise point<br/>isolated — no cluster"]
+```
+
+**Advantages of DBSCAN**
+- **No need to specify the number of clusters.**
+- Finds **arbitrarily shaped** clusters (rings, S-shapes) that K-Means cannot.
+- **Automatically identifies outliers** — excellent for fraud and intrusion detection.
+
+**Disadvantages**
+- Very sensitive to the choice of **ε** and **MinPts**.
+- Struggles when different clusters have **very different densities**.
+- Performs poorly in **high dimensions** (distances become meaningless).
+
+#### Which algorithm should you use?
+
+| Situation | Best choice |
+|---|---|
+| Large dataset, roughly spherical groups, K is known | **K-Means** |
+| Small dataset, you want to see the full hierarchy | **Hierarchical (Ward)** |
+| Irregular shapes and you need outliers flagged | **DBSCAN** |
+| Overlapping clusters with soft membership | **Gaussian Mixture Model** |
+| Categorical data | **K-Modes** |
+| Very large data with outliers | **K-Medoids / BIRCH** |
+
+**Previous Year Question List from this Topic:**
+
+- [Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-lin…](../written-answers/ai-and-ml.md?plain=1#L1296)
