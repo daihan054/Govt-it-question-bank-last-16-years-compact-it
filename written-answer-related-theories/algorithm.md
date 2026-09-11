@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 41 theories
+**Table of Contents** — 8 subtopics · 45 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -55,6 +55,12 @@
    - [Trees and the n − 1 Edge Property](#trees-and-the-n--1-edge-property)
    - [Eulerian and Hamiltonian Paths and Circuits](#eulerian-and-hamiltonian-paths-and-circuits)
    - [Graph Connectivity — Connected, Strongly and Weakly Connected](#graph-connectivity--connected-strongly-and-weakly-connected)
+
+8. **[Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack)**
+   - [The Fractional Knapsack Problem](#the-fractional-knapsack-problem)
+   - [0/1 Knapsack vs Fractional Knapsack](#01-knapsack-vs-fractional-knapsack)
+   - [Activity Selection / Interval Scheduling](#activity-selection--interval-scheduling)
+   - [Greedy vs Optimal Cost — Measuring the Gap](#greedy-vs-optimal-cost--measuring-the-gap)
 
 <!-- TOC END -->
 
@@ -3313,3 +3319,337 @@ Other algorithms for finding **all** SCCs: **Kosaraju's**, **Tarjan's** (single 
 - [(c) What is a strongly connected graph?](../written-answers/algorithm.md?plain=1#L2999)
 - [True False with explanation about Graph related (Two).](../written-answers/algorithm.md?plain=1#L3014)
 - [State whether the following are True or False:](../written-answers/algorithm.md?plain=1#L3026)
+
+## Greedy Algorithms (Fractional Knapsack)
+
+### The Fractional Knapsack Problem
+
+**The problem.** You have a knapsack that can carry at most **W** units of weight, and **n** items, where item *i* has value **vᵢ** and weight **wᵢ**. You may take a **fraction** of any item. **Maximise the total value carried.**
+
+#### The greedy strategy
+
+> **Take items in decreasing order of the value-to-weight ratio (vᵢ / wᵢ).**
+> Take each item fully while it fits; when the next item does not fit, take the **fraction** of it that fills the remaining capacity exactly.
+
+**Why this is optimal:** every unit of capacity should be filled with the most valuable material available. Since items can be split, there is never a reason to leave a higher-ratio item behind in favour of a lower-ratio one — and the bag is always filled completely. This can be proved rigorously by an **exchange argument**.
+
+#### Algorithm
+
+```
+FractionalKnapsack(items, W):
+    for each item i:
+        ratio[i] = value[i] / weight[i]
+    sort items in DECREASING order of ratio
+
+    totalValue = 0
+    remaining  = W
+    for each item i in sorted order:
+        if weight[i] <= remaining:
+            take the WHOLE item
+            totalValue += value[i]
+            remaining  -= weight[i]
+        else:
+            take the FRACTION (remaining / weight[i])
+            totalValue += ratio[i] * remaining
+            remaining = 0
+            break
+    return totalValue
+```
+
+**Time complexity: O(n log n)** — dominated by the sort. **Space: O(1)** extra.
+
+#### Worked example
+
+| Item | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| **Value** | 18 | 2.5 | 12 | 14 | 20 |
+| **Weight** | 4 | 3 | 1 | 2 | 5 |
+
+**Knapsack capacity W = 10** *(assumed — always state your assumption if the capacity is not printed).*
+
+**Step 1 — compute the value/weight ratio:**
+
+| Item | Value | Weight | **Ratio (v/w)** |
+|---|---|---|---|
+| 1 | 18 | 4 | **4.50** |
+| 2 | 2.5 | 3 | **0.83** |
+| 3 | 12 | 1 | **12.00** |
+| 4 | 14 | 2 | **7.00** |
+| 5 | 20 | 5 | **4.00** |
+
+**Step 2 — sort by ratio, highest first:** Item **3** (12.00) → Item **4** (7.00) → Item **1** (4.50) → Item **5** (4.00) → Item **2** (0.83)
+
+**Step 3 — fill the knapsack:**
+
+| Order | Item | Ratio | Weight | Remaining capacity before | Action | Value gained | Remaining after |
+|---|---|---|---|---|---|---|---|
+| 1 | **3** | 12.00 | 1 | 10 | Take **whole** | **12** | 9 |
+| 2 | **4** | 7.00 | 2 | 9 | Take **whole** | **14** | 7 |
+| 3 | **1** | 4.50 | 4 | 7 | Take **whole** | **18** | 3 |
+| 4 | **5** | 4.00 | 5 | 3 | Take **3/5 = 0.6** of it | 4.00 × 3 = **12** | 0 |
+| 5 | 2 | 0.83 | 3 | 0 | **Skip** — bag is full | 0 | 0 |
+
+**Step 4 — the answer:**
+
+> **Maximum value = 12 + 14 + 18 + 12 = 56**
+> Items taken: **3 (100 %), 4 (100 %), 1 (100 %), 5 (60 %)** — total weight = 1 + 2 + 4 + 3 = **10** ✅
+
+```mermaid
+flowchart LR
+    A["Knapsack, W = 10"] --> B["Item 3 — 1 kg<br/>value 12"]
+    A --> C["Item 4 — 2 kg<br/>value 14"]
+    A --> D["Item 1 — 4 kg<br/>value 18"]
+    A --> E["Item 5 — 3 of 5 kg (60%)<br/>value 12"]
+    B --> F["TOTAL VALUE = 56"]
+    C --> F
+    D --> F
+    E --> F
+```
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) নিচের সারণীটি বিবেচনা করুন:](../written-answers/algorithm.md?plain=1#L3118)
+- [Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____](../written-answers/algorithm.md?plain=1#L2863)
+- [Greedy algorithm উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/algorithm.md?plain=1#L2869)
+- [(খ) Greedy Algorithm কাকে বলে? দুটি এমন সমস্যা বর্ণনা করুন যা Greedy Algorithm দিয়ে সমাধান করা যায়।](../written-answers/algorithm.md?plain=1#L2891)
+
+
+---
+
+### 0/1 Knapsack vs Fractional Knapsack
+
+**0/1 Knapsack:** each item must be taken **entirely or not at all** — no fractions. (Think of a laptop: you cannot take 60 % of a laptop.)
+
+> **This one change makes greedy WRONG and forces Dynamic Programming.**
+
+#### Why greedy fails on 0/1 Knapsack — a counter-example
+
+Capacity **W = 10**:
+
+| Item | Value | Weight | Ratio |
+|---|---|---|---|
+| A | 60 | 5 | **12** |
+| B | 50 | 5 | 10 |
+| C | 55 | 6 | 9.17 |
+
+- **Greedy by ratio:** take A (ratio 12, weight 5) → 5 capacity left → take B (ratio 10, weight 5) → full. **Total = 110.**
+  *That is actually optimal here — so try a different set:*
+
+Capacity **W = 10**:
+
+| Item | Value | Weight | Ratio |
+|---|---|---|---|
+| A | 60 | 6 | **10** |
+| B | 50 | 5 | 10 |
+| C | 50 | 5 | 10 |
+
+- **Greedy:** takes A first (weight 6) → 4 capacity left → neither B nor C (weight 5) fits → **total = 60**, with **4 units of capacity wasted**.
+- **Optimal:** take B + C (weight 5 + 5 = 10) → **total = 100**.
+
+> **The reason greedy fails:** in the 0/1 version the knapsack can be left **partially empty**, and that wasted capacity is what greedy cannot reason about. In the fractional version there is never any waste — the bag is always filled exactly.
+
+#### The 0/1 Knapsack DP solution
+
+```
+Knapsack01(values, weights, n, W):
+    create dp[0..n][0..W]
+    for i = 0 to n:
+        for w = 0 to W:
+            if i == 0 or w == 0:
+                dp[i][w] = 0
+            else if weights[i-1] <= w:
+                dp[i][w] = max( values[i-1] + dp[i-1][w - weights[i-1]],   // take it
+                                dp[i-1][w] )                               // skip it
+            else:
+                dp[i][w] = dp[i-1][w]                                      // cannot fit
+    return dp[n][W]
+```
+
+**Time: O(n × W). Space: O(n × W)**, reducible to **O(W)** with a 1-D array.
+
+*(Note: O(n·W) is **pseudo-polynomial**, because W is a *value*, not the input size. The 0/1 Knapsack decision problem is **NP-complete**.)*
+
+#### Comparison
+
+| Point | **Fractional Knapsack** | **0/1 Knapsack** |
+|---|---|---|
+| Can an item be split? | ✅ **Yes** | ❌ **No — all or nothing** |
+| Technique | **Greedy** | **Dynamic Programming** |
+| Greedy by v/w ratio gives the optimum? | ✅ **Yes, always** | ❌ **No** |
+| Time complexity | **O(n log n)** | **O(n·W)** |
+| Space | O(1) | O(n·W) → O(W) |
+| Knapsack left partly empty? | **Never** | **Possibly** |
+| Complexity class | Solvable in polynomial time | **NP-complete** (decision version) |
+| Real example | Taking rice, oil, sugar by weight | Taking laptops, machines, whole projects |
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) নিচের সারণীটি বিবেচনা করুন:](../written-answers/algorithm.md?plain=1#L3118)
+- [What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. (Full question collect সম্ভব হয় নি)](../written-answers/algorithm.md?plain=1#L3276)
+- [(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?](../written-answers/algorithm.md?plain=1#L2817)
+- [Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____](../written-answers/algorithm.md?plain=1#L2863)
+
+
+---
+
+### Activity Selection / Interval Scheduling
+
+**The problem.** You are given **n activities**, each with a **start time s[i]** and a **finish time f[i]**. Only **one** activity can run at a time. **Select the maximum number of activities that do not overlap.**
+
+#### The greedy strategy — and why the obvious ideas fail
+
+| Strategy | Does it work? |
+|---|---|
+| Pick the activity that **starts earliest** | ❌ A very long first activity blocks everything |
+| Pick the **shortest** activity | ❌ A short activity in the middle can block two others |
+| Pick the one with **fewest conflicts** | ❌ Fails on carefully built examples |
+| ✅ **Pick the activity that FINISHES EARLIEST** | **✅ Always optimal** |
+
+> **The greedy rule: always choose the compatible activity with the EARLIEST FINISH TIME.**
+>
+> **Why it works:** finishing as early as possible leaves the **maximum amount of time free** for the remaining activities. Formally, any optimal solution's first activity can be exchanged for the earliest-finishing one without reducing the count — the classic **exchange argument**.
+
+#### Algorithm
+
+```
+ActivitySelection(s[], f[], n):
+    sort the activities by FINISH TIME (ascending)
+
+    selected = [ activity 0 ]        // the first one always gets picked
+    lastFinish = f[0]
+
+    for i = 1 to n-1:
+        if s[i] >= lastFinish:       // does not overlap the last selected one
+            selected.add(i)
+            lastFinish = f[i]
+    return selected
+```
+
+**Time: O(n log n)** for the sort, then **O(n)** for the scan. **Space: O(1)** extra.
+
+#### Worked example
+
+| Activity | A | B | C | D | E | F |
+|---|---|---|---|---|---|---|
+| **Start** | 1 | 3 | 0 | 5 | 8 | 5 |
+| **Finish** | 2 | 4 | 6 | 7 | 9 | 9 |
+
+**Step 1 — sort by finish time:** A(1,2), B(3,4), C(0,6), D(5,7), E(8,9), F(5,9)
+
+**Step 2 — scan:**
+
+| Activity | Start | Finish | Start ≥ last finish? | Decision | Last finish |
+|---|---|---|---|---|---|
+| **A** | 1 | 2 | — (first) | ✅ **Select** | 2 |
+| **B** | 3 | 4 | 3 ≥ 2 ✅ | ✅ **Select** | 4 |
+| C | 0 | 6 | 0 ≥ 4 ❌ | ❌ Reject | 4 |
+| **D** | 5 | 7 | 5 ≥ 4 ✅ | ✅ **Select** | 7 |
+| **E** | 8 | 9 | 8 ≥ 7 ✅ | ✅ **Select** | 9 |
+| F | 5 | 9 | 5 ≥ 9 ❌ | ❌ Reject | 9 |
+
+> **Answer: {A, B, D, E} — 4 activities**, the maximum possible.
+
+```mermaid
+gantt
+    title Selected activities (non-overlapping)
+    dateFormat X
+    axisFormat %s
+    section Selected
+    A :done, 1, 2
+    B :done, 3, 4
+    D :done, 5, 7
+    E :done, 8, 9
+    section Rejected
+    C :crit, 0, 6
+    F :crit, 5, 9
+```
+
+#### The "jobs with start time and duration" variant
+
+If you are given **start time s[i]** and **duration d[i]** instead of the finish time, simply compute **f[i] = s[i] + d[i]** first, then run the same algorithm. Nothing else changes.
+
+#### The BPDB / multiple-server variant
+
+> *"BPDB can serve one customer at a time. BPDB now wants to serve multiple customers at the same time. If n customers request service simultaneously, ..."*
+
+This is **Interval Partitioning** (also called the **minimum number of rooms / machines** problem) — a different greedy:
+
+> **The minimum number of servers needed = the maximum number of intervals that overlap at any single point in time** (the "**depth**" of the interval set).
+
+**Algorithm (sweep line), O(n log n):**
+1. Create two sorted lists: all **start** times and all **finish** times.
+2. Sweep through the events in time order. A **start** event adds +1 to the current count; a **finish** event subtracts 1.
+3. The **maximum value the counter ever reaches** is the minimum number of servers needed.
+4. To assign customers, keep the free servers in a **min-heap** keyed by their next free time; give each arriving customer the server that has been free longest, or open a new one.
+
+**Previous Year Question List from this Topic:**
+
+- [BPDB can provide service one customer at a time. BPDB want to provide service multiple customers at same time. If n number of customer at a time requesting for…](../written-answers/algorithm.md?plain=1#L3173)
+- [Given n jobs starting time n() and duration d(), print maximum number of jobs that don't overlap between each other.](../written-answers/algorithm.md?plain=1#L3207)
+- [You are given a set of activities with their starting time s() and finishing time f().](../written-answers/algorithm.md?plain=1#L3244)
+- [(খ) Greedy Algorithm কাকে বলে? দুটি এমন সমস্যা বর্ণনা করুন যা Greedy Algorithm দিয়ে সমাধান করা যায়।](../written-answers/algorithm.md?plain=1#L2891)
+
+
+---
+
+### Greedy vs Optimal Cost — Measuring the Gap
+
+When a greedy algorithm is **not** provably optimal, we measure how bad it can be.
+
+#### Key definitions
+
+| Term | Meaning |
+|---|---|
+| **Greedy cost (C_greedy)** | The cost of the solution the greedy algorithm produces |
+| **Optimal cost (C_opt)** | The true minimum (or maximum) achievable |
+| **Absolute gap** | `C_greedy − C_opt` |
+| **Relative error** | `(C_greedy − C_opt) / C_opt × 100 %` |
+| **Approximation ratio ρ** | `C_greedy / C_opt` for minimisation (or `C_opt / C_greedy` for maximisation). ρ = 1 means optimal |
+
+#### Worked example — 0/1 Knapsack
+
+Capacity **W = 10**:
+
+| Item | Value | Weight | Ratio |
+|---|---|---|---|
+| A | 60 | 6 | 10 |
+| B | 50 | 5 | 10 |
+| C | 50 | 5 | 10 |
+
+**Greedy (by ratio, taking A first):** A (weight 6, value 60) → 4 units left → nothing else fits.
+> **C_greedy = 60**
+
+**Optimal (by DP or inspection):** B + C → weight 5 + 5 = 10, value 50 + 50.
+> **C_opt = 100**
+
+**The calculation:**
+
+| Measure | Working | Result |
+|---|---|---|
+| Absolute gap | 100 − 60 | **40** |
+| Relative loss | 40 / 100 × 100 | **40 %** |
+| Approximation ratio | 60 / 100 | **0.6** (greedy captures only 60 % of the optimum) |
+
+#### Worked example — coin change
+
+Coins {1, 7, 10}, target **15**.
+- **Greedy:** 10 + 1 + 1 + 1 + 1 + 1 = **6 coins**
+- **Optimal:** 7 + 7 + 1 = **3 coins**
+- **Gap = 3 coins; ratio = 6/3 = 2.0** — greedy uses **twice** as many coins.
+
+#### Known approximation guarantees
+
+| Problem | Greedy guarantee |
+|---|---|
+| **Set Cover** | Greedy is within a factor of **ln n** of optimal — and that is provably the best possible unless P = NP |
+| **Bin Packing** (First-Fit Decreasing) | Uses at most **(11/9)·OPT + 1** bins |
+| **Metric TSP** (nearest neighbour) | Can be **Θ(log n)** times worse than optimal |
+| **0/1 Knapsack** (greedy by ratio) | **No constant guarantee** — but taking `max(greedy result, the single most valuable item)` is a **2-approximation** |
+| **Vertex Cover** (greedy on edges) | **2-approximation** |
+
+**How to present such an answer:** (1) run the greedy algorithm and state its cost; (2) find the true optimum by DP or by exhaustive check on the small instance; (3) subtract to get the gap; (4) express it as a percentage and as a ratio; (5) **explain *why* greedy lost** — usually because it committed early to a choice that wasted capacity or blocked a better combination.
+
+**Previous Year Question List from this Topic:**
+
+- [What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. (Full question collect সম্ভব হয় নি)](../written-answers/algorithm.md?plain=1#L3276)
+- [(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?](../written-answers/algorithm.md?plain=1#L2817)
