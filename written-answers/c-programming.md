@@ -1,23 +1,24 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 284 questions
+**Table of Contents** — 10 subtopics · 300 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-124) | 124 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-134) | 134 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
 | 3 | [Recursion & Functions](#recursion--functions-39) | 39 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
-| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-14) | 14 |
-| 7 | [File Handling](#file-handling-4) | 4 |
-| 8 | [Pointers](#pointers-4) | 4 |
-| 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
+| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-15) | 15 |
+| 7 | [Formula-Based Series (Practice)](#formula-based-series-practice-5) | 5 |
+| 8 | [File Handling](#file-handling-4) | 4 |
+| 9 | [Pointers](#pointers-4) | 4 |
+| 10 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Basic Programs & Control Statements (124)
+## Basic Programs & Control Statements (134)
 
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
@@ -4213,6 +4214,397 @@ a) What is call by reference? b) Write a program that indicate the example of re
         return 0;
     }
     ```
+125. **Write a program to print the common element between two arrays and the total number of elements found.** *[Bangladesh Bank Assistant Director (ICT) 2025 habib collection 1 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int a[100], b[100], n, m, i, j, k, count = 0;
+
+        printf("Enter size of first array: ");
+        scanf("%d", &n);
+        printf("Enter %d elements: ", n);
+        for (i = 0; i < n; i++) scanf("%d", &a[i]);
+
+        printf("Enter size of second array: ");
+        scanf("%d", &m);
+        printf("Enter %d elements: ", m);
+        for (j = 0; j < m; j++) scanf("%d", &b[j]);
+
+        printf("Common elements: ");
+        for (i = 0; i < n; i++) {
+            /* skip a[i] if it was already reported once */
+            int already = 0;
+            for (k = 0; k < i; k++)
+                if (a[k] == a[i]) { already = 1; break; }
+            if (already) continue;
+
+            for (j = 0; j < m; j++) {
+                if (a[i] == b[j]) {
+                    printf("%d ", a[i]);
+                    count++;
+                    break;                 // count each common value only once
+                }
+            }
+        }
+        printf("\nTotal common elements = %d\n", count);
+        return 0;
+    }
+    ```
+
+    Sample run
+    ```
+    A = 1 2 3 4 5
+    B = 4 5 6 7
+    Common elements: 4 5
+    Total common elements = 2
+    ```
+
+    - The nested loop compares every element of `A` against every element of `B` → time complexity **O(n×m)**.
+    - The inner `break` stops after the first hit so a value present twice in `B` is not counted twice.
+    - The `already` check skips duplicates inside `A` itself, so `A = {2,2,3}` and `B = {2}` reports `2` once, not twice.
+    - Faster alternative: sort both arrays and walk them with two pointers → **O(n log n + m log m)**; or use a hash table / frequency array for **O(n+m)** when the value range is small.
+
+126. **Find the sum of the series: $1 + \frac{1}{2} + \frac{1}{3} + \dots\dots\dots\dots + \frac{1}{n}$** *[Uttara Bank Assistant Programmer 2019 habib collection 13 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int n, i;
+        double sum = 0.0;
+
+        printf("Enter value of n: ");
+        scanf("%d", &n);
+
+        for (i = 1; i <= n; i++)
+            sum += 1.0 / i;            // 1.0 forces floating-point division
+
+        printf("Sum = %.6lf\n", sum);
+        return 0;
+    }
+    ```
+
+    - This is the **harmonic series** H(n). For n = 5 the answer is 1 + 0.5 + 0.3333 + 0.25 + 0.2 = **2.283333**.
+    - The classic mistake is writing `1 / i`. Both operands are `int`, so C does integer division and every term after the first becomes 0, making the sum exactly 1. Writing `1.0 / i` (or casting `(double)1 / i`) fixes it.
+    - The series has no closed form, but it grows like `ln(n) + 0.5772` (the Euler–Mascheroni constant), so it diverges very slowly — H(1000) is only about 7.49.
+
+127. **Find the sum of the series: $1^2 - 2^2 + 3^2 - 4^2 + 5^2 - \dots\dots\dots\dots \pm n^2$** *[Bangladesh Competition Commission Programmer 2019 habib collection 13, 19 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int n, i, sign = 1;
+        long sum = 0;
+
+        printf("Enter value of n: ");
+        scanf("%d", &n);
+
+        for (i = 1; i <= n; i++) {
+            sum += sign * (long)i * i;
+            sign = -sign;              // flip +/- on every term
+        }
+
+        printf("Sum = %ld\n", sum);
+        return 0;
+    }
+    ```
+
+    - The odd terms are added and the even terms subtracted, so `sign` toggles between `+1` and `-1` each pass. The alternative is `if (i % 2 == 0) sum -= i*i; else sum += i*i;`.
+    - Closed-form check: the sum is `n(n+1)/2` when **n is odd** and `-n(n+1)/2` when **n is even**.
+    - n = 5 → 1 − 4 + 9 − 16 + 25 = **15**, and 5×6/2 = 15 ✓
+    - n = 4 → 1 − 4 + 9 − 16 = **−10**, and −(4×5/2) = −10 ✓
+    - `(long)i * i` casts before multiplying so the square does not overflow `int` for large n.
+
+128. **Find the number of occurrences of a digit in a number.** *[Dutch-Bangla Bank Limited 2018 habib collection 15 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        long n, temp;
+        int digit, count = 0;
+
+        printf("Enter a number: ");
+        scanf("%ld", &n);
+        printf("Enter the digit to search: ");
+        scanf("%d", &digit);
+
+        if (n < 0) n = -n;             // handle negative input
+        temp = n;
+
+        if (temp == 0) {               // special case: the number 0
+            if (digit == 0) count = 1;
+        }
+        while (temp > 0) {
+            if (temp % 10 == digit)    // last digit
+                count++;
+            temp /= 10;                // drop the last digit
+        }
+
+        printf("Digit %d occurs %d time(s) in %ld\n", digit, count, n);
+        return 0;
+    }
+    ```
+
+    Sample run
+    ```
+    Enter a number: 1220342
+    Enter the digit to search: 2
+    Digit 2 occurs 3 time(s) in 1220342
+    ```
+
+    - `temp % 10` peels off the last digit and `temp /= 10` removes it — the standard digit-extraction idiom in C.
+    - The loop runs once per digit, so the complexity is **O(log₁₀ n)**.
+    - The `temp == 0` guard matters: `while (temp > 0)` never executes for input 0, so searching for digit 0 in the number 0 would otherwise wrongly report 0 occurrences.
+
+129. **Evaluate the series: $1\times3 + 2\times5 + 3\times7 + \dots\dots\dots\dots + n\times(2n+1)$** *[Dutch-Bangla Bank Limited 2018 habib collection 16 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int n, i;
+        long sum = 0;
+
+        printf("Enter value of n: ");
+        scanf("%d", &n);
+
+        for (i = 1; i <= n; i++)
+            sum += (long)i * (2 * i + 1);
+
+        printf("Sum = %ld\n", sum);
+        return 0;
+    }
+    ```
+
+    - Spotting the pattern is the whole trick: the first factor is `i` (1, 2, 3, …) and the second is the odd number `2i+1` (3, 5, 7, …).
+    - Closed form: `Σ i(2i+1) = Σ (2i² + i) = n(n+1)(4n+5) / 6`.
+    - n = 3 → 1×3 + 2×5 + 3×7 = 3 + 10 + 21 = **34**, and 3×4×17/6 = 34 ✓
+    - Using the formula gives the answer in **O(1)** instead of **O(n)**, which is worth mentioning in the exam script.
+
+130. **Array - Reverse the whole array.** *[Huo Academy Coding Practice Set habib collection 48 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int arr[100], n, i, start, end, temp;
+
+        printf("Enter size of array: ");
+        scanf("%d", &n);
+        printf("Enter %d elements: ", n);
+        for (i = 0; i < n; i++) scanf("%d", &arr[i]);
+
+        /* two-pointer in-place reversal */
+        start = 0;
+        end = n - 1;
+        while (start < end) {
+            temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+
+        printf("Reversed array: ");
+        for (i = 0; i < n; i++) printf("%d ", arr[i]);
+        printf("\n");
+        return 0;
+    }
+    ```
+
+    - **Two-pointer swap**: one index walks forward from the start, the other backward from the end, swapping as they go, and they meet in the middle.
+    - Time **O(n)**, extra space **O(1)** — no second array is needed, which is why this beats the naive "copy backwards into a new array" approach.
+    - `while (start < end)` (not `<=`) is deliberate: for an odd-length array the middle element stays where it is and swapping it with itself is pointless.
+
+131. **Array - Frequency count of elements.** *[Huo Academy Coding Practice Set habib collection 49 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int arr[100], counted[100] = {0};
+        int n, i, j, count;
+
+        printf("Enter size of array: ");
+        scanf("%d", &n);
+        printf("Enter %d elements: ", n);
+        for (i = 0; i < n; i++) scanf("%d", &arr[i]);
+
+        printf("Element  Frequency\n");
+        for (i = 0; i < n; i++) {
+            if (counted[i]) continue;      // already reported
+            count = 1;
+            for (j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                    counted[j] = 1;        // mark so it is not reported again
+                }
+            }
+            printf("%-8d %d\n", arr[i], count);
+        }
+        return 0;
+    }
+    ```
+
+    Sample run
+    ```
+    Array = 1 2 2 3 1 1
+    Element  Frequency
+    1        3
+    2        2
+    3        1
+    ```
+
+    - The `counted[]` flag array is what keeps the output clean; without it the element `1` would be printed three times with counts 3, 2 and 1.
+    - Complexity **O(n²)** with **O(n)** extra space.
+    - When the values are small non-negative integers, a **counting array** is far better: `freq[arr[i]]++` in one pass gives **O(n)** time, at the cost of an array as large as the maximum value.
+
+132. **Matrix - Sum of two matrices.** *[Huo Academy Coding Practice Set habib collection 52 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int A[10][10], B[10][10], C[10][10];
+        int m, n, i, j;
+
+        printf("Enter rows and columns: ");
+        scanf("%d %d", &m, &n);
+
+        printf("Enter elements of matrix A:\n");
+        for (i = 0; i < m; i++)
+            for (j = 0; j < n; j++)
+                scanf("%d", &A[i][j]);
+
+        printf("Enter elements of matrix B:\n");
+        for (i = 0; i < m; i++)
+            for (j = 0; j < n; j++)
+                scanf("%d", &B[i][j]);
+
+        for (i = 0; i < m; i++)
+            for (j = 0; j < n; j++)
+                C[i][j] = A[i][j] + B[i][j];   // element-wise addition
+
+        printf("Sum matrix C = A + B:\n");
+        for (i = 0; i < m; i++) {
+            for (j = 0; j < n; j++)
+                printf("%d ", C[i][j]);
+            printf("\n");
+        }
+        return 0;
+    }
+    ```
+
+    - Matrix addition is **element-wise**: `C[i][j] = A[i][j] + B[i][j]`.
+    - Both matrices must have **exactly the same dimensions** (m×n). This is the key difference from multiplication, which only needs the columns of A to match the rows of B.
+    - Time complexity **O(m×n)** — one pass over every cell.
+
+133. **Matrix - Find the transpose.** *[Huo Academy Coding Practice Set habib collection 54 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int A[10][10], T[10][10];
+        int m, n, i, j;
+
+        printf("Enter rows and columns: ");
+        scanf("%d %d", &m, &n);
+
+        printf("Enter elements of the matrix:\n");
+        for (i = 0; i < m; i++)
+            for (j = 0; j < n; j++)
+                scanf("%d", &A[i][j]);
+
+        for (i = 0; i < m; i++)
+            for (j = 0; j < n; j++)
+                T[j][i] = A[i][j];         // rows become columns
+
+        printf("Transpose (%d x %d):\n", n, m);
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < m; j++)
+                printf("%d ", T[i][j]);
+            printf("\n");
+        }
+        return 0;
+    }
+    ```
+
+    Example
+    ```
+    A (2 x 3)        Transpose (3 x 2)
+    1 2 3            1 4
+    4 5 6            2 5
+                     3 6
+    ```
+
+    - The whole operation is the single line `T[j][i] = A[i][j]` — row index and column index are swapped, so an m×n matrix becomes n×m.
+    - For a **square** matrix it can be done in place by swapping only the upper triangle: loop `j` from `i+1`, and swap `A[i][j]` with `A[j][i]`. Looping `j` from 0 would swap every pair twice and give back the original matrix.
+    - Time **O(m×n)**.
+
+134. **Matrix - Check identity matrix.** *[Huo Academy Coding Practice Set habib collection 56 (ET: N/A)]*
+
+Answer:
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int A[10][10], n, i, j, isIdentity = 1;
+
+        printf("Enter order of the square matrix: ");
+        scanf("%d", &n);
+
+        printf("Enter %d x %d elements:\n", n, n);
+        for (i = 0; i < n; i++)
+            for (j = 0; j < n; j++)
+                scanf("%d", &A[i][j]);
+
+        for (i = 0; i < n && isIdentity; i++) {
+            for (j = 0; j < n; j++) {
+                if (i == j && A[i][j] != 1) { isIdentity = 0; break; }  // diagonal must be 1
+                if (i != j && A[i][j] != 0) { isIdentity = 0; break; }  // rest must be 0
+            }
+        }
+
+        if (isIdentity)
+            printf("It is an Identity matrix\n");
+        else
+            printf("It is NOT an Identity matrix\n");
+        return 0;
+    }
+    ```
+
+    - An **identity matrix** is square, has 1 on every main-diagonal cell (`i == j`) and 0 everywhere else.
+    - ```
+      1 0 0
+      0 1 0   →  Identity matrix of order 3 (I₃)
+      0 0 1
+      ```
+    - The two `break` statements plus the `&& isIdentity` in the outer loop make it exit as soon as one bad cell is found, instead of scanning the rest pointlessly.
+    - Multiplying any matrix A by I leaves A unchanged (`A × I = I × A = A`), which is why I is the multiplicative identity for matrices.
 
 ## Output Tracing & Control Flow (57)
 
@@ -10197,7 +10589,7 @@ Answer: Bubble sort is used, since it is the easiest to draw as a flowchart.
     - Example: `5 2 9 1 7` becomes `1 2 5 7 9`.
     - Time complexity `O(n²)`, space `O(1)`.
 
-## String Manipulation & Algorithms (14)
+## String Manipulation & Algorithms (15)
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)]*
 
@@ -10732,6 +11124,225 @@ Answer: A palindrome number reads the same forwards and backwards, such as 121, 
 
     - Time complexity `O(n)`, space `O(n)` for the pattern buffer.  <!-- verify -->
     - Note: the question wording is ambiguous and only two sample cases were given, so this reading is inferred from them.
+
+15. **String - Find frequency of each character.** *[Huo Academy Coding Practice Set habib collection 60 (ET: N/A)]*
+
+Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+
+   int main(void) {
+       char str[200];
+       int freq[256] = {0};          // one slot per ASCII code
+       int i;
+
+       printf("Enter a string: ");
+       fgets(str, sizeof(str), stdin);
+
+       for (i = 0; str[i] != '\0'; i++) {
+           if (str[i] == '\n') continue;            // ignore the newline fgets keeps
+           freq[(unsigned char)str[i]]++;
+       }
+
+       printf("Character  Frequency\n");
+       for (i = 0; i < 256; i++)
+           if (freq[i] > 0)
+               printf("   %c       %d\n", i, freq[i]);
+
+       return 0;
+   }
+   ```
+
+   Sample run
+   ```
+   Enter a string: programming
+   Character  Frequency
+      a       1
+      g       2
+      i       1
+      m       2
+      n       1
+      o       1
+      p       1
+      r       2
+   ```
+
+   - This is the **counting / hashing** technique: the character itself is used as the array index, so `freq['a']` is `freq[97]`. One pass over the string is enough → **O(n)** time and **O(1)** extra space (a fixed 256-slot table).
+   - The cast `(unsigned char)` matters. `char` is signed on most compilers, so a byte above 127 becomes negative and `freq[-56]++` writes outside the array — undefined behaviour.
+   - Printing in index order gives the characters sorted alphabetically for free.
+   - To make the count case-insensitive, fold the case first with `tolower(str[i])` from `<ctype.h>`.
+
+## Formula-Based Series (Practice) (5)
+
+1. **Sum of Cubes — find the sum of the series $1^3 + 2^3 + 3^3 + \dots\dots\dots\dots + n^3$ using its closed-form formula.** *[Huo Academy Coding Practice Set habib collection 25 (ET: N/A)]*
+
+Answer:
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       int n, i;
+       long loop_sum = 0, formula_sum;
+
+       printf("Enter value of n: ");
+       scanf("%d", &n);
+
+       /* method 1 - loop, O(n) */
+       for (i = 1; i <= n; i++)
+           loop_sum += (long)i * i * i;
+
+       /* method 2 - closed form, O(1) */
+       formula_sum = ((long)n * (n + 1) / 2) * ((long)n * (n + 1) / 2);
+
+       printf("By loop    = %ld\n", loop_sum);
+       printf("By formula = %ld\n", formula_sum);
+       return 0;
+   }
+   ```
+
+   - **Formula:** `1³ + 2³ + … + n³ = [n(n+1)/2]²`
+   - Notice that this is exactly the **square of the sum of the first n natural numbers**, i.e. `(1+2+…+n)²`.
+   - n = 4 → 1 + 8 + 27 + 64 = **100**, and [4×5/2]² = 10² = 100 ✓
+   - The formula answers in **O(1)** while the loop needs **O(n)**.
+   - Divide before squaring (`n(n+1)/2` first) to keep the intermediate value small; `n(n+1)` is always even so the division is exact and no precision is lost.
+
+2. **Geometric Progression (GP) — find the sum of a geometric series using its closed-form formula.** *[Huo Academy Coding Practice Set habib collection 28 (ET: N/A)]*
+
+Answer:
+
+   ```c
+   #include <stdio.h>
+   #include <math.h>
+
+   int main(void) {
+       double a, r, sum;
+       int n, i;
+
+       printf("Enter first term a, common ratio r and number of terms n: ");
+       scanf("%lf %lf %d", &a, &r, &n);
+
+       if (r == 1.0)
+           sum = a * n;                              // special case, formula divides by zero
+       else
+           sum = a * (pow(r, n) - 1) / (r - 1);      // closed form
+
+       printf("Sum of %d terms = %.6lf\n", n, sum);
+
+       /* verification by loop */
+       double t = a, loop = 0;
+       for (i = 0; i < n; i++) { loop += t; t *= r; }
+       printf("By loop        = %.6lf\n", loop);
+
+       return 0;
+   }
+   ```
+
+   - A **GP** multiplies by a fixed ratio each step: `a, ar, ar², ar³, …`
+   - **Formula:** `Sₙ = a(rⁿ − 1) / (r − 1)` for r ≠ 1, and `Sₙ = a·n` when r = 1.
+   - a = 2, r = 3, n = 4 → 2 + 6 + 18 + 54 = **80**, and 2(81−1)/(3−1) = 160/2 = 80 ✓
+   - **Infinite GP:** when |r| < 1 the series converges to `S∞ = a / (1 − r)`.
+   - The `r == 1.0` guard is essential — without it the program divides by zero. This is the case examiners look for.
+   - Compile with `-lm` on Linux/Mac because `pow()` lives in the math library.
+
+3. **Arithmetic Progression (AP) — find the sum of an arithmetic series using its closed-form formula.** *[Huo Academy Coding Practice Set habib collection 29 (ET: N/A)]*
+
+Answer:
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       double a, d, last, sum;
+       int n, i;
+
+       printf("Enter first term a, common difference d and number of terms n: ");
+       scanf("%lf %lf %d", &a, &d, &n);
+
+       last = a + (n - 1) * d;            // nth term
+       sum  = n / 2.0 * (2 * a + (n - 1) * d);
+
+       printf("nth term = %.2lf\n", last);
+       printf("Sum      = %.2lf\n", sum);
+
+       /* verification by loop */
+       double t = a, loop = 0;
+       for (i = 0; i < n; i++) { loop += t; t += d; }
+       printf("By loop  = %.2lf\n", loop);
+
+       return 0;
+   }
+   ```
+
+   - An **AP** adds a fixed difference each step: `a, a+d, a+2d, a+3d, …`
+   - **nth term:** `aₙ = a + (n−1)d`
+   - **Sum:** `Sₙ = n/2 × [2a + (n−1)d]`, which can also be written `Sₙ = n/2 × (first term + last term)`.
+   - a = 3, d = 2, n = 5 → 3 + 5 + 7 + 9 + 11 = **35**, and 5/2 × (3 + 11) = 2.5 × 14 = 35 ✓
+   - Write `n / 2.0` and not `n / 2`. With two `int` operands C truncates, so n = 5 would give 2 instead of 2.5 and the answer would be wrong.
+   - The familiar `1 + 2 + … + n = n(n+1)/2` is just this formula with a = 1 and d = 1.
+
+4. **Factorial Sum — find the sum of the series $1! + 2! + 3! + \dots\dots\dots\dots + n!$** *[Huo Academy Coding Practice Set habib collection 30 (ET: N/A)]*
+
+Answer:
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       int n, i;
+       unsigned long long fact = 1, sum = 0;
+
+       printf("Enter value of n: ");
+       scanf("%d", &n);
+
+       for (i = 1; i <= n; i++) {
+           fact *= i;              // reuse the previous factorial: i! = (i-1)! x i
+           sum  += fact;
+       }
+
+       printf("Sum of factorials = %llu\n", sum);
+       return 0;
+   }
+   ```
+
+   - There is **no closed-form formula** for this series, so it must be computed term by term.
+   - The efficient trick is to **carry the factorial forward** instead of recomputing it: since `i! = (i−1)! × i`, one multiplication per term is enough. The whole program is **O(n)**. Calling a `factorial()` function inside the loop would make it **O(n²)**.
+   - n = 5 → 1 + 2 + 6 + 24 + 120 = **153**
+   - Factorials overflow fast. `unsigned long long` (64-bit) holds up to 20!; plain `int` overflows already at 13!. Beyond that, big-integer arithmetic with an array of digits is needed.
+
+5. **Fibonacci Series Sum — find the sum of the first n terms of the Fibonacci series.** *[Huo Academy Coding Practice Set habib collection 31 (ET: N/A)]*
+
+Answer:
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       int n, i;
+       long long a = 1, b = 1, next, sum = 0;
+
+       printf("Enter number of terms: ");
+       scanf("%d", &n);
+
+       for (i = 1; i <= n; i++) {
+           sum += a;
+           next = a + b;          // slide the window forward
+           a = b;
+           b = next;
+       }
+
+       printf("Sum of first %d Fibonacci terms = %lld\n", n, sum);
+       return 0;
+   }
+   ```
+
+   - The Fibonacci series is `1, 1, 2, 3, 5, 8, 13, …` where each term is the sum of the previous two: `F(n) = F(n−1) + F(n−2)`.
+   - **Identity:** `F(1) + F(2) + … + F(n) = F(n+2) − 1`
+   - n = 5 → 1 + 1 + 2 + 3 + 5 = **12**, and F(7) − 1 = 13 − 1 = 12 ✓
+   - Only two variables are kept instead of a whole array, so the program uses **O(n)** time and **O(1)** space.
+   - Never compute this with a naive recursive `fib()` inside a loop — that is exponential, **O(2ⁿ)**, because the same subproblems are recomputed over and over.
 
 ## File Handling (4)
 
