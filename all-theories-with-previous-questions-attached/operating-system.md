@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 10 theories
+**Table of Contents** — 6 subtopics · 14 theories
 
 1. **[Linux / Unix Commands & Administration](#linux--unix-commands--administration)**
    - [Linux — Structure, Shell and File System](#linux--structure-shell-and-file-system)
@@ -9,6 +9,7 @@
    - [CPU Scheduling — Concepts and Criteria](#cpu-scheduling--concepts-and-criteria)
    - [The Scheduling Algorithms](#the-scheduling-algorithms)
    - [Worked Scheduling Problems](#worked-scheduling-problems)
+   - [The Three Schedulers — Long-term, Medium-term and Short-term](#the-three-schedulers--long-term-medium-term-and-short-term)
 
 3. **[Memory Management & Paging](#memory-management--paging)**
    - [Memory Management — Paging and Segmentation](#memory-management--paging-and-segmentation)
@@ -17,9 +18,14 @@
 4. **[OS Concepts & Process Management](#os-concepts--process-management)**
    - [Operating System — Functions and Services](#operating-system--functions-and-services)
    - [Processes, Threads and Multithreading](#processes-threads-and-multithreading)
+   - [Process Creation, System Calls and Special Process States (fork, Zombie, Orphan, Daemon)](#process-creation-system-calls-and-special-process-states-fork-zombie-orphan-daemon)
 
 5. **[Deadlock & Concurrency Control](#deadlock--concurrency-control)**
    - [Deadlock — Conditions, Handling and Prevention](#deadlock--conditions-handling-and-prevention)
+   - [Process Synchronization — Critical Section, Semaphores and Mutex](#process-synchronization--critical-section-semaphores-and-mutex)
+
+6. **[File Systems & Disk Management](#file-systems--disk-management)**
+   - [File Systems, inodes, Partitions and Mounting](#file-systems-inodes-partitions-and-mounting)
 
 <!-- TOC END -->
 
@@ -86,6 +92,21 @@ flowchart TD
 - [Difference between below 3 linux command: cd, cd usr/desk/home, cd/user/desk/home](../written-answers/operating-system.md?plain=1#L1309)
 - [How do you define bash?](../written-answers/operating-system.md?plain=1#L2116)
 - [Linux এ file তৈরির জন্য কি কি Command ব্যবহৃত হয়? পূর্ণ Command লিখ।](../written-answers/operating-system.md?plain=1#L3406)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is LINUX?](../mcq-answers/operating-system.md?plain=1#L290)
+- [Which one of the first 64-bit operating system?](../mcq-answers/operating-system.md?plain=1#L308)
+- [In a computer, folder opening is denied by which of the following names?](../mcq-answers/operating-system.md?plain=1#L317)
+- [Which of the following contains configuration information of a window?](../mcq-answers/operating-system.md?plain=1#L326)
+- [Which O/S is recommended for real time system?](../mcq-answers/operating-system.md?plain=1#L344)
+- [Which OS is recommended for real time systems?](../mcq-answers/operating-system.md?plain=1#L353)
+- [Generally what type of server OS is chosen, where security concern is a great issue?](../mcq-answers/operating-system.md?plain=1#L371)
+- [User passwords in Linux are stored as-](../mcq-answers/operating-system.md?plain=1#L519)
+- [What is the maximum size of a file allowed in Linux with the following data Block Size = 4KB, inode data pointer size = 4 byte?](../mcq-answers/operating-system.md?plain=1#L537)
+- [USER150, USER153 can do certain tasks and USER151, USER152 can also do certain tasks as depicted in the picture. For this reason, two ________ have been created…](../mcq-answers/operating-system.md?plain=1#L555)
+- [In UNIX, the login prompt can be changed by changing the content of the file-](../mcq-answers/operating-system.md?plain=1#L576)
+
 
 
 ---
@@ -437,6 +458,18 @@ done
 - [A question on Linux file permission commands:](../written-answers/operating-system.md?plain=1#L3489)
 - [Linux Command:](../written-answers/operating-system.md?plain=1#L3567)
 
+**Previous Year MCQ List from this Topic:**
+
+- [A job which is schedule to run periodically at fixed times or intervals is known as-](../mcq-answers/operating-system.md?plain=1#L56)
+- [Which of the following Linux command has incorrect syntax?](../mcq-answers/operating-system.md?plain=1#L528)
+- [Which UNIX/Linux command is used to make all files and sub-directories in the directory "progs" executable by all users?](../mcq-answers/operating-system.md?plain=1#L546)
+- [In UNIX, the login prompt can be changed by changing the content of the file-](../mcq-answers/operating-system.md?plain=1#L576)
+- [Which of the following UNIX commands allows scheduling a program to be executed at specifies time?](../mcq-answers/operating-system.md?plain=1#L585)
+- [What command is used to remove files UNIX?](../mcq-answers/operating-system.md?plain=1#L594)
+- [You need to determine whether IP information has been assigned to your Windows NT. Which utility should you use?](../mcq-answers/operating-system.md?plain=1#L603)
+- [The command password issued without an argument with change the password of –](../mcq-answers/operating-system.md?plain=1#L380)
+
+
 
 ---
 
@@ -519,6 +552,15 @@ stateDiagram-v2
 - [(b) What is process? Describe different states of a process.](../written-answers/operating-system.md?plain=1#L6852)
 - [What are the five states of a process in an operating system?](../written-answers/operating-system.md?plain=1#L6973)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Time during which a job is processed by the Computer is:](../mcq-answers/operating-system.md?plain=1#L38)
+- [The time needs from the process arrival to the completion of that process is called](../mcq-answers/operating-system.md?plain=1#L117)
+- [A common representation of process scheduling is -](../mcq-answers/operating-system.md?plain=1#L162)
+- [The scheduling queue is generally stored as-](../mcq-answers/operating-system.md?plain=1#L171)
+- [The interval from the time of submission of a process to the time of completion is termed is ________.](../mcq-answers/operating-system.md?plain=1#L234)
+
+
 
 ---
 
@@ -599,6 +641,13 @@ Each process gets a fixed **TIME QUANTUM (time slice)**; when it expires, the pr
 - [Operating system (OS) scheduling is the key concept of multiprogramming. List and briefly define the major types of OS scheduling.](../written-answers/operating-system.md?plain=1#L5475)
 - [(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling](../written-answers/operating-system.md?plain=1#L5549)
 - [Write various types of CPU scheduling. Describes a CPU scheduling method which has best performance.](../written-answers/operating-system.md?plain=1#L5811)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following scheduling algorithm is non preemptive?](../mcq-answers/operating-system.md?plain=1#L29)
+- [Which of the following Process scheduling algorithm is highly improbable to be implemented?](../mcq-answers/operating-system.md?plain=1#L74)
+- [Which of the following process scheduling algorithm may lead to starvation?](../mcq-answers/operating-system.md?plain=1#L153)
+
 
 
 ---
@@ -775,6 +824,78 @@ flowchart TD
 - [Calculate The Average Waiting Time of SJF scheduling algorithm.](../written-answers/operating-system.md?plain=1#L5257)
 - [(b) Turnaround time of FCFS and SJF](../written-answers/operating-system.md?plain=1#L5410)
 - [Calculate the average waiting time and total turn around time in: (i) Non Preemptive SJF (ii) Preemptive SJF](../written-answers/operating-system.md?plain=1#L5640)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Time during which a job is processed by the Computer is:](../mcq-answers/operating-system.md?plain=1#L38)
+- [The time needs from the process arrival to the completion of that process is called](../mcq-answers/operating-system.md?plain=1#L117)
+- [The interval from the time of submission of a process to the time of completion is termed is ________.](../mcq-answers/operating-system.md?plain=1#L234)
+
+
+---
+
+### The Three Schedulers — Long-term, Medium-term and Short-term
+
+> An operating system does not have one scheduler but **three**, operating on **different timescales** and answering **different questions**.
+
+```mermaid
+flowchart LR
+    A["JOB POOL /<br/>on disk<br/>(NEW)"] -->|"① LONG-TERM scheduler<br/>(job scheduler)<br/>— which jobs enter memory?"| B["READY QUEUE<br/>(in main memory)"]
+    B -->|"② SHORT-TERM scheduler<br/>(CPU scheduler)<br/>— which ready process<br/>gets the CPU NOW?"| C["CPU — RUNNING"]
+    C --> D["WAITING<br/>(I/O)"]
+    D --> B
+    B -.->|"③ MEDIUM-TERM scheduler<br/>SWAP OUT"| E["SWAP SPACE<br/>(suspended, on disk)"]
+    E -.->|"SWAP IN"| B
+```
+
+| | ⭐ **LONG-TERM** | ⭐ **SHORT-TERM** | ⭐ **MEDIUM-TERM** |
+|---|---|---|---|
+| **Also called** | **Job scheduler** | ⭐ **CPU scheduler / dispatcher** | **Swapper** |
+| ⭐ **Decides** | ⭐ **WHICH PROCESSES ARE BROUGHT INTO THE READY QUEUE** (admitted from the job pool into main memory) | ⭐ **Which READY process gets the CPU NEXT** | **Which process to SWAP OUT of memory (and later back in)** |
+| **Moves a process** | **NEW → READY** | **READY → RUNNING** | **READY/WAITING ↔ SUSPENDED (disk)** |
+| **Frequency** | ⚠️ **Very INFREQUENT** (seconds to minutes) | ⭐ **VERY FREQUENT** (milliseconds) | In between |
+| **Speed required** | Can be slow and elaborate | ⭐ **Must be EXTREMELY FAST** — it runs constantly, so its own cost is pure overhead | Moderate |
+| **Controls** | ⭐ **The DEGREE OF MULTIPROGRAMMING** — how many processes are in memory at once | CPU utilisation | Reduces the degree of multiprogramming temporarily |
+| **Present in** | Batch systems (largely absent in modern time-sharing systems, where every process is admitted immediately) | ⭐ **Every** system | Time-sharing systems |
+
+> ### **"What is LONG-TERM scheduling?"** → ### ✅ **"It SELECTS WHICH PROCESS HAS TO BE BROUGHT INTO THE READY QUEUE."**
+>
+> **Why the long-term scheduler matters: it chooses a good MIX of processes.** If it admits only CPU-bound jobs the I/O devices sit idle; if only I/O-bound jobs, the CPU sits idle. **A balanced mix keeps both busy** — which is the whole purpose of multiprogramming.
+>
+> **Why the medium-term scheduler exists:** when memory is over-committed and **thrashing** begins, the only cure is to **reduce the degree of multiprogramming** — swap some process out entirely so the rest have enough frames.
+
+#### The scheduling queues and how they are stored
+
+| Queue | Holds |
+|---|---|
+| **Job queue** | **All** processes in the system |
+| ⭐ **Ready queue** | Processes **in main memory, ready and waiting for the CPU** |
+| **Device / I/O queues** | Processes waiting for a particular device |
+
+> ### **"The scheduling queue is generally stored as…"** → ### ✅ **A LINKED LIST** — each PCB contains a **pointer to the next PCB** in the queue, so a process can be inserted or removed in O(1) without shifting anything.
+> ### **"A common representation of process scheduling is…"** → ### ✅ **A QUEUEING DIAGRAM** — the standard picture of ready queue, CPU and I/O queues with processes circulating between them.
+
+#### The dispatcher, and dispatch latency
+
+> **The DISPATCHER is the module that actually GIVES CONTROL OF THE CPU to the process chosen by the short-term scheduler.** It performs the **context switch**, switches to user mode, and jumps to the correct location in the program. ⭐ **DISPATCH LATENCY is the time it takes to stop one process and start another** — pure overhead, so it must be minimal.
+
+> **The scheduler DECIDES; the dispatcher DOES.** Keeping that distinction straight is a common exam point.
+
+#### Virtual processors
+
+> ### **"To execute programs, an OS creates a number of ______, each one running a different program"** → ### ✅ **VIRTUAL PROCESSORS.**
+>
+> By **rapidly switching one physical CPU between many processes**, the operating system creates the **illusion that each process has a processor to itself**. That illusion — a *virtual processor* per process — is the fundamental abstraction of multiprogramming, and it is why a single-core machine can appear to run dozens of programs simultaneously.
+
+**Previous Year MCQ List from this Topic:**
+
+- [A common representation of process scheduling is -](../mcq-answers/operating-system.md?plain=1#L162)
+- [The scheduling queue is generally stored as-](../mcq-answers/operating-system.md?plain=1#L171)
+- [To execute a program, an OS creates a number of ________, each one for, running a different program.](../mcq-answers/operating-system.md?plain=1#L180)
+- [What is long term scheduling?](../mcq-answers/operating-system.md?plain=1#L189)
+- [Multiprogramming systems ________](../mcq-answers/operating-system.md?plain=1#L389)
+
+
 
 
 ---
@@ -959,6 +1080,14 @@ A logical address is a pair **(segment number, offset)**, and the **segment tabl
 - [Why page are sizes always powers of 2?](../written-answers/operating-system.md?plain=1#L6754)
 - [(a) Consider a computer system with the following specifications: 2+2=4](../written-answers/operating-system.md?plain=1#L6816)
 
+**Previous Year MCQ List from this Topic:**
+
+- [To keep track of how many frames have been allocated, how many are there, and how many are available, operating system maintain a—](../mcq-answers/operating-system.md?plain=1#L409)
+- [Logical Memory is broken into blocks of the same size called-](../mcq-answers/operating-system.md?plain=1#L418)
+- [A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page tabl…](../mcq-answers/operating-system.md?plain=1#L427)
+- [When there is a large logical address space, the best way of paging would be ________.](../mcq-answers/operating-system.md?plain=1#L207)
+
+
 
 ---
 
@@ -1091,6 +1220,20 @@ For older, non-paged systems, the OS must choose **which free hole** to allocate
 - [What is Thrashing? How does it impact CPU performance and system efficiency?](../written-answers/operating-system.md?plain=1#L6834)
 - [In the given example, let us assume the jobs and the memory requirements as the following: Job1=90k, Job2=20k, Job3=50k, Job4=200k. Let the free pace memory all…](../written-answers/operating-system.md?plain=1#L6533)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following page replacement algorithms suffers from Belady’s anomaly?](../mcq-answers/operating-system.md?plain=1#L400)
+- [What is the relationship between Paging and Virtual memory?](../mcq-answers/operating-system.md?plain=1#L436)
+- [Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory wi…](../mcq-answers/operating-system.md?plain=1#L445)
+- [Applying the LRU page replacement to the reference string 1 2 4 5 2 1 2 4. The main memory can accommodate pages and it already has pages and 2. Pape I came in…](../mcq-answers/operating-system.md?plain=1#L454)
+- [Consider a virtual memory system where three pages are allocated for real memory. If the page replacement algorithm used is FIFO, how many page replacements tak…](../mcq-answers/operating-system.md?plain=1#L463)
+- [Virtual memory located on:](../mcq-answers/operating-system.md?plain=1#L472)
+- [Virtually memory হিসেবে RAM এর পাশাপাশি কোনটি ব্যবহার হয়?](../mcq-answers/operating-system.md?plain=1#L481)
+- [Memory management scheme by which a computer stores and retrieves data from secondary storage for use in main memory is-](../mcq-answers/operating-system.md?plain=1#L490)
+- [Swap space exists in ---](../mcq-answers/operating-system.md?plain=1#L499)
+- [A page fault occurs ________](../mcq-answers/operating-system.md?plain=1#L508)
+
+
 
 ---
 
@@ -1147,6 +1290,22 @@ An **operating system** is **system software that acts as an INTERFACE between t
 
 - [(b) What is process? Describe different states of a process.](../written-answers/operating-system.md?plain=1#L6852)
 - [What are the five states of a process in an operating system?](../written-answers/operating-system.md?plain=1#L6973)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The main program in an operating system is called:](../mcq-answers/operating-system.md?plain=1#L225)
+- [The ______ system may manage a high degree of interaction between processes and is very useful for high speed and real-time processing.](../mcq-answers/operating-system.md?plain=1#L254)
+- [Which one is an embedded operating system?](../mcq-answers/operating-system.md?plain=1#L263)
+- [Which initial program is called at the starting of a computer?](../mcq-answers/operating-system.md?plain=1#L272)
+- [What is the mean of the Booting in the system?](../mcq-answers/operating-system.md?plain=1#L281)
+- [Where is the Boot strapping program stored?](../mcq-answers/operating-system.md?plain=1#L299)
+- [Who preside the interface between a process and the OS?](../mcq-answers/operating-system.md?plain=1#L335)
+- [Which O/S is recommended for real time system?](../mcq-answers/operating-system.md?plain=1#L344)
+- [Which OS is recommended for real time systems?](../mcq-answers/operating-system.md?plain=1#L353)
+- [Which one loads first when you boot up your Computer?](../mcq-answers/operating-system.md?plain=1#L362)
+- [Multiprogramming systems ________](../mcq-answers/operating-system.md?plain=1#L389)
+- [The request and release of resources are-](../mcq-answers/operating-system.md?plain=1#L668)
+
 
 
 ---
@@ -1213,6 +1372,176 @@ An **operating system** is **system software that acts as an INTERFACE between t
 - [(b) What is process? Describe different states of a process.](../written-answers/operating-system.md?plain=1#L6852)
 - [Why is multithreading used in programming? Explain the advantages of using multithreads in software development.](../written-answers/operating-system.md?plain=1#L6927)
 - [What are the five states of a process in an operating system?](../written-answers/operating-system.md?plain=1#L6973)
+
+**Previous Year MCQ List from this Topic:**
+
+- [A process needs I/O operations, it switches to _____](../mcq-answers/operating-system.md?plain=1#L20)
+- [What is the disadvantage of multithreading?](../mcq-answers/operating-system.md?plain=1#L108)
+- [Which is not the state of a process in an Operating System?](../mcq-answers/operating-system.md?plain=1#L126)
+- [The maximum number of processes that can be in ready state in computer system with n CPU's is—](../mcq-answers/operating-system.md?plain=1#L135)
+- [Multi-Threaded programs are-](../mcq-answers/operating-system.md?plain=1#L198)
+- [Which of the following is not the state of a process in process Control Block (PCB)?](../mcq-answers/operating-system.md?plain=1#L243)
+- [The ______ system may manage a high degree of interaction between processes and is very useful for high speed and real-time processing.](../mcq-answers/operating-system.md?plain=1#L254)
+
+
+---
+
+### Process Creation, System Calls and Special Process States (fork, Zombie, Orphan, Daemon)
+
+#### System calls — the interface between a process and the OS
+
+> ### **A SYSTEM CALL is the PROGRAMMATIC INTERFACE THROUGH WHICH A PROCESS REQUESTS A SERVICE FROM THE OPERATING SYSTEM KERNEL.** It is the **only** legitimate doorway from **user mode** into **kernel mode**.
+
+```mermaid
+flowchart LR
+    A["USER PROCESS<br/>(user mode —<br/>restricted privileges)"] -->|"system call<br/>e.g. read(), fork()"| B["TRAP / software interrupt<br/>— switch to KERNEL MODE"]
+    B --> C["KERNEL executes the<br/>privileged operation"]
+    C -->|"return value,<br/>back to user mode"| A
+```
+
+> ### **"Who presides over the interface between a process and the OS?"** → ### ✅ **SYSTEM CALLS.**
+> ### **"The request and release of resources are…"** → ### ✅ **SYSTEM CALLS.**
+
+| Category | Examples |
+|---|---|
+| ⭐ **Process control** | ⭐ **`fork()`, `exec()`, `wait()`, `exit()`, `kill()`** |
+| **File management** | `open()`, `read()`, `write()`, `close()`, `create()` |
+| **Device management** | `ioctl()`, `read()`, `write()` |
+| **Information maintenance** | `getpid()`, `time()`, `sleep()` |
+| **Communication** | `pipe()`, `shmget()`, `socket()`, `send()`, `recv()` |
+| **Protection** | `chmod()`, `umask()`, `chown()` |
+
+#### Process creation in UNIX/Linux — fork() and exec()
+
+> ### **`fork()` is the UNIX system call used to CREATE A NEW PROCESS.** It creates an **almost exact COPY of the calling process** — the new one is the **CHILD**, the original is the **PARENT**.
+
+```
+   pid_t pid = fork();
+
+   RETURN VALUE — this is the whole trick:
+        in the PARENT :  pid = the CHILD's process ID  (a positive number)
+        in the CHILD  :  pid = 0
+        on FAILURE    :  pid = −1
+
+   So ONE call RETURNS TWICE — once in each process.
+```
+
+```c
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    pid_t pid = fork();
+
+    if (pid < 0)         printf("fork failed\n");
+    else if (pid == 0)   printf("I am the CHILD,  my pid = %d\n", getpid());
+    else                 printf("I am the PARENT, my child = %d\n", pid);
+
+    return 0;
+}
+```
+
+| Call | What it does |
+|---|---|
+| ⭐ **`fork()`** | ⭐ **CREATES a new process** — a duplicate of the parent |
+| **`exec()` family** | **REPLACES the current process image** with a new program. **It does NOT create a process** |
+| **`wait()`** | The parent **BLOCKS until a child terminates** and **collects its exit status** |
+| **`exit()`** | Terminates the calling process, returning a status code |
+
+> ### **The classic UNIX idiom is `fork()` THEN `exec()`:** the shell **forks** a copy of itself, and the child **execs** the program you typed. This is exactly how every command you run from a terminal is started.
+
+#### ⭐ Zombie and Orphan processes — the pair always examined together
+
+| | ⭐ **ZOMBIE process** | ⭐ **ORPHAN process** |
+|---|---|---|
+| **Definition** | ⭐ **A process that has FINISHED EXECUTION but whose EXIT STATUS has NOT YET BEEN COLLECTED by its parent** | ⭐ **A process whose PARENT has TERMINATED while the child is STILL RUNNING** |
+| **Who died?** | **The CHILD** is dead; the parent is alive but negligent | **The PARENT** is dead; the child is alive |
+| **State code** | **`Z`** (defunct) in `ps` output | Runs normally |
+| **Consumes** | ⚠️ **Only a PROCESS-TABLE ENTRY** — no memory, no CPU | Normal resources |
+| **Why it matters** | Many zombies **exhaust the process table**, so no new process can be created | Harmless — it is immediately re-parented |
+| **Resolution** | The parent calls ⭐ **`wait()`** to "reap" it; if the parent dies, **init/systemd adopts and reaps it** | ⭐ **ADOPTED by `init` (PID 1) / systemd**, which will `wait()` for it |
+
+> ### **"In UNIX, processes that have FINISHED EXECUTION but have NOT YET had their STATUS COLLECTED are known as…"** → ### ✅ **ZOMBIE PROCESSES.**
+>
+> **Why zombies exist at all — the design reason:** the kernel **must keep the exit status somewhere** until the parent asks for it, otherwise the parent could never learn whether its child succeeded. The zombie entry **is** that stored status.
+
+#### Daemon processes
+
+> ### **A DAEMON is a process that RUNS IN THE BACKGROUND, DETACHED FROM ANY TERMINAL, providing a SERVICE — it is not started or controlled by an interactive user.** On UNIX, daemon names conventionally end in **`d`**.
+
+| Daemon | Service |
+|---|---|
+| ⭐ **`lpd` / print spooler** | ⭐ **The PRINTER DAEMON — runs as a SERVICE in the operating system**, accepting print jobs into a queue and feeding them to the printer |
+| **`sshd`** | Remote secure shell logins |
+| **`httpd` / `nginx`** | Web server |
+| **`crond`** | Runs scheduled jobs |
+| **`syslogd`** | System logging |
+| **`init` / `systemd`** | **PID 1** — the ancestor of all processes; adopts orphans |
+
+> **Characteristics of a daemon:** starts at **boot time** (or on demand), has **no controlling terminal**, usually **runs as a specific service user**, its parent is typically **init/systemd**, and it **waits for requests** rather than being invoked directly.
+
+#### Scheduled jobs — the cron job
+
+> ### **A CRON JOB is a task SCHEDULED TO RUN PERIODICALLY AT FIXED TIMES, DATES OR INTERVALS**, managed by the **`cron` daemon** on UNIX/Linux.
+
+```
+   crontab format — five time fields, then the command:
+
+     ┌───── minute        (0 – 59)
+     │ ┌─── hour          (0 – 23)
+     │ │ ┌─ day of month  (1 – 31)
+     │ │ │ ┌ month        (1 – 12)
+     │ │ │ │ ┌ day of week (0 – 7, 0 and 7 = Sunday)
+     │ │ │ │ │
+     * * * * *  /path/to/command
+
+   0 2 * * *        → every day at 02:00        (a nightly backup)
+   */15 * * * *     → every 15 minutes
+   0 0 1 * *        → at midnight on the 1st of every month
+```
+
+| Command | Use |
+|---|---|
+| ⭐ **`cron` / `crontab`** | ⭐ **Schedule a program to run at SPECIFIED, REPEATING times** |
+| **`at`** | Schedule a job to run **ONCE** at a given future time |
+| **`anacron`** | Runs missed jobs on machines that are not always on |
+
+#### Process states
+
+```mermaid
+stateDiagram-v2
+    [*] --> New
+    New --> Ready : admitted
+    Ready --> Running : scheduler dispatch
+    Running --> Ready : interrupt / time slice expired
+    Running --> Waiting : I/O or event WAIT
+    Waiting --> Ready : I/O or event COMPLETE
+    Running --> Terminated : exit
+    Terminated --> [*]
+```
+
+> ### **The FIVE standard process states are: NEW · READY · RUNNING · WAITING (BLOCKED) · TERMINATED.**
+>
+> ### **"A process needs an I/O operation — it switches to…"** → ### ✅ **WAITING (BLOCKED).**
+> ### **"Which is NOT a state of a process?"** → ### ✅ **"SLEEP" and "OLD" are NOT standard process states** in the five-state model. *(Real UNIX does have a "sleeping" state, which is its name for waiting — but in the textbook five-state model used by examiners, the blocked state is called **WAITING**.)*
+
+**The Process Control Block (PCB)** stores, for each process: the **process ID**, its **state**, the **program counter**, the **CPU registers**, **scheduling information** (priority, queue pointers), **memory-management information** (page tables, base/limit), **accounting information**, and **I/O status** (open files, devices).
+
+> ### **"The maximum number of processes that can be in the READY state in a system with n CPUs is…"** → ### ✅ **INDEPENDENT OF n.** The ready queue holds processes **waiting for** a CPU; its length is limited by memory and the process table, **not** by how many CPUs exist. *(It is the **RUNNING** state that is limited to **n** processes.)*
+
+**Previous Year MCQ List from this Topic:**
+
+- [A process needs I/O operations, it switches to _____](../mcq-answers/operating-system.md?plain=1#L20)
+- [In Unix operating system, which system call is used for creating a new process?](../mcq-answers/operating-system.md?plain=1#L47)
+- [A job which is schedule to run periodically at fixed times or intervals is known as-](../mcq-answers/operating-system.md?plain=1#L56)
+- [Which one of the following statements is true with respect to Printer Daemon process?](../mcq-answers/operating-system.md?plain=1#L65)
+- [Which is not the state of a process in an Operating System?](../mcq-answers/operating-system.md?plain=1#L126)
+- [In UNIX, processes that have finished execution but have not yet had their status collected are known as-](../mcq-answers/operating-system.md?plain=1#L144)
+- [Which of the following is not the state of a process in process Control Block (PCB)?](../mcq-answers/operating-system.md?plain=1#L243)
+- [Who preside the interface between a process and the OS?](../mcq-answers/operating-system.md?plain=1#L335)
+- [The request and release of resources are-](../mcq-answers/operating-system.md?plain=1#L668)
+
+
 
 
 ---
@@ -1331,3 +1660,253 @@ Requires **advance knowledge of the MAXIMUM resources each process may ever need
 
 - [Describe three basic techniques that exist to control deadlocks in databases. (05)](../written-answers/operating-system.md?plain=1#L7023)
 - [What are the four necessary conditions for a deadlock to occur?](../written-answers/operating-system.md?plain=1#L7039)
+
+**Previous Year MCQ List from this Topic:**
+
+- [A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N coul…](../mcq-answers/operating-system.md?plain=1#L614)
+- [Which one of the following is the deadlock avoidance algorithm?](../mcq-answers/operating-system.md?plain=1#L623)
+- [Which of the following is not a deadlock handling strategy?](../mcq-answers/operating-system.md?plain=1#L632)
+- [A system has 12 magnetic tape drives and 3 processes: PO, PI, and P2. Process PO requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives. The curre…](../mcq-answers/operating-system.md?plain=1#L641)
+- [A computer system has 6 type drives and each process may need 3 type drives. What is the maximum number of processes than is guaranteed to be deadlock free?](../mcq-answers/operating-system.md?plain=1#L650)
+- [Multi-Threaded programs are-](../mcq-answers/operating-system.md?plain=1#L198)
+
+
+---
+
+### Process Synchronization — Critical Section, Semaphores and Mutex
+
+> When several processes or threads share data, their operations can **interleave** in ways that corrupt it. **PROCESS SYNCHRONIZATION is the set of mechanisms that coordinate their access** so that shared data stays consistent.
+
+#### The race condition and the critical section
+
+> ### **A RACE CONDITION occurs when the OUTCOME depends on the ORDER in which concurrent processes happen to execute.**
+
+```
+   Two threads both run:  balance = balance + 100     (balance starts at 1000)
+
+   In machine terms this is THREE steps:
+        LOAD  R ← balance
+        ADD   R ← R + 100
+        STORE balance ← R
+
+   A bad interleaving:
+        T1: LOAD  R1 ← 1000
+        T2: LOAD  R2 ← 1000          ← T2 reads BEFORE T1 has written
+        T1: ADD   R1 = 1100 ; STORE balance = 1100
+        T2: ADD   R2 = 1100 ; STORE balance = 1100   ⚠️ one deposit LOST
+
+   Correct result: 1200.  Actual result: 1100.
+```
+
+> ### **A CRITICAL SECTION is the SEGMENT OF A PROGRAM IN WHICH SHARED RESOURCES ARE ACCESSED**, and which must **not** be executed by more than one process at a time.
+
+```
+   do {
+        ENTRY SECTION          ← request permission to enter
+            CRITICAL SECTION   ← access the shared resource
+        EXIT SECTION           ← release permission
+            REMAINDER SECTION
+   } while (true);
+```
+
+> ### **The three requirements any correct solution to the critical-section problem must satisfy:**
+>
+> | # | Requirement | Meaning |
+> |---|---|---|
+> | **1** | ⭐ **MUTUAL EXCLUSION** | **At most ONE process may be inside its critical section at a time** |
+> | **2** | ⭐ **PROGRESS** | If no process is in its critical section, one of those waiting **must be allowed in** — the decision cannot be postponed indefinitely |
+> | **3** | ⭐ **BOUNDED WAITING** | There is a **LIMIT on how many times others may enter before a waiting process gets its turn** — this is what prevents **starvation** |
+
+#### Semaphores
+
+> ### **A SEMAPHORE is an INTEGER VARIABLE accessed only through two ATOMIC operations — `wait()` (also called P or down) and `signal()` (also called V or up).**
+
+```
+   wait(S)   /  P(S)  /  down(S):        signal(S)  /  V(S)  /  up(S):
+        S = S − 1                             S = S + 1
+        if (S < 0) block this process         if (S ≤ 0) wake up one blocked process
+```
+
+| Type | Range of values | Purpose |
+|---|---|---|
+| ⭐ **BINARY semaphore (mutex-like)** | **0 or 1 only** | **MUTUAL EXCLUSION** — a lock |
+| ⭐ **COUNTING semaphore** | ⭐ **Any non-negative integer** | **Controls access to a POOL of N identical resources** — e.g. 10 database connections, 3 printers |
+
+**Worked example — a counting semaphore**
+> *A counting semaphore is initialised to 10. Then 6 `wait` operations and 4 `signal` operations are completed. What is the final value?*
+```
+   Each wait   DECREMENTS the semaphore by 1  →  6 waits   = −6
+   Each signal INCREMENTS the semaphore by 1  →  4 signals = +4
+
+   Final value = 10 − 6 + 4 = 8
+```
+> ### ✅ **The final value is 8.**
+>
+> **What the number MEANS: the value of a counting semaphore is the NUMBER OF RESOURCE UNITS STILL AVAILABLE.** So 8 of the original 10 resources remain free. *(If the value ever went **negative**, its magnitude would be the **number of processes blocked and waiting** on that semaphore.)*
+
+#### Mutex vs Semaphore — a standard comparison
+
+| Point | ⭐ **MUTEX (mutual exclusion lock)** | ⭐ **SEMAPHORE** |
+|---|---|---|
+| **What it is** | A **LOCKING mechanism** | A **SIGNALLING mechanism** |
+| **Values** | **Locked / unlocked** (binary) | **An integer counter** |
+| ⭐ **Ownership** | ⭐ **HAS AN OWNER — only the thread that LOCKED it may UNLOCK it** | ⭐ **NO ownership — ANY process may signal it** |
+| **Used for** | **Mutual exclusion** over one resource | **Mutual exclusion OR signalling/ordering** between processes |
+| **Counting** | No | ✅ **Yes — can guard N identical resources** |
+| **Analogy** | ⭐ **A toilet key** — whoever took it must return it | ⭐ **A rack of N keys** — anyone may put a key back |
+
+**Other synchronization tools:** **Monitors** (a higher-level construct bundling data, procedures and mutual exclusion — used in Java's `synchronized`) · **condition variables** · **spinlocks** (busy-waiting; efficient only for very short critical sections) · **Peterson's algorithm** (a classic pure-software solution for two processes) · **atomic hardware instructions** (`TestAndSet`, `CompareAndSwap`).
+
+#### The classic synchronization problems worth naming
+
+| Problem | What it illustrates |
+|---|---|
+| ⭐ **Producer–Consumer (bounded buffer)** | Coordinating a fixed-size shared buffer — needs **two counting semaphores (empty, full) plus a mutex** |
+| ⭐ **Readers–Writers** | Many readers may share, but a writer needs exclusive access. ⭐ **A SHARED lock allows READ operations to proceed concurrently; an EXCLUSIVE lock allows only one writer** |
+| ⭐ **Dining Philosophers** | Deadlock and starvation from circular resource requests |
+| **Sleeping Barber** | Coordination with limited waiting room |
+
+> ⚠️ **The danger of semaphores: they are easy to get wrong.** Forgetting a `signal()` causes a **permanent block**; doing the `wait()`s in a different order in two processes causes **DEADLOCK**; and the errors are **timing-dependent**, so they may not appear in testing. This is why higher-level constructs (monitors, concurrent collections) are preferred in application code, and why multi-threaded programs are, as the MCQ notes, ⭐ **more prone to deadlock** than single-threaded ones.
+
+**Previous Year MCQ List from this Topic:**
+
+- [A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on this semaphore. The resulting value of the semaphor…](../mcq-answers/operating-system.md?plain=1#L717)
+- [A critical section is a program segment-](../mcq-answers/operating-system.md?plain=1#L726)
+- [What is the disadvantage of multithreading?](../mcq-answers/operating-system.md?plain=1#L108)
+- [Multi-Threaded programs are-](../mcq-answers/operating-system.md?plain=1#L198)
+
+
+---
+
+## File Systems & Disk Management
+
+### File Systems, inodes, Partitions and Mounting
+
+> A **FILE SYSTEM is the method and data structures an operating system uses to CONTROL HOW DATA IS STORED, NAMED, ORGANISED AND RETRIEVED on a storage device.** Without one, a disk is just an undifferentiated sequence of blocks.
+
+#### Common file systems
+
+| File system | Used by | Notes |
+|---|---|---|
+| **FAT32** | Old Windows, USB drives | Universal compatibility; ⚠️ **maximum file size 4 GB** |
+| **exFAT** | Flash drives, SD cards | FAT without the 4 GB limit |
+| ⭐ **NTFS** | ⭐ **Windows** | **Journaling**, permissions, encryption, compression, large files |
+| ⭐ **ext4** | ⭐ **Linux** | Journaling, extents, large volumes |
+| **XFS / Btrfs / ZFS** | Linux, Unix, servers | High performance; snapshots, checksums |
+| **APFS / HFS+** | macOS | |
+| **NFS / SMB (CIFS)** | Network | Remote file access |
+
+#### The inode — how Linux stores file metadata
+
+> ### **An INODE (index node) is a data structure that stores ALL THE METADATA ABOUT A FILE — everything EXCEPT its NAME and its DATA.**
+
+| The inode CONTAINS | The inode does NOT contain |
+|---|---|
+| File **type** and **permissions** (mode) | ⚠️ **The FILE NAME** — that lives in the **DIRECTORY ENTRY**, which maps a name to an inode number |
+| **Owner (UID)** and **group (GID)** | The file's data (only **pointers** to the data blocks) |
+| **Size** in bytes | |
+| **Timestamps** — atime, mtime, ctime | |
+| **Link count** | |
+| ⭐ **POINTERS to the DATA BLOCKS** — direct, single-indirect, double-indirect and triple-indirect | |
+
+```
+   INODE structure (classic UNIX):
+
+     ┌──────────────────────────┐
+     │ metadata: mode, uid, size│
+     ├──────────────────────────┤
+     │ 12 DIRECT pointers       │──→ data blocks
+     ├──────────────────────────┤
+     │ 1 SINGLE-indirect        │──→ block of pointers ──→ data
+     ├──────────────────────────┤
+     │ 1 DOUBLE-indirect        │──→ block → block ──→ data
+     ├──────────────────────────┤
+     │ 1 TRIPLE-indirect        │──→ block → block → block ──→ data
+     └──────────────────────────┘
+```
+
+> **Why this matters — the maximum file size calculation.** With a **4 KB block** and **4-byte pointers**, one block holds **1024 pointers**:
+> ```
+>    direct           :  12 × 4 KB                     =  48 KB
+>    single indirect  :  1024 × 4 KB                   =   4 MB
+>    double indirect  :  1024 × 1024 × 4 KB            =   4 GB
+>    triple indirect  :  1024 × 1024 × 1024 × 4 KB     =   4 TB
+>                                                        ───────────
+>    TOTAL                                             ≈ MORE THAN 4 TB
+> ```
+> ### ✅ **This is why the answer to "maximum file size in Linux with 4 KB blocks and an inode with 12 direct, 1 single, 1 double and 1 triple indirect pointer" is "MORE THAN 4 TB"** — the triple-indirect level alone contributes 4 TB.
+>
+> **The key insight: each extra level of indirection multiplies the reach by the number of pointers per block (1024), which is why a handful of pointers can address terabytes.**
+
+#### Hard links vs symbolic links
+
+| | **Hard link** | **Symbolic (soft) link** |
+|---|---|---|
+| **Points to** | ⭐ **The INODE directly** | ⭐ **The PATH NAME** |
+| **Survives deletion of the original?** | ✅ **Yes** — the data lives while the link count > 0 | ❌ **No** — becomes a dangling link |
+| **Across file systems?** | ❌ No | ✅ **Yes** |
+| **Can link a directory?** | ❌ No | ✅ Yes |
+| **Command** | `ln file link` | `ln -s file link` |
+
+#### Partitions and drive letters
+
+> A **PARTITION is a logically separate section of a physical disk**, which the OS treats as an independent volume.
+
+| Type | Limit |
+|---|---|
+| ⭐ **PRIMARY partition** | **At most 4** per disk under the MBR scheme; one may be marked **active/bootable** |
+| ⭐ **EXTENDED partition** | **Only ONE** per disk; it is a container that holds **LOGICAL drives** |
+| **Logical drive** | Lives inside the extended partition; any number |
+| **GPT** | The modern replacement for MBR — up to **128 partitions**, disks larger than 2 TB |
+
+**Worked example — Windows drive lettering**
+> *A system has TWO IDE hard drives, each divided into a primary and an extended partition. Which letter is assigned to the second drive's primary partition?*
+```
+   Windows assigns letters by a fixed order:
+      ① ALL PRIMARY partitions, one per disk, in disk order
+      ② THEN the logical drives inside the extended partitions
+
+   Disk 0 primary   → C:
+   Disk 1 primary   → D:      ← the second drive's primary partition
+   Disk 0 logical   → E:
+   Disk 1 logical   → F:
+```
+> ### ✅ **D:** — because **every PRIMARY partition is lettered before ANY logical drive.** This ordering rule is the entire content of the question.
+
+#### Mounting
+
+> ### **MOUNTING is the process of ATTACHING A FILE SYSTEM (a portion of storage) INTO THE EXISTING DIRECTORY STRUCTURE at a specified point — the MOUNT POINT — so that its files become accessible.**
+
+```bash
+mount /dev/sdb1 /mnt/data     # attach the partition at /mnt/data
+umount /mnt/data              # detach it
+df -h                         # show mounted file systems and free space
+```
+
+> ### **"What is the mounting of a file system?"** → ### ✅ **"ATTACHING a portion of the file system INTO A DIRECTORY STRUCTURE."**
+>
+> **The conceptual difference from Windows:** Windows gives each volume its **own letter** (C:, D:), so there are several separate trees. **UNIX/Linux has exactly ONE tree rooted at `/`**, and every additional device is **grafted onto a directory inside it** — which is why a Linux path never reveals which physical disk the file is on. `/etc/fstab` lists the file systems to mount automatically at boot.
+
+#### File extensions worth knowing
+
+| Extension | Meaning |
+|---|---|
+| ⭐ **`.BAK`** | ⭐ **A BACKUP copy of another file** |
+| ⭐ **`.INI`** | ⭐ **An INITIALISATION / CONFIGURATION file** — a Windows system file holding configuration settings |
+| `.TMP` | Temporary file |
+| `.SYS` | System / driver file |
+| `.LOG` | Log file |
+| `.DLL` | Dynamic Link Library |
+
+> ⚠️ **Two reserved-name traps in Windows:** names such as ⭐ **`CON`**, `PRN`, `AUX`, `NUL`, `COM1`–`COM9` and `LPT1`–`LPT9` are **RESERVED DEVICE NAMES** inherited from DOS and **cannot be used as a file or folder name**. And **sending a file to the Recycle Bin does NOT free disk space** — the file is merely moved; space is reclaimed only when the bin is **emptied**.
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the mounting of file system?](../mcq-answers/operating-system.md?plain=1#L216)
+- [In a computer, folder opening is denied by which of the following names?](../mcq-answers/operating-system.md?plain=1#L317)
+- [Which of the following contains configuration information of a window?](../mcq-answers/operating-system.md?plain=1#L326)
+- [What is the maximum size of a file allowed in Linux with the following data Block Size = 4KB, inode data pointer size = 4 byte?](../mcq-answers/operating-system.md?plain=1#L537)
+- [A system has two IDE hard drives that are each divided into primary and extended partitions, which drive letter is assigned to the primary partition of the seco…](../mcq-answers/operating-system.md?plain=1#L679)
+- [Which of the following is not a true statement?](../mcq-answers/operating-system.md?plain=1#L688)
+- [Which of the following file name extension suggests that the file is backup of another file?](../mcq-answers/operating-system.md?plain=1#L697)
+- ["INI" extension refers usually what kind of file?](../mcq-answers/operating-system.md?plain=1#L706)
