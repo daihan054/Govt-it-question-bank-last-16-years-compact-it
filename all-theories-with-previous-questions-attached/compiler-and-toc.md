@@ -385,7 +385,7 @@ stateDiagram-v2
 > **The corrected form simply allows zeros on BOTH sides of each 1 inside the repeated group:**
 > ### **`0*(10*10*)*10*`  ✅**
 >
-> *(Verified by exhaustive check against every binary string up to length 14 — `0*(10*10*)*10*`, `0*1(0*10*1)*0*` and `(0+10*1)*10*` each match exactly the odd-parity strings; `0*(10*1)*10*` misses thousands of them.)*
+> *(Verified by exhaustive check against every binary string up to length 14 — `0*(10*10*)*10*`, `0*1(0*10*1)*0*`, **`(0*10*1)*0*10*`** and `(0+10*1)*10*` each match exactly the odd-parity strings; `0*(10*1)*10*` misses thousands of them.)*
 >
 > **What to do in the exam:** if the paper offers `0*(10*1)*10*` as the only plausible option, the examiner's intended key is almost certainly that option — but if **"None of these"** is available and the other options are also defective, **"None"** is the defensible answer. *(One of the questions in this very bank is answered "None" for exactly this reason.)*
 

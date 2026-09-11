@@ -1411,16 +1411,20 @@ flowchart TD
 > ### ✅ **100 Hz.**
 
 **Worked example — wavelength of a medium-wave broadcast**
-> *Dhaka Betar transmits on medium wave at 630 kHz. What is the wavelength?*
+> *Dhaka Betar broadcasts on medium wave at 630 Hz (as printed in the question). Radio waves travel at 3 × 10⁸ m/s. Find the wavelength.*
 ```
         λ = c / f
-          = (3 × 10⁸ m/s) / (630 × 10³ Hz)
-          = 3 × 10⁸ / 6.3 × 10⁵
-          = 476.19 metres
+          = (3 × 10⁸ m/s) / (630 Hz)
+          = 476,190 metres          ← the answer for the frequency AS PRINTED
 ```
-> ### ✅ **λ ≈ 476.19 METRES.**
+> ### ✅ **λ = 476,190 m** for the question exactly as it is written.
 >
-> ⚠️ **Note on the printed key: some answer sheets give "476190 m", which is wrong by a factor of 1000** — that figure would be the answer in **millimetres**, or would correspond to a frequency of 630 Hz rather than 630 kHz. **The correct wavelength is about 476 m**, which is why medium-wave aerials are hundreds of metres long. *(Sanity check: the MW band 530–1600 kHz corresponds to roughly 190–570 m — the very reason it was historically called the "medium wave" band.)*
+> ### ⚠️ **But read the UNIT carefully — this question is built around it.**
+> **Dhaka Betar's medium-wave transmission is actually at 630 kHz, not 630 Hz.** With the real frequency:
+> ```
+>        λ = 3 × 10⁸ / (630 × 10³) = 476.19 metres
+> ```
+> **The option lists in these papers contain BOTH 476190 m and 476.19 m precisely because of this.** ⭐ **Compute with whatever unit the question states — but know that a genuine MW wavelength is a few hundred METRES, not a few hundred kilometres.** *(Sanity check: the MW band 530–1600 kHz spans roughly 190–570 m — which is exactly why it is called the "medium" wave band, and why MW aerial masts are hundreds of metres tall.)*
 
 #### RMS, peak and peak-to-peak
 
