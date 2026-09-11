@@ -38,7 +38,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 
 ---
 
-## Progress — 23 of 24 files done
+## Progress — 24 of 24 files done
 
 | # | File | Status | New theories | Note |
 |---|---|---|---|---|
@@ -66,7 +66,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 | 22 | math.md | ✅ done | 3 | trigonometry, matrices/vectors, functions/complex numbers/series |
 | 23 | english.md | ✅ done | 2 | narration/reported speech, determiners/number/gender/sentence structure |
 | 24 | bangla.md | ✅ done | 3 | শব্দ প্রকরণ, বাচ্য/বাক্য/ণত্ব-ষত্ব, সাহিত্যের যুগবিভাগ |
-| 25 | gk.md | ⬜ pending | | 555 MCQs, 6 subtopics — **largest overall** |
+| 25 | gk.md | ✅ done | 3 | chemistry, physics/optics/astronomy, sports |
 
 > **`image-processing.md`** exists in the theories folder but has **no `mcq-answers` counterpart** — nothing to do for it.
 
@@ -74,7 +74,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 
 ## ▶ RESUME HERE
 
-**Next file: `gk.md`.**
+**Next file: `— ALL FILES DONE`.**
 
 The per-file loop:
 
