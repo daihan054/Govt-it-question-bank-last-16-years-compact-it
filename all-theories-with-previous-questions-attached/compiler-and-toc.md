@@ -1,9 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 13 theories
+**Table of Contents** — 6 subtopics · 15 theories
 
 1. **[Regular Expressions & Finite Automata](#regular-expressions--finite-automata)**
    - [Finite Automata — Components, DFA and NFA](#finite-automata--components-dfa-and-nfa)
    - [Regular Expressions](#regular-expressions)
+   - [Regular Expressions for Counting and Parity Patterns](#regular-expressions-for-counting-and-parity-patterns)
 
 2. **[Compiler vs Interpreter](#compiler-vs-interpreter)**
    - [Compiler, Interpreter and the Language Processors](#compiler-interpreter-and-the-language-processors)
@@ -25,6 +26,7 @@
 
 6. **[Compiler Design & Theory of Computation](#compiler-design--theory-of-computation)**
    - [Theory of Computation — The Big Picture](#theory-of-computation--the-big-picture)
+   - [Pushdown Automata (PDA) — Stack, Operations and Power](#pushdown-automata-pda--stack-operations-and-power)
 
 <!-- TOC END -->
 
@@ -205,6 +207,11 @@ This is a **Moore machine** if the output (the floor indicator) depends only on 
 - [Design a finite automaton for an elevator. The elevator can be at one of two floors: Ground or First. There is one button that controls the elevator, and it has…](../written-answers/compiler-and-toc.md?plain=1#L194)
 - [What are the components of finite automation model? Difference between DFA and NFA.](../written-answers/compiler-and-toc.md?plain=1#L229)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Complement of a regular set is-](../mcq-answers/compiler-and-toc.md?plain=1#L14)
+
+
 
 ---
 
@@ -289,6 +296,128 @@ Each type **contains** the one below it: Regular ⊂ Context-Free ⊂ Context-Se
 - [Which one of the following regular expressions represents the language: the set of all binary strings having two consecutive 0s and two consecutive 1s?](../written-answers/compiler-and-toc.md?plain=1#L19)
 - [Which one of the following regular expressions represents the language: The set of all binary strings having two consecutive 0's and two consecutive 1's? Explai…](../written-answers/compiler-and-toc.md?plain=1#L49)
 - [State diagram of DFA using binary strings having 0 with multiple of 3 on input \{0,1\}. Also showing regular expression.](../written-answers/compiler-and-toc.md?plain=1#L114)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following regular expressions represents the set of all the binary strings with an odd number of 1's?](../mcq-answers/compiler-and-toc.md?plain=1#L41)
+- [Which of the following is the regular expression to represent all the binary strings with odd number of 1's?](../mcq-answers/compiler-and-toc.md?plain=1#L50)
+- [Which one of the following regular expressions represents the set of all binary strings with an odd number of 1's?](../mcq-answers/compiler-and-toc.md?plain=1#L59)
+
+
+---
+
+### Regular Expressions for Counting and Parity Patterns
+
+> A very common exam pattern asks for a regular expression describing **HOW MANY times a symbol occurs** — "at least two", "exactly three", **"an ODD number of 1s"**, "an even number of 0s". These all follow from a single idea, and they are worth practising because the options offered in MCQs are frequently subtly wrong.
+
+#### The key insight — think of the DFA first, then read off the regex
+
+> ### **A "parity" condition (odd/even count) needs only TWO STATES**, because all the automaton has to remember is whether the count so far is **even** or **odd**.
+
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> Even
+    Even --> Odd : 1
+    Odd --> Even : 1
+    Even --> Even : 0
+    Odd --> Odd : 0
+    note right of Odd : ACCEPTING state<br/>for "odd number of 1s"
+```
+
+- Reading a **0 never changes the parity**, so 0 is a **self-loop on both states**.
+- Reading a **1 flips the parity**, so 1 **switches between the two states**.
+- Make **Odd** the accepting state → "odd number of 1s". Make **Even** accepting → "even number of 1s".
+
+**Because a 2-state DFA exists, the language IS regular** — that is the first thing to state in an exam answer.
+
+#### The standard answers
+
+| Language over Σ = {0, 1} | ⭐ **Regular expression** |
+|---|---|
+| ⭐ **ODD number of 1s** | ⭐ **`0*(10*10*)*10*`**  *(equivalently `0*1(0*10*1)*0*` or `(0+10*1)*10*`)* |
+| ⭐ **EVEN number of 1s** (including zero) | ⭐ **`0*(10*10*)*`**  *(equivalently `(0+10*1)*`)* |
+| **Exactly one 1** | `0*10*` |
+| **At least one 1** | `0*1(0+1)*` |
+| **Exactly two 1s** | `0*10*10*` |
+| **At least two 1s** | `(0+1)*1(0+1)*1(0+1)*` |
+| **Contains the substring `11`** | `(0+1)*11(0+1)*` |
+| **Starts and ends with the same symbol** | `0(0+1)*0 + 1(0+1)*1 + 0 + 1` |
+| **Length divisible by 3** | `((0+1)(0+1)(0+1))*` |
+
+#### How to build the "odd number of 1s" expression from the DFA
+
+```
+   Every string with an odd number of 1s looks like this:
+
+        0*        ( 10*10* )*         1        0*
+        │              │              │         │
+      leading      any number of    the ONE     trailing
+      zeros        PAIRS of 1s,     unmatched   zeros
+                   with zeros       1 that
+                   freely mixed in  makes it odd
+```
+
+**Read it aloud:** *"some zeros, then any number of **pairs** of 1s (with zeros allowed anywhere around them), then **one final 1**, then some zeros."* Pairs keep the count **even**; the single extra 1 makes it **odd**.
+
+#### ⚠️ A widely circulated WRONG answer — and the counterexample
+
+> **Many question papers and answer keys give `0*(10*1)*10*` for "odd number of 1s". This expression is INCORRECT.**
+>
+> **Why:** in `(10*1)*`, each pair is `1 0* 1` — zeros may appear **between the two 1s of a pair**, but the expression allows **no zeros BETWEEN one pair and the next**, nor between the last pair and the final `1`.
+>
+> ### **Counterexample: the string `1101`**
+> ```
+>    1101 contains three 1s  →  an ODD number  →  it SHOULD match.
+>
+>    Try to match 0*(10*1)*10* :
+>      0*        = ε
+>      (10*1)*   = "11"            (one pair, with zero 0s inside)
+>      then the expression demands a literal 1, but the next symbol is 0   ✗
+>
+>      (10*1)*   = ε
+>      then literal 1 = "1", then 0* must match "101"                       ✗
+>
+>    No parse succeeds  →  the expression REJECTS 1101, but it should accept it.
+> ```
+> **Other strings it wrongly rejects: `10101`, `11001`, `11010`, `110111`.**
+>
+> **The corrected form simply allows zeros on BOTH sides of each 1 inside the repeated group:**
+> ### **`0*(10*10*)*10*`  ✅**
+>
+> *(Verified by exhaustive check against every binary string up to length 14 — `0*(10*10*)*10*`, `0*1(0*10*1)*0*` and `(0+10*1)*10*` each match exactly the odd-parity strings; `0*(10*1)*10*` misses thousands of them.)*
+>
+> **What to do in the exam:** if the paper offers `0*(10*1)*10*` as the only plausible option, the examiner's intended key is almost certainly that option — but if **"None of these"** is available and the other options are also defective, **"None"** is the defensible answer. *(One of the questions in this very bank is answered "None" for exactly this reason.)*
+
+#### The method for ANY counting/parity question
+
+```
+   ① Ask: what must the automaton REMEMBER?
+      "Odd/even count"      → 2 states
+      "Count mod 3"         → 3 states
+      "At least two 1s"     → 3 states (seen 0, seen 1, seen ≥2)
+      "Equal numbers of a and b" → ⚠️ UNBOUNDED memory → NOT regular
+
+   ② Draw the DFA. If a FINITE number of states suffices, the language
+      IS regular and a regular expression must exist.
+
+   ③ Build the expression around the "neutral" symbols:
+      put X* wherever a symbol does not affect the condition.
+
+   ④ TEST your expression against small strings — especially
+      ε, "1", "10", "01", "11", "1101". Most wrong answers fail on
+      a string where the neutral symbol sits in an awkward place.
+```
+
+> ⚠️ **The boundary worth remembering: "an odd number of 1s" is REGULAR (finite memory — just a parity bit), but "an EQUAL number of 0s and 1s" is NOT regular** (it needs unbounded counting, so it requires a **pushdown automaton**). Recognising which side of that line a language falls on is the single most examined idea in this topic.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following regular expressions represents the set of all the binary strings with an odd number of 1's?](../mcq-answers/compiler-and-toc.md?plain=1#L41)
+- [Which of the following is the regular expression to represent all the binary strings with odd number of 1's?](../mcq-answers/compiler-and-toc.md?plain=1#L50)
+- [Which one of the following regular expressions represents the set of all binary strings with an odd number of 1's?](../mcq-answers/compiler-and-toc.md?plain=1#L59)
+
+
 
 
 ---
@@ -514,6 +643,11 @@ S → 0S0 | 1S1 | 2S2 | … | 9S9 | 0 | 1 | … | 9 | ε
 - [How CFG to represent a palindrome number?](../written-answers/compiler-and-toc.md?plain=1#L545)
 - [Context free Grammar: (like as....)](../written-answers/compiler-and-toc.md?plain=1#L584)
 - [Draw a derivation tree for the string “bab” from the CFG given by- S \to bSb \mid a \mid b](../written-answers/compiler-and-toc.md?plain=1#L689)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Number of steps required to get 'aab' from A→ aA|a|b—](../mcq-answers/compiler-and-toc.md?plain=1#L23)
+
 
 
 ---
@@ -1104,3 +1238,109 @@ A **Turing Machine** is the most powerful model: a finite control unit with a **
 - [Write difference between compiler and interpreter.](../written-answers/compiler-and-toc.md?plain=1#L917)
 - [What are the components of finite automation model? Difference between DFA and NFA.](../written-answers/compiler-and-toc.md?plain=1#L229)
 - [How CFG to represent a palindrome number?](../written-answers/compiler-and-toc.md?plain=1#L545)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Complement of a regular set is-](../mcq-answers/compiler-and-toc.md?plain=1#L14)
+- [Which of the operation is eligible in Push Down Automate?](../mcq-answers/compiler-and-toc.md?plain=1#L32)
+
+
+---
+
+### Pushdown Automata (PDA) — Stack, Operations and Power
+
+> ### **A PUSHDOWN AUTOMATON (PDA) is a FINITE AUTOMATON EQUIPPED WITH A STACK.** The stack gives it the **unbounded memory** a finite automaton lacks, and that is exactly what lets it recognise the **CONTEXT-FREE languages (Chomsky Type 2)**.
+
+```mermaid
+flowchart TD
+    A["INPUT TAPE — read left to right<br/>a a a b b b"] --> B["FINITE CONTROL<br/>(states + transition rules)"]
+    B <--> C["STACK — LIFO<br/>│ A │<br/>│ A │<br/>│ A │<br/>│ Z₀│  ← bottom marker<br/>PUSH on top · POP from top"]
+    B --> D["ACCEPT / REJECT"]
+```
+
+#### The operations a PDA can perform
+
+> ### **A PDA's stack supports exactly TWO operations: PUSH and POP.**
+
+| Operation | What it does |
+|---|---|
+| ⭐ **PUSH** | **Place a symbol ON TOP of the stack** |
+| ⭐ **POP** | **Remove the symbol from the TOP of the stack** |
+| *(no-op / skip)* | Leave the stack unchanged and just change state |
+
+> ⚠️ **What a PDA CANNOT do — and why MCQs test it:** it **cannot read or modify any symbol except the TOP one**. There is **no random access**, no indexing, no "peek at the third element", no searching the stack. The stack is strictly **LIFO — Last In, First Out**. This single restriction is what keeps a PDA weaker than a Turing machine.
+
+#### The formal definition
+
+> A PDA is a **7-tuple**: ### **M = (Q, Σ, Γ, δ, q₀, Z₀, F)**
+
+| Symbol | Meaning |
+|---|---|
+| **Q** | A finite set of **states** |
+| **Σ** | The **input alphabet** |
+| ⭐ **Γ** | The **STACK alphabet** (may differ from Σ) |
+| **δ** | The **transition function** — `δ(state, input symbol or ε, stack top) → (new state, string to push)` |
+| **q₀** | The **start state** |
+| ⭐ **Z₀** | The **initial stack symbol** (the bottom-of-stack marker) |
+| **F** | The set of **accepting (final) states** |
+
+**Two equivalent acceptance criteria:** **acceptance by FINAL STATE** (the PDA ends in a state of F), or **acceptance by EMPTY STACK** (the stack is emptied when the input is exhausted). **The two define the same class of languages.**
+
+#### The worked example that explains everything — aⁿbⁿ
+
+> **`{aⁿbⁿ : n ≥ 1}` — equal numbers of a's then b's — is the standard language that a finite automaton CANNOT recognise but a PDA CAN.**
+
+```
+   Strategy: PUSH one marker for every 'a', POP one for every 'b'.
+             If the stack empties exactly when the input ends, accept.
+
+   Input:  a  a  a  b  b  b
+
+   read a  → PUSH A     stack: A Z₀
+   read a  → PUSH A     stack: A A Z₀
+   read a  → PUSH A     stack: A A A Z₀
+   read b  → POP        stack: A A Z₀
+   read b  → POP        stack: A Z₀
+   read b  → POP        stack: Z₀        ← only the bottom marker left
+   input exhausted, stack empty of A's   → ✅ ACCEPT
+
+   For "aabbb":  after two POPs the stack has no A left, but a 'b' remains
+                 → ✗ REJECT      (correctly)
+```
+
+> ### **Why a FINITE automaton fails here:** to check that the b's equal the a's, the machine must **remember an arbitrarily large number n**. A DFA has only a **fixed, finite** number of states, so for a large enough n it must revisit a state and lose count — this is exactly what the **Pumping Lemma** formalises. **The stack supplies the unbounded counter the DFA lacks.**
+
+#### DFA vs PDA vs Turing Machine
+
+| | **Finite Automaton (DFA/NFA)** | ⭐ **Pushdown Automaton (PDA)** | **Turing Machine (TM)** |
+|---|---|---|---|
+| **Extra memory** | ❌ **None** — states only | ⭐ **A STACK (LIFO)** | ⭐ **An infinite TAPE, read AND write** |
+| **Memory access** | — | **Top of stack only** | **Any cell, both directions** |
+| **Operations** | — | ⭐ **PUSH, POP** | Read, write, move left, move right |
+| **Language class** | **Type 3 — Regular** | ⭐ **Type 2 — Context-Free** | **Type 0 — Recursively Enumerable** |
+| **Grammar** | Regular grammar | ⭐ **CFG — Context-Free Grammar** | Unrestricted grammar |
+| **Recognises** | `a*b*`, parity, fixed substrings | ⭐ **aⁿbⁿ, PALINDROMES, BALANCED BRACKETS, nested structures** | Anything computable |
+| **Cannot recognise** | aⁿbⁿ, palindromes | ⭐ **aⁿbⁿcⁿ**, `ww` (a string repeated) | The Halting Problem |
+| **Used in a compiler for** | **LEXICAL ANALYSIS** (the scanner) | ⭐ **SYNTAX ANALYSIS** (the parser) | — |
+
+#### DPDA vs NPDA — a distinction worth stating
+
+| | **Deterministic PDA (DPDA)** | **Non-deterministic PDA (NPDA)** |
+|---|---|---|
+| **Choice of move** | At most **one** possible move at each step | **Several** moves may be possible |
+| **Recognises** | **Deterministic** context-free languages | **ALL** context-free languages |
+| **Power** | ⚠️ **STRICTLY WEAKER** | ✅ **Strictly more powerful** |
+| **Example it cannot do** | Even-length palindromes `ww^R` | — |
+| **Practical use** | ⭐ **Real parsers (LR, LALR) are deterministic** — which is why programming-language grammars are deliberately designed to be unambiguous and LR-parsable | Theory |
+
+> ⚠️ **Note the contrast with finite automata: for FAs, deterministic and non-deterministic versions are EQUALLY powerful (every NFA has an equivalent DFA). For PUSHDOWN automata this is NOT true — an NPDA is strictly stronger than a DPDA.** That asymmetry is a favourite examination point.
+
+#### Why this matters to a compiler
+
+> **A programming language's syntax is CONTEXT-FREE, not regular** — because it contains **nesting**: balanced `{ }`, nested parentheses, nested `if` statements, nested function calls. A finite automaton cannot match an arbitrary depth of brackets, but a **stack can** — push on `(`, pop on `)`.
+>
+> ### **This is precisely why a compiler's SCANNER is built from finite automata and regular expressions, while its PARSER is built from a context-free grammar and behaves as a pushdown automaton.** The stack the parser uses is a real, visible data structure in every LR parser implementation.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the operation is eligible in Push Down Automate?](../mcq-answers/compiler-and-toc.md?plain=1#L32)
