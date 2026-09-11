@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 50 theories
+**Table of Contents** — 11 subtopics · 53 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -70,6 +70,11 @@
    - [Fibonacci Numbers with Dynamic Programming](#fibonacci-numbers-with-dynamic-programming)
    - [Maximum Subarray Problem — Kadane's Algorithm](#maximum-subarray-problem--kadanes-algorithm)
    - [DP on a Line — Repeater / Station Placement with a Minimum Gap](#dp-on-a-line--repeater--station-placement-with-a-minimum-gap)
+
+11. **[Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list)**
+   - [Adjacency Matrix](#adjacency-matrix)
+   - [Adjacency List](#adjacency-list)
+   - [Adjacency Matrix vs Adjacency List — Which to Use](#adjacency-matrix-vs-adjacency-list--which-to-use)
 
 <!-- TOC END -->
 
@@ -4212,3 +4217,201 @@ For *this particular* problem, a greedy also works and is even simpler: **scan f
 
 - [A communication link is established from Cox’s Bazar to Kuakata through a sequence of stations M_1, M_2, M_3, \dots, M_n. Each location can have at most one rep…](../written-answers/algorithm.md?plain=1#L3540)
 - [What will be the time and space complexity of the above algorithm?](../written-answers/algorithm.md?plain=1#L3688)
+
+## Graph Representation (Adjacency Matrix vs List)
+
+### Adjacency Matrix
+
+An **adjacency matrix** represents a graph as a **V × V two-dimensional array** `A`, where
+
+> **A[i][j] = 1** if there is an edge from vertex *i* to vertex *j*, otherwise **0**.
+> For a **weighted** graph, store the **weight** instead of 1, and **∞ (or 0)** where there is no edge.
+
+#### Worked example
+
+```mermaid
+flowchart LR
+    A((A)) --- B((B))
+    A --- C((C))
+    B --- C
+    B --- D((D))
+    C --- D
+    D --- E((E))
+```
+
+**Adjacency matrix (undirected):**
+
+|  | **A** | **B** | **C** | **D** | **E** |
+|---|---|---|---|---|---|
+| **A** | 0 | **1** | **1** | 0 | 0 |
+| **B** | **1** | 0 | **1** | **1** | 0 |
+| **C** | **1** | **1** | 0 | **1** | 0 |
+| **D** | 0 | **1** | **1** | 0 | **1** |
+| **E** | 0 | 0 | 0 | **1** | 0 |
+
+#### Key properties
+
+| Property | Detail |
+|---|---|
+| **Space** | **O(V²)** — always, regardless of how many edges exist |
+| **Check if edge (u,v) exists** | **O(1)** ✅ — just read `A[u][v]` |
+| **Find all neighbours of u** | **O(V)** ❌ — must scan the whole row |
+| **Add / remove an edge** | **O(1)** |
+| **Add a vertex** | **O(V²)** — the whole matrix must be rebuilt |
+| **Symmetry** | For an **undirected** graph the matrix is **symmetric**: A[i][j] = A[j][i] |
+| **Diagonal** | All zeros if there are no self-loops |
+| **Degree of vertex i** | Sum of row *i* (undirected). For directed: row sum = **out-degree**, column sum = **in-degree** |
+| **Total 1s** | 2E for undirected, E for directed |
+
+**A useful extra fact:** if **A** is the adjacency matrix, then **Aᵏ[i][j]** gives the **number of walks of length k** from vertex i to vertex j.
+
+**Previous Year Question List from this Topic:**
+
+- [Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are n…](../written-answers/algorithm.md?plain=1#L3736)
+- [(b) How a graph can be represented? Explain with example.](../written-answers/algorithm.md?plain=1#L3775)
+- [নিম্নে উল্লেখিত Graph- এর Adjacency Metrix এবং Adjacency List বের করুন।](../written-answers/algorithm.md?plain=1#L3816)
+
+
+---
+
+### Adjacency List
+
+An **adjacency list** stores, for **each vertex**, a **list of the vertices it is connected to**. It is an array (or hash map) of V lists.
+
+#### The same graph as an adjacency list
+
+```
+A → B, C
+B → A, C, D
+C → A, B, D
+D → B, C, E
+E → D
+```
+
+For a **weighted** graph each entry stores a pair: `A → (B, 4), (C, 2)`.
+
+#### Key properties
+
+| Property | Detail |
+|---|---|
+| **Space** | **O(V + E)** ✅ — proportional to what actually exists |
+| **Check if edge (u,v) exists** | **O(degree(u))**, i.e. O(V) in the worst case ❌ |
+| **Find all neighbours of u** | **O(degree(u))** ✅ — just walk that one list |
+| **Add an edge** | **O(1)** (push to the front of the list) |
+| **Remove an edge** | O(degree(u)) |
+| **Add a vertex** | **O(1)** |
+| **Total list entries** | 2E for undirected, E for directed |
+
+#### Example — a complete binary tree on 7 vertices
+
+A complete binary tree numbered 1 … 7, where node *i* has children **2i** and **2i+1**:
+
+```mermaid
+flowchart TD
+    N1((1)) --> N2((2))
+    N1 --> N3((3))
+    N2 --> N4((4))
+    N2 --> N5((5))
+    N3 --> N6((6))
+    N3 --> N7((7))
+```
+
+**Adjacency list** (treating the tree as an undirected graph):
+
+```
+1 → 2, 3
+2 → 1, 4, 5
+3 → 1, 6, 7
+4 → 2
+5 → 2
+6 → 3
+7 → 3
+```
+
+**The equivalent adjacency matrix:**
+
+|  | **1** | **2** | **3** | **4** | **5** | **6** | **7** |
+|---|---|---|---|---|---|---|---|
+| **1** | 0 | **1** | **1** | 0 | 0 | 0 | 0 |
+| **2** | **1** | 0 | 0 | **1** | **1** | 0 | 0 |
+| **3** | **1** | 0 | 0 | 0 | 0 | **1** | **1** |
+| **4** | 0 | **1** | 0 | 0 | 0 | 0 | 0 |
+| **5** | 0 | **1** | 0 | 0 | 0 | 0 | 0 |
+| **6** | 0 | 0 | **1** | 0 | 0 | 0 | 0 |
+| **7** | 0 | 0 | **1** | 0 | 0 | 0 | 0 |
+
+**Check:** the matrix is symmetric ✅, and the number of 1s = 12 = 2 × 6 edges ✅ (a tree on 7 vertices has 7 − 1 = 6 edges).
+
+*(If the tree is treated as a **directed** graph — parent → child only — delete the entries below the diagonal; there would then be exactly 6 ones.)*
+
+**Previous Year Question List from this Topic:**
+
+- [Given an adjacency list representation for a complete binary tree on 7 vertices. Given an equivalent adjacency matrix representation. Assume that vertices are n…](../written-answers/algorithm.md?plain=1#L3736)
+- [(b) How a graph can be represented? Explain with example.](../written-answers/algorithm.md?plain=1#L3775)
+- [নিম্নে উল্লেখিত Graph- এর Adjacency Metrix এবং Adjacency List বের করুন।](../written-answers/algorithm.md?plain=1#L3816)
+
+
+---
+
+### Adjacency Matrix vs Adjacency List — Which to Use
+
+| Point | **Adjacency Matrix** | **Adjacency List** |
+|---|---|---|
+| **Space** | **O(V²)** — wasteful for sparse graphs | **O(V + E)** ✅ |
+| **Edge lookup `isEdge(u,v)`** | **O(1)** ✅ | O(deg u) |
+| **Iterate all neighbours of u** | O(V) | **O(deg u)** ✅ |
+| **Iterate ALL edges** | **O(V²)** | **O(V + E)** ✅ |
+| **Add an edge** | O(1) | O(1) |
+| **Delete an edge** | **O(1)** ✅ | O(deg u) |
+| **Add a vertex** | O(V²) | **O(1)** ✅ |
+| **Best for** | **Dense** graphs (E ≈ V²) | **Sparse** graphs (E ≈ V) |
+| **Cache/memory behaviour** | Contiguous, cache-friendly | Pointer chasing |
+| **Ease of implementation** | Simplest | Slightly more work |
+
+#### Which problems suit which representation
+
+**Problems solved more efficiently with an ADJACENCY LIST:**
+
+| Problem | Why the list wins |
+|---|---|
+| **BFS / DFS traversal** | **O(V + E)** with a list vs **O(V²)** with a matrix — a huge win on sparse graphs |
+| **Dijkstra's shortest path** | **O(E log V)** with a list + heap vs O(V²) with a matrix |
+| **Kruskal's MST** | Needs to iterate over all edges — O(E) with a list |
+| **Topological sort, cycle detection, SCC** | All are traversal-based — O(V + E) |
+| **Any sparse real-world graph** | Road networks, social networks, web graphs (each node has few neighbours) |
+| **Finding the degree of a vertex** | Just the length of the list — O(1) if stored |
+
+**Problems solved more efficiently with an ADJACENCY MATRIX:**
+
+| Problem | Why the matrix wins |
+|---|---|
+| **"Is there an edge between u and v?"** — repeated many times | **O(1)** vs O(deg u) |
+| **Floyd-Warshall** all-pairs shortest path | The algorithm *is* a matrix operation — O(V³) either way, but a matrix is natural |
+| **Checking for a complete graph / counting triangles** | Needs many random edge queries |
+| **Dense graphs** (E close to V²) | The O(V²) space is no longer wasteful, and access is faster |
+| **Transitive closure** (Warshall's algorithm) | Pure matrix manipulation |
+| **Matrix-power tricks** (counting walks of length k) | Only possible with a matrix |
+| **Prim's MST on a dense graph** | The simple O(V²) matrix version beats the heap version when E ≈ V² |
+| **Frequent edge deletion** | O(1) vs O(deg u) |
+
+#### The rule of thumb
+
+> **Sparse graph (E ≪ V²) → Adjacency LIST.**
+> **Dense graph (E ≈ V²) or many "does this edge exist?" queries → Adjacency MATRIX.**
+
+Since **most real-world graphs are sparse**, the adjacency list is the **default choice** in practice.
+
+#### A third option — the edge list
+
+Simply store all edges as a list of triples **(u, v, weight)**.
+
+| Property | Value |
+|---|---|
+| Space | **O(E)** — the most compact |
+| Edge lookup | O(E) — very slow |
+| Best for | **Kruskal's algorithm** (which sorts all edges anyway) and **Bellman-Ford** (which relaxes every edge repeatedly) |
+
+**Previous Year Question List from this Topic:**
+
+- [Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adja…](../written-answers/algorithm.md?plain=1#L3707)
+- [(b) How a graph can be represented? Explain with example.](../written-answers/algorithm.md?plain=1#L3775)
