@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 38 theories
+**Table of Contents** — 7 subtopics · 43 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -50,6 +50,13 @@
    - [Decision Tree — Structure and Terminology](#decision-tree--structure-and-terminology)
    - [How a Decision Tree is Built — Entropy, Information Gain and Gini Index](#how-a-decision-tree-is-built--entropy-information-gain-and-gini-index)
    - [Pruning, Random Forest and Tree Ensembles](#pruning-random-forest-and-tree-ensembles)
+
+7. **[Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai)**
+   - [What is Generative AI?](#what-is-generative-ai)
+   - [Large Language Models (LLMs) — How They Work](#large-language-models-llms--how-they-work)
+   - [Generative AI in Government Citizen Services](#generative-ai-in-government-citizen-services)
+   - [ChatGPT — What it is, and its Pros and Cons](#chatgpt--what-it-is-and-its-pros-and-cons)
+   - [Explainable AI (XAI)](#explainable-ai-xai)
 
 <!-- TOC END -->
 
@@ -2251,3 +2258,320 @@ These two tricks make the trees **different from each other**, and averaging man
 
 - [Decisiontree model in Machine Learning.](../written-answers/ai-and-ml.md?plain=1#L992)
 - [Weak and strong learner ensemble learning in Machine learning.](../written-answers/ai-and-ml.md?plain=1#L1179)
+
+## Generative AI & Explainable AI (XAI)
+
+### What is Generative AI?
+
+**Generative AI (GenAI)** is the branch of Artificial Intelligence that **creates new, original content** — text, images, audio, video, code — instead of only analysing or classifying existing data.
+
+The key contrast:
+
+| | **Traditional / Discriminative AI** | **Generative AI** |
+|---|---|---|
+| **What it does** | **Decides / predicts** a label | **Creates** new content |
+| **Question it answers** | "Is this a cat or a dog?" | "Draw me a cat riding a bicycle." |
+| **Learns** | The boundary **between** classes — P(y\|x) | The **distribution of the data itself** — P(x) |
+| **Output** | A class, a number, a probability | Text, image, audio, video, code |
+| **Examples** | Spam filter, credit-scoring model, face recogniser | ChatGPT, DALL·E, Midjourney, GitHub Copilot, Sora |
+
+```mermaid
+flowchart LR
+    subgraph DIS["Discriminative AI"]
+        A1[Input: photo] --> A2[Model] --> A3["Output: label 'Dog'"]
+    end
+    subgraph GEN["Generative AI"]
+        B1["Input: prompt 'a dog in a boat'"] --> B2[Model] --> B3[Output: a brand-new photo]
+    end
+```
+
+#### How Generative AI works — the basic idea
+
+A generative model is trained on an enormous amount of data until it learns the **statistical patterns** of that data. It then produces new samples that *look like* they came from the same source — but are not copies.
+
+For text, the mechanism is astonishingly simple: **predict the next word, again and again.** Given *"The capital of Bangladesh is"*, the model assigns a high probability to *"Dhaka"*, outputs it, then feeds the longer sentence back in and predicts the next word.
+
+#### The main families of generative models
+
+| Model family | How it generates | Famous examples |
+|---|---|---|
+| **Transformer / LLM** | Predicts the next token using self-attention | GPT, Claude, Gemini, LLaMA |
+| **GAN** (Generative Adversarial Network) | A **Generator** creates fakes and a **Discriminator** tries to catch them; they compete until the fakes are convincing | StyleGAN, deepfakes |
+| **Diffusion model** | Starts from pure noise and removes the noise step by step until an image appears | DALL·E 3, Stable Diffusion, Midjourney |
+| **VAE** (Variational Autoencoder) | Compresses data into a latent space, then samples new points from it | Image generation, anomaly detection |
+
+```mermaid
+flowchart LR
+    subgraph GAN
+        N[Random noise] --> G[Generator] --> F[Fake image]
+        F --> D{Discriminator}
+        R[Real image] --> D
+        D -->|"real or fake?"| G
+    end
+```
+
+#### Applications of Generative AI
+
+| Type | Application |
+|---|---|
+| **Text** | Writing, summarising, translating, chatbots, email drafting, report generation |
+| **Code** | Autocompletion, bug fixing, test generation (GitHub Copilot) |
+| **Image** | Design, advertising, product mock-ups, architectural visuals |
+| **Audio / Video** | Voice cloning, dubbing, text-to-speech in Bangla, video generation |
+| **Data** | **Synthetic data** generation for training when real data is private or scarce |
+| **Business** | Customer support, marketing copy, knowledge-base search |
+
+#### Limitations and risks
+
+- **Hallucination** — the model states wrong facts with complete confidence.
+- **No real understanding** — it predicts likely words, it does not "know" anything.
+- **Training-data bias** is reproduced and amplified.
+- **Knowledge cut-off** — it does not know events after its training date unless connected to a search tool.
+- **Deepfakes and misinformation**; **copyright** disputes over training data.
+- **Privacy** — confidential text pasted into a public chatbot may leave the organisation.
+- **High compute and energy cost.**
+
+**Previous Year Question List from this Topic:**
+
+- [Imagine a government agency is developing an AI-based citizen service chatbot that can automatically generate responses, summarize documents, and provide policy…](../written-answers/ai-and-ml.md?plain=1#L1055)
+- [b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".](../written-answers/ai-and-ml.md?plain=1#L1077)
+- [What is ChatGPT? Write down the Pros and cons of ChatGPT.](../written-answers/ai-and-ml.md?plain=1#L1103)
+
+
+---
+
+### Large Language Models (LLMs) — How They Work
+
+**LLM = Large Language Model.**
+
+> A **Large Language Model** is a very large neural network — usually a **Transformer** — trained on a huge corpus of text (books, websites, code) to **understand and generate human language**. "Large" refers to both the training data (hundreds of billions of words) and the number of **parameters** (billions to trillions of weights).
+
+#### The Transformer architecture
+
+```mermaid
+flowchart TD
+    A["Input text: 'The bank approved my'"] --> B[Tokenisation<br/>split into tokens]
+    B --> C[Embedding<br/>each token → a vector of numbers]
+    C --> D[+ Positional Encoding<br/>adds word-order information]
+    D --> E["Transformer Blocks × N<br/>(Self-Attention + Feed-Forward)"]
+    E --> F[Output layer + Softmax<br/>probability of every possible next token]
+    F --> G["Next token: 'loan'"]
+    G -.->|append and repeat| A
+```
+
+**The key innovation is Self-Attention.** When processing a word, the model looks at **every other word in the sentence** and decides how much each one matters. In *"The bank approved my loan"* versus *"I sat on the river bank"*, attention lets the model give *bank* completely different meanings, because it weighs *loan* in one case and *river* in the other.
+
+This was introduced in the 2017 Google paper **"Attention Is All You Need"**, which replaced RNN/LSTM in NLP. Its advantage over an RNN is that all words can be processed **in parallel**, which is what made training on internet-scale data possible.
+
+#### How an LLM is built — three stages
+
+| Stage | What happens | Data used |
+|---|---|---|
+| **1. Pre-training** | Learns language by predicting the next token on a massive general corpus (**self-supervised** — no human labels) | Hundreds of billions of tokens |
+| **2. Supervised Fine-Tuning (SFT)** | Taught to follow instructions using human-written question–answer pairs | Thousands to millions of examples |
+| **3. RLHF** (Reinforcement Learning from Human Feedback) | Humans rank different answers; the model is tuned to prefer helpful, harmless, honest responses | Human preference data |
+
+#### Important LLM vocabulary
+
+| Term | Meaning |
+|---|---|
+| **Token** | A chunk of text (roughly ¾ of a word). LLMs read and write tokens, not letters |
+| **Parameter** | A learned weight. GPT-3 has 175 billion |
+| **Context window** | How much text the model can "see" at once (from a few thousand to over a million tokens) |
+| **Temperature** | Randomness control: 0 = safe and repetitive, 1+ = creative and varied |
+| **Prompt** | The instruction you give the model |
+| **Prompt engineering** | The skill of writing prompts that get good results (give role, context, examples, format) |
+| **Hallucination** | Confidently producing false information |
+| **Fine-tuning** | Further training on your own domain data |
+| **RAG** (Retrieval-Augmented Generation) | Fetch relevant documents from your own database first, then let the LLM answer **using only those documents** — the standard cure for hallucination |
+| **Multimodal** | A model that handles text + image + audio together |
+
+#### Well-known LLMs
+
+| Model | Organisation |
+|---|---|
+| **GPT** series (ChatGPT) | OpenAI |
+| **Claude** | Anthropic |
+| **Gemini** | Google DeepMind |
+| **LLaMA** (open weights) | Meta |
+| **BERT** (understanding, not generation) | Google |
+
+*(**BERT vs GPT:** BERT is an **encoder** — it reads text in both directions and is used for classification and search. GPT is a **decoder** — it generates text left to right.)*
+
+**Previous Year Question List from this Topic:**
+
+- [b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".](../written-answers/ai-and-ml.md?plain=1#L1077)
+- [LLM stands for __________.](../written-answers/ai-and-ml.md?plain=1#L1099)
+- [What is ChatGPT? Write down the Pros and cons of ChatGPT.](../written-answers/ai-and-ml.md?plain=1#L1103)
+
+
+---
+
+### Generative AI in Government Citizen Services
+
+A very current scenario question: *"A government agency is building an AI citizen-service chatbot that generates responses, summarises documents and provides policy information. Explain how Generative AI can help, and what must be considered."*
+
+#### How Generative AI helps
+
+```mermaid
+flowchart TD
+    C[Citizen asks a question<br/>in Bangla or English] --> B[GenAI Chatbot]
+    B --> R1[Answers policy questions 24×7]
+    B --> R2[Summarises long circulars & gazettes]
+    B --> R3[Fills and checks application forms]
+    B --> R4[Translates Bangla ↔ English]
+    B --> R5[Routes complex cases to a human officer]
+    KB[(Government document<br/>knowledge base)] -->|RAG retrieval| B
+```
+
+| Capability | Benefit to citizens and the agency |
+|---|---|
+| **Automatic response generation** | 24×7 service in natural Bangla; no queue, no office hours |
+| **Document summarisation** | A 40-page policy circular becomes a 5-line summary an officer can act on |
+| **Policy question answering** | Consistent, correct answers instead of officer-to-officer variation |
+| **Multilingual support** | Serves Bangla, English and regional speakers equally |
+| **Form filling & eligibility checking** | Reduces rejected applications and repeat visits |
+| **Workload reduction** | Officers handle only the 10–20 % of complex cases |
+| **Cost saving & reach** | One system serves the whole country, including remote areas |
+| **Accessibility** | Voice input/output helps citizens with low literacy or visual impairment |
+
+#### Risks and the safeguards you must mention
+
+| Risk | Safeguard |
+|---|---|
+| **Hallucination** — inventing a rule that does not exist | Use **RAG**: answer strictly from the official document base, and **cite the source circular** in every answer |
+| **Outdated information** | Re-index the knowledge base whenever a policy changes |
+| **Data privacy** (NID, income, health data) | Host **on-premises or in a sovereign cloud**; never send citizen data to a public API; mask personal data |
+| **Bias / unfair treatment** | Test answers across regions, genders and dialects; audit regularly |
+| **Legal liability of a wrong answer** | Add a disclaimer; keep **human-in-the-loop** for legal, financial and eligibility decisions |
+| **Security** — prompt injection, jailbreaks | Input filtering, output validation, rate limiting, logging |
+| **Accountability** | Log every conversation; make an officer responsible for reviewing escalations |
+| **Digital divide** | Keep the traditional counter service running alongside |
+
+**Recommended architecture (a strong point to include):** a **RAG pipeline** — citizen question → search the official document store → retrieve the top relevant passages → give them to the LLM as context → the LLM writes the answer **with citations**. This keeps the answer grounded in real government documents instead of the model's memory.
+
+**Previous Year Question List from this Topic:**
+
+- [Imagine a government agency is developing an AI-based citizen service chatbot that can automatically generate responses, summarize documents, and provide policy…](../written-answers/ai-and-ml.md?plain=1#L1055)
+
+
+---
+
+### ChatGPT — What it is, and its Pros and Cons
+
+**ChatGPT** is a conversational AI chatbot built by **OpenAI**, powered by the **GPT (Generative Pre-trained Transformer)** family of large language models. It was launched publicly in **November 2022** and reached 100 million users in two months — the fastest-growing consumer application in history at that time.
+
+"GPT" stands for:
+- **G — Generative:** it produces new text.
+- **P — Pre-trained:** it was first trained on a huge general text corpus.
+- **T — Transformer:** the neural-network architecture it uses.
+
+#### Advantages (Pros)
+
+1. **Available 24×7** and answers instantly.
+2. **Very wide knowledge** across almost every subject.
+3. **Natural conversation** — remembers the context of the discussion.
+4. **Huge productivity gain** — drafting letters, reports, emails, summaries, translations.
+5. **Learning aid** — explains a difficult concept at whatever level you ask for.
+6. **Coding help** — writes, explains and debugs programs.
+7. **Multilingual**, including Bangla.
+8. **Cost saving** for customer support and content creation.
+9. **Accessibility** — helps people with writing difficulties or disabilities.
+
+#### Disadvantages (Cons)
+
+1. **Hallucination** — it can state wrong facts, fake references and fake statistics **very convincingly**.
+2. **No real understanding** — it predicts likely text; it does not reason about truth.
+3. **Knowledge cut-off** — unaware of recent events unless it can search the web.
+4. **Bias** inherited from internet training data.
+5. **Privacy risk** — confidential or customer data pasted into it may be stored or used.
+6. **Academic dishonesty / plagiarism** — students submitting generated work.
+7. **Over-dependence** — weakens independent thinking and writing skill.
+8. **Job displacement** in writing, translation and basic support roles.
+9. **Misuse** — phishing emails, misinformation, malware, fake reviews.
+10. **Weak at precise mathematics and live data** without external tools.
+11. **High energy and computing cost.**
+
+**A balanced concluding line for the exam:** *ChatGPT is an excellent **assistant** but a poor **authority** — every fact it produces must be verified before it is used in an official document.*
+
+**Previous Year Question List from this Topic:**
+
+- [What is ChatGPT? Write down the Pros and cons of ChatGPT.](../written-answers/ai-and-ml.md?plain=1#L1103)
+- [b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".](../written-answers/ai-and-ml.md?plain=1#L1077)
+
+
+---
+
+### Explainable AI (XAI)
+
+**Explainable AI (XAI)** is the set of methods that make an AI model's decisions **understandable to humans** — *why* did the model give this output, and *which* inputs drove it.
+
+#### The black-box problem
+
+```mermaid
+flowchart LR
+    subgraph BB["Black-Box Model"]
+        I1[Income, age, credit history] --> M["Deep Neural Network<br/>❓ millions of weights"] --> O1["❌ Loan rejected"]
+    end
+    subgraph XAI["With XAI"]
+        I2[Income, age, credit history] --> M2[Model + explanation layer] --> O2["❌ Loan rejected<br/>because: 3 late payments (−40%),<br/>debt ratio 0.7 (−25%),<br/>short credit history (−15%)"]
+    end
+```
+
+A Random Forest or a deep neural network may be 95 % accurate, but it cannot say *why* it rejected an applicant. In banking, insurance, healthcare and government, "the computer said no" is not an acceptable answer — it may even be illegal.
+
+#### Why XAI is needed
+
+| Reason | Explanation |
+|---|---|
+| **Trust** | Users and officers will not adopt a system they cannot understand |
+| **Legal compliance** | Regulations (EU GDPR "right to explanation", the EU AI Act, banking rules) require decisions affecting people to be explainable |
+| **Fairness & bias detection** | Explanations reveal if the model is secretly using gender, religion or district |
+| **Debugging** | Shows when a model has learned a spurious shortcut (a famous case: a model detected "horse" from the photographer's watermark, not the horse) |
+| **Accountability** | Somebody must be answerable for an automated decision |
+| **Safety** | In medicine and self-driving cars, a wrong reason is as dangerous as a wrong answer |
+
+#### The accuracy vs interpretability trade-off
+
+| Model | Accuracy | Interpretability |
+|---|---|---|
+| Linear / Logistic Regression | Lower | **Very high** (read the coefficients) |
+| Decision Tree | Moderate | **High** (draw the tree) |
+| Random Forest / Gradient Boosting | High | Low |
+| Deep Neural Network | **Highest** | **Very low** |
+
+XAI exists to give the top row's transparency to the bottom row's accuracy.
+
+#### Two approaches to XAI
+
+**1. Intrinsic (transparent by design)** — use a model that is readable in the first place: linear regression, logistic regression, decision tree, rule-based system.
+
+**2. Post-hoc (explain an existing black box)** — train whatever model is most accurate, then explain it afterwards.
+
+| Technique | Idea | Scope |
+|---|---|---|
+| **LIME** (Local Interpretable Model-agnostic Explanations) | Around one particular prediction, slightly change the input many times, see how the output moves, and fit a **simple local linear model** to approximate the black box in that neighbourhood | **Local** — explains one prediction |
+| **SHAP** (SHapley Additive exPlanations) | Uses **Shapley values from game theory**: treat each feature as a "player" and fairly divide the prediction among them, so every feature gets a contribution score that adds up to the output | **Local and global** |
+| **Feature importance** | Rank features by how much the accuracy drops when a feature is shuffled | Global |
+| **Partial Dependence Plot (PDP)** | Plot how the prediction changes as one feature varies | Global |
+| **Counterfactual explanation** | *"If your income had been 10,000 Tk higher, the loan would have been approved"* | Local, very user-friendly |
+| **Saliency / Grad-CAM** | Highlights the pixels of an image that drove the decision | Local, for CNNs |
+
+**LIME vs SHAP in one line:** LIME is **faster** but approximate and can be unstable; SHAP is **mathematically grounded and consistent** but computationally heavier.
+
+#### XAI in banking — the standard example
+
+A bank uses a gradient-boosting model for credit scoring. When an application is rejected, SHAP produces:
+
+| Feature | Contribution |
+|---|---|
+| 3 late payments in the last year | **−40 %** |
+| Debt-to-income ratio 0.70 | **−25 %** |
+| Credit history only 8 months | **−15 %** |
+| Stable salary account | +12 % |
+
+The bank can now (a) give the customer a lawful, specific reason, (b) tell them exactly what to improve, and (c) prove to the regulator that gender and religion played no part.
+
+**Previous Year Question List from this Topic:**
+
+- [b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".](../written-answers/ai-and-ml.md?plain=1#L1077)
