@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 57 theories
+**Table of Contents** — 13 subtopics · 59 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -81,6 +81,10 @@
    - [Block (Divide and Conquer) Matrix Multiplication](#block-divide-and-conquer-matrix-multiplication)
    - [Strassen's Algorithm](#strassens-algorithm)
    - [Divide and Conquer — Worked Problem Summary](#divide-and-conquer--worked-problem-summary)
+
+13. **[Heap & Priority Queue](#heap--priority-queue)**
+   - [Binary Heap — Structure and Operations](#binary-heap--structure-and-operations)
+   - [Priority Queue — Concept and Applications](#priority-queue--concept-and-applications)
 
 <!-- TOC END -->
 
@@ -4688,3 +4692,215 @@ By the Master Theorem: n^(log₂7) = **n^2.807**, and f(n) = n² grows slower �
 - [Write down the difference between Divide and Conquer and Dynamic Programming.](../written-answers/algorithm.md?plain=1#L2783)
 - [(a) How does dynamic programming relate with divide and conquer approach?](../written-answers/algorithm.md?plain=1#L2799)
 - [Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are th…](../written-answers/algorithm.md?plain=1#L2839)
+
+## Heap & Priority Queue
+
+### Binary Heap — Structure and Operations
+
+A **binary heap** is a **complete binary tree** that satisfies the **heap property**. It is the standard implementation of a priority queue.
+
+#### The two defining rules
+
+| Rule | Meaning |
+|---|---|
+| **1. Shape property** | It is a **complete binary tree** — every level is completely filled except possibly the last, which is filled **from left to right** |
+| **2. Heap property** | **Max-heap:** every parent ≥ both children (the **maximum is at the root**)<br>**Min-heap:** every parent ≤ both children (the **minimum is at the root**) |
+
+Because the tree is **complete**, it can be stored in a **plain array with no pointers** — this is what makes heaps so efficient.
+
+#### Array representation
+
+For a node at index **i** (0-based):
+
+| Relation | Formula |
+|---|---|
+| **Left child** | `2i + 1` |
+| **Right child** | `2i + 2` |
+| **Parent** | `(i − 1) / 2` (integer division) |
+| **Last non-leaf node** | `n/2 − 1` |
+| **Height of the heap** | **⌊log₂ n⌋** |
+
+*(For 1-based indexing: left = 2i, right = 2i+1, parent = i/2 — often easier in exams.)*
+
+#### Building a Min-Heap — worked example
+
+**Insert 12, 29, 33, 56, 66, 99, 100, 344 one by one.**
+
+Placing them level by level gives:
+
+```mermaid
+flowchart TD
+    A((12)) --> B((29))
+    A --> C((33))
+    B --> D((56))
+    B --> E((66))
+    C --> F((99))
+    C --> G((100))
+    D --> H((344))
+```
+
+**Verification of the min-heap property:**
+
+| Parent | Children | Parent ≤ both? |
+|---|---|---|
+| 12 (idx 0) | 29, 33 | ✅ |
+| 29 (idx 1) | 56, 66 | ✅ |
+| 33 (idx 2) | 99, 100 | ✅ |
+| 56 (idx 3) | 344 | ✅ |
+
+> **Array form: `[12, 29, 33, 56, 66, 99, 100, 344]`** — a valid **min-heap**. (The input happened to be sorted, so no sift-up was ever needed.)
+
+#### Insertion — "sift up" / "bubble up"
+
+*(A directly asked question: "Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.")*
+
+```
+Insert(A, n, key):
+    A[n] = key                                  // 1. place at the END of the array
+    i = n                                       //    (keeps the tree COMPLETE)
+    while i > 0 and A[parent(i)] < A[i]:        // 2. while the parent is smaller
+        swap A[i], A[parent(i)]                 //    swap upwards
+        i = parent(i)
+    n = n + 1
+```
+
+**The procedure in words:**
+1. **Append** the new key at the **first free position** — the end of the array. This automatically preserves the *shape* property (the tree stays complete).
+2. The *heap* property may now be violated, because the new key might be larger than its parent.
+3. **Sift up:** repeatedly compare the new key with its parent and **swap** while the parent is smaller.
+4. Stop when the parent is larger **or** the key reaches the **root**.
+
+**Worked example — insert 75 into the max-heap `[70, 60, 55, 55, 30, 50, 44, 22]`:**
+
+| Step | Array position | Compare | Action |
+|---|---|---|---|
+| 1 | Append 75 at index 8 | — | `[70,60,55,55,30,50,44,22,**75**]` |
+| 2 | i = 8, parent = (8−1)/2 = 3 → A[3] = 55 | 75 > 55 | **Swap** → `[70,60,55,**75**,30,50,44,22,**55**]` |
+| 3 | i = 3, parent = (3−1)/2 = 1 → A[1] = 60 | 75 > 60 | **Swap** → `[70,**75**,55,**60**,30,50,44,22,55]` |
+| 4 | i = 1, parent = 0 → A[0] = 70 | 75 > 70 | **Swap** → `[**75**,**70**,55,60,30,50,44,22,55]` |
+| 5 | i = 0 — reached the root | — | **Stop** |
+
+**Final max-heap: `[75, 70, 55, 60, 30, 50, 44, 22, 55]`** ✅
+
+**Cost estimate:**
+
+| Measure | Value | Reason |
+|---|---|---|
+| **Worst case** | **O(log n)** | The key travels from a leaf to the root — a distance of exactly the **height, ⌊log₂ n⌋** |
+| **Best case** | **O(1)** | The new key is already smaller than its parent — no swap needed |
+| **Average case** | **O(1)** | Most nodes of a heap are near the leaves, so most insertions move up only a step or two |
+| **Number of comparisons** | at most **⌊log₂ n⌋** | One per level |
+| **Number of swaps** | at most **⌊log₂ n⌋** | |
+| **Extra space** | **O(1)** | Done entirely in place |
+
+*(If the array is dynamic and must be resized, an occasional reallocation costs O(n), but **amortised** over many insertions this is still O(1) per insertion.)*
+
+#### Deletion (extract-max) — "sift down" / "heapify"
+
+```
+ExtractMax(A, n):
+    max = A[0]                    // the root is the maximum
+    A[0] = A[n-1]                 // move the LAST element to the root
+    n = n - 1
+    Heapify(A, n, 0)              // sift it down to its correct place
+    return max
+```
+
+**Cost: O(log n)** — the moved element may sink all the way from the root to a leaf.
+
+#### All heap operations at a glance
+
+| Operation | Time | Note |
+|---|---|---|
+| **Find max (min)** | **O(1)** | Just read `A[0]` |
+| **Insert** | **O(log n)** | Sift up |
+| **Extract max (min)** | **O(log n)** | Sift down |
+| **Delete an arbitrary element** | O(log n) | If its index is known |
+| **Increase/Decrease key** | O(log n) | Then sift up or down |
+| **Build heap from an array** | **O(n)** ✅ | Not O(n log n) — see below |
+| **Heap sort** | O(n log n) | Build O(n) + n extractions |
+| **Search for an arbitrary value** | **O(n)** ❌ | A heap is **not** a search structure |
+| **Space** | O(n) | No pointers needed |
+
+> **Why is building a heap O(n), not O(n log n)?** Heapify is called on n/2 nodes, but its cost depends on the node's **height**, not on log n. Half the nodes are leaves (height 0, cost 0), a quarter have height 1, an eighth have height 2 … Summing `Σ (n/2^(h+1)) × h` converges to **2n = O(n)**.
+
+**Previous Year Question List from this Topic:**
+
+- [Construction of Min Heap: Given Value 12, 29, 33, 56, 66, 99, 100, and 344](../written-answers/algorithm.md?plain=1#L3946)
+- [Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.](../written-answers/algorithm.md?plain=1#L3980)
+- [(ক) Heap sort কিভাবে কাজ করে? উদাহরণসহ দেখান।](../written-answers/algorithm.md?plain=1#L748)
+- [(b) What is heap sort? Build a heap tree from the following list of numbers: (44, 30, 50, 22, 60, 55, 70, 55).](../written-answers/algorithm.md?plain=1#L909)
+
+
+---
+
+### Priority Queue — Concept and Applications
+
+A **priority queue** is an abstract data type where each element has a **priority**, and the element with the **highest priority is always served first** — regardless of the order in which items arrived.
+
+> A normal **queue** is FIFO: first in, first out.
+> A **priority queue** is "**most important out first**".
+
+*Real-life analogy:* in a hospital emergency room, a patient with a heart attack is treated before someone with a minor cut, even if the second person arrived first.
+
+#### The operations
+
+| Operation | Meaning |
+|---|---|
+| **insert(x, p)** | Add element x with priority p |
+| **getMax() / getMin()** | Look at the highest-priority element without removing it |
+| **extractMax() / extractMin()** | Remove and return the highest-priority element |
+| **changePriority(x, p)** | Update an element's priority |
+| **isEmpty()** | Check whether the queue is empty |
+
+#### How to implement it — and why a heap wins
+
+| Implementation | Insert | Extract max | Find max |
+|---|---|---|---|
+| **Unsorted array / list** | **O(1)** | O(n) | O(n) |
+| **Sorted array / list** | O(n) | **O(1)** | **O(1)** |
+| **Binary Heap** ✅ | **O(log n)** | **O(log n)** | **O(1)** |
+| Balanced BST | O(log n) | O(log n) | O(log n) |
+| Fibonacci Heap | **O(1)** amortised | O(log n) | O(1) |
+
+> The **binary heap** is the standard choice because it gives a good balance — no operation is worse than O(log n), and it needs **no pointers**, only an array.
+
+#### Types of priority queue
+
+| Type | Highest priority = |
+|---|---|
+| **Max-priority queue** | The **largest** value → implemented with a **max-heap** |
+| **Min-priority queue** | The **smallest** value → implemented with a **min-heap** |
+
+#### Applications of priority queues
+
+| Area | Use |
+|---|---|
+| **Dijkstra's shortest path** | Extract the unvisited vertex with the smallest tentative distance |
+| **Prim's MST** | Extract the cheapest edge leaving the current tree |
+| **Huffman coding** | Repeatedly extract the two **least frequent** symbols |
+| **A\* search** | Extract the node with the smallest f(n) = g(n) + h(n) |
+| **Operating systems** | **CPU scheduling** — run the highest-priority process first |
+| **Networking** | **QoS packet scheduling** — voice/video packets before bulk downloads |
+| **Heap Sort** | Repeatedly extract the maximum |
+| **Event-driven simulation** | Always process the event with the earliest timestamp |
+| **Load balancing** | Assign work to the least-loaded server |
+| **Finding the top-K elements** | Keep a min-heap of size K — **O(n log K)** |
+| **Median maintenance** | Two heaps (a max-heap for the lower half, a min-heap for the upper half) |
+| **Hospital triage, print queues, ticket systems** | Real-world priority servicing |
+
+#### Heap vs Binary Search Tree
+
+| Point | **Binary Heap** | **Binary Search Tree** |
+|---|---|---|
+| Ordering | Parent vs children only (**partial order**) | Full left < node < right (**total order**) |
+| Find min/max | **O(1)** ✅ | O(log n) |
+| Search an arbitrary key | **O(n)** ❌ | **O(log n)** ✅ |
+| In-order traversal gives sorted output | ❌ No | ✅ **Yes** |
+| Shape | Always a **complete** tree | Any shape; can degenerate |
+| Storage | **Array, no pointers** ✅ | Nodes with pointers |
+| Best for | **Priority queues**, heap sort, top-K | Searching, range queries, ordered iteration |
+
+**Previous Year Question List from this Topic:**
+
+- [Describe, and estimate the costs of, a procedure to insert a new item into an existing binary max-heap.](../written-answers/algorithm.md?plain=1#L3980)
