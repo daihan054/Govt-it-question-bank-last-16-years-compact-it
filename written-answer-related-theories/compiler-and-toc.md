@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 12 theories
+**Table of Contents** — 6 subtopics · 13 theories
 
 1. **[Regular Expressions & Finite Automata](#regular-expressions--finite-automata)**
    - [Finite Automata — Components, DFA and NFA](#finite-automata--components-dfa-and-nfa)
@@ -22,6 +22,9 @@
    - [Linker and Loader — Tasks and Differences](#linker-and-loader--tasks-and-differences)
    - [The Linker](#the-linker)
    - [The Loader](#the-loader)
+
+6. **[Compiler Design & Theory of Computation](#compiler-design--theory-of-computation)**
+   - [Theory of Computation — The Big Picture](#theory-of-computation--the-big-picture)
 
 <!-- TOC END -->
 
@@ -1029,3 +1032,63 @@ int add(int a, int b) { return a + b; }
 | 3 | **Loader** | When you type `./program`, the OS loader allocates memory, copies the code and data into RAM, loads `libc.so`, sets the stack pointer and program counter, and **jumps to `main`** |
 
 > **If `math.c` were forgotten at step 2**, the linker would fail with **`undefined reference to 'add'`** — the classic **linker error**, which is neither a compile-time error (the syntax was fine) nor a run-time error (the program never got built).
+
+## Compiler Design & Theory of Computation
+
+### Theory of Computation — The Big Picture
+
+**Theory of Computation (TOC)** studies **what problems can be solved by a machine, with which model, and at what cost**. It is built on three pillars: **Automata theory**, **Computability theory** and **Complexity theory**.
+
+#### The four models of computation
+
+Each model has strictly more memory than the one before it, and therefore recognises strictly more languages.
+
+| Model | Memory available | Grammar type | Languages recognised | Example it can handle |
+|---|---|---|---|---|
+| **Finite Automaton (DFA/NFA)** | **None** — only a finite set of states | **Type 3 — Regular** | Regular | `a*b*`, identifiers, numbers |
+| **Pushdown Automaton (PDA)** | A **STACK** (LIFO) | **Type 2 — Context-Free** | Context-free | `aⁿbⁿ`, **palindromes**, balanced brackets, expression syntax |
+| **Linear Bounded Automaton (LBA)** | A **tape limited to the input length** | Type 1 — Context-Sensitive | Context-sensitive | `aⁿbⁿcⁿ` |
+| **Turing Machine (TM)** | An **infinite tape**, read and write | Type 0 — Unrestricted | Recursively enumerable | **Anything computable** |
+
+```mermaid
+flowchart TD
+    A["Type 0 — Recursively Enumerable<br/>Turing Machine"] --> B["Type 1 — Context-Sensitive<br/>Linear Bounded Automaton"]
+    B --> C["Type 2 — Context-Free<br/>Pushdown Automaton"]
+    C --> D["Type 3 — Regular<br/>Finite Automaton"]
+```
+
+*(Read the arrows as "contains": every regular language is context-free, every context-free language is context-sensitive, and so on — but not the reverse.)*
+
+#### Where each model is used in a compiler
+
+| Compiler phase | Model used | Why |
+|---|---|---|
+| **Lexical analysis** | **Finite Automaton + Regular Expressions** | Tokens (identifiers, numbers, operators) form a **regular** language — no counting or nesting is needed |
+| **Syntax analysis** | **Pushdown Automaton + CFG** | Program structure has **nesting** — balanced `{}`, `()`, nested `if` — which requires a **stack**, so it is context-free, not regular |
+| **Semantic analysis** | Neither — a symbol table and attribute rules | Rules such as "a variable must be declared before use" are **context-sensitive** and are handled by ad-hoc checks rather than a formal automaton |
+
+> **This is the single most useful connection between the two halves of this subject:** *regular expressions and DFAs build the **scanner**; context-free grammars and pushdown automata build the **parser**.*
+
+#### The Turing Machine
+
+A **Turing Machine** is the most powerful model: a finite control unit with a **read/write head** on an **infinite tape**. Anything that can be computed by any physical computer can be computed by a Turing machine — this is the **Church-Turing thesis**.
+
+**Formally a 7-tuple:** M = (Q, Σ, Γ, δ, q₀, B, F) — states, input alphabet, **tape** alphabet, transition function, start state, **blank** symbol, and final states. The transition function **δ: Q × Γ → Q × Γ × {L, R}** says: given the current state and the symbol under the head, **write** a symbol, **move** left or right, and change state.
+
+#### Decidability and the Halting Problem
+
+| Term | Meaning |
+|---|---|
+| **Decidable (recursive)** | A Turing machine exists that **always halts** and answers yes or no |
+| **Semi-decidable (recursively enumerable)** | A TM halts and says "yes" for members, but may **loop forever** for non-members |
+| **Undecidable** | **No algorithm can exist** that answers correctly for every input |
+
+> **The Halting Problem** — *given an arbitrary program and an input, decide whether the program will eventually halt* — is **UNDECIDABLE**. Alan Turing proved this in 1936 by contradiction: if such a decider existed, one could build a program that halts exactly when the decider says it loops, which is impossible.
+
+**Other famous undecidable problems:** whether two CFGs generate the same language; whether a given CFG is **ambiguous**; whether a program ever reaches a given line (which is why perfect dead-code detection is impossible); the Post Correspondence Problem; and Rice's theorem (any non-trivial semantic property of programs is undecidable).
+
+**The practical lesson for compilers:** a compiler **cannot** prove in general that your program terminates, has no infinite loop, or has no dead code. It can only apply conservative approximations — which is exactly why optimisers are careful and why static analysers report "possible" problems rather than certain ones.
+
+**Previous Year Question List from this Topic:**
+
+- [Write difference between compiler and interpreter.](../written-answers/compiler-and-toc.md?plain=1#L916)
