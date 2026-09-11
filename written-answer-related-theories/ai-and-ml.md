@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 35 theories
+**Table of Contents** — 6 subtopics · 38 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -45,6 +45,11 @@
    - [Loss Functions and the Objective Function](#loss-functions-and-the-objective-function)
    - [How to Validate and Check the Reliability of a Machine Learning Model](#how-to-validate-and-check-the-reliability-of-a-machine-learning-model)
    - [Overfitting, Underfitting and the Bias-Variance Trade-off](#overfitting-underfitting-and-the-bias-variance-trade-off)
+
+6. **[Supervised Learning (Decision Trees)](#supervised-learning-decision-trees)**
+   - [Decision Tree — Structure and Terminology](#decision-tree--structure-and-terminology)
+   - [How a Decision Tree is Built — Entropy, Information Gain and Gini Index](#how-a-decision-tree-is-built--entropy-information-gain-and-gini-index)
+   - [Pruning, Random Forest and Tree Ensembles](#pruning-random-forest-and-tree-ensembles)
 
 <!-- TOC END -->
 
@@ -1983,3 +1988,266 @@ flowchart LR
 - [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
 - [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
 - [In machine learning. What will happen, when a machine is highly trained up a slight trained up?](../written-answers/ai-and-ml.md?plain=1#L1243)
+
+## Supervised Learning (Decision Trees)
+
+### Decision Tree — Structure and Terminology
+
+A **Decision Tree** is a supervised learning algorithm that makes a prediction by asking a **series of simple yes/no questions** about the features, arranged like an upside-down tree, until it reaches a final answer at a leaf.
+
+It is the **most human-readable** of all machine learning models — you can print it and a bank manager can follow it without knowing any mathematics. It can be used for both **classification** (output = a class) and **regression** (output = a number).
+
+#### A worked example — should a bank approve a loan?
+
+```mermaid
+flowchart TD
+    A{"Monthly income<br/>≥ 50,000 Tk?"} -->|No| B["❌ Reject"]
+    A -->|Yes| C{"Credit history<br/>good?"}
+    C -->|No| D["❌ Reject"]
+    C -->|Yes| E{"Existing loan<br/>EMI &gt; 40% of income?"}
+    E -->|Yes| F["❌ Reject"]
+    E -->|No| G["✅ Approve"]
+```
+
+Reading the tree is simply reading a rule:
+> *IF income ≥ 50,000 AND credit history is good AND EMI ≤ 40 % of income THEN approve the loan.*
+
+#### Terminology
+
+```mermaid
+flowchart TD
+    R["Root Node<br/>(the whole dataset, best feature)"] --> I1["Internal / Decision Node"]
+    R --> I2["Internal / Decision Node"]
+    I1 --> L1["Leaf / Terminal Node<br/>(final answer)"]
+    I1 --> L2["Leaf Node"]
+    I2 --> L3["Leaf Node"]
+    I2 --> S["Sub-tree / Branch"]
+```
+
+| Term | Meaning |
+|---|---|
+| **Root node** | The topmost node; represents the whole dataset and the **first, most informative question** |
+| **Decision / Internal node** | A node that asks a question about one feature and splits the data |
+| **Branch / Edge** | An outcome of a test ("Yes", "No", "Sunny", "Rainy") |
+| **Leaf / Terminal node** | A node with no children; holds the **final prediction** |
+| **Splitting** | Dividing a node into two or more sub-nodes |
+| **Pruning** | Removing branches to reduce overfitting (the opposite of splitting) |
+| **Parent / Child node** | A node that splits / the nodes produced by that split |
+| **Depth** | Number of levels from the root to the deepest leaf |
+| **Purity** | How much a node contains only one class (a pure node = 100 % one class) |
+
+#### Advantages and disadvantages
+
+**Advantages**
+- **Very easy to understand and explain** — even to non-technical people ("white box" model).
+- Needs **little data preparation**: no feature scaling or normalisation required.
+- Handles **both numerical and categorical** features.
+- Handles **non-linear** relationships naturally.
+- **Fast** to train and to predict.
+- Implicitly performs **feature selection** — the most useful features appear near the root.
+
+**Disadvantages**
+- **Overfits very easily** — a deep tree memorises the training data.
+- **Unstable**: a small change in the data can produce a completely different tree.
+- Greedy, so it finds a *locally* optimal tree, not the globally best one.
+- Can be **biased towards features with many distinct values**.
+- Poor at smooth/linear relationships compared with linear regression.
+
+**Previous Year Question List from this Topic:**
+
+- [Decisiontree model in Machine Learning.](../written-answers/ai-and-ml.md?plain=1#L992)
+- [(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।](../written-answers/ai-and-ml.md?plain=1#L1027)
+
+
+---
+
+### How a Decision Tree is Built — Entropy, Information Gain and Gini Index
+
+The whole algorithm boils down to one question repeated again and again:
+
+> **"Which feature should I split on next?"**
+> **Answer: the one that makes the child nodes as *pure* as possible.**
+
+So we need a way to measure **impurity**. There are two standard measures.
+
+#### 1. Entropy (used by ID3 and C4.5)
+
+**Entropy** measures the **disorder / uncertainty** in a node.
+
+> **Entropy(S) = − Σ pᵢ · log₂(pᵢ)**
+
+where pᵢ is the proportion of class i in the node.
+
+| Node contents | Entropy | Meaning |
+|---|---|---|
+| 100 % one class (pure) | **0** | No uncertainty at all |
+| 50 % / 50 % (binary) | **1** | Maximum uncertainty — a coin toss |
+| 80 % / 20 % | 0.72 | Fairly pure |
+
+*Quick check:* for 9 "Yes" and 5 "No" out of 14:
+Entropy = −(9/14)log₂(9/14) − (5/14)log₂(5/14) = −(0.643)(−0.637) − (0.357)(−1.485) = 0.410 + 0.530 = **0.940**
+
+#### 2. Information Gain
+
+**Information Gain** = how much entropy **drops** when we split on a feature. We choose the feature with the **highest** information gain.
+
+> **Gain(S, A) = Entropy(S) − Σ ( |Sᵥ| / |S| ) × Entropy(Sᵥ)**
+
+(the second term is the **weighted average entropy of the children**).
+
+**Worked example — the classic "Play Tennis" dataset (14 days, 9 Yes / 5 No):**
+
+Parent entropy = **0.940** (calculated above).
+
+Split on **Outlook**, which has three values:
+
+| Outlook | Samples | Yes | No | Entropy |
+|---|---|---|---|---|
+| Sunny | 5 | 2 | 3 | −(2/5)log₂(2/5) − (3/5)log₂(3/5) = **0.971** |
+| Overcast | 4 | 4 | 0 | **0** (pure!) |
+| Rainy | 5 | 3 | 2 | **0.971** |
+
+Weighted entropy after the split
+= (5/14)(0.971) + (4/14)(0) + (5/14)(0.971)
+= 0.347 + 0 + 0.347 = **0.694**
+
+**Information Gain(Outlook) = 0.940 − 0.694 = 0.247**
+
+Doing the same for the other features gives Gain(Humidity) = 0.152, Gain(Wind) = 0.048, Gain(Temperature) = 0.029. **Outlook wins**, so it becomes the **root node**. The process then repeats inside each branch.
+
+#### 3. Gini Index / Gini Impurity (used by CART)
+
+**Gini** measures the probability of **wrongly classifying** a randomly chosen element if it were labelled randomly according to the node's distribution.
+
+> **Gini(S) = 1 − Σ (pᵢ)²**
+
+| Node | Gini |
+|---|---|
+| Pure (100 % one class) | **0** |
+| 50/50 binary split | **0.5** (maximum for 2 classes) |
+
+For 9 Yes / 5 No: Gini = 1 − (9/14)² − (5/14)² = 1 − 0.413 − 0.128 = **0.459**
+
+We then compute **Gini Gain** the same way and pick the largest — or equivalently, pick the split with the **lowest weighted child Gini**.
+
+#### Entropy vs Gini
+
+| Point | **Entropy / Information Gain** | **Gini Index** |
+|---|---|---|
+| Range (binary) | 0 to 1 | 0 to 0.5 |
+| Formula | −Σ p log₂ p | 1 − Σ p² |
+| Computation | Slower (logarithm) | **Faster** (only squares) |
+| Used by | **ID3, C4.5** | **CART**, scikit-learn default |
+| Result | In practice, the two almost always choose the **same** split | |
+
+#### The three classic tree algorithms
+
+| Algorithm | Split criterion | Features handled | Tree type | Notes |
+|---|---|---|---|---|
+| **ID3** | Information Gain | Categorical only | Multi-way | Biased towards features with many values; no pruning |
+| **C4.5** | **Gain Ratio** (Info Gain ÷ Split Info) | Categorical + numeric | Multi-way | Handles missing values; does pruning; fixes ID3's bias |
+| **CART** | **Gini Index** (classification), **MSE** (regression) | Categorical + numeric | **Binary only** | Does both classification and regression; uses cost-complexity pruning |
+
+#### The algorithm in pseudo-code
+
+```
+BuildTree(S, Features):
+    if all examples in S have the same class:
+        return a Leaf with that class
+    if Features is empty or a stopping rule is met:
+        return a Leaf with the majority class of S
+    A  <- the feature in Features with the highest Information Gain (or lowest Gini)
+    create a Decision node that tests A
+    for each value v of A:
+        Sv <- the subset of S where A = v
+        if Sv is empty:
+            attach a Leaf with the majority class of S
+        else:
+            attach BuildTree(Sv, Features - {A})
+    return the node
+```
+
+**Previous Year Question List from this Topic:**
+
+- [Decisiontree model in Machine Learning.](../written-answers/ai-and-ml.md?plain=1#L992)
+- [(ক) Decision Tree কী? উদাহরণসহ বর্ণনা করুন।](../written-answers/ai-and-ml.md?plain=1#L1027)
+
+
+---
+
+### Pruning, Random Forest and Tree Ensembles
+
+#### Why pruning is needed
+
+If you let a decision tree grow until every leaf is pure, it will have one leaf per training row — a perfect score on the training set and a terrible score on new data. That is textbook **overfitting**. **Pruning** cuts the tree back.
+
+| Type | When it happens | How it works |
+|---|---|---|
+| **Pre-pruning** (early stopping) | *While* growing | Stop splitting when: max depth reached, node has fewer than *n* samples, information gain below a threshold, or max number of leaves reached |
+| **Post-pruning** | *After* the full tree is grown | Grow the complete tree, then remove branches that do not improve validation accuracy (e.g. **cost-complexity / reduced-error pruning**) |
+
+Post-pruning usually gives better trees; pre-pruning is faster.
+
+#### From one tree to a forest — Ensemble Learning
+
+A single tree is unstable. **Ensemble learning** combines many weak models into one strong model.
+
+```mermaid
+flowchart TD
+    D[(Training Data)] --> B1[Bootstrap sample 1] --> T1[Tree 1]
+    D --> B2[Bootstrap sample 2] --> T2[Tree 2]
+    D --> B3[Bootstrap sample 3] --> T3[Tree 3]
+    D --> BN[Bootstrap sample n] --> TN[Tree n]
+    T1 --> V{"Majority vote (classification)<br/>or Average (regression)"}
+    T2 --> V
+    T3 --> V
+    TN --> V
+    V --> R[Final Prediction]
+```
+
+**Random Forest** = many decision trees + **two sources of randomness**:
+1. **Bagging (Bootstrap Aggregating)** — each tree is trained on a random sample *with replacement* of the rows.
+2. **Random feature selection** — at each split, only a random subset of features is considered (typically √p features).
+
+These two tricks make the trees **different from each other**, and averaging many different trees cancels out their individual errors.
+
+| Point | Single Decision Tree | Random Forest |
+|---|---|---|
+| Accuracy | Moderate | **High** |
+| Overfitting | High risk | **Much lower** |
+| Interpretability | **Excellent** — you can draw it | Poor — hundreds of trees |
+| Training speed | Very fast | Slower (but parallelisable) |
+| Stability | Unstable | Very stable |
+
+#### Bagging vs Boosting
+
+| Point | **Bagging** | **Boosting** |
+|---|---|---|
+| Trees trained | **In parallel**, independently | **Sequentially**, each one fixing the previous one's mistakes |
+| Sampling | Random with replacement | Re-weights the misclassified examples |
+| Main aim | Reduce **variance** (overfitting) | Reduce **bias** (underfitting) |
+| Examples | **Random Forest** | **AdaBoost, Gradient Boosting, XGBoost, LightGBM** |
+
+**Stacking** is a third form: several different model types are trained, and a "meta-model" learns how to best combine their predictions.
+
+#### Weak learner vs Strong learner
+
+| Term | Meaning |
+|---|---|
+| **Weak learner** | A model that is only **slightly better than random guessing** (accuracy just above 50 % for a binary problem). Example: a **decision stump** — a tree with a single split |
+| **Strong learner** | A model with **high accuracy**, strongly correlated with the true labels |
+
+**The central idea of ensemble learning:** *many weak learners, combined properly, become a strong learner.* This was proved by Schapire in 1990 and is the theoretical basis of **Boosting**. AdaBoost, for instance, trains hundreds of decision stumps one after another — each new stump concentrates on the examples the previous ones got wrong — and the weighted vote of all of them is highly accurate.
+
+| Point | Weak Learner | Strong Learner |
+|---|---|---|
+| Accuracy | Slightly > 50 % | Close to the best possible |
+| Complexity | Very simple (stump, shallow tree) | Complex |
+| Used alone? | No | Yes |
+| Role in ensembles | The **building block** (bagging/boosting combine them) | Often the *result* of an ensemble |
+| Bias / Variance | High bias, low variance | Low bias |
+
+**Previous Year Question List from this Topic:**
+
+- [Decisiontree model in Machine Learning.](../written-answers/ai-and-ml.md?plain=1#L992)
+- [Weak and strong learner ensemble learning in Machine learning.](../written-answers/ai-and-ml.md?plain=1#L1179)
