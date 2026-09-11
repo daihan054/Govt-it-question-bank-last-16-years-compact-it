@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 11 subtopics · 53 theories
+**Table of Contents** — 12 subtopics · 57 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -75,6 +75,12 @@
    - [Adjacency Matrix](#adjacency-matrix)
    - [Adjacency List](#adjacency-list)
    - [Adjacency Matrix vs Adjacency List — Which to Use](#adjacency-matrix-vs-adjacency-list--which-to-use)
+
+12. **[Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication)**
+   - [Matrix Multiplication — The Standard Algorithm](#matrix-multiplication--the-standard-algorithm)
+   - [Block (Divide and Conquer) Matrix Multiplication](#block-divide-and-conquer-matrix-multiplication)
+   - [Strassen's Algorithm](#strassens-algorithm)
+   - [Divide and Conquer — Worked Problem Summary](#divide-and-conquer--worked-problem-summary)
 
 <!-- TOC END -->
 
@@ -4415,3 +4421,270 @@ Simply store all edges as a list of triples **(u, v, weight)**.
 
 - [Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adja…](../written-answers/algorithm.md?plain=1#L3707)
 - [(b) How a graph can be represented? Explain with example.](../written-answers/algorithm.md?plain=1#L3775)
+
+## Divide and Conquer & Matrix Multiplication
+
+### Matrix Multiplication — The Standard Algorithm
+
+Two matrices **A (m × n)** and **B (n × p)** can be multiplied only if the **number of columns of A equals the number of rows of B**. The result **C** is **m × p**, where
+
+> **C[i][j] = Σₖ₌₁ⁿ A[i][k] × B[k][j]**
+
+Each element of C is the **dot product** of row *i* of A with column *j* of B.
+
+#### Algorithm
+
+```
+MatrixMultiply(A, B, m, n, p):
+    create C[m][p]
+    for i = 0 to m-1:
+        for j = 0 to p-1:
+            C[i][j] = 0
+            for k = 0 to n-1:
+                C[i][j] = C[i][j] + A[i][k] * B[k][j]
+    return C
+```
+
+#### C implementation
+
+```c
+#include <stdio.h>
+#define N 3
+
+void multiply(int A[N][N], int B[N][N], int C[N][N]) {
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++) {
+            C[i][j] = 0;
+            for (int k = 0; k < N; k++)
+                C[i][j] += A[i][k] * B[k][j];
+        }
+}
+```
+
+#### Worked example (2 × 2)
+
+A = `[[1, 2], [3, 4]]`, B = `[[5, 6], [7, 8]]`
+
+| Element | Computation | Value |
+|---|---|---|
+| C[0][0] | 1×5 + 2×7 = 5 + 14 | **19** |
+| C[0][1] | 1×6 + 2×8 = 6 + 16 | **22** |
+| C[1][0] | 3×5 + 4×7 = 15 + 28 | **43** |
+| C[1][1] | 3×6 + 4×8 = 18 + 32 | **50** |
+
+> **C = [[19, 22], [43, 50]]**
+
+#### Complexity
+
+| | For n × n matrices |
+|---|---|
+| **Time** | **O(n³)** — three nested loops; n³ multiplications and n³ − n² additions |
+| **Space** | **O(n²)** for the result matrix |
+
+**Properties to remember:** matrix multiplication is **associative** `(AB)C = A(BC)` and **distributive**, but **NOT commutative** — `AB ≠ BA` in general.
+
+**Previous Year Question List from this Topic:**
+
+- [Write an algorithm for matrix multiplication.](../written-answers/algorithm.md?plain=1#L3910)
+- [Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____](../written-answers/algorithm.md?plain=1#L2863)
+
+
+---
+
+### Block (Divide and Conquer) Matrix Multiplication
+
+When a matrix is **too large to process at once** — because of a hardware limit, a cache size, or a memory limit — it is split into **sub-matrices (blocks)** and multiplied block by block. The block algebra works **exactly like scalar algebra**.
+
+#### The block rule
+
+Split each n × n matrix into four (n/2) × (n/2) blocks:
+
+```
+A = | A11  A12 |        B = | B11  B12 |        C = | C11  C12 |
+    | A21  A22 |            | B21  B22 |            | C21  C22 |
+```
+
+Then:
+
+> **C11 = A11·B11 + A12·B21**
+> **C12 = A11·B12 + A12·B22**
+> **C21 = A21·B11 + A22·B21**
+> **C22 = A21·B12 + A22·B22**
+
+**8 block multiplications and 4 block additions.**
+
+```mermaid
+flowchart TD
+    A["A (16×16)"] --> A1["A11, A12, A21, A22<br/>each 8×8"]
+    B["B (16×16)"] --> B1["B11, B12, B21, B22<br/>each 8×8"]
+    A1 --> M["8 multiplications of 8×8 blocks<br/>(each fits the processor)"]
+    B1 --> M
+    M --> S["4 additions of 8×8 blocks"]
+    S --> C["C (16×16)<br/>assembled from C11, C12, C21, C22"]
+```
+
+#### Worked solution — multiplying two 16 × 16 matrices on a processor that handles only 8 × 8
+
+**The problem:** A and B are 16 × 16, but the hardware multiplier accepts only 8 × 8 operands.
+
+**Step 1 — partition.** Split A and B each into **four 8 × 8 blocks**:
+
+```
+A = | A11  A12 |        B = | B11  B12 |
+    | A21  A22 |            | B21  B22 |
+```
+where A11 = A[0..7][0..7], A12 = A[0..7][8..15], A21 = A[8..15][0..7], A22 = A[8..15][8..15] — and likewise for B.
+
+**Step 2 — perform 8 multiplications of 8 × 8 blocks** (each one fits the processor):
+
+| # | Product | # | Product |
+|---|---|---|---|
+| 1 | A11 × B11 | 5 | A21 × B11 |
+| 2 | A12 × B21 | 6 | A22 × B21 |
+| 3 | A11 × B12 | 7 | A21 × B12 |
+| 4 | A12 × B22 | 8 | A22 × B22 |
+
+**Step 3 — perform 4 additions of 8 × 8 blocks:**
+
+```
+C11 = (A11×B11) + (A12×B21)
+C12 = (A11×B12) + (A12×B22)
+C21 = (A21×B11) + (A22×B21)
+C22 = (A21×B12) + (A22×B22)
+```
+
+**Step 4 — assemble** the four 8 × 8 results into the final 16 × 16 matrix C.
+
+#### Pseudo-code (general recursive version)
+
+```
+BlockMultiply(A, B, n, LIMIT):
+    if n <= LIMIT:
+        return StandardMultiply(A, B)          // small enough for the hardware
+
+    split A into A11, A12, A21, A22            // each n/2 × n/2
+    split B into B11, B12, B21, B22
+
+    C11 = Add( BlockMultiply(A11,B11,n/2,LIMIT), BlockMultiply(A12,B21,n/2,LIMIT) )
+    C12 = Add( BlockMultiply(A11,B12,n/2,LIMIT), BlockMultiply(A12,B22,n/2,LIMIT) )
+    C21 = Add( BlockMultiply(A21,B11,n/2,LIMIT), BlockMultiply(A22,B21,n/2,LIMIT) )
+    C22 = Add( BlockMultiply(A21,B12,n/2,LIMIT), BlockMultiply(A22,B22,n/2,LIMIT) )
+
+    return Combine(C11, C12, C21, C22)
+```
+
+#### Operation count and complexity
+
+**For the 16 × 16 case:**
+- 8 multiplications of 8 × 8, each costing 8³ = **512** scalar multiplications → 8 × 512 = **4,096**
+- This equals 16³ = 4,096 — so blocking does **not reduce** the total work; it only makes the problem **fit the hardware**.
+- Plus 4 block additions of 8 × 8 = 4 × 64 = **256** scalar additions for the combining step.
+
+**The recurrence:**
+
+> **T(n) = 8·T(n/2) + O(n²)**
+
+By the **Master Theorem**: a = 8, b = 2, so n^(log₂8) = **n³**, and f(n) = n² grows slower → **Case 1** → **T(n) = Θ(n³)** — the same as the standard algorithm.
+
+**Why blocking is still worth doing:**
+1. It **makes the computation possible** on limited hardware (the exam's scenario).
+2. Each block fits in the **CPU cache**, so it runs **much faster in practice** despite the same asymptotic complexity — this is why real BLAS libraries are block-based.
+3. The 8 block products are **independent**, so they can be computed **in parallel** on 8 cores or 8 processors.
+4. It works for out-of-core computation, where blocks are read from disk.
+
+**Previous Year Question List from this Topic:**
+
+- [You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?](../written-answers/algorithm.md?plain=1#L3855)
+- [(খ) Divide and Conquer technique কী? একটি সমস্যা বর্ণনা করুন যা Divide and Conquer Technique এ সমাধান করা যায়।](../written-answers/algorithm.md?plain=1#L3888)
+- [Write an algorithm for matrix multiplication.](../written-answers/algorithm.md?plain=1#L3910)
+
+
+---
+
+### Strassen's Algorithm
+
+**Strassen's algorithm (1969)** was the first method to break the O(n³) barrier for matrix multiplication. It uses the same block decomposition but reduces the **8 block multiplications to 7**, at the cost of more additions.
+
+#### The seven products
+
+```
+P1 = (A11 + A22) × (B11 + B22)
+P2 = (A21 + A22) × B11
+P3 = A11 × (B12 − B22)
+P4 = A22 × (B21 − B11)
+P5 = (A11 + A12) × B22
+P6 = (A21 − A11) × (B11 + B12)
+P7 = (A12 − A22) × (B21 + B22)
+```
+
+#### Assembling the result
+
+```
+C11 = P1 + P4 − P5 + P7
+C12 = P3 + P5
+C21 = P2 + P4
+C22 = P1 − P2 + P3 + P6
+```
+
+#### Complexity
+
+> **T(n) = 7·T(n/2) + O(n²)**
+
+By the Master Theorem: n^(log₂7) = **n^2.807**, and f(n) = n² grows slower → Case 1:
+
+> **T(n) = Θ(n^log₂7) = Θ(n^2.807)**
+
+| Algorithm | Multiplications per level | Complexity |
+|---|---|---|
+| Standard | 8 | **O(n³)** = O(n^3.000) |
+| **Strassen** | **7** | **O(n^2.807)** |
+| Coppersmith-Winograd family (theoretical) | — | O(n^2.37) |
+
+**Trade-offs**
+
+| Advantage | Disadvantage |
+|---|---|
+| Asymptotically faster | Uses **18 additions/subtractions** instead of 4 — worse for small n |
+| Big win for very large matrices | **Numerically less stable** (subtractions cause cancellation) |
+| Still divide and conquer, still parallelisable | Needs **more memory** for the 7 intermediate products |
+| — | Only beats the standard method above a **crossover point** (typically n ≈ 100–1000) |
+| — | Requires padding when n is not a power of 2 |
+
+**Previous Year Question List from this Topic:**
+
+- [You have given two 16 \times 16 metrics but your processor support 8 \times 8 matrices how can you multiply write algorithm?](../written-answers/algorithm.md?plain=1#L3855)
+- [(খ) Divide and Conquer technique কী? একটি সমস্যা বর্ণনা করুন যা Divide and Conquer Technique এ সমাধান করা যায়।](../written-answers/algorithm.md?plain=1#L3888)
+
+
+---
+
+### Divide and Conquer — Worked Problem Summary
+
+*(A frequent question: "What is the Divide and Conquer technique? Describe a problem that is solved by it.")*
+
+**Definition.** Divide and Conquer solves a problem by **dividing** it into smaller sub-problems of the same type, **conquering** them recursively, and **combining** their results into the final answer.
+
+**A complete worked example to present — Merge Sort:**
+
+| Step | What happens | Cost |
+|---|---|---|
+| **Divide** | Split the array of n elements into two halves at the midpoint | O(1) |
+| **Conquer** | Recursively merge-sort each half of size n/2 | 2·T(n/2) |
+| **Combine** | Merge the two sorted halves in one linear pass | O(n) |
+
+> **Recurrence: T(n) = 2T(n/2) + O(n) → Θ(n log n)**
+
+*Illustration:* `[38, 27, 43, 3, 9, 82, 10]`
+→ divide into `[38, 27, 43]` and `[3, 9, 82, 10]`
+→ keep dividing to single elements
+→ merge back upwards: `[27, 38, 43]` and `[3, 9, 10, 82]`
+→ final merge: `[3, 9, 10, 27, 38, 43, 82]`
+
+**Other problems to name:** Quick Sort, Binary Search, Strassen's matrix multiplication, Karatsuba integer multiplication, the closest-pair-of-points problem, the Tower of Hanoi, and finding the maximum and minimum together.
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) Divide and Conquer technique কী? একটি সমস্যা বর্ণনা করুন যা Divide and Conquer Technique এ সমাধান করা যায়।](../written-answers/algorithm.md?plain=1#L3888)
+- [Write down the difference between Divide and Conquer and Dynamic Programming.](../written-answers/algorithm.md?plain=1#L2783)
+- [(a) How does dynamic programming relate with divide and conquer approach?](../written-answers/algorithm.md?plain=1#L2799)
+- [Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are th…](../written-answers/algorithm.md?plain=1#L2839)
