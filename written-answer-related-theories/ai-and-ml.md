@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 47 theories
+**Table of Contents** — 9 subtopics · 53 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -63,6 +63,14 @@
    - [Federated Learning](#federated-learning)
    - [Reinforcement Learning vs Deep Learning vs Federated Learning](#reinforcement-learning-vs-deep-learning-vs-federated-learning)
    - [Ensemble Learning — Bagging, Boosting and Stacking](#ensemble-learning--bagging-boosting-and-stacking)
+
+9. **[Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search)**
+   - [Problem Solving by Searching in AI](#problem-solving-by-searching-in-ai)
+   - [Uninformed (Blind) Search Algorithms](#uninformed-blind-search-algorithms)
+   - [Informed (Heuristic) Search Algorithms](#informed-heuristic-search-algorithms)
+   - [Informed vs Uninformed Search — Comparison](#informed-vs-uninformed-search--comparison)
+   - [Adversarial Search — Minimax Algorithm](#adversarial-search--minimax-algorithm)
+   - [Alpha-Beta Pruning](#alpha-beta-pruning)
 
 <!-- TOC END -->
 
@@ -2863,3 +2871,239 @@ flowchart LR
 **Previous Year Question List from this Topic:**
 
 - [Weak and strong learner ensemble learning in Machine learning.](../written-answers/ai-and-ml.md?plain=1#L1179)
+
+## Search Algorithms (Informed vs Uninformed Search)
+
+### Problem Solving by Searching in AI
+
+Many AI problems — route finding, puzzles, planning, games — are solved by **searching** through the possible situations until a goal is reached.
+
+#### How a search problem is defined
+
+| Element | Meaning | Example (8-puzzle) |
+|---|---|---|
+| **Initial state** | Where the agent starts | The scrambled tile arrangement |
+| **Actions / Operators** | The legal moves | Slide a tile up / down / left / right |
+| **Transition model** | What each action produces | The new tile arrangement |
+| **Goal test** | How to know you are finished | Tiles are in order 1–8 |
+| **Path cost** | Cost of a sequence of actions | Number of moves |
+
+The set of all reachable states is the **state space**; the tree the algorithm builds while exploring is the **search tree**.
+
+#### The four measures used to judge any search algorithm
+
+| Criterion | Question |
+|---|---|
+| **Completeness** | Is it guaranteed to find a solution if one exists? |
+| **Optimality** | Does it find the **cheapest** solution? |
+| **Time complexity** | How many nodes are generated? |
+| **Space complexity** | How many nodes must be kept in memory at once? |
+
+Notation used in the complexity formulas: **b** = branching factor (children per node), **d** = depth of the shallowest goal, **m** = maximum depth of the tree.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the difference between informed and uninformed search algorithm.](../written-answers/ai-and-ml.md?plain=1#L1205)
+- [How $\alpha$-$\beta$ pruning is better than minimax search in game planning?](../written-answers/ai-and-ml.md?plain=1#L1222)
+
+
+---
+
+### Uninformed (Blind) Search Algorithms
+
+**Uninformed search** has **no extra information** about how close a state is to the goal. It only knows the problem definition, so it explores **blindly** and systematically.
+
+```mermaid
+flowchart TD
+    U[Uninformed / Blind Search] --> A[Breadth-First Search - BFS]
+    U --> B[Depth-First Search - DFS]
+    U --> C[Uniform Cost Search - UCS]
+    U --> D[Depth-Limited Search - DLS]
+    U --> E[Iterative Deepening DFS - IDDFS]
+    U --> F[Bidirectional Search]
+```
+
+| Algorithm | How it explores | Data structure | Complete? | Optimal? | Time | Space |
+|---|---|---|---|---|---|---|
+| **BFS** | Level by level | **Queue** (FIFO) | Yes | Yes *(if all step costs are equal)* | O(bᵈ) | **O(bᵈ)** — huge |
+| **DFS** | As deep as possible first | **Stack** (LIFO) | No (can loop forever) | No | O(bᵐ) | **O(bm)** — small |
+| **UCS** | Cheapest total path cost first | **Priority queue** by g(n) | Yes | **Yes** (handles different step costs) | O(b^(1+C\*/ε)) | Large |
+| **DLS** | DFS with a depth limit *l* | Stack | Only if d ≤ l | No | O(bˡ) | O(bl) |
+| **IDDFS** | DLS repeated with limit 0, 1, 2, 3 … | Stack | **Yes** | Yes (equal costs) | O(bᵈ) | **O(bd)** |
+| **Bidirectional** | Search from start *and* from goal, meet in the middle | Two queues | Yes | Yes | **O(b^(d/2))** | O(b^(d/2)) |
+
+**The practical winner is IDDFS**: it gets BFS's completeness and optimality with DFS's tiny memory usage. The repeated work sounds wasteful but is not — most nodes of a tree are in the last level anyway.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the difference between informed and uninformed search algorithm.](../written-answers/ai-and-ml.md?plain=1#L1205)
+
+
+---
+
+### Informed (Heuristic) Search Algorithms
+
+**Informed search** uses **extra problem-specific knowledge — a heuristic function h(n)** — that estimates how far a node is from the goal. This lets the algorithm head **towards** the goal instead of wandering.
+
+> **h(n)** = estimated cost from node *n* to the goal.
+> **g(n)** = actual cost already spent from the start to *n*.
+> **f(n)** = the evaluation function used to pick the next node.
+
+A classic heuristic: for route finding, h(n) = the **straight-line (aerial) distance** from city *n* to the destination. It is never exactly right, but it is a very useful guide.
+
+#### The two main informed algorithms
+
+| Algorithm | Evaluation function | Behaviour | Complete? | Optimal? |
+|---|---|---|---|---|
+| **Greedy Best-First Search** | **f(n) = h(n)** | Always jump to whatever *looks* closest to the goal | No (can get stuck in loops) | **No** |
+| **A\* Search** | **f(n) = g(n) + h(n)** | Balances "how far I have come" with "how far is left" | **Yes** | **Yes** — if h is admissible and consistent |
+
+```mermaid
+flowchart LR
+    S((Start)) -->|"g(n) = cost so far"| N((Node n))
+    N -->|"h(n) = estimated cost left"| G((Goal))
+    N -.->|"f(n) = g(n) + h(n)"| F["Total estimated cost<br/>of the best path through n"]
+```
+
+**A\*** is the most important search algorithm in AI. It is used in Google Maps, in game pathfinding and in robotics.
+
+#### Properties a heuristic must have
+
+| Property | Meaning | Why it matters |
+|---|---|---|
+| **Admissible** | h(n) **never overestimates** the true remaining cost | Guarantees A\* finds the optimal path |
+| **Consistent (monotonic)** | h(n) ≤ cost(n → n′) + h(n′) for every neighbour | Guarantees A\* never needs to re-expand a node |
+
+If **h(n) = 0** everywhere, A\* degenerates into **Uniform Cost Search**. The better (larger but still admissible) the heuristic, the fewer nodes A\* expands.
+
+**Other informed methods:** Hill Climbing, Beam Search, Simulated Annealing, Genetic Algorithms, IDA\* (memory-bounded A\*).
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the difference between informed and uninformed search algorithm.](../written-answers/ai-and-ml.md?plain=1#L1205)
+
+
+---
+
+### Informed vs Uninformed Search — Comparison
+
+| Point | **Uninformed (Blind) Search** | **Informed (Heuristic) Search** |
+|---|---|---|
+| **Extra knowledge** | **None** beyond the problem definition | Uses a **heuristic function h(n)** about the goal |
+| **Also called** | Blind search, brute-force search | Heuristic search, directed search |
+| **How it explores** | Systematically, in a fixed order | **Guided** towards the goal |
+| **Efficiency** | **Low** — explores a huge number of irrelevant nodes | **High** — explores far fewer nodes |
+| **Time & memory** | Usually much higher | Usually much lower |
+| **Solution quality** | Finds *a* solution; optimal only for BFS/UCS/IDDFS | Finds a good or optimal solution faster (A\* is optimal) |
+| **Completeness** | BFS, UCS, IDDFS are complete | A\* is complete; Greedy is not |
+| **Domain knowledge needed** | No | **Yes** — you must design a good heuristic |
+| **Works when** | You know nothing about the problem structure | You can estimate the distance to the goal |
+| **Examples** | BFS, DFS, UCS, DLS, IDDFS, Bidirectional | Greedy Best-First, **A\***, IDA\*, Hill Climbing, Beam Search |
+| **Real example** | Exploring every road until you stumble on the destination | Following road signs and a compass towards the destination |
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the difference between informed and uninformed search algorithm.](../written-answers/ai-and-ml.md?plain=1#L1205)
+
+
+---
+
+### Adversarial Search — Minimax Algorithm
+
+In a **two-player game** (chess, tic-tac-toe, Go) there is an **opponent** who is actively trying to make you lose. This is called **adversarial search**.
+
+**Minimax** assumes both players play perfectly:
+- **MAX** (you) tries to **maximise** the score.
+- **MIN** (the opponent) tries to **minimise** it.
+
+#### How it works
+
+1. Build the game tree down to a certain depth.
+2. Apply a **utility / evaluation function** to the leaf nodes (e.g. +10 = MAX wins, 0 = draw, −10 = MIN wins).
+3. **Back the values up** the tree: at a **MAX node** take the **largest** child value; at a **MIN node** take the **smallest**.
+4. At the root, choose the move leading to the highest value.
+
+```mermaid
+flowchart TD
+    R["MAX (root)<br/>value = 3"] --> A["MIN<br/>min(3,5,10) = 3"]
+    R --> B["MIN<br/>min(2,8,7) = 2"]
+    R --> C["MIN<br/>min(1,9,4) = 1"]
+    A --> A1((3))
+    A --> A2((5))
+    A --> A3((10))
+    B --> B1((2))
+    B --> B2((8))
+    B --> B3((7))
+    C --> C1((1))
+    C --> C2((9))
+    C --> C3((4))
+```
+
+Here MAX picks the left branch, because in the worst case it guarantees **3**, which is better than 2 or 1.
+
+| Property | Minimax |
+|---|---|
+| Complete | Yes (for a finite tree) |
+| Optimal | Yes (against an optimal opponent) |
+| Time complexity | **O(bᵐ)** |
+| Space complexity | O(bm) |
+
+**The problem:** O(bᵐ) is impossible for real games. Chess has b ≈ 35 and a game lasts m ≈ 100 plies, giving roughly 35¹⁰⁰ nodes — more than the number of atoms in the universe. Minimax alone can only look a few moves ahead.
+
+**Previous Year Question List from this Topic:**
+
+- [How $\alpha$-$\beta$ pruning is better than minimax search in game planning?](../written-answers/ai-and-ml.md?plain=1#L1222)
+
+
+---
+
+### Alpha-Beta Pruning
+
+**Alpha-Beta Pruning** is an optimisation of Minimax that **skips (prunes) branches that cannot possibly change the final decision** — without changing the answer at all.
+
+#### The two values
+
+| Symbol | Belongs to | Meaning | Starts at |
+|---|---|---|---|
+| **α (alpha)** | MAX | The **best (highest)** value MAX can already guarantee so far | −∞ |
+| **β (beta)** | MIN | The **best (lowest)** value MIN can already guarantee so far | +∞ |
+
+> **The pruning rule: stop exploring a node as soon as α ≥ β.**
+
+#### Why it is correct — the intuition
+
+Suppose MAX has already found a move guaranteeing a score of **3**. It now starts examining a second move and discovers that the opponent can force a **2** there. There is no point checking the rest of that branch: whatever else is hidden in it, the opponent will never let MAX get more than 2, and MAX already has 3 in hand. So the entire remaining sub-tree is **cut off**.
+
+```mermaid
+flowchart TD
+    R["MAX  α = 3"] --> A["MIN → 3<br/>(fully explored)"]
+    R --> B["MIN  β = 2<br/>α = 3 ≥ β = 2  ✂ PRUNE"]
+    A --> A1((3))
+    A --> A2((5))
+    A --> A3((10))
+    B --> B1((2))
+    B --> B2["✂ never evaluated"]
+    B --> B3["✂ never evaluated"]
+```
+
+#### Why Alpha-Beta is better than plain Minimax — the exam answer
+
+| Point | **Minimax** | **Minimax + Alpha-Beta Pruning** |
+|---|---|---|
+| **Nodes examined** | **Every** node of the tree | Only the nodes that can affect the result |
+| **Time complexity** | O(bᵐ) | **O(b^(m/2))** in the best case — effectively **√** of the work |
+| **Search depth in the same time** | d | **Roughly 2d** — it can look about **twice as deep** |
+| **Final move chosen** | Optimal | **Exactly the same optimal move** — nothing is lost |
+| **Memory** | O(bm) | O(bm) — same |
+| **Effective branching factor** | b | **√b** (chess: 35 → about 6) |
+
+**The three key advantages to state:**
+1. **Same answer, far less work.** Pruning is *safe* — it removes only branches that provably cannot influence the root value.
+2. **Twice the depth for the same time.** Because the effective branching factor drops from *b* to √*b*, an engine that could see 6 moves ahead can now see about 12 — and depth is what makes a chess program strong.
+3. **Practical feasibility.** Alpha-Beta is what turned game-tree search from a theoretical idea into working engines such as **Deep Blue**.
+
+**Important detail — move ordering.** The best case O(b^(m/2)) is only reached if the **best moves are examined first**. With a random order the gain is much smaller (about O(b^(3m/4))). Real engines therefore use heuristics — killer moves, transposition tables, iterative deepening — to try promising moves first.
+
+**Previous Year Question List from this Topic:**
+
+- [How $\alpha$-$\beta$ pruning is better than minimax search in game planning?](../written-answers/ai-and-ml.md?plain=1#L1222)
