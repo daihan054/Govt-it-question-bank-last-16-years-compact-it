@@ -951,7 +951,7 @@
    D. 476.19cm
 
    answer: A — 476190m  
-   explanation: λ = c/f = 3×10⁸ ÷ 630 = 476,190 metres.
+   explanation: λ = c/f = 3×10⁸ ÷ 630 = 476,190 metres, which matches option A for the frequency AS PRINTED. Note the unit in the question: Dhaka Betar actually broadcasts on medium wave at 630 kHz, not 630 Hz; with 630 kHz the answer would be 3×10⁸ ÷ 630×10³ = 476.19 m (option B). Option B exists precisely for that reading, so read the stated unit carefully.
 
 7. **What is the output power in watts of the following three-stage system?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*  
    a) 0.431\text{ Watt}  

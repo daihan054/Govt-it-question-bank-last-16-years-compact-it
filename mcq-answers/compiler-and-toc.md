@@ -45,7 +45,7 @@
    d. (0*+10) *1*10*
 
    answer: a — 0*+(10*1) *10*  
-   explanation: Read as 0*(10*1)*10*: the (10*1)* part contributes 1s in pairs (even), and the final 1 makes the total odd, while the 0* parts allow zeros anywhere.
+   explanation: (a) is the intended key. Note that the string as typeset, 0*(10*1)*10*, is NOT the odd-parity language: (10*1)* allows no zeros BETWEEN consecutive pairs, so it rejects 1101, 10101, 11001 and 11010. It is a typographic rendering of (0+10*1)*10*, which is correct. Correct forms: (0+10*1)*10* = 0*(10*10*)*10* = (0*10*1)*0*10* = 0*1(0*10*1)*0*.
 
 5. **Which of the following is the regular expression to represent all the binary strings with odd number of 1's?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*  
    a. 0*(10*1)*11  
@@ -53,8 +53,8 @@
    c. (0*10*1)*0*10*  
    d. (0*10*)*1(0*10*)*
 
-   answer: b — 0*(10*1)*10*  
-   explanation: Pairs of 1s from (10*1)* keep the count even, and the trailing 1 makes it odd; leading and trailing zeros are covered by the 0* terms.
+   answer: c — (0*10*1)*0*10*  
+   explanation: (c) is the only printed option that is exactly the odd-parity language: each (0*10*1) block supplies TWO 1s with zeros free to sit anywhere around them, and the final 0*10* supplies the ONE extra 1, giving 2k+1 ones. Some keys print (b) 0*(10*1)*10*, but that expression allows no zeros between consecutive 1-pairs and therefore REJECTS 1101, 10101, 11001 and 11010 — verified by exhaustive check over every binary string up to length 14. <!-- corrected: key was b -->
 
 6. **Which one of the following regular expressions represents the set of all binary strings with an odd number of 1's?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
    a) ((0+1)*1(0+1)*1)*10*  

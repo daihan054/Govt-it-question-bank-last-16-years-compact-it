@@ -618,7 +618,7 @@
    (d) 4
 
    answer: N = 6 — none of the printed options  
-   explanation: Deadlock is impossible while R ≥ N(max-1)+1, so 6 ≥ N+1 means N up to 5 is always safe; only 6 processes each holding one resource and needing one more can deadlock. <!-- verify -->
+   explanation: Deadlock is impossible while R ≥ N(max-1)+1, so 6 ≥ N+1 means N up to 5 is always safe; only 6 processes each holding one resource and needing one more can deadlock. Every printed option (1, 2, 3, 4) is ≤ 5, so none of them can deadlock — verified.
 
 2. **Which one of the following is the deadlock avoidance algorithm?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) banker’s algorithm  

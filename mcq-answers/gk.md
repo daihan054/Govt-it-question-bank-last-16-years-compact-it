@@ -1616,7 +1616,7 @@ __Q = next output__
    (d) 4
 
    answer: N = 6 — none of the printed options  
-   explanation: Deadlock is impossible while 6 ≥ N(2-1)+1, so N up to 5 is always safe; only 6 processes each holding one resource and needing one more can deadlock. <!-- verify -->
+   explanation: Deadlock is impossible while 6 ≥ N(2-1)+1, so N up to 5 is always safe; only 6 processes each holding one resource and needing one more can deadlock. Every printed option is ≤ 5, so none of them can deadlock — verified.
 
 168. **A critical section is a program segment—[ ক্রিটিক্যাল সেকশন (Critical section) হলো একটি প্রোগ্রাম সেগমেন্ট— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) which should run in a certain specified amount of time  
