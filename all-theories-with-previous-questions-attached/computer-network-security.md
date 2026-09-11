@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 32 theories
+**Table of Contents** — 15 subtopics · 36 theories
 
 1. **[Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks)**
    - [Social Engineering — Techniques and Prevention](#social-engineering--techniques-and-prevention)
@@ -17,6 +17,7 @@
    - [The RSA Algorithm](#the-rsa-algorithm)
    - [Hashing, and How It Differs from Encryption](#hashing-and-how-it-differs-from-encryption)
    - [Identifying Algorithm Types, DES and Key Management](#identifying-algorithm-types-des-and-key-management)
+   - [Steganography and the Classical Ciphers](#steganography-and-the-classical-ciphers)
 
 3. **[Firewalls & Network Defense](#firewalls--network-defense)**
    - [Firewall — Concept, Types and Placement](#firewall--concept-types-and-placement)
@@ -25,6 +26,7 @@
 
 4. **[Malware & Security Threats](#malware--security-threats)**
    - [Malware — Types and Characteristics](#malware--types-and-characteristics)
+   - [Virus Types and the Malware Taxonomy](#virus-types-and-the-malware-taxonomy)
 
 5. **[Web Security Vulnerabilities](#web-security-vulnerabilities)**
    - [SQL Injection](#sql-injection)
@@ -40,9 +42,11 @@
 
 8. **[Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https)**
    - [SSL, TLS and HTTPS](#ssl-tls-and-https)
+   - [Secure Remote Access, File Transfer and Port Authentication](#secure-remote-access-file-transfer-and-port-authentication)
 
 9. **[Cyber Crime & Security](#cyber-crime--security)**
    - [Cyber Security, Cyber Crime and Cyber Space](#cyber-security-cyber-crime-and-cyber-space)
+   - [Cyber Ethics, Cyber Law and Digital Wellbeing](#cyber-ethics-cyber-law-and-digital-wellbeing)
 
 10. **[VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn)**
    - [VPN — Concept, Types and Working](#vpn--concept-types-and-working)
@@ -222,6 +226,11 @@ flowchart TD
 - [If you downloaded the email, you will be able to face the problem. Which attack do you face?](../written-answers/computer-network-security.md?plain=1#L5715)
 - [e) What is email? What precautions can be taken to prevent unnecessary and unwanted e-mails?](../written-answers/computer-network-security.md?plain=1#L5742)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following describes an email that is sent to users with web links that direct them to malicious websites?](../mcq-answers/computer-network-security.md?plain=1#L183)
+
+
 
 ---
 
@@ -328,6 +337,12 @@ Service downtime and lost revenue · reputational damage and customer loss · st
 - [What do you understand by DOS attack and Man-in-the-middle attack? Please explain how it can be occurred?](../written-answers/computer-network-security.md?plain=1#L507)
 - [What is DDoS and SQL Injection attack?](../written-answers/computer-network-security.md?plain=1#L678)
 - [Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.](../written-answers/computer-network-security.md?plain=1#L942)
+
+**Previous Year MCQ List from this Topic:**
+
+- [________ is an assault on a service from a single source that floods it with so many requests that is becomes overwhelmed and is either stopped completely or op…](../mcq-answers/computer-network-security.md?plain=1#L120)
+- [Which of the following sends data packets over unprotected system?](../mcq-answers/computer-network-security.md?plain=1#L165)
+
 
 
 ---
@@ -449,6 +464,12 @@ flowchart LR
 - [Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.](../written-answers/computer-network-security.md?plain=1#L942)
 - [What is session hijacking and how to encrypt username and password in PHP?](../written-answers/computer-network-security.md?plain=1#L3619)
 
+**Previous Year MCQ List from this Topic:**
+
+- [An attacker sits between the sender and receiver and captures the information and retransmits to the receiver after some time without altering the information.…](../mcq-answers/computer-network-security.md?plain=1#L21)
+- [Which of the following mitigation techniques is MOST effective against a Man in the middle attack?](../mcq-answers/computer-network-security.md?plain=1#L192)
+
+
 
 ---
 
@@ -540,6 +561,11 @@ flowchart TD
 - [What do you mean by a DNS poisoning attack, and how does it work?](../written-answers/computer-network-security.md?plain=1#L534)
 - [Explain ARP Spoofing attack with diagram. Why ARP spoofing attacker used to launch Man-in-the-Middle attack.](../written-answers/computer-network-security.md?plain=1#L745)
 - [Difference between spoofing and sniffing](../written-answers/computer-network-security.md?plain=1#L781)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which is not a type of DNS attack?](../mcq-answers/computer-network-security.md?plain=1#L48)
+
 
 
 ---
@@ -732,6 +758,13 @@ A **spoofed packet** is a network packet whose **source address field has been d
 - [What is a spoofed packet, and how can it be used in network attacks?](../written-answers/computer-network-security.md?plain=1#L4246)
 - [Hacking a system without cracking the system, only for finding bugs and vulgarities is called?](../written-answers/computer-network-security.md?plain=1#L4752)
 
+**Previous Year MCQ List from this Topic:**
+
+- [An attacker sits between the sender and receiver and captures the information and retransmits to the receiver after some time without altering the information.…](../mcq-answers/computer-network-security.md?plain=1#L21)
+- [Which of the following is an attack that threatens the integrity of information?](../mcq-answers/computer-network-security.md?plain=1#L30)
+- [What are hackers who find bugs and vulnerabilities called?](../mcq-answers/computer-network-security.md?plain=1#L528)
+
+
 
 ---
 
@@ -785,6 +818,19 @@ A **spoofed packet** is a network packet whose **source address field has been d
 - [Which security attacks (given) occur on client side or server side?](../written-answers/computer-network-security.md?plain=1#L802)
 - [Write down ten name of different attack through internet.](../written-answers/computer-network-security.md?plain=1#L836)
 - [Write down the name of different attack through internet.](../written-answers/computer-network-security.md?plain=1#L920)
+
+**Previous Year MCQ List from this Topic:**
+
+- [An attacker sits between the sender and receiver and captures the information and retransmits to the receiver after some time without altering the information.…](../mcq-answers/computer-network-security.md?plain=1#L21)
+- [Which of the following is an attack that threatens the integrity of information?](../mcq-answers/computer-network-security.md?plain=1#L30)
+- [Which is not a type of DNS attack?](../mcq-answers/computer-network-security.md?plain=1#L48)
+- [________ is an assault on a service from a single source that floods it with so many requests that is becomes overwhelmed and is either stopped completely or op…](../mcq-answers/computer-network-security.md?plain=1#L120)
+- [________ a means of regaining access to a compromised system by installing software or configuring existing software to enable remote access under attacker-defi…](../mcq-answers/computer-network-security.md?plain=1#L129)
+- [Which of the following is not a web server attack type?](../mcq-answers/computer-network-security.md?plain=1#L138)
+- [Which of the following describes an email that is sent to users with web links that direct them to malicious websites?](../mcq-answers/computer-network-security.md?plain=1#L183)
+- [Which of the following mitigation techniques is MOST effective against a Man in the middle attack?](../mcq-answers/computer-network-security.md?plain=1#L192)
+- [The Bangladesh Bank robbery, also known as the Bangladesh bank cyber heist, was a theft that took place in February 2016. The governor of the central bank engag…](../mcq-answers/computer-network-security.md?plain=1#L57)
+
 
 ## Cryptography
 
@@ -899,6 +945,15 @@ The **Caesar cipher** is a **shift cipher**: each letter is replaced by the lett
 - [The Caesar Cipher is a type of shift cipher. Shift Ciphers work by using the modulo operator to encrypt and decrypt messages. The Shift Cipher has a key K, whic…](../written-answers/computer-network-security.md?plain=1#L1671)
 - [(গ) Plain Text and Cipher Text-এর মধ্যে মূল পার্থক্য কী? লিখুন।](../written-answers/computer-network-security.md?plain=1#L1750)
 - [(ক) Data encryption বলতে কী বোঝায়? বহুল ব্যবহৃত কয়েকটি encryption পদ্ধতির নাম লিখুন।](../written-answers/computer-network-security.md?plain=1#L1770)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is an encryption function?](../mcq-answers/computer-network-security.md?plain=1#L239)
+- [Which one of the following is false with respect to cryptography?](../mcq-answers/computer-network-security.md?plain=1#L275)
+- [Which of the followings is not a data encryption algorithm?](../mcq-answers/computer-network-security.md?plain=1#L338)
+- [The transformation of a message into an encoded from is known as ________](../mcq-answers/computer-network-security.md?plain=1#L347)
+- [In cryptography, RSA is-](../mcq-answers/computer-network-security.md?plain=1#L230)
+
 
 
 ---
@@ -1020,6 +1075,14 @@ flowchart TD
 - [Public key cryptography কীভাবে কাজ করে?](../written-answers/computer-network-security.md?plain=1#L1720)
 - [What is public key encryption? Explain digital signature with example.](../written-answers/computer-network-security.md?plain=1#L1800)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Digital signature uses which algorithm for encryption?](../mcq-answers/computer-network-security.md?plain=1#L221)
+- [In cryptography, RSA is-](../mcq-answers/computer-network-security.md?plain=1#L230)
+- [In an asymmetric key encryption process, the key used to encrypt the data is known as a-](../mcq-answers/computer-network-security.md?plain=1#L248)
+- [In the ____ protocol, the symmetric key is K= G^{xy} \pmod N, where G and N are public numbers.](../mcq-answers/computer-network-security.md?plain=1#L266)
+
+
 
 ---
 
@@ -1104,6 +1167,12 @@ The public key reveals **n** and **e**. To find the private key **d**, an attack
 
 - [Describe RSA Algorithm and how it works?](../written-answers/computer-network-security.md?plain=1#L1451)
 - [Identify the type of algorithm? (i) MD5 (ii) AES (iii) RSA (iv) Diffie-Hellman](../written-answers/computer-network-security.md?plain=1#L1435)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Digital Signature uses which algorithm?](../mcq-answers/computer-network-security.md?plain=1#L212)
+- [In cryptography, RSA is-](../mcq-answers/computer-network-security.md?plain=1#L230)
+
 
 
 ---
@@ -1234,6 +1303,11 @@ Both belong to the **SHA-2 family** designed by the NSA and published by **NIST*
 - [6.2 Explain the operational difference between Hashing and Encryption.](../written-answers/computer-network-security.md?plain=1#L1171)
 - [What is SHA-256 and SHA-512 in network security, what is avalanche effect, is it desirable or undesirable.](../written-answers/computer-network-security.md?plain=1#L1537)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the followings is not a data encryption algorithm?](../mcq-answers/computer-network-security.md?plain=1#L338)
+
+
 
 ---
 
@@ -1331,6 +1405,116 @@ flowchart TD
 - [Identify the type of algorithm? (i) MD5 (ii) AES (iii) RSA (iv) Diffie-Hellman](../written-answers/computer-network-security.md?plain=1#L1435)
 - [Write two symmetric key algorithm name.](../written-answers/computer-network-security.md?plain=1#L1633)
 - [What is difference between SHA and RSA algorithm?](../written-answers/computer-network-security.md?plain=1#L4195)
+
+**Previous Year MCQ List from this Topic:**
+
+- [In the ____ protocol, the symmetric key is K= G^{xy} \pmod N, where G and N are public numbers.](../mcq-answers/computer-network-security.md?plain=1#L266)
+- [Which of the followings is not a data encryption algorithm?](../mcq-answers/computer-network-security.md?plain=1#L338)
+- [In cryptography, RSA is-](../mcq-answers/computer-network-security.md?plain=1#L230)
+
+
+---
+
+### Steganography and the Classical Ciphers
+
+#### ⭐ Steganography
+
+> ### **STEGANOGRAPHY is the technique of HIDING SECRET DATA WITHIN AN ORDINARY, NON-SECRET FILE OR MESSAGE**, so that the very **EXISTENCE of the hidden message is concealed.**
+
+```mermaid
+flowchart LR
+    A["SECRET message"] --> C["EMBEDDING<br/>algorithm + key"]
+    B["COVER file<br/>(image, audio, video, text)"] --> C
+    C --> D["STEGO file —<br/>looks completely ORDINARY<br/>to any observer"]
+```
+
+> ### **The crucial distinction — Steganography vs Cryptography:**
+>
+> | | ⭐ **STEGANOGRAPHY** | ⭐ **CRYPTOGRAPHY** |
+> |---|---|---|
+> | **Hides** | ⭐ **The EXISTENCE of the message** | ⭐ **The MEANING of the message** |
+> | **An observer sees** | **An ordinary photo — and suspects nothing** | **Obvious gibberish — and knows a secret exists** |
+> | **Goal** | **Secrecy of communication itself** | **Confidentiality of content** |
+> | **If detected** | ⚠️ **The message is fully readable** | ✅ Still unreadable without the key |
+> | **Greek roots** | *steganos* = "covered" + *graphein* = "writing" | *kryptos* = "hidden" |
+>
+> ⭐ **They are COMPLEMENTARY, not alternatives.** Best practice is to **ENCRYPT first, then HIDE** — so that even if the hidden data is discovered, it is still ciphertext.
+
+**How it is done (the commonest method):** ⭐ **LSB — Least Significant Bit substitution.** In a 24-bit image each pixel has three 8-bit colour values; **changing the last bit of each alters the colour by 1/256**, which is **invisible to the human eye**, yet stores 3 bits per pixel. A 1-megapixel image can therefore hide about **375 KB** with no visible change.
+
+**Cover media:** images (BMP, PNG), audio (MP3, WAV), video, text (whitespace, word choice), network packets (covert channels), even file-system slack space.
+**Uses:** ✅ digital **watermarking** and copyright protection, confidential communication, tamper detection — but also ⚠️ **malware command-and-control, data exfiltration and terrorist communication**, which is why **steganalysis** (detecting hidden data by statistical anomalies) is a security discipline in its own right.
+
+#### The classical ciphers
+
+| Cipher | Type | How it works |
+|---|---|---|
+| ⭐ **Caesar** | **Monoalphabetic SUBSTITUTION** | **Shift every letter by a fixed amount k.** Key space is only **25** — trivially broken |
+| **Monoalphabetic substitution** | Substitution | Each letter maps to one fixed other letter. 26! keys — but **broken instantly by FREQUENCY ANALYSIS** |
+| ⭐ **VIGENÈRE** | ⭐ **POLYALPHABETIC substitution** | ⭐ **A repeating KEYWORD gives a DIFFERENT shift for each position** — this defeats simple frequency analysis |
+| **Playfair** | Digraph substitution | Encrypts letter **pairs** using a 5×5 key square |
+| **Hill** | Polygraphic | Matrix multiplication modulo 26 |
+| **Rail Fence / Columnar** | ⭐ **TRANSPOSITION** | **Letters are REARRANGED, not replaced** |
+| **One-Time Pad** | Substitution | ⭐ **The only PROVABLY UNBREAKABLE cipher** — key as long as the message, truly random, used once |
+
+> **The two fundamental operations of all classical cryptography: SUBSTITUTION (replace symbols) and TRANSPOSITION (reorder symbols).** Modern block ciphers such as **DES and AES apply both, repeatedly, in "rounds"** — Shannon's principles of **confusion** (substitution) and **diffusion** (transposition).
+
+#### ⭐ The Vigenère cipher — worked example
+
+> ### **Encryption rule: `Cᵢ = (Pᵢ + Kᵢ) mod 26`** — the key is **repeated** to the length of the plaintext.
+
+> **Encrypt the plaintext `mypassword` with the key `stream`.**
+
+**Step 1 — repeat the key under the plaintext**
+```
+   Plaintext :  m  y  p  a  s  s  w  o  r  d
+   Key       :  s  t  r  e  a  m  s  t  r  e      ← "stream" repeated
+```
+
+**Step 2 — convert to numbers (a = 0 … z = 25) and add mod 26**
+```
+   P :  m=12  y=24  p=15  a=0   s=18  s=18  w=22  o=14  r=17  d=3
+   K :  s=18  t=19  r=17  e=4   a=0   m=12  s=18  t=19  r=17  e=4
+        ────  ────  ────  ───   ────  ────  ────  ────  ────  ───
+   sum:  30    43    32    4     18    30    40    33    34    7
+  mod26:  4    17     6    4     18     4    14     7     8    7
+   C :   e     r     g     e     s     e     o     h     i     h
+```
+
+> ### ✅ **Ciphertext = `e r g e s e o h i h` — "ergeseohih"**
+>
+> **Decryption reverses it: `Pᵢ = (Cᵢ − Kᵢ + 26) mod 26`.** *(The `+26` prevents a negative result before the modulo.)*
+
+> ### **Why Vigenère was called *le chiffre indéchiffrable* for three centuries:** the **same plaintext letter encrypts to DIFFERENT ciphertext letters** depending on its position — note that the two `s` characters above became **`s` and `e`**. That **flattens the letter-frequency distribution**, defeating the frequency analysis that breaks every monoalphabetic cipher.
+>
+> ⚠️ **How it was eventually broken (Kasiski, 1863):** because the key **repeats**, repeated plaintext fragments aligned with the same key position produce **repeated ciphertext patterns**. The **distance between those repetitions is a multiple of the KEY LENGTH** — once the key length is known, the ciphertext splits into that many **Caesar ciphers**, each broken by frequency analysis. **The lesson is permanent: a repeating key is a fatal weakness, which is why the one-time pad requires a key as long as the message.**
+
+#### The cryptographic vocabulary
+
+| Term | Meaning |
+|---|---|
+| **Plaintext** | The original readable message, **M** or **P** |
+| **Ciphertext** | The encrypted form, **C** |
+| **Key** | The secret parameter, **K** |
+| ⭐ **Encryption function** | ⭐ **C = E(M, K)** — apply the algorithm E to the message with the key |
+| **Decryption function** | **M = D(C, K)** |
+| ⭐ **ENCODING** | ⭐ **The transformation of a message into an encoded FORM** — note that **encoding is NOT encryption**: it uses **no key** and provides **no secrecy** (Base64, ASCII, URL-encoding). Its purpose is **compatibility**, not confidentiality |
+| **Hashing** | A **one-way** fixed-length digest — **MD5, SHA-256**. ⚠️ **Not encryption: it cannot be reversed** |
+| **Cryptanalysis** | The study of breaking ciphers |
+| **Kerckhoffs's principle** | ⭐ **A cryptosystem must be secure even if EVERYTHING except the KEY is public knowledge** — security must never rest on hiding the algorithm |
+
+> ### **"Which is NOT a data encryption algorithm?"** → ### ✅ **MD5** — it is a **HASH function**, which is **one-way and produces no recoverable ciphertext**. *(DES, AES, RSA, Blowfish are genuine encryption algorithms.)*
+> ### **"The transformation of a message into an encoded form is known as…"** → ### ✅ **ENCODING.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [________ is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted a…](../mcq-answers/computer-network-security.md?plain=1#L66)
+- [Which one is an encryption function?](../mcq-answers/computer-network-security.md?plain=1#L239)
+- [In a Vigenere cipher, plaintext is *mypassword* and key is *stream*. What is the cipher text?](../mcq-answers/computer-network-security.md?plain=1#L320)
+- [Which of the followings is not a data encryption algorithm?](../mcq-answers/computer-network-security.md?plain=1#L338)
+- [The transformation of a message into an encoded from is known as ________](../mcq-answers/computer-network-security.md?plain=1#L347)
+
+
 
 ## Firewalls & Network Defense
 
@@ -1490,6 +1674,13 @@ An NGFW combines traditional stateful filtering with **deep packet inspection an
 - [What is firewall? explain its work. Draw a LAN network and a firewall where firewall will be situated.](../written-answers/computer-network-security.md?plain=1#L2400)
 - [What is Stateful and Stateless Firewall?](../written-answers/computer-network-security.md?plain=1#L2437)
 - [Write the difference between WPA firewall and Network Firewall.](../written-answers/computer-network-security.md?plain=1#L4313)
+
+**Previous Year MCQ List from this Topic:**
+
+- [In computers, why is Firewall used for?](../mcq-answers/computer-network-security.md?plain=1#L84)
+- [A proxy firewall filters at ________.](../mcq-answers/computer-network-security.md?plain=1#L147)
+- [To prevent we use firewall-](../mcq-answers/computer-network-security.md?plain=1#L156)
+
 
 
 ---
@@ -1715,6 +1906,11 @@ flowchart TD
 - [As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?](../written-answers/computer-network-security.md?plain=1#L1864)
 - [Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps w…](../written-answers/computer-network-security.md?plain=1#L250)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is the security equipment?](../mcq-answers/computer-network-security.md?plain=1#L174)
+
+
 
 ---
 
@@ -1905,6 +2101,115 @@ A **rootkit** is malware designed to obtain and **maintain privileged ("root") a
 - [c) What is a computer virus? Name of the two software that are used to prevent the virus.](../written-answers/computer-network-security.md?plain=1#L3001)
 - [Unsoliciated email is called?](../written-answers/computer-network-security.md?plain=1#L5693)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is a package of unauthorized programs and tools that has functions to create a back door in a server and hide the trace of entry into the…](../mcq-answers/computer-network-security.md?plain=1#L39)
+- [In computer systems, what is ‘Trojan Horse’?](../mcq-answers/computer-network-security.md?plain=1#L93)
+- [Viruses that take up residence in the computer’s memory and making hard to detect is called:](../mcq-answers/computer-network-security.md?plain=1#L102)
+- [________ a means of regaining access to a compromised system by installing software or configuring existing software to enable remote access under attacker-defi…](../mcq-answers/computer-network-security.md?plain=1#L129)
+- [Software downloaded from internet and installed that is malicious is called-](../mcq-answers/computer-network-security.md?plain=1#L438)
+- [Which of the following is not a malware?](../mcq-answers/computer-network-security.md?plain=1#L472)
+- [Trojan can be introduced through-](../mcq-answers/computer-network-security.md?plain=1#L481)
+- [Computer virus is a ________](../mcq-answers/computer-network-security.md?plain=1#L490)
+
+
+---
+
+### Virus Types and the Malware Taxonomy
+
+> ### **MALWARE ("MALicious softWARE") is any SOFTWARE DELIBERATELY DESIGNED TO CAUSE DAMAGE or gain unauthorised access** to a computer, server or network.
+
+#### The malware family
+
+| Type | Defining characteristic | Needs a host? | Self-replicating? |
+|---|---|---|---|
+| ⭐ **VIRUS** | ⭐ **A PROGRAM that ATTACHES ITSELF to another file and spreads when that file is RUN BY A USER** | ✅ **Yes** | ✅ Yes |
+| ⭐ **WORM** | Spreads **BY ITSELF ACROSS A NETWORK** — no user action needed | ❌ No | ✅ **Yes** |
+| ⭐ **TROJAN HORSE** | ⭐ **Disguises itself as LEGITIMATE, USEFUL software** to trick the user into installing it | ❌ No | ❌ **No** |
+| ⭐ **ROOTKIT** | ⭐ **A PACKAGE of unauthorised programs and tools that CONCEALS its own presence and maintains PRIVILEGED (root) access** | — | No |
+| ⭐ **BACKDOOR** | ⭐ **A means of REGAINING ACCESS to a compromised system**, by installing software or altering configuration | — | No |
+| **Ransomware** | **Encrypts the victim's files** and demands payment | No | Sometimes |
+| **Spyware / Keylogger** | Secretly **records activity and keystrokes** | No | No |
+| **Adware** | Forces unwanted advertisements | No | No |
+| **Botnet / Zombie** | Turns the machine into a remotely controlled node | No | Via worms |
+| **Logic bomb** | Dormant code that **triggers on a condition** (a date, a deletion) | Yes | No |
+
+> ### **"In computer systems, what is a Trojan Horse?"** → ### ✅ **MALWARE.**
+> ### **"A package of unauthorised programs and tools with functions to conceal itself"** → ### ✅ **ROOTKIT.**
+> ### **"A means of regaining access to a compromised system"** → ### ✅ **BACKDOOR.**
+> ### **"Software downloaded from the internet and installed that is malicious"** → ### ✅ **MALWARE.**
+> ### **"A computer virus is a ______"** → ### ✅ **PROGRAM.**
+
+> ### ⚠️ **"Which of the following is NOT a malware?"** → ### ✅ **A BUG.**
+>
+> **The distinction is important and frequently tested:**
+> | | **BUG** | **MALWARE** |
+> |---|---|---|
+> | **Origin** | ⭐ **An UNINTENTIONAL programming mistake** | ⭐ **DELIBERATELY written to cause harm** |
+> | **Intent** | None — an accident | **Malicious** |
+> | **Fixed by** | A patch from the developer | Removal by antivirus |
+> | **Relationship** | ⚠️ **A bug is what malware EXPLOITS** — an unpatched bug is a *vulnerability*, and "hidden bugs" are therefore a **software VULNERABILITY**, not malware itself | |
+
+#### ⭐ The types of computer VIRUS
+
+| Virus type | How it behaves |
+|---|---|
+| ⭐ **STEALTH virus** | ⭐ **Takes up residence in the computer's MEMORY and actively HIDES ITSELF**, intercepting the system calls antivirus software uses so that infected files appear clean. **This is what makes it hard to detect** |
+| **Resident virus** | Installs itself in memory and infects files as they are opened |
+| **Non-resident (direct action)** | Runs, infects, and exits — leaves nothing in memory |
+| ⭐ **POLYMORPHIC virus** | ⭐ **CHANGES its own CODE/signature on every infection**, defeating signature-based detection |
+| **Metamorphic virus** | Rewrites its entire body — even harder to detect |
+| ⭐ **BOOT SECTOR virus** | Infects the **Master Boot Record**, so it loads **before the operating system** |
+| ⭐ **MACRO virus** | Written in the **macro language of an application** (Word, Excel) and carried inside **documents** |
+| **File infector** | Attaches to executables (`.exe`, `.com`) |
+| **Multipartite** | Infects **both** boot sector and files |
+| **Overwrite virus** | Destroys the host file's contents |
+
+> ### **"Viruses that take up residence in the computer's memory, making them hard to detect, are called…"** → ### ✅ **STEALTH VIRUS.**
+
+#### How malware spreads
+
+> ### **"A Trojan can be introduced through…"** → ### ✅ **EMAILS** (attachments and links) — historically the single commonest vector.
+
+**The full list of vectors:** email attachments and phishing links · **pirated or cracked software** · infected USB drives · drive-by downloads from compromised websites · malicious advertisements (malvertising) · **unpatched software vulnerabilities** · fake software updates · peer-to-peer file sharing · social engineering.
+
+#### Antivirus software
+
+> ### **"এন্টি ভাইরাস কি?"** → ### ✅ **সফটওয়্যার (SOFTWARE)** — a program that **detects, prevents and removes** malware.
+
+**How antivirus detects malware:**
+
+| Method | How it works | Limitation |
+|---|---|---|
+| ⭐ **Signature-based** | Compares files against a **database of known malware signatures** | ⚠️ **Useless against new (zero-day) and POLYMORPHIC malware** — hence the need for daily updates |
+| **Heuristic analysis** | Looks for **suspicious code patterns and structures** | False positives |
+| ⭐ **Behavioural monitoring** | Watches what a program **DOES** at run time (mass file encryption, registry changes) | Detects *after* activity begins |
+| **Sandboxing** | Runs the suspect file in an **isolated environment** first | Resource-intensive |
+| **Cloud / ML reputation** | Checks file reputation and ML models centrally | Needs connectivity |
+
+**Genuine antivirus products:** **Norton, McAfee, Kaspersky, Avast, AVG, Bitdefender, ESET NOD32, Trend Micro, Windows Defender, Quick Heal, Panda, Sophos.**
+
+> ### **"Which of the following is NOT antivirus software?"** → ### ✅ **"Win-pro" and "Security Point"** — these are **not real antivirus products**. *(The technique for such questions: the genuine names are a small, well-known set — anything outside **Norton, McAfee, Kaspersky, Avast, AVG, Bitdefender, ESET, Defender, Quick Heal** is almost certainly the invented option.)*
+
+**Best practice beyond antivirus:** keep the **OS and all software patched** · do not run as administrator · **regular offline backups** (the only real defence against ransomware) · disable macros from the internet · use a firewall · verify senders before opening attachments · download software only from official sources.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is a package of unauthorized programs and tools that has functions to create a back door in a server and hide the trace of entry into the…](../mcq-answers/computer-network-security.md?plain=1#L39)
+- [Which one is the part of software vulnerability?](../mcq-answers/computer-network-security.md?plain=1#L75)
+- [In computer systems, what is ‘Trojan Horse’?](../mcq-answers/computer-network-security.md?plain=1#L93)
+- [Viruses that take up residence in the computer’s memory and making hard to detect is called:](../mcq-answers/computer-network-security.md?plain=1#L102)
+- [________ a means of regaining access to a compromised system by installing software or configuring existing software to enable remote access under attacker-defi…](../mcq-answers/computer-network-security.md?plain=1#L129)
+- [Software downloaded from internet and installed that is malicious is called-](../mcq-answers/computer-network-security.md?plain=1#L438)
+- [এন্টি ভাইরাস কি?](../mcq-answers/computer-network-security.md?plain=1#L444)
+- [নিচের কোনটি Antivirus নয়?](../mcq-answers/computer-network-security.md?plain=1#L454)
+- [Which of the following is not antivirus software?](../mcq-answers/computer-network-security.md?plain=1#L463)
+- [Which of the following is not a malware?](../mcq-answers/computer-network-security.md?plain=1#L472)
+- [Trojan can be introduced through-](../mcq-answers/computer-network-security.md?plain=1#L481)
+- [Computer virus is a ________](../mcq-answers/computer-network-security.md?plain=1#L490)
+
+
+
 
 ---
 
@@ -2017,6 +2322,15 @@ ResultSet rs = ps.executeQuery();
 - [What is SQL Injection? How can we protect web Application from SQL Injection attack?](../written-answers/computer-network-security.md?plain=1#L3526)
 - [What is SQL injection? How many ways to prevent it?](../written-answers/computer-network-security.md?plain=1#L3565)
 - [What is DDoS and SQL Injection attack?](../written-answers/computer-network-security.md?plain=1#L678)
+
+**Previous Year MCQ List from this Topic:**
+
+- [How can we prevent SQL Injection Attack?](../mcq-answers/computer-network-security.md?plain=1#L111)
+- [How can we prevent SQL Injection Attack?](../mcq-answers/computer-network-security.md?plain=1#L601)
+- [A database can be hacked by-](../mcq-answers/computer-network-security.md?plain=1#L610)
+- [Which tool could be used for detecting vulnerability through SQL injection?](../mcq-answers/computer-network-security.md?plain=1#L619)
+- [Which tool could be used for deleting vulnerability through SQL Injection?](../mcq-answers/computer-network-security.md?plain=1#L628)
+
 
 
 ---
@@ -2234,6 +2548,12 @@ if (password_verify($inputPassword, $storedHash)) {
 - [What are the important steps to secure a web server?](../written-answers/computer-network-security.md?plain=1#L3667)
 - [As a programmer when you release a software What security should you check before release your software.](../written-answers/computer-network-security.md?plain=1#L4292)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is not a web server attack type?](../mcq-answers/computer-network-security.md?plain=1#L138)
+- [A database can be hacked by-](../mcq-answers/computer-network-security.md?plain=1#L610)
+
+
 ## Authentication & Access Control
 
 ### Authentication, Authorization and Multi-Factor Authentication
@@ -2369,6 +2689,13 @@ It is the **standard protocol for querying and modifying a directory service** �
 - [(a) What is authentication? With example write a short note on “Two factor authentication”. (5 marks)](../written-answers/computer-network-security.md?plain=1#L4266)
 - [What is authentication and authorization? What is the CIA triad in cyber security? How does it work?](../written-answers/computer-network-security.md?plain=1#L5024)
 
+**Previous Year MCQ List from this Topic:**
+
+- [“Concurrent two-factor identity verification” is a biometric identification system that would requires ________.](../mcq-answers/computer-network-security.md?plain=1#L293)
+- [Special set of characters that computer associates with specific user identification is classified as ____.](../mcq-answers/computer-network-security.md?plain=1#L581)
+- [Which of the following standards provides port authentication?](../mcq-answers/computer-network-security.md?plain=1#L400)
+
+
 
 ---
 
@@ -2500,6 +2827,15 @@ flowchart TD
 - [What is public key encryption? Explain digital signature with example.](../written-answers/computer-network-security.md?plain=1#L1800)
 - [b) What is a digital signature? And why is that important?](../written-answers/computer-network-security.md?plain=1#L1840)
 - [CTC কী? কী কাজে ব্যবহার হয়?](../written-answers/computer-network-security.md?plain=1#L5459)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Digital Signature uses which algorithm?](../mcq-answers/computer-network-security.md?plain=1#L212)
+- [Digital signature uses which algorithm for encryption?](../mcq-answers/computer-network-security.md?plain=1#L221)
+- [Laili digitally signs a message and sends it to Mojnu. Verification of the signature by Mojnu requires-](../mcq-answers/computer-network-security.md?plain=1#L284)
+- [Which of the following is the role of Certification Authority (CA) in electronic commerce using public key encryption?](../mcq-answers/computer-network-security.md?plain=1#L302)
+- [Digital signature is a cryptographic method that ensures-](../mcq-answers/computer-network-security.md?plain=1#L329)
+
 
 
 ---
@@ -2641,6 +2977,16 @@ flowchart LR
 - [Information System কী? Information Syetem -এর সুরক্ষায় প্রয়োজনীয় পদক্ষেপ সংক্ষেপে বর্ণনা করুন?](../written-answers/computer-network-security.md?plain=1#L5170)
 - [What is the difference among threat, vulnerability and risk? Explain SSL and TLS.](../written-answers/computer-network-security.md?plain=1#L4633)
 - [What is Vulnerability?](../written-answers/computer-network-security.md?plain=1#L4882)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is an attack that threatens the integrity of information?](../mcq-answers/computer-network-security.md?plain=1#L30)
+- [Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?](../mcq-answers/computer-network-security.md?plain=1#L554)
+- [Cyber security Triad means-](../mcq-answers/computer-network-security.md?plain=1#L563)
+- [ACL (Access Control List) এর দুটি প্রধান ধরন হল?](../mcq-answers/computer-network-security.md?plain=1#L572)
+- [Special set of characters that computer associates with specific user identification is classified as ____.](../mcq-answers/computer-network-security.md?plain=1#L581)
+- [Issuance of cash through terminal outside bank is an example of-](../mcq-answers/computer-network-security.md?plain=1#L590)
+
 
 
 ---
@@ -2805,6 +3151,122 @@ With **ephemeral key exchange (ECDHE)**, a **new, temporary key pair is generate
 - [HTTPs কীভাবে একটি Website-এর সুরক্ষা দেয়? ব্লক ডায়াফ্রামের মাধ্যমে উত্তর দিন।](../written-answers/computer-network-security.md?plain=1#L4595)
 - [What is the difference among threat, vulnerability and risk? Explain SSL and TLS.](../written-answers/computer-network-security.md?plain=1#L4633)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following statements is false with respect to SSL?](../mcq-answers/computer-network-security.md?plain=1#L257)
+- [What is/are the main operation of SSL/TLS?](../mcq-answers/computer-network-security.md?plain=1#L311)
+- [Which of the items listed below is the least strong security protocol?](../mcq-answers/computer-network-security.md?plain=1#L358)
+- [Which protocol in data encryption of Network level?](../mcq-answers/computer-network-security.md?plain=1#L367)
+- [What does https mean?](../mcq-answers/computer-network-security.md?plain=1#L382)
+- [Which of the following connections methods is considered secure?](../mcq-answers/computer-network-security.md?plain=1#L427)
+- [What kind of encryption is used for securing emails in transit?](../mcq-answers/computer-network-security.md?plain=1#L639)
+
+
+---
+
+### Secure Remote Access, File Transfer and Port Authentication
+
+> A recurring exam pattern asks you to pick the **secure** protocol from a list where the others are **plaintext legacy protocols**. The rule is simple: ⭐ **if a protocol has a secure counterpart, the INSECURE one transmits credentials in CLEAR TEXT and must never be used.**
+
+#### ⭐ The insecure/secure protocol pairs
+
+| Purpose | ⚠️ **INSECURE (plaintext)** | ✅ **SECURE replacement** | Secure port |
+|---|---|---|---|
+| **Web browsing** | ⚠️ **HTTP** (80) | ⭐ **HTTPS** (443) — HTTP over **TLS** | 443 |
+| **Remote shell** | ⚠️ **TELNET** (23) | ⭐ **SSH** (22) | 22 |
+| **File transfer** | ⚠️ **FTP** (21) | ⭐ **SFTP** (22, over SSH) · **FTPS** (990, over TLS) | 22 / 990 |
+| **File copy** | ⚠️ **RCP** | ⭐ **SCP** (22, over SSH) | 22 |
+| **Remote login** | ⚠️ **rlogin / rsh** | **SSH** | 22 |
+| **Email retrieval** | POP3 (110) / IMAP (143) | **POP3S** (995) / **IMAPS** (993) | 995 / 993 |
+| **Email sending** | SMTP (25) | **SMTPS / SMTP+STARTTLS** (465/587) | 465 / 587 |
+| **Directory** | LDAP (389) | **LDAPS** (636) | 636 |
+| **Network management** | ⚠️ **SNMP v1/v2c** | **SNMPv3** (authentication + encryption) | 161 |
+
+> ### **"Which is the LEAST strong security protocol?"** → ### ✅ **HTTP** — it has **no encryption at all**.
+> ### **"Which protocol has similar functionality to Telnet but operates more securely?"** → ### ✅ **SSH.**
+> ### **"Which is a secure way to transfer files from one device to another?"** → ### ✅ **SFTP.**
+> ### **"Which is MOST secure for transferring network device configuration files?"** → ### ✅ **SCP.**
+> ### **"Which connection method is considered secure?"** → ### ✅ **HTTPS.**
+> ### **"What does HTTPS mean?"** → ### ✅ **HyperText Transfer Protocol SECURE.**
+
+#### SSH and its family
+
+> **SSH (Secure Shell) provides an ENCRYPTED CHANNEL over an unsecured network**, and is the foundation of secure administration.
+
+| It provides | How |
+|---|---|
+| **Confidentiality** | Symmetric encryption of the whole session |
+| **Integrity** | MAC on every packet |
+| ⭐ **Server authentication** | The client verifies the server's **host key** — this is what defeats man-in-the-middle |
+| ⭐ **Client authentication** | Password, or far better, ⭐ **PUBLIC-KEY authentication** |
+| **Tunnelling** | Port forwarding, X11 forwarding, SOCKS proxy, **VPN-like tunnels** |
+
+**SSH carries several services on the same port 22:** ⭐ **remote shell (ssh), file transfer (SFTP) and file copy (SCP)** — which is why all three appear together as the secure answers.
+
+> ⚠️ **SFTP is NOT "FTP with SSL".** ⭐ **SFTP = SSH File Transfer Protocol** — a completely different protocol running inside an SSH session on **port 22**. ⭐ **FTPS = FTP with TLS** — the old FTP protocol wrapped in TLS, using **ports 21/990 plus separate data ports**. **SFTP is easier to firewall (one port) and is generally preferred.**
+
+#### ⭐ 802.1X — port-based network access control
+
+> ### **IEEE 802.1X is the standard that provides PORT-BASED AUTHENTICATION** — a device must **authenticate BEFORE it is granted any network access at all** on that switch port or wireless SSID.
+
+```mermaid
+flowchart LR
+    A["SUPPLICANT<br/>the client device"] -->|"EAP over LAN"| B["AUTHENTICATOR<br/>the switch / wireless AP<br/>— the port stays CLOSED<br/>until authentication succeeds"]
+    B -->|"RADIUS"| C["AUTHENTICATION SERVER<br/>RADIUS / Active Directory"]
+    C -->|"accept / reject"| B
+    B -->|"port OPENED on success"| D["The network"]
+```
+
+> ### **"Which standard provides PORT AUTHENTICATION?"** → ### ✅ **802.1X.**
+
+| The three roles | |
+|---|---|
+| ⭐ **Supplicant** | The **client** requesting access |
+| ⭐ **Authenticator** | The **switch or access point** controlling the port |
+| ⭐ **Authentication Server** | Usually **RADIUS**, which makes the decision |
+
+**Why it matters:** without 802.1X, **anyone who can physically plug into a wall socket is on the corporate LAN**. With it, the port is dead until the device proves its identity — and the server can then assign a **VLAN, ACL or bandwidth limit** per user. It is the basis of **WPA2/WPA3-Enterprise** Wi-Fi.
+
+> ⚠️ **Do not confuse the similarly numbered standards: 802.1X is port AUTHENTICATION; 802.11 is Wi-Fi; 802.3 is Ethernet; 802.1Q is VLAN tagging.**
+
+#### Where each security protocol operates
+
+| Protocol | OSI layer | Secures |
+|---|---|---|
+| ⭐ **IPsec** | ⭐ **NETWORK layer (Layer 3)** | **Every IP packet** — so it protects **all** traffic transparently, which is why it is the basis of site-to-site **VPNs** |
+| ⭐ **SSL / TLS** | ⭐ **TRANSPORT layer (Layer 4)** *(strictly between transport and application)* | **Application sessions** — HTTPS, SMTPS, FTPS |
+| **SSH** | Application | Remote shell sessions |
+| **PGP / S-MIME** | Application | Individual email messages |
+| **WPA2 / WPA3** | Data link (Layer 2) | Wireless frames |
+| **802.1X** | Data link (Layer 2) | Port access |
+
+> ### **"In which layer does IPsec work?"** → ### ✅ **The NETWORK LAYER.**
+> ### **"What is the main operation of SSL/TLS?"** → ### ✅ **To ENSURE DATA SECURITY AT THE TRANSPORT LAYER.**
+> ### **"What kind of encryption is used for securing emails IN TRANSIT?"** → ### ✅ **TLS (Transport Layer Security).**
+>
+> ⭐ **The practical difference between IPsec and TLS:** **IPsec secures EVERYTHING between two networks or hosts, and applications need no modification**; **TLS secures ONE application session, and the application must be written to use it.** That is why a company VPN uses IPsec while a browser uses TLS.
+
+#### UDP and unprotected transmission
+
+> ### **"Which of the following sends data packets over an unprotected system?"** → ### ✅ **UDP.**
+>
+> **UDP is connectionless and provides no handshake, no sequence numbers, no acknowledgement and no built-in protection** — it simply emits datagrams. This makes it **fast and ideal for streaming, DNS and VoIP**, but also **trivially SPOOFABLE**, which is why UDP-based services (DNS, NTP, memcached) are the favourite **amplification vectors for DDoS attacks**. *(TCP's three-way handshake at least forces an attacker to complete a round trip, making blind spoofing much harder.)*
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the items listed below is the least strong security protocol?](../mcq-answers/computer-network-security.md?plain=1#L358)
+- [Which protocol in data encryption of Network level?](../mcq-answers/computer-network-security.md?plain=1#L367)
+- [In which layer IPsec works?](../mcq-answers/computer-network-security.md?plain=1#L376)
+- [What does https mean?](../mcq-answers/computer-network-security.md?plain=1#L382)
+- [Which of the following is a secure way to transfer files from one device to another?](../mcq-answers/computer-network-security.md?plain=1#L391)
+- [Which of the following standards provides port authentication?](../mcq-answers/computer-network-security.md?plain=1#L400)
+- [Which of the following protocols has similar functionality to Telnet but operates more securely than Telnet?](../mcq-answers/computer-network-security.md?plain=1#L409)
+- [Which of the following protocols is the MOST secure for transferring network device configurations?](../mcq-answers/computer-network-security.md?plain=1#L418)
+- [Which of the following connections methods is considered secure?](../mcq-answers/computer-network-security.md?plain=1#L427)
+- [Which of the following sends data packets over unprotected system?](../mcq-answers/computer-network-security.md?plain=1#L165)
+
+
+
 
 ---
 
@@ -2949,6 +3411,111 @@ With **ephemeral key exchange (ECDHE)**, a **new, temporary key pair is generate
 - [সাইবার অপরাধ কি? ৮টি সাইবার অপরাধ এর নাম লিখুন। সাইবার অপরাধ দূর করার জন্য ৬টি পন্থার নাম লিখুন।](../written-answers/computer-network-security.md?plain=1#L4936)
 - [Employee causes the most risk of fraud and computer compromises- do you agree with the statement. Justify your answer.](../written-answers/computer-network-security.md?plain=1#L4963)
 - [What is Cyber Security? Write down the top 10 cyber attack. Discuss about Ransomware and DDoS attack.](../written-answers/computer-network-security.md?plain=1#L341)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The Bangladesh Bank robbery, also known as the Bangladesh bank cyber heist, was a theft that took place in February 2016. The governor of the central bank engag…](../mcq-answers/computer-network-security.md?plain=1#L57)
+- [Which of the following describes investigating moral conduct concerning the digital media landscape?](../mcq-answers/computer-network-security.md?plain=1#L501)
+- [A student breaks the door of a professor's office to obtain a copy of the next day's examination. Define the type of security attack in this case.](../mcq-answers/computer-network-security.md?plain=1#L534)
+- [Which one of the following is the reason for “Cyberchondria”?](../mcq-answers/computer-network-security.md?plain=1#L543)
+
+
+---
+
+### Cyber Ethics, Cyber Law and Digital Wellbeing
+
+#### Cyber ethics
+
+> ### **CYBER ETHICS is the branch of ethics that INVESTIGATES MORAL CONDUCT concerning the DIGITAL MEDIA LANDSCAPE** — what is right and wrong behaviour in the use of computers, networks and information.
+
+> ### **"Which describes investigating moral conduct concerning the digital media landscape?"** → ### ✅ **CYBER ETHICS.**
+
+| Principle | Meaning |
+|---|---|
+| **Respect for privacy** | Do not access, collect or disclose another's data without consent |
+| **Respect for intellectual property** | No piracy, no plagiarism, no unlicensed software |
+| **Honesty and accuracy** | Do not spread misinformation or impersonate others |
+| **Non-maleficence** | Do not use computers to harm people |
+| **Accessibility and fairness** | Do not deny others access to resources |
+| **Accountability** | Take responsibility for the consequences of your code and actions |
+
+> **The "Ten Commandments of Computer Ethics" (Computer Ethics Institute)** include: *thou shalt not use a computer to harm other people · to interfere with others' computer work · to snoop around in others' files · to steal · to bear false witness · to copy or use proprietary software for which you have not paid · to use others' computer resources without authorisation · to appropriate others' intellectual output* — and positively: *think about the social consequences of the program you write, and use a computer in ways that show consideration and respect.*
+
+#### The types of hacker
+
+| Hat | Intent | Legality |
+|---|---|---|
+| ⭐ **WHITE HAT** | ⭐ **FINDS BUGS AND VULNERABILITIES in order to FIX them** — ethical hackers, penetration testers, security researchers | ✅ **Authorised and legal** |
+| ⭐ **BLACK HAT** | **Breaks in for personal gain, theft or damage** | ❌ Criminal |
+| **GREY HAT** | Finds flaws **without permission**, then discloses them — often asking for a reward | ⚠️ **Illegal, even if well-intentioned** |
+| **Script kiddie** | Uses others' tools with little understanding | Criminal |
+| **Hacktivist** | Attacks for a political or social cause | Criminal |
+| **State-sponsored** | Espionage and sabotage on behalf of a government | — |
+
+> ### **"What are hackers who find bugs and vulnerabilities called?"** → ### ✅ **WHITE HAT HACKERS.**
+>
+> ⚠️ **The line between white and grey is AUTHORISATION, not intention.** Testing a system you do not own, however good your motives, is an offence — which is why **written scope and permission is the first document in any penetration test**, and why **bug-bounty programmes** exist to make such testing lawful.
+
+#### Attacks defined by intent
+
+| Term | Meaning |
+|---|---|
+| ⭐ **SNOOPING** | ⭐ **UNAUTHORISED ACCESS to another person's or organisation's DATA** — casual or deliberate prying, including physically obtaining documents or reading someone's files |
+| **Eavesdropping / Sniffing** | Intercepting data **in transit** |
+| **Spoofing** | Impersonating another identity, address or website |
+| **Phishing** | Deceiving a user into revealing credentials |
+| **Social engineering** | Manipulating **people** rather than systems |
+
+> ### **"A student breaks the door of a professor's office to obtain a copy of the next day's examination paper" — this is an example of…"** → ### ✅ **SNOOPING** (unauthorised access to information). *(The physical break-in is burglary, but the information-security classification of the act is **snooping** — obtaining data one has no right to see.)*
+
+#### Cyber law in Bangladesh
+
+| Law | Year | Scope |
+|---|---|---|
+| **ICT Act** | **2006** (amended 2009, 2013) | The first Bangladeshi law on electronic transactions and computer crime; its **Section 57** became notorious and was later repealed |
+| ⭐ **Digital Security Act** | ⭐ **2018** | Replaced Section 57; covers **illegal access, data theft, identity fraud, digital forgery, cyber-terrorism, defamation and propaganda**; created the **Digital Security Agency** and the **National Computer Emergency Response Team (CIRT)** |
+| **Cyber Security Act** | **2023** | Enacted to replace the Digital Security Act, retaining much of its substance with some amended penalties |
+| **Copyright Act** | 2000 (amended) | Intellectual property |
+| **Right to Information Act** | 2009 | Citizen access to public information |
+
+> ### **"Which year was the Cyber/Digital Security Act declared in Bangladesh?"** → ### ✅ **2018** (the **Digital Security Act**).
+> ⚠️ **Note the sequence, since papers from different years expect different answers: ICT Act 2006 → Digital Security Act 2018 → Cyber Security Act 2023.** **Check the date of the question paper**, and state the chain if the question invites explanation.
+
+#### Copyright and intellectual property
+
+> ### **"Which of the following is protected by the Copyright Act?"** → ### ✅ **ALL OF THEM.**
+
+**Copyright protects the EXPRESSION of an idea, not the idea itself** — and it covers: **literary works** (including ⭐ **computer SOURCE CODE**), music, films, photographs, paintings, broadcasts, **databases**, architectural designs and dramatic works.
+
+| Right | Protects | Duration (typical) |
+|---|---|---|
+| ⭐ **Copyright** | **Expression** — code, text, music, images | Life of the author + 60 years (Bangladesh) |
+| **Patent** | **Inventions** — a new, useful, non-obvious process or device | 20 years |
+| **Trademark** | **Brand identity** — names, logos, slogans | Renewable indefinitely |
+| **Trade secret** | Confidential business information | Indefinite, while kept secret |
+
+> **Two software-specific points:** copyright arises **automatically on creation** — registration is not required; and ⭐ **software LICENCES (GPL, MIT, proprietary EULAs) are built ON TOP of copyright** — the licence is the copyright holder's grant of permission, which is why violating a licence is a copyright infringement.
+
+#### Digital wellbeing
+
+> ### **CYBERCHONDRIA is the ESCALATION OF HEALTH ANXIETY CAUSED BY EXCESSIVE ONLINE SEARCHING of medical symptoms.**
+>
+> ### **"What is the reason for Cyberchondria?"** → ### ✅ **EXCESSIVE ANXIETY DUE TO ONLINE SEARCH.**
+>
+> **The mechanism:** a search for a common symptom returns the **rarest and most serious** explanations prominently (they generate more engagement), the user escalates from "headache" to "brain tumour", anxiety rises, and that **drives further searching** — a self-reinforcing loop. The term blends *cyber* with *hypochondria*.
+
+**Related digital-wellbeing terms worth knowing:** **Nomophobia** (fear of being without a mobile phone) · **Cyberbullying** · **Doomscrolling** · **FOMO** · **Digital detox** · **Screen-time addiction** · **Technostress** · **Phantom vibration syndrome**.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following describes investigating moral conduct concerning the digital media landscape?](../mcq-answers/computer-network-security.md?plain=1#L501)
+- [Which of the following protected by copyright ACT?](../mcq-answers/computer-network-security.md?plain=1#L510)
+- [Which year declared Cybersecurity act in Bangladesh?](../mcq-answers/computer-network-security.md?plain=1#L519)
+- [What are hackers who find bugs and vulnerabilities called?](../mcq-answers/computer-network-security.md?plain=1#L528)
+- [A student breaks the door of a professor's office to obtain a copy of the next day's examination. Define the type of security attack in this case.](../mcq-answers/computer-network-security.md?plain=1#L534)
+- [Which one of the following is the reason for “Cyberchondria”?](../mcq-answers/computer-network-security.md?plain=1#L543)
+
+
 
 
 ---
@@ -3172,6 +3739,12 @@ The designated list has been expanded several times and currently comprises roug
 - [What is CII? How many CII organizations? Name 10 CII organization name.](../written-answers/computer-network-security.md?plain=1#L5428)
 - [CTC কী? কী কাজে ব্যবহার হয়?](../written-answers/computer-network-security.md?plain=1#L5459)
 - [(c) Briefly write about the cybersecurity laws of Bangladesh.](../written-answers/computer-network-security.md?plain=1#L5475)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The Bangladesh Bank robbery, also known as the Bangladesh bank cyber heist, was a theft that took place in February 2016. The governor of the central bank engag…](../mcq-answers/computer-network-security.md?plain=1#L57)
+- [Which year declared Cybersecurity act in Bangladesh?](../mcq-answers/computer-network-security.md?plain=1#L519)
+
 
 
 ---
@@ -3507,6 +4080,14 @@ The question mixes two different things, and the correct answer begins by **clar
 - [If you downloaded the email, you will be able to face the problem. Which attack do you face?](../written-answers/computer-network-security.md?plain=1#L5715)
 - [e) What is email? What precautions can be taken to prevent unnecessary and unwanted e-mails?](../written-answers/computer-network-security.md?plain=1#L5742)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following describes an email that is sent to users with web links that direct them to malicious websites?](../mcq-answers/computer-network-security.md?plain=1#L183)
+- [Which algorithm is used in email security?](../mcq-answers/computer-network-security.md?plain=1#L203)
+- [What kind of encryption is used for securing emails in transit?](../mcq-answers/computer-network-security.md?plain=1#L639)
+- [An unsolicited e-mail message sent to many recipients at once is a-](../mcq-answers/computer-network-security.md?plain=1#L648)
+
+
 
 ---
 
@@ -3634,3 +4215,7 @@ A crash is merely a **denial of service**. A real attack goes further:
 **Previous Year Question List from this Topic:**
 
 - [Explain buffer overflow attack with an example.](../written-answers/computer-network-security.md?plain=1#L5776)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is the part of software vulnerability?](../mcq-answers/computer-network-security.md?plain=1#L75)
