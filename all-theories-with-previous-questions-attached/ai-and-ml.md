@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 12 subtopics · 64 theories
+**Table of Contents** — 12 subtopics · 67 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -21,6 +21,7 @@
    - [Expert Systems — Architecture and Working](#expert-systems--architecture-and-working)
    - [Forward Chaining vs Backward Chaining](#forward-chaining-vs-backward-chaining)
    - [Measuring Intelligence — and Common True/False Traps](#measuring-intelligence--and-common-truefalse-traps)
+   - [Programming Languages for Artificial Intelligence](#programming-languages-for-artificial-intelligence)
 
 3. **[Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn)**
    - [Biological Neuron vs Artificial Neuron](#biological-neuron-vs-artificial-neuron)
@@ -45,6 +46,7 @@
    - [Loss Functions and the Objective Function](#loss-functions-and-the-objective-function)
    - [How to Validate and Check the Reliability of a Machine Learning Model](#how-to-validate-and-check-the-reliability-of-a-machine-learning-model)
    - [Overfitting, Underfitting and the Bias-Variance Trade-off](#overfitting-underfitting-and-the-bias-variance-trade-off)
+   - [Hyperparameters vs Parameters, and Hyperparameter Tuning](#hyperparameters-vs-parameters-and-hyperparameter-tuning)
 
 6. **[Supervised Learning (Decision Trees)](#supervised-learning-decision-trees)**
    - [Decision Tree — Structure and Terminology](#decision-tree--structure-and-terminology)
@@ -71,6 +73,7 @@
    - [Informed vs Uninformed Search — Comparison](#informed-vs-uninformed-search--comparison)
    - [Adversarial Search — Minimax Algorithm](#adversarial-search--minimax-algorithm)
    - [Alpha-Beta Pruning](#alpha-beta-pruning)
+   - [Local Search and Optimisation — Hill Climbing, Simulated Annealing and Genetic Algorithms](#local-search-and-optimisation--hill-climbing-simulated-annealing-and-genetic-algorithms)
 
 10. **[Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization)**
    - [Generalization — the Real Goal of Machine Learning](#generalization--the-real-goal-of-machine-learning)
@@ -184,6 +187,11 @@ If after 5 minutes of chatting the interrogator cannot reliably say which one is
 - [What is Artificial Intelligence?](../written-answers/ai-and-ml.md?plain=1#L389)
 - [What is the father of AI?](../written-answers/ai-and-ml.md?plain=1#L537)
 - [Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?](../written-answers/ai-and-ml.md?plain=1#L571)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is Artificial Intelligence?](../mcq-answers/ai-and-ml.md?plain=1#L89)
+
 
 ---
 
@@ -460,6 +468,13 @@ Examples: a robot learning to walk, AlphaGo, self-driving cars, dynamic pricing.
 - [Briefly explain supervised learning, unsupervised learning & reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L792)
 - [What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L1013)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which AI application involves teaching a computer to perform a task by example,rather than through explicit programming?](../mcq-answers/ai-and-ml.md?plain=1#L14)
+- [What is the main goal of reinforcement learning?](../mcq-answers/ai-and-ml.md?plain=1#L23)
+- [If the class levels of training data set are unknown in machine learning, then it is called:](../mcq-answers/ai-and-ml.md?plain=1#L143)
+
+
 ---
 
 ### The Machine Learning Workflow (End-to-End Pipeline)
@@ -504,6 +519,11 @@ flowchart LR
 **Previous Year Question List from this Topic:**
 
 - [(a) Describe the following terms: 3](../written-answers/ai-and-ml.md?plain=1#L25)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is not part of learning phase of machine learning?](../mcq-answers/ai-and-ml.md?plain=1#L107)
+
 
 ---
 
@@ -967,6 +987,58 @@ Do not confuse with **Alan Turing** (Enigma code-breaking, Turing Test) — he l
 - [Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?](../written-answers/ai-and-ml.md?plain=1#L571)
 - [ক) Deep Blue কী?](../written-answers/ai-and-ml.md?plain=1#L229)
 
+---
+
+### Programming Languages for Artificial Intelligence
+
+> No single language is "the" AI language — but a small set is repeatedly named in examinations, and each is associated with a distinct style of AI.
+
+| Language | Paradigm | Why it is associated with AI |
+|---|---|---|
+| ⭐ **PROLOG** | ⭐ **LOGIC programming (declarative)** | ⭐ **The classic AI language.** You state **FACTS and RULES**, and the built-in inference engine **derives the answers by itself** through unification and backtracking. Ideal for **knowledge representation, expert systems, rule-based reasoning, theorem proving and natural-language parsing.** Its name is short for **PROgramming in LOGic** (Colmerauer, 1972) |
+| ⭐ **LISP** | **Functional / symbolic** | ⭐ **The OLDEST AI language (John McCarthy, 1958)** — the second-oldest high-level language still in use. Built for **SYMBOLIC computation and list processing** ("LISt Processing"); its code-as-data property makes it powerful for programs that write or modify programs. Dominated classical AI research for decades |
+| ⭐ **PYTHON** | Multi-paradigm | ⭐ **The DOMINANT AI language TODAY in practice.** Not because the language itself is special, but because of its **libraries** — **TensorFlow, PyTorch, Keras, scikit-learn, NumPy, Pandas** — plus readable syntax and a vast community. **Almost all modern machine learning and deep learning is written in Python** |
+| **R** | Statistical | Statistics, data analysis and visualisation; strong in academic and statistical ML |
+| **Java** | Object-oriented | Large-scale, portable enterprise AI systems; Weka, Deeplearning4j |
+| **C++** | Systems | **Speed** — the performance-critical cores of TensorFlow and PyTorch are written in C++; used for robotics, games and embedded AI |
+| **Julia** | Scientific | High-performance numerical computing, growing in ML research |
+
+> ### **Answering the exam question.** If the paper asks *"Which language is used in AI?"* and the options include **Prolog** among ordinary general-purpose languages (C, COBOL, FORTRAN, Pascal), ### ✅ **the expected answer is PROLOG** — it is the language *designed specifically for* AI. If **Python** and **LISP** also appear, note that **Python is the most widely used in practice today** and **LISP is the historically foundational one**, and say which criterion you are answering on.
+
+#### Prolog in one example — why it feels like AI
+
+```prolog
+% FACTS — what is known
+parent(karim, rahim).
+parent(rahim, sadia).
+
+% A RULE — how to derive new knowledge
+grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
+
+% A QUERY
+?- grandparent(karim, sadia).
+   true.
+```
+
+> **Notice what is absent: there is no loop, no recursion written by hand, no search code.** The programmer states **what is true** and **what follows from what**; the language's **inference engine** performs the search, unification and backtracking automatically. **This declarative style — describing the problem rather than the procedure — is why Prolog became the emblematic AI language.**
+
+#### Two related facts frequently asked alongside
+
+| Question | ✅ **Answer** |
+|---|---|
+| ⭐ **Father of Artificial Intelligence** | ⭐ **John McCarthy** — coined the term "Artificial Intelligence" at the **Dartmouth Conference, 1956**, and created **LISP** |
+| ⭐ **GPT stands for** | ⭐ **Generative Pre-trained Transformer** |
+| ⭐ **What is ChatGPT** | ⭐ **An AI CHATBOT (conversational assistant) built by OpenAI on the GPT large language model**, which generates human-like text in response to a prompt |
+
+**Previous Year MCQ List from this Topic:**
+
+- [GPT stands for-](../mcq-answers/ai-and-ml.md?plain=1#L59)
+- [Which language uses in AI?](../mcq-answers/ai-and-ml.md?plain=1#L68)
+- [What is ChatGPT?](../mcq-answers/ai-and-ml.md?plain=1#L77)
+- [Which programming language is used extensively for Artificial Intelligence (AI)?](../mcq-answers/ai-and-ml.md?plain=1#L125)
+
+
+
 ## Deep Learning & Neural Networks (ANN, CNN, RNN)
 ### Biological Neuron vs Artificial Neuron
 
@@ -1010,6 +1082,11 @@ flowchart LR
 - [What does the axon of neural network do?](../written-answers/ai-and-ml.md?plain=1#L605)
 - [What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.](../written-answers/ai-and-ml.md?plain=1#L657)
 - [What is artificial Neural Network (ANN)? Based on ANN, describe input & hidden layer, weight and activation function.](../written-answers/ai-and-ml.md?plain=1#L707)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What s the axon of neural network do?](../mcq-answers/ai-and-ml.md?plain=1#L83)
+
 
 ---
 
@@ -1136,6 +1213,12 @@ flowchart LR
 - [What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.](../written-answers/ai-and-ml.md?plain=1#L657)
 - [Draw the single layer of ANN.](../written-answers/ai-and-ml.md?plain=1#L688)
 - [What is artificial Neural Network (ANN)? Based on ANN, describe input & hidden layer, weight and activation function.](../written-answers/ai-and-ml.md?plain=1#L707)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What s the axon of neural network do?](../mcq-answers/ai-and-ml.md?plain=1#L83)
+- [Which of the following neural networks uses supervised learning?](../mcq-answers/ai-and-ml.md?plain=1#L98)
+
 
 ---
 
@@ -1456,6 +1539,13 @@ flowchart LR
 - [Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised…](../written-answers/ai-and-ml.md?plain=1#L826)
 - [What is the difference between Supervised and Unsupervised learning?](../written-answers/ai-and-ml.md?plain=1#L72)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which AI application involves teaching a computer to perform a task by example,rather than through explicit programming?](../mcq-answers/ai-and-ml.md?plain=1#L14)
+- [Which of the following neural networks uses supervised learning?](../mcq-answers/ai-and-ml.md?plain=1#L98)
+- [K nearest neighbor algorithm is part of:](../mcq-answers/ai-and-ml.md?plain=1#L134)
+
+
 ---
 
 ### Unsupervised Learning in Detail
@@ -1502,6 +1592,12 @@ flowchart LR
 - [(a) Describe the following terms:](../written-answers/ai-and-ml.md?plain=1#L739)
 - [Briefly explain supervised learning, unsupervised learning & reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L792)
 - [(b) What is the difference between supervised and unsupervised learning? Explain with examples.](../written-answers/ai-and-ml.md?plain=1#L808)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the process of reducing the dimensionality of data while maintaining itsessential characteristics-](../mcq-answers/ai-and-ml.md?plain=1#L41)
+- [If the class levels of training data set are unknown in machine learning, then it is called:](../mcq-answers/ai-and-ml.md?plain=1#L143)
+
 
 ---
 
@@ -1561,6 +1657,13 @@ flowchart TD
 - [Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised…](../written-answers/ai-and-ml.md?plain=1#L826)
 - [What is the difference between Supervised and Unsupervised learning?](../written-answers/ai-and-ml.md?plain=1#L72)
 - [What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L1013)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which AI application involves teaching a computer to perform a task by example,rather than through explicit programming?](../mcq-answers/ai-and-ml.md?plain=1#L14)
+- [What is the main goal of reinforcement learning?](../mcq-answers/ai-and-ml.md?plain=1#L23)
+- [If the class levels of training data set are unknown in machine learning, then it is called:](../mcq-answers/ai-and-ml.md?plain=1#L143)
+
 
 ---
 
@@ -1773,6 +1876,11 @@ flowchart TD
 
 - [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
 - [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What does cross-validation mean in AI?](../mcq-answers/ai-and-ml.md?plain=1#L32)
+
 
 
 ---
@@ -2026,6 +2134,69 @@ flowchart LR
 - [Write down the Role of Validation set in ML.](../written-answers/ai-and-ml.md?plain=1#L847)
 - [b) How can we validate and check reliability of a machine learning model?](../written-answers/ai-and-ml.md?plain=1#L903)
 - [In machine learning. What will happen, when a machine is highly trained up a slight trained up?](../written-answers/ai-and-ml.md?plain=1#L1243)
+
+---
+
+### Hyperparameters vs Parameters, and Hyperparameter Tuning
+
+> ### **A PARAMETER is LEARNED BY the model FROM the training data. A HYPERPARAMETER is SET BY the engineer BEFORE training begins, and CONTROLS the learning process or the structure of the model.**
+
+#### The distinction
+
+| Point | ⭐ **PARAMETER (model parameter)** | ⭐ **HYPERPARAMETER** |
+|---|---|---|
+| **Who sets it** | ⭐ **The LEARNING ALGORITHM — automatically** | ⭐ **THE ENGINEER — manually, or by a tuning search** |
+| **When** | **DURING training** | ⭐ **BEFORE training starts** |
+| **Learned from data?** | ✅ **Yes** | ❌ **No** |
+| **What it represents** | The **knowledge the model has acquired** | The **configuration of the model and of the training process** |
+| **Saved with the model?** | ✅ Yes — it *is* the model | Recorded as configuration |
+| **Examples** | ⭐ **The WEIGHTS and BIASES of a neural network · the coefficients of a linear regression · the split points of a decision tree · the support vectors of an SVM** | ⭐ **LEARNING RATE · NUMBER OF LAYERS and neurons per layer · k in k-NN · k in k-Means · number of epochs · BATCH SIZE · max depth of a decision tree · regularisation strength (λ) · dropout rate · the choice of activation function · C and γ in an SVM · number of trees in a Random Forest** |
+
+> ### **The one-line answer:** *"A hyperparameter is a configuration value that DEFINES THE STRUCTURE OF THE MODEL or CONTROLS HOW IT IS TRAINED, and which must be chosen before training; parameters are the values the model itself learns during training."*
+>
+> **The memory aid:** *hyper* = "above" — a hyperparameter sits **above** the learning process and governs it. **You choose hyperparameters; the model discovers parameters.**
+
+#### The hyperparameters worth naming, and what each controls
+
+| Hyperparameter | Controls | If set too HIGH | If set too LOW |
+|---|---|---|---|
+| ⭐ **Learning rate (α)** | **How big a step gradient descent takes** | Overshoots the minimum; loss diverges or oscillates | Training is **extremely slow**; may stall in a local minimum |
+| **Number of epochs** | How many passes over the training data | ⚠️ **OVERFITTING** | ⚠️ **UNDERFITTING** |
+| **Batch size** | How many samples per weight update | Faster per epoch, but may generalise worse | Noisy updates, slow, but often better generalisation |
+| **Number of layers / neurons** | **Model capacity** | Overfitting; expensive | Underfitting — too simple to learn the pattern |
+| ⭐ **k in k-NN** | How many neighbours vote | Over-smoothed, ignores local structure | **Sensitive to noise**; k = 1 overfits badly |
+| **k in k-Means** | Number of clusters | Splits real clusters | Merges distinct clusters |
+| ⭐ **Regularisation λ (L1/L2)** | Penalty on large weights | **Underfitting** — model too constrained | **Overfitting** — no constraint |
+| **Dropout rate** | Fraction of neurons randomly disabled | Underfitting | Overfitting |
+| **Max depth (trees)** | Tree complexity | Overfitting | Underfitting |
+
+#### How hyperparameters are chosen — tuning
+
+```mermaid
+flowchart LR
+    A["Choose a set of<br/>candidate hyperparameters"] --> B["TRAIN on the<br/>TRAINING set"]
+    B --> C["EVALUATE on the<br/>VALIDATION set<br/>(or by CROSS-VALIDATION)"]
+    C --> D{"Best so far?"}
+    D -->|"try another set"| A
+    D -->|"done"| E["Retrain on train+validation,<br/>report the score on the<br/>untouched TEST set"]
+```
+
+| Method | How it works | Trade-off |
+|---|---|---|
+| **Manual / trial and error** | Guided by experience | Slow, not reproducible |
+| ⭐ **GRID SEARCH** | Tries **every combination** from a defined grid | Thorough but **exponentially expensive** |
+| ⭐ **RANDOM SEARCH** | Samples combinations **at random** | ✅ **Usually finds a good set FASTER than grid search**, because only a few hyperparameters actually matter and random sampling explores those more values |
+| **Bayesian optimisation** | Builds a probabilistic model of the objective and picks the most promising next trial | Most sample-efficient; more complex |
+| **Successive halving / Hyperband** | Starts many configurations cheaply and kills the poor ones early | Very efficient for deep learning |
+| **AutoML** | Automates the whole search | Convenient; costly and opaque |
+
+> ### ⚠️ **The rule that matters most in practice: hyperparameters MUST be tuned on the VALIDATION set, NEVER on the TEST set.** Tuning against the test set leaks information about it into the model, and the reported accuracy then **overstates real-world performance** — the classic way a project looks excellent in a report and fails in production. **Where data is limited, use k-fold CROSS-VALIDATION on the training data instead of a single fixed validation split.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [What does the term 'hyperparameter' refer in AI?](../mcq-answers/ai-and-ml.md?plain=1#L50)
+
+
 
 ## Supervised Learning (Decision Trees)
 
@@ -2435,6 +2606,11 @@ This was introduced in the 2017 Google paper **"Attention Is All You Need"**, wh
 - [LLM stands for __________.](../written-answers/ai-and-ml.md?plain=1#L1099)
 - [What is ChatGPT? Write down the Pros and cons of ChatGPT.](../written-answers/ai-and-ml.md?plain=1#L1103)
 
+**Previous Year MCQ List from this Topic:**
+
+- [GPT stands for-](../mcq-answers/ai-and-ml.md?plain=1#L59)
+
+
 
 ---
 
@@ -2529,6 +2705,11 @@ flowchart TD
 
 - [What is ChatGPT? Write down the Pros and cons of ChatGPT.](../written-answers/ai-and-ml.md?plain=1#L1103)
 - [b) Briefly discuss "Generative Artificial Intelligence (GAI)" & "Large Language Models (LLMs)".](../written-answers/ai-and-ml.md?plain=1#L1077)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is ChatGPT?](../mcq-answers/ai-and-ml.md?plain=1#L77)
+
 
 
 ---
@@ -2699,6 +2880,11 @@ In words: *nudge the current estimate towards (the reward you just got) plus (th
 - [(a) Describe the following terms:](../written-answers/ai-and-ml.md?plain=1#L739)
 - [Briefly explain supervised learning, unsupervised learning & reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L792)
 - [What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L1013)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the main goal of reinforcement learning?](../mcq-answers/ai-and-ml.md?plain=1#L23)
+
 
 
 ---
@@ -2999,6 +3185,11 @@ If **h(n) = 0** everywhere, A\* degenerates into **Uniform Cost Search**. The be
 
 - [Write down the difference between informed and uninformed search algorithm.](../written-answers/ai-and-ml.md?plain=1#L1205)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Hill climbing search এর প্রধান সমস্যা কোনটি?](../mcq-answers/ai-and-ml.md?plain=1#L152)
+
+
 
 ---
 
@@ -3124,6 +3315,144 @@ flowchart TD
 **Previous Year Question List from this Topic:**
 
 - [How $\alpha$-$\beta$ pruning is better than minimax search in game planning?](../written-answers/ai-and-ml.md?plain=1#L1222)
+
+---
+
+### Local Search and Optimisation — Hill Climbing, Simulated Annealing and Genetic Algorithms
+
+> **LOCAL SEARCH algorithms do not care about the PATH to the goal — only about the GOAL STATE ITSELF.** They keep **just the current state** in memory, repeatedly move to a neighbouring state that looks better, and stop when no improvement is possible. This makes them **extremely memory-efficient** and suitable for **optimisation** problems with enormous search spaces (timetabling, routing, circuit layout, neural-network weight tuning).
+
+#### Hill Climbing
+
+> ### **HILL CLIMBING is a local search that repeatedly moves to the NEIGHBOURING STATE WITH THE BEST HEURISTIC VALUE, and STOPS when no neighbour is better.** It is "greedy local search" — it always walks uphill and never looks back.
+
+```
+   Algorithm:
+      current ← initial state
+      loop:
+          neighbour ← the HIGHEST-valued successor of current
+          if value(neighbour) ≤ value(current):
+              return current          ← no improvement possible, STOP
+          current ← neighbour
+```
+
+> **The analogy:** *climbing a hill in thick fog with amnesia* — you can feel only the ground immediately around you, you always step upward, and you remember nothing of where you have been. You will certainly reach **a** peak; you have no way of knowing whether it is **the highest** peak.
+
+#### ⭐ The problems of Hill Climbing — the most examined part
+
+```
+  value
+    ↑                    ╭──╮  ← GLOBAL MAXIMUM (the real answer)
+    │        ╭──╮       ╱    ╲
+    │       ╱    ╲_____╱      ╲
+    │   ╭──╯  ↑                ╲
+    │  ╱   LOCAL MAXIMUM        ╲
+    │ ╱    (search STOPS here    ╲
+    │╱      and returns a         ╲
+    │       sub-optimal answer)
+    └──────────────────────────────────→ state space
+```
+
+| # | Problem | What happens | Remedy |
+|---|---|---|---|
+| **1** | ⭐ **LOCAL MAXIMUM** | ⭐ **The single biggest problem.** A peak that is **higher than all its neighbours but LOWER than the global maximum**. Every move goes downhill, so the algorithm **halts and returns a sub-optimal solution**, believing it has finished | **Random restarts**, simulated annealing, backtracking, beam search |
+| **2** | **PLATEAU (flat maximum)** | A flat region where **all neighbours have the SAME value**. The algorithm has no gradient to follow and **wanders aimlessly or stops** | **Allow sideways moves** (with a limit), large step sizes |
+| **3** | **RIDGE** | A sequence of local maxima forming a slope that **cannot be climbed by any single-step move** — every individual move goes down, though a diagonal path would go up | **Use compound/bigger moves**, or several directions at once |
+
+> ### **"Hill climbing search-এর প্রধান সমস্যা কোনটি?" → ✅ LOCAL MAXIMA.** The algorithm is **complete only in the sense that it always terminates** — it is **NOT optimal and NOT guaranteed to find the global maximum**, because it can never accept a worse state in order to escape a local peak.
+
+**Variants:** **Simple** hill climbing (take the first better neighbour) · **Steepest-ascent** (examine all neighbours, take the best) · **Stochastic** (choose randomly among the uphill moves) · ⭐ **RANDOM-RESTART hill climbing** — run it many times from random starting points and keep the best result; this is **simple and surprisingly effective**, and is the standard practical fix for local maxima.
+
+#### Simulated Annealing — escaping local maxima deliberately
+
+> ### **SIMULATED ANNEALING allows OCCASIONAL DOWNHILL MOVES, with a probability that DECREASES over time**, so the search can escape a local maximum early on but settles down into a good solution later.
+
+```
+   Probability of accepting a WORSE move  =  e^(−ΔE / T)
+
+      ΔE = how much worse the move is
+      T  = the "temperature", which starts HIGH and is gradually REDUCED
+
+   HIGH T (early)  → almost any move accepted → wide exploration
+   LOW  T (late)   → only improving moves     → behaves like hill climbing
+   T → 0           → converges
+```
+
+> **The name comes from METALLURGY:** metal is heated and then cooled **slowly** so that its atoms settle into a **low-energy crystal structure** rather than freezing into a flawed arrangement. Cool too fast and you get a brittle local optimum. **If the cooling schedule is slow enough, simulated annealing is guaranteed to find the global optimum** — though "slow enough" may be impractically slow.
+
+#### Genetic Algorithms
+
+> ### **A GENETIC ALGORITHM (GA) is a search and optimisation technique inspired by NATURAL SELECTION.** It maintains a **POPULATION of candidate solutions**, scores them with a **fitness function**, and produces successive **generations** by **selecting** the fittest and combining and altering them — so that the population evolves towards better solutions.
+
+```mermaid
+flowchart LR
+    A["① INITIAL POPULATION<br/>random candidate<br/>solutions (chromosomes)"] --> B["② FITNESS evaluation<br/>score each individual"]
+    B --> C["③ SELECTION<br/>pick the fitter parents"]
+    C --> D["④ CROSSOVER<br/>combine two parents<br/>to make offspring"]
+    D --> E["⑤ MUTATION<br/>randomly alter a gene"]
+    E --> F{"⑥ Termination?<br/>good enough / max<br/>generations reached"}
+    F -->|No| B
+    F -->|Yes| G["✅ BEST individual<br/>= the solution"]
+```
+
+#### ⭐ The OPERATORS of a Genetic Algorithm
+
+> ### **A genetic algorithm has THREE operators: SELECTION, CROSSOVER and MUTATION.**
+
+| Operator | What it does | Biological analogy |
+|---|---|---|
+| ⭐ **SELECTION** | **Chooses which individuals become parents**, biased towards higher fitness — roulette-wheel, tournament or rank selection | **Survival of the fittest** |
+| ⭐ **CROSSOVER (recombination)** | **Combines the genetic material of TWO parents to produce offspring** — e.g. single-point crossover swaps the tails of two bit strings. **This is the main source of new good solutions**, because it mixes building blocks that already work | **Sexual reproduction** |
+| ⭐ **MUTATION** | **Randomly flips/alters a gene** with a small probability (typically 0.1–1 %). Its job is to **maintain DIVERSITY and prevent premature convergence** on a local optimum — it is the GA's escape hatch | **Random genetic mutation** |
+
+```
+   SINGLE-POINT CROSSOVER
+      Parent 1:  1 0 1 1 | 0 0 1 0            crossover point after bit 4
+      Parent 2:  0 1 0 0 | 1 1 0 1
+                 ─────────────────
+      Child  1:  1 0 1 1 | 1 1 0 1
+      Child  2:  0 1 0 0 | 0 0 1 0
+
+   MUTATION (flip one bit, low probability)
+      Before:    1 0 1 1 1 1 0 1
+      After:     1 0 1 1 1 1 1 1
+                             ↑ mutated
+```
+
+> ⚠️ **The MCQ distinction that is always tested: POPULATION, GENE, CHROMOSOME and INDIVIDUAL are DATA ELEMENTS of a genetic algorithm — they are NOT operators.** The **operators are SELECTION, CROSSOVER and MUTATION** (with crossover and mutation being the two "genetic" operators proper).
+
+**GA terminology:**
+
+| Term | Meaning |
+|---|---|
+| **Chromosome / Individual** | One candidate solution, usually encoded as a **string of bits or values** |
+| **Gene** | One position (one element) within a chromosome |
+| **Population** | The set of chromosomes in the current generation |
+| **Fitness function** | The measure of **how good** a candidate is — the GA's objective function |
+| **Generation** | One complete cycle of selection, crossover and mutation |
+| **Elitism** | Copying the **best individuals unchanged** into the next generation so the best solution is never lost |
+
+**Advantages:** works on **huge, badly-behaved search spaces**; needs **no gradient or derivative**; **escapes local optima** far better than hill climbing; **naturally parallel**; handles multi-objective problems.
+**Disadvantages:** **computationally expensive**; **no guarantee of the global optimum**; **many parameters to tune** (population size, crossover and mutation rates); can **converge prematurely** if diversity is lost; the fitness function must be carefully designed.
+
+**Applications:** scheduling and timetabling, the travelling salesman problem, circuit and antenna design, **neural-network architecture search and weight optimisation**, feature selection, robotics and game strategy.
+
+#### Comparison of the local-search methods
+
+| Method | Keeps in memory | Escapes local maxima? | Guarantee |
+|---|---|---|---|
+| ⭐ **Hill Climbing** | **One state** | ❌ **No** — this is its defining weakness | Terminates, but **sub-optimal** |
+| **Random-restart hill climbing** | One state (× many runs) | ✅ Often, by luck | Approaches optimal as restarts → ∞ |
+| ⭐ **Simulated Annealing** | One state | ✅ **Yes — accepts worse moves early** | **Global optimum if cooled slowly enough** |
+| **Beam Search** | **k states** | Partly | No |
+| ⭐ **Genetic Algorithm** | ⭐ **A whole POPULATION** | ✅ **Yes — via mutation and diversity** | No guarantee, but strong in practice |
+
+**Previous Year MCQ List from this Topic:**
+
+- [Hill climbing search এর প্রধান সমস্যা কোনটি?](../mcq-answers/ai-and-ml.md?plain=1#L152)
+- [নিচের কোনটি Genetic algorithm এর একটি operator?](../mcq-answers/ai-and-ml.md?plain=1#L161)
+
+
 
 ## Overfitting, Underfitting & Model Generalization
 
@@ -3385,6 +3714,11 @@ For the rule **Bread → Milk**:
 
 - [Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.](../written-answers/ai-and-ml.md?plain=1#L1268)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Market basket analysis is part of:](../mcq-answers/ai-and-ml.md?plain=1#L116)
+
+
 
 ---
 
@@ -3529,6 +3863,11 @@ flowchart LR
 
 - [Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.](../written-answers/ai-and-ml.md?plain=1#L1268)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Market basket analysis is part of:](../mcq-answers/ai-and-ml.md?plain=1#L116)
+
+
 ## Clustering & Unsupervised Learning (K-Means, Hierarchical)
 
 ### Clustering — Concept, Types and Distance Measures
@@ -3588,6 +3927,11 @@ Clustering needs a way to say "how far apart are these two points?"
 - [Consider the five points: P1 (0.07, 0.83), P2 (0.85, 0.14), P3 (0.66, 0.89), P4 (0.49, 0.64), and P5 (0.80, 0.46). Group first two points considering single-lin…](../written-answers/ai-and-ml.md?plain=1#L1296)
 - [a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.](../written-answers/ai-and-ml.md?plain=1#L771)
 - [(b) What is the difference between supervised and unsupervised learning? Explain with examples.](../written-answers/ai-and-ml.md?plain=1#L808)
+
+**Previous Year MCQ List from this Topic:**
+
+- [If the class levels of training data set are unknown in machine learning, then it is called:](../mcq-answers/ai-and-ml.md?plain=1#L143)
+
 
 
 ---
