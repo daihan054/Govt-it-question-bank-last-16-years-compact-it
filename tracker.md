@@ -54,9 +54,8 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 | 10 | mechanical-engineering.md | ✅ done | 11 | **whole file created — no written-answers counterpart** |
 | 11 | software-engineering.md | ✅ done | 2 | metrics, requirements & scheduling |
 | 12 | web-technology.md | ✅ done | 3 | PHP syntax, web servers/CMS, XML/XSLT |
-| 13 | — | — | — | — |
 | | **REMAINING (11 files)** | | | |
-| 14 | c-programming.md | ⬜ pending | | 113 MCQs, 10 subtopics |
+| 14 | c-programming.md | ✅ done | 4 | data types/identifiers, escape sequences, arrays, pointer decls |
 | 15 | computer-fundamental.md | ⬜ pending | | 171 MCQs, 6 subtopics |
 | 16 | computer-network-security.md | ⬜ pending | | 70 MCQs, 8 subtopics |
 | 17 | computer-networks.md | ⬜ pending | | 340 MCQs, 13 subtopics — **largest IT file** |
@@ -75,7 +74,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 
 ## ▶ RESUME HERE
 
-**Next file: `c-programming.md`.**
+**Next file: `oop.md`.**
 
 The per-file loop:
 
