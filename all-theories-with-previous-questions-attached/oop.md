@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 15 theories
+**Table of Contents** — 10 subtopics · 17 theories
 
 1. **[OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism)**
    - [Object-Oriented Programming — Concepts and Principles](#object-oriented-programming--concepts-and-principles)
@@ -10,6 +10,8 @@
 2. **[Java Programming & Methods](#java-programming--methods)**
    - [Java — Architecture and Platform Independence](#java--architecture-and-platform-independence)
    - [Java Programming Patterns](#java-programming-patterns)
+   - [Java Language Essentials — Operators, Keywords, Wrapper Classes and Strings](#java-language-essentials--operators-keywords-wrapper-classes-and-strings)
+   - [Multithreading in Java — Thread, Runnable and the Thread Lifecycle](#multithreading-in-java--thread-runnable-and-the-thread-lifecycle)
 
 3. **[Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling)**
    - [Designing Classes — Worked Examples](#designing-classes--worked-examples)
@@ -211,6 +213,21 @@ flowchart LR
 - [What are the difference between Structure Programming and Objest Oriented Progrmamming?](../written-answers/oop.md?plain=1#L3962)
 - [Explain feature of OOP.](../written-answers/oop.md?plain=1#L4446)
 
+**Previous Year MCQ List from this Topic:**
+
+- [A collection of objects that use common structure and a common behavior is knownas-](../mcq-answers/oop.md?plain=1#L56)
+- [Which of the following is not property of the Object Oriented Programming Concept?](../mcq-answers/oop.md?plain=1#L649)
+- [Which is not the feature of JAVA OOP?](../mcq-answers/oop.md?plain=1#L667)
+- [Object Oriented programming এর বৈশিষ্ট্য কোনটি?](../mcq-answers/oop.md?plain=1#L676)
+- [Which one is pure object-oriented language?](../mcq-answers/oop.md?plain=1#L703)
+- [Which is not feature of object-oriented programming?](../mcq-answers/oop.md?plain=1#L712)
+- [Which is not a feature of object-oriented programming?](../mcq-answers/oop.md?plain=1#L721)
+- [Which one of the following is the core property of Object-Oriented Programming?](../mcq-answers/oop.md?plain=1#L730)
+- [In object Oriented Programming, a property can be accessed from ________](../mcq-answers/oop.md?plain=1#L739)
+- [Which of the following provides a programmer with the facility of using object of a class inside other classes?](../mcq-answers/oop.md?plain=1#L694)
+- [Which language is not support OOP four Inheritance feature?](../mcq-answers/oop.md?plain=1#L817)
+
+
 
 ---
 
@@ -347,6 +364,19 @@ s.display();      // The user calls area() WITHOUT KNOWING the formula inside
 - [What is Abstraction and Polymorphism expalin with example?](../written-answers/oop.md?plain=1#L1638)
 - [Which type of variable violates encapsulation rules?](../written-answers/oop.md?plain=1#L10977)
 - [Briefly Describe Abstraction, Encapsulation.](../written-answers/oop.md?plain=1#L11341)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?](../mcq-answers/oop.md?plain=1#L685)
+- [In object Oriented Programming, a property can be accessed from ________](../mcq-answers/oop.md?plain=1#L739)
+- [Which of the following does NOT achieve encapsulation?](../mcq-answers/oop.md?plain=1#L750)
+- [Which variable violates the principle of ecvapsulation?](../mcq-answers/oop.md?plain=1#L759)
+- [Which of the following is a technique for hiding the internal implementation details of an object?](../mcq-answers/oop.md?plain=1#L765)
+- [What is the characteristic of OOP programming that allows binding data and methods to work as a unit?](../mcq-answers/oop.md?plain=1#L774)
+- [Encapsulation এর মাধ্যমে object oriented programming এর কোন বৈশিষ্ট্যটি নিশ্চিত হয়?](../mcq-answers/oop.md?plain=1#L783)
+- [In C++, the idea to hiding the details of how something is implemented is known as](../mcq-answers/oop.md?plain=1#L788)
+- [In C++, the idea to hiding the details of how something is implemented is known as-](../mcq-answers/oop.md?plain=1#L797)
+
 
 
 ---
@@ -541,6 +571,22 @@ a = new Cat();  a.makeSound();     // "Meow!"
 - [Inheritance, Polymorphism and Encapsulation ব্যাখ্যা করুন।](../written-answers/oop.md?plain=1#L4103)
 - [What do you mean by Polymorphism and Inheritance in Object Oriented Programming (OOP)? Give appropriate example.](../written-answers/oop.md?plain=1#L4538)
 - [Consider a base class Shape and its derived class Rectangle. Design a code inheritance code using C++.](../written-answers/oop.md?plain=1#L4640)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following statements is/are true about Inheritance in Java?](../mcq-answers/oop.md?plain=1#L266)
+- [Which keyword must be used to inherit class in java?](../mcq-answers/oop.md?plain=1#L333)
+- [A class that is inherited in java is called a ________.](../mcq-answers/oop.md?plain=1#L342)
+- [Which of the keywords can be used in a subclass to call the constructor of superclass?](../mcq-answers/oop.md?plain=1#L432)
+- [A class that is inherited in java is called a ________.](../mcq-answers/oop.md?plain=1#L459)
+- [When a class serves as base class for many derived classes, the situation is called-](../mcq-answers/oop.md?plain=1#L808)
+- [Which language is not support OOP four Inheritance feature?](../mcq-answers/oop.md?plain=1#L817)
+- [Which type of members can't accessed in derived classes of a base class?](../mcq-answers/oop.md?plain=1#L826)
+- [What is default level of inheritance has to be specified in C++?](../mcq-answers/oop.md?plain=1#L832)
+- [A derived class inherits attributes from a-](../mcq-answers/oop.md?plain=1#L841)
+- [How to access the overridden method of base class from the derived class?](../mcq-answers/oop.md?plain=1#L850)
+- [Which of the following provides a programmer with the facility of using object of a class inside other classes?](../mcq-answers/oop.md?plain=1#L694)
+
 
 
 ---
@@ -739,6 +785,23 @@ int main() {
 - [Difference between method overloading and overriding in java.](../written-answers/oop.md?plain=1#L4781)
 - [What is polymorphism? What is the difference between method overriding and method overloading?](../written-answers/oop.md?plain=1#L4871)
 
+**Previous Year MCQ List from this Topic:**
+
+- [A feature of Object oriented programming languages that allows a specific routine to use variables of different types at different times, is called OOP?](../mcq-answers/oop.md?plain=1#L524)
+- [A function having more than one distinct meaning is called ______ function](../mcq-answers/oop.md?plain=1#L530)
+- [The feature in object-oriented programming that allows the same operation to be carried out differently, depending on the object, is-](../mcq-answers/oop.md?plain=1#L539)
+- [The most common use of ________ in OOP occurs when a parent class reference is used to refer to a child class object.](../mcq-answers/oop.md?plain=1#L548)
+- [Which operator that can be overloaded is?](../mcq-answers/oop.md?plain=1#L602)
+- [If same message is passed to objects of several different classes and all of those can respond in a different way, what is this feature called?](../mcq-answers/oop.md?plain=1#L620)
+- [What is the process of defining two or more methods within the same class that have same name but different parameters declaration?](../mcq-answers/oop.md?plain=1#L629)
+- [Overloaded functions are ________](../mcq-answers/oop.md?plain=1#L638)
+- [Which of the following operators should be preferred to overload as a global function rather than a member method?](../mcq-answers/oop.md?plain=1#L506)
+- [Which of the following operators cannot be overloaded in C/C++ ?](../mcq-answers/oop.md?plain=1#L515)
+- [The operator that cannot be overloaded is ________.](../mcq-answers/oop.md?plain=1#L566)
+- [Which functions overloads the ">>" operator?](../mcq-answers/oop.md?plain=1#L575)
+- [Which of the following operator functions cannot be global i.e. must be a member function?](../mcq-answers/oop.md?plain=1#L584)
+
+
 
 ---
 
@@ -896,6 +959,16 @@ Counter.showCount();      // "Objects created: 3"  ← called on the CLASS, not 
 - [(c) Why Java is called platform independent language?](../written-answers/oop.md?plain=1#L6268)
 - [Write the full form of following topics:](../written-answers/oop.md?plain=1#L6473)
 - [Discus architecture of Java virtual machine.](../written-answers/oop.md?plain=1#L6814)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is Java's machine code?](../mcq-answers/oop.md?plain=1#L38)
+- [Java Virtual Machine is-](../mcq-answers/oop.md?plain=1#L181)
+- [Which component is used to compile, debug and execute in Java program?](../mcq-answers/oop.md?plain=1#L405)
+- [Java source code is compiled into ________](../mcq-answers/oop.md?plain=1#L477)
+- [Which of the followings can be used in a Java Server Page (JSP) page?](../mcq-answers/oop.md?plain=1#L279)
+- [Which of the following is an incorrect statement about packages?](../mcq-answers/oop.md?plain=1#L387)
+
 
 
 ---
@@ -1156,6 +1229,317 @@ class OverdraftAccount extends BankAccount {
 - [Write a java program using 2D array and array output will be-](../written-answers/oop.md?plain=1#L6555)
 - [Write simple Java program to convert string into camel case and display camel case string.](../written-answers/oop.md?plain=1#L6698)
 
+---
+
+### Java Language Essentials — Operators, Keywords, Wrapper Classes and Strings
+
+#### ⭐ Java operators — and the one that does not exist
+
+| Category | Operators |
+|---|---|
+| **Arithmetic** | `+ - * / %` |
+| **Relational** | `== != > < >= <=` |
+| **Logical** | ⭐ **`&&` (logical AND), `\|\|` (logical OR), `!` (NOT)** |
+| **Bitwise** | ⭐ **`&` (bitwise AND), `\|`, `^`, `~`, `<< >> >>>`** |
+| **Assignment** | `= += -= *= /= %=` |
+| **Unary** | `++ -- + -` |
+| **Ternary** | `? :` |
+| **Object** | ⭐ **`new`** (create an object), **`instanceof`** (type test), `.` (member access) |
+| ⚠️ **NOT in Java** | ⭐ **`sizeof`** · `->` · the address-of `&` in the C sense · **pointer arithmetic** · **operator overloading** |
+
+> ### **"Which of the following is NOT an operator in Java?"** → ### ✅ **`sizeof`.**
+>
+> **Why Java has no `sizeof`:** primitive sizes are **fixed by the language specification** (an `int` is **always** 32 bits on every platform), so there is nothing to query — unlike C, where sizes are implementation-defined. Java also gives no direct memory access, so knowing an object's byte size would serve no purpose.
+
+> ### **"Which operator is used to CREATE an object in Java?"** → ### ✅ **`new`.**
+> ```java
+>    Box obj = new Box();      // ⭐ the ONE valid form:
+>    //  ↑      ↑    ↑          type  reference  new + constructor call
+> ```
+> ⚠️ **Several questions in this bank answer "None of these" to this very question** — that happens when the printed options omit `new` (offering `create`, `make`, `object` instead). **The correct operator is unambiguously `new`; answer "None of these" only if `new` genuinely is not among the options.**
+
+> ### **"`Class`, `&&` and `&` in Java"** → ### ✅ **`class` is a KEYWORD used to define a new class; `&&` is the LOGICAL AND; `&` is the BITWISE AND.**
+>
+> | | ⭐ **`&&` — logical** | ⭐ **`&` — bitwise** |
+> |---|---|---|
+> | **Operands** | `boolean` only | Integers **or** booleans |
+> | ⭐ **Short-circuits?** | ⭐ **YES** — if the left side is `false`, the **right side is never evaluated** | ❌ **NO** — **both sides are always evaluated** |
+> | **Typical use** | `if (p != null && p.size() > 0)` — the null check protects the second test | Bit masking: `flags & MASK` |
+>
+> ⭐ **Short-circuiting is not a mere optimisation — it is a correctness feature.** `if (p != null & p.size() > 0)` would evaluate `p.size()` even when `p` is null, throwing a `NullPointerException`.
+
+#### The Java keywords
+
+```
+   abstract  assert    boolean   break     byte      case      catch     char
+   class     const     continue  default   do        double    else      enum
+   extends   final     finally   float     for       goto      if        implements
+   import    instanceof int      interface long      native    new       package
+   private   protected public    return    short     static    strictfp  super
+   switch    synchronized this   throw     throws    transient try       void
+   volatile  while
+```
+> ### **"Which list contains ONLY Java keywords?"** → ### ✅ **`class, if, void, long, int, continue`.**
+>
+> ⚠️ **Common non-keywords that look like keywords: `main`, `String`, `System`, `println`, `null`, `true`, `false`.** *(`null`, `true` and `false` are **literals**, not keywords; `String` and `System` are **classes**.)* **`goto` and `const` are RESERVED but UNUSED** — you may not use them as identifiers, yet they do nothing.
+
+> ### **"Which statement is NOT true for Java?"** → ### ✅ **"The number 1 can be used instead of the keyword `true`."**
+> **Java is strictly type-safe about booleans:** `if (1)` is a **compile error**. A condition must be a genuine `boolean`. *(In C and C++ any non-zero value is true — that is exactly the difference being tested.)*
+
+#### ⭐ Wrapper classes, Boxing and Unboxing
+
+> ### **A WRAPPER CLASS wraps a PRIMITIVE type in an OBJECT**, so it can be used where only objects are allowed — in collections, generics and as `null`.
+
+| Primitive | Wrapper class | | Primitive | Wrapper class |
+|---|---|---|---|---|
+| `byte` | **Byte** | | `boolean` | **Boolean** |
+| `short` | **Short** | | `char` | ⭐ **Character** |
+| `int` | ⭐ **Integer** | | `float` | **Float** |
+| `long` | **Long** | | `double` | **Double** |
+
+> ### **"Converting a primitive type into its corresponding wrapper class object instance is called…"** → ### ✅ **BOXING.**
+
+```java
+   int    n  = 42;
+   Integer o = Integer.valueOf(n);   // BOXING   — explicit
+   Integer p = n;                    // ⭐ AUTOBOXING   — automatic (Java 5+)
+
+   Integer q = 100;
+   int    r  = q.intValue();         // UNBOXING — explicit
+   int    s  = q;                    // ⭐ AUTO-UNBOXING — automatic
+
+   List<Integer> list = new ArrayList<>();
+   list.add(5);                      // autoboxed: int 5 → Integer
+```
+
+| Term | Direction |
+|---|---|
+| ⭐ **BOXING** | ⭐ **Primitive → Wrapper OBJECT** |
+| ⭐ **UNBOXING** | **Wrapper object → Primitive** |
+| **Autoboxing / auto-unboxing** | The compiler inserts the conversion **automatically** |
+
+**Why wrapper classes are needed:** **collections store only objects** (`List<int>` is illegal, `List<Integer>` is not) · they allow **`null`** to mean "no value" · they provide **utility methods** (`Integer.parseInt`, `Integer.MAX_VALUE`, `Character.isDigit`) · and **generics work only with reference types**.
+
+> ⚠️ **Two traps:** **auto-unboxing a `null` wrapper throws a `NullPointerException`**; and **`==` on wrappers compares REFERENCES, not values** — though Java caches Integers in the range **−128 to 127**, so `Integer a=100, b=100; a==b` is `true` while `a=200, b=200; a==b` is **`false`**. **Always use `.equals()`.**
+
+#### ⭐ String comparison — the most examined Java trap
+
+| Expression | Compares | Use it for |
+|---|---|---|
+| ⚠️ **`str1 == str2`** | ⭐ **The REFERENCES — whether they are the SAME OBJECT** | **Never** for string content |
+| ⭐ **`str1.equals(str2)`** | ⭐ **The CONTENT, case-SENSITIVE** | Normal comparison |
+| ⭐ **`str1.equalsIgnoreCase(str2)`** | ⭐ **The CONTENT, IGNORING CASE** | ⭐ **Case-insensitive comparison** |
+| `str1.compareTo(str2)` | Lexicographic order; returns <0, 0, >0 | Sorting |
+
+> ### **"Which is used for comparing whether two String objects str1 and str2 are the same, ignoring case?"** → ### ✅ **`str1.equalsIgnoreCase(str2)`.**
+
+```java
+   String a = "Hello";
+   String b = "Hello";
+   String c = new String("Hello");
+   String d = "HELLO";
+
+   a == b                     // true  — both point to the SAME interned literal
+   a == c                     // ⚠️ FALSE — 'new' forced a separate object
+   a.equals(c)                // ✅ true  — same content
+   a.equals(d)                // false — case differs
+   a.equalsIgnoreCase(d)      // ✅ true
+```
+
+> **Why `==` sometimes appears to work: the STRING POOL.** Identical string **literals** are interned and share one object, so `a == b` is true — which lulls beginners into using `==`, until a string arrives from user input or `new`, and the comparison silently fails. ⭐ **Rule: use `==` for primitives and for reference identity; use `.equals()` for object content.**
+
+**Strings are IMMUTABLE in Java** — every "modification" creates a new object. For repeated concatenation use **`StringBuilder`** (fast, not thread-safe) or **`StringBuffer`** (thread-safe).
+
+#### Char arithmetic and Math methods
+
+```java
+   System.out.print('D' + 'E' + 'F');     // ⭐ 207, NOT "DEF"
+```
+> ### ✅ **207** — because **`char` is promoted to `int` in arithmetic**, and `'D'=68, 'E'=69, 'F'=70`, giving **68+69+70 = 207**. *(To concatenate them as text you must start with a String: `"" + 'D' + 'E' + 'F'` gives `"DEF"`.)*
+
+```java
+   System.out.println(Math.floor(-7.4));   // ⭐ -8.0
+   System.out.println(Math.ceil(-7.4));    // -7.0
+   (int) Math.floor(d)                     // ⭐ the largest int not greater than d
+```
+> ### **`Math.floor(-7.4)` → −8.0**, because **floor rounds toward NEGATIVE INFINITY**, not toward zero. *(A plain cast `(int)(-7.4)` truncates toward zero and gives **−7** — a different answer, which is why the "closest value to a double d while not being greater than d" is **`(int) Math.floor(d)`**.)*
+
+```java
+   int C = 10;
+   System.out.println(C--);    // ⭐ prints 10, THEN C becomes 9
+   System.out.println(--C);    // would print 8
+```
+> ### **`C--` is POST-decrement: the ORIGINAL value is used in the expression, and the variable is decremented afterwards.** ✅ **Output: 10.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following correctly describes the meaning of "Class", "&&", and "&" in Java?](../mcq-answers/oop.md?plain=1#L29)
+- [Find the correct output: System.out.print('D' + 'E'+ 'F');](../mcq-answers/oop.md?plain=1#L158)
+- [Converting a primitive type data into its corresponding wrapper class object instance is called-](../mcq-answers/oop.md?plain=1#L228)
+- [Which of the following statements is not true for Java Language?](../mcq-answers/oop.md?plain=1#L288)
+- [Find the output of following Java code line: System.out.println (math.floor (-7.4)](../mcq-answers/oop.md?plain=1#L297)
+- [Which of the following is not an operator in Java?](../mcq-answers/oop.md?plain=1#L306)
+- [In Java, which operator is used to create an object?](../mcq-answers/oop.md?plain=1#L315)
+- [Which of the following produce an answer that is closest in value to a double, d, while not being greater than d?](../mcq-answers/oop.md?plain=1#L324)
+- [In java, which operator is used to create an object?](../mcq-answers/oop.md?plain=1#L360)
+- [In java, which one will be used for comprising whether the two String object str1 and str2 are same?](../mcq-answers/oop.md?plain=1#L369)
+- [int C=10; System.out.println(C--); gives a output of-](../mcq-answers/oop.md?plain=1#L414)
+- [In java, which operator is used to create an object?](../mcq-answers/oop.md?plain=1#L423)
+- [Which of the following is a valid declaration of an object of class Box?](../mcq-answers/oop.md?plain=1#L441)
+- [In Java, which operator is used to create an object-](../mcq-answers/oop.md?plain=1#L450)
+- [In Java, which operator is used to create an object?](../mcq-answers/oop.md?plain=1#L468)
+- [Which one of these lists contains only Java programming language keywords?](../mcq-answers/oop.md?plain=1#L486)
+
+
+---
+
+### Multithreading in Java — Thread, Runnable and the Thread Lifecycle
+
+> **A THREAD is the smallest unit of execution within a process.** **MULTITHREADING lets a single program perform several tasks concurrently**, sharing the same memory space — which makes it far cheaper than running several processes.
+
+#### ⭐ The two ways to create a thread
+
+| Method | How | Trade-off |
+|---|---|---|
+| **1. EXTEND `Thread`** | `class MyTask extends Thread { public void run() {…} }` | ⚠️ Uses up the **single inheritance slot** — the class can extend nothing else |
+| ⭐ **2. IMPLEMENT `Runnable`** | ⭐ **`class MyTask implements Runnable { public void run() {…} }`** | ✅ **PREFERRED** — the class remains free to extend another class, and it separates the *task* from the *thread* |
+
+```java
+// ⭐ The preferred approach — implement Runnable
+class Downloader implements Runnable {
+    public void run() {                     // ⭐ the ONLY method Runnable requires
+        System.out.println("running in " + Thread.currentThread().getName());
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        Thread t = new Thread(new Downloader());
+        t.start();          // ⭐ start() — creates a NEW thread, which then calls run()
+        // t.run();         // ⚠️ WRONG — this just calls run() on the CURRENT thread
+    }
+}
+```
+
+> ### **"Which method MUST be defined by a class implementing `java.lang.Runnable`?"** → ### ✅ **`public void run()`.**
+>
+> **`Runnable` is a FUNCTIONAL INTERFACE with exactly one method — `run()`** — which is also why it can be written as a lambda: `new Thread(() -> System.out.println("hi")).start();`
+
+> ### **"Which interface is implemented by the `Thread` class?"** → ### ✅ **`Runnable`.**
+>
+> That is precisely why a `Thread` object can itself be passed wherever a `Runnable` is expected.
+
+> ### ⚠️ **`start()` vs `run()` — the single most important distinction:**
+> | | ⭐ **`start()`** | ⚠️ **`run()`** |
+> |---|---|---|
+> | **Effect** | **Creates a NEW thread of execution**, which then invokes `run()` | **Executes `run()` on the CURRENT thread** — an ordinary method call |
+> | **Concurrency** | ✅ **Yes — genuinely parallel** | ❌ **None — completely sequential** |
+> | **Can be called twice?** | ❌ No — throws `IllegalThreadStateException` | ✅ Yes, like any method |
+>
+> **Calling `run()` directly is the classic beginner bug: the program compiles, runs and produces correct output — with no multithreading whatsoever.**
+
+#### The methods of the Thread class
+
+| Method | Purpose |
+|---|---|
+| ⭐ **`start()`** | Begin execution in a new thread |
+| ⭐ **`run()`** | The thread's body (overridden) |
+| ⭐ **`sleep(ms)`** | **static** — pause the current thread; **keeps its locks** |
+| ⭐ **`join()`** | Wait for another thread to finish |
+| **`interrupt()`** | Request that a thread stop waiting |
+| **`isAlive()`** | Has it started and not yet finished? |
+| **`setPriority(n)` / `getPriority()`** | 1 (MIN) … 10 (MAX), default 5 |
+| **`setName()` / `getName()`** | |
+| **`yield()`** | **static** — hint that the scheduler may run another thread |
+| **`currentThread()`** | **static** — a reference to the running thread |
+| ⚠️ **Deprecated** | `stop()`, `suspend()`, `resume()` — unsafe, they can leave data corrupted |
+| ⚠️ **NOT a method** | ⭐ **`go()`** — does not exist |
+
+> ### **"Which of the following is NOT a method of the Thread class?"** → ### ✅ **`go()`.**
+
+#### The thread lifecycle
+
+```mermaid
+stateDiagram-v2
+    [*] --> New : Thread t = new Thread()
+    New --> Runnable : t.start()
+    Runnable --> Running : the SCHEDULER picks it
+    Running --> Runnable : yield() / time slice ends
+    Running --> Blocked : waiting for a LOCK
+    Running --> Waiting : wait() / join()
+    Running --> TimedWaiting : sleep(ms)
+    Blocked --> Runnable : lock acquired
+    Waiting --> Runnable : notify() / notifyAll()
+    TimedWaiting --> Runnable : time elapsed
+    Running --> Terminated : run() returns
+    Terminated --> [*]
+```
+
+| State | Meaning |
+|---|---|
+| **NEW** | Created but `start()` not yet called |
+| **RUNNABLE** | Ready to run, waiting for CPU time |
+| **RUNNING** | Currently executing |
+| **BLOCKED** | Waiting to acquire a monitor lock |
+| **WAITING / TIMED_WAITING** | `wait()`, `join()` / `sleep(ms)` |
+| **TERMINATED (Dead)** | `run()` has completed |
+
+#### Synchronization — why it is needed
+
+> **Threads share memory, so two threads updating the same variable can interleave and corrupt it** — the **race condition**. Java's tool is the **`synchronized`** keyword, which enforces **mutual exclusion** on an object's monitor.
+
+```java
+   class Counter {
+       private int count = 0;
+       public synchronized void increment() {   // ⭐ only ONE thread at a time
+           count++;                             // (not atomic without this)
+       }
+   }
+```
+
+| Tool | Purpose |
+|---|---|
+| ⭐ **`synchronized` method / block** | Mutual exclusion on an object's monitor |
+| **`volatile`** | Guarantees **visibility** of a variable across threads (but **not** atomicity) |
+| **`wait()` / `notify()` / `notifyAll()`** | Coordination between threads |
+| **`java.util.concurrent`** | `ExecutorService`, `AtomicInteger`, `ConcurrentHashMap`, `CountDownLatch` — **the modern, preferred toolkit** |
+
+> ⚠️ **Multithreaded programs are MORE PRONE TO DEADLOCK**, because two threads can each hold a lock the other needs. The standard preventions are **acquiring locks in a consistent global order**, using **timeouts** (`tryLock`), and keeping critical sections short.
+
+#### Advantages and disadvantages
+
+| ✅ **Advantages** | ⚠️ **Disadvantages** |
+|---|---|
+| **Better CPU utilisation** — one thread computes while another waits for I/O | ⭐ **DIFFICULTY IN MANAGING CONCURRENCY** — race conditions, deadlock, starvation |
+| **Responsive user interfaces** — long work moves off the UI thread | **Hard to debug and test** — bugs are timing-dependent and often unreproducible |
+| **Cheaper than processes** — threads share memory, so creation and switching are fast | **Synchronization overhead**, and contention can make code *slower* |
+| Natural fit for servers handling many clients | Increased design complexity |
+
+> ### **"What is the disadvantage of multithreading?"** → ### ✅ **THE DIFFICULTY IN MANAGING CONCURRENCY.**
+
+#### Two related facts
+
+> ### **"Which data structure does the operating system use to manage RECURSION in Java?"** → ### ✅ **A STACK** — the **call stack**. Each method call pushes a **stack frame** holding its parameters, local variables and return address; returning pops it. **Each thread has its OWN stack**, which is why recursion depth is per-thread and why runaway recursion raises a **`StackOverflowError`**.
+>
+> ### **"Which component is used to compile, debug and execute a Java program?"** → ### ✅ **The JDK (Java Development Kit).**
+> ```
+>    JDK  =  JRE  +  development tools (javac, jdb, javadoc, jar)     ← to DEVELOP
+>    JRE  =  JVM  +  standard class libraries                         ← to RUN
+>    JVM  =  the execution engine that runs BYTECODE                  ← the core
+> ```
+> **Java source (`.java`) → `javac` → BYTECODE (`.class`) → JVM → native machine code.** The bytecode is what makes Java platform-independent: **"Write Once, Run Anywhere."**
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is not a method of the Thread class?](../mcq-answers/oop.md?plain=1#L190)
+- [Which one of these interfaces is implemented by thread class?](../mcq-answers/oop.md?plain=1#L351)
+- [Which of these data types is used by operating system to manage the Recursion in Java?](../mcq-answers/oop.md?plain=1#L378)
+- [Which method must be defined by a class implementing java.lang.Runnable interface?](../mcq-answers/oop.md?plain=1#L495)
+- [What does runFinalize() do?](../mcq-answers/oop.md?plain=1#L152)
+
+
+
+
 
 ---
 
@@ -1415,6 +1799,16 @@ class CurrentAccount extends Account {
 - [There was a java program where you have to create a class, constructor, setter function, getter function.](../written-answers/oop.md?plain=1#L8014)
 - [In java language: write a class named Bicycle having 3 integer variables (speed, gear, cost) and a constructor to initialize the variables. Also write a class n…](../written-answers/oop.md?plain=1#L8155)
 
+**Previous Year MCQ List from this Topic:**
+
+- [What type of variable should be used to store data that is important throughout an object's lifespan?](../mcq-answers/oop.md?plain=1#L47)
+- [A collection of objects that use common structure and a common behavior is knownas-](../mcq-answers/oop.md?plain=1#L56)
+- [Read the following statement in a Java program that compiles and executes-](../mcq-answers/oop.md?plain=1#L84)
+- [What are the inbuit classes?](../mcq-answers/oop.md?plain=1#L140)
+- [What is syntax for call static method in class?](../mcq-answers/oop.md?plain=1#L146)
+- [Which of the following is a valid declaration of an object of class Box?](../mcq-answers/oop.md?plain=1#L441)
+
+
 
 ---
 
@@ -1546,6 +1940,19 @@ int main() {
 - [Differentiate constructor and destructor with example.](../written-answers/oop.md?plain=1#L10540)
 - [What is main difference Destructor and constructor with example?](../written-answers/oop.md?plain=1#L10660)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which information is not correct for any constructor of a java class?](../mcq-answers/oop.md?plain=1#L237)
+- [Which of the following is the destructor of class Vehicle?](../mcq-answers/oop.md?plain=1#L557)
+- [Which of the following is the destructor for class “vehicle”?](../mcq-answers/oop.md?plain=1#L593)
+- [Which of the following is true regarding a constructor in Object Oriented Programming?](../mcq-answers/oop.md?plain=1#L861)
+- [A constructor is a special type of-](../mcq-answers/oop.md?plain=1#L870)
+- [Which part of a class is invoked when an object is initialized in java?](../mcq-answers/oop.md?plain=1#L879)
+- [Which operator is used to declare the destructor in C++?](../mcq-answers/oop.md?plain=1#L888)
+- [Object being passed to a copy constructor-](../mcq-answers/oop.md?plain=1#L897)
+- [Does constructor overloading include different return types for constructors to be overloaded?](../mcq-answers/oop.md?plain=1#L906)
+
+
 
 ---
 
@@ -1633,6 +2040,14 @@ class Employee {
 - [What are the various Access Specification in C++? Explain their purpose with are example.](../written-answers/oop.md?plain=1#L11143)
 - [How many specifiers are used in C++ programing?](../written-answers/oop.md?plain=1#L11270)
 - [Briefly Describe Abstraction, Encapsulation.](../written-answers/oop.md?plain=1#L11341)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following does NOT achieve encapsulation?](../mcq-answers/oop.md?plain=1#L750)
+- [Which variable violates the principle of ecvapsulation?](../mcq-answers/oop.md?plain=1#L759)
+- [Which type of members can't accessed in derived classes of a base class?](../mcq-answers/oop.md?plain=1#L826)
+- [In object Oriented Programming, a property can be accessed from ________](../mcq-answers/oop.md?plain=1#L739)
+
 
 
 ---
@@ -1787,6 +2202,17 @@ catch (IOException e) {
 - [What is difference between exception and error in Java?](../written-answers/oop.md?plain=1#L11549)
 - [What is exception handling? Write with an example.](../written-answers/oop.md?plain=1#L11642)
 - [Write the difference between throw and throws using Exception handling?](../written-answers/oop.md?plain=1#L11808)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The statements that allows you to define a block of code to be tested for exceptions while it is being executed.](../mcq-answers/oop.md?plain=1#L917)
+- [The ________ block used to execute a given set of the statement whether the exception is thrown or not.](../mcq-answers/oop.md?plain=1#L923)
+- [Java uses a keyword ________ to preface a block of code that is likely to cause an error condition and ‘throw’ an exception.](../mcq-answers/oop.md?plain=1#L932)
+- [Which of the following method(s) not included in InputStream class?](../mcq-answers/oop.md?plain=1#L941)
+- [Which alternative can replace the throw statement in C++?](../mcq-answers/oop.md?plain=1#L950)
+- [Why do you need to handle exceptions?](../mcq-answers/oop.md?plain=1#L959)
+- [Which of the following is not property of the Object Oriented Programming Concept?](../mcq-answers/oop.md?plain=1#L649)
+
 
 
 ---
@@ -2043,6 +2469,17 @@ class Circle implements Drawable, Resizable {
 - [Class/Interface implementation of code?](../written-answers/oop.md?plain=1#L12208)
 - [An Abstract class Player with two sub classes Bowler and Batsman, Abstract class has one abstract method average, also have constructor and a string function th…](../written-answers/oop.md?plain=1#L12344)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following statements about abstract classes and interfaces in Java is correct?](../mcq-answers/oop.md?plain=1#L20)
+- [Interfaces in Java are meant to be-](../mcq-answers/oop.md?plain=1#L114)
+- [Which of the following statements is correct regarding abstract classes?](../mcq-answers/oop.md?plain=1#L199)
+- [Multiple inheritances in Java can be implemented using which of the following?](../mcq-answers/oop.md?plain=1#L396)
+- [How many instances of an abstract can be created?](../mcq-answers/oop.md?plain=1#L611)
+- [Which is not the feature of JAVA OOP?](../mcq-answers/oop.md?plain=1#L667)
+- [Which of the following modifiers cannot be applied to a method in C++?](../mcq-answers/oop.md?plain=1#L658)
+
+
 
 ## OOP Concepts (Inheritance, Polymorphism, Encapsulation)
 
@@ -2176,6 +2613,13 @@ public class Payroll {
 - [Answer the following Questions](../written-answers/oop.md?plain=1#L8536)
 - [What is polymorphism in the context of OOP? Explain with example.](../written-answers/oop.md?plain=1#L8569)
 - [Write down the concept about inheritance with example.](../written-answers/oop.md?plain=1#L8606)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one of the following is the core property of Object-Oriented Programming?](../mcq-answers/oop.md?plain=1#L730)
+- [Object Oriented programming এর বৈশিষ্ট্য কোনটি?](../mcq-answers/oop.md?plain=1#L676)
+- [Which one is pure object-oriented language?](../mcq-answers/oop.md?plain=1#L703)
+
 
 
 ---
@@ -2375,6 +2819,19 @@ public class Test {
 - [Consider the following program and perform the task that follow:](../written-answers/oop.md?plain=1#L9584)
 - [You are required to trace the changes in value for each of the numbers, before and after each method are called for each of iterations and finally write down ou…](../written-answers/oop.md?plain=1#L9760)
 
+**Previous Year MCQ List from this Topic:**
+
+- [The following method, which is intended to find the maximum element of the parameter array, is incorrect.](../mcq-answers/oop.md?plain=1#L65)
+- [What is the output of this Java program?](../mcq-answers/oop.md?plain=1#L94)
+- [What is the result of compiling and running the following code?](../mcq-answers/oop.md?plain=1#L123)
+- [Find the correct output: System.out.print('D' + 'E'+ 'F');](../mcq-answers/oop.md?plain=1#L158)
+- [Find the output of the following code:](../mcq-answers/oop.md?plain=1#L167)
+- [What is the output of this Java program?](../mcq-answers/oop.md?plain=1#L208)
+- [What is the output of this Java program?](../mcq-answers/oop.md?plain=1#L246)
+- [Find the output of following Java code line: System.out.println (math.floor (-7.4)](../mcq-answers/oop.md?plain=1#L297)
+- [int C=10; System.out.println(C--); gives a output of-](../mcq-answers/oop.md?plain=1#L414)
+
+
 
 ---
 
@@ -2500,3 +2957,7 @@ class LinkedList {
 - [Consider the following Java program and determine the integer value printed by the execution of the main() method:](../written-answers/oop.md?plain=1#L8652)
 - [6.13 Consider the following Java program and determine the integer value printed by the execution of the main() method:](../written-answers/oop.md?plain=1#L8902)
 - [You are required to trace the changes in value for each of the numbers, before and after each method are called for each of iterations and finally write down ou…](../written-answers/oop.md?plain=1#L9760)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of these data types is used by operating system to manage the Recursion in Java?](../mcq-answers/oop.md?plain=1#L378)
