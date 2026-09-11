@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 32 theories
+**Table of Contents** — 10 subtopics · 36 theories
 
 1. **[Basic Programs & Control Statements](#basic-programs--control-statements)**
    - [C Program Structure and the Compilation Process](#c-program-structure-and-the-compilation-process)
@@ -28,6 +28,8 @@
    - [Variables, Scope, Lifetime and Storage Classes](#variables-scope-lifetime-and-storage-classes)
    - [Structure, Union and Array — Differences](#structure-union-and-array--differences)
    - [Types of Errors in Programming](#types-of-errors-in-programming)
+   - [C Data Types, Identifiers, Constants and Naming Conventions](#c-data-types-identifiers-constants-and-naming-conventions)
+   - [Escape Sequences, Errors and the C Standard Library Headers](#escape-sequences-errors-and-the-c-standard-library-headers)
 
 5. **[Flowcharts & Algorithms](#flowcharts--algorithms)**
    - [Algorithm — Definition and Ways of Expressing It](#algorithm--definition-and-ways-of-expressing-it)
@@ -47,9 +49,13 @@
    - [Pointers in C — Concept and Advantages](#pointers-in-c--concept-and-advantages)
    - [Dynamic Memory Allocation](#dynamic-memory-allocation)
    - [Array vs Pointer](#array-vs-pointer)
+   - [Complex Pointer Declarations — Pointer to Array vs Array of Pointers](#complex-pointer-declarations--pointer-to-array-vs-array-of-pointers)
 
 9. **[Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs)**
    - [Command Line Arguments in C](#command-line-arguments-in-c)
+
+10. **[Arrays & Functions](#arrays--functions)**
+   - [Arrays — Indexing, Bounds, 2-D Arrays and Passing to Functions](#arrays--indexing-bounds-2-d-arrays-and-passing-to-functions)
 
 <!-- TOC END -->
 
@@ -265,6 +271,14 @@ switch (ch) {
 - [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9416)
 - [(c) Is it possible to convert all if-else code into switch code block? Give an example.](../written-answers/c-programming.md?plain=1#L9516)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following cannot be checked in a switch-case statement?](../mcq-answers/c-programming.md?plain=1#L647)
+- [C programming language এ নিচের কোনটিকে "if" দিয়ে Replace করা যায়?](../mcq-answers/c-programming.md?plain=1#L920)
+- [Find out the error in following block of code: if (x=100) cout<<"x is 100";](../mcq-answers/c-programming.md?plain=1#L1111)
+- [What will be the output of the following C code?](../mcq-answers/c-programming.md?plain=1#L79)
+
+
 
 ---
 
@@ -410,6 +424,23 @@ for (i = 1; i <= 10; i++) {
 - [Explain in details the different forms of looping statement in C language.](../written-answers/c-programming.md?plain=1#L9596)
 - [Three types of control statements and their graphical presentation using flowchart or flow graph.](../written-answers/c-programming.md?plain=1#L10010)
 - [(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L10041)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following statements about the "do while" loop is correct?](../mcq-answers/c-programming.md?plain=1#L578)
+- [Which for loop has range of similar indexes of 'i' used in for (i = 0; i < n; i++)?](../mcq-answers/c-programming.md?plain=1#L587)
+- [Consider int i=0; Then which of the following is not an infinite loop?](../mcq-answers/c-programming.md?plain=1#L596)
+- [Which keyword is used to skip the rest of a loop and carry on from the top of the loop again?](../mcq-answers/c-programming.md?plain=1#L605)
+- [What can be used to terminate for(;;)?](../mcq-answers/c-programming.md?plain=1#L614)
+- [The ________ loop is especially useful when you process a menu selection?](../mcq-answers/c-programming.md?plain=1#L620)
+- [C programming Language এ কোনো loop থেকে তৎক্ষণাৎ বের করার জন্য উল্লেখিত কোনটি ব্যবহৃত হয়?](../mcq-answers/c-programming.md?plain=1#L629)
+- [Which Control statement can be executed at least once?](../mcq-answers/c-programming.md?plain=1#L638)
+- [Which control statement can be executed at least once?](../mcq-answers/c-programming.md?plain=1#L656)
+- [What is an example of iteration in C?](../mcq-answers/c-programming.md?plain=1#L691)
+- [How many times will loop iterate?](../mcq-answers/c-programming.md?plain=1#L222)
+- [Which for loop statement is invalid?](../mcq-answers/c-programming.md?plain=1#L451)
+- [Which for loop has range of similar indexes of ‘i’ used in for(i=0; i<n; i++)?( for(i=0; i<n; i++) লুপের সমান ইনডেক্স রেঞ্জ নিচের কোন লুপটিতে ব্যবহৃত হয়েছে? )](../mcq-answers/c-programming.md?plain=1#L1180)
+
 
 
 ---
@@ -592,6 +623,18 @@ if (q != r) {
 - [Write a program that read n number string and print these strings in ascending order.](../written-answers/c-programming.md?plain=1#L3974)
 - [Write a C program that performs this matrices problem. Calculate and display the sum of the elements on the main diagonal and the sum of the elements on the ant…](../written-answers/c-programming.md?plain=1#L4172)
 - [What will occur when an array is declared without size?](../written-answers/c-programming.md?plain=1#L8914)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following correctly accesses the seventh element stored in arr, an array with 100 elements?](../mcq-answers/c-programming.md?plain=1#L747)
+- [Assuming an int is of 4 bytes, What is the size of “int array(15)”?](../mcq-answers/c-programming.md?plain=1#L765)
+- [Which of the following is correct to initialize arrays in C?](../mcq-answers/c-programming.md?plain=1#L783)
+- [What is the access methodology in array?](../mcq-answers/c-programming.md?plain=1#L792)
+- [An n*n array v is defined as follows: v(i, j)=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is](../mcq-answers/c-programming.md?plain=1#L810)
+- [int number () = {10,20,30,40,50}; number(3) =?](../mcq-answers/c-programming.md?plain=1#L828)
+- [Two dimensional arrays are also called?](../mcq-answers/c-programming.md?plain=1#L837)
+- [The smallest element of array index is called it-](../mcq-answers/c-programming.md?plain=1#L846)
+
 
 
 ---
@@ -1071,6 +1114,27 @@ int main() {
 - [What is the output of following program?](../written-answers/c-programming.md?plain=1#L6619)
 - [Find the output of following program.](../written-answers/c-programming.md?plain=1#L6742)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Find Output:](../mcq-answers/c-programming.md?plain=1#L23)
+- [Find Output:](../mcq-answers/c-programming.md?plain=1#L43)
+- [What will be the output of the following C code?](../mcq-answers/c-programming.md?plain=1#L63)
+- [What will be the output of the following C code?](../mcq-answers/c-programming.md?plain=1#L96)
+- [What will be the output of the following C code?](../mcq-answers/c-programming.md?plain=1#L134)
+- [What will be the output of the following C code?](../mcq-answers/c-programming.md?plain=1#L151)
+- [What will be the output of this C program?](../mcq-answers/c-programming.md?plain=1#L167)
+- [Given Output:](../mcq-answers/c-programming.md?plain=1#L204)
+- [What will be the output of the following “C” code fragment?](../mcq-answers/c-programming.md?plain=1#L228)
+- [Which is the correct output?](../mcq-answers/c-programming.md?plain=1#L296)
+- [Which is correct output?](../mcq-answers/c-programming.md?plain=1#L308)
+- [Find the correct output:](../mcq-answers/c-programming.md?plain=1#L320)
+- [What is the correct output of the following C program statements?](../mcq-answers/c-programming.md?plain=1#L333)
+- [What is the output for the following C code segment?](../mcq-answers/c-programming.md?plain=1#L346)
+- [Which is the correct output?](../mcq-answers/c-programming.md?plain=1#L469)
+- [What will be the output of this C program?](../mcq-answers/c-programming.md?plain=1#L498)
+- [Find output in C- Program:](../mcq-answers/c-programming.md?plain=1#L544)
+
+
 
 ---
 
@@ -1156,6 +1220,18 @@ if (1 || i++) ;               /* i++ NEVER runs → i stays 0  */
 - [Output of the following program:](../written-answers/c-programming.md?plain=1#L5525)
 - [Which of the following is the correct order of evaluation?](../written-answers/c-programming.md?plain=1#L9490)
 
+**Previous Year MCQ List from this Topic:**
+
+- [What is the precedence of arithmetic operators (from highest to lowest)?](../mcq-answers/c-programming.md?plain=1#L1057)
+- [Which is logical operator?](../mcq-answers/c-programming.md?plain=1#L1066)
+- [Which keyword is used in C language?](../mcq-answers/c-programming.md?plain=1#L1102)
+- [Find out the error in following block of code: if (x=100) cout<<"x is 100";](../mcq-answers/c-programming.md?plain=1#L1111)
+- [Which of the following is not a logical operator?](../mcq-answers/c-programming.md?plain=1#L1120)
+- [For a given integer, which of the following operators can be used to set and reset a particular bit respectively?](../mcq-answers/c-programming.md?plain=1#L1039)
+- [Which of the following correctly shows the hierarchy of algorithm operation in C?](../mcq-answers/c-programming.md?plain=1#L665)
+- [Which of the following correctly shows the hierarchy of algorithm operation in C?](../mcq-answers/c-programming.md?plain=1#L992)
+
+
 
 ---
 
@@ -1235,6 +1311,15 @@ printf("%d", arr[++i]);      /* i = 3 first, prints arr[3] = 40 */
 - [(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L8994)
 - [Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Contro…](../written-answers/c-programming.md?plain=1#L9260)
 - [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9416)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What will be the output of the following C code?](../mcq-answers/c-programming.md?plain=1#L96)
+- [What will be the output of the following C code?](../mcq-answers/c-programming.md?plain=1#L151)
+- [What is the correct output of the following C program statements?](../mcq-answers/c-programming.md?plain=1#L333)
+- [What are the final values of a and c in the following C statement? (initialize value a=2, c=1) c=c? c=2:a=0;](../mcq-answers/c-programming.md?plain=1#L709)
+- [Which of the following will not increase the value of variable c by 1?](../mcq-answers/c-programming.md?plain=1#L1075)
+
 
 
 ---
@@ -1333,6 +1418,15 @@ if (fabs(a - 0.3) < 1e-6) printf("Equal");   /* ✅ the CORRECT way */
 - [(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?](../written-answers/c-programming.md?plain=1#L8974)
 - [Write some default data type in C.](../written-answers/c-programming.md?plain=1#L9217)
 - [Using examples explain data types used in C language.](../written-answers/c-programming.md?plain=1#L9558)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What will be the output of the following C code?](../mcq-answers/c-programming.md?plain=1#L63)
+- [What is the output for the following C code segment?](../mcq-answers/c-programming.md?plain=1#L346)
+- [What will be the output of following code?](../mcq-answers/c-programming.md?plain=1#L426)
+- [What is the minimum value that can be stored accurately in a 32-bit signed integer of C programming language?](../mcq-answers/c-programming.md?plain=1#L875)
+- [What is the maximum value that can be stored in a 32-bit signed integer of C language?](../mcq-answers/c-programming.md?plain=1#L884)
+
 
 
 ---
@@ -1509,6 +1603,19 @@ printf("%zu\n", sizeof(c + 1));     /* sizeof(int) = 4 — c is PROMOTED to int 
 - [What is the difference between Null and Void?](../written-answers/c-programming.md?plain=1#L8880)
 - [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L8939)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Determine Output:](../mcq-answers/c-programming.md?plain=1#L243)
+- [Determine Output:](../mcq-answers/c-programming.md?plain=1#L258)
+- [Find Output:](../mcq-answers/c-programming.md?plain=1#L392)
+- [What will happen if this C program is compiled and executed?](../mcq-answers/c-programming.md?plain=1#L483)
+- [What will be the output of this C program?](../mcq-answers/c-programming.md?plain=1#L516)
+- [What will be output if you compile & and execute following C code?](../mcq-answers/c-programming.md?plain=1#L560)
+- [Assume that the size of an integer is 4 bytes, predict the output of following program.](../mcq-answers/c-programming.md?plain=1#L278)
+- [What will be the output of following code?](../mcq-answers/c-programming.md?plain=1#L426)
+- [What will be the output of the given line?](../mcq-answers/c-programming.md?plain=1#L439)
+
+
 ## Recursion & Functions
 
 ### Functions in C — Declaration, Definition and Call
@@ -1598,6 +1705,17 @@ return_type  function_name ( parameter_list )
 - [When a function is called more than one time that is called?](../written-answers/c-programming.md?plain=1#L7843)
 - [(e) Write about the syntax of function.](../written-answers/c-programming.md?plain=1#L7851)
 - [(ক) C প্রোগ্রামিং ল্যাঙ্গুয়েজে user defined function এবং library function এর পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L7888)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following format is a correct format for declaration of function?](../mcq-answers/c-programming.md?plain=1#L700)
+- [Which are the keywords of structured programming?](../mcq-answers/c-programming.md?plain=1#L727)
+- [The number of values a function can return at a time?](../mcq-answers/c-programming.md?plain=1#L738)
+- [Which of the following do not return any value?](../mcq-answers/c-programming.md?plain=1#L756)
+- [In C++, The library function exit() causes an exit from-](../mcq-answers/c-programming.md?plain=1#L774)
+- [Consider the function fun (x, y) below. That is the value of fun (4, 3)?](../mcq-answers/c-programming.md?plain=1#L361)
+- [What does the following function do?](../mcq-answers/c-programming.md?plain=1#L377)
+
 
 
 ---
@@ -1717,6 +1835,13 @@ void minMax(int a[], int n, int *min, int *max) {
 - [Distinguish between Call by value and Call by referee in C/C++.](../written-answers/c-programming.md?plain=1#L8077)
 - [Difference between call by value and call by reference with example.](../written-answers/c-programming.md?plain=1#L8677)
 
+**Previous Year MCQ List from this Topic:**
+
+- [When you pass array as an argument to a function, which actually gets passed?](../mcq-answers/c-programming.md?plain=1#L819)
+- [In C, if you pass an array as an argument to a function, what actually gets passed?](../mcq-answers/c-programming.md?plain=1#L864)
+- [Which of the following doesn’t require an ‘&’ for the input in scanf ( ) ?](../mcq-answers/c-programming.md?plain=1#L718)
+
+
 
 ---
 
@@ -1826,6 +1951,14 @@ flowchart TD
 - [Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algori…](../written-answers/c-programming.md?plain=1#L8558)
 - [What is recursive function? Give an example of recursive function.](../written-answers/c-programming.md?plain=1#L8639)
 - [Write the performance of a non-recursive function which is written in recursive way.](../written-answers/c-programming.md?plain=1#L8755)
+
+**Previous Year MCQ List from this Topic:**
+
+- [When a function is called more than one time that is called?](../mcq-answers/c-programming.md?plain=1#L1247)
+- [How many function calls will be performed to execute the following recursive function?](../mcq-answers/c-programming.md?plain=1#L1253)
+- [Consider the following recursive function fun (x,y) . What is the value of fun (4,3) ?](../mcq-answers/c-programming.md?plain=1#L1269)
+- [Consider the function fun (x, y) below. That is the value of fun (4, 3)?](../mcq-answers/c-programming.md?plain=1#L361)
+
 
 
 ---
@@ -2042,6 +2175,14 @@ int rowSum(int a[][100], int row, int col) {
 - [Write a program in C with recursive function to compute the value $X^n$ where n is a positive integer and x has real value.](../written-answers/c-programming.md?plain=1#L8781)
 - [a) Using recursion, develop a computer program to find the n-th Fibonacci number using this rule. (5 marks)](../written-answers/c-programming.md?plain=1#L8826)
 
+**Previous Year MCQ List from this Topic:**
+
+- [How many function calls will be performed to execute the following recursive function?](../mcq-answers/c-programming.md?plain=1#L1253)
+- [Consider the following recursive function fun (x,y) . What is the value of fun (4,3) ?](../mcq-answers/c-programming.md?plain=1#L1269)
+- [Consider the function fun (x, y) below. That is the value of fun (4, 3)?](../mcq-answers/c-programming.md?plain=1#L361)
+- [What does the following function do?](../mcq-answers/c-programming.md?plain=1#L377)
+
+
 ## Operators, Data Types & Language Concepts
 
 ### Data Types in C
@@ -2137,6 +2278,17 @@ int n = (int)3.99;            /* 3 — truncates, does NOT round */
 - [Using examples explain data types used in C language.](../written-answers/c-programming.md?plain=1#L9558)
 - [(ক) C ভাষায় ব্যবহৃত বিভিন্ন ধরনের Data Type বর্ণনা করুন।](../written-answers/c-programming.md?plain=1#L877)
 
+**Previous Year MCQ List from this Topic:**
+
+- [C কী ধরনের programming language?](../mcq-answers/c-programming.md?plain=1#L902)
+- [নিচের কোনটি C ভাষার Keyword নয়?](../mcq-answers/c-programming.md?plain=1#L911)
+- [Suppose a C program has floating constant 1.414, what's the best way to convert it as a float data type?](../mcq-answers/c-programming.md?plain=1#L929)
+- [Which format specifier is used for typing double data?](../mcq-answers/c-programming.md?plain=1#L956)
+- [Which of the following is not derived data type in C?](../mcq-answers/c-programming.md?plain=1#L1019)
+- [What is not the kind of data type?](../mcq-answers/c-programming.md?plain=1#L1093)
+- [Which of the following cannot be checked in a switch-case statement?](../mcq-answers/c-programming.md?plain=1#L647)
+
+
 
 ---
 
@@ -2202,6 +2354,18 @@ int w = a & b == 3;             /* == binds TIGHTER than & →  a & (b==3) = 5 &
 - [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9416)
 - [Which of the following is the correct order of evaluation?](../written-answers/c-programming.md?plain=1#L9490)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Let x be an integer which can take a value of 0 or 1. The statement if (x==0) x=1; else x=0; is equivalent to which of the following?](../mcq-answers/c-programming.md?plain=1#L1030)
+- [For a given integer, which of the following operators can be used to set and reset a particular bit respectively?](../mcq-answers/c-programming.md?plain=1#L1039)
+- [Which of the declaration is correct?](../mcq-answers/c-programming.md?plain=1#L1048)
+- [Which is logical operator?](../mcq-answers/c-programming.md?plain=1#L1066)
+- [Which of the following will not increase the value of variable c by 1?](../mcq-answers/c-programming.md?plain=1#L1075)
+- [The escape sequence “\b” in C programming is -----](../mcq-answers/c-programming.md?plain=1#L1084)
+- [Which keyword is used in C language?](../mcq-answers/c-programming.md?plain=1#L1102)
+- [Which of the following is not a logical operator?](../mcq-answers/c-programming.md?plain=1#L1120)
+
+
 
 ---
 
@@ -2266,6 +2430,13 @@ static void helper() { }
 **Previous Year Question List from this Topic:**
 
 - [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L8939)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Variable which use same name in whole program and in its all routines thus best classified as-](../mcq-answers/c-programming.md?plain=1#L947)
+- [Hungarian notation is used to ________.](../mcq-answers/c-programming.md?plain=1#L1010)
+- [Determine Output:](../mcq-answers/c-programming.md?plain=1#L243)
+
 
 
 ---
@@ -2474,6 +2645,272 @@ The code compiles but the **linker cannot resolve a reference**.
 - [(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।](../written-answers/c-programming.md?plain=1#L5259)
 - [a) Using Pseudocode give an example of run time error.](../written-answers/c-programming.md?plain=1#L6187)
 - [Find the error of given code](../written-answers/c-programming.md?plain=1#L6337)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Determine Output:](../mcq-answers/c-programming.md?plain=1#L258)
+- [Which type of following errors is generated when the program is being execute?](../mcq-answers/c-programming.md?plain=1#L460)
+- [If any error occurs due to violation of programming rule is ________.](../mcq-answers/c-programming.md?plain=1#L535)
+- [What will be output if you compile & and execute following C code?](../mcq-answers/c-programming.md?plain=1#L560)
+- [Find out the error in following block of code: if (x=100) cout<<"x is 100";](../mcq-answers/c-programming.md?plain=1#L1111)
+
+
+---
+
+### C Data Types, Identifiers, Constants and Naming Conventions
+
+#### The classification of C data types
+
+```mermaid
+flowchart TD
+    A["C DATA TYPES"] --> B["① PRIMARY / BASIC<br/>int · char · float · double · void"]
+    A --> C["② DERIVED<br/>⭐ ARRAY · POINTER · FUNCTION"]
+    A --> D["③ USER-DEFINED<br/>⭐ structure · union · ENUMERATION · typedef"]
+    A --> E["④ VOID<br/>no value"]
+```
+
+| Category | Members |
+|---|---|
+| ⭐ **PRIMARY (basic/fundamental)** | **int, char, float, double, void** |
+| ⭐ **DERIVED** | ⭐ **ARRAY, POINTER, FUNCTION** — *derived from the basic types* |
+| ⭐ **USER-DEFINED** | ⭐ **structure (`struct`), union, ENUMERATION (`enum`), `typedef`** |
+
+> ### **"Which of the following is NOT a derived data type in C?"** → ### ✅ **ENUMERATION.**
+>
+> **The reasoning: `enum` is a USER-DEFINED type, not a DERIVED one.** The derived types are exactly **array, pointer and function** — each *built from* an existing type. *(Structure and union are likewise user-defined, though some textbooks group them loosely with derived types; **enumeration is never classed as derived**, which is what the question tests.)*
+
+#### Integer sizes and ranges
+
+| Type | Typical size | Range |
+|---|---|---|
+| `char` | 1 byte | −128 to 127 (signed) · 0 to 255 (unsigned) |
+| `short` | 2 bytes | −32,768 to 32,767 |
+| ⭐ **`int` (32-bit)** | **4 bytes** | ### ⭐ **−2³¹ to 2³¹ − 1 = −2,147,483,648 to 2,147,483,647** |
+| `unsigned int` | 4 bytes | 0 to 2³² − 1 = 4,294,967,295 |
+| `long long` | 8 bytes | −2⁶³ to 2⁶³ − 1 |
+| `float` | 4 bytes | ~6–7 significant digits |
+| `double` | 8 bytes | ~15–16 significant digits |
+
+> ### **The two halves of the same question:**
+> ### **"Minimum value in a 32-bit signed integer"** → ### ✅ **−2³¹**
+> ### **"Maximum value in a 32-bit signed integer"** → ### ✅ **2³¹ − 1**
+>
+> ⭐ **Why the range is ASYMMETRIC:** in **two's complement**, one of the 2³² bit patterns is used for **zero**, and it is taken from the positive side. So there are **2³¹ negative values but only 2³¹ − 1 positive ones**. *(The constants `INT_MIN` and `INT_MAX` in `<limits.h>` give these portably.)*
+>
+> ⚠️ **Sizes are NOT fixed by the C standard** — it guarantees only minimum ranges and that `sizeof(char) == 1`. Always use `sizeof` rather than assuming.
+
+#### ⭐ Identifiers — the rules for a valid name
+
+> ### **A valid C IDENTIFIER must: begin with a LETTER or an UNDERSCORE `_`; contain only LETTERS, DIGITS and UNDERSCORES; and must NOT be a C KEYWORD.** C is **case-sensitive**.
+
+| Identifier | Valid? | Why |
+|---|---|---|
+| `length`, `_count`, `sum2`, `my_var` | ✅ | Follow all the rules |
+| ⚠️ **`No#of-students`** | ❌ **INVALID** | ⭐ Contains **`#` and `-`**, neither of which is allowed |
+| ⚠️ **`com-pact`** | ❌ **INVALID** | ⭐ Contains a **HYPHEN**, which C reads as the **minus operator** |
+| `2ndValue` | ❌ | **Starts with a digit** |
+| `my var` | ❌ | Contains a **space** |
+| `int`, `for`, `while` | ❌ | **Reserved keywords** |
+
+> ### **"Which is an INVALID variable name / not a valid identifier?"** → ### ✅ **`No#of-students` and `com-pact`** — because of the `#` and the **hyphen**. **The hyphen is the trap: it looks like a word separator but is the subtraction operator, so `com-pact` parses as `com minus pact`. Use an UNDERSCORE instead.**
+
+#### The 32 C keywords
+
+```
+   auto     break    case     char     const    continue default  do
+   double   else     enum     extern   float    for      goto     if
+   int      long     register return   short    signed   sizeof   static
+   struct   switch   typedef  union    unsigned void     volatile while
+```
+
+> ### **"নিচের কোনটি C ভাষার Keyword নয়?"** → ### ✅ **`star`** — it is not in the list above. *(⚠️ **`main` is NOT a keyword either** — it is an ordinary identifier that the linker treats specially. So is `printf`.)*
+> ### **"Which keyword is used in C language?"** → ### ✅ **`for`.**
+
+#### Constants and the float suffix
+
+| Constant | Written as | Type |
+|---|---|---|
+| Integer | `42`, `0x2A` (hex), `052` (octal) | `int` |
+| **Floating** | **`1.414`** | ⚠️ **`double` BY DEFAULT** |
+| ⭐ **Float** | ⭐ **`1.414f` or `1.414F`** | ⭐ **`float`** |
+| Long double | `1.414L` | `long double` |
+| Character | `'A'` | `int` (in C) |
+| String | `"Hello"` | `char[]` |
+| Symbolic | `#define PI 3.1416` or `const float PI = 3.1416f;` | — |
+
+> ### **"A C program has the floating constant 1.414 — what is the best way to make it a FLOAT?"** → ### ✅ **`1.414f` or `1.414F`.**
+>
+> **Why it matters:** without the suffix the literal is a **`double`**, so an expression like `float x = 1.414;` performs a **double-to-float conversion at every use**, and comparisons such as `x == 1.414` **fail** because the double and the narrowed float differ. The `f` suffix makes the constant a genuine float.
+
+#### Format specifiers
+
+| Specifier | Type | | Specifier | Type |
+|---|---|---|---|---|
+| `%d` / `%i` | `int` | | `%u` | `unsigned int` |
+| `%c` | `char` | | `%s` | string |
+| `%f` | `float` | | ⭐ **`%lf`** | ⭐ **`double`** |
+| `%e` / `%g` | scientific / shortest | | `%ld` | `long` |
+| `%x` / `%o` | hex / octal | | `%p` | pointer |
+| `%%` | a literal `%` | | `%lld` | `long long` |
+
+> ### **"Which format specifier is used for typing DOUBLE data?"** → ### ✅ **`%lf`.**
+>
+> ⚠️ **The subtlety worth knowing:** in **`scanf` you MUST use `%lf` for a double** (`%f` would read only a float and corrupt memory). In **`printf`, both `%f` and `%lf` work**, because floats are automatically promoted to double when passed to a variadic function.
+
+#### Hungarian notation
+
+> ### **HUNGARIAN NOTATION is a naming convention in which a PREFIX indicating the variable's TYPE (or purpose) is attached to the beginning of its NAME.** It is therefore used to ⭐ **DEFINE THE NAME OF THE VARIABLE.**
+
+```c
+   int    iCount;        // i  → integer
+   float  fSalary;       // f  → float
+   char   cGrade;        // c  → char
+   char   szName[20];    // sz → zero-terminated string
+   int   *pValue;        // p  → pointer
+   bool   bIsValid;      // b  → boolean
+```
+
+> **Invented by Charles Simonyi at Microsoft** (he was Hungarian — hence the name). **Advantage:** the type is visible at the point of use, without looking up the declaration. **Disadvantage:** it becomes wrong the moment a type is changed, and modern IDEs show the type on hover — so it is **largely obsolete today**, though it survives in legacy Windows code.
+
+**Other naming conventions:** **camelCase** (`totalAmount`) · **PascalCase** (`TotalAmount`) · **snake_case** (`total_amount`) · **SCREAMING_SNAKE_CASE** for constants (`MAX_SIZE`).
+
+#### Where C sits among the languages
+
+> ### **"C কী ধরনের programming language?"** → ### ✅ **MID-LEVEL (মধ্যম স্তরের) language.**
+>
+> **Why "mid-level":** C combines **HIGH-LEVEL features** (functions, structured control flow, data types, portability, readable syntax) with **LOW-LEVEL capability** (pointers, direct memory access, bit manipulation, and the ability to talk to hardware). **That combination is why operating systems, device drivers and compilers are written in C** — it is close enough to the machine to control it, yet high-level enough to be portable.
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the minimum value that can be stored accurately in a 32-bit signed integer of C programming language?](../mcq-answers/c-programming.md?plain=1#L875)
+- [What is the maximum value that can be stored in a 32-bit signed integer of C language?](../mcq-answers/c-programming.md?plain=1#L884)
+- [C programming এ নিচের কোনটি Invalid variable name?](../mcq-answers/c-programming.md?plain=1#L893)
+- [C কী ধরনের programming language?](../mcq-answers/c-programming.md?plain=1#L902)
+- [নিচের কোনটি C ভাষার Keyword নয়?](../mcq-answers/c-programming.md?plain=1#L911)
+- [Suppose a C program has floating constant 1.414, what's the best way to convert it as a float data type?](../mcq-answers/c-programming.md?plain=1#L929)
+- [Which format specifier is used for typing double data?](../mcq-answers/c-programming.md?plain=1#L956)
+- [Which one of the following is not a valid identifier?](../mcq-answers/c-programming.md?plain=1#L965)
+- [Hungarian notation is used to ________.](../mcq-answers/c-programming.md?plain=1#L1010)
+- [Which of the following is not derived data type in C?](../mcq-answers/c-programming.md?plain=1#L1019)
+- [Which of the declaration is correct?](../mcq-answers/c-programming.md?plain=1#L1048)
+- [What is not the kind of data type?](../mcq-answers/c-programming.md?plain=1#L1093)
+- [Which keyword is used in C language?](../mcq-answers/c-programming.md?plain=1#L1102)
+
+
+---
+
+### Escape Sequences, Errors and the C Standard Library Headers
+
+#### ⭐ Escape sequences
+
+> **An ESCAPE SEQUENCE is a BACKSLASH followed by a character, used to represent a character that cannot be typed directly** — a control character, or one that would otherwise be interpreted by the compiler.
+
+| Sequence | Meaning | Effect |
+|---|---|---|
+| `\n` | **Newline** | Moves to the next line |
+| `\t` | **Horizontal tab** | |
+| ⭐ **`\b`** | ⭐ **BACKSPACE** | Moves the cursor **one position BACK** |
+| `\r` | **Carriage return** | Moves to the start of the current line |
+| `\a` | Alert (bell) | Audible beep |
+| `\f` | Form feed | |
+| `\v` | Vertical tab | |
+| `\\` | **Backslash** | Prints one `\` |
+| `\'` / `\"` | Single / double quote | |
+| `\0` | ⭐ **NULL character** | **Terminates every C string** |
+| `\ddd` / `\xhh` | Octal / hex character code | |
+
+> ### **"The escape sequence `\b` in C programming is…"** → ### ✅ **BACKSPACE.**
+>
+> ⚠️ **`\0` is the most important of all** — it is the **null terminator** that marks the end of a C string. `"abc"` occupies **four** bytes, not three, and `strlen("abc")` is 3 while `sizeof("abc")` is 4. **Forgetting the terminator is the classic cause of buffer overruns in C.**
+
+#### The kinds of programming error
+
+| Error type | When it appears | Cause | Example |
+|---|---|---|---|
+| ⭐ **SYNTAX error** | ⭐ **At COMPILE time** | ⭐ **VIOLATION OF THE LANGUAGE'S GRAMMAR (programming rules)** | Missing `;`, unmatched `{`, misspelt keyword |
+| **Semantic / type error** | Compile time | Grammatically valid but meaningless | Assigning a string to an int |
+| ⭐ **RUN-TIME error** | ⭐ **WHILE THE PROGRAM IS BEING EXECUTED** | The statement is legal but fails when run | **Division by zero**, dereferencing NULL, array index out of range, out of memory |
+| **Logical error** | Never reported | The program runs and produces the **WRONG ANSWER** | Using `+` where `*` was meant |
+| **Linker error** | Link time | A referenced symbol is not found | `undefined reference to 'foo'` |
+
+> ### **"If any error occurs due to VIOLATION OF PROGRAMMING RULES, it is…"** → ### ✅ **SYNTAX ERROR.**
+> ### **"Which type of error is generated when the program is BEING EXECUTED?"** → ### ✅ **RUN-TIME ERROR.**
+>
+> ⚠️ **LOGICAL errors are the most dangerous**, precisely because **nothing reports them** — the compiler is satisfied and the program runs to completion, but the result is wrong. They are found only by **testing**.
+
+#### The assignment-vs-comparison trap
+
+```c
+   if (x = 100)  printf("x is 100");    // ⚠️ ASSIGNS 100 to x, then tests 100 (true) — ALWAYS TRUE
+   if (x == 100) printf("x is 100");    // ✅ CORRECT — compares
+```
+
+> ### **"Find the error in `if (x=100) cout << "x is 100";"** → ### ✅ **THE "EQUALS TO" OPERATOR MISTAKE** — `=` (assignment) has been written where `==` (comparison) was meant.
+>
+> **Why C does not stop you:** an assignment is an **expression whose value is the value assigned**, so `x = 100` is a perfectly legal condition that evaluates to 100, which is **non-zero and therefore TRUE**. The branch always executes and `x` is silently overwritten. *(The defensive habit is to write the constant first — **`if (100 == x)`** — so that a mistyped `=` becomes a compile error. Modern compilers also warn with `-Wall`.)*
+
+#### The standard library headers
+
+| Header | Provides |
+|---|---|
+| **`<stdio.h>`** | **Input/output** — `printf`, `scanf`, `fopen`, `fclose`, `fgets`, `getchar` |
+| ⭐ **`<stdlib.h>`** | ⭐ **Memory allocation — `malloc()`, `calloc()`, `realloc()`, `free()`** — plus `exit()`, `atoi()`, `rand()`, `qsort()` |
+| **`<string.h>`** | `strlen`, `strcpy`, `strcat`, `strcmp`, `strstr`, `memcpy` |
+| ⭐ **`<math.h>`** | ⭐ **`ceil()`, `floor()`, `sqrt()`, `pow()`, `fabs()`, `sin()`, `log()`** |
+| **`<ctype.h>`** | `isalpha`, `isdigit`, `toupper`, `tolower` |
+| **`<limits.h>`** | `INT_MAX`, `INT_MIN`, `CHAR_BIT` |
+| **`<time.h>`** | `time`, `clock`, `difftime` |
+
+> ### **"Which header file should be included to use `malloc()` and `calloc()`?"** → ### ✅ **`<stdlib.h>`.**
+
+| | **`malloc(size)`** | **`calloc(n, size)`** |
+|---|---|---|
+| **Arguments** | **One** — total bytes | **Two** — count and element size |
+| **Initialises the memory?** | ❌ **No — contains GARBAGE** | ✅ **Yes — zero-filled** |
+| **Speed** | Slightly faster | Slightly slower |
+| **Returns** | `void*` to the block, or **`NULL` on failure** | Same |
+
+> ⚠️ **Every `malloc`/`calloc` must be matched by a `free()`**, and the return value **must be checked against NULL** — otherwise the program leaks memory or crashes.
+
+#### ceil and floor
+
+```c
+   #include <math.h>
+   ceil(9.87)   →  10.0     // rounds UP   to the smallest integer ≥ x
+   floor(9.87)  →   9.0     // rounds DOWN to the largest  integer ≤ x
+   round(9.87)  →  10.0     // rounds to the NEAREST
+   ceil(-9.87)  →  -9.0     // ⚠️ "up" means toward +∞
+   floor(-9.87) → -10.0
+```
+
+> ### **"The value 9.87 becomes 10 when you use…"** → ### ✅ **`ceil()`.**
+
+#### Structured programming
+
+> ### **STRUCTURED PROGRAMMING is a discipline that builds every program from just THREE CONTROL STRUCTURES**, avoiding `goto` entirely:
+>
+> | # | Structure | In C |
+> |---|---|---|
+> | **1** | ⭐ **SEQUENCE** | Statements executed one after another |
+> | **2** | ⭐ **SELECTION (decision)** | `if`, `if-else`, `switch` |
+> | **3** | ⭐ **ITERATION (repetition/loop)** | `for`, `while`, `do-while` |
+>
+> ### **"Which are the keywords of structured programming?"** → ### ✅ **ALL OF THEM — sequence, selection and iteration together.**
+>
+> **The Böhm–Jacopini theorem** proves that **any computable function can be written using only these three** — which is the formal justification for abandoning `goto`. Structured programs are **easier to read, test, debug and maintain**, because control flows top-to-bottom with a single entry and a single exit per block.
+
+**Previous Year MCQ List from this Topic:**
+
+- [The escape sequence “\b” in C programming is -----](../mcq-answers/c-programming.md?plain=1#L1084)
+- [The value 9.87 to 10 when use?](../mcq-answers/c-programming.md?plain=1#L1001)
+- [Which type of following errors is generated when the program is being execute?](../mcq-answers/c-programming.md?plain=1#L460)
+- [If any error occurs due to violation of programming rule is ________.](../mcq-answers/c-programming.md?plain=1#L535)
+- [Determine Output:](../mcq-answers/c-programming.md?plain=1#L258)
+- [Which are the keywords of structured programming?](../mcq-answers/c-programming.md?plain=1#L727)
+- [Which header file should be included to use functions like malloc() and calloc()?](../mcq-answers/c-programming.md?plain=1#L1236)
+
+
+
 
 ## Flowcharts & Algorithms
 
@@ -3552,6 +3989,15 @@ arr[i]   ==   *(arr + i)   ==   *(i + arr)   ==   i[arr]
 - [অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।](../written-answers/c-programming.md?plain=1#L10917)
 - [(a) What is the difference between array and pointer?](../written-answers/c-programming.md?plain=1#L11022)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Address stored in the pointer variable is of type ______](../mcq-answers/c-programming.md?plain=1#L1200)
+- [Address variable রাখা যায় কোনটিতে?](../mcq-answers/c-programming.md?plain=1#L1209)
+- [C-programming এ address রাখার জন্য কোনটি সাধারণত ব্যবহৃত হয়?](../mcq-answers/c-programming.md?plain=1#L1218)
+- [When you pass array as an argument to a function, which actually gets passed?](../mcq-answers/c-programming.md?plain=1#L819)
+- [In C, if you pass an array as an argument to a function, what actually gets passed?](../mcq-answers/c-programming.md?plain=1#L864)
+
+
 
 ---
 
@@ -3649,6 +4095,11 @@ int *r = malloc(1000000000000);
 - [(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L10940)
 - [Describe Dynamic memory allocation in programming in C?](../written-answers/c-programming.md?plain=1#L10971)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which header file should be included to use functions like malloc() and calloc()?](../mcq-answers/c-programming.md?plain=1#L1236)
+
+
 
 ---
 
@@ -3687,6 +4138,116 @@ p++;             /* ✅ legal — p now points to a[1] */
 
 - [(a) What is the difference between array and pointer?](../written-answers/c-programming.md?plain=1#L11022)
 - [অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।](../written-answers/c-programming.md?plain=1#L10917)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the following declaration for? int (*a)(10);](../mcq-answers/c-programming.md?plain=1#L1227)
+- [When you pass array as an argument to a function, which actually gets passed?](../mcq-answers/c-programming.md?plain=1#L819)
+- [In C, if you pass an array as an argument to a function, what actually gets passed?](../mcq-answers/c-programming.md?plain=1#L864)
+- [What is the access methodology in array?](../mcq-answers/c-programming.md?plain=1#L792)
+
+
+---
+
+### Complex Pointer Declarations — Pointer to Array vs Array of Pointers
+
+#### What a pointer holds
+
+> ### **A POINTER is a variable that STORES THE MEMORY ADDRESS of another variable.**
+
+```c
+   int  x = 10;
+   int *p = &x;        // p HOLDS THE ADDRESS of x
+   printf("%d", *p);   // 10  — * DEREFERENCES: "the value AT that address"
+```
+
+> ### **"Address variable রাখা যায় কোনটিতে?" / "C-তে address রাখার জন্য কোনটি ব্যবহৃত হয়?"** → ### ✅ **POINTER.**
+>
+> ### **"The address stored in a pointer variable is of type ______"** → ### ✅ **INTEGER** *(as the expected key)*.
+> ⚠️ **A necessary qualification:** an address **is** an unsigned integral value — which is why the answer is "integer" — but a pointer is **NOT an `int`** and must never be treated as one. On a 64-bit machine an address is 8 bytes while an `int` is 4, so assigning a pointer to an `int` **truncates and corrupts it**. The correct integer type for holding an address portably is **`uintptr_t`** from `<stdint.h>`. *(Give "integer" as the answer, and add this caveat if the question invites explanation.)*
+
+#### ⭐ Reading complex declarations — the right-left rule
+
+> ### **THE RIGHT-LEFT RULE:** start at the **identifier**; go **RIGHT** as far as you can; then go **LEFT**; use parentheses to control the order — exactly as in arithmetic.
+>
+> The key precedence fact: ⭐ **`[]` and `()` bind TIGHTER than `*`.**
+
+| Declaration | Read it as | Meaning |
+|---|---|---|
+| ⭐ **`int (*a)[10];`** | `a` → **`(*a)`** is a pointer → to `[10]` of `int` | ⭐ **A POINTER TO AN ARRAY of 10 integers** — **ONE** pointer |
+| ⭐ **`int *a[10];`** | `a` → `[10]` an array → of `*int` | ⭐ **An ARRAY OF 10 POINTERS to int** — **TEN** pointers |
+| `int *a;` | — | A pointer to int |
+| `int **a;` | — | A pointer to a pointer to int |
+| `int (*f)(int);` | `f` is a pointer → to a function taking int → returning int | **Function pointer** |
+| `int *f(int);` | `f` is a function → returning a pointer to int | Function returning a pointer |
+| `int a[3][4];` | — | A 2-D array (3 arrays of 4 ints) |
+
+> ### **"What is the following declaration for — `int (*a)[10];`"** → ### ✅ **A POINTER TO AN ARRAY OF 10 INTEGERS.**
+>
+> ### **The parentheses are everything:**
+> ```
+>    int (*a)[10];          int *a[10];
+>    ─────────────          ────────────
+>    a ──► [ ][ ][ ]…       a[0] ──► int
+>          one array of     a[1] ──► int
+>          10 ints          a[2] ──► int   …  ten separate pointers
+>
+>    sizeof(a) = 8          sizeof(a) = 80     (10 pointers × 8 bytes)
+>    a++  advances by       a++ is illegal (a is an array name)
+>         40 BYTES          a[i]++ advances ONE pointer by 4 bytes
+> ```
+> **Without the parentheses, `[]` binds first and you get an array of pointers.** A pointer to an array is what you need to pass a **2-D array** to a function: `void f(int (*m)[4])` accepts `int m[3][4]`.
+
+#### Pointer arithmetic — scaled, not raw
+
+```c
+   int arr[5] = {10, 20, 30, 40, 50};
+   int *p = arr;          // p points at arr[0]  (the array name IS the base address)
+
+   p + 1                  // ⭐ advances by sizeof(int) = 4 BYTES, not 1 byte
+   *(p + 2)               // 30   — identical to arr[2]
+   p++                    // now points at arr[1]
+```
+
+> ### **The identity that underlies all of it: `arr[i]` is *defined* as `*(arr + i)`.** That is why indexing and pointer arithmetic are interchangeable in C — and, curiously, why `arr[i]` and `i[arr]` are both legal and mean the same thing.
+
+| Operation | Valid on pointers? |
+|---|---|
+| `p + n`, `p − n`, `p++`, `p--` | ✅ Yes — **scaled by the element size** |
+| `p1 − p2` | ✅ Yes — gives the **number of elements** between them |
+| `p1 == p2`, `p1 < p2` | ✅ Yes |
+| `p1 + p2`, `p * 2`, `p / 2` | ❌ **Meaningless — not allowed** |
+
+#### The pointer errors that matter
+
+| Problem | What happens | Prevention |
+|---|---|---|
+| ⭐ **Dangling pointer** | Points to memory that has been **freed** or has gone out of scope | Set the pointer to **`NULL` immediately after `free()`** |
+| ⭐ **Memory leak** | Allocated memory is **never freed** | Match **every `malloc`/`calloc` with a `free`** |
+| **NULL dereference** | `*p` when `p == NULL` → **segmentation fault** | **Always check `if (p != NULL)`** |
+| **Wild pointer** | An uninitialised pointer holding garbage | **Initialise to `NULL`** at declaration |
+| **Double free** | `free()` called twice on the same block | Null the pointer after freeing |
+| **Buffer overflow** | Writing past the end of an allocation | Check bounds; use `snprintf`, `strncpy` |
+
+#### Why pointers exist at all
+
+1. ⭐ **Dynamic memory allocation** — `malloc`, `calloc`, `realloc`, `free`.
+2. ⭐ **Passing large data cheaply** — arrays and structures are passed by address, not copied.
+3. ⭐ **Allowing a function to MODIFY its caller's variables** (simulated pass-by-reference).
+4. **Building dynamic data structures** — linked lists, trees, graphs.
+5. **Function pointers** — callbacks, jump tables, `qsort`'s comparator.
+6. **Direct hardware and memory access** — the reason C is used for drivers and embedded work.
+7. **Efficient string handling.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [Address stored in the pointer variable is of type ______](../mcq-answers/c-programming.md?plain=1#L1200)
+- [Address variable রাখা যায় কোনটিতে?](../mcq-answers/c-programming.md?plain=1#L1209)
+- [C-programming এ address রাখার জন্য কোনটি সাধারণত ব্যবহৃত হয়?](../mcq-answers/c-programming.md?plain=1#L1218)
+- [What is the following declaration for? int (*a)(10);](../mcq-answers/c-programming.md?plain=1#L1227)
+- [Which header file should be included to use functions like malloc() and calloc()?](../mcq-answers/c-programming.md?plain=1#L1236)
+
+
 
 
 ---
@@ -3796,3 +4357,180 @@ int main(int argc, char *argv[]) {
 **Previous Year Question List from this Topic:**
 
 - [Write a C program that takes inputs integer values from command line interface and print the summation of the integers.](../written-answers/c-programming.md?plain=1#L11053)
+
+---
+
+## Arrays & Functions
+
+### Arrays — Indexing, Bounds, 2-D Arrays and Passing to Functions
+
+> **An ARRAY is a collection of elements OF THE SAME DATA TYPE, stored in CONTIGUOUS memory locations and accessed by an INDEX.**
+
+#### Declaration, initialisation and indexing
+
+```c
+int  marks[5];                          // declaration — 5 ints, values are GARBAGE
+int  marks[5] = {1, 2, 3, 4, 5};        // ✅ full initialisation
+int  marks[5] = {1, 2};                 // partial — the rest become 0
+int  marks[]  = {1, 2, 3, 4, 5};        // size inferred as 5
+int  marks[5] = {0};                    // all five set to 0
+```
+
+> ### **"Which is correct to initialise an array in C?"** → ### ✅ **`int array[5] = {1, 2, 3, 4, 5};`** — braces, comma-separated, count not exceeding the declared size.
+
+> ### ⭐ **Array indices in C are ZERO-BASED.**
+> ```
+>    int arr[100];        valid indices are 0 … 99
+>
+>    arr[0]  → the 1st element
+>    arr[6]  → ⭐ the SEVENTH element
+>    arr[99] → the 100th (last) element
+>    arr[100] → ⚠️ OUT OF BOUNDS — undefined behaviour, NOT an error message
+> ```
+
+> ### **"Which correctly accesses the SEVENTH element of `arr`?"** → ### ✅ **`arr[6]`.**
+> ### **"`int number[] = {10,20,30,40,50};` — what is `number[3]`?"** → ### ✅ **40** (index 3 is the **fourth** element).
+
+| Term | Meaning |
+|---|---|
+| ⭐ **LOWER BOUND** | ⭐ **The SMALLEST index of the array** — in C always **0** |
+| **Upper bound** | The largest valid index — `size − 1` |
+| **Size / length** | The number of elements |
+| **Index / subscript** | The position number |
+
+> ### **"The smallest element of an array index is called…"** → ### ✅ **LOWER BOUND.**
+>
+> ⚠️ **C performs NO bounds checking.** Writing `arr[100]` in a 100-element array compiles cleanly and corrupts whatever memory happens to follow — this is the root of the **buffer-overflow** vulnerability class. *(Java, Python and C# all throw an exception instead.)*
+
+#### Memory and size
+
+```c
+   sizeof(int) = 4 bytes
+   int array[15];
+   sizeof(array) = 15 × 4 = 60 bytes
+```
+> ### **"Assuming an int is 4 bytes, what is the size of `int array[15]`?"** → ### ✅ **60 bytes.**
+>
+> **The general formula: `total bytes = number_of_elements × sizeof(element_type)`**, and the number of elements is recovered as **`sizeof(array) / sizeof(array[0])`** — the standard idiom, which works **only in the scope where the array was declared** (see the base-address section below for why).
+
+#### Access method
+
+> ### **"What is the access methodology in an array?"** → ### ✅ **RANDOM (direct) access.**
+>
+> **Why: the address of any element is computed by ARITHMETIC, not by traversal:**
+> ```
+>      address of arr[i]  =  base_address + ( i × sizeof(element) )
+> ```
+> This is a **single multiplication and addition**, so reaching `arr[0]` and `arr[9999]` take **exactly the same time — O(1)**. *(A **linked list**, by contrast, offers only **sequential** access — O(n) — because each node must be followed to reach the next.)*
+
+#### Two-dimensional arrays
+
+```c
+   int matrix[3][4];            // 3 rows × 4 columns = 12 elements
+
+   matrix[i][j]                 // row i, column j — both zero-based
+
+   // Stored in ROW-MAJOR order in C:
+   //   matrix[0][0] matrix[0][1] matrix[0][2] matrix[0][3] matrix[1][0] ...
+
+   address of a[i][j] = base + ( (i × number_of_columns) + j ) × sizeof(element)
+```
+
+> ### **"Two-dimensional arrays are also called…"** → ### ✅ **BOTH — a MATRIX and a TABLE** (the usual pair of options). A 2-D array is the natural representation of a matrix or of tabular data.
+
+**Worked example — the antisymmetric sum**
+> *An n×n array v is defined by `v[i][j] = i − j` for all 1 ≤ i, j ≤ n. What is the sum of all its elements?*
+```
+   Pair each element v[i][j] = (i − j) with its mirror v[j][i] = (j − i).
+
+        (i − j) + (j − i) = 0        every pair cancels
+        and on the diagonal, v[i][i] = i − i = 0
+
+   ⇒ every element is cancelled by its transpose partner
+```
+> ### ✅ **The sum is 0.**
+>
+> **The elegant way to say it: the matrix is ANTISYMMETRIC (skew-symmetric), since v[i][j] = −v[j][i]; the sum of every skew-symmetric matrix is zero.** *(No arithmetic is needed at all — spotting the symmetry is the whole solution.)*
+
+#### ⭐ Passing an array to a function — what is really passed
+
+> ### **When an array is passed as an argument to a function, what is actually passed is the BASE ADDRESS OF THE ARRAY — a POINTER to its first element.** The array is **NOT copied**.
+
+```c
+   void modify(int a[], int n) {      // identical to  int *a
+       a[0] = 999;                    // ⚠️ this CHANGES the CALLER's array
+   }
+
+   int main(void) {
+       int arr[5] = {1,2,3,4,5};
+       printf("%zu\n", sizeof(arr));  // 20  — here arr is a real array
+       modify(arr, 5);                // only the ADDRESS is passed
+       printf("%d\n", arr[0]);        // 999 — the original was modified
+   }
+```
+
+> ### **"When you pass an array as an argument to a function, what actually gets passed?"** → ### ✅ **THE BASE ADDRESS OF THE ARRAY.**
+
+| Consequence | Explanation |
+|---|---|
+| ⭐ **The function can MODIFY the caller's array** | It holds the real address, so arrays behave as if **passed by reference** — even though C is strictly **pass-by-value** (the *pointer value* is what is copied) |
+| ⭐ **`sizeof` no longer gives the array size inside the function** | It **decays to a pointer**, so `sizeof(a)` returns **8** (the pointer size), not 20. ⭐ **This is why the LENGTH must be passed as a separate parameter** |
+| **Passing is cheap** | One pointer, regardless of whether the array has 10 or 10 million elements |
+| **To protect the data** | Declare the parameter **`const int a[]`** so the compiler forbids modification |
+
+> ⚠️ **This "array decay" is one of the most important facts in C.** `int a[]`, `int *a` and `int a[100]` are **all identical as function parameters** — the declared size is ignored entirely.
+
+#### Functions — declaration, return values and exit
+
+> ### **The correct form of a function DECLARATION (prototype) is:**
+> ### **`return-type function-name (argument-type list);`**
+
+```c
+   int  sum(int, int);                 // ✅ prototype — types only
+   int  sum(int a, int b);             // ✅ names are optional in a prototype
+   int  sum(int a, int b) { return a + b; }   // definition
+```
+
+> ### **"The number of values a function can return at a time is…"** → ### ✅ **ONE.**
+>
+> **Ways around the single-return-value limit** — worth naming: return a **structure**; pass **pointers** as output parameters; use a **global variable** (discouraged); or return a **pointer to dynamically allocated memory**.
+
+| Function | Returns |
+|---|---|
+| ⭐ **A constructor** (C++) | ⭐ **NOTHING — it has no return type at all**, not even `void` |
+| **A `void` function** | Nothing |
+| ⭐ **`exit()`** (from `<stdlib.h>`) | ⭐ **Never returns — it TERMINATES THE ENTIRE PROGRAM IN WHICH IT OCCURS**, flushing buffers and closing files |
+| **`return`** | Leaves only the **current function** |
+
+> ### **"Which of the following does not return any value?"** → ### ✅ **A CONSTRUCTOR function.**
+> ### **"In C++, the library function `exit()` causes an exit from…"** → ### ✅ **the PROGRAM in which it occurs** *(not merely the current function or loop)*.
+
+#### scanf and the `&` operator
+
+```c
+   int  age;      scanf("%d", &age);        // ⭐ & REQUIRED — scanf needs the ADDRESS
+   float x;       scanf("%f", &x);          // ⭐ & required
+   char name[10]; scanf("%s", name);        // ⭐ NO & — an array NAME IS ALREADY an address
+   char *p = malloc(10); scanf("%s", p);    // no & — p already holds an address
+```
+
+> ### **"Which of the following does NOT require an `&` for input in `scanf()`?"** → ### ✅ **`char name[10];` — an ARRAY.**
+>
+> **The reason is exactly the base-address rule above: the name of an array IS its base address**, so writing `&name` would be redundant (it yields the same address, but with a different type). For an ordinary scalar variable, `&` is essential — **omitting it is one of the commonest causes of a crash in beginner C code**, because `scanf` then treats the *value* as an address.
+
+**Previous Year MCQ List from this Topic:**
+
+- [The number of values a function can return at a time?](../mcq-answers/c-programming.md?plain=1#L738)
+- [Which of the following correctly accesses the seventh element stored in arr, an array with 100 elements?](../mcq-answers/c-programming.md?plain=1#L747)
+- [Which of the following do not return any value?](../mcq-answers/c-programming.md?plain=1#L756)
+- [Assuming an int is of 4 bytes, What is the size of “int array(15)”?](../mcq-answers/c-programming.md?plain=1#L765)
+- [In C++, The library function exit() causes an exit from-](../mcq-answers/c-programming.md?plain=1#L774)
+- [Which of the following is correct to initialize arrays in C?](../mcq-answers/c-programming.md?plain=1#L783)
+- [What is the access methodology in array?](../mcq-answers/c-programming.md?plain=1#L792)
+- [An n*n array v is defined as follows: v(i, j)=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is](../mcq-answers/c-programming.md?plain=1#L810)
+- [When you pass array as an argument to a function, which actually gets passed?](../mcq-answers/c-programming.md?plain=1#L819)
+- [int number () = {10,20,30,40,50}; number(3) =?](../mcq-answers/c-programming.md?plain=1#L828)
+- [Two dimensional arrays are also called?](../mcq-answers/c-programming.md?plain=1#L837)
+- [The smallest element of array index is called it-](../mcq-answers/c-programming.md?plain=1#L846)
+- [In C, if you pass an array as an argument to a function, what actually gets passed?](../mcq-answers/c-programming.md?plain=1#L864)
+- [Which of the following doesn’t require an ‘&’ for the input in scanf ( ) ?](../mcq-answers/c-programming.md?plain=1#L718)
