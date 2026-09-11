@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 1 subtopics · 9 theories
+**Table of Contents** — 2 subtopics · 16 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -11,6 +11,15 @@
    - [Heap Sort](#heap-sort)
    - [Counting Sort, Radix Sort and Bucket Sort](#counting-sort-radix-sort-and-bucket-sort)
    - [Comparison of All Sorting Algorithms](#comparison-of-all-sorting-algorithms)
+
+2. **[Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs)**
+   - [Graph Traversal — What and Why](#graph-traversal--what-and-why)
+   - [Breadth-First Search (BFS)](#breadth-first-search-bfs)
+   - [Depth-First Search (DFS)](#depth-first-search-dfs)
+   - [BFS vs DFS — Comparison](#bfs-vs-dfs--comparison)
+   - [Cycle Detection in a Graph](#cycle-detection-in-a-graph)
+   - [Topological Sorting](#topological-sorting)
+   - [Estimating Search Time and Memory from the Branching Factor](#estimating-search-time-and-memory-from-the-branching-factor)
 
 <!-- TOC END -->
 
@@ -827,3 +836,521 @@ This single table answers a large share of the sorting questions.
 - [Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.](../written-answers/algorithm.md?plain=1#L554)
 - [Describe four types sorting algorithm with example.](../written-answers/algorithm.md?plain=1#L779)
 - [Analyze the following C function and determine its Big O Time Complexity and Space Complexity. Explain your reasoning.](../written-answers/algorithm.md?plain=1#L937)
+
+## Graph Traversal Algorithms (BFS & DFS)
+
+### Graph Traversal — What and Why
+
+**Graph traversal** means visiting **every vertex** of a graph exactly once, in some systematic order. Unlike a tree, a graph can have **cycles** and **multiple paths** to the same node, so every traversal algorithm must keep a **`visited[]` array** to avoid going round in circles forever.
+
+There are exactly **two fundamental traversal strategies**:
+
+| Strategy | Idea | Data structure |
+|---|---|---|
+| **BFS — Breadth-First Search** | Explore **level by level** — all neighbours first, then their neighbours | **Queue** (FIFO) |
+| **DFS — Depth-First Search** | Go **as deep as possible** along one path, then backtrack | **Stack** (LIFO) — or recursion |
+
+```mermaid
+flowchart LR
+    subgraph BFSV["BFS — level by level"]
+        A1((A)) --> B1((B))
+        A1 --> C1((C))
+        B1 --> D1((D))
+        C1 --> E1((E))
+    end
+    subgraph DFSV["DFS — deep first"]
+        A2((A)) --> B2((B))
+        B2 --> D2((D))
+        A2 -.->|"later"| C2((C))
+        C2 --> E2((E))
+    end
+```
+
+**Both take O(V + E) time** with an adjacency list — every vertex is visited once and every edge is examined once.
+
+**Previous Year Question List from this Topic:**
+
+- [What are the BFS and DFS value for the Binary tree from the following figure?](../written-answers/algorithm.md?plain=1#L1051)
+- [What are BFS and DFS for Binary Tree?](../written-answers/algorithm.md?plain=1#L1077)
+- [Follow alphabetical ordering while considering the order of nodes traversed. (Find BFS and DFS)](../written-answers/algorithm.md?plain=1#L1227)
+- [Draw BFS and DFS tree starting node A-](../written-answers/algorithm.md?plain=1#L1397)
+
+
+---
+
+### Breadth-First Search (BFS)
+
+**BFS** starts at a source vertex and visits **all vertices at distance 1**, then **all at distance 2**, and so on — expanding outwards in "rings". It uses a **queue**.
+
+#### Algorithm
+
+```
+BFS(graph, start):
+    create an empty queue Q
+    mark start as visited
+    Q.enqueue(start)
+
+    while Q is not empty:
+        u = Q.dequeue()
+        print u                          // visit u
+        for each neighbour v of u:       // in alphabetical / index order
+            if v is not visited:
+                mark v as visited
+                Q.enqueue(v)
+```
+
+#### Worked example
+
+Graph (adjacency, alphabetical order):
+
+```mermaid
+flowchart TD
+    A((A)) --- B((B))
+    A --- C((C))
+    A --- D((D))
+    B --- E((E))
+    C --- F((F))
+    D --- G((G))
+    E --- H((H))
+```
+
+| Step | Dequeue | Print | Enqueue | Queue after |
+|---|---|---|---|---|
+| 1 | — | — | A | `A` |
+| 2 | A | **A** | B, C, D | `B C D` |
+| 3 | B | **B** | E | `C D E` |
+| 4 | C | **C** | F | `D E F` |
+| 5 | D | **D** | G | `E F G` |
+| 6 | E | **E** | H | `F G H` |
+| 7 | F | **F** | — | `G H` |
+| 8 | G | **G** | — | `H` |
+| 9 | H | **H** | — | *(empty)* |
+
+**BFS order: A, B, C, D, E, F, G, H** — notice it is exactly **level-order**.
+
+#### The BFS tree
+
+The edges actually used to first reach each vertex form the **BFS tree**:
+
+```mermaid
+flowchart TD
+    A((A)) --> B((B))
+    A --> C((C))
+    A --> D((D))
+    B --> E((E))
+    C --> F((F))
+    D --> G((G))
+    E --> H((H))
+```
+
+#### Complexity and properties
+
+| | Adjacency list | Adjacency matrix |
+|---|---|---|
+| **Time** | **O(V + E)** | O(V²) |
+| **Space** | **O(V)** — the queue plus the visited array | O(V) |
+
+**Key property:** in an **unweighted** graph, BFS finds the **shortest path (fewest edges)** from the source to every other vertex. This is BFS's single most important use.
+
+#### Applications of BFS
+
+1. **Shortest path in an unweighted graph** (number of hops).
+2. **Finding connected components**.
+3. **Social networks** — "people within 2 connections of you".
+4. **Web crawlers** — crawl pages level by level from a seed.
+5. **GPS / navigation** on unweighted maps.
+6. **Peer-to-peer networks** (finding nearby nodes), **broadcasting** in networks.
+7. **Bipartite-graph checking** (2-colouring).
+8. **Cycle detection** in an undirected graph.
+9. **Solving puzzles** with the fewest moves (Rubik's cube, word ladder, 8-puzzle).
+10. **Garbage collection** (Cheney's algorithm).
+
+**Previous Year Question List from this Topic:**
+
+- [What are the BFS and DFS value for the Binary tree from the following figure?](../written-answers/algorithm.md?plain=1#L1051)
+- [What are BFS and DFS for Binary Tree?](../written-answers/algorithm.md?plain=1#L1077)
+- [অথবা, (ক) BFS অ্যালগরিদম উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/algorithm.md?plain=1#L1124)
+- [Follow alphabetical ordering while considering the order of nodes traversed. (Find BFS and DFS)](../written-answers/algorithm.md?plain=1#L1227)
+- [Draw BFS and DFS tree starting node A-](../written-answers/algorithm.md?plain=1#L1397)
+- [Run the BFS algorithm from vertex 1 and draw the BFS tree.](../written-answers/algorithm.md?plain=1#L1473)
+
+
+---
+
+### Depth-First Search (DFS)
+
+**DFS** starts at a vertex, goes as **deep as it can along one branch**, and only when it gets stuck does it **backtrack** and try another branch. It uses a **stack** — either explicitly or through **recursion**.
+
+#### Algorithm (recursive — the natural form)
+
+```
+DFS(graph, u):
+    mark u as visited
+    print u                              // visit u
+    for each neighbour v of u:
+        if v is not visited:
+            DFS(graph, v)                // go deeper
+```
+
+#### Algorithm (iterative, with an explicit stack)
+
+```
+DFS_iterative(graph, start):
+    create an empty stack S
+    S.push(start)
+    while S is not empty:
+        u = S.pop()
+        if u is not visited:
+            mark u as visited
+            print u
+            for each neighbour v of u in REVERSE order:
+                if v is not visited:
+                    S.push(v)
+```
+
+#### Worked example on the same graph
+
+Starting at **A**, taking neighbours alphabetically:
+
+| Step | At | Action | Stack / path |
+|---|---|---|---|
+| 1 | A | visit A, go to B | A |
+| 2 | B | visit B, go to E | A → B |
+| 3 | E | visit E, go to H | A → B → E |
+| 4 | H | visit H — **dead end**, backtrack | A → B → E → H |
+| 5 | — | backtrack to A (B and E have no unvisited neighbours) | A |
+| 6 | C | visit C, go to F | A → C |
+| 7 | F | visit F — dead end, backtrack | A → C → F |
+| 8 | D | visit D, go to G | A → D |
+| 9 | G | visit G — dead end, finished | A → D → G |
+
+**DFS order: A, B, E, H, C, F, D, G.**
+
+#### The DFS tree
+
+```mermaid
+flowchart TD
+    A((A)) --> B((B))
+    B --> E((E))
+    E --> H((H))
+    A --> C((C))
+    C --> F((F))
+    A --> D((D))
+    D --> G((G))
+```
+
+#### Complexity
+
+| | Adjacency list | Adjacency matrix |
+|---|---|---|
+| **Time** | **O(V + E)** | O(V²) |
+| **Space** | **O(V)** — recursion stack (O(h) where h = the longest path) | O(V) |
+
+#### Limitations of DFS — and how to fix them
+
+*(A directly asked question.)*
+
+| Limitation | Explanation | Solution |
+|---|---|---|
+| **1. Not guaranteed to find the shortest path** | It dives down the first branch, which may be a long detour | Use **BFS** for unweighted graphs, **Dijkstra** for weighted ones |
+| **2. Can get stuck in an infinite path** | On an infinite or very deep state space, plain DFS may never come back | **Depth-Limited Search (DLS)** or **Iterative Deepening DFS (IDDFS)** |
+| **3. Can loop forever on a cyclic graph** | It revisits the same vertices endlessly | Maintain a **`visited[]` array** (or a closed set) |
+| **4. Stack overflow on deep graphs** | Recursion depth can exceed the system stack | Use the **iterative version with an explicit stack** |
+| **5. Not complete** (in infinite spaces) | It may descend forever and never reach the goal | **IDDFS** — it is complete *and* keeps DFS's low memory |
+| **6. Not optimal** | The first solution found may be far from the best | IDDFS, or **A\*** with a heuristic |
+
+#### Applications of DFS
+
+1. **Cycle detection** in directed and undirected graphs.
+2. **Topological sorting** of a DAG.
+3. **Finding connected components** and **strongly connected components** (Kosaraju, Tarjan).
+4. **Path finding** (any path, not the shortest).
+5. **Maze generation and maze solving**.
+6. **Finding bridges and articulation points** (critical links in a network).
+7. **Backtracking problems** — N-Queens, Sudoku, subset generation.
+8. **Detecting bipartiteness**.
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) Node A থেকে শুরু করে নিম্নোক্ত গ্রাফটির DFS Traversal লিখুন।](../written-answers/algorithm.md?plain=1#L1161)
+- [(b) What are the main limitation of Depth First Search (DFS)? Is there any way to solve these issues?](../written-answers/algorithm.md?plain=1#L1200)
+- [DFS complexity (Approximate)](../written-answers/algorithm.md?plain=1#L1218)
+- [Follow alphabetical ordering while considering the order of nodes traversed. (Find BFS and DFS)](../written-answers/algorithm.md?plain=1#L1227)
+- [Draw BFS and DFS tree starting node A-](../written-answers/algorithm.md?plain=1#L1397)
+
+
+---
+
+### BFS vs DFS — Comparison
+
+| Point | **BFS (Breadth-First Search)** | **DFS (Depth-First Search)** |
+|---|---|---|
+| **Exploration order** | **Level by level** (nearest first) | **Deepest first**, then backtrack |
+| **Data structure** | **Queue (FIFO)** | **Stack (LIFO)** / recursion |
+| **Shortest path (unweighted)** | ✅ **Guaranteed** | ❌ Not guaranteed |
+| **Time complexity** | O(V + E) | O(V + E) |
+| **Space complexity** | **O(V)** — can hold a whole level; worst case **O(b^d)** | **O(h)** — only the current path; worst case **O(bm)** — usually **much less** |
+| **Memory usage** | **High** (stores all nodes of a level) | **Low** |
+| **Complete?** | Yes | No (may go down an infinite branch) |
+| **Optimal?** | Yes (equal edge weights) | No |
+| **Good when** | The goal is **near the source**; you need the shortest path | The goal is **deep**; memory is limited; you must explore all paths |
+| **Bad when** | The tree is very wide (memory blows up) | The tree is very deep or infinite |
+| **Implementation** | Iterative (queue) | Recursive (naturally) |
+| **Typical uses** | Shortest path, social networks, web crawling, broadcasting, bipartite check | Topological sort, cycle detection, SCC, backtracking, maze solving, bridges |
+
+#### "Which one is faster? Which one needs more memory?"
+
+- **Speed:** on paper both are **O(V + E)** — neither is asymptotically faster. In practice, whichever reaches the goal first wins: **BFS is faster if the target is shallow**, **DFS is faster if the target is deep**. DFS also has lower constant overhead because recursion is cheaper than queue operations.
+- **Memory:** **BFS needs far more memory.** BFS must store an entire level of the tree — up to **O(b^d)** nodes — while DFS only stores the current root-to-node path, **O(b·m)**. For a branching factor of 10 and depth 10, BFS may need to hold 10¹⁰ nodes while DFS holds about 100.
+
+#### "Why is DFS better than BFS?"
+
+DFS is preferred when:
+1. **Memory is the constraint** — O(depth) instead of O(breadth^depth).
+2. The **solution lies deep** in the tree.
+3. You must **explore every path** (backtracking problems, puzzles).
+4. The problem is naturally recursive — topological sort, SCC, articulation points.
+5. Implementation is simpler (a few lines of recursion).
+
+*(But BFS is better when the shortest path is required — so "better" always depends on the problem.)*
+
+**Previous Year Question List from this Topic:**
+
+- [Why DFS better than BFS, Explain?](../written-answers/algorithm.md?plain=1#L999)
+- [(খ) BFS ও DFS এর পার্থক্য লিখুন।](../written-answers/algorithm.md?plain=1#L1106)
+- [Difference between depth first and breadth first search.](../written-answers/algorithm.md?plain=1#L1185)
+- [(c) Between Depths first search (DFS) and Breath first search (BFS). Which one is faster? Which one requires more memory?](../written-answers/algorithm.md?plain=1#L1430)
+- [True false (DFS/ Directed graph related) (হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/algorithm.md?plain=1#L1304)
+
+
+---
+
+### Cycle Detection in a Graph
+
+#### Detecting a cycle in a **directed** graph — DFS with three colours
+
+The key idea: a cycle exists if DFS ever reaches a vertex that is **currently on the recursion stack** (a **back edge**). Simply being "visited" is not enough — it must be visited **and still in progress**.
+
+```
+DetectCycleDirected(graph):
+    visited[]  = all false
+    inStack[]  = all false             // currently in the recursion stack
+    for each vertex v:
+        if not visited[v]:
+            if DFSUtil(v) == true:
+                return "Cycle exists"
+    return "No cycle"
+
+DFSUtil(u):
+    visited[u] = true
+    inStack[u] = true
+    for each neighbour v of u:
+        if not visited[v]:
+            if DFSUtil(v) == true:
+                return true
+        else if inStack[v] == true:    // BACK EDGE → cycle found
+            return true
+    inStack[u] = false                 // done with u, remove from the stack
+    return false
+```
+
+**Time: O(V + E). Space: O(V).**
+
+**The three-colour way of describing the same thing:**
+
+| Colour | Meaning |
+|---|---|
+| **White** | Not visited yet |
+| **Grey** | Visited, still being processed (on the recursion stack) |
+| **Black** | Completely finished |
+
+> **A cycle exists if and only if DFS finds an edge leading to a GREY vertex.**
+
+```mermaid
+flowchart LR
+    A((A)) --> B((B))
+    B --> C((C))
+    C --> A
+    C --> D((D))
+```
+Here DFS goes A → B → C, and from C it finds an edge back to **A**, which is still grey (still on the stack) → **cycle A → B → C → A**.
+
+#### Alternative — Kahn's algorithm (BFS based)
+
+1. Compute the **in-degree** of every vertex.
+2. Put all vertices with in-degree 0 into a queue.
+3. Repeatedly dequeue a vertex, add it to the output, and decrease the in-degree of each of its neighbours; enqueue any that drop to 0.
+4. **If the number of vertices output is less than V, the graph has a cycle.**
+
+#### Detecting a cycle in an **undirected** graph
+
+Here a "back edge" to the **parent** does not count, because the same edge is traversed in both directions.
+
+```
+DFSUtil(u, parent):
+    visited[u] = true
+    for each neighbour v of u:
+        if not visited[v]:
+            if DFSUtil(v, u) == true: return true
+        else if v != parent:          // visited, and NOT the node we came from
+            return true               // → cycle
+    return false
+```
+
+*(Union-Find / Disjoint Set is the other standard method for undirected graphs, in almost O(E) time.)*
+
+#### How to detect a **negative-weight cycle**
+
+Neither BFS nor DFS can do this — you need **Bellman-Ford**. Run it for **V − 1** iterations to relax all edges, then do **one extra iteration**: if any edge can still be relaxed (i.e. some distance still decreases), a **negative-weight cycle** exists. *(See the shortest-path section for details.)*
+
+**Previous Year Question List from this Topic:**
+
+- [Write an Algorithm to detect a cycle in a directed graph.](../written-answers/algorithm.md?plain=1#L1014)
+- [True false (DFS/ Directed graph related) (হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/algorithm.md?plain=1#L1304)
+
+
+---
+
+### Topological Sorting
+
+**Topological sorting** of a **Directed Acyclic Graph (DAG)** is a **linear ordering of its vertices** such that for **every directed edge u → v, vertex u comes before v** in the ordering.
+
+Think of it as: *"put the tasks in an order such that every prerequisite comes before the task that needs it."*
+
+> **Two hard rules:**
+> 1. It exists **only for a DAG** — a graph with a **cycle has no topological order** (a cycle means A must come before B and B before A, which is impossible).
+> 2. It is **not unique** — a graph usually has several valid topological orders.
+
+#### Example — university course prerequisites
+
+```mermaid
+flowchart LR
+    A["Programming"] --> B["Data Structures"]
+    A --> C["Discrete Math"]
+    B --> D["Algorithms"]
+    C --> D
+    D --> E["Machine Learning"]
+```
+
+Valid topological orders include:
+`Programming → Discrete Math → Data Structures → Algorithms → Machine Learning`
+`Programming → Data Structures → Discrete Math → Algorithms → Machine Learning`
+
+#### Method 1 — DFS based
+
+```
+TopologicalSort(graph):
+    visited[] = all false
+    stack S = empty
+    for each vertex v:
+        if not visited[v]:
+            DFSUtil(v, S)
+    print S in reverse order (pop everything)
+
+DFSUtil(u, S):
+    visited[u] = true
+    for each neighbour v of u:
+        if not visited[v]:
+            DFSUtil(v, S)
+    S.push(u)            // push AFTER all descendants are done
+```
+
+**The key insight:** a vertex is pushed onto the stack **only after every vertex reachable from it has been pushed**. So it ends up *below* them in the stack, and popping gives the correct order.
+
+#### Method 2 — Kahn's algorithm (BFS based, in-degree)
+
+```
+Kahn(graph):
+    compute in-degree of every vertex
+    Q = all vertices with in-degree 0
+    count = 0;  result = []
+    while Q is not empty:
+        u = Q.dequeue()
+        result.append(u);  count++
+        for each neighbour v of u:
+            in-degree[v]--
+            if in-degree[v] == 0:
+                Q.enqueue(v)
+    if count != V:  return "Cycle exists — no topological order"
+    return result
+```
+
+**Worked trace** on the course graph: in-degrees are Programming 0, Discrete Math 1, Data Structures 1, Algorithms 2, ML 1.
+Queue starts with `Programming` → output it → DS and DM drop to 0 → queue `DS, DM` → output DS → Algorithms drops to 1 → output DM → Algorithms drops to 0 → output Algorithms → ML drops to 0 → output ML.
+**Result: Programming, Data Structures, Discrete Math, Algorithms, Machine Learning.** Count = 5 = V ✅ no cycle.
+
+| Point | DFS method | Kahn's (BFS) method |
+|---|---|---|
+| Data structure | Stack + recursion | Queue + in-degree array |
+| Detects a cycle | Needs extra colour tracking | **Automatically** (count ≠ V) |
+| Time | O(V + E) | O(V + E) |
+| Space | O(V) | O(V) |
+
+#### Applications of topological sorting
+
+- **Course prerequisite** scheduling.
+- **Build systems** (`make`, Maven, npm) — compile dependencies in the right order.
+- **Task / project scheduling** (PERT, CPM).
+- **Spreadsheet formula** evaluation order.
+- **Package/dependency resolution** (apt, pip).
+- **Instruction scheduling** in compilers.
+- **Deadlock detection** in operating systems.
+
+**Previous Year Question List from this Topic:**
+
+- [Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the orde…](../written-answers/algorithm.md?plain=1#L1252)
+
+
+---
+
+### Estimating Search Time and Memory from the Branching Factor
+
+Exam questions sometimes give a **branching factor b** and a **goal depth d** and ask for the time and memory.
+
+**The standard formulas** for a tree-shaped search space:
+
+| | BFS | DFS |
+|---|---|---|
+| **Nodes generated (time)** | **O(b^d)** | O(b^m) |
+| **Nodes stored (space)** | **O(b^d)** | **O(b·m)** |
+
+where **b** = branching factor, **d** = depth of the shallowest goal, **m** = maximum depth.
+
+*(The exact node count for a full tree down to level d is 1 + b + b² + … + b^d = (b^(d+1) − 1)/(b − 1), but the dominant term b^d is what matters.)*
+
+#### Worked example — b = 4, goal at level d = 5, CPU explores 10,000 nodes/second
+
+**Number of nodes** (counting the root as level 0, down to level 5):
+
+> 1 + 4 + 4² + 4³ + 4⁴ + 4⁵ = 1 + 4 + 16 + 64 + 256 + 1024 = **1,365 nodes**
+
+*(If the question means only the last level, 4⁵ = **1,024** nodes; if it means up to and including level 5 as above, 1,365. State your assumption.)*
+
+**Time required**
+
+> Time = total nodes ÷ nodes per second = 1,365 ÷ 10,000 = **0.1365 seconds** ≈ **137 milliseconds**
+
+**Memory required**
+
+BFS must hold the **entire frontier**, which at worst is the deepest level:
+
+> Space = O(b^d) = 4⁵ = **1,024 nodes** in the queue
+
+If each node needs, say, 100 bytes, memory ≈ 1,024 × 100 = **102,400 bytes ≈ 100 KB**.
+
+**Compare with DFS:** DFS would store only **b × m = 4 × 5 = 20** nodes — about **50 times less memory** for the same search. This is the concrete illustration of why BFS's memory usage is its fatal weakness.
+
+#### Complexity summary of the search strategies
+
+| Algorithm | Time | Space | Complete | Optimal |
+|---|---|---|---|---|
+| **BFS** | O(b^d) | **O(b^d)** | Yes | Yes (unit costs) |
+| **DFS** | O(b^m) | **O(bm)** | No | No |
+| **IDDFS** | O(b^d) | **O(bd)** | Yes | Yes (unit costs) |
+| **Bidirectional BFS** | **O(b^(d/2))** | O(b^(d/2)) | Yes | Yes |
+
+**Previous Year Question List from this Topic:**
+
+- [Find the time and space complexity of BFS which has branch 4 branch and the target at level 5? If cpu can explore 10000 nodes per second find the time required…](../written-answers/algorithm.md?plain=1#L1444)
+- [DFS complexity (Approximate)](../written-answers/algorithm.md?plain=1#L1218)
+- [(c) Between Depths first search (DFS) and Breath first search (BFS). Which one is faster? Which one requires more memory?](../written-answers/algorithm.md?plain=1#L1430)
