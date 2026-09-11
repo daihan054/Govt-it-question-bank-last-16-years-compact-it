@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 12 theories
+**Table of Contents** — 8 subtopics · 14 theories
 
 1. **[Focus Writing](#focus-writing)**
    - [Focus Writing — Structure, Method and Model](#focus-writing--structure-method-and-model)
@@ -10,6 +10,8 @@
    - [Tense and the Right Form of Verbs](#tense-and-the-right-form-of-verbs)
    - [Articles and Prepositions](#articles-and-prepositions)
    - [Voice, Narration and Transformation of Sentences](#voice-narration-and-transformation-of-sentences)
+   - [Narration — Direct and Indirect Speech](#narration--direct-and-indirect-speech)
+   - [Determiners, Number, Gender and Sentence Structure](#determiners-number-gender-and-sentence-structure)
 
 3. **[Translation](#translation)**
    - [Translation — Bangla ⇄ English](#translation--bangla--english)
@@ -307,6 +309,18 @@ flowchart TD
 - [I had a talk with him. Write the name of 'parts of speech' of the underlined word.](../written-answers/english.md?plain=1#L564)
 - [২. Which one is collective noun? (a) Boy (b) Wood (c) Herd (d) Infancy](../written-answers/english.md?plain=1#L589)
 
+**Previous Year MCQ List from this Topic:**
+
+- [What is the plural number of 'Ovum'?](../mcq-answers/english.md?plain=1#L67)
+- [A clause must have.](../mcq-answers/english.md?plain=1#L76)
+- [Masculine gender of 'deer'.....](../mcq-answers/english.md?plain=1#L94)
+- [Which is the noun form of ‘Waste’?](../mcq-answers/english.md?plain=1#L189)
+- [Which is the Verb form of ‘Short’?](../mcq-answers/english.md?plain=1#L198)
+- [Indicate the correct sentence ______](../mcq-answers/english.md?plain=1#L212)
+- [Choose the correct sentence:](../mcq-answers/english.md?plain=1#L251)
+- [There is ______ on the roads today.](../mcq-answers/english.md?plain=1#L261)
+
+
 
 ---
 
@@ -367,6 +381,16 @@ flowchart TD
 - [Right forms of verb.](../written-answers/english.md?plain=1#L528)
 - [Use the correct form of verbs within brackets: (a) Medha walks fast lest she (be) late. (b) Why you (not attend) the meeting yesterday? (c) You had better (to s…](../written-answers/english.md?plain=1#L538)
 - [১০. Since we grow the locally, we need not to _____ it.](../written-answers/english.md?plain=1#L623)
+
+**Previous Year MCQ List from this Topic:**
+
+- [You should not _____ back with your teachers.](../mcq-answers/english.md?plain=1#L31)
+- [Pick appropriate word and complete the sentence: 'We asked him why he telephoned earlier.'](../mcq-answers/english.md?plain=1#L116)
+- [I would ______ left the job than](../mcq-answers/english.md?plain=1#L207)
+- [My doctor knew that I would eventually recover and to kind of work ______ before.](../mcq-answers/english.md?plain=1#L245)
+- [He told me that he ______ watching the movie.](../mcq-answers/english.md?plain=1#L297)
+- [Fill in the blank with right option: 'I am looking forward-you.'](../mcq-answers/english.md?plain=1#L125)
+
 
 
 ---
@@ -476,6 +500,22 @@ flowchart TD
 - [৭. I saw _____ one eyed man.](../written-answers/english.md?plain=1#L615)
 - [৮. What's the time _____ your watch?](../written-answers/english.md?plain=1#L619)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Fill in the blank: The scientist looked _____ the microscope.](../mcq-answers/english.md?plain=1#L17)
+- [The concert was cancelled _____ the heavy rain.](../mcq-answers/english.md?plain=1#L22)
+- [They went _____ the rain.](../mcq-answers/english.md?plain=1#L58)
+- [Credit Tk. 6000 _____ my account.](../mcq-answers/english.md?plain=1#L85)
+- [Pick appropriate preposition and complete: 'The man is absorbed _____ meditation.'](../mcq-answers/english.md?plain=1#L107)
+- [Fill in the blank with right option: 'I am looking forward-you.'](../mcq-answers/english.md?plain=1#L125)
+- [Put appropriate preposition for the sentence below:- Some writer sink ______ oblivion in course of time.](../mcq-answers/english.md?plain=1#L221)
+- [BPDB look ______](../mcq-answers/english.md?plain=1#L239)
+- [Rahima carry ______ his language.](../mcq-answers/english.md?plain=1#L271)
+- [The tiger fell ______ prey. Ans: Upon](../mcq-answers/english.md?plain=1#L281)
+- [He complied ______ my request.](../mcq-answers/english.md?plain=1#L291)
+- [Indicate the correct sentence ______](../mcq-answers/english.md?plain=1#L212)
+
+
 
 ---
 
@@ -579,6 +619,307 @@ flowchart TD
 - [English Transformation of Sentence (Voice change, Simple to complex, Superlative to comparative etc)](../written-answers/english.md?plain=1#L515)
 - [Write the passive voice of “Did you do the sum?”](../written-answers/english.md?plain=1#L576)
 - [২. How did you do it? (Change the Voice)](../written-answers/english.md?plain=1#L605)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which underlined part of the following sentence is incorrect?](../mcq-answers/english.md?plain=1#L103)
+- [Select the correct sentence from the following options.](../mcq-answers/english.md?plain=1#L134)
+- [Who taught her such things?](../mcq-answers/english.md?plain=1#L143)
+- [We hope that we shall win the match.](../mcq-answers/english.md?plain=1#L152)
+- [The Manager said, "Well, what can I do for you?"](../mcq-answers/english.md?plain=1#L162)
+- [He said, "Can you sing?" And I said, "No"](../mcq-answers/english.md?plain=1#L171)
+- [He said, "Will you listen to such a man?"](../mcq-answers/english.md?plain=1#L180)
+- [He said to me, “Do read the holy Quran daily.”](../mcq-answers/english.md?plain=1#L230)
+
+
+---
+
+### Narration — Direct and Indirect Speech
+
+> ### **DIRECT speech quotes the speaker's EXACT words inside quotation marks. INDIRECT (reported) speech reports the SUBSTANCE of what was said, without quotation marks.**
+
+```
+   DIRECT   :  He said, "I am busy."
+   INDIRECT :  He said that he was busy.
+```
+
+#### ⭐ The four changes that must be made
+
+```mermaid
+flowchart LR
+    A["① REPORTING VERB<br/>changes with the<br/>SENTENCE TYPE"] --> B["② The CONJUNCTION<br/>that / if / wh-word"]
+    B --> C["③ PRONOUNS<br/>change by PERSON"]
+    C --> D["④ TENSE<br/>shifts BACK one step"]
+    D --> E["⑤ Words of NEARNESS<br/>become words of<br/>DISTANCE"]
+```
+
+#### 1. The reporting verb — determined by the KIND of sentence
+
+| Sentence type | Reporting verb becomes | Conjunction |
+|---|---|---|
+| ⭐ **Assertive (statement)** | **said / told** | ⭐ **that** |
+| ⭐ **Interrogative — yes/no question** | ⭐ **asked / enquired** | ⭐ **if / whether** |
+| ⭐ **Interrogative — wh-question** | **asked / wanted to know** | ⭐ **the SAME wh-word** (what, why, how…) |
+| ⭐ **Imperative — order** | ⭐ **ordered / commanded / told** | ⭐ **to + verb** |
+| ⭐ **Imperative — request** | ⭐ **requested** | **to + verb** |
+| **Imperative — advice** | **advised / suggested** | to + verb |
+| **Optative (wish)** | **wished / prayed** | that |
+| **Exclamatory** | **exclaimed with joy / sorrow / wonder** | that |
+
+#### 2. ⭐ The tense shift — "one step back"
+
+| Direct | → | Indirect |
+|---|---|---|
+| Present Simple (*go*) | → | **Past Simple (*went*)** |
+| Present Continuous (*am going*) | → | **Past Continuous (*was going*)** |
+| Present Perfect (*have gone*) | → | **Past Perfect (*had gone*)** |
+| Past Simple (*went*) | → | **Past Perfect (*had gone*)** |
+| Past Perfect (*had gone*) | → | **Past Perfect (unchanged)** |
+| **will / shall** | → | ⭐ **would / should** |
+| **can** | → | ⭐ **could** |
+| **may** | → | **might** |
+| **must** | → | **had to / must** |
+
+> ### ⚠️ **The tense does NOT change when:**
+> - The reporting verb is in the **PRESENT or FUTURE** — *He **says** that he **is** busy.*
+> - The statement is a ⭐ **UNIVERSAL TRUTH or habitual fact** — *The teacher said that the earth **moves** round the sun.*
+> - It is a **historical fact** with a definite past time.
+
+#### 3. Pronoun and 4. Time/place changes
+
+```
+   PRONOUNS — the "SON" rule:
+        Subject   of the reporting verb  →  1st person (I, we) changes to match it
+        Object    of the reporting verb  →  2nd person (you) changes to match it
+        No change →  3rd person (he, she, they) stays as it is
+```
+
+| Direct | → | Indirect | | Direct | → | Indirect |
+|---|---|---|---|---|---|---|
+| **now** | → | **then** | | **here** | → | **there** |
+| **today** | → | **that day** | | **this** | → | **that** |
+| **tomorrow** | → | **the next day** | | **these** | → | **those** |
+| **yesterday** | → | **the previous day** | | **come** | → | **go** |
+| **ago** | → | **before** | | **thus** | → | **so** |
+| **last night** | → | **the previous night** | | **next week** | → | **the following week** |
+
+#### ⭐ Worked examples
+
+**A — a WH-question**
+> *Direct: The Manager said, "Well, what can I do for you?"*
+```
+   ① Type = WH-question   ⇒ reporting verb → "wanted to know / asked"
+   ② Conjunction = the same wh-word "what"
+   ③ Word order becomes STATEMENT order (NOT question order) — no auxiliary inversion
+   ④ can → could ;  I → he ;  you → him
+   ⑤ "Well" (an exclamatory filler) is dropped
+```
+> ### ✅ ***The Manager wanted to know what he could do for him.***
+>
+> ⚠️ **The commonest error: keeping question word order.** *"…what could he do…"* is **wrong** — in indirect speech a question becomes a **statement in form**, so the subject comes **before** the verb, and **no question mark** is used.
+
+**B — a YES/NO question**
+> *Direct: He said, "Can you sing?" And I said, "No."*
+```
+   ① Yes/no question  ⇒ "asked"
+   ② Conjunction = "if" or "whether"
+   ③ can → could ;  you → I
+   ④ The answer "No" is reported as a negative statement
+```
+> ### ✅ ***He asked me if I could sing, and I said that I could not.***
+
+**C — another yes/no question**
+> *Direct: He said, "Will you listen to such a man?"*
+> ### ✅ ***He asked them whether they would listen to such a man.***
+> *(will → **would**; "you" → **they**, matching the people addressed.)*
+
+**D — an IMPERATIVE (request)**
+> *Direct: He said to me, "Do read the holy Quran daily."*
+```
+   ① "Do read" with "please/do" signals a REQUEST ⇒ reporting verb → "requested"
+   ② Imperative ⇒ "to + base verb"
+   ③ "me" stays as the object of the request
+```
+> ### ✅ ***He requested me to read the holy Quran daily.***
+>
+> ⚠️ **Choose the reporting verb by the TONE:** a blunt command → **ordered**; a polite one → **requested**; guidance → **advised**; a warning → **warned**; a prohibition → **forbade** or *told … not to*.
+
+#### The quick checklist
+
+```
+   ☐ Removed the quotation marks and the comma?
+   ☐ Chosen the reporting verb to match the SENTENCE TYPE?
+   ☐ Used the right conjunction (that / if / whether / wh-word / to)?
+   ☐ Shifted the tense one step back (unless it is a universal truth)?
+   ☐ Adjusted every pronoun?
+   ☐ Changed this/here/now/today to that/there/then/that day?
+   ☐ For a question — used STATEMENT word order and NO question mark?
+```
+
+**Previous Year MCQ List from this Topic:**
+
+- [The Manager said, "Well, what can I do for you?"](../mcq-answers/english.md?plain=1#L162)
+- [He said, "Can you sing?" And I said, "No"](../mcq-answers/english.md?plain=1#L171)
+- [He said, "Will you listen to such a man?"](../mcq-answers/english.md?plain=1#L180)
+- [He said to me, “Do read the holy Quran daily.”](../mcq-answers/english.md?plain=1#L230)
+
+
+---
+
+### Determiners, Number, Gender and Sentence Structure
+
+#### ⭐ Countable vs uncountable — the distinction behind many MCQs
+
+| | **COUNTABLE nouns** | ⭐ **UNCOUNTABLE nouns** |
+|---|---|---|
+| **Can be counted** | ✅ one book, two books | ❌ not *two milks* |
+| **Plural form** | ✅ Yes | ❌ **No — always singular** |
+| **Take** | **many, few, a few, a number of** | ⭐ **much, little, a little, an amount of** |
+| **Examples** | book, boy, chair, apple, idea | ⭐ **milk, water, sugar, rice, TRAFFIC, INFORMATION, ADVICE, FURNITURE, LUGGAGE, EQUIPMENT, NEWS, MONEY, BREAD, WORK** |
+
+> ⚠️ **The uncountable nouns that catch Bengali speakers out — because their Bangla equivalents ARE countable:**
+> **information, advice, furniture, luggage, baggage, equipment, machinery, scenery, poetry, news, traffic, work, bread, money, stationery.**
+> ```
+>    ❌ many informations · many furnitures · many advices · many traffics
+>    ✅ much information  · much furniture  · much advice  · much traffic
+>    ✅ a piece of information · an item of furniture · a piece of advice
+> ```
+
+> ### **"______ sugar do you want in your tea?"** → ### ✅ **HOW MUCH** (sugar is uncountable).
+> ### **"There is ______ on the roads today."** → ### ✅ **TOO MUCH TRAFFIC** (traffic is uncountable, so *too many traffics* is wrong).
+
+#### ⭐ much / many · little / few — and the crucial article
+
+| Determiner | Used with | Meaning |
+|---|---|---|
+| **much** | Uncountable | A large quantity |
+| **many** | Countable plural | A large number |
+| ⭐ **LITTLE** (no article) | Uncountable | ⭐ **NEGATIVE — "hardly any", almost none** |
+| ⭐ **A LITTLE** | Uncountable | ⭐ **POSITIVE — "some", a small but sufficient quantity** |
+| **the little** | Uncountable | "the small amount that there is" |
+| ⭐ **FEW** (no article) | Countable | ⭐ **NEGATIVE — "hardly any"** |
+| ⭐ **A FEW** | Countable | ⭐ **POSITIVE — "some"** |
+| **the few** | Countable | "the small number that there is" |
+
+```
+   There is LITTLE milk in the bottle.    → ⚠️ almost NONE (a complaint)
+   There is A LITTLE milk in the bottle.  → ✅ SOME, enough for the tea (reassuring)
+
+   FEW students passed.    → almost none — disappointing
+   A FEW students passed.  → some did — encouraging
+```
+
+> ### **"There is ______ milk in the bottle."** → ### ✅ **A LITTLE** — the sentence is a neutral statement that **some** milk is present. **The single article `a` reverses the meaning entirely**, which is exactly what the question tests.
+
+#### Number — irregular and Latin/Greek plurals
+
+| Singular | ⭐ **Plural** | | Singular | **Plural** |
+|---|---|---|---|---|
+| ⭐ **ovum** | ⭐ **ova** | | **datum** | **data** |
+| **medium** | media | | **bacterium** | bacteria |
+| **curriculum** | curricula | | **memorandum** | memoranda |
+| **analysis** | **analyses** | | **basis** | bases |
+| **crisis** | crises | | **thesis** | theses |
+| **index** | indices / indexes | | **appendix** | appendices |
+| **radius** | radii | | **syllabus** | syllabi / syllabuses |
+| **phenomenon** | **phenomena** | | **criterion** | **criteria** |
+| **child** | children | | **ox** | oxen |
+| **foot** | feet | | **tooth** | teeth |
+| **mouse** | mice | | **goose** | geese |
+| **man** | men | | **woman** | women |
+
+> ### **"What is the plural of 'Ovum'?"** → ### ✅ **OVA.**
+>
+> **The Latin pattern: -um → -a** (ovum→ova, datum→data, medium→media); **-us → -i** (radius→radii); **-is → -es** (analysis→analyses); **Greek -on → -a** (phenomenon→phenomena, criterion→criteria).
+
+**Nouns with no change:** *sheep, deer, fish, aircraft, series, species, means*.
+**Always plural in form:** *scissors, trousers, spectacles, tongs, alms, riches, thanks, wages*.
+**Plural in form but SINGULAR in use:** *news, mathematics, physics, economics, politics, ethics* — "**The news IS good**".
+
+#### ⭐ Gender — masculine and feminine pairs
+
+| Masculine | Feminine | | Masculine | Feminine |
+|---|---|---|---|---|
+| ⭐ **Buck** | ⭐ **Doe** *(DEER)* | | **Bull / Ox** | **Cow** |
+| **Cock** | Hen | | **Drake** | Duck |
+| **Gander** | Goose | | **Stallion** | Mare |
+| **Ram** | Ewe | | **Boar** | Sow |
+| **Dog** | Bitch | | **Tiger** | Tigress |
+| **Lion** | Lioness | | **Fox** | Vixen |
+| **Horse** | Mare | | **Stag / Hart** | Hind |
+| **Nephew** | Niece | | **Wizard** | Witch |
+| **Bachelor** | Spinster | | **Monk** | Nun |
+| **Sir** | Madam | | **Bridegroom** | Bride |
+
+> ### **"Masculine gender of 'deer'"** → ### ✅ **BUCK** *(the female is a **DOE**; a large male red deer is a **STAG** or **HART**, and its female a **HIND**).*
+
+**The four genders:** **Masculine** (male) · **Feminine** (female) · **Common** (either — *child, friend, student, teacher, baby*) · **Neuter** (neither — *book, table, chair*).
+
+#### ⭐ Phrase, Clause and Sentence
+
+| | ⭐ **PHRASE** | ⭐ **CLAUSE** |
+|---|---|---|
+| **Definition** | A group of words **WITHOUT a subject and a finite verb** | ⭐ **A group of words that MUST HAVE a SUBJECT and a PREDICATE (a finite verb)** |
+| **Expresses a complete idea?** | No | Sometimes (an independent clause does) |
+| **Example** | *in the morning · on the table · to win the prize* | *he came home · because he was ill* |
+
+> ### **"A clause must have ______"** → ### ✅ **A SUBJECT AND A PREDICATE.**
+
+| Clause type | Can stand alone? | Example |
+|---|---|---|
+| ⭐ **Independent (principal/main)** | ✅ **Yes** | *He came home.* |
+| ⭐ **Dependent (subordinate)** | ❌ **No** | *…because he was ill.* |
+| → **Noun clause** | Acts as a noun | *I know **what he wants**.* |
+| → **Adjective (relative) clause** | Describes a noun | *The man **who stole my bag** was tall.* |
+| → **Adverbial clause** | Modifies a verb | *He left **when the bell rang**.* |
+
+**Sentence types by structure:**
+
+| Type | Composition |
+|---|---|
+| ⭐ **SIMPLE** | **ONE** independent clause |
+| ⭐ **COMPOUND** | **TWO or more INDEPENDENT** clauses joined by *and, but, or, so* |
+| ⭐ **COMPLEX** | **ONE independent + one or more DEPENDENT** clauses |
+| **Compound-complex** | Two independents + at least one dependent |
+
+> ### **"Select the correct sentence"** → ### ✅ ***"The man who stole my bag was tall."***
+> **Why it is correct: `who stole my bag` is a RELATIVE CLAUSE modifying `the man`, and the main clause `The man … was tall` has its own subject and verb.** The sentence is therefore **complex** and complete. *(Errors in the other options usually involve a missing main verb, a dangling clause, or a wrong relative pronoun — remember **who** for people, **which** for things, **that** for either.)*
+
+#### Comparison — the pitfalls
+
+```
+   ✅ Rahim is as tall as I (am).        formal — the pronoun is a SUBJECT
+   ✅ Rahim is as tall as me.            informal, widely accepted in speech
+   ❌ Rahim is as taller as me.          "as … as" takes the POSITIVE degree
+
+   ✅ He is taller than I (am).
+   ✅ He is the tallest boy in the class.
+   ⚠️ He is taller than ANY OTHER boy.   ← "OTHER" is essential in the comparative
+```
+
+> ### **"Choose the correct sentence"** → ### ✅ ***"Rahim is as tall as I."*** — **`as … as` requires the POSITIVE degree** (*tall*, not *taller*), and the formal construction completes an implied verb (*as I am*), which calls for the **subject** pronoun **I**.
+
+#### Articles with a general statement
+
+> ### **"Indicate the correct sentence"** → ### ✅ ***"The ant is an intelligent insect."***
+>
+> **Why: to make a statement about a WHOLE SPECIES or CLASS, English uses `the` + singular noun** — *The ant is industrious. The dog is faithful. The computer has changed our lives.* *(The alternatives — *An ant is…* and *Ants are…* — are also grammatical, but **`the` + singular is the standard generic form**, and note **an** before *intelligent*, which begins with a vowel sound.)*
+
+**Previous Year MCQ List from this Topic:**
+
+- [_____ sugar do you want in your tea?](../mcq-answers/english.md?plain=1#L40)
+- [There is _____ milk in the bottle.](../mcq-answers/english.md?plain=1#L49)
+- [What is the plural number of 'Ovum'?](../mcq-answers/english.md?plain=1#L67)
+- [A clause must have.](../mcq-answers/english.md?plain=1#L76)
+- [Masculine gender of 'deer'.....](../mcq-answers/english.md?plain=1#L94)
+- [Select the correct sentence from the following options.](../mcq-answers/english.md?plain=1#L134)
+- [Indicate the correct sentence ______](../mcq-answers/english.md?plain=1#L212)
+- [Choose the correct sentence:](../mcq-answers/english.md?plain=1#L251)
+- [There is ______ on the roads today.](../mcq-answers/english.md?plain=1#L261)
+- [Do not sit on a ______ chair. Ans: broken](../mcq-answers/english.md?plain=1#L286)
+
+
+
 
 
 ---
@@ -771,6 +1112,36 @@ flowchart TD
 - [Rewrite the following sentences and use the idiom as directed:](../written-answers/english.md?plain=1#L442)
 - [Write sentence with meaning from the following phrase and idioms: Break the ice, A pain in the neck, Fit as a fiddle, Burn bridges, So far so good](../written-answers/english.md?plain=1#L485)
 
+**Previous Year MCQ List from this Topic:**
+
+- ['Cut and dry' means:](../mcq-answers/english.md?plain=1#L2051)
+- ['Come to light' means?](../mcq-answers/english.md?plain=1#L2060)
+- [The phrase 'Prima facie' means-](../mcq-answers/english.md?plain=1#L2069)
+- [Select the correct English translation of: The boy takes after his father.](../mcq-answers/english.md?plain=1#L2078)
+- [Prima facie ______ means.](../mcq-answers/english.md?plain=1#L2087)
+- [The blow off some steam means ______](../mcq-answers/english.md?plain=1#L2096)
+- [‘End in smoke’ means-](../mcq-answers/english.md?plain=1#L2102)
+- [What is the meaning of 'to bell the cat'?](../mcq-answers/english.md?plain=1#L2108)
+- [To bring of - অর্থ কি?](../mcq-answers/english.md?plain=1#L2118)
+- [What is the meaning of the phrase ‘sine die’?](../mcq-answers/english.md?plain=1#L2124)
+- ['A cook and bull story' means —](../mcq-answers/english.md?plain=1#L2133)
+- [The phrase 'an apple of discord' means ______.](../mcq-answers/english.md?plain=1#L2142)
+- [The visit his mother off and on. Here "off and on" means?](../mcq-answers/english.md?plain=1#L2151)
+- [Leaders should not only make speeches they should also be prepared to bell the cat.](../mcq-answers/english.md?plain=1#L2160)
+- [Which Idiom means 'try every possible course of action in order to achieve something'?](../mcq-answers/english.md?plain=1#L2169)
+- [What is the meaning of “White Elephant”?](../mcq-answers/english.md?plain=1#L2178)
+- [Choose the appropriate meaning of the idiom ‘swan song’](../mcq-answers/english.md?plain=1#L2187)
+- [I am feeling under the water. What does the underlined phrase mean?](../mcq-answers/english.md?plain=1#L2196)
+- ['Enough is enough' is used to mean;](../mcq-answers/english.md?plain=1#L2205)
+- ["Once in a blue moon" means:](../mcq-answers/english.md?plain=1#L2214)
+- [The phrase ‘Baker’s dozen’ means ________](../mcq-answers/english.md?plain=1#L2223)
+- [What is the meaning of the phrase, 'of late'?](../mcq-answers/english.md?plain=1#L2232)
+- ['Every now and then' means-](../mcq-answers/english.md?plain=1#L2241)
+- [His evidence bears out, the evidence of the first witness. Here bears out means](../mcq-answers/english.md?plain=1#L2250)
+- [Phrase and idioms:](../mcq-answers/english.md?plain=1#L2259)
+- [The phrase ‘Prima facie’ means— ( ‘Prima facie’ বাক্যাংশটির অর্থ কী? )](../mcq-answers/english.md?plain=1#L2267)
+
+
 
 ---
 
@@ -846,6 +1217,42 @@ flowchart TD
 - [১. নিচের কোনটি লেফটেনেন্ট এর সঠিক Spelling? (a) Lieutenant (b) Leptenant (c) Lieutenand (d) Lieftenant](../written-answers/english.md?plain=1#L837)
 - [১. What is the synonym of Certainly?](../written-answers/english.md?plain=1#L841)
 - [৫. Spelling Correction: Tsunami, Commission, Laughping, hetarogineous.](../written-answers/english.md?plain=1#L845)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the antonym of 'famous '?](../mcq-answers/english.md?plain=1#L1533)
+- [What is the synonym of 'bona fide'?](../mcq-answers/english.md?plain=1#L1542)
+- [The word 'precedence' means.](../mcq-answers/english.md?plain=1#L1551)
+- [What does "Epistemology" mean?](../mcq-answers/english.md?plain=1#L1560)
+- [What is the antonym of 'transparent'?](../mcq-answers/english.md?plain=1#L1569)
+- [Which of the following resembles OATH: PROMISE?](../mcq-answers/english.md?plain=1#L1578)
+- [Which of the following is the opposite of the word INGENIOUS?](../mcq-answers/english.md?plain=1#L1587)
+- [The synonym of ENIGMA is](../mcq-answers/english.md?plain=1#L1596)
+- [Antonym of word ‘Stiff’](../mcq-answers/english.md?plain=1#L1605)
+- [Write is related to reader in the same way as producer is related to ______](../mcq-answers/english.md?plain=1#L1614)
+- [Nearest meaning of ‘AUGUST’](../mcq-answers/english.md?plain=1#L1620)
+- [Synonym of ‘EXTRANEOUS’](../mcq-answers/english.md?plain=1#L1626)
+- [Plagiarism means- Ans: Theft of Idea](../mcq-answers/english.md?plain=1#L1632)
+- [Could: Rain :: Vapour : Ans: Moistrue](../mcq-answers/english.md?plain=1#L1637)
+- [Select the pair which has the same relationship. ORTHOPEDIC: BONE](../mcq-answers/english.md?plain=1#L1642)
+- [Choose the word that is correctly spelt:](../mcq-answers/english.md?plain=1#L2431)
+- [Which one is correct?](../mcq-answers/english.md?plain=1#L2440)
+- [Identify the word with correct spelling from the following options.](../mcq-answers/english.md?plain=1#L2449)
+- [Choose the correct spelling](../mcq-answers/english.md?plain=1#L2458)
+- [Which is the correct spelling?](../mcq-answers/english.md?plain=1#L2467)
+- [Find out the correct spelling.](../mcq-answers/english.md?plain=1#L2476)
+- [Select correct spelling?](../mcq-answers/english.md?plain=1#L2485)
+- [Which one is correct?](../mcq-answers/english.md?plain=1#L2495)
+- [Which spell is correct word (s)?](../mcq-answers/english.md?plain=1#L2505)
+- [Which word is spelt correctly?](../mcq-answers/english.md?plain=1#L2514)
+- [Choose the correct spelling-](../mcq-answers/english.md?plain=1#L2523)
+- [Which of the following has the similar sound of the word “won”?](../mcq-answers/english.md?plain=1#L2532)
+- [Choose the correct spelling.](../mcq-answers/english.md?plain=1#L2541)
+- [Find the correctly spelt word.](../mcq-answers/english.md?plain=1#L2550)
+- [Which of the following is correct spelt?](../mcq-answers/english.md?plain=1#L2559)
+- [Which one is the correct spelling?](../mcq-answers/english.md?plain=1#L2568)
+- [The correct spelling is-](../mcq-answers/english.md?plain=1#L2577)
+
 
 
 ---
@@ -1101,3 +1508,23 @@ flowchart TD
 **Previous Year Question List from this Topic:**
 
 - [Who is the writer of “Gulliver's Travels”?](../written-answers/english.md?plain=1#L1065)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Who is the author of the drama 'You Never Can Tell'?](../mcq-answers/english.md?plain=1#L2278)
+- [Shakespeare was born in the year-](../mcq-answers/english.md?plain=1#L2287)
+- [Romantic period of English literature-](../mcq-answers/english.md?plain=1#L2296)
+- ['The Sun Also Rises' is written by-](../mcq-answers/english.md?plain=1#L2305)
+- [What is an Epic?](../mcq-answers/english.md?plain=1#L2314)
+- [Who is 'Poet of Nature'?](../mcq-answers/english.md?plain=1#L2323)
+- [Who was both a poet & painter?](../mcq-answers/english.md?plain=1#L2332)
+- [The very first English Dictionary was complied by-](../mcq-answers/english.md?plain=1#L2341)
+- [Poet of Nature এর লেখক কে?](../mcq-answers/english.md?plain=1#L2350)
+- [The author of the story "The Luncheon" is -](../mcq-answers/english.md?plain=1#L2356)
+- [Who wrote 'arms and the Man'?](../mcq-answers/english.md?plain=1#L2366)
+- [Who wrote "The Solitary Reaper"?](../mcq-answers/english.md?plain=1#L2375)
+- [Who did write first English dictionary?](../mcq-answers/english.md?plain=1#L2384)
+- ["Glimpes of world history " was written by](../mcq-answers/english.md?plain=1#L2393)
+- [The famous quote "It matters not what someone is born but what they grow to be" was written in novel by the author-](../mcq-answers/english.md?plain=1#L2402)
+- ['Playing It My Way' is written by-](../mcq-answers/english.md?plain=1#L2411)
+- [The quote “All the glitters is not gold” is from which play of Shakespeare?](../mcq-answers/english.md?plain=1#L2420)
