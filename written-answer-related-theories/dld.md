@@ -9,7 +9,7 @@
    - [Number Systems and Codes](#number-systems-and-codes)
    - [Signed Numbers and 2's Complement](#signed-numbers-and-2s-complement)
 
-3. **[Boolean Algebra & De Morgan's Theorem](#boolean-algebra--de-morgans-theorem)**
+3. **[Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem)**
    - [Boolean Algebra — Laws and Simplification](#boolean-algebra--laws-and-simplification)
 
 4. **[Karnaugh Map (K-Map)](#karnaugh-map-k-map)**
@@ -787,7 +787,7 @@ int bitsToChange(int a, int b) {
 
 ---
 
-## Boolean Algebra & De Morgan's Theorem
+## Boolean Algebra & De Morgan’s Theorem
 
 ### Boolean Algebra — Laws and Simplification
 
@@ -952,6 +952,27 @@ By the complement law, **X + X̄ = 1** with X = A·B:
 **Example** — for 3 variables, the row A=1, B=0, C=1 gives the **minterm AB̄C = m₅** (since 101₂ = 5) and the **maxterm (Ā+B+C̄) = M₅**.
 
 > **The relationship: F = Σm(the rows where F = 1) = ΠM(the rows where F = 0)**, and **m_i = (M_i)′**.
+
+**Previous Year Question List from this Topic:**
+
+- [(a) State De-Morgan’s law with an appropriate example.](../written-answers/dld.md?plain=1#L6660)
+- [AB + (A(\overline{BC}))(AC + \overline{B}C)](../written-answers/dld.md?plain=1#L6720)
+- [Simplify Y = A\bar{B} + \overline{(\bar{A} + B)}C in digital logic design.](../written-answers/dld.md?plain=1#L6788)
+- [X+\bar{X}Y = ?](../written-answers/dld.md?plain=1#L6841)
+- [(ক) নিম্নলিখিত Boolean Function টি সংক্ষিপ্ত আকারে লিখুন: F(A, B, C, D) = \bar{A}\,\bar{B}\bar{C} + \bar{B}C\bar{D} + \bar{A}\bar{B}C\bar{D} + A\bar{B}\bar{C}](../written-answers/dld.md?plain=1#L6899)
+- [Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD](../written-answers/dld.md?plain=1#L6973)
+- [Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}](../written-answers/dld.md?plain=1#L7034)
+- [(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}](../written-answers/dld.md?plain=1#L7105)
+- [AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.](../written-answers/dld.md?plain=1#L7171)
+- [Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D](../written-answers/dld.md?plain=1#L7236)
+- [De-Morgans Law গুলো বর্ণনা করুন।](../written-answers/dld.md?plain=1#L7301)
+- [(ক) বুলিয়ান অ্যালজেবরার সাহায্যে সরল করুন: $\overline{x+y(x+z)}$](../written-answers/dld.md?plain=1#L7368)
+- [(খ) প্রমাণ করুন: $A \oplus B = AB + \bar{A}\bar{B}$](../written-answers/dld.md?plain=1#L7427)
+- [(ক) তিন চলকের De Morgan's উপপাদ্য দুইটি লিখুন এবং Truth table-এর সাহায্যে প্রমাণ করুন।](../written-answers/dld.md?plain=1#L7482)
+- [Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$](../written-answers/dld.md?plain=1#L7547)
+- [Construct a truth table for the following function: $(r \lor (q \land \neg p)) \land \neg(r \land (q \land \neg p))$ is the same as $r \oplus (q \land \neg p)$…](../written-answers/dld.md?plain=1#L7613)
+- [Trouth table construction for $f(A,B,C,D) = (A+B) \oplus (CD)$](../written-answers/dld.md?plain=1#L7667)
+
 
 ---
 
